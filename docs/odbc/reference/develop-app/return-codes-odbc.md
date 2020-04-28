@@ -11,14 +11,14 @@ helpviewer_keywords:
 - return codes [ODBC]
 - diagnostic information [ODBC], return codes
 ms.assetid: e893b719-4392-476f-911a-5ed6da6f7e94
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5f780f9abc47a367a1825d51b12159292ace5da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 15e434025ed1201ca61371c2fb88e70143e131a5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68020426"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304312"
 ---
 # <a name="return-codes-odbc"></a>Codici restituiti ODBC
 Ogni funzione in ODBC restituisce un codice, noto come *codice restituito,* che indica l'esito positivo o negativo complessivo della funzione. La logica del programma si basa generalmente sui codici restituiti.  

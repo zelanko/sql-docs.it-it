@@ -1,5 +1,5 @@
 ---
-title: Esecuzione di un'istruzione . Documenti Microsoft
+title: Esecuzione di un'istruzione | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,24 +13,24 @@ ms.assetid: e5f0d2ee-0453-4faf-b007-12978dd300a1
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: c3ce09809c896a4d1d9333da00367f972655f96b
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305742"
 ---
 # <a name="executing-a-statement"></a>Esecuzione di un'istruzione
-Esistono quattro modi per eseguire un'istruzione, a seconda di quando vengono compilati (preparati) dal motore di database e che li definisce:There are four ways to execute a statement, depending on when they are compiled (prepared) by the database engine and who defines them:  
+Esistono quattro modi per eseguire un'istruzione, a seconda del momento in cui vengono compilati (preparati) dal motore di database e che li definiscono:  
   
--   **Esecuzione diretta** L'applicazione definisce l'istruzione SQL. Viene preparato ed eseguito in fase di esecuzione in un unico passaggio.  
+-   **Esecuzione diretta** L'applicazione definisce l'istruzione SQL. Viene preparata ed eseguita in fase di esecuzione in un singolo passaggio.  
   
--   **Esecuzione preparata** L'applicazione definisce l'istruzione SQL. Viene preparato ed eseguito in fase di esecuzione in passaggi separati. L'istruzione può essere preparata una sola volta ed eseguita più volte.  
+-   **Esecuzione preparata** L'applicazione definisce l'istruzione SQL. Viene preparata ed eseguita in fase di esecuzione in passaggi distinti. L'istruzione può essere preparata una volta ed eseguita più volte.  
   
--   **Procedure** L'applicazione può definire e compilare una o più istruzioni SQL in fase di sviluppo e archiviare queste istruzioni nell'origine dati come routine. La procedura viene eseguita una o più volte in fase di esecuzione. L'applicazione può enumerare le stored procedure disponibili utilizzando le funzioni di catalogo.  
+-   **Procedure** L'applicazione può definire e compilare una o più istruzioni SQL in fase di sviluppo e archiviare queste istruzioni nell'origine dati come procedura. La procedura viene eseguita una o più volte in fase di esecuzione. L'applicazione può enumerare le stored procedure disponibili utilizzando le funzioni di catalogo.  
   
--   **Funzioni di catalogo** Il writer del driver crea una funzione che restituisce un set di risultati predefinito. In genere, questa funzione invia un'istruzione SQL predefinita o chiama una procedura creata per questo scopo. La funzione viene eseguita una o più volte in fase di esecuzione.  
+-   **Funzioni di catalogo** Il writer del driver crea una funzione che restituisce un set di risultati predefinito. In genere, questa funzione Invia un'istruzione SQL predefinita o chiama una procedura creata a questo scopo. La funzione viene eseguita una o più volte in fase di esecuzione.  
   
- Una particolare istruzione (identificata dal relativo handle di istruzione) può essere eseguita un numero qualsiasi di volte. L'istruzione può essere eseguita con una varietà di istruzioni SQL diverse oppure può essere eseguita ripetutamente con la stessa istruzione SQL. Ad esempio, il codice seguente utilizza lo stesso handle di istruzione (*hstmt1*) per recuperare e visualizzare le tabelle nel database Sales. Viene quindi riutilizzato questo handle per recuperare le colonne in una tabella selezionata dall'utente.  
+ Un'istruzione specifica (identificata dal relativo handle di istruzione) può essere eseguita un numero qualsiasi di volte. L'istruzione può essere eseguita con un'ampia gamma di istruzioni SQL diverse oppure può essere eseguita ripetutamente con la stessa istruzione SQL. Nel codice seguente, ad esempio, viene utilizzato lo stesso handle di istruzione (*hstmt1*) per recuperare e visualizzare le tabelle nel database Sales. Riutilizza quindi questo handle per recuperare le colonne in una tabella selezionata dall'utente.  
   
 ```  
 SQLHSTMT    hstmt1;  
@@ -52,7 +52,7 @@ SQLColumns(hstmt1, "Sales", SQL_NTS, "sysadmin", SQL_NTS, Table, SQL_NTS, NULL, 
 // Code not shown.  
 ```  
   
- Il codice seguente mostra come viene utilizzato un singolo handle per eseguire ripetutamente la stessa istruzione per eliminare righe da una tabella.  
+ Nel codice seguente viene illustrato come utilizzare un singolo handle per eseguire ripetutamente la stessa istruzione per eliminare le righe da una tabella.  
   
 ```  
 SQLHSTMT      hstmt1;  
@@ -72,13 +72,13 @@ while ((OrderID = GetOrderID()) != 0) {
 }  
 ```  
   
- Per molti driver, l'allocazione di istruzioni è un'attività costosa, pertanto riutilizzare la stessa istruzione in questo modo è in genere più efficiente rispetto alla liberazione di istruzioni esistenti e all'allocazione di nuove. Le applicazioni che creano set di risultati in un'istruzione devono prestare attenzione a chiudere il cursore sul set di risultati prima di rieseguire l'istruzione. Per ulteriori informazioni, consultate [Chiusura del cursore.](../../../odbc/reference/develop-app/closing-the-cursor.md)  
+ Per molti driver, l'allocazione di istruzioni è un'attività costosa, quindi il riutilizzo della stessa istruzione in questo modo è in genere più efficiente rispetto alla liberazione di istruzioni esistenti e all'allocazione di nuove. Per le applicazioni che creano set di risultati in un'istruzione è necessario prestare attenzione a chiudere il cursore sul set di risultati prima di rieseguire l'istruzione. Per ulteriori informazioni, vedere [chiusura del cursore](../../../odbc/reference/develop-app/closing-the-cursor.md).  
   
- Il riutilizzo delle istruzioni impone inoltre all'applicazione di evitare una limitazione in alcuni driver del numero di istruzioni che possono essere attive contemporaneamente. La definizione esatta di "attivo" è specifica del driver, ma spesso si riferisce a qualsiasi istruzione che è stata preparata o eseguita e ha ancora risultati disponibili. Ad esempio, dopo la preparazione di un'istruzione **INSERT,** viene in genere considerata attiva; dopo l'esecuzione di un'istruzione **SELECT** e l'apertura del cursore, in genere viene considerata attiva; dopo l'esecuzione di un'istruzione **CREATE TABLE,** in genere non viene considerata attiva.  
+ Il riutilizzo di istruzioni impone inoltre all'applicazione di evitare una limitazione in alcuni driver del numero di istruzioni che possono essere attive alla volta. La definizione esatta di "Active" è specifica del driver, ma si riferisce spesso a qualsiasi istruzione preparata o eseguita e con risultati ancora disponibili. Ad esempio, dopo che un'istruzione **Insert** è stata preparata, viene in genere considerata attiva. dopo l'esecuzione di un'istruzione **Select** e il cursore è ancora aperto, in genere viene considerato attivo; dopo l'esecuzione di un'istruzione **Create Table** , non viene in genere considerata attiva.  
   
- Un'applicazione determina quante istruzioni possono essere attive su una singola connessione contemporaneamente chiamando **SQLGetInfo** con l'opzione SQL_MAX_CONCURRENT_ACTIVITIES. Un'applicazione può utilizzare più istruzioni attive di questo limite aprendo più connessioni all'origine dati. perché le connessioni possono essere costose, tuttavia, l'effetto sulle prestazioni deve essere considerato.  
+ Un'applicazione determina il numero di istruzioni che possono essere attive in una singola connessione alla volta chiamando **SQLGetInfo** con l'opzione SQL_MAX_CONCURRENT_ACTIVITIES. Un'applicazione può utilizzare più istruzioni attive rispetto a questo limite aprendo più connessioni all'origine dati. Poiché le connessioni possono essere costose, tuttavia, è necessario considerare l'effetto sulle prestazioni.  
   
- Le applicazioni possono limitare il periodo di tempo assegnato per l'esecuzione di un'istruzione con l'attributo di istruzione SQL_ATTR_QUERY_TIMEOUT. Se il periodo di timeout scade prima che l'origine dati restituisca il set di risultati, la funzione che esegue l'istruzione SQL restituisce SQLSTATE HYT00 (Timeout scaduto). Per impostazione predefinita, non è previsto alcun timeout.  
+ Le applicazioni possono limitare la quantità di tempo assegnata per l'esecuzione di un'istruzione con l'attributo dell'istruzione SQL_ATTR_QUERY_TIMEOUT. Se il periodo di timeout scade prima che l'origine dati restituisca il set di risultati, la funzione che esegue l'istruzione SQL restituisce SQLSTATE HYT00 (timeout scaduto). Per impostazione predefinita, non è previsto alcun timeout.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

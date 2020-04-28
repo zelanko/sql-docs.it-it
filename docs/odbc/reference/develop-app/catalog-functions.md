@@ -1,5 +1,5 @@
 ---
-title: Funzioni di catalogo - Documenti Microsoft
+title: Funzioni di catalogo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,20 +16,20 @@ ms.assetid: 81ba9453-c085-47c0-b411-90ca6a5ee428
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: eb28ec6f4ea299dae8737fc707fd53e4d102442d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305202"
 ---
 # <a name="catalog-functions"></a>Funzioni di catalogo
-Tutti i database hanno una struttura che descrive come i dati verranno archiviati nel database. Ad esempio, un database degli ordini cliente semplice potrebbe avere la struttura illustrata nella figura seguente, in cui le colonne ID vengono utilizzate per collegare le tabelle.  
+In tutti i database è presente una struttura che descrive la modalità di archiviazione dei dati nel database. Ad esempio, è possibile che un database di ordini di vendita semplice abbia la struttura mostrata nella figura seguente, in cui le colonne ID vengono utilizzate per collegare le tabelle.  
   
- ![Struttura di un database semplice](../../../odbc/reference/develop-app/media/pr19.gif "Pr19 (informazioni in stato di")  
+ ![Struttura di un database semplice](../../../odbc/reference/develop-app/media/pr19.gif "PR19")  
   
- Questa struttura, insieme ad altre informazioni quali i privilegi, viene memorizzata in un set di tabelle di sistema denominato catalogo del *database,* noto anche come *dizionario dei dati.*  
+ Questa struttura, insieme ad altre informazioni, ad esempio i privilegi, è archiviata in un set di tabelle di sistema denominato catalogo del database *,* noto anche come *dizionario dei dati*.  
   
- Un'applicazione può individuare questa struttura tramite chiamate alle funzioni di *catalogo*. Le funzioni di catalogo restituiscono informazioni nei set di risultati e vengono in genere implementate tramite istruzioni **SELECT** sulle tabelle del catalogo. Un'applicazione potrebbe ad esempio richiedere un set di risultati contenente informazioni su tutte le tabelle del sistema o tutte le colonne di una particolare tabella.  
+ Un'applicazione può individuare questa struttura tramite chiamate alle *funzioni di catalogo*. Le funzioni di catalogo restituiscono informazioni nei set di risultati e vengono in genere implementate tramite istruzioni **Select** per le tabelle nel catalogo. Un'applicazione potrebbe ad esempio richiedere un set di risultati contenente informazioni su tutte le tabelle del sistema o tutte le colonne di una particolare tabella.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

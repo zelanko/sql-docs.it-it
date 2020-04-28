@@ -1,5 +1,5 @@
 ---
-title: Cursori scorrevoli e isolamento delle transazioni Documenti Microsoft
+title: Cursori scorrevoli e isolamento delle transazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,28 +16,28 @@ ms.assetid: f0216f4a-46e3-48ae-be0a-e2625e8403a6
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 7e40278bd209132736aee2788b5648ffa84a44e6
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304222"
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>Cursori scorrevoli e isolamento delle transazioni
-Nella tabella seguente sono elencati i fattori che regolano la visibilità delle modifiche.  
+Nella tabella seguente sono elencati i fattori che determinano la visibilità delle modifiche.  
   
 |Modifiche apportate da:|La visibilità dipende da:|  
 |----------------------|----------------------------|  
-|Cursore|Tipo di cursore, implementazione del cursoreCursor type, cursor implementation|  
-|Altri rendiconti nella stessa transazione|Tipo di cursore|  
-|Rendiconti in altre transazioni|Tipo di cursore, livello di isolamento delle transazioniCursor type, transaction isolation level|  
+|Cursore|Tipo di cursore, implementazione del cursore|  
+|Altre istruzioni nella stessa transazione|Tipo di cursore|  
+|Istruzioni in altre transazioni|Tipo di cursore, livello di isolamento della transazione|  
   
  Questi fattori sono illustrati nella figura seguente.  
   
- ![Fattori che controllano la visibilità delle modifiche](../../../odbc/reference/develop-app/media/pr23.gif "pr23 (informazioni in stato di pr23")  
+ ![Fattori che controllano la visibilità delle modifiche](../../../odbc/reference/develop-app/media/pr23.gif "pr23")  
   
- Nella tabella seguente viene riepilogata la capacità di ogni tipo di cursore di rilevare le modifiche apportate da se stesso, da altre operazioni nella propria transazione e da altre transazioni. La visibilità di queste ultime modifiche dipende dal tipo di cursore e dal livello di isolamento della transazione contenente il cursore.  
+ Nella tabella seguente è riepilogata la possibilità di ogni tipo di cursore di rilevare le modifiche apportate da se stesso, da altre operazioni nella propria transazione e da altre transazioni. La visibilità delle ultime modifiche dipende dal tipo di cursore e dal livello di isolamento della transazione contenente il cursore.  
   
-|Tipo di cursore: azione|Self|Proprio<br /><br /> Txn|Othr<br /><br /> Txn<br /><br /> (RU[a])|Othr<br /><br /> Txn<br /><br /> (RC[a])|Othr<br /><br /> Txn<br /><br /> (RR[a])|Othr<br /><br /> Txn<br /><br /> (S[a])|  
+|Cursore type\action|Self|Proprio<br /><br /> Transazione|Altro<br /><br /> Transazione<br /><br /> (UR [a])|Altro<br /><br /> Transazione<br /><br /> (RC [a])|Altro<br /><br /> Transazione<br /><br /> (RR [a])|Altro<br /><br /> Transazione<br /><br /> (S [a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
 |Statico|||||||  
 |Insert|Forse [b]|No|No|No|No|No|  
@@ -52,14 +52,14 @@ Nella tabella seguente sono elencati i fattori che regolano la visibilità delle
 |Aggiornamento|Sì|Sì|Sì|Sì|No|No|  
 |Delete|Sì|Sì|Sì|Sì|No|No|  
   
- [a] Le lettere tra parentesi indicano il livello di isolamento della transazione contenente il cursore; il livello di isolamento dell'altra transazione (in cui è stata apportata la modifica) è irrilevante.  
+ [a] le lettere tra parentesi indicano il livello di isolamento della transazione contenente il cursore. il livello di isolamento dell'altra transazione, in cui è stata apportata la modifica, è irrilevante.  
   
- RU: Lettura senza commit  
+ UR: lettura di cui non è stato eseguito il commit  
   
- RC: Lettura impegnata  
+ RC: Read Committed  
   
- RR: Lettura ripetibile  
+ RR: lettura ripetibile  
   
- S: Serializzabile  
+ S: serializzabile  
   
- [b] Dipende da come viene implementato il cursore. Se il cursore può rilevare tali modifiche viene segnalato tramite l'opzione SQL_STATIC_SENSITIVITY in **SQLGetInfo**.
+ [b] dipende dalla modalità di implementazione del cursore. Se il cursore è in grado di rilevare tali modifiche viene segnalato tramite l'opzione SQL_STATIC_SENSITIVITY in **SQLGetInfo**.

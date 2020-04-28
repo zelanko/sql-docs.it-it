@@ -1,6 +1,6 @@
 ---
-title: Recuperare i dati numerici con SQL_NUMERIC_STRUCT Documenti Microsoft
-description: L'utilizzo di C/Cè tramite ODBC consente di recuperare il tipo di dati numerico di SQL Server utilizzando SQL_NUMERIC_STRUCT, correlati a i SQL_C_NUMERIC.
+title: Recuperare dati numerici con SQL_NUMERIC_STRUCT | Microsoft Docs
+description: C/C++ tramite ODBC recupera il tipo di dati numerico SQL Server utilizzando SQL_NUMERIC_STRUCT, correlati SQL_C_NUMERIC.
 editor: ''
 ms.prod: sql
 ms.technology: connectivity
@@ -11,27 +11,27 @@ ms.date: 07/14/2017
 ms.author: v-daenge
 author: David-Engel
 ms.openlocfilehash: 63575c952feb8fc21d56f48540a7cd4e54d5e11f
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305122"
 ---
-# <a name="retrieve-numeric-data-with-sql_numeric_struct"></a>Recuperare dati numerici con SQL\_NUMERIC\_STRUCT
+# <a name="retrieve-numeric-data-with-sql_numeric_struct"></a>Recuperare dati numerici con\_lo\_struct numerico SQL
 
-In questo articolo viene descritto come recuperare dati numerici dal driver ODBC di SQL Server in una struttura numerica. Viene inoltre descritto come ottenere i valori corretti utilizzando valori di precisione e scala specifici.
+Questo articolo descrive come recuperare dati numerici da SQL Server driver ODBC in una struttura numerica. Viene inoltre descritto come ottenere i valori corretti utilizzando valori di precisione e scala specifici.
 
-Questo tipo di dati consente alle applicazioni di gestire direttamente i dati numerici. Intorno all'anno 2003, ODBC 3.0 ha introdotto un nuovo tipo di dati ODBC C, identificato da **SQL\_C\_NUMERIC**. Questo tipo di dati è ancora rilevante a partire dal 2017.
+Questo tipo di dati consente alle applicazioni di gestire direttamente i dati numerici. Nell'anno 2003, in ODBC 3,0 è stato introdotto un nuovo tipo di dati ODBC c, identificato da **\_SQL c\_numeric**. Questo tipo di dati è ancora pertinente a partire da 2017.
 
-Il buffer C utilizzato ha la definizione di tipo **SQL\_NUMERIC\_STRUCT**. Questa struttura include campi per l'archiviazione della precisione, della scala, del segno e del valore dei dati numerici. Il valore stesso viene archiviato come intero scalato con il byte meno significativo che inizia nella posizione più a sinistra. 
+Il buffer C utilizzato ha la definizione del tipo di **struct numeric\_\_SQL**. Questa struttura dispone di campi per archiviare la precisione, la scala, il segno e il valore dei dati numerici. Il valore stesso viene archiviato come intero scalato con il byte meno significativo che inizia nella posizione più a sinistra. 
 
-L'articolo [Tipi di](c-data-types.md) dati C fornisce ulteriori\_\_informazioni sul formato e sull'utilizzo di SQL NUMERIC STRUCT. In genere [l'Appendice D](appendix-d-data-types.md) di ODBC 3.0 Programmer's Reference illustra i tipi di dati.
-
-
-## <a name="sql_numeric_struct-overview"></a>Panoramica di SQL\_NUMERIC\_STRUCT
+I [tipi di dati](c-data-types.md) dell'articolo C forniscono ulteriori informazioni sul formato e sull'utilizzo\_dello\_struct numerico SQL. In genere, l' [Appendice D](appendix-d-data-types.md) di ODBC 3,0 Programmer ' s Reference illustra i tipi di dati.
 
 
-Lo\_STRUCT\_NUMERICo SQL viene definito nel file di intestazione sqltypes.h come segue:
+## <a name="sql_numeric_struct-overview"></a>Panoramica\_dello\_struct numerico SQL
+
+
+Lo struct\_numerico\_SQL è definito nel file di intestazione SqlTypes. h, come indicato di seguito:
 
 
 ```c
@@ -46,22 +46,22 @@ typedef struct tagSQL_NUMERIC_STRUCT
 ```
 
             
-I campi di precisione e scala della struttura numerica non vengono mai utilizzati per l'input da un'applicazione, solo per l'output dal driver all'applicazione.
+I campi di precisione e scala della struttura numerica non vengono mai usati per l'input da un'applicazione, solo per l'output dal driver all'applicazione.
 
-Il driver utilizza la precisione predefinita (definito dal driver) e la scala predefinita (0) ogni volta che si restituiscono dati all'applicazione. A meno che l'applicazione non specifichi i valori per la precisione e la scala, il driver assume il valore predefinito e tronca la parte decimale dei dati numerici.
+Il driver usa la precisione predefinita (definita dal driver) e la scala predefinita (0) ogni volta che vengono restituiti dati all'applicazione. A meno che l'applicazione non specifichi valori per precisione e scala, il driver presuppone il valore predefinito e tronca la parte decimale dei dati numerici.
 
-## <a name="sql_numeric_struct-code-sample"></a>Esempio\_\_di codice SQL NUMERIC STRUCT
+## <a name="sql_numeric_struct-code-sample"></a>Esempio\_di\_codice dello struct numerico SQL
 
-Questo esempio di codice mostra come:This code sample shows you how to:
+Questo esempio di codice illustra come eseguire le operazioni seguenti:
 
 - Impostare la precisione.
 - Impostare la scala.
 - Recuperare i valori corretti. 
 
 > [!Note]
-> QUALSIASI UTILIZZO DA PARTE DELL'UTENTE DEL CODICE FORNITO IN QUESTO ARTICOLO È A PROPRIO RISCHIO E PERICOLO. 
+> QUALSIASI USO DA PARTE DELL'UTENTE DEL CODICE FORNITO IN QUESTO ARTICOLO È A PROPRIO RISCHIO. 
 >
-> Microsoft fornisce questi esempi di codice "così com'è" senza garanzia di alcun tipo, espressa o implicita, inclusa, a non solo, le garanzie implicite di merchantability e/o idoneità per uno scopo particolare.
+> Microsoft fornisce questi esempi di codice "così come sono" senza garanzia di alcun tipo, espressa o implicita, incluse, a titolo esemplificativo, le garanzie implicite di commerciabilità e/o idoneità per uno scopo specifico.
 
 ```c
 #include <stdio.h>
@@ -226,17 +226,17 @@ while((retcode =SQLFetch(hstmt1)) != SQL_NO_DATA)
 ```
 
 
-Nella struttura numerica, il campo val è una matrice di caratteri di 16 elementi. Ad esempio, 25.212 viene scalato a 25212 e la scala è 3.For example, 25.212 is scalad to 25212 and the scale is 3. In formato esadecimale questo numero sarebbe 627C.
+Nella struttura numerica il campo Val è una matrice di caratteri di 16 elementi. 25,212, ad esempio, viene ridimensionato a 25212 e la scala è 3. In formato esadecimale questo numero sarebbe 627C.
 
-Il driver restituisce i seguenti elementi:
+Il driver restituisce gli elementi seguenti:
 
-- Il carattere equivalente di 7C, che è ' (pipe) nel primo elemento della matrice di caratteri.
-- L'equivalente di 62, che è 'b' nel secondo elemento.
-- Il resto degli elementi della matrice contiene zeri, pertanto il buffer contiene ''b'0''.
+- Il carattere equivalente di 7C, che è' |' (pipe) nel primo elemento della matrice di caratteri.
+- Equivalente a 62, che è' b ' nel secondo elemento.
+- I rimanenti degli elementi della matrice contengono zeri, quindi il buffer contiene ' | b\0'.
 
-Ora la sfida consiste nel costruire l'intero scalato da questa matrice di stringhe. Ogni carattere nella stringa corrisponde a due cifre esadecimali, ad esempio la cifra meno significativa (LSD) e la cifra più significativa (MSD). Il valore intero scalato può essere generato moltiplicando ogni cifra (LSD & MSD) con un multiplo di 16, a partire da 1.
+A questo punto, la sfida consiste nel costruire l'intero scalato da questa matrice di stringhe. Ogni carattere nella stringa corrisponde a due cifre esadecimali, ad indicare la cifra meno significativa (LSD) e la cifra più significativa (MSD). Il valore integer scalato potrebbe essere generato moltiplicando ogni cifra (LSD & MSD) con un multiplo di 16, a partire da 1.
 
-Codice che implementa la conversione dalla modalità little endian all'intero ridimensionato. Spetta allo sviluppatore dell'applicazione implementare questa funzionalità. L'esempio di codice seguente è solo uno dei molti modi possibili.
+Codice che implementa la conversione dalla modalità little endian all'integer ridimensionato. Per implementare questa funzionalità, spetta allo sviluppatore dell'applicazione. L'esempio di codice seguente è solo uno dei molti modi possibili.
 
 
 ```c
@@ -265,21 +265,21 @@ long strtohextoval()
 ### <a name="applies-to-versions"></a>Si applica alle versioni
 
 
-Le informazioni precedenti\_su\_SQL NUMERIC STRUCT si applicano alle seguenti versioni del prodotto:
+Le informazioni precedenti sullo struct\_numerico\_SQL si applicano alle versioni seguenti del prodotto:
 
-- Driver Microsoft ODBC per Microsoft SQL Server 3.7
-- Componenti di Microsoft Data Access 2.1
-- Componenti di Microsoft Data Access 2.5
-- Componenti di Microsoft Data Access 2.6
-- Componenti di Microsoft Data Access 2.7
-
-
-## <a name="sql_c_numeric-overview"></a>Panoramica di SQL\_C\_NUMERIC
+- Microsoft ODBC driver for Microsoft SQL Server 3,7
+- Microsoft Data Access Components 2,1
+- Microsoft Data Access Components 2,5
+- Microsoft Data Access Components 2,6
+- Microsoft Data Access Components 2,7
 
 
-Nel programma di esempio seguente\_viene\_illustrato l'utilizzo di SQL C NUMERIC, inserendo 123.45 in una tabella. Nella tabella, la colonna è definita come numerico o decimale, con precisione 5 e con scala 2.
+## <a name="sql_c_numeric-overview"></a>Panoramica\_di\_SQL C numeric
 
-Il driver ODBC utilizzato per eseguire questo programma deve supportare la funzionalità ODBC 3.0.
+
+Il programma di esempio seguente illustra l'uso di SQL\_C\_numeric inserendo 123,45 in una tabella. Nella tabella la colonna è definita come valore numerico o decimale, con precisione 5 e con scala 2.
+
+Il driver ODBC utilizzato per eseguire il programma deve supportare la funzionalità ODBC 3,0.
 
 
 ```c

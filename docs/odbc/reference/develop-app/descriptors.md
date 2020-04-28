@@ -1,5 +1,5 @@
 ---
-title: Proprietà Descriptors . Documenti Microsoft
+title: Descrittori | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,21 +16,21 @@ ms.assetid: ef2cbb93-cd00-40f8-b1d2-5f5723a991aa
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ca8299daae744fb9398ed6ffc99c838ce8edff48
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305902"
 ---
 # <a name="descriptors"></a>Descrittori
-Un handle descrittore fa riferimento a una struttura di dati che contiene informazioni su colonne o parametri dinamici.  
+Un handle descrittore fa riferimento a una struttura di dati che include informazioni su colonne o parametri dinamici.  
   
- Le funzioni ODBC che operano sui dati di colonna e parametri impostano e recuperano in modo implicito i campi descrittore. Ad esempio, quando **SQLBindCol** viene chiamato per associare i dati della colonna, imposta i campi descrittore che descrivono completamente l'associazione. Quando **SQLColAttribute** viene chiamato per descrivere i dati della colonna, restituisce i dati archiviati nei campi del descrittore.  
+ Le funzioni ODBC che operano sui dati di colonne e parametri impostano e recuperano in modo implicito i campi di descrizione Ad esempio, quando **SQLBindCol** viene chiamato per associare i dati della colonna, imposta i campi del descrittore che descrivono completamente l'associazione. Quando **SQLColAttribute** viene chiamato per descrivere i dati della colonna, restituisce i dati archiviati nei campi del descrittore.  
   
- Un'applicazione che chiama le funzioni ODBC non deve preoccuparsi di descrittori. Nessuna operazione di database richiede che l'applicazione ottenga l'accesso diretto ai descrittori. Tuttavia, per alcune applicazioni, ottenere l'accesso diretto ai descrittori semplifica molte operazioni. Ad esempio, l'accesso diretto ai descrittori fornisce un modo per riassociare i dati delle colonne, che può essere più efficiente rispetto alla chiamata **di SQLBindCol** nuovamente.  
+ Un'applicazione che chiama funzioni ODBC non deve preoccuparsi di descrittori. Nessuna operazione di database richiede che l'applicazione ottenga l'accesso diretto ai descrittori. Tuttavia, per alcune applicazioni, ottenere l'accesso diretto ai descrittori semplifica molte operazioni. Ad esempio, l'accesso diretto ai descrittori fornisce un modo per riassociare i dati della colonna, che può essere più efficiente rispetto alla chiamata di **SQLBindCol** .  
   
 > [!NOTE]  
->  La rappresentazione fisica del descrittore non è definita. Le applicazioni ottengono l'accesso diretto a un descrittore solo modificandone i campi chiamando le funzioni ODBC con l'handle del descrittore.  
+>  La rappresentazione fisica del descrittore non è definita. Le applicazioni ottengono l'accesso diretto a un descrittore solo modificando i campi chiamando le funzioni ODBC con l'handle del descrittore.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

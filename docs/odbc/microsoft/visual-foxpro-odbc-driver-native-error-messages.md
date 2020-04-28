@@ -1,5 +1,5 @@
 ---
-title: Messaggi di errore nativi del driver ODBC di Visual FoxPro Documenti Microsoft
+title: Messaggi di errore nativi del driver ODBC Visual FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,21 +15,21 @@ ms.assetid: 7b2622e8-ccee-4853-9171-4fb10de0461d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 4f97356a810f5aa0d911e09df016c62b03ee726b
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304790"
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Messaggi di errore nativi del driver ODBC Visual FoxPro
-Nelle tabelle seguenti sono elencati i messaggi di errore nativi del driver ODBC di Visual FoxPro.  
+Nelle tabelle seguenti vengono elencati i messaggi di errore nativi del driver ODBC Visual FoxPro.  
   
 ## <a name="001"></a>001  
   
 |||  
 |-|-|  
-|1|La funzione non è disponibile.|  
-|2|Errore di input/output dell'operazione.|  
+|1|La funzionalità non è disponibile.|  
+|2|Operazione di input/output non riuscita.|  
 |3|Handle libero non trovato.|  
 |5|Utilizzo dell'handle non allocato.|  
 |99|Procedura annullata.|  
@@ -39,12 +39,12 @@ Nelle tabelle seguenti sono elencati i messaggi di errore nativi del driver ODBC
 |||  
 |-|-|  
 |100|Troppi file aperti.|  
-|101|Impossibile aprire il file.|  
+|101|Non è possibile aprire il file.|  
 |102|Impossibile creare il file.|  
 |105|Errore durante la scrittura nel file.|  
 |107|Lunghezza della chiave non valida.|  
 |109|Record non compreso nell'intervallo.|  
-|110|Record non nell'indice.|  
+|110|Il record non è presente nell'indice.|  
 |111|Descrittore di file non valido.|  
 |113|Il file non è aperto.|  
 |114|Spazio su disco insufficiente per il *valore*.|  
@@ -52,43 +52,43 @@ Nelle tabelle seguenti sono elencati i messaggi di errore nativi del driver ODBC
 |118|Il file di indice non corrisponde alla tabella.|  
 |119|Nessuna tabella aperta.|  
 |120|Il file non esiste.|  
-|121|File già esistente.|  
-|122|La tabella non dispone di alcun ordine di indice impostato.|  
-|123|Non un tavolo.|  
+|121|Il file esiste già.|  
+|122|Per la tabella non è impostato alcun ordine di indice.|  
+|123|Non è una tabella.|  
 |125|L'espressione di indice supera la lunghezza massima.|  
 |127|È necessario utilizzare un'espressione logica con una clausola FOR o WHILE.|  
 |128|Non è un'espressione numerica.|  
 |129|Variabile non trovata.|  
 |132|Il file è in uso.|  
 |133|L'indice non corrisponde alla tabella. Eliminare il file di indice e ricreare l'indice.|  
-|135|Rilevata la fine del file.|  
+|135|È stata rilevata la fine del file.|  
 |136|Inizio del file rilevato.|  
 |137|Alias non trovato.|  
-|139|È necessario utilizzare un'espressione logica con FILTRO.|  
+|139|È necessario utilizzare un'espressione logica con filtro.|  
 |142|Relazione ciclica.|  
-|143|Non sono stati trovati campi da copiare.|  
-|144|Il comando LOCATE deve essere emesso prima del comando CONTINUE.|  
-|145|Deve essere un campo carattere o un campo numerico.|  
+|143|Nessun campo trovato per la copia.|  
+|144|Il comando di individuazione deve essere emesso prima del comando CONTINUE.|  
+|145|Deve essere un campo di chiave o un carattere numerico.|  
 |146|Impossibile scrivere in un file di sola lettura.|  
-|147|La tabella di destinazione è già impegnata in una relazione.|  
-|148|L'espressione è stata reinserita durante l'esecuzione del filtro.|  
+|147|La tabella di destinazione è già coinvolta in una relazione.|  
+|148|L'espressione è stata nuovamente immessa mentre è in esecuzione il filtro.|  
 |149|Memoria insufficiente per il buffer.|  
-|150|Memoria insufficiente per la mappa dei file.|  
+|150|Memoria insufficiente per il mapping del file.|  
 |155|Chiamata buffdirty non valida.|  
-|156|Nomi di campo duplicati.|  
+|156|Nomi di campi duplicati.|  
 |158|Nessun campo trovato per l'elaborazione.|  
-|159|Overflow numerico. I dati sono andati persi.|  
-|162|Procedura '*valore*' non trovato.|  
-|165|*non* è correlato all'area di lavoro corrente.|  
-|170|Variabile '*valore*' non trovato.|  
-|171|Impossibile aprire il *valore*del file .|  
-|173|Il*valore*' File ' non esiste.|  
-|174|'*valore*' non è una variabile di memoria.|  
-|175|'*valore*' non è una variabile di file.|  
-|176|'*valore*' non è una matrice.|  
-|177|Alias '*valore*' non trovato.|  
+|159|Overflow numerico. Dati persi.|  
+|162|La procedura '*value*' non è stata trovata.|  
+|165|il *valore* non è correlato all'area di lavoro corrente.|  
+|170|La variabile '*value*' non è stata trovata.|  
+|171|Impossibile aprire il *valore*del file.|  
+|173|Il file '*value*' non esiste.|  
+|174|'*value*' non è una variabile di memoria.|  
+|175|'*value*' non è una variabile di file.|  
+|176|'*value*' non è una matrice.|  
+|177|L'alias '*value*' non è stato trovato.|  
 |180|Il file non è stato inserito in memoria utilizzando il comando LOAD.|  
-|182|Memoria insufficiente per completare l'operazione.|  
+|182|Memoria insufficiente per completare questa operazione.|  
   
 ## <a name="200"></a>200  
   
@@ -98,35 +98,35 @@ Nelle tabelle seguenti sono elencati i messaggi di errore nativi del driver ODBC
 |201|Troppi nomi utilizzati.|  
 |202|Il programma è troppo grande.|  
 |203|Troppe variabili di memoria.|  
-|205|Errore di nidificazione.|  
+|205|Errore di annidamento.|  
 |206|Definizione di macro ricorsiva.|  
-|209|La linea è troppo lunga.|  
-|210|Livello di annidamento DO consentito superato.|  
-|211|Manca un'istruzione IF &#124; ELSE &#124; ENDIF.|  
-|212|La nidificazione della struttura è troppo profonda.|  
-|213|C'è una parola chiave mancante nel FOR... ENDFOR o DO CASE... Struttura dei comandi ENDCASE.|  
-|219|Il comando contiene una frase/parola chiave non riconosciuta.|  
-|221|Il comando non contiene la clausola obbligatoria.|  
+|209|La riga è troppo lungo.|  
+|210|È stato superato il livello di nidificazione consentito.|  
+|211|Oggetto se &#124; ELSE &#124; Istruzione ENDIF mancante.|  
+|212|Annidamento della struttura troppo intenso.|  
+|213|È presente una parola chiave mancante nell'oggetto per... ENDFOR o DO CASE... Struttura del comando ENDCASE.|  
+|219|Il comando contiene una frase o una parola chiave non riconosciuta.|  
+|221|Nel comando manca la clausola obbligatoria.|  
 |222|Verbo di comando non riconosciuto.|  
-|224|Riferimento pedice non valido.|  
+|224|Riferimento di indice non valido.|  
 |227|Espressione mancante.|  
 |228|Il numero di tabella non è valido.|  
-|229|Troppo pochi argomenti.|  
+|229|Argomenti insufficienti.|  
 |230|Troppi argomenti.|  
 |233|L'istruzione non è consentita in modalità interattiva.|  
-|234|Pedice non compreso nell'intervallo definito.|  
+|234|Indice non compreso nell'intervallo definito.|  
 |236|Sospendere il programma prima di utilizzare RESUME.|  
-|238|Non viene trovata alcuna istruzione PARAMETER.|  
+|238|Non è stata trovata alcuna istruzione PARAMETER.|  
 |239|È necessario specificare parametri aggiuntivi.|  
-|240|Non un'espressione di caratteri.|  
-|250|Sono attivi troppi comandi PROCEDURE.|  
+|240|Non è un'espressione di caratteri.|  
+|250|Sono attivi troppi comandi di procedura.|  
 |252|Il codice compilato per questa riga è troppo lungo.|  
-|257|La stringa della chiave è troppo lunga.|  
-|291|L'espressione utilizzata con ASIN() non è compresa nell'intervallo.|  
-|292|Impossibile utilizzare 0 o negativo come argomento per LOG10().|  
-|293|L'espressione utilizzata con ACOS() non è compresa nell'intervallo.|  
-|294|Foxuser. File DBF non valido.|  
-|295|Percorso o nome file non valido.|  
+|257|Stringa chiave troppo lungo.|  
+|291|L'espressione utilizzata con ASIN () non è compresa nell'intervallo.|  
+|292|Non è possibile usare 0 o negativo come argomento per LOG10 ().|  
+|293|L'espressione utilizzata con ARCCOS () non è compresa nell'intervallo.|  
+|294|FOXUSER. Il file DBF non è valido.|  
+|295|Nome file o percorso non valido.|  
 |296|Errore durante la lettura della risorsa.|  
 |297|Il comando è consentito solo in modalità interattiva.|  
   
@@ -134,12 +134,12 @@ Nelle tabelle seguenti sono elencati i messaggi di errore nativi del driver ODBC
   
 |||  
 |-|-|  
-|301|Mancata corrispondenza tra operatore e tipo di operando.|  
+|301|Mancata corrispondenza del tipo di operatore/operando.|  
 |302|Tipo di dati non corrispondente.|  
-|305|Espressione valutata in base a un valore non valido.|  
-|307|Non può dividere per 0.|  
+|305|L'espressione ha restituito un valore non valido.|  
+|307|Non è possibile dividere per 0.|  
 |308|Spazio dello stack insufficiente.|  
-|337|Impossibile nidificare il comando PRINTJOB.|  
+|337|Impossibile annidare il comando PRINTJOB.|  
   
 ## <a name="400"></a>400  
   
@@ -150,23 +150,23 @@ Nelle tabelle seguenti sono elencati i messaggi di errore nativi del driver ODBC
 |410|Impossibile creare file di lavoro temporanei.|  
 |423|Errore durante la creazione dell'oggetto OLE.|  
 |424|Errore durante la copia dell'oggetto OLE negli Appunti.|  
-|462|errore di coerenza interna del *valore.*|  
-|465|Errore di coerenza interna pass-through SQL.|  
+|462|errore di coerenza interna del *valore* .|  
+|465|Errore di coerenza interno SQL pass-through.|  
 |466|Handle di connessione non valido.|  
 |467|Proprietà non valida per i cursori locali.|  
 |468|Proprietà non valida per i cursori di tabella.|  
-|469|Il valore della proprietà non è compreso nell'intervallo.|  
+|469|Il valore della proprietà non è limite.|  
 |470|Nome di proprietà non corretto.|  
 |471|Formato di colonna non corretto.|  
 |473|Proprietà a livello di ambiente non valida.|  
-|474|Chiamata non valida eseguita durante l'esecuzione di una sequenza SQLEXEC().|  
-|479|Valore del \\ *nome*\\di colonna di aggiornamento non valido.|  
-|489|I campi generali non possono essere utilizzati nella condizione WHERE di un'istruzione di aggiornamento. Modificare la proprietà WhereType della visualizzazione.|  
-|491|Non sono specificate tabelle di aggiornamento. Utilizzare la proprietà Tables del cursore.|  
-|492|Non vengono specificate colonne \\chiave per il *valore*\\della tabella di aggiornamento. Utilizzare la proprietà KeyFieldList del cursore.|  
-|493|Parametro SQL mancante.|  
+|474|Chiamata non valida eseguita durante l'esecuzione di una sequenza SQLEXEC ().|  
+|479|Il \\ *valore*\\del nome della colonna di aggiornamento non è valido.|  
+|489|I campi generali non possono essere usati nella condizione WHERE di un'istruzione Update. Modificare la proprietà WhereType della vista.|  
+|491|Nessuna tabella di aggiornamento specificata. Utilizzare la proprietà Tables del cursore.|  
+|492|Non sono state specificate colonne chiave per il \\ *valore*\\della tabella Update. Utilizzare la proprietà DataFieldName del cursore.|  
+|493|Il parametro SQL è mancante.|  
 |494|La definizione della vista è stata modificata.|  
-|495|Avviso: la chiave definita dalla proprietà KeyField per il *valore* della tabella non è univoca.|  
+|495|Avviso: la chiave definita dalla proprietà campo chiave per il *valore* della tabella non è univoca.|  
 |498|Istruzione SQL SELECT non valida.|  
 |499|Il *valore* del parametro SQL non è valido.|  
   
@@ -174,104 +174,104 @@ Nelle tabelle seguenti sono elencati i messaggi di errore nativi del driver ODBC
   
 |||  
 |-|-|  
-|502|Impossibile scrivere nel record perché è in uso.|  
+|502|Non è possibile scrivere nel record perché è in uso.|  
 |503|Il file non può essere bloccato.|  
 |508|Errore durante l'inizializzazione di OLE.|  
-|520|Nessun database è aperto o impostato come database corrente.|  
+|520|Nessun database aperto o impostato come database corrente.|  
 |522|Errore di coerenza interna della connettività.|  
 |523|L'esecuzione è stata annullata dall'utente.|  
 |525|La funzione non è supportata nelle tabelle remote.|  
 |526|Errore di connettività: *valore.*|  
 |527|Impossibile caricare la libreria ODBC, ODBC32. DLL.|  
-|528|Punto di ingresso ODBC mancante, *valore*.|  
+|528|Il punto di ingresso ODBC manca, *valore*.|  
 |530|Recupero annullato; la tabella remota è chiusa.|  
-|532|La conversione dei tipi non è supportata.|  
+|532|La conversione del tipo non è supportata.|  
 |533|Questa proprietà è di sola lettura.|  
 |536|La funzione non è supportata nelle tabelle native.|  
-|538|È in esecuzione una stored procedure.|  
-|540|Numero di sessione non valido.|  
-|541|Il *valore* di connessione è occupato.|  
-|542|I campi della tabella di base sono stati modificati e non corrispondono più ai campi di visualizzazione. Non è possibile impostare le proprietà dei campi di visualizzazione.|  
-|543|La conversione del tipo richiesta dalla proprietà DataType per il campo '*valore*' non è valida.|  
-|544|La proprietà DataType per il campo '*valore*' non è valida.|  
-|545|Buffer di \\tabella per il *valore*dell'alias: contiene modifiche di cui non è stato eseguito il commit.|  
+|538|È in corso l'esecuzione di un stored procedure.|  
+|540|Il numero di sessione non è valido.|  
+|541|Il *valore* della connessione è occupato.|  
+|542|I campi della tabella di base sono stati modificati e non corrispondono più ai campi di visualizzazione. Impossibile impostare le proprietà del campo di visualizzazione.|  
+|543|La conversione del tipo richiesta dalla proprietà DataType per il campo '*value*' non è valida.|  
+|544|La proprietà DataType per il campo '*value*' non è valida.|  
+|545|Buffer tabella per \\ *valore*alias \ contiene modifiche di cui non è stato eseguito il commit.|  
 |546|Impossibile chiudere la tabella durante l'esecuzione dell'espressione associata a tabella.|  
-|547|Impossibile inserire una riga vuota da una vista nelle relative tabelle di base.|  
-|548|Il *valore* della tabella ha uno o più indici non strutturali aperti. Chiuderli e ripetere la transazione inizia.|  
-|549|Sessione dati: il*valore* non può essere rilasciato con transazioni aperte.|  
-|550|. Errore di coerenza interno DBC.|  
+|547|Impossibile inserire una riga vuota da una visualizzazione nelle relative tabelle di base.|  
+|548|Per il *valore* della tabella sono aperti uno o più indici non strutturali. Chiuderli e ripetere l'operazione BEGIN TRANSACTION.|  
+|549|Impossibile rilasciare la sessione dati #*value* con transazioni aperte.|  
+|550|. Errore di coerenza interna DBC.|  
 |557|Il database deve essere aperto in modo esclusivo.|  
 |559|Proprietà non trovata.|  
 |560|Il valore della proprietà non è valido.|  
-|561|Database non valido. Si prega di convalidare.|  
+|561|Il database non è valido. Verificare.|  
 |562|Impossibile trovare il *valore* dell'oggetto nel database.|  
-|563|Impossibile trovare il *valore* di visualizzazione nel database corrente.|  
-|566|Impossibile eseguire il comando PACK su un database mentre le relative tabelle sono in uso.|  
-|567|Proprietà della chiave primaria non valida. si prega di convalidare il database.|  
+|563|Impossibile trovare il *valore* della vista nel database corrente.|  
+|566|Non è possibile eseguire il comando PACK su un database mentre le tabelle sono in uso.|  
+|567|La proprietà della chiave primaria non è valida; verificare il database.|  
 |570|Il database è di sola lettura.|  
-|571|Il *valore* del nome è già utilizzato per un altro|  
-|575|Nome oggetto non valido.|  
-|577|Viene fatto riferimento al *valore* della tabella in una relazione.|  
-|578|Nome di tabella di database non valido.|  
-|579|Impossibile eseguire il comando su una tabella con cursori in modalità buffer di tabella.|  
-|580|La funzionalità non è supportata per i non.Feature is not supported for non-. Tabelle DBC.|  
-|581|Il *valore* del campo non accetta *valori*Null .|  
-|583|La regola di convalida dei record viene violata.|  
-|585|Conflitto di aggiornamento. Utilizzare TABLEUPDATE() con il parametro lForce per eseguire il commit dell'aggiornamento o TABLEREVERT() per eseguire il rollback dell'aggiornamento.|  
-|586|La funzione richiede la modalità di buffering di righe o tabelle.|  
-|587|OldVAL() o CURVAL() annidati non validi.|  
-|589|Il buffering di tabelle o righe richiede che SET MULTILOCKS sia impostato su ON.|  
-|590|Comando BEGIN TRANSACTION non riuscito. Il livello di nidificazione è troppo profondo.|  
-|591|Il comando END TRANSACTION non può essere emesso senza un comando BEGIN TRANSACTION corrispondente.|  
-|592|Il comando ROLLBACK non può essere emesso senza un comando BEGIN TRANSACTION corrispondente.|  
-|593|Il comando non può essere emesso all'interno di una transazione.|  
-|594|Non è consentito tentare un blocco di file in una transazione dopo l'assunzione di blocchi di record precedenti.|  
+|571|Il *valore* del nome è già usato per un altro|  
+|575|Il nome dell'oggetto non è valido.|  
+|577|Si fa riferimento al *valore* della tabella in una relazione.|  
+|578|Nome della tabella di database non valido.|  
+|579|Impossibile eseguire il comando in una tabella con cursori in modalità di buffering di tabella.|  
+|580|La funzionalità non è supportata per non. Tabelle DBC.|  
+|581|Il *valore* del campo non accetta un *valore*null.|  
+|583|La regola di convalida del record viene violata.|  
+|585|Conflitto di aggiornamento. Utilizzare TABLEUPDATE () con il parametro lForce per eseguire il commit dell'aggiornamento o TABLEREVERT () per eseguire il rollback dell'aggiornamento.|  
+|586|La funzione richiede la modalità di buffering di riga o tabella.|  
+|587|OLDVAL annidato () o CURVAl () non valido.|  
+|589|Per il buffering delle tabelle o delle righe è necessario che SET MULTILOCKS sia impostato su ON.|  
+|590|Comando BEGIN TRANSACTION non riuscito. Il livello di annidamento è troppo intenso.|  
+|591|Impossibile eseguire il comando END TRANSACTION senza un comando BEGIN TRANSACTION corrispondente.|  
+|592|Non è possibile eseguire il comando ROLLBACK senza un comando BEGIN TRANSACTION corrispondente.|  
+|593|Impossibile eseguire il comando all'interno di una transazione.|  
+|594|Non è consentito tentare un blocco di file in una transazione dopo l'esecuzione di blocchi di record precedenti.|  
 |596|Il buffering delle tabelle non è abilitato.|  
-|597|Le viste richiedono DB_BUFOPTROW o DB_BUFOPTTABLE.|  
-|598|La regola e il codice trigger devono bilanciare l'utilizzo delle transazioni.|  
-|599|Sessione dati:*il valore* è stato forzato a ROLLBACK tutte le transazioni per evitare deadlock.|  
+|597|Le visualizzazioni richiedono DB_BUFOPTROW o DB_BUFOPTTABLE.|  
+|598|Il codice di regola e trigger deve bilanciare l'utilizzo delle transazioni.|  
+|599|La sessione dati #*value* è stata forzata per eseguire il rollback di tutte le transazioni per evitare il deadlock.|  
   
 ## <a name="600"></a>600  
   
 |||  
 |-|-|  
-|601|Il nome alias è già in uso.|  
-|602|Operazione non valida per un campo Memo, Generale o Immagine.|  
-|612|Non è stato definito alcun menu o voce di menu di questo tipo.|  
-|618|Menu non è stato definito con DEFINE MENU.|  
-|624|Il titolo del menu non è stato definito con DEFINE PAD.|  
-|625|Menu non è stato definito con DEFINE POPUP.|  
-|631|Le dimensioni della matrice non sono valide.|  
-|637|Il file deve essere aperto esclusivamente per convertire il file Memo.|  
+|601|Il nome dell'alias è già in uso.|  
+|602|Operazione non valida per un campo Memo, generale o immagine.|  
+|612|Questo menu o voce di menu non è definito.|  
+|618|Menu non definito con il MENU Definisci.|  
+|624|Il titolo del menu non è stato definito con il riquadro Definisci.|  
+|625|Il menu non è stato definito con il POPUP Definisci.|  
+|631|Dimensioni della matrice non valide.|  
+|637|Il file deve essere aperto esclusivamente per convertire il file di memo.|  
 |638|Il campo deve essere un campo Memo.|  
 |649|Nessun comando PRINTJOB precedente corrispondente a questo comando.|  
-|651|CANCEL o SUSPEND non è consentito.|  
-|659|La tabella contiene campi memo che non possono essere convertiti mentre è aperta in sola lettura.|  
-|683|Tag di indice non trovato.|  
+|651|Annulla o SOSPENDi non è consentito.|  
+|659|La tabella contiene campi memo che non possono essere convertiti durante l'apertura di sola lettura.|  
+|683|Il tag index non è stato trovato.|  
   
 ## <a name="700"></a>700  
   
 |||  
 |-|-|  
-|700|Il record è in uso da un altro utente.|  
+|700|Il record è usato da un altro utente.|  
 |701|Il file deve essere aperto in modo esclusivo.|  
-|702|Il file è in uso da un altro utente.|  
-|703|Record non bloccato.|  
-|705|Accesso ai file negato.|  
-|706|Impossibile ordinare . FILE IDX in ordine decrescente.|  
-|707|Strutturali. File CDX non trovato.|  
+|702|Il file è utilizzato da un altro utente.|  
+|703|Il record non è bloccato.|  
+|705|Accesso al file negato.|  
+|706|Non è possibile ordinare. IDX i file in ordine decrescente.|  
+|707|Strutturali. Il file CDX non è stato trovato.|  
 |708|Il file è aperto in un'altra area di lavoro.|  
 |712|Il nome del campo è un duplicato o non valido.|  
-|714|Il*valore*' della finestra ' non è stato definito.|  
+|714|La finestra '*value*' non è stata definita.|  
 |718|Il file è di sola lettura.|  
-|722|Espressione del preprocessore non valida.|  
-|734|Valore *value* della proprietà non trovato.|  
-|737|*value* è un metodo, un evento o un oggetto.|  
+|722|Espressione per il preprocessore non valida.|  
+|734|Il *valore* della proprietà non è stato trovato.|  
+|737|il *valore* è un metodo, un evento o un oggetto.|  
 |738|Il *valore* della proprietà non è un metodo o un evento.|  
-|740|*value* è una proprietà di sola lettura.|  
-|748|Questo file non è compatibile con la versione corrente di Visual FoxPro.|  
+|740|il *valore* è una proprietà di sola lettura.|  
+|748|Questo file è incompatibile con la versione corrente di Visual FoxPro.|  
 |750|Il file è stato creato in una versione successiva di Visual FoxPro rispetto alla versione corrente.|  
-|763|*Il valore* della proprietà esiste già.|  
+|763|Il *valore* della proprietà esiste già.|  
 |773|Il tipo di oggetto di database non è valido.|  
 |784|Questo oggetto è derivato da una classe base e non dispone di una classe padre.|  
   
@@ -279,13 +279,13 @@ Nelle tabelle seguenti sono elencati i messaggi di errore nativi del driver ODBC
   
 |||  
 |-|-|  
-|802|SQL: impossibile individuare la tabella.|  
+|802|SQL: Impossibile individuare la tabella.|  
 |872|Troppe colonne.|  
 |879|Nessuna chiave primaria.|  
 |884|L'univocità del *valore* di indice viene violata.|  
 |885|Solo i tag strutturali possono essere definiti come candidati.|  
-|886|L'indice non accetta NULL.|  
-|887|Ricorsione non valida nella valutazione delle regole.|  
+|886|Index non accetta valori NULL.|  
+|887|Ricorsione non valida nella valutazione della regola.|  
 |888|Il nome del tag è troppo lungo.|  
   
 ## <a name="900"></a>900  
@@ -293,43 +293,43 @@ Nelle tabelle seguenti sono elencati i messaggi di errore nativi del driver ODBC
 |||  
 |-|-|  
 |901|Il valore, il tipo o il conteggio dell'argomento della funzione non è valido.|  
-|902|Valutatore di espressioni non riuscito.|  
-|903|La stringa è troppo lunga per adattarsi.|  
-|904|Errore di dominio.|  
-|905|LOG(): zero o negativo utilizzato come argomento.|  
-|906|L'argomento SQRT() non può essere negativo.|  
-|912|Operazione non valida per un campo Generale.|  
+|902|Errore dell'analizzatore di espressioni.|  
+|903|La stringa è troppo grande per essere adattata.|  
+|904|* * o ^ errore di dominio.|  
+|905|LOG (): zero o negativo usato come argomento.|  
+|906|L'argomento SQRT () non può essere negativo.|  
+|912|Operazione non valida per un campo generale.|  
 |914|Il numero della tabella codici non è valido.|  
-|915|Sequenza di confronto '*valore*' non trovata.|  
+|915|Impossibile trovare la sequenza di confronto '*value*'.|  
 |918|Il nome del file è troppo lungo.|  
 |922|Il volume non esiste.|  
-|923|Valore *dell'oggetto* non trovato.|  
-|924|*valore* non è un oggetto.|  
-|925|*Valore*del membro sconosciuto .|  
-|928|Istruzione è valida solo all'interno di una definizione di classe.|  
-|929|*valore* può essere utilizzato solo all'interno di un metodo.|  
+|923|Il *valore* dell'oggetto non è stato trovato.|  
+|924|il *valore* non è un oggetto.|  
+|925|*Valore*del membro sconosciuto.|  
+|928|L'istruzione è valida solo all'interno di una definizione di classe.|  
+|929|il *valore* può essere utilizzato solo all'interno di un metodo.|  
 |930|Impossibile ridefinire il *valore*.|  
-|931|L'istruzione non è in una routine.|  
+|931|L'istruzione non è in una procedura.|  
 |934|L'istruzione è valida solo all'interno di un metodo.|  
-|935|L'oggetto corrente non eredita dal *valore*della classe .|  
-|937|Il file di procedura '*valore*' non è stato trovato.|  
+|935|L'oggetto corrente non eredita dal *valore*della classe.|  
+|937|Il file di routine '*value*' non è stato trovato.|  
 |938|L'oggetto non è contenuto in un *valore*.|  
-|939|Mancata corrispondenza CON/ENDWITH.|  
-|940|Espressione non valida all'esterno di WITH/ENDWITH.|  
+|939|WITH/ENDWITH non corrispondente.|  
+|940|Espressione non valida all'esterno di con/ENDWITH.|  
 |941|Il codice di errore non è valido.|  
 |942|Gli oggetti non possono essere assegnati alle matrici.|  
 |943|Il *valore* del membro non restituisce un oggetto.|  
 |945|L'oggetto corrente è stato rilasciato.|  
 |947|Espressione troppo complessa.|  
 |951|Impossibile cancellare l'oggetto in uso.|  
-|955|Vincere. INI/registro è danneggiato.|  
-|957|Errore durante l'accesso allo spooler della stampante.|  
+|955|Win. INI/Registro di sistema danneggiato.|  
+|957|Errore durante l'accesso allo spooler di stampa.|  
 |959|Coordinate non valide.|  
-|960|Ridefinizione non valida del *valore*della variabile .|  
-|971|Impossibile compilare fino al completamento del comando COMPILE corrente.|  
+|960|Ridefinizione non valida del *valore*della variabile.|  
+|971|Impossibile compilare fino al completamento del comando di compilazione corrente.|  
 |972|Il *valore* della matrice è in uso.|  
-|974|Le matrici non possono essere assegnate agli elementi della matrice.|  
-|976|Impossibile risolvere il backlink.|  
-|988|Valore di valuta non compreso nell'intervallo.|  
-|990|Annullare.|  
+|974|Non è possibile assegnare matrici agli elementi della matrice.|  
+|976|Non è possibile risolvere il backlink.|  
+|988|Il valore della valuta non è compreso nell'intervallo.|  
+|990|Annulla.|  
 |999|Funzione non implementata.|

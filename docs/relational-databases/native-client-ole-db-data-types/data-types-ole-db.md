@@ -17,16 +17,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 501e73cd5db2fbf79cd84c0184161f0c6ec6a341
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304442"
 ---
 # <a name="data-types-ole-db"></a>Tipi di dati (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Per [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguire istruzioni ed elaborare i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] risultati utilizzando il provider OLE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB Native Client, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è necessario conoscere il modo in cui il provider OLE DB Native Client esegue il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mapping dei tipi di dati ai tipi di dati OLE DB durante l'associazione di parametri o colonne in un set di righe e quando utilizza l'interfaccia **ITableDefinition** per creare una tabella in .  
+  Per eseguire istruzioni ed [!INCLUDE[tsql](../../includes/tsql-md.md)] elaborare i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] risultati utilizzando il provider di OLE DB di Native client, è necessario essere in grado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di eseguire il mapping [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tra i tipi di dati del provider di OLE DB di Native client e i tipi di dati OLE DB quando si associano parametri o colonne di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]set di righe e quando si utilizza l'interfaccia **ITableDefinition** per creare una tabella in.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   

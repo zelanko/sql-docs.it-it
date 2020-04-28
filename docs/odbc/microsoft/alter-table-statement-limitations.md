@@ -1,5 +1,5 @@
 ---
-title: "Limitazioni dell'istruzione ALTER TABLE : Documenti Microsoft"
+title: Limitazioni dell'istruzione ALTER TABLE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ ms.assetid: f3e88f85-edf4-47cd-a822-292b106ddb34
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 19afa8b07b0051de9ce45ec652ea337c0f689f52
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304700"
 ---
 # <a name="alter-table-statement-limitations"></a>Limitazioni dell'istruzione ALTER TABLE
-Quando viene utilizzato il driver dBASE o Paradox, una volta creato un indice e aggiunto un nuovo record, la struttura della tabella non può essere modificata dall'istruzione ALTER TABLE a meno che l'indice non venga eliminato e il contenuto della tabella non venga eliminato.  
+Quando si utilizza il driver dBASE o Paradox, dopo la creazione di un indice e l'aggiunta di un nuovo record, la struttura della tabella non può essere modificata dall'istruzione ALTER TABLE, a meno che l'indice non venga eliminato e il contenuto della tabella venga eliminato.  
   
- Le istruzioni ALTER TABLE non sono supportate per i driver di Microsoft Excel o text.  
+ Le istruzioni ALTER TABLE non sono supportate per i driver di Microsoft Excel o di testo.  
   
 > [!NOTE]  
->  Quando si utilizza il driver Paradox senza implementare il motore di database Borland, le istruzioni ALTER TABLE non sono supportate. sono consentite solo istruzioni di lettura e accodamento.
+>  Quando si utilizza il driver Paradox senza implementare il motore di database Borland, le istruzioni ALTER TABLE non sono supportate. sono consentite solo istruzioni Read e Append.

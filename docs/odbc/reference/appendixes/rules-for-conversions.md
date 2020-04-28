@@ -1,5 +1,5 @@
 ---
-title: Regole per le conversioni Documenti Microsoft
+title: Regole per le conversioni | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,89 +16,89 @@ ms.assetid: 89f846a3-001d-496a-9843-ac9c38dc1762
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: c49177d62fffc3b3b5c47a25bf3fb421d7564245
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305087"
 ---
 # <a name="rules-for-conversions"></a>Regole per le conversioni
-Le regole in questa sezione si applicano per le conversioni che coinvolgono valori letterali numerici. Ai fini di queste regole, sono definiti i seguenti termini:  
+Le regole in questa sezione sono valide per le conversioni che coinvolgono valori letterali numerici. Ai fini di queste regole, vengono definiti i termini seguenti:  
   
--   *Assegnazione del negozio:* Quando si inviano dati in una colonna di tabella in un database. Ciò si verifica durante le chiamate a **SQLExecute**, **SQLExecDirect**e **SQLSetPos**. Durante l'assegnazione dell'archivio, "destinazione" si riferisce a una colonna di database e "origine" si riferisce ai dati nei buffer dell'applicazione.  
+-   *Assegnazione archivio:* Quando si inviano dati a una colonna di una tabella in un database. Questo errore si verifica durante le chiamate a **SQLExecute**, **SQLExecDirect**e **SQLSetPos**. Durante l'assegnazione del negozio, "destinazione" si riferisce a una colonna del database e "Source" si riferisce ai dati nei buffer dell'applicazione.  
   
--   *Assegnazione recupero:* Quando si recuperano dati dal database in buffer dell'applicazione. Ciò si verifica durante le chiamate a **SQLFetch**, **SQLGetData**, **SQLFetchScroll**e **SQLSetPos**. Durante l'assegnazione di recupero, "destinazione" si riferisce ai buffer dell'applicazione e "origine" si riferisce alla colonna del database.  
+-   *Assegnazione di recupero:* Durante il recupero dei dati dal database ai buffer dell'applicazione. Questo errore si verifica durante le chiamate a **SQLFetch**, **SQLGetData**, **SQLFetchScroll**e **SQLSetPos**. Durante l'assegnazione del recupero, "destinazione" si riferisce ai buffer dell'applicazione e "Source" si riferisce alla colonna di database.  
   
 -   *CS:* Valore nell'origine del carattere.  
   
 -   *NT:* Valore nella destinazione numerica.  
   
--   *NS:* Valore nell'origine numerica.  
+-   *NS:* Valore dell'origine numerica.  
   
 -   *CT:* Valore nella destinazione del carattere.  
   
--   Precisione di un valore letterale numerico esatto: il numero di cifre che contiene.  
+-   Precisione di un valore letterale numerico esatto: numero di cifre in esso contenute.  
   
 -   La scala di un valore letterale numerico esatto: il numero di cifre a destra del periodo espresso o implicito.  
   
--   La precisione di un valore letterale numerico approssimativo: la precisione della sua mantissa.  
+-   Precisione di un valore letterale numerico approssimato: la precisione del relativo mantissa.  
   
-## <a name="character-source-to-numeric-target"></a>Origine carattere alla destinazione numerica  
- Di seguito sono riportate le regole per la conversione da un'origine di caratteri (CS) a una destinazione numerica (NT):  
+## <a name="character-source-to-numeric-target"></a>Da origine carattere a destinazione numerica  
+ Di seguito sono riportate le regole per la conversione da un'origine carattere (CS) a una destinazione numerica (NT):  
   
-1.  Sostituire CS con il valore ottenuto rimuovendo eventuali spazi iniziali o finali in CS. Se CS non è un *valore letterale numerico*valido, viene restituito SQLSTATE 22018 (valore carattere non valido per la specifica cast).  
+1.  Sostituire CS con il valore ottenuto rimuovendo gli spazi iniziali o finali in CS. Se CS non è un valore *letterale numerico*valido, viene restituito SQLSTATE 22018 (valore di carattere non valido per la specifica del cast).  
   
-2.  Sostituire CS con il valore ottenuto rimuovendo gli zeri iniziali prima del separatore decimale, gli zeri finali dopo il separatore decimale o entrambi.  
+2.  Sostituire CS con il valore ottenuto rimuovendo gli zeri iniziali prima del separatore decimale, gli zeri finali dopo la virgola decimale o entrambi.  
   
-3.  Convertire CS in NT. Se la conversione comporta una perdita di cifre significative, viene restituito SQLSTATE 22003 (valore numerico non compreso nell'intervallo). Se la conversione comporta la perdita di cifre non significative, viene restituito SQLSTATE 01S07 (troncamento frazionario).  
+3.  Convertire CS in NT. Se la conversione comporta la perdita di cifre significative, viene restituito l'identificativo SQLSTATE 22003 (valore numerico non compreso nell'intervallo). Se la conversione comporta la perdita di cifre non significative, viene restituito SQLSTATE 01S07 (troncamento frazionario).  
   
-## <a name="numeric-source-to-character-target"></a>Origine numerica a destinazione carattereNumeric Source to Character Target  
- Di seguito sono riportate le regole per la conversione da un'origine numerica (NS) a una destinazione carattere (CT):Following are the rules for converting from a numeric source (NS) to a character target (CT):  
+## <a name="numeric-source-to-character-target"></a>Da origine numerica a destinazione carattere  
+ Di seguito sono riportate le regole per la conversione da un'origine numerica (NS) a una destinazione di caratteri (CT):  
   
-1.  Sia LT la lunghezza in caratteri di CT. Per l'assegnazione di recupero, LT è uguale alla lunghezza del buffer in caratteri meno il numero di byte nel carattere di terminazione null per questo set di caratteri.  
+1.  Lasciare che LT sia la lunghezza in caratteri di CT. Per l'assegnazione di recupero, LT è uguale alla lunghezza del buffer in caratteri meno il numero di byte nel carattere di terminazione null per questo set di caratteri.  
   
-2.  Casi:  
+2.  Casi  
   
-    -   Se NS è un tipo numerico esatto, quindi lasciare YP uguale alla stringa di caratteri più breve che è conforme alla definizione di *esatto-numerico-letterale* in modo che la scala di YP è la stessa della scala di NS e il valore interpretato di YP è il valore assoluto di NS.  
+    -   Se NS è un tipo numerico esatto, è possibile lasciare che l'oggetto YP sia uguale alla stringa di caratteri più breve conforme alla definizione del valore *letterale exact-numeric* , in modo che la scala di YP corrisponda alla scala di NS e il valore interpretato di YP sia il valore assoluto di NS.  
   
-    -   Se NS è un tipo numerico approssimativo, quindi lasciare YP essere una stringa di caratteri come segue:  
+    -   Se NS è un tipo numerico approssimativo, lasciare che YP sia una stringa di caratteri come indicato di seguito:  
   
          Maiuscole/minuscole:  
   
-         Se NS è uguale a 0, allora YP è 0.  
+         Se NS è uguale a 0, YP è 0.  
   
-         Che YSN sia la stringa di caratteri più breve conforme alla definizione di exact*numeric-literal* e il cui valore interpretato è il valore assoluto di NS. Se la lunghezza di YSN è minore di (*precisione* 1) del tipo di dati di NS, quindi lasciare YP uguale a YSN.  
+         Consentire a YSN di essere la stringa di caratteri più breve conforme alla definizione di valore*letterale* exact-numeric e il cui valore interpretato è il valore assoluto di NS. Se la lunghezza di YSN è minore di (*precisione* + 1) del tipo di dati NS, consentire a YP uguale a YSN.  
   
-         In caso contrario, YP è la stringa di caratteri più breve conforme alla definizione di *approssimativo-numerico-letterale* il cui valore interpretato è il valore assoluto di NS e la cui *mantissa* è costituita da una singola *cifra* diversa da '0', seguita da un *punto* e da un *unsigned-integer*.  
+         In caso contrario, YP è la stringa di caratteri più breve conforme alla definizione di valore *letterale approssimativo* il cui valore interpretato è il valore assoluto di NS e il cui *mantissa* è costituito da una singola *cifra* che non è' 0', seguita da un *punto* e un *intero senza segno*.  
   
 3.  Maiuscole/minuscole:  
   
-    -   Se NS è minore di 0, allora lasciate che Y sia il risultato di:  
+    -   Se NS è minore di 0, consentire a Y di essere il risultato di:  
   
-         '-' &#124;&#124; YP  
+         '-'  &#124;&#124; YP  
   
-         dove '&#124;&#124;' è l'operatore di concatenazione di stringhe.  
+         dove ' &#124;&#124;' è l'operatore di concatenazione di stringhe.  
   
-         In caso contrario, lasciare Y uguale YP.  
+         In caso contrario, lasciare Y uguale a YP.  
   
-4.  Lasciate che LY sia la lunghezza in caratteri di Y.  
+4.  Lasciare che sia la lunghezza in caratteri di Y.  
   
 5.  Maiuscole/minuscole:  
   
-    -   Se LY è uguale a LT, CT è impostato su Y.  
+    -   Se LY è uguale a LT, CT viene impostato su Y.  
   
-    -   Se LY è minore di LT, CT viene impostato su Y esteso a destra in base al numero appropriato di spazi.  
+    -   Se LY è minore di LT, CT viene impostato su Y esteso a destra del numero di spazi appropriato.  
   
          In caso contrario (LY > LT), copiare i primi caratteri LT di Y in CT.  
   
          Maiuscole/minuscole:  
   
-         Se si tratta di un'assegnazione di archivio, restituire l'errore SQLSTATE 22001 (dati stringa troncati a destra).  
+         Se si tratta di un'assegnazione di archivio, restituire l'errore SQLSTATE 22001 (dati stringa, troncati a destra).  
   
-         Se si tratta di assegnazione di recupero, restituire l'avviso SQLSTATE 01004 (dati stringa troncati a destra). Quando la copia comporta la perdita di cifre frazionarie (diversi dagli zeri finali), è definito dal driver se si verifica una delle seguenti condizioni:  
+         Se si tratta di un'assegnazione di recupero, restituire l'avviso SQLSTATE 01004 (dati stringa, troncati a destra). Quando la copia comporta la perdita di cifre frazionarie (ad eccezione degli zeri finali), è definito dal driver se si verifica una delle condizioni seguenti:  
   
-         (1) Il driver tronca la stringa in Y in una scala appropriata (che può anche essere zero) e scrive il risultato in CT.  
+         (1) il driver tronca la stringa in Y a una scala appropriata (che può essere anche zero) e scrive il risultato in CT.  
   
-         (2) Il conducente arrotonda la stringa in Y a una scala appropriata (che può anche essere zero) e scrive il risultato in CT.  
+         (2) il driver arrotonda la stringa in Y a una scala appropriata (che può essere anche zero) e scrive il risultato in CT.  
   
-         (3) Il conducente non tronca né arrotonda, ma copia solo i primi caratteri LT di Y in CT.
+         (3) il driver non tronca né arrotonda, ma copia solo i primi caratteri LT di Y in CT.

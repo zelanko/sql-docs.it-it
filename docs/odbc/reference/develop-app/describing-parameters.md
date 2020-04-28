@@ -1,5 +1,5 @@
 ---
-title: Descrizione dei parametri Documenti Microsoft
+title: Descrizione dei parametri | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,21 +13,21 @@ ms.assetid: 118d0f47-2afd-4955-bb47-38b1e2c2f38f
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: f4d9284294707da0a469bf75ff9812ad5f7855bb
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305942"
 ---
 # <a name="describing-parameters"></a>Descrizione di parametri
-**SQLBindParameter** include argomenti che descrivono il parametro: il tipo SQL, la precisione e la scala. Il driver utilizza queste informazioni, o *metadati,* per convertire il valore del parametro nel tipo richiesto dall'origine dati. A prima vista, potrebbe sembrare che il driver è in una posizione migliore per conoscere i metadati del parametro rispetto all'applicazione; dopo tutto, il driver può facilmente individuare i metadati per una colonna del set di risultati. A quanto pare, questo non è il caso. In primo luogo, la maggior parte delle origini dati non forniscono un modo per il driver per individuare i metadati dei parametri. In secondo luogo, la maggior parte delle applicazioni conosce già i metadati.  
+**SQLBindParameter** include argomenti che descrivono il parametro: tipo, precisione e scala SQL. Il driver utilizza queste informazioni, o *metadati,* per convertire il valore del parametro nel tipo necessario per l'origine dati. A prima vista, potrebbe sembrare che il driver si trovi in una posizione migliore per individuare i metadati del parametro rispetto all'applicazione; Dopo tutto, il driver può individuare facilmente i metadati per una colonna del set di risultati. Come si scopre, questo non è il caso. Per prima cosa, la maggior parte delle origini dati non consente al driver di individuare i metadati dei parametri. In secondo luogo, la maggior parte delle applicazioni già conosce i metadati.  
   
- Se un'istruzione SQL è hardcoded nell'applicazione, il writer dell'applicazione conosce già il tipo di ogni parametro. Se un'istruzione SQL viene costruita dall'applicazione in fase di esecuzione, l'applicazione può determinare i metadati durante la compilazione dell'istruzione. Ad esempio, quando l'applicazione costruisce la clausola  
+ Se un'istruzione SQL è hardcoded nell'applicazione, il writer di applicazioni conosce già il tipo di ogni parametro. Se un'istruzione SQL viene costruita dall'applicazione in fase di esecuzione, l'applicazione può determinare i metadati durante la compilazione dell'istruzione. Ad esempio, quando l'applicazione crea la clausola  
   
 ```  
 WHERE OrderID = ?  
 ```  
   
- può chiamare **SQLColumns** per il OrderID colonna.  
+ può chiamare **SQLColumns** per la colonna OrderID.  
   
- L'unica situazione in cui l'applicazione non è in grado di determinare facilmente i metadati del parametro è quando l'utente immette un'istruzione con parametri. In questo caso, l'applicazione chiama **SQLPrepare** per preparare l'istruzione, **SQLNumParams** per determinare il numero di parametri e **SQLDescribeParam** per descrivere ogni parametro. Tuttavia, come è stato annotato in precedenza, la maggior parte delle origini dati non forniscono un modo per il driver per individuare i metadati dei parametri, pertanto **SQLDescribeParam** non è ampiamente supportato.
+ L'unica situazione in cui l'applicazione non è in grado di determinare facilmente i metadati dei parametri è quando l'utente immette un'istruzione con parametri. In questo caso, l'applicazione chiama **SQLPrepare** per preparare l'istruzione, **SQLNumParams** per determinare il numero di parametri e **SQLDescribeParam** per descrivere ogni parametro. Tuttavia, come indicato in precedenza, la maggior parte delle origini dati non consente al driver di individuare i metadati dei parametri, quindi **SQLDescribeParam** non è ampiamente supportato.
