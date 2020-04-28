@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo Valori restituiti per dBASE Documenti Microsoft
+title: Valori restituiti da SQLGetInfo per dBASE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,24 +17,24 @@ ms.assetid: af64753c-c758-4b68-954b-2c84e3bbd93f
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ea3a937fe7e877eaf70c405678d82111a691dd3b
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298551"
 ---
 # <a name="sqlgetinfo-returned-values-for-dbase"></a>Valori restituiti da SQLGetInfo per dBASE
-Nella tabella seguente sono elencati i #defines di linguaggio C per l'argomento *fInfoType* e i valori corrispondenti restituiti da **SQLGetInfo**. Queste informazioni possono essere recuperate passando il linguaggio C elencato #defines a **SQLGetInfo** nel *fInfoType* argomento. Per ulteriori informazioni sui valori restituiti da **SQLGetInfo**, vedere *ODBC Programmer's Reference*.  
+Nella tabella seguente sono elencati i #defines del linguaggio C per l'argomento *fInfoType* e i valori corrispondenti restituiti da **SQLGetInfo**. Queste informazioni possono essere recuperate passando le #defines del linguaggio C elencate a **SQLGetInfo** nell'argomento *fInfoType* . Per ulteriori informazioni sui valori restituiti da **SQLGetInfo**, vedere *ODBC Programmer ' s Reference*.  
   
 > [!NOTE]  
 >  Dove **SQLGetInfo** restituisce una maschera di bit a 32 bit, una barra verticale (&#124;) rappresenta un OR bit per bit.  
   
-|Infotype|Valore restituito|  
+|InfoType|Valore restituito|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|Tutto pronto|  
+|SQL_AGGREGATE_FUNCTIONS|Tutti impostati|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|Più valori|  
 |SQL_ASYNC_MODE|0|  
@@ -44,7 +44,7 @@ Nella tabella seguente sono elencati i #defines di linguaggio C per l'argomento 
 |SQL_CATALOG_LOCATION|SQL_QL_START|  
 |SQL_CATALOG_NAME|"Y"|  
 |SQL_CATALOG_NAME_SEPARATOR|"\\"|  
-|SQL_CATALOG_TERM|"Directory"|  
+|SQL_CATALOG_TERM|Directory|  
 |SQL_CATALOG_USAGE|Più valori|  
 |SQL_COLLATION_SEQ|""|  
 |SQL_COLUMN_ALIAS|"Y"|  
@@ -81,22 +81,22 @@ Nella tabella seguente sono elencati i #defines di linguaggio C per l'argomento 
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|DSN da Odbc.ini o "" se la parola chiave DRIVER viene utilizzata in Odbc.ini|  
-|SQL_DATA_SOURCE_READ_ONLY|"N" (dipende dall'origine dati).)|  
+|SQL_DATA_SOURCE_NAME|DSN da ODBC. ini o "" Se si usa la parola chiave DRIVER in ODBC. ini|  
+|SQL_DATA_SOURCE_READ_ONLY|"N" (dipende dall'origine dati.)|  
 |SQL_DATABASE_NAME|Directory database corrente|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|"DBASE"|  
+|SQL_DBMS_NAME|DBASE|  
 |SQL_DBMS_VER|Più valori|  
 |SQL_DDL_INDEX|Più valori|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
 |SQL_DESCRIBE_PARAMETER|0|  
-|SQL_DRIVER_HDBC|Gestito da Gestione Driver.|  
-|SQL_DRIVER_HENV|Gestito da Gestione Driver.|  
-|SQL_DRIVER_HLIB|Gestito da Gestione Driver.|  
-|SQL_DRIVER_HSTMT|Gestito da Gestione Driver.|  
-|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
+|SQL_DRIVER_HDBC|Gestito da Gestione driver.|  
+|SQL_DRIVER_HENV|Gestito da Gestione driver.|  
+|SQL_DRIVER_HLIB|Gestito da Gestione driver.|  
+|SQL_DRIVER_HSTMT|Gestito da Gestione driver.|  
+|SQL_DRIVER_NAME|"OdbcJt32. dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4.00.*nnnn"*(*nnnn* specifica la data di compilazione)|  
+|SQL_DRIVER_VER|"4,00.*nnnn*" (*nnnn* specifica la data di compilazione)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -110,8 +110,8 @@ Nella tabella seguente sono elencati i #defines di linguaggio C per l'argomento 
 |SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1|SQL_CA1_NEXT|  
 |SQL_GETDATA_EXTENSIONS|Più valori|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
-|SQL_IDENTIFIER_CASE|SQL_IC_UPPER (il qualificatore viene restituito in lettere maiuscole e minuscole in modo che Windows NT possa individuare la directory).|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"\`(virgoletta posteriore)|  
+|SQL_IDENTIFIER_CASE|SQL_IC_UPPER (il qualificatore viene restituito in un caso misto, in modo che Windows NT possa individuare la directory).|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (virgoletta indietro)|  
 |SQL_KEYWORDS|Più valori|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -119,7 +119,7 @@ Nella tabella seguente sono elencati i #defines di linguaggio C per l'argomento 
 |SQL_MAX_CHAR_LITERAL_LEN|254|  
 |SQL_MAX_COLUMN_NAME_LEN|10|  
 |SQL_MAX_COLUMNS_IN_GROUP_BY|10|  
-|SQL_MAX_COLUMNS_IN_INDEX|0 (Limite sconosciuto o non applicabile)|  
+|SQL_MAX_COLUMNS_IN_INDEX|0 (limite sconosciuto o non applicabile)|  
 |SQL_MAX_COLUMNS_IN_ORDER_BY|10|  
 |SQL_MAX_COLUMNS_IN_SELECT|255|  
 |SQL_MAX_COLUMNS_IN_TABLE|255|  
@@ -141,7 +141,7 @@ Nella tabella seguente sono elencati i #defines di linguaggio C per l'argomento 
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|Più valori|  
-|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
+|CONFORMITÀ SQL_ODBC_SAG_CLI_|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|Da Gestione driver|  
 |SQL_OJ_CAPABILITIES|Più valori|  
@@ -155,12 +155,12 @@ Nella tabella seguente sono elencati i #defines di linguaggio C per l'argomento 
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|Più valori|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|"DBASE"|  
-|SQL_SPECIAL_CHARACTERS|\`\@#$%^&\*\_-+=\\"";";:\? / \> \[]&#124;'|  
+|SQL_SERVER_NAME|DBASE|  
+|SQL_SPECIAL_CHARACTERS|\`\@#$%^&"~\*\? / } {\> "';:<,.!'\_-+=\\ \[] &#124; "|  
 |SQL_STRING_FUNCTIONS|Più valori|  
 |SQL_SUBQUERIES|Più valori|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|"TABELLA"|  
+|SQL_TABLE_TERM|TABELLA|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|Più valori|  

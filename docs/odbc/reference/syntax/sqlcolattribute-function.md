@@ -17,20 +17,20 @@ f1_keywords:
 helpviewer_keywords:
 - SQLColAttribute function [ODBC]
 ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c4577b97c827d527422fe2448656496d7c196c40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c94de3dfc7036277f8be56c401326cdab07a9606
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68118695"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301291"
 ---
 # <a name="sqlcolattribute-function"></a>Funzione SQLColAttribute
 **Conformità**  
  Versione introdotta: ODBC 3,0 Standard Compliance: ISO 92  
   
- **Summary**  
+ **Riepilogo**  
  **SQLColAttribute** restituisce informazioni sul descrittore per una colonna in un set di risultati. Le informazioni sul descrittore vengono restituite come una stringa di caratteri, un valore dipendente dal descrittore o un valore integer.  
   
 > [!NOTE]  

@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 33ec9e1dd6d2898261eb541d746e4ccece9d5591
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299056"
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
@@ -45,7 +45,7 @@ HRESULT WaitForAsynchCompletion(
  Il metodo è riuscito.  
   
  E_UNEXPECTED  
- Un set di righe è in uno stato inutilizzato perché **ITransaction::Commit** o **ITransaction::Abort** è stato chiamato o il set di righe è stato annullato durante la fase di inizializzazione.  
+ Un set di righe è in uno stato inutilizzato perché è stato chiamato **ITransaction:: commit** o **ITransaction:: Abort** oppure il set di righe è stato annullato durante la fase di inizializzazione.  
   
  DB_E_CANCELED  
  L'elaborazione asincrona è stata annullata durante il popolamento del set di righe o l'inizializzazione dell'oggetto origine dati.  
@@ -57,7 +57,7 @@ HRESULT WaitForAsynchCompletion(
 >  Oltre ai valori di codice restituiti elencati in precedenza, il metodo **ISSAsynchStatus::WaitForAsynchCompletion** supporta anche i valori di codice restituiti dai metodi OLEDB di base **ICommand::Execute** e **IDBInitialize::Initialize**.  
   
 ## <a name="remarks"></a>Osservazioni  
- Il metodo **ISSAsynchStatus::WaitForAsynchCompletion** non verrà restituito fino al superamento del valore di timeout (in millisecondi) o al completamento dell'operazione in sospeso. **L'oggetto Command** dispone di una proprietà **CommandTimeout** che controlla il numero di secondi di esecuzione di una query prima del timeout. La proprietà **CommandTimeout** verrà ignorata se utilizzata insieme al metodo **ISSAsynchStatus::WaitForAsynchCompletion.**  
+ Il metodo **ISSAsynchStatus::WaitForAsynchCompletion** non verrà restituito fino al superamento del valore di timeout (in millisecondi) o al completamento dell'operazione in sospeso. L'oggetto **Command** dispone di una proprietà **CommandTimeout** che controlla il numero di secondi di esecuzione di una query prima che si verifichi il timeout. La proprietà **CommandTimeout** verrà ignorata se utilizzata insieme al metodo **ISSAsynchStatus:: WaitForAsynchCompletion** .  
   
  La proprietà di timeout viene ignorata per le operazioni asincrone. Il parametro di timeout di **ISSAsynchStatus::WaitForAsynchCompletion** specifica la quantità massima di tempo che deve trascorrere prima che il controllo venga restituito al chiamante. Se questo timeout scade, verrà restituito DB_S_ASYNCHRONOUS. I timeout non annullano mai operazioni asincrone. Se l'applicazione deve annullare un'operazione asincrona che non viene completata entro il periodo di timeout, deve attendere lo scadere del timeout e quindi annullare in modo esplicito l'operazione se viene restituito DB_S_ASYNCHRONOUS.  
   
@@ -71,7 +71,7 @@ HRESULT WaitForAsynchCompletion(
  È stata inoltre aggiunta la proprietà SSPROP_ISSAsynchStatus al set di proprietà DBPROPSET_SQLSERVERROWSET. I provider che supportano l'interfaccia [ISSAsynchStatus](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md) devono implementare questa proprietà con un valore VARIANT_TRUE.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esecuzione di operazioni asincronePerforming Asynchronous Operations](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   
+ [Esecuzione di operazioni asincrone](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   
  [ISSAsynchStatus &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

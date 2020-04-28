@@ -1,5 +1,5 @@
 ---
-title: 'Da SQL a C: Intervalli anno-mese Documenti Microsoft'
+title: 'Da SQL a C: intervalli anno-mese | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -16,34 +16,34 @@ ms.assetid: 1233634b-8214-420f-b872-3b2630105ba4
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ba79a4d6165a43676634a6b79db56b88f5bcc234
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81296391"
 ---
 # <a name="sql-to-c-year-month-intervals"></a>Da SQL a C: intervalli anno-mese
 
-Gli identificatori per i tipi di dati SQL ODBC dell'intervallo anno-mese sono i seguenti:
+Gli identificatori per i tipi di dati ODBC SQL con intervallo anno-mese sono i seguenti:
 
 - SQL_INTERVAL_MONTH
 - SQL_INTERVAL_YEAR
 - SQL_INTERVAL_YEAR_TO_MONTH
 
-Nella tabella seguente vengono illustrati i tipi di dati C ODBC in cui è possibile convertire i dati SQL dell'intervallo anno-mese. Per una spiegazione delle colonne e dei termini nella tabella, vedere [Conversione di dati da SQL a tipi di dati C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).  
+Nella tabella seguente sono illustrati i tipi di dati ODBC C in cui è possibile convertire i dati SQL dell'intervallo di anno mese. Per una spiegazione delle colonne e dei termini della tabella, vedere [conversione di dati da SQL a tipi di dati C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).  
 
-|Identificatore del tipo C|Test|TargetValuePtr|StrLen_or_IndPtr|SQLSTATE|  
+|Identificatore di tipo C|Test|TargetValuePtr|StrLen_or_IndPtr|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_INTERVAL_MONTH[a]<br /><br /> SQL_C_INTERVAL_YEAR[a]<br /><br /> SQL_C_INTERVAL_YEAR_TO_MONTH[a]|Parte dei campi finali non troncata<br /><br /> Parte dei campi finali troncata<br /><br /> La precisione iniziale della destinazione non è sufficienteper contenere i dati dall'origine|Data<br /><br /> Dati troncati<br /><br /> Non definito|Lunghezza dei dati in byte<br /><br /> Lunghezza dei dati in byte<br /><br /> Non definito|n/d<br /><br /> 01S07 (intito)<br /><br /> 22015|  
-|SQL_C_STINYINT[b]<br /><br /> SQL_C_UTINYINT[b]<br /><br /> SQL_C_USHORT[b]<br /><br /> SQL_C_SHORT[b]<br /><br /> SQL_C_SLONG[b]<br /><br /> SQL_C_ULONG[b]<br /><br /> SQL_C_NUMERIC[b]<br /><br /> SQL_C_BIGINT[b]|La precisione dell'intervallo era un singolo campo e i dati sono stati convertiti senza troncamento<br /><br /> La precisione dell'intervallo era un singolo campo e troncato intero<br /><br /> La precisione dell'intervallo non era un singolo campo|Data<br /><br /> Dati troncati<br /><br /> Non definito|Dimensione del tipo di dati C<br /><br /> Lunghezza dei dati in byte<br /><br /> Dimensione del tipo di dati C|n/d<br /><br /> 22003<br /><br /> 22015|  
-|SQL_C_BINARY|Lunghezza in byte dei dati <- *BufferLength*<br /><br /> Lunghezza in byte dei dati > *BufferLength*|Data<br /><br /> Non definito|Lunghezza dei dati in byte<br /><br /> Non definito|n/d<br /><br /> 22003|  
-|SQL_C_CHAR|Lunghezza byte carattere < *BufferLength*<br /><br /> Numero di cifre intere (anziché frazionarie) < *BufferLength*<br /><br /> Numero di cifre intere (anziché frazionarie) >: *BufferLength*|Data<br /><br /> Dati troncati<br /><br /> Non definito|Dimensione del tipo di dati C<br /><br /> Dimensione del tipo di dati C<br /><br /> Non definito|n/d<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|Lunghezza dei caratteri < *BufferLength*<br /><br /> Numero di cifre intere (anziché frazionarie) < *BufferLength*<br /><br /> Numero di cifre intere (anziché frazionarie) >: *BufferLength*|Data<br /><br /> Dati troncati<br /><br /> Non definito|Dimensione del tipo di dati C<br /><br /> Dimensione del tipo di dati C<br /><br /> Non definito|n/d<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_INTERVAL_MONTH [a]<br /><br /> SQL_C_INTERVAL_YEAR [a]<br /><br /> SQL_C_INTERVAL_YEAR_TO_MONTH [a]|Porzione campi finali non troncata<br /><br /> Porzione campi finali troncata<br /><br /> La precisione principale della destinazione non è abbastanza grande da poter conservare i dati dall'origine|Data<br /><br /> Dati troncati<br /><br /> Non definito|Lunghezza dei dati in byte<br /><br /> Lunghezza dei dati in byte<br /><br /> Non definito|n/d<br /><br /> 01S07<br /><br /> 22015|  
+|SQL_C_STINYINT [b]<br /><br /> SQL_C_UTINYINT [b]<br /><br /> SQL_C_USHORT [b]<br /><br /> SQL_C_SHORT [b]<br /><br /> SQL_C_SLONG [b]<br /><br /> SQL_C_ULONG [b]<br /><br /> SQL_C_NUMERIC [b]<br /><br /> SQL_C_BIGINT [b]|La precisione dell'intervallo è un singolo campo e i dati sono stati convertiti senza troncamento<br /><br /> La precisione dell'intervallo è un singolo campo e l'intero troncato<br /><br /> La precisione dell'intervallo non è un campo singolo|Data<br /><br /> Dati troncati<br /><br /> Non definito|Dimensioni del tipo di dati C<br /><br /> Lunghezza dei dati in byte<br /><br /> Dimensioni del tipo di dati C|n/d<br /><br /> 22003<br /><br /> 22015|  
+|SQL_C_BINARY|Lunghezza in byte dei dati <= *bufferLength*<br /><br /> Lunghezza in byte dei dati > *bufferLength*|Data<br /><br /> Non definito|Lunghezza dei dati in byte<br /><br /> Non definito|n/d<br /><br /> 22003|  
+|SQL_C_CHAR|Lunghezza in byte di caratteri < *bufferLength*<br /><br /> Numero di cifre intere (anziché frazionarie) < *bufferLength*<br /><br /> Numero di cifre intere (anziché frazionarie) >= *bufferLength*|Data<br /><br /> Dati troncati<br /><br /> Non definito|Dimensioni del tipo di dati C<br /><br /> Dimensioni del tipo di dati C<br /><br /> Non definito|n/d<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|Lunghezza in caratteri < *bufferLength*<br /><br /> Numero di cifre intere (anziché frazionarie) < *bufferLength*<br /><br /> Numero di cifre intere (anziché frazionarie) >= *bufferLength*|Data<br /><br /> Dati troncati<br /><br /> Non definito|Dimensioni del tipo di dati C<br /><br /> Dimensioni del tipo di dati C<br /><br /> Non definito|n/d<br /><br /> 01004<br /><br /> 22003|  
   
- [a] Un tipo SQL di intervallo anno-mese può essere convertito in qualsiasi tipo di intervallo C del mese dell'anno.  
+ [a] un tipo SQL con intervallo di anno mese può essere convertito in un tipo C con intervallo di mesi di anno.  
   
- [b] Se la precisione dell'intervallo è un singolo campo (uno di ANNO o MESE), il tipo SQL dell'intervallo può essere convertito in qualsiasi valore numerico esatto (SQL_C_STINYINT, SQL_C_UTINYINT, SQL_C_USHORT, SQL_C_SHORT, SQL_C_SLONG, SQL_C_ULONG o SQL_C_NUMERIC).  
+ [b] se la precisione dell'intervallo è un singolo campo (un anno o un mese), il tipo di intervallo SQL può essere convertito in un valore numerico esatto (SQL_C_STINYINT, SQL_C_UTINYINT, SQL_C_USHORT, SQL_C_SHORT, SQL_C_SLONG, SQL_C_ULONG o SQL_C_NUMERIC).  
 
 ## <a name="default-conversions"></a>Conversioni predefinite
 
-La conversione predefinita di un tipo SQL a intervalli è nel tipo di dati dell'intervallo C corrispondente. L'applicazione associa quindi la colonna o il parametro (o imposta il campo SQL_DESC_DATA_PTR nel record appropriato del ARD) in modo che punti alla struttura SQL_INTERVAL_STRUCT inizializzata (o passa un puntatore alla struttura di INTERVAL_STRUCT SQL_ come argomento *TargetValuePtr* in una chiamata a **SQLGetData**).
+La conversione predefinita di un tipo SQL intervallo corrisponde al tipo di dati intervallo C corrispondente. L'applicazione associa quindi la colonna o il parametro (oppure imposta il campo SQL_DESC_DATA_PTR nel record appropriato del sistema ARD) in modo che punti alla struttura di SQL_INTERVAL_STRUCT inizializzata (o passa un puntatore alla struttura SQL_ INTERVAL_STRUCT come argomento *TargetValuePtr* in una chiamata a **SQLGetData**).

@@ -1,5 +1,5 @@
 ---
-title: Tipi di dati SQL in ODBC . Documenti Microsoft
+title: Tipi di dati SQL in ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: a833a725-3c27-4d6b-9f6a-8c2e6e3e2920
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 5c42b4745b2e9865462f58e17b5ce966d8598729
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301638"
 ---
 # <a name="sql-data-types-in-odbc"></a>Tipi di dati SQL in ODBC

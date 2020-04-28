@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2f15092bd515ed16a470c854168b228d5445e3d6
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300951"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>Enumerare origini dati OLE DB (OLE DB)
@@ -25,7 +25,7 @@ ms.locfileid: "81300951"
 
   In questo esempio viene illustrato come utilizzare l'oggetto enumeratore per elencare le origini dati disponibili.  
   
- Per elencare le origini dati visibili all'enumeratore SQLOLEDB, il consumer chiama il [metodo ISourcesRowset::GetSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312) . Questo metodo restituisce un set di righe di informazioni sulle origini dati attualmente visibili.  
+ Per elencare le origini dati visibili all'enumeratore SQLOLEDB, il consumer chiama il metodo [ISourcesRowset:: GetSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312) . Questo metodo restituisce un set di righe di informazioni sulle origini dati attualmente visibili.  
   
  A seconda della libreria di rete utilizzata, viene cercato il dominio appropriato per le origini dati. Per le named pipe, si tratta del dominio a cui è connesso il client. Per AppleTalk, si tratta dell'area predefinita. Per SPX/IPX, si tratta dell'elenco di installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] individuate nel bindery. Per Banyan VINES, si tratta delle installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] individuate nella rete locale. I socket multiprotocollo e TCP/IP non sono supportati.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "81300951"
  Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).  
   
 > [!IMPORTANT]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è necessario crittografarle con [l'API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario salvare in modo permanente le credenziali, è necessario crittografarle con l' [API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>Per enumerare origini dati OLE DB  
   

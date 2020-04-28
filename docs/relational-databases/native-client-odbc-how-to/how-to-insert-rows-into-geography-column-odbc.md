@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: inserire righe nella colonna Geography (ODBC) Documenti Microsoft'
+title: 'Procedura: inserimento di righe in colonne geografiche (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3693a2f38542b0ae8c12d0634a9784a00340ba73
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81293881"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>Procedura: Inserire righe in colonne geografiche (ODBC)
@@ -27,10 +27,10 @@ ms.locfileid: "81293881"
   
  Non è possibile utilizzare questo esempio con le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- Per ulteriori informazioni sull'archiviazione spaziale, vedere [Dati spaziali &#40;&#41;di SQL Server. ](../../relational-databases/spatial/spatial-data-sql-server.md)  
+ Per ulteriori informazioni sull'archiviazione spaziale, vedere [dati spaziali &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
 ## <a name="example"></a>Esempio  
- Il primo [!INCLUDE[tsql](../../includes/tsql-md.md)]elenco di codice ( ) crea una tabella utilizzata da questo esempio.  
+ Il primo listato di codice ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) consente di creare una tabella utilizzata da questo esempio.  
   
  Compilare il secondo listato di codice (C++) con odbc32.lib e user32.lib. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "81293881"
   
  In questo esempio viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. Per connettersi a un'istanza denominata, modificare la definizione dell'origine dati ODBC per specificare l'istanza in base al formato: server\istanzadenominata. Per impostazione predefinita, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] viene installato in un'istanza denominata.  
   
- Il terzo [!INCLUDE[tsql](../../includes/tsql-md.md)]elenco di codice ( ) elimina la tabella utilizzata da questo esempio.  
+ Il terzo listato di codice ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) consente di eliminare la tabella utilizzata dall'esempio.  
   
 ```sql
 use tempdb  

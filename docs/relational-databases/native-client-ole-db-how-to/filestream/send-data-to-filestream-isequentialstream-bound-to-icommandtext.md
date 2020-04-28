@@ -1,5 +1,5 @@
 ---
-title: FileSTREAM di dati, ISequentialStream ICommandTextData FILESTREAM, ISequentialStream ICommandText
+title: FILESTREAM dati, ISequentialStream ICommandText
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f27ac32da560316806086f51c69cd2a374eb1a15
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81295790"
 ---
 # <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>Inviare dati a FILESTREAM - ISequentialStream associato a ICommandText
@@ -23,7 +23,7 @@ ms.locfileid: "81295790"
 
   In questo esempio viene utilizzata un'interfaccia ISequentialStream associata a un parametro ICommandText per inviare una quantità di dati compresa tra 4 MB e 4 GB a una colonna FILESTREAM.  
   
- Per ulteriori informazioni sulla funzionalità filestream , vedere [Supporto FILESTREAM &#40;&#41;OLE DB ](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
+ Per ulteriori informazioni sulla funzionalità FILESTREAM, vedere [supporto filestream &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Esempio  
  Prima di compilare ed eseguire questo esempio, abilitare il supporto per FILESTREAM ([Abilitare e configurare FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)).  

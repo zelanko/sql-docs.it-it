@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo (Driver di accesso) Documenti Microsoft
+title: SQLGetInfo (driver Access) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ ms.assetid: c226aba7-a2f4-4b32-b640-92654b40e5a7
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 9a9208ce32faa221d543baf62e2169e4523ae437
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298591"
 ---
 # <a name="sqlgetinfo-access-driver"></a>SQLGetInfo (driver Access)
 > [!NOTE]  
->  In questo argomento vengono fornite informazioni specifiche del driver di accesso. Per informazioni generali su questa funzione, vedere l'argomento appropriato in [Riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  In questo argomento vengono fornite informazioni specifiche del driver di accesso. Per informazioni generali su questa funzione, vedere l'argomento appropriato in informazioni di [riferimento sulle API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **SQLGetInfo** supporta il tipo di informazioni SQL_FILE_USAGE. Il valore restituito è un numero intero a 16 bit che indica come il driver considera direttamente i file in un'origine dati:The returned value is a 16-bit integer that indicates how the driver directly treats files in a data source:  
+ **SQLGetInfo** supporta il tipo di informazioni SQL_FILE_USAGE. Il valore restituito è un intero a 16 bit che indica il modo in cui il driver tratta direttamente i file in un'origine dati:  
   
--   SQL_FILE_NOT_SUPPORTED - Il driver non è un driver a livello singolo.  
+-   SQL_FILE_NOT_SUPPORTED: il driver non è un driver a livello singolo.  
   
 -   SQL_FILE_TABLE: un driver a livello singolo considera i file in un'origine dati come tabelle.  
   
@@ -35,9 +35,9 @@ ms.locfileid: "81298591"
  Il driver ODBC restituisce SQL_FILE_QUALIFIER perché ogni file è un database completo.  
   
 ## <a name="sql_bookmark_persistence"></a>SQL_BOOKMARK_PERSISTENCE  
- SQL_BP_UPDATE SQL_BP_SCROLL &#124;[1]  
+ SQL_BP_SCROLL &#124; SQL_BP_UPDATE [1]  
   
- [1] I segnalibri persistono dopo un commit, ma non vengono mantenuti dopo un rollback.  
+ [1] i segnalibri vengono mantenuti dopo un commit, ma non vengono mantenuti dopo un'operazione di rollback.  
   
 ## <a name="sql_convert_binary"></a>SQL_CONVERT_BINARY  
  SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124; SQL_CVT_INTEGER &#124; SQL_CVT_NUMERIC &#124; SQL_CVT_REAL &#124; SQL_CVT_SMALLINT &#124; SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
@@ -92,7 +92,7 @@ ms.locfileid: "81298591"
   
 ## <a name="sql_dbms_ver"></a>SQL_DBMS_VER  
   
-|Isam|Versione|Formato dei numeri di versione|  
+|ISAM|Versione|Formato dei numeri di versione|  
 |----------|-------------|-------------------------------|  
 |Microsoft Access|2.0|02.00.0000|  
 ||3.0|03.00.0000|  
@@ -100,7 +100,7 @@ ms.locfileid: "81298591"
 ||4.0|04.00.0000|  
   
 > [!NOTE]  
->  Le versioni 1.0 e 1.1 non sono supportate. Inoltre, non vi è alcuna differenza nel formato dei dati in Microsoft Access 3.0, 7.0 e 97.  
+>  Le versioni 1,0 e 1,1 non sono supportate. Inoltre, non esiste alcuna differenza nel formato dati nelle versioni di Microsoft Access 3,0, 7,0 e 97.  
   
 ## <a name="sql_ddl_index"></a>SQL_DDL_INDEX  
  SQL_DL_CREATE_INDEX  
@@ -111,9 +111,9 @@ ms.locfileid: "81298591"
  SQL_GD_ANY_ORDER &#124; SQL_GD_ANY_COLUMN &#124; SQL_GD_BLOCK &#124; SQL_GD_BOUND  
   
 ## <a name="sql_keywords"></a>SQL_KEYWORDS  
- Alfanumerici  
+ ALFANUMERICI  
   
- Autoincrement  
+ AUTOINCREMENT  
   
  BINARY  
   
@@ -121,55 +121,55 @@ ms.locfileid: "81298591"
   
  BYTE  
   
- Contatore  
+ COUNTER  
   
  CURRENCY  
   
  DATABASE  
   
- Databasename  
+ DATABASENAME  
   
  DATETIME  
   
- Impedire  
+ IMPEDIRE  
   
- Distinctrow  
+ DISTINCTROW  
   
  DOUBLEFLOAT  
   
  FLOAT4  
   
- GALLEGGIANTE8  
+ FLOAT8  
   
  GENERAL  
   
- DOPPIO( IEEE)  
+ IEEEDOUBLE  
   
- IEEESINGLE (IEEESINGLE)  
+ IEEESINGLE  
   
  IGNORE  
   
  IMAGE  
   
- INTERO1  
+ INTEGER1  
   
- INTERO2  
+ INTEGER2  
   
- INTERO4  
+ INTEGER4  
   
- Logico  
+ LOGICO  
   
- LOGICO1  
+ LOGICAL1  
   
  LONG  
   
- LONGBINARY (oggetto LONGBINARY)  
+ LONGBINARY  
   
  LONGCHAR  
   
- TESTO LUNGO  
+ LONGTEXT  
   
- Memo  
+ MEMO  
   
  MONEY  
   
@@ -177,9 +177,9 @@ ms.locfileid: "81298591"
   
  NUMBER  
   
- Oleobject  
+ OLEOBJECT  
   
- OWNERACCESS  
+ OWNERACCESS OPTION  
   
  PARAMETERS  
   
@@ -189,9 +189,9 @@ ms.locfileid: "81298591"
   
  SHORT  
   
- Singolo  
+ SINGOLO  
   
- SINGOLO FLOAT  
+ SINGLEFLOAT  
   
  STDEV  
   
@@ -199,13 +199,13 @@ ms.locfileid: "81298591"
   
  STRING  
   
- TABLEID (INDICE TABLEID)  
+ TABLEID  
   
  TEXT  
   
  TOP  
   
- Trasformare  
+ TRASFORMAZIONE  
   
  UNSIGNEDBYTE  
   

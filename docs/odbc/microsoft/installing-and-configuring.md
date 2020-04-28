@@ -1,5 +1,5 @@
 ---
-title: Installazione e configurazione Documenti Microsoft
+title: Installazione e configurazione | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: 4202165e-b89c-47a5-ae59-0c98988caad5
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 0184bc84a2a633b5c5b702a8f445615113a0614b
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299991"
 ---
 # <a name="installing-and-configuring"></a>Installazione e configurazione
-Per scaricare il driver ODBC di Visual FoxPro, vedere il sito di download del [driver ODBC di Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318).  
+Per scaricare il driver ODBC Visual FoxPro, vedere [il sito di download del driver ODBC Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318).  
   
- In questa sezione sono contenuti i seguenti argomenti che consentono di installare e configurare il driver ODBC Microsoft Visual FoxPro:  
+ In questa sezione sono contenuti gli argomenti seguenti che consentono di installare e configurare il driver ODBC di Microsoft Visual FoxPro:  
   
 -   [Requisiti di sistema](../../odbc/microsoft/system-requirements-visual-foxpro-odbc-driver.md)  
   
@@ -37,4 +37,4 @@ Per scaricare il driver ODBC di Visual FoxPro, vedere il sito di download del [d
   
 -   [Finestra di dialogo di configurazione ODBC Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)  
   
- Per scaricare il driver, vedere il sito di [download del driver ODBC di Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318).
+ Per scaricare il driver, vedere [il sito di download del driver ODBC Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318).

@@ -1,5 +1,5 @@
 ---
-title: Driver ODBC per il programmatore di Oracle&#39;s Riferimento Documenti Microsoft
+title: Informazioni di riferimento sul driver ODBC per Oracle Programmer&#39;s | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,13 +11,13 @@ ms.assetid: d70e79a1-6403-49ad-8713-eda6e8aa287e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 763c9892836b262f308b82ef96794a03dc33fd12
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298121"
 ---
-# <a name="odbc-driver-for-oracle-programmer39s-reference"></a>Driver ODBC per Oracle programmatore&#39;s riferimento
+# <a name="odbc-driver-for-oracle-programmer39s-reference"></a>Informazioni di riferimento sul driver ODBC per Oracle Programmer&#39;s
 > [!IMPORTANT]  
 >  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Utilizzare invece il driver ODBC fornito da Oracle.  
   
@@ -41,11 +41,11 @@ ms.locfileid: "81298121"
   
 -   [Limitazioni dell'uso dei cursori gestiti da keyset](../../odbc/microsoft/limitations-of-using-keyset-driven-cursors.md)  
   
--   [ODBC Driver for Oracle Stored Procedures](../../odbc/microsoft/stored-procedures-odbc-driver-for-oracle.md)  
+-   [Driver ODBC per stored procedure Oracle](../../odbc/microsoft/stored-procedures-odbc-driver-for-oracle.md)  
   
--   [ODBC Driver for Oracle Error Messages](../../odbc/microsoft/error-messages-odbc-driver-for-oracle.md)  
+-   [Driver ODBC per i messaggi di errore Oracle](../../odbc/microsoft/error-messages-odbc-driver-for-oracle.md)  
   
--   [Livelli di conformità ODBCODBC Conformance Levels](../../odbc/microsoft/odbc-driver-for-oracle-conformance-levels.md)  
+-   [Livelli di conformità ODBC](../../odbc/microsoft/odbc-driver-for-oracle-conformance-levels.md)  
   
 -   [Funzioni API](../../odbc/microsoft/api-functions-odbc-driver-for-oracle.md)  
   

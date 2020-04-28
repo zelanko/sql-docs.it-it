@@ -1,5 +1,5 @@
 ---
-title: SQLPrepare (driver ODBC di Visual FoxPro) Documenti Microsoft
+title: SQLPrepare (driver ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,26 +13,26 @@ ms.assetid: 0c4cb5a4-9729-4b2e-a0c6-52027b92e8fc
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 14c9358d04e539eb2c77a00e195e8216cd0f5496
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301557"
 ---
 # <a name="sqlprepare-visual-foxpro-odbc-driver"></a>SQLPrepare (driver ODBC Visual FoxPro)
 > [!NOTE]  
->  In questo argomento sono contenute informazioni specifiche del driver ODBC di Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato in [Riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Questo argomento contiene informazioni specifiche del driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato in informazioni di [riferimento sulle API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Supporto: Completo  
+ Supporto: completo  
   
- Conformità API ODBC: livello di baseODBC API Conformance: Core Level  
+ Conformità API ODBC: livello principale  
   
  Prepara un'istruzione SQL pianificando come ottimizzare ed eseguire l'istruzione. L'istruzione SQL viene compilata per l'esecuzione da [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md).  
   
- Se i nomi di tabella, vista o campo contengono spazi, racchiudere i nomi tra virgolette rovesciate ('). Ad esempio, se il database contiene una tabella denominata Tabella personale e il campo Campo personale, racchiudere ogni elemento dell'identificatore come segue:  
+ Se la tabella, la vista o i nomi dei campi contengono spazi, racchiudere i nomi tra virgolette ('). Se, ad esempio, il database contiene una tabella denominata My Table e il campo campo My, racchiudere ogni elemento dell'identificatore nel modo seguente:  
   
 ```  
 SELECT * FROM `My Table`.`My Field`  
 ```  
   
- Per ulteriori informazioni, vedere [SQLPrepare](../../odbc/reference/syntax/sqlprepare-function.md) in *ODBC Programmer's Reference*.
+ Per ulteriori informazioni, vedere [SQLPrepare](../../odbc/reference/syntax/sqlprepare-function.md) in *ODBC Programmer ' s Reference*.

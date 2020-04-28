@@ -1,5 +1,5 @@
 ---
-title: Implementazione di SQLGetDiagRec e SQLGetDiagField . Documenti Microsoft
+title: Implementazione di SQLGetDiagRec e SQLGetDiagField | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,18 +17,18 @@ ms.assetid: 11ba1857-b533-4517-8131-a2a8a0154a0a
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 4c090af19a9296e46e3036ca23f6c97298bcb1b8
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300141"
 ---
 # <a name="implementing-sqlgetdiagrec-and-sqlgetdiagfield"></a>Implementazione di SQLGetDiagRec e SQLGetDiagField
-**SQLGetDiagRec** e **SQLGetDiagField** vengono implementati da Gestione Driver e da ogni driver. Gestione Driver e ogni driver gestiscono i record di diagnostica per ogni handle di ambiente, connessione, istruzione e descrittore e liberare tali record solo quando viene chiamata un'altra funzione con tale handle o l'handle viene liberato.  
+**SQLGetDiagRec** e **SQLGetDiagField** vengono implementati da Gestione driver e da ogni driver. Gestione driver e ogni driver conservano i record di diagnostica per ogni handle di ambiente, connessione, istruzione e descrittore e li liberano solo quando un'altra funzione viene chiamata con tale handle oppure l'handle viene liberato.  
   
- Anche se sia Gestione Driver che ogni driver devono determinare il primo record di stato in base alle classificazioni in [Sequenza dei record di stato](../../../odbc/reference/develop-app/sequence-of-status-records.md), Gestione Driver determina la sequenza finale dei record.  
+ Anche se Gestione driver e ogni driver devono determinare il primo record di stato in base alle classificazioni in [sequenza dei record di stato](../../../odbc/reference/develop-app/sequence-of-status-records.md), gestione driver determina la sequenza finale di record.  
   
- **SQLGetDiagRec** e **SQLGetDiagField** non registrano record di diagnostica su se stessi.  
+ **SQLGetDiagRec** e **SQLGetDiagField** non pubblicano i record di diagnostica.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

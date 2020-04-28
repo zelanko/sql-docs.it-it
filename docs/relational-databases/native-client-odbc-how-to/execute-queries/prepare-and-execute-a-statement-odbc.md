@@ -1,5 +1,5 @@
 ---
-title: Preparazione ed esecuzione di un'istruzione (ODBC) Documenti Microsoft
+title: Preparare ed eseguire un'istruzione (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eaf7e3518f369639ba3d2eb854a103ff839276c7
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81294064"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>Preparare ed eseguire un'istruzione (ODBC)
@@ -27,7 +27,7 @@ ms.locfileid: "81294064"
     
 ### <a name="to-prepare-a-statement-once-and-then-execute-it-multiple-times"></a>Per preparare un'istruzione da eseguire più volte  
   
-1.  Chiamare [la funzione SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) per preparare l'istruzione.  
+1.  Chiamare la [funzione SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) per preparare l'istruzione.  
   
 2.  Facoltativamente, chiamare [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) per determinare il numero di parametri nell'istruzione preparata.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "81294064"
   
     -   Chiamare [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) per ottenere informazioni sui parametri.  
   
-    -   Associare ogni parametro a una variabile di programma utilizzando [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md). Configurare i parametri data-at-execution.  
+    -   Associare ogni parametro a una variabile di programma usando [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md). Configurare i parametri data-at-execution.  
   
 4.  Per ogni esecuzione di un'istruzione preparata:  
   
@@ -43,7 +43,7 @@ ms.locfileid: "81294064"
   
     -   Chiamare [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) per eseguire l'istruzione preparata.  
   
-    -   Se vengono utilizzati parametri di input data-at-execution, [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) restituisce SQL_NEED_DATA. Inviare i dati in blocchi utilizzando [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) e [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
+    -   Se vengono utilizzati parametri di input data-at-execution, [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) restituisce SQL_NEED_DATA. Inviare i dati in blocchi usando [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) e [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
   
 ### <a name="to-prepare-a-statement-with-column-wise-parameter-binding"></a>Per preparare un'istruzione con associazione di parametri a livello di colonna  
   
@@ -81,7 +81,7 @@ ms.locfileid: "81294064"
   
     -   Chiamare SQLExecute per eseguire l'istruzione preparata.  
   
-    -   Se vengono utilizzati parametri di input data-at-execution, SQLExecute restituisce SQL_NEED_DATA. Inviare i dati in blocchi utilizzando SQLParamData e SQLPutData.  
+    -   Se vengono utilizzati parametri di input data-at-execution, SQLExecute restituisce SQL_NEED_DATA. Inviare i dati in blocchi usando SQLParamData e SQLPutData.  
   
 ### <a name="to-prepare-a-statement-with-row-wise-bound-parameters"></a>Per preparare un'istruzione con associazione di parametri a livello di riga  
   
@@ -103,7 +103,7 @@ ms.locfileid: "81294064"
   
 3.  Chiamare SQLPrepare per preparare l'istruzione.  
   
-4.  Per ogni indicatore di parametro, chiamare SQLBindParameter per puntare il valore dei dati del parametro e il puntatore della lunghezza dei dati alle relative variabili nel primo elemento della matrice di strutture allocata nel passaggio 1.For each parameter marker, call SQLBindParameter to point the parameter data value and data length pointer to their variables in the first element of the array of structures allocated in Step 1. Se il parametro è di tipo data-at-execution, configurarlo.  
+4.  Per ogni marcatore di parametro, chiamare SQLBindParameter per puntare il valore dei dati del parametro e il puntatore alla lunghezza dei dati alle variabili nel primo elemento della matrice di strutture allocate nel passaggio 1. Se il parametro è di tipo data-at-execution, configurarlo.  
   
 5.  Per ogni esecuzione di un'istruzione preparata:  
   
@@ -111,9 +111,9 @@ ms.locfileid: "81294064"
   
     -   Chiamare SQLExecute per eseguire l'istruzione preparata. Il driver esegue in modo efficace l'istruzione SQL S volte, una volta per ogni set di parametri.  
   
-    -   Se vengono utilizzati parametri di input data-at-execution, SQLExecute restituisce SQL_NEED_DATA. Inviare i dati in blocchi utilizzando SQLParamData e SQLPutData.  
+    -   Se vengono utilizzati parametri di input data-at-execution, SQLExecute restituisce SQL_NEED_DATA. Inviare i dati in blocchi usando SQLParamData e SQLPutData.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esecuzione di query procedure relative agli argomenti &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [Procedure relative all'esecuzione di query &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

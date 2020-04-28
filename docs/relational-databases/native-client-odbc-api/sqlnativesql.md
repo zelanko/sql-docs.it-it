@@ -1,5 +1,5 @@
 ---
-title: 'Proprietà SQLNativeSql : Documenti Microsoft'
+title: SQLNativeSql | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 19db781408b419c5aa657ac3a256188ff20e4554
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298434"
 ---
 # <a name="sqlnativesql"></a>SQLNativeSql
@@ -27,7 +27,7 @@ ms.locfileid: "81298434"
   Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client soddisfa richieste di **SQLNativeSql** senza visitare il server. La funzione verifica in modo efficiente la sintassi di istruzioni SQL. Il controllo della sintassi non determina se gli identificatori o i risultati di espressioni nelle istruzioni SQL sono validi. È possibile che l'esecuzione del formato SQL nativo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito da **SQLNativeSql** non riesca.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione SQLNativeSql](https://go.microsoft.com/fwlink/?LinkID=59358)   
+ [SQLNativeSql (funzione)](https://go.microsoft.com/fwlink/?LinkID=59358)   
  [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

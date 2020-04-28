@@ -1,5 +1,5 @@
 ---
-title: Funzione SQLBulkOperations . Documenti Microsoft
+title: Funzione SQLBulkOperations | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 61f4f294a6d84856bc3065b599a370bb5658e3ca
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301331"
 ---
 # <a name="sqlbulkoperations-function"></a>Funzione SQLBulkOperations
 **Conformità**  
- Versione introdotta: ODBC 3.0 Standards Compliance: ODBC  
+ Versione introdotta: ODBC 3,0 Standard Compliance: ODBC  
   
  **Riepilogo**  
- **SQLBulkOperations** esegue inserimenti in blocco e operazioni di segnalibro in blocco, tra cui aggiornamento, eliminazione e recupero per segnalibro.  
+ **SQLBulkOperations** esegue inserimenti in blocco e operazioni di segnalibro bulk, tra cui l'aggiornamento, l'eliminazione e il recupero tramite segnalibro.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,10 +45,10 @@ SQLRETURN SQLBulkOperations(
   
 ## <a name="arguments"></a>Argomenti  
  *StatementHandle*  
- [Ingresso] Handle di istruzione.  
+ Input Handle di istruzione.  
   
  *Operazione*  
- [Ingresso] Operazione da eseguire:  
+ Input Operazione da eseguire:  
   
  SQL_ADD SQL_UPDATE_BY_BOOKMARK SQL_DELETE_BY_BOOKMARK SQL_FETCH_BY_BOOKMARK  
   
@@ -58,208 +58,208 @@ SQLRETURN SQLBulkOperations(
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLBulkOperations** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, è possibile ottenere un valore SQLSTATE associato chiamando **SQLGetDiagRec** con un *HandleType* di SQL_HANDLE_STMT e un *handle* di *StatementHandle*. Nella tabella seguente sono elencati i valori SQLSTATE in genere restituiti da **SQLBulkOperations** e vengono illustrati ognuno di essi nel contesto di questa funzione. la notazione "(DM)" precede le descrizioni di SQLSTATEs restituite da Gestione Driver. Il codice restituito associato a ogni valore SQLSTATE viene SQL_ERROR, se non specificato diversamente.  
+ Quando **SQLBulkOperations** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, è possibile ottenere un valore SQLSTATE associato chiamando **SQLGetDiagRec** con *HandleType* di SQL_HANDLE_STMT e un *handle* di *statementHandle*. Nella tabella seguente sono elencati i valori SQLSTATE restituiti in genere da **SQLBulkOperations** e ne viene illustrato ciascuno nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituite da Gestione driver. Il codice restituito associato a ogni valore SQLSTATE è SQL_ERROR, a meno che non sia specificato diversamente.  
   
- Per tutti gli SQLSTATE che possono restituire SQL_SUCCESS_WITH_INFO o SQL_ERROR (ad eccezione di 01xxx SQLSTATEs), viene restituito SQL_SUCCESS_WITH_INFO se si verifica un errore in uno o più, ma non in tutte le righe di un'operazione multiriga, e SQL_ERROR viene restituito se si verifica un errore in un'operazione a riga singola.  
+ Per tutti questi SQLSTATE che possono restituire SQL_SUCCESS_WITH_INFO o SQL_ERROR (ad eccezione di sql01xxxs), viene restituito SQL_SUCCESS_WITH_INFO se si verifica un errore in una o più righe, ma non in tutte, righe di un'operazione più righe e viene restituito SQL_ERROR se si verifica un errore in un'operazione a riga singola.  
   
 |SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
-|01000|Avvertenza generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
-|01004|Troncamento a destra dei dati stringaString data right truncation|*L'argomento Operation* è stato SQL_FETCH_BY_BOOKMARK e i dati stringa o binari restituiti per una colonna o colonne con un tipo di dati di SQL_C_CHAR o SQL_C_BINARY hanno determinato il troncamento di caratteri non vuoti o dati binari non NULL.|  
-|01S01 (in questo stato di|Errore nella riga|*L'argomento Operation* è stato SQL_ADD e si è verificato un errore in una o più righe durante l'esecuzione dell'operazione, ma almeno una riga è stata aggiunta correttamente. (Funzione restituisce SQL_SUCCESS_WITH_INFO.)<br /><br /> (Questo errore viene generato solo quando un'applicazione utilizza un ODBC 2. *x* driver.)|  
-|01S07 (intito)|Troncamento frazionario|*L'argomento Operation* era SQL_FETCH_BY_BOOKMARK, il tipo di dati del buffer dell'applicazione non era SQL_C_CHAR o SQL_C_BINARY e i dati restituiti ai buffer dell'applicazione per una o più colonne venivano troncati. Per i tipi di dati numerici C, la parte frazionaria del numero è stata troncata. Per i tipi di dati di ora, timestamp e intervallo C che contengono un componente ora, la parte frazionaria dell'ora è stata troncata.)<br /><br /> (Funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
-|07006|Violazione dell'attributo del tipo di dati con restrizioniRestricted data type attribute violation|Il *Operation* argomento è stato SQL_FETCH_BY_BOOKMARK e il valore dei dati di una colonna nel set di risultati non è stato possibile convertire nel tipo di dati specificato dal *TargetType* argomento nella chiamata a **SQLBindCol**.<br /><br /> *L'argomento Operation* è stato SQL_UPDATE_BY_BOOKMARK o SQL_ADD e non è stato possibile convertire il valore dei dati nei buffer dell'applicazione nel tipo di dati di una colonna nel set di risultati.|  
-|07009|Indice descrittore non valido|*L'argomento Operation* è stato SQL_ADD ed è stata associata una colonna con un numero di colonna maggiore del numero di colonne nel set di risultati.|  
-|21S02|Il grado della tabella derivata non corrisponde all'elenco di colonne|L'argomento *Operazione* è stata SQL_UPDATE_BY_BOOKMARK; e nessuna colonna era aggiornabile perché tutte le colonne erano non associate o di sola lettura oppure il valore nel buffer di lunghezza/indicatore associato era SQL_COLUMN_IGNORE.|  
-|22001|Troncamento a destra dei dati stringaString data right truncation|L'assegnazione di un carattere o di un valore binario a una colonna nel set di risultati ha comportato il troncamento di caratteri o byte non vuoti (per i caratteri) o non null (per binari).|  
-|22003|Valore numerico non compreso nell'intervallo|*L'argomento Operation* è stato SQL_ADD o SQL_UPDATE_BY_BOOKMARK e l'assegnazione di un valore numerico a una colonna nel set di risultati ha causato il troncamento dell'intera parte del numero anziché frazionaria.<br /><br /> L'argomento *Operation* è stato SQL_FETCH_BY_BOOKMARK e la restituzione del valore numerico per una o più colonne associate avrebbe causato una perdita di cifre significative.|  
-|22007|Formato datetime non valido|*L'argomento Operazione* è stato SQL_ADD o SQL_UPDATE_BY_BOOKMARK e l'assegnazione di un valore di data o timestamp a una colonna nel set di risultati ha causato il campo anno, mese o giorno non compreso nell'intervallo.<br /><br /> L'argomento *Operazione* è stato SQL_FETCH_BY_BOOKMARK e la restituzione del valore data o timestamp per una o più colonne associate avrebbe fatto sì che il campo anno, mese o giorno non fosse compreso nell'intervallo.|  
-|22008|Overflow del campo Data/ora|*L'argomento Operation* è stato SQL_ADD o SQL_UPDATE_BY_BOOKMARK e le prestazioni dell'aritmetica datetime sui dati inviati a una colonna nel set di risultati hanno restituito un campo datetime (anno, mese, giorno, ora, minuto o secondo campo) del risultato che non rientra nell'intervallo di valori consentito per il campo o non è valido in base alle regole naturali del calendario gregoriano per datetime.<br /><br /> *L'argomento Operation* è stato SQL_FETCH_BY_BOOKMARK e l'esecuzione dell'aritmetica datetime sui dati recuperati dal set di risultati ha determinato un campo datetime (anno, mese, giorno, ora, minuto o secondo campo) del risultato che non rientra nell'intervallo di valori consentito per il campo o non è valido in base alle regole naturali del calendario gregoriano per datetime.|  
-|22015|Overflow campo intervallo|*L'argomento Operation* è stato SQL_ADD o SQL_UPDATE_BY_BOOKMARK e l'assegnazione di un tipo di dati numerico o di intervallo C esatto a un tipo di dati SQL a intervalli ha causato una perdita di cifre significative.<br /><br /> L'argomento *Operazione* è stato SQL_ADD o SQL_UPDATE_BY_BOOKMARK. durante l'assegnazione a un tipo SQL intervallo, non è stata rappresentazione del valore del tipo C nel tipo SQL di intervallo.<br /><br /> *L'argomento Operation* è stato SQL_FETCH_BY_BOOKMARK e l'assegnazione da un tipo SQL esatto numerico o a intervallo a un tipo di intervallo C ha causato una perdita di cifre significative nel campo iniziale.<br /><br /> L'argomento *Operazione* è stato SQL_FETCH_BY_BOOKMARK; durante l'assegnazione a un tipo di intervallo C, non è stata rappresentazione del valore del tipo SQL nel tipo di intervallo C.|  
-|22018|Valore di carattere non valido per la specifica del cast|L'argomento *Operazione* è stato SQL_FETCH_BY_BOOKMARK; il tipo C era un numero esatto o approssimativo, un datetime o un tipo di dati interval; il tipo SQL della colonna era un tipo di dati carattere; e il valore nella colonna non è un valore letterale valido del tipo C associato.<br /><br /> L'argomento *Operazione* è stata SQL_ADD o SQL_UPDATE_BY_BOOKMARK; il tipo SQL era un numero esatto o approssimativo, un datetime o un tipo di dati interval; il tipo C è stato SQL_C_CHAR; e il valore nella colonna non è un valore letterale valido del tipo SQL associato.|  
-|23000|Violazione dei vincoli di integrità|L'argomento *Operazione* è stato SQL_ADD, SQL_DELETE_BY_BOOKMARK o SQL_UPDATE_BY_BOOKMARK ed è stato violato un vincolo di integrità.<br /><br /> *L'argomento Operation* è stato SQL_ADD e una colonna non associata è definita come NOT NULL e non ha alcun valore predefinito.<br /><br /> *L'argomento Operation* è stato SQL_ADD, la lunghezza specificata nel buffer *di StrLen_or_IndPtr* associato è stata SQL_COLUMN_IGNORE e la colonna non ha un valore predefinito.|  
-|24000|Stato del cursore non valido|*StatementHandle* era in uno stato eseguito, ma a *StatementHandle*non è stato associato alcun set di risultati .|  
+|01000|Avviso generale|Messaggio informativo specifico del driver. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
+|01004|Troncamento a destra dei dati stringa|L'argomento dell' *operazione* è stato SQL_FETCH_BY_BOOKMARK e i dati stringa o binari restituiti per una colonna o colonne con tipo di dati SQL_C_CHAR o SQL_C_BINARY hanno causato il troncamento di dati binari non vuoti o non null.|  
+|01S01|Errore nella riga|L'argomento dell' *operazione* è stato SQL_ADD e si è verificato un errore in una o più righe durante l'esecuzione dell'operazione, ma è stata aggiunta almeno una riga. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)<br /><br /> Questo errore viene generato solo quando un'applicazione utilizza un ODBC 2. driver *x* .)|  
+|01S07|Troncamento frazionario|L'argomento *Operation* è stato SQL_FETCH_BY_BOOKMARK, il tipo di dati del buffer dell'applicazione non è stato SQL_C_CHAR o SQL_C_BINARY e i dati restituiti ai buffer dell'applicazione per una o più colonne sono stati troncati. (Per i tipi di dati C numerici, la parte frazionaria del numero è stata troncata. Per i tipi di dati time, timestamp e Interval C che contengono un componente ora, la porzione frazionaria del tempo è stata troncata.<br /><br /> (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
+|07006|Violazione dell'attributo del tipo di dati con restrizioni|L'argomento *Operation* è stato SQL_FETCH_BY_BOOKMARK e il valore dei dati di una colonna nel set di risultati non può essere convertito nel tipo di dati specificato dall'argomento *targetType* nella chiamata a **SQLBindCol**.<br /><br /> L'argomento *Operation* è stato SQL_UPDATE_BY_BOOKMARK o SQL_ADD e il valore dei dati nei buffer dell'applicazione non può essere convertito nel tipo di dati di una colonna del set di risultati.|  
+|07009|Indice del descrittore non valido|L' *operazione* argument è stata SQL_ADD e una colonna è stata associata a un numero di colonna maggiore del numero di colonne nel set di risultati.|  
+|21S02|Il grado della tabella derivata non corrisponde all'elenco di colonne|L' *operazione* dell'argomento è stata SQL_UPDATE_BY_BOOKMARK; e non è stato possibile aggiornare le colonne perché tutte le colonne sono di tipo non associato o di sola lettura oppure il valore nel buffer di lunghezza/indicatore associato è stato SQL_COLUMN_IGNORE.|  
+|22001|Troncamento a destra dei dati stringa|L'assegnazione di un valore di tipo carattere o binario a una colonna nel set di risultati ha comportato il troncamento di caratteri non vuoti (per i caratteri) o byte non null (per binari).|  
+|22003|Valore numerico non compreso nell'intervallo|L'argomento *Operation* è stato SQL_ADD o SQL_UPDATE_BY_BOOKMARK e l'assegnazione di un valore numerico a una colonna nel set di risultati ha causato il troncamento dell'intero oggetto, anziché della parte frazionaria del numero.<br /><br /> L' *operazione* relativa all'argomento è stata SQL_FETCH_BY_BOOKMARK e la restituzione del valore numerico per una o più colonne limite avrebbe causato la perdita di cifre significative.|  
+|22007|Formato DateTime non valido|L'argomento dell' *operazione* è stato SQL_ADD o SQL_UPDATE_BY_BOOKMARK e l'assegnazione di un valore di data o di timestamp a una colonna nel set di risultati ha determinato che il campo anno, mese o giorno non è compreso nell'intervallo.<br /><br /> L' *operazione* relativa all'argomento è stata SQL_FETCH_BY_BOOKMARK e la restituzione del valore di data o timestamp per una o più colonne limite avrebbe causato il campo anno, mese o giorno non compreso nell'intervallo.|  
+|22008|Overflow del campo Data/ora|L'argomento *Operation* è stato SQL_ADD o SQL_UPDATE_BY_BOOKMARK e le prestazioni dell'aritmetica DateTime sui dati inviati a una colonna nel set di risultati hanno generato un campo DateTime (anno, mese, giorno, ora, minuto o secondo) del risultato che non rientra nell'intervallo consentito di valori per il campo o non è valido in base alle regole naturali del calendario gregoriano per DateTime.<br /><br /> L'argomento *Operation* è stato SQL_FETCH_BY_BOOKMARK e le prestazioni dell'aritmetica DateTime sui dati recuperati dal set di risultati hanno generato un campo DateTime (anno, mese, giorno, ora, minuto o secondo) del risultato che non rientra nell'intervallo consentito di valori per il campo o non è valido in base alle regole naturali del calendario gregoriano per le DateTime.|  
+|22015|Overflow del campo Interval|L'argomento dell' *operazione* è stato SQL_ADD o SQL_UPDATE_BY_BOOKMARK e l'assegnazione di un tipo numerico o intervallo C esatto a un tipo di dati SQL intervallo ha causato una perdita di cifre significative.<br /><br /> L'argomento dell' *operazione* è stato SQL_ADD o SQL_UPDATE_BY_BOOKMARK; Quando si assegna a un tipo SQL intervallo, non esiste alcuna rappresentazione del valore del tipo C nel tipo SQL intervallo.<br /><br /> L'argomento dell' *operazione* è stato SQL_FETCH_BY_BOOKMARK e l'assegnazione da un tipo SQL numerico o intervallo esatto a un tipo intervallo C ha causato la perdita di cifre significative nel campo iniziali.<br /><br /> L'argomento dell' *operazione* è stato SQL_FETCH_BY_BOOKMARK; Quando si assegna a un tipo intervallo C, non è presente alcuna rappresentazione del valore del tipo SQL nel tipo intervallo C.|  
+|22018|Valore di carattere non valido per la specifica del cast|L'argomento dell' *operazione* è stato SQL_FETCH_BY_BOOKMARK; il tipo C è un valore numerico esatto o approssimativo, un valore DateTime o un tipo di dati interval; il tipo SQL della colonna è un tipo di dati character. e il valore nella colonna non è un valore letterale valido del tipo C associato.<br /><br /> L' *operazione* dell'argomento è stata SQL_ADD o SQL_UPDATE_BY_BOOKMARK; il tipo SQL è un tipo numerico esatto o approssimativo, un valore DateTime o un tipo di dati interval; il tipo C è stato SQL_C_CHAR; e il valore nella colonna non è un valore letterale valido del tipo SQL associato.|  
+|23000|Violazione del vincolo di integrità|L'argomento dell' *operazione* è stato SQL_ADD, SQL_DELETE_BY_BOOKMARK o SQL_UPDATE_BY_BOOKMARK ed è stato violato un vincolo di integrità.<br /><br /> L'argomento *Operation* è stato SQL_ADD e una colonna non associata è definita come not null e non ha alcun valore predefinito.<br /><br /> L'argomento *Operation* è stato SQL_ADD, la lunghezza specificata nel buffer *StrLen_or_IndPtr* associato è stata SQL_COLUMN_IGNORE e la colonna non ha un valore predefinito.|  
+|24000|Stato del cursore non valido|Lo stato di *statementHandle* è stato eseguito, ma nessun set di risultati è stato associato a *statementHandle*.|  
 |40001|Errore di serializzazione|È stato eseguito il rollback della transazione a causa di un deadlock delle risorse con un'altra transazione.|  
-|40003|Completamento dell'istruzione sconosciuto|La connessione associata non è riuscita durante l'esecuzione di questa funzione e non è possibile determinare lo stato della transazione.|  
-|42000|Errore di sintassi o violazione di accesso|Il driver non è stato in grado di bloccare la riga in base alle esigenze per eseguire l'operazione richiesta nell'argomento *Operation.*|  
-|44000|Violazione della clausola WITH CHECK OPTION|*L'argomento Operazione* è stato SQL_ADD o SQL_UPDATE_BY_BOOKMARK e l'inserimento o l'aggiornamento è stato eseguito su una tabella visualizzata (o una tabella derivata dalla tabella visualizzata) creata specificando **WITH CHECK OPTION**, in modo che una o più righe interessate dall'inserimento o dall'aggiornamento non siano più presenti nella tabella visualizzata.|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non è stato definito alcun SQLSTATE specifico e per il quale non è stato definito alcun SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \*MessageText* descrive l'errore e la relativa causa.|  
-|I001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare la memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
-|I008|Operation canceled|L'elaborazione asincrona è stata abilitata per *il StatementHandle*. La funzione è stata chiamata e prima del completamento dell'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato su *StatementHandle*. Quindi la funzione è stata chiamata nuovamente su *StatementHandle*.<br /><br /> La funzione è stata chiamata e prima del completamento dell'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato su *StatementHandle* da un thread diverso in un'applicazione multithread.|  
-|HY010 (Informazioni in stati incomMIino in|Errore della sequenza di funzioni|(DM) è stata chiamata una funzione in modo asincrono in esecuzione per l'handle di connessione associato a *StatementHandle*. Questa funzione asincrona era ancora in esecuzione quando è stata chiamata la funzione **SQLBulkOperations.This** asynchronous function was still executing when the SQLBulkOperations function was called.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** è stato chiamato per *il StatementHandle* e restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.<br /><br /> (DM) *L'oggetto statementHandle* specificato non era in uno stato eseguito. La funzione è stata chiamata senza prima chiamare **SQLExecDirect**, **SQLExecute**o una funzione di catalogo.<br /><br /> (DM) una funzione in esecuzione in modo asincrono (non questo) è stato chiamato per il *StatementHandle* ed era ancora in esecuzione quando questa funzione è stata chiamata.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**o **SQLSetPos** è stato chiamato per *StatementHandle* e ha restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.<br /><br /> (DM) Il driver era un ODBC 2. *x* driver e **SQLBulkOperations** è stato chiamato per un *StatementHandle* prima **SQLFetchScroll** o **SQLFetch** è stato chiamato.<br /><br /> (DM) **SQLBulkOperations** è stato chiamato dopo **sqlExtendedFetch** è stato chiamato su *StatementHandle*.|  
-|HY011|Impossibile impostare l'attributo ora|(DM) Il driver era un ODBC 2. *x* e l'attributo dell'istruzione SQL_ATTR_ROW_STATUS_PTR è stato impostato tra le chiamate a **SQLFetch** o **SQLFetchScroll** e **SQLBulkOperations**.|  
-|HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché non è stato possibile accedere agli oggetti di memoria sottostante, probabilmente a causa di condizioni di memoria insufficiente.|  
-|I090|Stringa o lunghezza del buffer non valida|L'argomento *Operazione* è stato SQL_ADD o SQL_UPDATE_BY_BOOKMARK. un valore di dati non era un puntatore null; il tipo di dati C è stato SQL_C_BINARY o SQL_C_CHAR; e il valore della lunghezza della colonna era minore di 0, ma non uguale a SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE, SQL_NTS o SQL_NULL_DATA oppure minore o uguale a SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> Il valore in un buffer di lunghezza/indicatore è stato SQL_DATA_AT_EXEC; il tipo SQL è SQL_LONGVARCHAR, SQL_LONGVARBINARY o un tipo di dati specifico dell'origine dati long. e il tipo di informazioni SQL_NEED_LONG_DATA_LEN in **SQLGetInfo** era "Y".<br /><br /> *L'argomento Operation* è stato SQL_ADD, l'attributo dell'istruzione SQL_ATTR_USE_BOOKMARK è stato impostato su SQL_UB_VARIABLE e la colonna 0 è stata associata a un buffer la cui lunghezza non è uguale alla lunghezza massima per il segnalibro per il set di risultati. Questa lunghezza è disponibile nel campo SQL_DESC_OCTET_LENGTH dell'IRD e può essere ottenuta chiamando **SQLDescribeCol**, **SQLColAttribute**o **SQLGetDescField**.|  
-|I092 (informazioni in stato IN CUI|Identificatore di attributo non valido|(DM) il valore specificato per l'argomento *Operation* non è valido.<br /><br /> *L'argomento Operation* è stato SQL_ADD, SQL_UPDATE_BY_BOOKMARK o SQL_DELETE_BY_BOOKMARK e l'attributo dell'istruzione SQL_ATTR_CONCURRENCY è stato impostato su SQL_CONCUR_READ_ONLY.<br /><br /> *L'argomento Operation* è stato SQL_DELETE_BY_BOOKMARK, SQL_FETCH_BY_BOOKMARK o SQL_UPDATE_BY_BOOKMARK e la colonna del segnalibro non è stata associata oppure l'attributo dell'istruzione SQL_ATTR_USE_BOOKMARKS è stato impostato su SQL_UB_OFF.|  
-|HY117|La connessione è sospesa a causa di uno stato di transazione sconosciuto. Sono consentite solo funzioni di disconnessione e di sola lettura.|(DM) Per ulteriori informazioni sullo stato sospeso, vedere [Funzione SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYC00|Funzionalità facoltativa non implementataOptional feature not implemented|Il driver o l'origine dati non supporta l'operazione richiesta nell'argomento *Operation.*|  
-|HYT00|Timeout|Il periodo di timeout della query è scaduto prima che l'origine dati restituisca il set di risultati. Il periodo di timeout viene impostato tramite **SQLSetStmtAttr** con un *attributo* argomento di SQL_ATTR_QUERY_TIMEOUT.|  
-|HYT01|Timeout connessione scaduto|Il periodo di timeout della connessione è scaduto prima che l'origine dati riscisse risposta alla richiesta. Il periodo di timeout della connessione viene impostato tramite **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Il driver non supporta questa funzione|(DM) il driver associato a *StatementHandle* non supporta la funzione.|  
-|IM017|Il polling è disabilitato in modalità di notifica asincronaPolling is disabled in asynchronous notification mode|Ogni volta che viene utilizzato il modello di notifica, il polling è disabilitato.|  
-|IM018 (in vi eim.|**SQLCompleteAsync** non è stato chiamato per completare l'operazione asincrona precedente su questo handle.|Se la chiamata di funzione precedente sull'handle restituisce SQL_STILL_EXECUTING e se la modalità di notifica è abilitata, **SQLCompleteAsync** deve essere chiamato sull'handle per eseguire la post-elaborazione e completare l'operazione.|  
+|40003|Completamento istruzione sconosciuto|La connessione associata non è riuscita durante l'esecuzione di questa funzione e non è possibile determinare lo stato della transazione.|  
+|42000|Errore di sintassi o violazione di accesso|Il driver non è stato in grado di bloccare la riga in base alle esigenze per eseguire l'operazione richiesta nell'argomento *Operation* .|  
+|44000|Violazione della clausola WITH CHECK OPTION|L'argomento *Operation* è stato SQL_ADD o SQL_UPDATE_BY_BOOKMARK e l'inserimento o l'aggiornamento è stato eseguito in una tabella visualizzata, o una tabella derivata dalla tabella visualizzata, che è stata creata specificando **with check Option**, in modo tale che una o più righe interessate dall'istruzione INSERT o Update non saranno più presenti nella tabella visualizzata.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \*MessageText* descrive l'errore e la sua origine.|  
+|HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
+|HY008|Operation canceled|L'elaborazione asincrona è stata abilitata per *statementHandle*. La funzione è stata chiamata e prima del completamento dell'esecuzione è stato chiamato **SQLCancel** o **SQLCancelHandle** in *statementHandle*. La funzione è stata chiamata nuovamente in *statementHandle*.<br /><br /> La funzione è stata chiamata e prima del completamento dell'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato su *statementHandle* da un thread diverso in un'applicazione multithread.|  
+|HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona per l'handle di connessione associato a *statementHandle*. Questa funzione asincrona era ancora in esecuzione quando è stata chiamata la funzione **SQLBulkOperations** .<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** è stato chiamato per *statementHandle* e restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.<br /><br /> (DM) il *statementHandle* specificato non si trova in uno stato eseguito. La funzione è stata chiamata senza prima chiamare **SQLExecDirect**, **SQLExecute**o una funzione di catalogo.<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona (non questa) per *statementHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**o **SQLSetPos** è stato chiamato per *statementHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.<br /><br /> (DM) il driver era ODBC 2. è stato chiamato il driver *x* e **SQLBulkOperations** per *statementHandle* prima della chiamata a **SQLFetchScroll** o **SQLFetch** .<br /><br /> (DM) **SQLBulkOperations** è stato chiamato dopo la chiamata di **SQLExtendedFetch** su *statementHandle*.|  
+|HY011|Non è possibile impostare l'attributo adesso|(DM) il driver era ODBC 2. il driver *x* e l'attributo SQL_ATTR_ROW_STATUS_PTR istruzione sono stati impostati tra le chiamate a **SQLFetch** o **SQLFetchScroll** e **SQLBulkOperations**.|  
+|HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché non è possibile accedere agli oggetti memoria sottostante, probabilmente a causa di condizioni di memoria insufficiente.|  
+|HY090|Lunghezza della stringa o del buffer non valida|L'argomento dell' *operazione* è stato SQL_ADD o SQL_UPDATE_BY_BOOKMARK; un valore di dati non è un puntatore null. il tipo di dati C è SQL_C_BINARY o SQL_C_CHAR; il valore della lunghezza della colonna è minore di 0, ma non uguale a SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE, SQL_NTS o SQL_NULL_DATA o minore o uguale a SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> Il valore in un buffer di lunghezza/indicatore è stato SQL_DATA_AT_EXEC; il tipo SQL è SQL_LONGVARCHAR, SQL_LONGVARBINARY o un tipo di dati lungo specifico dell'origine dati. e il tipo di informazioni SQL_NEED_LONG_DATA_LEN in **SQLGetInfo** era "Y".<br /><br /> L'argomento *Operation* è stato SQL_ADD, l'attributo SQL_ATTR_USE_BOOKMARK Statement è stato impostato su SQL_UB_VARIABLE e la colonna 0 è stata associata a un buffer la cui lunghezza non è uguale alla lunghezza massima del segnalibro per il set di risultati. Questa lunghezza è disponibile nel campo SQL_DESC_OCTET_LENGTH di IRD e può essere ottenuta chiamando **SQLDescribeCol**, **SQLColAttribute**o **SQLGetDescField**.|  
+|HY092|Identificatore di attributo non valido|(DM) il valore specificato per l'argomento dell' *operazione* non è valido.<br /><br /> L'argomento *Operation* è SQL_ADD, SQL_UPDATE_BY_BOOKMARK o SQL_DELETE_BY_BOOKMARK e l'attributo SQL_ATTR_CONCURRENCY Statement è stato impostato su SQL_CONCUR_READ_ONLY.<br /><br /> L'argomento dell' *operazione* è stato SQL_DELETE_BY_BOOKMARK, SQL_FETCH_BY_BOOKMARK o SQL_UPDATE_BY_BOOKMARK e la colonna del segnalibro non è associata oppure l'attributo dell'istruzione SQL_ATTR_USE_BOOKMARKS è stato impostato su SQL_UB_OFF.|  
+|HY117|Connessione sospesa a causa di uno stato di transazione sconosciuto. Sono consentite solo le funzioni di disconnessione e di sola lettura.|(DM) per ulteriori informazioni sullo stato Suspended, vedere [funzione SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYC00|Funzionalità facoltativa non implementata|Il driver o l'origine dati non supporta l'operazione richiesta nell'argomento *Operation* .|  
+|HYT00|Timeout|Il periodo di timeout della query è scaduto prima che l'origine dati restituisse il set di risultati. Il periodo di timeout viene impostato tramite **SQLSetStmtAttr** con un argomento di *attributo* SQL_ATTR_QUERY_TIMEOUT.|  
+|HYT01|Timeout connessione scaduto|Il periodo di timeout della connessione è scaduto prima che l'origine dati abbia risposto alla richiesta. Il periodo di timeout della connessione viene impostato tramite **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
+|IM001|Il driver non supporta questa funzione|(DM) il driver associato a *statementHandle* non supporta la funzione.|  
+|IM017|Polling disabilitato in modalità di notifica asincrona|Ogni volta che viene utilizzato il modello di notifica, il polling è disabilitato.|  
+|IM018|**SQLCompleteAsync** non è stato chiamato per completare l'operazione asincrona precedente su questo handle.|Se la chiamata di funzione precedente nell'handle restituisce SQL_STILL_EXECUTING e se è abilitata la modalità di notifica, è necessario chiamare **SQLCompleteAsync** sull'handle per eseguire la post-elaborazione e completare l'operazione.|  
   
 ## <a name="comments"></a>Commenti  
   
 > [!CAUTION]  
->  Per informazioni sugli stati dell'istruzione **SQLBulkOperations** possono essere chiamati e cosa deve fare per garantire la compatibilità con ODBC 2. *x,* vedere la sezione [Cursori a blocchi, Cursori scorrevoli e Compatibilità con](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) le versioni precedenti nell'Appendice G: Linee guida per i driver per la compatibilità con le versioni precedenti.  
+>  Per informazioni sugli stati di istruzione in cui è possibile chiamare **SQLBulkOperations** e sulle operazioni che è necessario eseguire per la compatibilità con ODBC 2. *x* applicazioni, vedere la sezione [cursori a blocchi, cursori scorrevoli e compatibilità con le versioni precedenti](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) in Appendice G: linee guida per la compatibilità con le versioni precedenti.  
   
- Un'applicazione utilizza **SQLBulkOperations** per eseguire le operazioni seguenti nella tabella o vista di base che corrisponde alla query corrente:  
+ Un'applicazione utilizza **SQLBulkOperations** per eseguire le operazioni seguenti sulla tabella o sulla vista di base che corrisponde alla query corrente:  
   
 -   Aggiungere nuove righe.  
   
--   Aggiornare un set di righe in cui ogni riga è identificata da un segnalibro.  
+-   Aggiorna un set di righe in cui ogni riga viene identificata da un segnalibro.  
   
--   Eliminare un set di righe in cui ogni riga è identificata da un segnalibro.  
+-   Consente di eliminare un set di righe in cui ogni riga viene identificata da un segnalibro.  
   
--   Recuperare un set di righe in cui ogni riga è identificata da un segnalibro.  
+-   Recuperare un set di righe in cui ogni riga viene identificata da un segnalibro.  
   
- Dopo una chiamata a **SQLBulkOperations**, la posizione del cursore di blocco non è definita. L'applicazione deve chiamare **SQLFetchScroll** per impostare la posizione del cursore. Un'applicazione deve chiamare **SQLFetchScroll** solo con un *argomento FetchOrientation* di SQL_FETCH_FIRST, SQL_FETCH_LAST, SQL_FETCH_ABSOLUTE o SQL_FETCH_BOOKMARK. La posizione del cursore non è definita se l'applicazione chiama **SQLFetch** o **SQLFetchScroll** con un *argomento FetchOrientation* di SQL_FETCH_PRIOR, SQL_FETCH_NEXT o SQL_FETCH_RELATIVE.  
+ Dopo una chiamata a **SQLBulkOperations**, la posizione del cursore a blocchi non è definita. Per impostare la posizione del cursore, l'applicazione deve chiamare **SQLFetchScroll** . Un'applicazione deve chiamare **SQLFetchScroll** solo con un argomento *FetchOrientation* di SQL_FETCH_FIRST, SQL_FETCH_LAST, SQL_FETCH_ABSOLUTE o SQL_FETCH_BOOKMARK. La posizione del cursore non è definita se l'applicazione chiama **SQLFetch** o **SQLFetchScroll** con un argomento *FetchOrientation* di SQL_FETCH_PRIOR, SQL_FETCH_NEXT o SQL_FETCH_RELATIVE.  
   
- Una colonna può essere ignorata nelle operazioni bulk eseguite da una chiamata a **SQLBulkOperations** impostando il buffer di lunghezza/indicatore della colonna specificato nella chiamata a **SQLBindCol**, su SQL_COLUMN_IGNORE.  
+ Una colonna può essere ignorata nelle operazioni bulk eseguite da una chiamata a **SQLBulkOperations** impostando il buffer di lunghezza/indicatore di colonna specificato nella chiamata a **SQLBindCol**, per SQL_COLUMN_IGNORE.  
   
- Non è necessario che l'applicazione imposti l'attributo dell'istruzione SQL_ATTR_ROW_OPERATION_PTR quando chiama **SQLBulkOperations** perché le righe non possono essere ignorate quando si eseguono operazioni bulk con questa funzione.  
+ Non è necessario che l'applicazione imposti l'attributo dell'istruzione SQL_ATTR_ROW_OPERATION_PTR quando chiama **SQLBulkOperations** perché le righe non possono essere ignorate durante l'esecuzione di operazioni bulk con questa funzione.  
   
- Il buffer a cui fa riferimento l'attributo dell'istruzione SQL_ATTR_ROWS_FETCHED_PTR contiene il numero di righe interessate da una chiamata a **SQLBulkOperations**.  
+ Il buffer a cui punta l'attributo dell'istruzione SQL_ATTR_ROWS_FETCHED_PTR contiene il numero di righe interessate da una chiamata a **SQLBulkOperations**.  
   
- Quando *l'argomento Operation* è SQL_ADD o SQL_UPDATE_BY_BOOKMARK e l'elenco di selezione della specifica di query associata al cursore contiene più di un riferimento alla stessa colonna, è definito dal driver se viene generato un errore o il driver ignora i riferimenti duplicati ed esegue le operazioni richieste.  
+ Quando l'argomento *Operation* è SQL_ADD o SQL_UPDATE_BY_BOOKMARK e l'elenco SELECT della specifica della query associata al cursore contiene più di un riferimento alla stessa colonna, viene definito dal driver se viene generato un errore o se il driver ignora i riferimenti duplicati ed esegue le operazioni richieste.  
   
- Per ulteriori informazioni sull'utilizzo di **SQLBulkOperations**, vedere [Aggiornamento dei dati con SQLBulkOperations](../../../odbc/reference/develop-app/updating-data-with-sqlbulkoperations.md).  
+ Per altre informazioni su come usare **SQLBulkOperations**, vedere [aggiornamento dei dati con SQLBulkOperations](../../../odbc/reference/develop-app/updating-data-with-sqlbulkoperations.md).  
   
-## <a name="performing-bulk-inserts"></a>Esecuzione di inserimenti di massaPerforming Bulk Inserts  
+## <a name="performing-bulk-inserts"></a>Esecuzione di inserimenti bulk  
  Per inserire dati con **SQLBulkOperations**, un'applicazione esegue la sequenza di passaggi seguente:  
   
 1.  Esegue una query che restituisce un set di risultati.  
   
 2.  Imposta l'attributo dell'istruzione SQL_ATTR_ROW_ARRAY_SIZE sul numero di righe che desidera inserire.  
   
-3.  Chiama **SQLBindCol** per associare i dati che si desidera inserire. I dati sono associati a una matrice con una dimensione uguale al valore di SQL_ATTR_ROW_ARRAY_SIZE.  
+3.  Chiama **SQLBindCol** per associare i dati che desidera inserire. I dati sono associati a una matrice con una dimensione uguale al valore di SQL_ATTR_ROW_ARRAY_SIZE.  
   
     > [!NOTE]  
-    >  La dimensione della matrice a cui fa riferimento l'attributo dell'istruzione SQL_ATTR_ROW_STATUS_PTR deve essere uguale a SQL_ATTR_ROW_ARRAY_SIZE o SQL_ATTR_ROW_STATUS_PTR deve essere un puntatore null.  
+    >  Le dimensioni della matrice a cui fa riferimento l'attributo dell'istruzione SQL_ATTR_ROW_STATUS_PTR devono essere uguali a SQL_ATTR_ROW_ARRAY_SIZE o SQL_ATTR_ROW_STATUS_PTR deve essere un puntatore null.  
   
 4.  Chiama **SQLBulkOperations**(*StatementHandle,* SQL_ADD) per eseguire l'inserimento.  
   
-5.  Se l'applicazione ha impostato l'attributo di istruzione SQL_ATTR_ROW_STATUS_PTR, è possibile esaminare questa matrice per visualizzare il risultato dell'operazione.  
+5.  Se l'applicazione ha impostato l'attributo SQL_ATTR_ROW_STATUS_PTR Statement, può ispezionare questa matrice per vedere il risultato dell'operazione.  
   
- Se un'applicazione associa la colonna 0 prima di chiamare **SQLBulkOperations** con *un* Operation argomento di SQL_ADD, il driver aggiornerà i buffer di colonna 0 associati con i valori del segnalibro per la riga appena inserita. Affinché ciò si verifichi, l'applicazione deve aver impostato l'attributo dell'istruzione SQL_ATTR_USE_BOOKMARKS su SQL_UB_VARIABLE prima di eseguire l'istruzione. (Questo non funziona con un ODBC 2. *x* driver.)  
+ Se un'applicazione associa la colonna 0 prima di chiamare **SQLBulkOperations** con un argomento *Operation* di SQL_ADD, il driver aggiornerà i buffer della colonna 0 associati con i valori dei segnalibri per la riga appena inserita. Per eseguire questa operazione, l'applicazione deve impostare l'attributo dell'istruzione SQL_ATTR_USE_BOOKMARKS su SQL_UB_VARIABLE prima di eseguire l'istruzione. Questa operazione non funziona con ODBC 2. driver *x* .)  
   
- I dati lunghi possono essere aggiunti in parti da SQLBulkOperations, usando le chiamate a SQLParamData e SQLPutData.Long data can be added in parts by SQLBulkOperations, by using calls to SQLParamData and SQLPutData. Per altre informazioni, vedere "Fornire dati lunghi per inserimenti e aggiornamenti bulk" più avanti in questa guida di riferimento sulla funzione.  
+ I dati Long possono essere aggiunti in parti da SQLBulkOperations, usando le chiamate a SQLParamData e SQLPutData. Per ulteriori informazioni, vedere "fornitura di dati Long per gli inserimenti e aggiornamenti bulk" più avanti in questo riferimento alla funzione.  
   
- Non è necessario che l'applicazione chiami **SQLFetch** o **SQLFetchScroll** prima di chiamare **SQLBulkOperations** (tranne quando si va contro un ODBC 2.* x* driver; vedere [Compatibilità con le versioni precedenti e Conformità agli standard](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)).  
+ Non è necessario che l'applicazione chiami **SQLFetch** o **SQLFetchScroll** prima di chiamare **SQLBulkOperations** (eccetto quando si passa a un ODBC 2.* driver x* ; vedere [compatibilità con le versioni precedenti e conformità agli standard](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  
   
- Il comportamento è definito dal driver se **SQLBulkOperations**, con un *Operation* argomento di SQL_ADD , viene chiamato su un cursore che contiene colonne duplicate. Il driver può restituire un SQLSTATE definito dal driver, aggiungere i dati alla prima colonna visualizzata nel set di risultati o eseguire altri comportamenti definiti dal driver.  
+ Il comportamento è definito dal driver se **SQLBulkOperations**, con un argomento *Operation* di SQL_ADD, viene chiamato su un cursore che contiene colonne duplicate. Il driver può restituire un valore SQLSTATE definito dal driver, aggiungere i dati alla prima colonna visualizzata nel set di risultati oppure eseguire altro comportamento definito dal driver.  
   
-## <a name="performing-bulk-updates-by-using-bookmarks"></a>Esecuzione di aggiornamenti in blocco tramite segnalibri  
- Per eseguire aggiornamenti in blocco utilizzando i segnalibri con **SQLBulkOperations**, un'applicazione esegue i passaggi seguenti in sequenza:  
+## <a name="performing-bulk-updates-by-using-bookmarks"></a>Esecuzione di aggiornamenti bulk tramite segnalibri  
+ Per eseguire gli aggiornamenti in blocco utilizzando segnalibri con **SQLBulkOperations**, un'applicazione esegue i passaggi seguenti in sequenza:  
   
 1.  Imposta l'attributo dell'istruzione SQL_ATTR_USE_BOOKMARKS su SQL_UB_VARIABLE.  
   
 2.  Esegue una query che restituisce un set di risultati.  
   
-3.  Imposta l'attributo dell'istruzione SQL_ATTR_ROW_ARRAY_SIZE sul numero di righe che desidera aggiornare.  
+3.  Imposta l'attributo dell'istruzione SQL_ATTR_ROW_ARRAY_SIZE sul numero di righe che si desidera aggiornare.  
   
-4.  Chiama **SQLBindCol** per associare i dati che si desidera aggiornare. I dati sono associati a una matrice con una dimensione uguale al valore di SQL_ATTR_ROW_ARRAY_SIZE. Chiama anche **SQLBindCol** per associare la colonna 0 (la colonna del segnalibro).  
+4.  Chiama **SQLBindCol** per associare i dati che desidera aggiornare. I dati sono associati a una matrice con una dimensione uguale al valore di SQL_ATTR_ROW_ARRAY_SIZE. Chiama anche **SQLBindCol** per associare la colonna 0 (colonna del segnalibro).  
   
-5.  Copia i segnalibri per le righe che è interessato ad aggiornare nella matrice associata alla colonna 0.  
+5.  Copia i segnalibri per le righe di cui è interessato l'aggiornamento nella matrice associata alla colonna 0.  
   
 6.  Aggiorna i dati nei buffer associati.  
   
     > [!NOTE]  
-    >  La dimensione della matrice a cui fa riferimento l'attributo di istruzione SQL_ATTR_ROW_STATUS_PTR deve essere uguale a SQL_ATTR_ROW_ARRAY_SIZE o SQL_ATTR_ROW_STATUS_PTR deve essere un puntatore null.  
+    >  Le dimensioni della matrice a cui fa riferimento l'attributo dell'istruzione SQL_ATTR_ROW_STATUS_PTR devono essere uguali a SQL_ATTR_ROW_ARRAY_SIZE o SQL_ATTR_ROW_STATUS_PTR deve essere un puntatore null.  
   
 7.  Chiama **SQLBulkOperations**(*StatementHandle,* SQL_UPDATE_BY_BOOKMARK).  
   
     > [!NOTE]  
-    >  Se l'applicazione ha impostato l'attributo di istruzione SQL_ATTR_ROW_STATUS_PTR, è possibile esaminare questa matrice per visualizzare il risultato dell'operazione.  
+    >  Se l'applicazione ha impostato l'attributo SQL_ATTR_ROW_STATUS_PTR Statement, può ispezionare questa matrice per vedere il risultato dell'operazione.  
   
-8.  Facoltativamente, chiama **SQLBulkOperations**(*StatementHandle*, SQL_FETCH_BY_BOOKMARK) per recuperare i dati nei buffer dell'applicazione associati per verificare che l'aggiornamento si sia verificato.  
+8.  Chiama facoltativamente **SQLBulkOperations**(*statementHandle*, SQL_FETCH_BY_BOOKMARK) per recuperare i dati nei buffer dell'applicazione associati per verificare che l'aggiornamento sia stato eseguito.  
   
-9. Se i dati sono stati aggiornati, il driver modifica il valore nella matrice di stato della riga per le righe appropriate in SQL_ROW_UPDATED.  
+9. Se i dati sono stati aggiornati, il driver modifica il valore nella matrice di stato della riga per le righe appropriate SQL_ROW_UPDATED.  
   
- Gli aggiornamenti di massa eseguiti da **SQLBulkOperations** possono includere dati lunghi utilizzando le chiamate a **SQLParamData** e **SQLPutData**. Per altre informazioni, vedere "Fornire dati lunghi per inserimenti e aggiornamenti bulk" più avanti in questa guida di riferimento sulla funzione.  
+ Gli aggiornamenti in blocco eseguiti da **SQLBulkOperations** possono includere dati di lunghezza usando le chiamate a **SQLParamData** e **SQLPutData**. Per ulteriori informazioni, vedere "fornitura di dati Long per gli inserimenti e aggiornamenti bulk" più avanti in questo riferimento alla funzione.  
   
- Se i segnalibri vengono mantenuti tra i cursori, non è necessario che l'applicazione chiami **SQLFetch** o **SQLFetchScroll** prima dell'aggiornamento tramite segnalibri. Può utilizzare i segnalibri che ha memorizzato da un cursore precedente. Se i segnalibri non vengono mantenuti tra i cursori, l'applicazione deve chiamare **SQLFetch** o **SQLFetchScroll** per recuperare i segnalibri.  
+ Se i segnalibri vengono mantenuti tra i cursori, non è necessario che l'applicazione chiami **SQLFetch** o **SQLFetchScroll** prima dell'aggiornamento da parte dei segnalibri. Può utilizzare i segnalibri archiviati da un cursore precedente. Se i segnalibri non vengono mantenuti tra i cursori, l'applicazione deve chiamare **SQLFetch** o **SQLFetchScroll** per recuperare i segnalibri.  
   
- Il comportamento è definito dal driver se **SQLBulkOperations**, con un *Operation* argomento di SQL_UPDATE_BY_BOOKMARK, viene chiamato su un cursore che contiene colonne duplicate. Il driver può restituire un SQLSTATE definito dal driver, aggiornare la prima colonna visualizzata nel set di risultati o eseguire altri comportamenti definiti dal driver.  
+ Il comportamento è definito dal driver se **SQLBulkOperations**, con un argomento *Operation* di SQL_UPDATE_BY_BOOKMARK, viene chiamato su un cursore che contiene colonne duplicate. Il driver può restituire un valore SQLSTATE definito dal driver, aggiornare la prima colonna visualizzata nel set di risultati o eseguire altro comportamento definito dal driver.  
   
-## <a name="performing-bulk-fetches-using-bookmarks"></a>Esecuzione di recuperamenti in blocco tramite segnalibriPerforming Bulk Fetches Using Bookmarks  
- Per eseguire recuperi di massa utilizzando i segnalibri con **SQLBulkOperations**, un'applicazione esegue i passaggi seguenti in sequenza:  
+## <a name="performing-bulk-fetches-using-bookmarks"></a>Esecuzione di operazioni di recupero bulk mediante segnalibri  
+ Per eseguire il recupero bulk mediante segnalibri con **SQLBulkOperations**, un'applicazione esegue i passaggi seguenti in sequenza:  
   
 1.  Imposta l'attributo dell'istruzione SQL_ATTR_USE_BOOKMARKS su SQL_UB_VARIABLE.  
   
 2.  Esegue una query che restituisce un set di risultati.  
   
-3.  Imposta l'attributo di istruzione SQL_ATTR_ROW_ARRAY_SIZE sul numero di righe che desidera recuperare.  
+3.  Imposta l'attributo dell'istruzione SQL_ATTR_ROW_ARRAY_SIZE sul numero di righe che desidera recuperare.  
   
-4.  Chiama **SQLBindCol** per associare i dati che desidera recuperare. I dati sono associati a una matrice con una dimensione uguale al valore di SQL_ATTR_ROW_ARRAY_SIZE. Chiama anche **SQLBindCol** per associare la colonna 0 (la colonna del segnalibro).  
+4.  Chiama **SQLBindCol** per associare i dati che desidera recuperare. I dati sono associati a una matrice con una dimensione uguale al valore di SQL_ATTR_ROW_ARRAY_SIZE. Chiama anche **SQLBindCol** per associare la colonna 0 (colonna del segnalibro).  
   
-5.  Copia i segnalibri per le righe che è interessato a recuperare nella matrice associata alla colonna 0. (Si presuppone che l'applicazione abbia già ottenuto i segnalibri separatamente.)  
+5.  Copia i segnalibri per le righe di cui è interessato il recupero nella matrice associata alla colonna 0. Si presuppone che l'applicazione abbia già ottenuto i segnalibri separatamente.  
   
     > [!NOTE]  
-    >  La dimensione della matrice a cui fa riferimento l'attributo di istruzione SQL_ATTR_ROW_STATUS_PTR deve essere uguale a SQL_ATTR_ROW_ARRAY_SIZE o SQL_ATTR_ROW_STATUS_PTR deve essere un puntatore null.  
+    >  Le dimensioni della matrice a cui fa riferimento l'attributo dell'istruzione SQL_ATTR_ROW_STATUS_PTR devono essere uguali a SQL_ATTR_ROW_ARRAY_SIZE o SQL_ATTR_ROW_STATUS_PTR deve essere un puntatore null.  
   
 6.  Chiama **SQLBulkOperations**(*StatementHandle,* SQL_FETCH_BY_BOOKMARK).  
   
-7.  Se l'applicazione ha impostato l'attributo di istruzione SQL_ATTR_ROW_STATUS_PTR, è possibile esaminare questa matrice per visualizzare il risultato dell'operazione.  
+7.  Se l'applicazione ha impostato l'attributo SQL_ATTR_ROW_STATUS_PTR Statement, può ispezionare questa matrice per vedere il risultato dell'operazione.  
   
- Se i segnalibri vengono mantenuti tra i cursori, non è necessario che l'applicazione chiami **SQLFetch** o **SQLFetchScroll** prima di eseguire il recupero tramite segnalibri. Può utilizzare i segnalibri che ha memorizzato da un cursore precedente. Se i segnalibri non vengono mantenuti tra i cursori, l'applicazione deve chiamare **SQLFetch** o **SQLFetchScroll** una volta per recuperare i segnalibri.  
+ Se i segnalibri vengono mantenuti tra i cursori, non è necessario che l'applicazione chiami **SQLFetch** o **SQLFetchScroll** prima di recuperare i segnalibri. Può utilizzare i segnalibri archiviati da un cursore precedente. Se i segnalibri non vengono mantenuti tra i cursori, l'applicazione deve chiamare **SQLFetch** o **SQLFetchScroll** una volta per recuperare i segnalibri.  
   
-## <a name="performing-bulk-deletes-using-bookmarks"></a>Esecuzione di eliminazioni in blocco tramite segnalibri  
- Per eseguire eliminazioni in blocco utilizzando i segnalibri con **SQLBulkOperations**, un'applicazione esegue i passaggi seguenti in sequenza:  
+## <a name="performing-bulk-deletes-using-bookmarks"></a>Esecuzione di eliminazioni bulk mediante segnalibri  
+ Per eseguire le eliminazioni bulk mediante segnalibri con **SQLBulkOperations**, un'applicazione esegue i passaggi seguenti in sequenza:  
   
 1.  Imposta l'attributo dell'istruzione SQL_ATTR_USE_BOOKMARKS su SQL_UB_VARIABLE.  
   
 2.  Esegue una query che restituisce un set di risultati.  
   
-3.  Imposta l'attributo dell'istruzione SQL_ATTR_ROW_ARRAY_SIZE sul numero di righe che desidera eliminare.  
+3.  Imposta l'attributo dell'istruzione SQL_ATTR_ROW_ARRAY_SIZE sul numero di righe che si desidera eliminare.  
   
-4.  Chiama **SQLBindCol** per associare la colonna 0 (la colonna del segnalibro).  
+4.  Chiama **SQLBindCol** per associare la colonna 0 (colonna del segnalibro).  
   
-5.  Copia i segnalibri per le righe che è interessato ad eliminare nella matrice associata alla colonna 0.  
+5.  Copia i segnalibri per le righe che desidera eliminare nella matrice associata alla colonna 0.  
   
     > [!NOTE]  
-    >  La dimensione della matrice a cui fa riferimento l'attributo di istruzione SQL_ATTR_ROW_STATUS_PTR deve essere uguale a SQL_ATTR_ROW_ARRAY_SIZE o SQL_ATTR_ROW_STATUS_PTR deve essere un puntatore null.  
+    >  Le dimensioni della matrice a cui fa riferimento l'attributo dell'istruzione SQL_ATTR_ROW_STATUS_PTR devono essere uguali a SQL_ATTR_ROW_ARRAY_SIZE o SQL_ATTR_ROW_STATUS_PTR deve essere un puntatore null.  
   
 6.  Chiama **SQLBulkOperations**(*StatementHandle,* SQL_DELETE_BY_BOOKMARK).  
   
-7.  Se l'applicazione ha impostato l'attributo di istruzione SQL_ATTR_ROW_STATUS_PTR, è possibile esaminare questa matrice per visualizzare il risultato dell'operazione.  
+7.  Se l'applicazione ha impostato l'attributo SQL_ATTR_ROW_STATUS_PTR Statement, può ispezionare questa matrice per vedere il risultato dell'operazione.  
   
- Se i segnalibri vengono mantenuti tra i cursori, l'applicazione non deve chiamare **SQLFetch** o **SQLFetchScroll** prima di eliminarli dai segnalibri. Può utilizzare i segnalibri che ha memorizzato da un cursore precedente. Se i segnalibri non vengono mantenuti tra i cursori, l'applicazione deve chiamare **SQLFetch** o **SQLFetchScroll** una volta per recuperare i segnalibri.  
+ Se i segnalibri vengono mantenuti tra i cursori, l'applicazione non deve chiamare **SQLFetch** o **SQLFetchScroll** prima dell'eliminazione da parte dei segnalibri. Può utilizzare i segnalibri archiviati da un cursore precedente. Se i segnalibri non vengono mantenuti tra i cursori, l'applicazione deve chiamare **SQLFetch** o **SQLFetchScroll** una volta per recuperare i segnalibri.  
   
-## <a name="providing-long-data-for-bulk-inserts-and-updates"></a>Fornire dati lunghi per inserimenti e aggiornamenti in blocco  
- È possibile fornire dati lunghi per gli inserimenti e gli aggiornamenti bulk eseguiti dalle chiamate a **SQLBulkOperations**. Per inserire o aggiornare dati lunghi, un'applicazione esegue i passaggi seguenti oltre ai passaggi descritti nelle sezioni "Esecuzione di inserimenti in blocco" e "Esecuzione di aggiornamenti in blocco tramite segnalibri" più indietro in questo argomento.  
+## <a name="providing-long-data-for-bulk-inserts-and-updates"></a>Fornire dati lunghi per gli inserimenti e gli aggiornamenti bulk  
+ È possibile fornire dati lunghi per gli inserimenti e gli aggiornamenti bulk eseguiti da chiamate a **SQLBulkOperations**. Per inserire o aggiornare i dati lunghi, un'applicazione esegue i passaggi seguenti oltre ai passaggi descritti nella sezione "esecuzione di inserimenti bulk" e "esecuzione di aggiornamenti bulk mediante segnalibri" più indietro in questo argomento.  
   
-1.  Quando associa i dati utilizzando **SQLBindCol**, l'applicazione inserisce un valore definito dall'applicazione, ad esempio il numero di colonna, nel buffer * \*TargetValuePtr* per le colonne data-at-execution. Il valore può essere utilizzato in un secondo momento per identificare la colonna.  
+1.  Quando associa i dati tramite **SQLBindCol**, l'applicazione inserisce un valore definito dall'applicazione, ad esempio il numero di colonna, nel buffer * \*TargetValuePtr* per le colonne data-at-execution. Il valore può essere utilizzato in un secondo momento per identificare la colonna.  
   
-     L'applicazione inserisce il risultato della macro SQL_LEN_DATA_AT_EXEC(*length*) nel buffer * \*StrLen_or_IndPtr.* Se il tipo di dati SQL della colonna è SQL_LONGVARBINARY, SQL_LONGVARCHAR o un tipo di dati specifico dell'origine dati long e il driver restituisce "Y" per il tipo di informazioni SQL_NEED_LONG_DATA_LEN in **SQLGetInfo**, *length* è il numero di byte di dati da inviare per il parametro; in caso contrario, deve essere un valore non negativo e viene ignorato.  
+     L'applicazione inserisce il risultato della macro SQL_LEN_DATA_AT_EXEC (*length*) nel buffer di * \*StrLen_or_IndPtr* . Se il tipo di dati SQL della colonna è SQL_LONGVARBINARY, SQL_LONGVARCHAR o un tipo di dati lungo specifico dell'origine dati e il driver restituisce "Y" per il tipo di informazioni SQL_NEED_LONG_DATA_LEN in **SQLGetInfo**, *length* è il numero di byte di dati da inviare per il parametro. in caso contrario, deve essere un valore non negativo e viene ignorato.  
   
-2.  Quando **SQLBulkOperations** viene chiamato, se sono presenti colonne data-at-execution, la funzione restituisce SQL_NEED_DATA e procede al passaggio 3, che segue. Se non sono presenti colonne data-at-execution, il processo è completo.  
+2.  Quando viene chiamato **SQLBulkOperations** , se sono presenti colonne data-at-execution, la funzione restituisce SQL_NEED_DATA e procede al passaggio 3, che segue. Se non sono presenti colonne data-at-execution, il processo è completo.  
   
-3.  L'applicazione chiama **SQLParamData** per recuperare l'indirizzo del buffer * \*TargetValuePtr* per la prima colonna data-at-execution da elaborare. **SQLParamData** restituisce SQL_NEED_DATA. L'applicazione recupera il valore definito dall'applicazione dal buffer * \*TargetValuePtr.*  
+3.  L'applicazione chiama **SQLParamData** per recuperare l'indirizzo del buffer * \*TargetValuePtr* per la prima colonna data-at-execution da elaborare. **SQLParamData** restituisce SQL_NEED_DATA. L'applicazione recupera il valore definito dall'applicazione dal buffer * \*TargetValuePtr* .  
   
     > [!NOTE]  
-    >  Sebbene i parametri data-at-execution siano simili alle colonne data-at-execution, il valore restituito da **SQLParamData** è diverso per ognuno di essi.  
+    >  Sebbene i parametri data-at-execution siano simili alle colonne data-at-execution, il valore restituito da **SQLParamData** è diverso per ogni.  
   
-     Le colonne Data-at-execution sono colonne in un set di righe per le quali verranno inviati dati con **SQLPutData** quando una riga viene aggiornata o inserita con **SQLBulkOperations**. Sono associati a **SQLBindCol**. Il valore restituito da **SQLParamData** è l'indirizzo della riga nel buffer*TargetValuePtr* che viene elaborato.  
+     Le colonne data-at-execution sono colonne di un set di righe per cui i dati verranno inviati con **SQLPutData** quando una riga viene aggiornata o inserita con **SQLBulkOperations**. Sono associati a **SQLBindCol**. Il valore restituito da **SQLParamData** è l'indirizzo della riga nel buffer **TargetValuePtr* in fase di elaborazione.  
   
-4.  L'applicazione chiama **SQLPutData** una o più volte per inviare i dati per la colonna. È necessaria più di una chiamata se non è possibile restituire tutti i valori di dati nel buffer * \*TargetValuePtr* specificato in **SQLPutData**; più chiamate a **SQLPutData** per la stessa colonna sono consentite solo quando si inviano dati di tipo carattere C a una colonna con un tipo di dati carattere, binario o specifico dell'origine dati o quando si inviano dati C binari a una colonna con un tipo di dati carattere, binario o specifico dell'origine dati.  
+4.  L'applicazione chiama **SQLPutData** una o più volte per inviare i dati per la colonna. È necessaria più di una chiamata se non è possibile restituire tutto il valore dei dati nel buffer * \*TargetValuePtr* specificato in **SQLPutData**; sono consentite più chiamate a **SQLPutData** per la stessa colonna solo quando si inviano dati di tipo carattere c a una colonna con tipo di dati character, Binary o origine dati oppure quando si inviano dati c binari a una colonna con un tipo di dati character, Binary o data source specifico.  
   
-5.  L'applicazione chiama nuovamente **SQLParamData** per segnalare che tutti i dati sono stati inviati per la colonna.  
+5.  L'applicazione chiama di nuovo **SQLParamData** per segnalare che tutti i dati sono stati inviati per la colonna.  
   
-    -   Se sono presenti più colonne data-at-execution, **SQLParamData** restituisce SQL_NEED_DATA e l'indirizzo del buffer *TargetValuePtr* per la successiva colonna data-at-execution da elaborare. L'applicazione ripete i passaggi 4 e 5.  
+    -   Se sono presenti più colonne data-at-execution, **SQLParamData** restituisce SQL_NEED_DATA e l'indirizzo del buffer *TargetValuePtr* per la colonna data-at-execution successiva da elaborare. L'applicazione ripete i passaggi 4 e 5.  
   
-    -   Se non sono presenti altre colonne data-at-execution, il processo è completo. Se l'istruzione è stata eseguita correttamente, **SQLParamData** restituisce SQL_SUCCESS o SQL_SUCCESS_WITH_INFO; se l'esecuzione non è riuscita, restituisce SQL_ERROR. A questo punto, **SQLParamData** può restituire qualsiasi SQLSTATE che può essere restituito da **SQLBulkOperations**.  
+    -   Se non sono presenti altre colonne data-at-execution, il processo è completo. Se l'istruzione è stata eseguita correttamente, **SQLParamData** restituisce SQL_SUCCESS o SQL_SUCCESS_WITH_INFO; Se l'esecuzione ha esito negativo, restituisce SQL_ERROR. A questo punto, **SQLParamData** può restituire qualsiasi SQLSTATE che può essere restituito da **SQLBulkOperations**.  
   
- Se l'operazione viene annullata o si verifica un errore in **SQLParamData** o **SQLPutData** dopo **SQLBulkOperations** restituisce SQL_NEED_DATA e prima dell'invio dei dati per tutte le colonne data-at-execution, l'applicazione può chiamare solo **SQLCancel**, **SQLGetDiagField**, **SQLGetDiagRec**, **SQLGetFunctions**, **SQLParamData**o **SQLPutData** per l'istruzione o la connessione associata all'istruzione. Se chiama qualsiasi altra funzione per l'istruzione o la connessione associata all'istruzione, la funzione restituisce SQL_ERROR e SQLSTATE HY010 (errore di sequenza di funzione).  
+ Se l'operazione viene annullata o si verifica un errore in **SQLParamData** o **SQLPutData** dopo che **SQLBulkOperations** restituisce SQL_NEED_DATA e prima che i dati vengano inviati per tutte le colonne data-at-execution, l'applicazione può chiamare solo **SQLGetFunctions** **SQLCancel**, **SQLGetDiagField** **, SQLGetDiagRec, SQLGetFunctions**, **SQLParamData**o **SQLPutData** per l'istruzione o la connessione associata all'istruzione. Se chiama qualsiasi altra funzione per l'istruzione o la connessione associata all'istruzione, la funzione restituisce SQL_ERROR e SQLSTATE HY010 (errore della sequenza di funzioni).  
   
- Se l'applicazione chiama **SQLCancel** mentre il driver richiede ancora dati per le colonne data-at-esecuzione, il driver annulla l'operazione. L'applicazione può quindi chiamare nuovamente **SQLBulkOperations;** l'annullamento non influisce sullo stato del cursore o sulla posizione corrente del cursore.  
+ Se l'applicazione chiama **SQLCancel** mentre il driver necessita ancora di dati per le colonne data-at-execution, il driver Annulla l'operazione. L'applicazione può quindi chiamare di nuovo **SQLBulkOperations** . l'annullamento non influisce sullo stato del cursore o sulla posizione corrente del cursore.  
   
 ## <a name="row-status-array"></a>Matrice di stato riga  
- La matrice di stato della riga contiene i valori di stato per ogni riga di dati nel set di righe dopo una chiamata a **SQLBulkOperations**. Il driver imposta i valori di stato in questa matrice dopo una chiamata a **SQLFetch**, **SQLFetchScroll**, **SQLSetPos**o **SQLBulkOperations**. Questa matrice viene inizialmente popolata da una chiamata a **SQLBulkOperations** se **SQLFetch** o **SQLFetchScroll** non è stato chiamato prima di **SQLBulkOperations**. Questa matrice fa riferimento all'attributo dell'istruzione SQL_ATTR_ROW_STATUS_PTR. Il numero di elementi nelle matrici di stato delle righe deve essere uguale al numero di righe nel set di righe (come definito dall'attributo di istruzione SQL_ATTR_ROW_ARRAY_SIZE). Per informazioni su questa matrice di stato di riga, vedere [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md).  
+ La matrice di stato della riga contiene i valori di stato per ogni riga di dati nel set di righe dopo una chiamata a **SQLBulkOperations**. Il driver imposta i valori di stato in questa matrice dopo una chiamata a **SQLFetch**, **SQLFetchScroll**, **SQLSetPos**o **SQLBulkOperations**. Questa matrice viene inizialmente popolata da una chiamata a **SQLBulkOperations** se **SQLFetch** o **SQLFetchScroll** non è stato chiamato prima di **SQLBulkOperations**. Questa matrice fa riferimento all'attributo dell'istruzione SQL_ATTR_ROW_STATUS_PTR. Il numero di elementi nelle matrici di stato della riga deve essere uguale al numero di righe nel set di righe (come definito dall'attributo SQL_ATTR_ROW_ARRAY_SIZE Statement). Per informazioni su questa matrice di stato della riga, vedere [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md).  
   
 ## <a name="code-example"></a>Esempio di codice  
- Nell'esempio seguente vengono recuperate 10 righe di dati alla volta dalla tabella Customers. Viene quindi richiesto all'utente di eseguire un'azione. Per ridurre il traffico di rete, il buffer di esempio aggiorna, elimina e inserisce localmente nelle matrici associate, ma in corrispondenza degli offset oltre i dati del set di righe. Quando l'utente sceglie di inviare aggiornamenti, eliminazioni e inserimenti all'origine dati, il codice imposta l'offset dell'associazione in modo appropriato e chiama **SQLBulkOperations**. Per semplicità, l'utente non può memorizzare nel buffer più di 10 aggiornamenti, eliminazioni o inserimenti.  
+ Nell'esempio seguente vengono recuperate 10 righe di dati alla volta dalla tabella Customers. Viene quindi richiesto all'utente di eseguire un'azione. Per ridurre il traffico di rete, l'esempio memorizza nel buffer gli aggiornamenti, le eliminazioni e gli inserimenti in locale nelle matrici limitate, ma in corrispondenza degli offset oltre i dati del set di righe. Quando l'utente sceglie di inviare aggiornamenti, eliminazioni e inserimenti nell'origine dati, il codice imposta l'offset del binding in modo appropriato e chiama **SQLBulkOperations**. Per semplicità, l'utente non può memorizzare nel buffer più di 10 aggiornamenti, eliminazioni o inserimenti.  
   
 ```cpp  
 // SQLBulkOperations_Function.cpp  
@@ -451,16 +451,16 @@ int main() {
   
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
-|Associazione di un buffer a una colonna in un set di risultatiBinding a buffer to a column in a result set|[Funzione SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
-|Annullamento dell'elaborazione delle istruzioniCanceling statement processing|[Funzione SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|Associazione di un buffer a una colonna in un set di risultati|[Funzione SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
+|Annullamento dell'elaborazione di istruzioni|[Funzione SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
 |Recupero di un blocco di dati o scorrimento di un set di risultati|[Funzione SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
-|Ottenere un singolo campo di un descrittoreGetting a single field of a descriptor|[Funzione SQLGetDescField](../../../odbc/reference/syntax/sqlgetdescfield-function.md)|  
-|Recupero di più campi di un descrittoreGetting multiple fields of a descriptor|[Funzione SQLGetDescRec](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
-|Impostazione di un singolo campo di un descrittore|[Funzione SQLSetDescFieldSQLSetDescField Function](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
+|Recupero di un singolo campo di un descrittore|[Funzione SQLGetDescField](../../../odbc/reference/syntax/sqlgetdescfield-function.md)|  
+|Recupero di più campi di un descrittore|[Funzione SQLGetDescRec](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
+|Impostazione di un singolo campo di un descrittore|[SQLSetDescField (funzione)](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
 |Impostazione di più campi di un descrittore|[Funzione SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
 |Posizionamento del cursore, aggiornamento dei dati nel set di righe o aggiornamento o eliminazione di dati nel set di righe|[Funzione SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
-|Impostazione di un attributo di istruzioneSetting a statement attribute|[Funzione SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
+|Impostazione di un attributo di istruzione|[Funzione SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento all'API ODBCODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Informazioni di riferimento sulle API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [File di intestazione ODBC](../../../odbc/reference/install/odbc-header-files.md)

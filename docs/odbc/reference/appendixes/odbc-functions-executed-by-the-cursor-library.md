@@ -1,5 +1,5 @@
 ---
-title: Funzioni ODBC eseguite dalla libreria di cursori Documenti Microsoft
+title: Funzioni ODBC eseguite dalla libreria di cursori | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,32 +16,32 @@ ms.assetid: 2f1d3386-7e59-4d55-a5b4-3440b61343a3
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 70fb48a8764a913ea4c2376c1a44bcd8712e7d29
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298231"
 ---
 # <a name="odbc-functions-executed-by-the-cursor-library"></a>Funzioni ODBC eseguite dalla libreria di cursori
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Microsoft consiglia di utilizzare la funzionalità del cursore del driver.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Microsoft consiglia di utilizzare la funzionalità di cursore del driver.  
   
- La libreria di cursori esegue le seguenti funzioni. Quando un'applicazione chiama una funzione in questo elenco, Gestione Driver richiama la libreria di cursori, non il driver. Si noti che la libreria di cursori può chiamare il driver durante l'esecuzione della funzione.  
+ La libreria di cursori esegue le funzioni seguenti. Quando un'applicazione chiama una funzione in questo elenco, gestione driver richiama la libreria di cursori, non il driver. Si noti che la libreria di cursori può chiamare il driver durante l'esecuzione della funzione.  
   
 |||  
 |-|-|  
-|**SQLBindCol**|**Opzione SQLGetStmtOption**|  
-|**SQLBindParam (informazioni in lingua inglese)**|**SQLNativeSql**|  
+|**SQLBindCol**|**SQLGetStmtOption**|  
+|**SQLBindParam**|**SQLNativeSql**|  
 |**SQLBindParameter**|**SQLNumParams**|  
-|**SQLCloseCursor**|**Opzioni SQLParam**|  
+|**SQLCloseCursor**|**SQLParamOptions**|  
 |**SQLEndTran**|**SQLRowCount**|  
-|**Sqlextendedfetch**|**SQLSetConnectAttr**|  
-|**SQLFetchScroll**|**Sqlsetconnectoption**|  
+|**SQLExtendedFetch**|**SQLSetConnectAttr**|  
+|**SQLFetchScroll**|**SQLSetConnectOption**|  
 |**SQLFreeHandle**|**SQLSetDescField**|  
 |**SQLFreeStmt**|**SQLSetDescRec**|  
 |**SQLGetData**|**SQLSetPos**|  
-|**SQLGetDescField**|**Opzioni SQLSetScrollOptions**|  
+|**SQLGetDescField**|**SQLSetScrollOptions**|  
 |**SQLGetDescRec**|**SQLSetStmtAttr**|  
-|**SQLGetFunctions**|**Opzione SQLSetStmmtOption**|  
-|**SQLGetInfo**|**SQLTransact (transazione SQLTransact)**|  
+|**SQLGetFunctions**|**SQLSetStmtOption**|  
+|**SQLGetInfo**|**SQLTransact**|  
 |**SQLGetStmtAttr**||

@@ -1,5 +1,5 @@
 ---
-title: 'Modalità commit : Documenti Microsoft'
+title: Modalità commit | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,18 +15,18 @@ ms.assetid: 963fe470-f7cb-4dbe-a779-05f98d7ff17d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 0bdff581ed20ffd2768f4ebd2a033476873dcfec
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299121"
 ---
 # <a name="commit-mode"></a>Modalità di commit
-Le transazioni in ODBC possono essere in una delle due modalità seguenti: modalità di commit automatico o modalità di commit manuale.  
+Le transazioni in ODBC possono trovarsi in una delle due modalità seguenti: modalità autocommit o modalità commit manuale.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
--   [Modalità commit automatico](../../../odbc/reference/develop-app/auto-commit-mode.md)  
+-   [Modalità autocommit](../../../odbc/reference/develop-app/auto-commit-mode.md)  
   
 -   [Modalità di commit manuale](../../../odbc/reference/develop-app/manual-commit-mode.md)  
   

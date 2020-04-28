@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - installing ODBC components [ODBC], setup program
 ms.assetid: 9cc5d75d-b293-41e5-927c-10f4af2e7af1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dc79bb5d12b53938e3e2ef1c531fd03b0002ed78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b89cae70db65bd2aa54b8e9789a5c2b35696923e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68093828"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81296151"
 ---
 # <a name="setup-program"></a>Programma di installazione
 > **Nota:** A partire da Windows XP e Windows Server 2003, **ODBC è incluso nel sistema operativo Windows**. È consigliabile installare solo in modo esplicito ODBC nelle versioni precedenti di Windows.  

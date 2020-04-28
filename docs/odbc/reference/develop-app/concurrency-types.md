@@ -1,5 +1,5 @@
 ---
-title: Tipi di concorrenza - Documenti Microsoft
+title: Tipi di concorrenza | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,19 +17,19 @@ ms.assetid: 46762ae5-17dd-4777-968e-58156f470fe1
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 642301d09c5aa189276db534e58aca0c5e00e3ce
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299101"
 ---
 # <a name="concurrency-types"></a>Tipi di concorrenza
-Per risolvere il problema della concorrenza ridotta nei cursori, ODBC espone quattro diversi tipi di concorrenza del cursore:  
+Per risolvere il problema relativo alla riduzione della concorrenza nei cursori, ODBC espone quattro tipi diversi di concorrenza del cursore:  
   
--   **Sola lettura** Il cursore può leggere i dati ma non aggiornare o eliminare i dati. Questo è il tipo di concorrenza predefinito. Anche se il DBMS potrebbe bloccare le righe per applicare i livelli di isolamento Ripetibile lettura e Serializable, è possibile utilizzare blocchi di lettura anziché blocchi di scrittura. Ciò comporta una maggiore concorrenza perché altre transazioni possono almeno leggere i dati.  
+-   Sola **lettura** Il cursore può leggere i dati ma non può aggiornare o eliminare i dati. Si tratta del tipo di concorrenza predefinito. Sebbene il sistema DBMS possa bloccare le righe per applicare i livelli di isolamento Repeatable Read e Serializable, può utilizzare i blocchi Read anziché i blocchi Write. Ciò comporta una concorrenza più elevata perché altre transazioni possono almeno leggere i dati.  
   
--   **Blocco** Il cursore utilizza il livello più basso di blocco necessario per assicurarsi che sia possibile aggiornare o eliminare le righe nel set di risultati. Ciò comporta in genere livelli di concorrenza molto bassi, in particolare ai livelli di isolamento delle transazioni ripetibili di lettura e serializzazione.  
+-   **Blocco** di Il cursore utilizza il livello di blocco più basso necessario per verificare che sia in grado di aggiornare o eliminare righe nel set di risultati. Questo in genere comporta livelli di concorrenza molto bassi, soprattutto a livello di isolamento delle transazioni Repeatable Read e Serializable.  
   
--   **Concorrenza ottimistica tramite versioni di riga e concorrenza ottimistica tramite valoriOptimistic concurrency using row versions and optimistic concurrency using values** Il cursore utilizza la concorrenza ottimistica: aggiorna o elimina le righe solo se non sono state modificate dopo l'ultima lettura. Per rilevare le modifiche, confronta le versioni o i valori delle righe. Non esiste alcuna garanzia che il cursore sarà in grado di aggiornare o eliminare una riga, ma la concorrenza è molto più alta rispetto a quando viene utilizzato il blocco. Per ulteriori informazioni, vedere la sezione seguente, [Concorrenza ottimistica](../../../odbc/reference/develop-app/optimistic-concurrency.md).  
+-   **Concorrenza ottimistica che utilizza versioni di riga e concorrenza ottimistica utilizzando valori** Il cursore usa la concorrenza ottimistica: Aggiorna o Elimina le righe solo se non sono state modificate dall'ultima lettura. Per rilevare le modifiche, vengono confrontate le versioni di riga o i valori. Non vi è alcuna garanzia che il cursore sia in grado di aggiornare o eliminare una riga, ma la concorrenza è molto più elevata rispetto a quando si usa il blocco. Per ulteriori informazioni, vedere la sezione seguente, [concorrenza ottimistica](../../../odbc/reference/develop-app/optimistic-concurrency.md).  
   
- Un'applicazione specifica il tipo di concorrenza che si desidera che il cursore da utilizzare con l'attributo di istruzione SQL_ATTR_CONCURRENCY. Per determinare i tipi supportati, chiama **SQLGetInfo** con l'opzione SQL_SCROLL_CONCURRENCY.
+ In un'applicazione viene specificato il tipo di concorrenza che si desidera venga utilizzato dal cursore con l'attributo dell'istruzione SQL_ATTR_CONCURRENCY. Per determinare quali tipi sono supportati, viene chiamato **SQLGetInfo** con l'opzione SQL_SCROLL_CONCURRENCY.

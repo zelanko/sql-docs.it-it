@@ -1,5 +1,5 @@
 ---
-title: Ottenere l'autenticazione Kerberos reciproca Documenti Microsoft
+title: Ottenere l'autenticazione Kerberos reciproca | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5d222f54b3c19d0deaeab4a370ded226856f2246
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301121"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>Ottenere l'autenticazione Kerberos reciproca
@@ -25,7 +25,7 @@ ms.locfileid: "81301121"
   
  Non è possibile utilizzare questo esempio con le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- Per ulteriori informazioni, vedere [Nome dell'entità servizio &#40;supporto&#41; SPN nelle connessioni client](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md).  
+ Per ulteriori informazioni, vedere [nome dell'entità servizio &#40;SPN&#41; supporto per le connessioni client](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md).  
   
 ## <a name="example"></a>Esempio  
  Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  

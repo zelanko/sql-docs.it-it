@@ -1,5 +1,5 @@
 ---
-title: Operazioni della libreria di cursori Documenti Microsoft
+title: Operazioni della libreria di cursori | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,14 +18,14 @@ ms.assetid: 04d514b1-dc4d-4b84-bf35-60f4657ef1f6
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: a2297e72aacad7ea91b7af934a47bebbc61f0686
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301618"
 ---
 # <a name="cursor-library-operations"></a>Operazioni della libreria di cursori
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Microsoft consiglia di utilizzare la funzionalità del cursore del driver.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Microsoft consiglia di utilizzare la funzionalità di cursore del driver.  
   
- Se un'applicazione che utilizza un driver ODBC *2.x* effettua chiamate alla libreria di cursori ODBC *3.x,* l'applicazione potrebbe essere in grado di utilizzare le funzionalità di ODBC *3.x* che non sono supportate dal driver ODBC *2.x.* Un writer di applicazioni deve prestare attenzione a come vengono utilizzate queste funzionalità, tuttavia. L'utilizzo della libreria di cursori ODBC *3.x* non trasforma un driver ODBC *2.x* in un driver ODBC *3.x.*
+ Se un'applicazione che utilizza un driver ODBC *2. x* effettua chiamate alla libreria di cursori ODBC *3. x* , l'applicazione potrebbe essere in grado di utilizzare le funzionalità ODBC *3. x* che non sono supportate dal driver ODBC *2. x* . Tuttavia, un writer di applicazioni deve prestare particolare attenzione alla modalità di utilizzo di queste funzionalità. L'utilizzo della libreria di cursori ODBC *3. x* non rende un driver ODBC *2. x* in un driver ODBC *3. x* .

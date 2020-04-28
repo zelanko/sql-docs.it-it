@@ -1,5 +1,5 @@
 ---
-title: Sottochiavi di specifica dell'origine dati Documenti Microsoft
+title: Sottochiavi di specifica dell'origine dati | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,27 +15,27 @@ ms.assetid: d7e88a07-e6ab-4258-a45d-1ca21234fbec
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 281377c307f3f3750e87bf5dc988beb7660067af
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300341"
 ---
 # <a name="data-source-specification-subkeys"></a>Sottochiavi di specifica dell'origine dati
-Ogni origine dati elencata nella sottochiave Origini dati ODBC dispone di una sottochiave propria. Questa sottochiave ha lo stesso nome del valore corrispondente nella sottochiave Origini dati ODBC. I valori in questa sottochiave devono elencare la DLL del driver e possono elencare una descrizione dell'origine dati. Se il driver supporta i convertitori, i valori possono elencare il nome di un traduttore predefinito, la DLL di conversione predefinita e l'opzione di conversione predefinita. I valori possono anche elencare altre informazioni richieste dal driver per connettersi all'origine dati. Ad esempio, il driver potrebbe richiedere un nome di server, un nome di database o un nome di schema.  
+Ogni origine dati elencata nella sottochiave origini dati ODBC presenta una sottochiave. Questa sottochiave ha lo stesso nome del valore corrispondente nella sottochiave origini dati ODBC. I valori in questa sottochiave devono elencare la DLL del driver e possono elencare una descrizione dell'origine dati. Se il driver supporta i convertitori, i valori possono elencare il nome di un convertitore predefinito, la DLL di traduzione predefinita e l'opzione di conversione predefinita. I valori possono anche elencare altre informazioni richieste dal driver per la connessione all'origine dati. Ad esempio, il driver potrebbe richiedere il nome del server, il nome del database o il nome dello schema.  
   
- I formati dei valori sono come illustrato nella tabella seguente. È necessario solo il valore Driver.  
+ I formati dei valori sono indicati nella tabella seguente. È necessario solo il valore del driver.  
   
 |Nome|Tipo di dati|Data|  
 |----------|---------------|----------|  
 |Descrizione|REG_SZ|*Descrizione*|  
-|Driver|REG_SZ|*driver-DLL-percorso*|  
-|Dll di traduzione|REG_SZ|*percorso DLL-traduttore*|  
-|NomeTraduzione|REG_SZ|*traduttore-nome*|  
-|TranslationOption (Opzione)TranslationOption (|REG_SZ|*opzione di traduzione*|  
-|*opt-value-name*|*opt-value-type*|*opt-value-data*|  
+|Driver|REG_SZ|*Driver-DLL-Path*|  
+|TranslationDLL|REG_SZ|*translator-DLL-percorso*|  
+|Translationname|REG_SZ|*nome traduttore*|  
+|TranslationOption|REG_SZ|*Translation-opzione*|  
+|*nome-valore-opt*|*opt-valore-tipo*|*opt-value-dati*|  
   
- Si supponga, ad esempio, che il driver di SQL Server richieda il nome del server e un flag per la conversione da OEM ad ANSI e definisca i valori Server e OEMTOANSI per questi. Si supponga inoltre che l'origine dati di inventario utilizzi le tabelle codici di Microsoft® per la conversione tra le tabelle codici di Windows® Latin 1 (1250) e multilingue (850). I valori nella sottochiave Inventory potrebbero essere i seguenti:  
+ Si supponga, ad esempio, che il driver SQL Server richieda il nome del server e un flag per la conversione da OEM a ANSI e definisce i valori server e OEMTOANSI per questi. Si supponga inoltre che l'origine dati di inventario utilizzi il convertitore della tabella codici di Microsoft® per tradurre tra le tabelle codici di Windows® Latin 1 (1250) e multilingue (850). I valori nella sottochiave Inventory possono essere i seguenti:  
   
 ```  
 Description : REG_SZ : Inventory database on server InvServ  

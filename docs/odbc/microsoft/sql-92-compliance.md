@@ -1,5 +1,5 @@
 ---
-title: Conformità di SQL-92 Documenti Microsoft
+title: Conformità SQL-92 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,32 +16,32 @@ ms.assetid: 50c8c7df-df01-4f4d-ad62-d059cf29d73a
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 9ac0ae5873e545afb8fcac9dd003c984b1ed303a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300701"
 ---
 # <a name="sql-92-compliance"></a>Conformità SQL-92
-I driver di database desktop ODBC e il motore Microsoft Jet sottostante non sono compatibili con SQL-92. Supportano molte funzionalità definite in SQL-92. Alcune funzionalità supportate nel driver non sono supportate in SQL-92. Per ulteriori informazioni, vedere *Microsoft Jet Database Engine Programmer's Guide*. Di seguito sono riportate le principali differenze tra i due:  
+I driver del database desktop ODBC e il motore Microsoft Jet sottostante non sono conformi a SQL-92. Supportano numerose funzionalità definite in SQL-92. Alcune funzionalità supportate nel driver non sono supportate in SQL-92. Per ulteriori informazioni, vedere la *Guida per programmatori Microsoft Jet motore di database*. Di seguito sono riportate le principali differenze tra le due:  
   
--   Il codice SQL utilizzato dai driver di database desktop supporta espressioni più potenti rispetto a quelle specificate da SQL-92.  
+-   Il database SQL utilizzato dai driver del database desktop supporta espressioni più potenti rispetto a quelle specificate da SQL-92.  
   
--   Al predicato BETWEEN si applicano regole diverse.  
+-   Regole diverse si applicano al predicato BETWEEN.  
   
--   Il codice SQL utilizzato dai driver di Database desktop e ANSI SQL supporta parole chiave diverse.  
+-   SQL utilizzato dai driver del database desktop e ANSI SQL supporta parole chiave diverse.  
   
- Le seguenti funzionalità di SQL-92 non sono supportate da Microsoft Jet SQL:  
+ Le funzionalità SQL-92 seguenti non sono supportate da Microsoft Jet SQL:  
   
 -   Istruzioni di sicurezza, ad esempio GRANT e LOCK.  
   
 -   DISTINCT con riferimenti a funzioni di aggregazione.  
   
- Le funzionalità seguenti sono miglioramenti apportati al codice SQL utilizzato dai driver di database desktop non specificati da SQL-92:  
+ Le funzionalità seguenti sono i miglioramenti apportati a SQL utilizzati dai driver del database desktop non specificati da SQL-92:  
   
--   Istruzione TRANSFORM che fornisce il supporto per le query a campi incrociati.  
+-   L'istruzione TRANSFORM fornisce supporto per le query a campi incrociati.  
   
 -   Funzioni di aggregazione aggiuntive (**StDev** e **VarP**).  
   
 > [!NOTE]  
->  I driver di database desktop supportano la sintassi ANSI standard per % (percentuale) e _ (carattere di sottolineatura), non (asterisco) e ? (punto interrogativo).
+>  I driver del database desktop supportano la sintassi standard ANSI per% (percentuale) e _ (carattere di sottolineatura), non * (asterisco) e? (punto interrogativo).

@@ -1,5 +1,5 @@
 ---
-title: Sottochiave dei traduttori ODBC Documenti Microsoft
+title: Sottochiave ODBC Translator | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: 6b170f1f-e263-4aac-9d49-8d0ca0470ca2
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 617416adfcddfbf041c48acbf83cb9589e34ae27
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81296221"
 ---
 # <a name="odbc-translators-subkey"></a>Sottochiave ODBC Translators
@@ -26,11 +26,11 @@ I valori nella sottochiave ODBC Translators elencano i traduttori installati. Il
   
 |Nome|Tipo di dati|Data|  
 |----------|---------------|----------|  
-|*traduttore-desc*|REG_SZ|**Installato**|  
+|*Translator-DESC*|REG_SZ|**Installato**|  
   
- Il nome *del traduttore-desc* è definito dallo sviluppatore del traduttore.  
+ Il nome *Translator-desc* viene definito dallo sviluppatore del traduttore.  
   
- Si supponga, ad esempio, che un utente abbia installato Microsoft® Code Page Translator e un ASCII personalizzato per il traduttore EBCDIC. I valori nella sottochiave ODBC Translators potrebbero essere i seguenti:  
+ Si supponga, ad esempio, che un utente abbia installato Microsoft® Code page translator e un convertitore ASCII personalizzato per EBCDIC. I valori nella sottochiave ODBC Translators potrebbero essere i seguenti:  
   
 ```  
 MS Code Page Translator: REG_SZ : Installed  

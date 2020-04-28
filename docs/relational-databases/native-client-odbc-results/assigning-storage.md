@@ -1,5 +1,5 @@
 ---
-title: Assegnazione dell'archiviazione Documenti Microsoft
+title: Assegnazione dell'archiviazione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -23,10 +23,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 067abcfc8aa5bfd781e6656e3ced9f9e1e573e5f
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297871"
 ---
 # <a name="assigning-storage"></a>Assegnazione di archiviazione
@@ -34,7 +34,7 @@ ms.locfileid: "81297871"
 
   In un'applicazione è possibile assegnare l'archiviazione per i risultati prima o dopo l'esecuzione di un'istruzione SQL. Se la preparazione o l'esecuzione dell'istruzione SQL avviene prima, è possibile richiedere informazioni sul set di risultati prima di archiviare i risultati. Se ad esempio il set di risultati non è noto, è necessario recuperare il numero di colonne prima dell'assegnazione dell'archiviazione.  
   
- Per associare l'archiviazione per una colonna di dati, un'applicazione chiama SQLBindCol e la passa:To associate storage for a column of data, an application calls [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)and passes it:  
+ Per associare lo spazio di archiviazione per una colonna di dati, un'applicazione chiama [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)e la passa:  
   
 -   Tipo di dati nel quale devono essere convertiti i dati.  
   
@@ -56,11 +56,11 @@ ms.locfileid: "81297871"
   
 -   L'associazione a livello di riga è completa quando tutti i parametri dell'istruzione SQL vengono associati come un'unità a una matrice di strutture contenenti le singole variabili per i parametri.  
   
-     L'associazione per riga viene specificata chiamando **SQLSetStmtAttr** con *Attribute* impostato su SQL_ATTR_ROW_BIND_TYPE e *ValuePtr* impostato sulla dimensione della struttura contenente le variabili che riceveranno le colonne del set di risultati.  
+     L'associazione per riga viene specificata chiamando **SQLSetStmtAttr** con *Attribute* impostato su SQL_ATTR_ROW_BIND_TYPE e *ValuePtr* impostato sulle dimensioni della struttura che contiene le variabili che riceveranno le colonne del set di risultati.  
   
  Viene inoltre impostato SQL_ATTR_ROW_ARRAY_SIZE sul numero di elementi presenti nelle matrici di colonne o di righe e vengono impostati SQL_ATTR_ROW_STATUS_PTR e SQL_ATTR_ROWS_FETCHED_PTR.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Elaborazione dei risultati &#40;&#41;ODBCProcessing Results &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+ [Elaborazione dei risultati &#40;&#41;ODBC](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

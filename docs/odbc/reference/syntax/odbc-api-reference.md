@@ -1,5 +1,5 @@
 ---
-title: Guida di riferimento all'API ODBC - Documenti Microsoft
+title: Informazioni di riferimento sulle API ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,20 +12,20 @@ ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 6065db0ea99efaec11190902ec9268db63a6d255
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298935"
 ---
 # <a name="odbc-api-reference"></a>Informazioni di riferimento sull'API ODBC
-Negli argomenti di questa sezione viene descritta ogni funzione ODBC in ordine alfabetico. Ogni funzione è definita come una funzione del linguaggio di programmazione C.Each function is defined as a C programming language function. Le descrizioni includono quanto segue:  
+Negli argomenti di questa sezione viene descritta ogni funzione ODBC in ordine alfabetico. Ogni funzione è definita come funzione del linguaggio di programmazione C. Sono incluse le descrizioni seguenti:  
   
 -   Scopo  
   
 -   Versione ODBC  
   
--   Livello di conformità CLI standard  
+-   Livello di conformità dell'interfaccia della riga di comando standard  
   
 -   Sintassi  
   
@@ -35,20 +35,20 @@ Negli argomenti di questa sezione viene descritta ogni funzione ODBC in ordine a
   
 -   Diagnostica  
   
--   Commenti sull'utilizzo e l'implementazione  
+-   Commenti sull'utilizzo e sull'implementazione  
   
 -   Esempio di codice  
   
 -   Riferimenti a funzioni correlate  
   
- Il livello di conformità CLI standard può essere uno dei seguenti: ISO 92, Open Group, ODBC o Deprecated. Una funzione contrassegnata come conforme allo standard ISO 92 viene visualizzata anche in Open Group versione 1, perché Open Group è un superset puro di ISO 92. Una funzione contrassegnata come Open Group-compliant viene visualizzata anche in ODBC 3. *x*, perché ODBC 3. *x* è un superset puro di Open Group versione 1. Una funzione contrassegnata come conforme a ODBC non viene visualizzata in nessuno standard. Una funzione contrassegnata come deprecata è stata deprecata in ODBC 3. *x*.  
+ Il livello di conformità standard dell'interfaccia della riga di comando può essere uno dei seguenti: ISO 92, gruppo aperto, ODBC o deprecato. Una funzione contrassegnata come ISO 92 è presente anche in Open Group versione 1, perché Open Group è un superset puro di ISO 92. Una funzione contrassegnata come conforme a gruppi aperti viene visualizzata anche in ODBC 3. *x*, perché ODBC 3. *x* è un superset puro della versione 1 del gruppo aperto. Una funzione contrassegnata come conforme a ODBC non viene visualizzata in nessuno standard. Una funzione contrassegnata come deprecata è stata deprecata in ODBC 3. *x*.  
   
- La gestione delle informazioni di diagnostica è descritta nella descrizione della funzione [SQLGetDiagField.Handling](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) of diagnostic information is described in the SQLGetDiagField function description. Il testo associato ai valori SQLSTATE è incluso per fornire una descrizione della condizione, ma non è destinato a prescrivere testo specifico.  
+ La gestione delle informazioni di diagnostica è descritta nella descrizione della funzione [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) . Il testo associato ai valori SQLSTATE è incluso per fornire una descrizione della condizione, ma non è destinato a prescrivere testo specifico.  
   
 > [!NOTE]  
 >  Per informazioni specifiche del driver sulle funzioni ODBC, vedere la sezione relativa al driver.  
   
- In questa sezione sono contenuti argomenti per le seguenti funzioni:  
+ Questa sezione contiene argomenti per le funzioni seguenti:  
   
 -   [Funzione SQLAllocConnect](../../../odbc/reference/syntax/sqlallocconnect-function.md)  
   
@@ -82,7 +82,7 @@ Negli argomenti di questa sezione viene descritta ogni funzione ODBC in ordine a
   
 -   [Funzione SQLCompleteAsync](../../../odbc/reference/syntax/sqlcompleteasync-function.md)  
   
--   [Funzione SQLConnectSQLConnect Function](../../../odbc/reference/syntax/sqlconnect-function.md)  
+-   [Funzione SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)  
   
 -   [Funzione SQLCopyDesc](../../../odbc/reference/syntax/sqlcopydesc-function.md)  
   
@@ -104,7 +104,7 @@ Negli argomenti di questa sezione viene descritta ogni funzione ODBC in ordine a
   
 -   [Funzione SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)  
   
--   [Funzione SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)  
+-   [SQLExecute (funzione)](../../../odbc/reference/syntax/sqlexecute-function.md)  
   
 -   [Funzione SQLExtendedFetch](../../../odbc/reference/syntax/sqlextendedfetch-function.md)  
   
@@ -180,7 +180,7 @@ Negli argomenti di questa sezione viene descritta ogni funzione ODBC in ordine a
   
 -   [Funzione SQLSetCursorName](../../../odbc/reference/syntax/sqlsetcursorname-function.md)  
   
--   [Funzione SQLSetDescFieldSQLSetDescField Function](../../../odbc/reference/syntax/sqlsetdescfield-function.md)  
+-   [SQLSetDescField (funzione)](../../../odbc/reference/syntax/sqlsetdescfield-function.md)  
   
 -   [Funzione SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Recupero di segnalibri Documenti Microsoft
+title: Recupero di segnalibri | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ ms.assetid: a34c8f09-b786-4835-a44b-b7294c970aff
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 3d146b2fb9bfc0e7294709e971f1b6752dc99ab3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300071"
 ---
 # <a name="retrieving-bookmarks"></a>Recupero di segnalibri
-Se l'applicazione utilizzerà i segnalibri, deve impostare l'attributo dell'istruzione SQL_ATTR_USE_BOOKMARKS su SQL_UB_VARIABLE prima di preparare o eseguire l'istruzione. Ciò è necessario perché la creazione e la gestione dei segnalibri può essere un'operazione costosa, pertanto i segnalibri devono essere abilitati solo quando un'applicazione può utilizzarli in modo corretto.  
+Se l'applicazione utilizzerà segnalibri, è necessario impostare l'attributo SQL_ATTR_USE_BOOKMARKS istruzione su SQL_UB_VARIABLE prima di preparare o eseguire l'istruzione. Questa operazione è necessaria perché la compilazione e la gestione dei segnalibri può essere un'operazione costosa, quindi i segnalibri devono essere abilitati solo quando un'applicazione può utilizzarli in modo corretto.  
   
- I segnalibri vengono restituiti come colonna 0 del set di risultati. Esistono tre modi in cui un'applicazione può recuperarli:There are three ways an application can retrieve them:  
+ I segnalibri vengono restituiti come colonna 0 del set di risultati. Un'applicazione può recuperarle in tre modi:  
   
--   Associare la colonna 0 del set di risultati. **SQLFetch** o **SQLFetchScroll** restituisce i segnalibri per ogni riga nel set di righe insieme ai dati per altre colonne associate.  
+-   Associare la colonna 0 del set di risultati. **SQLFetch** o **SQLFetchScroll** restituisce i segnalibri per ogni riga nel set di righe insieme ai dati relativi ad altre colonne associate.  
   
--   Chiamare **SQLSetPos** per posizionare su una riga nel set di righe e quindi chiamare SQLGetData per la colonna 0.Call SQLSetPos to position to a row in the rowset and then call **SQLGetData** for column 0. Se un driver supporta i segnalibri, deve sempre supportare la possibilità di chiamare **SQLGetData** per la colonna 0, anche se non consente alle applicazioni di chiamare **SQLGetData** per altre colonne prima dell'ultima colonna associata.  
+-   Chiamare **SQLSetPos** per posizionare in una riga del set di righe e quindi chiamare **SQLGetData** per la colonna 0. Se un driver supporta i segnalibri, deve sempre supportare la possibilità di chiamare **SQLGetData** per la colonna 0, anche se non consente alle applicazioni di chiamare **SQLGetData** per altre colonne prima dell'ultima colonna associata.  
   
--   Chiamare **SQLBulkOperations** con l'argomento *Operation* impostato su SQL_ADD e la colonna 0 associata. Il cursore inserisce la riga e restituisce il segnalibro per la riga nel buffer associato.
+-   Chiamare **SQLBulkOperations** con l'argomento *Operation* impostato su SQL_ADD e il limite della colonna 0. Il cursore inserisce la riga e restituisce il segnalibro per la riga nel buffer associato.
