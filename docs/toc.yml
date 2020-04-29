@@ -7029,7 +7029,7 @@
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: analytics-platform-system/index.md
     - name: SQL Server Analysis Services (SSAS) >
-      href: 'https://docs.microsoft.com/en-us/analysis-services/analysis-services-overview'
+      href: 'https://docs.microsoft.com/analysis-services/analysis-services-overview'
     - name: SQL Server Reporting Services (SSRS) >
       href: reporting-services/index.md
     - name: Master Data Services
@@ -7785,6 +7785,55 @@
               href: azure-data-studio/tutorial-build-custom-insight-sql-server.md
             - name: Backup e ripristino
               href: azure-data-studio/tutorial-backup-restore-sql-server.md
+        - name: Concetti
+          items:
+            - name: Estensioni
+              href: azure-data-studio/extensions.md
+              items:
+                - name: Estensione PostgreSQL
+                  href: azure-data-studio/postgres-extension.md
+                - name: Estensione della virtualizzazione dei dati
+                  href: azure-data-studio/data-virtualization-extension.md
+                - name: SQL Server Agent
+                  href: azure-data-studio/sql-server-agent-extension.md
+                - name: Estensione Server di gestione centrale di SQL Server
+                  href: azure-data-studio/sql-server-cms-extension.md
+                - name: Estensione SQL Server dacpac
+                  href: azure-data-studio/sql-server-dacpac-extension.md
+                - name: SQL Server Import
+                  href: azure-data-studio/sql-server-import-extension.md
+                - name: SQL Server Profiler
+                  href: azure-data-studio/sql-server-profiler-extension.md
+                - name: Estensione Confronto schema
+                  href: azure-data-studio/schema-compare-extension.md
+                - name: Estensione di PowerShell
+                  href: azure-data-studio/powershell-extension.md
+                - name: Estensione Istanza gestita
+                  href: azure-data-studio/azure-sql-managed-instance-extension.md
+                - name: Estensione SandDance
+                  href: azure-data-studio/sanddance-extension.md
+            - name: Creazione di estensioni
+              items:
+                - name: Panoramica dell'estendibilità
+                  href: azure-data-studio/extensibility.md
+                - name: Creazione di estensioni
+                  href: azure-data-studio/extension-authoring.md
+                - name: Creare un'estensione
+                  href: azure-data-studio/tutorial-create-extension.md
+                - name: API di estendibilità
+                  href: azure-data-studio/extensibility-apis.md
+            - name: Notebook
+              items:
+                - name: Panoramica dei notebook
+                  href: azure-data-studio/notebooks-guidance.md
+                - name: Usare il kernel SQL
+                  href: azure-data-studio/notebooks-tutorial-sql-kernel.md
+                - name: Usare il kernel Python
+                  href: azure-data-studio/notebooks-tutorial-python-kernel.md
+                - name: Kqlmagic
+                  href: azure-data-studio/notebooks-kql-magic.md
+                - name: Gestire un notebook
+                  href: azure-data-studio/notebooks-manage-sql-server.md
         - name: Guide pratiche
           items:
             - name: Dashboard e widget di informazioni dettagliate
@@ -7801,55 +7850,14 @@
               href: azure-data-studio/server-groups.md
             - name: Controllo del codice sorgente
               href: azure-data-studio/source-control.md
+            - name: Raccolta dati di utilizzo
+              href: azure-data-studio/usage-data-collection.md
             - name: Impostazioni utente e area di lavoro
               href: azure-data-studio/settings.md
             - name: Autenticazione di Windows (Kerberos)
               href: azure-data-studio/enable-kerberos.md
-            - name: Notebook
-              items:
-                - name: Panoramica dei notebook
-                  href: azure-data-studio/notebooks-guidance.md
-                - name: Come usare il kernel SQL
-                  href: azure-data-studio/notebooks-tutorial-sql-kernel.md
-                - name: Come gestire un notebook
-                  href: azure-data-studio/notebooks-manage-sql-server.md
             - name: Raccolta dati di utilizzo
               href: azure-data-studio/usage-data-collection.md
-        - name: Estensioni
-          href: azure-data-studio/extensions.md
-          items:
-            - name: Estensione PostgreSQL
-              href: azure-data-studio/postgres-extension.md
-            - name: Estensione della virtualizzazione dei dati
-              href: azure-data-studio/data-virtualization-extension.md
-            - name: SQL Server Agent
-              href: azure-data-studio/sql-server-agent-extension.md
-            - name: Estensione Server di gestione centrale di SQL Server
-              href: azure-data-studio/sql-server-cms-extension.md
-            - name: Estensione SQL Server dacpac
-              href: azure-data-studio/sql-server-dacpac-extension.md
-            - name: SQL Server Import
-              href: azure-data-studio/sql-server-import-extension.md
-            - name: SQL Server Profiler
-              href: azure-data-studio/sql-server-profiler-extension.md
-            - name: Estensione Confronto schema
-              href: azure-data-studio/schema-compare-extension.md
-            - name: Estensione di PowerShell
-              href: azure-data-studio/powershell-extension.md
-            - name: Estensione Istanza gestita
-              href: azure-data-studio/azure-sql-managed-instance-extension.md
-            - name: Estensione SandDance
-              href: azure-data-studio/sanddance-extension.md
-        - name: Creazione di estensioni
-          items:
-            - name: Panoramica dell'estendibilità
-              href: azure-data-studio/extensibility.md
-            - name: Creazione di estensioni
-              href: azure-data-studio/extension-authoring.md
-            - name: Creare un'estensione
-              href: azure-data-studio/tutorial-create-extension.md
-            - name: API di estendibilità
-              href: azure-data-studio/extensibility-apis.md
         - name: Risorse
           items:
             - name: Domande frequenti
