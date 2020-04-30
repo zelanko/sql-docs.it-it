@@ -46,12 +46,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aad9f7204073590927cdbecdf237038311bb686d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ad10e1d576d1751de10e433420fe3df6106c7ee4
+ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81627971"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138289"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -287,11 +287,11 @@ LOB_COMPACTION = OFF
   
 Per gli indici columnstore in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire dalla versione [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], l'operazione REORGANIZE esegue online le ottimizzazioni di deframmentazione aggiuntive seguenti:  
   
--   Rimuove fisicamente le righe da un rowgroup quando più del 10% delle righe è stato eliminato in modo logico. I byte eliminati vengono recuperati sui supporti fisici. Ad esempio, se in un rowgroup compresso di 1 milione di righe 100.000 righe sono state eliminate, SQL Server rimuoverà le righe eliminate e ricomprimerà il rowgroup con 900.000 righe. Esegue il salvataggio nell'archiviazione rimuovendo le righe eliminate.  
+-   Rimuove fisicamente le righe da un rowgroup quando più del 10% delle righe è stato eliminato in modo logico. I byte eliminati vengono recuperati sui supporti fisici. Ad esempio, se in un rowgroup compresso di 1 milione di righe 100.000 righe sono state eliminate, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rimuoverà le righe eliminate e ricomprimerà il rowgroup con 900.000 righe. Esegue il salvataggio nell'archiviazione rimuovendo le righe eliminate.  
   
--   Combina uno o più rowgroup compressi per aumentare le righe in ogni rowgroup, fino a un massimo di 1.024.576 righe. Ad esempio, se si importano globalmente 5 batch di 102.400 righe si otterranno 5 rowgroup compressi. Se si esegue l'operazione REORGANIZE, questi rowgroup verranno uniti in un rowgroup compresso di 512.000 righe. Si presuppone che non vi siano limiti di memoria o di dimensioni del dizionario.  
+-   Combina uno o più rowgroup compressi per aumentare le righe in ogni rowgroup, fino a un massimo di 1.048.576 righe. Ad esempio, se si importano globalmente 5 batch di 102.400 righe si otterranno 5 rowgroup compressi. Se si esegue l'operazione REORGANIZE, questi rowgroup verranno uniti in un rowgroup compresso di 512.000 righe. Si presuppone che non vi siano limiti di memoria o di dimensioni del dizionario.  
   
--   Per i rowgroup in cui oltre il 10% delle righe è stato eliminato in modo logico, SQL Server tenterà di combinare questo rowgroup con uno o più rowgroup. Ad esempio, il rowgroup 1 viene compresso con 500.000 righe e il rowgroup 21 viene compresso con il numero massimo di 1.048.576 righe.  Nel rowgroup 21 il 60% delle righe è stato eliminato in modo da lasciare 409.830 righe. SQL Server consente di combinare questi due rowgroup per comprimere un nuovo rowgroup con 909.830 righe.  
+-   Per i rowgroup in cui almeno il 10% delle righe è stato eliminato in modo logico, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenterà di combinare questo rowgroup con uno o più rowgroup. Ad esempio, il rowgroup 1 viene compresso con 500.000 righe e il rowgroup 21 viene compresso con il numero massimo di 1.048.576 righe. Nel rowgroup 21 il 60% delle righe è stato eliminato in modo da lasciare 409.830 righe. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di combinare questi due rowgroup per comprimere un nuovo rowgroup con 909.830 righe.  
   
 REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = { ON | **OFF** } )  
  Si applica agli indici columnstore. 

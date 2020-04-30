@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: seodec18
 ms.date: 03/18/2020
-ms.openlocfilehash: 7a510500d16c29971d1a5263c5138ad1981c9401
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5a6bd8792cd42d34796b36fb18a4d8c551d684f5
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215480"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087331"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Note sulla versione per Azure Data Studio
 
@@ -87,7 +87,7 @@ ms.locfileid: "80215480"
 | Modifica | Dettagli |
 | :----- | :------ |
 | Modificato l'elenco a discesa Collega a connessione nei notebook in modo che sia indicata solo la connessione attualmente attiva | [#8129](https://github.com/microsoft/azuredatastudio/issues/8129) |
-| Aggiunta l'impostazione bigdatacluster.ignoreSslVerification per consentire l'esclusione degli errori di verifica SSL durante la connessione a un'integrazione applicativa dei dati | [#8582](https://github.com/microsoft/azuredatastudio/pull/8582) |
+| Aggiunta l'impostazione bigdatacluster.ignoreSslVerification per consentire l'esclusione degli errori di verifica TLS/SSL durante la connessione a un servizio BDC | [#8582](https://github.com/microsoft/azuredatastudio/pull/8582) |
 | Consentita la modifica della versione del linguaggio predefinito per gli editor di query offline | [#8419](https://github.com/microsoft/azuredatastudio/pull/8419) |
 | Stato di disponibilità generale per le funzionalità di cluster Big Data e SQL 2019 | [#8269](https://github.com/microsoft/azuredatastudio/issues/8269) |
 | Bug e problemi risolti | Per un elenco completo delle correzioni, vedere i [bug e i problemi su GitHub](https://github.com/microsoft/azuredatastudio/milestone/44?closed=1). |
@@ -495,7 +495,7 @@ _La versione 0.32.8 contiene correzioni per un paio di regressioni individuata n
 - Correzione del [problema 1836](https://github.com/Microsoft/azuredatastudio/issues/1836): file con estensione .sql non associati a SQL Operations Studio.
 - Correzione del [problema 1850](https://github.com/Microsoft/azuredatastudio/issues/1850): la digitazione di N'' viene completata automaticamente in N'''.
 - Correzione del [problema 1985](https://github.com/Microsoft/azuredatastudio/issues/1985): la copia dalla griglia dei risultati della query è spostata di 1 colonna.
-- Correzione del [problema 1998](htpts://github.com/Microsoft/azuredatastudio/pull/1998): aggiunta la versione di VS Code alla finestra di dialogo Informazioni su.
+- Correzione del [problema 1998](https://github.com/Microsoft/azuredatastudio/pull/1998): aggiunta la versione di VS Code alla finestra di dialogo Informazioni su.
 - Correzione del [problema 2042](https://github.com/Microsoft/azuredatastudio/pull/2042): Agente: abilitato il pulsante per l'importazione di query da file SQL.
 - Correzione del [problema 2091](https://github.com/Microsoft/azuredatastudio/issues/2091): non è possibile usare la scelta rapida da tastiera CTRL+C per copiare dal riquadro risultati.
 - Correzione del [problema 2099](https://github.com/Microsoft/azuredatastudio/pull/2099): sono state aggiunte altre opzioni di salvataggio come CSV.
