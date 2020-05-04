@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (anteprima)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: Usare l'istruzione COPY in Azure SQL Data Warehouse per il caricamento da account di archiviazione esterni.
-ms.date: 12/13/2019
+ms.date: 04/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,18 +18,28 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: f28fced64212c9b7e76989d29fa837d4983cebe2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: cfd9d2b00d1ba7aa1c56b967deb872d3d9bc0190
+ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631974"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619654"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (anteprima)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Questo articolo illustra come usare l'istruzione COPY in Azure SQL Data Warehouse per il caricamento da account di archiviazione esterni. L'istruzione COPY offre la massima flessibilità per l'inserimento di dati con velocità effettiva elevata in SQL Data Warehouse.
+Questo articolo illustra come usare l'istruzione COPY in Azure SQL Data Warehouse per il caricamento da account di archiviazione esterni. L'istruzione COPY offre la massima flessibilità per l'inserimento di dati con velocità effettiva elevata in SQL Data Warehouse. Usare COPY per le funzionalità seguenti:
+
+- Usare utenti con privilegi inferiori per caricare senza richiedere autorizzazioni CONTROL rigorose per il data warehouse
+- Eseguire una sola istruzione T-SQL senza dover creare oggetti di database aggiuntivi
+- Analizzare e caricare correttamente i file CSV in cui i **delimitatori** (stringa, campo, riga) **sono** **preceduti da un carattere di escape all'interno di colonne delimitate da stringhe**
+- Specificare un modello di autorizzazione più preciso senza esporre le chiavi dell'account di archiviazione usando le firme di accesso condiviso (SAS)
+- Usare un account di archiviazione diverso per il percorso di ERRORFILE (REJECTED_ROW_LOCATION)
+- Personalizzare i valori predefiniti per ogni colonna di destinazione e specificare i campi dei dati di origine da caricare in colonne di destinazione specifiche
+- Specificare un carattere di terminazione riga personalizzato per i file CSV
+- Usare i formati di data di SQL Server per i file CSV
+- Specificare caratteri jolly e più file nel percorso della posizione di archiviazione
 
 > [!NOTE]  
 > L'istruzione COPY è attualmente disponibile in versione di anteprima pubblica.
@@ -130,24 +140,32 @@ Posizione di gestione temporanea dei file contenenti i dati. Attualmente sono su
 
 Quando si esegue l'autenticazione con AAD o in un account di archiviazione pubblico, non è necessario specificare CREDENTIAL. 
 
-- Autenticazione con firme di accesso condiviso (SAS) *IDENTITY: costante con valore ‘Shared Access Signature’* 
-  *SECRET: La* [*firma di accesso condiviso*](/azure/storage/common/storage-sas-overview) *fornisce accesso delegato controllato alle risorse dell'account di archiviazione*.
-  Autorizzazioni minime richieste: READ e LIST
-
+- Autenticazione con firme di accesso condiviso (SAS)
+  
+  - *IDENTITY: costante con valore ‘Shared Access Signature’*
+  - *SECRET: La* [*firma di accesso condiviso*](/azure/storage/common/storage-sas-overview) *fornisce accesso delegato controllato alle risorse dell'account di archiviazione*.
+  -  Autorizzazioni minime richieste: READ e LIST
+  
 - Autenticazione con [*entità servizio*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
 
-  *IDENTITY: <ClientID>@<OAuth_2.0_Token_EndPoint>* 
-  *SECRET: chiave dell'entità servizio dell'applicazione AAD* Ruoli Controllo degli accessi in base al ruolo minimi richiesti: Collaboratore ai dati dei BLOB di archiviazione, Proprietario dei dati dei BLOB di archiviazione o Lettore dei dati dei BLOB di archiviazione
+  - *IDENTITY: <ClientID>@<OAuth_2.0_Token_EndPoint>*
+  - *SECRET: chiave dell'entità servizio dell'applicazione AAD*
+  -  Ruoli Controllo degli accessi in base al ruolo minimi richiesti: Collaboratore ai dati dei BLOB di archiviazione, Proprietario dei dati dei BLOB di archiviazione o Lettore dei dati dei BLOB di archiviazione
 
-  > [!NOTE]  
-  > Usare l'endpoint di token OAuth 2.0 **V1**
-
-- Autenticazione con chiave dell'account di archiviazione *IDENTITY: costante con valore ‘Storage Account Key’* 
-  *SECRET: chiave dell'account di archiviazione*
+- Autenticazione con chiave dell'account di archiviazione
   
-- Autenticazione con [identità gestita](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (endpoint servizio di rete virtuale) *IDENTITY: costante con valore ‘Managed Identity’* Ruoli Controllo degli accessi in base al ruolo minimi richiesti: Collaboratore ai dati dei BLOB di archiviazione, Proprietario dei dati dei BLOB di archiviazione o Lettore dei dati dei BLOB di archiviazione per il server di database SQL registrato con AAD 
+  - *IDENTITY: costante con valore ‘Storage Account Key’*
+  - *SECRET: chiave dell'account di archiviazione*
   
-- Autenticazione con utente di AAD *Non è necessario specificare CREDENTIAL* Ruoli Controllo degli accessi in base al ruolo minimi richiesti: Collaboratore ai dati dei BLOB di archiviazione, Proprietario dei dati dei BLOB di archiviazione o Lettore dei dati dei BLOB di archiviazione per l'utente di AAD
+- Autenticazione con [identità gestita](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (endpoint servizio di rete virtuale)
+  
+  - *IDENTITY: costante con valore ‘Managed Identity’*
+  - Ruoli Controllo degli accessi in base al ruolo minimi richiesti: Collaboratore ai dati dei BLOB di archiviazione o Proprietario dei dati dei BLOB di archiviazione per il server di database SQL registrato con AAD
+  
+- Autenticazione con utente di AAD
+  
+  - *Non è necessario specificare CREDENTIAL*
+  - Ruoli Controllo degli accessi in base al ruolo minimi richiesti: Collaboratore ai dati dei BLOB di archiviazione o Proprietario dei dati dei BLOB di archiviazione per l'utente di AAD
 
 *ERRORFILE = Percorso directory*</br>
 *ERRORFILE* si applica solo al formato CSV. Specifica la directory all'interno dell'istruzione COPY in cui scrivere le righe rifiutate e il file di errori corrispondente. È possibile specificare il percorso completo dall'account di archiviazione oppure il percorso relativo al contenitore. Se il percorso specificato non esiste, viene creato automaticamente. Viene creata una directory figlio con nome "_rejectedrows". Il carattere "_ " assicura che la directory venga ignorata da altre attività di elaborazione dati, salvo se indicata in modo esplicito nel parametro del percorso. 
@@ -208,21 +226,20 @@ Se questo parametro non è specificato, il comando COPY rileva automaticamente i
 - .deflate - **DefaultCodec** (solo Parquet e ORC)
 
  *FIELDQUOTE = 'field_quote'*</br>
-*FIELDQUOTE* si applica al formato CSV e specifica un singolo carattere che verrà usato come carattere virgolette (delimitatore di stringa) nel file CSV. Se non viene specificato alcun valore, viene usato il carattere virgolette (") come definito nello standard RFC 4180. I caratteri ASCII estesi non sono supportati con UTF-8 per FIELDQUOTE.
+*FIELDQUOTE* si applica al formato CSV e specifica un singolo carattere che verrà usato come carattere virgolette (delimitatore di stringa) nel file CSV. Se non viene specificato alcun valore, viene usato il carattere virgolette (") come definito nello standard RFC 4180. I caratteri ASCII e multibyte estesi non sono supportati con UTF-8 per FIELDQUOTE.
 
 > [!NOTE]  
 > Ai caratteri FIELDQUOTE viene applicata una sequenza di escape nelle colonne stringa in cui è presente un oggetto FIELDQUOTE (delimitatore) doppio. 
 
 *FIELDTERMINATOR = 'field_terminator’*</br>
-*FIELDTERMINATOR* si applica solo al formato CSV. Specifica il carattere di terminazione del campo che verrà usato nel file CSV. Il carattere di terminazione del campo può essere specificato usando la notazione esadecimale. Il carattere di terminazione del campo può essere costituito da più caratteri. Il carattere di terminazione del campo predefinito è una virgola (,).
-Per altre informazioni, vedere [Impostazione dei caratteri di terminazione del campo e della riga (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md?view=sql-server-2017).
+*FIELDTERMINATOR* si applica solo al formato CSV. Specifica il carattere di terminazione del campo che verrà usato nel file CSV. Il carattere di terminazione del campo può essere specificato usando la notazione esadecimale. Il carattere di terminazione del campo può essere costituito da più caratteri. Il carattere di terminazione del campo predefinito è una virgola (,). I caratteri ASCII e multibyte estesi non sono supportati con UTF-8 per FIELDTERMINATOR.
 
 ROW TERMINATOR = 'row_terminator'</br>
 *ROW TERMINATOR* si applica solo al formato CSV. Specifica il carattere di terminazione della riga che verrà usato nel file CSV. Il carattere di terminazione della riga può essere specificato usando la notazione esadecimale. Il carattere di terminazione della riga può essere costituito da più caratteri. Per impostazione predefinita, il carattere di terminazione della riga è \r\n. 
 
 Il comando COPY aggiunge come prefisso il carattere \r quando si specifica \n (nuova riga), quindi il risultato è \r\n. Per specificare solo il carattere \n, usare la notazione esadecimale (0x0A). Quando si specificano caratteri di terminazione della riga costituiti da più caratteri in formato esadecimale, non specificare 0x tra i singoli caratteri.
 
-Per altre informazioni su come specificare i caratteri di terminazione della riga, vedere la [documentazione](https://docs.microsoft.com/sql/relational-databases/import-export/specify-field-and-row-terminators-sql-server?view=sql-server-2017#using-row-terminators) seguente.
+I caratteri ASCII e multibyte estesi non sono supportati con UTF-8 per ROW TERMINATOR.
 
 *FIRSTROW  = First_row_int*</br>
 *FIRSTROW* si applica al formato CSV e specifica il numero della riga che viene letta per prima in tutti i file con il comando COPY. I valori iniziano da 1, che è il valore predefinito. Se il valore è impostato su due, la prima riga di ogni file (riga di intestazione) viene ignorata quando i dati vengono caricati. Le righe vengono ignorate in base alla presenza di caratteri di terminazione della riga.
@@ -361,10 +378,10 @@ WITH (
 ## <a name="faq"></a>Domande frequenti
 
 ### <a name="what-is-the-performance-of-the-copy-command-compared-to-polybase"></a>Quali sono le prestazioni del comando COPY rispetto a PolyBase?
-Il comando COPY avrà prestazioni migliori nel momento in cui la funzionalità è disponibile a livello generale. Per ottimizzare le prestazioni durante l'anteprima pubblica, è consigliabile dividere l'input in più file durante il caricamento del file CSV. COPY presenta attualmente le stesse prestazioni di PolyBase quando si usa INSERT SELECT. 
+Il comando COPY avrà prestazioni migliori a seconda del carico di lavoro. Per ottimizzare le prestazioni durante l'anteprima pubblica, è consigliabile dividere l'input in più file durante il caricamento del file CSV. Condividere i risultati delle prestazioni con il team Microsoft durante l'anteprima. sqldwcopypreview@service.microsoft.com
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>Quali sono le linee guida per la divisione in file per il comando COPY che carica i file CSV?
-Le linee guida per il numero di file sono descritte nella tabella seguente. Una volta raggiunto il numero consigliato di file, si otterranno prestazioni migliori per i file più grandi. 
+Le linee guida per il numero di file sono descritte nella tabella seguente. Una volta raggiunto il numero consigliato di file, si otterranno prestazioni migliori per i file più grandi. Per una semplice esperienza di suddivisione dei file, vedere la [documentazione](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/how-to-maximize-copy-load-throughput-with-file-splits/ba-p/1314474) seguente. 
 
 | **DWU** | **#Files** |
 | :-----: | :--------: |

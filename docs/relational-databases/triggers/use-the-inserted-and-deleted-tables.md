@@ -18,12 +18,12 @@ ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e070cfc4b02ae52ab755306a29eb90c6afc912cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 242ae654ede8a827b89e630369965faee4505840
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075504"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220696"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Utilizzo delle tabelle inserite ed eliminate
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68075504"
  Quando si impostano le condizioni di trigger, utilizzare correttamente le tabelle inserted e deleted in base all'azione che ha attivato il trigger. Sebbene il riferimento alla tabella deleted durante la verifica di un'istruzione INSERT o alla tabella inserted durante la verifica di un'istruzione DELETE non causi alcun errore, in questi casi le tabelle di verifica dei trigger non conterranno alcuna riga.  
   
 > [!NOTE]  
->  Se le azioni dei trigger dipendono dal numero di righe interessate dalle modifiche apportate ai dati, usare le verifiche (ad esempio un esame di @@ROWCOUNT) nel caso di modifiche apportate ai dati di più righe (un'istruzione INSERT, DELETE o UPDATE basata su un'istruzione SELECT) ed eseguire le azioni appropriate.  
+>  Se le azioni dei trigger dipendono dal numero di righe interessate dalle modifiche apportate ai dati, usare le verifiche (ad esempio un esame di @@ROWCOUNT) nel caso di modifiche apportate ai dati di più righe (un'istruzione INSERT, DELETE o UPDATE basata su un'istruzione SELECT) ed eseguire le azioni appropriate. Per altre informazioni, vedere [Creazione di trigger DML per gestire più righe di dati](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] non è possibile usare i riferimenti di colonna di tipo **text**, **ntext**o **image** nelle tabelle inserted e deleted per i trigger AFTER. Questi tipi di dati sono tuttavia disponibili per garantire la compatibilità con le versioni precedenti. L'archiviazione preferita per i dati di grandi dimensioni consiste nell'usare i tipi di dati **varchar(max)** , **nvarchar(max)** e **varbinary(max)** . I trigger AFTER e INSTEAD OF supportano i dati **varchar(max)** , **nvarchar(max)** e **varbinary(max)** nelle tabelle inserted e deleted. Per altre informazioni, vedere [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68075504"
   
  Poiché i vincoli CHECK possono fare riferimento solo alle colonne in cui è definito il vincolo a livello di colonna o di tabella, è necessario definire come trigger qualsiasi vincolo tra tabelle, in questo caso le regole business.  
   
- Nell'esempio seguente viene creato un trigger DML. Questo trigger verifica che la posizione creditizia del fornitore sia buona quando viene eseguito un tentativo di inserimento di un nuovo ordine di acquisto nella tabella `PurchaseOrderHeader` . Per ottenere la posizione creditizia del fornitore corrispondente all'ordine di acquisto inserito, la tabella `Vendor` deve essere una tabella con riferimenti e deve essere unita in join alla tabella inserted. Se la posizione creditizia è troppo bassa, viene visualizzato un messaggio e l'operazione di inserimento non viene eseguita. Si noti che questo esempio non consente modifiche ai dati a riga multipla. Per altre informazioni, vedere [Creazione di trigger DML per gestire più righe di dati](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).  
+ Nell'esempio seguente viene creato un trigger DML. Questo trigger verifica che la posizione creditizia del fornitore sia buona quando viene eseguito un tentativo di inserimento di un nuovo ordine di acquisto nella tabella `PurchaseOrderHeader` . Per ottenere la posizione creditizia del fornitore corrispondente all'ordine di acquisto inserito, la tabella `Vendor` deve essere una tabella con riferimenti e deve essere unita in join alla tabella inserted. Se la posizione creditizia è troppo bassa, viene visualizzato un messaggio e l'operazione di inserimento non viene eseguita.
   
  [!code-sql[TriggerDDL#CreateTrigger3](../../relational-databases/triggers/codesnippet/tsql/use-the-inserted-and-del_1.sql)]  
   

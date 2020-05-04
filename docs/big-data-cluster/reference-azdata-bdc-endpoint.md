@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 80ba3c4d3eb177b3e547e9d235fa796e2b9818cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 71f52b8312518cf669751d50dcc857c3d892bd98
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74820933"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588077"
 ---
 # <a name="azdata-bdc-endpoint"></a>azdata bdc endpoint
 
@@ -28,24 +28,39 @@ L'articolo seguente offre informazioni di riferimento sul comando `bdc endpoint`
 [azdata bdc endpoint list](#azdata-bdc-endpoint-list) | Elenca gli endpoint per il cluster di Big Data.
 ## <a name="azdata-bdc-endpoint-list"></a>azdata bdc endpoint list
 Elenca gli endpoint per il cluster di Big Data.
+
 ```bash
 azdata bdc endpoint list [--endpoint-name -e] 
-       ```
-### Optional Parameters
+```
+
+### <a name="optional-parameters"></a>Parametri facoltativi
+
 #### `--endpoint-name -e`
-Big data cluster endpoint name.
-### Global Arguments
+
+Nome dell'endpoint del cluster di Big Data.
+
+### <a name="global-arguments"></a>Argomenti globali
+
 #### `--debug`
-Increase logging verbosity to show all debug logs.
+
+Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.
+
 #### `--help -h`
-Show this help message and exit.
+
+Visualizza questo messaggio della guida ed esce.
+
 #### `--output -o`
-Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
+
+Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
+
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
+
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
+
 #### `--verbose`
-Increase logging verbosity. Use --debug for full debug logs.
 
-## Next steps
+Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 
-For more information about other `azdata` commands, see [azdata reference](reference-azdata.md). For more information about how to install the `azdata` tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).
+## <a name="next-steps"></a>Passaggi successivi
+
+Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md). Per altre informazioni su come installare lo strumento `azdata`, vedere [Installare azdata per gestire i cluster Big Data di SQL Server 2019](deploy-install-azdata.md).

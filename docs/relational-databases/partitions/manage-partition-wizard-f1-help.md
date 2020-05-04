@@ -1,5 +1,5 @@
 ---
-title: Guida sensibile al contesto della Gestione guidata partizione | Microsoft Docs
+title: Gestione guidata partizione
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,14 +23,14 @@ helpviewer_keywords:
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: dc76237530ba47a513aba164260061ec6b20e7c3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d779af4f450fe444181df995a8dab26b102c3038
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68892415"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220426"
 ---
-# <a name="manage-partition-wizard-f1-help"></a>Guida sensibile al contesto della Gestione guidata partizione
+# <a name="manage-partition-wizard"></a>Gestione guidata partizione 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Usare la **Gestione guidata partizione** per gestire e modificare tabelle partizionate esistenti tramite il cambio della partizione o l'implementazione di uno scenario basato su finestra temporale scorrevole. Questa procedura guidata può semplificare la gestione delle partizioni e la normale migrazione di dati all'interno e all'esterno delle tabelle.  
   
