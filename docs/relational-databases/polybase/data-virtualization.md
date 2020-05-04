@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: f4bd7eec24be747fe6c0933d31467410bfecf2a9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3b45ec31788814df7c472dbb81e3b47e0e42abeb
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75227508"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588092"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>Usare la procedura guidata Tabella esterna con origini dati relazionali
 
@@ -64,7 +64,7 @@ Il passaggio successivo consiste nel configurare le credenziali. Immettere un no
 
 Nella pagina successiva selezionare le tabelle per cui si vuole creare viste esterne. Quando si selezionano database principali, vengono incluse anche le tabelle figlio. Dopo aver selezionato le tabelle, viene visualizzata una tabella di mapping a destra. Nella tabella è possibile apportare modifiche ai tipi. È anche possibile modificare il nome della tabella esterna selezionata.
 
-![Credenziali dell'origine dati esterna](media/data-virtualization/data-table-mapping.png)
+![Credenziali dell'origine dati esterna](media/data-virtualization/data-table-map.png)
 
 > [!NOTE]
 >Per modificare la vista di mapping, fare doppio clic su un altra tabella selezionata.

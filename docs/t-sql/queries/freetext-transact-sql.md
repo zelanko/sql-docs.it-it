@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7da0d231300afd550f7f3e4c4d491a5109c57f00
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8681ab325f5c1583ab62604c0c1416f9c88152b9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636221"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719412"
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Predicato usato nella clausola [!INCLUDE[tsql](../../includes/tsql-md.md)]WHERE[ di ](../../t-sql/queries/where-transact-sql.md) relativa a un'istruzione SELECT di [!INCLUDE[tsql](../../includes/tsql-md.md)] per eseguire una ricerca full-text di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in colonne indicizzate full-text che contengono tipi di dati basati su caratteri. Questo predicato esegue la ricerca dei valori che corrispondono al significato e non solo all'esatta formulazione delle parole nella condizione di ricerca. Se si usa FREETEXT, il motore delle query full-text esegue internamente le azioni di seguito elencate in *freetext_string*, assegna un peso a ogni termine e quindi cerca le corrispondenze:  
   
