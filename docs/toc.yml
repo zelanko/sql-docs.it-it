@@ -222,6 +222,8 @@
               href: big-data-cluster/troubleshoot-active-directory.md
             - name: DNS Active Directory
               href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
+            - name: Esito negativo dell'accesso ad Active Directory
+              href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
             - name: Diritti di amministratore di HDFS
               href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
     - name: Informazioni di riferimento
