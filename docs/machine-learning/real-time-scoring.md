@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 932995bad218df91e58af7daed01ddf4277a5dc0
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f46b27019d85084b572dced79e786033b30c2aec
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117184"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719290"
 ---
 # <a name="real-time-scoring-with-sp_rxpredict-in-sql-server-machine-learning"></a>Assegnazione dei punteggi in tempo reale con sp_rxPredict in SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +23,7 @@ L'assegnazione dei punteggi in tempo reale si basa sulla stored procedure di sis
 
 ## <a name="how-real-time-scoring-works"></a>Funzionamento dell'assegnazione dei punteggi in tempo reale
 
-L'assegnazione dei punteggi in tempo reale è supportata in tipi di modelli specifici in base alle funzioni RevoScaleR o MicrosoftML, ad esempio [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). Usa librerie C++ native per generare punteggi, in base all'input dell'utente fornito a un modello di Machine Learning archiviato in un formato binario speciale.
+L'assegnazione dei punteggi in tempo reale è supportata in tipi di modelli specifici in base alle funzioni RevoScaleR o MicrosoftML, ad esempio [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) e [rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). Usa librerie C++ native per generare punteggi, in base all'input dell'utente fornito a un modello di Machine Learning archiviato in un formato binario speciale.
 
 Essendo possibile usare un modello sottoposto a training per l'assegnazione dei punteggi senza dover chiamare un runtime di linguaggio esterno, viene ridotto il sovraccarico di più processi. Ciò supporta prestazioni di stima molto più veloci per gli scenari di assegnazione dei punteggi di produzione. Poiché i dati non escono mai da SQL Server, è possibile generare e inserire i risultati in una nuova tabella senza alcuna conversione dei dati tra R e SQL.
 
@@ -34,7 +34,7 @@ L'assegnazione dei punteggi in tempo reale è un processo in più passaggi:
 3. Si forniscono nuovi dati di input a cui assegnare un punteggio, sia in formato tabulare che come righe singole, come input per il modello.
 4. Per generare i punteggi, chiamare la stored procedure [sp_rxPredict](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 + [Abilitare l'integrazione CLR in SQL Server](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).
 

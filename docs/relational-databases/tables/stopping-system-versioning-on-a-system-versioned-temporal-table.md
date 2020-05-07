@@ -1,7 +1,7 @@
 ---
 title: Arresto del controllo delle versioni di sistema in una tabella temporale con controllo delle versioni di sistema | Microsoft Docs
 ms.custom: ''
-ms.date: 10/11/2016
+ms.date: 04/28/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: dddd707e-bfb1-44ff-937b-a84c5e5d1a94
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 74b222b8014b3a0e41e34d588d5893b7f4aaf9b8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8ebeb98accf6f89e094949a7a8e56a86a2dcd6dd
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165451"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220391"
 ---
 # <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>Arresto del controllo delle versioni in una tabella temporale con controllo delle versioni di sistema
 
@@ -39,6 +39,7 @@ Arrestare il controllo delle versioni di sistema per eseguire specifiche operazi
 - Quando si imposta **SYSTEM_VERSIONING = OFF** e non si rimuove il periodo **SYSTEM_TIME** , il sistema continua ad aggiornare le colonne del periodo per ogni operazione di inserimento e di aggiornamento. L'eliminazione di elementi nella tabella corrente è definitiva.
 - Eliminare il periodo **SYSTEM_TIME** per rimuovere completamente le colonne del periodo.
 - Quando si imposta **SYSTEM_VERSIONING = OFF**, tutti gli utenti con autorizzazioni sufficienti possono modificare lo schema e il contenuto della tabella di cronologia o anche eliminare definitivamente tale tabella.
+- Non è possibile impostare **SYSTEM_VERSIONING = OFF** se sono presenti altri oggetti creati con SCHEMABINDING con estensione di query temporali, ad esempio facendo riferimento a **SYSTEM_TIME**. Questa restrizione impedisce che questi oggetti generino errori se si imposta **SYSTEM_VERSIONING = OFF**.
 
 ### <a name="permanently-remove-system_versioning"></a>Rimuovere in modo definitivo SYSTEM_VERSIONING
 

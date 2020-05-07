@@ -1,7 +1,7 @@
 ---
 title: Hint di tabella (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/31/2017
+ms.date: 04/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -36,20 +36,20 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d5675f7c62ce43a9e41770075cd4a97253ea051e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 225a92fc082a2778a7146923a9d138d0ce86aa7b
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981768"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087520"
 ---
 # <a name="hints-transact-sql---table"></a>Hint (Transact-SQL) - Tabella
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gli hint di tabella consentono di modificare il comportamento predefinito di Query Optimizer per la durata dell'istruzione DML (Data Manipulation Language) specificando un metodo di blocco, uno o più indici, un'operazione di elaborazione di query, quale un'analisi di tabella (Table Scan) o una ricerca nell'indice (Index Seek), oppure altre opzioni. Gli hint di tabella sono specificati nella clausola FROM dell'istruzione DML e influiscono solo sulla tabella o sulla vista a cui viene fatto riferimento nella clausola.  
+  Gli hint di tabella consentono di modificare il comportamento predefinito di Query Optimizer per la durata dell'istruzione DML (Data Manipulation Language) specificando un metodo di blocco, uno o più indici, un'operazione di elaborazione di query, ad esempio una scansione di tabella o una ricerca nell'indice, oppure altre opzioni. Gli hint di tabella sono specificati nella clausola FROM dell'istruzione DML e influiscono solo sulla tabella o sulla vista a cui viene fatto riferimento nella clausola.  
   
 > [!CAUTION]  
->  Poiché Query Optimizer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente in genere di selezionare il piano di esecuzione migliore per una query, gli hint devono essere usati solo se strettamente necessari ed esclusivamente da sviluppatori e amministratori di database esperti.  
+>  Poiché Query Optimizer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seleziona in genere il piano di esecuzione migliore per una query, gli hint devono essere usati solo se strettamente necessari ed esclusivamente da sviluppatori e amministratori di database esperti.  
   
  **Si applica a:**  
   
@@ -67,7 +67,7 @@ ms.locfileid: "73981768"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql
 WITH  ( <table_hint> [ [, ]...n ] )  
   
 <table_hint> ::=   
@@ -127,7 +127,7 @@ Con alcune eccezioni, gli hint di tabella sono supportati nella clausola FROM so
 > [!IMPORTANT]  
 > L'omissione della parola chiave WITH è una funzionalità deprecata: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-Gli hint di tabella seguenti sono supportati con e senza la parola chiave WITH: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT e NOEXPAND. Se vengono specificati senza la parola chiave WITH, questi hint devono essere specificati da soli. Ad esempio:  
+Gli hint di tabella seguenti sono consentiti con e senza la parola chiave `WITH`: `NOLOCK`, `READUNCOMMITTED`, `UPDLOCK`, `REPEATABLEREAD`, `SERIALIZABLE`, `READCOMMITTED`, `TABLOCK`, `TABLOCKX`, `PAGLOCK`, `ROWLOCK`, `NOWAIT`, `READPAST`, `XLOCK`, `SNAPSHOT` e `NOEXPAND`. Se vengono specificati senza la parola chiave WITH, questi hint devono essere specificati da soli. Ad esempio:  
   
 ```sql  
 FROM t (TABLOCK)  
@@ -261,7 +261,7 @@ Equivale a READUNCOMMITTED. Per altre informazioni, vedere la sezione READUNCOMM
 > Per le istruzioni UPDATE e DELETE: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 NOWAIT  
-Imposta [!INCLUDE[ssDE](../../includes/ssde-md.md)] in modo che venga restituito un messaggio non appena viene rilevato un blocco nella tabella. NOWAIT equivale a specificare SET LOCK_TIMEOUT 0 per una tabella specifica. L'hint NOWAIT non funziona quando viene incluso anche l'hint TABLOCK. Per terminare una query senza attendere il momento in cui usare l'hint TABLOCK, anteporre invece `SETLOCK_TIMEOUT 0;` alla query.  
+Imposta [!INCLUDE[ssDE](../../includes/ssde-md.md)] in modo che venga restituito un messaggio non appena viene rilevato un blocco nella tabella. NOWAIT equivale a specificare `SET LOCK_TIMEOUT 0` per una tabella specifica. L'hint NOWAIT non funziona quando viene incluso anche l'hint TABLOCK. Per terminare una query senza attendere il momento in cui usare l'hint TABLOCK, anteporre invece `SETLOCK_TIMEOUT 0;` alla query.  
   
 PAGLOCK  
 Acquisisce i blocchi di pagina dove in genere vengono acquisiti i singoli blocchi su righe o chiavi oppure dove in genere viene acquisito un singolo blocco di tabella. Per impostazione predefinita, viene usata la modalità di blocco appropriata per l'operazione specifica. Se viene specificato nelle transazioni operative al livello di isolamento SNAPSHOT, i blocchi di pagina vengono acquisiti solo se PAGLOCK è combinato con altri hint di tabella che richiedono i blocchi, ad esempio UPDLOCK e HOLDLOCK.  
@@ -339,7 +339,7 @@ Questa opzione consente l'ottimizzazione dei tempi di esecuzione delle query rag
 TABLOCK  
 Specifica che il blocco acquisito deve essere applicato a livello di tabella. Il tipo di blocco acquisito varia in base all'istruzione eseguita. Un'istruzione SELECT può ad esempio acquisire un blocco condiviso. Se si specifica TABLOCK, il blocco condiviso viene applicato all'intera tabella anziché a livello di riga o di pagina. Se si specifica anche HOLDLOCK, il blocco di tabella viene mantenuto attivo fino al termine della transazione.  
   
-Quando si importano dati in un heap tramite l'istruzione INSERT INTO \<target_table> SELECT \<columns> FROM \<source_table>, è possibile abilitare la registrazione ottimizzata e i blocchi per l'istruzione specificando l'hint TABLOCK per la tabella di destinazione. Il modello di recupero del database deve inoltre essere impostato sul modello con registrazione minima o con registrazione minima delle operazioni bulk. Per altre informazioni, vedere [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
+Quando si importano dati in un heap tramite l'istruzione `INSERT INTO <target_table> SELECT <columns> FROM <source_table>`, è possibile abilitare la registrazione minima e i blocchi ottimizzati per l'istruzione specificando l'hint TABLOCK per la tabella di destinazione. Il modello di recupero del database deve inoltre essere impostato sul modello con registrazione minima o con registrazione minima delle operazioni bulk. L'hint TABLOCK abilita anche gli inserimenti paralleli negli heap o negli indici columnstore cluster. Per altre informazioni, vedere [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
   
 Se usato in combinazione con il provider di set di righe con lettura bulk [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) per importare dati in una tabella, TABLOCK consente a più client di caricare simultaneamente i dati nella tabella di destinazione ottimizzandone la registrazione e i blocchi. Per altre informazioni, vedere [Prerequisiti per la registrazione minima nell'importazione bulk](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
