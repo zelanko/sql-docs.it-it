@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f9203423267f68137e11203be60ffa4d0e0c3e41
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 379b9e74388b9cedad55e3263c823c3d9d276286
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296901"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588167"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>Integration Services (SSIS) in un cluster
 
@@ -128,7 +128,7 @@ In questa sezione vengono fornite le istruzioni necessarie per la configurazione
   
 4.  Modificare il valore dell'elemento **StorePath** impostando il percorso completo della cartella **Pacchetti** creata nel disco condiviso in uno dei passaggi precedenti.  
   
-5.  Aggiornare il valore di **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** nel Registro di sistema impostando il percorso e il nome completo del file di configurazione del servizio nel disco condiviso.  
+5.  In ogni nodo aggiornare il valore di **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** nel Registro di sistema impostando il percorso e il nome completo del file di configurazione del servizio nel disco condiviso.  
   
 ### <a name="to-bring-the-integration-services-service-online"></a>Per portare online il servizio Integration Services  
   

@@ -9,33 +9,34 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 11bc21819760bebabd12018030c352bd98f79adb
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: 0f6600b6578abe0a9b72dff8fee2d815b0771c0c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531094"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82178132"
 ---
-# <a name="get-started-with-big-data-clusters-2019"></a>Introduzione ai [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="get-started-with-big-data-clusters-2019-deployment"></a>Introduzione alla distribuzione di [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questo articolo offre una panoramica della distribuzione di [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).
+Questo articolo offre una panoramica della distribuzione di [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]. L'articolo offre un'introduzione ai concetti e presenta un framework utile alla comprensione degli scenari di distribuzione. I passaggi di distribuzione specifici variano in base alla piattaforma scelta per il client e il server. Per informazioni introduttive su [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], vedere [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)
 
-Per altri scenari di distribuzione, vedere:
+Per altri scenari di distribuzione di SQL Server, vedere:
 
 - [Windows](../database-engine/install-windows/install-sql-server.md)
 - [Linux](../linux/sql-server-linux-setup.md)
 - [Contenitori Docker](../linux/sql-server-linux-configure-docker.md)
 
-Questo articolo presenta i concetti principali e un quadro generale per la comprensione degli altri articoli sulla distribuzione inclusi in questa sezione. I passaggi di distribuzione specifici variano in base alla piattaforma scelta per il client e il server.
-
-> [!TIP]
-> Per ottenere rapidamente un ambiente in cui siano già distribuiti Kubernetes e un cluster Big Data e rendere più semplice l'apprendimento delle relative funzionalità, usare uno degli script di esempio indicati nella [sezione degli script](#scripts). Dopo la distribuzione, per gestire il cluster usare gli [strumenti client](#tools) nella sezione seguente.
+## <a name="quick-introduction"></a>Breve introduzione 
 
 Guardare questo video di 9 minuti per una panoramica della distribuzione di cluster Big Data:
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Clusters-deployment-overview/player?WT.mc_id=dataexposed-c9-niner]
+
+
+> [!TIP]
+> Per ottenere rapidamente un ambiente in cui siano già distribuiti Kubernetes e un cluster Big Data e rendere più semplice l'apprendimento delle relative funzionalità, usare uno degli script di esempio indicati nella [sezione degli script](#scripts). Dopo la distribuzione, per gestire il cluster usare gli [strumenti client](#tools) nella sezione seguente.
 
 
 ## <a name="client-tools"></a><a id="tools"></a> Strumenti client

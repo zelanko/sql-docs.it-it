@@ -16,15 +16,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753f
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 81a9f0e52c061ec494143eb4f61158546f5e57f9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 241df9557a141eb45933ced261a7b55f98a6ec8e
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78256930"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087351"
 ---
 # <a name="execution-plans"></a>Piani di esecuzione
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Per poter eseguire le query, il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] deve analizzare l'istruzione per determinare il modo più efficiente di accedere ai dati necessari. Questa analisi viene gestita da un componente denominato Query Optimizer. I dati di input per Query Optimizer sono costituiti dalla query, dallo schema del database (definizioni di tabella e indice) e dalle statistiche del database. L'output di Query Optimizer è un piano di esecuzione query, talvolta definito piano di query o piano di esecuzione.   
 
@@ -45,9 +45,9 @@ Il piano di esecuzione di una query è costituito dalla definizione degli elemen
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ha tre opzioni di visualizzazione dei piani di esecuzione:        
-> -  ***[Piano di esecuzione stimato](../../relational-databases/performance/display-the-estimated-execution-plan.md)***: il piano compilato generato da Query Optimizer in base alle stime.        
-> -  ***[Piano di esecuzione effettivo](../../relational-databases/performance/display-an-actual-execution-plan.md)***: il piano compilato più il [contesto di esecuzione](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse). Include le informazioni di runtime effettivo disponibili al termine dell'esecuzione, ad esempio gli avvisi relativi all'esecuzione o, nelle versioni più recenti del [!INCLUDE[ssde_md](../../includes/ssde_md.md)], il tempo trascorso e il tempo CPU usato durante l'esecuzione.        
-> -  ***[Statistiche sulle query dinamiche](../../relational-databases/performance/live-query-statistics.md)***, ovvero il piano compilato più il contesto di esecuzione. Includono le informazioni di runtime durante l'avanzamento dell'esecuzione e vengono aggiornate ogni secondo. Le informazioni di runtime includono, ad esempio, il numero effettivo di righe che passano attraverso gli operatori.       
+> -  ***[Piano di esecuzione stimato](../../relational-databases/performance/display-the-estimated-execution-plan.md)***: il piano compilato generato da Query Optimizer in base alle stime. Si tratta del piano di query memorizzato nella cache dei piani.        
+> -  ***[Piano di esecuzione effettivo](../../relational-databases/performance/display-an-actual-execution-plan.md)***: il piano compilato più il [contesto di esecuzione](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse). Diventa disponibile **dopo il completamento dell'esecuzione della query**. Include le informazioni di runtime effettivo, ad esempio gli avvisi relativi all'esecuzione o, nelle versioni più recenti del [!INCLUDE[ssde_md](../../includes/ssde_md.md)], il tempo trascorso e il tempo CPU usato durante l'esecuzione.         
+> -  ***[Statistiche sulle query dinamiche](../../relational-databases/performance/live-query-statistics.md)***: il piano compilato più il contesto di esecuzione. Sono disponibili per le **query in esecuzione** e vengono aggiornate ogni secondo. Sono incluse informazioni di runtime, ad esempio il numero effettivo di righe che passano attraverso gli [operatori](../../relational-databases/showplan-logical-and-physical-operators-reference.md), il tempo trascorso e lo stato della query stimato.
 
 > [!TIP]
 > Per altre informazioni sull'elaborazione delle query e sui piani di esecuzione delle query, vedere le sezioni [Ottimizzazione delle istruzioni SELECT](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements) e [Memorizzazione nella cache e riutilizzo del piano di esecuzione](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse) della Guida sull'architettura di elaborazione delle query.

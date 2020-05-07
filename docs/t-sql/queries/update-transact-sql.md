@@ -38,12 +38,12 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4c6c89602f55eb72c01d32a2541bcf4c775b9a9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da4f6e997d3f99e9c64c7623a616fe5d45c283db
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78176691"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82169369"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -203,7 +203,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  SET **@** _variable_ = *column* = *expression* imposta la variabile sullo stesso valore della colonna, a differenza di SET **@** _variable_ = _column_, _column_ = _expression_, che imposta la variabile sul valore precedente all'aggiornamento della colonna.  
   
  \<OUTPUT_Clause>  
- Restituisce dati aggiornati o espressioni basate su di essi come parte dell'operazione UPDATE. La clausola OUTPUT non è supportata in alcuna istruzione DML applicata a tabelle o viste remote. Per altre informazioni, vedere [Clausola OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
+ Restituisce dati aggiornati o espressioni basate su di essi come parte dell'operazione UPDATE. La clausola OUTPUT non è supportata in alcuna istruzione DML applicata a tabelle o viste remote. Per altre informazioni sugli argomenti e il comportamento di questa clausola, vedere [Clausola OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
  FROM \<table_source>  
  Specifica che una tabella, vista o origine di tabella derivata viene utilizzata per fornire i criteri per l'operazione di aggiornamento. Per altre informazioni, vedere [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
@@ -463,7 +463,7 @@ ID     Value
 ## <a name="logging-behavior"></a>Comportamento di registrazione  
  L'istruzione UPDATE viene registrata. Viene tuttavia eseguita una registrazione minima per gli aggiornamenti parziali a tipi di dati per valori di grandi dimensioni tramite la clausola **\.WRITE**. Per altre informazioni, vedere "Aggiornamento dei tipi di dati per valori di grandi dimensioni" nella sezione precedente "Tipi di dati".  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni `UPDATE` sono necessarie nella tabella di destinazione. Sono anche necessarie le autorizzazioni `SELECT` per la tabella da aggiornare se l'istruzione UPDATE include una clausola WHERE o se l'argomento *expression* nella clausola SET usa una colonna della tabella.  

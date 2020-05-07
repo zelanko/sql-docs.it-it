@@ -11,12 +11,13 @@ helpviewer_keywords:
 ms.assetid: b528bb49-340c-4a81-9c8d-cefce6562f16
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fe4aa3b74af774543c5125652d8f860c68fb04fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+manager: craigg
+ms.openlocfilehash: 9593cfdc08161d3352c59332970aee668a89f4f0
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68118329"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81727945"
 ---
 # <a name="mssqlserver_9004"></a>MSSQLSERVER_9004
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,13 +35,23 @@ ms.locfileid: "68118329"
   
 ## <a name="explanation"></a>Spiegazione  
 Si è verificato un errore nell'elaborazione del log durante un'operazione di rollback, recupero o replica. Potrebbe trattarsi di un errore rilevato dal sistema operativo o di un errore di consistenza interno rilevato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
+[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] esegue verifiche logiche sulla coerenza del contenuto del log delle transazioni durante la lettura e l'elaborazione del log. Non vengono controllati tutti gli aspetti dell'intestazione, dei blocchi e dei record del log. Il numero State (Stato) offre altre informazioni sul tipo di errore:
+
+ - **State 1**: l'intestazione file di log del file di log virtuale (VLF) è danneggiata.  Se viene rilevata un'intestazione del file di registro danneggiata durante l'avvio del database al momento dell'avvio del servizio, è possibile che in ERRORLOG (log degli errori) sia visualizzato solo l'errore 9004. L'intestazione del file di log è la prima parte di ogni VLF all'interno di un log delle transazioni. L'intestazione del file di log non corrisponde all'intestazione del file singolo, ovvero ai primi 8 kB del file di log. Se l'intestazione di file del file di log è danneggiata, è possibile che si riceva un messaggio 5172, simile a quello originato per il danneggiamento della pagina di intestazione di un file di database.
+ - **State 2 e State 3**: un blocco del log non era valido al momento dell'esecuzione del ripristino durante un'operazione RESTORE.
+ - **State da 4 a 12**: questi sono i vari controlli sui blocchi di log durante l'elaborazione dei record di log. Includono la parità, il settore e altri controlli logici sulla coerenza del log delle transazioni.
+
+Nella maggior parte dei casi questo errore si verifica solo in ERRORLOG o nel log eventi dell'applicazione di Windows con EventId = 9004, perché l'operazione che elabora il log non è basata su un comando utente diretto (ad esempio il ripristino eseguito all'avvio del motore SQL Server). In queste situazioni l'errore 9004 viene spesso visualizzato insieme all'errore 3414. Tuttavia, alcune query come ALTER DATABASE potrebbero richiedere un'elaborazione del log e pertanto visualizzeranno questi errori. Poiché la gravità dell'errore è Severity=21, la sessione utente viene disconnessa.
+
+## <a name="cause"></a>Causa
+L'errore 9004 è un errore generale che indica che il contenuto del log delle transazioni è danneggiato. Il motivo per cui il log perde la coerenza è simile a qualsiasi problema di danneggiamento del database rilevato dal motore SQL Server. Per trovare il motivo del danneggiamento del log, è consigliabile adottare tecniche simili a quelle usate per il danneggiamento del database, inclusa l'analisi di possibili problemi a livello di hardware, file system e I/O. Si noti che l'esecuzione di DBCC CHECKDB non include il controllo del log delle transazioni e non è in grado di rilevare errori di danneggiamento del log. L'errore 9004 viene generato dal motore SQL Server stesso.
+
 ## <a name="user-action"></a>Azione dell'utente  
 Per correggere l'errore, eseguire una delle operazioni seguenti:  
   
--   Eseguire il ripristino da un backup.  
+-   **Eseguire il ripristino da un backup**:  eseguire il ripristino da un backup valido noto per risolvere questo problema. Se la parte log di un backup del database o del log include contenuti danneggiati, è possibile che si registri un errore 9004 in RESTORE. In questa situazione, il log delle transazioni nel backup è danneggiato.
   
--   Ricompilare il log.  
+-   **Ricompilare il log**:  se non è possibile eseguire il ripristino da un backup, la ricompilazione del log delle transazioni potrebbe consentire di riportare online il database. È importante esaminare con cura le conseguenze della ricostruzione del log delle transazioni. Una di queste è la *possibile perdita di coerenza delle transazioni nel database*. Per altre informazioni su come ricostruire il log delle transazioni, vedere [Risoluzione degli errori in modalità di emergenza per il database](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md#resolving-errors-in-database-emergency-mode).
   
-Esaminare inoltre il registro eventi e il log degli errori di sistema per individuare le cause all'interno del sistema che possono aver generato il problema.  
+-   **Esaminare i log per rilevare problemi di sistema**: esaminare anche il registro eventi e i log degli errori di sistema per trovare all'interno del sistema le cause che possono aver generato il problema.  
   

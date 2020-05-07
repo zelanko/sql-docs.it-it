@@ -1,5 +1,6 @@
 ---
 title: Backup di SQL Server nell'URL | Microsoft Docs
+description: Informazioni sui concetti, i requisiti e i componenti necessari per consentire a SQL Server di usare archiviazione BLOB di Microsoft Azure come destinazione di backup.
 ms.custom: ''
 ms.date: 03/25/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8263000b7a6fb166657e48777cc0d8c4c007ddd2
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 1de8413f3888c3fe91f7b8557956490a1065c4fd
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087371"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180461"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup di SQL Server nell'URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

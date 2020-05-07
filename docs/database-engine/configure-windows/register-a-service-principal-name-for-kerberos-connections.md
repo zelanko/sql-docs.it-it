@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0248af282581019ebedc28656852ec5c78fd00b5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 49d8ec52ae12f40f6adaaf360e2e7a1659bef97d
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257514"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087494"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrazione di un nome dell'entità servizio per le connessioni Kerberos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -142,9 +142,9 @@ Per le connessioni con named pipe e con memoria condivisa, il formato del nome S
   
 Come nome SPN è possibile utilizzare gli account di servizio, specificati mediante l'attributo di connessione per l'autenticazione Kerberos nei formati seguenti:  
   
--   **username@domain** o **dominio\nomeutente** per un account utente di dominio  
+-   **nomeutente\@dominio** o **dominio\nomeutente** per un account utente di dominio  
   
--   **computer$@domain** o **host\FQDN** per un account di dominio di computer, ad esempio Sistema locale o NETWORK SERVICES.  
+-   **computer$\@dominio** o **host\FQDN** per un account di dominio di computer, ad esempio Sistema locale o NETWORK SERVICES.  
   
 Per determinare il metodo di autenticazione di una connessione, eseguire la query seguente.  
   

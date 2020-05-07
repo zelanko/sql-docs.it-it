@@ -3,18 +3,18 @@ title: Eseguire l'installazione in Windows
 description: Informazioni su come installare Machine Learning Services per SQL Server in Windows. È possibile usare Machine Learning Services per eseguire gli script Python e R nel database.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/20/2020
+ms.date: 02/29/2020
 ms.topic: conceptual
 author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 721b6cefdee0a50c79bd2b8a0e3ac4f26202abd5
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a96eb5b8d50102c09ed6343c0f067db5a5bdb6e2
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118414"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588232"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Installare SQL Server Machine Learning Services (Python e R) in Windows
 
@@ -28,7 +28,7 @@ Informazioni su come installare Machine Learning Services per SQL Server in Wind
 
 + Per assicurare la continuità aziendale, per Machine Learning Services è disponibile il supporto di [Gruppi di disponibilità AlwaysOn](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server). Installare Machine Learning Services e configurare i pacchetti in ogni nodo.
 
-+ L'installazione di Machine Learning Services *non è supportata* in un cluster di failover con SQL Server 2017; è supportata con SQL Server 2019.
++ L'installazione di Machine Learning Services *non è supportata* in un'[istanza di cluster di failover Always On](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) in SQL Server 2017. È supportata con SQL Server 2019 e versioni successive.
  
 + Non installare Machine Learning Services in un controller di dominio. La parte del programma di installazione relativa a Machine Learning Services avrà esito negativo.
 

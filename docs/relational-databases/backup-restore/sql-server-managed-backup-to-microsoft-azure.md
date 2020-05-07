@@ -1,5 +1,6 @@
 ---
 title: Backup gestito di SQL Server in Microsoft Azure | Microsoft Docs
+description: Backup gestito di SQL Server in Microsoft Azure gestisce e automatizza i backup di SQL Server nel servizio di archiviazione BLOB di Microsoft Azure.
 ms.custom: ''
 ms.date: 10/18/2016
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 49016b1b4ff391c1b1f533a2bf716f39a40b4dbe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9038b277c5ef552dcf2bbdc2fdcabef52e269599
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245433"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180435"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Backup gestito di SQL Server in Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "75245433"
 |**Account Microsoft Azure**|È possibile iniziare a usare Azure con una [versione di valutazione gratuita](https://azure.microsoft.com/pricing/free-trial/) prima di esaminare le [opzioni per l'acquisto](https://azure.microsoft.com/pricing/purchase-options/).|  
 |**Account di archiviazione di Azure**|I backup vengono archiviati nel servizio di archiviazione BLOB Azure associato a un account di archiviazione Azure. Per istruzioni dettagliate per creare un account di archiviazione, vedere [Informazioni sugli account di archiviazione Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).|  
 |**Contenitore BLOB**|I BLOB sono organizzati in contenitori. L'utente specifica il contenitore di destinazione per i file di backup. È possibile creare un contenitore nel [portale di gestione di Azure](https://manage.windowsazure.com/)oppure con il comando di **Azure PowerShell**[New-AzureStorageContainer](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) .|  
-|**Firma di accesso condiviso**|L'accesso al contenitore di destinazione è controllato da una firma di accesso condiviso (SAS, Shared Access Signature). Per una panoramica su SAS, vedere [Firme di accesso condiviso, parte 1: conoscere il modello di firma di accesso condiviso](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). È possibile creare un token della firma di accesso condiviso nel codice o con il comando di PowerShell **New-AzureStorageContainerSASToken** . Per un esempio di script di PowerShell che semplifica questo processo, vedere [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)(Semplificazione della creazione di credenziali SQL con i token della firma di accesso condiviso in Archiviazione di Azure con Powershell). Il token della firma di accesso condiviso può essere archiviato in **Credenziali SQL** ed essere usato con [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
+|**Firma di accesso condiviso**|L'accesso al contenitore di destinazione è controllato da una firma di accesso condiviso (SAS, Shared Access Signature). Per una panoramica su SAS, vedere [Firme di accesso condiviso, parte 1: informazioni sul modello di firma di accesso condiviso](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). È possibile creare un token della firma di accesso condiviso nel codice o con il comando di PowerShell **New-AzureStorageContainerSASToken** . Per un esempio di script di PowerShell che semplifica questo processo, vedere [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)(Semplificazione della creazione di credenziali SQL con i token della firma di accesso condiviso in Archiviazione di Azure con Powershell). Il token della firma di accesso condiviso può essere archiviato in **Credenziali SQL** ed essere usato con [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |**SQL Server Agent**|Per il corretto funzionamento di [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] è necessario che il servizio SQL Server Agent sia in esecuzione. È consigliabile impostare l'opzione per l'avvio automatico.|  
   
 ## <a name="components"></a>Componenti  
@@ -74,7 +75,7 @@ ms.locfileid: "75245433"
  È possibile specificare una pianificazione di backup personalizzata usando la stored procedure di sistema [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md). Se non viene specificata una pianificazione personalizzata, il tipo di backup pianificato e la frequenza di esecuzione vengono stabiliti in base al carico di lavoro del database. Le impostazioni del periodo di memorizzazione vengono utilizzate per determinare la durata di conservazione di un file di backup nell'archiviazione e la possibilità di recupero del database fino a una temporizzazione entro il periodo di memorizzazione.  
   
 ### <a name="backup-file-naming-conventions"></a>Convenzioni di denominazione dei file di backup  
- [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] usa il contenitore specificato dall'utente, che ha quindi il controllo sul nome del contenitore. I file di backup per i database non di disponibilità vengono denominati usando la convenzione seguente: il nome viene creato usando i primi 40 caratteri del nome del database, il GUID del database senza '-' e il timestamp. Il carattere di sottolineatura viene inserito tra i segmenti come separatore. Per il backup completo viene utilizzata l'estensione di file **BAK** , mentre per i backup del log viene utilizzata **LOG** . Per i database del gruppo di disponibilità, oltre alla convenzione di denominazione file descritta in precedenza, viene aggiunto il GUID del database del gruppo di disponibilità dopo i 40 caratteri del nome del database. Il valore GUID del database del gruppo di disponibilità è il valore per group_database_id in sys.databases.  
+ [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] usa il contenitore specificato dall'utente, che ha quindi il controllo sul nome del contenitore. Per i file di backup, i database non di disponibilità vengono denominati usando la convenzione seguente: il nome viene creato usando i primi 40 caratteri del nome del database, il GUID del database senza '-' e il timestamp. Il carattere di sottolineatura viene inserito tra i segmenti come separatore. Per il backup completo viene utilizzata l'estensione di file **BAK** , mentre per i backup del log viene utilizzata **LOG** . Per i database del gruppo di disponibilità, oltre alla convenzione di denominazione file descritta in precedenza, viene aggiunto il GUID del database del gruppo di disponibilità dopo i 40 caratteri del nome del database. Il valore GUID del database del gruppo di disponibilità è il valore per group_database_id in sys.databases.  
   
 ### <a name="full-database-backup"></a>Backup completo del database  
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pianifica un backup completo del database se si verifica una delle condizioni seguenti:  
@@ -99,7 +100,7 @@ ms.locfileid: "75245433"
 -   Ogni volta che il backup del log delle transazioni è in ritardo rispetto a un backup completo del database. L'obiettivo è quello di anticipare la catena di log rispetto al backup completo.  
   
 ## <a name="retention-period-settings"></a>Impostazioni del periodo di memorizzazione  
- Quando si abilita il backup, è necessario impostare il periodo di memorizzazione in giorni: il valore minimo è pari a 1 giorno mentre quello massimo a 30 giorni.  
+ Quando si abilita il backup, è necessario impostare il periodo di conservazione in giorni: il valore minimo è pari a 1 giorno mentre quello massimo a 30 giorni.  
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] basato sulle impostazioni del periodo di memorizzazione viene valutata la possibilità di eseguire un recupero fino a una data e ora specifiche in un tempo specificato, per determinare quali file di backup mantenere e quali invece eliminare. L'oggetto backup_finish_date del backup viene utilizzato per determinare e far corrispondere il tempo specificato in base alle impostazioni del periodo di memorizzazione.  
   

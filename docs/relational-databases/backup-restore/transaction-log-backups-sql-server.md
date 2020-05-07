@@ -1,5 +1,6 @@
 ---
 title: Backup di log delle transazioni [SQL Server] | Microsoft Docs
+description: Indipendentemente dai backup di database, è possibile eseguire il backup del log delle transazioni di SQL Server di frequente. La sequenza dei backup del log delle transazioni è una catena di log.
 ms.custom: ''
 ms.date: 01/05/2018
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 491016d02dfdb890914633333e19a3138c01779d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b4cbba5a13a41d9f24901d348566c4c09234060f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68041350"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180441"
 ---
 # <a name="transaction-log-backups-sql-server"></a>Backup di log delle transazioni (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ In genere, un amministratore del database crea un backup completo occasionale de
   
  Il backup del log delle transazioni creato alle 20.00 contiene i record del log delle transazioni compresi tra le 16.00 e le 20.00, includendo l'ora di creazione del backup completo del database (18.00). La sequenza di backup del log delle transazioni è continua, dal primo backup completo del database creato alle 8.00 fino all'ultimo backup del log delle transazioni creato alle 20.00. Per informazioni su come applicare i backup del log, vedere l'esempio in [Applicare backup log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
-##  <a name="recommendations"></a><a name="Recommendations"></a> Raccomandazioni  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni  
   
 -   Se un log delle transazioni è danneggiato, il lavoro eseguito dopo il backup valido più recente viene perso. Pertanto è consigliabile inserire i file di log in una risorsa di archiviazione con tolleranza di errore.  
   

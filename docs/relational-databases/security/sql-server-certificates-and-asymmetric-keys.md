@@ -13,12 +13,12 @@ ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99e5f88f730953929115a5b18c00e5d1bb67562e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8b330e97aa006b223120d13433bf2c317205b96c
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68126831"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153120"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Certificati SQL Server e chiavi simmetriche
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +70,8 @@ ms.locfileid: "68126831"
 |||  
 |-|-|  
 |Strumento|Scopo|  
-|[makecert](/windows/desktop/SecCrypto/makecert)|Vengono creati certificati.|  
+|[New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)|Crea certificati autofirmati.|  
+|[makecert](/windows/desktop/SecCrypto/makecert)|Vengono creati certificati. Deprecato a favore di **New-SelfSignedCertificate**.|  
 |[sn](/dotnet/framework/tools/sn-exe-strong-name-tool)|Vengono creati nomi sicuri per le chiavi simmetriche.|  
   
 ## <a name="related-tasks"></a>Attività correlate  

@@ -1,5 +1,6 @@
 ---
 title: Backup completi del file (SQL Server) | Microsoft Docs
+description: In SQL Server è possibile eseguire il backup e il ripristino di un intero filegroup anziché specificare singolarmente ogni singolo file.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1d70bf0d8e99d24ee0d7ea9e046090ba4ed32453
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3495b06e0f5c502fc40c1cf4fade996fa8e05c71
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67939620"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179087"
 ---
 # <a name="full-file-backups-sql-server"></a>Backup completi del file (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

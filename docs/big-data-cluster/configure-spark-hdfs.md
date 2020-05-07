@@ -5,16 +5,16 @@ description: I cluster Big Data di SQL Server consentono soluzioni Spark e HDFS.
 author: rajmera3
 ms.author: raajmera
 ms.reviewer: mikeray
-ms.date: 02/13/2020
+ms.date: 02/21/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 630f81c921d99634cfb4b8824dc0d46c3680c85f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8d4325bcdbfe26d68b32fe4767a710b26f52f712
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77283476"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220146"
 ---
 # <a name="configure-apache-spark-and-apache-hadoop-in-big-data-clusters"></a>Configurare Apache Spark e Apache Hadoop nei cluster Big Data
 
@@ -41,6 +41,10 @@ Ad esempio, tutte le configurazioni nel servizio `hdfs` appartengono alla catego
 - Hive: https://cwiki.apache.org/confluence/display/Hive/Configuration+Properties#ConfigurationProperties-MetaStore
 - Livy: https://github.com/cloudera/livy/blob/master/conf/livy.conf.template
 - Apache Knox Gateway: https://knox.apache.org/books/knox-0-14-0/user-guide.html#Gateway+Details
+
+Oltre a queste configurazioni, viene anche offerta la possibilità di specificare se i processi Spark possono essere eseguiti o meno nel pool di archiviazione. 
+
+Questo valore booleano, `includeSpark`, si trova nel file di configurazione `bdc.json` in `spec.resources.storage-0.spec.settings.spark`.
 
 ## <a name="unsupported-configurations"></a>Configurazioni non supportate
 

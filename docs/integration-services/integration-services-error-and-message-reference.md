@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 53ea3f9eb2704de6c6c2c1ba5237ba96aa10c011
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0f4ca1a9362abb1004829d34a3c7783850b1f3b0
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79433828"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087391"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Guida di riferimento ai messaggi e agli errori di Integration Services
 
@@ -241,9 +241,9 @@ ms.locfileid: "79433828"
 >|0xC0016005|-1073651707|DTS_E_LOGINFAILURE|Tentativo di accesso non riuscito per "%1". Questo errore si verifica quando le credenziali di accesso specificate non sono corrette. Verificare le credenziali di accesso.|  
 >|0xC0016006|-1073651706|DTS_E_INVALIDSERVERNAME|Impossibile risolvere il nome del server specificato nell'URL %1.|  
 >|0xC0016007|-1073651705|DTS_E_PROXYAUTH|Impossibile autenticare il proxy. Questo errore si verifica quando non vengono specificate le credenziali di accesso o le credenziali non sono corrette.|  
->|0xC0016008|-1073651704|DTS_E_SECUREFAILURE|La risposta ottenuta dal server alla richiesta di certificato SSL non è valida. Impossibile elaborare la richiesta.|  
+>|0xC0016008|-1073651704|DTS_E_SECUREFAILURE|La risposta ottenuta dal server alla richiesta di certificato TLS/SSL non è valida. Impossibile elaborare la richiesta.|  
 >|0xC0016009|-1073651703|DTS_E_TIMEOUT|Timeout della richiesta. Questo errore può verificarsi quando il timeout specificato è troppo breve oppure non è possibile attivare una connessione al server o al proxy. Verificare che l'URL del server e del proxy siano corretti.|  
->|0xC001600A|-1073651702|DTS_E_CLIENTAUTH|Certificato client mancante. Questo errore si verifica quando il server si aspetta un certificato client SSL e l'utente fornisce un certificato non valido oppure non fornisce affatto un certificato. Per questa connessione è necessario configurare un certificato client.|  
+>|0xC001600A|-1073651702|DTS_E_CLIENTAUTH|Certificato client mancante. Questo errore si verifica quando il server si aspetta un certificato client TLS/SSL e l'utente specifica un certificato non valido oppure non specifica nessun certificato. Per questa connessione è necessario configurare un certificato client.|  
 >|0xC001600B|-1073651701|DTS_E_REDIRECTFAILURE|Il server specificato, URL %1, include un reindirizzamento e la richiesta di reindirizzamento non è riuscita.|  
 >|0xC001600C|-1073651700|DTS_E_SERVERAUTH|Autenticazione del server non riuscita. Questo errore si verifica quando non vengono specificate le credenziali di accesso o le credenziali non sono corrette.|  
 >|0xC001600D|-1073651699|DTS_E_WINHTTPUNKNOWNERROR|Impossibile elaborare la richiesta. Riprovare più tardi.|  

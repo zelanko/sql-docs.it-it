@@ -1,5 +1,6 @@
 ---
 title: Backup completo del database (SQL Server) | Microsoft Docs
+description: In SQL Server, un backup completo del database consente di eseguire il backup dell'intero database. I backup completi del database rappresentano il database al momento del completamento del backup.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b447bec3817dbaa173c544dcb31200a702b8661d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ece8a9d031b5b85c7da672a50e56666f3814cd20
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68890071"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179075"
 ---
 # <a name="full-database-backups-sql-server"></a>Backup completo del database (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

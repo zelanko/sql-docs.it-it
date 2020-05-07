@@ -1,5 +1,6 @@
 ---
 title: Configurare la compressione dei backup (SQL Server) | Microsoft Docs
+description: Questo articolo descrive come eseguire l'override dell'impostazione predefinita a livello di server durante la creazione di un singolo backup o la pianificazione di una serie di backup di routine in SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 430905eb-d218-458c-bd48-aeee6fbb7446
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 73f1d6c4d65a9e581611ef439c79c41eb691e4c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d9ba9a26022c194316089bf13eb4c1d6811b76c4
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68076118"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220466"
 ---
 # <a name="configure-backup-compression-sql-server"></a>Configura compressione backup (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

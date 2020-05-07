@@ -32,12 +32,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a5b98bf8e99d55217fadfd2c1811cb484c3ee3b
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.openlocfilehash: 0ad386f4137b43746eed82665715e2fef5957a79
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82107987"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82181099"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -199,7 +199,7 @@ Quando vengono inseriti valori espliciti in una colonna Identity, è necessario 
 Clausola OUTPUT  
  Restituisce le righe inserite come parte dell'operazione di inserimento. I risultati possono essere restituiti all'applicazione di elaborazione o possono essere inseriti in una tabella o in una variabile di tabella per essere elaborati ulteriormente.  
   
- La [clausola OUTPUT](../../t-sql/queries/output-clause-transact-sql.md) non è supportata in istruzioni DML che fanno riferimento a viste partizionate locali, viste partizionate distribuite o tabelle remote, né in istruzioni INSERT che contengono un parametro *execute_statement*. La clausola OUTPUT INTO non è supportata in istruzioni INSERT che contengono una clausola \<dml_table_source>. 
+ La clausola OUTPUT non è supportata in istruzioni DML che fanno riferimento a viste partizionate locali, viste partizionate distribuite o tabelle remote, né in istruzioni INSERT che contengono un parametro *execute_statement*. La clausola OUTPUT INTO non è supportata in istruzioni INSERT che contengono una clausola \<dml_table_source>. Per altre informazioni sugli argomenti e il comportamento di questa clausola, vedere [Clausola OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).
   
  VALUES  
  Parola chiave che introduce l'elenco o gli elenchi di valori dei dati da inserire. Deve essere disponibile un valore per ogni colonna in *column_list*, se specificato, o nella tabella. L'elenco di valori deve essere racchiuso tra parentesi.  

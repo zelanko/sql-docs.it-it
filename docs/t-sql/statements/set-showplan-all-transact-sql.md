@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3d9e7712128269033a8391169063cf205f40208c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c1daa0270987a558b98e6a42e4f9498c56bfd6ef
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634294"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220366"
 ---
 # <a name="set-showplan_all-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,9 +50,9 @@ SET SHOWPLAN_ALL { ON | OFF }
 ## <a name="remarks"></a>Osservazioni  
  L'opzione SET SHOWPLAN_ALL viene impostata in fase di esecuzione, non in fase di analisi.  
   
- Quando l'opzione SET SHOWPLAN_ALL è impostata su ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce le informazioni di esecuzione per ciascuna istruzione, senza eseguirla. Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] non vengono eseguite. Quando l'opzione è impostata su ON, vengono restituite informazioni su tutte le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] successive fino a quando l'opzione non viene reimpostata su OFF. Se, ad esempio, si esegue un'istruzione CREATE TABLE quando l'opzione SET SHOWPLAN_ALL è impostata su ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce un messaggio di errore di una successiva istruzione SELECT che interessa la stessa tabella, per informare gli utenti che la tabella specificata non esiste. I successivi riferimenti a tale tabella pertanto hanno esito negativo. Quando l'opzione SET SHOWPLAN_ALL è impostata su OFF, le istruzioni vengono eseguite da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza la generazione di alcun report.  
+ Quando l'opzione `SET SHOWPLAN_ALL` è impostata su ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce le informazioni di esecuzione per ciascuna istruzione, senza eseguirla. Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] non vengono eseguite. Quando l'opzione è impostata su ON, vengono restituite informazioni su tutte le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] successive fino a quando l'opzione non viene reimpostata su OFF. Ad esempio se si esegue un'istruzione CREATE TABLE quando l'opzione `SET SHOWPLAN_ALL` è impostata su ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce un messaggio di errore da una successiva istruzione SELECT che interessa la stessa tabella, per informare gli utenti che la tabella specificata non esiste. I successivi riferimenti a tale tabella pertanto hanno esito negativo. Quando l'opzione SET SHOWPLAN_ALL è impostata su OFF, le istruzioni vengono eseguite da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza la generazione di alcun report.  
   
- L'opzione SET SHOWPLAN_ALL è stata creata specificatamente per l'utilizzo in applicazioni per la gestione dell'output. Usare SET SHOWPLAN_TEXT per ottenere output leggibile in applicazioni della riga di comando per Microsoft Win32, ad esempio l'utilità **osql**.  
+ L'opzione `SET SHOWPLAN_ALL` è progettata per l'uso in applicazioni scritte per gestirne l'output. Usare SET SHOWPLAN_TEXT per ottenere output leggibile in applicazioni della riga di comando per Microsoft Win32, ad esempio l'utilità **osql**.  
   
  Non è possibile specificare entrambe le opzioni SET SHOWPLAN_TEXT e SET SHOWPLAN_ALL in una stored procedure. Devono essere inoltre le uniche istruzioni di un batch.  
   
@@ -74,8 +74,8 @@ SET SHOWPLAN_ALL { ON | OFF }
 |**AvgRowSize**|Dimensioni medie stimate (in byte) della riga che viene elaborata dall'operatore.|  
 |**TotalSubtreeCost**|Costo* (cumulativo) stimato dell'operazione e delle operazioni figlio.|  
 |**OutputList**|Include un elenco delimitato da virgole delle colonne previste dall'operazione corrente.|  
-|**Avvisi**|Include un elenco delimitato da virgole dei messaggi di avviso relativi all'operazione corrente. I messaggi di avviso possono includere la stringa "NO STATS:()" con un elenco di colonne. Tale messaggio indica che in Query Optimizer è stata tentata una decisione in base alle statistiche di questa colonna, ma non era disponibile alcuna statistica. Query Optimizer ha pertanto formulato un'ipotesi con cui potrebbe essere stato scelto un piano non efficiente per la query. Per altre informazioni sulla creazione o l'aggiornamento di statistiche di colonna, che agevolano la scelta di un piano di query più efficace in Query Optimizer, vedere [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md). Questa colonna può includere facoltativamente la stringa "MISSING JOIN PREDICATE", a indicare che è stato eseguito un join tra tabelle senza specificare un predicato di join. In seguito all'eliminazione accidentale di un predicato di join, la query potrebbe richiedere tempi di esecuzione maggiori del previsto e restituire un set di risultati di dimensioni elevate. Se la colonna include tale stringa, verificare se l'assenza di un predicato di join è o meno voluta.|  
-|**Tipo**|Tipo di nodo. Per il nodo padre di ogni query, è il tipo di istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)], ad esempio SELECT, INSERT, EXECUTE e così via. Per sottonodi che rappresentano piani di esecuzione, il tipo è PLAN_ROW.|  
+|**:::no-loc text="Warnings":::**|Include un elenco delimitato da virgole dei messaggi di avviso relativi all'operazione corrente. I messaggi di avviso possono includere la stringa "NO STATS:()" con un elenco di colonne. Tale messaggio indica che in Query Optimizer è stata tentata una decisione in base alle statistiche di questa colonna, ma non era disponibile alcuna statistica. Query Optimizer ha pertanto formulato un'ipotesi con cui potrebbe essere stato scelto un piano non efficiente per la query. Per altre informazioni sulla creazione o l'aggiornamento di statistiche di colonna, che agevolano la scelta di un piano di query più efficace in Query Optimizer, vedere [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md). Questa colonna può includere facoltativamente la stringa "MISSING JOIN PREDICATE", a indicare che è stato eseguito un join tra tabelle senza specificare un predicato di join. In seguito all'eliminazione accidentale di un predicato di join, la query potrebbe richiedere tempi di esecuzione maggiori del previsto e restituire un set di risultati di dimensioni elevate. Se la colonna include tale stringa, verificare se l'assenza di un predicato di join è o meno voluta.|  
+|**:::no-loc text="Type":::**|Tipo di nodo. Per il nodo padre di ogni query, è il tipo di istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)], ad esempio SELECT, INSERT, EXECUTE e così via. Per sottonodi che rappresentano piani di esecuzione, il tipo è PLAN_ROW.|  
 |**Parallel**|**0** = L'operatore non viene eseguito in parallelo.<br /><br /> **1** = L'operatore viene eseguito in parallelo.|  
 |**EstimateExecutions**|Numero stimato di esecuzioni dell'operatore durante l'elaborazione della query corrente.|  
 |||

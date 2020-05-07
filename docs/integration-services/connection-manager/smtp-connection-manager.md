@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3795d442-714b-4bbb-9acd-75bf277a468a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 40e6fc7d5156ebb56266977bf929242db232e3e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a5f36ab7571008b73d90cc337e3fe7f5e5fa8523
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298482"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087431"
 ---
 # <a name="smtp-connection-manager"></a>Gestione connessione SMTP
 
@@ -46,7 +46,7 @@ ms.locfileid: "71298482"
     > [!IMPORTANT]  
     >  La gestione connessione SMTP supporta solo l'autenticazione anonima e l'autenticazione di Windows. Non supporta l'autenticazione di base.  
   
--   Specificare se crittografare la comunicazione mediante SSL (Secure Sockets Layer) quando si inviano messaggi di posta elettronica.  
+-   Specificare se crittografare la comunicazione mediante TLS (Transport Layer Security), protocollo precedentemente noto come SSL (Secure Sockets Layer), quando si inviano messaggi di posta elettronica.  
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
@@ -79,5 +79,5 @@ ms.locfileid: "71298482"
 >  Se si utilizza Microsoft Exchange come server SMTP, potrebbe essere necessario impostare l'opzione **Usa autenticazione di Windows** su **True**. È possibile configurare i server Exchange in modo da impedire le connessioni SMTP non autenticate.  
   
  **Attiva SSL (Secure Sockets Layer)**  
- Selezionare questa opzione per crittografare le comunicazioni mediante SSL (Secure Sockets Layer) durante l'invio di messaggi di posta elettronica.  
+ Selezionare questa opzione per crittografare le comunicazioni tramite TLS/SSL durante l'invio di messaggi di posta elettronica.  
   

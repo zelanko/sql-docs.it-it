@@ -8,17 +8,46 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: seodec18
-ms.date: 03/18/2020
-ms.openlocfilehash: 5a6bd8792cd42d34796b36fb18a4d8c551d684f5
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.date: 04/30/2020
+ms.openlocfilehash: d7c54fbbb959085206cb993d4b9e9087ac8c3a50
+ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087331"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619674"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Note sulla versione per Azure Data Studio
 
 **[Scarica e installa l'ultima versione](download.md)**
+
+## <a name="april-2020-hotfix"></a>Aprile 2020 (hotfix)
+
+30 aprile 2020 &nbsp; / &nbsp; versione: 1.17.1
+
+&nbsp;
+
+| Modifica | Dettagli |
+| :----- | :------ |
+| Correzione del bug n. 10197 Non è possibile connettersi tramite MFA | [10197](https://github.com/microsoft/azuredatastudio/issues/10197)  |
+| &nbsp; | &nbsp; |
+
+## <a name="april-2020"></a>Aprile 2020
+
+27 aprile 2020 &nbsp; / &nbsp; versione: 1.17.0
+
+&nbsp;
+
+| Modifica | Dettagli |
+| :----- | :------ |
+| Pagina iniziale migliorata | Aggiornamento dell'interfaccia utente nella pagina iniziale per semplificare la visualizzazione delle azioni comuni e mettere in evidenza le estensioni. |
+| Nuove funzionalità dei notebook | &bull; &nbsp; Aggiunta della barra degli strumenti Markdown durante la modifica delle celle di testo per facilitare la scrittura con Markdown <br/> &bull; &nbsp; Riprogettazione del viewlet Book di Jupyter per trasformarlo in un viewlet di Notebooks in cui è possibile gestire insieme Book e notebook di Jupyter <br/>&bull; &nbsp; Aggiunta del supporto per salvare in modo permanente i grafici durante il salvataggio di un notebook <br/> &bull; &nbsp; Aggiunta del supporto per KQL Magic nei notebook Python|
+| Dashboard migliorati | I dashboard in tutto Azure Data Studio sono stati aggiornati con i modelli di progettazione più recenti, inclusa una barra degli strumenti delle azioni. Questo vale anche per molte estensioni. |
+| Aggiunta dell'integrazione di Cloud Shell nella visualizzazione Azure. | |
+| Supporto di Always Encrypted e Always Encrypted con enclave sicuri. | |
+| Bug e problemi risolti | Per un elenco completo delle correzioni, vedere i [bug e i problemi su GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22April+2020+Release%22). |
+| &nbsp; | &nbsp; |
+| Bug e problemi risolti | Per un elenco completo delle correzioni, vedere i [bug e i problemi su GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22April+2020+Release%22). |
+| &nbsp; | &nbsp; |
 
 ## <a name="march-2020"></a>Marzo 2020
 
@@ -50,7 +79,7 @@ ms.locfileid: "82087331"
 
 ## <a name="february-2020"></a>Febbraio 2020
 
-13 febbraio 2020 &nbsp; / &nbsp; versione: 1.15.0 
+13 febbraio 2020 &nbsp; / &nbsp; versione: 1.15.0
 
 &nbsp;
 
@@ -247,7 +276,7 @@ ms.locfileid: "82087331"
 - Notebook
     - [5838](https://github.com/microsoft/azuredatastudio/issues/5838) Consentire agli utenti di usare la versione di sistema di Python per i notebook
 - Confronto schema
-    - [5804](https://github.com/microsoft/azuredatastudio/issues/5804) Le attività di confronto schema mostrano un menu di scelta rapida Annulla predefinito che non esegue alcuna operazione
+    - [5804](https://github.com/microsoft/azuredatastudio/issues/5804) Le attività di confronto schemi mostrano un menu di scelta rapida Annulla predefinito che non esegue alcuna operazione
 
 ## <a name="may-2019"></a>Maggio 2019
 
@@ -274,7 +303,7 @@ ms.locfileid: "82087331"
 | :----- | :------ |
 | Scheda **Server** rinominata in **Connessioni** | |
 | Spostamento di Azure Resource Explorer come viewlet di Azure in Connessioni | Gli utenti possono ora vedere le istanze SQL di Azure tramite il viewlet Azure nella visualizzazione Connessioni ed espandere per vedere gli oggetti in ogni server o database.|
-| Miglioramenti ai notebook SQL | &bull; &nbsp; Aggiunta di un pulsante alla barra degli strumenti per cancellare l'output per tutte le celle <br/>&bull; &nbsp; Aggiunta di un pulsante alla barra degli strumenti per eseguire tutte le celle <br/>&bull; &nbsp; Correzione di nome della connessione anziché nome del server (se impostato) nell'elenco a discesa Collega a <br/>&bull; &nbsp; Correzione del mancato rendering delle immagini nel markdown quando si usano percorsi relativi per le immagini <br/>&bull; &nbsp; Miglioramento delle funzionalità nelle griglie dei notebook mediante l'aggiunta del doppio clic per il ridimensionamento automatico delle colonne e il supporto della rotella del mouse <br/>&bull; &nbsp; Miglioramenti alla gestione degli errori e alla resilienza dell'installazione di Python durante l'installazione di Python con i notebook <br/>&bull; &nbsp; Miglioramenti alla funzionalità "Seleziona tutto" quando si selezionano le celle del notebook <br/>&bull; &nbsp; Miglioramenti alle connessioni a notebook per impedire che la chiusura di un notebook incida su e una connessione di Esplora oggetti <br/>&bull; &nbsp; Miglioramenti all'esperienza notebook per visualizzare un messaggio all'utente quando il notebook è disconnesso ed è necessaria una connessione per l'esecuzione delle celle<br/>&bull; &nbsp; Miglioramento del supporto per i notebook non salvati per riattivarli in ADS al riavvio di ADS |
+| Miglioramenti ai notebook SQL | &bull; &nbsp; Aggiunta di un pulsante alla barra degli strumenti per cancellare l'output per tutte le celle <br/>&bull; &nbsp; Aggiunta di un pulsante alla barra degli strumenti per eseguire tutte le celle <br/>&bull; &nbsp; Correzione di nome della connessione anziché nome del server (se impostato) nell'elenco a discesa Collega a <br/>&bull; &nbsp; Correzione del mancato rendering delle immagini nel markdown quando si usano percorsi relativi per le immagini <br/>&bull; &nbsp; Miglioramento delle funzionalità nelle griglie dei notebook mediante l'aggiunta del doppio clic per il ridimensionamento automatico delle colonne e il supporto migliorato della rotella del mouse <br/>&bull; &nbsp; Miglioramenti alla gestione degli errori e alla resilienza dell'installazione di Python durante l'installazione di Python con i notebook <br/>&bull; &nbsp; Miglioramenti alla funzionalità "Seleziona tutto" quando si selezionano le celle del notebook <br/>&bull; &nbsp; Miglioramenti alle connessioni a notebook per impedire che la chiusura di un notebook incida su e una connessione di Esplora oggetti <br/>&bull; &nbsp; Miglioramenti all'esperienza notebook per visualizzare un messaggio all'utente quando il notebook è disconnesso ed è necessaria una connessione per l'esecuzione delle celle<br/>&bull; &nbsp; Miglioramento del supporto per i notebook non salvati per riattivarli in ADS al riavvio di ADS |
 | Bug e problemi risolti. | Vedere i [bug e i problemi su GitHub](https://github.com/Microsoft/azuredatastudio/milestone/26?closed=1). |
 | &nbsp; | &nbsp; |
 
@@ -302,7 +331,7 @@ ms.locfileid: "82087331"
 | Aggiunta dell'estensione PowerShell  | Offre l'esperienza dell'[estensione PowerShell](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) da VS Code.  |
 | Aggiunta dell'estensione SQL Server dacpac  | Sposta la procedura guidata di applicazione livello dati da SQL Server Import in una nuova estensione.  |
 | Aggiunta dell'estensione della community QueryPlan.show | Aggiunge il supporto dell'integrazione per visualizzare i piani di query  |
-| Aggiornamento dell'estensione SQL Server 2019 (anteprima) | &bull; &nbsp; Il supporto di Jupyter Notebook, in particolare il supporto per i kernel Python3 e Spark, è stato spostato in Azure Data Studio. <br/>&bull; &nbsp; Correzioni di bug alla procedura guidata dati esterni  |
+| Aggiornamento dell'estensione SQL Server 2019 (anteprima) | &bull; &nbsp; Il supporto di Jupyter Notebook, in particolare il supporto per i kernel Python3 e Spark, è stato spostato nello strumento principale Azure Data Studio. <br/>&bull; &nbsp; Correzioni di bug alla procedura guidata dati esterni  |
 | Bug e problemi risolti. | Vedere i [bug e i problemi su GitHub](https://github.com/Microsoft/azuredatastudio/milestone/25?closed=1). |
 | &nbsp; | &nbsp; |
 
@@ -457,7 +486,7 @@ Per informazioni dettagliate, vedere il [log delle modifiche](https://github.com
 
 30 agosto 2018 &nbsp; / &nbsp; versione: 0.32.8 &nbsp; / &nbsp; Anteprima pubblica
 
-L'*Anteprima pubblica di agosto* è incentrata sulla correzione dei bug, la stabilizzazione del prodotto e il superamento delle lacune negli scenari esistenti.
+L'*anteprima pubblica di agosto* è incentrata sulla correzione dei bug, la stabilizzazione del prodotto e il superamento delle lacune negli scenari esistenti.
 
 _La versione 0.32.8 contiene correzioni per un paio di regressioni individuata nella 0.32.7 ([1971](https://github.com/Microsoft/azuredatastudio/issues/1971), [2372](https://github.com/Microsoft/azuredatastudio/issues/2372))_
 
@@ -692,7 +721,7 @@ L'*Anteprima pubblica di febbraio* include alcuni suggerimenti di funzionalità 
 | Il campo **Database** della finestra di dialogo di connessione è ora un elenco a discesa popolato dinamicamente che conterrà un elenco di database popolati dal server specificato. | &nbsp; |
 | Introduzione all'API di estendibilità della connessione. | &nbsp; |
 | Integrazione dell'editor VS Code 1.19. | &nbsp; |
-| Aggiornamento del componente JustinPealing/html-query-plan per implementare diversi miglioramenti del visualizzatore piano di query. | &nbsp; |
+| Aggiornamento del componente JustinPealing/html-query-plan per implementare diversi miglioramenti del visualizzatore del piano di query. | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ### <a name="fixed-issues-february-2018"></a>Problemi risolti, febbraio 2018

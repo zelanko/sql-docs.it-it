@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: f0c3fe15a46333fad43b72ba3c8040153b9b51a2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0b034a0c0d449bd85afbfd46fa407e34921b8cf2
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80386190"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262131"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Note sulla versione per SqlPackage.exe
 
@@ -34,6 +34,45 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+## <a name="185-sqlpackage"></a>18.5 sqlpackage
+
+|Piattaforma|Download|Data di rilascio|Versione|Compilare
+|:---|:---|:---|:---|:---|
+|Windows|[Programma di installazione MSI](https://go.microsoft.com/fwlink/?linkid=2128142)|28 aprile 2020|18.5|15.0.4769.1|
+|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2128145)|28 aprile 2020| 18.5|15.0.4769.1|
+|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2128144)|28 aprile 2020| 18.5|15.0.4769.1|
+|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2128143)|28 aprile 2020| 18.5|15.0.4769.1|
+
+### <a name="features"></a>Funzionalità
+| Funzionalità | Dettagli |
+| :------ | :------ |
+| Distribuzione | La classificazione di riservatezza dei dati è ora supportata per SQL Server 2008 e versioni successive, il database SQL di Azure e Azure SQL Data Warehouse |
+| Distribuzione | Aggiunta del supporto di Azure SQL Data Warehouse per i vincoli di tabella |
+| Distribuzione | Aggiunta del supporto di Azure SQL Data Warehouse per l'indice columnstore cluster ordinato |
+| Distribuzione | Aggiunta del supporto per un'origine dati esterna (per Oracle, Teradata, MongoDB/CosmosDB, ODBC, cluster Big Data) e una tabella esterna per cluster Big Data di SQL Server 2019 |
+| Distribuzione | Aggiunta di un'istanza di database SQL Edge come edizione supportata |
+| Distribuzione | Supporto dei nomi dei server Istanza gestita nel formato '\<server>.\<zonadns>.database.windows.net' |
+| Distribuzione | Aggiunta del supporto per il comando di copia in Azure SQL Data Warehouse |
+| Distribuzione | Aggiunta dell'opzione di distribuzione 'IgnoreTablePartitionOptions' durante la pubblicazione per evitare la ricreazione della tabella in caso di modifica della funzione di partizione per la tabella per Azure SQL Data Warehouse |
+| .NET Core | Aggiunta del supporto di Microsoft.Data.SqlClient nella versione .NET Core di sqlpackage |
+| &nbsp; | &nbsp; |
+
+### <a name="fixes"></a>Correzioni
+| Fix | Dettagli |
+| :-- | :------ |
+| Distribuzione | Correzione della pubblicazione dacpac di un database che contiene un utente esterno, che generava un errore "Riferimento oggetto non impostato su un'istanza di un oggetto." |
+| Distribuzione | Correzione dell'analisi del percorso JSON come espressione |
+| Distribuzione | Correzione della generazione di istruzioni GRANT per le autorizzazioni AlterAnyDatabaseScopedConfiguration e AlterAnySensitivityClassification |
+| Distribuzione | Correzione dell'autorizzazione script esterno non riconosciuta |
+| Distribuzione | Correzione per la proprietà inline - l'aggiunta implicita della proprietà non deve essere visualizzata nella differenza ma la menzione esplicita dovrebbe essere visualizzata tramite script |
+| Distribuzione | Risoluzione di un problema a causa del quale la modifica di una tabella a cui fa riferimento una vista materializzata (MV) causa la generazione di istruzioni ALTER VIEW che non sono supportate per le viste materializzate per Azure SQL Data Warehouse |
+| Distribuzione | Correzione dell'errore di pubblicazione quando si aggiunge una colonna a una tabella con dati per Azure SQL Data Warehouse |
+| Distribuzione | Correzione dello script di aggiornamento che deve spostare i dati in una nuova tabella quando si modifica il tipo di colonna di distribuzione (scenario di perdita dei dati) per Azure SQL Data Warehouse |
+| ScriptDom | Correzione del bug ScriptDom a causa del quale non funzionava il riconoscimento dei vincoli inline definiti dopo un indice inline |
+| ScriptDom | Correzione della parentesi di chiusura mancante per ScriptDom SYSTEM_TIME in un'istruzione batch |
+| Always Encrypted | Correzione per la tabella #tmpErrors che non può essere eliminata se sqlpackage si riconnette e la tabella temporanea è già stata eliminata perché la tabella temporanea scompare al termine della connessione |
+| &nbsp; | &nbsp; |
+
 ## <a name="1841-sqlpackage"></a>sqlpackage 18.4.1
 
 |Piattaforma|Download|Data di rilascio|Versione|Compilare
@@ -71,7 +110,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | :------ | :------ |
 | Distribuzione | Aggiungere il supporto per la distribuzione in Azure SQL Data Warehouse (GA). | 
 | Piattaforma | Versione GA di sqlpackage per .NET Core per macOS, Linux e Windows. | 
-| Security | Rimuovere la firma del codice SHA1. |
+| Sicurezza | Rimuovere la firma del codice SHA1. |
 | Distribuzione | Aggiungere il supporto per le nuove edizioni del database di Azure: GeneralPurpose, BusinessCritical, Hyperscale |
 | Distribuzione | Aggiungere il supporto di Istanza gestita per utenti e gruppi di AAD. |
 | Distribuzione | Supportare il parametro/AccessToken per sqlpackage in .NET Core. |
@@ -91,7 +130,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Importa |  Per i file con estensione bacpac con file compressi di dimensioni superiori a 4 GB, può essere necessario eseguire l'importazione con la versione di sqlpackage per .NET Core.  Questo comportamento è dovuto al modo in cui .NET Core genera le intestazioni dei file zip, che, anche se valide, non sono leggibili per la versione di sqlpackage per .NET Full Framework. | 
 | Distribuzione | Il parametro /p:Storage=File non è supportato. In .NET Core è supportato solo il parametro Memory. | 
 | Always Encrypted | sqlpackage per .NET Core non supporta le colonne Always Encrypted. | 
-| Security | sqlpackage per .NET Core non supporta il parametro /ua per l'autenticazione a più fattori. | 
+| Sicurezza | sqlpackage per .NET Core non supporta il parametro /ua per l'autenticazione a più fattori. | 
 | Distribuzione | Non sono supportati i file con estensione dacpac e bacpac V2 meno recenti che usano la serializzazione dei dati JSON. |
 | &nbsp; | &nbsp; |
 
@@ -208,7 +247,7 @@ Build: &nbsp; 15.0.4200.1
 | Distribuzione | Aggiunta del supporto per il livello di compatibilità del database 150. | 
 | Distribuzione | Aggiunta del supporto per le istanze gestite. | 
 | Prestazioni | Aggiunta del parametro della riga di comando MaxParallelism per specificare il grado di parallelismo per le operazioni di database. | 
-| Security | Aggiunta del parametro della riga di comando AccessToken per specificare un token di autenticazione quando ci si connette a SQL Server. | 
+| Sicurezza | Aggiunta del parametro della riga di comando AccessToken per specificare un token di autenticazione quando ci si connette a SQL Server. | 
 | Importa | Aggiunta del supporto per lo streaming dei tipi di dati BLOB/CLOB per le importazioni. | 
 | Distribuzione | Aggiunta del supporto per l'opzione 'INLINE' UDF scalare. | 
 | Grafico | Aggiunta del supporto per la sintassi 'MERGE' nella tabella grafo. |

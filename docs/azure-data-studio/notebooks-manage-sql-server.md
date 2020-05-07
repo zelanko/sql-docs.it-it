@@ -1,6 +1,6 @@
 ---
-title: Gestire un notebook di SQL Server
-description: Informazioni su come gestire notebook in Azure Data Studio, inclusi l'apertura di un notebook, il relativo salvataggio e la modifica della connessione del cluster Big Data.
+title: Come gestire un notebook
+description: Informazioni su come gestire notebook in Azure Data Studio, inclusi l'apertura di un notebook, il relativo salvataggio e la modifica della connessione SQL o del kernel Python.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: achatter, alayu, mikeray
@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.custom: ''
-ms.date: 03/30/2020
-ms.openlocfilehash: 9b071a9d1b9e770e1443e5df539208baa4399a30
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.date: 04/27/2020
+ms.openlocfilehash: 435290bd45e79c835ba134bb732f1672dc31c2cf
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531594"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82178699"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Come gestire notebook in Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questo articolo descrive come aprire e salvare file di notebook in Azure Data Studio con SQL Server. Illustra anche come modificare la connessione a SQL Server.
+Questo articolo descrive come aprire e salvare file di notebook in Azure Data Studio. Illustra inoltre come modificare la connessione a SQL Server o al kernel Python.
 
 ## <a name="open-a-notebook"></a>Aprire un notebook
 
@@ -57,9 +57,9 @@ Usare il comando **File: Aprire**  dal riquadro comandi digitando CTRL+MAIUSC+P 
 > - Comandi **Salva file**, **Salva file con nome...** e **Salva tutto** dal menu File.
 > - Comando **File: Salva** immessi nel riquadro comandi.
 
-## <a name="change-the-connection"></a>Modificare la connessione
+## <a name="change-the-sql-connection"></a>Modificare la connessione SQL
 
-Per modificare la connessione per un notebook:
+Per modificare la connessione SQL per un notebook:
 
 1. Selezionare il menu **Collega a** dalla barra degli strumenti del notebook e quindi selezionare **Cambia connessione**.
 
@@ -69,6 +69,31 @@ Per modificare la connessione per un notebook:
 
    ![Selezionare un server dal menu Associa a.](./media/notebooks-manage-sql-server/select-attach-to-2.png)
 
+## <a name="change-the-python-kernel"></a>Modificare il kernel Python
+
+La prima volta che si apre Azure Data Studio viene visualizzata la pagina **Configura Python per Notebooks**. È possibile selezionare:
+
+- **Nuova installazione di Python** per installare una nuova copia di Python per Azure Data Studio o
+- **Usa l'installazione esistente di Python** per specificare il percorso di un'installazione esistente di Python da usare in Azure Data Studio
+
+Per visualizzare il percorso e la versione del kernel Python attivo, creare una cella di codice ed eseguire i comandi Python seguenti:
+
+```python
+import os
+import sys
+print(sys.version_info)
+print(os.path.dirname(sys.executable))
+```
+
+Per passare a un'installazione diversa di Python:
+
+1. Scegliere **Preferenze** dal menu **File** e quindi **Impostazioni**.
+1. Scorrere fino a **Configurazione di Notebook** in **Estensioni**.
+1. In **Usa l'installazione esistente di Python** deselezionare l'opzione "Percorso locale di un'installazione preesistente di Python usata da Notebooks."
+1. Riavviare Azure Data Studio.
+
+Quando viene visualizzata la pagina **Configura Python per Notebooks** è possibile scegliere di creare una nuova installazione di Python o specificare il percorso di un'installazione esistente.
+
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sui notebook in Azure Data Studio, vedere [Come usare i notebook in SQL Server 2019](notebooks-guidance.md).
+Per altre informazioni sui notebook SQL in Azure Data Studio, vedere [Come usare i notebook in SQL Server 2019](notebooks-guidance.md).

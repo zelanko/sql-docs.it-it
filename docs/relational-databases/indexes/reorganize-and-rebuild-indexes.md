@@ -32,12 +32,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: faf62599a54c4c1a58b33066e69cf3b2e8698b70
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: 4fee0e8af2e4d556e388fc72086286d4a21184a8
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138143"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220716"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>Risolvere la frammentazione degli indici tramite riorganizzazione o ricompilazione di questi
 
@@ -57,6 +57,9 @@ Che cos'è la frammentazione dell'indice e perché è opportuno occuparsene:
 
 Il primo passaggio per decidere il metodo di deframmentazione dell'indice da usare consiste nell'eseguire un'analisi dell'indice per determinare il grado di frammentazione. La frammentazione viene rilevata in modo diverso per gli indici rowstore e columnstore.
 
+> [!NOTE]
+> È particolarmente importante verificare la frammentazione dell'indice o dell'heap dopo l'eliminazione di grandi quantità di dati. Per gli heap, se sono presenti aggiornamenti frequenti, potrebbe essere necessario anche esaminare la frammentazione per evitare la proliferazione di record di inoltro. Per altre informazioni sugli heap, vedere [Heap (tabelle senza indici cluster)](../../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures). 
+
 ### <a name="detecting-fragmentation-of-rowstore-indexes"></a>Rilevamento della frammentazione degli indici rowstore
 
 È possibile usare [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) per rilevare la frammentazione in un indice specifico, in tutti gli indici di una tabella o vista indicizzata, in tutti gli indici di un database o in tutti gli indici di tutti i database. Per gli indici partizionati, **sys.dm_db_index_physical_stats** fornisce anche informazioni sulla frammentazione per ogni partizione.
@@ -73,18 +76,22 @@ Una volta noto il grado di frammentazione, usare la tabella seguente per determi
 
 |Valore di**avg_fragmentation_in_percent**|Istruzione correttiva|
 |-----------------------------------------------|--------------------------|
-|> 5% e < = 30%|ALTER INDEX REORGANIZE|
-|> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>1</sup>|
+|> 5% e < = 30% <sup>1</sup>|ALTER INDEX REORGANIZE|
+|> 30% <sup>1</sup>|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>2</sup>|
 
-<sup>1</sup> È possibile eseguire la ricompilazione di un indice online oppure offline. La riorganizzazione di un indice viene sempre eseguita online. Per ottenere una disponibilità simile a quella offerta dall'opzione di riorganizzazione è necessario ricompilare gli indici in modalità online. Per altre informazioni, vedere [INDEX](#rebuild-an-index) ed [Eseguire operazioni online sugli indici](../../relational-databases/indexes/perform-index-operations-online.md).
+<sup>1</sup> Questi valori costituiscono un'indicazione approssimativa per determinare il punto in cui passare da `ALTER INDEX REORGANIZE` a `ALTER INDEX REBUILD`. I valori effettivi, in realtà, variano da caso a caso. È importante riuscire a determinare la soglia migliore per l'ambiente in uso.      
 
-Questi valori costituiscono un'indicazione approssimativa per determinare il punto in cui passare da `ALTER INDEX REORGANIZE` a `ALTER INDEX REBUILD`. I valori effettivi, in realtà, variano da caso a caso. È importante riuscire a determinare la soglia migliore per l'ambiente in uso. Se ad esempio un determinato indice viene usato principalmente per le operazioni di analisi, la rimozione della frammentazione può migliorare le prestazioni di tali operazioni. Il vantaggio in termini di prestazioni è meno evidente per gli indici usati principalmente per le operazioni di ricerca. Analogamente, la rimozione della frammentazione in un heap (una tabella senza indici cluster) è particolarmente utile per le operazioni di analisi degli indici non cluster, ma ha un effetto ridotto nelle operazioni di ricerca.
+> [!TIP] 
+> Se ad esempio un determinato indice viene usato principalmente per le operazioni di analisi, la rimozione della frammentazione può migliorare le prestazioni di tali operazioni. Il vantaggio in termini di prestazioni potrebbe essere meno evidente per gli indici usati principalmente per le operazioni di ricerca.    
+Analogamente, la rimozione della frammentazione in un heap (una tabella senza indici cluster) è particolarmente utile per le operazioni di analisi degli indici non cluster, ma ha un effetto ridotto nelle operazioni di ricerca.
 
-Non è necessario deframmentare gli indici con frammentazione pari o inferiore al 5% perché i vantaggi offerti dalla rimozione di una frammentazione così limitata sono quasi sempre annullati dal costo a livello di CPU della riorganizzazione o della ricompilazione dell'indice. Inoltre la ricompilazione o la riorganizzazione degli indici rowstore di dimensioni ridotte in genere non riduce effettivamente la frammentazione. Le pagine di indici di dimensioni ridotte vengono talvolta archiviate in extent misti. Poiché gli extent misti possono essere condivisi al massimo da otto oggetti, la frammentazione in un indice di dimensioni ridotte potrebbe non ridursi dopo la riorganizzazione o la ricompilazione dell'indice. Vedere anche [Considerazioni specifiche per la ricompilazione degli indici rowstore](#considerations-specific-to-rebuilding-rowstore-indexes).
+<sup>2</sup> È possibile eseguire la ricompilazione di un indice online oppure offline. La riorganizzazione di un indice viene sempre eseguita online. Per ottenere una disponibilità simile a quella offerta dall'opzione di riorganizzazione è necessario ricompilare gli indici in modalità online. Per altre informazioni, vedere [INDEX](#rebuild-an-index) ed [Eseguire operazioni online sugli indici](../../relational-databases/indexes/perform-index-operations-online.md).
+
+Non è necessario deframmentare gli indici con frammentazione pari o inferiore al 5% perché i vantaggi offerti dalla rimozione di una frammentazione così limitata sono quasi sempre annullati dal costo a livello di CPU della riorganizzazione o della ricompilazione dell'indice. Inoltre la ricompilazione o la riorganizzazione degli indici rowstore di dimensioni ridotte in genere non riduce effettivamente la frammentazione. Fino a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], incluso, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] alloca spazio usando extent misti. Per questo motivo, le pagine di indici di dimensioni ridotte vengono talvolta archiviate in extent misti. Poiché gli extent misti possono essere condivisi al massimo da otto oggetti, la frammentazione in un indice di dimensioni ridotte potrebbe non ridursi dopo la riorganizzazione o la ricompilazione dell'indice. Vedere anche [Considerazioni specifiche per la ricompilazione degli indici rowstore](#considerations-specific-to-rebuilding-rowstore-indexes). Per altre informazioni sugli extent, vedere la [Guida sull'architettura di pagina ed extent](../../relational-databases/pages-and-extents-architecture-guide.md#extents).
 
 ### <a name="detecting-fragmentation-of-columnstore-indexes"></a>Rilevamento della frammentazione degli indici columnstore
 
-Usando [sys.dm_db_column_store_row_group_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md) è possibile determinare la percentuale di righe eliminate in un indice, ovvero una misura corretta per la frammentazione in un rowgroup in un indice columnstore. Usare queste informazioni per calcolare la frammentazione in un indice specifico, in tutti gli indici di una tabella, in tutti gli indici di un database o in tutti gli indici di tutti i database.
+Usando [sys.dm_db_column_store_row_group_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md) è possibile determinare la percentuale di righe eliminate in un indice, ovvero una misura ragionevole per la frammentazione in un rowgroup di un indice columnstore. Usare queste informazioni per calcolare la frammentazione in un indice specifico, in tutti gli indici di una tabella, in tutti gli indici di un database o in tutti gli indici di tutti i database.
 
 Il set di risultati restituito da **sys.dm_db_column_store_row_group_physical_stats** include le colonne seguenti:
 

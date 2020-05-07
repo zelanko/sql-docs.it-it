@@ -1,5 +1,6 @@
 ---
 title: Ripristinare il database fino a una transazione contrassegnata (SSMS)
+description: Per il ripristino di un database di SQL Server usare la finestra di dialogo Ripristina log delle transazioni per ripristinare il database fino a una transazione contrassegnata nei backup del log disponibili.
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8f0ea144-1819-4832-905f-e5d0f49b066b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1e71815c79e626a1cebb60c7d5d50fda1cce132d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 88386ec0aa476901708ccaed10b235bdab04fe1e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245080"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180805"
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>Ripristinare un database fino a una transazione contrassegnata (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

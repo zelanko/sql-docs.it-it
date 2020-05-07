@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/14/2020
+ms.date: 04/20/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: b217787d0cba0a1d62ab8393ef7fac76d7665bb0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c61185c660e650a2052a2e5a6df1ad9ac3ad0af4
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77568064"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087465"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -49,7 +49,7 @@ Crea un gruppo del carico di lavoro di Resource Governor e lo associa al pool di
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```syntaxsql
 CREATE WORKLOAD GROUP group_name
 [ WITH
     ( [ IMPORTANCE = { LOW | MEDIUM | HIGH } ]
@@ -203,7 +203,7 @@ Crea un gruppo di carico di lavoro. I gruppi di carico di lavoro sono contenitor
 
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-```
+```syntaxsql
 CREATE WORKLOAD GROUP group_name
 [ WITH
  (  [ MIN_PERCENTAGE_RESOURCE = value ]
@@ -275,7 +275,7 @@ Se viene creato un gruppo di carico di lavoro con `min_percentage_resource` magg
 
 I parametri `min_percentage_resource`, `cap_percentage_resource`, `request_min_resource_grant_percent` e `request_max_resource_grant_percent` hanno valori effettivi che vengono modificati nel contesto del livello di servizio corrente e della configurazione di altri gruppi del carico di lavoro.
 
-La concorrenza supportata per ogni livello di servizio rimane invariata quando le classi di risorse sono state usate per definire le concessioni di risorse per ogni query. Di conseguenza i valori supportati per request_min_resource_grant_percent dipendono dal livello di servizio su cui è impostata l'istanza. Al livello di servizio più basso, DW100c, è necessario almeno il 25% di risorse per richiesta. Al livello DW100c, il valore effettivo di request_min_resource_grant_percent per un gruppo di carico di lavoro configurato può essere pari o superiore al 25%. Per altri dettagli su come vengono derivati i valori effettivi, vedere la tabella seguente.
+Il parametro `request_min_resource_grant_percent` ha un valore effettivo poiché sono necessarie risorse minime per ogni query, a seconda del livello di servizio.  Ad esempio, al livello di servizio più basso, DW100c, è necessario un minimo di 25% di risorse per ogni richiesta.  Se il gruppo di carico di lavoro è configurato con il 3% `request_min_resource_grant_percent` e `request_max_resource_grant_percent`, i valori effettivi per entrambi i parametri si adattano al 25% all'avvio dell'istanza.  Se l'istanza viene aumentata a DW1000c, i valori configurati ed effettivi per entrambi i parametri sono al 3% poiché il 3% è il valore minimo supportato al livello di servizio.  Se l'istanza viene aumentata a un valore maggiore di DW1000c, i valori configurati ed effettivi per entrambi i parametri rimangono al 3%.  Per altri dettagli sui valori effettivi ai diversi livelli di servizio, vedere la tabella seguente.
 
 |Livello di servizio|Valore effettivo mio per REQUEST_MIN_RESOURCE_GRANT_PERCENT|Numero massimo di query simultanee|
 |---|---|---|
@@ -297,9 +297,9 @@ La concorrenza supportata per ogni livello di servizio rimane invariata quando l
 |DW30000c|0,75%|128|
 ||||
 
-Analogamente, request_min_resource_grant_percent, min_percentage_resource devono essere maggiori o uguali al valore effettivo di request_min_resource_grant_percent. Il valore di un gruppo di carico di lavoro con `min_percentage_resource` inferiore al valore effettivo di `min_percentage_resource` viene impostato su zero in fase di esecuzione. In questo caso, le risorse configurate per `min_percentage_resource` sono condivisibili in tutti i gruppi di carico di lavoro. Ad esempio, il gruppo di carico di lavoro `wgAdHoc` con `min_percentage_resource` del 10% in esecuzione in DW1000c avrà un valore `min_percentage_resource` effettivo del 10% (3,25% è il valore minimo supportato in DW1000c). `wgAdhoc` in DW100c avrà un valore min_percentage_resource effettivo dello 0%. Il 10% configurato per `wgAdhoc` verrà condiviso tra tutti i gruppi di carico di lavoro.
+Il parametro `min_percentage_resource` deve essere maggiore o uguale al valore `request_min_resource_grant_percent` effettivo. Il valore di un gruppo di carico di lavoro con `min_percentage_resource` inferiore al valore `min_percentage_resource` effettivo ha il valore adattato a zero in fase di esecuzione. In questo caso, le risorse configurate per `min_percentage_resource` sono condivisibili in tutti i gruppi di carico di lavoro. Ad esempio, il gruppo di carico di lavoro `wgAdHoc` con `min_percentage_resource` del 10% in esecuzione in DW1000c avrà un valore `min_percentage_resource` effettivo del 10% (3% è il valore minimo supportato in DW1000c). `wgAdhoc` in DW100c avrà un valore min_percentage_resource effettivo dello 0%. Il 10% configurato per `wgAdhoc` verrà condiviso tra tutti i gruppi di carico di lavoro.
 
-Anche `cap_percentage_resource` ha un valore effettivo. Se un gruppo di carico di lavoro `wgAdhoc` è configurato con una `cap_percentage_resource` del 100% e viene creato un altro gruppo di carico di lavoro `wgDashboards` con `min_percentage_resource` del 25%, il valore `cap_percentage_resource` effettivo per `wgAdhoc` diventa 75%.
+Il parametro `cap_percentage_resource` ha anche un valore effettivo. Se un gruppo di carico di lavoro `wgAdhoc` è configurato con una `cap_percentage_resource` del 100% e viene creato un altro gruppo di carico di lavoro `wgDashboards` con `min_percentage_resource` del 25%, il valore `cap_percentage_resource` effettivo per `wgAdhoc` diventa 75%.
 
 Il modo più semplice per conoscere i valori di runtime per i gruppi di carico di lavoro consiste nell'eseguire una query sulla vista di sistema [sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md).
 

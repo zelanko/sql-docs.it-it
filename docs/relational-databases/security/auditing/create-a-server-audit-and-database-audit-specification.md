@@ -1,6 +1,6 @@
 ---
-title: Creare un controllo del server e di una specifica del controllo del database
-description: Informazioni su come creare un controllo SQL Server e una specifica del controllo del database usando SQL Server Management Studio o Transact-SQL (T-SQL)
+title: Creare una specifica di controllo server e di controllo database
+description: Informazioni su come creare una specifica di controllo SQL Server e di controllo database usando SQL Server Management Studio o Transact-SQL (T-SQL).
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,49 +16,35 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d9ab1fa97653513d18c43b916ca5bfbc2105e8e7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 55b848cd43e157a9a75670a24aea645c3279f7ea
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75557876"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262069"
 ---
-# <a name="create-a-server-audit-and-database-audit-specification"></a>Creazione di un controllo del server e di una specifica del controllo del database
+# <a name="create-a-server-audit-and-database-audit-specification"></a>Creare una specifica di controllo server e di controllo database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  In questo argomento viene illustrato come creare un controllo del server e la specifica di un controllo del database in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+  Questo articolo descrive come creare una specifica di controllo server e di controllo database in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- Il*controllo* di un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o di un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comporta il rilevamento e la registrazione di eventi che si verificano nel sistema. L'oggetto *SQL Server Audit* raccoglie un'unica istanza di azioni a livello di server o di database e gruppi di azioni da monitorare. Il controllo si trova a livello dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è possibile disporre di più controlli. Anche l'oggetto *Database-Level Audit Specification* fa parte di un controllo. È possibile creare una specifica del controllo del database per ogni database di SQL Server e per ogni controllo. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+ Il controllo di un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o di un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comporta il rilevamento e la registrazione di eventi che si verificano nel sistema. L'oggetto *SQL Server Audit* raccoglie un'unica istanza di azioni a livello di server o di database e gruppi di azioni da monitorare. Il controllo si trova a livello dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è possibile disporre di più controlli. Anche l'oggetto *Database-Level Audit Specification* fa parte di un controllo. È possibile creare una specifica del controllo del database per ogni database di SQL Server e per ogni controllo. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
- **Contenuto dell'articolo**  
-  
--   **Prima di iniziare:**  
-  
-     [Limitazioni e restrizioni](#Restrictions)  
-  
-     [Sicurezza](#Security)  
-  
--   **Per creare un controllo del server e una specifica del controllo del database utilizzando:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
+ ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
- Le specifiche del controllo del database sono oggetti non a sicurezza diretta che risiedono in un database specifico. Quando una specifica del controllo del database viene creata, il relativo stato è disabilitato.  
+ Le specifiche del controllo del database sono oggetti non a sicurezza diretta che risiedono in un database specifico. Al momento della creazione, una specifica di controllo database è in stato disabilitato.  
   
- Durante la creazione o la modifica di una specifica di controllo in un database utente, non includere azioni di controllo su oggetti con ambito server, come le viste di sistema. Se si includono oggetti con ambito server, verrà creato il controllo, ma gli oggetti con ambito server non saranno inclusi e non verranno restituiti errori. Per eseguire il controllo degli oggetti con ambito server, utilizzare una specifica di controllo database nel database master.  
+ Durante la creazione o la modifica di una specifica di controllo database in un database utente, non includere azioni di controllo su oggetti con ambito server, come le viste di sistema. Se si includono oggetti con ambito server, verrà creato il controllo, ma gli oggetti con ambito server non saranno inclusi e non verrà restituito alcun errore. Per eseguire il controllo degli oggetti con ambito server, usare una specifica di controllo database nel database master.  
   
- Le specifiche di controllo del database risiedono nel database dove vengono create, ad eccezione del database di sistema **tempdb** .  
+ Le specifiche di controllo database risiedono nel database dove vengono create, ad eccezione del database di sistema **TempDB**.  
   
 ###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
   
--   Gli utenti che dispongono dell'autorizzazione ALTER ANY DATABASE AUDIT possono creare specifiche del controllo del database e associarle a qualsiasi controllo.  
+-   Gli utenti con l'autorizzazione ALTER ANY DATABASE AUDIT possono creare specifiche di controllo database e associarle a qualsiasi controllo.  
   
--   Dopo essere stata creata, la specifica di controllo del database può essere visualizzata dalle entità che dispongono delle autorizzazioni CONTROL SERVER, ALTER ANY DATABASE AUDIT o dell'account sysadmin.  
+-   Dopo la creazione di una specifica di controllo database, le entità con le autorizzazioni CONTROL SERVER o ALTER ANY DATABASE AUDIT possono visualizzarla. Anche l'account sysadmin può visualizzarla.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
@@ -66,55 +52,55 @@ ms.locfileid: "75557876"
   
 1.  In Esplora oggetti espandere la cartella **Sicurezza** .  
   
-2.  Fare clic con il pulsante destro del mouse sulla cartella **Controlli** e scegliere **Nuovo controllo...** . Per altre informazioni, vedere [Creazione di un controllo del server e di una specifica del controllo del server](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md).  
+2.  Fare clic con il pulsante destro del mouse sulla cartella **Controlli** e scegliere **Nuovo controllo**. Per altre informazioni, vedere [Creare un controllo server e una specifica di controllo server](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md).  
   
-3.  Una volta selezionate le opzioni, fare clic su **OK**.  
+3.  Dopo aver selezionato le opzioni desiderate selezionare **OK**.  
 
 #### <a name="to-create-a-database-level-audit-specification"></a>Per creare una specifica del controllo a livello di database  
   
-1.  In Esplora oggetti espandere il database in cui si desidera creare una nuova specifica del controllo.  
+1.  In Esplora oggetti espandere il database in cui si vuole creare la specifica di controllo.  
   
 2.  Espandere la cartella **Sicurezza** .  
   
-3.  Fare clic con il pulsante destro del mouse sulla cartella **Specifiche controllo database** e selezionare **Nuova specifica controllo data base...** .  
+3.  Fare clic con il pulsante destro del mouse sulla cartella **Specifiche controllo database** e scegliere **Nuova specifica controllo database**.  
   
-     Nella finestra di dialogo **Crea specifica controllo database** sono disponibili le opzioni indicate di seguito.  
+     Nella finestra di dialogo **Crea specifica controllo database** sono disponibili queste opzioni:  
   
      **Nome**  
-     Nome della specifica del controllo del database. Tale nome viene generato automaticamente quando si crea una nuova specifica del controllo del server, ma è modificabile.  
+     Nome della specifica del controllo del database. Un nome viene generato automaticamente quando si crea una nuova specifica di controllo server. Il nome è modificabile.  
   
      **Controllo**  
      Nome di un oggetto controllo server esistente. Digitare il nome del controllo o selezionarlo nell'elenco.  
   
      **Tipo di azione di controllo**  
-     Specifica i gruppi di azioni di controllo a livello di database e le azioni di controllo da acquisire. Per l'elenco di gruppi di azioni di controllo a livello di database e di azioni di controllo e una descrizione degli eventi contenuti, vedere [Azioni e gruppi di azioni di SQL Server Audit](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).  
+     Specifica i gruppi di azioni di controllo a livello di database e le azioni di controllo da acquisire. Per un elenco di gruppi di azioni di controllo a livello di database e delle azioni di controllo e una descrizione degli eventi contenuti, vedere [Azioni e gruppi di azioni di controllo di SQL Server](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).  
   
      **Schema dell'oggetto**  
      Consente di visualizzare lo schema per il **nome oggetto**specificato.  
   
      **nome oggetto**  
-     Nome dell'oggetto da controllare. Tale opzione è disponibile solo per le azioni di controllo e non si applica ai gruppi di controllo.  
+     Nome dell'oggetto da controllare. Questa opzione è disponibile solo per le azioni di controllo. Non si applica ai gruppi di controllo.  
   
      **Puntini di sospensione (...)**  
-     Consente di visualizzare la finestra di dialogo **Seleziona oggetti** per eseguire la ricerca e la selezione di un oggetto disponibile, in base all'opzione **Tipo di azione di controllo**.  
+     Apre la finestra di dialogo **Seleziona oggetti** in modo da poter cercare e selezionare un oggetto disponibile, in base all'opzione **Tipo di azione di controllo** specificata.  
   
      **Nome entità**  
      Account per filtrare il controllo per l'oggetto da controllare.  
   
      **Puntini di sospensione (...)**  
-     Viene visualizzata la finestra di dialogo **Seleziona oggetti** per eseguire la ricerca e selezionare un oggetto disponibile, in base all'opzione **Nome oggetto**specificata.  
+     Apre la finestra di dialogo **Seleziona oggetti** in modo da poter cercare e selezionare un oggetto disponibile, in base all'opzione **Nome oggetto**specificata.  
   
-4.  Una volta selezionate le opzioni, fare clic su **OK**.  
+4.  Dopo aver selezionato le opzioni desiderate selezionare **OK**.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-create-a-server-audit"></a>Per creare un controllo del server  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  In Esplora oggetti connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2.  Sulla barra Standard fare clic su **Nuova query**.  
+2.  Sulla barra Standard selezionare **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
+3.  Incollare l'esempio seguente nella finestra Query e quindi selezionare **Esegui**.  
   
     ```  
     USE master ;  
@@ -131,11 +117,11 @@ ms.locfileid: "75557876"
   
 #### <a name="to-create-a-database-level-audit-specification"></a>Per creare una specifica del controllo a livello di database  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  In Esplora oggetti connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2.  Sulla barra Standard fare clic su **Nuova query**.  
+2.  Sulla barra Standard selezionare **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Nell'esempio seguente viene creata una specifica del controllo del database denominata `Audit_Pay_Tables` che controlla le istruzioni SELECT e INSERT per l'utente `dbo` per la tabella `HumanResources.EmployeePayHistory` in base al controllo del server definito in precedenza.  
+3.  Incollare l'esempio seguente nella finestra Query e quindi selezionare **Esegui**. In questo esempio viene creata una specifica di controllo database denominata `Audit_Pay_Tables`. Controlla le istruzioni SELECT e INSERT da parte dell'utente `dbo` per la tabella `HumanResources.EmployeePayHistory`, in base al controllo server definito nella sezione precedente.  
   
     ```  
     USE AdventureWorks2012 ;   

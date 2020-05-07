@@ -1,7 +1,7 @@
 ---
 title: Guida sull'architettura di elaborazione delle query | Microsoft Docs
 ms.custom: ''
-ms.date: 02/14/2020
+ms.date: 02/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 57cd755c29262d64d7e5215c0ef053a28c5f3507
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 67f0b04b6ac0ce0fc9d8e20ac8b8088061a6ab0a
+ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79510202"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82108002"
 ---
 # <a name="query-processing-architecture-guide"></a>Guida sull'architettura di elaborazione delle query
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -894,13 +894,13 @@ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], il modello di prepara
 * L'applicazione può controllare il momento della creazione del piano di esecuzione e del suo riutilizzo.
 * Il modello di preparazione/esecuzione è utilizzabile con altri database, incluse le versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-### <a name="parameter-sniffing"></a><a name="ParamSniffing"></a> Analisi dei parametri
-Il termine "analisi dei parametri" si riferisce a un processo in base al quale [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] individua i valori dei parametri correnti durante la compilazione o ricompilazione e li passa a Query Optimizer in modo che possano essere usati per generare piani di esecuzione di query potenzialmente più efficienti.
+### <a name="parameter-sensitivity"></a><a name="ParamSniffing"></a> Sensibilità ai parametri
+Il termine "sensibilità ai parametri", noto anche come "analisi dei parametri", si riferisce a un processo in base al quale [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] individua i valori dei parametri correnti durante la compilazione o la ricompilazione e li passa a Query Optimizer in modo che possano essere usati per generare piani di esecuzione di query potenzialmente più efficienti.
 
 I valori dei parametri vengono individuati durante la compilazione o ricompilazione per i seguenti tipi di batch:
 
 -  Stored procedure
--  Query inviate tramite sp_executesql 
+-  Query inviate tramite `sp_executesql` 
 -  Query preparate
 
 Per altre informazioni sulla risoluzione dei problemi di analisi dei parametri, vedere [Risolvere i problemi di query con problemi di piani di esecuzione di query sensibili ai parametri](/azure/sql-database/sql-database-monitor-tune-overview).
@@ -929,11 +929,35 @@ I costrutti che impediscono il parallelismo includono:
 -   **Query ricorsive**        
     Per altre informazioni sulla ricorsione, vedere [Linee guida per la definizione e l'utilizzo delle espressioni di tabella comuni ricorsive](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) e [Recursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx) (Ricorsione in T-SQL).
 
--   **Funzioni con valori di tabella**        
-    Per altre informazioni sulle funzioni con valori di tabella, vedere [Creazione di funzioni definite dall'utente (Motore di database)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+-   **Funzioni con valori di tabella con istruzioni multiple (MSTVF)**         
+    Per altre informazioni sulle funzioni con valori di tabella con istruzioni multiple (MSTVF), vedere [Creazione di funzioni definite dall'utente (Motore di database)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
     
 -   **Parola chiave TOP**        
     Per altre informazioni, vedere [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md).
+
+Un piano di esecuzione delle query può contenere l'attributo **NonParallelPlanReason** nell'elemento **QueryPlan** che descrive il motivo per cui il parallelismo non è stato usato.  I valori per questo attributo sono:
+
+|Valore NonParallelPlanReason|Descrizione|
+|----|----|
+|MaxDOPSetToOne|Massimo grado di parallelismo impostato su 1.|
+|EstimatedDOPIsOne|Grado di parallelismo stimato pari a 1.|
+|NoParallelWithRemoteQuery|Parallelismo non supportato per le query remote.|
+|NoParallelDynamicCursor|Piani paralleli non supportati per i cursori dinamici.|
+|NoParallelFastForwardCursor|Piani paralleli non supportati per i cursori fast forward.|
+|NoParallelCursorFetchByBookmark|Piani paralleli non supportati per i cursori che eseguono il recupero tramite segnalibro.|
+|NoParallelCreateIndexInNonEnterpriseEdition|Creazione di indici paralleli non supportata per edizioni diverse da Enterprise Edition.|
+|NoParallelPlansInDesktopOrExpressEdition|Piani paralleli non supportati per Desktop Edition ed Express Edition.|
+|NonParallelizableIntrinsicFunction|Query con riferimenti a una funzione intrinseca non parallelizzabile.|
+|CLRUserDefinedFunctionRequiresDataAccess|Parallelismo non supportato per una funzione CLR definita dall'utente che richiede l'accesso ai dati.|
+|TSQLUserDefinedFunctionsNotParallelizable|Query con riferimenti a una funzione T-SQL definita dall'utente non parallelizzabile.|
+|TableVariableTransactionsDoNotSupportParallelNestedTransaction|Transazioni annidate parallele non supportate dalle transazioni di variabili di tabella.|
+|DMLQueryReturnsOutputToClient|Query DML che restituisce l'output al client e non è parallelizzabile.|
+|MixedSerialAndParallelOnlineIndexBuildNotSupported|Combinazione non supportata di piani seriali e paralleli per una singola compilazione indice online.|
+|CouldNotGenerateValidParallelPlan|Verifica del piano parallelo non superata. Failback al piano seriale.|
+|NoParallelForMemoryOptimizedTables|Parallelismo non supportato per le tabelle OLTP in memoria a cui si fa riferimento.|
+|NoParallelForDmlOnMemoryOptimizedTable|Parallelismo non supportato per DML in una tabella OLTP in memoria.|
+|NoParallelForNativelyCompiledModule|Parallelismo non supportato per i moduli compilati in modo nativo a cui si fa riferimento.|
+|NoRangesResumableCreate|Generazione dell'intervallo non riuscita per un'operazione di creazione ripristinabile.|
 
 Dopo l'inserimento degli operatori di scambio, si ottiene un piano di esecuzione parallela della query. Questo tipo di piano può usare più di un thread di lavoro. In un piano di esecuzione seriale, usato da una query non parallela (seriale), l'esecuzione è invece affidata a un solo thread di lavoro. Il numero effettivo di thread di lavoro usati da una query parallela viene determinato al momento dell'inizializzazione del piano di esecuzione della query e dipende dalla complessità del piano e dal grado di parallelismo. 
 
@@ -963,7 +987,13 @@ Quando una delle condizioni seguenti è vera, Query Optimizer di [!INCLUDE[ssNoV
  
 Al momento dell'esecuzione, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] determina se il carico di lavoro di sistema corrente e i dati di configurazione illustrati in precedenza consentono l'esecuzione parallela. Se l'esecuzione parallela è possibile, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] determina il numero ottimale di thread di lavoro e suddivide l'esecuzione del piano parallelo tra tali thread di lavoro. Dal momento in cui viene avviata l'esecuzione parallela su più thread di lavoro di una query o di un'operazione sull'indice, viene usato lo stesso numero di thread di lavoro fino al completamento dell'operazione. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] riesamina il numero ottimale di thread di lavoro ogni volta che viene recuperato un piano di esecuzione dalla cache dei piani. Ad esempio, l'esecuzione di una query può comportare l'uso di un piano seriale, un'esecuzione successiva della stessa query può richiedere un piano parallelo con tre thread di lavoro e una terza esecuzione può richiedere un piano parallelo con quattro thread di lavoro.
 
-In un piano di esecuzione parallela della query, gli operatori insert, update e delete vengono eseguiti in modo seriale. La clausola WHERE di un'istruzione UPDATE o DELETE oppure la parte SELECT di un'istruzione INSERT possono tuttavia essere eseguite in parallelo. Le modifiche apportate ai dati verranno quindi applicate in modo seriale al database.
+Gli operatori di aggiornamento ed eliminazione in un piano di esecuzione di query parallele vengono eseguiti in modo seriale, ma la clausola WHERE di un'istruzione UPDATE o DELETE può essere eseguita in parallelo. Le modifiche apportate ai dati verranno quindi applicate in modo seriale al database.
+
+Fino a [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], anche l'operatore di inserimento viene eseguito in serie. La parte SELECT di un'istruzione INSERT, tuttavia, può essere eseguita in parallelo. Le modifiche apportate ai dati verranno quindi applicate in modo seriale al database. 
+
+A partire da [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] e dal livello di compatibilità del database 110, l'istruzione `SELECT … INTO` può essere eseguita in parallelo. Altre forme di operatori di inserimento funzionano nello stesso modo descritto per [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].
+
+A partire da [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] e dal livello di compatibilità del database 130, l'istruzione `INSERT … SELECT` può essere eseguita in parallelo durante l'inserimento in heap o indici columnstore cluster (CCI) e usando l'hint TABLOCK. Anche gli inserimenti all'interno di tabelle temporanee locali (identificate dal prefisso #) e di tabelle temporanee globali (identificate da prefissi ##) sono abilitati per il parallelismo usando l'hint TABLOCK. Per altre informazioni, vedere [INSERT (Transact-SQL)](../t-sql/statements/insert-transact-sql.md#best-practices).
 
 I cursori statici e gestiti da keyset possono essere popolati tramite piani di esecuzione parallela. La funzionalità dei cursori dinamici può invece essere implementata solo tramite l'esecuzione seriale. Query Optimizer genera sempre un piano di esecuzione seriale per le query che fanno parte di un cursore dinamico.
 

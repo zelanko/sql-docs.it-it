@@ -2,7 +2,7 @@
 title: Definizione del gruppo di disponibilità Always On
 description: Introduzione ai concetti fondamentali per la configurazione e la gestione di gruppi di disponibilità Always On.
 ms.custom: seo-lt-2019
-ms.date: 05/17/2016
+ms.date: 04/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3a6a21cf82a7b94d5526e4492d69bc5f1578b716
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d59d727adfdea88223932f2ba3f01a1d969a7e65
+ms.sourcegitcommit: 69f93dd1afc0df76c3b4d9203adae0ad7dbd7bb2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77478455"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82598757"
 ---
-# <a name="overview-of-always-on-availability-groups-sql-server"></a>Panoramica di Gruppi di disponibilità AlwaysOn (SQL Server)
+# <a name="what-is-an-always-on-availability-group"></a>Definizione del gruppo di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
  In questo argomento sono introdotti i concetti di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fondamentali per la configurazione e la gestione di uno o più gruppi di disponibilità in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Per un riepilogo dei vantaggi offerti dai gruppi di disponibilità e per una panoramica della terminologia relativa a [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere [Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "77478455"
   
  ![Gruppo di disponibilità con cinque repliche](../../../database-engine/availability-groups/windows/media/aoag-agintrofigure.gif "Gruppo di disponibilità con cinque repliche")  
   
-##  <a name="availability-databases"></a><a name="AvDbs"></a> Availability Databases  
+## <a name="availability-databases"></a><a name="AvDbs"></a> Database di disponibilità  
  Per poter essere aggiunto a un gruppo di disponibilità, il database deve essere online, di lettura e scrittura ed esistere sull'istanza del server che ospita la replica primaria. Il database viene aggiunto al gruppo di disponibilità come database primario, pur rimanendo disponibile ai client. Non esiste alcun database secondario corrispondente finché i backup del nuovo database primario non sono ripristinati sull'istanza del server che ospita la replica secondaria (tramite RESTORE WITH NORECOVERY). Il nuovo database secondario rimane nello stato RESTORING finché non ne viene creato un join al gruppo di disponibilità. Per altre informazioni, vedere [Avviare lo spostamento dati su un database secondario Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
  Dopo la creazione di un join, il database secondario passa allo stato ONLINE e avvia la sincronizzazione dati con il database primario corrispondente. La*sincronizzazione dati* è il processo tramite cui le modifiche apportate a un database primario sono riprodotte in un database secondario. La sincronizzazione dei dati comporta che il database primario invia i record del log delle transazioni al database secondario.  
@@ -63,7 +63,7 @@ ms.locfileid: "77478455"
 > [!IMPORTANT]  
 >  Un database di disponibilità viene a volte definito *replica di database* in [!INCLUDE[tsql](../../../includes/tsql-md.md)], PowerShell e nei nomi di oggetti SMO (SQL Server Management Objects). Il termine "database replica" (replica di database) viene usato ad esempio nei nomi delle DMV AlwaysOn che restituiscono informazioni sui database di disponibilità:  **sys.dm_hadr_database_replica_states** e **sys.dm_hadr_database_replica_cluster_states**. Tuttavia, nella documentazione online di SQL Server il termine "replica" si riferisce solitamente alle repliche di disponibilità. Ad esempio, "replica primaria" e "replica secondaria" si riferiscono sempre a repliche di disponibilità.  
   
-##  <a name="availability-replicas"></a><a name="AGsARsADBs"></a> Repliche di disponibilità  
+## <a name="availability-replicas"></a><a name="AGsARsADBs"></a> Repliche di disponibilità  
  Ogni gruppo di disponibilità definisce un set di due o più partner di failover noti come repliche di disponibilità. Le*repliche di disponibilità* sono componenti del gruppo di disponibilità. Ogni replica di disponibilità ospita una copia dei database di disponibilità del gruppo di disponibilità. Per un determinato gruppo di disponibilità, le repliche di disponibilità devono essere ospitate da istanze separate di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che risiedono in nodi diversi di un cluster WSFC. Ognuna di queste istanze del server deve essere abilitata per AlwaysOn.  
   
  In una determinata istanza può essere ospitata solo una replica di disponibilità per gruppo di disponibilità. Tuttavia, ogni istanza può essere usata per numerosi gruppi di disponibilità. Un'istanza specificata può essere un'istanza autonoma o un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Se è necessaria la ridondanza a livello di server, usare le istanze del cluster di failover.  
@@ -73,8 +73,9 @@ ms.locfileid: "77478455"
 > [!NOTE]  
 >  Quando il ruolo di una replica di disponibilità è indeterminato, ad esempio durante un failover, i relativi database si trovano temporaneamente nello stato NOT SYNCHRONIZING. Il loro ruolo rimane impostato su RESOLVING finché il ruolo della replica di disponibilità non viene risolto. Se una replica di disponibilità viene risolta nel ruolo primario, i relativi database diventano i database primari. Se una replica di disponibilità viene risolta nel ruolo secondario, i relativi database diventano i database secondari.  
   
-##  <a name="availability-modes"></a><a name="AvailabilityModes"></a> Modalità di disponibilità  
- La modalità di disponibilità è una proprietà di ogni replica di disponibilità. La modalità di disponibilità determina se la replica primaria eseguirà il commit delle transazioni su un database solo dopo che una determinata replica secondaria avrà scritto su disco i record del log delle transazioni (consolidamento del log). I [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supportano due modalità di disponibilità: *modalità commit asincrono* e *modalità commit sincrono*.  
+## <a name="availability-modes"></a><a name="AvailabilityModes"></a> Modalità di disponibilità
+
+La modalità di disponibilità è una proprietà di ogni replica di disponibilità. La modalità di disponibilità determina se la replica primaria eseguirà il commit delle transazioni su un database solo dopo che una determinata replica secondaria avrà scritto su disco i record del log delle transazioni (consolidamento del log). I [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supportano due modalità di disponibilità: *modalità commit asincrono* e *modalità commit sincrono*.  
   
 -   **Asynchronous-commit mode**  
   
@@ -86,7 +87,7 @@ ms.locfileid: "77478455"
   
  Per altre informazioni, vedere [Modalità di disponibilità &#40;gruppi di disponibilità Always On&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
-##  <a name="types-of-failover"></a><a name="FormsOfFailover"></a> Tipi di failover  
+## <a name="types-of-failover"></a><a name="FormsOfFailover"></a> Tipi di failover  
  Nel contesto di una sessione tra la replica primaria e una replica secondaria, i ruoli primari e secondari sono potenzialmente intercambiabili in un processo noto come *failover*. Durante un failover la replica secondaria di destinazione assume il ruolo primario, diventando la nuova replica primaria. La nuova replica primaria porta i relativi database online come database primari, consentendo alle applicazioni client di connettersi ad essi. Se la replica primaria precedente è disponibile, assume il ruolo secondario, diventando una replica secondaria. I database primari precedenti diventano database secondari e la sincronizzazione dati viene ripresa.  
   
  Sono disponibili tre tipi di failover: automatico, manuale e forzato (con possibile perdita di dati). La forma o le forme di failover supportate da una determinata replica secondaria dipendono dalla relativa modalità di disponibilità e, per la modalità commit sincrono, dalla modalità di failover sulla replica primaria e sulla replica secondaria di destinazione.  
@@ -111,7 +112,7 @@ ms.locfileid: "77478455"
   
  Per altre informazioni, vedere [Failover e modalità di failover &#40;gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   
-##  <a name="client-connections"></a><a name="ClientConnections"></a> Connessioni client  
+## <a name="client-connections"></a><a name="ClientConnections"></a> Connessioni client  
  È possibile fornire la connettività client alla replica primaria di un determinato gruppo di disponibilità creando un listener del gruppo di disponibilità. Un *listener del gruppo di disponibilità* fornisce un set di risorse collegate a un determinato gruppo di disponibilità per l'indirizzamento delle connessioni client alla replica di disponibilità appropriata.  
   
  Un listener del gruppo di disponibilità è associato a un nome DNS univoco che funge da nome di rete virtuale (VNN), a uno o più indirizzi IP virtuali (VIP) e a un numero di porta TCP. Per altre informazioni, vedere [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
@@ -119,7 +120,7 @@ ms.locfileid: "77478455"
 > [!TIP]  
 >  Se un gruppo di disponibilità dispone unicamente di due repliche di disponibilità e non è configurato per consentire l'accesso in lettura alla replica secondaria, i client possono connettersi alla replica primaria tramite una [stringa di connessione per il mirroring del database](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md). Questo approccio può essere utile temporaneamente dopo la migrazione di un database dal mirroring del database ai [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Prima di aggiungere ulteriori repliche di disponibilità, è necessario creare un listener del gruppo di disponibilità e aggiornare le applicazioni affinché utilizzino il nome di rete del listener.  
   
-##  <a name="active-secondary-replicas"></a><a name="ActiveSecondaries"></a> Repliche secondarie attive  
+## <a name="active-secondary-replicas"></a><a name="ActiveSecondaries"></a> Repliche secondarie attive  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supporta le repliche secondarie attive. Le funzionalità delle repliche secondarie attive includono il supporto per:  
   
 -   **Esecuzione di operazioni di backup sulle repliche secondarie**  
@@ -132,7 +133,7 @@ ms.locfileid: "77478455"
   
      Se un listener del gruppo di disponibilità e una o più repliche secondarie leggibili vengono elaborate da un gruppo di disponibilità, tramite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è possibile instradare le richieste di connessione con finalità di lettura a una di tali repliche (*routing di sola lettura*). Per altre informazioni, vedere [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
-##  <a name="session-timeout-period"></a><a name="SessionTimeoutPerios"></a> Periodo di timeout della sessione  
+## <a name="session-timeout-period"></a><a name="SessionTimeoutPerios"></a> Periodo di timeout della sessione  
  Il periodo di timeout della sessione è una proprietà della replica di disponibilità che determina quanto tempo la connessione con un'altra replica di disponibilità può rimanere inattiva prima che la connessione venga chiusa. Le repliche primarie e secondarie effettuano vicendevolmente il ping per segnalare che ancora sono attive. La ricezione di un ping dall'altra replica durante il periodo di timeout indica che la connessione è ancora aperta e che le istanze del server sono in comunicazione. Alla ricezione di un ping, la replica di disponibilità reimposta il contatore del timeout della sessione per quella connessione.  
   
  Il periodo di timeout della sessione impedisce alla replica di attendere indefinitamente la ricezione di un ping dall'altra replica. Se non viene ricevuto alcun ping dall'altra replica entro il periodo di timeout della sessione, si verifica il timeout della replica. La connessione viene chiusa e per la replica scaduta viene impostato lo stato DISCONNECTED. Anche se la replica disconnessa è configurata per la modalità con commit sincrono, le transazioni non attenderanno che quella replica venga riconnessa e risincronizzata.  
@@ -142,16 +143,16 @@ ms.locfileid: "77478455"
 > [!NOTE]  
 >  Nel ruolo di risoluzione, il periodo di timeout della sessione non si applica perché il ping non viene eseguito.  
   
-##  <a name="automatic-page-repair"></a><a name="APR"></a> Correzione di pagina automatica  
+## <a name="automatic-page-repair"></a><a name="APR"></a> Correzione di pagina automatica  
  Ogni replica di disponibilità tenta di recuperare automaticamente delle pagine danneggiate su un database locale risolvendo determinati tipi di errore che impediscono la lettura di una pagina di dati. Se una replica secondaria non legge una pagina, la replica richiede alla replica primaria una copia aggiornata della pagina. Se la replica primaria non legge una pagina, la replica trasmette una richiesta per una copia aggiornata a tutte le repliche secondarie e ottiene la pagina dalla prima replica secondaria che risponderà. Se la richiesta viene soddisfatta, la pagina illeggibile viene sostituita dalla copia e l'errore viene risolto.  
   
  Per altre informazioni, vedere [Correzione automatica della pagina &#40;Gruppi di disponibilità: Mirroring del database&#41;](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md).  
   
-##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
+## <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
   
 -   [Introduzione ai gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)  
   
-##  <a name="related-content"></a><a name="RelatedContent"></a> Contenuto correlato  
+## <a name="related-content"></a><a name="RelatedContent"></a> Related content  
   
 -   **Blog:**  
   

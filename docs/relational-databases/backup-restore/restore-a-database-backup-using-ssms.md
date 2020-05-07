@@ -1,5 +1,6 @@
 ---
 title: Ripristinare un backup del database tramite SSMS | Microsoft Docs
+description: Questo articolo illustra come ripristinare un backup completo del database di SQL Server tramite SQL Server Management Studio.
 ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7cd893c9556b1dd45e2206ce73740e253af98ed3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2a76b91e9f5fd1cab9512cd42f05ce949ccf4d68
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70278763"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180847"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Ripristinare un backup del database tramite SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +71,7 @@ Per informazioni sul ripristino di SQL Server da un servizio di archiviazione BL
         -   Finestra di dialogo**Seleziona dispositivi di backup**  
         
             **Tipo di supporto di backup**  
-         Selezionare un tipo di supporto dall'elenco a discesa **Tipo di supporti di backup** .  Nota: l'opzione **Nastro** viene visualizzata solo se nel computer è montata un'unità nastro, mentre l'opzione **Dispositivo di backup** viene visualizzata solo se è disponibile almeno un dispositivo di backup.
+         Selezionare un tipo di supporto dall'elenco a discesa **Tipo di supporti di backup** .  Nota: L'opzione **Nastro** viene visualizzata solo se nel computer è montata un'unità nastro, mentre l'opzione **Dispositivo di backup** viene visualizzata solo se è disponibile almeno un dispositivo di backup.
 
             **Aggiungere**  
             In base al tipo di supporto selezionato nell'elenco a discesa **Tipo di supporti di backup** , facendo clic su **Aggiungi** , si apre una delle finestre di dialogo seguenti. Se l'elenco nella casella di riepilogo **Supporti di backup** è pieno, il pulsante **Aggiungi** non è disponibile.
@@ -146,7 +147,7 @@ Nell'esempio seguente viene ripristinato un backup del disco precedente di `Sale
 7.  Nella sezione **Opzioni di ripristino** selezionare **Sovrascrivi il database esistente (WITH REPLACE)** .
 
     > [!NOTE]
-    > Se non si seleziona questa opzione è possibile che sia visualizzato il messaggio di errore seguente: "System.Data.SqlClient.SqlError: Il set di backup include il backup di un database diverso dal database '`Sales`' esistente. (Microsoft.SqlServer.SmoExtended)"
+    > Se non si seleziona questa opzione, potrebbe essere visualizzato il messaggio di errore seguente: "System.Data.SqlClient.SqlError: Il set di backup include il backup di un database diverso dal database '`Sales`' esistente. (Microsoft.SqlServer.SmoExtended)"
 
 8.  Nella sezione **Backup della parte finale del log** deselezionare **Esegui il backup della parte finale del log prima del ripristino**.
 
@@ -158,7 +159,7 @@ Nell'esempio seguente viene ripristinato un backup del disco precedente di `Sale
 9.  Nella sezione **Connessioni server** selezionare **Chiudi connessioni esistenti ai database di destinazione**.
 
     > [!NOTE]
-    > Se non si seleziona questa opzione è possibile che sia visualizzato il messaggio di errore seguente: "System.Data.SqlClient.SqlError: Impossibile ottenere accesso esclusivo al database perché è in uso. (Microsoft.SqlServer.SmoExtended)"
+    > Se non si seleziona questa opzione, potrebbe essere visualizzato il messaggio di errore seguente: "System.Data.SqlClient.SqlError: Impossibile ottenere accesso esclusivo al database perché è in uso. (Microsoft.SqlServer.SmoExtended)"
     
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 

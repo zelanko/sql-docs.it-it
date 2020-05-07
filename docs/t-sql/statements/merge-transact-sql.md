@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 10798009fe69426b0aaa4b035bba0a19eaf36426
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ff70ad2a8aa50c0e4121a6a597b8e150d0f35a54
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634131"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82181096"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -249,7 +249,7 @@ INDEX ( index_val [ ,...n ] )
 Specifica il nome o l'ID di uno o più indici della tabella di destinazione per eseguire un join implicito con la tabella di origine. Per altre informazioni, vedere [Hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 \<output_clause>  
-Restituisce una riga per ogni riga in *target_table* aggiornata, inserita o eliminata, senza alcun ordine specifico. Nella clausola di output è possibile specificare **$action**. **$action** è una colonna di tipo **nvarchar(10)** che restituisce uno dei tre valori per ogni riga: "INSERT", "UPDATE" o "DELETE", secondo l'azione eseguita su tale riga. Per altre informazioni sugli argomenti di questa clausola, vedere [Clausola OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
+Restituisce una riga per ogni riga in *target_table* aggiornata, inserita o eliminata, senza alcun ordine specifico. Nella clausola di output è possibile specificare **$action**. **$action** è una colonna di tipo **nvarchar(10)** che restituisce uno dei tre valori per ogni riga: "INSERT", "UPDATE" o "DELETE", secondo l'azione eseguita su tale riga. Per altre informazioni sugli argomenti e il comportamento di questa clausola, vedere [Clausola OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
 OPTION ( \<query_hint> [ ,...n ] )  
 Specifica che vengono utilizzati hint di ottimizzazione per personalizzare il modo in cui il Motore di database elabora l'istruzione. Per altre informazioni, vedere [Hint per la query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  

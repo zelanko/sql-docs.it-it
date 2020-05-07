@@ -15,12 +15,12 @@ ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f9e7ef2d1503088cba081b931e09f1fb3536b56
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2c72de4a0070595b9e1a371d5309d4e1d3e43853
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67946991"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588247"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Stima della cardinalità (SQL Server)
 
@@ -48,19 +48,14 @@ Nei casi seguenti, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
 
 Questo articolo illustra come valutare e scegliere la migliore configurazione di stima della cardinalità per il sistema. Per la maggior parte dei sistemi è disponibile la stima della cardinalità più recente perché è la più accurata. La stima della cardinalità prevede il numero di righe che verranno probabilmente restituite dalla query. La stima della cardinalità è usata da Query Optimizer per generare il piano di query ottimale. Con stime più accurate, Query Optimizer è in genere in grado di produrre un piano di query migliore.  
   
-Il sistema di applicazioni può includere una query importante il cui piano viene configurato su un piano più lento a causa della nuova stima di cardinalità. Una query di questo tipo potrebbe essere simile quanto segue:  
-  
-- Una query OLTP (elaborazione di transazioni online) che viene eseguita con una frequenza tale da determinare l'esecuzione simultanea di più istanze della query.  
-- Un'istruzione SELECT con aggregazione sostanziale che viene eseguita durante l'orario lavorativo di OLTP.  
-  
-Sono implementate tecniche per identificare una query che risulta più lenta con la nuova stima della cardinalità. Inoltre, sono disponibili opzioni per la risoluzione del problema di prestazioni.
+Il sistema di applicazioni può includere una query importante il cui piano viene sostituito con un piano più lento a causa di modifiche della stima della cardinalità tra versioni diverse. Sono disponibili tecniche e strumenti per l'identificazione di una query che risulta più lenta a causa di problemi di stima della cardinalità. Inoltre, sono disponibili opzioni per la risoluzione del problema di prestazioni conseguente.
   
 ## <a name="versions-of-the-ce"></a>Versioni della stima della cardinalità
 
 Nel 1998 è stato incluso un aggiornamento importante della stima di cardinalità in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, per cui il livello di compatibilità era 70. Questa versione del modello di stima di cardinalità si basa su quattro presupposti:
 
--  **Indipendenza:** si presuppone che le distribuzioni dei dati in colonne diverse siano indipendenti una dall'altro, a meno che siano disponibili e utilizzabili informazioni di correlazione.
--  **Uniformità:** i valori distinct sono divisi uniformemente e hanno tutti la stessa frequenza. Più precisamente, all'interno di ogni intervallo dell'[istogramma](../../relational-databases/statistics/statistics.md#histogram), i valori distinct sono distribuiti uniformemente e hanno tutti la stessa frequenza. 
+-  **Indipendenza:** si presuppone che le distribuzioni dei dati in colonne diverse siano indipendenti una dall'altra, a meno che siano disponibili e utilizzabili informazioni di correlazione.
+-  **Uniformità:** i valori Distinct sono divisi uniformemente e hanno tutti la stessa frequenza. Più precisamente, all'interno di ogni intervallo dell'[istogramma](../../relational-databases/statistics/statistics.md#histogram), i valori distinct sono distribuiti uniformemente e hanno tutti la stessa frequenza. 
 -  **Indipendenza (semplice):** gli utenti eseguono una query per i dati esistenti. Ad esempio, per un join di uguaglianza tra due tabelle, considerare la selettività di join <sup>1</sup> in ogni istogramma di input prima di creare un join di istogrammi e stimarne la selettività. 
 -  **Inclusione:** per i predicati di filtro dove `Column = Constant`, si presuppone che la costante sia effettivamente esistente nella colonna associata. Se un intervallo dell'istogramma corrispondente non è vuoto, si presuppone che uno dei valori distinct dell'intervallo corrisponda al valore del predicato.
 
@@ -69,9 +64,9 @@ Nel 1998 è stato incluso un aggiornamento importante della stima di cardinalit�
 Gli aggiornamenti successivi sono iniziati con [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], con livelli di compatibilità 120 e superiori. Gli aggiornamenti della stima di cardinalità per i livelli 120 e superiori integrano presupposti e algoritmi aggiornati che funzionano bene nel data warehousing moderno e nei carichi di lavoro OLTP. Dopo i presupporti della stima di cardinalità per i livelli 70, con la stima di cardinalità per i livelli 120 sono stati modificati i presupposti del modello seguenti:
 
 -  **Indipendenza** diventa **correlazione:** la combinazione dei diversi valori di colonna che non sono necessariamente indipendenti. Può assomigliare all'esecuzione di query sui dati più reali.
--  **Indipendenza semplice** diventa **contenimento di base:** gli utenti possono eseguire la query per dati che non esistono. Ad esempio, per un join di uguaglianza tra due tabelle, si usano gli istogrammi delle tabelle di base per stimare la selettività di join e considerare la selettività dei predicati.
+-  **Indipendenza semplice** diventa **indipendenza di base:** gli utenti possono eseguire query per dati che non esistono. Ad esempio, per un join di uguaglianza tra due tabelle, si usano gli istogrammi delle tabelle di base per stimare la selettività di join e considerare la selettività dei predicati.
   
-**Livello di compatibilità:** per assicurarsi che il database sia impostato su un determinato livello, è possibile usare il codice [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente per [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+**Livello di compatibilità:** è possibile assicurarsi che il database sia impostato su un determinato livello usando il codice [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente per [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
 ```sql  
 SELECT ServerProperty('ProductVersion');  
@@ -129,9 +124,12 @@ SET QUERY_STORE CLEAR;
 ```  
   
 > [!TIP] 
-> Si consiglia di installare la versione più recente di [Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) e di aggiornarlo spesso.  
+> Si consiglia di installare la versione più recente di [Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) e di aggiornarlo spesso.  
+
+> [!IMPORTANT] 
+> Verificare che Query Store sia configurato correttamente per il database e il carico di lavoro. Per altre informazioni, vedere [Best practices with Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md) (Procedure consigliate per Query Store). 
   
-Un'altra opzione per tenere traccia del processo relativo alle stime di cardinalità consiste nell'usare l'evento esteso denominato **query_optimizer_estimate_cardinality**. Il codice di esempio [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente viene eseguito su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Scrive un file con estensione xel in `C:\Temp\`. Il percorso è comunque modificabile. Quando si apre il file con estensione xel in [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], le informazioni dettagliate sono visualizzate in modo intuitivo.  
+Un'altra opzione per tenere traccia del processo relativo alle stime di cardinalità consiste nell'usare l'evento esteso denominato **query_optimizer_estimate_cardinality**. Il codice di esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seguente viene eseguito su [!INCLUDE[tsql](../../includes/tsql-md.md)]. Scrive un file con estensione xel in `C:\Temp\`. Il percorso è comunque modificabile. Quando si apre il file con estensione xel in [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], le informazioni dettagliate sono visualizzate in modo intuitivo.  
   
 ```sql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
@@ -176,7 +174,7 @@ Di seguito sono indicate alcune operazioni da eseguire per stabilire se una dell
   
     3.  Assicurarsi che la configurazione `LEGACY_CARDINALITY_ESTIMATION` del database sia impostata su OFF.  
   
-    4.  Eseguire un'istruzione CLEAR per cancellare il contenuto dell'archivio query. Naturalmente, verificare che l'archivio query sia impostato su ON.  
+    4.  Cancellare il contenuto di Query Store. Verificare che Query Store sia attivo.  
   
     5.  Eseguire l'istruzione: `SET NOCOUNT OFF;`  
   
@@ -282,8 +280,8 @@ Una nuova ricerca estesa su carichi di lavoro moderni e dati di business effetti
   
 ```sql  
 SELECT s.ticket, s.customer, r.store  
-FROM dbo.Sales    AS s  
-CROSS JOIN dbo.Returns  AS r  
+FROM dbo.Sales AS s  
+CROSS JOIN dbo.Returns AS r  
 WHERE s.ticket = r.ticket AND  
       s.type = 'toy' AND  
       r.date = '2016-05-11';  

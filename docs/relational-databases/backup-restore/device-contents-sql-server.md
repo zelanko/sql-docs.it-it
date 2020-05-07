@@ -1,5 +1,6 @@
 ---
 title: Contenuto dispositivo (SQL Server) | Microsoft Docs
+description: In SQL Server usare la finestra di dialogo Contenuto dispositivo per visualizzare le informazioni di backup che descrivono il dispositivo, i supporti, il set di supporti e il set o i set di backup.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ecddec60e1a0fd30d28bfae52a5fef29a6425fbf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c9819b7853121c006180d0a988dbc83e905505f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68068495"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179187"
 ---
 # <a name="device-contents-sql-server"></a>Contenuto dispositivo (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,8 +58,8 @@ ms.locfileid: "68068495"
 |Intestazione|Valori|  
 |------------|------------|  
 |**Nome**|Nome del set di backup.|  
-|**Tipo**|Tipo di backup eseguito, ovvero Completo, Differenziale o Log delle transazioni.|  
-|**Componente**|Componente incluso nel backup, ovvero Database, File o *\<vuoto>* (nel caso dei log delle transazioni).|  
+|**Tipo**|Tipo di operazione di backup eseguita: Completo, Differenziale o Log delle transazioni.|  
+|**Componente**|Componente di cui è stato eseguito il backup: database, file o *\<vuoto>* , nel caso dei log delle transazioni.|  
 |**Server**|Nome dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che ha eseguito l'operazione di backup.|  
 |**Database**|Nome del database di cui è stato eseguito il backup.|  
 |**Posizione**|Posizione del set di backup nel volume.|  

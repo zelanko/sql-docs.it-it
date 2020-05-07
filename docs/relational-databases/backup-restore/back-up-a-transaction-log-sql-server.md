@@ -1,5 +1,6 @@
 ---
 title: Eseguire il backup di un log delle transazioni | Microsoft Docs
+description: Questo articolo descrive come eseguire il backup di un log delle transazioni in SQL Server usando SQL Server Management Studio, Transact-SQL o PowerShell.
 ms.custom: ''
 ms.date: 02/02/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 965b6957f9428a2c1d12b307db0a0f2b77ea16e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b40463d35a7d6468e93b2a32b44dffb1aefed182
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71708730"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220644"
 ---
 # <a name="back-up-a-transaction-log"></a>Eseguire il backup di un log delle transazioni
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "71708730"
   
 Non è possibile usare l'istruzione `BACKUP` in una transazione esplicita o [implicita](../../t-sql/statements/set-implicit-transactions-transact-sql.md). Per transazione esplicita si intende una transazione di cui vengono definiti in modo esplicito l'inizio e la fine.
 
-### <a name="recommendations"></a><a name="Recommendations"></a> Raccomandazioni  
+### <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni  
   
 - Se un database usa il [modello di recupero](recovery-models-sql-server.md) con registrazione completa o il modello di recupero con registrazione minima delle operazioni bulk, è necessario eseguire il backup del log delle transazioni con una frequenza sufficiente per garantire la protezione dei dati e per evitare il [riempimento del log delle transazioni](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md) stesso. Tronca il log e supporta il ripristino del database in corrispondenza di uno specifico punto nel tempo. 
   
@@ -150,7 +151,7 @@ BACKUP LOG AdventureWorks2012
 GO  
 ```  
   
-##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Con PowerShell
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilizzo di PowerShell
 
 Impostare e usare il [provider SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md). Usare il cmdlet **Backup-SqlDatabase** e specificare **Log** per il valore del parametro **-BackupAction** .  
   

@@ -1,5 +1,6 @@
 ---
-title: "Procedura: Connessione con l'autenticazione di SQL Server | Microsoft Docs"
+title: "Procedura: Connettersi con l'autenticazione di SQL Server"
+description: Considerazioni importanti sull'uso dell'autenticazione SQL Server per connettersi al database.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 10028beb86526f553a959376804d855513f0336c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 55f87063904a0201b9aa1a98cdb296d27c821083
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916447"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728324"
 ---
-# <a name="how-to-connect-using-sql-server-authentication"></a>Procedura: Connessione con l'autenticazione di SQL Server
+# <a name="how-to-connect-using-sql-server-authentication"></a>Procedura: Connettersi con l'autenticazione di SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] supporta l'autenticazione di SQL Server quando ci si connette a SQL Server.  
   
-L'autenticazione di SQL Server deve essere usata solo quando l'autenticazione di Windows non è possibile. Per informazioni sulla connessione con l'autenticazione di Windows, vedere [How to: Connect Using Windows Authentication](../../connect/php/how-to-connect-using-windows-authentication.md).  
+L'autenticazione di SQL Server deve essere usata solo quando l'autenticazione di Windows non è possibile. Per informazioni sulla connessione con l'autenticazione Windows, vedere [Procedura: Connettersi con l'autenticazione Windows](../../connect/php/how-to-connect-using-windows-authentication.md).  
   
 Quando si usa l'autenticazione di SQL Server per la connessione a SQL Server è necessario considerare i seguenti punti:  
   
@@ -130,7 +131,7 @@ Questo esempio usa il driver PDO_SQLSRV per illustrare la procedura di connessio
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
-[Procedura: Connessione con l'autenticazione di SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)
+[Procedura: Connettersi con l'autenticazione di SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)
 
 [Guida alla programmazione per i driver Microsoft per PHP per SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
@@ -140,7 +141,7 @@ Questo esempio usa il driver PDO_SQLSRV per illustrare la procedura di connessio
 
 [Procedura: Creare un account di accesso di SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)
 
-[Procedura: Creare un utente del database](../../relational-databases/security/authentication-access/create-a-database-user.md)
+[Procedura: Creare un utente di database](../../relational-databases/security/authentication-access/create-a-database-user.md)
 
 [Gestione di utenti, ruoli e account di accesso](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 

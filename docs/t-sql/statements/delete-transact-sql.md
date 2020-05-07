@@ -25,12 +25,12 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 348a4984f7616bb58faa1d6182bc27ae974dde82
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1207f4938c1c3b269cd503e1f7f7f7e279207685
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633207"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82169359"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 
@@ -131,7 +131,7 @@ DELETE
  Specifica uno o più hint di tabella consentiti per una tabella di destinazione. La parola chiave WITH e le parentesi sono obbligatorie. Le opzioni NOLOCK e READUNCOMMITTED non sono consentite. Per altre informazioni sugli hint di tabella, vedere [Hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  \<OUTPUT_Clause>  
- Restituisce le righe eliminate o le espressioni basate su tali righe nell'ambito di un'operazione DELETE. La clausola OUTPUT non è supportata nelle istruzioni DML eseguite su viste o tabelle remote. Per altre informazioni, vedere [Clausola OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
+ Restituisce le righe eliminate o le espressioni basate su tali righe nell'ambito di un'operazione DELETE. La clausola OUTPUT non è supportata nelle istruzioni DML eseguite su viste o tabelle remote. Per altre informazioni sugli argomenti e il comportamento di questa clausola, vedere [Clausola OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
  FROM *table_source*  
  Specifica una clausola FROM aggiuntiva. Questa estensione di [!INCLUDE[tsql](../../includes/tsql-md.md)] dell'istruzione DELETE consente di specificare dati di \<table_source> e di eliminare le righe corrispondenti dalla tabella specificata nella prima clausola FROM.  

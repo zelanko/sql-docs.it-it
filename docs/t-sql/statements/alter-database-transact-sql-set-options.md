@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 3667a8bffa62dbb4b297fc73ce2910048110468f
-ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
+ms.openlocfilehash: 482451fbe9a94696f434bd005b95b49e5dd5dd5e
+ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80464386"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138281"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opzioni di ALTER DATABASE SET (Transact-SQL)
 
@@ -68,7 +68,7 @@ Le configurazioni con ambito database vengono usate per impostare diverse config
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```syntaxsql
 ALTER DATABASE { database_name | CURRENT }
 SET
 {
@@ -328,11 +328,11 @@ L'opzione AUTO_CLOSE è utile per i database desktop perché consente di gestire
 >
 > Per il mirroring del database è necessario che AUTO_CLOSE sia OFF.
 
-Quando il database è impostato su AUTOCLOSE = ON, un'operazione che avvia una chiusura automatica del database comporta la cancellazione della cache dei piani per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La cancellazione della cache dei piani comporta la ricompilazione di tutti i piani di esecuzione successivi e può causare un peggioramento improvviso e temporaneo delle prestazioni di esecuzione delle query. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 e versioni successive, il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene il messaggio informativo seguente per ogni archivio cache cancellato nella cache dei piani: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha rilevato %d occorrenza/e di scaricamento dell'archivio cache '%s' (parte della cache dei piani) a causa di operazioni di manutenzione o riconfigurazione del database." Questo messaggio viene registrato ogni cinque minuti per tutta la durata dello scaricamento della cache.
+Quando il database è impostato su AUTOCLOSE = ON, un'operazione che avvia una chiusura automatica del database comporta la cancellazione della cache dei piani per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La cancellazione della cache dei piani comporta la ricompilazione di tutti i piani di esecuzione successivi e può causare un peggioramento improvviso e temporaneo delle prestazioni di esecuzione delle query. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 e versioni successive, per ogni archivio cache cancellato nella cache dei piani, il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene il messaggio informativo seguente: `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. Questo messaggio viene registrato ogni cinque minuti per tutta la durata dello scaricamento della cache.
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { **ON** | OFF }     
 ON     
-Query Optimizer crea statistiche per colonne singole nei predicati di query, se necessario, per migliorare i piani di query e le prestazioni di esecuzione delle query. Queste statistiche per colonne singole vengono create quando Query Optimizer compila le query. Vengono create solo sulle colonne che non sono già le prime di un oggetto statistiche esistente.
+Query Optimizer crea statistiche per colonne singole nei predicati di query, in base alle esigenze, per migliorare i piani di query e le prestazioni di esecuzione delle query. Queste statistiche per colonne singole vengono create quando Query Optimizer compila le query. Vengono create solo sulle colonne che non sono già le prime di un oggetto statistiche esistente.
 
 L'impostazione predefinita è ON. È consigliabile usare l'impostazione predefinita per la maggior parte dei database.
 
@@ -1228,7 +1228,7 @@ La cache dei piani viene inoltre scaricata negli scenari seguenti.
 - Viene ripristinato un backup del database.
 - Viene scollegato un database.
 
-La cancellazione della cache dei piani comporta la ricompilazione di tutti i piani di esecuzione successivi e può causare un peggioramento improvviso e temporaneo delle prestazioni di esecuzione delle query. Il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene il messaggio informativo seguente per ogni archivio cache cancellato nella cache dei piani: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha rilevato %d occorrenza/e di scaricamento dell'archivio cache '%s' (parte della cache dei piani) a causa di operazioni di manutenzione o riconfigurazione del database". Questo messaggio viene registrato ogni cinque minuti per tutta la durata dello scaricamento della cache.
+La cancellazione della cache dei piani comporta la ricompilazione di tutti i piani di esecuzione successivi e può causare un peggioramento improvviso e temporaneo delle prestazioni di esecuzione delle query. Per ogni archivio cache cancellato nella cache dei piani, il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene il messaggio informativo seguente: `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. Questo messaggio viene registrato ogni cinque minuti per tutta la durata dello scaricamento della cache.
 
 ## <a name="examples"></a>Esempi
 
@@ -1420,7 +1420,7 @@ I livelli di compatibilità sono opzioni `SET`, ma sono descritti in [Livello di
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```syntaxsql
 ALTER DATABASE { database_name | Current }
 SET
 {
@@ -2214,7 +2214,7 @@ I livelli di compatibilità sono opzioni `SET`, ma sono descritti in [Livello di
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```syntaxsql
 ALTER DATABASE { database_name | Current }
 SET
 {
@@ -2909,7 +2909,7 @@ SET QUERY_STORE = ON
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```syntaxsql
 ALTER DATABASE { database_name }
 SET
 {
@@ -3034,10 +3034,10 @@ SELECT name, is_result_set_caching_on FROM sys.databases
 WHERE name = <'Your_Database_Name'>
 ```
 
-Eseguire questo comando per verificare se è stata eseguita una query usando il risultato memorizzato nella cache.  La colonna result_set_cache restituisce 1 per il riscontro nella cache, 0 per un mancato riscontro nella cache e valori negativi per i motivi per cui non è stata usata la memorizzazione nella cache del set di risultati.  Per informazioni dettagliate, vedere [sys.dm_pdw_exec_requests](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql?view=aps-pdw-2016-au7).  
+Eseguire questo comando per verificare se è stata eseguita una query usando il risultato memorizzato nella cache.  La colonna result_cache_hit restituisce 1 per il riscontro nella cache, 0 per un mancato riscontro nella cache e valori negativi per i motivi per cui non è stata usata la memorizzazione nella cache del set di risultati.  Per informazioni dettagliate, vedere [sys.dm_pdw_exec_requests](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql?view=aps-pdw-2016-au7).  
 
 ```sql
-SELECT request_id, command, result_set_cache FROM sys.dm_pdw_exec_requests
+SELECT request_id, command, result_cache_hit FROM sys.dm_pdw_exec_requests
 WHERE request_id = <'Your_Query_Request_ID'>
 ```
 

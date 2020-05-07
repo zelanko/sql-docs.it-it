@@ -1,5 +1,6 @@
 ---
 title: Procedure consigliate e risoluzione dei problemi per il backup nell'URL
+description: Procedure consigliate e suggerimenti per la risoluzione dei problemi relativi al backup e al ripristino di SQL Server in archiviazione BLOB di Azure.
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5f744f0bb5d1ced6424fc8882a0a215042fbfc69
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7520fc7592be23f923fffdcc1440c9b81d94ac0b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76920348"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180538"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Procedure consigliate e risoluzione dei problemi per il backup di SQL Server nell'URL
 

@@ -1,5 +1,6 @@
 ---
 title: Backup differenziali (SQL Server) | Microsoft Docs
+description: In SQL Server, un backup differenziale acquisisce solo i dati che sono stati modificati dopo l'ultimo backup completo, ovvero la base del backup differenziale.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 123bb7af-1367-4bde-bfcb-76d36799b905
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: be0ff34acb9d7743ae096f8ecd2b0ad3ed8a4e28
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cf10fdcdee4d3fcca3cf3e119bf18bb341352edb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089839"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179191"
 ---
 # <a name="differential-backups-sql-server"></a>Backup differenziali [SQL Server]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

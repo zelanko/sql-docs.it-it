@@ -1,5 +1,6 @@
 ---
 title: Backup di file e filegroup | Microsoft Docs
+description: Questo articolo descrive come eseguire il backup di file e filegroup in SQL Server usando SQL Server Management Studio, Transact-SQL o PowerShell.
 ms.custom: ''
 ms.date: 08/03/2016
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cf87d09eed5b955c1773c46270f25cb0a2d57eaa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 48d0581df76c6f6b5c4cd291981cf01e13f5eb79
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71708682"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220603"
 ---
 # <a name="back-up-files-and-filegroups"></a>Backup di file e filegroup
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ Per altre informazioni sul backup dei file, vedere [Backup completi del file &#4
   
 Per altre informazioni sulle limitazioni e restrizioni, vedere [Panoramica del backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
-###  <a name="recommendations"></a><a name="Recommendations"></a> Raccomandazioni
+###  <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni
   
 Per impostazione predefinita, per ogni operazione di backup eseguita in modo corretto viene aggiunta una voce al log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e al registro eventi di sistema. Se il backup del log viene eseguito di frequente, questi messaggi possono aumentare rapidamente, provocando la creazione di log degli errori di dimensioni elevate e rendendo difficile l'individuazione di altri messaggi. In questo caso è possibile eliminare tali voci di log usando il flag di traccia 3226 se nessuno degli script dipende da esse. Vedere [Flag di traccia &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
 
@@ -199,7 +200,7 @@ BACKUP DATABASE Sales
 GO  
 ```  
   
-## <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Con PowerShell
+## <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Utilizzo di PowerShell
 
 Impostare e usare il [provider SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md).
   

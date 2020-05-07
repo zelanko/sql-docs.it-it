@@ -12,12 +12,12 @@ ms.manager: jroth
 ms.reviewer: dnethi
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
-ms.openlocfilehash: 7abe0347e01ffa922b95b86c71bd3afef7d140ae
-ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
+ms.openlocfilehash: 4379b5aea85bdc3eeeca96d6be690a3fb3c89bcb
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80873107"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82086816"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Note sulla versione per SQL Server Management Studio (SSMS)
 
@@ -87,11 +87,11 @@ La versione 18.5 è un aggiornamento della versione 18.4 con i nuovi elementi e 
 | Always On | È stato risolto un problema per cui veniva visualizzato un errore quando si tentava di visualizzare il dashboard durante la connessione a un endpoint di un cluster Big Data. |
 | Controllo | È stato risolto un problema a causa del quale la finestra di unione dei log di controllo si arrestava in modo anomalo quando era presente una cartella con un nome vuoto nella cartella radice dell'account di archiviazione. |
 | Controllo | È stato risolto un problema per cui la finestra di unione dei log di controllo non visualizzava tutti i server quando erano presenti troppi elementi nella radice del contenitore. |
-| Chiarimento sui dati | È stato risolto un problema per cui la procedura guidata *Classificazione dei dati* non si apre per i database con un numero elevato di tabelle. |
-| Chiarimento sui dati | Vengono ora applicati GUID diversi per ogni struttura label/infoType e di GUID nel processo di convalida. |
-| Chiarimento sui dati | Rimozione del processo di classificazione in SqlServer2019. |
-| Chiarimento sui dati | Correzione dei test di convalida precedenti (aggiunta della classificazione, rimozione della proprietà non valida *InformationTypes*) e aggiunta di nuovi test per i primi due punti. |
-| Chiarimento sui dati | Il pulsante immediatamente sopra la tabella delle colonne classificate riduce ora al minimo il pannello delle indicazioni, come afferma. |
+| Classificazione dei dati | È stato risolto un problema per cui la procedura guidata *Classificazione dei dati* non si apre per i database con un numero elevato di tabelle. |
+| Classificazione dei dati | Vengono ora applicati GUID diversi per ogni struttura label/infoType e di GUID nel processo di convalida. |
+| Classificazione dei dati | Rimozione del processo di classificazione in SqlServer2019. |
+| Classificazione dei dati | Correzione dei test di convalida precedenti (aggiunta della classificazione, rimozione della proprietà non valida *InformationTypes*) e aggiunta di nuovi test per i primi due punti. |
+| Classificazione dei dati | Il pulsante immediatamente sopra la tabella delle colonne classificate riduce ora al minimo il pannello delle indicazioni, come afferma. |
 | SQL Server Management Studio (SSMS) - Generale | Aggiornamento della versione dei driver MSODBC e MSOLEDB. |
 | SQL Server Management Studio (SSMS) - Generale | Sono stati risolti i blocchi e gli arresti anomali di almeno due origini comuni in SSMS. |
 | SQL Server Management Studio (SSMS) - Generale | È stato risolto un altro caso in cui la *finestra di dialogo Ripristina* si blocca quando si seleziona il pulsante Sfoglia. |
@@ -593,7 +593,7 @@ La versione 18.2 è un aggiornamento della versione 18.1 con i nuovi elementi e 
 |Esplora oggetti|Correzione di un problema per cui SSMS genera un'eccezione, ad esempio perché non è possibile eseguire il cast dell'oggetto da DBNull ad altri tipi, quando si prova a espandere il nodo "Gestione" in Esplora oggetti (errore di configurazione di DataCollector).|
 |Esplora oggetti|Correzione di un problema per cui Esplora oggetti non applicava escape alle virgolette prima di richiamare "Modifica le prime righe"rendendo confusa la finestra di progettazione.|
 |Esplora oggetti|Correzione di un problema per cui la procedura guidata "Importare un'applicazione livello dati" non viene avviata dalla struttura di Archiviazione di Azure.|
-|Esplora oggetti|Correzione di un problema per cui in "Configurazione Posta elettronica database" lo stato della casella di controllo SSL non veniva mantenuto. Per informazioni dettagliate, vedere [https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541). |
+|Esplora oggetti|Correzione di un problema per cui in "Configurazione Posta elettronica database" lo stato della casella di controllo TLS/SSL non veniva mantenuto. Per informazioni dettagliate, vedere [https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541). |
 |Esplora oggetti|Correzione di un problema per cui in SSMS l'opzione Chiudi connessioni esistenti viene disattivata quando si prova a ripristinare il database con is_auto_update_stats_async_on.|
 |Esplora oggetti|Correzione di un problema a causa del quale quando si faceva clic con il pulsante destro del mouse sui nodi in Esplora oggetti, ad esempio "Tabelle", e si voleva eseguire un'azione come ad esempio filtrare le tabelle selezionando Filtro > Impostazioni filtro, le impostazioni di filtro potevano essere visualizzate in un altro schermo rispetto a quello in cui SSMS era attivo. Per informazioni dettagliate, vedere [https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106](https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106). |
 |Esplora oggetti|Correzione di un problema rilevato da tempo per cui CANC non funzionava in Esplora oggetti quando si tentava di rinominare un oggetto. Per informazioni dettagliate, vedere [https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510](https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510), [https://feedback.azure.com/forums/908035/suggestions/32910247](https://feedback.azure.com/forums/908035/suggestions/32910247) e altri duplicati.|
