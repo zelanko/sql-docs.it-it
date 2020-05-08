@@ -1710,7 +1710,7 @@
               href: relational-databases/tables/disable-foreign-key-constraints-for-replication.md
             - name: Disabilitare i vincoli con INSERT e UPDATE
               href: relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md
-        - name: Vincoli UNIQUE
+        - name: Vincoli UNIQUE e CHECK
           href: relational-databases/tables/unique-constraints-and-check-constraints.md
           items:
             - name: Create
