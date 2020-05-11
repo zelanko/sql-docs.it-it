@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cf1372f11b278e555b7f8110e4517fd5fc616683
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4494931e0ee189e785ed057471e5560f4737ecc0
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924007"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922316"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Uso dell'autenticazione integrata Kerberos per la connessione a SQL Server
 
@@ -73,7 +73,7 @@ Per ulteriori informazioni sui nomi dell'entità servizio (SPN), vedere:
 
 - [Utilizzo dell'autenticazione Kerberos in SQL Server](https://support.microsoft.com/kb/319723)
 
-- [Utilizzo di Kerberos con SQL Server](https://go.microsoft.com/fwlink/?LinkId=207814)
+- [Utilizzo di Kerberos con SQL Server](https://docs.microsoft.com/archive/blogs/sql_protocols/using-kerberos-with-sql-server)
 
 > [!NOTE]  
 > Per le versioni precedenti alla 6.2 del driver JDBC, per un uso corretto di Kerberos tra diverse aree di autenticazione è necessario impostare **serverSpn** in modo esplicito.

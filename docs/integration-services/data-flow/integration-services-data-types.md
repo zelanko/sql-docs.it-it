@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 45ada0520d90c1c6e63adad4f9e62bf1ea31e270
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff0ae9555fcd17ccb79fc239f3ef1e125706dc75
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292420"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921934"
 ---
 # <a name="integration-services-data-types"></a>Tipi di dati di Integration Services
 
@@ -257,7 +257,7 @@ ms.locfileid: "71292420"
  Per informazioni sul mapping di tipi di dati nel flusso di dati, vedere [Utilizzo di tipi di dati nel flusso di dati](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Intervento nel blog sul [confronto delle prestazioni tra le tecniche di conversione dei tipi di dati in SSIS 2008](https://go.microsoft.com/fwlink/?LinkId=220823)su blogs.msdn.com.  
+ Intervento nel blog sul [confronto delle prestazioni tra le tecniche di conversione dei tipi di dati in SSIS 2008](https://techcommunity.microsoft.com/t5/datacat/performance-comparison-between-data-type-conversion-techniques/ba-p/305035)su blogs.msdn.com.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Dati nei flussi di dati](../../integration-services/data-flow/data-in-data-flows.md)  

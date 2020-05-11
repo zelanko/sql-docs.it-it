@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 27087dd1ef9291cd75f8ef5f9b38f822b8900295
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 2bcb7e2af7646059f6cb7ee38a4f136f1a62ae2b
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487990"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924827"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Supporto della disponibilità elevata in Scale Out
 
@@ -32,7 +32,7 @@ In alternativa, la disponibilità elevata sul lato Scale Out Master può essere 
 Per configurare la disponibilità elevata sul lato Scale Out Master con Always On per il catalogo SSIS, eseguire le operazioni seguenti:
 
 ## <a name="1-prerequisites"></a>1. Prerequisiti
-Configurare un cluster di failover di Windows Vedere il post di blog [Installing the Failover Cluster Feature and Tools for Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) (Installazione della funzionalità di clustering di failover e degli strumenti per Windows Server 2012) per le istruzioni. Installare la funzionalità e gli strumenti in tutti i nodi del cluster.
+Configurare un cluster di failover di Windows Vedere il post di blog [Installing the Failover Cluster Feature and Tools for Windows Server 2012](https://techcommunity.microsoft.com/t5/failover-clustering/installing-the-failover-cluster-feature-and-tools-in-windows/ba-p/371733) (Installazione della funzionalità di clustering di failover e degli strumenti per Windows Server 2012) per le istruzioni. Installare la funzionalità e gli strumenti in tutti i nodi del cluster.
 
 ## <a name="2-install-scale-out-master-on-the-primary-node"></a>2. Installare Scale Out Master nel nodo primario
 Installare i servizi del motore di database di SQL Server, Integration Services e Scale Out Master nel nodo primario per Scale Out Master. 

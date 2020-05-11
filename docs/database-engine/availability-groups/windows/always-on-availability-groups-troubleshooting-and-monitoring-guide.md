@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fa4b3ae0ef918b0d7706a7f4e47eceb50d380c0b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: af11c20870da67f9b6004c4a277c17e277c1ffed
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822042"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922428"
 ---
 # <a name="monitor-and-troubleshoot-availability-groups"></a>Monitoraggio e risoluzione dei problemi dei gruppi di disponibilità
  Questa guida consente di iniziare rapidamente a monitorare i gruppi di disponibilità Always On e a risolvere alcuni problemi più comuni dei gruppi di disponibilità. Riporta contenuto originale nonché una pagina di destinazione con informazioni utili pubblicate anche altrove. Sebbene in questa guida non sia possibile trattare in modo approfondito tutti i problemi che possono verificarsi nell'ambito dei gruppi di disponibilità, l'utente troverà un'indicazione della direzione da seguire per l'analisi della causa principale e la risoluzione dei problemi. 
@@ -64,15 +64,15 @@ ms.locfileid: "74822042"
 |-----------|-----------------|  
 |[Monitorare le prestazioni per i gruppi di disponibilità Always On](monitor-performance-for-always-on-availability-groups.md)|Descrive il processo di sincronizzazione dei dati per i gruppi di disponibilità, i controlli di flusso e le metriche utili per il monitoraggio di un gruppo di disponibilità. Viene illustrato anche come raccogliere le metriche per gli obiettivi RTO e RPO.|  
 |[Monitoraggio dei gruppi di disponibilità &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)|Fornisce informazioni sugli strumenti per eseguire il monitoraggio di un gruppo di disponibilità.|  
-|[The Always On Health Model Part 1: Health Model Architecture (Modello di integrità Always On, parte 1: Architettura del modello di integrità)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx)|Fornisce una panoramica del modello di integrità Always On.|  
-|[The Always On health model, part 2: Extending the health model (Modello di integrità Always On, parte 2: Estensione del modello di integrità)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)|Illustra come personalizzare il modello di integrità Always On e il dashboard Always On per visualizzare informazioni aggiuntive.|  
-|[Monitoring Always On health with PowerShell - Part 1: Basic cmdlet overview (Monitoraggio dell'integrità AlwaysOn con PowerShell, parte 1: Panoramica sui cmdlet di base)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)|Fornisce una panoramica sui cmdlet PowerShell Always On che possono essere utilizzati per monitorare l'integrità di un gruppo di disponibilità.|  
-|[Monitoring Always On health with PowerShell, part 2: Advanced cmdlet usage (Monitoraggio dell'integrità Always On con PowerShell, parte 2: Utilizzo avanzato dei cmdlet)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)|Fornisce informazioni sull'utilizzo avanzato dei cmdlet PowerShell Always On per monitorare l'integrità di un gruppo di disponibilità.|  
-|[Monitoring Always On health with PowerShell, part 3: A simple monitoring application (Monitoraggio dell'integrità Always On con PowerShell, parte 3: Applicazione di monitoraggio semplice)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)|Illustra come monitorare automaticamente un gruppo di disponibilità con un'applicazione.|  
-|[Monitoring Always On health with PowerShell, part 4: Integration with SQL Server Agent (Monitoraggio dell'integrità Always On con PowerShell, parte 4: Integrazione con SQL Server Agent)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)|Fornisce informazioni su come integrare il monitoraggio dei gruppi di disponibilità con SQL Server Agent e configurare la notifica delle entità appropriate in caso di problemi.|  
+|[The Always On Health Model Part 1: Health Model Architecture (Modello di integrità Always On, parte 1: Architettura del modello di integrità)](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-1-health-model-architecture)|Fornisce una panoramica del modello di integrità Always On.|  
+|[The Always On health model, part 2: Extending the health model (Modello di integrità Always On, parte 2: Estensione del modello di integrità)](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)|Illustra come personalizzare il modello di integrità Always On e il dashboard Always On per visualizzare informazioni aggiuntive.|  
+|[Monitoring Always On health with PowerShell - Part 1: Basic cmdlet overview (Monitoraggio dell'integrità AlwaysOn con PowerShell, parte 1: Panoramica sui cmdlet di base)](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)|Fornisce una panoramica sui cmdlet PowerShell Always On che possono essere utilizzati per monitorare l'integrità di un gruppo di disponibilità.|  
+|[Monitoring Always On health with PowerShell, part 2: Advanced cmdlet usage (Monitoraggio dell'integrità Always On con PowerShell, parte 2: Utilizzo avanzato dei cmdlet)](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage)|Fornisce informazioni sull'utilizzo avanzato dei cmdlet PowerShell Always On per monitorare l'integrità di un gruppo di disponibilità.|  
+|[Monitoring Always On health with PowerShell, part 3: A simple monitoring application (Monitoraggio dell'integrità Always On con PowerShell, parte 3: Applicazione di monitoraggio semplice)](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application)|Illustra come monitorare automaticamente un gruppo di disponibilità con un'applicazione.|  
+|[Monitoring Always On health with PowerShell, part 4: Integration with SQL Server Agent (Monitoraggio dell'integrità Always On con PowerShell, parte 4: Integrazione con SQL Server Agent)](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent)|Fornisce informazioni su come integrare il monitoraggio dei gruppi di disponibilità con SQL Server Agent e configurare la notifica delle entità appropriate in caso di problemi.|  
 
 ## <a name="next-steps"></a>Passaggi successivi  
- [SQL Server Always On Team Blog (Blog di SQL Server Always On)](https://blogs.msdn.com/b/sqlalwayson/)   
+ [SQL Server Always On Team Blog (Blog di SQL Server Always On)](https://docs.microsoft.com/archive/blogs/sqlalwayson/)   
  [Pagina relativa ai blog del Servizio Supporto Tecnico Clienti per gli ingegneri di SQL Server](https://blogs.msdn.com/b/psssql/)  
   
   

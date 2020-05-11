@@ -2,7 +2,7 @@
 title: SQL Data Developer | Microsoft Docs
 description: Usare la piattaforma dati SQL di Microsoft per creare soluzioni incentrate sui dati in dispositivi mobili e desktop per server Web, server aziendali e il cloud.
 ms.custom: ''
-ms.date: 03/28/2017
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7571287c89589969e3b2d3b8c26677423c1c35b0
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 0b60eb6ca02ef446fe05bb109123e5c48951905a
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528762"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922305"
 ---
 # <a name="sql-data-developer"></a>SQL Data Developer
 Usare la piattaforma dati SQL di Microsoft per creare soluzioni incentrate sui dati in dispositivi mobili e desktop per server Web, server aziendali e il cloud.  
@@ -33,20 +33,17 @@ Usare la piattaforma dati SQL di Microsoft per creare soluzioni incentrate sui d
 
 ## <a name="sql-data-access"></a>Accesso ai dati SQL
 * [Driver del client SQL](sql-connection-libraries.md):  usare i driver SQL per connettere i dati, eseguire query su di essi, aggiornarli, inserirli o eliminarli da un database SQL.
-* [Entity Framework](https://msdn.microsoft.com/library/gg696172.aspx): usare Entity Framework per accedere facilmente ai database tramite LINQ, con accesso diretto a SQL Server e l'opzione per controllare il mapping tra un modello EDM (Entity Data Model) e le strutture relazionali non elaborate. 
-* [Windows Communication Foundation (WCF)](https://msdn.microsoft.com/library/dd456779.aspx): usare Data Services per una soluzione praticamente pronta all'uso per creare e utilizzare facilmente servizi OData sul Web e nella rete Intranet.
-* [Sync Framework](https://msdn.microsoft.com/library/jj839436.aspx): usare Sync Framework per abilitare l'accesso offline a qualsiasi tipo di dati, archivio dati, protocollo di trasferimento e topologia di rete.
-* [Reactive Extensions](https://msdn.microsoft.com/library/hh242985.aspx): usare Reactive Extensions (Rx) per eseguire la programmazione di flussi di eventi e semplificare la programmazione asincrona usando sequenze Observable e operatori di query in stile LINQ.  Usare Reactive Extensions per JavaScript (RxJS) per semplificare la programmazione asincrona basata su callback e guidata dagli eventi sul Web usando sequenze Observable.
+* [Entity Framework](/ef/): usare Entity Framework per accedere facilmente ai database tramite LINQ, con accesso diretto a SQL Server e l'opzione per controllare il mapping tra un modello EDM (Entity Data Model) e le strutture relazionali non elaborate. 
+* [Windows Communication Foundation (WCF)](/dotnet/framework/wcf/): usare Data Services per una soluzione praticamente pronta all'uso per creare e utilizzare facilmente servizi OData sul Web e nella rete Intranet.
+* [Sync Framework](/previous-versions/sql/synchronization/mt490616(v=msdn.10)): usare Sync Framework per abilitare l'accesso offline a qualsiasi tipo di dati, archivio dati, protocollo di trasferimento e topologia di rete.
+* [Reactive Extensions](https://github.com/dotnet/reactive): usare Reactive Extensions (Rx) per eseguire la programmazione di flussi di eventi e semplificare la programmazione asincrona usando sequenze Observable e operatori di query in stile LINQ.  Usare Reactive Extensions per JavaScript (RxJS) per semplificare la programmazione asincrona basata su callback e guidata dagli eventi sul Web usando sequenze Observable.
 * [Integrazione con CLR](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md):  usare l'integrazione con CLR per creare stored procedure, trigger, tipi definiti dall'utente, funzioni definite dall'utente, aggregazioni definite dall'utente e funzioni di flusso con valori di tabella usando qualsiasi linguaggio .NET Framework, inclusi Microsoft Visual Basic .NET e Microsoft Visual C#. 
 * [SQLXML 4.0](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md): usare SQLXML 4.0 per esportare dati relazionali in XML.
 
 ## <a name="data-collection-processing-and-visualization"></a>Raccolta, elaborazione e visualizzazione dei dati
-* [Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)
+* [Analysis Services](/analysis-services/analysis-services-developer-documentation)
 * [Integration Services](../integration-services/integration-services-developer-documentation.md)  
 * [Master Data Services](../master-data-services/develop/master-data-services-developer-documentation.md)
 * [Servizi di replica](../relational-databases/replication/concepts/replication-developer-documentation.md)
 * [Reporting Services](../reporting-services/reporting-services-developer-documentation.md)
 * [Service Broker](../database-engine/configure-windows/sql-server-service-broker.md)
-
-
- 
