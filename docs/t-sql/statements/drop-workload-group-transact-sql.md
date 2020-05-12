@@ -17,12 +17,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: f0f50ecd1b6cb74367512822b0257094aa3e3d5b
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d2bbbee44b7b50e5d25bda3b4d10c6123db6497b
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636397"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001159"
 ---
 # <a name="drop-workload-group-transact-sql"></a>DROP WORKLOAD GROUP (Transact-SQL)
 
@@ -30,78 +30,40 @@ ms.locfileid: "81636397"
 
 Nella riga seguente fare clic sul nome di prodotto a cui si è interessati. Verrà visualizzato un contenuto diverso in questa pagina Web, appropriato per il prodotto su cui si fa clic.
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> |||||
-> |---|---|---|---|
-> |**_\* SQL Server \*_** &nbsp;|[Istanza gestita<br />database SQL](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](drop-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+||||
+|---|---|---|
+|**_\* SQL Server \*_** &nbsp;|[Istanza gestita<br />database SQL](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](drop-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+||||
 
 &nbsp;
 
 ## <a name="sql-server-and-sql-database-managed-instance"></a>SQL Server e Istanza gestita di database SQL
 
-Elimina un gruppo del carico di lavoro esistente di Resource Governor definito dall'utente.
-
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
-
-## <a name="syntax"></a>Sintassi
-
-```syntaxsql
-DROP WORKLOAD GROUP group_name
-[;]
-```
-
-## <a name="arguments"></a>Argomenti
-
-*group_name* è il nome di un gruppo di carico di lavoro esistente definito dall'utente.
-
-## <a name="remarks"></a>Osservazioni
-
-L'istruzione DROP WORKLOAD GROUP non è consentita per i gruppi interni o predefiniti di Resource Governor.
-
-Per l'esecuzione di istruzioni DDL, è consigliabile avere familiarità con gli stati di Resource Governor. Per altre informazioni, vedere [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).
-
-Se un gruppo del carico di lavoro contiene sessioni attive, non sarà possibile eliminare o spostare il gruppo del carico di lavoro a un pool di risorse diverso quando l'istruzione ALTER RESOURCE GOVERNOR RECONFIGURE dovrà applicare la modifica. Per evitare il problema, eseguire una delle azioni seguenti:
-
-- Attendere la disconnessione di tutte le sessioni relative al gruppo interessato, quindi eseguire nuovamente l'istruzione ALTER RESOURCE GOVERNOR RECONFIGURE.
-
-- Arrestare in modo esplicito le sessioni del gruppo interessato utilizzando il comando KILL, quindi eseguire nuovamente l'istruzione ALTER RESOURCE GOVERNOR RECONFIGURE.
-
-- Riavviare il server. Una volta completato il processo di riavvio, il gruppo eliminato non verrà creato e in un gruppo spostato verrà utilizzata la nuova assegnazione del pool di risorse.
-
-- Una volta generata l'istruzione DROP WORKLOAD GROUP, se si decide di non arrestare in modo esplicito le sessioni per applicare la modifica, è possibile ricreare il gruppo utilizzando lo stesso nome presente prima della generazione dell'istruzione DROP, quindi spostando il gruppo al pool di risorse originale. Per applicare le modifiche, eseguire l'istruzione ALTER RESOURCE GOVERNOR RECONFIGURE.
-
-## <a name="permissions"></a>Autorizzazioni
-
-È richiesta l'autorizzazione CONTROL SERVER.
-
-## <a name="examples"></a>Esempi
-
-L'esempio seguente illustra come eliminare il gruppo del carico di lavoro denominato `adhoc`.
-
-```
-DROP WORKLOAD GROUP adhoc;
-GO
-ALTER RESOURCE GOVERNOR RECONFIGURE;
-GO
-```
-
-## <a name="see-also"></a>Vedere anche
-
-- [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)
-- [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)  
-- [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)
-- [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)
-- [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)
-- [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)
-- [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
+[!INCLUDE [DROP WORKLOAD GROUP](../../includes/drop-workload-group.md)]
   
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+||||
+|---|---|---|
+|[SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)|**_\* Istanza gestita<br />database SQL \*_** &nbsp;|[Azure Synapse<br />Analytics](drop-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+||||
+
+&nbsp;
+
+##  <a name="sql-server-and-sql-database-managed-instance"></a>SQL Server e Istanza gestita di database SQL
+
+[!INCLUDE [DROP WORKLOAD GROUP](../../includes/drop-workload-group.md)]
+
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)||[Istanza gestita<br />database SQL](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)||**_\* Azure Synapse<br />Analytics \*_** &nbsp;||||
+||||
+|---|---|---|
+|[SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)|[Istanza gestita<br />database SQL](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)| **_\* Azure Synapse<br />Analytics \*_** &nbsp;|
+||||
 
 &nbsp;
 
@@ -113,7 +75,7 @@ Consente di eliminare un gruppo di carico di lavoro.  Al termine dell'esecuzione
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```syntaxsql
 DROP WORKLOAD GROUP group_name  
 ```
 
