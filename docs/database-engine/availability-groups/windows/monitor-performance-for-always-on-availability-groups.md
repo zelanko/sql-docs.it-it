@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 767de0e7c255a96ba9aa4b2c7201c423b1269d80
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3730a4a6cff31098df9d081457fb233727096de5
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68014685"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922359"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Monitorare le prestazioni di gruppi di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -312,7 +312,7 @@ Per il database primario, **last_commit_time** corrisponde all'ora in cui è sta
 
   
 ##  <a name="monitoring-for-rto-and-rpo"></a>Monitoraggio di RTO e RPO  
- In questa sezione viene illustrato come monitorare i gruppi di disponibilità per la metrica degli obiettivi RTO e RPO. Questa dimostrazione è simile all'esercitazione per la GUI descritta in [The AlwaysOn Health Model Part 2: Extending the Health Model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (Il modello di integrità AlwaysOn parte 2: Estensione del modello di integrità).  
+ In questa sezione viene illustrato come monitorare i gruppi di disponibilità per la metrica degli obiettivi RTO e RPO. Questa dimostrazione è simile all'esercitazione per la GUI descritta in [The AlwaysOn Health Model Part 2: Extending the Health Model](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model) (Il modello di integrità AlwaysOn parte 2: Estensione del modello di integrità).  
   
  Gli elementi per il calcolo del tempo di failover e della possibile perdita dei dati in [Stima del tempo di failover (RTO)](#estimating-failover-time-rto) e in [Stima della potenziale perdita dei dati (RPO)](#estimating-potential-data-loss-rpo) vengono specificati come metrica delle prestazione nel facet della gestione basata su criteri **Stato replica di database** (vedere [View the policy-based management facets on a SQL Server object](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)) (Visualizzare i facet della gestione basata su criteri in un oggetto di SQL Server). È possibile monitorare queste due metriche in una pianificazione e ricevere un avviso quando la metrica supera rispettivamente gli obiettivi RTO e RPO.  
   
