@@ -2,19 +2,19 @@
 title: Uso di Always Encrypted con il driver ODBC
 description: Informazioni su come sviluppare applicazioni ODBC usando Always Encrypted e Microsoft ODBC Driver for SQL Server.
 ms.custom: ''
-ms.date: 09/01/2018
+ms.date: 05/06/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: d47e0d0f874689ca81a5153de08cb3e81fff22fc
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 938dba82797db23a9199c2c03fa8ec3c8bd010da
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635418"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886298"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Uso di Always Encrypted con ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -115,9 +115,9 @@ Questo esempio illustra come inserire una riga nella tabella Patients. Tenere pr
 
 - Il codice di esempio non contiene alcun elemento specifico per la crittografia. Il driver rileva automaticamente e crittografa i valori dei parametri SSN e data, che puntano a colonne crittografate. In questo modo la crittografia diventa trasparente per l'applicazione.
 
-- I valori inseriti nelle colonne di database, incluse quelle crittografate, vengono passati come parametri associati (vedere [Funzione SQLBindParameter](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx)). Quando si inviano valori a colonne non crittografate, l'uso dei parametri è facoltativo, nonostante sia consigliabile per prevenire attacchi SQL injection. È invece necessario usare i parametri in presenza di valori destinati a colonne crittografate. Se i valori inseriti nelle colonne SSN o BirthDate sono stati passati come valori letterali incorporati nell'istruzione della query, la query avrà esito negativo perché il driver non prova a crittografare o a elaborare i valori letterali nelle query. Di conseguenza, il server li rifiuterà come incompatibili con le colonne crittografate.
+- I valori inseriti nelle colonne di database, incluse quelle crittografate, vengono passati come parametri associati (vedere [Funzione SQLBindParameter](../../odbc/reference/syntax/sqlbindparameter-function.md)). Quando si inviano valori a colonne non crittografate, l'uso dei parametri è facoltativo, nonostante sia consigliabile per prevenire attacchi SQL injection. È invece necessario usare i parametri in presenza di valori destinati a colonne crittografate. Se i valori inseriti nelle colonne SSN o BirthDate sono stati passati come valori letterali incorporati nell'istruzione della query, la query avrà esito negativo perché il driver non prova a crittografare o a elaborare i valori letterali nelle query. Di conseguenza, il server li rifiuterà come incompatibili con le colonne crittografate.
 
-- Il tipo SQL del parametro inserito nella colonna SSN è impostato su SQL_CHAR, che esegue il mapping al tipo di dati di SQL Server **char** (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`). Se il tipo del parametro è stato impostato su SQL_WCHAR, che esegue il mapping a **nchar**, la query avrà esito negativo perché Always Encrypted non supporta le conversioni sul lato server da valori nchar crittografati a valori char crittografati. Vedere [Guida di riferimento per programmatori ODBC - Appendice D: Tipi di dati](https://msdn.microsoft.com/library/ms713607.aspx) per informazioni sui mapping dei tipi di dati.
+- Il tipo SQL del parametro inserito nella colonna SSN è impostato su SQL_CHAR, che esegue il mapping al tipo di dati di SQL Server **char** (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`). Se il tipo del parametro è stato impostato su SQL_WCHAR, che esegue il mapping a **nchar**, la query avrà esito negativo perché Always Encrypted non supporta le conversioni sul lato server da valori nchar crittografati a valori char crittografati. Vedere [Guida di riferimento per programmatori ODBC - Appendice D: Tipi di dati](../../odbc/reference/appendixes/appendix-d-data-types.md) per informazioni sui mapping dei tipi di dati.
 
 ```
     SQL_DATE_STRUCT date;
@@ -289,11 +289,11 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 L'API `SQLSetPos` consente a un'applicazione aggiornare le righe in un set di risultati usando buffer che sono stati associati con SQLBindCol e in cui precedentemente sono stati recuperati dati di riga. A causa del comportamento di riempimento asimmetrico dei tipi crittografati a lunghezza fissa, è possibile modificare in modo imprevisto i dati di queste colonne mentre si eseguono aggiornamenti in altre colonne della riga. Con Always Encrypted, i valori dei caratteri a lunghezza fissa verranno riempiti se il valore è inferiore alle dimensioni del buffer.
 
-Per mitigare questo comportamento, usare il flag `SQL_COLUMN_IGNORE` per ignorare le colonne che non verranno aggiornate come parte di `SQLBulkOperations` e quando si usa `SQLSetPos` per gli aggiornamenti basati sul cursore.  Tutte le colonne che non vengono modificate direttamente dall'applicazione devono essere ignorate, sia per le prestazioni sia per evitare il troncamento delle colonne associate a un buffer *inferiore* alle dimensioni effettive (DB). Per altre informazioni, vedere la [guida di riferimento della funzione SQLSetPos](https://msdn.microsoft.com/library/ms713507(v=vs.85).aspx).
+Per mitigare questo comportamento, usare il flag `SQL_COLUMN_IGNORE` per ignorare le colonne che non verranno aggiornate come parte di `SQLBulkOperations` e quando si usa `SQLSetPos` per gli aggiornamenti basati sul cursore.  Tutte le colonne che non vengono modificate direttamente dall'applicazione devono essere ignorate, sia per le prestazioni sia per evitare il troncamento delle colonne associate a un buffer *inferiore* alle dimensioni effettive (DB). Per altre informazioni, vedere la [guida di riferimento della funzione SQLSetPos](../../odbc/reference/syntax/sqlsetpos-function.md).
 
 #### <a name="sqlmoreresults--sqldescribecol"></a>SQLMoreResults e SQLDescribeCol
 
-I programmi applicativi possono chiamare [SQLDescribeCol](https://msdn.microsoft.com/library/ms716289(v=vs.85).aspx) per restituire metadati sulle colonne nelle istruzioni preparate.  Se Always Encrypted è abilitato la chiamata di `SQLMoreResults` *prima* della chiamata `SQLDescribeCol` fa sì che venga chiamato [sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), che non restituisce correttamente i metadati in testo non crittografato per le colonne crittografate. Per evitare questo problema, chiamare `SQLDescribeCol` nelle istruzioni preparate *prima* di chiamare `SQLMoreResults`.
+I programmi applicativi possono chiamare [SQLDescribeCol](../../odbc/reference/syntax/sqldescribecol-function.md) per restituire metadati sulle colonne nelle istruzioni preparate.  Se Always Encrypted è abilitato la chiamata di `SQLMoreResults` *prima* della chiamata `SQLDescribeCol` fa sì che venga chiamato [sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), che non restituisce correttamente i metadati in testo non crittografato per le colonne crittografate. Per evitare questo problema, chiamare `SQLDescribeCol` nelle istruzioni preparate *prima* di chiamare `SQLMoreResults`.
 
 ## <a name="controlling-the-performance-impact-of-always-encrypted"></a>Controllo dell'impatto di Always Encrypted sulle prestazioni
 
@@ -379,7 +379,7 @@ ODBC Driver for SQL Server viene fornito con i provider di archivi chiavi predef
 
 ### <a name="using-the-azure-key-vault-provider"></a>Uso di Azure Key Vault Provider
 
-Azure Key Vault (AKV) rappresenta una scelta valida per archiviare e gestire le chiavi master delle colonne per Always Encrypted, soprattutto se le applicazioni sono ospitate in Azure. ODBC Driver for SQL Server in Linux, macOS e Windows include un provider di archivio chiavi master della colonna predefinito per Azure Key Vault. Per altre informazioni sulla configurazione di un'istanza di Azure Key Vault per Always Encrypted, vedere [Azure Key Vault - Procedura dettagliata](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/), [Introduzione a Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) e [Creazione di chiavi master della colonna in Azure Key Vault](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2).
+Azure Key Vault (AKV) rappresenta una scelta valida per archiviare e gestire le chiavi master delle colonne per Always Encrypted, soprattutto se le applicazioni sono ospitate in Azure. ODBC Driver for SQL Server in Linux, macOS e Windows include un provider di archivio chiavi master della colonna predefinito per Azure Key Vault. Per altre informazioni sulla configurazione di un'istanza di Azure Key Vault per Always Encrypted, vedere [Azure Key Vault - Procedura dettagliata](/archive/blogs/kv/azure-key-vault-step-by-step), [Introduzione a Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) e [Creazione di chiavi master della colonna in Azure Key Vault](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault).
 
 > [!NOTE]
 > Il driver ODBC supporta solo l'autenticazione AKV direttamente con Azure Active Directory. Se si usa l'autenticazione di Azure Active Directory per AKV e la configurazione di Active Directory richiede l'autenticazione in un endpoint Active Directory Federation Services, l'autenticazione potrebbe non riuscire.
@@ -541,7 +541,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 |`ValuePtr`|[Input] Puntatore a una struttura CEKeystoreData. Il campo del nome della struttura identifica il provider a cui sono destinati i dati.|
 |`StringLength`|[Input] Costante SQL_IS_POINTER|
 
-Altre informazioni dettagliate sugli errori possono essere ottenute tramite [SQLGetDiacRec](https://msdn.microsoft.com/library/ms710921(v=vs.85).aspx).
+Altre informazioni dettagliate sugli errori possono essere ottenute tramite [SQLGetDiacRec](../../odbc/reference/syntax/sqlgetdescrec-function.md).
 
 > [!NOTE]
 > Il provider può usare l'handle di connessione per associare i dati scritti a una connessione specifica, se è opportuno. Questo è utile per implementare la configurazione in base alla connessione. È possibile anche ignorare il contesto della connessione e trattare i dati in modo identico indipendentemente dalla connessione usata per inviare i dati. Per altre informazioni, vedere [Associazione del contesto](custom-keystore-providers.md#context-association).
@@ -562,7 +562,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 |`BufferLength`|[Input] Costante SQL_IS_POINTER|
 |`StringLengthPtr`|[Output] Puntatore a un buffer in cui restituire BufferLength. Se *ValuePtr è un puntatore Null, non viene restituita alcuna lunghezza.|
 
-Il chiamante deve garantire che venga allocato un buffer di lunghezza sufficiente dopo la struttura CEKEYSTOREDATA per il provider in cui scrivere. Al momento della restituzione, il relativo campo dataSize viene aggiornato con la lunghezza effettiva dei dati letti dal provider. Altre informazioni dettagliate sugli errori possono essere ottenute tramite [SQLGetDiacRec](https://msdn.microsoft.com/library/ms710921(v=vs.85).aspx).
+Il chiamante deve garantire che venga allocato un buffer di lunghezza sufficiente dopo la struttura CEKEYSTOREDATA per il provider in cui scrivere. Al momento della restituzione, il relativo campo dataSize viene aggiornato con la lunghezza effettiva dei dati letti dal provider. Altre informazioni dettagliate sugli errori possono essere ottenute tramite [SQLGetDiacRec](../../odbc/reference/syntax/sqlgetdescrec-function.md).
 
 Questa interfaccia non pone requisiti aggiuntivi sul formato dei dati trasferiti tra un'applicazione e un provider dell'archivio chiavi. Ogni provider può definire il proprio protocollo/formato di dati, a seconda delle esigenze.
 
@@ -659,7 +659,6 @@ Quando si riscontrano difficoltà nell'uso di Always Encrypted, iniziare control
 
 - `ColumnEncryption` è abilitato nel DSN, nella stringa di connessione o nell'attributo di connessione e se si usa l'enclave sicuro, ha il formato appropriato.
 
-
 Inoltre quando si usa l'enclave sicuro gli errori di attestazione identificano il passaggio del processo di attestazione in cui si è verificato l'errore, in base alla tabella seguente:
 
 |Passaggio|Descrizione|
@@ -669,9 +668,7 @@ Inoltre quando si usa l'enclave sicuro gli errori di attestazione identificano i
 |200-299| Formato dell'identità dell'enclave inatteso o errato. |
 |300-399| Errore durante la creazione del canale sicuro con enclave. |
 
-
 ## <a name="see-also"></a>Vedere anche
 
 - [Always Encrypted (Motore di database)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted con enclave sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves.md)
-- [Blog sulla Crittografia sempre attiva](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
