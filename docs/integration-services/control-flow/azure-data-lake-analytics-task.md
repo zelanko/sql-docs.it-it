@@ -4,8 +4,6 @@ description: È possibile inviare processi U-SQL al servizio Azure Data Lake Ana
 ms.custom: ''
 ms.date: 06/27/2019
 ms.prod: sql
-ms.prod_service: integration-services
-ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +11,13 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPADLSTASK.F1
 author: yanancai
 ms.author: yanacai
-ms.openlocfilehash: ab9a357e8215310b21fa2e401067f49176aeefd4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.reviewer: maghan
+ms.openlocfilehash: 1f4eaadafa422611c3d24cbefee7a7d982dd88d8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67947352"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763662"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Attività Azure Data Lake Analytics
 
@@ -53,6 +52,7 @@ La configurazione di U-SQL ha due impostazioni: **SourceType** e le opzioni dina
 |**DirectInput**|Specifica lo script U-SQL tramite l'editor inline. Selezionando questo valore, verrà visualizzata l'opzione dinamica **USQLStatement**.|  
 |**FileConnection**|Specifica un file con estensione usql locale che contiene lo script U-SQL. Selezionando questa opzione, verrà visualizzata l'opzione dinamica **FileConnection**.|  
 |**Variabile**|Specifica una variabile SSIS che contiene lo script U-SQL. Se si seleziona questo valore, viene visualizzata l'opzione dinamica **SourceVariable**.|
+| &nbsp; | &nbsp; |
 
 **SourceType Dynamic Options** (Opzioni dinamiche per SourceType) specifica il contenuto dello script per la query U-SQL. 
 
@@ -61,6 +61,7 @@ La configurazione di U-SQL ha due impostazioni: **SourceType** e le opzioni dina
 |**SourceType = DirectInput**|Digitare la query U-SQL da inviare direttamente nella casella di opzione oppure fare clic sul pulsante Sfoglia (...) per digitare la query U-SQL nella finestra di dialogo **Enter U-SQL Query** (Immettere la query U-SQL).|  
 |**SourceType = FileConnection**|Selezionare una gestione connessione file esistente o selezionare <**Nuova connessione**> per creare una nuova connessione file. Per informazioni correlate, vedere [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md) ed [Editor gestione connessione File](../../integration-services/connection-manager/file-connection-manager-editor.md).|  
 |**SourceType = Variable**|Selezionare una variabile esistente oppure selezionare \<**Nuova variabile**> per creare una nuova variabile. Per informazioni correlate, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).|
+| &nbsp; | &nbsp; |
 
 
 ### <a name="job-configuration"></a>Configurazione del processo
@@ -78,6 +79,7 @@ La configurazione del processo specifica le proprietà di invio dei processi U-S
   |-----------|-----------------|
   |True|Il risultato dell'attività è basato sul risultato dell'esecuzione del processo U-SQL. Il processo ha esito positivo > l'attività ha esito positivo. Il processo ha esito negativo > l'attività ha esito negativo. L'attività ha esito positivo o negativo > l'attività viene completata.|
   |False|Il risultato dell'attività è basato sul risultato della preparazione e dell'invio del processo U-SQL. L'invio del processo ha esito positivo e supera la fase di preparazione > l'attività ha esito positivo. L'invio del processo ha esito negativo o il processo non supera la fase di preparazione > l'attività ha esito negativo. L'attività ha esito positivo o negativo > l'attività viene completata.|
+  | &nbsp; | &nbsp; |
 
 - **TimeOut:** specifica il timeout in secondi per l'esecuzione del processo. In caso di timeout, il processo viene annullato e contrassegnato come non riuscito. Questa proprietà non è disponibile se **Synchronous** è impostato su false.
 
@@ -125,6 +127,7 @@ Si noti che i percorsi di input e output sono definiti nei parametri **\@in** e 
 |-------------|--------------|
 |Utente: Variabile1|\@in|
 |Utente: Variabile2|\@out| 
+| &nbsp; | &nbsp; |
 
 ## <a name="expression-page-configuration"></a>Configurazione della pagina Espressioni
 

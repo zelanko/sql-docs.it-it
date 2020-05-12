@@ -1,8 +1,8 @@
 ---
-title: Driver Microsoft OLE DB per SQL Server | Microsoft Docs
+title: Driver Microsoft OLE DB per SQL Server
 description: Microsoft OLE DB Driver per SQL Server abilita la connettività per SQL Server e il database SQL di Azure tramite le API OLE DB standard.
 ms.custom: ''
-ms.date: 02/12/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - native data access [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 52877846ab573b146c148dab681cd45aec0a083c
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 7f66fc300dce4e3b9fac9a2476c4703fd5be5c88
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488511"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886348"
 ---
 # <a name="microsoft-ole-db-driver-for-sql-server"></a>Driver Microsoft OLE DB per SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,15 +51,15 @@ OLE DB Driver for SQL Server è un'API (Application Programming Interface) di ac
 Sono disponibili tre generazioni distinte di provider Microsoft OLE DB per SQL Server.
 
 ### <a name="1-microsoft-ole-db-provider-for-sql-server-sqloledb"></a>1. Provider Microsoft OLE DB per SQL Server (SQLOLEDB)
-Il [provider Microsoft OLE DB per SQL Server](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) (SQLOLEDB) viene ancora fornito come parte di [Windows Data Access Components](https://msdn.microsoft.com/library/ms692897.aspx). Non viene più aggiornato e non è consigliabile usare questo driver per nuovi sviluppi.
+Il [provider Microsoft OLE DB per SQL Server](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) (SQLOLEDB) viene ancora fornito come parte di [Windows Data Access Components](/previous-versions/windows/desktop/ms692897(v=vs.85)). Non viene più aggiornato e non è consigliabile usare questo driver per nuovi sviluppi.
 
 ### <a name="2-sql-server-native-client-snac"></a>2. SQL Server Native Client (SNAC)
 A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [SQL Server Native Client (SNAC)](../../relational-databases/native-client/sql-server-native-client.md) include un'interfaccia del provider OLE DB (SQLNCLI) ed è il provider OLE DB fornito con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] fino a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].
 
-È stato [annunciato come deprecato nel 2011](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/) e non è consigliabile usare questo driver per nuovi sviluppi. Per altre informazioni sul ciclo di vita di SNAC e i download disponibili, vedere i [dettagli del ciclo di vita di SNAC](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/).
+È stato [annunciato come deprecato nel 2011](/archive/blogs/sqlnativeclient/microsoft-is-aligning-with-odbc-for-native-relational-data-access) e non è consigliabile usare questo driver per nuovi sviluppi. Per altre informazioni sul ciclo di vita di SNAC e i download disponibili, vedere i [dettagli del ciclo di vita di SNAC](/archive/blogs/sqlreleaseservices/snac-lifecycle-explained).
 
 ### <a name="3-microsoft-ole-db-driver-for-sql-server-msoledbsql"></a>3. Driver Microsoft OLE DB per SQL Server (MSOLEDBSQL)
-OLE DB non è [più deprecato](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/10/06/announcing-the-new-release-of-ole-db-driver-for-sql-server/) ed è stato rilasciato nel 2018.
+OLE DB non è [più deprecato](/archive/blogs/sqlnativeclient/announcing-the-new-release-of-ole-db-driver-for-sql-server) ed è stato rilasciato nel 2018.
 
 Il nuovo provider OLE DB viene chiamato Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL). Il nuovo provider verrà aggiornato con le funzionalità del server più recenti.
 

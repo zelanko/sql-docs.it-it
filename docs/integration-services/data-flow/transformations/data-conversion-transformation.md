@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e1573167bfe50e5dcb63734a90c7b9b5bd00e40a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d52273ac3ea7722abe6e0607c2ab5d0be12e4694
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297962"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922423"
 ---
 # <a name="data-conversion-transformation"></a>Conversione dati - trasformazione
 
@@ -53,7 +53,7 @@ ms.locfileid: "71297962"
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice. Per informazioni sull'uso della trasformazione Conversione dati in Progettazione SSIS, vedere [Convertire i dati in un tipo di dati diverso tramite la trasformazione Conversione dati](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md). Per informazioni sull'impostazione delle proprietà di questa trasformazione a livello di programmazione, vedere [Proprietà comuni](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796) e [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Intervento nel blog sul [confronto delle prestazioni tra le tecniche di conversione dei tipi di dati in SSIS 2008](https://go.microsoft.com/fwlink/?LinkId=220823)su blogs.msdn.com.  
+ Intervento nel blog sul [confronto delle prestazioni tra le tecniche di conversione dei tipi di dati in SSIS 2008](https://techcommunity.microsoft.com/t5/datacat/performance-comparison-between-data-type-conversion-techniques/ba-p/305035)su blogs.msdn.com.  
   
 ## <a name="data-conversion-transformation-editor"></a>Editor trasformazione Conversione dati
   Usare la finestra di dialogo **Editor trasformazione Conversione dati** per selezionare le colonne da convertire e i tipi di dati in cui convertire la colonna e impostare gli attributi di conversione.  
