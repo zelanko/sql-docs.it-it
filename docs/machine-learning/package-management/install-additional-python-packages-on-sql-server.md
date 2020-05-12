@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4e72ded2e2f2a51805403132c662bff3d70c97ce
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 9271d10c83575ba1203c145d217c4b179976eff6
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487115"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886448"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>Installare pacchetti Python con sqlmlutils
 
@@ -25,7 +25,7 @@ Questo articolo descrive come usare le funzioni incluse in [**sqlmlutils**](http
 Per altre informazioni sulla posizione dei pacchetti e sui percorsi di installazione, vedere [Ottenere informazioni sui pacchetti Python](../package-management/python-package-information.md).
 
 > [!NOTE]
-> Per aggiungere pacchetti Python in SQL Server 2019 non è consigliabile usare il comando `pip install` standard di Python. In alternativa, usare **sqlmlutils**, come descritto in questo articolo.
+> Il pacchetto **sqlmlutils** descritto in questo articolo viene usato per aggiungere pacchetti Python a SQL Server 2019 o versione successiva. Per SQL Server 2017 e versioni precedenti, vedere [Installare i pacchetti con gli strumenti Python](https://docs.microsoft.com/sql/machine-learning/package-management/install-python-packages-standard-tools?view=sql-server-2017&viewFallbackFrom=sql-server-ver15).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -63,7 +63,6 @@ Prima di usare **sqlmlutils**, è necessario installarlo nel computer client usa
 1. Aprire un **prompt dei comandi** ed eseguire i comandi seguenti per installare il pacchetto **sqlmlutils**. Sostituire il percorso completo del file ZIP di **sqlmlutils** scaricato. In questo esempio si presuppone che il file scaricato sia `c:\temp\sqlmlutils-1.0.0.zip`.
 
    ```console
-   pip install "pymssql<3.0"
    pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils-1.0.0.zip
    ```
 

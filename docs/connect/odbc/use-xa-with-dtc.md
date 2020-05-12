@@ -2,7 +2,7 @@
 title: Uso di XA con Microsoft ODBC Driver
 description: Microsoft ODBC Driver for SQL Server offre il supporto per le transazioni XA con il controllo DTC (Distributed Transaction Coordinator) in Windows, Linux e macOS.
 ms.custom: ''
-ms.date: 02/04/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: karinazhou
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: ba11ff1bee512b0e3ea7b2b641ac6dc64f60adc9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3b5b8444058f0078b56ab5e4500b86a4c35a1897
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635546"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886328"
 ---
 # <a name="using-xa-transactions"></a>Uso delle transazioni XA
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "81635546"
 
 ## <a name="overview"></a>Panoramica
 
-Microsoft ODBC Driver for SQL Server a partire dalla versione 17.3 offre il supporto per le transazioni XA con il controllo DTC (Distributed Transaction Coordinator) in Windows, Linux e macOS. L'implementazione XA sul lato driver consente all'applicazione client di inviare alla gestione delle transazioni operazioni seriali, ad esempio avvio, commit, rollback di un ramo di transazione e così via. Quindi il servizio di gestione delle transazioni comunicherà con Resource Manager in base a queste operazioni. Per altre informazioni sulla specifica XA e sull'implementazione Microsoft per il controllo DTC (MS DTC), vedere l'argomento relativo al [funzionamento del controllo DTV di SQL Server (transazioni MSDTC e XA)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/).
+Microsoft ODBC Driver for SQL Server a partire dalla versione 17.3 offre il supporto per le transazioni XA con il controllo DTC (Distributed Transaction Coordinator) in Windows, Linux e macOS. L'implementazione XA sul lato driver consente all'applicazione client di inviare alla gestione delle transazioni operazioni seriali, ad esempio avvio, commit, rollback di un ramo di transazione e così via. Quindi il servizio di gestione delle transazioni comunicherà con Resource Manager in base a queste operazioni. Per altre informazioni sulla specifica XA e sull'implementazione Microsoft per il controllo DTC (MS DTC), vedere l'argomento relativo al [funzionamento del controllo DTV di SQL Server (transazioni MSDTC e XA)](/archive/blogs/bobsql/how-it-works-sql-server-dtc-msdtc-and-xa-transactions).
 
 
 
