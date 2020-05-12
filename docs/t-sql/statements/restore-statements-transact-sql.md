@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bef2c016492636e0005701cf07e16d6fb8c338ca
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: 3661b840340f4fb14e5dcc52f2ae0aa296b7520e
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262162"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922167"
 ---
 # <a name="restore-statements-transact-sql"></a>Istruzioni RESTORE (Transact-SQL)
 
@@ -770,7 +770,7 @@ FROM URL
 Specifica uno o più dispositivi di backup inseriti sugli URL che verranno usati per l'operazione di ripristino. Il formato URL viene usato per il ripristino dei backup dal servizio di archiviazione di Microsoft Azure.
 
 > [!IMPORTANT]
-> Per eseguire il ripristino da più dispositivi durante il ripristino da URL, è necessario usare token di firma di accesso condiviso (SAS). Per esempi di creazione di una firma di accesso condiviso, vedere [Backup di SQL Server nell'URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) e [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) (Semplificazione della creazione di credenziali SQL con token di firma di accesso condiviso (SAS) in Archiviazione di Azure con Powershell).
+> Per eseguire il ripristino da più dispositivi durante il ripristino da URL, è necessario usare token di firma di accesso condiviso (SAS). Per esempi di creazione di una firma di accesso condiviso, vedere [Backup di SQL Server nell'URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) e [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell) (Semplificazione della creazione di credenziali SQL con token di firma di accesso condiviso (SAS) in Archiviazione di Azure con Powershell).
 
 *n* è un segnaposto che indica che è possibile specificare fino a 64 dispositivi di backup in un elenco delimitato da virgole.
 

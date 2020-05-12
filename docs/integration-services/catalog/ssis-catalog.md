@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1e240a53d86d66fdf81b53cae1ba55d41820befd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 81f446164fd12867c19273e6cf15018b749061a4
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287725"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925170"
 ---
 # <a name="ssis-catalog"></a>Catalogo SSIS
 
@@ -359,7 +359,7 @@ Per eseguire il **processo di manutenzione del server SSIS**, SSIS crea l'access
   
     ```  
   
-     Per altri esempi di come usare Windows PowerShell e lo spazio dei nomi <xref:Microsoft.SqlServer.Management.IntegrationServices>, vedere l'intervento sul blog relativo a [SSIS e PowerShell in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539) nel sito blogs.msdn.com. Per una panoramica dello spazio dei nomi e degli esempi di codice, vedere l'intervento sul blog relativo a [uno sguardo rapido del modello a oggetti gestito del catalogo SSIS](https://go.microsoft.com/fwlink/?LinkId=254267)sul sito blogs.msdn.com.  
+     Per altri esempi di come usare Windows PowerShell e lo spazio dei nomi <xref:Microsoft.SqlServer.Management.IntegrationServices>, vedere l'intervento sul blog relativo a [SSIS e PowerShell in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539) nel sito blogs.msdn.com. Per una panoramica dello spazio dei nomi e degli esempi di codice, vedere l'intervento sul blog relativo a [uno sguardo rapido del modello a oggetti gestito del catalogo SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)sul sito blogs.msdn.com.  
 
 ## <a name="catalog-properties-dialog-box"></a>Finestra di dialogo Proprietà catalogo
   Utilizzare la finestra di dialogo Proprietà catalogo per configurare il catalogo di SSISDB. Le proprietà del catalogo consentono di definire come vengono crittografati i dati sensibili, come vengono mantenuti i dati del controllo delle versioni dei progetti e quando si verifica il timeout delle operazioni di convalida. Il catalogo di SSISDB rappresenta un punto centrale di archiviazione e amministrazione di progetti, pacchetti, parametri e ambienti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -582,7 +582,7 @@ Per eseguire il **processo di manutenzione del server SSIS**, SSIS crea l'access
 ###  <a name="prerequisites"></a><a name="prereq"></a> Prerequisiti  
 Eseguire questi passaggi preliminari prima di abilitare il supporto Always On per il database SSISDB.  
   
-1.  Configurare un cluster di failover di Windows Vedere il post del blog relativo all’ [installazione della funzionalità e degli strumenti per il cluster di failover per Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) per le istruzioni. Installare la funzionalità e gli strumenti in tutti i nodi del cluster.  
+1.  Configurare un cluster di failover di Windows Vedere il post del blog relativo all’ [installazione della funzionalità e degli strumenti per il cluster di failover per Windows Server 2012](https://techcommunity.microsoft.com/t5/failover-clustering/installing-the-failover-cluster-feature-and-tools-in-windows/ba-p/371733) per le istruzioni. Installare la funzionalità e gli strumenti in tutti i nodi del cluster.  
   
 2.  Installare SQL Server 2016 con Integration Services (SSIS) in ogni nodo del cluster.  
   
@@ -668,4 +668,4 @@ Se l'opzione **Abilita supporto per AlwaysOn** nel menu di scelta rapida risulta
   
 -   Intervento nel blog sui [suggerimenti per il controllo dell'accesso al catalogo SSIS](https://go.microsoft.com/fwlink/?LinkId=246669)sul sito Web blogs.msdn.com.  
   
--   Intervento nel blog relativo a [uno sguardo rapido del modello a oggetti gestito del catalogo SSIS](https://go.microsoft.com/fwlink/?LinkId=254267)su blogs.msdn.com.  
+-   Intervento nel blog relativo a [uno sguardo rapido del modello a oggetti gestito del catalogo SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)su blogs.msdn.com.  
