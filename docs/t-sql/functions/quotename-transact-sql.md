@@ -19,15 +19,15 @@ helpviewer_keywords:
 - QUOTENAME function
 - valid identifiers [SQL Server]
 ms.assetid: 34d47f1e-2ac7-4890-8c9c-5f60f115e076
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b83a3dbe28848a335e414a0dd39ef1fafdffff17
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c0b033d43bd2912fe113634af7422b3728c83765
+ms.sourcegitcommit: c53bab7513f574b81739e5930f374c893fc33ca2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634911"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82987487"
 ---
 # <a name="quotename-transact-sql"></a>QUOTENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "81634911"
   
 ## <a name="syntax"></a>Sintassi  
   
-```syntaxsql
+```sql
 QUOTENAME ( 'character_string' [ , 'quote_character' ] )   
 ```  
   
@@ -55,24 +55,33 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono utilizzati la stringa di caratteri `abc[]def` e i caratteri `[` e `]` per creare un identificatore delimitato di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido.  
   
-```  
-SELECT QUOTENAME('abc[]def');  
+```sql
+SELECT QUOTENAME('abc[]def');
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-[abc[]]def]  
+[abc[]]def]
   
 (1 row(s) affected)  
 ```  
   
  Si noti che nella stringa `abc[]def` la parentesi quadra chiusa è doppia a indicare un carattere di escape.  
+ 
+ Nell'esempio seguente viene preparata una stringa racchiusa tra virgolette da usare per la denominazione di una colonna.  
+  
+```sql
+DECLARE @columnName NVARCHAR(255)='user''s "custom" name'
+DECLARE @sql NVARCHAR(MAX) = 'SELECT FirstName AS ' + QUOTENAME(@columnName) + ' FROM dbo.DimCustomer'
+
+EXEC sp_executesql @sql
+```
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Nell'esempio seguente vengono utilizzati la stringa di caratteri `abc def` e i caratteri `[` e `]` per creare un identificatore delimitato di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido.  
   
-```  
+```sql
 SELECT QUOTENAME('abc def');   
 ```  
   
@@ -96,6 +105,3 @@ SELECT QUOTENAME('abc def');
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
  [Funzioni per i valori stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
-  
-  
-

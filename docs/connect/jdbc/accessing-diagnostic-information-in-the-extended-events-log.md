@@ -1,7 +1,8 @@
 ---
-title: Accesso alle informazioni di diagnostica nel log degli eventi estesi | Microsoft Docs
+title: Accesso alle informazioni di diagnostica nel log degli eventi estesi
+description: Informazioni su come accedere agli eventi estesi nel server correlati a eventi da Microsoft JDBC Driver per SQL Server.
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,20 +11,20 @@ ms.topic: conceptual
 ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d5f8086c0ccb161bb94e1b878736b55ee306fe4b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 98d2ffca0ca9f8bab6f481ddf654bd388ecba4d7
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920343"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922256"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Accesso alle informazioni di diagnostica nel log degli eventi estesi
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  In [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] con l'aggiornamento della traccia ([Creazione di tracce](../../connect/jdbc/tracing-driver-operation.md)) è stato possibile semplificare la correlazione di eventi client con informazioni di diagnostica, ad esempio errori di connessione, provenienti dal buffer circolare della connettività del server e informazioni sulle prestazioni dell'applicazione nel log degli eventi estesi. Per ulteriori informazioni sulla lettura del log degli eventi estesi, vedere [View Event Session Data](https://msdn.microsoft.com/library/hh710068(SQL.110).aspx) (Visualizzare i dati di una sessione di eventi).  
+  In [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] con l'aggiornamento della traccia ([Creazione di tracce](../../connect/jdbc/tracing-driver-operation.md)) è stato possibile semplificare la correlazione di eventi client con informazioni di diagnostica, ad esempio errori di connessione, provenienti dal buffer circolare della connettività del server e informazioni sulle prestazioni dell'applicazione nel log degli eventi estesi. Per informazioni sulla lettura del registro eventi esteso, vedere [Eventi estesi](../../relational-databases/extended-events/extended-events.md).  
   
 ## <a name="details"></a>Dettagli  
- Per operazioni di connessione, tramite [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] verrà inviato un ID connessione client. In caso di errore di connessione, è possibile accedere al buffer circolare della connettività, [Connectivity troubleshooting in SQL Server 2008 with the Connectivity Ring Buffer](https://go.microsoft.com/fwlink/?LinkId=207752) (Risoluzione dei problemi relativi alla connettività in SQL Server 2008 con il buffer circolare della connettività), individuare il campo **ClientConnectionID** e ottenere le informazioni di diagnostica sul problema di connessione. Gli ID di connessione client vengono registrati nel buffer circolare solo se si verifica un errore. In caso di errore di connessione prima dell'invio del pacchetto di preaccesso, l'ID di connessione client non verrà generato. L'ID di connessione client è un GUID a 16 byte. È possibile trovare l'ID di connessione client anche nell'output di destinazione degli eventi estesi, se l'azione **client_connection_id** viene aggiunta agli eventi in una sessione di eventi estesi. Se si necessita di un ulteriore supporto diagnostico del driver client, è possibile abilitare la traccia e rieseguire il comando di connessione per osservare il campo **ClientConnectionID** nella traccia.  
+ Per operazioni di connessione, tramite [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] verrà inviato un ID connessione client. In caso di errore di connessione, è possibile accedere al buffer circolare della connettività, [Connectivity troubleshooting in SQL Server 2008 with the Connectivity Ring Buffer](/archive/blogs/sql_protocols/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer) (Risoluzione dei problemi relativi alla connettività in SQL Server 2008 con il buffer circolare della connettività), individuare il campo **ClientConnectionID** e ottenere le informazioni di diagnostica sul problema di connessione. Gli ID di connessione client vengono registrati nel buffer circolare solo se si verifica un errore. In caso di errore di connessione prima dell'invio del pacchetto di preaccesso, l'ID di connessione client non verrà generato. L'ID di connessione client è un GUID a 16 byte. È possibile trovare l'ID di connessione client anche nell'output di destinazione degli eventi estesi, se l'azione **client_connection_id** viene aggiunta agli eventi in una sessione di eventi estesi. Se si necessita di un ulteriore supporto diagnostico del driver client, è possibile abilitare la traccia e rieseguire il comando di connessione per osservare il campo **ClientConnectionID** nella traccia.  
   
  È possibile ottenere l'ID di connessione client a livello di codice usando l'[interfaccia ISQLServerConnection](../../connect/jdbc/reference/isqlserverconnection-interface.md). L'ID connessione sarà inoltre disponibile in tutte le eccezioni correlate alla connessione.  
   
@@ -51,7 +52,6 @@ add event rpc_completed (action (client_connection_id))
 add target ring_buffer with (track_causality=on)  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Diagnosi dei problemi relativi al driver JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
-  
-  
+## <a name="see-also"></a>Vedere anche
+
+[Diagnosi dei problemi relativi al driver JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  

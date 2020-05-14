@@ -1,7 +1,7 @@
 ---
 title: Problemi noti per il driver ODBC in Linux e macOS
 description: Informazioni sui problemi noti relativi a Microsoft ODBC Driver for SQL Server in Linux e macOS e sui passaggi per la risoluzione dei problemi di connettività.
-ms.date: 03/05/2020
+ms.date: 05/06/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: connectivity
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - known issues
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f6e39184b8ba565fed48ba501e2502dad19257ce
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 898df9a68fd0e1fd87cab597502d6e0baa17172b
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728420"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886408"
 ---
 # <a name="known-issues-for-the-odbc-driver-on-linux-and-macos"></a>Problemi noti per il driver ODBC in Linux e macOS
 
@@ -25,7 +25,7 @@ Questo argomento contiene un elenco di problemi noti relativi a Microsoft ODBC D
 
 ## <a name="known-issues"></a>Problemi noti
 
-Altri problemi verranno pubblicati nel [blog del team di Microsoft ODBC Driver](https://blogs.msdn.com/b/sqlnativeclient/).  
+Ulteriori problemi verranno pubblicati nel [blog sui driver di SQL Server](https://techcommunity.microsoft.com/t5/SQL-Server/bg-p/SQLServer/label-name/SQLServerDrivers).  
 
 - A causa delle limitazioni della libreria di sistema, Alpine Linux supporta meno codifiche di caratteri e impostazioni locali. Ad esempio, en_US.UTF-8 non è disponibile. Per altre informazioni, vedere [musl libc - functional differences from glibc](https://wiki.musl-libc.org/functional-differences-from-glibc.html) (musl libc - differenze funzionali da glibc).
 
@@ -82,7 +82,7 @@ Per altre informazioni sulla risoluzione dei problemi di connessione, vedere:
   
 - [Risoluzione dei problemi di connettività in SQL Server 2008 con il buffer circolare della connettività](https://techcommunity.microsoft.com/t5/sql-server/connectivity-troubleshooting-in-sql-server-2008-with-the/ba-p/383393)  
   
-- [Strumento di risoluzione dei problemi di autenticazione di SQL Server](https://docs.microsoft.com/archive/blogs/sqlsecurity/sql-server-authentication-troubleshooter)  
+- [Strumento di risoluzione dei problemi di autenticazione di SQL Server](/archive/blogs/sqlsecurity/sql-server-authentication-troubleshooter)  
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -1,9 +1,8 @@
 ---
 title: Modello di applicazione - partizionamento di tabelle con ottimizzazione per la memoria
-ms.custom: seo-dt-2019
-ms.date: 03/14/2017
+ms.custom: seo-dt-2019,issue-PR=4700-14820
+ms.date: 05/03/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
@@ -11,141 +10,190 @@ ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c871da0fcd20cffc2c6510d7084f79faefa2d50
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ee8450f69d87bce0691de5d4641c0ab68b6fe3b7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412802"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762832"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Modello di applicazione per il partizionamento di tabelle con ottimizzazione per la memoria
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] supporta un modello in cui una quantità limitata di dati attivi viene mantenuta in una tabella ottimizzata per la memoria, mentre i dati usati meno di frequente vengono elaborati su disco. In genere, si tratta di uno scenario in cui i dati vengono archiviati in base a una chiave **datetime** .  
-  
- È possibile emulare tabelle partizionate con tabelle ottimizzate per la memoria mantenendo una tabella partizionata e una tabella ottimizzata per la memoria con uno schema comune. I dati correnti verranno inseriti e aggiornati nella tabella ottimizzata per la memoria, mentre i dati utilizzati meno frequentemente verranno gestiti nella tabella partizionata tradizionale.  
-  
- Un'applicazione che riconosce i dati attivi in una tabella ottimizzata per la memoria può utilizzare le stored procedure compilate in modo nativo per accedere ai dati. Le operazioni che devono accedere all'intero intervallo di dati, o che non sono in grado di riconoscere quale tabella contiene i dati rilevanti, utilizzano codice [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato per creare un join tra la tabella ottimizzata per la memoria e la tabella partizionata.  
-  
- Questo cambio di partizione è descritto di seguito:  
-  
--   Inserire i dati dalla tabella di OLTP in memoria in una tabella di staging, eventualmente utilizzando una data limite.  
-  
--   Eliminare gli stessi dati dalla tabella ottimizzata per la memoria.  
-  
--   Passare alla tabella di staging.  
-  
--   Aggiungere la partizione attiva.  
-  
- ![Cambio di partizione.](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "Cambio di partizione.")  
-Manutenzione dei dati attivi  
-  
- Le azioni che iniziano con Deleting ActiveOrders devono essere eseguite durante una sessione di manutenzione per evitare che le query non rilevino i dati durante il periodo tra l'eliminazione dei dati e il passaggio alla tabella di staging.  
-  
- Per un esempio correlato, vedere [Partizionamento a livello di applicazione](../../relational-databases/in-memory-oltp/application-level-partitioning.md).  
-  
-## <a name="code-sample"></a>Codice di esempio  
- Nell'esempio seguente viene illustrato come utilizzare una tabella ottimizzata per la memoria con una tabella basata su disco partizionata. I dati utilizzati frequentemente vengono archiviati in memoria. Per salvare i dati su disco, creare una nuova partizione e copiare i dati nella tabella partizionata.  
-  
- Nella prima parte di questo esempio vengono creati il database e gli oggetti necessari. Nella seconda parte di questo esempio viene illustrato come spostare i dati da una tabella ottimizzata per la memoria in una tabella partizionata.  
-  
-```sql  
-CREATE DATABASE partitionsample;  
-GO  
-  
--- enable for In-Memory OLTP - change file path as needed  
-ALTER DATABASE partitionsample
-    ADD FILEGROUP partitionsample_mod
+[!INCLUDE[hek_2](../../includes/hek-2-md.md)] supporta un modello di progettazione di applicazioni che gestisce le risorse per le prestazioni per dati relativamente correnti. Questo modello può essere applicato quando i dati correnti vengono letti o aggiornati molto più spesso rispetto ai dati meno recenti. In questo caso, i dati correnti sono detti *attivi* o *ad accesso frequente* e i dati meno recenti sono detti *ad accesso sporadico*.
+
+Il concetto è archiviare i dati *ad accesso frequente* in una tabella ottimizzata per la memoria. Probabilmente su base settimanale o mensile, i dati meno recenti che rientrano nella categoria dei dati *ad accesso sporadico* vengono spostati in una tabella partizionata. I dati nella tabella partizionata vengono archiviati su disco o in un'altra unità disco rigido, non in memoria.
+
+In genere, questa progettazione usa una chiave **datetime** per consentire al processo di spostamento di distinguere in modo efficiente tra dati ad accesso frequente e quelli ad accesso sporadico.
+
+## <a name="advanced-partitioning"></a>Partizionamento avanzato
+
+In questa progettazione è previsto l'uso di una tabella partizionata che include anche una partizione ottimizzata per la memoria. Per il corretto funzionamento di questa progettazione, è necessario assicurarsi che tutte le tabelle condividano uno schema comune. Nell'esempio di codice riportato più avanti in questo articolo viene illustrata la tecnica.
+
+Si presume che i nuovi dati siano ad accesso frequente per definizione. I dati ad accesso frequente vengono inseriti e aggiornati nella tabella ottimizzata per la memoria. I dati ad accesso sporadico vengono mantenuti nella tabella partizionata tradizionale. Periodicamente, una stored procedure aggiunge una nuova partizione. La partizione contiene i dati ad accesso sporadico più recenti che sono stati spostati fuori dalla tabella ottimizzata per la memoria.
+
+Se un'operazione richiede solo dati ad accesso frequente, può usare le stored procedure compilate in modo nativo per accedere ai dati. Per unire in join la tabella ottimizzata per la memoria con la tabella partizionata, le operazioni che potrebbero accedere a dati ad accesso frequente o sporadico devono usare istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretate.
+
+### <a name="add-a-partition"></a>Aggiungere una partizione
+
+I dati che sono diventati di recente ad accesso sporadico devono essere spostati nella tabella partizionata. I passaggi per questo scambio di partizione periodico sono i seguenti:
+
+1. Per i dati nella tabella ottimizzata per la memoria, determinare il valore datetime che rappresenta il limite o il valore di cambio data tra dati ad accesso frequente e dati diventati di recente ad accesso sporadico.
+2. Inserire i nuovi dati ad accesso sporadico, dalla tabella OLTP in memoria in una tabella *cold\_staging*.
+3. Eliminare gli stessi dati ad accesso sporadico dalla tabella ottimizzata per la memoria.
+4. Scambiare la tabella cold\_staging in una partizione.
+5. Aggiungere la partizione.
+
+#### <a name="maintenance-window"></a>Finestra di manutenzione
+
+Uno dei passaggi precedenti consiste nell'eliminare i dati diventati di recente ad accesso sporadico dalla tabella ottimizzata per la memoria. Esiste un intervallo di tempo tra questa eliminazione e il passaggio finale che aggiunge la nuova partizione. Durante questo intervallo, le applicazioni che tentano di leggere i dati diventati di recente ad accesso sporadico riscontreranno errori.
+
+Per un esempio correlato, vedere [Partizionamento a livello di applicazione](../../relational-databases/in-memory-oltp/application-level-partitioning.md).
+
+## <a name="code-sample"></a>Codice di esempio
+
+L'esempio Transact-SQL seguente viene presentato in una serie di blocchi di codice più piccoli, solo per la facilità di presentazione. È possibile aggiungerli tutti in un unico grande blocco di codice per i test.
+
+Nel suo complesso, l'esempio T-SQL illustra come usare una tabella ottimizzata per la memoria con una tabella basata su disco partizionata.
+
+Nelle prime fasi dell'esempio T-SQL viene creato il database, quindi vengono creati gli oggetti, come le tabelle nel database. Nelle fasi successive viene illustrato come spostare i dati da una tabella ottimizzata per la memoria in una tabella partizionata.
+
+### <a name="create-a-database"></a>Creazione di un database
+
+Questa sezione dell'esempio T-SQL crea un database di prova. Il database è configurato in modo da supportare sia tabelle ottimizzate per la memoria che tabelle partizionate.
+
+```sql
+CREATE DATABASE PartitionSample;
+GO
+
+-- Add a FileGroup, enabled for In-Memory OLTP.
+-- Change file path as needed.
+
+ALTER DATABASE PartitionSample
+    ADD FILEGROUP PartitionSample_mod
     CONTAINS MEMORY_OPTIMIZED_DATA;
 
-ALTER DATABASE partitionsample
+ALTER DATABASE PartitionSample
     ADD FILE(
-        NAME = 'partitionsample_mod',
-        FILENAME = 'c:\data\partitionsample_mod')
-    TO FILEGROUP partitionsample_mod;  
-GO  
-  
-USE partitionsample;  
-GO  
-  
--- frequently used portion of the SalesOrders - memory-optimized  
-  
-CREATE TABLE dbo.SalesOrders_hot (  
-   so_id INT IDENTITY PRIMARY KEY NONCLUSTERED,  
-   cust_id INT NOT NULL,  
-   so_date DATETIME2 NOT NULL INDEX ix_date NONCLUSTERED,  
-   so_total MONEY NOT NULL,  
-   INDEX ix_date_total NONCLUSTERED (so_date desc, so_total desc)  
-) WITH (MEMORY_OPTIMIZED=ON)  
-GO  
-  
--- cold portion of the SalesOrders - partitioned disk-based table  
-CREATE PARTITION FUNCTION [ByDatePF](datetime2) AS RANGE RIGHT   
-   FOR VALUES();  
-GO  
-  
-CREATE PARTITION SCHEME [ByDateRange]   
-   AS PARTITION [ByDatePF]   
-   ALL TO ([PRIMARY]);  
-GO  
-  
-CREATE TABLE dbo.SalesOrders_cold (  
-   so_id INT NOT NULL,  
-   cust_id INT NOT NULL,  
-   so_date DATETIME2 NOT NULL,  
-   so_total MONEY NOT NULL,  
-   CONSTRAINT PK_SalesOrders_cold PRIMARY KEY (so_id, so_date),  
-   INDEX ix_date_total NONCLUSTERED (so_date desc, so_total desc)  
-) ON [ByDateRange](so_date)  
-GO  
-  
--- table for temporary partitions  
-CREATE TABLE dbo.SalesOrders_cold_staging (  
-   so_id INT NOT NULL,  
-   cust_id INT NOT NULL,  
-   so_date datetime2 NOT NULL,  
-   so_total MONEY NOT NULL,  
-   CONSTRAINT PK_SalesOrders_cold_staging PRIMARY KEY (so_id, so_date),  
-   INDEX ix_date_total NONCLUSTERED (so_date desc, so_total desc),  
-   CONSTRAINT CHK_SalesOrders_cold_staging CHECK (so_date >= '1900-01-01')  
-)  
-GO  
-  
--- aggregate view of the hot and cold data  
-CREATE VIEW dbo.SalesOrders  
-AS SELECT so_id,  
-          cust_id,  
-          so_date,  
-          so_total,  
-          1 AS 'is_hot'  
-       FROM dbo.SalesOrders_hot  
-   UNION ALL  
-   SELECT so_id,  
-          cust_id,  
-          so_date,  
-          so_total,  
-          0 AS 'is_hot'  
-       FROM dbo.SalesOrders_cold;  
-GO  
-  
--- move all sales orders up to the split date to cold storage  
-CREATE PROCEDURE dbo.usp_SalesOrdersOffloadToCold @splitdate datetime2  
-   AS  
-   BEGIN  
-      BEGIN TRANSACTION;  
-      -- create new heap based on the hot data to be moved to cold storage  
-      INSERT INTO dbo.SalesOrders_cold_staging WITH( TABLOCKX)  
-      SELECT so_id , cust_id , so_date , so_total  
-         FROM dbo.SalesOrders_hot WITH ( serializable)  
-         WHERE so_date <= @splitdate;  
-  
-      -- remove moved data  
-      DELETE FROM dbo.SalesOrders_hot WITH( SERIALIZABLE)  
-         WHERE so_date <= @splitdate;  
-  
-      -- update partition function, and switch in new partition  
-      ALTER PARTITION SCHEME [ByDateRange] NEXT USED [PRIMARY];  
-  
+        NAME = 'PartitionSample_mod',
+        FILENAME = 'c:\data\PartitionSample_mod')
+    TO FILEGROUP PartitionSample_mod;
+GO
+```
+
+### <a name="create-a-memory-optimized-table-for-hot-data"></a>Creare una tabella ottimizzata per la memoria per i dati ad accesso frequente
+
+Questa sezione crea la tabella ottimizzata per la memoria che contiene i dati più recenti, in gran parte dati ancora ad accesso frequente.
+
+```sql
+USE PartitionSample;
+GO
+
+-- Create a memory-optimized table for the HOT Sales Order data.
+-- Notice the index that uses datetime2.
+
+CREATE TABLE dbo.SalesOrders_hot (
+   so_id INT IDENTITY PRIMARY KEY NONCLUSTERED,
+   cust_id INT NOT NULL,
+   so_date DATETIME2 NOT NULL INDEX ix_date NONCLUSTERED,
+   so_total MONEY NOT NULL,
+   INDEX ix_date_total NONCLUSTERED (so_date desc, so_total desc)
+) WITH (MEMORY_OPTIMIZED=ON);
+GO
+```
+
+### <a name="create-a-partitioned-table-for-cold-data"></a>Creare una tabella partizionata per i dati ad accesso sporadico
+
+In questa sezione viene creata la tabella partizionata che contiene i dati ad accesso sporadico.
+
+```sql
+-- Create a partition and table for the COLD Sales Order data.
+-- Notice the index that uses datetime2.
+
+CREATE PARTITION FUNCTION [ByDatePF](datetime2) AS RANGE RIGHT
+   FOR VALUES();
+GO
+
+CREATE PARTITION SCHEME [ByDateRange]
+   AS PARTITION [ByDatePF]
+   ALL TO ([PRIMARY]);
+GO
+
+CREATE TABLE dbo.SalesOrders_cold (
+   so_id INT NOT NULL,
+   cust_id INT NOT NULL,
+   so_date DATETIME2 NOT NULL,
+   so_total MONEY NOT NULL,
+   CONSTRAINT PK_SalesOrders_cold PRIMARY KEY (so_id, so_date),
+   INDEX ix_date_total NONCLUSTERED (so_date desc, so_total desc)
+) ON [ByDateRange](so_date);
+GO
+```
+
+### <a name="create-a-table-to-store-cold-data-during-move"></a>Creare una tabella per archiviare i dati ad accesso sporadico durante lo spostamento
+
+In questa sezione viene creata la tabella cold\_staging. Viene anche creata una vista che unisce i dati ad accesso frequente e sporadico dalle due tabelle.
+
+```sql
+-- A table used to briefly stage the newly cold data, during moves to a partition.
+
+CREATE TABLE dbo.SalesOrders_cold_staging (
+   so_id INT NOT NULL,
+   cust_id INT NOT NULL,
+   so_date datetime2 NOT NULL,
+   so_total MONEY NOT NULL,
+   CONSTRAINT PK_SalesOrders_cold_staging PRIMARY KEY (so_id, so_date),
+   INDEX ix_date_total NONCLUSTERED (so_date desc, so_total desc),
+   CONSTRAINT CHK_SalesOrders_cold_staging CHECK (so_date >= '1900-01-01')
+);
+GO
+
+-- A view, for retrieving the aggregation of hot plus cold data.
+
+CREATE VIEW dbo.SalesOrders
+AS SELECT so_id,
+          cust_id,
+          so_date,
+          so_total,
+          1 AS 'is_hot'
+       FROM dbo.SalesOrders_hot
+   UNION ALL
+   SELECT so_id,
+          cust_id,
+          so_date,
+          so_total,
+          0 AS 'is_cold'
+       FROM dbo.SalesOrders_cold;
+GO
+```
+
+### <a name="create-the-stored-procedure"></a>Creare la stored procedure
+
+In questa sezione viene creata la stored procedure da eseguire periodicamente. La stored procedure consente di spostare i dati diventati ad accesso sporadico di recente dalla tabella ottimizzata per la memoria alla tabella partizionata.
+
+```sql
+-- A stored procedure to move all newly cold sales orders data
+-- to its staging location.
+
+CREATE PROCEDURE dbo.usp_SalesOrdersOffloadToCold @splitdate datetime2
+   AS
+   BEGIN
+      BEGIN TRANSACTION;
+
+      -- Insert the cold data as a temporary heap.
+      INSERT INTO dbo.SalesOrders_cold_staging WITH (TABLOCKX)
+      SELECT so_id , cust_id , so_date , so_total
+         FROM dbo.SalesOrders_hot WITH (serializable)
+         WHERE so_date <= @splitdate;
+
+      -- Delete the moved data from the hot table.
+      DELETE FROM dbo.SalesOrders_hot WITH (SERIALIZABLE)
+         WHERE so_date <= @splitdate;
+
+      -- Update the partition function, and switch in the new partition.
+      ALTER PARTITION SCHEME [ByDateRange] NEXT USED [PRIMARY];
+
       DECLARE @p INT = (
         SELECT MAX(partition_number)
             FROM sys.partitions
@@ -155,78 +203,98 @@ CREATE PROCEDURE dbo.usp_SalesOrdersOffloadToCold @splitdate datetime2
         N'ALTER TABLE dbo.SalesOrders_cold_staging
             SWITCH TO dbo.SalesOrders_cold partition @i',
         N'@i int',
-        @i = @p;  
-  
-      ALTER PARTITION FUNCTION [ByDatePF]()  
-      SPLIT RANGE( @splitdate);  
-  
-      -- modify constraint on staging table to align with new partition  
-      ALTER TABLE dbo.SalesOrders_cold_staging DROP CONSTRAINT CHK_SalesOrders_cold_staging;  
-  
-      DECLARE @s nvarchar( 100) = CONVERT( nvarchar( 100) , @splitdate , 121);  
-      DECLARE @sql nvarchar( 1000) = N'alter table dbo.SalesOrders_cold_staging   
-         add constraint CHK_SalesOrders_cold_staging check (so_date > ''' + @s + ''')';  
-      PRINT @sql;  
-      EXEC sp_executesql @sql;  
-  
-      COMMIT;  
-END;  
-GO  
-  
--- insert sample values in the hot table  
-INSERT INTO dbo.SalesOrders_hot VALUES(1,SYSDATETIME(), 1);   
-GO  
-  
-INSERT INTO dbo.SalesOrders_hot VALUES(1, SYSDATETIME(), 1);  
-GO  
-  
-INSERT INTO dbo.SalesOrders_hot VALUES(1, SYSDATETIME(), 1);  
-GO  
-  
--- verify contents of the table  
-SELECT *  FROM dbo.SalesOrders;  
-GO  
-  
--- offload all sales orders to date to cold storage  
-DECLARE  @t datetime2 = SYSDATETIME();  
-EXEC dbo.usp_SalesOrdersOffloadToCold @t;  
-  
--- verify contents of the tables  
-SELECT * FROM dbo.SalesOrders;  
-GO  
-  
--- verify partitions  
-SELECT OBJECT_NAME( object_id) , * FROM sys.dm_db_partition_stats ps  
-   WHERE object_id = OBJECT_ID( 'dbo.SalesOrders_cold');  
-  
--- insert more rows in the hot table  
-INSERT INTO dbo.SalesOrders_hot VALUES(2, SYSDATETIME(), 1);  
-GO  
-  
-INSERT INTO dbo.SalesOrders_hot VALUES(2, SYSDATETIME(), 1);  
-GO  
-  
-INSERT INTO dbo.SalesOrders_hot VALUES(2, SYSDATETIME(), 1);  
-GO  
-  
--- verify contents of the tables  
-SELECT * FROM dbo.SalesOrders;  
-GO  
-  
--- offload all sales orders to date to cold storage  
-DECLARE @t datetime2 = SYSDATETIME();  
-EXEC dbo.usp_SalesOrdersOffloadToCold @t;  
-  
--- verify contents of the tables  
-SELECT * FROM dbo.SalesOrders;  
-GO  
-  
--- verify partitions  
-SELECT OBJECT_NAME( object_id) , partition_number , row_count  FROM sys.dm_db_partition_stats ps  
-  WHERE object_id = OBJECT_ID( 'dbo.SalesOrders_cold') AND index_id = 1;  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Tabelle ottimizzate per la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
-  
-  
+        @i = @p;
+
+      ALTER PARTITION FUNCTION [ByDatePF]()
+      SPLIT RANGE( @splitdate);
+
+      -- Modify a constraint on the cold_staging table, to align with new partition.
+      ALTER TABLE dbo.SalesOrders_cold_staging
+         DROP CONSTRAINT CHK_SalesOrders_cold_staging;
+
+      DECLARE @s nvarchar( 100) = CONVERT( nvarchar( 100) , @splitdate , 121);
+      DECLARE @sql nvarchar( 1000) = N'alter table dbo.SalesOrders_cold_staging 
+         add constraint CHK_SalesOrders_cold_staging check (so_date > ''' + @s + ''')';
+      PRINT @sql;
+      EXEC sp_executesql @sql;
+
+      COMMIT;
+END;
+GO
+```
+
+### <a name="prepare-sample-data-and-demo-the-stored-procedure"></a>Preparare i dati di esempio ed eseguire la stored procedure
+
+Questa sezione genera e inserisce dati di esempio, quindi esegue la stored procedure a titolo dimostrativo.
+
+```sql
+-- Insert sample values into the hot table.
+INSERT INTO dbo.SalesOrders_hot VALUES(1,SYSDATETIME(), 1);
+GO
+INSERT INTO dbo.SalesOrders_hot VALUES(1, SYSDATETIME(), 1);
+GO
+INSERT INTO dbo.SalesOrders_hot VALUES(1, SYSDATETIME(), 1);
+GO
+
+-- Verify that the hot data is in the table, by selecting from the view.
+SELECT * FROM dbo.SalesOrders;
+GO
+
+-- Treat all data in the hot table as cold data:
+-- Run the stored procedure, to move (offload) all sales orders to date to cold storage.
+DECLARE @t datetime2 = SYSDATETIME();
+EXEC dbo.usp_SalesOrdersOffloadToCold @t;
+
+-- Again, read hot plus cold data from the view.
+SELECT * FROM dbo.SalesOrders;
+GO
+
+-- Retrieve the name of every partition.
+SELECT OBJECT_NAME( object_id) , * FROM sys.dm_db_partition_stats ps
+   WHERE object_id = OBJECT_ID( 'dbo.SalesOrders_cold');
+
+-- Insert more data into the hot table.
+INSERT INTO dbo.SalesOrders_hot VALUES(2, SYSDATETIME(), 1);
+GO
+INSERT INTO dbo.SalesOrders_hot VALUES(2, SYSDATETIME(), 1);
+GO
+INSERT INTO dbo.SalesOrders_hot VALUES(2, SYSDATETIME(), 1);
+GO
+
+-- Read hot plus cold data from the view.
+SELECT * FROM dbo.SalesOrders;
+GO
+
+-- Again, run the stored procedure, to move all sales orders to date to cold storage.
+DECLARE @t datetime2 = SYSDATETIME();
+EXEC dbo.usp_SalesOrdersOffloadToCold @t;
+
+-- Read hot plus cold data from the view.
+SELECT * FROM dbo.SalesOrders;
+GO
+
+-- Again, retrieve the name of every partition.
+-- The stored procedure can modify the partitions.
+SELECT OBJECT_NAME( object_id) , partition_number , row_count
+  FROM sys.dm_db_partition_stats ps
+  WHERE object_id = OBJECT_ID( 'dbo.SalesOrders_cold')
+    AND index_id = 1;
+```
+
+### <a name="drop-all-the-demo-objects"></a>Eliminare tutti gli oggetti dimostrativi
+
+Ricordarsi di rimuovere il database di test dimostrativo dal sistema di test.
+
+```sql
+-- You must first leave the context of the PartitionSample database.
+
+-- USE <A-Database-Name-Here>;
+GO
+
+DROP DATABASE PartitionSample;
+GO
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Tabelle ottimizzate per la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)

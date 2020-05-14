@@ -1,5 +1,6 @@
 ---
 title: Elemento Filegroup per Index (DTA)
+description: Nell'utilità dta l'elemento Filegroup per Index specifica il filegroup in cui deve essere creato l'indice per una configurazione specificata dall'utente.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: d08931e613cb32b961e6bbd8f848abb42c0de67b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0b3c331a11cb01807c6193147ca89f3989d26e0d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307673"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826472"
 ---
 # <a name="filegroup-element-for-index-dta"></a>Elemento Filegroup per Index (DTA)
 

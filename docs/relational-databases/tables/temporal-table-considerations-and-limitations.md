@@ -11,12 +11,12 @@ ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2adb04d7f50a649d3b98be1732c15ee7c18a1767
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: f63d1c3c416859cab9ace87ad62e87b45c08a567
+ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487450"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82784487"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Considerazioni e limitazioni delle tabelle temporali
 
@@ -51,7 +51,7 @@ Quando si usano le tabelle temporali, tenere presenti le considerazioni seguenti
 
   - **Always On:** supporto completo
   - **Change Data Capture e rilevamento modifiche dati:** supportati solo nella tabella corrente
-  - **Replica snapshot e transazionale**: supportata solo per un singolo server di pubblicazione senza attivazione di tabella temporale e per un sottoscrittore con attivazione di tabella temporale. In questo caso, il server di pubblicazione viene usato per un carico di lavoro OLTP, mentre il sottoscrittore viene usato per la ripartizione di report, inclusa l'esecuzione di query 'AS OF'. All'avvio dell'agente di distribuzione viene aperta una transazione che viene mantenuta aperta fino a quando l'agente di distribuzione non è interrotto. A causa di questo comportamento, SysStartTime e SysEndTime vengono popolati per iniziare l'ora della prima transazione avviata dall'agente di distribuzione. Di conseguenza, può essere preferibile eseguire l'agente di distribuzione in base a una pianificazione anziché in modo continuo, in base all'impostazione predefinita. L'uso di più sottoscrittori non è supportato poiché potrebbe comportare dati temporali incoerenti a causa della dipendenza dall'orologio di sistema locale.
+  - **Replica snapshot e transazionale**: supportata solo per un singolo server di pubblicazione senza attivazione di tabella temporale e per un sottoscrittore con attivazione di tabella temporale. In questo caso, il server di pubblicazione viene usato per un carico di lavoro OLTP, mentre il sottoscrittore viene usato per la ripartizione di report, inclusa l'esecuzione di query 'AS OF'. All'avvio dell'agente di distribuzione viene aperta una transazione che viene mantenuta aperta fino a quando l'agente di distribuzione non è interrotto. A causa di questo comportamento, SysStartTime e SysEndTime vengono popolati con l'ora di inizio della prima transazione avviata dall'agente di distribuzione. Di conseguenza, può essere preferibile eseguire l'agente di distribuzione in base a una pianificazione anziché usare il comportamento predefinito di esecuzione continua, se per l'applicazione o l'organizzazione è importante che SysStartTime e SysEndTime vengano popolati con un'ora vicina all'ora di sistema corrente. L'uso di più sottoscrittori non è supportato poiché potrebbe comportare dati temporali incoerenti a causa della dipendenza dall'orologio di sistema locale.
   - **Replica di tipo merge:** non supportata per le tabelle temporali
 
 - Le query normali influiscono solo sui dati della tabella corrente. Per eseguire query sui dati della tabella di cronologia, è necessario usare le query temporali. Questo argomento verrà approfondito più avanti in questo documento nella sezione Esecuzione di query sui dati temporali.

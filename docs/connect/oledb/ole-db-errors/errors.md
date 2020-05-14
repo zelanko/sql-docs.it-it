@@ -1,8 +1,8 @@
 ---
-title: Errori | Microsoft Docs
-description: Errors
+title: OLE DB Errors
+description: Informazioni sul modo in cui vengono restituiti gli errori in OLE DB Driver per SQL Server e su come è possibile ottenere informazioni su di essi.
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - OLE DB error handling
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 9bf1985706cefc3007da56a9bf782a070e3b8edf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 82fe76b5a7ab2445884f7741abc81bfa0b400ed1
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994962"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922398"
 ---
 # <a name="errors"></a>Errors
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

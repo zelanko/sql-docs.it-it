@@ -1,5 +1,6 @@
 ---
 title: Ripristini di file (modello di recupero con registrazione minima) | Microsoft Docs
+description: In SQL Server un ripristino di file si applica a uno o più file danneggiati senza ripristinare l'intero database.
 ms.custom: ''
 ms.date: 03/24/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 4f6d06667e4cb3b2c89d920424fb9801b0e1de2d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba10028f3dc1a954bdfa59f98c1c5e456081febe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68138738"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834539"
 ---
 # <a name="file-restores-simple-recovery-model"></a>Ripristini di file (modello di recupero con registrazione minima)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "68138738"
      Per informazioni sul supporto per il ripristino di pagine e file in linea, vedere [Caratteristiche e attività del motore di database](https://msdn.microsoft.com/library/d9efe145-3306-4d61-bd77-e2af43e19c34). Per altre informazioni sui ripristini online, vedere [Ripristino in linea &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md).  
   
     > [!TIP]  
-    >  Se si desidera attivare la modalità offline per il database al fine di eseguire un ripristino di file, attivare la modalità offline per il database prima di avviare la sequenza di ripristino eseguendo la seguente istruzione [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) : ALTER DATABASE *nome_database* SET OFFLINE.  
+    >  Se si desidera attivare la modalità offline per il database per eseguire un ripristino di file, eseguire l'istruzione [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) seguente prima di avviare la sequenza di ripristino: ALTER DATABASE *database_name* SET OFFLINE.  
   
  **Contenuto dell'argomento**  
   
@@ -64,7 +65,7 @@ ms.locfileid: "68138738"
 2.  Ripristinare il backup differenziale di file più recente per ogni file ripristinato e recuperare il database.  
   
 ### <a name="transact-sql-steps-for-file-restore-sequence-simple-recovery-model"></a>Passaggi di Transact-SQL per la sequenza di ripristino di file (modello di recupero con registrazione minima)  
- Questa sezione descrive le opzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]RESTORE[ essenziali di ](../../t-sql/statements/restore-statements-transact-sql.md) per una semplice sequenza di ripristino di file. La sintassi e i dettagli non rilevanti sono stati omessi.  
+ Questa sezione descrive le opzioni [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) essenziali di [!INCLUDE[tsql](../../includes/tsql-md.md)] per una semplice sequenza di ripristino di file. La sintassi e i dettagli non rilevanti sono stati omessi.  
   
  La sequenza di ripristino contiene solo due istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] . La prima istruzione esegue il ripristino di un file secondario, il file `A`, che viene ripristinato utilizzando WITH NORECOVERY. La seconda operazione ripristina altri due file, i file `B` e `C` , che vengono ripristinati utilizzando WITH RECOVERY da un diverso dispositivo di backup:  
   
@@ -82,9 +83,9 @@ ms.locfileid: "68138738"
   
 ### <a name="examples"></a>Esempi  
   
--   [Esempio: Ripristino online di un file di sola lettura &#40;modello di recupero con registrazione minima&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [Esempio: Ripristino online di un file di sola lettura &#40;Modello di recupero con registrazione minima&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
--   [Esempio: Ripristino offline del filegroup primario e di un altro filegroup &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
+-   [Esempio: Ripristino offline del filegroup primario e di un altro filegroup &#40;Modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Per ripristinare file e filegroup**  

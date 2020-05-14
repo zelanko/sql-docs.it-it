@@ -1,6 +1,7 @@
 ---
 title: Installare Riesecuzione distribuita
 titleSuffix: SQL Server Distributed Replay
+description: Questo articolo fornisce i collegamenti alle informazioni necessarie per installare la funzionalità Riesecuzione distribuita in SQL Server.
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: e5d1605d9f44cf5e28cd6e49b6a234de44f5c5f7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ba6115e530b0c8f5bd0a2d1ae9c03a3d7f701355
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74992125"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999437"
 ---
 # <a name="install-distributed-replay---overview"></a>Install Distributed Replay - Overview
 
@@ -32,7 +33,6 @@ Utilizzare gli argomenti seguenti per installare la funzionalità di Riesecuzion
 |[Completare i passaggi successivi all'installazione](../../tools/distributed-replay/complete-the-post-installation-steps.md)|Argomento contenente le procedure per il completamento di un'installazione di Riesecuzione distribuita.|  
 |[Modificare gli account dei servizi controller e client](../../tools/distributed-replay/modify-the-controller-and-client-services-accounts.md)|Argomento contenente le procedure per avviare e arrestare i servizi controller e client Riesecuzione distribuita, nonché per modificare gli account del servizio.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Installare SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  
-  
-  
+## <a name="see-also"></a>Vedere anche
+
+-[Installare SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)

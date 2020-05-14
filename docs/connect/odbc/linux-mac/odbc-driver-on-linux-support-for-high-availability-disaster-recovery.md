@@ -1,7 +1,8 @@
 ---
-title: Driver ODBC in Linux e macOS - Disponibilità elevata e ripristino di emergenza | Microsoft Docs
+title: Driver ODBC in Linux e macOS - Disponibilità elevata e ripristino di emergenza
+description: Informazioni sul supporto di Gruppi di disponibilità AlwaysOn con il driver ODBC Microsoft per Linux e macOS.
 ms.custom: ''
-ms.date: 04/05/2018
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,25 +11,25 @@ ms.topic: conceptual
 ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b738bac760211ff8b24ef1e5fdbc027fd966f166
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 50a72faf7dc517257ee2ce66f0f800c289f4329e
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80912437"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922186"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Supporto del driver ODBC in Linux e macOS per disponibilità elevata e ripristino di emergenza
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 I driver ODBC per Linux e macOS supportano [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Per altre informazioni su [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], vedere:  
   
--   [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx)  
+-   [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
--   [Creazione e configurazione di gruppi di disponibilità (SQL Server)](https://msdn.microsoft.com/library/ff878265.aspx)  
+-   [Creazione e configurazione di gruppi di disponibilità (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)  
   
--   [Clustering di failover e gruppi di disponibilità AlwaysOn (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)  
+-   [Clustering di failover e gruppi di disponibilità AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [Repliche secondarie attive: repliche secondarie leggibili (gruppi di disponibilità AlwaysOn)](https://msdn.microsoft.com/library/ff878253.aspx)  
+-   [Repliche secondarie attive: Repliche secondarie leggibili (Gruppi di disponibilità AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
 È possibile specificare il listener di un determinato gruppo di disponibilità nella stringa di connessione. Se un'applicazione ODBC in Linux o macOS è connessa a un database in un gruppo di disponibilità, la connessione originale viene interrotta e deve esserne aperta una nuova per l'applicazione affinché quest'ultima possa continuare a funzionare dopo il failover.
 

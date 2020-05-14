@@ -43,14 +43,14 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e19f5ae872c8d37eb639372db54466da7221cc15
-ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
+ms.openlocfilehash: b172457f50ca3d76c830f6ab2c789d28a3490ec8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80873137"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825667"
 ---
-# <a name="generate-and-publish-scripts-wizard"></a>Genera e pubblica script 
+# <a name="generate-and-publish-scripts-wizard"></a>Genera e pubblica script
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -156,6 +156,8 @@ Usare questa pagina per specificare come si desidera che vengano generati gli sc
 - **Riempimento ANSI** : consente di includere **ANSI PADDING ON** nello script. Il valore predefinito è **True**.
 
 - **Accoda a file** : se è impostato su **True**, questo script viene aggiunto alla fine di uno script esistente specificato nella pagina **Imposta opzioni di generazione script** . Se è impostato su **False**, il nuovo script sovrascrive uno script precedente. Il valore predefinito è **False**.
+
+- **Verifica esistenza oggetto** - Quando **True** aggiunge la verifica dell'esistenza prima di generare l'istruzione di creazione per gli oggetti SQL. Ad esempio: tabelle, viste, funzioni o stored procedure. Per l'istruzione CREATE viene eseguito il wrapping in un'istruzione IF. Se si sa che la destinazione è pulita, lo script è molto più pulito. Se si prevede che gli oggetti NON esistano nella destinazione, si riceve un errore. Il valore predefinito è **False**.
 
 - **Continua generazione script in caso di errore**: se è impostato su **False**, la generazione di script viene arrestata in caso di errore. Se è impostato su **True**, la generazione di script continua. Il valore predefinito è **False**.
 

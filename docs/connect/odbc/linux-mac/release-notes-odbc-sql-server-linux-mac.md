@@ -1,7 +1,8 @@
 ---
 title: Note sulla versione per ODBC Driver for SQL Server in Linux e macOS
+description: Informazioni sulle novità e le modifiche per le versioni rilasciate di Microsoft ODBC Driver for SQL Server.
 ms.custom: ''
-ms.date: 04/24/2020
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-jizho2
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 36d390bc13924bbedb1d423790127a3d24f9b63e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c2fe32e1a86273d071801fed9d2ffb8806d54ce6
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153271"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922202"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Note sulla versione per Microsoft ODBC Driver for SQL Server in Linux e macOS
 
@@ -173,6 +174,6 @@ Il driver ODBC in SUSE Linux (anteprima) supporta SUSE Linux Enterprise 11 Servi
 
 Il driver ODBC in Linux supporta [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Per altre informazioni, vedere [ODBC Driver on Linux Support for High Availability, Disaster Recovery](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md) (Supporto del driver ODBC in Linux per disponibilità elevata e ripristino di emergenza).  
 
-Il driver ODBC in Linux supporta le connessioni al database SQL di Microsoft Azure. Per altre informazioni, vedere [Procedura: stabilire la connessione al database SQL di Azure tramite ODBC](https://msdn.microsoft.com/library/hh974312.aspx).  
+Il driver ODBC in Linux supporta le connessioni al database SQL di Azure.
 
 L'opzione `-l` (timeout di accesso) è stata aggiunta a `bcp`. Per altre informazioni, vedere [Connessione a **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md).

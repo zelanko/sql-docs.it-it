@@ -1,6 +1,7 @@
 ---
 title: Completare i passaggi successivi all'installazione
 titleSuffix: SQL Server Distributed Replay
+description: Dopo aver installato il componente Riesecuzione distribuita, è necessario modificare gli account del controller e del servizio client corrispondenti.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: fade888b904b6be436e78cc38f9fc77bc8ee734d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e38755c65e457123c732035a2874f9904644e0d5
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307078"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001171"
 ---
 # <a name="complete-the-post-installation-steps"></a>Completare i passaggi successivi all'installazione
 

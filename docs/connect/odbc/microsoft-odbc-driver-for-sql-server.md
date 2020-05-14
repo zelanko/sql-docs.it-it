@@ -1,8 +1,8 @@
 ---
-title: Microsoft ODBC Driver for SQL Server | Microsoft Docs
+title: Microsoft ODBC Driver for SQL Server
 description: Microsoft ODBC Driver for SQL Server abilita la connettività per SQL Server e il database SQL di Azure tramite API ODBC standard.
 ms.custom: ''
-ms.date: 02/05/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8eb3024d231522ce9c96e9a9cacd48a97c0b5869
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 42fce5ed05099227cf134b7bd244b7c93e98d501
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486776"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886339"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
 
@@ -76,8 +76,7 @@ L'esempio di codice C++ illustra come usare le API ODBC per connettersi e accede
 - [Note sulla versione di ODBC per SQL Server in Windows](windows/release-notes-odbc-sql-server-windows.md)
 - [Requisiti di sistema, installazione e file del driver](../../connect/odbc/windows/system-requirements-installation-and-driver-files.md)
 
+## <a name="community"></a>Community
 
-
-## <a name="community"></a>Community  
-- [Blog del team di Microsoft ODBC Driver for SQL Server](https://blogs.msdn.com/sqlnativeclient/default.aspx)  
+- [Blog sui driver di SQL Server](https://techcommunity.microsoft.com/t5/SQL-Server/bg-p/SQLServer/label-name/SQLServerDrivers)  
 - [Forum di accesso ai dati di SQL Server](https://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  

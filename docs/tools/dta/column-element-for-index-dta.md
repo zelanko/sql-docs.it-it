@@ -1,5 +1,6 @@
 ---
 title: Elemento Column per Index (DTA)
+description: Nell'utilità dta l'elemento Column per Index specifica le colonne sulle quali viene creato l'indice per una configurazione specificata dall'utente.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/09/2017
-ms.openlocfilehash: 008cba36af33c465c3a126dc3e101b8ebca28e36
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 02900685d93eef62553d830494d25ec83ca83ce1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307881"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831628"
 ---
 # <a name="column-element-for-index-dta"></a>Elemento Column per Index (DTA)
 
@@ -42,7 +43,7 @@ Specifica le colonne sulle quali viene creato l'indice per una configurazione sp
   
 ## <a name="element-attributes"></a>Attributi elemento  
   
- **Type**: facoltativo. Specifica il tipo di colonna dell'indice. Usare un tipo di dati **string** per specificare questo attributo con uno dei valori consentiti seguenti:  
+ **Tipo**: Facoltativa. Specifica il tipo di colonna dell'indice. Usare un tipo di dati **string** per specificare questo attributo con uno dei valori consentiti seguenti:  
   
 -   **KeyColumn**  
   
@@ -64,7 +65,7 @@ Specifica le colonne sulle quali viene creato l'indice per una configurazione sp
   
      Per altre informazioni sulle colonne incluse, vedere [Creare indici con colonne incluse](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
   
- **SortOrder**: facoltativo. Specifica l'ordinamento della colonna. Usare un tipo di dati **string** per specificare un ordinamento **"Ascending"** o **"Descending"** come segue:  
+ **SortOrder**: Facoltativa. Specifica l'ordinamento della colonna. Usare un tipo di dati **string** per specificare un ordinamento **"Ascending"** o **"Descending"** come segue:  
   
 ```  
 <Column SortOrder="Ascending">  

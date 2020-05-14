@@ -1,5 +1,6 @@
 ---
 title: Dati BLOB (Binary Large Object) (SQL Server) | Microsoft Docs
+description: Con FILESTREAM, FileTable e Archivio BLOB remoto (RBS), SQL Server può archiviare BLOB nel database o in uno spazio di archiviazione remoto. Confrontare opzioni per l'archiviazione di BLOB.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 97509274-c3f8-43e5-a37c-52f1ffe0961a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6b38a13252001f9c50b62510f11e43822cde1666
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 47410378e63141a0fb2df6623e882083e15bbe47
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68018866"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000153"
 ---
 # <a name="binary-large-object-blob-data-sql-server"></a>Dati BLOB (Binary Large Object) (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,6 @@
 ---
 title: Elemento DropOnlyMode (DTA)
+description: Nell'utilità dta l'elemento DropOnlyMode specifica che Ottimizzazione guidata motore di database considera solo la rimozione degli indici, delle viste indicizzate o delle partizioni esistenti.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: a0cd0d9511e3a2791231f1cfa39aa4c8e5999eec
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b8335b68b684f5ca9688542a30919c05397b6c65
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75305597"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831551"
 ---
 # <a name="droponlymode-element-dta"></a>Elemento DropOnlyMode (DTA)
 
@@ -43,7 +44,7 @@ Specifica che Ottimizzazione guidata motore di database deve considerare la rimo
   
  **Valore predefinito**  
   
- **Occorrenza**: facoltativo. È possibile usarlo solo una volta per ogni elemento **TuningOptions** . Non è possibile usarlo se nell'elemento **TuningOptions** sono specificati gli elementi seguenti:  
+ **Occorrenza**: Facoltativa. È possibile usarlo solo una volta per ogni elemento **TuningOptions** . Non è possibile usarlo se nell'elemento **TuningOptions** sono specificati gli elementi seguenti:  
   
 -   [Elemento FeatureSet &#40;DTA&#41;](../../tools/dta/featureset-element-dta.md)  
   
@@ -52,7 +53,7 @@ Specifica che Ottimizzazione guidata motore di database deve considerare la rimo
 -   [Elemento KeepExisting &#40;DTA&#41;](../../tools/dta/keepexisting-element-dta.md) impostato su **ALL**  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
- **Elemento padre**: [elemento TuningOptions &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)  
+ **Elemento padre**: [Elemento TuningOptions &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)  
   
  **Elementi figlio**  
   

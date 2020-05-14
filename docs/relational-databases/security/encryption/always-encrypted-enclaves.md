@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e750070f51dc6cba1b035e9426d9814e4fd1b67
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5625c3429a9bae89ae940fb552a3e6d1e58678c9
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558034"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999426"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted con enclave sicuri
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -156,7 +156,7 @@ Always Encrypted con enclave sicuri risolve alcune limitazioni di Always Encrypt
 - Criteri di ricerca (LIKE) e operatori di confronto nella colonna crittografata con la crittografia casuale.
     > [!NOTE]
     > Le operazioni precedenti sono supportate per le colonne di tipo stringa di caratteri che usano le regole di confronto con un ordinamento binary2 (regole di confronto BIN2). Le colonne di tipo stringa di caratteri che usano regole di confronto non BIN2 possono essere crittografate tramite crittografia casuale e chiavi di crittografia di colonna abilitate per l'enclave. Tuttavia, l'unica nuova funzionalità abilitata per questo tipo di colonne è la crittografia sul posto.
-- Creazione di indici non cluster sulle colonne con crittografia casuale.
+- Creazione di indici non cluster e statistiche sulle colonne con crittografia casuale.
 
 Tutte le altre limitazioni per Always Encrypted elencate in [Informazioni sulle funzionalità](always-encrypted-database-engine.md#feature-details) si applicano anche ad Always Encrypted con enclave sicuri.
 

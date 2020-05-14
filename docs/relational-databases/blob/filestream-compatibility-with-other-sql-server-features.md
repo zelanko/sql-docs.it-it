@@ -1,6 +1,6 @@
 ---
 title: Compatibilità FILESTREAM | Microsoft Docs
-description: Compatibilità FILESTREAM con altre funzionalità di SQL Server
+description: FILESTREAM archivia i dati nel file system. Informazioni sulle linee guida, sulle limitazioni e sui suggerimenti da tenere presenti quando si usa FILESTREAM con diverse funzionalità di SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c4d32598cfab0cc08ece6721b0ff593c8577394d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4c47e7af592383bee13399c2220fee25fa8ed2c2
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245403"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999810"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>Compatibilità FILESTREAM con altre funzionalità di SQL Server
 

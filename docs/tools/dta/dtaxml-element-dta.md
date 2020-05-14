@@ -1,5 +1,6 @@
 ---
 title: Elemento DTAXML (DTA)
+description: Nell'utilità dta l'elemento DTAXML contiene tutti gli elementi che descrivono l'input e l'output di ottimizzazione generati da Ottimizzazione guidata motore di database.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: aeb5bfc3544d5de783a40fcfe8692a466fee6b40
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9fc1f4b52fa73ecc014e4f22139496f471bf46f8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307738"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831533"
 ---
 # <a name="dtaxml-element-dta"></a>Elemento DTAXML (DTA)
 

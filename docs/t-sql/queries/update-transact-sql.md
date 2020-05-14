@@ -38,12 +38,12 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da4f6e997d3f99e9c64c7623a616fe5d45c283db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 405071c6f4752ab3aebc9f96d23dd2b5734fb39a
+ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82169369"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82872773"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -458,7 +458,7 @@ ID     Value
 ```  
 
 ## <a name="locking-behavior"></a>Comportamento di blocco  
- Un'istruzione UPDATE acquisisce sempre un blocco esclusivo (X) sulla tabella che modifica e mantiene tale blocco fino al completamento della transazione. Con un blocco esclusivo, nessuna altra transazione può modificare dati. È possibile specificare hint di tabella per eseguire l'override di questo comportamento predefinito per la durata dell'istruzione UPDATE specificando un altro metodo di blocco. Gli hint dovrebbero comunque essere utilizzati solo se strettamente necessario ed esclusivamente da sviluppatori e amministratori di database esperti. Per altre informazioni, vedere [Hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+ Un'istruzione UPDATE acquisisce un blocco esclusivo (X) su qualsiasi riga modificata e mantiene questi blocchi fino al completamento della transazione. A seconda del piano di query per l'istruzione UPDATE, del numero di righe modificate e del livello di isolamento della transazione, è possibile che i blocchi vengano acquisiti a livello PAGE o TABLE anziché a livello ROW. Per evitare questi blocchi di livello superiore, provare a dividere le istruzioni di aggiornamento che interessano migliaia di righe o più in batch e assicurarsi che le condizioni di join e filtro siano supportate dagli indici. Per informazioni dettagliate sui meccanismi di blocco in SQL Server, vedere l'articolo [Utilizzo dei blocchi in Motore di database](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine).  
   
 ## <a name="logging-behavior"></a>Comportamento di registrazione  
  L'istruzione UPDATE viene registrata. Viene tuttavia eseguita una registrazione minima per gli aggiornamenti parziali a tipi di dati per valori di grandi dimensioni tramite la clausola **\.WRITE**. Per altre informazioni, vedere "Aggiornamento dei tipi di dati per valori di grandi dimensioni" nella sezione precedente "Tipi di dati".  

@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bbc94f7586c05746a70c2f9fd9172230771837a6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 41c77ad93bf129fa84f5d039b64a63593a335aee
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67912048"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849839"
 ---
 # <a name="resource-governor"></a>Resource Governor
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] La funzionalità Resource Governor consente di gestire il carico di lavoro e l'utilizzo delle risorse di sistema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Resource Governor consente di specificare i limiti sulla quantità di CPU, I/O fisici e memoria che può essere usata dalle richieste in ingresso dell'applicazione.  
+  La funzionalità Resource Governor di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permette di gestire il carico di lavoro e l'uso delle risorse di sistema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Resource Governor consente di specificare limiti per la quantità di CPU, I/O fisico e memoria che può essere usata dalle richieste in ingresso dell'applicazione.  
   
 ## <a name="benefits-of-resource-governor"></a>Vantaggi di Resource Governor  
  Resource Governor consente di gestire i carichi di lavoro e le risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificando limiti relativi all'utilizzo delle risorse da parte delle richieste in entrata. Nel contesto di Resource Governor il carico di lavoro è un set di richieste o query con dimensioni simili che può o deve essere considerato come singola entità. Sebbene non si tratti di un requisito obbligatorio, utilizzando in modo uniforme le risorse di un carico di lavoro è possibile sfruttare al massimo i vantaggi offerti da Resource Governor. I limiti delle risorse possono essere riconfigurati in tempo reale con un minimo impatto sui carichi di lavoro in esecuzione.  
   
- In un ambiente con più carichi di lavoro distinti nello stesso server Resource Governor consente di differenziare tali carichi di lavoro e allocare le risorse condivise in modo appropriato, in base ai limiti specificati. Tali risorse sono rappresentate da CPU, I/O fisico e memoria.  
+ In un ambiente con più carichi di lavoro distinti nello stesso server Resource Governor consente di differenziare tali carichi di lavoro e allocare le risorse condivise in modo appropriato, in base ai limiti specificati. Queste risorse sono rappresentate da CPU, I/O fisico e memoria.  
   
  Resource Governor consente di:  
   
@@ -41,11 +41,11 @@ ms.locfileid: "67912048"
 ## <a name="resource-governor-constraints"></a>Vincoli di Resource Governor  
  In questa versione di Resource Governor sono previsti i seguenti vincoli:  
   
--   La gestione delle risorse è limitata a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Non è possibile utilizzare Resource Governor per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+-   La gestione delle risorse è limitata a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Non è possibile usare Resource Governor per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
--   Non è disponibile il monitoraggio o la gestione del carico di lavoro tra istanze di SQL Server.  
+-   Non è disponibile il monitoraggio o la gestione del carico di lavoro tra istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Resource Governor è in grado di gestire i carichi di lavoro OLTP. Questi tipi di query, in genere con una durata molto breve, non restano tuttavia mai abbastanza a lungo nella CPU da richiedere l'applicazione dei controlli di larghezza di banda. Ciò può comportare un'asimmetria nelle statistiche restituite per la percentuale di utilizzo della CPU.  
+-   Resource Governor è in grado di gestire i carichi di lavoro OLTP. Questi tipi di query, in genere con una durata molto breve, non restano tuttavia mai abbastanza a lungo nella CPU da richiedere l'applicazione dei controlli di larghezza di banda. Ciò può comportare una distorsione nelle statistiche restituite per la percentuale di utilizzo della CPU.  
   
 -   La capacità di governare l'I/O fisico è relativa solo alle operazioni degli utenti e non alle attività di sistema. Tra le attività di sistema sono incluse le operazioni di scrittura nel log delle transazioni e le operazioni di I/O del Lazywriter. La funzionalità Resource Governor si applica soprattutto alle operazioni di lettura dell'utente perché la maggior parte delle operazioni di scrittura viene eseguita in genere dalle attività di sistema.  
   
