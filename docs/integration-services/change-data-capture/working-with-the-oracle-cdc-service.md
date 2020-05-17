@@ -82,7 +82,7 @@ ms.locfileid: "79288235"
 |status|Codice di stato utilizzato dalla tabella dello stato.|  
 |sub_status|Codice di stato secondario utilizzato dalla tabella dello stato.|  
 |status_message|Messaggio di stato utilizzato dalla tabella dello stato.|  
-|source|Nome del componente di Oracle CDC che ha prodotto il record di traccia.|  
+|target|Nome del componente di Oracle CDC che ha prodotto il record di traccia.|  
 |text_data|Dati di testo aggiuntivi per i casi in cui l'errore o il record di traccia contiene un payload testuale.|  
 |binary_data|Dati binari aggiuntivi per i casi in cui l'errore o il record di traccia contiene un payload binario.|  
   
