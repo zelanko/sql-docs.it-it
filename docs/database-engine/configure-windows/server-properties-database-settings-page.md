@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.custom: ''
 ms.date: 05/23/2019
-ms.openlocfilehash: bdefcbbfe6d5987de4ac69ab60d1e80b004a5db6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d6d7982384d8e83db35e35feb2e106ddae727fac
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025464"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152053"
 ---
 # <a name="server-properties---database-settings-page"></a>Proprietà server (pagina Impostazioni database)
 
@@ -59,7 +59,7 @@ In [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] o version
 - Se la casella **Comprimi backup** è selezionata, per impostazione predefinita i nuovi backup vengono compressi.
   
     > [!IMPORTANT]
-    >  Per impostazione predefinita, la compressione aumenta significativamente l'utilizzo della CPU e la CPU aggiuntiva utilizzata dal processo di compressione può avere un impatto negativo sulle operazioni simultanee. Potrebbe pertanto essere necessario creare backup compressi con priorità bassa in una sessione in cui l'utilizzo della CPU è limitato da [Resource Governor](../../relational-databases/resource-governor/resource-governor.md). Per ulteriori informazioni, vedere [Utilizzo di Resource Governor per limitare l'utilizzo della CPU da parte della compressione dei backup &#40;Transact-SQL&#41;](../.. relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).
+    >  Per impostazione predefinita, la compressione aumenta significativamente l'utilizzo della CPU e la CPU aggiuntiva utilizzata dal processo di compressione può avere un impatto negativo sulle operazioni simultanee. Potrebbe pertanto essere necessario creare backup compressi con priorità bassa in una sessione in cui l'utilizzo della CPU è limitato da [Resource Governor](../../relational-databases/resource-governor/resource-governor.md). Per ulteriori informazioni, vedere [Utilizzo di Resource Governor per limitare l'utilizzo della CPU da parte della compressione dei backup &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).
   
 Se si è membri del ruolo predefinito del server **sysadmin** o **serveradmin**, è possibile modificare l'impostazione selezionando la casella **Comprimi backup**.  
   

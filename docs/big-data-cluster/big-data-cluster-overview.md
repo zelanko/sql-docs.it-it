@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c751992e666151752783e9813efa2f696fcdcb6e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 610f837c5354a72c665da067fcc8fea582ac6de3
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77903773"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152002"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>Che cosa sono i [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
@@ -117,7 +117,7 @@ Il pool di dati viene usato per il salvataggio permanente e la memorizzazione ne
 Il pool di archiviazione è formato da pod del pool di archiviazione costituiti da SQL Server in Linux, Spark, and HDFS. Tutti i nodi di archiviazione in un cluster Big Data di SQL Server sono membri di un cluster HDFS.
 
 > [!TIP]
-> Per informazioni dettagliate sull'architettura e sull'installazione dei cluster Big Data, vedere [Workshop: Architettura Microsoft dei [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters).
+> Per informazioni dettagliate sull'architettura e sull'installazione dei cluster Big Data, vedere [Workshop: Architettura Microsoft dei [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://github.com/microsoft/sqlworkshops-bdc).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9851df7630dd74a02a55c686a207576cbe99ba96
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3c6943d24ec3c1803490cea29c1a415dbb5d3bdc
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82804390"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151197"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -529,6 +529,31 @@ SELECT * FROM OPENROWSET(
 > [!IMPORTANT]
 > Il database SQL di Azure supporta solo la lettura da Archiviazione BLOB di Azure.
 
+Un altro modo per accedere all'account di archiviazione è tramite [identità gestita](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview). A tale scopo, seguire i [passaggi da 1 a 3](https://docs.microsoft.com/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview?toc=/azure/sql-data-warehouse/toc.json&bc=/azure/sql-data-warehouse/breadcrumb/toc.json#steps) per configurare il database SQL per accedere all'archiviazione tramite l'identità gestita, dopo di che è possibile implementare il codice di esempio come indicato di seguito.
+```sql
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
+GO
+
+--> Change to using Managed Identity instead of SAS key 
+CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Identity';
+GO
+
+CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
+WITH ( TYPE = BLOB_STORAGE,
+          LOCATION = 'https://****************.blob.core.windows.net/curriculum'
+          , CREDENTIAL= msi_cred --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
+);
+
+INSERT INTO achievements with (TABLOCK) (id, description)
+SELECT * FROM OPENROWSET(
+   BULK  'csv/achievements.csv',
+   DATA_SOURCE = 'MyAzureBlobStorage',
+   FORMAT ='CSV',
+   FORMATFILE='csv/achievements-c.xml',
+   FORMATFILE_DATA_SOURCE = 'MyAzureBlobStorage'
+    ) AS DataFile;
+```
 ### <a name="additional-examples"></a>Esempi aggiuntivi
 
 Per esempi aggiuntivi relativi all'uso di `INSERT...SELECT * FROM OPENROWSET(BULK...)`, vedere gli argomenti seguenti:
