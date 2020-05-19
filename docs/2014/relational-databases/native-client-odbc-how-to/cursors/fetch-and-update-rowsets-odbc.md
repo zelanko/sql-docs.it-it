@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - rowsets [ODBC]
 ms.assetid: cf0eb3b4-8b72-49fc-a845-95edc360cf93
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f04184e968b60a58c4adfa067d516b58b0a43292
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a799e2c4c7c3e7e3119fece847cb726751441c39
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200446"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701884"
 ---
 # <a name="fetch-and-update-rowsets-odbc"></a>Recuperare e aggiornare set di righe (ODBC)
     
@@ -43,7 +43,7 @@ ms.locfileid: "63200446"
   
 6.  Facoltativamente, eseguire un'istruzione UPDATE o DELETE posizionata, specificando il nome del cursore, disponibile da [SQLGetCursorName](../../native-client-odbc-api/sqlgetcursorname.md), e utilizzando un handle di istruzione diverso nella stessa connessione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Procedure per l'utilizzo di cursori &#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)  
   
   

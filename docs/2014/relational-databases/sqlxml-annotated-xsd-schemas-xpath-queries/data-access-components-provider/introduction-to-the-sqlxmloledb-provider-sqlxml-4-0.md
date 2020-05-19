@@ -11,15 +11,15 @@ helpviewer_keywords:
 - adExecuteStream flag
 - SQLXMLOLEDB Provider, about SQLXMLOLEDB Provider
 ms.assetid: 2e3f3817-4209-4bf4-9f46-248c95bc6f1b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9826143c68b8c1bd3edc6472156d140a6141968b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 34f98fabf4bc5fe5fe5a5f465d43576370ecae5b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014391"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703218"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>Introduzione al provider SQLXMLOLEDB (SQLXML 4.0)
   Il provider SQLXMLOLEDB è un provider OLE DB che espone la funzionalità [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML tramite gli oggetti ADO (ActiveX Data Objects). Il provider può tuttavia eseguire i comandi solo nella modalità di scrittura in un flusso di output di ADO. Il provider SQLXMLOLEDB non è un provider di set di righe. Quando si esegue un comando, è necessario specificare il flag adExecuteStream, che indica a ADO di usare il flusso di output specificato.  
@@ -37,13 +37,13 @@ oTestCommand.Execute , , adExecuteStream
 ## <a name="sqlxmloledb-provider-specific-properties"></a>Proprietà specifiche del provider SQLXMLOLEDB  
  Il provider SQLXMLOLEDB espone le proprietà di connessione specifiche riportate di seguito.  
   
-|Connessione<br /><br /> proprietà|Impostazione predefinita<br /><br /> (se disponibile)|Descrizione|  
+|Connessione<br /><br /> proprietà|Predefinito<br /><br /> (se disponibile)|Description|  
 |-----------------------------|----------------------------|-----------------|  
 |Provider di dati||Specifica il PROGID del provider OLE DB tramite il quale SQLXMLOLEDB esegue i comandi. A partire da SQLXML 4.0 e [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], questo provider è contenuto in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Il valore di questa proprietà è pertanto limitato a "SQLNCLI11". Per altre informazioni, vedere [Programmazione in SQL Server Native Client](../../native-client/sql-server-native-client-programming.md).|  
   
  Il provider SQLXMLOLEDB espone le proprietà dei comandi specifiche riportate di seguito.  
   
-|Comando<br /><br /> proprietà|Impostazione predefinita<br /><br /> (se disponibile)|Descrizione|  
+|Comando<br /><br /> proprietà|Predefinito<br /><br /> (se disponibile)|Description|  
 |--------------------------|----------------------------|-----------------|  
 |Percorso di base|""|Specifica il percorso file di base. Tale percorso viene utilizzato per specificare la posizione dei file XSL (XML Stylesheet Language) o dei file dello schema di mapping. Il percorso del file di base viene utilizzato anche per risolvere i percorsi relativi dei file di schema XSL o di mapping specificati nelle proprietà dello schema XSL o mapping.<br /><br /> Per un esempio in cui viene usata questa proprietà, vedere [esecuzione di query XPath &#40;provider SQLXMLOLEDB&#41;](executing-xpath-queries-sqlxmloledb-provider.md).|  
 |ClientSideXML|False|Impostare questa proprietà su False se si desidera che il processo di conversione del set di righe in XML venga eseguito sul client anziché sul server. Questa operazione si rivela utile quando si desidera spostare il carico delle prestazioni al livello intermedio.<br /><br /> Per un esempio in cui viene usata questa proprietà, vedere [esecuzione di query sql &#40;provider SQLXMLOLEDB&#41;](executing-sql-queries-sqlxmloledb-provider.md) o [esecuzione di modelli che contengono query SQL &#40;&#41;del provider SQLXMLOLEDB ](executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md).|  
@@ -56,7 +56,7 @@ oTestCommand.Execute , , adExecuteStream
   
  La tabella seguente contiene le descrizioni dei valori delle proprietà dei flag di flusso SS.  
   
-|Valore proprietà|Descrizione|  
+|Valore proprietà|Description|  
 |--------------------|-----------------|  
 |STREAM_FLAGS_DISALLOW_URL|Gli URL non sono consentiti per gli schemi di mapping o XSL.|  
 |STREAM_FLAGS_DISALLOW_ABSOLTE_PATH|Un percorso specificato per uno schema di mapping o per XSL deve essere relativo al percorso di base del modello stesso.|  

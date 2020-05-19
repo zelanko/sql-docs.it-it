@@ -11,20 +11,20 @@ helpviewer_keywords:
 - value method [XML in SQL Server]
 - nodes method [XML in SQL Server]
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 377f9ecfd0f3d94388929d78a048bc65e5020a3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 527e646f956e60b2c8495a738a85595baac383f2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193238"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702335"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>Utilizzare i metodi value() e nodes() con OPENXML
-  È possibile usare più metodi **value ()** per `xml` il tipo di dati in una clausola **Select** per generare un set di righe di valori estratti. Il metodo **nodes()** crea un riferimento interno per ogni nodo selezionato, che può essere usato per altre query. Se sono presenti numerose colonne e quando per la creazione del set di righe vengono usate espressioni di percorso complesse, si può usare una combinazione dei metodi **nodes()** e **value()** per generare il set di righe in modo più efficiente.  
+  È possibile usare più metodi **value ()** per il `xml` tipo di dati in una clausola **Select** per generare un set di righe di valori estratti. Il metodo **nodes()** crea un riferimento interno per ogni nodo selezionato, che può essere usato per altre query. Se sono presenti numerose colonne e quando per la creazione del set di righe vengono usate espressioni di percorso complesse, si può usare una combinazione dei metodi **nodes()** e **value()** per generare il set di righe in modo più efficiente.  
   
- Il metodo **Nodes ()** restituisce istanze di un tipo `xml` di dati speciale, ciascuno dei quali ha un contesto impostato su un nodo selezionato diverso. Questo tipo di istanza XML supporta i metodi **query()** , **value()** , **nodes()** e **exist()** e può essere usato nelle aggregazioni **count(\*)** . Tutti gli altri utilizzi generano un errore.  
+ Il metodo **Nodes ()** restituisce istanze di un `xml` tipo di dati speciale, ciascuno dei quali ha un contesto impostato su un nodo selezionato diverso. Questo tipo di istanza XML supporta i metodi **query()** , **value()** , **nodes()** e **exist()** e può essere usato nelle aggregazioni **count(\*)** . Tutti gli altri utilizzi generano un errore.  
   
 ## <a name="example-using-nodes"></a>Esempio: utilizzo del metodo nodes()  
  Si supponga di voler estrarre il nome e il cognome degli autori il cui nome è diverso da "David". Si supponga inoltre di voler estrarre tali informazioni sotto forma di un set di righe contenente due colonne, FirstName e LastName. A questo scopo si possono usare i metodi **nodes()** e **value()** , come mostrato nell'esempio seguente:  

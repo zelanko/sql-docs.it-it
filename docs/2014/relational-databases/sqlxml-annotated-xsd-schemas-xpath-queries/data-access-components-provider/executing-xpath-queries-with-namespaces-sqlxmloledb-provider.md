@@ -14,22 +14,22 @@ helpviewer_keywords:
 - XPath queries [SQLXML], SQLXMLOLEDB Provider
 - namespaces [SQLXML], XPath queries
 ms.assetid: 024a4b7d-435d-47ba-9e80-2c2f640108f5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f72c5841989eb12f89eda34fbfb310e125612d1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa708c4b439e3a556ea7dac345cc04f32c59e2d6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013077"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703236"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>Esecuzione di query XPath con spazi dei nomi (provider SQLXMLOLEDB)
   Le query XPath possono includere spazi dei nomi. Se gli elementi dello schema sono spazi dei nomi qualificati, ovvero includono uno spazio dei nomi di destinazione, è necessario che nelle query XPath eseguite sullo schema sia specificato lo spazio dei nomi in questione.  
   
  Poiché l'utilizzo del carattere jolly (*) non è supportato in SQLXML 4.0, è necessario specificare la query XPath utilizzando un prefisso dello spazio dei nomi. Per risolvere questo prefisso, utilizzare la proprietà Namespaces per specificare l'associazione dello spazio dei nomi.  
   
- Nell'esempio seguente, la query XPath specifica gli spazi dei nomi usando il carattere jolly (\*) e le funzioni XPath local-name () e Namespace-URI (). Questa query XPath restituisce tutti gli elementi in cui il nome locale è `Contact` e l'URI dello spazio dei nomi è `urn:myschema:Contacts`.  
+ Nell'esempio seguente, la query XPath specifica gli spazi dei nomi usando il carattere jolly ( \* ) e le funzioni XPath local-name () e Namespace-URI (). Questa query XPath restituisce tutti gli elementi in cui il nome locale è `Contact` e l'URI dello spazio dei nomi è `urn:myschema:Contacts`.  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  

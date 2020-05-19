@@ -28,18 +28,18 @@ helpviewer_keywords:
 - Execute method
 - XML Bulk Load [SQLXML], object model
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1bf68b7f2c8fd1a2cc8d753ddd6348e8161b55c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9189617e7d572cd46805e34eaa258e81362827d7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013286"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703343"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>Modello a oggetti per il caricamento bulk XML di SQL Server (SQLXML 4.0)
-  Il modello [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a oggetti Microsoft XML bulk load è costituito dall'oggetto SQLXMLBulkLoad. Questo oggetto supporta i metodi e le proprietà seguenti.  
+  Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] modello a oggetti Microsoft XML bulk load è costituito dall'oggetto SQLXMLBulkLoad. Questo oggetto supporta i metodi e le proprietà seguenti.  
   
 ## <a name="methods"></a>Metodi  
  Execute  
@@ -118,7 +118,7 @@ ms.locfileid: "66013286"
  SchemaGen  
  Specifica se creare le tabelle necessarie prima di eseguire un'operazione di caricamento bulk. Si tratta di una proprietà booleana. Se questa proprietà è impostata su TRUE, vengono create le tabelle identificate nello schema di mapping (il database deve essere presente). Se una o più tabelle sono già presenti nel database, la proprietà SGDropTables determina se le tabelle preesistenti devono essere eliminate e ricreate.  
   
- Il valore predefinito per la proprietà SchemaGen è FALSE. SchemaGen non crea vincoli PRIMARY KEY nelle tabelle appena create. SchemaGen, tuttavia, crea vincoli FOREIGN KEY nel database se è in grado di trovare le `sql:relationship` annotazioni e `sql:key-fields` corrispondenti nello schema di mapping e se il campo chiave è costituito da una sola colonna.  
+ Il valore predefinito per la proprietà SchemaGen è FALSE. SchemaGen non crea vincoli PRIMARY KEY nelle tabelle appena create. SchemaGen, tuttavia, crea vincoli FOREIGN KEY nel database se è in grado di trovare le `sql:relationship` `sql:key-fields` annotazioni e corrispondenti nello schema di mapping e se il campo chiave è costituito da una sola colonna.  
   
  Si noti che se si imposta la proprietà SchemaGen su TRUE, il caricamento bulk XML esegue le operazioni seguenti:  
   
@@ -132,7 +132,7 @@ ms.locfileid: "66013286"
  Il valore predefinito è FALSE.  
   
  SGUseID  
- Specifica se l'attributo nello schema di mapping identificato come tipo `id` può essere utilizzato per la creazione di un vincolo PRIMARY KEY quando viene creata la tabella. Utilizzare questa proprietà quando la proprietà SchemaGen è impostata su TRUE. Se SGUseID è TRUE, l'utilità SchemaGen utilizza un attributo per il `dt:type="id"` quale viene specificato come colonna chiave primaria e aggiunge il vincolo di chiave primaria appropriato durante la creazione della tabella.  
+ Specifica se l'attributo nello schema di mapping identificato come tipo `id` può essere utilizzato per la creazione di un vincolo PRIMARY KEY quando viene creata la tabella. Utilizzare questa proprietà quando la proprietà SchemaGen è impostata su TRUE. Se SGUseID è TRUE, l'utilità SchemaGen utilizza un attributo per il quale `dt:type="id"` viene specificato come colonna chiave primaria e aggiunge il vincolo di chiave primaria appropriato durante la creazione della tabella.  
   
  Il valore predefinito è FALSE.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "66013286"
  Specifica se il caricamento bulk deve essere eseguito come transazione. In questo caso, è garantito il rollback se il caricamento bulk ha esito negativo. Si tratta di una proprietà booleana. Se la proprietà è impostata su TRUE, il caricamento bulk viene eseguito in un contesto transazionale. La proprietà TempFilePath è utile solo quando Transaction è impostato su TRUE.  
   
 > [!NOTE]  
->  Se si caricano dati binari (ad esempio i tipi di dati XML bin. Hex, bin. Base64 nei tipi di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Binary, image), la proprietà Transaction deve essere impostata su false.  
+>  Se si caricano dati binari (ad esempio i tipi di dati XML bin. Hex, bin. Base64 nei tipi di dati binary, Image [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), la proprietà Transaction deve essere impostata su false.  
   
  Il valore predefinito è FALSE.  
   

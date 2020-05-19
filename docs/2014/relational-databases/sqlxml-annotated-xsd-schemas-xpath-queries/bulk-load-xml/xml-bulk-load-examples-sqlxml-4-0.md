@@ -28,21 +28,21 @@ helpviewer_keywords:
 - xml data type [SQL Server], SQLXML
 - bulk load [SQLXML], examples
 ms.assetid: 970e4553-b41d-4a12-ad50-0ee65d1f305d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fc1618a40585ad1b20d4f59019f1dd3674468da7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fed14f30b7580f94d2ac93224b84fdc02d254fd8
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013270"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703327"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>Esempi di caricamento bulk XML (SQLXML 4.0)
   Negli esempi seguenti viene illustrata la funzionalità di caricamento bulk XML in Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. In ogni esempio vengono forniti uno schema XSD e lo schema XDR equivalente.  
   
 ## <a name="bulk-loader-script-validateandbulkloadvbs"></a>Script per il caricamento bulk (ValidateAndBulkload.vbs)  
- Lo script seguente, scritto in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript), carica un documento XML nel DOM XML; viene convalidato in base a uno schema. e, se il documento è valido, esegue un caricamento bulk XML per caricare il codice XML in una [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabella. Lo script può essere utilizzato con ognuno dei singoli esempi che vi fanno riferimento più avanti in questo argomento.  
+ Lo script seguente, scritto in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript), carica un documento XML nel DOM XML; lo convalida rispetto a uno schema e, se il documento è valido, esegue un caricamento bulk XML per caricare il codice XML in una [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabella. Lo script può essere utilizzato con ognuno dei singoli esempi che vi fanno riferimento più avanti in questo argomento.  
   
 > [!NOTE]  
 >  Il caricamento bulk XML non genera un avviso o un errore se non viene caricato alcun contenuto dal file di dati. È pertanto consigliabile convalidare il file di dati XML prima di eseguire un'operazione di caricamento bulk.  
@@ -110,8 +110,8 @@ Function ValidateFile(strXmlFile,strUrn,strXsdFile)
 End Function  
 ```  
   
-## <a name="a-bulk-loading-xml-in-a-table"></a>A. Caricamento bulk di un file XML in una tabella  
- In questo esempio viene stabilita una connessione all' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza di specificata nella proprietà ConnectionString (MyServer). Nell'esempio viene inoltre specificata la Proprietà ErrorLogFile. L'output degli errori viene pertanto salvato nel file specificato ("C:\error.log"), che può essere anche spostato in un percorso diverso. Si noti inoltre che il metodo Execute ha come parametri sia il file dello schema di mapping (SampleSchema. Xml) che il file di dati XML (SampleXMLData. Xml). Quando si esegue il caricamento bulk, la tabella Cust creata nel database **tempdb** conterrà nuovi record basati sul contenuto del file di dati XML.  
+## <a name="a-bulk-loading-xml-in-a-table"></a>R. Caricamento bulk di un file XML in una tabella  
+ In questo esempio viene stabilita una connessione all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] specificata nella proprietà ConnectionString (MyServer). Nell'esempio viene inoltre specificata la Proprietà ErrorLogFile. L'output degli errori viene pertanto salvato nel file specificato ("C:\error.log"), che può essere anche spostato in un percorso diverso. Si noti inoltre che il metodo Execute ha come parametri sia il file dello schema di mapping (SampleSchema. Xml) che il file di dati XML (SampleXMLData. Xml). Quando si esegue il caricamento bulk, la tabella Cust creata nel database **tempdb** conterrà nuovi record basati sul contenuto del file di dati XML.  
   
 #### <a name="to-test-a-sample-bulk-load"></a>Per testare un caricamento bulk di esempio  
   
@@ -199,7 +199,7 @@ End Function
 ```  
   
 ## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>B. Caricamento bulk di dati XML in più tabelle  
- In questo esempio il documento XML è costituito dagli elementi ** \<Customer>** e ** \<Order>** .  
+ In questo esempio il documento XML è costituito dagli elementi ** \< Customer>** e ** \< Order>** .  
   
 ```  
 <ROOT>  
@@ -231,7 +231,7 @@ Cust(CustomerID, CompanyName, City)
 CustOrder(OrderID, CustomerID)  
 ```  
   
- Nello schema XSD seguente viene definita la vista XML delle tabelle. Lo schema specifica la relazione padre-figlio tra gli ** \<elementi Customer>** e ** \<Order>** .  
+ Nello schema XSD seguente viene definita la vista XML delle tabelle. Lo schema specifica la relazione padre-figlio tra gli elementi ** \< Customer>** e ** \< Order>** .  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -270,7 +270,7 @@ CustOrder(OrderID, CustomerID)
 </xsd:schema>  
 ```  
   
- Il caricamento bulk XML utilizza la relazione di chiave primaria/chiave esterna specificata in precedenza tra gli ** \<elementi cust>** e ** \<CustOrder>** per eseguire il caricamento bulk dei dati in entrambe le tabelle.  
+ Il caricamento bulk XML utilizza la relazione di chiave primaria/chiave esterna specificata in precedenza tra gli elementi ** \< cust>** e ** \< CustOrder>** per eseguire il caricamento bulk dei dati in entrambe le tabelle.  
   
 #### <a name="to-test-a-sample-bulk-load"></a>Per testare un caricamento bulk di esempio  
   
@@ -383,7 +383,7 @@ CustOrder(OrderID, CustomerID)
 </xsd:schema>  
 ```  
   
- Lo schema specifica un ** \<elemento Order>** con un ** \<elemento Product>** figlio. L' ** \<elemento Order>** viene mappato alla tabella Ord e l' ** \<elemento Product>** viene mappato alla tabella Product nel database. La relazione di catena specificata nell'elemento ** \<Product>** identifica una relazione M:N rappresentata dalla tabella OrderDetail. Un ordine può includere molti prodotti e un prodotto può essere incluso in molti ordini.  
+ Lo schema specifica un elemento ** \< Order>** con un elemento ** \< Product>** figlio. L'elemento ** \< Order>** viene mappato alla tabella Ord e l'elemento ** \< Product>** viene mappato alla tabella Product nel database. La relazione di catena specificata nell'elemento ** \< Product>** identifica una relazione M:N rappresentata dalla tabella OrderDetail. Un ordine può includere molti prodotti e un prodotto può essere incluso in molti ordini.  
   
  Quando si esegue il caricamento bulk di un documento XML con questo schema, vengono aggiunti record alle tabelle Ord, Product e OrderDetail.  
   
@@ -541,7 +541,7 @@ OrderDetail (OrderID, ProductID)
     </ROOT>  
     ```  
   
-4.  Creare un file nell'editor di testo o XML preferito e salvarlo con il nome ValidateAndBulkload.vbs. Aggiungere al file il codice VBScript seguente: Modificare la stringa di connessione per specificare i nomi del server e del database appropriati. Specificare il percorso appropriato per i file che vengono usati come parametri per `Execute` il metodo.  
+4.  Creare un file nell'editor di testo o XML preferito e salvarlo con il nome ValidateAndBulkload.vbs. Aggiungere al file il codice VBScript seguente: Modificare la stringa di connessione per specificare i nomi del server e del database appropriati. Specificare il percorso appropriato per i file che vengono usati come parametri per il `Execute` metodo.  
   
     ```  
     Set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
@@ -587,7 +587,7 @@ Set objBL = Nothing
   
 1.  Creare un file nell'editor di testo o XML preferito e salvarlo con il nome SampleSchema.xml. Aggiungere al file lo schema XSD fornito nell'esempio precedente "Utilizzo di relazioni a catena nello schema per il caricamento bulk XML".  
   
-2.  Creare un file nell'editor di testo o XML preferito e salvarlo con il nome SampleXMLData.xml. Aggiungere al file il documento XML fornito nell'esempio precedente "Utilizzo di relazioni a catena nello schema per il caricamento bulk XML". Rimuovere l' \<elemento radice> dal documento (per impostarlo come frammento).  
+2.  Creare un file nell'editor di testo o XML preferito e salvarlo con il nome SampleXMLData.xml. Aggiungere al file il documento XML fornito nell'esempio precedente "Utilizzo di relazioni a catena nello schema per il caricamento bulk XML". Rimuovere l' \< elemento radice> dal documento (per impostarlo come frammento).  
   
 3.  Creare un file nell'editor di testo o XML preferito e salvarlo con il nome ValidateAndBulkload.vbs. Aggiungere al file il codice VBScript fornito in questo esempio. Modificare la stringa di connessione per specificare i nomi del server e del database appropriati. Specificare il percorso appropriato per i file specificati come parametri del metodo Execute.  
   
@@ -845,7 +845,7 @@ End Sub
 </xsd:schema>  
 ```  
   
- Lo schema identifica una colonna di overflow (OverflowColumn) per la tabella Cust. Di conseguenza, tutti i dati XML non utilizzati per ogni ** \<elemento Customer>** vengono aggiunti a questa colonna.  
+ Lo schema identifica una colonna di overflow (OverflowColumn) per la tabella Cust. Di conseguenza, tutti i dati XML non utilizzati per ogni elemento ** \< Customer>** vengono aggiunti a questa colonna.  
   
 > [!NOTE]  
 >  Tutti gli elementi astratti (elementi per cui è specificato **abstract = "true"** ) e tutti gli attributi non consentiti (gli attributi per i quali non è **consentito = "true"** ) vengono considerati overflow dal caricamento bulk XML e vengono aggiunti alla colonna di overflow, se specificato. In caso contrario, vengono ignorati.  
@@ -972,7 +972,7 @@ set objBL=Nothing
 ```  
   
 > [!NOTE]  
->  Il percorso dei file temporanei deve essere un percorso condiviso a cui l'account del servizio dell'istanza di destinazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e l'account che esegue l'applicazione di caricamento bulk possano accedere. A meno che non si stia caricando il caricamento bulk in un server locale, il percorso del file temporaneo deve essere \\un percorso UNC, ad esempio \nomeserver\nomecondivisione.  
+>  Il percorso dei file temporanei deve essere un percorso condiviso a cui l'account del servizio dell'istanza di destinazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e l'account che esegue l'applicazione di caricamento bulk possano accedere. A meno che non si stia caricando il caricamento bulk in un server locale, il percorso del file temporaneo deve essere un percorso UNC, ad esempio \\ \nomeserver\nomecondivisione.  
   
 #### <a name="to-test-a-working-sample"></a>Per testare un esempio reale  
   
@@ -1031,7 +1031,7 @@ set objBL=Nothing
   
 5.  Eseguire il codice VBScript.  
   
-     Quando il valore di **CustomerID** viene `sql:datatype` specificato come GUID che include parentesi graffe ({e}), lo schema deve specificare l'oggetto corrispondente per l'attributo **CustomerID** , ad esempio:  
+     `sql:datatype`Quando il valore di **CustomerID** viene specificato come GUID che include parentesi graffe ({e}), lo schema deve specificare l'oggetto corrispondente per l'attributo **CustomerID** , ad esempio:  
   
     ```  
     <ROOT>  
@@ -1063,7 +1063,7 @@ set objBL=Nothing
     </xsd:schema>  
     ```  
   
-     Quando `sql:datatype` si specifica l'identificazione del tipo di `uniqueidentifier`colonna come, l'operazione di caricamento bulk rimuove le parentesi graffe ({e}) dal valore **CustomerID** prima di inserirlo nella colonna.  
+     Quando `sql:datatype` si specifica l'identificazione del tipo di colonna come `uniqueidentifier` , l'operazione di caricamento bulk rimuove le parentesi graffe ({e}) dal valore **CustomerID** prima di inserirlo nella colonna.  
   
  Di seguito viene indicato lo schema XDR equivalente:  
   
@@ -1245,7 +1245,7 @@ End Sub
 ## <a name="j-bulk-loading-in-xml-data-type-columns"></a>J. Caricamento bulk in colonne con tipo di dati xml  
  Se lo schema di mapping specifica una colonna con [tipo di dati XML](/sql/t-sql/xml/xml-transact-sql) tramite l' `sql:datatype="xml"` annotazione, il caricamento bulk XML è in grado di copiare elementi figlio XML per il campo mappato dal documento di origine in questa colonna.  
   
- Si consideri lo schema XSD seguente, che esegue il mapping di una vista della tabella Production.ProductModel nel database di esempio AdventureWorks. In questa tabella viene eseguito il mapping del `xml` campo CatalogDescription del tipo di dati a un ** \<elemento desc>** usando `sql:datatype="xml"` le `sql:field` annotazioni e.  
+ Si consideri lo schema XSD seguente, che esegue il mapping di una vista della tabella Production.ProductModel nel database di esempio AdventureWorks. In questa tabella viene eseguito il mapping del campo CatalogDescription del `xml` tipo di dati a un elemento ** \< desc>** usando le `sql:field` `sql:datatype="xml"` annotazioni e.  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  

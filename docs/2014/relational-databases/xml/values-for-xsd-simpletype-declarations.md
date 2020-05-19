@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - xsd:simpleType declarations
 ms.assetid: 557b972d-3af9-40bf-8382-72b05c9de1c1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f0b24a9c02e38ba8165e015cdf8d1b107e64cbaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6682bdb7443ae9ee41bd1a7f77d7b5d5ae4d7359
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193078"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702298"
 ---
 # <a name="values-for-ltxsdsimpletypegt-declarations"></a>Valori per dichiarazioni &lt;xsd:simpleType&gt;
   Nella tabella seguente vengono descritte le restrizioni applicate, basate su tutte le enumerazioni di tipi semplici XSD riconosciute.  
@@ -26,7 +26,7 @@ ms.locfileid: "63193078"
   
 |Tipo semplice|Limitazione|  
 |-----------------|----------------|  
-|`duration`|La parte dell'anno deve essere compresa nell'intervallo da-2<sup>^</sup>31 a 2<sup>^</sup>31-1. Il mese, il giorno, l'ora, il minuto e il secondo devono essere tutti all'interno dell'intervallo di 0 a 9999. La parte relativa ai secondi ha tre cifre aggiuntive di precisione a destra del separatore decimale.|  
+|`duration`|La parte dell'anno deve essere compresa nell'intervallo da-2 <sup>^</sup> 31 a 2 <sup>^</sup> 31-1. Il mese, il giorno, l'ora, il minuto e il secondo devono essere tutti all'interno dell'intervallo di 0 a 9999. La parte relativa ai secondi ha tre cifre aggiuntive di precisione a destra del separatore decimale.|  
 |`dateTime`|La parte relativa all'ora nel sottocampo del fuso orario deve essere compresa nell'intervallo accettato di -14 a +14. La parte dell'anno deve essere compresa nell'intervallo da 1 a 9999. La parte del mese deve essere compresa nell'intervallo da 1 a 12. La parte del giorno deve essere compresa nell'intervallo da 1 a 31 e deve essere una data di calendario valida. Ad esempio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rileverà e restituirà un errore per una data non valida, nel caso di 31-02-1974, in quanto il mese di febbraio non include 31 giorni.<br /><br /> Il secondo componente supporta una precisione di 100 nanosecondi. L'indicazione del fuso orario è facoltativa.<br /><br /> SQL Server 2005 supporta anni nell'intervallo -9999 a 9999. Nella nuova versione di SQL Server è supportato un intervallo di anni minore. Per altre informazioni, vedere [confrontare dati XML tipizzati con dati XML non tipizzati](compare-typed-xml-to-untyped-xml.md).|  
 |`date`|La parte dell'anno deve essere compresa nell'intervallo da 1 a 9999. La parte del mese deve essere compresa nell'intervallo da 1 a 12. La parte del giorno deve essere compresa nell'intervallo da 1 a 31 e deve essere una data di calendario valida. Ad esempio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rileverà e restituirà un errore per una data non valida, nel caso di 31-02-1974, in quanto il mese di febbraio non include 31 giorni.<br /><br /> SQL Server 2005 supporta anni nell'intervallo -9999 a 9999. Nella nuova versione di SQL Server è supportato un intervallo di anni minore. Per altre informazioni, vedere [confrontare dati XML tipizzati con dati XML non tipizzati](compare-typed-xml-to-untyped-xml.md).|  
 |`gYearMonth`|La parte dell'anno deve essere compresa nell'intervallo da -9999 a 9999.|  
