@@ -12,15 +12,15 @@ helpviewer_keywords:
 - XPath operators [SQLXML]
 - operators [SQLXML]
 ms.assetid: 177a0eb2-11ef-4459-a317-485a433ee769
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1597893c203f1223ad916f5c7acecb66ff554c76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb2026f0e6720f98f2a2af96da6058e1ce06ba61
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012435"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717744"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Specifica di operatori relazionali nelle query XPath (SQLXML 4.0)
   Negli esempi seguenti viene illustrato come specificare gli operatori relazionali nelle query XPath. Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [schema XSD con annotazioni di esempio per gli esempi XPath &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -28,13 +28,13 @@ ms.locfileid: "66012435"
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-specify-relational-operator"></a>R. Specificare un operatore relazionale  
- Questa query XPath restituisce gli elementi figlio dell'elemento ** \<Customer>** in cui il valore dell'attributo **CustomerID** è "1" e in cui gli elementi ** \<>Order** figlio contengono un ** \<OrderDetail>** figlio con un attributo **OrderQty** con un valore maggiore di 3:  
+ Questa query XPath restituisce gli elementi figlio dell'elemento ** \< Customer>** in cui il valore dell'attributo **CustomerID** è "1" e in cui gli elementi ** \<>Order** figlio contengono un ** \< OrderDetail>** figlio con un attributo **OrderQty** con un valore maggiore di 3:  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- Il predicato specificato tra parentesi quadre filtra gli ** \<elementi Customer>** . Vengono restituiti solo gli ** \<elementi Customer>** con almeno un ** \<OrderDetail>** nipotino con un valore di attributo OrderQty maggiore di 3.  
+ Il predicato specificato tra parentesi quadre filtra gli elementi ** \< Customer>** . Vengono restituiti solo gli elementi ** \< Customer>** con almeno un ** \< OrderDetail>** nipotino con un valore di attributo OrderQty maggiore di 3.  
   
  L'asse `child` è l'asse predefinito. È pertanto possibile specificare la query nel modo seguente:  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66012435"
 ```  
   
 ### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. Specificare un operatore relazionale nella query XPath e utilizzare una funzione booleana per confrontare il risultato  
- Questa query restituisce tutti gli ** \<elementi figlio Order>** del nodo di contesto con un valore dell'attributo **SalesPersonID** inferiore a 270:  
+ Questa query restituisce tutti gli elementi figlio ** \< Order>** del nodo di contesto con un valore dell'attributo **SalesPersonID** inferiore a 270:  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  

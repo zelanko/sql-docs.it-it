@@ -14,19 +14,19 @@ f1_keywords:
 helpviewer_keywords:
 - Keys collection [ADOX]
 ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a84932192fc7f51f21a7fd65c06c7417ef02da92
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1a7bebc1c05ab195d3b23c5c0894d4fcce967625
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965856"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746546"
 ---
 # <a name="keys-collection-adox"></a>Raccolta Keys (ADOX)
 Contiene tutti gli oggetti [chiave](../../../ado/reference/adox-api/key-object-adox.md) di una [tabella](../../../ado/reference/adox-api/table-object-adox.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il metodo [Append](../../../ado/reference/adox-api/append-method-adox-keys.md) per una [raccolta di chiavi](../../../ado/reference/adox-api/keys-collection-adox.md) è univoco per ADOX. È possibile scegliere:  
   
 -   Aggiungere una nuova chiave alla raccolta con il metodo [Append](../../../ado/reference/adox-api/append-method-adox-keys.md) .  

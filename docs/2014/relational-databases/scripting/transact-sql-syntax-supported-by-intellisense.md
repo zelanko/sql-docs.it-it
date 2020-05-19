@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Transact-SQL IntelliSense
 - IntelliSense [SQL Server], Transact-SQL syntax
 ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2db2ac49f1caa455c8c05529437a385d360ecaf6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5bf48818e6e1d0b5d92fbd04602d09a72276593
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242996"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718241"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>Sintassi Transact-SQL supportata da IntelliSense
   In questo argomento vengono descritti le istruzioni e gli elementi di sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] supportati da IntelliSense in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -47,9 +47,9 @@ ms.locfileid: "75242996"
   
 |Istruzione Transact-SQL|Sintassi supportata|  
 |-----------------------------|----------------------|  
-|[INSERIRE](/sql/t-sql/statements/insert-transact-sql)|Tutta la sintassi, eccetto la clausola *execute_statement* .|  
+|[INSERT](/sql/t-sql/statements/insert-transact-sql)|Tutta la sintassi, eccetto la clausola *execute_statement* .|  
 |[UPDATE](/sql/t-sql/queries/update-transact-sql)|Tutta la sintassi.|  
-|[ELIMINARE](/sql/t-sql/statements/delete-transact-sql)|Tutta la sintassi.|  
+|[DELETE](/sql/t-sql/statements/delete-transact-sql)|Tutta la sintassi.|  
 |[DICHIARARE@local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|Tutta la sintassi.|  
 |[SET@local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|Tutta la sintassi.|  
 |[EXECUTE](/sql/t-sql/language-elements/execute-transact-sql)|Esecuzione di stored procedure e di funzioni definite dall'utente e di sistema.|  
@@ -57,7 +57,7 @@ ms.locfileid: "75242996"
 |[CREA VISTA](/sql/t-sql/statements/create-view-transact-sql)|Tutta la sintassi.|  
 |[CREATE PROCEDURE](/sql/t-sql/statements/create-procedure-transact-sql)|Tutta la sintassi, con le eccezioni seguenti:<br /><br /> Non è disponibile supporto IntelliSense per la clausola EXTERNAL NAME.<br /><br /> Nella clausola AS IntelliSense supporta solo le istruzioni e la sintassi elencate in questo argomento.|  
 |[ALTER PROCEDURE](/sql/t-sql/statements/alter-procedure-transact-sql)|Tutta la sintassi, con le eccezioni seguenti:<br /><br /> Non è disponibile supporto IntelliSense per la clausola EXTERNAL NAME.<br /><br /> Nella clausola AS IntelliSense supporta solo le istruzioni e la sintassi elencate in questo argomento.|  
-|[USARE](/sql/t-sql/language-elements/use-transact-sql)|Tutta la sintassi.|  
+|[USE](/sql/t-sql/language-elements/use-transact-sql)|Tutta la sintassi.|  
   
 ## <a name="intellisense-in-supported-statements"></a>IntelliSense in istruzioni supportate  
  Nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] IntelliSense supporta i seguenti elementi della sintassi quando vengono utilizzati in una delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] supportate:  
@@ -93,7 +93,7 @@ ms.locfileid: "75242996"
   
  IntelliSense non è disponibile per gli elementi elencati sopra quando vengono usati in altre istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] . Il supporto IntelliSense è ad esempio disponibile per i nomi di colonna utilizzati in un'istruzione SELECT, ma non per le colonne utilizzate nell'istruzione CREATE FUNCTION.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  All'interno di uno script o di un batch [!INCLUDE[tsql](../../includes/tsql-md.md)] , nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] IntelliSense supporta solo le istruzioni e la sintassi elencate in questo argomento. Negli esempi di codice [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti sono mostrati le istruzioni e gli elementi della sintassi che IntelliSense supporta. Ad esempio, nel batch seguente, IntelliSense è disponibile per l'istruzione `SELECT` quando è codificata da sola, ma non quando `SELECT` è contenuta in un'istruzione `CREATE FUNCTION` .  
   
 ```  

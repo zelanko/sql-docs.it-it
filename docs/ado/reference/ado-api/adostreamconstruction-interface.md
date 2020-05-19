@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ADOStreamConstruction interface [ADO]
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 70a6dd02722a34159b345a83b32897aa8c38d0ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2c120667a0ce279ea03922adf487f58c1fdc92de
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920781"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747053"
 ---
 # <a name="adostreamconstruction-interface"></a>Interfaccia ADOStreamConstruction
 L'interfaccia **ADOStreamConstruction** viene utilizzata per costruire un oggetto **flusso** ADO da un oggetto OLE DB **IStream** in un'applicazione C/C++.  
@@ -32,13 +32,13 @@ L'interfaccia **ADOStreamConstruction** viene utilizzata per costruire un oggett
 |[Proprietà Stream](../../../ado/reference/ado-api/stream-property.md)|Lettura/Scrittura. Ottiene o imposta un oggetto **flusso** OLE DB.|  
   
 ## <a name="methods"></a>Metodi  
- Nessuno.  
+ No.  
   
-## <a name="events"></a>Events  
- Nessuno.  
+## <a name="events"></a>Eventi  
+ No.  
   
-## <a name="remarks"></a>Osservazioni  
- Dato un oggetto OLE DB **IStream** (`pStream`), la costruzione di un oggetto **flusso** ADO (`adoStr`) equivale alle tre operazioni di base seguenti:  
+## <a name="remarks"></a>Commenti  
+ Dato un oggetto OLE DB **IStream** ( `pStream` ), la costruzione di un oggetto **flusso** ADO ( `adoStr` ) equivale alle tre operazioni di base seguenti:  
   
 1.  Creazione di un oggetto **flusso** ADO:  
   
@@ -63,7 +63,7 @@ pRowset->QueryInterface(IID_IUnknown, (void**)&pUnk);
 adoStrConstruct->put_Stream(pUnk);  
 ```  
   
- L' `adoStr` oggetto risultante rappresenta ora l'oggetto **flusso** ADO costruito dal OLE DB oggetto **IStream** .  
+ L'oggetto risultante `adoStr` rappresenta ora l'oggetto **flusso** ADO costruito dal OLE DB oggetto **IStream** .  
   
 ## <a name="requirements"></a>Requisiti  
  **Versione:** ADO 2,0 o versione successiva  

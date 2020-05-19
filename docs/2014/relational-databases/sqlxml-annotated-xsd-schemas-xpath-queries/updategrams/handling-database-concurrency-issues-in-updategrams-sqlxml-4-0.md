@@ -17,25 +17,25 @@ helpviewer_keywords:
 - concurrency [SQLXML]
 - intermediate concurrency protection [SQLXML]
 ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b561de7d655001e2c62f7c85e57cc7eb098af12d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aca690da62c0a25bb5b40464d7e13574d83064f5
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014745"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717524"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>Gestione dei problemi di concorrenza di database negli updategram (SQLXML 4.0)
-  Analogamente ad altri meccanismi di aggiornamento del database, gli updategram devono gestire aggiornamenti simultanei ai dati in un ambiente multiutente. Gli updategram utilizzano il controllo della concorrenza ottimistica, che esegue il confronto dei dati di campo come snapshot per garantire che i dati da aggiornare non siano già stati modificati da un'altra applicazione utente dal momento in cui sono stati letti dal database. Gli updategram includono questi valori di snapshot nel blocco ** \<before>** degli updategram. Prima di aggiornare il database, l'updategram controlla i valori specificati in ** \<prima di>** blocco rispetto ai valori attualmente presenti nel database per garantire che l'aggiornamento sia valido.  
+  Analogamente ad altri meccanismi di aggiornamento del database, gli updategram devono gestire aggiornamenti simultanei ai dati in un ambiente multiutente. Gli updategram utilizzano il controllo della concorrenza ottimistica, che esegue il confronto dei dati di campo come snapshot per garantire che i dati da aggiornare non siano già stati modificati da un'altra applicazione utente dal momento in cui sono stati letti dal database. Gli updategram includono questi valori di snapshot nel blocco ** \< before>** degli updategram. Prima di aggiornare il database, l'updategram controlla i valori specificati in prima di ** \<>** blocco rispetto ai valori attualmente presenti nel database per garantire che l'aggiornamento sia valido.  
   
  Il controllo della concorrenza ottimistica offre tre livelli di protezione in un updategram: basso (nessuno), intermedio ed elevato. È possibile stabilire il livello di protezione necessario specificando l'updategram di conseguenza.  
   
 ## <a name="lowest-level-of-protection"></a>Livello di protezione più basso  
- Questo livello corrisponde a un aggiornamento nascosto, in cui l'aggiornamento viene elaborato senza riferimento ad altri aggiornamenti eseguiti dall'ultima lettura del database. In tal caso, è necessario specificare solo le colonne chiave primaria nel blocco ** \<prima di>** per identificare il record e specificare le informazioni aggiornate nel blocco ** \<after>** .  
+ Questo livello corrisponde a un aggiornamento nascosto, in cui l'aggiornamento viene elaborato senza riferimento ad altri aggiornamenti eseguiti dall'ultima lettura del database. In tal caso, è necessario specificare solo le colonne chiave primaria nel blocco ** \< prima di>** per identificare il record e specificare le informazioni aggiornate nel blocco ** \< after>** .  
   
- Il nuovo numero di telefono del contatto nell'updategram seguente, ad esempio, è corretto, indipendentemente dal numero di telefono precedente. Si noti come il ** \<blocco before>** specifica solo la colonna chiave primaria (ContactID).  
+ Il nuovo numero di telefono del contatto nell'updategram seguente, ad esempio, è corretto, indipendentemente dal numero di telefono precedente. Si noti come il blocco ** \< before>** specifica solo la colonna chiave primaria (ContactID).  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -53,9 +53,9 @@ ms.locfileid: "66014745"
 ## <a name="intermediate-level-of-protection"></a>Livello di protezione intermedio  
  In questo livello di protezione l'updategram confronta i valori correnti dei dati aggiornati con i valori nelle colonne del database per verificare che i valori non siano stati modificati da altre transazioni dalla lettura del record da parte della transazione.  
   
- È possibile ottenere questo livello di protezione specificando le colonne chiave primaria e le colonne da aggiornare nel blocco ** \<prima del>** .  
+ È possibile ottenere questo livello di protezione specificando le colonne chiave primaria e le colonne da aggiornare nel blocco ** \< prima del>** .  
   
- Questo updategram, ad esempio, modifica il valore nella colonna Phone della tabella Person.Contact per il contatto con ContactID 1. Il ** \<blocco before>** specifica l'attributo **Phone** per garantire che il valore dell'attributo corrisponda al valore nella colonna corrispondente nel database prima di applicare il valore aggiornato.  
+ Questo updategram, ad esempio, modifica il valore nella colonna Phone della tabella Person.Contact per il contatto con ContactID 1. Il blocco ** \< before>** specifica l'attributo **Phone** per garantire che il valore dell'attributo corrisponda al valore nella colonna corrispondente nel database prima di applicare il valore aggiornato.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -75,11 +75,11 @@ ms.locfileid: "66014745"
   
  Per ottenere questo livello di protezione elevato contro aggiornamenti simultanei, sono disponibili due metodi:  
   
--   Specificare colonne aggiuntive nella tabella del blocco ** \<before>** .  
+-   Specificare colonne aggiuntive nella tabella del blocco ** \< before>** .  
   
-     Se si specificano colonne aggiuntive nel blocco ** \<before>** , l'updategram confronta i valori specificati per le colonne con i valori presenti nel database prima di applicare l'aggiornamento. Se una o più delle colonne dei record è stata modificata dal momento in cui la transazione ha letto il record, l'updategram non esegue l'aggiornamento.  
+     Se si specificano colonne aggiuntive nel blocco ** \< before>** , l'updategram confronta i valori specificati per le colonne con i valori presenti nel database prima di applicare l'aggiornamento. Se una o più delle colonne dei record è stata modificata dal momento in cui la transazione ha letto il record, l'updategram non esegue l'aggiornamento.  
   
-     Nell'updategram seguente, ad esempio, viene aggiornato il nome dello spostamento, ma vengono specificate colonne aggiuntive (StartTime, EndTime) nel blocco ** \<before>** , in modo da richiedere un livello di protezione superiore rispetto agli aggiornamenti simultanei.  
+     Nell'updategram seguente, ad esempio, viene aggiornato il nome dello spostamento, ma vengono specificate colonne aggiuntive (StartTime, EndTime) nel blocco ** \< before>** , in modo da richiedere un livello di protezione superiore rispetto agli aggiornamenti simultanei.  
   
     ```  
     <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -97,11 +97,11 @@ ms.locfileid: "66014745"
     </ROOT>  
     ```  
   
-     In questo esempio viene specificato il livello di protezione più elevato specificando tutti i valori di colonna per il record nel blocco ** \<before>** .  
+     In questo esempio viene specificato il livello di protezione più elevato specificando tutti i valori di colonna per il record nel blocco ** \< before>** .  
   
--   Specificare la colonna timestamp (se disponibile) nel blocco ** \<before>** .  
+-   Specificare la colonna timestamp (se disponibile) nel blocco ** \< before>** .  
   
-     Anziché specificare tutte le colonne dei record nel blocco `<before`>, è possibile specificare solo la colonna timestamp, se presente nella tabella, insieme alle colonne chiave primaria nel blocco ** \<prima di>** . Il database aggiorna la colonna timestamp a un valore univoco dopo ogni aggiornamento del record. In questo caso, l'updategram confronta il valore del timestamp con il valore corrispondente nel database. Il valore del timestamp archiviato nel database è un valore binary. La colonna timestamp, pertanto, deve essere specificata nello schema come `dt:type="bin.hex"`, `dt:type="bin.base64"` o `sql:datatype="timestamp"`. È possibile specificare il tipo di `xml` dati o il tipo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di dati.  
+     Anziché specificare tutte le colonne dei record nel `<before` blocco>, è possibile specificare solo la colonna timestamp, se presente nella tabella, insieme alle colonne chiave primaria nel blocco ** \< prima di>** . Il database aggiorna la colonna timestamp a un valore univoco dopo ogni aggiornamento del record. In questo caso, l'updategram confronta il valore del timestamp con il valore corrispondente nel database. Il valore del timestamp archiviato nel database è un valore binary. La colonna timestamp, pertanto, deve essere specificata nello schema come `dt:type="bin.hex"`, `dt:type="bin.base64"` o `sql:datatype="timestamp"`. È possibile specificare il tipo di `xml` dati o il [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo di dati.  
   
 #### <a name="to-test-the-updategram"></a>Per testare l'updategram  
   
@@ -186,7 +186,7 @@ ms.locfileid: "66014745"
 </Schema>  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Considerazioni sulla sicurezza degli updategram &#40;SQLXML 4,0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Visual C++ code examples [ADO], event model
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1af45d9ac4674af98097083e2da89a217f17a58f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bce894f1e0cce8c8d8800b2633924f9cc5bc6bd9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921011"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747345"
 ---
 # <a name="ado-events-model-example-vc"></a>Esempio del modello di eventi ADO (VC++)
 La sezione Visual C++ della [creazione di un'istanza dell'evento ADO per lingua](../../../ado/guide/data/ado-event-instantiation-by-language.md) fornisce una descrizione generale di come creare un'istanza del modello di eventi ADO. Di seguito è riportato un esempio specifico di creazione di un'istanza del modello di eventi all'interno dell'ambiente creato dalla direttiva **#import** .  
@@ -44,7 +44,7 @@ La sezione Visual C++ della [creazione di un'istanza dell'evento ADO per lingua]
   
 -   L'esempio è scritto come applicazione console.  
   
--   Inserire il proprio codice nel commento "`// Do some work`".  
+-   Inserire il proprio codice nel commento " `// Do some work` ".  
   
 -   Per impostazione predefinita, tutti i gestori eventi non effettuano alcuna operazione e annullano altre notifiche. È necessario inserire il codice appropriato per l'applicazione e consentire le notifiche, se necessario.  
   

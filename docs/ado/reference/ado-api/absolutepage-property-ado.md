@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - AbsolutePage property [ADO]
 ms.assetid: ddb58a35-ec3a-423c-a504-3c65e62c23d4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 12b2e6c6f12fc06cb223551b55cb7f9a38df9ac3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0da08a0c51c8d4d89329bbe9c36cacd7979c1e71
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921836"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747543"
 ---
 # <a name="absolutepage-property-ado"></a>Proprietà AbsolutePage (ADO)
 Indica in quale pagina si trova il record corrente.  
@@ -30,7 +30,7 @@ Indica in quale pagina si trova il record corrente.
   
  Per il codice a 64 bit, usare un tipo di dati che fornisce l'archiviazione di un valore a 64 bit. Ad esempio, è possibile usare un valore **Long** o un altro valore che può avere una lunghezza di 64 bit, ad esempio DBORDINAL. Non usare i valori **PositionEnum** perché sono limitati alla lunghezza di 32 bit.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questa proprietà può essere usata per identificare il numero di pagina in cui si trova il record corrente. Usa la proprietà [pageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) per dividere logicamente il numero totale di set di righe dell'oggetto **Recordset** in una serie di pagine, ognuna delle quali ha il numero di record uguale a **pageSize** (ad eccezione dell'ultima pagina, che può avere meno record). Il provider deve supportare la funzionalità appropriata affinché questa proprietà sia disponibile.  
   
 -   Quando si recupera o si imposta la proprietà **AbsolutePage** , ADO usa la proprietà [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) e la proprietà [pageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) insieme come indicato di seguito:  

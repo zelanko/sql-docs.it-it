@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - IndexNulls property [ADOX]
 ms.assetid: 313b0bf7-3f37-4823-8fca-bd9c80e078a7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 25a319d81fb3ecde22691f5197e93acb38a5e04a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f0834560d90fe8dc5d8a5130f024bac7b3bc3517
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966008"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746834"
 ---
 # <a name="indexnulls-property-adox"></a>Proprietà IndexNulls (ADOX)
 Indica se i record con valori null nei rispettivi campi di indice contengono voci di indice.  
@@ -32,7 +32,7 @@ Indica se i record con valori null nei rispettivi campi di indice contengono voc
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta e restituisce un valore [AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md) . Il valore predefinito è **adIndexNullsDisallow**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questa proprietà è di sola lettura sugli oggetti [Indice](../../../ado/reference/adox-api/index-object-adox.md) già accodati a una raccolta.  
   
 ## <a name="applies-to"></a>Si applica a  

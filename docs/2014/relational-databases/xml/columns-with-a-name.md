@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - names [SQL Server], columns with
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a57f4b1a56c3a23c9be8957f97fa7b352f9674a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a689c29297703e48a1f759643599dbc93843d9f0
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62638165"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717231"
 ---
 # <a name="columns-with-a-name"></a>Colonne provviste di un nome
   Di seguito vengono illustrate le condizioni specifiche in cui viene eseguito il mapping tra le colonne del set di righe provviste di nome e il codice XML risultante, con distinzione tra maiuscole e minuscole:  
@@ -33,7 +33,7 @@ ms.locfileid: "62638165"
 -   Una colonna ha un nome diverso.  
   
 ## <a name="column-name-starts-with-an-at-sign-"></a>Il nome di colonna inizia con un simbolo di chiocciola (\@)  
- Se il nome della colonna inizia con un simbolo di\@chiocciola () e non contiene una barra (/), viene creato un attributo `row` dell'elemento <> con il valore di colonna corrispondente. Ad esempio, la query seguente restituisce un set di righe a due colonne (\@PmId, Name). Nel codice XML risultante, un attributo **PmId** viene aggiunto all'elemento <`row`> corrispondente e gli viene assegnato un valore di ProductModelID.  
+ Se il nome della colonna inizia con un simbolo di chiocciola ( \@ ) e non contiene una barra (/), viene creato un attributo dell' `row` elemento <> con il valore di colonna corrispondente. Ad esempio, la query seguente restituisce un set di righe a due colonne (\@PmId, Name). Nel codice XML risultante, un attributo **PmId** viene aggiunto all'elemento <`row`> corrispondente e gli viene assegnato un valore di ProductModelID.  
   
 ```  
   
@@ -66,7 +66,7 @@ go
 ```  
   
 ## <a name="column-name-does-not-start-with-an-at-sign-"></a>Il nome di colonna non inizia con un simbolo di chiocciola (\@)  
- Se il nome di colonna non inizia con un simbolo di chiocciola (\@), non è uno dei test di nodo XPath e non contiene una barra (/), viene creato un elemento XML che è un sottoelemento dell'elemento riga <`row`> per impostazione predefinita.  
+ Se il nome di colonna non inizia con un simbolo di chiocciola ( \@ ), non è uno dei test di nodo XPath e non contiene una barra (/), viene creato un elemento XML che è un sottoelemento dell'elemento riga <`row`> per impostazione predefinita.  
   
  La query seguente specifica il nome della colonna, il risultato. Un elemento figlio <`result`> viene pertanto aggiunto all'elemento <`row`>.  
   
@@ -128,7 +128,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- I nomi di colonna vengono usati come un percorso nella creazione del codice XML in modalità PATH. Il nome della colonna che contiene i valori ID dipendente inizia con\@''. Viene pertanto aggiunto un attributo **EmpID**all'elemento <`row`>. I nomi di tutte le altre colonne contengono una barra ("/"), che indica la gerarchia. Il codice XML risultante avrà l'elemento figlio <`EmpName`> sotto l'elemento <`row`> e l'elemento figlio <`EmpName`> avrà gli elementi figlio <`First`>, <`Middle`> e <`Last`>.  
+ I nomi di colonna vengono usati come un percorso nella creazione del codice XML in modalità PATH. Il nome della colonna che contiene i valori ID dipendente inizia con ' \@ '. Viene pertanto aggiunto un attributo **EmpID**all' `row` elemento <>. I nomi di tutte le altre colonne contengono una barra ("/"), che indica la gerarchia. Il codice XML risultante avrà l'elemento figlio <`EmpName`> sotto l'elemento <`row`> e l'elemento figlio <`EmpName`> avrà gli elementi figlio <`First`>, <`Middle`> e <`Last`>.  
   
 ```  
 <row EmpID="1">  

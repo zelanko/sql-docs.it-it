@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO, methods
 - methods [ADO]
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8df204daeda82f809cf50246590141729e3608e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 65145ce8f77c352fb24a2a206d99828298b6a60c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920920"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747252"
 ---
 # <a name="ado-methods"></a>Metodi ADO
 
@@ -31,9 +31,9 @@ ms.locfileid: "67920920"
 |[Annulla](../../../ado/reference/ado-api/cancel-method-ado.md)|Annulla l'esecuzione di una chiamata al metodo asincrona in sospeso.|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Annulla un aggiornamento batch in sospeso.|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Annulla tutte le modifiche apportate alla riga corrente o nuova di un oggetto **Recordset** oppure alla raccolta **Fields** di un oggetto **record** , prima di chiamare il metodo **Update** .|  
-|[Deselezionare](../../../ado/reference/ado-api/clear-method-ado.md)|Rimuove tutti gli oggetti **Error** dalla raccolta **Errors** .|  
+|[Cancella](../../../ado/reference/ado-api/clear-method-ado.md)|Rimuove tutti gli oggetti **Error** dalla raccolta **Errors** .|  
 |[Clone](../../../ado/reference/ado-api/clone-method-ado.md) (Clona)|Crea un oggetto **Recordset** duplicato da un oggetto **Recordset** esistente. Facoltativamente, specifica che il clone deve essere di sola lettura.|  
-|[Chiudi](../../../ado/reference/ado-api/close-method-ado.md)|Chiude un oggetto aperto e tutti gli oggetti dipendenti.|  
+|[Close](../../../ado/reference/ado-api/close-method-ado.md)|Chiude un oggetto aperto e tutti gli oggetti dipendenti.|  
 |[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)|Confronta due segnalibri e restituisce un'indicazione dei valori relativi.|  
 |[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)|Copia un file o una directory e il relativo contenuto in un'altra posizione.|  
 |[CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md)|Copia il numero specificato di caratteri o byte (a seconda del **tipo**) nel **flusso** in un altro oggetto **flusso** .|  
@@ -44,7 +44,7 @@ ms.locfileid: "67920920"
 |[DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)|Elimina un file o una directory e tutte le relative sottodirectory.|  
 |[Execute (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|Esegue la query, l'istruzione SQL o stored procedure specificata nella proprietà **CommandText** .|  
 |[Execute (connessione ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|Esegue la query, l'istruzione SQL, il stored procedure o il testo specifico del provider specificato.|  
-|[Trovare](../../../ado/reference/ado-api/find-method-ado.md)|Esegue la ricerca di un **Recordset** per la riga che soddisfa i criteri specificati.|  
+|[Trova](../../../ado/reference/ado-api/find-method-ado.md)|Esegue la ricerca di un **Recordset** per la riga che soddisfa i criteri specificati.|  
 |[Filo](../../../ado/reference/ado-api/flush-method-ado.md)|Impone il contenuto del **flusso** rimanente nel buffer ADO all'oggetto sottostante a cui è associato il **flusso** .|  
 |[Metodo get_OLEDBCommand](../../../ado/reference/ado-api/get-oledbcommand-method.md)|Restituisce il comando OLEDB sottostante, propagando prima di tutto le informazioni sui parametri impostate nel comando ADO al comando OLEDB.|  
 |[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|Restituisce un **Recordset** le cui righe rappresentano i file e le sottodirectory della directory rappresentata da questo **record**.|  

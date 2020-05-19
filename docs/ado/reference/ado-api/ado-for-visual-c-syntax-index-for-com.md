@@ -14,14 +14,14 @@ helpviewer_keywords:
 - ADO for Visual C++ syntax [ADO]
 - syntax indexes [ADO], ADO for Visual C++ syntax
 ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 74562de6d4bd606e4cb9217cdd119646f51e2e47
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 044dcc2fb10463e592a953725afc2413c3a5880f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920985"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747303"
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>Indice sintassi ADO per Visual C++ per COM
 Questo indice è un riferimento incrociato alla guida di riferimento al linguaggio ADO basata su Microsoft Visual C++.  
@@ -32,7 +32,7 @@ Questo indice è un riferimento incrociato alla guida di riferimento al linguagg
   
  La sintassi del metodo e della proprietà in Visual C++ è elencata per gli elementi seguenti:  
   
--   [Raccolte](../../../ado/reference/ado-api/collections-ado-for-visual-c-syntax.md)  
+-   [raccolte](../../../ado/reference/ado-api/collections-ado-for-visual-c-syntax.md)  
   
 -   [Oggetto Command](../../../ado/reference/ado-api/command-ado-for-visual-c-syntax.md)  
   

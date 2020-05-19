@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ADORecordConstruction interface [ADO]
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c56ba0b9d7ebebbf4a9e4baf669bbdc6eb84355e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 12a9b2cae1c516ed3bf8caef8127034e6ff2a847
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920803"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747179"
 ---
 # <a name="adorecordconstruction-interface"></a>Interfaccia ADORecordConstruction
 L'interfaccia **ADORecordConstruction**viene utilizzata per costruire un oggetto **record** ADO da un oggetto OLE DB **Row** in un'applicazione C/C++.  
@@ -35,13 +35,13 @@ L'interfaccia **ADORecordConstruction**viene utilizzata per costruire un oggetto
 |[Riga](../../../ado/reference/ado-api/row-property-ado.md)|Lettura/Scrittura.<br />Ottiene o imposta un oggetto OLE DB **riga** da/in questo oggetto **record** ADO.|  
   
 ## <a name="methods"></a>Metodi  
- Nessuno.  
+ No.  
   
-## <a name="events"></a>Events  
- Nessuno.  
+## <a name="events"></a>Eventi  
+ No.  
   
 ## <a name="remarks"></a>Osservazioni  
- Dato un oggetto OLE DB **Row** (`pRow`), la costruzione di un oggetto **record** ADO (`adoR`), equivale alle tre operazioni di base seguenti:  
+ Dato un oggetto OLE DB **Row** ( `pRow` ), la costruzione di un oggetto **record** ADO ( `adoR` ), equivale alle tre operazioni di base seguenti:  
   
 1.  Creazione di un oggetto **record** ADO:  
   

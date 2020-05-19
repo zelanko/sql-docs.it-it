@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLMoreResults function
 ms.assetid: f65698c3-7291-480d-9dab-58b13feb7771
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 85e0008e22e38b82fbd006a91eca80f67d7d8289
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50679a4d9654307140ef798c0ab612349d1ed175
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046726"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705970"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
   **SQLMoreResults** consente all'applicazione di recuperare più set di righe di risultati. Un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT contenente una clausola COMPUTE, o un batch inviato di istruzioni ODBC o [!INCLUDE[tsql](../../includes/tsql-md.md)] , comporta la generazione di più set di risultati da parte del driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non consente la creazione di un cursore server per elaborare i risultati in entrambi i casi. Pertanto, lo sviluppatore deve assicurarsi che l'istruzione ODBC sia bloccata. Lo sviluppatore deve esaurire i dati restituiti o annullare l'istruzione ODBC prima di elaborare i dati di altre istruzioni attive nella connessione.  

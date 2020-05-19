@@ -13,15 +13,15 @@ helpviewer_keywords:
 - undocumented [SQL Server]
 - documentation policy [SQL Server]
 ms.assetid: 6854121d-429d-4d1b-9d64-342583e08378
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b5a25f4f151bb7aa1a9deef24486bd533d5755b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac8669fc161dfba1f7ed1f7c3b16e15619be2ff6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62837521"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706927"
 ---
 # <a name="legal-notice-for-documentation"></a>Nota legale sulla documentazione
   Questo documento viene fornito "così com'è". Le informazioni e le opinioni espresse nel presente documento, inclusi gli URL e altri riferimenti a siti Web Internet, sono soggette a modifiche senza preavviso. L'utente accetta di usarle a proprio rischio.  

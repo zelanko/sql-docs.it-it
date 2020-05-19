@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Boolean-valued predicates
 - multiple predicates
 ms.assetid: 5f6e7219-6911-4bca-a54b-56b95e0b43dd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d04cefe217d72d36ff8cd342c27addca6bcff21e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2ddbcecdc42033ad9ae54732eee9eb3d2205cee
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012455"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717778"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>Specifica di predicati con valori booleani nelle query XPath (SQLXML 4.0)
   Negli esempi seguenti viene illustrato come specificare predicati con valori booleani nelle query XPath. Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [schema XSD con annotazioni di esempio per gli esempi XPath &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -89,13 +89,13 @@ ms.locfileid: "66012455"
     ```  
   
 ### <a name="b-specify-successive-and-nested-predicates"></a>B. Specificare predicati successivi e nidificati  
- Nella query seguente viene illustrato l'utilizzo di predicati successivi. La query restituisce tutti gli **SalesPersonID** **TerritoryID** ** \<** elementi figlio del cliente>del nodo di contesto con un attributo SalesPersonID con valore 277 e un attributo TerritoryID con valore 3:  
+ Nella query seguente viene illustrato l'utilizzo di predicati successivi. La query restituisce tutti gli elementi figlio del ** \< cliente>** del nodo di contesto con un attributo **SalesPersonID** con valore 277 e un attributo **TerritoryID** con valore 3:  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- La query restituisce gli ** \<elementi Customer>** che soddisfano entrambe le condizioni specificate nei predicati.  
+ La query restituisce gli elementi ** \< Customer>** che soddisfano entrambe le condizioni specificate nei predicati.  
   
  È possibile specificare un collegamento all'asse `attribute` (@) e, poiché l'asse `child` è l'asse predefinito, può essere omesso dalla query:  
   
@@ -103,7 +103,7 @@ ms.locfileid: "66012455"
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- Nella query XPath seguente viene illustrato l'utilizzo di predicati nidificati. **SalesPersonID** La query restituisce tutti gli ** \<** elementi figlio del cliente>del nodo di contesto che includono ** \<Order>** elementi figlio con almeno un ** \<elemento Order>** con valore di attributo SalesPersonID pari a 2.  
+ Nella query XPath seguente viene illustrato l'utilizzo di predicati nidificati. La query restituisce tutti gli elementi figlio del ** \< cliente>** del nodo di contesto che includono ** \< Order>** elementi figlio con almeno un elemento ** \< Order>** con valore di attributo **SalesPersonID** pari a 2.  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -166,7 +166,7 @@ ms.locfileid: "66012455"
 ```  
   
 ### <a name="c-specify-a-top-level-predicate"></a>C. Specificare un predicato di livello superiore  
- La query seguente restituisce il ** \<cliente>** nodi elemento figlio del nodo di contesto che dispongono ** \<** degli elementi figlio Order>. La query testa il percorso come predicato di livello superiore:  
+ La query seguente restituisce il ** \< cliente>** nodi elemento figlio del nodo di contesto che dispongono degli elementi figlio ** \< Order>** . La query testa il percorso come predicato di livello superiore:  
   
 ```  
 /child::Customer[child::Order]  

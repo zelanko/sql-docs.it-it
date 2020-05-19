@@ -11,20 +11,20 @@ topic_type:
 helpviewer_keywords:
 - SQLNativeSql function
 ms.assetid: 2d999fec-9e22-4514-ad5f-22a64b82f95b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0556d4e3b06c68e70513d68a5c2616bf47fc299c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8329eac48b395467c8c9c7354f28649d44149248
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046736"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705961"
 ---
 # <a name="sqlnativesql"></a>SQLNativeSql
   Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client soddisfa richieste di **SQLNativeSql** senza visitare il server. La funzione verifica in modo efficiente la sintassi di istruzioni SQL. Il controllo della sintassi non determina se gli identificatori o i risultati di espressioni nelle istruzioni SQL sono validi. È possibile che l'esecuzione del formato SQL nativo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito da **SQLNativeSql** non riesca.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQLNativeSql (funzione)](https://go.microsoft.com/fwlink/?LinkID=59358)   
  [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   

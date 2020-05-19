@@ -12,14 +12,14 @@ helpviewer_keywords:
 - registering custom business objects in RDS [ADO]
 - business objects in RDS [ADO]
 ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f998463e0f8190aa040b801d2fd29c732bb31dce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9f110447fbb0f00c037361b00945b228449caf4f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922360"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747718"
 ---
 # <a name="registering-a-custom-business-object"></a>Registrazione di un oggetto business personalizzato
 Per avviare correttamente un oggetto business personalizzato (file con estensione dll o exe) tramite il server Web, è necessario immettere il ProgID dell'oggetto business nel registro di sistema, come illustrato in questa procedura. Questa funzionalità RDS protegge la sicurezza del server Web eseguendo solo file eseguibili approvati.  

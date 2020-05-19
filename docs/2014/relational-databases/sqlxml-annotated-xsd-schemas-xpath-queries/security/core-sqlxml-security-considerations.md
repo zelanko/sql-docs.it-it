@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - security [SQLXML], about security
 ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cc25af8e18e826ce6b8323d714f090ac3d571a97
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2046229ded8ec429d12c54939d7432e478aaf3ba
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010549"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717633"
 ---
 # <a name="core-sqlxml-security-considerations"></a>Considerazioni principali sulla sicurezza di SQLXML 4.0
   Di seguito sono riportate alcune linee guida relative alla sicurezza quando si utilizza SQLXML per l'accesso ai dati.  
@@ -48,7 +48,7 @@ ms.locfileid: "66010549"
   
 -   Quando si eseguono DiffGram, in SQLXML vengono tradotti in comandi DELETE, UPDATE e INSERT sull'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Tali comandi influiscono solo sui dati esistenti. I comandi generati da SQLXML non modificheranno mai il database. Gli utenti devono inviare comandi espliciti per modificare la struttura del database, includendoli ad esempio in un blocco `sql:query` di un modello.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Considerazioni sulla sicurezza per SQLXML 4.0](sqlxml-4-0-security-considerations.md)  
   
   

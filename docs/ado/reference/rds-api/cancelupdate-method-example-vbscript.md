@@ -12,20 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - CancelUpdate method [ADO], VBScript example
 ms.assetid: c23912f0-1288-4727-8fb4-f643b8811cf7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b92db747267f250501b11200c870526fe79e713b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d560233efc7623a390fbd2fc63e8add5f26cd157
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964608"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746412"
 ---
 # <a name="cancelupdate-method-example-vbscript"></a>Esempio del metodo CancelUpdate (VBScript)
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Per testare questo esempio, tagliare e incollare il codice tra i \<tag body> \<e/body> in un documento HTML normale e denominarlo **CancelUpdateVBS. asp**. Lo script ASP identificherà il server Internet. Sarà necessario modificare il nome del server in modo da riflettere la propria configurazione. È sufficiente modificare il valore della stringa di connessione da MyServer al nome dell'installazione di SQL Server.  
+ Per testare questo esempio, tagliare e incollare il codice tra i \< tag Body> e \< /Body> in un documento HTML normale e denominarlo **CancelUpdateVBS. asp**. Lo script ASP identificherà il server Internet. Sarà necessario modificare il nome del server in modo da riflettere la propria configurazione. È sufficiente modificare il valore della stringa di connessione da MyServer al nome dell'installazione di SQL Server.  
   
 ```  
 <!-- BeginCancelUpdateVBS -->  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b875808a5a9379f917b246cb871420a339519f7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63155723"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718809"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Costrutti supportati in stored procedure compilate in modo nativo
   Questo argomento contiene un elenco delle funzionalità supportate per le stored procedure compilate in modo nativo ([create procedure &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
@@ -66,7 +66,7 @@ ms.locfileid: "63155723"
 ##  <a name="supported-operators"></a><a name="so"></a>Operatori supportati  
  Di seguito vengono elencati gli operatori supportati.  
   
--   [Gli operatori di confronto &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/comparison-operators-transact-sql) (ad esempio, \<>,, >= e <=) sono supportati nelle istruzioni condizionali (se, while).  
+-   [Gli operatori di confronto &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/comparison-operators-transact-sql) (ad esempio, >, \< , >= e <=) sono supportati nelle istruzioni condizionali (se, while).  
   
 -   Operatori unari (+, -).  
   
@@ -112,7 +112,7 @@ ms.locfileid: "63155723"
   
 -   Predicato del filtro IS [NOT] NULL  
   
--   Da \<tabella con ottimizzazione per la memoria>  
+-   Da \< tabella con ottimizzazione per la memoria>  
   
 -   [GROUP BY &#40;&#41;Transact-SQL](/sql/t-sql/queries/select-group-by-transact-sql) è supportato, insieme alle funzioni di aggregazione AVG, COUNT, COUNT_BIG, min, Max e Sum. MIN e MAX non sono supportate per i tipi nvarchar, char, varchar, varchar, varbinary e binary. La [clausola order by &#40;&#41;Transact-SQL](/sql/t-sql/queries/select-order-by-clause-transact-sql) è supportata con [Group by &#40;transact-SQL&#41;](/sql/t-sql/queries/select-group-by-transact-sql) se un'espressione nell'elenco ORDER BY viene visualizzata Verbatim nell'elenco Group by. Ad esempio, l'espressione GROUP BY a + b ORDER BY a + b è supportata, ma GROUP BY a, b ORDER BY a + b non lo è.  
   
@@ -228,7 +228,7 @@ GO
   
  La formula per calcolare un valore N massimo supportato nel caso peggiore in TOP N è: `N = floor ( 65536 / number_of_tables * 8 + total_size+of+aggs )`.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Stored procedure compilate in modo nativo](natively-compiled-stored-procedures.md)   
  [Problemi di migrazione relativi alle stored procedure compilate in modo nativo](migration-issues-for-natively-compiled-stored-procedures.md)  
   

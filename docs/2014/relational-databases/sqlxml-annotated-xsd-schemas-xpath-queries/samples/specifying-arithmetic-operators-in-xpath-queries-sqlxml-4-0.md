@@ -12,15 +12,15 @@ helpviewer_keywords:
 - XPath queries [SQLXML], arithmetic operators
 - operators [SQLXML]
 ms.assetid: fdfbc87d-759f-4abc-acf5-a21de01f78d3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2ca89efb197083b095ee7b1db18d3114525084a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3d4ffa4b8eed84bd6597552967b3e51b10459749
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012472"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717858"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Specifica di operatori aritmetici nelle query XPath (SQLXML 4.0)
   Negli esempi seguenti viene illustrato come specificare operatori aritmetici in query XPath. Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [schema XSD con annotazioni di esempio per gli esempi XPath &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -28,13 +28,13 @@ ms.locfileid: "66012472"
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-specify-the--arithmetic-operator"></a>R. Specificare l'operatore aritmetico *  
- Questa query XPath restituisce ** \<OrderDetail>** gli elementi che soddisfano il predicato specificato:  
+ Questa query XPath restituisce ** \< OrderDetail>** gli elementi che soddisfano il predicato specificato:  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- Nella `child` query è l'asse e `OrderDetail` è il test di nodo (true se **OrderDetail** è un ** \<nodo elemento>**, perché l' ** \<elemento>** nodo è il nodo primario per l' `child` asse). Per tutti i nodi dell' ** \<elemento>OrderDetail** , viene applicato il test nel predicato e vengono restituiti solo i nodi che soddisfano la condizione.  
+ Nella query `child` è l'asse e `OrderDetail` è il test di nodo (true se **OrderDetail** è un ** \< nodo elemento>**, perché l' ** \< elemento>** nodo è il nodo primario per l' `child` asse). Per tutti i nodi dell'elemento ** \<>OrderDetail** , viene applicato il test nel predicato e vengono restituiti solo i nodi che soddisfano la condizione.  
   
 > [!NOTE]  
 >  I numeri in XPath sono numeri a virgola mobile a precisione doppia e il confronto di numeri a virgola mobile come nell'esempio causa un arrotondamento.  

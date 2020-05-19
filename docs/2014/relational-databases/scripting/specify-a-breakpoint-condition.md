@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint conditions
 ms.assetid: b43d8a2b-99a3-4fb7-8848-99c042ea7ef7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c27ed8abfd66cb896182cd5a795965163e5c8618
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 58258ab6c364cbe7137e8a5157cb4f335e049c42
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243228"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718589"
 ---
 # <a name="specify-a-breakpoint-condition"></a>Impostare una condizione del punto di interruzione
   Una condizione per il punto di interruzione è un'espressione [!INCLUDE[tsql](../../includes/tsql-md.md)] valutata dal debugger quando viene raggiunto il punto di interruzione. Se la condizione viene soddisfatta e viene raggiunto un numero di passaggi specificato, il debugger interrompe o esegue l'azione specificata per il punto di interruzione.  
@@ -37,7 +37,7 @@ ms.locfileid: "75243228"
   
 2.  Nella finestra di dialogo **Condizione punto di interruzione** immettere un'espressione booleana valida nella casella **Condizione** .  
   
-3.  Scegliere **è true** se si desidera interrompere l'intervallo quando l'espressione restituisce `true`oppure scegliere **è stato modificato** se si desidera interrompere l'intervallo quando viene modificato il valore dell'espressione.  
+3.  Scegliere **è true** se si desidera interrompere l'intervallo quando l'espressione restituisce `true` oppure scegliere **è stato modificato** se si desidera interrompere l'intervallo quando viene modificato il valore dell'espressione.  
   
     > [!NOTE]  
     >  Il debugger non valuta l'espressione booleana fino a quando il primo il punto di interruzione non viene raggiunto. Se si sceglie **È stato modificato**, il debugger non considera la prima valutazione una modifica e quindi non interrompe l'esecuzione in corrispondenza della prima valutazione.  

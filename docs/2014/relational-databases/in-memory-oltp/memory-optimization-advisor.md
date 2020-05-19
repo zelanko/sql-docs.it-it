@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.swb.memoryoptimizationwizard.f1
 - swb.memoryoptimizationwizard.f1
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1d2fe137a21f2bd48113e65524b4315494f40a49
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f4dcc5a7658ee3549d774989ae95a027a5787fc2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157998"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719072"
 ---
 # <a name="memory-optimization-advisor"></a>Ottimizzazione guidata per la memoria
   Lo strumento di report sulle prestazioni delle transazioni (vedere [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) indica quali tabelle del database trarranno vantaggio se trasferite per utilizzare OLTP in memoria. Una volta identificata la tabella da trasferire per l'utilizzo di OLTP in memoria, è possibile utilizzare Ottimizzazione guidata per la memoria per eseguire facilmente la migrazione della tabella di database basata su disco in OLTP in memoria.  
@@ -84,7 +84,7 @@ ms.locfileid: "63157998"
 > [!WARNING]  
 >  Selezionare questa opzione solo se si comprende il rischio della perdita dei dati con le tabelle non durevoli.  
   
- Scegliere **Avanti** per continuare.  
+ Fare clic su **Avanti** per continuare.  
   
 ### <a name="review-primary-key-conversion"></a>Verifica conversione chiave primaria  
  La schermata successiva è denominata **Verifica conversione chiave primaria**. In Ottimizzazione guidata per la memoria viene rilevato se nella tabella sono presenti una o più chiavi primarie e viene popolato l'elenco di colonne in base ai metadati delle chiavi primarie. Se non è presente alcuna chiave primaria, per eseguire la migrazione a una tabella ottimizzata per la memoria durevole, sarà necessario crearne una.  
@@ -121,7 +121,7 @@ ms.locfileid: "63157998"
   
  Al termine, aggiornare **Esplora oggetti** per visualizzare la nuova tabella ottimizzata per la memoria e la vecchia tabella basata su disco. La vecchia tabella può essere conservata o eliminata a seconda delle proprie esigenze.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Migrazione a OLTP in memoria](migrating-to-in-memory-oltp.md)  
   
   

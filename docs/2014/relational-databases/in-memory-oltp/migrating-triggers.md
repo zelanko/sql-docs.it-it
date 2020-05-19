@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: ad5385c5-5a50-40ca-a319-97d5606b8511
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b7df393f26523991abafded74ded242390cb0e3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 38280abdedfc78f747a84acf62c38759e8f5d3de
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63071469"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719063"
 ---
 # <a name="migrating-triggers"></a>Migrazione di trigger
   In questo argomento vengono illustrati i trigger DDL e DML e le tabelle ottimizzate per la memoria.  
@@ -154,7 +154,7 @@ END
 GO  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Migrazione a OLTP in memoria](migrating-to-in-memory-oltp.md)  
   
   

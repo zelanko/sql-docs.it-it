@@ -12,15 +12,15 @@ helpviewer_keywords:
 - OLE DB, SQLXML
 - executing updategrams [SQLXML]
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a61c0386d6e5c5e836a60e5175272d4fdaaa6f15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e58db16e14c0e959ca83dcdd687159f80bbeaf77
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014787"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717503"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>Esecuzione di un updategram mediante OLE DB (SQLXML 4.0)
   Questo argomento fornisce un esempio funzionante del database usingOLE per l'esecuzione di un updategram.  
@@ -58,7 +58,7 @@ ms.locfileid: "66014787"
 </Schema>  
 ```  
   
- La query restituisce tutti gli elementi relativi ai dipendenti. Con il mapping predefinito, l' ** \<elemento Person. Contact>** viene mappato alla tabella Person. Contact del database AdventureWorks.  
+ La query restituisce tutti gli elementi relativi ai dipendenti. Con il mapping predefinito, l'elemento ** \< Person. Contact>** viene mappato alla tabella Person. Contact del database AdventureWorks.  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>Per impostare XML come comando recuperando il risultato come documento XML  
   
@@ -513,7 +513,7 @@ FOR XML AUTO</sql:query>
 </ROOT>  
 ```  
   
- Il modello include una query SQL. Per la query è necessario un valore per il@Titleparametro (). Se per il parametro non viene passato alcun valore, verrà utilizzato il valore predefinito ("Mr.").  
+ Il modello include una query SQL. Per la query è necessario un valore per il parametro ( @Title ). Se per il parametro non viene passato alcun valore, verrà utilizzato il valore predefinito ("Mr.").  
   
  Durante il passaggio dei valori di parametro a un modello è necessario specificare sia il nome che il valore del parametro.  
   

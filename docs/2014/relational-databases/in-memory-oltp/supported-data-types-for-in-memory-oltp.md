@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: a7380ef0-c9d7-49e4-b6de-fad34752b9f3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: de5f805a9d722974adf7975f713436bc7b1ca4d0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7ba8c40979873cc2c3f2358b57dc0e491a1795e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63155155"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718823"
 ---
 # <a name="supported-data-types"></a>Tipi di dati supportati
   I tipi di dati seguenti sono **supportati** nelle tabelle ottimizzate per la memoria e nelle stored procedure compilate in modo nativo:  
@@ -53,7 +53,7 @@ ms.locfileid: "63155155"
   
 |Tipo di dati|Per ulteriori informazioni|  
 |---------------|--------------------------|  
-|Data|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|  
+|data|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|  
 |time|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)|  
 |Datetime|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql)|  
 |datetime2|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|  
@@ -85,7 +85,7 @@ ms.locfileid: "63155155"
 |HIERARCHYID|Oggetti di grandi dimensioni. Ad esempio, varchar(max), nvarchar(max), varbinary(max), image, xml, text e ntext.|ROWVERSION|  
 |sql_variant|Funzioni CLR|Tipi definiti dall'utente (UDT)|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Supporto di Transact-SQL per OLTP in memoria](transact-sql-support-for-in-memory-oltp.md)   
  [Implementazione di colonne LOB in una tabella ottimizzata per la memoria](../../database-engine/implementing-lob-columns-in-a-memory-optimized-table.md)   
  [Implementazione di SQL_VARIANT in una tabella con ottimizzazione per la memoria](implementing-sql-variant-in-a-memory-optimized-table.md)  

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - business objects in RDS [ADO]
 ms.assetid: 75a21910-607f-463a-ae18-a17130dafb7e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 31af4a68ec830a5fd514173c831ce3863fef7443
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 79f88f36b7eae83163ef2754f9b2c2265550c684
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922350"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747663"
 ---
 # <a name="registering-business-objects-on-the-client-for-use-with-dcom"></a>Registrazione degli oggetti business sul client per l'uso con DCOM
 Per gli oggetti business personalizzati è necessario assicurarsi che il lato client sia in grado di eseguire il mapping del nome del programma (ProgId) a un identificatore (CLSID) che può essere utilizzato su DCOM. Per questo motivo, il ProgID dell'oggetto DCOM deve trovarsi nel registro di sistema sul lato client ed eseguire il mapping all'ID classe dell'oggetto business sul lato server. Per gli altri protocolli supportati (HTTP, HTTPS e in-process), questa operazione non è necessaria.  

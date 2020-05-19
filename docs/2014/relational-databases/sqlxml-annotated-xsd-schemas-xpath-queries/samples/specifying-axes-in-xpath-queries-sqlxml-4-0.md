@@ -15,15 +15,15 @@ helpviewer_keywords:
 - parent axis
 - axes [SQLXML]
 ms.assetid: d17b8278-da58-4576-95b4-7a92772566d8
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 81d671c834cfeb1bf1191c0d5cd4ace72741ff10
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8adf10727478344216da05ea982a466daa0eba63
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010720"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717822"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Definizione di assi in query XPath (SQLXML 4.0)
   Negli esempi seguenti viene illustrato il modo in cui specificare assi in query XPath.  
@@ -33,13 +33,13 @@ ms.locfileid: "66010720"
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-retrieve-child-elements-of-the-context-node"></a>R. Recuperare elementi figlio del nodo di contesto  
- La query XPath seguente seleziona tutti gli ** \<** elementi figlio del contatto>del nodo di contesto:  
+ La query XPath seguente seleziona tutti gli elementi figlio del ** \< contatto>** del nodo di contesto:  
   
 ```  
 /child::Contact  
 ```  
   
- Nella query `child` è l'asse e `Contact` è il test di nodo (true se `Contact` è un ** \<elemento>** nodo, perché \<l'elemento> è il tipo di nodo primario associato all' `child` asse).  
+ Nella query `child` è l'asse e `Contact` è il test di nodo (true se `Contact` è un ** \< elemento>** nodo, perché \< l'elemento> è il tipo di nodo primario associato all' `child` asse).  
   
  L'asse `child` è l'asse predefinito. È pertanto possibile scrivere la query nel modo seguente:  
   
@@ -84,13 +84,13 @@ ms.locfileid: "66010720"
 ```  
   
 ### <a name="b-retrieve-grandchildren-of-the-context-node"></a>B. Recuperare nipoti del nodo di contesto  
- La query XPath seguente seleziona tutti gli ** \<** elementi figlio dell'elemento Order>degli elementi figlio del ** \<>Customer** del nodo di contesto:  
+ La query XPath seguente seleziona tutti gli elementi figlio dell'elemento ** \< Order>** degli elementi figlio del ** \<>Customer** del nodo di contesto:  
   
 ```  
 /child::Customer/child::Order  
 ```  
   
- Nella `child` query è l'asse e `Customer` e `Order` sono i test di nodo (i test del nodo sono true se Customer e Order sono ** \<elementi>** nodi, perché l' ** \<elemento>** nodo è il nodo primario per l' `child` asse). Per ogni nodo che corrisponde ** \<>cliente **, i nodi corrispondenti ** \<agli ordini>** vengono aggiunti al risultato. Nel set di risultati viene restituito solo ** \<Order>** .  
+ Nella query `child` è l'asse e `Customer` e `Order` sono i test di nodo (i test del nodo sono true se Customer e Order sono ** \< elementi>** nodi, perché l' ** \< elemento>** nodo è il nodo primario per l' `child` asse). Per ogni nodo che corrisponde ** \<>cliente **, i nodi corrispondenti agli ** \< ordini>** vengono aggiunti al risultato. Nel set di risultati viene restituito solo ** \< Order>** .  
   
  L'asse `child` è l'asse predefinito. È pertanto possibile specificare la query nel modo seguente:  
   
@@ -159,10 +159,10 @@ ms.locfileid: "66010720"
 </ROOT>  
 ```  
   
- Se la query XPath è specificata come `Customer/Order/OrderDetail`, da ogni nodo corrispondente ** \<a Customer>** la query passa all' ** \<ordine>** elementi. Per ogni nodo che corrisponde ** \<>**, la query aggiunge i nodi ** \<OrderDetail>** al risultato. Nel set di risultati viene restituito solo ** \<OrderDetail>** .  
+ Se la query XPath è specificata come `Customer/Order/OrderDetail` , da ogni nodo corrispondente a ** \< Customer>** la query passa all' ** \< ordine>** elementi. Per ogni nodo che corrisponde ** \<>**, la query aggiunge i nodi ** \< OrderDetail>** al risultato. Nel set di risultati viene restituito solo ** \< OrderDetail>** .  
   
 ### <a name="c-use--to-specify-the-parent-axis"></a>C. Utilizzare . per specificare l'asse padre  
- La query seguente recupera tutti gli ** \<elementi Order>** con un elemento ** \<Customer>group** con un valore di attributo **CustomerID** 1. La query utilizza l' `child` asse nel predicato per trovare il padre dell'elemento ** \<Order>** .  
+ La query seguente recupera tutti gli elementi ** \< Order>** con un elemento ** \< Customer>group** con un valore di attributo **CustomerID** 1. La query utilizza l' `child` asse nel predicato per trovare il padre dell'elemento ** \< Order>** .  
   
 ```  
 /child::Customer/child::Order[../@CustomerID="1"]  
@@ -181,7 +181,7 @@ ms.locfileid: "66010720"
 ```  
   
 > [!NOTE]  
->  La query `/Order[../@CustomerID="1"]` XPath restituirà un errore perché non è presente alcun elemento padre dell' ** \<ordine>**. Sebbene sia possibile che nello schema di mapping siano presenti elementi che contengono ** \<>di ordine **, XPath non ha iniziato in alcun modo. di conseguenza, ** \<Order>** viene considerato il tipo di elemento di livello principale nel documento.  
+>  La query XPath `/Order[../@CustomerID="1"]` restituirà un errore perché non è presente alcun elemento padre dell' ** \< ordine>**. Sebbene sia possibile che nello schema di mapping siano presenti elementi che contengono ** \<>di ordine **, XPath non è iniziato in corrispondenza di alcuno di essi. di conseguenza, l' ** \< ordine>** viene considerato il tipo di elemento di primo livello nel documento.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Per testare la query Xpath sullo schema di mapping  
   
@@ -246,13 +246,13 @@ ms.locfileid: "66010720"
 ```  
   
 ### <a name="d-specify-the-attribute-axis"></a>D. Specificare l'asse attribute  
- La query XPath seguente seleziona tutti **CustomerID** gli ** \<** elementi figlio del cliente>del nodo di contesto con il valore di attributo CustomerID 1:  
+ La query XPath seguente seleziona tutti gli elementi figlio del ** \< cliente>** del nodo di contesto con il valore di attributo **CustomerID** 1:  
   
 ```  
 /child::Customer[attribute::CustomerID="1"]  
 ```  
   
- `attribute::CustomerID`Nel predicato `attribute` è l'asse e `CustomerID` è il test di nodo ( `CustomerID` se è un attributo, il test del nodo è true, perché l' ** \<attributo>** nodo è il nodo `attribute` primario per l'asse).  
+ Nel predicato `attribute::CustomerID` `attribute` è l'asse e `CustomerID` è il test di nodo (se `CustomerID` è un attributo, il test del nodo è true, perché l' ** \< attributo>** nodo è il nodo primario per l' `attribute` asse).  
   
  È possibile specificare un collegamento all'asse `attribute` (@) e, poiché l'asse `child` è l'asse predefinito, può essere omesso dalla query:  
   

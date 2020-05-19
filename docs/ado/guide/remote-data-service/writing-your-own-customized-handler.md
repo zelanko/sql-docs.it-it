@@ -11,14 +11,14 @@ helpviewer_keywords:
 - DataFactory handler in RDS [ADO]
 - customized handler in RDS [ADO]
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 98e2ec3538de68bffa5b22acc94dda3d81e5c6f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cd7aec0e98afd09b30c4e4d67102d1333efdcdd6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921880"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747608"
 ---
 # <a name="writing-your-own-customized-handler"></a>Scrittura di un gestore personalizzato
 È possibile scrivere un gestore personalizzato se si è un amministratore del server IIS che desidera il supporto per Servizi Desktop remoto predefinito, ma maggiore controllo sulle richieste e sui diritti di accesso degli utenti.  
@@ -31,12 +31,12 @@ ms.locfileid: "67921880"
 ## <a name="idatafactoryhandler-interface"></a>Interfaccia IDataFactoryHandler  
  Questa interfaccia dispone di due metodi, **getRecordset** e **Reconnect**. Per entrambi i metodi è necessario che la proprietà [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) sia impostata su **adUseClient**.  
   
- Entrambi i metodi accettano argomenti che vengono visualizzati dopo la prima virgola nella parola chiave "**handler =**". Ad esempio, `"Handler=progid,arg1,arg2;"` passerà una stringa di argomento `"arg1,arg2"`di e `"Handler=progid"` passerà un argomento null.  
+ Entrambi i metodi accettano argomenti che vengono visualizzati dopo la prima virgola nella parola chiave "**handler =**". Ad esempio, `"Handler=progid,arg1,arg2;"` passerà una stringa di argomento di `"arg1,arg2"` e `"Handler=progid"` passerà un argomento null.  
   
 ## <a name="getrecordset-method"></a>Metodo GetRecordSet  
  Questo metodo esegue una query sull'origine dati e crea un nuovo oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) usando gli argomenti forniti. Il **Recordset** deve essere aperto con **adLockBatchOptimistic** e non deve essere aperto in modo asincrono.  
   
-### <a name="arguments"></a>Argomenti  
+### <a name="arguments"></a>Arguments  
  ***conn***  Stringa di connessione.  
   
  ***argomenti***  Argomenti per il gestore.  
@@ -48,7 +48,7 @@ ms.locfileid: "67921880"
 ## <a name="reconnect-method"></a>Metodo di riconnessione  
  Questo metodo aggiorna l'origine dati. Viene creato un nuovo oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) e il **Recordset**specificato viene collegato.  
   
-### <a name="arguments"></a>Argomenti  
+### <a name="arguments"></a>Arguments  
  ***conn***  Stringa di connessione.  
   
  ***argomenti***  Argomenti per il gestore.  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - XPath queries [SQLXML], Boolean operators
 - operators [SQLXML]
 ms.assetid: 9928cff5-62ac-42aa-96bf-2e09a1df0bc3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 29404c4a3dc7b4b10106e7a3a8cb170ffe1e7a3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45db8a3111173257cad45bea2961b9bb4c72bffc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010624"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717791"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>Specifica di operatori booleani in query XPath (SQLXML 4.0)
   Negli esempi seguenti viene illustrato come specificare operatori booleani in query XPath. Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [schema XSD con annotazioni di esempio per gli esempi XPath &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -29,7 +29,7 @@ ms.locfileid: "66010624"
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>R. Specificare l'operatore booleano OR  
- Questa query XPath restituisce **CustomerID** gli ** \<** elementi figlio del>Customer del nodo di contesto con il valore dell'attributo CustomerID 13 o 31:  
+ Questa query XPath restituisce gli elementi figlio del ** \<>Customer** del nodo di contesto con il valore dell'attributo **CustomerID** 13 o 31:  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
@@ -41,7 +41,7 @@ ms.locfileid: "66010624"
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- Nel predicato `attribute` , è l'asse `CustomerID` e è il test di nodo (true se **CustomerID** è un ** \<attributo>** nodo, perché l' ** \<attributo>** nodo è il nodo primario `attribute` per l'asse). Il predicato filtra gli ** \<elementi Customer>** e restituisce solo quelli che soddisfano la condizione specificata nel predicato.  
+ Nel predicato `attribute` , è l'asse `CustomerID` e è il test di nodo (true se **CustomerID** è un ** \< attributo>** nodo, perché l' ** \< attributo>** nodo è il nodo primario per l' `attribute` asse). Il predicato filtra gli elementi ** \< Customer>** e restituisce solo quelli che soddisfano la condizione specificata nel predicato.  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>Per testare query Xpath sullo schema di mapping  
   

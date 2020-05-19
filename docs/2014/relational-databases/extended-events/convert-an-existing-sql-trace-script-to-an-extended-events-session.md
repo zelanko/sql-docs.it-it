@@ -10,15 +10,15 @@ helpviewer_keywords:
 - SQL Trace, convert script to extended events
 - extended events [SQL Server], convert SQL Trace script
 ms.assetid: 4c8f29e6-0a37-490f-88b3-33493871b3f9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 83cf9390524d2fdc013fdddc41c610c28930e998
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39a89574fffa57174dc141ee12686798b7d7bd5a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63015773"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719123"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>Convertire uno script di Traccia SQL esistente in una sessione Eventi estesi
   Se si dispone di uno script di Traccia SQL esistente che si desidera convertire in una sessione Eventi estesi, è possibile utilizzare le procedure descritte in questo argomento per creare una sessione Eventi estesi equivalente. Usando le informazioni contenute nelle tabelle di sistema trace_xe_action_map e trace_xe_event_map, è possibile raccogliere le informazioni necessarie per la conversione.  
@@ -247,7 +247,7 @@ ADD TARGET package0.asynchronous_file_target
    (SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Visualizzare gli eventi estesi equivalenti alle classi di evento di traccia SQL](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
   
   

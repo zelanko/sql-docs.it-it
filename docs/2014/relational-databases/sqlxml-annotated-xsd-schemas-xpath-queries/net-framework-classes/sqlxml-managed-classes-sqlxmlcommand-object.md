@@ -27,15 +27,15 @@ helpviewer_keywords:
 - ClientSideXML property
 - CommandStream property
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d002208a83b58a4c8547bc6ce85db073ced70974
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e7ee45c8d725e233541f4db34796e89327bc11e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010739"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717942"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>Oggetto SqlXmlCommand (classi gestite SQLXML)
   Si tratta del costruttore per l'oggetto SqlXmlCommand:  
@@ -44,7 +44,7 @@ ms.locfileid: "66010739"
 public SqlXmlCommand(string cnString)  
 ```  
   
- Dove `cnString` è la stringa di connessione ADO o OLEDB che identifica il server, il database e le informazioni di accesso, ad `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`esempio.  
+ Dove `cnString` è la stringa di connessione ADO o OLEDB che identifica il server, il database e le informazioni di accesso, ad esempio `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"` .  
   
  Nella stringa di connessione `Provider` deve essere SQLOLEDB e `Data Provider` non deve essere incluso nella stringa del provider.  
   
@@ -106,7 +106,7 @@ public SqlXmlCommand(string cnString)
  CommandType  
  Identifica il tipo di comando. Questa proprietà viene utilizzata per specificare il tipo di comando che si desidera eseguire. I valori nella tabella seguente determinano il tipo del comando. Per un esempio funzionante, vedere [accesso alla funzionalità SQLXML nell'ambiente .NET](accessing-sqlxml-functionality-in-the-net-environment.md).  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |SqlXmlCommandType. SQL|Esegue un comando SQL, ad esempio `SELECT * FROM Employees FOR XML AUTO`.|  
 |SqlXmlCommandType. XPath|Esegue un comando XPath, ad esempio `Employees[@EmployeeID=1]`.|  
@@ -115,7 +115,7 @@ public SqlXmlCommand(string cnString)
 |SqlXmlCommandType. UpdateGram|Esegue un updategram.|  
 |SqlXmlCommandType. DiffGram|Esegue un Diffgram.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Oggetto SqlXmlParameter &#40;classi gestite SQLXML&#41;](sqlxml-managed-classes-sqlxmlparameter-object.md)   
  [Oggetto SqlXmlAdapter &#40;classi gestite SQLXML&#41;](sqlxml-managed-classes-sqlxmladapter-object.md)  
   

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - referencing libraries in a Visual Basic application[ADO]
 - ADO, libraries
 ms.assetid: cfd37a82-aad2-41cd-8d13-1566c43d95f0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 25ea858995c884af202d3d80f4de675c9f4cda27
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 766707f8903f72da8b1735def4ed4433c4468d90
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923055"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747884"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>Riferimenti alle librerie ADO in un'applicazione Visual Basic 6
 Per importare le librerie ADO in un'applicazione Microsoft Visual Basic 6, è necessario impostare un riferimento nel progetto Visual Basic.  

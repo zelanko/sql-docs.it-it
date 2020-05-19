@@ -1,5 +1,5 @@
 ---
-title: RDS restituisce &quot;un errore di&quot; lettura del flusso | Microsoft Docs
+title: RDS restituisce un &quot; errore di lettura del flusso &quot; | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - stream not read error in RDS [ADO]
 ms.assetid: cb5a68f8-dba4-41da-bafd-04efe53706b7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c89756e86a702217d5d9d8495bf62b0d27f52321
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ca194c911b590dfcc8baba87195c91a70640dd24
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922465"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747733"
 ---
-# <a name="rds-returns-quotstream-not-readquot-error"></a>RDS restituisce &quot;un errore di&quot; lettura del flusso
+# <a name="rds-returns-quotstream-not-readquot-error"></a>RDS restituisce un &quot; errore di lettura del flusso &quot;
 "Impossibile leggere l'oggetto flusso perché è vuoto o la posizione corrente si trova alla fine del flusso. Per i flussi non vuoti, impostare la posizione corrente con la proprietà Position. Per determinare se un flusso è vuoto, controllare la proprietà Size ".  
   
  Se viene visualizzato questo messaggio di errore, è possibile che si sia tentato di usare una query gerarchica con parametri su http. RDS non consente di utilizzare gerarchie con parametri remoti.  

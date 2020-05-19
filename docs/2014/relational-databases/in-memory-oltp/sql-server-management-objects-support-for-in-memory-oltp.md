@@ -8,14 +8,14 @@ ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a
 author: CarlRabeler
-ms.author: genemi
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7591cff38ac08d9fd36d7b39f180613fbdd12961
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c88969e0b644c4eb0497a37142023fa1430b5770
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63066439"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718963"
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>Supporto di SQL Server Management Objects per OLTP in memoria
   In questo argomento vengono descritte le modifiche in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) per OLTP in memoria.  
@@ -171,7 +171,7 @@ public class A {
 }  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Supporto di SQL Server per OLTP in memoria](sql-server-support-for-in-memory-oltp.md)  
   
   

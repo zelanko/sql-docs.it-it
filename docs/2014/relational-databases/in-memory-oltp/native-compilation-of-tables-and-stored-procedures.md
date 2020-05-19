@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9e70ab55fedcc5053cf82a78c040c850a23824eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9fb2078ea3b9515af26df0846ee2f5d92bd9349a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63075196"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706433"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Compilazione nativa di tabelle e stored procedure
   Con OLTP in memoria viene introdotto il concetto di compilazione nativa. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può compilare in modo nativo stored procedure che accedono alle tabelle ottimizzate per la memoria. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è anche in grado di compilare in modo nativo tabelle ottimizzate per la memoria. Con la compilazione nativa si accede ai dati più velocemente e si eseguono le query in modo più efficiente rispetto al tradizionale [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretato. La compilazione nativa di tabelle e stored procedure produce DLL.  
@@ -115,12 +115,12 @@ go
  Per la compilazione nativa di tabelle e stored procedure viene usato il compilatore di OLTP in memoria. Il compilatore genera file che vengono scritti su disco e caricati in memoria. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono usati i seguenti meccanismi per limitare l'accesso a tali file.  
   
 ### <a name="native-compiler"></a>Compilatore nativo  
- Il file eseguibile del compilatore, nonché i file binari e i file di intestazione necessari per la compilazione nativa, vengono installati come parte dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nella cartella MSSQL\Binn\Xtp. Quindi, se l'istanza predefinita viene installata in c:\Program Files, i file del compilatore vengono installati in c:\Programmi\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. MSSQLSERVER\MSSQL\Binn\Xtp.  
+ Il file eseguibile del compilatore, nonché i file binari e i file di intestazione necessari per la compilazione nativa, vengono installati come parte dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nella cartella MSSQL\Binn\Xtp. Quindi, se l'istanza predefinita viene installata in c:\Program Files, i file del compilatore vengono installati in c:\Programmi \\ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \MSSQL12. MSSQLSERVER\MSSQL\Binn\Xtp.  
   
  Per limitare l'accesso al compilatore, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono usati gli elenchi di controllo di accesso (ACL) per limitare l'accesso ai file binari. Tutti i file binari di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono protetti dalla modifica o dalla manomissione tramite gli ACL. Gli ACL del compilatore nativo limitano anche l'utilizzo del compilatore; solo gli amministratori di sistema e l'account del servizio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispongono delle autorizzazioni di lettura ed esecuzione per i file del compilatore nativo.  
   
 ### <a name="files-generated-by-a-native-compilation"></a>File generati da una compilazione nativa  
- I file generati quando una tabella o una stored procedure viene compilata includono file DLL e file intermedi compresi i file con le estensioni seguenti: c, obj, xml e pdb. I file generati vengono salvati in una sottocartella della cartella dati predefinita. La sottocartella viene denominata Xtp. Quando si installa l'istanza predefinita con la cartella dei dati predefinita, i file generati vengono inseriti in\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]c:\Programmi \MSSQL12. MSSQLSERVER\MSSQL\DATA\Xtp.  
+ I file generati quando una tabella o una stored procedure viene compilata includono file DLL e file intermedi compresi i file con le estensioni seguenti: c, obj, xml e pdb. I file generati vengono salvati in una sottocartella della cartella dati predefinita. La sottocartella viene denominata Xtp. Quando si installa l'istanza predefinita con la cartella dei dati predefinita, i file generati vengono inseriti in c:\Programmi \\ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \MSSQL12. MSSQLSERVER\MSSQL\DATA\Xtp.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la manomissione dei file DLL generati viene impedita in tre modi:  
   
