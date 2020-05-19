@@ -15,14 +15,14 @@ helpviewer_keywords:
 - syntax indexes [ADO], ADO for Visual C++ syntax
 - collections [ADO], ADO for Visual C++ syntax
 ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f18884c7a1aabe138408cca7eb529f4f21120330
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dc708e467c226440b861057b0498ed3bd80135d1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919914"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748872"
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>Raccolte (sintassi ADO per Visual C++)
 ## <a name="parameters"></a>Parametri  
@@ -87,7 +87,7 @@ get_Item(VARIANT Index, ADOField **ppvObject);
   
 -   [Proprietà Item (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
   
-## <a name="errors"></a>Errors  
+## <a name="errors"></a>Errori  
   
 ### <a name="methods"></a>Metodi  
   

@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - dynamic properties [ADO], index
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9eb88905f56abf9c1c702f5fd73cbe61a1bcde3d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f7d2c5bcc1b07107164b8df73c8239ebd66b9fa4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921089"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749223"
 ---
 # <a name="ado-dynamic-property-index"></a>Indice delle proprietà dinamiche ADO
 I provider di dati, i provider di servizi e i componenti del servizio possono aggiungere proprietà dinamiche alle raccolte di **Proprietà** degli oggetti di [connessione](../../../ado/reference/ado-api/connection-object-ado.md) e [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) non aperti. Un provider specificato può anche inserire proprietà aggiuntive quando questi oggetti sono aperti. Alcune di queste proprietà sono elencate nella sezione [proprietà dinamiche ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md) . Ulteriori informazioni sono elencate sotto i provider specifici nella sezione [appendice a: Providers](../../../ado/guide/appendixes/appendix-a-providers.md) .  
@@ -56,7 +56,7 @@ I provider di dati, i provider di servizi e i componenti del servizio possono ag
 |Dimensioni massime riga|DBPROP_MAXROWSIZE|  
 |Dimensioni massime righe includono BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|  
 |Numero massimo di tabelle in SELECT|DBPROP_MAXTABLESINSELECT|  
-|Mode|DBPROP_INIT_MODE|  
+|Modalità|DBPROP_INIT_MODE|  
 |Set di parametri multipli|DBPROP_MULTIPLEPARAMSETS|  
 |Risultati multipli|DBPROP_MULTIPLERESULTS|  
 |Più oggetti di archiviazione|DBPROP_MULTIPLESTORAGEOBJECTS|  

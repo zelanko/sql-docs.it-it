@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - DataFactory customization in RDS [ADO]
 ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1bdc406778bea0d6355e747998d2517b841fc17b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a5339af431c913af21591124960e0e59a939dc14
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922775"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749658"
 ---
 # <a name="datafactory-customization"></a>Personalizzazione di Data Factory
 Remote Data Service (RDS) fornisce un modo per eseguire facilmente l'accesso ai dati in un sistema client/server a tre livelli. Un controllo dati client specifica la connessione e i parametri della stringa di comando per eseguire una query su un'origine dati remota, oppure su una stringa di connessione e parametri dell'oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) per eseguire un aggiornamento.  
