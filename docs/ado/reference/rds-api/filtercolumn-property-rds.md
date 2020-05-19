@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - FilterColumn property [ADO]
 ms.assetid: 0a5473e8-8ce6-4518-83fb-4920b827e285
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3e88cb6f8d563df66a8faaa84d5aeafaa9d359e8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 53b53bcadc90c8c27027f593014ffab204dc78fa
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964087"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752113"
 ---
 # <a name="filtercolumn-property-rds"></a>Proprietà FilterColumn (Servizi Desktop remoto)
 Indica la colonna in cui valutare i criteri di filtro.  
@@ -40,7 +40,7 @@ DataControl.FilterColumn = String
  *Stringa*  
  Valore **stringa** che specifica la colonna in cui valutare i criteri di filtro. I criteri di filtro vengono specificati nella proprietà [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md) .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Le proprietà [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)e **FilterColumn offrono** forniscono funzionalità di ordinamento e filtro nella cache sul lato client. La funzionalità di ordinamento ordina i record in base ai valori di una colonna. La funzionalità di filtro Visualizza un subset di record in base ai criteri di ricerca, mentre il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) completo viene mantenuto nella cache. Il metodo [Reset](../../../ado/reference/rds-api/reset-method-rds.md) eseguirà i criteri e sostituirà il **Recordset** corrente con un **Recordset**aggiornabile.  
   
 ## <a name="applies-to"></a>Si applica a  

@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - FilterCriterion property [RDS]
 ms.assetid: 24eb03ba-ccfd-4353-b6af-03586b2da6fd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5b14e042c7566b6b6f8559e9dc371028a509979
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 88e1bbdb45b48e42d69bd921384056089b3a2241
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964062"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752031"
 ---
 # <a name="filtercriterion-property-rds"></a>Proprietà FilterCriterion (Servizi Desktop remoto)
 Indica l'operatore di valutazione da utilizzare nel valore del filtro.  
@@ -38,9 +38,9 @@ DataControl.FilterCriterion = String
  Variabile oggetto che rappresenta un Servizi Desktop remoto [. Oggetto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
  *Stringa*  
- Valore **stringa** che specifica l'operatore di valutazione di [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md) ai record. Può essere uno dei seguenti: <, \<=, >, >=, = o <>.  
+ Valore **stringa** che specifica l'operatore di valutazione di [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md) ai record. Può essere uno dei seguenti: <, \< =, >, >=, = o <>.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Le proprietà [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), **FilterCriterion**e [FilterColumn offrono](../../../ado/reference/rds-api/filtercolumn-property-rds.md) forniscono funzionalità di ordinamento e filtro nella cache sul lato client. La funzionalità di ordinamento ordina i record in base ai valori di una colonna. La funzionalità di filtro Visualizza un subset di record in base ai criteri di ricerca, mentre il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) completo viene mantenuto nella cache. Il metodo [Reset](../../../ado/reference/rds-api/reset-method-rds.md) eseguirà i criteri e sostituirà il **Recordset** corrente con un **Recordset**aggiornabile.  
   
  L'operatore "! =" non è valido per **FilterCriterion**; usare invece "<>".  

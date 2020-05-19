@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Handler property [ADO]
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a7423879b8263d87575d913c4863143faf3573e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 22e054a6f1723f32d81a4f00ec941a10f8212506
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963993"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751943"
 ---
 # <a name="handler-property-rds"></a>Proprietà Handler (Servizi Desktop remoto)
 Indica il nome di un programma di personalizzazione sul lato server (gestore) che estende la funzionalità di [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)ed eventuali parametri usati dal *gestore*.  
@@ -40,9 +40,9 @@ DataControl.Handler = String
  Variabile oggetto che rappresenta un Servizi Desktop remoto [. Oggetto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
  *Stringa*  
- Valore **stringa** che contiene il nome del gestore e qualsiasi parametro, tutti separati da virgole (ad esempio, `"handlerName,parm1,parm2,...,parm` *N*`"`).  
+ Valore **stringa** che contiene il nome del gestore e qualsiasi parametro, tutti separati da virgole (ad esempio, `"handlerName,parm1,parm2,...,parm` *N* `"` ).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questa proprietà supporta la [personalizzazione](../../../ado/guide/remote-data-service/datafactory-customization.md), una funzionalità che richiede l'impostazione della proprietà [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) su **adUseClient**.  
   
  Il nome del gestore e i relativi parametri, se presenti, sono separati da virgole (","). Si otterrà un comportamento imprevedibile se un punto e virgola (";") viene visualizzato in qualsiasi punto all'interno della *stringa*. È possibile scrivere un gestore personalizzato, purché supporti l'interfaccia **IDataFactoryHandler** .  

@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d1a5fa5c9002d4a27490dfc98fb79f482539f042
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b4c44e48c46abab1cc15e3fbf90592414fad7c9c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964311"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752680"
 ---
 # <a name="execute-method-rds"></a>Metodo Execute (Servizi Desktop remoto)
 Esegue la richiesta e crea un recordset ADO da usare in ADO 2,5 e versioni successive.  
@@ -41,7 +41,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  Stringa in due parti che identifica il gestore da utilizzare con questa esecuzione. La stringa contiene due parti. La prima parte contiene il nome (ProgID) del gestore da usare. La seconda parte contiene gli argomenti da passare al gestore. I dettagli relativi alla modalità di interpretazione della stringa degli argomenti sono specifici per ogni gestore. Le due parti sono separate dalla prima istanza di una virgola nella stringa. La stringa arguments può contenere altre virgole. Gli argomenti sono facoltativi.  
   
  *QueryString*  
- Comando nel linguaggio di comando supportato dal provider OLE DB identificato nella stringa di connessione. Per i provider basati su SQL, *QueryString* potrebbe contenere un'istruzione del comando Transact-SQL, ma per i provider non SQL (ad esempio, MSDataShape) potrebbe non essere [!INCLUDE[tsql](../../../includes/tsql-md.md)] un'istruzione di query.  
+ Comando nel linguaggio di comando supportato dal provider OLE DB identificato nella stringa di connessione. Per i provider basati su SQL, *QueryString* potrebbe contenere un'istruzione del comando Transact-SQL, ma per i provider non SQL (ad esempio, MSDataShape) potrebbe non essere un' [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzione di query.  
   
  Se viene utilizzato un gestore, il gestore può modificare o sostituire il valore specificato qui. Ad esempio, il gestore in genere sostituisce *QueryString* con una stringa di query dal relativo file ini. Per impostazione predefinita, viene usato il file msdfmap. ini.  
   
@@ -77,7 +77,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *pInformation*  
  Puntatore a un errore di informazioni restituito da Execute. Se è NULL, non vengono restituite informazioni sull'errore.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il parametro *HandlerString* può essere null. Ciò che accade in questo caso dipende dalla modalità di configurazione del server RDS. Una stringa del gestore "MSDFMAP. handler" indica che deve essere usato il gestore fornito da Microsoft (msdfmap. dll). Una stringa del gestore "MASDFMAP. Handler, Sample. ini" indica che è necessario utilizzare il gestore msdfmap. dll e che l'argomento "Sample. ini" deve essere passato al gestore. MSDFMAP. dll interpreterà l'argomento come direzione per utilizzare Sample. ini per verificare le stringhe di connessione e di query.  
   
 ## <a name="applies-to"></a>Si applica a  

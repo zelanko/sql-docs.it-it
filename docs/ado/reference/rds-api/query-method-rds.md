@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Query method [ADO]
 ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f646d5ebee63981c882f5e1ece147be0ff1677e7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b3025f37b47cd545e7e7cde127e96740077ab961
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963820"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751493"
 ---
 # <a name="query-method-rds"></a>Metodo Query (Servizi Desktop remoto)
 Usa una stringa di query SQL valida per restituire un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -46,7 +46,7 @@ Set Recordset = DataFactory.Query(Connection, Query)
  *Query*  
  **Stringa** che contiene la query SQL.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La query deve usare il sottolinguaggio SQL del server di database. Se si verifica un errore con la query eseguita, viene restituito lo stato del risultato. Il metodo di **query** non esegue alcun controllo della sintassi sulla stringa di **query** .  
   
 ## <a name="applies-to"></a>Si applica a  

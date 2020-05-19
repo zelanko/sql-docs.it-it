@@ -14,14 +14,14 @@ helpviewer_keywords:
 - MoveFirst method [RDS]
 - MoveNext method [RDS]
 ms.assetid: 45c80bb5-136f-4204-9df2-78740fa55574
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8e99ff17cad2bebcfaed509788ea3721ddfeb0ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 096ad338f1ec9f039a6c63366984aee4d891c202
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963881"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751601"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-rds"></a>Metodi MoveFirst, MoveLast, MoveNext e MovePrevious (Servizi Desktop remoto)
 Passa al record primo, ultimo, successivo o precedente in un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) specificato.  
@@ -40,7 +40,7 @@ DataControl.Recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
  *DataControl*  
  Variabile oggetto che rappresenta un Servizi Desktop remoto [. Oggetto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  È possibile utilizzare i metodi **Move** con **RDS. Oggetto DataControl** per spostarsi tra i record di dati nei controlli associati a dati in una pagina Web. Si supponga, ad esempio, di visualizzare un **Recordset** in una griglia mediante l'associazione a un **RDS. Oggetto DataControl** . È quindi possibile includere i pulsanti primo, ultimo, successivo e precedente su cui gli utenti possono fare clic per passare al record primo, ultimo, successivo o precedente nel **Recordset**visualizzato. A tale scopo, chiamare i metodi **MoveFirst**, **MoveLast**, **MoveNext**e **MovePrevious** del Servizi Desktop remoto **. Oggetto DataControl** nelle procedure OnClick rispettivamente per i pulsanti First, Last, Next e Previous. Nell' [esempio](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md) di Rubrica viene illustrato come eseguire questa operazione.  
   
 ## <a name="applies-to"></a>Si applica a  

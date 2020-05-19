@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Execute21 method [RDS]
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8434345dcc4436865e4981a19ef1164d35a852f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3e7f006d0a833b8c370e6d80045a873c4ca2b16b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964207"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752634"
 ---
 # <a name="execute21-method-rds"></a>Metodo Execute21 (Servizi Desktop remoto)
 Esegue la richiesta e crea un recordset ADO da utilizzare in ADO 2,1.  
@@ -69,7 +69,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *pParameters*  
  Variant che contiene una matrice sicura di definizioni di parametri. Se l'opzione *GetInfo* è stata specificata in *lExecuteOptions*, questo parametro viene utilizzato per restituire le definizioni dei parametri ottenute dal provider OLE DB. In caso contrario, questo parametro può essere vuoto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il parametro *HandlerString* può essere null. Ciò che si verifica in questo caso dipende dalla modalità di configurazione del server RDS. Una stringa del gestore "MSDFMAP. handler" indica che deve essere usato il gestore fornito da Microsoft (msdfmap. dll). Una stringa del gestore "MASDFMAP. Handler, Sample. ini" indica che è necessario utilizzare il gestore msdfmap. dll e che l'argomento "Sample. ini" deve essere passato al gestore. MSDFMAP. dll interpreterà l'argomento come direzione per utilizzare Sample. ini per verificare le stringhe di connessione e di query.  
   
 > [!NOTE]

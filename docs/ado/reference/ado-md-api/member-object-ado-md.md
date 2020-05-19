@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - Member object [ADO MD], members
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 44d6b5f06bffb1cea786ba34d3d2aa8a3efb45ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d4d512d651c8162124c935ffdb260c4abe4ecb14
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949490"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753203"
 ---
 # <a name="member-object-ado-md"></a>Oggetto Member (ADO MD)
 Rappresenta un membro di un livello in un cubo, gli elementi figlio di un membro di un livello o un membro di una posizione lungo un asse di un insieme di celle.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Le proprietà di un **membro** variano a seconda del contesto in cui viene utilizzata. Un **membro** di un [livello](../../../ado/reference/ado-md-api/level-object-ado-md.md) in un [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) ha una proprietà [Children](../../../ado/reference/ado-md-api/children-property-ado-md.md) che restituisce i **membri** al livello inferiore successivo della gerarchia dal **membro**corrente. Per un **membro** di una [posizione](../../../ado/reference/ado-md-api/position-object-ado-md.md), la raccolta **Children** è sempre vuota. Inoltre, la proprietà [Type](../../../ado/reference/ado-md-api/type-property-ado-md.md) si applica solo ai **membri** di un **livello**.  
   
  Un **membro** di **position** dispone di due proprietà che risultano utili quando si visualizzano le [celle](../../../ado/reference/ado-md-api/cellset-object-ado-md.md): [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md) e [ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md). Si verificherà un errore se si accede a queste proprietà in un **membro** di un **livello**.  
