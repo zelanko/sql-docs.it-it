@@ -44,7 +44,7 @@ while ((rc=SQLFetch(hstmt)) != SQL_NO_DATA) {
   
  Nella tabella seguente vengono definiti i codici restituiti.  
   
-|Codice restituito|Descrizione|  
+|Codice restituito|Description|  
 |-----------------|-----------------|  
 |SQL_SUCCESS|Funzione completata correttamente. L'applicazione chiama **SQLGetDiagField** per recuperare informazioni aggiuntive dal record di intestazione.|  
 |SQL_SUCCESS_WITH_INFO|La funzione è stata completata correttamente, probabilmente con un errore non irreversibile (avviso). L'applicazione chiama **SQLGetDiagRec** o **SQLGetDiagField** per recuperare informazioni aggiuntive.|  

@@ -11,30 +11,30 @@ topic_type:
 helpviewer_keywords:
 - SQLPutData function
 ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7e15353cd9f4c4a837fe5978d00259ad5460d50d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 410aa819e2d4af056c53fc30a971625001b1186e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046626"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702205"
 ---
 # <a name="sqlputdata"></a>SQLPutData
-  Quando si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] USA SQLPutData per inviare più di 65.535 byte di dati (per la versione 4.21 a) o 400 KB di dati (per SQL Server versione 6,0 e successive) per una colonna SQL_LONGVARCHAR (`text`), SQL_WLONGVARCHAR (`ntext`) o SQL_LONGVARBINARY (`image`), si applicano le restrizioni seguenti:  
+  Quando si usa SQLPutData per inviare più di 65.535 byte di dati (per la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 4.21 a) o 400 KB di dati (per SQL Server versione 6,0 e successive) per una colonna SQL_LONGVARCHAR ( `text` ), SQL_WLONGVARCHAR ( `ntext` ) o SQL_LONGVARBINARY (), `image` si applicano le restrizioni seguenti:  
   
 -   Il parametro a cui si fa riferimento può essere il *insert_Value* in un'istruzione INSERT.  
   
 -   Il parametro a cui si fa riferimento può essere un' *espressione* nella clausola set di un'istruzione Update.  
   
- L'annullamento di una sequenza di chiamate SQLPutData che forniscono dati in blocchi a un server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che esegue comporta un aggiornamento parziale del valore della colonna quando si usa la versione 6,5 o precedente. La `text`colonna `ntext`, o `image` a cui è stato fatto riferimento quando è stato chiamato SQLCancel è impostata su un valore di segnaposto intermedio.  
+ L'annullamento di una sequenza di chiamate SQLPutData che forniscono dati in blocchi a un server che esegue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comporta un aggiornamento parziale del valore della colonna quando si usa la versione 6,5 o precedente. La `text` `ntext` colonna, o `image` a cui è stato fatto riferimento quando è stato chiamato SQLCancel è impostata su un valore di segnaposto intermedio.  
   
 > [!NOTE]  
 >  Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client non supporta la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 e versioni precedenti.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Per SQLPutData è [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibile un SQLSTATE specifico di Native Client:  
+ Per SQLPutData è disponibile un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLSTATE specifico di Native Client:  
   
 |SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
@@ -63,7 +63,7 @@ ms.locfileid: "63046626"
 ## <a name="sqlputdata-support-for-large-clr-udts"></a>Supporto di SQLPutData per i tipi CLR definiti dall'utente di grandi dimensioni  
  `SQLPutData` supporta i tipi CLR definiti dall'utente di grandi dimensioni. Per ulteriori informazioni, vedere [tipi CLR definiti dall'utente di grandi dimensioni &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQLPutData (funzione)](https://go.microsoft.com/fwlink/?LinkId=59365)   
  [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - promoting properties [XML in SQL Server]
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b5b2d167ca9bb2f5a39802bacceb3dd0eb3c96d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9c86eef119ce121dfb5ff964e64f1970eda16db
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68195580"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702551"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promuovere i valori XML di uso frequente mediante colonne calcolate
   Se le query vengono eseguite principalmente su un piccolo numero di valori di attributi e di elementi, sarà possibile promuovere tali quantità al livello di colonne relazionali. Ciò risulta utile quando le query vengono eseguite su una piccola parte dei dati XML mentre viene recuperata l'intera istanza XML. Non è necessario creare un indice XML sulla colonna XML, ma è possibile indicizzare la colonna promossa. Le query devono essere scritte in modo da utilizzare la colonna promossa, poiché il Query Optimizer non reindirizza alla colonna promossa le query eseguite sulla colonna XML.  
@@ -172,7 +172,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
   
 3.  Definire i trigger di inserimento, aggiornamento ed eliminazione utilizzando la funzione definita dall'utente per la manutenzione delle tabelle di proprietà.  
   
- A tale scopo è innanzitutto necessario creare la funzione CLR di flusso. Il `xml` tipo di dati viene esposto come classe SqlXml gestita in ADO.NET e supporta il metodo **CreateReader ()** che restituisce un oggetto XmlReader.  
+ A tale scopo è innanzitutto necessario creare la funzione CLR di flusso. Il `xml` tipo di dati viene esposto come classe SqlXml gestita in ADO.NET e supporta il **Metodo CreateReader ()** che restituisce un oggetto XmlReader.  
   
 > [!NOTE]  
 >  Il codice di esempio in questa sezione utilizza XPathDocument e XPathNavigator, che impongono il caricamento in memoria di tutti i documenti XML. Se nella propria applicazione si utilizza codice analogo per elaborare numerosi documenti XML di grandi dimensioni, sarà necessario ricordare che tale codice non è scalabile. Se possibile, è preferibile utilizzare allocazioni di memoria di piccole dimensioni e utilizzare interfacce di flusso. Per altre informazioni sulle prestazioni, vedere [Architettura dell'integrazione con CLR](../../database-engine/dev-guide/architecture-of-clr-integration.md).  

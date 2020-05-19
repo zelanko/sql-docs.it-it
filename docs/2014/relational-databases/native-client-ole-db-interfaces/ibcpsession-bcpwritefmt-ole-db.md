@@ -13,15 +13,15 @@ topic_type:
 helpviewer_keywords:
 - BCPWriteFmt method
 ms.assetid: add50425-2ed6-411a-a391-4ce63c364892
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1b4022f14c1f39984b1feaa0a45adef2154c1d0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a547548f84af88ea3790658618570aeed8ce8112
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62826843"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82695134"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
   Scrive informazioni sul formato per ogni colonna nel file di formato.  
@@ -58,7 +58,7 @@ const wchar_t *pwszFormatFile);
  E_UNEXPECTED  
  La chiamata al metodo non era prevista. Non è stato ad esempio chiamato il metodo [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) prima della chiamata a questo metodo.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [IBCPSession &#40;OLE DB&#41;](ibcpsession-ole-db.md)   
  [Esecuzione di operazioni di copia bulk](../native-client/features/performing-bulk-copy-operations.md)  
   

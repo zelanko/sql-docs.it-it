@@ -15,15 +15,15 @@ helpviewer_keywords:
 - sql:limit-value
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f93a60e7b6c1dfa2a0c7577aafbbb68d5068c629
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd38d26195d10c097ad090ed756a7f5d62508456
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013813"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703584"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtrare valori tramite sql:limit-field e sql:limit-value (SQLXML 4.0)
   È possibile limitare le righe restituite da una query di database in base a un valore di limitazione. Le annotazioni `sql:limit-field` e `sql:limit-value` vengono utilizzate per identificare la colonna di database che contiene valori di limitazione e per specificare un valore di limitazione specifico da utilizzare per filtrare i dati restituiti.  
@@ -35,7 +35,7 @@ ms.locfileid: "66013813"
 > [!NOTE]  
 >  Quando si utilizza un'annotazione `sql:limit-field` in cui la colonna SQL mappata è di tipo `real`, SQLXML 4.0 esegue la conversione nell'annotazione `sql:limit-value` specificata negli elementi XML Schema come valore `nvarchar` specificato. Per questa operazione è necessario che i valori del limite decimale siano specificati tramite la notazione scientifica completa. Per ulteriori informazioni, vedere l'esempio B seguente.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Per creare esempi reali utilizzando questi esempi, è necessario che siano installati gli elementi seguenti.  
   
 -   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -44,7 +44,7 @@ ms.locfileid: "66013813"
   
  In questi esempi vengono utilizzati modelli per specificare query XPath sullo schema di mapping XSD.  
   
-### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>A. Limitazione degli indirizzi dei clienti restituiti a un tipo di indirizzo specifico  
+### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>R. Limitazione degli indirizzi dei clienti restituiti a un tipo di indirizzo specifico  
  In questo esempio un database contiene due tabelle:  
   
 -   Customer (CustomerID, CompanyName)  
@@ -170,7 +170,7 @@ ms.locfileid: "66013813"
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- Si tratta dello schema di mapping in cui l'attributo **OrderID** sui dettagli dell'ordine viene mappato alla colonna OrderID nella relazione Orders. I valori restituiti per questo attributo sono limitati solo a quelli con valore pari 2.0000000 e-001 (0,2) come specificato per l'attributo **discount** usando le `sql:limit-field` annotazioni e `sql:limit-value` .  
+ Si tratta dello schema di mapping in cui l'attributo **OrderID** sui dettagli dell'ordine viene mappato alla colonna OrderID nella relazione Orders. I valori restituiti per questo attributo sono limitati solo a quelli con valore pari 2.0000000 e-001 (0,2) come specificato per l'attributo **discount** usando le `sql:limit-field` `sql:limit-value` annotazioni e.  
   
  Lo schema è il seguente:  
   
@@ -304,7 +304,7 @@ ms.locfileid: "66013813"
     </root>  
     ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [&#41;Transact-SQL float e Real &#40;](/sql/t-sql/data-types/float-and-real-transact-sql)   
  [nchar e nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)   
  [Installazione di SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   

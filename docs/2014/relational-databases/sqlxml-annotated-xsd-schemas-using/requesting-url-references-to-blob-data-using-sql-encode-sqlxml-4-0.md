@@ -16,15 +16,15 @@ helpviewer_keywords:
 - BLOBs, URL references
 - Base 64-encoded format
 ms.assetid: 2f8cd93b-c636-462b-8291-167197233ee0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 153a88bcb31f65d4e6aff007cfbee7d1f7afc6df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cab7101480099ce462585b658cb1acb023399b4c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013725"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703546"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>Richiesta di riferimenti URL a dati BLOB utilizzando sql:encode (SQLXML 4.0)
   In uno schema XSD con annotazioni quando viene eseguito il mapping di un attributo o elemento a una colonna BLOB in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i dati vengono restituiti in formato con codifica Base 64 in XML.  
@@ -40,11 +40,11 @@ ms.locfileid: "66013725"
 > [!NOTE]  
 >  Non è possibile utilizzare le colonne di tipo BLOB come parte di una chiave o di una chiave esterna.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per l'esecuzione di esempi SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>A. Specifica di sql:encode per ottenere un riferimento URL ai dati BLOB  
- In questo esempio, lo schema di mapping `sql:encode` specifica sull'attributo **LargePhoto** per recuperare il riferimento URI a una foto del prodotto specifica, anziché recuperare i dati binari nel formato con codifica base 64.  
+### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>R. Specifica di sql:encode per ottenere un riferimento URL ai dati BLOB  
+ In questo esempio, lo schema di mapping specifica `sql:encode` sull'attributo **LargePhoto** per recuperare il riferimento URI a una foto del prodotto specifica, anziché recuperare i dati binari nel formato con codifica base 64.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

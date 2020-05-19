@@ -18,18 +18,18 @@ helpviewer_keywords:
 - XML schema collections [SQL Server]
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 45f3dfbf7a4caa2744ef57a352b0434e7eb1bf37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 939f0d85233f5efe7ddc010169fd0922000083f7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193036"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702266"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Raccolte di XML Schema (SQL Server)
-  Come descritto nell'argomento [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), SQL Server fornisce l'archiviazione nativa dei dati XML tramite il `xml` tipo di dati. Facoltativamente, è possibile associare schemi XSD a una variabile o a una colonna `xml` di tipo tramite una raccolta di XML Schema. Una raccolta di XML Schema archivia gli elementi XML Schema importati e può essere quindi utilizzata per eseguire le operazioni seguenti:  
+  Come descritto nell'argomento [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), SQL Server fornisce l'archiviazione nativa dei dati XML tramite il `xml` tipo di dati. Facoltativamente, è possibile associare schemi XSD a una variabile o a una colonna di `xml` tipo tramite una raccolta di XML Schema. Una raccolta di XML Schema archivia gli elementi XML Schema importati e può essere quindi utilizzata per eseguire le operazioni seguenti:  
   
 -   Convalidare istanze XML.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "63193036"
   
  Lo schema viene inoltre utilizzato dal motore di elaborazione delle query per la verifica dei tipi, per l'ottimizzazione delle query e per la modifica dei dati.  
   
- Inoltre, SQL Server usa la raccolta di XML Schema associata, nel caso di tipizzato `xml`, per convalidare l'istanza XML. Se l'istanza XML è conforme allo schema, il database consente di archiviarla nel sistema insieme alle relative informazioni sul tipo, in caso contrario la rifiuta.  
+ Inoltre, SQL Server usa la raccolta di XML Schema associata, nel caso di tipizzato `xml` , per convalidare l'istanza XML. Se l'istanza XML è conforme allo schema, il database consente di archiviarla nel sistema insieme alle relative informazioni sul tipo, in caso contrario la rifiuta.  
   
  Per recuperare la raccolta di schemi archiviata nel database è possibile utilizzare la funzione intrinseca XML_SCHEMA_NAMESPACE. Per altre informazioni, vedere [Visualizzare una raccolta di XML Schema archiviata](../xml/view-a-stored-xml-schema-collection.md).  
   
@@ -161,7 +161,7 @@ ms.locfileid: "63193036"
 ##  <a name="getting-information-about-xml-schemas-and-schema-collections"></a><a name="info"></a> Acquisizione di Informazioni su XML Schema e Raccolte di schemi  
  Le raccolte di XML Schema sono enumerate nella vista del catalogo sys.xml_schema_collections. La raccolta di XML Schema "sys" è definita dal sistema e contiene gli spazi dei nomi predefiniti che è possibile utilizzare in tutte le raccolte di XML Schema definite dall'utente senza doverli caricare in modo esplicito. Tale elenco contiene gli spazi dei nomi per xml, xs, xsi, fn e xdt. Sono disponibili altre due viste del catalogo: sys.xml_schema_namespaces, che enumera tutti gli spazi dei nomi in ogni raccolta di XML Schema, e sys.xml_components, che enumera tutti i componenti degli elementi XML Schema presenti in ognuno.  
   
- La funzione predefinita **XML_SCHEMA_NAMESPACE**, *SchemaName, XmlSchemaCollectionName, Namespace-URI*, produce un'istanza del tipo `xml` di dati. Tale istanza contiene frammenti di XML Schema per gli schemi inclusi in una raccolta di XML Schema, ad eccezione degli elementi XML Schema predefiniti.  
+ La funzione predefinita **XML_SCHEMA_NAMESPACE**, *SchemaName, XmlSchemaCollectionName, Namespace-URI*, produce un' `xml` istanza del tipo di dati. Tale istanza contiene frammenti di XML Schema per gli schemi inclusi in una raccolta di XML Schema, ad eccezione degli elementi XML Schema predefiniti.  
   
  Per enumerare il contenuto di una raccolta di XML Schema è possibile:  
   

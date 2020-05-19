@@ -15,15 +15,15 @@ helpviewer_keywords:
 - XML data islands [SQL Server]
 - data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 130228aee1ba21829651afb5dfd5665692a42315
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193335"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702400"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Utilizzare i risultati di query FOR XML nel codice di un'applicazione
   L'utilizzo delle clausole FOR XML nelle query SQL consente di recuperare e inoltre di eseguire il cast dei risultati delle query come dati XML. Se i risultati di una query FOR XML possono essere utilizzati nel codice XML dell'applicazione, è possibile eseguire le operazioni seguenti:  
@@ -290,7 +290,7 @@ SqlConnection closed.
 ```  
   
 > [!NOTE]  
->  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` supporto del tipo di dati consente di richiedere che il risultato di una query for XML venga `xml` restituito come tipo di dati, anziché come dati tipizzati stringa o immagine, specificando la [direttiva Type](type-directive-in-for-xml-queries.md). L'uso della direttiva TYPE nelle query FOR XML consente di ottenere l'accesso a livello di programmazione ai risultati FOR XML, in modo analogo a quanto illustrato in [Utilizzo di dati XML nelle applicazioni](use-xml-data-in-applications.md).  
+>  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` supporto del tipo di dati consente di richiedere che il risultato di una query for XML venga restituito come `xml` tipo di dati, anziché come dati tipizzati stringa o immagine, specificando la [direttiva Type](type-directive-in-for-xml-queries.md). L'uso della direttiva TYPE nelle query FOR XML consente di ottenere l'accesso a livello di programmazione ai risultati FOR XML, in modo analogo a quanto illustrato in [Utilizzo di dati XML nelle applicazioni](use-xml-data-in-applications.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)  

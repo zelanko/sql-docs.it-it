@@ -13,15 +13,15 @@ topic_type:
 helpviewer_keywords:
 - BCPInit method
 ms.assetid: 583096d7-da34-49be-87fd-31210aac81aa
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fc9983cea171eb78f4b3b4f2b9c5cb9f31ecb2d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b9f282f9f95c971c4ab5007a947e94848e9b8ad6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033594"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82695399"
 ---
 # <a name="ibcpsessionbcpinit-ole-db"></a>IBCPSession::BCPInit (OLE DB)
   Inizializza la struttura della copia bulk, esegue alcune operazioni di controllo degli errori, verifica che i dati e i nomi dei file di formato siano corretti, quindi li apre.  
@@ -42,7 +42,7 @@ inteDirection);
   
  Il metodo **BCPInit** esamina la struttura dell'origine del database o della tabella di destinazione, non il file di dati. Specifica i valori relativi al formato dei dati per il file di dati in base a ogni colonna nella vista o nella tabella di database o nel set di risultati SELECT. Questa specifica include il tipo di dati di ogni colonna, la presenza o meno di un indicatore di lunghezza o Null e di stringhe di byte con carattere di terminazione nei dati e la larghezza dei tipi di dati a lunghezza fissa. Il metodo **BCPInit** imposta questi valori nel modo seguente:  
   
--   Il tipo di dati specificato è quello della colonna della vista o della tabella di database oppure del set di risultati SELECT. Il tipo di dati viene enumerato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in base ai tipi di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nativi specificati nel file di intestazione di Native Client (sqlncli. h). I relativi valori utilizzano il modello BCP_TYPE_XXX. I dati vengono rappresentati nel relativo formato elettronico, ovvero i dati di una colonna di un tipo di dati integer vengono rappresentati da una sequenza a quattro byte, di tipo big o little endian a seconda del computer con il quale è stato creato il file di dati.  
+-   Il tipo di dati specificato è quello della colonna della vista o della tabella di database oppure del set di risultati SELECT. Il tipo di dati viene enumerato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in base ai tipi di dati nativi specificati nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file di intestazione di Native Client (sqlncli. h). I relativi valori utilizzano il modello BCP_TYPE_XXX. I dati vengono rappresentati nel relativo formato elettronico, ovvero i dati di una colonna di un tipo di dati integer vengono rappresentati da una sequenza a quattro byte, di tipo big o little endian a seconda del computer con il quale è stato creato il file di dati.  
   
 -   Se un tipo di dati del database ha una lunghezza fissa, anche i dati del file di dati presenteranno una lunghezza fissa. I metodi di copia bulk che elaborano dati, ad esempio [IBCPSession::BCPExec](ibcpsession-bcpexec-ole-db.md), analizzano le righe di dati prevedendo che la lunghezza dei dati nel file sia identica alla lunghezza dei dati specificata nella vista o nella tabella di database o nell'elenco di colonne SELECT. I dati di una colonna del database definiti come `char(13)` devono, ad esempio, essere rappresentati da 13 caratteri per ogni riga di dati nel file. I dati a lunghezza fissa possono essere preceduti da un indicatore Null se la colonna del database consente valori Null.  
   
@@ -87,7 +87,7 @@ inteDirection);
  E_INVALIDARG  
  Uno o più argomenti non sono stati specificati correttamente, ad esempio è stato immesso un nome file non valido.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [IBCPSession &#40;OLE DB&#41;](ibcpsession-ole-db.md)   
  [Esecuzione di operazioni di copia bulk](../native-client/features/performing-bulk-copy-operations.md)  
   

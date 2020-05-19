@@ -2,7 +2,7 @@
 title: Progettazione di assembly | Microsoft Docs
 description: Questo articolo descrive i fattori da tenere in considerazione quando si progetta un assembly da ospitare in SQL Server, tra cui la creazione di pacchetti, la gestione e le restrizioni per gli assembly.
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/24/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: clr
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65dbc1a4fdabbf234f4676d75011522a8f3481d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4f2a5281d0e5fd7ac18f908ba4c28302b3bfdd5f
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488051"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262064"
 ---
 # <a name="assemblies---designing"></a>Assembly - Progettazione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,19 +102,22 @@ eUI
  Gli assembly cui fa riferimento l'assembly personalizzato devono essere caricati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando CREATE ASSEMBLY. Gli assembly [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] seguenti sono già caricati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e, pertanto, possono essere utilizzati come riferimento dagli assembly personalizzati senza richiedere l'utilizzo di CREATE ASSEMBLY.  
   
 ```  
-custommarshallers.dll  
-Microsoft.visualbasic.dll  
-Microsoft.visualc.dll  
+CustomMarshalers.dll  
+Microsoft.VisualBasic.dll  
+Microsoft.VisualC.dll  
 mscorlib.dll  
-system.data.dll  
+System.dll  
+System.Configuration.dll  
+System.Core.dll  
+System.Data.dll  
+System.Data.OracleClient.dll  
 System.Data.SqlXml.dll  
-system.dll  
-system.security.dll  
-system.web.services.dll  
-system.xml.dll  
-System.Transactions  
-System.Data.OracleClient  
-System.Configuration  
+System.Deployment.dll  
+System.Security.dll  
+System.Transactions.dll  
+System.Web.Services.dll  
+system.Xml.dll  
+System.Xml.Linq.dll  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

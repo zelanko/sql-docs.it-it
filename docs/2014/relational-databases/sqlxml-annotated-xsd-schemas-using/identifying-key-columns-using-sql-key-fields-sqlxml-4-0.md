@@ -18,15 +18,15 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - key-fields annotation
 ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bc3c063da7bb9133f8687a908c4bd7e0e13bae8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d592ea935453675d0467e9d2e4d9162d79117cc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013815"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703559"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Identificazione delle colonne chiave mediante sql:key-fields (SQLXML 4.0)
   Quando si specifica una query XPath su uno schema XSD, nella maggior parte dei casi sono necessarie informazioni chiave per ottenere la nidificazione appropriata nel risultato. La specifica dell'annotazione `sql:key-fields` rappresenta un modo per assicurarsi che venga generata la gerarchia appropriata.  
@@ -38,17 +38,17 @@ ms.locfileid: "66013815"
   
  È necessario utilizzare l' `sql:key-fields` annotazione quando un elemento contiene un ** \<>SQL: Relationship** definito tra l'elemento e un elemento figlio ma non fornisce la chiave primaria della tabella specificata nell'elemento padre.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per l'esecuzione di esempi SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. Creazione della nidificazione appropriata quando \<SQL: Relationship> non fornisce informazioni sufficienti  
+### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>R. Creazione della nidificazione appropriata quando \< SQL: relationship> non fornisce informazioni sufficienti  
  In questo esempio viene illustrato dove specificare `sql:key-fields`.  
   
- Si consideri lo schema seguente: Lo schema specifica una gerarchia tra gli ** \<elementi Order>** e ** \<Customer>** in cui l' ** \<elemento Order>** è il padre e l' ** \<elemento Customer>** è un elemento figlio.  
+ Si consideri lo schema seguente: Lo schema specifica una gerarchia tra gli elementi ** \< Order>** e ** \< Customer>** in cui l'elemento ** \< Order>** è il padre e l'elemento ** \< Customer>** è un elemento figlio.  
   
- Il ** \<Tag>SQL: Relationship** viene utilizzato per specificare la relazione padre-figlio. che identifica CustomerID nella tabella Sales.SalesOrderHeader come chiave padre che fa riferimento alla chiave figlio CustomerID nella tabella Sales.Customer. Le informazioni fornite in ** \<SQL: Relationship>** non sono sufficienti per identificare in modo univoco le righe nella tabella padre (Sales. SalesOrderHeader). Se non si specifica l'annotazione `sql:key-fields`, la gerarchia generata non è precisa.  
+ Il tag ** \<>SQL: Relationship** viene utilizzato per specificare la relazione padre-figlio. che identifica CustomerID nella tabella Sales.SalesOrderHeader come chiave padre che fa riferimento alla chiave figlio CustomerID nella tabella Sales.Customer. Le informazioni fornite in ** \< SQL: Relationship>** non sono sufficienti per identificare in modo univoco le righe nella tabella padre (Sales. SalesOrderHeader). Se non si specifica l'annotazione `sql:key-fields`, la gerarchia generata non è precisa.  
   
- Con `sql:key-fields` specificato in ** \<Order>**, l'annotazione identifica in modo univoco le righe nel padre (tabella Sales. SalesOrderHeader) e i relativi elementi figlio vengono visualizzati al di sotto del relativo elemento padre.  
+ Con `sql:key-fields` specificato in ** \< Order>**, l'annotazione identifica in modo univoco le righe nel padre (tabella Sales. SalesOrderHeader) e i relativi elementi figlio vengono visualizzati al di sotto del relativo elemento padre.  
   
  Lo schema è il seguente:  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66013815"
   
 1.  Copiare il codice dello schema precedente e incollarlo in un file di testo. Salvare il file come KeyFields1.xml.  
   
-2.  Copiare il modello seguente e incollarlo in un file di testo. Salvare il file come KeyFields1T.xml nella stessa directory nella quale è stato salvato KeyFields1.xml. La query XPath nel modello restituisce tutti gli ** \<elementi Order>** con CustomerID minore di 3.  
+2.  Copiare il modello seguente e incollarlo in un file di testo. Salvare il file come KeyFields1T.xml nella stessa directory nella quale è stato salvato KeyFields1.xml. La query XPath nel modello restituisce tutti gli elementi ** \< Order>** con CustomerID minore di 3.  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -125,7 +125,7 @@ ms.locfileid: "66013815"
 ```  
   
 ### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. Specifica di sql:key-fields per produrre una nidificazione appropriata nel risultato  
- Nello schema seguente non è specificata alcuna gerarchia tramite ** \<SQL: Relationship>**. Lo schema richiede ancora la specifica dell'annotazione `sql:key-fields` per identificare in modo univoco i dipendenti nella tabella HumanResources.Employee.  
+ Nello schema seguente non è specificata alcuna gerarchia tramite ** \< SQL: Relationship>**. Lo schema richiede ancora la specifica dell'annotazione `sql:key-fields` per identificare in modo univoco i dipendenti nella tabella HumanResources.Employee.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -152,7 +152,7 @@ ms.locfileid: "66013815"
   
 1.  Copiare il codice dello schema precedente e incollarlo in un file di testo. Salvare il file come KeyFields2.xml.  
   
-2.  Copiare il modello seguente e incollarlo in un file di testo. Salvare il file come KeyField21T.xml nella stessa directory nella quale è stato salvato KeyFields2.xml. La query XPath nel modello restituisce tutti gli elementi ** \<HumanResources. Employee>** :  
+2.  Copiare il modello seguente e incollarlo in un file di testo. Salvare il file come KeyField21T.xml nella stessa directory nella quale è stato salvato KeyFields2.xml. La query XPath nel modello restituisce tutti gli elementi ** \< HumanResources. Employee>** :  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

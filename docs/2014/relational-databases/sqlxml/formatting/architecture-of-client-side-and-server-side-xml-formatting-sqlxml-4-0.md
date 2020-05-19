@@ -16,22 +16,22 @@ helpviewer_keywords:
 - SQL Server Native Client, XML
 - SQLXMLOLEDB Provider, XML formatting architecture
 ms.assetid: 52440d9e-89fd-4c15-a008-a1ea99f41387
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 03601c4d36a3e11de4df35bc32237ac554ca93fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: caebd8ecad5fe9a48745d10adff28cf2a68d6a1d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014435"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702919"
 ---
 # <a name="architecture-of-client-side-and-server-side-xml-formatting-sqlxml-40"></a>Architettura della formattazione XML sul lato client e sul lato server (SQLXML 4.0)
   Nell'illustrazione seguente viene mostrata l'architettura della formattazione XML sul lato server.  
   
  ![Architettura della formattazione XML sul lato server](../../../database-engine/dev-guide/media/serversidexml.gif "Architettura della formattazione XML sul lato server")  
   
- In questo esempio il comando specificato sul client viene inviato al server. Il server produce un documento XML e lo restituisce al client. In questo caso, il server dispone di un'istanza [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]di. Grazie alla formattazione XML sul lato server, è possibile utilizzare il provider SQLXMLOLEDB o il provider SQLOLEDB.  Il provider SQLXMLOLEDB utilizza Sqlxml4.dll che è incluso in SQLXML 4.0. Quando si utilizza il provider SQLOLEDB, per impostazione predefinita si ottiene la funzionalità SQLXML fornita dal file Sqlxmlx.dll incluso in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows o in Microsoft Data Access Components (MDAC) 2.6 o versione successiva. Per utilizzare Sqlxml4. dll con SQLOLEDB, è necessario impostare la proprietà SQLXML Version su "SQLXML. 4.0" per l'oggetto connessione SQLOLEDB. In entrambi i casi, il server produce il documento XML e lo invia al client.  
+ In questo esempio il comando specificato sul client viene inviato al server. Il server produce un documento XML e lo restituisce al client. In questo caso, il server dispone di un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Grazie alla formattazione XML sul lato server, è possibile utilizzare il provider SQLXMLOLEDB o il provider SQLOLEDB.  Il provider SQLXMLOLEDB utilizza Sqlxml4.dll che è incluso in SQLXML 4.0. Quando si utilizza il provider SQLOLEDB, per impostazione predefinita si ottiene la funzionalità SQLXML fornita dal file Sqlxmlx.dll incluso in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows o in Microsoft Data Access Components (MDAC) 2.6 o versione successiva. Per utilizzare Sqlxml4. dll con SQLOLEDB, è necessario impostare la proprietà SQLXML Version su "SQLXML. 4.0" per l'oggetto connessione SQLOLEDB. In entrambi i casi, il server produce il documento XML e lo invia al client.  
   
 > [!NOTE]  
 >  Gli updategram e le query XPath vengono analizzati sul client. Per ottenere il modello XPath o la funzionalità degli updategram in SQLXML 4.0, utilizzare Sqlxml4.dll.  

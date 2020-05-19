@@ -13,15 +13,15 @@ topic_type:
 helpviewer_keywords:
 - BCPColFmt method
 ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e896f3e04d24becf136b7abefcff9dbe97fa0970
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68cb7c9d0a4fdc96f181281d78f7011231752375
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63240268"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82695685"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
   Crea un'associazione tra variabili di programma e colonne di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -75,7 +75,7 @@ DBORDINALidxServerCol);
  Indice del campo nel file di dati dell'utente.  
   
  *eUserDataType*[in]  
- Il tipo di dati del campo nel file di dati dell'utente. I tipi di dati disponibili sono elencati nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file di intestazione di Native Client (sqlncli. h) con BCP_TYPE_XXX formato, ad esempio BCP_TYPE_SQLINT4. Se viene specificato il valore BCP_TYPE_DEFAULT, il provider tenta di utilizzare lo stesso tipo della colonna della tabella o della vista. Per le operazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] copia bulk in un file quando l' `eUserDataType` argomento è BCP_TYPE_SQLDECIMAL o BCP_TYPE_SQLNUMERIC:  
+ Il tipo di dati del campo nel file di dati dell'utente. I tipi di dati disponibili sono elencati nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file di intestazione di Native Client (sqlncli. h) con BCP_TYPE_XXX formato, ad esempio BCP_TYPE_SQLINT4. Se viene specificato il valore BCP_TYPE_DEFAULT, il provider tenta di utilizzare lo stesso tipo della colonna della tabella o della vista. Per le operazioni di copia bulk [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un file quando l' `eUserDataType` argomento è BCP_TYPE_SQLDECIMAL o BCP_TYPE_SQLNUMERIC:  
   
 -   Se la colonna di origine non è decimal o numeric, vengono utilizzate la precisione e la scala predefinite.  
   
@@ -87,13 +87,13 @@ DBORDINALidxServerCol);
  *cbUserData*[in]  
  Lunghezza massima, espressa in byte, dei dati del campo nel file utente, senza includere la lunghezza di un carattere di terminazione o di un indicatore di lunghezza.  
   
- L' `cbUserData` impostazione di su BCP_LENGTH_NULL indica che tutti i valori nei campi del file di dati sono o devono essere impostati su null. Impostando `cbUserData` su BCP_LENGTH_VARIABLE indica che il sistema deve determinare la lunghezza dei dati per ogni campo. Per alcuni campi, questo potrebbe indicare che viene generato un indicatore di lunghezza o Null da anteporre ai dati in una copia da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o che l'indicatore è previsto nei dati copiati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ `cbUserData`L'impostazione di su BCP_LENGTH_NULL indica che tutti i valori nei campi del file di dati sono o devono essere impostati su null. Impostando `cbUserData` su BCP_LENGTH_VARIABLE indica che il sistema deve determinare la lunghezza dei dati per ogni campo. Per alcuni campi, questo potrebbe indicare che viene generato un indicatore di lunghezza o Null da anteporre ai dati in una copia da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o che l'indicatore è previsto nei dati copiati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i tipi di dati character e `cbUserData` binary, può essere BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 o un valore positivo. Se `cbUserData` è BCP_LENGTH_VARIABLE, il sistema utilizza l'indicatore di lunghezza, se presente, o una sequenza di caratteri di terminazione per determinare la lunghezza dei dati. Se vengono specificati sia un indicatore di lunghezza che una sequenza di caratteri di terminazione, la copia bulk utilizza la modalità che comporta la copia del minor numero di dati. Se `cbUserData` è BCP_LENGTH_VARIABLE, il tipo di dati è [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di tipo carattere o binario e se non viene specificato né un indicatore di lunghezza né una sequenza di caratteri di terminazione, il sistema restituisce un messaggio di errore.  
+ Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i tipi di dati character e binary, `cbUserData` può essere BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 o un valore positivo. Se `cbUserData` è BCP_LENGTH_VARIABLE, il sistema utilizza l'indicatore di lunghezza, se presente, o una sequenza di caratteri di terminazione per determinare la lunghezza dei dati. Se vengono specificati sia un indicatore di lunghezza che una sequenza di caratteri di terminazione, la copia bulk utilizza la modalità che comporta la copia del minor numero di dati. Se `cbUserData` è BCP_LENGTH_VARIABLE, il tipo di dati è di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo carattere o binario e se non viene specificato né un indicatore di lunghezza né una sequenza di caratteri di terminazione, il sistema restituisce un messaggio di errore.  
   
- Se `cbUserData` è 0 o un valore positivo, il sistema utilizza `cbUserData` come lunghezza massima dei dati. Tuttavia, se, oltre a un valore positivo `cbUserData`, viene specificato un indicatore di lunghezza o una sequenza di caratteri di terminazione, il sistema determina la lunghezza dei dati utilizzando il metodo che comporta la copia del minor numero di dati.  
+ Se `cbUserData` è 0 o un valore positivo, il sistema utilizza `cbUserData` come lunghezza massima dei dati. Tuttavia, se, oltre a un valore positivo `cbUserData` , viene specificato un indicatore di lunghezza o una sequenza di caratteri di terminazione, il sistema determina la lunghezza dei dati utilizzando il metodo che comporta la copia del minor numero di dati.  
   
- Il `cbUserData` valore rappresenta il numero di byte di dati. Se i dati di tipo carattere sono rappresentati da caratteri wide Unicode `cbUserData` , un valore di parametro positivo rappresenta il numero di caratteri moltiplicato per la dimensione, in byte, di ogni carattere.  
+ Il `cbUserData` valore rappresenta il numero di byte di dati. Se i dati di tipo carattere sono rappresentati da caratteri wide Unicode, un `cbUserData` valore di parametro positivo rappresenta il numero di caratteri moltiplicato per la dimensione, in byte, di ogni carattere.  
   
  *pbUserDataTerm*[size_is][in]  
  Sequenza di caratteri di terminazione da utilizzare per il campo. Questo parametro risulta particolarmente utile per i dati di tipo carattere, in quanto tutti gli altri tipi hanno una lunghezza fissa o, nel caso dei dati binari, richiedono un indicatore di lunghezza per registrare in modo accurato il numero di byte presenti.  
@@ -126,7 +126,7 @@ DBORDINALidxServerCol);
  E_OUTOFMEMORY  
  Errore di memoria insufficiente.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [IBCPSession &#40;OLE DB&#41;](ibcpsession-ole-db.md)   
  [Esecuzione di operazioni di copia bulk](../native-client/features/performing-bulk-copy-operations.md)  
   

@@ -9,22 +9,22 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), descriptor fields
 ms.assetid: 4e009eff-c156-4d63-abcf-082ddd304de2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bd58bdb611a070c812364baf2fa3e1544c2ffdc9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a2d4b96d837edc1fa0fcb2ce2c9d48449eb59e7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63228959"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82698199"
 ---
 # <a name="table-valued-parameter-descriptor-fields"></a>Campi di descrizione dei parametri con valori di tabella
   Il supporto per i parametri con valori di tabella include nuovi campi specifici di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nei descrittori di parametri delle applicazioni (APD, Application Parameter Descriptor) e nei descrittori di parametri di implementazione (IPD, Implementation Parameter Descriptor) ODBC.  
   
 ## <a name="remarks"></a>Osservazioni  
   
-|Nome|Location|Type|Descrizione|  
+|Nome|Location|Tipo|Description|  
 |----------|--------------|----------|-----------------|  
 |SQL_CA_SS_TYPE_NAME|IPD|SQLTCHAR*|Nome del tipo di server del parametro con valori di tabella.<br /><br /> Quando un nome di tipo di parametro con valori di tabella viene specificato in una chiamata a SQLBindParameter, deve sempre essere specificato come valore Unicode, anche nelle applicazioni compilate come applicazioni ANSI. Il valore utilizzato per il parametro *StrLen_or_IndPtr* deve essere SQL_NTS o la lunghezza della stringa del nome moltiplicato per sizeof (WCHAR).<br /><br /> Quando un nome di tipo di parametro con valori di tabella viene specificato tramite SQLSetDescField, può essere specificato usando un valore letterale conforme al modo in cui viene compilata l'applicazione. In Gestione driver ODBC verrà eseguita la conversione Unicode necessaria.|  
 |SQL_CA_SS_TYPE_CATALOG_NAME (di sola lettura)|IPD|SQLTCHAR*|Il catalogo in cui è definito il tipo.|  
@@ -34,7 +34,7 @@ ms.locfileid: "63228959"
   
  Di seguito sono indicati gli attributi di istruzione e i campi di intestazione di descrizione che si applicano ai parametri con valori di tabella quando lo stato attivo del parametro è impostato su un parametro con valori di tabella:  
   
-|Nome|Location|Type|Descrizione|  
+|Nome|Location|Tipo|Description|  
 |----------|--------------|----------|-----------------|  
 |SQL_ATTR_PARAMSET_SIZE<br /><br /> (equivale a SQL_DESC_ARRAY_SIZE in APD)|APD|SQLUINTEGER|Dimensione delle matrici di buffer per un parametro con valori di tabella. Si tratta del numero massimo di righe che può essere adattato dai buffer o della dimensione dei buffer in righe. Nel valore del parametro con valori di tabella stesso potrebbe essere presente un numero maggiore o minore di righe rispetto a quello che può essere contenuto nel buffer. Il valore predefinito è 1. **Nota:**  Se SQL_SOPT_SS_PARAM_FOCUS è impostato sul valore predefinito 0, SQL_ATTR_PARAMSET_SIZE fa riferimento all'istruzione e specifica il numero di set di parametri. Se SQL_SOPT_SS_PARAM_FOCUS è impostato sul numero ordinale di un parametro con valori di tabella, si riferisce al parametro con valori di tabella e specifica il numero di righe per set di parametri per il parametro con valori di tabella.|  
 |SQL_ATTR_PARAM _BIND_TYPE|APD|SQLINTEGER|L'impostazione predefinita è SQL_PARAM_BIND_BY_COLUMN.<br /><br /> Per selezionare l'associazione per riga, questo campo è impostato sulla lunghezza della struttura o su un'istanza di un buffer che verrà associato a un set di righe del parametro con valori di tabella. Questa lunghezza deve includere lo spazio per tutte le colonne associate ed eventuale riempimento della struttura o del buffer. In questo modo si garantisce che, quando l'indirizzo di una colonna associata viene incrementato con la lunghezza specificata, il risultato punterà all'inizio della stessa colonna della riga successiva. In caso di utilizzo dell'operatore `sizeof` in ANSI C, questo comportamento è garantito.|  
@@ -50,7 +50,7 @@ ms.locfileid: "63228959"
   
  SQL_CA_SS_TYPE_CATALOG_NAME e SQL_CA_SS_TYPE_SCHEMA_NAME possono inoltre essere utilizzati per recuperare il catalogo e lo schema associati ai parametri del tipo CLR definito dall'utente. Si tratta di alternative agli attributi dello schema del catalogo specifico del tipo esistente per questi tipi.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Parametri con valori di tabella &#40;&#41;ODBC](table-valued-parameters-odbc.md)  
   
   

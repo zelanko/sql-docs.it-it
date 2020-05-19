@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 660515f10797e1f11fac22c1baf4ed74e9f67c0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a5ec9cefd0106a8e6eb4d796921efe147bea446
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157239"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702218"
 ---
 # <a name="supported-sql-server-features"></a>Funzionalità di SQL Server supportate
   In questo argomento vengono illustrate le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportate o non supportate per l'utilizzo con oggetti ottimizzati per la memoria.  
@@ -105,13 +105,13 @@ ms.locfileid: "63157239"
   
  Salvo alcune eccezioni, le transazioni tra database non sono supportate. Nella tabella seguente vengono descritti i casi supportati e le relative restrizioni. Vedere anche [Query tra database](cross-database-queries.md).  
   
-|Database|Consentito|Descrizione|  
+|Database|Consentito|Description|  
 |---------------|-------------|-----------------|  
 |Database utente, model e msdb|No|Query e transazioni tra database non sono supportate.<br /><br /> Query e transazioni che accedono a tabelle ottimizzate per la memoria o a stored procedure compilate in modo nativo non possono accedere ad altri database, ad eccezione del master del database di sistema (accesso in sola lettura) e di tempdb.|  
 |Database delle risorse e tempdb|Sì|Non vi sono restrizioni per le transazioni tra database che, oltre a un singolo database utente, utilizzano solo un database delle risorse e tempdb.|  
 |master|Sola lettura|Il commit delle transazioni tra database che riguardano OLTP in memoria e il database master non viene eseguito se sono incluse scritture nel database master. Le transazioni tra database che eseguono solo letture dal master e utilizzano un solo database utente sono consentite.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Supporto di SQL Server per OLTP in memoria](sql-server-support-for-in-memory-oltp.md)  
   
   

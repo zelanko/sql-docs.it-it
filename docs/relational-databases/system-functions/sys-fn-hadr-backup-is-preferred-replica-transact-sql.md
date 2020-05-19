@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 61b9be77-e2f6-4da1-b2ae-a62cbe226145
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4e343e7e9657b69ebd06a147cb99fa19e3c36aab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 287acb7986b3e518260f82278f8079391932ab6f
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68120251"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262139"
 ---
 # <a name="sysfn_hadr_backup_is_preferred_replica--transact-sql"></a>sys. fn_hadr_backup_is_preferred_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,8 +46,8 @@ sys.fn_hadr_backup_is_preferred_replica ( 'dbname' )
  '*dbname*'  
  Nome del database di cui eseguire il backup. *dbname* è di tipo sysname.  
   
-## <a name="returns"></a>Valori di codice restituiti  
- Restituisce 1 se il database nell'istanza corrente è nella replica preferita. In caso contrario, restituisce 0.  
+## <a name="returns"></a>Restituisce  
+ Restituisce il tipo di dati **bool**: 1 se il database nell'istanza corrente è nella replica preferita; in caso contrario, 0.  
   
 ## <a name="remarks"></a>Osservazioni  
  Utilizzare questa funzione in uno script di backup per determinare se il database corrente si trova nella replica preferita per i backup. È possibile eseguire uno script in ogni replica di disponibilità. Ognuno di questi processi analizza gli stessi dati per determinare il processo da eseguire in modo tale che solo uno dei processi pianificati procede effettivamente alla fase di backup. Il codice di esempio avrà un aspetto analogo al seguente:  
@@ -75,7 +75,7 @@ GO
   
 -   [Configurare il backup su repliche di disponibilità &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzioni di gruppi di disponibilità Always On &#40;&#41;Transact-SQL](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
  [Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [CREARE un gruppo di disponibilità &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   

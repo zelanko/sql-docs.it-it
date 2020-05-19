@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - large data
 ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 24d05ef704e37af9d0d8c1e2a9e9eefe0b20f1d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9789ddf12272dd6c33c8cfbbb8677ecc3bb4b191
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63218667"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82696196"
 ---
 # <a name="set-large-data-ole-db"></a>Impostare dati di grandi dimensioni (OLE DB)
   In questo esempio viene illustrato come impostare dati BLOB, creare una tabella, aggiungere un record di esempio, recuperare tale record nel set di righe e quindi impostare il valore del campo BLOB. Questo esempio non è supportato in IA64.  
@@ -33,7 +33,7 @@ ms.locfileid: "63218667"
   
 #### <a name="to-set-blob-data"></a>Per impostare dati BLOB  
   
-1.  Creare una struttura DBOBJECT che descrive il modo in cui accedere alla colonna BLOB. Impostare l'elemento **dwFlag** della struttura DBOBJECT su STGM_READ e impostare l'elemento iid su `IID_ISequentialStream` , ovvero l'interfaccia da esporre.  
+1.  Creare una struttura DBOBJECT che descrive il modo in cui accedere alla colonna BLOB. Impostare l'elemento **dwFlag** della struttura DBOBJECT su STGM_READ e impostare l'elemento iid su, `IID_ISequentialStream` ovvero l'interfaccia da esporre.  
   
 2.  Impostare le proprietà nel gruppo di proprietà DBPROPSET_ROWSET in modo che il set di righe sia aggiornabile.  
   

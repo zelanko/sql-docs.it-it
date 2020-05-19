@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data types
 - SQLGetData function
 ms.assetid: b289c7fb-5017-4d7e-a2d3-19401e9fc4cd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b803ca3742f9cb831e51105aab9d0ed75ad78e16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d4dc78d946f76161cbe7210e183d9b3b77be955
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200075"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82699291"
 ---
 # <a name="fetching-result-data"></a>Recupero di dati dei risultati
   Un'applicazione ODBC dispone di tre opzioni per il recupero dei dati dei risultati.  
@@ -56,11 +56,11 @@ ms.locfileid: "63200075"
   
  Quando si utilizza SQL_C_DEFAULT per specificare il tipo della variabile C, è necessario procedere con cautela. SQL_C_DEFAULT specifica che il tipo della variabile C corrisponde al tipo di dati SQL della colonna o del parametro. Se SQL_C_DEFAULT viene specificato per una colonna **ntext**, **nchar**o **nvarchar** , i dati Unicode vengono restituiti all'applicazione. Ciò può provocare diversi problemi se l'applicazione non è stata codificata per la gestione di dati Unicode. È possibile che si verifichino gli stessi tipi di problemi con il tipo di dati **uniqueidentifier** (SQL_GUID).  
   
- i dati di tipo **Text**, **ntext**e **Image** sono in genere troppo grandi per essere contenuti in una singola variabile di programma e vengono in genere elaborati con **SQLGetData** anziché con **SQLBindCol**. Quando si utilizzano i cursori server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , il driver ODBC di Native Client è ottimizzato per non trasmettere i dati per le colonne di tipo **Text**, **ntext**o **Image** non associato al momento del recupero della riga. I dati di tipo **Text**, **ntext**o **Image** non vengono effettivamente recuperati dal server fino a quando l'applicazione non rilascia **SQLGetData** per la colonna.  
+ i dati di tipo **Text**, **ntext**e **Image** sono in genere troppo grandi per essere contenuti in una singola variabile di programma e vengono in genere elaborati con **SQLGetData** anziché con **SQLBindCol**. Quando si utilizzano i cursori server, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client è ottimizzato per non trasmettere i dati per le colonne di tipo **Text**, **ntext**o **Image** non associato al momento del recupero della riga. I dati di tipo **Text**, **ntext**o **Image** non vengono effettivamente recuperati dal server fino a quando l'applicazione non rilascia **SQLGetData** per la colonna.  
   
  Questa ottimizzazione può essere applicata alle applicazioni in modo che non vengano visualizzati dati di tipo **Text**, **ntext**o **Image** quando un utente scorre verso l'alto e verso il basso di un cursore. Dopo che l'utente ha selezionato una riga, l'applicazione può chiamare **SQLGetData** per recuperare i dati di tipo **Text**, **ntext**o **Image** . In questo modo viene salvata la trasmissione dei dati di tipo **Text**, **ntext**o **Image** per tutte le righe che l'utente non seleziona e che può salvare la trasmissione di quantità molto elevate di dati.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Elaborazione dei risultati &#40;&#41;ODBC](processing-results-odbc.md)  
   
   

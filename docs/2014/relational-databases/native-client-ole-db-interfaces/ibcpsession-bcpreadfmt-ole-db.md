@@ -13,15 +13,15 @@ topic_type:
 helpviewer_keywords:
 - BCPReadFmt method
 ms.assetid: e2a12050-94e4-48a3-8a48-b780d646f116
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5a82cd2b9261b8f8c26e4e37636423cc27603fcc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54cfcdb87e8292f4588360e5a6b8c77f410a1fc9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192418"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82695409"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>IBCPSession::BCPReadFmt (OLE DB)
   Legge le informazioni sul formato per ogni colonna dal file di formato.  
@@ -35,13 +35,13 @@ const wchar_t *pwszFormatFile);
 ```  
   
 ## <a name="remarks"></a>Osservazioni  
- Il metodo **BCPReadFmt** viene usato per la lettura di dati da un file di formato che specifica il formato dei dati nel file di dati. Questo metodo è in grado di rilevare la versione corretta del file di formato. Può rilevare automaticamente se il file è in formato xml o testo stile antico e comportarsi di conseguenza. Le versioni dei file di formato supportate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dall'utilità bcp del provider di OLE DB di Native Client sono la versione 6,0 o successive.  
+ Il metodo **BCPReadFmt** viene usato per la lettura di dati da un file di formato che specifica il formato dei dati nel file di dati. Questo metodo è in grado di rilevare la versione corretta del file di formato. Può rilevare automaticamente se il file è in formato xml o testo stile antico e comportarsi di conseguenza. Le versioni dei file di formato supportate dall' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilità bcp del provider di OLE DB di Native Client sono la versione 6,0 o successive.  
   
  Dopo la lettura dei valori del formato, il metodo **BCPReadFmt** effettua le chiamate appropriate ai metodi [IBCPSession::BCPColumns](ibcpsession-bcpcolumns-ole-db.md) e [IBCPSession::BCPColFmt](ibcpsession-bcpcolfmt-ole-db.md). L'utente può evitare di analizzare un file di formato ed effettuare queste chiamate.  
   
  Per salvare un file di formato, chiamare il metodo [IBCPSession::BCPWriteFmt](ibcpsession-bcpwritefmt-ole-db.md). Le chiamate al metodo **BCPReadFmt** possono fare riferimento ai formati salvati. In alternativa, l'utilità per la copia bulk (**bcp**) può salvare i formati di dati definiti dall'utente in file ai quali può fare riferimento il metodo **BCPReadFmt**.  
   
- Il `BCP_OPTION_DELAYREADFMT` valore del parametro *eOption* di [IBCPSession:: BCPControl](ibcpsession-bcpcontrol-ole-db.md) modifica il comportamento di IBCPSession:: BCPReadFmt.  
+ Il `BCP_OPTION_DELAYREADFMT` valore del parametro *EOption* di [IBCPSession:: BCPControl](ibcpsession-bcpcontrol-ole-db.md) modifica il comportamento di IBCPSession:: BCPReadFmt.  
   
 ## <a name="arguments"></a>Argomenti  
  *pwszFormatFile*[in]  
@@ -60,7 +60,7 @@ const wchar_t *pwszFormatFile);
  E_UNEXPECTED  
  La chiamata al metodo non era prevista. Non è stato ad esempio chiamato il metodo [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) prima della chiamata a questo metodo.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [IBCPSession &#40;OLE DB&#41;](ibcpsession-ole-db.md)   
  [Esecuzione di operazioni di copia bulk](../native-client/features/performing-bulk-copy-operations.md)  
   

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c9b1969f-be1d-4dfb-a33d-551f380b9e27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: befd4ba78a3d147acd8dd2adbd8fcb81500ec4b8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a030bbcd292ade6e52f71f523d60dfccbdf6c79
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68811409"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262123"
 ---
 # <a name="sysfn_hadr_is_primary_replica-transact-sql"></a>sys.fn_hadr_is_primary_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +45,8 @@ sys.fn_hadr_is_primary_replica ( 'dbname' )
  '*dbname*'  
  Nome del database. *dbname* è di tipo sysname.  
   
-## <a name="returns"></a>Valori di codice restituiti  
- Restituisce 1 se il database nell'istanza corrente è la replica primaria. In caso contrario, restituisce 0.  
+## <a name="returns"></a>Restituisce  
+ Restituisce il tipo di dati **bool**: 1 se il database nell'istanza corrente è la replica primaria; in caso contrario, 0.  
   
 ## <a name="remarks"></a>Osservazioni  
  Utilizzare questa funzione per determinare se l'istanza locale ospita la replica primaria del database di disponibilità specificato. Il codice di esempio avrà un aspetto analogo al seguente:  
@@ -75,7 +75,7 @@ GO
 ### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzioni Gruppi di disponibilità AlwaysOn &#40;&#41;Transact-SQL](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
  [sys. dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../..//relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) [gruppi di disponibilità AlwaysOn](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) &#40;SQL Server&#41;   
  [CREARE un gruppo di disponibilità &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   

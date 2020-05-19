@@ -10,22 +10,22 @@ helpviewer_keywords:
 - FOR XML clause, formatting
 - server-side XML formatting
 ms.assetid: ae9ea068-0857-4505-a3b2-f53d256b644c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: af44d854ba28e8e8ac3b1a4572bf9b222f20299b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 13e20c9c4b415ad5dabc53baad813126a81afcae
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012207"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702868"
 ---
 # <a name="server-side-xml-formatting-sqlxml-40"></a>Formattazione XML sul lato server (SQLXML 4.0)
   In questo argomento sono incluse informazioni sulla formattazione di documenti XML sul lato server dai set di righe generati da query eseguite su un database in Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è possibile archiviare e recuperare documenti XML da e verso tabelle di database. Per recuperare un documento XML, utilizzare l'estensione della query FOR XML in una query SELECT.  
   
- Si supponga, ad esempio, che un'applicazione client esegua [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] un comando su costituito [!INCLUDE[tsql](../../../includes/tsql-md.md)] dalla query seguente:  
+ Si supponga, ad esempio, che un'applicazione client esegua un comando su [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] costituito dalla [!INCLUDE[tsql](../../../includes/tsql-md.md)] query seguente:  
   
 ```  
 SELECT FirstName, LastName  
@@ -52,7 +52,7 @@ FROM   Person.Contact
   
  Per ulteriori informazioni sulla clausola FOR XML, vedere [costruzione di codice XML mediante for XML](../../xml/for-xml-sql-server.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Architettura della formattazione XML sul lato client e sul lato server &#40;SQLXML 4,0&#41;](architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
  [Formattazione XML sul lato client &#40;SQLXML 4,0&#41;](client-side-xml-formatting-sqlxml-4-0.md)   
  [FOR XML &#40;SQL Server&#41;](../../xml/for-xml-sql-server.md)  

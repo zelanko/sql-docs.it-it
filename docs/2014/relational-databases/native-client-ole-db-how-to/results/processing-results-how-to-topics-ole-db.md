@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - OLE DB, processing results
 ms.assetid: 23cc2688-6080-497e-8151-712d10da5fef
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f0ffe1ae426b39742e9d50f343daf913777836cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: beef30273e7d3ad3b0273c10ebbb3d589b7187a7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225472"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82696522"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>Procedure relative all'elaborazione dei risultati (OLE DB)
   L'elaborazione dei risultati in un'applicazione OLE DB comporta innanzitutto la determinazione delle caratteristiche del set di risultati e il successivo recupero dei dati in variabili del programma. Se il comando esegue una stored procedure, è necessario anche sapere come elaborare i codici restituiti e i parametri di output ottenuti dalle stored procedure.  
@@ -32,7 +32,7 @@ ms.locfileid: "63225472"
   
 -   [Recuperare righe da un set di risultati &#40;OLE DB&#41;](fetch-rows-from-a-result-set-ole-db.md)  
   
-## <a name="see-also"></a>Vedi anche  
- [Procedure per OLE DB](../ole-db-how-to-topics.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Procedure relative a OLE DB](../ole-db-how-to-topics.md)  
   
   

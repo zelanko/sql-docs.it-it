@@ -13,15 +13,15 @@ helpviewer_keywords:
 - queries [SQLXML], ADO
 - SQLXML, ADO
 ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 02dfe2bfe1a5893a2ef121f279648c5962d6cce9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c513c643ebae58c0670abd18e3da1736eabfdd3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251420"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702848"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>Utilizzo di ADO per eseguire query SQLXML 4.0
   Nelle versioni precedenti di SQLXML viene fornito il supporto per l'esecuzione di query basate su HTTP mediante le directory virtuali IIS e il filtro ISAPI SQLXML. In SQLXML 4.0 questi componenti sono stati rimossi in quanto simili e, a partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], è stata fornita una funzionalità sostitutiva con i servizi Web XML nativi.  
@@ -119,9 +119,9 @@ ms.locfileid: "75251420"
     3.  Nell'elenco dei programmi attualmente installati, verificare che **Microsoft SQL Server Native Client** sia visualizzato nell'elenco.  
   
         > [!NOTE]  
-        >  Se è necessario installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client, vedere installazione di [SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md).  
+        >  Se è necessario installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client, vedere [installazione di SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md).  
   
-2.  Verificare che la versione di MDAC installata per il computer client sia 2.6 o successiva. Se è necessario verificare le informazioni sulla versione di MDAC, è possibile utilizzare lo strumento MDAC Component Checker, fornito come download gratuito dal sito [https://www.microsoft.com/](https://www.microsoft.com/)Web Microsoft. Per ulteriori informazioni, cercare "MDAC Component Checker" sul sito Web Microsoft.  
+2.  Verificare che la versione di MDAC installata per il computer client sia 2.6 o successiva. Se è necessario verificare le informazioni sulla versione di MDAC, è possibile utilizzare lo strumento MDAC Component Checker, fornito come download gratuito dal sito Web Microsoft [https://www.microsoft.com/](https://www.microsoft.com/) . Per ulteriori informazioni, cercare "MDAC Component Checker" sul sito Web Microsoft.  
   
 3.  Eseguire lo script.  
   

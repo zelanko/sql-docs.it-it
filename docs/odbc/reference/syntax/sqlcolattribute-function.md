@@ -68,7 +68,7 @@ SQLRETURN SQLColAttribute (
  Se *CharacterAttributePtr* è null, *StringLengthPtr* restituisce comunque il numero totale di byte (escluso il carattere di terminazione null per i dati di tipo carattere) disponibili per restituire nel buffer a cui punta *CharacterAttributePtr*.  
   
  *BufferLength*  
- Input Se *FieldIdentifier* è un campo definito da ODBC e *CharacterAttributePtr* punta a una stringa di caratteri o a un buffer binario, questo argomento deve essere \*la lunghezza di *CharacterAttributePtr*. Se *FieldIdentifier* è un campo definito da ODBC e \* *CharacterAttribute*ptr è un numero intero, questo campo viene ignorato. Se * \*CharacterAttributePtr* è una stringa Unicode (quando si chiama **SQLColAttributeW**), l'argomento *bufferLength* deve essere un numero pari. Se *FieldIdentifier* è un campo definito dal driver, l'applicazione indica la natura del campo per Gestione driver impostando l'argomento *bufferLength* . *BufferLength* può avere i valori seguenti:  
+ Input Se *FieldIdentifier* è un campo definito da ODBC e *CharacterAttributePtr* punta a una stringa di caratteri o a un buffer binario, questo argomento deve essere la lunghezza di \* *CharacterAttributePtr*. Se *FieldIdentifier* è un campo definito da ODBC e \* *CharacterAttribute*ptr è un numero intero, questo campo viene ignorato. Se * \* CharacterAttributePtr* è una stringa Unicode (quando si chiama **SQLColAttributeW**), l'argomento *bufferLength* deve essere un numero pari. Se *FieldIdentifier* è un campo definito dal driver, l'applicazione indica la natura del campo per Gestione driver impostando l'argomento *bufferLength* . *BufferLength* può avere i valori seguenti:  
   
 -   Se *CharacterAttributePtr* è un puntatore a un puntatore, il valore di *BufferLength* deve essere SQL_IS_POINTER.  
   
@@ -81,14 +81,14 @@ SQLRETURN SQLColAttribute (
  *StringLengthPtr*  
  Output Puntatore a un buffer in cui restituire il numero totale di byte, escluso il byte di terminazione null per i dati di tipo carattere, disponibile per restituire in **CharacterAttributePtr*.  
   
- Per i dati di tipo carattere, se il numero di byte disponibili per restituire è maggiore o uguale a *bufferLength*, le informazioni \*sul descrittore in *CharacterAttributePtr* vengono troncate a *bufferLength* meno la lunghezza di un carattere di terminazione null e con terminazione null dal driver.  
+ Per i dati di tipo carattere, se il numero di byte disponibili per restituire è maggiore o uguale a *bufferLength*, le informazioni sul descrittore in \* *CharacterAttributePtr* vengono troncate a *bufferLength* meno la lunghezza di un carattere di terminazione null e con terminazione null dal driver.  
   
  Per tutti gli altri tipi di dati, il valore di *bufferLength* viene ignorato e il driver presuppone che la dimensione di **CharacterAttributePtr* sia 32 bit.  
   
  *NumericAttributePtr*  
  Output Puntatore a un buffer Integer in cui restituire il valore nel campo *FieldIdentifier* della riga *ColumnNumber* di IRD, se il campo è un tipo di descrittore numerico, ad esempio SQL_DESC_COLUMN_LENGTH. In caso contrario, il campo non viene utilizzato. Si noti che alcuni driver possono scrivere solo la versione inferiore a 32 bit o a 16 bit di un buffer e lasciare invariato il bit di ordine superiore. Pertanto, le applicazioni devono inizializzare il valore su 0 prima di chiamare questa funzione.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
@@ -105,7 +105,7 @@ SQLRETURN SQLColAttribute (
 |HY008|Operation canceled|L'elaborazione asincrona è stata abilitata per *statementHandle*. La funzione è stata chiamata e prima del completamento dell'esecuzione è stato chiamato **SQLCancel** o **SQLCancelHandle** in *statementHandle*. La funzione è stata chiamata nuovamente in *statementHandle*.<br /><br /> La funzione è stata chiamata e prima del completamento dell'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato su *statementHandle* da un thread diverso in un'applicazione multithread.|  
 |HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona per l'handle di connessione associato a *statementHandle*. Questa funzione Aynchronous era ancora in esecuzione quando è stato chiamato SQLColAttribute.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** è stato chiamato per *statementHandle* e restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.<br /><br /> (DM) la funzione è stata chiamata prima di chiamare **SQLPrepare**, **SQLExecDirect**o una funzione di catalogo per *statementHandle*.<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona (non questa) per *statementHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** è stato chiamato per *statementHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché non è possibile accedere agli oggetti memoria sottostante, probabilmente a causa di condizioni di memoria insufficiente.|  
-|HY090|Lunghezza della stringa o del buffer non valida|(DM) * \*CharacterAttributePtr* è una stringa di caratteri e *bufferLength* è minore di 0 ma non uguale a SQL_NTS.|  
+|HY090|Lunghezza della stringa o del buffer non valida|(DM) * \* CharacterAttributePtr* è una stringa di caratteri e *bufferLength* è minore di 0 ma non uguale a SQL_NTS.|  
 |HY091|Identificatore del campo del descrittore non valido|Il valore specificato per l'argomento *FieldIdentifier* non è uno dei valori definiti e non è un valore definito dall'implementazione.|  
 |HY117|Connessione sospesa a causa di uno stato di transazione sconosciuto. Sono consentite solo le funzioni di disconnessione e di sola lettura.|(DM) per ulteriori informazioni sullo stato Suspended, vedere [funzione SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYC00|Driver non in grado di supportare|Il valore specificato per l'argomento *FieldIdentifier* non è supportato dal driver.|  
@@ -121,13 +121,13 @@ SQLRETURN SQLColAttribute (
 ## <a name="comments"></a>Commenti  
  Per informazioni sul modo in cui le applicazioni utilizzano le informazioni restituite da **SQLColAttribute**, vedere [metadati del set di risultati](../../../odbc/reference/develop-app/result-set-metadata.md).  
   
- **SQLColAttribute** restituisce informazioni in \* *NumericAttributePtr* o in \* *CharacterAttributePtr*. Le informazioni integer vengono restituite in \* *NumericAttributePtr* come valore SQLLEN; tutti gli altri formati di informazioni vengono restituiti \*in *CharacterAttributePtr*. Quando vengono restituite informazioni \*in *NumericAttributePtr*, il driver ignora *CharacterAttributePtr*, *bufferLength*e *StringLengthPtr*. Quando vengono restituite informazioni \*in *CharacterAttributePtr*, il driver ignora *NumericAttributePtr*.  
+ **SQLColAttribute** restituisce informazioni in \* *NumericAttributePtr* o in \* *CharacterAttributePtr*. Le informazioni integer vengono restituite in \* *NumericAttributePtr* come valore SQLLEN; tutti gli altri formati di informazioni vengono restituiti in \* *CharacterAttributePtr*. Quando vengono restituite informazioni in \* *NumericAttributePtr*, il driver ignora *CharacterAttributePtr*, *bufferLength*e *StringLengthPtr*. Quando vengono restituite informazioni in \* *CharacterAttributePtr*, il driver ignora *NumericAttributePtr*.  
   
  **SQLColAttribute** restituisce i valori dei campi del descrittore di IRD. La funzione viene chiamata con un handle di istruzione anziché un handle del descrittore. I valori restituiti da **SQLColAttribute** per i valori *FieldIdentifier* elencati più avanti in questa sezione possono anche essere recuperati chiamando **SQLGetDescField** con l'handle IRD appropriato.  
   
  I campi del descrittore attualmente definiti, la versione di ODBC in cui sono stati introdotti e gli argomenti in cui vengono restituite le informazioni vengono illustrati più avanti in questa sezione. più tipi di descrittori possono essere definiti dai driver per sfruttare le diverse origini dati.  
   
- ODBC 3. il driver *x* deve restituire un valore per ogni campo del descrittore. Se un campo del descrittore non è applicabile a un driver o a un'origine dati e se non diversamente specificato, \*il driver restituisce 0 in *StringLengthPtr* o una stringa vuota in **CharacterAttributePtr*.  
+ ODBC 3. il driver *x* deve restituire un valore per ogni campo del descrittore. Se un campo del descrittore non è applicabile a un driver o a un'origine dati e se non diversamente specificato, il driver restituisce 0 in \* *StringLengthPtr* o una stringa vuota in **CharacterAttributePtr*.  
   
 ## <a name="backward-compatibility"></a>Backward Compatibility  
  ODBC 3. la funzione *x* **SQLColAttribute** sostituisce la deprecata ODBC 2. **SQLColAttributes**funzione *x* . Quando si esegue il mapping di **SQLColAttributes** a **SQLCOLATTRIBUTE** (quando ODBC 2.* *l'applicazione x funziona con ODBC 3. driver *x* ) o mapping di **SQLColAttribute** a **SQLColAttributes** (quando ODBC 3.* *l'applicazione x funziona con ODBC 2. driver *x* ), la gestione driver passa il valore di *FieldIdentifier* tramite, ne esegue il mapping a un nuovo valore o restituisce un errore, come indicato di seguito:  
@@ -145,7 +145,7 @@ SQLRETURN SQLColAttribute (
   
  Nella tabella seguente sono elencati i tipi di descrittori restituiti da **SQLColAttribute**. Il tipo per i valori *NumericAttributePtr* è **SQLLEN \* **.  
   
-|*FieldIdentifier*|Informazioni<br /><br /> restituito in|Descrizione|  
+|*FieldIdentifier*|Informazioni<br /><br /> restituito in|Description|  
 |-----------------------|---------------------------------|-----------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE (ODBC 1,0)|*NumericAttributePtr*|SQL_TRUE se la colonna è una colonna a incremento automatico.<br /><br /> SQL_FALSE se la colonna non è una colonna a incremento automatico o non è numerica.<br /><br /> Questo campo è valido solo per le colonne con tipi di dati numerici. Un'applicazione può inserire valori in una riga contenente una colonna AutoIncrement, ma in genere non può aggiornare i valori nella colonna.<br /><br /> Quando viene eseguita un'istruzione INSERT in una colonna AutoIncrement, viene inserito un valore univoco nella colonna in fase di inserimento. L'incremento non è definito, ma è specifico dell'origine dati. Un'applicazione non deve presupporre che una colonna AutoIncrement venga avviata in un determinato punto o incrementi di un determinato valore.|  
 |SQL_DESC_BASE_COLUMN_NAME (ODBC 3,0)|*CharacterAttributePtr*|Nome della colonna di base per la colonna del set di risultati. Se non esiste un nome di colonna di base (come nel caso di colonne che sono espressioni), questa variabile contiene una stringa vuota.<br /><br /> Queste informazioni vengono restituite dal campo SQL_DESC_BASE_COLUMN_NAME record di IRD, che è un campo di sola lettura.|  

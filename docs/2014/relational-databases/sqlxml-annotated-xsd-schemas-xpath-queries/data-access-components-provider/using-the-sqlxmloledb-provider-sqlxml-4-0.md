@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SQLXMLOLEDB Provider, samples
 - ClientSideXML property
 ms.assetid: fbcefac5-29c9-478b-b0e0-d510b593f446
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 67a5486816f5af652e111372c9cb492ba3cdb3c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ffb1d252167250cbb6cf665d8b3f70179e0285b6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012944"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703198"
 ---
 # <a name="using-the-sqlxmloledb-provider-sqlxml-40"></a>Utilizzo del provider SQLXMLOLEDB (SQLXML 4.0)
   Negli argomenti di questa sezione vengono fornite applicazioni ADO di esempio che illustrano l'utilizzo delle proprietà specifiche del provider SQLXMLOLEDB.  
@@ -58,7 +58,7 @@ ms.locfileid: "66012944"
  [Applicazione di una trasformazione XSL &#40;provider SQLXMLOLEDB&#41;](applying-an-xsl-transformation-sqlxmloledb-provider.md)  
  Viene illustrato l'utilizzo delle proprietà ClientSideXML e XSL nell'applicazione di una trasformazione XSL.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Requisiti di sistema per SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md)  
   
   

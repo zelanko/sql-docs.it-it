@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_init function
 ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8d482ac020aaaf5ac8f029306441c3e9979f4379
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c77414aac2b6b25d8b0c2ca774cac07c269f328
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62689068"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701948"
 ---
 # <a name="bcp_init"></a>bcp_init
   Inizializza l'operazione di copia bulk.  
@@ -71,11 +71,11 @@ eDirection
  *eDirection*  
  Direzione della copia, ovvero DB_IN oppure DB_OUT. DB_IN indica una copia da variabili di programma o da un file utente a una tabella. DB_OUT indica una copia da una tabella di database a un file utente. È necessario specificare un nome di file utente con DB_OUT.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SUCCEED o FAIL.  
   
 ## <a name="remarks"></a>Osservazioni  
- Chiamare **bcp_init** prima di chiamare qualsiasi altra funzione di copia bulk. **bcp_init** esegue le inizializzazioni necessarie per una copia bulk dei dati tra la workstation e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Chiamare **bcp_init** prima di chiamare qualsiasi altra funzione di copia bulk. **bcp_init** esegue le inizializzazioni necessarie per una copia bulk dei dati tra la workstation e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  La funzione **bcp_init** deve essere fornita con un handle di connessione ODBC abilitato per l'utilizzo con le funzioni di copia bulk. Per abilitare l'handle, utilizzare [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_BCP impostato su SQL_BCP_ON per un handle di connessione allocato, ma non connesso. Il tentativo di assegnare l'attributo su un handle collegato comporta un errore.  
   
@@ -89,7 +89,7 @@ eDirection
   
 -   Quando si esegue la copia in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il file di dati deve includere dati per ogni colonna della tabella di database. Quando si esegue la copia da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i dati di tutte le colonne della vista o della tabella di database o del set di risultati SELECT vengono copiati nel file di dati.  
   
--   Quando si esegue la copia dati di in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la posizione ordinale di una colonna nel file di dati deve essere identica alla posizione ordinale della colonna nella tabella di database. Quando si esegue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la copia da, **bcp_exec** inserisce i dati in base alla posizione ordinale della colonna nella tabella di database.  
+-   Quando si esegue la copia dati di in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la posizione ordinale di una colonna nel file di dati deve essere identica alla posizione ordinale della colonna nella tabella di database. Quando si esegue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la copia da, **bcp_exec** inserisce i dati in base alla posizione ordinale della colonna nella tabella di database.  
   
 -   Se un tipo di dati del database è di lunghezza variabile (ad esempio, **varbinary (22)**) o se una colonna del database può contenere valori null, i dati nel file di dati sono preceduti da un indicatore di lunghezza o null. La larghezza dell'indicatore varia in base al tipo di dati e alla versione della copia bulk.  
   
@@ -97,7 +97,7 @@ eDirection
   
  Le copie bulk eseguite in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono essere ottimizzate per le tabelle che non contengono indici impostando il modello di recupero del database su SIMPLE o BULK_LOGGED. Per ulteriori informazioni, vedere [prerequisiti per la registrazione minima nell'importazione bulk](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md) e [ALTER database](/sql/t-sql/statements/alter-database-transact-sql).  
   
- Se non viene utilizzato alcun file di dati, è necessario chiamare [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) per specificare il formato e la posizione in memoria dei dati per ogni colonna, quindi copiare le righe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di dati in utilizzando [bcp_sendrow](bcp-sendrow.md).  
+ Se non viene utilizzato alcun file di dati, è necessario chiamare [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) per specificare il formato e la posizione in memoria dei dati per ogni colonna, quindi copiare le righe di dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando [bcp_sendrow](bcp-sendrow.md).  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrato come utilizzare la funzione ODBC bcp_init con un file di formato.  
@@ -228,7 +228,7 @@ int main() {
   
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzioni di copia bulk](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

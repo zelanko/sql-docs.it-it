@@ -3,22 +3,29 @@ title: Novità di SSMA per Access (AccessToSQL) | Microsoft Docs
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/2/2020
+ms.date: 4/27/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 2fd3da31e6a635a65f3d2a2f75320dd0586159d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1bc77c0fac3698d7d36ebfb47dde547d475142e
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80625579"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220256"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Novità di SSMA per Access (AccessToSQL)
 
 Questo articolo elenca SQL Server Migration Assistant (SSMA) per le modifiche di accesso in ogni versione.
+
+## <a name="ssma-v89"></a>SSMA v 8.9
+
+La versione v 8.9 di SSMA per Access contiene le modifiche seguenti:
+
+* Conversione migliorata per le query con riferimento automatico
+* Correzione del problema con i caratteri speciali nel nome del progetto
 
 ## <a name="ssma-v88"></a>SSMA v 8.8
 
@@ -30,7 +37,7 @@ La versione v 8.8 di SSMA per l'accesso include:
 
 ## <a name="ssma-v87"></a>SSMA v 8,7
 
-La versione v 8.7 di SSMA per Access ha migliorato la conversione `IIF` per la funzione nelle query, nonché le correzioni minime e i miglioramenti delle prestazioni nell'interfaccia utente grafica.
+La versione v 8.7 di SSMA per Access ha migliorato la conversione per la `IIF` funzione nelle query, nonché le correzioni minime e i miglioramenti delle prestazioni nell'interfaccia utente grafica.
 
 > [!IMPORTANT]
 > Con SSMA v 8.5 e versioni successive, .NET 4.7.2 è un prerequisito di installazione. Se è necessario installare questa versione, è possibile scaricare il file di runtime da [qui](https://dotnet.microsoft.com/download/dotnet-framework/net472).
@@ -39,7 +46,7 @@ La versione v 8.7 di SSMA per Access ha migliorato la conversione `IIF` per la f
 
 Oltre a un set di correzioni mirato progettato per migliorare l'usabilità e le prestazioni, la versione 8.6 di SSMA per l'accesso è stata migliorata aggiungendo un'impostazione che consente agli utenti di omettere le proprietà estese di SSMA nel codice convertito.
 
-Per sfruttare questa impostazione, in SSMA per Access passare a **strumenti** > **Impostazioni** > progetto**conversione****generale** > , quindi in **varie**aggiornare il valore dell'opzione **omette proprietà estese** su **Sì**.
+Per sfruttare questa impostazione, in SSMA per Access passare a **strumenti**  >  **Impostazioni progetto**  >  **General**  >  **conversione**generale, quindi in **varie**aggiornare il valore dell'opzione **omette proprietà estese** su **Sì**.
 
 ![Omettere l'impostazione delle proprietà estese](../access/media/ssma-omit-extended-properties.png)
 
@@ -50,7 +57,7 @@ Per sfruttare questa impostazione, in SSMA per Access passare a **strumenti** > 
 
 La versione 8.5 di SSMA per l'accesso è stata migliorata con il supporto per l'autenticazione Azure Active Directory e il supporto di base per le funzionalità JSON in SQL Server, insieme a un set di correzioni mirato progettato per migliorare l'usabilità e le prestazioni.
 
-Inoltre, SSMA per l'accesso supporta ora la conversione di più funzioni standard`ISNULL`( `IIF`, e così via).
+Inoltre, SSMA per l'accesso supporta ora la conversione di più funzioni standard ( `ISNULL` , `IIF` e così via).
 
 > [!IMPORTANT]
 > Con SSMA v 8.5, .NET 4.7.2 è un prerequisito di installazione. Se è necessario installare questa versione, è possibile scaricare il file di runtime da [qui](https://dotnet.microsoft.com/download/dotnet-framework/net472).
@@ -67,7 +74,7 @@ La versione di SSMA per l'accesso a v 8.4 è stata migliorata con correzioni mir
 La versione di SSMA per l'accesso a v 8.3 è stata migliorata con correzioni mirate progettate per migliorare la qualità e le metriche di conversione. Inoltre, questa versione di SSMA per Access fornisce le correzioni seguenti:
 
 * Risolvere i problemi di accessibilità.
-* Aggiungere il supporto di `hierarchyid` base per il tipo in SQL Server.
+* Aggiungere il supporto di base per il `hierarchyid` tipo in SQL Server.
 
 ## <a name="ssma-v82"></a>SSMA v 8.2
 
@@ -181,7 +188,7 @@ La versione 2016 di SSMA per l'accesso contiene le modifiche seguenti:
 
 * Aggiunta del supporto ufficiale per SQL Server 2016.
 * Controllo del programma di installazione rimosso per .NET 2,0.
-* Correzione `save-project` dei `open-project` comandi e per la console di SSMA.
+* Correzione `save-project` `open-project` dei comandi e per la console di SSMA.
 * Correzione `securepassword` del comando per la console SSMA.
 * Correzione del conteggio degli oggetti per il caricamento iniziale.
 * Caricamento dei dati delle tabelle fisse per le schede dell'interfaccia utente per l'accesso.
@@ -238,8 +245,8 @@ La versione di SSMA per Access del 2011 luglio aggiunge una segnalazione errori 
 
 La versione aprile 2011 di SSMA per Access contiene le modifiche seguenti:
 
-* Aggiunta di una singola installazione di "SSMA for Access", che supporta [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)] [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] e SQL di Azure.
-* È stata aggiunta la possibilità di [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)]connettersi a.
+* Aggiunta di una singola installazione di "SSMA for Access", che supporta [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] , [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)] [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] e SQL di Azure.
+* È stata aggiunta la possibilità di connettersi a [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] .
 * Aggiunta di SSMA per il supporto della versione della console di Access per compatibilità con le versioni precedenti È possibile aprire i progetti creati dalle versioni precedenti a SSMA v 5.0.
 * Aggiunta della possibilità di installare il prodotto SSMA v 5.0 side-by-Side (SxS) con le versioni precedenti del prodotto SSMA.
 
@@ -270,10 +277,10 @@ La versione 2007 di SSMA per l'accesso contiene le modifiche seguenti:
 
 La versione di novembre 2006 di SSMA per Access contiene le modifiche seguenti:
 
-* Aggiunta di una nuova migrazione guidata database che consente di eseguire la migrazione di un singolo database da Access [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]a.
-* È stato aggiunto un nuovo comando Convert, Load e migrate che converte i database di Access, carica [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]gli oggetti convertiti in ed [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] esegue la migrazione dei dati in un unico passaggio.
+* Aggiunta di una nuova migrazione guidata database che consente di eseguire la migrazione di un singolo database da Access a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] .
+* È stato aggiunto un nuovo comando Convert, Load e migrate che converte i database di Access, carica gli oggetti convertiti in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] ed esegue la migrazione dei dati in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] un unico passaggio.
 * Miglioramento della migrazione delle query. La migrazione delle query ora converte più query SELECT in viste. Per ulteriori informazioni, vedere [conversione di oggetti di database di Access](converting-access-database-objects-accesstosql.md).
-* È stata aggiunta la possibilità di modificare le proprietà delle tabelle [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] e degli indici nella scheda **tabella** .
+* È stata aggiunta la possibilità di modificare le proprietà delle tabelle e degli indici nella [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] scheda **tabella** .
 * Sono state aggiunte nuove impostazioni globali:
   * È possibile scegliere di visualizzare i numeri di riga nelle finestre dell'editor.
   * È possibile configurare SSMA in modo da richiedere la sostituzione di oggetti duplicati o sempre o mai sostituire gli oggetti duplicati durante la conversione dello schema.

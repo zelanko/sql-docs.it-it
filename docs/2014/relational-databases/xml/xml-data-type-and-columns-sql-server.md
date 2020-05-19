@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 755685601bb97f7e0b8980024df07e27967f3cd3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f96d90f620f563877e554c282d9443313bad1b14
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193069"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702238"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Colonne e tipo di dati XML (SQL Server)
-  Questo argomento illustra i vantaggi e le limitazioni del tipo `xml` di dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e consente di scegliere come archiviare i dati XML.  
+  Questo argomento illustra i vantaggi e le limitazioni del `xml` tipo di dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e consente di scegliere come archiviare i dati XML.  
   
 ## <a name="relational-or-xml-data-model"></a>Modello di dati relazionale o XML  
  Se i dati utilizzati sono altamente strutturati in base a uno schema noto, il modello relazionale costituisce senz'altro il metodo di archiviazione ottimale. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili tutte le funzionalità e gli strumenti necessari. Se invece i dati sono semistrutturati, non strutturati o dotati di una struttura sconosciuta, sarà necessario prestare particolare attenzione alla modellazione.  
@@ -61,7 +61,7 @@ ms.locfileid: "63193069"
   
      I dati vengono archiviati in una rappresentazione interna che mantiene il contenuto XML e che contiene informazioni sulla gerarchia di contenimento, l'ordine dei documenti e i valori dell'elemento e dell'attributo. In particolare, viene mantenuto il contenuto InfoSet dei dati XML. Per altre informazioni su InfoSet, vedere [http://www.w3.org/TR/xml-infoset](https://go.microsoft.com/fwlink/?LinkId=48843). Il contenuto InfoSet potrebbe non essere una copia identica del testo XML, perché non vengono mantenute le informazioni seguenti: spazi vuoti non significativi, ordine degli attributi, prefissi degli spazi dei nomi e dichiarazione XML.  
   
-     Per il `xml` tipo di dati tipizzato, un `xml` tipo di dati associato a XML Schema, PSVI (Post-Schema Validation InfoSet) aggiunge all'InfoSet le informazioni sul tipo e viene codificato nella rappresentazione interna. Questo consente di migliorare in modo significativo la velocità di analisi. Per altre informazioni, vedere le specifiche relative allo schema XML W3C su [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) e [http://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871).  
+     Per `xml` il tipo di dati tipizzato, un `xml` tipo di dati associato a XML Schema, PSVI (Post-Schema Validation Infoset) aggiunge all'InfoSet le informazioni sul tipo e viene codificato nella rappresentazione interna. Questo consente di migliorare in modo significativo la velocità di analisi. Per altre informazioni, vedere le specifiche relative allo schema XML W3C su [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) e [http://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871).  
   
 -   Mapping tra archiviazione XML e relazionale  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63193069"
   
      Viene archiviata una copia identica dei dati. Questo è utile per le applicazioni specializzate per scopi particolari, ad esempio quelle per i documenti legali. Per la maggior parte delle applicazioni non è invece necessaria una copia esatta, ma è sufficiente il contenuto XML (conformità all'InfoSet).  
   
- È in genere necessario utilizzare una combinazione di questi approcci, ad esempio se si desidera archiviare i dati XML in una colonna con tipo di dati `xml` e promuovere le relative proprietà al livello di colonne relazionali, In alternativa, è possibile utilizzare la tecnologia di mapping per archiviare parti non ricorsive in colonne non XML e solo le parti ricorsive nelle colonne `xml` con tipo di dati.  
+ È in genere necessario utilizzare una combinazione di questi approcci, ad esempio se si desidera archiviare i dati XML in una colonna con tipo di dati `xml` e promuovere le relative proprietà al livello di colonne relazionali, In alternativa, è possibile utilizzare la tecnologia di mapping per archiviare parti non ricorsive in colonne non XML e solo le parti ricorsive nelle `xml` colonne con tipo di dati.  
   
 ### <a name="choice-of-xml-technology"></a>Scelta della tecnologia XML  
  La scelta della tecnologia XML, ovvero tra XML nativo e visualizzazione XML, dipende in genere dai fattori seguenti:  
@@ -123,7 +123,7 @@ ms.locfileid: "63193069"
   
  Per le query, in fase di esecuzione è necessario convertire i dati nel tipo di dati `xml` ed eseguire query XQuery su di essi. La conversione in fase di esecuzione può essere tuttavia molto costosa, soprattutto se il documento è di grandi dimensioni. Se è necessario eseguire query di frequente, è possibile archiviare una seconda copia dei documenti in una colonna con tipo di dati `xml` e indicizzarla, mentre per restituire le copie esatte dei documenti si utilizza la colonna con tipo di dati `[n]varchar(max)`.  
   
- La colonna XML può essere una colonna calcolata, basata sulla colonna `[n]varchar(max)`. Tuttavia, non è possibile creare un indice XML in una colonna calcolata, XML, né un indice XML per `[n]varchar(max)` le colonne o `varbinary(max)` .  
+ La colonna XML può essere una colonna calcolata, basata sulla colonna `[n]varchar(max)`. Tuttavia, non è possibile creare un indice XML in una colonna calcolata, XML, né un indice XML per le `[n]varchar(max)` colonne o `varbinary(max)` .  
   
 ### <a name="xml-view-technology"></a>Tecnologia di visualizzazione XML  
  Definendo un mapping tra elementi XML Schema e le tabelle in un database, si crea una visualizzazione XML dei dati persistenti. Tramite la visualizzazione XML, è possibile utilizzare il caricamento bulk XML per popolare le tabelle sottostanti. È possibile eseguire query sulla visualizzazione XML utilizzando XPath versione 1.0. Le query vengono convertite in query SQL sulle tabelle. Analogamente, anche gli aggiornamenti vengono propagati a tali tabelle.  
@@ -146,7 +146,7 @@ ms.locfileid: "63193069"
  Si supponga ad esempio di avere a disposizione dati relazionali relativi a clienti, ordini e voci, che si desidera gestire come XML. Definire una visualizzazione XML applicando uno schema AXSD ai dati relazionali. La visualizzazione XML consente di eseguire il caricamento bulk dei dati XML nelle tabelle, nonché di aggiornare ed eseguire query sui dati relazionali. Questo modello è utile quando è necessario scambiare dati contenenti markup XML con altre applicazioni, senza interrompere le applicazioni SQL.  
   
 ### <a name="hybrid-model"></a>Modello ibrido  
- Spesso, una combinazione di colonne relazionali `xml` e di tipo di dati è appropriata per la modellazione dei dati. È possibile archiviare parte dei dati XML in colonne relazionali e il resto, o l'intero valore XML, in una colonna XML. Questa soluzione può migliorare le prestazioni, perché offre un maggiore controllo sugli indici creati sulle colonne relazionali e sulle caratteristiche di blocco.  
+ Spesso, una combinazione di colonne relazionali e di `xml` tipo di dati è appropriata per la modellazione dei dati. È possibile archiviare parte dei dati XML in colonne relazionali e il resto, o l'intero valore XML, in una colonna XML. Questa soluzione può migliorare le prestazioni, perché offre un maggiore controllo sugli indici creati sulle colonne relazionali e sulle caratteristiche di blocco.  
   
  I valori da archiviare nelle colonne relazionali dipendono dal carico di lavoro. Se ad esempio per il recupero di tutti i valori XML si usa l'espressione del percorso, /Customer/@CustId, promuovendo il valore dell'attributo **CustId** in modo da ottenere una colonna relazionale e indicizzando tale colonna sarà possibile eseguire le query molto più rapidamente. Se tuttavia i dati XML sono estensivamente scomposti in colonne relazionali in modo non ridondante, il riassemblaggio potrebbe avere un costo significativo.  
   
@@ -174,7 +174,7 @@ ms.locfileid: "63193069"
   
 -   Non può essere utilizzato come colonna chiave in un indice. Può tuttavia essere inserito come tipo di dati in un indice cluster o essere aggiunto in modo esplicito a un indice non cluster utilizzando la parola chiave INCLUDE durante la creazione dell'indice.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Esempi di importazione ed esportazione bulk di documenti XML &#40;SQL Server&#41;](../import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
   

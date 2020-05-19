@@ -10,15 +10,15 @@ helpviewer_keywords:
 - XML data [SQL Server], retrieving
 - XML instance retrieval
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0f556bfccdd117b23db36bb9551e885f4c38614e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c6ac510751f20856151e6d89280cbac76c74420
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63241211"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702518"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Recuperare ed eseguire query su dati XML
   In questo argomento vengono descritte le opzioni query che è necessario specificare per eseguire query sui dati XML. Vengono inoltre descritte le parti di istanze XML che non vengono mantenute quando vengono archiviate nei database.  
@@ -40,7 +40,7 @@ FROM T1
   
  Il risultato è `<doc/>`.  
   
- La dichiarazione XML, ad esempio `<?xml version='1.0'?>`, non è mantenuta quando si archiviano i dati XML in un'istanza del tipo di dati `xml`. Questo si verifica per motivi strutturali. La dichiarazione XML () e i relativi attributi (version/encoding/stand-alone) vengono persi dopo la conversione dei dati `xml`nel tipo. La dichiarazione XML viene considerata come una direttiva per il parser XML. I dati XML vengono archiviati internamente come ucs-2. Tutte le altre PI nell'istanza XML vengono mantenute.  
+ La dichiarazione XML, ad esempio `<?xml version='1.0'?>`, non è mantenuta quando si archiviano i dati XML in un'istanza del tipo di dati `xml`. Questo si verifica per motivi strutturali. La dichiarazione XML () e i relativi attributi (version/encoding/stand-alone) vengono persi dopo la conversione dei dati nel tipo `xml` . La dichiarazione XML viene considerata come una direttiva per il parser XML. I dati XML vengono archiviati internamente come ucs-2. Tutte le altre PI nell'istanza XML vengono mantenute.  
   
   
 ### <a name="order-of-attributes"></a>Ordine degli attributi  
@@ -87,7 +87,7 @@ GO
   
   
 ##  <a name="setting-required-query-options"></a><a name="query"></a> Impostazione di opzioni query obbligatorie  
- Quando si eseguono `xml` query su colonne o variabili `xml` di tipo utilizzando metodi con tipo di dati, è necessario impostare le opzioni seguenti come illustrato.  
+ Quando si eseguono query `xml` su colonne o variabili `xml` di tipo utilizzando metodi con tipo di dati, è necessario impostare le opzioni seguenti come illustrato.  
   
 |Opzioni SET|Valori richiesti|  
 |-----------------|---------------------|  
@@ -99,7 +99,7 @@ GO
 |NUMERIC_ROUNDABORT|OFF|  
 |QUOTED_IDENTIFIER|ATTIVA|  
   
- Se le opzioni non vengono impostate come indicato, le query e le `xml` modifiche sui metodi con tipo di dati avranno esito negativo.  
+ Se le opzioni non vengono impostate come indicato, le query e le modifiche sui `xml` metodi con tipo di dati avranno esito negativo.  
   
   
 ## <a name="see-also"></a>Vedere anche  

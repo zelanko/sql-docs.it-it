@@ -15,21 +15,21 @@ helpviewer_keywords:
 - AUTO mode
 - client-side XPath
 ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4eaa4667db1e8b6ed789e2adb90bc8d72c1b02e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b721a2abeaf941cd7169b731b5d1a74e15c4396
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012345"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702878"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>Lato client e Formattazione XML sul lato server (SQLXML 4.0)
   In questo argomento vengono descritte le differenze generali tra la formattazione XML sul lato client e quella sul lato server in SQLXML.  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>Query su più set di righe non supportate nella formattazione sul lato client  
- Le query che generano più set di righe non sono supportate quando si utilizza la formattazione XML sul lato client. Supporre, ad esempio, di disporre di una directory virtuale nella quale è stata specificata la formattazione sul lato client. Si consideri questo modello di esempio, in cui sono presenti due istruzioni SELECT in un ** \<blocco SQL: query>** :  
+ Le query che generano più set di righe non sono supportate quando si utilizza la formattazione XML sul lato client. Supporre, ad esempio, di disporre di una directory virtuale nella quale è stata specificata la formattazione sul lato client. Si consideri questo modello di esempio, in cui sono presenti due istruzioni SELECT in un blocco ** \< SQL: query>** :  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -40,12 +40,12 @@ ms.locfileid: "66012345"
 </ROOT>  
 ```  
   
- È possibile eseguire questo modello nel codice dell'applicazione ma viene restituito un errore, poiché la formattazione XML sul lato client non supporta la formattazione di più set di righe. Se si specificano le query in due blocchi ** \<SQL: query>** distinti, si otterranno i risultati desiderati.  
+ È possibile eseguire questo modello nel codice dell'applicazione ma viene restituito un errore, poiché la formattazione XML sul lato client non supporta la formattazione di più set di righe. Se si specificano le query in due blocchi ** \< SQL: query>** distinti, si otterranno i risultati desiderati.  
   
 ## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>timestamp viene mappato in modo diverso nella formattazione sul lato client e in quella sul lato server  
  Nella formattazione XML sul lato server la colonna di database del tipo `timestamp` esegue il mapping al tipo XDR i8, quando viene specificata l'opzione XMLDATA nella query.  
   
- Nella formattazione XML sul lato client la colonna di database del tipo `timestamp` esegue il mapping al tipo XDR `uri` o `bin.base64`, a seconda che venga specificata l'opzione binary base64 nella query. Il `bin.base64` tipo XDR è utile se si utilizzano le funzionalità updategram e Bulkload, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `timestamp` quanto questo tipo viene convertito nel tipo. In questo modo, l'operazione di inserimento, aggiornamento o eliminazione viene eseguita correttamente.  
+ Nella formattazione XML sul lato client la colonna di database del tipo `timestamp` esegue il mapping al tipo XDR `uri` o `bin.base64`, a seconda che venga specificata l'opzione binary base64 nella query. Il `bin.base64` tipo XDR è utile se si utilizzano le funzionalità updategram e Bulkload, in quanto questo tipo viene convertito nel [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `timestamp` tipo. In questo modo, l'operazione di inserimento, aggiornamento o eliminazione viene eseguita correttamente.  
   
 ## <a name="deep-variants-are-used-in-server-side-formatting"></a>Tipi VARIANT completi utilizzati nella formattazione sul lato server  
  Nella formattazione XML sul lato server vengono utilizzati i tipi VARIANT completi. Se si utilizza la formattazione XML sul lato client, le varianti vengono convertite in una stringa Unicode e i sottotipi di VARIANT non vengono utilizzati.  
@@ -212,7 +212,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
   
 -   Quando si specifica **client-side-xml = "1"** (true) in un modello, viene richiesta la formattazione XML sul lato client. In questo caso, è possibile specificare FOR XML NESTED. Se si specifica FOR XML AUTO, la formattazione XML viene eseguita sul lato server anche se nel modello è specificato **client-side-xml = "1"** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Considerazioni sulla sicurezza per XML &#40;SQLXML 4,0&#41;](../../sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
  [Formattazione XML sul lato client &#40;SQLXML 4,0&#41;](client-side-xml-formatting-sqlxml-4-0.md)   
  [Formattazione XML sul lato server &#40;SQLXML 4,0&#41;](server-side-xml-formatting-sqlxml-4-0.md)  

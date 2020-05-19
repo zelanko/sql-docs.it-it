@@ -10,15 +10,15 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested AUTO mode
 - nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b0db2a84b4be80fffec0f05aed11f39a3bcea7db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30d1f6540a8be6cc45af4d396daf10ca0d1a7d88
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63287355"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702706"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>Generare elementi di pari livello tramite query nidificate in modalità AUTO
   Nell'esempio seguente viene descritta la procedura per generare elementi di pari livello tramite una query nidificata in modalità AUTO. L'unico metodo alternativo per generare un valore XML di questo tipo è utilizzare la modalità EXPLICIT, ma ciò può rivelarsi eccessivamente complesso.  

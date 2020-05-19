@@ -11,20 +11,20 @@ topic_type:
 helpviewer_keywords:
 - SQLStatistics function
 ms.assetid: e60101ae-a5f5-432f-a32a-d8e6fb0cbde8
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 509205e0eeb2a913c8fdb4505961b8a3d4965529
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 412dea0c99c8351e8f7747b0acbd09a3116d468f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188612"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702101"
 ---
 # <a name="sqlstatistics"></a>SQLStatistics
   **SQLStatistics** può essere eseguito su un cursore statico. Il tentativo di eseguire **SQLStatistics** su un oggetto aggiornabile (gestito da keyset o dinamico) restituisce SQL_SUCCESS_WITH_INFO che indica che il tipo di cursore è stato modificato.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzione SQLStatistics](https://go.microsoft.com/fwlink/?LinkId=59372)   
  [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   

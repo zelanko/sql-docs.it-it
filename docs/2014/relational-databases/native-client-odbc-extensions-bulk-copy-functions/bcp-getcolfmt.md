@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_getcolfmt function
 ms.assetid: f8bdada5-7b2d-4475-8c98-f93e9d77b130
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: db8b433652829b16890552a70bd1e0d08d1c1bc4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 793543cce582bd4e17cbf8d06f096056a2ecb89b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62689082"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701967"
 ---
 # <a name="bcp_getcolfmt"></a>bcp_getcolfmt
   Utilizzato per trovare il valore della proprietà di formato di colonna.  
@@ -72,20 +72,20 @@ pcbLen
  *pcbLen*  
  IIndicatore di misura relativo alla lunghezza dei dati restituiti nel buffer delle proprietà.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SUCCEED o FAIL.  
   
 ## <a name="remarks"></a>Osservazioni  
  I valori delle proprietà di formato della colonna sono elencati nell'argomento [bcp_setcolfmt](bcp-setcolfmt.md) . I valori delle proprietà di formato della colonna vengono impostati chiamando la funzione **bcp_setcolfmt** e viene utilizzata la funzione **bcp_getcolfmt** per individuare il valore della proprietà formato colonna.  
   
- Le modifiche del comportamento possono essere osservate quando [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ci si connette a un computer server (o versione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] successiva) rispetto alle versioni precedenti. Per altre informazioni, vedere [Metadata Discovery](../native-client/features/metadata-discovery.md).  
+ Le modifiche del comportamento possono essere osservate quando ci si connette a un [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] computer server (o versione successiva) rispetto alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versioni precedenti. Per altre informazioni, vedere [Metadata Discovery](../native-client/features/metadata-discovery.md).  
   
 ## <a name="bcp_getcolfmt-support-for-enhanced-date-and-time-features"></a>Supporto di bcp_getcolfmt per le caratteristiche avanzate di data e ora  
  I tipi utilizzati con la `BCP_FMT_TYPE` proprietà per i tipi data/ora sono specificati nelle [modifiche della copia bulk per i tipi di data e ora avanzati &#40;OLE DB e&#41;ODBC ](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
  Per ulteriori informazioni, vedere [miglioramenti di data e ora &#40;&#41;ODBC ](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzioni di copia bulk](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

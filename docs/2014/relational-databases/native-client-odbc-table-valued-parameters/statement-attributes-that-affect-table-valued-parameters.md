@@ -10,25 +10,25 @@ helpviewer_keywords:
 - table-valued parameters (ODBC), descriptor header field
 - table-valued parameters (ODBC), statement attribute
 ms.assetid: 089213b0-d368-4332-b2e5-b2bd8770c64f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 19a757f82c2fa2ff2e78453ddf0fea1fbebda3c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b9edfe0286492602025a2b63b116e35084626fab
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62626216"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82698106"
 ---
 # <a name="statement-attributes-that-affect-table-valued-parameters"></a>Attributi dell'istruzione che influiscono sui parametri con valori di tabella
   Nella tabella seguente vengono illustrati gli attributi di un campo di descrizione.  
   
-|Nome attributo|Type|Descrizione|  
+|Nome attributo|Tipo|Description|  
 |--------------------|----------|-----------------|  
 |SQL_SOPT_SS_PARAM_FOCUS|SQLUINTEGER|Per ulteriori informazioni su SQL_SS_PARAM_FOCUS, vedere [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md).|  
 |SQL_SOPT_SS_NAME_SCOPE|SQLUINTEGER|Per ulteriori informazioni su SQL_SS_NAME_SCOPE, vedere [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md).|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Parametri con valori di tabella &#40;&#41;ODBC](table-valued-parameters-odbc.md)  
   
   

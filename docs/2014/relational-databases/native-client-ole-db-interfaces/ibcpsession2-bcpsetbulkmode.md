@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - BCPSetBulkMode function
 ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2e2ba7f2874cc35fbd662c8696fa999980b52bb6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a07ba7d4af55fa4215a7b08ae34b718d4de46cd4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62989981"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82694583"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
   IBCPSession2::BCPSetBulkMode offre un'alternativa a [IBCPSession::BCPColFmt &#40;OLE DB&#41;](ibcpsession-bcpcolfmt-ole-db.md) per specificare il formato della colonna. A differenza di IBCPSession::BCPColFmt, che imposta i singoli attributi di formato di colonna, IBCPSession2::BCPSetBulkMode imposta tutti gli attributi.  
@@ -51,7 +51,7 @@ HRESULT BCPSetBulkMode (
  cbRow  
  Lunghezza, in byte, del valore del carattere di terminazione della riga.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  IBCPSession2::BCPSetBulkMode può restituire uno dei valori seguenti:  
   
 |||  
@@ -71,14 +71,14 @@ HRESULT BCPSetBulkMode (
   
 |Proprietà|Descrizione|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|Specifica la modalità di output carattere.<br /><br /> Corrisponde all'opzione-c in BCP. EXE e in IBCPSession:: BCPColFmt con la proprietà *eUserDataType* impostata su `BCP_TYPE_SQLCHARACTER`.|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Specifica la modalità di output Unicode.<br /><br /> Corrisponde all'opzione-w in BCP. EXE e IBCPSession:: BCPColFmt con la proprietà *eUserDataType* impostata `BCP_TYPE_SQLNCHAR`su.|  
-|BCP_OUT_NATIVE_TEXT_MODE|Specifica tipi nativi per i tipi non carattere e Unicode per i tipi carattere.<br /><br /> Corrisponde all'opzione-N in BCP. EXE e IBCPSession:: BCPColFmt con la proprietà *eUserDataType* impostata `BCP_TYPE_SQLNCHAR` su se il tipo di colonna è una `BCP_TYPE_DEFAULT` stringa o se non è una stringa.|  
-|BCP_OUT_NATIVE_MODE|Specifica tipi di database nativi.<br /><br /> Corrisponde all'opzione-n in BCP. EXE e IBCPSession:: BCPColFmt con la proprietà *eUserDataType* impostata `BCP_TYPE_DEFAULT`su.|  
+|BCP_OUT_CHARACTER_MODE|Specifica la modalità di output carattere.<br /><br /> Corrisponde all'opzione-c in BCP. EXE e in IBCPSession:: BCPColFmt con la proprietà *eUserDataType* impostata su `BCP_TYPE_SQLCHARACTER` .|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Specifica la modalità di output Unicode.<br /><br /> Corrisponde all'opzione-w in BCP. EXE e IBCPSession:: BCPColFmt con la proprietà *eUserDataType* impostata su `BCP_TYPE_SQLNCHAR` .|  
+|BCP_OUT_NATIVE_TEXT_MODE|Specifica tipi nativi per i tipi non carattere e Unicode per i tipi carattere.<br /><br /> Corrisponde all'opzione-N in BCP. EXE e IBCPSession:: BCPColFmt con la proprietà *eUserDataType* impostata su `BCP_TYPE_SQLNCHAR` se il tipo di colonna è una stringa o `BCP_TYPE_DEFAULT` se non è una stringa.|  
+|BCP_OUT_NATIVE_MODE|Specifica tipi di database nativi.<br /><br /> Corrisponde all'opzione-n in BCP. EXE e IBCPSession:: BCPColFmt con la proprietà *eUserDataType* impostata su `BCP_TYPE_DEFAULT` .|  
   
  È possibile chiamare IBCPSession::BCPControl e IBCPSession2::BCPSetBulkMode per le opzioni IBCPSession::BCPControl che non sono in conflitto con IBCPSession2::BCPSetBulkMode. Ad esempio, è possibile chiamare IBCPSession:: BCPControl con `BCP_OPTION_FIRST` e IBCPSession2:: BCPSetBulkMode.  
   
- Non è possibile chiamare IBCPSession:: BCPControl `BCP_OPTION_TEXTFILE` con e IBCPSession2:: BCPSetBulkMode.  
+ Non è possibile chiamare IBCPSession:: BCPControl con `BCP_OPTION_TEXTFILE` e IBCPSession2:: BCPSetBulkMode.  
   
  Se si tenta di chiamare IBCPSession2::BCPSetBulkMode con una sequenza di chiamate di funzione che include IBCPSession::BCPColFmt, IBCPSession::BCPControl e IBCPSession::BCPReadFmt, una delle chiamate di funzione restituirà un errore nella sequenza. Se si sceglie di correggere l'errore, chiamare IBCPSession::BCPInit per reimpostare le impostazioni e ricominciare.  
   
@@ -360,7 +360,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [IBCPSession2 &#40;OLE DB&#41;](ibcpsession2-ole-db.md)  
   
   

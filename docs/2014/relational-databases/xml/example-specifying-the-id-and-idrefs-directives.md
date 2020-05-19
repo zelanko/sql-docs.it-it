@@ -10,15 +10,15 @@ helpviewer_keywords:
 - IDREFS directive
 - ID directive
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8771eb523153a2a03b7e10dd58b3c1a85504f63e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b1ac80773b28538f29837973d94f1b50b79f0788
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63288883"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702784"
 ---
 # <a name="example-specifying-the-id-and-idrefs-directives"></a>Esempio: Specifica delle direttive ID e IDREFS
   Un attributo dell'elemento può essere specificato come attributo di tipo `ID` e l'attributo `IDREFS` può quindi essere utilizzato per fare riferimento a tale attributo. In questo modo è possibile creare collegamenti tra più documenti, in modo analogo alla relazione esistente tra chiave primaria e chiave esterna nei database relazionali.  

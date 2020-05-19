@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 459cd091043d567b4c93555c271213d066f3989e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a676688176e164736552460667432919250f8e99
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487107"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82261846"
 ---
 # <a name="supported-net-framework-libraries"></a>Librerie .NET Framework supportate
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Grazie all'integrazione di CLR in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è possibile creare stored procedure, trigger, funzioni definite dall'utente, tipi definiti dall'utente e aggregazioni definite dall'utente nel codice gestito. Con le librerie di classi .NET Framework è possibile accedere alle classi preesistenti che offrono funzionalità per manipolazione delle stringhe, operazioni matematiche avanzate, accesso ai file, crittografia e così via. A queste classi è possibile accedere da stored procedure gestite, tipi definiti dall'utente, trigger, funzioni definite dall'utente o funzioni di aggregazione definite dall'utente.  
   
 > [!NOTE]  
->  Se si gestiscono o aggiornano assembly non supportati nella Global Assembly Cache (GAC), è possibile che si arresti il funzionamento dell'applicazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ciò si verifica in quanto le operazioni di gestione o aggiornamento delle librerie presenti nella GAC non determinano l'aggiornamento degli assembly che si trovano in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se un assembly è presente sia in un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sia nella GAC, le due copie relative devono corrispondere esattamente. Se non corrispondono, si verificherà un errore quando l'assembly verrà usato dalla funzionalità di integrazione con CLR di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se si esegue il servizio o si aggiornano assembly nella GAC che sono registrati anche nel database, inclusi gli assembly di .NET Framework non supportati, assicurarsi di eseguire anche il servizio o aggiornare la copia dell'assembly [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] all'interno dei database con l'istruzione **ALTER assembly** . Per ulteriori informazioni, vedere l' [articolo della Knowledge Base 949080](https://support.microsoft.com/kb/949080).  
+>  Se si gestiscono o aggiornano assembly non supportati nella Global Assembly Cache (GAC), è possibile che si arresti il funzionamento dell'applicazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ciò si verifica in quanto le operazioni di gestione o aggiornamento delle librerie presenti nella GAC non determinano l'aggiornamento degli assembly che si trovano in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se un assembly è presente sia in un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sia nella GAC, le due copie relative devono corrispondere esattamente. Se non corrispondono, si verificherà un errore quando l'assembly verrà usato dalla funzionalità di integrazione con CLR di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se si esegue il servizio o si aggiornano assembly nella GAC che sono registrati anche nel database, inclusi gli assembly di .NET Framework non supportati, assicurarsi di eseguire anche il servizio o aggiornare la copia dell'assembly all'interno dei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database con l'istruzione **ALTER assembly** . Per ulteriori informazioni, vedere l' [articolo della Knowledge Base 949080](https://support.microsoft.com/kb/949080).  
   
 ## <a name="supported-libraries"></a>Librerie supportate  
  A partire da [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è disponibile un elenco di librerie .NET Framework supportate, che sono state testate per verificare che rispettino gli standard di sicurezza e di affidabilità per l'interazione con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le librerie supportate non devono essere registrate in modo esplicito nel server prima che possano essere utilizzate nel codice. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di caricarle direttamente dalla Global Assembly Cache (GAC).  
@@ -33,37 +33,27 @@ ms.locfileid: "81487107"
  Le librerie e gli spazi dei nomi supportati dall'integrazione con CLR in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sono:  
   
 -   CustomMarshalers  
-  
 -   Microsoft.VisualBasic  
-  
 -   Microsoft.VisualC  
-  
 -   mscorlib  
-  
 -   Sistema  
-  
 -   System.Configuration  
-  
+-   System.Core  
 -   System.Data  
-  
 -   System.Data.OracleClient  
-  
 -   System.Data.SqlXml  
-  
 -   System.Deployment  
-  
 -   System.Security  
-  
 -   System.Transactions  
-  
 -   System.Web.Services  
-  
 -   System.Xml  
-  
--   System.Core.dll  
-  
--   System.Xml.Linq.dll  
-  
+-   System.Xml.Linq  
+
+<!--
+Any modifications to the list above should be duplicated on the following page:
+https://docs.microsoft.com/sql/relational-databases/clr-integration/assemblies-designing#supported-net-framework-assemblies
+-->
+
 ## <a name="unsupported-libraries"></a>Librerie non supportate  
  Le librerie non supportate possono essere comunque chiamate da stored procedure gestite, trigger, funzioni definite dall'utente, tipi definiti dall'utente e funzioni di aggregazione definite dall'utente. La libreria non supportata deve prima essere registrata nel [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, utilizzando l'istruzione **create assembly** , prima di poterla utilizzare nel codice. È necessario verificare e testare la sicurezza e l'affidabilità delle librerie non supportate registrate ed eseguite nel server.  
   

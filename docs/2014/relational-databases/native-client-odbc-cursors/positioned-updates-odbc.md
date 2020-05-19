@@ -15,15 +15,15 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - ODBC cursors, positioned updates
 ms.assetid: ff404e02-630f-474d-b5d4-06442b756991
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2336944b583b6077d75bd5155bb4b52c66d9a852
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb6ed6d38d4294884092ae5c038b5e83d23c6b97
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200529"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702011"
 ---
 # <a name="positioned-updates-odbc"></a>Aggiornamenti posizionati (ODBC)
   In ODBC sono supportati due metodi per eseguire gli aggiornamenti posizionati in un cursore:  
@@ -78,7 +78,7 @@ ms.locfileid: "63200529"
   
  **SQLSetPos** è preferibile rispetto a where current of quando si utilizzano i cursori server. Se si utilizza un cursore statico aggiornabile con la libreria di cursore ODBC, la libreria di cursori implementa gli aggiornamenti di WHERE CURRENT OF aggiungendo una clausola WHERE con i valori chiave per la tabella sottostante. Se le chiavi nella tabella non sono univoche, possono verificarsi aggiornamenti non desiderati.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzo di cursori &#40;&#41;ODBC](using-cursors-odbc.md)  
   
   

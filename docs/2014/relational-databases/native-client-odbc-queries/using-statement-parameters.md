@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, statements
 - ODBC applications, statements
 ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a16f070623503dcb17788bc75bd5695bc1584d7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa2f1121be229c3679237542bc8cf3384ba425b4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200242"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82699872"
 ---
 # <a name="using-statement-parameters"></a>Utilizzo dei parametri delle istruzioni
   Un parametro è una variabile in un'istruzione SQL che consente a un'applicazione ODBC di:  
@@ -32,7 +32,7 @@ ms.locfileid: "63200242"
   
 -   Migliorare l'interazione dell'utente nella costruzione di criteri di query.  
   
--   Gestire i dati di tipo **Text**, **ntext**e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Image** e i tipi di dati C specifici di.  
+-   Gestire i dati di tipo **Text**, **ntext**e **Image** e i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati C specifici di.  
   
  Una tabella **parts** , ad esempio, include colonne denominate **partID**, **Description**e **Price**. Per aggiungere una parte senza parametri, è necessario costruire un'istruzione SQL come:  
   
@@ -54,7 +54,7 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
   
 -   [Associazione di parametri](using-statement-parameters-binding-parameters.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Esecuzione di query &#40;ODBC&#41;](executing-queries-odbc.md)  
   
   
