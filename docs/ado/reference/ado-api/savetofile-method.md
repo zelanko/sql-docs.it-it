@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - SaveToFile method [ADO]
 ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c2e56178ad306d5b39c2445c391c3bbabe4fc424
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c8434841442ee61b31d021e5f2c46f57f1d2b147
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917030"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755830"
 ---
 # <a name="savetofile-method"></a>Metodo SaveToFile
 Salva il contenuto binario di un [flusso](../../../ado/reference/ado-api/stream-object-ado.md) in un file.  
@@ -43,7 +43,7 @@ Stream.SaveToFile FileName, SaveOptions
 > [!NOTE]
 >  Se si sovrascrive un file esistente (quando **adSaveCreateOverwrite** è impostato), **SaveToFile** tronca tutti i byte del file esistente originale che seguono la nuova [EOS](../../../ado/reference/ado-api/eos-property.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **SaveToFile** può essere utilizzato per copiare il contenuto di un oggetto **flusso** in un file locale. Non sono state apportate modifiche al contenuto o alle proprietà dell'oggetto **flusso** . L'oggetto **flusso** deve essere aperto prima di chiamare **SaveToFile**.  
   
  Questo metodo non modifica l'associazione dell'oggetto **flusso** alla relativa origine sottostante. L'oggetto **Stream** sarà comunque associato all'URL o al **record** originale che era l'origine all'apertura.  
@@ -53,6 +53,6 @@ Stream.SaveToFile FileName, SaveOptions
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Metodo Open (flusso ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [Metodo Save](../../../ado/reference/ado-api/save-method.md)

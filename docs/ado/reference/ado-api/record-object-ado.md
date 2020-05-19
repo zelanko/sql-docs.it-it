@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - Record object [ADO]
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5ffc515350bfff4307da382c05aae50ed1930802
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a6a7c3b44498dee88be8dc3f37cd713038375753
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917365"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754039"
 ---
 # <a name="record-object-ado"></a>Oggetto Record (ADO)
 Rappresenta una riga di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) o del provider di dati oppure un oggetto restituito da un provider di dati semistrutturato, ad esempio un file o una directory.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Un oggetto **record** rappresenta una riga di dati e presenta alcune somiglianze concettuali con un **Recordset**a una riga. A seconda delle funzionalità del provider, gli oggetti **record** possono essere restituiti direttamente dal provider anziché da un **Recordset**di una riga, ad esempio quando viene eseguita una query SQL che seleziona solo una riga. In alternativa, è possibile ottenere un oggetto **record** direttamente da un oggetto **Recordset** . In alternativa, è possibile restituire un **record** direttamente da un provider ai dati semistrutturati, ad esempio il provider di OLE DB di Microsoft Exchange.  
   
  È possibile visualizzare i campi associati all'oggetto **record** per mezzo della raccolta [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) nell'oggetto **record** . ADO consente colonne con valori di oggetto, inclusi **Recordset**, **SAFEARRAY**e valori scalari nella raccolta **Fields** di oggetti **record** .  
@@ -59,7 +59,7 @@ Rappresenta una riga di un [Recordset](../../../ado/reference/ado-api/recordset-
   
 -   Indica lo stato corrente del **record** con la proprietà [state](../../../ado/reference/ado-api/state-property-ado.md) .  
   
--   Indica il tipo di **record** - *semplice*, di *raccolta*o di *documento strutturato* con la proprietà [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md).  
+-   Indica il tipo di **record**  -  *semplice*, di *raccolta*o di *documento strutturato* con la proprietà [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md).  
   
 -   Arrestare l'esecuzione di un'operazione asincrona con il metodo [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md) .  
   
@@ -81,7 +81,7 @@ Rappresenta una riga di un [Recordset](../../../ado/reference/ado-api/recordset-
   
 -   [Proprietà, metodi ed eventi dell'oggetto Record](../../../ado/reference/ado-api/record-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Raccolta Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Record e flussi](../../../ado/guide/data/records-and-streams.md)   

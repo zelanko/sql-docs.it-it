@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ErrorValueEnum enumeration [ADO]
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 18117be8dccc64f7ed2583170cf062145836f337
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e0280faf3399c24015fd07ec2e62c688a3d8e799
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932879"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755222"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 Specifica il tipo di errore in fase di esecuzione ADO.  
@@ -36,7 +36,7 @@ Specifica il tipo di errore in fase di esecuzione ADO.
 > [!NOTE]
 >  OLE DB errori possono essere passati all'applicazione ADO. In genere, questi possono essere identificati da un codice di funzionalità di Windows *4*. Ad esempio, 0x800***4***.  
   
-|Costante|valore|Descrizione|  
+|Costante|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adErrBoundToCommand**|3707-2146824581 0x800A0E7B|Impossibile modificare la proprietà **ActiveConnection** di un oggetto **Recordset** con un oggetto **Command** come origine.|  
 |**adErrCannotComplete**|3732-2146824556 0x800A0E94|Il server non è in grado di completare l'operazione.|  

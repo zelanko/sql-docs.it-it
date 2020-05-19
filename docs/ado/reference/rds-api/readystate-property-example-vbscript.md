@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ReadyState property [ADO], VBScript example
 ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5b27a26eede798b8a8f8df9d76451125f042510a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7a3d39355a95b46170ab3f7a5b24cd43582ecac3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963600"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755519"
 ---
 # <a name="readystate-property-example-vbscript"></a>Esempio della proprietà ReadyState (VBScript)
 > [!IMPORTANT]
@@ -27,7 +27,7 @@ ms.locfileid: "67963600"
   
  Nell'esempio seguente viene illustrato come leggere la proprietà [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) di Servizi Desktop remoto [. Oggetto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) in fase di esecuzione nel codice VBScript. **ReadyState** è una proprietà di sola lettura.  
   
- Per testare questo esempio, tagliare e incollare il codice tra i \<tag body> \<e/body> in un documento HTML normale e denominarlo **RDSReadySt. asp**. Usare **trova** per individuare il file Adovbs. Inc e inserirlo nella directory che si intende usare. Lo script ASP identificherà il server.  
+ Per testare questo esempio, tagliare e incollare il codice tra i \< tag Body> e \< /Body> in un documento HTML normale e denominarlo **RDSReadySt. asp**. Usare **trova** per individuare il file Adovbs. Inc e inserirlo nella directory che si intende usare. Lo script ASP identificherà il server.  
   
 ```  
 <!-- BeginReadyStateVBS -->  
