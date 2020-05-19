@@ -22,15 +22,15 @@ helpviewer_keywords:
 - compatibility [Reporting Services]
 - earlier versions [SQL Server], (See also backward compatibility)
 ms.assetid: 15d9117e-e2fa-4985-99ea-66a117c1e9fd
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4619eeea35df4de16c3b980ecc0ea685488970eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2c6ed19ca2167a07068c0471194c598fb067fc0
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088580"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707017"
 ---
 # <a name="backward-compatibility"></a>Backward Compatibility
   Nelle sezioni seguenti vengono fornite informazioni sulla compatibilità dei componenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. In particolare vengono fornite informazioni su funzionalità deprecate, funzionalità non più supportate, modifiche di rilievo e modifiche al funzionamento.  
@@ -47,7 +47,7 @@ ms.locfileid: "66088580"
 |[Compatibilità con le versioni precedenti &#40;Master Data Services&#41;](../master-data-services/backward-compatibility-master-data-services.md)|Contiene argomenti in cui vengono descritte le modifiche di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] apportate in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che possono richiedere modifiche alle soluzioni [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] esistenti.|  
 |[Compatibilità con le versioni precedenti della replica](../../2014/relational-databases/replication/replication-backward-compatibility.md)|Contiene argomenti in cui vengono descritte le modifiche del [!INCLUDE[ssDE](../includes/ssde-md.md)] apportate in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che possono richiedere modifiche alle soluzioni di replica esistenti.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Installare SQL Server 2014](../database-engine/install-windows/install-sql-server.md)   
  [Aggiornamento a SQL Server 2014](../database-engine/install-windows/upgrade-sql-server.md)  
   

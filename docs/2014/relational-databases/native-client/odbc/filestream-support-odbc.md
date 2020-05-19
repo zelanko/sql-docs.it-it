@@ -10,20 +10,20 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server], ODBC
 - ODBC, FILESTREAM support
 ms.assetid: 87982955-1542-4551-9c06-447ffe8193b9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0e48619daa350fd5b7a7dc47a9762459fbddc7d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec85083e634123497c707f3028285ec1300ff2d4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206596"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707096"
 ---
 # <a name="filestream-support-odbc"></a>Supporto FILESTREAM (ODBC)
   ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta la caratteristica FILESTREAM avanzata. Per ulteriori informazioni su questa funzionalità, vedere [supporto FILESTREAM](../features/filestream-support.md). Per un esempio che illustra il supporto di ODB per FILESTREAM, vedere [inviare e ricevere dati in modo incrementale con filestream &#40;&#41;ODBC ](../../native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md).  
   
- Per inviare e ricevere `varbinary(max)` valori maggiori di 2 GB, un'applicazione deve associare parametri usando SQLBindParameter con *ColumnSize* impostato su `SQL_SS_LENGTH_UNLIMITED`e impostare il contenuto di *StrLen_or_IndPtr* su prima di `SQL_DATA_AT_EXEC` SQLExecDirect o SQLExecute.  
+ Per inviare e ricevere `varbinary(max)` valori maggiori di 2 GB, un'applicazione deve associare parametri usando SQLBindParameter con *ColumnSize* impostato su `SQL_SS_LENGTH_UNLIMITED` e impostare il contenuto di *StrLen_or_IndPtr* su prima di `SQL_DATA_AT_EXEC` SQLExecDirect o SQLExecute.  
   
  Come per qualsiasi parametro data-at-execution, i dati verranno forniti con SQLParamData e SQLPutData.  
   
@@ -264,7 +264,7 @@ return r;
 }  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Programmazione in SQL Server Native Client](../sql-server-native-client-programming.md)  
   
   

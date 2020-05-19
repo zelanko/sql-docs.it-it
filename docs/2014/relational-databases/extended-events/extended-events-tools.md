@@ -10,15 +10,15 @@ helpviewer_keywords:
 - extended events [SQL Server], using
 - extended events [SQL Server], options for using
 ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e26bc62f0e6b81b7b4ac8e1361d0a1ac31513ef6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2521810771713833a10f7e01f1e83480c3050369
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63137064"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706766"
 ---
 # <a name="extended-events-tools"></a>Strumenti degli eventi estesi
   È possibile utilizzare gli strumenti seguenti per creare e gestire sessioni Eventi estesi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
@@ -82,7 +82,7 @@ ms.locfileid: "63137064"
 |[trace_xe_event_map &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/extended-events-tables-trace-xe-event-map)|Contiene una riga per ogni evento degli eventi estesi di cui è stato eseguito il mapping a una classe di evento di Traccia SQL.|  
 |[trace_xe_action_map &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/extended-events-tables-trace-xe-action-map)|Contiene una riga per ogni azione degli eventi estesi di cui è stato eseguito il mapping a un ID della colonna di Traccia SQL.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](../views/views.md)   
  [Viste del catalogo &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)   
  [SQL Server tabelle degli eventi estesi &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/system-tables-transact-sql)   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xevents
 ms.topic: conceptual
 ms.assetid: 114ec05b-7eca-4c87-b276-25e37b84be39
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 99984df84d2eb24ebf3d58f3fa697d11c5ad4a1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66108d50898610949cb5cab7fb3bdd2dcc726801
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128600"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706792"
 ---
 # <a name="alter-an-extended-events-session"></a>Modificare una sessione Eventi estesi
   Dopo avere creato una sessione Eventi estesi, è possibile modificarla secondo necessità utilizzando la **Creazione guidata Eventi estesi di SQL Server**.  
@@ -48,7 +48,7 @@ ms.locfileid: "63128600"
   
 -   Nella finestra di dialogo **Proprietà** apportare le modifiche desiderate, quindi fare clic su **OK**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)   
  [Creare una sessione Eventi estesi tramite l'editor di query](../../database-engine/create-an-extended-events-session-using-query-editor.md)  
   

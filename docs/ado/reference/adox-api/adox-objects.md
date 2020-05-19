@@ -11,14 +11,14 @@ helpviewer_keywords:
 - objects [ADOX]
 - ADOX, objects
 ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 16ff3c926b1c0457f0f0dda382881aad45fb4efd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2969927d6221f45bff027b97f6e6468ab63baa86
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928506"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764112"
 ---
 # <a name="adox-objects"></a>Oggetti ADOX
 ## <a name="adox-object-summary"></a>Riepilogo oggetto ADOX  

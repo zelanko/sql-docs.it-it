@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 99a21cd5dd32af9e84877865cfe7c0fc92f6c087
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c010b291468432544a037d15fbaa790fc3ee789d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967223"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764022"
 ---
 # <a name="append-method-adox-users"></a>Metodo Append (raccolta Users ADOX)
 Aggiunge un nuovo oggetto [utente](../../../ado/reference/adox-api/user-object-adox.md) alla raccolta [Users](../../../ado/reference/adox-api/users-collection-adox.md) .  
@@ -40,7 +40,7 @@ Users.Append User[,Password]
  *Password*  
  Facoltativa. Valore **stringa** che contiene la password per l'utente. Il parametro *password* corrisponde al valore specificato dal metodo [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) di un oggetto **utente** .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La raccolta **Users** di un [Catalogo](../../../ado/reference/adox-api/catalog-object-adox.md) rappresenta tutti gli utenti del catalogo. La raccolta **Users** per un [gruppo](../../../ado/reference/adox-api/group-object-adox.md) rappresenta solo gli utenti che dispongono di un'appartenenza al gruppo specifico.  
   
  Se il provider non supporta la creazione di utenti, si verificherà un errore.  

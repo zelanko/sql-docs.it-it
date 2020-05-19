@@ -10,15 +10,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], variables
 - xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a62d8fbafc353e2d71223506b7fb4516d184b494
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62637994"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717096"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Creazione di variabili e colonne con tipo di dati XML
   Il tipo di dati `xml` è un tipo di dati predefinito in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed è simile ad altri tipi predefiniti quali `int` e `varchar`. Come per gli altri tipi incorporati, è possibile usare il `xml` tipo di dati come tipo di colonna quando si crea una tabella come tipo di variabile, un tipo di parametro, un tipo restituito dalla funzione o in [cast e Convert](/sql/t-sql/functions/cast-and-convert-transact-sql).  
@@ -127,7 +127,7 @@ INSERT INTO T values(1,'<Product />')
 ```  
   
 ## <a name="same-or-different-table"></a>Utilizzo di un'unica tabella o di più tabelle  
- È `xml` possibile creare una colonna con tipo di dati in una tabella che contiene altre colonne relazionali oppure in una tabella separata con una relazione di chiave esterna con una tabella principale.  
+ `xml`È possibile creare una colonna con tipo di dati in una tabella che contiene altre colonne relazionali oppure in una tabella separata con una relazione di chiave esterna con una tabella principale.  
   
  Creare una `xml` colonna con tipo di dati nella stessa tabella quando si verifica una delle condizioni seguenti:  
   

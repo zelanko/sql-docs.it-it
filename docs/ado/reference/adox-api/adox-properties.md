@@ -11,14 +11,14 @@ helpviewer_keywords:
 - properties [ADOX]
 - ADOX, properties
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 32a36388b1be6dc7f5bab6bbb0bd9f97b01aac46
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6aed31fef1f685effc3216d6055de0faf0e22698
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910615"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764102"
 ---
 # <a name="adox-properties"></a>Proprietà ADOX
 
@@ -46,9 +46,9 @@ ms.locfileid: "67910615"
 |[Tipo (colonna)](../../../ado/reference/adox-api/type-property-column-adox.md)|Indica il tipo di dati di una colonna.|  
 |[Tipo (chiave)](../../../ado/reference/adox-api/type-property-key-adox.md)|Indica il tipo di dati della chiave.|  
 |[Tipo (tabella)](../../../ado/reference/adox-api/type-property-table-adox.md)|Indica il tipo di una tabella.|  
-|[Unico](../../../ado/reference/adox-api/unique-property-adox.md)|Indica se le chiavi dell'indice devono essere univoche.|  
+|[Univoco](../../../ado/reference/adox-api/unique-property-adox.md)|Indica se le chiavi dell'indice devono essere univoche.|  
 |[UpdateRule](../../../ado/reference/adox-api/updaterule-property-adox.md)|Indica l'azione eseguita quando viene aggiornata una chiave primaria.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Informazioni di riferimento sull'API ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
  [Estensioni ADO per Data Definition Language and Security (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, commands
 - commands [OLE DB]
 ms.assetid: de03b27e-8c5a-4060-b650-f77279be01df
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 17591d2420b23c741d988b87a6de2519cbcc4bb2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d70024e02d4cab2c944105eef3fbff84ee2af9a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62826986"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707627"
 ---
 # <a name="commands"></a>Comandi:
   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client espone l'interfaccia **ICommand** e gli oggetti Command, descritti in questa sezione:  
@@ -31,7 +31,7 @@ ms.locfileid: "62826986"
   
 -   [Comandi che generano risultati con più set di righe](commands-generating-multiple-rowset-results.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server Native Client &#40;OLE DB&#41;](../native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

@@ -11,24 +11,24 @@ topic_type:
 helpviewer_keywords:
 - SQLProcedureColumns function
 ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 21c0a7248f2e8c5313678f503b239cdf44d16ea7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 536d8551b82918aae34fa25723c99e8cfad5f1ad
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046716"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705877"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
-  `SQLProcedureColumns`Restituisce una riga che riporta gli attributi del valore restituito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di tutte le stored procedure.  
+  `SQLProcedureColumns`Restituisce una riga che riporta gli attributi del valore restituito di tutte le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedure.  
   
  `SQLProcedureColumns`restituisce SQL_SUCCESS se sono presenti o meno valori per i parametri *CatalogName*, *SchemaName*, *ProcName*o *ColumnName* . **SQLFetch** restituisce SQL_NO_DATA quando in questi parametri vengono utilizzati valori non validi.  
   
  `SQLProcedureColumns` può essere eseguito in un cursore del server statico. Un tentativo di eseguire `SQLProcedureColumns` in un cursore aggiornabile (dinamico o keyset) restituirà SQL_SUCCESS_WITH_INFO, che indica che il tipo di cursore è stato modificato.  
   
- Nella tabella seguente sono elencate le colonne restituite dal set di risultati e il modo in cui sono state estese **xml** per gestire i tipi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dati **UDT** e XML tramite il driver ODBC di Native Client:  
+ Nella tabella seguente sono elencate le colonne restituite dal set di risultati e il modo in cui sono state estese per gestire i tipi di dati **UDT** e **XML** tramite il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client:  
   
 |Nome colonna|Descrizione|  
 |-----------------|-----------------|  
@@ -74,7 +74,7 @@ ms.locfileid: "63046716"
 ## <a name="sqlprocedurecolumns-support-for-large-clr-udts"></a>Supporto di SQLProcedureColumns per tipi CLR definiti dall'utente di grandi dimensioni  
  `SQLProcedureColumns` supporta i tipi CLR definiti dall'utente di grandi dimensioni. Per ulteriori informazioni, vedere [tipi CLR definiti dall'utente di grandi dimensioni &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQLProcedureColumns (funzione)](https://go.microsoft.com/fwlink/?LinkId=59363)   
  [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   

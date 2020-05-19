@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQLPERF data structure
 - statistical information [ODBC]
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3f2c16e66c03eee8c5e1616fdaa0f0d1b154b85e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3c5863489bcdda590137587273b9b31b4bae3cc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63143586"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707069"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Profiling delle prestazioni del driver ODBC
   Il driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client può eseguire il profiling di due tipi di dati sulle prestazioni:  
@@ -117,7 +117,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |msExecutionTime|Tempo cumulativo impiegato dal driver per l'elaborazione dopo SQL_PERF_START, incluso il tempo di attesa per le risposte dal server.|  
 |msNetworkServerTime|Tempo cumulativo di attesa del driver per le risposte dal server.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server Native Client &#40;ODBC&#41;](sql-server-native-client-odbc.md)   
  [Procedure per la profilatura delle prestazioni del driver ODBC &#40;ODBC&#41;](../../native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   

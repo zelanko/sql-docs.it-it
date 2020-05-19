@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 34fdc72cfbb341e7b7d998a76036e6e2b060e7d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ba02a877d06d6ee3b7f57f6a42c588f4c1019a9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112247"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706572"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guida all'elaborazione delle query per le tabelle con ottimizzazione per la memoria
   Con OLTP in memoria sono state introdotte le tabelle ottimizzate per la memoria e le stored procedure compilate in modo nativo in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. In questo articolo viene fornita una panoramica sull'elaborazione delle query per le tabelle ottimizzate per la memoria e le stored procedure compilate in modo nativo.  
@@ -222,7 +222,7 @@ Esecuzione di stored procedure compilate in modo nativo.
   
  La chiamata di una stored procedure compilata in modo nativo viene descritta nel modo riportato di seguito.  
   
-1.  L'utente rilascia un' `EXEC`istruzione *usp_myproc* .  
+1.  L'utente rilascia un' `EXEC` istruzione *usp_myproc* .  
   
 2.  Il parser estrae il nome e i parametri della stored procedure.  
   
@@ -239,7 +239,7 @@ Esecuzione di stored procedure compilate in modo nativo.
  Lo sniffing dei parametri non viene utilizzato per la compilazione delle stored procedure compilate in modo nativo. Tutti i parametri della stored procedure vengono considerati con valore UNKNOWN. Analogamente alle stored procedure interpretate, anche le stored procedure compilate in modo nativo supportano l'hint `OPTIMIZE FOR`. Per altre informazioni, vedere [Hint per la query &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query).  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>Recupero di un piano di esecuzione di query per le stored procedure compilate in modo nativo  
- Il piano di esecuzione di query per una stored procedure compilata in modo nativo può essere recuperato usando **Piano di esecuzione stimato** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]o tramite l'opzione SHOWPLAN_XML in [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Ad esempio:  
+ Il piano di esecuzione di query per una stored procedure compilata in modo nativo può essere recuperato usando **Piano di esecuzione stimato** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]o tramite l'opzione SHOWPLAN_XML in [!INCLUDE[tsql](../../../includes/tsql-md.md)]. ad esempio:  
   
 ```sql  
 SET SHOWPLAN_XML ON  
@@ -303,6 +303,6 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono mantenute statistiche a livello di colonna per le tabelle ottimizzate per la memoria. Inoltre, viene mantenuto il conteggio effettivo delle righe della tabella. Tuttavia, diversamente dalle tabelle basate su disco, le statistiche per le tabelle ottimizzate per la memoria non vengono aggiornate automaticamente. Pertanto, le statistiche devono essere aggiornate manualmente dopo aver effettuato modifiche significative nelle tabelle. Per altre informazioni, vedere [Statistiche per tabelle con ottimizzazione per la memoria](memory-optimized-tables.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle con ottimizzazione per la memoria](memory-optimized-tables.md)  
+ [Tabelle ottimizzate per la memoria](memory-optimized-tables.md)  
   
   

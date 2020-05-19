@@ -12,15 +12,15 @@ helpviewer_keywords:
 - commands [OLE DB]
 - command preparation [SQL Server Native Client]
 ms.assetid: 09ec0c6c-0a44-4766-b9b7-5092f676ee54
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9dada733f7729d534b66777f747560cd45530727
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd3be1705411dd84a4bc3e0ad9e55f6e6c8d97b2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62865021"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707455"
 ---
 # <a name="preparing-commands"></a>Preparazione dei comandi
   Il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client supporta la funzione di preparazione dei comandi per l'esecuzione multipla ottimizzata di un solo comando. La preparazione dei comandi genera tuttavia overhead e per un consumer non esiste la necessità di preparare un comando per eseguirlo più volte. In genere, un comando deve essere preparato se verrà eseguito più di tre volte.  
@@ -51,7 +51,7 @@ ms.locfileid: "62865021"
   
  Un oggetto comando include al massimo una stored procedure temporanea in **tempdb**. Le stored procedure temporanee esistenti rappresentano il testo del comando corrente di un oggetto comando specifico.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Comandi:](commands.md)  
   
   

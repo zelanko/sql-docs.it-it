@@ -10,15 +10,15 @@ helpviewer_keywords:
 - developer's guide [SQL Server Database Engine]
 - Database Engine [SQL Server], development
 ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fb5dec821d69066ce0a24c4e104f5f2be3ef905a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5751cadb999ee3a2c9d8260bee7a6197047d312
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530955"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706855"
 ---
 # <a name="developer39s-guide-database-engine"></a>Guida a Developer&#39;s (motore di database)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornisce un vasto set di strumenti per lo sviluppo, l'amministrazione e il controllo di applicazioni di database.  

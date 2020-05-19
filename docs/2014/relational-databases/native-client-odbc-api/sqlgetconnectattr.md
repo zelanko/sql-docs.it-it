@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - SQLGetConnectAttr function
 ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 818c136814062c94491cfa02b84d2fff443a1f0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f6f6ee0d881f470f1251c99f17212f1648b85c4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128660"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706081"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
-  Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client definisce gli attributi di connessione specifici del driver. Alcuni degli attributi sono disponibili per `SQLGetConnectAttr`e la funzione viene utilizzata per segnalare le impostazioni correnti. I valori restituiti per questi attributi non sono garantiti finché non viene stabilita una connessione o se l'attributo non è stato impostato tramite [SQLSetConnectAttr](sqlsetconnectattr.md).  
+  Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client definisce gli attributi di connessione specifici del driver. Alcuni degli attributi sono disponibili per `SQLGetConnectAttr` e la funzione viene utilizzata per segnalare le impostazioni correnti. I valori restituiti per questi attributi non sono garantiti finché non viene stabilita una connessione o se l'attributo non è stato impostato tramite [SQLSetConnectAttr](sqlsetconnectattr.md).  
   
  In questo argomento sono elencati gli attributi di sola lettura. Per informazioni sugli altri [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attributi di connessione specifici del driver ODBC di Native client, vedere [SQLSetConnectAttr](sqlsetconnectattr.md).  
   
@@ -32,7 +32,7 @@ ms.locfileid: "63128660"
 > [!NOTE]  
 >  L'attributo di connessione ODBC standard SQL_COPT_SS_CONNECTION_DEAD restituisce lo stato più recente della connessione. Tale stato potrebbe non essere quello corrente.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|La connessione al server è stata persa.|  
 |SQL_CD_FALSE|La connessione è aperta e disponibile per l'elaborazione di istruzioni.|  
@@ -48,7 +48,7 @@ ms.locfileid: "63128660"
   
  Per ulteriori informazioni, vedere [accesso alle informazioni di diagnostica nel log degli eventi estesi](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |SQL_ERROR|Connessione non riuscita.|  
 |SQL_SUCCESS|Connessione attivata. L'ID di connessione client verrà trovato nel buffer di output.|  
@@ -56,7 +56,7 @@ ms.locfileid: "63128660"
 ## <a name="sql_copt_ss_perf_data"></a>SQL_COPT_SS_PERF_DATA  
  Tramite l'attributo SQL_COPT_SS_PERF_DATA viene restituito un puntatore a una struttura SQLPERF contenente le statistiche correnti sulle prestazioni del driver. `SQLGetConnectAttr`restituisce NULL se la registrazione delle prestazioni non è abilitata. Le statistiche nella struttura SQLPERF non vengono aggiornate in modo dinamico dal driver. Chiamare `SQLGetConnectAttr` ogni volta che è necessario aggiornare le statistiche sulle prestazioni.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |NULL|La registrazione delle prestazioni non è abilitata.|  
 |Qualsiasi altro valore|Puntatore a una struttura SQLPERF.|  
@@ -67,7 +67,7 @@ ms.locfileid: "63128660"
 ## <a name="sql_copt_ss_user_data"></a>SQL_COPT_SS_USER_DATA  
  L'attributo SQL_COPT_SS_USER_DATA recupera il puntatore ai dati utente. I dati utente vengono archiviati nella memoria del client e registrati per singola connessione. Se il puntatore ai dati utente SQL_UD_NOTSET non è stato impostato, viene restituito un puntatore NULL.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|Non è impostato alcun puntatore ai dati utente.|  
 |Qualsiasi altro valore|Puntatore ai dati utente.|  
@@ -81,7 +81,7 @@ ms.locfileid: "63128660"
   
  Per ulteriori informazioni sui nomi SPN, vedere [nomi dell'entità servizio &#40;spn&#41; nelle connessioni Client &#40;ODBC&#41;](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQLGetConnectAttr (funzione)](https://go.microsoft.com/fwlink/?LinkId=59347)   
  [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)   
  [IMPOSTA QUOTED_IDENTIFIER &#40;&#41;Transact-SQL](/sql/t-sql/statements/set-quoted-identifier-transact-sql)   

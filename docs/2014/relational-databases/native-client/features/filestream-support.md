@@ -10,15 +10,15 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server], SQL Server Native Client
 - SQL Server Native Client [FILESTREAM support]
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 33e447048f7058ee81b0b144f0aa94a370f6d670
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab8ca7912db7607acbca716f733184ed57dc681e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046263"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707290"
 ---
 # <a name="filestream-support"></a>Supporto FILESTREAM
   FILESTREAM consente di archiviare e accedere a valori binari di grandi dimensioni mediante [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o accesso diretto al file system di Windows. Un valore binario di grandi dimensioni è un valore superiore a 2 gigabyte (GB). Per altre informazioni sul supporto FILESTREAM avanzato, vedere [FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md).  
@@ -56,13 +56,13 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>Compatibilità con le versioni precedenti  
- Se il client è stato compilato utilizzando la versione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di Native Client inclusa in [!INCLUDE[ssVersion2005](../../../includes/sscurrent-md.md)], `varbinary(max)` il comportamento sarà compatibile con. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Questo significa che i dati restituiti avranno come dimensione massima 2 GB. Per valori di dimensioni superiori a 2 GB, verrà eseguito un troncamento e restituito l'avviso "Troncamento a destra dei dati della stringa".  
+ Se il client è stato compilato utilizzando la versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client inclusa in [!INCLUDE[ssVersion2005](../../../includes/sscurrent-md.md)] , il `varbinary(max)` comportamento sarà compatibile con [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] . Questo significa che i dati restituiti avranno come dimensione massima 2 GB. Per valori di dimensioni superiori a 2 GB, verrà eseguito un troncamento e restituito l'avviso "Troncamento a destra dei dati della stringa".  
   
  Quando la compatibilità con il tipo di dati è impostata su 80, il comportamento client sarà coerente con il comportamento del client legacy.  
   
- Per i client che utilizzano SQLOLEDB o altri provider rilasciati prima [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] di Native client `varbinary(max)` , verrà eseguito il mapping all'immagine.  
+ Per i client che utilizzano SQLOLEDB o altri provider rilasciati prima [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] di Native client, `varbinary(max)` verrà eseguito il mapping all'immagine.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzionalità di SQL Server Native Client](sql-server-native-client-features.md)  
   
   

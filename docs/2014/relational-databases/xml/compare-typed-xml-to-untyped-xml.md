@@ -22,15 +22,15 @@ helpviewer_keywords:
 - XML [SQL Server], untyped
 - xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 98cbaa59ea78e0033e9a534915987576347db604
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b00b44ebe66a372b2037e62dc589afa35003495e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62637619"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717200"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Confronto dati XML tipizzati con dati XML non tipizzati
   È possibile creare variabili, parametri e colonne di tipo `xml`. Se si desidera, è inoltre possibile associare una raccolta XML Schema a una variabile, un parametro o una colonna di tipo `xml`. In questo caso, l' `xml` istanza del tipo di dati viene chiamata *tipizzata*. In caso contrario, l'istanza XML è definita *non tipizzata*.  
@@ -52,7 +52,7 @@ ms.locfileid: "62637619"
   
 -   Gli schemi sono disponibili ma non si desidera che i dati vengano convalidati dal server. Questo avviene talvolta quando un'applicazione esegue una convalida sul lato client prima di archiviare i dati sul server, archivia temporaneamente dati XML non validi in base allo schema oppure utilizza componenti di schema non supportati dal server.  
   
- Utilizzare il `xml` tipo di dati tipizzato nelle situazioni seguenti:  
+ Utilizzare `xml` il tipo di dati tipizzato nelle situazioni seguenti:  
   
 -   Gli schemi per i dati XML sono disponibili e si desidera che i dati XML vengano convalidati dal server in base a XML Schema.  
   
@@ -63,12 +63,12 @@ ms.locfileid: "62637619"
  Nelle colonne, nelle variabili e nei parametri XML tipizzati è possibile archiviare documenti o contenuto XML. Nella dichiarazione è tuttavia necessario specificare, tramite un flag, se si desidera archiviare un documento o del contenuto. È inoltre necessario fornire la raccolta XML Schema. Specificare DOCUMENT se ogni istanza XML include esattamente un elemento di livello principale, CONTENT in caso contrario. Nella verifica dei tipi eseguita durante la compilazione delle query il compilatore utilizza il flag DOCUMENT per derivare gli elementi singleton di livello principale.  
   
 ## <a name="creating-typed-xml"></a>Creazione di dati XML tipizzati  
- Prima di poter creare variabili `xml` tipizzate, parametri o colonne, è necessario innanzitutto registrare la raccolta di XML schema utilizzando [Create XML schema Collection &#40;&#41;Transact-SQL ](/sql/t-sql/statements/create-xml-schema-collection-transact-sql). È quindi possibile associare la raccolta XML Schema alle variabili, ai parametri o alle colonne del tipo di dati `xml`.  
+ Prima di poter creare variabili tipizzate `xml` , parametri o colonne, è necessario innanzitutto registrare la raccolta di XML schema utilizzando [Create XML schema collection &#40;&#41;Transact-SQL ](/sql/t-sql/statements/create-xml-schema-collection-transact-sql). È quindi possibile associare la raccolta XML Schema alle variabili, ai parametri o alle colonne del tipo di dati `xml`.  
   
  Negli esempi seguenti, per specificare il nome della raccolta XML Schema viene utilizzata una convenzione di denominazione in due parti. La prima parte è il nome dello schema e la seconda parte è il nome della raccolta XML Schema.  
   
 ### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Esempio: associazione di una raccolta di schemi a una variabile di tipo xml  
- Nell'esempio seguente viene creata`xml` una variabile di tipo a cui viene associata una raccolta di schemi. La raccolta di schemi specificata è già stata importata nel database **AdventureWorks** .  
+ Nell'esempio seguente viene creata una `xml` variabile di tipo a cui viene associata una raccolta di schemi. La raccolta di schemi specificata è già stata importata nel database **AdventureWorks** .  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   

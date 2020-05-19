@@ -13,22 +13,22 @@ helpviewer_keywords:
 - macros [SQL Server]
 - Extended Stored Procedure API [SQL Server]
 ms.assetid: 158a6765-0542-4e84-b5ab-f173d946ef5e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f4146e19c6306cbe83659390605f570561fcc08f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63f66eb4b47588476afc2e01cf9c42a00293aee5
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917820"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706839"
 ---
 # <a name="database-engine-extended-stored-procedure-programming"></a>Programmazione di stored procedure estese del Motore di database
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)] Utilizzare invece la funzionalità di integrazione con CLR. Per altre informazioni, vedere [Concetti relativi alla programmazione dell'integrazione con CLR &#40;Common Language Runtime&#41;](clr-integration/common-language-runtime-clr-integration-programming-concepts.md).  
   
- L' [!INCLUDE[msCoName](../includes/msconame-md.md)] API stored procedure estesa fornisce un'API (Application Programming Interface) basata su server per l' [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] estensione della funzionalità. L'API è costituita da macro e funzioni C e C++ utilizzate per compilare applicazioni nelle categorie seguenti: stored procedure estese e applicazioni gateway.  
+ L' [!INCLUDE[msCoName](../includes/msconame-md.md)] API stored procedure estesa fornisce un'API (Application Programming Interface) basata su server per l'estensione della [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] funzionalità. L'API è costituita da macro e funzioni C e C++ utilizzate per compilare applicazioni nelle categorie seguenti: stored procedure estese e applicazioni gateway.  
   
  Le stored procedure estese consentono di creare routine esterne personalizzate in un linguaggio di programmazione quale C. Le stored procedure estese appaiono come stored procedure normali e vengono eseguite in modo analogo. È possibile passare parametri alle stored procedure estese che possono restituire risultati e informazioni sullo stato.  
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 405cdac5-a0d4-47a4-9180-82876b773b82
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 89fc6a74486cad96be0baee374721e06520acfcb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00ef2590d21ad0d58acecf690342e92bb843ea2d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63015303"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706443"
 ---
 # <a name="migrating-to-in-memory-oltp"></a>Migrazione a OLTP in memoria
   In questa sezione viene illustrato come eseguire la migrazione di oggetti di database per utilizzare OLTP in memoria.  
@@ -46,7 +46,7 @@ ms.locfileid: "63015303"
   
  Per informazioni sulle metodologie di migrazione, vedere [In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx) (OLTP in memoria: considerazioni sulla migrazione e sui modelli di carico di lavoro comuni).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [OLTP in memoria &#40;l'ottimizzazione in memoria&#41;](in-memory-oltp-in-memory-optimization.md)   
  [Stimare i requisiti di memoria delle tabelle con ottimizzazione per la memoria](memory-optimized-tables.md)  
   

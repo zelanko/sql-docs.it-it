@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLProcedures function
 ms.assetid: ec41f017-f5e0-40ef-913a-65d206068631
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b0001f1d6e45e855b884028a595a2b61263c2e58
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a0464cd8a91db43f9629bed3cc9e45e48a8f7c3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046684"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705906"
 ---
 # <a name="sqlprocedures"></a>SQLProcedures
   Tutte le stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituiscono un valore. **SQLProcedures** restituisce SQL_PT_FUNCTION per la colonna del set di risultati PROCEDURE_TYPE.  
@@ -30,7 +30,7 @@ ms.locfileid: "63046684"
   
  **SQLProcedures** restituisce informazioni su tutte le routine i cui nomi corrispondono a *ProcName* e possono essere eseguite dall'utente corrente o per cui all'utente corrente è stata concessa l'autorizzazione View definition.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQLProcedures (funzione)](https://go.microsoft.com/fwlink/?LinkId=59364)   
  [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   

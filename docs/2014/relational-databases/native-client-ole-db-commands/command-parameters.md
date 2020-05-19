@@ -13,15 +13,15 @@ helpviewer_keywords:
 - parameters [SQL Server Native Client], OLE DB
 - commands [OLE DB]
 ms.assetid: 072ead49-ebaf-41eb-9a0f-613e9d990f26
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 836f4cb41c8c2cf5b72dbbcf08b8154381a958cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93ec7e88dba785b1559512601adebdee64ea9fdb
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62467347"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82708198"
 ---
 # <a name="command-parameters"></a>Parametri dei comandi
   I parametri sono contrassegnati nel testo dei comandi dal carattere del punto interrogativo. L'istruzione SQL seguente è ad esempio contrassegnata per un solo parametro di input:  
@@ -30,7 +30,7 @@ ms.locfileid: "62467347"
 {call SalesByCategory('Produce', ?)}  
 ```  
   
- Per migliorare le prestazioni riducendo il traffico di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rete, il provider di OLE DB di Native client non deriva automaticamente le informazioni sui parametri, a meno che non venga chiamato **ICommandWithParameters:: GetParameterInfo** o **ICommandPrepare::P repare** prima di eseguire un comando. Ciò significa che il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client non esegue automaticamente le operazioni seguenti:  
+ Per migliorare le prestazioni riducendo il traffico di rete, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client non deriva automaticamente le informazioni sui parametri, a meno che non venga chiamato **ICommandWithParameters:: GetParameterInfo** o **ICommandPrepare::P repare** prima di eseguire un comando. Ciò significa che il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client non esegue automaticamente le operazioni seguenti:  
   
 -   Verificare la correttezza del tipo di dati specificato con **ICommandWithParameters::SetParameterInfo**.  
   
@@ -53,12 +53,12 @@ ms.locfileid: "62467347"
   
  I nomi dei parametri delle stored procedure non devono essere specificati in una struttura DBPARAMBINDINFO. Utilizzare NULL per il valore del membro *pwszName* per indicare che il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client deve ignorare il nome del parametro e utilizzare solo l'ordinale specificato nel membro *rgParamOrdinals* di **ICommandWithParameters::** SetValue. Se il testo del comando contiene parametri denominati e senza nome, tutti i parametri senza nome devono essere specificati prima di quelli denominati.  
   
- Se viene specificato il nome di un parametro di stored procedure, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il provider OLE DB di Native Client verifica il nome per verificare che sia valido. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client restituisce un errore quando riceve un nome di parametro errato dal consumer.  
+ Se viene specificato il nome di un parametro di stored procedure, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB di Native Client verifica il nome per verificare che sia valido. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client restituisce un errore quando riceve un nome di parametro errato dal consumer.  
   
 > [!NOTE]  
->  Per esporre il supporto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per i tipi XML e definiti dall'utente (UDT) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , il provider di OLE DB di Native Client implementa una nuova interfaccia [ISSCommandWithParameters](../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) .  
+>  Per esporre il supporto per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i tipi XML e definiti dall'utente (UDT), il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client implementa una nuova interfaccia [ISSCommandWithParameters](../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Comandi:](commands.md)  
   
   

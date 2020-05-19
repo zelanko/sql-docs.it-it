@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: ac47cb74-5578-417d-bcef-f970d9527705
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dd93707ef139b1751d918af43efed72574d58aa5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58449d2d7d685eaceb3b3015121cb4f59271a46d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088511"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706859"
 ---
 # <a name="sql-server-backward-compatibility"></a>Compatibilità con le versioni precedenti di SQL Server
   Negli argomenti della sezione relativa alla compatibilità con le versioni precedenti vengono descritte le differenze di funzionamento di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tra le varie versioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -29,7 +29,7 @@ ms.locfileid: "66088511"
 |[Modifiche di rilievo nelle funzionalità di SQL Server in SQL Server 2014](../../2014/getting-started/breaking-changes-to-sql-server-features-in-sql-server-2014.md)|Modifiche che potrebbero richiedere modifiche alle applicazioni. In questo argomento vengono analizzate la configurazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e le funzionalità del programma di installazione.|  
 |[Differenze di funzionamento delle funzionalità di SQL Server in SQL Server 2014](../../2014/getting-started/behavior-changes-to-sql-server-features-in-sql-server-2014.md)|Modifiche del comportamento delle caratteristiche di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in questa versione. In questo argomento vengono analizzate la configurazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e le funzionalità del programma di installazione.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Compatibilità con le versioni precedenti](../../2014/getting-started/backward-compatibility.md)  
   
   

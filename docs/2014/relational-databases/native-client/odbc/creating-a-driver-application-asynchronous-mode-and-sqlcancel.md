@@ -15,15 +15,15 @@ helpviewer_keywords:
 - ODBC applications, asynchronous operations
 - SQL Server Native Client ODBC driver, asynchronous mode
 ms.assetid: f31702a2-df76-4589-ac3b-da5412c03dc2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3a4ec4e5d7575fdf5d915c8209999e1285fa79aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18cb81205a6e7036f34c7bb6f73f822bf0a6e173
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144322"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707126"
 ---
 # <a name="asynchronous-mode-and-sqlcancel"></a>Modalità asincrona e SQLCancel
   Alcune funzioni ODBC possono essere utilizzate in modo sincrono o in modo asincrono. Le operazioni asincrone possono essere abilitate per un handle di istruzione o per un handle di connessione. Se l'opzione viene impostata per un handle di connessione, sarà valida per tutti gli handle di istruzione nell'handle di connessione. Per abilitare o disabilitare le operazioni asincrone vengono utilizzate le istruzioni seguenti:  
@@ -47,7 +47,7 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ASYNC_ENABLE,
   
  A volte un comando rimane in attesa per molto tempo. Se l'applicazione deve annullare il comando senza attendere una risposta, è possibile eseguire questa operazione chiamando **SQLCancel** con lo stesso handle di istruzione del comando in attesa. Questa è l'unica volta in cui deve essere utilizzato **SQLCancel** . Alcuni programmatori utilizzano **SQLCancel** quando elaborano in modo parziale un set di risultati e desiderano annullare il resto del set di risultati. È necessario utilizzare [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md) o [SQLCloseCursor](../../native-client-odbc-api/sqlclosecursor.md) per annullare il resto di un set di risultati in attesa, non **SQLCancel**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di un'applicazione driver ODBC di SQL Server Native Client](creating-a-driver-application.md)  
   
   

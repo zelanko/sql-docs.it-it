@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xevents
 ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d44ab9256367ceb9883b55bb9b01ad67e14ded32
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a229b02f60c56b9979d2d31788910b3faa63cb2f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62705515"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706643"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Gestire sessioni di eventi in Esplora oggetti
   In questo argomento vengono illustrate le azioni eseguibili in **Esplora oggetti** che influiscono su Eventi estesi:  
@@ -36,7 +36,7 @@ ms.locfileid: "62705515"
  Per altre informazioni sulla creazione di una sessione Eventi estesi, vedere [Create an Extended Events Session](../../database-engine/create-an-extended-events-session.md)(Creare una sessione Eventi estesi).  
   
 ## <a name="starting-or-stopping-an-extended-events-session"></a>Avviare o arrestare una sessione Eventi estesi  
- È possibile avviare o arrestare una sessione eventi estesi tramite l' **Editor** di query `ALTER EVENT SESSION` utilizzando l'istruzione oppure utilizzando il nodo **eventi estesi** di **Esplora oggetti**.  
+ È possibile avviare o arrestare una sessione eventi estesi tramite l' **editor di query** utilizzando l' `ALTER EVENT SESSION` istruzione oppure utilizzando il nodo **eventi estesi** di **Esplora oggetti**.  
   
  Quando si arresta una sessione eventi, questa non viene più elencata come sessione attiva nella DMV sys.dm_xe_sessions. La definizione della sessione rimane tuttavia intatta ed è possibile riavviare la sessione. Per rimuovere completamente una definizione di sessione, è necessario eliminare la sessione.  
   
@@ -96,7 +96,7 @@ STATE = STOP
   
 4.  Espandere la casella di riepilogo a discesa **Modello** .  
   
-5.  Fare clic su ** \<file da... >aprire** e cercare la sessione (file XML) che si vuole importare.  
+5.  Fare clic su ** \< file da... >aprire** e cercare la sessione (file XML) che si vuole importare.  
   
  La sessione verrà visualizzata nel nodo **Sessioni** . Per impostazione predefinita,la sessione non viene avviata.  
   
@@ -128,7 +128,7 @@ STATE = STOP
  Quando si elimina una sessione eventi, tutte le informazioni di configurazione vengono rimosse e la definizione della sessione non viene più visualizzata nella vista del catalogo sys.server_event_sessions.  
   
 > [!NOTE]  
->  system_health e AlwaysOn_health sono inclusi in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; non eliminarli. system_health è eliminata per impostazione predefinita (per altre informazioni, vedere [Utilizzare la sessione system_health](use-the-ssms-xe-profiler.md)). Per impostazione predefinita, AlwaysOn_health è disattivato. Tramite queste sessioni vengono raccolti dati che possono essere utili per la diagnosi dei problemi di prestazioni.  
+>  system_health e AlwaysOn_health sono inclusi in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; non eliminarli. system_health è eliminata per impostazione predefinita (per altre informazioni, vedere [Utilizzare la sessione system_health](use-the-ssms-xe-profiler.md)). Per impostazione predefinita, AlwaysOn_health è disattivato. Tramite queste sessioni vengono raccolti dati che possono essere utili per la diagnosi dei problemi di prestazioni.  
   
  Per eliminare una sessione Eventi estesi, è necessario disporre dell'autorizzazione ALTER ANY EVENT SESSION.  
   

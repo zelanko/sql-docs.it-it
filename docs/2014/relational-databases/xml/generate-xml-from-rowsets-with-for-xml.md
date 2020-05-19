@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, generating XML from rowsets
 ms.assetid: d061c0f1-3de9-4ad1-bbca-ce45d064b6c8
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 181d07e187c6b1091d38ebbe0018c61ae856caf3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d7024369f579f818e56250f1aac48c2d1834ea26
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204991"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82715379"
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>Generazione di XML da set di righe con FOR XML
   È possibile generare un' `xml` istanza del tipo di dati da un set di righe utilizzando for XML con la nuova direttiva **Type** .  
@@ -36,7 +36,7 @@ FROM   T
 FOR XML AUTO, TYPE  
 ```  
   
- La vista V contiene una singola riga con un singolo nome xmlVal e di tipo`.` XML su cui è possibile eseguire query come un' `xml` istanza del tipo di dati normale. La query seguente, ad esempio, restituisce il nome dell'autore, "David":  
+ La vista V contiene una singola riga con un singolo nome xmlVal e di tipo XML su `.` cui è possibile eseguire query come un' `xml` istanza del tipo di dati normale. La query seguente, ad esempio, restituisce il nome dell'autore, "David":  
   
 ```  
 SELECT xmlVal.query('//author[first-name = "David"]')  

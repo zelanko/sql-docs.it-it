@@ -12,20 +12,20 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, persisted data source objects
 - persisted data source objects
 ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7a5d50163f439ec3fabd219761f0749c88745c58
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e4eaf05eb6334a9df316642adbeb4086be079ca
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63231442"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707409"
 ---
 # <a name="persisted-data-source-objects"></a>Oggetti origine dati persistenti
   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client supporta oggetti origine dati salvati in modo permanente con l'interfaccia **IPersistFile** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  **A. Rendere persistente l'inizializzazione dell'origine dati:**  
   
  In questo esempio viene illustrata una funzione che rende persistenti le proprietà di inizializzazione dell'origine dati definendo un server, un database e l'utilizzo della Modalità di autenticazione di Windows per la connessione. Il nome del server e il nome del database vengono ricevuti nei parametri *pLocation* e *pDatasource* della funzione.  
@@ -227,7 +227,7 @@ HRESULT InitFromPersistedDS
   
  Il metodo **IPersistFile::Save** può essere chiamato prima o dopo la chiamata al metodo **IDBInitialize::Initialize**. Se si chiama il metodo al termine del completamento di **IDBInitialize::Initialize** viene resa persistente una specifica di origine dati valida.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Oggetti di origine dati &#40;OLE DB&#41;](data-source-objects-ole-db.md)  
   
   

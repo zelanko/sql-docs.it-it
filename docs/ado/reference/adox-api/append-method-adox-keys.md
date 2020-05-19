@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 215a5391-f422-42ec-99ea-4e6fbb5d3d64
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fd66edb75bec4f4b7e35c53c9ebeabd9b3c75d83
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5d4797344958391dca278e23be2efafa6d1b3f69
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967295"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764032"
 ---
 # <a name="append-method-adox-keys"></a>Metodo Append (raccolta Keys ADOX)
 Aggiunge un nuovo oggetto [chiave](../../../ado/reference/adox-api/key-object-adox.md) alla raccolta di [chiavi](../../../ado/reference/adox-api/keys-collection-adox.md) .  
@@ -49,7 +49,7 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
  *RelatedColumn*  
  Facoltativa. Valore **stringa** che specifica il nome della colonna correlata per una chiave esterna. Il parametro *RelatedColumn* corrisponde al valore della proprietà **Name** di un oggetto [Column](../../../ado/reference/adox-api/column-object-adox.md) .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il parametro *Columns* può assumere il nome di una colonna o una matrice di nomi di colonna.  
   
 ## <a name="applies-to"></a>Si applica a  

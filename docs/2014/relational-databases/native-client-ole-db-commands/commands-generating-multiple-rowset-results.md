@@ -14,18 +14,18 @@ helpviewer_keywords:
 - commands [OLE DB]
 - multiple-rowset results
 ms.assetid: 4567668d-35fd-4162-b61f-f7536862cdcb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 04a7db670171f6f890f55a89e2da987ef2309f0e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29ce1e2c701db485d8251bc9c017a9b192576a7c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62657681"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707818"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Comandi che generano risultati con più set di righe
-  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client può restituire più set [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di righe dalle istruzioni. Tramite le istruzioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono restituiti più set di righe nelle condizioni seguenti:  
+  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client può restituire più set di righe dalle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istruzioni. Tramite le istruzioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono restituiti più set di righe nelle condizioni seguenti:  
   
 -   Le istruzioni SQL in batch vengono inviate come singolo comando.  
   
@@ -48,7 +48,7 @@ WCHAR*       wSQLString = L"SELECT * FROM Categories; "
   
 -   [Utilizzo dell'interfaccia IMultipleResults per elaborare più set di risultati](using-imultipleresults-to-process-multiple-result-sets.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Comandi:](commands.md)  
   
   

@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - driver performance data [ODBC]
 ms.assetid: b997790a-8cc6-4800-8867-74c1bef07be3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a7de38f3c91814dbd364caee84b34dacdfbdf475
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 957e99d67360d72e1d8920d3bad2611c67f747de
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200310"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82712971"
 ---
 # <a name="profile-driver-performance-data-odbc"></a>Analizzare i dati relativi alle prestazioni del driver (ODBC)
   In questo esempio vengono illustrate le opzioni specifiche del driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la registrazione delle statistiche relative alle prestazioni. Nell'esempio viene creato il file odbcperf.log e vengono illustrate sia la creazione di un file di log dei dati relativi alle prestazioni che la visualizzazione dei dati relativi alle prestazioni direttamente dalla struttura di dati SQLPERF, definita in Odbcss.h. L'esempio è stato sviluppato per ODBC versione 3.0 o successiva.  
@@ -41,7 +41,7 @@ ms.locfileid: "63200310"
   
 ### <a name="to-log-driver-performance-data-programmatically"></a>Per registrare i dati relativi alle prestazioni del driver a livello di programmazione  
   
-1.  Chiamare [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_DATA_LOG e il percorso completo e il nome file del file di log dei dati sulle prestazioni. Ad esempio:  
+1.  Chiamare [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_DATA_LOG e il percorso completo e il nome file del file di log dei dati sulle prestazioni. ad esempio:  
   
     ```  
     "C:\\Odbcperf.log"  
@@ -237,7 +237,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Procedure per la profilatura delle prestazioni del driver ODBC &#40;ODBC&#41;](profiling-odbc-driver-performance-odbc.md)   
  [Profiling delle prestazioni del driver ODBC](../native-client/odbc/profiling-odbc-driver-performance.md)  
   

@@ -17,18 +17,18 @@ helpviewer_keywords:
 - ODBC data types, text columns
 - image columns [ODBC]
 ms.assetid: 7b543556-ff36-4d35-ac08-de96223d92cd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a161b009239db3c17acb64f8d8eeaaa61321cd9f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e6f790a82b45f9a74318a8ec46ef1e4f2a283edb
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63195322"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82709283"
 ---
 # <a name="managing-text-and-image-columns"></a>Gestione di colonne di tipo text e image
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]i dati di tipo **Text**, **ntext**e **Image** (detti anche Long Data) sono tipi di dati stringa di tipo carattere o binario che possono contenere valori troppo grandi per essere contenuti in colonne **char**, **varchar**, **Binary**o **varbinary** . Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati **Text** viene mappato al tipo di dati ODBC SQL_LONGVARCHAR; **ntext** esegue il mapping a SQL_WLONGVARCHAR; e il mapping di **Immagini** a SQL_LONGVARBINARY. Alcuni elementi di dati, ad esempio i documenti lunghi o le bitmap di grandi dimensioni, potrebbero essere troppo grandi per essere archiviati correttamente in memoria. Per recuperare dati Long da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in parti sequenziali, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il driver ODBC di Native Client consente a un'applicazione di chiamare [SQLGetData](../native-client-odbc-api/sqlgetdata.md). Per inviare dati Long in parti sequenziali, l'applicazione può chiamare [SQLPutData](../native-client-odbc-api/sqlputdata.md). I parametri per i quali i dati vengono inviati in fase di esecuzione sono noti come parametri data-at-execution.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]i dati di tipo **Text**, **ntext**e **Image** (detti anche Long Data) sono tipi di dati stringa di tipo carattere o binario che possono contenere valori troppo grandi per essere contenuti in colonne **char**, **varchar**, **Binary**o **varbinary** . Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati **Text** viene mappato al tipo di dati ODBC SQL_LONGVARCHAR; **ntext** esegue il mapping a SQL_WLONGVARCHAR; e il mapping di **Immagini** a SQL_LONGVARBINARY. Alcuni elementi di dati, ad esempio i documenti lunghi o le bitmap di grandi dimensioni, potrebbero essere troppo grandi per essere archiviati correttamente in memoria. Per recuperare dati Long da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in parti sequenziali, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client consente a un'applicazione di chiamare [SQLGetData](../native-client-odbc-api/sqlgetdata.md). Per inviare dati Long in parti sequenziali, l'applicazione può chiamare [SQLPutData](../native-client-odbc-api/sqlputdata.md). I parametri per i quali i dati vengono inviati in fase di esecuzione sono noti come parametri data-at-execution.  
   
  Un'applicazione può effettivamente scrivere o recuperare qualsiasi tipo di dati (non solo i dati di tipo Long) con **SQLPutData** o **SQLGetData**, sebbene sia possibile inviare o recuperare solo dati di tipo **carattere** e **binario** in parti. Tuttavia, se i dati sono sufficientemente piccoli da adattarsi a un singolo buffer, in genere non esiste alcun motivo per utilizzare **SQLPutData** o **SQLGetData**. È molto più semplice associare il singolo buffer al parametro o alla colonna.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "63195322"
   
 -   [Colonne data-at-execution di tipo text, ntext o image](data-at-execution-and-text-ntext-or-image-columns.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)  
   
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - extended events [SQL Server], SQL Trace equivalents
 - extended events [SQL Server], user configurable events
 ms.assetid: 7f24104c-201d-4361-9759-f78a27936011
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0dd90613851184ad7fcff16ecf0a89875433dbfd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 866586f5da9682d66f884565254adf4185d63760
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62512383"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706591"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>Visualizzare gli eventi estesi equivalenti alle classi di evento di traccia SQL
   Se si desidera utilizzare gli eventi estesi per raccogliere dati degli eventi equivalenti a colonne e classi di evento di Traccia SQL, è utile comprendere in che modo viene eseguito il mapping degli eventi di Traccia SQL a eventi e azioni degli eventi estesi.  
@@ -77,7 +77,7 @@ ms.locfileid: "62512383"
   
 -   Per le classi di eventi di Traccia SQL configurabili dall'utente (da UserConfigurable:1 a UserConfigurable:9), la funzionalità Eventi estesi usa un singolo evento in sostituzione di tali classi. Il nome dell'evento è user_event. Questo evento viene generato usando sp_trace_generateevent, che è la stessa stored procedure usata da Traccia SQL. L'evento user_event viene restituito indipendentemente dall'ID evento passato alla stored procedure. Viene tuttavia restituito un campo event_id come parte dei dati dell'evento. In questo modo, è possibile compilare un predicato basato sull'ID evento. Se, ad esempio, si usa UserConfigurable:0 (event ID = 82) nel codice, è possibile aggiungere l'evento user_event alla sessione e specificare un predicato di 'event_id = 82'. Non è quindi necessario modificare il codice perché la stored procedure sp_trace_generateevent genera l'evento user_event degli eventi estesi e la classe di evento di Traccia SQL equivalente.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_generateevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql)  
   
   

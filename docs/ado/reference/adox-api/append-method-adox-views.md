@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 637932fed7effb87705b3aa195578cfd506e1454
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 540ff52141139f4748cb2cd4c8979f5f8b55b230
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967159"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764002"
 ---
 # <a name="append-method-adox-views"></a>Metodo Append (raccolta Views ADOX)
 Crea un nuovo oggetto [visualizzazione](../../../ado/reference/adox-api/view-object-adox.md) e lo aggiunge alla raccolta [views](../../../ado/reference/adox-api/views-collection-adox.md) .  
@@ -40,7 +40,7 @@ Views.Append Name, Command
  *Comando*  
  Oggetto [comando](../../../ado/reference/ado-api/command-object-ado.md) ADO che rappresenta la visualizzazione da creare.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Crea una nuova visualizzazione nell'origine dati con il nome e gli attributi specificati nell'oggetto **comando** .  
   
  Se il testo del comando specificato dall'utente rappresenta una procedura anziché una vista, il comportamento dipende dal provider. L' **Accodamento** avrà esito negativo se il provider non supporta la persistenza dei comandi.  

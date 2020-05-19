@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - Index object [ADOX]
 ms.assetid: 6b9578c0-bc94-46b9-b801-c18e14b04b31
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7bff462b7c9ffe115cdfd52d1ec1f0a810a50531
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 840484cbfcb1feeb56022835b6c1b3157101edb8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966087"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763882"
 ---
 # <a name="index-object-adox"></a>Oggetto Index (ADOX)
 Rappresenta un indice di una tabella di database.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il codice seguente crea un nuovo **Indice**:  
   
 ```  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data access [SQL Server Native Client], user-defined types
 - ISSCommandWithParameters interface
 ms.assetid: e15d8169-3517-4323-9c9e-0f5c34aff7df
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f2adbf40b3fe0b0e079198087a47f525d464a41b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa78cc2d4d27fdfb1db6333f21685263d22dd97e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206615"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707169"
 ---
 # <a name="using-user-defined-types"></a>Utilizzo dei tipi definiti dall'utente (UDT)
   In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] sono stati introdotti i tipi definiti dall'utente (UDT). I tipi definiti dall'utente estendono il sistema di tipi SQL consentendo di archiviare oggetti e strutture di dati personalizzate in un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. I tipi definiti dall'utente possono contenere più tipi di dati e possono assumere comportamenti, differenziandoli dai tipi di dati alias tradizionali costituiti da un singolo tipo di dati di sistema [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. I tipi definiti dall'utente vengono definiti utilizzando uno dei linguaggi supportati da .NET Common Language Runtime (CLR) che generano codice verificabile, Sono inclusi Microsoft Visual C#<sup>?</sup> e Visual Basic<sup>?</sup> NET. I dati vengono esposti come campi e proprietà di una classe o struttura .NET mentre i comportamenti vengono definiti dai metodi della classe o della struttura.  
@@ -40,7 +40,7 @@ ms.locfileid: "68206615"
 >  Il metodo **IRowsetFind::FindNextRow** non funziona con il tipo di dati UDT. Se il tipo definito dall'utente viene utilizzato come tipo di colonna di ricerca, viene restituito DB_E_BADCOMPAREOP.  
   
 ### <a name="data-bindings-and-coercions"></a>Associazione dati e coercizioni  
- Nella tabella seguente vengono descritte l'associazione e la coercizione che si verificano quando si utilizzano i tipi di dati elencati con un tipo definito dall'utente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le colonne con tipo definito dall' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utente vengono esposte tramite il provider OLE DB di Native Client come DBTYPE_UDT. È possibile ottenere i metadati tramite i set di righe dello schema appropriati in modo da potere gestire i tipi definiti personalizzati come oggetti.  
+ Nella tabella seguente vengono descritte l'associazione e la coercizione che si verificano quando si utilizzano i tipi di dati elencati con un tipo definito dall'utente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le colonne con tipo definito dall'utente vengono esposte tramite il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB di Native client come DBTYPE_UDT. È possibile ottenere i metadati tramite i set di righe dello schema appropriati in modo da potere gestire i tipi definiti personalizzati come oggetti.  
   
 |Tipo di dati|Al server<br /><br /> **UDT**|Al server<br /><br /> **non UDT**|Dal server<br /><br /> **UDT**|Dal server<br /><br /> **non UDT**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
@@ -82,7 +82,7 @@ ms.locfileid: "68206615"
 #### <a name="the-procedure_parameters-schema-rowset"></a>Set di righe dello schema PROCEDURE_PARAMETERS  
  Al set di righe dello schema PROCEDURE_PARAMETERS sono state effettuate le seguenti aggiunte.  
   
-|Nome colonna|Type|Descrizione|  
+|Nome colonna|Tipo|Descrizione|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Identificatore del nome in tre parti.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Identificatore del nome in tre parti.|  
@@ -92,7 +92,7 @@ ms.locfileid: "68206615"
 #### <a name="the-sql_assemblies-schema-rowset"></a>Set di righe dello schema SQL_ASSEMBLIES  
  Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client espone un nuovo set di righe dello schema specifico del provider che descrive i tipi definiti dall'utente registrati. Il server ASSEMBLY può essere specificato come DBTYPE_WSTR, ma non è presente nel set di righe. Se non viene specificato, il set di righe imposterà come valore predefinito il server corrente. Il set di righe dello schema SQL_ASSEMBLIES viene definito nella tabella seguente.  
   
-|Nome colonna|Type|Descrizione|  
+|Nome colonna|Tipo|Descrizione|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|Nome del catalogo dell'assembly contenente il tipo.|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|Nome dello schema o nome del proprietario dell'assembly contenente il tipo. Sebbene l'ambito degli assembly sia il database e non lo schema, gli assembly dispongono di un proprietario qui rappresentato.|  
@@ -104,7 +104,7 @@ ms.locfileid: "68206615"
 #### <a name="the-sql_assemblies_-dependencies-schema-rowset"></a>Set di righe dello schema SQL_ASSEMBLIES_ DEPENDENCIES  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Il provider di OLE DB di Native Client espone un nuovo set di righe dello schema specifico del provider che descrive le dipendenze dell'assembly per un server specificato. ASSEMBLY_SERVER può essere specificato dal chiamante come DBTYPE_WSTR, ma non è presente nel set di righe. Se non viene specificato, il set di righe imposterà come valore predefinito il server corrente. Il set di righe dello schema SQL_ASSEMBLY_DEPENDENCIES viene definito nella tabella seguente.  
   
-|Nome colonna|Type|Descrizione|  
+|Nome colonna|Tipo|Descrizione|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|Nome del catalogo dell'assembly contenente il tipo.|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|Nome dello schema o nome del proprietario dell'assembly contenente il tipo. Sebbene l'ambito degli assembly sia il database e non lo schema, gli assembly dispongono di un proprietario qui rappresentato.|  
@@ -114,7 +114,7 @@ ms.locfileid: "68206615"
 #### <a name="the-sql_user_types-schema-rowset"></a>Set di righe dello schema SQL_USER_TYPES  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Il provider OLE DB di Native Client espone un nuovo set di righe dello schema, SQL_USER_TYPES, che descrive quando vengono aggiunti i tipi definiti dall'utente registrati per un server specificato. UDT_SERVER deve essere specificato dal chiamante come DBTYPE_WSTR, ma non è presente nel set di righe. Il set di righe dello schema SQL_USER_TYPES viene definito nella tabella seguente.  
   
-|Nome colonna|Type|Descrizione|  
+|Nome colonna|Tipo|Descrizione|  
 |-----------------|----------|-----------------|  
 |UDT_CATALOGNAME|DBTYPE_WSTR|Per le colonne con tipo definito dall'utente questa proprietà è una stringa che specifica il nome del catalogo in cui viene definito il tipo definito dall'utente.|  
 |UDT_SCHEMANAME|DBTYPE_WSTR|Per le colonne con tipo definito dall'utente questa proprietà è una stringa che specifica il nome dello schema in cui viene definito il tipo definito dall'utente.|  
@@ -124,7 +124,7 @@ ms.locfileid: "68206615"
 #### <a name="the-columns-schema-rowset"></a>Set di righe dello schema COLUMNS  
  Le aggiunte al set di righe dello schema COLUMNS includono le colonne seguenti.  
   
-|Nome colonna|Type|Descrizione|  
+|Nome colonna|Tipo|Descrizione|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Per le colonne con tipo definito dall'utente questa proprietà è una stringa che specifica il nome del catalogo in cui viene definito il tipo definito dall'utente.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Per le colonne con tipo definito dall'utente questa proprietà è una stringa che specifica il nome dello schema in cui viene definito il tipo definito dall'utente.|  
@@ -135,7 +135,7 @@ ms.locfileid: "68206615"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native client aggiunge nuovi valori o modifiche a molti dei set di proprietà OLE DB principali.  
   
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>Set di proprietà DBPROPSET_SQLSERVERPARAMETER  
- Per supportare i tipi definiti dall'utente tramite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB, Native Client implementa la nuova DBPROPSET_SQLSERVERPARAMETER set di proprietà che contiene i valori seguenti.  
+ Per supportare i tipi definiti dall'utente tramite OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementa la nuova DBPROPSET_SQLSERVERPARAMETER set di proprietà che contiene i valori seguenti.  
   
 |Nome|Type|Descrizione|  
 |----------|----------|-----------------|  
@@ -148,7 +148,7 @@ ms.locfileid: "68206615"
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>Set di proprietà DBPROPSET_SQLSERVERCOLUMN  
  Per supportare la creazione di tabelle nell'interfaccia **ITableDefinition** , [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client aggiunge le tre nuove colonne seguenti al set di proprietà DBPROPSET_SQLSERVERCOLUMN.  
   
-|Nome|Descrizione|Type|Description|  
+|Nome|Descrizione|Type|Descrizione|  
 |----------|-----------------|----------|-----------------|  
 |SSPROP_COL_UDT_CATALOGNAME|UDT_CATALOGNAME|VT_BSTR|Per le colonne di tipo DBTYPE_UDT questa proprietà è una stringa che specifica il nome del catalogo in cui viene definito il tipo definito dall'utente.|  
 |SSPROP_COL_UDT_SCHEMANAME|UDT_SCHEMANAME|VT_BSTR|Per le colonne di tipo DBTYPE_UDT questa proprietà è una stringa che specifica il nome dello schema in cui viene definito il tipo definito dall'utente.|  
@@ -171,15 +171,15 @@ ms.locfileid: "68206615"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native client aggiunge nuovi valori o modifiche a molte delle interfacce di OLE DB principali.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>Interfaccia ISSCommandWithParameters  
- Per supportare i tipi definiti dall' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utente tramite OLE DB, Native Client implementa una serie di modifiche, inclusa l'aggiunta dell'interfaccia **ISSCommandWithParameters** . Questa nuova interfaccia eredita dall'interfaccia OLE DB principale **ICommandWithParameters**. Oltre ai tre metodi ereditati da **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**e **separameterinfo**; **ISSCommandWithParameters** fornisce i metodi **GetParameterProperties** e **SetParameterProperties** utilizzati per gestire i tipi di dati specifici del server.  
+ Per supportare i tipi definiti dall'utente tramite OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementa una serie di modifiche, inclusa l'aggiunta dell'interfaccia **ISSCommandWithParameters** . Questa nuova interfaccia eredita dall'interfaccia OLE DB principale **ICommandWithParameters**. Oltre ai tre metodi ereditati da **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**e **separameterinfo**; **ISSCommandWithParameters** fornisce i metodi **GetParameterProperties** e **SetParameterProperties** utilizzati per gestire i tipi di dati specifici del server.  
   
 > [!NOTE]  
 >  L'interfaccia **ISSCommandWithParameters** usa anche la nuova struttura SSPARAMPROPS.  
   
 #### <a name="the-icolumnsrowset-interface"></a>Interfaccia IColumnsRowset  
- Oltre all'interfaccia **ISSCommandWithParameters** , Native client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aggiunge anche nuovi valori al set di righe restituito dalla chiamata al metodo **IColumnsRowset:: GetColumnRowset** , inclusi i seguenti.  
+ Oltre all'interfaccia **ISSCommandWithParameters** , [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client aggiunge anche nuovi valori al set di righe restituito dalla chiamata al metodo **IColumnsRowset:: GetColumnRowset** , inclusi i seguenti.  
   
-|Nome colonna|Type|Description|  
+|Nome colonna|Tipo|Descrizione|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_UDT_CATALOGNAME|DBTYPE_WSTR|Identificatore del nome di catalogo del tipo definito dall'utente.|  
 |DBCOLUMN_SS_UDT_SCHEMANAME|DBTYPE_WSTR|Identificatore del nome dello schema del tipo definito dall'utente.|  
@@ -189,7 +189,7 @@ ms.locfileid: "68206615"
  È possibile differenziare una colonna con tipo definito dall'utente del server dagli altri tipi binari quando DBCOLUMN_TYPE è impostato su DBTYPE_UDT analizzando i metadati UDT aggiunti sopra specificati. Se tali dati sono parzialmente completi, il tipo di server sarà un tipo definito dall'utente. Per i tipi di server non UDT queste colonne vengono sempre restituite come NULL.  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Driver ODBC di SQL Server Native Client  
- Nel driver ODBC di Native Client sono state apportate alcune modifiche per supportare i tipi definiti dall' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utente. Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC di Native client esegue [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] il mapping del tipo definito dall'utente a SQL_SS_UDT identificatore del tipo di dati SQL specifico del driver. Le colonne con tipo definito dall'utente vengono rilevate come SQL_SS_UDT. Se si esegue il mapping di una colonna UDT in modo esplicito a un altro tipo in un'istruzione SQL utilizzando i metodi **ToString** o **ToXmlString** del tipo definito dall'utente o tramite la funzione **cast/Convert** , il tipo della colonna nel set di risultati rifletterà il tipo effettivo in cui è stata convertita la colonna.  
+ Nel driver ODBC di Native Client sono state apportate alcune modifiche [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per supportare i tipi definiti dall'utente. Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC di Native client esegue il mapping del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo definito dall'utente a SQL_SS_UDT identificatore del tipo di dati SQL specifico del driver. Le colonne con tipo definito dall'utente vengono rilevate come SQL_SS_UDT. Se si esegue il mapping di una colonna UDT in modo esplicito a un altro tipo in un'istruzione SQL utilizzando i metodi **ToString** o **ToXmlString** del tipo definito dall'utente o tramite la funzione **cast/Convert** , il tipo della colonna nel set di risultati rifletterà il tipo effettivo in cui è stata convertita la colonna.  
   
 ### <a name="sqlcolattribute-sqldescribeparam-sqlgetdescfield"></a>SQLColAttribute, SQLDescribeParam, SQLGetDescField  
  Sono stati aggiunti quattro nuovi campi di descrizione specifici del driver per fornire informazioni aggiuntive per una colonna con tipo definito dall'utente di un set di risultati oppure un parametro UDT della query stored procedure/con parametri, da recuperare tramite le funzioni [SQLColAttribute](../../native-client-odbc-api/sqlcolattribute.md), [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md)e [SQLGetDescField](../../native-client-odbc-api/sqlgetdescfield.md) .  
@@ -204,7 +204,7 @@ ms.locfileid: "68206615"
   
  Quando si esegue la conversione dai tipi di dati C ai tipi di dati SQL, SQL_C_WCHAR, SQL_C_BINARY e SQL_C_CHAR possono essere convertiti tutti in SQL_SS_UDT. Tenere tuttavia presente che i dati binari vengono convertiti in una stringa esadecimale durante la conversione dai tipi di dati SQL SQL_C_WCHAR e SQL_C_CHAR.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzionalità di SQL Server Native Client](sql-server-native-client-features.md)   
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 2f82db01-da7e-4a7d-8bc0-48b245e6f768
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b5f034eaea1faeb1547a3697bec4dab50090864d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c76aef87e8d9ed968552b7a46e496472dfaf32a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157942"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706506"
 ---
 # <a name="implementing-a-case-statement"></a>Implementazione di un'istruzione CASE
   Le istruzioni CASE non sono supportate nelle stored procedure compilate in modo nativo. Nell'esempio seguente viene illustrata una modalità per implementare la funzionalità di un'istruzione CASE in una stored procedure compilata in modo nativo.  
@@ -73,7 +73,7 @@ EXEC dbo.usp_SOHOnlineOrderResult
 GO  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Problemi di migrazione per le stored procedure compilate in modo nativo](migration-issues-for-natively-compiled-stored-procedures.md)   
  [Costrutti Transact-SQL non supportati da OLTP in memoria](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   

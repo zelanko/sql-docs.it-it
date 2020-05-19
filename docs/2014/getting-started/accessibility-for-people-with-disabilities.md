@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQL Server Books Online, accessibility features
 - customer service [SQL Server]
 ms.assetid: 0f85627e-e9d0-4b17-896a-218c9f31d339
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a653c4b5cd8d6e1bb9b5c826039169a7a5b80278
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8f3786ac7f031510d8985cb97634cbfc92024c4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74683592"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707018"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>Accessibilità per utenti disabili
   [!INCLUDE[msCoName](../includes/msconame-md.md)] cerca di sviluppare prodotti e servizi che siano facili da utilizzare per chiunque. In questo argomento vengono fornite informazioni sulle caratteristiche, i prodotti e i servizi seguenti in grado di semplificare l'accesso di utenti disabili alla famiglia di server [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows.  
@@ -79,10 +79,10 @@ ms.locfileid: "74683592"
  La documentazione per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è disponibile online. Per ulteriori informazioni, vedere [utilizzare la documentazione del prodotto per SQL Server](../2014-toc/index.yml).  
   
 ## <a name="obtaining-documentation-for-additional-msconame-products"></a>Come ottenere la documentazione relativa ad altri prodotti [!INCLUDE[msCoName](../includes/msconame-md.md)]  
- È possibile ottenere la documentazione accessibile [!INCLUDE[msCoName](../includes/msconame-md.md)] per i prodotti dal [sito Web di accessibilità Microsoft](https://go.microsoft.com/fwlink/?LinkID=67164).  
+ È possibile ottenere la documentazione accessibile per [!INCLUDE[msCoName](../includes/msconame-md.md)] i prodotti dal [sito Web di accessibilità Microsoft](https://go.microsoft.com/fwlink/?LinkID=67164).  
   
 ### <a name="recording-for-the-blind--dyslexic-inc"></a>Recording for the Blind & Dyslexic, Inc.  
- È possibile ottenere pubblicazioni [!INCLUDE[msCoName](../includes/msconame-md.md)] aggiuntive dalla registrazione per la cecità & dislessing, Inc. Questi documenti vengono distribuiti a membri idonei e registrati per il servizio di distribuzione in audio cassette o dischi floppy. La raccolta contiene oltre 80.000 titoli, compresi i libri [!INCLUDE[msCoName](../includes/msconame-md.md)] Press e la documentazione dei prodotti [!INCLUDE[msCoName](../includes/msconame-md.md)]. Per informazioni relative all'idoneità e alla disponibilità di libri [!INCLUDE[msCoName](../includes/msconame-md.md)] Press e documentazione dei prodotti [!INCLUDE[msCoName](../includes/msconame-md.md)], contattare:  
+ È possibile ottenere [!INCLUDE[msCoName](../includes/msconame-md.md)] pubblicazioni aggiuntive dalla registrazione per la cecità & Dislessing, Inc. Questi documenti vengono distribuiti a membri idonei e registrati per il servizio di distribuzione in audio cassette o dischi floppy. La raccolta contiene oltre 80.000 titoli, compresi i libri [!INCLUDE[msCoName](../includes/msconame-md.md)] Press e la documentazione dei prodotti [!INCLUDE[msCoName](../includes/msconame-md.md)]. Per informazioni relative all'idoneità e alla disponibilità di libri [!INCLUDE[msCoName](../includes/msconame-md.md)] Press e documentazione dei prodotti [!INCLUDE[msCoName](../includes/msconame-md.md)], contattare:  
   
  Registrazione per la cecità & dislessing, Inc. 20 Roszel Road Princeton, NJ 08540  
   
@@ -97,7 +97,7 @@ ms.locfileid: "74683592"
 ## <a name="customer-service-for-people-who-are-deaf-or-hard-of-hearing"></a>Servizio clienti per utenti con problemi di udito  
  In caso di utenti con problemi di udito, è disponibile un servizio telefonico TTY/TDD interattivo che consente di completare l'accesso ai servizi clienti e prodotti [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
   
-### <a name="customer-service"></a>Servizio clienti  
+### <a name="customer-service"></a>Customer Service  
  È possibile contattare il [!INCLUDE[msCoName](../includes/msconame-md.md)] centro informazioni di vendita in un telefono di testo effettuando la connessione (800) 892-5234 tra 6:30 A.M. alle 17.30 (ora solare, Pacifico), dal lunedì al venerdì, escluse le festività.  
   
 ### <a name="technical-help"></a>Assistenza tecnica  

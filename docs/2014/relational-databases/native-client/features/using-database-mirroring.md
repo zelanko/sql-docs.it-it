@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, database mirroring
 - SQL Server Native Client OLE DB provider, database mirroring
 ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5d7db93bdbe00b6aa1bc2525c0e8ed47e45aaf15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9f45aebe59892704e49a2a6d1cd45e5af4ae471
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225335"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707199"
 ---
 # <a name="using-database-mirroring"></a>Utilizzo del mirroring del database
     
@@ -60,9 +60,9 @@ ms.locfileid: "63225335"
 ## <a name="sql-server-native-client-ole-db-provider"></a>Provider OLE DB di SQL Server Native Client  
  Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client supporta il mirroring del database tramite gli attributi della stringa di connessione e connessione. La proprietà SSPROP_INIT_FAILOVERPARTNER è stata aggiunta al set di proprietà DBPROPSET_SQLSERVERDBINIT e la parola chiave `FailoverPartner` è un nuovo attributo di stringa di connessione per DBPROP_INIT_PROVIDERSTRING. Per ulteriori informazioni, vedere [utilizzo delle parole chiave delle stringhe di connessione con SQL Server Native Client](../applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- La cache di failover viene mantenuta fino a quando il provider viene caricato, ovvero fino a quando non viene chiamato **CoUninitialize** o a condizione che l'applicazione disponga di un riferimento a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] un oggetto gestito da Native client OLE DB provider, ad esempio un oggetto origine dati.  
+ La cache di failover viene mantenuta fino a quando il provider viene caricato, ovvero fino a quando non viene chiamato **CoUninitialize** o a condizione che l'applicazione disponga di un riferimento a un oggetto gestito da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client OLE DB provider, ad esempio un oggetto origine dati.  
   
- Per informazioni dettagliate [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sul supporto del provider OLE DB Native Client per il mirroring del database, vedere [proprietà di inizializzazione e autorizzazione](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Per informazioni dettagliate sul [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporto del provider OLE DB Native Client per il mirroring del database, vedere [proprietà di inizializzazione e autorizzazione](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Driver ODBC di SQL Server Native Client  
  Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC di Native Client supporta il mirroring del database tramite gli attributi della stringa di connessione e connessione. In particolare, l'attributo SQL_COPT_SS_FAILOVER_PARTNER è stato aggiunto per l'utilizzo con le funzioni [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) e [SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md) . e la `Failover_Partner` parola chiave è stata aggiunta come nuovo attributo della stringa di connessione.  
@@ -72,7 +72,7 @@ ms.locfileid: "63225335"
 > [!NOTE]  
 >  Gestione driver ODBC è stato migliorato per supportare la specifica del nome del server di failover.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzionalità di SQL Server Native Client](sql-server-native-client-features.md)   
  [Connettere i client a una sessione di mirroring del database &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Mirroring del database &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)  

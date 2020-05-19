@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4d1ae35d9dae03292edf31cd2b06acf97dc0db0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bcfa139cb854954d920a1148f3d5cebb907c61e4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783234"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706561"
 ---
 # <a name="altering-memory-optimized-tables"></a>Modifica di tabelle con ottimizzazione per la memoria
   L'esecuzione di operazioni ALTER nelle tabelle ottimizzate per la memoria non è supportata. Sono incluse le operazioni come la modifica di bucket_count oppure l'aggiunta e la rimozione di un indice o di una colonna. In questo argomento vengono fornite le linee guida su come aggiornare le tabelle ottimizzate per la memoria.  
@@ -69,7 +69,7 @@ ms.locfileid: "72783234"
     select * into dbo.T_copy from dbo.T  
     ```  
   
-     Se la memoria disponibile è sufficiente, `T_copy` può essere una tabella ottimizzata per la memoria, che rende più veloce la copia dei dati. <sup>2</sup>  
+     Se la memoria disponibile è sufficiente, `T_copy` può essere una tabella ottimizzata per la memoria, che rende più veloce la copia dei dati.<sup> 2</sup>  
   
 5.  Eliminare gli oggetti associati allo schema che fanno riferimento alla tabella originale.  
   
@@ -83,9 +83,9 @@ ms.locfileid: "72783234"
   
 10. Avviare il carico di lavoro su `T`.  
   
- <sup>1</sup> si noti `T_copy` che in questo esempio è salvato in modo permanente su disco. Se un backup di `T` è disponibile, l'utilità `T_copy` può essere una tabella temporanea o non durevole.  
+ <sup>1</sup> si noti che `T_copy` in questo esempio è salvato in modo permanente su disco. Se un backup di `T` è disponibile, l'utilità `T_copy` può essere una tabella temporanea o non durevole.  
   
- <sup>2</sup> è necessario disporre di memoria sufficiente `T_copy`per. La memoria non viene liberata immediatamente con `DROP TABLE`. Se `T_copy` è con ottimizzazione per la memoria, deve essere disponibile la memoria sufficiente per due copie aggiuntive di `T`. Se `T_copy` è basata su disco, deve essere disponibile la memoria sufficiente per una sola copia aggiuntiva di `T`, perché Garbage Collector richiede l'aggiornamento dopo l'eliminazione della versione precedente di `T`.  
+ <sup>2</sup> è necessario disporre di memoria sufficiente per `T_copy` . La memoria non viene liberata immediatamente con `DROP TABLE`. Se `T_copy` è con ottimizzazione per la memoria, deve essere disponibile la memoria sufficiente per due copie aggiuntive di `T`. Se `T_copy` è basata su disco, deve essere disponibile la memoria sufficiente per una sola copia aggiuntiva di `T`, perché Garbage Collector richiede l'aggiornamento dopo l'eliminazione della versione precedente di `T`.  
   
 ## <a name="changing-schema-powershell"></a>Modifica dello schema (PowerShell)  
  Gli script di PowerShell seguenti preparano e generano le modifiche dello schema creando lo script della tabella e delle autorizzazioni associate.  
@@ -223,7 +223,7 @@ Write-Host ""
   
  Il seguente script di PowerShell esegue le modifiche dello schema che erano state inserite nello script nell'esempio precedente. Questo script accetta come argomento una tabella ed esegue gli script delle modifiche dello schema generate per la tabella e le stored procedure associate.  
   
- Utilizzo: execute_schema_change. ps1 *server_name * * db_name`schema_name`table_name*  
+ Utilizzo: execute_schema_change. ps1 *server_name * * db_name `schema_name` table_name*  
   
 ```powershell
 # stop execution once an error occurs  
@@ -294,4 +294,4 @@ Write-Host ""
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle con ottimizzazione per la memoria](memory-optimized-tables.md)  
+ [Tabelle ottimizzate per la memoria](memory-optimized-tables.md)  

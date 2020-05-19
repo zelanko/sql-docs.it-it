@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ActiveConnection property [ADOX], Visual Basic example
 ms.assetid: bb3274b1-764d-43a7-a49f-ef55680ecd26
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4c6d30aeeb650525873669ccd175155c7e69cd0b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dc83a171b9ed2632900c8f31a4ea4d059493b19a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967112"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763962"
 ---
 # <a name="catalog-activeconnection-property-example-vb"></a>Esempio della proprietà ActiveConnection di Catalog (VB)
 Impostando la proprietà [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) su una connessione aperta valida, viene aperto il catalogo. Da un catalogo aperto, è possibile accedere agli oggetti dello schema contenuti nel catalogo.  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - extended events [SQL Server]
 - xe
 ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 485c748aad8b07a5e8b92a02c03d51a82e5f362a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8498937fa1f259b194ea57fc5f5d286adf0db12
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62990699"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706659"
 ---
 # <a name="extended-events"></a>Eventi estesi
   Gli eventi estesi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono dotati di un'architettura estremamente scalabile e configurabile che consente agli utenti di raccogliere le informazioni necessarie per diagnosticare o identificare un problema legato alle prestazioni.  
@@ -93,11 +93,11 @@ ms.locfileid: "62990699"
 |Viene descritto come visualizzare gli eventi e le azioni Eventi estesi equivalenti a ogni evento di Traccia SQL e alle colonne associate.|[Visualizzare gli eventi estesi equivalenti alle classi di evento di traccia SQL](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
 |Viene descritto come trovare i parametri che è possibile impostare quando si utilizza l'argomento ADD TARGET in CREATE EVENT SESSION o ALTER EVENT SESSION.|[Recuperare i parametri configurabili per l'argomento ADD TARGET](../../database-engine/get-the-configurable-parameters-for-the-add-target-argument.md)|  
 |Viene descritto come convertire uno script di Traccia SQL esistente in una sessione Eventi estesi.|[Convertire uno script di Traccia SQL esistente in una sessione Eventi estesi](convert-an-existing-sql-trace-script-to-an-extended-events-session.md)|  
-|Viene descritto come determinare quali query mantengono il blocco, il piano della query e lo stack [!INCLUDE[tsql](../../includes/tsql-md.md)] al momento del blocco.|[Determinare le query che mantengono attivi i blocchi](determine-which-queries-are-holding-locks.md)|  
+|Viene descritto come determinare quali query mantengono il blocco, il piano della query e lo stack [!INCLUDE[tsql](../../includes/tsql-md.md)] al momento del blocco.|[Individuare le query che mantengono attivi i blocchi](determine-which-queries-are-holding-locks.md)|  
 |Viene descritto come individuare l'origine dei blocchi che hanno effetti negativi sulle prestazioni del database.|[Cercare gli oggetti con il maggior numero di blocchi acquisiti](find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
 |Viene illustrato come utilizzare gli eventi estesi con Analisi eventi per Windows al fine di monitorare l'attività del sistema.|[Monitorare l'attività del sistema mediante gli eventi estesi](monitor-system-activity-using-extended-events.md)|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Applicazioni livello dati](../data-tier-applications/data-tier-applications.md)   
  [Supporto dell'applicazione livello dati per oggetti e versioni di SQL Server](../data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
  [Distribuire un'applicazione livello dati](../data-tier-applications/deploy-a-data-tier-application.md)   

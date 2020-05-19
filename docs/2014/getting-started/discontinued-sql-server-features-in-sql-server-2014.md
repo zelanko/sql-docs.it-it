@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e53e51a021315c79659e684327e8b7eb784001be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bf9e3f3e7bf2d170faf0eaab2be18098a24b52cc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112228"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706975"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Funzionalità di SQL Server obsolete in SQL Server 2014
   In questo argomento vengono descritte le funzionalità non più disponibili dopo l'aggiornamento a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -40,7 +40,7 @@ ms.locfileid: "79112228"
 ## <a name="discontinued-features-in-sql-server-2008"></a>Funzionalità obsolete in SQL Server 2008  
   
 ### <a name="discontinued-sql-dmo-from-sql-server-express-installation"></a>Eliminazione di SQL-DMO dall'installazione di SQL Server Express  
- SQL-DMO for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è stato rimosso da [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. È consigliabile modificare il prima possibile le applicazioni che utilizzano questa funzionalità. Se è necessario supportare SQL-DMO per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express, installare i componenti per la compatibilità con [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] le versioni precedenti dal Feature Pack dall' [area download Microsoft](https://www.microsoft.com/download/). Utilizzare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) per i nuovi progetti di sviluppo.  
+ SQL-DMO for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è stato rimosso da [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. È consigliabile modificare il prima possibile le applicazioni che utilizzano questa funzionalità. Se è necessario supportare SQL-DMO per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express, installare i componenti per la compatibilità con le versioni precedenti dal [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] Feature Pack dall' [area download Microsoft](https://www.microsoft.com/download/). Utilizzare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) per i nuovi progetti di sviluppo.  
   
 ### <a name="discontinued-option-for-web-assistant"></a>Opzione rimossa per Pubblicazione guidata sul Web  
  L'opzione `sp_configure` per abilitare Pubblicazione guidata sul Web è stata rimossa da [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. È consigliabile utilizzare [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in alternativa.  
@@ -78,7 +78,7 @@ ms.locfileid: "79112228"
   
  <sup>1</sup> Questi parametri sono validi solo per l'installazione.  
   
- <sup>2</sup> A [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]partire da, specificare/Action = EditionUpgrade per aggiornare un'edizione esistente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di a un'edizione diversa in qualsiasi momento senza usare il supporto di installazione originale. Per ulteriori informazioni sugli aggiornamenti di versione ed edizione supportati, vedere [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
+ <sup>2</sup> A partire [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] da, specificare/Action = EditionUpgrade per aggiornare un'edizione esistente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a un'edizione diversa in qualsiasi momento senza usare il supporto di installazione originale. Per ulteriori informazioni sugli aggiornamenti di versione ed edizione supportati, vedere [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
  Per altre informazioni, vedere [Installare SQL Server 2014 dal prompt dei comandi](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   

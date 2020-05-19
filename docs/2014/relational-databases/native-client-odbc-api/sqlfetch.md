@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - SQLFetch function
 ms.assetid: 69f0ec68-5857-4aec-9fbf-4bf592d3ab39
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3dc2de6d8dc1967986162f2a468d0edf7266730a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ba1b1bf96bfbee4d3625417706aad738a49fcf4f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63015803"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706112"
 ---
 # <a name="sqlfetch"></a>SQLFetch
   SQLFetch supporta le caratteristiche avanzate di data e ora.  
@@ -27,7 +27,7 @@ ms.locfileid: "63015803"
 ## <a name="sqlfetch-support-for-large-clr-udts"></a>Supporto di SQLFetch per tipi CLR definiti dall'utente di grandi dimensioni  
  `SQLFetch` supporta i tipi CLR definiti dall'utente di grandi dimensioni. Per ulteriori informazioni, vedere [tipi CLR definiti dall'utente di grandi dimensioni &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=80703)   
  [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   

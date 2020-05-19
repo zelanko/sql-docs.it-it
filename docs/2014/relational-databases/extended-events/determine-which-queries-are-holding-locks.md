@@ -13,15 +13,15 @@ helpviewer_keywords:
 - extended events [SQL Server], locks
 - extended events [SQL Server], holding locks
 ms.assetid: bdfce092-3cf1-4b5e-99d5-fd8c6f9ad560
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cf37fbc1b5402e825d38b5f19326484d7b1afd12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c358973ad93360d7b9cd54efa0e70d9114bbc7de
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62519358"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706775"
 ---
 # <a name="determine-which-queries-are-holding-locks"></a>Individuare le query che mantengono attivi i blocchi
   Gli amministratori di database hanno spesso la necessità di individuare l'origine dei blocchi che hanno effetti negativi sulle prestazioni del database.  
@@ -151,7 +151,7 @@ ms.locfileid: "62519358"
     DROP EVENT SESSION FindBlockers ON SERVER  
     ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [CREARE una sessione eventi &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)   
  [DROP EVENT SESSION &#40;&#41;Transact-SQL](/sql/t-sql/statements/drop-event-session-transact-sql)   

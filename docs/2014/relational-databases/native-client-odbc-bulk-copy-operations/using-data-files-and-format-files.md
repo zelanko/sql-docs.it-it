@@ -14,15 +14,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - bulk copy [ODBC], data files
 ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4c49ccb59a8e6ab1b027de02afee37252e8cc482
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51efa12bcb308c64c8c63a425cdc615dab237e04
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206827"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705798"
 ---
 # <a name="using-data-files-and-format-files"></a>Utilizzo di file di dati e file di formato
   Il programma per la copia bulk più semplice effettua le operazioni seguenti:  
@@ -49,9 +49,9 @@ ms.locfileid: "68206827"
   
  Quando si esegue la copia bulk da un file di dati descritto da un file di formato, leggere il file di formato chiamando [bcp_readfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) dopo **bcp_init** ma prima di **bcp_exec**.  
   
- La funzione **bcp_control** controlla diverse opzioni durante la copia bulk [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in da un file di dati. **bcp_control** imposta le opzioni, ad esempio il numero massimo di errori prima della terminazione, la riga del file in cui avviare la copia bulk, la riga in cui arrestare e le dimensioni del batch.  
+ La funzione **bcp_control** controlla diverse opzioni durante la copia bulk in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un file di dati. **bcp_control** imposta le opzioni, ad esempio il numero massimo di errori prima della terminazione, la riga del file in cui avviare la copia bulk, la riga in cui arrestare e le dimensioni del batch.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Esecuzione di operazioni di copia bulk &#40;ODBC&#41;](performing-bulk-copy-operations-odbc.md)  
   
   

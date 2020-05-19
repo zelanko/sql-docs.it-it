@@ -12,15 +12,15 @@ helpviewer_keywords:
 - OLE DB, SPNs
 - SPNs [SQL Server]
 ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 42b25dfe8f0a39c577e38c6d1ef21c7f3315a89d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 419be334c31aa5c4a0f65f9d9f881dbffc4aef94
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75231779"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707255"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Supporto per nomi SPN nelle connessioni client
   A partire da [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], il supporto per i nomi SPN è stato esteso per consentire l'autenticazione reciproca in tutti i protocolli. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] i nomi SPN sono supportati solo per Kerberos su TCP quando il nome SPN predefinito per l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene registrato con Active Directory.  
@@ -33,10 +33,10 @@ ms.locfileid: "75231779"
 >  Un nome SPN specificato da un'applicazione client viene usato solo quando viene stabilita una connessione con sicurezza integrata di Windows.  
   
 > [!TIP]  
->  Kerberos Configuration Manager per è uno strumento di diagnostica che consente di risolvere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **i [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] problemi di connettività correlati a Kerberos [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ** con. Per altre informazioni, vedere [Microsoft Kerberos Configuration Manager per SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
+>  **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Kerberos Configuration Manager per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** è uno strumento di diagnostica che semplifica la risoluzione dei problemi di connettività correlati a Kerberos con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Microsoft Kerberos Configuration Manager per SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
 > [!TIP]  
->  Kerberos Configuration Manager per è uno strumento di diagnostica che consente di risolvere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **i [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] problemi di connettività correlati a Kerberos [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ** con. Per altre informazioni, vedere [Microsoft Kerberos Configuration Manager per SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
+>  **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Kerberos Configuration Manager per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** è uno strumento di diagnostica che semplifica la risoluzione dei problemi di connettività correlati a Kerberos con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Microsoft Kerberos Configuration Manager per SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
  Per altre informazioni su Kerberos, vedere gli articoli seguenti:  
   
@@ -44,13 +44,13 @@ ms.locfileid: "75231779"
   
 -   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
   
-## <a name="usage"></a>Uso  
+## <a name="usage"></a>Usage  
  Nella tabella seguente vengono descritti gli scenari più comuni in cui le applicazioni client possono abilitare l'autenticazione protetta.  
   
 |Scenario|Descrizione|  
 |--------------|-----------------|  
 |Un'applicazione legacy non specifica un nome SPN.|Questo scenario di compatibilità garantisce che non vi saranno differenze di comportamento per le applicazioni sviluppate per le versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se non viene specificato alcun nome SPN, l'applicazione si basa sui nomi SPN generati e non è in grado di identificare il metodo di autenticazione usato.|  
-|Un'applicazione client che usa la versione corrente di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client specifica un nome SPN nella stringa di connessione come utente di dominio o account del computer, come nome SPN specifico dell'istanza o come stringa definita dall'utente.|È possibile utilizzare la parola chiave `ServerSPN` in una stringa del provider, di inizializzazione o di connessione per effettuare le operazioni seguenti:<br /><br /> -Specificare l'account utilizzato dall' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza per una connessione. Questa operazione semplifica l'accesso all'autenticazione Kerberos. Se è presente un centro distribuzione chiavi (KDC, Key Distribution Center) Kerberos ed è stato specificato l'account corretto, è più probabile che venga usata l'autenticazione Kerberos anziché l'autenticazione NTLM. Il centro distribuzione chiavi si trova in genere nello stesso computer del controller di dominio.<br />-Specificare un nome SPN per cercare l'account del servizio per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] l'istanza. Per ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono generati due nomi SPN predefiniti che possono essere usati a questo scopo. Non è tuttavia garantito che tali chiavi siano presenti in Active Directory, pertanto in questa situazione non è garantita neanche l'autenticazione Kerberos.<br />-Specificare un nome SPN che verrà utilizzato per cercare l'account del servizio per l' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza di. Può trattarsi di qualsiasi stringa definita dall'utente di cui è stato eseguito il mapping all'account del servizio. In questo caso, la chiave deve essere registrata manualmente nel centro distribuzione chiavi e deve essere conforme alle regole relative ai nomi SPN definiti dall'utente.<br /><br /> È possibile utilizzare la parola chiave `FailoverPartnerSPN` per specificare il nome SPN per il server partner di failover. L'intervallo di valori per gli account e per le chiavi di Active Directory coincide con i valori che è possibile specificare per il server principale.|  
+|Un'applicazione client che usa la versione corrente di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client specifica un nome SPN nella stringa di connessione come utente di dominio o account del computer, come nome SPN specifico dell'istanza o come stringa definita dall'utente.|È possibile utilizzare la parola chiave `ServerSPN` in una stringa del provider, di inizializzazione o di connessione per effettuare le operazioni seguenti:<br /><br /> -Specificare l'account utilizzato dall' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza per una connessione. Questa operazione semplifica l'accesso all'autenticazione Kerberos. Se è presente un centro distribuzione chiavi (KDC, Key Distribution Center) Kerberos ed è stato specificato l'account corretto, è più probabile che venga usata l'autenticazione Kerberos anziché l'autenticazione NTLM. Il centro distribuzione chiavi si trova in genere nello stesso computer del controller di dominio.<br />-Specificare un nome SPN per cercare l'account del servizio per l' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza. Per ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono generati due nomi SPN predefiniti che possono essere usati a questo scopo. Non è tuttavia garantito che tali chiavi siano presenti in Active Directory, pertanto in questa situazione non è garantita neanche l'autenticazione Kerberos.<br />-Specificare un nome SPN che verrà utilizzato per cercare l'account del servizio per l' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza di. Può trattarsi di qualsiasi stringa definita dall'utente di cui è stato eseguito il mapping all'account del servizio. In questo caso, la chiave deve essere registrata manualmente nel centro distribuzione chiavi e deve essere conforme alle regole relative ai nomi SPN definiti dall'utente.<br /><br /> È possibile utilizzare la parola chiave `FailoverPartnerSPN` per specificare il nome SPN per il server partner di failover. L'intervallo di valori per gli account e per le chiavi di Active Directory coincide con i valori che è possibile specificare per il server principale.|  
 |Un'applicazione ODBC specifica un nome SPN come attributo di connessione per il server principale o il server partner di failover.|È possibile utilizzare l'attributo di connessione `SQL_COPT_SS_SERVER_SPN` per specificare il nome SPN per una connessione al server principale.<br /><br /> È possibile utilizzare l'attributo di connessione `SQL_COPT_SS_FAILOVER_PARTNER_SPN` per specificare il nome SPN per il server partner di failover.|  
 |Un'applicazione OLE DB specifica un nome SPN come proprietà di inizializzazione dell'origine dati per il server principale o per un server partner di failover.|È possibile utilizzare la proprietà di connessione `SSPROP_INIT_SERVER_SPN` nel set di proprietà `DBPROPSET_SQLSERVERDBINIT` per specificare il nome SPN per una connessione.<br /><br /> È possibile utilizzare la proprietà di connessione `SSPROP_INIT_FAILOVER_PARTNER_SPN` nel set di proprietà `DBPROPSET_SQLSERVERDBINIT` per specificare il nome SPN per il server partner di failover.|  
 |Un utente specifica un nome SPN per un server o per un server partner di failover in un nome di origine dati ODBC.|È possibile specificare il nome SPN in un nome di origine dati ODBC tramite le finestre di dialogo di configurazione del nome dell'origine dati.|  
@@ -98,9 +98,9 @@ ms.locfileid: "75231779"
 |MSSQLSvc/*fqdn*:*port*|Nome SPN predefinito generato dal provider quando si utilizza il protocollo TCP.<br /><br /> *port* è un numero di porta TCP.|  
 |MSSQLSvc/*FQDN*:*NomeIstanza*|Nome SPN predefinito generato dal provider per un'istanza denominata quando si usa un protocollo diverso da TCP.<br /><br /> *InstanceName* è il nome di un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |HOST/*fqdn*<br /><br /> HOST/*MachineName*|Nome SPN di cui viene eseguito il mapping ad account del computer predefiniti registrati automaticamente in Windows.|  
-|*Dominio nome utente*@*Domain*|Specifica diretta di un account di dominio.<br /><br /> *Username* è un nome di account utente di Windows.<br /><br /> *Domain* è un nome di dominio di Windows o un nome di dominio completo.|  
-|*MachineName*$@*Dominio* MachineName|Specifica diretta di un account del computer.<br /><br /> Se il server a cui si esegue la connessione è in esecuzione con account di sistema locale o di servizio di rete, `ServerSPN` per ottenere l'autenticazione Kerberos può essere nel formato di*dominio* *machineName*$@.|  
-|*KDCKey*/*machineName*|Nome SPN specificato dall'utente.<br /><br /> *KDCKey* è una stringa alfanumerica conforme alle regole relative alle chiavi KDC.|  
+|*Nome utente* @ *Dominio*|Specifica diretta di un account di dominio.<br /><br /> *Username* è un nome di account utente di Windows.<br /><br /> *Domain* è un nome di dominio di Windows o un nome di dominio completo.|  
+|*Nomecomputer* $@ *Dominio*|Specifica diretta di un account del computer.<br /><br /> Se il server a cui si esegue la connessione è in esecuzione con account di sistema locale o di servizio di rete, per ottenere l'autenticazione Kerberos `ServerSPN` può essere nel formato di *MachineName* $@ *dominio* MachineName.|  
+|*KDCKey* / *Nomecomputer*|Nome SPN specificato dall'utente.<br /><br /> *KDCKey* è una stringa alfanumerica conforme alle regole relative alle chiavi KDC.|  
   
 ## <a name="odbc-and-ole-db-syntax-supporting-spns"></a>Sintassi ODBC e OLE DB con supporto di nomi SPN  
  Per informazioni specifiche della sintassi, vedere gli argomenti seguenti:  

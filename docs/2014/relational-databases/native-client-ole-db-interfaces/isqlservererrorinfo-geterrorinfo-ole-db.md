@@ -13,18 +13,18 @@ topic_type:
 helpviewer_keywords:
 - GetErrorInfo method
 ms.assetid: 83265c9c-eaf9-41f0-9f73-b0ae0972f0d5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9131c65236a0efffa19aab2bd10b1fd8e309653b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe870479a96ff0d40ddaae6903eadd29edfb64b8
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127782"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707354"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
-  Restituisce un puntatore a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] struttura SSERRORINFO del provider OLE DB di Native client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contenente i dettagli dell'errore.  
+  Restituisce un puntatore a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] struttura SSERRORINFO del provider OLE DB di Native Client contenente i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dettagli dell'errore.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -52,7 +52,7 @@ OLECHAR**ppErrorStrings);
  E_OUTOFMEMORY  
  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client non è in grado di allocare memoria sufficiente per completare la richiesta.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client alloca memoria per le stringhe SSERRORINFO e OLECHAR restituite tramite i puntatori passati dal consumer. Il consumer deve deallocare questa memoria tramite il metodo **IMalloc::Free** quando l'accesso ai dati dell'errore non è più necessario.  
   
  La struttura SSERRORINFO viene definita nel modo seguente:  
@@ -83,7 +83,7 @@ SSERRORINFO;
   
  I puntatori nella struttura fanno riferimento agli indirizzi nella stringa restituita nell'argomento *ppErrorStrings*.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [ISQLServerErrorInfo &#40;OLE DB&#41;](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md)   
  [RAISERROR &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/raiserror-transact-sql)  
   

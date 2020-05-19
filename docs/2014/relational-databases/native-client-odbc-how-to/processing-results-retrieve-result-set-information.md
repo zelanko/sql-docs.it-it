@@ -10,15 +10,15 @@ helpviewer_keywords:
 - result sets [ODBC]
 - result sets [ODBC], fetching
 ms.assetid: 34f235e4-f80b-4123-8764-9deb18506f14
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a39a6715a9ba8ab08d846aabb96e5b0665a2aa43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3017f74b12eb18624f8a34e8a1289da18b70c93a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200298"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82712701"
 ---
 # <a name="retrieve-result-set-information-odbc"></a>Recuperare informazioni sul set di risultati (ODBC)
     
@@ -34,7 +34,7 @@ ms.locfileid: "63200298"
   
     -   Chiamare [SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md) per ottenere informazioni specifiche sul descrittore sulla colonna risultato.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Procedure per l'elaborazione dei risultati &#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)   
  [Determinazione delle caratteristiche di un set di risultati &#40;ODBC&#41;](../native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
   

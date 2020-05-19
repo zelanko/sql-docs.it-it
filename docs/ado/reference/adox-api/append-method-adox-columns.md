@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6493157c00e5a71c7c2f085191231bb33bb5279a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1e69f2510e825a935cf7eb34951051c1e3848bb9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967321"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764042"
 ---
 # <a name="append-method-adox-columns"></a>Metodo Append (raccolta Columns ADOX)
 Aggiunge un nuovo oggetto [Column](../../../ado/reference/adox-api/column-object-adox.md) alla raccolta [Columns](../../../ado/reference/adox-api/columns-collection-adox.md) .  

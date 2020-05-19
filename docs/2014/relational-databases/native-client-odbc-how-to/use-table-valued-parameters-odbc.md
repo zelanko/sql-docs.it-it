@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 6f8da6ab-9de6-4d0a-9b7e-acb76a50a2e7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ec4d66af36ff74b5b0a9160529990c9fc52fc961
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81f2ba1ab23449738c31b154646ac63d00cc4850
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200273"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82711929"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>Utilizzare parametri con valori di tabella (ODBC)
   In questo esempio viene illustrata la modalità di utilizzo di parametri con valori di tabella per inserire più righe con più colonne e una chiamata al server.  

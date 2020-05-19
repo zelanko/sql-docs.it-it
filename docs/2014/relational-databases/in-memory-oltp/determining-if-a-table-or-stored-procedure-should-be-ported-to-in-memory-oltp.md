@@ -10,18 +10,18 @@ helpviewer_keywords:
 - Analyze, Migrate, Report
 - AMR
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 358a595ef326f86db9ab81294bc3a9c88fc8ef0d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63072378"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706533"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria
-  L'agente di raccolta delle [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] prestazioni delle transazioni in consente di valutare se OLTP in memoria può migliorare le prestazioni dell'applicazione di database. Nel report dell'analisi delle prestazioni delle transazioni viene inoltre indicata la quantità di operazioni che è necessario eseguire per abilitare OLTP in memoria nell'applicazione. Una volta identificata la tabella basata su disco da trasferire in OLTP in memoria, è possibile usare [Ottimizzazione guidata per la memoria](memory-optimization-advisor.md)per semplificarne la migrazione. Analogamente, l' [Native Compilation Advisor](native-compilation-advisor.md) semplifica il trasferimento di una stored procedure a una stored procedure compilata in modo nativo.  
+  L'agente di raccolta delle prestazioni delle transazioni in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] consente di valutare se OLTP in memoria può migliorare le prestazioni dell'applicazione di database. Nel report dell'analisi delle prestazioni delle transazioni viene inoltre indicata la quantità di operazioni che è necessario eseguire per abilitare OLTP in memoria nell'applicazione. Una volta identificata la tabella basata su disco da trasferire in OLTP in memoria, è possibile usare [Ottimizzazione guidata per la memoria](memory-optimization-advisor.md)per semplificarne la migrazione. Analogamente, l' [Native Compilation Advisor](native-compilation-advisor.md) semplifica il trasferimento di una stored procedure a una stored procedure compilata in modo nativo.  
   
  In questo argomento viene illustrato come effettuare le seguenti operazioni:  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63072378"
     > [!IMPORTANT]  
     >  Le prestazioni di un sistema di database dipendono da molti fattori, non tutti osservabili e misurabili tramite l'agente di raccolta delle prestazioni delle transazioni. Pertanto, il report di analisi delle prestazioni delle transazioni non è in grado di garantire che i miglioramenti effettivi delle prestazioni corrisponderanno alle eventuali stime eseguite.  
   
- L'agente di raccolta delle prestazioni delle transazioni e la capacità di generare un report di analisi delle prestazioni delle transazioni vengono installati quando si seleziona **strumenti di gestione-** di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]base o **strumenti di gestione-avanzate** quando si installa.  
+ L'agente di raccolta delle prestazioni delle transazioni e la capacità di generare un report di analisi delle prestazioni delle transazioni vengono installati quando si seleziona **strumenti di gestione-di base** o **strumenti di gestione-avanzate** quando si installa [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .  
   
 ## <a name="best-practices"></a>Procedure consigliate  
  Il flusso di lavoro consigliato è illustrato nel diagramma di flusso seguente. I nodi gialli rappresentano le procedure facoltative:  
@@ -63,7 +63,7 @@ ms.locfileid: "63072378"
   
  L'agente di raccolta delle prestazioni delle transazioni acquisisce dati ogni 15 minuti. Per ottenere risultati utili, eseguire l'agente di raccolta per almeno un'ora. Per ottenere i risultati migliori, eseguire l'agente di raccolta quanto basta ad acquisire i dati per gli scenari principali. Generare un report di analisi delle prestazioni delle transazioni solo dopo aver completato la raccolta dei dati.  
   
- Configurare l'agente di raccolta delle prestazioni delle transazioni affinché venga eseguito nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in produzione e raccolga i dati in un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un ambiente di sviluppo (test) per garantire un overhead minimo. Per informazioni su come salvare i dati in un database di data warehouse di gestione in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] un'istanza remota, vedere [configurare la raccolta dati in un'istanza di SQL Server remota](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md#xxx).  
+ Configurare l'agente di raccolta delle prestazioni delle transazioni affinché venga eseguito nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in produzione e raccolga i dati in un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un ambiente di sviluppo (test) per garantire un overhead minimo. Per informazioni su come salvare i dati in un database di data warehouse di gestione in un' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza remota, vedere [configurare la raccolta dati in un'istanza di SQL Server remota](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md#xxx).  
   
 ## <a name="performance-impacts"></a>Impatto sulle prestazioni  
  L'agente di raccolta delle prestazioni delle transazioni è costituito da due set di raccolta dati:  
@@ -102,7 +102,7 @@ ms.locfileid: "63072378"
 ### <a name="configure-data-collection-on-a-local-ssnoversion-instance"></a>Configurare la raccolta dati in un'istanza locale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  Per la raccolta dati è necessario che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent sia avviato. È sufficiente configurare un agente di raccolta dati su un server.  
   
- Un agente di raccolta dati può essere configurato in un SQL Server 2012 o versione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]successiva di.  
+ Un agente di raccolta dati può essere configurato in un SQL Server 2012 o versione successiva di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Per configurare la raccolta dati da caricare in un database del data warehouse di gestione nella stessa istanza  
   
@@ -121,7 +121,7 @@ ms.locfileid: "63072378"
 ###  <a name="configure-data-collection-on-a-remote-ssnoversion-instance"></a><a name="xxx"></a>Configurare la raccolta dati in un' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza remota  
  Per la raccolta dati è necessario che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent sia avviato nell'istanza che raccoglierà i dati.  
   
- Un agente di raccolta dati può essere configurato in un SQL Server 2012 o versione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]successiva di.  
+ Un agente di raccolta dati può essere configurato in un SQL Server 2012 o versione successiva di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Per poter caricare dati in un database del data warehouse di gestione in un'istanza diversa da quella in cui verrà eseguita la profilatura delle transazioni, è necessario un proxy di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent configurato con le credenziali corrette per un agente di raccolta dati. Per abilitare un proxy di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, è innanzitutto necessario definire le credenziali con un account di accesso abilitato per il dominio, che deve essere membro del gruppo `mdw_admin` per il database del data warehouse di gestione. Per informazioni su come creare le credenziali, vedere [procedura: creare una credenziale (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) .  
   
@@ -224,7 +224,7 @@ ms.locfileid: "63072378"
   
  Per visualizzare i dettagli su come convertire un stored procedure in un stored procedure compilato in modo nativo, usare l' [Assistente compilazione nativa](native-compilation-advisor.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Migrazione a OLTP in memoria](migrating-to-in-memory-oltp.md)  
   
   

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8c16ac4d18806b670c8b3e27dc09c9019d7ecdeb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 19617c65b350527753895ed613f671c3ac0f88e8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967242"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764012"
 ---
 # <a name="append-method-adox-tables"></a>Metodo Append (raccolta Tables ADOX)
 Aggiunge un nuovo oggetto [Table](../../../ado/reference/adox-api/table-object-adox.md) alla raccolta [Tables](../../../ado/reference/adox-api/tables-collection-adox.md) .  
@@ -37,7 +37,7 @@ Tables.Append Table
  *tavolo*  
  Valore **Variant** che contiene un riferimento alla **tabella** da accodare o il nome della tabella da creare e aggiungere.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se il provider non supporta la creazione di tabelle, si verificherà un errore.  
   
 ## <a name="applies-to"></a>Si applica a  

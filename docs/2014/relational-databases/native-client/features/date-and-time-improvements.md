@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 160731a6749b3741a68dcccafedd3499db465349
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07788d27d71dc320ef72bc68ba90e8022705380b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75231756"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707299"
 ---
 # <a name="date-and-time-improvements"></a>Miglioramenti relativi a data e ora
   In questo argomento viene descritto il supporto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client per i tipi di dati di data e ora aggiunti in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
@@ -24,7 +24,7 @@ ms.locfileid: "75231756"
   
  Per informazioni sulle applicazioni di esempio in cui viene illustrata questa funzionalità, vedere la [pagina relativa agli esempi di programmazione dati di SQL Server](https://msftdpprodsamples.codeplex.com/).  
   
-## <a name="usage"></a>Uso  
+## <a name="usage"></a>Usage  
  Nelle sezioni seguenti vengono descritte le diverse modalità di utilizzo dei nuovi tipi di data e ora.  
   
 ### <a name="use-date-as-a-distinct-data-type"></a>Utilizzare il tipo date come tipo di dati distinto  

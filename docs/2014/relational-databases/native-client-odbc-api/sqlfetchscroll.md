@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLFetchScroll function
 ms.assetid: 524a3985-a08d-4445-99e0-bb551a666615
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3c9614a71c0015d17178a57d33c5fd0d9b62433c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b4a5094f8bac1e3972b4d0b2daa7a0da9fa3629
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63154679"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706137"
 ---
 # <a name="sqlfetchscroll"></a>SQLFetchScroll
   **SQLFetchScroll** restituisce un set di righe di dati all'applicazione. Le dimensioni del set di righe vengono impostate utilizzando [SQLSetStmtAttr](sqlsetstmtattr.md). Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client supporta tutte le istruzioni di recupero definite, ad esempio SQL_FETCH_RELATIVE, con le limitazioni seguenti:  
@@ -36,7 +36,7 @@ ms.locfileid: "63154679"
 ## <a name="sqlfetchscroll-support-for-large-clr-udts"></a>Supporto SQLFetchScroll per i tipi CLR definiti dall'utente di grandi dimensioni  
  **SQLFetchScroll** supporta i tipi CLR definiti dall'utente di grandi dimensioni. Per ulteriori informazioni, vedere [tipi CLR definiti dall'utente di grandi dimensioni &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQLFetchScroll (funzione)](https://go.microsoft.com/fwlink/?LinkId=59343)   
  [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   

@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLColumns function
 ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5815e4f3a0cdd0defb16c613f3d6e9444fdfaac7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92f7fbce5917826915186e9782f0f91d51ae8875
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067722"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706341"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
   `SQLColumns`restituisce SQL_SUCCESS se sono presenti o meno valori per i parametri *CatalogName*, *TableName*o *ColumnName* . **SQLFetch** restituisce SQL_NO_DATA quando in questi parametri vengono utilizzati valori non validi.  
@@ -29,9 +29,9 @@ ms.locfileid: "63067722"
   
  `SQLColumns` può essere eseguito in un cursore del server statico. Un tentativo di eseguire `SQLColumns` in un cursore aggiornabile (dinamico o keyset) restituirà SQL_SUCCESS_WITH_INFO, che indica che il tipo di cursore è stato modificato.  
   
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client supporta la segnalazione di informazioni per le tabelle nei server collegati accettando un nome in due parti per il parametro *catalogname* : *linked_server_name. catalog_name*.  
+ Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client supporta la segnalazione di informazioni per le tabelle nei server collegati accettando un nome in due parti per il parametro *CatalogName* : *linked_server_name. catalog_name*.  
   
- Per ODBC 2. *x* le applicazioni che non utilizzano caratteri *TableName*jolly in TableName `SQLColumns` restituiscono informazioni su tutte le tabelle i cui nomi corrispondono a *TableName* e sono di proprietà dell'utente corrente. Se l'utente corrente non è proprietario di alcuna tabella il *TableName* cui nome corrisponde al `SQLColumns` parametro TableName, restituisce informazioni sulle tabelle di proprietà di altri utenti in cui il nome della tabella corrisponde al parametro *TableName* . Per ODBC 2. *x* applicazioni che utilizzano caratteri jolly `SQLColumns` , restituisce tutte le tabelle i cui nomi corrispondono a *TableName*. Per ODBC 3. *x* Applications `SQLColumns` restituisce tutte le tabelle i cui nomi corrispondono a *TableName* indipendentemente dal proprietario o dal fatto che vengano utilizzati caratteri jolly.  
+ Per ODBC 2. *x* le applicazioni che non utilizzano caratteri *TableName*jolly in TableName `SQLColumns` restituiscono informazioni su tutte le tabelle i cui nomi corrispondono a *TableName* e sono di proprietà dell'utente corrente. Se l'utente corrente non è proprietario di alcuna tabella il cui nome corrisponde al parametro *TableName* , `SQLColumns` restituisce informazioni sulle tabelle di proprietà di altri utenti in cui il nome della tabella corrisponde al parametro *TableName* . Per ODBC 2. *x* applicazioni che utilizzano caratteri jolly, `SQLColumns` restituisce tutte le tabelle i cui nomi corrispondono a *TableName*. Per ODBC 3. *x* Applications `SQLColumns` restituisce tutte le tabelle i cui nomi corrispondono a *TableName* indipendentemente dal proprietario o dal fatto che vengano utilizzati caratteri jolly.  
   
  Nella tabella seguente vengono elencate le colonne restituite dal set di risultati:  
   
@@ -50,16 +50,16 @@ ms.locfileid: "63067722"
 |SS_UDT_SCHEMA_NAME|Nome dello schema contenente il tipo definito dall'utente.|  
 |SS_UDT_ASSEMBLY_TYPE_NAME|Nome completo dell'assembly del tipo definito dall'utente.|  
   
- Per i tipi definiti dall'utente, la colonna TYPE_NAME esistente viene utilizzata per indicare il nome del tipo definito dall'utente. Pertanto, non deve essere aggiunta alcuna colonna aggiuntiva al set di risultati `SQLColumns` di o [SQLProcedureColumns](sqlprocedurecolumns.md). DATA_TYPE per un parametro o una colonna con tipo definito dall'utente è SQL_SS_UDT.  
+ Per i tipi definiti dall'utente, la colonna TYPE_NAME esistente viene utilizzata per indicare il nome del tipo definito dall'utente. Pertanto, non deve essere aggiunta alcuna colonna aggiuntiva al set di risultati di `SQLColumns` o [SQLProcedureColumns](sqlprocedurecolumns.md). DATA_TYPE per un parametro o una colonna con tipo definito dall'utente è SQL_SS_UDT.  
   
  Per il tipo definito dall'utente dei parametri, è possibile utilizzare i nuovi descrittori specifici del driver definiti precedentemente per ottenere o impostare le proprietà di metadati aggiuntive di un tipo definito dall'utente, nel caso in cui il server restituisca o richieda queste informazioni.  
   
- Quando un client si connette [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a e chiama SQLColumns, l'utilizzo di valori null o Wild Card per il parametro di input del catalogo non restituirà informazioni da altri cataloghi. Verranno invece restituite solo informazioni relative al catalogo corrente. Il client può prima chiamare SQLTables per determinare in quale catalogo si trova la tabella desiderata. Il client può quindi utilizzare tale valore del catalogo per il parametro di input del catalogo nella chiamata a SQLColumns per recuperare informazioni sulle colonne della tabella.  
+ Quando un client si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e chiama SQLColumns, l'utilizzo di valori null o Wild Card per il parametro di input del catalogo non restituirà informazioni da altri cataloghi. Verranno invece restituite solo informazioni relative al catalogo corrente. Il client può prima chiamare SQLTables per determinare in quale catalogo si trova la tabella desiderata. Il client può quindi utilizzare tale valore del catalogo per il parametro di input del catalogo nella chiamata a SQLColumns per recuperare informazioni sulle colonne della tabella.  
   
 ## <a name="sqlcolumns-and-table-valued-parameters"></a>SQLColumns e parametri con valori di tabella  
  Il set di risultati restituito da SQLColumns dipende dall'impostazione di SQL_SOPT_SS_NAME_SCOPE. Per ulteriori informazioni, vedere [SQLSetStmtAttr](sqlsetstmtattr.md). Di seguito sono indicate le colonne che sono state aggiunte per i parametri con valori di tabella:  
   
-|Nome colonna|Tipo di dati|Sommario|  
+|Nome colonna|Tipo di dati|Contenuto|  
 |-----------------|---------------|--------------|  
 |SS_IS_COMPUTED|Smallint|Per una colonna in TABLE_TYPE, SQL_TRUE se la colonna è una colonna calcolata. In caso contrario, SQL_FALSE.|  
 |SS_IS_IDENTITY|Smallint|SQL_TRUE se la colonna è una colonna Identity. In caso contrario, SQL_FALSE.|  
@@ -75,20 +75,20 @@ ms.locfileid: "63067722"
  `SQLColumns` supporta i tipi CLR definiti dall'utente di grandi dimensioni. Per ulteriori informazioni, vedere [tipi CLR definiti dall'utente di grandi dimensioni &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>Supporto di SQLColumns per colonne di tipo sparse  
- Al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] set di risultati per SQLColumns sono state aggiunte due colonne specifiche:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Al set di risultati per SQLColumns sono state aggiunte due colonne specifiche:  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|`Smallint`|SQL_TRUE se una colonna è di tipo sparse. In caso contrario, SQL_FALSE.|  
 |SS_IS_COLUMN_SET|`Smallint`|SQL_TRUE se la colonna è `column_set`. In caso contrario, SQL_FALSE.|  
   
- In conformità con la specifica ODBC, SS_IS_SPARSE e SS_IS_COLUMN_SET vengono visualizzati prima di tutte le colonne specifiche del driver che sono state [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aggiunte alle versioni [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]precedenti di e dopo tutte le colonne richieste da ODBC stesso.  
+ In conformità con la specifica ODBC, SS_IS_SPARSE e SS_IS_COLUMN_SET vengono visualizzati prima di tutte le colonne specifiche del driver che sono state aggiunte alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versioni precedenti di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e dopo tutte le colonne richieste da ODBC stesso.  
   
  Il set di risultati restituito da SQLColumns dipende dall'impostazione di SQL_SOPT_SS_NAME_SCOPE. Per ulteriori informazioni, vedere [SQLSetStmtAttr](sqlsetstmtattr.md).  
   
  Per ulteriori informazioni sulle colonne di tipo sparse in ODBC, vedere [supporto di colonne di tipo sparse &#40;&#41;ODBC ](../native-client/odbc/sparse-columns-support-odbc.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzione SQLColumns](https://go.microsoft.com/fwlink/?LinkId=59336)   
  [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   

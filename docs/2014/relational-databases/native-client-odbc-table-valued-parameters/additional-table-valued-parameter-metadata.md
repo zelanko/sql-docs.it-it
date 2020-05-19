@@ -10,18 +10,18 @@ helpviewer_keywords:
 - table-valued parameters (ODBC), catalog functions to retrieve metadata
 - table-valued parameters (ODBC), metadata
 ms.assetid: 6c193188-5185-4373-9a0d-76cfc150c828
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f7b9aea58b56308764f907f8cf54bf74bb0663c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f0d46200df3881d7b24cf582b5c252f4e66e255b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200573"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82709739"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>Metadati aggiuntivi dei parametri con valori di tabella
-  Per recuperare i metadati per un parametro con valori di tabella, un'applicazione chiama SQLProcedureColumns. Per un parametro con valori di tabella, SQLProcedureColumns restituisce una singola riga. Sono state [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aggiunte due colonne specifiche aggiuntive, SS_TYPE_CATALOG_NAME e SS_TYPE_SCHEMA_NAME, per fornire informazioni sullo schema e sul catalogo per i tipi di tabella associati ai parametri con valori di tabella. In conformità con la specifica ODBC, SS_TYPE_CATALOG_NAME e SS_TYPE_SCHEMA_NAME vengono visualizzati prima di tutte le colonne specifiche del driver che sono state aggiunte nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e dopo tutte le colonne richieste da ODBC stesso.  
+  Per recuperare i metadati per un parametro con valori di tabella, un'applicazione chiama SQLProcedureColumns. Per un parametro con valori di tabella, SQLProcedureColumns restituisce una singola riga. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Sono state aggiunte due colonne specifiche aggiuntive, SS_TYPE_CATALOG_NAME e SS_TYPE_SCHEMA_NAME, per fornire informazioni sullo schema e sul catalogo per i tipi di tabella associati ai parametri con valori di tabella. In conformità con la specifica ODBC, SS_TYPE_CATALOG_NAME e SS_TYPE_SCHEMA_NAME vengono visualizzati prima di tutte le colonne specifiche del driver che sono state aggiunte nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e dopo tutte le colonne richieste da ODBC stesso.  
   
  Nella tabella seguente sono elencate le colonne significative per i parametri con valori di tabella.  
   
@@ -29,8 +29,8 @@ ms.locfileid: "63200573"
 |-----------------|---------------|---------------------|  
 |DATA_TYPE|Smallint non NULL|SQL_SS_TABLE|  
 |TYPE_NAME|WVarchar(128) non NULL|Nome del tipo del parametro con valori di tabella.|  
-|COLUMN_SIZE|Integer|NULL|  
-|BUFFER_LENGTH|Integer|0|  
+|COLUMN_SIZE|Intero|NULL|  
+|BUFFER_LENGTH|Intero|0|  
 |DECIMAL_DIGITS|Smallint|NULL|  
 |NUM_PREC_RADIX|Smallint|NULL|  
 |NULLABLE|Smallint non NULL|SQL_NULLABLE|  
@@ -38,7 +38,7 @@ ms.locfileid: "63200573"
 |COLUMN_DEF|WVarchar(4000)|NULL|  
 |SQL_DATA_TYPE|Smallint non NULL|SQL_SS_TABLE|  
 |SQL_DATETIME_SUB|Smallint|NULL|  
-|CHAR_OCTET_LENGTH|Integer|NULL|  
+|CHAR_OCTET_LENGTH|Intero|NULL|  
 |ORDINAL_POSITION|Integer non NULL|Posizione ordinale del parametro.|  
 |IS_NULLABLE|Varchar|"YES"|  
 |SS_TYPE_CATALOG_NAME|WVarchar(128) non NULL|Catalogo contenente la definizione di tipo per il tipo di tabella del parametro con valori di tabella.|  
@@ -50,7 +50,7 @@ ms.locfileid: "63200573"
   
  Quando SQL_SOPT_SS_NAME_SCOPE è impostato su SQL_SS_NAME_SCOPE_TABLE, le query ai server collegati non riescono. Le chiamate a SQLColumns o SQLPrimaryKeys con un catalogo contenente un componente server avranno esito negativo.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Parametri con valori di tabella &#40;&#41;ODBC](table-valued-parameters-odbc.md)  
   
   

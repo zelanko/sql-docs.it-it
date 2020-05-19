@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - ICommand [SQL Server Native Client]
 ms.assetid: 5e24b3a0-0658-44fc-b653-f4c52f9eb328
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d4e583b08cf0ba55268c4acb9e19722d3a693d50
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 748760817948e71aeb3c2160e63e768b1f0ba54c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62987324"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707369"
 ---
 # <a name="icommand-ole-db"></a>ICommand (OLE DB)
   In questo argomento viene illustrato il comportamento di OLE DB specifico di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -25,7 +25,7 @@ ms.locfileid: "62987324"
 ## <a name="icommandexecute"></a>ICommand::Execute  
  L'inserimento di un numero di dati maggiori delle dimensioni di una colonna restituisce in genere un errore. In alcuni casi, tuttavia, viene restituito S_OK, ma *dwStatus* viene impostato su DBSTATUS_S_TRUNCATED. Questa situazione si verifica in genere quando vengono inseriti dati con parametri in una colonna di dimensioni insufficienti per contenere i dati, senza aver chiamato `ICommandWithParameters::SetParameterInfo`.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Interfacce &#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)  
   
   

@@ -11,38 +11,38 @@ helpviewer_keywords:
 - extended events [SQL Server], PowerShell
 - PowerShell [SQL Server], extended events
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ea4432b07007ce1bbc4ec5b944594b204a7ad808
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 69de90bb43e35b559def569bfe1f60433d7c14de
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782910"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706594"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>Utilizzare il provider PowerShell per eventi estesi
   È possibile gestire eventi estesi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite il provider PowerShell per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La sottocartella XEvent è disponibile all'interno dell'unità SQLSERVER. È possibile accedere alla cartella utilizzando uno dei metodi seguenti:  
   
--   Al prompt dei comandi digitare `sqlps` e quindi premere INVIO. Digitare `cd xevent` e quindi premere INVIO. Da qui è possibile usare il **CD** e `dir` i comandi (oppure i cmdlet **set-location** e **Get-ChildItem** ) per passare al nome del server e al nome dell'istanza.  
+-   Al prompt dei comandi digitare `sqlps` e quindi premere INVIO. Digitare `cd xevent` e quindi premere INVIO. Da qui è possibile usare il **CD** e i `dir` comandi (oppure i cmdlet **set-location** e **Get-ChildItem** ) per passare al nome del server e al nome dell'istanza.  
   
 -   In Esplora oggetti espandere il nome dell'istanza, espandere **Gestione**, fare clic con il pulsante destro del mouse su **Eventi estesi**, quindi scegliere **Avvia PowerShell**. Verrà avviato PowerShell nel percorso seguente:  
   
-     PS SqlServer: \ XEvent\\*nomeserver*\\*NomeIstanza*>  
+     PS SqlServer: \ XEvent \\ *nomeserver* \\ *NomeIstanza*>  
   
     > [!NOTE]  
     >  È possibile avviare PowerShell da qualsiasi nodo all'interno di **Eventi estesi**. È possibile, ad esempio, fare clic con il pulsante destro del mouse su **Sessioni**e quindi scegliere **Avvia PowerShell**. Verrà avviato PowerShell a un livello più interno, nella cartella Sessioni.  
   
- È possibile esplorare l'albero delle cartelle XEvent per visualizzare sessioni di eventi estesi esistenti e i relativi eventi, database di destinazione e predicati associati. Ad esempio, dal percorso PS SqlServer: \ XEvent\\*nomeserver*\\*NomeIstanza*> digitare `cd sessions`, premere INVIO, digitare `dir`e quindi premere INVIO. è possibile visualizzare l'elenco delle sessioni archiviate in tale istanza. È inoltre possibile visualizzare se la sessione è in esecuzione, e in tal caso per quanto tempo, e se la sessione è configurata per l'avvio all'avvio dell'istanza.  
+ È possibile esplorare l'albero delle cartelle XEvent per visualizzare sessioni di eventi estesi esistenti e i relativi eventi, database di destinazione e predicati associati. Ad esempio, dal percorso PS SqlServer: \ XEvent \\ *nomeserver* \\ *NomeIstanza*> digitare, `cd sessions` premere INVIO, digitare `dir` e quindi premere INVIO. è possibile visualizzare l'elenco delle sessioni archiviate in tale istanza. È inoltre possibile visualizzare se la sessione è in esecuzione, e in tal caso per quanto tempo, e se la sessione è configurata per l'avvio all'avvio dell'istanza.  
   
- Per visualizzare gli eventi, i relativi predicati e i database di destinazione associati a una sessione, è possibile passare alla directory con il nome della sessione e quindi visualizzare la cartella degli eventi o dei database di destinazione. Ad esempio, per visualizzare gli eventi e i relativi predicati associati alla sessione di integrità del sistema predefinita, dal percorso PS SqlServer: \\\XEvent*ServerName*\\*NomeIstanza*\Sessions> digitare `cd system_health\events,` premi invio, digitare `dir`e quindi premere INVIO.  
+ Per visualizzare gli eventi, i relativi predicati e i database di destinazione associati a una sessione, è possibile passare alla directory con il nome della sessione e quindi visualizzare la cartella degli eventi o dei database di destinazione. Ad esempio, per visualizzare gli eventi e i relativi predicati associati alla sessione di integrità del sistema predefinita, dal percorso PS SqlServer: \ XEvent \\ *ServerName* \\ *NomeIstanza*\Sessions> digitare `cd system_health\events,` premi invio, digitare `dir` e quindi premere INVIO.  
   
  Il provider PowerShell per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è uno strumento potente che consente di creare, modificare e gestire sessioni di eventi estesi. Nella sezione seguente vengono forniti alcuni esempi di base dell'utilizzo di script di PowerShell con eventi estesi.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Negli esempi seguenti notare quanto segue:  
   
--   Gli script devono essere eseguiti dal prompt PS SQLSERVER:\\> (disponibile digitando `sqlps` al prompt dei comandi).  
+-   Gli script devono essere eseguiti dal prompt PS SQLSERVER: \\> (disponibile digitando `sqlps` al prompt dei comandi).  
   
 -   Gli script utilizzano l'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - handles [ODBC], connection
 - handles [ODBC], about handles
 ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 322120624c612371b56029c2cf29c9ab457c81b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9237c5a92367769674d585b11f0d930b2d6fbbd
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225498"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82715039"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>Allocare handle e connettersi a SQL Server (ODBC)
     
@@ -39,11 +39,11 @@ ms.locfileid: "63225498"
   
 7.  Facoltativamente, chiamare [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) per impostare le opzioni di connessione oppure chiamare [SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md) per ottenere le opzioni di connessione.  
   
-8.  Chiamare SQLConnect per utilizzare un'origine dati esistente a cui connettersi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+8.  Chiamare SQLConnect per utilizzare un'origine dati esistente a cui connettersi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      Oppure  
   
-     Chiamare [SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md) per usare una stringa di connessione per la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]connessione a.  
+     Chiamare [SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md) per usare una stringa di connessione per la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      Il formato minimo di una stringa di connessione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] completa può essere uno dei seguenti:  
   
@@ -56,9 +56,9 @@ ms.locfileid: "63225498"
   
      \- - oppure -  
   
-     Chiamare [SQLBrowseConnect](../native-client-odbc-api/sqlbrowseconnect.md) più volte in modo iterativo per compilare la stringa di connessione e connettersi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a.  
+     Chiamare [SQLBrowseConnect](../native-client-odbc-api/sqlbrowseconnect.md) più volte in modo iterativo per compilare la stringa di connessione e connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-9. Facoltativamente, chiamare [SQLGetInfo](../native-client-odbc-api/sqlgetinfo.md) per ottenere gli attributi e il comportamento del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver per l'origine dati.  
+9. Facoltativamente, chiamare [SQLGetInfo](../native-client-odbc-api/sqlgetinfo.md) per ottenere gli attributi e il comportamento del driver per l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origine dati.  
   
 10. Allocare e utilizzare le istruzioni.  
   

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Attributes property [ADOX], VC++ example
 ms.assetid: 1057b57b-5ace-4830-9a20-562e88aeef86
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 794fcee913b41d98c0703244df86eb90efe3f740
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7b1d3da3d5228345f6f6ae995718b641ecaead89
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76918817"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763982"
 ---
 # <a name="attributes-property-example-vc"></a>Esempio della proprietà Attributes (VC++)
 In questo esempio viene illustrata la proprietà [Attributes](../../../ado/reference/adox-api/attributes-property-adox.md) di una [colonna](../../../ado/reference/adox-api/column-object-adox.md). Impostando il valore su **adColNullable** , l'utente può impostare il valore di un [campo](../../../ado/reference/ado-api/field-object.md) [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) su una stringa vuota. In questa situazione, l'utente può distinguere tra un record in cui i dati non sono noti e un record in cui i dati non sono applicabili.  

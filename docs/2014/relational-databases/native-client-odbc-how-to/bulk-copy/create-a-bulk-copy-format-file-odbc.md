@@ -10,15 +10,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], file formats
 - bulk copy [ODBC], data files
 ms.assetid: 0572fef3-daf5-409e-b557-c2a632f9a06d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 54f57ae8d03037639076e890b93c0cff9021bd78
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c85e0663b5fa9961793cc30bb4a0986b64077bd
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157215"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82715002"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>Creare un file di formato per la copia bulk (ODBC)
   In questo esempio viene illustrato come utilizzare le funzioni di copia bulk per creare un file di dati e un file di formato. L'esempio è stato sviluppato per ODBC versione 3.0 o successiva.  
@@ -211,7 +211,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPDate')
 GO  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Procedure per la copia bulk con il driver ODBC di SQL Server &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Utilizzo di file di dati e file di formato](../../native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
