@@ -10,15 +10,15 @@ helpviewer_keywords:
 - IntelliSense [SQL Server], delimiter highlighting
 - IntelliSense [SQL Server], syntax pair matching
 ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 49b121f776ec6a9d363236fab03a1da2228311a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e4359a546c350c666190331ab6a8484ca9a99a83
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244804"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704088"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>Corrispondenza automatica di coppie della sintassi
   La corrispondenza automatica di coppie della sintassi consente di verificare immediatamente se gli elementi della sintassi che devono essere codificati in coppie sono abbinati correttamente. Questa corrispondenza è nota come corrispondenza tra delimitatori nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , corrispondenza tra parentesi graffe nell'editor di query XMLA di Analysis Services e corrispondenza tra parentesi negli editor MDX e DMX.  

@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters, rowset creation
 ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: de130ef821551383ada1a6df3574404cd3518e88
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eee3452c109bcd519cb24ba96b621ec25c0110df
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046516"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704590"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>Creazione di un set di righe di parametri con valori di tabella
   Sebbene i consumer siano in grado di fornire qualsiasi oggetto set di righe per i parametri con valori di tabella, vengono implementati gli oggetti set di righe tipici rispetto agli archivi dati di back-end, con conseguente limitazione delle prestazioni. Per questo motivo, il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client consente ai consumer di creare un oggetto set di righe specializzato nei dati in memoria. Questo speciale oggetto set di righe in memoria è un nuovo oggetto COM denominato set di righe di parametri con valori di tabella. Tale oggetto fornisce funzionalità simili ai set di parametri.  
@@ -39,16 +39,16 @@ ms.locfileid: "63046516"
   
  Per recuperare informazioni sullo stato null, univoco, calcolato e di aggiornamento di ogni colonna, il consumer utilizza IColumnsRowset:: GetColumnsRowset o IColumnsInfo:: GetColumnInfo. Questi metodi forniscono informazioni dettagliate su ogni colonna del set di righe di parametri con valori di tabella.  
   
- Il consumer specifica il tipo di ogni colonna del parametro con valori di tabella, analogamente al modo in cui vengono specificate le colonne quando viene creata una tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il consumer ottiene un oggetto set di righe di parametri con valori [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di tabella dal provider OLE DB di Native client tramite il parametro di output *ppRowset* .  
+ Il consumer specifica il tipo di ogni colonna del parametro con valori di tabella, analogamente al modo in cui vengono specificate le colonne quando viene creata una tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il consumer ottiene un oggetto set di righe di parametri con valori di tabella dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Provider OLE DB di Native client tramite il parametro di output *ppRowset* .  
   
 ## <a name="dynamic-scenario"></a>Scenario dinamico  
  Quando il consumer non dispone di informazioni sul tipo, è consigliabile utilizzare IOpenRowset:: OpenRowset per creare un'istanza di oggetti set di righe di parametri con valori di tabella. L'unica informazione che il consumer deve fornire al provider è il nome del tipo.  
   
  In questo scenario, il provider ottiene le informazioni sul tipo relative a un oggetto set di righe di parametri con valori di tabella dal server per conto del consumer.  
   
- I parametri *pTableID* e *pUnkOuter* devono essere impostati come nello scenario statico. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Provider di OLE DB di Native client ottiene quindi le informazioni sul tipo (vincoli e informazioni sulla colonna) dal server e restituisce un oggetto set di righe di parametri con valori di tabella tramite il parametro *ppRowset* . Questa operazione richiede la comunicazione con il server e pertanto viene eseguita in modo diverso rispetto allo scenario statico. Lo scenario dinamico funziona solo con le chiamate di procedura con parametri.  
+ I parametri *pTableID* e *pUnkOuter* devono essere impostati come nello scenario statico. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client ottiene quindi le informazioni sul tipo (vincoli e informazioni sulla colonna) dal server e restituisce un oggetto set di righe di parametri con valori di tabella tramite il parametro *ppRowset* . Questa operazione richiede la comunicazione con il server e pertanto viene eseguita in modo diverso rispetto allo scenario statico. Lo scenario dinamico funziona solo con le chiamate di procedura con parametri.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Parametri con valori di tabella &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)   
  [Usare parametri con valori di tabella &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

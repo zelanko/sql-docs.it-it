@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], incremental search
 - incremental searches [SQL Server Management Studio]
 ms.assetid: 490bb36c-dd43-4219-9e2a-ff27046b9395
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9334e4d44663f5d0637d6933eb7a72eae74d4a84
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9eebc2c66143d4728a05fc3df0f9ac02af9a5288
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243654"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703729"
 ---
 # <a name="search-an-active-document-incrementally"></a>Ricerca incrementale in un documento attivo
   È possibile eseguire una ricerca incrementale in un singolo documento o in una singola finestra immettendo il testo. Verrà evidenziato il primo set di caratteri che corrisponde ai caratteri immessi durante la ricerca incrementale nel documento o nella finestra. La ricerca viene estesa automaticamente a tutto il testo all'interno di un documento o di una finestra, fatta eccezione per il testo nascosto.  

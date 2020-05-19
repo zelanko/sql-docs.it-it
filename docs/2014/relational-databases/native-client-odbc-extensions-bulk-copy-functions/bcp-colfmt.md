@@ -15,18 +15,18 @@ topic_type:
 helpviewer_keywords:
 - bcp_colfmt function
 ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4c583ffad2267a82c39d4ab6c7cd71a1852c7cb2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96773f6ed74282cfd1610fc0b297b7e78e892c42
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63065459"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705337"
 ---
 # <a name="bcp_colfmt"></a>bcp_colfmt
-  Specifica il formato di origine o di destinazione dei dati in un file utente. Quando viene utilizzato come formato di origine, **bcp_colfmt** specifica il formato di un file di dati esistente utilizzato come origine dei dati in una copia bulk in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] una tabella. Quando viene utilizzato come formato di destinazione, il file di dati viene creato utilizzando i formati di colonna specificati con **bcp_colfmt**.  
+  Specifica il formato di origine o di destinazione dei dati in un file utente. Quando viene utilizzato come formato di origine, **bcp_colfmt** specifica il formato di un file di dati esistente utilizzato come origine dei dati in una copia bulk in una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella. Quando viene utilizzato come formato di destinazione, il file di dati viene creato utilizzando i formati di colonna specificati con **bcp_colfmt**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -72,11 +72,11 @@ idxServerCol
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]è stato introdotto il supporto per i token del tipo di dati SQLXML e SQLUDT nel parametro *eUserDataType* .  
   
- Il parametro *eUserDataType* viene enumerato in base [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ai token del tipo di dati in sqlncli. h e non negli enumeratori dei tipi di dati ODBC C. È ad esempio possibile specificare una stringa di caratteri SQL_C_CHAR di tipo ODBC utilizzando il tipo SQLCHARACTER specifico di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Il parametro *eUserDataType* viene enumerato in base ai [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] token del tipo di dati in sqlncli. h e non negli enumeratori dei tipi di dati ODBC C. È ad esempio possibile specificare una stringa di caratteri SQL_C_CHAR di tipo ODBC utilizzando il tipo SQLCHARACTER specifico di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Per specificare la rappresentazione predefinita dei dati per il tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], impostare questo parametro su 0.  
   
- Per una copia bulk [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un file, quando *EUSERDATATYPE* è SqlDecimal o SQLNUMERIC:  
+ Per una copia bulk [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un file, quando *eUserDataType* è SqlDecimal o SQLNUMERIC:  
   
 -   Se la colonna di origine non è **Decimal** o **numeric**, vengono utilizzate la precisione e la scala predefinite.  
   
@@ -100,7 +100,7 @@ idxServerCol
   
  L'impostazione di *cbUserData* su SQL_VARLEN_DATA indica che il sistema deve determinare la lunghezza dei dati in ogni colonna. Per alcune colonne, ciò può indicare che viene generato un indicatore di lunghezza o Null da anteporre ai dati in una copia da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o che l'indicatore è previsto nei dati copiati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i tipi di dati character e binary, *cbUserData* può essere SQL_VARLEN_DATA, SQL_NULL_DATA, 0 o un valore positivo. Se *cbUserData* è SQL_VARLEN_DATA, il sistema utilizza l'indicatore di lunghezza, se presente, o una sequenza di caratteri di terminazione per determinare la lunghezza dei dati. Se vengono specificati sia un indicatore di lunghezza che una sequenza di caratteri di terminazione, la copia bulk utilizza la modalità che comporta la copia del minor numero di dati. Se *cbUserData* è SQL_VARLEN_DATA, il tipo di dati è [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di tipo carattere o binario e non viene specificato né un indicatore di lunghezza né una sequenza di caratteri di terminazione, il sistema restituisce un messaggio di errore.  
+ Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i tipi di dati character e binary, *cbUserData* può essere SQL_VARLEN_DATA, SQL_NULL_DATA, 0 o un valore positivo. Se *cbUserData* è SQL_VARLEN_DATA, il sistema utilizza l'indicatore di lunghezza, se presente, o una sequenza di caratteri di terminazione per determinare la lunghezza dei dati. Se vengono specificati sia un indicatore di lunghezza che una sequenza di caratteri di terminazione, la copia bulk utilizza la modalità che comporta la copia del minor numero di dati. Se *cbUserData* è SQL_VARLEN_DATA, il tipo di dati è di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo carattere o binario e non viene specificato né un indicatore di lunghezza né una sequenza di caratteri di terminazione, il sistema restituisce un messaggio di errore.  
   
  Se *cbUserData* è 0 o un valore positivo, il sistema usa *cbUserData* come lunghezza massima dei dati. Se, tuttavia, oltre a un *cbUserData* positivo, viene specificato un indicatore di lunghezza o una sequenza di caratteri di terminazione, il sistema determina la lunghezza dei dati usando il metodo che comporta la copia della quantità minima di dati.  
   
@@ -123,7 +123,7 @@ idxServerCol
   
  Se questo valore è 0, la copia bulk ignora la colonna nel file di dati.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SUCCEED o FAIL.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -160,7 +160,7 @@ idxServerCol
   
  Per ulteriori informazioni, vedere [miglioramenti di data e ora &#40;&#41;ODBC ](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzioni di copia bulk](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - OLE DB error handling, about error handling
 - OLE DB error handling
 ms.assetid: bd0612f4-96ef-4919-b0f9-b5447210fe93
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 434b4251c51809c97744e7aaf954ac1f11c06cfa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3979390a58235dbb8ec7c76e7b16478e7d9deb9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050676"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704999"
 ---
 # <a name="errors"></a>Errors
   Gli oggetti OLE/COM segnalano gli errori tramite il codice restituito HRESULT delle funzioni membro oggetto. Un HRESULT OLE/COM è una struttura costituita da pacchetti di byte. OLE fornisce macro che risolvono i riferimenti dei membri di struttura.  
@@ -30,7 +30,7 @@ ms.locfileid: "63050676"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può restituire più errori. Un'applicazione può recuperare gli errori del server uno alla volta chiamando [IMultipleResults::GetResult](https://go.microsoft.com/fwlink/?LinkId=129630) insieme a ISQLErrorInfo e IErrorRecords.  
   
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client espone l'OLE DB **IErrorInfo**con miglioramento dei record `ISQLErrorInfo`, l'oggetto personalizzato e le interfacce dell'oggetto errore [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) specifiche del provider.  
+ Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client espone l'OLE DB **IErrorInfo**con miglioramento dei record, l' `ISQLErrorInfo` oggetto personalizzato e le interfacce dell'oggetto errore [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) specifiche del provider.  
   
  Per informazioni sulla traccia degli errori, vedere [Data Access Tracing](https://go.microsoft.com/fwlink/?LinkId=125805) (Traccia di accesso ai dati). Per informazioni sui miglioramenti apportati alla traccia degli errori aggiunta in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], vedere [Accesso alle informazioni di diagnostica nel log degli eventi estesi](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
@@ -40,13 +40,13 @@ ms.locfileid: "63050676"
   
 -   [Informazioni nelle interfacce di errore](information-in-error-interfaces.md)  
   
--   [Dettagli relativi agli errori SQL Server](sql-server-error-detail.md)  
+-   [Dettagli relativi agli errori di SQL Server](sql-server-error-detail.md)  
   
 -   [Recupero delle informazioni sugli errori](retrieving-error-information.md)  
   
 -   [Risultati dei messaggi di SQL Server](sql-server-message-results.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server Native Client &#40;OLE DB&#41;](../native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - bcp_setbulkmode function
 ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9671447a2fba1cd57b021266f29de7af741f0de6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53a89baa1fc13759bd24d6c12190bce509f6dfce
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62688788"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705269"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
   bcp_setbulkmode consente di specificare il formato della colonna in un'operazione di copia bulk, impostando tutti gli attributi di colonna in una singola chiamata di funzione.  
@@ -67,7 +67,7 @@ cbRow
  *cbRow*  
  Lunghezza, in byte, del valore del carattere di terminazione della riga.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SUCCEED o FAIL  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -79,9 +79,9 @@ cbRow
   
 |Proprietà|Descrizione|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|Specifica la modalità di output carattere.<br /><br /> Corrisponde all'opzione-c in BCP. EXE e per bcp_setcolfmt con la `BCP_FMT_TYPE` proprietà impostata su `SQLCHARACTER`.|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Specifica la modalità di output Unicode.<br /><br /> Corrisponde all'opzione-w in BCP. EXE e bcp_setcolfmt con `BCP_FMT_TYPE` la proprietà impostata `SQLNCHAR`su.|  
-|BCP_OUT_NATIVE_TEXT_MODE|Specifica tipi nativi per i tipi non carattere e Unicode per i tipi carattere.<br /><br /> Corrisponde all'opzione-N in BCP. EXE e bcp_setcolfmt con `BCP_FMT_TYPE` la proprietà impostata `SQLNCHAR` su se il tipo di colonna è una stringa (impostazione predefinita se non è una stringa).|  
+|BCP_OUT_CHARACTER_MODE|Specifica la modalità di output carattere.<br /><br /> Corrisponde all'opzione-c in BCP. EXE e per bcp_setcolfmt con la `BCP_FMT_TYPE` proprietà impostata su `SQLCHARACTER` .|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Specifica la modalità di output Unicode.<br /><br /> Corrisponde all'opzione-w in BCP. EXE e bcp_setcolfmt con la `BCP_FMT_TYPE` proprietà impostata su `SQLNCHAR` .|  
+|BCP_OUT_NATIVE_TEXT_MODE|Specifica tipi nativi per i tipi non carattere e Unicode per i tipi carattere.<br /><br /> Corrisponde all'opzione-N in BCP. EXE e bcp_setcolfmt con `BCP_FMT_TYPE` la proprietà impostata su `SQLNCHAR` se il tipo di colonna è una stringa (impostazione predefinita se non è una stringa).|  
 |BCP_OUT_NATIVE_MODE|Specifica tipi di database nativi.<br /><br /> Corrisponde all'opzione-n in BCP. EXE e bcp_setcolfmt con `BCP_FMT_TYPE` la proprietà impostata sul valore predefinito.|  
   
  Non usare bcp_setbulkmode con una sequenza di chiamate di funzione che include bcp_setcolfmt, bcp_control e bcp_readfmt. Ad esempio, non è necessario chiamare bcp_control (BCPTEXTFILE) e bcp_setbulkmode.  
@@ -295,7 +295,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzioni di copia bulk](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (methods)
 ms.assetid: e3c2a450-8fd4-44cb-93d8-affe1b65c68e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2dd4ec6578ee59044157fcdb4fa8d082a297c536
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f0ea289b75085cd4b7e90531eeaf592979707c2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046586"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704638"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-methods"></a>Supporto dei tipi di parametro con valori di tabella OLE DB (metodi)
   I parametri con valori di tabella sono supportati dai seguenti metodi OLE DB standard:  
@@ -34,7 +34,7 @@ ms.locfileid: "63046586"
 |IColumnsRowset::GetColumnsRowset|Recupera le informazioni sui metadati relative a una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per i parametri con valori di tabella, questa stessa interfaccia fornisce informazioni dettagliate sui metadati relative a ogni colonna, ad esempio:<br /><br /> -DBCOLUMN_FLAGS indica il supporto di valori null tramite il bit DBCOLUMNFLAGS_ISNULLABLE.<br />-DBCOLUMN_ISUNIQUE indica se la colonna è una colonna Identity.<br />-DBCOLUMN_COMPUTEMODE indica se la colonna è calcolata.|  
 |IAccessor::CreateAccessor|Per associare un oggetto set di righe di parametri con valori di tabella a un parametro del comando, creare una funzione di accesso con il membro *wType* impostato su DBTYPE_TABLE. La struttura DBOBJECT conterrà l'interfaccia IID_IRowset o un'altra interfaccia valida dell'oggetto set di righe nel membro *iid*. Il resto dei campi viene gestito in modo analogo a DBTYPE_IUNKNOWN.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Supporto del tipo di parametro con valori di tabella OLE DB](ole-db-table-valued-parameter-type-support.md)   
  [Creazione di set di righe di parametri con valori di tabella](table-valued-parameter-rowset-creation.md)   
  [Usare parametri con valori di tabella &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)  

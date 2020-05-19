@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, stored procedures
 - stored procedures [OLE DB], about OLE DB stored procedures
 ms.assetid: 75611e40-789f-412b-91e5-0cc0b8d289ef
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d4a2c55573807feb4de947f1fa3b5af685b9f168
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: efda11d7bcbb4afd37143c6f9669e15f0cc16f5f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62638326"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704166"
 ---
 # <a name="stored-procedures"></a>Stored procedure
   Una stored procedure ([Stored procedure &#40;motore di database&#41;](../../stored-procedures/stored-procedures-database-engine.md)) è un oggetto eseguibile archiviato in un database. Supporti [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
@@ -38,7 +38,7 @@ ms.locfileid: "62638326"
   
 -   [Esecuzione di una chiamata a una stored procedure &#40;OLE DB&#41;](stored-procedures-calling.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server Native Client &#40;OLE DB&#41;](sql-server-native-client-ole-db.md)  
   
   

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - table-valued parameters (ODBC)
 - ODBC, table-valued parameters
 ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 31ed60f10f12bbc11037a64caa50802360b919de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e22b65aab9b9775889a3a03fe3ba90a84aafc9f0
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62467301"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705158"
 ---
 # <a name="table-valued-parameters-odbc"></a>Parametri con valori di tabella (ODBC)
   Il supporto ODBC dei parametri con valori di tabella consente a un'applicazione client di inviare più efficientemente i dati con parametri al server, inviando più righe al server con una sola chiamata.  
@@ -77,7 +77,7 @@ ms.locfileid: "62467301"
  [Esempi di programmazione di parametri con valori di tabella ODBC](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md)  
  Viene descritta l'esecuzione delle attività più comuni.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
  [Parametri con valori di tabella &#40;SQL Server Native Client&#41;](../native-client/features/table-valued-parameters-sql-server-native-client.md)  
   

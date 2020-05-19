@@ -11,15 +11,15 @@ helpviewer_keywords:
 - bindings [OLE DB]
 - OLE DB, bindings and conversions
 ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b35583f18cbe590773c6661091186f669e012555
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d920fef68adaa63059970a49c9473d75eeabfd30
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62638208"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705050"
 ---
 # <a name="bindings-and-conversions-ole-db"></a>Associazioni e conversioni (OLE DB)
   In questa sezione viene descritto come eseguire conversioni tra valori `datetime` e `datetimeoffset`. Le conversioni descritte in questa sezione sono già disponibili in OLE DB o costituiscono un'estensione coerente di OLE DB.  
@@ -28,7 +28,7 @@ ms.locfileid: "62638208"
   
 -   Formato delle stringhe `datetime` e `datetimeoffset`:  
   
-     *aaaa*-*mm*mm-*GG*[ *HH*:*mm*:*SS*[.* 9999999*] [?? *HH*:*mm*]]  
+     *aaaa* - *mm* - *DD*[ *HH*:*mm*:*SS*[.* 9999999*] [?? *HH*:*mm*]]  
   
 -   Formato delle stringhe `time`:  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62638208"
  [Conversioni eseguite da server a client](conversions-performed-from-server-to-client.md)  
  Vengono descritte le conversioni di data/ora eseguite tra [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o versione successiva) e un'applicazione client scritta con la specifica OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Miglioramenti relativi a data e ora &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

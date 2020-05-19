@@ -10,15 +10,15 @@ helpviewer_keywords:
 - dragging and dropping text
 - Query Editor [SQL Server Management Studio], dragging and dropping text
 ms.assetid: 623354b8-fa56-4167-862a-98c468dd8a22
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 287dc09bf6f534036938fc31b0a959726b56d9ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f18600ac4ab01d2f34fc6a63d91a4d3cb65c189a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244902"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703967"
 ---
 # <a name="drag-and-drop-text"></a>Trascinamento della selezione
   Il testo può essere selezionato e quindi trascinato in altre posizioni. È possibile trascinare il testo:  

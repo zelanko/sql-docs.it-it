@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - rowset binding [ODBC]
 ms.assetid: a7be05f0-6b11-4b53-9fbc-501e591eef09
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6b416d9f7fdd07613f684fb2b27ac058b60d5b3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a5939d97f518dd88f6eaa48fde259d6b4eab54ae
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200436"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705227"
 ---
 # <a name="use-rowset-binding-odbc"></a>Utilizzare l'associazione di set di righe (ODBC)
     
@@ -69,7 +69,7 @@ ms.locfileid: "63200436"
   
 5.  Ogni chiamata a [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) o [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) recupera le righe R e trasferisce i dati nelle colonne delimitate.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Procedure per l'utilizzo di cursori &#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)   
  [Modalità di implementazione di cursori](../../native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)   
  [Utilizzare cursori &#40;&#41;ODBC](use-cursors-odbc.md)  

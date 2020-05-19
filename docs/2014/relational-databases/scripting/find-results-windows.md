@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - Find Results Windows dialog box
 ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 88fb0cda002694d87cad94dd8032811f6451f1cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 406c19cb8cc5609e15206c81fc0297e14c6dd8ca
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245132"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703896"
 ---
 # <a name="find-results-windows"></a>Finestre Risultati ricerca
   Nelle due finestre Risultati ricerca vengono visualizzate le corrispondenze trovate utilizzando la scheda **Cerca nei file** o **Sostituisci nei file** della finestra di dialogo **Trova e sostituisci** . Il comando **Opzioni risultati** disponibile nelle schede **Cerca nei file** e **Sostituisci nei file** consente di scegliere la finestra Risultati ricerca in cui verranno visualizzate le corrispondenze trovate.  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data access [SQL Server Native Client], installing SQL Server Native Client
 - removing SQL Server Native Client
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f832c4b55c8a039de440b08e6d2ed3350175e2a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0a9f440f32b0bbcc314893b8abe6a183ac8b0738
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75231806"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704424"
 ---
 # <a name="installing-sql-server-native-client"></a>Installazione di SQL Server Native Client
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 viene installato con [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. Non esistono versioni di [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client. Per ulteriori informazioni, vedere Novità [di SQL Server Native Client](../sql-server-native-client.md). È anche possibile ottenere sqlncli.msi dalla pagina Web di SQL Server 2012 Feature Pack. Per scaricare la versione più recente del SQL Server Native Client, passare a [Microsoft?? SQL Server?? 2012 SP2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=43339). Se nel computer è installata anche una versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client precedente a SQL Server 2012, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 verrà installato side-by-side con la versione precedente.  
@@ -56,7 +56,7 @@ ms.locfileid: "75231806"
  Se si utilizza l'opzione /passive, /qn, /qb o /qr con msiexec, è necessario specificare anche IACCEPTSQLNCLILICENSETERMS=YES per indicare in modo esplicito l'accettazione delle condizioni di licenza dell'utente finale. È necessario specificare questa opzione in lettere maiuscole.  
   
 ## <a name="uninstalling-sql-server-native-client"></a>Disinstallazione di SQL Server Native Client  
- Poiché le applicazioni come [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] server e gli [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] strumenti dipendono [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da Native client, è importante non disinstallare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client finché tutte le applicazioni dipendenti non vengono disinstallate. Per consentire agli utenti di eseguire il provider con un avviso che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] l'applicazione dipende da Native client, usare l'opzione di installazione APPGUID nell'identità del servizio gestito, come indicato di seguito:  
+ Poiché le applicazioni come [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Server e gli [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] strumenti dipendono da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client, è importante non disinstallare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client finché tutte le applicazioni dipendenti non vengono disinstallate. Per consentire agli utenti di eseguire il provider con un avviso che l'applicazione dipende da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client, usare l'opzione di installazione APPGUID nell'identità del servizio gestito, come indicato di seguito:  
   
  `msiexec /i sqlncli.msi APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  
   

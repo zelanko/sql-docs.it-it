@@ -12,15 +12,15 @@ helpviewer_keywords:
 - scripting [SQL Server Database Engine]
 - scripting [SQL Server Database Engine], PowerShell
 ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0b092c85ea678ce05c3b9c8bbff4f78d47589bdb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 48f749da0acc21e990954a1198d868c0786d2a72
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244956"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703979"
 ---
 # <a name="database-engine-scripting"></a>Script del motore di database
   Il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] supporta l'ambiente di scripting di [!INCLUDE[msCoName](../../includes/msconame-md.md)] PowerShell per gestire le istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e gli oggetti nelle istanze. È anche possibile compilare ed eseguire query nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] che contengono [!INCLUDE[tsql](../../includes/tsql-md.md)] e XQuery in ambienti molto simili agli ambienti di scripting.  
@@ -53,7 +53,7 @@ ms.locfileid: "75244956"
   
 -   Le query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e il relativo debug possono essere eseguiti in modo interattivo nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È possibile codificare ed eseguire il debug di varie istruzioni in una sessione, quindi salvare tutte le istruzioni in un solo file script.  
   
--   L' `sqlcmd` utilità del prompt dei comandi consente di [!INCLUDE[ssDE](../../includes/ssde-md.md)] eseguire query in modo interattivo ed [!INCLUDE[ssDE](../../includes/ssde-md.md)] eseguire anche i file script di query esistenti.  
+-   L' `sqlcmd` utilità del prompt dei comandi consente di eseguire query in modo interattivo [!INCLUDE[ssDE](../../includes/ssde-md.md)] ed eseguire anche [!INCLUDE[ssDE](../../includes/ssde-md.md)] i file script di query esistenti.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] In genere, i file script delle query del [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] vengono codificati in modo interattivo usando l'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Il file può essere aperto in un secondo momento in uno degli ambienti seguenti:  
   

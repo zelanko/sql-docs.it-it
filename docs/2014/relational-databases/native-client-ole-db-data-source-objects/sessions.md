@@ -10,18 +10,18 @@ helpviewer_keywords:
 - sessions [OLE DB]
 - SQL Server Native Client OLE DB provider, sessions
 ms.assetid: 3a980816-675c-4fba-acc9-429297d85bbd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f594ace96fc34a77adca244e79c55551f0ddb8d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae9b5b908e4f4c6104d2639c7d0032a3b1f2087c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63228969"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705138"
 ---
 # <a name="sessions"></a>Sessioni
-  Una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sessione del provider OLE DB di Native client rappresenta una singola connessione a un' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]istanza di.  
+  Una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sessione del provider OLE DB di Native client rappresenta una singola connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client richiede che le sessioni delimitatino lo spazio delle transazioni per un'origine dati. Tutti gli oggetti comando creati da uno specifico oggetto di sessione partecipano alla transazione locale o distribuita dell'oggetto in questione.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "63228969"
   
  Un oggetto di sessione aggiuntivo creato nell'origine dati stabilisce una connessione all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come specificato dall'origine dati. La connessione all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eliminata quando l'applicazione rilascia tutti i riferimenti agli oggetti creati nella sessione.  
   
- Nell'esempio seguente viene illustrato come utilizzare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client per connettersi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un database:  
+ Nell'esempio seguente viene illustrato come utilizzare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client per connettersi a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database:  
   
 ```  
 int main()  
@@ -178,14 +178,14 @@ EXIT:
 }  
 ```  
   
- La [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connessione di oggetti di sessione del provider OLE DB Native client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un'istanza di può generare un sovraccarico significativo per le applicazioni che creano e rilasciano continuamente oggetti sessione. L'overhead può essere ridotto al minimo gestendo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modo efficiente gli oggetti sessione del provider OLE DB di Native Client. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Le applicazioni del provider OLE DB Native client possono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantenere attiva la connessione di un oggetto sessione mantenendo un riferimento su almeno un'interfaccia dell'oggetto.  
+ La connessione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di oggetti di sessione del provider OLE DB Native client a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può generare un sovraccarico significativo per le applicazioni che creano e rilasciano continuamente oggetti sessione. L'overhead può essere ridotto al minimo gestendo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modo efficiente gli oggetti sessione del provider OLE DB di Native Client. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Le applicazioni del provider OLE DB Native client possono mantenere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attiva la connessione di un oggetto sessione mantenendo un riferimento su almeno un'interfaccia dell'oggetto.  
   
  La gestione di un pool di riferimenti agli oggetti di creazione del comando consente ad esempio di mantenere attive le connessioni a tali oggetti di sessione nel pool. Al momento della richiesta degli oggetti di sessione, il codice di manutenzione del pool passa un puntatore di interfaccia **IDBCreateCommand** valido al metodo dell'applicazione che richiede la sessione. Quando il metodo dell'applicazione non richiede più la sessione, restituisce di nuovo il puntatore all'interfaccia al codice di manutenzione del pool, anziché rilasciare il riferimento dell'applicazione all'oggetto di creazione del comando.  
   
 > [!NOTE]  
 >  Nell'esempio precedente l'interfaccia **IDBCreateCommand** viene usata perché l'interfaccia **ICommand** implementa il metodo **GetDBSession**, ovvero l'unico metodo nell'ambito del comando o del set di righe che consenta a un oggetto di determinare la sessione nella quale è stato creato. Pertanto, solo ed esclusivamente un oggetto comando consente a un'applicazione di recuperare un puntatore all'oggetto origine dati dal quale possono essere create sessioni aggiuntive.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Oggetti di origine dati &#40;OLE DB&#41;](data-source-objects-ole-db.md)  
   
   

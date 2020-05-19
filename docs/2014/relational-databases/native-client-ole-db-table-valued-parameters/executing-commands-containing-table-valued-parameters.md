@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters, executing commands containing
 ms.assetid: 7ecba6f6-fe7a-462a-9aa3-d5115b6d4529
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ae08a79bcfe1e4befcad8559e82bdfba5b347fc2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b5c6bbdf0d26002af350293a6526ed46bb71fd3e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63228561"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704656"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>Esecuzione di comandi contenenti parametri con valori di tabella
   L'esecuzione di un comando contenente parametri con valori di tabella avviene in due fasi.  
@@ -46,7 +46,7 @@ ms.locfileid: "63228561"
   
 -   I dati saranno inviati al server per le colonne con DBPROP_COL_AUTOINCREMENT o SSPROP_COL_COMPUTED, a meno che non sia impostata anche la proprietà SSPROP_PARAM_TABLE_DEFAULT.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Parametri con valori di tabella &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)   
  [Usare parametri con valori di tabella &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

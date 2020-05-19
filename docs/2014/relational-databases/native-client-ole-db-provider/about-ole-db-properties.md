@@ -12,15 +12,15 @@ helpviewer_keywords:
 - properties [OLE DB]
 - property values [SQL Server Native Client]
 ms.assetid: 0b36a61e-b542-400d-a3d2-e6f643caf2c6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6e7c010beaf3aefa4f73314d8576a066dca6a167
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87027481170d8f72f91b1923ae6703b9796d5541
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62638073"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704769"
 ---
 # <a name="about-ole-db-properties"></a>Informazioni sulle proprietà OLE DB
   I consumer impostano i valori delle proprietà per richiedere specifici comportamenti degli oggetti. Utilizzano, ad esempio, proprietà per specificare le interfacce che devono essere esposte da un set di righe. I consumer recuperano i valori delle proprietà per determinare le funzionalità di un oggetto, ad esempio un set di righe, una sessione o un oggetto origine dati.  
@@ -45,7 +45,7 @@ ms.locfileid: "62638073"
   
 7.  Chiamata a un metodo per impostare proprietà e passaggio del conteggio e della matrice delle strutture DBPROPSET.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di un'applicazione provider OLE DB SQL Server Native Client](creating-a-sql-server-native-client-ole-db-provider-application.md)   
  [Proprietà (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=112207)  
   

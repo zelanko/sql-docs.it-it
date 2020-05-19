@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Find and Replace dialog box
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c3d96670edc599a1f16456b862922dc6378b1362
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d65ec8de3e45632548a813024223eb72314acc2b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245149"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703924"
 ---
 # <a name="find-and-replace"></a>Trova e sostituisci
   Usare la finestra di dialogo **Trova e sostituisci** per trovare testo all'interno di un file e facoltativamente sostituirlo con altro testo. Possono essere visualizzate versioni della finestra **Trova e sostituisci** con opzioni leggermente diverse, a seconda di come è stata aperta la finestra di dialogo. Scegliere **Trova e sostituisci** dal menu **Modifica**e quindi fare clic su **Ricerca veloce** per aprire la finestra di dialogo con le opzioni di ricerca ma senza le opzioni di sostituzione. Scegliere **Trova e sostituisci** dal menu **Modifica**e quindi fare clic su **Sostituzione veloce** per aprire la finestra di dialogo con le opzioni di ricerca e sostituzione.  

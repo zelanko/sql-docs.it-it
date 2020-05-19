@@ -13,15 +13,15 @@ topic_type:
 helpviewer_keywords:
 - GetParameterProperties method
 ms.assetid: 7f4cc5ea-d028-4fe5-9192-bd153ab3c26c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6d492a64b6d8a4e8ddf7de27067f1f0bcfef205e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ebc423dd019b5a161fd767d7b9ca8eaac8d8e335
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62638083"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704808"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
   Restituisce una matrice di strutture di set di proprietà SSPARAMPROPS, un set di proprietà SSPARAMPROPS per ogni tipo definito dall'utente o parametro XML.  
@@ -60,13 +60,13 @@ SSPARAMPROPS **prgParamProperties);
   
  `};`  
   
-|Membro|Descrizione|  
+|Membro|Description|  
 |------------|-----------------|  
 |*iOrdinal*|Numero ordinale del parametro passato.|  
 |*cPropertySets*|Numero di strutture DBPROPSET in *rgPropertySets*.|  
 |*rgPropertySets*|Puntatore alla memoria nel quale restituire una matrice di strutture DBPROPSET.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [ISSCommandWithParameters &#40;OLE DB&#41;](isscommandwithparameters-ole-db.md)  
   
   

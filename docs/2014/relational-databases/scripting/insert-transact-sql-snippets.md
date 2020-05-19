@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Transact-SQL snippets, code
 - snippets [Transact-SQL], how to insert
 ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 40e1fea04c0f864d871c01e9087ca9d346475c18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 258934209cf17fd43ea41b6aa07063a2e42b056a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242084"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703871"
 ---
 # <a name="insert-transact-sql-snippets"></a>Inserimento di frammenti di Transact-SQL
   Un frammento di codice [!INCLUDE[tsql](../../includes/tsql-md.md)] è un modello che è possibile utilizzare come punto iniziale per la scrittura di nuove istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  

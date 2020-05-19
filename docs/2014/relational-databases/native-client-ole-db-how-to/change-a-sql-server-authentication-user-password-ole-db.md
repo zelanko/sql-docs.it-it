@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 1ed37ded-5671-46a4-b609-eea886dfae20
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 351ce45247fcc4fb76228ab792a97f4e1f915989
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4c88949dd81ccfd438c9403a1b640bc9c78b03a1
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874578"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704924"
 ---
 # <a name="change-a-sql-server-authentication-user-password-ole-db"></a>Modificare una password utente di autenticazione di SQL Server (OLE DB)
   In questo esempio viene illustrato come utilizzare OLE DB per modificare la password di un account utente con l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

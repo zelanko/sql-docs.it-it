@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_writefmt function
 ms.assetid: cb4c1d37-667d-4bcd-b13c-eb638bcc9b69
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8d4a5067598b475ed8fe103606088d0e4d6d0554
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec7c5f8db1d8d1f3c675b267adb8345d086d0b80
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62689412"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705282"
 ---
 # <a name="bcp_writefmt"></a>bcp_writefmt
   Crea un file di formato che contiene una descrizione del formato del file di dati della copia bulk corrente.  
@@ -49,7 +49,7 @@ szFormatFile
  *szFormatFile*  
  Percorso e nome del file utente per ricevere i valori di formato per il file di dati.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SUCCEED o FAIL.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -60,7 +60,7 @@ szFormatFile
  Per caricare un file di formato salvato, utilizzare [bcp_readfmt](bcp-readfmt.md).  
   
 > [!NOTE]  
->  Il file di formato prodotto da **bcp_writefmt** è supportato solo dalle versioni dell'utilità **bcp** distribuite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la versione 7,0 e successive.  
+>  Il file di formato prodotto da **bcp_writefmt** è supportato solo dalle versioni dell'utilità **bcp** distribuite con la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 7,0 e successive.  
   
 ## <a name="example"></a>Esempio  
   
@@ -117,7 +117,7 @@ if (bcp_exec(hdbc, &nRowsProcessed) == SUCCEED)
 // Carry on.  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzioni di copia bulk](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

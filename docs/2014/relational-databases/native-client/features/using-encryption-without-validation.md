@@ -13,20 +13,20 @@ helpviewer_keywords:
 - encryption [SQL Server Native Client]
 - SQL Server Native Client, encryption
 ms.assetid: f4c63206-80bb-4d31-84ae-ccfcd563effa
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 443c6e0c556a7e69510796b1d58ab0f7b2567e6e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1fbea13b0ad9744e1cbe6240c9084f8fda6dc2e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225487"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704312"
 ---
 # <a name="using-encryption-without-validation"></a>Utilizzo della crittografia senza convalida
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crittografa sempre pacchetti di rete associati all'accesso. Se non è stato eseguito il provisioning di nessun certificato nel server quando viene avviato, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] genera un certificato autofirmato utilizzato per crittografare pacchetti di accesso.  
   
- Le applicazioni possono inoltre richiedere l'attivazione della crittografia per tutto il traffico di rete mediante le parole chiave della stringa di connessione o le proprietà di connessione. Le parole chiave sono "Encrypt" per ODBC e OLE DB quando si usa una stringa del provider con **IDbInitialize:: Initialize**o "Use Encryption for data" per ADO e OLE DB quando si usa una stringa di inizializzazione con **IDataInitialize**. Questa operazione può anche essere configurata tramite l'opzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **Forza crittografia protocollo** di Configuration Manager. Per impostazione predefinita, la crittografia di tutto il traffico di rete per una connessione richiede che nel server sia stato eseguito il provisioning di un certificato.  
+ Le applicazioni possono inoltre richiedere l'attivazione della crittografia per tutto il traffico di rete mediante le parole chiave della stringa di connessione o le proprietà di connessione. Le parole chiave sono "Encrypt" per ODBC e OLE DB quando si usa una stringa del provider con **IDbInitialize:: Initialize**o "Use Encryption for data" per ADO e OLE DB quando si usa una stringa di inizializzazione con **IDataInitialize**. Questa operazione può anche essere configurata tramite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] l'opzione **Forza crittografia protocollo** di Configuration Manager. Per impostazione predefinita, la crittografia di tutto il traffico di rete per una connessione richiede che nel server sia stato eseguito il provisioning di un certificato.  
   
  Per informazioni sulle parole chiave della stringa di connessione, vedere [utilizzo delle parole chiave delle stringhe di connessione con SQL Server Native Client](../applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
@@ -52,7 +52,7 @@ ms.locfileid: "63225487"
 ## <a name="sql-server-native-client-odbc-driver"></a>Driver ODBC di SQL Server Native Client  
  Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC di Native Client supporta la crittografia senza convalida tramite aggiunte alle funzioni [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) e [SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md) . SQL_COPT_SS_TRUST_SERVER_CERTIFICATE è stato aggiunto per accettare SQL_TRUST_SERVER_CERTIFICATE_YES o SQL_TRUST_SERVER_CERTIFICATE_NO. SQL_TRUST_SERVER_CERTIFICATE_NO è l'impostazione predefinita. È stata inoltre aggiunta una nuova parola chiave, "TrustServerCertificate", per la stringa di connessione. Accetta i valori yes o no. Il valore predefinito è "no".  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzionalità di SQL Server Native Client](sql-server-native-client-features.md)  
   
   

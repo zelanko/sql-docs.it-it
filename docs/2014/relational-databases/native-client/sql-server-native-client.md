@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d2a01b9d9d13bf5e9135d287553beb8b87c2dcd5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 003abb67cd66d02294210ddb3f55061abcc804f4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62638848"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704137"
 ---
 # <a name="what39s-new-in-sql-server-native-client"></a>Novità di SQL Server Native Client&#39;
   Tramite [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] viene installato [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client. Non esistono versioni di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Native Client.  
@@ -34,7 +34,7 @@ ms.locfileid: "62638848"
   
 -   [Supporto di SQL Server Native Client per il ripristino di emergenza a disponibilità elevata](features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
   
--   [Accesso alle informazioni di diagnostica nel registro eventi estesi](features/accessing-diagnostic-information-in-the-extended-events-log.md)  
+-   [Accesso alle informazioni di diagnostica nel log degli eventi estesi](features/accessing-diagnostic-information-in-the-extended-events-log.md)  
   
  ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ora supporta tre funzionalità aggiunte a ODBC standard in Windows 7 SDK:  
   
@@ -42,19 +42,19 @@ ms.locfileid: "62638848"
   
 -   Estendibilità del tipo di dati C. Per ulteriori informazioni, vedere [tipi di dati C in ODBC](https://go.microsoft.com/fwlink/?LinkID=191495).  
   
-     Per supportare questa funzionalità in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client, SQLGetDescField può restituire `SQL_C_SS_TIME2` (per `time` i tipi) `SQL_C_SS_TIMESTAMPOFFSET` o ( `datetimeoffset`per) invece `SQL_C_BINARY`di, se l'applicazione usa ODBC 3,8. Per ulteriori informazioni, vedere [supporto del tipo di dati per i miglioramenti di data e ora ODBC](features/date-and-time-improvements.md).  
+     Per supportare questa funzionalità in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client, SQLGetDescField può restituire `SQL_C_SS_TIME2` (per i `time` tipi) o `SQL_C_SS_TIMESTAMPOFFSET` (per `datetimeoffset` ) invece di `SQL_C_BINARY` , se l'applicazione usa ODBC 3,8. Per ulteriori informazioni, vedere [supporto del tipo di dati per i miglioramenti di data e ora ODBC](features/date-and-time-improvements.md).  
   
 -   Chiamata di `SQLGetData` con un buffer di piccole dimensioni più volte per recuperare un valore di parametro di grandi dimensioni. Per altre informazioni, vedere [recupero di parametri di output tramite SQLGetData](https://go.microsoft.com/fwlink/?LinkID=191494).  
   
  Negli argomenti seguenti vengono descritte le modifiche nel comportamento di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
--   Quando si `ICommandWithParameters::SetParameterInfo`chiama, il valore passato al parametro *pwszName* deve essere un identificatore valido. Per ulteriori informazioni, vedere [ICommandWithParameters](../native-client-ole-db-interfaces/icommandwithparameters.md).  
+-   Quando si chiama `ICommandWithParameters::SetParameterInfo` , il valore passato al parametro *pwszName* deve essere un identificatore valido. Per ulteriori informazioni, vedere [ICommandWithParameters](../native-client-ole-db-interfaces/icommandwithparameters.md).  
   
 -   Tramite `SQLDescribeParam` viene restituito ora in modo coerente un valore conforme alla specifica ODBC. Per ulteriori informazioni, vedere [SQLDescribeParam](../native-client-odbc-api/sqldescribeparam.md).  
   
 -   [Modifica del comportamento del driver ODBC quando si gestiscono le conversioni di caratteri](features/odbc-driver-behavior-change-when-handling-character-conversions.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzionalità di SQL Server Native Client](features/sql-server-native-client-features.md)  
   
   

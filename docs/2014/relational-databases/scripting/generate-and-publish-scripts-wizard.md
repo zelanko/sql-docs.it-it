@@ -39,15 +39,15 @@ helpviewer_keywords:
 - databases [SQL Server], generating scripts
 - Publish Database Wizard
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 47bf324dd757661a6f49f18b28f810c87ca1419e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b378eb5e4a68f07aee179e52552017578b0b33d4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242113"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703929"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Genera e pubblica script
   È possibile usare la procedura guidata **Genera e pubblica script** per creare script per il trasferimento di un database tra le istanze del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o di [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. È possibile generare script per un database in un'istanza del motore di database nella rete locale o da [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Gli script generati possono essere eseguiti in un'altra istanza del motore di database o in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. È inoltre possibile usare la procedura guidata per pubblicare direttamente il contenuto di un database in un servizio Web creato tramite Database Publishing Services. È possibile creare script per un intero database o limitare la creazione a oggetti specifici.  
@@ -188,7 +188,7 @@ ms.locfileid: "75242113"
   
 -   **Script per autorizzazioni a livello oggetto** : consente di includere script per l'impostazione dell'autorizzazione per gli oggetti del database. Il valore predefinito è **False**.  
   
--   **Script** per statistiche: se è impostato su **script per statistiche**, questa `CREATE STATISTICS` opzione include l'istruzione per ricreare le statistiche sull'oggetto. L'opzione **Genera script per statistiche e istogrammi** consente inoltre di creare informazioni sugli istogrammi. Il valore predefinito è **Non generare script per statistiche**. Per altre informazioni, vedere [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
+-   **Script** per statistiche: se è impostato su **script per statistiche**, questa opzione include l' `CREATE STATISTICS` istruzione per ricreare le statistiche sull'oggetto. L'opzione **Genera script per statistiche e istogrammi** consente inoltre di creare informazioni sugli istogrammi. Il valore predefinito è **Non generare script per statistiche**. Per altre informazioni, vedere [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
 -   **Script per use database** : consente `USE DATABASE` di aggiungere l'istruzione allo script. Per verificare che gli oggetti di database vengano creati nel database corretto, includere l'istruzione `USE DATABASE`. Quando si prevede di usare lo script in un database diverso, selezionare **false** per omettere l' `USE DATABASE` istruzione. Il valore predefinito è **True**. Per altre informazioni, vedere [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
   
@@ -198,7 +198,7 @@ ms.locfileid: "75242113"
   
 -   **Genera script per il rilevamento modifiche** : consente di generare script per il rilevamento delle modifiche se è abilitato nel database di origine o nelle tabelle del database di origine. Il valore predefinito è **False**. Per altre informazioni, vedere [Informazioni sul rilevamento delle modifiche &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md).  
   
--   **Script per vincoli check** : `CHECK` aggiunge vincoli allo script. Il valore predefinito è **True**. I vincoli `CHECK` richiedono che i dati immessi in una tabella rispettino una condizione specificata. Per altre informazioni, vedere [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
+-   **Script per vincoli check** : aggiunge `CHECK` vincoli allo script. Il valore predefinito è **True**. I vincoli `CHECK` richiedono che i dati immessi in una tabella rispettino una condizione specificata. Per altre informazioni, vedere [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
 -   **Genera script per le opzioni di compressione dati** : consente di includere le opzioni di compressione dati, se sono configurate nel database di origine o nelle tabelle del database di origine. Per altre informazioni, vedere [Data Compression](../data-compression/data-compression.md). Il valore predefinito è **False**.  
   
@@ -252,9 +252,9 @@ ms.locfileid: "75242113"
   
 7.  **Pubblica autorizzazioni a livello di oggetto** : consente di includere le autorizzazioni per gli oggetti selezionati del database. Il valore predefinito è **False**.  
   
-8.  **Pubblica statistiche** : se è impostato su **pubblica statistiche**, include `CREATE STATISTICS` l'istruzione per ricreare le statistiche sull'oggetto. L'opzione **Pubblica statistiche e istogrammi** consente di creare anche informazioni sugli istogrammi. Il valore predefinito è **Non pubblicare statistiche**. Per altre informazioni, vedere [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
+8.  **Pubblica statistiche** : se è impostato su **pubblica statistiche**, include l' `CREATE STATISTICS` istruzione per ricreare le statistiche sull'oggetto. L'opzione **Pubblica statistiche e istogrammi** consente di creare anche informazioni sugli istogrammi. Il valore predefinito è **Non pubblicare statistiche**. Per altre informazioni, vedere [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
-9. **Pubblica opzioni vardecimal** : consente di `vardecimal` abilitare il formato di tabella nella tabella del database di destinazione quando è abilitato nella tabella del database di origine. Il valore predefinito è **True**.  
+9. **Pubblica opzioni vardecimal** : consente di abilitare il `vardecimal` formato di tabella nella tabella del database di destinazione quando è abilitato nella tabella del database di origine. Il valore predefinito è **True**.  
   
 10. **Schema per qualifica dei nomi degli oggetti** : consente di includere il nome dello schema nel nome degli oggetti che vengono creati. Il valore predefinito è **True**.  
   
@@ -268,7 +268,7 @@ ms.locfileid: "75242113"
   
  **Opzioni tabella/vista** : le opzioni seguenti si applicano solo alle tabelle o alle viste.  
   
-1.  **Pubblica vincoli check** : consente di includere la `CHECK` creazione di vincoli nel processo di pubblicazione. Il valore predefinito è **True**. I vincoli `CHECK` richiedono che i dati immessi in una tabella rispettino una condizione specificata. Per altre informazioni, vedere [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
+1.  **Pubblica vincoli check** : consente di includere la creazione di `CHECK` vincoli nel processo di pubblicazione. Il valore predefinito è **True**. I vincoli `CHECK` richiedono che i dati immessi in una tabella rispettino una condizione specificata. Per altre informazioni, vedere [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
 2.  **Pubblica chiavi esterne** : consente di includere la creazione di chiavi esterne nel processo di pubblicazione. Il valore predefinito è **True**. Le chiavi esterne indicano e impongono le relazioni tra tabelle. Per altre informazioni, vedere [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md).  
   

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - catalog functions [ODBC]
 - functions [ODBC]
 ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 263df9986df0297c8bf1afdb35d70841835cef4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9308f9208d75287f3c93112f7f810c8ece3bc18b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62667379"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704272"
 ---
 # <a name="using-catalog-functions"></a>Utilizzo delle funzioni di catalogo
   Tutti i database presentano una struttura che contiene i dati archiviati nel database. Una definizione di tale struttura, insieme ad altre informazioni quali le autorizzazioni, è archiviata in un catalogo (implementato come un set di tabelle di sistema), noto anche come dizionario dei dati.  
@@ -43,7 +43,7 @@ ms.locfileid: "62667379"
   
      Restituisce un elenco dei cataloghi presenti in un server collegato.  
   
- Quando si dispone di un nome di server collegato e di un nome [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di catalogo, il driver ODBC di Native Client supporta il recupero di informazioni dal catalogo utilizzando un nome in due parti _linked_server_name_**.** _Catalog_ per *CatalogName* nelle funzioni del catalogo ODBC seguenti:  
+ Quando si dispone di un nome di server collegato e di un nome di catalogo, il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC di Native Client supporta il recupero di informazioni dal catalogo utilizzando un nome in due parti _linked_server_name_**.** _Catalog_ per *CatalogName* nelle funzioni del catalogo ODBC seguenti:  
   
 -   **SQLColumnPrivileges**  
   
@@ -73,7 +73,7 @@ ms.locfileid: "62667379"
   
      Deve essere presente in fase di esecuzione. sqlncli11.dll è distribuito con il driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server Native Client &#40;ODBC&#41;](sql-server-native-client-odbc.md)   
  [SQLColumnPrivileges](../../native-client-odbc-api/sqlcolumnprivileges.md)   
  [SQLColumns](../../native-client-odbc-api/sqlcolumns.md)   

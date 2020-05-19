@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider
 - SQL Server Native Client, OLE DB
 ms.assetid: da846da4-ec19-4a4f-81fb-7d5a2b2bf80a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 924c8f9dca934c81eab74c102509a8d04f66997b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4328c284d23313cf737c5cf8b39751359e568b4f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033559"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704177"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
   Il provider OLE DB di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client è un'API COM di basso livello utilizzata per l'accesso ai dati. Il provider OLE DB di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client è consigliato per lo sviluppo di strumenti, utilità o componenti di basso livello che necessitano di prestazioni elevate. Il provider OLE DB di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client un provider nativo a prestazioni elevate che accede direttamente al protocollo TDS (Tabular Data Stream) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -38,7 +38,7 @@ ms.locfileid: "63033559"
   
 -   [Oggetti di origine dati &#40;OLE DB&#41;](../../native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
--   [Comandi:](../../native-client-ole-db-commands/commands.md)  
+-   [Comandi](../../native-client-ole-db-commands/commands.md)  
   
 -   [Set di righe](../../native-client-ole-db-rowsets/rowsets.md)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "63033559"
   
 -   [Transazioni](../../native-client-ole-db-transactions/transactions.md)  
   
--   [Errors](../../native-client-ole-db-errors/errors.md)  
+-   [Errori](../../native-client-ole-db-errors/errors.md)  
   
 -   [Nomi SPN &#40;Service Principal Name&#41; nelle connessioni client &#40;OLE DB&#41;](service-principal-names-spns-in-client-connections-ole-db.md)  
   
@@ -70,9 +70,9 @@ ms.locfileid: "63033559"
   
 -   [Riferimento SQL Server Native Client &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   
--   [Procedure per OLE DB](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+-   [Procedure relative a OLE DB](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Programmazione in SQL Server Native Client](../sql-server-native-client-programming.md)  
   
   

@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - IRow interface
 ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 225a624f22f80b00a848d73f38febad60936b90a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a91faaa534c35e7affcdf11cb5174d8cb9e62fc6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62468497"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704887"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Recuperare colonne tramite IRow::GetColumns (OLE DB)
   L'interfaccia `IRow` consente accesso diretto alle colonne di una singola riga nel set di risultati. Di conseguenza, tramite `IRow` è possibile recuperare in modo efficace colonne da un set di risultati con una singola riga.  
@@ -516,7 +516,7 @@ if exists (select name from sysobjects where name = 'MyTable')
 go  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
- [Procedure per OLE DB](ole-db-how-to-topics.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Procedure relative a OLE DB](ole-db-how-to-topics.md)  
   
   

@@ -19,18 +19,18 @@ helpviewer_keywords:
 - ODBC applications, header files
 - SQLNCLI, library files
 ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 800b3e43129bba36db0836f9a58a3ad1e47b40c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a772188438d0dcd29b97e5233eac1152a2998e21
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046288"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704376"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>Utilizzo dei file di intestazione e della libreria di SQL Server Native Client
-  I file di intestazione e di libreria di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client vengono installati con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Quando si sviluppa un'applicazione, è importante copiare e installare nell'ambiente di sviluppo tutti i file necessari per lo sviluppo. Per ulteriori informazioni sull'installazione e la ridistribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di Native client, vedere [installazione di SQL Server Native Client](installing-sql-server-native-client.md).  
+  I file di intestazione e di libreria di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client vengono installati con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Quando si sviluppa un'applicazione, è importante copiare e installare nell'ambiente di sviluppo tutti i file necessari per lo sviluppo. Per ulteriori informazioni sull'installazione e la ridistribuzione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client, vedere [installazione di SQL Server Native Client](installing-sql-server-native-client.md).  
   
  I file di intestazione e di libreria di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client vengono installati nel percorso seguente:  
   
@@ -100,7 +100,7 @@ include "sqlncli.h";
   
  Per altre informazioni, vedere [Esecuzione di operazioni di copia bulk](../features/performing-bulk-copy-operations.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Compilazione di applicazioni con SQL Server Native Client](building-applications-with-sql-server-native-client.md)  
   
   

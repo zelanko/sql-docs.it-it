@@ -21,15 +21,15 @@ helpviewer_keywords:
 - ODBC error handling, statements generating messages
 - SQLExecDirect function
 ms.assetid: 672ebdc5-7fa1-4ceb-8d52-fd25ef646654
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 11235979a886e82fa09ca1d1a79fa21550965d0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6b848163d01d49d4151fa628ab81e867cb69c18
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68205694"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705395"
 ---
 # <a name="processing-statements-that-generate-messages"></a>Elaborazione di istruzioni che generano messaggi
   Le opzioni STATISTICS TIME e STATISTICS IO dell'istruzione SET [!INCLUDE[tsql](../../includes/tsql-md.md)] vengono utilizzate per ottenere informazioni utili per la diagnosi di query con esecuzione prolungata. Le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportano inoltre l'opzione SHOWPLAN per l'analisi di piani di query. È possibile impostare queste opzioni in un'applicazione ODBC eseguendo le istruzioni seguenti:  
@@ -145,7 +145,7 @@ szErrorMsg= "[Microsoft] [SQL Server Native Client][SQL Server]
   
  Se l'istruzione PRINT o RAISERROR viene restituita dopo un'istruzione SQL, ad esempio un'istruzione SELECT, le informazioni di stampa o RAISERROR vengono restituite quando si [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md)posizioni del set di risultati contenente l'errore. **SQLMoreResults** restituisce SQL_SUCCESS_WITH_INFO o SQL_ERROR a seconda della gravità del messaggio. I messaggi vengono recuperati chiamando **SQLGetDiagRec** fino a quando non viene restituito SQL_NO_DATA.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestione di errori e messaggi](handling-errors-and-messages.md)  
   
   

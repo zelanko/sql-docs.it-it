@@ -22,15 +22,15 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 - queries [SQL Server], SQL Server Management Studio
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fd16879f512bf1529bec8dab6679880cd0a6b8dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8c3e064358b58844726daa6499dc6c2ed0eeedd1
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243331"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703788"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Editor di query e di testo (SQL Server Management Studio)
   È possibile utilizzare uno degli editor di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per modificare e testare interattivamente uno script [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX o XML/A oppure per modificare un file XML o un file di testo normale. Ogni editor è supportato da un servizio specifico del linguaggio che assegna un colore alle parole chiave e controlla il codice per rilevare eventuali errori di sintassi e utilizzo. L'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] include un debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] che è possibile utilizzare per correggere i problemi nel codice [!INCLUDE[tsql](../../includes/tsql-md.md)] .  

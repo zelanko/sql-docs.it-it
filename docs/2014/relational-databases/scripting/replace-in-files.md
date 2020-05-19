@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Replace in Files dialog box
 ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5d2881ed683a067a65b3ccc068223460dd89f3f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cd79bd7e486db052391efd631c101321ff9c8157
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243675"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703738"
 ---
 # <a name="replace-in-files"></a>Sostituisci nei file
   La scheda **Sostituisci nei file** della finestra di dialogo Trova e sostituisci consente di cercare una stringa o un'espressione nel codice di un dato set di file e di modificare alcune o tutte le corrispondenze trovate. L'elenco delle corrispondenze rilevate e delle azioni eseguite viene visualizzato nella finestra per i risultati della ricerca selezionata in **Opzioni risultati**.  

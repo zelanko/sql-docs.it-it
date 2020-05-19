@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - OLE DB, date/time improvements
 ms.assetid: e65c9253-bd99-4dc3-9cb8-7613f754c966
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ef6334f6fe4671f2563add857f6dd58ce67a2840
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ba55a2a8fe0ad873c4b5433a53972c441b535333
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63237840"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704992"
 ---
 # <a name="ole-db-api-support-for-date-and-time-enhancements"></a>Supporto dell'API OLE DB per i miglioramenti relativi a data e ora
   Le caratteristiche avanzate di data e ora sono supportate dalle seguenti API OLE DB.  
@@ -34,7 +34,7 @@ ms.locfileid: "63237840"
 |IRowsetFastLoad|Questa interfaccia supporta i nuovi tipi di data/ora, ma non è stata apportata alcuna modifica all'interfaccia.|  
 |ITableDefinition::CreateTable|Per altre informazioni, vedere [Supporto dei tipi di dati per i miglioramenti relativi a data e ora OLE DB](data-type-support-for-ole-db-date-and-time-improvements.md).|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Miglioramenti relativi a data e ora &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

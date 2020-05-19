@@ -12,15 +12,15 @@ helpviewer_keywords:
 - rowsets [SQL Server], results processing
 - results [SQL Server Native Client]
 ms.assetid: 20887ac4-f649-4e7f-92e6-f929e2e70952
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9fdc66899f7d863cbfb3ae04ad0796614717a734
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6ce44134cac69b1d869c1e4ef86d77a49c23d385
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209667"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704746"
 ---
 # <a name="processing-results"></a>Risultati dell'elaborazione
   Se un oggetto set di righe viene prodotto dall'esecuzione di un comando o dalla generazione di un oggetto set di righe direttamente dal provider, il consumer deve recuperare e accedere ai dati nel set di righe.  
@@ -41,8 +41,8 @@ ms.locfileid: "63209667"
   
  Dopo aver specificato le strutture DBBINDING, viene creata una funzione di accesso (**IAccessor::CreateAccessor**). Una funzione di accesso è una raccolta di associazioni e viene utilizzata per ottenere o impostare i dati nel buffer del consumer.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di un'applicazione provider OLE DB SQL Server Native Client](creating-a-sql-server-native-client-ole-db-provider-application.md)   
- [Procedure per OLE DB](../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [Procedure relative a OLE DB](../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

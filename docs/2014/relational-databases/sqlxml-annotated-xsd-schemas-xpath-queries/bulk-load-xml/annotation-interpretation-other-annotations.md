@@ -18,15 +18,15 @@ helpviewer_keywords:
 - id-prefix annotation [SQLXML]
 - is-mapping-schema annotation
 ms.assetid: f7b4d37b-d6d3-4ac3-b2fd-a0b534a924e4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fff698fc4eb92dd1bade50274a289f861e07ede0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 169d65e801aca6ed34735649757b37a3ffe13193
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013604"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703456"
 ---
 # <a name="other-annotations-sqlxml-40"></a>Altre annotazioni (SQLXML 4.0)
   Oltre alle annotazioni descritte negli argomenti precedenti di questa sezione, il caricamento bulk XML interpreta queste altre annotazioni, come segue:  
@@ -49,7 +49,7 @@ ms.locfileid: "66013604"
  `sql:key-fields`  
  Il caricamento bulk XML ignora sempre questa annotazione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Interpretazione dell'annotazione &#40;SQLXML 4,0&#41;](annotation-interpretation-sqlxml-4-0.md)  
   
   

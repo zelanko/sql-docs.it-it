@@ -12,15 +12,15 @@ helpviewer_keywords:
 - language references [SQL Server]
 - IntelliSense [SQL Server], Parameter Info option
 ms.assetid: 56c2aac9-c65c-4679-b62c-d9f689876dde
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b842f35c2852ce6ed607e943199bb322823651b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b50c09f27b458fcb2d940a639bee9cb76c1c0044
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242012"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703783"
 ---
 # <a name="parameter-info-intellisense"></a>Informazioni parametri (IntelliSense)
   L'opzione [!INCLUDE[msCoName](../../includes/msconame-md.md)] Informazione sul parametro **di** IntelliSense consente di aprire un elenco di parametri che include informazioni relative a numero, nomi e tipi dei parametri necessari per una funzione o per una stored procedure. Il parametro in grassetto indica il parametro successivo necessario quando viene digitata una funzione o una stored procedure.  

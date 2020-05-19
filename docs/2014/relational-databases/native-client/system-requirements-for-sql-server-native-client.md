@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SQL Server Native Client, system requirements
 - SQLNCLI, system requirements
 ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 85b00f00e2c557f31a7343a99e1f2592741a6b59
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4bc3c47ea6d356279c5502eaf45abc09c307e7cd
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637791"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704134"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>Requisiti di sistema per SQL Server Native Client
   Per usare le caratteristiche di accesso ai dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio MARS, è necessario verificare che sia installato il software indicato di seguito:  
@@ -62,7 +62,7 @@ ms.locfileid: "73637791"
   
  Non sono presenti controlli `DataTypeCompatibility` per ODBC.  
   
- IDBInfo:: GetKeywords restituirà sempre un elenco di parole chiave che corrisponde alla versione del server nella connessione e non è `DataTypeCompatibility`interessato da.  
+ IDBInfo:: GetKeywords restituirà sempre un elenco di parole chiave che corrisponde alla versione del server nella connessione e non è interessato da `DataTypeCompatibility` .  
   
 |Tipo di dati|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Applicazioni OLE DB di Windows Data Access Components, MDAC e<br /><br /> SQL Server Native Client con DataTypeCompatibility=80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
@@ -72,7 +72,7 @@ ms.locfileid: "73637791"
 |nvarchar(max)|NVARCHAR|NVARCHAR|Ntext|  
 |Xml|Xml|Xml|Ntext|  
 |UDT CLR (> 8Kb)|udt|varbinary|Immagine|  
-|Data|Data|varchar|Varchar|  
+|data|data|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  
 |time|time|varchar|Varchar|  

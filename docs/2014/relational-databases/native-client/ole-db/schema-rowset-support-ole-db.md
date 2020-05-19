@@ -13,23 +13,23 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, schema rowsets
 - rowsets [OLE DB], schema
 ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 83b6ea8594d22527f2f9b87a77d70671c5724111
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9624749eff8b455c7071d395ec91c96aeae9d32a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62625961"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704237"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Supporto dei set di righe dello schema (OLE DB)
-  Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client supporta inoltre la restituzione di informazioni sullo schema [!INCLUDE[tsql](../../../includes/tsql-md.md)] da un server collegato durante l'elaborazione di query distribuite.  
+  Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client supporta inoltre la restituzione di informazioni sullo schema da un server collegato durante l'elaborazione di [!INCLUDE[tsql](../../../includes/tsql-md.md)] query distribuite.  
   
 > [!NOTE]  
 >  Benché [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporti i sinonimi, non vengono restituiti metadati per i sinonimi da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
- Nelle tabelle seguenti sono elencati i set di righe dello schema e le colonne [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di restrizione supportate dal provider OLE DB di Native Client.  
+ Nelle tabelle seguenti sono elencati i set di righe dello schema e le colonne di restrizione supportate dal [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB di Native Client.  
   
 |Set di righe dello schema|Colonne di restrizione|  
 |-------------------|-------------------------|  
@@ -54,7 +54,7 @@ ms.locfileid: "62625961"
   
  [Set di righe LINKEDSERVERS &#40;OLE DB&#41;](schema-rowsets-linkedservers-rowset.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server Native Client &#40;OLE DB&#41;](sql-server-native-client-ole-db.md)   
  [Utilizzo dei tipi definiti dall'utente (UDT)](../features/using-user-defined-types.md)  
   

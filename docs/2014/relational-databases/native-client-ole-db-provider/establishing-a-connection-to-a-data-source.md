@@ -13,18 +13,18 @@ helpviewer_keywords:
 - CoCreateInstance method
 - OLE DB data sources [SQL Server Native Client]
 ms.assetid: 7ebd1394-cc8d-4bcf-92f3-c374a26e7ba0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 263728218fd032c0814d73197cde56fc2d661e9c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c4d9ba6fb3a28bd54e51c4e87946919f0dae286
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63183743"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704748"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>Avvio di una connessione a un'origine dati
-  Per accedere al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB di Native client, il consumer deve prima creare un'istanza di un oggetto origine dati chiamando il metodo **CoCreateInstance** . Un identificatore univoco di classe (CLSID) identifica ogni provider OLE DB. Per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client, l'identificatore di classe è CLSID_SQLNCLI10. È inoltre possibile utilizzare il simbolo SQLNCLI_CLSID che verrà risolto nel provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB di Native client utilizzato nel sqlncli. h a cui si fa riferimento.  
+  Per accedere al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB di Native client, il consumer deve prima creare un'istanza di un oggetto origine dati chiamando il metodo **CoCreateInstance** . Un identificatore univoco di classe (CLSID) identifica ogni provider OLE DB. Per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client, l'identificatore di classe è CLSID_SQLNCLI10. È inoltre possibile utilizzare il simbolo SQLNCLI_CLSID che verrà risolto nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB di Native client utilizzato nel sqlncli. h a cui si fa riferimento.  
   
  L'oggetto origine dati espone l'interfaccia **IDBProperties** usata dal consumer per fornire informazioni di base sull'autenticazione, ad esempio il nome del server, il nome del database, l'ID utente e la password. Per impostare queste proprietà, viene chiamato il metodo **IDBProperties::SetProperties**.  
   
@@ -102,7 +102,7 @@ void InitializeAndEstablishConnection() {
 }  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di un'applicazione del provider OLE DB di SQL Server Native Client](creating-a-sql-server-native-client-ole-db-provider-application.md)  
   
   

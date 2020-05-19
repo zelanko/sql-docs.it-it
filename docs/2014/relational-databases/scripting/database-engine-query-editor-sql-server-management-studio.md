@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Query Editor [Database Engine], Features
 - SQL Server Management Studio [SQL Server], Database Engine Query Editor
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9ec7e26daa91723e5633a9640b99003ebc844d31
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c7737cf46d3e82eb6aef0e915d1e572ae0fca94
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244938"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703994"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Editor di query del Motore di database (SQL Server Management Studio)
   Utilizzare l'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per creare ed eseguire script contenenti istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] . L'editor supporta anche l'esecuzione di script contenenti comandi **sqlcmd** .  
@@ -71,7 +71,7 @@ ms.locfileid: "75244938"
  **Eseguire**  
  Consente di eseguire il codice selezionato o, se non è selezionata alcuna parte del codice, di eseguire tutto il codice incluso nell'editor di query.  
   
- **Debug**  
+ **Eseguire il debug**  
  Consente di abilitare il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] , che supporta azioni di debug quali l'impostazione di punti di interruzione, il controllo di variabili e l'esecuzione di codice istruzione per istruzione.  
   
  **Annulla esecuzione query**  

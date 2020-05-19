@@ -25,20 +25,20 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - named relationships [SQLXML]
 ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f27b47ae8216fa64b537d4c8b22b612c535a1869
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2997254fc20085b4e82195002a51adc6f5d0b87
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013664"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703488"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Definizione di relazioni tramite sql:relationship (SQLXML 4.0)
   Gli elementi in un documento XML possono essere correlati. È possibile nidificare gerarchicamente gli elementi e specificare relazioni ID, IDREF o IDREFS tra gli elementi.  
   
- In uno schema XSD, ad esempio, un ** \<elemento Customer>** contiene ** \<Order>** elementi figlio. Quando viene eseguito il mapping dello schema al database AdventureWorks, l' ** \<elemento Customer>** viene mappato alla tabella Sales. Customer e l' ** \<elemento Order>** viene mappato alla tabella Sales. SalesOrderHeader. Queste tabelle sottostanti, Sales.Customer e Sales.SalesOrderHeader, sono correlate in quanto i clienti effettuano ordini. L'elemento CustomerID nella tabella Sales.SalesOrderHeader è una chiave esterna che fa riferimento alla chiave primaria CustomerID nella tabella Sales.Customer. È possibile stabilire queste relazioni fra elementi dello schema di mapping tramite l'annotazione `sql:relationship`.  
+ In uno schema XSD, ad esempio, un elemento ** \< Customer>** contiene ** \< Order>** elementi figlio. Quando viene eseguito il mapping dello schema al database AdventureWorks, l'elemento ** \< Customer>** viene mappato alla tabella Sales. Customer e l'elemento ** \< Order>** viene mappato alla tabella Sales. SalesOrderHeader. Queste tabelle sottostanti, Sales.Customer e Sales.SalesOrderHeader, sono correlate in quanto i clienti effettuano ordini. L'elemento CustomerID nella tabella Sales.SalesOrderHeader è una chiave esterna che fa riferimento alla chiave primaria CustomerID nella tabella Sales.Customer. È possibile stabilire queste relazioni fra elementi dello schema di mapping tramite l'annotazione `sql:relationship`.  
   
  Nello schema XSD con annotazioni l'annotazione `sql:relationship` viene utilizzata per nidificare gerarchicamente gli elementi dello schema, sulla base di relazioni chiave primaria/chiave esterna tra le tabelle sottostanti a cui viene eseguito il mapping degli elementi. Nello specificare l'annotazione `sql:relationship`, è necessario identificare gli elementi seguenti:  
   
@@ -48,13 +48,13 @@ ms.locfileid: "66013664"
   
  Queste informazioni vengono utilizzate per generare la gerarchia appropriata.  
   
- Per fornire i nomi di tabella e le necessarie informazioni sull'unione in join, nell'annotazione `sql:relationship` vengono specificati gli attributi seguenti. Questi attributi sono validi solo con l' ** \<elemento SQL: Relationship>** :  
+ Per fornire i nomi di tabella e le necessarie informazioni sull'unione in join, nell'annotazione `sql:relationship` vengono specificati gli attributi seguenti. Questi attributi sono validi solo con l'elemento ** \< SQL: Relationship>** :  
   
  **Nome**  
  Specifica il nome univoco della relazione,  
   
  **Parent**  
- Specifica la relazione padre (tabella). Si tratta di un attributo facoltativo. Se non è specificato, il nome della tabella padre viene ottenuto dalle informazioni presenti nella gerarchia padre-figlio del documento. Se lo schema specifica due gerarchie padre-figlio che utilizzano la stessa ** \<>SQL: Relationship** ma elementi padre diversi, non è necessario specificare l'attributo parent in ** \<SQL: Relationship>**. Queste informazioni vengono ottenute dalla gerarchia nello schema.  
+ Specifica la relazione padre (tabella). Si tratta di un attributo facoltativo. Se non è specificato, il nome della tabella padre viene ottenuto dalle informazioni presenti nella gerarchia padre-figlio del documento. Se lo schema specifica due gerarchie padre-figlio che utilizzano la stessa ** \<>SQL: Relationship** ma elementi padre diversi, non è necessario specificare l'attributo parent in ** \< SQL: Relationship>**. Queste informazioni vengono ottenute dalla gerarchia nello schema.  
   
  **parent-key**  
  Specifica la chiave padre dell'elemento padre. Se la chiave padre è costituita da più colonne, i valori vengono specificati con uno spazio tra l'uno e l'altro. Tra i valori specificati per la chiave multicolonna e la chiave figlio corrispondente viene applicato un mapping posizionale.  
@@ -66,21 +66,21 @@ ms.locfileid: "66013664"
  Specifica la chiave figlio nell'elemento figlio che fa riferimento alla chiave padre nell'elemento padre. Se la chiave figlio è costituita da più attributi (colonne), i valori di chiave figlio vengono specificati con uno spazio tra l'uno e l'altro. Tra i valori specificati per la chiave multicolonna e la chiave padre corrispondente viene applicato un mapping posizionale.  
   
  **inverse**  
- Questo attributo specificato in ** \<SQL: Relationship>** viene utilizzato dagli updategram. Per ulteriori informazioni, vedere [specifica dell'attributo SQL: inverse in SQL: Relationship](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
+ Questo attributo specificato in ** \< SQL: Relationship>** viene utilizzato dagli updategram. Per ulteriori informazioni, vedere [specifica dell'attributo SQL: inverse in SQL: Relationship](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
   
- L' `sql:key-fields` annotazione deve essere specificata in un elemento che contiene un elemento figlio, che dispone di un ** \<>SQL: Relationship** definito tra l'elemento e il figlio e che non fornisce la chiave primaria della tabella specificata nell'elemento padre. Anche se lo schema non specifica ** \<SQL: Relationship>**, è necessario specificare `sql:key-fields` per produrre la gerarchia appropriata. Per ulteriori informazioni, vedere [identificazione delle colonne chiave mediante SQL: key-fields](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md).  
+ L' `sql:key-fields` annotazione deve essere specificata in un elemento che contiene un elemento figlio, che dispone di un ** \<>SQL: Relationship** definito tra l'elemento e il figlio e che non fornisce la chiave primaria della tabella specificata nell'elemento padre. Anche se lo schema non specifica ** \< SQL: Relationship>**, è necessario specificare `sql:key-fields` per produrre la gerarchia appropriata. Per ulteriori informazioni, vedere [identificazione delle colonne chiave mediante SQL: key-fields](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md).  
   
  Per produrre la nidificazione appropriata nel risultato, è consigliabile specificare `sql:key-fields` in tutti gli schemi.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per l'esecuzione di esempi SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>A. Specifica dell'annotazione sql:relationship in un elemento  
- Nello schema XSD con annotazioni ** \<** seguente sono inclusi gli elementi Customer>e ** \<Order>** . L' ** \<elemento Order>** è un elemento figlio dell'elemento ** \<Customer>** .  
+### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>R. Specifica dell'annotazione sql:relationship in un elemento  
+ Nello schema XSD con annotazioni seguente sono inclusi gli elementi ** \< Customer>** e ** \< Order>** . L'elemento ** \< Order>** è un elemento figlio dell'elemento ** \< Customer>** .  
   
- Nello schema l' `sql:relationship` annotazione viene specificata nell' ** \<ordine>** elemento figlio. La relazione stessa è definita nell'elemento ** \<>xsd: appinfo** .  
+ Nello schema l' `sql:relationship` annotazione viene specificata nell' ** \< ordine>** elemento figlio. La relazione stessa è definita nell'elemento ** \<>xsd: appinfo** .  
   
- L' ** \<elemento Relationship>** identifica CustomerID nella tabella Sales. SalesOrderHeader come chiave esterna che fa riferimento alla chiave primaria CustomerID nella tabella Sales. Customer. Gli ordini appartenenti a un cliente, pertanto, vengono visualizzati come elementi figlio dell'elemento ** \<Customer>** .  
+ L'elemento ** \< Relationship>** identifica CustomerID nella tabella Sales. SalesOrderHeader come chiave esterna che fa riferimento alla chiave primaria CustomerID nella tabella Sales. Customer. Gli ordini appartenenti a un cliente, pertanto, vengono visualizzati come elementi figlio dell'elemento ** \< Customer>** .  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -196,11 +196,11 @@ ms.locfileid: "66013664"
 ...  
 ```  
   
- Per ogni ordine nella tabella Sales. SalesOrderHeader, il documento XML include un ** \<elemento Order>** . E ogni ** \<Order>** elemento ha un elenco di ** \<prodotti>** elementi figlio, uno per ogni prodotto richiesto nell'ordine.  
+ Per ogni ordine nella tabella Sales. SalesOrderHeader, il documento XML include un elemento ** \< Order>** . E ogni ** \< Order>** elemento ha un elenco di ** \< prodotti>** elementi figlio, uno per ogni prodotto richiesto nell'ordine.  
   
  Per specificare uno schema XSD che produrrà questa gerarchia, è necessario definire due relazioni: OrderOD e ODProduct. La relazione OrderOD specifica la relazione padre-figlio tra le tabelle Sales.SalesOrderHeader e Sales.SalesOrderDetail. La relazione ODProduct specifica la relazione tra le tabelle Sales.SalesOrderDetail e Production.Product.  
   
- Nello schema seguente l' `msdata:relationship` annotazione nell'elemento ** \<Product>** specifica due valori: OrderOD e ODProduct. L'ordine in cui sono elencati gli attributi è importante.  
+ Nello schema seguente l' `msdata:relationship` annotazione nell'elemento ** \< Product>** specifica due valori: OrderOD e ODProduct. L'ordine in cui sono elencati gli attributi è importante.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -238,7 +238,7 @@ ms.locfileid: "66013664"
 </xsd:schema>  
 ```  
   
- Anziché specificare una relazione denominata, è possibile specificare una relazione anonima. In questo caso, l'intero contenuto dell' ** \<annotazione>**... /Annotation>, che descrive le due relazioni, viene visualizzato come elemento figlio di ** \<Product>**. ** \< **  
+ Anziché specificare una relazione denominata, è possibile specificare una relazione anonima. In questo caso, l'intero contenuto dell' ** \< annotazione>**... ** \< /annotation>**, che descrive le due relazioni, viene visualizzato come elemento figlio di ** \< Product>**.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -317,7 +317,7 @@ ms.locfileid: "66013664"
 ```  
   
 ### <a name="c-specifying-the-relationship-annotation-on-an-attribute"></a>C. Definizione dell'annotazione sql:relationship in un attributo  
- Lo schema in questo esempio include un \<elemento Customer> con un \<elemento CustomerID> figlio e un attributo OrderID di tipo IDREFS. L' \<elemento Customer> viene mappato alla tabella Sales. Customer nel database AdventureWorks. Per impostazione predefinita, l'ambito di questo mapping si applica a tutti gli elementi o attributi figlio `sql:relation` , a meno che non sia specificato nell'elemento o attributo figlio. in questo caso, è necessario definire la relazione chiave primaria/chiave esterna appropriata \<utilizzando l'elemento Relationship>. L'elemento o l'attributo figlio, che specifica la tabella diversa utilizzando l'annotazione `relation`, deve specificare anche l'annotazione `relationship`.  
+ Lo schema in questo esempio include un \< elemento Customer> con un \< elemento CustomerID> figlio e un attributo OrderID di tipo IDREFS. L' \< elemento customer> viene mappato alla tabella Sales. Customer nel database AdventureWorks. Per impostazione predefinita, l'ambito di questo mapping si applica a tutti gli elementi o attributi figlio, a meno che non `sql:relation` sia specificato nell'elemento o attributo figlio. in questo caso, è necessario definire la relazione chiave primaria/chiave esterna appropriata utilizzando l' \< elemento Relationship>. L'elemento o l'attributo figlio, che specifica la tabella diversa utilizzando l'annotazione `relation`, deve specificare anche l'annotazione `relationship`.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -382,11 +382,11 @@ ms.locfileid: "66013664"
 ```  
   
 ### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>D. Specifica di sql:relationship in più elementi  
- In questo esempio lo schema XSD con annotazioni contiene gli ** \<elementi Customer>**, ** \<Order>** e ** \<OrderDetail>** .  
+ In questo esempio lo schema XSD con annotazioni contiene gli elementi ** \< Customer>**, ** \< Order>** e ** \< OrderDetail>** .  
   
- L' ** \<elemento Order>** è un elemento figlio dell'elemento ** \<Customer>** . ** \<** **SQL: Relationship>specificato nell'ordine \<**>elemento figlio; gli ordini appartenenti a un cliente, pertanto, vengono visualizzati come elementi figlio del ** \<cliente>**.  
+ L'elemento ** \< Order>** è un elemento figlio dell'elemento ** \< Customer>** . il ** \<>SQL: Relationship** è specificato nell' ** \< ordine>** elemento figlio. gli ordini appartenenti a un cliente, pertanto, vengono visualizzati come elementi figlio del ** \<>Customer **.  
   
- L' ** \<elemento Order>** include l' ** \<elemento OrderDetail>** figlio. ** \<** ** \<SQL: Relationship>** viene specificato in ** \<OrderDetail>** elemento figlio, quindi i dettagli dell'ordine relativi a un ordine vengono visualizzati come elementi figlio di tale ordine>elemento.  
+ L'elemento ** \< Order>** include l'elemento ** \< OrderDetail>** figlio. ** \< SQL: Relationship>** viene specificato in ** \< OrderDetail>** elemento figlio, quindi i dettagli dell'ordine relativi a un ordine vengono visualizzati come elementi figlio di tale ** \< ordine>** elemento.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -490,7 +490,7 @@ Emp1(SalesPersonID, FirstName, LastName, ReportsTo)
 Emp2(SalesPersonID, FirstName, LastName, ReportsTo)  
 ```  
   
- Nella vista XML seguente sono presenti gli ** \<elementi Emp1>** e ** \<emp2>** mapping alle tabelle Sales. Emp1 e Sales. emp2:  
+ Nella vista XML seguente sono presenti gli elementi ** \< Emp1>** e ** \< emp2>** mapping alle tabelle Sales. Emp1 e Sales. emp2:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -524,7 +524,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
 </xsd:schema>  
 ```  
   
- Nello schema, sia l'elemento ** \<>Emp1** che `EmpType` ** \<l'elemento emp2>** sono di tipo. Il tipo `EmpType` descrive un ** \<ordine>** elemento figlio e il ** \<>SQL: Relationship **corrispondente. In questo caso, non esiste un singolo elemento padre che possa essere identificato in ** \<SQL: Relationship>** usando l'attributo **padre** . In questa situazione non viene specificato l'attributo **Parent** in ** \<SQL: Relationship>**; le informazioni sugli attributi **padre** vengono ottenute dalla gerarchia nello schema.  
+ Nello schema, sia l'elemento ** \<>Emp1** che l'elemento ** \< emp2>** sono di tipo `EmpType` . Il tipo `EmpType` descrive un ** \< ordine>** elemento figlio e il ** \<>SQL: Relationship **corrispondente. In questo caso, non esiste un singolo elemento padre che possa essere identificato in ** \< SQL: Relationship>** usando l'attributo **padre** . In questa situazione, non è necessario specificare l'attributo **Parent** in ** \< SQL: Relationship>**; le informazioni sugli attributi **padre** vengono ottenute dalla gerarchia nello schema.  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Per testare una query Xpath di esempio sullo schema  
   
@@ -560,7 +560,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
   
 3.  Copiare il codice dello schema precedente e incollarlo in un file di testo. Salvare il file con il nome relationship-noparent.xml.  
   
-4.  Copiare il modello seguente e incollarlo in un file di testo. Salvare il file con il nome relationship-noparentT.xml nella stessa directory in cui è stato salvato il file relationship-noparent.xml. La query nel modello seleziona tutti gli \<elementi> Emp1 (pertanto, l'elemento padre è Emp1).  
+4.  Copiare il modello seguente e incollarlo in un file di testo. Salvare il file con il nome relationship-noparentT.xml nella stessa directory in cui è stato salvato il file relationship-noparent.xml. La query nel modello seleziona tutti gli \< elementi> Emp1 (pertanto, l'elemento padre è Emp1).  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

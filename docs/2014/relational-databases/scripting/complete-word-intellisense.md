@@ -12,15 +12,15 @@ helpviewer_keywords:
 - text completion [IntelliSense]
 - Complete Word option [IntelliSense]
 ms.assetid: ee9c43a6-aae9-4cfa-b18e-1da9266fabcd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e9606d85d18418df94501a91ddfb888915302788
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9f321d8c048697652055723773c0a9868c5a29b1
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244924"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704018"
 ---
 # <a name="complete-word-intellisense"></a>Completa parola (IntelliSense)
   L'opzione Completa parola di [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense immette la parte rimanente di un nome di variabile, di comando o di funzione dopo che è stato digitato un numero di caratteri sufficiente per identificare il termine in modo univoco.  

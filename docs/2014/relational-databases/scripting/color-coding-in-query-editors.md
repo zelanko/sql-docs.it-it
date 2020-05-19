@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], color coding
 - color coding [Query Editor]
 ms.assetid: 802882dc-c997-4e3f-8a01-994bb43169ae
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e615a8e316cb5c8e15056eeaa111b5daf1ef5513
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 840096c197a2e827281bb0023ad03a6d407f3758
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244951"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704049"
 ---
 # <a name="color-coding-in-query-editors"></a>Codifica con colori negli editor di query
   Al testo immesso negli editor del codice viene assegnata una categoria. Ogni categoria viene identificata con un colore. I colore consentono di individuare rapidamente il testo nel codice. I commenti ad esempio vengono evidenziati con il colore verde scuro. Nella tabella seguente sono riportati i colori più comuni. È possibile visualizzare l'intero elenco dei colori e le relative categorie e configurare uno schema di colori personalizzato dal menu **Strumenti**, **Opzioni** . Per altre informazioni su come modificare i colori predefiniti, vedere [Modificare lo stile, le dimensioni e il colore del carattere](change-font-color-size-and-style.md).  

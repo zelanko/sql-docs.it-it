@@ -9,27 +9,27 @@ ms.topic: reference
 helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1aea946703b9ebe06c32fcc25044a3b68326625e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fb6c943e237e791ff4febed0ab3273eb9324662
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63199258"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704264"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Tipi CLR definiti dall'utente di grandi dimensioni (OLE DB)
   In questo argomento vengono illustrate le modifiche apportate a OLE DB in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client per supportare i tipi CLR (Common Language Runtime) definiti dall'utente di grandi dimensioni.  
   
- Per ulteriori informazioni sul supporto di tipi definiti dall'utente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR di grandi dimensioni in native client, vedere [tipi CLR definiti dall'utente di grandi dimensioni](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md). Per un esempio, vedere [Usare tipi definiti dall'utente CLR di grandi dimensioni &#40;OLE DB&#41;](../../native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
+ Per ulteriori informazioni sul supporto di tipi definiti dall'utente CLR di grandi dimensioni in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client, vedere [tipi CLR definiti dall'utente di grandi dimensioni](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md). Per un esempio, vedere [Usare tipi definiti dall'utente CLR di grandi dimensioni &#40;OLE DB&#41;](../../native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
   
 ## <a name="data-format"></a>Formato dati  
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client viene utilizzato ~0 per rappresentare la lunghezza dei valori con dimensioni illimitate nel caso di tipi di oggetti LOB. ~ 0 rappresenta anche le dimensioni dei tipi CLR definiti dall'utente che superano 8.000 byte.  
   
  Nella tabella seguente viene illustrato il mapping dei tipi di dati nei parametri e nei set di righe:  
   
-|Tipo di dati di SQL Server|Tipo di dati OLE DB|Layout in memoria|valore|  
+|Tipo di dati di SQL Server|Tipo di dati OLE DB|Layout in memoria|Valore|  
 |--------------------------|----------------------|-------------------|-----------|  
 |tipo CLR definito dall'utente|DBTYPE_UDT|BYTE[](matrice di byte\)|132 (oledb.h)|  
   
@@ -77,7 +77,7 @@ ms.locfileid: "63199258"
   
  Per i tipi definiti dall'utente vengono definite anche le colonne seguenti:  
   
-|Identificatore di colonna|Type|Descrizione|  
+|Identificatore di colonna|Tipo|Description|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|Per le colonne con tipo definito dall'utente, il nome del catalogo in cui è indicato il tipo definito dall'utente.|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|Per le colonne con tipo definito dall'utente, il nome dello schema in cui è indicato il tipo definito dall'utente.|  
@@ -102,7 +102,7 @@ ms.locfileid: "63199258"
   
  Per i tipi definiti dall'utente vengono definite le colonne aggiuntive seguenti:  
   
-|Identificatore di colonna|Type|Descrizione|  
+|Identificatore di colonna|Tipo|Description|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Per le colonne con tipo definito dall'utente, il nome del catalogo in cui è indicato il tipo definito dall'utente.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Per le colonne con tipo definito dall'utente, il nome dello schema in cui è indicato il tipo definito dall'utente.|  
@@ -169,7 +169,7 @@ ms.locfileid: "63199258"
   
  Quando `DataTypeCompatibility` (SSPROP_INIT_DATATYPECOMPATIBILITY) è impostato su "80", i tipi definiti dall'utente di grandi dimensioni vengono visualizzati ai client nello stesso modo in cui vengono visualizzati ai client legacy.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Tipi CLR definiti dall'utente di grandi dimensioni](../features/large-clr-user-defined-types.md)  
   
   

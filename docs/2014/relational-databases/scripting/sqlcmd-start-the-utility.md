@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 80f8f63b4ddb3e8641ef503a615d57c63be35164
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 08ba399bd9ebe4a8ba4c064aa2e0bce39b82d533
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243273"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703676"
 ---
 # <a name="start-the-sqlcmd-utility"></a>Avvio dell'utilità sqlcmd
   Per iniziare a utilizzare `sqlcmd`, è innanzitutto necessario avviare l'utilità e connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile connettersi a un'istanza predefinita oppure a un'istanza denominata. Il primo passaggio consiste nell'avvio dell'utilità `sqlcmd`.  
@@ -44,11 +44,11 @@ ms.locfileid: "75243273"
   
 ### <a name="to-start-the-sqlcmd-utility-and-connect-to-a-named-instance-of-sql-server"></a>Per avviare l'utilità sqlcmd e connettersi a un'istanza denominata di SQL Server  
   
-1.  Aprire una finestra del prompt dei comandi e `sqlcmd -S`Digitare *myServer\instanceName*. Sostituire *server\nomeIstanza* con il nome del computer e dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui ci si vuole connettere.  
+1.  Aprire una finestra del prompt dei comandi e digitare `sqlcmd -S` *myServer\instanceName*. Sostituire *server\nomeIstanza* con il nome del computer e dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui ci si vuole connettere.  
   
 2.  Premere INVIO.  
   
-     Il `sqlcmd` prompt (1>) indica che si è connessi all'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Il `sqlcmd` prompt (1>) indica che si è connessi all'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
     > [!NOTE]  
     >  Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] immesse vengono archiviate in un buffer. Vengono eseguite in batch quando viene rilevato il comando GO.  

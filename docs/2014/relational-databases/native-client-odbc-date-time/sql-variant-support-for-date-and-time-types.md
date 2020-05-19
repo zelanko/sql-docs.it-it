@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - sql_variant data type
 ms.assetid: 12ff1ea6-e2cc-40e6-910c-3126974a90b3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0cbde879e2b7f215c5044936dfbdacab9196f02d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4dcca38ab5b7b67ca92cf35b49852bcd88437328
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63215966"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705424"
 ---
 # <a name="sql_variant-support-for-date-and-time-types"></a>Supporto sql_variant per i tipi di data e ora
   In questo argomento viene illustrato come il tipo di dati `sql_variant` supporta la funzionalità avanzata di data e ora.  
@@ -48,16 +48,16 @@ ms.locfileid: "63215966"
 |SQL_C_BIT|bit|SQL_CA_SS_VARIANT_SQL_TYPE viene ignorato.|  
 |SQL_C_UTINYINT|TINYINT|SQL_CA_SS_VARIANT_SQL_TYPE viene ignorato.|  
 |SQL_C_BINARY|varbinary|SQL_CA_SS_VARIANT_SQL_TYPE non è impostato.|  
-|SQL_C_BINARY|time|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIME2<br /><br /> Scale è impostato su SQL_DESC_PRECISION (il parametro *DecimalDigits* di `SQLBindParameter`).|  
-|SQL_C_BINARY|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIMESTAMPOFFSET<br /><br /> Scale è impostato su SQL_DESC_PRECISION (il parametro *DecimalDigits* di `SQLBindParameter`).|  
-|SQL_C_TYPE_DATE|Data|SQL_CA_SS_VARIANT_SQL_TYPE viene ignorato.|  
+|SQL_C_BINARY|time|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIME2<br /><br /> Scale è impostato su SQL_DESC_PRECISION (il parametro *DecimalDigits* di `SQLBindParameter` ).|  
+|SQL_C_BINARY|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIMESTAMPOFFSET<br /><br /> Scale è impostato su SQL_DESC_PRECISION (il parametro *DecimalDigits* di `SQLBindParameter` ).|  
+|SQL_C_TYPE_DATE|data|SQL_CA_SS_VARIANT_SQL_TYPE viene ignorato.|  
 |SQL_C_TYPE_TIME|time(0)|SQL_CA_SS_VARIANT_SQL_TYPE viene ignorato.|  
-|SQL_C_TYPE_TIMESTAMP|datetime2|Scale è impostato su SQL_DESC_PRECISION (il parametro *DecimalDigits* di `SQLBindParameter`).|  
-|SQL_C_NUMERIC|decimal|La precisione è impostata su SQL_DESC_PRECISION ( *ColumnSize* il parametro ColumnSize `SQLBindParameter`di).<br /><br /> Set di scalabilità da SQL_DESC_SCALE (il parametro *DecimalDigits* di SQLBindParameter).|  
+|SQL_C_TYPE_TIMESTAMP|datetime2|Scale è impostato su SQL_DESC_PRECISION (il parametro *DecimalDigits* di `SQLBindParameter` ).|  
+|SQL_C_NUMERIC|decimal|La precisione è impostata su SQL_DESC_PRECISION (il parametro *ColumnSize* di `SQLBindParameter` ).<br /><br /> Set di scalabilità da SQL_DESC_SCALE (il parametro *DecimalDigits* di SQLBindParameter).|  
 |SQL_C_SS_TIME2|time|SQL_CA_SS_VARIANT_SQL_TYPE viene ignorato|  
 |SQL_C_SS_TIMESTAMPOFFSET|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE viene ignorato|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Miglioramenti di data e ora &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

@@ -12,20 +12,20 @@ helpviewer_keywords:
 - resynchronizing rows
 - data updates [SQL Server], OLE DB
 ms.assetid: d2d30505-a878-4aa9-b821-53d8118a45a5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7b041dc07afb30fff0c03d96fec9cd8a5d62f965
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39579347453fd7e40e4d8c03fe2ebb8eca3fe5a9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63229018"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704725"
 ---
 # <a name="resynchronizing-rows"></a>Risincronizzazione delle righe
-  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native **IRowsetResynch** client supporta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo IRowsetResynch nei set di righe supportati dal cursore. **IRowsetResynch** non è disponibile su richiesta. Il consumer deve richiedere l'interfaccia prima di aprire il set di righe.  
+  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client supporta solo **IRowsetResynch** nei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] set di righe supportati dal cursore. **IRowsetResynch** non è disponibile su richiesta. Il consumer deve richiedere l'interfaccia prima di aprire il set di righe.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Aggiornamento dei dati dei set di righe](updating-data-in-rowsets.md)  
   
   

@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_collen function
 ms.assetid: faaf1f7a-81f2-4852-a178-56602c33673a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a66a88a61a581dff262fb8585b5cf32830f8eeed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e46f3c241d44033194c484b8955389fba972fd22
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62718098"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705318"
 ---
 # <a name="bcp_collen"></a>bcp_collen
   Imposta la lunghezza dei dati nella variabile di programma per la copia bulk corrente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -55,17 +55,17 @@ idxServerCol
  *idxServerCol*  
  Posizione ordinale della colonna nella tabella in cui vengono copiati i dati. La prima colonna è 1. La posizione ordinale di una colonna viene segnalata da [SQLColumns](../native-client-odbc-api/sqlcolumns.md).  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SUCCEED o FAIL.  
   
 ## <a name="remarks"></a>Osservazioni  
- La funzione **bcp_collen** consente di modificare la lunghezza dei dati nella variabile di programma per una determinata colonna durante la copia dei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dati in con [bcp_sendrow](bcp-sendrow.md).  
+ La funzione **bcp_collen** consente di modificare la lunghezza dei dati nella variabile di programma per una determinata colonna durante la copia dei dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con [bcp_sendrow](bcp-sendrow.md).  
   
  Inizialmente, la lunghezza dei dati viene determinata quando viene chiamato [bcp_bind](bcp-bind.md) . Se la lunghezza dei dati viene modificata tra le chiamate a **bcp_sendrow** e non viene utilizzato alcun prefisso di lunghezza o carattere di terminazione, è possibile chiamare **bcp_collen** per reimpostare la lunghezza. La chiamata successiva a **bcp_sendrow** utilizza la lunghezza impostata dalla chiamata al **bcp_collen**.  
   
  È necessario chiamare **bcp_collen** una volta per ogni colonna della tabella di cui si desidera modificare la lunghezza dei dati.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzioni di copia bulk](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

@@ -15,18 +15,18 @@ helpviewer_keywords:
 - stored procedures [OLE DB], calling
 - SQL Server Native Client OLE DB provider, stored procedures
 ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7385dddea48813615a851979e526af5f03a23332
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33fedf2957203b1a750aba8fd086087c03ffc934
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206582"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704189"
 ---
 # <a name="calling-a-stored-procedure-ole-db"></a>Esecuzione di una chiamata a una stored procedure (OLE DB)
-  Una stored procedure può avere zero o più parametri. Può inoltre restituire un valore. Quando si utilizza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] il provider di OLE DB di Native client, è possibile passare i parametri di un stored procedure:  
+  Una stored procedure può avere zero o più parametri. Può inoltre restituire un valore. Quando si utilizza il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native client, è possibile passare i parametri di un stored procedure:  
   
 -   Specificando il valore dei dati a livello di codice.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68206582"
 5.  Eseguire il comando usando **ICommand::Execute**.  
   
 ## <a name="methods-of-calling-a-stored-procedure"></a>Metodi per l'esecuzione di una chiamata a una stored procedure  
- Quando si esegue un stored procedure in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB di Native Client supporta:  
+ Quando si esegue un stored procedure in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB di Native Client supporta:  
   
 -   Sequenza di escape ODBC CALL.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "68206582"
  Per un'applicazione di esempio che illustra una sequenza di escape RPC, vedere [Eseguire una stored procedure &#40;con la sintassi RPC&#41; ed elaborare i codici restituiti e i parametri di output &#40;OLE DB&#41;](../../native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Istruzione Transact-SQL EXECUTE  
- La sequenza di escape ODBC CALL e la sequenza di escape RPC rappresentano i metodi preferiti per la chiamata a una stored procedure rispetto all'istruzione [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql). Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native client utilizza il meccanismo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] RPC di per ottimizzare l'elaborazione del comando. Questo protocollo RPC migliora le prestazioni riducendo l'elaborazione dei parametri e l'analisi delle istruzioni eseguite sul server.  
+ La sequenza di escape ODBC CALL e la sequenza di escape RPC rappresentano i metodi preferiti per la chiamata a una stored procedure rispetto all'istruzione [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql). Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native client utilizza il meccanismo RPC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per ottimizzare l'elaborazione del comando. Questo protocollo RPC migliora le prestazioni riducendo l'elaborazione dei parametri e l'analisi delle istruzioni eseguite sul server.  
   
  Di seguito è riportato un esempio dell'istruzione  **EXECUTE** di [!INCLUDE[tsql](../../../includes/tsql-md.md)]:  
   
@@ -125,7 +125,7 @@ ms.locfileid: "68206582"
 EXECUTE SalesByCategory 'Produce', '1995'  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Stored procedure](stored-procedures.md)  
   
   

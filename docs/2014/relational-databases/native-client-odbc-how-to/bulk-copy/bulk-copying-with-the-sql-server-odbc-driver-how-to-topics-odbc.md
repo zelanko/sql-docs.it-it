@@ -10,20 +10,20 @@ helpviewer_keywords:
 - bulk copy [ODBC]
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 6037b2c2-62b5-4a9e-b36d-83e5b315eef2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dcc35614e156301efa5892d59a09156c189e0fac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 515f84836f55fe1aa97fbb03a22ee6cc2799710c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72688875"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705237"
 ---
 # <a name="bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc"></a>Procedure per l'esecuzione di una copia bulk con il driver ODBC di SQL Server (ODBC)
   Se utilizzata con Microsoft SQL Server 2005, il driver ODBC SQL Server supporta le stesse funzioni di copia bulk supportate dall'API DB-Library.  
   
- Per informazioni su una modifica di rilievo nella copia bulk a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]partire da, vedere [esecuzione di operazioni di copia bulk &#40;&#41;ODBC ](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
+ Per informazioni su una modifica di rilievo nella copia bulk a partire da [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , vedere [esecuzione di operazioni di copia bulk &#40;&#41;ODBC ](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   

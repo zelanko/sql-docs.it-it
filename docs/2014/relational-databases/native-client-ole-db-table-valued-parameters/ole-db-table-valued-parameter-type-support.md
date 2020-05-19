@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (OLE DB)
 ms.assetid: 147036a0-260e-4f81-8b3b-89209e023a32
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 27ae90e05784c18d85f84daa9955818d3133ad07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87dcc1df096d72610be680013776748aca1a11ca
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046505"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704597"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>Supporto del tipo di parametro con valori di tabella OLE DB
   In questo argomento viene descritto il supporto del tipo OLE DB per i parametri con valori di tabella.  
@@ -59,7 +59,7 @@ CoType RowsetTVP
 ## <a name="properties"></a>Proprietà  
  Per informazioni sulle proprietà di OLE DB che supportano i parametri con valori di tabella, vedere [Supporto dei tipi di parametri con valori di tabella OLE DB &#40;proprietà&#41;](ole-db-table-valued-parameter-type-support-properties.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Parametri con valori di tabella &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)   
  [Usare parametri con valori di tabella &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

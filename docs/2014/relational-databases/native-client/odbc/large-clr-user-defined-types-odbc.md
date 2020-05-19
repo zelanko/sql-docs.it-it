@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ODBC, large user-defined types
 - large user-defined types [ODBC]
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5af4f85652fc1a8a333912c741f96df014655ebe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df59c3a49715791e2f525e4bc5a69ff8991cac44
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144308"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704279"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Tipi CLR definiti dall'utente di grandi dimensioni (ODBC)
   In questo argomento vengono illustrate le modifiche apportate a ODBC in SQL Server Native Client per supportare i tipi CLR (Common Language Runtime) definiti dall'utente (UDT) di grandi dimensioni.  
@@ -34,7 +34,7 @@ ms.locfileid: "63144308"
   
  Nella tabella seguente viene illustrato il mapping dei tipi di dati nei parametri e nei set di risultati:  
   
-|Tipo di dati di SQL Server|Tipo di dati SQL|valore|  
+|Tipo di dati di SQL Server|Tipo di dati SQL|Valore|  
 |--------------------------|-------------------|-----------|  
 |tipo CLR definito dall'utente|SQL_SS_UDT|-151 (sqlncli.h)|  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63144308"
   
 |Tipo di dati SQL|Layout in memoria|Tipo di dati C|Valore (sqlext.h)|  
 |-------------------|-------------------|-----------------|------------------------|  
-|SQL_SS_UDT|SQLCHAR * (unsigned char \*)|SQL_C_BINARY|SQL_BINARY (-2)|  
+|SQL_SS_UDT|SQLCHAR * (unsigned char \* )|SQL_C_BINARY|SQL_BINARY (-2)|  
   
 ## <a name="descriptor-fields-for-parameters"></a>Campi di descrizione per i parametri  
  Di seguito sono riportate le informazioni restituite nei campi IPD:  
@@ -210,7 +210,7 @@ ms.locfileid: "63144308"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  I valori restituiti per i tipi definiti dall'utente sono i seguenti:  
   
-|Tipo di dati SQL|Type|Sottotipo|Length|Precision|Scalabilità|  
+|Tipo di dati SQL|Tipo|Sottotipo|Length|Precision|Scalabilità|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (lunghezza minore o uguale a 8.000 byte)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (lunghezza maggiore di 8.000 byte)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -230,7 +230,7 @@ ms.locfileid: "63144308"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  I valori consentiti per i tipi definiti dall'utente sono i seguenti:  
   
-|Tipo di dati SQL|Type|Sottotipo|Length|Precision|Scalabilità|  
+|Tipo di dati SQL|Tipo|Sottotipo|Length|Precision|Scalabilità|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (lunghezza minore o uguale a 8.000 byte)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (lunghezza maggiore di 8.000 byte)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -238,7 +238,7 @@ ms.locfileid: "63144308"
 ### <a name="sqlspecialcolumns"></a>SQLSpecialColumns  
  I valori restituiti per i tipi di dati definiti dall'utente delle colonne DATA_TYPE, TYPE_NAME, COLUMN_SIZE, BUFFER_LENGTH e DECIMAL_DIGTS sono uguali a quelli descritti nella sezione "Metadati della colonna restituiti da SQLColumns e SQLProcedureColumns (metadati del catalogo)" riportata in precedenza in questo argomento.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Tipi CLR definiti dall'utente di grandi dimensioni](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

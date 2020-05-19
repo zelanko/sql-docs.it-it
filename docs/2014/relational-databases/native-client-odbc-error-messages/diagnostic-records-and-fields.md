@@ -17,15 +17,15 @@ helpviewer_keywords:
 - fields [ODBC]
 - status information [ODBC]
 ms.assetid: 4949530c-62d1-4f1a-b592-144244444ce0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 173d0287ba1b63e8811e2d340448d03c3bbf961d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3d7d839fb55aff82c9d4f2ca12a316fa7401a502
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63213929"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705403"
 ---
 # <a name="diagnostic-records-and-fields"></a>Campi e record di diagnostica
   I record di diagnostica sono associati a handle descrittore, di istruzione, di connessione o di ambiente ODBC. Quando una funzione ODBC genera un codice restituito diverso da SQL_SUCCESS o SQL_INVALID_HANDLE, l'handle chiamato dalla funzione presenta record di diagnostica associati che contengono messaggi informativi o di errore. Questi record vengono mantenuti fino a quando non vengono eliminati per effetto di una chiamata a un'altra funzione utilizzando l'handle specifico. Non esiste un limite nel numero di record di diagnostica che possono essere associati a un handle.  
@@ -44,9 +44,9 @@ ms.locfileid: "63213929"
   
  **SQLGetDiagField** viene elaborato da Gestione driver ODBC utilizzando le informazioni sugli errori memorizzate nella cache dal driver sottostante. Gestione driver ODBC memorizza nella cache i campi di diagnostica specifici del driver solo una volta stabilita una connessione. **SQLGetDiagField** restituisce SQL_ERROR se viene chiamato per ottenere i campi di diagnostica specifici del driver prima che una connessione venga completata correttamente. Se una funzione di connessione ODBC restituisce SQL_SUCCESS_WITH_INFO, i campi di diagnostica specifici del driver della funzione non sono ancora disponibili. È possibile iniziare a chiamare **SQLGetDiagField** per i campi di diagnostica specifici del driver solo dopo aver eseguito un'altra chiamata di funzione ODBC dopo la funzione Connect.  
   
- La maggior parte degli errori [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] segnalati dal driver ODBC di Native client può essere diagnosticata efficacemente utilizzando solo le informazioni restituite da **SQLGetDiagRec**. In alcuni casi, tuttavia, le informazioni restituite dai campi di diagnostica specifici del driver sono importanti per la diagnosi di un errore. Quando si codifica un gestore degli errori ODBC per le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applicazioni che utilizzano il driver ODBC di Native client, è consigliabile utilizzare anche **SQLGetDiagField** per recuperare almeno i campi SQL_DIAG_SS_MSGSTATE e SQL_DIAG_SS_SEVERITY specifici del driver. Se un determinato errore può essere generato in diverse posizioni nel codice [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SQL_DIAG_SS_MSGSTATE indica esattamente al supporto tecnico Microsoft il punto in cui è stato generato, fornendo in tal modo un'informazione che in alcuni casi facilita la diagnosi di un problema.  
+ La maggior parte degli errori segnalati dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client può essere diagnosticata efficacemente utilizzando solo le informazioni restituite da **SQLGetDiagRec**. In alcuni casi, tuttavia, le informazioni restituite dai campi di diagnostica specifici del driver sono importanti per la diagnosi di un errore. Quando si codifica un gestore degli errori ODBC per le applicazioni che utilizzano il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client, è consigliabile utilizzare anche **SQLGetDiagField** per recuperare almeno i campi SQL_DIAG_SS_MSGSTATE e SQL_DIAG_SS_SEVERITY specifici del driver. Se un determinato errore può essere generato in diverse posizioni nel codice [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SQL_DIAG_SS_MSGSTATE indica esattamente al supporto tecnico Microsoft il punto in cui è stato generato, fornendo in tal modo un'informazione che in alcuni casi facilita la diagnosi di un problema.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestione di errori e messaggi](handling-errors-and-messages.md)  
   
   

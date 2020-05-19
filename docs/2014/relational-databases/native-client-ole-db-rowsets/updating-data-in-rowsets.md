@@ -14,20 +14,20 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, data updates
 - data updates [SQL Server], OLE DB
 ms.assetid: 37769b1c-c480-419a-8c54-5cc420bf73db
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f68e4f2be641d6c6aeaf8bbbfcc8cad81ab1a39a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d1c1e70e704c50b619a34b28a899ce10316d446
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62938682"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704715"
 ---
 # <a name="updating-data-in-rowsets"></a>Aggiornamento dei dati dei set di righe
-  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client aggiorna i dati quando un consumer aggiorna un set di righe modificabile che contiene i dati. Un set di righe modificabile viene creato quando il consumer richiede il supporto per l'interfaccia **IRowsetChange** o **IRowsetUpdate**.  
+  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client aggiorna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i dati quando un consumer aggiorna un set di righe modificabile che contiene i dati. Un set di righe modificabile viene creato quando il consumer richiede il supporto per l'interfaccia **IRowsetChange** o **IRowsetUpdate**.  
   
- Tutti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i set di righe modificabili dal provider di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB utilizzano i cursori per supportare il set di righe. La proprietà del set di righe DBPROP_LOCKMODE modifica il comportamento di controllo della concorrenza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nei cursori e determina il comportamento di recupero delle righe del set di righe e di generazione degli errori di integrità dei dati nei set di righe aggiornabili.  
+ Tutti i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] set di righe modificabili dal provider di Native Client OLE DB utilizzano [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i cursori per supportare il set di righe. La proprietà del set di righe DBPROP_LOCKMODE modifica il comportamento di controllo della concorrenza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nei cursori e determina il comportamento di recupero delle righe del set di righe e di generazione degli errori di integrità dei dati nei set di righe aggiornabili.  
   
  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client supporta la sincronizzazione delle righe prima o dopo un aggiornamento.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62938682"
   
 -   [Risincronizzazione delle righe](updating-data-in-rowsets-resynchronizing-rows.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Set di righe](rowsets.md)  
   
   

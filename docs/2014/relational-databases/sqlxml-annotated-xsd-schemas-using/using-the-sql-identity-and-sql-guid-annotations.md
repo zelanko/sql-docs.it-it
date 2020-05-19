@@ -20,18 +20,18 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], IDENTITY-type columns
 - updategrams [SQLXML], GUID values
 ms.assetid: 7661dfd0-6573-4692-a8f1-3597adcd33c4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c6135f1b46e9b2312f01b9ff7a7ebdd08d2d34a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48e36f7532a3f81df1784b3e2108d3c06ed84987
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013642"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703468"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>Utilizzo delle annotazioni sql:identity e sql:guid
-  È possibile specificare le `sql:identity` annotazioni e `sql:guid` in uno schema XSD su qualsiasi nodo che esegue il mapping a una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]colonna del database in. Il formato dell'updategram supporta gli attributi `updg:at-identity` e `updg:guid` che invece non vengono supportati dal formato DiffGram. L'attributo `updg:at-identity` definisce il comportamento relativo all'aggiornamento di una colonna di tipo IDENTITY. L'attributo `updg:guid` consente di ottenere un valore GUID da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di utilizzarlo nell'updategram. Per ulteriori informazioni ed esempi reali, vedere [inserimento di dati mediante UPDATEGRAM XML &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
+  È possibile specificare le `sql:identity` `sql:guid` annotazioni e in uno schema XSD su qualsiasi nodo che esegue il mapping a una colonna del database in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il formato dell'updategram supporta gli attributi `updg:at-identity` e `updg:guid` che invece non vengono supportati dal formato DiffGram. L'attributo `updg:at-identity` definisce il comportamento relativo all'aggiornamento di una colonna di tipo IDENTITY. L'attributo `updg:guid` consente di ottenere un valore GUID da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di utilizzarlo nell'updategram. Per ulteriori informazioni ed esempi reali, vedere [inserimento di dati mediante UPDATEGRAM XML &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
   
  Le annotazioni `sql:identity` e `sql:guid` estendono questa funzionalità ai DiffGram.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66013642"
  Le annotazioni `sql:identity` e `sql:guid` possono essere definite su un elemento di contenuto complesso.  
   
 ## <a name="sqlidentity-annotation"></a>Annotazione sql:identity  
- È possibile specificare l'annotazione `sql:identity` nello schema XSD su qualsiasi nodo che esegue il mapping a una colonna di database di tipo IDENTITY. Il valore specificato per questa annotazione definisce il modo in cui viene aggiornata la colonna di tipo IDENTITY, usando il valore fornito nell'updategram per modificare la colonna o ignorando il valore, nel qual caso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]viene usato un valore generato da per questa colonna.  
+ È possibile specificare l'annotazione `sql:identity` nello schema XSD su qualsiasi nodo che esegue il mapping a una colonna di database di tipo IDENTITY. Il valore specificato per questa annotazione definisce il modo in cui viene aggiornata la colonna di tipo IDENTITY, usando il valore fornito nell'updategram per modificare la colonna o ignorando il valore, nel qual caso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene usato un valore generato da per questa colonna.  
   
  All'annotazione `sql:identity` è possibile assegnare due valori:  
   
@@ -61,6 +61,6 @@ ms.locfileid: "66013642"
  Specifica che il valore GUID generato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere utilizzato per la colonna specifica nell'operazione di aggiornamento.  
   
  useValue  
- Specifica che per la colonna deve essere utilizzato il valore specificato nell'updategram. Questo è il valore predefinito.  
+ Specifica che per la colonna deve essere utilizzato il valore specificato nell'updategram. Si tratta del valore predefinito.  
   
   

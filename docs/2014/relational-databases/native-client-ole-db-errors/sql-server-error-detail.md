@@ -14,15 +14,15 @@ helpviewer_keywords:
 - OLE DB error handling, error details
 - ISQLServerErrorInfo interface
 ms.assetid: 51500ee3-3d78-47ec-b90f-ebfc55642e06
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5c7535e4579204834fc8024b7c37c46675320b8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3d8c392312f98140f2a75becb175fab26c4e590
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63156388"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704953"
 ---
 # <a name="sql-server-error-detail"></a>Dettagli relativi agli errori SQL Server
   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client definisce l'interfaccia di errore specifica del provider [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md). L'interfaccia restituisce maggiori dettagli relativi agli errori [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e risulta molto utile quando operazioni di esecuzione di comandi o del set di righe non riescono.  
@@ -44,7 +44,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
   
  I membri di struttura SSERRORINFO vengono interpretati dal consumer come segue.  
   
-|Membro|Descrizione|  
+|Membro|Description|  
 |------------|-----------------|  
 |*pwszMessage*|Messaggio di errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Identico alla stringa restituita in **IErrorInfo::GetDescription**.|  
 |*pwszServer*|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la sessione.|  
@@ -54,7 +54,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
 |*bClass*|Gravità di un messaggio di errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |*wLineNumber*|Quando è applicabile, restituisce il numero di riga di una stored procedure in cui si è verificato l'errore.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Errori](errors.md)   
  [RAISERROR &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/raiserror-transact-sql)  
   

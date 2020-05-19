@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, query notifications
 - consumer notification for rowset changes [SQL Server Native Client]
 ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7a149e8940896210a408b36c7cb06814646fd322
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72eb5468976a6a51d8e76a6cfdbca5118ebd1dd2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206605"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704326"
 ---
 # <a name="working-with-query-notifications"></a>Utilizzo delle notifiche delle query
   Le notifiche delle query sono state introdotte in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Basate sull'infrastruttura di Service Broker introdotta in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], tali notifiche consentono di comunicare alle applicazioni che i dati sono stati modificati. Questa caratteristica è particolarmente utile per le applicazioni che forniscono una cache di informazioni provenienti da un database, ad esempio un'applicazione Web, e devono essere notificate quando i dati di origine vengono modificati.  
@@ -45,7 +45,7 @@ ms.locfileid: "68206605"
   
  Le notifiche vengono inviate una sola volta. Per la notifica continua delle modifiche dei dati, è necessario creare una nuova sottoscrizione rieseguendo la query al termine dell'elaborazione di ogni notifica.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Le applicazioni client native ricevono in genere notifiche tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)] il comando [Receive](/sql/t-sql/statements/receive-transact-sql) per leggere le notifiche dalla coda associata al servizio specificato nelle opzioni di notifica.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Le applicazioni client native ricevono in genere notifiche tramite il [!INCLUDE[tsql](../../../includes/tsql-md.md)] comando [Receive](/sql/t-sql/statements/receive-transact-sql) per leggere le notifiche dalla coda associata al servizio specificato nelle opzioni di notifica.  
   
 > [!NOTE]  
 >  I nomi di tabella devono essere qualificati nelle query per le quali è necessaria la notifica, ad esempio `dbo.myTable`, e devono essere qualificati con nomi in due parti. La sottoscrizione non è valida se vengono utilizzati nomi in tre o quattro parti.  
@@ -68,16 +68,16 @@ CREATE SERVICE myService ON QUEUE myQueue
  Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB di Native Client supporta la notifica del consumer per la modifica del set di righe Il consumer riceve una notifica a ogni fase di modifica dei set di righe e a ogni tentativo di modifica.  
   
 > [!NOTE]  
->  Il passaggio di una query di notifica al server con **ICommand:: Execute** è l'unico modo valido per sottoscrivere le notifiche [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] delle query con il provider di OLE DB di Native Client.  
+>  Il passaggio di una query di notifica al server con **ICommand:: Execute** è l'unico modo valido per sottoscrivere le notifiche delle query con il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client.  
   
 ### <a name="the-dbpropset_sqlserverrowset-property-set"></a>Set di proprietà DBPROPSET_SQLSERVERROWSET  
  Per supportare le notifiche di query tramite OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client aggiunge le nuove proprietà seguenti al set di proprietà DBPROPSET_SQLSERVERROWSET.  
   
-|Nome|Type|Descrizione|  
+|Nome|Type|Description|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|Numero di secondi durante i quali la notifica di query deve rimanere attiva.<br /><br /> Il valore predefinito è 432000 secondi (5 giorni). Il valore minimo è 1 secondo e il valore massimo è 2^31-1 secondi.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Testo del messaggio di notifica. Tale testo è definito dall'utente e non presenta un formato predefinito.<br /><br /> Per impostazione predefinita, la stringa è vuota. È possibile specificare un messaggio utilizzando da 1 a 2000 caratteri.|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|Opzioni di notifica delle query. Queste vengono specificate in una stringa con sintassi del*valore* del *nome*=. L'utente è responsabile della creazione del servizio e della lettura delle notifiche all'esterno della coda.<br /><br /> Il valore predefinito è una stringa vuota.|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|Opzioni di notifica delle query. Queste vengono specificate in una stringa con sintassi del valore del *nome* = *value* . L'utente è responsabile della creazione del servizio e della lettura delle notifiche all'esterno della coda.<br /><br /> Il valore predefinito è una stringa vuota.|  
   
  Il commit della sottoscrizione di notifica viene sempre eseguito, indipendentemente dall'esecuzione dell'istruzione in una transazione utente o in modalità di commit automatico o a prescindere se la transazione in cui è stata eseguita l'istruzione sia stata sottoposta a commit o a rollback. La notifica server viene generata in seguito a una delle condizioni di notifica non valide seguenti: modifica dello schema o dei dati sottostanti o raggiungimento del periodo di timeout, a seconda dell'evento che si verifica per primo. Le registrazioni della notifica vengono eliminate subito dopo essere state generate. In seguito alla ricezione delle notifiche, è pertanto necessario che venga effettuata nuovamente la sottoscrizione se si desidera ottenere ulteriori aggiornamenti.  
   
@@ -133,7 +133,7 @@ RECEIVE * FROM MyQueue
   
  L'invio di una query per la notifica inviata dallo stesso utente nello stesso contesto di database e ha lo stesso modello, gli stessi valori dei parametri, lo stesso ID di notifica e lo stesso percorso di recapito di una sottoscrizione attiva esistente, rinnoverà la sottoscrizione esistente, reimpostando il nuovo timeout specificato. Ciò significa che se viene richiesta una notifica per query identiche, verrà inviata solo una notifica. Questa restrizione è applicabile a una query duplicata in un batch o a una query in una stored procedure chiamata più volte.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzionalità di SQL Server Native Client](sql-server-native-client-features.md)  
   
   

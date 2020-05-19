@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - transact sql scripts
 ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6d9fb152507979232d27308d107278d4b6d3bccb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c6d747fe98e08ee21305525302563d1c8025aa2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243204"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703683"
 ---
 # <a name="run-transact-sql-script-files-using-sqlcmd"></a>Esecuzione di file script Transact-SQL mediante sqlcmd
   È possibile utilizzare `sqlcmd` per eseguire un file script [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un file script [!INCLUDE[tsql](../../includes/tsql-md.md)] è un file di testo che può contenere una combinazione di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)], comandi di `sqlcmd` e variabili di scripting.  
