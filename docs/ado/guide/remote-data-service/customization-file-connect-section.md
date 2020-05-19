@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connect section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1de3710590cf49de30ff8e79a6ff829b124c42dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9dab615fd861252832abe83d4b0ae736e2189180
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922801"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749975"
 ---
 # <a name="customization-file-connect-section"></a>Sezione sulla connessione del file di personalizzazione
 Il comportamento predefinito del gestore è negare tutte le connessioni. La sezione **Connect** specifica le eccezioni al comportamento. Se, ad esempio, tutte le sezioni di **connessione** sono assenti o vuote, per impostazione predefinita non è possibile effettuare alcuna connessione.  
@@ -51,7 +51,7 @@ connectionString
   
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 |Parte|Descrizione|  
 |----------|-----------------|  
@@ -60,7 +60,7 @@ connectionString
 |**Accesso**|Stringa letterale che indica che si tratta di una voce di accesso.|  
 |**_accessRight_**|Uno dei seguenti diritti di accesso:<br /><br /> -   **NoAccess** : l'utente non può accedere all'origine dati.<br />-   **ReadOnly** -l'utente può leggere l'origine dati.<br />-   **ReadWrite** -l'utente può leggere o scrivere nell'origine dati.|  
   
- Se si desidera consentire qualsiasi connessione (in effetti, disabilitando il comportamento predefinito del gestore), impostare la voce di accesso nella sezione **Connetti predefinito** su `Access=ReadWrite`ed eliminare o impostare come commento qualsiasi altra sezione dell' _identificatore_ di **connessione** .  
+ Se si desidera consentire qualsiasi connessione (in effetti, disabilitando il comportamento predefinito del gestore), impostare la voce di accesso nella sezione **Connetti predefinito** su `Access=ReadWrite` ed eliminare o impostare come commento qualsiasi altra sezione dell' _identificatore_ di **connessione** .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Sezione log file di personalizzazione](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   

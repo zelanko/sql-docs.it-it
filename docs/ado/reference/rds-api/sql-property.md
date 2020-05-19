@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - SQL property [RDS]
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f70eba6b5f53be7068708fdd8b139f0add10be90
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eb860ed19386b73d90fc26dab8fa96f4b9672a73
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963345"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750724"
 ---
 # <a name="sql-property"></a>Proprietà SQL
 Indica la stringa di query utilizzata per recuperare il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -44,7 +44,7 @@ Run time: DataControl.SQL = "QueryString"
  Variabile oggetto che rappresenta un Servizi Desktop remoto **. Oggetto DataControl** .  
   
 ## <a name="remarks"></a>Osservazioni  
- In generale, si tratta di un'istruzione SQL (che `"Select * from NewTitles"`usa il dialetto del server di database), ad esempio. Per garantire che i record vengano abbinati e aggiornati accuratamente, una query aggiornabile deve contenere un campo diverso da un campo binario lungo o un campo calcolato.  
+ In generale, si tratta di un'istruzione SQL (che usa il dialetto del server di database), ad esempio `"Select * from NewTitles"` . Per garantire che i record vengano abbinati e aggiornati accuratamente, una query aggiornabile deve contenere un campo diverso da un campo binario lungo o un campo calcolato.  
   
  La proprietà **SQL** è facoltativa se un oggetto business sul lato server personalizzato recupera i dati per il client.  
   

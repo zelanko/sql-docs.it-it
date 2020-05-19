@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - ReadyState property [ADO]
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8a2a3d22f30a865687e38aedfaf6e688e677efae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c5e1eb89c0e4c7dcbef736d2968a4ffd97a37b93
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963587"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751213"
 ---
 # <a name="readystate-property-rds"></a>Proprietà ReadyState (Servizi Desktop remoto)
 Indica lo stato di un oggetto [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) quando recupera i dati nell'oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -29,7 +29,7 @@ Indica lo stato di un oggetto [DataControl](../../../ado/reference/rds-api/datac
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce uno dei valori seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**adcReadyStateLoaded**|La query corrente è ancora in esecuzione e non è stata recuperata alcuna riga. Il **Recordset** dell'oggetto **DataControl** non è disponibile per l'utilizzo.|  
 |**adcReadyStateInteractive**|Un set iniziale di righe recuperato dalla query corrente è stato archiviato nel **Recordset** dell'oggetto **DataControl** e disponibile per l'utilizzo. È ancora in corso il recupero delle righe rimanenti.|  

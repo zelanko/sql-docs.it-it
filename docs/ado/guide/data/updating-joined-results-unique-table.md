@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - updating JOINed results (Unique Table)
 ms.assetid: d52e6926-5c22-43dc-9f32-7b32c1a071e2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b951587fcc00788e92555eed208ea7f99b525a6a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3d6076fc4c3566d13dfe4a583aefcb0e3e1ba1f6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923650"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750206"
 ---
 # <a name="updating-joined-results-unique-table"></a>Aggiornamento dei risultati uniti in join: tabella univoca
 ADO consente di controllare attentamente le modifiche apportate a una determinata tabella di base in un recordset formato da un'operazione di JOIN in più tabelle di base utilizzando la proprietà dinamica della tabella univoca. Per informazioni dettagliate sull'utilizzo di una tabella univoca, vedere gli argomenti di riferimento per gli sviluppatori ADO sulle proprietà dinamiche della tabella univoca e della risincronizzazione degli aggiornamenti.  

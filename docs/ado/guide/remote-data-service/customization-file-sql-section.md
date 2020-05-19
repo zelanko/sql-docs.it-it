@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQL section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6163a5b5fd0999e17e17961639e0a1fee3e8fa4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 934b982004bf27e28a8daeed09061101886ce444
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922792"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749873"
 ---
 # <a name="customization-file-sql-section"></a>Sezione SQL del file di personalizzazione
 La sezione **SQL** può contenere una nuova stringa SQL che sostituisce la stringa di comando del client. Se nella sezione non è presente alcuna stringa SQL, la sezione verrà ignorata.  
@@ -28,7 +28,7 @@ La sezione **SQL** può contenere una nuova stringa SQL che sostituisce la strin
   
  La nuova stringa SQL può essere *parametrizzata*. Ovvero, i parametri della sezione **SQL** stringa SQL (designata dal carattere "?") possono essere sostituiti dagli argomenti corrispondenti in un *identificatore* nella stringa di comando del client (designato da un elenco delimitato da virgole tra parentesi). L'identificatore e l'elenco di argomenti si comportano come una chiamata di funzione.  
   
- Si supponga, ad esempio, che la stringa `"CustomerByID(4)"`di comando del client sia, `[SQL CustomerByID]`che l'intestazione della sezione SQL sia e `"SELECT * FROM Customers WHERE CustomerID = ?".` che la nuova stringa `"SELECT * FROM Customers WHERE CustomerID = 4"` di sezione SQL sia il gestore a generare e utilizzare tale stringa per eseguire una query sull'origine dati.  
+ Si supponga, ad esempio, che la stringa di comando del client sia `"CustomerByID(4)"` , che l'intestazione della sezione SQL sia `[SQL CustomerByID]` e che la nuova stringa di sezione SQL sia `"SELECT * FROM Customers WHERE CustomerID = ?".` il gestore `"SELECT * FROM Customers WHERE CustomerID = 4"` a generare e utilizzare tale stringa per eseguire una query sull'origine dati.  
   
  Se la nuova istruzione SQL è la stringa null (""), la sezione verrà ignorata.  
   
