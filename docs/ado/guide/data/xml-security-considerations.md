@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XML security in ADO
 ms.assetid: fadbd38e-6e7b-4b81-96ea-85169c664374
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fa0e9e2df1e8ba3f44b10e662d25e536ac7962f8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ab98aaf7bb2a0f4887df5a1c2276fe0df8862972
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923351"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748218"
 ---
 # <a name="xml-security-considerations"></a>Considerazioni sulla sicurezza per XML
 I metodi ADO Save e Open sull'oggetto recordset non sono considerati operazioni sicure per l'esecuzione in Internet Explorer. Pertanto, se questi metodi vengono utilizzati in un codice di script in esecuzione in un'applicazione o in un controllo ospitato in un browser, la configurazione di sicurezza del browser avrà effetto sul comportamento.  

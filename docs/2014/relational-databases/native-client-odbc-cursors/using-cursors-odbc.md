@@ -13,15 +13,15 @@ helpviewer_keywords:
 - cursors [ODBC]
 - ODBC cursors
 ms.assetid: 51322f92-0d76-44c9-9c33-9223676cf1d3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bc53253c93f5f52c6bbe00941eadbf14b65d5f64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 190efb4a3c5343eab9f8654009a4a7b3c6d2a6f2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206826"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705546"
 ---
 # <a name="using-cursors-odbc"></a>Uso dei cursori (ODBC)
   ODBC supporta un modello di cursore che consente:  
@@ -64,7 +64,7 @@ ms.locfileid: "68206826"
   
 -   [Aggiornamenti posizionati &#40;ODBC&#41;](positioned-updates-odbc.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
  [Chiudi &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/close-transact-sql)   
  [Cursori](../../relational-databases/cursors.md)   

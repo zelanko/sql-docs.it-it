@@ -15,14 +15,14 @@ helpviewer_keywords:
 - EOF property [ADO]
 - BOF property [ADO]
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4932d3349c2d4e2948ddd28d9df3a30424064dcb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9496a4e2115cb686764981e8a5fae3ecfe59401e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920380"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748740"
 ---
 # <a name="bof-eof-properties-ado"></a>Proprietà BOF ed EOF (ADO)
 -   **BOF** Indica che la posizione del record corrente è prima del primo record in un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -49,8 +49,8 @@ ms.locfileid: "67920380"
   
 ||MoveFirst<br /><br /> MoveLast|MovePrevious<br /><br /> Sposta < 0|Sposta 0|MoveNext<br /><br /> Sposta > 0|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**BOF**=**true**, **EOF**=**false**|Consentito|Errore|Errore|Consentito|  
-|**BOF**=**false**, **EOF**=**true**|Consentito|Consentito|Errore|Errore|  
+|**BOF** = **True**, **EOF** = **false**|Consentito|Errore|Errore|Consentito|  
+|**BOF** = **False**, **EOF** = **true**|Consentito|Consentito|Errore|Errore|  
 |Entrambi **true**|Errore|Errore|Errore|Errore|  
 |Entrambi **false**|Consentito|Consentito|Consentito|Consentito|  
   

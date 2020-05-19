@@ -10,18 +10,18 @@ helpviewer_keywords:
 - date/time [ODBC]
 - ODBC, date/time improvements
 ms.assetid: e31d5ca5-2103-498f-954c-1ee93e217186
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d56689bb045a6540bfdfbb9c7147dc34db110bde
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 521017e07cf2304186ee0238e72f3274bb3f95c9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63207002"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705510"
 ---
 # <a name="date-and-time-improvements-odbc"></a>Miglioramenti relativi a data e ora (ODBC)
-  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sono stati introdotti nuovi tipi di dati di data e ora. In questa sezione viene descritto il modo in cui questi nuovi tipi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono esposti come estensioni in Native Client. Per una panoramica del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporto di Native Client per i nuovi tipi di dati di data e ora, vedere [miglioramenti di data e ora](../native-client/features/date-and-time-improvements.md). Per un esempio che illustra il supporto ODBC per data/ora, vedere [usare i tipi di data e ora](../native-client-odbc-how-to/use-date-and-time-types.md).  
+  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sono stati introdotti nuovi tipi di dati di data e ora. In questa sezione viene descritto il modo in cui questi nuovi tipi vengono esposti come estensioni in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Per una panoramica del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporto di Native Client per i nuovi tipi di dati di data e ora, vedere [miglioramenti di data e ora](../native-client/features/date-and-time-improvements.md). Per un esempio che illustra il supporto ODBC per data/ora, vedere [usare i tipi di data e ora](../native-client-odbc-how-to/use-date-and-time-types.md).  
   
  Per altre informazioni generali sui tipi di dati di data e ora, vedere [datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql).  
   
@@ -47,7 +47,7 @@ ms.locfileid: "63207002"
  [Supporto delle API ODBC per le funzionalità avanzate di data e ora](odbc-api-support-for-enhanced-date-and-time-features.md)  
  Vengono elencate le funzioni ODBC che supportano la funzionalità avanzata di data e ora.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

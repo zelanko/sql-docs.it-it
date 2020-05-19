@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional data [ADO]
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 61f3e34af2a9331118b41657cf958021b972b04a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dcd4839fc984dacddc79f54b350a98cdbe53355b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923139"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747999"
 ---
 # <a name="working-with-multidimensional-data"></a>Utilizzo dei dati multidimensionali
 Un *celle* è il risultato di una query sui dati multidimensionali. È costituito da una raccolta di assi, in genere non più di quattro assi e in genere solo due o tre. Un *asse* è una raccolta di membri di una o più dimensioni, utilizzata per individuare o filtrare valori specifici in un cubo.  
@@ -40,7 +40,7 @@ Un *celle* è il risultato di una query sui dati multidimensionali. È costituit
   
 -   Measures-Sales, PercentChange, BudgetedSales  
   
--   Products  
+-   Prodotti  
   
  Il seguente insieme di celle rappresenta le vendite per 1991 per tutti i prodotti:  
   

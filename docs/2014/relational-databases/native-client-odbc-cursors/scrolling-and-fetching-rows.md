@@ -17,15 +17,15 @@ helpviewer_keywords:
 - fetching [ODBC]
 - ODBC cursors, scrolling rows
 ms.assetid: 9109f10d-326b-4a6d-8c97-831f60da8c4c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a0c0f7f2cad7eaecc212e2283fab7fc7d69f2ee7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a8b21784d186be2c989adaacdc691da9a495ca09
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63207121"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705525"
 ---
 # <a name="scrolling-and-fetching-rows"></a>Scorrimento e recupero di righe
   Per utilizzare un cursore scorrevole, un'applicazione ODBC deve effettuare le operazioni seguenti:  
@@ -58,7 +58,7 @@ ms.locfileid: "63207121"
   
 -   [Applicazione di segnalibri alle righe in ODBC](scrolling-and-fetching-rows-bookmarking-rows-in-odbc.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzo di cursori &#40;&#41;ODBC](using-cursors-odbc.md)  
   
   

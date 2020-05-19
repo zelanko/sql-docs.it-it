@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional schemas and data
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2e4681bb9e1fd1028ee1ddc2bd7f72efc03fb6c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a4a2f6dbd2c5d075bb888e61bb01e1094c8ef5c0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923183"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748083"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Panoramica di schemi e dati multidimensionali
 ## <a name="understanding-multidimensional-schemas"></a>Informazioni sugli schemi multidimensionali  
@@ -53,7 +53,7 @@ Hamburg, Munich, Stuttgart}
 ### <a name="hierarchies"></a>Gerarchie  
  Le gerarchie definiscono le modalità di rollup o raggruppamento dei livelli di una dimensione. Una dimensione può avere più di una gerarchia. Nella dimensione Geography esiste una gerarchia naturale:  
   
-### <a name="levels"></a>Levels  
+### <a name="levels"></a>Livelli  
  Nella dimensione Geography di esempio illustrata nella figura precedente, ogni casella rappresenta un livello nella gerarchia.  
   
  Ogni livello dispone di un set di membri, come indicato di seguito:  
@@ -68,7 +68,7 @@ Hamburg, Munich, Stuttgart}
   
 -   Città`= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
   
-### <a name="members"></a>Members  
+### <a name="members"></a>Membri  
  I membri a livello foglia di una gerarchia non hanno elementi figlio e i membri a livello radice non hanno elementi padre. Tutti gli altri membri hanno almeno un elemento padre e almeno un elemento figlio. Ad esempio, un attraversamento parziale dell'albero gerarchico nella dimensione Geography produce le relazioni padre-figlio seguenti:  
   
 -   `{All} (parent of) {Europe, North America}`  

@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - metadata [ODBC]
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9b4e7650f6b36ddbfb8c06ebe6c9f776cfee5ea0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fcac538ee01da719d43015408337f63a09f15d18
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032334"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705438"
 ---
 # <a name="parameter-and-result-metadata"></a>Metadati per parametri e risultati
   In questo argomento viene descritto ciò che viene restituito nel campo di descrizione del parametro di implementazione (IPD, Implementation Parameter Descriptor) e in quello di descrizione della riga di implementazione (IRD, Implementation Row Descriptor) per i tipi di dati date e time.  
@@ -66,7 +66,7 @@ ms.locfileid: "63032334"
   
  Quando SQL_CA_SS_SERVER_TYPE viene impostato da una chiamata a SQLSetDescField, il relativo valore deve essere SQL_SS_TYPE_DEFAULT, SQL_SS_TYPE_SMALLDATETIME o SQL_SS_TYPE_DATETIME. In caso contrario, viene restituito SQL_ERROR e viene registrato un record di diagnostica con SQLState HY092 e con il messaggio "Identificatore di opzione o di attributo non valido".  
   
- L'attributo SQL_CA_SS_SERVER_TYPE può essere utilizzato dalle applicazioni che dipendono da funzionalità supportate da `datetime` e `smalldatetime` ma non da `datetime2`. Ad esempio, `datetime2` richiede l'utilizzo delle funzioni `dateadd` e **datediif** , mentre `datetime` e `smalldatetime` consentono anche operatori aritmetici. Nella maggior parte delle applicazioni è consigliabile evitare l'uso di questo attributo.  
+ L'attributo SQL_CA_SS_SERVER_TYPE può essere utilizzato dalle applicazioni che dipendono da funzionalità supportate da `datetime` e `smalldatetime` ma non da `datetime2`. Ad esempio, `datetime2` richiede l'utilizzo delle `dateadd` funzioni e **datediif** , mentre `datetime` e `smalldatetime` consentono anche operatori aritmetici. Nella maggior parte delle applicazioni è consigliabile evitare l'uso di questo attributo.  
   
 ## <a name="information-returned-in-ird-fields"></a>Informazioni restituite nei campi IRD  
  Di seguito sono riportate le informazioni restituite nei campi IRD:  
@@ -92,7 +92,7 @@ ms.locfileid: "63032334"
 |SQL_DESC_TYPE_NAME|`date`|`time`|`smalldatetime`|`datetime`|`datetime2`|datetimeoffset|  
 |SQL_DESC_UNSIGNED|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Metadati &#40;&#41;ODBC](../../database-engine/dev-guide/metadata-odbc.md)  
   
   

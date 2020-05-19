@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - log file space in RDS [ADO]
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c8dc0799fbeba24ad4725d25647ef471edad8fb7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1eca3db07301ca45c898f21f558339e5f2ab93e1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922551"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747874"
 ---
 # <a name="minimizing-log-file-space-usage"></a>Riduzione al minimo dell'utilizzo dello spazio per il file di log
 Un file di log può essere riempito rapidamente (arrestando così il server) se è presente un volume elevato di attività in un database SQL Server. È possibile impostare il file di log in modo da **troncare il Checkpoint** per estendere significativamente la durata del file di log per un database.  

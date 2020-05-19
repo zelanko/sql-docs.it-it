@@ -9,18 +9,18 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [ODBC], C to SQL
 ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8179b9452852777bb6d2a06018d0bf86598a5bf8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43d16368d1f550ccf534a1a6e9804c7ce18b096c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63207011"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705488"
 ---
 # <a name="conversions-from-c-to-sql"></a>Conversioni da tipi di dati C a tipi di dati SQL
-  Questo argomento elenca i problemi da considerare quando si esegue la conversione da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi C a tipi di data/ora.  
+  Questo argomento elenca i problemi da considerare quando si esegue la conversione da tipi C a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di data/ora.  
   
  Le conversioni descritte nella tabella seguente sono valide se effettuate sul client. Nei casi in cui il client specifica la precisione in secondi frazionari per un parametro che differisce da quello definito sul server, la conversione client potrebbe riuscire ma il server restituirà un errore durante la chiamata di `SQLExecute` o `SQLExecuteDirect`. In particolare, ODBC considera errore qualsiasi troncamento dei secondi frazionari, mentre il comportamento di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prevede l'arrotondamento, utilizzato, ad esempio, quando si va da `datetime2(6)` a `datetime2(2)`. I valori della colonna di tipo datetime vengono arrotondati a 1/300° di un secondo e le colonne smalldatetime contengono secondi impostati su zero dal server.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "63207011"
 |13|Se si verifica un troncamento con perdita di dati, viene generato un record di diagnostica con SQLSTATE 22001 e il messaggio "Troncamento a destra della stringa di dati".<br /><br /> Il numero di cifre per i secondi frazionari (scala) è determinato dalla dimensione della colonna di destinazione in base a quanto segue:<br /><br /> **Tipo:** SQL_C_TYPE_TIMESTAMP<br /><br /> Scala implicita<br /><br /> 0<br /><br /> 19<br /><br /> Scala implicita<br /><br /> 1.. 9<br /><br /> 21..29<br /><br /> Per SQL_C_TYPE_TIMESTAMP, tuttavia, se i secondi frazionari possono essere rappresentati con tre cifre senza perdita di dati e la dimensione della colonna è almeno 23, vengono generate esattamente tre cifre di secondi frazionari. Questo comportamento assicura la compatibilità con le versioni precedenti per le applicazioni sviluppate utilizzando driver ODBC meno recenti.<br /><br /> Per dimensioni di colonna maggiori dell'intervallo specificato nella tabella, si presuppone una scala 9. Questa conversione deve consentire fino a nove cifre per i secondi frazionari, il massimo consentito da ODBC.<br /><br /> Una dimensione della colonna pari a zero implica una dimensione illimitata per i tipi di carattere a lunghezza variabile in ODBC (9 cifre, a meno che non si applichi la regola delle 3 cifre per SQL_C_TYPE_TIMESTAMP). La specifica di una dimensione della colonna pari a zero con un tipo di carattere a lunghezza fissa è un errore.|  
 |N/D|Viene mantenuto il comportamento di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni precedenti.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Miglioramenti di data e ora &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - metadata [ODBC]
 - catalog metadata [ODBC]
 ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c2784b7915d96665cae814e0dff46b2f2135bc52
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 783843e9bc25b0f6f1771fe7459de85b8cb56431
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62511525"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705448"
 ---
 # <a name="catalog-metadata"></a>Metadati del catalogo
   In questo argomento vengono descritti i metadati delle colonne restituiti da `SQLColumns` e `SQLProcedureColumns` e i metadati dei tipi di dati restituiti da `SQLGetTypeInfo`.  
@@ -63,7 +63,7 @@ ms.locfileid: "62511525"
 |INTERVAL_PRECISION|NULL|NULL|NULL|NULL|NULL|NULL|  
 |USERTYPE|0|0|12|22|0|0|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Metadati &#40;&#41;ODBC](../../database-engine/dev-guide/metadata-odbc.md)  
   
   

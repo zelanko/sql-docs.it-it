@@ -12,15 +12,15 @@ helpviewer_keywords:
 - ODBC applications, cursors
 - ODBC cursors, cursor behaviors
 ms.assetid: e70960e1-2085-46ed-9d55-aeb8c3532c84
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 92ceb297f1004770903f4eadd7323bfef98e7cd1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66a4fe9d231ea4d2a2231bdde65267a9cd47e4af
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62711466"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705586"
 ---
 # <a name="cursor-properties"></a>Proprietà del cursore
   Le caratteristiche generali di un cursore vengono determinate impostando il tipo di cursore ODBC o il funzionamento del cursore SQL-92/ISO. Negli argomenti seguenti vengono descritti ulteriori attributi di istruzione e di connessione che influiscono sul comportamento di un cursore.  
@@ -31,7 +31,7 @@ ms.locfileid: "62711466"
   
 -   [Livello di isolamento delle transazioni di cursore](cursor-transaction-isolation-level.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzo di cursori &#40;&#41;ODBC](../using-cursors-odbc.md)  
   
   

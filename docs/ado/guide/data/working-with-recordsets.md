@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO]
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a3025140929d7a7cf281f72c035bf79e0a5883b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 07f970dd557d381280f5a9dbdd52eb015de0df75
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923412"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748338"
 ---
 # <a name="working-with-recordsets"></a>Utilizzo dei recordset
 L'oggetto **Recordset** dispone di funzionalità predefinite che consentono di riorganizzare l'ordine dei dati nel set di risultati, di cercare un record specifico in base ai criteri forniti dall'utente e anche di ottimizzare le operazioni di ricerca usando gli indici. Se queste funzionalità sono disponibili per l'uso dipendono dal provider e in alcuni casi, ad esempio quella della proprietà [index](../../../ado/reference/ado-api/index-property.md) , ovvero la struttura dell'origine dati stessa.  
@@ -33,7 +33,7 @@ L'oggetto **Recordset** dispone di funzionalità predefinite che consentono di r
   
  Se si imposta la proprietà **Sort** su una stringa vuota, le righe vengono reimpostate sull'ordine originale ed eliminano gli indici temporanei. Gli indici esistenti non verranno eliminati.  
   
- Si supponga che un **Recordset** contenga tre campi denominati *FirstName*, *middleInitial*e *LastName*. Impostare la proprietà **Sort** sulla stringa "`lastName DESC, firstName ASC`", che ordina il **Recordset** in base al cognome in ordine decrescente e quindi in base al nome in ordine crescente. Il secondo iniziale viene ignorato.  
+ Si supponga che un **Recordset** contenga tre campi denominati *FirstName*, *middleInitial*e *LastName*. Impostare la proprietà **Sort** sulla stringa " `lastName DESC, firstName ASC` ", che ordina il **Recordset** in base al cognome in ordine decrescente e quindi in base al nome in ordine crescente. Il secondo iniziale viene ignorato.  
   
  Nessun campo a cui viene fatto riferimento in una stringa di criteri di ordinamento può essere denominato "ASC" o "DESC" perché tali nomi sono in conflitto con le parole chiave **ASC** e **desc**. Assegnare un alias a un campo con un nome in conflitto usando la parola chiave **As** nella query che restituisce il **Recordset**.  
   
@@ -48,18 +48,18 @@ L'oggetto **Recordset** dispone di funzionalità predefinite che consentono di r
   
  Il metodo **Find** limita la ricerca al contenuto di un campo. Il metodo **Seek** richiede un indice e presenta anche altre limitazioni. Se è necessario eseguire la ricerca in più campi che non sono la base di un indice o se il provider non supporta gli indici, è possibile limitare i risultati utilizzando la proprietà **Filter** dell'oggetto **Recordset** .  
   
-### <a name="find"></a>Find  
+### <a name="find"></a>Trova  
  Il metodo **Find** esegue la ricerca di un **Recordset** per la riga che soddisfa un criterio specificato. Facoltativamente, è possibile specificare la direzione della ricerca, la riga iniziale e l'offset dalla riga iniziale. Se il criterio viene raggiunto, la posizione della riga corrente viene impostata sul record trovato; in caso contrario, la posizione viene impostata sull'estremità (o inizio) del **Recordset**, a seconda della direzione di ricerca.  
   
  Per il criterio è possibile specificare solo un nome di colonna singola. In altre parole, questo metodo non supporta le ricerche multicolonna.  
   
- L'operatore di confronto per il criterio può essere**>**"" (maggiore di),**\<**"" (minore di), "=" (uguale), ">=" (maggiore o uguale a), "<=" (minore o uguale a), "<>" (non uguale) o "like" (criteri di ricerca).  
+ L'operatore di confronto per il criterio può essere " **>** " (maggiore di), " **\<** " (minore di), "=" (uguale), ">=" (maggiore o uguale a), "<=" (minore o uguale a), "<>" (non uguale) o "like" (criteri di ricerca).  
   
  Il valore del criterio può essere una stringa, un numero a virgola mobile o una data. I valori stringa sono delimitati da virgolette singole o contrassegni "#" (simbolo di cancelletto), ad esempio "state =' WA '" o "state = #WA #". I valori di data sono delimitati dai contrassegni "#" (simbolo di cancelletto), ad esempio "start_date > #7/22/97 #".  
   
- Se l'operatore di confronto è "like", il valore stringa può contenere un asterisco (*) per trovare una o più occorrenze di qualsiasi carattere o sottostringa. Ad esempio, "state like\*am" corrisponde a Maine e Massachusetts. È anche possibile usare gli asterischi iniziali e finali per trovare una sottostringa contenuta all'interno dei valori. Ad esempio, "state like '\*As\*'" corrisponde a Alaska, Arkansas e Massachusetts.  
+ Se l'operatore di confronto è "like", il valore stringa può contenere un asterisco (*) per trovare una o più occorrenze di qualsiasi carattere o sottostringa. Ad esempio, "state like am" \* corrisponde a Maine e Massachusetts. È anche possibile usare gli asterischi iniziali e finali per trovare una sottostringa contenuta all'interno dei valori. Ad esempio, "state like ' \* As \* '" corrisponde a Alaska, Arkansas e Massachusetts.  
   
- Gli asterischi possono essere utilizzati solo alla fine di una stringa di criteri o insieme sia all'inizio che alla fine di una stringa di criteri, come illustrato in precedenza. Non è possibile usare l'asterisco come carattere jolly (' * Str ') o carattere jolly incorporato (\*' s'). Verrà generato un errore.  
+ Gli asterischi possono essere utilizzati solo alla fine di una stringa di criteri o insieme sia all'inizio che alla fine di una stringa di criteri, come illustrato in precedenza. Non è possibile usare l'asterisco come carattere jolly (' * Str ') o carattere jolly incorporato (' \* s'). Verrà generato un errore.  
   
 ### <a name="seek-and-index"></a>Seek e index  
  Utilizzare il metodo **Seek** insieme alla proprietà **index** se il provider sottostante supporta indici nell'oggetto **Recordset** . Utilizzare il metodo [Supports](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** per determinare se il provider sottostante supporta **Seek**e il metodo **Supports (adIndex)** per determinare se il provider supporta gli indici. Ad esempio, il [provider di OLE DB per Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) supporta la **ricerca** e l' **Indice**.  
@@ -83,16 +83,16 @@ L'oggetto **Recordset** dispone di funzionalità predefinite che consentono di r
  Per rimuovere un filtro da un **Recordset**, utilizzare la costante **adFilterNone** . L'impostazione della proprietà **Filter** su una stringa di lunghezza zero ("") ha lo stesso effetto dell'utilizzo della costante **adFilterNone** .  
   
 ### <a name="filtering-with-a-criteria-string"></a>Filtraggio con una stringa di criteri  
- La stringa dei criteri è costituita da clausole nel formato *FieldName operator value* (ad `"LastName = 'Smith'"`esempio,). È possibile creare clausole composte concatenando singole clausole con **and** (ad `"LastName = 'Smith' AND FirstName = 'John'"`esempio,) e **or** (ad `"LastName = 'Smith' OR LastName = 'Jones'"`esempio,). Usare le linee guida seguenti per le stringhe dei criteri:  
+ La stringa dei criteri è costituita da clausole nel formato *FieldName operator value* (ad esempio, `"LastName = 'Smith'"` ). È possibile creare clausole composte concatenando singole clausole con **and** (ad esempio, `"LastName = 'Smith' AND FirstName = 'John'"` ) e **or** (ad esempio, `"LastName = 'Smith' OR LastName = 'Jones'"` ). Usare le linee guida seguenti per le stringhe dei criteri:  
   
 -   *FieldName* deve essere un nome di campo valido del **Recordset**. Se il nome del campo contiene spazi, è necessario racchiudere il nome tra parentesi quadre.  
   
--   L' *operatore* deve essere uno dei seguenti: **\<**, **>**, ** \< **, **>=**, **<>**, **=** o **like**.  
+-   L' *operatore* deve essere uno dei seguenti: **\<** , **>** , **\<=** , **>=** , **<>** , **=** o **like**.  
   
--   *Value* è il valore con cui si confronteranno i valori dei campi (ad `'Smith'`esempio `#8/24/95#` `12.345`,,, `$50.00`o). Usare le virgolette singole (') con le stringhe e i`#`segni di cancelletto () con le date. Per i numeri, è possibile usare separatori decimali, simboli del dollaro e notazione scientifica. Se *operator* è **simile a**, *value* può utilizzare caratteri jolly. Solo l'asterisco (\*) e il segno di percentuale (%) i caratteri jolly sono consentiti e devono essere l'ultimo carattere della stringa. Il *valore* non può essere null.  
+-   *Value* è il valore con cui si confronteranno i valori dei campi (ad esempio,,, `'Smith'` `#8/24/95#` `12.345` o `$50.00` ). Usare le virgolette singole (') con le stringhe e i segni di cancelletto ( `#` ) con le date. Per i numeri, è possibile usare separatori decimali, simboli del dollaro e notazione scientifica. Se *operator* è **simile a**, *value* può utilizzare caratteri jolly. Solo l'asterisco ( \* ) e il segno di percentuale (%) i caratteri jolly sono consentiti e devono essere l'ultimo carattere della stringa. Il *valore* non può essere null.  
   
     > [!NOTE]
-    >  Per includere virgolette singole (') nel *valore*del filtro, usare due virgolette singole per rappresentarne una. Ad esempio, per filtrare in modo da essere impostata su *Malley*, `"col1 = 'O''Malley'"`la stringa di criteri deve essere. Per includere virgolette singole sia all'inizio che alla fine del valore del filtro, racchiudere la stringa nei segni di cancelletto (#). Ad esempio, per applicare un filtro su *"1"*, la stringa di `"col1 = #'1'#"`criteri deve essere.  
+    >  Per includere virgolette singole (') nel *valore*del filtro, usare due virgolette singole per rappresentarne una. Ad esempio, per filtrare in modo da essere impostata su *Malley*, la stringa di criteri deve essere `"col1 = 'O''Malley'"` . Per includere virgolette singole sia all'inizio che alla fine del valore del filtro, racchiudere la stringa nei segni di cancelletto (#). Ad esempio, per applicare un filtro su *"1"*, la stringa di criteri deve essere `"col1 = #'1'#"` .  
   
  Non esiste alcuna precedenza tra **and** e **or**. Le clausole possono essere raggruppate tra parentesi. Tuttavia, non è possibile raggruppare le clausole unite da un oggetto **o** , quindi unire il gruppo a un'altra clausola con e, come indicato di seguito.  
   
@@ -106,7 +106,7 @@ L'oggetto **Recordset** dispone di funzionalità predefinite che consentono di r
 (LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')  
 ```  
   
- In una clausola **like** è possibile usare un carattere jolly all'inizio e alla fine del modello (ad esempio, `LastName Like '*mit*'`) o solo alla fine del pattern (ad esempio, `LastName Like 'Smit*'`).  
+ In una clausola **like** è possibile usare un carattere jolly all'inizio e alla fine del modello (ad esempio, `LastName Like '*mit*'` ) o solo alla fine del pattern (ad esempio, `LastName Like 'Smit*'` ).  
   
 ### <a name="filtering-with-a-constant"></a>Filtraggio con una costante  
  Per filtrare i **Recordset**sono disponibili le costanti seguenti.  

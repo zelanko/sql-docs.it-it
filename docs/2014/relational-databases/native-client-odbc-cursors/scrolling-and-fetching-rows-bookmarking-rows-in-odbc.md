@@ -13,15 +13,15 @@ helpviewer_keywords:
 - ODBC cursors, scrolling rows
 - bookmarks [ODBC]
 ms.assetid: 9cfcd243-c9d4-4c2a-abc4-399dbabe5f6b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7f54f9c61bb78a3c0e52adc491b95e03ad85ecd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6489fcee1a8faa3f1205c8418e329182c41e376c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63207275"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705549"
 ---
 # <a name="bookmarking-rows-in-odbc"></a>Applicazione di segnalibri alle righe in ODBC
   Un segnalibro è un valore utilizzato per identificare una riga di dati. Il significato del valore del segnalibro è noto solo al driver o all'origine dati. Un segnalibro, ad esempio, può essere tanto semplice quanto un numero di riga o tanto complesso quanto un indirizzo del disco. In ODBC l'applicazione richiede un segnalibro per una determinata riga, lo archivia e lo passa nuovamente al cursore per tornare alla riga.  
@@ -30,7 +30,7 @@ ms.locfileid: "63207275"
   
  I segnalibri possono essere usati anche con la funzione **SQLBulkOperations** per eseguire operazioni su un set di righe a partire dal segnalibro.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Scorrimento e recupero di righe](../native-client-ole-db-rowsets/fetching-rows.md)  
   
   

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - date/time [ODBC], data type support
 - ODBC, date/time improvements
 ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d3ee53add852917cdd234c9306c9ddaf46da0818
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49f5e5d90a24aed8a717edb2f1c4efe4a2fd5e07
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76939611"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705503"
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>Supporto dei tipi di dati per i miglioramenti relativi a data e ora ODBC
   In questo argomento vengono fornite informazioni sui tipi ODBC che supportano i tipi di dati di data e ora [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -32,7 +32,7 @@ ms.locfileid: "76939611"
   
  Nella tabella seguente viene illustrato il mapping completo per il tipo di server. Si noti che alcune celle della tabella contengono due voci; in questi casi, la prima è il valore per ODBC 3.0 mentre la seconda è il valore per ODBC 2.0.  
   
-|Tipo di dati di SQL Server|Tipo di dati SQL|valore|  
+|Tipo di dati di SQL Server|Tipo di dati SQL|Valore|  
 |--------------------------|-------------------|-----------|  
 |Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  

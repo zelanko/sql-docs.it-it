@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - bulk copy [ODBC], changes for date/time improvements
 ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 855d0baf0b0b890b9343378f8060919979d5f206
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0cf98fadc2f194390f87bca14afcac545ac51df1
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63207110"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705536"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>Modifiche della copia bulk per i tipi di data e ora migliorati (OLE DB e ODBC)
   In questo argomento vengono descritti i miglioramenti apportati ai tipi di data/ora per supportare la funzionalità di copia bulk. Le informazioni incluse in questo argomento sono valide sia per OLE DB sia per ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -30,7 +30,7 @@ ms.locfileid: "63207110"
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
 |Datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
-|Date|SQLDATE|de|  
+|Data|SQLDATE|de|  
 |Tempo|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
@@ -63,7 +63,7 @@ ms.locfileid: "63207110"
 ## <a name="character-data-files"></a>File di dati di tipo carattere  
  Nei file di dati di tipo carattere i valori di data e ora vengono rappresentati come descritto nella sezione "formati di dati: stringhe e valori letterali" del [supporto dei tipi di dati](data-type-support-for-odbc-date-and-time-improvements.md) per i miglioramenti di data e ora ODBC per ODBC oppure del supporto dei tipi di [dati per OLE DB miglioramenti di data e ora](../native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) per OLE DB.  
   
- Nei dati nativi nativi, i valori di data e ora per i quattro nuovi tipi sono rappresentati come rappresentazioni TDS con scala 7 (poiché si tratta del valore massimo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportato da e i file di dati bcp non archiviano la scala di queste colonne). Non viene apportata alcuna modifica all'archiviazione del `datetime` tipo `smalldatetime` esistente e o delle relative rappresentazioni TDS (Tabular Data Stream).  
+ Nei dati nativi nativi, i valori di data e ora per i quattro nuovi tipi sono rappresentati come rappresentazioni TDS con scala 7 (poiché si tratta del valore massimo supportato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e i file di dati bcp non archiviano la scala di queste colonne). Non viene apportata alcuna modifica all'archiviazione del `datetime` tipo esistente e `smalldatetime` o delle relative rappresentazioni TDS (Tabular Data Stream).  
   
  Di seguito vengono indicate le dimensioni dello spazio di archiviazione per i diversi tipi di archiviazione per OLE DB:  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63207110"
 |-----------------------|---------------------------|  
 |Datetime|8|  
 |smalldatetime|4|  
-|Data|3|  
+|data|3|  
 |time|6|  
 |datetime2|9|  
 |datetimeoffset|11|  
@@ -90,11 +90,11 @@ ms.locfileid: "63207110"
 ## <a name="bcp-types-in-sqlnclih"></a>Tipi BCP in sqlncli.h  
  Di seguito vengono indicati i tipi definiti in sqlncli.h per l'utilizzo con le estensioni API BCP in ODBC. Questi tipi vengono passati con il parametro *eUserDataType* di IBCPSession::BCPColFmt in OLE DB.  
   
-|tipo di archiviazione di file|Tipo di dati del file host|Digitare sqlncli. h per l'utilizzo con IBCPSession:: BCPColFmt|valore|  
+|tipo di archiviazione di file|Tipo di dati del file host|Digitare sqlncli. h per l'utilizzo con IBCPSession:: BCPColFmt|Valore|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
-|Date|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
+|Data|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
 |Tempo|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
@@ -106,7 +106,7 @@ ms.locfileid: "63207110"
   
 |A -><br /><br /> From|Data|time|smalldatetime|Datetime|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
-|Date|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
+|Data|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
 |Tempo|N/D|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
 |Datetime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
@@ -136,7 +136,7 @@ ms.locfileid: "63207110"
 |12|I secondi vengono impostati su zero e i secondi frazionari vengono ignorati. Non è possibile alcun errore di troncamento.|  
 |N/D|Viene mantenuto il comportamento di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni precedenti.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Miglioramenti di data e ora &#40;ODBC&#41;](date-and-time-improvements-odbc.md)   
  [Miglioramenti relativi a data e ora &#40;OLE DB&#41;](../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - cursors [ODBC], concurrency
 - ODBC cursors, concurrency
 ms.assetid: 68228ece-cbf1-4f19-bfdc-053884c1af48
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3101da05e25cf67fda816bd889393bbebe8be3ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7139ace2498ef2eeddb173950281ac4cf493efad
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62711456"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705587"
 ---
 # <a name="cursor-concurrency-odbc"></a>Concorrenza dei cursori (ODBC)
   Le operazioni dei cursori, come i tipi di cursore, sono influenzate dalle opzioni di concorrenza impostate dall'applicazione. Le opzioni di concorrenza vengono impostate utilizzando l'opzione SQL_ATTR_CONCURRENCY di [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md). I tipi di concorrenza sono i seguenti:  
@@ -32,7 +32,7 @@ ms.locfileid: "62711456"
   
 -   Blocco (SQL_CONCUR_LOCK)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Proprietà del cursore](cursor-properties.md)  
   
   
