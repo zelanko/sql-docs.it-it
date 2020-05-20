@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_upgrade_log_shipping
 ms.assetid: ee01092f-9caf-4e88-888b-ec7b84223705
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 493fcac9f5de8ee85a2e3c014763045c697bbe0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e96326c97dde209f37104e66e562b66e96c8acd3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68119441"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809070"
 ---
 # <a name="sp_upgrade_log_shipping-transact-sql"></a>sp_upgrade_log_shipping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,15 +39,15 @@ sp_upgrade_log_shipping
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- Nessuno.  
+ No.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno.  
+ No.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questa stored procedure viene richiamata automaticamente durante l'aggiornamento di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire l'aggiornamento dei metadati specifici per il log shipping. Non è necessario eseguire questa procedura in modo esplicito, a meno che non si verifichino problemi a livello dei metadati durante l'aggiornamento.  
   
  La stored procedure sp_upgrade_log_shipping deve essere eseguita dal database master nel server primario, secondario o di monitoraggio.  

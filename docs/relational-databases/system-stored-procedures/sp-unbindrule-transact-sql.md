@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_unbindrule
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b409b76d3a7c07ac03173346059f38ac616f5a87
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 54c5c0f9bfa6bc64a79e0f4dcde72c09b2a281fb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095864"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809402"
 ---
 # <a name="sp_unbindrule-transact-sql"></a>sp_unbindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_unbindrule [ @objname = ] 'object_name'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Per visualizzare il testo di una regola, eseguire **sp_helptext** specificando il nome della regola come parametro.  
   
  Quando una regola non è associata, le informazioni sull'associazione vengono rimosse dalla tabella **sys. Columns** se la regola è stata associata a una colonna e dalla tabella **sys. Types** se la regola è stata associata a un tipo di dati alias.  

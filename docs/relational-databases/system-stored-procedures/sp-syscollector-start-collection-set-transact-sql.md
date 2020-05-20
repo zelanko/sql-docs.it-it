@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_start_collection_set
 ms.assetid: d8357180-f51e-4681-99f9-0596fe2d2b53
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cad08f3866a17299aefce24df9701bb1817bc5fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 52afba46b09552af62ba9f08c34e1749689f41cc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010597"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809975"
 ---
 # <a name="sp_syscollector_start_collection_set-transact-sql"></a>sp_syscollector_start_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_syscollector_start_collection_set
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  È necessario eseguire sp_syscollector_create_collection_set nel contesto del database di sistema msdb e SQL Server Agent deve essere abilitato.  
   
  Questa procedura ha esito negativo se viene eseguita in un set di raccolta che non include una pianificazione. Se il set di raccolta non dispone di una pianificazione, ad esempio perché la relativa modalità di raccolta è impostata su non memorizzato nella cache, utilizzare la [sp_syscollector_run_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql.md) stored procedure per avviare il set di raccolta.  
@@ -62,7 +62,7 @@ sp_syscollector_start_collection_set
 ## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa procedura, è necessaria l'appartenenza al ruolo predefinito del database dc_operator. Se al set di raccolta non è associato un account proxy, è richiesta l'appartenenza al ruolo predefinito del server sysadmin.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene avviato un set di raccolta utilizzando il relativo identificatore.  
   
 ```  

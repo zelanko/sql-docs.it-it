@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_targetservergroup
 ms.assetid: 4ac65ed6-e07e-40e4-a282-13bfd92dfa41
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 330f044d832bf039028cb3d7e92d8929e28e6e79
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 46e14eb91dde8018abcc52fe618dd9ff688a15b3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946622"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809104"
 ---
 # <a name="sp_update_targetservergroup-transact-sql"></a>sp_update_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +51,10 @@ sp_update_targetservergroup
 ## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa stored procedure, è necessario che agli utenti venga concesso il ruolo predefinito del server **sysadmin** .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_update_targetservergroup** deve essere eseguito dal database **msdb** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente il nome del gruppo di server di destinazione `Servers Processing Customer Orders` viene modificato in `Local Servers Processing Customer Orders`.  
   
 ```  

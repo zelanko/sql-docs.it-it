@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_create
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7d698932bb7ef7e0fd37a0ced8ab536eeb0d5d68
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bc81a19350c3ba95b99c821d972c02dd112c18e7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096035"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809715"
 ---
 # <a name="sp_trace_create-transact-sql"></a>sp_trace_create (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,9 +59,9 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 |SHUTDOWN_ON_ERROR|**4**|Specifica che se non è possibile scrivere nel file per un qualsiasi motivo, SQL Server viene arrestato. Questa opzione risulta utile quando si eseguono tracce di controllo della sicurezza.|  
 |TRACE_PRODUCE_BLACKBOX|**8**|Specifica che il server salverà un record contenente gli ultimi 5 MB di informazioni di traccia generate dal server. TRACE_PRODUCE_BLACKBOX è incompatibile con tutte le altre opzioni.|  
   
-`[ @tracefile = ] 'trace_file'`Specifica il percorso e il nome file in cui verrà scritta la traccia. *trace_file* è di **tipo nvarchar (245)** e non prevede alcun valore predefinito. *trace_file* può essere una directory locale (ad esempio n'c:\MSSQL\Trace\traccia.trc ') o un percorso UNC per una condivisione o un percorso (n\\\\ *' nomeserver*\\*ShareName*\\*directory*\Trace.trc ').  
+`[ @tracefile = ] 'trace_file'`Specifica il percorso e il nome file in cui verrà scritta la traccia. *trace_file* è di **tipo nvarchar (245)** e non prevede alcun valore predefinito. *trace_file* può essere una directory locale (ad esempio n'c:\MSSQL\Trace\traccia.trc ') o un percorso UNC per una condivisione o un percorso (n' \\ \\ *nomeserver* \\ *ShareName* \\ *directory*\Trace.trc ').  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aggiungerà un'estensione **TRC** a tutti i nomi dei file di traccia. Se si specificano l'opzione *max_file_size* TRACE_FILE_ROLLOVER e un max_file_size [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , in viene creato un nuovo file di traccia quando le dimensioni massime del file di traccia originale aumentano. Il nuovo file ha lo stesso nome del file originale, ma viene aggiunto _*n* per indicare la sequenza, a partire da **1**. Se, ad esempio, il primo file di traccia è denominato **filename. trc**, il secondo file di traccia è denominato **filename_1. trc**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aggiungerà un'estensione **TRC** a tutti i nomi dei file di traccia. Se si specificano l'opzione TRACE_FILE_ROLLOVER e un *max_file_size* , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in viene creato un nuovo file di traccia quando le dimensioni massime del file di traccia originale aumentano. Il nuovo file ha lo stesso nome del file originale, ma viene aggiunto _*n* per indicare la sequenza, a partire da **1**. Se, ad esempio, il primo file di traccia è denominato **filename. trc**, il secondo file di traccia è denominato **filename_1. trc**.  
   
  Se si utilizza l'opzione TRACE_FILE_ROLLOVER, si consiglia di non utilizzare caratteri di sottolineatura nel nome del file di traccia originale. Se vengono utilizzati caratteri di sottolineatura, si verifica il comportamento seguente:  
   
@@ -70,7 +70,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 -   La funzione fn_trace_gettable non carica i file di rollover (se specificati tramite l'argomento *number_files* ) in cui il nome del file originale termina con un carattere di sottolineatura e un valore numerico. Ciò non vale per il carattere di sottolineatura e il numero che vengono aggiunti automaticamente all'esecuzione del rollover di un file.  
   
 > [!NOTE]  
->  Come soluzione alternativa a entrambi questi comportamenti, è possibile rinominare i file in modo da rimuovere i caratteri di sottolineatura nel nome del file originale. Ad esempio, se il file originale è denominato **my_trace. trc**e il file di rollover è denominato **my_trace_1. trc**, è possibile rinominare i file in **Trace. trc** e **Mytrace_1. trc** prima di aprire i file in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+>  Come soluzione alternativa a entrambi questi comportamenti, è possibile rinominare i file in modo da rimuovere i caratteri di sottolineatura nel nome del file originale. Ad esempio, se il file originale è denominato **my_trace. trc**e il file di rollover è denominato **my_trace_1. trc**, è possibile rinominare i file in **Trace. trc** e **Mytrace_1. trc** prima di aprire i file in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .  
   
  non è possibile specificare *trace_file* quando viene utilizzata l'opzione TRACE_PRODUCE_BLACKBOX.  
   
@@ -101,8 +101,8 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 |14|Ora di arresto non valida. Restituito quando l'ora specificata è già trascorsa.|  
 |15|Parametri non validi. Restituito quando l'utente specifica parametri incompatibili.|  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_trace_create** è un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedure che esegue molte delle azioni eseguite in precedenza da **xp_trace_\* ** stored procedure estese disponibili nelle versioni precedenti di SQL Server. Usare **sp_trace_create** anziché:  
+## <a name="remarks"></a>Commenti  
+ **sp_trace_create** è un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedure che esegue molte delle azioni eseguite in precedenza da **xp_trace_ \* ** stored procedure estese disponibili nelle versioni precedenti di SQL Server. Usare **sp_trace_create** anziché:  
   
 -   **xp_trace_addnewqueue**  
   

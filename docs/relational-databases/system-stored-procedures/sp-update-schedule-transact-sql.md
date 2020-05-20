@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_schedule
 ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 51e21d189a9302c2dc7b74a013846460e9cb7bc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bad747d2c88b7d159b9d043d12c81cc380c84c7b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946647"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809257"
 ---
 # <a name="sp_update_schedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,10 +65,10 @@ sp_update_schedule
   
 `[ @freq_type = ] freq_type`Valore che indica quando deve essere eseguito un processo. *freq_type*è di **tipo int**e il valore predefinito è **0**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una sola volta|  
-|**4**|Giornaliera|  
+|**4**|Ogni giorno|  
 |**8**|Settimanale|  
 |**16**|Ogni mese|  
 |**32**|Mensile rispetto all' *intervallo freq*|  
@@ -89,7 +89,7 @@ sp_update_schedule
   
 `[ @freq_subday_type = ] freq_subday_type`Specifica le unità per *freq_subday_interval * *.* *freq_subday_type*è di **tipo int**e il valore predefinito è **0**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione (unità)|  
+|Valore|Descrizione (unità)|  
 |-----------|--------------------------|  
 |**0x1**|All'ora specificata|  
 |**0x2**|Secondi|  
@@ -100,7 +100,7 @@ sp_update_schedule
   
 `[ @freq_relative_interval = ] freq_relative_interval`Occorrenza di un processo di *freq_interval* ogni mese, se *freq_interval* è **32** (mensile relativo). *freq_relative_interval*è di **tipo int**e il valore predefinito è **0**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione (unità)|  
+|Valore|Descrizione (unità)|  
 |-----------|--------------------------|  
 |**1**|First (Primo)|  
 |**2**|Second|  
@@ -127,7 +127,7 @@ sp_update_schedule
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Tutti i processi che utilizzano la pianificazione, adottano immediatamente le nuove impostazioni. Cambiando la pianificazione, tuttavia, non vengono arrestati i processi attualmente in esecuzione.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -143,7 +143,7 @@ sp_update_schedule
   
  Solo i membri del **ruolo sysadmin** possono modificare una pianificazione di proprietà di un altro utente.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene modificato lo stato abilitato della pianificazione `NightlyJobs` impostandolo su `0` e impostando il proprietario su `terrid`.  
   
 ```  

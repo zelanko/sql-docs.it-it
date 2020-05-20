@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_server_diagnostics
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d150d9b027b9a2c4d309ca2055722bb47ba092a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8d6d418bcdefbb3977a98f04743b7e1b2a58bf54
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982113"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810564"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -77,9 +77,9 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **eventi**: raccoglie dati e superfici attraverso la stored procedure sugli errori e gli eventi di interesse registrati dal server, inclusi i dettagli sulle eccezioni del buffer circolare, gli eventi del buffer circolare sul broker di memoria, la memoria insufficiente, il monitoraggio dell'utilità di pianificazione, il pool di buffer, gli spinlock, la sicurezza e la connettività. Gli eventi avranno sempre 0 come stato.  
   
--   **nome del gruppo di disponibilità>: raccoglie i dati per il gruppo di disponibilità specificato (se component_type = "always on: AvailabilityGroup"). \< **  
+-   ** \< nome del gruppo di disponibilità>**: raccoglie i dati per il gruppo di disponibilità specificato (se component_type = "always on: AvailabilityGroup").  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 Da una prospettiva di errore, i componenti di elaborazione di query, risorsa e sistema verranno utilizzati per il rilevamento dell'errore mentre i componenti di eventi e io_subsystem verranno utilizzati solo per gli scopi diagnostici.  
   
 Nella tabella seguente viene eseguito il mapping dei componenti agli stati di integrità associati.  
@@ -100,7 +100,7 @@ La (x) in ogni riga rappresenta gli stati di integrità validi per il componente
 ## <a name="permissions"></a>Autorizzazioni  
 È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
 È consigliabile utilizzare le sessioni estese per acquisire le informazioni di integrità e salvarle in un file che si trova fuori da SQL Server. Pertanto, è ancora possibile accedervi se si verifica un errore. Nell'esempio seguente viene salvato l'output da una sessione eventi in un file:  
 ```sql  
 CREATE EVENT SESSION [diag]  

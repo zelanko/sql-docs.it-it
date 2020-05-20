@@ -15,22 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - sp_updatestats
 ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c00bdd453bc4d1bf467b37aca3639eb43f55e022
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e28564c44dc226054f0b08e8ba75fe36509cf064
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085796"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808932"
 ---
 # <a name="sp_updatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Viene `UPDATE STATISTICS` eseguito su tutte le tabelle interne e definite dall'utente nel database corrente.  
+Viene eseguito `UPDATE STATISTICS` su tutte le tabelle interne e definite dall'utente nel database corrente.  
   
-Per ulteriori informazioni su `UPDATE STATISTICS`, vedere [UPDATE statistics &#40;&#41;Transact-SQL ](../../t-sql/statements/update-statistics-transact-sql.md). Per ulteriori informazioni sulle statistiche, vedere [statistiche](../../relational-databases/statistics/statistics.md).  
+Per ulteriori informazioni su `UPDATE STATISTICS` , vedere [update statistics &#40;&#41;Transact-SQL ](../../t-sql/statements/update-statistics-transact-sql.md). Per ulteriori informazioni sulle statistiche, vedere [statistiche](../../relational-databases/statistics/statistics.md).  
     
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,11 +43,11 @@ sp_updatestats [ [ @resample = ] 'resample']
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="arguments"></a>Argomenti  
+## <a name="arguments"></a>Arguments  
 `[ @resample = ] 'resample'`Specifica che **sp_updatestats** utilizzerà l'opzione RESAMPLE dell'istruzione [Update Statistics](../../t-sql/statements/update-statistics-transact-sql.md) . Se **' resample '** non è specificato, **sp_updatestats** aggiorna le statistiche usando il campionamento predefinito. il **ricampionamento** è **varchar (8)** e il valore predefinito è no.  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_updatestats** viene eseguito `UPDATE STATISTICS`, specificando la `ALL` parola chiave, in tutte le tabelle interne e definite dall'utente nel database. sp_updatestats Visualizza i messaggi che indicano lo stato di avanzamento. Al termine dell'aggiornamento, viene segnalato che sono state aggiornate le statistiche di tutte le tabelle.  
+## <a name="remarks"></a>Commenti  
+ **sp_updatestats** viene eseguito `UPDATE STATISTICS` , specificando la `ALL` parola chiave, in tutte le tabelle interne e definite dall'utente nel database. sp_updatestats Visualizza i messaggi che indicano lo stato di avanzamento. Al termine dell'aggiornamento, viene segnalato che sono state aggiornate le statistiche di tutte le tabelle.  
   
 sp_updatestats aggiorna le statistiche negli indici non cluster disabilitati, mentre non le aggiorna negli indici cluster disabilitati.  
   
@@ -60,7 +60,7 @@ Per i database con un livello di compatibilità inferiore a 90, l'esecuzione di 
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o la proprietà del database (**dbo**).  
 
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
 Nell'esempio seguente vengono aggiornate le statistiche per le tabelle del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql  

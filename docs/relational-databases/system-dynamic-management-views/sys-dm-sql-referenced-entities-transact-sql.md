@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_sql_referenced_entities dynamic management function
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64ddba95ec5c7fb8dfa6e6e685fcf9d5b6846fe9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cb2b6e422b9b9e746e851e6d7b799cdf7c63387f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090667"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811275"
 ---
 # <a name="sysdm_sql_referenced_entities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce una riga per ogni entità definita dall'utente a cui viene fatto riferimento in base al nome nella definizione dell'entità di riferimento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]specificata in. Una dipendenza tra due entità viene creata quando un'entità definita dall'utente, denominata *entità a cui si fa riferimento*, viene visualizzata in base al nome in un'espressione SQL permanente di un'altra entità definita dall'utente, detta *entità di riferimento*. Ad esempio, se una stored procedure è l'entità di riferimento specificata, questa funzione restituisce tutte le entità definite dall'utente indicate nella stored procedure, ad esempio tabelle, viste, tipi definiti dall'utente (UDT) o altre stored procedure.  
+Restituisce una riga per ogni entità definita dall'utente a cui viene fatto riferimento in base al nome nella definizione dell'entità di riferimento specificata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Una dipendenza tra due entità viene creata quando un'entità definita dall'utente, denominata *entità a cui si fa riferimento*, viene visualizzata in base al nome in un'espressione SQL permanente di un'altra entità definita dall'utente, detta *entità di riferimento*. Ad esempio, se una stored procedure è l'entità di riferimento specificata, questa funzione restituisce tutte le entità definite dall'utente indicate nella stored procedure, ad esempio tabelle, viste, tipi definiti dall'utente (UDT) o altre stored procedure.  
   
  È possibile utilizzare questa funzione a gestione dinamica per creare un report sui seguenti tipi di entità indicati dall'entità di riferimento specificata:  
   
@@ -114,7 +114,7 @@ sys.dm_sql_referenced_entities (
   
  Restituisce l'errore 2020 quando le dipendenze della colonna non possono essere risolte. Questo errore non impedisce alla query di restituire dipendenze a livello di oggetto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questa funzione può essere eseguita nel contesto di qualsiasi database per restituire le entità che fanno riferimento a un trigger DDL a livello di server.  
   
  Nella tabella seguente sono elencati i tipi di entità per i quali vengono create e gestite le informazioni sulle dipendenze. Le informazioni sulle dipendenze non vengono create né gestite per regole, impostazioni predefinite, tabelle temporanee, stored procedure temporanee o oggetti di sistema.  
@@ -139,7 +139,7 @@ sys.dm_sql_referenced_entities (
 |Funzione di partizione|No|Sì|  
 | &nbsp; | &nbsp; | &nbsp; |
 
- \*Una tabella viene rilevata come entità di riferimento solo quando fa riferimento [!INCLUDE[tsql](../../includes/tsql-md.md)] a un modulo, a un tipo definito dall'utente o a una raccolta di XML Schema nella definizione di una colonna calcolata, un vincolo check o un vincolo Default.  
+ \*Una tabella viene rilevata come entità di riferimento solo quando fa riferimento a un [!INCLUDE[tsql](../../includes/tsql-md.md)] modulo, a un tipo definito dall'utente o a una raccolta di XML Schema nella definizione di una colonna calcolata, un vincolo check o un vincolo Default.  
   
  ** Le stored procedure numerate con un valore intero maggiore di 1 non vengono registrate come entità di riferimento o a cui viene fatto riferimento.  
   
@@ -268,7 +268,7 @@ The dependencies reported for entity "dbo.Proc1" might not include
 
 Questo esempio E presuppone che sia stato eseguito l'esempio D. Esempio E indica che le dipendenze vengono gestite dinamicamente. Nell'esempio vengono eseguite le operazioni seguenti:
 
-1. Ricrea `Table1`, che è stato eliminato nell'esempio D.
+1. Ricrea `Table1` , che è stato eliminato nell'esempio D.
 2. Run Then `sys.dm_sql_referenced_entities` viene eseguito di nuovo con il stored procedure specificato come entità di riferimento.
 
 Il set di risultati Mostra che vengono restituite sia le tabelle sia le rispettive colonne definite nel stored procedure. Inoltre, la colonna `is_all_columns_found` restituisce 1 per tutti gli oggetti e le colonne.
@@ -304,7 +304,7 @@ GO
  ```
  
 ### <a name="f-returning-object-or-column-usage"></a>F. Restituzione dell'utilizzo di oggetti e colonne  
- Nell'esempio seguente vengono restituiti gli oggetti e le dipendenze delle colonne della stored procedure `HumanResources.uspUpdateEmployeePersonalInfo`. Questa procedura aggiorna le colonne `NationalIDNumber`, `BirthDate,``MaritalStatus`e `Gender` della `Employee` tabella in base a un valore specificato `BusinessEntityID` . Un altro stored procedure `upsLogError` , viene definito in un oggetto try... Blocco CATCH per acquisire eventuali errori di esecuzione. Le colonne `is_selected`, `is_updated` e `is_select_all` restituiscono informazioni sul modo in cui tali oggetti e colonne vengono utilizzati all'interno dell'oggetto di riferimento. La tabella e le colonne modificate vengono indicate con il valore 1 nella colonna is_updated. Viene selezionata solo la colonna `BusinessEntityID` e la stored procedure `uspLogError` non viene né selezionata né modificata.  
+ Nell'esempio seguente vengono restituiti gli oggetti e le dipendenze delle colonne della stored procedure `HumanResources.uspUpdateEmployeePersonalInfo`. Questa procedura aggiorna le colonne `NationalIDNumber` , `BirthDate,``MaritalStatus` e `Gender` della `Employee` tabella in base a un valore specificato `BusinessEntityID` . Un altro stored procedure, `upsLogError` viene definito in un oggetto try... Blocco CATCH per acquisire eventuali errori di esecuzione. Le colonne `is_selected`, `is_updated` e `is_select_all` restituiscono informazioni sul modo in cui tali oggetti e colonne vengono utilizzati all'interno dell'oggetto di riferimento. La tabella e le colonne modificate vengono indicate con il valore 1 nella colonna is_updated. Viene selezionata solo la colonna `BusinessEntityID` e la stored procedure `uspLogError` non viene né selezionata né modificata.  
 
 ```sql  
 USE AdventureWorks2012;

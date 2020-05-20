@@ -7,20 +7,20 @@ ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: c53e4a36-b841-424a-b8e2-255b1878deb6
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 90531889d3e510d342ff39abdf069f75f3c371aa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9b96946a45affa82d4d2e0512b40417e69f3c664
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401717"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811395"
 ---
 # <a name="sysdm_pdw_component_health_active_alerts-transact-sql"></a>sys. dm_pdw_component_health_active_alerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Archivia gli avvisi attivi [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] sui componenti.  
+  Archivia gli avvisi attivi sui [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] componenti.  
   
 |Nome colonna|Tipo di dati|Descrizione|Range|  
 |-----------------|---------------|-----------------|-----------|  
@@ -33,7 +33,7 @@ ms.locfileid: "74401717"
 |previous_value|**nvarchar(255)**|Utilizzato quando l'avviso è di tipo StatusChange. Questo è lo stato del componente precedente. Il valore è NULL per gli avvisi di tipo soglia. Vedere [sys. pdw_health_alerts &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-pdw-health-alerts-transact-sql.md) per un elenco di tipi di avviso.|NULL|  
 |create_time|**datetime**|Data e ora di generazione dell'avviso.|NOT NULL|  
   
- Per informazioni sul numero massimo di righe mantenute da questa visualizzazione, vedere "valori minimi e massimi [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]" in.  
+ Per informazioni sul numero massimo di righe mantenute da questa visualizzazione, vedere "valori minimi e massimi" in [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] .  
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Data Warehouse e Parallel data warehouse viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

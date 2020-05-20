@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpsrvrolemember
 ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ba1cbbfb95dafaa99a33d95b1d92a9e6e5f4e9a2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 73a8052af35854b0e2a1d557b1b31050dbb560ea
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010759"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810678"
 ---
 # <a name="sp_helpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,10 +65,10 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 |MemberName|**sysname**|Nome di un membro di ServerRole|  
 |MemberSID|**varbinary (85)**|ID di sicurezza di MemberName|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Utilizzare sp_helprolemember per visualizzare i membri di un ruolo del database.  
   
- Tutti gli account di accesso sono membri di Public. sp_helpsrvrolemember non riconosce il ruolo public perché, internamente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non implementa public come ruolo.  
+ Tutti gli account di accesso sono membri di Public. sp_helpsrvrolemember non riconosce il ruolo public perché, internamente, non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa public come ruolo.  
   
  Per aggiungere o rimuovere membri dai ruoli del server, vedere [ALTER server role &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
@@ -77,7 +77,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo public.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono elencati i membri del ruolo predefinito del server `sysadmin`.  
   
 ```  
