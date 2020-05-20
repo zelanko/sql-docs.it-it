@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_table_privileges
 ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 595f8adb46602109751b1912feed99ae4702fb55
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a9c6391540f3da535eb709bba0a39bac11a99289
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68702838"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834255"
 ---
 # <a name="sp_table_privileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
 
@@ -43,22 +43,22 @@ sp_table_privileges [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @table_name= ] '*table_name*'  
+ [ @table_name =]'*table_name*'  
  Tabella utilizzata per restituire informazioni del catalogo. *table_name* è di **tipo nvarchar (** 384 **)** e non prevede alcun valore predefinito. La ricerca con caratteri jolly è supportata.  
   
- [ @table_owner= ] '*TABLE_OWNER*'  
+ [ @table_owner =]'*TABLE_OWNER*'  
  Proprietario della tabella utilizzata per restituire informazioni sul catalogo. *TABLE_OWNER*è di **tipo nvarchar (** 384 **)** e il valore predefinito è null. La ricerca con caratteri jolly è supportata. Se owner viene omesso, vengono applicate le regole di visibilità della tabella predefinite nel sistema DBMS sottostante.  
   
  Se l'utente corrente è il proprietario di una tabella con il nome specificato, vengono restituite le colonne di tale tabella. Se *owner* non è specificato e l'utente corrente non è il proprietario di una tabella con il *nome*specificato, questa procedura cerca una tabella con il *table_name* specificato di proprietà del proprietario del database. Se viene individuata, vengono restituite le colonne di tale tabella.  
   
- [ @table_qualifier= ] '*TABLE_QUALIFIER*'  
+ [ @table_qualifier =]'*TABLE_QUALIFIER*'  
  Nome del qualificatore di tabella. *TABLE_QUALIFIER* è di **tipo sysname**e il valore predefinito è null. Vari prodotti DBMS supportano la denominazione in tre parti per le tabelle (*Qualifier.Owner.Name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
- [ @fUsePattern= ] '*fUsePattern*'  
+ [ @fUsePattern =]'*fUsePattern*'  
  Determina se i caratteri di sottolineatura (_), percentuale (%) e parentesi quadra ([o]) vengono interpretati come caratteri jolly. I valori validi sono 0 (utilizzo dei criteri di ricerca disattivato) e 1 (utilizzo dei criteri di ricerca attivato). *fUsePattern* è di **bit**e il valore predefinito è 1.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- nessuno  
+ Nessuno  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -68,7 +68,7 @@ sp_table_privileges [ @table_name = ] 'table_name'
 |TABLE_OWNER|**sysname**|Nome del proprietario della tabella. Questo campo restituisce sempre un valore.|  
 |TABLE_NAME|**sysname**|Nome della tabella. Questo campo restituisce sempre un valore.|  
 |GRANTOR|**sysname**|Nome dell'utente del database che ha concesso autorizzazioni all'utente specificato in GRANTEE per la tabella specificata in TABLE_NAME. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna corrisponde sempre a TABLE_OWNER. Questo campo restituisce sempre un valore. Inoltre, il valore della colonna GRANTOR può essere il proprietario del database (TABLE_OWNER) o un utente a cui il proprietario del database ha concesso autorizzazioni tramite la clausola WITH GRANT OPTION dell'istruzione GRANT.|  
-|GRANTEE|**sysname**|Nome dell'utente di database a cui l'utente GRANTOR specificato ha concesso autorizzazioni per la tabella TABLE_NAME. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]questa colonna include sempre un utente di database dalla vista sys. database_principalssystem. Questo campo restituisce sempre un valore.|  
+|GRANTEE|**sysname**|Nome dell'utente di database a cui l'utente GRANTOR specificato ha concesso autorizzazioni per la tabella TABLE_NAME. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna include sempre un utente di database dalla vista sys. database_principalssystem. Questo campo restituisce sempre un valore.|  
 |PRIVILEGE|**sysname**|Una delle autorizzazioni di tabella disponibili. I possibili valori delle autorizzazioni possono essere quelli seguenti o altri valori supportati dall'origine dati al momento della definizione dell'implementazione:<br /><br /> SELECT = l'utente GRANTEE può recuperare i dati di una o più colonne.<br /><br /> INSERT = L'utente GRANTEE può inserire dati in nuove righe di una o più colonne.<br /><br /> UPDATE = L'utente GRANTEE può modificare i dati esistenti di una o più colonne.<br /><br /> DELETE = L'utente GRANTEE può rimuovere righe dalla tabella.<br /><br /> REFERENCES = l'utente GRANTEE può fare riferimento a una colonna di una tabella esterna in una relazione chiave primaria/chiave esterna. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questo tipo di relazione viene definito tramite vincoli di tabella.<br /><br /> L'ambito di azione ottenuto dall'utente GRANTEE tramite un privilegio di tabella specifico dipende dall'origine dati. Il privilegio UPDATE, ad esempio, può permettere all'utente GRANTEE di aggiornare tutte le colonne di una tabella in una certa origine dei dati e solo le colonne per le quali l'utente GRANTOR dispone del privilegio UPDATE in un'origine dei dati diversa.|  
 |IS_GRANTABLE|**sysname**|Indica se all'utente GRANTEE è consentito o meno concedere autorizzazioni ad altri utenti (autorizzazione per la concessione di autorizzazioni). I possibili valori sono YES, NO e NULL. Un valore sconosciuto, o NULL, fa riferimento a un'origine dati per le quali l'autorizzazione per la concessione di autorizzazioni non è applicabile.|  
   
@@ -78,7 +78,7 @@ sp_table_privileges [ @table_name = ] 'table_name'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione SELECT per lo schema.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituite informazioni sui privilegi per tutte le tabelle con nome che inizia con la parola `Contact`.  
   
 ```  

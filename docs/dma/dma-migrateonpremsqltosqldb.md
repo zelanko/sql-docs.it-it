@@ -11,15 +11,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: cc87b541b2b6ebf2f6a9068ba35ae0f62f8e9988
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6280a3ea803424dc2a6a72d673c59e1e48816601
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056607"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885928"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Eseguire la migrazione di SQL Server o SQL Server locali in macchine virtuali di Azure al database SQL di Azure usando il Data Migration Assistant
 
@@ -33,7 +33,7 @@ Questo articolo fornisce istruzioni dettagliate per la migrazione di SQL Server 
 
 2. Impostare il tipo di origine su **SQL Server** e il tipo di server di destinazione sul **database SQL di Azure**.
 
-3. Selezionare **Create** (Crea).
+3. Selezionare **Crea**.
 
    ![Crea progetto di migrazione](../dma/media/NewCreate1.png)
 

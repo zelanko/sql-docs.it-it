@@ -10,12 +10,12 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b317ffdb38c06cafe09ff786004b7ac144d0b18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8f1b28766eab6ecd5035dd8a58e88abaccc97c5
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228470"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921727"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Estensioni a AdventureWorks per illustrare OLTP in memoria
     
@@ -45,14 +45,14 @@ ms.locfileid: "75228470"
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]RTM-Evaluation, Developer o Enterprise Edition  
   
--   Per il test delle prestazioni, un server con specifiche simili all'ambiente di produzione. Per questo particolare esempio sono necessari almeno 16 GB di memoria disponibili per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per linee guida generali sull'hardware [!INCLUDE[hek_2](../includes/hek-2-md.md)]per, vedere il post di Blog seguente:[https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
+-   Per il test delle prestazioni, un server con specifiche simili all'ambiente di produzione. Per questo particolare esempio sono necessari almeno 16 GB di memoria disponibili per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per linee guida generali sull'hardware per [!INCLUDE[hek_2](../includes/hek-2-md.md)] , vedere il post di Blog seguente:[https://cloudblogs.microsoft.com/sqlserver/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014/](https://cloudblogs.microsoft.com/sqlserver/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014/)  
   
 ##  <a name="installing-the-hek_2-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>Installazione dell' [!INCLUDE[hek_2](../includes/hek-2-md.md)] esempio basato su AdventureWorks  
  Per installare l'esempio, seguire i passaggi riportati di seguito.  
   
 1.  Scaricare l'archivio per il backup completo del database AdventureWorks2014:  
   
-    1.  Aprire il codice seguente [https://msftdbprodsamples.codeplex.com/downloads/get/880661](https://msftdbprodsamples.codeplex.com/downloads/get/880661):.  
+    1.  Aprire il codice seguente: [https://msftdbprodsamples.codeplex.com/downloads/get/880661](https://msftdbprodsamples.codeplex.com/downloads/get/880661) .  
   
     2.  Quando richiesto, salvare il file in una cartella locale.  
   
@@ -87,13 +87,13 @@ ms.locfileid: "75228470"
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  Scaricare lo script di esempio[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] " [!INCLUDE[hek_2](../includes/hek-2-md.md)] RTM Sample. SQL" dall' [esempio di OLTP in memoria SQL Server 2014 RTM](https://go.microsoft.com/fwlink/?LinkID=396372) in una cartella locale.  
+5.  Scaricare lo script di esempio " [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. SQL" dall' [esempio di OLTP In memoria SQL Server 2014 RTM](https://go.microsoft.com/fwlink/?LinkID=396372) in una cartella locale.  
   
-6.  Aggiornare il valore della variabile "checkpoint_files_location" nello script "[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. SQL" per puntare al percorso di destinazione per i file del [!INCLUDE[hek_2](../includes/hek-2-md.md)] checkpoint. I file del checkpoint devono essere posizionati in un'unità con prestazioni di I/O sequenziali ottimali.  
+6.  Aggiornare il valore della variabile "checkpoint_files_location" nello script " [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. SQL" per puntare al percorso di destinazione per i [!INCLUDE[hek_2](../includes/hek-2-md.md)] file del checkpoint. I file del checkpoint devono essere posizionati in un'unità con prestazioni di I/O sequenziali ottimali.  
   
      Aggiornare il valore della variabile 'database_name' in modo da puntare al database AdventureWorks2014.  
   
-    1.  Assicurarsi di includere la barra rovesciata\' "come parte del nome del percorso  
+    1.  Assicurarsi di includere la barra rovesciata " \' come parte del nome del percorso  
   
     2.  Esempio:  
   
@@ -113,7 +113,7 @@ ms.locfileid: "75228470"
   
     2.  Utilizzando Management Studio:  
   
-        1.  Aprire lo script "[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. SQL" in una finestra di query  
+        1.  Aprire lo script " [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. SQL" in una finestra di query  
   
         2.  Connettersi al server di destinazione contenente il database AdventureWorks2014  
   
@@ -223,7 +223,7 @@ ms.locfileid: "75228470"
   
 -   *Tipi alias definiti dall'utente (UDT)*: nella tabella originale viene usato il tipo di dati definito dall'utente dbo.Flag, equivalente al bit del tipo di dati di sistema. Nella tabella migrata viene utilizzato, in alternativa, il tipo di dati bit.  
   
--   *Regole di confronto di BIN2* : le colonne Name e ProductNumber sono incluse nelle chiavi di indice e devono quindi avere regole di [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]confronto di BIN2 in. In questo caso, si presuppone che l'applicazione non si basi sulle specifiche delle regole di confronto, quale l'esclusione della distinzione tra maiuscole e minuscole.  
+-   *Regole di confronto di BIN2* : le colonne Name e ProductNumber sono incluse nelle chiavi di indice e devono quindi avere regole di confronto di BIN2 in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] . In questo caso, si presuppone che l'applicazione non si basi sulle specifiche delle regole di confronto, quale l'esclusione della distinzione tra maiuscole e minuscole.  
   
 -   *Rowguid* . La colonna rowguid viene omessa. Per informazioni dettagliate, vedere la descrizione della tabella SalesOrderHeader.  
   
@@ -412,7 +412,7 @@ ms.locfileid: "75228470"
   
 -   -S. Nome dell'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alla quale connettersi  
   
--   -E usa l'autenticazione di Windows per la connessione (impostazione predefinita); Se si utilizza [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] l'autenticazione di, utilizzare le opzioni-u e-P per specificare rispettivamente il nome utente e la password  
+-   -E usa l'autenticazione di Windows per la connessione (impostazione predefinita); Se si utilizza l' [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autenticazione di, utilizzare le opzioni-u e-P per specificare rispettivamente il nome utente e la password  
   
 -   -d. Nome del database, per questo esempio AdventureWorks2014  
   
@@ -462,7 +462,7 @@ END
  Si utilizzerà lo strumento ostress per eseguire gli script utilizzando diverse connessioni simultanee. Si utilizzerà il parametro '-n' per controllare il numero di connessioni e il parametro 'r' per controllare il numero di volte in cui lo script viene eseguito in ogni connessione.  
   
 #### <a name="functional-validation-of-the-workload"></a>Convalida funzionale del carico di lavoro  
- Per verificare che tutto funzioni, si inizierà con un test di esempio, usando 10 connessioni simultanee e 5 iterazioni, inserendo un totale di 10 \* * 5 20 = 1000 di ordini di vendita.  
+ Per verificare che tutto funzioni, si inizierà con un test di esempio, usando 10 connessioni simultanee e 5 iterazioni, inserendo un totale di 10 * 5 \* 20 = 1000 di ordini di vendita.  
   
  Con il comando seguente si supponga di usare l'istanza predefinita nel computer locale. Se si utilizza un'istanza denominata o un server remoto, modificare il nome del server di conseguenza, utilizzando il parametro -S.  
   
@@ -519,7 +519,7 @@ ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @
   
  In un server di prova con un numero totale di 8 core fisici (16 logici), l'operazione ha richiesto 41 minuti e 25 secondi. In un secondo server di prova con 24 core fisici (48 logici), l'operazione ha richiesto 52 minuti e 16 secondi.  
   
- Il fattore principale della differenza a livello di prestazioni tra le tabelle ottimizzate per la memoria e quelle basate su disco in questo test è che quando si utilizzano le tabelle basate su disco, tramite [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non è possibile usare completamente la CPU. Il motivo è la contesa di latch: tramite le transazioni simultanee si tenta di scrivere nella stessa pagina di dati; i latch vengono utilizzati per garantire che in una pagina venga scritta una sola transazione per volta. Il motore [!INCLUDE[hek_2](../includes/hek-2-md.md)] è privo di latch e le righe di dati non sono organizzate in pagine. Pertanto, le transazioni simultanee non bloccano gli inserimenti degli [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] altri, consentendo in tal modo di utilizzare completamente la CPU.  
+ Il fattore principale della differenza a livello di prestazioni tra le tabelle ottimizzate per la memoria e quelle basate su disco in questo test è che quando si utilizzano le tabelle basate su disco, tramite [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non è possibile usare completamente la CPU. Il motivo è la contesa di latch: tramite le transazioni simultanee si tenta di scrivere nella stessa pagina di dati; i latch vengono utilizzati per garantire che in una pagina venga scritta una sola transazione per volta. Il motore [!INCLUDE[hek_2](../includes/hek-2-md.md)] è privo di latch e le righe di dati non sono organizzate in pagine. Pertanto, le transazioni simultanee non bloccano gli inserimenti degli altri, consentendo in tal modo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di utilizzare completamente la CPU.  
   
  È possibile osservare l'utilizzo della CPU mentre il carico di lavoro è in esecuzione, ad esempio tramite Gestione attività. Si noterà che con le tabelle basate su disco l'utilizzo della CPU è lontano dal 100%. In una configurazione di prova con 16 processori logici, l'utilizzo si aggira intorno al 24%.  
   
@@ -569,10 +569,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|Impostazione predefinita|94|  
+|MEMORYCLERK_XTP|Predefinito|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
-|MEMORYCLERK_XTP|Impostazione predefinita|0|  
-|MEMORYCLERK_XTP|Impostazione predefinita|0|  
+|MEMORYCLERK_XTP|Predefinito|0|  
+|MEMORYCLERK_XTP|Predefinito|0|  
   
  I clerk di memoria predefiniti contengono strutture di memoria di sistema e sono relativamente ridotti. Il clerk di memoria per il database utente, in questo caso il database con ID 5, è pari a circa 900 MB.  
   
@@ -618,10 +618,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|Impostazione predefinita|146|  
+|MEMORYCLERK_XTP|Predefinito|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
-|MEMORYCLERK_XTP|Impostazione predefinita|0|  
-|MEMORYCLERK_XTP|Impostazione predefinita|0|  
+|MEMORYCLERK_XTP|Predefinito|0|  
+|MEMORYCLERK_XTP|Predefinito|0|  
   
  Come si può notare, tramite [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene utilizzato un bit in 8 GB per gli indici e le tabelle ottimizzate per la memoria nel database di esempio.  
   
@@ -664,10 +664,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|Impostazione predefinita|2261|  
+|MEMORYCLERK_XTP|Predefinito|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
-|MEMORYCLERK_XTP|Impostazione predefinita|0|  
-|MEMORYCLERK_XTP|Impostazione predefinita|0|  
+|MEMORYCLERK_XTP|Predefinito|0|  
+|MEMORYCLERK_XTP|Predefinito|0|  
   
  Si prevede che la memoria verrà recuperata quando il carico di lavoro transazionale è in esecuzione.  
   
@@ -683,10 +683,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|Impostazione predefinita|1863|  
+|MEMORYCLERK_XTP|Predefinito|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
-|MEMORYCLERK_XTP|Impostazione predefinita|0|  
-|MEMORYCLERK_XTP|Impostazione predefinita|0|  
+|MEMORYCLERK_XTP|Predefinito|0|  
+|MEMORYCLERK_XTP|Predefinito|0|  
   
 ### <a name="disk-utilization-for-memory-optimized-tables"></a>Utilizzo del disco per tabelle ottimizzate per la memoria  
  Le dimensioni complessive su disco per i file del checkpoint di un database in un determinato momento possono essere recuperate tramite la query seguente:  

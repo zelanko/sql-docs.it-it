@@ -1,5 +1,6 @@
 ---
 title: Monitorare SQL Server backup gestito in Azure | Microsoft Docs
+description: Questo articolo descrive gli strumenti che è possibile usare per determinare l'integrità complessiva dei backup usando SQL Server backup gestito in Azure e identificare gli errori.
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,12 +11,12 @@ ms.assetid: cfb9e431-7d4c-457c-b090-6f2528b2f315
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25e45e5877d528d1f01fe8695d8575466991c381
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ed32927e38f67c718031930023bd246048e2db5
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798043"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849610"
 ---
 # <a name="monitor-sql-server-managed-backup-to-azure"></a>Monitorare il backup gestito di SQL Server in Azure
   [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] dispone di misure predefinite per identificare problemi ed errori durante i processi di backup e risolverli con un'azione correttiva, se possibile.  Tuttavia, vi sono alcune situazioni in cui è richiesto l'intervento dell'utente. In questo argomento vengono descritti gli strumenti che è possibile utilizzare per determinare lo stato di integrità complessivo dei backup e vengono identificati tutti gli errori che devono essere risolti.  
@@ -108,13 +109,13 @@ GO
     ```  
   
 ### <a name="aggregated-error-countshealth-status"></a>Conteggi errori aggregati/stato di integrità  
- La funzione **smart_admin. fn_get_health_status** restituisce una tabella di conteggi di errori aggregati per ogni categoria che può essere utilizzata per monitorare lo stato di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]integrità di. Questa stessa funzione viene utilizzata anche dal meccanismo di notifica tramite posta elettronica configurato dal sistema descritto più avanti in questo argomento.   
+ La funzione **smart_admin. fn_get_health_status** restituisce una tabella di conteggi di errori aggregati per ogni categoria che può essere utilizzata per monitorare lo stato di integrità di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] . Questa stessa funzione viene utilizzata anche dal meccanismo di notifica tramite posta elettronica configurato dal sistema descritto più avanti in questo argomento.   
 Questi conteggi aggregati possono essere utilizzati per monitorare l'integrità del sistema. Ad esempio, se la colonna number_ of_retention_loops è 0 in 30 minuti, è possibile che la gestione della memorizzazione richieda del tempo o che addirittura non funzioni correttamente. Le colonne di errori diverse da zero possono indicare problemi e, per individuarli, è necessario verificare i registri eventi estesi. In alternativa, chiamare **smart_admin. sp_get_backup_diagnostics** stored procedure per trovare i dettagli dell'errore.  
   
 ### <a name="using-agent-notification-for-assessing-backup-status-and-health"></a>Utilizzo della notifica dell'agente per valutare l'integrità e lo stato di backup  
  In [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] è incluso un meccanismo di notifica basato sui criteri di gestione basata su criteri di SQL Server.  
   
- **Prerequisiti**  
+ **Prerequisiti:**  
   
 -   Per utilizzare questa funzionalità, è necessario Posta elettronica database. Per ulteriori informazioni su come abilitare posta elettronica database per l'istanza di SQL Server, vedere [Configure posta elettronica database](../relational-databases/database-mail/configure-database-mail.md).  
   
@@ -203,7 +204,7 @@ $policyResults = Get-SqlSmartAdmin | Test-SqlSmartAdmin -AllowUserPolicies
 $policyResults.PolicyEvaluationDetails | Select Name, Category, Expression, Result, Exception | fl
 ```  
   
- Lo script seguente restituisce un report dettagliato degli errori e degli avvisi per l'istanza predefinita (`\SQL\COMPUTER\DEFAULT`):  
+ Lo script seguente restituisce un report dettagliato degli errori e degli avvisi per l'istanza predefinita ( `\SQL\COMPUTER\DEFAULT` ):  
   
 ```powershell
 (Get-SqlSmartAdmin ).EnumHealthStatus()  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergepublication
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d291288c44341c3a707696b0b3baecdcd15779ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 26480fa1adb8493a1c29e5b67a163e9cbff54920
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68137646"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834481"
 ---
 # <a name="sp_helpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,28 +43,28 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>Argomenti  
  [ @publication **=** ] **'**_pubblicazione_**'**  
- Nome della pubblicazione. *Publication*è di **%** **tipo sysname**e il valore predefinito è, che restituisce informazioni su tutte le pubblicazioni di tipo merge nel database corrente.  
+ Nome della pubblicazione. *Publication*è di **tipo sysname**e il valore predefinito è **%** , che restituisce informazioni su tutte le pubblicazioni di tipo merge nel database corrente.  
   
  [ @found **=** ] **'***trovato***'** output  
  Flag che indica le righe che restituiscono valori. *trovato*è di **tipo int** e un parametro di output e il valore predefinito è null. **1** indica che la pubblicazione è stata trovata. **0** indica che la pubblicazione non è stata trovata.  
   
- [ @publication_id **=**] output **'***publication_id***'**  
+ [ @publication_id **=** ] output **'***publication_id***'**  
  Numero di identificazione della pubblicazione. *publication_id* è di tipo **uniqueidentifier** e un parametro di output e il valore predefinito è null.  
   
- [ @reserved **=**] **'***riservato***'**  
+ [ @reserved **=** ] **'***riservato***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*riservato* è di **tipo nvarchar (20)** e il valore predefinito è null.  
   
  [ @publisher **=** ] **'***Publisher***'**  
  Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
   
- [@publisher_db **=** ] **'***publisher_db***'**  
+ [ @publisher_db **=** ] **'***publisher_db***'**  
  Nome del database di pubblicazione. *publisher_db* è di **tipo sysname**e il valore predefinito è null.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|id|**int**|Ordine sequenziale della pubblicazione nell'elenco del set di risultati.|  
+|ID|**int**|Ordine sequenziale della pubblicazione nell'elenco del set di risultati.|  
 |name|**sysname**|Nome della pubblicazione.|  
 |description|**nvarchar(255)**|Descrizione della pubblicazione.|  
 |status|**tinyint**|Viene indicato quando i dati della pubblicazione sono disponibili.|  
@@ -79,14 +79,14 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |publication_type|**int**|Tipo di pubblicazione:<br /><br /> **0** = snapshot.<br /><br /> **1** = transazionale.<br /><br /> **2** = Unione.|  
 |pubid|**uniqueidentifier**|Identificatore univoco della pubblicazione.|  
 |snapshot_jobid|**binary(16)**|ID di processo dell'agente snapshot. Per ottenere la voce per il processo snapshot nella tabella di sistema [sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md) , è necessario convertire il valore esadecimale in **uniqueidentifier**.|  
-|enabled_for_internet|**int**|Viene determinato se la pubblicazione è abilitata per Internet. Se è **1**, i file di sincronizzazione della pubblicazione vengono inseriti nella `C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\Ftp` directory. La directory FTP (File Transfer Protocol) deve essere creata dall'utente. Se è **0**, la pubblicazione non è abilitata per l'accesso a Internet.|  
+|enabled_for_internet|**int**|Viene determinato se la pubblicazione è abilitata per Internet. Se è **1**, i file di sincronizzazione della pubblicazione vengono inseriti nella `C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\Ftp` Directory. La directory FTP (File Transfer Protocol) deve essere creata dall'utente. Se è **0**, la pubblicazione non è abilitata per l'accesso a Internet.|  
 |dynamic_filter|**int**|Indica se viene utilizzato un filtro di riga con parametri. **0** indica che non viene utilizzato un filtro di riga con parametri.|  
 |has_subscription|**bit**|Indica se esistono sottoscrizioni della pubblicazione. **0** indica che al momento non sono presenti sottoscrizioni della pubblicazione.|  
 |snapshot_in_default_folder|**bit**|Viene specificato se i file di snapshot sono archiviati nella cartella predefinita.<br /><br /> Se è **1**, i file di snapshot sono disponibili nella cartella predefinita.<br /><br /> Se è **0**, i file di snapshot vengono archiviati nella posizione alternativa specificata da **alt_snapshot_folder**. Una posizione alternativa può essere un altro server, un'unità di rete oppure un supporto rimovibile, ad esempio un CD o un disco rimovibile. È inoltre possibile archiviare i file di snapshot in un sito FTP in modo che possano essere successivamente recuperati dal Sottoscrittore.<br /><br /> Nota: questo parametro può essere true e avere ancora una posizione nel parametro **alt_snapshot_folder** . Tale combinazione consente di specificare che i file di snapshot vengono archiviati sia nel percorso predefinito che in quello alternativo.|  
 |alt_snapshot_folder|**nvarchar(255)**|Specifica la posizione della cartella alternativa per lo snapshot.|  
 |pre_snapshot_script|**nvarchar(255)**|Specifica un puntatore a un file con **estensione SQL** che l'agente di merge viene eseguito prima di uno degli script degli oggetti replicati durante l'applicazione dello snapshot in un Sottoscrittore.|  
 |post_snapshot_script|**nvarchar(255)**|Specifica un puntatore a un file con **estensione SQL** che viene eseguito dal agente di merge dopo l'applicazione di tutti gli altri script di oggetti replicati e dei dati durante una sincronizzazione iniziale.|  
-|compress_snapshot|**bit**|Specifica che lo snapshot scritto nella posizione **alt_snapshot_folder** viene compresso nel formato [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB.|  
+|compress_snapshot|**bit**|Specifica che lo snapshot scritto nella posizione **alt_snapshot_folder** viene compresso nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] formato CAB.|  
 |ftp_address|**sysname**|Indirizzo di rete del servizio FTP per il database di distribuzione. Viene specificata la posizione in cui i file di snapshot della pubblicazione possono essere prelevati dall'agente di merge.|  
 |ftp_port|**int**|Numero di porta del servizio FTP per il database di distribuzione. **ftp_port** il valore predefinito è **21**. Viene specificata la posizione in cui i file di snapshot della pubblicazione possono essere prelevati dall'agente di merge.|  
 |ftp_subdirectory|**nvarchar(255)**|Viene specificata la posizione in cui i file di snapshot possono essere prelevati dall'agente di merge quando lo snapshot viene recapitato tramite FTP.|  
@@ -96,7 +96,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |allow_subscription_copy|**int**|Specifica se la funzionalità che consente di copiare i database di sottoscrizione che sottoscrivono la pubblicazione è abilitata. Il valore **0** indica che la copia non è consentita.|  
 |allow_synctoalternate|**int**|Viene specificato se è consentito l'utilizzo di un partner di sincronizzazione alternativo per la sincronizzazione con il server di pubblicazione. Il valore **0** indica che un partner di sincronizzazione non è consentito.|  
 |validate_subscriber_info|**nvarchar (500)**|Viene visualizzato un elenco delle funzioni utilizzate per il recupero delle informazioni sul Sottoscrittore e la convalida dei criteri per i filtri di riga con parametri nel Sottoscrittore. Inoltre, viene facilitata la verifica del partizionamento consistente delle informazioni a ogni operazione di unione.|  
-|backward_comp_level|**int**|Livello di compatibilità del database. I possibili valori sono i seguenti:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90** =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90** =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level|**int**|Livello di compatibilità del database. I possibili valori sono i seguenti:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_activedirectory|**bit**|Specifica se le informazioni sulla pubblicazione sono pubblicate in Active Directory. Il valore **0** indica che le informazioni sulla pubblicazione non sono disponibili dal Active Directory.<br /><br /> Questo parametro è deprecato ed è supportato solo per compatibilità con gli script di versioni precedenti. Non è più possibile aggiungere informazioni sulla pubblicazione in Active Directory.|  
 |max_concurrent_merge|**int**|Numero massimo di processi di merge simultanei. Se è **0**, non esiste alcun limite al numero di processi di merge simultanei in esecuzione in un determinato momento.|  
 |max_concurrent_dynamic_snapshots|**int**|Numero massimo di sessioni simultanee di snapshot dei dati filtrati eseguibili nella pubblicazione di tipo merge. Se è **0**, non esiste alcun limite al numero massimo di sessioni simultanee di snapshot dei dati filtrati che possono essere eseguite simultaneamente sulla pubblicazione in un determinato momento.|  

@@ -12,18 +12,18 @@ ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7fb33e6ccb5afbdee1bf6c3673a24548d6fe9961
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 952690e4f37be304d80a542e38d461ef92ce2c21
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66102126"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886438"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Configurare connessioni SSL in un server di report in modalità nativa
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] La modalità nativa usa il servizio SSL HTTP (Secure Sockets Layer) per stabilire connessioni crittografate a un server di report. Se si dispone di un file di certificato (con estensione cer) installato in un archivio certificati locale nel server di report, è possibile associare il certificato a una prenotazione di URL di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per supportare le connessioni al server di report tramite un canale crittografato.  
   
 > [!TIP]  
->  Se si utilizza la modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vedere la documentazione su SharePoint per ulteriori informazioni. Ad esempio, [How to enable SSL on a SharePoint 2010 web application (https://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)](https://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx) (Come abilitare SSL in un'applicazione Web SharePoint 2010).  
+>  Se si utilizza la modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vedere la documentazione su SharePoint per ulteriori informazioni. Ad esempio, [How to enable SSL on a SharePoint 2010 web application (https://docs.microsoft.com/archive/blogs/sowmyancs/how-to-enable-ssl-on-a-sharepoint-2010-web-application)](https://docs.microsoft.com/archive/blogs/sowmyancs/how-to-enable-ssl-on-a-sharepoint-2010-web-application) (Come abilitare SSL in un'applicazione Web SharePoint 2010).  
   
  Poiché anche Internet Information Services (IIS) usa il servizio SSL HTTP, si verificano problemi di interoperabilità significativi di cui è necessario tenere conto se si sceglie di eseguire IIS e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nello stesso computer. Esaminare la sezione Problemi di interoperabilità con IIS per indicazioni su come risolvere tali problemi.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66102126"
   
  Se si rimuovono le associazioni SSL per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mediante Gestione configurazione Reporting Services, SSL potrebbe non funzionare più per i siti Web di un server in cui è in esecuzione Internet Information Services (IIS) o un altro server HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Gestione configurazione rimuove la chiave del Registro di sistema riportata di seguito. Quando si rimuove la chiave del Registro di sistema, viene anche rimossa l'associazione SSL per IIS. Senza questa associazione, SSL non viene fornito per il protocollo HTTPS. Per diagnosticare questo problema, utilizzare Gestione IIS o l'utilità della riga di comando HTTPCFG.exe. Per risolverlo, ripristinare l'associazione SSL per i siti Web in uso mediante Gestione IIS. Per evitare che si verifichi di nuovo, utilizzare Gestione IIS innanzitutto per rimuovere le associazioni SSL e, successivamente, per ripristinare l'associazione per i siti Web desiderati. Per altre informazioni, vedere l'articolo della Knowledge Base [Mancato funzionamento di SSL dopo la rimozione di un'associazione SSL (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Autenticazione con il server di report](authentication-with-the-report-server.md)   
  [Configurare e amministrare un server di report &#40;modalità nativa SSRS&#41;](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [File di configurazione RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   

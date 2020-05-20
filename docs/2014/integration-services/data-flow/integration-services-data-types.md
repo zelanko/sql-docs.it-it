@@ -18,12 +18,12 @@ ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fbd39569da4623eda3bb3906fd81bd5da69ab831
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c03333e715483f8da32703636373ef0115c3a1c0
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62902444"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921603"
 ---
 # <a name="integration-services-data-types"></a>Tipi di dati di Integration Services
   Quando i dati entrano in un flusso di dati di un pacchetto, l'origine che estrae i dati li converte in un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Ai dati numerici viene assegnato un tipo di dati numeric, ai dati stringa viene assegnato un tipo di dati character e alle date viene assegnato un tipo di dati date. Agli altri dati, ad esempio GUID e BLOB (Binary Large Object), vengono assegnati i tipi dai dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] appropriati. Se i dati sono di un tipo non convertibile in un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , verrà generato un errore.  
@@ -62,7 +62,7 @@ ms.locfileid: "62902444"
 |DT_WSTR|Stringa di caratteri Unicode con terminazione Null e lunghezza massima di 4000 caratteri. Se un valore di una colonna contiene ulteriori terminatori Null, la stringa verrà troncata in corrispondenza del primo carattere Null.|  
 |DT_IMAGE|Valore binario con dimensioni massime di 2<sup>31</sup>-1 (2.147.483.647) byte. .|  
 |DT_NTEXT|Stringa di caratteri Unicode con lunghezza massima di 2<sup>30</sup> -1 (1.073.741.823) caratteri.|  
-|DT_TEXT|Una [!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]stringa di caratteri/MBCS con lunghezza massima di 2<sup>31</sup>-1 (2.147.483.647) caratteri.|  
+|DT_TEXT|Una [!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)] stringa di caratteri/MBCS con lunghezza massima di 2<sup>31</sup>-1 (2.147.483.647) caratteri.|  
   
 ## <a name="conversion-of-data-types"></a>Conversione di tipi di dati  
  Se i dati in una colonna non richiedono l'intera larghezza allocata dal tipo di dati di origine, sarà possibile modificare il tipo di dati della colonna. Riducendo il più possibile la larghezza delle singole righe di dati è possibile ottimizzare le prestazioni delle operazioni di trasferimento dei dati, perché minore è la larghezza della riga, più rapido sarà lo spostamento dei dati dall'origine alla destinazione.  
@@ -253,7 +253,7 @@ ms.locfileid: "62902444"
  Per informazioni sul mapping di tipi di dati nel flusso di dati, vedere [Utilizzo di tipi di dati nel flusso di dati](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Intervento nel blog sul [confronto delle prestazioni tra le tecniche di conversione dei tipi di dati in SSIS 2008](https://go.microsoft.com/fwlink/?LinkId=220823)su blogs.msdn.com.  
+ Intervento nel blog sul [confronto delle prestazioni tra le tecniche di conversione dei tipi di dati in SSIS 2008](https://techcommunity.microsoft.com/t5/datacat/performance-comparison-between-data-type-conversion-techniques/ba-p/305035)su blogs.msdn.com.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Dati nei flussi di dati](data-in-data-flows.md)  

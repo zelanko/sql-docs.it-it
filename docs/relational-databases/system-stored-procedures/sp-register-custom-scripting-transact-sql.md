@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_register_custom_scripting
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c10451148c6f9b2fda231691b770bca3928517f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d57f3098a69e499392af502d2d3a6d94840bde21
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68075753"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834354"
 ---
 # <a name="sp_register_custom_scripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  La replica consente di sostituire una o più stored procedure predefinite utilizzate per la replica transazionale con stored procedure personalizzate definite dall'utente. Quando viene apportata una modifica dello schema a una tabella replicata, queste stored procedure vengono ricreate. **sp_register_custom_scripting** registra un stored procedure o [!INCLUDE[tsql](../../includes/tsql-md.md)] un file di script che viene eseguito quando si verifica una modifica dello schema per inserire nello script la definizione per un nuovo stored procedure personalizzato definito dall'utente. Questa nuova stored procedure personalizzata definita dall'utente deve riflettere il nuovo schema della tabella. **sp_register_custom_scripting** viene eseguita nel database di pubblicazione del server di pubblicazione e il file di script o stored procedure registrato viene eseguito nel Sottoscrittore quando si verifica una modifica dello schema.  
+  La replica consente di sostituire una o più stored procedure predefinite utilizzate per la replica transazionale con stored procedure personalizzate definite dall'utente. Quando viene apportata una modifica dello schema a una tabella replicata, queste stored procedure vengono ricreate. **sp_register_custom_scripting** registra un stored procedure o un [!INCLUDE[tsql](../../includes/tsql-md.md)] file di script che viene eseguito quando si verifica una modifica dello schema per inserire nello script la definizione per un nuovo stored procedure personalizzato definito dall'utente. Questa nuova stored procedure personalizzata definita dall'utente deve riflettere il nuovo schema della tabella. **sp_register_custom_scripting** viene eseguita nel database di pubblicazione del server di pubblicazione e il file di script o stored procedure registrato viene eseguito nel Sottoscrittore quando si verifica una modifica dello schema.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,10 +42,10 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ## <a name="arguments"></a>Argomenti  
 `[ @type = ] 'type'`Tipo di stored procedure o script personalizzato da registrare. il *tipo* è **varchar (16)** e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**inserire**|La stored procedure personalizzata registrata viene eseguita quando viene replicata un'istruzione INSERT.|  
-|**aggiornamento**|La stored procedure personalizzata registrata viene eseguita quando viene replicata un'istruzione UPDATE.|  
+|**update**|La stored procedure personalizzata registrata viene eseguita quando viene replicata un'istruzione UPDATE.|  
 |**delete**|La stored procedure personalizzata registrata viene eseguita quando viene replicata un'istruzione DELETE.|  
 |**custom_script**|Lo script viene eseguito alla fine del trigger DDL (Data Definition Language).|  
   
@@ -54,7 +54,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 > [!NOTE]  
 >  Se si specifica NULL per il parametro *value*, verrà annullata la registrazione di uno script precedentemente registrato, che corrisponde all'esecuzione [sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md).  
   
- Quando il valore di *tipo* è **custom_script**, è previsto il nome e il percorso [!INCLUDE[tsql](../../includes/tsql-md.md)] completo di un file di script. In caso contrario, il *valore* deve corrispondere al nome di un stored procedure registrato.  
+ Quando il valore di *tipo* è **custom_script**, è previsto il nome e il percorso completo di un [!INCLUDE[tsql](../../includes/tsql-md.md)] file di script. In caso contrario, il *valore* deve corrispondere al nome di un stored procedure registrato.  
   
 `[ @publication = ] 'publication'`Nome della pubblicazione per cui viene registrato lo script o la stored procedure personalizzata. *Publication* è di **tipo sysname**e il valore predefinito è **null**.  
   

@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: fc280fa541e2a6b5ea984086d694ffdd3f7c39a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bc6805426251e87a8db3dcf4ad9da6343ac0ea12
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056546"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885998"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Configurare le impostazioni per Data Migration Assistant
 
@@ -29,11 +29,11 @@ ms.locfileid: "74056546"
 
 - Applicazione desktop
 
-  % ProgramFiles%\\Microsoft Data Migration Assistant\\DMA. exe. config
+  % ProgramFiles% \\ Microsoft Data Migration Assistant \\ DMA. exe. config
 
 - Utilità della riga di comando
 
-  % ProgramFiles%\\Microsoft Data Migration Assistant\\dmacmd. exe. config 
+  % ProgramFiles% \\ Microsoft Data Migration Assistant \\ dmacmd. exe. config 
 
 Assicurarsi di salvare una copia del file di configurazione originale prima di apportare qualsiasi modifica. Dopo aver apportato le modifiche, riavviare Data Migration Assistant per rendere effettivi i nuovi valori di configurazione.
 
@@ -82,7 +82,7 @@ A partire da Data Migration Assistant v 2.0, se si verifica questo problema, è 
 Durante la valutazione, Data Migration Assistant estrae l'applicazione livello dati (dacpac) per comprendere lo schema del database. Questa operazione può avere esito negativo con timeout per database di dimensioni molto grandi o se il server è sotto carico. A partire dalla migrazione dei dati v 1.0, è possibile modificare i valori di configurazione seguenti per evitare errori. 
 
 > [!NOTE]
-> Per impostazione &lt;predefinita&gt; , l'intera voce DACFx è impostata come commento. Rimuovere i commenti e quindi modificare il valore in base alle esigenze.
+> &lt; &gt; Per impostazione predefinita, l'intera voce DACFx è impostata come commento. Rimuovere i commenti e quindi modificare il valore in base alle esigenze.
 
 - commandTimeout
 
@@ -90,7 +90,7 @@ Durante la valutazione, Data Migration Assistant estrae l'applicazione livello d
 
 - databaseLockTimeout
 
-   Questo parametro equivale a [impostare il periodo\_di timeout\_del blocco del blocco](../t-sql/statements/set-lock-timeout-transact-sql.md) in *millisecondi*.(Valore predefinito = 5000)
+   Questo parametro equivale a [impostare il \_ \_ periodo di timeout del blocco del blocco](../t-sql/statements/set-lock-timeout-transact-sql.md) in *millisecondi*.(Valore predefinito = 5000)
 
 - maxDataReaderDegreeOfParallelism
 

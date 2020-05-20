@@ -1,5 +1,6 @@
 ---
 title: Configurare il backup gestito (SQL Server Management Studio) | Microsoft Docs
+description: Usare la finestra di dialogo backup gestito per configurare il backup gestito SQL Server impostazione predefinita di Azure. Informazioni sulle opzioni che è necessario prendere in considerazione.
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql-server-2014
@@ -12,15 +13,15 @@ ms.assetid: 79397cf6-0611-450a-b0d8-e784a76e3091
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 021db5a2283eb6ec68ea80302e938f08e7ba1a5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d8e7e02f844df026c597e93e43ebee7f8e786a72
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154346"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849439"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>Configurare il backup gestito (SQL Server Management Studio)
-  La finestra di dialogo **backup gestito** consente di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] configurare le impostazioni predefinite per l'istanza. In questo argomento viene descritto come usare questa finestra di dialogo per configurare le impostazioni predefinite di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per l'istanza e le opzioni che è necessario considerare quando si esegue questa operazione. Quando [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] è configurato per l'istanza, le impostazioni vengono applicate a qualsiasi nuovo database creato successivamente.  
+  La finestra di dialogo **backup gestito** consente di configurare [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] le impostazioni predefinite per l'istanza. In questo argomento viene descritto come usare questa finestra di dialogo per configurare le impostazioni predefinite di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per l'istanza e le opzioni che è necessario considerare quando si esegue questa operazione. Quando [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] è configurato per l'istanza, le impostazioni vengono applicate a qualsiasi nuovo database creato successivamente.  
   
  Se si vuole configurare [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per un database specifico, vedere [abilitare e configurare SQL Server backup gestito in Azure per un database](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md#DatabaseConfigure).  
  
@@ -47,7 +48,7 @@ ms.locfileid: "70154346"
   
 -   `SELECT` su `smart_admin.fn_backup_instance_config`.  
   
- **Per configurare il backup gestito:** per [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] configurare in SQL Server Management Studio, è necessario essere un amministratore di sistema o disporre delle autorizzazioni seguenti:  
+ **Per configurare il backup gestito:** per configurare [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] in SQL Server Management Studio, è necessario essere un amministratore di sistema o disporre delle autorizzazioni seguenti:  
   
  L'appartenenza al ruolo del database `db_backupoperator`, con le autorizzazioni `ALTER ANY CREDENTIAL` e `EXECUTE` sulla stored procedure `sp_delete_backuphistory`.  
   
@@ -68,7 +69,7 @@ ms.locfileid: "70154346"
   
  Specificare l' **URL di archiviazione** per l'account di archiviazione di Azure, le credenziali SQL che archiviano le informazioni di autenticazione per l'account di archiviazione e il periodo di memorizzazione per i file di backup.  
   
- Il formato dell'URL di archiviazione è\<: https://StorageAccount>. blob.Core.Windows.NET/  
+ Il formato dell'URL di archiviazione è: https:// \< StorageAccount>. blob.Core.Windows.NET/  
   
  Per impostare le impostazioni di crittografia a livello di istanza, selezionare l'opzione **Crittografa backup** e specificare l'algoritmo e un certificato o una chiave asimmetrica da utilizzare per la crittografia.  Questa proprietà è impostata a livello di istanza e viene usata per tutti i nuovi database creati dopo l'applicazione di questa configurazione.  
   
@@ -78,7 +79,7 @@ ms.locfileid: "70154346"
 ### <a name="considerations"></a>Considerazioni  
  Se si configura [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] a livello di istanza, le impostazioni vengono applicate a qualsiasi nuovo database creato successivamente.  Tuttavia, i database esistenti non ereditano automaticamente queste impostazioni. Per configurare [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] su database già esistenti, è necessario configurare ogni database in modo specifico. Per altre informazioni, vedere [abilitare e configurare SQL Server backup gestito in Azure per un database](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md#DatabaseConfigure).  
   
- Se [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] è stato sospeso utilizzando `smart_admin.sp_backup_master_switch`, verrà visualizzato un messaggio di avviso che indica che il backup gestito è disabilitato e che le configurazioni correnti non diverranno effettive. Quando si tenta di completare la configurazione. Usare l' `smart_admin.sp_backup_master_switch` oggetto archiviato e impostare @new_state= 1. Questa attività riprenderà i servizi [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] e le impostazioni di configurazione diventeranno attive. Per ulteriori informazioni sulla stored procedure, vedere [smart_admin. sp_ backup_master_switch &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql).  
+ Se [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] è stato sospeso utilizzando `smart_admin.sp_backup_master_switch` , verrà visualizzato un messaggio di avviso che indica che il backup gestito è disabilitato e che le configurazioni correnti non diverranno effettive. Quando si tenta di completare la configurazione. Usare l'oggetto `smart_admin.sp_backup_master_switch` archiviato e impostare @new_state = 1. Questa attività riprenderà i servizi [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] e le impostazioni di configurazione diventeranno attive. Per ulteriori informazioni sulla stored procedure, vedere [smart_admin. sp_ backup_master_switch &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Backup gestito di SQL Server in Azure: Interoperabilità e coesistenza](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  

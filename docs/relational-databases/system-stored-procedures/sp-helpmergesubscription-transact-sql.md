@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergesubscription
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0e5f044482d3e46e4e20279a437b8d9459d1d3bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e790d110fc45708c7aa2be76db3890c8d1bc7f13
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68002646"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834465"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,19 +43,19 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **%** **tipo sysname**e il valore predefinito è. È necessario che la pubblicazione esista già e che sia conforme alle regole per gli identificatori. Se è NULL **%** o, vengono restituite informazioni su tutte le pubblicazioni e le sottoscrizioni di tipo merge nel database corrente.  
+`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è **%** . È necessario che la pubblicazione esista già e che sia conforme alle regole per gli identificatori. Se è NULL o **%** , vengono restituite informazioni su tutte le pubblicazioni e le sottoscrizioni di tipo merge nel database corrente.  
   
-`[ @subscriber = ] 'subscriber'`Nome del Sottoscrittore. *Subscriber* è di **%** **tipo sysname**e il valore predefinito è. Se è NULL o %, vengono restituite informazioni su tutte le sottoscrizioni della pubblicazione specificata.  
+`[ @subscriber = ] 'subscriber'`Nome del Sottoscrittore. *Subscriber* è di **tipo sysname**e il valore predefinito è **%** . Se è NULL o %, vengono restituite informazioni su tutte le sottoscrizioni della pubblicazione specificata.  
   
-`[ @subscriber_db = ] 'subscriber_db'`Nome del database di sottoscrizione. *subscriber_db*è di **%** **tipo sysname**e il valore predefinito è, che restituisce informazioni su tutti i database di sottoscrizione.  
+`[ @subscriber_db = ] 'subscriber_db'`Nome del database di sottoscrizione. *subscriber_db*è di **tipo sysname**e il valore predefinito è **%** , che restituisce informazioni su tutti i database di sottoscrizione.  
   
-`[ @publisher = ] 'publisher'`Nome del server di pubblicazione. Il server di pubblicazione deve essere un server valido. *Publisher*è di **tipo sysname**e il valore **%** predefinito è, che restituisce informazioni su tutti i server di pubblicazione.  
+`[ @publisher = ] 'publisher'`Nome del server di pubblicazione. Il server di pubblicazione deve essere un server valido. *Publisher*è di **tipo sysname**e il valore predefinito è **%** , che restituisce informazioni su tutti i server di pubblicazione.  
   
-`[ @publisher_db = ] 'publisher_db'`Nome del database del server di pubblicazione. *publisher_db*è di **%** **tipo sysname**e il valore predefinito è, che restituisce informazioni su tutti i database del server di pubblicazione.  
+`[ @publisher_db = ] 'publisher_db'`Nome del database del server di pubblicazione. *publisher_db*è di **tipo sysname**e il valore predefinito è **%** , che restituisce informazioni su tutti i database del server di pubblicazione.  
   
 `[ @subscription_type = ] 'subscription_type'`Tipo di sottoscrizione. *subscription_type*è di **tipo nvarchar (15)**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
 |**push** (impostazione predefinita)|Sottoscrizione push|  
 |**tirare**|Sottoscrizione pull|  
@@ -85,9 +85,9 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**offload_server**|**sysname**|Nome del server in cui è in esecuzione l'agente.|  
 |**use_interactive_resolver**|**int**|Specifica se durante la fase di riconciliazione viene utilizzato il sistema di risoluzione dei conflitti interattivo. Se è **0**, il sistema di risoluzione interattivo non viene utilizzato.|  
 |**hostname**|**sysname**|Valore fornito quando una sottoscrizione viene filtrata in base al valore della funzione [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) .|  
-|**subscriber_security_mode**|**smallint**|Modalità di sicurezza nel Sottoscrittore, dove **1** indica l'autenticazione di Windows **0** e 0 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indica l'autenticazione di.|  
+|**subscriber_security_mode**|**smallint**|Modalità di sicurezza nel Sottoscrittore, dove **1** indica l'autenticazione di Windows e **0** indica [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione di.|  
 |**subscriber_login**|**sysname**|Nome dell'account di accesso nel Sottoscrittore.|  
-|**subscriber_password**|**sysname**|La password effettiva per il Sottoscrittore non viene mai restituita. Il risultato è mascherato da una stringa**\*\*\*\*\***"".|  
+|**subscriber_password**|**sysname**|La password effettiva per il Sottoscrittore non viene mai restituita. Il risultato è mascherato da una **\*\*\*\*\*\*** stringa "".|  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  

@@ -12,16 +12,16 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
 manager: jroth
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6f9d3d97d939586683015f38ab17c00dd03ca122
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 30f840c9fe558382c5a0549f09657c917c69c3d4
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75253508"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886188"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Valutare la conformità di un SQL Server di dati di cui si esegue la migrazione al database SQL di Azure usando il Data Migration Assistant
 
@@ -97,12 +97,12 @@ Dopo aver creato un progetto di migrazione, in **strumenti di valutazione**, nel
 
 ### <a name="create-an-assessment"></a>Creare una valutazione
 
-1. A sinistra, selezionare l' **+** icona e quindi selezionare il tipo di **progetto** di valutazione
+1. A sinistra, selezionare l' **+** icona e quindi selezionare il **tipo di progetto** di valutazione
 2. Specificare il nome del progetto, quindi selezionare il server di origine e i tipi di server di destinazione.
 
     Se si sta aggiornando l'istanza di SQL Server locale a una versione successiva di SQL Server o a SQL Server ospitata in una macchina virtuale di Azure, impostare il tipo di server di origine e di destinazione su **SQL Server**. Impostare il tipo di server di destinazione su **istanza gestita di database SQL di Azure** per una valutazione della conformità della destinazione del database SQL di Azure (PaaS).
 
-3. Selezionare **Create** (Crea).
+3. Selezionare **Crea**.
 
    ![Interfaccia Azure Migrate-Data Migration Assistant](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-interface.png)
 

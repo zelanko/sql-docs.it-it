@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergepullsubscription
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c92ea8e2f172d9cb5b40559c2a7b77a60153065b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: af38463c5104da636d04f961b0cee5210369e38d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68137705"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834504"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,11 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="argument"></a>Argomento  
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **%** **tipo sysname**e il valore predefinito è. Se *publication* la pubblicazione **%** è, vengono restituite informazioni su tutte le pubblicazioni e le sottoscrizioni di tipo merge nel database corrente.  
+`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è **%** . Se la *pubblicazione* è **%** , vengono restituite informazioni su tutte le pubblicazioni e le sottoscrizioni di tipo merge nel database corrente.  
   
-`[ @publisher = ] 'publisher'`Nome del server di pubblicazione. *Publisher*è di **%** **tipo sysname**e il valore predefinito è.  
+`[ @publisher = ] 'publisher'`Nome del server di pubblicazione. *Publisher*è di **tipo sysname**e il valore predefinito è **%** .  
   
-`[ @publisher_db = ] 'publisher_db'`Nome del database del server di pubblicazione. *publisher_db*è di **%** **tipo sysname**e il valore predefinito è.  
+`[ @publisher_db = ] 'publisher_db'`Nome del database del server di pubblicazione. *publisher_db*è di **tipo sysname**e il valore predefinito è **%** .  
   
 `[ @subscription_type = ] 'subscription_type'`Indica se visualizzare le sottoscrizioni pull. *subscription_type*è di **tipo nvarchar (10)** e il valore predefinito è **' pull '**. I valori validi sono **' push '**, **' pull '** o **' both '**.  
   
@@ -69,11 +69,11 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**last_updated**|**nvarchar (26)**|Ora in cui l'agente di merge ha eseguito l'ultima sincronizzazione della sottoscrizione.|  
 |**publisher_login**|**sysname**|Nome dell'account di accesso del server di pubblicazione.|  
 |**publisher_password**|**sysname**|Password del server di pubblicazione.|  
-|**publisher_security_mode**|**int**|Modalità di sicurezza del server di pubblicazione:<br /><br /> **autenticazione 0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **1** = autenticazione di Windows|  
+|**publisher_security_mode**|**int**|Modalità di sicurezza del server di pubblicazione:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione 0<br /><br /> **1** = autenticazione di Windows|  
 |**distribuzione**|**sysname**|Nome del server di distribuzione.|  
 |**distributor_login**|**sysname**|Nome dell'account di accesso del server di distribuzione.|  
 |**distributor_password**|**sysname**|Password per il server di distribuzione.|  
-|**distributor_security_mode**|**int**|Modalità di sicurezza del server di distribuzione:<br /><br /> **autenticazione 0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **1** = autenticazione di Windows|  
+|**distributor_security_mode**|**int**|Modalità di sicurezza del server di distribuzione:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione 0<br /><br /> **1** = autenticazione di Windows|  
 |**ftp_address**|**sysname**|Disponibile per compatibilità con le versioni precedenti. Indirizzo di rete del servizio FTP per il server di distribuzione.|  
 |**ftp_port**|**int**|Disponibile per compatibilità con le versioni precedenti. Numero di porta del servizio FTP per il database di distribuzione.|  
 |**ftp_login**|**sysname**|Disponibile per compatibilità con le versioni precedenti. Nome utente utilizzato per la connessione al servizio FTP.|  
@@ -95,8 +95,8 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**internet_security_mode**|**int**|Modalità di autenticazione utilizzata per la connessione al server Web in cui viene eseguita la sincronizzazione Web. Il valore **1** indica l'autenticazione di Windows, mentre il valore **0** indica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione di.|  
 |**internet_timeout**|**int**|Periodo di tempo, espresso in secondi, al termine del quale una richiesta di sincronizzazione Web scade.|  
 |**hostname**|**nvarchar(128)**|Specifica un valore di overload per [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) quando questa funzione viene utilizzata nella clausola WHERE di un filtro di riga con parametri.|  
-|**job_login**|**nvarchar(512)**|Account di Windows utilizzato per l'esecuzione dell'agente di merge, restituito nel formato *dominio*\\*nomeutente*.|  
-|**job_password**|**sysname**|Per motivi di sicurezza, viene sempre restituito**\*\*\*\*\*\*\*\*\*** il valore "".|  
+|**job_login**|**nvarchar(512)**|Account di Windows utilizzato per l'esecuzione dell'agente di merge, restituito nel formato *dominio* \\ *nomeutente*.|  
+|**job_password**|**sysname**|Per motivi di sicurezza, **\*\*\*\*\*\*\*\*\*\*** viene sempre restituito il valore "".|  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  

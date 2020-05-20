@@ -1,5 +1,6 @@
 ---
 title: Risoluzione dei problemi di SQL Server backup gestito in Azure | Microsoft Docs
+description: Questo articolo descrive le attività e gli strumenti che è possibile usare per risolvere gli errori che possono verificarsi durante SQL Server backup gestito per Microsoft Azure operazioni.
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,12 +11,12 @@ ms.assetid: a34d35b0-48eb-4ed1-9f19-ea14754650da
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 385fa6f6bd874734207c6fec10ddc687b951825a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: db55c753317f945a8156b671fa9cbcd72ce4c641
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76929441"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849599"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-azure"></a>Risoluzione dei problemi relativi al backup gestito di SQL Server in Azure
   In questo argomento vengono descritti gli strumenti e le attività utilizzabili per la risoluzione dei problemi relativi agli errori che si possono verificare durante le operazioni di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
@@ -33,7 +34,7 @@ ms.locfileid: "76929441"
   
 1.  Abilitare la notifica tramite posta elettronica per iniziare a ricevere messaggi di posta elettronica per errori e avvisi.  
   
-     In alternativa, è anche possibile eseguire periodicamente `smart_admin.fn_get_health_status` per controllare gli errori e i conteggi aggregati. Ad esempio, `number_of_invalid_credential_errors` rappresenta il numero di volte in cui il backup intelligente ha tentato di eseguire un backup ma è stato restituito un errore di credenziali non valide. `Number_of_backup_loops` e `number_of_retention_loops` non sono errori; ma indicano il numero di volte in cui il thread di backup e il thread di memorizzazione hanno analizzato l'elenco di database. In genere, @begin_time quando @end_time e non vengono specificati, la funzione Visualizza le informazioni degli ultimi 30 minuti, quindi in genere è necessario visualizzare i valori diversi da zero per queste due colonne. Se vengono visualizzati valori pari a zero, significa che si è verificato un overload del sistema o che il sistema non risponde. Per ulteriori informazioni, vedere la sezione **risoluzione dei problemi di sistema** più avanti in questo argomento.  
+     In alternativa, è anche possibile eseguire periodicamente `smart_admin.fn_get_health_status` per controllare gli errori e i conteggi aggregati. Ad esempio, `number_of_invalid_credential_errors` rappresenta il numero di volte in cui il backup intelligente ha tentato di eseguire un backup ma è stato restituito un errore di credenziali non valide. `Number_of_backup_loops` e `number_of_retention_loops` non sono errori; ma indicano il numero di volte in cui il thread di backup e il thread di memorizzazione hanno analizzato l'elenco di database. In genere, quando @begin_time e @end_time non vengono specificati, la funzione Visualizza le informazioni degli ultimi 30 minuti, quindi in genere è necessario visualizzare i valori diversi da zero per queste due colonne. Se vengono visualizzati valori pari a zero, significa che si è verificato un overload del sistema o che il sistema non risponde. Per ulteriori informazioni, vedere la sezione **risoluzione dei problemi di sistema** più avanti in questo argomento.  
   
 2.  Esaminare i registri eventi estesi per ulteriori dettagli sugli errori e altri eventi associati.  
   
@@ -44,17 +45,17 @@ ms.locfileid: "76929441"
   
 1.  **Modifiche alle credenziali SQL:** Se il nome della credenziale utilizzata da [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] viene modificato o se viene eliminato, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] non sarà in grado di eseguire i backup. La modifica deve essere applicata alle impostazioni di configurazione di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
   
-2.  **Modifiche ai valori della chiave di accesso all'archiviazione:** Se i valori della chiave di archiviazione vengono modificati per l'account Azure, ma le credenziali SQL non vengono aggiornate con i [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] nuovi valori, avrà esito negativo quando si esegue l'autenticazione nella risorsa di archiviazione e non è possibile eseguire il backup dei database configurati per l'uso di questo account.  
+2.  **Modifiche ai valori della chiave di accesso all'archiviazione:** Se i valori della chiave di archiviazione vengono modificati per l'account Azure, ma le credenziali SQL non vengono aggiornate con i nuovi valori, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] avrà esito negativo quando si esegue l'autenticazione nella risorsa di archiviazione e non è possibile eseguire il backup dei database configurati per l'uso di questo account.  
   
-3.  **Modifiche all'account di archiviazione di Azure:** L'eliminazione o la ridenominazione dell'account di archiviazione senza modifiche corrispondenti alle credenziali [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] SQL causerà un errore e non verrà eseguito alcun backup. Se si elimina un account di archiviazione, verificare che i database vengano riconfigurati con informazioni sull'account di archiviazione valide. Se un account di archiviazione viene ridenominato oppure i valori della chiave vengono modificati, verificare che queste modifiche vengano riflesse nelle credenziali SQL utilizzate da [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
+3.  **Modifiche all'account di archiviazione di Azure:** L'eliminazione o la ridenominazione dell'account di archiviazione senza modifiche corrispondenti alle credenziali SQL causerà [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] un errore e non verrà eseguito alcun backup. Se si elimina un account di archiviazione, verificare che i database vengano riconfigurati con informazioni sull'account di archiviazione valide. Se un account di archiviazione viene ridenominato oppure i valori della chiave vengono modificati, verificare che queste modifiche vengano riflesse nelle credenziali SQL utilizzate da [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
   
 4.  **Modifiche alle proprietà del database:** Le modifiche ai modelli di recupero o la modifica del nome possono causare errori di backup.  
   
-5.  **Modifiche al modello di recupero:** Se il modello di recupero del database viene modificato in semplice da completo o con registrazione minima delle operazioni bulk, i backup verranno arrestati e i database verranno ignorati da [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Per altre informazioni, vedere [SQL Server backup gestito in Azure: interoperabilità e coesistenza](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
+5.  **Modifiche al modello di recupero:** Se il modello di recupero del database viene modificato in semplice da completo o con registrazione minima delle operazioni bulk, i backup verranno arrestati e i database verranno ignorati da [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] . Per altre informazioni, vedere [SQL Server backup gestito in Azure: interoperabilità e coesistenza](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
   
 ### <a name="most-common-error-messages-and-solutions"></a>Messaggi di errori più comuni e soluzioni  
   
-1.  **Errori durante l'abilitazione [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]o la configurazione di:**  
+1.  **Errori durante l'abilitazione o la configurazione di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] :**  
   
      Errore: "non è stato possibile accedere all'URL di archiviazione... Specificare una credenziale SQL valida... ": è possibile che venga visualizzato questo e altri errori simili che fanno riferimento a credenziali SQL.  In questi casi, esaminare il nome delle credenziali SQL fornite, nonché le informazioni archiviate nelle credenziali SQL, ovvero il nome dell'account di archiviazione e la chiave di accesso alle archiviazioni e verificare che siano correnti e valide.  
   
@@ -101,7 +102,7 @@ ms.locfileid: "76929441"
 ### <a name="troubleshooting-system-issues"></a>Risoluzione dei problemi relativi al sistema  
  Di seguito vengono illustrati alcuni scenari quando si verifica un problema con il sistema (SQL Server, SQL Server Agent) e i relativi effetti su [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]:  
   
--   **Sqlservr. exe smette di rispondere o smette di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] funzionare quando è in esecuzione:** se SQL Server smette di funzionare, SQL Agent verrà arrestato [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] normalmente, inoltre si interrompe e gli eventi vengono registrati nel file SQL Agent. out.  
+-   **Sqlservr. exe smette di rispondere o smette di funzionare quando [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] è in esecuzione:** se SQL Server smette di funzionare, SQL Agent verrà arrestato normalmente, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] inoltre si interrompe e gli eventi vengono registrati nel file SQL Agent. out.  
   
      Se SQL Server non risponde, gli eventi vengono registrati nel canale di amministrazione.  Un esempio del registro eventi:  
   
@@ -109,7 +110,7 @@ ms.locfileid: "76929441"
      *il codice di errore, il messaggio e l'StackTrace verranno visualizzati in un canale di amministrazione XEvent, insieme ad alcune informazioni aggiuntive, ad esempio:*   
     *"È probabile che si verifichino problemi di connettività con SQL Server. Il database verrà ignorato nell'iterazione corrente "*  
   
--   **SQL Agent smette di rispondere o smette di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] funzionare quando è in esecuzione:**  
+-   **SQL Agent smette di rispondere o smette di funzionare quando [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] è in esecuzione:**  
   
      Se SQL Agent si blocca, viene arrestato anche [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] e gli eventi vengono registrati nel canale di amministrazione. È simile agli scenari in cui SQL Server non risponde.  
   

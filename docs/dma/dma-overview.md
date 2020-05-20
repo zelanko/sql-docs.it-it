@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, overview
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: 64c8416a15afd685559fe2d05c436c2e5fc1382d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: ad6bf673fb9bfe435d517dfd9e2dcf71774191a1
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73632856"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885798"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Panoramica di Data Migration Assistant
 
@@ -32,7 +32,7 @@ Il Data Migration Assistant (DMA) consente di eseguire l'aggiornamento a una pia
 
 Per installare DMA, scaricare la versione più recente dello strumento dall' [area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53595), quindi eseguire il file **DataMigrationAssistant. msi** .
 
-## <a name="capabilities"></a>Capabilities
+## <a name="capabilities"></a>Funzionalità
 
 - Valutare le istanze di SQL Server locali che eseguono la migrazione a database SQL di Azure.Il flusso di lavoro di valutazione consente di rilevare i seguenti problemi che possono influire sulla migrazione del database SQL di Azure e fornisce indicazioni dettagliate su come risolverli.
 
@@ -42,7 +42,7 @@ Per installare DMA, scaricare la versione più recente dello strumento dall' [ar
 
 - Individuare i problemi che possono influire sull'aggiornamento a un SQL Server locale.Questi sono descritti come problemi di compatibilità e sono organizzati nelle categorie seguenti:
 
-  - Modifiche di rilievo
+  - Modifiche che causano un'interruzione
   - Modifiche funzionali
   - Funzionalità deprecate
 

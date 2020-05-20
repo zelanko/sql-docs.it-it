@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_link_publication
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 17c1c2a5ccb7ef9e7c4a3d843f63edde1f134016
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0948b01e404b5eca475b344390ff105d4e094cce
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139901"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834389"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,9 +57,9 @@ sp_link_publication [ @publisher = ] 'publisher'
   
 `[ @security_mode = ] security_mode`Modalità di sicurezza utilizzata dal Sottoscrittore per la connessione a un server di pubblicazione remoto per l'aggiornamento immediato. *security_mode* è di **tipo int**. i possibili valori sono i seguenti. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
-|**0**|USA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione di con l'account di accesso specificato in questo stored procedure come *account di accesso* e *password*.<br /><br /> Nota: nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]questa opzione è stata usata per specificare una chiamata di procedura remota (RPC) dinamica.|  
+|**0**|Usa l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione di con l'account di accesso specificato in questo stored procedure come *account di accesso* e *password*.<br /><br /> Nota: nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa opzione è stata usata per specificare una chiamata di procedura remota (RPC) dinamica.|  
 |**1**|Utilizza il contesto di sicurezza (autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o autenticazione di Windows) dell'utente che esegue la modifica nel Sottoscrittore.<br /><br /> Nota: questo account deve esistere anche nel server di pubblicazione con privilegi sufficienti. Se si utilizza l'autenticazione di Windows è necessario che sia supportata la delega degli account di sicurezza.|  
 |**2**|Usa un account di accesso del server collegato definito dall'utente esistente creato con **sp_link_publication**.|  
   
@@ -79,7 +79,7 @@ sp_link_publication [ @publisher = ] 'publisher'
   
  Per le sottoscrizioni push, la voce può essere pulita [sp_subscription_cleanup &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). Per le sottoscrizioni pull, la voce può essere pulita [sp_droppullsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md) o [Sp_subscription_cleanup &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). È inoltre possibile chiamare **sp_link_publication** con una password null per cancellare la voce nella MSsubscription_properties &#40;tabella di sistema [&#41;Transact-SQL](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) per motivi di sicurezza.  
   
- La modalità predefinita utilizzata in un Sottoscrittore ad aggiornamento immediato per la connessione al server di pubblicazione non consente la connessione tramite l'autenticazione di Windows. Per eseguire la connessione con questa modalità di autenticazione, è necessario configurare un server collegato per il server di pubblicazione e il Sottoscrittore ad aggiornamento immediato deve utilizzare questa connessione per l'aggiornamento del Sottoscrittore. Questa operazione richiede l'esecuzione del **sp_link_publication** con *security_mode* = **2**. Se si utilizza l'autenticazione di Windows è necessario che sia supportata la delega degli account di sicurezza.  
+ La modalità predefinita utilizzata in un Sottoscrittore ad aggiornamento immediato per la connessione al server di pubblicazione non consente la connessione tramite l'autenticazione di Windows. Per eseguire la connessione con questa modalità di autenticazione, è necessario configurare un server collegato per il server di pubblicazione e il Sottoscrittore ad aggiornamento immediato deve utilizzare questa connessione per l'aggiornamento del Sottoscrittore. Questa operazione richiede l'esecuzione del **sp_link_publication** con *security_mode*  =  **2**. Se si utilizza l'autenticazione di Windows è necessario che sia supportata la delega degli account di sicurezza.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent_failover](../../relational-databases/replication/codesnippet/tsql/sp-link-publication-tran_1.sql)]  
