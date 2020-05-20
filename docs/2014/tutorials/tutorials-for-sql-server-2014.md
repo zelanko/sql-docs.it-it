@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: be20c79c4c44d65b4d6b1177d06cea5ef66c164b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da87f0fbae21d11906f12a906aa5107e8812436e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242062"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000049"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>Esercitazioni di SQL Server 2014
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] vengono introdotte numerose nuove tecnologie e funzionalità.  

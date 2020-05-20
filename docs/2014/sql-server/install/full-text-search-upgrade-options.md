@@ -10,15 +10,15 @@ f1_keywords:
 - Full-Text Search
 - Upgrade options, Full-Text Search
 ms.assetid: 16c9376b-5fbb-4495-a429-06a2493849c9
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 575105d61446f2fd272e4087457e7762c1abb2e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce419321dc3201c4db8d103e1d256e14168c6ec8
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095092"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000205"
 ---
 # <a name="full-text-search-upgrade-options"></a>Opzioni di aggiornamento della ricerca full-text
   Utilizzare la pagina Opzioni di aggiornamento della ricerca full-text dell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per selezionare l'opzione di aggiornamento della ricerca full-text da utilizzare per l'aggiornamento dei database.  
@@ -38,7 +38,7 @@ ms.locfileid: "66095092"
   
  Per informazioni sull'impatto dell'importazione di un indice full-text, vedere "Considerazioni per la scelta di un'opzione di aggiornamento full-text" più avanti in questo argomento.  
   
- **Ricompilare**  
+ **Ricompilazione**  
  I cataloghi full-text vengono ricompilati utilizzando i nuovi word breaker ottimizzati. La ricompilazione degli indici può richiedere molto tempo. Dopo l'aggiornamento, inoltre, potrebbe essere necessaria una quantità significativa di CPU e di memoria.  
   
  **Reimposta**  

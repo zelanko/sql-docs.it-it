@@ -10,15 +10,15 @@ helpviewer_keywords:
 - technical reference [SQL Server Database Engine]
 - Database Engine [SQL Server], getting assistance
 ms.assetid: e9533f6b-c48a-4f53-a7a0-379e092bb667
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 43cecce8e173c0135a7a37ee5800c7cf658c1f1a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea211e607425d82a980cafc778647efca39773ab
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175380"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000534"
 ---
 # <a name="technical-reference-database-engine"></a>Guida di riferimento tecnico (Motore di database)
   Consente di individuare gli strumenti, le lingue e la documentazione di riferimento per la programmazione dell'amministrazione per il [!INCLUDE[ssDE](../includes/ssde-md.md)] in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].

@@ -12,18 +12,23 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, new features
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: b5caa8b63175447daa04198768a67e7fe5e59c81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: 287e3396ec26652f43754be313b02e3bf7d9831d
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78896807"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924625"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Novità di Data Migration Assistant
 
 Questo articolo elenca le aggiunte in ogni versione di Data Migration Assistant.
+
+## <a name="data-migration-assistant-v-52"></a>Data Migration Assistant v 5,2
+La versione 5.2 del Data Migration Assistant fornisce supporto per:
+- Il caricamento di valutazioni per Azure Migrate con supporto per Azure per enti pubblici e cloud nazionali (offerta sovrana).  Questa funzionalità consente a di valutare l'idoneità della migrazione di SQL Server Data estate a SQL di Azure.
+- Supporto della riga di comando per il caricamento di valutazioni per Azure Migrate con supporto per Azure per enti pubblici e cloud nazionali.  A questo punto, è possibile automatizzare completamente il caricamento delle valutazioni nel progetto di Azure migrate per ottenere un report di conformità SQL di Azure consolidato. 
 
 ## <a name="data-migration-assistant-v-50"></a>Data Migration Assistant v 5,0
 
@@ -176,7 +181,7 @@ La versione 2.0 di Data Migration Assistant include consigli sulle funzionalità
 La versione 1.0 di Data Migration Assistant è la versione iniziale e fornisce:
 
 - Individuazione di problemi che possono influire sull'aggiornamento a una versione locale di SQL Server. I risultati vengono descritti come problemi di compatibilità e sono suddivisi in categorie nelle aree seguenti:
-  - Modifiche di rilievo
+  - Modifiche che causano un'interruzione
   - Modifiche funzionali
   - Funzionalità deprecate
 - Individuazione di nuove funzionalità nella piattaforma SQL Server di destinazione di cui il database può trarre vantaggio dopo un aggiornamento. I risultati sono descritti come raccomandazioni sulle funzionalità e sono suddivisi in categorie nelle aree seguenti:

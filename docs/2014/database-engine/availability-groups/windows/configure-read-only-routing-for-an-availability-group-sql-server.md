@@ -17,12 +17,12 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f50ff5cd5a3ecbc70aafb6da7cf5008f31bada0f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e74a05193ae2051b12dbc15bb199b22a3c44f2a
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797725"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925011"
 ---
 # <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>Configurare il routing di sola lettura per un gruppo di disponibilità (SQL Server)
   Per configurare un gruppo di disponibilità AlwaysOn in modo da supportare il routing di sola lettura in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], è possibile utilizzare [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell. Con*routing di sola lettura* si intende la capacità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di instradare le richieste di connessione in sola lettura valide a una [replica secondaria leggibile](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) AlwaysOn, ovvero una replica configurata per consentire carichi di lavoro di sola lettura quando viene eseguita nel ruolo secondario. Per supportare il routing di sola lettura, il gruppo di disponibilità deve possedere un [listener del gruppo di disponibilità](../../listeners-client-connectivity-application-failover.md). I client in sola lettura devono indirizzare le richieste di connessione al listener e le stringhe di connessione del client devono specificare la finalità dell'applicazione come in sola lettura, ovvero devono essere *richieste di connessione con finalità di lettura*.  
@@ -39,7 +39,7 @@ ms.locfileid: "72797725"
   
 -   È necessario che il gruppo di disponibilità disponga di un listener del gruppo di disponibilità. Per altre informazioni, vedere [Creare o configurare un listener del gruppo di disponibilità &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md).  
   
--   È necessario configurare una o più repliche di disponibilità in modo che accettino solo la modalità di sola lettura nel ruolo secondario, ovvero le [repliche secondarie leggibili](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)(\)AlwaysOn% 20Availability% 20Groups. MD). Per altre informazioni, vedere [Configurare l'accesso in sola lettura in una replica di disponibilità &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md).  
+-   È necessario configurare una o più repliche di disponibilità in modo che accettino solo la modalità di sola lettura nel ruolo secondario, ovvero le [repliche secondarie leggibili](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)(AlwaysOn% 20Availability% 20Groups \) . MD). Per altre informazioni, vedere [Configurare l'accesso in sola lettura in una replica di disponibilità &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
 -   È necessario essere connessi all'istanza del server che ospita la replica primaria corrente.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "72797725"
   
 -   Per ogni replica secondaria leggibile che deve supportare il routing di sola lettura, è necessario specificare un *URL di routing di sola lettura*. L'URL viene usato solo quando la replica locale viene eseguita nel ruolo secondario. L'URL di routing di sola lettura deve essere specificato per ogni singola replica in base alle esigenze. Ogni URL di routing di sola lettura viene usato per il routing delle richieste di connessione con finalità di lettura a una replica secondaria leggibile specifica. In genere, a ogni replica secondaria leggibile viene assegnato un URL di routing di sola lettura.  
   
-     Per informazioni sul calcolo dell'URL di routing di sola lettura per una replica di disponibilità, vedere [Calcolo di read_only_routing_url per AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx).  
+     Per informazioni sul calcolo dell'URL di routing di sola lettura per una replica di disponibilità, vedere [Calcolo di read_only_routing_url per AlwaysOn](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson).  
   
 -   Per ogni replica di disponibilità che deve supportare il routing di sola lettura quando viene eseguita come replica primaria, è necessario specificare un *elenco di routing di sola lettura*. L'elenco di routing di sola lettura viene usato solo quando la replica locale viene eseguita nel ruolo primario. L'elenco deve essere specificato per ogni singola replica in base alle esigenze. In genere, ciascun elenco di routing di sola lettura deve contenere tutti gli URL di routing di sola lettura, con l'URL della replica locale alla fine dell'elenco.  
   
@@ -78,25 +78,25 @@ ms.locfileid: "72797725"
   
     -   Per configurare il routing di sola lettura per il ruolo secondario, nella clausola ADD REPLICA o MODIFY REPLICA WITH specificare l'opzione SECONDARY_ROLE, come segue:  
   
-         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **='** TCP **://*`system-address`*:*`port`*')**  
+         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **='** TCP **:// *`system-address`* : *`port`* ')**  
   
          I parametri dell'URL del routing di sola lettura sono i seguenti:  
   
          *system-address*  
          Stringa, ad esempio un nome di sistema, un nome di dominio completo o un indirizzo IP, che identifica in modo univoco il computer di destinazione.  
   
-         *port*  
+         *porta*  
          Numero di porta utilizzato dal motore di database dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
          Esempio:   `SECONDARY_ROLE (READ_ONLY_ROUTING_URL = N'TCP://COMPUTER01.contoso.com:1433')`  
   
          In una clausola MODIFY REPLICA l'argomento ALLOW_CONNECTIONS è facoltativo se la replica è già configurata per consentire connessioni in sola lettura.  
   
-         Per ulteriori informazioni, vedere [Calcolo di Read_only_routing_url per AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx).  
+         Per ulteriori informazioni, vedere [Calcolo di Read_only_routing_url per AlwaysOn](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson).  
   
     -   Per configurare il routing di sola lettura per il ruolo primario, nella clausola ADD REPLICA o MODIFY REPLICA WITH specificare l'opzione PRIMARY_ROLE, come segue:  
   
-         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **= ('*`server`*'** [ **,**... *n* ] **)**  
+         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **= (' *`server`* '** [ **,**... *n* ] **)**  
   
          dove *server* identifica un'istanza del server in cui viene ospitata una replica secondaria di sola lettura nel gruppo di disponibilità.  
   
@@ -150,13 +150,13 @@ GO
   
 2.  Quando si aggiunge una replica di disponibilità a un gruppo di disponibilità, utilizzare il cmdlet `New-SqlAvailabilityReplica`. Quando si modifica una replica di disponibilità esistente, utilizzare il cmdlet `Set-SqlAvailabilityReplica`. I parametri pertinenti sono i seguenti:  
   
-    -   Per configurare il routing di sola lettura per il ruolo secondario, specificare il parametro **parametro ReadonlyRoutingConnectionUrl "*`url`*"** .  
+    -   Per configurare il routing di sola lettura per il ruolo secondario, specificare il parametro **parametro ReadonlyRoutingConnectionUrl " *`url`* "** .  
   
          dove *url* è il nome di dominio completo (FQDN) e la porta di connettività da usare in caso di routing alla replica per le connessioni di sola lettura. Ad esempio: `-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
   
-         Per ulteriori informazioni, vedere [Calcolo di Read_only_routing_url per AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx).  
+         Per ulteriori informazioni, vedere [Calcolo di Read_only_routing_url per AlwaysOn](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson).  
   
-    -   Per configurare l'accesso alla connessione per il ruolo primario, specificare **ReadonlyRoutingList "*`server`*"** [ **,**... *n* ], dove *Server* identifica un'istanza del server che ospita una replica secondaria di sola lettura nel gruppo di disponibilità. Ad esempio: `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
+    -   Per configurare l'accesso alla connessione per il ruolo primario, specificare **ReadonlyRoutingList " *`server`* "** [ **,**... *n* ], dove *Server* identifica un'istanza del server che ospita una replica secondaria di sola lettura nel gruppo di disponibilità. Ad esempio: `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
   
         > [!NOTE]  
         >  È necessario impostare l'URL del routing di sola lettura di una replica prima di configurare il relativo elenco di routing di sola lettura.  
@@ -183,7 +183,7 @@ Set-SqlAvailabilityReplica -ReadOnlyRoutingList "SecondaryServer","PrimaryServer
  Una volta configurate la replica primaria corrente e le repliche secondarie leggibili per supportare il routing di sola lettura in entrambi i ruoli, le repliche secondarie leggibili potranno ricevere richieste di connessione con finalità di lettura dai client che si connettono tramite il listener del gruppo di disponibilità.  
   
 > [!TIP]  
->  Quando si usa l'utilità [bcp](../../../tools/bcp-utility.md) o l' [utilità sqlcmd](../../../tools/sqlcmd-utility.md), è possibile specificare l'accesso in sola lettura a qualsiasi replica secondaria abilitata per l'accesso in sola lettura `-K ReadOnly` specificando l'opzione.  
+>  Quando si usa l'utilità [bcp](../../../tools/bcp-utility.md) o l' [utilità sqlcmd](../../../tools/sqlcmd-utility.md), è possibile specificare l'accesso in sola lettura a qualsiasi replica secondaria abilitata per l'accesso in sola lettura specificando l' `-K ReadOnly` opzione.  
   
 ###  <a name="requirements-and-recommendations-for-client-connection-strings"></a><a name="ConnStringReqsRecs"></a> Requisiti e indicazioni per le stringhe di connessione del client  
  Per consentire a un'applicazione client di utilizzare il routing di sola lettura, è necessario che la relativa stringa di connessione soddisfi i requisiti seguenti:  
@@ -233,7 +233,7 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
   
 -   **Blog:**  
   
-     [Calcolo di read_only_routing_url per AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)  
+     [Calcolo di read_only_routing_url per AlwaysOn](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)  
   
      [Blog del team di SQL Server AlwaysOn: Blog ufficiale del team di SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   

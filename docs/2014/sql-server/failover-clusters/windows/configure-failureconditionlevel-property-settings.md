@@ -10,12 +10,12 @@ ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 87ed68cc3540075e0fd5d357182d709394f44455
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cfaffaeec425542597aaa43498ec0222813a251e
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797504"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925035"
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>Configurare le impostazioni della proprietà FailureConditionLevel
   Utilizzare la proprietà FailureConditionLevel per impostare le condizioni per il failover o il riavvio dell'istanza del cluster di failover AlwaysOn. Le modifiche apportate a questa proprietà vengono applicate immediatamente senza richiedere il riavvio del servizio cluster di failover di Windows Server (WSFC) o della risorsa istanza cluster di failover.  
@@ -42,7 +42,7 @@ ms.locfileid: "72797504"
   
 2.  Importare il modulo `FailoverClusters` per abilitare i cmdlet del cluster.  
   
-3.  Utilizzare il `Get-ClusterResource` cmdlet per trovare la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] risorsa, quindi utilizzare `Set-ClusterParameter` il cmdlet per impostare la proprietà **FailureConditionLevel** per un'istanza del cluster di failover.  
+3.  Utilizzare il `Get-ClusterResource` cmdlet per trovare la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] risorsa, quindi utilizzare il `Set-ClusterParameter` cmdlet per impostare la proprietà **FailureConditionLevel** per un'istanza del cluster di failover.  
   
 > [!TIP]  
 >  Ogni volta che viene aperta una nuova finestra di PowerShell, è necessario importare il modulo `FailoverClusters`.  
@@ -58,7 +58,7 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
   
 ### <a name="related-content-powershell"></a>Contenuto correlato (PowerShell)  
   
--   [Clustering and High-Availability](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (Failover Clustering and Network Load Balancing Team Blog) (Clustering e disponibilità elevata - Blog del team di clustering di failover e bilanciamento del carico di rete)  
+-   [Clustering and High-Availability](https://techcommunity.microsoft.com/t5/failover-clustering/bg-p/FailoverClustering) (Failover Clustering and Network Load Balancing Team Blog) (Clustering e disponibilità elevata - Blog del team di clustering di failover e bilanciamento del carico di rete)  
   
 -   [Introduzione a Windows PowerShell in un cluster di failover](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   

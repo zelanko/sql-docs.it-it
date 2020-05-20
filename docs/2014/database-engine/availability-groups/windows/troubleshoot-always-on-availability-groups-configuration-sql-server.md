@@ -14,12 +14,12 @@ ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6cd3384f94139698fd04f4d5dcefdeab763c872b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5041882c3eadb4e7f6f28a118e45c6e42f13cea6
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175437"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924895"
 ---
 # <a name="troubleshoot-alwayson-availability-groups-configuration-sql-server"></a>Risolvere i problemi relativi alla configurazione di Gruppi di disponibilità AlwaysOn (SQL Server)
   In questo argomento vengono fornite informazioni per la risoluzione dei problemi tipici relativi alla configurazione delle istanze del server per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Tra i problemi di configurazione tipici sono inclusi la disabilitazione di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , la configurazione errata degli account, l'endpoint del mirroring del database inesistente, l'endpoint inaccessibile (errore di SQL Server 1418), l'accesso alla rete inesistente e l'esito negativo di un comando di creazione di join del database (errore di SQL Server 35250).
@@ -29,7 +29,7 @@ ms.locfileid: "78175437"
 
  **Contenuto dell'argomento:**
 
-|Sezione|Descrizione|
+|Sezione|Description|
 |-------------|-----------------|
 |[Funzionalità Gruppi di disponibilità AlwaysOn non abilitata](#IsHadrEnabled)|Se un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non è abilitata per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], l'istanza non supporta la creazione del gruppo di disponibilità e non è in grado di ospitare alcuna replica di disponibilità.|
 |[Account](#Accounts)|Illustra i requisiti per la corretta configurazione degli account in cui viene eseguito [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|
@@ -56,7 +56,7 @@ ms.locfileid: "78175437"
 
 2.  Se [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene eseguito come account predefinito, ad esempio Sistema locale, Servizio locale o Servizio di rete, oppure come account non di dominio, è necessario utilizzare certificati per l'autenticazione dell'endpoint. Se gli account del servizio utilizzano account di dominio nello stesso dominio, è possibile scegliere di concedere l'accesso CONNECT per ogni account del servizio su tutti i percorsi di replica oppure utilizzare certificati. Per altre informazioni, vedere [Usare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).
 
-##  <a name="endpoints"></a><a name="Endpoints"></a>Endpoint
+##  <a name="endpoints"></a><a name="Endpoints"></a> Endpoint
  È necessario configurare correttamente gli endpoint.
 
 1.  Verificare che ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospiterà una replica di disponibilità (ogni *percorso di replica*) disponga di un endpoint del mirroring del database. Per determinare se in una determinata istanza del server è presente un endpoint del mirroring del database, usare la vista del catalogo [sys.database_mirroring_endpoints](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql). Per altre informazioni, vedere [Creare un endpoint del mirroring del database per l'autenticazione Windows &#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) oppure [Impostare l'endpoint del mirroring del database per l'uso di certificati per le connessioni in uscita &#40;Transact-SQL&#41;](../../database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md).
@@ -136,7 +136,7 @@ ms.locfileid: "78175437"
 |![Casella](../../media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Replica primaria corrente|Verificare che READ_ONLY_ROUTING_LIST contenga solo le istanze del server che ospitano una replica secondaria leggibile.|**Per identificare repliche secondarie leggibili:** sys.availability_replicas (colonna**secondary_role_allow_connections_desc** )<br /><br /> **Per visualizzare un elenco di routing di sola lettura:** sys.availability_read_only_routing_lists<br /><br /> **Per modificare un elenco di routing di sola lettura:** ALTER AVAILABILITY GROUP|[sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|
 |![Casella](../../media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Ogni replica in read_only_routing_list|Verificare che Windows Firewall non blocchi la porta READ_ONLY_ROUTING_URL.|-|[Configurare Windows Firewall per l'accesso al motore di database](../../configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|
 |![Casella](../../media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Ogni replica in read_only_routing_list|In Gestione configurazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verificare quanto segue:<br /><br /> La connettività remota di SQL Server è abilitata.<br /><br /> TCP/IP è abilitato.<br /><br /> Gli indirizzi IP sono configurati correttamente.|-|[Visualizzare o modificare le proprietà del server &#40;SQL Server&#41;](../../configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [Configurare un server per l'attesa su una porta TCP specifica &#40;Gestione configurazione SQL Server&#41;](../../configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|
-|![Casella](../../media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Ogni replica in read_only_routing_list|Verificare che il READ_ONLY_ROUTING_URL (TCP<strong>://*`system-address`*:</strong>*porta*) contenga il nome di dominio completo (FQDN) e il numero di porta corretti.|-|[Calcolo di read_only_routing_url per AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|
+|![Casella](../../media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Ogni replica in read_only_routing_list|Verificare che il READ_ONLY_ROUTING_URL (TCP<strong>:// *`system-address`* :</strong>*porta*) contenga il nome di dominio completo (FQDN) e il numero di porta corretti.|-|[Calcolo di read_only_routing_url per AlwaysOn](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|
 |![Casella](../../media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Sistema client|Verificare che il driver client supporti il routing di sola lettura.|-|[Connettività client AlwaysOn (SQL Server)](always-on-client-connectivity-sql-server.md)|
 
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate

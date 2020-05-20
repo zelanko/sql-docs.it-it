@@ -12,12 +12,12 @@ ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 3cc249ebfce796d7932e68d993ac98ede867845f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3462266279ed80e94871db4831918ad70b444be
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63238385"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922139"
 ---
 # <a name="sql-server-audit-records"></a>Record di SQL Server Audit
   La caratteristica [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit consente di controllare gruppi di eventi ed eventi a livello di server e di database. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](sql-server-audit-database-engine.md). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -28,8 +28,8 @@ ms.locfileid: "63238385"
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|Data e ora di generazione dell'azione controllabile.|`datetime2`|Sì|  
 |**sequence_no**|Viene tenuta traccia della sequenza dei record all'interno di un singolo record di controllo con dimensioni troppo elevate per il buffer di scrittura dei controlli.|`int`|Sì|  
-|**action_id**|ID dell'azione.<br /><br /> Suggerimento: per usare **action_id** come predicato, è necessario convertirlo da stringa di caratteri in valore numerico. Per altre informazioni, vedere [Filter SQL Server Audit on action_id / class_type predicate](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)(Filtro di SQL Server Audit con il predicato action_id / class_type).|`varchar(4)`|Sì|  
-|**completata**|Indica se l'azione che ha generato l'evento ha avuto esito positivo|`bit`-1 = esito positivo, 0 = esito negativo|Sì|  
+|**action_id**|ID dell'azione.<br /><br /> Suggerimento: per usare **action_id** come predicato, è necessario convertirlo da stringa di caratteri in valore numerico. Per altre informazioni, vedere [Filter SQL Server Audit on action_id / class_type predicate](https://docs.microsoft.com/archive/blogs/sqlsecurity/filter-sql-server-audit-on-action_id-class_type-predicate)(Filtro di SQL Server Audit con il predicato action_id / class_type).|`varchar(4)`|Sì|  
+|**riuscito**|Indica se l'azione che ha generato l'evento ha avuto esito positivo|`bit`-1 = esito positivo, 0 = esito negativo|Sì|  
 |**permission_bitmask**|Se applicabile, visualizza le autorizzazioni concesse, negate o revocate.|`bigint`|No|  
 |**is_column_permission**|Flag indicante un'autorizzazione a livello di colonna.|`bit`-1 = true, 0 = false|No|  
 |**session_id**|ID della sessione in cui si è verificato l'evento.|`int`|Sì|  

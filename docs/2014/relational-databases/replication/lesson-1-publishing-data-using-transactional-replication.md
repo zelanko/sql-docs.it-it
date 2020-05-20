@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 9c55aa3c-4664-41fc-943f-e817c31aad5e
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8267f70049d0ef37c0ce80bc594dff25d53f15fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18236ec3ca5a62cd45a2cf7cdd3d56b5cea79063
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721088"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000457"
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>Lezione 1: Pubblicazione dei dati tramite la replica transazionale
   In questa lezione verrà creata una pubblicazione transazionale con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per pubblicare un subset filtrato della tabella **Product** nel database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Verrà inoltre aggiunto l'account di accesso di SQL Server utilizzato dall'agente di distribuzione all'elenco di accesso alla pubblicazione. Per eseguire questa esercitazione è necessario avere completato l'esercitazione precedente [Preparazione del server per la replica](tutorial-preparing-the-server-for-replication.md).  
@@ -81,7 +81,7 @@ ms.locfileid: "62721088"
 ## <a name="next-steps"></a>Passaggi successivi  
  In questo modo è stata creata la pubblicazione transazionale. Il passaggio successivo consiste nel sottoscrivere la pubblicazione. Vedere [Lezione 2: Creazione di una sottoscrizione per una pubblicazione transazionale](lesson-2-creating-a-subscription-to-the-transactional-publication.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Filtrare i dati pubblicati](publish/filter-published-data.md)   
  [Definire un articolo](publish/define-an-article.md)   
  [Creare e applicare lo snapshot](create-and-apply-the-snapshot.md)  

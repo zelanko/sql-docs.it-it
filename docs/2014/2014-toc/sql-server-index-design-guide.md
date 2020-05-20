@@ -7,21 +7,21 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 726fb1ffd4175afa0d247d2029db559db2ff3231
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe493927d269c092e775970b3089550203271f0e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68475979"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000511"
 ---
 # <a name="sql-server-index-design-guide"></a>Guida per la progettazione di indici di SQL Server
 
   Gli indici progettati in modo non corretto e la mancanza di indici costituiscono le cause principali dei colli di bottiglia delle applicazioni di database. La progettazione di indici efficienti è fondamentale per ottenere buone prestazioni del database e dell'applicazione. In questa guida per la progettazione di indici di SQL Server sono contenute informazioni e procedure consigliate che consentono di progettare indici validi per soddisfare le esigenze dell'applicazione.  
   
-**Si applica a** [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] : [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] tramite, se non specificato diversamente.  
+**Si applica a**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] tramite, [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] se non specificato diversamente.  
   
  In questa guida si presuppone che il lettore conosca i tipi di indice disponibili in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per una descrizione generale dei tipi di indice, vedere [Tipi di indice](../relational-databases/indexes/indexes.md).  
   
@@ -213,7 +213,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   Possono essere utilizzate in query di intervallo.  
   
- Se l'indice cluster non viene creato con la proprietà UNIQUE, aggiunge [!INCLUDE[ssDE](../includes/ssde-md.md)] automaticamente una colonna uniquifier a 4 byte alla tabella. Quando necessario, aggiunge [!INCLUDE[ssDE](../includes/ssde-md.md)] automaticamente un valore uniquifier a una riga per rendere univoca ciascuna chiave. Questa colonna e i relativi valori sono per uso interno e non sono visualizzati o accessibili dagli utenti.  
+ Se l'indice cluster non viene creato con la proprietà UNIQUE, [!INCLUDE[ssDE](../includes/ssde-md.md)] aggiunge automaticamente una colonna uniquifier a 4 byte alla tabella. Quando necessario, [!INCLUDE[ssDE](../includes/ssde-md.md)] aggiunge automaticamente un valore uniquifier a una riga per rendere univoca ciascuna chiave. Questa colonna e i relativi valori sono per uso interno e non sono visualizzati o accessibili dagli utenti.  
   
 ### <a name="clustered-index-architecture"></a>Architettura dell'indice cluster  
 
@@ -267,7 +267,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   Colonne che vengono modificate di frequente  
   
-     Le modifiche frequenti determinano lo spostamento dell'intera riga in quanto [!INCLUDE[ssDE](../includes/ssde-md.md)] deve mantenere i valori dei dati nell'ordine fisico. Si tratta di una considerazione importante nel caso di sistemi che elaborano volumi elevati di transazioni in cui i dati sono in genere volatili.  
+     In questo modo viene spostata l'intera riga, perché [!INCLUDE[ssDE](../includes/ssde-md.md)] deve contenere i valori dei dati di una riga in ordine fisico. Si tratta di una considerazione importante nel caso di sistemi che elaborano volumi elevati di transazioni in cui i dati sono in genere volatili.  
   
 -   Chiavi estese  
   
@@ -628,7 +628,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  ![Icona freccia usata con il collegamento Torna all'inizio](media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [in questa guida](#Top)  
   
-##  <a name="additional-reading"></a><a name="Additional_Reading"></a>Letture aggiuntive  
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> Ulteriori informazioni  
 
  [Miglioramento delle prestazioni con le viste indicizzate di SQL Server 2008](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
   

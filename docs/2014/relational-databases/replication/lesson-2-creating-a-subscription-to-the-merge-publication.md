@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 495fb831490a35043b500caea2c835bfd80b6a8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a39b3395a26fdbe3c235f429f312f4d6b3aff512
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721034"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000441"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>Lezione 2: Creazione di una sottoscrizione per una pubblicazione di tipo merge
   In questa lezione verranno descritte le procedure per creare una sottoscrizione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Verranno quindi impostate le autorizzazioni per il database di sottoscrizione e verrà generato manualmente lo snapshot dei dati filtrati per la nuova sottoscrizione. Per eseguire questa lezione è necessario aver completato la lezione precedente [Lezione 1: Pubblicazione dei dati tramite la replica di tipo merge](lesson-1-publishing-data-using-merge-replication.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "62721034"
   
 5.  Nella pagina Posizione in cui eseguire l'agente di merge fare clic su **Esegui ogni agente nel relativo Sottoscrittore**e su **Avanti**.  
   
-6.  Nella pagina Sottoscrittori selezionare il nome dell'istanza del server Sottoscrittore e in **database di sottoscrizione**selezionare ** \<nuovo database>** dall'elenco.  
+6.  Nella pagina Sottoscrittori selezionare il nome dell'istanza del server Sottoscrittore e in **database di sottoscrizione**selezionare ** \< nuovo database>** dall'elenco.  
   
 7.  Nella finestra di dialogo **Nuovo database** immettere **SalesOrdersReplica** nella casella **Nome database** , selezionare **OK**e fare clic su **Avanti**.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62721034"
   
 9. Nella pagina Inizializzazione sottoscrizioni selezionare **Alla prima sincronizzazione** dall'elenco **Quando** , fare clic su **Avanti**e di nuovo su **Avanti** .  
   
-10. `adventure-works\pamela0` Nella pagina Valori HOST_NAME immettere un valore nella casella **valore HOST_NAME** , quindi fare clic su **fine**.  
+10. Nella pagina Valori HOST_NAME immettere un valore `adventure-works\pamela0` nella casella **valore HOST_NAME** , quindi fare clic su **fine**.  
   
 11. Fare di nuovo clic su **Fine** e dopo aver creato la sottoscrizione fare clic su **Chiudi**.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "62721034"
 ## <a name="next-steps"></a>Passaggi successivi  
  In questo modo è stata creata una sottoscrizione per la pubblicazione di tipo merge ed è stato generato lo snapshot dei dati filtrati per la nuova partizione dati della sottoscrizione in modo che sia disponibile all'inizializzazione della sottoscrizione. Il passaggio successivo consiste nella concessione dei diritti all'agente di merge nel database di sottoscrizione e nell'esecuzione dell'agente di merge per l'avvio della sincronizzazione e l'inizializzazione della sottoscrizione. Vedere [Lezione 3: Sincronizzazione della sottoscrizione con la pubblicazione di tipo merge](lesson-3-synchronizing-the-subscription-to-the-merge-publication.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Subscribe to Publications](subscribe-to-publications.md)   
  [Create a Pull Subscription](create-a-pull-subscription.md)   
  [Snapshot per pubblicazioni di tipo merge con filtri con parametri](snapshots-for-merge-publications-with-parameterized-filters.md)  

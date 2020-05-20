@@ -10,12 +10,12 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cb77d8abdc0b4a8ca67996433e5399740c7bdc0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 087ca52acea1cace7eb218cc33ce31cd21e10cc8
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82086885"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922244"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Esercitazione: Creazione di report drill-through e report principali (Generatore report)
   In questa esercitazione verrà illustrato come creare due tipi di report: un report drill-through e un report principale. I dati di vendita di esempio utilizzati in questi report vengono recuperati da un cubo di Analysis Services. Nell'illustrazione seguente vengono mostrati i report creati.  
@@ -340,7 +340,7 @@ ms.locfileid: "82086885"
   
 1.  Nel riquadro Dati report espandere **Parametri**.  
   
-2.  Fare clic con \@il pulsante destro del mouse su ProductProductCategoryName e quindi scegliere **Proprietà parametri**.  
+2.  Fare clic con il pulsante destro del mouse su \@ ProductProductCategoryName e quindi scegliere **Proprietà parametri**.  
   
     > [!NOTE]  
     >  Il \@ carattere accanto al nome indica che questo è un parametro.  
@@ -413,7 +413,7 @@ ms.locfileid: "82086885"
   
 5.  In **Origine dati**verificare che l'origine dati sia **Microsoft SQL Server Analysis Services (AdomdClient)**.  
   
-6.  In **nome server**Digitare il nome di un server in cui è installata un' [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] istanza di.  
+6.  In **nome server**Digitare il nome di un server in cui è installata un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 7.  In **Selezionare o immettere un nome di database**specificare il cubo Contoso.  
   
@@ -447,7 +447,7 @@ ms.locfileid: "82086885"
 2.  Nella finestra di dialogo **Seleziona cubo** fare clic su Vendite, quindi fare clic su **OK**.  
   
     > [!TIP]  
-    >  Se non si vuole creare manualmente la query MDX, fare clic sull'icona ![Passa alla modalità progettazione](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Passare alla modalità progettazione"), impostare Progettazione query in modalità query, incollare la query MDX completata nella finestra di progettazione query e quindi procedere con il passaggio 5 in [Per creare il set di dati](#MSkip).  
+    >  Se non si vuole creare manualmente la query MDX, fare clic sull'icona ![Passa alla modalità progettazione](media/rsqdicon-designmode.gif "Passare alla modalità progettazione"), impostare Progettazione query in modalità query, incollare la query MDX completata nella finestra di progettazione query e quindi procedere con il passaggio 5 in [Per creare il set di dati](#MSkip).  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  

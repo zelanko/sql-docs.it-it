@@ -10,15 +10,15 @@ ms.assetid: d7bce6a5-d414-488d-a3cd-50c1c62019c4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ffe6a854e24240c6298dfbf7b4c195d787e07c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e5f25a42b54e0ae310c7033a81f75cad75582416
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78172040"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925065"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>Opzione replay (strumento di amministrazione Distributed Replay)
-  Lo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] strumento di amministrazione riesecuzione distribuita `DReplay.exe`,, è uno strumento da riga di comando che è possibile utilizzare per comunicare con il controller di riesecuzione distribuita. Questo argomento descrive l'opzione della riga di comando **replay** e la sintassi corrispondente.
+  Lo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] strumento di amministrazione riesecuzione distribuita, `DReplay.exe` , è uno strumento da riga di comando che è possibile utilizzare per comunicare con il controller di riesecuzione distribuita. Questo argomento descrive l'opzione della riga di comando **replay** e la sintassi corrispondente.
 
  L'opzione **replay** avvia la fase di riproduzione dell'evento, in cui il controller recapita i dati di riproduzione ai client specificati, avvia la riesecuzione distribuita e sincronizza i client. Ogni client che partecipa alla riproduzione può eventualmente registrare l'attività di riproduzione e salvare in locale un file di traccia dei risultati.
 
@@ -50,11 +50,11 @@ ms.locfileid: "78172040"
 
 -   I percorsi UNC non sono supportati.
 
- **-o** Acquisisce l'attività di riproduzione dei client e la Salva in un file di traccia dei risultati nel percorso specificato dall' `<ResultDirectory>` elemento nel file di configurazione del client `DReplayClient.xml`,.
+ **-o** Acquisisce l'attività di riproduzione dei client e la Salva in un file di traccia dei risultati nel percorso specificato dall' `<ResultDirectory>` elemento nel file di configurazione del client, `DReplayClient.xml` .
 
  Quando il parametro **-o** non è specificato, il file di traccia dei risultati non viene generato. L'output della console restituisce informazioni di riepilogo al termine della riproduzione, ma non sono disponibili altre statistiche di riproduzione.
 
- **-s** *target_server* specifica l'istanza di destinazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di su cui deve essere riprodotto il carico di lavoro distribuito. È necessario specificare questo parametro nel formato **nome_server[\nome istanza]**.
+ **-s** *target_server* specifica l'istanza di destinazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] su cui deve essere riprodotto il carico di lavoro distribuito. È necessario specificare questo parametro nel formato **nome_server[\nome istanza]**.
 
  Non è possibile utilizzare "`localhost`" o "`.`" come server di destinazione.
 
@@ -75,7 +75,7 @@ ms.locfileid: "78172040"
 
  Se **-f** non è specificato, l'intervallo predefinito è 30 secondi.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
  In questo esempio il comportamento della riproduzione distribuita deriva per lo più da un file di configurazione della riproduzione modificato, denominato `DReplay.exe.replay.config`.
 
 -   Il parametro **-m** specifica che un computer denominato `controller1` funge da controller. È necessario specificare il nome computer quando il servizio controller viene eseguito in un computer diverso.
@@ -148,6 +148,6 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
  Per altre informazioni, vedere [Sicurezza di Distributed Replay](distributed-replay-security.md).
 
 ## <a name="see-also"></a>Vedere anche
- [Riprodurre i dati di traccia](replay-trace-data.md) [esaminare i risultati della riproduzione](review-the-replay-results.md) [SQL Server Riesecuzione distribuita](sql-server-distributed-replay.md) [configurare riesecuzione distribuita](configure-distributed-replay.md) [SQL Server Forum riesecuzione distribuita](https://social.technet.microsoft.com/Forums/sl/sqldru/) [con riesecuzione distribuita per eseguire il test di carico del SQL Server parte 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx) [usando riesecuzione distribuita per eseguire il test di carico del SQL Server-parte 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)
+ [Riprodurre i dati di traccia](replay-trace-data.md) [esaminare i risultati della riproduzione](review-the-replay-results.md) [SQL Server Riesecuzione distribuita](sql-server-distributed-replay.md) [configurare riesecuzione distribuita](configure-distributed-replay.md) [SQL Server Forum riesecuzione distribuita](https://social.technet.microsoft.com/Forums/sl/sqldru/) [con riesecuzione distribuita per eseguire il test di carico del SQL Server parte 2](https://docs.microsoft.com/archive/blogs/msdn/mspfe/using-distributed-replay-to-load-test-your-sql-serverpart-2) [usando riesecuzione distribuita per eseguire il test di carico del SQL Server-parte 1](https://docs.microsoft.com/archive/blogs/batuhanyildiz/using-distributed-replay-to-load-test-your-sql-serverpart-1)
 
 

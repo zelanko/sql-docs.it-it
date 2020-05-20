@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.text.f1
 ms.assetid: fd2fb409-58f9-4ede-8349-ce007126b68d
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8d96384a4a4f4adbb52855a45f1bc00d3aadd85d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8b41a624335026c3c20bd0d7b1d037d1ec55d06
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088981"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000571"
 ---
 # <a name="query-options-results-text-page"></a>Opzioni query - Risultati (pagina Testo)
   Utilizzare questa pagina per specificare le opzioni di visualizzazione di un set di risultati di una query in formato testo. Le impostazioni disponibili in questa pagina si applicano inoltre quando è selezionata l'opzione **Risultati in un file** .  

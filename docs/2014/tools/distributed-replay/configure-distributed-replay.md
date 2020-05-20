@@ -10,12 +10,12 @@ ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c5e44910c72e5162b9acb74ebbf74cd19d7ce1bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40cbece7c2ee5aad3b65a0b4066b409d9f0b6b6e
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149519"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925055"
 ---
 # <a name="configure-distributed-replay"></a>Configurare Distributed Replay
   I dettagli relativi alla configurazione della Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono specificati in file XML nel controller della Riesecuzione distribuita, nei client e nella posizione in cui è installato lo strumento di amministrazione, ovvero i file seguenti:  
@@ -163,11 +163,11 @@ ms.locfileid: "63149519"
 </Options>  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
- [Opzioni della riga di comando dello strumento di amministrazione &#40;Riesecuzione distribuita Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
- [SQL Server Riesecuzione distribuita](sql-server-distributed-replay.md)   
- [Forum Riesecuzione distribuita SQL Server](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [Uso di Riesecuzione distribuita per eseguire il test di carico del SQL Server-parte 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
- [Using Distributed Replay to Load Test Your SQL Server - Part 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx) (Uso di Riesecuzione distribuita per testare il caricamento di SQL Server, prima parte)  
+## <a name="see-also"></a>Vedere anche  
+ [Opzioni della riga di comando dello strumento di amministrazione &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
+ [Forum di SQL Server Distributed Replay](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
+ [Using Distributed Replay to Load Test Your SQL Server - Part 2](https://docs.microsoft.com/archive/blogs/msdn/mspfe/using-distributed-replay-to-load-test-your-sql-serverpart-2)  (Uso di Riesecuzione distribuita per testare il caricamento di SQL Server, seconda parte)  
+ [Using Distributed Replay to Load Test Your SQL Server - Part 1](https://docs.microsoft.com/archive/blogs/batuhanyildiz/using-distributed-replay-to-load-test-your-sql-serverpart-1) (Uso di Riesecuzione distribuita per testare il caricamento di SQL Server, prima parte)  
   
   

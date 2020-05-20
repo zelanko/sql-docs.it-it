@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 5995b7d2-7c06-46f5-b96c-2bee879bcda2
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d3e8b5f0be58d9153fbe4d0ffd0287ea753fcc5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9dc9824efb3f962d97f786835fa2367be18b55f7
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721081"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000414"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>Lezione 2: Creazione di una sottoscrizione per una pubblicazione transazionale
   In questa lezione verranno descritte le procedure per creare una sottoscrizione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per eseguire questa lezione è necessario aver completato la lezione precedente, [Lezione 1: Pubblicazione dei dati tramite la replica transazionale](lesson-1-publishing-data-using-transactional-replication.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "62721081"
   
 5.  Nella pagina Sottoscrittori, se il nome dell'istanza del Sottoscrittore non è visualizzato, fare clic su **Aggiungi Sottoscrittore**, quindi su **Aggiungi Sottoscrittore SQL Server**, immettere il nome dell'istanza del Sottoscrittore nella finestra di dialogo **Connetti al server** e quindi fare clic su **Connetti**.  
   
-6.  Nella pagina Sottoscrittori selezionare il nome dell'istanza del server Sottoscrittore e selezionare ** \<nuovo database>** nel **database di sottoscrizione**.  
+6.  Nella pagina Sottoscrittori selezionare il nome dell'istanza del server Sottoscrittore e selezionare ** \< nuovo database>** nel **database di sottoscrizione**.  
   
 7.  Nella finestra di dialogo **Nuovo database** digitare **ProductReplica** nella casella **Nome database** , fare clic su **OK**e scegliere **Avanti**.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62721081"
 ## <a name="next-steps"></a>Passaggi successivi  
  In questo modo è stata creata una sottoscrizione per la pubblicazione transazionale. Poiché l'agente di distribuzione per questa sottoscrizione è in esecuzione continua, la sottoscrizione viene inizializzata al momento della creazione. Il passaggio successivo consiste nell'utilizzo di token di traccia per verificare che le modifiche sono state replicate nel Sottoscrittore e per determinare la latenza. Vedere [Lezione 3: Convalida della sottoscrizione e misurazione della latenza](lesson-3-validating-the-subscription-and-measuring-latency.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Inizializzare una sottoscrizione con uno snapshot](initialize-a-subscription-with-a-snapshot.md)   
  [Creare una sottoscrizione push](create-a-push-subscription.md)   
  [Subscribe to Publications](subscribe-to-publications.md)  

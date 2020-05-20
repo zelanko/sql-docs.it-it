@@ -13,12 +13,12 @@ ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 583af6e77d699c88e7712ac03053467138bd5a5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 021e37ee7efb8d525cdbc16d2f7b1111045ea7a6
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177351"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925045"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
   La funzionalità Riesecuzione distribuita di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di valutare l'impatto dei futuri aggiornamenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. È possibile usarla anche per valutare l'impatto degli aggiornamenti hardware e del sistema operativo e dell'ottimizzazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .
@@ -47,7 +47,7 @@ ms.locfileid: "78177351"
 ## <a name="distributed-replay-concepts"></a>Concetti di base di Distributed Replay
  I componenti seguenti costituiscono l'ambiente di Distributed Replay:
 
--   **Strumento di amministrazione di riesecuzione distribuita**: un'applicazione `DReplay.exe`console,, utilizzata per comunicare con il controller di riesecuzione distribuita. Utilizzare lo strumento di amministrazione per controllare la riproduzione distribuita.
+-   **Strumento di amministrazione di riesecuzione distribuita**: un'applicazione console, `DReplay.exe` , utilizzata per comunicare con il controller di riesecuzione distribuita. Utilizzare lo strumento di amministrazione per controllare la riproduzione distribuita.
 
 -   **Controller di Riesecuzione distribuita**: un computer che esegue il servizio Windows denominato [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controller di Riesecuzione distribuita. Con il controller di Riesecuzione distribuita è possibile orchestrare le azioni dei client Riesecuzione distribuita. In ogni ambiente di Riesecuzione distribuita può essere presente una sola istanza del controller.
 
@@ -72,6 +72,6 @@ ms.locfileid: "78177351"
 |Viene descritto come usare lo strumento di amministrazione per avviare, monitorare e annullare operazioni nel controller.|[Opzioni della riga di comando dello strumento di amministrazione &#40;Utilità Riesecuzione distribuita&#41;](administration-tool-command-line-options-distributed-replay-utility.md)|
 
 ## <a name="see-also"></a>Vedere anche
- [SQL Server Forum riesecuzione distribuita](https://social.technet.microsoft.com/Forums/sl/sqldru/) [utilizzando riesecuzione distribuita per eseguire il test di carico del SQL Server-parte 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx) [utilizzando riesecuzione distribuita per eseguire il test di carico del SQL Server-parte 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)
+ [SQL Server Forum riesecuzione distribuita](https://social.technet.microsoft.com/Forums/sl/sqldru/) [utilizzando riesecuzione distribuita per eseguire il test di carico del SQL Server-parte 2](https://docs.microsoft.com/archive/blogs/msdn/mspfe/using-distributed-replay-to-load-test-your-sql-serverpart-2) [utilizzando riesecuzione distribuita per eseguire il test di carico del SQL Server-parte 1](https://docs.microsoft.com/archive/blogs/batuhanyildiz/using-distributed-replay-to-load-test-your-sql-serverpart-1)
 
 

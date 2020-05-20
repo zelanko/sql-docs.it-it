@@ -10,12 +10,12 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 968d1bb6ce5eee2d25860353586d14f31dc67807
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6f770ea7ed5257cdca5def868b1bdfa8359af79a
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175910"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925095"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Monitorare e risolvere i problemi relativi all'utilizzo della memoria
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] utilizza la memoria in modi diversi rispetto alle tabelle basate su disco. È possibile monitorare la quantità di memoria allocata e utilizzata dagli indici e dalle tabelle ottimizzate per la memoria nel database tramite DMV o contatori delle prestazioni forniti per il sottosistema di Garbage Collection e memoria.  Ciò offre visibilità a livello di sistema e di database e consente di evitare problemi dovuti all'esaurimento della memoria.
@@ -112,8 +112,8 @@ ms.locfileid: "78175910"
 
 ##  <a name="monitoring-memory-usage"></a>Monitoraggio dell'utilizzo della memoria
 
-###  <a name="using-ssmanstudiofull"></a>Utilizzo di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] viene fornito con report standard predefiniti per monitorare la memoria utilizzata dalle tabelle in memoria. È possibile accedere a questi report utilizzando Esplora oggetti come descritto [qui](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx). È inoltre possibile utilizzare Esplora oggetti per monitorare la memoria utilizzata dalle singole tabelle ottimizzate per la memoria.
+###  <a name="using-ssmanstudiofull"></a>Uso di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] viene fornito con report standard predefiniti per monitorare la memoria utilizzata dalle tabelle in memoria. È possibile accedere a questi report usando Esplora oggetti. È inoltre possibile utilizzare Esplora oggetti per monitorare la memoria utilizzata dalle singole tabelle ottimizzate per la memoria.
 
 #### <a name="consumption-at-the-database-level"></a>Utilizzo a livello di database
  È possibile monitorare l'utilizzo della memoria a livello di database nel modo seguente.
@@ -122,7 +122,7 @@ ms.locfileid: "78175910"
 
 2.  In Esplora oggetti fare clic con il pulsante destro del mouse sul database in cui si desidera creare i report.
 
-3.  Nel menu di scelta rapida selezionare **Reports** -> report**standard report** -> **utilizzo memoria da oggetti con ottimizzazione per la memoria**
+3.  Nel menu di scelta rapida selezionare **report**  ->  **standard report**  ->  **utilizzo memoria da oggetti con ottimizzazione per la memoria**
 
  ![HK_MM_SSMS](../../database-engine/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")
 

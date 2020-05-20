@@ -10,12 +10,12 @@ ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4106de497a43404cb44606259d53beb1ed8f5a58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 435aa6a89b1b7aafd243efbc6de86bcb8f731346
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797445"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925018"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>Configurazione delle impostazioni HealthCheckTimeout
   L'impostazione HealthCheckTimeout viene utilizzata per specificare la durata, in millisecondi, dell'attesa della DLL della risorsa di SQL Server relativamente alle informazioni restituite dalla stored procedure [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) prima di stabilire la mancata risposta da parte dell'istanza del cluster di failover AlwaysOn. Le modifiche apportate alle impostazioni del timeout vengono applicate immediatamente e non richiedono il riavvio della risorsa di SQL Server.  
@@ -42,7 +42,7 @@ ms.locfileid: "72797445"
   
 2.  Importare il modulo `FailoverClusters` per abilitare i cmdlet del cluster.  
   
-3.  Utilizzare il `Get-ClusterResource` cmdlet per trovare la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] risorsa, quindi utilizzare `Set-ClusterParameter` il cmdlet per impostare la proprietà **HealthCheckTimeout** per l'istanza del cluster di failover.  
+3.  Utilizzare il `Get-ClusterResource` cmdlet per trovare la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] risorsa, quindi utilizzare il `Set-ClusterParameter` cmdlet per impostare la proprietà **HealthCheckTimeout** per l'istanza del cluster di failover.  
   
 > [!TIP]  
 >  Ogni volta che viene aperta una nuova finestra di PowerShell, è necessario importare il modulo `FailoverClusters`.  
@@ -58,7 +58,7 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
   
 ### <a name="related-content-powershell"></a>Contenuto correlato (PowerShell)  
   
--   [Clustering and High-Availability](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (Failover Clustering and Network Load Balancing Team Blog) (Clustering e disponibilità elevata - Blog del team di clustering di failover e bilanciamento del carico di rete)  
+-   [Clustering and High-Availability](https://techcommunity.microsoft.com/t5/failover-clustering/bg-p/FailoverClustering) (Failover Clustering and Network Load Balancing Team Blog) (Clustering e disponibilità elevata - Blog del team di clustering di failover e bilanciamento del carico di rete)  
   
 -   [Introduzione a Windows PowerShell in un cluster di failover](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   

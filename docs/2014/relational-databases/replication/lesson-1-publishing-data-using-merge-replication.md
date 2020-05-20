@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: c3c6e0b6-54cd-4b7d-8efb-2cefe14fcd7f
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 204742cb6c712c1e293048ed6216d9b007f2541b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63df76a4e136a7d0a581d613829482b7eb430ea6
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721184"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000481"
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>Lezione 1: Pubblicazione dei dati tramite la replica di tipo merge
   In questa lezione verrà creata una pubblicazione di tipo merge con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per pubblicare un subset delle tabelle **Employee**, **SalesOrderHeader**e **SalesOrderDetail** nel database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Queste tabelle vengono filtrate usando filtri di riga con parametri in modo che ogni sottoscrizione contenga una partizione univoca dei dati. Verrà inoltre aggiunto l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usato dall'agente di merge all'elenco di accesso alla pubblicazione. Per eseguire questa esercitazione è necessario avere completato l'esercitazione precedente [Preparazione del server per la replica](tutorial-preparing-the-server-for-replication.md).  
@@ -83,7 +83,7 @@ ms.locfileid: "62721184"
   
 21. Selezionare **Crea snapshot immediatamente**, deselezionare **Usa la pianificazione seguente per l'esecuzione dell'agente snapshot**e quindi fare clic su **Avanti**.  
   
-22. Nella pagina sicurezza agente fare clic su **impostazioni di sicurezza**, \< _Machine_Name>_ **\ repl_snapshot** nella casella **account processo** , specificare la password per l'account, quindi fare clic su **OK**. Fare clic su **Fine**.  
+22. Nella pagina sicurezza agente fare clic su **impostazioni di sicurezza**, digitare \< _Machine_Name>_ **\ repl_snapshot** nella casella **account processo** , specificare la password per l'account, quindi fare clic su **OK**. Fare clic su **Fine**.  
   
 23. Nella pagina Completamento procedura guidata immettere **AdvWorksSalesOrdersMerge** nella casella **Nome pubblicazione** , quindi fare clic su **Fine**.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "62721184"
 ## <a name="next-steps"></a>Passaggi successivi  
  In questo modo è stata creata la pubblicazione di tipo merge. Il passaggio successivo consiste nel sottoscrivere la pubblicazione. Vedere [Lezione 2: Creazione di una sottoscrizione per una pubblicazione di tipo merge](lesson-2-creating-a-subscription-to-the-merge-publication.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Filtrare i dati pubblicati](publish/filter-published-data.md)   
  [Filtri di riga con parametri](merge/parameterized-filters-parameterized-row-filters.md)   
  [Definire un articolo](publish/define-an-article.md)  

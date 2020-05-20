@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 5148c993-6cd4-42f0-9109-1ec08d8e798c
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: eb81724c8feb5ca34736b16aeb8f8d65b1018300
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81445fd27a030321c4ca45bb0b2bee22a223b4ea
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74683494"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000505"
 ---
 # <a name="getting-started-sql-server-2014"></a>Introduzione (SQL Server 2014)
   Sono disponibili fonti di informazioni, requisiti di sistema, istruzioni per l'installazione e altro ancora su [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  

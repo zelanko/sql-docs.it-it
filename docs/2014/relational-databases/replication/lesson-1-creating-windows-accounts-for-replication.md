@@ -10,23 +10,23 @@ helpviewer_keywords:
 - replication [SQL Server], tutorials
 - replication [SQL Server], administering
 ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f11321b20c4238fdf9b3376d79edcb12c0e9204b
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721165"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000471"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>Lezione 1: Creazione di account di Windows per la replica
   In questa lezione verranno creati account di Windows per l'esecuzione degli agenti di replica. Verrà creato un account di Windows separato nel server locale per gli agenti seguenti:  
   
 |Agente|Location|Nome account|  
 |-----------|--------------|------------------|  
-|agente snapshot|Editore|\<*nome_computer*>\repl_snapshot|  
-|Agente di lettura log|Editore|\<*nome_computer*>\repl_logreader|  
+|agente snapshot|Publisher|\<*nome_computer*>\repl_snapshot|  
+|Agente di lettura log|Publisher|\<*nome_computer*>\repl_logreader|  
 |Agente di distribuzione|Server di pubblicazione e Sottoscrittore|\<*nome_computer*>\repl_distribution|  
 |Agente di merge|Server di pubblicazione e Sottoscrittore|\<*nome_computer*>\repl_merge|  
   
@@ -41,7 +41,7 @@ ms.locfileid: "62721165"
   
 3.  Fare clic con il pulsante destro del mouse su **utenti** e quindi scegliere **nuovo utente**.  
   
-4.  Immettere `repl_snapshot` nella casella **nome utente** , specificare la password e altre informazioni rilevanti, quindi fare clic su **crea** per creare l'account repl_snapshot.  
+4.  Immettere `repl_snapshot` nella casella **nome utente** , specificare la password e altre informazioni rilevanti, quindi fare clic su **Crea** per creare l'account repl_snapshot.  
   
 5.  Ripetere il passaggio precedente per creare gli account repl_logreader, repl_distribution e repl_merge.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62721165"
   
 3.  Fare clic con il pulsante destro del mouse su **utenti** e quindi scegliere **nuovo utente**.  
   
-4.  Immettere `repl_distribution` nella casella **nome utente** , specificare la password e altre informazioni rilevanti, quindi fare clic su **crea** per creare l'account repl_distribution.  
+4.  Immettere `repl_distribution` nella casella **nome utente** , specificare la password e altre informazioni rilevanti, quindi fare clic su **Crea** per creare l'account repl_distribution.  
   
 5.  Ripetere il passaggio precedente per creare l'account repl_merge.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62721165"
 ## <a name="next-steps"></a>Passaggi successivi  
  In questo modo sono stati creati gli account di Windows per gli agenti di replica. Il passaggio successivo consiste nella configurazione della cartella snapshot. Vedere [Lezione 2: Preparazione della cartella snapshot](lesson-2-preparing-the-snapshot-folder.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica degli agenti di replica](agents/replication-agents-overview.md)  
   
   
