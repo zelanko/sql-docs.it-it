@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpullsubscription_agent
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 79bca732108776b66a2e5750015a27e5931b617a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ea558eafb665538b90cc4d9e41d16166dd9475c5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69028949"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820723"
 ---
 # <a name="sp_addpullsubscription_agent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -130,11 +130,11 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @frequency_type = ] frequency_type`Frequenza con cui pianificare la agente di distribuzione. *frequency_type* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Singola occorrenza|  
 |**2** (impostazione predefinita)|On demand|  
-|**4**|Giornaliera|  
+|**4**|Ogni giorno|  
 |**8**|Settimanale|  
 |**16**|Ogni mese|  
 |**32**|Mensile relativa|  
@@ -148,7 +148,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Data del agente di distribuzione. Questo parametro viene usato quando *frequency_type* è impostato su **32** (mensile relativo). *frequency_relative_interval* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1** (impostazione predefinita)|First (Primo)|  
 |**2**|Second|  
@@ -160,7 +160,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @frequency_subday = ] frequency_subday`Frequenza di ripianificazione durante il periodo definito. *frequency_subday* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1** (impostazione predefinita)|Una sola volta|  
 |**2**|Second|  
@@ -181,7 +181,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @encrypted_distributor_password = ] encrypted_distributor_password`L'impostazione di *encrypted_distributor_password* non è più supportata. Se si tenta di impostare questo parametro di **bit** su **1** , verrà generato un errore.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Indica se la sottoscrizione può essere sincronizzata [!INCLUDE[msCoName](../../includes/msconame-md.md)] tramite Gestione sincronizzazione. *enabled_for_syncmgr* è di **tipo nvarchar (5)** e il valore predefinito è false. Se **false**, la sottoscrizione non è registrata con Gestione sincronizzazione. Se **true**, la sottoscrizione viene registrata con Gestione sincronizzazione e può essere sincronizzata senza [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]avviare.  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Indica se la sottoscrizione può essere sincronizzata tramite [!INCLUDE[msCoName](../../includes/msconame-md.md)] Gestione sincronizzazione. *enabled_for_syncmgr* è di **tipo nvarchar (5)** e il valore predefinito è false. Se **false**, la sottoscrizione non è registrata con Gestione sincronizzazione. Se **true**, la sottoscrizione viene registrata con Gestione sincronizzazione e può essere sincronizzata senza avviare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 `[ @ftp_address = ] 'ftp_address'`Solo per compatibilità con le versioni precedenti.  
   
@@ -230,7 +230,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_addpullsubscription_agent** viene utilizzata nella replica snapshot e nella replica transazionale.  
   
 ## <a name="example"></a>Esempio  

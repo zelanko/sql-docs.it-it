@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergesubscription
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b501a2c06a6d9e8e3573ef5d5814c3318c4e623b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: af9bd2035106502da6ccb83a9a8818ca6bd0c47a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769128"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820705"
 ---
 # <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @subscriber_type = ] 'subscriber_type'`Tipo di Sottoscrittore. *subscriber_type*è di **tipo nvarchar (15)**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**locale** (impostazione predefinita)|Sottoscrittore noto solo al server di pubblicazione.|  
 |**globale**|Sottoscrittore noto a tutti i server.|  
@@ -90,10 +90,10 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`Valore che indica quando verrà eseguito il agente di merge. *frequency_type* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una sola volta|  
-|**4**|Giornaliera|  
+|**4**|Ogni giorno|  
 |**8**|Settimanale|  
 |**10**|Ogni mese|  
 |**20**|Mensile, in base all'intervallo di frequenza|  
@@ -102,7 +102,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @frequency_interval = ] frequency_interval`Giorno o giorni in cui viene eseguita la agente di merge. *frequency_interval* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Sunday|  
 |**2**|Monday|  
@@ -118,7 +118,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Occorrenza di merge pianificata dell'intervallo di frequenza in ogni mese. *frequency_relative_interval* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|First (Primo)|  
 |**2**|Second|  
@@ -131,7 +131,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @frequency_subday = ] frequency_subday`Unità per *frequency_subday_interval*. *frequency_subday* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una sola volta|  
 |**2**|Second|  
@@ -153,7 +153,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @description = ] 'description'`Breve descrizione della sottoscrizione di tipo merge. *Description*è di **tipo nvarchar (255)** e il valore predefinito è null. Questo valore viene visualizzato da monitoraggio replica nella colonna **nome descrittivo** , che può essere utilizzato per ordinare le sottoscrizioni per una pubblicazione monitorata.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Specifica se la sottoscrizione può essere sincronizzata [!INCLUDE[msCoName](../../includes/msconame-md.md)] tramite Gestione sincronizzazione Microsoft Windows. *enabled_for_syncmgr* è di **tipo nvarchar (5)** e il valore predefinito è false. Se **false**, la sottoscrizione non è registrata con Gestione sincronizzazione. Se **true**, la sottoscrizione viene registrata con Gestione sincronizzazione e può essere sincronizzata senza [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]avviare.  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Specifica se la sottoscrizione può essere sincronizzata tramite [!INCLUDE[msCoName](../../includes/msconame-md.md)] Gestione sincronizzazione Microsoft Windows. *enabled_for_syncmgr* è di **tipo nvarchar (5)** e il valore predefinito è false. Se **false**, la sottoscrizione non è registrata con Gestione sincronizzazione. Se **true**, la sottoscrizione viene registrata con Gestione sincronizzazione e può essere sincronizzata senza avviare [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 `[ @offloadagent = ] remote_agent_activation`Specifica che l'agente può essere attivato in remoto. *remote_agent_activation* è di **bit** e il valore predefinito è **0**.  
   
@@ -164,7 +164,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @use_interactive_resolver = ] 'use_interactive_resolver'`Consente di risolvere i conflitti in modo interattivo per tutti gli articoli che consentono la risoluzione interattiva. *use_interactive_resolver* è di **tipo nvarchar (5)** e il valore predefinito è false.  
   
-`[ @merge_job_name = ] 'merge_job_name'`Il * \@parametro merge_job_name* è deprecato e non può essere impostato. *merge_job_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @merge_job_name = ] 'merge_job_name'`Il parametro * \@ merge_job_name* è deprecato e non può essere impostato. *merge_job_name* è di **tipo sysname**e il valore predefinito è null.  
   
 `[ @hostname = ] 'hostname'`Esegue l'override del valore restituito da [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) quando questa funzione viene utilizzata nella clausola WHERE di un filtro con parametri. *Hostname* è di **tipo sysname**e il valore predefinito è null.  
   
@@ -177,7 +177,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="remarks"></a>Osservazioni  
  **sp_addmergesubscription** viene utilizzata nella replica di tipo merge.  
   
- Quando **sp_addmergesubscription** viene eseguita da un membro del ruolo predefinito del server **sysadmin** per creare una sottoscrizione push, il processo di agente di merge viene creato in modo implicito e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito con l'account del servizio Agent. Si consiglia di eseguire [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) e specificare le credenziali di un account di Windows diverso, specifico dell'agente per ** \@job_login** e ** \@job_password**. Per ulteriori informazioni, vedere [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+ Quando **sp_addmergesubscription** viene eseguita da un membro del ruolo predefinito del server **sysadmin** per creare una sottoscrizione push, il processo di agente di merge viene creato in modo implicito e viene eseguito con l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio Agent. Si consiglia di eseguire [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) e specificare le credenziali di un account di Windows diverso, specifico dell'agente per ** \@ job_login** e ** \@ job_password**. Per ulteriori informazioni, vedere [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergesubscription-_1.sql)]  

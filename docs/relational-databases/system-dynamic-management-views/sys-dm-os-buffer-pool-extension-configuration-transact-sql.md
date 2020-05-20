@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_buffer_pool_extension_configuration dynamic management view
 ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 38e4e1ad85a5e968d4b0bb33a3a72a829942585b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b8924d703085b3f93fe2ae36084025e945ff3fda
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900213"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820868"
 ---
 # <a name="sysdm_os_buffer_pool_extension_configuration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
 
@@ -65,7 +65,7 @@ WHERE is_in_bpool_extension <> 0
 ;  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Estensione pool di buffer](../../database-engine/configure-windows/buffer-pool-extension.md)   
  [sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
   

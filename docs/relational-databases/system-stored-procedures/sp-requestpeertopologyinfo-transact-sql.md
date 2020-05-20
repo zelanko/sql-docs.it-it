@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_requestpeertopologyinfo
 ms.assetid: 15cd28bd-5a72-41fb-ae1b-726baaa6fad5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d137706da49f666ce66abea52249796a0094c7e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 61439aeb9fd4a58d8b003473a4e55fa19ca06a36
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68129657"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824339"
 ---
 # <a name="sp_requestpeertopologyinfo-transact-sql"></a>sp_requestpeertopologyinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,16 +38,16 @@ sp_requestpeertopologyinfo [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @publication= ] '*Publication*'  
+ [ @publication =]'*pubblicazione*'  
  Nome della pubblicazione per cui eseguire una richiesta di stato a livello di topologia. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
- [ @request_id= ] *request_id*  
+ [ @request_id =] *request_id*  
  Numero ID assegnato alla richiesta di stato di topologia. *request_id* è di **tipo int**e il valore predefinito è null. Questo ID può essere utilizzato da [sp_gettopologyinfo](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md).  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  sp_requestpeertopologyinfo viene utilizzato nella replica transazionale peer-to-peer. Eseguire sp_requestpeertopologyinfo prima di eseguire [sp_gettopologyinfo](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md). Queste procedure vengono utilizzate dalla Configurazione guidata topologia peer-to-peer, ma possono anche essere utilizzate direttamente se si richiedono informazioni sulla topologia in un formato XML. Se si preferisce ottenere risultati tabulari, eseguire una query sulla tabella di sistema [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md) .  
   
 ## <a name="permissions"></a>Autorizzazioni  

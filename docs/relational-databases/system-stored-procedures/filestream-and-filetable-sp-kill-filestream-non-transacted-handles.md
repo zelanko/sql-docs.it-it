@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_kill_filestream_non_transacted_handles
 ms.assetid: 7188353e-ab29-49a0-8f25-7fb8ab122589
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 98c986c26c8d0d0cc6e2b8ff3573f0a20d938975
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8c7a2ce13a0dddf5e3cda22bef47d43478170655
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942268"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820748"
 ---
 # <a name="sp_kill_filestream_non_transacted_handles-transact-sql"></a>sp_kill_filestream_non_transacted_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] 'table_name', [[ @h
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-set"></a>Set di risultati  
- Nessuno.  
+ No.  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  Il *handle_id* richiesto da **sp_kill_filestream_non_transacted_handles** non è correlato al session_id o all'unità di lavoro utilizzata in altri comandi **Kill** .  
@@ -67,7 +67,7 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] 'table_name', [[ @h
 ### <a name="permissions"></a>Autorizzazioni  
  È necessario disporre dell'autorizzazione **View database state** per ottenere gli handle di file dalla vista a gestione dinamica **sys. dm_FILESTREAM_non_transacted_handles** e per eseguire **sp_kill_filestream_non_transacted_handles**.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Negli esempi seguenti viene illustrato come chiamare **sp_kill_filestream_non_transacted_handles** per chiudere gli handle di file non transazionali per i dati della tabella FileTable.  
   
 ```sql  
@@ -95,7 +95,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione di tabelle FileTable](../../relational-databases/blob/manage-filetables.md)  
+ [Gestire tabelle FileTable](../../relational-databases/blob/manage-filetables.md)  
  [Viste a gestione dinamica FILESTREAM e FileTable (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
  <br>[Viste del catalogo FILESTREAM e FileTable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
  <br>[sp_filestream_force_garbage_collection (Transact-SQL)](filestream-and-filetable-sp-filestream-force-garbage-collection.md)

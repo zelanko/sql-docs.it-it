@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_uncontained_entities dynamic management view
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 625c6134c91a9b452b8df2b7e235b78126c1354e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4e42daae837968ddcf0f61b860886e372bb47245
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68026926"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827996"
 ---
 # <a name="sysdm_db_uncontained_entities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "68026926"
 |*nome feature_*|**nvarchar(256)**|Restituisce il nome esterno dell'oggetto.|  
 |*feature_type_name*|**nvarchar(256)**|Restituisce il tipo di funzionalità.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  sys. dm_db_uncontained_entities Mostra le entità che potenzialmente possono superare il limite del database. Restituirà le entità utente che possono utilizzare gli oggetti al di fuori del database.  
   
  I tipi di funzionalità seguenti vengono segnalati.  
@@ -67,7 +67,7 @@ ms.locfileid: "68026926"
 ### <a name="permissions"></a>Autorizzazioni  
  sys.dm_db_uncontained_entities restituisce solo oggetti per cui l'utente dispone di un qualsiasi tipo di autorizzazione. Per valutare completamente l'indipendenza del database, questa funzione deve essere utilizzata da un utente con privilegi elevati, ad esempio un membro del ruolo predefinito del server **sysadmin** o del ruolo **db_owner** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene creata una procedura denominata P1, quindi viene eseguita una query su `sys.dm_db_uncontained_entities`. Nella query viene segnalato che P1 utilizza **sys.endpoints** , che si trova all'esterno del database.  
   
 ```sql  

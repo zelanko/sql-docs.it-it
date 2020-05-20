@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_operator
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f410024e1458d20e436df72cc2978ce41b5d60df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 080933e13c2f72deef536885b9d3b5c1c4c7593b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "74095506"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821083"
 ---
 # <a name="sp_add_operator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_add_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @name = ] 'name'`Nome di un operatore (destinatario notifiche). Questo nome deve essere univoco e non può contenere il carattere**%** di percentuale (). *Name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @name = ] 'name'`Nome di un operatore (destinatario notifiche). Questo nome deve essere univoco e non può contenere il carattere di percentuale ( **%** ). *Name* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 `[ @enabled = ] enabled`Indica lo stato corrente dell'operatore. *Enabled* è di **tinyint**e il valore predefinito è **1** (abilitato). Se è **0**, l'operatore non è abilitato e non riceve le notifiche.  
   
@@ -60,7 +60,7 @@ sp_add_operator [ @name = ] 'name'
   
  È possibile specificare un indirizzo di posta elettronica fisico o un alias per *email_address*. Ad esempio:  
   
- '**jdoe**' o '**jdoe\@XYZ.com**'  
+ '**jdoe**' o '**jdoe \@ XYZ.com**'  
   
 > [!NOTE]  
 >  È necessario utilizzare l'indirizzo di posta elettronica per Posta elettronica database.  
@@ -79,9 +79,9 @@ sp_add_operator [ @name = ] 'name'
   
 `[ @sunday_pager_end_time = ] sunday_pager_end_time`Tempo trascorso il quale il servizio **SQLServerAgent** non invia più notifiche tramite cercapersone all'operatore specificato la domenica. *sunday_pager_end_time*è di **tipo int**e il valore predefinito è **180000**, che indica le 6:00. nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
   
-`[ @pager_days = ] pager_days`Numero che indica i giorni in cui l'operatore è disponibile per le pagine (in base alle ore di inizio e di fine specificate). *pager_days*è di **tinyint**e il valore predefinito è **0** che indica che l'operatore non è mai disponibile per la ricezione di una pagina. I valori validi sono compresi tra **0** e **127**. *pager_days*viene calcolato aggiungendo i singoli valori per i giorni richiesti. Ad esempio, da lunedì a venerdì sono **2**+**4**+**8**+**16**+**32** = **62**. Nella tabella seguente vengono elencati i valori disponibili per ogni giorno della settimana.  
+`[ @pager_days = ] pager_days`Numero che indica i giorni in cui l'operatore è disponibile per le pagine (in base alle ore di inizio e di fine specificate). *pager_days*è di **tinyint**e il valore predefinito è **0** che indica che l'operatore non è mai disponibile per la ricezione di una pagina. I valori validi sono compresi tra **0** e **127**. *pager_days*viene calcolato aggiungendo i singoli valori per i giorni richiesti. Ad esempio, da lunedì a venerdì sono **2** + **4** + **8** + **16** + **32**  =  **62**. Nella tabella seguente vengono elencati i valori disponibili per ogni giorno della settimana.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Sunday|  
 |**2**|Monday|  
@@ -111,7 +111,7 @@ sp_add_operator [ @name = ] 'name'
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_add_operator**.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono impostate e attivate le informazioni per l'operatore `danwi`. L'operatore è abilitato. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent invia notifiche tramite cercapersone da lunedì a venerdì, dalle 8.00 alle 17.00.  
   
 ```  
@@ -129,7 +129,7 @@ EXEC dbo.sp_add_operator
 GO  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_delete_operator &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
  [sp_help_operator &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
  [sp_update_operator &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   

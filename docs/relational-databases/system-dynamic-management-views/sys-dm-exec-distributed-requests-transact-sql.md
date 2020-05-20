@@ -19,15 +19,15 @@ helpviewer_keywords:
 - PolyBase
 - dm_exec_distributed_sql_requests management view
 ms.assetid: c041d416-d8c6-435e-a563-6a310abd33e3
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37fd17f17d8b6aa1a30f48d75258d27f4a45561a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 52a1ee453d0a516bc2dc1fd42dcd4439272d844c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097801"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821151"
 ---
 # <a name="sysdm_exec_distributed_requests-transact-sql"></a>sys. dm_exec_distributed_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]

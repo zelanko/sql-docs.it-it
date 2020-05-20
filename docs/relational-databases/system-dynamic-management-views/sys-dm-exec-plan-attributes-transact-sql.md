@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_plan_attributes dynamic management function
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4b6e5b28612efccafa9e2de0606eef821e341081
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1c3e0e4f48037f471ad260f709879ea7ce8ff5e8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68255605"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829450"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|attributo|**varchar(128)**|Nome dell'attributo associato al piano. La tabella immediatamente sotto questo elenco elenca i possibili attributi, i relativi tipi di dati e le relative descrizioni.|  
+|Attributo|**varchar(128)**|Nome dell'attributo associato al piano. La tabella immediatamente sotto questo elenco elenca i possibili attributi, i relativi tipi di dati e le relative descrizioni.|  
 |value|**sql_variant**|Valore dell'attributo associato al piano.|  
 |is_cache_key|**bit**|Indica se l'attributo viene utilizzato come parte della chiave di ricerca nella cache per il piano.|  
 
@@ -80,10 +80,10 @@ Nella tabella precedente, l' **attributo** può avere i valori seguenti:
   
 ## <a name="permissions"></a>Autorizzazioni  
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]è richiesta `VIEW SERVER STATE` l'autorizzazione.   
+In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
 Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
 
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 ## <a name="set-options"></a>Opzioni SET  
  Le copie dello stesso piano compilato potrebbero differire solo per il valore nella colonna **set_options** . Ciò indica che connessioni diverse utilizzano set di opzioni SET diversi per la stessa query. L'utilizzo di set diversi di opzioni è in genere poco consigliabile perché può causare compilazioni aggiuntive, un minore riutilizzo del piano e un aumento delle dimensioni della cache dei piani in seguito alla presenza di più copie dei piani.  
@@ -91,7 +91,7 @@ Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l
 ### <a name="evaluating-set-options"></a>Valutazione delle opzioni SET  
  Per convertire il valore restituito in **set_options** alle opzioni con cui è stato compilato il piano, sottrarre i valori dal valore **set_options** , iniziando con il valore massimo possibile, fino a quando non si raggiunge 0. Ogni valore sottratto corrisponde a un'opzione utilizzata nel piano di query. Se, ad esempio, il valore in **set_options** è 251, le opzioni con cui è stato compilato il piano sono ANSI_NULL_DFLT_ON (128), QUOTED_IDENTIFIER (64), ANSI_NULLS (32), ANSI_WARNINGS (16), CONCAT_NULL_YIELDS_NULL (8), piano parallelo (2) e ANSI_PADDING (1).  
   
-|Opzione|valore|  
+|Opzione|Valore|  
 |------------|-----------|  
 |ANSI_PADDING|1|  
 |Parallel Plan|2|  
@@ -111,7 +111,7 @@ Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l
 |DATEFORMAT|32768|  
 |LanguageID|65536|  
 |UPON<br /><br /> Indica che l'opzione di database PARAMETERIZATION era impostata su FORCED al momento della compilazione del piano.|131072|  
-|ROWCOUNT|**Si applica a:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
+|ROWCOUNT|**Si applica a:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] A[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
   
 ## <a name="cursors"></a>Cursori  
  I cursori inattivi vengono memorizzati nella cache in un piano compilato in modo che la memoria utilizzata per archiviare il cursore possa essere riutilizzata da utenti simultanei dei cursori. Si supponga, ad esempio, che un batch dichiari e utilizzi un cursore senza deallocarlo. Se due utenti eseguono lo stesso batch, saranno presenti due cursori attivi. Dopo la deallocazione dei cursori, potenzialmente in batch diversi, la memoria utilizzata per archiviare il cursore viene assegnata alla cache e non rilasciata. Questo elenco dei cursori inattivi viene mantenuto nel piano compilato. In occasione della successiva esecuzione del batch, la memoria per il cursore nella cache verrà riutilizzata e inizializzata in modo appropriato come cursore attivo.  
@@ -119,9 +119,9 @@ Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l
 ### <a name="evaluating-cursor-options"></a>Valutazione delle opzioni di cursore  
  Per convertire il valore restituito in **required_cursor_options** e **acceptable_cursor_options** alle opzioni con cui è stato compilato il piano, sottrarre i valori dal valore della colonna, iniziando con il valore massimo possibile, fino a quando non si raggiunge 0. Ogni valore sottratto corrisponde a un'opzione di cursore utilizzata nel piano di query.  
   
-|Opzione|valore|  
+|Opzione|Valore|  
 |------------|-----------|  
-|nessuno|0|  
+|Nessuno|0|  
 |INSENSITIVE|1|  
 |SCROLL|2|  
 |READ ONLY|4|  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_cryptographic_provider_properties dynamic management view
 ms.assetid: 024b0095-6766-4189-a39a-d316c5ec2874
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cc1e0915fb48b42429bb2821476f98154ac39451
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0b08159d666fb18cc92feb88f087168b249ff523
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005106"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824696"
 ---
 # <a name="sysdm_cryptographic_provider_properties-transact-sql"></a>sys.dm_cryptographic_provider_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68005106"
 |provider_id|**int**|Numero di identificazione del provider di crittografia.|  
 |guid|**uniqueidentifier**|GUID univoco del provider.|  
 |provider_version|**nvarchar(256)**|Versione del provider nel formato '*AA.BB.cccc.dd*'.|  
-|sqlcrypt_version|**nvarchar(256)**|Versione principale dell'API [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di crittografia nel formato '*AA.BB.cccc.dd*'.|  
+|sqlcrypt_version|**nvarchar(256)**|Versione principale dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] API di crittografia nel formato '*AA.BB.cccc.dd*'.|  
 |friendly_name|**nvarchar(2048)**|Nome fornito dal provider.|  
 |authentication_type|**nvarchar(256)**|WINDOWS, BASIC o OTHER.|  
 |symmetric_key_support|**tinyint**|0 (non supportato)<br /><br /> 1 (supportato)|  
@@ -48,7 +48,7 @@ ms.locfileid: "68005106"
 |symmetric_key_import|**tinyint**|0 (non supportato)<br /><br /> 1 (supportato)|  
 |symmetric_key_persistance|**tinyint**|0 (non supportato)<br /><br /> 1 (supportato)|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La vista sys.dm_cryptographic_provider_properties è visibile a tutti.  
   
 ## <a name="see-also"></a>Vedere anche  

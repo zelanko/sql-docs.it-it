@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_addmessage
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d040fa0ccfe9b962f8847db0a841b95a534326fa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c046d562164e47ed72580801196756714547755e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80531030"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820720"
 ---
 # <a name="sp_addmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
   
 `[ @lang = ] 'language'`Lingua del messaggio. *Language* è di **tipo sysname** e il valore predefinito è null. Poiché è possibile installare più lingue nello stesso server, *Language* specifica la lingua in cui viene scritto ogni messaggio. Quando la *lingua* viene omessa, la lingua è la lingua predefinita per la sessione.  
   
-`[ @with_log = ] { 'TRUE' | 'FALSE' }`Indica se il messaggio deve essere scritto nel registro applicazioni di Windows quando si verifica. WITH_LOG è di tipo **varchar (5)** e il valore predefinito è false. ** \@** Se è TRUE, l'errore viene sempre scritto nel registro applicazioni di Windows. Se è FALSE, l'errore viene scritto nel registro applicazioni di Windows a seconda della modalità con cui è stato generato. Solo i membri del ruolo del server **sysadmin** possono usare questa opzione.  
+`[ @with_log = ] { 'TRUE' | 'FALSE' }`Indica se il messaggio deve essere scritto nel registro applicazioni di Windows quando si verifica. ** \@ WITH_LOG** è di tipo **varchar (5)** e il valore predefinito è false. Se è TRUE, l'errore viene sempre scritto nel registro applicazioni di Windows. Se è FALSE, l'errore viene scritto nel registro applicazioni di Windows a seconda della modalità con cui è stato generato. Solo i membri del ruolo del server **sysadmin** possono usare questa opzione.  
   
 > [!NOTE]  
 >  Se un messaggio viene scritto nel registro applicazioni di Windows, viene registrato inoltre nel file di log degli errori di [!INCLUDE[ssDE](../../includes/ssde-md.md)].  

@@ -9,19 +9,17 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: b19b2df1b39bcc88332d60f1389be12b32d7b921
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 4e9aa1b7b2b21883e3034d32959a8267d67d56c0
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118014"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606905"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>Usare T-SQL (CREATE EXTERNAL LIBRARY) per installare i pacchetti R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Questo articolo illustra come installare nuovi pacchetti R in un'istanza di SQL Server in cui è abilitato Machine Learning. È possibile scegliere tra più approcci. L'uso di T-SQL è consigliabile agli amministratori di server che non hanno familiarità con R.
-
-**Si applica a:**  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 L'istruzione [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) consente di aggiungere un pacchetto o un set di pacchetti a un'istanza o a un database specifico senza eseguire direttamente il codice R o Python. Questo metodo richiede tuttavia la preparazione del pacchetto e autorizzazioni aggiuntive per il database.
 

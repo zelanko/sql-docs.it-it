@@ -42,7 +42,7 @@ Creare per prima cosa una libreria di classi.
   
 1.  Nel menu **File** fare clic su **Nuovo** e quindi su **Progetto**.  
   
-2.  Nella finestra di dialogo **Nuovo progetto** fare clic su Visual C**in**Tipi di progetto\#.  
+2.  Nella finestra di dialogo **Nuovo progetto** fare clic su Visual C\# in **Tipi di progetto**.  
   
 3.  In **Modelli** selezionare **Libreria di classi**.  
   

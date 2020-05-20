@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_downloadlist
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 40345ed8ad1a10da0088c5c1388c44fa24cad929
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9dd52e6d2e4bf8a1a099ea2391a2c6ce2d6decdc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055188"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827725"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,11 +55,11 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 `[ @operation = ] 'operation'`Operazione valida per il processo specificato. *Operation* è di tipo **varchar (64)** e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**DIFETTO**|Operazione del server che richiede al server di destinazione di escludere dal servizio **SQLServerAgent** master.|  
-|**ELIMINARE**|Operazione del processo che rimuove un intero processo.|  
-|**INSERIRE**|Operazione del processo che inserisce un intero processo o ne aggiorna uno esistente. Include tutti i passaggi e le pianificazioni del processo, se applicabile.|  
+|**DELETE**|Operazione del processo che rimuove un intero processo.|  
+|**INSERT**|Operazione del processo che inserisce un intero processo o ne aggiorna uno esistente. Include tutti i passaggi e le pianificazioni del processo, se applicabile.|  
 |**RE-ENLIST**|Operazione del server con cui viene attivato il rinvio delle informazioni di integrazione del server di destinazione, tra cui l'intervallo di polling e il fuso orario per il dominio multiserver. Il server di destinazione Riscarica anche i dettagli **MSXOperator** .|  
 |**SET-POLL**|Operazione del server con cui viene impostato l'intervallo di tempo in secondi per il polling del dominio multiserver eseguito dai server di destinazione. Se specificato, il *valore* viene interpretato come il valore dell'intervallo necessario e può essere un valore compreso tra **10** e **28.800**.|  
 |**INIZIARE**|Operazione del processo con cui viene richiesto l'avvio dell'esecuzione del processo.|  
@@ -100,7 +100,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni per l'esecuzione di questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene visualizzato un elenco di righe in `sysdownloadlist` per il processo `NightlyBackups`.  
   
 ```  

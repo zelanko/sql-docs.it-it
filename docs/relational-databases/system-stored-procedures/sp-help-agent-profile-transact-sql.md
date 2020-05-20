@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_agent_profile
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6f7b63875d7c4c4c5ab5f3880c133448fe6da240
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ae3e555f48958aec87ed012244fae9775fae1619
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771460"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826101"
 ---
 # <a name="sp_help_agent_profile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 ## <a name="arguments"></a>Argomenti  
 `[ @agent_type = ] agent_type`Tipo di agente. *agent_type* è di **tipo int**e il valore predefinito è **0**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|agente snapshot|  
 |**2**|Agente di lettura log|  
@@ -64,7 +64,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_help_agent_profile** viene utilizzato in tutti i tipi di replica.  
   
 ## <a name="permissions"></a>Autorizzazioni  

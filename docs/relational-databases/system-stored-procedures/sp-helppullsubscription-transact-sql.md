@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppullsubscription
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1ab2afba10ff754b5bd99d36df02d642cc5c6bb0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ce6fe81cc037e8e704758155aa302c61418ce65b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771442"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824486"
 ---
 # <a name="sp_helppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,11 +40,11 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'`Nome del server remoto. *Publisher* è di **tipo sysname**e il valore **%** predefinito è, che restituisce informazioni per tutti i server di pubblicazione.  
+`[ @publisher = ] 'publisher'`Nome del server remoto. *Publisher* è di **tipo sysname**e il valore predefinito è **%** , che restituisce informazioni per tutti i server di pubblicazione.  
   
-`[ @publisher_db = ] 'publisher_db'`Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname**e il valore **%** predefinito è, che restituisce tutti i database del server di pubblicazione.  
+`[ @publisher_db = ] 'publisher_db'`Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname**e il valore predefinito è **%** , che restituisce tutti i database del server di pubblicazione.  
   
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **%** **tipo sysname**e il valore predefinito è, che restituisce tutte le pubblicazioni. Se questo parametro è uguale a ALL, vengono restituite solo le sottoscrizioni pull con independent_agent = **0** .  
+`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è **%** , che restituisce tutte le pubblicazioni. Se questo parametro è uguale a ALL, vengono restituite solo le sottoscrizioni pull con independent_agent = **0** .  
   
 `[ @show_push = ] 'show_push'`Indica se devono essere restituite tutte le sottoscrizioni push. *show_push*è di **tipo nvarchar (5)** e il valore predefinito è false, che non restituisce le sottoscrizioni push.  
   
@@ -65,16 +65,16 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**modalità di aggiornamento**|**tinyint**|Tipo di aggiornamenti consentiti.|  
 |**distribution agent job_id**|**int**|ID di processo dell'agente di distribuzione.|  
 |**enabled_for_synmgr**|**int**|Indica se è possibile sincronizzare la sottoscrizione tramite Gestione sincronizzazione [!INCLUDE[msCoName](../../includes/msconame-md.md)].|  
-|**subscription guid**|**binary(16)**|Identificatore globale della versione della sottoscrizione nella pubblicazione.|  
+|**GUID sottoscrizione**|**binary(16)**|Identificatore globale della versione della sottoscrizione nella pubblicazione.|  
 |**subid**|**binary(16)**|Identificatore globale di una sottoscrizione anonima.|  
 |**immediate_sync**|**bit**|Indica se i file di sincronizzazione vengono creati o ricreati a ogni esecuzione dell'agente snapshot.|  
 |**account di accesso del server di pubblicazione**|**sysname**|ID dell'account di accesso utilizzato nel server di pubblicazione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**password del server di pubblicazione**|**nvarchar (524)**|Password (crittografata) utilizzata dal server di pubblicazione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**publisher security_mode**|**int**|Modalità di sicurezza implementata nel server di pubblicazione:<br /><br /> **autenticazione 0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **1** = autenticazione di Windows<br /><br /> **2** = i trigger di sincronizzazione utilizzano una voce **sysservers** statica per eseguire una chiamata di procedura remota (RPC) e il server di *pubblicazione* deve essere definito nella tabella **sysservers** come server remoto o collegato.|  
+|**publisher security_mode**|**int**|Modalità di sicurezza implementata nel server di pubblicazione:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione 0<br /><br /> **1** = autenticazione di Windows<br /><br /> **2** = i trigger di sincronizzazione utilizzano una voce **sysservers** statica per eseguire una chiamata di procedura remota (RPC) e il server di *pubblicazione* deve essere definito nella tabella **sysservers** come server remoto o collegato.|  
 |**distribuzione**|**sysname**|Nome del server di distribuzione.|  
 |**distributor_login**|**sysname**|ID dell'account di accesso utilizzato nel server di distribuzione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**distributor_password**|**nvarchar (524)**|Password (crittografata) utilizzata nel server di distribuzione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**distributor_security_mode**|**int**|Modalità di sicurezza implementata nel server di distribuzione:<br /><br /> **autenticazione 0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **1** = autenticazione di Windows|  
+|**distributor_security_mode**|**int**|Modalità di sicurezza implementata nel server di distribuzione:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione 0<br /><br /> **1** = autenticazione di Windows|  
 |**ftp_address**|**sysname**|Disponibile solo per compatibilità con le versioni precedenti.|  
 |**ftp_port**|**int**|Disponibile solo per compatibilità con le versioni precedenti.|  
 |**ftp_login**|**sysname**|Disponibile solo per compatibilità con le versioni precedenti.|  
@@ -90,13 +90,13 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**last_sync_status**|**int**|Stato della sottoscrizione:<br /><br /> **0** = tutti i processi sono in attesa di essere avviati<br /><br /> **1** = uno o più processi vengono avviati<br /><br /> **2** = tutti i processi sono stati eseguiti correttamente<br /><br /> **3** = almeno un processo è in esecuzione<br /><br /> **4** = tutti i processi sono pianificati e inattivi<br /><br /> **5** = è in corso un tentativo di esecuzione di almeno un processo dopo un errore precedente<br /><br /> **6** = almeno un processo non è stato eseguito correttamente|  
 |**last_sync_summary**|**sysname**|Descrizione dei risultati dell'ultima sincronizzazione.|  
 |**last_sync_time**|**datetime**|Data e ora dell'aggiornamento delle informazioni della sottoscrizione. Si tratta di una stringa UNICODE con data ISO (114) + ora ODBC (121). Il formato è yyyymmdd hh:mi:sss.mmm dove 'yyyy' rappresenta l'anno, 'mm' il mese, 'dd' il giorno, 'hh' l'ora, 'mi' i minuti, 'sss' i secondi e 'mmm' i millisecondi.|  
-|**job_login**|**nvarchar(512)**|Account di Windows utilizzato per l'esecuzione dell'agente di distribuzione, restituito nel formato *dominio*\\*nomeutente*.|  
-|**job_password**|**sysname**|Per motivi di sicurezza, viene sempre restituito**\*\*\*\*\*\*\*\*\*** il valore "".|  
+|**job_login**|**nvarchar(512)**|Account di Windows utilizzato per l'esecuzione dell'agente di distribuzione, restituito nel formato *dominio* \\ *nomeutente*.|  
+|**job_password**|**sysname**|Per motivi di sicurezza, **\*\*\*\*\*\*\*\*\*\*** viene sempre restituito il valore "".|  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_helppullsubscription** viene utilizzata per la replica snapshot e transazionale.  
   
 ## <a name="permissions"></a>Autorizzazioni  

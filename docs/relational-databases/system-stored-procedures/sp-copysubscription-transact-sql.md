@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_copysubscription
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5d3f67794eb2825c10b822ce719459b563f046d2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b3a2a2405b4ca22f780576135c66ee32d058ed10
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304828"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826276"
 ---
 # <a name="sp_copysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,14 +45,14 @@ sp_copysubscription [ @filename = ] 'file_name'
 ## <a name="arguments"></a>Argomenti  
 `[ @filename = ] 'file_name'`Stringa che specifica il percorso completo, incluso il nome del file, in cui viene salvata una copia del file di dati (con estensione MDF). il *nome del file* è **nvarchar (260)** e non prevede alcun valore predefinito.  
   
-`[ @temp_dir = ] 'temp_dir'`Nome della directory che contiene i file temporanei. *temp_dir* è di **tipo nvarchar (260)** e il valore predefinito è null. Se è null, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà utilizzata la directory dei dati predefinita. Nella directory deve essere disponibile spazio sufficiente per l'archiviazione di un file le cui dimensioni sono pari alla somma delle dimensioni di tutti i file di database del Sottoscrittore.  
+`[ @temp_dir = ] 'temp_dir'`Nome della directory che contiene i file temporanei. *temp_dir* è di **tipo nvarchar (260)** e il valore predefinito è null. Se è NULL, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà utilizzata la directory dei dati predefinita. Nella directory deve essere disponibile spazio sufficiente per l'archiviazione di un file le cui dimensioni sono pari alla somma delle dimensioni di tutti i file di database del Sottoscrittore.  
   
-`[ @overwrite_existing_file = ] 'overwrite_existing_file'`Flag booleano facoltativo che specifica se sovrascrivere o meno un file esistente con lo stesso nome specificato nel ** \@nome file**. *overwrite_existing_file*è di **bit**e il valore predefinito è **0**. Se è **1**, sovrascrive il file specificato da ** \@filename**, se esistente. Se è **0**, il stored procedure ha esito negativo se il file esiste e il file non viene sovrascritto.  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'`Flag booleano facoltativo che specifica se sovrascrivere o meno un file esistente con lo stesso nome specificato nel ** \@ nome file**. *overwrite_existing_file*è di **bit**e il valore predefinito è **0**. Se è **1**, sovrascrive il file specificato da ** \@ filename**, se esistente. Se è **0**, il stored procedure ha esito negativo se il file esiste e il file non viene sovrascritto.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_copysubscription** viene utilizzato in tutti i tipi di replica per copiare un database di sottoscrizione in un file come alternativa all'applicazione di uno snapshot nel Sottoscrittore. Il database deve essere configurato in modo che supporti solo le sottoscrizioni pull. Gli utenti che dispongono delle autorizzazioni appropriate possono eseguire copie del database di sottoscrizione e quindi inviare tramite posta elettronica, copiare o trasferire il file ottenuto (con estensione msf) in un altro Sottoscrittore, dove è possibile collegarlo come sottoscrizione.  
   
  Le dimensioni del database di sottoscrizione copiato devono essere inferiori a 2 gigabyte (GB)  

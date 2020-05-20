@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_trigger_stats dynamic management function
 ms.assetid: 863498b4-849c-434d-b748-837411458738
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65e54b90fa036e738f2e1e6a28498559051011a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 65072bd42e1e1f85189afe8bb832a2b0811417e2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262207"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824563"
 ---
 # <a name="sysdm_exec_trigger_stats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,27 +63,27 @@ ms.locfileid: "68262207"
 |**last_elapsed_time**|**bigint**|Tempo trascorso, in microsecondi, per l'ultima esecuzione completata del trigger.|  
 |**min_elapsed_time**|**bigint**|Tempo minimo trascorso, in microsecondi, per qualsiasi esecuzione completata del trigger.|  
 |**max_elapsed_time**|**bigint**|Tempo massimo trascorso, in microsecondi, per qualsiasi esecuzione completata del trigger.| 
-|**total_spills**|**bigint**|Numero totale di pagine distribuite dall'esecuzione del trigger a partire dalla relativa compilazione.<br /><br /> **Si applica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partire da CU3|  
-|**last_spills**|**bigint**|Numero di pagine distribuite durante l'ultima esecuzione del trigger.<br /><br /> **Si applica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partire da CU3|  
-|**min_spills**|**bigint**|Numero minimo di pagine che questo trigger ha mai distribuito durante una singola esecuzione.<br /><br /> **Si applica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partire da CU3|  
-|**max_spills**|**bigint**|Numero massimo di pagine che questo trigger ha mai distribuito durante una singola esecuzione.<br /><br /> **Si applica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partire da CU3|  
+|**total_spills**|**bigint**|Numero totale di pagine distribuite dall'esecuzione del trigger a partire dalla relativa compilazione.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**last_spills**|**bigint**|Numero di pagine distribuite durante l'ultima esecuzione del trigger.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**min_spills**|**bigint**|Numero minimo di pagine che questo trigger ha mai distribuito durante una singola esecuzione.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**max_spills**|**bigint**|Numero massimo di pagine che questo trigger ha mai distribuito durante una singola esecuzione.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**total_page_server_reads**|**bigint**|Numero totale di letture di pagine del server eseguite dalle esecuzioni del trigger a partire dalla relativa compilazione.<br /><br /> **Si applica a**: iperscalabilità del database SQL di Azure|  
 |**last_page_server_reads**|**bigint**|Numero di letture di pagine del server eseguite durante l'ultima esecuzione del trigger.<br /><br /> **Si applica a**: iperscalabilità del database SQL di Azure|  
 |**min_page_server_reads**|**bigint**|Numero minimo di letture di pagine del server eseguite da questo trigger durante una singola esecuzione.<br /><br /> **Si applica a**: iperscalabilità del database SQL di Azure|  
 |**max_page_server_reads**|**bigint**|Numero massimo di letture di pagine del server eseguite da questo trigger durante una singola esecuzione.<br /><br /> **Si applica a**: iperscalabilità del database SQL di Azure|  
 
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], le viste a gestione dinamica non possono esporre le informazioni che influenzerebbero l'indipendenza del database o le informazioni sugli altri database a cui l'utente dispone di accesso. Per evitare di esporre queste informazioni, ogni riga che contiene dati che non appartengono al tenant connesso viene filtrata.  
 
 Le statistiche nella vista vengono aggiornate quando viene completata una query.  
   
 ## <a name="permissions"></a>Autorizzazioni  
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]è richiesta `VIEW SERVER STATE` l'autorizzazione.   
+In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
 Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituite informazioni sui primi cinque trigger identificati in base al tempo medio trascorso.  
   
 ```sql  

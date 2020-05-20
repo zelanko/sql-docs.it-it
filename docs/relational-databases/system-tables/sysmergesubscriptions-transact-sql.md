@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergesubscriptions system table
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1cd32e7224b66c012d3422a3754cb0b4e0ca325b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0722ccd8c4f18fd16ed4abdb3630e80bc7d5de53
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029780"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824777"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68029780"
 |subscriber_server|**sysname**|ID del server utilizzato per eseguire il mapping del campo srvid al valore specifico del server nella migrazione di una copia del database di sottoscrizione in un server diverso.|  
 |db_name|**sysname**|Nome del database di sottoscrizione.|  
 |pubid|**uniqueidentifier**|ID della pubblicazione da cui è stata creata la sottoscrizione corrente.|  
-|datasource_type|**int**|Tipo di origine dati:<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **2** = OLE DB Jet.|  
+|datasource_type|**int**|Tipo di origine dati:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> **2** = OLE DB Jet.|  
 |subid|**uniqueidentifier**|Numero di identificazione univoco per la sottoscrizione.|  
 |replnickname|**binary**|Nome alternativo compresso per la replica.|  
 |replicastate|**uniqueidentifier**|Identificatore univoco utilizzato per determinare se la sincronizzazione precedente ha avuto esito positivo confrontando il valore nel server di pubblicazione con il valore nel Sottoscrittore.|  

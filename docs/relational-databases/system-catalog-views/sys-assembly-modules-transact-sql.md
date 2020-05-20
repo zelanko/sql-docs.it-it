@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.assembly_modules catalog view
 ms.assetid: 5f9e644e-8065-49a2-b53d-db7df98f70d8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 68e91d6935549bc8dd421361c092c3ad1fb01905
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 967626693c52cc31bacddf88735224f3e191e6a6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68118165"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829185"
 ---
 # <a name="sysassembly_modules-transact-sql"></a>sys.assembly_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68118165"
 |**assembly_class**|**sysname**|Nome della classe nell'assembly che definisce il modulo corrente.|  
 |**assembly_method**|**sysname**|Nome del metodo all'interno del **assembly_class** che definisce il modulo.<br /><br /> Restituisce NULL per le funzioni di aggregazione (AF).|  
 |**null_on_null_input**|**bit**|Il modulo è stato dichiarato in modo da produrre un output NULL per qualsiasi input NULL.|  
-|**execute_as_principal_id**|**int**|ID dell'entità di database nella quale si verifica l'esecuzione del contesto nella modalità specificata dalla clausola EXECUTE AS della funzione CLR, della stored procedure CLR o del trigger CLR.<br /><br /> NULL = EXECUTE AS CALLER Questa è la modalità predefinita.<br /><br /> ID dell'entità di database specificata = EXECUTE AS SELF, EXECUTE AS *user_name*o execute As *login_name*.<br /><br /> -2 = EXECUTE AS OWNER.|  
+|**execute_as_principal_id**|**int**|ID dell'entità di database nella quale si verifica l'esecuzione del contesto nella modalità specificata dalla clausola EXECUTE AS della funzione CLR, della stored procedure CLR o del trigger CLR.<br /><br /> NULL = EXECUTE AS CALLER Questo è il valore predefinito.<br /><br /> ID dell'entità di database specificata = EXECUTE AS SELF, EXECUTE AS *user_name*o execute As *login_name*.<br /><br /> -2 = EXECUTE AS OWNER.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

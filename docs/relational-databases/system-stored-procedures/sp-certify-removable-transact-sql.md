@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_certify_removable
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c39665f54a915282a6c59fe7d57b24d0cde0a5e7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 64621f1d675fc7cd4e64b690b1e440a1dbad2d1c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68045934"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826668"
 ---
 # <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se il database è configurato correttamente, **sp_certify_removable** esegue le operazioni seguenti:  
   
 -   Imposta il database offline per consentire la copia dei file.  
@@ -59,7 +59,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
 -   Contrassegna i filegroup di dati come filegroup di sola lettura per consentire la copia dei file su supporti di sola lettura.  
   
- L'amministratore di sistema deve essere il proprietario del database e di tutti i relativi oggetti. L'amministratore di sistema è un utente noto presente in tutti i server in cui [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione e può prevedere l'esistenza quando il database viene distribuito e installato in un secondo momento.  
+ L'amministratore di sistema deve essere il proprietario del database e di tutti i relativi oggetti. L'amministratore di sistema è un utente noto presente in tutti i server in cui è in esecuzione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e può prevedere l'esistenza quando il database viene distribuito e installato in un secondo momento.  
   
  Se si esegue **sp_certify_removable** senza il valore **auto** e vengono restituite informazioni su una delle condizioni seguenti:  
   
@@ -82,7 +82,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni Execute sono limitate ai membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene confermato che il database `inventory` è pronto per la rimozione.  
   
 ```  
@@ -90,7 +90,7 @@ EXEC sp_certify_removable inventory, AUTO;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Scollegamento e collegamento del database &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [Collegamento e scollegamento di un database &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [sp_create_removable &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-create-removable-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sp_dbremove &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   

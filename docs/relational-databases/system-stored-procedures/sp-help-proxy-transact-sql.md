@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_proxy
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 904a694d73613bb1c40c671b18ca33e5d9b5d0e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c091872c7e79a45fd6fb135d20c0910f9cd0158d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085281"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828415"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_help_proxy
   
  Nella tabella seguente vengono elencati i valori disponibili per ogni sottosistema.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |ActiveScripting|Script ActiveX|  
 |CmdExec|Sistema operativo (CmdExec)|  
@@ -83,7 +83,7 @@ sp_help_proxy
 |**credential_id**|**int**|Identificatore per le credenziali associate a questo proxy.|  
 |**credential_identity_exists**|**int**|Indica se credential_identity esiste. { 0 = non esiste, 1 = esiste }|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se non vengono specificati parametri, **sp_help_proxy** elenca le informazioni per tutti i proxy nell'istanza di.  
   
  Per determinare quali proxy possono essere utilizzati da un account di accesso per un determinato sottosistema, specificare *Name* e *subsystem_name*. Quando vengono forniti questi argomenti, **sp_help_proxy** elenca i proxy a cui l'account di accesso specificato può accedere e che possono essere utilizzati per il sottosistema specificato.  

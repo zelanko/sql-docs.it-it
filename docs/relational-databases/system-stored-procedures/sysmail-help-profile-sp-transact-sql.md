@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_profile_sp
 ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2d8f2af3894377cc0922274ca26c231c003f3bd6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 95660c293ef8a5efcca132407cd930ab0b721d89
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68044498"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827425"
 ---
 # <a name="sysmail_help_profile_sp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,15 +56,15 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 |**name**|**sysname**|Nome del profilo.|  
 |**Descrizione**|**nvarchar(256)**|Descrizione del profilo.|  
   
-## <a name="remarks"></a>Osservazioni  
- Quando viene specificato un nome di profilo o un ID profilo, **sysmail_help_profile_sp** restituisce informazioni su tale profilo. In caso contrario, **sysmail_help_profile_sp** restituisce informazioni su ogni profilo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nell'istanza.  
+## <a name="remarks"></a>Commenti  
+ Quando viene specificato un nome di profilo o un ID profilo, **sysmail_help_profile_sp** restituisce informazioni su tale profilo. In caso contrario, **sysmail_help_profile_sp** restituisce informazioni su ogni profilo nell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza.  
   
  Il stored procedure **sysmail_help_profile_sp** si trova nel database **msdb** ed è di proprietà dello schema **dbo** . La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  **A. Visualizzazione di tutti i profili**  
   
  Nell'esempio seguente vengono visualizzati tutti i profili disponibili nell'istanza.  

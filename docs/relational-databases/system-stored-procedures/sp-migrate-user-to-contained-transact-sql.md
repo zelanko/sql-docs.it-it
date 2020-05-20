@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_migrate_user_to_contained
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d5bcafb24313851f58fd18fc19ebabd0ee98f6dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a641f363b4a39b28b7a7ea767914d952c83d697e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022329"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828290"
 ---
 # <a name="sp_migrate_user_to_contained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Converte un utente del database di cui è stato eseguito il mapping a un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un utente del database indipendente con password. In un database indipendente, utilizzare questa procedura per rimuovere le dipendenze nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui viene installato il database. **sp_migrate_user_to_contained** separa l'utente dall'account di accesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] originale, in modo che sia possibile amministrare separatamente impostazioni quali password e lingua predefinita per il database indipendente. **sp_migrate_user_to_contained** possibile utilizzare prima di trasferire il database indipendente in un'istanza diversa di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] per eliminare le dipendenze dagli account [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di accesso dell'istanza corrente.  
+  Converte un utente del database di cui è stato eseguito il mapping a un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un utente del database indipendente con password. In un database indipendente, utilizzare questa procedura per rimuovere le dipendenze nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui viene installato il database. **sp_migrate_user_to_contained** separa l'utente dall' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso originale, in modo che sia possibile amministrare separatamente impostazioni quali password e lingua predefinita per il database indipendente. **sp_migrate_user_to_contained** possibile utilizzare prima di trasferire il database indipendente in un'istanza diversa di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] per eliminare le dipendenze dagli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso dell'istanza corrente.  
   
 > [!NOTE]
 > Prestare attenzione quando si usa **sp_migrate_user_to_contained**, perché non sarà possibile invertire l'effetto. Questa procedura viene utilizzata solo in un database indipendente. Per ulteriori informazioni, vedere [database indipendenti](../../relational-databases/databases/contained-databases.md).  
@@ -42,19 +42,19 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [**@username =** ] **N'***User***'**  
+ [** @username =** ] **N'***User***'**  
  Nome di un utente nel database indipendente corrente di cui è stato eseguito il mapping a un account di accesso con autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il valore è di **tipo sysname**e il valore predefinito è **null**.  
   
- [**@rename =** ] **N'***copy_login_name***'** | **n'***keep_name***'**  
+ [** @rename =** ] **N'***copy_login_name***'**  |  **N'***keep_name***'**  
  Quando un utente del database basato su un account di accesso dispone di un nome utente diverso da quello del nome account di accesso, utilizzare *keep_name* per mantenere il nome utente del database durante la migrazione. Utilizzare *copy_login_name* per creare il nuovo utente del database indipendente con il nome dell'account di accesso, anziché l'utente. Quando il nome utente di un utente del database basato su un account di accesso è uguale al nome dell'account di accesso, entrambe le opzioni consentono di creare l'utente del database indipendente senza la modifica del nome.  
   
- [**@disablelogin =** ] **N'***disable_login***'** | **n'***do_not_disable_login***'**  
+ [** @disablelogin =** ] **N'***disable_login***'**  |  **N'***do_not_disable_login***'**  
  *disable_login* Disabilita l'account di accesso nel database master. Per connettersi quando l'account di accesso è disabilitato, la connessione deve fornire il nome del database indipendente come **catalogo iniziale** come parte della stringa di connessione.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_migrate_user_to_contained** crea l'utente del database indipendente con password, indipendentemente dalle proprietà o dalle autorizzazioni dell'account di accesso. Ad esempio, la procedura può avere esito positivo se l'account di accesso è disabilitato o se all'utente viene negata l'autorizzazione **Connect** per il database.  
   
  **sp_migrate_user_to_contained** presenta le restrizioni seguenti.  

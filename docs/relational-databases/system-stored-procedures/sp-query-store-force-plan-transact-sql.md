@@ -18,22 +18,22 @@ helpviewer_keywords:
 - sys.sp_query_store_force_plan
 - sp_query_store_force_plan
 ms.assetid: 0068f258-b998-4e4e-b47b-e375157c8213
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b34cf94a2ab6cfec601d41b02bf32b00f0eb3b41
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 880cdae24004936b1d27321499ceac759b554ea3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71207716"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824388"
 ---
 # <a name="sp_query_store_force_plan-transact-sql"></a>sp_query_store_force_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Consente di forzare un piano specifico per una query specifica.  
   
- Quando un piano è forzato per una query specifica, ogni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] volta che rileva la query, tenta di forzare il piano in Query Optimizer. Se l'utilizzo forzato del piano ha esito negativo, viene generato un evento esteso e viene richiesto a Query Optimizer di ottimizzare in modo normale.  
+ Quando un piano è forzato per una query specifica, ogni volta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che rileva la query, tenta di forzare il piano in Query Optimizer. Se l'utilizzo forzato del piano ha esito negativo, viene generato un evento esteso e viene richiesto a Query Optimizer di ottimizzare in modo normale.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,12 +51,12 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede l'autorizzazione **ALTER** per il database.
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituite informazioni sulle query nell'archivio query.  
   
 ```sql  

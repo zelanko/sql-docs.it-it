@@ -19,15 +19,15 @@ helpviewer_keywords:
 - PolyBase,views
 - PolyBase
 ms.assetid: 7597d97b-1fde-4135-ac35-4af12968f300
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b0ba7eecc8e117e429f6992622d0c7bb2073f86a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8348ebacb68f2df122b73d6ad3480cadedd27c1b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74834329"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821106"
 ---
 # <a name="sysdm_exec_external_work-transact-sql"></a>sys. dm_exec_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "74834329"
   
  Eseguire una query su sys. dm_exec_external_work per identificare il lavoro per comunicare con l'origine dati esterna, ad esempio Hadoop o External SQL Server.  
   
-|Nome colonna|Tipo di dati|Descrizione|Range|  
+|Nome colonna|Tipo di dati|Description|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|`nvarchar(32)`|Identificatore univoco per la query di base associata.|Vedere *request_id* in [sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
 |step_index|`int`|Richiesta eseguita dal thread di lavoro.|Vedere *step_index* in [sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
 |dms_step_index|`int`|Passaggio del piano DMS eseguito dal thread di lavoro.|Vedere [sys. dm_exec_dms_workers &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md).|  
 |compute_node_id|`int`|Nodo su cui è in esecuzione il ruolo di lavoro.|Vedere [sys. dm_exec_compute_nodes &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
-|type|`nvarchar(60)`|Tipo di lavoro esterno.|' File Split '|  
+|tipo|`nvarchar(60)`|Tipo di lavoro esterno.|' File Split '|  
 |work_id|`int`|ID della divisione effettiva.|Maggiore o uguale a 0.|  
 |input_name|`nvarchar(4000)`|Nome dell'input da leggere|Nome file quando si usa Hadoop.|  
 |read_location|`bigint`|Offset o percorso di lettura.|Offset del file da leggere.|  
