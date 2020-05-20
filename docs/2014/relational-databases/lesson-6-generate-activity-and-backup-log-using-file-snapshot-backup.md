@@ -10,17 +10,17 @@ ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 25ae3cee8e08292297449914bfb6e40dfc1b4b3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e31789b1f2cf5b2206af400c7c7798f7761f1e6c
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175460"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922076"
 ---
 # <a name="lesson-7-move-your-data-files-to-azure-storage"></a>Lezione 7: Spostare i file di dati in Archiviazione di Azure
   In questa lezione verrà illustrato come spostare i file di dati in archiviazione di Azure (ma non nell'istanza di SQL Server). È possibile seguire questa lezione anche senza aver completato le lezioni 4, 5 e 6.  
   
- Per spostare i file di dati in archiviazione di Azure, è possibile `ALTER DATABASE` usare l'istruzione in quanto consente di modificare il percorso dei file di dati.  
+ Per spostare i file di dati in archiviazione di Azure, è possibile usare l' `ALTER DATABASE` istruzione in quanto consente di modificare il percorso dei file di dati.  
   
  Per questa lezione si presuppone che l'utente abbia già completato i passaggi seguenti:  
   
@@ -74,7 +74,7 @@ ms.locfileid: "70175460"
   
     ```  
   
-5.  A questo punto, è necessario copiare i file di dati in archiviazione di Azure usando uno dei metodi seguenti: [strumento AzCopy](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx), [pagina put](https://msdn.microsoft.com/library/azure/ee691975.aspx), informazioni di [riferimento sulla libreria client di archiviazione](https://msdn.microsoft.com/library/azure/dn261237.aspx)o uno strumento di esplorazione di archiviazione di terze parti.  
+5.  A questo punto, è necessario copiare i file di dati in archiviazione di Azure usando uno dei metodi seguenti: [strumento AzCopy](https://docs.microsoft.com/archive/blogs/windowsazurestorage/azcopy-uploadingdownloading-files-for-windows-azure-blobs), [pagina put](https://msdn.microsoft.com/library/azure/ee691975.aspx), informazioni di [riferimento sulla libreria client di archiviazione](https://msdn.microsoft.com/library/azure/dn261237.aspx)o uno strumento di esplorazione di archiviazione di terze parti.  
   
      **Importante:** Quando si usa questa nuova funzionalità avanzata, assicurarsi sempre di creare un BLOB di pagine e non un BLOB in blocchi.  
   

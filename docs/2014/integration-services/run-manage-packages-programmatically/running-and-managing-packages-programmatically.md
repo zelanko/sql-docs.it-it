@@ -10,12 +10,12 @@ ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ecbaa54a723fae6a3c5fd11363bf42f1f2a57da0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 077460ed71e42cdbecb6ac67b3e6bb1a3b49860c
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766827"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922063"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>Esecuzione e gestione dei pacchetti a livello di programmazione
   Se è necessario gestire ed eseguire pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] all'esterno dell'ambiente di sviluppo, è possibile modificare i pacchetti a livello di programmazione. Questo approccio rende disponibili diverse opzioni:  
@@ -35,7 +35,7 @@ ms.locfileid: "62766827"
 ## <a name="running-packages-on-the-integration-services-server"></a>Esecuzione di pacchetti nel server Integration Services  
  Quando si distribuiscono pacchetti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], è possibile eseguirli a livello di codice tramite lo spazio dei nomi <xref:Microsoft.SqlServer.Management.IntegrationServices>. L'assembly Microsoft.SqlServer.Management.IntegrationServices viene compilato con .NET Framework 3.5. Se si compila un'applicazione .NET Framework 4.0, potrebbe essere necessario aggiungere il riferimento all'assembly direttamente nel file di progetto in uso.  
   
- È inoltre possibile utilizzare lo spazio dei nomi per distribuire e gestire progetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Per una panoramica dello spazio dei nomi e i frammenti di codice, vedere l'intervento sul blog relativo a [uno sguardo rapido del modello a oggetti gestito del catalogo SSIS](https://go.microsoft.com/fwlink/?LinkId=253122), su blogs.msdn.com.  
+ È inoltre possibile utilizzare lo spazio dei nomi per distribuire e gestire progetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Per una panoramica dello spazio dei nomi e i frammenti di codice, vedere l'intervento sul blog relativo a [uno sguardo rapido del modello a oggetti gestito del catalogo SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892), su blogs.msdn.com.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Differenze tra l'esecuzione locale e remota](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)  
@@ -78,7 +78,7 @@ ms.locfileid: "62766827"
   
 ![Integration Services icona (piccola)](../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video [!INCLUDE[msCoName](../../includes/msconame-md.md)] più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] su MSDN:<br /><br /> [Visitare la pagina relativa a Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server Integration Services](../sql-server-integration-services.md)  
   
   
