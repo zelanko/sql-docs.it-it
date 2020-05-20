@@ -17,19 +17,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_database_replica_states dynamic management view
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 83b3c369add51a853078dd64a8861d633ac330ec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2edfbd187835a321f513f3fb9d14aaa1aef65ec5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982271"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827962"
 ---
 # <a name="sysdm_hadr_database_replica_states-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce una riga per ogni database che partecipa a un gruppo di disponibilità Always On per il quale l'istanza locale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di ospita una replica di disponibilità. Questa DMV espone informazioni sullo stato sia sulle repliche primarie sia su quelle secondarie. Su una replica secondaria, questa vista restituisce una riga per ogni database secondario sull'istanza del server. Sulla replica primaria, questa vista restituisce una riga per ogni database primario e una riga aggiuntiva per il database secondario corrispondente.  
+  Restituisce una riga per ogni database che partecipa a un gruppo di disponibilità Always On per il quale l'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ospita una replica di disponibilità. Questa DMV espone informazioni sullo stato sia sulle repliche primarie sia su quelle secondarie. Su una replica secondaria, questa vista restituisce una riga per ogni database secondario sull'istanza del server. Sulla replica primaria, questa vista restituisce una riga per ogni database primario e una riga aggiuntiva per il database secondario corrispondente.  
   
 > [!IMPORTANT]
 > A seconda dell'azione e degli stati di livello superiore, è possibile che le informazioni sullo stato del database non siano disponibili o non aggiornate. I valori hanno inoltre pertinenza esclusivamente locale. Nella replica primaria, ad esempio, il valore della colonna **last_hardened_lsn** riflette le informazioni su un determinato database secondario attualmente disponibile per la replica primaria, non sul valore LSN finale effettivo che la replica secondaria potrebbe avere attualmente.  

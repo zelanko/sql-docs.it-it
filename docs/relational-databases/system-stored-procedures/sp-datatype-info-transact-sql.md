@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_datatype_info
 ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 39e8f688c23cffb1512be1cd1142d38c010668a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e88bc45995574dcde29427773e3e8d9bec62ed96
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108297"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826215"
 ---
 # <a name="sp_datatype_info-transact-sql"></a>sp_datatype_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 `[ @ODBCVer = ] odbc_version`Versione di ODBC utilizzata. *odbc_version* è di **tinyint**e il valore predefinito è 2.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- nessuno  
+ Nessuno  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -72,14 +72,14 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |INTERVAL_PRECISION|**smallint**|Valore della precisione principale dell'intervallo se *data_type* è l' **intervallo**; in caso contrario, NULL.|  
 |USERTYPE|**smallint**|valore **UserType** dalla tabella systypes.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  sp_datatype_info è equivalente a SQLGetTypeInfo in ODBC. I risultati restituiti vengono ordinati in base a DATA_TYPE e quindi in base alla precisione del mapping del tipo di dati al tipo di dati SQL ODBC corrispondente.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo public.  
   
-## <a name="examples"></a>Esempi  
- Nell'esempio seguente vengono recuperate informazioni per i tipi di dati **sysname** e **nvarchar** specificando il `-9`valore *data_type* di.  
+## <a name="examples"></a>Esempio  
+ Nell'esempio seguente vengono recuperate informazioni per i tipi di dati **sysname** e **nvarchar** specificando il valore *data_type* di `-9` .  
   
 ```  
 USE master;  

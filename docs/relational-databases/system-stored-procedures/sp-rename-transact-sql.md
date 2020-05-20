@@ -18,20 +18,20 @@ helpviewer_keywords:
 - sp_rename
 - renaming tables
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92ef8c4583db152b2f81a574010a12030680704f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac92f07acb7e7322adcf00e09774f72e93e39963
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983073"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826571"
 ---
 # <a name="sp_rename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Consente di modificare il nome di un oggetto creato dall'utente nel database corrente. Questo oggetto può essere una tabella, un indice, una colonna, un tipo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] dati alias o un tipo definito dall'utente Common Language Runtime (CLR).  
+  Consente di modificare il nome di un oggetto creato dall'utente nel database corrente. Questo oggetto può essere una tabella, un indice, una colonna, un tipo di dati alias o un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] tipo definito dall'utente Common Language Runtime (CLR).  
   
 > [!CAUTION]  
 >  La modifica di una parte del nome di un oggetto potrebbe compromettere il funzionamento di script e stored procedure. È consigliabile evitare di utilizzare questa istruzione per rinominare stored procedure, trigger, funzioni definite dall'utente o viste. In alternativa, eliminare l'oggetto e ricrearlo con il nuovo nome.  
@@ -47,21 +47,21 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @objname = ] '*object_name*'  
+ [ @objname =]'*object_name*'  
  Nome corrente completo o non qualificato dell'oggetto utente o del tipo di dati. Se l'oggetto da rinominare è una colonna in una tabella, *object_name* deve essere nel formato *Table. Column* o *schema. Table. Column*. Se l'oggetto da rinominare è un indice, *object_name* deve essere nel formato *Table. index* o *schema. Table. index*. Se l'oggetto da rinominare è un vincolo, *object_name* deve essere nel formato *schema. vincolo*.  
   
  Le virgolette sono necessarie solo se viene specificato un nome di oggetto completo. Nel caso di un nome completo, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. *object_name* è di **tipo nvarchar (776)** e non prevede alcun valore predefinito.  
   
- [ @newname = ] '*new_name*'  
+ [ @newname =]'*new_name*'  
  Nuovo nome dell'oggetto specificato. *new_name* deve essere un nome costituito da una parte e deve rispettare le regole per gli identificatori. *newname* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 > [!NOTE]  
 >  I nomi di trigger non possono iniziare con # o ##.  
   
- [ @objtype = ] '*object_type*'  
+ [ @objtype =]'*object_type*'  
  Tipo dell'oggetto da rinominare. *object_type* è di tipo **varchar (13)** e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |COLUMN|Colonna da rinominare.|  
 |DATABASE|Database definito dall'utente. Quando si rinomina un database è necessario specificare questo tipo di oggetto.|  
@@ -73,7 +73,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (esito positivo) o un numero diverso da zero (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  È possibile modificare il nome di un oggetto o un tipo di dati solo nel database corrente. I nomi della maggior parte dei tipi di dati e degli oggetti di sistema non sono modificabili.  
   
  La stored procedure sp_rename rinomina automaticamente l'indice associato ogni volta che viene rinominato un vincolo PRIMARY KEY o UNIQUE. Se un indice rinominato è associato a un vincolo PRIMARY KEY, quando si esegue sp_rename viene rinominato automaticamente anche il vincolo PRIMARY KEY.  
@@ -100,7 +100,7 @@ GO
 ```  
   
 ### <a name="b-renaming-a-column"></a>B. Ridenominazione di una colonna  
- Nell'esempio seguente la `TerritoryID` colonna della `SalesTerritory` tabella viene rinominata in `TerrID`.  
+ Nell'esempio seguente la colonna della tabella viene rinominata in `TerritoryID` `SalesTerritory` `TerrID` .  
   
 ```  
 USE AdventureWorks2012;  

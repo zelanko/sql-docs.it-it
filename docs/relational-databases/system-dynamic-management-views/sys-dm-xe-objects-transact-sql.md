@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sys.dm_xe_objects dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 023ee54178c5f303797c6db83cc646353304b051
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 80170f22636b9542524f8ce97b6fe8a5e595953c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090270"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827844"
 ---
 # <a name="sysdm_xe_objects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68090270"
  |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(60)**|Nome dell'oggetto . il nome è univoco all'interno di un pacchetto per un tipo di oggetto specifico. Non ammette i valori Null.|  
-|object_type|**nvarchar(60)**|Tipo dell'oggetto. object_type è uno dei seguenti:<br /><br /> event<br /><br /> action<br /><br /> target<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> Non ammette i valori Null.|  
+|object_type|**nvarchar(60)**|Tipo dell'oggetto. object_type è uno dei seguenti:<br /><br /> event<br /><br /> action<br /><br /> target<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> tipo<br /><br /> Non ammette i valori Null.|  
 |package_guid|**uniqueidentifier**|GUID del pacchetto che espone questa azione. C'è una relazione molti-a-uno con sys.dm_xe_packages.package_id. Non ammette i valori Null.|  
 |description|**nvarchar(256)**|Descrizione dell'azione. la descrizione viene impostata dall'autore del pacchetto. Non ammette i valori Null.|  
 |capabilities|**int**|Bitmap che descrive le funzionalità dell'oggetto. Ammette i valori Null.|  

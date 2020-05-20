@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector view
 - syscollector_collection_sets view
 ms.assetid: db0def92-f25b-45da-9709-eab972b33800
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a001a6a2da2532ac6d0e2a00079c8bd7c7036b66
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e258fbd2e0d7a9d15e3c8aa9c2ec3e7bcc7ddc0c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060378"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824941"
 ---
 # <a name="syscollector_collection_sets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +46,13 @@ ms.locfileid: "68060378"
 |logging_level|**smallint**|Specifica il livello di registrazione (0, 1 o 2). Non ammette i valori Null.|  
 |days_until_expiration|**smallint**|Numero di giorni durante i quali i dati raccolti vengono salvati nel data warehouse di gestione. Non ammette i valori Null.|  
 |description|**nvarchar(4000)**|Descrive il set di raccolta. Ammette i valori Null.|  
-|dump_on_any_error|**bit**|Attivato (1) o disattivato (0) per indicare se creare un [!INCLUDE[ssIS](../../includes/ssis-md.md)] file di dump in caso di errore. Non ammette i valori Null.|  
+|dump_on_any_error|**bit**|Attivato (1) o disattivato (0) per indicare se creare un file di [!INCLUDE[ssIS](../../includes/ssis-md.md)] dump in caso di errore. Non ammette i valori Null.|  
 |dump_on_codes|**nvarchar(max)**|Contiene l'elenco dei [!INCLUDE[ssIS](../../includes/ssis-md.md)] codici di errore utilizzati per attivare il file dump. Ammette i valori Null.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede SELECT per dc_operator, dc_proxy.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  L'API dell'agente di raccolta dati consente di modificare o eliminare solo i set di raccolta da essi creati. I set di raccolta forniti con il sistema non possono essere modificati o eliminati. Tuttavia, è possibile abilitare o disabilitare un set di raccolta del sistema e modificare la configurazione.  
   
 ## <a name="see-also"></a>Vedere anche  

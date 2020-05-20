@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - spatial indexes [SQL Server], stored procedures
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 82b906be4568b15a18c55247532bf35b6cd939a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: be45e7dd794ab7e03ffc70eb9b73109411fd3a02
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69028902"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827455"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Stored procedure per l'indice spaziale-argomenti e proprietà
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "69028902"
   
 -   [sp_help_spatial_geography_index_xml &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
-## <a name="arguments"></a>Argomenti  
+## <a name="arguments"></a>Arguments  
 `[ @tabname = ] 'tabname'`Nome completo o non qualificato della tabella per la quale è stato specificato l'indice spaziale.  
   
  Le virgolette sono necessarie solo se viene specificata una tabella qualificata. Nel caso di un nome completo, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. *TabName* è di **tipo nvarchar**(776) e non prevede alcun valore predefinito.  
@@ -59,7 +59,7 @@ ms.locfileid: "69028902"
 `[ @xml_output = ] 'xml_output'`Parametro di output che restituisce il set di risultati in un frammento XML. *xml_output* è di **XML** e non prevede alcun valore predefinito.  
   
 ## <a name="properties"></a>Proprietà  
- Impostare ** \@verboseoutput** = 0 per restituire le proprietà principali, come illustrato nella tabella seguente. verboseoutput > 0 per restituire tutte le proprietà dell'indice spaziale. ** \@**  
+ Impostare ** \@ verboseoutput** = 0 per restituire le proprietà principali, come illustrato nella tabella seguente. ** \@ verboseoutput** > 0 per restituire tutte le proprietà dell'indice spaziale.  
   
  **Base_Table_Rows**  
  Numero di righe nella tabella di base. Il valore è **bigint**.  
@@ -300,10 +300,10 @@ ms.locfileid: "69028902"
 ## <a name="permissions"></a>Autorizzazioni  
  L'utente deve essere un membro del ruolo **public** . È necessario disporre dell'autorizzazione READ ACCESS per il server e l'oggetto. Queste condizioni si applicano a tutte le stored procedure relative agli indici spaziali.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Le proprietà che contengono valori NULL non sono incluse nel set restituito.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Per gli esempi, vedere gli argomenti seguenti:  
   
 -   [sp_help_spatial_geometry_index &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  

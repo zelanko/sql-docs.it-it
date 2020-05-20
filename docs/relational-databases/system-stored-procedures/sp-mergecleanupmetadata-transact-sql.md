@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergecleanupmetadata
 ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0196993f863d973e14834f7eb3b93b797a825ac4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c2691bb443da95ee04e49dcccf7e9888805ea573
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72907330"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828353"
 ---
 # <a name="sp_mergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Deve essere utilizzato solo nelle topologie di replica che includono server che eseguono [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versioni di [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] precedenti al Service Pack 1. **sp_mergecleanupmetadata** consente agli amministratori di eliminare i metadati nelle tabelle di sistema **MSmerge_genhistory**, **MSmerge_contents** e **MSmerge_tombstone** . Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
+  Deve essere utilizzato solo nelle topologie di replica che includono server che eseguono versioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti al [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1.** sp_mergecleanupmetadata** consente agli amministratori di eliminare i metadati nelle tabelle di sistema **MSmerge_genhistory**, **MSmerge_contents** e **MSmerge_tombstone** . Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,27 +38,27 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **%** **tipo sysname**e il valore predefinito è, che consente di pulire i metadati per tutte le pubblicazioni. Se viene specificata in modo esplicito, la pubblicazione deve essere esistente.  
+`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è **%** , che consente di pulire i metadati per tutte le pubblicazioni. Se viene specificata in modo esplicito, la pubblicazione deve essere esistente.  
   
 `[ @reinitialize_subscriber = ] 'subscriber'`Specifica se reinizializzare il Sottoscrittore. *Subscriber* è **di tipo nvarchar (5)**. può essere **true** o **false**e il valore predefinito è **true**. Se **true**, le sottoscrizioni vengono contrassegnate per la reinizializzazione. Se **false**, le sottoscrizioni non vengono contrassegnate per la reinizializzazione.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
- **sp_mergecleanupmetadata** deve essere utilizzato solo nelle topologie di replica che includono server che eseguono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versioni di [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] precedenti al Service Pack 1. Per le topologie in cui è incluso solo [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 o versioni successive, è consigliabile utilizzare la pulizia dei metadati basata sulla memorizzazione automatica. Quando si esegue questa stored procedure, è importante tenere presente che le dimensioni del file di log nel computer di esecuzione sono destinate ad aumentare, a volte in modo consistente.  
+## <a name="remarks"></a>Commenti  
+ **sp_mergecleanupmetadata** deve essere utilizzato solo nelle topologie di replica che includono server che eseguono versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti al [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1. Per le topologie in cui è incluso solo [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 o versioni successive, è consigliabile utilizzare la pulizia dei metadati basata sulla memorizzazione automatica. Quando si esegue questa stored procedure, è importante tenere presente che le dimensioni del file di log nel computer di esecuzione sono destinate ad aumentare, a volte in modo consistente.  
   
 > [!CAUTION]
 >  Dopo l'esecuzione di **sp_mergecleanupmetadata** , per impostazione predefinita tutte le sottoscrizioni dei sottoscrittori di pubblicazioni che contengono metadati archiviati in **MSmerge_genhistory**, **MSmerge_contents** e **MSmerge_tombstone** vengono contrassegnate per la reinizializzazione, tutte le modifiche in sospeso nel Sottoscrittore vengono perse e lo snapshot corrente è contrassegnato come obsoleto.  
 > 
 > [!NOTE]
->  Se in un database sono presenti più pubblicazioni e una di queste pubblicazioni utilizza un periodo di memorizzazione infinito (**\@conservazione**=**0**), l'esecuzione di **sp_mergecleanupmetadata** non esegue la pulizia dei metadati del rilevamento delle modifiche della replica di tipo merge per il database. È pertanto opportuno utilizzare il periodo di memorizzazione infinito con cautela.  
+>  Se in un database sono presenti più pubblicazioni e una di queste pubblicazioni utilizza un periodo di memorizzazione infinito (** \@ conservazione** = **0**), l'esecuzione di **sp_mergecleanupmetadata** non esegue la pulizia dei metadati del rilevamento delle modifiche della replica di tipo merge per il database. È pertanto opportuno utilizzare il periodo di memorizzazione infinito con cautela.  
   
- Quando si esegue questa stored procedure, è possibile scegliere se reinizializzare i Sottoscrittori impostando il ** \@parametro reinitialize_subscriber** su **true** (impostazione predefinita) o **false**. Se **sp_mergecleanupmetadata** viene eseguita con il ** \@parametro reinitialize_subscriber** impostato su **true**, uno snapshot viene riapplicato nel Sottoscrittore anche se la sottoscrizione è stata creata senza uno snapshot iniziale, ad esempio se lo schema e i dati dello snapshot sono stati applicati manualmente o sono già presenti nel Sottoscrittore. L'impostazione del parametro su **false** deve essere utilizzata con cautela, perché se la pubblicazione non viene reinizializzata, è necessario assicurarsi che i dati nel server di pubblicazione e nel Sottoscrittore siano sincronizzati.  
+ Quando si esegue questa stored procedure, è possibile scegliere se reinizializzare i Sottoscrittori impostando il parametro ** \@ Reinitialize_subscriber** su **true** (impostazione predefinita) o **false**. Se **sp_mergecleanupmetadata** viene eseguita con il parametro ** \@ reinitialize_subscriber** impostato su **true**, uno snapshot viene riapplicato nel Sottoscrittore anche se la sottoscrizione è stata creata senza uno snapshot iniziale, ad esempio se lo schema e i dati dello snapshot sono stati applicati manualmente o sono già presenti nel Sottoscrittore. L'impostazione del parametro su **false** deve essere utilizzata con cautela, perché se la pubblicazione non viene reinizializzata, è necessario assicurarsi che i dati nel server di pubblicazione e nel Sottoscrittore siano sincronizzati.  
   
- Indipendentemente dal valore di ** \@reinitialize_subscriber**, **sp_mergecleanupmetadata** ha esito negativo se sono presenti processi di merge in corso che tentano di caricare le modifiche in un server di pubblicazione o in un Sottoscrittore di ripubblicazione nel momento in cui viene richiamato il stored procedure.  
+ Indipendentemente dal valore di ** \@ reinitialize_subscriber**, **sp_mergecleanupmetadata** ha esito negativo se sono presenti processi di merge in corso che tentano di caricare le modifiche in un server di pubblicazione o in un Sottoscrittore di ripubblicazione nel momento in cui viene richiamato il stored procedure.  
   
- **Esecuzione di sp_mergecleanupmetadata con \@REINITIALIZE_SUBSCRIBER = true:**  
+ **Esecuzione di sp_mergecleanupmetadata con \@ reinitialize_subscriber = true:**  
   
 1.  È consigliabile, ma non richiesto, arrestare tutti gli aggiornamenti nei database di pubblicazione e sottoscrizione. Se l'esecuzione degli aggiornamenti continua, gli aggiornamenti effettuati in un Sottoscrizione dall'ultimo processo di tipo merge andranno perduti quando la pubblicazione viene reinizializzata. Viene tuttavia conservata la convergenza dei dati.  
   
@@ -74,7 +74,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 7.  Eseguire il backup del database di pubblicazione. Se non si esegue questa operazione, dopo il ripristino del database di pubblicazione può verificarsi un errore del processo di merge.  
   
- **Esecuzione di sp_mergecleanupmetadata con \@REINITIALIZE_SUBSCRIBER = false:**  
+ **Esecuzione di sp_mergecleanupmetadata con \@ reinitialize_subscriber = FALSE:**  
   
 1.  Arrestare **tutti** gli aggiornamenti ai database di pubblicazione e sottoscrizione.  
   

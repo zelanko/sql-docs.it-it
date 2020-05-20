@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_publication_validation
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bdfe70e3df86f792d250cd7abcc3ef3013e9df19
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4fd1c7bf329334bee0d8b3c29ba5d1d97909818e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056228"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826008"
 ---
 # <a name="sp_publication_validation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,15 +45,15 @@ sp_publication_validation [ @publication = ] 'publication'
   
 `[ @rowcount_only = ] 'rowcount_only'`Indica se restituire solo il conteggio delle righe per la tabella. *rowcount_only* è di **smallint** . i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|Esegue un checksum compatibile con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.<br /><br /> Nota: quando un articolo viene filtrato orizzontalmente, viene eseguita un'operazione di conteggio delle righe anziché un'operazione di checksum.|  
 |**1** (impostazione predefinita)|Esegue solo la convalida mediante conteggio delle righe.|  
-|**2**|Esegue la convalida mediante conteggio delle righe e checksum binario.<br /><br /> Nota: per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i sottoscrittori della versione 7,0, viene eseguita solo una convalida tramite conteggio delle righe.|  
+|**2**|Esegue la convalida mediante conteggio delle righe e checksum binario.<br /><br /> Nota: per i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori della versione 7,0, viene eseguita solo una convalida tramite conteggio delle righe.|  
   
 `[ @full_or_fast = ] 'full_or_fast'`Metodo utilizzato per calcolare il conteggio delle righe. *full_or_fast* è di **tinyint** . i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|Esegue un conteggio completo con COUNT(*).|  
 |**1**|Esegue un conteggio rapido da **sysindexes. Rows**. Il conteggio delle righe in [sys. sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) è molto più rapido rispetto al conteggio delle righe nella tabella effettiva. Tuttavia, poiché [sys. sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) viene aggiornato in modo differito, il conteggio delle righe potrebbe non essere accurato.|  
@@ -61,15 +61,15 @@ sp_publication_validation [ @publication = ] 'publication'
   
 `[ @shutdown_agent = ] 'shutdown_agent'`Indica se il agente di distribuzione deve essere arrestato immediatamente dopo il completamento della convalida. *shutdown_agent* è di **bit**e il valore predefinito è **0**. Se è **0**, l'agente di replica non viene arrestato. Se è **1**, l'agente di replica si arresta dopo la convalida dell'ultimo articolo.  
   
-`[ @publisher = ] 'publisher'`Specifica un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publisher = ] 'publisher'`Specifica un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
->  il *server di pubblicazione* non deve essere utilizzato quando viene richiesta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la convalida in un server di pubblicazione.  
+>  il *server di pubblicazione* non deve essere utilizzato quando viene richiesta la convalida in un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_publication_validation** viene utilizzata nella replica transazionale.  
   
  **sp_publication_validation** possibile chiamare in qualsiasi momento dopo l'attivazione degli articoli associati alla pubblicazione. Questa procedura può essere eseguita in modo manuale una sola volta oppure nell'ambito di un processo con pianificazione periodica per la convalida dei dati.  

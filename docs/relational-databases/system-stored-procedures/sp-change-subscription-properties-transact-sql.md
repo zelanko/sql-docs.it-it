@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_change_subscription_properties
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e033e446fc771ad87542474edb1e90caf08faebd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 511276581464f366214bfd9bdd8543e3fb339ab8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81528787"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828455"
 ---
 # <a name="sp_change_subscription_properties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
 `[ @publication_type = ] publication_type`Specifica il tipo di replica della pubblicazione. *publication_type* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Tipo di pubblicazione|  
+|Valore|Tipo di pubblicazione|  
 |-----------|----------------------|  
 |**0**|Transazionale|  
 |**1**|Snapshot|  
@@ -63,7 +63,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
  Nella tabella seguente vengono descritte le proprietà degli articoli e i valori corrispondenti.  
   
-|Proprietà|valore|Descrizione|  
+|Proprietà|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Specifica la posizione della cartella alternativa per lo snapshot. Se il valore è NULL, i file di snapshot vengono prelevati dalla posizione predefinita specificata dal server di pubblicazione.|  
 |**distrib_job_login**||Account di accesso per l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows utilizzato per l'esecuzione dell'agente.|  
@@ -102,7 +102,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_change_subscription_properties** viene utilizzato in tutti i tipi di replica.  
   
  **sp_change_subscription_properties** viene utilizzata per le sottoscrizioni pull.  

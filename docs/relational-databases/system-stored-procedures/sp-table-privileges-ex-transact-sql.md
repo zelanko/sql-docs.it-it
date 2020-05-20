@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_table_privileges_ex
 ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b40f7233bb3c50203a68c0b01cfcbdaf631e0098
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ab1630f6dd172410d26f48d0485b23d257c6d408
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096174"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825995"
 ---
 # <a name="sp_table_privileges_ex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 `[ @fUsePattern = ] 'fUsePattern'`Determina se i caratteri ' _', '%',' [' è]' sono interpretati come caratteri jolly. I valori validi sono 0 (utilizzo dei criteri di ricerca disattivato) e 1 (utilizzo dei criteri di ricerca attivato). *fUsePattern* è di **bit**e il valore predefinito è 1.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- nessuno  
+ Nessuno  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -63,18 +63,18 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 |**TABLE_CAT**|**sysname**|Nome del qualificatore della tabella. Vari prodotti DBMS supportano la denominazione in tre parti per le tabelle (_qualificatore_**.** _proprietario_**.** _nome_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella. Questo campo può essere NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nome del proprietario della tabella. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome dell'utente del database che ha creato la tabella. Questo campo restituisce sempre un valore.|  
 |**TABLE_NAME**|**sysname**|Nome della tabella. Questo campo restituisce sempre un valore.|  
-|**GRANTOR**|**sysname**|Nome utente del database che ha concesso le autorizzazioni per questo **table_name** all' **utente autorizzato**specificato. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa colonna è sempre identica alla **TABLE_OWNER**. Questo campo restituisce sempre un valore. Inoltre, è possibile che la colonna di concessione sia il proprietario del database (**TABLE_OWNER**) o un utente a cui il proprietario del database ha concesso l'autorizzazione utilizzando la clausola WITH GRANT OPTION dell'istruzione Grant.|  
+|**GRANTOR**|**sysname**|Nome utente del database che ha concesso le autorizzazioni per questo **table_name** all' **utente autorizzato**specificato. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , questa colonna è sempre identica alla **TABLE_OWNER**. Questo campo restituisce sempre un valore. Inoltre, è possibile che la colonna di concessione sia il proprietario del database (**TABLE_OWNER**) o un utente a cui il proprietario del database ha concesso l'autorizzazione utilizzando la clausola WITH GRANT OPTION dell'istruzione Grant.|  
 |**GRANTEE**|**sysname**|Nome utente del database a cui sono state concesse le autorizzazioni per questo **table_name** dall' **utente autorizzato**indicato. Questo campo restituisce sempre un valore.|  
 |**PRIVILEGE**|**varchar (** 32 **)**|Una delle autorizzazioni di tabella disponibili. I possibili valori delle autorizzazioni di tabella sono i seguenti. È inoltre possibile utilizzare altri valori supportati dall'origine dei dati al momento della definizione dell'implementazione.<br /><br /> SELECT = l' **utente GRANTEE** può recuperare i dati per una o più colonne.<br /><br /> INSERT = l' **utente GRANTEE** può fornire dati per le nuove righe di una o più colonne.<br /><br /> UPDATE = l' **utente GRANTEE** può modificare i dati esistenti per una o più colonne.<br /><br /> DELETE = l' **utente GRANTEE** può rimuovere righe dalla tabella.<br /><br /> REFERENCEs = l' **utente GRANTEE** può fare riferimento a una colonna di una tabella esterna in una relazione di chiave primaria/chiave esterna. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le relazioni tra chiave primaria e chiave esterna vengono definite tramite l'utilizzo di vincoli di tabella.<br /><br /> L'ambito di azione fornito all' **utente autorizzato** da un privilegio di tabella specifico dipende dall'origine dati. Ad esempio, l'autorizzazione UPDATE potrebbe consentire all' **utente autorizzato** di aggiornare tutte le colonne di una tabella in un'origine dati e solo le colonne per le quali l' **utente autorizzato** dispone dell'autorizzazione Update per un'altra origine dati.|  
 |**IS_GRANTABLE**|**varchar (** 3 **)**|Indica se l' **utente autorizzato** è autorizzato a concedere autorizzazioni ad altri utenti. Questa autorizzazione spesso viene denominata "autorizzazione per la concessione di autorizzazioni". I possibili valori sono YES, NO e NULL. Il valore sconosciuto, o NULL, indica un'origine dei dati per la quale l'autorizzazione per la concessione di autorizzazioni non è applicabile.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  I risultati restituiti vengono ordinati in base **TABLE_QUALIFIER**, **TABLE_OWNER**, **table_name**e **Privilege**.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione SELECT per lo schema.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituite informazioni sui privilegi per le tabelle il cui nome inizia con `Product` incluse nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] disponibile nel server collegato `Seattle1`. ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si presuppone come server collegato).  
   
 ```  

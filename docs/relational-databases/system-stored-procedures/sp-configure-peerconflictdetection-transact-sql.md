@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_configure_peerconflictdetection
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8a8cc9930ddf85dea60999e3b63dbcebaaf42d8f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a332257b640124c04ed339ff11473b89a7c3b83b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68215948"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828435"
 ---
 # <a name="sp_configure_peerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,41 +44,41 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @publication=] '*Publication*'  
+ [ @publication =]'*pubblicazione*'  
  Nome della pubblicazione per cui si desidera configurare il rilevamento dei conflitti. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
- [ @action= ] '*azione*'  
+ [ @action =]'*azione*'  
  Specifica se abilitare o disabilitare il rilevamento dei conflitti per una pubblicazione. *Action* è di **tipo nvarchar (5)**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
-|**Abilita**|Abilita il rilevamento dei conflitti per una pubblicazione.|  
-|**disabilitare**|Disabilita il rilevamento dei conflitti per una pubblicazione.|  
+|**enable**|Abilita il rilevamento dei conflitti per una pubblicazione.|  
+|**disable**|Disabilita il rilevamento dei conflitti per una pubblicazione.|  
 |NULL (predefinito)||  
   
- [ @originator_id= ] *originator_id*  
+ [ @originator_id =] *originator_id*  
  Specifica un ID per un nodo in una topologia peer-to-peer. *originator_id* è di **tipo int**e il valore predefinito è null. Questo ID viene utilizzato per il rilevamento dei conflitti se l' *azione* è impostata su **Abilita**. Specificare un ID positivo diverso da zero che non sia mai stato utilizzato nella topologia. Per un elenco degli ID che sono già stati utilizzati, eseguire una query sulla tabella di sistema [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) .  
   
- [ @conflict_retention= ] *conflict_retention*  
+ [ @conflict_retention =] *conflict_retention*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @continue_onconflict= ] '*continue_onconflict*']  
+ [ @continue_onconflict =]'*continue_onconflict*']  
  Determina se l'agente di distribuzione continua a elaborare le modifiche dopo che è stato rilevato un conflitto. *continue_onconflict* è di **tipo nvarchar (5)** e il valore predefinito è false.  
   
 > [!CAUTION]  
 >  È consigliabile utilizzare il valore predefinito FALSE. Quando questa opzione è impostata su TRUE, l'agente di distribuzione tenta di garantire la convergenza dei dati nella topologia applicando la riga in conflitto dal nodo con ID di origine maggiore. Questo metodo non garantisce la convergenza. Dopo il rilevamento di un conflitto, è necessario assicurarsi che la topologia sia coerente. Per ulteriori informazioni, vedere la sezione relativa alla gestione dei conflitti in [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
- [ @local= ] '*local*'  
+ [ @local =]'*local*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @timeout= ] *timeout*  
+ [ @timeout =] *timeout*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
- sp_configure_peerconflictdetection è utilizzato nella replica transazionale peer-to-peer. Per usare il rilevamento dei conflitti, tutti i nodi [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] devono eseguire o versioni successive. e il rilevamento deve essere abilitato per tutti i nodi.  
+## <a name="remarks"></a>Commenti  
+ sp_configure_peerconflictdetection è utilizzato nella replica transazionale peer-to-peer. Per usare il rilevamento dei conflitti, tutti i nodi devono eseguire [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versioni successive e il rilevamento deve essere abilitato per tutti i nodi.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server sysadmin o al ruolo predefinito del database db_owner.  

@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobsteplog
 ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e3af6ff05b971e6b9a0dedc1ec2e14f4ba87e00c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 522672192ab955ced5987184ed2f6ea2812a431a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090037"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827555"
 ---
 # <a name="sp_help_jobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce i metadati relativi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un log del passaggio del processo di Agent specifico. **sp_help_jobsteplog** non restituisce il log effettivo.  
+  Restituisce i metadati relativi a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log del passaggio del processo di Agent specifico. **sp_help_jobsteplog** non restituisce il log effettivo.  
 
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -70,7 +70,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**log_size**|**float**|Dimensioni in megabyte (MB) del log dei passaggi del processo.|  
 |**log**|**nvarchar(max)**|Output del log dei passaggi del processo.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_help_jobsteplog** si trova nel database **msdb** .  
   
 ## <a name="permissions"></a>Autorizzazioni  

@@ -16,21 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_appdomains dynamic management dynamic management view
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3ebcda61d95cc5131048ab32701d9d68228646ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d374b244b265d6bc46ca9e6073f9a688fcd2b4a5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68138407"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824763"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce una riga per ogni dominio dell'applicazione nel server. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Il [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] dominio applicazione (**AppDomain**) è un costrutto nella Common Language Runtime (CLR) che rappresenta l'unità di isolamento per un'applicazione. È possibile utilizzare questa visualizzazione per comprendere e risolvere i problemi relativi agli oggetti di integrazione CLR [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in esecuzione in.  
+  Restituisce una riga per ogni dominio dell'applicazione nel server. Il dominio applicazione (**AppDomain**) è un costrutto nella [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) che rappresenta l'unità di isolamento per un'applicazione. È possibile utilizzare questa visualizzazione per comprendere e risolvere i problemi relativi agli oggetti di integrazione CLR in esecuzione in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Esistono diversi tipi di oggetti di database gestito dell'integrazione con CLR. Per informazioni generali su questi oggetti, vedere [compilazione di oggetti di database con l'integrazione con Common Language Runtime (CLR)](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md). Ogni volta che questi oggetti vengono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eseguiti, crea un **AppDomain** in cui è possibile caricare ed eseguire il codice richiesto. Il livello di isolamento per un **AppDomain** è un **AppDomain** per database per proprietario. Ovvero, tutti gli oggetti CLR di proprietà di un utente vengono sempre eseguiti nello stesso **AppDomain** per database (se un utente registra oggetti di database CLR in database diversi, gli oggetti di database CLR verranno eseguiti in domini applicazione diversi). Un **AppDomain** non viene eliminato definitivamente al termine dell'esecuzione del codice. ma viene memorizzato nella cache per le future esecuzioni. In questo modo le prestazioni risultano migliorate.  
+ Esistono diversi tipi di oggetti di database gestito dell'integrazione con CLR. Per informazioni generali su questi oggetti, vedere [compilazione di oggetti di database con l'integrazione con Common Language Runtime (CLR)](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md). Ogni volta che questi oggetti vengono eseguiti, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Crea un **AppDomain** in cui è possibile caricare ed eseguire il codice richiesto. Il livello di isolamento per un **AppDomain** è un **AppDomain** per database per proprietario. Ovvero, tutti gli oggetti CLR di proprietà di un utente vengono sempre eseguiti nello stesso **AppDomain** per database (se un utente registra oggetti di database CLR in database diversi, gli oggetti di database CLR verranno eseguiti in domini applicazione diversi). Un **AppDomain** non viene eliminato definitivamente al termine dell'esecuzione del codice. ma viene memorizzato nella cache per le future esecuzioni. In questo modo le prestazioni risultano migliorate.  
   
  Per ulteriori informazioni, vedere [domini applicazione](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
@@ -38,20 +38,20 @@ ms.locfileid: "68138407"
 |-----------------|---------------|-----------------|  
 |**appdomain_address**|**varbinary (8)**|Indirizzo del **dominio applicazione**. Tutti gli oggetti di database gestiti di proprietà di un utente vengono sempre caricati nello stesso **AppDomain**. È possibile utilizzare questa colonna per cercare tutti gli assembly attualmente caricati in questo **AppDomain** in **sys. dm_clr_loaded_assemblies**.|  
 |**appdomain_id**|**int**|ID del **dominio AppDomain**. Ogni **AppDomain** ha un ID univoco.|  
-|**appdomain_name**|**varchar (386)**|Nome dell' **AppDomain** assegnato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**appdomain_name**|**varchar (386)**|Nome dell' **AppDomain** assegnato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**creation_time**|**datetime**|Ora di creazione dell' **AppDomain** . Poiché gli **AppDomain** vengono memorizzati nella cache e riutilizzati per migliorare le prestazioni, **creation_time** non è necessariamente il momento in cui il codice è stato eseguito.|  
 |**db_id**|**int**|ID del database in cui è stato creato l' **AppDomain** . Il codice archiviato in due database diversi non può condividere un **AppDomain**.|  
 |**user_id**|**int**|ID dell'utente i cui oggetti possono essere eseguiti in questo **AppDomain**.|  
 |**state**|**nvarchar(128)**|Descrittore per lo stato corrente del **dominio AppDomain**. Un AppDomain può trovarsi in stati diversi dalla creazione all'eliminazione. Per ulteriori informazioni, vedere la sezione Osservazioni di questo argomento.|  
 |**strong_refcount**|**int**|Numero di riferimenti sicuri a questo **AppDomain**. Riflette il numero di batch attualmente in esecuzione che utilizzano questo **AppDomain**. Si noti che l'esecuzione di questa visualizzazione creerà un **refcount sicuro**; anche se non è attualmente in esecuzione codice, **strong_refcount** avrà un valore pari a 1.|  
-|**weak_refcount**|**int**|Numero di riferimenti deboli a questo **AppDomain**. Indica il numero di oggetti all'interno dell' **AppDomain** memorizzati nella cache. Quando si esegue un oggetto di database gestito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , lo memorizza nella cache all'interno dell' **AppDomain** per un riutilizzo futuro. In questo modo le prestazioni risultano migliorate.|  
+|**weak_refcount**|**int**|Numero di riferimenti deboli a questo **AppDomain**. Indica il numero di oggetti all'interno dell' **AppDomain** memorizzati nella cache. Quando si esegue un oggetto di database gestito, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo memorizza nella cache all'interno dell' **AppDomain** per un riutilizzo futuro. In questo modo le prestazioni risultano migliorate.|  
 |**cost**|**int**|Costo del **dominio AppDomain**. Maggiore è il costo, più è probabile che questo **AppDomain** debba essere scaricato con un numero eccessivo di richieste di memoria. Il costo dipende in genere dalla quantità di memoria necessaria per ricreare questo **AppDomain**.|  
 |**value**|**int**|Valore del **dominio AppDomain**. Più basso è il valore, più è probabile che questo **AppDomain** debba essere scaricato sotto pressione di memoria. Il valore dipende in genere dal numero di connessioni o batch che utilizzano questo **AppDomain**.|  
 |**total_processor_time_ms**|**bigint**|Tempo totale del processore, in millisecondi, utilizzato da tutti i thread durante l'esecuzione nel dominio dell'applicazione corrente dall'avvio del processo. Equivale a **System. AppDomain. MonitoringTotalProcessorTime**.|  
 |**total_allocated_memory_kb**|**bigint**|Dimensioni totali, in kilobyte, di tutte le allocazioni di memoria eseguite dal dominio dell'applicazione dalla sua creazione, senza sottrarre la memoria raccolta. Equivale a **System. AppDomain. MonitoringTotalAllocatedMemorySize**.|  
 |**survived_memory_kb**|**bigint**|Numero di kilobyte rimanenti dall'ultima raccolta di blocco completa e a cui fa riferimento il dominio dell'applicazione corrente. Equivale a **System. AppDomain. MonitoringSurvivedMemorySize**.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Esiste una relazione uno-a-uno tra **dm_clr_appdomains. appdomain_address** e **dm_clr_loaded_assemblies. appdomain_address**.  
   
  Le tabelle seguenti elencano i valori di **stato** possibili, le relative descrizioni e quando si verificano nel ciclo di vita dell' **AppDomain** . È possibile usare queste informazioni per seguire la vita di un **AppDomain** e per controllare lo scaricamento di istanze di **AppDomain** sospette o ripetitive, senza dover analizzare il registro eventi di Windows.  
@@ -76,14 +76,14 @@ ms.locfileid: "68138407"
 |-----------|-----------------|  
 |E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ha richiesto che CLR scarichi l' **AppDomain**, in genere perché l'assembly che contiene gli oggetti di database gestiti è stato modificato o eliminato.|  
 |E_APPDOMAIN_UNLOADED|CLR ha scaricato l' **AppDomain**. Questo è in genere il risultato di una procedura di escalation dovuta a **ThreadAbort**, **OutOfMemory**o a un'eccezione non gestita nel codice utente.|  
-|E_APPDOMAIN_ENQUEUE_DESTROY|**AppDomain** è stato scaricato in CLR e impostato per essere eliminato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|E_APPDOMAIN_DESTROY|È in corso l'eliminazione del **AppDomain** da parte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|E_APPDOMAIN_ZOMBIE|**AppDomain** eliminato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; Tuttavia, non tutti i riferimenti a **AppDomain** sono stati eliminati.|  
+|E_APPDOMAIN_ENQUEUE_DESTROY|**AppDomain** è stato scaricato in CLR e impostato per essere eliminato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|E_APPDOMAIN_DESTROY|È in corso l'eliminazione del **AppDomain** da parte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|E_APPDOMAIN_ZOMBIE|**AppDomain** eliminato da. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tuttavia, non tutti i riferimenti a **AppDomain** sono stati eliminati.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE nel database.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene illustrato come visualizzare i dettagli di un **AppDomain** per un determinato assembly:  
   
 ```  

@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - PolyBase
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: ba22ffe282e6b4248ed58bed850bc6ac08255df5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: aa3b52dbc2f08e9cb504263afeb672956e4972d2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278117"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826372"
 ---
 # <a name="sp_polybase_join_group-transact-sql"></a>sp_polybase_join_group (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,14 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- head_node_address = n'*head_node_address*' * \@*  
- Nome del computer che ospita il SQL Server nodo head del gruppo con scalabilità orizzontale di base. head_node_address è di tipo nvarchar (255). * \@*  
+ * \@ head_node_address* = n'*head_node_address*'  
+ Nome del computer che ospita il SQL Server nodo head del gruppo con scalabilità orizzontale di base. * \@ head_node_address* è di tipo nvarchar (255).  
   
- * \@dms_control_channel_port* = dms_control_channel_port  
- Porta in cui è in esecuzione il canale di controllo per il nodo head PolyBase Data Movement servizio. dms_control_channel_port è un __int16 senza segno. * \@* Il valore predefinito è **16450**.  
+ * \@ dms_control_channel_port* = dms_control_channel_port  
+ Porta in cui è in esecuzione il canale di controllo per il nodo head PolyBase Data Movement servizio. * \@ dms_control_channel_port* è un __int16 senza segno. Il valore predefinito è **16450**.  
   
- * \@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
- Nome del nodo head SQL Server istanza nel gruppo con scalabilità orizzontale di base. head_node_sql_server_instance_name è di tipo nvarchar (16). * \@*  
+ * \@ head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
+ Nome del nodo head SQL Server istanza nel gruppo con scalabilità orizzontale di base. * \@ head_node_sql_server_instance_name* è di tipo nvarchar (16).  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -55,7 +55,7 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL SERVER.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Dopo aver eseguito il stored procedure, arrestare il motore di base e riavviare il servizio PolyBase Data Movement nel computer. Per verificare, eseguire la DMV seguente sul nodo head: **sys. dm_exec_compute_nodes**.  
   
 ## <a name="example"></a>Esempio  

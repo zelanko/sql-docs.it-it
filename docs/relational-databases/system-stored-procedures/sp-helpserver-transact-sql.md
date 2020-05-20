@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpserver
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 844e96d765f9ed06f88b140b906b78eb4ea16ea0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9e965a11708b2d4bbb72903a05846cb14300a5c6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997438"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826100"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_helpserver [ [ @server = ] 'server' ]
   
 `[ @optname = ] 'option'`Opzione che descrive il server. *Option* è di tipo **varchar (** 35 **)** e il valore predefinito è null. i valori possibili sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**regole di confronto compatibili**|L'utilizzo di questa opzione influisce sull'esecuzione delle query distribuite in server collegati. Se questa opzione è impostata su true,|  
 |**accesso ai dati**|Consente di attivare e disabilitare un server collegato per l'accesso a query distribuite.|  
@@ -76,7 +76,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**connect_timeout**|**int**|Valore di timeout per la connessione al server collegato.|  
 |**query_timeout**|**int**|Valore di timeout per le query eseguite sul server collegato.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  A un server possono essere associati più stati.  
   
 ## <a name="permissions"></a>Autorizzazioni  

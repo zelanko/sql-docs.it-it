@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAMethod
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7f0196a710f9349e109bcf956eca6e2310c1e051
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 98a8b4ce231c907231646379a3730ab0c1c535db
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252201"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828265"
 ---
 # <a name="sp_oamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,13 +68,13 @@ sp_OAMethod objecttoken , methodname
   
  Per ottenere il valore restituito di un parametro di output, il *parametro* deve essere una variabile locale del tipo di dati appropriato ed è necessario specificare l' **output** . Se viene specificato un parametro costante o se l' **output** non è specificato, qualsiasi valore restituito da un parametro di output viene ignorato.  
   
- Se specificato, *parameterName* deve corrispondere al nome del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] parametro denominato. Si noti **@** che non _parametername_is [!INCLUDE[tsql](../../includes/tsql-md.md)] una variabile locale. Il simbolo di chiocciola (**@**) viene rimosso e *parameterName*viene passato all'oggetto OLE come nome del parametro. Tutti i parametri denominati devono essere specificati dopo tutti i parametri posizionali.  
+ Se specificato, *parameterName* deve corrispondere al nome del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] parametro denominato. Si noti che **@** non _parametername_is una [!INCLUDE[tsql](../../includes/tsql-md.md)] variabile locale. Il simbolo di chiocciola ( **@** ) viene rimosso e *parameterName*viene passato all'oggetto OLE come nome del parametro. Tutti i parametri denominati devono essere specificati dopo tutti i parametri posizionali.  
   
  *n*  
  Segnaposto che indica la possibilità di specificare più parametri.  
   
 > [!NOTE]
->  ParameterName può essere un parametro denominato perché fa parte del metodo specificato e viene passato all'oggetto. * \@* Gli altri parametri della stored procedure vengono specificati in base alla posizione e non in base al nome.  
+>  * \@ parameterName* può essere un parametro denominato perché fa parte del metodo specificato e viene passato all'oggetto. Gli altri parametri della stored procedure vengono specificati in base alla posizione e non in base al nome.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (esito positivo) o un numero diverso da zero (esito negativo) corrispondente al valore intero del codice HRESULT restituito dall'oggetto di automazione OLE.  
@@ -101,7 +101,7 @@ sp_OAMethod objecttoken , methodname
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  È anche possibile usare **sp_OAMethod** per ottenere un valore della proprietà.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -110,7 +110,7 @@ sp_OAMethod objecttoken , methodname
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-calling-a-method"></a>R. Chiamata di un metodo  
- Nell'esempio seguente viene chiamato `Connect` il metodo dell'oggetto **SqlServer** creato in precedenza.  
+ Nell'esempio seguente viene chiamato il `Connect` metodo dell'oggetto **SqlServer** creato in precedenza.  
   
 ```  
 EXEC @hr = sp_OAMethod @object, 'Connect', NULL, 'my_server',  
@@ -123,7 +123,7 @@ END;
 ```  
   
 ### <a name="b-getting-a-property"></a>B. Recupero di una proprietà  
- Nell'esempio seguente viene ottenuta la `HostName` proprietà (dell'oggetto **SqlServer** creato in precedenza) e viene archiviata in una variabile locale.  
+ Nell'esempio seguente viene ottenuta la `HostName` Proprietà (dell'oggetto **SqlServer** creato in precedenza) e viene archiviata in una variabile locale.  
   
 ```  
 DECLARE @property varchar(255);  

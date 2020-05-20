@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_sys_memory dynamic management view
 ms.assetid: 1ca58814-1caa-44c1-b307-ff0bdcbbef62
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 891ae8c4f21d0a38302a7213aab22b8a70e855ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2304a0afc16c99934f6f77c640c60cb2ade52acf
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79027951"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827884"
 ---
 # <a name="sysdm_os_sys_memory-transact-sql"></a>sys.dm_os_sys_memory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "79027951"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è vincolato da e risponde a condizioni di memoria esterna a livello di sistema operativo e di limiti fisici dell'hardware sottostante. La determinazione dello stato complessivo del sistema è un'importante parte della valutazione dell'utilizzo della memoria di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Per chiamare questo oggetto [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] da [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]o, usare il nome **sys. dm_pdw_nodes_os_sys_memory**.  
+>  Per chiamare questo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oggetto da o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , usare il nome **sys. dm_pdw_nodes_os_sys_memory**.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -49,9 +49,9 @@ ms.locfileid: "79027951"
 |**system_high_memory_signal_state**|**bit**|Stato della notifica relativa alle risorse elevate della memoria di sistema. Un valore 1 indica che Windows ha impostato un segnale di memoria elevato. Per ulteriori informazioni, vedere [CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) in MSDN Library.|  
 |**system_low_memory_signal_state**|**bit**|Stato della notifica relativa alle risorse insufficienti della memoria di sistema. Un valore 1 indica che Windows ha impostato un segnale di memoria basso. Per ulteriori informazioni, vedere [CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) in MSDN Library.|  
 |**system_memory_state_desc**|**nvarchar(256)**|Descrizione dello stato della memoria. Vedere la tabella riportata di seguito.|  
-|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
+|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
   
-|Condizione|valore|  
+|Condizione|Valore|  
 |---------------|-----------|  
 |system_high_memory_signal_state = 1<br /><br /> e<br /><br /> system_low_memory_signal_state = 0|La quantità di memoria fisica disponibile è elevata.|  
 |system_high_memory_signal_state = 0<br /><br /> e<br /><br /> system_low_memory_signal_state = 1|La quantità di memoria fisica disponibile è bassa.|  

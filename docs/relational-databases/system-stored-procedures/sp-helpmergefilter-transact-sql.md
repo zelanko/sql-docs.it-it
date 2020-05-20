@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergefilter
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5a743b03d379276e6842b72e44d346cc1356cf7a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 709472c434d2ddb80d33832e7c466abdb5a7d0fc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68137691"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828895"
 ---
 # <a name="sp_helpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +41,9 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ## <a name="arguments"></a>Argomenti  
 `[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @article = ] 'article'`Nome dell'articolo. *article* è di **%** **tipo sysname**e il valore predefinito è, che restituisce i nomi di tutti gli articoli.  
+`[ @article = ] 'article'`Nome dell'articolo. *article* è di **tipo sysname**e il valore predefinito è **%** , che restituisce i nomi di tutti gli articoli.  
   
-`[ @filtername = ] 'filtername'`Nome del filtro su cui si desidera ottenere informazioni. *FilterName* è di **%** **tipo sysname**e il valore predefinito è, che restituisce informazioni su tutti i filtri definiti per l'articolo o la pubblicazione.  
+`[ @filtername = ] 'filtername'`Nome del filtro su cui si desidera ottenere informazioni. *FilterName* è di **tipo sysname**e il valore predefinito è **%** , che restituisce informazioni su tutti i filtri definiti per l'articolo o la pubblicazione.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -64,7 +64,7 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_helpmergefilter** viene utilizzata nella replica di tipo merge.  
   
 ## <a name="permissions"></a>Autorizzazioni  

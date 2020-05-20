@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobstep
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c65498b25bfbe0a5eee38a43ea212e29edc26295
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 55fcc73b489a781601a2a6c5bbe139ee449cd60d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090049"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827565"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**retry_attempts**|**int**|Numero massimo di tentativi di esecuzione del comando (nel caso in cui non sia stato eseguito correttamente).|  
 |**retry_interval**|**int**|Intervallo in minuti che intercorre tra un tentativo e il successivo.|  
 |**os_run_priority**|**int**|Riservato.|  
-|**output_file_name**|**nvarchar(200)**|File in cui scrivere l'output del comando ([!INCLUDE[tsql](../../includes/tsql-md.md)]solo per i passaggi, **CmdExec**e **PowerShell** ).|  
+|**output_file_name**|**nvarchar(200)**|File in cui scrivere l'output del comando ( [!INCLUDE[tsql](../../includes/tsql-md.md)] solo per i passaggi, **CmdExec**e **PowerShell** ).|  
 |**last_run_outcome**|**int**|Risultato dell'ultima esecuzione del passaggio:<br /><br /> **0** = non riuscito<br /><br /> **1** = operazione completata<br /><br /> **2** = nuovo tentativo<br /><br /> **3** = annullato<br /><br /> **5** = sconosciuto|  
 |**last_run_duration**|**int**|Durata (hhmmss) dell'ultima esecuzione del passaggio.|  
 |**last_run_retries**|**int**|Numero di tentativi di esecuzione del comando durante l'ultima esecuzione del passaggio.|  
@@ -86,7 +86,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**last_run_time**|**int**|Ora di inizio dell'ultima esecuzione del passaggio.|  
 |**proxy_id**|**int**|Proxy per il passaggio del processo.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_help_jobstep** si trova nel database **msdb** .  
   
 ## <a name="permissions"></a>Autorizzazioni  

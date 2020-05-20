@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_repladdcolumn
 ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 75c66d1077b111837197957cc845b690b794ea24
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 08f459761c6e72063979bef6f7d9067611f2dd78
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771054"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826569"
 ---
 # <a name="sp_repladdcolumn-transact-sql"></a>sp_repladdcolumn (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -46,36 +46,36 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @source_object =] '*source_object*'  
+ [ @source_object =]'*source_object*'  
  Nome dell'articolo di tabella che contiene la nuova colonna da aggiungere. *source_object* è di **tipo nvarchar (358**) e non prevede alcun valore predefinito.  
   
- [ @column =] '*colonna*'  
+ [ @column =]'*colonna*'  
  Nome della colonna della tabella da aggiungere per la replica. *Column* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
- [ @typetext =] '*TypeText*'  
+ [ @typetext =]'*TypeText*'  
  Definizione della colonna da aggiungere. *TypeText* è di **tipo nvarchar (3000)** e non prevede alcun valore predefinito. Se, ad esempio, la colonna order_filled viene aggiunta ed è un campo a carattere singolo, non NULL, e il valore predefinito è **N**, order_filled sarebbe il parametro della *colonna* , mentre la definizione del **vincolo char (1) not null constraint_name valore predefinito ' n'** corrisponderebbe al parametro *TypeText* .  
   
- [ @publication_to_add =] '*publication_to_add*'  
+ [ @publication_to_add =]'*publication_to_add*'  
  Nome della pubblicazione cui si desidera aggiungere la nuova colonna. *publication_to_add* è di **tipo nvarchar (4000)** e il valore predefinito è **All**. Se **tutte**le pubblicazioni contenenti questa tabella sono interessate. Se viene specificato *publication_to_add* , viene aggiunta la nuova colonna solo per questa pubblicazione.  
   
- [ @from_agent = ] *from_agent*  
+ [ @from_agent =] *from_agent*  
  Specifica se la stored procedure viene eseguita da un agente di replica. *from_agent* è di **tipo int**e il valore predefinito è **0**, mentre il valore **1** viene utilizzato quando questo stored procedure viene eseguito da un agente di replica e in tutti gli altri casi è necessario utilizzare il valore predefinito **0**.  
   
- [ @schema_change_script =] '*schema_change_script*'  
+ [ @schema_change_script =]'*schema_change_script*'  
  Specifica il nome e il percorso di uno script di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzato per modificare le stored procedure personalizzate generate dal sistema. *schema_change_script* è di **tipo nvarchar (4000)** e il valore predefinito è null. La replica consente di sostituire una o più stored procedure predefinite utilizzate per la replica transazionale con stored procedure personalizzate definite dall'utente. *schema_change_script* viene eseguita dopo che è stata apportata una modifica dello schema a un articolo di tabella replicato utilizzando sp_repladdcolumn e che può essere utilizzato per eseguire una delle operazioni seguenti:  
   
 -   Se le stored procedure personalizzate vengono rigenerate automaticamente, è possibile utilizzare *schema_change_script* per eliminare queste stored procedure personalizzate e sostituirle con stored procedure personalizzate definite dall'utente che supportano il nuovo schema.  
   
 -   Se le stored procedure personalizzate non vengono rigenerate automaticamente, è possibile utilizzare *schema_change_script*per rigenerare tali stored procedure o per creare stored procedure personalizzate definite dall'utente.  
   
- [ @force_invalidate_snapshot = ] *force_invalidate_snapshot*  
+ [ @force_invalidate_snapshot =] *force_invalidate_snapshot*  
  Abilita o disabilita la funzionalità che consente di invalidare uno snapshot. *force_invalidate_snapshot* è di **bit**e il valore predefinito è **1**.  
   
  **1** specifica che le modifiche apportate all'articolo possono causare l'invalidità dello snapshot. in tal caso, il valore **1** consente di eseguire il nuovo snapshot.  
   
  **0** specifica che le modifiche apportate all'articolo non invalidano lo snapshot.  
   
- [ @force_reinit_subscription = ] *force_reinit_subscription*  
+ [ @force_reinit_subscription =] *force_reinit_subscription*  
  Abilita o disabilita la funzionalità che consente di reinizializzare la sottoscrizione. *force_reinit_subscription* è un **bit** e il valore predefinito è **0**.  
   
  **0** specifica che le modifiche apportate all'articolo non provocano la reinizializzazione della sottoscrizione.  

@@ -23,15 +23,15 @@ helpviewer_keywords:
 - stored procedures [SQL Server], refreshing metadata
 - user-defined functions [SQL Server], refreshing metadata
 ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df5ff458c45a4ac804591a8a4d77d9367b8cb6c4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2de8653c0a18cc6fabaf2570a10c73184e5c9706
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982766"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825985"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,7 +58,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="arguments"></a>Argomenti  
 `[ @name = ] 'module\_name'`Nome del stored procedure, funzione definita dall'utente, vista, trigger DML, trigger DDL a livello di database o trigger DDL a livello di server. *module_name* non può essere un stored procedure di Common Language Runtime (CLR) o una funzione CLR. *module_name* non possono essere associati a schema. *module_name* è di **tipo nvarchar**e non prevede alcun valore predefinito. *module_name* può essere un identificatore in più parti, ma può fare riferimento solo agli oggetti nel database corrente.  
   
-`[ , @namespace = ] ' \<class> '`È la classe del modulo specificato. Quando *module_name* è un trigger DDL, \<la classe> è obbligatoria. >di classe è di **tipo nvarchar**(20). * \<* Gli input validi sono:  
+`[ , @namespace = ] ' \<class> '`È la classe del modulo specificato. Quando *module_name* è un trigger DDL, la \< classe> è obbligatoria. * \<>di classe* è di **tipo nvarchar**(20). Gli input validi sono:  
   
 |||  
 |-|-|  
@@ -68,7 +68,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (esito positivo) o un numero diverso da zero (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_refreshsqlmodule** deve essere eseguito quando vengono apportate modifiche agli oggetti sottostanti il modulo che influiscono sulla definizione. In caso contrario, le query o le chiamate su tale modulo potrebbero generare risultati imprevisti. Per aggiornare una vista, è possibile usare **sp_refreshsqlmodule** o **sp_refreshview** con gli stessi risultati.  
   
  **sp_refreshsqlmodule** non influisce sulle autorizzazioni, le proprietà estese o le opzioni set associate all'oggetto.  

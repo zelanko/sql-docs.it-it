@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_types catalog view
 ms.assetid: 441ba49d-f778-4fa1-98c4-ced375a01a34
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0a78730509cc1f9eeec83b8d9ff9cb0917e0ed99
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 356e73e2b90d059117cadef436bcea27498c9871
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060432"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824966"
 ---
 # <a name="sysxml_schema_types-transact-sql"></a>sys.xml_schema_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68060432"
 |**is_extension_blocked**|**bit**|1 = la sostituzione con un'estensione del tipo è bloccata nelle istanze quando l'attributo block nella definizione **complexType** o l'attributo **blockDefault** dello schema predecessore \<> elemento informazioni elemento è impostato su "extension" o "#all".<br /><br /> 0 = La sostituzione con l'estensione non è bloccata.|  
 |**is_restriction_blocked**|**bit**|1 = la sostituzione con una restrizione del tipo è bloccata nelle istanze quando l'attributo block nella definizione **complexType** o l'attributo **blockDefault** dello schema predecessore \<> elemento informazioni elemento è impostato su "restriction" o "#all".<br /><br /> 0 = La sostituzione con la restrizione non è bloccata (predefinito)|  
 |**is_final_extension**|**bit**|1 = la derivazione per estensione del tipo è bloccata quando l'attributo final nella definizione **complexType** o l'attributo **finalDefault** dello schema predecessore \<> elemento informazioni sugli elementi è impostato su "extension" o "#all".<br /><br /> 0 = L'estensione è consentita (predefinito)|  
-|**is_final_restriction**|**bit**|1 = la derivazione per restrizione del tipo è bloccata quando l'attributo final nella definizione semplice o **complexType** o l'attributo **finalDefault** dello schema \<predecessore> elemento informazioni sugli elementi è impostato su "restriction" o "#all".<br /><br /> 0 = La restrizione è consentita (predefinito)|  
+|**is_final_restriction**|**bit**|1 = la derivazione per restrizione del tipo è bloccata quando l'attributo final nella definizione semplice o **complexType** o l'attributo **finalDefault** dello schema predecessore \<> elemento informazioni sugli elementi è impostato su "restriction" o "#all".<br /><br /> 0 = La restrizione è consentita (predefinito)|  
 |**is_final_list_member**|**bit**|1 = Questo tipo semplice non può essere utilizzato come tipo di elemento in un elenco.<br /><br /> 0 = Questo è un tipo complesso oppure il tipo può essere utilizzato come tipo di elemento (predefinito)|  
 |**is_final_union_member**|**bit**|1 = Questo tipo semplice non può essere utilizzato come tipo di membro di Tipo unione.<br /><br /> 0 = Questo è un tipo complesso oppure il tipo può essere utilizzato come tipo di membro unione. (predefinito)|  
   

@@ -17,14 +17,14 @@ helpviewer_keywords:
 - editions [SQL Server]
 - sys.dm_db_persisted_sku_features dynamic management view
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f689541d455f4f7e6da4cc68742519a74f671506
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c92a9271575a725aef6981b97cb9b35c81829044
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73981829"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828060"
 ---
 # <a name="sysdm_db_persisted_sku_features-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +41,10 @@ ms.locfileid: "73981829"
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW DATABASE STATE per il database.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se nel database non sono utilizzate funzionalità che possono essere limitate da un'edizione specifica, la vista non restituisce alcuna riga.  
   
- sys. dm_db_persisted_sku_features possibile elencare le funzionalità di modifica del database seguenti come limitate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a edizioni specifiche:  
+ sys. dm_db_persisted_sku_features possibile elencare le funzionalità di modifica del database seguenti come limitate a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edizioni specifiche:  
   
 -   **ChangeCapture**: indica che Change Data Capture è abilitato un database. Per rimuovere Change Data Capture, utilizzare il stored procedure [sys. sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) . Per altre informazioni, vedere [Informazioni su Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md).  
   
@@ -65,7 +65,7 @@ ms.locfileid: "73981829"
 -   **TransparentDataEncryption.** Indica che un database viene crittografato utilizzando Transparent Data Encryption. Per rimuovere Transparent Data Encryption, utilizzare l'istruzione ALTER DATABASE. Per altre informazioni sulla crittografia trasparente del database, vedere [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
 
 > [!NOTE]
-> A partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] da Service Pack 1, queste funzionalità, ad eccezione di **TransparentDataEncryption.** sono disponibili in più [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edizioni e non solo per le edizioni Enterprise o Developer.
+> A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1, queste funzionalità, ad eccezione di **TransparentDataEncryption.** sono disponibili in più [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edizioni e non solo per le edizioni Enterprise o Developer.
 
  Per determinare se in un database sono in uso funzionalità disponibili solo in edizioni specifiche, eseguire l'istruzione seguente nel database:  
   

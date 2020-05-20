@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSrepl_version system table
 ms.assetid: c1330f03-940b-4564-ac42-6030c6e21173
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 45dad1cfaa6057cd50ee4c01b484df8250121a46
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9599ab09ebd2da3ae51e84cd73bdcf3be0f05b5b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079147"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825854"
 ---
 # <a name="msrepl_version-transact-sql"></a>MSrepl_version (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68079147"
 |-----------------|---------------|-----------------|  
 |**major_version**|**int**|Numero di versione principale del database di distribuzione.|  
 |**minor_version**|**int**|Numero di versione secondario del database di distribuzione.|  
-|**Revisione**|**int**|Numero di revisione.|  
+|**revision**|**int**|Numero di revisione.|  
 |**db_existed**|**bit**|Indica se il database di distribuzione esiste prima della chiamata a **sp_adddistributiondb** .|  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - backup media [SQL Server], backupset system table
 - backup sets [SQL Server]
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b138a299edbb1e9f3a2314e92b7e77418594a711
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0eb367dd29a96f5819563f0b10e036b7274c4303
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68119326"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827368"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "68119326"
 |**name**|**nvarchar(128)**|Nome del set di backup. Può essere NULL.|  
 |**Descrizione**|**nvarchar(255)**|Descrizione del set di backup. Può essere NULL.|  
 |**user_name**|**nvarchar(128)**|Nome dell'utente che esegue l'operazione di backup. Può essere NULL.|  
-|**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] numero di versione principale. Può essere NULL.|  
+|**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]numero di versione principale. Può essere NULL.|  
 |**software_minor_version**|**tinyint**|Numero di versione secondario di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Può essere NULL.|  
 |**software_build_version**|**smallint**|Numero di build di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Può essere NULL.|  
 |**time_zone**|**smallint**|Differenza tra l'ora locale (del luogo in cui viene eseguita l'operazione di backup) e l'ora di Greenwich (UTC), in intervalli di 15 minuti. I possibili valori sono compresi tra -48 e +48 inclusi. Il valore 127 indica che la differenza è sconosciuta. Ad esempio, -20 indica l'ora della costa orientale degli Stati Uniti, ovvero 5 ore in meno rispetto all'ora di Greenwich. Può essere NULL.|  
@@ -73,7 +73,7 @@ ms.locfileid: "68119326"
 |**database_name**|**nvarchar(128)**|Nome del database su cui viene eseguita l'operazione di backup. Può essere NULL.|  
 |**server_name**|**nvarchar(128)**|Nome del server che esegue l'operazione di backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Può essere NULL.|  
 |**machine_name**|**nvarchar(128)**|Nome del computer che esegue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Può essere NULL.|  
-|**flags**|**int**|In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la colonna **Flags** è stata deprecata e viene sostituita con le colonne di bit seguenti:<br /><br /> **has_bulk_logged_data** <br /> **is_snapshot** <br /> **is_readonly** <br /> **is_single_user** <br /> **has_backup_checksums** <br /> **is_damaged** <br /> **begins_log_chain** <br /> **has_incomplete_metadata** <br /> **is_force_offline** <br /> **is_copy_only**<br /><br /> Può essere NULL.<br /><br /> Nei set di backup di versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i flag disponibili sono i seguenti:<br />1 = Il backup contiene dati a registrazione minima. <br />2 = È stata utilizzata l'opzione WITH SNAPSHOT. <br />4 = Al momento del backup il database era in modalità sola lettura.<br />8 = Al momento del backup il database era in modalità utente singolo.|  
+|**flags**|**int**|In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la colonna **Flags** è stata deprecata e viene sostituita con le colonne di bit seguenti:<br /><br /> **has_bulk_logged_data** <br /> **is_snapshot** <br /> **is_readonly** <br /> **is_single_user** <br /> **has_backup_checksums** <br /> **is_damaged** <br /> **begins_log_chain** <br /> **has_incomplete_metadata** <br /> **is_force_offline** <br /> **is_copy_only**<br /><br /> Può essere NULL.<br /><br /> Nei set di backup di versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i flag disponibili sono i seguenti:<br />1 = Il backup contiene dati a registrazione minima. <br />2 = È stata utilizzata l'opzione WITH SNAPSHOT. <br />4 = Al momento del backup il database era in modalità sola lettura.<br />8 = Al momento del backup il database era in modalità utente singolo.|  
 |**unicode_locale**|**int**|Impostazioni locali Unicode. Può essere NULL.|  
 |**unicode_compare_style**|**int**|Stile di confronto Unicode. Può essere NULL.|  
 |**collation_name**|**nvarchar(128)**|Nome delle regole di confronto. Può essere NULL.|  
@@ -101,21 +101,21 @@ ms.locfileid: "68119326"
 |**encryptor_thumbprint**|**varbinary(20)**|L'identificazione digitale del componente di crittografia che può essere utilizzato per trovare il certificato o la chiave asimmetrica nel database. Nel caso in cui il backup non è stato crittografato, questo valore è NULL.|  
 |**encryptor_type**|**nvarchar(32)**|Tipo di componente di crittografia: certificato o chiave asimmetrica. . Nel caso in cui il backup non è stato crittografato, questo valore è NULL.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  RESTOre VERIFYONLY FROM *backup_device* with LOADHISTORY popola la colonna della tabella **BackupMediaSet** con i valori appropriati dell'intestazione del set di supporti.  
   
  Per ridurre il numero di righe in questa tabella e in altre tabelle di backup e di cronologia, eseguire la [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) stored procedure.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle di backup e ripristino &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
- [backupfile &#40;&#41;Transact-SQL](../../relational-databases/system-tables/backupfile-transact-sql.md)   
- [backupfilegroup &#40;&#41;Transact-SQL](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
- [backupmediafamily &#40;&#41;Transact-SQL](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
- [BackupMediaSet &#40;&#41;Transact-SQL](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
+ [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
+ [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
+ [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
+ [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
  [Possibili errori relativi ai supporti durante il backup e il ripristino &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
  [Set di supporti, gruppi di supporti e set di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [Modelli di recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
- [RESTOre HEADERONLY &#40;&#41;Transact-SQL](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
+ [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
  [Tabelle di backup e ripristino &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)  
   
   

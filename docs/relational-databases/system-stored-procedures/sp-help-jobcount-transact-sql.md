@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobcount
 ms.assetid: ae8ef851-646c-4889-bc11-c8ec78762572
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1f874aa26001b7d595f319a59d5c116907aa096e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6084f17cca92211d1ec102fe941c98774c105e9a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68054958"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827605"
 ---
 # <a name="sp_help_jobcount-transact-sql"></a>sp_help_jobcount (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_help_jobcount
 |-----------------|---------------|-----------------|  
 |**JobCount**|**int**|Numero di processi per la pianificazione specificata.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questa procedura visualizza un elenco del numero di processi associati alla pianificazione specificata.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -71,7 +71,7 @@ sp_help_jobcount
   
  Solo i membri di **sysadmin** possono visualizzare i conteggi dei processi di proprietà di altri utenti.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene visualizzato un elenco del numero di processi associati alla pianificazione `NightlyJobs`.  
   
 ```  

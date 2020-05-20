@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor_tables
 ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5c005ff603f21dca387215cafd9dff572db53960
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9af57e2f3a3bcf6554e88d8c6f9d54b8ec069009
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053094"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827815"
 ---
 # <a name="sp_describe_cursor_tables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,26 +48,26 @@ sp_describe_cursor_tables
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @cursor_return= ] *output_cursor_variable* OUTPUT  
+ [ @cursor_return =] output *output_cursor_variable*  
  Nome di una variabile di cursore dichiarata per ricevere l'output del cursore. *output_cursor_variable* è un **cursore**, non prevede alcun valore predefinito e non deve essere associato ad alcun cursore al momento della chiamata sp_describe_cursor_tables. Il cursore restituito è di tipo scorrevole, dinamico e di sola lettura.  
   
- [ @cursor_source= ] {N'local ' | N'Global ' | N'variable '}  
+ [ @cursor_source =] {N'local ' | N'Global ' | N'variable '}  
  Specifica se il cursore di cui viene generato il report viene specificato utilizzando il nome di un cursore locale, di un cursore globale o di una variabile di cursore. Il parametro è di **tipo nvarchar (30)**.  
   
- [ @cursor_identity= ] N'*local_cursor_name*'  
+ [ @cursor_identity =] N'*local_cursor_name*'  
  Nome di un cursore creato da un'istruzione DECLARE CURSOR con la parola chiave LOCAL specificata in modo esplicito o utilizzata per impostazione predefinita. *local_cursor_name* è di **tipo nvarchar (128)**.  
   
- [ @cursor_identity= ] N'*global_cursor_name*'  
+ [ @cursor_identity =] N'*global_cursor_name*'  
  Nome di un cursore creato da un'istruzione DECLARE CURSOR con la parola chiave GLOBAL o impostato sul valore predefinito GLOBAL. *global_cursor_name* può essere anche il nome di un cursore API del server aperto da un'applicazione ODBC che ha quindi denominato il cursore chiamando SQLSetCursorName. *global_cursor_name* è di **tipo nvarchar (128)**.  
   
- [ @cursor_identity= ] N'*input_cursor_variable*'  
+ [ @cursor_identity =] N'*input_cursor_variable*'  
  Nome di una variabile di cursore associata a un cursore aperto. *input_cursor_variable* è di **tipo nvarchar (128)**.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- nessuno  
+ Nessuno  
   
 ## <a name="cursors-returned"></a>Cursori restituiti  
- sp_describe_cursor_tables incapsula il report come [!INCLUDE[tsql](../../includes/tsql-md.md)] parametro di output del **cursore** . In questo modo i batch, le stored procedure e i trigger [!INCLUDE[tsql](../../includes/tsql-md.md)] possono elaborare l'output una riga alla volta. Ciò significa inoltre che non è possibile chiamare direttamente la procedura da funzioni API. Il parametro di output del **cursore** deve essere associato a una variabile di programma, ma le API non supportano i parametri o le variabili del **cursore** di binding.  
+ sp_describe_cursor_tables incapsula il report come parametro di [!INCLUDE[tsql](../../includes/tsql-md.md)] output del **cursore** . In questo modo i batch, le stored procedure e i trigger [!INCLUDE[tsql](../../includes/tsql-md.md)] possono elaborare l'output una riga alla volta. Ciò significa inoltre che non è possibile chiamare direttamente la procedura da funzioni API. Il parametro di output del **cursore** deve essere associato a una variabile di programma, ma le API non supportano i parametri o le variabili del **cursore** di binding.  
   
  Nella tabella seguente viene descritto il formato del cursore restituito da sp_describe_cursor_tables.  
   
@@ -82,13 +82,13 @@ sp_describe_cursor_tables
 |dbid|**int**|ID del database contenente la tabella specificata. 0 se si utilizza OPENQUERY o OPENROWSET.|  
 |dbname|**sysname**, **Nullable**|Nome del database contenente la tabella specificata. NULL se si utilizza OPENQUERY o OPENROWSET.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La stored procedure sp_describe_cursor_tables descrive le tabelle di base a cui fa riferimento un cursore del server. Utilizzare sp_describe_cursor_columns per ottenere una descrizione degli attributi del set dei risultati restituito dal cursore. Utilizzare sp_describe_cursor per ottenere una descrizione delle caratteristiche globali del cursore, come il supporto dello scorrimento e degli aggiornamenti. Utilizzare sp_cursor_list per ottenere un report dei cursori del server [!INCLUDE[tsql](../../includes/tsql-md.md)] visibili nella connessione.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo public.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene aperto un cursore globale ed eseguita la stored procedure `sp_describe_cursor_tables` per creare un report sulle tabelle a cui fa riferimento il cursore.  
   
 ```  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_change_agent_parameter
 ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cd737be5a1e71e46750f6c80fd68ad254cb6436f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f22b2446713274503071e615690aaf7a03fc33d2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768937"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824835"
 ---
 # <a name="sp_change_agent_parameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 > [!NOTE]  
 >  Se un parametro è supportato per un *agent_type*specificato, ma non è stato definito nel profilo agente, viene restituito un errore. Per aggiungere un parametro a un profilo agente, è necessario eseguire [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
   
- Per un agente di snapshot (*agent_type*=**1**), se definito nel profilo, è possibile modificare le proprietà seguenti:  
+ Per un agente di snapshot (*agent_type* = **1**), se definito nel profilo, è possibile modificare le proprietà seguenti:  
   
 -   **70Subscribers**  
   
@@ -70,7 +70,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **UsePerArticleContentsView**  
   
- Per un agente di lettura log (*agent_type*=**2**), se definito nel profilo, è possibile modificare le proprietà seguenti:  
+ Per un agente di lettura log (*agent_type* = **2**), se definito nel profilo, è possibile modificare le proprietà seguenti:  
   
 -   **HistoryVerboseLevel più elevato**  
   
@@ -92,7 +92,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **ReadBatchThreshold**  
   
- Per un agente di distribuzione (*agent_type*=**3**), se definito nel profilo, è possibile modificare le proprietà seguenti:  
+ Per un agente di distribuzione (*agent_type* = **3**), se definito nel profilo, è possibile modificare le proprietà seguenti:  
   
 -   **BcpBatchSize**  
   
@@ -130,7 +130,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **TransactionsPerHistory**  
   
- Per un agente di merge (*agent_type*=**4**), se definito nel profilo, è possibile modificare le proprietà seguenti:  
+ Per un agente di merge (*agent_type* = **4**), se definito nel profilo, è possibile modificare le proprietà seguenti:  
   
 -   **AltSnapshotFolder**  
   
@@ -216,11 +216,11 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **UseInprocLoader**  
   
--   **Convalida**  
+-   **Validate**  
   
 -   **ValidateInterval**  
   
- Per un agente di lettura coda (*agent_type*=**9**), se definito nel profilo, è possibile modificare le proprietà seguenti:  
+ Per un agente di lettura coda (*agent_type* = **9**), se definito nel profilo, è possibile modificare le proprietà seguenti:  
   
 -   **HistoryVerboseLevel più elevato**  
   
@@ -245,7 +245,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_change_agent_parameter** viene utilizzato in tutti i tipi di replica.  
   
 ## <a name="permissions"></a>Autorizzazioni  

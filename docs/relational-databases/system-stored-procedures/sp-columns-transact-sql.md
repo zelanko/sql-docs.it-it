@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_columns
 ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8eb18a81ff7910418e5b3c8a3b36a0e4cd94cc36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbc724b9178ec867768fde3dc3d9ff58add554e9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070348"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826270"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,12 +53,12 @@ sp_columns [ @table_name = ] object
   
 `[ \@table_qualifier = ] qualifier`Nome del qualificatore dell'oggetto. *Qualifier* è di **tipo sysname**e il valore predefinito è null. Vari prodotti DBMS supportano la denominazione in tre parti per gli oggetti (_qualificatore_**.** _proprietario_**.** _nome_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In alcuni prodotti rappresenta il nome del server dell'ambiente di database dell'oggetto.  
   
-`[ \@column_name = ] column`È una singola colonna e viene utilizzata quando si desidera una sola colonna di informazioni di catalogo. *Column* è di **tipo nvarchar (384)** e il valore predefinito è null. Se la *colonna* non è specificata, vengono restituite tutte le colonne. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la *colonna* rappresenta il nome della colonna elencato nella tabella **syscolumns** . La ricerca con caratteri jolly è supportata. Per ottenere la massima interoperabilità, è consigliabile che nel client di gateway siano utilizzati solo i caratteri jolly standard di SQL-92, ovvero i caratteri % e _.  
+`[ \@column_name = ] column`È una singola colonna e viene utilizzata quando si desidera una sola colonna di informazioni di catalogo. *Column* è di **tipo nvarchar (384)** e il valore predefinito è null. Se la *colonna* non è specificata, vengono restituite tutte le colonne. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la *colonna* rappresenta il nome della colonna elencato nella tabella **syscolumns** . La ricerca con caratteri jolly è supportata. Per ottenere la massima interoperabilità, è consigliabile che nel client di gateway siano utilizzati solo i caratteri jolly standard di SQL-92, ovvero i caratteri % e _.  
   
 `[ \@ODBCVer = ] ODBCVer`Versione di ODBC in uso. *ODBCVer* è di **tipo int**e il valore predefinito è 2. che indica ODBC versione 2. I valori validi sono 2 e 3. Per le differenze di comportamento tra le versioni 2 e 3, vedere la specifica ODBC **SQLColumns** .  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- nessuno  
+ Nessuno  
   
 ## <a name="result-sets"></a>Set di risultati  
  Il catalogo **sp_columns** stored procedure equivale a **SQLColumns** in ODBC. I risultati restituiti vengono ordinati in base **TABLE_QUALIFIER**, **TABLE_OWNER**e **table_name**.  
@@ -74,7 +74,7 @@ sp_columns [ @table_name = ] object
 |**PRECISIONE**|**int**|Numero di cifre significative. Il valore restituito per la colonna **Precision** è in base 10.|  
 |**LENGTH**|**int**|Dimensioni del trasferimento dei dati. <sup>1</sup>|  
 |**SCALA**|**smallint**|Numero di cifre a destra del separatore decimale.|  
-|**RADIX**|**smallint**|Base per i tipi di dati numerici.|  
+|**RADICE**|**smallint**|Base per i tipi di dati numerici.|  
 |**NULLABLE**|**smallint**|Specifica se i valori Null sono supportati.<br /><br /> 1 = I valori Null sono supportati.<br /><br /> 0 = I valori Null non sono supportati (NOT NULL).|  
 |**COMMENTI**|**varchar (254)**|In questo campo viene sempre restituito NULL.|  
 |**COLUMN_DEF**|**nvarchar(4000)**|Valore predefinito della colonna.|  
@@ -90,10 +90,10 @@ sp_columns [ @table_name = ] object
 ## <a name="permissions"></a>Autorizzazioni  
  Sono necessarie le autorizzazioni SELECT e VIEW DEFINITION per lo schema.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_columns** segue i requisiti per gli identificatori delimitati. Per altre informazioni, vedere [Identificatori del database](../../relational-databases/databases/database-identifiers.md).  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituite informazioni sulle colonne della tabella specificata.  
   
 ```  

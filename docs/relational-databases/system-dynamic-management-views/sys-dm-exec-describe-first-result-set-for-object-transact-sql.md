@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_describe_first_result_set_for_object catalog view
 ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c500967b83581cc3bc108232f12c9a0f4d008da6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9bf2dff5e5d7a3cb1581de9c0b15ff8a58dc6be7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71199339"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827989"
 ---
 # <a name="sysdm_exec_describe_first_result_set_for_object-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Questa funzione a gestione dinamica accetta @object_id come parametro e descrive i metadati del primo risultato per il modulo con tale ID. Il @object_id valore specificato può essere l'ID di [!INCLUDE[tsql](../../includes/tsql-md.md)] un stored procedure o [!INCLUDE[tsql](../../includes/tsql-md.md)] di un trigger. Se è l'ID di qualsiasi altro oggetto, ad esempio una vista, una tabella, una funzione o una procedura CLR, viene specificato un errore nelle colonne degli errori del risultato.  
+  Questa funzione a gestione dinamica accetta @object_id come parametro e descrive i metadati del primo risultato per il modulo con tale ID. Il valore @object_id specificato può essere l'ID di un [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure o di un [!INCLUDE[tsql](../../includes/tsql-md.md)] trigger. Se è l'ID di qualsiasi altro oggetto, ad esempio una vista, una tabella, una funzione o una procedura CLR, viene specificato un errore nelle colonne degli errori del risultato.  
   
  **sys. dm_exec_describe_first_result_set_for_object** ha la stessa definizione del set di risultati [sys. dm_exec_describe_first_result_set &#40;transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) ed è simile a SP_DESCRIBE_FIRST_RESULT_SET &#40;[Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)&#41;.  
   
@@ -44,7 +44,7 @@ sys.dm_exec_describe_first_result_set_for_object
   
 ## <a name="arguments"></a>Argomenti  
  *\@object_id*  
- Oggetto @object_id di un [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure o di [!INCLUDE[tsql](../../includes/tsql-md.md)] un trigger. @object_id è di tipo **int**.  
+ Oggetto @object_id di un [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure o di un [!INCLUDE[tsql](../../includes/tsql-md.md)] trigger. @object_id è di tipo **int**.  
   
  *\@include_browse_information*  
  @include_browse_informationè di tipo **bit**. Se impostato su 1, ogni query viene analizzata come se per essa fosse stata specificata un'opzione FOR BROWSE. Restituisce informazioni sulla tabella di origine e colonne chiave aggiuntive.  
@@ -96,7 +96,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**error_type**|**int**|Contiene un numero intero che rappresenta l'errore restituito. Viene eseguito il mapping a error_type_desc. Vedere l'elenco nelle osservazioni.|  
 |**error_type_desc**|**nvarchar(60)**|Contiene una breve stringa in caratteri maiuscoli che rappresenta l'errore restituito. Viene eseguito il mapping a error_type. Vedere l'elenco nelle osservazioni.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questa funzione utilizza lo stesso algoritmo di **sp_describe_first_result_set**. Per ulteriori informazioni, vedere [sp_describe_first_result_set &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
  Nella tabella seguente vengono elencati i tipi di errore con le relative descrizioni  
@@ -118,7 +118,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |13|OBJECT_ID_DOES_NOT_EXIST|Il @object_id passato alla funzione non è stato trovato nel catalogo di sistema.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'autorizzazione per @tsql eseguire l'argomento.  
+ È richiesta l'autorizzazione per eseguire l' @tsql argomento.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -138,7 +138,7 @@ GO
 ```  
   
 ### <a name="b-combining-the-sysdm_exec_describe_first_result_set_for_object-function-and-a-table-or-view"></a>B. Combinazione della funzione sys.dm_exec_describe_first_result_set_for_object e di una tabella o vista  
- Nell'esempio seguente vengono utilizzate la vista del catalogo di sistema sys. Procedures e la funzione **sys. dm_exec_describe_first_result_set_for_object** per visualizzare i metadati per i set di risultati di tutte [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] le stored procedure nel database.  
+ Nell'esempio seguente vengono utilizzate la vista del catalogo di sistema sys. Procedures e la funzione **sys. dm_exec_describe_first_result_set_for_object** per visualizzare i metadati per i set di risultati di tutte le stored procedure nel [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```  
 USE AdventureWorks2012;  

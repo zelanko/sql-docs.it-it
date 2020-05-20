@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_enable_collector
 - data collector [SQL Server], stored procedures
 ms.assetid: 53ff2b0d-b7da-4e3d-8f3d-35e857bc3720
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ab6087b68fba057e6acd91f43804b0e324992e1d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7015577f6965524735d97969f025c23a8a1b65d6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68000810"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828779"
 ---
 # <a name="sp_syscollector_enable_collector-transact-sql"></a>sp_syscollector_enable_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,18 +40,18 @@ dbo.sp_syscollector_enable_collector
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- nessuno  
+ Nessuno  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il valore predefinito è l'agente di raccolta dati del server.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa procedura, è necessaria l'appartenenza al ruolo predefinito del database **dc_admin** o **dc_operator** (con autorizzazione EXECUTE).  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene abilitato l'agente di raccolta dati.  
   
 ```sql  

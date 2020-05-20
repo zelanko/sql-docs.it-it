@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e0d725d37470f28847feb296194abd98fce9ae4a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 57087264554d228ec02ed22baa2afb932e646b10
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68061925"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826388"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>Notifiche di query-sys. dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,12 +42,12 @@ ms.locfileid: "68061925"
   
 ## <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
-|From|A|Attivato|Type|  
+|From|A|On|Tipo|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|Molti-a-uno|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|Molti-a-uno|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il codice di stato 0 indica uno stato non definito.  
   
  I codici di stato seguenti indicano che è stata attivata una sottoscrizione a causa di una modifica:  
@@ -55,7 +55,7 @@ ms.locfileid: "68061925"
 |Codice|Stato minore|Info|  
 |----------|------------------|----------|  
 |65798|La sottoscrizione è stata attivata perché i dati sono stati modificati|sottoscrizione attivata dall'inserimento|  
-|65799|La sottoscrizione è stata attivata perché i dati sono stati modificati|Delete|  
+|65799|La sottoscrizione è stata attivata perché i dati sono stati modificati|Elimina|  
 |65800|La sottoscrizione è stata attivata perché i dati sono stati modificati|Aggiornamento|  
 |65801|La sottoscrizione è stata attivata perché i dati sono stati modificati|Unione|  
 |65802|La sottoscrizione è stata attivata perché i dati sono stati modificati|Tronca tabella|  

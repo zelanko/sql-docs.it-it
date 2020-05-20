@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_bindsession
 ms.assetid: 1436fe21-ad00-4a98-aca1-1451a5e571d2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fac327d88aa8a6d74e153c1c7b2f3d637bf6f936
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9a079a279c9d342033086c565203f85ad360e753
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68046019"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828496"
 ---
 # <a name="sp_bindsession-transact-sql"></a>sp_bindsession (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Associa o Annulla l'associazione di una sessione ad altre sessioni nella stessa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. L'associazione di sessioni consente a due o più sessioni di partecipare alla stessa transazione e condividere i blocchi fino a quando non viene eseguita un'istruzione ROLLBACK TRANSACTION o COMMIT TRANSACTION.  
+  Associa o Annulla l'associazione di una sessione ad altre sessioni nella stessa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] . L'associazione di sessioni consente a due o più sessioni di partecipare alla stessa transazione e condividere i blocchi fino a quando non viene eseguita un'istruzione ROLLBACK TRANSACTION o COMMIT TRANSACTION.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilizzare invece MARS (Multiple Active Results Sets) o transazioni distribuite. Per altre informazioni vedere [Uso di MARS &#40;Multiple Active Result Set&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
@@ -48,12 +48,12 @@ sp_bindsession { 'bind_token' | NULL }
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Due sessioni associate condividono esclusivamente la transazione e i blocchi. Ogni sessione mantiene il livello di isolamento specifico impostato e se si imposta un diverso livello di isolamento per una sessione, tale modifica non influisce sul livello di isolamento dell'altra sessione. Ogni sessione è identificata da un account di sicurezza specifico e consente l'accesso solo alle risorse del database per cui l'account in questione dispone delle autorizzazioni.  
   
  **sp_bindsession** utilizza un token di associazione per associare due o più sessioni client esistenti. Tali sessioni devono essere incluse nella stessa istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)] da cui è stato ottenuto il token di associazione. Una sessione è un client che esegue un comando. Le sessioni di database associate condividono una transazione e uno spazio di blocco.  
   
- Non è possibile utilizzare un token di associazione ottenuto da un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)] per una sessione client connessa a un'altra istanza, anche nel caso di transazioni DTC. Un token di associazione è valido solo a livello locale all'interno di ogni istanza e non può essere condiviso tra più istanze. Per associare le [!INCLUDE[ssDE](../../includes/ssde-md.md)]sessioni client in un'altra istanza di, è necessario ottenere un token di associazione diverso eseguendo **sp_getbindtoken**.  
+ Non è possibile utilizzare un token di associazione ottenuto da un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)] per una sessione client connessa a un'altra istanza, anche nel caso di transazioni DTC. Un token di associazione è valido solo a livello locale all'interno di ogni istanza e non può essere condiviso tra più istanze. Per associare le sessioni client in un'altra istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)] , è necessario ottenere un token di associazione diverso eseguendo **sp_getbindtoken**.  
   
  **sp_bindsession** avrà esito negativo con un errore se usa un token non attivo.  
   

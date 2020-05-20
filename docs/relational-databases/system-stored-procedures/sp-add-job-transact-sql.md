@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_job
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7752b8fcb453f545c357c529774d570e41201ed1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c78536fbf8e9bb00133d7724f218c60c3d005fb2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72381906"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826341"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "72381906"
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
  > [!IMPORTANT]  
- > In [istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la maggior parte delle funzionalità di SQL Server Agent sono attualmente supportate. Per informazioni dettagliate, vedere [istanza gestita di database SQL di Azure differenze di T-SQL da SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) .
+ > In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
  
 ## <a name="syntax"></a>Sintassi  
   
@@ -57,7 +57,7 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_name = ] 'job_name'`Nome del processo. Il nome deve essere univoco e non può contenere il carattere**%** di percentuale (). *job_name*è di **tipo nvarchar (128)** e non prevede alcun valore predefinito.  
+`[ @job_name = ] 'job_name'`Nome del processo. Il nome deve essere univoco e non può contenere il carattere di percentuale ( **%** ). *job_name*è di **tipo nvarchar (128)** e non prevede alcun valore predefinito.  
   
 `[ @enabled = ] enabled`Indica lo stato del processo aggiunto. *Enabled*è di **tinyint**e il valore predefinito è 1 (abilitato). Se è **0**, il processo non è abilitato e non viene eseguito in base alla pianificazione. Tuttavia, può essere eseguita manualmente.  
   
@@ -69,13 +69,13 @@ sp_add_job [ @job_name = ] 'job_name'
   
 `[ @category_id = ] category_id`Meccanismo indipendente dal linguaggio per specificare una categoria di processi. *category_id*è di **tipo int**e il valore predefinito è null.  
   
-`[ @owner_login_name = ] 'login'`Nome dell'account di accesso proprietario del processo. *login*è di **tipo sysname**e il valore predefinito è null, che viene interpretato come nome di account di accesso corrente. Solo i membri del ruolo predefinito del server **sysadmin** possono impostare o modificare il valore per ** \@owner_login_name**. Se gli utenti che non sono membri del ruolo **sysadmin** o modificano il valore di ** \@owner_login_name**, l'esecuzione di questo stored procedure ha esito negativo e viene restituito un errore.  
+`[ @owner_login_name = ] 'login'`Nome dell'account di accesso proprietario del processo. *login*è di **tipo sysname**e il valore predefinito è null, che viene interpretato come nome di account di accesso corrente. Solo i membri del ruolo predefinito del server **sysadmin** possono impostare o modificare il valore per ** \@ owner_login_name**. Se gli utenti che non sono membri del ruolo **sysadmin** o modificano il valore di ** \@ owner_login_name**, l'esecuzione di questo stored procedure ha esito negativo e viene restituito un errore.  
   
 `[ @notify_level_eventlog = ] eventlog_level`Valore che indica quando inserire una voce nel registro applicazioni di Microsoft Windows per questo processo. *eventlog_level*è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
-|**0**|Never|  
+|**0**|Mai|  
 |**1**|In caso di esito positivo|  
 |**2** (impostazione predefinita)|In caso di esito negativo|  
 |**3**|Sempre|  
@@ -106,9 +106,9 @@ sp_add_job [ @job_name = ] 'job_name'
  nessuno  
   
 ## <a name="remarks"></a>Osservazioni  
- originating_server esiste nel **sp_add_job,** ma non è elencato in argomenti. ** \@** originating_server è riservata per uso interno. ** \@**  
+ ** \@ originating_server** esiste nel **sp_add_job,** ma non è elencato in argomenti. ** \@ originating_server** è riservata per uso interno.  
   
- Dopo l'esecuzione di **sp_add_job** per l'aggiunta di un processo, è possibile usare **sp_add_jobstep** per aggiungere passaggi che eseguono le attività del processo. **sp_add_jobschedule** possibile utilizzare per creare la pianificazione utilizzata dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servizio Agent per eseguire il processo. Utilizzare **sp_add_jobserver** per impostare l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza di in cui viene eseguito il processo e **sp_delete_jobserver** per rimuovere il processo dall' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza di.  
+ Dopo l'esecuzione di **sp_add_job** per l'aggiunta di un processo, è possibile usare **sp_add_jobstep** per aggiungere passaggi che eseguono le attività del processo. **sp_add_jobschedule** possibile utilizzare per creare la pianificazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzata dal servizio Agent per eseguire il processo. Utilizzare **sp_add_jobserver** per impostare l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza di in cui viene eseguito il processo e **sp_delete_jobserver** per rimuovere il processo dall' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza di.  
   
  Se il processo verrà eseguito in uno o più server di destinazione in un ambiente multiserver, utilizzare **sp_apply_job_to_targets** per impostare i server di destinazione o i gruppi di server di destinazione per il processo. Per rimuovere i processi dai server di destinazione o dai gruppi di server di destinazione, utilizzare **sp_remove_job_from_targets**.  
   
@@ -125,7 +125,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  Per informazioni sulle autorizzazioni specifiche associate a ognuno di questi ruoli predefiniti del database, vedere [SQL Server Agent ruoli](../../ssms/agent/sql-server-agent-fixed-database-roles.md)predefiniti del database.  
   
- Solo i membri del ruolo predefinito del server **sysadmin** possono impostare o modificare il valore per ** \@owner_login_name**. Se gli utenti che non sono membri del ruolo **sysadmin** o modificano il valore di ** \@owner_login_name**, l'esecuzione di questo stored procedure ha esito negativo e viene restituito un errore.  
+ Solo i membri del ruolo predefinito del server **sysadmin** possono impostare o modificare il valore per ** \@ owner_login_name**. Se gli utenti che non sono membri del ruolo **sysadmin** o modificano il valore di ** \@ owner_login_name**, l'esecuzione di questo stored procedure ha esito negativo e viene restituito un errore.  
   
 ## <a name="examples"></a>Esempi  
   

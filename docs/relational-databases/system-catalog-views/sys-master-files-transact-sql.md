@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.master_files catalog view
 ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2aa7c30f132f0c0e8774dcb39f31e1a254e8689c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2baa122d56582cfdf0bef780434f9f5ba98711ca
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72313716"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825149"
 ---
 # <a name="sysmaster_files-transact-sql"></a>sys.master_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -36,8 +36,8 @@ ms.locfileid: "72313716"
 |-----------------|---------------|-----------------|  
 |database_id|**int**|ID del database al quale è associato il file corrente. Il masterdatabase_id è sempre 1.|  
 |file_id|**int**|ID del file all'interno del database. Il file_id primario è sempre 1.|  
-|file_guid|**uniqueidentifier**|Identificatore univoco del file.<br /><br /> NULL = il database è stato aggiornato da una versione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedente di (valido per SQL Server 2005 e versioni precedenti).|  
-|type|**tinyint**|Tipo di file:<br /><br /> 0 = Righe<br /><br /> 1 = Log<br /><br /> 2 = FILESTREAM<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = Full-text (cataloghi full-text precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]; i cataloghi full-text aggiornati a oppure creati in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versioni successive indicheranno un tipo di file 0).|  
+|file_guid|**uniqueidentifier**|Identificatore univoco del file.<br /><br /> NULL = il database è stato aggiornato da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (valido per SQL Server 2005 e versioni precedenti).|  
+|tipo|**tinyint**|Tipo di file:<br /><br /> 0 = Righe<br /><br /> 1 = Log<br /><br /> 2 = FILESTREAM<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = Full-text (cataloghi full-text precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]; i cataloghi full-text aggiornati a oppure creati in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versioni successive indicheranno un tipo di file 0).|  
 |type_desc|**nvarchar(60)**|Descrizione del tipo di file:<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (cataloghi full-text precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]).|  
 |data_space_id|**int**|ID dello spazio dati al quale appartiene il file. Lo spazio dati è un filegroup.<br /><br /> 0 = File di log|  
 |name|**sysname**|Nome logico del file nel database.|  

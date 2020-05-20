@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_reinitsubscription
 ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: eaeeaa5009cb119b40dcde9b8f9baa170d8f7bef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ee9af1ee7057b7a64a62e0ead12ba7e386839587
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762535"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828250"
 ---
 # <a name="sp_reinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,10 +54,10 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
   
 `[ @for_schema_change = ] 'for_schema_change'`Indica se la reinizializzazione viene eseguita in seguito a una modifica dello schema nel database di pubblicazione. *for_schema_change* è di **bit**e il valore predefinito è 0. Se è **0**, le sottoscrizioni attive per le pubblicazioni che consentono l'aggiornamento immediato vengono riattivate fino a quando l'intera pubblicazione e non solo alcuni degli articoli vengono reinizializzate. Le reinizializzazione viene pertanto avviata in seguito a modifiche dello schema. Se è **1**, le sottoscrizioni attive non vengono riattivate fino a quando non viene eseguita la agente di snapshot.  
   
-`[ @publisher = ] 'publisher'`Specifica un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publisher = ] 'publisher'`Specifica un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
->  il *Server* di pubblicazione non deve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] essere utilizzato per i server di pubblicazione.  
+>  il server di pubblicazione non deve essere utilizzato per i *Server* di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione.  
   
 `[ @ignore_distributor_failure = ] ignore_distributor_failure`Consente la reinizializzazione anche se il server di distribuzione non esiste o è offline. *ignore_distributor_failure* è di **bit**e il valore predefinito è 0. Se è **0**, la reinizializzazione ha esito negativo se il server di distribuzione non esiste o è offline.  
   
@@ -66,7 +66,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_reinitsubscription** viene utilizzata nella replica transazionale.  
   
  **sp_reinitsubscription** non è supportato per la replica transazionale peer-to-peer.  

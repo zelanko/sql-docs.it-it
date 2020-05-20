@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_add_job
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 7dd10d28855cc4c10f5496c74f1f39a91826052f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 65f75b5f9830a19a973db0fffa06b7baf2bbdbae
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68106540"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825963"
 ---
 # <a name="syssp_cdc_add_job-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  Poiché i processi di pulizia e di acquisizione vengono creati per impostazione predefinita, questa stored procedure è necessaria solo quando un processo è stato eliminato in modo esplicito e deve essere ricreato.  
   
- Il nome del processo è **CDC.** **pulizia del\_** _nome\_\>del database o CDC. \<_ **cdc.** *<database_name>* _\>nome\_del database Capture, dove<database_name>è il nome del database corrente. \<_**\_** Se esiste già un processo con lo stesso nome, il nome viene aggiunto con un punto (**.**) seguito da un identificatore univoco, ad esempio: **CDC. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
+ Il nome del processo è **CDC.** ** \_ pulizia** del _ \< \_ nome \> del database_o **CDC.** _ \< \_ nome \> del database_** \_ Capture**, dove *<database_name>* è il nome del database corrente. Se esiste già un processo con lo stesso nome, il nome viene aggiunto con un punto (**.**) seguito da un identificatore univoco, ad esempio: **CDC. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
   
  Per visualizzare la configurazione corrente di un processo di pulizia o di acquisizione, utilizzare [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md). Per modificare la configurazione di un processo, utilizzare [sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md).  
   

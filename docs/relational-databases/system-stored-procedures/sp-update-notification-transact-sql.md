@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_updatenotification
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 35cfa3aeda8e296cd1a85a0e8a098aaddac90954
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7282472dcb916d7122625534cb64f80ce9f4ea6a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084858"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827483"
 ---
 # <a name="sp_update_notification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_update_notification
   
 `[ @notification_method = ] notification`Metodo con cui l'operatore riceve una notifica. la *notifica*è di **tinyint**e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Posta elettronica|  
 |**2**|Cercapersone|  
@@ -59,7 +59,7 @@ sp_update_notification
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_update_notification** deve essere eseguito dal database **msdb** .  
   
  È possibile aggiornare una notifica per un operatore che non ha le informazioni di indirizzo necessarie usando il *notification_method*specificato. Gli eventuali errori che si verificano durante l'invio di un messaggio di posta elettronica o di una notifica su cercapersone vengono registrati nel log degli errori di Microsoft SQL Server Agent.  
@@ -67,8 +67,8 @@ sp_update_notification
 ## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa stored procedure, è necessario che agli utenti venga concesso il ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene modificato il metodo di notifica per le `François Ajenstat`notifiche inviate a `Test Alert`per l'avviso.  
+## <a name="examples"></a>Esempio  
+ Nell'esempio seguente viene modificato il metodo di notifica per le notifiche inviate a `François Ajenstat` per l'avviso `Test Alert` .  
   
 ```  
 USE msdb ;  

@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_stats_properties
 ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 274e801bfb8e627564f5586574c16ecd916e9859
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 21007e66d8f193ce8e2a166e1615619be409cb9d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910710"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828015"
 ---
 # <a name="sysdm_db_stats_properties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |rows_sampled|**bigint**|Numero totale di righe campionate per i calcoli statistici.|  
 |steps|**int**|Numero di intervalli nell'istogramma. Per altre informazioni, vedere [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).|  
 |unfiltered_rows|**bigint**|Numero totale di righe nella tabella prima dell'applicazione dell'espressione di filtro (per statistiche filtrate). Se le statistiche non vengono filtrate, unfiltered_rows corrisponde al valore restituito nella colonna rows.|  
-|modification_counter|**bigint**|Numero totale di modifiche per la colonna iniziale delle statistiche, la colonna in cui viene compilato l'istogramma, dall'ultimo aggiornamento delle statistiche.<br /><br /> Tabelle con ottimizzazione per la memoria [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] : a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] partire da e in questa colonna è contenuto il numero totale di modifiche per la tabella dall'ultimo aggiornamento delle statistiche oppure il database è stato riavviato.|  
+|modification_counter|**bigint**|Numero totale di modifiche per la colonna iniziale delle statistiche, la colonna in cui viene compilato l'istogramma, dall'ultimo aggiornamento delle statistiche.<br /><br /> Tabelle con ottimizzazione per la memoria: a partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] da e in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] questa colonna è contenuto il numero totale di modifiche per la tabella dall'ultimo aggiornamento delle statistiche oppure il database è stato riavviato.|  
 |persisted_sample_percent|**float**|Percentuale di campionamento persistente usata per gli aggiornamenti delle statistiche che non specificano in modo esplicito una percentuale di campionamento. Se il valore è zero, non viene impostata alcuna percentuale di campionamento persistente per la statistica.<br /><br /> **Si applica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
   
 ## <a name="remarks"></a>Osservazioni su <a name="Remarks"></a>  
@@ -77,7 +77,7 @@ La data di aggiornamento delle statistiche viene archiviata nell'[oggetto BLOB d
 ## <a name="examples"></a>Esempi  
 
 ### <a name="a-simple-example"></a>R. Esempio semplice
-Nell'esempio seguente vengono restituite le statistiche `Person.Person` per la tabella nel database AdventureWorks.
+Nell'esempio seguente vengono restituite le statistiche per la `Person.Person` tabella nel database AdventureWorks.
 
 ```sql
 SELECT * FROM sys.dm_db_stats_properties (object_id('Person.Person'), 1);
@@ -104,7 +104,7 @@ CROSS APPLY sys.dm_db_stats_properties(stat.object_id, stat.stats_id) AS sp
 WHERE modification_counter > 1000;  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [DBCC SHOW_STATISTICS &#40;&#41;Transact-SQL](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [sys. stats &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
  [Funzioni e viste a gestione dinamica relative agli oggetti &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   

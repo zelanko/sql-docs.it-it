@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_catalog_components
 ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 213cc6ea9be57590d52755fdbba3151882ac0a38
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 687a624eea351433407ee88298a6520ceb213841
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055175"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827709"
 ---
 # <a name="sp_help_fulltext_catalog_components-transact-sql"></a>sp_help_fulltext_catalog_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ sp_help_fulltext_catalog_components
 |-----------------|---------------|-----------------|  
 |**nome catalogo full-text**|**int**|Nome del catalogo full-text.|  
 |**ID catalogo full-text**|**sysname**|ID del catalogo full-text.|  
-|**componenttype**|**sysname**|Tipo di componente. I tipi validi sono:<br /><br /> Filtro<br /><br /> Protocol handler<br /><br /> Wordbreaker|  
+|**componenttype**|**sysname**|Tipo di componente. I tipi validi sono:<br /><br /> Filtra<br /><br /> Protocol handler<br /><br /> Wordbreaker|  
 |**ComponentName**|**sysname**|Nome del componente.|  
 |**clsid**|**uniqueidentifier**|Identificatore della classe del componente.|  
 |**fullpath**|**nvarchar(256)**|Percorso della posizione del componente.<br /><br /> NULL = il chiamante non è un membro del ruolo predefinito del server **serveradmin** .|  
 |**version**|**nvarchar(30)**|Versione del componente.|  
-|**manufacturer**|**sysname**|Nome del produttore del componente.|  
+|**Produttore**|**sysname**|Nome del produttore del componente.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  

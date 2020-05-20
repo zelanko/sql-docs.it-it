@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helparticle
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e1e71d3795b233ec335cf01848fa3b226a6ebde0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f840af0170278692de43b7933965500b304669b1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771105"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828350"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,14 +43,14 @@ sp_helparticle [ @publication = ] 'publication'
 ## <a name="arguments"></a>Argomenti  
 `[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @article = ] 'article'`Nome di un articolo della pubblicazione. *article* è di **%** **tipo sysname**e il valore predefinito è. Se l' *articolo* non viene specificato, vengono restituite informazioni su tutti gli articoli relativi alla pubblicazione specificata.  
+`[ @article = ] 'article'`Nome di un articolo della pubblicazione. *article* è di **tipo sysname**e il valore predefinito è **%** . Se l' *articolo* non viene specificato, vengono restituite informazioni su tutti gli articoli relativi alla pubblicazione specificata.  
   
 `[ @returnfilter = ] returnfilter`Specifica se deve essere restituita la clausola di filtro. *returnfilter* è di **bit**e il valore predefinito è **1**, che restituisce la clausola di filtro.  
   
-`[ @publisher = ] 'publisher'`Specifica un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publisher = ] 'publisher'`Specifica un server di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
->  Impossibile specificare *Publisher* quando si richiedono informazioni su un articolo pubblicato da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
+>  Impossibile specificare *Publisher* quando si richiedono informazioni su un articolo pubblicato da un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione.  
   
 `[ @found = ] found OUTPUT`Solo per uso interno.  
   
@@ -92,7 +92,7 @@ sp_helparticle [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_helparticle** viene utilizzata nella replica snapshot e nella replica transazionale.  
   
 ## <a name="permissions"></a>Autorizzazioni  

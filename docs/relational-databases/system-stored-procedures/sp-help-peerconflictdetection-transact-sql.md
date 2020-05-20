@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_peerconflictdetection
 ms.assetid: 59e04107-5eaa-44a1-beb6-ac4f2dbbcb28
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b08e3312f34fcc26d6effff92e09b3739508171e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d5c593127a16a5a1045b8b44f943079cd3335f3a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085287"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828379"
 ---
 # <a name="sp_help_peerconflictdetection-transact-sql"></a>sp_help_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @publication= ] '*Publication*'  
+ [ @publication =]'*pubblicazione*'  
  Nome della pubblicazione per cui si desidera restituire le informazioni. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
- [ @timeout= ] *timeout*  
+ [ @timeout =] *timeout*  
  Specifica l'intervallo di tempo, espresso in secondi, dopo il quale si verifica il timeout della procedura durante l'attesa di una risposta da ogni nodo nella topologia. Se nella topologia è presente un Sottoscrittore di sola lettura, non sarà possibile specificare un valore di timeout. I Sottoscrittori di sola lettura non rispondono mai a una chiamata da questa procedura. *timeout* è di **tipo int**e il valore predefinito è 60.  
   
 ## <a name="result-sets"></a>Set di risultati  
@@ -56,7 +56,7 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  sp_help_peerconflictdetection è utilizzato nella replica transazionale peer-to-peer.  
   
 ## <a name="permissions"></a>Autorizzazioni  

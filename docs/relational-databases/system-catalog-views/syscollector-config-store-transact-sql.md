@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector view
 - syscollector_config_store view
 ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 174fa1af651c2e713bdb91ba217e896b833467b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 17271cf5e5f7f3bfafe8b0fbf52ddb77a2746e3f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060367"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824943"
 ---
 # <a name="syscollector_config_store-transact-sql"></a>syscollector_config_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68060367"
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede l'autorizzazione SELECT sulla vista o l'appartenenza ai ruoli predefiniti del database dc_operator, dc_proxy o dc_admin.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  L'elenco di proprietà disponibile è fisso e i relativi valori possono essere modificati utilizzando solo la stored procedure appropriata. Nella tabella seguente vengono descritte le proprietà esposte tramite questa vista.  
   
 |Nome proprietà|Descrizione|  
@@ -49,7 +49,7 @@ ms.locfileid: "68060367"
 |MDWDatabase|Nome del data warehouse di gestione. Utilizzare la stored procedure sp_syscollector_set_warehouse_database_name per modificare questo valore.|  
 |MDWInstance|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per il data warehouse di gestione. Utilizzare la stored procedure sp_syscollector_set_warehouse_instance_name per modificare questo valore.|  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene eseguita una query sulla vista syscollector_config_store.  
   
 ```sql  

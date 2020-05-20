@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_properties dynamic management view
 ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 331969c2baa8ec67e0cd7c0ebf8cdd894878f397
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8cb9cfc6e645e9777a697e62183db874c47cfeb4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266058"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824725"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68266058"
   
  La proprietà **Version** indica la versione del .NET Framework e del CLR ospitato nel server.  
   
- La vista gestita dinamica **sys. dm_clr_properties** può restituire sei valori diversi per la proprietà **state** , che riflette lo stato del CLR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Hosted. ovvero:  
+ La vista gestita dinamica **sys. dm_clr_properties** può restituire sei valori diversi per la proprietà **state** , che riflette lo stato del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR hosted. ovvero:  
   
 -   Mscoree is not loaded.  
   
@@ -62,21 +62,21 @@ ms.locfileid: "68266058"
   
  È possibile che la **versione CLR bloccata con** lo stato Mscoree sia visibile laddove il CLR ospitato non è in uso e pertanto non è ancora stato inizializzato. Il CLR hosted viene inizializzato alla prima esecuzione di un'istruzione DDL, ad esempio [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md), o un oggetto di database gestito.  
   
- Lo stato di **CLR inizializzato** indica che il CLR hosted è stato inizializzato correttamente. Si noti che questo stato non indica se l'esecuzione del codice CLR utente è stata abilitata. Se l'esecuzione del codice CLR utente viene prima abilitata e quindi disabilitata [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzando il [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) stored procedure, il valore di stato sarà ancora **CLR inizializzato**.  
+ Lo stato di **CLR inizializzato** indica che il CLR hosted è stato inizializzato correttamente. Si noti che questo stato non indica se l'esecuzione del codice CLR utente è stata abilitata. Se l'esecuzione del codice CLR utente viene prima abilitata e quindi disabilitata utilizzando il [!INCLUDE[tsql](../../includes/tsql-md.md)] [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) stored procedure, il valore di stato sarà ancora **CLR inizializzato**.  
   
  Lo stato di **inizializzazione in modo permanente per l'inizializzazione CLR** indica che l'inizializzazione CLR ospitata Le possibili cause sono la scarsa disponibilità di memoria o un errore nell'handshake host tra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il CLR. In questo caso verrà generato il messaggio di errore 6512 o 6513.  
   
  Lo **stato di CLR arrestato** viene visualizzato solo quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in corso l'arresto.  
   
-## <a name="remarks"></a>Osservazioni  
- Le proprietà e i valori di questa visualizzazione potrebbero cambiare in una versione futura [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di a causa dei miglioramenti della funzionalità di integrazione con CLR.  
+## <a name="remarks"></a>Commenti  
+ Le proprietà e i valori di questa visualizzazione potrebbero cambiare in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a causa dei miglioramenti della funzionalità di integrazione con CLR.  
   
 ## <a name="permissions"></a>Autorizzazioni  
   
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]è richiesta `VIEW SERVER STATE` l'autorizzazione.   
+In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
 Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
 
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  L'esempio seguente recupera informazioni relative al CLR hosted:  
   
 ```  

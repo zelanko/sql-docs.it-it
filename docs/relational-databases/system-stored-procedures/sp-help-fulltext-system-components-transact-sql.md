@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_system_components
 ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98e360887d63db59e1e61bf5c52928e9626b0f39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e6239ac1bb413d2291b94e7ac05b445c770e5f13
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304888"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827653"
 ---
 # <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -72,7 +72,7 @@ sp_help_fulltext_system_components
 |**clsid**|**uniqueidentifier**|Identificatore della classe del componente.|  
 |**fullpath**|**nvarchar(256)**|Percorso della posizione del componente.<br /><br /> NULL = il chiamante non è un membro del ruolo predefinito del server **serveradmin** .|  
 |**version**|**nvarchar(30)**|Versione del componente.|  
-|**manufacturer**|**sysname**|Nome del produttore del componente.|  
+|**Produttore**|**sysname**|Nome del produttore del componente.|  
   
  Il set di risultati seguente viene restituito solo se esistono uno o più cataloghi full-text che utilizzano *component_type*.  
   
@@ -84,7 +84,7 @@ sp_help_fulltext_system_components
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** ; Tuttavia, gli utenti possono visualizzare solo le informazioni sui cataloghi full-text per i quali dispongono dell'autorizzazione VIEW DEFINITION. Solo i membri del ruolo predefinito del server **serveradmin** possono visualizzare i valori nella colonna **FullPath** .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questo metodo è di particolare importanza durante la preparazione per un aggiornamento. Eseguire la stored procedure all'interno di un particolare database e utilizzare l'output per determinare se l'aggiornamento avrà effetti su un particolare catalogo.  
   
 ## <a name="examples"></a>Esempi  
@@ -106,7 +106,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>C. Determinazione della registrazione di un word breaker specifico  
- Nell'esempio seguente viene elencato il word breaker per la lingua turca (LCID = 1055) se è stato installato nel sistema e registrato sull'istanza del servizio. In questo esempio vengono specificati i nomi dei parametri, ** \@component_type** e ** \@param**.  
+ Nell'esempio seguente viene elencato il word breaker per la lingua turca (LCID = 1055) se è stato installato nel sistema e registrato sull'istanza del servizio. In questo esempio vengono specificati i nomi dei parametri, ** \@ component_type** e ** \@ param**.  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  

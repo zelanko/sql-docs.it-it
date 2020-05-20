@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSsubscription_properties system table
 ms.assetid: f96fc1ae-b798-4b05-82a7-564ae6ef23b8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e49d5ed290d95453c376713cabb914a495dfca8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 38013350a75e6632995d8025535ea115110894e0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139716"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827185"
 ---
 # <a name="mssubscription_properties-transact-sql"></a>MSsubscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "68139716"
 |**publication_type**|**int**|Tipo di pubblicazione:<br /><br /> **0** = transazionale.<br /><br /> **2** = Unione.|  
 |**publisher_login**|**sysname**|ID dell'account di accesso utilizzato nel server di pubblicazione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**publisher_password**|**nvarchar (524)**|Password (crittografata) utilizzata nel server di pubblicazione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**publisher_security_mode**|**int**|Modalità di sicurezza implementata nel server di pubblicazione:<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server l'autenticazione.<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticazione di Windows.<br /><br /> **2** = i trigger di sincronizzazione utilizzano una voce **sysservers** statica per eseguire una chiamata di procedura remota (RPC) e il server di *pubblicazione* deve essere definito nella tabella **sysservers** come server remoto o server collegato.|  
+|**publisher_security_mode**|**int**|Modalità di sicurezza implementata nel server di pubblicazione:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server l'autenticazione.<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticazione di Windows.<br /><br /> **2** = i trigger di sincronizzazione utilizzano una voce **sysservers** statica per eseguire una chiamata di procedura remota (RPC) e il server di *pubblicazione* deve essere definito nella tabella **sysservers** come server remoto o server collegato.|  
 |**distribuzione**|**sysname**|Nome del server di distribuzione.|  
 |**distributor_login**|**sysname**|ID dell'account di accesso utilizzato nel server di distribuzione per l'autenticazione di SQL Server.|  
 |**distributor_password**|**nvarchar (524)**|Password (crittografata) utilizzata nel server di distribuzione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**distributor_security_mode**|**int**|Modalità di sicurezza implementata nel server di distribuzione.<br /><br /> **autenticazione 0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> **1** = autenticazione di Windows.|  
+|**distributor_security_mode**|**int**|Modalità di sicurezza implementata nel server di distribuzione.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione 0.<br /><br /> **1** = autenticazione di Windows.|  
 |**ftp_address**|**sysname**|Indirizzo di rete del servizio File Transfer Protocol (FTP) per il server di distribuzione.|  
 |**ftp_port**|**int**|Numero di porta del servizio FTP per il server di distribuzione.|  
 |**ftp_login**|**sysname**|Nome utente utilizzato per la connessione al servizio FTP.|  
@@ -52,7 +52,7 @@ ms.locfileid: "68139716"
 |**dts_package_name**|**sysname**|Specifica il nome del pacchetto Data Transformation Services (DTS).|  
 |**dts_package_password**|**nvarchar (524)**|Specifica la password per il pacchetto.|  
 |**dts_package_location**|**int**|Percorso di archiviazione del pacchetto DTS.|  
-|**enabled_for_syncmgr**|**bit**|Specifica se è possibile sincronizzare la sottoscrizione tramite Gestione sincronizzazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> **0** = la sottoscrizione non è registrata con Gestione sincronizzazione.<br /><br /> **1** = la sottoscrizione viene registrata con Gestione sincronizzazione e può essere sincronizzata [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]senza avviare.|  
+|**enabled_for_syncmgr**|**bit**|Specifica se è possibile sincronizzare la sottoscrizione tramite Gestione sincronizzazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> **0** = la sottoscrizione non è registrata con Gestione sincronizzazione.<br /><br /> **1** = la sottoscrizione viene registrata con Gestione sincronizzazione e può essere sincronizzata senza avviare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .|  
 |**offload_agent**|**bit**|Specifica se è possibile attivare l'agente in remoto. Se è **0**, l'agente non può essere attivato in remoto.|  
 |**offload_server**|**sysname**|Nome di rete del server utilizzato per l'attivazione remota.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|Specifica il percorso della cartella in cui vengono salvati i file di snapshot.|  

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_update_collection_item
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 791c20214ff3eda4b5bb1f2bd3214b25ea972d74
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e14f60cb3e1a4493e58968913a3ae840625e190f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010552"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828217"
 ---
 # <a name="sp_syscollector_update_collection_item-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,27 +46,27 @@ sp_syscollector_update_collection_item
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @collection_item_id = ] *collection_item_id*  
+ [ @collection_item_id =] *collection_item_id*  
  Identificatore univoco che identifica l'elemento della raccolta. *collection_item_id* è di **tipo int** e il valore predefinito è null. *collection_item_id* deve avere un valore se il *nome* è null.  
   
- [ @name = ] '*Name*'  
+ [ @name =]'*nome*'  
  Nome dell'elemento della raccolta. *Name* è di **tipo sysname** e il valore predefinito è null. Se *collection_item_id* è null, il *nome* deve avere un valore.  
   
- [ @new_name = ] '*new_name*'  
+ [ @new_name =]'*new_name*'  
  Nuovo nome per l'elemento della raccolta. *new_name* è di **tipo sysname**e, se utilizzato, non può essere una stringa vuota.  
   
  *new_name* deve essere univoco. Per un elenco dei nomi degli elementi della raccolta correnti, eseguire una query sulla vista di sistema syscollector_collection_items.  
   
- [ @frequency = ] *frequenza* di  
+ [ @frequency =] *frequenza*  
  Frequenza, espressa in secondi, con cui vengono raccolti i dati da questo elemento della raccolta. *Frequency* è di **tipo int**e il valore predefinito è 5, ovvero il valore minimo che è possibile specificare.  
   
- [ @parameters = ] '*Parameters*'  
+ [ @parameters =]'*Parameters*'  
  Parametri di input per l'elemento della raccolta. *Parameters* è di **XML** e il valore predefinito è null. Lo schema dei *parametri* deve corrispondere allo schema dei parametri del tipo di agente di raccolta.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se il set di raccolta è impostato sulla modalità non in cache, la modifica della frequenza viene ignorata in quanto in questa modalità la raccolta e il caricamento dei dati vengono eseguiti in base alla pianificazione specificata per il set di raccolta. Per visualizzare lo stato del set di raccolta, eseguire la query seguente. Sostituire `<collection_item_id>` con l'ID dell'elemento della raccolta da aggiornare.  
   
 ```  
@@ -88,10 +88,10 @@ WHERE collection_item_id = <collection_item_id>;
   
 -   @parameters  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Gli esempi seguenti sono basati sull'elemento della raccolta creato nell'esempio definito in [sp_syscollector_create_collection_item &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md).  
   
-### <a name="a-changing-the-collection-frequency"></a>A. Modifica della frequenza di raccolta  
+### <a name="a-changing-the-collection-frequency"></a>R. Modifica della frequenza di raccolta  
  Nell'esempio seguente viene modificata la frequenza di raccolta per l'elemento della raccolta specificato.  
   
 ```  

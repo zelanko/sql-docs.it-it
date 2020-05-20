@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_memory_objects dynamic management view
 ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3d0691a82607a207a64f4a6c7ed8c937f052abc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eece83b3c1fcde0d33a515c85eeb2cdac0a72cf4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983082"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827879"
 ---
 # <a name="sysdm_os_memory_objects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,16 +54,16 @@ ms.locfileid: "73983082"
 |**contention_factor**|**real**|Valore che specifica la contesa in questo oggetto di memoria, con 0 che significa nessuna contesa. Il valore viene aggiornato ogni volta che viene eseguito un numero specificato di allocazioni di memoria che riflette la contesa durante tale periodo. Si applica solo agli oggetti di memoria thread-safe.|  
 |**waiting_tasks_count**|**bigint**|Numero di attese in questo oggetto memoria. Questo contatore viene incrementato ogni volta che viene allocata memoria da questo oggetto memoria. L'incremento indica il numero di attività attualmente in attesa di accesso a questo oggetto memoria. Si applica solo agli oggetti di memoria thread-safe. Si tratta di un valore del massimo sforzo senza una garanzia di correttezza.|  
 |**exclusive_access_count**|**bigint**|Specifica la frequenza con cui è stato eseguito l'accesso esclusivo a questo oggetto di memoria. Si applica solo agli oggetti di memoria thread-safe.  Si tratta di un valore del massimo sforzo senza una garanzia di correttezza.|  
-|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
+|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
   
- **partition_type**, **contention_factor**, **waiting_tasks_count**e **exclusive_access_count** non sono ancora implementate in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **partition_type**, **contention_factor**, **waiting_tasks_count**e **exclusive_access_count** non sono ancora implementate in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] .  
   
 ## <a name="permissions"></a>Autorizzazioni
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]è richiesta `VIEW SERVER STATE` l'autorizzazione.   
+In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
 Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
 
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Gli oggetti memoria sono heap. Le allocazioni implementate dagli oggetti sono caratterizzate da una maggiore granularità rispetto alle allocazioni implementate dai clerk di memoria. I componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzano oggetti memoria anziché clerk di memoria. Gli oggetti memoria utilizzano l'interfaccia dell'allocatore di pagine del clerk di memoria per allocare le pagine. Gli oggetti memoria non utilizzano interfacce di memoria virtuale o condivisa. In base al modello di allocazione, i componenti possono creare tipi diversi di oggetti memoria per allocare aree di dimensioni arbitrarie.  
   
  Le dimensioni di pagina tipiche di un oggetto memoria sono pari a 8 KB. Gli oggetti memoria incrementale possono tuttavia avere dimensioni di pagina da 512 byte a 8 KB.  
@@ -71,7 +71,7 @@ Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l
 > [!NOTE]  
 >  Le dimensioni di pagina non corrispondono a un'allocazione massima. Le dimensioni di pagina corrispondono invece alla granularità dell'allocazione supportata da un allocatore di pagine e implementata da un clerk di memoria. È possibile richiedere allocazioni superiori a 8 KB dagli oggetti memoria.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene restituita la quantità di memoria allocata per ogni tipo di oggetto memoria.  
   
 ```  

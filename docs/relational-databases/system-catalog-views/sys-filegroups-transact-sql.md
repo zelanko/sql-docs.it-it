@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.filegroups catalog view
 ms.assetid: 9e851f72-1f8e-4515-a25d-152ebc12ed56
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 313c0b80a1bf1d2a094760198053e26426e99c36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4e143c5f995c05b7bf23f62f36ea5681621cccab
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005176"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828150"
 ---
 # <a name="sysfilegroups-transact-sql"></a>sys.filegroups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68005176"
 |**filegroup_guid**|**uniqueidentifier**|GUID del filegroup.<br /><br /> NULL = Filegroup PRIMARY|  
 |**log_filegroup_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questo valore è NULL.|  
 |**is_read_only**|**bit**|1 = Il filegroup è di sola lettura.<br /><br /> 0 = Il filegroup è di lettura/scrittura.|  
-|**is_autogrow_all_files**|**bit**|**Si applica a** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (da alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> 1 = quando un file del filegroup soddisfa la soglia di aumento automatico delle dimensioni, tutti i file nel filegroup aumentano.<br /><br /> 0 = quando un file del filegroup soddisfa la soglia di aumento automatico delle dimensioni, solo quel file aumenta. Questa è la modalità predefinita.|  
+|**is_autogrow_all_files**|**bit**|**Si applica a**: (da alla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> 1 = quando un file del filegroup soddisfa la soglia di aumento automatico delle dimensioni, tutti i file nel filegroup aumentano.<br /><br /> 0 = quando un file del filegroup soddisfa la soglia di aumento automatico delle dimensioni, solo quel file aumenta. Questo è il valore predefinito.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

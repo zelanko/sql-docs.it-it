@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_job
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 29870a0ffb3d2c3b1872acbb40266aef0d16b62c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1972670a39dbd0fdb3f12b58df5116a83bf0a58d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75546560"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827647"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @job_aspect = ] 'job_aspect'`Attributo del processo da visualizzare. *job_aspect* è di tipo **varchar (9)** e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**ALL**|Informazioni sugli attributi del processo|  
 |**PROCESSO**|Informazioni sul processo|  
@@ -81,7 +81,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @execution_status = ] status`Stato di esecuzione dei processi. *status* è di **tipo int**e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|Restituisce solo i processi non inattivi o sospesi.|  
 |**1**|In esecuzione.|  
@@ -91,7 +91,7 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|Sospeso.|  
 |**7**|Esecuzione delle azioni finali in corso.|  
   
-`[ @date_comparator = ] 'date_comparison'`Operatore di confronto da utilizzare nei confronti di *date_created* e *DATE_MODIFIED*. *date_comparison* è di **carattere (1)** e può essere =, \<o >.  
+`[ @date_comparator = ] 'date_comparison'`Operatore di confronto da utilizzare nei confronti di *date_created* e *DATE_MODIFIED*. *date_comparison* è di **carattere (1)** e può essere =, \< o >.  
   
 `[ @date_created = ] date_created`Data di creazione del processo. *date_created*è di tipo **DateTime**e il valore predefinito è null.  
   
@@ -162,7 +162,7 @@ sp_help_job { [ @job_id = ] job_id
 |**retry_attempts**|**int**|Numero massimo di tentativi di esecuzione del comando (nel caso in cui non sia stato eseguito correttamente) oltre il quale il passaggio viene considerato errato.|  
 |**retry_interval**|**int**|Intervallo di tempo in minuti che intercorre tra un tentativo e il successivo.|  
 |**os_run_priority**|**varchar (4000)**|Riservato.|  
-|**output_file_name**|**varchar (200)**|File in cui scrivere l'output del comando ([!INCLUDE[tsql](../../includes/tsql-md.md)] solo per i passaggi **CmdExec** ).|  
+|**output_file_name**|**varchar (200)**|File in cui scrivere l'output del comando ( [!INCLUDE[tsql](../../includes/tsql-md.md)] solo per i passaggi **CmdExec** ).|  
 |**last_run_outcome**|**int**|Risultato dell'ultima esecuzione del passaggio:<br /><br /> **0** = non riuscito<br /><br /> **1** = operazione completata<br /><br /> **3** = annullato<br /><br /> **5** = sconosciuto|  
 |**last_run_duration**|**int**|Durata in secondi dell'ultima esecuzione del passaggio.|  
 |**last_run_retries**|**int**|Numero di tentativi di esecuzione del comando durante l'ultima esecuzione del passaggio.|  
