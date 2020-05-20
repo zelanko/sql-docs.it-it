@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helplogins
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b4c3d6ded5d85e5d38556792aaa7ea71dd9f42fa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c26bf0ff225a593a6427402fc15543edbfc15637
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122446"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818217"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nome dell'account di accesso.|  
 |**SID**|**varbinary (85)**|ID di sicurezza (SID) dell'account di accesso.|  
-|**DefDBName**|**sysname**|Database predefinito utilizzato da **LoginName** per la connessione a un'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di.|  
+|**DefDBName**|**sysname**|Database predefinito utilizzato da **LoginName** per la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**DefLangName**|**sysname**|Lingua predefinita utilizzata da **LoginName**.|  
 |**Auser**|**char (5)**|Yes = **LoginName** è associato a un nome utente in un database.<br /><br /> No = **LoginName** non è associato a un nome utente.|  
 |**ARemote**|**carattere (7)**|Yes = **LoginName** è associato a un account di accesso remoto.<br /><br /> No = **LoginName** non dispone di un account di accesso associato.|  
@@ -61,11 +61,11 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nome dell'account di accesso.|  
-|**DBName**|**sysname**|Database predefinito utilizzato da **LoginName** per la connessione a un'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di.|  
+|**DBName**|**sysname**|Database predefinito utilizzato da **LoginName** per la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**Nome utente**|**sysname**|Account utente a cui è stato eseguito il mapping di **LoginName** in **dbname**e i ruoli di cui è membro **LoginName** in **dbname**.|  
 |**UserOrAlias**|**carattere (8)**|Membro = **username** è un ruolo.<br /><br /> User = **username** è un account utente.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Prima di rimuovere un account di accesso, utilizzare **sp_helplogins** per identificare gli account utente di cui è stato eseguito il mapping all'account di accesso.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -79,7 +79,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
   
  Se **sp_helplogins** non è in grado di accedere a un database, **sp_helplogins** restituirà quante più informazioni possibile e visualizzerà il messaggio di errore 15622.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituite informazioni sull'account di accesso `John`.  
   
 ```  

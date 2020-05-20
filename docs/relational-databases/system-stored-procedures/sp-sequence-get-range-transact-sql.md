@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sequence number object, sp_sequence_get_range procedure
 - sp_sequence_get_range
 ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd17110b5a5f2abf8f64662221f334ebf769b258
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ab7e05eba835f5cee47e0256f5866623bc658e44
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77114567"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816607"
 ---
 # <a name="sp_sequence_get_range-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -53,24 +53,24 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ## <a name="arguments"></a>Argomenti  
 `[ @sequence_name = ] N'sequence'`Nome dell'oggetto sequenza. Lo schema è facoltativo. *SEQUENCE_NAME* è di **tipo nvarchar (776)**.  
   
-`[ @range_size = ] range_size`Numero di valori da recuperare dalla sequenza. range_size è di tipo **bigint**. ** \@**  
+`[ @range_size = ] range_size`Numero di valori da recuperare dalla sequenza. ** \@ range_size** è di tipo **bigint**.  
   
-`[ @range_first_value = ] range_first_value`Il parametro di output restituisce il primo valore (minimo o massimo) dell'oggetto sequenza utilizzato per calcolare l'intervallo richiesto. range_first_value viene **sql_variant** con lo stesso tipo di base di quello dell'oggetto sequenza utilizzato nella richiesta. ** \@**  
+`[ @range_first_value = ] range_first_value`Il parametro di output restituisce il primo valore (minimo o massimo) dell'oggetto sequenza utilizzato per calcolare l'intervallo richiesto. ** \@ range_first_value** viene **sql_variant** con lo stesso tipo di base di quello dell'oggetto sequenza utilizzato nella richiesta.  
   
-`[ @range_last_value = ] range_last_value`Il parametro di output facoltativo restituisce l'ultimo valore dell'intervallo richiesto. range_last_value viene **sql_variant** con lo stesso tipo di base di quello dell'oggetto sequenza utilizzato nella richiesta. ** \@**  
+`[ @range_last_value = ] range_last_value`Il parametro di output facoltativo restituisce l'ultimo valore dell'intervallo richiesto. ** \@ range_last_value** viene **sql_variant** con lo stesso tipo di base di quello dell'oggetto sequenza utilizzato nella richiesta.  
   
-`[ @range_cycle_count = ] range_cycle_count`Il parametro di output facoltativo restituisce il numero di volte in cui l'oggetto sequenza è stato riciclato per restituire l'intervallo richiesto. range_cycle_count è di **tipo int**. ** \@**  
+`[ @range_cycle_count = ] range_cycle_count`Il parametro di output facoltativo restituisce il numero di volte in cui l'oggetto sequenza è stato riciclato per restituire l'intervallo richiesto. ** \@ range_cycle_count** è di **tipo int**.  
   
-`[ @sequence_increment = ] sequence_increment`Il parametro di output facoltativo restituisce l'incremento dell'oggetto sequenza utilizzato per calcolare l'intervallo richiesto. sequence_increment viene **sql_variant** con lo stesso tipo di base di quello dell'oggetto sequenza utilizzato nella richiesta. ** \@**  
+`[ @sequence_increment = ] sequence_increment`Il parametro di output facoltativo restituisce l'incremento dell'oggetto sequenza utilizzato per calcolare l'intervallo richiesto. ** \@ sequence_increment** viene **sql_variant** con lo stesso tipo di base di quello dell'oggetto sequenza utilizzato nella richiesta.  
   
-`[ @sequence_min_value = ] sequence_min_value`Il parametro di output facoltativo restituisce il valore minimo dell'oggetto sequenza. sequence_min_value viene **sql_variant** con lo stesso tipo di base di quello dell'oggetto sequenza utilizzato nella richiesta. ** \@**  
+`[ @sequence_min_value = ] sequence_min_value`Il parametro di output facoltativo restituisce il valore minimo dell'oggetto sequenza. ** \@ sequence_min_value** viene **sql_variant** con lo stesso tipo di base di quello dell'oggetto sequenza utilizzato nella richiesta.  
   
-`[ @sequence_max_value = ] sequence_max_value`Il parametro di output facoltativo restituisce il valore massimo dell'oggetto sequenza. sequence_max_value viene **sql_variant** con lo stesso tipo di base di quello dell'oggetto sequenza utilizzato nella richiesta. ** \@**  
+`[ @sequence_max_value = ] sequence_max_value`Il parametro di output facoltativo restituisce il valore massimo dell'oggetto sequenza. ** \@ sequence_max_value** viene **sql_variant** con lo stesso tipo di base di quello dell'oggetto sequenza utilizzato nella richiesta.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  sp_sequence_get_rangeis in sys. è possibile fare riferimento allo schema ed è possibile fare riferimento a sys. sp_sequence_get_range.  
   
 ### <a name="cycling-sequences"></a>Sequenze con riavvio  
@@ -87,7 +87,7 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione UPDATE per l'oggetto sequenza o lo schema dell'oggetto sequenza.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Negli esempi seguenti viene usato un oggetto sequenza denominato test. RangeSeq. Utilizzare l'istruzione seguente per creare la sequenza test. RangeSeq.  
   
 ```  
@@ -105,7 +105,7 @@ CREATE SEQUENCE Test.RangeSeq
 ;  
 ```  
   
-### <a name="a-retrieving-a-range-of-sequence-values"></a>A. Recupero di un intervallo di valori di sequenza  
+### <a name="a-retrieving-a-range-of-sequence-values"></a>R. Recupero di un intervallo di valori di sequenza  
  Nell'istruzione seguente vengono ottenuti quattro numeri di sequenza dall'oggetto sequenza test. RangeSeq e viene restituito all'utente il primo numero di numeri.  
   
 ```  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergearticle
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e1c297e050121c3013242c40938fdd4c0ba8b936
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e01a1c9c96813c14827ca2f941c84d151c147195
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122339"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818116"
 ---
 # <a name="sp_helpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione per cui si desidera recuperare informazioni. *Publication*è di **%** **tipo sysname**e il valore predefinito è, che restituisce informazioni su tutti gli articoli di tipo merge contenuti in tutte le pubblicazioni del database corrente.  
+`[ @publication = ] 'publication'`Nome della pubblicazione per cui si desidera recuperare informazioni. *Publication*è di **tipo sysname**e il valore predefinito è **%** , che restituisce informazioni su tutti gli articoli di tipo merge contenuti in tutte le pubblicazioni del database corrente.  
   
-`[ @article = ] 'article'`Nome dell'articolo per cui si desidera ottenere informazioni. *article*è di **%** **tipo sysname**e il valore predefinito è, che restituisce informazioni su tutti gli articoli di tipo merge nella pubblicazione specificata.  
+`[ @article = ] 'article'`Nome dell'articolo per cui si desidera ottenere informazioni. *article*è di **tipo sysname**e il valore predefinito è **%** , che restituisce informazioni su tutti gli articoli di tipo merge nella pubblicazione specificata.  
   
 ## <a name="result-set"></a>Set di risultati  
   
@@ -68,7 +68,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**identity_support**|**int**|Se è abilitata la gestione automatica degli intervalli di valori Identity. dove **1** è abilitato e **0** è disabilitato.|  
 |**pub_identity_range**|**bigint**|Dimensioni di intervallo da utilizzare per l'assegnazione di nuovi valori Identity. Per ulteriori informazioni, vedere la sezione relativa alla replica di tipo merge in [replicare le colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**identity_range**|**bigint**|Dimensioni di intervallo da utilizzare per l'assegnazione di nuovi valori Identity. Per ulteriori informazioni, vedere la sezione relativa alla replica di tipo merge in [replicare le colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
-|**soglia**|**int**|Valore percentuale utilizzato per i Sottoscrittori che eseguono [!INCLUDE[ssEW](../../includes/ssew-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]versioni precedenti di. **soglia** controlla quando il agente di merge assegna un nuovo intervallo di valori Identity. Quando viene utilizzata la percentuale di valori specificata in threshold, l'agente di merge crea un nuovo intervallo di valori Identity. Per ulteriori informazioni, vedere la sezione relativa alla replica di tipo merge in [replicare le colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
+|**soglia**|**int**|Valore percentuale utilizzato per i Sottoscrittori che eseguono [!INCLUDE[ssEW](../../includes/ssew-md.md)] o versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **soglia** controlla quando il agente di merge assegna un nuovo intervallo di valori Identity. Quando viene utilizzata la percentuale di valori specificata in threshold, l'agente di merge crea un nuovo intervallo di valori Identity. Per ulteriori informazioni, vedere la sezione relativa alla replica di tipo merge in [replicare le colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**verify_resolver_signature**|**int**|Se una firma digitale viene verificata prima dell'utilizzo di un sistema di risoluzione nella replica di tipo merge; dove **0** indica che la firma non viene verificata e **1** indica che la firma viene verificata per verificare se si tratta di una fonte attendibile.|  
 |**destination_object**|**sysname**|Nome dell'oggetto di destinazione. È applicabile solo per gli articoli di schema di tipo merge per stored procedure, viste e funzioni definite dall'utente.|  
 |**allow_interactive_resolver**|**int**|Se il sistema di risoluzione interattivo viene utilizzato in un articolo; dove **1** indica che questo resolver viene utilizzato e **0** indica che non viene utilizzato.|  
