@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help
 ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb5e9a1ab72140a08423fa50c10eeb1f2d06ad79
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac6e69db443bd23c3e9b1119b21d8fd98ebe39c4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72909087"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815726"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ sp_help [ [ @objname = ] 'name' ]
     |**Storage_type**|**nvarchar (** 128 **)**|Nome del tipo di archiviazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
     |**Lunghezza**|**smallint**|Lunghezza fisica del tipo di dati in byte.|  
     |**Prec**|**int**|Precisione, ovvero il numero totale di cifre.|  
-    |**Ridimensionare**|**int**|Numero di cifre a destra del separatore decimale.|  
+    |**Ridimensionamento**|**int**|Numero di cifre a destra del separatore decimale.|  
     |**Ammette i valori Null**|**varchar (** 35 **)**|Indica se i valori NULL sono supportati. I possibili valori sono Yes o No.|  
     |**Default_name**|**nvarchar (** 128 **)**|Nome del valore predefinito associato al tipo di dati specificato.<br /><br /> NULL = Non è associata alcuna regola predefinita.|  
     |**Rule_name**|**nvarchar (** 128 **)**|Nome di una regola associata al tipo di dati specificato.<br /><br /> NULL = Non è associata alcuna regola predefinita.|  
@@ -94,7 +94,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**Calcolata**|**varchar (** 35 **)**|Indica se i valori della colonna sono calcolati (Yes o No).|  
         |**Lunghezza**|**int**|Lunghezza della colonna in byte.<br /><br /> Nota: se il tipo di dati della colonna è un tipo di valore di grandi dimensioni (**varchar (max)**, **nvarchar (max)**, **varbinary (max)** o **XML**), il valore verrà visualizzato come-1.|  
         |**Prec**|**char (** 5 **)**|Precisione della colonna.|  
-        |**Ridimensionare**|**char (** 5 **)**|Scala della colonna.|  
+        |**Ridimensionamento**|**char (** 5 **)**|Scala della colonna.|  
         |**Ammette i valori Null**|**varchar (** 35 **)**|Indica se nella colonna sono consentiti i valori Null. I possibili valori sono Yes o No.|  
         |**TrimTrailingBlanks**|**varchar (** 35 **)**|Specifica se gli spazi vuoti finali devono essere eliminati o meno. Restituisce Yes o No.|  
         |**FixedLenNullInSource**|**varchar (** 35 **)**|Disponibile solo per compatibilità con le versioni precedenti.|  
@@ -105,7 +105,7 @@ sp_help [ [ @objname = ] 'name' ]
         |Nome colonna|Tipo di dati|Descrizione|  
         |-----------------|---------------|-----------------|  
         |**Identità**|**nvarchar (** 128 **)**|Nome della colonna il cui tipo di dati viene dichiarato come Identity.|  
-        |**Inizializzazione**|**numeric**|Valore iniziale per la colonna Identity.|  
+        |**Seed**|**numeric**|Valore iniziale per la colonna Identity.|  
         |**Incremento**|**numeric**|Incremento da utilizzare per i valori della colonna.|  
         |**Non per la replica**|**int**|La proprietà IDENTITY non viene applicata quando un account di accesso per la replica, ad esempio **sqlrepl**, inserisce i dati nella tabella:<br /><br /> 1 = True<br /><br /> 0 = False|  
   
@@ -155,10 +155,10 @@ sp_help [ [ @objname = ] 'name' ]
         |**Type**|**nvarchar (** 128 **)**|Tipo di dati del parametro della stored procedure.|  
         |**Lunghezza**|**smallint**|Capacità massima di archiviazione fisica in byte.|  
         |**Prec**|**int**|Precisione, ovvero il numero totale di cifre.|  
-        |**Ridimensionare**|**int**|Numero di cifre a destra del separatore decimale.|  
+        |**Ridimensionamento**|**int**|Numero di cifre a destra del separatore decimale.|  
         |**Param_order**|**smallint**|Ordine del parametro.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La routine **sp_help** Cerca un oggetto solo nel database corrente.  
   
  Quando il *nome* non è specificato, **sp_help** elenca i nomi di oggetto, i proprietari e i tipi di oggetto per tutti gli oggetti nel database corrente. **sp_helptrigger** fornisce informazioni sui trigger.  

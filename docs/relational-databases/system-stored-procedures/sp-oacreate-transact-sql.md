@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OACreate
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2ad8059466ac520b6f9f793af7670cbd73b96b38
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d851461ae4cd07f3dd89e2cff4326d03e05a5d66
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68107928"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815273"
 ---
 # <a name="sp_oacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *ProgID*  
+ *progid*  
  ProgID dell'oggetto OLE da creare. Questa stringa di caratteri descrive la classe dell'oggetto OLE e ha il formato: **'**_OleComponent_**.** _Oggetto_**'**  
   
  *OleComponent* è il nome del componente del server di automazione OLE, mentre *Object* è il nome dell'oggetto OLE. L'oggetto OLE specificato deve essere valido e deve supportare l'interfaccia **IDispatch** .  
@@ -65,9 +65,9 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  Se non è specificato, il valore predefinito è **5**. Questo valore viene passato come parametro *dwClsContext* della chiamata a **CoCreateInstance**.  
   
- Se è consentito un server OLE in-process (usando un valore di contesto **1** o **5** o non specificando un valore di contesto), ha accesso alla memoria e ad altre risorse di proprietà [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di. Un server OLE in-process può danneggiare la memoria o le risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], con conseguenti risultati imprevisti, ad esempio un errore di violazione di accesso in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Se è consentito un server OLE in-process (usando un valore di contesto **1** o **5** o non specificando un valore di contesto), ha accesso alla memoria e ad altre risorse di proprietà di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un server OLE in-process può danneggiare la memoria o le risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], con conseguenti risultati imprevisti, ad esempio un errore di violazione di accesso in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Quando si specifica il valore di contesto **4**, un server OLE locale non ha accesso alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] risorse e non può danneggiare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la memoria o le risorse.  
+ Quando si specifica il valore di contesto **4**, un server OLE locale non ha accesso alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] risorse e non può danneggiare la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memoria o le risorse.  
   
 > [!NOTE]  
 >  I parametri di questa stored procedure vengono specificati in base alla posizione, non in base al nome.  
@@ -77,7 +77,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  Per ulteriori informazioni sui codici restituiti HRESULT, vedere [codici restituiti e informazioni sugli errori di automazione OLE](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se sono abilitate le procedure di automazione OLE, una chiamata a **sp_OACreate** avvierà l'ambiente di esecuzione condiviso di automazione OLE. Per ulteriori informazioni sull'abilitazione dell'automazione OLE, vedere [opzione di configurazione del server OLE Automation Procedures](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md).  
   
  L'oggetto OLE creato viene distrutto automaticamente al termine del batch di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  

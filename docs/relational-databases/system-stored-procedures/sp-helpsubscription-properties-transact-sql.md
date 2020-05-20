@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscription_properties
 ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 28305f4676c9323b364703feb0b668615a159e6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cf8c3510ffbd2d40c882061cc81bb8f6a80d294f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771558"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815418"
 ---
 # <a name="sp_helpsubscription_properties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,15 +40,15 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'`Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e il valore **%** predefinito è, che restituisce informazioni su tutti i server di pubblicazione.  
+`[ @publisher = ] 'publisher'`Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e il valore predefinito è **%** , che restituisce informazioni su tutti i server di pubblicazione.  
   
-`[ @publisher_db = ] 'publisher_db'`Nome del database del server di pubblicazione. *publisher_db* è di **%** **tipo sysname**e il valore predefinito è, che restituisce informazioni su tutti i database del server di pubblicazione.  
+`[ @publisher_db = ] 'publisher_db'`Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname**e il valore predefinito è **%** , che restituisce informazioni su tutti i database del server di pubblicazione.  
   
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **%** **tipo sysname**e il valore predefinito è, che restituisce informazioni su tutte le pubblicazioni.  
+`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è **%** , che restituisce informazioni su tutte le pubblicazioni.  
   
 `[ @publication_type = ] publication_type`Tipo di pubblicazione. *publication_type* è di **tipo int**e il valore predefinito è null. Se specificato, *publication_type* deve essere uno dei valori seguenti:  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|Pubblicazione transazionale|  
 |**1**|Pubblicazione snapshot|  
@@ -64,11 +64,11 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |**publication_type**|**int**|Tipo di pubblicazione:<br /><br /> **0** = transazionale<br /><br /> **1** = snapshot<br /><br /> **2** = Unione|  
 |**publisher_login**|**sysname**|ID dell'account di accesso utilizzato nel server di pubblicazione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**publisher_password**|**nvarchar (524)**|Password (crittografata) utilizzata nel server di pubblicazione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**publisher_security_mode**|**int**|Modalità di sicurezza utilizzata nel server di pubblicazione:<br /><br /> **autenticazione 0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **1** = autenticazione di Windows|  
+|**publisher_security_mode**|**int**|Modalità di sicurezza utilizzata nel server di pubblicazione:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione 0<br /><br /> **1** = autenticazione di Windows|  
 |**distribuzione**|**sysname**|Nome del server di distribuzione.|  
 |**distributor_login**|**sysname**|Account di accesso per il server di distribuzione.|  
 |**distributor_password**|**nvarchar (524)**|Password (crittografata) per il server di distribuzione.|  
-|**distributor_security_mode**|**int**|Modalità di sicurezza utilizzata nel server di distribuzione:<br /><br /> **autenticazione 0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **1** = autenticazione di Windows|  
+|**distributor_security_mode**|**int**|Modalità di sicurezza utilizzata nel server di distribuzione:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione 0<br /><br /> **1** = autenticazione di Windows|  
 |**ftp_address**|**sysname**|Disponibile solo per compatibilità con le versioni precedenti. Indirizzo di rete del servizio FTP (File Transfer Protocol) per il server di distribuzione.|  
 |**ftp_port**|**int**|Disponibile solo per compatibilità con le versioni precedenti. Numero di porta del servizio FTP per il server di distribuzione.|  
 |**ftp_login**|**sysname**|Disponibile solo per compatibilità con le versioni precedenti. Nome utente utilizzato per la connessione al servizio FTP.|  
@@ -93,7 +93,7 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_helpsubscription_properties** viene utilizzata per la replica snapshot, la replica transazionale e la replica di tipo merge.  
   
 ## <a name="permissions"></a>Autorizzazioni  

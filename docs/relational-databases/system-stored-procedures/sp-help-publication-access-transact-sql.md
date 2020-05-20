@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_publication_access
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7c562c039b65f99f1d3d9915f0dd00b93dc95860
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8fe57e26392a2a01c7074d7d019baa20c4b9cb5f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770989"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815810"
 ---
 # <a name="sp_help_publication_access-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_help_publication_access [ @publication = ] 'publication'
   
 `[ @return_granted = ] 'return_granted'`ID di accesso. *return_granted* è di **bit**e il valore predefinito è 1. Se viene specificato **0** e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene utilizzata l'autenticazione, vengono restituiti gli account di accesso disponibili visualizzati nel server di pubblicazione, ma non nel server di distribuzione. Se viene specificato **0** e viene utilizzata l'autenticazione di Windows, vengono restituiti gli account di accesso non autorizzati in modo specifico al server di pubblicazione o al server di distribuzione.  
   
-`[ @login = ] 'login'`ID di accesso di sicurezza standard. *login* è di **%** **tipo sysname**e il valore predefinito è.  
+`[ @login = ] 'login'`ID di accesso di sicurezza standard. *login* è di **tipo sysname**e il valore predefinito è **%** .  
   
 `[ @initial_list = ] initial_list`Specifica se restituire tutti i membri con accesso alla pubblicazione o solo quelli che hanno eseguito l'accesso prima che nuovi membri siano stati aggiunti all'elenco. *initial_list* è di bit e il valore predefinito è **0**.  
   
@@ -63,7 +63,7 @@ sp_help_publication_access [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_help_publication_access** viene utilizzato in tutti i tipi di replica.  
   
  Quando **Isntname** e **Isntgroup** nel set di risultati sono **0**, si presuppone che l'account di accesso sia un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso.  

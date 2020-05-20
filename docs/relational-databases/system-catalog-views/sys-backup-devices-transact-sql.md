@@ -18,19 +18,19 @@ helpviewer_keywords:
 - backup devices [SQL Server], viewing information
 - sys.backup_devices catalog view
 ms.assetid: 457edaa4-aca1-4bd3-bf8d-734490b80fcd
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: b70d87a6f1a72662c1ca466a532d3050b4fe58ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b5f70fa8b486688a6c83133781b63d188742e345
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942586"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816169"
 ---
 # <a name="sysbackup_devices-transact-sql"></a>sys.backup_devices (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contiene una riga per ogni dispositivo di backup registrato utilizzando **sp_addumpdevice** o creato in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  Contiene una riga per ogni dispositivo di backup registrato utilizzando **sp_addumpdevice** o creato in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -46,7 +46,7 @@ ms.locfileid: "67942586"
  [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Dispositivi di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
- [sp_addumpdevice &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
+ [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [Viste del catalogo di database e file &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [Domande frequenti sull'esecuzione di query sul catalogo di sistema di SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_add_principalprofile_sp
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fedc7e0dd7fe71feb0b0da1f00f2a7f996c6129c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d752015dab48058af18cb981a009691f407da171
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305055"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814385"
 ---
 # <a name="sysmail_add_principalprofile_sp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,22 +54,22 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
- Per rendere pubblico un profilo, specificare un ** \@principal_id** **0** o un ** \@principal_name** di **public**. Un profilo pubblico è disponibile per tutti gli utenti nel database **msdb** , anche se gli utenti devono essere anche membri di **DatabaseMailUserRole** per eseguire **sp_send_dbmail**.  
+## <a name="remarks"></a>Commenti  
+ Per rendere pubblico un profilo, specificare un ** \@ principal_id** **0** o un ** \@ principal_name** di **public**. Un profilo pubblico è disponibile per tutti gli utenti nel database **msdb** , anche se gli utenti devono essere anche membri di **DatabaseMailUserRole** per eseguire **sp_send_dbmail**.  
   
- A un utente del database può essere associato un solo profilo predefinito. Quando ** \@is_default** è'**1**' e l'utente è già associato a uno o più profili, il profilo specificato diventa il profilo predefinito per l'utente. Il profilo che in precedenza era il profilo predefinito è tuttora associato all'utente, ma non è più il profilo predefinito.  
+ A un utente del database può essere associato un solo profilo predefinito. Quando ** \@ is_default** è'**1**' e l'utente è già associato a uno o più profili, il profilo specificato diventa il profilo predefinito per l'utente. Il profilo che in precedenza era il profilo predefinito è tuttora associato all'utente, ma non è più il profilo predefinito.  
   
- Quando ** \@is_default** è'**0**' e non esiste nessun'altra associazione, il stored procedure restituisce un errore.  
+ Quando ** \@ is_default** è'**0**' e non esiste nessun'altra associazione, il stored procedure restituisce un errore.  
   
  Il stored procedure **sysmail_add_principalprofile_sp** si trova nel database **msdb** ed è di proprietà dello schema **dbo** . La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  **A. Creazione di un'associazione e impostazione del profilo predefinito**  
   
- Nell'esempio seguente viene creata un'associazione tra il profilo `AdventureWorks Administrator Profile` denominato e l'utente `ApplicationUser`del database **msdb** . Il profilo è il profilo predefinito per l'utente.  
+ Nell'esempio seguente viene creata un'associazione tra il profilo denominato `AdventureWorks Administrator Profile` e l'utente del database **msdb** `ApplicationUser` . Il profilo è il profilo predefinito per l'utente.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp  
@@ -80,7 +80,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
  **B. Impostazione di un profilo come profilo pubblico predefinito**  
   
- Nell'esempio seguente il `AdventureWorks Public Profile` profilo viene reso il profilo pubblico predefinito per gli utenti nel database **msdb** .  
+ Nell'esempio seguente il profilo viene reso il profilo `AdventureWorks Public Profile` pubblico predefinito per gli utenti nel database **msdb** .  
   
 ```  
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp  
