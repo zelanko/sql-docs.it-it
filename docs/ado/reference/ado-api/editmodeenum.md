@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - EditModeEnum enumeration [ADO]
 ms.assetid: 45d54b6e-db2c-4553-9fd0-528147d6da2f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0a8c4ddb27bbc6831095062af5491fb501b6d5b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e4e16cbdddf39ba6abb03f93c35b2c2243d1bd71
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933040"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765562"
 ---
 # <a name="editmodeenum"></a>EditModeEnum
 Specifica lo stato di modifica di un record.  
   
-|Costante|valore|Descrizione|  
+|Costante|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adEditNone**|0|Indica che non è in corso alcuna operazione di modifica.|  
 |**adEditInProgress**|1|Indica che i dati nel record corrente sono stati modificati, ma non salvati.|  

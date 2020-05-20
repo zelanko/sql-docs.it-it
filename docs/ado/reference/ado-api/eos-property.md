@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - EOS property
 ms.assetid: 57e08c5f-f3ed-4ecd-8c66-50b83b1031d1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5a19856c957ee0c003e934ff8b2632aa28e32d33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9199563f2a5d6ce594b88577cfb69766cf311492
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918921"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765532"
 ---
 # <a name="eos-property"></a>Proprietà EOS
 Indica se la posizione corrente è alla fine del [flusso](../../../ado/reference/ado-api/stream-object-ado.md).  
@@ -34,6 +34,6 @@ Indica se la posizione corrente è alla fine del [flusso](../../../ado/reference
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Esempio di proprietà EOS e LineSeparator e metodo SkipLine (VB)](../../../ado/reference/ado-api/eos-and-lineseparator-properties-and-skipline-method-example-vb.md)   
  [Oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

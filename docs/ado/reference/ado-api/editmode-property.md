@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - EditMode property
 ms.assetid: a1b04bb2-8c8b-47f9-8477-bfd0368b6f68
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c0ffc6fb258799b0ab0bb03e7acbd922f6a67d1f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1cbe93a06eb6521b2210edc08cdca421cd5de982
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918986"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765572"
 ---
 # <a name="editmode-property"></a>Proprietà EditMode
 Indica lo stato di modifica del record corrente.  
@@ -28,10 +28,10 @@ Indica lo stato di modifica del record corrente.
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un valore [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md) .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  ADO gestisce un buffer di modifica associato al record corrente. Questa proprietà indica se sono state apportate modifiche a questo buffer o se è stato creato un nuovo record. Utilizzare la proprietà **EditMode** per determinare lo stato di modifica del record corrente. È possibile verificare la presenza di modifiche in sospeso se un processo di modifica è stato interrotto e determinare se è necessario utilizzare il metodo [Update](../../../ado/reference/ado-api/update-method.md) o [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) .  
   
- In *modalità di aggiornamento immediato* la proprietà **EditMode** viene reimpostata su **adEditNone** dopo che è stata chiamata una chiamata al metodo **Update** . Quando una chiamata a [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) non elimina correttamente il record o i record nell'origine dati (ad esempio, a causa di violazioni di integrità referenziale), il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) rimane in modalità di modifica (**EditMode** = **adEditInProgress**). Pertanto, **CancelUpdate** deve essere chiamato prima di spostare il record corrente (ad esempio, [Move](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)o [Close](../../../ado/reference/ado-api/close-method-ado.md) ).  
+ In *modalità di aggiornamento immediato* la proprietà **EditMode** viene reimpostata su **adEditNone** dopo che è stata chiamata una chiamata al metodo **Update** . Quando una chiamata a [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) non elimina correttamente il record o i record nell'origine dati (ad esempio, a causa di violazioni di integrità referenziale), il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) rimane in modalità di modifica (**EditMode**  =  **adEditInProgress**). Pertanto, **CancelUpdate** deve essere chiamato prima di spostare il record corrente (ad esempio, [Move](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)o [Close](../../../ado/reference/ado-api/close-method-ado.md) ).  
   
  In *modalità di aggiornamento batch* (in cui il provider memorizza nella cache più modifiche e le scrive nell'origine dati sottostante solo quando si chiama il metodo [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) ), il valore della proprietà **EditMode** viene modificato quando viene eseguita la prima operazione e non viene reimpostato da una chiamata al metodo **Update** . Le operazioni successive non modificano il valore della proprietà **EditMode** , anche se vengono eseguite operazioni diverse. Ad esempio, se la prima operazione consiste nell'aggiungere un nuovo record e il secondo apporta modifiche a un record esistente, la proprietà di **EditMode** sarà ancora **adEditAdd**. La proprietà **EditMode** non viene reimpostata su **adEditNone** fino al termine della chiamata a **UpdateBatch**. Per determinare quali operazioni sono state eseguite, impostare la proprietà [Filter](../../../ado/reference/ado-api/filter-property.md) su [adFilterPending](../../../ado/reference/ado-api/filtergroupenum.md) in modo da rendere visibili solo i record con modifiche in sospeso ed esaminare la proprietà [status](../../../ado/reference/ado-api/status-property-ado-recordset.md) di ogni record per determinare quali modifiche sono state apportate ai dati.  
   
@@ -41,7 +41,7 @@ Indica lo stato di modifica del record corrente.
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Esempio di proprietà CursorType, LockType e EditMode (VB)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
  [Esempio di proprietà CursorType, LockType e EditMode (VC + +)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
  [Metodo AddNew (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Skipline method [ADO], Visual Basic example
 - EOS property [ADO], Visual Basic example
 ms.assetid: 77ce3042-9ebc-44ba-a4ff-0f1b1fd4a9c4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d2a9c5f4f07b22f11869a21fc4855f4ae21b25c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c4998ffe368a9f7773474514a7d53922d1b6cb36
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933069"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765542"
 ---
 # <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>Esempio di proprietà EOS e LineSeparator e metodo SkipLine (VB)
 Questo esempio illustra come modificare i flussi di testo una riga alla volta. Viene visualizzato l'effetto della modifica del separatore di riga dal ritorno a capo/avanzamento riga (**adCRLF**) al semplice avanzamento riga (**adLF**) o ritorno a capo (**ADCR**).  
