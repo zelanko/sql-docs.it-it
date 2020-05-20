@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 92aaf7c04d7a5e176fce4448b9d4f6172b541647
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ce461246f0afef31ab4b60b772f92aeeb479a4cb
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75755846"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606888"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Connettore Microsoft per Oracle
 
@@ -26,7 +26,7 @@ Connettore Microsoft per Oracle consente di esportare e caricare i dati in un'or
 
 I prodotti Microsoft SQL Server seguenti sono supportati da Connettore Microsoft per Oracle:
 
-- A partire da SQL Server 2019
+- A partire da SQL Server 2019 CU1
 - SQL Server Data Tools (SSDT) dalla versione 15.9.3
 
 Sono supportate le origini dati delle versioni seguenti di Oracle Database:

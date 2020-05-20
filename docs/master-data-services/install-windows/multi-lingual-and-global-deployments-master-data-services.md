@@ -1,5 +1,6 @@
 ---
 title: Distribuzioni multilingue e globali
+description: Master Data Services supporta la distribuzione di componenti e strumenti in tutte le lingue supportate da SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c3d485f8-867c-4aa2-a90d-f38fda192534
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a5a8857330b1a4fa532e9e0f43b4596cdf34b48c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7173db1e255f4a7fe4f08a0e57ee80ece3d6c00f
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75254767"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606231"
 ---
 # <a name="multi-lingual-and-global-deployments-master-data-services"></a>Distribuzioni multilingue e globali (Master Data Services)
 
@@ -25,7 +26,7 @@ ms.locfileid: "75254767"
 ## <a name="how-languages-are-used"></a>Modalità di utilizzo delle lingue  
  Nella tabella seguente viene descritto il supporto per i componenti e gli strumenti di [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .  
   
-|Componente o strumento|Descrizione|  
+|Componente o strumento|Description|  
 |-----------------------|-----------------|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Installazione|Selezionare il programma di installazione in lingua inglese quando si desidera che l'applicazione Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] sia disponibile e supportata in lingue diverse dalla lingua di installazione. Per ulteriori informazioni, vedere la descrizione relativa a [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] riportata di seguito.|  
 |[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]|La lingua di [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] viene determinata dal programma di installazione. Ad esempio, se si sceglie Italiano per la lingua di installazione, [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] sarà disponibile in italiano nel computer.|  

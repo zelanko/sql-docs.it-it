@@ -1,5 +1,6 @@
 ---
 title: Rendere sicura un'applicazione Web Gestione dati master
+description: In SQL Server, è possibile proteggere l'applicazione Web Gestione dati master con HTTPS. È necessario essere un amministratore ed è necessario che MDS sia installato nel server Web.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 57ba6a83d48254bdd0d86fee9a5d2d6300cb58bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ac70d45886904032e1f61c01c35ee8542351029
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81728493"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606513"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Rendere sicura un'applicazione Web Gestione dati master
 
@@ -40,7 +41,7 @@ ms.locfileid: "81728493"
   
 3.  Nel riquadro **Azioni** fare clic su **Binding**.  
   
-4.  Fare clic su **Aggiungi**.  
+4.  Scegliere **Aggiungi**.  
   
 5.  Nell'elenco selezionare **https**.  
   

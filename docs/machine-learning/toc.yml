@@ -1,7 +1,7 @@
-- name: Documentazione di SQL Server Machine Learning Services
+- name: Documentazione per Machine Learning in SQL
   href: ../machine-learning/index.yml
-- name: Documentazione di SQL Server >
-  href: ../sql-server/index.yml
+- name: Documentazione di Microsoft SQL >
+  href: ../index.yml
 - name: Panoramica
   expanded: true
   items:
@@ -113,6 +113,26 @@
       items:
         - name: Esercitazioni di R
           href: ../machine-learning/tutorials/r-tutorials.md
+        - name: Noleggio sci (albero delle decisioni)
+          items:
+            - name: 1 - Introduzione
+              href: ../machine-learning/tutorials/r-predictive-model-introduction.md
+            - name: 2 - Preparare i dati
+              href: ../machine-learning/tutorials/r-predictive-model-prepare-data.md
+            - name: 3 - Eseguire il training del modello
+              href: ../machine-learning/tutorials/r-predictive-model-train.md
+            - name: 4 - Distribuire il modello
+              href: ../machine-learning/tutorials/r-predictive-model-deploy.md
+        - name: Categorizzare i clienti (clustering K-means)
+          items:
+            - name: 1 - Introduzione
+              href: ../machine-learning/tutorials/r-clustering-model-introduction.md
+            - name: 2 - Preparare i dati
+              href: ../machine-learning/tutorials/r-clustering-model-prepare-data.md
+            - name: 3 - Creare il modello
+              href: ../machine-learning/tutorials/r-clustering-model-build.md
+            - name: 4 - Distribuire il modello
+              href: ../machine-learning/tutorials/r-clustering-model-deploy.md
         - name: Creare modelli basati sulla partizione
           href: ../machine-learning/tutorials/r-tutorial-create-models-per-partition.md
         - name: Usare R in T-SQL

@@ -1,7 +1,7 @@
 ---
 title: DELETE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/30/2019
+ms.date: 05/19/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -25,12 +25,12 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1207f4938c1c3b269cd503e1f7f7f7e279207685
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56e259f707a665c5bc2f4af89b63c2cb3846b70c
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82169359"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606413"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 
@@ -80,7 +80,27 @@ DELETE
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics (formerly SQL Data Warehouse)
+
+[ WITH <common_table_expression> [ ,...n ] ] 
+DELETE [database_name . [ schema ] . | schema. ] table_name  
+FROM [database_name . [ schema ] . | schema. ] table_name 
+JOIN {<join_table_source>}[ ,...n ]  
+ON <join_condition>
+[ WHERE <search_condition> ]   
+[ OPTION ( <query_options> [ ,...n ]  ) ]  
+[; ]  
+
+<join_table_source> ::=   
+{  
+    [ database_name . [ schema_name ] . | schema_name . ] table_or_view_name [ AS ] table_or_view_alias 
+    [ <tablesample_clause>]  
+    | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]  
+}  
+```
+
+```syntaxsql
+-- Syntax for Parallel Data Warehouse  
   
 DELETE 
     [ FROM [database_name . [ schema ] . | schema. ] table_name ]   
@@ -440,7 +460,8 @@ GO
 DELETE FROM Table1;  
 ```  
   
-### <a name="l-delete-a-set-of-rows-from-a-table"></a>L. Eliminare un set di righe di una tabella  
+### <a name="l-delete-a-set-of-rows-from-a-table"></a>L. Eliminare un set di righe di una tabella
+
  Nell'esempio seguente vengono eliminate dalla tabella `Table1` tutte le righe in cui il valore della colonna `StandardCost` è maggiore di 1000,00.  
   
 ```sql
@@ -448,7 +469,8 @@ DELETE FROM Table1
 WHERE StandardCost > 1000.00;  
 ```  
   
-### <a name="m-using-label-with-a-delete-statement"></a>M. Uso di LABEL con un'istruzione DELETE  
+### <a name="m-using-label-with-a-delete-statement"></a>M. Uso di LABEL con un'istruzione DELETE
+
  Nell'esempio seguente viene usata un'etichetta con l'istruzione DELETE.  
   
 ```sql
@@ -457,7 +479,8 @@ OPTION ( LABEL = N'label1' );
   
 ```  
   
-### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>N. Uso di un'etichetta e di un hint per la query con l'istruzione DELETE  
+### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>N. Uso di un'etichetta e di un hint per la query con l'istruzione DELETE
+
  Questa query illustra la sintassi di base per l'uso di un hint di join per la query con l'istruzione DELETE. Per altre informazioni sugli hint di join e su come usare la clausola OPTION, vedere [Clausola OPTION (Transact-SQL)](../queries/option-clause-transact-sql.md).
   
 ```sql
@@ -481,8 +504,32 @@ DELETE tableA WHERE EXISTS (
 SELECT TOP 1 1 FROM tableB tb WHERE tb.col1 = tableA.col1
 )
 ```
-  
-## <a name="see-also"></a>Vedere anche  
+
+### <a name="p-delete-based-on-the-result-of-joining-with-another-table"></a>P. Eliminare in base al risultato del join con un'altra tabella
+
+Questo esempio illustra come eseguire un'eliminazione da una tabella in base al risultato del join con un'altra tabella.
+
+```sql
+CREATE TABLE dbo.Table1   
+    (ColA int NOT NULL, ColB decimal(10,3) NOT NULL);  
+GO  
+
+CREATE TABLE dbo.Table2   
+    (ColA int PRIMARY KEY NOT NULL, ColB decimal(10,3) NOT NULL);  
+GO  
+INSERT INTO dbo.Table1 VALUES(1, 10.0), (1, 20.0);  
+INSERT INTO dbo.Table2 VALUES(1, 0.0);  
+GO  
+
+DELETE dbo.Table2   
+FROM dbo.Table2   
+    INNER JOIN dbo.Table1   
+    ON (dbo.Table2.ColA = dbo.Table1.ColA)
+    WHERE dboTable2.ColA = 1;  
+```
+
+## <a name="see-also"></a>Vedere anche
+
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
