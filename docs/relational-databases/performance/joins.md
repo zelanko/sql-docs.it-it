@@ -173,7 +173,7 @@ Il termine hash bailout è talvolta usato per descrivere grace hash join o hash 
 Per altre informazioni sugli hash bailout, vedere [Hash Warning - classe di evento](../../relational-databases/event-classes/hash-warning-event-class.md).    
 
 ## <a name="understanding-adaptive-joins"></a><a name="adaptive"></a> Informazioni sui join adattivi
-[Modalità batch](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) I join adattivi consentono di rimandare a [dopo](#hash) la scansione del primo input la scelta tra l'esecuzione di un metodo [hash join](#nested_loops) e l'esecuzione di un metodo join a **cicli annidati**. L'operatore Join adattivo definisce una soglia che viene usata per stabilire quando passare a un piano Cicli annidati. Durante l'esecuzione, un piano di query può pertanto passare a una strategia di join più efficace senza dover essere ricompilato. 
+[Modalità batch](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) I join adattivi consentono di rimandare a **dopo** la scansione del primo input la scelta tra l'esecuzione di un metodo [hash join](#hash) e l'esecuzione di un metodo join a [cicli annidati](#nested_loops). L'operatore Join adattivo definisce una soglia che viene usata per stabilire quando passare a un piano Cicli annidati. Durante l'esecuzione, un piano di query può pertanto passare a una strategia di join più efficace senza dover essere ricompilato. 
 
 > [!TIP]
 > Questa funzionalità è ottimale per i carichi di lavoro con frequenti oscillazioni tra i volumi di input di join rilevati.

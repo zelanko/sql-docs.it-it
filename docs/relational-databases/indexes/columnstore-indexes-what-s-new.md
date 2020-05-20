@@ -1,7 +1,7 @@
 ---
 title: Indici columnstore - Novità | Microsoft Docs
 ms.custom: ''
-ms.date: 03/20/2018
+ms.date: 05/11/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 690455f8dba76b45643ac4971c988059c56e33f9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0728c62f3c866a75a88702b7fdd2f7e8cea557dc
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70009427"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269448"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Indici columnstore - Novità
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,6 +49,12 @@ ms.locfileid: "70009427"
 |L'indice columnstore può avere una colonna calcolata non persistente||||sì|||   
   
  <sup>1</sup> Per creare un indice columnstore non cluster di sola lettura, archiviare l'indice in un filegroup di sola lettura.  
+
+## [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+ [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] aggiunge queste nuove funzionalità.
+
+### <a name="functional"></a>Funzionale
+- A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], il motore di tuple viene aiutato da un'attività di unione in background, che comprime automaticamente i rowgroup delta OPEN più piccoli che sono esistiti per un dato periodo di tempo (come determinato da una soglia interna) oppure unisce i rowgroup COMPRESSED da cui è stato eliminato un numero elevato di righe. In precedenza era necessaria un'operazione di riorganizzazione dell'indice per unire i rowgroup con dati eliminati parzialmente. Ciò migliora la qualità dell'indice columnstore nel tempo. 
 
 ## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] aggiunge queste nuove funzionalità.

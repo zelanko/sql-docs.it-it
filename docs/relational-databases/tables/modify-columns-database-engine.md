@@ -59,7 +59,7 @@ ms.locfileid: "79288225"
   
 3.  Nella scheda **Proprietà colonne** fare clic sulla cella della griglia relativa alla proprietà **Tipo di dati** , quindi selezionare un nuovo tipo di dati dall'elenco a discesa.  
   
-4.  Scegliere **Salva** **nome tabella** dal menu _File_.  
+4.  Scegliere **Salva**_nome tabella_ dal menu **File**.  
   
 > [!NOTE]  
 >  Quando si modifica il tipo di dati di una colonna, in Progettazione tabelle verrà applicata la lunghezza predefinita del tipo di dati selezionato, anche se ne è stata già specificata un'altra. È pertanto opportuno impostare sempre la lunghezza del tipo di dati per il valore desiderato dopo avere specificato il tipo di dati.  

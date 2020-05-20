@@ -72,7 +72,7 @@ ms.locfileid: "72907269"
   
 5.  Fare clic su **Close**.  
   
-6.  Scegliere **Salva** **nome tabella** dal menu _File_.  
+6.  Scegliere **Salva**_nome tabella_ dal menu **File**.  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
  **Per modificare un vincolo CHECK**  

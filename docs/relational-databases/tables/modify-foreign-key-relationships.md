@@ -142,7 +142,7 @@ ms.locfileid: "68139596"
   
     -   **Imposta predefinito** Viene impostato il valore predefinito stabilito per la colonna se per tutte le colonne chiave esterna della tabella sono stati impostati valori predefiniti.  
   
-4.  Scegliere **Salva** **nome tabella** dal menu _File_.  
+4.  Scegliere **Salva**_nome tabella_ dal menu **File**.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
  **Per modificare una chiave esterna**  

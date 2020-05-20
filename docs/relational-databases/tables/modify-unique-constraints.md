@@ -66,7 +66,7 @@ ms.locfileid: "68811332"
     |Impostare l'opzione cluster|Nella griglia sotto **Progettazione tabelle** selezionare **Crea come CLUSTERED** e nell'elenco a discesa scegliere Sì per creare un indice cluster e No per crearne uno non cluster. Per ogni tabella è possibile creare un solo indice cluster. Se esiste già un indice cluster in questa tabella, deselezionare questa opzione sull'indice originale.|  
     |Definire un fattore di riempimento|In **Progettazione tabelle**all'interno della griglia espandere la categoria **Specifica riempimento** e digitare un numero intero compreso tra 0 e 100 nella casella **Riempimento** .|  
   
-5.  Scegliere **Salva** **nome tabella** dal menu _File_.  
+5.  Scegliere **Salva**_nome tabella_ dal menu **File**.  
   
 ##  <a name="to-modify-a-unique-constraint"></a><a name="TsqlProcedure"></a> **Per modificare un vincolo UNIQUE**  
   

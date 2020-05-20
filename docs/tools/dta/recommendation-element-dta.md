@@ -1,5 +1,6 @@
 ---
 title: Elemento Recommendation (DTA)
+description: Nell'utilità dta l'elemento Recommendation contiene informazioni sugli indici ipotetici che fanno parte di una configurazione specificata dall'utente.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: a6ad8f298dc633959a3da16376c3e2a486ee807c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4ffcd156a3379a341188622142205575a3209a11
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306036"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151821"
 ---
 # <a name="recommendation-element-dta"></a>Elemento Recommendation (DTA)
 

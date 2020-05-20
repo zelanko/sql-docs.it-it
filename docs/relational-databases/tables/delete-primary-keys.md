@@ -65,7 +65,7 @@ ms.locfileid: "67986461"
     > [!NOTE]  
     >  Per annullare questa operazione, chiudere la tabella senza salvare le modifiche. L'eliminazione di una chiave primaria non può essere annullata senza perdere tutte le altre modifiche apportate alla tabella.  
   
-3.  Scegliere **Salva** **nome tabella** dal menu _File_.  
+3.  Scegliere **Salva**_nome tabella_ dal menu **File**.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
   
