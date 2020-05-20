@@ -13,20 +13,20 @@ f1_keywords:
 helpviewer_keywords:
 - CommandTimeout property [ADO]
 ms.assetid: c611f857-d6b0-4dca-8925-f4a02e769eb0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7c8c6b10e63e4cacce0124eb11102db796168d9b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b771c5b8dc54bb312893885aea9c9c151feef3e3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919705"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760387"
 ---
 # <a name="commandtimeout-property-ado"></a>Proprietà CommandTimeout (ADO)
 Indica il tempo di attesa durante l'esecuzione di un comando prima di terminare il tentativo e generare un errore.  
   
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
- Imposta o restituisce un valore **Long** che indica, in secondi, il tempo di attesa per l'esecuzione di un comando. L'impostazione predefinita è 30.  
+ Imposta o restituisce un valore **Long** che indica, in secondi, il tempo di attesa per l'esecuzione di un comando. Il valore predefinito è 30.  
   
 ## <a name="remarks"></a>Osservazioni  
  Utilizzare la proprietà **CommandTimeout** per un oggetto [connessione](../../../ado/reference/ado-api/connection-object-ado.md) o un oggetto [comando](../../../ado/reference/ado-api/command-object-ado.md) per consentire l'annullamento di una chiamata al metodo [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) , a causa di ritardi dal traffico di rete o da un utilizzo eccessivo del server. Se l'intervallo impostato nella proprietà **CommandTimeout** scade prima del completamento dell'esecuzione del comando, si verifica un errore e ADO Annulla il comando. Se si imposta la proprietà su zero, ADO resterà in attesa per un periodo di tempo indefinito fino al completamento dell'esecuzione. Verificare che il provider e l'origine dati in cui si scrive il codice supportino la funzionalità **CommandTimeout** .  

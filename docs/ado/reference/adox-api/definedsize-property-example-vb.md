@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - DefinedSize property [ADOX], Visual Basic example
 ms.assetid: 4dda2239-7ab5-4729-9c63-eb530803f7d9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d188ba801112a94d1ac09c6e1bae7fbbe5bccfee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 09e65fec85fd224df64ce7cc7fdb5166e67897e8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966459"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759187"
 ---
 # <a name="definedsize-property-example-vb"></a>Esempio della proprietà DefinedSize (VB)
 In questo esempio viene illustrata la proprietà [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) di una [colonna](../../../ado/reference/adox-api/column-object-adox.md). Il codice ridefinirà le dimensioni della colonna FirstName della tabella **Employees** del database *Northwind* . Viene quindi visualizzata la modifica apportata ai valori del [campo](../../../ado/reference/ado-api/field-object.md) FirstName di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) basato sulla tabella **Employees** . Si noti che per impostazione predefinita, il campo FirstName viene riempito con spazi dopo la ridefinizione della proprietà **DefinedSize** .  

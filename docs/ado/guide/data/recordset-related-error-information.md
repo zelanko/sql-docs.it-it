@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Recordset-related errors [ADO]
 - errors [ADO], Recordset-related
 ms.assetid: 7e103574-59ad-4790-b5f9-fa8d715e711e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d3f8e8d9802b5d0c73af73aff20d929c188b9292
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cb51fa80cff0a17340e289886f0315ea167b88b0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924377"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760957"
 ---
 # <a name="recordset-related-error-information"></a>Informazioni sugli errori correlati ai recordset
 Durante l'elaborazione batch, la proprietà **status** dell'oggetto **Recordset** fornisce informazioni sui singoli record nel **Recordset**. Prima di eseguire un aggiornamento batch, la proprietà **status** del **Recordset** riflette le informazioni sui record da aggiungere, modificare ed eliminare. Dopo la chiamata di **UpdateBatch** , la proprietà **status** indica l'esito positivo o negativo dell'operazione. Quando si passa da record a record nel **Recordset**, il valore della proprietà **status** viene modificato per descrivere lo stato del record corrente.

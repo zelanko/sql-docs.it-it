@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - CompareEnum enumeration [ADO]
 ms.assetid: bc8f710d-0621-4673-8d8e-0361e44abed0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c109f90fc023b6fbfeda01c8b4404c42a822c40a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6460e755ec3fc1f9675af1f88d673b403b13b377
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919555"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760337"
 ---
 # <a name="compareenum"></a>CompareEnum
 Specifica la posizione relativa di due record rappresentati dai relativi segnalibri.  
   
-|Costante|valore|Descrizione|  
+|Costante|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adCompareEqual**|1|Indica che i segnalibri sono uguali.|  
 |**adCompareGreaterThan**|2|Indica che il primo segnalibro è successivo al secondo.|  

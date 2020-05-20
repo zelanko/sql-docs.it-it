@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - AddNew method [ADO]
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a2f9efa8f5042fab603c794edada5aacab001936
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a6359d1b9f69963120e9446c47aa5473beedd127
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921322"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760727"
 ---
 # <a name="addnew-method-ado"></a>Metodo AddNew (ADO)
 Crea un nuovo record per un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) aggiornabile.  
@@ -43,7 +43,7 @@ recordset.AddNew FieldList, Values
  *Valori*  
  Facoltativa. Un singolo valore o una matrice di valori per i campi nel nuovo record. Se *FieldName* è una matrice, *i valori* devono essere anche una matrice con lo stesso numero di membri. in caso contrario, si verifica un errore. L'ordine dei nomi di campo deve corrispondere all'ordine dei valori di campo in ogni matrice.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Usare il metodo **AddNew** per creare e inizializzare un nuovo record. Utilizzare il metodo [Supports](../../../ado/reference/ado-api/supports-method.md) con **adAddNew** (un valore [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) ) per verificare se è possibile aggiungere record all'oggetto **Recordset** corrente.  
   
  Dopo aver chiamato il metodo **AddNew** , il nuovo record diventa il record corrente e rimane aggiornato dopo la chiamata al metodo [Update](../../../ado/reference/ado-api/update-method.md) . Poiché il nuovo record viene aggiunto al **Recordset**, una chiamata a **MoveNext** che segue l'aggiornamento viene spostata oltre la fine del **Recordset**, rendendo **EOF** true. Se l'oggetto **Recordset** non supporta i segnalibri, potrebbe non essere possibile accedere al nuovo record dopo lo spostamento in un altro record. A seconda del tipo di cursore, potrebbe essere necessario chiamare il metodo [Requery](../../../ado/reference/ado-api/requery-method.md) per rendere accessibile il nuovo record.  

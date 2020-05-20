@@ -11,14 +11,14 @@ helpviewer_keywords:
 - cursors [ADO], static
 - static cursors [ADO]
 ms.assetid: cce93ace-c4ed-4c6c-940c-28a50ff2fd12
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 520c484bdaaa6eb59488900208993a607c5b0f7b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4baacc48beffda2d83a23ce24d3a31c314da5841
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924112"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760827"
 ---
 # <a name="static-cursors"></a>Cursori statici
 Il cursore statico Visualizza sempre il set di risultati così come era quando il cursore è stato aperto per la prima volta. A seconda dell'implementazione, i cursori statici sono di sola lettura o di lettura/scrittura e forniscono lo scorrimento avanti e indietro. Il cursore statico non rileva in genere le modifiche apportate all'appartenenza, all'ordine o ai valori del set di risultati dopo l'apertura del cursore. I cursori statici possono rilevare le proprie operazioni di aggiornamento, eliminazione e inserimento, anche se tale rilevamento non è obbligatorio per cursori di questo tipo.  

@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Source property [ADO Error]
 ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6b55ebbe5a167b7d70cf606fc4e37e7ede36b486
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 95b000db970bc3da925319bbe6e273557a8787ca
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67916907"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759827"
 ---
 # <a name="source-property-ado-error"></a>Proprietà Source (Error - ADO)
 Indica il nome dell'oggetto o dell'applicazione che ha generato originariamente un errore.  
@@ -40,7 +40,7 @@ Indica il nome dell'oggetto o dell'applicazione che ha generato originariamente 
 ## <a name="applies-to"></a>Si applica a  
  [Error (oggetto)](../../../ado/reference/ado-api/error-object.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Esempio di proprietà Description, HelpContext, filelima, NativeError, Number, source e SQLState (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
  [Esempio di proprietà Description, HelpContext, filelima, NativeError, Number, source e SQLState (VC + +)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [Description (proprietà)](../../../ado/reference/ado-api/description-property.md)   

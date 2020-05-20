@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - Clustered property [ADOX]
 ms.assetid: 9b62fb35-de43-425a-83ca-77af4e33fea9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c66bca375951ec78593bafc2c2eff950e3282e4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0f4cbd0a305d7e2eae29884223ec6a67aed5fb4f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966998"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759417"
 ---
 # <a name="clustered-property-adox"></a>Proprietà Clustered (ADOX)
 Indica se l'indice è di tipo cluster.  
@@ -32,7 +32,7 @@ Indica se l'indice è di tipo cluster.
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta e restituisce un valore **booleano** .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il valore predefinito è **False**.  
   
  Questa proprietà è di sola lettura sugli oggetti [Indice](../../../ado/reference/adox-api/index-object-adox.md) che sono già stati accodati a una raccolta.  

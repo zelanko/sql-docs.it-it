@@ -11,14 +11,14 @@ helpviewer_keywords:
 - cursors [ADO], dynamic
 - dynamic cursors [ADO]
 ms.assetid: 00460f30-8cf7-494e-82df-41012f40ae51
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 86e51b7880004117e8efc96bd310c6de705d43a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4a2b251e23c2408e75acd77debbc0876fd3f9c98
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925500"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761047"
 ---
 # <a name="dynamic-cursors"></a>Cursori dinamici
 I cursori dinamici rilevano tutte le modifiche apportate alle righe nel set di risultati, indipendentemente dal fatto che vengano apportate all'interno del cursore o da altri utenti all'esterno del cursore. Tutte le istruzioni INSERT, Update e DELETE eseguite da tutti gli utenti sono visibili tramite il cursore. Il cursore dinamico può rilevare le modifiche apportate alle righe, all'ordine e ai valori nel set di risultati dopo l'apertura del cursore. Gli aggiornamenti eseguiti all'esterno del cursore non sono visibili finché non ne viene eseguito il commit, a meno che il livello di isolamento della transazione del cursore non sia impostato su "non sottoposto a commit".  

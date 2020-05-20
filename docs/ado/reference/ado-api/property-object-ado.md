@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Property object [ADO]
 ms.assetid: b2a4767c-03c7-4935-a3bc-df3e1a38a009
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 43bfa816a9ca8a93cdc1188a98e54d3e0d9111b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d2f4a8b6cdeabcbab0802a0052ed697af70ef45a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917550"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759967"
 ---
 # <a name="property-object-ado"></a>Oggetto Property (ADO)
 Rappresenta una caratteristica dinamica di un oggetto ADO definito dal provider.  
@@ -48,7 +48,7 @@ Rappresenta una caratteristica dinamica di un oggetto ADO definito dal provider.
   
 -   [Proprietà, metodi ed eventi dell'oggetto Property](../../../ado/reference/ado-api/property-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Field (oggetto)](../../../ado/reference/ado-api/field-object.md)   

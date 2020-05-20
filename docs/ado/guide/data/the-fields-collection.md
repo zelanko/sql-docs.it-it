@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Field object [ADO], fields collection
 - Fields collection [ADO]
 ms.assetid: 574cf36e-e5f5-403b-983c-749ef93c108f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 197a57b8a9b9ea2927a057733992a02c731a335a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0e249d22657718899c7838aa55a23a543389dc5a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923930"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760777"
 ---
 # <a name="the-fields-collection"></a>Raccolta Fields
 La raccolta **Fields** è una delle raccolte intrinseche di ADO. Una raccolta è un set ordinato di elementi a cui è possibile fare riferimento come unità. Per ulteriori informazioni sulle raccolte ADO, vedere [il modello a oggetti ADO](../../../ado/guide/data/ado-objects-and-collections.md).  

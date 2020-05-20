@@ -14,14 +14,14 @@ helpviewer_keywords:
 - errors [ADO], provider
 - Error object [ADO], provider errors
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 85d4a7607fae1df7dfb6ec62b8a3bfae8f58001b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2fce89dd6df633f8cdcf78271c63336b3ecc7b05
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924543"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760997"
 ---
 # <a name="provider-errors"></a>Errori del provider
 Quando si verifica un errore del provider, viene restituito un errore di run-time di-2147467259. Quando viene visualizzato questo errore, controllare la raccolta di **errori** dell'oggetto **connessione** attivo, che conterrà uno o più errori che descrivono cosa si è verificato.  
@@ -64,7 +64,7 @@ End Function
 ## <a name="the-error-object"></a>Oggetto Error  
  Esaminando un oggetto **Error** è possibile determinare l'errore che si è verificato e, più importante, l'applicazione o l'oggetto che ha causato l'errore. L'oggetto **Error** presenta le proprietà seguenti:  
   
-|Nome proprietà|Descrizione|  
+|Nome proprietà|Description|  
 |-------------------|-----------------|  
 |**Descrizione**|Descrizione testuale dell'errore che si è verificato.|  
 |**HelpContext, fileguida**|Si riferisce all'argomento della guida e al file della guida che contengono una descrizione dell'errore che si è verificato.|  

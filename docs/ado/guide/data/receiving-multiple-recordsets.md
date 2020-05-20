@@ -11,14 +11,14 @@ helpviewer_keywords:
 - receiving multiple Recordsets [ADO]
 - Recordset object [ADO], receiving multiple Recordsets
 ms.assetid: 2a7ad7a6-f00d-4355-b0b5-d0ab957b0566
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6d6e649201b8bf23a1b696d574baea2f4b049e06
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 12aa80b918d11dad07119a26da3da8f27ef82cdb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924539"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759107"
 ---
 # <a name="receiving-multiple-recordsets"></a>Ricezione di più recordset
 Il [provider Microsoft OLE DB per SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) supporta la restituzione di più oggetti **Recordset** per un unico comando contenente più istruzioni SQL, un **Recordset** per ogni istruzione SQL. L'ordine in cui vengono restituiti i **Recordset**segue l'ordine in cui le istruzioni SQL vengono inserite nel testo del comando.  

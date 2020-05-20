@@ -8,17 +8,17 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 315c32dc-aeb1-4629-b30e-87b44e8f84d1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9d7f351b90030e755dde8ad13905ef4533eff08e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2ecedd516891e2f99a800da452573717f211ff60
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924056"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760797"
 ---
 # <a name="step-3-populate-the-fields-list-box"></a>Passaggio 3: Popolare la casella di riepilogo Fields
-Per popolare la casella di riepilogo campi, inserire il codice seguente nel gestore eventi Click di `lstMain`:  
+Per popolare la casella di riepilogo campi, inserire il codice seguente nel gestore eventi Click di `lstMain` :  
   
 ```  
 Private Sub lstMain_Click()  
@@ -46,13 +46,13 @@ Private Sub lstMain_Click()
 End Sub  
 ```  
   
- Questo codice dichiara e crea istanze degli oggetti record e recordset locali rispettivamente `rec` e `rs`.  
+ Questo codice dichiara e crea istanze degli oggetti record e recordset locali `rec` rispettivamente e `rs` .  
   
- La riga corrispondente alla risorsa selezionata in `lstMain` viene resa la riga corrente di. `grs` La casella di riepilogo dettagli viene quindi deselezionata e `rec` viene aperta con la `grs` riga corrente di come origine.  
+ La riga corrispondente alla risorsa selezionata in `lstMain` viene resa la riga corrente di `grs` . La casella di riepilogo dettagli viene quindi deselezionata e `rec` viene aperta con la riga corrente di `grs` come origine.  
   
- Se la risorsa è un record di raccolta, come specificato da [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md), il recordset `rs` locale viene aperto sugli elementi figlio di REC. Viene `lstDetails` quindi compilato con i valori delle righe di `rs`.  
+ Se la risorsa è un record di raccolta, come specificato da [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md), il recordset locale `rs` viene aperto sugli elementi figlio di REC. `lstDetails`Viene quindi compilato con i valori delle righe di `rs` .  
   
- Se la risorsa è un record semplice, `recFields` viene chiamato il metodo. Per ulteriori informazioni su `recFields`, vedere il passaggio successivo.  
+ Se la risorsa è un record semplice, `recFields` viene chiamato il metodo. Per ulteriori informazioni su `recFields` , vedere il passaggio successivo.  
   
  Non viene implementato codice se la risorsa è un documento strutturato.  
   

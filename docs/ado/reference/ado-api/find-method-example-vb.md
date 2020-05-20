@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Find method [ADO], Visual Basic example
 ms.assetid: bbf27dcc-9815-4e2f-8ea8-b8c9fe6dedd6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6513daf2a2d57b0ed2b9d68f6232112d238de037
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e3495e26fa4b71563716877db501299873aff532
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932622"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760107"
 ---
 # <a name="find-method-example-vb"></a>Esempio del metodo Find (VB)
 In questo esempio viene utilizzato il metodo [Find](../../../ado/reference/ado-api/find-method-ado.md) dell'oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) per individuare e contare il numero di titoli aziendali nel database ***pubs*** . Nell'esempio si presuppone che il provider sottostante non supporti funzionalità simili.  

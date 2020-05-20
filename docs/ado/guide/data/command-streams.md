@@ -11,14 +11,14 @@ helpviewer_keywords:
 - command streams [ADO]
 - streams [ADO], command
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fd0c2273739a3651c7fdd4c424ce0cb47d39dd5b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0bf95d202d842a656ec4b42bc2277b8eb9a76689
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925848"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761207"
 ---
 # <a name="command-streams"></a>Flussi di comandi
 ADO ha sempre supportato l'input del comando in formato stringa specificato dalla proprietà **CommandText** . In alternativa, con ADO 2,7 o versioni successive, è anche possibile usare un flusso di informazioni per l'input del comando assegnando il flusso alla proprietà **CommandStream** . È possibile assegnare un oggetto **flusso** ADO o qualsiasi oggetto che supporti l'interfaccia **IStream** com.  
@@ -40,7 +40,7 @@ adoStreamQuery.Open
   
  Il contenuto del flusso di query sarà una query modello XML.  
   
- La query modello richiede un riferimento allo spazio dei nomi XML identificato dal prefisso SQL: del tag \<SQL: query>. Un'istruzione SQL SELECT viene inclusa come contenuto del modello XML e assegnata a una variabile stringa come indicato di seguito:  
+ La query modello richiede un riferimento allo spazio dei nomi XML identificato dal prefisso SQL: del \< tag SQL: query>. Un'istruzione SQL SELECT viene inclusa come contenuto del modello XML e assegnata a una variabile stringa come indicato di seguito:  
   
 ```  
 sQuery = "<ROOT xmlns:sql='urn:schemas-microsoft-com:xml-sql'>  

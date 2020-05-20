@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Source property [ADO], Visual Basic example
 ms.assetid: 7c83eb01-71c7-4c5d-9778-6270471c8164
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5161dc2aa0a0a213095a160cf0473c138cdf2cf5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3f652b23e65b4f5669c6d369595933df4c5c6b9a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930912"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759797"
 ---
 # <a name="source-property-example-vb"></a>Esempio della proprietà Source (VB)
 In questo esempio viene illustrata la proprietà [source](../../../ado/reference/ado-api/source-property-ado-recordset.md) aprendo tre oggetti [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) basati su origini dati diverse.  

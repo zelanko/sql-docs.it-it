@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - UpdateBatch method [ADO]
 ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e9d74fe938ce486a4cd15573af8166dbed12ba6f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9572bf6b50f359a5193dbe1b23034f1503afb1fc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67937848"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759457"
 ---
 # <a name="updatebatch-method"></a>Metodo UpdateBatch
 Scrive tutti gli aggiornamenti batch in sospeso sul disco.  
@@ -40,7 +40,7 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
  *PreserveStatus*  
  Facoltativa. Valore **booleano** che specifica se è necessario eseguire il commit delle modifiche locali, come indicato dalla proprietà [status](../../../ado/reference/ado-api/status-property-ado-recordset.md) . Se questo valore è impostato su **true**, la proprietà **status** di ogni record rimarrà invariata al termine dell'aggiornamento.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Utilizzare il metodo **UpdateBatch** quando si modifica un oggetto **Recordset** in modalità di aggiornamento batch per trasmettere tutte le modifiche apportate in un oggetto **Recordset** al database sottostante.  
   
  Se l'oggetto **Recordset** supporta l'aggiornamento in batch, è possibile memorizzare nella cache più modifiche a uno o più record localmente fino a quando non si chiama il metodo **UpdateBatch** . Se si modifica il record corrente o si aggiunge un nuovo record quando si chiama il metodo **UpdateBatch** , ADO chiamerà automaticamente il metodo [Update](../../../ado/reference/ado-api/update-method.md) per salvare le modifiche in sospeso apportate al record corrente prima di trasmettere le modifiche in batch al provider. È consigliabile utilizzare l'aggiornamento batch solo con un keyset o un cursore statico.  

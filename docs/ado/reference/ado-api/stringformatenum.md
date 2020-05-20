@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - StringFormatEnum enumeration [ADO]
 ms.assetid: 28f7d1ec-092b-4323-a39d-d3f882c6c81a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 85bef64902f014e7b5269d6df328128bc8fe8d6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 67814e1236bc10e9b008d1684586796dd62950b4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67937887"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759557"
 ---
 # <a name="stringformatenum"></a>StringFormatEnum
 Specifica il formato durante il recupero di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) come stringa.  
   
-|Costante|valore|Descrizione|  
+|Costante|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adClipString**|2|Delimita le righe in base a *RowDelimiter*, colonne per *ColumnDelimiter*e valori null per *NullExpr*. Questi tre parametri del metodo [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) sono validi solo con un *StringFormat* di **adClipString**.|  
   

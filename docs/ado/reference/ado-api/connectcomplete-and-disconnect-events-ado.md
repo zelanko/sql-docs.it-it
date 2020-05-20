@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Disconnect event [ADO]
 - ConnectComplete event [ADO]
 ms.assetid: 568f5252-d069-4d99-a01b-2ada87ad1304
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 448270ddf0e8cd7efb5ec39a93d4ff993360730e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 88aa5ee6b1d4eabecb65323f557e4bf594da8629
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919573"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760327"
 ---
 # <a name="connectcomplete-and-disconnect-events-ado"></a>Eventi ConnectComplete e Disconnect (ADO)
 L'evento **ConnectComplete** viene chiamato dopo l'avvio di una connessione. L'evento di **disconnessione** viene chiamato al termine di una connessione.  

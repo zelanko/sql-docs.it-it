@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - CacheSize property [ADO], Visual Basic example
 ms.assetid: a237ffdb-6e5b-47c6-9901-d5cdbe8625f3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7d88977844c415c43baa7b4b8669b7d8e13793fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 166f18abc1adac56640374ef6e0ce5405e7fdc54
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920248"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758897"
 ---
 # <a name="cachesize-property-example-vb"></a>Esempio della proprietà CacheSize (VB)
 In questo esempio viene usata la proprietà [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) per mostrare la differenza nelle prestazioni per un'operazione eseguita con e senza una cache di 30 record.  

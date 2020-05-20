@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Schema section [ADO]
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5b6e591ecc9f366f3914986b0ae11e0e301b782d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8222b697fec7d0dd5bd1f32425cf48761f25308e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924296"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760897"
 ---
 # <a name="schema-section"></a>Sezione dello schema
 La sezione schema è obbligatoria. Come illustrato nell'esempio precedente, ADO scrive i metadati dettagliati su ogni colonna per mantenere la semantica dei valori dei dati il più possibile per l'aggiornamento. Tuttavia, per caricare nel codice XML, ADO richiede solo i nomi delle colonne e il set di righe a cui appartengono. Di seguito è riportato un esempio di uno schema minimo:  
@@ -95,7 +95,7 @@ La sezione schema è obbligatoria. Come illustrato nell'esempio precedente, ADO 
 </rs:data>  
 ```  
   
- Analogamente, poiché `CompanyName` nell'esempio precedente non è definito alcun alias, `CompanyName` è necessario utilizzarlo in modo coerente in tutto il documento.  
+ Analogamente, poiché nell'esempio precedente non è definito alcun alias `CompanyName` , è `CompanyName` necessario utilizzarlo in modo coerente in tutto il documento.  
   
 ## <a name="data-types"></a>Tipi di dati  
  È possibile applicare un tipo di dati a una colonna con l'attributo dt: Type. Per la guida definitiva ai tipi XML consentiti, vedere la sezione relativa ai tipi di dati della [specifica W3C XML-Data](http://www.w3.org/TR/1998/NOTE-XML-data/). È possibile specificare un tipo di dati in due modi: specificare l'attributo dt: Type direttamente nella definizione di colonna oppure utilizzare il costrutto s:DataType come elemento annidato della definizione di colonna. Ad esempio,  
@@ -152,13 +152,13 @@ La sezione schema è obbligatoria. Come illustrato nell'esempio precedente, ADO 
 </s:AttributeType>  
 ```  
   
- La definizione consente `CompanyName` di essere null, ma `ShipperID` non può contenere un valore null. Se la sezione dati contiene la riga seguente, il provider di persistenza imposterà lo stato dei dati `CompanyName` della colonna sulla costante di stato OLE DB DBSTATUS_S_ISNULL:  
+ La definizione consente `CompanyName` di essere null, ma `ShipperID` non può contenere un valore null. Se la sezione dati contiene la riga seguente, il provider di persistenza imposterà lo stato dei dati della `CompanyName` colonna sulla costante di stato OLE DB DBSTATUS_S_ISNULL:  
   
 ```  
 <z:row ShipperID="1"/>  
 ```  
   
- Se la riga è completamente vuota, come indicato di seguito, il provider di persistenza restituisce uno stato OLE DB `ShipperID` di DBSTATUS_E_UNAVAILABLE per e DBSTATUS_S_ISNULL per CompanyName.  
+ Se la riga è completamente vuota, come indicato di seguito, il provider di persistenza restituisce uno stato OLE DB di DBSTATUS_E_UNAVAILABLE per `ShipperID` e DBSTATUS_S_ISNULL per CompanyName.  
   
 ```  
 <z:row/>   
@@ -170,7 +170,7 @@ La sezione schema è obbligatoria. Come illustrato nell'esempio precedente, ADO 
 <z:row ShipperID="1" CompanyName=""/>  
 ```  
   
- Per la riga precedente, il provider di persistenza restituirà uno stato di OLE DB DBSTATUS_S_OK per entrambe le colonne. `CompanyName` In questo caso è semplicemente "" (una stringa di lunghezza zero).  
+ Per la riga precedente, il provider di persistenza restituirà uno stato di OLE DB DBSTATUS_S_OK per entrambe le colonne. `CompanyName`In questo caso è semplicemente "" (una stringa di lunghezza zero).  
   
  Per ulteriori informazioni sui costrutti di OLE DB disponibili per l'utilizzo nello schema di un documento XML per OLE DB, vedere la definizione di "urn: schemas-microsoft-com: rowset" e la guida per programmatori OLE DB.  
   

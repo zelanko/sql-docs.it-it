@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Value property [ADO]
 ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e35dd93e6d90a81934d8f272ea79c5eb7c8a97c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6648fcabe8890ef653558636738735a4f5e4012f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67913926"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759447"
 ---
 # <a name="value-property-ado"></a>Proprietà Value (ADO)
 
@@ -48,7 +48,7 @@ ADO consente di impostare e restituire dati binari lunghi con la proprietà **va
 |-|-|-|  
 |[Oggetto Field](../../../ado/reference/ado-api/field-object.md)|[Oggetto Parameter](../../../ado/reference/ado-api/parameter-object.md)|[Oggetto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
-[Esempio di proprietà Value (VB) value,](../../../ado/reference/ado-api/value-property-example-vb.md)
-[esempio (VC + +)](../../../ado/reference/ado-api/value-property-example-vc.md) 
+[Esempio di proprietà Value (VB)](../../../ado/reference/ado-api/value-property-example-vb.md) 
+ [Esempio di proprietà Value (VC + +)](../../../ado/reference/ado-api/value-property-example-vc.md) 

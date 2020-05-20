@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data shaping [ADO], APPEND clause
 - append clause [ADO]
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e09113b42f655a3b94ab3877ff81f2553a363931
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d26f83985ce74edc0581ff9ff8fee31d5064c7e5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924187"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760867"
 ---
 # <a name="shape-append-clause"></a>Clausola APPEND di Shape
 La clausola SHAPE Command APPEND Accoda una colonna o colonne a un **Recordset**. Spesso queste colonne sono colonne del capitolo, che fanno riferimento a un **Recordset**figlio.  
@@ -36,7 +36,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
  *comando padre*  
  Zero o uno dei seguenti elementi (è possibile omettere completamente il *comando padre* ):  
   
--   Comando del provider racchiuso tra parentesi graffe ({}"") che restituisce un oggetto **Recordset** . Il comando viene emesso al provider di dati sottostante e la relativa sintassi dipende dai requisiti del provider. Si tratta in genere del linguaggio SQL, sebbene ADO non richieda un linguaggio di query specifico.  
+-   Comando del provider racchiuso tra parentesi graffe (" {} ") che restituisce un oggetto **Recordset** . Il comando viene emesso al provider di dati sottostante e la relativa sintassi dipende dai requisiti del provider. Si tratta in genere del linguaggio SQL, sebbene ADO non richieda un linguaggio di query specifico.  
   
 -   Un altro comando Shape incorporato tra parentesi.  
   
@@ -66,7 +66,7 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 ## <a name="remarks"></a>Osservazioni  
  *recordset figlio*  
- -   Comando del provider racchiuso tra parentesi graffe ({}"") che restituisce un oggetto **Recordset** . Il comando viene emesso al provider di dati sottostante e la relativa sintassi dipende dai requisiti del provider. Si tratta in genere del linguaggio SQL, sebbene ADO non richieda un linguaggio di query specifico.  
+ -   Comando del provider racchiuso tra parentesi graffe (" {} ") che restituisce un oggetto **Recordset** . Il comando viene emesso al provider di dati sottostante e la relativa sintassi dipende dai requisiti del provider. Si tratta in genere del linguaggio SQL, sebbene ADO non richieda un linguaggio di query specifico.  
   
 -   Un altro comando Shape incorporato tra parentesi.  
   
@@ -102,13 +102,13 @@ SHAPE [parent-command [[AS] parent-alias]]
 SHAPE {select * from t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- SHAPE eseguirà due comandi: `select * from t1` e (`select * from t2 RELATE k1 TO k2)`. Se l'utente fornisce un comando composto costituito da più comandi del provider separati da punti e virgola, la forma non è in grado di distinguere la differenza. Quindi, nel comando SHAPE seguente,  
+ SHAPE eseguirà due comandi: `select * from t1` e ( `select * from t2 RELATE k1 TO k2)` . Se l'utente fornisce un comando composto costituito da più comandi del provider separati da punti e virgola, la forma non è in grado di distinguere la differenza. Quindi, nel comando SHAPE seguente,  
   
 ```  
 SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- La forma viene `select * from t1; drop table t1` eseguita e`select * from t2 RELATE k1 TO k2),` (senza rendersene conto `drop table t1` che è un comando del provider separato e in questo caso pericoloso. Le applicazioni devono sempre convalidare l'input dell'utente per impedire che si verifichino potenziali attacchi pirati informatici.  
+ La forma viene eseguita `select * from t1; drop table t1` e ( `select * from t2 RELATE k1 TO k2),` senza rendersene conto che `drop table t1` è un comando del provider separato e in questo caso pericoloso. Le applicazioni devono sempre convalidare l'input dell'utente per impedire che si verifichino potenziali attacchi pirati informatici.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

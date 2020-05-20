@@ -3,7 +3,6 @@ title: Creare la chiave master di un database | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2019
 ms.prod: sql-server-2014
-ms.reviewer: carlrab
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,16 +11,17 @@ ms.assetid: 8cb24263-e97d-4e4d-9429-6cf494a4d5eb
 author: jaszymas
 ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 86f74710e99079d0acd28db09bcf1e4ba7c57865
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.reviewer: carlrab
+ms.openlocfilehash: cc0b3e0dccd1ecf674d583e4d1b7adc1a85341d2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957245"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758887"
 ---
 # <a name="create-a-database-master-key"></a>Creazione della chiave master di un database
 
-In questo argomento viene descritto come creare una chiave master del database `master` nel database [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] in utilizzando [!INCLUDE[tsql](../../../includes/tsql-md.md)].
+In questo argomento viene descritto come creare una chiave master del database nel `master` database in utilizzando [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[tsql](../../../includes/tsql-md.md)] .
 
 **Contenuto dell'articolo**
 

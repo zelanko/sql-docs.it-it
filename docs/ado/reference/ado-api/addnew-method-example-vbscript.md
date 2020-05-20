@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - AddNew method [ADO], VBScript
 ms.assetid: dcdcaf0a-b9b0-4d81-8728-43c38c4c853b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e8329b1edd2e240e00221096bd501d3edf204e71
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fd5d6a54bd36b62c9aec6492a66e4a451ead25f5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921288"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760617"
 ---
 # <a name="addnew-method-example-vbscript"></a>Esempio del metodo AddNew (VBScript)
 In questo esempio viene usato il metodo [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) per creare un nuovo record con il nome specificato.  

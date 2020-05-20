@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - namespaces in ADO
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a5f28b5d593524288a755f4c9455bba39554d7bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8f3261b7b68213205dbcc51e155832242aa42747
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924811"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759147"
 ---
 # <a name="namespaces"></a>Spazi dei nomi
 Il formato di persistenza XML in ADO utilizza i quattro spazi dei nomi seguenti.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il formato di persistenza XML in ADO utilizza i quattro spazi dei nomi seguenti.  
   
 |Prefisso|Descrizione|  

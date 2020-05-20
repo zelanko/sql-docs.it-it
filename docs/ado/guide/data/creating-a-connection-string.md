@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connections [ADO]
 - connection strings [ADO]
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3c9d81ef7be98f3c65167de24b3ff59ac6f05df5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b58dc19097d01630fa1ab1c2707e8be379ae83cb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925769"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761147"
 ---
 # <a name="creating-a-connection-string"></a>Creazione di una stringa di connessione
 Una stringa di connessione è costituita da un elenco di coppie argomento/valore (ovvero parametri), separate da punti e virgola. Ad esempio:  
@@ -48,7 +48,7 @@ m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _
              "Initial Catalog=Northwind;Integrated Security='SSPI';"  
 ```  
   
- In questa stringa di connessione, ADO riconosce solo `"Provider=SQLOLEDB"` il parametro, che specifica il provider di Microsoft OLE DB per SQL Server come origine dati ADO. Il resto delle coppie argomento/valore, `"Data Source=MySqlServer; Initial Catalog=Northwind;Integrated Security='SSPI';"`, viene passato Verbatim a questo provider. Il tipo e la validità di tali parametri sono specifici del provider. Per informazioni sui parametri validi che possono essere passati nella stringa di connessione, consultare la documentazione del singolo provider.  
+ In questa stringa di connessione, ADO riconosce solo il `"Provider=SQLOLEDB"` parametro, che specifica il provider di Microsoft OLE DB per SQL Server come origine dati ADO. Il resto delle coppie argomento/valore, `"Data Source=MySqlServer; Initial Catalog=Northwind;Integrated Security='SSPI';"` , viene passato Verbatim a questo provider. Il tipo e la validità di tali parametri sono specifici del provider. Per informazioni sui parametri validi che possono essere passati nella stringa di connessione, consultare la documentazione del singolo provider.  
   
  In base al provider OLE DB per SQL Server documentazione, è possibile sostituire "Server" per il parametro dell' *origine dati* e "database" per il parametro del *catalogo iniziale* . Quindi, la stringa di connessione seguente produrrebbe risultati identici a quelli precedenti:  
   

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - CacheSize property [ADO], JScript example
 ms.assetid: 3675f641-b4b1-48ff-ba33-8d9ea064cd04
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ac48cd3397905a3ab0d14d65006cbd4a7656555b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9aad983c315aae76dc30cbbbef645c25b9302bdf
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920265"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758907"
 ---
 # <a name="cachesize-property-example-jscript"></a>Esempio della proprietà CacheSize (JScript)
 In questo esempio viene usata la proprietà [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) per mostrare la differenza nelle prestazioni per un'operazione eseguita con e senza una cache di 30 record. Tagliare e incollare il codice seguente nel blocco note o in un altro editor di testo e salvarlo come **CacheSizeJS. asp**.  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Stat method [ADO]
 ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0538a3afae1e4c0bf4159d8ef6a42872f21ff6ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6295640a0d9ec0815ebac9086efc3835915e0e0c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67916874"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759777"
 ---
 # <a name="stat-method"></a>Metodo Stat
 Recupera le informazioni su un oggetto [flusso](../../../ado/reference/ado-api/stream-object-ado.md) .  
@@ -42,12 +42,12 @@ Long stream.Stat(StatStg, StatFlag)
  *StatFlag*  
  Specifica che questo metodo non restituisce alcuni membri della struttura STATSTG, salvando così un'operazione di allocazione della memoria. I valori vengono ricavati dall'enumerazione STATFLAG. L'enumerazione STATFLAG ha due valori  
   
-|Costante|valore|  
+|Costante|Valore|  
 |--------------|-----------|  
 |STATFLAG_DEFAULT|0|  
 |STATFLAG_NONAME|1|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La versione del metodo stat implementato per l'oggetto flusso ADO compila i campi seguenti della struttura STATSTG:  
   
  *pwcsName*  

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - service providers [ADO]
 - service components [ADO]
 ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4ffecfc87ec23fc4d62174dae31220511c9f72d4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 39e1670d9d37b1404e65ecb50f09dc214abdaaff
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926975"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760547"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>Appendice A: provider di dati e servizi
 Questa sezione illustra tre tipi di provider: provider di dati, provider di servizi e componenti del servizio. I provider rientrano in due categorie, ovvero quelle che forniscono i dati e i servizi. Un *provider di dati* possiede i propri dati e li espone in forma tabulare all'applicazione. Un *provider di servizi* incapsula un servizio tramite la produzione e l'utilizzo di dati, aumentando le funzionalità nelle applicazioni ADO. Un provider di servizi può anche essere definito ulteriormente come *componente del servizio*, che deve interagire con altri provider di servizi o componenti.
@@ -70,7 +70,7 @@ Questa sezione illustra tre tipi di provider: provider di dati, provider di serv
  Per ulteriori informazioni sui provider di OLE DB, vedere [Microsoft OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms722784.aspx).
 
 ## <a name="provider-commands"></a>Comandi del provider
- Per ogni provider elencato qui, se le applicazioni consentono agli utenti di immettere istruzioni SQL come comandi del provider, è sempre necessario convalidare l'input dell'utente e vigilare su possibili attacchi di hacker usando istruzioni SQL potenzialmente `DROP TABLE t1`pericolose, ad esempio, come parte dell'input utente.
+ Per ogni provider elencato qui, se le applicazioni consentono agli utenti di immettere istruzioni SQL come comandi del provider, è sempre necessario convalidare l'input dell'utente e vigilare su possibili attacchi di hacker usando istruzioni SQL potenzialmente pericolose, ad esempio `DROP TABLE t1` , come parte dell'input utente.
 
 ## <a name="see-also"></a>Vedere anche
  Oggetto [comando (ADO)](../../../ado/reference/ado-api/command-object-ado.md) [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [provider Microsoft OLE DB per Internet pubblicazione](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) [del provider Microsoft OLE DB per Microsoft Active Directory Service](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md) provider [microsoft OLE DB per Microsoft indexing Service](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md) provider [Microsoft OLE DB provider per ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md) [provider Microsoft OLE DB per Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) [provider Microsoft OLE DB per SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) provider [Microsoft OLE DB per Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) [Properties Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [Recordset Object (ADO](../../../ado/reference/ado-api/recordset-object-ado.md) ) metodo di [aggiornamento (RDS](../../../ado/reference/rds-api/refresh-method-rds.md) )

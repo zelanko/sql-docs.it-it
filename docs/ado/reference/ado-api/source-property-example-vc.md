@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Source property [ADO], VC++ example
 ms.assetid: e10d33da-ea30-4138-ae40-e9f6aa9d17d9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: da0bfacc4ab64929bcd37051efa9d36944871253
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0d7d5fb516e1ec8ed5eb68f3fccdc834e0a06259
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930880"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759787"
 ---
 # <a name="source-property-example-vc"></a>Esempio della proprietà Source (VC++)
 In questo esempio viene illustrata la proprietà [source](../../../ado/reference/ado-api/source-property-ado-recordset.md) aprendo tre oggetti [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) basati su origini dati diverse.  

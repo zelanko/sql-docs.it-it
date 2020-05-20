@@ -11,14 +11,14 @@ helpviewer_keywords:
 - conflicts [ADO], detecting and resolving
 - ADO, detecting and resolving conflicts
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bce9917f144e8c63160f571a986263d8d7e97b21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d3b3a9f4c5482d0171c59a734aa6139bc2239c55
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925568"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761087"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Rilevamento e risoluzione di conflitti
 Se si sta lavorando con il recordset in modalità immediata, è possibile che si verifichino problemi di concorrenza. D'altra parte, se l'applicazione usa l'aggiornamento in modalità batch, è possibile che un utente possa modificare un record prima che vengano salvate le modifiche apportate da un altro utente che modifica lo stesso record. In tal caso, si desidera che l'applicazione gestisca normalmente il conflitto. Potrebbe essere necessario che l'ultima persona invii un aggiornamento al server "WINS". In alternativa, è possibile consentire all'utente più recente di decidere quale aggiornamento deve avere la precedenza, offrendogli una scelta tra i due valori in conflitto.  

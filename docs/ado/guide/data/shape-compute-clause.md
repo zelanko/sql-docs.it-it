@@ -12,14 +12,14 @@ helpviewer_keywords:
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fa6862808643f3d687fa406cb3fc2aa23c9b7d7b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 44ccd2c978cb0356a2fcab75daa860db0f4f77f5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924148"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760847"
 ---
 # <a name="shape-compute-clause"></a>Clausola COMPUTE di Shape
 Una clausola COMPUTE di forma genera un **Recordset**padre, le cui colonne sono costituite da un riferimento al **Recordset**figlio. colonne facoltative il cui contenuto è il capitolo, il nuovo o le colonne calcolate oppure il risultato dell'esecuzione di funzioni di aggregazione sul **Recordset** figlio o su un **Recordset**precedentemente definito. e tutte le colonne del **Recordset** figlio elencate nella clausola facoltativa by.  
@@ -38,7 +38,7 @@ SHAPE child-command [AS] child-alias
  *comando figlio*  
  È costituito da uno dei seguenti elementi:  
   
--   Comando di query racchiuso tra parentesi graffe ({}"") che restituisce un oggetto **Recordset** figlio. Il comando viene emesso al provider di dati sottostante e la relativa sintassi dipende dai requisiti del provider. Si tratta in genere del linguaggio SQL, sebbene ADO non richieda un linguaggio di query specifico.  
+-   Comando di query racchiuso tra parentesi graffe (" {} ") che restituisce un oggetto **Recordset** figlio. Il comando viene emesso al provider di dati sottostante e la relativa sintassi dipende dai requisiti del provider. Si tratta in genere del linguaggio SQL, sebbene ADO non richieda un linguaggio di query specifico.  
   
 -   Nome di un **Recordset**con forma esistente.  
   
@@ -94,7 +94,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
            objConnection  
 ```  
   
- Questo comando apre un **Recordset** con forma a due livelli. Il livello padre è un **Recordset** generato con una colonna di aggregazione`SUM(rs.population)`(), una colonna che fa riferimento al **Recordset** figlio`rs`() e una colonna per il raggruppamento del`state` **Recordset** figlio (). Il livello figlio è il **Recordset** restituito dal comando di query (`select * from demographics`).  
+ Questo comando apre un **Recordset** con forma a due livelli. Il livello padre è un **Recordset** generato con una colonna di aggregazione ( `SUM(rs.population)` ), una colonna che fa riferimento al **Recordset** figlio ( `rs` ) e una colonna per il raggruppamento del **Recordset** figlio ( `state` ). Il livello figlio è il **Recordset** restituito dal comando di query ( `select * from demographics` ).  
   
  Le righe di dettaglio del **Recordset** figlio verranno raggruppate in base allo stato, ma in caso contrario in nessun ordine particolare. Ovvero, i gruppi non saranno in ordine alfabetico o numerico. Se si desidera che il **Recordset** padre venga ordinato, è possibile utilizzare il metodo di **ordinamento del recordset** per ordinare il **Recordset**padre.  
   

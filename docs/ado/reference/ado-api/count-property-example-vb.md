@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Count property [ADO], Visual Basic example
 ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5be99b4f43669a14f948cf10ee0b91028907ec0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8adf469970b6bfb75d4abe75694c99424768353b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933367"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760227"
 ---
 # <a name="count-property-example-vb"></a>Esempio della proprietà Count (VB)
-In questo esempio viene illustrata la proprietà [count](../../../ado/reference/ado-api/count-property-ado.md) con due raccolte nel database ***Employee*** . La proprietà ottiene il numero di oggetti in ogni raccolta e imposta il limite superiore per i cicli che enumerano queste raccolte. Un altro modo per enumerare queste raccolte senza usare la proprietà **count** consiste nell' `For Each...Next` usare le istruzioni.  
+In questo esempio viene illustrata la proprietà [count](../../../ado/reference/ado-api/count-property-ado.md) con due raccolte nel database ***Employee*** . La proprietà ottiene il numero di oggetti in ogni raccolta e imposta il limite superiore per i cicli che enumerano queste raccolte. Un altro modo per enumerare queste raccolte senza usare la proprietà **count** consiste nell'usare le `For Each...Next` istruzioni.  
   
 ```  
 'BeginCountVB  

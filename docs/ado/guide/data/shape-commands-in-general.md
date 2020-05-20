@@ -11,21 +11,21 @@ helpviewer_keywords:
 - shape commands [ADO]
 - data shaping [ADO], shape commands
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 09fec8bd07d036fd6a93b8f6bcb54a51a68150fa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0554da0486b58aff8da6fcf012732b6012f70ae6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924172"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760857"
 ---
 # <a name="shape-commands-in-general"></a>Comandi Shape in generale
 Data Shaping definisce le colonne di un **Recordset**con forma, le relazioni tra le entità rappresentate dalle colonne e il modo in cui il **Recordset** viene popolato con i dati.  
   
  Un **Recordset** con forma può essere costituito dai tipi di colonne seguenti.  
   
-|Tipo di colonna|Descrizione|  
+|Tipo di colonna|Description|  
 |-----------------|-----------------|  
 |data|Campi da un **Recordset** restituito da un comando di query a un provider di dati, a una tabella o a un **Recordset**precedentemente definito.|  
 |capitolo|Un riferimento a un altro **Recordset**, denominato *capitolo*. Le colonne del capitolo consentono di definire una relazione *padre-figlio* in cui *l'elemento padre* è il **Recordset** che contiene la colonna del capitolo e l' *elemento figlio* è il **Recordset** rappresentato dal capitolo.|  

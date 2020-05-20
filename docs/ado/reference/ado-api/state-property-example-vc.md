@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - State property [ADO], VC++ example
 ms.assetid: 1c38cd3b-e4f5-4754-b115-ef5e46d24ab9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dad78c3754fb55aa83c50d467920a611db277f13
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 63518ccce25b9c3597b0baf45ad1a7cfd03d5031
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930841"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759727"
 ---
 # <a name="state-property-example-vc"></a>Esempio della proprietà State (VC++)
 In questo esempio viene utilizzata la proprietà [state](../../../ado/reference/ado-api/state-property-ado.md) per visualizzare un messaggio durante l'apertura delle connessioni asincrone e l'esecuzione di comandi asincroni.  

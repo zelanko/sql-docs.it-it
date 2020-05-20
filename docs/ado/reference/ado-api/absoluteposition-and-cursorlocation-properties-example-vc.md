@@ -13,14 +13,14 @@ helpviewer_keywords:
 - CursorLocation property [ADO], VC++ example
 - AbsolutePosition property [ADO], VC++ example
 ms.assetid: 48c07216-d199-4822-89f8-ce928d3d2b74
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 76ff99822c47ffc14c686b1e6703663c8e309845
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 58455116560db74d1e1966752e16595be3b74be8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921703"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758937"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vc"></a>Esempio di proprietà AbsolutePosition e CursorLocation (VC + +)
 In questo esempio viene illustrato il modo in cui la proprietà [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) è in grado di tenere traccia dello stato di avanzamento di un ciclo che enumera tutti i record di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Usa la proprietà [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) per abilitare la proprietà **AbsolutePosition** impostando il cursore su un cursore client.  

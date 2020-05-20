@@ -8,14 +8,14 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 90748ca7f725ddbf947d9686b846695da0c6626c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2110384afa66e74e17d4e3c9a8600b5825cc412e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924060"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760787"
 ---
 # <a name="step-4-populate-the-details-text-box"></a>Passaggio 4: Popolare la casella di riepilogo Details
 Per popolare la casella di testo dettagli, creare una nuova subroutine denominata **recFields** e inserire il codice seguente:  
@@ -44,7 +44,7 @@ Sub recFields(r As Record, l As ListBox, t As TextBox)
 End Sub  
 ```  
   
- Questo codice viene popolato `lstDetails` con i campi e i valori del record semplice passato `recFields`a. Se la risorsa è un file di testo, viene aperto un flusso di testo dal record di risorse. Il codice determina se il set di caratteri è ASCII e copia il contenuto del `txtDetails`flusso in.  
+ Questo codice viene popolato `lstDetails` con i campi e i valori del record semplice passato a `recFields` . Se la risorsa è un file di testo, viene aperto un flusso di testo dal record di risorse. Il codice determina se il set di caratteri è ASCII e copia il contenuto del flusso in `txtDetails` .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Scenario di pubblicazione Internet](../../../ado/guide/data/internet-publishing-scenario.md)   

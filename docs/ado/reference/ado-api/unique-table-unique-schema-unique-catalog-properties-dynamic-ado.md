@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Unique Schema property [ADO]
 - Unique Catalog property [ADO]
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1b70920cd223223d5efb14925a6808168ca9cc16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ac7fa0cf50a92b2738d3e83d5e7b9d5fac46fd9b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67911669"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759517"
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Tabella univoca, schema univoco, proprietà del catalogo univoco-Dynamic (ADO)
 Consente di controllare in modo accurato le modifiche apportate a una determinata tabella di base in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) costituito da un'operazione di join in più tabelle di base.  
@@ -50,5 +50,5 @@ Consente di controllare in modo accurato le modifiche apportate a una determinat
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

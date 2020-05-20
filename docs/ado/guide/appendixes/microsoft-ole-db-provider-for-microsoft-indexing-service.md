@@ -12,14 +12,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Microsoft Indexing service
 - OLE DB provider for Microsoft Indexing service [ADO]
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a5a81514fd12117a9f43e2c33bf0cda579fb363d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e4bc6669f961e712ced994a590348604e7bd3274
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926668"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760477"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Panoramica di Microsoft OLE DB provider per il servizio di indicizzazione Microsoft
 Il provider Microsoft OLE DB per Microsoft Indexing Service fornisce l'accesso di sola lettura a livello di codice ai file system e ai dati web indicizzati dal servizio Microsoft Indexing. Le applicazioni ADO possono eseguire query SQL per recuperare il contenuto e le informazioni sulle proprietà del file.
@@ -87,7 +87,7 @@ MSIDXS
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|Sola lettura|
 |[origine](../../../ado/reference/ado-api/source-property-ado-recordset.md)|lettura/scrittura|
 |[State](../../../ado/reference/ado-api/state-property-ado.md)|Sola lettura|
-|[Stato](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Sola lettura|
+|[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Sola lettura|
 
  \*I segnalibri devono essere abilitati nel provider affinché questa funzionalità sia presente nel **Recordset**.
 
@@ -100,8 +100,8 @@ MSIDXS
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|No|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|No|
 |[Clone](../../../ado/reference/ado-api/clone-method-ado.md) (Clona)|Sì|
-|[Chiudi](../../../ado/reference/ado-api/close-method-ado.md)|Sì|
-|[Elimina](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|No|
+|[Close](../../../ado/reference/ado-api/close-method-ado.md)|Sì|
+|[Eliminazione](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|No|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sì|
 |[Spostamento](../../../ado/reference/ado-api/move-method-ado.md)|Sì|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sì|

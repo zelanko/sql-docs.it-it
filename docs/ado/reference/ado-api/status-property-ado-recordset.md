@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Status property [ADO Recordset]
 ms.assetid: 41d70d89-880f-4850-9d17-19d9790cc8eb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1d91c3e92be7679ad6fbbb4a4ee7bd1bb6a48422
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d3ba9ad977fe02a712a675b8a9e4bae4b3d038b1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67916831"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759737"
 ---
 # <a name="status-property-ado-recordset"></a>Proprietà Status (Recordset - ADO)
 Indica lo stato del record corrente rispetto agli aggiornamenti batch o ad altre operazioni bulk.  
@@ -35,6 +35,6 @@ Indica lo stato del record corrente rispetto agli aggiornamenti batch o ad altre
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Esempio di proprietà Status (recordset) (VB)](../../../ado/reference/ado-api/status-property-example-recordset-vb.md)   
  [Esempio della proprietà Status (VC++)](../../../ado/reference/ado-api/status-property-example-vc.md)   

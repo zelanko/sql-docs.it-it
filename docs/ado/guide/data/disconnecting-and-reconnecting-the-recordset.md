@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO], disconnecting and reconnecting
 ms.assetid: c5134af7-81d6-4de4-9fd1-cfe29973545e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9829ddfd7e625941c97bd3b2027c328a1fba93d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7ef30165a05bc472bfe34cec4e7f669d545d7768
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925517"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761057"
 ---
 # <a name="disconnecting-and-reconnecting-the-recordset"></a>Disconnessione e riconnessione del recordset
 Una delle funzionalità più potenti disponibili in ADO è la possibilità di aprire un recordset lato client da un'origine dati e quindi di disconnettere il recordset dall'origine dati. Una volta che il recordset è stato disconnesso, è possibile chiudere la connessione all'origine dati, rilasciando quindi le risorse sul server usato per gestirlo. È possibile continuare a visualizzare e modificare i dati nel recordset mentre è disconnesso e successivamente riconnettersi all'origine dati e inviare gli aggiornamenti in modalità batch.  

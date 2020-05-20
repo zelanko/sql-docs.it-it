@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - State property [ADO]
 ms.assetid: 0b993bac-2653-40b1-bcbb-5b57b6aae2bf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c45b9331ddd538cdf23a57eaf39b6efb71bccc4a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 68a0e6fe0c595a79447cbf79155914606415df89
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930857"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759757"
 ---
 # <a name="state-property-ado"></a>Proprietà State (ADO)
 Indica per tutti gli oggetti applicabili se lo stato dell'oggetto è aperto o chiuso. Se l'oggetto esegue un metodo asincrono, indica se lo stato corrente dell'oggetto è la connessione, l'esecuzione o il recupero.  
@@ -28,7 +28,7 @@ Indica per tutti gli oggetti applicabili se lo stato dell'oggetto è aperto o ch
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un valore **Long** che può essere un valore [ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md) . Il valore predefinito è **adStateClosed**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  È possibile utilizzare la proprietà **state** per determinare lo stato corrente di un determinato oggetto in qualsiasi momento.  
   
  La proprietà **state** dell'oggetto può avere una combinazione di valori. Se, ad esempio, un'istruzione è in esecuzione, questa proprietà avrà un valore combinato di **adStateOpen** e **adStateExecuting**.  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - CommandText property [ADOX], Visual Basic example
 - Command property [ADOX], Visual Basic example
 ms.assetid: 413263a8-05c0-4404-929d-69f82b987ba3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 848fffdaabaf0a7f783969d7e44d7612bb2f92dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 116aaa974255352e0d51171f804e86ac02191737
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966787"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759317"
 ---
 # <a name="command-and-commandtext-properties-example-vb"></a>Esempio delle proprietà Command e CommandText (VB)
 Nel codice seguente viene illustrato come utilizzare la proprietà [Command](../../../ado/reference/adox-api/command-property-adox.md) per aggiornare il testo di una stored procedure.  

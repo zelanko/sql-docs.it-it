@@ -12,14 +12,14 @@ helpviewer_keywords:
 - OLE DB providers [ADO]
 - ADO, OLE DB providers
 ms.assetid: 877b9f25-60c4-4ab6-8052-2c28a3849e89
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 40506ec971782c5e9108a34fd240faabcc2756b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6dfb672b57b95224cf6ff056c3298c7c8a437d2a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925653"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761107"
 ---
 # <a name="data-providers"></a>Provider di dati
 I provider di dati rappresentano diverse origini di dati, ad esempio database SQL, file indicizzati sequenziali, fogli di calcolo, archivi di documenti e file di posta elettronica. I provider espongono i dati in modo uniforme usando un'astrazione comune denominata set di righe.  

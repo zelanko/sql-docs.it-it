@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Status property [ADO Field], Visual Basic example
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c28a0b615a9f250c8539e87abf9fefbc11f513ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2263f72311111ef7f63d006e085165ec2ab492c3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67916824"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759707"
 ---
 # <a name="status-property-example-field-vb"></a>Esempio della proprietà Status (Field) (VB)
 Nell'esempio seguente viene aperto un documento da una cartella di lettura/scrittura utilizzando il [provider di pubblicazione Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). La proprietà [status](../../../ado/reference/ado-api/status-property-ado-field.md) di un [oggetto campo](../../../ado/reference/ado-api/field-object.md) del [record](../../../ado/reference/ado-api/record-object-ado.md) verrà prima impostata su **adFieldPendingInsert**, quindi verrà aggiornata in **adFieldOK**.  
@@ -91,7 +91,7 @@ Attribute VB_Name = "StatusField"
 Attribute VB_Name = "StatusField"  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Field (oggetto)](../../../ado/reference/ado-api/field-object.md)   
  [Oggetto record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Proprietà Status (campo ADO)](../../../ado/reference/ado-api/status-property-ado-field.md)

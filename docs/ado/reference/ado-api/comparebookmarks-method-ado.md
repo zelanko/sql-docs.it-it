@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - CompareBookmarks method [ADO]
 ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0d737c2f031fa3ba630eabb7e52dff0e056c3390
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: aa4be74086e4d35af70ac52aa9db0066f4279e3e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919595"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760367"
 ---
 # <a name="comparebookmarks-method-ado"></a>Metodo CompareBookmarks (ADO)
 Confronta due segnalibri e restituisce un'indicazione dei valori relativi.  
@@ -44,7 +44,7 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
  *Segnalibro2*  
  Segnalibro della seconda riga.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  I segnalibri devono essere applicati allo stesso oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) o a un oggetto **Recordset** e al relativo [Clone](../../../ado/reference/ado-api/clone-method-ado.md). Non è possibile confrontare in modo affidabile i segnalibri da oggetti **Recordset** diversi, anche se sono stati creati dalla stessa origine o comando. Non è inoltre possibile confrontare i segnalibri per un oggetto **Recordset** il cui provider sottostante non supporta i confronti.  
   
  Un segnalibro identifica in modo univoco una riga in un oggetto **Recordset** . Per ottenere il relativo segnalibro, utilizzare la proprietà [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) della riga corrente.  
