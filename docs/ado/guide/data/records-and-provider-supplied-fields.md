@@ -11,14 +11,14 @@ helpviewer_keywords:
 - records-provided fields [ADO]
 - provider-supplied fields [ADO]
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 54d55926d2bec89b0764b751bf165586e8d3c6c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: abfa226c5bc6c94613a5d45c48a351811235455f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924511"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764792"
 ---
 # <a name="records-and-provider-supplied-fields"></a>Record e campi specificati dal provider
 Quando un oggetto [record](../../../ado/reference/ado-api/record-object-ado.md) viene aperto, la relativa origine può essere la riga corrente di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)aperto, un URL assoluto o un URL relativo insieme a un oggetto di [connessione](../../../ado/reference/ado-api/connection-object-ado.md) aperto.  
@@ -55,7 +55,7 @@ Quando un oggetto [record](../../../ado/reference/ado-api/record-object-ado.md) 
 ## <a name="resource-recordset-columns"></a>Colonne recordset di risorse  
  Un *Recordset di risorse* è costituito dalle colonne seguenti.  
   
-|Nome colonna|Type|Descrizione|  
+|Nome colonna|Tipo|Descrizione|  
 |-----------------|----------|-----------------|  
 |RESOURCE_PARSENAME|AdVarWChar|Di sola lettura. Indica l'URL della risorsa.|  
 |RESOURCE_PARENTNAME|AdVarWChar|Di sola lettura. Indica l'URL assoluto del record padre.|  
@@ -63,7 +63,7 @@ Quando un oggetto [record](../../../ado/reference/ado-api/record-object-ado.md) 
 |RESOURCE_ISHIDDEN|AdBoolean|True se la risorsa è nascosta. Non verrà restituita alcuna riga, a meno che il comando che crea il set di righe non selezioni in modo esplicito le righe in cui RESOURCE_ISHIDDEN è true.|  
 |RESOURCE_ISREADONLY|AdBoolean|True se la risorsa è di sola lettura. Tenta di aprire questa risorsa con DBBINDFLAG_WRITE e avrà esito negativo con DB_E_READONLY. Questa proprietà può essere modificata anche quando la risorsa è stata aperta solo per la lettura.|  
 |RESOURCE_CONTENTTYPE|AdVarWChar|Indica l'utilizzo probabile del documento, ad esempio il Brief di un avvocato. Questo può corrispondere al modello di Office usato per creare il documento.|  
-|RESOURCE_CONTENTCLASS|AdVarWChar|Indica il tipo MIME del documento, che indica il formato, ad esempio`text/html`"".|  
+|RESOURCE_CONTENTCLASS|AdVarWChar|Indica il tipo MIME del documento, che indica il formato, ad esempio " `text/html` ".|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWChar|Indica la lingua in cui è archiviato il contenuto.|  
 |RESOURCE_CREATIONTIME|adFileTime|Di sola lettura. Indica una struttura FILETIME che contiene l'ora in cui è stata creata la risorsa. L'ora è indicata nel formato UTC (Coordinated Universal Time).|  
 |RESOURCE_LASTACCESSTIME|AdFileTime|Di sola lettura. Indica una struttura FILETIME che contiene l'ora dell'ultimo accesso alla risorsa. L'ora è in formato UTC. I membri FILETIME sono zero se il provider non supporta questo membro di tempo.|  

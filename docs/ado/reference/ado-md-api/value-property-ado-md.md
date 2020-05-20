@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Value property [ADO MD]
 ms.assetid: 70dc5cff-0b05-456d-b86b-2686fe4e7ce6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 74cebabb5fad4dc7e7f6719224324b243b40d206
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d299c927e5e9e73c48874fc6afd76fc9d5777f80
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67913881"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764952"
 ---
 # <a name="value-property-ado-md"></a>Proprietà Value (ADO MD)
 Indica il valore della [cella](../../../ado/reference/ado-md-api/cell-object-ado-md.md)corrente.  
@@ -32,5 +32,5 @@ Indica il valore della [cella](../../../ado/reference/ado-md-api/cell-object-ado
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Cell (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Proprietà FormattedValue (ADO MD)](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md)

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO MD, objects
 - objects [ADO MD]
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d568ca20cca6c12a04c0f3d54a2c134d59a0d7fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 01a35a38812d105a1e26454022321e57448efadd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930578"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765252"
 ---
 # <a name="ado-md-objects"></a>Oggetti ADO MD
 
@@ -32,7 +32,7 @@ ms.locfileid: "67930578"
 |[Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Rappresenta una delle dimensioni di un cubo multidimensionale che contiene una o più gerarchie di membri.|  
 |[Gerarchia](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|Rappresenta un modo in cui i membri di una dimensione possono essere aggregati o sottoposti a rollup. Una dimensione può essere aggregata in una o più gerarchie.|  
 |[Level](../../../ado/reference/ado-md-api/level-object-ado-md.md)|Contiene un set di membri, ognuno dei quali ha lo stesso rango all'interno di una gerarchia.|  
-|[Membro](../../../ado/reference/ado-md-api/member-object-ado-md.md)|Rappresenta un membro di un livello in un cubo, gli elementi figlio di un membro di un livello o un membro di una posizione lungo un asse di un insieme di celle.|  
+|[Member](../../../ado/reference/ado-md-api/member-object-ado-md.md)|Rappresenta un membro di un livello in un cubo, gli elementi figlio di un membro di un livello o un membro di una posizione lungo un asse di un insieme di celle.|  
 |[Posizione](../../../ado/reference/ado-md-api/position-object-ado-md.md)|Rappresenta un set di uno o più membri di dimensioni diverse che definiscono un punto lungo un asse.|  
   
  Inoltre, l'oggetto **Catalogo** è connesso a un oggetto **connessione** ADO, incluso nella libreria ADO standard:  

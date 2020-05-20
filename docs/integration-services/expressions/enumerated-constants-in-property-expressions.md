@@ -536,7 +536,7 @@ ms.locfileid: "71297634"
 |File|1|  
 |File di log|2|  
   
- Proprietà **BackupDevice**: impostata usando i valori dell'enumerazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DeviceType**di** Management Objects (SMO).  
+ Proprietà **BackupDevice**: impostata usando i valori dell'enumerazione **DeviceType** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).  
   
 |Nome descrittivo in DeviceType|Valore numerico|  
 |---------------------------------|-------------------|  
@@ -564,7 +564,7 @@ ms.locfileid: "71297634"
 |Year|3|  
   
 ### <a name="update-statistics-task"></a>Attività Aggiorna statistiche  
- Proprietà **UpdateType**: impostata usando i valori dell'enumerazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]StatisticsTarget**di** Management Objects (SMO).  
+ Proprietà **UpdateType**: impostata usando i valori dell'enumerazione **StatisticsTarget** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).  
   
 |Nome descrittivo in StatisticsTarget|Valore numerico|  
 |---------------------------------------|-------------------|  

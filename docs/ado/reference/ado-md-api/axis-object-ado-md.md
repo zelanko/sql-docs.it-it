@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - Axis object [ADO MD]
 ms.assetid: 5f498c9a-b1e7-4e6e-9ae6-71eadaf9aada
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bf2b072acfda34ebdcafc1af82cd90c6be5d2537
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c251355637c5d57729a7d4aa737f2face1c9ace2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67939964"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765182"
 ---
 # <a name="axis-object-ado-md"></a>Oggetto Axis (ADO MD)
 Rappresenta un asse posizionale o di filtro di un oggetto Cell, contenente i membri selezionati di una o più dimensioni.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Un oggetto **Axis** può essere contenuto da una raccolta di [assi](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) o restituito dalla proprietà [FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) di un oggetto [Cell](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
   
  Con le raccolte e le proprietà di un oggetto **asse** , è possibile eseguire le operazioni seguenti:  

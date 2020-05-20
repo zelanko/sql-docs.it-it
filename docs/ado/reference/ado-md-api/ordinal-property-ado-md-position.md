@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Ordinal property [ADO MD]
 ms.assetid: 6efe8b5d-a2d5-43a9-a5ea-f9244f8d4ec9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c212b9a31c72b96444649129f0c54a4c52226de4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 51b7adb9a82b03af32c38c11a03c05d2291e04d8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949308"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765062"
 ---
 # <a name="ordinal-property-ado-md-position"></a>Proprietà Ordinal (Position - ADO MD)
 Identifica in modo univoco una [posizione](../../../ado/reference/ado-md-api/position-object-ado-md.md) lungo un asse.  
@@ -29,7 +29,7 @@ Identifica in modo univoco una [posizione](../../../ado/reference/ado-md-api/pos
 ## <a name="return-values"></a>Valori restituiti  
  Restituisce un valore **Long** integer ed è di sola lettura.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La proprietà **ordinale** di un oggetto [position](../../../ado/reference/ado-md-api/position-object-ado-md.md) corrisponde all'indice della **posizione** all'interno dell' [insieme Positions](../../../ado/reference/ado-md-api/positions-collection-ado-md.md) .  
   
  È possibile recuperare rapidamente una cella utilizzando il **numero ordinale** della **posizione** lungo ogni asse con la proprietà [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) dell'oggetto [cellt](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) .  

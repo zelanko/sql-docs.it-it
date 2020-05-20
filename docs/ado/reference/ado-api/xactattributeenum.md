@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - XactAttributeEnum enumeration [ADO]
 ms.assetid: e7dcecd3-7dc7-445c-b922-f700c3067fbc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d828c2b9b49138cc4dfd6345d90e70c333554fe0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d645c648b6e1410f96beb567d7fb496e5fdae2d2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67947438"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764422"
 ---
 # <a name="xactattributeenum"></a>XactAttributeEnum
 Specifica gli attributi di transazione di un oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) .  
   
-|Costante|valore|Descrizione|  
+|Costante|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adXactAbortRetaining**|262144|Esegue le interruzioni di conservazione chiamando [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) per avviare automaticamente una nuova transazione. Questo comportamento non è supportato da tutti i provider.|  
 |**adXactCommitRetaining**|131072|Esegue i commit di conservazione chiamando [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) per avviare automaticamente una nuova transazione. Questo comportamento non è supportato da tutti i provider.|  

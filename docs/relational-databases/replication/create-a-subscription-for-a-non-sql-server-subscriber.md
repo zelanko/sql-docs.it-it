@@ -153,7 +153,7 @@ ms.locfileid: "75322015"
   
 1.  Installare il provider OLE DB più recente per il Sottoscrittore non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia nel server di pubblicazione che nel server di distribuzione. Per i requisiti di replica relativi a un provider OLE DB, vedere [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md), [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md), [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
   
-2.  Nel database di pubblicazione del server di pubblicazione eseguire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_helppublication &#40;Transact-SQL&#41;[ per verificare che la pubblicazione supporti Sottoscrittori non ](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md).  
+2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md) per verificare che la pubblicazione supporti Sottoscrittori non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     -   Se il valore di **enabled_for_het_sub** è 1, i Sottoscrittori non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportati.  
   

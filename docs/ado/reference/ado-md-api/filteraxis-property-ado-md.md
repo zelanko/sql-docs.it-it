@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - FilterAxis property [ADO MD]
 ms.assetid: 9c656963-531e-4cd1-b698-d5f42a9b7ba3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d44ac908c04338f80c18699319f75a068370c3e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b7f9b34757970ce98dedaa9601340cad533ad002
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938451"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764232"
 ---
 # <a name="filteraxis-property-ado-md"></a>Proprietà FilterAxis (ADO MD)
 Indica le informazioni sul filtro relative al [cellt](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)corrente.  
@@ -29,7 +29,7 @@ Indica le informazioni sul filtro relative al [cellt](../../../ado/reference/ado
 ## <a name="return-values"></a>Valori restituiti  
  Restituisce un oggetto [Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md) ed è di sola lettura.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Utilizzare la proprietà **FilterAxis** per restituire informazioni sulle dimensioni utilizzate per sezionare i dati. La proprietà [DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md) dell' **asse** restituisce il numero di dimensioni del filtro dei dati. Questo asse è in genere costituito da una sola riga.  
   
  L' **asse** restituito da **FilterAxis** non è contenuto nella raccolta [Assis](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) per un oggetto [cellt](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) .  

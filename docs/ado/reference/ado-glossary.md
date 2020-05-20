@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f9677e62a9efbaa36f03c5cde253b79aa5d401c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0b6bd1cb1f5b0461236c0604bb5818d9dcbadd2a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76925594"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765302"
 ---
 # <a name="ado-glossary"></a>Glossario di ADO
 In questo argomento vengono definiti i termini rilevanti per ADO.  
   
-## <a name="a"></a>Una  
+## <a name="a"></a>Una   
  URL assoluto  
  URL completo che specifica il percorso di una risorsa che risiede in Internet o in una rete Intranet. Vedere anche *URL* e *URL relativo*.  
   
@@ -49,7 +49,7 @@ In questo argomento vengono definiti i termini rilevanti per ADO.
  Mapping tra un campo di una tabella e una variabile. Nelle estensioni ADO Visual C++, viene eseguito il mapping dei campi **Recordset** alle variabili C/C++.  
   
  maschera  
- Valore numerico destinato a un confronto di valori bit per bit con altri valori numerici, in genere per contrassegnare le opzioni nel parametro o nei valori restituiti. Questo confronto viene in genere eseguito con operatori logici bit per bit, ad esempio **and** e **&** **or** in Visual Basic e **&#124;** in C++.  
+ Valore numerico destinato a un confronto di valori bit per bit con altri valori numerici, in genere per contrassegnare le opzioni nel parametro o nei valori restituiti. Questo confronto viene in genere eseguito con operatori logici bit per bit, ad esempio **and** e **or** in Visual Basic **&** e **&#124;** in C++.  
   
  Ad esempio, i valori ADO **FieldAttributeEnum** possono essere utilizzati come maschere di maschera per determinare gli attributi di un campo. Si supponga di voler determinare se un campo è aggiornabile. Per eseguire questa operazione, è possibile usare l'espressione seguente in Visual Basic:`Field.Attributes AND adFldUpdatable`  
   
@@ -100,7 +100,7 @@ In questo argomento vengono definiti i termini rilevanti per ADO.
  operatore di confronto  
  Operatore che confronta due espressioni e restituisce un valore booleano.  
   
- Parametro dei criteri che può essere espresso come ">" (maggiore di), "\<" (minore di), "=" (uguale), ">=" (maggiore o uguale a), "<=" (minore o uguale), "<>" (non uguale) o "like" (criteri di ricerca).  
+ Parametro dei criteri che può essere espresso come ">" (maggiore di), " \< " (minore di), "=" (uguale), ">=" (maggiore o uguale a), "<=" (minore o uguale), "<>" (non uguale) o "like" (criteri di ricerca).  
   
  component  
  Oggetto che incapsula sia i dati che il codice e fornisce un set ben definito di servizi disponibili pubblicamente.  
@@ -263,7 +263,7 @@ In questo argomento vengono definiti i termini rilevanti per ADO.
  Set di righe di un'origine dati con lo stesso schema di campo. Un set di righe può rappresentare tutti o alcuni campi di una tabella. Un set di righe può anche rappresentare una tabella virtuale, creata da una query o un join di due o più tabelle. In ADO i set di righe sono rappresentati da oggetti **Recordset** .  
   
 ## <a name="s"></a>S  
- Scope  
+ Ambito  
  Intervallo di riferimento per un oggetto o una variabile oppure un intervallo di record in una vista o in una tabella. È ad esempio possibile fare riferimento alle variabili locali solo all'interno della routine in cui sono state definite. Le variabili pubbliche sono accessibili da qualsiasi punto dell'applicazione. Gli oggetti, ad esempio il database corrente, si trovano nell'ambito se si trovano nel percorso di ricerca definito. Gli intervalli di record possono essere specificati con una clausola SCOPE in molti comandi.  
   
  provider di servizi  

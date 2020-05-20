@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data shaping [ADO], parameterized commands
 - parameterized commands [ADO]
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e7d4399a8cf279ed2283061fff9064ffcc1adfba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 17d2d282eddcd358d8b3efe90ffda2d40e9e1574
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924731"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764802"
 ---
 # <a name="operation-of-parameterized-commands"></a>Funzionamento dei comandi con parametri
 Se si utilizza un **Recordset**figlio di grandi dimensioni, in particolare rispetto alle dimensioni del **Recordset**padre, ma è necessario accedere solo a pochi capitoli figlio, potrebbe risultare più efficiente utilizzare un comando con parametri.  
@@ -74,7 +74,7 @@ Rst1.MovePrevious  ' RstChild now holds cached rs, saving round trip.
   
  Utilizzando una gerarchia senza parametri, non è possibile correlare le tabelle teams e Games in modo tale che il **Recordset** figlio per ogni team contenga la pianificazione completa. È possibile creare capitoli che contengono la pianificazione Home o la pianificazione stradale, ma non entrambi. Ciò è dovuto al fatto che la clausola RELATE consente di limitare le relazioni padre-figlio del form (PC1 = CC1) e (PC2 = PC2). Quindi, se il comando includesse "CORRELAre team_id a home_team, team_id a visiting_team", si otterrebbero solo giochi in cui un team stava giocando a se stesso. Si vuole usare "(team_id = home_team) o (team_id = visiting_team)", ma il provider di forme non supporta la clausola o.  
   
- Per ottenere il risultato desiderato, è possibile usare un comando con parametri. Ad esempio:  
+ Per ottenere il risultato desiderato, è possibile usare un comando con parametri. ad esempio:  
   
 ```  
 SHAPE {SELECT * FROM teams}   
@@ -86,7 +86,7 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
  Questo esempio sfrutta la maggiore flessibilità della clausola SQL WHERE per ottenere i risultati necessari.  
   
 > [!NOTE]
->  Quando si usano le clausole WHERE, i parametri non possono usare i tipi di dati SQL per text, ntext e image. in caso contrario, verrà generato `Invalid operator for data type`un errore che contiene la descrizione seguente:.  
+>  Quando si usano le clausole WHERE, i parametri non possono usare i tipi di dati SQL per text, ntext e image. in caso contrario, verrà generato un errore che contiene la descrizione seguente: `Invalid operator for data type` .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di data shaping](../../../ado/guide/data/data-shaping-example.md)   

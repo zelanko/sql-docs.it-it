@@ -11,14 +11,14 @@ helpviewer_keywords:
 - properties [ADO]
 - ADO properties
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d3ddf4e26d015067c0b5bf06f6e2adeecd39f041
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e413913d3064b4302d4673098b82d220acc23aa1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920890"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764562"
 ---
 # <a name="ado-properties"></a>Proprietà ADO
 
@@ -50,7 +50,7 @@ ms.locfileid: "67920890"
 |[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)|Indica la capacità dei dati di un oggetto **campo** .|  
 |[Descrizione](../../../ado/reference/ado-api/description-property.md)|Descrive un oggetto **Error** .|  
 |[Sottolinguaggio](../../../ado/reference/ado-api/dialect-property.md)|Indica la sintassi e le regole generali che il provider utilizzerà per analizzare le proprietà **CommandText** o **CommandStream** .|  
-|[Direction](../../../ado/reference/ado-api/direction-property.md)|Indica se il **parametro** rappresenta un parametro di input, un parametro di output o entrambi o se il parametro è il valore restituito da un stored procedure.|  
+|[Direzione](../../../ado/reference/ado-api/direction-property.md)|Indica se il **parametro** rappresenta un parametro di input, un parametro di output o entrambi o se il parametro è il valore restituito da un stored procedure.|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|Indica lo stato di modifica del record corrente.|  
 |[EOS](../../../ado/reference/ado-api/eos-property.md)|Indica se la posizione corrente è alla fine del flusso.|  
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|Indica un filtro per i dati in un **Recordset**.|  

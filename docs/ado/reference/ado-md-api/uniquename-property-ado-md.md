@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - UniqueName property [ADO MD]
 ms.assetid: 5b977956-e252-4861-8425-f1aaf6b80130
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4bb4e77047fb1a5483c0b87d98f55eda43f1658b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5192713ead82cc486fbbdba643cf426c0849ddad
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67913957"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764962"
 ---
 # <a name="uniquename-property-ado-md"></a>Proprietà UniqueName (ADO MD)
 Indica un nome non ambiguo per l'oggetto corrente.  
@@ -39,5 +39,5 @@ Indica un nome non ambiguo per l'oggetto corrente.
 |[Oggetto Dimension (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|[Oggetto Hierarchy (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|  
 |[Oggetto Level (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)|[Oggetto Member (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Proprietà Name (ADO MD)](../../../ado/reference/ado-md-api/name-property-ado-md.md)

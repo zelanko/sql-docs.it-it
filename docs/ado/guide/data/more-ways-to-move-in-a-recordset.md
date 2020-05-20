@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Recordset object [ADO], moving
 - MovePrevious method [ADO]
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0ea83f40c6d6e595277a173c181c24f33e382393
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3d68fb018e3b72e193127f8f49160813c06a1332
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924883"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764812"
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>Altri metodi per lo spostamento in un recordset
 I quattro metodi seguenti vengono usati per spostarsi o scorrere nel **Recordset**: [MoveFirst, MoveLast, MoveNext e MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). Alcuni di questi metodi non sono disponibili per i cursori di sola trasmissione.  
@@ -46,7 +46,7 @@ If oRs.BOF Then oRs.MoveFirst
 . . .  
 ```  
   
- Nei casi in cui il **Recordset** è stato filtrato o ordinato e i dati del record corrente vengono modificati, anche la posizione potrebbe cambiare. In questi casi, il metodo **MoveNext** funziona normalmente, ma tenere presente che la posizione viene spostata un record in un altro punto dalla nuova posizione, non dalla posizione precedente. Se, ad esempio, si modificano i dati nel record corrente, in modo che il record venga spostato alla fine del **Recordset**ordinato, significa che la chiamata a **MoveNext** comporta l'impostazione del record corrente sulla posizione dopo l'ultimo record nel **Recordset** (**EOF** = **true**).  
+ Nei casi in cui il **Recordset** è stato filtrato o ordinato e i dati del record corrente vengono modificati, anche la posizione potrebbe cambiare. In questi casi, il metodo **MoveNext** funziona normalmente, ma tenere presente che la posizione viene spostata un record in un altro punto dalla nuova posizione, non dalla posizione precedente. Se, ad esempio, si modificano i dati nel record corrente, in modo che il record venga spostato alla fine del **Recordset**ordinato, significa che la chiamata a **MoveNext** comporta l'impostazione del record corrente sulla posizione dopo l'ultimo record nel **Recordset** (**EOF**  =  **true**).  
   
  Il comportamento dei vari metodi di spostamento dell'oggetto **Recordset** dipende, in una certa misura, dai dati all'interno del **Recordset**. I nuovi record aggiunti al **Recordset** vengono inizialmente aggiunti in un ordine specifico, definito dall'origine dati e possono essere dipendenti in modo implicito o esplicito sui dati nel nuovo record. Se, ad esempio, un ordinamento o un join viene eseguito all'interno della query che popola il **Recordset**, il nuovo record verrà inserito nella posizione appropriata all'interno del **Recordset**. Se l'ordinamento non viene specificato in modo esplicito durante la creazione del **Recordset**, le modifiche nell'implementazione dell'origine dati possono causare la modifica involontaria dell'ordine delle righe restituite. Inoltre, le funzioni di ordinamento, filtro e modifica del **Recordset** possono influenzare l'ordine e possibilmente quali righe del recordset saranno visibili.  
   

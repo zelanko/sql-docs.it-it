@@ -14,14 +14,14 @@ helpviewer_keywords:
 - referencing libraries in a Visual C++ application[ADO]
 - ADO, libraries
 ms.assetid: d3ea12ec-bca8-48c3-af57-ce14576108c9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 62fb1b89299af1f466e446c8adba422a841f0196
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a790ace40aa31324ce8b22127d8f6948ae86e059
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923028"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764762"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-c-application"></a>Riferimenti alle librerie ADO in un'applicazione Visual C++
 Per usare la versione più recente di ADO in un'applicazione Visual C++, usare la `#import` direttiva seguente:  

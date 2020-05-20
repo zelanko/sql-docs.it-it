@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - ActiveConnection property [ADO MD]
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ae0b32385b98ac1b48688a7f89bbd7c91842a106
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 13a24320f7b49d8d2a0e1341bff2d9a4cca575dd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67911588"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765322"
 ---
 # <a name="activeconnection-property-ado-md"></a>Proprietà ActiveConnection (ADO MD)
 Indica a quale oggetto della [connessione](../../../ado/reference/ado-api/connection-object-ado.md) ADO appartiene attualmente il Cell o il catalogo corrente.  
@@ -30,7 +30,7 @@ Indica a quale oggetto della [connessione](../../../ado/reference/ado-api/connec
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce una **variante** che contiene una stringa che definisce una connessione o un oggetto **connessione** . Il valore predefinito è vuoto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  È possibile impostare questa proprietà su un oggetto **connessione** ADO valido o su una stringa di connessione valida. Quando questa proprietà è impostata su una stringa di connessione, il provider crea un nuovo oggetto **connessione** utilizzando questa definizione e apre la connessione.  
   
  Se si usa l'argomento *ActiveConnection* del metodo [Open](../../../ado/reference/ado-md-api/open-method-ado-md.md) per aprire un oggetto [cellt](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) , la proprietà **ActiveConnection** erediterà il valore dell'argomento.  
@@ -62,7 +62,7 @@ Indica a quale oggetto della [connessione](../../../ado/reference/ado-api/connec
 |-|-|  
 |[Oggetto Catalog (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|[Oggetto Cellset (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Esempio di celle (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Metodo Open (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)

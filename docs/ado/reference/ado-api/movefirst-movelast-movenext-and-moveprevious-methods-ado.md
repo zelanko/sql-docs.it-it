@@ -23,14 +23,14 @@ helpviewer_keywords:
 - MoveFirst method [ADO]
 - MovePrevious method [ADO]
 ms.assetid: a61a01a7-5b33-4150-9126-21dfa63654cb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5f0cdacc6e0d7e5512dbc259815e5b9562c9b68
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4acdf777429e879ed22b99ea5a0f07775bc3798c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918116"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764502"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-ado"></a>Metodi MoveFirst, MoveLast, MoveNext e MovePrevious (ADO)
 Passa al record primo, ultimo, successivo o precedente in un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) specificato e fa in modo che registri il record corrente.  
@@ -60,7 +60,7 @@ recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Esempio di metodi MoveFirst, MoveLast, MoveNext e MovePrevious (VB)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vb.md)   
  [Esempio di metodi MoveFirst, MoveLast, MoveNext e MovePrevious (VBScript)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript.md)   
  [Esempio di metodi MoveFirst, MoveLast, MoveNext e MovePrevious (VC + +)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vc.md)   

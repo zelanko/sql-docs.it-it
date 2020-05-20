@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - ObjectTypeEnum enumeration [ADOX]
 ms.assetid: 3fdecfca-aa91-4596-ad98-610f1b7f840b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 04c7b1d1cb5d07a300b82d13a7e80158498bbd5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d493218f31965c04b5a64321c4a1bf87a2518f6f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965656"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763792"
 ---
 # <a name="objecttypeenum"></a>ObjectTypeEnum
 Specifica il tipo di oggetto di database per il quale impostare le autorizzazioni o la proprietà.  
   
-|Costante|valore|Descrizione|  
+|Costante|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adPermObjColumn**|2|L'oggetto è una colonna.|  
 |**adPermObjDatabase**|3|L'oggetto è un database.|  

@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - error object [ADO]
 ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5018dc921267663d64037024ef21c82ac6e3f7c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 717a3af4bec62725cc4cf5da8621163f24c2ab3f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932966"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764532"
 ---
 # <a name="error-object"></a>Oggetto Error
 Contiene informazioni dettagliate sugli errori di accesso ai dati relativi a una singola operazione che interessa il provider.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Tutte le operazioni che coinvolgono oggetti ADO possono generare uno o più errori del provider. Quando si verifica ogni errore, uno o più oggetti **Error** vengono inseriti nella raccolta [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) dell'oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) . Quando un'altra operazione ADO genera un errore, la raccolta **Errors** viene cancellata e il nuovo set di oggetti **Error** viene inserito nella raccolta **Errors** .  
   
 > [!NOTE]

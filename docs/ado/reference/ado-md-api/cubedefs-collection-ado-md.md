@@ -14,19 +14,19 @@ f1_keywords:
 helpviewer_keywords:
 - CubeDefs collection [ADO MD]
 ms.assetid: c79a5e36-71fd-44c4-948d-d6a7a89bb3b5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6753c5a2cf70557868a25b2c4e2675a53d26d07b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c9d6834b4c6ec932ac0d25108b37df15fb778e5d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938621"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764342"
 ---
 # <a name="cubedefs-collection-ado-md"></a>Raccolta CubeDefs (ADO MD)
 Contiene gli oggetti [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) che rappresentano un cubo da un catalogo multidimensionale.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **CubeDefs** è una raccolta ADO standard. Con le proprietà e i metodi di una raccolta, è possibile eseguire le operazioni seguenti:  
   
 -   Ottenere il numero di oggetti nella raccolta con la proprietà [count](../../../ado/reference/ado-api/count-property-ado.md) .  

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Parent property [ADO MD]
 ms.assetid: 32c278c1-d8e1-4bb7-9ecd-2fbfdffee34b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2f6d6e03dd3288a5b0ca71bb9e129e1a57abf7c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 94e6e920d6ab44265c42b9ca26e2410c43c3659e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949325"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765052"
 ---
 # <a name="parent-property-ado-md"></a>Proprietà Parent (ADO MD)
 Indica il membro padre del [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) corrente in una gerarchia.  
@@ -29,7 +29,7 @@ Indica il membro padre del [membro](../../../ado/reference/ado-md-api/member-obj
 ## <a name="return-values"></a>Valori restituiti  
  Restituisce un oggetto [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) ed è di sola lettura.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Un membro che si trova al livello superiore di una gerarchia (la radice) non ha un elemento padre. Questa proprietà è supportata solo per gli oggetti **membro** che appartengono a un oggetto [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) . Si verifica un errore quando si fa riferimento a questa proprietà dagli oggetti **membro** che appartengono a un oggetto [position](../../../ado/reference/ado-md-api/position-object-ado-md.md) .  
   
 ## <a name="applies-to"></a>Si applica a  

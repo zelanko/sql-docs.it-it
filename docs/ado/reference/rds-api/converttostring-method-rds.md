@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - ConvertToString method [ADO]
 ms.assetid: b3f36bc8-6f69-49b0-83cd-2ccd3afebfbe
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 71e50c4f611342c8e06687c47ab1c45fb60974ac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6eff6ae54dc5cc0b901cfb1da61244e30d963615
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964570"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764842"
 ---
 # <a name="converttostring-method-rds"></a>Metodo ConvertToString (Servizi Desktop remoto)
 Converte un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in una stringa MIME che rappresenta i dati del recordset.  
@@ -40,7 +40,7 @@ DataFactory.ConvertToString(Recordset)
  *Recordset*  
  Variabile oggetto che rappresenta un oggetto **Recordset** .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Con i file ASP, usare **ConvertToString** per incorporare il **Recordset** in una pagina HTML generata sul server per il trasporto in un computer client.  
   
  **ConvertToString** carica innanzitutto il **Recordset** nelle tabelle dei servizi del cursore e quindi genera un flusso in formato MIME.  

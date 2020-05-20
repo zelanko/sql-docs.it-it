@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - customization file in RDS [ADO]
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 81a73044c1ab413fb2b49286814f3e6b3951c6c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2edcfaaae08da97eccfe7b9a570716a2dfedfc2c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921966"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764612"
 ---
 # <a name="understanding-the-customization-file"></a>Informazioni sul file di personalizzazione
 Ogni intestazione di sezione nel file di personalizzazione è costituita da parentesi quadre (**[]**) contenenti un tipo e un parametro. I quattro tipi di sezione sono indicati dalle stringhe letterali **Connect**, **SQL**, **Users**o **logs**. Il parametro è la stringa letterale, l'impostazione predefinita, un identificatore specificato dall'utente o Nothing.  

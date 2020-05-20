@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - ActiveConnection property [ADO]
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8dabf974e36b1f6beaff36f3a4888c128d7dfe1b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 448510f237fc4ce56368d7f2d74b72f63de87c61
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921516"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764572"
 ---
 # <a name="activeconnection-property-ado"></a>Proprietà ActiveConnection (ADO)
 Indica a quale oggetto [connessione](../../../ado/reference/ado-api/connection-object-ado.md) appartiene attualmente il [comando](../../../ado/reference/ado-api/command-object-ado.md), il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)o l'oggetto [record](../../../ado/reference/ado-api/record-object-ado.md) specificato.  
@@ -30,7 +30,7 @@ Indica a quale oggetto [connessione](../../../ado/reference/ado-api/connection-o
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore **stringa** che contiene una definizione per una connessione se la connessione viene chiusa o una **variante** contenente l'oggetto **connessione** corrente se la connessione è aperta. Il valore predefinito è un riferimento a un oggetto null. Vedere la proprietà [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Utilizzare la proprietà **ActiveConnection** per determinare l'oggetto **connessione** in cui verrà eseguito l'oggetto **comando** specificato oppure verrà aperto il **Recordset** specificato.  
   
 ## <a name="command"></a>Comando  

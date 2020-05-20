@@ -16,14 +16,14 @@ helpviewer_keywords:
 - WillChangeRecord event [ADO]
 - recordchangecomplete event [ADO]
 ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6e632db34fbbacbee61cd943067052af27a8cfe8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c34aa614b7e152f21479e09a16fd2ed9d22febfc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938670"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764482"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>Eventi WillChangeRecord e RecordChangeComplete (ADO)
 L'evento **WillChangeRecord** viene chiamato prima della modifica di uno o più record (righe) nel [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) . L'evento **RecordChangeComplete** viene chiamato dopo la modifica di uno o più record.  
@@ -60,7 +60,7 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
  *pRecordset*  
  Oggetto **Recordset** . **Recordset** per il quale si è verificato l'evento.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  È possibile che si verifichi un evento **WillChangeRecord** o **RecordChangeComplete** per il primo campo modificato in una riga a causa delle operazioni **Recordset** seguenti: [Update](../../../ado/reference/ado-api/update-method.md), [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md), [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)e [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md). Il valore del **Recordset** [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) determina quali operazioni provocano l'esecuzione degli eventi.  
   
  Durante l'evento **WillChangeRecord** , la proprietà del [filtro](../../../ado/reference/ado-api/filter-property.md) **Recordset** è impostata su **adFilterAffectedRecords**. Non è possibile modificare questa proprietà durante l'elaborazione dell'evento.  

@@ -521,7 +521,7 @@ GO
 ### <a name="subqueries-with-comparison-operators"></a><a name="comparison"></a> Sottoquery con operatori di confronto
 Le sottoquery possono essere introdotte da un operatore di confronto, ovvero =, < >, >, > =, <, ! >, ! < o < =).   
 
-Analogamente alle sottoquery introdotte da `ANY`, le sottoquery introdotte da un operatore di confronto non modificato, ovvero non seguito dalla parola chiave `ALL` o `IN`, devono restituire un solo valore anziché un elenco di valori. Se una sottoquery di questo tipo restituisce più valori, SQL Server visualizza un messaggio di errore.    
+Analogamente alle sottoquery introdotte da `IN`, le sottoquery introdotte da un operatore di confronto non modificato, ovvero non seguito dalla parola chiave `ANY` o `ALL`, devono restituire un solo valore anziché un elenco di valori. Se una sottoquery di questo tipo restituisce più valori, SQL Server visualizza un messaggio di errore.    
 
 Per utilizzare una sottoquery introdotta da un operatore di confronto non modificato, è necessario aver acquisito una certa familiarità con i dati e la natura del problema in modo da sapere che la sottoquery restituirà un solo valore.     
 

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADOX, object model
 ms.assetid: 31c0781c-96c8-4460-90ea-134066154fc7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ad9942121c6b6173e773cc601f33b572a58512d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6c521a1db30a35e43e5e0a7dbb118320769d4756
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928533"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764132"
 ---
 # <a name="adox-object-model"></a>Modello a oggetti ADOX
 Il diagramma seguente illustra il modo in cui gli oggetti sono rappresentati e correlati in ADOX. Per ulteriori informazioni su un oggetto o una raccolta specifica, vedere l'argomento di riferimento specifico oppure [oggetti ADOX](../../../ado/reference/adox-api/adox-objects.md) e [raccolte di ADOX](../../../ado/reference/adox-api/adox-collections.md).  

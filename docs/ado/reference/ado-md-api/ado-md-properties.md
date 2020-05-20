@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO MD, properties
 - properties [ADO MD]
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cc69511e41d00aa96e69181a654194f31f7dcc02
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b653bd79c6e6e27dee30a4f11385f457717364a2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930559"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765232"
 ---
 # <a name="ado-md-properties"></a>Proprietà ADO MD
 
@@ -29,7 +29,7 @@ ms.locfileid: "67930559"
 |[ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)|Indica il numero di membri per i quali l'oggetto **membro** corrente è l'elemento padre in una gerarchia.|  
 |[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)|Restituisce una raccolta di **membri** per cui il **membro** corrente è l'elemento padre nella gerarchia.|  
 |[Numero](../../../ado/reference/ado-api/count-property-ado.md)|Indica il numero di oggetti in una raccolta.|  
-|[Livello nidificazione](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|Indica il numero di livelli tra il **livello** e la radice del livello della gerarchia.|  
+|[Depth](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|Indica il numero di livelli tra il **livello** e la radice del livello della gerarchia.|  
 |[Descrizione](../../../ado/reference/ado-md-api/description-property-ado-md.md)|Restituisce una spiegazione del testo dell'oggetto corrente.|  
 |[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)|Indica il numero di dimensioni su un asse.|  
 |[DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)|Indica se nessuno degli elementi figlio segue immediatamente il membro sull'asse.|  

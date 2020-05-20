@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Ordinal property [ADO MD]
 ms.assetid: a6001168-b954-47f0-ba0d-c05c4cc40c58
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 194b72ce66eb2efdc3a246f24948b01c790f7b8e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b0563912d49ba6baff085fd83be88693e8f8ba1f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949372"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765072"
 ---
 # <a name="ordinal-property-ado-md-cell"></a>Proprietà Ordinal (Cell - ADO MD)
 Identifica in modo univoco una [cella](../../../ado/reference/ado-md-api/cell-object-ado-md.md) in base alla relativa posizione all'interno di un oggetto Cell.  
@@ -29,7 +29,7 @@ Identifica in modo univoco una [cella](../../../ado/reference/ado-md-api/cell-ob
 ## <a name="return-values"></a>Valori restituiti  
  Restituisce un valore **Long** integer ed è di sola lettura.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il valore ordinale della cella identifica in modo univoco la cella all'interno di un celle. Dal punto di vista concettuale, le celle sono numerate in un insieme di celle come se il numero di celle fosse una matrice *p*-dimensionale, dove *p* è il numero di [assi](../../../ado/reference/ado-md-api/axes-collection-ado-md.md). Le celle sono numerate a partire da zero nell'ordine principale della riga. Di seguito è illustrata la formula per il calcolo del numero ordinale di una cella:  
   
  Il valore ordinale della cella può essere utilizzato con la proprietà [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) dell'oggetto [cellt](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) per recuperare rapidamente la [cella](../../../ado/reference/ado-md-api/cell-object-ado-md.md).  
