@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSpublications system table
 ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: de4970e82155454b3d05d6200bc7413baca97aef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 31f7d9c3e5d297a39fd0278c51014793a4b8dbd0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67939019"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829239"
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "67939019"
 |**pubblicazione**|**sysname**|Nome della pubblicazione.|  
 |**publication_id**|**int**|ID della pubblicazione.|  
 |**publication_type**|**int**|Tipo di pubblicazione:<br /><br /> **0** = transazionale.<br /><br /> **1** = snapshot.<br /><br /> **2** = Unione.|  
-|**thirdparty_flag**|**bit**|Indica se una pubblicazione è un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database:<br /><br /> **0** = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> **1** = origine dati diversa da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**thirdparty_flag**|**bit**|Indica se una pubblicazione è un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> **1** = origine dati diversa da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**independent_agent**|**bit**|Indica se per questa pubblicazione è disponibile un agente di distribuzione autonomo.|  
 |**immediate_sync**|**bit**|Indica se i file di sincronizzazione vengono creati o aggiornati a ogni esecuzione dell'agente snapshot.|  
 |**allow_push**|**bit**|Indica se è possibile creare sottoscrizioni di tipo push per la pubblicazione specificata.|  
@@ -47,7 +47,7 @@ ms.locfileid: "67939019"
 |**conservazione**|**int**|Periodo di memorizzazione della pubblicazione in ore.|  
 |**sync_method**|**int**|Metodo di sincronizzazione:<br /><br /> **0** = nativo (genera l'output della copia bulk in modalità nativa di tutte le tabelle).<br /><br /> **1** = character (genera un output per la copia bulk in modalità carattere per tutte le tabelle).<br /><br /> **3** = simultanea (genera l'output della copia bulk in modalità nativa di tutte le tabelle, ma non blocca la tabella durante lo snapshot).<br /><br /> **4** = concurrent_c (genera un output per la copia bulk in modalità carattere di tutte le tabelle, ma non blocca la tabella durante lo snapshot)<br /><br /> I valori **3** e **4** sono disponibili per la replica transazionale e per la replica di tipo merge, ma non per la replica snapshot.|  
 |**allow_subscription_copy**|**bit**|Abilita o disabilita la funzione di copia dei database di sottoscrizione che sottoscrivono la pubblicazione. **0** indica che la copia è disabilitata e **1** indica che è abilitata.|  
-|**thirdparty_options**|**int**|Specifica se la visualizzazione di una pubblicazione nella cartella replica in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è stata annullata:<br /><br /> **0** = Visualizza una pubblicazione eterogenea nella cartella replica in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].<br /><br /> **1** = non visualizza una pubblicazione eterogenea nella cartella replica in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
+|**thirdparty_options**|**int**|Specifica se la visualizzazione di una pubblicazione nella cartella replica in è stata annullata [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] :<br /><br /> **0** = Visualizza una pubblicazione eterogenea nella cartella replica in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .<br /><br /> **1** = non visualizza una pubblicazione eterogenea nella cartella replica in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .|  
 |**allow_queued_tran**|**bit**|Specifica se la pubblicazione consente l'aggiornamento in coda:<br /><br /> **0 =** La pubblicazione non è in coda.<br /><br /> **1** = la pubblicazione è accodata.|  
 |**options**|**int**|Informazioni non disponibili in questa versione.|  
   

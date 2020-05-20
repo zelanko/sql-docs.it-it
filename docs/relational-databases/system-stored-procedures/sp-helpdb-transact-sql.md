@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpdb
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7acc14d3950e0e2d1004727b2efbffd2e4963a2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fb3ab70170f1b96bcfd62a9d7108792871ccd5d7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67903023"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828955"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**proprietario**|**sysname**|Proprietario del database, ad esempio **sa**.|  
 |**dbid**|**smallint**|ID del database.|  
 |**created**|**nvarchar(11)**|Data di creazione del database.|  
-|**Stato**|**nvarchar (600)**|Elenco separato da virgola dei valori delle opzioni impostate nel database.<br /><br /> Le opzioni con valori booleani vengono elencate solo se sono abilitate. Le opzioni non booleane sono elencate con i valori corrispondenti nel formato *option_name*=*valore*.<br /><br /> Per altre informazioni, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
+|**Stato**|**nvarchar (600)**|Elenco separato da virgola dei valori delle opzioni impostate nel database.<br /><br /> Le opzioni con valori booleani vengono elencate solo se sono abilitate. Le opzioni non booleane sono elencate con i valori corrispondenti nel formato *option_name* = *valore*.<br /><br /> Per altre informazioni, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
 |**compatibility_level**|**tinyint**|Livello di compatibilità del database (60, 65, 70, 80 o 90).|  
   
  Se si specifica *Name* , esiste un set di risultati aggiuntivo che mostra l'allocazione di file per il database specificato.  
@@ -69,7 +69,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**growth**|**nvarchar (18)**|Incremento per l'aumento delle dimensioni del file. Indica la quantità di spazio aggiunta al file ogni volta che è necessario spazio aggiuntivo.|  
 |**utilizzo**|**varchar (9)**|Utilizzo del file. Per un file di dati, il valore è **"solo dati"** e per il file di log il valore è **"log only"**.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La colonna **stato** del set di risultati indica le opzioni impostate su on nel database. Tutte le opzioni di database non vengono segnalate dalla colonna **stato** . Per visualizzare un elenco completo delle impostazioni dell'opzione di database correnti, utilizzare la vista del catalogo **sys. databases** .  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -94,7 +94,7 @@ EXEC sp_helpdb;
 GO  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   

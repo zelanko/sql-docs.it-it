@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_system_memory_consumers dynamic management view
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 83e9368b562a7ac200171dc814830b21d677770a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ac86bea128939be70a3931183f23d4fdffa0d8c3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090092"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829016"
 ---
 # <a name="sysdm_xtp_system_memory_consumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ select * from sys.dm_xtp_system_memory_consumers
   
  Per altre informazioni, vedere [OLTP in memoria &#40;ottimizzazione in memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Nome colonna|Type|Descrizione|  
+|Nome colonna|Tipo|Descrizione|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|ID interno del consumer di memoria.|  
 |memory_consumer_type|**int**|Intero che rappresenta il tipo di consumer di memoria con uno dei valori seguenti:<br /><br /> 0: non deve essere visualizzato. Aggrega l'utilizzo della memoria due o più consumer.<br /><br /> 1-LOOKASIDE: tiene traccia dell'utilizzo di memoria per un LOOKASIDE di sistema.<br /><br /> 2-VARHEAP: tiene traccia dell'utilizzo di memoria per un heap a lunghezza variabile.<br /><br /> 4: pool di pagine IO: tiene traccia dell'utilizzo di memoria per un pool di pagine di sistema usato per operazioni di i/o.|  

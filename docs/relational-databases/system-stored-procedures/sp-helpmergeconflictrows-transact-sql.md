@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergeconflictrows
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b72a821c56f35e1ea7f3542b5746c234012c2da0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b6963d3a2b28ba103c731f015fd352ff105cfb95
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68137765"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828929"
 ---
 # <a name="sp_helpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +41,9 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **%** **tipo sysname**e il valore predefinito è. Se la pubblicazione viene specificata, vengono restituiti tutti i conflitti risultanti corrispondenti. Se, ad esempio, nella tabella **MSmerge_conflict_Customers** sono presenti righe con conflitti per le pubblicazioni **WA** e **CA** , il passaggio di un nome di pubblicazione **CA** consente di recuperare i conflitti relativi alla pubblicazione della **CA** .  
+`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è **%** . Se la pubblicazione viene specificata, vengono restituiti tutti i conflitti risultanti corrispondenti. Se, ad esempio, nella tabella **MSmerge_conflict_Customers** sono presenti righe con conflitti per le pubblicazioni **WA** e **CA** , il passaggio di un nome di pubblicazione **CA** consente di recuperare i conflitti relativi alla pubblicazione della **CA** .  
   
-`[ @conflict_table = ] 'conflict_table'`Nome della tabella dei conflitti. *conflict_table* è di **tipo sysname**e non prevede alcun valore predefinito. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive, le tabelle dei conflitti vengono denominate usando l'articolo formato nomi con **MSmerge_conflict\_pubblicazione\_**, con una tabella per ogni articolo pubblicato.  
+`[ @conflict_table = ] 'conflict_table'`Nome della tabella dei conflitti. *conflict_table* è di **tipo sysname**e non prevede alcun valore predefinito. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive, le tabelle dei conflitti vengono denominate usando **l' \_ _ \_ articolo_** formato nomi con MSmerge_conflict pubblicazione, con una tabella per ogni articolo pubblicato.  
   
 `[ @publisher = ] 'publisher'`Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
   
@@ -66,7 +66,7 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_helpmergeconflictrows** viene utilizzata nella replica di tipo merge.  
   
 ## <a name="permissions"></a>Autorizzazioni  
