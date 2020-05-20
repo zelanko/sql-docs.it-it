@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - IHpublications system table
 ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5a94299b1411cdb53a47c773330773ce7209fbf2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 112d237781ecbe257ef0b9d8c3f4bdee37ca5bc4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67990330"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82813585"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "67990330"
 |**alt_snapshot_folder**|**nvarchar (510)**|Specifica la posizione della cartella alternativa per lo snapshot.|  
 |**pre_snapshot_script**|**nvarchar (510)**|Specifica un puntatore al percorso di un file con **estensione SQL** . L'agente di distribuzione esegue lo script pre-snapshot prima dell'esecuzione degli script di oggetti replicati in fase di applicazione di uno snapshot in un Sottoscrittore.|  
 |**post_snapshot_script**|**nvarchar (510)**|Specifica un puntatore al percorso di un file con **estensione SQL** . L'agente di distribuzione esegue lo script post-snapshot dopo l'applicazione di tutti gli altri script di oggetti replicati e dei dati durante una sincronizzazione iniziale.|  
-|**compress_snapshot**|**bit**|Specifica che lo snapshot scritto nella posizione *alt_snapshot_folder* deve essere compresso nel formato [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB. **0** indica che lo snapshot non verrà compresso.|  
+|**compress_snapshot**|**bit**|Specifica che lo snapshot scritto nella posizione *alt_snapshot_folder* deve essere compresso nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] formato CAB. **0** indica che lo snapshot non verrà compresso.|  
 |**ftp_address**|**sysname**|Indirizzo di rete del servizio FTP per il server di distribuzione. Specifica la posizione in cui i file di snapshot della pubblicazione possono essere prelevati dall'agente di distribuzione.|  
 |**ftp_port**|**int**|Numero di porta del servizio FTP per il server di distribuzione. Specifica la posizione in cui i file di snapshot della pubblicazione possono essere prelevati dall'agente di distribuzione.|  
 |**ftp_subdirectory**|**nvarchar (510)**|Specifica la posizione in cui i file di snapshot possono essere prelevati dall'agente di distribuzione se la pubblicazione supporta la propagazione degli snapshot tramite FTP.|  
@@ -57,9 +57,9 @@ ms.locfileid: "67990330"
 |**centralized_conflicts**|**bit**|Specifica se i record dei conflitti vengono archiviati nel server di pubblicazione:<br /><br /> **0** = i record dei conflitti vengono archiviati sia nel server di pubblicazione che nel Sottoscrittore che ha causato il conflitto.<br /><br /> **1** = i record dei conflitti vengono archiviati nel server di pubblicazione.<br /><br /> *Questa colonna non è supportata per server di pubblicazione non SQL.*|  
 |**conflict_retention**|**int**|Specifica il periodo di memorizzazione dei conflitti, espresso in giorni. *Questa colonna non è supportata per server di pubblicazione non SQL.*|  
 |**conflict_policy**|**int**|Specifica i criteri di risoluzione dei conflitti adottati quando viene utilizzata l'opzione per Sottoscrittori ad aggiornamento in coda. I possibili valori sono i seguenti:<br /><br /> **1** = il conflitto viene vinto dal server di pubblicazione.<br /><br /> **2** = il conflitto viene vinto dal Sottoscrittore.<br /><br /> **3** = la sottoscrizione viene reinizializzata.<br /><br /> *Questa colonna non è supportata per server di pubblicazione non SQL.*|  
-|**queue_type**|**int**|Specifica il tipo di coda da utilizzare. I possibili valori sono i seguenti:<br /><br /> **1** = MSMQ, che usa [!INCLUDE[msCoName](../../includes/msconame-md.md)] Accodamento messaggi per archiviare le transazioni.<br /><br /> **2** = SQL, che usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per archiviare le transazioni.<br /><br /> Questa colonna non viene utilizzata da[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editori non.<br /><br /> Nota: l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] utilizzo di Accodamento messaggi è stato deprecato e non è più supportato.<br /><br /> *Questa colonna non è supportata per i Publisher non SQL.*|  
+|**queue_type**|**int**|Specifica il tipo di coda da utilizzare. I possibili valori sono i seguenti:<br /><br /> **1** = MSMQ, che usa [!INCLUDE[msCoName](../../includes/msconame-md.md)] Accodamento messaggi per archiviare le transazioni.<br /><br /> **2** = SQL, che usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per archiviare le transazioni.<br /><br /> Questa colonna non viene utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editori non.<br /><br /> Nota: l'utilizzo [!INCLUDE[msCoName](../../includes/msconame-md.md)] di Accodamento messaggi è stato deprecato e non è più supportato.<br /><br /> *Questa colonna non è supportata per i Publisher non SQL.*|  
 |**ad_guidname**|**sysname**|Specifica se la pubblicazione è pubblicata in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Un identificatore univoco globale (GUID) valido indica che la pubblicazione è pubblicata nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory e il GUID è l'oggetto di pubblicazione Active Directory corrispondente **objectGUID**. Se il valore è NULL, la pubblicazione non è pubblicata in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. *Questa colonna non è supportata per server di pubblicazione non SQL.*|  
-|**backward_comp_level**|**int**|Livello di compatibilità del database. I possibili valori sono i seguenti:<br /><br /> **90** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].<br /><br /> *Questa colonna non è supportata per server di pubblicazione non SQL.*|  
+|**backward_comp_level**|**int**|Livello di compatibilità del database. I possibili valori sono i seguenti:<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .<br /><br /> *Questa colonna non è supportata per server di pubblicazione non SQL.*|  
 |**Descrizione**|**nvarchar(255)**|Voce descrittiva della pubblicazione.|  
 |**independent_agent**|**bit**|Specifica se per la pubblicazione è disponibile un agente di distribuzione autonomo.<br /><br /> **0** = la pubblicazione utilizza un agente di distribuzione condiviso e ogni coppia database del server di pubblicazione/database del Sottoscrittore dispone di un solo agente condiviso.<br /><br /> **1** = è presente una agente di distribuzione autonoma per questa pubblicazione.|  
 |**immediate_sync**|**bit**|Indica se i file di sincronizzazione vengono creati o ricreati ogni volta che viene eseguita la agente di snapshot, dove **1** indica che vengono creati ogni volta che viene eseguito l'agente.|  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_primary_databases system table
 ms.assetid: 56888756-a798-42be-9b5e-0f9aa05a2cc6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9c1dfefbc309e9ccc0f170461795c00a117247e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 28e32289763b6b191e8eb160e06f8c961dd5f437
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304981"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82813217"
 ---
 # <a name="log_shipping_primary_databases-transact-sql"></a>log_shipping_primary_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "72304981"
 |**monitor_server_security_mode**|**bit**|Modalità di sicurezza utilizzata per connettersi al server di monitoraggio.<br /><br /> 1 = Autenticazione di Windows.<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione di.|  
 |**last_backup_file**|**nvarchar (500)**|Percorso assoluto del backup del log delle transazioni più recente.|  
 |**last_backup_date**|**datetime**|Data e ora dell'ultima operazione di backup dei log.|  
-|**user_specified_monitor**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **sp_help_log_shipping_primary_database** e **sp_help_log_shipping_secondary_primary** utilizzare questa colonna per controllare la visualizzazione delle impostazioni di monitoraggio [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]in.<br /><br /> 0 = quando si richiama una di queste due stored procedure, l'utente non ha specificato un valore esplicito per ** \@** il parametro monitor_server.<br /><br /> 1 = È stato specificato un valore esplicito.|  
-|**backup_compression**|**tinyint**|Indica se la configurazione per il log shipping esegue l'override del comportamento della compressione dei backup a livello del server.<br /><br /> 0 = disabilitati. I backup del log non vengono mai compressi, indipendentemente dalle impostazioni di compressione dei backup configurate dal server.<br /><br /> 1 = abilitati. I backup del log vengono sempre compressi, indipendentemente dalle impostazioni di compressione dei backup configurate dal server.<br /><br /> 2 = usa la configurazione del server per l'opzione di configurazione server per la [visualizzazione o configurare l'opzione di configurazione del server backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) . Questo è il valore predefinito.<br /><br /> La compressione dei backup è supportata solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition.|  
+|**user_specified_monitor**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **sp_help_log_shipping_primary_database** e **sp_help_log_shipping_secondary_primary** utilizzare questa colonna per controllare la visualizzazione delle impostazioni di monitoraggio in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .<br /><br /> 0 = quando si richiama una di queste due stored procedure, l'utente non ha specificato un valore esplicito per il parametro ** \@ monitor_server** .<br /><br /> 1 = È stato specificato un valore esplicito.|  
+|**backup_compression**|**tinyint**|Indica se la configurazione per il log shipping esegue l'override del comportamento della compressione dei backup a livello del server.<br /><br /> 0 = disabilitati. I backup del log non vengono mai compressi, indipendentemente dalle impostazioni di compressione dei backup configurate dal server.<br /><br /> 1 = abilitati. I backup del log vengono sempre compressi, indipendentemente dalle impostazioni di compressione dei backup configurate dal server.<br /><br /> 2 = usa la configurazione del server per l'opzione di configurazione server per la [visualizzazione o configurare l'opzione di configurazione del server backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) . Si tratta del valore predefinito.<br /><br /> La compressione dei backup è supportata solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni sul &#40;di log shipping SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

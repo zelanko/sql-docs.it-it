@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSreplication_subscriptions system table
 ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a7164afe24d15abf195ebff96e4e96a82877deae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 37114a42cd7e9c64872ff42848bb916b21c1d941
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079990"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82812425"
 ---
 # <a name="msreplication_subscriptions-transact-sql"></a>MSreplication_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68079990"
 |**independent_agent**|**bit**|Indica se per questa pubblicazione è disponibile un agente di distribuzione autonomo.|  
 |**subscription_type**|**int**|Tipo di sottoscrizione:<br /><br /> 0 = push<br /><br /> 1 = pull<br /><br /> 2 = anonima|  
 |**distribution_agent**|**sysname**|Nome dell'agente di distribuzione.|  
-|**Tempo**|**smalldatetime**|Ora dell'ultimo aggiornamento eseguito dall'agente di distribuzione.|  
+|**Time**|**smalldatetime**|Ora dell'ultimo aggiornamento eseguito dall'agente di distribuzione.|  
 |**Descrizione**|**nvarchar(255)**|Descrizione della sottoscrizione.|  
 |**transaction_timestamp**|**varbinary(16)**|Solo per uso interno.|  
 |**update_mode**|**tinyint**|Tipo di aggiornamento.|  

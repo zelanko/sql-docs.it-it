@@ -17,19 +17,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_availability_group_states dynamic management view
 ms.assetid: d18019dd-f8dc-4492-b035-b1a639369b65
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 91efefbdc28480cf2a3b3fb579dba0946dba8a2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bace0824a7c8411e267186c3e9919ba2eb4be15c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900770"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82812028"
 ---
 # <a name="sysdm_hadr_availability_group_states-transact-sql"></a>sys.dm_hadr_availability_group_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce una riga per ogni gruppo di disponibilità Always On che dispone di una replica di disponibilità nell'istanza locale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di. Ogni riga visualizza gli stati che definiscono l'integrità di un determinato gruppo di disponibilità.  
+  Restituisce una riga per ogni gruppo di disponibilità Always On che dispone di una replica di disponibilità nell'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ogni riga visualizza gli stati che definiscono l'integrità di un determinato gruppo di disponibilità.  
   
 > [!NOTE]  
 >  Per ottenere l'elenco completo di, eseguire una query sulla vista del catalogo [sys. availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) .  
@@ -50,7 +50,7 @@ ms.locfileid: "67900770"
 ### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Monitorare i gruppi di disponibilità &#40;&#41;Transact-SQL](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Funzioni e DMV di Gruppi di disponibilità AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  

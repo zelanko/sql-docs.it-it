@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_io_virtual_file_stats dynamic management function
 ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ad2d38c031f97e46ef36f33f5e7a0fc82bcb5e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f74fcfb00286d79699eed1e40c3dc36f907026ec
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74412836"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811845"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "74412836"
   Restituisce le statistiche di I/O per i file di log e di dati. Questa vista a gestione dinamica sostituisce la funzione [fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md) .  
   
 > [!NOTE]  
->  Per chiamare questo oggetto [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]da, usare il nome **sys. dm_pdw_nodes_io_virtual_file_stats**. 
+>  Per chiamare questo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oggetto da, usare il nome **sys. dm_pdw_nodes_io_virtual_file_stats**. 
 
 ## <a name="syntax"></a>Sintassi  
   
@@ -78,7 +78,7 @@ ID del file. *file_id* è di tipo int e non prevede alcun valore predefinito. Gl
 |**database_name**|**sysname**|nome del database.</br></br>Per SQL Data Warehouse, questo è il nome del database archiviato nel nodo identificato da pdw_node_id. Ogni nodo dispone di un database tempdb con 13 file. Ogni nodo dispone anche di un database per ogni distribuzione e ogni database di distribuzione contiene 5 file. Se, ad esempio, ogni nodo contiene 4 distribuzioni, i risultati mostrano 20 file di database di distribuzione per ogni pdw_node_id. 
 |**database_id**|**smallint**|ID del database.|  
 |**file_id**|**smallint**|ID di file.|  
-|**sample_ms**|**bigint**|Numero di millisecondi dall'avvio del computer. È possibile utilizzare questa colonna per confrontare output diversi di questa funzione.</br></br>Il tipo di dati **int** è int [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] per through[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|**sample_ms**|**bigint**|Numero di millisecondi dall'avvio del computer. È possibile utilizzare questa colonna per confrontare output diversi di questa funzione.</br></br>Il tipo di dati è **int** per [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |**num_of_reads**|**bigint**|Numero di letture eseguite nel file.|  
 |**num_of_bytes_read**|**bigint**|Numero totale di byte letti nel file.|  
 |**io_stall_read_ms**|**bigint**|Tempo totale di attesa degli utenti, in millisecondi, per il completamento delle operazioni di lettura nel file.|  
@@ -88,11 +88,11 @@ ID del file. *file_id* è di tipo int e non prevede alcun valore predefinito. Gl
 |**io_stall**|**bigint**|Tempo totale di attesa degli utenti, in millisecondi, per il completamento delle operazioni di I/O nel file.|  
 |**size_on_disk_bytes**|**bigint**|Numero di byte utilizzati nel disco per il file. Per i file sparse, questo numero corrisponde al numero effettivo di byte nel disco utilizzati per gli snapshot di database.|  
 |**file_handle**|**varbinary**|Handle di file Windows per il file.|  
-|**io_stall_queued_read_ms**|**bigint**|Non **si applica a:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]a.<br /><br /> Latenza di I/O totale introdotta dalla governance delle risorse di I/O per le letture. Non ammette i valori Null. Per ulteriori informazioni, vedere [sys. dm_resource_governor_resource_pools &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
-|**io_stall_queued_write_ms**|**bigint**|Non **si applica a:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]a.<br /><br />  Latenza di I/O totale introdotta dalla governance delle risorse di I/O per le scritture. Non ammette i valori Null.|
+|**io_stall_queued_read_ms**|**bigint**|Non **si applica a:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] .<br /><br /> Latenza di I/O totale introdotta dalla governance delle risorse di I/O per le letture. Non ammette i valori Null. Per ulteriori informazioni, vedere [sys. dm_resource_governor_resource_pools &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
+|**io_stall_queued_write_ms**|**bigint**|Non **si applica a:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] .<br /><br />  Latenza di I/O totale introdotta dalla governance delle risorse di I/O per le scritture. Non ammette i valori Null.|
 |**pdw_node_id**|**int**|**Si applica a:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identificatore del nodo per la distribuzione.
  
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 I contatori vengono inizializzati su Empty ogni volta che viene avviato il servizio SQL Server (MSSQLSERVER).
   
 ## <a name="permissions"></a>Autorizzazioni  

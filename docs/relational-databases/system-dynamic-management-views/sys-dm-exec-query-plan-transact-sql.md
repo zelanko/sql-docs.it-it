@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_plan dynamic management function
 ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3d4ccd016c32e197c75026c1039e5ff4c21eef32
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4cc8fd7a20da6d0bf56d68b690bf35341cb6a63e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68135182"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82812138"
 ---
 # <a name="sysdm_exec_query_plan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ Il *plan_handle* può essere ottenuto dagli oggetti a gestione dinamica seguenti
 |**encrypted**|**bit**|Indica se la stored procedure corrispondente è crittografata.<br /><br /> 0 = non crittografata<br /><br /> 1 = crittografata<br /><br /> La colonna non ammette i valori Null.|  
 |**query_plan**|**xml**|Contiene la rappresentazione Showplan della fase di compilazione del piano di esecuzione della query specificato con *plan_handle*. La rappresentazione Showplan è in formato XML. Viene generato un piano per ogni batch contenente ad esempio istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc, chiamate di stored procedure e chiamate di funzioni definite dall'utente.<br /><br /> La colonna ammette i valori Null.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Nelle condizioni seguenti non viene restituito alcun output Showplan nella colonna **query_plan** della tabella restituita per **sys.dm_exec_query_plan**:  
   
 -   Se il piano di query specificato utilizzando *plan_handle* è stato eliminato dalla cache dei piani, la colonna **query_plan** della tabella restituita è null. Questa condizione si verifica, ad esempio, in presenza di un ritardo di tempo tra l'acquisizione dell'handle del piano e il relativo utilizzo in **sys.dm_exec_query_plan**.  
@@ -78,18 +78,18 @@ Il *plan_handle* può essere ottenuto dagli oggetti a gestione dinamica seguenti
  Quando una query ad hoc utilizza la parametrizzazione semplice o forzata, la colonna **query_plan** conterrà solo il testo dell'istruzione e non il piano di query effettivo. Per restituire il piano di query, chiamare **sys.dm_exec_query_plan** per l'handle del piano della query con parametri preparata. È possibile determinare se è stata eseguita la parametrizzazione della query facendo riferimento alla colonna **sql** della vista [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) o alla colonna di testo della DMV [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
   
 > [!NOTE] 
-> A causa di una limitazione del numero di livelli annidati consentiti nel tipo di dati **XML** , **sys. dm_exec_query_plan** non può restituire piani di query che soddisfano o superano 128 livelli di elementi annidati. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa condizione impediva il completamento del piano di query e generava l'errore 6335. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 e versioni successive, la colonna **query_plan** restituisce null.   
+> A causa di una limitazione del numero di livelli annidati consentiti nel tipo di dati **XML** , **sys. dm_exec_query_plan** non può restituire piani di query che soddisfano o superano 128 livelli di elementi annidati. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa condizione impediva il completamento del piano di query e generava l'errore 6335. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 e versioni successive, la colonna **QUERY_PLAN** restituisce null.   
 > È possibile utilizzare la funzione a gestione dinamica [sys. dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md) per restituire l'output del piano di query in formato testo.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per eseguire **sys. dm_exec_query_plan**, un utente deve essere un membro del ruolo predefinito del server **sysadmin** o disporre dell' `VIEW SERVER STATE` autorizzazione per il server.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Negli esempi seguenti viene illustrato l'utilizzo della vista a gestione dinamica **sys.dm_exec_query_plan**.  
   
- Per visualizzare i Showplan XML, eseguire le query seguenti nell'editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e quindi fare clic su **ShowPlanXML** nella colonna **query_plan** della tabella restituita da **sys.dm_exec_query_plan**. Il piano Showplan XML verrà visualizzato nel riquadro di riepilogo di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Per salvare lo Showplan XML in un file, fare clic con il pulsante destro del mouse su **ShowplanXml** nella colonna **query_plan** , fare clic su **Salva risultati**con \<nome, denominare il file nel formato *file_name*>. sqlplan; ad esempio, ShowplanXml. sqlplan.  
+ Per visualizzare i Showplan XML, eseguire le query seguenti nell'editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e quindi fare clic su **ShowPlanXML** nella colonna **query_plan** della tabella restituita da **sys.dm_exec_query_plan**. Il piano Showplan XML verrà visualizzato nel riquadro di riepilogo di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Per salvare lo Showplan XML in un file, fare clic con il pulsante destro del mouse su **ShowplanXml** nella colonna **query_plan** , fare clic su **Salva risultati**con nome, denominare il file nel formato \< *file_name*>. sqlplan, ad esempio ShowplanXML. sqlplan.  
   
-### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>A. Recupero del piano di query memorizzato nella cache per un query o un batch Transact-SQL con esecuzione prolungata  
+### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>R. Recupero del piano di query memorizzato nella cache per un query o un batch Transact-SQL con esecuzione prolungata  
  I piani delle query per vari tipi di batch [!INCLUDE[tsql](../../includes/tsql-md.md)], come batch ad hoc, stored procedure e funzioni definite dall'utente, vengono memorizzati nella cache in un'area della memoria denominata cache dei piani. Ogni piano della query memorizzato nella cache è identificato da un ID univoco denominato handle del piano. È possibile specificare l'handle del piano con la vista a gestione dinamica **sys.dm_exec_query_plan** per recuperare il piano di esecuzione per una query o un batch [!INCLUDE[tsql](../../includes/tsql-md.md)] specifico.  
   
  Se l'esecuzione di una query o un batch [!INCLUDE[tsql](../../includes/tsql-md.md)] risulta prolungata in una particolare connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile recuperare il piano di esecuzione di tale query o batch per individuare le cause del ritardo. Nell'esempio seguente viene illustrato come recuperare il piano Showplan XML per una query o un batch con esecuzione prolungata.  
@@ -116,7 +116,7 @@ WHERE session_id = 54;
 GO  
 ```  
   
- La tabella restituita da **sys. dm_exec_requests** indica che l'handle del piano per la query o il batch con esecuzione prolungata è `0x06000100A27E7C1FA821B10600`, che è possibile specificare come argomento `sys.dm_exec_query_plan` *plan_handle* con per recuperare il piano di esecuzione in formato XML, come indicato di seguito. Il piano di esecuzione in formato XML per la query o il batch con esecuzione prolungata è contenuto nella colonna **query_plan** della tabella restituita da `sys.dm_exec_query_plan`.  
+ La tabella restituita da **sys. dm_exec_requests** indica che l'handle del piano per la query o il batch con esecuzione prolungata è `0x06000100A27E7C1FA821B10600` , che è possibile specificare come argomento *plan_handle* con `sys.dm_exec_query_plan` per recuperare il piano di esecuzione in formato XML, come indicato di seguito. Il piano di esecuzione in formato XML per la query o il batch con esecuzione prolungata è contenuto nella colonna **query_plan** della tabella restituita da `sys.dm_exec_query_plan`.  
   
 ```sql  
 USE master;  

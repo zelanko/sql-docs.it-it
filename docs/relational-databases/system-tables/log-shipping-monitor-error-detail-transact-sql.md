@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_monitor_error_detail system table
 ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5e441e5165262a4455e34cb9a0adb55b9679578f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5c69ac9d3169b3cb407c98c76b1890c5a35188b4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67990051"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82813204"
 ---
 # <a name="log_shipping_monitor_error_detail-transact-sql"></a>log_shipping_monitor_error_detail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "67990051"
 |**origine**|**nvarchar**|Origine del messaggio di errore o dell'evento.|  
 |**help_url**|**nvarchar**|URL, se disponibile, in cui sono disponibili informazioni aggiuntive sull'errore.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questa tabella include i dettagli degli errori relativi ai processi di log shipping. Ogni errore viene registrato come una sequenza di eccezioni. Per ogni sessione dell'agente possono essere disponibili più errori (sequenze).  
   
  Oltre a essere archiviate sul server di monitoraggio remoto, le informazioni relative al server primario vengono archiviate nel server primario nella tabella **log_shipping_monitor_error_detail** e le informazioni relative a un server secondario vengono inoltre archiviate nel server secondario nella tabella **log_shipping_monitor_error_detail** .  

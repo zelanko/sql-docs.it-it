@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_monitor_secondary system table
 ms.assetid: afbe1bb7-89a7-4020-9408-0af64a043c2e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 838c810c28c03ae11237f449483789ed8dbbf740
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dd35759cfc37f504adc7adcccdbc863525bfa175
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989952"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82813342"
 ---
 # <a name="log_shipping_monitor_secondary-transact-sql"></a>log_shipping_monitor_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "67989952"
 |**last_restored_latency**|**int**|Intervallo, in minuti, intercorso tra la creazione del backup del log nel server primario e il relativo ripristino nel server secondario.<br /><br /> Il valore iniziale è NULL.|  
 |**history_retention_period**|**int**|Periodo di tempo, in minuti, durante il quale i record della cronologia di log shipping vengono mantenuti per un database secondario specificato prima di essere eliminati.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Oltre a essere archiviate sul server di monitoraggio remoto, le informazioni correlate a un server secondario vengono inoltre archiviate nel server secondario nella relativa tabella **log_shipping_monitor_secondary** .  
   
 ## <a name="see-also"></a>Vedere anche  
