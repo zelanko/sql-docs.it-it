@@ -1,5 +1,6 @@
 ---
-title: 'Esercitazione: Strumento Ottimizzazione guidata motore di database'
+title: 'Esercitazione: Database Engine Tuning Advisor'
+description: Database Engine Tuning Advisor esamina come vengono elaborate le query e consiglia come migliorare le prestazioni di elaborazione delle query modificando le strutture del database.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -14,14 +15,14 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: a6fea0bbb9c9471885f76f3f6f44a86b50718d3e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ad92ad29414afcf849ef0dd8a1ade0463748af35
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75304701"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151481"
 ---
-# <a name="tutorial-database-engine-tuning-advisor"></a>Esercitazione: Strumento Ottimizzazione guidata motore di database
+# <a name="tutorial-database-engine-tuning-advisor"></a>Esercitazione: Database Engine Tuning Advisor
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -35,7 +36,7 @@ In questa esercitazione verrà illustrato come navigare nell'interfaccia utente 
 [Lezione 1: Navigazione di base in Ottimizzazione guidata motore di database](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
 In questa lezione sarà possibile acquisire familiarità con la GUI dello strumento Ottimizzazione guidata motore di database e ottenere informazioni su come impostare il layout e le opzioni di visualizzazione.  
   
-[Lezione 2: Uso dello strumento Ottimizzazione guidata motore di database](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[Lezione 2: Uso di Ottimizzazione guidata motore di database](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
 In questa lezione verranno descritte le procedure per eseguire alcune semplici attività di ottimizzazione utilizzando la GUI dello strumento Ottimizzazione guidata motore di database.  
   
 [Lezione 3: Uso dell'utilità del prompt dei comandi dta](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  

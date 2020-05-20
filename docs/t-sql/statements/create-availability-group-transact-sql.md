@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fc168c53b91a2b66c039265abd95ea0d16147e23
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 5260ccc53fbdba1e0773dc43c021f0ec4f21e255
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925231"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151553"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -134,7 +134,7 @@ CREATE AVAILABILITY GROUP group_name
  SECONDARY  
  Specifica che i backup devono essere eseguiti su una replica secondaria tranne quando la replica primaria è l'unica replica online. In tal caso il backup deve essere eseguito sulla replica primaria. Questo è il comportamento predefinito.  
   
- Nessuno  
+ NONE  
  Specifica che si preferisce che i processi di backup ignorino il ruolo delle repliche di disponibilità nella scelta della replica per l'esecuzione dei backup. Si noti che i processi di backup potrebbero valutare altri fattori, ad esempio la priorità di backup di ogni replica di disponibilità in combinazione con lo stato operativo e lo stato connesso.  
   
 > [!IMPORTANT]  
@@ -150,7 +150,7 @@ CREATE AVAILABILITY GROUP group_name
   
 |Level|Condizione di errore|  
 |-----------|-----------------------|  
-|1|Specifica che deve essere avviato un failover automatico quando si verifica una delle condizioni seguenti:<br /><br /> \- Il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è attivo.<br /><br /> \- Il lease del gruppo di disponibilità per la connessione al cluster WSFC scade poiché non viene ricevuto alcun ACK dall'istanza del server. Per altre informazioni, vedere [Funzionamento: timeout lease di SQL Server Always On](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-AlwaysOn-lease-timeout.aspx).|  
+|1|Specifica che deve essere avviato un failover automatico quando si verifica una delle condizioni seguenti:<br /><br /> \- Il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è attivo.<br /><br /> \- Il lease del gruppo di disponibilità per la connessione al cluster WSFC scade poiché non viene ricevuto alcun ACK dall'istanza del server. Per altre informazioni, vedere [How It Works: SQL Server Always On Lease Timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-AlwaysOn-lease-timeout.aspx) (Funzionamento: timeout lease di SQL Server Always On).|  
 |2|Specifica che deve essere avviato un failover automatico quando si verifica una delle condizioni seguenti:<br /><br /> \- L'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non si connette al cluster e viene superata la soglia HEALTH_CHECK_TIMEOUT specificata dall'utente per il gruppo di disponibilità.<br /><br /> \- La replica di disponibilità si trova in uno stato di errore.|  
 |3|Specifica che deve essere avviato un failover automatico in caso di errori interni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] critici, ad esempio spinlock orfani, gravi violazioni dell'accesso in scrittura o dumping eccessivo.<br /><br /> Questo è il comportamento predefinito.|  
 |4|Specifica che deve essere avviato un failover automatico in caso di errori interni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con gravità moderata, ad esempio una condizione persistente di memoria insufficiente nel pool di risorse interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -294,7 +294,7 @@ CREATE AVAILABILITY GROUP group_name
   
 -   0 indica che questa replica di disponibilità non è destinata all'esecuzione dei backup. Ciò si rivela utile, ad esempio, per una replica di disponibilità remota in cui non si desidera eseguire mai il failover dei backup.  
   
- Per altre informazioni, vedere [Repliche secondarie attive: Backup in repliche secondarie &#40;gruppi di disponibilità Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+ Per altre informazioni, vedere [Repliche secondarie attive: Backup su repliche secondarie &#40;Gruppi di disponibilità Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
  SECONDARY_ROLE **(** ... **)**  
  Specifica le impostazioni specifiche del ruolo che vengono applicate se questa replica di disponibilità è attualmente proprietaria del ruolo secondario, ovvero ogni volta che è una replica secondaria. All'interno delle parentesi, specificare uno o entrambe opzioni per il ruolo secondario. Se si specificano entrambe, usare un elenco delimitato da virgole.  
@@ -313,7 +313,7 @@ CREATE AVAILABILITY GROUP group_name
  ALL  
  Sono consentite tutte le connessioni ai database nella replica secondaria per l'accesso in sola lettura.  
   
- Per altre informazioni, vedere [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Per altre informazioni, vedere [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  READ_ONLY_ROUTING_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
  Specifica l'URL da usare per il routing delle richieste di connessione con finalità di lettura a questa replica di disponibilità. Si tratta dell'URL sul quale è in ascolto il motore di database di SQL Server. In genere, l'istanza predefinita del motore di database di SQL Server è in ascolto sulla porta TCP 1433.  
@@ -353,9 +353,18 @@ CREATE AVAILABILITY GROUP group_name
   
  A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], è possibile eseguire il bilanciamento del carico delle richieste con finalità di lettura in tutte le repliche secondarie leggibili. A questo scopo, inserire le repliche in un set annidato di parentesi all'interno dell'elenco di routing di sola lettura. Per altre informazioni ed esempi, vedere [Configurare il bilanciamento del carico tra le repliche di sola lettura](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing).  
   
- Nessuno  
+ NONE  
  Specifica che quando questa replica di disponibilità è la replica primaria, il routing di sola lettura non è supportato. Questo è il comportamento predefinito.  
-  
+
+ READ_WRITE_ROUTING_URL **=** { **('** \<istanza_server> **')** }  
+ Si applica a: SQL Server (a partire da SQL Server 2019 (15.x)) 
+
+ Specifica istanze del server in cui sono ospitate repliche di disponibilità per questo gruppo di disponibilità che soddisfano i requisiti seguenti quando vengono eseguite nel ruolo principale:
+-   La specifica della replica PRIMARY_ROLE include READ_WRITE_ROUTING_URL.
+-   La stringa di connessione può essere impostata come ReadWrite definendo ApplicationIntent come ReadWrite o non impostando ApplicationIntent e consentendo che venga implementata l'impostazione predefinita (ReadWrite).
+
+Per altre informazioni, vedere [Reindirizzamento della connessione in lettura/scrittura da replica secondaria a primaria - Gruppi di disponibilità AlwaysOn](../../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md).
+
  SESSION_TIMEOUT **=** *integer*  
  Specifica il periodo di timeout della sessione in secondi. Se non si specifica questa opzione, il periodo di timeout predefinito è di 10 secondi. Il valore minimo è 5 secondi.  
   
@@ -473,7 +482,7 @@ CREATE AVAILABILITY GROUP group_name
   
  Per informazioni sulle restrizioni relative alle istruzioni Transact-SQL AVAILABILITY GROUP, vedere [Panoramica delle istruzioni Transact-SQL per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md).  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  Sono necessarie l'appartenenza al ruolo predefinito del server **sysadmin** e l'autorizzazione server CREATE AVAILABILITY GROUP oppure l'autorizzazione ALTER ANY AVAILABILITY GROUP o CONTROL SERVER.  

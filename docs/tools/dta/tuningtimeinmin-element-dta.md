@@ -1,5 +1,6 @@
 ---
 title: Elemento TuningTimeInMin (DTA)
+description: Nell'utilità dta l'elemento TuningTimeInMin specifica la lunghezza massima di una sessione di ottimizzazione espressa in minuti.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 31d72b47896360c673865aec9847f268ad79d9d5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5f57cc81435aeb6542dfdd4a360e8e4c0a26d343
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75304689"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151475"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>Elemento TuningTimeInMin (DTA)
 

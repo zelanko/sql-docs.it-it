@@ -1,5 +1,6 @@
 ---
 title: Utilità sqlcmd
+description: L'utilità sqlcmd consente di immettere istruzioni Transact-SQL, procedure di sistema e file di script usando diverse modalità e usa ODBC per eseguire i batch Transact-SQL.
 ms.custom: seo-lt-2019
 ms.date: 11/27/2018
 ms.prod: sql
@@ -27,12 +28,12 @@ ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 413d8fffc505c8b2cfb5404e70cdd9f64cd150de
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0b4274b0c724ca86608bf35c9398b3edd199d55a
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77544933"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151620"
 ---
 # <a name="sqlcmd-utility"></a>Utilità sqlcmd
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -413,7 +414,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
 >  Il valore di timeout effettivo può variare di diversi secondi rispetto al valore specificato per *time_out* .  
   
  **-vvar =**  _value_[ **var =** _value_...]  
- Crea una variabile di scripting di **sqlcmd**che può essere usata in uno script **sqlcmd** . Se il valore contiene spazi, racchiuderlo tra virgolette. È possibile specificare più valori _**var**_ = **"** _values_ **"** . Se in uno dei valori specificati è incluso un errore, l'utilità **sqlcmd** genera un messaggio di errore e viene chiusa.  
+ Crea una variabile di scripting di **sqlcmd**che può essere usata in uno script **sqlcmd** . Se il valore contiene spazi, racchiuderlo tra virgolette. È possibile specificare più valori _**var**_= **"** _values_ **"** . Se in uno dei valori specificati è incluso un errore, l'utilità **sqlcmd** genera un messaggio di errore e viene chiusa.  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   

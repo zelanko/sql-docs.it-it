@@ -11,12 +11,12 @@ ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc6409f7a8f5fc15568e583aa50552667f2dd874
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d34b2a8bfeaf11a58f0cf9e07962fb44fa8973fd
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71816709"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151569"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Indici columnstore - Prestazioni delle query
 
@@ -33,9 +33,16 @@ ms.locfileid: "71816709"
     
 -   **Usare l'ordine di inserimento.** In genere in un data warehouse tradizionale i dati vengono inseriti in ordine temporale e le analisi vengono eseguite in una dimensione temporale, come nel caso delle analisi delle vendite per trimestre. Per questo tipo di carico di lavoro, l'eliminazione del rowgroup viene eseguita automaticamente. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] diversi rowgroup vengono ignorati durante l'elaborazione della query.    
     
--   **Usare l'indice rowstore cluster.** Se il predicato della query comune è in una colonna (ad esempio C1) non correlata all'ordine di inserimento della riga, è possibile creare un indice rowstore cluster nelle colonne C1 e quindi creare l'indice columstore cluster eliminando l'indice rowstore cluster. Se si crea l'indice columnstore cluster in modo esplicito usando `MAXDOP = 1`, l'indice risultante verrà ordinato perfettamente in base alla colonna C1. Se si specifica `MAXDOP = 8` si avrà una sovrapposizione di valori in otto rowgroup. Un caso comune di applicazione di questa strategia riguarda l'indice columnstore creato inizialmente con un set di dati di grandi dimensioni. Per un indice columnstore non cluster (NCCI), se la tabella rowstore di base include un indice cluster le righe risultano già ordinate. In questo caso, l'indice columnstore non cluster risultante sarà ordinato automaticamente. È importante notare che l'indice columnstore non mantiene automaticamente l'ordine delle righe. Quando vengono inserite nuove righe o vengono aggiornate righe meno recenti, potrebbe essere necessario ripetere il processo a causa di un possibile deterioramento delle prestazioni delle query di analisi.    
+-   **Usare l'indice rowstore cluster.** Se il predicato della query comune è in una colonna (ad esempio C1) non correlata all'ordine di inserimento della riga, è possibile creare un indice rowstore cluster nelle colonne C1 e quindi creare l'indice columstore cluster eliminando l'indice rowstore cluster. Se si crea l'indice columnstore cluster in modo esplicito usando `MAXDOP = 1`, l'indice risultante verrà ordinato perfettamente in base alla colonna C1. Se si specifica `MAXDOP = 8`, si avrà una sovrapposizione di valori in otto rowgroup. Un caso comune di applicazione di questa strategia riguarda l'indice columnstore creato inizialmente con un set di dati di grandi dimensioni. Per un indice columnstore non cluster (NCCI), se la tabella rowstore di base include un indice cluster le righe risultano già ordinate. In questo caso, l'indice columnstore non cluster risultante sarà ordinato automaticamente. È importante notare che l'indice columnstore non mantiene automaticamente l'ordine delle righe. Quando vengono inserite nuove righe o vengono aggiornate righe meno recenti, potrebbe essere necessario ripetere il processo a causa di un possibile deterioramento delle prestazioni delle query di analisi.    
     
--   **Usare il partizionamento delle tabelle.** È possibile partizionare l'indice columnstore e quindi usare l'eliminazione delle partizioni per ridurre il numero di rowgroup da analizzare. Se ad esempio si ha una tabella dei fatti in cui vengono archiviati gli acquisti eseguiti dai clienti e si usa un modello di query comune per cercare gli acquisti eseguiti trimestralmente da un determinato cliente, è possibile combinare l'ordine di inserimento con il partizionamento nella colonna del cliente. Ogni partizione contiene righe in ordine temporale per un determinato cliente.    
+-   **Usare il partizionamento delle tabelle.** È possibile partizionare l'indice columnstore e quindi usare l'eliminazione delle partizioni per ridurre il numero di rowgroup da analizzare. Se ad esempio si ha una tabella dei fatti in cui vengono archiviati gli acquisti eseguiti dai clienti e si usa un modello di query comune per cercare gli acquisti eseguiti trimestralmente da un determinato cliente, è possibile combinare l'ordine di inserimento con il partizionamento nella colonna del cliente. Ogni partizione contiene righe in ordine temporale per un determinato cliente. Se è necessario rimuovere i dati dal columnstore, valutare anche la possibilità di usare il partizionamento delle tabelle. La disattivazione e il troncamento delle partizioni non più necessarie è una strategia efficace per eliminare i dati senza generare la frammentazione introdotta con rowgroup più piccoli.    
+
+-   **Evitare di eliminare quantità elevate di dati**. La rimozione di righe compresse da un rowgroup non è un'operazione sincrona. Sarebbe costoso decomprimere un rowgroup, eliminare la riga e quindi ricomprimerla. Se si eliminano dati da rowgroup compressi, tali rowgroup verranno comunque analizzati anche se restituiranno un minor numero di righe. Se il numero di righe eliminate per diversi rowgroup è sufficientemente grande da consentire l'unione in un minor numero di rowgroup, la riorganizzazione del columnstore aumenta la qualità dell'indice e le prestazioni delle query migliorano. Se il processo di eliminazione dei dati in genere svuota interi rowgroup, valutare la possibilità di usare il partizionamento delle tabelle, disattivare le partizioni non più necessarie e troncarle anziché eliminare righe. 
+
+    > [!NOTE]
+    > A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], il motore di tuple viene aiutato da un'attività di unione in background, che comprime automaticamente i rowgroup delta OPEN più piccoli che sono esistiti per un dato periodo di tempo (come determinato da una soglia interna) oppure unisce i rowgroup COMPRESSED da cui è stato eliminato un numero elevato di righe. Ciò migliora la qualità dell'indice columnstore nel tempo.   
+    > Se è necessario eliminare grandi quantità di dati dall'indice columnstore, valutare la possibilità di suddividere nel tempo tale operazione in batch di eliminazione più piccoli, per consentire all'attività di unione in background di gestire l'unione di rowgroup più piccoli e migliorare la qualità dell'indice, eliminando la necessità di pianificare le finestre di manutenzione per la riorganizzazione dell'indice dopo l'eliminazione dei dati.    
+    > Per altre informazioni sui termini e sui concetti dei columnstore, vedere [Indici columnstore - Panoramica](../../relational-databases/indexes/columnstore-indexes-overview.md).
     
 ### <a name="2-plan-for-enough-memory-to-create-columnstore-indexes-in-parallel"></a>2. Pianificare una quantità di memoria sufficiente per creare indici columnstore in parallelo    
  Per impostazione predefinita, la creazione di un indice columnstore è un'operazione parallela, a meno che la memoria non sia vincolata. La creazione dell'indice in parallelo richiede più memoria rispetto alla creazione dell'indice in modo seriale. Se si dispone di un'ampia quantità di memoria, la creazione di un indice columnstore richiede un tempo di circa 1,5 volte superiore rispetto alla compilazione di un albero B nelle stesse colonne.    
@@ -47,7 +54,7 @@ ms.locfileid: "71816709"
  A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] la query viene eseguita sempre in modalità batch. Nelle versioni precedenti l'esecuzione batch viene usata solo quando DOP è maggiore di uno.    
     
 ## <a name="columnstore-performance-explained"></a>Spiegazione delle prestazioni columnstore    
- Gli indici columnstore ottengono prestazioni di query ottimali combinando l'elaborazione in memoria in modalità batch ad alta velocità con tecniche che riducono significativamente i requisiti I/O.  Poiché le query di analisi analizzano un numero elevato di righe, in genere sono associate alle operazioni I/O, quindi la riduzione di tali operazioni durante l'esecuzione delle query è fondamentale per la progettazione di indici columnstore.  Dopo la lettura dei dati in memoria, è molto importante ridurre il numero di operazioni in memoria.    
+ Gli indici columnstore ottengono prestazioni di query ottimali combinando l'elaborazione in memoria in modalità batch ad alta velocità con tecniche che riducono significativamente i requisiti I/O. Poiché le query di analisi analizzano un numero elevato di righe, in genere sono associate alle operazioni I/O, quindi la riduzione di tali operazioni durante l'esecuzione delle query è fondamentale per la progettazione di indici columnstore. Dopo la lettura dei dati in memoria, è molto importante ridurre il numero di operazioni in memoria.    
     
  Gli indici columnstore riducono le operazioni I/O e ottimizzano le operazioni in memoria grazie all'elevata compressione dei dati, all'eliminazione di columnstore, all'eliminazione di rowgroup e all'elaborazione batch.    
     
@@ -74,7 +81,7 @@ ms.locfileid: "71816709"
     
  **Quando è necessario che un indice columnstore esegua una scansione di tabella completa?**    
     
- A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] è possibile creare uno o più indici albero B non cluster normali in un indice columnstore cluster con una procedura analoga a quella per un heap rowstore. Gli indici albero B non cluster possono velocizzare una query con un predicato di uguaglianza o un predicato con un intervallo di valori limitato.  Per i predicati più complessi, Query Optimizer potrebbe optare per una scansione di tabella completa. Senza la possibilità di ignorare i rowgroup, una scansione di tabella completa richiederebbe molto tempo, in particolare per tabelle di grandi dimensioni.    
+ A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] è possibile creare uno o più indici albero B non cluster normali in un indice columnstore cluster con una procedura analoga a quella per un heap rowstore. Gli indici albero B non cluster possono velocizzare una query con un predicato di uguaglianza o un predicato con un intervallo di valori limitato. Per i predicati più complessi, Query Optimizer potrebbe optare per una scansione di tabella completa. Senza la possibilità di ignorare i rowgroup, una scansione di tabella completa richiederebbe molto tempo, in particolare per tabelle di grandi dimensioni.    
     
  **In che occasioni una query di analisi trae vantaggio dall'eliminazione di rowgroup per una scansione di tabella completa?**    
     
@@ -84,7 +91,7 @@ ms.locfileid: "71816709"
     
  Per determinare quali rowgroup eliminare, l'indice columnstore usa i metadati per archiviare i valori minimi e massimi di ogni segmento di colonna per ogni rowgroup. Se nessuno degli intervalli dei segmenti di colonna soddisfa i criteri del predicato della query, l'intero rowgroup viene ignorato senza eseguire alcuna operazione I/O. Questo procedimento funziona perché in genere i dati vengono caricati con un ordinamento e, anche se l'ordinamento delle righe non è sempre garantito, i valori dei dati simili spesso si trovano all'interno dello stesso rowgroup o in un rowgroup adiacente.    
     
- Per altri dettagli sui rowgroup, vedere Guida agli indici columnstore    
+ Per altri dettagli sui rowgroup, vedere [Linee guida per la progettazione di indici columnstore](../../relational-databases/sql-server-index-design-guide.md#columnstore_index).    
     
 ### <a name="batch-mode-execution"></a>Esecuzione in modalità batch    
  L'esecuzione in modalità batch indica l'elaborazione congiunta di un set di righe, generalmente non più di 900, per migliorare l'efficienza di esecuzione. Ad esempio, la query `SELECT SUM (Sales) FROM SalesData` aggrega le vendite totali della tabella SalesData. Nell'esecuzione in modalità batch, il motore di esecuzione delle query calcola l'aggregato in gruppi di 900 valori. In questo modo, invece di pagare il costo delle singole righe, i metadati, i costi di accesso e altri tipi di costi generali vengono suddivisi su tutte le righe in un batch, riducendo notevolmente il percorso del codice. L'elaborazione in modalità batch funziona sui dati compressi, quando disponibili, ed elimina alcuni degli operatori di scambio usati dall'elaborazione in modalità riga. Questo velocizza l'esecuzione delle query di analisi per ordini di grandezza.    
@@ -134,10 +141,10 @@ Ad esempio, la distribuzione dell'aggregazione viene eseguita in entrambe le que
 ```sql     
 SELECT  productkey, SUM(TotalProductCost)    
 FROM FactResellerSalesXL_CCI    
-GROUP BY productkey    
+GROUP BY productkey;    
     
 SELECT  SUM(TotalProductCost)    
-FROM FactResellerSalesXL_CCI    
+FROM FactResellerSalesXL_CCI;    
 ```    
     
 ### <a name="string-predicate-pushdown"></a>Distribuzione del predicato stringa    
@@ -147,7 +154,7 @@ Ad esempio, un fatto può essere un record che rappresenta la vendita di un cert
     
 Ad esempio considerare il caso di una tabella delle dimensioni `Products`. Una chiave primaria tipica è `ProductCode`, generalmente rappresentata con il tipo di dati stringa. Una procedura consigliata per il miglioramento delle prestazioni delle query è la creazione di una chiave surrogata, in genere una colonna di tipo integer, per fare riferimento alla riga della tabella delle dimensioni dalla tabella dei fatti. 
     
-L'indice columnstore esegue in modo efficace le query di analisi con join/predicati che includono chiavi di tipo numerico o integer. Tuttavia, in molti carichi di lavoro del cliente vengono usate colonne basate su stringhe per il collegamento delle tabelle dei fatti e delle dimensioni e le prestazioni delle query con l'indice columnstore non risultano altrettanto efficaci. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] migliora in modo significativo le prestazioni delle query di analisi con le colonne basate su stringhe grazie alla distribuzione dei predicati con colonne di tipo stringa nel nodo SCAN.    
+L'indice columnstore esegue in modo efficace le query di analisi con join/predicati che includono chiavi di tipo numerico o integer. In molti carichi di lavoro del cliente vengono tuttavia usate colonne basate su stringhe per il collegamento delle tabelle dei fatti e delle dimensioni e le prestazioni delle query con l'indice columnstore non risultano altrettanto efficaci. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] migliora in modo significativo le prestazioni delle query di analisi con le colonne basate su stringhe grazie alla distribuzione dei predicati con colonne di tipo stringa nel nodo SCAN.    
     
 La distribuzione del predicato stringa si basa sul dizionario primario o secondario creato per le colonne per migliorare le prestazioni delle query. Ad esempio, prendere in considerazione il segmento di colonna stringa all'interno di un rowgroup costituito da 100 valori stringa distinti. Ipotizzando la presenza di un milione di righe, il valore medio dei riferimenti a ogni singolo valore stringa è pari a 10.000.    
     
@@ -160,8 +167,7 @@ Con la distribuzione del predicato stringa, l'esecuzione della query calcola il 
     -   Le espressioni che restituiscono NULL non sono supportate.    
     
 ## <a name="see-also"></a>Vedere anche    
- [Indici columnstore - Linee guida per la progettazione](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   
- [Indici columnstore - Linee guida per il caricamento di dati](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
+ [Linee guida per la progettazione di indici columnstore](../../relational-databases/sql-server-index-design-guide.md#columnstore_index) [Indici columnstore - Linee guida per il caricamento di dati](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Introduzione a columnstore per l'analisi operativa in tempo reale](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)     
  [Indici columnstore per il data warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
  [Riorganizzare e ricompilare gli indici](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)    

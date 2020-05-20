@@ -16,12 +16,12 @@ ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 58ff313686f1f37643068a28d4e30ac93eddd2ce
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 9f459e71ebeb95de2b1d80f1281881df1c0474a0
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528225"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151862"
 ---
 # <a name="replication-log-reader-agent"></a>Agente lettura log repliche
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +50,8 @@ logread [-?]
 [-LoginTimeOut login_time_out_seconds]  
 [-LogScanThreshold scan_threshold]  
 [-MaxCmdsInTran number_of_commands]  
-[-MessageInterval message_interval]  
+[-MessageInterval message_interval]
+[-MultiSubnetFailover [0|1]]
 [-Output output_path_and_file_name]  
 [-OutputVerboseLevel [0|1|2|3|4]]  
 [-PacketSize packet_size]  
@@ -139,6 +140,8 @@ logread [-?]
  Intervallo di tempo utilizzato per la registrazione della cronologia. Un evento della cronologia viene registrato quando viene raggiunto il valore di **MessageInterval** dopo la registrazione dell'ultimo evento della cronologia.  
   
  Se nell'origine non vi sono transazioni replicate disponibili, tramite l'agente viene inviato al server di distribuzione un messaggio che segnala l'assenza di transazioni. Questa opzione specifica per quanto tempo l'agente aspetta prima di inviare un altro messaggio di assenza di transazioni. Gli agenti inviano sempre un messaggio di assenza di transazioni quando rilevano che nell'origine non vi sono transazioni disponibili dopo aver elaborato in precedenza transazioni replicate. Il valore predefinito è 60 secondi.  
+ 
+ **-MultiSubnetFailover** [**0**|**1**] specifica se la proprietà MultiSubnetFailover è abilitata o meno. Se l'applicazione si connette a un gruppo di disponibilità Always On in subnet diverse, l'impostazione di MultiSubnetFailover su 1 (True) garantisce una maggiore velocità di rilevamento e connessione al server attualmente attivo.
   
  **-Output** _output_path_and_file_name_  
  Percorso del file di output dell'agente. Se non viene specificato il nome file, l'output viene inviato alla console. Se il nome file specificato esiste già, l'output viene aggiunto al file.  
@@ -201,6 +204,7 @@ logread [-?]
 |Contenuto aggiornato|  
 |---------------------|  
 |Aggiunta del parametro **-ExtendedEventConfigFile** .|  
+|Aggiunta del parametro **-MultiSubnetFailover**.|
   
 ## <a name="see-also"></a>Vedere anche  
  [Amministrazione dell'agente di replica](../../../relational-databases/replication/agents/replication-agent-administration.md)  

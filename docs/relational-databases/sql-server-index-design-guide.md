@@ -22,12 +22,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 68b29bd0497598909914cb71f9f180ccf57191c0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4d6547436a3338805d9dd81c88ae786a187f9576
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79486524"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151995"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Architettura e guida per la progettazione degli indici di SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -659,6 +659,8 @@ Quando si parla di indici columnstore, si usano i termini *rowstore* e *columnst
   Un indice columnstore archivia inoltre fisicamente alcune righe in un formato rowstore, denominato archivio differenziale. L'archivio differenziale, detto anche rowgroup differenziale, è una posizione di archiviazione per le righe in numero troppo limitato per qualificarsi per la compressione nel columnstore. Ogni rowgroup differenziale viene implementato come indice albero B cluster. 
 
 - Il **deltastore** è una posizione di archiviazione per le righe in numero troppo limitato per essere compresse nel columnstore. Il deltastore archivia le righe in formato rowstore. 
+
+Per altre informazioni sui termini e sui concetti dei columnstore, vedere [Indici columnstore - Panoramica](../relational-databases/indexes/columnstore-indexes-overview.md).
   
 #### <a name="operations-are-performed-on-rowgroups-and-column-segments"></a>Le operazioni vengono eseguite sui rowgroup e sui segmenti di colonna
 
@@ -667,17 +669,27 @@ L'indice columnstore raggruppa le righe in unità gestibili. Ognuna di queste un
 Ad esempio, l'indice columnstore esegue queste operazioni sui rowgroup:
 
 * Compressione dei rowgroup nel columnstore. La compressione viene eseguita su ogni segmento di colonna all'interno di un rowgroup.
-* Esegue il merge dei rowgroup durante un'operazione `ALTER INDEX ... REORGANIZE`.
+* Unisce i rowgrup durante un'operazione `ALTER INDEX ... REORGANIZE`, che include la rimozione dei dati eliminati.
 * Crea nuovi rowgroup durante un'operazione `ALTER INDEX ... REBUILD`.
 * Restituzione di informazioni sull'integrità e la frammentazione dei rowgroup nelle viste a gestione dinamica (DMV).
 
-L'archivio differenziale è costituito da uno o più rowgroup detti **rowgroup differenziali**. Un rowgroup differenziale è un indice albero B cluster che archivia caricamenti e inserimenti bulk di dimensioni contenute, fino a quando il rowgroup non contiene 1.048.576 righe o l'indice non viene ricompilato.  Quando un rowgroup differenziale raggiunge 1.048.576 righe, viene contrassegnato come chiuso e attende che un processo denominato motore di tuple lo comprima nel columnstore. 
+L'archivio differenziale è costituito da uno o più rowgroup detti **rowgroup differenziali**. Ogni rowgroup delta è un indice albero B cluster che archivia caricamenti bulk e inserimenti di piccole dimensioni fino a quando il rowgroup non contiene 1.048.576 righe, dopodiché un processo detto **tuple-mover** comprime automaticamente il rowgroup chiuso nel columnstore. 
+
+Per altre informazioni sugli stati dei rowgroup, vedere [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md). 
+
+> [!TIP]
+> La presenza di un numero eccessivo di rowgroup di piccole dimensioni riduce la qualità dell'indice columnstore. Un'operazione di riorganizzazione unisce i rowgroup più piccoli in base a un criterio di soglia interna, che determina come rimuovere le righe eliminate e combinare i rowgroup compressi. Dopo un'operazione merge, la qualità dell'indice risulterà migliore. 
+
+> [!NOTE]
+> A partire da [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], il motore di tuple viene aiutato da un'attività di unione in background, che comprime automaticamente i rowgroup delta aperti più piccoli che sono esistiti per un dato periodo di tempo (come determinato da una soglia interna) oppure unisce i rowgroup compressi da cui è stato eliminato un numero elevato di righe.      
 
 Ogni colonna dispone di alcuni dei relativi valori in ogni rowgroup. Questi valori sono denominati **segmenti di colonna**. Ogni rowgroup contiene un segmento di colonna per ogni colonna della tabella. Ogni colonna ha un segmento di colonna in ogni rowgroup.
 
 ![Segmento di colonna](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "segmento di colonna") 
  
-Quando l'indice columnstore comprime un rowgroup, ogni segmento di colonna viene compresso separatamente. Per decomprimere un'intera colonna, l'indice columnstore deve semplicemente decomprimere un segmento di colonna da ogni rowgroup.   
+Quando l'indice columnstore comprime un rowgroup, ogni segmento di colonna viene compresso separatamente. Per decomprimere un'intera colonna, l'indice columnstore deve semplicemente decomprimere un segmento di colonna da ogni rowgroup. 
+
+Per altre informazioni sui termini e sui concetti dei columnstore, vedere [Indici columnstore - Panoramica](../relational-databases/indexes/columnstore-indexes-overview.md). 
 
 #### <a name="small-loads-and-inserts-go-to-the-deltastore"></a>I caricamenti e gli inserimenti di dimensioni contenute vengono indirizzati all'archivio differenziale
 Un indice columnstore migliora le prestazioni e la compressione del columnstore comprimendo almeno 102.400 righe alla volta nell'indice columnstore. Per eseguire la compressione bulk delle righe, l'indice columnstore accumula caricamenti e inserimenti di dimensioni contenute nell'archivio differenziale. Le operazioni deltastore sono gestite in modo automatico. Per tornare ai risultati della query corretti, l'indice columnstore cluster combina i risultati della query da columnstore e deltastore. 
@@ -689,11 +701,19 @@ Le righe vengono indirizzate all'archivio differenziale nei casi seguenti:
 
 L'archivio differenziale archivia anche un elenco di ID per le righe eliminate contrassegnate come eliminate ma non ancora eliminate fisicamente dal columnstore. 
 
+Per altre informazioni sui termini e sui concetti dei columnstore, vedere [Indici columnstore - Panoramica](../relational-databases/indexes/columnstore-indexes-overview.md). 
+
 #### <a name="when-delta-rowgroups-are-full-they-get-compressed-into-the-columnstore"></a>Quando i rowgroup differenziali sono pieni, vengono compressi nel columnstore
 
-Gli indici columnstore cluster acquisiscono fino a 1.048.576 righe in ogni rowgroup differenziale prima di comprimere il rowgroup nel columnstore. migliorando così la compressione dell'indice columnstore. Quando un rowgroup differenziale contiene 1.048.576 righe, l'indice columnstore lo contrassegna come chiuso. Un processo in background, denominato *motore di tuple*, trova ogni rowgroup chiuso e lo comprime nel columnstore. 
+Gli indici columnstore cluster acquisiscono fino a 1.048.576 righe in ogni rowgroup differenziale prima di comprimere il rowgroup nel columnstore. migliorando così la compressione dell'indice columnstore. Quando un rowgroup Delta raggiunge il numero massimo di righe, passa dallo stato OPEN (aperto) allo stato CLOSED (chiuso). Un processo in background denominato tuple-mover controlla la presenza di rowgroup chiusi. Se il processo trova un rowgroup chiuso, lo comprime e lo archivia nel columnstore.  
 
-È possibile forzare l'inserimento dei rowgroup differenziali nel columnstore usando [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) per ricostruire o riorganizzare l'indice.  Si noti che in caso di memoria insufficiente durante la compressione, l'indice columnstore potrebbe ridurre il numero di righe nel rowgroup compresso.
+Quando un rowgroup delta è stato compresso, il rowgroup delta esistente passa allo stato TOMBSTONE (rimozione definitiva) per essere poi rimosso dal processo tuple-mover quando non riceve nessun riferimento, mentre il nuovo rowgroup compresso viene contrassegnato come COMPRESSED (compresso). 
+
+Per altre informazioni sugli stati dei rowgroup, vedere [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md). 
+
+È possibile forzare l'inserimento dei rowgroup differenziali nel columnstore usando [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) per ricostruire o riorganizzare l'indice. Si noti che in caso di memoria insufficiente durante la compressione, l'indice columnstore potrebbe ridurre il numero di righe nel rowgroup compresso.   
+
+Per altre informazioni sui termini e sui concetti dei columnstore, vedere [Indici columnstore - Panoramica](../relational-databases/indexes/columnstore-indexes-overview.md). 
 
 #### <a name="each-table-partition-has-its-own-rowgroups-and-delta-rowgroups"></a>Ogni partizione di tabella ha i propri rowgroup e rowgroup differenziali
 
@@ -701,8 +721,11 @@ Il concetto di partizionamento è lo stesso per un indice cluster, un indice hea
 
 I rowgroup sono sempre definiti all'interno di una partizione di tabella. Quando un indice columnstore viene partizionato, ogni partizione ha rowgroup compressi e rowgroup differenziali propri.
 
+> [!TIP]
+> Se è necessario rimuovere i dati dal columnstore, è consigliabile usare il partizionamento delle tabelle. La disattivazione e il troncamento delle partizioni non più necessarie è una strategia efficace per eliminare i dati senza generare la frammentazione introdotta con rowgroup più piccoli.
+
 ##### <a name="each-partition-can-have-multiple-delta-rowgroups"></a>Ogni partizione può avere più rowgroup differenziali
-Ogni partizione può avere più di un rowgroup differenziale. Quando l'indice columnstore deve aggiungere dati a un rowgroup differenziale e il rowgroup differenziale è bloccato, l'indice columnstore tenterà di ottenere un blocco su un rowgroup differenziale diverso. In assenza di rowgroup differenziali disponibili, l'indice columnstore creerà un nuovo rowgroup differenziale.  Ad esempio, una tabella con 10 partizioni potrebbe avere facilmente 20 o più rowgroup differenziali. 
+Ogni partizione può avere più di un rowgroup differenziale. Quando l'indice columnstore deve aggiungere dati a un rowgroup differenziale e il rowgroup differenziale è bloccato, l'indice columnstore tenterà di ottenere un blocco su un rowgroup differenziale diverso. In assenza di rowgroup differenziali disponibili, l'indice columnstore creerà un nuovo rowgroup differenziale. Ad esempio, una tabella con 10 partizioni potrebbe avere facilmente 20 o più rowgroup differenziali. 
 
 #### <a name="you-can-combine-columnstore-and-rowstore-indexes-on-the-same-table"></a>È possibile combinare indici columnstore e rowstore nella stessa tabella
 Un indice non cluster contiene una copia totale o parziale di tutte le righe e colonne della tabella sottostante. L'indice è definito sotto forma di una o più colonne della tabella e ha una condizione facoltativa che consente di filtrare le righe. 

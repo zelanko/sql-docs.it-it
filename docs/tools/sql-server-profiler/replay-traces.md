@@ -1,6 +1,7 @@
 ---
 title: Riprodurre le tracce
 titleSuffix: SQL Server Profiler
+description: Per la risoluzione dei problemi, vedere come riprodurre dati di SQL Server Profiler da un singolo computer e come usare i punti di interruzione e le connessioni utente simulate nella riproduzione.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 50ef296f7ce7198dc0e233aca08e33c5f1cf7af0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 46d8a93d917917c0b0dec57e26633f564b9c1d01
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307465"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151716"
 ---
 # <a name="replay-traces"></a>Riprodurre le tracce
 
@@ -28,7 +29,7 @@ La riproduzione è la possibilità di riprodurre un'attività acquisita in una t
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] include un motore di riproduzione a thread multipli in grado di simulare le connessioni utente e l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La funzionalità di riproduzione risulta utile per la risoluzione dei problemi a livello di applicazione o di processo. Dopo aver identificato il problema e implementato le correzioni adeguate, eseguire nell'applicazione o nel processo la traccia con cui è stato rilevato il possibile problema. Riprodurre quindi la traccia originale e confrontare i risultati.  
   
- La riproduzione di tracce supporta il debug eseguito tramite le opzioni **Attiva/Disattiva punto di interruzione** ed **Esegui fino al cursore** del menu [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Riproduci**di**. Queste opzioni consentono in modo particolare un miglioramento dell'analisi di script lunghi. La riproduzione della traccia viene suddivisa infatti in segmenti brevi, che possono essere quindi analizzati in modo incrementale.  
+ La riproduzione di tracce supporta il debug eseguito tramite le opzioni **Attiva/Disattiva punto di interruzione** ed **Esegui fino al cursore** del menu **Riproduci** di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Queste opzioni consentono in modo particolare un miglioramento dell'analisi di script lunghi. La riproduzione della traccia viene suddivisa infatti in segmenti brevi, che possono essere quindi analizzati in modo incrementale.  
   
  Per informazioni sulle autorizzazioni richieste per riprodurre tracce, vedere [Autorizzazioni necessarie per l'esecuzione di SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md).  
   

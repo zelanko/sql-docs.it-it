@@ -1,6 +1,7 @@
 ---
 title: Avviare automaticamente una traccia dopo la connessione a un server
 titleSuffix: SQL Server Profiler
+description: Informazioni su come avviare automaticamente la traccia dei dati degli eventi in SQL Server Profiler dopo la connessione a un'istanza di SQL Server.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 0e1999897413531366d207b7b5df587030c02647
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ff07dedccd12bbbe67040ebcccb8f716af85c753
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307817"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151677"
 ---
 # <a name="start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler"></a>Avviare una traccia automaticamente dopo la connessione a un server (SQL Server Profiler)
 

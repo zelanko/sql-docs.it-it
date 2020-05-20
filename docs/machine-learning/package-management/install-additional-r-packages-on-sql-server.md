@@ -3,19 +3,19 @@ title: Installare nuovi pacchetti R
 description: Informazioni su come usare sqlmlutils per installare nuovi pacchetti R in un'istanza di Machine Learning Services per SQL Server o R Services per SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/20/2019
+ms.date: 05/11/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ecfeeafd90d2fd7449ed99c5bacbdff05dff2784
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2b2c561791b88340fd0a77977843f582fa60c648
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746324"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269432"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Installare nuovi pacchetti R con sqlmlutils
 
@@ -51,54 +51,59 @@ Il pacchetto **sqlmlutils** dipende dal pacchetto **RODBCext** e **RODBCext** di
 
 Se il computer client dispone di accesso a Internet, è possibile scaricare e installare **sqlmlutils** e i relativi pacchetti dipendenti online.
 
-1. Scaricare la versione più recente del file ZIP di **sqlmlutils** da https://github.com/Microsoft/sqlmlutils/tree/master/R/dist nel computer client. Non decomprimere il file.
+1. Scaricare la versione più recente del file **sqlmlutils** (`.zip` per Windows, `.tar.gz` per Linux) da https://github.com/Microsoft/sqlmlutils/tree/master/R/dist al computer client. Non espandere il file.
 
-1. Aprire un **prompt dei comandi** ed eseguire i comandi seguenti per installare i pacchetti **sqlmlutils** e **RODBCext**. Sostituire il percorso completo del file ZIP di **sqlmlutils** scaricato. In questo esempio si presuppone che il file si trovi nella cartella Documents. Il pacchetto **RODBCext** viene trovato online e installato.
+1. Aprire un **prompt dei comandi** ed eseguire i comandi seguenti per installare i pacchetti **RODBCext** e **sqlmlutils**. Sostituire il percorso del file **sqlmlutils** scaricato. Il pacchetto **RODBCext** viene trovato online e installato.
 
+   ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
    ```console
-   R -e "install.packages('RODBCext', repos='https://cran.microsoft.com')"
-   R CMD INSTALL %UserProfile%\Documents\sqlmlutils_0.7.1.zip
+   R -e "install.packages('RODBCext', repos='https://mran.microsoft.com/snapshot/2019-02-01/')"
+   R CMD INSTALL sqlmlutils_0.7.1.zip
    ```
+   ::: moniker-end
+
+   ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+   ```console
+   R -e "install.packages('RODBCext', repos='https://mran.microsoft.com/snapshot/2019-02-01/')"
+   R CMD INSTALL sqlmlutils_0.7.1.tar.gz
+   ```
+   ::: moniker-end
 
 ### <a name="install-sqlmlutils-offline"></a>Installare sqlmlutils offline
 
-Se il computer client non dispone di una connessione Internet, è necessario scaricare i pacchetti **sqlmlutils** e **RODBCext** in anticipo usando un computer con accesso a Internet. È quindi possibile copiare i file in una cartella del computer client e installare i pacchetti offline.
+Se il computer client non dispone di una connessione Internet, è necessario scaricare i pacchetti **RODBCext** e **sqlmlutils** in anticipo usando un computer con accesso a Internet. È quindi possibile copiare i file in una cartella del computer client e installare i pacchetti offline.
 
 Il pacchetto **RODBCext** dispone di una serie di pacchetti dipendenti e quindi l'identificazione di tutte le dipendenze per un pacchetto diventa complicata. È consigliabile usare [**miniCRAN**](https://andrie.github.io/miniCRAN/) in modo da creare per il pacchetto una cartella di repository locale che includa tutti i pacchetti dipendenti.
 Per altre informazioni, vedere [Creare un repository di pacchetti R locale usando miniCRAN](create-a-local-package-repository-using-minicran.md).
 
-Il pacchetto **sqlmlutils** è costituito da un singolo file ZIP che è possibile copiare nel computer client e installare.
+Il pacchetto **sqlmlutils** è costituito da un singolo file che è possibile copiare nel computer client e installare.
 
 In un computer con accesso a Internet:
 
 1. Installare **miniCRAN**. Per informazioni dettagliate, vedere [Installare miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran).
 
-1. In RStudio eseguire lo script R seguente per creare un repository locale del pacchetto **RODBCext**. Questo esempio crea il repository nella cartella `c:\downloads\rodbcext`.
+1. In RStudio eseguire lo script R seguente per creare un repository locale del pacchetto **RODBCext**. In questo esempio si presuppone che il repository venga creato nella cartella `rodbcext`.
 
-   ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
-
+   ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
    ```R
-   CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
-   local_repo <- "c:/downloads/rodbcext"
+   CRAN_mirror <- c(CRAN = "https://mran.microsoft.com/snapshot/2019-02-01/")
+   local_repo <- "rodbcext"
    pkgs_needed <- "RODBCext"
    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
 
    makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.5");
    ```
-
    ::: moniker-end
 
    ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
-
    ```R
-   CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
-   local_repo <- "c:/downloads/rodbcext"
+   CRAN_mirror <- c(CRAN = "https://mran.microsoft.com/snapshot/2019-02-01/")
+   local_repo <- "rodbcext"
    pkgs_needed <- "RODBCext"
    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
 
    makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "source", Rversion = "3.5");
    ```
-
    ::: moniker-end
 
    Per il valore di `Rversion`, usare la versione di R installata in SQL Server. Per verificare la versione installata, usare il comando T-SQL seguente.
@@ -108,16 +113,29 @@ In un computer con accesso a Internet:
     , @script = N'print(R.version)'
    ```
 
-1. Scaricare la versione più recente del file ZIP di **sqlmlutils** da [https://github.com/Microsoft/sqlmlutils/tree/master/R/dist](https://github.com/Microsoft/sqlmlutils/tree/master/R/dist) (non decomprimere il file ZIP). Ad esempio, scaricare il file in `c:\downloads\sqlmlutils_0.7.1.zip`.
+1. Scaricare la versione più recente del file **sqlmlutils** (`.zip` per Windows, `.tar.gz` per Linux) da [https://github.com/Microsoft/sqlmlutils/tree/master/R/dist](https://github.com/Microsoft/sqlmlutils/tree/master/R/dist). Non espandere il file.
 
-1. Copiare l'intera cartella del repository di **RODBCext** (`c:\downloads\rodbcext`) e il file ZIP di **sqlmlutils** (`c:\downloads\sqlmlutils_0.7.1.zip`) nel computer client. Ad esempio, copiarli nella cartella `c:\temp\packages` del computer client.
+1. Copiare l'intera cartella del repository di **RODBCext** e il file **sqlmlutils** nel computer client.
 
-Nel computer client usato per connettersi a SQL Server, aprire un prompt dei comandi ed eseguire i comandi seguenti per installare **RODBCext** e quindi **sqlmlutils**.
+Nel computer client usato per connettersi a SQL Server:
 
-```console
-R -e "install.packages('RODBCext', repos='c:\temp\packages\rodbcext')"
-R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
-```
+1. Aprire un prompt dei comandi.
+
+1. Eseguire i comandi seguenti per installare **RODBCext** e quindi **sqlmlutils**. Sostituire i percorsi completi della cartella del repository **RODBCext** e del file **sqlmlutils** copiati nel computer.
+
+   ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+   ```console
+   R -e "install.packages('RODBCext', repos='rodbcext')"
+   R CMD INSTALL sqlmlutils_0.7.1.zip
+   ```
+   ::: moniker-end
+
+   ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+   ```console
+   R -e "install.packages('RODBCext', repos='rodbcext')"
+   R CMD INSTALL sqlmlutils_0.7.1.tar.gz
+   ```
+   ::: moniker-end
 
 ## <a name="add-an-r-package-on-sql-server"></a>Aggiungere un pacchetto R in SQL Server
 
@@ -154,8 +172,7 @@ In un computer con accesso a Internet:
 
 1. Eseguire lo script R seguente per creare un repository locale per **glue**. Questo esempio crea la cartella del repository in `c:\downloads\glue`.
 
-   ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
-
+   ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
    ```R
    CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
    local_repo <- "c:/downloads/glue"
@@ -164,11 +181,9 @@ In un computer con accesso a Internet:
 
    makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.5");
    ```
-
    ::: moniker-end
 
    ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
-
    ```R
    CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
    local_repo <- "c:/downloads/glue"
@@ -177,7 +192,6 @@ In un computer con accesso a Internet:
 
    makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "source", Rversion = "3.5");
    ```
-
    ::: moniker-end
 
 

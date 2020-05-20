@@ -1,6 +1,7 @@
 ---
 title: Strumento di amministrazione dell'opzione Cancel
 titleSuffix: SQL Server Distributed Replay
+description: Questo articolo descrive l'opzione della riga di comando cancel e la sintassi dello strumento di amministrazione Riesecuzione distribuita di SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ ms.topic: conceptual
 ms.assetid: fea376de-307a-4b45-b7e2-37df88f3681a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 00bff043287d323b84ad878e1444fda83e6d97be
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 41d76a8b87e6aa0bc46c5199c2843cce89f7cdac
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307063"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152112"
 ---
 # <a name="cancel-option-distributed-replay-administration-tool"></a>Opzione cancel (strumento di amministrazione Distributed Replay)
 

@@ -1,6 +1,7 @@
 ---
 title: Avviare una traccia
 titleSuffix: SQL Server Profiler
+description: Informazioni su come avviare una traccia e individuare i dati dopo aver definito una nuova traccia o creato un modello in SQL Server Profiler.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: b7e2432d728b487fe0ea55a1e03c84f613c270d1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a5f93237a6a52c4a9695e0bd940dd7d712a6e5b3
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307802"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151741"
 ---
 # <a name="start-a-trace"></a>Avviare una traccia
 

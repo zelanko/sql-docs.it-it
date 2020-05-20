@@ -1,6 +1,7 @@
 ---
 title: Preparare i dati di traccia di input
 titleSuffix: SQL Server Distributed Replay
+description: Prima di avviare una riesecuzione distribuita con Riesecuzione distribuita di SQL Server, preparare i dati di traccia di input avviando la fase di pre-elaborazione.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 514d11ded0761cd4719b3d3a44b7c91d08d97e04
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4bb84ab2f8df17bba52b41d115b2c67d47931eb3
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307000"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152204"
 ---
 # <a name="prepare-the-input-trace-data"></a>Preparazione dei dati di traccia di input
 
@@ -33,7 +34,7 @@ Prima di avviare una riesecuzione distribuita con la funzionalità Riesecuzione 
   
 ### <a name="to-prepare-the-input-trace-data"></a>Per preparare i dati di traccia di input  
   
-1.  **Modificare le impostazioni di configurazione della pre-elaborazione (facoltativo)** : se si vogliono modificare le impostazioni di configurazione della pre-elaborazione, ad esempio se filtrare o meno le sessioni di sistema o configurare il tempo di inattività massimo, è necessario modificare l'elemento `<PreprocessModifiers>` del file XML di configurazione della pre-elaborazione `DReplay.exe.preprocess.config`. Se si modifica il file di configurazione della pre-elaborazione, è consigliabile modificarne una copia anziché l'originale. Per modificare le impostazioni, effettuare le operazioni seguenti:  
+1.  **(Facoltativo) Modificare le impostazioni di configurazione della pre-elaborazione**: se si vogliono modificare le impostazioni di configurazione della pre-elaborazione, ad esempio se filtrare o meno le sessioni di sistema o configurare il tempo di inattività massimo, è necessario modificare l'elemento `<PreprocessModifiers>` del file XML di configurazione della pre-elaborazione `DReplay.exe.preprocess.config`. Se si modifica il file di configurazione della pre-elaborazione, è consigliabile modificarne una copia anziché l'originale. Per modificare le impostazioni, effettuare le operazioni seguenti:  
   
     1.  Creare una copia del file di configurazione della pre-elaborazione predefinito `DReplay.exe.preprocess.config`e rinominare il nuovo file. Il file di configurazione della pre-elaborazione predefinito si trova nella cartella di installazione dello strumento di amministrazione.  
   
@@ -43,7 +44,7 @@ Prima di avviare una riesecuzione distribuita con la funzionalità Riesecuzione 
   
      Per altre informazioni sul file di configurazione della pre-elaborazione, vedere [Configurare Riesecuzione distribuita](../../tools/distributed-replay/configure-distributed-replay.md).  
   
-2.  **Avviare la fase di pre-elaborazione**: per preparare i dati di traccia di input, è necessario eseguire lo strumento di amministrazione con l'opzione **preprocess** . Per altre informazioni, vedere [Opzione preprocess &#40;strumento di amministrazione Riesecuzione distribuita&#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md).  
+2.  **Avviare la fase di pre-elaborazione**: per preparare i dati di traccia di input, è necessario eseguire lo strumento di amministrazione con l'opzione **preprocess**. Per altre informazioni, vedere [Opzione preprocess &#40;strumento di amministrazione Riesecuzione distribuita&#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md).  
   
     1.  Aprire l'utilità del prompt dei comandi di Windows (**CMD.exe**) e passare al percorso di installazione dello strumento di amministrazione Riesecuzione distribuita (**DReplay.exe**).  
   

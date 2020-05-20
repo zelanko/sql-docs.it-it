@@ -1,5 +1,6 @@
 ---
 title: Elemento Partitioning (DTA)
+description: Nell'utilità dta l'elemento Partitioning contiene lo schema di partizione che dovrà essere usato da Ottimizzazione guidata motore di database durante l'analisi.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 092a652783f5ccaa16e52fe915820a009e4fc274
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b9c07012e71b28caac02cef3f9a4e6bc729c667c
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306120"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151832"
 ---
 # <a name="partitioning-element-dta"></a>Elemento Partitioning (DTA)
 

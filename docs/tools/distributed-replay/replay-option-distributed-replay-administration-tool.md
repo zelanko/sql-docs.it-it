@@ -1,6 +1,7 @@
 ---
 title: Opzione replay nello strumento di amministrazione
 titleSuffix: SQL Server Distributed Replay
+description: Questo articolo descrive l'opzione della riga di comando replay e la sintassi dello strumento di amministrazione Riesecuzione distribuita di SQL Server, che avvia la fase di riproduzione dell'evento.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: a41c619bd2d14fdc5438669d5ada239a88125c5a
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 7c012d88065a6a2958411aa1c0849002e9c0436a
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925121"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152160"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>Opzione replay (strumento di amministrazione Distributed Replay)
 
@@ -93,7 +94,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
 -   Il parametro **-d** specifica il percorso del file intermedio nel controller, `c:\WorkingDir`.  
   
--   Il parametro **-o** indica che ogni client specificato acquisisce l'attività di riproduzione e la salva in un file di traccia dei risultati. Nota: è possibile utilizzare l'elemento `<ResultTrace>` nel file di configurazione per specificare se registrare il conteggio delle righe e il set di risultati.  
+-   Il parametro **-o** indica che ogni client specificato acquisisce l'attività di riproduzione e la salva in un file di traccia dei risultati. Nota: è possibile usare l'elemento `<ResultTrace>` nel file di configurazione per specificare se registrare il conteggio delle righe e il set di risultati.  
   
 -   Il parametro **-w** specifica che i computer compresi tra `client1` e `client4` partecipano come client alla riesecuzione distribuita.  
   

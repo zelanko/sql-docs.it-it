@@ -1,5 +1,6 @@
 ---
 title: Elemento OnlineIndexOperation (DTA)
+description: Nell'utilità dta l'elemento OnlineIndexOperation specifica se gli elementi consigliati da Ottimizzazione guidata motore di database possono essere creati online.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 67cff876fd66870489fddb1c5e0908c5d511c6d6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2718b5b697fcbf8371d80203aa1d8e51386c1f9b
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306153"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151845"
 ---
 # <a name="onlineindexoperation-element-dta"></a>Elemento OnlineIndexOperation (DTA)
 

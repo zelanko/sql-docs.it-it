@@ -1,5 +1,6 @@
 ---
 title: utilità tablediff
+description: Usare l'utilità tablediff per confrontare i dati in due tabelle per rilevarne l'eventuale non convergenza e risolvere i problemi relativi alla non convergenza in una topologia di replica.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: cb12cc164490e249dae13ef22cdd5279a0427102
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b7f8a136c5aa17b1d7ed32cdc8024cdc44db0d25
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75304801"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150511"
 ---
 # <a name="tablediff-utility"></a>utilità tablediff
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

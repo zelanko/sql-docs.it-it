@@ -32,12 +32,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4fee0e8af2e4d556e388fc72086286d4a21184a8
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 03690af5e9ec4ce835372378ca3bdf13eff3073a
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220716"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152039"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>Risolvere la frammentazione degli indici tramite riorganizzazione o ricompilazione di questi
 
@@ -223,6 +223,7 @@ Per deframmentare un indice frammentato, usare uno dei metodi seguenti:
 La riorganizzazione di un indice richiede una quantità minima di risorse di sistema ed è un'operazione online. Ciò significa che i blocchi di tabella a lungo termine non vengono mantenuti attivi e le query o gli aggiornamenti inerenti la tabella sottostante possono continuare durante la transazione `ALTER INDEX REORGANIZE`.
 
 - Per gli [indici rowstore](clustered-and-nonclustered-indexes-described.md), il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] deframmenta il livello foglia di indici cluster e non cluster di tabelle e viste tramite il riordinamento fisico delle pagine al livello foglia in base all'ordine logico dei nodi foglia (da sinistra verso destra). La riorganizzazione compatta anche le pagine di indice in base al valore del fattore di riempimento dell'indice. Per visualizzare l'impostazione del fattore di riempimento, usare [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md). Per esempi di sintassi, vedere [Esempi: Indici rowstore](../../t-sql/statements/alter-index-transact-sql.md#examples-rowstore-indexes).
+
 - Quando si usano gli [indici columnstore](columnstore-indexes-overview.md), l'archivio differenziale potrebbe ritrovarsi con più rowgroup di piccole dimensioni dopo l'inserimento, l'aggiornamento e l'eliminazione dei dati nel tempo. La riorganizzazione di un indice columnstore consiste nel forzare l'inserimento di tutti i rowgroup nel columnstore per poi combinarli generando un numero minore di rowgroup con più righe. L'operazione di riorganizzazione rimuove anche le righe che sono state eliminate dal columnstore. La riorganizzazione inizialmente richiede risorse di CPU aggiuntive per comprimere i dati, il che potrebbe globalmente ridurre le prestazioni del sistema. Tuttavia, non appena i dati sono compressi, le prestazioni delle query migliorano. Per esempi di sintassi, vedere [Esempi: Indici Columnstore](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes).
 
 ### <a name="rebuild-an-index"></a>Ricompilare un indice
@@ -230,7 +231,13 @@ La riorganizzazione di un indice richiede una quantità minima di risorse di sis
 La ricompilazione di un indice consiste nell'eliminazione e nella ricreazione dell'indice. A seconda del tipo di indice e della versione del [!INCLUDE[ssde_md](../../includes/ssde_md.md)], è possibile eseguire un'operazione di ricompilazione online o offline. Per la sintassi T-SQL, vedere [ALTER INDEX REBUILD](../../t-sql/statements/alter-index-transact-sql.md#rebuilding-indexes)
 
 - Per gli [indici rowstore](clustered-and-nonclustered-indexes-described.md), la ricompilazione ha l'effetto di rimuovere la frammentazione, recuperare spazio su disco grazie alla compattazione delle pagine in base all'impostazione del fattore di riempimento esistente o specificata e riordinare le righe dell'indice in pagine contigue. Quando viene specificata la parola chiave `ALL`, tutti gli indici della tabella vengono eliminati e ricompilati in una singola transazione. Non è necessario eliminare in anticipo i vincoli di chiave esterna. Quando vengono ricompilati indici con un numero di extent pari o superiore a 128, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] posticipa le effettive deallocazioni delle pagine e i blocchi associati fino al termine del commit della transazione. Per esempi di sintassi, vedere [Esempi: Indici Rowstore](../../t-sql/statements/alter-index-transact-sql.md#examples-rowstore-indexes).
-- Per gli [indici columnstore](columnstore-indexes-overview.md), la ricompilazione ha l'effetto di rimuovere la frammentazione, spostare tutte le righe nel columnstore e recuperare spazio su disco eliminando fisicamente le righe che sono state eliminate logicamente dalla tabella. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], la ricompilazione dell'indice columnstore in genere non è necessaria perché `REORGANIZE` esegue gran parte della ricompilazione in background come operazione online. Per esempi di sintassi, vedere [Esempi: Indici Columnstore](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes).
+
+- Per gli [indici columnstore](columnstore-indexes-overview.md), la ricompilazione ha l'effetto di rimuovere la frammentazione, spostare tutte le righe nel columnstore e recuperare spazio su disco eliminando fisicamente le righe che sono state eliminate logicamente dalla tabella. 
+  
+  > [!TIP]
+  > A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], la ricompilazione dell'indice columnstore in genere non è necessaria perché `REORGANIZE` esegue gran parte della ricompilazione in background come operazione online. 
+  
+  Per esempi di sintassi, vedere [Esempi: Indici Columnstore](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes).
 
 ### <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni
 
@@ -254,9 +261,6 @@ La ricompilazione di un indice consiste nell'eliminazione e nella ricreazione de
 6. Nella finestra di dialogo **Riorganizza indici** verificare che nella griglia **Indici da riorganizzare** sia presente l'indice corretto, quindi scegliere **OK**.
 7. Selezionare la casella di controllo **Compatta dati di colonne LOB** per specificare che tutte le pagine che contengono dati LOB vengano compattate.
 8. Scegliere **OK.**
-
-> [!NOTE]
-> La riorganizzazione di un indice columnstore con [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] combina insieme i rowgroup `COMPRESSED`, ma non forza la compressione di tutti i rowgroup nel columnstore. Il rowgroup CLOSED verranno compressi, mentre i rowgroup OPEN non verranno compressi nel columnstore. Per comprimere tutti i rowgroup, usare l'esempio [!INCLUDE[tsql](../../includes/tsql-md.md)][seguente](#TsqlProcedureReorg).
 
 #### <a name="to-reorganize-all-indexes-in-a-table"></a>Per riorganizzare tutti gli indici in una tabella
 
@@ -357,6 +361,13 @@ Quando viene specificato `ALL` con l'istruzione `ALTER INDEX`, vengono riorganiz
 
 Durante la ricompilazione di un indice columnstore, il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] legge tutti i dati dell'indice columnstore originale, incluso l'archivio differenziale. Combina i dati in nuovi rowgroup e comprime i rowgroup nel columnstore. Il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] deframmenta il columnstore eliminando fisicamente le righe che sono state eliminate logicamente dalla tabella. I byte eliminati vengono recuperati nel disco.
 
+> [!NOTE]
+> La riorganizzazione di un indice columnstore con [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] combina i rowgroup COMPRESSED, ma non forza la compressione di tutti i rowgroup nel columnstore. Il rowgroup CLOSED verranno compressi, mentre i rowgroup OPEN non verranno compressi nel columnstore. Per comprimere tutti i rowgroup, usare l'esempio [!INCLUDE[tsql](../../includes/tsql-md.md)] [di seguito](#TsqlProcedureReorg).
+
+> [!NOTE]
+> A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], il motore di tuple viene aiutato da un'attività di unione in background, che comprime automaticamente i rowgroup delta aperti più piccoli che sono esistiti per un dato periodo di tempo (come determinato da una soglia interna) oppure unisce i rowgroup compressi da cui è stato eliminato un numero elevato di righe. In questo modo viene migliorata la qualità dell'indice columnstore nel tempo.    
+> Per altre informazioni sui termini e sui concetti dei columnstore, vedere [Indici columnstore - Panoramica](../../relational-databases/indexes/columnstore-indexes-overview.md).
+
 ### <a name="rebuild-a-partition-instead-of-the-entire-table"></a>Ricompilare una partizione in alternativa all'intera tabella
 
 - La ricompilazione di un'intera tabella richiede molto tempo se l'indice è esteso ed è necessario sufficiente spazio su disco per archiviare una copia aggiuntiva dell'indice durante la ricompilazione. In genere è necessario solo ricompilare la partizione utilizzata più di recente.
@@ -375,7 +386,9 @@ Ricompilare una partizione dopo il caricamento dei dati assicura che tutti i dat
 Durante la riorganizzazione di un indice columnstore, il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] comprime tutti i rowgroup differenziali CLOSED nel columnstore come rowgroup compresso. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], il comando `REORGANIZE` esegue online le ottimizzazioni di deframmentazione aggiuntive seguenti:
 
 - Rimuove fisicamente le righe da un rowgroup quando più del 10% delle righe è stato eliminato in modo logico. I byte eliminati vengono recuperati sui supporti fisici. Ad esempio, se in un rowgroup compresso di 1 milione di righe 100.000 righe sono state eliminate, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rimuoverà le righe eliminate e ricomprimerà il rowgroup con 900.000 righe. Esegue il salvataggio nell'archiviazione rimuovendo le righe eliminate.
+
 - Combina uno o più rowgroup compressi per aumentare le righe in ogni rowgroup, fino a un massimo di 1.048.576 righe. Ad esempio, se si importano globalmente 5 batch di 102.400 righe si otterranno 5 rowgroup compressi. Se si esegue l'operazione REORGANIZE, questi rowgroup verranno uniti in un rowgroup compresso di 512.000 righe. Si presuppone che non vi siano limiti di memoria o di dimensioni del dizionario.
+
 - Per i rowgroup in cui almeno il 10% delle righe è stato eliminato in modo logico, il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] tenta di combinare questo rowgroup con uno o più rowgroup. Ad esempio, il rowgroup 1 viene compresso con 500.000 righe e il rowgroup 21 viene compresso con il numero massimo di 1.048.576 righe. Nel rowgroup 21 il 60% delle righe è stato eliminato in modo da lasciare 409.830 righe. Il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] consente di combinare questi due rowgroup per comprimere un nuovo rowgroup con 909.830 righe.
 
 Dopo l'esecuzione di carichi di dati, è possibile che nell'archivio differenziale rimangano più rowgroup di piccole dimensioni. È possibile usare `ALTER INDEX REORGANIZE` per forzare l'inserimento di tutti i rowgroup in columnstore e poi combinare i rowgroup in un numero inferiore di rowgroup con più righe. L'operazione di riorganizzazione rimuoverà anche le righe che sono state eliminate dal columnstore.
@@ -400,11 +413,11 @@ Statistiche:
 Quando l'opzione `ALLOW_PAGE_LOCKS` è impostata su OFF, non è possibile eseguire operazioni di riorganizzazione degli indici.
 
 Fino a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], la ricompilazione di un indice columnstore cluster è un'operazione offline. Il motore di database deve acquisire un blocco esclusivo sulla tabella o sulla partizione durante la ricompilazione. I dati sono offline e non sono disponibili durante la ricompilazione, anche quando si usa `NOLOCK`, l'isolamento dello snapshot Read Committed (RCSI) o l'isolamento dello snapshot.
-A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], un indice columnstore cluster può essere ricompilato tramite l'opzione `ONLINE=ON`.
+A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], un indice columnstore cluster può essere ricompilato tramite l'opzione `ONLINE = ON`.
 
-Per una tabella di Azure Synapse Analytics (in precedenza Azure SQL Data Warehouse) con un indice columnstore cluster ordinato, `ALTER INDEX REBUILD` riordina i dati usando TempDB. Monitorare TempDB durante le operazioni di ricompilazione. Se è necessario più spazio per TempDB, è possibile aumentare le dimensioni del data warehouse. Tornare alle dimensioni precedenti al termine della ricompilazione dell'indice.
+Per una tabella di Azure Synapse Analytics (in precedenza [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]) con un indice columnstore cluster ordinato, `ALTER INDEX REBUILD` riordina i dati usando TempDB. Monitorare TempDB durante le operazioni di ricompilazione. Se è necessario più spazio per TempDB, è possibile aumentare le dimensioni del data warehouse. Tornare alle dimensioni precedenti al termine della ricompilazione dell'indice.
 
-Per una tabella di Azure Synapse Analytics (in precedenza Azure SQL Data Warehouse) con un indice columnstore cluster ordinato, `ALTER INDEX REORGANIZE` non riordina i dati. Per riordinare i dati, usare `ALTER INDEX REBUILD`.
+Per una tabella di Azure Synapse Analytics (in precedenza [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]) con un indice columnstore cluster ordinato, `ALTER INDEX REORGANIZE` non riordina i dati. Per riordinare i dati, usare `ALTER INDEX REBUILD`.
 
 ## <a name="using-index-rebuild-to-recover-from-hardware-failures"></a>Uso di INDEX REBUILD per il ripristino da errori hardware
 

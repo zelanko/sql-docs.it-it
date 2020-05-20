@@ -22,12 +22,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6fe7a6cd5d42c73307462df8c711fdac57e7febb
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 9579c639e1c731c30a145a856a889796795c90b8
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633234"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151530"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
@@ -50,7 +50,10 @@ WITH IDENTITY = 'identity_name'
 
 *credential_name* specifica il nome della credenziale con ambito database che si vuole creare. *credential_name* non può iniziare con il simbolo del cancelletto (#). perché tale simbolo viene utilizzato per le credenziali di sistema.
 
-IDENTITY **='** _identity\_name_ **'** specifica il nome dell'account da usare per la connessione all'esterno del server. Per importare un file dall'archiviazione BLOB di Azure usando una chiave di condivisione, il nome dell'identità deve essere `SHARED ACCESS SIGNATURE`. Per caricare dati in SQL DW è possibile usare qualsiasi valore valido per l'identità. Per altre informazioni sulle firme di accesso condiviso, vedere [Uso delle firme di accesso condiviso](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).
+IDENTITY **='** _identity\_name_ **'** specifica il nome dell'account da usare per la connessione all'esterno del server. Per l'importazione di un file dall'archiviazione BLOB di Azure usando una chiave condivisa, il nome dell'identità deve essere `SHARED ACCESS SIGNATURE`. Per caricare dati in SQL DW è possibile usare qualsiasi valore valido per l'identità. Per altre informazioni sulle firme di accesso condiviso, vedere [Uso delle firme di accesso condiviso](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).
+
+> [!NOTE]
+WITH IDENTITY non è obbligatoria se il contenitore dell'archiviazione BLOB di Azure è abilitato per l'accesso anonimo. Per un esempio di query nell'archiviazione BLOB di Azure, vedere [Importazione in una tabella da un file archiviato in Archiviazione BLOB di Azure](../functions/openrowset-transact-sql.md#j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage).
 
 SECRET **='** _secret_ **'** specifica il segreto richiesto per l'autenticazione in uscita. È necessario specificare `SECRET` per importare un file dall'archiviazione BLOB di Azure. Per caricare dati dall'archiviazione BLOB di Azure in SQL Data Warehouse, il segreto deve essere la chiave di archiviazione di Azure.
 > [!WARNING]

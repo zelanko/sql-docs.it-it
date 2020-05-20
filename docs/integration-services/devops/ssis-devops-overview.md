@@ -9,14 +9,14 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0b57ac8ea8462a5c79feb1a91c4f9d205927b953
-ms.sourcegitcommit: c53bab7513f574b81739e5930f374c893fc33ca2
+ms.openlocfilehash: 946ea5d404db51c5241e5657524cf3dbc1a519a7
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82987205"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152163"
 ---
-# <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>SQL Server Integration Services (SSIS) DevOps Tools (anteprima)
+# <a name="sql-server-integration-services-ssis-devops-tools"></a>SQL Server Integration Services (SSIS) DevOps Tools
 
 L'estensione [SSIS DevOps Tools](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) è disponibile nel marketplace di **Azure DevOps**.
 
@@ -344,6 +344,12 @@ Lo schema JSON di configurazione ha tre livelli:
 |sensitive|Indica se il valore della variabile di ambiente è sensibile.|Gli input validi sono: <br> *true* <br> *false*|
 
 ## <a name="release-notes"></a>Note sulla versione
+
+### <a name="version-101"></a>Versione 1.0.1
+
+Data di rilascio: 9 maggio 2020
+
+- È stato risolto un problema per cui l'attività di compilazione SSIS compila sempre l'intera soluzione, anche se è stato specificato come percorso del progetto un singolo file con estensione dtproj.
 
 ### <a name="version-100"></a>Versione 1.0.0
 

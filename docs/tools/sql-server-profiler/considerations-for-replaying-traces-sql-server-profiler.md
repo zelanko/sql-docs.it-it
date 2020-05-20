@@ -1,6 +1,7 @@
 ---
 title: Considerazioni sulla riproduzione di tracce
 titleSuffix: SQL Server Profiler
+description: Individuare le operazioni, le stored procedure, i modelli e le attività di log che impediscono a SQL Server Profiler di riprodurre le tracce.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/06/2017
-ms.openlocfilehash: a8a4288d4810ca137d8e6397188ada0e69b945bd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a12b6101cde482d38ef9573cb236cc7eba002aab
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307341"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151911"
 ---
 # <a name="considerations-for-replaying-traces-sql-server-profiler"></a>Considerazioni relative alla riproduzione di tracce (SQL Server Profiler)
 

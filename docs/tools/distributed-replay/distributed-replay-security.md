@@ -1,6 +1,7 @@
 ---
 title: Sicurezza di Riesecuzione distribuita
 titleSuffix: SQL Server Distributed Replay
+description: Questo articolo descrive la procedura di configurazione della sicurezza per Riesecuzione distribuita di SQL Server e include importanti considerazioni relative alle procedure di protezione e rimozione dei dati.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: a9d29f7c546064d6069caa3770e1ddc1e7ebe53f
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 25bc62c6ea0785cf9abb05909fdc2f2563932b07
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087445"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151102"
 ---
 # <a name="distributed-replay-security"></a>Sicurezza di Distributed Replay
 

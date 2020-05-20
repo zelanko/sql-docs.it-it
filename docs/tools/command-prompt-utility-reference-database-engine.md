@@ -1,5 +1,6 @@
 ---
 title: Utilità del prompt dei comandi SQL (motore di database)
+description: Le utilità del prompt dei comandi consentono di generare script di operazioni SQL Server. Questo articolo descrive numerose utilità del prompt dei comandi incluse in SQL Server.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -17,12 +18,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: a25fcbb39b2b4edacd3d9e6ddab64a88d5888fe9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c201c13c0d2a77f4005ad2fe788c783431c88094
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74992741"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151425"
 ---
 # <a name="sql-command-prompt-utilities-database-engine"></a>Utilità del prompt dei comandi SQL (motore di database)
 

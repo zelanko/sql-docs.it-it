@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: a96eb5b8d50102c09ed6343c0f067db5a5bdb6e2
-ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
+ms.openlocfilehash: 1b4de199e96497f32039614a39aabb4b1e8fe5d0
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82588232"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151891"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Installare SQL Server Machine Learning Services (Python e R) in Windows
 
@@ -212,7 +212,7 @@ Per questo passaggio è necessario riavviare il server. Se si intende abilitare 
 
 ## <a name="restart-the-service"></a>Riavviare il servizio.
 
-Al termine dell'installazione, riavviare il motore di database prima di continuare con il passaggio successivo, abilitando l'esecuzione degli script.
+Al termine dell'installazione riavviare il motore di database.
 
 Il riavvio del servizio ha l'effetto di riavviare automaticamente anche il servizio [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] correlato.
 

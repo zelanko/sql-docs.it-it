@@ -2,7 +2,7 @@
 title: Connessione con ODBC
 description: Informazioni su come creare una connessione a un database da Linux o macOS usando Microsoft ODBC Driver for SQL Server.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/11/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2b99479883fd1cc74008d62a9c322226ed587244
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2a17f9a69adae4bc785560ac3e06b8025a34089a
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632809"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152042"
 ---
 # <a name="connecting-to-sql-server"></a>Connessione a SQL Server
+
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 Questo argomento descrive come creare una connessione a un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -36,22 +37,27 @@ Per tutte le parole chiave e gli attributi delle stringhe di connessione support
   
 Il valore passato alla parola chiave **Driver** può essere uno dei seguenti:  
   
--   Il nome usato al momento dell'installazione del driver.
+- Il nome usato al momento dell'installazione del driver.
 
--   Il percorso della libreria di driver specificato nel file ini del modello usato per l'installazione del driver.  
+- Il percorso della libreria di driver specificato nel file ini del modello usato per l'installazione del driver.  
 
-Per creare un DSN, creare, se necessario, e modificare il file **~/.ODBC. ini** (`.odbc.ini` nella home directory) per un DSN utente accessibile solo all'utente corrente o `/etc/odbc.ini` per un DSN di sistema (richiede privilegi amministrativi). Di seguito è riportato un file di esempio con le voci minime richieste per un DSN:  
+I DSN sono facoltativi. È possibile usare un DSN per definire parole chiave della stringa di connessione sotto un nome `DSN` al quale è poi possibile fare riferimento nella stringa di connessione. Per creare un DSN, creare, se necessario, e modificare il file **~/.ODBC. ini** (`.odbc.ini` nella home directory) per un DSN utente accessibile solo all'utente corrente o `/etc/odbc.ini` per un DSN di sistema (richiede privilegi amministrativi). Di seguito è riportato un file di esempio con le voci minime richieste per un DSN:  
 
-```  
+```ini
+# [DSN name]
 [MSSQLTest]  
-Driver = ODBC Driver 13 for SQL Server  
-Server = [protocol:]server[,port]  
-#   
+Driver = ODBC Driver 17 for SQL Server  
+# Server = [protocol:]server[,port]  
+Server = tcp:localhost,1433
+#
 # Note:  
 # Port is not a valid keyword in the odbc.ini file  
 # for the Microsoft ODBC driver on Linux or macOS
 #  
 ```  
+
+Per connettersi usando il DSN precedente in una stringa di connessione è necessario specificare la parola chiave `DSN` come `DSN=MSSQLTest;UID=my_username;PWD=my_password`  
+La stringa di connessione precedente equivale a specificare una stringa di connessione senza la parola chiave `DSN` come `Driver=ODBC Driver 17 for SQL Server;Server=tcp:localhost,1433;UID=my_username;PWD=my_password`
 
 È anche possibile specificare il protocollo e la porta per la connessione al server. Ad esempio, **Server=tcp:** _nomeserver_ **, 12345**. Si noti che l'unico protocollo supportato dai driver Linux e macOS è `tcp`.
 
@@ -59,11 +65,12 @@ Per connettersi a un'istanza denominata tramite una porta statica, usare <b>Serv
 
 In alternativa, è possibile aggiungere le informazioni del DSN in un file di modello ed eseguire il comando seguente per aggiungere tali informazioni a `~/.odbc.ini`:
  - **odbcinst -i -s -f** _template_file_  
- 
+
 È possibile verificare che il driver funzioni usando `isql` per testare la connessione oppure usare questo comando:
  - **bcp master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S <server> -U <name> -P <password>**  
 
 ## <a name="using-tlsssl"></a>Uso di TLS/SSL  
+
 È possibile usare Transport Layer Security (TLS), noto in precedenza come Secure Sockets Layer (SSL), per crittografare le connessioni a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. TLS protegge i nomi utente e le password di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in rete. TLS verifica anche l'identità del server per la protezione dagli attacchi man-in-the-middle (MITM).  
 
 L'abilitazione della crittografia aumenta la sicurezza a scapito delle prestazioni.
@@ -79,7 +86,7 @@ Indipendentemente dalle impostazioni di **Encrypt** e **TrustServerCertificate**
 
 Per impostazione predefinita, le connessioni crittografate verificano sempre il certificato del server. Tuttavia, se ci si connette a un server che ha un certificato autofirmato, aggiungere anche l'opzione `TrustServerCertificate` per ignorare il controllo del certificato rispetto all'elenco di autorità di certificazione attendibili:  
 
-```  
+```
 Driver={ODBC Driver 13 for SQL Server};Server=ServerNameHere;Encrypt=YES;TrustServerCertificate=YES  
 ```  
   

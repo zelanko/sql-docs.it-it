@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1d3caeed2e7c57dfd4a3e993872034b066f56737
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 13f5c8c892729abe0ba0e0a79185b360f0098d07
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70874526"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150598"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "70874526"
   
 ## <a name="syntax"></a>Sintassi  
   
-```SQL  
+```syntaxsql
   
 ALTER AVAILABILITY GROUP group_name   
   {  
@@ -179,7 +179,7 @@ ALTER AVAILABILITY GROUP group_name
  SECONDARY  
  Specifica che i backup devono essere eseguiti su una replica secondaria tranne quando la replica primaria è l'unica replica online. In tal caso il backup deve essere eseguito sulla replica primaria. Questo è il comportamento predefinito.  
   
- Nessuno  
+ NONE  
  Specifica che si preferisce che i processi di backup ignorino il ruolo delle repliche di disponibilità nella scelta della replica per l'esecuzione dei backup. Si noti che i processi di backup potrebbero valutare altri fattori, ad esempio la priorità di backup di ogni replica di disponibilità in combinazione con lo stato operativo e lo stato connesso.  
   
 > [!IMPORTANT]  
@@ -197,7 +197,7 @@ ALTER AVAILABILITY GROUP group_name
   
 |Level|Condizione di errore|  
 |-----------|-----------------------|  
-|1|Specifica che deve essere avviato un failover automatico quando si verifica una delle condizioni seguenti:<br /><br /> Il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è attivo.<br /><br /> Il lease del gruppo di disponibilità per la connessione al cluster WSFC scade poiché non viene ricevuto alcun acknowledgement dall'istanza del server. Per altre informazioni, vedere [Funzionamento: timeout lease di SQL Server Always On](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).|  
+|1|Specifica che deve essere avviato un failover automatico quando si verifica una delle condizioni seguenti:<br /><br /> Il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è attivo.<br /><br /> Il lease del gruppo di disponibilità per la connessione al cluster WSFC scade poiché non viene ricevuto alcun acknowledgement dall'istanza del server. Per altre informazioni, vedere [How It Works: SQL Server Always On Lease Timeout](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-sql-server-alwayson-lease-timeout/ba-p/317268) (Funzionamento: timeout lease di SQL Server Always On).|  
 |2|Specifica che deve essere avviato un failover automatico quando si verifica una delle condizioni seguenti:<br /><br /> L'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non si connette al cluster e viene superata la soglia HEALTH_CHECK_TIMEOUT specificata dall'utente del gruppo di disponibilità.<br /><br /> La replica di disponibilità si trova in uno stato di errore.|  
 |3|Specifica che deve essere avviato un failover automatico in caso di errori interni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] critici, ad esempio spinlock orfani, gravi violazioni dell'accesso in scrittura o dumping eccessivo.<br /><br /> Questo è il comportamento predefinito.|  
 |4|Specifica che deve essere avviato un failover automatico in caso di errori interni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con gravità moderata, ad esempio una condizione persistente di memoria insufficiente nel pool di risorse interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -274,7 +274,7 @@ Specifica se le transazioni distribuite sono abilitate per questo gruppo di disp
  Per informazioni sui prerequisiti per i nodi WSFC e le istanze del server, vedere [Prerequisiti, restrizioni e raccomandazioni per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
  ENDPOINT_URL ='TCP://*system-address*:*port*'  
- Specifica il percorso URL dell'[endpoint del mirroring del database](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui verrà ospitata la replica di disponibilità da aggiungere o modificare.  
+ Specifica il percorso URL dell'[endpoint del mirroring del database[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nell'istanza di ](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) in cui verrà ospitata la replica di disponibilità da aggiungere o modificare.  
   
  ENDPOINT_URL è obbligatorio nella clausola ADD REPLICA ON e facoltativo nella clausola MODIFY REPLICA ON.  Per altre informazioni, vedere [Specificare l'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
@@ -343,7 +343,7 @@ Specifica se le transazioni distribuite sono abilitate per questo gruppo di disp
   
 -   0 indica che la replica di disponibilità non verrà mai scelta per l'esecuzione dei backup. Ciò si rivela utile, ad esempio, per una replica di disponibilità remota in cui non si desidera eseguire mai il failover dei backup.  
   
- Per altre informazioni, vedere [Repliche secondarie attive: Backup in repliche secondarie &#40;gruppi di disponibilità Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+ Per altre informazioni, vedere [Repliche secondarie attive: Backup su repliche secondarie &#40;Gruppi di disponibilità Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
  SECONDARY_ROLE **(** ... **)**  
  Specifica le impostazioni specifiche di ruolo che verranno applicate se questa replica di disponibilità è attualmente proprietaria del ruolo secondario (ovvero ogni volta che è una replica secondaria). All'interno delle parentesi, specificare uno o entrambe opzioni per il ruolo secondario. Se si specificano entrambe, usare un elenco delimitato da virgole.  
@@ -362,14 +362,14 @@ Specifica se le transazioni distribuite sono abilitate per questo gruppo di disp
  ALL  
  Sono consentite tutte le connessioni ai database nella replica secondaria per l'accesso in sola lettura.  
   
- Per altre informazioni, vedere [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Per altre informazioni, vedere [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  READ_ONLY_ROUTING_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
  Specifica l'URL da usare per il routing delle richieste di connessione con finalità di lettura a questa replica di disponibilità. Si tratta dell'URL sul quale è in ascolto il motore di database di SQL Server. In genere, l'istanza predefinita del motore di database di SQL Server è in ascolto sulla porta TCP 1433.  
   
  Per un'istanza denominata, è possibile ottenere il numero di porta eseguendo una query sulle colonne **port** e **type_desc** della DMV [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md). L'istanza del server usa il listener Transact-SQL (**type_desc='TSQL'** ).  
   
- Per altre informazioni sul calcolo dell'URL di routing di sola lettura per una replica di disponibilità, vedere [Calcolo di read_only_routing_url per Always On](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx).  
+ Per altre informazioni sul calcolo dell'URL di routing di sola lettura per una replica di disponibilità, vedere [Calcolo di read_only_routing_url per Always On](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson).  
   
 > [!NOTE]  
 >  Per un'istanza denominata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il listener Transact-SQL deve essere configurato per usare una porta specifica. Per altre informazioni, vedere [Configurazione di un server per l'attesa su una porta TCP specifica &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
@@ -404,9 +404,18 @@ Specifica se le transazioni distribuite sono abilitate per questo gruppo di disp
   
  A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], è possibile eseguire il bilanciamento del carico delle richieste con finalità di lettura in tutte le repliche secondarie leggibili. A questo scopo, inserire le repliche in un set annidato di parentesi all'interno dell'elenco di routing di sola lettura. Per altre informazioni ed esempi, vedere [Configurare il bilanciamento del carico tra le repliche di sola lettura](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing).  
   
- Nessuno  
+ NONE  
  Specifica che quando questa replica di disponibilità è la replica primaria, il routing di sola lettura non è supportato. Questo è il comportamento predefinito. In caso di utilizzo con MODIFY REPLICA ON, questo valore disabilita un elenco esistente, se presente.  
-  
+
+ READ_WRITE_ROUTING_URL **=** { **('** \<istanza_server> **')** }  
+ Si applica a: SQL Server (a partire da SQL Server 2019 (15.x)) 
+
+ Specifica istanze del server in cui sono ospitate repliche di disponibilità per questo gruppo di disponibilità che soddisfano i requisiti seguenti quando vengono eseguite nel ruolo principale:
+-   La specifica della replica PRIMARY_ROLE include READ_WRITE_ROUTING_URL.
+-   La stringa di connessione può essere impostata come ReadWrite definendo ApplicationIntent come ReadWrite o non impostando ApplicationIntent e consentendo che venga implementata l'impostazione predefinita (ReadWrite).
+
+Per altre informazioni, vedere [Reindirizzamento della connessione in lettura/scrittura da replica secondaria a primaria - Gruppi di disponibilità AlwaysOn](../../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md).
+
  SESSION_TIMEOUT **=** _seconds_  
  Specifica il periodo di timeout della sessione in secondi. Se non si specifica questa opzione, il periodo di timeout predefinito è di 10 secondi. Il valore minimo è 5 secondi.  
   
@@ -605,7 +614,7 @@ Avvia un failover manuale del gruppo di disponibilità senza perdita di dati nel
   
  Per informazioni sulle restrizioni relative alle istruzioni Transact-SQL AVAILABILITY GROUP, vedere [Panoramica delle istruzioni Transact-SQL per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md).  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  È necessaria anche l'autorizzazione ALTER ANY DATABASE.   
