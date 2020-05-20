@@ -12,14 +12,14 @@ helpviewer_keywords:
 - stored procedures [ADO]
 - commands [ADO]
 ms.assetid: 685f7652-2271-4ede-b552-2eeb8c756b4c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 32f1013ef0aa9c8f02e19ec98234418480bc5f22
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 998bda7d2c940b16f298fdfe436a2d60b27f09ba
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925868"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761217"
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>Chiamata di una stored procedure con Command
 È possibile usare un comando per chiamare un stored procedure. L'esempio di codice alla fine di questo argomento si riferisce a un stored procedure nel database di esempio Northwind, denominato CustOrdersOrders, che è definito nel modo seguente.  
@@ -40,7 +40,7 @@ ORDER BY OrderID
   
  Esistono altre importanti differenze tra l'esempio di codice seguente e il codice nei [parametri dell'oggetto comando](../../../ado/guide/data/command-object-parameters.md), in cui i parametri sono stati immessi manualmente. In primo luogo, questo codice non imposta la proprietà **preparata** su **true** perché è un SQL Server stored procedure ed è precompilato per definizione. In secondo luogo, la proprietà **CommandType** dell'oggetto **Command** è cambiata in **adCmdStoredProc** nel secondo esempio per informare ADO che il comando era un stored procedure.  
   
- Nel secondo esempio, infine, il parametro deve essere indicato dall'indice quando si imposta il valore, perché il nome del parametro potrebbe non essere noto in fase di progettazione. Se si conosce il nome del parametro, è possibile impostare la nuova proprietà [namedParameters](../../../ado/reference/ado-api/namedparameters-property-ado.md) dell'oggetto **Command** su true e fare riferimento al nome della proprietà. Ci si potrebbe chiedere perché la posizione del primo parametro indicato nel stored procedure (@CustomerID) è 1 anziché 0 (`objCmd(1) = "ALFKI"`). Questo perché il parametro 0 contiene un valore restituito dal SQL Server stored procedure.  
+ Nel secondo esempio, infine, il parametro deve essere indicato dall'indice quando si imposta il valore, perché il nome del parametro potrebbe non essere noto in fase di progettazione. Se si conosce il nome del parametro, è possibile impostare la nuova proprietà [namedParameters](../../../ado/reference/ado-api/namedparameters-property-ado.md) dell'oggetto **Command** su true e fare riferimento al nome della proprietà. Ci si potrebbe chiedere perché la posizione del primo parametro indicato nel stored procedure ( @CustomerID ) è 1 anziché 0 ( `objCmd(1) = "ALFKI"` ). Questo perché il parametro 0 contiene un valore restituito dal SQL Server stored procedure.  
   
 ```  
 'BeginAutoParamCmd  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO]
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1890d554367b2a21bcd46a6d2ebddf00013957e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3c7b428e1127ac2431f6e0988774315c12ebd74f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926426"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761529"
 ---
 # <a name="visual-c-ado-programming"></a>Programmazione ADO in Visual C++
 Il riferimento all'API ADO descrive la funzionalità di ADO Application Programming Interface (API) usando una sintassi simile a Microsoft Visual Basic. Sebbene i destinatari siano tutti utenti, i programmatori ADO utilizzano linguaggi diversi, ad esempio Visual Basic, Visual C++ (con e senza la direttiva **#import** ) e Visual J++ (con il pacchetto della classe ADO/WFC).  
@@ -64,7 +64,7 @@ objectPtr->PutProperty(value);      // set property value
 variable = objectPtr->GetProperty;  // get property value  
 ```
   
- Il compilatore genererà la chiamata di_Proprietà_ **Get**_-_, **put**-o **PutRef**appropriata in base alla sintassi alternativa dichiarata e alla possibilità di leggere o scrivere la proprietà.  
+ Il compilatore genererà la **Get** _-_ chiamata di_Proprietà_ Get, **put**-o **PutRef**appropriata in base alla sintassi alternativa dichiarata e alla possibilità di leggere o scrivere la proprietà.  
   
  La direttiva del compilatore **__declspec (Property...)** può dichiarare solo **Get**, **put**o **Get** e **inserire** la sintassi alternativa per una funzione. Le operazioni di sola lettura hanno solo una Dichiarazione **Get** ; le operazioni di sola scrittura hanno solo una Dichiarazione **put** ; le operazioni di lettura e scrittura contengono entrambe dichiarazioni **Get** e **put** .  
   
@@ -84,7 +84,7 @@ variable = objectPtr->GetProperty;  // get property value
 collectionPtr->Item[index];  
 ```
   
- Ad esempio, assegnare un valore a un campo di un oggetto **Recordset** , denominato **_RS_**, derivato dalla tabella **authors** del database **pubs** . Utilizzare la proprietà **Item ()** per accedere al terzo **campo** della raccolta dei **campi** dell'oggetto **Recordset** (le raccolte sono indicizzate da zero; si supponga che il terzo campo sia denominato **_\_au fname_**). Chiamare quindi il metodo **value ()** sull'oggetto **Field** per assegnare un valore stringa.  
+ Ad esempio, assegnare un valore a un campo di un oggetto **Recordset** , denominato **_RS_**, derivato dalla tabella **authors** del database **pubs** . Utilizzare la proprietà **Item ()** per accedere al terzo **campo** della raccolta dei **campi** dell'oggetto **Recordset** (le raccolte sono indicizzate da zero; si supponga che il terzo campo sia denominato **_au \_ fname_**). Chiamare quindi il metodo **value ()** sull'oggetto **Field** per assegnare un valore stringa.  
   
  Questo può essere espresso in Visual Basic nei quattro modi seguenti (le ultime due forme sono univoche per Visual Basic; gli altri linguaggi non hanno equivalenti):  
   
@@ -150,16 +150,16 @@ rs->Fields->Item["au_fname"]->Value = "value";
   
  L' `ActiveConnection` argomento accetta un riferimento a un **_variant_t**, che può essere codificato come una stringa di connessione o un puntatore a un oggetto **connessione** aperta.  
   
- Il **_variant_t** corretto verrà creato in modo implicito se si passa una stringa come "`DSN=pubs;uid=MyUserName;pwd=MyPassword;`" o un puntatore come "`(IDispatch *) pConn`".  
+ Il **_variant_t** corretto verrà creato in modo implicito se si passa una stringa come " `DSN=pubs;uid=MyUserName;pwd=MyPassword;` " o un puntatore come " `(IDispatch *) pConn` ".  
   
 > [!NOTE]
 >  Se ci si connette a un provider dell'origine dati che supporta l'autenticazione di Windows, è necessario specificare **Trusted_Connection = Yes** o **Integrated Security = SSPI** anziché le informazioni relative a ID utente e password nella stringa di connessione.  
   
- In alternativa, è possibile codificare in modo esplicito un **_variant_t** contenente`_variant_t((IDispatch *) pConn, true)`un puntatore, ad esempio "". Il cast, `(IDispatch *)`, risolve l'ambiguità con un altro costruttore che accetta un puntatore a un'interfaccia IUnknown.  
+ In alternativa, è possibile codificare in modo esplicito un **_variant_t** contenente un puntatore, ad esempio " `_variant_t((IDispatch *) pConn, true)` ". Il cast, `(IDispatch *)` , risolve l'ambiguità con un altro costruttore che accetta un puntatore a un'interfaccia IUnknown.  
   
  Si tratta di un aspetto cruciale, sebbene raramente noto, che ADO è un'interfaccia IDispatch. Ogni volta che un puntatore a un oggetto ADO deve essere passato come **Variant**, è necessario eseguire il cast di tale puntatore come puntatore a un'interfaccia IDispatch.  
   
- L'ultimo caso codifica in modo esplicito il secondo argomento booleano del costruttore con il relativo valore predefinito `true`facoltativo. Questo argomento fa sì che il costruttore **Variant** chiami il metodo **AddRef**(), che compensa per ADO la chiamata automatica al metodo **_variant_t:: Release**() quando il metodo ADO o la chiamata di proprietà viene completata.  
+ L'ultimo caso codifica in modo esplicito il secondo argomento booleano del costruttore con il relativo valore predefinito facoltativo `true` . Questo argomento fa sì che il costruttore **Variant** chiami il metodo **AddRef**(), che compensa per ADO la chiamata automatica al metodo **_variant_t:: Release**() quando il metodo ADO o la chiamata di proprietà viene completata.  
   
 ### <a name="safearray"></a>SafeArray  
  **SAFEARRAY** è un tipo di dati strutturato che contiene una matrice di altri tipi di dati. Un **SAFEARRAY** viene chiamato *Safe* perché contiene informazioni sui limiti di ogni dimensione della matrice e limita l'accesso agli elementi della matrice in tali limiti.  
@@ -200,7 +200,7 @@ pRecordset->NextRecordset(NULL);
 ```
   
 ## <a name="error-handling"></a>Gestione degli errori  
- In COM, la maggior parte delle operazioni restituisce un codice restituito HRESULT che indica se una funzione è stata completata correttamente. La direttiva **#import** genera il codice wrapper intorno a ogni proprietà o metodo "Raw" e controlla l'HRESULT restituito. Se HRESULT indica un errore, il codice wrapper genera un errore COM chiamando _com_issue_errorex () con il codice restituito HRESULT come argomento. Gli oggetti errore com possono essere rilevati in un blocco **try**-**catch** . (Per motivi di efficienza, rilevare un riferimento a un oggetto **_com_error** ).  
+ In COM, la maggior parte delle operazioni restituisce un codice restituito HRESULT che indica se una funzione è stata completata correttamente. La direttiva **#import** genera il codice wrapper intorno a ogni proprietà o metodo "Raw" e controlla l'HRESULT restituito. Se HRESULT indica un errore, il codice wrapper genera un errore COM chiamando _com_issue_errorex () con il codice restituito HRESULT come argomento. Gli oggetti errore com possono essere rilevati in un blocco **try** - **catch** . (Per motivi di efficienza, rilevare un riferimento a un oggetto **_com_error** ).  
   
  Si noti che si tratta di errori ADO: risultanti dall'operazione ADO non riuscita. Gli errori restituiti dal provider sottostante vengono visualizzati come oggetti **errore** nella raccolta **errori** oggetto **connessione** .  
   
@@ -216,7 +216,7 @@ pRecordset->NextRecordset(NULL);
 Dim rst As ADODB.Recordset  
 ```
   
- La clausola "`ADODB.Recordset`" è il ProgID dell'oggetto **Recordset** come definito nel registro di sistema. Una nuova istanza di un oggetto **record** viene dichiarata come segue:  
+ La clausola " `ADODB.Recordset` " è il ProgID dell'oggetto **Recordset** come definito nel registro di sistema. Una nuova istanza di un oggetto **record** viene dichiarata come segue:  
   
 ```vb
 Dim rst As New ADODB.Recordset  
@@ -261,9 +261,9 @@ rs.CreateInstance(__uuidof(_Recordset));
 rs->Open(...);  
 ```
   
- Si noti che in un caso l'operatore`.`"" viene usato come se la variabile fosse un'istanza di una classe (`rs.CreateInstance`) e in un altro caso, l'operatore`->`"" viene usato come se la variabile fosse un puntatore a un'interfaccia (`rs->Open`).  
+ Si noti che in un caso l' `.` operatore "" viene usato come se la variabile fosse un'istanza di una classe ( `rs.CreateInstance` ) e in un altro caso, l' `->` operatore "" viene usato come se la variabile fosse un puntatore a un'interfaccia ( `rs->Open` ).  
   
- Una variabile può essere usata in due modi perché l'operatore`->`"" è in overload per consentire a un'istanza di una classe di comportarsi come un puntatore a un'interfaccia. Un membro della classe privata della variabile di istanza contiene un puntatore all'interfaccia **_Recordset** ; l'operatore`->`"" restituisce il puntatore. e il puntatore restituito accede ai membri dell'oggetto **_Recordset** .  
+ Una variabile può essere usata in due modi perché l' `->` operatore "" è in overload per consentire a un'istanza di una classe di comportarsi come un puntatore a un'interfaccia. Un membro della classe privata della variabile di istanza contiene un puntatore all'interfaccia **_Recordset** ; l' `->` operatore "" restituisce il puntatore e il puntatore restituito accede ai membri dell'oggetto **_Recordset** .  
   
 ### <a name="coding-a-missing-parameter---string"></a>Codifica di una stringa di parametro mancante  
  Quando è necessario codificare un operando **stringa** mancante in Visual Basic, si omette semplicemente l'operando. È necessario specificare l'operando in Visual C++. Codificare un **_bstr_t** con una stringa vuota come valore.  
@@ -344,7 +344,7 @@ End Sub
   
      Il **Recordset** restituito è costituito da più colonne, un subset di che rappresenta le colonne del vincolo. I valori delle colonne vincolo per ogni riga restituita devono corrispondere ai valori di vincolo corrispondenti.  
   
-4.  Coloro che hanno familiarità con **SafeArrays** possono essere sorpresi che **SafeArrayDestroy**() non viene chiamato prima dell'uscita. In realtà, la chiamata a **SafeArrayDestroy**() in questo caso provocherà un'eccezione in fase di esecuzione. Il motivo è che il distruttore `vtCriteria` per chiamerà **VariantClear**() quando il **_variant_t** esce dall'ambito, che consente di liberare **SAFEARRAY**. Se si chiama **SafeArrayDestroy**, senza cancellare manualmente il **_variant_t**, il distruttore tenterà di cancellare un puntatore **SAFEARRAY** non valido.  
+4.  Coloro che hanno familiarità con **SafeArrays** possono essere sorpresi che **SafeArrayDestroy**() non viene chiamato prima dell'uscita. In realtà, la chiamata a **SafeArrayDestroy**() in questo caso provocherà un'eccezione in fase di esecuzione. Il motivo è che il distruttore per chiamerà `vtCriteria` **VariantClear**() quando il **_variant_t** esce dall'ambito, che consente di liberare **SAFEARRAY**. Se si chiama **SafeArrayDestroy**, senza cancellare manualmente il **_variant_t**, il distruttore tenterà di cancellare un puntatore **SAFEARRAY** non valido.  
   
      Se è stato chiamato **SafeArrayDestroy** , il codice sarà simile al seguente:  
   
@@ -433,14 +433,14 @@ cn.Close
 End Sub  
 ```
   
- Questo Visual C++ esempio illustra la_Proprietà_ **Get**/**put**/**PutRef**.  
+ Questo Visual C++ esempio illustra la **Proprietà Get** / **put** / **PutRef**_Property_.  
   
 #### <a name="notes"></a>Note  
  Le note seguenti corrispondono alle sezioni con commenti nell'esempio di codice.  
   
 1.  In questo esempio vengono utilizzate due forme di un argomento stringa mancante, ovvero una costante esplicita, **strMissing**, e una stringa che verrà utilizzata dal compilatore per creare una **_bstr_t** temporanea esistente per l'ambito del metodo **Open** .  
   
-2.  Non è necessario eseguire il cast dell'operando `rs->PutRefActiveConnection(cn)` di `(IDispatch *)` a perché il tipo dell'operando è `(IDispatch *)`già.  
+2.  Non è necessario eseguire il cast dell'operando di `rs->PutRefActiveConnection(cn)` a `(IDispatch *)` perché il tipo dell'operando è già `(IDispatch *)` .  
   
 ```cpp
 // Visual_CPP_ado_prog_2.cpp  
@@ -557,11 +557,11 @@ void main() {
 #### <a name="notes"></a>Note  
  Le note seguenti corrispondono alle sezioni con commenti nell'esempio di codice.  
   
-1.  Specificare un oggetto **Connection** aperto in una **variante**codificata in modo esplicito. Eseguirne il cast con \*(IDispatch), in modo che venga richiamato il costruttore corretto. Inoltre, impostare in modo esplicito il secondo parametro **_variant_t** sul valore predefinito **true**, in modo che il conteggio dei riferimenti all'oggetto venga corretto al termine dell'operazione **Recordset:: Open** .  
+1.  Specificare un oggetto **Connection** aperto in una **variante**codificata in modo esplicito. Eseguirne il cast con (IDispatch), in \* modo che venga richiamato il costruttore corretto. Inoltre, impostare in modo esplicito il secondo parametro **_variant_t** sul valore predefinito **true**, in modo che il conteggio dei riferimenti all'oggetto venga corretto al termine dell'operazione **Recordset:: Open** .  
   
-2.  L'espressione, `(_bstr_t)`, non è un cast, ma un operatore **_variant_t** che estrae una stringa di **_Bstr_t** dal **Variant** restituito per **valore**.  
+2.  L'espressione, `(_bstr_t)` , non è un cast, ma un operatore **_variant_t** che estrae una stringa di **_bstr_t** dal **Variant** restituito per **valore**.  
   
- L'espressione, `(char*)`, non è un cast, ma un operatore **_bstr_t** che estrae un puntatore alla stringa incapsulata in un oggetto **_bstr_t** .  
+ L'espressione, `(char*)` , non è un cast, ma un operatore **_bstr_t** che estrae un puntatore alla stringa incapsulata in un oggetto **_bstr_t** .  
   
  In questa sezione di codice vengono illustrati alcuni dei comportamenti utili degli operatori **_variant_t** e **_bstr_t** .  
   

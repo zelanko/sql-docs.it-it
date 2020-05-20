@@ -12,14 +12,14 @@ helpviewer_keywords:
 - absolute URLs [ADO]
 - URLs [ADO]
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f15c5890300687a2d587a58a586d00bf2c8d0fd8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8787d293c349ea921f9f0edd293e77a075e5f7a3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926369"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761479"
 ---
 # <a name="absolute-and-relative-urls"></a>URL relativi e assoluti
 Un URL specifica il percorso di una destinazione archiviata in un computer locale o in rete. La destinazione può essere un file, una directory, una pagina HTML, un'immagine, un programma e così via.  
@@ -70,13 +70,13 @@ Un URL specifica il percorso di una destinazione archiviata in un computer local
 recordset.Open "system32/Readme25.txt", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  
 ```  
   
- L'URL assoluto nella stringa di connessione specifica il server (`YourServer`) e il percorso (`Winnt`). Questo URL definisce anche il contesto.  
+ L'URL assoluto nella stringa di connessione specifica il server ( `YourServer` ) e il percorso ( `Winnt` ). Questo URL definisce anche il contesto.  
   
- L'URL relativo nel testo del comando usa l'URL assoluto come punto di partenza e specifica il resto del percorso (`system32`) e il file da aprire (`Readme25.txt`).  
+ L'URL relativo nel testo del comando usa l'URL assoluto come punto di partenza e specifica il resto del percorso ( `system32` ) e il file da aprire ( `Readme25.txt` ).  
   
- Il campo Options (`adCmdTableDirect`) indica che il tipo di comando è un URL relativo.  
+ Il campo Options ( `adCmdTableDirect` ) indica che il tipo di comando è un URL relativo.  
   
- Come altro esempio, il codice seguente apre un **Recordset** sul contenuto della `Winnt` directory:  
+ Come altro esempio, il codice seguente apre un **Recordset** sul contenuto della `Winnt` Directory:  
   
 ```  
 recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  

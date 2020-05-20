@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - errors [ADO], error codes
 ms.assetid: 3aee61c7-a9b7-4596-b78e-5828a00d0281
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9efe0f39ce304501096d9dcc682a0ea5d5137ee7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bceca521ebbf79f3e25fc0585130bc6bc96f7244
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926993"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761649"
 ---
 # <a name="capture-ado-error-codes"></a>Acquisisci codici di errore ADO
 Oltre agli errori del provider restituiti negli oggetti [Error](../../../ado/reference/ado-api/error-object.md) della raccolta [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) , ADO può restituire errori al meccanismo di gestione delle eccezioni dell'ambiente di Runtime. Usare il meccanismo di intercettazione degli errori del linguaggio di programmazione, ad esempio l'istruzione **On Error** in Microsoft® Visual Basic o il blocco **try-catch** in Microsoft Visual C++®, per acquisire gli errori ADO.

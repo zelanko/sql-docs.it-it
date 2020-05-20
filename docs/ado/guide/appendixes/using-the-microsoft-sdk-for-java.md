@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Java (Microsoft SDK for)
 - Microsoft SDK for Java [ADO]
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b0e6c5f2eb5ad792141e77122ff9e132d97f62ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ae18edeeb66691f0875a196e11e10f9f761b30c5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926460"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761559"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Uso di Microsoft SDK per Java
 
@@ -29,7 +29,7 @@ Microsoft SDK per Java è il kit per sviluppatori per l'ambiente Microsoft Inter
   
  L'utilità JActiveX. exe genera classi da una libreria dei tipi, ma può essere richiamata solo nella riga di comando. Questa funzionalità non è integrata con l'ambiente di sviluppo di Visual J++. Diversamente dalle classi generate dalla creazione guidata libreria dei tipi Java, è possibile eseguire l'istruzione nei wrapper della classe creati dall'SDK. Questa operazione è utile per il debug del modo in cui il codice utilizza le classi wrapper ADO.  
   
- Questo meccanismo legge la libreria dei tipi ADO e genera le classi di cui è possibile creare un'istanza all'interno dell'applicazione. Genera le classi nel percorso seguente: \\<directory\>Windows \Java\trustlib\msado15.  
+ Questo meccanismo legge la libreria dei tipi ADO e genera le classi di cui è possibile creare un'istanza all'interno dell'applicazione. Genera le classi nel percorso seguente: \\<directory Windows \> \Java\trustlib\msado15.  
   
  La creazione di un'applicazione ADO in Java con Microsoft SDK per Java è fondamentalmente identica, dal punto di vista del codice sorgente, all'uso della procedura guidata per la libreria dei tipi Java. Per il codice di esempio, vedere [wrapper della classe ADO Java](../../../ado/guide/appendixes/ado-java-class-wrappers.md). L'unica differenza reale consiste nel modo in cui vengono generate le classi wrapper in primo luogo, come illustrato nei passaggi seguenti.  
   

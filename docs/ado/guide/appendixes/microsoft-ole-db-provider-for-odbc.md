@@ -11,14 +11,14 @@ helpviewer_keywords:
 - OLE DB provider for ODBC [ADO]
 - providers [ADO], OLE DB provider for ODBC
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 25db7fdb20ceb2dd24f819e1db7077d40f7e7e3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2b84ce6679071cc3ea90ce23b4dcd9f8e1894bb2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926630"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761629"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Panoramica di Microsoft OLE DB provider per ODBC
 A un programmatore ADO o RDS, un mondo ideale è quello in cui ogni origine dati espone un'interfaccia di OLE DB, in modo che ADO possa chiamare direttamente nell'origine dati. Sebbene sempre più fornitori di database implementino OLE DB interfacce, alcune origini dati non sono ancora esposte in questo modo. È tuttavia possibile accedere alla maggior parte dei sistemi DBMS attualmente in uso tramite ODBC.
@@ -92,7 +92,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-connection-properties"></a>Proprietà di connessione specifiche del provider
  Il provider OLE DB per ODBC aggiunge diverse proprietà alla raccolta [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) dell'oggetto **Connection** . Nella tabella seguente sono elencate le proprietà con il nome della proprietà OLE DB corrispondente tra parentesi.
 
-|Nome proprietà|Descrizione|
+|Nome proprietà|Description|
 |-------------------|-----------------|
 |Procedure accessibili (KAGPROP_ACCESSIBLEPROCEDURES)|Indica se l'utente ha accesso alle stored procedure.|
 |Tabelle accessibili (KAGPROP_ACCESSIBLETABLES)|Indica se l'utente dispone delle autorizzazioni per eseguire le istruzioni SELECT sulle tabelle del database.|
@@ -119,7 +119,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-recordset-and-command-properties"></a>Proprietà del comando e del recordset specifici del provider
  Il provider OLE DB per ODBC aggiunge diverse proprietà alla raccolta **Properties** degli oggetti **Recordset** e **Command** . Nella tabella seguente sono elencate le proprietà con il nome della proprietà OLE DB corrispondente tra parentesi.
 
-|Nome proprietà|Descrizione|
+|Nome proprietà|Description|
 |-------------------|-----------------|
 |Aggiornamenti/eliminazioni/inserimenti basati su query (KAGPROP_QUERYBASEDUPDATES)|Indica se è possibile eseguire aggiornamenti, eliminazioni e inserimenti tramite query SQL.|
 |Tipo di concorrenza ODBC (KAGPROP_CONCURRENCY)|Indica il metodo utilizzato per ridurre i potenziali problemi causati da due utenti che tentano di accedere contemporaneamente agli stessi dati dall'origine dati.|
@@ -192,7 +192,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|lettura/scrittura|non disponibile|Sola lettura|Sola lettura|
 |[origine](../../../ado/reference/ado-api/source-property-ado-recordset.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
 |[State](../../../ado/reference/ado-api/state-property-ado.md)|Sola lettura|Sola lettura|Sola lettura|Sola lettura|
-|[Stato](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Sola lettura|Sola lettura|Sola lettura|Sola lettura|
+|[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Sola lettura|Sola lettura|Sola lettura|Sola lettura|
 
  Le proprietà [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) e [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) sono di sola scrittura quando ADO viene utilizzato con la versione 1,0 del provider Microsoft OLE DB per ODBC.
 
@@ -205,8 +205,8 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Sì|Sì|Sì|Sì|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Sì|Sì|Sì|Sì|
 |[Clone](../../../ado/reference/ado-api/clone-method-ado.md) (Clona)|No|No|Sì|Sì|
-|[Chiudi](../../../ado/reference/ado-api/close-method-ado.md)|Sì|Sì|Sì|Sì|
-|[Elimina](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Sì|Sì|Sì|Sì|
+|[Close](../../../ado/reference/ado-api/close-method-ado.md)|Sì|Sì|Sì|Sì|
+|[Eliminazione](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Sì|Sì|Sì|Sì|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sì|Sì|Sì|Sì|
 |[Spostamento](../../../ado/reference/ado-api/move-method-ado.md)|Sì|Sì|Sì|Sì|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sì|Sì|Sì|Sì|
@@ -260,7 +260,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Dimensioni massime riga|DBPROP_MAXROWSIZE|
 |Dimensioni massime righe includono BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |Numero massimo di tabelle in SELECT|DBPROP_MAXTABLESINSELECT|
-|Mode|DBPROP_INIT_MODE|
+|Modalità|DBPROP_INIT_MODE|
 |Set di parametri multipli|DBPROP_MULTIPLEPARAMSETS|
 |Risultati multipli|DBPROP_MULTIPLERESULTS|
 |Più oggetti di archiviazione|DBPROP_MULTIPLESTORAGEOBJECTS|

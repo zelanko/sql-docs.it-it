@@ -12,19 +12,19 @@ helpviewer_keywords:
 - errors [ADO], ErrorValueEnum
 - ErrorValueEnum enumeration [ADO]
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: da9d7d2374f8e3410598bfdfbd97e59eb505b255
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 774a1c17f579c9274b700e4e1fea682cc462ed29
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926248"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761387"
 ---
 # <a name="ado-errors"></a>Errori ADO
 La costante **ErrorValueEnum** descrive i valori di errore ADO. Per un elenco completo di queste costanti enumerate, inclusi i valori, vedere [Appendice B: errori ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md). In questa sezione vengono esaminati alcuni degli errori più interessanti e vengono illustrate alcune situazioni specifiche che possono sollevarle o soluzioni per risolvere il problema. Vengono elencate sia la costante **ErrorValueEnum** che il numero decimale positivo breve.
 
-|Number|Costante ErrorValueEnum|Descrizione/possibili cause|
+|Numero|Costante ErrorValueEnum|Descrizione/possibili cause|
 |------------|-----------------------------|----------------------------------|
 |**3000**|**adErrProviderFailed**|Il provider non è riuscito a eseguire l'operazione richiesta.|
 |**3001**|**adErrInvalidArgument**|Gli argomenti sono di tipo errato, non sono compresi nell'intervallo accettabile oppure sono in conflitto tra loro. Questo errore è spesso causato da un errore tipografico in un'istruzione SQL SELECT. Ad esempio, un nome di campo o un nome di tabella con errori di ortografia può generare questo errore. Questo errore può verificarsi anche quando un campo o una tabella denominata in un'istruzione SELECT non esiste nell'archivio dati.|
@@ -63,7 +63,7 @@ La costante **ErrorValueEnum** descrive i valori di errore ADO. Per un elenco co
 |**3724**|**adErrCantConvertvalue**|Non è possibile convertire il valore di dati per motivi diversi dalla non corrispondenza di segno o dall'overflow dei dati. Ad esempio, la conversione avrebbe dati troncati.|
 |**3725**|**adErrCantCreate**|Impossibile impostare o recuperare il valore dei dati perché il tipo di dati del campo è sconosciuto oppure il provider non dispone di risorse sufficienti per eseguire l'operazione.|
 |**3726**|**adErrColumnNotOnThisRow**|Il record non contiene questo campo. È stato specificato un nome di campo errato oppure è stato fatto riferimento a un campo non presente nella raccolta **Fields** del record corrente.|
-|**3727**|**adErrURLDoesNotExist**|L'URL di origine o l'elemento padre dell'URL di destinazione non esiste. Si è verificato un errore tipografico nell'URL di origine o di destinazione. È possibile che `https://mysite/photo/myphoto.jpg` si disponga di in `https://mysite/photos/myphoto.jpg` alternativa. Errore tipografico nell'URL padre (in questo caso, *foto* anziché *foto*) ha causato l'errore.|
+|**3727**|**adErrURLDoesNotExist**|L'URL di origine o l'elemento padre dell'URL di destinazione non esiste. Si è verificato un errore tipografico nell'URL di origine o di destinazione. È possibile che si disponga di `https://mysite/photo/myphoto.jpg` in `https://mysite/photos/myphoto.jpg` alternativa. Errore tipografico nell'URL padre (in questo caso, *foto* anziché *foto*) ha causato l'errore.|
 |**3728**|**adErrTreePermissionDenied**|Le autorizzazioni non sono sufficienti per accedere ad albero o sottoalbero. L'utente indicato nella stringa di connessione non dispone delle autorizzazioni appropriate.|
 |**3729**|**adErrInvalidURL**|L'URL contiene caratteri non validi. Verificare che l'URL sia digitato correttamente. L'URL segue lo schema registrato per il provider corrente (ad esempio, il provider di pubblicazione Internet è registrato per http).|
 |**3730**|**adErrResourceLocked**|L'oggetto rappresentato dall'URL specificato è bloccato da uno o più processi. Attendere il completamento del processo e ripetere l'operazione. L'oggetto a cui si sta tentando di accedere è stato bloccato da un altro utente o da un altro processo nell'applicazione. Questo è più probabile che si verifichi in un ambiente multiutente.|

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - stored procedures [ADO]
 - commands [ADO]
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2189bf9b2a82cdf21fdd13ed77a977f6b333ac87
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0bb81e82e27decadbf6d31ce9bc391023474ecba
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925890"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761237"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>Chiamata di una stored procedure come metodo in un oggetto Connection
 È possibile chiamare un stored procedure come se fosse un metodo nativo sull'oggetto **connessione** aperto associato. Questa operazione è simile alla chiamata di un comando denominato nell'oggetto **Connection** .  

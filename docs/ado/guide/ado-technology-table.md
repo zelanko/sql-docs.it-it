@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, technologies
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2e260ba5e9bfa4cc0d55187dff09072dd5842828
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0e0fb8e559dcf98f39b5f3783e3e43d5d10671cb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67927018"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761659"
 ---
 # <a name="products-and-technologies-table"></a>Tabella prodotti e tecnologie
 Nella tabella seguente sono elencati i prodotti, gli strumenti e le tecnologie Microsoft descritti nella Guida per programmatori di ADO. Fornisce i collegamenti, laddove possibile, agli argomenti pertinenti della guida.
@@ -38,7 +38,7 @@ Nella tabella seguente sono elencati i prodotti, gli strumenti e le tecnologie M
 |SQL Server|[Controllo delle transazioni](../../ado/guide/data/controlling-transactions-ado.md)<br /><br /> [Chiamata di una stored procedure con Command](../../ado/guide/data/calling-a-stored-procedure-with-a-command.md)<br /><br /> [Record corrente e dimensioni del recordset](../../ado/guide/data/current-record-and-size-of-recordset.md)<br /><br /> [Cursori forward-only](../../ado/guide/data/forward-only-cursors.md)<br /><br /> [Flussi di comandi](../../ado/guide/data/command-streams.md)<br /><br /> [Recupero di set di risultati nei flussi](../../ado/guide/data/retrieving-resultsets-into-streams.md)<br /><br /> [Esecuzione dello script SQL per Address Book](../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)<br /><br /> [Garantire spazio sufficiente per TempDB](../../ado/guide/remote-data-service/ensuring-sufficient-tempdb-space.md)<br /><br /> [Riduzione al minimo dell'utilizzo dello spazio per il file di log](../../ado/guide/remote-data-service/minimizing-log-file-space-usage.md)<br /><br /> [Provider Microsoft OLE DB per SQL Server](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)|
 |Server di transazione|[Esecuzione di oggetti business nei Servizi componenti](../../ado/guide/remote-data-service/running-business-objects-in-component-services.md)|
 |VBScript|[Gestione degli errori in altre lingue](../../ado/guide/data/handling-errors-in-other-languages.md)<br /><br /> [Funzioni Visual Basic, Applications Edition](../../ado/guide/data/visual-basic-for-applications-functions.md)<br /><br /> [Flussi di comandi](../../ado/guide/data/command-streams.md)<br /><br /> [Soluzioni per RDA (Remote Data Access)](../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)<br /><br /> [Scenario RDS](../../ado/guide/remote-data-service/rds-scenario.md)<br /><br /> [Esercitazione su RDS (VBScript)](../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)<br /><br /> [Programmazione ADO VBScript](../../ado/guide/appendixes/vbscript-ado-programming.md)<br /><br /> [Esempi di codice ADO in Microsoft Visual Basic Scripting Edition](../../ado/reference/ado-api/ado-code-examples-vbscript.md)|
-|Visual Basic|[Errors](../../ado/guide/data/errors-ado.md)<br /><br /> [Errori ADO](../../ado/guide/data/ado-errors.md)<br /><br /> [Creazione di un'istanza di evento ADO per lingua](../../ado/guide/data/ado-event-instantiation-by-language.md)<br /><br /> [Funzioni Visual Basic, Applications Edition](../../ado/guide/data/visual-basic-for-applications-functions.md)<br /><br /> [Esercitazione su RDS](../../ado/guide/remote-data-service/rds-tutorial.md)<br /><br /> [Uso di ADO con Microsoft Visual Basic](../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)<br /><br /> [Esempi di codice ADO in Microsoft Visual Basic](../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)|
+|Visual Basic|[Errori](../../ado/guide/data/errors-ado.md)<br /><br /> [Errori ADO](../../ado/guide/data/ado-errors.md)<br /><br /> [Creazione di un'istanza di evento ADO per lingua](../../ado/guide/data/ado-event-instantiation-by-language.md)<br /><br /> [Funzioni Visual Basic, Applications Edition](../../ado/guide/data/visual-basic-for-applications-functions.md)<br /><br /> [Esercitazione su RDS](../../ado/guide/remote-data-service/rds-tutorial.md)<br /><br /> [Uso di ADO con Microsoft Visual Basic](../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)<br /><br /> [Esempi di codice ADO in Microsoft Visual Basic](../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)|
 |Visual C++|[Gestione degli errori in altre lingue](../../ado/guide/data/handling-errors-in-other-languages.md)<br /><br /> [Creazione di un'istanza di evento ADO per lingua](../../ado/guide/data/ado-event-instantiation-by-language.md)<br /><br /> [Uso di ADO con Microsoft Visual C++](../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)<br /><br /> [Esempi di codice ADO in Microsoft Visual C++](../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)|
 |Visual Studio|[Appendice D: Esempi ADO](../../ado/guide/appendixes/appendix-d-ado-samples.md)|
 |Windows 2000|[Requisiti di sistema per l'applicazione Address Book](../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)<br /><br /> [Concessione dei privilegi Guest a un computer server Web](../../ado/guide/remote-data-service/granting-guest-privileges-to-a-web-server-computer.md)<br /><br /> [Registrazione di un oggetto business personalizzato](../../ado/guide/remote-data-service/registering-a-custom-business-object.md)<br /><br /> [Sicurezza delle applicazioni RDS](../../ado/guide/remote-data-service/securing-rds-applications.md)<br /><br /> [Configurazione di RDS in Windows 2000](../../ado/guide/remote-data-service/configuring-rds-on-windows-2000.md)|

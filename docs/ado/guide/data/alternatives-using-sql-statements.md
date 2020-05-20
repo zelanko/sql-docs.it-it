@@ -12,14 +12,14 @@ helpviewer_keywords:
 - editing data [ADO], sql statements
 - ADO, SQL statements
 ms.assetid: 8b528b23-063d-45ea-8dea-6a90d4060b20
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f41ef7f0641877056a6e2f3d85fd6a40ff7826db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f1e80dd692b234b88d2b63ed0a43d956152e2e2b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925995"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761267"
 ---
 # <a name="alternatives-using-sql-statements"></a>Alternative: uso di istruzioni SQL
 ADO consente inoltre di utilizzare i comandi come alternative alle proprietà e ai metodi predefiniti per la modifica dei dati. A seconda del provider, tutte le operazioni descritte in questa sezione possono essere eseguite anche passando i comandi all'origine dati. È ad esempio possibile utilizzare le istruzioni SQL UPDATE per modificare i dati senza utilizzare la proprietà **value** di un **campo**. È possibile utilizzare le istruzioni SQL INSERT per aggiungere nuovi record a un'origine dati, anziché il metodo ADO **AddNew**. Per ulteriori informazioni su SQL o sul linguaggio di manipolazione dei dati del provider, vedere la documentazione dell'origine dati.  

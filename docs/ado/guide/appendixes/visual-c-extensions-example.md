@@ -13,19 +13,19 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO], VC++ extensions example
 ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6d3517f40b15081ca2ee4621d07455cc13bb577d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d48315598c17b9462e9a42de58bd54313a4fd794
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926399"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761509"
 ---
 # <a name="visual-c-extensions-example"></a>Esempio di estensioni di Visual C++
 Questo programma Mostra come i valori vengono recuperati dai campi e convertiti in variabili C/C++.  
   
- Questo esempio si avvale anche dei "puntatori intelligenti", che gestiscono automaticamente i dettagli specifici di COM relativi `QueryInterface` alla chiamata e al conteggio dei riferimenti per l'interfaccia **IADORecordBinding** .  
+ Questo esempio si avvale anche dei "puntatori intelligenti", che gestiscono automaticamente i dettagli specifici di COM relativi alla chiamata `QueryInterface` e al conteggio dei riferimenti per l'interfaccia **IADORecordBinding** .  
   
  Senza puntatori intelligenti, è necessario scrivere il codice seguente:  
   
@@ -38,7 +38,7 @@ TESTHR(pRs->QueryInterface(
 if (picRs) picRs->Release();  
 ```  
   
- Con i puntatori intelligenti, il `IADORecordBindingPtr` tipo viene derivato `IADORecordBinding` dall'interfaccia con questa istruzione:  
+ Con i puntatori intelligenti, il tipo viene derivato `IADORecordBindingPtr` dall' `IADORecordBinding` interfaccia con questa istruzione:  
   
 ```cpp
 _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));  
@@ -50,7 +50,7 @@ _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));
 IADORecordBindingPtr picRs(pRs);  
 ```  
   
- Poiché le estensioni Visual C++ sono implementate dall'oggetto **Recordset** , il costruttore per il puntatore intelligente, `picRs`, accetta il puntatore`RecordsetPtr` _, `pRs`. Il costruttore chiama `QueryInterface` using `pRs` per trovare l' `IADORecordBinding` interfaccia.  
+ Poiché le estensioni Visual C++ sono implementate dall'oggetto **Recordset** , il costruttore per il puntatore intelligente, `picRs` , accetta il `RecordsetPtr` puntatore _, `pRs` . Il costruttore chiama `QueryInterface` using `pRs` per trovare l' `IADORecordBinding` interfaccia.  
   
 ```cpp
 // Visual_Cpp_Extensions_Example.cpp  

@@ -10,14 +10,14 @@ ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a839ffc977981c977c2675f25dae4d505e89b081
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cc3f3e0f70864444e4ff07ba16ac37cbd42234df
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926051"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761307"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>Creazione di istanze di eventi ADO: Visual C++
 Si tratta di una descrizione schematica di come creare istanze di eventi ADO in Microsoft® Visual C++®. Per una descrizione completa, vedere [esempio di modello di eventi ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) .  

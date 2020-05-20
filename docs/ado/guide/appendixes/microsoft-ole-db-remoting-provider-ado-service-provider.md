@@ -12,14 +12,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB remoting provider
 - remoting provider [ADO]
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5c60567da677564c168f0601625686bdfb8b3d67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e3ad2ebe195bdcdf97548f040f3ef7dcc1fb1a38
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926594"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761609"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Panoramica del provider Microsoft OLE DB Remoting
 Il provider Microsoft OLE DB Remoting consente a un utente locale in un computer client di richiamare i provider di dati in un computer remoto. Specificare i parametri del provider di dati per il computer remoto come se si trattasse di un utente locale nel computer remoto. Specificare quindi i parametri utilizzati dal provider remoto per accedere al computer remoto. È quindi possibile accedere al computer remoto come se si trattasse di un utente locale.
@@ -44,7 +44,7 @@ Il provider Microsoft OLE DB Remoting consente a un utente locale in un computer
 ## <a name="dynamic-properties"></a>Proprietà dinamiche
  Quando il provider di servizi viene richiamato, le seguenti proprietà dinamiche vengono aggiunte alla raccolta [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) dell'oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md).
 
-|Nome proprietà dinamica|Descrizione|
+|Nome proprietà dinamica|Description|
 |---------------------------|-----------------|
 |**DFMode**|Indica la modalità DataFactory. Stringa che specifica la versione desiderata dell'oggetto [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) nel server. Impostare questa proprietà prima di aprire una connessione per richiedere una versione specifica della data **Factory**. Se la versione richiesta non è disponibile, verrà effettuato un tentativo di usare la versione precedente. Se non è presente alcuna versione precedente, si verificherà un errore. Se **DFMode** è minore della versione disponibile, si verificherà un errore. Questa proprietà è di sola lettura dopo che è stata effettuata una connessione.<br /><br /> Può essere uno dei valori stringa validi seguenti:<br /><br /> -"25"-versione 2,5 (impostazione predefinita)<br />-"21"-versione 2,1<br />-"20"-versione 2,0<br />-"15"-versione 1,5|
 |**Proprietà del comando**|Indica i valori che verranno aggiunti alla stringa di proprietà del comando (set di righe) inviate al server dal provider MS remoto. Il valore predefinito per questa stringa è vt_empty.|

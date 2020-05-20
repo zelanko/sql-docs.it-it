@@ -12,14 +12,14 @@ helpviewer_keywords:
 - OLE DB provider for Oracle [ADO]
 - Oracle provider [ADO]
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 60510302525562d9c3007a6ef57213fc261b4c60
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e956ca5486485c3dde8079f6b9067a8fef7e2f3a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926627"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761639"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Panoramica di provider Microsoft OLE DB per Oracle
 > [!IMPORTANT]
@@ -62,12 +62,12 @@ MSDAORA
 
  Questi parametri sono descritti in modo completo nella Guida [di riferimento per programmatori OLE DB](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8). L' [indice della proprietà dinamica ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) fornisce un riferimento incrociato tra questi nomi di parametro e le proprietà OLE DB corrispondenti.
 
-|Parametro|Descrizione|
+|Parametro|Description|
 |---------------|-----------------|
 |**Handle finestra**|Indica l'handle della finestra da utilizzare per richiedere ulteriori informazioni.|
 |**Locale Identifier**|Indica un numero univoco a 32 bit, ad esempio 1033, che specifica le preferenze relative alla lingua dell'utente. Queste preferenze indicano il modo in cui le date e le ore vengono formattate, gli elementi vengono ordinati alfabeticamente, le stringhe vengono confrontate e così via.|
 |**Servizi di OLE DB**|Indica una maschera di maschera che specifica OLE DB servizi da abilitare o disabilitare.|
-|**Prompt**|Indica se richiedere all'utente quando viene stabilita una connessione.|
+|**Messaggio di richiesta**|Indica se richiedere all'utente quando viene stabilita una connessione.|
 |**Proprietà estese**|Stringa contenente informazioni di connessione estese specifiche del provider. Utilizzare questa proprietà solo per le informazioni di connessione specifiche del provider che non possono essere descritte tramite il meccanismo della proprietà.|
 
 ## <a name="see-also"></a>Vedere anche
