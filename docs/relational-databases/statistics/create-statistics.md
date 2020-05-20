@@ -58,7 +58,7 @@ ms.locfileid: "68103419"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  L'utente deve essere il proprietario della tabella o della vista indicizzata o un membro di uno dei seguenti ruoli: ruolo predefinito del server **sysadmin** , ruolo predefinito del database **db_owner** o ruolo predefinito del database **db_ddladmin** .  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-create-statistics"></a>Per creare statistiche  
   
@@ -119,7 +119,7 @@ ms.locfileid: "68103419"
      **Espressione filtro**  
      Specifica le righe di dati da includere nelle statistiche filtrate. Ad esempio, usare `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  Nella pagina **Generale** della finestra di dialogo **Nuove statistiche per Tabella **_nome\_tabella_ fare clic su **Aggiungi**.  
+5.  Nella pagina **Generale** della finestra di dialogo **Nuove statistiche per Tabella** _nome\_tabella_ fare clic su **Aggiungi**.  
   
      Nella finestra di dialogo **Seleziona colonne** vengono visualizzate le proprietà seguenti. Queste informazioni sono di sola lettura.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "68103419"
   
 7.  Nella finestra di dialogo **Nuove statistiche per Tabella** _nome\_tabella_ fare clic su **OK**.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-create-statistics"></a>Per creare statistiche  
   
