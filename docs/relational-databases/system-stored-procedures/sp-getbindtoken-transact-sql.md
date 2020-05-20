@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_getbindtoken
 ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ac8bc2087b4c100b784aadac8458e106538f76d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dca4015832f8bebf5501c4b3a7e84339bf62957b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68123998"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833207"
 ---
 # <a name="sp_getbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,11 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [@out_token=]'*RETURN_VALUE*'  
+ [ @out_token =]'*RETURN_VALUE*'  
  Token da utilizzare per associare le sessioni. *RETURN_VALUE* è di tipo **varchar (255)** e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- nessuno  
+ Nessuno  
   
 ## <a name="result-sets"></a>Set di risultati  
  nessuno  
@@ -65,7 +65,7 @@ Cannot get a transaction token if there is no transaction active.
 Reissue the statement after a transaction has been started.  
 ```  
   
- Quando sp_getbindtoken viene utilizzata per integrare una connessione di transazione distribuita all'interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] una transazione aperta, in viene restituito lo stesso token. Ad esempio:  
+ Quando sp_getbindtoken viene utilizzata per integrare una connessione di transazione distribuita all'interno di una transazione aperta, in viene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito lo stesso token. Ad esempio:  
   
 ```  
 USE AdventureWorks2012;  
@@ -107,7 +107,7 @@ PKb'gN5<9aGEedk_16>8U=5---/5G=--
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo public.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene recuperato un token di associazione, di cui viene quindi visualizzato il nome.  
   
 ```  

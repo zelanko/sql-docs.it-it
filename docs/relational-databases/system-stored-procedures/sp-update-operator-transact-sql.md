@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_operator
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2a766ad74f42336612859c63cf42df654846ff96
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 098d027ff74bad7b4215a96044f4044fda9ee98e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084846"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832526"
 ---
 # <a name="sp_update_operator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,43 +53,43 @@ sp_update_operator
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @name=] '*Name*'  
+ [ @name =]'*nome*'  
  Nome dell'operatore da modificare. *Name* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
- [ @new_name=] '*new_name*'  
+ [ @new_name =]'*new_name*'  
  Nuovo nome dell'operatore. Il nome deve essere univoco. *new_name* è di **tipo sysname**e il valore predefinito è null.  
   
- [ @enabled=] *abilitato*  
+ [ @enabled =] *abilitato*  
  Numero che indica lo stato corrente dell'operatore (**1** se è attualmente abilitato, **0** in caso contrario). *Enabled* è di **tinyint**e il valore predefinito è null. Gli operatori non abilitati non ricevono le notifiche di avviso.  
   
- [ @email_address=] '*email_address*'  
+ [ @email_address =]'*email_address*'  
  Indirizzo di posta elettronica dell'operatore. Questa stringa viene passata direttamente al sistema di posta elettronica. *email_address* è di **tipo nvarchar (100)** e il valore predefinito è null.  
   
- [ @pager_address=] '*pager_number*'  
+ [ @pager_address =]'*pager_number*'  
  Indirizzo del cercapersone dell'operatore. Questa stringa viene passata direttamente al sistema di posta elettronica. *pager_number* è di **tipo nvarchar (100)** e il valore predefinito è null.  
   
- [ @weekday_pager_start_time=] *weekday_pager_start_time*  
+ [ @weekday_pager_start_time =] *weekday_pager_start_time*  
  Indica l'ora dei giorni lavorativi da lunedì a venerdì oltre la quale è possibile inviare una notifica al cercapersone dell'operatore specificato. *weekday_pager_start_time*è di **tipo int**e il valore predefinito è null e deve essere immesso nel formato HHMMSS per l'uso con un formato a 24 ore.  
   
- [ @weekday_pager_end_time=] *weekday_pager_end_time*  
+ [ @weekday_pager_end_time =] *weekday_pager_end_time*  
  Indica l'ora dei giorni lavorativi da lunedì a venerdì oltre la quale non è possibile inviare una notifica al cercapersone dell'operatore specificato. *weekday_pager_end_time*è di **tipo int**e il valore predefinito è null e deve essere immesso nel formato HHMMSS per l'uso con un formato a 24 ore.  
   
- [ @saturday_pager_start_time=] *saturday_pager_start_time*  
+ [ @saturday_pager_start_time =] *saturday_pager_start_time*  
  Indica l'ora del sabato oltre la quale è possibile inviare una notifica sul cercapersone dell'operatore specificato. *saturday_pager_start_time*è di **tipo int**e il valore predefinito è null e deve essere immesso nel formato HHMMSS per l'uso con un formato a 24 ore.  
   
- [ @saturday_pager_end_time=] *saturday_pager_end_time*  
+ [ @saturday_pager_end_time =] *saturday_pager_end_time*  
  Indica l'ora del sabato oltre la quale non è possibile inviare una notifica sul cercapersone dell'operatore specificato. *saturday_pager_end_time*è di **tipo int**e il valore predefinito è null e deve essere immesso nel formato HHMMSS per l'uso con un formato a 24 ore.  
   
- [ @sunday_pager_start_time=] *sunday_pager_start_time*  
+ [ @sunday_pager_start_time =] *sunday_pager_start_time*  
  Indica l'ora della domenica oltre la quale è possibile inviare una notifica sul cercapersone dell'operatore specificato. *sunday_pager_start_time*è di **tipo int**e il valore predefinito è null e deve essere immesso nel formato HHMMSS per l'uso con un formato a 24 ore.  
   
- [ @sunday_pager_end_time=] *sunday_pager_end_time*  
+ [ @sunday_pager_end_time =] *sunday_pager_end_time*  
  Indica l'ora della domenica oltre la quale non è possibile inviare una notifica sul cercapersone dell'operatore specificato. *sunday_pager_end_time*è di **tipo int**e il valore predefinito è null e deve essere immesso nel formato HHMMSS per l'uso con un formato a 24 ore.  
   
- [ @pager_days=] *pager_days*  
- Indica i giorni in cui l'operatore può essere rintracciato tramite cercapersone (in base all'ora di inizio e fine specificata). *pager_days*è di **tinyint**e il valore predefinito è null. deve essere un valore **compreso tra 0** e **127**. *pager_days* viene calcolato aggiungendo i singoli valori per i giorni richiesti. Ad esempio, da lunedì a venerdì sono **2**+**4**+**8**+**16**+**32** = **64**.  
+ [ @pager_days =] *pager_days*  
+ Indica i giorni in cui l'operatore può essere rintracciato tramite cercapersone (in base all'ora di inizio e fine specificata). *pager_days*è di **tinyint**e il valore predefinito è null. deve essere un valore **compreso tra 0** e **127**. *pager_days* viene calcolato aggiungendo i singoli valori per i giorni richiesti. Ad esempio, da lunedì a venerdì sono **2** + **4** + **8** + **16** + **32**  =  **64**.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Sunday|  
 |**2**|Monday|  
@@ -99,10 +99,10 @@ sp_update_operator
 |**32**|Friday|  
 |**64**|Sabato|  
   
- [ @netsend_address=] '*netsend_address*'  
+ [ @netsend_address =]'*netsend_address*'  
  Indirizzo di rete dell'operatore a cui viene inviato il messaggio di rete. *netsend_address*è di **tipo nvarchar (100)** e il valore predefinito è null.  
   
- [ @category_name=] '*Category*'  
+ [ @category_name =]'*Category*'  
  Nome della categoria di questo avviso. *Category* è di **tipo sysname**e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
@@ -114,7 +114,7 @@ sp_update_operator
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server sysadmin.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente lo stato dell'operatore viene impostato su abilitato. Vengono inoltre impostati i giorni in cui è possibile contattare l'operatore sul cercapersone, ovvero da lunedì a venerdì, dalle 8 alle 17.  
   
 ```  

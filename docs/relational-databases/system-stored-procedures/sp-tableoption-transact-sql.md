@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_tableoption
 ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2c72d07873e2e07ee7f6f095f677625a18cdb5a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e2e822d1ca6aff1e91a848f839b824bb4476fc5a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982262"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834209"
 ---
 # <a name="sp_tableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,21 +46,21 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @TableNamePattern =] '*Table*'  
+ [ @TableNamePattern =]'*tabella*'  
  Nome completo o non qualificato di una tabella di database definita dall'utente. Nel caso di un nome qualificato di tabella, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. Non è possibile configurare le opzioni tabella per più tabelle contemporaneamente. *Table* è di **tipo nvarchar (776)** e non prevede alcun valore predefinito.  
   
- [ @OptionName = ] '*option_name*'  
+ [ @OptionName =]'*option_name*'  
  Nome di un'opzione di tabella. *option_name* è di tipo **varchar (35)** e non prevede alcun valore predefinito null. *option_name* può essere uno dei valori seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |table lock on bulk load|Quando questa opzione è disabilitata (impostazione predefinita), durante il processo di caricamento bulk nelle tabelle definite dall'utente vengono acquisiti blocchi di riga. Se abilitata, viene acquisito un blocco di tipo aggiornamento bulk.|  
 |insert row lock|Non più supportata.<br /><br /> Questa opzione non influisce sulla funzionalità di blocco di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed è disponibile solo per compatibilità con script e procedure esistenti.|  
-|text in row|Quando questa opzione è disabilitata, ovvero impostata su OFF o 0 (impostazione predefinita), il funzionamento corrente rimane invariato e la riga non contiene valori BLOB.<br /><br /> Quando è specificato @OptionValue e è attivato (abilitato) o un valore intero compreso tra 24 e 7000, le nuove stringhe di tipo **Text**, **ntext**o **Image** vengono archiviate direttamente nella riga di dati. Tutti i BLOB esistenti (oggetto binario di grandi dimensioni: dati di tipo **Text**, **ntext**o **Image** ) verranno convertiti in testo in formato di riga quando il valore del BLOB viene aggiornato. Per altre informazioni, vedere la sezione Osservazioni.|  
-|large value types out of row|1 = le colonne **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML** e di tipo definito dall'utente (UDT) di grandi dimensioni nella tabella vengono archiviate all'esterno di righe, con un puntatore di 16 byte alla radice.<br /><br /> 0 = i valori **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML** e UDT di grandi dimensioni vengono archiviati direttamente nella riga di dati, fino a un limite di 8000 byte e fino a quando il valore può rientrare nel record. Se le dimensioni del record non sono sufficienti per il valore, all'interno della riga viene archiviato un puntatore e i dati restanti vengono archiviati all'esterno della riga nello spazio di archiviazione LOB. Il valore predefinito è 0.<br /><br /> Il tipo definito dall'utente (UDT) di grandi dimensioni [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] si applica a: e versioni successive. <br /><br /> Utilizzare l'opzione TEXTIMAGE_ON di [Create Table](../../t-sql/statements/create-table-transact-sql.md) per specificare un percorso per l'archiviazione di tipi di dati di grandi dimensioni. |  
+|text in row|Quando questa opzione è disabilitata, ovvero impostata su OFF o 0 (impostazione predefinita), il funzionamento corrente rimane invariato e la riga non contiene valori BLOB.<br /><br /> Quando è specificato e @OptionValue è attivato (abilitato) o un valore intero compreso tra 24 e 7000, le nuove stringhe di tipo **Text**, **ntext**o **Image** vengono archiviate direttamente nella riga di dati. Tutti i BLOB esistenti (oggetto binario di grandi dimensioni: dati di tipo **Text**, **ntext**o **Image** ) verranno convertiti in testo in formato di riga quando il valore del BLOB viene aggiornato. Per altre informazioni, vedere la sezione Osservazioni.|  
+|large value types out of row|1 = le colonne **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML** e di tipo definito dall'utente (UDT) di grandi dimensioni nella tabella vengono archiviate all'esterno di righe, con un puntatore di 16 byte alla radice.<br /><br /> 0 = i valori **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML** e UDT di grandi dimensioni vengono archiviati direttamente nella riga di dati, fino a un limite di 8000 byte e fino a quando il valore può rientrare nel record. Se le dimensioni del record non sono sufficienti per il valore, all'interno della riga viene archiviato un puntatore e i dati restanti vengono archiviati all'esterno della riga nello spazio di archiviazione LOB. Il valore predefinito è 0.<br /><br /> Il tipo definito dall'utente (UDT) di grandi dimensioni si applica a: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive. <br /><br /> Utilizzare l'opzione TEXTIMAGE_ON di [Create Table](../../t-sql/statements/create-table-transact-sql.md) per specificare un percorso per l'archiviazione di tipi di dati di grandi dimensioni. |  
 |formato di archiviazione vardecimal|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> Se TRUE, ON o 1, la tabella designata è abilitata per il formato di archiviazione vardecimal. Se FALSE, OFF o 0, il formato di archiviazione vardecimal non è abilitato per la tabella. Il formato di archiviazione vardecimal può essere abilitato solo quando il database è stato abilitato per il formato di archiviazione vardecimal utilizzando [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md). In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive il formato di archiviazione **vardecimal** è deprecato. ed è necessario usare il tipo di compressione ROW. Per altre informazioni, vedere [Data Compression](../../relational-databases/data-compression/data-compression.md). Il valore predefinito è 0.|  
   
- [ @OptionValue =] '*valore*'  
+ [ @OptionValue =]'*valore*'  
  Indica se la *option_name* è abilitata (true, on o 1) oppure disabilitata (false, off o 0). *value* è di tipo **varchar (12)** e non prevede alcun valore predefinito. il *valore* non fa distinzione tra maiuscole e minuscole.  
   
  Per l'opzione text in row, i valori dell'opzione validi sono 0, ON, OFF o un numero intero compreso tra 24 e 7000. Quando *value* è on, il valore predefinito del limite è 256 byte.  
@@ -73,7 +73,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
  In sp_tableoption è possibile abilitare o disabilitare l'opzione text in row solo in tabelle contenenti colonne di testo. Nel caso di tabelle prive di colonne di questo tipo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un errore.  
   
- Quando l'opzione text in row è abilitata, @OptionValue il parametro consente agli utenti di specificare le dimensioni massime da archiviare in una riga per un BLOB. I possibili valori sono compresi tra 24 e 7000 byte. Il valore predefinito è 256 byte.  
+ Quando l'opzione text in row è abilitata, il @OptionValue parametro consente agli utenti di specificare le dimensioni massime da archiviare in una riga per un BLOB. I possibili valori sono compresi tra 24 e 7000 byte. Il valore predefinito è 256 byte.  
   
  le stringhe di tipo **Text**, **ntext**o **Image** vengono archiviate nella riga di dati se si applicano le condizioni seguenti:  
   
@@ -118,7 +118,7 @@ EXEC sp_tableoption 'HumanResources.JobCandidate', 'large value types out of row
 ```  
   
 ### <a name="b-enabling-vardecimal-storage-format-on-a-table"></a>B. Abilitazione del formato di archiviazione vardecimal in una tabella  
- Nell'esempio seguente viene modificata `Production.WorkOrderRouting` la tabella per archiviare `decimal` il tipo di dati `vardecimal` nel formato di archiviazione.  
+ Nell'esempio seguente viene modificata la `Production.WorkOrderRouting` tabella per archiviare il `decimal` tipo di dati nel `vardecimal` formato di archiviazione.  
 
 ```sql  
 USE master;  

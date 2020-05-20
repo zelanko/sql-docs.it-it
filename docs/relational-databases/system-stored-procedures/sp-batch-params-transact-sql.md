@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_batch_params
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9a5b4ac7c5e1e8d3c136f99475fa7a17ebd8b002
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e9a7cb410a1e520ee05b7f93263dcc46750dfb87
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001812"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833467"
 ---
 # <a name="sp_batch_params-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce un set di righe che contiene informazioni sui parametri inclusi in [!INCLUDE[tsql](../../includes/tsql-md.md)] un batch. **sp_batch_params** analizza solo il batch specificato e restituisce informazioni sui valori dei parametri incorporati. e non esegue il batch, né modifica l'ambiente di esecuzione.  
+  Restituisce un set di righe che contiene informazioni sui parametri inclusi in un [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. **sp_batch_params** analizza solo il batch specificato e restituisce informazioni sui valori dei parametri incorporati. e non esegue il batch, né modifica l'ambiente di esecuzione.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,10 +39,10 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @tsqlbatch = ] 'tsqlbatch'`Stringa Unicode contenente un'istruzione o un [!INCLUDE[tsql](../../includes/tsql-md.md)] batch per il quale si desidera ottenere informazioni sui parametri. *TSqlBatch* è di **tipo nvarchar (max)** o convertibile in modo implicito in **nvarchar (max)**.  
+`[ @tsqlbatch = ] 'tsqlbatch'`Stringa Unicode contenente un' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o un batch per il quale si desidera ottenere informazioni sui parametri. *TSqlBatch* è di **tipo nvarchar (max)** o convertibile in modo implicito in **nvarchar (max)**.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- nessuno  
+ Nessuno  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -55,7 +55,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 |**PRECISIONE**|**int**|Numero di cifre significative. Il valore restituito per la colonna **Precision** è in base 10.|  
 |**LENGTH**|**int**|Dimensioni di trasferimento dei dati. Questo valore è NULL.|  
 |**SCALA**|**smallint**|Numero di cifre a destra del separatore decimale. Questo valore è NULL.|  
-|**RADIX**|**smallint**|Base per i tipi di dati numerici. Questo valore è NULL.|  
+|**RADICE**|**smallint**|Base per i tipi di dati numerici. Questo valore è NULL.|  
 |**NULLABLE**|**smallint**|Specifica se i valori Null sono supportati o meno:<br /><br /> 1 = Per il parametro è possibile creare il tipo di dati con supporto per valori Null.<br /><br /> 0 = I valori Null non sono supportati.<br /><br /> Questo valore è NULL.|  
 |**SQL_DATA_TYPE**|**smallint**|Valore del tipo di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visualizzato nel campo TYPE del descrittore. Questa colonna corrisponde alla colonna **DATA_TYPE**, tranne che per i tipi di dati **datetime** e ISO **interval**. In questa colonna viene sempre restituito un valore. Questo valore è NULL.|  
 |**SQL_DATETIME_SUB**|**smallint**|Sottocodice **DateTime** o **intervallo** ISO se il valore di **SQL_DATA_TYPE** è SQL_DATETIME o SQL_INTERVAL. Per i tipi di dati diversi da **datetime** e **ISO interval**, questa colonna è NULL. Questo valore è NULL.|  
@@ -65,7 +65,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 ## <a name="permissions"></a>Autorizzazioni  
  L'autorizzazione per l'esecuzione di **sp_batch_params** viene concessa a **public**.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente una query viene passata a `sp_batch_params`. Il set di risultati enumera l'elenco dei valori dei parametri incorporati.  
   
 ```  

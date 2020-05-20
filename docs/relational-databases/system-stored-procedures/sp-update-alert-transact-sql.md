@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_alert
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2856f89264994b9f1812653450d94e2cb2e2b0c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a63a5e34ac0331bfe879814e4d503c4d57cc3208
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69890840"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832545"
 ---
 # <a name="sp_update_alert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,9 +78,9 @@ sp_update_alert
   
 `[ @include_event_description_in = ] include_event_description_in`Specifica se la descrizione dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] errore dal registro applicazioni di Windows deve essere inclusa nel messaggio di notifica. *include_event_description_in* è di **tinyint**e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
-|**0**|nessuno|  
+|**0**|Nessuno|  
 |**1**|Posta elettronica|  
 |**2**|Cercapersone|  
 |**4**|**net send**|  
@@ -112,10 +112,10 @@ sp_update_alert
   
 `[ @performance_condition = ] 'performance_condition'`Valore espresso nel formato **'**_itemcomparatorvalue_**'**. *performance_condition* è di **tipo nvarchar (512)** e il valore predefinito è null ed è costituito da questi elementi.  
   
-|Componente del formato|Descrizione|  
+|Componente del formato|Description|  
 |--------------------|-----------------|  
 |*Item*|Oggetto prestazioni, contatore delle prestazioni o istanza denominata del contatore|  
-|*Confronto*|Uno di questi operatori: **>**, **<**,**=**|  
+|*Confronto*|Uno di questi operatori: **>** , **<** ,**=**|  
 |*Valore*|Valore numerico del contatore|  
   
 `[ @category_name = ] 'category'`Nome della categoria di avvisi. *Category* è di **tipo sysname** e il valore predefinito è null.  
@@ -128,14 +128,14 @@ sp_update_alert
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
- Solo **sysmessages** scritti nel registro [!INCLUDE[msCoName](../../includes/msconame-md.md)] applicazioni di Windows possono generare un avviso.  
+ Solo **sysmessages** scritti nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] registro applicazioni di Windows possono generare un avviso.  
   
  **sp_update_alert** modifica solo le impostazioni di avviso per le quali vengono forniti i valori dei parametri. Se si omette un parametro, viene mantenuta l'impostazione corrente.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa stored procedure, gli utenti devono essere membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente l'impostazione di abilitazione di `Test Alert` viene sostituita con `0`.  
   
 ```  

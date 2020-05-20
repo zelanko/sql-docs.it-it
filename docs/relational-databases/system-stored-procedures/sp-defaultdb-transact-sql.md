@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_defaultdb
 ms.assetid: 663b859f-c6da-4942-95a6-60b93d05654e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: aec951ea8a0397c39c57619609264596aec9a648
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 09c28c955dd89a889600982882c6bdafdc2b10cb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085825"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833417"
 ---
 # <a name="sp_defaultdb-transact-sql"></a>sp_defaultdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @loginame = ] 'login'`Nome dell'account di accesso. *login* è di **tipo sysname**e non prevede alcun valore predefinito. l' *account di accesso* può [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] essere un account di accesso esistente o un utente o un gruppo di Windows. Se un account di accesso per l'utente o il gruppo di Windows non esiste in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ne verrà automaticamente creato uno.  
+`[ @loginame = ] 'login'`Nome dell'account di accesso. *login* è di **tipo sysname**e non prevede alcun valore predefinito. l' *account di accesso* può essere un account di accesso esistente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un utente o un gruppo di Windows. Se un account di accesso per l'utente o il gruppo di Windows non esiste in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ne verrà automaticamente creato uno.  
   
 `[ @defdb = ] 'database'`Nome del nuovo database predefinito. il *database* è di **tipo sysname**e non prevede alcun valore predefinito. il *database* deve essere già esistente.  
   
@@ -57,7 +57,7 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER ANY LOGIN.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] viene impostato come database predefinito per l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`Victoria`.  
   
 ```  

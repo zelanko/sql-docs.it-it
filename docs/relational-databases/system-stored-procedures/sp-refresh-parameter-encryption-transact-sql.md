@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sp_refresh_parameter_encryption
 - Always Encrypted, sp_refresh_parameter_encryption
 ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5f699f21b1f28537da2e2f0033fe6b17908186a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 47f622c287eb0e32e1c5db2d33b64af2de3e379b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68002459"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833145"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,9 +46,9 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="arguments"></a>Argomenti
 
-`[ @name = ] 'module_name'`Nome del stored procedure, funzione definita dall'utente, vista, trigger DML, trigger DDL a livello di database o trigger DDL a livello di server. *module_name* non può essere un stored procedure di Common Language Runtime (CLR) o una funzione CLR. *module_name* non possono essere associati a schema. *module_name* è `nvarchar`di e non prevede alcun valore predefinito. *module_name* può essere un identificatore in più parti, ma può fare riferimento solo agli oggetti nel database corrente.
+`[ @name = ] 'module_name'`Nome del stored procedure, funzione definita dall'utente, vista, trigger DML, trigger DDL a livello di database o trigger DDL a livello di server. *module_name* non può essere un stored procedure di Common Language Runtime (CLR) o una funzione CLR. *module_name* non possono essere associati a schema. *module_name* è `nvarchar` di e non prevede alcun valore predefinito. *module_name* può essere un identificatore in più parti, ma può fare riferimento solo agli oggetti nel database corrente.
 
-`[ @namespace = ] ' < class > '`È la classe del modulo specificato. Quando *module_name* è un trigger DDL, `<class>` è obbligatorio. `<class>` è `nvarchar(20)`. Gli input validi `DATABASE_DDL_TRIGGER` sono `SERVER_DDL_TRIGGER`e.    
+`[ @namespace = ] ' < class > '`È la classe del modulo specificato. Quando *module_name* è un trigger DDL, `<class>` è obbligatorio. `<class>` è `nvarchar(20)`. Gli input validi sono `DATABASE_DDL_TRIGGER` e `SERVER_DDL_TRIGGER` .    
 
 ## <a name="return-code-values"></a>Valori del codice restituito  
 
@@ -61,28 +61,28 @@ I metadati di crittografia per i parametri di un modulo possono diventare obsole
 * Sono state aggiornate le proprietà di crittografia di una colonna in una tabella a cui fa riferimento il modulo. Una colonna, ad esempio, è stata eliminata e viene aggiunta una nuova colonna con lo stesso nome, ma è stato aggiunto un tipo di crittografia diverso, una chiave di crittografia o un algoritmo di crittografia.  
 * Il modulo fa riferimento a un altro modulo con metadati di crittografia dei parametri obsoleti.  
 
-Quando si modificano le proprietà di crittografia di `sp_refresh_parameter_encryption` una tabella, è necessario eseguire per tutti i moduli direttamente o indirettamente che fanno riferimento alla tabella. Questo stored procedure può essere chiamato su tali moduli in qualsiasi ordine, senza richiedere all'utente di aggiornare prima di tutto il modulo interno prima di trasferirsi ai chiamanti.
+Quando si modificano le proprietà di crittografia di una tabella, è `sp_refresh_parameter_encryption` necessario eseguire per tutti i moduli direttamente o indirettamente che fanno riferimento alla tabella. Questo stored procedure può essere chiamato su tali moduli in qualsiasi ordine, senza richiedere all'utente di aggiornare prima di tutto il modulo interno prima di trasferirsi ai chiamanti.
 
-`sp_refresh_parameter_encryption`non influisce sulle autorizzazioni, sulle proprietà estese `SET` o sulle opzioni associate all'oggetto. 
+`sp_refresh_parameter_encryption`non influisce sulle autorizzazioni, sulle proprietà estese o sulle `SET` opzioni associate all'oggetto. 
 
 Per aggiornare un trigger DDL a livello di server, eseguire questa stored procedure dal contesto di un qualsiasi database.
 
 > [!NOTE]
->  Tutte le firme associate all'oggetto vengono eliminate quando si esegue `sp_refresh_parameter_encryption`.
+>  Tutte le firme associate all'oggetto vengono eliminate quando si esegue `sp_refresh_parameter_encryption` .
 
 ## <a name="permissions"></a>Autorizzazioni
 
-È `ALTER` richiesta l'autorizzazione per il `REFERENCES` modulo e l'autorizzazione per tutti i tipi CLR definiti dall'utente e le raccolte di XML Schema a cui fa riferimento l'oggetto.   
+`ALTER`È richiesta l'autorizzazione per il modulo e l' `REFERENCES` autorizzazione per tutti i tipi CLR definiti dall'utente e le raccolte di XML Schema a cui fa riferimento l'oggetto.   
 
-Quando il modulo specificato è un trigger DDL a livello di database, `ALTER ANY DATABASE DDL TRIGGER` richiede l'autorizzazione nel database corrente.    
+Quando il modulo specificato è un trigger DDL a livello di database, richiede `ALTER ANY DATABASE DDL TRIGGER` l'autorizzazione nel database corrente.    
 
-Quando il modulo specificato è un trigger DDL a livello di server, `CONTROL SERVER` richiede l'autorizzazione.
+Quando il modulo specificato è un trigger DDL a livello di server, richiede l' `CONTROL SERVER` autorizzazione.
 
-Per i moduli definiti con la `EXECUTE AS` clausola, `IMPERSONATE` è richiesta l'autorizzazione per l'entità specificata. In genere, l'aggiornamento di un oggetto non `EXECUTE AS` comporta la modifica dell'entità, a meno che `EXECUTE AS USER` il modulo non sia stato definito con e il nome utente del server principale venga risolto in un altro utente rispetto al momento in cui è stato creato il modulo.
+Per i moduli definiti con la `EXECUTE AS` clausola, `IMPERSONATE` è richiesta l'autorizzazione per l'entità specificata. In genere, l'aggiornamento di un oggetto non comporta la modifica `EXECUTE AS` dell'entità, a meno che il modulo non sia stato definito con `EXECUTE AS USER` e il nome utente del server principale venga risolto in un altro utente rispetto al momento in cui è stato creato il modulo.
  
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
-Nell'esempio seguente viene creata una tabella e una procedura che fa riferimento alla tabella, viene configurato Always Encrypted, quindi viene illustrata la modifica della `sp_refresh_parameter_encryption` tabella e l'esecuzione della stored procedure.  
+Nell'esempio seguente viene creata una tabella e una procedura che fa riferimento alla tabella, viene configurato Always Encrypted, quindi viene illustrata la modifica della tabella e l'esecuzione della `sp_refresh_parameter_encryption` stored procedure.  
 
 Creare innanzitutto la tabella iniziale e un stored procedure che fa riferimento alla tabella.
 ```sql
@@ -135,7 +135,7 @@ GO
 ```
 
 
-Infine si sostituisce la colonna SSN con la colonna crittografata, quindi viene eseguita `sp_refresh_parameter_encryption` la procedura per aggiornare i componenti del always Encrypted.
+Infine si sostituisce la colonna SSN con la colonna crittografata, quindi viene eseguita la `sp_refresh_parameter_encryption` procedura per aggiornare i componenti del always Encrypted.
 ```sql
 ALTER TABLE [Patients] DROP COLUMN [SSN];
 GO

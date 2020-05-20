@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addscriptexec
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e8ae792ba7f8422e841abbbe2f80b096497df993
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6e3c380f5508897a25327be20e05b22984d3bd4e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022456"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833683"
 ---
 # <a name="sp_addscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ sp_addscriptexec [ @publication = ] publication
   
  **1** = l'agente continua lo script e ignora l'errore.  
   
-`[ @publisher = ] 'publisher'`Specifica un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publisher = ] 'publisher'`Specifica un server di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
->  il *Server* di pubblicazione non deve essere utilizzato per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la pubblicazione da un server di pubblicazione.  
+>  il *Server* di pubblicazione non deve essere utilizzato per la pubblicazione da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -65,7 +65,7 @@ sp_addscriptexec [ @publication = ] publication
   
  Per utilizzare **sp_addscriptexec**, l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio deve disporre delle autorizzazioni di lettura e scrittura per la posizione dello snapshot e le autorizzazioni di lettura per il percorso in cui sono archiviati gli script.  
   
- L' [utilità sqlcmd](../../tools/sqlcmd-utility.md) viene utilizzata per eseguire lo script nel Sottoscrittore e lo script viene eseguito nel contesto di sicurezza utilizzato dal agente di distribuzione o agente di merge durante la connessione al database di sottoscrizione. Quando l'agente viene eseguito in una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], viene utilizzata l' [utilità osql](../../tools/osql-utility.md) anziché [SQLCMD](../../tools/sqlcmd-utility.md).  
+ L' [utilità sqlcmd](../../tools/sqlcmd-utility.md) viene utilizzata per eseguire lo script nel Sottoscrittore e lo script viene eseguito nel contesto di sicurezza utilizzato dal agente di distribuzione o agente di merge durante la connessione al database di sottoscrizione. Quando l'agente viene eseguito in una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , viene utilizzata l' [utilità osql](../../tools/osql-utility.md) anziché [SQLCMD](../../tools/sqlcmd-utility.md).  
   
  **sp_addscriptexec** è utile per l'applicazione di script ai sottoscrittori e utilizza [SQLCMD](../../tools/sqlcmd-utility.md) per applicare il contenuto dello script al Sottoscrittore. Tuttavia, poiché le configurazioni dei Sottoscrittori sono soggette a variazioni, gli script testati prima dell'invio al server di pubblicazione potrebbero comunque causare errori in un Sottoscrittore. *SkipError* offre la possibilità di agente di distribuzione o agente di merge ignorare gli errori e continuare con. Usare [SQLCMD](../../tools/sqlcmd-utility.md) per testare gli script prima di eseguire **sp_addscriptexec**.  
   

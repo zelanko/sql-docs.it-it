@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursorfetch
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4635bffa5b5b681d0ff202c4231c4d8b8d10ae26
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a1cb929158a6d17a7a7c16e5e303c403a2c03112
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108516"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831798"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_cursorfetch cursor
  *FetchType*  
  Specifica il buffer del cursore da recuperare. *FetchType* è un parametro facoltativo che richiede uno dei valori di input Integer seguenti.  
   
-|valore|Nome|Descrizione|  
+|valore|Nome|Description|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|Recupera il primo buffer delle righe *nrows* . Se *nrows* è uguale a 0, il cursore viene posizionato prima del set di risultati e non viene restituita alcuna riga.|  
 |0x0002|NEXT|Recupera il buffer successivo di righe *nrows* .|  
@@ -133,7 +133,7 @@ sp_cursorfetch cursor
   
  Il parametro di stato di RPC viene impostato su uno dei valori mostrati nella tabella seguente.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |0|La routine è stata eseguita correttamente.|  
 |0x0001|La routine non è riuscita.|  
@@ -142,7 +142,7 @@ sp_cursorfetch cursor
   
  Le righe vengono restituite come set tipico di risultati, ovvero il formato della colonna (0x2a), le righe (0xd1), infine done (0xfd). I token dei metadati vengono inviati nello stesso formato specificato per sp_cursoropen, ovvero: 0x81, 0xa5 e 0xa4 per gli utenti di SQL Server 7.0 e così via. Gli indicatori di stato delle righe vengono inviati come colonne nascoste, analogamente alla modalità BROWSE, alla fine di ogni riga con nome di colonna rowstat e tipo di dati INT4. La colonna rowstat può avere uno dei valori mostrati nella tabella seguente:  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  

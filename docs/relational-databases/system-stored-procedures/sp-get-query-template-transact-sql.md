@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_get_query_template
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9841e7815f31af26aeeb3ed0f4783d3a36d83030
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 80f5bc86498bc33e0cb04e8ca54154b96307c480
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124078"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833233"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_get_query_template
  Parametro di output di tipo **nvarchar (max)**, fornito come indicato, per ricevere il formato con parametri di *query_text* come valore letterale stringa.  
   
  @parameters  
- Parametro di output di tipo **nvarchar (max)**, fornito come indicato, per ricevere un valore letterale stringa dei nomi di parametro e dei tipi di dati che sono @templatetextstati parametrizzati in.  
+ Parametro di output di tipo **nvarchar (max)**, fornito come indicato, per ricevere un valore letterale stringa dei nomi di parametro e dei tipi di dati che sono stati parametrizzati in @templatetext .  
   
 ## <a name="remarks"></a>Osservazioni  
  sp_get_query_template restituisce un errore se:  
@@ -58,12 +58,12 @@ sp_get_query_template
   
 -   *query_text* è null, non una stringa Unicode, sintatticamente non valida o non può essere compilata.  
   
- Se sp_get_query_template restituisce un errore, i valori dei parametri di output @templatetext e @parameters non vengono modificati.  
+ Se sp_get_query_template restituisce un errore, i valori dei parametri di output e non vengono modificati @templatetext @parameters .  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo del database public.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene restituito il formato con parametri di una query contenente due valori letterali costanti.  
   
 ```  

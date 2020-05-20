@@ -17,20 +17,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_expression_dependencies catalog view
 ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ade6ffc213d570fcb7da965cf73f43e2db335d17
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c66a822991bb347b429b1524f0b04aa768cb38f4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69561131"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833958"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Contiene una riga per ogni dipendenza in base al nome in un'entità definita dall'utente nel database corrente. Sono incluse le dipendenze tra funzioni scalari definite dall'utente e compilate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modo nativo e altri moduli. Una dipendenza tra due entità viene creata quando un'entità, denominata *entità a cui si fa riferimento*, viene visualizzata in base al nome in un'espressione SQL permanente di un'altra entità, detta *entità di riferimento*. Ad esempio, quando viene fatto riferimento a una tabella nella definizione di una vista, la vista, ovvero l'entità di riferimento, dipende dalla tabella, ovvero l'entità a cui si fa riferimento. Se la tabella viene eliminata, la vista non è utilizzabile.  
+  Contiene una riga per ogni dipendenza in base al nome in un'entità definita dall'utente nel database corrente. Sono incluse le dipendenze tra funzioni scalari definite dall'utente e compilate in modo nativo e altri [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] moduli. Una dipendenza tra due entità viene creata quando un'entità, denominata *entità a cui si fa riferimento*, viene visualizzata in base al nome in un'espressione SQL permanente di un'altra entità, detta *entità di riferimento*. Ad esempio, quando viene fatto riferimento a una tabella nella definizione di una vista, la vista, ovvero l'entità di riferimento, dipende dalla tabella, ovvero l'entità a cui si fa riferimento. Se la tabella viene eliminata, la vista non è utilizzabile.  
   
  Per altre informazioni, vedere [Funzioni scalari definite dall'utente per OLTP in memoria](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
@@ -91,7 +91,7 @@ ms.locfileid: "69561131"
 |Raccolta di XML Schema|No|Sì|  
 |Funzione di partizione|No|Sì|  
   
- \*Una tabella viene rilevata come entità di riferimento solo quando fa riferimento [!INCLUDE[tsql](../../includes/tsql-md.md)] a un modulo, a un tipo definito dall'utente o a una raccolta di XML Schema nella definizione di una colonna calcolata, un vincolo check o un vincolo Default.  
+ \*Una tabella viene rilevata come entità di riferimento solo quando fa riferimento a un [!INCLUDE[tsql](../../includes/tsql-md.md)] modulo, a un tipo definito dall'utente o a una raccolta di XML Schema nella definizione di una colonna calcolata, un vincolo check o un vincolo Default.  
   
  ** Ogni colonna utilizzata nel predicato del filtro viene registrata come un'entità di riferimento.  
   

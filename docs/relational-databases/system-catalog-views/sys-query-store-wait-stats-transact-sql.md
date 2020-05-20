@@ -19,12 +19,12 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bff80fbe2b5022e12eca58de42192a3a1bb18d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f3c94f7f23697539b000c9c76dc1d0970a56a96d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74190366"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834100"
 ---
 # <a name="sysquery_store_wait_stats-transact-sql"></a>sys. query_store_wait_stats (Transact-SQL)
 
@@ -41,11 +41,11 @@ ms.locfileid: "74190366"
 |**wait_category_desc**|**nvarchar(128)**|Per la descrizione testuale del campo categoria di attesa, esaminare la tabella seguente.|
 |**execution_type**|**tinyint**|Determina il tipo di esecuzione della query:<br /><br /> 0-esecuzione regolare (completata correttamente)<br /><br /> 3-esecuzione interrotta dal client<br /><br /> 4-esecuzione interrotta eccezione|  
 |**execution_type_desc**|**nvarchar(128)**|Descrizione testuale del campo tipo di esecuzione:<br /><br /> 0-normale<br /><br /> 3-interrotto<br /><br /> 4-eccezione|  
-|**total_query_wait_time_ms**|**bigint**|Tempo `CPU wait` totale per il piano di query all'interno dell'intervallo di aggregazione e della categoria di attesa (in millisecondi).|
+|**total_query_wait_time_ms**|**bigint**|`CPU wait`Tempo totale per il piano di query all'interno dell'intervallo di aggregazione e della categoria di attesa (in millisecondi).|
 |**avg_query_wait_time_ms**|**float**|Durata media di attesa per il piano di query per esecuzione all'interno dell'intervallo di aggregazione e della categoria di attesa (in millisecondi).|
 |**last_query_wait_time_ms**|**bigint**|Durata dell'ultima attesa per il piano di query all'interno dell'intervallo di aggregazione e della categoria di attesa (in millisecondi).|
-|**min_query_wait_time_ms**|**bigint**|Tempo `CPU wait` minimo per il piano di query all'interno dell'intervallo di aggregazione e della categoria di attesa (in millisecondi).|
-|**max_query_wait_time_ms**|**bigint**|Tempo `CPU wait` massimo per il piano di query all'interno dell'intervallo di aggregazione e della categoria di attesa (in millisecondi).|
+|**min_query_wait_time_ms**|**bigint**|`CPU wait`Tempo minimo per il piano di query all'interno dell'intervallo di aggregazione e della categoria di attesa (in millisecondi).|
+|**max_query_wait_time_ms**|**bigint**|`CPU wait`Tempo massimo per il piano di query all'interno dell'intervallo di aggregazione e della categoria di attesa (in millisecondi).|
 |**stdev_query_wait_time_ms**|**float**|`Query wait`deviazione standard della durata per il piano di query entro l'intervallo di aggregazione e la categoria di attesa (in millisecondi).|
 
 ## <a name="wait-categories-mapping-table"></a>Tabella di mapping delle categorie di attesa
@@ -65,7 +65,7 @@ ms.locfileid: "74190366"
 |**8**|**SQL CLR**|% CLR, SQLCLR%|
 |**9**|**Mirroring**|DBMIRROR|
 |**10**|**Transazione**|XACT%, DTC%, TRAN_MARKLATCH_%, MSQL_XACT_%, TRANSACTION_MUTEX|
-|**11**|**Idle**|SLEEP_%, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_QUEUE, XE_TIMER_EVENT|
+|**11**|**Inattivo**|SLEEP_%, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_QUEUE, XE_TIMER_EVENT|
 |**12**|**PreEmptive**|PREEMPTIVE_%|
 |**13**|**Service Broker**|BROKER_% **(ma non BROKER_RECEIVE_WAITFOR)**|
 |**14**|**IO log i/o**|LOGMGR, LOGBUFFER, LOGMGR_RESERVE_APPEND, LOGMGR_FLUSH, LOGMGR_PMM_LOG, CHKPT, WRITELOG|

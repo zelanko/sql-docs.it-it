@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_addsrvrolemember
 ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2c927bdff462922d1846188366fbb92ce0d3663c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ab49a6572bfe8b2879b832642eeb1cf692177bb6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022422"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833646"
 ---
 # <a name="sp_addsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_addsrvrolemember [ @loginame= ] 'login'
   
 ## <a name="arguments"></a>Argomenti  
  [ @loginame **=** ] **'**_login_**'**  
- Nome dell'account di accesso aggiunto al ruolo predefinito del server. *login* è di **tipo sysname**e non prevede alcun valore predefinito. *login* può essere un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso di o un account di accesso di Windows. Gli account di Windows che non dispongono ancora dell'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ricevono automaticamente l'autorizzazione di accesso.  
+ Nome dell'account di accesso aggiunto al ruolo predefinito del server. *login* è di **tipo sysname**e non prevede alcun valore predefinito. *login* può essere un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un account di accesso di Windows. Gli account di Windows che non dispongono ancora dell'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ricevono automaticamente l'autorizzazione di accesso.  
   
  [ @rolename **=** ] **'**_Role_**'**  
  Nome del ruolo predefinito del server a cui verrà aggiunto l'account di accesso. *Role* è di **tipo sysname**e il valore predefinito è null. deve essere uno dei valori seguenti:  
@@ -80,7 +80,7 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo a cui viene aggiunto il nuovo membro.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente l'account di accesso di Windows `Corporate\HelenS` viene aggiunto al ruolo predefinito del server `sysadmin`.  
   
 ```  

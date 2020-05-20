@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsynctriggers
 ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2b9bdabcc11c900ae0a1cbe71280b64efb6ccdaf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b99d42216f188771219f711f34ccd7f105770f27
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096214"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833613"
 ---
 # <a name="sp_addsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
   
 `[ @distributor = ] 'distributor'`Nome del server di distribuzione. *Distributor* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @pubversion = ] pubversion`Indica la versione del server di pubblicazione. *pubversion* è di **tipo int**e il valore predefinito è 1. **1** indica che la versione del server [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] di pubblicazione è Service Pack 2 o precedente; **2** indica che il server di [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] pubblicazione è Service Pack 3 (SP3) o versione successiva. *pubversion* deve essere impostato in modo esplicito su **2** quando la versione [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] del server di pubblicazione è SP3 o successiva.  
+`[ @pubversion = ] pubversion`Indica la versione del server di pubblicazione. *pubversion* è di **tipo int**e il valore predefinito è 1. **1** indica che la versione del server di pubblicazione è [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 o precedente; **2** indica che il server di pubblicazione è [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 3 (SP3) o versione successiva. *pubversion* deve essere impostato in modo esplicito su **2** quando la versione del server di pubblicazione è [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SP3 o successiva.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  

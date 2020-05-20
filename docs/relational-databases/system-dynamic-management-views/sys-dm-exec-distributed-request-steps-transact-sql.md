@@ -19,22 +19,22 @@ helpviewer_keywords:
 - dm_exec_distributed_request_steps
 - sys.dm_exec_distributed_request_steps management view
 ms.assetid: 1954541d-b716-4e03-8fcc-7022f428e01d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5c40ce6d1c7b7ef85f24fc8032559e000d89be1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e5b2dcf0cf62d9fe6157284409d96bec8f105b4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097818"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833771"
 ---
 # <a name="sysdm_exec_distributed_request_steps-transact-sql"></a>sys. dm_exec_distributed_request_steps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Include informazioni su tutti i passaggi che compongono una query o una richiesta di polibase specificata. Elenca una riga per ogni passaggio della query.  
   
-|Nome colonna|Tipo di dati|Descrizione|Range|  
+|Nome colonna|Tipo di dati|Description|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**int**|execution_id e step_index costituiscono la chiave per questa visualizzazione. ID numerico univoco associato alla richiesta.|Vedere ID in [sys. dm_exec_requests &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
 |step_index|**int**|Posizione di questo passaggio nella sequenza di passaggi che costituiscono la richiesta.|da 0 a (n-1) per una richiesta con n passaggi.|  
@@ -47,7 +47,7 @@ ms.locfileid: "68097818"
 |end_time|**datetime**|Ora di completamento dell'esecuzione di questo passaggio, annullato o non riuscito.|Minore o uguale all'ora corrente e maggiore o uguale a start_time, impostare su NULL per i passaggi attualmente in esecuzione o in coda.|  
 |total_elapsed_time|**int**|Quantità totale di tempo di esecuzione del passaggio della query, in millisecondi|Compreso tra 0 e la differenza tra end_time e start_time. 0 per i passaggi in coda.|  
 |row_count|**bigint**|Numero totale di righe modificate o restituite dalla richiesta|0 per i passaggi che non sono stati modificati o restituiscono dati, il numero di righe interessate in altro modo. Impostare su-1 per i passaggi DMS.|  
-|command|nvarchar(4000)|Include il testo completo del comando di questo passaggio.|Qualsiasi stringa di richiesta valida per un passaggio. Troncato se è più lungo di 4000 caratteri.|  
+|.|nvarchar(4000)|Include il testo completo del comando di questo passaggio.|Qualsiasi stringa di richiesta valida per un passaggio. Troncato se è più lungo di 4000 caratteri.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Risoluzione dei problemi di polibase con viste a gestione dinamica](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   

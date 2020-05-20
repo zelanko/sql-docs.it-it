@@ -16,15 +16,15 @@ helpviewer_keywords:
 - application locks
 - sp_getapplock
 ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fee963f1b026090a84e58a9b0844fe040f9e9793
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a42fe0c5bf58dfb1214897d87cdde3126b924a75
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72717257"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833247"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @Resource= ] '*resource_name*'  
+ [ @Resource =]'*resource_name*'  
  Stringa contenente un nome che identifica la risorsa di blocco. L'applicazione deve garantire che il nome della risorsa sia univoco. Il nome specificato viene sottoposto internamente ad hashing per creare un valore che è possibile archiviare in Gestione blocchi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* è di **tipo nvarchar (255)** e non prevede alcun valore predefinito. Se una stringa di risorsa è più lunga di **nvarchar (255)**, verrà troncata in **nvarchar (255)**.  
   
  *resource_name* viene confrontato in formato binario e pertanto distingue tra maiuscole e minuscole indipendentemente dalle impostazioni delle regole di confronto del database corrente.  
@@ -54,22 +54,22 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 > [!NOTE]  
 >  Dopo l'acquisizione di un blocco a livello di applicazione, è possibile recuperare solo i primi 32 caratteri in testo normale. La parte rimanente viene sottoposta a hashing.  
   
- [ @LockMode= ] '*Lock_Mode*'  
+ [ @LockMode =]'*Lock_Mode*'  
  Modalità di blocco da acquisire per una particolare risorsa. *lock_mode* è di tipo **nvarchar(32)** e non dispone di valore predefinito. Il valore può essere uno dei seguenti: **Shared**, **Update**, **IntentShared**, **IntentExclusive**o **Exclusive**. Per altre informazioni, vedere [modalità di blocco](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes).
   
- [ @LockOwner= ] '*lock_owner*'  
+ [ @LockOwner =]'*lock_owner*'  
  Proprietario del blocco, ovvero il valore di *lock_owner* al momento della richiesta del blocco. *lock_owner* è **nvarchar(32)**. Il valore può essere **Transaction** (impostazione predefinita) o **Session**. Quando il valore *lock_owner* è **Transaction**, per impostazione predefinita o specificato in modo esplicito, è necessario eseguire sp_getapplock all'interno di una transazione.  
   
- [ @LockTimeout= ] '*valore*'  
- Valore di timeout del blocco espresso in millisecondi. Il valore predefinito corrisponde al valore restituito da @@LOCK_TIMEOUT. Per indicare che una richiesta di blocco deve restituire un codice restituito-1 anziché attendere il blocco quando la richiesta non può essere concessa immediatamente, specificare 0.  
+ [ @LockTimeout =]'*valore*'  
+ Valore di timeout del blocco espresso in millisecondi. Il valore predefinito corrisponde al valore restituito da @ @LOCK_TIMEOUT . Per indicare che una richiesta di blocco deve restituire un codice restituito-1 anziché attendere il blocco quando la richiesta non può essere concessa immediatamente, specificare 0.  
   
- [ @DbPrincipal= ] '*database_principal*'  
+ [ @DbPrincipal =]'*database_principal*'  
  Utente, ruolo o ruolo applicazione al quale sono state assegnate autorizzazioni per un oggetto di un database. Il chiamante della funzione deve essere un membro del ruolo predefinito del database *database_principal*, dbo o db_owner per chiamare la funzione correttamente. Il valore predefinito è public.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  \>= 0 (esito positivo) o < 0 (esito negativo)  
   
-|valore|Risultato|  
+|Valore|Risultato|  
 |-----------|------------|  
 |0|Il blocco è stato concesso in modo sincrono.|  
 |1|Il blocco è stato concesso dopo il rilascio di altri blocchi incompatibili.|  
@@ -139,7 +139,7 @@ GO
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo public.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene inserito un blocco condiviso, associato alla transazione corrente, nella risorsa `Form1` del database `AdventureWorks2012`.  
   
 ```  

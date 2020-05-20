@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sp_fulltext_keymappings
 - full-text indexes [SQL Server], troubleshooting
 ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef8bd6cfbcc10fa0625b4925da618ab275331a32
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fc68be51382b72dee1b143a3535d631ae93dbb7c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124236"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833277"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -55,7 +55,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 >  Per informazioni sull'utilizzo di uno, due o tre parametri, vedere la sezione "Osservazioni" più avanti in questo argomento.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- Nessuno.  
+ No.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -86,12 +86,12 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 -   Viene rilevato il valore NULL per un parametro che può essere diverso da NULL.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
   
 > [!NOTE]  
->  Negli esempi riportati in questa sezione utilizzare la tabella `Production.ProductReview` del database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . È possibile creare questo indice eseguendo l'esempio fornito per la `ProductReview` tabella in [create fulltext index &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
+>  Negli esempi riportati in questa sezione utilizzare la tabella `Production.ProductReview` del database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . È possibile creare questo indice eseguendo l'esempio fornito per la `ProductReview` tabella in [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
   
-### <a name="a-obtaining-all-the-key-and-docid-values"></a>A. Recupero di tutti i valori Key e DocId  
+### <a name="a-obtaining-all-the-key-and-docid-values"></a>R. Recupero di tutti i valori Key e DocId  
  Nell'esempio seguente viene utilizzata un'istruzione [Declare](../../t-sql/language-elements/declare-local-variable-transact-sql.md) per creare una variabile locale `@table_id` e per assegnare l'ID della `ProductReview` tabella come valore. Nell'esempio viene eseguito **sp_fulltext_keymappings** specificando `@table_id` per il parametro *table_id* .  
   
 > [!NOTE]  

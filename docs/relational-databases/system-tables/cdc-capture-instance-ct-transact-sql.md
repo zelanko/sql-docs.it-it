@@ -1,5 +1,5 @@
 ---
-title: CDC. &lt;capture_instance&gt;_CT (Transact-SQL) | Microsoft Docs
+title: CDC. &lt; capture_instance &gt; _CT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - cdc.<capture_instance>_CT
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6595fa2a2462463b9ecc64778af1d72e588477d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 02f08a02236195d02f36c0b8e24b792adf46933e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72908399"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833094"
 ---
-# <a name="cdcltcapture_instancegt_ct-transact-sql"></a>CDC. &lt;capture_instance&gt;_CT (Transact-SQL)
+# <a name="cdcltcapture_instancegt_ct-transact-sql"></a>CDC. &lt; capture_instance &gt; _CT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Tabella delle modiche creata quando Change Data Capture è abilitato in una tabella di origine. La tabella restituisce una riga per ogni operazione di inserimento ed eliminazione eseguita nella tabella di origine e due righe per ogni operazione di aggiornamento eseguita nella tabella di origine. Se non viene specificato al momento dell'abilitazione della tabella di origine, il nome della tabella delle modifiche viene derivato. Il formato del nome è CDC. *capture_instance*_CT dove *capture_instance* è il nome dello schema della tabella di origine e il nome della tabella di origine nel formato *schema_table*. Se, ad esempio, la tabella **Person. Address** nel database di esempio **AdventureWorks** è abilitata per Change Data Capture, il nome della tabella delle modifiche derivata sarà **CDC. Person_Address_CT**.  
@@ -45,7 +45,7 @@ ms.locfileid: "72908399"
   
 ## <a name="remarks"></a>Osservazioni  
 
-La `__$command_id` colonna colonna was è stata introdotta in un aggiornamento cumulativo nelle versioni da 2012 a 2016. Per informazioni sulla versione e sul download, vedere l'articolo [della Knowledge base 3030352 alla correzione: la tabella delle modifiche è ordinata in modo errato per le righe aggiornate dopo aver abilitato Change Data Capture per un database Microsoft SQL Server](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  Per ulteriori informazioni, vedere la pagina relativa alla [funzionalità CDC potrebbe interrompersi dopo l'aggiornamento alla versione più recente di cu per SQL Server 2012, 2014 e 2016](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
+La colonna colonna `__$command_id` was è stata introdotta in un aggiornamento cumulativo nelle versioni da 2012 a 2016. Per informazioni sulla versione e sul download, vedere l'articolo [della Knowledge base 3030352 alla correzione: la tabella delle modifiche è ordinata in modo errato per le righe aggiornate dopo aver abilitato Change Data Capture per un database Microsoft SQL Server](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  Per ulteriori informazioni, vedere la pagina relativa alla [funzionalità CDC potrebbe interrompersi dopo l'aggiornamento alla versione più recente di cu per SQL Server 2012, 2014 e 2016](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
 
 ## <a name="captured-column-data-types"></a>Tipi di dati delle colonne acquisite  
  Le colonne acquisite incluse in questa tabella hanno lo stesso tipo di dati e valore delle corrispondenti colonne di origine, con le seguenti eccezioni:  
@@ -57,7 +57,7 @@ La `__$command_id` colonna colonna was è stata introdotta in un aggiornamento c
  Tuttavia, i valori in queste colonne sono uguali ai valori della colonna di origine.  
   
 ### <a name="large-object-data-types"></a>Tipi di dati per oggetti di grandi dimensioni:  
- Alle colonne con tipo di dati **Image**, **Text**e **ntext** viene sempre assegnato un valore **null** quando _ _ $ operation = \_ \_1 o $Operation = 3. Alle colonne con tipo di dati **varbinary (max)**, **varchar (max)** o **nvarchar (max)** viene assegnato **NULL** un valore null \_ \_quando $Operation = 3 a meno che la colonna non sia stata modificata durante l'aggiornamento. Quando \_ \_$Operation = 1, a queste colonne viene assegnato il relativo valore al momento dell'eliminazione. Le colonne calcolate incluse in un'istanza di acquisizione hanno sempre un valore **null**.  
+ Alle colonne con tipo di dati **Image**, **Text**e **ntext** viene sempre assegnato un valore **null** quando _ _ $ operation = 1 o \_ \_ $Operation = 3. Alle colonne con tipo di dati **varbinary (max)**, **varchar (max)** o **nvarchar (max)** viene assegnato un valore **null** quando \_ \_ $Operation = 3 a meno che la colonna non sia stata modificata durante l'aggiornamento. Quando \_ \_ $Operation = 1, a queste colonne viene assegnato il relativo valore al momento dell'eliminazione. Le colonne calcolate incluse in un'istanza di acquisizione hanno sempre un valore **null**.  
   
  Per impostazione predefinita, la dimensione massima che può essere aggiunta a una colonna acquista in una singola istruzione INSERT, UPDATE, WRITETEXT o UPDATETEXT è pari a 65.536 byte o 64 KB Per aumentare questa dimensione per supportare dati LOB di dimensioni maggiori, usare l' [opzione di configurazione del server Configure max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) per specificare una dimensione massima maggiore. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  
   

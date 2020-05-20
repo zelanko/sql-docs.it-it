@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticlecolumndatatype
 ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f101d9081c7eb898d43c461a3bd64eca0c043b64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: aa069ffe0d4ce677542ac714b19475aa3930f290
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67995522"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833460"
 ---
 # <a name="sp_changearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,19 +53,19 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
   
 `[ @column = ] 'column'`Nome della colonna per cui modificare il mapping dei tipi di dati. *Column* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @type = ] 'type'`Nome del tipo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dati nella colonna di destinazione. *Type* è di tipo **sysname**e il valore predefinito è null.  
+`[ @type = ] 'type'`Nome del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati nella colonna di destinazione. *Type* è di tipo **sysname**e il valore predefinito è null.  
   
-`[ @length = ] length`Lunghezza del tipo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dati nella colonna di destinazione. *length* è di tipo **bigint**e il valore predefinito è null.  
+`[ @length = ] length`Lunghezza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati nella colonna di destinazione. *length* è di tipo **bigint**e il valore predefinito è null.  
   
-`[ @precision = ] precision`Precisione del tipo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dati nella colonna di destinazione. *Precision* è di tipo **bigint**e il valore predefinito è null.  
+`[ @precision = ] precision`Precisione del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati nella colonna di destinazione. *Precision* è di tipo **bigint**e il valore predefinito è null.  
   
-`[ @publisher = ] 'publisher'`Specifica un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publisher = ] 'publisher'`Specifica un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
- **Sp_changearticlecolumndatatype** viene utilizzato per eseguire l'override dei mapping dei tipi di dati predefiniti tra i tipi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]server di pubblicazione supportati (Oracle e). Per visualizzare i mapping dei tipi di dati predefiniti, eseguire [sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md).  
+ **Sp_changearticlecolumndatatype** viene utilizzato per eseguire l'override dei mapping dei tipi di dati predefiniti tra i tipi di server di pubblicazione supportati (Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Per visualizzare i mapping dei tipi di dati predefiniti, eseguire [sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md).  
   
  **sp_changearticlecolumndatatype** è supportato solo per i Publisher Oracle. Se si esegue questa stored procedure su una pubblicazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene generato un errore.  
   

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_table
 ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1db3a16b8072df38937bb482ac85a75dec6e83b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a906f17e655775308d72d04ed8917ca67b205b6a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124141"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833232"
 ---
 # <a name="sp_fulltext_table-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_fulltext_table
   
 `[ @action = ] 'action'`Azione da eseguire. *Action* è di **tipo nvarchar (50)** e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**Crea**|Crea i metadati per un indice full-text per la tabella a cui fa riferimento *qualified_table_name* e specifica che i dati dell'indice full-text per questa tabella devono risiedere nella *fulltext_catalog_name*. Questa azione indica inoltre l'utilizzo di *unique_index_name* come colonna chiave full-text. Questo indice univoco deve essere già presente e definito in una colonna della tabella.<br /><br /> Nella tabella sarà possibile eseguire una ricerca full-text solo dopo il popolamento del catalogo full-text.|  
 |**Goccia**|Elimina i metadati nell'indice full-text per *qualified_table_name*. Se l'indice full-text è attivo, viene disattivato automaticamente prima dell'eliminazione. Non è necessario rimuovere le colonne prima di eliminare l'indice full-text.|  
@@ -66,7 +66,7 @@ sp_fulltext_table
 |**Stop_background_updateindex**|Arresta la propagazione delle modifiche rilevate nell'indice full-text.|  
 |**start_full**|Avvia un popolamento completo dell'indice full-text per la tabella.|  
 |**start_incremental**|Avvia un popolamento incrementale dell'indice full-text per la tabella.|  
-|**Arresta**|Arresta un popolamento completo o incrementale.|  
+|**Stop**|Arresta un popolamento completo o incrementale.|  
   
 `[ @ftcat = ] 'fulltext_catalog_name'`Nome del catalogo full-text esistente valido per un'azione **create** . Per tutte le altre azioni questo parametro deve essere NULL. *fulltext_catalog_name* è di **tipo sysname**e il valore predefinito è null.  
   

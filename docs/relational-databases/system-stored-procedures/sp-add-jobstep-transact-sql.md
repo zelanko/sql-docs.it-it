@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_jobstep
 ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c312f8798ba4ad42eed327123c9adc5feacba8a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5d9f68c1e3b4f0bec4ba338af12fb1f24c5ff204
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74412849"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833692"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 
@@ -33,7 +33,7 @@ ms.locfileid: "74412849"
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > In [istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la maggior parte, ma non tutti i tipi di processo SQL Server Agent sono supportati. Per informazioni dettagliate, vedere [istanza gestita di database SQL di Azure differenze di T-SQL da SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) .
+  > In [istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la maggior parte, ma non tutti i tipi di processo SQL Server Agent sono supportati. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -73,11 +73,11 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @step_name = ] 'step_name'`Nome del passaggio. *step_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @subsystem = ] 'subsystem'`Sottosistema utilizzato dal servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per eseguire il *comando*. il *sottosistema* è di **tipo nvarchar (40)**. i possibili valori sono i seguenti.  
+`[ @subsystem = ] 'subsystem'`Sottosistema utilizzato dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servizio Agent per eseguire il *comando*. il *sottosistema* è di **tipo nvarchar (40)**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
-|'**ACTIVESCRIPTING**'|Script ActiveX<br /><br /> ** \* Importante \* \* **[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
+|'**ACTIVESCRIPTING**'|Script ActiveX<br /><br /> ** \* \* \* Importante \* **[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |'**CmdExec**'|Comando del sistema operativo o programma eseguibile|  
 |'**Distribution**'|Processo di Agente distribuzione repliche|  
 |'**Snapshot**'|Processo di Agente snapshot repliche|  
@@ -110,7 +110,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @on_success_action = ] success_action`Azione da eseguire se il passaggio ha esito positivo. *success_action* è di **tinyint**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione (azione)|  
+|Valore|Descrizione (azione)|  
 |-----------|----------------------------|  
 |**1** (impostazione predefinita)|Uscita in caso di esito positivo|  
 |**2**|Uscita in caso di esito negativo|  
@@ -121,7 +121,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @on_fail_action = ] fail_action`Azione da eseguire se il passaggio ha esito negativo. *fail_action* è di **tinyint**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione (azione)|  
+|Valore|Descrizione (azione)|  
 |-----------|----------------------------|  
 |**1**|Uscita in caso di esito positivo|  
 |**2** (impostazione predefinita)|Uscita in caso di esito negativo|  
@@ -130,7 +130,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @on_fail_step_id = ] fail_step_id`ID del passaggio del processo da eseguire se il passaggio ha esito negativo e *fail_action* è **4**. *fail_step_id* è di **tipo int**e il valore predefinito è **0**.  
   
-`[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] il *Server* è di **tipo nvarchar (30)** e il valore predefinito è null.  
+`[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]il *Server* è di **tipo nvarchar (30)** e il valore predefinito è null.  
   
 `[ @database_name = ] 'database'`Nome del database in cui eseguire un [!INCLUDE[tsql](../../includes/tsql-md.md)] passaggio. il *database* è di **tipo sysname**e il valore predefinito è null. in tal caso, viene utilizzato il database **Master** . I nomi racchiusi tra parentesi quadre ([ ]) non sono ammessi. Per un passaggio di processo ActiveX, il *database* è il nome del linguaggio di script utilizzato dal passaggio.  
   
@@ -142,11 +142,11 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @os_run_priority = ] run_priority`Riservati.  
   
-`[ @output_file_name = ] 'file_name'`Nome del file in cui viene salvato l'output di questo passaggio. *file_name* è di **tipo nvarchar (200)** e il valore predefinito è null. *file_name* possono includere uno o più token elencati sotto *Command*. Questo parametro è valido solo con [!INCLUDE[tsql](../../includes/tsql-md.md)]i comandi in esecuzione nei sottosistemi, **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]o. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
+`[ @output_file_name = ] 'file_name'`Nome del file in cui viene salvato l'output di questo passaggio. *file_name* è di **tipo nvarchar (200)** e il valore predefinito è null. *file_name* possono includere uno o più token elencati sotto *Command*. Questo parametro è valido solo con i comandi in esecuzione nei [!INCLUDE[tsql](../../includes/tsql-md.md)] sottosistemi, **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 `[ @flags = ] flags`È un'opzione che controlla il comportamento. *Flags* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**0** (predefinito)|Il file di output viene sovrascritto|  
 |**2**|L'output viene aggiunto alla fine del file di output.|  
@@ -156,9 +156,9 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**32**|Tutto l'output viene scritto nella cronologia processo|  
 |**64**|Creare un evento Windows da utilizzare come segnale per l'interruzione dell'oggetto JobStep Cmd|  
   
-`[ @proxy_id = ] proxy_id`Numero ID del proxy in cui viene eseguito il passaggio di processo. *proxy_id* è di tipo **int**e il valore predefinito è null. Se non viene specificato alcun *proxy_id* , non viene specificato alcun *proxy_name* e non viene specificato alcun *user_name* , il passaggio del processo viene eseguito come [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio per Agent.  
+`[ @proxy_id = ] proxy_id`Numero ID del proxy in cui viene eseguito il passaggio di processo. *proxy_id* è di tipo **int**e il valore predefinito è null. Se non viene specificato alcun *proxy_id* , non viene specificato alcun *proxy_name* e non viene specificato alcun *user_name* , il passaggio del processo viene eseguito come account del servizio per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
-`[ @proxy_name = ] 'proxy_name'`Nome del proxy in cui viene eseguito il passaggio di processo. *proxy_name* è di tipo **sysname**e il valore predefinito è null. Se non viene specificato alcun *proxy_id* , non viene specificato alcun *proxy_name* e non viene specificato alcun *user_name* , il passaggio del processo viene eseguito come [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio per Agent.  
+`[ @proxy_name = ] 'proxy_name'`Nome del proxy in cui viene eseguito il passaggio di processo. *proxy_name* è di tipo **sysname**e il valore predefinito è null. Se non viene specificato alcun *proxy_id* , non viene specificato alcun *proxy_name* e non viene specificato alcun *user_name* , il passaggio del processo viene eseguito come account del servizio per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -171,7 +171,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
  SQL Server Management Studio include un semplice strumento grafico per la gestione dei processi ed è lo strumento consigliato per la creazione e gestione dell'infrastruttura dei processi.  
   
- Per impostazione predefinita, un passaggio di processo viene eseguito con l'account [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del servizio per Agent, a meno che non sia specificato un altro proxy. Un requisito di questo account deve essere un membro del ruolo di sicurezza predefinito **sysadmin** .
+ Per impostazione predefinita, un passaggio di processo viene eseguito con l'account del servizio per Agent, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] meno che non sia specificato un altro proxy. Un requisito di questo account deve essere un membro del ruolo di sicurezza predefinito **sysadmin** .
   
  Un proxy può essere identificato da *proxy_name* o *proxy_id*.  
   
@@ -188,7 +188,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
  L'autore del passaggio del processo deve avere accesso al proxy per il passaggio del processo. I membri del ruolo predefinito del server **sysadmin** hanno accesso a tutti i proxy. Per quanto riguarda gli altri utenti, è necessario concedere esplicitamente l'accesso a un proxy.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene creato un passaggio di processo che modifica l'accesso al database impostando la modalità sola lettura per il database Sales. In questo esempio, inoltre, vengono specificati 5 tentativi, con un intervallo di 5 minuti tra ognuno.  
   
 > [!NOTE]  

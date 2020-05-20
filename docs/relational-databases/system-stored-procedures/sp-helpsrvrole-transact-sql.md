@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpsrvrole
 ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a632e6923ab3127a363650c63533fa548d1acc12
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9abcbec940d9afa7b5aeb36183610b471bb3a3df
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006124"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833184"
 ---
 # <a name="sp_helpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 ## <a name="arguments"></a>Argomenti  
 `[ @srvrolename = ] 'role'`Nome del ruolo predefinito del server. *Role* è di **tipo sysname**e il valore predefinito è null. *Role* può essere uno dei valori seguenti.  
   
-|Ruolo predefinito del server|Descrizione|  
+|Ruolo predefinito del server|Description|  
 |-----------------------|-----------------|  
 |sysadmin|Amministratori di sistema|  
 |securityadmin|Amministratori di sicurezza|  
@@ -60,14 +60,14 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|Nome del ruolo del server|  
-|Descrizione|**sysname**|Descrizione di ServerRole|  
+|Description|**sysname**|Descrizione di ServerRole|  
   
 ## <a name="remarks"></a>Osservazioni  
  I ruoli predefiniti del server sono definiti a livello di server e dispongono delle autorizzazioni per l'esecuzione di attività amministrative specifiche a livello del server. Non è possibile aggiungere, rimuovere o modificare i ruoli predefiniti del server.  
   
  Per aggiungere o rimuovere membri dai ruoli del server, vedere [ALTER server role &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
- Tutti gli account di accesso sono membri di Public. sp_helpsrvrole non riconosce il ruolo public perché, internamente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non implementa public come ruolo.  
+ Tutti gli account di accesso sono membri di Public. sp_helpsrvrole non riconosce il ruolo public perché, internamente, non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa public come ruolo.  
   
  sp_helpsrvrole non accetta un ruolo del server definito dall'utente come argomento. Per elencare i ruoli del server definiti dall'utente, vedere gli esempi in [ALTER server role &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   

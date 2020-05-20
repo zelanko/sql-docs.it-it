@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_jobsteplog
 ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 66b353c7fc79b49cb9cd3fb9fe228075f3a0d473
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e56f2c544f168dbcedc0424f26818aad2e3c2c79
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305094"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833349"
 ---
 # <a name="sp_delete_jobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,15 +49,15 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 > **Nota:** È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi.  
   
-`[ @step_id = ] step_id`Numero di identificazione del passaggio del processo per il quale è necessario eliminare il log dei passaggi del processo. Se non è incluso, tutti i log dei passaggi di processo nel processo vengono ** \@** eliminati a meno che non vengano specificati older_than o ** \@larger_than** . *step_id* è di **tipo int**e il valore predefinito è null.  
+`[ @step_id = ] step_id`Numero di identificazione del passaggio del processo per il quale è necessario eliminare il log dei passaggi del processo. Se non è incluso, tutti i log dei passaggi di processo nel processo vengono eliminati a meno che non vengano specificati ** \@ older_than** o ** \@ larger_than** . *step_id* è di **tipo int**e il valore predefinito è null.  
   
 `[ @step_name = ] 'step_name'`Nome del passaggio del processo per cui deve essere eliminato il log dei passaggi del processo. *step_name* è di **tipo sysname**e il valore predefinito è null.  
   
 > **Nota:** È possibile specificare *step_id* o *step_name* , ma non è possibile specificarli entrambi.  
   
-`[ @older_than = ] 'date'`Data e ora del log del passaggio di processo meno recente che si desidera memorizzare. Verranno rimossi tutti i log dei passaggi di processo antecedenti questa data e ora. *date* è di tipo **DateTime**e il valore predefinito è null. È possibile specificare sia ** \@older_than** che ** \@larger_than** .  
+`[ @older_than = ] 'date'`Data e ora del log del passaggio di processo meno recente che si desidera memorizzare. Verranno rimossi tutti i log dei passaggi di processo antecedenti questa data e ora. *date* è di tipo **DateTime**e il valore predefinito è null. È possibile specificare sia ** \@ older_than** che ** \@ larger_than** .  
   
-`[ @larger_than = ] 'size_in_bytes'`Dimensioni in byte del log dei passaggi di processo più grande che si desidera memorizzare. Vengono rimossi tutti i log dei passaggi di processo la cui dimensione è maggiore rispetto a quella indicata. È possibile specificare sia ** \@larger_than** che ** \@older_than** .  
+`[ @larger_than = ] 'size_in_bytes'`Dimensioni in byte del log dei passaggi di processo più grande che si desidera memorizzare. Vengono rimossi tutti i log dei passaggi di processo la cui dimensione è maggiore rispetto a quella indicata. È possibile specificare sia ** \@ larger_than** che ** \@ older_than** .  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -68,7 +68,7 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>Osservazioni  
  **sp_delete_jobsteplog** si trova nel database **msdb** .  
   
- Se non viene specificato alcun argomento eccetto ** \@job_id** o ** \@job_name** , vengono eliminati tutti i log dei passaggi di processo per il processo specificato.  
+ Se non viene specificato alcun argomento eccetto ** \@ job_id** o ** \@ job_name** , vengono eliminati tutti i log dei passaggi di processo per il processo specificato.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  

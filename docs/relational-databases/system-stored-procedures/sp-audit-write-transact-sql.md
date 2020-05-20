@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_audit_write
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9bef63c267bdf5b7d0c2603ed7a93af329d1992c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ba751e5872f4f6fa4973674170d54a0dbc75f75a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251976"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833428"
 ---
 # <a name="sp_audit_write-transact-sql"></a>sp_audit_write (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
 ## <a name="arguments"></a>Argomenti  
  `[ @user_defined_event_id = ] user_defined_event_id`  
- Parametro definito dall'utente e registrato nella colonna **user_defined_event_id** del log di controllo. user_defined_event_id è di tipo **smallint**. * \@*  
+ Parametro definito dall'utente e registrato nella colonna **user_defined_event_id** del log di controllo. * \@ user_defined_event_id* è di tipo **smallint**.  
   
  `[ @succeeded = ] succeeded`  
  Parametro passato dall'utente per indicare se l'evento ha avuto esito positivo o meno. Viene visualizzato nella colonna del log di controllo indicante l'esito positivo. `@succeeded`è di **bit**.  

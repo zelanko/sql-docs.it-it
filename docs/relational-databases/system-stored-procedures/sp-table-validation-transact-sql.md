@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_table_validation
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 736b4f00e8d33a6bd1e095addc5219fe305ae26a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c63e6e535aed72684e56d5f578e52e065f8190d2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72173551"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834220"
 ---
 # <a name="sp_table_validation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @rowcount_only = ] type_of_check_requested`Specifica il tipo di checksum o di conteggio delle righe da eseguire. *type_of_check_requested* è di **smallint**e il valore predefinito è **1**.  
   
- Se è **0**, eseguire un conteggio delle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] righe e un checksum compatibile con 7,0.  
+ Se è **0**, eseguire un conteggio delle righe e un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] checksum compatibile con 7,0.  
   
  Se è **1**, eseguire solo un controllo RowCount.  
   
@@ -63,7 +63,7 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @full_or_fast = ] full_or_fast`Metodo utilizzato per calcolare il conteggio delle righe. *full_or_fast* è di **tinyint**e il valore predefinito è **2**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|Esegue un conteggio completo con COUNT(*).|  
 |**1**|Esegue un conteggio rapido da **sysindexes. Rows**. Il conteggio delle righe in **sysindexes** è molto più veloce rispetto al conteggio delle righe nella tabella effettiva. Tuttavia, poiché **sysindexes** viene aggiornato in modo differito, il conteggio delle righe potrebbe non essere accurato.|  
@@ -71,7 +71,7 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @shutdown_agent = ] shutdown_agent`Se il agente di distribuzione è in esecuzione **sp_table_validation**, specifica se il agente di distribuzione dovrebbe essere arrestato immediatamente dopo il completamento della convalida. *shutdown_agent* è di **bit**e il valore predefinito è **0**. Se è **0**, l'agente di replica non viene arrestato. Se è **1**, viene generato l'errore 20578 e l'agente di replica viene segnalato per l'arresto. Questo parametro viene ignorato quando **sp_table_validation** viene eseguito direttamente da un utente.  
   
-`[ @table_name = ] table_name`Nome della tabella della vista utilizzata per i messaggi di output. *table_name* è di ** \@** **tipo sysname**e il valore predefinito è Table.  
+`[ @table_name = ] table_name`Nome della tabella della vista utilizzata per i messaggi di output. *table_name* è di **tipo sysname**e il valore predefinito è ** \@ Table**.  
   
 `[ @column_list = ] 'column_list'`Elenco di colonne da utilizzare nella funzione checksum. *column_list* è di **tipo nvarchar (4000)** e il valore predefinito è null. Abilita la convalida degli articoli di tipo merge per specificare un elenco di colonne che non include le colonne calcolate e timestamp.  
   
@@ -87,7 +87,7 @@ sp_table_validation [ @table = ] 'table'
   
  Quando si esegue un'operazione di checksum, è necessario che la struttura della tabella nei due server sia identica, ovvero le tabelle nei due server devono includere le stesse colonne nel medesimo ordine aventi lo stesso tipo di dati, la stessa lunghezza e le stesse condizioni NULL/NOT NULL. Se, ad esempio, nel server di pubblicazione è stata eseguita un'istruzione CREATE TABLE e quindi un'istruzione ALTER TABLE per l'inserimento di colonne, ma lo script applicato al Sottoscrittore è una tabella CREATE semplice, la struttura NON è identica. Se non si è certi che la struttura delle due tabelle sia identica, esaminare [syscolumns](../../relational-databases/system-compatibility-views/sys-syscolumns-transact-sql.md) e verificare che l'offset in ogni tabella sia lo stesso.  
   
- È probabile che i valori a virgola mobile generino differenze di checksum se è stata utilizzata l' **utilità bcp** in modalità carattere, ovvero se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la pubblicazione include Sottoscrittori non. Ciò è dovuto a differenze di precisione minime ma inevitabili nella conversione da e verso la modalità carattere.  
+ È probabile che i valori a virgola mobile generino differenze di checksum se è stata utilizzata l' **utilità bcp** in modalità carattere, ovvero se la pubblicazione include [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sottoscrittori non. Ciò è dovuto a differenze di precisione minime ma inevitabili nella conversione da e verso la modalità carattere.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per eseguire **sp_table_validation**, è necessario disporre delle autorizzazioni SELECT per la tabella da convalidare.  

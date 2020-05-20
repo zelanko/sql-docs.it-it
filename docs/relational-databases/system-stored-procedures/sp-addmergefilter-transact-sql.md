@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergefilter
 ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0ba0e2384ec63d29d3a5030c0b018998896dc8cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 76b5b8b5aa9f867c1dcf4b47940fce117c35bc69
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68769185"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831820"
 ---
 # <a name="sp_addmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -74,9 +74,9 @@ sp_addmergefilter [ @publication = ] 'publication'
   
 `[ @filter_type = ] filter_type`Specifica il tipo di filtro da aggiungere. *filter_type* è di **tinyint**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
-|**1**|Solo filtro di join. Necessario per supportare [!INCLUDE[ssEW](../../includes/ssew-md.md)] i sottoscrittori.|  
+|**1**|Solo filtro di join. Necessario per supportare i [!INCLUDE[ssEW](../../includes/ssew-md.md)] sottoscrittori.|  
 |**2**|Solo relazione tra record logici.|  
 |**3**|Filtro di join e relazione tra record logici.|  
   
@@ -106,7 +106,7 @@ sp_addmergefilter [ @publication = ] 'publication'
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_addmergefilter**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Definire un articolo](../../relational-databases/replication/publish/define-an-article.md)   
  [Definire e modificare un filtro di join tra articoli di merge](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [Filtri join](../../relational-databases/replication/merge/join-filters.md)   

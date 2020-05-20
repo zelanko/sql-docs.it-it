@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_configure_sp
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7984fba52f813644c9dcb25bca2beb123be85622
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6e0f410a73d010d2931cfda2e87a4a4b4cbc1c64
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017718"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832506"
 ---
 # <a name="sysmail_configure_sp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Modifica le impostazioni di configurazione per Posta elettronica database. Le impostazioni di configurazione specificate con **sysmail_configure_sp** si applicano [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] all'intera istanza.  
+  Modifica le impostazioni di configurazione per Posta elettronica database. Le impostazioni di configurazione specificate con **sysmail_configure_sp** si applicano all'intera [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,13 +41,13 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [**@parameter_name** = ] **'**_parameter_name_**'**  
+ [ **@parameter_name** =] **'**_parameter_name_**'**  
  Nome del parametro da modificare.  
   
- [**@parameter_value** = ] **'**_parameter_value_**'**  
+ [ **@parameter_value** =] **'**_parameter_value_**'**  
  Nuovo valore del parametro  
   
- [**@description** = ] **'**_Description_**'**  
+ [ **@description** =] **'**_Description_**'**  
  Descrizione del parametro.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
@@ -75,7 +75,7 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  **A.  Impostazione di Posta elettronica database per eseguire il tentativo con ogni account 10 volte**  
   
  Nell'esempio seguente viene illustrato come impostare Posta elettronica database per ritentare ogni account dieci volte prima di considerare l'account irraggiungibile.  

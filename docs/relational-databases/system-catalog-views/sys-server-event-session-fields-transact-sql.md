@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.server_event_session_fields catalog view
 - xe
 ms.assetid: 7109f9fb-8a1f-432c-92d1-6f8af3e96af1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 81d66f177c230d406fac9dae9373cf85da1837e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 260a0252d096a926eee8ea81c68320dc3b035b31
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133216"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834022"
 ---
 # <a name="sysserver_event_session_fields-transact-sql"></a>sys.server_event_session_fields (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -18,14 +18,14 @@ helpviewer_keywords:
 - core.sp_purge_data stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 72737a9b623e7979617784c1ef49c3f6d09aaea8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 27f2d95a23a89c4e50924944709ba38a39a6ff2d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942499"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833708"
 ---
 # <a name="coresp_purge_data-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,18 +46,18 @@ core.sp_purge_data
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [@retention_days =] *retention_days*  
+ [ @retention_days =] *retention_days*  
  Numero di giorni per cui conservare i dati nelle tabelle del data warehouse di gestione. I dati con un timestamp più vecchio di *retention_days* vengono rimossi. *retention_days* è di **smallint**e il valore predefinito è null. Se specificato, il valore deve essere positivo. Quando è NULL, il valore nella colonna valid_through della vista core.snapshots determina le righe da rimuovere.  
   
- [@instance_name = ] '*instance_name*'  
+ [ @instance_name =]'*instance_name*'  
  Nome dell'istanza per l'insieme di raccolta. *instance_name* è di **tipo sysname**e il valore predefinito è null.  
   
- *instance_name* deve essere il nome completo dell'istanza, costituito dal nome del computer e dal nome dell'istanza nel formato *nomecomputer*\\*NomeIstanza*. Quando è NULL, viene utilizzata l'istanza predefinita nel server locale.  
+ *instance_name* deve essere il nome completo dell'istanza, costituito dal nome del computer e dal nome dell'istanza nel formato *nomecomputer* \\ *NomeIstanza*. Quando è NULL, viene utilizzata l'istanza predefinita nel server locale.  
   
- [@collection_set_uid = ] '*collection_set_uid*'  
+ [ @collection_set_uid =]'*collection_set_uid*'  
  GUID per il set di raccolta. *collection_set_uid* è di tipo **uniqueidentifier**e il valore predefinito è null. Quando è NULL, vengono rimosse le righe risultanti da tutti i set di raccolta. Per ottenere questo valore, eseguire una query sulla vista del catalogo syscollector_collection_sets.  
   
- [@duration = ] *durata*  
+ [ @duration =] *durata*  
  Numero massimo di minuti per l'esecuzione dell'operazione di eliminazione. *Duration* è di **smallint**e il valore predefinito è null. Se specificato, il valore deve essere zero o un numero intero positivo. Quando è NULL, l'operazione viene eseguita finché non vengono rimosse tutte le righe restituite o l'operazione non viene arrestata manualmente.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
@@ -66,7 +66,7 @@ core.sp_purge_data
 ## <a name="remarks"></a>Osservazioni  
  Questa procedura seleziona le righe della vista core.snapshots risultanti per la rimozione in base a un periodo di memorizzazione. Tutte le righe risultanti per la rimozione vengono eliminate dalla tabella core.snapshots_internal. L'eliminazione delle righe precedenti genera un'azione di eliminazione a catena in tutte le tabelle del data warehouse di gestione. Questa operazione viene eseguita utilizzando la clausola ON DELETE CASCADE definita per tutte le tabelle in cui vengono archiviati i dati raccolti.  
   
- Ogni snapshot e i dati associati vengono eliminati all'interno di una transazione esplicita, dopodiché viene eseguito il commit. Pertanto, se l'operazione di ripulitura viene arrestata manualmente o il valore @duration specificato per viene superato, rimangono solo i dati di cui non è stato eseguito il commit. Questi dati possono essere rimossi alla successiva esecuzione del processo.  
+ Ogni snapshot e i dati associati vengono eliminati all'interno di una transazione esplicita, dopodiché viene eseguito il commit. Pertanto, se l'operazione di ripulitura viene arrestata manualmente o il valore specificato per @duration viene superato, rimangono solo i dati di cui non è stato eseguito il commit. Questi dati possono essere rimossi alla successiva esecuzione del processo.  
   
  La procedura deve essere eseguita nel contesto del database del data warehouse di gestione.  
   
