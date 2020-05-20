@@ -11,14 +11,14 @@ helpviewer_keywords:
 - cursors [ADO], forward-only
 - forward-only cursors [ADO]
 ms.assetid: 2b1e062f-3294-4a6f-8241-a17045c4df18
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e84fbf2b8fda2fa2b14088af1e0830d8109aba8a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8943e97e8ce246732f0153a53f8be8d80d4fa88f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925300"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758197"
 ---
 # <a name="forward-only-cursors"></a>Cursori forward-only
 Il tipo di cursore predefinito tipico, denominato cursore di tipo "Avanti" o non scorrevole ", può essere spostato solo in avanti nel set di risultati. Un cursore di sola trasmissione non supporta lo scorrimento, ovvero la possibilità di spostarsi avanti e indietro nel set di risultati. supporta solo il recupero di righe dall'inizio alla fine del set di risultati. Con alcuni cursori di sola lettura (ad esempio con la libreria di cursori SQL Server), tutte le istruzioni INSERT, Update e DELETE eseguite dall'utente corrente (o di cui è stato eseguito il commit da altri utenti) che interessano le righe nel set di risultati sono visibili durante il recupero delle righe. Poiché lo scorrimento all'indietro del cursore non è consentito, tuttavia, le modifiche apportate alle righe nel database dopo il recupero delle righe stesse non sono visibili tramite il cursore.  

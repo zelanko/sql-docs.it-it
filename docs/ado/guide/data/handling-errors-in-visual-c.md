@@ -13,14 +13,14 @@ helpviewer_keywords:
 - errors [ADO], Visual C++
 - Visual C++ error handling [ADO]
 ms.assetid: b7576f07-020a-45f7-9e79-b5756f33f7ab
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fb9eb29a78c3ec5f47e3ff09641ba04ca01d204a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1628522a6ef1c9498ea26e987070ee9f3a873d19
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925120"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758847"
 ---
 # <a name="handling-errors-in-visual-c"></a>Gestione degli errori in Visual C++
 In COM, la maggior parte delle operazioni restituisce un codice restituito HRESULT che indica se una funzione è stata completata correttamente. La direttiva #import genera il codice wrapper intorno a ogni proprietà o metodo "Raw" e controlla l'HRESULT restituito. Se HRESULT indica un errore, il codice wrapper genera un errore COM chiamando _com_issue_errorex () con il codice restituito HRESULT come argomento. Gli oggetti errore COM possono essere rilevati in un blocco **try-catch** . (Per motivi di efficienza, rilevare un riferimento a un oggetto _com_error).  

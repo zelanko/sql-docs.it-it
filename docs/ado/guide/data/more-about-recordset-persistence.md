@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bee7d185d5f598a2f0a086bb7e3bea49ddfff88c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c45f457cdf633cc16052ed2945f71da176efe472
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924903"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757587"
 ---
 # <a name="more-about-recordset-persistence"></a>Altre informazioni sulla persistenza dei recordset
 L'oggetto recordset ADO supporta l'archiviazione del contenuto di un oggetto **Recordset** in un file tramite il relativo metodo [Save](../../../ado/reference/ado-api/save-method.md) . Il file archiviato in modo permanente può esistere in un'unità locale, in un server o come URL in un sito Web. Successivamente, il file può essere ripristinato con il metodo [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) dell'oggetto **Recordset** o il metodo [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) dell'oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) .  

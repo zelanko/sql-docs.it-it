@@ -13,21 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - FieldStatusEnum enumeration [ADO]
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d3ad005a4c26a033f6c97d97def4cd55d867c14e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7ea1fc2d8347df28e983b412976c545327456ad8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918660"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756814"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 Specifica lo [stato](../../../ado/reference/ado-api/status-property-ado-field.md) di un [oggetto campo](../../../ado/reference/ado-api/field-object.md).  
   
- I **valori\* adFieldPending** indicano l'operazione che ha causato l'impostazione dello stato e possono essere combinati con altri valori di stato.  
+ I **valori \* adFieldPending** indicano l'operazione che ha causato l'impostazione dello stato e possono essere combinati con altri valori di stato.  
   
-|Costante|valore|Descrizione|  
+|Costante|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adFieldAlreadyExists**|26|Indica che il campo specificato esiste già.|  
 |**adFieldBadStatus**|12|Indica che un valore di stato non valido è stato inviato da ADO al provider OLE DB. Le possibili cause includono un provider OLE DB 1,0 o 1,1 o una combinazione non corretta di [valore](../../../ado/reference/ado-api/value-property-ado.md) e [stato](../../../ado/reference/ado-api/status-property-ado-field.md).|  

@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - RecordTypeEnum enumeration [ADO]
 ms.assetid: f557e537-015d-4ba7-8a41-a6f00b366a91
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: df70838b7986993459df4f37af8b7043626a5d7b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8b47b68b8515ea80405d6083e37a767fb5a6d21e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931269"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756561"
 ---
 # <a name="recordtypeenum"></a>RecordTypeEnum
 Specifica il tipo di oggetto [record](../../../ado/reference/ado-api/record-object-ado.md) .  
   
-|Costante|valore|Descrizione|  
+|Costante|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adSimpleRecord**|0|Indica un record *semplice* (non contiene nodi figlio).|  
 |**adCollectionRecord**|1|Indica un record di *raccolta* (contiene i nodi figlio).|  

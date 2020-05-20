@@ -11,14 +11,14 @@ helpviewer_keywords:
 - providers [ADO], data shaping service for OLE DB
 - data shaping service for OLE DB [ADO]
 ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ddef2feab633627c9549b73787faa1d104d69c5e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 68ed3899311d970da47e627fe844fe05ccd37c78
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926814"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758477"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Panoramica di Microsoft Data Shaping Service per OLE DB
 > [!IMPORTANT]
@@ -36,7 +36,7 @@ ms.locfileid: "67926814"
 ## <a name="dynamic-properties"></a>Proprietà dinamiche
  Quando il provider di servizi viene richiamato, le seguenti proprietà dinamiche vengono aggiunte alla raccolta [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) dell'oggetto[Connection](../../../ado/reference/ado-api/connection-object-ado.md) .
 
-|Nome proprietà dinamica|Descrizione|
+|Nome proprietà dinamica|Description|
 |---------------------------|-----------------|
 |**Nomi di riforme univoci**|Indica se sono consentiti oggetti **Recordset** con valori duplicati per le proprietà del nome di modifica della **forma** . Se questa proprietà dinamica è **true** e viene creato un nuovo **Recordset** con lo stesso nome di modifica della forma specificato dall'utente come **Recordset**esistente, il nome della nuova forma dell'oggetto **Recordset** viene modificato per renderlo univoco. Se questa proprietà è **false** e viene creato un nuovo **Recordset** con lo stesso nome di modifica della forma specificato dall'utente del **Recordset**esistente, entrambi gli oggetti **Recordset** avranno lo stesso nome di modifica della forma. Non è pertanto possibile modificare la forma di un **Recordset** purché siano presenti entrambi i recordset.<br /><br /> Il valore predefinito della proprietà è **false**.|
 |**provider di dati**|Indica il nome del provider che fornirà le righe da modellare. Questo valore può essere NONE se non viene utilizzato un provider per fornire righe.|

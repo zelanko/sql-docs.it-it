@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - DefaultDatabase property
 ms.assetid: 41e8a8dd-e69c-4a09-8736-93502e01961c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c78dfdc476dc9dcf599fcfe7cb87bd5e1a39d281
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5a68a41985515e63e6e8520c30fc662c69e1ced6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919159"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757447"
 ---
 # <a name="defaultdatabase-property"></a>Proprietà DefaultDatabase
 Indica il database predefinito per un oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) .  
@@ -28,7 +28,7 @@ Indica il database predefinito per un oggetto [Connection](../../../ado/referenc
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore **stringa** che restituisce il nome di un database disponibile dal provider.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Utilizzare la proprietà **DefaultDatabase** per impostare o restituire il nome del database predefinito in un oggetto **connessione** specifico.  
   
  Se è presente un database predefinito, le stringhe SQL possono utilizzare una sintassi non qualificata per accedere agli oggetti in tale database. Per accedere agli oggetti in un database diverso da quello specificato nella proprietà **DefaultDatabase** , è necessario qualificare i nomi degli oggetti con il nome del database desiderato. Al momento della connessione, il provider scriverà le informazioni predefinite sul database nella proprietà **DefaultDatabase** . Alcuni provider consentono un solo database per connessione, nel qual caso non è possibile modificare la proprietà **DefaultDatabase** .  
@@ -41,6 +41,6 @@ Indica il database predefinito per un oggetto [Connection](../../../ado/referenc
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Esempio di proprietà provider e DefaultDatabase (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
  [Esempio delle proprietà Provider e DefaultDatabase (VC++)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vc.md)   

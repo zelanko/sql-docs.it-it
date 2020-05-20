@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - RecordStatusEnum enumeration [ADO]
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 233b2f84b6a60c7b5162edce6c1b76b63946ae81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f84f43a90479064c2a95d407b7f816fd48c1c679
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931282"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756759"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
 Specifica lo [stato](../../../ado/reference/ado-api/status-property-ado-recordset.md) di un record per quanto riguarda gli aggiornamenti in batch e altre operazioni bulk.  
   
-|Costante|valore|Descrizione|  
+|Costante|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adRecCanceled**|0x100|Indica che il record non è stato salvato perché l'operazione è stata annullata.|  
 |**adRecCantRelease**|0x400|Indica che il nuovo record non è stato salvato perché il record esistente è stato bloccato.|  

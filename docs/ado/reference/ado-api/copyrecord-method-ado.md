@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - CopyRecord method [ADO]
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: aaabb32234cefe2e3c3727ce5a18dd2d98549a77
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5fc8cfec5752f88909214301931c69dddfe89dc5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933411"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758797"
 ---
 # <a name="copyrecord-method-ado"></a>Metodo CopyRecord (ADO)
 Copia un'entità rappresentata da un [record](../../../ado/reference/ado-api/record-object-ado.md) in un'altra posizione.  
@@ -37,7 +37,7 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
  *origine*  
  Facoltativa. Valore **stringa** che contiene un URL che specifica l'entità da copiare, ad esempio un file o una directory. Se l' *origine* viene omessa o specifica una stringa vuota, il file o la directory rappresentata dal [record](../../../ado/reference/ado-api/record-object-ado.md) corrente verrà copiato.  
   
- *Destination*  
+ *Destinazione*  
  Facoltativa. Valore **stringa** che contiene un URL che specifica il percorso in cui verrà copiato il *codice sorgente* .  
   
  *Nome utente*  

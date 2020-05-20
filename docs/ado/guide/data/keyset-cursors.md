@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Keyset cursors [ADO]
 - cursors [ADO], Keyset
 ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c7a12d1579af407bca77c9fa61d660a84a09f04e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3df797be676961227687117e1fd7bdb748370efd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924902"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757747"
 ---
 # <a name="keyset-cursors"></a>Cursori keyset
 Il cursore keyset fornisce funzionalità tra un cursore statico e un cursore dinamico nella capacità di rilevare le modifiche. Come un cursore statico, non sempre rileva le modifiche all'appartenenza e all'ordine del set di risultati. Come un cursore dinamico, rileva le modifiche ai valori delle righe nel set di risultati.  

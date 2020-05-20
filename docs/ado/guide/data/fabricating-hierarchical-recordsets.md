@@ -13,14 +13,14 @@ helpviewer_keywords:
 - fabricating hierarchical Recordsets [ADO]
 - data shaping [ADO], hierarchical Recordsets
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6fcdb630f2391f685080ac594cfdb537edf626a2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 105dee3121252e94b53d1d8211b94af5e6004c31
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925328"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758307"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>Creazione di recordset gerarchici
 Nell'esempio seguente viene illustrato come costruire un recordset gerarchico senza un'origine dati sottostante utilizzando la grammatica di data shaping per definire le colonne per i **Recordset**padre, figlio e nipote.  

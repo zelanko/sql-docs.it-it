@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Delete method [ADO]
 ms.assetid: 160c575e-df63-4ade-a2d3-5fd8f72e70cc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 965ef1bc84961e3358c530180bfe4e99249b0bc7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 19fb69e51e04a2e15c60767981bc32e4dfe77141
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933171"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757377"
 ---
 # <a name="delete-method-ado-parameters-collection"></a>Metodo Delete (raccolta Parameters ADO)
 Elimina un oggetto dalla raccolta di [parametri](../../../ado/reference/ado-api/parameters-collection-ado.md) .  
@@ -37,7 +37,7 @@ Parameters.Delete Index
  *Indice*  
  Valore **stringa** che contiene il nome dell'oggetto che si desidera eliminare o la posizione ordinale (indice) dell'oggetto nella raccolta.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  L'utilizzo del metodo **Delete** in una raccolta consente di rimuovere uno degli oggetti nella raccolta. Questo metodo è disponibile solo nella raccolta **Parameters** di un oggetto [Command](../../../ado/reference/ado-api/command-object-ado.md) . Quando si chiama il metodo **Delete** , è necessario utilizzare la proprietà [Name](../../../ado/reference/ado-api/name-property-ado.md) dell'oggetto [Parameter](../../../ado/reference/ado-api/parameter-object.md) o il relativo indice di raccolta. una variabile oggetto non è un argomento valido.  
   
 ## <a name="applies-to"></a>Si applica a  

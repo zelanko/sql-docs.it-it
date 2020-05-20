@@ -11,14 +11,14 @@ helpviewer_keywords:
 - shape commands [ADO], shape grammar
 - data shaping [ADO], shape grammar
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 91bdf0cfbfe87075d2c9484bca7edd835a950ee6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ce65f6961502a5bfe43278e4a29a11c4210d4af8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925345"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758257"
 ---
 # <a name="formal-shape-grammar"></a>Grammatica formale per Shape
 Si tratta della grammatica formale per la creazione di qualsiasi comando Shape:  
@@ -41,28 +41,28 @@ Si tratta della grammatica formale per la creazione di qualsiasi comando Shape:
   
 |Termine|Definizione|  
 |----------|----------------|  
-|\<Shape-comando>|SHAPE [\<Table-exp> [[As] \<alias>]] [\<Shape-Action>]|  
-|\<tabella-> exp|{\<provider-comando-testo>} &#124;<br /><br /> (\<Shape-Command>) &#124;<br /><br /> TABELLA \<con virgolette-nome> &#124;<br /><br /> \<nome tra virgolette>|  
-|\<forma-azione>|ACCODAre \<gli alias-Field-List> &#124;<br /><br /> Compute \<Aliased-Field-List> [by \<Field-List>]|  
-|\<con alias-Field-List>|\<con alias-Field> [, \<con alias-Field... >]|  
-|\<con alias-Field>|\<Field-exp> [[AS] \<alias>]|  
-|\<campo-> exp|(\<relazione-exp>) &#124;<br /><br /> \<calcolato-exp> &#124;<br /><br /> \<aggregazione-> &#124; exp<br /><br /> \<nuovo-> exp|  
-|<relation_exp>|\<Table-exp> [[AS] \<alias>]<br /><br /> CORRELAre \<relation-cond-list>|  
-|\<relazione-cond-list>|\<relation-cond> [, \<relazione-cond>...]|  
+|\<Shape-comando>|SHAPE [ \< Table-exp> [[As] \< alias>]] [ \< shape-Action>]|  
+|\<tabella-> exp|{ \< provider-comando-testo>} &#124;<br /><br /> ( \< Shape-command>) &#124;<br /><br /> TABELLA con \< virgolette-nome> &#124;<br /><br /> \<nome tra virgolette>|  
+|\<forma-azione>|ACCODAre gli \< alias-field-list> &#124;<br /><br /> Compute \< Aliased-field-list> [by \< field-list>]|  
+|\<con alias-Field-List>|\<con alias-Field> [, con \< alias-Field... >]|  
+|\<con alias-Field>|\<Field-exp> [[AS] \< alias>]|  
+|\<campo-> exp|( \< relazione-exp>) &#124;<br /><br /> \<calcolato-exp> &#124;<br /><br /> \<aggregazione-> &#124; exp<br /><br /> \<nuovo-> exp|  
+|<relation_exp>|\<Table-exp> [[AS] \< alias>]<br /><br /> CORRELAre \< Relation-cond-list>|  
+|\<relazione-cond-list>|\<relation-cond> [, \< relazione-cond>...]|  
 |\<relazione-> cond|\<Nome-campo> al \<> di riferimento figlio|  
-|\<> di riferimento figlio|\<Nome campo> &#124;<br /><br /> PARAMETRO \<param-Ref>|  
+|\<> di riferimento figlio|\<Nome campo> &#124;<br /><br /> PARAMETRO \< param-ref>|  
 |\<> param-Ref|\<numero>|  
-|\<> elenco campi|\<Nome-campo> [, \<nome-campo>]|  
-|\<aggregazione-> exp|SUM (\<Qualified-Field-Name>) &#124;<br /><br /> MEDIA (\<Qualified-Field-Name>) &#124;<br /><br /> MIN (\<Qualified-Field-Name>) &#124;<br /><br /> MAX (\<Qualified-Field-Name>) &#124;<br /><br /> COUNT (\<qualified-alias> &#124; \<Qualified-Name>) &#124;<br /><br /> STDEV (\<Qualified-Field-Name>) &#124;<br /><br /> ANY (\<Qualified-Field-Name>)|  
-|\<calcolato-exp>|CALCOLO (\<espressione>)|  
-|\<Qualified-Field-Name>|\<> alias. [\<alias>...] \<nome campo>|  
+|\<> elenco campi|\<Nome-campo> [, \< nome-campo>]|  
+|\<aggregazione-> exp|SUM ( \< Qualified-Field-name>) &#124;<br /><br /> MEDIA ( \< Qualified-Field-name>) &#124;<br /><br /> MIN ( \< Qualified-Field-name>) &#124;<br /><br /> MAX ( \< Qualified-Field-name>) &#124;<br /><br /> COUNT ( \< qualified-alias> &#124; \< Qualified-Name>) &#124;<br /><br /> STDEV ( \< Qualified-Field-name>) &#124;<br /><br /> ANY ( \< Qualified-Field-name>)|  
+|\<calcolato-exp>|CALCOLO ( \< espressione>)|  
+|\<Qualified-Field-Name>|\<> alias. [ \< alias>...] \< Nome campo>|  
 |\<> alias|\<nome tra virgolette>|  
-|\<Nome campo>|\<nome tra virgolette> [[AS] \<alias>]|  
-|\<nome tra virgolette>|"\<String>" &#124;<br /><br /> '\<String>' &#124;<br /><br /> [\<String>] &#124;<br /><br /> \<nome>|  
+|\<Nome campo>|\<nome tra virgolette> [[AS] \< alias>]|  
+|\<nome tra virgolette>|" \< string>" &#124;<br /><br /> ' \< string>' &#124;<br /><br /> [ \< string>] &#124;<br /><br /> \<nome>|  
 |\<nome qualificato>|alias [. alias...]|  
 |\<nome>|alfa [alpha &#124; digit &#124; _ &#124; # &#124;: &#124;...]|  
 |\<numero>|digit [digit...]|  
-|\<nuovo-> exp|NUOVO \<tipo di campo> [(\<numero> [, \<numero>])]|  
+|\<nuovo-> exp|NUOVO \< tipo di campo> [( \< numero> [, \< numero>])]|  
 |\<> di tipo campo|Tipo di dati OLE DB o ADO.|  
 |\<> stringa|Unicode-char [Unicode-char...]|  
 |\<> espressione|Espressione Visual Basic, Applications Edition i cui operandi sono altre colonne non di calcolo nella stessa riga.|  

@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - DataTypeEnum enumeration [ADO]
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 27386894ce6d1d393505d49b4863a0ba9bf3320b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5d22757951cad59c10bc1d7eea85ea8ee11ed0ad
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933229"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757627"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 Specifica il tipo di dati di un [campo](../../../ado/reference/ado-api/field-object.md), un [parametro](../../../ado/reference/ado-api/parameter-object.md)o una [proprietà](../../../ado/reference/ado-api/property-object-ado.md). L'indicatore del tipo di OLE DB corrispondente viene visualizzato tra parentesi nella colonna Descrizione della tabella seguente.  
   
-|Costante|valore|Descrizione|  
+|Costante|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**AdArray**|0x2000|Valore del flag, sempre combinato con un'altra costante del tipo di dati che indica una matrice dell'altro tipo di dati. Non si applica a ADOX.|  
 |**adBigInt**|20|Indica un intero con segno a otto byte (DBTYPE_I8).|  

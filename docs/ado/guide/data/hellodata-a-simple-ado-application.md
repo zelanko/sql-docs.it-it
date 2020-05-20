@@ -11,14 +11,14 @@ helpviewer_keywords:
 - HelloData sample application [ADO]
 - ADO, samples
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e666f479d95e3915703dc539ba2731e95175488b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 18f9f0cd227a258b1d2d9cd2d201527f614bcc49
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925135"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758827"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: applicazione ADO semplice
 Questa semplice applicazione illustra le quattro operazioni ADO principali: recupero, analisi, modifica e aggiornamento dei dati. Queste operazioni vengono eseguite sul database di esempio Northwind incluso in Microsoft® SQL Server. Per concentrarsi sulle nozioni di base di ADO e per impedire confusione del codice, la gestione degli errori nell'esempio è minima.  
@@ -42,7 +42,7 @@ Questa semplice applicazione illustra le quattro operazioni ADO principali: recu
   
  ![Form1 per l'applicazione VB HelloData](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   
-|Tipo di controllo|Proprietà|valore|  
+|Tipo di controllo|Proprietà|Valore|  
 |------------------|--------------|-----------|  
 |Form|Nome|Form1|  
 ||Altezza:|6500|  

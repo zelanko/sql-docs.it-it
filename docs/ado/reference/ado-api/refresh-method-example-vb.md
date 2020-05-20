@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Refresh method [ADO], Visual Basic example
 ms.assetid: f5375fa1-4711-4f7e-9ba4-54c427f71325
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 220703626f5cbe7aa1b7f8aa3d6ee24fee238827
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 449c6d0da1ddb5915f694020f84a933fa67871e6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917306"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756550"
 ---
 # <a name="refresh-method-example-vb"></a>Esempio del metodo Refresh (VB)
 Questo esempio illustra l'uso del metodo [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) per aggiornare la raccolta [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) per un oggetto stored procedure [comando](../../../ado/reference/ado-api/command-object-ado.md) .  
@@ -120,7 +120,7 @@ End Sub
 'EndRefreshVB  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Raccolta Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Metodo Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Active Directory service
 - OLE DB provider for Active Directory service [ADO]
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e204a4f6f7f395ca93198bc560f4a216d5a70673
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 837f5fbcbb6c7730cdfcbe08e532a73c5faad06f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926671"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758327"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Provider Microsoft OLE DB per Microsoft Active Directory Service
 Il provider ADSI (Active Directory Service Interfaces) consente a ADO di connettersi a servizi di directory eterogenei tramite ADSI. Ciò consente alle applicazioni ADO di accedere in sola lettura ai servizi directory di Microsoft Windows NT 4,0 e Microsoft Windows 2000, oltre a qualsiasi servizio di directory compatibile con LDAP e a servizi directory di Novell. ADSI si basa su un modello di provider, in modo che se è presente un nuovo provider che concede l'accesso a un'altra directory, l'applicazione ADO sarà in grado di accedervi facilmente. Il provider ADSI è a thread libero e il formato Unicode è abilitato.  
@@ -59,14 +59,14 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |*Radice*|Indica l'oggetto **ADsPath** da cui iniziare la ricerca (ovvero la radice della ricerca).|  
 |*Filter*|Indica il filtro di ricerca nel formato RFC 1960.|  
 |*Attributi*|Indica un elenco delimitato da virgole di attributi da restituire.|  
 |*Ambito*|Facoltativa. **Stringa** che specifica l'ambito della ricerca. Può essere uno dei seguenti:<br /><br /> -Base: Cerca solo l'oggetto di base (radice della ricerca).<br />-Unlivello-Cerca solo un livello.<br />-Subtree-Cerca nell'intero sottoalbero.|  
   
- Ad esempio:  
+ ad esempio:  
   
 ```vb
 "<LDAP://DC=ArcadiaBay,DC=COM>;(objectClass=*);sn, givenName; subtree"  
@@ -110,7 +110,7 @@ objectClass='user' AND objectCategory='Person'"
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|Sola lettura|  
 |[origine](../../../ado/reference/ado-api/source-property-ado-recordset.md)|lettura/scrittura|  
 |[State](../../../ado/reference/ado-api/state-property-ado.md)|Sola lettura|  
-|[Stato](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Sola lettura|  
+|[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Sola lettura|  
   
  **Disponibilità dei metodi Recordset ADO standard:**  
   
@@ -121,8 +121,8 @@ objectClass='user' AND objectCategory='Person'"
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|No|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|No|  
 |[Clone](../../../ado/reference/ado-api/clone-method-ado.md) (Clona)|Sì|  
-|[Chiudi](../../../ado/reference/ado-api/close-method-ado.md)|Sì|  
-|[Elimina](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|No|  
+|[Close](../../../ado/reference/ado-api/close-method-ado.md)|Sì|  
+|[Eliminazione](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|No|  
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sì|  
 |[Spostamento](../../../ado/reference/ado-api/move-method-ado.md)|Sì|  
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sì|  

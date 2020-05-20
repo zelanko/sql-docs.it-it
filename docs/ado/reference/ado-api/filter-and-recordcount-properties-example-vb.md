@@ -13,14 +13,14 @@ helpviewer_keywords:
 - RecordCount property [ADO], Visual Basic example
 - Filter property [ADO], Visual Basic example
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6f94440d9ddd0d0b5091f2a106f603397147ebda
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8eeb68293e7c800fda4c4dd395f840cfeeb2d572
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918645"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756762"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Esempio delle proprietà Filter e RecordCount (VB)
 In questo esempio viene aperto un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) nella tabella publishers del database ***pubs*** . USA quindi la proprietà [Filter](../../../ado/reference/ado-api/filter-property.md) per limitare il numero di record visibili a tali autori in un determinato paese/area geografica. La proprietà **RecordCount** viene utilizzata per mostrare la differenza tra i recordset filtrati e non filtrati.  
@@ -114,7 +114,7 @@ End Sub
 Attribute VB_Name = "Filter"  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Filter (proprietà)](../../../ado/reference/ado-api/filter-property.md)   
  [Proprietà RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

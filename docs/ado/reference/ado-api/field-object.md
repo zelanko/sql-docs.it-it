@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Field object [ADO]
 ms.assetid: b10a72fc-3c4b-4186-a70b-993dc9f7a092
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 04dbf3069896b9a7668d64a2f1d322f0b17ca5f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8a50d9f3354f9d5eb5a7615c244d8a8990ffc0c9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918679"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758767"
 ---
 # <a name="field-object"></a>Oggetto Field
 Rappresenta una colonna di dati con un tipo di dati comune.  
@@ -52,7 +52,7 @@ Rappresenta una colonna di dati con un tipo di dati comune.
   
 -   [Proprietà, metodi ed eventi dell'oggetto Field](../../../ado/reference/ado-api/field-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Raccolta Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

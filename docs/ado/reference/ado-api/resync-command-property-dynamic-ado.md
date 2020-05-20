@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Resync Command property [ADO]
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e81fa9ffb28ba31f50d77cacf372bc24d09787ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 916afef294a76e62702dbbd7cc413a0540484f62
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917142"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756473"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Proprietà dinamica Resync Command (ADO)
 Specifica una stringa di comando fornita dall'utente che il metodo di [Risincronizzazione](../../../ado/reference/ado-api/resync-method.md) emette per aggiornare i dati nella tabella denominata nella proprietà dinamica della [tabella univoca](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) .  
@@ -33,7 +33,7 @@ Specifica una stringa di comando fornita dall'utente che il metodo di [Risincron
   
  Di seguito sono riportati due esempi basati su SQL:  
   
- 1\) il **Recordset** è definito da un comando:  
+ 1 \) il **Recordset** è definito da un comando:  
   
 ```  
 SELECT * FROM Customers JOIN Orders ON   
@@ -54,7 +54,7 @@ WHERE Orders.OrderID = ?"
   
  La **tabella univoca** è *Orders* e la relativa chiave primaria, *OrderID*, è parametrizzata. La sub-SELECT fornisce un modo semplice per garantire a livello di codice il numero e l'ordine delle colonne restituiti dal comando originale.  
   
- 2\) il **Recordset** è definito da un stored procedure:  
+ 2 \) il **Recordset** è definito da un stored procedure:  
   
 ```  
 CREATE PROC Custorders @CustomerID char(5) AS   

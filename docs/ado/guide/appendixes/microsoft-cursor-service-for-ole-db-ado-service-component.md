@@ -11,14 +11,14 @@ helpviewer_keywords:
 - providers [ADO], cursor service for OLE DB
 - cursor service for OLE DB [ADO]
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e7e5b9a973e5ccf04f92a2162d88ee25b7fa5242
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6b0b4a3773f0de637458384e8819a7b913da3e40
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926790"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758507"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Panoramica di Microsoft Cursor Service per OLE DB
 Il servizio Microsoft Cursor per OLE DB integra le funzioni di supporto del cursore dei provider di dati. Di conseguenza, l'utente percepisce una funzionalità relativamente uniforme di tutti i provider di dati.
@@ -56,14 +56,14 @@ Recordset1.Properties.Item("Command Time out") = 50
 > [!NOTE]
 >  La proprietà dinamica DBPROP_SERVERDATAONINSERT non è supportata dal servizio cursore, anche se è supportata dal provider di dati sottostante.
 
-|Nome proprietà|Descrizione|
+|Nome proprietà|Description|
 |-------------------|-----------------|
 |Ricalcolo automatico (DBPROP_ADC_AUTORECALC)|Per i recordset creati con il servizio Data Shaping, questo valore indica la frequenza con cui vengono calcolate le colonne calcolate e di aggregazione. Il valore predefinito (valore = 1) prevede il ricalcolo ogni volta che il servizio Data Shaping determina che i valori sono stati modificati. Se il valore è 0, le colonne calcolate o aggregate vengono calcolate solo quando la gerarchia viene inizialmente compilata.|
 |Dimensioni batch (DBPROP_ADC_BATCHSIZE)|Indica il numero di istruzioni Update che possono essere raggruppate prima di essere inviate all'archivio dati. Più istruzioni in un batch, minore è il numero di round trip all'archivio dati.|
 |Memorizzare nella cache le righe figlio (DBPROP_ADC_CACHECHILDROWS)|Per i recordset creati con il servizio Data Shaping, questo valore indica se i recordset figlio vengono archiviati in una cache per un uso successivo.|
 |Versione del motore di cursore (DBPROP_ADC_CEVER)|Indica la versione del servizio cursore utilizzata.|
 |Mantieni stato delle modifiche (DBPROP_ADC_MAINTAINCHANGESTATUS)|Indica il testo del comando utilizzato per la risincronizzazione di una o più righe in un join a più tabelle.|
-|[Ottimizzare](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Indica se deve essere creato un indice. Se impostato su **true**, autorizza la creazione temporanea degli indici per migliorare l'esecuzione di determinate operazioni.|
+|[Ottimizzazione](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Indica se deve essere creato un indice. Se impostato su **true**, autorizza la creazione temporanea degli indici per migliorare l'esecuzione di determinate operazioni.|
 |[Nome riforma](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|Indica il nome del **Recordset**. È possibile fare riferimento all'interno dei comandi di data shaping correnti o successivi.|
 |[Comando di risincronizzazione](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|Indica una stringa di comando personalizzata utilizzata dal metodo [Resync](../../../ado/reference/ado-api/resync-method.md) quando è attiva la proprietà di [tabella univoca](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) .|
 |[Catalogo univoco](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Indica il nome del database contenente la tabella a cui si fa riferimento nella proprietà di **tabella univoca** .|
@@ -82,7 +82,7 @@ rs.Properties("Optimize") = True
 ## <a name="built-in-property-behavior"></a>Comportamento della proprietà incorporata
  Il servizio Cursor per OLE DB influisca anche sul comportamento di determinate proprietà predefinite.
 
-|Nome proprietà|Descrizione|
+|Nome proprietà|Description|
 |-------------------|-----------------|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Integra i tipi di cursori disponibili per un **Recordset**.|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Integra i tipi di blocchi disponibili per un **Recordset**. Abilita gli aggiornamenti batch.|

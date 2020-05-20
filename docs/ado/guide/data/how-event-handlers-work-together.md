@@ -15,14 +15,14 @@ helpviewer_keywords:
 - event handlers [ADO]
 - multiple object event handlers [ADO]
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b744dbd464aedbd9b87d22aa74277787fcc3c7a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 98144b1dacb406de4f57f9d051547640edd09397
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925045"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758107"
 ---
 # <a name="how-event-handlers-work-together"></a>Interazione tra i gestori eventi
 A meno che non si stia programmando in Visual Basic, è necessario implementare tutti i gestori eventi per gli eventi di **connessione** e **Recordset** , indipendentemente dal fatto che si elaborino effettivamente tutti gli eventi. La quantità di operazioni di implementazione che è necessario eseguire dipende dal linguaggio di programmazione. Per ulteriori informazioni, vedere [creazione di un'istanza dell'evento ADO in base al linguaggio](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
@@ -45,7 +45,7 @@ A meno che non si stia programmando in Visual Basic, è necessario implementare 
   
  Singoli gestori eventi **completi** possono essere utili per la gestione delle operazioni asincrone. Ogni operazione asincrona ha un evento **completo** appropriato.  
   
- Ad esempio, il popolamento di un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) di grandi dimensioni può richiedere molto tempo. Se l'applicazione è scritta in modo appropriato, è possibile avviare `Recordset.Open(...,adAsyncExecute)` un'operazione e continuare con altre elaborazioni. Alla fine, si riceverà una notifica quando il **Recordset** viene popolato da un evento **ExecuteComplete** .  
+ Ad esempio, il popolamento di un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) di grandi dimensioni può richiedere molto tempo. Se l'applicazione è scritta in modo appropriato, è possibile avviare un' `Recordset.Open(...,adAsyncExecute)` operazione e continuare con altre elaborazioni. Alla fine, si riceverà una notifica quando il **Recordset** viene popolato da un evento **ExecuteComplete** .  
   
 ## <a name="single-event-handlers-and-multiple-objects"></a>Gestori di eventi singoli e più oggetti  
  La flessibilità di un linguaggio di programmazione come Microsoft Visual C++® consente di disporre di un gestore eventi per elaborare eventi da più oggetti. Ad esempio, è possibile avere un gestore eventi di **disconnessione** per elaborare eventi da diversi oggetti **connessione** . Se una delle connessioni è terminata, viene chiamato il gestore eventi di **disconnessione** . È possibile stabilire quale connessione ha causato l'evento perché il parametro dell'oggetto gestore eventi verrebbe impostato sull'oggetto **connessione** corrispondente.  

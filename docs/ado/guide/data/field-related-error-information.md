@@ -11,19 +11,19 @@ helpviewer_keywords:
 - field-related errors [ADO]
 - errors [ADO], field-related
 ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7094c2dba004e35593f5ab11b1162efbdf3283c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e61850ca788f6cff11d2a665000f68b89cd3ed45
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925316"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758291"
 ---
 # <a name="field-related-error-information"></a>Informazioni sugli errori correlati ai campi
 Se un errore è direttamente correlato a un campo, ad esempio se i dati risultano mancanti o se il tipo non è corretto per il campo, è possibile recuperare ulteriori informazioni sulla causa del problema esaminando la proprietà di **stato** dell'oggetto **campo** . Questa proprietà è stata migliorata per fornire informazioni specifiche sul problema. Quindi, ad esempio, quando una chiamata a **UpdateBatch** ha esito negativo, la causa del problema può essere determinata esaminando la proprietà **status** dei **campi** in ognuno dei record effettivi. La proprietà conterrà uno dei valori della costante **FieldStatusEnum** . La tabella seguente include i valori che sono di particolare interesse quando si verifica un errore.  
   
-|Costante|valore|Descrizione|  
+|Costante|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adFieldCantConvertValue**|2|Indica che il campo non può essere recuperato o archiviato senza perdita di dati.|  
 |**adFieldDataOverflow**|6|Indica che i dati restituiti dal provider hanno causato un overflow del tipo di dati del campo.|  
