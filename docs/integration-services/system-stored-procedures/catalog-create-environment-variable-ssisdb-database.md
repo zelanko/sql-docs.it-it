@@ -90,7 +90,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
  La stored procedure consente di convalidare il tipo di dati della variabile per assicurarsi che sia supportato dal catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 > [!TIP]  
->  In **si consideri di usare il tipo di dati**Int16[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] al posto del tipo di dati **Sbyte** non supportato.  
+>  In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] si consideri di usare il tipo di dati **Int16** al posto del tipo di dati **Sbyte** non supportato.  
   
  Il valore passato a questa stored procedure con il parametro *value* viene convertito da un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in un tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in base alla tabella seguente:  
   

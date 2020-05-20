@@ -119,7 +119,7 @@ ms.locfileid: "68103419"
      **Espressione filtro**  
      Specifica le righe di dati da includere nelle statistiche filtrate. Ad esempio, usare `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  Nella pagina **Generale** della finestra di dialogo _Nuove statistiche per Tabella \__ nome**tabella** fare clic su **Aggiungi**.  
+5.  Nella pagina **Generale** della finestra di dialogo **Nuove statistiche per Tabella **_nome\_tabella_ fare clic su **Aggiungi**.  
   
      Nella finestra di dialogo **Seleziona colonne** vengono visualizzate le proprietà seguenti. Queste informazioni sono di sola lettura.  
   
