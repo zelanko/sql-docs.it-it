@@ -14,14 +14,14 @@ helpviewer_keywords:
 - XML persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 263f83093c46f4265559fe0b1844112687d4fc67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3afbec77df9a80ab7e304d2e3101e795b939eef2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924599"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763612"
 ---
 # <a name="persisting-records-in-xml-format"></a>Persistenza di record in formato XML
 Analogamente al formato ADTG, la persistenza del **Recordset** in formato XML viene implementata con il provider di persistenza di Microsoft OLE DB. Questo provider genera un set di righe di sola lettura e di sola lettura da un file o un flusso XML salvato che contiene le informazioni sullo schema generate da ADO. Analogamente, può assumere un **Recordset**ADO, generare codice XML e salvarlo in un file o in qualsiasi oggetto che implementi l'interfaccia **IStream** com. In realtà, un file è semplicemente un altro esempio di oggetto che supporta **IStream**. Per le versioni 2,5 e successive, ADO si basa su Microsoft XML Parser (MSXML) per caricare il codice XML nel **Recordset**; pertanto MSXML. dll è obbligatorio.  
@@ -59,7 +59,7 @@ rs.Open "titles.sav",,,,adCmdFile
 rs2.open s  
 ```  
   
- ADO rende sempre permanente l'intero oggetto **Recordset** . Se si desidera rendere permanente un subset di righe dell'oggetto **Recordset** , utilizzare il metodo **Filter** per limitare le righe o modificare la clausola di selezione. Tuttavia, è necessario aprire un oggetto **Recordset** con un cursore sul lato client (**CursorLocation** = **adUseClient**) per utilizzare il metodo **Filter** per il salvataggio di un subset di righe. Ad esempio, per recuperare i titoli che iniziano con la lettera "b", è possibile applicare un filtro a un oggetto **Recordset** aperto:  
+ ADO rende sempre permanente l'intero oggetto **Recordset** . Se si desidera rendere permanente un subset di righe dell'oggetto **Recordset** , utilizzare il metodo **Filter** per limitare le righe o modificare la clausola di selezione. Tuttavia, è necessario aprire un oggetto **Recordset** con un cursore sul lato client (**CursorLocation**  =  **adUseClient**) per utilizzare il metodo **Filter** per il salvataggio di un subset di righe. Ad esempio, per recuperare i titoli che iniziano con la lettera "b", è possibile applicare un filtro a un oggetto **Recordset** aperto:  
   
 ```  
 rs.Filter "title_id like 'B*'"  

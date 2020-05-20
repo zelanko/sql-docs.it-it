@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 16142f200e6fd6e7c141b4f1fe6d45fe8917bc28
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8a091a606cf3049c055794bc16cc51db78a40978
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931908"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762179"
 ---
 # <a name="open-method-ado-recordset"></a>Metodo Open (Recordset - ADO)
 Apre un cursore su un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -60,7 +60,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  Utilizzando il metodo **Open** su un oggetto **Recordset** , viene aperto un cursore che rappresenta i record di una tabella di base, i risultati di una query o un **Recordset**salvato in precedenza.  
   
- Utilizzare l'argomento di *origine* facoltativo per specificare un'origine dati utilizzando uno dei seguenti elementi: una variabile oggetto **comando** , un'istruzione SQL, un stored procedure, un nome di tabella, un URL o un nome di percorso file completo. Se l' *origine* è un nome di percorso del file, può essere un percorso completo ("c:\dir\file.RST"), un percorso relativo ("... \File.RST ") o un URL ("<https://files/file.rst>").  
+ Utilizzare l'argomento di *origine* facoltativo per specificare un'origine dati utilizzando uno dei seguenti elementi: una variabile oggetto **comando** , un'istruzione SQL, un stored procedure, un nome di tabella, un URL o un nome di percorso file completo. Se l' *origine* è un nome di percorso del file, può essere un percorso completo ("c:\dir\file.RST"), un percorso relativo ("... \File.RST ") o un URL (" <https://files/file.rst> ").  
   
  Non è consigliabile usare l'argomento di *origine* del metodo **Open** per eseguire una query di azione che non restituisce record perché non esiste un modo semplice per determinare se la chiamata ha avuto esito positivo. Il **Recordset** restituito da tale query verrà chiuso. Per eseguire una query che non restituisce record, ad esempio un'istruzione SQL INSERT, chiamare invece il metodo [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) di un oggetto **Command** o il metodo [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) di un oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) .  
   

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - RecordCount property [ADO], VC++ example
 - Filter property [ADO], VC++ example
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 38f7dc64507e79704a62f321d7513419cc3c15d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d079a56268d903970f7e99d987b1315d1decec44
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932661"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763442"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>Esempio di proprietà Filter e RecordCount (VC + +)
 In questo esempio viene utilizzata la proprietà [Filter](../../../ado/reference/ado-api/filter-property.md) per aprire un nuovo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) basato su una condizione specificata applicata a un **Recordset**esistente. Usa la proprietà [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) per visualizzare il numero di record nei due **Recordset**. Per eseguire questa procedura, è necessaria la funzione FilterField.  

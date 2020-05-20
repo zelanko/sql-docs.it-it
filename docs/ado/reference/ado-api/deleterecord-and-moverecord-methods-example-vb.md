@@ -13,14 +13,14 @@ helpviewer_keywords:
 - MoveRecord method [ADO], Visual Basic example
 - DeleteRecord method [ADO], Visual Basic example
 ms.assetid: c3937d1e-9872-47e5-a22e-b147637f2388
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1c449e2a7c52b069478a07e4e2fa902c3b0527e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: af8f2a1431c8d41393e25638edf1ac83fee16236
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919107"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763462"
 ---
 # <a name="deleterecord-and-moverecord-methods-example-vb"></a>Esempio di metodi DeleteRecord e MoveRecord (VB)
 Questo esempio illustra come copiare, spostare, modificare ed eliminare il contenuto di un file di testo pubblicato in una cartella Web. Altre proprietà e metodi usati includono [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md), [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md), [source](../../../ado/reference/ado-api/source-property-ado-record.md)e [Flush](../../../ado/reference/ado-api/flush-method-ado.md).  
@@ -148,7 +148,7 @@ End Sub
 'EndDeleteRecordVB  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Metodo DeleteRecord (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)   
  [Metodo Flush (ADO)](../../../ado/reference/ado-api/flush-method-ado.md)   
  [Metodo GetChildren (ADO)](../../../ado/reference/ado-api/getchildren-method-ado.md)   

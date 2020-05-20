@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - PositionEnum enumeration
 ms.assetid: e69af0a5-3405-4b72-9c6e-6b188ff746fd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d5f7ca47177a953313ff983bb25f9178b73b4930
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 57a440a97dcdf1c0fddcff8017e0c2d04967b92d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917598"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763342"
 ---
 # <a name="positionenum"></a>PositionEnum
 Specifica la posizione corrente del puntatore del record all'interno di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
-|Costante|valore|Descrizione|  
+|Costante|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adPosBOF**|-2|Indica che il puntatore al record corrente si trova in BOF (ovvero la proprietà [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) è **true**).|  
 |**adPosEOF**|-3|Indica che il puntatore al record corrente si trova in EOF (ovvero la proprietà [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) è **true**).|  

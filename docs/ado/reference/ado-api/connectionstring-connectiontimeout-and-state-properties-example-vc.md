@@ -14,14 +14,14 @@ helpviewer_keywords:
 - ConnectionTimeout property [ADO], VC++ example
 - State property [ADO], VC++ example
 ms.assetid: c6bd2609-4c49-462f-a1aa-7bee0f615adb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d69cbde12b14a481e19856882f0b91844a1deb69
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3f70a5e98a34811af2b6d2b173da3f6c4215682d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919452"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762642"
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>Esempio di proprietà ConnectionString, ConnectionTimeout e state (VC + +)
 In questo esempio vengono illustrate diverse modalità di utilizzo della proprietà [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) per aprire un oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) . USA inoltre la proprietà [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) per impostare un periodo di timeout della connessione e la proprietà [state](../../../ado/reference/ado-api/state-property-ado.md) per verificare lo stato delle connessioni. Per eseguire questa procedura, è necessaria la funzione GetState.  
@@ -166,7 +166,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Proprietà ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
  [Proprietà ConnectionTimeout (ADO)](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)   

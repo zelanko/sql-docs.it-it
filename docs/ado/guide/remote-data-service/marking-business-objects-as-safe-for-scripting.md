@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - business objects in RDS [ADO]
 ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 55ae560f35a06e77803bfb011f4d430d5079ea05
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a6655b1bba274a9dc5079c7c996b58da6ba8ae0f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922601"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763602"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>Contrassegnare gli oggetti business come sicuri per lo scripting
 > [!IMPORTANT]
@@ -43,6 +43,6 @@ Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]
   
  Nell'ultimo passaggio, l'installazione guidata dell'applicazione crea un file con estensione htm e CAB. È quindi possibile copiare questi due file nel computer di destinazione e fare doppio clic sul file con estensione htm per caricare la pagina e registrare correttamente il server.  
   
- Poiché l'oggetto business verrà installato nella directory Windows\System32\Occache per impostazione predefinita, spostarlo nella directory>\\Windows\System32 e modificare la chiave del registro di sistema **HKEY_CLASSES_ROOT \CLSID\\**\<*MyActiveXGUID***InprocServer32** in modo che corrisponda al percorso corretto.
+ Poiché l'oggetto business verrà installato nella directory Windows\System32\Occache per impostazione predefinita, spostarlo nella directory Windows\System32 e modificare la chiave del registro di sistema **HKEY_CLASSES_ROOT \CLSID \\ ** \< *MyActiveXGUID* > \\ **InprocServer32** in modo che corrisponda al percorso corretto.
 
 

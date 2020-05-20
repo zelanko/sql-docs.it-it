@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Type property [ADO]
 ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0ee1058299becb4a7a4234debc097516cb02dd41
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 46718126ede409caa749b3a49dfaaffe118afc77
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67937861"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761829"
 ---
 # <a name="type-property-ado"></a>Proprietà Type (ADO)
 Indica il tipo operativo o il tipo di dati di un [parametro](../../../ado/reference/ado-api/parameter-object.md), un [campo](../../../ado/reference/ado-api/field-object.md)o un oggetto [proprietà](../../../ado/reference/ado-api/property-object-ado.md) .  

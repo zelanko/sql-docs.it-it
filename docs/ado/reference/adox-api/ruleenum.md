@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - RuleEnum enumeration [ADOX]
 ms.assetid: 738fd3ff-3daf-483d-a0b9-88bef1be54c1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 87c61baa93cb1dbca58bbe86ffc254a92d2b9d5b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c04bbd079de68891cf271ff2ea668696e29a4394
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965242"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762802"
 ---
 # <a name="ruleenum"></a>RuleEnum
 Specifica la regola da seguire quando viene eliminato un [tasto](../../../ado/reference/adox-api/key-object-adox.md) .  
   
-|Costante|valore|Descrizione|  
+|Costante|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adRICascade**|1|Modifiche a cascata.|  
 |**adRINone**|0|Valore predefinito. Non viene eseguita alcuna azione.|  

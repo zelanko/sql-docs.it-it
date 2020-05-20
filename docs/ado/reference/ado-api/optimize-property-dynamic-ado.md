@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Optimize property [ADO]
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3e8bb3c3787effe8418db735a72425a793b73e35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8d27195b00d1e1867f6bf037cd6c20500ec35e84
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931859"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762084"
 ---
 # <a name="optimize-property-dynamic-ado"></a>Proprietà dinamica Optimize (ADO)
 Specifica se è necessario creare un indice in un [campo](../../../ado/reference/ado-api/field-object.md).  
@@ -33,7 +33,7 @@ Specifica se è necessario creare un indice in un [campo](../../../ado/reference
   
  **Optimize** è una proprietà dinamica aggiunta alla raccolta [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) dell'oggetto [Field](../../../ado/reference/ado-api/field-object.md) quando la proprietà [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) è impostata su **adUseClient**.  
   
-## <a name="usage"></a>Uso  
+## <a name="usage"></a>Usage  
   
 ```  
 Dim rs As New Recordset  

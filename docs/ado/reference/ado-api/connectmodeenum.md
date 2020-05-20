@@ -13,23 +13,23 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectModeEnum enumeration [ADO]
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: debf6f9dc4ac1326caf9fbf32b65f15f34a19094
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6e78ab5988d88447539da7c492f0b02943693844
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933451"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762612"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 Specifica le autorizzazioni disponibili per la modifica dei dati in una [connessione](../../../ado/reference/ado-api/connection-object-ado.md), l'apertura di un [record](../../../ado/reference/ado-api/record-object-ado.md)o la specifica di valori per la proprietà [mode](../../../ado/reference/ado-api/mode-property-ado.md) degli oggetti **record** e [flusso](../../../ado/reference/ado-api/stream-object-ado.md) .  
   
-|Costante|valore|Descrizione|  
+|Costante|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adModeRead**|1|Indica le autorizzazioni di sola lettura.|  
 |**adModeReadWrite**|3|Indica le autorizzazioni di lettura/scrittura.|  
-|**adModeRecursive**|0x400000|Utilizzato insieme agli altri * \*\* valori ShareDeny* (**adModeShareDenyNone**, **adModeShareDenyWrite**o **adModeShareDenyRead**) per propagare le restrizioni di condivisione a tutti i sottorecord del **record**corrente. Non ha alcun effetto se il **record** non contiene elementi figlio. Viene generato un errore di run-time se usato solo con **adModeShareDenyNone** . Tuttavia, può essere usato con **adModeShareDenyNone** se combinato con altri valori. Ad esempio, è possibile usare "**adModeRead** o **adModeShareDenyNone** o **adModeRecursive**".|  
+|**adModeRecursive**|0x400000|Utilizzato insieme agli altri valori * \* ShareDeny \* * (**adModeShareDenyNone**, **adModeShareDenyWrite**o **adModeShareDenyRead**) per propagare le restrizioni di condivisione a tutti i sottorecord del **record**corrente. Non ha alcun effetto se il **record** non contiene elementi figlio. Viene generato un errore di run-time se usato solo con **adModeShareDenyNone** . Tuttavia, può essere usato con **adModeShareDenyNone** se combinato con altri valori. Ad esempio, è possibile usare "**adModeRead** o **adModeShareDenyNone** o **adModeRecursive**".|  
 |**adModeShareDenyNone**|16|Consente ad altri utenti di aprire una connessione con qualsiasi autorizzazione. Impossibile negare l'accesso in lettura e in scrittura ad altri.|  
 |**adModeShareDenyRead**|4|Impedisce ad altri utenti di aprire una connessione con autorizzazioni di lettura.|  
 |**adModeShareDenyWrite**|8|Impedisce ad altri utenti di aprire una connessione con autorizzazioni di scrittura.|  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Visual Basic for applications functions [ADO]
 - data shaping [ADO], Visual Basic for Applications functions
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 25cac9bffce7602ce211be7f83c7e55239061282
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 155eda8cf8361abff080d52db9a226fa9237b2eb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923468"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763012"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Funzioni di Visual Basic, Applications Edition
 Le funzioni di Visual Basic, Applications Edition seguenti possono essere utilizzate nelle espressioni CALC di data shaping:  
@@ -32,17 +32,17 @@ Le funzioni di Visual Basic, Applications Edition seguenti possono essere utiliz
 |ChrB $|CInt|CLng|Cos|CSng|CStr|  
 |Cvar|CVDate|CVErr|Data|Date$|DateAdd|  
 |DateDiff|DatePart|DateSerial|DateValue|Giorno|DDB|  
-|Errore|Error$|Exp|Fix|Format|Format$|  
+|Errore|Error$|Exp|Fix|Formato|Format$|  
 |FV|Hex|Hex$|Ora|IIF|InStr|  
 |Int|IPmt|IRR|IsDate|IsEmpty|IsError|  
-|IsNull|IsNumeric|IsObject|LCase|LCase$|Left|  
-|LeftB|Left$|LeftB $|Len|File di log|LTrim|  
+|IsNull|IsNumeric|IsObject|LCase|LCase$|Sinistra|  
+|LeftB|Left$|LeftB $|Len|Registro|LTrim|  
 |LTrim$|Mid|Mid$|Minuto|MIRR|Month|  
 |Adesso|NPer|NPV|Oct|Oct$|Pmt|  
-|PPmt|PV|QBColor|Tariffa|RGB|Right|  
+|PPmt|PV|QBColor|Tariffa|RGB|Destra|  
 |RightB|Right$|RightB $|Rnd|RTrim|RTrim $|  
 |Second|Sgn|Sin|SLN|Space|Space$|  
-|Sqr|Str|Str$|StrComp|StrConv|string|  
+|Sqr|Str|Str$|StrComp|StrConv|String|  
 |String$|SYD|Tan|Tempo|Time$|Timer|  
 |TimeSerial|TimeValue|Trim|Trim$|TypeName|UCase|  
 |UCase$|Val|VarType|Giorno della settimana|Year||  

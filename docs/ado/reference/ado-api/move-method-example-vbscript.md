@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Move method, VBScript example
 ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8d2075987e8c3faae9003b0edc4010fe7e4cedb5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 23db96e87538227691f00548c47c2f3d1858349b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918160"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762482"
 ---
 # <a name="move-method-example-vbscript"></a>Esempio del metodo Move (VBScript)
 Questo esempio usa il metodo [Move](../../../ado/reference/ado-api/move-method-ado.md) per posizionare il puntatore del record in base all'input dell'utente.  
@@ -182,6 +182,6 @@ End Sub
 <!-- EndMoveVBS -->  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Metodo Move (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

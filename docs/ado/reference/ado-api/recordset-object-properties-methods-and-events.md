@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO], members
 ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f84faca18ad1f4f4bf7e036fa4ccbe0335154a63
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b89d125cd100d380f7d20c64ed23a2087cf4e949
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917336"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761859"
 ---
 # <a name="recordset-object-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto recordset
 ## <a name="propertiescollections"></a>Proprietà/raccolte  
@@ -120,7 +120,7 @@ ms.locfileid: "67917336"
   
  [Metodo UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventi  
  [Evento EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)  
   
  [Evento FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)  
@@ -135,5 +135,5 @@ ms.locfileid: "67917336"
   
  [Eventi WillMove e MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

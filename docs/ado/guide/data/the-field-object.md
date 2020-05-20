@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Field object [ADO]
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 80e6576b236db44452c4e89b1d8f3bb8976ab120
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 07b58be0aed59707266f86b5e5074e82da80220b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923989"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763092"
 ---
 # <a name="the-field-object"></a>Oggetto Field
 Ogni oggetto **campo** corrisponde in genere a una colonna in una tabella di database. Tuttavia, un **campo** può anche rappresentare un puntatore a un altro **Recordset**, denominato capitolo. Le eccezioni, ad esempio le colonne del capitolo, verranno descritte più avanti in questa guida.  
@@ -70,7 +70,7 @@ Ogni oggetto **campo** corrisponde in genere a una colonna in una tabella di dat
   
  Le proprietà predefinite sono quelle implementate in ADO e immediatamente disponibili per qualsiasi nuovo oggetto, usando la `MyObject.Property` sintassi. Non vengono visualizzati come oggetti **Proprietà** nella raccolta delle **Proprietà** di un oggetto.  
   
- Le proprietà dinamiche sono definite dal provider di dati sottostante e vengono visualizzate nella raccolta **Properties** per l'oggetto ADO appropriato. Una proprietà specifica del provider, ad esempio, può indicare se un oggetto **Recordset** supporta le transazioni o l'aggiornamento di. Queste proprietà aggiuntive verranno visualizzate come oggetti **Proprietà** nella raccolta delle **proprietà** dell'oggetto **Recordset** . È possibile fare riferimento alle proprietà dinamiche solo tramite la raccolta, usando la `MyObject.Properties(0)` sintassi `MyObject.Properties("Name")`o.  
+ Le proprietà dinamiche sono definite dal provider di dati sottostante e vengono visualizzate nella raccolta **Properties** per l'oggetto ADO appropriato. Una proprietà specifica del provider, ad esempio, può indicare se un oggetto **Recordset** supporta le transazioni o l'aggiornamento di. Queste proprietà aggiuntive verranno visualizzate come oggetti **Proprietà** nella raccolta delle **proprietà** dell'oggetto **Recordset** . È possibile fare riferimento alle proprietà dinamiche solo tramite la raccolta, usando la sintassi `MyObject.Properties(0)` o `MyObject.Properties("Name")` .  
   
  Non è possibile eliminare entrambi i tipi di proprietà.  
   

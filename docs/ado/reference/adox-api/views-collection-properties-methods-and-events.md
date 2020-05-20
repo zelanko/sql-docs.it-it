@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Views collection [ADOX], members
 ms.assetid: 04e119a4-39e1-45fe-8e39-c9b9afbfeb27
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9b76eb52f9f90e97c47d96e8bb072c2bee33061e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4a6b037e13be2d760d752fd5c9c4b4a9843bbc1b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964759"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761729"
 ---
 # <a name="views-collection-properties-methods-and-events"></a>Proprietà, metodi ed eventi della raccolta Views
 ## <a name="properties"></a>Proprietà  
@@ -32,7 +32,7 @@ ms.locfileid: "67964759"
   
  [Refresh (metodo)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventi  
  No.  
   
 ## <a name="see-also"></a>Vedere anche  

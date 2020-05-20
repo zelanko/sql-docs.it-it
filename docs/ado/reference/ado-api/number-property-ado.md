@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - number property [ADO]
 ms.assetid: f92323c5-dd11-4a63-a505-d9014a0f067f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ce027747c843e02998f4845db7075e70cf8733b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 02663507e19bf57f46b45ab7a99a717aec844dc4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917993"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762362"
 ---
 # <a name="number-property-ado"></a>Proprietà Number (ADO)
 Indica il numero che identifica in modo univoco un oggetto [Error](../../../ado/reference/ado-api/error-object.md) .  
@@ -38,7 +38,7 @@ Indica il numero che identifica in modo univoco un oggetto [Error](../../../ado/
 ## <a name="applies-to"></a>Si applica a  
  [Error (oggetto)](../../../ado/reference/ado-api/error-object.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Esempio di proprietà Description, HelpContext, filelima, NativeError, Number, source e SQLState (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
  [Esempio di proprietà Description, HelpContext, filelima, NativeError, Number, source e SQLState (VC + +)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [Description (proprietà)](../../../ado/reference/ado-api/description-property.md)   

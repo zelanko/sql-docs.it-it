@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - CursorTypeEnum enumeration [ADO]
 ms.assetid: ffc6e245-4471-42ae-84dd-e85bddfce983
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f6333934997c9de38b8df1dd08849886ff3dd7f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0af12cbad09990add1e5f42c05a68a0d249377fa
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933278"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763492"
 ---
 # <a name="cursortypeenum"></a>CursorTypeEnum
 Specifica il tipo di cursore utilizzato in un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
-|Costante|valore|Descrizione|  
+|Costante|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adOpenDynamic**|2|Utilizza un cursore dinamico. Sono visibili aggiunte, modifiche ed eliminazioni da parte di altri utenti e tutti i tipi di spostamento tramite il **Recordset** sono consentiti, ad eccezione dei segnalibri, se il provider non li supporta.|  
 |**adOpenForwardOnly**|0|Valore predefinito. Utilizza un cursore di sola trasmissione. Identico a un cursore statico, tranne per il fatto che è possibile scorrere i record in modo semplice. In questo modo è possibile migliorare le prestazioni quando è necessario effettuare un solo passaggio attraverso un **Recordset**.|  

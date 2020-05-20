@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - NextRecordset method [ADO], Visual Basic example
 ms.assetid: b14806da-80d9-4da4-bb87-f558b36a6ac0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 28a16d531cceb7147c5d4971d662797cb57242e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 78480bd71a1d96f5c5447022e3c7748814003bea
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918015"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762382"
 ---
 # <a name="nextrecordset-method-example-vb"></a>Esempio del metodo NextRecordset (VB)
 In questo esempio viene utilizzato il metodo [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) per visualizzare i dati in un recordset che utilizza un'istruzione di comando composta costituita da tre istruzioni **SELECT** separate.  
@@ -94,6 +94,6 @@ End Sub
 'EndNextRecordsetVB  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Metodo NextRecordset (ADO)](../../../ado/reference/ado-api/nextrecordset-method-ado.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

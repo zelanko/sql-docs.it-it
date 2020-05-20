@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Prepared property [ADO], VC++ example
 ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 58da870e9c65be459e6bd4a8c35bb84aef325c61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f2820f149c079a20e79297d98c1f265031a77ca7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917580"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761930"
 ---
 # <a name="prepared-property-example-vc"></a>Esempio della proprietà Prepared (VC++)
 In questo esempio viene illustrata la proprietà [preparata](../../../ado/reference/ado-api/prepared-property-ado.md) aprendo due oggetti [comando](../../../ado/reference/ado-api/command-object-ado.md) , uno preparato e uno non preparato.  
@@ -143,6 +143,6 @@ void PrintComError(_com_error &e) {
  **Risultati delle prestazioni:**  
 **Non preparato: 0,016 secondi**  
 **Preparati: 0,016 secondi**   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Proprietà Prepared (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

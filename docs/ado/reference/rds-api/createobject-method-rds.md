@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - CreateObject method [ADO]
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c6b50714cdff536418e759828d972c16abd7d7a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2b8cf7f5629158ccd1bdd74e30b7ba9bc5bb6942
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964540"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762672"
 ---
 # <a name="createobject-method-rds"></a>Metodo CreateObject (Servizi Desktop remoto)
 Crea il proxy per l'oggetto business di destinazione e restituisce un puntatore a tale oggetto. Il proxy esegue il marshalling dei dati e li esegue il marshalling sullo Stub lato server per le comunicazioni con l'oggetto business per inviare richieste e dati tramite Internet. Per gli oggetti componente in-process non vengono usati proxy, ma viene fornito solo un puntatore all'oggetto.  
@@ -31,8 +31,8 @@ Crea il proxy per l'oggetto business di destinazione e restituisce un puntatore 
   
 |Protocollo|Sintassi|  
 |--------------|------------|  
-|HTTP|Set Object = DataSpace. CreateObject ("ProgId", "https\://awebsrvr")|  
-|HTTPS|Set Object = DataSpace. CreateObject ("ProgId", "https\://awebsrvr")|  
+|HTTP|Set Object = DataSpace. CreateObject ("ProgId", "https \: //awebsrvr")|  
+|HTTPS|Set Object = DataSpace. CreateObject ("ProgId", "https \: //awebsrvr")|  
 |DCOM|Set object = DataSpace.CreateObject("ProgId", "computername")|  
 |In-Process|Set object = DataSpace.CreateObject("ProgId", "")|  
   

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Move method [ADO]
 ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4d76f239094185af7a3e940201b3f99132c0194a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 527e8c4f2f4c7c18163346f76029be539d1581d2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918190"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762502"
 ---
 # <a name="move-method-ado"></a>Metodo Move (ADO)
 Sposta la posizione del record corrente in un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -38,7 +38,7 @@ recordset.Move NumRecords, Start
  Espressione **Long** con segno che specifica il numero di record spostati dalla posizione corrente del record.  
   
  *Inizia*  
- Facoltativo. Valore **stringa** o **variante** che restituisce un segnalibro. È anche possibile usare un valore [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) .  
+ Facoltativa. Valore **stringa** o **variante** che restituisce un segnalibro. È anche possibile usare un valore [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) .  
   
 ## <a name="remarks"></a>Osservazioni  
  Il metodo **Move** è supportato in tutti gli oggetti **Recordset** .  
@@ -63,7 +63,7 @@ recordset.Move NumRecords, Start
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Esempio di metodo Move (VB)](../../../ado/reference/ado-api/move-method-example-vb.md)   
  [Esempio di metodo Move (VBScript)](../../../ado/reference/ado-api/move-method-example-vbscript.md)   
  [Esempio di metodo Move (VC + +)](../../../ado/reference/ado-api/move-method-example-vc.md)   

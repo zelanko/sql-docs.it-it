@@ -13,20 +13,20 @@ f1_keywords:
 helpviewer_keywords:
 - Cellset object [ADO MD]
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9524e9801f284d3dff3125b850cdd1fd32a361a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e50fb60fbde205171c066380a2c2023d485a5a09
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928641"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761769"
 ---
 # <a name="cellset-object-ado-md"></a>Oggetto Cellset (ADO MD)
 Rappresenta i risultati di una query multidimensionale. Si tratta di una raccolta di celle selezionate da cubi o altri celle.  
   
 ## <a name="remarks"></a>Osservazioni  
- I dati all'interno di un insieme di **celle** vengono recuperati mediante l'accesso diretto a un tipo di matrice. È possibile eseguire il drill-down di un membro specifico per ottenere i dati relativi a tale membro. Il codice seguente, ad esempio, restituisce la didascalia del primo membro nella prima posizione sul primo asse di un celle denominato `cst`:  
+ I dati all'interno di un insieme di **celle** vengono recuperati mediante l'accesso diretto a un tipo di matrice. È possibile eseguire il drill-down di un membro specifico per ottenere i dati relativi a tale membro. Il codice seguente, ad esempio, restituisce la didascalia del primo membro nella prima posizione sul primo asse di un celle denominato `cst` :  
   
 ```  
 cst.Axes(0).Positions(0).Members(0).Caption  

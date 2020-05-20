@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Cellset object [ADO MD], members
 ms.assetid: fb303e33-5a85-4e4e-81db-acaaa6f53799
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ccee0a1b6f31bf9cb54272387e2d7363d2324530
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 15b599884fffff5e9d6c289165b21a1d6f40b7a6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67911544"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761759"
 ---
 # <a name="cellset-object-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto Cellset
 ## <a name="propertiescollections"></a>Proprietà/raccolte  
@@ -40,7 +40,7 @@ ms.locfileid: "67911544"
   
  [Metodo Open](../../../ado/reference/ado-md-api/open-method-ado-md.md)  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventi  
  No.  
   
 ## <a name="see-also"></a>Vedere anche  

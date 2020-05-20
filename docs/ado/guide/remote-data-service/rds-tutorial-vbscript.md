@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - RDS tutorial [ADO], VBScript
 ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d45347bcdf212158fb6a0ee9f4599e1e1b00ff54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1fc60383f0862c845ee70be11a051b9da48b36a2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922423"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763572"
 ---
 # <a name="rds-tutorial-vbscript"></a>Esercitazione su RDS (VBScript)
 Questa è l'esercitazione su RDS, scritta in Microsoft Visual Basic Scripting Edition. Per una descrizione dello scopo di questa esercitazione, vedere l' [esercitazione su RDS](../../../ado/guide/remote-data-service/rds-tutorial.md).  
@@ -27,7 +27,7 @@ Questa è l'esercitazione su RDS, scritta in Microsoft Visual Basic Scripting Ed
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- In questa esercitazione, Servizi Desktop remoto [. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) e Servizi Desktop remoto [. Gli spazi](../../../ado/reference/rds-api/dataspace-object-rds.md) dei nomi vengono creati in fase di progettazione, ovvero vengono definiti con tag oggetto, come segue: `<OBJECT>...</OBJECT>`. In alternativa, è possibile crearli in fase di esecuzione con il metodo [CreateObject metodo (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md) . Ad esempio, il Servizi Desktop remoto **. **È possibile creare un oggetto DataControl analogo al seguente:  
+ In questa esercitazione, Servizi Desktop remoto [. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) e Servizi Desktop remoto [. Gli spazi](../../../ado/reference/rds-api/dataspace-object-rds.md) dei nomi vengono creati in fase di progettazione, ovvero vengono definiti con tag oggetto, come segue: `<OBJECT>...</OBJECT>` . In alternativa, è possibile crearli in fase di esecuzione con il metodo [CreateObject metodo (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md) . Ad esempio, il Servizi Desktop remoto **. **È possibile creare un oggetto DataControl analogo al seguente:  
   
 ```vb
 Set DC = Server.CreateObject("RDS.DataControl")  

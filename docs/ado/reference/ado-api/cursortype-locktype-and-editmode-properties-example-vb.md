@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CursorType property [ADO], Visual Basic example
 - LockType property [ADO], Visual Basic example
 ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4556a243206d373a110aaab6a56bd43bf487abff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 044dc0351cb5893514373f298c7a3df86abe5f38
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919276"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763532"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>Esempio di proprietà CursorType, LockType e EditMode (VB)
 In questo esempio viene illustrata l'impostazione delle proprietà [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) e [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) prima di aprire un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Mostra anche il valore della proprietà [EditMode](../../../ado/reference/ado-api/editmode-property.md) in varie condizioni. Per eseguire questa procedura, è necessaria la funzione EditModeOutput.  
@@ -122,7 +122,7 @@ End Function
 'EndEditModeVB  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Proprietà CursorType (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
  [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)   
  [Proprietà EditMode](../../../ado/reference/ado-api/editmode-property.md)   

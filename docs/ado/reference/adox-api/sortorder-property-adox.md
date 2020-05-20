@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SortOrder property [ADOX]
 ms.assetid: 04510b19-9cb2-4895-b23b-f7790123eb04
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e30d3ba08c10b16768d75a9234cfa15fe501c9b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2026bcae8e0923159f6fb1044ab379d439993400
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965211"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762792"
 ---
 # <a name="sortorder-property-adox"></a>Proprietà SortOrder (ADOX)
 Indica la sequenza di ordinamento per la colonna (solo colonne indice).  
