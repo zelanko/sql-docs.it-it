@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sysschedules system table
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cbf570a09f3316172a60206730b91644cc603f0b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: de79a475b8edb8f02eee15d79f1259b8032b60e8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79090580"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82806707"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "79090580"
 |**freq_interval**|**int**|Giorni in cui viene eseguito il processo. Dipende dal valore di **freq_type**. Il valore predefinito è **0**, che indica che **freq_interval** è inutilizzato. Per i valori possibili e i relativi effetti, vedere la tabella seguente.|  
 |**freq_subday_type**|**int**|Unità per la **freq_subday_interval**. Di seguito sono riportati i valori possibili e le relative descrizioni.<br /><br /> <br /><br /> **1** : all'ora specificata<br /><br /> **2** : secondi<br /><br /> **4** : minuti<br /><br /> **8** : ore|  
 |**freq_subday_interval**|**int**|Numero di periodi di **freq_subday_type** tra le esecuzioni del processo.|  
-|**freq_relative_interval**|**int**|Quando **freq_interval** si verifica ogni mese, se **freq_type** è **32** (mensile relativo). I possibili valori sono i seguenti:<br /><br /> **0** = **freq_relative_interval** non è utilizzato<br /><br /> **1** = prima<br /><br /> **2** = secondo<br /><br /> **4** = terzo<br /><br /> **8** = quarto<br /><br /> **16** = Ultima|  
+|**freq_relative_interval**|**int**|Quando **freq_interval** si verifica ogni mese, se **freq_type** è **32** (mensile relativo). I possibili valori sono i seguenti:<br /><br /> **0**  =  **freq_relative_interval** non è usato<br /><br /> **1** = prima<br /><br /> **2** = secondo<br /><br /> **4** = terzo<br /><br /> **8** = quarto<br /><br /> **16** = Ultima|  
 |**freq_recurrence_**<br /><br /> **Factor**|**int**|Numero di settimane o mesi tra le esecuzioni pianificate di un processo. **freq_recurrence_factor** viene utilizzato solo se **freq_type** è **8**, **16**o **32**. Se questa colonna contiene **0**, **freq_recurrence_factor** non è utilizzata.|  
 |**active_start_date**|**int**|Data dalla quale è possibile avviare l'esecuzione del processo. La data è nel formato AAAAMMGG. NULL indica la data odierna.|  
 |**active_end_date**|**int**|Data dalla quale è possibile arrestare l'esecuzione del processo. La data è nel formato AAAAMMGG.|  
