@@ -23,7 +23,7 @@ ms.locfileid: "68137422"
 ---
 # <a name="database-mail"></a>Posta elettronica database
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Posta elettronica database è una soluzione aziendale per l'invio di messaggi di posta elettronica da [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o dall'[istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Posta elettronica database consente alle applicazioni di database di inviare messaggi di posta elettronica agli utenti. I messaggi possono includere risultati di query e file provenienti da qualunque risorsa disponibile in rete.  
+  Posta elettronica database è una soluzione aziendale per l'invio di messaggi di posta elettronica da [ o dall'[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Posta elettronica database consente alle applicazioni di database di inviare messaggi di posta elettronica agli utenti. I messaggi possono includere risultati di query e file provenienti da qualunque risorsa disponibile in rete.  
   
 > [!NOTE] 
 > Posta elettronica database è disponibile in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e nell'[istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index), ma non nei database SQL di Azure singleton e in pool elastici. 

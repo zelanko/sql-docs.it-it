@@ -49,7 +49,7 @@ ms.locfileid: "68042270"
  Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geography** non corrispondono.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene usato il metodo `geography` per creare due istanze `STGeomFromText()` uguali in modo non banale e viene usato `STEquals()` per verificarne l'uguaglianza. Le istanze sono uguali perché `LINESTRING` e `POINT` sono contenuti all'interno di `POLYGON`.  
+ Nell'esempio seguente viene usato il metodo `STGeomFromText()` per creare due istanze `geography` uguali in modo non banale e viene usato `STEquals()` per verificarne l'uguaglianza. Le istanze sono uguali perché `LINESTRING` e `POINT` sono contenuti all'interno di `POLYGON`.  
   
 ```  
 DECLARE @g geography;  

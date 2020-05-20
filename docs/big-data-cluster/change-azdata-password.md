@@ -61,7 +61,7 @@ Se il cluster funziona in modalità non Active Directory, aggiornare la password
 
 1. Crittografare la nuova password complessa usando `hexsalt`:
 
-   Per praticità, viene messo a disposizione uno strumento predefinito `pbkdf2` per crittografare la password. Scaricare l'app .NET Core appropriata per la piattaforma per [`pbkdf2`](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/security/password-hashing/pbkdf2/prebuilt-binaries).
+   Per praticità, viene messo a disposizione uno strumento predefinito `pbkdf2` per crittografare la password. Scaricare l'app .NET Core appropriata per la piattaforma per [](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/security/password-hashing/pbkdf2/prebuilt-binaries)`pbkdf2`.
 
    L'app è indipendente e non richiede prerequisiti, ad esempio i runtime .NET. Per crittografare la password, eseguire:
 

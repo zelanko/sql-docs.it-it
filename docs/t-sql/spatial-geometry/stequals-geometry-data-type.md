@@ -49,7 +49,7 @@ Restituisce 1 se un'istanza **geometry** rappresenta lo stesso set di punti di u
  Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geometry** non corrispondono.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene usato il metodo `geometry` per creare due istanze `STGeomFromText()` uguali in modo non banale e viene usato `STEquals()` per verificarne l'uguaglianza.  
+ Nell'esempio seguente viene usato il metodo `STGeomFromText()` per creare due istanze `geometry` uguali in modo non banale e viene usato `STEquals()` per verificarne l'uguaglianza.  
   
 ```  
 DECLARE @g geometry  

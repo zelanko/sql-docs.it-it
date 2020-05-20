@@ -71,7 +71,7 @@ ms.locfileid: "68094947"
   
 3.  Fare clic con il pulsante destro del mouse sulla cartella **Ruoli server** e selezionare **Nuovo ruolo server**.  
   
-4.  Nella pagina **Generale** della finestra di dialogo _Nuovo ruolo server -\_\_nome_ruolo**server** immettere un nome per il nuovo ruolo del server nella casella **Nome ruolo del server**.  
+4.  Nella pagina **Generale** della finestra di dialogo **Nuovo ruolo server -**_nome\_ruolo\_server_ immettere un nome per il nuovo ruolo del server nella casella **Nome ruolo del server**.  
   
 5.  Nella casella **Proprietario** immettere il nome dell'entità del server proprietaria del nuovo ruolo. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona account di accesso o ruolo server**.  
   

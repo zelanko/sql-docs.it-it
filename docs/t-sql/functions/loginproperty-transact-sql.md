@@ -120,7 +120,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-checking-whether-a-login-must-change-its-password"></a>R. Verifica della necessità di modificare la password di un account di accesso  
- Nell'esempio seguente viene controllato se la password dell'account di accesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di `John3` deve essere modificata alla connessione successiva a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Nell'esempio seguente viene controllato se la password dell'account di accesso `John3` di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere modificata alla connessione successiva a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 SELECT LOGINPROPERTY('John3', 'IsMustChange');  
@@ -128,7 +128,7 @@ GO
 ```  
   
 ### <a name="b-checking-whether-a-login-is-locked-out"></a>B. Controllo dell'eventuale blocco di un account di accesso  
- Nell'esempio seguente viene controllato se l'account di accesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di `John3` è bloccato.  
+ Nell'esempio seguente viene controllato se l'account di accesso `John3` di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è bloccato.  
   
 ```  
 SELECT LOGINPROPERTY('John3', 'IsLocked');  
