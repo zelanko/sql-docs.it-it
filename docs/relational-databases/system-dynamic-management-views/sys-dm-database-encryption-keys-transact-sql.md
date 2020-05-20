@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_database_encryption_keys dynamic management view
 ms.assetid: 56fee8f3-06eb-4fff-969e-abeaa0c4b8e4
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e716c826fd366fda4505b7fcf9ec8e3b756ec25
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2a1057be51a987e694fa1a29de4299ff63a70733
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80531054"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824628"
 ---
 # <a name="sysdm_database_encryption_keys-transact-sql"></a>sys.dm_database_encryption_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "80531054"
 |key_algorithm|**nvarchar(32)**|Visualizza l'algoritmo usato per la chiave.|  
 |key_length|**int**|Visualizza la lunghezza della chiave.|  
 |encryptor_thumbprint|**varbinary(20)**|Mostra l'identificazione digitale della crittografia.|  
-|encryptor_type|**nvarchar(32)**|**Si applica a** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (da alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> Descrive il componente di crittografia.|  
+|encryptor_type|**nvarchar(32)**|**Si applica a**: (da alla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> Descrive il componente di crittografia.|  
 |percent_complete|**real**|Percentuale di completamento del cambiamento di stato della crittografia del database. In assenza di un cambiamento di stato il valore sarà 0.|
 |encryption_state_desc|**nvarchar(32)**|**Si applica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e versioni successive.<br><br> Stringa che indica se il database è crittografato o non crittografato.<br><br>NONE<br><br>NON crittografati<br><br>CRITTOGRAFATI<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
 |encryption_scan_state|**int**|**Si applica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e versioni successive.<br><br>Indica lo stato corrente dell'analisi della crittografia. <br><br>0 = non è stata avviata alcuna analisi, Transparent Data Encryption non è abilitato<br><br>1 = l'analisi è in corso.<br><br>2 = l'analisi è in corso ma è stata sospesa, l'utente può riprendere.<br><br>3 = l'analisi è stata interrotta per qualche motivo, è necessario un intervento manuale. Per ulteriori informazioni, contattare supporto tecnico Microsoft.<br><br>4 = l'analisi è stata completata correttamente, Transparent Data Encryption è abilitato e la crittografia è stata completata.|
@@ -53,7 +53,7 @@ ms.locfileid: "80531054"
   
 ## <a name="permissions"></a>Autorizzazioni
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]è richiesta `VIEW SERVER STATE` l'autorizzazione.   
+In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
 Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
 
 ## <a name="see-also"></a>Vedere anche  

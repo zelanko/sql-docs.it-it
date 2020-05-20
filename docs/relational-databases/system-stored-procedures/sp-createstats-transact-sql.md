@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_createstats
 ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e0bb7d109323f4eb4a33181ab45b4b17d15faf54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0cc6ff854079b740279127000a9edb04552245e1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108608"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820554"
 ---
 # <a name="sp_createstats-transact-sql"></a>sp_createstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_createstats
 ## <a name="result-sets"></a>Set di risultati  
  Il nome dei nuovi oggetti statistiche corrisponde a quello delle colonne su cui sono stati creati.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  sp_createstats non crea o Aggiorna statistiche sulle colonne che sono la prima colonna di un oggetto statistiche esistente.  Include la prima colonna di statistiche create per gli indici, le colonne con statistiche a colonna singola generate con AUTO_CREATE_STATISTICS opzione e la prima colonna di statistiche create con l'istruzione CREATE STATISTICs. sp_createstats non crea statistiche sulle prime colonne degli indici disabilitati, a meno che tale colonna non venga utilizzata in un altro indice attivato. sp_createstats non crea statistiche sulle tabelle con un indice cluster disabilitato.  
   
  Quando la tabella contiene un set di colonne, sp_createstats non crea statistiche sulle colonne di tipo sparse. Per ulteriori informazioni sui set di colonne e sulle colonne di tipo sparse, vedere [utilizzare set di colonne](../../relational-databases/tables/use-column-sets.md) e [utilizzare colonne di tipo sparse](../../relational-databases/tables/use-sparse-columns.md).  

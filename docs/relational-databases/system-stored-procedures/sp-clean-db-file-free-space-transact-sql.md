@@ -16,14 +16,14 @@ helpviewer_keywords:
 - ghost records
 - sp_clean_db_file_free_space
 ms.assetid: 3eb53a67-969d-4cb8-9681-b1c8e6fd55b6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c788d78dac45f2371829bb450ac98c94164d97ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1761c3546d043dd74a3fe2b491618140635fe61c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070396"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823456"
 ---
 # <a name="sp_clean_db_file_free_space-transact-sql"></a>sp_clean_db_file_free_space (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +43,13 @@ sp_clean_db_file_free_space
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @dbname= ] '*database_name*'  
+ [ @dbname =]'*database_name*'  
  Nome del database da pulire. *dbname* è di **tipo sysname** e non può essere null.  
   
- [ @fileid= ] '*file_number*'  
+ [ @fileid =]'*file_number*'  
  ID del file di dati su cui eseguire la pulizia. *file_number* è di **tipo int** e non può essere null.  
   
- [ @cleaning_delay= ] '*delay_in_seconds*'  
+ [ @cleaning_delay =]'*delay_in_seconds*'  
  Specifica un intervallo di ritardo tra le pulizie delle pagine per ridurre l'impatto sul sistema di I/O. *delay_in_seconds* è di **tipo int** e il valore predefinito è 0.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
@@ -67,7 +67,7 @@ sp_clean_db_file_free_space
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo del database db_owner.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono eliminate le informazioni residue dal file di dati primario del database `AdventureWorks2012`.  
   
 ```  

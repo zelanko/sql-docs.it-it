@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_gettopologyinfo
 ms.assetid: 8bbe8a06-a4aa-4219-8402-12db6a4682c6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 901ad9739966327102ceda6c7d26815daa867888
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0f3bb48f4fc219f0bc6d4e46b8073d10fd255f1f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68123916"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820473"
 ---
 # <a name="sp_gettopologyinfo-transact-sql"></a>sp_gettopologyinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ sp_gettopologyinfo [ @request_id = ] request_id
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @request_id= ] *request_id*  
+ [ @request_id =] *request_id*  
  ID di una richiesta di stato di topologia. *request_id* è di **tipo int**e il valore predefinito è null. Per ottenere un ID, utilizzare il @request_id parametro output di [sp_requestpeertopologyinfo](../../relational-databases/system-stored-procedures/sp-requestpeertopologyinfo-transact-sql.md) o eseguire una query sulla [MSpeer_topologyrequest](../../relational-databases/system-tables/mspeer-topologyrequest-transact-sql.md) tabella di sistema.  
   
 ## <a name="result-sets"></a>Set di risultati  

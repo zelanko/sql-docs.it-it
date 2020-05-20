@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_special_columns
 ms.assetid: 0b0993f8-73e0-402b-8c6c-1b0963956f5d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c82970caa25089320a1dc5daf68076f27478081f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ceb000826fee3ce4a26472343a6bb68e3636a9b3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032838"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820330"
 ---
 # <a name="sp_special_columns-transact-sql"></a>sp_special_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,31 +46,31 @@ sp_special_columns [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @table_name=] '*table_name*'  
+ [ @table_name =]'*table_name*'  
  Nome della tabella utilizzata per restituire informazioni sul catalogo. *Name* è di **tipo sysname**e non prevede alcun valore predefinito. I criteri di ricerca con caratteri jolly non sono supportati.  
   
- [ @table_owner=] '*TABLE_OWNER*'  
+ [ @table_owner =]'*TABLE_OWNER*'  
  Proprietario della tabella utilizzata per restituire informazioni sul catalogo. *owner* è di **tipo sysname**e il valore predefinito è null. I criteri di ricerca con caratteri jolly non sono supportati. Se il *proprietario* non è specificato, vengono applicate le regole di visibilità della tabella predefinite del sistema DBMS sottostante.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se l'utente corrente è il proprietario di una tabella con il nome specificato, vengono restituite le colonne di tale tabella. Se *owner* non è specificato e l'utente corrente non è il proprietario di una tabella con il *nome*specificato, questa procedura cerca una tabella con il *nome* specificato di proprietà del proprietario del database. Se la tabella esiste, vengono restituite le colonne corrispondenti.  
   
- [ @qualifier=] '*Qualifier*'  
+ [ @qualifier =]'*qualificatore*'  
  Nome del qualificatore di tabella. *Qualifier* è di **tipo sysname**e il valore predefinito è null. Vari prodotti DBMS supportano la denominazione in tre parti per le tabelle (*Qualifier.Owner.Name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In alcuni prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
- [ @col_type=] '*col_type*'  
+ [ @col_type =]'*col_type*'  
  Tipo di colonna. *col_type* è di tipo **char (** 1 **)** e il valore predefinito è r. il tipo r restituisce la colonna o il set di colonne ottimale che, tramite il recupero di valori dalla colonna o dalle colonne, consente di identificare in modo univoco ogni riga nella tabella specificata. Una colonna può essere una pseudocolonna progettata a questo scopo oppure la colonna o le colonne di un indice univoco della tabella. Il tipo di colonna V restituisce le eventuali colonne della tabella specificata che vengono aggiornate automaticamente dall'origine dati in corrispondenza dell'aggiornamento di un valore della riga tramite una transazione.  
   
- [ @scope=] '*scope*'  
+ [ @scope =]'*scope*'  
  Ambito minimo richiesto per ROWID. l' *ambito* è **char (** 1 **)** e il valore predefinito è T. Scope C specifica che ROWID è valido solo se posizionato in corrispondenza di tale riga. L'ambito T indica che il valore ROWID è valido per la transazione.  
   
- [ @nullable=] '*Nullable*'  
+ [ @nullable =]'*Nullable*'  
  Indica se le colonne speciali possono accettare un valore null. *Nullable* è **char (** 1 **)** e il valore predefinito è U. O specifica le colonne speciali che non ammettono valori null. mentre U specifica le colonne che ammettono parzialmente valori Null.  
   
- [ @ODBCVer=] '*ODBCVer*'  
+ [ @ODBCVer =]'*ODBCVer*'  
  Versione ODBC utilizzata. *ODBCVer* è di **tipo int (** 4 **)** e il valore predefinito è 2. che indica ODBC versione 2.0. Per ulteriori informazioni sulle differenze tra ODBC versione 2.0 e ODBC versione 3.0, vedere la specifica ODBC SQLSpecialColumns per ODBC versione 3.0.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- nessuno  
+ Nessuno  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -91,7 +91,7 @@ sp_special_columns [ @table_name = ] 'table_name'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione SELECT per lo schema.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituite informazioni sulla colonna che identifica in modo univoco le righe nella tabella `HumanResources.Department`.  
   
 ```sql  

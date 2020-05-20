@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpublication
 ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5e6e7232d718d5cf6cb1791783f105f31dc2f4ec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3ae6596579942a3292c3467f4d3489346eb4aa42
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769105"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820672"
 ---
 # <a name="sp_addpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -91,28 +91,28 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@sync_method = ] _'sync_method'`Modalità di sincronizzazione. *sync_method* è di **tipo nvarchar (13)**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**native**|Genera l'output in modalità nativa del programma per la copia bulk per tutte le tabelle. *Non supportato per i Publisher Oracle*.|  
 |**carattere**|Genera l'output in modalità carattere del programma per la copia bulk per tutte le tabelle. _Per un server di pubblicazione Oracle,_ il **carattere** _è valido solo per la replica snapshot_.|  
 |**simultanee**|Genera l'output del programma per la copia bulk in modalità nativa per tutte le tabelle, senza tuttavia bloccare le tabelle durante lo snapshot. Questo valore è supportato solo per pubblicazioni transazionali. *Non supportato per i Publisher Oracle*.|  
 |**concurrent_c**|Genera l'output del programma per la copia bulk in modalità carattere per tutte le tabelle, senza tuttavia bloccare le tabelle durante lo snapshot. Questo valore è supportato solo per pubblicazioni transazionali.|  
-|**snapshot del database**|Genera output del programma in modalità nativa per la copia bulk di tutte le tabelle da uno snapshot del database. Gli snapshot del database non sono disponibili in ogni edizione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
-|**database snapshot character**|Genera output del programma in modalità carattere per la copia bulk di tutte le tabelle da uno snapshot del database. Gli snapshot del database non sono disponibili in ogni edizione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
-|NULL (predefinito)|Il valore predefinito **native** è nativo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per i Publisher. Per[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i Publisher non, il valore predefinito è **character** quando il valore di *repl_freq* è **snapshot** e **concurrent_c** per tutti gli altri casi.|  
+|**snapshot del database**|Genera output del programma in modalità nativa per la copia bulk di tutte le tabelle da uno snapshot del database. Gli snapshot del database non sono disponibili in ogni edizione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
+|**database snapshot character**|Genera output del programma in modalità carattere per la copia bulk di tutte le tabelle da uno snapshot del database. Gli snapshot del database non sono disponibili in ogni edizione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
+|NULL (predefinito)|Il valore predefinito è **nativo** per i [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. Per i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher non, il valore predefinito è **character** quando il valore di *repl_freq* è **snapshot** e **concurrent_c** per tutti gli altri casi.|  
   
 `[ \@repl_freq = ] 'repl_freq'`Tipo di frequenza di replica. *repl_freq* è di tipo **nvarchar (10)**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
-|**Continuous** (impostazione predefinita)|Il server di pubblicazione genera l'output per tutte le transazioni basate su log. Per gli[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editori non è necessario che *sync_method* sia impostato su **concurrent_c**.|  
-|**snapshot**|Il server di pubblicazione genera solo gli eventi di sincronizzazione pianificati. Per gli[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editori non è necessario che *sync_method* sia impostato su **carattere**.|  
+|**Continuous** (impostazione predefinita)|Il server di pubblicazione genera l'output per tutte le transazioni basate su log. Per gli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editori non è necessario che *sync_method* sia impostato su **concurrent_c**.|  
+|**snapshot**|Il server di pubblicazione genera solo gli eventi di sincronizzazione pianificati. Per gli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editori non è necessario che *sync_method* sia impostato su **carattere**.|  
   
 `[ \@description = ] 'description'`Descrizione facoltativa della pubblicazione. *Description* è di **tipo nvarchar (255)** e il valore predefinito è null.  
   
 `[ \@status = ] 'status'`Specifica se i dati della pubblicazione sono disponibili. *status* è di **tipo nvarchar (8)**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**active**|I dati della pubblicazione risultano immediatamente disponibili per i Sottoscrittori.|  
 |**inattivo** (impostazione predefinita)|I dati della pubblicazione non sono disponibili per i Sottoscrittori quando viene creata la pubblicazione (è possibile creare una sottoscrizione, che tuttavia non viene elaborata).|  
@@ -135,7 +135,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@autogen_sync_procs = ] 'autogen_sync_procs'`Specifica se la stored procedure di sincronizzazione per le sottoscrizioni aggiornabili viene generata nel server di pubblicazione. *autogen_sync_procs* è di **tipo nvarchar (5)**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**true**|Questo valore viene impostato automaticamente quando sono abilitate le sottoscrizioni aggiornabili.|  
 |**false**|Questo valore viene impostato automaticamente quando non sono abilitate le sottoscrizioni aggiornabili oppure per server di pubblicazione Oracle.|  
@@ -148,7 +148,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@allow_queued_tran = ] 'allow_queued_updating'`Abilita o Disabilita l'accodamento delle modifiche nel Sottoscrittore finché non è possibile applicarle al server di pubblicazione. *allow_queued_updating* è di **tipo nvarchar (5)** e il valore predefinito è false. Se **false**, le modifiche nel Sottoscrittore non vengono accodate. **true** *non è supportato per i Publisher Oracle*.  
   
-`[ \@snapshot_in_defaultfolder = ] 'snapshot_in_default_folder'`Specifica se i file di snapshot sono archiviati nella cartella predefinita. *snapshot_in_default_folder* è di **tipo nvarchar (5)** e il valore predefinito è true. Se **true**, i file di snapshot sono disponibili nella cartella predefinita. Se **false**, i file di snapshot sono stati archiviati nel percorso alternativo specificato da *alternate_snapshot_folder*. Le posizioni alternative possono essere un altro server, un'unità di rete oppure un supporto rimovibile, ad esempio un CD o un disco rimovibile. È inoltre possibile archiviare i file di snapshot in un sito FTP in modo che possano essere successivamente recuperati dal Sottoscrittore. Si noti che questo parametro può essere true e avere ancora una posizione nel parametro ** \@alt_snapshot_folder** . Tale combinazione indica che i file di snapshot vengono archiviati sia nella posizione predefinita che in posizioni alternative.  
+`[ \@snapshot_in_defaultfolder = ] 'snapshot_in_default_folder'`Specifica se i file di snapshot sono archiviati nella cartella predefinita. *snapshot_in_default_folder* è di **tipo nvarchar (5)** e il valore predefinito è true. Se **true**, i file di snapshot sono disponibili nella cartella predefinita. Se **false**, i file di snapshot sono stati archiviati nel percorso alternativo specificato da *alternate_snapshot_folder*. Le posizioni alternative possono essere un altro server, un'unità di rete oppure un supporto rimovibile, ad esempio un CD o un disco rimovibile. È inoltre possibile archiviare i file di snapshot in un sito FTP in modo che possano essere successivamente recuperati dal Sottoscrittore. Si noti che questo parametro può essere true e avere ancora una posizione nel parametro ** \@ alt_snapshot_folder** . Tale combinazione indica che i file di snapshot vengono archiviati sia nella posizione predefinita che in posizioni alternative.  
   
 `[ \@alt_snapshot_folder = ] 'alternate_snapshot_folder'`Specifica la posizione della cartella alternativa per lo snapshot. *alternate_snapshot_folder* è di **tipo nvarchar (255)** e il valore predefinito è null.  
   
@@ -156,7 +156,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@post_snapshot_script = ] 'post_snapshot_script'`Specifica un puntatore al percorso di un file con **estensione SQL** . *post_snapshot_script* è di **tipo nvarchar (255)** e il valore predefinito è null. L'agente di distribuzione esegue lo script post-snapshot dopo l'applicazione di tutti gli altri dati e script di oggetti replicati durante una sincronizzazione iniziale. Lo script viene eseguito nel contesto di sicurezza utilizzato dall'agente di distribuzione per la connessione al database di sottoscrizione.  
   
-`[ \@compress_snapshot = ] 'compress_snapshot'`Specifica che lo snapshot scritto nella posizione ** \@alt_snapshot_folder** deve essere compresso nel formato [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB. *compress_snapshot* è di **tipo nvarchar (5)** e il valore predefinito è false. **false** specifica che lo snapshot non verrà compresso; **true** specifica che lo snapshot verrà compresso. I file di snapshot con una dimensione superiore a 2 gigabyte (GB) non possono essere compressi. I file di snapshot compressi vengono decompressi nella posizione in cui viene eseguito l'agente di distribuzione. Per le sottoscrizioni pull in genere vengono utilizzati snapshot compressi in modo che i file vengano decompressi nel Sottoscrittore. Non è possibile comprimere lo snapshot all'interno della cartella predefinita.  
+`[ \@compress_snapshot = ] 'compress_snapshot'`Specifica che lo snapshot scritto nella posizione ** \@ alt_snapshot_folder** deve essere compresso nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] formato CAB. *compress_snapshot* è di **tipo nvarchar (5)** e il valore predefinito è false. **false** specifica che lo snapshot non verrà compresso; **true** specifica che lo snapshot verrà compresso. I file di snapshot con una dimensione superiore a 2 gigabyte (GB) non possono essere compressi. I file di snapshot compressi vengono decompressi nella posizione in cui viene eseguito l'agente di distribuzione. Per le sottoscrizioni pull in genere vengono utilizzati snapshot compressi in modo che i file vengano decompressi nel Sottoscrittore. Non è possibile comprimere lo snapshot all'interno della cartella predefinita.  
   
 `[ \@ftp_address = ] 'ftp_address'`È l'indirizzo di rete del servizio FTP per il server di distribuzione. *ftp_address* è di **tipo sysname**e il valore predefinito è null. Specifica la posizione in cui i file di snapshot della pubblicazione possono essere prelevati dall'agente di distribuzione o di merge di un Sottoscrittore. Poiché questa proprietà viene archiviata per ogni pubblicazione, ogni pubblicazione può avere un *ftp_address*diverso. La pubblicazione deve supportare la propagazione di snapshot tramite FTP.  
   
@@ -176,7 +176,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@conflict_policy = ] 'conflict_policy'`Specifica i criteri di risoluzione dei conflitti seguiti quando viene utilizzata l'opzione del Sottoscrittore ad aggiornamento in coda. *conflict_policy* è di **tipo nvarchar (100)** e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**pub wins**|Prevale il server di pubblicazione.|  
 |**sub reinit**|Reinizializzare la sottoscrizione.|  
@@ -191,10 +191,10 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@queue_type = ] 'queue_type'`Specifica il tipo di coda utilizzato. *queue_type* è di **tipo nvarchar (10)** e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**SQL**|Consente di utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'archiviazione delle transazioni.|  
-|NULL (predefinito)|Il valore predefinito è **SQL**, che specifica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzare per archiviare le transazioni.|  
+|NULL (predefinito)|Il valore predefinito è **SQL**, che specifica di utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per archiviare le transazioni.|  
   
 > [!NOTE]  
 >  L'utilizzo di MSMQ ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing) non è più supportato. Se si specifica il valore **MSMQ** , verrà generato un avviso e la replica imposterà automaticamente il valore su **SQL**.  
@@ -207,14 +207,14 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@qreader_job_name = ] 'queue_reader_agent_name'`Nome di un processo di Agent esistente. *queue_reader_agent_name* è di **tipo sysname**e il valore predefinito è null. Questo parametro viene specificato solo quando l'agente di lettura coda utilizzerà un processo esistente anziché uno nuovo.  
   
-`[ \@publisher = ] 'publisher'`Specifica un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
+`[ \@publisher = ] 'publisher'`Specifica un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
->  non utilizzare *Publisher* quando si aggiunge una pubblicazione a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
+>  non utilizzare *Publisher* quando si aggiunge una pubblicazione a un server di pubblicazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 `[ \@allow_initialize_from_backup = ] 'allow_initialize_from_backup'`Indica se i sottoscrittori possono inizializzare una sottoscrizione di questa pubblicazione da un backup anziché da uno snapshot iniziale. *allow_initialize_from_backup* è di **tipo nvarchar (5)**. i possibili valori sono i seguenti:  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**true**|Abilita l'inizializzazione da un backup.|  
 |**false**|Disabilita l'inizializzazione da un backup.|  
@@ -225,13 +225,13 @@ sp_addpublication [ @publication = ] 'publication'
 > [!WARNING]  
 >  Per evitare la mancanza di dati del Sottoscrittore, quando si utilizza **sp_addpublication** con `@allow_initialize_from_backup = N'true'`, utilizzare sempre `@immediate_sync = N'true'`.  
   
-`[ \@replicate_ddl = ] replicate_ddl`Indica se per la pubblicazione è supportata la replica dello schema. *replicate_ddl* è di **tipo int**e il valore predefinito è [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **1** per i Publisher e **0** per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i Publisher non. **1** indica che le istruzioni Data Definition Language (DDL) eseguite nel server di pubblicazione vengono replicate, mentre **0** indica che le istruzioni DDL non vengono replicate. *La replica dello schema non è supportata per server di pubblicazione Oracle.* Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+`[ \@replicate_ddl = ] replicate_ddl`Indica se per la pubblicazione è supportata la replica dello schema. *replicate_ddl* è di **tipo int**e il valore predefinito è **1** per i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher e **0** per i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher non. **1** indica che le istruzioni Data Definition Language (DDL) eseguite nel server di pubblicazione vengono replicate, mentre **0** indica che le istruzioni DDL non vengono replicate. *La replica dello schema non è supportata per server di pubblicazione Oracle.* Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
- Il * \@parametro replicate_ddl* viene rispettato quando un'istruzione DDL aggiunge una colonna. Il * \@parametro replicate_ddl* viene ignorato quando un'istruzione DDL modifica o rilascia una colonna per i motivi seguenti.  
+ Il parametro * \@ replicate_ddl* viene rispettato quando un'istruzione DDL aggiunge una colonna. Il parametro * \@ replicate_ddl* viene ignorato quando un'istruzione DDL modifica o rilascia una colonna per i motivi seguenti.  
   
--   Quando viene rilasciata una colonna, è necessario aggiornare sysarticlecolumns per evitare l'inclusione della colonna eliminata da parte delle nuove istruzioni DML che determinerebbe la mancata esecuzione dell'agente di distribuzione. Il * \@parametro replicate_ddl* viene ignorato perché la replica deve sempre replicare la modifica dello schema.  
+-   Quando viene rilasciata una colonna, è necessario aggiornare sysarticlecolumns per evitare l'inclusione della colonna eliminata da parte delle nuove istruzioni DML che determinerebbe la mancata esecuzione dell'agente di distribuzione. Il parametro * \@ replicate_ddl* viene ignorato perché la replica deve sempre replicare la modifica dello schema.  
   
--   Quando una colonna viene modificata, è probabile che venga modificato il tipo di dati di origine o il supporto dei valori Null, di conseguenza le istruzioni DML contengono un valore che potrebbe non essere compatibile con la tabella nel Sottoscrittore. Tali istruzioni DML potrebbero determinare la mancata esecuzione dell'agente di distribuzione. Il * \@parametro replicate_ddl* viene ignorato perché la replica deve sempre replicare la modifica dello schema.  
+-   Quando una colonna viene modificata, è probabile che venga modificato il tipo di dati di origine o il supporto dei valori Null, di conseguenza le istruzioni DML contengono un valore che potrebbe non essere compatibile con la tabella nel Sottoscrittore. Tali istruzioni DML potrebbero determinare la mancata esecuzione dell'agente di distribuzione. Il parametro * \@ replicate_ddl* viene ignorato perché la replica deve sempre replicare la modifica dello schema.  
   
 -   Quando un'istruzione DDL aggiunge una nuova colonna, sysarticlecolumns non include la nuova colonna. Le istruzioni DML non tenteranno di replicare i dati per la nuova colonna. Il parametro viene rispettato perché la replica o la non replica di DDL è accettabile.  
   
@@ -259,7 +259,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@publish_local_changes_only = ] 'publish_local_changes_only'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ \@enabled_for_het_sub = ] 'enabled_for_het_sub'`Consente alla pubblicazione di supportare[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sottoscrittori non. *enabled_for_het_sub* è di **tipo nvarchar (5)** e il valore predefinito è false. Il valore **true** indica che la pubblicazione supporta[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sottoscrittori non. Quando *enabled_for_het_sub* è **true**, vengono applicate le restrizioni seguenti:  
+`[ \@enabled_for_het_sub = ] 'enabled_for_het_sub'`Consente alla pubblicazione di supportare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sottoscrittori non. *enabled_for_het_sub* è di **tipo nvarchar (5)** e il valore predefinito è false. Il valore **true** indica che la pubblicazione supporta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sottoscrittori non. Quando *enabled_for_het_sub* è **true**, vengono applicate le restrizioni seguenti:  
   
 -   *allow_initialize_from_backup* deve essere **false**.  
   
@@ -321,7 +321,7 @@ sp_addpublication [ @publication = ] 'publication'
   
  Se sono presenti più pubblicazioni che pubblicano lo stesso oggetto di database, solo le pubblicazioni con un valore *replicate_ddl* **1** eseguiranno la replica delle istruzioni ALTER TABLE, ALTER VIEW, alter procedure, ALTER FUNCTION e alter trigger DDL. Una istruzione ALTER TABLE DROP COLUMN DDL verrà tuttavia replicata da tutte le pubblicazioni che stanno pubblicando la colonna eliminata.  
   
- Con la replica DDL abilitata (*replicate_ddl* = **1**) per una pubblicazione, per apportare modifiche DDL non di replica alla pubblicazione, è necessario prima eseguire [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) per impostare *replicate_ddl* su **0**. Una volta rilasciate le istruzioni DDL non di replica, è possibile eseguire nuovamente [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) per riattivare la replica DDL.  
+ Con la replica DDL abilitata (*replicate_ddl*  =  **1**) per una pubblicazione, per apportare modifiche DDL non di replica alla pubblicazione, è necessario prima eseguire [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) per impostare *replicate_ddl* su **0**. Una volta rilasciate le istruzioni DDL non di replica, è possibile eseguire nuovamente [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) per riattivare la replica DDL.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_AddTranPub](../../relational-databases/replication/codesnippet/tsql/sp-addpublication-transa_1.sql)]  

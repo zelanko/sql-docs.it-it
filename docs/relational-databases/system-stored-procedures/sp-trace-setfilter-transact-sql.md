@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setfilter
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0f48f7e8dd6e7d8fa57868994f9bcabb66777e90
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5d6646bb794b50158035759916ba823c6fca2102
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095946"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820266"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
   
 `[ @comparison_operator = ] comparison_operator`Specifica il tipo di confronto da effettuare. *comparison_operator* è di **tipo int**e non prevede alcun valore predefinito. Nella tabella seguente vengono descritti gli operatori di confronto e i valori che li rappresentano.  
   
-|valore|Operatore di confronto|  
+|Valore|Operatore di confronto|  
 |-----------|-------------------------|  
 |**0**|= (uguaglianza)|  
 |**1**|<>  (non uguale a)|  
@@ -92,7 +92,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |16|Funzione non valida per la traccia.|  
   
 ## <a name="remarks"></a>Osservazioni  
- **sp_trace_setfilter** è un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedure che esegue molte delle azioni eseguite in precedenza dalle stored procedure estese disponibili nelle versioni precedenti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di. Utilizzare **sp_trace_setfilter** anziché le stored procedure estese di **filtro xp_trace_set\*** per creare, applicare, rimuovere o modificare i filtri sulle tracce. Per ulteriori informazioni, vedere [filtrare una traccia](../../relational-databases/sql-trace/filter-a-trace.md).  
+ **sp_trace_setfilter** è un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedure che esegue molte delle azioni eseguite in precedenza dalle stored procedure estese disponibili nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Utilizzare **sp_trace_setfilter** anziché le stored procedure estese di ** \* filtro xp_trace_set** per creare, applicare, rimuovere o modificare i filtri sulle tracce. Per ulteriori informazioni, vedere [filtrare una traccia](../../relational-databases/sql-trace/filter-a-trace.md).  
   
  Tutti i filtri per una determinata colonna devono essere abilitati insieme in un'unica esecuzione di **sp_trace_setfilter**. Se, ad esempio, un utente desidera applicare due filtri alla colonna dei nomi di applicazione e un filtro alla colonna dei nomi utente, deve specificare i filtri per il nome dell'applicazione in sequenza. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce un errore se l'utente tenta di specificare un filtro per il nome dell'applicazione nella chiamata a un stored procedure, seguito da un filtro per il nome utente e quindi da un altro filtro per il nome dell'applicazione.  
   
@@ -101,7 +101,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ## <a name="permissions"></a>Autorizzazioni  
  L'utente deve disporre delle autorizzazioni ALTER TRACE.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono impostati tre filtri in Trace `1`. I filtri `N'SQLT%'` e `N'MS%'` vengono applicati alla colonna `AppName`, valore `10`, tramite l'operatore di confronto "`LIKE`". Il filtro `N'joe'` viene applicato a una colonna diversa, ovvero `UserName`, valore `11`, tramite l'operatore di confronto "`EQUAL`".  
   
 ```  

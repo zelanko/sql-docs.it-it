@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_job
 ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5428ae9130646db662c6c960f777c6a7dfe25000
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 35653ce883733b7e1b3c2969fc4e62c61ad12eb9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084887"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820206"
 ---
 # <a name="sp_update_job-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,9 +76,9 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
 `[ @notify_level_eventlog = ] eventlog_level`Specifica quando inserire una voce nel registro applicazioni di Microsoft Windows per questo processo. *eventlog_level*è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione (azione)|  
+|Valore|Descrizione (azione)|  
 |-----------|----------------------------|  
-|**0**|Never|  
+|**0**|Mai|  
 |**1**|In caso di esito positivo|  
 |**2**|In caso di esito negativo|  
 |**3**|Sempre|  
@@ -102,7 +102,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_update_job** deve essere eseguito dal database **msdb** .  
   
  **sp_update_job** modifica solo le impostazioni per le quali vengono forniti i valori dei parametri. Se si omette un parametro, viene mantenuta l'impostazione corrente.  
@@ -120,7 +120,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
  Solo i membri di **sysadmin** possono utilizzare questa stored procedure per modificare gli attributi dei processi di proprietà di altri utenti.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono modificati il nome, la descrizione e lo stato di attivazione del processo `NightlyBackups`.  
   
 ```  

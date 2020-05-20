@@ -9,20 +9,20 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 0673a8f8-8bed-41eb-8959-a9e3e9e03a65
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8f275d48131ef7011307f39f38d37a8bfff4ea18
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a5fdb20b8fe35238e912c302bb57812e8e4791a4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899320"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82819376"
 ---
 # <a name="sysdm_pdw_os_performance_counters-transact-sql"></a>sys. dm_pdw_os_performance_counters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Contiene informazioni sui contatori delle prestazioni di Windows per i [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]nodi in.  
+  Contiene informazioni sui contatori delle prestazioni di Windows per i nodi in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] .  
   
 |Nome colonna|Tipo di dati|Descrizione|Range|  
 |-----------------|---------------|-----------------|-----------|  
@@ -33,7 +33,7 @@ ms.locfileid: "67899320"
 |counter_value|**Decimali (38, 10)**|Valore corrente del contatore.||  
 |last_update_time|**Datetime2 (3)**|Timestamp dell'ultima volta in cui il valore è stato aggiornato.||  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Data Warehouse e Parallel data warehouse viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

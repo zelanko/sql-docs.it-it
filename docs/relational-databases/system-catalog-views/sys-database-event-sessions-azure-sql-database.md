@@ -6,27 +6,27 @@ ms.service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
 ms.assetid: 02c2cd71-d35e-4d4c-b844-92b240f768f4
-author: MightyPen
-ms.author: genemi
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 4ef8388e18ee73a0f1217e4e04adc13379892520
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7384cf9bfcf08f307a4e81cb0cdebe78e8011ea3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67915084"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823534"
 ---
 # <a name="sysdatabase_event_sessions-azure-sql-database"></a>sys.database_event_sessions (database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Elenca tutte le definizioni di sessione eventi presenti nel database corrente, in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+  Elenca tutte le definizioni di sessione eventi presenti nel database corrente, in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .  
   
 > [!NOTE]
->  La vista del catalogo simile `sys.server_event_sessions` denominata si applica [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]solo a.  
+>  La vista del catalogo simile denominata `sys.server_event_sessions` si applica solo a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ||  
 |-|  
-|**Si applica a**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]e a tutte le versioni successive.|  
+|**Si applica a**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] e a tutte le versioni successive.|  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  

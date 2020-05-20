@@ -12,15 +12,15 @@ helpviewer_keywords:
 - remote execution
 - queries, remote execution
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 021a6e689dfc109f8a58ca080956aec7efc49291
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 32655955bc150a57a6f15ebccdcf30187d3128fe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124468"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820571"
 ---
 # <a name="sp_execute_remote-azure-sql-database"></a>sp_execute_remote (database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,22 +43,22 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ \@data_source_name =] *DataSourceName*  
+ [ \@ data_source_name =] *DataSourceName*  
  Identifica l'origine dati esterna in cui viene eseguita l'istruzione. Vedere [creare un'origine dati esterna &#40;&#41;Transact-SQL ](../../t-sql/statements/create-external-data-source-transact-sql.md). L'origine dati esterna può essere di tipo "RDBMS" o "SHARD_MAP_MANAGER".  
   
- [ \@stmt =] *istruzione*  
- Stringa Unicode che contiene un'istruzione o [!INCLUDE[tsql](../../includes/tsql-md.md)] un batch. \@stmt deve essere una costante Unicode o una variabile Unicode. Non sono consentite le espressioni Unicode più complesse, ad esempio per la concatenazione di due stringhe tramite l'operatore +. Le costanti di tipo carattere non sono consentite. Se viene specificata una costante Unicode, è necessario che sia preceduta da un valore **N**. La costante Unicode **N'sp_who '** , ad esempio, è valida, ma la costante carattere **' sp_who '** non lo è. Le dimensioni massime della stringa dipendono dalla memoria disponibile nel server di database. Nei server a 64 bit, le dimensioni della stringa sono limitate a 2 GB, ovvero la dimensione massima di **nvarchar (max)**.  
+ [ \@ stmt =] ( *istruzione* )  
+ Stringa Unicode che contiene un' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o un batch. \@stmt deve essere una costante Unicode o una variabile Unicode. Non sono consentite le espressioni Unicode più complesse, ad esempio per la concatenazione di due stringhe tramite l'operatore +. Le costanti di tipo carattere non sono consentite. Se viene specificata una costante Unicode, è necessario che sia preceduta da un valore **N**. La costante Unicode **N'sp_who '** , ad esempio, è valida, ma la costante carattere **' sp_who '** non lo è. Le dimensioni massime della stringa dipendono dalla memoria disponibile nel server di database. Nei server a 64 bit, le dimensioni della stringa sono limitate a 2 GB, ovvero la dimensione massima di **nvarchar (max)**.  
   
 > [!NOTE]  
 >  \@stmt può contenere parametri con lo stesso formato di un nome di variabile, ad esempio:`N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
- Ogni parametro incluso in \@stmt deve avere una voce corrispondente nell'elenco di \@definizioni dei parametri params e nell'elenco dei valori dei parametri.  
+ Ogni parametro incluso in \@ stmt deve avere una voce corrispondente nell'elenco di \@ definizioni dei parametri params e nell'elenco dei valori dei parametri.  
   
- [ \@params =] \@N'*parameter_name * * data_type* [,... *n* ]'  
- È una stringa che contiene le definizioni di tutti i parametri incorporati in \@stmt. La stringa deve essere una costante Unicode o una variabile Unicode. Ogni definizione di parametro è costituita da un nome del parametro e da un tipo di dati. *n* è un segnaposto che indica definizioni di parametro aggiuntive. Ogni parametro specificato in \@stmtmust deve essere definito \@in params. Se l' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il batch \@in stmt non contiene parametri, \@params non è necessario. Il valore predefinito per questo parametro è NULL.  
+ [ \@ params =] n' \@ *parameter_name * * data_type* [,... *n* ]'  
+ È una stringa che contiene le definizioni di tutti i parametri incorporati in \@ stmt. La stringa deve essere una costante Unicode o una variabile Unicode. Ogni definizione di parametro è costituita da un nome del parametro e da un tipo di dati. *n* è un segnaposto che indica definizioni di parametro aggiuntive. Ogni parametro specificato in \@ stmtmust deve essere definito in \@ params. Se l' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il batch in \@ stmt non contiene parametri, \@ params non è necessario. Il valore predefinito per questo parametro è NULL.  
   
- [ \@param1 =] '*value1*'  
- Valore per il primo parametro definito nella stringa di parametri. Il valore può essere una costante o una variabile Unicode. È necessario specificare un valore di parametro per ogni parametro incluso in \@stmt. I valori non sono necessari se l' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il batch \@in stmt non dispone di parametri.  
+ [ \@ param1 =]'*value1*'  
+ Valore per il primo parametro definito nella stringa di parametri. Il valore può essere una costante o una variabile Unicode. È necessario specificare un valore di parametro per ogni parametro incluso in \@ stmt. I valori non sono necessari se l' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il batch in \@ stmt non dispone di parametri.  
   
  *n*  
  Segnaposto per i valori di parametri aggiuntivi. I valori possono essere solo costanti o variabili. Non sono consentite espressioni più complesse quali funzioni o espressioni compilate tramite operatori.  
@@ -75,13 +75,13 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="remarks"></a>Osservazioni  
  `sp_execute_remote`i parametri devono essere specificati nell'ordine specifico, come descritto nella sezione precedente della sintassi. Se i parametri non vengono immessi in ordine, verrà visualizzato un messaggio di errore.  
   
- `sp_execute_remote`ha lo stesso comportamento di [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md) per quanto riguarda i batch e l'ambito dei nomi. L'istruzione o il batch Transact-SQL nel sp_execute_remote * \@parametro stmt* non viene compilato finché non viene eseguita l'istruzione sp_execute_remote.  
+ `sp_execute_remote`ha lo stesso comportamento di [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md) per quanto riguarda i batch e l'ambito dei nomi. L'istruzione o il batch Transact-SQL nel sp_execute_remote parametro * \@ stmt* non viene compilato finché non viene eseguita l'istruzione sp_execute_remote.  
   
  `sp_execute_remote`aggiunge una colonna aggiuntiva al set di risultati denominato ' $ShardName ' contenente il nome del database remoto che ha prodotto la riga.  
   
  `sp_execute_remote`può essere utilizzato in modo analogo a [sp_executesql &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md).  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
 ### <a name="simple-example"></a>Esempio semplice  
  Nell'esempio seguente viene creata ed eseguita una semplice istruzione SELECT su un database remoto.  
   
@@ -92,7 +92,7 @@ EXEC sp_execute_remote
 ```  
   
 ### <a name="example-with-multiple-parameters"></a>Esempio con più parametri  
-Creare una credenziale con ambito database in un database utente, specificando le credenziali di amministratore per il database master. Creare un'origine dati esterna che punta al database master e specificare le credenziali con ambito database. In seguito, ad esempio, nel database utente viene eseguita la `sp_set_firewall_rule` procedura nel database master. Per `sp_set_firewall_rule` la procedura sono necessari 3 parametri e il `@name` parametro deve essere Unicode.
+Creare una credenziale con ambito database in un database utente, specificando le credenziali di amministratore per il database master. Creare un'origine dati esterna che punta al database master e specificare le credenziali con ambito database. In seguito, ad esempio, nel database utente viene eseguita la `sp_set_firewall_rule` procedura nel database master. `sp_set_firewall_rule`Per la procedura sono necessari 3 parametri e il `@name` parametro deve essere Unicode.
 
 ```
 EXEC sp_execute_remote @data_source_name  = N'PointToMaster', 

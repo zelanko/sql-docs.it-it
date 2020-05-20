@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_settriggerorder
 ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e258badbcf304fddbaf7575269194bd409ec8645
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ad5239e2761ed1cc788f7826a054ac0e038d9e79
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982237"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824296"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,27 +50,27 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 > [!IMPORTANT]  
 >  Il **primo** e l' **ultimo** trigger devono essere due trigger diversi.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**Prima**|Trigger avviato per primo.|  
-|**Ultima**|Trigger avviato per ultimo.|  
+|**Last (Ultimo)**|Trigger avviato per ultimo.|  
 |**Nessuno**|Il trigger viene attivato in base a un ordine non definito.|  
   
-`[ @stmttype = ] 'statement_type'`Specifica l'istruzione SQL che attiva il trigger. *statement_type* è di tipo **varchar (50)** ed è possibile inserire, aggiornare, eliminare, accedere o [!INCLUDE[tsql](../../includes/tsql-md.md)] qualsiasi evento di istruzione elencato negli [eventi DDL](../../relational-databases/triggers/ddl-events.md). Non è possibile specificare gruppi di eventi.  
+`[ @stmttype = ] 'statement_type'`Specifica l'istruzione SQL che attiva il trigger. *statement_type* è di tipo **varchar (50)** ed è possibile inserire, aggiornare, eliminare, accedere o qualsiasi [!INCLUDE[tsql](../../includes/tsql-md.md)] evento di istruzione elencato negli [eventi DDL](../../relational-databases/triggers/ddl-events.md). Non è possibile specificare gruppi di eventi.  
   
- Un trigger può essere designato come **primo** o **ultimo** trigger per un tipo di istruzione solo dopo che il trigger è stato definito come trigger per tale tipo di istruzione. Ad esempio, il trigger **TR1** può essere designato per **primo** per INSERT nella tabella **T1** se **TR1** è definito come trigger di inserimento. Restituisce un errore se **TR1**, che è stato definito solo come trigger di inserimento, viene impostato come **primo**o ultimo trigger per un'istruzione Update. **Last** [!INCLUDE[ssDE](../../includes/ssde-md.md)] Per altre informazioni, vedere la sezione Osservazioni.  
+ Un trigger può essere designato come **primo** o **ultimo** trigger per un tipo di istruzione solo dopo che il trigger è stato definito come trigger per tale tipo di istruzione. Ad esempio, il trigger **TR1** può essere designato per **primo** per INSERT nella tabella **T1** se **TR1** è definito come trigger di inserimento. [!INCLUDE[ssDE](../../includes/ssde-md.md)]Restituisce un errore se **TR1**, che è stato definito solo come trigger di inserimento, viene impostato come **primo**o **ultimo**trigger per un'istruzione Update. Per altre informazioni, vedere la sezione Osservazioni.  
   
- namespace = { **' database '** | **' server '** | ** \@** NULL  
- Quando *triggername* è un trigger DDL, ** \@lo spazio dei nomi** specifica se *triggername* è stato creato con ambito database o ambito server. Se *triggername* è un trigger LOGON, è necessario specificare il server. Per ulteriori informazioni sull'ambito del trigger DDL, vedere [trigger DDL](../../relational-databases/triggers/ddl-triggers.md). Se non è specificato o se viene specificato NULL, *triggername* è un trigger DML.  
+ ** \@ namespace =** { **' database '**  |  **' server '** | NULL  
+ Quando *triggername* è un trigger DDL, ** \@ lo spazio dei nomi** specifica se *triggername* è stato creato con ambito database o ambito server. Se *triggername* è un trigger LOGON, è necessario specificare il server. Per ulteriori informazioni sull'ambito del trigger DDL, vedere [trigger DDL](../../relational-databases/triggers/ddl-triggers.md). Se non è specificato o se viene specificato NULL, *triggername* è un trigger DML.  
   
 ||  
 |-|  
-|Il SERVER si applica [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a: e versioni successive.|  
+|Il SERVER si applica a: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.|  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 ## <a name="dml-triggers"></a>Trigger DML  
  Può essere presente un solo **primo** e un **ultimo** trigger per ogni istruzione in una singola tabella.  

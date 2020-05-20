@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_helptrigger
 ms.assetid: e486d39b-771d-488d-a786-7136433a2203
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e6244443fc1f6ba7d83376226fedd56563e0d39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3c01290f0f95a7e240931a9398ab7acea1b287be
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68048226"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824404"
 ---
 # <a name="sp_helptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ sp_helptrigger [ @tabname = ] 'table'
   
 `[ @triggertype = ] 'type'`Tipo di trigger DML per cui restituire informazioni. il *tipo* è **char (6)** e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
-|**ELIMINARE**|Restituisce informazioni sui trigger DELETE.|  
-|**INSERIRE**|Restituisce informazioni sui trigger INSERT.|  
+|**DELETE**|Restituisce informazioni sui trigger DELETE.|  
+|**INSERT**|Restituisce informazioni sui trigger INSERT.|  
 |**UPDATE**|Restituisce informazioni sui trigger UPDATE.|  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
@@ -71,7 +71,7 @@ sp_helptrigger [ @tabname = ] 'table'
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede l'autorizzazione di [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md) per la tabella.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene eseguita la stored procedure `sp_helptrigger` per generare informazioni sui trigger definiti nella tabella `Person.Person`.  
   
 ```  

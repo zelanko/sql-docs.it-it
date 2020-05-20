@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscription
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bf7712ceb55fc368d493be9999cd0b8d4d9f474c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f6ad28ace9f8b3a1b4852c54e3e4f427bd22c06d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771574"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824442"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione associata. *Publication* è di **%** **tipo sysname**e il valore predefinito è, che restituisce tutte le informazioni sulla sottoscrizione per questo server.  
+`[ @publication = ] 'publication'`Nome della pubblicazione associata. *Publication* è di **tipo sysname**e il valore predefinito è **%** , che restituisce tutte le informazioni sulla sottoscrizione per questo server.  
   
-`[ @article = ] 'article'`Nome dell'articolo. *article* è di **%** **tipo sysname**e il valore predefinito è, che restituisce tutte le informazioni sulla sottoscrizione per le pubblicazioni e i Sottoscrittori selezionati. Se è **All**, viene restituita una sola voce per la sottoscrizione completa di una pubblicazione.  
+`[ @article = ] 'article'`Nome dell'articolo. *article* è di **tipo sysname**e il valore predefinito è **%** , che restituisce tutte le informazioni sulla sottoscrizione per le pubblicazioni e i Sottoscrittori selezionati. Se è **All**, viene restituita una sola voce per la sottoscrizione completa di una pubblicazione.  
   
-`[ @subscriber = ] 'subscriber'`Nome del sottoscrittore su cui si desidera ottenere informazioni sulla sottoscrizione. *Subscriber* è di **%** **tipo sysname**e il valore predefinito è, che restituisce tutte le informazioni sulla sottoscrizione per le pubblicazioni e gli articoli selezionati.  
+`[ @subscriber = ] 'subscriber'`Nome del sottoscrittore su cui si desidera ottenere informazioni sulla sottoscrizione. *Subscriber* è di **tipo sysname**e il valore predefinito è **%** , che restituisce tutte le informazioni sulla sottoscrizione per le pubblicazioni e gli articoli selezionati.  
   
-`[ @destination_db = ] 'destination_db'`Nome del database di destinazione. *destination_db* è di **%** **tipo sysname**e il valore predefinito è.  
+`[ @destination_db = ] 'destination_db'`Nome del database di destinazione. *destination_db* è di **tipo sysname**e il valore predefinito è **%** .  
   
 `[ @found = ] 'found'OUTPUT`Flag che indica la restituzione di righe. *trovato*è di **tipo int** e un parametro di output e il valore predefinito è 23456.  
   
@@ -81,7 +81,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**offload_server**|**sysname**|Nome del server abilitato per l'attivazione remota degli agenti. Se NULL, viene utilizzata la offload_server corrente elencata in [MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md) tabella.|  
 |**dts_package_name**|**sysname**|Specifica il nome del pacchetto Data Transformation Services (DTS).|  
 |**dts_package_location**|**int**|Posizione del pacchetto DTS, se assegnato alla sottoscrizione. Se è presente un pacchetto, un valore pari a **0** indica il percorso del pacchetto nel **server di distribuzione**. Il valore **1** specifica il **Sottoscrittore**.|  
-|**subscriber_security_mode**|**smallint**|Modalità di sicurezza nel Sottoscrittore, dove **1** indica l'autenticazione di Windows **0** e 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indica l'autenticazione di.|  
+|**subscriber_security_mode**|**smallint**|Modalità di sicurezza nel Sottoscrittore, dove **1** indica l'autenticazione di Windows e **0** indica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione di.|  
 |**subscriber_login**|**sysname**|Nome dell'account di accesso nel Sottoscrittore.|  
 |**subscriber_password**||La password effettiva per il Sottoscrittore non viene mai restituita. Il risultato è mascherato da una stringa "**&#42;&#42;&#42;&#42;&#42;&#42;**".|  
 |**job_login**|**sysname**|Nome dell'account di Windows utilizzato per l'esecuzione dell'agente di distribuzione.|  
@@ -97,7 +97,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_helpsubscription** viene utilizzata per la replica snapshot e transazionale.  
   
 ## <a name="permissions"></a>Autorizzazioni  

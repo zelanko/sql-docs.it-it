@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_purge_jobhistory
 ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad5e7a1d03dde408da52ca2b5ebe6b40f10c06c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64832f713153e6eaed126e30a2a0fd56c38a4bc6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72313755"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820366"
 ---
 # <a name="sp_purge_jobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ sp_purge_jobhistory
 > [!NOTE]  
 >  I membri del ruolo predefinito del server **sysadmin** o i membri del ruolo predefinito del database **SQLAgentOperatorRole** possono eseguire **sp_purge_jobhistory** senza specificare un *job_name* o *job_id*. Quando gli utenti **sysadmin** non specificano questi argomenti, la cronologia processo per tutti i processi locali e multiserver viene eliminata entro il tempo specificato da *oldest_date*. Quando gli utenti di **SQLAgentOperatorRole** non specificano questi argomenti, la cronologia processo per tutti i processi locali viene eliminata entro il tempo specificato da *oldest_date*.  
   
-`[ @job_id = ] job_id`Numero di identificazione del processo dei record da eliminare. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null. È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi. Vedere la nota nella descrizione di ** \@job_name** per informazioni sul modo in cui gli utenti **sysadmin** o **SQLAgentOperatorRole** possono usare questo argomento.  
+`[ @job_id = ] job_id`Numero di identificazione del processo dei record da eliminare. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null. È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi. Vedere la nota nella descrizione di ** \@ job_name** per informazioni sul modo in cui gli utenti **sysadmin** o **SQLAgentOperatorRole** possono usare questo argomento.  
   
 `[ @oldest_date = ] oldest_date`Il record meno recente da conservare nella cronologia. *oldest_date* è di tipo **DateTime**e il valore predefinito è null. Quando si specifica *oldest_date* , **sp_purge_jobhistory** rimuove solo i record precedenti al valore specificato.  
   

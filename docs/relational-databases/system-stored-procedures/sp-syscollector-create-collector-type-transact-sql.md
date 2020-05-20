@@ -16,19 +16,19 @@ helpviewer_keywords:
 - sp_syscollector_create_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bd8c82a401f78f4907bb891ede845017c00ac5ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4290d2ecff4b76675f464c5e2a396703e7fc370c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032629"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824286"
 ---
 # <a name="sp_syscollector_create_collector_type-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Crea un tipo di agente di raccolta per l'agente di raccolta dati. Un tipo di agente di raccolta è un wrapper [!INCLUDE[ssIS](../../includes/ssis-md.md)] logico intorno ai pacchetti che fornisce il meccanismo effettivo per raccogliere dati e caricarli nel data warehouse di gestione.  
+  Crea un tipo di agente di raccolta per l'agente di raccolta dati. Un tipo di agente di raccolta è un wrapper logico intorno ai [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacchetti che fornisce il meccanismo effettivo per raccogliere dati e caricarli nel data warehouse di gestione.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,22 +46,22 @@ sp_syscollector_create_collector_type
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @collector_type_uid = ] '*collector_type_uid*'  
+ [ @collector_type_uid =]'*collector_type_uid*'  
  GUID del tipo di agente di raccolta. *collector_type_uid* è di tipo **uniqueidentifier** e se è null, verrà creata e restituita automaticamente come output.  
   
- [ @name = ] '*Name*'  
+ [ @name =]'*nome*'  
  Nome del tipo di agente di raccolta. *Name* è di **tipo sysname** e deve essere specificato.  
   
- [ @parameter_schema = ] '*parameter_schema*'  
+ [ @parameter_schema =]'*parameter_schema*'  
  XML Schema per questo tipo di agente di raccolta. *parameter_schema* è di **XML** e il valore predefinito è null.  
   
- [ @parameter_formatter = ] '*parameter_formatter*'  
+ [ @parameter_formatter =]'*parameter_formatter*'  
  Modello da utilizzare per trasformare l'XML per l'utilizzo nella pagina delle proprietà del set di raccolta. *parameter_formatter* è di **XML** e il valore predefinito è null.  
   
- [@collection_package_id = ] *collection_package_id*  
+ [ @collection_package_id =] *collection_package_id*  
  È un identificatore univoco locale che punta al pacchetto di raccolta [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilizzato dal set di raccolta. *collection_package_id* è **uniqueidentifier** ed è obbligatorio.  
   
- [@upload_package_id = ] *upload_package_id*  
+ [ @upload_package_id =] *upload_package_id*  
  Identificatore univoco locale che punta al pacchetto di caricamento di [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilizzato dal set di raccolta. *upload_package_id* è di tipo **uniqueidentifier** ed è obbligatorio.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  

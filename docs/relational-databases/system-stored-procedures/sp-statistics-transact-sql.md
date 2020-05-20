@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_statistics
 ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b4e3e25dbab53f31e354dcff537b6bfb9a6b433d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3cdde96f57f813dbc25434867ed78ff884c2e7ab
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032745"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820297"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -72,14 +72,14 @@ sp_statistics [ @table_name = ] 'table_name'
 |**TABLE_OWNER**|**sysname**|Nome del proprietario della tabella. In questa colonna viene sempre restituito un valore.|  
 |**TABLE_NAME**|**sysname**|Nome della tabella. In questa colonna viene sempre restituito un valore.|  
 |**NON_UNIQUE**|**smallint**|NOT NULL.<br /><br /> 0 = Univoco<br /><br /> 1 = Non univoco|  
-|**INDEX_QUALIFIER**|**sysname**|Nome del proprietario dell'indice. In alcuni prodotti DBMS gli indici possono essere creati da utenti diversi dal proprietario della tabella. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]questa colonna è sempre uguale a **table_name**.|  
+|**INDEX_QUALIFIER**|**sysname**|Nome del proprietario dell'indice. In alcuni prodotti DBMS gli indici possono essere creati da utenti diversi dal proprietario della tabella. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna è sempre uguale a **table_name**.|  
 |**INDEX_NAME**|**sysname**|Nome dell'indice. In questa colonna viene sempre restituito un valore.|  
 |**TIPO**|**smallint**|Questa colonna restituisce sempre un valore:<br /><br /> 0 = Statistiche di una tabella<br /><br /> 1 = Cluster<br /><br /> 2 = Hash<br /><br /> 3 = non cluster|  
 |**SEQ_IN_INDEX**|**smallint**|Posizione della colonna all'interno dell'indice.|  
 |**COLUMN_NAME**|**sysname**|Nome della colonna per ogni colonna dell' **table_name** restituito. In questa colonna viene sempre restituito un valore.|  
 |**CONFRONTO**|**char (1)**|Ordine utilizzato nelle regole di confronto. I possibili valori sono i seguenti:<br /><br /> A = Crescente<br /><br /> D = Decrescente<br /><br /> NULL = Non applicabile|  
 |**CARDINALITÀ**|**int**|Numero di righe nella tabella o di valori univoci nell'indice.|  
-|**PAGES**|**int**|Numero di pagine in cui archiviare l'indice o la tabella.|  
+|**PAGINE**|**int**|Numero di pagine in cui archiviare l'indice o la tabella.|  
 |**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non restituisce un valore.|  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
@@ -98,7 +98,7 @@ sp_statistics [ @table_name = ] 'table_name'
  È richiesta l'autorizzazione SELECT per lo schema.  
   
 ## <a name="example-sssdwfull-and-sspdw"></a>Esempio: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Nell'esempio seguente vengono restituite informazioni `DimEmployee` sulla tabella.  
+ Nell'esempio seguente vengono restituite informazioni sulla `DimEmployee` tabella.  
   
 ```  
 -- Uses AdventureWorks  

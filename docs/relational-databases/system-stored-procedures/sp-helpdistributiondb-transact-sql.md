@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdistributiondb
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 90dee1076743ae54201248c808b04c6197d42198
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e0efc86400b0858e387a83e8ea765f0058e30459
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770926"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824497"
 ---
 # <a name="sp_helpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @database = ] 'database_name'`Nome del database per il quale vengono restituite le proprietà. *database_name* è di **tipo sysname**e il valore **%** predefinito è per tutti i database associati al server di distribuzione e per i quali l'utente dispone delle autorizzazioni.  
+`[ @database = ] 'database_name'`Nome del database per il quale vengono restituite le proprietà. *database_name* è di **tipo sysname**e il valore predefinito è **%** per tutti i database associati al server di distribuzione e per i quali l'utente dispone delle autorizzazioni.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -60,7 +60,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_helpdistributiondb** viene utilizzato in tutti i tipi di replica.  
   
 ## <a name="permissions"></a>Autorizzazioni  

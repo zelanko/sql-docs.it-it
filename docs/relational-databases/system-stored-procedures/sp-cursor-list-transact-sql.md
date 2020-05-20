@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_list
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5adcaab96bfe9af3945b479e4bff5180ca8140d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e214f2247009af8e43aefd9cb3274ea59332bcd5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108584"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820557"
 ---
 # <a name="sp_cursor_list-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,20 +41,20 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @cursor_return= ] *cursor_variable_name* OUTPUT  
+ [ @cursor_return =] OUTPUT *cursor_variable_name*  
  Nome di una variabile di cursore dichiarata. *cursor_variable_name* è un **cursore**e non prevede alcun valore predefinito. Il cursore restituito è di tipo scorrevole, dinamico e di sola lettura.  
   
- [ @cursor_scope= ] *cursor_scope*  
+ [ @cursor_scope =] *cursor_scope*  
  Specifica il livello dei cursori da segnalare. *cursor_scope* è di **tipo int**e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |1|Restituisce tutti i cursori locali.|  
 |2|Restituisce tutti i cursori globali.|  
 |3|Restituisce i cursori locali e quelli globali.|  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- nessuno  
+ Nessuno  
   
 ## <a name="cursors-returned"></a>Cursori restituiti  
  sp_cursor_list restituisce un report come parametro di output di un cursore [!INCLUDE[tsql](../../includes/tsql-md.md)], anziché come set di risultati. In questo modo i batch, le stored procedure e i trigger [!INCLUDE[tsql](../../includes/tsql-md.md)] possono elaborare l'output una riga alla volta. Non è possibile richiamare direttamente la procedura da funzioni API del database. Il parametro di output del cursore deve essere associato a una variabile di programma, ma le API del database non supportano l'associazione di parametri o variabili del cursore.  
@@ -64,17 +64,17 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |reference_name|**sysname**|Nome utilizzato per fare riferimento al cursore. Se il riferimento al cursore è stato impostato tramite il nome specificato in un'istruzione DECLARE CURSOR, il nome di riferimento corrisponde al nome del cursore. Se il riferimento al cursore è stato impostato tramite una variabile, il riferimento corrisponde al nome della variabile di cursore.|  
-|cursor_name|**sysname**|Nome del cursore che deriva da un'istruzione DECLARE CURSOR. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se il cursore è stato creato impostando una variabile di cursore su un cursore, **cursor_name** restituisce il nome della variabile di cursore.  Nelle versioni precedenti questa colonna di output restituisce un nome generato dal sistema.|  
+|cursor_name|**sysname**|Nome del cursore che deriva da un'istruzione DECLARE CURSOR. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se il cursore è stato creato impostando una variabile di cursore su un cursore, **cursor_name** restituisce il nome della variabile di cursore.  Nelle versioni precedenti questa colonna di output restituisce un nome generato dal sistema.|  
 |cursor_scope|**smallint**|1 = LOCAL<br /><br /> 2 = GLOBAL|  
 |status|**smallint**|Valori restituiti dalla funzione di sistema CURSOR_STATUS:<br /><br /> 1 = Il cursore a cui si fa riferimento tramite il nome o la variabile è aperto. Se il cursore è di tipo insensitive, statico o keyset, il set di risultati contiene almeno una riga. Se invece è dinamico, contiene zero o più righe.<br /><br /> 0 = Il cursore a cui si fa riferimento tramite il nome o la variabile è aperto, ma non contiene righe. I cursori dinamici non restituiscono mai questo valore.<br /><br /> -1 = Il cursore a cui si fa riferimento tramite il nome o la variabile è chiuso.<br /><br /> -2 = Si applica solo alle variabili di cursore. Alla variabile non è assegnato alcun cursore. È possibile che un parametro OUTPUT abbia assegnato un cursore alla variabile, ma la stored procedure ha chiuso il cursore prima di completare l'operazione.<br /><br /> -3 = Non esiste alcun cursore o variabile di cursore con il nome specificato oppure alla variabile non è stato assegnato alcun cursore.|  
 |model|**smallint**|1 = Insensitive (o statico)<br /><br /> 2 = keyset<br /><br /> 3 = dinamica<br /><br /> 4 = Fast forward-only|  
 |Concorrenza|**smallint**|1 = Di sola lettura.<br /><br /> 2 = Blocchi di scorrimento.<br /><br /> 3 = Ottimistica.|  
 |scrollable|**smallint**|0 = Forward-only<br /><br /> 1 = Scorrevole|  
 |open_status|**smallint**|0 = Chiuso<br /><br /> 1 = Aperto|  
-|cursor_rows|**int**|Numero di righe del set di risultati. Per ulteriori informazioni, vedere [@@CURSOR_ROWS](../../t-sql/functions/cursor-rows-transact-sql.md).|  
-|fetch_status|**smallint**|Stato dell'ultimo recupero del cursore. Per ulteriori informazioni, vedere [@@FETCH_STATUS](../../t-sql/functions/fetch-status-transact-sql.md):<br /><br /> 0 = Recupero corretto.<br /><br /> -1 = Recupero non riuscito o non compreso entro i limiti del cursore.<br /><br /> -2 = La riga richiesta è mancante.<br /><br /> -9 = Nessun recupero eseguito sul cursore.|  
+|cursor_rows|**int**|Numero di righe del set di risultati. Per ulteriori informazioni, vedere [@ @CURSOR_ROWS ](../../t-sql/functions/cursor-rows-transact-sql.md).|  
+|fetch_status|**smallint**|Stato dell'ultimo recupero del cursore. Per ulteriori informazioni, vedere [@ @FETCH_STATUS ](../../t-sql/functions/fetch-status-transact-sql.md):<br /><br /> 0 = Recupero corretto.<br /><br /> -1 = Recupero non riuscito o non compreso entro i limiti del cursore.<br /><br /> -2 = La riga richiesta è mancante.<br /><br /> -9 = Nessun recupero eseguito sul cursore.|  
 |column_count|**smallint**|Numero di colonne nel set di risultati del cursore.|  
-|row_count|**smallint**|Numero di righe modificate dopo l'ultima operazione eseguita sul cursore. Per ulteriori informazioni, vedere [@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md).|  
+|row_count|**smallint**|Numero di righe modificate dopo l'ultima operazione eseguita sul cursore. Per ulteriori informazioni, vedere [@ @ROWCOUNT ](../../t-sql/functions/rowcount-transact-sql.md).|  
 |last_operation|**smallint**|Ultima operazione eseguita sul cursore:<br /><br /> 0 = Non è stata eseguita alcuna operazione.<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = INSERIMENTO<br /><br /> 4 = UPDATE<br /><br /> 5 = ELIMINA<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|Valore univoco che identifica il cursore nell'ambito del server.|  
   
@@ -90,7 +90,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni di esecuzione vengono assegnate per impostazione predefinita al ruolo public.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene aperto un cursore globale e viene utilizzata la stored procedure `sp_cursor_list` per creare un report degli attributi del cursore.  
   
 ```  

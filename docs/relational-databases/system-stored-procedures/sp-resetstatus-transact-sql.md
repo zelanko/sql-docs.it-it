@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_resetstatus
 ms.assetid: b892727f-ea3b-4b94-88d9-f2386ad4962c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1a9f4346116e94957cce16307d70c69a13942b5a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 94c83711131fe1b08edee73db748a8152b9b56f0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68129625"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824346"
 ---
 # <a name="sp_resetstatus-transact-sql"></a>sp_resetstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sp_resetstatus [ @dbname = ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @dbname= ] '*database*'  
+ [ @dbname =]'*database*'  
  Nome del database di cui si desidera reimpostare lo stato. il *database* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La stored procedure sp_resetstatus disattiva il flag di stato sospetto di un database e aggiorna le colonne della modalità e dello stato per il database specificato in sys.databases. Prima di eseguire questa procedura, è necessario analizzare il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e risolvere tutti i problemi esistenti. Dopo l'esecuzione di sp_resetstatus, arrestare e riavviare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Un database può risultare sospetto per svariati motivi. È ad esempio possibile che il sistema operativo abbia negato l'accesso a una risorsa del database oppure che uno o più file di database siano danneggiati o non disponibili.  
@@ -56,7 +56,7 @@ sp_resetstatus [ @dbname = ] 'database'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server sysadmin.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene reimpostato lo stato del database `AdventureWorks2012`.  
   
 ```  

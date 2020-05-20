@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpushsubscription_agent
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8073d51fb4376acbdc19724422f6ef7543e3c403
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 740437178b6d9ab444cabdbda3e37febc65b3897
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68894047"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820704"
 ---
 # <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -98,11 +98,11 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`Frequenza con cui pianificare la agente di distribuzione. *frequency_type* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Singola occorrenza|  
 |**2**|On demand|  
-|**4**|Giornaliera|  
+|**4**|Ogni giorno|  
 |**8**|Settimanale|  
 |**16**|Ogni mese|  
 |**32**|Mensile relativa|  
@@ -116,7 +116,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Data del agente di distribuzione. Questo parametro viene usato quando *frequency_type* è impostato su **32** (mensile relativo). *frequency_relative_interval* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1** (impostazione predefinita)|First (Primo)|  
 |**2**|Second|  
@@ -128,7 +128,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @frequency_subday = ] frequency_subday`Frequenza di ripianificazione durante il periodo definito. *frequency_subday* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una sola volta|  
 |**2**|Second|  
@@ -154,13 +154,13 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @dts_package_location = ] 'dts_package_location'`Specifica la posizione del pacchetto. *dts_package_location* è di **tipo nvarchar (12)** e il valore predefinito è Distributor. Il percorso del pacchetto può essere **Distributor** o **Subscriber**.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Indica se la sottoscrizione può essere sincronizzata [!INCLUDE[msCoName](../../includes/msconame-md.md)] tramite Gestione sincronizzazione. *enabled_for_syncmgr* è di **tipo nvarchar (5)** e il valore predefinito è false. Se **false**, la sottoscrizione non è registrata con Gestione sincronizzazione. Se **true**, la sottoscrizione viene registrata con Gestione sincronizzazione e può essere sincronizzata senza [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]avviare.  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Indica se la sottoscrizione può essere sincronizzata tramite [!INCLUDE[msCoName](../../includes/msconame-md.md)] Gestione sincronizzazione. *enabled_for_syncmgr* è di **tipo nvarchar (5)** e il valore predefinito è false. Se **false**, la sottoscrizione non è registrata con Gestione sincronizzazione. Se **true**, la sottoscrizione viene registrata con Gestione sincronizzazione e può essere sincronizzata senza avviare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 `[ @distribution_job_name = ] 'distribution_job_name'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 `[ @publisher = ] 'publisher'`Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @subscriber_provider = ] 'subscriber_provider'`Identificatore a livello di codice (PROGID) univoco con il quale viene registrato il provider di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB per l'origine dati non. *subscriber_provider* è di **tipo sysname**e il valore predefinito è null. *subscriber_provider* deve essere univoco per il provider di OLE DB installato nel server di distribuzione. *subscriber_provider* è supportato solo per i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sottoscrittori non.  
+`[ @subscriber_provider = ] 'subscriber_provider'`Identificatore a livello di codice (PROGID) univoco con il quale viene registrato il provider di OLE DB per l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origine dati non. *subscriber_provider* è di **tipo sysname**e il valore predefinito è null. *subscriber_provider* deve essere univoco per il provider di OLE DB installato nel server di distribuzione. *subscriber_provider* è supportato solo per i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sottoscrittori non.  
   
 `[ @subscriber_datasrc = ] 'subscriber_datasrc'`Nome dell'origine dati come riconosciuto dal provider OLE DB. *subscriber_datasrc* è di **tipo nvarchar (4000)** e il valore predefinito è null. *subscriber_datasrc* viene passato come proprietà DBPROP_INIT_DATASOURCE per inizializzare il provider di OLE DB. *subscriber_datasrc* è supportato solo per i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sottoscrittori non.  
   

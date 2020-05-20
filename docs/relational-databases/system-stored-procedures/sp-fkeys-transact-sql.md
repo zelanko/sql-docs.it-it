@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fkeys
 ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb5f684321a11d56a419ae73be0bfb2950fb9939
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cee63720a743de8e2aed496bf3f7f3e791780575
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124397"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820531"
 ---
 # <a name="sp_fkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,30 +44,30 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @pktable_name=] '*pktable_name*'  
+ [ @pktable_name =]'*pktable_name*'  
  Nome della tabella, contenente la chiave primaria, utilizzata per restituire informazioni del catalogo. *pktable_name* è di **tipo sysname**e il valore predefinito è null. I criteri di ricerca con caratteri jolly non sono supportati. È necessario specificare questo parametro o il parametro *FKTABLE_NAME* , o entrambi.  
   
- [ @pktable_owner=] '*pktable_owner*'  
+ [ @pktable_owner =]'*pktable_owner*'  
  Nome del proprietario della tabella, con la chiave primaria, utilizzata per restituire le informazioni del catalogo. *pktable_owner* è di **tipo sysname**e il valore predefinito è null. I criteri di ricerca con caratteri jolly non sono supportati. Se *pktable_owner* viene omesso, vengono applicate le regole di visibilità della tabella predefinite del sistema DBMS sottostante.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se l'utente corrente è il proprietario di una tabella avente il nome specificato, vengono restituite le colonne di tale tabella. Se *pktable_owner* non viene specificato e l'utente corrente non è il proprietario di una tabella con la *pktable_name*specificata, la stored procedure esegue la ricerca di una tabella con il *pktable_name* specificato di proprietà del proprietario del database. Se viene individuata, vengono restituite le colonne di tale tabella.  
   
- [ @pktable_qualifier =] '*pktable_qualifier*'  
+ [ @pktable_qualifier =]'*pktable_qualifier*'  
  Nome del qualificatore della tabella contenente la chiave primaria. *pktable_qualifier* è di tipo sysname e il valore predefinito è null. Vari prodotti DBMS supportano la denominazione in tre parti per le tabelle (*Qualifier.Owner.Name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il qualificatore rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
- [ @fktable_name=] '*FKTABLE_NAME*'  
+ [ @fktable_name =]'*FKTABLE_NAME*'  
  Nome della tabella contenente una chiave esterna, utilizzata per restituire informazioni del catalogo. *FKTABLE_NAME* è di tipo sysname e il valore predefinito è null. I criteri di ricerca con caratteri jolly non sono supportati. È necessario specificare questo parametro o il parametro *pktable_name* , o entrambi.  
   
- [ @fktable_owner =] '*FKTABLE_OWNER*'  
+ [ @fktable_owner =]'*FKTABLE_OWNER*'  
  Nome del proprietario della tabella contenente la chiave esterna, utilizzata per restituire informazioni del catalogo. *FKTABLE_OWNER* è di **tipo sysname**e il valore predefinito è null. I criteri di ricerca con caratteri jolly non sono supportati. Se *FKTABLE_OWNER* viene omesso, vengono applicate le regole di visibilità della tabella predefinite del sistema DBMS sottostante.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se l'utente corrente è il proprietario di una tabella avente il nome specificato, vengono restituite le colonne di tale tabella. Se *FKTABLE_OWNER* non viene specificato e l'utente corrente non è il proprietario di una tabella con la *FKTABLE_NAME*specificata, la stored procedure esegue la ricerca di una tabella con il *FKTABLE_NAME* specificato di proprietà del proprietario del database. Se viene individuata, vengono restituite le colonne di tale tabella.  
   
- [ @fktable_qualifier= ] '*FKTABLE_QUALIFIER*'  
+ [ @fktable_qualifier =]'*FKTABLE_QUALIFIER*'  
  Nome del qualificatore della tabella contenente una chiave esterna. *FKTABLE_QUALIFIER* è di **tipo sysname**e il valore predefinito è null. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il qualificatore rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- nessuno  
+ Nessuno  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -101,9 +101,9 @@ Se viene specificato il nome della tabella della chiave primaria e il nome della
 La stored procedure sp_fkeys corrisponde a SQLForeignKeys in ODBC.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È `SELECT` richiesta l'autorizzazione per lo schema.  
+ È richiesta `SELECT` l'autorizzazione per lo schema.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene recuperato un elenco delle chiavi esterne per la tabella `HumanResources.Department` nel database `AdventureWorks2012`.  
   
 ```sql  
@@ -114,7 +114,7 @@ EXEC sp_fkeys @pktable_name = N'Department'
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Nell'esempio seguente viene recuperato un elenco delle chiavi esterne per la tabella `DimDate` nel database `AdventureWorksPDW2012`. Non viene restituita alcuna [!INCLUDE[ssDW](../../includes/ssdw-md.md)] riga perché non supporta le chiavi esterne.  
+ Nell'esempio seguente viene recuperato un elenco delle chiavi esterne per la tabella `DimDate` nel database `AdventureWorksPDW2012`. Non viene restituita alcuna riga perché non [!INCLUDE[ssDW](../../includes/ssdw-md.md)] supporta le chiavi esterne.  
   
 ```sql  
 EXEC sp_fkeys @pktable_name = N'DimDate;  

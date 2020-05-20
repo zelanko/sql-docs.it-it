@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_mirroring_connections dynamic management view
 ms.assetid: e4df91b6-0240-45d0-ae22-cb2c0d52e0b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 57987f90552897b57e2efe685a9f7ea95152daa9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bbb92c73f29c55cf30dde68e59489e64859a2267
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090955"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82819647"
 ---
 # <a name="database-mirroring---sysdm_db_mirroring_connections"></a>Mirroring del database-sys. dm_db_mirroring_connections
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68090955"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**connection_id**|**uniqueidentifier**|Identificatore della connessione.|  
-|**transport_stream_id**|**uniqueidentifier**|Identificatore della connessione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SNI (Network Interface) utilizzata dalla connessione per le comunicazioni TCP/IP.|  
+|**transport_stream_id**|**uniqueidentifier**|Identificatore della [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connessione SNI (Network Interface) utilizzata dalla connessione per le comunicazioni TCP/IP.|  
 |**state**|**smallint**|Stato corrente della connessione. Valori possibili:<br /><br /> 1 = NEW<br /><br /> 2 = CONNECTING<br /><br /> 3 = CONNECTED<br /><br /> 4 = LOGGED_IN<br /><br /> 5 = CHIUSO|  
 |**state_desc**|**nvarchar(60)**|Stato corrente della connessione. Valori possibili:<br /><br /> NEW<br /><br /> CONNECTING<br /><br /> CONNECTED<br /><br /> LOGGED_IN<br /><br /> CLOSED|  
 |**connect_time**|**datetime**|Data e ora di apertura della connessione.|  

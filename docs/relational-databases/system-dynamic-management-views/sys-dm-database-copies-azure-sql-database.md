@@ -16,15 +16,15 @@ helpviewer_keywords:
 - dm_database_copies
 - sys.dm_database_copies
 ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0654bd9d15591d994b05ab2c01d9912bc0c56117
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f63469fb4955895b1eb1e3e8466dfbce6306e502
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005087"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824629"
 ---
 # <a name="sysdm_database_copies-azure-sql-database"></a>sys.dm_database_copies (Database di SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68005087"
 Per restituire informazioni sui collegamenti di replica geografica, usare le viste [sys. geo_replication_links](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md) o [sys. dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (disponibili nel database SQL V12).
   
   
-|Nome colonna|Tipo di dati|Descrizione|  
+|Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID del database corrente nella vista `sys.databases`.|  
 |**start_date**|**datetimeoffset**|Ora UTC in un data center del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] regionale in cui è stata avviata la copia del database.|  
@@ -59,6 +59,6 @@ Per restituire informazioni sui collegamenti di replica geografica, usare le vis
  Questa vista è disponibile solo nel database **Master** per l'account di accesso dell'entità di livello server.  
   
 ## <a name="remarks"></a>Osservazioni  
- È possibile utilizzare la vista **sys. dm_database_copies** nel database **Master** del server di origine o di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] destinazione. Quando la copia del database viene completata correttamente e il nuovo database diventa ONLINE, la riga nella vista **sys. dm_database_copies** viene rimossa automaticamente.  
+ È possibile utilizzare la vista **sys. dm_database_copies** nel database **Master** del server di origine o di destinazione [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Quando la copia del database viene completata correttamente e il nuovo database diventa ONLINE, la riga nella vista **sys. dm_database_copies** viene rimossa automaticamente.  
   
   

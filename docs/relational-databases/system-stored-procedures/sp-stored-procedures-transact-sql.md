@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_stored_procedures
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 554b9317d6b474b23e9dbbc10dea03156ccc6287
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 865e86976a6da117d41ba2f22020f7137dee5038
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68702778"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820274"
 ---
 # <a name="sp_stored_procedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 
@@ -55,7 +55,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   Schema **dbo** nel database corrente.  
   
-`[ @qualifier = ] 'qualifier'`Nome del qualificatore della procedura. *Qualifier* è di **tipo sysname**e il valore predefinito è null. Vari prodotti DBMS supportano la denominazione in tre parti per le tabelle nel formato (_qualificatore_**.** _schema_**.** _nome_. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *Qualifier* rappresenta il nome del database. In alcuni prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
+`[ @qualifier = ] 'qualifier'`Nome del qualificatore della procedura. *Qualifier* è di **tipo sysname**e il valore predefinito è null. Vari prodotti DBMS supportano la denominazione in tre parti per le tabelle nel formato (_qualificatore_**.** _schema_**.** _nome_. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , *Qualifier* rappresenta il nome del database. In alcuni prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
 `[ @fUsePattern = ] 'fUsePattern'`Determina se il carattere di sottolineatura (_), la percentuale (%) o le parentesi quadre []) vengono interpretati come caratteri jolly. *fUsePattern* è di **bit**e il valore predefinito è 1.  
   
@@ -64,7 +64,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
  **1** = i criteri di ricerca sono on.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- nessuno  
+ Nessuno  
   
 ## <a name="result-sets"></a>Set di risultati  
   
