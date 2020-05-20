@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_showpendingchanges
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6b09069cb5289e28d978a4f3b3483e14e63cebb2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0f2430e334d5e7de4225a9c2022a719058837261
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73632741"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829955"
 ---
 # <a name="sp_showpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,8 +62,8 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 |article_name|**sysname**|Nome dell'articolo nella tabella di origine delle modifiche.|  
 |pending_deletes|**int**|Numero di eliminazioni in attesa della replica.|  
 |pending_ins_and_upd|**int**|Numero di inserimenti e aggiornamenti in attesa della replica.|  
-|is_delete|**bit**|Indica se la modifica in sospeso è un'eliminazione. Il valore **1** indica che la modifica è un'eliminazione. Richiede il valore **1** per @show_rows.|  
-|rowguid|**uniqueidentifier**|GUID che identifica la riga modificata. Richiede il valore **1** per @show_rows.|  
+|is_delete|**bit**|Indica se la modifica in sospeso è un'eliminazione. Il valore **1** indica che la modifica è un'eliminazione. Richiede il valore **1** per @show_rows .|  
+|rowguid|**uniqueidentifier**|GUID che identifica la riga modificata. Richiede il valore **1** per @show_rows .|  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  

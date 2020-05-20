@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_showrowreplicainfo
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d0c750fd35dce98c1d754f192214cd96cfc56143
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 34fa326c5982ee36cf0ee00fb66c8bac1714c06a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032890"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830947"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_name**|**sysname**|Nome del database in cui è stata immessa la voce.|  
 |**db_nickname**|**binary(6)**|Nome alternativo del database in cui è stata immessa la voce.|  
 |**version**|**int**|Versione della voce.|  
-|**current_state**|**nvarchar (9)**|Restituisce informazioni sullo stato corrente della riga.<br /><br /> i dati della riga **y** rappresentano lo stato corrente della riga.<br /><br /> i dati di **n** righe non rappresentano lo stato corrente della riga.<br /><br /> n/a>non applicabile. ** \<**<br /><br /> Impossibile determinare lo stato corrente di>sconosciuto. ** \<**|  
+|**current_state**|**nvarchar (9)**|Restituisce informazioni sullo stato corrente della riga.<br /><br /> i dati della riga **y** rappresentano lo stato corrente della riga.<br /><br /> i dati di **n** righe non rappresentano lo stato corrente della riga.<br /><br /> ** \< n/a>** non applicabile.<br /><br /> Impossibile determinare lo stato corrente di ** \<>sconosciuto** .|  
 |**rowversion_table**|**nchar (17)**|Indica se le versioni di riga vengono archiviate nella tabella [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) o nella tabella [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) .|  
 |**Commento**|**nvarchar(255)**|Informazioni aggiuntive relative alla voce sulla versione di riga. Questo campo è in genere vuoto.|  
   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - PolyBase management views
 - dm_exec_compute_nodes management view
 ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 44664805dc9b728ecbd48acbf38c4565601c631a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8b7148904df1a9c59bb6b12fd521945b70e2f4d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71326141"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830660"
 ---
 # <a name="sysdm_exec_compute_nodes-transact-sql"></a>sys. dm_exec_compute_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "71326141"
   
  Usare questa DMV per visualizzare l'elenco di tutti i nodi nel cluster con scalabilità orizzontale con il ruolo, il nome e l'indirizzo IP.  
   
-|Nome colonna|Tipo di dati|Descrizione|Range|  
+|Nome colonna|Tipo di dati|Description|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|ID numerico univoco associato al nodo. Chiave per questa visualizzazione.|Univoco nel cluster con scalabilità orizzontale indipendentemente dal tipo.|  
-|type|**nvarchar(32)**|Tipo del nodo.|' COMPUTE ',' HEAD '|  
+|tipo|**nvarchar(32)**|Tipo del nodo.|' COMPUTE ',' HEAD '|  
 |name|**nvarchar(32)**|Nome logico del nodo.|Qualsiasi stringa di lunghezza appropriata.|  
 |address|**nvarchar(32)**|Indirizzo IP del nodo.|Intervallo indirizzi IP|  
   

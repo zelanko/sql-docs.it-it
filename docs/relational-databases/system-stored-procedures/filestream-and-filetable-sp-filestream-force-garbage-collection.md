@@ -16,14 +16,14 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - sp_filestream_force_garbage_collection
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e836fb2bd64a4fb0be15288322aa8fee30dc763e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cbf1658fd1567d9cdd3c35e02195435b6e86adcc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942281"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830402"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ sp_filestream_force_garbage_collection
   
 |||  
 |-|-|  
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |0|Operazione riuscita|  
 |1|Operazione non riuscita|  
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |*file_name*|Indica il nome del contenitore FILESTREAM|  
 |*num_collected_items*|Indica il numero di elementi FILESTREAM (file/directory) che sono stati sottoposti a Garbage Collection (eliminati) in questo contenitore.|  
@@ -79,16 +79,16 @@ sp_filestream_force_garbage_collection
 
 A causa delle operazioni a 2 fasi, il stored procedure deve essere eseguito due volte per eliminare effettivamente i file FILESTREAM sottostanti.  
 
-Garbage Collection (GC) si basa sul troncamento del log. Di conseguenza, se i file sono stati eliminati di recente in un database utilizzando il modello di recupero con registrazione completa, sono GC-ed solo dopo che è stato eseguito un backup del log delle parti del log delle transazioni e la parte del log è contrassegnata come inattiva. In un database che utilizza un modello di recupero con registrazione minima, un troncamento del log si verifica dopo che è stato emesso un oggetto `CHECKPOINT` nel database.  
+Garbage Collection (GC) si basa sul troncamento del log. Di conseguenza, se i file sono stati eliminati di recente in un database utilizzando il modello di recupero con registrazione completa, sono GC-ed solo dopo che è stato eseguito un backup del log delle parti del log delle transazioni e la parte del log è contrassegnata come inattiva. In un database che utilizza un modello di recupero con registrazione minima, un troncamento del log si verifica dopo che `CHECKPOINT` è stato emesso un oggetto nel database.  
 
 
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo del database db_owner.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Negli esempi seguenti viene eseguito il Garbage Collector per i contenitori FILESTREAM nel database `FSDB`.  
   
-### <a name="a-specifying-no-container"></a>A. Specifica di nessun contenitore  
+### <a name="a-specifying-no-container"></a>R. Specifica di nessun contenitore  
   
 ```sql  
 USE FSDB;  
@@ -106,7 +106,7 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
-[Filestream](../../relational-databases/blob/filestream-sql-server.md)
+[FileStream](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Tabelle FileTable](../../relational-databases/blob/filetables-sql-server.md)
 <br>[DMV per FILESTREAM e tabelle FileTable (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
 <br>[Viste del catalogo Filestream e FileTable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)

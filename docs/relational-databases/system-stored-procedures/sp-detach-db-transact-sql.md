@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_detach_db
 - detaching databases [SQL Server]
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ec7758ad2f9443ad29f0da799e3f286612f95cab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 25d292ed7f45d921d2fc9eafbc1d2d5fe5912dbe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278188"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830228"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 `[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'`Specifica che il file di indice full-text associato al database che si desidera scollegare non verrà eliminato durante l'operazione di scollegamento del database. *Keepfulltextindexfile* è di **tipo nvarchar (10)** e il valore predefinito è **true**. Se *keepfulltextindexfile* è **false**, vengono eliminati tutti i file di indice full-text associati al database e i metadati dell'indice full-text, a meno che il database non sia di sola lettura. Se è NULL o **true**, vengono conservati i metadati correlati a full-text.  
   
 > [!IMPORTANT]
->  Il ** \@parametro keepfulltextindexfile** verrà rimosso in una versione futura di. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Non utilizzare questo parametro in un nuovo progetto di sviluppo e modificare non appena possibile le applicazioni in cui viene attualmente utilizzato.  
+>  Il parametro ** \@ keepfulltextindexfile** verrà rimosso in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Non utilizzare questo parametro in un nuovo progetto di sviluppo e modificare non appena possibile le applicazioni in cui viene attualmente utilizzato.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -102,7 +102,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 
  Prima di impostare il database in modalità SINGLE_USER, verificare che l'opzione AUTO_UPDATE_STATISTICS_ASYNC sia impostata su OFF. Se l'opzione è impostata su ON, tramite il thread in background utilizzato per aggiornare le statistiche viene stabilita una connessione con il database che non sarà quindi accessibile in modalità utente singolo. Per altre informazioni, vedere [impostare un database in modalità utente singolo](../databases/set-a-database-to-single-user-mode.md).
 
- L'istruzione seguente `ALTER DATABASE` , ad esempio, consente di ottenere l'accesso [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] esclusivo al database dopo la disconnessione di tutti gli utenti correnti dal database.  
+ L'istruzione seguente, ad esempio, `ALTER DATABASE` consente di ottenere l'accesso esclusivo al [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database dopo la disconnessione di tutti gli utenti correnti dal database.  
   
 ```  
 USE master;  
@@ -120,8 +120,8 @@ GO
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o al ruolo **db_owner** del database.  
   
-## <a name="examples"></a>Esempi  
- Nell'esempio seguente il [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database viene scollegato con *skipchecks* impostato su true.  
+## <a name="examples"></a>Esempio  
+ Nell'esempio seguente il database viene scollegato [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] con *skipchecks* impostato su true.  
   
 ```  
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  
@@ -136,7 +136,7 @@ exec sp_detach_db @dbname='AdventureWorks2012'
   
 ## <a name="see-also"></a>Vedere anche  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Scollegamento e collegamento del database &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [Collegamento e scollegamento di un database &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Scollegamento di un database](../../relational-databases/databases/detach-a-database.md)  
   

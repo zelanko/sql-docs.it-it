@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_dbfixedrolepermission
 ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2a51fcc7108c7f6af6237d77cbad73c87ed7c6e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fe4c8864856ef9b324a5f44b4811cfff4e8de218
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78180116"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831685"
 ---
 # <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Visualizza le autorizzazioni di un ruolo predefinito del database. **sp_dbfixedrolepermission** restituisce informazioni corrette in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. L'output non riflette le modifiche alla gerarchia di autorizzazioni implementate in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Per ulteriori informazioni, vedere [ruoli a livello di database](../../relational-databases/security/authentication-access/database-level-roles.md#fixed-database-roles), che visualizza un elenco di ruoli predefiniti del database e le relative autorizzazioni.  
+  Visualizza le autorizzazioni di un ruolo predefinito del database. **sp_dbfixedrolepermission** restituisce informazioni corrette in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] . L'output non riflette le modifiche alla gerarchia di autorizzazioni implementate in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Per ulteriori informazioni, vedere [ruoli a livello di database](../../relational-databases/security/authentication-access/database-level-roles.md#fixed-database-roles), che visualizza un elenco di ruoli predefiniti del database e le relative autorizzazioni.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -42,7 +42,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @rolename = ] 'role'`Nome di un ruolo predefinito del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database valido. *Role* è di **tipo sysname**e il valore predefinito è null. Se *Role* non è specificato, vengono visualizzate le autorizzazioni per tutti i ruoli predefiniti del database.  
+`[ @rolename = ] 'role'`Nome di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ruolo predefinito del database valido. *Role* è di **tipo sysname**e il valore predefinito è null. Se *Role* non è specificato, vengono visualizzate le autorizzazioni per tutti i ruoli predefiniti del database.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  

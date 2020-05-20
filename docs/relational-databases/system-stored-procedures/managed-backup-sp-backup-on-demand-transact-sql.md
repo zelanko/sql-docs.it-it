@@ -18,21 +18,21 @@ helpviewer_keywords:
 - smart_admin.sp_backup_on_demand
 - sp_backup_on_demand
 ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e34cf20585ea7dcd3690d80ee415fc274bf852ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bb2bda2d58504033469e8ed0f6455784efb113b8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155395"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830451"
 ---
 # <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup. sp_backup_on_demand (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Richiede al [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] di eseguire un backup del database specificato.  
   
- Utilizzare questa stored procedure per l'esecuzione dei backup ad hoc per un database configurato con il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. In questo modo si impedisce che le interruzioni [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] della catena di backup e dei processi siano compatibili e che il backup venga archiviato nello stesso contenitore di archiviazione BLOB di Azure.  
+ Utilizzare questa stored procedure per l'esecuzione dei backup ad hoc per un database configurato con il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. In questo modo si impedisce che le interruzioni della catena di backup e [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] dei processi siano compatibili e che il backup venga archiviato nello stesso contenitore di archiviazione BLOB di Azure.  
   
  Al completamento del backup, viene restituito il percorso del file di backup completo che include il nome e la posizione del nuovo file di backup risultante dall'operazione di backup.  
   
@@ -50,7 +50,7 @@ EXEC managed_backup.sp_backup_on_demand
   
 ##  <a name="arguments"></a><a name="Arguments"></a>Argomenti  
  @database_name  
- Nome del database in cui deve essere eseguito il backup. È @database_name di **tipo sysname**.  
+ Nome del database in cui deve essere eseguito il backup. @database_nameÈ di **tipo sysname**.  
   
  @type  
  Tipo di backup da eseguire: database o log. Il @type parametro è di **tipo nvarchar (32)**.  
@@ -63,7 +63,7 @@ EXEC managed_backup.sp_backup_on_demand
 ### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **db_backupoperator** database, con autorizzazioni **ALTER ANY CREDENTIAL** e autorizzazioni **Execute** per **sp_delete_backuphistory**stored procedure.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene eseguita una richiesta di backup del database per il database ' TestDB '. Per questo database è stato abilitato il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
 ```  

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - database mirroring [SQL Server], monitoring
 - sp_dbmmonitoraddmonitoring
 ms.assetid: 9489dc30-af29-4363-a172-4645947fc95e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4ed53c6a72b201129cf9f75214261bbdd47d6fb9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4b8ddf9753578f6d73cd6baf7511c73d90377e1a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108155"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831649"
 ---
 # <a name="sp_dbmmonitoraddmonitoring-transact-sql"></a>sp_dbmmonitoraddmonitoring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_dbmmonitoraddmonitoring [ update_period ]
 >  Se il periodo di aggiornamento è impostato su un valore troppo basso, i tempi di risposta per i client potrebbero aumentare.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- nessuno  
+ Nessuno  
   
 ## <a name="result-sets"></a>Set di risultati  
  nessuno  
@@ -55,7 +55,7 @@ sp_dbmmonitoraddmonitoring [ update_period ]
 ## <a name="remarks"></a>Osservazioni  
  Per eseguire questa procedura è necessario che sia consentita l'esecuzione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent nell'istanza del server e per eseguire il processo di Monitoraggio mirroring del database è necessario che SQL Server Agent sia in esecuzione.  
   
- Se il mirroring del database viene [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]avviato da, la procedura **sp_dbmmonitoraddmonitoring** viene eseguita automaticamente. Se si avvia manualmente il mirroring utilizzando le istruzioni ALTER DATABASE, per monitorare il database con mirroring sull'istanza del server, è necessario eseguire **sp_dbmmonitoraddmonitoring** manualmente.  
+ Se il mirroring del database viene avviato da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , la procedura **sp_dbmmonitoraddmonitoring** viene eseguita automaticamente. Se si avvia manualmente il mirroring utilizzando le istruzioni ALTER DATABASE, per monitorare il database con mirroring sull'istanza del server, è necessario eseguire **sp_dbmmonitoraddmonitoring** manualmente.  
   
 > [!NOTE]  
 >  Se si esegue **sp_dbmmonitoraddmonitoring** prima di configurare il mirroring del database, il processo di monitoraggio verrà eseguito, ma non aggiornerà la tabella di stato in cui è archiviata la cronologia di monitoraggio mirroring del database.  
@@ -63,7 +63,7 @@ sp_dbmmonitoraddmonitoring [ update_period ]
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene avviato il monitoraggio con un periodo di aggiornamento di `3` minuti.  
   
 ```  

@@ -18,14 +18,14 @@ helpviewer_keywords:
 - core.sp_update_data_source stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a840c749222cc7c01fa1b1ff5a27489e0e9d322a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 207b27a4d7006f8181cbfe7a6cb6e072ee741d82
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942461"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829668"
 ---
 # <a name="coresp_update_data_source-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,28 +46,28 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @collection_set_uid = ] '*collection_set_uid*'  
+ [ @collection_set_uid =]'*collection_set_uid*'  
  GUID per il set di raccolta. *collection_set_uid* è di tipo **uniqueidentifier**e non prevede alcun valore predefinito. Per ottenere il GUID, eseguire una query sulla vista dbo.syscollector_collection_sets nel database msdb.  
   
- [ @machine_name = ] '*machine_name*'  
+ [ @machine_name =]'*machine_name*'  
  Nome del server in cui risiede l'insieme di raccolta. *machine_name* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
- [ @named_instance = ] '*named_instance*'  
+ [ @named_instance =]'*named_instance*'  
  Nome dell'istanza per l'insieme di raccolta. *named_instance* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 > [!NOTE]  
->  *named_instance* deve essere il nome completo dell'istanza, costituito dal nome del computer e dal nome dell'istanza nel formato *nomecomputer*\\*NomeIstanza*.  
+>  *named_instance* deve essere il nome completo dell'istanza, costituito dal nome del computer e dal nome dell'istanza nel formato *nomecomputer* \\ *NomeIstanza*.  
   
- [ @days_until_expiration = ] *days_until_expiration*  
+ [ @days_until_expiration =] *days_until_expiration*  
  Numero di giorni rimanenti del periodo di memorizzazione dei dati dello snapshot. *days_until_expiration* è **smallint**.  
   
- [ @source_id = ] *source_id*  
+ [ @source_id =] *source_id*  
  Identificatore univoco per l'origine dell'aggiornamento. *source_id* è di **tipo int** e viene restituito come output.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Ogni volta che un pacchetto di caricamento inizia a caricare i dati nel data warehouse di gestione, il componente di runtime dell'agente di raccolta dati chiama core.sp_update_data_source. La tabella core.source_info_internal viene aggiornata se dopo l'ultimo caricamento si è verificata una delle modifiche seguenti:  
   
 -   È stato aggiunto un nuovo set di raccolta.  
@@ -77,7 +77,7 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del database di **mdw_writer** (con autorizzazione Execute).  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene aggiornata l'origine dati (in questo caso il set di raccolta Utilizzo disco), viene impostato il numero di giorni che mancano alla scadenza e viene restituito l'identificatore per l'origine. In questo esempio viene utilizzata l'istanza predefinita.  
   
 ```  

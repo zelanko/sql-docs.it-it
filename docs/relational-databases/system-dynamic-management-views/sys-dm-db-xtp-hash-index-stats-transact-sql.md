@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_hash_index_stats (dynamic management view)
 ms.assetid: 45969884-cd61-48e8-aee5-c725c78e3e4c
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2bbaaaa6770c5644da227c7e64a9ff9e0fc2c13
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 754c254a208adbb40a2efc44934bbcc40608ec85
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68026844"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830797"
 ---
 # <a name="sysdm_db_xtp_hash_index_stats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ Le catene molto lunghe possono influire significativamente sulle prestazioni del
   
 Per altre informazioni, vedere [indici hash per le tabelle ottimizzate per la memoria](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
   
-|Nome colonna|Type|Descrizione|  
+|Nome colonna|Tipo|Description|  
 |-----------------|----------|-----------------|  
 |object_id|**int**|ID oggetto della tabella padre.|  
 |xtp_object_id|**bigint**|ID della tabella ottimizzata per la memoria.|  

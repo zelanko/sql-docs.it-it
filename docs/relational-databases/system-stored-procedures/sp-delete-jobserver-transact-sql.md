@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_jobserver
 ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a2f4b2e8dbcf8e8427f51388c7bead75263d95a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4499183a8cf5019fe7a4ce10bdb9ffc83726551a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68130644"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831202"
 ---
 # <a name="sp_delete_jobserver-transact-sql"></a>sp_delete_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,8 +58,8 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa stored procedure, gli utenti devono essere membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempi  
- Nell'esempio seguente il server `SEATTLE2` viene rimosso dall'elaborazione `Weekly Sales Backups`del processo.  
+## <a name="examples"></a>Esempio  
+ Nell'esempio seguente il server viene rimosso `SEATTLE2` dall'elaborazione del `Weekly Sales Backups` processo.  
   
 > [!NOTE]  
 >  In questo esempio si presuppone che il processo `Weekly Sales Backups` sia stato creato in precedenza.  

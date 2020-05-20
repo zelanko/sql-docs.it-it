@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_host_info dynamic management view
 ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 052402d3a394e8da3e08828992127d3cd89b95ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8275ed39d49c8fdb64c1d2f26cc1d218c525500c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900170"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830511"
 ---
 # <a name="sysdm_os_host_info-transact-sql"></a>sys. dm_os_host_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +46,13 @@ Questa visualizzazione è simile a [sys. dm_os_windows_info](../../relational-da
 ## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
-Per `SELECT` impostazione predefinita `sys.dm_os_host_info` , l'autorizzazione per `public` è concessa al ruolo. Se revocato, `VIEW SERVER STATE` richiede l'autorizzazione per il server.   
+`SELECT` `sys.dm_os_host_info` Per impostazione predefinita, l'autorizzazione per è concessa al `public` ruolo. Se revocato, richiede `VIEW SERVER STATE` l'autorizzazione per il server.   
  
 > [!CAUTION]
->  A partire dalla [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] versione CTP 1,3 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] , la versione `SELECT` 17 richiede `sys.dm_os_host_info` l'autorizzazione per la connessione [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]a. Se `SELECT` l'autorizzazione viene revocata da `public`, solo gli `VIEW SERVER STATE` account di accesso con autorizzazione possono connettersi con la versione più recente di SSMS. Altri strumenti, ad esempio, `sqlcmd.exe` possono connettersi senza `SELECT` autorizzazione `sys.dm_os_host_info`.
+>  A partire dalla versione [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1,3, la [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] versione 17 richiede l'autorizzazione per la `SELECT` `sys.dm_os_host_info` connessione a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] . Se `SELECT` l'autorizzazione viene revocata da `public` , solo gli account di accesso con `VIEW SERVER STATE` autorizzazione possono connettersi con la versione più recente di SSMS. Altri strumenti, ad esempio, `sqlcmd.exe` possono connettersi senza `SELECT` autorizzazione `sys.dm_os_host_info` .
 
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituite tutte le colonne della vista **sys. dm_os_host_info** .  
   
 ```  
@@ -74,7 +74,7 @@ Ecco un set di risultati di esempio in Linux:
  |Linux |Ubuntu |16.04  |   |NULL   |1033 |  
 
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sys. dm_os_sys_info &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
  [sys.dm_os_windows_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)  
  

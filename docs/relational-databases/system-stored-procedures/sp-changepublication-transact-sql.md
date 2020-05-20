@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changepublication
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1e5b128a38fc32b16cca9d0a8e59f09aef88676c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6d5c08e0a844348210ae011e395c04de5b4cdcdd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762420"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829567"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   
  Nella tabella seguente vengono descritte le proprietà della pubblicazione che è possibile modificare e le limitazioni previste per i valori di tali proprietà.  
   
-|Proprietà|valore|Descrizione|  
+|Proprietà|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|È possibile creare sottoscrizioni anonime per la pubblicazione specificata e anche *immediate_sync* deve essere **true**. Non è possibile modificare questa proprietà per pubblicazioni peer-to-peer.|  
 ||**false**|Non è consentito creare sottoscrizioni anonime per la pubblicazione specificata. Non è possibile modificare questa proprietà per pubblicazioni peer-to-peer.|  
@@ -88,13 +88,13 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|I file di sincronizzazione vengono creati solo se esistono nuove sottoscrizioni. I Sottoscrittori ricevono i file di sincronizzazione dopo la sottoscrizione solo se l'agente snapshot è stato avviato e completato.|  
 |**independent_agent**|**true**|Per la pubblicazione viene utilizzato un agente di distribuzione dedicato.|  
 ||**false**|Per la pubblicazione viene utilizzato un agente di distribuzione condiviso e a ogni coppia database di pubblicazione/database di sottoscrizione è associato un agente condiviso.|  
-|**p2p_continue_onconflict**|**true**|L'agente di distribuzione continua a elaborare le modifiche quando viene rilevato un conflitto.<br /> **Attenzione:** Si consiglia di `FALSE`usare il valore predefinito. Quando questa opzione è impostata su `TRUE`, il agente di distribuzione tenta di eseguire la convergenza dei dati nella topologia applicando la riga in conflitto dal nodo con l'ID originatore più elevato. Questo metodo non garantisce la convergenza. Dopo il rilevamento di un conflitto, è necessario assicurarsi che la topologia sia coerente. Per ulteriori informazioni, vedere la sezione relativa alla gestione dei conflitti in [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
+|**p2p_continue_onconflict**|**true**|L'agente di distribuzione continua a elaborare le modifiche quando viene rilevato un conflitto.<br /> **Attenzione:** Si consiglia di usare il valore predefinito `FALSE` . Quando questa opzione è impostata su `TRUE` , il agente di distribuzione tenta di eseguire la convergenza dei dati nella topologia applicando la riga in conflitto dal nodo con l'ID originatore più elevato. Questo metodo non garantisce la convergenza. Dopo il rilevamento di un conflitto, è necessario assicurarsi che la topologia sia coerente. Per ulteriori informazioni, vedere la sezione relativa alla gestione dei conflitti in [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 ||**false**|L'agente di distribuzione arresta l'elaborazione delle modifiche quando viene rilevato un conflitto.|  
 |**post_snapshot_script**||Specifica il percorso di un file script [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguito dall'agente di distribuzione dopo l'applicazione di tutti gli altri dati e script di oggetti replicati durante una sincronizzazione iniziale.|  
 |**pre_snapshot_script**||Specifica il percorso di un file script [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguito dall'agente di distribuzione prima dell'applicazione di tutti gli altri dati e script di oggetti replicati durante una sincronizzazione iniziale.|  
 |**publish_to_ActiveDirectory**|**true**|Questo parametro è deprecato ed è supportato solo per compatibilità con gli script di versioni precedenti. Non è più possibile aggiungere informazioni di pubblicazione in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory.|  
 ||**false**|Rimuove le informazioni sulla pubblicazione da Active Directory.|  
-|**queue_type**|**SQL**|Consente di utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'archiviazione delle transazioni. È possibile modificare questa proprietà solo se non esistono sottoscrizioni attive.<br /><br /> Nota: il supporto per [!INCLUDE[msCoName](../../includes/msconame-md.md)] l'utilizzo di Accodamento messaggi è stato interrotto. Se si specifica il valore **MSMQ** per *value* , viene restituito un errore.|  
+|**queue_type**|**SQL**|Consente di utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'archiviazione delle transazioni. È possibile modificare questa proprietà solo se non esistono sottoscrizioni attive.<br /><br /> Nota: il supporto per l'utilizzo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Accodamento messaggi è stato interrotto. Se si specifica il valore **MSMQ** per *value* , viene restituito un errore.|  
 |**repl_freq**|**continuo**|Pubblica l'output di tutte le transazioni basate su log.|  
 ||**snapshot**|Pubblica solo gli eventi di sincronizzazione pianificati.|  
 |**replicate_ddl**|**1**|Le istruzioni DDL (Data Definition Language) eseguite nel server di pubblicazione vengono replicate. Non è possibile modificare questa proprietà per pubblicazioni non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -111,8 +111,8 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**simultanee**|Consente di utilizzare l'output generato dal programma per la copia bulk in modalità nativa per tutte le tabelle, senza tuttavia bloccare le tabelle durante il processo di generazione dello snapshot. Questa proprietà non è valida per la replica snapshot.|  
 ||**concurrent_c**|Consente di utilizzare l'output generato dal programma per la copia bulk in modalità carattere per tutte le tabelle, senza tuttavia bloccare le tabelle durante il processo di generazione dello snapshot. Questa proprietà non è valida per la replica snapshot.|  
 |**taskId**||Questa proprietà è deprecata e non è più supportata.|  
-|**allow_drop**|**true**|Abilita `DROP TABLE` il supporto della dll per gli articoli che fanno parte della replica transazionale. Versione minima supportata: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 o versione successiva [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e Service Pack 1 o versione successiva. Riferimento aggiuntivo: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
-||**false**|Disabilita il supporto `DROP TABLE` delle dll per articoli che fanno parte della replica transazionale. Si tratta del valore **predefinito** per questa proprietà.|
+|**allow_drop**|**true**|Abilita il `DROP TABLE` supporto della dll per gli articoli che fanno parte della replica transazionale. Versione minima supportata: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 o versione successiva e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1 o versione successiva. Riferimento aggiuntivo: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
+||**false**|Disabilita `DROP TABLE` il supporto delle dll per articoli che fanno parte della replica transazionale. Si tratta del valore **predefinito** per questa proprietà.|
 |**Null** (impostazione predefinita)||Restituisce l'elenco dei valori supportati per la *Proprietà*.|  
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Conferma che l'azione eseguita da questo stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è di **bit**e il valore predefinito è **0**.  
@@ -120,20 +120,20 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   - **1** specifica che le modifiche apportate all'articolo possono causare l'invalidità dello snapshot. Se alcune sottoscrizioni esistenti richiedono un nuovo snapshot, questo valore consente di contrassegnare lo snapshot esistente come obsoleto e di generarne uno nuovo.   
 Per informazioni sulle proprietà che richiedono la generazione di un nuovo snapshot quando vengono modificate, vedere la sezione Osservazioni.  
   
-[**@force_reinit_subscription =** ] *force_reinit_subscription*  
+[** @force_reinit_subscription =** ] *force_reinit_subscription*  
  Segnala che l'azione eseguita dalla stored procedure potrebbe richiedere la reinizializzazione delle sottoscrizioni esistenti. *force_reinit_subscription* è un **bit** e il valore predefinito è **0**.  
   - **0** specifica che le modifiche apportate all'articolo non provocano la reinizializzazione della sottoscrizione. Se la stored procedure rileva che la modifica richiede la reinizializzazione delle sottoscrizioni esistenti, viene generato un errore e non viene apportata alcuna modifica.  
   - **1** specifica che le modifiche apportate all'articolo comportano la reinizializzazione della sottoscrizione esistente e concede l'autorizzazione per la reinizializzazione della sottoscrizione.  
   
-`[ @publisher = ] 'publisher'`Specifica un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publisher = ] 'publisher'`Specifica un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
   
   > [!NOTE]  
-  >  Impossibile utilizzare *Publisher* quando si modificano le proprietà degli articoli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un server di pubblicazione.  
+  >  Impossibile utilizzare *Publisher* quando si modificano le proprietà degli articoli in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_changepublication** viene utilizzata nella replica snapshot e nella replica transazionale.  
   
  Dopo la modifica di una delle proprietà seguenti, è necessario generare un nuovo snapshot ed è necessario specificare il valore **1** per il parametro *force_invalidate_snapshot* .  
@@ -150,7 +150,7 @@ Per informazioni sulle proprietà che richiedono la generazione di un nuovo snap
 -   **snapshot_in_defaultfolder**  
 -   **sync_mode**  
   
-Per elencare gli oggetti di pubblicazione nel Active Directory **publish_to_active_directory** utilizzando il parametro publish_to_active_directory [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario che l'oggetto sia già stato creato nella Active Directory.  
+Per elencare gli oggetti di pubblicazione nel Active Directory utilizzando il parametro **publish_to_active_directory** , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è necessario che l'oggetto sia già stato creato nella Active Directory.  
   
 ## <a name="impact-of-immediate-sync"></a>Impatto della sincronizzazione immediata  
  Quando la sincronizzazione immediata è attiva, tutte le modifiche nel log vengono rilevate subito dopo la generazione dello snapshot iniziale anche se non sono presenti sottoscrizioni. Le modifiche registrate vengono utilizzate quando un cliente utilizza il backup per aggiungere un nuovo nodo peer. Dopo il ripristino del backup, il peer viene sincronizzato con qualsiasi altra modifica che si verifica dopo l'esecuzione del backup. Poiché i comandi vengono rilevati nel database di distribuzione, la logica di sincronizzazione può esaminare l'ultimo LSN di cui è stato eseguito il backup e utilizzarlo come punto di partenza, sapendo che il comando è disponibile se il backup è stato eseguito entro il periodo di memorizzazione massimo. Il valore predefinito per il periodo di memorizzazione minimo è 0 ore e il periodo di memorizzazione massimo è di 24 ore.  

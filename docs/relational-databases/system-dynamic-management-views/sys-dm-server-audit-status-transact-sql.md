@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_audit_status dynamic management view
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c30cbd012bb1ccc7d379eadcfd29fee87a96dd85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: acb5726d9309a93e389e22a57d4be54cf03dbe24
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72313688"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830423"
 ---
 # <a name="sysdm_server_audit_status-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "72313688"
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|ID del controllo. Esegue il mapping al campo **Audit_ID** nella vista del catalogo **sys. Audits** .|  
 |**name**|**sysname**|Nome del controllo. Uguale al campo **Name** nella vista del catalogo **sys. server_audits** .|  
-|**Stato**|**smallint**|Stato numerico del controllo del server:<br /><br /> 0 = non avviata<br /><br /> 1 =<br />        Started<br /><br /> 2 =<br />      Errore di runtime<br /><br /> 3 = creazione destinazione non riuscita<br /><br /> 4 = chiusura in corso|  
+|**Stato**|**smallint**|Stato numerico del controllo del server:<br /><br /> 0 = non avviata<br /><br /> 1 =<br />        Avviato<br /><br /> 2 =<br />      Errore di runtime<br /><br /> 3 = creazione destinazione non riuscita<br /><br /> 4 = chiusura in corso|  
 |**status_desc**|**nvarchar(256)**|Stringa che visualizza lo stato del controllo del server:<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|Timestamp in UTC dell'ultima modifica dello stato per il controllo.|  
 |**event_session_address**|**varbinary (8)**|Indirizzo della sessione degli eventi estesi associata al controllo. Correlato alla vista del catalogo **sys. dm_xe_sessions. Address** .|  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_first_result_set
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc58447e9893647dfa73643f14455d715625478e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2033ae81a030fa57e2f4aaf962e5dd35f9a9a318
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053056"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831182"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -44,9 +44,9 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ## <a name="arguments"></a>Argomenti  
 `[ \@tsql = ] 'Transact-SQL_batch'`Una o più [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni. *Transact-SQL_batch* può essere di **tipo nvarchar (***n***)** o **nvarchar (max)**.  
   
-`[ \@params = ] N'parameters'`\@params fornisce una stringa di dichiarazione per i parametri [!INCLUDE[tsql](../../includes/tsql-md.md)] del batch, che è simile a sp_executesql. I parametri possono essere di **tipo nvarchar (n)** o **nvarchar (max)**.  
+`[ \@params = ] N'parameters'`\@params fornisce una stringa di dichiarazione per i parametri del [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, che è simile a sp_executesql. I parametri possono essere di **tipo nvarchar (n)** o **nvarchar (max)**.  
   
- È una stringa che contiene le definizioni di tutti i parametri incorporati nella [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. La stringa deve essere una costante o una variabile Unicode. Ogni definizione di parametro è costituita da un nome del parametro e da un tipo di dati. *n* è un segnaposto che indica definizioni di parametro aggiuntive. Ogni parametro specificato nell'istruzione deve essere definito in \@params. Se l' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il batch nell'istruzione non contiene parametri, \@params non è necessario. Il valore predefinito per questo parametro è NULL.  
+ È una stringa che contiene le definizioni di tutti i parametri incorporati nella [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. La stringa deve essere una costante o una variabile Unicode. Ogni definizione di parametro è costituita da un nome del parametro e da un tipo di dati. *n* è un segnaposto che indica definizioni di parametro aggiuntive. Ogni parametro specificato nell'istruzione deve essere definito in \@ params. Se l' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il batch nell'istruzione non contiene parametri, \@ params non è necessario. Il valore predefinito per questo parametro è NULL.  
   
 `[ \@browse_information_mode = ] tinyint`Specifica se vengono restituite altre colonne chiave e informazioni sulla tabella di origine. Se impostato su 1, ogni query viene analizzata come se per essa fosse stata specificata un'opzione FOR BROWSE. Vengono restituite informazioni aggiuntive sulla tabella di origine e sulle colonne chiave.  
   
@@ -113,17 +113,17 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  **sp_describe_first_result_set** restituisce un errore nei casi seguenti.  
   
--   Se l'input \@TSQL non è un batch [!INCLUDE[tsql](../../includes/tsql-md.md)] valido. La validità è determinata dall'analisi e dall'analisi del [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Eventuali errori causati dal batch durante l'ottimizzazione della query o durante l'esecuzione non vengono considerati quando si [!INCLUDE[tsql](../../includes/tsql-md.md)] determina se il batch è valido.  
+-   Se l'input \@ TSQL non è un [!INCLUDE[tsql](../../includes/tsql-md.md)] batch valido. La validità è determinata dall'analisi e dall'analisi del [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Eventuali errori causati dal batch durante l'ottimizzazione della query o durante l'esecuzione non vengono considerati quando si determina se il [!INCLUDE[tsql](../../includes/tsql-md.md)] batch è valido.  
   
--   Se \@params non è null e contiene una stringa che non è una stringa di dichiarazione sintatticamente valida per i parametri, o se contiene una stringa che dichiara qualsiasi parametro più di una volta.  
+-   Se \@ params non è null e contiene una stringa che non è una stringa di dichiarazione sintatticamente valida per i parametri, o se contiene una stringa che dichiara qualsiasi parametro più di una volta.  
   
--   Se il batch [!INCLUDE[tsql](../../includes/tsql-md.md)] di input dichiara una variabile locale con lo stesso nome di un parametro dichiarato in \@params.  
+-   Se il [!INCLUDE[tsql](../../includes/tsql-md.md)] batch di input dichiara una variabile locale con lo stesso nome di un parametro dichiarato in \@ params.  
   
 -   L'istruzione utilizza una tabella temporanea.  
   
 -   La query include la creazione di una tabella permanente sulla quale viene eseguita una query.  
   
- Se tutti gli altri controlli hanno esito positivo, vengono presi in considerazione tutti i possibili percorsi del flusso di controllo nel batch di input. Vengono prese in considerazione tutte le istruzioni del flusso di controllo (GOTO, i blocchi IF/ [!INCLUDE[tsql](../../includes/tsql-md.md)] else, while e try/catch, nonché le procedure, [!INCLUDE[tsql](../../includes/tsql-md.md)] i batch dinamici o i trigger richiamati dal batch di input da un'istruzione EXEC, un'istruzione DDL che causa l'attivazione di trigger DDL o un'istruzione DML che causa la generazione di trigger in una tabella di destinazione o in una tabella modificata a causa dell'azione di propagazione su un vincolo di chiave esterna. Qualora siano possibili più percorsi di controllo, a un certo punto si verifica l'arresto di un algoritmo.  
+ Se tutti gli altri controlli hanno esito positivo, vengono presi in considerazione tutti i possibili percorsi del flusso di controllo nel batch di input. Vengono prese in considerazione tutte le istruzioni del flusso di controllo (GOTO, i blocchi IF/ELSE, WHILE e [!INCLUDE[tsql](../../includes/tsql-md.md)] try/catch, nonché le procedure, i [!INCLUDE[tsql](../../includes/tsql-md.md)] batch dinamici o i trigger richiamati dal batch di input da un'istruzione EXEC, un'istruzione DDL che causa l'attivazione di trigger DDL o un'istruzione DML che causa la generazione di trigger in una tabella di destinazione o in una tabella modificata a causa dell'azione di propagazione su un vincolo di chiave esterna. Qualora siano possibili più percorsi di controllo, a un certo punto si verifica l'arresto di un algoritmo.  
   
  Per ogni percorso del flusso di controllo, la prima istruzione, se presente, che restituisce un set di risultati è determinata da **sp_describe_first_result_set**.  
   
@@ -152,13 +152,13 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
  **sp_describe_first_result_set** non supporta la ricorsione indiretta.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'autorizzazione per \@eseguire l'argomento TSQL.  
+ È richiesta l'autorizzazione per eseguire l' \@ argomento TSQL.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
   
 ### <a name="typical-examples"></a>Esempi tipici  
   
-#### <a name="a-simple-example"></a>A. Esempio semplice  
+#### <a name="a-simple-example"></a>R. Esempio semplice  
  Nell'esempio seguente viene descritto il set di risultati restituito da una singola query.  
   
 ```  
@@ -269,7 +269,7 @@ ELSE
     SELECT d FROM t2; '  
 ```  
   
- Risultato: \<nome di colonna sconosciuto> **varchar (20) null**  
+ Risultato: \< nome di colonna sconosciuto> **varchar (20) null**  
   
 #### <a name="column-name-forced-to-be-identical-through-aliasing"></a>Nome della colonna forzato a essere identico tramite aliasing  
  Come in precedenza, ma le colonne hanno lo stesso nome tramite l'aliasing delle colonne.  

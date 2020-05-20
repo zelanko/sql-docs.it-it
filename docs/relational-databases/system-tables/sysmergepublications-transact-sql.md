@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergepublications system table
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9a2c2802f0bd077c64800225590b2346205fb30a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 96708a8109594e0978757a163840d605d09cb522
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029785"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829832"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "68029785"
 |**alt_snapshot_folder**|**nvarchar(255)**|Posizione della cartella alternativa per lo snapshot.|  
 |**pre_snapshot_script**|**nvarchar(255)**|Puntatore a un oggetto. file **SQL** eseguito dal agente di merge prima di uno degli script degli oggetti di replica durante l'applicazione dello snapshot nel Sottoscrittore.|  
 |**post_snapshot_script**|**nvarchar(255)**|Puntatore a un oggetto. file **SQL** che viene eseguito dal agente di merge dopo l'applicazione di tutti gli altri dati e script di oggetti di replica durante una sincronizzazione iniziale.|  
-|**compress_snapshot**|**bit**|Specifica se lo snapshot scritto nella posizione **alt_snapshot_folder** viene compresso nel formato [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB. **0** indica che il file non è compresso.|  
+|**compress_snapshot**|**bit**|Specifica se lo snapshot scritto nella posizione **alt_snapshot_folder** viene compresso nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] formato CAB. **0** indica che il file non è compresso.|  
 |**ftp_address**|**sysname**|Indirizzo di rete del servizio FTP (File Transfer Protocol) per il server di distribuzione. Specifica se i file di snapshot della pubblicazione si trovano in una posizione in cui possono essere prelevati dall'agente di merge, se FTP è abilitato.|  
 |**ftp_port**|**int**|Numero di porta del servizio FTP per il server di distribuzione.|  
 |**ftp_subdirectory**|**nvarchar(255)**|Subdirectory della posizione in cui i file di snapshot saranno disponibili per l'agente di merge.|  
@@ -65,7 +65,7 @@ ms.locfileid: "68029785"
 |**allow_synctoalternate**|**bit**|Viene specificato se è consentito l'utilizzo di un partner di sincronizzazione alternativo per la sincronizzazione con il server di pubblicazione. **0** indica che un partner di sincronizzazione non è consentito.|  
 |**validate_subscriber_info**|**nvarchar (500)**|Viene visualizzato un elenco delle funzioni utilizzate per il recupero delle informazioni sul Sottoscrittore e la convalida dei criteri per i filtri di riga con parametri nel Sottoscrittore.|  
 |**ad_guidname**|**sysname**|Specifica se la pubblicazione è pubblicata in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Un GUID valido specifica che la pubblicazione è pubblicata nel Active Directory e il GUID è l'oggetto di pubblicazione Active Directory corrispondente **objectGUID**. Se è NULL, la pubblicazione non è pubblicata in Active Directory.|  
-|**backward_comp_level**|**int**|Livello di compatibilità del database. I possibili valori sono i seguenti:<br /><br /> **90** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
+|**backward_comp_level**|**int**|Livello di compatibilità del database. I possibili valori sono i seguenti:<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .|  
 |**max_concurrent_merge**|**int**|Numero massimo di processi di merge simultanei consentiti. Il valore **0** per questa proprietà significa che non esiste alcun limite al numero di processi di merge simultanei in esecuzione in un determinato momento. Questa proprietà consente di impostare un limite al numero di processi di merge simultanei eseguibili contemporaneamente in una pubblicazione di tipo merge. Se è stata pianificata l'esecuzione simultanea di un numero di sessioni maggiore del limite consentito, le sessioni in eccesso vengono inserite in una coda dove rimangono in attesa fino al completamento del processo di merge in esecuzione.|  
 |**max_concurrent_dynamic_snapshots**|**int**|Numero massimo di sessioni simultanee di snapshot di dati filtrati eseguibili nella pubblicazione di tipo merge. Se è **0**, non esiste alcun limite al numero massimo di sessioni simultanee di snapshot dei dati filtrati che possono essere eseguite simultaneamente sulla pubblicazione in un determinato momento. Questa proprietà consente di impostare un limite al numero di sessioni simultanee di snapshot eseguibili contemporaneamente in una pubblicazione di tipo merge. Se è stata pianificata l'esecuzione simultanea di un numero di sessioni maggiore del limite consentito, le sessioni in eccesso vengono inserite in una coda dove rimangono in attesa fino al completamento del processo di merge in esecuzione.|  
 |**use_partition_groups**|**smallint**|Specifica se la pubblicazione utilizza partizioni pre-calcolate.|  

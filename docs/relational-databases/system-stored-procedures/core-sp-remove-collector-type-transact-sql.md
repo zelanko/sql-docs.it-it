@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sp_remove_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 88ceba25-e41a-405f-a416-bb68918a0024
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9c2b3bf93abd6acfad699f47344f05ddbc34e85a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ae6affebf2520b99fc82af17806dab8058313bc3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942472"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830450"
 ---
 # <a name="coresp_remove_collector_type-transact-sql"></a>core.sp_remove_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ core.sp_remove_collector_type [ @collector_type_uid = ] 'collector_type_uid'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @collector_type_uid = ] '*collector_type_uid*'  
+ [ @collector_type_uid =]'*collector_type_uid*'  
  GUID per il tipo agente di raccolta. *collector_type_uid* è di tipo **uniqueidentifier**e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
@@ -53,7 +53,7 @@ core.sp_remove_collector_type [ @collector_type_uid = ] 'collector_type_uid'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del database di **mdw_admin** (con autorizzazione Execute).  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene rimosso il tipo di agente di raccolta query T-SQL generico dalla vista core.supported_collector_types.  
   
 ```  

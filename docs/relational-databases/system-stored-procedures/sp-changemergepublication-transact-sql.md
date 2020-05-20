@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergepublication
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7bcedfb666b5fffb2f31b6bf73ee02972ea30067
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3cc0e6bb77c49b7eefc17e5d1f16a185834f2061
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097678"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829605"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
  Nella tabella seguente vengono descritte le proprietà della pubblicazione che è possibile modificare e le limitazioni previste per i valori di tali proprietà.  
   
-|Proprietà|valore|Descrizione|  
+|Proprietà|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|Le sottoscrizioni anonime sono consentite.|  
 ||**false**|Le sottoscrizioni anonime non sono consentite.|  
@@ -75,7 +75,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**compress_snapshot**|**true**|Lo snapshot in una cartella snapshot alternativa viene compresso nel formato CAB. Non è possibile comprimere lo snapshot all'interno della cartella snapshot predefinita. Se si modifica questa proprietà, è necessario un nuovo snapshot.|  
 ||**false**|Per impostazione predefinita, lo snapshot non viene compresso. Se si modifica questa proprietà, è necessario un nuovo snapshot.|  
 |**conflict_logging**|**pubblicazione**|I record con conflitti vengono archiviati nel server di pubblicazione.|  
-||**Sottoscrittore**|I record con conflitti vengono archiviati nel Sottoscrittore che ha causato il conflitto. Non supportato per [!INCLUDE[ssEW](../../includes/ssew-md.md)] i sottoscrittori *.*|  
+||**Sottoscrittore**|I record con conflitti vengono archiviati nel Sottoscrittore che ha causato il conflitto. Non supportato per i [!INCLUDE[ssEW](../../includes/ssew-md.md)] sottoscrittori *.*|  
 ||**sia**|I record con conflitti vengono archiviati nel server di pubblicazione e nel Sottoscrittore.|  
 |**conflict_retention**||Valore **int** che specifica il periodo di memorizzazione, espresso in giorni, per cui vengono conservati i conflitti. Impostando *conflict_retention* su **0** significa che non è necessaria alcuna pulizia dei conflitti.|  
 |**Descrizione**||Descrizione della pubblicazione.|  
@@ -139,7 +139,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_changemergepublication** viene utilizzata nella replica di tipo merge.  
   
  La modifica delle proprietà seguenti richiede la generazione di un nuovo snapshot. È necessario specificare il valore **1** per il parametro *force_invalidate_snapshot* .  

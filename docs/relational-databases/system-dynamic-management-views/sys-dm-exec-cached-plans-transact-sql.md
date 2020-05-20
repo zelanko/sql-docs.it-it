@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_cached_plans dynamic management view
 ms.assetid: 95b707d3-3a93-407f-8e88-4515d4f2039d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe53a1d912ce03ab2eedb66b72b4de947466b313
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bd09fde00399dc2e96dc67334a0446ca9f618c3e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68263945"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830725"
 ---
 # <a name="sysdm_exec_cached_plans-transact-sql"></a>sys.dm_exec_cached_plans (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68263945"
  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], le viste a gestione dinamica non possono esporre le informazioni che influenzerebbero l'indipendenza del database o le informazioni sugli altri database a cui l'utente dispone di accesso. Per evitare di esporre queste informazioni, ogni riga che contiene dati che non appartengono al tenant connesso viene filtrata. Inoltre, i valori nelle colonne **memory_object_address** e **pool_id** sono filtrati; il valore della colonna è impostato su NULL.  
   
 > [!NOTE]  
->  Per chiamare questo oggetto [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] da [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]o, usare il nome **sys. dm_pdw_nodes_exec_cached_plans**.  
+>  Per chiamare questo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oggetto da o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , usare il nome **sys. dm_pdw_nodes_exec_cached_plans**.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -45,16 +45,16 @@ ms.locfileid: "68263945"
 |size_in_bytes|**int**|Numero di byte utilizzati dall'oggetto della cache.|  
 |memory_object_address|**varbinary (8)**|Indirizzo di memoria della voce memorizzata nella cache. È possibile utilizzare questo valore con [sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) per recuperare la suddivisione di memoria del piano memorizzato nella cache e con [sys.dm_os_memory_cache_entries](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md) per ottenere il costo della memorizzazione della voce nella cache.|  
 |cacheobjtype|**nvarchar (34)**|Tipo di oggetto nella cache. I possibili valori sono i seguenti:<br /><br /> Compiled Plan<br /><br /> Compiled Plan Stub<br /><br /> Parse Tree<br /><br /> Extended Proc<br /><br /> CLR Compiled Func<br /><br /> CLR Compiled Proc|  
-|objtype|**nvarchar (16)**|Tipo di oggetto. Di seguito sono riportati i valori possibili e le relative descrizioni.<br /><br /> Proc: stored procedure<br />Preparato: istruzione preparata<br />Adhoc: query ad hoc. Fa riferimento [!INCLUDE[tsql](../../includes/tsql-md.md)] a eventi inviati come eventi di linguaggio utilizzando **osql** o **SQLCMD** anziché come chiamate di procedure remote.<br />ReplProc: Replication-Filter-procedure<br />Trigger: trigger<br />Visualizzazione: visualizzazione<br />Impostazione predefinita: predefinita<br />UsrTab: tabella utente<br />SysTab: tabella di sistema<br />Check: vincolo CHECK<br />Regola: regola|  
+|objtype|**nvarchar (16)**|Tipo di oggetto. Di seguito sono riportati i valori possibili e le relative descrizioni.<br /><br /> Proc: stored procedure<br />Preparato: istruzione preparata<br />Adhoc: query ad hoc. Fa riferimento a [!INCLUDE[tsql](../../includes/tsql-md.md)] eventi inviati come eventi di linguaggio utilizzando **osql** o **SQLCMD** anziché come chiamate di procedure remote.<br />ReplProc: Replication-Filter-procedure<br />Trigger: trigger<br />Visualizzazione: visualizzazione<br />Impostazione predefinita: predefinita<br />UsrTab: tabella utente<br />SysTab: tabella di sistema<br />Check: vincolo CHECK<br />Regola: regola|  
 |plan_handle|**varbinary(64)**|Identificatore del piano in memoria. Si tratta di un identificatore temporaneo, che rimane costante solo se il piano rimane nella cache. È possibile utilizzare questo valore con le funzioni a gestione dinamica seguenti:<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
 |pool_id|**int**|ID del pool di risorse in base a cui viene rilevato l'utilizzo della memoria del piano.|  
-|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
+|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
   
  <sup>1</sup>  
   
 ## <a name="permissions"></a>Autorizzazioni
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]è richiesta `VIEW SERVER STATE` l'autorizzazione.   
+In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
 Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
 
 ## <a name="examples"></a>Esempi  
@@ -83,7 +83,7 @@ GO
 ```  
   
 ### <a name="c-returning-the-set-options-with-which-the-plan-was-compiled"></a>C. Restituzione delle opzioni SET con cui è stato compilato il piano  
- Nell'esempio seguente vengono restituite le opzioni SET con cui è stato compilato il piano. Viene `sql_handle` restituito anche l'oggetto per il piano. L'operatore PIVOT viene utilizzato per restituire gli `set_options` attributi `sql_handle` e come colonne anziché come righe. Per ulteriori informazioni sul valore restituito in `set_options`, vedere [sys. Dm_exec_plan_attributes &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md).  
+ Nell'esempio seguente vengono restituite le opzioni SET con cui è stato compilato il piano. `sql_handle`Viene restituito anche l'oggetto per il piano. L'operatore PIVOT viene utilizzato per restituire gli `set_options` `sql_handle` attributi e come colonne anziché come righe. Per ulteriori informazioni sul valore restituito in `set_options` , vedere [sys. dm_exec_plan_attributes &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md).  
   
 ```sql  
 SELECT plan_handle, pvt.set_options, pvt.sql_handle  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_depends
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9ee6b9df37e61dcb4eed45bc11431d49b160cf87
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9076d4bdda58a851e358371375b71f8934a945fe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053106"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830232"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,17 +63,17 @@ sp_depends [ @objname = ] '<object>'
 ## <a name="result-sets"></a>Set di risultati  
  **sp_depends** Visualizza due set di risultati.  
   
- Il set di risultati seguente Mostra gli oggetti da * \<* cui dipende l'oggetto>.  
+ Il set di risultati seguente Mostra gli oggetti da cui dipende l' * \< oggetto>* .  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**nome**|**nvarchar (257** **)**|Nome dell'elemento a cui è associata una dipendenza.|  
 |**type**|**nvarchar (16)**|Tipo di elemento.|  
-|**Aggiornato**|**nvarchar (7)**|Specifica se l'elemento è aggiornato.|  
+|**informazioni aggiornate**|**nvarchar (7)**|Specifica se l'elemento è aggiornato.|  
 |**selezionato**|**nvarchar(8)**|Specifica se l'elemento viene utilizzato in un'istruzione SELECT.|  
-|**colonna**|**sysname**|Colonna o parametro in cui esiste la dipendenza.|  
+|**column**|**sysname**|Colonna o parametro in cui esiste la dipendenza.|  
   
- Il set di risultati seguente Mostra gli oggetti che dipendono dall' * \<oggetto>*.  
+ Il set di risultati seguente Mostra gli oggetti che dipendono dall' * \< oggetto>*.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  

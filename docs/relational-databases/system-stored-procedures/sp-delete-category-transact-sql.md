@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_category
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a9a6812e12366900dfc1c5808eaede727c05f958
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2e150318d4c334c67c51f6cf47c127793a25edb2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68120054"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831258"
 ---
 # <a name="sp_delete_category-transact-sql"></a>sp_delete_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ## <a name="arguments"></a>Argomenti  
 `[ @class = ] 'class'`Classe della categoria. la classe è di *tipo* **varchar (8)** e non prevede alcun valore predefinito e deve avere uno di questi valori.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**PROCESSO**|Elimina una categoria di processi.|  
 |**AVVISO**|Elimina una categoria di avvisi.|  
@@ -64,7 +64,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ## <a name="permissions"></a>Autorizzazioni  
  Questa procedura può essere eseguita solo dai membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene eliminata la categoria di processi `AdminJobs`.  
   
 ```  

@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.columns catalog view
 ms.assetid: 323ac9ea-fc52-4b8c-8a7e-e0e44f8ed86c
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 64b4d3e1eb464481b076af86dbc018be72e93a6f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4811f9a3f7178c77699c30a2a334787eed9e41e0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73981962"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829735"
 ---
 # <a name="syscolumns-transact-sql"></a>sys.columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -73,15 +73,15 @@ ms.locfileid: "73981962"
 |rule_object_id|**int**|ID della regola autonoma associata alla colonna tramite sys.sp_bindrule.<br /><br /> 0 = Nessuna regola autonoma. Per i vincoli CHECK a livello di colonna, vedere [sys. check_constraints &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md).|  
 |is_sparse|**bit**|1 = La colonna è di tipo sparse. Per altre informazioni, vedere [Usare le colonne di tipo sparse](../../relational-databases/tables/use-sparse-columns.md).|  
 |is_column_set|**bit**|1 = La colonna è un set di colonne. Per altre informazioni, vedere [Usare le colonne di tipo sparse](../../relational-databases/tables/use-sparse-columns.md).|  
-|generated_always_type|**tinyint**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]successive.<br /><br /> Identifica quando viene generato il valore della colonna (sarà sempre 0 per le colonne nelle tabelle di sistema):<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END<br /><br /> Per altre informazioni, vedere [tabelle temporali &#40;database relazionali&#41;](../../relational-databases/tables/temporal-tables.md).|  
-|generated_always_type_desc|**nvarchar(60)**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]successive.<br /><br /> Descrizione testuale del `generated_always_type`valore di (sempre NOT_APPLICABLE per le colonne nelle tabelle di sistema) <br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END|  
-|encryption_type|**int**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]successive.<br /><br /> Tipo di crittografia:<br /><br /> 1 = crittografia deterministica<br /><br /> 2 = crittografia casuale|  
-|encryption_type_desc|**nvarchar (64)**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]successive.<br /><br /> Descrizione del tipo di crittografia:<br /><br /> CASUALE<br /><br /> DETERMINISTIC|  
-|encryption_algorithm_name|**sysname**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]successive.<br /><br /> Nome dell'algoritmo di crittografia.<br /><br /> È supportata solo AEAD_AES_256_CBC_HMAC_SHA_512.|  
-|column_encryption_key_id|**int**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]successive.<br /><br /> ID di CEK.|  
-|column_encryption_key_database_name|**sysname**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni [!INCLUDE[ssSDW_md](../../includes/sssds-md.md)]successive.<br /><br /> Nome del database in cui è presente la chiave di crittografia della colonna se diverso dal database della colonna. NULL se la chiave esiste nello stesso database della colonna.|  
-|is_hidden|**bit**|**Si applica a**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] e versioni [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]successive.<br /><br /> Indica se la colonna è nascosta:<br /><br /> 0 = normale, non nascosta, colonna visibile<br /><br /> 1 = colonna nascosta|  
-|is_masked|**bit**|**Si applica a**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] e versioni [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]successive.<br /><br /> Indica se la colonna è mascherata da una maschera dati dinamica:<br /><br /> 0 = colonna normale, non mascherata<br /><br /> 1 = la colonna è mascherata|  
+|generated_always_type|**tinyint**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Identifica quando viene generato il valore della colonna (sarà sempre 0 per le colonne nelle tabelle di sistema):<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END<br /><br /> Per altre informazioni, vedere [tabelle temporali &#40;database relazionali&#41;](../../relational-databases/tables/temporal-tables.md).|  
+|generated_always_type_desc|**nvarchar(60)**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Descrizione testuale del `generated_always_type` valore di (sempre NOT_APPLICABLE per le colonne nelle tabelle di sistema) <br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END|  
+|encryption_type|**int**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Tipo di crittografia:<br /><br /> 1 = crittografia deterministica<br /><br /> 2 = crittografia casuale|  
+|encryption_type_desc|**nvarchar (64)**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Descrizione del tipo di crittografia:<br /><br /> CASUALE<br /><br /> DETERMINISTIC|  
+|encryption_algorithm_name|**sysname**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Nome dell'algoritmo di crittografia.<br /><br /> È supportata solo AEAD_AES_256_CBC_HMAC_SHA_512.|  
+|column_encryption_key_id|**int**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> ID di CEK.|  
+|column_encryption_key_database_name|**sysname**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive, [!INCLUDE[ssSDW_md](../../includes/sssds-md.md)].<br /><br /> Nome del database in cui è presente la chiave di crittografia della colonna se diverso dal database della colonna. NULL se la chiave esiste nello stesso database della colonna.|  
+|is_hidden|**bit**|**Si applica a**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] e versioni successive, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Indica se la colonna è nascosta:<br /><br /> 0 = normale, non nascosta, colonna visibile<br /><br /> 1 = colonna nascosta|  
+|is_masked|**bit**|**Si applica a**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] e versioni successive, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Indica se la colonna è mascherata da una maschera dati dinamica:<br /><br /> 0 = colonna normale, non mascherata<br /><br /> 1 = la colonna è mascherata|  
 
 
  

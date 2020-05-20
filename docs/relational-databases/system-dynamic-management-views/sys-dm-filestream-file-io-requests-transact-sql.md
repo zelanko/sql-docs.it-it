@@ -16,21 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_filestream_file_io_requests catalog view
 ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4fb51b33655756d9c3c65dfcb5de3bae380ee9a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b7b44d76ad893775216e6566add3636603ea7dce
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67951030"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830625"
 ---
 # <a name="sysdm_filestream_file_io_requests-transact-sql"></a>sys.dm_filestream_file_io_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Viene visualizzato un elenco di richieste di I/O elaborate dal proprietario dello spazio dei nomi (NSO, Namespace Owner) in quel preciso momento.  
   
-|Colonna|Type|Descrizione|  
+|Colonna|Tipo|Description|  
 |------------|----------|-----------------|  
 |**request_context_address**|**varbinary (8)**|Viene visualizzato l'indirizzo interno del blocco di memoria NSO in cui è contenuta la richiesta di I/O del driver. Non ammette i valori Null.|  
 |**current_spid**|**smallint**|Mostra l'ID del processo di sistema (SPID) per la connessione del SQL Server corrente. Non ammette i valori Null.|  
@@ -39,7 +39,7 @@ ms.locfileid: "67951030"
 |**request_id**|**int**|Viene mostrato l'ID univoco della richiesta assegnato dal driver a questa richiesta. Non ammette i valori Null.|  
 |**irp_id**|**int**|Viene mostrato l'ID IRP univoco. È utile per identificare tutte le richieste di I/O correlate all'IRP specificato. Non ammette i valori Null.|  
 |**handle_id**|**int**|Viene indicato l'ID handle dello spazio dei nomi. Si tratta dell'identificatore specifico dell'NSO ed è univoco in tutta l'istanza. Non ammette i valori Null.|  
-|**client_thread_id**|**varbinary (8)**|Mostra l'ID del thread dell'applicazione client che ha origine la richiesta.<br /><br /> ** \* Avviso di \* \* ** Questa operazione è significativa solo se l'applicazione client è in esecuzione nello stesso computer del SQL Server. Quando l'applicazione client è in esecuzione in modalità remota, il **client_thread_id** Mostra l'ID del thread di un processo di sistema che funziona per conto del client remoto.<br /><br /> Ammette i valori Null.|  
+|**client_thread_id**|**varbinary (8)**|Mostra l'ID del thread dell'applicazione client che ha origine la richiesta.<br /><br /> ** \* \* Questo \* avviso \* ** è significativo solo se l'applicazione client è in esecuzione nello stesso computer del SQL Server. Quando l'applicazione client è in esecuzione in modalità remota, il **client_thread_id** Mostra l'ID del thread di un processo di sistema che funziona per conto del client remoto.<br /><br /> Ammette i valori Null.|  
 |**client_process_id**|**varbinary (8)**|Viene mostrato l'ID processo dell'applicazione client se quest'ultima è in esecuzione nello stesso computer in cui è installato SQL Server. Per un client remoto, viene mostrato l'ID processo di sistema in funzione a nome dell'applicazione client. Ammette i valori Null.|  
 |**handle_context_address**|**varbinary (8)**|Mostra l'indirizzo della struttura NSO interna associata all'handle del client. Ammette i valori Null.|  
 |**filestream_transaction_id**|**varbinary(128)**|Vengono mostrati l'ID della transazione associata all'handle specifico e tutte le richieste associate a questo handle. Si tratta del valore restituito dalla funzione **GET_FILESTREAM_TRANSACTION_CONTEXT** . Ammette i valori Null.|  

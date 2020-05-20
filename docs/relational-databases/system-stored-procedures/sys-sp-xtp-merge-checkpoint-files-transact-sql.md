@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_xtp_merge_checkpoint_files
 ms.assetid: da04df2a-f7a1-41e7-a1ef-2d5d68919892
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 73638d41c7a24a37c068d365771b4d0469a174d5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d439edc04b13092c2dc95bbf3e45c62739f43a4c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68041020"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829938"
 ---
 # <a name="syssp_xtp_merge_checkpoint_files-transact-sql"></a>sys.sp_xtp_merge_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68041020"
   
 ||  
 |-|  
-|**Nota**: questo stored procedure è deprecato in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Non è più necessario e non può essere usato, a partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]da.|  
+|**Nota**: questo stored procedure è deprecato in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] . Non è più necessario e non può essere usato, a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .|  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -56,7 +56,7 @@ sys.sp_xtp_merge_checkpoint_files database_name, @transaction_lower_bound, @tran
  Limite superiore (BigInt) delle transazioni per un file di dati, come illustrato in [sys. dm_db_xtp_checkpoint_files &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md). Viene generato un errore per un valore transactionId non valido.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- nessuno  
+ Nessuno  
   
 ## <a name="cursors-returned"></a>Cursori restituiti  
  nessuno  

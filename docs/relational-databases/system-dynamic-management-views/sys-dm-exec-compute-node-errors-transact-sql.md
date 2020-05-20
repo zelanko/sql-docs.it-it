@@ -19,26 +19,26 @@ helpviewer_keywords:
 - dm_exec_compute_node_errors
 - sys.dm_exec_compute_node_errors management view
 ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b074da717a2c5deac9d576da938d1229dafeac77
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5de36530fcf50a403558cb97fa72ad6a2d126e32
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73532786"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830690"
 ---
 # <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys. dm_exec_compute_node_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Restituisce gli errori che si verificano nei nodi di calcolo di base.  
   
-|Nome colonna|Tipo di dati|Descrizione|Range|  
+|Nome colonna|Tipo di dati|Description|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |error_id|`nvarchar(36)`|ID numerico univoco associato all'errore.|Univoco in tutti gli errori di query nel sistema|  
-|source|`nvarchar(255)`|Descrizione del processo o del thread di origine||  
-|type|`nvarchar(255)`|Tipo di errore.||  
+|origine|`nvarchar(255)`|Descrizione del processo o del thread di origine||  
+|tipo|`nvarchar(255)`|Tipo di errore.||  
 |create_time|`datetime`|Data e ora dell'occorrenza dell'errore||  
 |compute_node_id|`int`|Identificatore del nodo di calcolo specifico|Vedere compute_node_id di [sys. dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
 |rexecution_id|`nvarchar(36)`|Identificatore della query di polibase, se disponibile.||  

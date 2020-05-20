@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sp_add_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 1d981037-2147-464e-a456-7d8e479bce89
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3e0f91b88a9f58ed290183ae48676572204ac98b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2e8d56f2959b78779f4ef8761053eab61cb7dd58
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078208"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829674"
 ---
 # <a name="coresp_add_collector_type-transact-sql"></a>core.sp_add_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ core.sp_add_collector_type [ @collector_type_uid = ] 'collector_type_uid'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @collector_type_uid = ] '*collector_type_uid*'  
+ [ @collector_type_uid =]'*collector_type_uid*'  
  GUID per il tipo agente di raccolta. *collector_type_uid* è di tipo **uniqueidentifier**e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
@@ -51,7 +51,7 @@ core.sp_add_collector_type [ @collector_type_uid = ] 'collector_type_uid'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del database di **mdw_admin** (con autorizzazione Execute).  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene aggiunto il tipo di agente di raccolta query T-SQL generico alla vista core.supported_collector_types. Per impostazione predefinita, il tipo agente di raccolta query T-SQL generico esiste già. Se pertanto si esegue il codice in un'installazione predefinita, viene visualizzato un messaggio che indica che il tipo di agente di raccolta esiste già.  
   
  Il codice viene eseguito correttamente se il tipo di agente di raccolta query T-SQL generico è stato rimosso utilizzando la stored procedure core.sp_remove_collector_type e quindi si desidera aggiungerlo di nuovo come tipo di agente di raccolta query registrato in grado di caricare i dati nel data warehouse di gestione.  

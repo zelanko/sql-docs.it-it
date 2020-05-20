@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_sql_text dynamic management function
 ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ff8d99bd31e2638aa63393fb5ba052f442bf75f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: de6ed0a0b8f91157b61c7d38564c8ab0941f1c6c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67936899"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830638"
 ---
 # <a name="sysdm_exec_sql_text-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ Handle di piano è un valore hash derivato dal piano compilato dell'intero batch
 ### <a name="a-conceptual-example"></a>R. Esempio concettuale
 Di seguito è riportato un esempio di base per illustrare il passaggio di un **sql_handle** direttamente o con **Cross Apply**.
   1.  Crea attività.  
-Eseguire l'istruzione T-SQL seguente in una nuova finestra di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]query in.   
+Eseguire l'istruzione T-SQL seguente in una nuova finestra di query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .   
       ```sql
       -- Identify current spid (session_id)
       SELECT @@SPID;
@@ -111,7 +111,7 @@ Eseguire l'istruzione T-SQL seguente in una nuova finestra di [!INCLUDE[ssManStu
       ```
       
     2.  Utilizzando **Cross Apply**.  
-    Il sql_handle da **sys. dm_exec_requests** verrà passato a **sys. DM_EXEC_SQL_TEXT** utilizzando **Cross Apply**. Aprire una nuova finestra query e passare lo SPID identificato nel passaggio 1. In questo esempio lo SPID è `59`.
+    Il sql_handle da **sys. dm_exec_requests** verrà passato a **sys. DM_EXEC_SQL_TEXT** utilizzando **Cross Apply**. Aprire una nuova finestra query e passare lo SPID identificato nel passaggio 1. In questo esempio lo SPID è `59` .
 
         ```sql
         SELECT t.*
@@ -121,7 +121,7 @@ Eseguire l'istruzione T-SQL seguente in una nuova finestra di [!INCLUDE[ssManStu
          ```      
  
     2.  Passaggio diretto **sql_handle** .  
-Acquisire il **sql_handle** da **sys. dm_exec_requests**. Passare quindi il **sql_handle** direttamente a **sys. dm_exec_sql_text**. Aprire una nuova finestra di query e passare lo SPID identificato nel passaggio 1 a **sys. dm_exec_requests**. In questo esempio lo SPID è `59`. Passare quindi il **sql_handle** restituito come argomento a **sys. dm_exec_sql_text**.
+Acquisire il **sql_handle** da **sys. dm_exec_requests**. Passare quindi il **sql_handle** direttamente a **sys. dm_exec_sql_text**. Aprire una nuova finestra di query e passare lo SPID identificato nel passaggio 1 a **sys. dm_exec_requests**. In questo esempio lo SPID è `59` . Passare quindi il **sql_handle** restituito come argomento a **sys. dm_exec_sql_text**.
 
         ```sql
         -- acquire sql_handle
@@ -186,5 +186,5 @@ ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;
  [sys. dm_exec_cursors &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)   
  [sys. dm_exec_xml_handles &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)   
  [sys. dm_exec_query_memory_grants &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
- [Utilizzo di Apply](../../t-sql/queries/from-transact-sql.md#using-apply)   [sys. dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
+ [Utilizzo di Apply](../../t-sql/queries/from-transact-sql.md#using-apply)   [sys. dm_exec_text_query_plan &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
 

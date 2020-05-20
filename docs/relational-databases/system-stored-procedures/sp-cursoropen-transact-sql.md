@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoropen
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f5127d041817a41dcf2d6fb4ed65070c87d05dd4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8f439fa61b8bfecfba9d03589af0d09ff737f3bc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108478"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831764"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *scrollopt*  
  Opzione di scorrimento. *scrollopt* è un parametro facoltativo che richiede uno dei valori di input **int** seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -74,7 +74,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *ccopt*  
  Opzioni del controllo della concorrenza. *ccopt* è un parametro facoltativo che richiede uno dei valori di input **int** seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (precedentemente noto come LOCKCC)|  
@@ -117,7 +117,7 @@ sp_cursoropen cursor OUTPUT, stmt
  0x0002  
  È in corso l'elaborazione di un'operazione FETCH.  
   
- Una  
+ Una   
  Questo cursore è stato deallocato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e non è disponibile.  
   
  Quando viene generato un errore, è possibile che i valori restituiti siano incoerenti. L'accuratezza non può pertanto essere garantita.  
@@ -154,7 +154,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  I contenuti consentiti del parametro *stmt* dipendono dal fatto che il valore restituito da *ccopt* ALLOW_DIRECT sia stato collegato da o al resto dei valori *ccopt* , ad esempio:  
   
--   Se ALLOW_DIRECT viene omesso, è necessario [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzare un'istruzione SELECT o Execute che chiama per un stored procedure contenente una singola istruzione SELECT. L'istruzione SELECT deve inoltre essere qualificata come cursore, ovvero non può contenere le parole chiave SELECT INTO o FOR BROWSE.  
+-   Se ALLOW_DIRECT viene omesso, è [!INCLUDE[tsql](../../includes/tsql-md.md)] necessario utilizzare un'istruzione SELECT o Execute che chiama per un stored procedure contenente una singola istruzione SELECT. L'istruzione SELECT deve inoltre essere qualificata come cursore, ovvero non può contenere le parole chiave SELECT INTO o FOR BROWSE.  
   
 -   Se viene specificato ALLOW_DIRECT, è possibile che vengano eseguite una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)], incluse quelle che, a loro volta, eseguono altre stored procedure con più istruzioni. Le istruzioni non SELECT o qualsiasi istruzione SELECT che contenga le parole chiave SELECT INTO o FOR BROWSE verranno semplicemente eseguite e non comporteranno la creazione di un cursore. Questo vale per qualsiasi istruzione SELECT inclusa in un batch di più istruzioni. Nei casi in cui un'istruzione SELECT contiene clausole che riguardano solo i cursori, tali clausole vengono ignorate. Ad esempio, quando il valore di *ccopt* è 0x2002, si tratta di una richiesta per:  
   
@@ -169,7 +169,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  AUTO_FETCH e AUTO_CLOSE possono essere collegati tramite OR a FAST_FORWARD.  
   
- Se CHECK_ACCEPTED_TYPES è ON, è necessario che sia ON almeno uno *scrollopt* degli ultimi cinque valori`,` scrollopt (KEYSET_ACCEPTABLE DYNAMIC_ACCEPTABLE, FORWARD_ONLY_ACCEPTABLE, STATIC_ACCEPTABLE o FAST_FORWARD_ACCEPTABLE).  
+ Se CHECK_ACCEPTED_TYPES è ON, è necessario che sia ON almeno uno degli ultimi cinque valori *scrollopt* (KEYSET_ACCEPTABLE `,` DYNAMIC_ACCEPTABLE, FORWARD_ONLY_ACCEPTABLE, STATIC_ACCEPTABLE o FAST_FORWARD_ACCEPTABLE).  
   
  I cursori STATIC sono sempre aperti come READ_ONLY. Ciò significa che non è possibile aggiornare la tabella sottostante tramite questo cursore.  
   
@@ -201,7 +201,7 @@ sp_cursoropen cursor OUTPUT, stmt
 ## <a name="rpc-considerations"></a>Considerazioni su RPC  
  Per richiedere che vengano restituiti metadati sull'elenco di selezione del cursore nel flusso TDS, è possibile impostare il flag di input RPC RETURN_METADATA su 0x0001.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
   
 ### <a name="bound_param-parameter"></a>Parametro bound_param  
  I parametri dopo il quinto vengono passati insieme sul piano dell'istruzione come parametri di input. Il primo parametro di questo tipo deve essere una stringa nel formato:  

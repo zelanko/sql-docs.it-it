@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sp_set_parameter
 - smart_admin.sp_set_parameter
 ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 838a8b0d998476a37b0dd4d30cab5041ad4276a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7a1a2ad1b617ba30f5c271ced52399bf176cb527
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942039"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830355"
 ---
 # <a name="managed_backupsp_set_parameter-transact-sql"></a>managed_backup. sp_set_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ EXEC managed_backup.sp_set_parameter
 ### <a name="permissions"></a>Autorizzazioni  
  Sono necessarie le autorizzazioni **Execute** per **managed_backup. sp_set_parameter** stored procedure.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Negli esempi seguenti vengono abilitati eventi estesi operativi e di debug.  
   
 ```  

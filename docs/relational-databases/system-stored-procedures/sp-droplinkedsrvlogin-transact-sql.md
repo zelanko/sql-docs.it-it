@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_droplinkedsrvlogin
 ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ff6abaef6fc19a1bc646aab7ff30e4fcf6e13380
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3040f585e10816d4f8664566be8af1523048db88
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097659"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830126"
 ---
 # <a name="sp_droplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,9 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @rmtsrvname = ] 'rmtsrvname'`Nome di un server collegato a cui viene applicato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il mapping degli account di accesso. *rmtsrvname* è di **tipo sysname**e non prevede alcun valore predefinito. *rmtsrvname* deve esistere già.  
+`[ @rmtsrvname = ] 'rmtsrvname'`Nome di un server collegato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui viene applicato il mapping degli account di accesso. *rmtsrvname* è di **tipo sysname**e non prevede alcun valore predefinito. *rmtsrvname* deve esistere già.  
   
-`[ @locallogin = ] 'locallogin'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Account di accesso nel server locale con mapping al server collegato *rmtsrvname*. *locallogin* è di **tipo sysname**e non prevede alcun valore predefinito. È necessario che esista già un mapping di *locallogin* a *rmtsrvname* . Se è NULL, il mapping predefinito creato da **sp_addlinkedserver**, che esegue il mapping di tutti gli account di accesso nel server locale agli account di accesso nel server collegato, viene eliminato.  
+`[ @locallogin = ] 'locallogin'`Account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accesso nel server locale con mapping al server collegato *rmtsrvname*. *locallogin* è di **tipo sysname**e non prevede alcun valore predefinito. È necessario che esista già un mapping di *locallogin* a *rmtsrvname* . Se è NULL, il mapping predefinito creato da **sp_addlinkedserver**, che esegue il mapping di tutti gli account di accesso nel server locale agli account di accesso nel server collegato, viene eliminato.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  

@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_procedure_stats dynamic management view
 ms.assetid: ab8ddde8-1cea-4b41-a7e4-697e6ddd785a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ff5a1f816d0ade76ed6e39db3e8cfc3048ba632
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a3620efe22d2a285aed7f78f6573bdc2280be47f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68742898"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829425"
 ---
 # <a name="sysdm_exec_procedure_stats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68742898"
   
 > [!NOTE]
 > I risultati di **sys. dm_exec_procedure_stats** possono variare a seconda dell'esecuzione, perché i dati riflettono solo le query finite e non quelli ancora in corso.
-> Per chiamare questo oggetto [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] da [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]o, usare il nome **sys. dm_pdw_nodes_exec_procedure_stats**. 
+> Per chiamare questo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oggetto da o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , usare il nome **sys. dm_pdw_nodes_exec_procedure_stats**. 
 
   
 |Nome colonna|Tipo di dati|Descrizione|  
@@ -70,11 +70,11 @@ ms.locfileid: "68742898"
 |**last_elapsed_time**|**bigint**|Tempo trascorso, in microsecondi, per l'ultima esecuzione completata del stored procedure.|  
 |**min_elapsed_time**|**bigint**|Tempo minimo trascorso, in microsecondi, per qualsiasi esecuzione completata di questo stored procedure.|  
 |**max_elapsed_time**|**bigint**|Tempo massimo trascorso, in microsecondi, per qualsiasi esecuzione completata di questo stored procedure.|  
-|**total_spills**|**bigint**|Numero totale di pagine rilasciate dall'esecuzione di questo stored procedure da quando è stato compilato.<br /><br /> **Si applica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partire da CU3|  
-|**last_spills**|**bigint**|Numero di pagine distribuite durante l'ultima esecuzione del stored procedure.<br /><br /> **Si applica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partire da CU3|  
-|**min_spills**|**bigint**|Numero minimo di pagine che questo stored procedure ha mai distribuito durante una singola esecuzione.<br /><br /> **Si applica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partire da CU3|  
-|**max_spills**|**bigint**|Il numero massimo di pagine che questo stored procedure ha mai distribuito durante una singola esecuzione.<br /><br /> **Si applica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partire da CU3|  
-|**pdw_node_id**|**int**|Identificatore del nodo su cui si trova questa distribuzione.<br /><br />**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|**total_spills**|**bigint**|Numero totale di pagine rilasciate dall'esecuzione di questo stored procedure da quando è stato compilato.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**last_spills**|**bigint**|Numero di pagine distribuite durante l'ultima esecuzione del stored procedure.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**min_spills**|**bigint**|Numero minimo di pagine che questo stored procedure ha mai distribuito durante una singola esecuzione.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**max_spills**|**bigint**|Il numero massimo di pagine che questo stored procedure ha mai distribuito durante una singola esecuzione.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**pdw_node_id**|**int**|Identificatore del nodo su cui si trova questa distribuzione.<br /><br />**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
 |**total_page_server_reads**|**bigint**|Numero totale di letture di pagine del server eseguite dalle esecuzioni di questo stored procedure da quando è stato compilato.<br /><br /> **Si applica a**: iperscalabilità del database SQL di Azure|  
 |**last_page_server_reads**|**bigint**|Numero di letture di pagine del server eseguite durante l'ultima esecuzione del stored procedure.<br /><br /> **Si applica a**: iperscalabilità del database SQL di Azure|  
 |**min_page_server_reads**|**bigint**|Numero minimo di letture di pagine del server eseguite da questo stored procedure durante una singola esecuzione.<br /><br /> **Si applica a**: iperscalabilità del database SQL di Azure|  
@@ -84,13 +84,13 @@ ms.locfileid: "68742898"
   
 ## <a name="permissions"></a>Autorizzazioni  
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]è richiesta `VIEW SERVER STATE` l'autorizzazione.   
+In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
 Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
    
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Le statistiche nella vista vengono aggiornate quando viene completata l'esecuzione della stored procedure.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituite informazioni sulle prime dieci stored procedure identificate in base al tempo medio trascorso.  
   
 ```sql  

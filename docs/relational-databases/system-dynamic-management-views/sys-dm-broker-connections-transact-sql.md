@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_broker_connections dynamic management view
 ms.assetid: d9e20433-67fe-4fcc-80e3-b94335b2daef
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2df4786147a5301e4e9167cbe121b9151e72190f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 43f5c110aaf9b492d70eb7220b6eccc249222609
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68099159"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830904"
 ---
 # <a name="sysdm_broker_connections-transact-sql"></a>sys.dm_broker_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68099159"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**connection_id**|**uniqueidentifier**|Identificatore della connessione. Ammette valori Null.|  
-|**transport_stream_id**|**uniqueidentifier**|Identificatore della connessione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SNI (Network Interface) utilizzata dalla connessione per le comunicazioni TCP/IP. Ammette valori Null.|  
+|**transport_stream_id**|**uniqueidentifier**|Identificatore della [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connessione SNI (Network Interface) utilizzata dalla connessione per le comunicazioni TCP/IP. Ammette valori Null.|  
 |**state**|**smallint**|Stato corrente della connessione. Ammette valori Null. Valori possibili:<br /><br /> 1 = NEW<br /><br /> 2 = CONNECTING<br /><br /> 3 = CONNECTED<br /><br /> 4 = LOGGED_IN<br /><br /> 5 = CHIUSO|  
 |**state_desc**|**nvarchar(60)**|Stato corrente della connessione. Ammette valori Null. Valori possibili:<br /><br /> NEW<br /><br /> CONNECTING<br /><br /> CONNECTED<br /><br /> LOGGED_IN<br /><br /> CLOSED|  
 |**connect_time**|**datetime**|Data e ora di apertura della connessione. Ammette valori Null.|  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_deletemergeconflictrow
 ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a315bc147cf86df40cf6fa216b8c45eeb1fcccca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5d778a90adf2579ca136603847762b2577a5155f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68111961"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830279"
 ---
 # <a name="sp_deletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @conflict_table = ] 'conflict_table'`Nome della tabella dei conflitti. *conflict_table* è di **%** **tipo sysname**e il valore predefinito è. Se il *conflict_table* viene specificato come null o **%**, si presuppone che si verifichi un conflitto di eliminazione e che la riga corrispondente a *rowguid* e *origin_datasource* e *source_object* venga eliminata dalla tabella [MSmerge_conflicts_info &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) .  
+`[ @conflict_table = ] 'conflict_table'`Nome della tabella dei conflitti. *conflict_table* è di **tipo sysname**e il valore predefinito è **%** . Se il *conflict_table* viene specificato come null o **%** , si presuppone che si verifichi un conflitto di eliminazione e che la riga corrispondente a *rowguid* e *origin_datasource* e *Source_object* venga eliminata dalla tabella [MSmerge_conflicts_info &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) .  
   
 `[ @source_object = ] 'source_object'`Nome della tabella di origine. *source_object* è di **tipo nvarchar (386)** e il valore predefinito è null.  
   

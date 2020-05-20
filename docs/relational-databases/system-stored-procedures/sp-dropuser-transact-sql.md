@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropuser
 ms.assetid: e28f18f9-7ecf-4568-89f4-fe5c520df386
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 42628ab49e30a4c6dada2eafb505435b8b389de6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d4f4b08f21d29fead3f2cebf477be69cfaf766ad
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124716"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831135"
 ---
 # <a name="sp_dropuser-transact-sql"></a>sp_dropuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Rimuove un utente di database dal database corrente. **sp_dropuser** garantisce la compatibilità con le versioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]precedenti di.  
+  Rimuove un utente di database dal database corrente. **sp_dropuser** garantisce la compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]In alternativa, usare [drop user](../../t-sql/statements/drop-user-transact-sql.md) .  
@@ -54,14 +54,14 @@ sp_dropuser [ @name_in_db = ] 'user'
   
  Quando si rimuove un utente di database, vengono rimossi anche tutti gli alias di tale utente. Se l'utente è proprietario di uno schema vuoto che ha lo stesso suo nome, lo schema verrà rimosso. Se l'utente è proprietario di altre entità a protezione diretta nel database, l'utente non verrà rimosso. La proprietà degli oggetti deve prima essere trasferita ad un'altra entità. Per altre informazioni, vedere [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md). Se si rimuove un utente di database, vengono rimosse automaticamente anche le autorizzazioni corrispondenti e l'utente viene rimosso dai ruoli di database di cui è membro.  
   
- non è possibile utilizzare **sp_dropuser** per rimuovere il proprietario del database (**dbo**) **INFORMATION_SCHEMA** utenti o l'utente **Guest** dai database **Master** o **tempdb** . Nei database non di sistema `EXEC sp_dropuser 'guest'` , l'autorizzazione Connect viene revocata dall'utente **Guest**. ma l'utente stesso non verrà rimosso.  
+ non è possibile utilizzare **sp_dropuser** per rimuovere il proprietario del database (**dbo**) **INFORMATION_SCHEMA** utenti o l'utente **Guest** dai database **Master** o **tempdb** . Nei database non di sistema, l' `EXEC sp_dropuser 'guest'` autorizzazione Connect viene revocata dall'utente **Guest**. ma l'utente stesso non verrà rimosso.  
   
  Impossibile eseguire **sp_dropuser** in una transazione definita dall'utente.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER ANY USER per il database.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente l'utente `Albert` viene rimosso dal database corrente.  
   
 ```  
