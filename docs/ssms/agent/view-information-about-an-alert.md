@@ -53,7 +53,7 @@ Per impostazione predefinita, i membri del ruolo predefinito del server **sysadm
   
 4.  Fare clic con il pulsante destro del mouse sull'avviso con le informazioni da visualizzare e selezionare **Proprietà**.  
   
-    Per altre informazioni sulle opzioni disponibili contenute nella finestra di dialogo dell'interfaccia utente nella finestra di dialogo _Proprietà dell'avviso\__ nome**avviso**:  
+    Per altre informazioni sulle opzioni disponibili contenute nella finestra di dialogo dell'interfaccia utente nella finestra di dialogo **Proprietà dell'avviso**_nome\_avviso_:  
   
     -   [Proprietà avviso - nuovo avviso &#40; pagina generale&#41;](../../ssms/agent/alert-properties-new-alert-general-page.md)  
   

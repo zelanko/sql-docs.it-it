@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sys.sp_cdc_help_change_data_capture
 - sp_cdc_help_change_data_capture
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: fdf0086fe3a87823a419f3535888ea3211ee9ef1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b5ceaaa02d07e34e1e93789d2c72f80a3459a472
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905169"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808022"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,14 @@ sys.sp_cdc_help_change_data_capture
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @source_schema = ] '*source_schema*'  
+ [ @source_schema =]'*source_schema*'  
  Nome dello schema a cui appartiene la tabella di origine. *source_schema* è di **tipo sysname**e il valore predefinito è null. Quando si specifica *source_schema* , è necessario specificare anche *source_name* .  
   
  Se è diverso da NULL, *source_schema* deve esistere nel database corrente.  
   
  Se *source_schema* è diverso da null, anche *source_name* deve essere non null.  
   
- [ @source_name = ] '*source_name*'  
+ [ @source_name =]'*source_name*'  
  Nome della tabella di origine. *source_name* è di **tipo sysname**e il valore predefinito è null. Quando si specifica *source_name* , è necessario specificare anche *source_schema* .  
   
  Se è diverso da NULL, *source_name* deve esistere nel database corrente.  
@@ -82,7 +82,7 @@ sys.sp_cdc_help_change_data_capture
 |index_column_list|**nvarchar(max)**|Elenco delle colonne dell'indice utilizzato per identificare in modo univoco le righe nella tabella di origine.|  
 |captured_column_list|**nvarchar(max)**|Elenco delle colonne di origine acquisite.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Quando sia *source_schema* che *source_name* il valore predefinito è null o viene impostato in modo esplicito su null, questo stored procedure restituisce informazioni per tutte le istanze di acquisizione del database a cui il chiamante ha accesso SELECT. Quando *source_schema* e *SOURCE_NAME* sono non null, vengono restituite solo le informazioni sulla tabella abilitata specificata specifica.  
   
 ## <a name="permissions"></a>Autorizzazioni  

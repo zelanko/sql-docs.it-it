@@ -60,7 +60,7 @@ Gli account proxy possono essere creati, modificati o eliminati unicamente dai m
   
 5.  Fare clic con il pulsante destro del mouse sull'account proxy da modificare e scegliere **Proprietà**.  
   
-6.  Nella finestra di dialogo _Proprietà account proxy\__ nome**proxy** apportare le modifiche necessarie all'account proxy. Per altre informazioni sulle opzioni della finestra di dialogo, vedere [Creazione di un proxy di SQL Server Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
+6.  Nella finestra di dialogo **Proprietà account proxy**_nome\_proxy_ apportare le modifiche necessarie all'account proxy. Per altre informazioni sulle opzioni della finestra di dialogo, vedere [Creazione di un proxy di SQL Server Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
 7.  Al termine, fare clic su **OK**.  
   

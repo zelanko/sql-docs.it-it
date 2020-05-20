@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.sp_cdc_generate_wrapper_function
 - sp_cdc_generate_wrapper_function
 ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 074e114f81db6615a04240f10447a3f711a51cf7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d1f29541162381923faa6baa4ca6ce8d362a0f27
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083747"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808194"
 ---
 # <a name="syssp_cdc_generate_wrapper_function-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +50,16 @@ sys.sp_cdc_generate_wrapper_function
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @capture_instance= ] '*capture_instance*'  
+ [ @capture_instance =]'*capture_instance*'  
  Istanza di acquisizione per la quale gli script devono essere generati. *capture_instance* è di **tipo sysname** e il valore predefinito è null. Se il valore viene omesso oppure viene impostato in modo esplicito su NULL, gli script del wrapper vengono generati per tutte le istanze di acquisizione  
   
- [ @closed_high_end_point= ] *high_end_pt_flag*  
+ [ @closed_high_end_point =] *high_end_pt_flag*  
  Flag che indica se modifiche per cui l'ora di commit è uguale all'endpoint superiore devono essere incluse nell'intervallo di estrazione dalla routine generata. *high_end_pt_flag* è di **bit** e il valore predefinito è 1, che indica che l'endpoint deve essere incluso. Il valore 0 indica che tutte le ore di commit saranno minori dell'endpoint superiore.  
   
- [ @column_list= ] '*column_list*'  
+ [ @column_list =]'*column_list*'  
  Elenco di colonne acquisite da includere nel set di risultati restituito dalla funzione wrapper. *column_list* è di **tipo nvarchar (max)** e il valore predefinito è null. Si si specifica NULL, vengono incluse tutte le colonne acquisite.  
   
- [ @update_flag_list= ] '*update_flag_list*'  
+ [ @update_flag_list =]'*update_flag_list*'  
  Elenco di colonne incluse per cui viene inserito un flag nel set di risultati restituiti dalla funzione wrapper. *update_flag_list* è di **tipo nvarchar (max)** e il valore predefinito è null. Se si specifica NULL, non viene incluso alcun flag.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
@@ -72,10 +72,10 @@ sys.sp_cdc_generate_wrapper_function
 |**function_name**|**nvarchar (145)**|Nome della funzione generata.|  
 |**create_script**|**nvarchar(max)**|Script che crea la funzione wrapper relativa all'istanza di acquisizione.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Lo script che crea la funzione per eseguire il wrapping delle query relative a tutte le modifiche per un'istanza di acquisizione viene sempre generato. Se l'istanza di acquisizione supporta query relative alle modifiche totali, lo script per generare un wrapper per tale tipo di query viene comunque creato.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene illustrato come utilizzare `sys.sp_cdc_generate_wrapper_function` per creare wrapper per tutte le funzioni di Change Data Capture.  
   
 ```  

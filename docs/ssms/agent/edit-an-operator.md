@@ -59,7 +59,7 @@ Solo i membri del ruolo predefinito del server **sysadmin** possono modificare g
   
 4.  Fare clic con il pulsante destro del mouse sull'operatore da modificare e selezionare **Proprietà**.  
   
-    Per altre informazioni sulle opzioni disponibili nella finestra di dialogo _Proprietà\__ nome**operatore**, vedere:  
+    Per altre informazioni sulle opzioni disponibili nella finestra di dialogo **Proprietà**_nome\_operatore_, vedere:  
   
     -   [Proprietà operatore - nuovo operatore &#40;pagina generale&#41;](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   

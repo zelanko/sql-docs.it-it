@@ -59,7 +59,7 @@ Solo i membri del ruolo predefinito del server **sysadmin** possono definire la 
   
 4.  Fare clic con il pulsante destro del mouse sull'avviso per cui si desidera definire una risposta e selezionare **Proprietà**.  
   
-5.  Nella finestra di dialogo _Proprietà dell'avviso\__ nome**avviso** in **Selezione pagina** selezionare **Risposta**.  
+5.  Nella finestra di dialogo **Proprietà dell'avviso**_nome\_avviso_ in **Selezione pagina** selezionare **Risposta**.  
   
 6.  Selezionare la casella di controllo **Esegui processo** e, dall'elenco sottostante la casella di controllo **Esegui processo**, selezionare il processo da eseguire quando viene generato l'avviso. È possibile creare un nuovo processo facendo clic su **Nuovo processo**. Per visualizzare ulteriori informazioni sul processo, fare clic su **Visualizza processo**. Per altre informazioni sulle opzioni disponibili nelle finestre di dialogo **Nuovo processo** e **Proprietà processo**_nome\_processo_ vedere [Creare un processo](../../ssms/agent/create-a-job.md) e [Visualizzare un processo](../../ssms/agent/view-a-job.md).  
   

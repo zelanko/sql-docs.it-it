@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sp_cdc_get_ddl_history
 - sys.sp_cdc_get_ddl_history
 ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: bb4622b36901afc7ff04eacbfe840a9adda5b214
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7e7b22c489c7237bd9793aa590e92c1145f071b1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083731"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808083"
 ---
 # <a name="syssp_cdc_get_ddl_history-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @capture_instance = ] '*capture_instance*'  
+ [ @capture_instance =]'*capture_instance*'  
  Nome dell'istanza di acquisizione associata a una tabella di origine. *capture_instance* è di **tipo sysname** e non può essere null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
@@ -61,13 +61,13 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 |ddl_lsn|**binary(10)**|Numero di sequenza del file di log (LSN) associato alla modifica DDL.|  
 |ddl_time|**datetime**|Ora associata alla modifica DDL.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Le modifiche DDL apportate alla tabella di origine che modificano la struttura della colonna della tabella di origine, ad esempio l'aggiunta o l'eliminazione di una colonna o la modifica del tipo di dati di una colonna esistente, vengono mantenute nella tabella [CDC. ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) . È possibile creare un report su queste modifiche utilizzando questa stored procedure. Le voci di cdc.ddl_history vengono create quando il processo di acquisizione legge la transazione DDL nel log.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede l'appartenenza al ruolo predefinito del database db_owner per la restituzione delle righe relative a tutte le istanze di acquisizione del database. Per tutti gli altri utenti, è richiesta l'autorizzazione SELECT su tutte le colonne acquisite nella tabella di origine e, se è stato definito un ruolo di controllo per l'istanza di acquisizione, l'appartenenza a tale ruolo del database.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene aggiunta una colonna alla tabella di origine `HumanResources.Employee` e viene eseguita la stored procedure `sys.sp_cdc_get_ddl_history` per creare un report sulle modifiche DDL che si applicano alla tabella di origine associata all'istanza di acquisizione `HumanResources_Employee`.  
   
 ```  

@@ -58,7 +58,7 @@ Solo i membri del ruolo predefinito del server **sysadmin** possono modificare g
   
 4.  Fare clic con il pulsante destro del mouse sull'operatore che si vuole abilitare o disabilitare, selezionare **Proprietà**e fare clic sulla scheda **Generale** .  
   
-5.  Nella finestra di dialogo _Proprietà\__ nome**operatore** selezionare o deselezionare la casella di controllo **Abilitato**.  
+5.  Nella finestra di dialogo **Proprietà**_nome\_operatore_ selezionare o deselezionare la casella di controllo **Abilitato**.  
   
 6.  Fare clic su **OK**.  
   

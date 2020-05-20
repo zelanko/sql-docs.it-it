@@ -57,7 +57,7 @@ Il [pool di buffer ibrido](../database-engine/configure-windows/hybrid-buffer-po
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] descrive come configurare la memoria persistente (PMEM) usando la `ndctl`memoria persistente[ dell'utilità ](../linux/sql-server-linux-configure-pmem.md).
+[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] descrive come configurare la memoria persistente (PMEM) usando la [memoria persistente](../linux/sql-server-linux-configure-pmem.md) dell'utilità `ndctl`.
 
 ## <a name="persisted-log-buffer"></a>Buffer di log persistente
 

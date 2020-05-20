@@ -167,7 +167,7 @@ Per impostazione predefinita, in Team Foundation Build viene creato un file di c
   
 9. In Esplora soluzioni fare doppio clic sul file app.config.  
   
-10. Nell'editor aggiungere \< per ogni nodo *SqlUnitTesting_* VSVersion`AllowConfigurationOverride="true"`>. Ad esempio:  
+10. Nell'editor aggiungere `AllowConfigurationOverride="true"` per ogni nodo \<SqlUnitTesting_*VSVersion*>. Ad esempio:  
   
     ```  
     -- Update SqlUnitTesting_VS2010 node to:  

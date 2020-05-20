@@ -55,7 +55,7 @@ ms.locfileid: "65581737"
   
 #### <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a>Per modificare la posizione di una legenda rispetto al viewport  
   
-1.  In visualizzazione Struttura fare clic con il pulsante destro del mouse sulla legenda e aprire la pagina _Proprietà\<_ **elemento report>** .  
+1.  In visualizzazione Struttura fare clic con il pulsante destro del mouse sulla legenda e aprire la pagina **Proprietà**_\<elemento report>_.  
   
 2.  In **Posizione**fare clic sulla posizione che specifica il punto in cui visualizzare la legenda rispetto al viewport.  
   
@@ -219,7 +219,7 @@ ms.locfileid: "65581737"
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare clic con il pulsante destro del mouse sul livello che contiene i dati desiderati e quindi scegliere _Regola\<_ **tipo di elemento mappa>** .  
+2.  Fare clic con il pulsante destro del mouse sul livello che contiene i dati desiderati e quindi scegliere **Regola**_\<tipo di elemento mappa>_.  
   
 3.  Verificare che l'opzione **Visualizza dati tramite** \<*tipo di regola*> sia selezionata.  
   
@@ -261,7 +261,7 @@ ms.locfileid: "65581737"
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare clic con il pulsante destro del mouse sul livello che contiene i dati desiderati e quindi scegliere _Regola\<_ **tipo di elemento mappa>** .  
+2.  Fare clic con il pulsante destro del mouse sul livello che contiene i dati desiderati e quindi scegliere **Regola**_\<tipo di elemento mappa>_.  
   
 3.  Fare clic su **Legenda**.  
   
@@ -274,7 +274,7 @@ ms.locfileid: "65581737"
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare clic con il pulsante destro del mouse sul livello che contiene i dati desiderati e quindi scegliere _Regola\<_ **tipo di elemento mappa>** .  
+2.  Fare clic con il pulsante destro del mouse sul livello che contiene i dati desiderati e quindi scegliere **Regola**_\<tipo di elemento mappa>_.  
   
 3.  Fare clic su **Legenda**.  
   

@@ -50,7 +50,7 @@ Per prima cosa, installare l'estensione per la distribuzione di app in Visual St
 
 1. Avviare Visual Studio Code e passare alla barra laterale Estensioni.
 
-1. Fare clic sul menu di scelta rapida `…` nella parte superiore della barra laterale e selezionare `Install from vsix`.
+1. Fare clic sul menu di scelta rapida `Install from vsix` nella parte superiore della barra laterale e selezionare `…`.
 
    ![Installare VSIX](media/vs-extension/install_vsix.png)
 

@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_set_rpo_duration stored procedure
 ms.assetid: 95c80c5b-9252-4612-9ea7-544c48834fd2
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 12d703b03483e1ea4641a822291106de3598f05e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3588f12006de3f7a9e79f6743ae8dffbe01f42c2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905016"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807852"
 ---
 # <a name="syssp_rda_set_rpo_duration-transact-sql"></a>sys. sp_rda_set_rpo_duration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_rda_set_rpo_duration [ @duration_hrs = ] duration_hrs
 ```    
     
 ## <a name="arguments"></a>Argomenti    
- [ @duration_hrs = ] *duration_hrs*    
+ [ @duration_hrs =] *duration_hrs*    
  Numero di ore (valore intero non null) dei dati migrati che si desidera mantenere SQL Server per il database abilitato per l'estensione corrente. Il valore predefinito e il valore minimo è 8 ore.    
  
  > [!NOTE]
@@ -50,10 +50,10 @@ sp_rda_set_rpo_duration [ @duration_hrs = ] duration_hrs
 ## <a name="permissions"></a>Autorizzazioni    
  Richiede autorizzazioni db_owner.    
     
-## <a name="remarks"></a>Osservazioni    
+## <a name="remarks"></a>Commenti    
  Ottenere il valore corrente eseguendo [sys. sp_rda_get_rpo_duration &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md).    
     
-## <a name="see-also"></a>Vedi anche    
+## <a name="see-also"></a>Vedere anche    
  [sys. sp_rda_get_rpo_duration &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md)     
  [Ripristinare i database abilitati per Stretch (Stretch Database)](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)     
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)    

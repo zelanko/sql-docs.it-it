@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.sp_cdc_cleanup_change_tables
 - sp_cdc_cleanup_change_tables
 ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 51c0af34fb3158cc5032ee9ef53abce22d8ecc3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ae48ceffec12ce840ab436cc80a46c036da329b6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72909323"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808293"
 ---
 # <a name="syssp_cdc_cleanup_change_table-transact-sql"></a>sys.sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,19 +45,19 @@ sys.sp_cdc_cleanup_change_table
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @capture_instance = ] '*capture_instance*'  
+ [ @capture_instance =]'*capture_instance*'  
  Nome dell'istanza di acquisizione associata alla tabella delle modifiche. *capture_instance* è di **tipo sysname**e non prevede alcun valore predefinito e non può essere null.  
   
  *capture_instance* necessario assegnare un nome a un'istanza di acquisizione esistente nel database corrente.  
   
- [ @low_water_mark = ] *low_water_mark*  
+ [ @low_water_mark =] *low_water_mark*  
  Numero di sequenza del file di log (LSN) che deve essere utilizzato come nuovo limite minimo per l' *istanza di acquisizione*. *low_water_mark* è **binario (10)** e non prevede alcun valore predefinito.  
   
  Se il valore è diverso da null, deve apparire come valore start_lsn di una voce corrente nella tabella [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) . Se altre voci in cdc.lsn_time_mapping condividono la stessa ora di commit della voce identificata dal nuovo limite minimo, il valore LSN minore associato a tale gruppo di voci viene scelto come limite minimo.  
   
  Se il valore viene impostato in modo esplicito su NULL, il limite *minimo* corrente per l' *istanza di acquisizione* viene utilizzato per definire il limite superiore per l'operazione di pulizia.  
   
- [ @threshold= ] '*Elimina soglia*'  
+ [ @threshold =]'*Elimina soglia*'  
  Numero massimo di voci che possono essere eliminate utilizzando un'unica istruzione nel processo di pulizia. *delete_threshold* è di tipo **bigint**e il valore predefinito è 5000.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
@@ -80,7 +80,7 @@ sys.sp_cdc_cleanup_change_table
   
 -   I report del processo Cleanup Agent eliminano gli errori.  
   
-     Un amministratore può eseguire questa stored procedure in modo esplicito per riprovare un'operazione non riuscita. Per ripetere la pulizia per una determinata istanza di acquisizione, eseguire sys. sp_cdc_cleanup_change_table e specificare NULL per @low_water_mark il parametro.  
+     Un amministratore può eseguire questa stored procedure in modo esplicito per riprovare un'operazione non riuscita. Per ripetere la pulizia per una determinata istanza di acquisizione, eseguire sys. sp_cdc_cleanup_change_table e specificare NULL per il @low_water_mark parametro.  
   
 -   I criteri basati sulla memorizzazione utilizzati dal processo di Cleanup Agent non sono adeguati.  
   

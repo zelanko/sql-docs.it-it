@@ -55,7 +55,7 @@ Solo i membri del ruolo predefinito del server **sysadmin** possono definire ope
   
 2.  Fare clic con il pulsante destro del mouse su **SQL Server Agent** e scegliere **Proprietà**.  
   
-3.  Nella finestra di dialogo **Proprietà SQL Server Agent -** _nome\_server_ selezionare **Sistema avvisi** in **Selezione pagina**.  
+3.  Nella finestra di dialogo **Proprietà SQL Server Agent -**_nome\_server_ selezionare **Sistema avvisi** in **Selezione pagina**.  
   
 4.  In **Operatore alternativo**selezionare **Abilita operatore alternativo**.  
   

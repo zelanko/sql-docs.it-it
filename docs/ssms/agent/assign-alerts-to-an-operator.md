@@ -62,7 +62,7 @@ Solo i membri del ruolo predefinito del server **sysadmin** possono assegnare av
   
 4.  Fare clic con il pulsante destro del mouse sull'operatore a cui assegnare un avviso, scegliere **Proprietà**e selezionare la pagina **Notifiche** .  
   
-5.  Nella finestra di dialogo _Proprietà\__ nome**operatore** in **Seleziona una pagina** selezionare **Notifiche**.  
+5.  Nella finestra di dialogo **Proprietà**_nome\_operatore_ in **Seleziona una pagina** selezionare **Notifiche**.  
   
 6.  Nell'area **Visualizza le notifiche inviate all'utente per**selezionare **Avvisi** per visualizzare un elenco di avvisi inviati all'operatore oppure selezionare **Processi** per visualizzare un elenco dei processi che inviano notifiche all'operatore. Selezionare una o più tra le caselle di controllo seguenti per definire il metodo di notifica secondo le necessità: **Posta elettronica**, **CERCAPERSONE**oppure **Net Send**.  
   

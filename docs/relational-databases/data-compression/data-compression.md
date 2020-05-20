@@ -33,7 +33,7 @@ ms.locfileid: "77705876"
 # <a name="data-compression"></a>Compressione dei dati
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] supportano la compressione delle righe e delle pagine per gli indici e le tabelle rowstore e la compressione dell'archivio columnstore e columnstore per le tabelle e gli indici columnstore.  
+  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supportano la compressione delle righe e delle pagine per gli indici e le tabelle rowstore e la compressione dell'archivio columnstore e columnstore per le tabelle e gli indici columnstore.  
   
  Per le tabelle e gli indici rowstore, utilizzare la funzionalità di compressione dei dati per ridurre le dimensioni del database. Oltre a risparmiare spazio, la compressione dei dati migliora le prestazioni dei carichi di lavoro di I/O a utilizzo elevato di memoria perché i dati vengono archiviati in un numero inferiore di pagine e le query devono leggere un numero inferiore di pagine dal disco. Sono tuttavia necessarie risorse della CPU aggiuntive nel server di database per comprimere e decomprimere i dati, mentre i dati vengono scambiati con l'applicazione. È possibile configurare la compressione di righe e pagine sugli oggetti di database seguenti:   
 -   Un'intera tabella archiviata come heap.  
