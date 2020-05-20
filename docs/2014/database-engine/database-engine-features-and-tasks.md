@@ -10,18 +10,18 @@ helpviewer_keywords:
 - Database Engine [SQL Server], development
 - development [SQL Server Database Engine]
 ms.assetid: d9efe145-3306-4d61-bd77-e2af43e19c34
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 43aa8a23a7d9322e6865b83e3aee4d77fa40e49e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b181efac9660dda7b1ddd0e313f6562e1ea3ba0
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064983"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000991"
 ---
 # <a name="database-engine-features-and-tasks"></a>Caratteristiche e attività del motore di database
-  Trovare le informazioni necessarie a chiunque-designer, sviluppatore, analista o amministratore per compilare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] i database.  
+  Trovare le informazioni necessarie a chiunque-designer, sviluppatore, analista o amministratore per compilare i [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Istanze del motore di database &#40;SQL Server&#41;](configure-windows/database-engine-instances-sql-server.md)  

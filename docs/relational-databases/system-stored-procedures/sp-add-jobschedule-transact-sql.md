@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_jobschedule
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 06dbee74cfb3e2d5e697ea9594d46c98557de8ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 11aa73828caba66637d5d5b87a478dca851bdaf9
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70810501"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151958"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "70810501"
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > In [istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la maggior parte delle funzionalità di SQL Server Agent sono attualmente supportate. Per informazioni dettagliate, vedere [istanza gestita di database SQL di Azure differenze di T-SQL da SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) .
+  > In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,7 +50,8 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
      [ , [ @active_end_date = ] active_end_date ]  
      [ , [ @active_start_time = ] active_start_time ]  
      [ , [ @active_end_time = ] active_end_time ]  
-     [ , [ @schedule_id = ] schedule_id OUTPUT ]  
+     [ , [ @schedule_id = ] schedule_id OUTPUT ]
+     [ , [ @schedule_uid = ] _schedule_uid OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -67,10 +68,10 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_type = ] frequency_type`Valore che indica quando deve essere eseguito il processo. *frequency_type* è di **tipo int**e il valore predefinito è **0**. i possibili valori sono i seguenti:  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una sola volta|  
-|**4**|Giornaliera|  
+|**4**|Ogni giorno|  
 |**8**|Settimanale|  
 |**16**|Ogni mese|  
 |**32**|Mensile rispetto a *frequency_interval.*|  
@@ -79,19 +80,19 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_interval = ] frequency_interval`Giorno in cui viene eseguito il processo. *frequency_interval* è di **tipo int**e il valore predefinito è 0 e dipende dal valore di *frequency_type* , come indicato nella tabella seguente:  
   
-|valore|Effetto|  
+|Valore|Effetto|  
 |-----------|------------|  
 |**1** (una volta)|*frequency_interval* non è utilizzato.|  
 |**4** (giornaliera)|Ogni *frequency_interval* giorni.|  
 |**8** (settimanale)|*frequency_interval* è uno o più degli elementi seguenti (combinati con un operatore logico OR):<br /><br /> 1 = domenica<br /><br /> 2 = lunedì<br /><br /> 4 = martedì<br /><br /> 8 = mercoledì<br /><br /> 16 = giovedì<br /><br /> 32 = venerdì<br /><br /> 64 = sabato|  
 |**16** (ogni mese)|Il *frequency_interval* giorno del mese.|  
 |**32** (mensile relativo)|*frequency_interval* è uno dei seguenti:<br /><br /> 1 = domenica<br /><br /> 2 = lunedì<br /><br /> 3 = martedì<br /><br /> 4 = mercoledì<br /><br /> 5 = giovedì<br /><br /> 6 = venerdì<br /><br /> 7 = sabato<br /><br /> 8 = giorno<br /><br /> 9 = giorno feriale<br /><br /> 10 = giorno festivo|  
-|**64** (all'avvio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del servizio Agent)|*frequency_interval* non è utilizzato.|  
+|**64** (all' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avvio del servizio Agent)|*frequency_interval* non è utilizzato.|  
 |**128**|*frequency_interval* non è utilizzato.|  
   
 `[ @freq_subday_type = ] frequency_subday_type`Specifica le unità per *frequency_subday_interval*. *frequency_subday_type* è di **tipo int**e non prevede alcun valore predefinito. i possibili valori sono i seguenti:  
   
-|valore|Descrizione (unità)|  
+|Valore|Descrizione (unità)|  
 |-----------|--------------------------|  
 |**0x1**|All'ora specificata|  
 |**0x4**|Minuti|  
@@ -103,7 +104,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
  *frequency_relative_interval* è di **tipo int**e non prevede alcun valore predefinito. i possibili valori sono i seguenti:  
   
-|valore|Descrizione (unità)|  
+|Valore|Descrizione (unità)|  
 |-----------|--------------------------|  
 |**1**|First (Primo)|  
 |**2**|Second|  
@@ -150,7 +151,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
  
  ## <a name="example"></a>Esempio
- Nell'esempio seguente viene assegnata una pianificazione del `SaturdayReports` processo a che verrà eseguita ogni sabato alle 2:00 AM.
+ Nell'esempio seguente viene assegnata una pianificazione del processo a `SaturdayReports` che verrà eseguita ogni sabato alle 2:00 AM.
 ```sql  
 EXEC msdb.dbo.sp_add_jobschedule 
         @job_name = N'SaturdayReports', -- Job name

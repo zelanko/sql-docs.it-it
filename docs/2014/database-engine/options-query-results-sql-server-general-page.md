@@ -13,15 +13,15 @@ f1_keywords:
 - MISCELLANEOUSFILESPROJECT
 - DevLang-TSQL
 ms.assetid: d3b31e81-c0b6-4615-8fb3-997edb2acb7a
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 48261d5ff0290dd5042b6604d9e492871bf6da38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4eb7ac1830554180b1de1ee67b6bc6f11fd2463f
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089332"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000796"
 ---
 # <a name="options-query-results-sql-server-general-page"></a>Opzioni (risultati query-SQL Server-pagina generale)
   Utilizzare questa pagina per specificare le impostazioni predefinite del riquadro Risultati query. Per visualizzare le impostazioni, scegliere **Opzioni** dal menu **Strumenti**, espandere la cartella **Risultati query**, selezionare **SQL Server** e quindi fare clic su **Generale**. Le modifiche apportate a queste opzioni vengono applicate solo alle nuove query di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per modificare le opzioni per le query correnti, scegliere **Opzioni query** dal menu **Query** oppure fare clic con il pulsante destro del mouse nella finestra Query di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e quindi scegliere **Opzioni query**.  

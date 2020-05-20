@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 7f041821-6a12-4ab5-bb3a-a8345a9bc00b
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 447b91ee1aa99642647dd1377976feef026b9a08
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe3384fe5e5dde96082b0e21805a0e8b915ccb6a
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62778952"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000911"
 ---
 # <a name="full-text-search-f1-help"></a>Guida sensibile al contesto di Ricerca full-text
   In questa sezione sono disponibili argomenti sulle finestre di dialogo relative alla ricerca full-text di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] presenti in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Per accedere a un argomento relativo all'interfaccia utente, premere F1 oppure fare clic su **?** mentre la finestra di dialogo è aperta.  
@@ -29,7 +29,7 @@ ms.locfileid: "62778952"
 |[Proprietà indice full-text &#40;pagina generale&#41;](../../2014/database-engine/full-text-index-properties-general-page.md)|[Editor dell'elenco delle proprietà di ricerca](../../2014/database-engine/search-property-list-editor.md)|  
 |[Proprietà indice full-text &#40;pagina colonne&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md)||  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Ricerca full-text](../relational-databases/search/full-text-search.md)   
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)   

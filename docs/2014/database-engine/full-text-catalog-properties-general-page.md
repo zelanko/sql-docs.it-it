@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.general.f1
 ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60a56b6d64957198292146d392ea22a572fb8a4e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779664"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000961"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Proprietà catalogo full-text (pagina Generale)
   In questa sezione vengono illustrate le opzioni e le funzioni disponibili nella pagina **generale** della finestra di dialogo **Proprietà catalogo full-text** .  
@@ -34,7 +34,7 @@ ms.locfileid: "62779664"
  **Stato popolamento**  
  Indica lo stato del catalogo. I valori possibili sono:  
   
--   **Idle**  
+-   **Inattivo**  
   
 -   **Ricerca per indicizzazione in corso**  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62779664"
  Nome del catalogo full-text.  
   
  **Distinzione tra caratteri accentati**  
- Consente di visualizzare o modificare se il catalogo è sensibile ai segni diacritici, ad esempio una**~** tilde (), un contrassegno acuto acuto (**́**) o una diereszione (**̈**). I valori validi sono:  
+ Consente di visualizzare o modificare se il catalogo è sensibile ai segni diacritici, ad esempio una tilde ( **~** ), un contrassegno acuto acuto (**́**) o una diereszione (**̈**). I valori validi sono:  
   
 -   **No**  
   
@@ -90,7 +90,7 @@ ms.locfileid: "62779664"
 |**Ricompila catalogo**|Consente di eliminare e ricompilare il catalogo full-text. È necessario eseguire questa operazione quando viene modificata una proprietà fondamentale del catalogo, ad esempio l'impostazione relativa alla distinzione dei caratteri accentati e non accentati.<br /><br /> Affinché l'operazione di ricompilazione abbia esito positivo, il filegroup in cui risiede il catalogo full-text deve essere online oppure di lettura e scrittura. Al termine della ricompilazione, l'indice full-text verrà ripopolato.<br /><br /> Questa azione esegue ALTER FULLTEXT CATALOG *catalog_name* Rebuild.|  
 |**Ripopola catalogo**|Consente di aggiornare il catalogo con le modifiche più recenti apportate ai dati. Questa opzione implica tempi di inattività del catalogo.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Popolamento degli indici full-text](../relational-databases/indexes/indexes.md)  
   
   

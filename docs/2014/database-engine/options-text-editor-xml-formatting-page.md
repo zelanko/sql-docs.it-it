@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 97373178-d288-4127-af37-d9f5fe1b8607
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f96625c9658c3bd9864f0928e738357b6e14311e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0d36c5a92dba9f3f92943b65107e7eedb178554
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089850"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000633"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>Opzioni (Editor di testo - XML - pagina Formattazione)
 
@@ -24,9 +24,9 @@ Questa finestra di dialogo consente di specificare le impostazioni di formattazi
 > [!NOTE]  
 > Queste impostazioni sono disponibili quando si selezionano la cartella **Editor di testo**, la cartella **XML** e quindi l'opzione **Formattazione** nella finestra di dialogo **Opzioni**.  
   
-## <a name="attributes"></a>Attributes  
+## <a name="attributes"></a>Attributi  
  **Mantieni la formattazione manuale degli attributi**  
- Consente di non riformattare gli attributi. Questa è la modalità predefinita.  
+ Consente di non riformattare gli attributi. Questo è il valore predefinito.  
   
 > [!NOTE]  
 >  Se gli attributi sono disposti su più righe, a ogni riga di attributi verrà applicato un rientro corrispondente al rientro dell'elemento padre.  
@@ -50,7 +50,7 @@ Questa finestra di dialogo consente di specificare le impostazioni di formattazi
   
 ## <a name="mixed-content"></a>Contenuto misto  
  **Formatta contenuto misto per impostazione predefinita**  
- Viene riformattato il contenuto misto, tranne quando il contenuto si trova in un ambito `xml:space="preserve"`. Questa è la modalità predefinita.  
+ Viene riformattato il contenuto misto, tranne quando il contenuto si trova in un ambito `xml:space="preserve"`. Questo è il valore predefinito.  
   
  Se un elemento contiene testo e markup, il contenuto viene considerato misto. Di seguito viene riportato un esempio di elemento con contenuto misto.  
   
@@ -62,5 +62,5 @@ Questa finestra di dialogo consente di specificare le impostazioni di formattazi
   
  \<>/dir  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Editor XML &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)  

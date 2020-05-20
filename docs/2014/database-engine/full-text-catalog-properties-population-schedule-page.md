@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.schedule.f1
 ms.assetid: 8681506b-5dc6-4165-beb6-1e76ca470425
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8094d481af3fef9db8bb7ef9ab45fc5c66ff7e11
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1e8ac94f235e08f2217edb9504722ebac998cb28
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62778823"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000933"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>Proprietà catalogo full-text (pagina Pianificazione popolamento)
   Utilizzare questa finestra di dialogo per aggiungere o modificare pianificazioni che determinano il momento in cui il catalogo full-text verrà popolato o ripopolato.  
@@ -37,16 +37,16 @@ ms.locfileid: "62778823"
  **Descrizione**  
  Descrizione dell'operazione pianificata.  
   
- **Nuova**  
+ **Nuovo**  
  Fare clic su questo pulsante per creare una nuova pianificazione di indicizzazione. Questo pulsante Visualizza la finestra di dialogo **nuova pianificazione Catalogo indicizzazione full-text** .  
   
  **Modifica**  
  Fare clic su questo pulsante per modificare la pianificazione di popolamento selezionata.  
   
- **Elimina**  
+ **Eliminazione**  
  Fare clic su questo pulsante per rimuovere la pianificazione di popolamento selezionata.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
   
   

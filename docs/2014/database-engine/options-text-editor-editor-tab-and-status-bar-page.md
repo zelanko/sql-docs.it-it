@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.swb.sqleditors.editorcontextsettings
 - VS.ToolsOptionsPages.Text_Editor.EditorTabAndStatusBar
 ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 01098f2181085f17788429608afb7bdda15fb504
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7a64d8fe198b5660715488b6e1b15d5e4831a99
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089235"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000721"
 ---
 # <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Opzioni (pagina Editor di testo: Scheda editor e barra di stato)
   Nella **pagina Scheda editor e barra di stato** è possibile personalizzare le informazioni visualizzate dagli editor di query di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . È possibile specificare il livello di informazioni da visualizzare nella scheda e sulla barra di stato della finestra dell'editor di query, nonché specificare se la barra di stato viene visualizzata nella parte superiore o inferiore della finestra dell'editor.  
@@ -70,7 +70,7 @@ ms.locfileid: "66089235"
  **In alto**  
  La barra di stato viene visualizzata nella parte superiore della finestra dell'editor di query.  
   
- **Parte inferiore**  
+ **Ultimo**  
  La barra di stato viene visualizzata nella parte inferiore della finestra dell'editor di query.  
   
 ## <a name="tab-text"></a>Testo scheda  
@@ -91,7 +91,7 @@ ms.locfileid: "66089235"
  **Includi nome server**  
  Consente di includere il nome del server. Per le connessioni locali, si tratta del nome dell'istanza. Per le connessioni remote, si tratta del nome del computer remoto e del nome dell'istanza.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni &#40;ambiente: pagina tipi di carattere e colori&#41;](../ssms/menu-help/options-environment-fonts-and-colors-page.md)   
  [Codifica con colori negli editor di query](../relational-databases/scripting/color-coding-in-query-editors.md)  
   

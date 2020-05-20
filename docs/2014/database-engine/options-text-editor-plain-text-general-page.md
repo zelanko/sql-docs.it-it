@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fd68ebe406fc7168746c804e585fa7465ee8c527
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4253bf2395fc33ecf315a1f092e0203513de90e5
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089283"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000692"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>Opzioni (Editor di testo - Testo normale - pagina Generale)
   Utilizzare questa finestra di dialogo per cambiare il comportamento di modifica generale dell'editor di testo utilizzato per modificare un documento non associato a un dato linguaggio di sviluppo. Per visualizzare queste impostazioni scegliere **Opzioni** dal menu **Strumenti** , espandere **Editor di testo**, espandere **Testo normale** e quindi fare clic su **Generale**.  
@@ -55,7 +55,7 @@ ms.locfileid: "66089283"
   
  Questa impostazione non ha alcun effetto sui comandi **Copia** o **Taglia** applicati a righe non vuote. Se non è selezionato alcun elemento, viene copiata o tagliata la riga intera. Se quindi si fa clic su **Incolla**, vengono incollati la riga intera e il relativo carattere di ritorno a capo.  
   
-## <a name="display"></a>Visualizzazione  
+## <a name="display"></a>Schermo  
  **Numeri di riga**  
  Consente di visualizzare un numero di riga accanto a ogni riga di testo.  
   

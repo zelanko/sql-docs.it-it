@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_sessions dynamic management view
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9c87a6900b8ee19e18efb76506d1bed5a645202
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ce44d14573000e9880fb1daf3a1ddb42746ee85
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76516272"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151968"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,12 +34,12 @@ ms.locfileid: "76516272"
   
  La vista a gestione dinamica sys. dm_exec_connections, sys. dm_exec_sessions e sys. dm_exec_requests è mappata alla tabella di sistema [sys. sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) .  
   
-> **Nota:** Per chiamare questo oggetto [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] da [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]o, usare il nome **sys. dm_pdw_nodes_exec_sessions**.  
+> **Nota:** Per chiamare questo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oggetto da o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , usare il nome **sys. dm_pdw_nodes_exec_sessions**.  
   
 |Nome colonna|Tipo di dati|Descrizione e informazioni specifiche della versione|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Identifica la sessione associata a ogni connessione principale attiva. Non ammette i valori Null.|  
-|login_time|**datetime**|Data e ora in cui è stata stabilita la sessione. Non ammette i valori Null.|  
+|login_time|**datetime**|Data e ora in cui è stata stabilita la sessione. Non ammette i valori Null. Le sessioni per le quali non è stata completata l'accesso nel momento in cui viene eseguita una query sulla DMV vengono visualizzate con l'ora di accesso `1900-01-01` .|  
 |host_name|**nvarchar(128)**|Nome della workstation client specifica di una sessione. Il valore è NULL per le sessioni interne. Ammette i valori Null.<br /><br /> **Nota sulla sicurezza:** L'applicazione client fornisce il nome della workstation e può fornire dati non accurati. Non considerare HOST_NAME una caratteristica di sicurezza.|  
 |program_name|**nvarchar(128)**|Nome del programma client che ha iniziato la sessione. Il valore è NULL per le sessioni interne. Ammette i valori Null.|  
 |host_process_id|**int**|ID di processo del programma client che ha iniziato la sessione. Il valore è NULL per le sessioni interne. Ammette i valori Null.|  
@@ -88,13 +88,13 @@ ms.locfileid: "76516272"
 |database_id|**smallint**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> ID del database corrente per ogni sessione.|  
 |authenticating_database_id|**int**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> ID del database che ha eseguito l'autenticazione dell'entità. Per gli account di accesso, il valore sarà 0. Per gli utenti di database indipendenti, il valore sarà l'ID del database indipendente.|  
 |open_transaction_count|**int**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> Numero di transazioni aperte per sessione.|  
-|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
+|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
 |page_server_reads|**bigint**|**Si applica a**: iperscalabilità del database SQL di Azure<br /><br /> Numero di letture di pagine del server eseguite dalle richieste della sessione durante la sessione. Non ammette i valori Null.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
 Tutti possono visualizzare le proprie informazioni sulla sessione.  
-**[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:** È `VIEW SERVER STATE` richiesta l' [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] autorizzazione per per visualizzare tutte le sessioni nel server.  
-**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** Richiede `VIEW DATABASE STATE` per visualizzare tutte le connessioni al database corrente. `VIEW DATABASE STATE`non è possibile concedere nel `master` database. 
+** [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] :** È richiesta l' `VIEW SERVER STATE` autorizzazione [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] per per visualizzare tutte le sessioni nel server.  
+** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] :** Richiede `VIEW DATABASE STATE` per visualizzare tutte le connessioni al database corrente. `VIEW DATABASE STATE`non è possibile concedere nel `master` database. 
   
   
 ## <a name="remarks"></a>Osservazioni  

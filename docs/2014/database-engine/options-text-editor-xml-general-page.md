@@ -7,21 +7,21 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 46a9f913-d0b9-40ff-b382-9bbdec7461a6
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 784032205f081e340e30203314e96a3b2dbf640e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b32dcfc95c5fc6929454add71ff4452e00fdda6e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089194"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001044"
 ---
 # <a name="options-text-editor---xml---general-page"></a>Opzioni (Editor di testo - XML - pagina Generale)
   Utilizzare questa finestra di dialogo per cambiare il comportamento di modifica generale dell'editor XML utilizzato per modificare i documenti XML. Per visualizzare le impostazioni scegliere **Opzioni** dal menu **Strumenti** , espandere la sottocartella **XML** e quindi fare clic su **Generale**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Opzioni di impostazione in più posizioni  
- Le opzioni per l'editor XML possono essere impostate anche nella finestra di dialogo **Tutti i linguaggi - Generale** . Se si utilizzano le finestre di dialogo **tutti i linguaggi** per impostare opzioni diverse per [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] gli altri editor, ad esempio DMX o MDX, è necessario reimpostare le opzioni dell'editor XML tramite questa finestra di dialogo.  
+ Le opzioni per l'editor XML possono essere impostate anche nella finestra di dialogo **Tutti i linguaggi - Generale** . Se si utilizzano le finestre di dialogo **tutti i linguaggi** per impostare opzioni diverse per gli altri [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Editor, ad esempio DMX o MDX, è necessario reimpostare le opzioni dell'editor XML tramite questa finestra di dialogo.  
   
 ## <a name="statement-completion"></a>Completamento istruzioni  
  **Elenco automatico membri**  
@@ -55,7 +55,7 @@ ms.locfileid: "66089194"
   
  Questa impostazione non ha alcun effetto sui comandi **Copia** o **Taglia** applicati a righe non vuote. Se non è selezionato alcun elemento, viene copiata o tagliata la riga intera. Se quindi si fa clic su **Incolla**, vengono incollati la riga intera e il relativo carattere di ritorno a capo.  
   
-## <a name="display"></a>Visualizzazione  
+## <a name="display"></a>Schermo  
  **Numeri di riga**  
  Se questa casella di controllo è selezionata, accanto a ogni riga del codice viene visualizzato un numero.  
   

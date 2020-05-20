@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Plain_Text.Tabs
 ms.assetid: 07d82d10-bca9-4b37-abbb-58ef9bfb264b
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0e060f1bccb544edd4e82c759b737e05c4bb980b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bdbcfa8140ecbc8c40086af41e64ba96920fe78
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089855"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000698"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>Opzioni (Editor di testo - Testo normale - pagina Tabulazioni)
   Utilizzare questa finestra di dialogo per cambiare il comportamento di tabulazione dell'editor di testo utilizzato per modificare un documento non associato a un dato linguaggio di sviluppo. Per visualizzare queste impostazioni scegliere **Opzioni** dal menu **Strumenti**, espandere **Editor di testo**, espandere **Testo normale** e quindi fare clic su **Tabulazioni**.  
@@ -29,7 +29,7 @@ ms.locfileid: "66089855"
  **Nessuno**  
  Consente di non fare rientrare la nuova riga creata premendo INVIO. Il cursore viene posizionato in corrispondenza della prima colonna della nuova riga.  
   
- **Blocco**  
+ **Bloccato**  
  Consente di fare rientrare la nuova riga creata premendo INVIO con la stessa distanza di rientro della riga precedente.  
   
  **Intelligenti**  

@@ -13,18 +13,18 @@ helpviewer_keywords:
 - aliases [SQL Server], named pipes
 - Named Pipes [SQL Server], connection strings
 ms.assetid: 90930ff2-143b-4651-8ae3-297103600e4f
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 12d5cb30217a0580d4da101d614b4930cfd8184b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c22ee167318fb6e37194a3558637d9afc642111
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63065549"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001031"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>Creazione di una stringa di connessione valida tramite named pipe
-  A meno che non venga modificato dall'utente, quando l'istanza [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinita di è in attesa sul protocollo Named Pipes `\\.\pipe\sql\query` , utilizza come nome della pipe. Il periodo indica che il computer è il computer locale, `pipe` indica che la connessione è una named pipe e `sql\query` è il nome della pipe. Per connettersi alla pipe predefinita, è necessario che il nome della pipe dell'alias sia `\\<computer_name>\pipe\sql\query`. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è stato configurato per essere in attesa su una pipe diversa, è necessario che il nome della pipe utilizzi tale pipe. Se ad esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza `\\.\pipe\unit\app` come pipe, è necessario che l'alias utilizzi `\\<computer_name>\pipe\unit\app` come nome della pipe.  
+  A meno che non venga modificato dall'utente, quando l'istanza predefinita di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in attesa sul protocollo Named Pipes, utilizza `\\.\pipe\sql\query` come nome della pipe. Il periodo indica che il computer è il computer locale, `pipe` indica che la connessione è una named pipe e `sql\query` è il nome della pipe. Per connettersi alla pipe predefinita, è necessario che il nome della pipe dell'alias sia `\\<computer_name>\pipe\sql\query`. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è stato configurato per essere in attesa su una pipe diversa, è necessario che il nome della pipe utilizzi tale pipe. Se ad esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza `\\.\pipe\unit\app` come pipe, è necessario che l'alias utilizzi `\\<computer_name>\pipe\unit\app` come nome della pipe.  
   
  Per creare un nome di pipe valido, è necessario:  
   
@@ -32,11 +32,11 @@ ms.locfileid: "63065549"
   
 -   Selezionare **Named Pipes** come **protocollo**.  
   
--   Immettere il **nome della pipe**. In alternativa, è possibile lasciare vuoto il **nome** della [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pipe e Configuration Manager completerà il nome della pipe appropriato dopo aver specificato il **protocollo** e il **Server**  
+-   Immettere il **nome della pipe**. In alternativa, è possibile lasciare vuoto il **nome della pipe** e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager completerà il nome della pipe appropriato dopo aver specificato il **protocollo** e il **Server**  
   
 -   Specificare un **Server**. Per un'istanza denominata è possibile specificare un nome di server e un nome di istanza.  
   
- Al momento della connessione, tramite il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componente native client vengono letti i valori del nome del server, del protocollo e della pipe dal registro di sistema per il nome alias specificato e viene creato un `np:\\<computer_name>\pipe\<pipename>` nome `np:\\<IPAddress>\pipe\<pipename>`di pipe nel formato o. Per un'istanza denominata, il nome della pipe predefinita `\\<computer_name>\pipe\MSSQL$<instance_name>\sql\query`è.  
+ Al momento della connessione, tramite il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componente native client vengono letti i valori del nome del server, del protocollo e della pipe dal registro di sistema per il nome alias specificato e viene creato un nome di pipe nel formato `np:\\<computer_name>\pipe\<pipename>` o `np:\\<IPAddress>\pipe\<pipename>` . Per un'istanza denominata, il nome della pipe predefinita è `\\<computer_name>\pipe\MSSQL$<instance_name>\sql\query` .  
   
 > [!NOTE]  
 >  Per impostazione predefinita, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Firewall chiude la porta 445. Poiché [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comunica sulla porta 445, è necessario aprire nuovamente tale porta se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è configurato per restare in attesa di connessioni client in arrivo mediante Named Pipes. Per informazioni sulla configurazione di un firewall, vedere "Procedura: Configurazione di un firewall per l’accesso a SQL Server" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure vedere la documentazione relativa al firewall.  
@@ -54,7 +54,7 @@ WHERE session_id = @@SPID;
   
 ```  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Connessione tramite il nome del server alla pipe predefinita:  
   
 ```  
@@ -118,7 +118,7 @@ Server             .
 > [!NOTE]  
 >  Per specificare il protocollo di rete come parametro **SQLCMD** , vedere "procedura: connessione al motore di database tramite sqlcmd. exe" nella documentazione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] linea.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di una stringa di connessione valida tramite il protocollo Shared Memory](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
  [Creazione di una stringa di connessione valida tramite TCP IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
  [Scelta di un protocollo di rete](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)  

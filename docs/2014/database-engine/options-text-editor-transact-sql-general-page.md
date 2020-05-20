@@ -11,15 +11,15 @@ f1_keywords:
 dev_langs:
 - TSQL
 ms.assetid: 7021ecb7-8fb5-4d8c-b984-3d34fcde8be2
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f32377fffb26ac622dc4045d108e491adc2b0342
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0552e7cd3212d8fb65100c6bd8efbaca91af43c4
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089166"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000678"
 ---
 # <a name="options-text-editor---transact-sql--general-page"></a>Opzioni (editor di testo-Transact-SQL-pagina generale)
   Utilizzare la finestra di dialogo delle opzioni **Generale** per cambiare il comportamento di modifica generale dell'editor di query del [!INCLUDE[ssDE](../includes/ssde-md.md)] utilizzato per modificare gli script [!INCLUDE[tsql](../includes/tsql-md.md)] . Per visualizzare le impostazioni scegliere **Opzioni** dal menu **Strumenti**, espandere la sottocartella **Transact-SQL** e quindi fare clic su **Generale**.  
@@ -56,7 +56,7 @@ ms.locfileid: "66089166"
   
  Questa impostazione non ha alcun effetto sui comandi **Copia** o **Taglia** applicati a righe non vuote. Se non è selezionato alcun elemento, viene copiata o tagliata la riga intera. Se quindi si fa clic su **Incolla**, vengono incollati la riga intera e il relativo carattere di ritorno a capo.  
   
-## <a name="display"></a>Visualizzazione  
+## <a name="display"></a>Schermo  
  **Numeri di riga**  
  Se questa casella di controllo è selezionata, accanto a ogni riga del codice viene visualizzato un numero.  
   

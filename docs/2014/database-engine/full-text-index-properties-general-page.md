@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.fulltextindexproperties.general.f1
 ms.assetid: f4dff61c-8c2f-4ff9-abe4-70a34421448f
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a240ed4e3788d65ab795d8680dc93f253cfde059
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 187366d9f289804942ba6e7d331a47bfaae68232
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62778942"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000941"
 ---
 # <a name="full-text-index-properties-general-page"></a>Proprietà indice full-text (pagina Generale)
   **Per visualizzare o modificare le proprietà modificabili di un indice full-text**  
@@ -65,7 +65,7 @@ ms.locfileid: "62778942"
  Filegroup cui appartiene l'indice full-text.  
   
  **Elenco di parole non significative indice full-text**  
- Elenco di parole non significative associate all'indice full-text. Un elenco di [parole non significative](../relational-databases/search/full-text-search.md) eventualmente associato a un indice full-text viene applicato alle query full-text su tale indice. È possibile rimuovere l'elenco di parole non significative dall'indice selezionando ** \<>** dall'elenco oppure è possibile selezionare un elenco di parole non significative diverso; System>indica l'oggetto di parole non significative di sistema. ** \<**  
+ Elenco di parole non significative associate all'indice full-text. Un elenco di [parole non significative](../relational-databases/search/full-text-search.md) eventualmente associato a un indice full-text viene applicato alle query full-text su tale indice. È possibile rimuovere l'elenco di parole non significative dall'indice selezionando ** \<>** dall'elenco oppure è possibile selezionare un elenco di parole non significative diverso; ** \< System>** indica l'oggetto di parole non significative di sistema.  
   
  **Per creare un elenco di parole non significative**  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62778942"
  **Elenco delle proprietà di ricerca**  
  Elenco delle proprietà di ricerca, se presente, attualmente associato all'indice full-text. Un elenco delle proprietà di ricerca specifica un set di proprietà del documento incluse nell'indice full-text associato al momento del popolamento. Per altre informazioni, vedere [Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
- Off>indica che all'indice non è attualmente associato alcun elenco di proprietà di ricerca. ** \<** È possibile rimuovere l'elenco delle proprietà di ricerca corrente dall'indice selezionando ** \<off>** dall'elenco oppure è possibile selezionare un elenco di proprietà di ricerca diverso nell'elenco. Questo elenco contiene solo gli elenchi delle proprietà di ricerca inclusi nel database corrente.  
+ ** \< Off>** indica che all'indice non è attualmente associato alcun elenco di proprietà di ricerca. È possibile rimuovere l'elenco delle proprietà di ricerca corrente dall'indice selezionando ** \< off>** dall'elenco oppure è possibile selezionare un elenco di proprietà di ricerca diverso nell'elenco. Questo elenco contiene solo gli elenchi delle proprietà di ricerca inclusi nel database corrente.  
   
 > [!NOTE]  
 >  È possibile associare un elenco delle proprietà di ricerca specificato a più indici full-text nello stesso database.  
@@ -119,7 +119,7 @@ ms.locfileid: "62778942"
   
 |||  
 |-|-|  
-|**True**|Enabled|  
+|**True**|Attivato|  
 |**False**|Disabled|  
   
  **Rilevamento delle modifiche**  
@@ -129,9 +129,9 @@ ms.locfileid: "62778942"
   
 |||  
 |-|-|  
-|**Disattivato**|L'indice full-text non viene aggiornato con le modifiche apportate ai dati sottostanti.|  
+|**Off**|L'indice full-text non viene aggiornato con le modifiche apportate ai dati sottostanti.|  
 |**Manuale**|L'indice full-text non viene aggiornato automaticamente con le modifiche apportate ai dati sottostanti. Tuttavia, le modifiche apportate ai dati sottostanti vengono mantenute ed è possibile propagarle all'indice full-text in base a una pianificazione utilizzando SQL Server Agent o manualmente.|  
-|**Automatico**|L'indice full-text viene aggiornato automaticamente con le modifiche apportate ai dati sottostanti nella tabella di base.|  
+|**Automatic** (Automatica)|L'indice full-text viene aggiornato automaticamente con le modifiche apportate ai dati sottostanti nella tabella di base.|  
   
  **Ripopolamento indice**  
  Fare clic per avviare un popolamento sull'indice full-text alla chiusura della finestra di dialogo. Selezionare uno dei tipi di popolamento seguenti:  
@@ -142,7 +142,7 @@ ms.locfileid: "62778942"
 |**Incrementale**|Il popolamento incrementale aggiorna l'indice full-text relativamente alle righe aggiunte, eliminate o modificate dopo l'ultimo popolamento o durante la sua esecuzione. Per eseguire un popolamento incrementale, è necessario che la tabella di base contenga una colonna del tipo di dati `timestamp`.|  
 |**Aggiornamento**|L'indice full-text viene aggiornato ogni qual volta i dati della tabella di base vengono modificati.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Introduzione alla ricerca full-text](../relational-databases/search/get-started-with-full-text-search.md)  
   
   

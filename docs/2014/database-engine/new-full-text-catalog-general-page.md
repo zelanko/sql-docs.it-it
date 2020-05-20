@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalog.general.f1
 ms.assetid: 5ed6f7cd-d9af-4439-9f33-fc935b883d91
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 61c11ad810109d76a59b9f6d9c1a3620a2866d65
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52eb88fa2607068f01f41be9d14d828c0a04e1e3
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62844099"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000848"
 ---
 # <a name="new-full-text-catalog-general-page"></a>Nuovo catalogo full-text (pagina Generale)
   Utilizzare questa finestra di dialogo per creare un nuovo catalogo full-text.  
@@ -38,9 +38,9 @@ ms.locfileid: "62844099"
  Selezionare questa opzione per impostare il catalogo come predefinito per i nuovi cataloghi full-text.  
   
  **Distinzione caratteri accentati/non accentati**  
- Indica se il catalogo è sensibile o non sensibile ai segni diacritici, ad esempio una tilde (**~**), un contrassegno acuto acuto (**́**) o una diereszione (**̈**). Se si seleziona **insensitive**, i segni diacritici vengono ignorati negli indici full-text associati a questo catalogo full-text. Per informazioni sui segni diacritici, vedere segni [diacritici](https://www.merriam-webster.com/dictionary/diacritic) nel sito Web Merriam-Webster.  
+ Indica se il catalogo è sensibile o non sensibile ai segni diacritici, ad esempio una tilde ( **~** ), un contrassegno acuto acuto (**́**) o una diereszione (**̈**). Se si seleziona **insensitive**, i segni diacritici vengono ignorati negli indici full-text associati a questo catalogo full-text. Per informazioni sui segni diacritici, vedere segni [diacritici](https://www.merriam-webster.com/dictionary/diacritic) nel sito Web Merriam-Webster.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
   
   

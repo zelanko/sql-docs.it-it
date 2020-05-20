@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Banyan VINES
 - protocols [SQL Server], client configuration
 ms.assetid: 6565fb7d-b076-4447-be90-e10d0dec359a
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9c167994c7145bce348b6959a57533e398e1d6bb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9046541411d472c7fe557cfad78ca903107513ab
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035286"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001091"
 ---
 # <a name="choosing-a-network-protocol"></a>Scelta di un protocollo di rete
-  Per connettersi al [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] è necessario che sia abilitato un protocollo di rete. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di soddisfare le richieste su più protocolli contemporaneamente. I client eseguono la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con un unico protocollo. Se il programma client non conosce il protocollo sul quale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in attesa, configurarlo per l'esecuzione di tentativi in sequenza su più protocolli. Utilizzare Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per abilitare, disabilitare e configurare i protocolli di rete.  
+  Per connettersi al [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] è necessario che sia abilitato un protocollo di rete. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]consente di soddisfare le richieste su più protocolli contemporaneamente. I client eseguono la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con un unico protocollo. Se il programma client non conosce il protocollo sul quale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in attesa, configurarlo per l'esecuzione di tentativi in sequenza su più protocolli. Utilizzare Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per abilitare, disabilitare e configurare i protocolli di rete.  
   
 ## <a name="shared-memory"></a>Shared Memory  
  Shared Memory è il protocollo più semplice da utilizzare e non richiede la configurazione di impostazioni. Poiché i client che utilizzano questo protocollo possono connettersi solo a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eseguita sullo stesso computer, Shared Memory non è adatto per la maggior parte delle attività del database. Utilizzare il protocollo Shared Memory per la risoluzione dei problemi quando si sospetta che gli altri protocolli siano configurati in modo non corretto.  
