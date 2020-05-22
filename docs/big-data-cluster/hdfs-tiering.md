@@ -1,7 +1,7 @@
 ---
 title: Configurare la suddivisione in livelli HDFS
 titleSuffix: SQL Server big data clusters
-description: Questo articolo illustra come configurare la suddivisione in livelli HDFS per montare un file system di Azure Data Lake Storage esterno in HDFS in un'istanza di [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+description: Questo articolo illustra come configurare la suddivisione in livelli HDFS per montare un file system di Azure Data Lake Storage esterno in HDFS in un cluster Big Data di SQL Server 2019.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 008a62d3d36acf96b0c63559cd4d8ecbf27641c1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c156e117b3a26c09feb5afb3bb2f3ee1c594c43b
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190397"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606603"
 ---
 # <a name="configure-hdfs-tiering-on-big-data-clusters-2019"></a>Configurare la suddivisione in livelli HDFS in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -43,7 +43,7 @@ Le sezioni seguenti forniscono un esempio di come configurare la suddivisione in
 
 La suddivisione in livelli HDFS supporta l'aggiornamento. Aggiornare un montaggio esistente per ottenere lo snapshot più recente dei dati remoti.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 - [Cluster Big Data distribuito](deployment-guidance.md)
 - [Strumenti per Big Data](deploy-big-data-tools.md)

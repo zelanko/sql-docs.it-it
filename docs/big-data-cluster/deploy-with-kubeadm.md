@@ -1,7 +1,7 @@
 ---
 title: Configurare Kubernetes con kubeadm
 titleSuffix: SQL Server Big Data Clusters
-description: Informazioni su come configurare Kubernetes in più computer Ubuntu 16.04 o 18.04 (fisici o virtuali) per distribuzioni di [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+description: Informazioni su come configurare Kubernetes in più computer Ubuntu 16.04 o 18.04 (fisici o virtuali) per distribuzioni di cluster Big Data di SQL Server 2019.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0d5478df68f6f88d638aaafc88c92f2a5730b9f7
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 83f66841c4894d3c61ff8196eb52f3ac84fe42f9
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269460"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606547"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Configurare Kubernetes in più computer per distribuzioni di cluster Big Data di SQL Server
 
@@ -26,7 +26,7 @@ Questo articolo fornisce un esempio di come usare **kubeadm** per configurare Ku
 > Per gli script di esempio che configurano Kubernetes, vedere [Creare un cluster Kubernetes usando Kubeadm in Ubuntu 16.04 LTS or 18.04 LTS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm).
 Vedere anche [questo](deployment-script-single-node-kubeadm.md) argomento per uno script di esempio che automatizza la distribuzione di uno strumento kubeadm per nodo singolo in una macchina virtuale e quindi distribuisce una configurazione predefinita di un cluster Big Data.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 - Almeno 3 computer fisici o macchine virtuali Linux
 - Configurazione consigliata per singolo computer:

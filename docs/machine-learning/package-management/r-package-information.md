@@ -4,17 +4,18 @@ description: Istruzioni su come ottenere informazioni sui pacchetti R installati
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2019
+ms.date: 05/01/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7e2b1b438b1563749a999ed8170046d67eef6b63
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.reviewer: davidph
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 78dc96f3568bd2a19f2604d76d47010f9d9104a0
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117964"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606487"
 ---
 # <a name="get-r-package-information"></a>Ottenere informazioni sui pacchetti R
 
@@ -33,26 +34,25 @@ Per assicurare la protezione delle risorse del server, la libreria dell'istanza 
 Il percorso predefinito dei file binari per R è il seguente:
 
 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`
+
+In questo esempio si presuppone che venga usata l'istanza di SQL predefinita, ovvero MSSQLSERVER. Se SQL Server è installato come istanza definita dall'utente, in alternativa viene usato il nome specificato.
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 Il percorso predefinito dei file binari per R è il seguente:
 
 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library`
+
+In questo esempio si presuppone che venga usata l'istanza di SQL predefinita, ovvero MSSQLSERVER. Se SQL Server è installato come istanza definita dall'utente, in alternativa viene usato il nome specificato.
 ::: moniker-end
 
-::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 Il percorso predefinito dei file binari per R è il seguente:
 
 `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES\library`
-::: moniker-end
 
 In questo esempio si presuppone che venga usata l'istanza di SQL predefinita, ovvero MSSQLSERVER. Se SQL Server è installato come istanza definita dall'utente, in alternativa viene usato il nome specificato.
-
-<!-- I don't think this note is necessary. If you have these other products installed, you'd already know about them.
-> [!NOTE]
-> If you find other folders having similar subfolder names and files, you probably have a standalone installation of  Microsoft R Server or Machine Learning Server. These server products have different installers and paths: C:\Program Files\Microsoft\R Server\R_SERVER or C:\Program Files\Microsoft\ML SERVER\R_SERVER. For more information, see [Install R Server 9.1 for Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) or [Install Machine Learning Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
--->
+::: moniker-end
 
 Eseguire l'istruzione seguente per verificare la libreria di pacchetti R predefinita per l'istanza corrente:
 
@@ -64,26 +64,11 @@ WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
-L'istruzione seguente usa [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) per restituire il percorso della libreria dell'istanza e la versione di RevoScaleR usata da SQL Server:
-
-```sql
-EXECUTE sp_execute_external_script
-  @language =N'R',
-  @script=N'
-  sql_r_path <- rxSqlLibPaths("local")
-  print(sql_r_path)
-  version_info <-packageVersion("RevoScaleR")
-  print(version_info)'
-```
-
-> [!NOTE]
-> La funzione [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) può essere eseguita solo sul computer locale. La funzione non può restituire percorsi di libreria per le connessioni remote.
-
-## <a name="default-r-packages"></a>Pacchetti R predefiniti
+## <a name="default-microsoft-r-packages"></a>Pacchetti Microsoft R predefiniti
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
-Con R Services per SQL Server vengono installati i pacchetti R seguenti.
+Con R Services per SQL Server vengono installati i pacchetti Microsoft R seguenti.
 
 |Pacchetti | Versione | Descrizione |
 |---------|---------|-------------|
@@ -92,15 +77,28 @@ Con R Services per SQL Server vengono installati i pacchetti R seguenti.
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 
-Quando si seleziona la funzionalità R durante l'installazione di Machine Learning Services per SQL Server, vengono installati i pacchetti R seguenti.
+Quando si seleziona la funzionalità R durante l'installazione di Machine Learning Services per SQL Server, vengono installati i pacchetti Microsoft R seguenti.
 
 |Pacchetti | Versione | Descrizione |
 |---------|---------|-------------|
 | [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 9.2 | Usato per contesti di calcolo remoti, streaming, esecuzione parallela di funzioni rx per l'importazione e la trasformazione dei dati, modellazione, visualizzazione e analisi. |
 | [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | Usato per includere script R nelle stored procedure. |
 | [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| 1.4.0 | Aggiunge algoritmi di Machine Learning in R. | 
+| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | Usato per la scrittura di istruzioni MDX in R. |
+
+::: moniker-end
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+
+Quando si seleziona la funzionalità R durante l'installazione di Machine Learning Services per SQL Server, vengono installati i pacchetti Microsoft R seguenti.
+
+|Pacchetti | Versione | Descrizione |
+|---------|---------|-------------|
+| [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 9.4.7 | Usato per contesti di calcolo remoti, streaming, esecuzione parallela di funzioni rx per l'importazione e la trasformazione dei dati, modellazione, visualizzazione e analisi. |
+| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | Usato per includere script R nelle stored procedure. |
+| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| 9.4.7 | Aggiunge algoritmi di Machine Learning in R. |
 | [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | Usato per la scrittura di istruzioni MDX in R. |
 
 ::: moniker-end
@@ -121,13 +119,7 @@ Il supporto per R include la distribuzione di R open source. In questo modo è p
 
 La distribuzione di R open source inclusa nell'installazione è [Microsoft R Open (MRO)](https://mran.microsoft.com/open). MRO aggiunge valore alle funzioni R di base includendo pacchetti open source aggiuntivi come [Intel Math Kernel Library](https://en.wikipedia.org/wiki/Math_Kernel_Library).
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-La versione di R fornita da MRO tramite l'installazione di R Services per SQL Server è la 3.2.2.
-::: moniker-end
-
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-La versione di R fornita da MRO tramite l'installazione di Machine Learning Services per SQL Server è la 3.3.3.
-::: moniker-end
+Per informazioni sulla versione di R inclusa con ogni versione di SQL Server, vedere [Versioni di Python e R](../sql-server-machine-learning-services.md#versions).
 
 > [!IMPORTANT]
 > Non si dovrebbe mai sovrascrivere manualmente la versione di R installata dal programma di installazione di SQL Server con le versioni più recenti sul Web. I pacchetti Microsoft per R sono basati su versioni specifiche di R. La modifica dell'installazione può rendere instabile questa distribuzione.
@@ -156,24 +148,25 @@ Per altre informazioni sui campi facoltativi e predefiniti per il file DESCRIPTI
 Se è stato installato un pacchetto R e si vuole verificare che il pacchetto sia disponibile per una determinata istanza di SQL Server, è possibile eseguire una stored procedure per caricare il pacchetto e restituire messaggi.
 
 L'istruzione seguente, ad esempio, esegue la ricerca del pacchetto [glue](https://cran.r-project.org/web/packages/glue/) e lo carica, se disponibile.
-Se il pacchetto non viene trovato o non può essere caricato, viene restituito un errore per segnalare che non è presente alcun pacchetto con il nome "glue".
+Se il pacchetto non viene trovato o non può essere caricato, viene restituito un errore.
 
 ```sql
 EXECUTE sp_execute_external_script  
   @language =N'R',
-  @script=N'require("glue")'
-GO
+  @script=N'
+require("glue")
+'
 ```
 
 Per altre informazioni sul pacchetto, vedere la funzione `packageDescription`.
-L'istruzione seguente restituisce informazioni per il pacchetto **glue**.
+L'istruzione seguente restituisce informazioni per il pacchetto **MicrosoftML**.
 
 ```sql
 EXECUTE sp_execute_external_script
   @language = N'R',
   @script = N'
-print(packageDescription("glue"))
-  '
+print(packageDescription("MicrosoftML"))
+'
 ```
 
 ## <a name="next-steps"></a>Passaggi successivi
@@ -181,6 +174,6 @@ print(packageDescription("glue"))
 ::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
 + [Installare pacchetti con gli strumenti R](install-r-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 + [Installare nuovi pacchetti R con sqlmlutils](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

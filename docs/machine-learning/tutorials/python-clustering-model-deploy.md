@@ -1,6 +1,6 @@
 ---
 title: 'Esercitazione su Python: Distribuire un modello di clustering'
-description: Nell'ultima parte di questa serie di esercitazioni in quattro parti si distribuirà un modello di clustering in Python con Machine Learning Services per SQL Server.
+description: Nell'ultima parte di questa serie di esercitazioni in quattro parti si distribuirà un modello di clustering in Python con Machine Learning in SQL.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
@@ -11,28 +11,33 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: df0fd7cb27977679a6ca879d7ae01045ed3fa8c8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 0343c3c410c8cf7b76b391fecd6ff57bff5e80d3
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116564"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606442"
 ---
-# <a name="tutorial-deploy-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>Esercitazione: Distribuire un modello in Python per suddividere in categorie i clienti con Machine Learning Services per SQL Server
+# <a name="python-tutorial-deploy-a-model-to-categorize-customers-with-sql-machine-learning"></a>Esercitazione su Python: Distribuire un modello per categorizzare i clienti con Machine Learning in SQL
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Nell'ultima parte di questa serie di esercitazioni in quattro parti si distribuirà un modello di clustering, sviluppato in Python, in un database SQL usando Machine Learning Services per SQL Server oppure in cluster Big Data.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 Nell'ultima parte di questa serie di esercitazioni in quattro parti si distribuirà un modello di clustering, sviluppato in Python, in un database SQL Server usando Machine Learning Services per SQL Server.
+::: moniker-end
 
-Per eseguire regolarmente il clustering, man mano che si registrano nuovi clienti, è necessario essere in grado di chiamare lo script Python da qualsiasi app. A questo scopo è possibile distribuire lo script Python in SQL Server inserendolo all'interno di una stored procedure SQL nel database. Poiché il modello viene eseguito nel database SQL, può essere facilmente sottoposto a training in base ai dati archiviati nel database.
+Per eseguire regolarmente il clustering, man mano che si registrano nuovi clienti, è necessario essere in grado di chiamare lo script Python da qualsiasi app. A questo scopo è possibile distribuire lo script Python in un database inserendolo all'interno di una stored procedure SQL. Poiché il modello viene eseguito nel database, può essere facilmente sottoposto a training in base ai dati archiviati nel database.
 
-In questa sezione si sposterà il codice Python appena scritto in SQL Server e si distribuirà il clustering con l'aiuto di Machine Learning Services per SQL Server.
+In questa sezione il codice Python appena scritto verrà spostato sul server e verrà distribuito il clustering.
 
 In questo articolo si apprenderà come:
 
 > [!div class="checklist"]
 > * Creare una stored procedure che genera il modello
-> * Eseguire il clustering in SQL Server
+> * Eseguire il clustering sul server
 > * Usare le informazioni sul clustering
 
 Nella [prima parte](python-clustering-model.md) sono stati installati i prerequisiti ed è stato ripristinato il database di esempio.
@@ -175,19 +180,18 @@ SELECT customer.[c_email_address], customer.c_customer_sk
 
 ## <a name="clean-up-resources"></a>Pulire le risorse
 
-Completata questa esercitazione, è possibile eliminare il database tpcxbb_1gb da SQL Server.
+Dopo aver completato questa esercitazione, è possibile eliminare il database tpcxbb_1gb.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
 Nella quarta parte di questa serie di esercitazioni sono stati completati i passaggi seguenti:
 
 * Creare una stored procedure che genera il modello
-* Eseguire il clustering in SQL Server
+* Eseguire il clustering sul server
 * Usare le informazioni sul clustering
 
-Per altre informazioni sull'uso di Python in Machine Learning Services per SQL Server, vedere:
+Per altre informazioni sull'uso di Python con Machine Learning in SQL, vedere:
 
-* [Avvio rapido: Creare ed eseguire semplici script Python con SQL Server Machine Learning Services](quickstart-python-create-script.md)
-* [Altre esercitazioni di Python per Machine Learning Services per SQL Server](sql-server-python-tutorials.md)
+* [Avvio rapido: Creare ed eseguire script Python semplici](quickstart-python-create-script.md)
+* [Altre esercitazioni di Python per Machine Learning in SQL](python-tutorials.md)
 * [Installare pacchetti Python con sqlmlutils](../package-management/install-additional-python-packages-on-sql-server.md)
-

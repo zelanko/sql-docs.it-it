@@ -1,7 +1,7 @@
 ---
 title: Distribuire applicazioni con azdata
 titleSuffix: SQL Server Big Data Clusters
-description: Distribuire uno script Python o R come applicazione in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+description: Distribuire uno script Python o R come applicazione in un cluster Big Data di SQL Server 2019.
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 33b5bf6061e9168fd150adcb4a7ccf29302bce63
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ab28a6bbe7bbf108305f065dcdf7b870c0f76602
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253152"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606624"
 ---
 # <a name="how-to-deploy-an-app-on-big-data-clusters-2019"></a>Come distribuire un'app in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -37,7 +37,7 @@ Sono supportati i tipi seguenti di app:
 - MLeap Serving
 - SQL Server Integration Services (SSIS)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 - [Cluster Big Data di SQL Server 2019](deployment-guidance.md)
 - [Utilità della riga di comando azdata](deploy-install-azdata.md)
@@ -106,7 +106,7 @@ Il comando seguente mostra un esempio del possibile aspetto di questo comando:
 azdata app create --spec ./addpy
 ```
 
-Si presuppone che l'applicazione sia archiviata nella cartella `addpy`. Questa cartella deve contenere anche un file di specifiche per l'applicazione, denominato `spec.yaml`. Per altre informazioni sul file [, vedere la ](concept-application-deployment.md)pagina sulla distribuzione di applicazioni`spec.yaml`.
+Si presuppone che l'applicazione sia archiviata nella cartella `addpy`. Questa cartella deve contenere anche un file di specifiche per l'applicazione, denominato `spec.yaml`. Per altre informazioni sul file `spec.yaml`, vedere la [pagina sulla distribuzione di applicazioni](concept-application-deployment.md).
 
 Per distribuire l'app di esempio, creare i file seguenti in una directory denominata `addpy`:
 

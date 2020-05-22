@@ -1,28 +1,34 @@
 ---
 title: 'Esercitazione su Python: Compilare un modello di cluster'
-description: Nella terza parte di questa serie di esercitazioni in quattro parti verrà compilato un modello K-Means per eseguire il clustering in Python con Machine Learning Services per SQL Server.
+titleSuffix: SQL machine learning
+description: Nella terza parte di questa serie di esercitazioni in quattro parti si creerà un modello K-Means per eseguire il clustering in Python con Machine Learning in SQL.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/27/2019
+ms.date: 05/14/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9669686d0163b9ce1c362e7cdf2814c7a95bfaa8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 6e0aa1bcbf1bc79b6f77fc0b564d840194ffa8ec
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116594"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606441"
 ---
-# <a name="tutorial-build-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>Esercitazione: Compilare un modello in Python per suddividere in categorie i clienti con Machine Learning Services per SQL Server
+# <a name="python-tutorial-build-a-model-to-categorize-customers-with-sql-machine-learning"></a>Esercitazione su Python: Compilare un modello per categorizzare i clienti con Machine Learning in SQL
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Nella terza parte di questa serie di esercitazioni in quattro parti verrà compilato un modello K-Means in Python per eseguire il clustering. Nella parte successiva della serie questo modello verrà distribuito in un database SQL con Machine Learning Services per SQL Server.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Nella terza parte di questa serie di esercitazioni in quattro parti verrà compilato un modello K-Means in Python per eseguire il clustering. Nella parte successiva della serie questo modello verrà distribuito in un database con Machine Learning Services per SQL Server oppure in cluster Big Data.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+Nella terza parte di questa serie di esercitazioni in quattro parti verrà compilato un modello K-Means in Python per eseguire il clustering. Nella parte successiva della serie questo modello verrà distribuito in un database con Machine Learning Services per SQL Server.
+::: moniker-end
 
 In questo articolo si apprenderà come:
 
@@ -33,9 +39,9 @@ In questo articolo si apprenderà come:
 
 Nella [prima parte](python-clustering-model.md) sono stati installati i prerequisiti ed è stato ripristinato il database di esempio.
 
-Nella [seconda parte](python-clustering-model-prepare-data.md) si è appreso come preparare i dati di un database SQL per il clustering.
+Nella [seconda parte](python-clustering-model-prepare-data.md) si è appreso come preparare i dati di un database per il clustering.
 
-Nella [quarta parte](python-clustering-model-deploy.md) si apprenderà come creare una stored procedure in un database SQL in grado di eseguire il clustering in Python in base ai nuovi dati.
+Nella [quarta parte](python-clustering-model-deploy.md) si apprenderà come creare una stored procedure in un database in grado di eseguire il clustering in Python in base ai nuovi dati.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -147,7 +153,7 @@ Il cluster 0 è un gruppo di clienti che non sono chiaramente attivi. Forse si p
 
 ## <a name="clean-up-resources"></a>Pulire le risorse
 
-Se non si intende continuare con questa esercitazione, eliminare il database tpcxbb_1gb da SQL Server.
+Se non si intende continuare con questa esercitazione, eliminare il database tpcxbb_1gb.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
@@ -160,4 +166,4 @@ Nella terza parte di questa serie di esercitazioni sono stati completati i passa
 Per distribuire il modello di Machine Learning creato, seguire la quarta parte di questa serie di esercitazioni:
 
 > [!div class="nextstepaction"]
-> [Esercitazione: Distribuire un modello di clustering in Python con Machine Learning Services per SQL Server](python-clustering-model-deploy.md)
+> [Esercitazione su Python: Distribuire un modello di clustering](python-clustering-model-deploy.md)

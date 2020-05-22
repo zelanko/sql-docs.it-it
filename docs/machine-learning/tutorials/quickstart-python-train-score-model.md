@@ -3,24 +3,29 @@ title: 'Guida introduttiva: Eseguire il training di un modello in Python'
 description: Questo argomento di avvio rapido illustra come creare ed eseguire il training di un modello predittivo con Python. Il modello verrà salvato in una tabella nell'istanza di SQL Server in uso, quindi si userà il modello per stimare i valori dei nuovi dati tramite Machine Learning Services per SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/28/2020
 ms.topic: quickstart
-author: garyericson
-ms.author: garye
-ms.reviewer: davidph
+author: cawrites
+ms.author: chadam
+ms.reviewer: garye
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2eeb4bd6a384b37d8a0d7f2bd15e8ea126654a4e
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 929491de1eb99835133d04d396023b84680af9f4
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487331"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606869"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>Guida introduttiva: Creare e assegnare i punteggi a un modello predittivo in Python con Machine Learning Services per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Questo argomento di avvio rapido illustra come creare ed eseguire il training di un modello predittivo con Python. Il modello verrà salvato in una tabella nell'istanza di SQL Server in uso, quindi si userà il modello per stimare i valori dei nuovi dati tramite [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md) oppure in [cluster Big Data](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 Questo argomento di avvio rapido illustra come creare ed eseguire il training di un modello predittivo con Python. Il modello verrà salvato in una tabella nell'istanza di SQL Server in uso, quindi si userà il modello per stimare i valori dei nuovi dati tramite [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md).
+::: moniker-end
 
 Si creeranno due stored procedure che verranno eseguite in SQL. La prima usa il classico set di dati Iris e genera un modello Naïve Bayes per stimare una specie di iris in base alle caratteristiche del fiore. La seconda stored procedure, per l'assegnazione dei punteggi, chiama il modello generato nella prima stored procedure per restituire un set di stime basate sui nuovi dati. Inserendo il codice Python in una stored procedure SQL, le operazioni sono contenute in SQL, sono riutilizzabili e possono essere chiamate da altre stored procedure e applicazioni client.
 
@@ -33,9 +38,15 @@ Completando questo argomento di avvio rapido si apprenderà:
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- Questo argomento di avvio rapido richiede l'accesso a un'istanza di SQL Server con [Machine Learning Services per SQL Server](../install/sql-machine-learning-services-windows-install.md) con il linguaggio Python installato.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- Machine Learning Services per SQL Server. Per informazioni su come installare Machine Learning Services, vedere la [guida all'installazione di Windows](../install/sql-machine-learning-services-windows-install.md) o la [guida all'installazione di Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). È anche possibile [abilitare Machine Learning Services in cluster Big Data di SQL Server](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- Machine Learning Services per SQL Server. Per informazioni su come installare Machine Learning Services, vedere la [guida all'installazione di Windows](../install/sql-machine-learning-services-windows-install.md). 
+::: moniker-end
 
-- È anche necessario uno strumento per l'esecuzione di query SQL che contengono script Python. È possibile eseguire questi script usando qualsiasi strumento di gestione del database o di query, purché possa connettersi a un'istanza di SQL Server, nonché eseguire una query T-SQL o una stored procedure. In questo argomento di avvio rapido viene usato [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- Uno strumento per l'esecuzione di query SQL che contengono script R. In questo argomento di avvio rapido viene usato [Azure Data Studio](../../azure-data-studio/what-is.md).
+
 
 - In questo esercizio vengono usati i dati di esempio Iris. Seguire le istruzioni nei [dati demo del set di dati Iris](demo-data-iris-in-sql.md) per creare il database di esempio **irissql**.
 
@@ -43,7 +54,7 @@ Completando questo argomento di avvio rapido si apprenderà:
 
 In questo passaggio si creerà una stored procedure che genera un modello per la stima dei risultati.
 
-1. Aprire SSMS, connettersi all'istanza di SQL Server e aprire una nuova finestra di query.
+1. Aprire Azure Data Studio, connettersi all'istanza di SQL Server e aprire una nuova finestra di query.
 
 1. Stabilire la connessione al database irissql.
 
@@ -83,7 +94,7 @@ In questo passaggio si creerà una stored procedure che genera un modello per la
 
 1. Verificare che la stored procedure esista. 
 
-   Se lo script T-SQL del passaggio precedente è stato eseguito senza errori, una nuova stored procedure denominata **generate_iris_model** viene creata e aggiunta al database **irissql**. In SQL Server Management Studio le stored procedure sono disponibili in **Esplora oggetti**, **Programmabilità**.
+   Se lo script T-SQL del passaggio precedente è stato eseguito senza errori, una nuova stored procedure denominata **generate_iris_model** viene creata e aggiunta al database **irissql**. In Azure Data Studio le stored procedure sono disponibili in **Esplora oggetti**, **Programmabilità**.
 
 ## <a name="execute-the-procedure-to-create-and-train-models"></a>Eseguire la stored procedure per creare ed eseguire il training di modelli
 
@@ -174,7 +185,7 @@ Ora che un modello è stato creato, sottoposto a training e salvato, procedere c
 
 In questo esercizio si è appreso come creare stored procedure dedicate a diverse attività, in cui ognuna ha usato la stored procedure di sistema `sp_execute_external_script` per avviare un processo Python. Gli input del processo Python vengono passati a `sp_execute_external` come parametri. Sia lo script Python stesso che le variabili di dati in un database di SQL Server vengono passati come input.
 
-In genere è consigliabile pianificare l'uso di SSMS solo con codice Python pulito o codice Python semplice che restituisce output basato su riga. Come strumento, SSMS supporta linguaggi di query come T-SQL e restituisce set di righe bidimensionali. Se il codice genera un output visivo come un grafico a dispersione o un istogramma, sono necessari uno strumento o un'applicazione per utenti finali separati in grado di eseguire il rendering dell'immagine all'esterno della stored procedure.
+In genere è consigliabile pianificare l'uso di Azure Data Studio solo con codice Python pulito o codice Python semplice che restituisce output basato su riga. Come strumento, Azure Data Studio supporta linguaggi di query come T-SQL e restituisce set di righe bidimensionali. Se il codice genera un output visivo come un grafico a dispersione o un istogramma, sono necessari uno strumento o un'applicazione per utenti finali separati in grado di eseguire il rendering dell'immagine all'esterno della stored procedure.
 
 Per alcuni sviluppatori Python abituati a scrivere script onnicomprensivi che gestiscono una serie di operazioni, l'organizzazione delle attività in procedure separate potrebbe sembrare superflua. Il training e l'assegnazione dei punteggi hanno però casi d'uso diversi. Separando queste attività, è possibile inserirle in pianificazioni diverse e assegnare le autorizzazioni in base a ogni operazione.
 
@@ -184,6 +195,6 @@ Un vantaggio finale è che i processi possono essere modificati usando parametri
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni su Machine Learning Services per SQL Server, vedere:
+Per altre informazioni sulle esercitazioni per Python con Machine Learning in SQL, vedere:
 
-- [Che cos'è Machine Learning Services per SQL Server (Python e R)?](../sql-server-machine-learning-services.md)
+- [Esercitazioni di Python](python-tutorials.md)

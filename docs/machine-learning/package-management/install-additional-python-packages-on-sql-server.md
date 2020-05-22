@@ -3,18 +3,18 @@ title: Installare pacchetti Python con sqlmlutils
 description: Informazioni su come usare lo strumento pip di Python per installare nuovi pacchetti Python in un'istanza di Machine Learning Services per SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/30/2020
+ms.date: 04/24/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9271d10c83575ba1203c145d217c4b179976eff6
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 69da04eaad729225ed0629ba78d2f214b30ba942
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886448"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606490"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>Installare pacchetti Python con sqlmlutils
 
@@ -33,11 +33,11 @@ Per altre informazioni sulla posizione dei pacchetti e sui percorsi di installaz
 
 + Installare [python](https://www.python.org/) nel computer client usato per connettersi a SQL Server. Può anche essere necessario un ambiente di sviluppo per Python, ad esempio [Visual Studio Code](https://code.visualstudio.com/download) con l'[estensione per Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python). 
 
-+ Installare [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) (SSMS) nel computer client usato per connettersi a SQL Server. È possibile usare altri strumenti di query o gestione di database, ma in questo articolo si presuppone che venga usato Azure Data Studio o SSMS.
++ Installare [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) nel computer client usato per connettersi a SQL Server. È possibile usare altri strumenti di query o gestione di database, ma in questo articolo si presuppone che venga usato Azure Data Studio.
 
 ### <a name="other-considerations"></a>Altre considerazioni
 
-+ I pacchetti devono essere conformi alla versione di Python disponibile. Per altre informazioni sulla versione di Python inclusa in ogni versione di SQL Server, vedere le [versioni di Python e R in Che cos'è Machine Learning Services per SQL Server (Python e R)?](../sql-server-machine-learning-services.md#versions)
++ I pacchetti devono essere conformi alla versione di Python disponibile. Per informazioni sulla versione di Python inclusa con ogni versione di SQL Server, vedere [Versioni di Python e R](../sql-server-machine-learning-services.md#versions).
 
 + La libreria di pacchetti Python si trova nella cartella Programmi dell'istanza di SQL Server e, per impostazione predefinita, è necessario disporre delle autorizzazioni di amministratore per eseguire installazioni in questa cartella. Per altre informazioni, vedere [Percorso della libreria dei pacchetti](../package-management/python-package-information.md#default-python-library-location).
 
@@ -134,7 +134,7 @@ connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdataba
 sqlmlutils.SQLPackageManager(connection).install("text_tools-1.0.0-py3-none-any.whl")
 ```
 
-## <a name="use-the-package-in-sql-server"></a>Usare il pacchetto in SQL Server
+## <a name="use-the-package"></a>Usare il pacchetto
 
 È ora possibile usare il pacchetto in uno script Python in SQL Server. Ad esempio:
 
@@ -158,8 +158,8 @@ Se si vuole rimuovere il pacchetto **text-tools**, usare il comando Python segue
 sqlmlutils.SQLPackageManager(connection).uninstall("text-tools")
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="next-steps"></a>Passaggi successivi
 
-+ Per visualizzare le informazioni sui pacchetti Python installati in Machine Learning Services per SQL Server, vedere [Ottenere informazioni sui pacchetti Python](../package-management/python-package-information.md).
++ Per informazioni sui pacchetti Python installati in Machine Learning Services per SQL Server, vedere [Ottenere informazioni sui pacchetti Python](../package-management/python-package-information.md).
 
 + Per informazioni sull'installazione dei pacchetti R in Machine Learning Services per SQL Server, vedere [Installare nuovi pacchetti R in SQL Server](install-additional-r-packages-on-sql-server.md).

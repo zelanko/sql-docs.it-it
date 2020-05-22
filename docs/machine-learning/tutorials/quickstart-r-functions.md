@@ -1,38 +1,55 @@
 ---
 title: 'Guida introduttiva: Funzioni R'
-description: Questo argomento di avvio rapido descrive come usare funzioni matematiche e di utilità R con Machine Learning Services per SQL Server.
+titleSuffix: SQL machine learning
+description: Questo argomento di avvio rapido descrive come usare funzioni matematiche e di utilità R con Machine Learning in SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/23/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fd3c3326fe0b186ade24cbcf95f587abba1cb6bc
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: c769862ab2ab1b06169ae5191217945cf8220c9b
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487284"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606668"
 ---
-# <a name="quickstart-r-functions-with-sql-server-machine-learning-services"></a>Guida introduttiva: Funzioni R con Machine Learning Services per SQL Server
+# <a name="quickstart-r-functions-with-sql-machine-learning"></a>Guida introduttiva: Funzioni R con Machine Learning in SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Questo argomento di avvio rapido descrive come usare funzioni matematiche e di utilità R con Machine Learning Services per SQL Server. Le funzioni statistiche sono spesso complesse da implementare in T-SQL, ma possono essere eseguite in R con poche righe di codice.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Questo argomento di avvio rapido descrive come usare funzioni matematiche e di utilità R con [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md) o in [cluster Big Data](../../big-data-cluster/machine-learning-services.md). Le funzioni statistiche sono spesso complesse da implementare in T-SQL, ma possono essere eseguite in R con poche righe di codice.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+Questo argomento di avvio rapido descrive come usare funzioni matematiche e di utilità R con [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md). Le funzioni statistiche sono spesso complesse da implementare in T-SQL, ma possono essere eseguite in R con poche righe di codice.
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+Questo argomento di avvio rapido descrive come usare funzioni matematiche e di utilità R con [R Services per SQL Server](../r/sql-server-r-services.md). Le funzioni statistiche sono spesso complesse da implementare in T-SQL, ma possono essere eseguite in R con poche righe di codice.
+::: moniker-end
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- Questo argomento di avvio rapido richiede l'accesso a un'istanza di SQL Server con [Machine Learning Services per SQL Server](../install/sql-machine-learning-services-windows-install.md) con il linguaggio R installato.
+Per completare questo argomento di avvio rapido è necessario soddisfare i prerequisiti seguenti.
 
-  L'istanza di SQL Server può essere in una macchina virtuale di Azure o in locale. Tenere presente che la funzionalità di scripting esterno è disabilitata per impostazione predefinita, quindi potrebbe essere necessario [abilitare lo scripting esterno](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) e verificare che il **servizio Launchpad di SQL Server** sia in esecuzione prima di iniziare.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- Machine Learning Services per SQL Server. Per informazioni su come installare Machine Learning Services, vedere la [guida all'installazione di Windows](../install/sql-machine-learning-services-windows-install.md) o la [guida all'installazione di Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). È anche possibile [abilitare Machine Learning Services in cluster Big Data di SQL Server](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- Machine Learning Services per SQL Server. Per informazioni su come installare Machine Learning Services, vedere la [guida all'installazione di Windows](../install/sql-machine-learning-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+- R Services per SQL Server 2016. Per informazioni su come installare R Services, vedere la [guida all'installazione di Windows](../install/sql-r-services-windows-install.md).
+::: moniker-end
 
-- È anche necessario uno strumento per l'esecuzione di query SQL che contengono script R. È possibile eseguire questi script usando qualsiasi strumento di gestione del database o di query, purché possa connettersi a un'istanza di SQL Server, nonché eseguire una query T-SQL o una stored procedure. In questo argomento di avvio rapido viene usato [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- Uno strumento per l'esecuzione di query SQL che contengono script R. In questo argomento di avvio rapido viene usato [Azure Data Studio](../../azure-data-studio/what-is.md).
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>Creare una stored procedure per generare numeri casuali
 
-Per semplicità, usare il pacchetto R `stats`, che viene installato e caricato per impostazione predefinita in Machine Learning Services per SQL Server con R installato. Il pacchetto contiene centinaia di funzioni per le attività statistiche comuni, tra cui la funzione `rnorm`, che genera una quantità specificata di numeri casuali usando la distribuzione normale, in base a una deviazione e a una media standard.
+Per semplicità, si userà il pacchetto `stats` di R, che viene installato e caricato per impostazione predefinita. Il pacchetto contiene centinaia di funzioni per le attività statistiche comuni, tra cui la funzione `rnorm`, che genera una quantità specificata di numeri casuali usando la distribuzione normale, in base a una deviazione e a una media standard.
 
 Ad esempio, il codice R seguente restituisce 100 numeri, in una media di 50, in base alla deviazione standard 3.
 
@@ -53,7 +70,7 @@ EXECUTE sp_execute_external_script
 
 Si vuole semplificare la generazione di un set diverso di numeri casuali?
 
-Questa operazione è facile se eseguita in combinazione con SQL Server. Si definisce una stored procedure che ottiene gli argomenti dall'utente e quindi si passano tali argomenti nello script R come variabili.
+Questa operazione è semplice se eseguita in combinazione con T-SQL. Si definisce una stored procedure che ottiene gli argomenti dall'utente e quindi si passano tali argomenti nello script R come variabili.
 
 ```sql
 CREATE PROCEDURE MyRNorm (
@@ -107,11 +124,7 @@ WITH RESULT SETS (([Col1] int not null));
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per creare un modello di Machine Learning usando R in SQL Server, seguire questo argomento di avvio rapido:
+Per creare un modello di Machine Learning usando R con Machine Learning in SQL, seguire questo argomento di avvio rapido:
 
 > [!div class="nextstepaction"]
-> [Creare un modello predittivo e assegnare punteggi in R con Machine Learning Services per SQL Server](quickstart-r-train-score-model.md)
-
-Per altre informazioni su Machine Learning Services per SQL Server, vedere:
-
-- [Che cos'è Machine Learning Services per SQL Server (Python e R)?](../sql-server-machine-learning-services.md)
+> [Creare e assegnare i punteggi a un modello predittivo in R con Machine Learning in SQL](quickstart-r-train-score-model.md)

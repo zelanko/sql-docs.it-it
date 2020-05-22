@@ -3,30 +3,42 @@ title: 'Guida introduttiva: Eseguire script Python'
 description: Eseguire un set di semplici script Python con Machine Learning Services per SQL Server. Informazioni su come usare la stored procedure sp_execute_external_script per eseguire lo script in un'istanza di SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/17/2020
 ms.topic: quickstart
-author: garyericson
-ms.author: garye
-ms.reviewer: davidph
+author: cawrites
+ms.author: chadam
+ms.reviewer: garye
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1ae25eeb4890057074f78ec6a62c251cd097e22e
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 6b15423d82a13485d343dc797bdf6e6efe25088f
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487383"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606451"
 ---
 # <a name="quickstart-run-simple-python-scripts-with-sql-server-machine-learning-services"></a>Guida introduttiva: Eseguire semplici script Python con Machine Learning Services per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+In questo argomento di avvio rapido verrà eseguito un set di semplici script Python con [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md) oppure in [cluster Big Data](../../big-data-cluster/machine-learning-services.md). Si apprenderà come usare la stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) per eseguire lo script in un'istanza di SQL Server.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 In questo argomento di avvio rapido verrà seguito un set di semplici script Python con [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md). Si apprenderà come usare la stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) per eseguire lo script in un'istanza di SQL Server.
+::: moniker-end
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- Questo argomento di avvio rapido richiede l'accesso a un'istanza di SQL Server con [Machine Learning Services per SQL Server](../install/sql-machine-learning-services-windows-install.md) con il linguaggio Python installato.
 
-- È anche necessario uno strumento per l'esecuzione di query SQL che contengono script Python. È possibile eseguire questi script usando qualsiasi strumento di gestione del database o di query, purché possa connettersi a un'istanza di SQL Server, nonché eseguire una query T-SQL o una stored procedure. In questo argomento di avvio rapido viene usato [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- Machine Learning Services per SQL Server. Per informazioni su come installare Machine Learning Services, vedere la [guida all'installazione di Windows](../install/sql-machine-learning-services-windows-install.md) o la [guida all'installazione di Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). È anche possibile [abilitare Machine Learning Services in cluster Big Data di SQL Server](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- Machine Learning Services per SQL Server. Per informazioni su come installare Machine Learning Services, vedere la [guida all'installazione di Windows](../install/sql-machine-learning-services-windows-install.md) o la [guida all'installazione di Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). È anche possibile [abilitare Machine Learning Services in cluster Big Data di SQL Server](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+
+- È anche necessario uno strumento per l'esecuzione di query SQL che contengono script Python. È possibile eseguire questi script usando qualsiasi strumento di gestione del database o di query, purché possa connettersi a un'istanza di SQL Server, nonché eseguire una query T-SQL o una stored procedure. In questo argomento di avvio rapido si usa [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio).
 
 ## <a name="run-a-simple-script"></a>Eseguire uno script semplice
 
@@ -43,7 +55,7 @@ d = a*b
 print(c, d)
 ```
 
-1. In **SQL Server Management Studio** aprire una nuova finestra di query connessa all'istanza di SQL Server.
+1. In **Azure Data Studio** aprire una nuova finestra di query connessa all'istanza di SQL Server.
 
 1. Passare lo script Python completo alla stored procedure `sp_execute_external_script`.
 
@@ -89,8 +101,9 @@ Gli input per la stored procedure `sp_execute_external_script` includono:
 |-|-|
 | @language | Definisce l'estensione del linguaggio da chiamare, in questo caso Python |
 | @script | Definisce i comandi passati al runtime Python<br>L'intero script Python deve essere incluso in questo argomento come testo Unicode. È anche possibile aggiungere il testo a una variabile di tipo **nvarchar** e quindi chiamare la variabile |
-| @input_data_1 | Dati restituiti dalla query, passati al runtime Python, che restituisce i dati a SQL Server come frame di dati |
-|WITH RESULT SETS | Clausola che definisce lo schema della tabella dati restituita per SQL Server, in questo caso aggiungendo "Hello World" come nome di colonna e **int** per il tipo di dati |
+| @input_data_1 | Dati restituiti dalla query, passati al runtime Python, che restituisce i dati come frame di dati |
+|WITH RESULT SETS | Clausola che definisce lo schema della tabella dati restituita per SQL Server, aggiungendo "Hello World" come nome di colonna e **int** per il tipo di dati |
+
 
 Il comando restituisce il testo seguente:
 
@@ -241,13 +254,8 @@ L'elenco proviene da `pkg_resources.working_set` in Python e viene restituito a 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per informazioni su come usare le strutture di dati quando si usa Python in Machine Learning Services per SQL Server, seguire questo argomento di avvio rapido:
+Per informazioni su come usare le strutture di dati quando si usa Python con Machine Learning in SQL, seguire questo argomento di avvio rapido:
 
 > [!div class="nextstepaction"]
 > [Avvio rapido: Strutture di dati e oggetti quando si usa Python in Machine Learning Services per SQL Server](quickstart-python-data-structures.md)
 
-Per altre informazioni sull'uso di Python in Machine Learning Services per SQL Server, vedere gli articoli seguenti:
-
-- [Scrivere funzioni Python avanzate con Machine Learning Services per SQL Server](quickstart-python-functions.md)
-- [Creare e assegnare i punteggi a un modello predittivo in Python con Machine Learning Services per SQL Server](quickstart-python-train-score-model.md)
-- [Che cos'è Machine Learning Services per SQL Server (Python e R)?](../sql-server-machine-learning-services.md)

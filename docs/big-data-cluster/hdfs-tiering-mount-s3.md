@@ -1,7 +1,7 @@
 ---
 title: Montare S3 per la suddivisione in livelli HDFS
 titleSuffix: SQL Server big data clusters
-description: Questo articolo illustra come configurare la suddivisione in livelli HDFS per montare un file system S3 esterno in HDFS in un'istanza di [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+description: Questo articolo illustra come configurare la suddivisione in livelli HDFS per montare un file system S3 esterno in HDFS in un cluster Big Data di SQL Server 2019.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 653f9a48c03df18fc0591f7bd8060d951567c779
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fce89b5c2ee40fc7229c0c330fefe9e253a4fdc6
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69652301"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606590"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Come montare S3 per la suddivisione in livelli HDFS in un cluster Big Data
 
 Le sezioni seguenti forniscono un esempio di come configurare la suddivisione in livelli HDFS con un'origine dati di archiviazione S3.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 - [Cluster Big Data distribuito](deployment-guidance.md)
 - [Strumenti per Big Data](deploy-big-data-tools.md)

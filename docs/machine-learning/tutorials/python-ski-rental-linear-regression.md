@@ -1,50 +1,59 @@
 ---
 title: 'Esercitazione su Python: Noleggi di sci'
-description: Nella terza parte di questa serie di esercitazioni in quattro parti si compilerà un modello di regressione lineare in Python per stimare il noleggio di sci con Machine Learning Services per SQL Server.
+titleSuffix: SQL machine learning
+description: In questa serie di esercitazioni in quattro parti si creerà un modello di regressione lineare in Python per stimare i noleggi di sci con Machine Learning in SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/02/2020
+ms.date: 04/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 877b9ece1fb88f8e46b4d986645fe051fba5fdd7
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: b34687440763f2c514016989542ae3f2d7c0e6ed
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487420"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606916"
 ---
-# <a name="python-tutorial-predict-ski-rental-with-linear-regression-in-sql-server-machine-learning-services"></a>Esercitazione su Python: Stimare il noleggio di sci con la regressione lineare in Machine Learning Services per SQL Server
+# <a name="python-tutorial-predict-ski-rental-with-linear-regression-with-sql-machine-learning"></a>Esercitazione su Python: Stimare il noleggio di sci con la regressione lineare con Machine Learning in SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In questa serie di esercitazioni in quattro parti si useranno Python e la regressione lineare in [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md) per stimare il numero di noleggi di sci. In questa esercitazione viene usato un [notebook Python in Azure Data Studio](../../azure-data-studio/sql-notebooks.md), ma è possibile usare anche un ambiente IDE (Integrated Development Environment) Python integrato.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+In questa serie di esercitazioni in quattro parti si useranno Python e la regressione lineare in [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md) oppure in [cluster Big Data](../../big-data-cluster/machine-learning-services.md) per stimare il numero di noleggi di sci. Questa esercitazione usa un [notebook Python in Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+In questa serie di esercitazioni in quattro parti si useranno Python e la regressione lineare in [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md) per stimare il numero di noleggi di sci. Questa esercitazione usa un [notebook Python in Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
+::: moniker-end
 
 Si supponga di essere i proprietari di un'agenzia di noleggio di sci e di voler stimare il numero di noleggi richiesti in una data futura. Queste informazioni consentiranno di preparare correttamente le scorte, il personale e le strutture.
 
-Nella prima parte di questa serie verranno configurati i prerequisiti. Nelle seconda e nella terza parte si svilupperanno alcuni script Python in un notebook Jupyter per preparare i dati ed eseguire il training di un modello di Machine Learning. Nella quarta parte verranno quindi eseguiti gli script Python in SQL Server mediante stored procedure T-SQL.
+Nella prima parte di questa serie verranno configurati i prerequisiti. Nelle seconda e nella terza parte si svilupperanno alcuni script Python in un notebook per preparare i dati ed eseguire il training di un modello di Machine Learning. Nella quarta parte verranno quindi eseguiti gli script Python in SQL Server mediante stored procedure T-SQL.
 
 In questo articolo si apprenderà come:
 
 > [!div class="checklist"]
 > * Importare un database di esempio in SQL Server 
 
-Nella [seconda parte](python-ski-rental-linear-regression-prepare-data.md) si apprenderà come caricare i dati da SQL Server in un frame di dati Python e come preparare i dati in Python.
+Nella [seconda parte](python-ski-rental-linear-regression-prepare-data.md) si apprenderà come caricare i dati da un database in un frame di dati Python e come preparare i dati in Python.
 
 Nella [terza parte](python-ski-rental-linear-regression-train-model.md) si apprenderà come eseguire il training di un modello di regressione lineare in Python.
 
-Nella [quarta parte](python-ski-rental-linear-regression-deploy-model.md) si apprenderà come archiviare il modello in SQL Server e creare stored procedure dagli script Python sviluppati nella seconda e nella terza parte. Le stored procedure verranno quindi eseguite in SQL Server per eseguire stime basate sui nuovi dati.
+Nelle [quarta parte](python-ski-rental-linear-regression-deploy-model.md) si apprenderà come archiviare il modello in un database e quindi creare le stored procedure dagli script Python sviluppati nella seconda e nella terza parte. Le stored procedure verranno quindi eseguite sul server per eseguire stime basate sui nuovi dati.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-* Machine Learning Services per SQL Server: per informazioni su come installare Machine Learning Services, vedere la [guida all'installazione di Windows](../install/sql-machine-learning-services-windows-install.md) o la [guida all'installazione di Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json).
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+* Machine Learning Services per SQL Server: per informazioni su come installare Machine Learning Services, vedere la [guida all'installazione di Windows](../install/sql-machine-learning-services-windows-install.md) o la [guida all'installazione di Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). È anche possibile [abilitare Machine Learning Services in cluster Big Data di SQL Server](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+* Machine Learning Services per SQL Server: per informazioni su come installare Machine Learning Services, vedere la [guida all'installazione di Windows](../install/sql-machine-learning-services-windows-install.md). 
+::: moniker-end
 
-* IDE Python: questa esercitazione usa un notebook Python in [Azure Data Studio](../../azure-data-studio/what-is.md). Per altre informazioni, vedere [Come usare i notebook in Azure Data Studio](../../azure-data-studio/sql-notebooks.md). 
+* IDE Python: questa esercitazione usa un notebook Python in [Azure Data Studio](../../azure-data-studio/what-is.md). Per altre informazioni, vedere [Come usare i notebook in Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
 
-    È anche possibile usare il proprio ambiente di sviluppo integrato di Python, ad esempio un notebook Jupyter o [Visual Studio Code](https://code.visualstudio.com/docs) con l'[estensione Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) e l'[estensione mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql). 
-
-* Strumento di query SQL: questa esercitazione presuppone che si usi [Azure Data Studio](../../azure-data-studio/what-is.md). È possibile usare anche [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) (SSMS).
+* Strumento di query SQL: questa esercitazione presuppone che si usi [Azure Data Studio](../../azure-data-studio/what-is.md).
 
 * Pacchetti Python aggiuntivi: gli esempi in questa serie di esercitazioni usano i seguenti pacchetti Python, che potrebbero essere installati o meno per impostazione predefinita:
 
@@ -63,6 +72,11 @@ Nella [quarta parte](python-ski-rental-linear-regression-deploy-model.md) si app
 
 Il database di esempio usato in questa esercitazione è stato salvato in un file di backup del database con estensione **bak** che è possibile scaricare e usare.
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+> [!NOTE]
+> Se si usa Machine Learning Services in cluster Big Data, vedere l'articolo su come [ripristinare un database nell'istanza master di un cluster Big Data di SQL Server](../../big-data-cluster/data-ingestion-restore-database.md).
+::: moniker-end
+
 1. Scaricare il file [TutorialDB.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/TutorialDB.bak).
 
 1. Seguire le istruzioni in [Ripristinare un database da un file di backup](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file) in Azure Data Studio usando i dettagli seguenti:
@@ -77,12 +91,12 @@ Il database di esempio usato in questa esercitazione è stato salvato in un file
    SELECT * FROM [dbo].[rental_data];
    ```
 
-Abilitare gli script esterni eseguendo i comandi SQL seguenti:
+1. Abilitare gli script esterni eseguendo i comandi SQL seguenti:
 
-  ```sql
-  sp_configure 'external scripts enabled', 1;
-  RECONFIGURE WITH override;
-  ```
+    ```sql
+    sp_configure 'external scripts enabled', 1;
+    RECONFIGURE WITH override;
+    ```
 
 ## <a name="next-steps"></a>Passaggi successivi
 

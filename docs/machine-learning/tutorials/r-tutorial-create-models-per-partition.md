@@ -9,12 +9,12 @@ ms.author: davidph
 author: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 997896520a72f7803e656a42d2e38ebc6bf59d3d
-ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
+ms.openlocfilehash: 9c45fa9db06980f05bdaf059aae857a36b326c24
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619664"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606683"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Esercitazione: Creare modelli basati su partizioni in R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ Per completare l'esercitazione è necessario quanto segue:
 
 + Istanza del motore di database di SQL Server 2019, con Machine Learning Services e integrazione di R.
 
-+ Nell'esercitazione viene usata la [connessione loopback per SQL Server da uno script R su ODBC](../connect/loopback-connection.md]. È quindi necessario [creare un account di accesso per SQLRUserGroup](../security/create-a-login-for-sqlrusergroup.md).
++ Nell'esercitazione viene usata la [connessione loopback per SQL Server da uno script R su ODBC](../connect/loopback-connection.md). È quindi necessario [creare un account di accesso per SQLRUserGroup](../security/create-a-login-for-sqlrusergroup.md).
 
 Controllare la versione eseguendo **`SELECT @@Version`** come query T-SQL in uno strumento di query.
 

@@ -1,25 +1,31 @@
 ---
 title: 'Esercitazione su Python: Distribuire il modello'
-description: Nell'ultima parte di questa serie di esercitazioni in quattro parti si distribuirà un modello Python per la stima dei noleggi di sci in un database di SQL Server usando Machine Learning Services.
+titleSuffix: SQL machine learning
+description: Nell'ultima parte di questa serie di esercitazioni in quattro parti si distribuirà un modello Python per la stima dei noleggi di sci in un database con Machine Learning in SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/02/2020
+ms.date: 04/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e78f099f108f9affa58f53d1ad46b802eae004dd
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1771cc70a2e5b36109ba028c86939ce66fa00993
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116484"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606733"
 ---
-# <a name="python-tutorial-deploy-a-linear-regression-model-to-sql-server-machine-learning-services"></a>Esercitazione su Python: Distribuire un modello di regressione lineare in Machine Learning Services per SQL Server
+# <a name="python-tutorial-deploy-a-linear-regression-model-with-sql-machine-learning"></a>Esercitazione su Python: Distribuire un modello di regressione lineare con Machine Learning in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Nell'ultima parte di questa serie di esercitazioni in quattro parti si distribuirà un modello di regressione lineare sviluppato in Python in un database SQL Server usando Machine Learning Services o cluster Big Data.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 Nell'ultima parte di questa serie di esercitazioni in quattro parti si distribuirà un modello di regressione lineare sviluppato in Python in un database SQL Server usando Machine Learning Services.
+::: moniker-end
 
 In questo articolo si apprenderà come:
 
@@ -31,7 +37,7 @@ In questo articolo si apprenderà come:
 
 Nella [prima parte](python-ski-rental-linear-regression.md) si è appreso come ripristinare il database di esempio.
 
-Nella [seconda parte](python-ski-rental-linear-regression-prepare-data.md) si è appreso come caricare i dati da SQL Server in un frame di dati Python e come preparare i dati in Python.
+Nella [seconda parte](python-ski-rental-linear-regression-prepare-data.md) si è appreso come caricare i dati da un database in un frame di dati Python e come preparare i dati in Python.
 
 Nella [terza parte](python-ski-rental-linear-regression-train-model.md) si è appreso come eseguire il training di un modello di Machine Learning di regressione lineare in Python.
 
@@ -119,11 +125,11 @@ Creare una tabella nel database TutorialDB e quindi salvare il modello nella tab
    CREATE PROCEDURE py_predict_rentalcount (@model varchar(100))
    AS
    BEGIN
-    DECLARE @py_model varbinary(max) = (select model from rental_py_models where model_name = @model);
+       DECLARE @py_model varbinary(max) = (select model from rental_py_models where model_name = @model);
    
-    EXECUTE sp_execute_external_script
-                @language = N'Python',
-                @script = N'
+       EXECUTE sp_execute_external_script
+                   @language = N'Python',
+                   @script = N'
    
    # Import the scikit-learn function to compute error.
    from sklearn.metrics import mean_squared_error
@@ -196,7 +202,7 @@ Creare una tabella nel database TutorialDB e quindi salvare il modello nella tab
 
    :::image type="content" source="media/python-tutorial-prediction-results.png" alt-text="Risultati della stima dalla stored procedure":::
 
-Sono state completate le operazioni di creazione, training e distribuzione di un modello in Machine Learning Services per SQL Server. Il modello è stato quindi usato in una stored procedure per stimare i valori in base ai nuovi dati.
+È stato creato un modello e ne è correttamente eseguito il training e la distribuzione. Il modello è stato quindi usato in una stored procedure per stimare i valori in base ai nuovi dati.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
@@ -207,6 +213,6 @@ Nella quarta parte di questa serie di esercitazioni sono stati completati i pass
 * Creare una stored procedure che esegue stime usando il modello
 * Eseguire il modello con nuovi dati
 
-Per altre informazioni sull'uso di Python in Machine Learning Services per SQL Server, vedere:
+Per altre informazioni sull'uso di Python con Machine Learning in SQL, vedere:
 
-+ [Esercitazioni di Python per Machine Learning Services per SQL Server](sql-server-python-tutorials.md)
++ [Esercitazioni di Python](python-tutorials.md)

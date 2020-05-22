@@ -1,51 +1,58 @@
 ---
 title: Esercitazioni di R
-description: Questo articolo descrive le esercitazioni e gli argomenti di avvio rapido di R per Machine Learning Services per SQL Server.
+titleSuffix: SQL machine learning
+description: Questo articolo descrive le esercitazioni di R per Machine Learning in SQL. Informazioni su come eseguire gli script e creare modelli di Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/13/2020
 ms.topic: tutorial
-author: dphansen
-ms.author: davidph
+author: cawrites
+ms.author: chadam
+ms.reviewer: garye, davidph
+ms.date: 05/04/2020
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 952a33eb5a160acae44b5d1ae674c75b8d74cca5
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 63c271c4e1d59c9446495607b42b0b5ad13ea246
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487290"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606923"
 ---
-# <a name="r-tutorials-for-sql-server-machine-learning-services"></a>Esercitazioni di R per Machine Learning Services per SQL Server
+# <a name="r-tutorials-for-sql-machine-learning"></a>Esercitazioni di R per Machine Learning in SQL
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Questo articolo descrive le esercitazioni e gli argomenti di avvio rapido di R per [Machine Learning Services in SQL Server](../sql-server-machine-learning-services.md) e in [cluster Big Data](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 Questo articolo descrive le esercitazioni e gli argomenti di avvio rapido di R per [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md).
-
-+ Informazioni su come eseguire script R.
-+ Compilare, eseguire il training e distribuire modelli R in SQL Server.
-+ Informazioni sui contesti di calcolo remoti e locali.
-+ Esplorare i pacchetti Microsoft R per le attività di data science e Machine Learning.
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+Questo articolo descrive le esercitazioni e gli argomenti di avvio rapido di R per [R Services per SQL Server 2016](../r/sql-server-r-services.md).
+::: moniker-end
 
 <a name="bkmk_sqltutorials"></a>
 
-## <a name="r-quickstarts-and-tutorials"></a>Argomenti di avvio rapido ed esercitazioni su R
+## <a name="r-tutorials"></a>Esercitazioni di R
 
-| Collegamento | Descrizione |
+| Esercitazione | Descrizione |
 |------|-------------|
-| [Avvio rapido: Creare ed eseguire script R semplici](quickstart-r-create-script.md) | Primo di una serie completa, in questo argomento di avvio rapido viene illustrata la sintassi di base per chiamare una funzione R usando un editor di query T-SQL, ad esempio SQL Server Management Studio. |
-| [Esercitazione: Analisi R nel database per data scientist](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | Destinata agli sviluppatori R che non hanno familiarità con SQL Server, questa esercitazione illustra come eseguire le principali attività di data science in SQL Server. Descrive come caricare e visualizzare dati, eseguire il training e il salvataggio di un modello in SQL Server e usare il modello per l'analisi predittiva. |
-| [Esercitazione: Analisi R nel database per sviluppatori SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md) | Fornisce le istruzioni per creare e distribuire una soluzione R completa usando solo strumenti [!INCLUDE[tsql](../../includes/tsql-md.md)]. Descrive nel dettaglio il passaggio di una soluzione all'ambiente di produzione. Si apprenderà come eseguire il wrapping del codice R in una stored procedure, come salvare un modello R in un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e come effettuare chiamate con parametri al modello R per la creazione di stime. |
-| [Esercitazione: Approfondimento di RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) | Spiega come usare le funzioni nei pacchetti RevoScaleR, nonché come spostare dati tra R e SQL Server e come cambiare il contesto di calcolo per adattarlo a un'attività specifica. Descrive inoltre come creare modelli e tracciati e come spostarli tra l'ambiente di sviluppo e il server di database. |
+| [Stimare il noleggio di sci con l'albero delle decisioni](r-predictive-model-introduction.md) | Usare R e un modello di albero delle decisioni per stimare il numero di noleggi di sci in futuro. Usare notebook in Azure Data Studio per preparare i dati ed eseguire il training del modello e T-SQL per distribuire il modello. |
+| [Categorizzazione dei clienti tramite clustering K-means](r-clustering-model-introduction.md) | Usare R per sviluppare e distribuire un modello di clustering K-Means per categorizzare i clienti. Usare notebook in Azure Data Studio per preparare i dati ed eseguire il training del modello e T-SQL per distribuire il modello. |
+| [Analisi R nel database per data scientist](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | Destinata agli sviluppatori R che non hanno familiarità con SQL Server, questa esercitazione illustra come eseguire le principali attività di data science in SQL Server. Descrive come caricare e visualizzare dati, eseguire il training e il salvataggio di un modello in SQL Server e usare il modello per l'analisi predittiva. |
+| [Analisi R nel database per sviluppatori SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md) | Fornisce le istruzioni per creare e distribuire una soluzione R completa usando solo strumenti [!INCLUDE[tsql](../../includes/tsql-md.md)]. Descrive nel dettaglio il passaggio di una soluzione all'ambiente di produzione. Si apprenderà come eseguire il wrapping del codice R in una stored procedure, come salvare un modello R in un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e come effettuare chiamate con parametri al modello R per la creazione di stime. |
 
-<a name ="bkmk_samples"></a>
+## <a name="r-quickstarts"></a>Argomenti di avvio rapido di R
 
-## <a name="code-samples"></a>Esempi di codice
+Se non si ha familiarità con Machine Learning in SQL, è possibile provare anche gli argomenti di avvio rapido di R.
 
-| Collegamento | Descrizione |
-|------|-------------|
-| [Creare un modello predittivo usando R e SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction) | Si descrive come una società di noleggio di sci potrebbe usare modelli di Machine Learning per stimare i noleggi futuri, in modo da aiutare il piano aziendale e il personale a soddisfare la domanda futura. |
-| [Eseguire il clustering dei clienti con R ed SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/customerclustering/) | Si ricorre all'apprendimento non supervisionato per classificare i clienti in base ai dati di vendita. |
+| Guida introduttiva | Descrizione |
+|-|-|
+| [Eseguire script R semplici](quickstart-r-create-script.md) | Informazioni di base su come chiamare R in T-SQL usando [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). |
+| [Strutture di dati e oggetti con R](quickstart-r-data-types-and-objects.md) | Descrive come SQL usa il linguaggio R per gestire strutture di dati. |
+| [Creare e assegnare i punteggi a un modello predittivo in R](quickstart-r-data-types-and-objects.md) | Illustra come creare, sottoporre a training e usare un modello R per eseguire stime in base ai nuovi dati. |
 
-## <a name="see-also"></a>Vedere anche
+## <a name="next-steps"></a>Passaggi successivi
 
-+ [Estensione R in SQL Server](../concepts/extension-r.md)
+Per informazioni più tecniche su R in SQL Server, vedere [Estensione del linguaggio R in SQL Server](../concepts/extension-r.md).
