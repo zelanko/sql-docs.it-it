@@ -22,7 +22,7 @@ ms.locfileid: "69028037"
 
   È possibile individuare la versione installata di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] nei modi seguenti:  
   
--   Chiamando il metodo [getDriverMajorVersion](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md), [getDriverMinorVersion](../../connect/jdbc/reference/getdrivermajorversion-method-sqlserverdatabasemetadata.md) o [getDriverVersion](../../connect/jdbc/reference/getdriverminorversion-method-sqlserverdatabasemetadata.md) di [SQLServerDatabaseMetaData](../../connect/jdbc/reference/getdriverversion-method-sqlserverdatabasemetadata.md).  
+-   Chiamando il metodo [getDriverMajorVersion](../../connect/jdbc/reference/getdrivermajorversion-method-sqlserverdatabasemetadata.md), [getDriverMinorVersion](../../connect/jdbc/reference/getdriverminorversion-method-sqlserverdatabasemetadata.md) o [getDriverVersion](../../connect/jdbc/reference/getdriverversion-method-sqlserverdatabasemetadata.md) di [SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md).  
   
 -   La versione viene visualizzata nel file readme.txt della distribuzione del prodotto.  
   

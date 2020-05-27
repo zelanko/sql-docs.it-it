@@ -60,7 +60,7 @@ WITH
  Introduce le clausole che definiscono la route da modificare.  
   
  SERVICE_NAME **='** _service\_name_ **'**  
- Specifica il nome del servizio remoto a cui la route fa riferimento. *service_name* deve corrispondere esattamente al nome usato dal servizio remoto. Per creare corrispondenza con [!INCLUDE[ssSB](../../includes/sssb-md.md)]service_name *,*  usa un confronto byte per byte. In altre parole, nel confronto viene fatta distinzione tra maiuscole e minuscole e non vengono considerate le regole di confronto correnti. Una route con nome di servizio **'SQL/ServiceBroker/BrokerConfiguration'** è una route per un servizio di configurazione di Service Broker. Per una route per questo servizio non è necessario specificare un'istanza di Service Broker.  
+ Specifica il nome del servizio remoto a cui la route fa riferimento. *service_name* deve corrispondere esattamente al nome usato dal servizio remoto. Per creare corrispondenza con *service_name*, [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa un confronto byte per byte. In altre parole, nel confronto viene fatta distinzione tra maiuscole e minuscole e non vengono considerate le regole di confronto correnti. Una route con nome di servizio **'SQL/ServiceBroker/BrokerConfiguration'** è una route per un servizio di configurazione di Service Broker. Per una route per questo servizio non è necessario specificare un'istanza di Service Broker.  
   
  Se la clausola SERVICE_NAME viene omessa, il nome del servizio per la route rimane invariato.  
   
@@ -99,9 +99,9 @@ INNER JOIN sys.service_broker_endpoints AS ssbe
 WHERE ssbe.name = N'MyServiceBrokerEndpoint';  
 ```  
   
- Se per il parametro **next_hop_address** di una route viene specificato il valore *'LOCAL'* , il messaggio viene recapitato a un servizio nell'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Se per il parametro *next_hop_address* di una route viene specificato il valore **'LOCAL'** , il messaggio viene recapitato a un servizio nell'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Se per il parametro **next_hop_address** di una route viene specificato il valore *'TRANSPORT'* , l'indirizzo di rete viene determinato in base all'indirizzo di rete nel nome del servizio. Per una route con valore **'TRANSPORT'** è possibile specificare un nome di servizio o un'istanza di Service Broker.  
+ Se per il parametro *next_hop_address* di una route viene specificato il valore **'TRANSPORT'** , l'indirizzo di rete viene determinato in base all'indirizzo di rete nel nome del servizio. Per una route con valore **'TRANSPORT'** è possibile specificare un nome di servizio o un'istanza di Service Broker.  
   
  Se il parametro *next_hop_address* corrisponde al server principale per un database mirror, è necessario specificare anche MIRROR_ADDRESS per il server mirror. In caso contrario non può venire eseguito il failover automatico della route al server mirror.  
   
@@ -133,7 +133,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  Le clausole che non sono specificate nel comando ALTER ROUTE rimangono invariate. Non è possibile pertanto eseguire il comando ALTER per specificare che la route non scade, che corrisponde a un nome di servizio o che corrisponde a un'istanza di Service Broker. Per modificare queste caratteristiche di una route è necessario eliminare la route esistente e creare una nuova route con le nuove informazioni.  
   
- Se per il parametro **next_hop_address** di una route viene specificato il valore *'TRANSPORT'* , l'indirizzo di rete viene determinato in base all'indirizzo di rete nel nome del servizio. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elabora correttamente i nomi di servizi che iniziano con un indirizzo di rete in un formato valido per *next_hop_address*. I servizi con nomi che contengono indirizzi di rete validi verranno indirizzati all'indirizzo di rete indicato nel nome del servizio.  
+ Se per il parametro *next_hop_address* di una route viene specificato il valore **'TRANSPORT'** , l'indirizzo di rete viene determinato in base all'indirizzo di rete nel nome del servizio. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elabora correttamente i nomi di servizi che iniziano con un indirizzo di rete in un formato valido per *next_hop_address*. I servizi con nomi che contengono indirizzi di rete validi verranno indirizzati all'indirizzo di rete indicato nel nome del servizio.  
   
  La tabella di routing può includere qualsiasi numero di route che specificano lo stesso servizio, indirizzo di rete e/o identificatore dell'istanza di Service Broker. In questo caso, [!INCLUDE[ssSB](../../includes/sssb-md.md)] sceglie una route utilizzando una procedura progettata in modo da individuare la corrispondenza più esatta tra le informazioni specificate nella conversazione e le informazioni della tabella di routing.  
   

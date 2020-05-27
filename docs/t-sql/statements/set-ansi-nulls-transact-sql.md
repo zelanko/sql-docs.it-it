@@ -107,7 +107,7 @@ SELECT @ANSI_NULLS AS ANSI_NULLS;
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente vengono usati gli operatori di confronto Uguale a (`=`) e Diverso da (`<>`) per confrontare i valori `NULL` e non Null in una tabella. L'esempio evidenzia anche il fatto che l'impostazione dell'opzione `IS NULL` non influisce su `SET ANSI_NULLS`.  
+ Nell'esempio seguente vengono usati gli operatori di confronto Uguale a (`=`) e Diverso da (`<>`) per confrontare i valori `NULL` e non Null in una tabella. L'esempio evidenzia anche il fatto che l'impostazione dell'opzione `SET ANSI_NULLS` non influisce su `IS NULL`.  
   
 ```sql  
 -- Create table t1 and insert values.  

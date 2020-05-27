@@ -180,7 +180,7 @@ GO
 ```  
   
 ### <a name="c-revoking-impersonate-permission-on-a-user-from-an-application-role"></a>C. Revoca dell'autorizzazione IMPERSONATE per un utente a un ruolo applicazione  
- Nell'esempio seguente viene revocata l'autorizzazione `IMPERSONATE` per l'utente `HamithaL` al ruolo applicazione [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] del database `AccountsPayable17`.  
+ Nell'esempio seguente viene revocata l'autorizzazione `IMPERSONATE` per l'utente `HamithaL` al ruolo applicazione `AccountsPayable17` del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   

@@ -113,7 +113,7 @@ GO
 ```  
   
 ### <a name="b-revoking-take-ownership-permission-with-the-cascade-option"></a>B. Revoca dell'autorizzazione TAKE OWNERSHIP con l'opzione CASCADE  
- Nell'esempio seguente viene revocata l'autorizzazione `TAKE OWNERSHIP` per l'endpoint `Shipping83` all'utente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di `PKomosinski` e a tutte le entità a cui l'utente `PKomosinski` ha concesso l'autorizzazione `TAKE OWNERSHIP` per `Shipping83`.  
+ Nell'esempio seguente viene revocata l'autorizzazione `TAKE OWNERSHIP` per l'endpoint `Shipping83` all'utente `PKomosinski` di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a tutte le entità a cui l'utente `PKomosinski` ha concesso l'autorizzazione `TAKE OWNERSHIP` per `Shipping83`.  
   
 ```  
 USE master;  

@@ -191,7 +191,7 @@ ALTER QUEUE ExpenseQueue
 ```  
   
 ### <a name="c-changing-the-number-of-queue-readers"></a>C. Modifica del numero di lettori di coda  
- Nell'esempio seguente il numero massimo di istanze della stored procedure avviate da `7` per la coda viene impostato su [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
+ Nell'esempio seguente il numero massimo di istanze della stored procedure avviate da [!INCLUDE[ssSB](../../includes/sssb-md.md)] per la coda viene impostato su `7`.  
   
 ```  
 ALTER QUEUE ExpenseQueue WITH ACTIVATION (MAX_QUEUE_READERS = 7) ;  

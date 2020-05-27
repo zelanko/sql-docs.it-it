@@ -35,7 +35,7 @@ public boolean getSendTimeAsDatetime();
  **true** se i valori java.sql.Time verranno inviati al server come tipo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]datetime**di**. **false** se i valori java.sql.Time verranno inviati al server come tipo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]time**di**.  
   
 ## <a name="remarks"></a>Osservazioni  
- Per altre informazioni sulla proprietà di connessione [sendTimeAsDatetime](../../../connect/jdbc/setting-the-connection-properties.md), vedere **Impostazione delle proprietà di connessione**.  
+ Per altre informazioni sulla proprietà di connessione **sendTimeAsDatetime**, vedere [Impostazione delle proprietà di connessione](../../../connect/jdbc/setting-the-connection-properties.md).  
   
  L'oggetto [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md) consente di impostare la proprietà di connessione **sendTimeAsDatetime** a livello di codice.  
   

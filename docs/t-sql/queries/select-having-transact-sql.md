@@ -60,7 +60,7 @@ ORDER BY SalesOrderID ;
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Nell'esempio seguente viene usata una clausola `HAVING` per recuperare dalla tabella `SalesAmount` il valore totale di `80000` che supera `OrderDateKey` per ogni `FactInternetSales`.  
+ Nell'esempio seguente viene usata una clausola `HAVING` per recuperare dalla tabella `FactInternetSales` il valore totale di `SalesAmount` che supera `80000` per ogni `OrderDateKey`.  
   
 ```sql
 -- Uses AdventureWorks  

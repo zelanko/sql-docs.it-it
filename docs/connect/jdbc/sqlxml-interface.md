@@ -21,7 +21,7 @@ ms.locfileid: "69027695"
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Con il driver JDBC viene fornito supporto per l'API di JDBC 4.0, in cui viene presentata l'interfaccia java.sql.SQLXML. Tale interfaccia definisce i metodi per interagire e modificare i dati XML. Il tipo di dati **SQLXML** viene mappato sul tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**xml**.  
+Con il driver JDBC viene fornito supporto per l'API di JDBC 4.0, in cui viene presentata l'interfaccia java.sql.SQLXML. Tale interfaccia definisce i metodi per interagire e modificare i dati XML. Il tipo di dati **SQLXML** corrisponde al tipo di dati **xml**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 L'interfaccia SQLXML offre metodi per accedere al valore XML come **Stringa**, **Lettore** o **Scrittore** oppure come **Flusso**. È inoltre possibile accedere al valore XML tramite **Origine** oppure impostarlo come **Risultato**, utilizzati con le API dei parser XML, tra cui Document Object Model (DOM), Simple API for XML (SAX) e Streaming API for XML (StAX), nonché con trasformazioni XSLT e XPath.  
   

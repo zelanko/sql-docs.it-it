@@ -274,7 +274,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  Nello schema XSD si noti quanto segue:  
   
--   ListPrice e DealerPrice sono dello stesso tipo, `money`ed entrambi possono essere NULL nella tabella. Dato che non possono essere restituiti nel codice XML risultante, nella dichiarazione del tipo complesso dell'elemento <`Price`> esiste pertanto un solo elemento figlio <`row`> con minOccurs=0 e maxOccurs=2.  
+-   ListPrice e DealerPrice sono dello stesso tipo, `money`ed entrambi possono essere NULL nella tabella. Dato che non possono essere restituiti nel codice XML risultante, nella dichiarazione del tipo complesso dell'elemento <`row`> esiste pertanto un solo elemento figlio <`Price`> con minOccurs=0 e maxOccurs=2.  
   
 -   Poiché il valore `DealerPrice` è NULL nella tabella, nel risultato viene restituito solo `ListPrice` come elemento <`Price`>. Se si aggiunge il parametro `XSINIL` alla direttiva ELEMENTS, si otterranno entrambi gli elementi con il valore `xsi:nil` impostato su TRUE per l'elemento <`Price`> corrispondente a DealerPrice. Si otterranno inoltre due elementi figlio <`Price`> nella definizione del tipo complesso <`row`> dello schema XSD inline, con l'attributo `nillable` impostato su TRUE per entrambi. Di seguito è riportato un frammento che rappresenta un risultato parziale:  
   

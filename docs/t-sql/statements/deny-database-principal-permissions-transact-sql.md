@@ -172,7 +172,7 @@ GO
 ```  
   
 ### <a name="c-denying-impersonate-permission-on-a-user-to-an-application-role"></a>C. Negazione dell'autorizzazione IMPERSONATE per un utente a un ruolo applicazione  
- Nell'esempio seguente viene negata l'autorizzazione `IMPERSONATE` per l'utente `HamithaL` al ruolo applicazione [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] del database `AccountsPayable17`.  
+ Nell'esempio seguente viene negata l'autorizzazione `IMPERSONATE` per l'utente `HamithaL` al ruolo applicazione `AccountsPayable17` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   

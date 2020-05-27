@@ -291,7 +291,7 @@ SqlConnection closed.
 ```  
   
 > [!NOTE]  
->  Il supporto del tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]xml**in** consente di richiedere che il risultato di una query FOR XML venga restituito come tipo di dati **xml** invece che come dati tipizzati di stringa o immagine, specificando la [direttiva TYPE](../../relational-databases/xml/type-directive-in-for-xml-queries.md). L'uso della direttiva TYPE nelle query FOR XML consente di ottenere l'accesso a livello di programmazione ai risultati FOR XML, in modo analogo a quanto illustrato in [Utilizzo di dati XML nelle applicazioni](../../relational-databases/xml/use-xml-data-in-applications.md).  
+>  Il supporto del tipo di dati **xml** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di richiedere che il risultato di una query FOR XML venga restituito come tipo di dati **xml** invece che come dati tipizzati di stringa o immagine, specificando la [direttiva TYPE](../../relational-databases/xml/type-directive-in-for-xml-queries.md). L'uso della direttiva TYPE nelle query FOR XML consente di ottenere l'accesso a livello di programmazione ai risultati FOR XML, in modo analogo a quanto illustrato in [Utilizzo di dati XML nelle applicazioni](../../relational-databases/xml/use-xml-data-in-applications.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  

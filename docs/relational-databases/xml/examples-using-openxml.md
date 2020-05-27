@@ -282,7 +282,7 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- A **CustomerID**viene applicato il mapping incentrato sugli attributi. Nell'elemento < **> non è presente l'attributo** ContactName`Customer`, quindi verrà applicato il mapping incentrato sugli elementi.  
+ A **CustomerID**viene applicato il mapping incentrato sugli attributi. Nell'elemento <`Customer`> non è presente l'attributo **ContactName**, quindi verrà applicato il mapping incentrato sugli elementi.  
   
 ### <a name="d-specifying-the-text-xpath-function-as-colpattern"></a>D. Impostazione della funzione XPath text() come parametro ColPattern  
  Il documento XML utilizzato nell'esempio è costituito da elementi <`Customer`> e <`Order`>. L'istruzione OPENXML recupera un set di righe composto dall'attributo **oid** dell'elemento <`Order`>, dall'ID dell'elemento padre del nodo identificato da *rowpattern* e dalla stringa del valore foglia del contenuto dell'elemento.  

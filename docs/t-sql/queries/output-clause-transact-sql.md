@@ -81,7 +81,7 @@ ms.locfileid: "75952443"
   
  Se non si specifica *column_list*, la variabile **table** deve avere lo stesso numero di colonne del set dei risultati OUTPUT. Le eccezioni sono le colonne calcolate e Identity, le quali devono essere ignorate. Se *column_list* viene specificato, le colonne omesse devono consentire i valori Null oppure devono avere valori predefiniti assegnati.  
   
- Per altre informazioni sulle variabili **table**, vedere [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md).  
+ Per altre informazioni sulle variabili [table](../../t-sql/data-types/table-transact-sql.md), vedere **table &#40;Transact-SQL&#41;** .  
   
  *output_table*  
  Specifica una tabella in cui vengono inserite le righe restituite invece di essere restituite al chiamante. *output_table* può essere una tabella temporanea.  

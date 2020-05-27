@@ -48,7 +48,7 @@ Per ottenere ulteriori dettagli sull'errore generato dal server, è possibile us
 
 -   `SQLServerError.getLineNumber()` restituisce il numero di riga nel batch dei comandi Transact-SQL o nella stored procedure che ha generato l'errore.
   
- Nell'esempio seguente viene passata alla funzione una connessione aperta al database di esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] e viene costruita un'istruzione SQL in formato non corretto che non contiene la clausola FROM. L'istruzione viene quindi eseguita con conseguente elaborazione di un'eccezione SQL.  
+ Nell'esempio seguente viene passata alla funzione una connessione aperta al database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene costruita un'istruzione SQL in formato non corretto che non contiene la clausola FROM. L'istruzione viene quindi eseguita con conseguente elaborazione di un'eccezione SQL.  
   
  [!code[JDBC#HandlingErrors1](../../connect/jdbc/codesnippet/Java/handling-errors_1.java)]  
   
