@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: 49ce2094-c4dc-4e46-8cef-c17c5db084ca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a58f7f8620924d4f707fe61c45ae87e19737471f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a060efe0c4d6a3ed34d59d755398e0079402cc4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070166"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547413"
 ---
 # <a name="review-aggregation-usage-usage-based-optimiation-wizard"></a>Controlla utilizzo aggregazioni (Ottimizzazione guidata basata sulle statistiche di utilizzo)
   Utilizzare la pagina **Controlla utilizzo aggregazioni** per configurare le impostazioni di utilizzo delle aggregazioni.  
   
 ## <a name="options"></a>Opzioni  
- **Predefinita**  
+ **Default**  
  Selezionare per impostare l'impostazione di utilizzo delle aggregazioni per l'attributo su Predefinito. Con questa impostazione, la progettazione applica una regola predefinita in base al tipo di attributo e di dimensione.  
   
  **Completo**  
@@ -38,7 +37,7 @@ ms.locfileid: "66070166"
  **Imposta come predefinito per tutti**  
  Selezionare per impostare le impostazioni  di utilizzo delle aggregazioni per tutti gli attributi su Predefinito.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto della progettazione guidata aggregazioni](aggregation-design-wizard-f1-help.md)   
  [Procedure guidate di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-wizards-multidimensional-data.md)  
   

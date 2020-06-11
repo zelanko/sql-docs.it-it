@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4ccdabea-9c4d-460d-ba78-d23068143696
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a508cbfb3d5a348fa07e33b686359f5f0d5531a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 201ff28999efb006b80157125c85242d538d756a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076743"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537103"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>Modificare le proprietà in una vista origine dati (Analysis Services)
   Dopo aver definito una vista origine dati mediante la Creazione guidata vista origine dati e aver aggiunto tabelle, viste, calcoli denominati e query denominate alla vista origine dati, può rivelarsi utile modificare le proprietà relative a:  
@@ -79,7 +78,7 @@ ms.locfileid: "66076743"
 |Length|Specifica la lunghezza massima della colonna, in base ai dati nella colonna della vista o della tabella sottostante.|  
 |Nome|Specifica il nome della colonna sottostante oppure il nome del calcolo denominato. La proprietà **Name** viene usata dagli oggetti di data mining e OLAP durante la definizione degli attributi in base a calcoli denominati. Questa proprietà è modificabile soltanto per calcoli denominati.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Viste origine dati in modelli multidimensionali](data-source-views-in-multidimensional-models.md)   
  [Utilizzare diagrammi in Progettazione vista origine dati &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   

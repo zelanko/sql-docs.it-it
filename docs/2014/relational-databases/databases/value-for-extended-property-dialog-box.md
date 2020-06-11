@@ -15,17 +15,17 @@ ms.assetid: cf0ba215-cf83-48e0-bd98-a8ddc8810eab
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ac8dd7682ecfe8df3b317bba578bca8358b9b11
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61351e04ef5100e203ff0be098eddecb0500663a
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916503"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859263"
 ---
 # <a name="value-for-extended-property-dialog-box"></a>Valore per proprietà estesa - finestra di dialogo
   Usare la finestra di dialogo **Valore per** *\<<nome proprietà* per immettere o visualizzare un valore. È possibile accedere a questa finestra di dialogo da diverse posizioni.  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco elementi dell'interfaccia utente  
  **Nome proprietà estesa**  
  Nome della proprietà estesa visualizzata o impostata.  
   

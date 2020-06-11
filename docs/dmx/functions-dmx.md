@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f68a66e778d44059a83ca6eca3cee35b4dffca9c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ad02b8414f2b59bf8e226b8d3d2cbbc05f161d9c
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892758"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670186"
 ---
 # <a name="functions-dmx"></a>Funzioni (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Quando si utilizza DMX (Data Mining Extensions) per eseguire query sugli [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]oggetti in, è possibile utilizzare le funzioni per restituire più informazioni rispetto ai soli valori delle colonne del modello di data mining o del set di dati di input. È ad esempio possibile utilizzare query DMX per ottenere sia il valore stimato di una colonna, sia la probabilità che tale stima sia corretta. Oltre alle funzioni DMX è possibile utilizzare anche stored procedure e funzioni di Microsoft Visual Basic, Applications Edition (VBA) e Microsoft Excel.  
+  Quando si utilizza DMX (Data Mining Extensions) per eseguire query sugli oggetti in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , è possibile utilizzare le funzioni per restituire più informazioni rispetto ai soli valori delle colonne del modello di data mining o del set di dati di input. È ad esempio possibile utilizzare query DMX per ottenere sia il valore stimato di una colonna, sia la probabilità che tale stima sia corretta. Oltre alle funzioni DMX è possibile utilizzare anche stored procedure e funzioni di Microsoft Visual Basic, Applications Edition (VBA) e Microsoft Excel.  
   
 ## <a name="dmx-functions"></a>Funzioni DMX  
  È possibile utilizzare funzioni DMX per eseguire le attività seguenti:  

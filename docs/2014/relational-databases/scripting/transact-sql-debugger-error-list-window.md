@@ -15,12 +15,12 @@ ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c88fb6beda0bef5a9e3d1980c1ffa78ed4944b70
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b4ee09b1cd960a58dbf26ecc1b1cc898af4fad96
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718408"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83857845"
 ---
 # <a name="error-list-window-management-studio"></a>Finestra Elenco errori (Management Studio)
   La finestra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Elenco errori**di** mostra gli errori semantici e di sintassi generati dal codice IntelliSense nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -67,7 +67,7 @@ ms.locfileid: "82718408"
 > [!NOTE]  
 >  **Elenco errori** visualizza solo gli errori dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , non gli errori degli editor MDX, DMX o XML/A. Questi errori vengono visualizzati nella scheda **Messaggi** dei rispettivi editor.  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco elementi dell'interfaccia utente  
  All'apertura di **Elenco errori** le informazioni sono visualizzate nelle colonne seguenti:  
   
  **Ordine predefinito**  

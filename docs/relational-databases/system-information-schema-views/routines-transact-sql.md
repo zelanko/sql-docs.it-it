@@ -19,12 +19,12 @@ ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ec3836db241320beabfbd4672ffad9b22ccaf58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e302d454ba0bf243f702b90b24cf7076ed97cb6
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078518"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669460"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,10 +39,10 @@ ms.locfileid: "68078518"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |SPECIFIC_CATALOG|**nvarchar (** 128 **)**|Nome specifico del catalogo. Questo nome corrisponde a ROUTINE_CATALOG.|  
-|SPECIFIC_SCHEMA|**nvarchar (** 128 **)**|Nome specifico dello schema.<br /><br /> ** \* Importante \* \* ** Non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
+|SPECIFIC_SCHEMA|**nvarchar (** 128 **)**|Nome specifico dello schema.<br /><br /> Importante non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. ** \* \* \* \* ** INFORMATION_SCHEMA visualizzazioni rappresentano solo un subset dei metadati di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
 |SPECIFIC_NAME|**nvarchar (** 128 **)**|Nome specifico del catalogo. Questo nome corrisponde a ROUTINE_NAME.|  
 |ROUTINE_CATALOG|**nvarchar (** 128 **)**|Nome del catalogo della funzione.|  
-|ROUTINE_SCHEMA|**nvarchar (** 128 **)**|Nome dello schema che contiene la funzione.<br /><br /> ** \* Importante \* \* ** Non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
+|ROUTINE_SCHEMA|**nvarchar (** 128 **)**|Nome dello schema che contiene la funzione.<br /><br /> Importante non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. ** \* \* \* \* ** INFORMATION_SCHEMA visualizzazioni rappresentano solo un subset dei metadati di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
 |ROUTINE_NAME|**nvarchar (** 128 **)**|Nome della funzione.|  
 |ROUTINE_TYPE|**nvarchar (** 20 **)**|Restituisce PROCEDURE per le stored procedure e FUNCTION per le funzioni.|  
 |MODULE_CATALOG|**nvarchar (** 128 **)**|NULL Riservato per utilizzi futuri.|  

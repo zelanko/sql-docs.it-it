@@ -1,7 +1,7 @@
 ---
 title: sys. Objects (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/30/2017
+ms.date: 05/20/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: f8d6163a-2474-410c-a794-997639f31b3b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0673c55c64c623bd112cbf63c50bc803764ce04c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: beede3f42597a6b3c7acc6f5bc5a57bc070d0eba
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825028"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83732689"
 ---
 # <a name="sysobjects-transact-sql"></a>sys.objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "82825028"
 |tipo|**char(2)**|Tipo di oggetto:<br /><br /> AF = funzione di aggregazione (CLR)<br /><br /> C = vincolo CHECK<br /><br /> D = DEFAULT (vincolo o valore autonomo)<br /><br /> F = vincolo FOREIGN KEY<br /><br /> FN = funzione scalare SQL<br /><br /> FS = funzione scalare di assembly (CLR)<br /><br /> FT = funzione valutata a livello di tabella assembly (CLR)<br /><br /> IF = funzione SQL inline valutata a livello di tabella<br /><br /> IT = tabella interna<br /><br /> P = stored procedure SQL<br /><br /> PC = stored procedure di assembly (CLR)<br /><br /> PG = guida di piano<br /><br /> PK = vincolo PRIMARY KEY<br /><br /> R = regola (tipo obsoleto, autonoma)<br /><br /> RF = procedura-filtro-replica<br /><br /> S = tabella di base di sistema<br /><br /> SN = sinonimo<br /><br /> SO = oggetto sequenza<br /><br /> U = tabella (definita dall'utente)<br /><br /> V = vista<br /><br /> EC = vincolo Edge <br /><br /> <br /><br /> **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> <br /><br /> SQ = coda di servizio<br /><br /> TA = trigger DML assembly (CLR)<br /><br /> TF = funzione valutata a livello di tabella SQL<br /><br /> TR = trigger DML SQL<br /><br /> TT = tipo tabella<br /><br /> UQ = vincolo UNIQUE<br /><br /> X = stored procedure estesa<br /><br /> <br /><br /> **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] , [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] .<br /><br /> <br /><br /> ET = tabella esterna|  
 |type_desc|**nvarchar(60)**|Descrizione del tipo di oggetto:<br /><br /> AGGREGATE_FUNCTION<br /><br /> CHECK_CONSTRAINT<br /><br /> CLR_SCALAR_FUNCTION<br /><br /> CLR_STORED_PROCEDURE<br /><br /> CLR_TABLE_VALUED_FUNCTION<br /><br /> CLR_TRIGGER<br /><br /> DEFAULT_CONSTRAINT<br /><br /> EXTENDED_STORED_PROCEDURE<br /><br /> FOREIGN_KEY_CONSTRAINT<br /><br /> INTERNAL_TABLE<br /><br /> PLAN_GUIDE<br /><br /> PRIMARY_KEY_CONSTRAINT<br /><br /> REPLICATION_FILTER_PROCEDURE<br /><br /> RULE<br /><br /> SEQUENCE_OBJECT<br /><br /> <br /><br /> **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> <br /><br /> SERVICE_QUEUE<br /><br /> SQL_INLINE_TABLE_VALUED_FUNCTION<br /><br /> SQL_SCALAR_FUNCTION<br /><br /> SQL_STORED_PROCEDURE<br /><br /> SQL_TABLE_VALUED_FUNCTION<br /><br /> SQL_TRIGGER<br /><br /> SYNONYM<br /><br /> SYSTEM_TABLE<br /><br /> TABLE_TYPE<br /><br /> UNIQUE_CONSTRAINT<br /><br /> USER_TABLE<br /><br /> VIEW|  
 |create_date|**datetime**|Data di creazione dell'oggetto.|  
-|modify_date|**datetime**|Data dell'ultima modifica apportata all'oggetto mediante un'istruzione ALTER. Se l'oggetto è una tabella o una vista, modify_date viene modificata anche quando si crea o si modifica un indice cluster nella tabella o nella vista.|  
+|modify_date|**datetime**|Data dell'ultima modifica apportata all'oggetto mediante un'istruzione ALTER. Se l'oggetto è una tabella o una vista, modify_date cambia anche quando si crea o si modifica un indice nella tabella o nella vista.|  
 |is_ms_shipped|**bit**|Oggetto creato da un componente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interno.|  
 |is_published|**bit**|L'oggetto viene pubblicato.|  
 |is_schema_published|**bit**|Viene pubblicato solo lo schema dell'oggetto.|  
@@ -58,7 +58,7 @@ ms.locfileid: "82825028"
 ## <a name="remarks"></a>Commenti  
  È possibile applicare le funzioni predefinite [object_id](../../t-sql/functions/object-id-transact-sql.md), [object_name](../../t-sql/functions/object-name-transact-sql.md)e [OBJECTPROPERTY](../../t-sql/functions/objectproperty-transact-sql.md)() agli oggetti visualizzati in sys. Objects.  
   
- È disponibile una versione di questa visualizzazione con lo stesso schema, denominato [sys. system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md), che Mostra gli oggetti di sistema. È disponibile un'altra visualizzazione denominata [sys. all_objects](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md) che Mostra gli oggetti di sistema e utente. Le tre viste del catalogo hanno tutte la stessa struttura.  
+ È disponibile una versione di questa visualizzazione con lo stesso schema, denominato [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md), che Mostra gli oggetti di sistema. È disponibile un'altra visualizzazione denominata [sys. all_objects](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md) che Mostra gli oggetti di sistema e utente. Le tre viste del catalogo hanno tutte la stessa struttura.  
   
  In questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un indice esteso, ad esempio un indice XML o un indice spaziale, è considerato una tabella interna in sys.objects (type = IT e type_desc = INTERNAL_TABLE). Per un indice esteso:  
   
@@ -163,7 +163,7 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys. all_objects &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md)   
- [sys. system_objects &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
+ [sys.system_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
  [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)   
  [Viste del catalogo oggetti &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Domande frequenti sull'esecuzione di query sul catalogo di sistema SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   

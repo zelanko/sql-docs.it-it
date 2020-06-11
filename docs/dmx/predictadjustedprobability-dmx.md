@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c2ae90886d6469802543f62bf5636ccaafeb32fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 610d304f2634a4de8f8578fff3258f4b1f2dbc67
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68008095"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669289"
 ---
 # <a name="predictadjustedprobability-dmx"></a>PredictAdjustedProbability (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,14 +33,14 @@ PredictAdjustedProbability(<scalar column reference>, [<predicted state>])
 ## <a name="return-type"></a>Tipo restituito  
  Valore scalare.  
   
-## <a name="remarks"></a>Osservazioni  
- Se lo stato stimato viene omesso, verrà utilizzato lo stato con la più alta probabilità stimabile, escludendo il bucket degli stati mancanti. Per includere il bucket degli stati mancanti, impostare \<lo stato stimato> su **INCLUDE_NULL**.  
+## <a name="remarks"></a>Commenti  
+ Se lo stato stimato viene omesso, verrà utilizzato lo stato con la più alta probabilità stimabile, escludendo il bucket degli stati mancanti. Per includere il bucket degli stati mancanti, impostare lo \< stato stimato> su **INCLUDE_NULL**.  
   
- Per restituire la probabilità adattata per gli stati mancanti, impostare \<lo stato stimato> su null.  
+ Per restituire la probabilità adattata per gli stati mancanti, impostare lo \< stato stimato> su null.  
   
- La funzione **PredictAdjustedProbability** è un' [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] estensione del OLE DB [!INCLUDE[msCoName](../includes/msconame-md.md)] per la specifica di data mining.  
+ La funzione **PredictAdjustedProbability** è un' [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] estensione del [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB per la specifica di data mining.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene utilizzato un natural prediction join per determinare la probabilità che un individuo sia un acquirente di biciclette sulla base del modello di data mining TM Decision Tree e la probabilità adattata per la stima.  
   
 ```  

@@ -12,17 +12,17 @@ ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bae94dfd09495d271b668390b17059e067f092c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e119a0f4423b07a4c97339d843fbc60181886eb3
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66107622"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858593"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>Finestra di dialogo Opzioni Generatore report, Impostazioni (Generatore report)
   Fare clic sul pulsante **Generatore report** , quindi fare clic su **Opzioni** per impostare le opzioni per la visualizzazione dei file e delle connessioni recenti. È anche possibile modificare il server di report predefinito o aggiungerne uno se tale server non è disponibile.  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco elementi dell'interfaccia utente  
  **Usa questo server di report o sito di SharePoint per impostazione predefinita**  
  È possibile che l'amministratore abbia configurato questa opzione. Il valore può essere un URL ben formato che inizia con http:// o https://. Questa impostazione determina le connessioni all'origine dati che verranno visualizzate per impostazione predefinita nelle procedure guidate Nuova tabella o matrice e Nuovo grafico. I report verranno inoltre elaborati su questo server e sarà possibile fare riferimento alle risorse dal server.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66107622"
  **Cancella tutti gli elenchi di elementi recenti**  
  Cancellare tutti gli elenchi correnti di siti e server, connessioni ai set di dati condivisi e alle origini dati nonché documenti recenti.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

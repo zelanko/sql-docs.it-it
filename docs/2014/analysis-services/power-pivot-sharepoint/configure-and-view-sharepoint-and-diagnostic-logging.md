@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2f05edb30344b63781a89540ade8de4743bb715e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 360a8b93c20dd57d3dd3d382c843a2f65d5f3c27
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071850"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547583"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>Configurare e visualizzare i file di log di SharePoint e la registrazione diagnostica (PowerPivot per SharePoint)
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] vengono registrati in file di log di SharePoint. Usare le informazioni in questo argomento per configurare i livelli di registrazione e visualizzare le informazioni sui file di log. È possibile controllare quali eventi server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] vengono registrati nel file. È inoltre possibile controllare la gravità di messaggi registrati. Per altre informazioni, vedere [configurare la raccolta dati di utilizzo per &#40;PowerPivot per SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
@@ -118,13 +117,13 @@ ms.locfileid: "66071850"
   
 |Process|Area|Category|Level|Message|Dettagli|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
-|w3wp.exe|Servizio PowerPivot|Uso|Dettagliato|Non sono disponibili statistiche sulle richieste, nulla da registrare.|A intervalli predefiniti, il servizio riporta le statistiche sulle risposte alle query come evento di utilizzo nel sistema di raccolta dei dati di utilizzo. Questo messaggio indica che non ci sono statistiche sulle query da riportare.|  
-|w3wp.exe|Servizio PowerPivot|Front-end Web|Dettagliato|Avvio dell'individuazione di un server applicazioni per l'origine\<dati =*percorso*>|Quando riceve una richiesta di connessione, il servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] identifica un [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] disponibile per gestire la richiesta. Se è presente un solo server nella farm, il server locale accetta la richiesta in tutti i casi.|  
+|w3wp.exe|Servizio PowerPivot|Utilizzo|Dettagliato|Non sono disponibili statistiche sulle richieste, nulla da registrare.|A intervalli predefiniti, il servizio riporta le statistiche sulle risposte alle query come evento di utilizzo nel sistema di raccolta dei dati di utilizzo. Questo messaggio indica che non ci sono statistiche sulle query da riportare.|  
+|w3wp.exe|Servizio PowerPivot|Front-end Web|Dettagliato|Avvio dell'individuazione di un server applicazioni per l'origine dati =\<*path*>|Quando riceve una richiesta di connessione, il servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] identifica un [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] disponibile per gestire la richiesta. Se è presente un solo server nella farm, il server locale accetta la richiesta in tutti i casi.|  
 |w3wp.exe|Servizio PowerPivot|Front-end Web|Dettagliato|Individuazione del server applicazioni riuscita.|La richiesta è stata allocata a un'applicazione di servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
-|w3wp.exe|Servizio PowerPivot|Front-end Web|Dettagliato|Reindirizzamento della richiesta per l' \< *origine <*> a [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)].|La richiesta è stata inoltrata a [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)].|  
-|w3wp.exe|Servizio PowerPivot|Elaborazione delle richieste|Dettagliato|Reindirizzamento della richiesta per il nome\<*utente di SharePoint*> al database|Una connessione rappresentata all'origine dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è stata creata per conto dell'utente SharePoint.|  
+|w3wp.exe|Servizio PowerPivot|Front-end Web|Dettagliato|Reindirizzamento della richiesta per \<*PowerPivotdata source*> a [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] .|La richiesta è stata inoltrata a [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)].|  
+|w3wp.exe|Servizio PowerPivot|Elaborazione delle richieste|Dettagliato|Reindirizzamento della richiesta per il nome utente \<*SharePoint user*> al database|Una connessione rappresentata all'origine dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è stata creata per conto dell'utente SharePoint.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Raccolta dati di utilizzo di PowerPivot](power-pivot-usage-data-collection.md)   
  [Visualizzare e leggere i file di log del programma di installazione SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Configurare la raccolta dati di utilizzo per &#40;PowerPivot per SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  

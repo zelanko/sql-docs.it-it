@@ -3,9 +3,9 @@ title: sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL) | Micr
 ms.custom: ''
 ms.date: 03/27/2019
 ms.prod: sql
-ms.technology: system-objects
 ms.prod_service: sql-database
 ms.reviewer: ''
+ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_governor
@@ -20,12 +20,12 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: ae34c89fd570921bec26d8a11537c58b6bba2302
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 04f0346e15043c105030b94eb96633e1f31b64d9
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247314"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627312"
 ---
 # <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL)
 
@@ -36,7 +36,7 @@ Restituisce lo snapshot con intervallo di 20 secondi per gli ultimi 32 minuti (1
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|INT|ID del pool di risorse. Non ammette i valori Null.
-|**name**|sysname|Nome del pool di risorse. Non ammette i valori Null.|
+|**nome**|sysname|Nome del pool di risorse. Non ammette i valori Null.|
 |**snapshot_time**|datetime2|Data/ora dello snapshot delle statistiche del pool di risorse|
 |**duration_ms**|INT|Durata tra lo snapshot corrente e quello precedente|
 |**statistics_start_time**|datetime2|Ora di reimpostazione delle statistiche per questo pool. Non ammette i valori Null.|
@@ -103,14 +103,14 @@ Restituisce lo snapshot con intervallo di 20 secondi per gli ultimi 32 minuti (1
 
 Questa vista richiede l'autorizzazione VIEW SERVER STATE.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Gli utenti possono accedere a questa vista a gestione dinamica per monitorare il consumo di risorse quasi in tempo reale per il pool di carico di lavoro degli utenti e per i pool interni di sistema dell'istanza del database SQL di Azure
 
 > [!IMPORTANT]
 > La maggior parte dei dati esposti da questa DMV è destinata al consumo interno ed è soggetta a modifiche.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Nell'esempio seguente vengono restituiti i dati di frequenza massima dei log e il consumo a ogni snapshot da parte del pool di utenti  
 

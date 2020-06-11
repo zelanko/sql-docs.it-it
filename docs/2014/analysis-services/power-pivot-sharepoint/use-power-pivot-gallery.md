@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f8c14a123fcdb23efade07e78dec94d242df7fc7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f634f6c0a435c733af7f223de333cb52d95ce897
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175690"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547713"
 ---
 # <a name="use-powerpivot-gallery"></a>Usare la raccolta PowerPivot
   La raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è una raccolta documenti di SharePoint specifica che consente un'anteprima dettagliata e la gestione dei documenti per cartelle di lavoro pubblicate di Excel e report di Reporting Services contenenti dati PowerPivot.
@@ -148,14 +147,14 @@ ms.locfileid: "78175690"
 
 4.  Fare clic su **Salva**. Il salvataggio del documento forza il servizio snapshot a rigenerare l'immagine di anteprima.
 
-##  <a name="known-issues"></a><a name="bkmk_known_issues"></a>Problemi noti
+##  <a name="known-issues"></a><a name="bkmk_known_issues"></a> Problemi noti
 
 ### <a name="document-type-is-not-supported"></a>Tipo di documento non supportato
  Il tipo di contenuto **Documento raccolta PowerPivot** non è supportato. Se si abilita il tipo di contenuto **Documento raccolta PowerPivot** per una raccolta documenti e si tenta di creare un nuovo documento di tale tipo, verrà visualizzato un messaggio di errore simile a uno dei seguenti:
 
 -   ' Nuovo documento ' richiede un'applicazione e un Web browser compatibili con Microsoft SharePoint Foundation. Per aggiungere un documento a questa raccolta documenti, fare clic sul pulsante ' Carica documento '.
 
--   "L'indirizzo Internet ' http://[nome server]/testSite/PowerPivot Gallery/ReportGallery/Forms/template. xlsx ' non è valido." " Microsoft Excel non può accedere al file ' http:///[nome server]/testSite/PowerPivot Gallery/ReportGallery/Forms/template. xlsx '. I motivi possibili sono diversi:
+-   "L'indirizzo Internet ' http://[nome server]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' non è valido." " Microsoft Excel non è in grado di accedere al file ' http://[nome server]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx'. I motivi possibili sono diversi:
 
  Il tipo di contenuto **Documento raccolta PowerPivot** non viene aggiunto automaticamente alle raccolte documenti. Questo problema non viene riscontrato a meno che non si abiliti manualmente il tipo di contenuto non supportato.
 

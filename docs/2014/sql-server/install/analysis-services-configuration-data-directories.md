@@ -10,24 +10,24 @@ ms.assetid: ef732855-b7af-4f40-a619-5573c1c354bb
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 4ff1cd03eb260d892c22c36285fa07d912994510
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 47d4299cde4575f7443faa1546aeffdb41fe12d5
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096805"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859173"
 ---
 # <a name="analysis-services-configuration---data-directories"></a>Configurazione di Analysis Services - Directory dati
   Le directory predefinite della tabella seguente sono configurabili dall'utente durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'autorizzazione per accedere a questi file viene concessa agli amministratori locali e ai membri del gruppo di sicurezza SQLServerMSASUser$\<istanza> creato e di cui viene effettuato il provisioning durante l'installazione.  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco elementi dell'interfaccia utente  
   
 |Descrizione|Directory predefinita|Consigli|  
 |-----------------|-----------------------|---------------------|  
-|Directory radice dati|C:\Programmi\Microsoft SQL Server\MSAS12. \<InstanceId> \OLAP\Data\|assicurarsi che la cartella \Programmi\Microsoft SQL Server \ sia protetta con autorizzazioni limitate. Le prestazioni di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dipendono, in molte configurazioni, dalle prestazioni del sottosistema di archiviazione in cui si trova la directory dei dati. Posizionare tale directory nel sottosistema di archiviazione collegato al sistema in grado di garantire le prestazioni più elevate. Per le installazioni del cluster di failover, assicurarsi che le directory dei dati vengano posizionate nel disco condiviso.|  
-|Directory file di log|C:\Programmi\Microsoft SQL Server\MSAS12. \<InstanceId> \OLAP\Log\|è la directory per i [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] file di log e include il log FlightRecorder. Se si aumenta la durata dell'Utilità Traccia eventi, assicurarsi che la directory dei log disponga di spazio sufficiente.|  
-|Directory temporanea|C:\Programmi\Microsoft SQL Server\MSAS12. \<InstanceId> \OLAP\Temp\|posizionare la directory temporanea nel sottosistema di archiviazione ad alte prestazioni.|  
-|Directory di backup|C:\Programmi\Microsoft SQL Server\MSAS12. \<InstanceId> \OLAP\Backup\|è la directory per i [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] file di backup predefiniti. Per le installazioni di PowerPivot per SharePoint, si tratta inoltre della posizione in cui i servizi di sistema PowerPivot memorizzano nella cache i file di dati PowerPivot.<br /><br /> Verificare che vengano impostate le autorizzazioni appropriate in modo da impedire la perdita di dati e che il gruppo di utenti per il servizio [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] disponga delle autorizzazioni adeguate per la scrittura nella directory di backup. Non è supportato l'utilizzo di un'unità di cui è stato eseguito il mapping per le directory di backup.|  
+|Directory radice dati|C:\Programmi\Microsoft SQL Server\MSAS12. \< InstanceID> \OLAP\Data \| assicurarsi che la cartella \programmi\microsoft SQL Server \ sia protetta con autorizzazioni limitate. Le prestazioni di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dipendono, in molte configurazioni, dalle prestazioni del sottosistema di archiviazione in cui si trova la directory dei dati. Posizionare tale directory nel sottosistema di archiviazione collegato al sistema in grado di garantire le prestazioni più elevate. Per le installazioni del cluster di failover, assicurarsi che le directory dei dati vengano posizionate nel disco condiviso.|  
+|Directory file di log|C:\Programmi\Microsoft SQL Server\MSAS12. \< InstanceID> \OLAP\Log \| è la directory per i [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] file di log e include il log FlightRecorder. Se si aumenta la durata dell'Utilità Traccia eventi, assicurarsi che la directory dei log disponga di spazio sufficiente.|  
+|Directory temporanea|C:\Programmi\Microsoft SQL Server\MSAS12. \< InstanceID> \OLAP\Temp \| posizionare la directory temporanea nel sottosistema di archiviazione ad alte prestazioni.|  
+|Directory di backup|C:\Programmi\Microsoft SQL Server\MSAS12. \< InstanceID> \OLAP\Backup \| è la directory per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] i file di backup predefiniti. Per le installazioni di PowerPivot per SharePoint, si tratta inoltre della posizione in cui i servizi di sistema PowerPivot memorizzano nella cache i file di dati PowerPivot.<br /><br /> Verificare che vengano impostate le autorizzazioni appropriate in modo da impedire la perdita di dati e che il gruppo di utenti per il servizio [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] disponga delle autorizzazioni adeguate per la scrittura nella directory di backup. Non è supportato l'utilizzo di un'unità di cui è stato eseguito il mapping per le directory di backup.|  
   
 ## <a name="notes"></a>Note  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66096805"
   
     -   In una directory in cui si trovano i file di sistema  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Percorsi dei file per le istanze predefinite e denominate di SQL Server](../../../2014/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)  
   
   

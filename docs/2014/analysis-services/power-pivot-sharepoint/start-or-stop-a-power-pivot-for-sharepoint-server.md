@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 312afc0336405ca530f731ad4fec55a26a960e7a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 237f4dfaa615718f7fa4301b8d64cab0c45600b0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071053"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547763"
 ---
 # <a name="start-or-stop-a-powerpivot-for-sharepoint-server"></a>Avviare o arrestare un server PowerPivot per SharePoint
   Servizio di sistema PowerPivot e un' [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] istanza operano insieme nello stesso server applicazioni locale per supportare l'elaborazione di dati e richieste coordinata in una farm di SharePoint.  
@@ -61,7 +60,7 @@ ms.locfileid: "66071053"
 |Nuove richieste di query o aggiornamento dati|Se si arresta l'unico server PowerPivot per SharePoint nella farm, non verranno gestite nuove richieste di dati PowerPivot e una richiesta di dati causerà un errore di dati non trovati.<br /><br /> Se si dispone di più server PowerPivot per SharePoint, la richiesta verrà inviata a uno dei server disponibili.|  
 |Dati sull'utilizzo|I dati sull'utilizzo non verranno raccolti durante l'arresto dei servizi.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurare gli account del servizio PowerPivot](configure-power-pivot-service-accounts.md)  
   
   

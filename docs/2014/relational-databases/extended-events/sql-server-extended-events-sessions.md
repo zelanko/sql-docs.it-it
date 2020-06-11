@@ -1,7 +1,7 @@
 ---
 title: Sessioni degli eventi estesi di SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 05/26/2020
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: xevents
@@ -14,12 +14,12 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 83440163bdb1e03690fe4f5dcf93fdfc6779057f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 63a94ef98eeb1b460672e50657b5ece6ef491764
+ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706603"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83868346"
 ---
 # <a name="sql-server-extended-events-sessions"></a>Sessioni Eventi estesi di SQL Server
   Una sessione di eventi estesi di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene creata nel processo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui è ospitato il motore degli eventi estesi. Gli aspetti seguenti di una sessione degli eventi estesi forniscono un contesto per la comprensione dell'infrastruttura degli eventi estesi e dell'elaborazione generale che si verifica:  
@@ -30,9 +30,9 @@ ms.locfileid: "82706603"
   
 ## <a name="session-states"></a>Stati della sessione  
  Nella figura seguente sono mostrati i vari stati di una sessione degli eventi estesi.  
-  
- ![Stato della sessione degli eventi estesi](../../database-engine/media/xesessionstate.gif "Stato della sessione degli eventi estesi")  
-  
+
+![Stato della sessione degli eventi estesi](../../database-engine/media/xesessionstate.png "Stato della sessione degli eventi estesi")
+
  Con riferimento alla figura precedente, si noti come lo stato della sessione cambi man mano che vengono inviati i vari comandi DDL per una sessione dell'evento. Tali cambiamenti di stato sono descritti nella tabella seguente.  
   
 |Etichetta di illustrazione|Istruzione DDL|Descrizione|  
@@ -50,7 +50,7 @@ ms.locfileid: "82706603"
   
  Nella figura seguente viene illustrato il contenuto di una sessione e la relazione tra pacchetti e sessioni.  
   
- ![Coesistenza e condivisione di oggetti nelle sessioni.](../../database-engine/media/xesessions.gif "Coesistenza e condivisione di oggetti nelle sessioni.")  
+ ![Coesistenza e condivisione di oggetti nelle sessioni](../../database-engine/media/xesessions.gif "Coesistenza e condivisione di oggetti nelle sessioni.")  
   
  Con riferimento all'illustrazione precedente, si noti che:  
   

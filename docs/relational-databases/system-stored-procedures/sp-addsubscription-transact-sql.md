@@ -1,6 +1,7 @@
 ---
 title: sp_addsubscription (Transact-SQL) | Microsoft Docs
-ms.date: 10/28/2015
+description: Aggiunge una sottoscrizione a una pubblicazione e imposta lo stato del Sottoscrittore. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73789c16cbea481cc159774e6c629d3a131d7478
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a87ba30f69027849ea5444163291465dec00d9be
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833630"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627616"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,6 +84,9 @@ sp_addsubscription [ @publication = ] 'publication'
   
  [ @subscriber =]'*Subscriber*'  
  Nome del Sottoscrittore. *Subscriber* è di **tipo sysname**e il valore predefinito è null.  
+
+> [!NOTE]
+> Il nome del server può essere specificato come `<Hostname>,<PortNumber>` . Potrebbe essere necessario specificare il numero di porta per la connessione quando SQL Server viene distribuito in Linux o Windows con una porta personalizzata e il servizio browser è disabilitato.
   
  [ @destination_db =]'*destination_db*'  
  Nome del database di destinazione in cui verranno inseriti i dati replicati. *destination_db* è di **tipo sysname**e il valore predefinito è null. Se è NULL, *destination_db* viene impostato sul nome del database di pubblicazione. Per i Publisher Oracle, è necessario specificare *destination_db* . Per un Sottoscrittore non SQL Server, specificare il valore (destinazione predefinita) per *destination_db*.  
@@ -255,7 +259,7 @@ sp_addsubscription [ @publication = ] 'publication'
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  [ @password =]'*password*'  
- Specifica una password per il backup se durante la creazione del backup è stata impostata una password. *password*è di **tipo sysname**e il valore predefinito è null.  
+ Specifica una password per il backup se durante la creazione del backup è stata impostata una password. *password* è di **tipo sysname**e il valore predefinito è null.  
   
  [ @fileidhint =] *fileidhint*  
  Identifica un valore ordinale del set di backup da ripristinare. *fileidhint* è di **tipo int**e il valore predefinito è null.  
@@ -288,7 +292,7 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La stored procedure sp_addsubscription viene utilizzata per la replica snapshot e transazionale.  
   
  Se la stored procedure sp_addsubscription viene eseguita da un membro del ruolo predefinito del server sysadmin per creare una sottoscrizione push, il processo dell'agente di distribuzione viene creato in modo implicito e viene eseguito utilizzando l'account del servizio SQL Server Agent. Si consiglia di eseguire [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) e specificare le credenziali di un account di Windows diverso da quello specifico dell'agente per @job_login e @job_password . Per ulteriori informazioni, vedere [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  

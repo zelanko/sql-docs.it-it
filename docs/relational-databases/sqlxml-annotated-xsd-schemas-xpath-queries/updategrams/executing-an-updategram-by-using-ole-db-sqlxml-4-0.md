@@ -1,5 +1,6 @@
 ---
 title: Esecuzione di un updategram utilizzando OLE DB (SQLXML)
+description: Informazioni su come utilizzare OLE DB in SQLXML 4,0 per eseguire un updategram.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 754db698b7c82a64f66cbb7a4df43bd4127413d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9267699ff8edbaf0d615dbdb45a915e24e842b11
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75241277"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215260"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>Esecuzione di un updategram mediante OLE DB (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +61,7 @@ ms.locfileid: "75241277"
 </Schema>  
 ```  
   
- La query restituisce tutti gli elementi relativi ai dipendenti. Con il mapping predefinito, l' ** \<elemento Person. Contact>** viene mappato alla tabella Person. Contact del database AdventureWorks.  
+ La query restituisce tutti gli elementi relativi ai dipendenti. Con il mapping predefinito, l' **\<Person.Contact>** elemento viene mappato alla tabella Person. Contact del database AdventureWorks.  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>Per impostare XML come comando recuperando il risultato come documento XML  
   
@@ -515,7 +516,7 @@ FOR XML AUTO</sql:query>
 </ROOT>  
 ```  
   
- Il modello include una query SQL. Per la query è necessario un valore per il@Titleparametro (). Se per il parametro non viene passato alcun valore, verrà utilizzato il valore predefinito ("Mr.").  
+ Il modello include una query SQL. Per la query è necessario un valore per il parametro ( @Title ). Se per il parametro non viene passato alcun valore, verrà utilizzato il valore predefinito ("Mr.").  
   
  Durante il passaggio dei valori di parametro a un modello è necessario specificare sia il nome che il valore del parametro.  
   

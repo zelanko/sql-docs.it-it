@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d4b91b06470c9cb22e98ac76ea52494728a7ca11
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f93df1c1388f6a85272ced6bf419140c74105ddc
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893099"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669957"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,19 +28,19 @@ TopCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>Si applica a  
- Espressione che restituisce una tabella, ad esempio un riferimento \<a una colonna di tabella>, o una funzione che restituisce una tabella.  
+ Espressione che restituisce una tabella, ad esempio un riferimento a una \< colonna di tabella>, o una funzione che restituisce una tabella.  
   
 ## <a name="return-type"></a>Tipo restituito  
  \<espressione di tabella>  
   
-## <a name="remarks"></a>Osservazioni  
- Il valore fornito dall'espressione di \<rango> argomento determina l'ordine di rango decrescente per le righe fornite nell'espressione di \<tabella> argomento e viene restituito il numero di righe in primo piano specificate nell'argomento \<count>.  
+## <a name="remarks"></a>Commenti  
+ Il valore fornito dall' \< espressione di rango> argomento determina l'ordine di rango decrescente per le righe fornite nell' \< espressione di tabella> argomento e viene restituito il numero di righe in primo piano specificate nell' \< argomento count>.  
   
  La funzione tocount è stata introdotta originariamente per consentire le stime associative e in generale produce gli stessi risultati di un'istruzione che include le clausole **Select Top** e **Order by** . È possibile ottenere prestazioni migliori per le stime associative se si utilizza la funzione **Predict (DMX)** , che supporta la specifica di un numero di stime da restituire.  
   
  Tuttavia, esistono situazioni in cui potrebbe essere ancora necessario utilizzare il conteggio dei conteggi. DMX, ad esempio, non supporta il qualificatore **Top** in un'istruzione sub-SELECT. La funzione [PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md) non supporta inoltre l'aggiunta di **Top**.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Gli esempi seguenti sono query di stima sul modello di associazione compilato mediante l' [esercitazione di base sul data mining](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Le query restituiscono gli stessi risultati, ma nel primo esempio viene utilizzato il conteggio delle corrispondenze e il secondo esempio utilizza la funzione Predict.  
   
  Per comprendere il funzionamento del conteggio dei conteggi, può essere utile eseguire prima una query di stima che restituisca solo la tabella nidificata.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9057cb89-fb17-466e-a1ce-192c8ca20692
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 46504906b13323ac4881ca2289e87e31f1cea72f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c5d28ef26a24f65be180b73620cf3f665db24d3c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071092"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547813"
 ---
 # <a name="powerpivot-usage-data-collection"></a>Raccolta dati di utilizzo di PowerPivot
   La raccolta dati di utilizzo è una funzionalità di SharePoint a livello di farm. In PowerPivot per SharePoint questo sistema viene utilizzato ed esteso per fornire i report nel dashboard di gestione PowerPivot in cui viene mostrato l'utilizzo dei servizi e dei dati PowerPivot. A seconda dell'installazione di SharePoint, la raccolta dati di utilizzo potrebbe essere disabilitata per la farm. È necessario che un amministratore della farm abiliti la registrazione dell'utilizzo per creare i dati di utilizzo che vengono visualizzati nel dashboard di gestione PowerPivot. Per ulteriori informazioni su come abilitare e configurare la raccolta dati di utilizzo per gli eventi PowerPivot, vedere [configurare la raccolta dati di utilizzo per &#40;PowerPivot per SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
@@ -68,7 +67,7 @@ ms.locfileid: "66071092"
 |---------------|----------------------|-----------------|  
 |Servizio Timer di SharePoint (SPTimerV4)||Questo servizio di Windows viene eseguito in modalità locale in ogni computer membro della farm ed elabora tutti i processi timer definiti a livello di farm.|  
 |Importazione dati di utilizzo di Microsoft SharePoint Foundation|Ogni 30 minuti in SharePoint 2010. Ogni 5 minuti in SharePoint 2013.|Questo processo timer viene configurato globalmente a livello di farm. I dati di utilizzo vengono spostati dai file di log locali al database di raccolta dati di utilizzo centrale. È possibile eseguire manualmente questo processo timer per forzare un'operazione di importazione dati.|  
-|Processo timer di Elaborazione dati di utilizzo di Microsoft SharePoint Foundation|Giornalmente alle 3.00|**(\*)** A partire da SQL Server 2012 PowerPivot per SharePoint, questo processo temporale è supportato per scenari di migrazione o di aggiornamento in cui è ancora possibile includere dati di utilizzo più vecchi nei database di utilizzo di SharePoint. A partire da SQL Server 2012 PowerPivot per SharePoint, il database di utilizzo di SharePoint non viene utilizzato per il flusso di lavoro del dashboard di gestione e la raccolta utilizzo di PowerPivot. Il processo timer può essere eseguito manualmente per spostare tutti i dati correlati a PowerPivot rimanenti nel database di utilizzo di SharePoint nei database dell'applicazione di servizio PowerPivot.<br /><br /> Questo processo timer viene configurato globalmente a livello di farm. Consente di verificare la presenza di dati di utilizzo scaduti nel database di raccolta dati di utilizzo centrale (cioè i record risalenti a più di 30 giorni prima). Per i server PowerPivot della farm, questo processo timer esegue un controllo aggiuntivo per i dati sull'utilizzo di PowerPivot. Quando vengono rilevati dati sull'utilizzo di PowerPivot, il processo timer sposta i dati in un database dell'applicazione di servizio utilizzando un identificatore dell'applicazione per trovare il database corretto.<br /><br /> È possibile eseguire manualmente questo processo timer per forzare un controllo sui dati scaduti o un'importazione dei dati di utilizzo PowerPivot in un database dell'applicazione di servizio PowerPivot.|  
+|Processo timer di Elaborazione dati di utilizzo di Microsoft SharePoint Foundation|Giornalmente alle 3.00|**( \* )** A partire da SQL Server 2012 PowerPivot per SharePoint, questo processo temporale è supportato per scenari di migrazione o di aggiornamento in cui è ancora possibile includere dati di utilizzo più vecchi nei database di utilizzo di SharePoint. A partire da SQL Server 2012 PowerPivot per SharePoint, il database di utilizzo di SharePoint non viene utilizzato per il flusso di lavoro del dashboard di gestione e la raccolta utilizzo di PowerPivot. Il processo timer può essere eseguito manualmente per spostare tutti i dati correlati a PowerPivot rimanenti nel database di utilizzo di SharePoint nei database dell'applicazione di servizio PowerPivot.<br /><br /> Questo processo timer viene configurato globalmente a livello di farm. Consente di verificare la presenza di dati di utilizzo scaduti nel database di raccolta dati di utilizzo centrale (cioè i record risalenti a più di 30 giorni prima). Per i server PowerPivot della farm, questo processo timer esegue un controllo aggiuntivo per i dati sull'utilizzo di PowerPivot. Quando vengono rilevati dati sull'utilizzo di PowerPivot, il processo timer sposta i dati in un database dell'applicazione di servizio utilizzando un identificatore dell'applicazione per trovare il database corretto.<br /><br /> È possibile eseguire manualmente questo processo timer per forzare un controllo sui dati scaduti o un'importazione dei dati di utilizzo PowerPivot in un database dell'applicazione di servizio PowerPivot.|  
 |Processo timer di elaborazione dashboard di gestione PowerPivot|Giornalmente alle 3.00|Questo processo timer aggiorna la cartella di lavoro di PowerPivot interna che fornisce i dati amministrativi al dashboard di gestione PowerPivot. Ottiene le informazioni aggiornate gestite da SharePoint, inclusi i nomi dei server, i nomi utente, i nomi delle applicazioni e i nomi dei file visualizzati nei report del dashboard o nelle web part.|  
   
 ##  <a name="reporting-on-usage-data"></a><a name="reporting"></a> Report relativi ai dati di utilizzo  
@@ -76,7 +75,7 @@ ms.locfileid: "66071092"
   
  Per ulteriori informazioni su come visualizzare i report, vedere [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Dati di utilizzo e dashboard di gestione PowerPivot](power-pivot-management-dashboard-and-usage-data.md)   
  [Informazioni di riferimento sulle impostazioni di configurazione &#40;PowerPivot per SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md)   
  [Configurare la raccolta dati di utilizzo per &#40;PowerPivot per SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  

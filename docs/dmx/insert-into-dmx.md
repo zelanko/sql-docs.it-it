@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 210ab8c5750fdcb38bcbca324d77eecd926042d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a66897fe02d33c3f614ad5a24e5b2f9a78e1e4c9
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892718"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670079"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,12 +43,12 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
  *query sui dati di origine*  
  Query di origine nel formato definito dal provider.  
   
-## <a name="remarks"></a>Osservazioni  
- Se non si specifica un **modello di data mining** o una [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] **struttura di data mining**, Cerca il tipo di oggetto in base al nome ed elabora l'oggetto corretto. Se il server contiene una struttura di data mining e un modello di data mining con lo stesso nome, verrà restituito un errore.  
+## <a name="remarks"></a>Commenti  
+ Se non si specifica un **modello di data mining** o una **struttura di data mining**, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cerca il tipo di oggetto in base al nome ed elabora l'oggetto corretto. Se il server contiene una struttura di data mining e un modello di data mining con lo stesso nome, verrà restituito un errore.  
   
- Utilizzando la seconda forma di sintassi, inserire in*\<>di oggetti *. COLUMN_VALUES, è possibile inserire i dati direttamente nelle colonne del modello senza training del modello. Questo metodo consente di fornire dati di colonna al modello in un modo ordinato e conciso, che risulta utile quando si utilizzano set di dati che contengono gerarchie o colonne ordinate.  
+ Utilizzando la seconda forma di sintassi, inserire in* \<>di oggetti *. COLUMN_VALUES, è possibile inserire i dati direttamente nelle colonne del modello senza training del modello. Questo metodo consente di fornire dati di colonna al modello in un modo ordinato e conciso, che risulta utile quando si utilizzano set di dati che contengono gerarchie o colonne ordinate.  
   
- Se si utilizza l'istruzione **Insert into** con un modello di data mining o una struttura di data \<mining e si lasciano le \<colonne del modello mappate> e la query dei dati di origine> argomenti, l'istruzione si comporta come **ProcessDefault**, utilizzando le associazioni già esistenti. Se le associazioni non esistono, l'istruzione restituirà un errore. Per ulteriori informazioni su **ProcessDefault**, vedere [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services). La sintassi è illustrata nell'esempio seguente:  
+ Se si utilizza l'istruzione **Insert into** con un modello di data mining o una struttura di data mining e si lasciano le \< colonne del modello mappate> e la \< query dei dati di origine> argomenti, l'istruzione si comporta come **ProcessDefault**, utilizzando le associazioni già esistenti. Se le associazioni non esistono, l'istruzione restituirà un errore. Per ulteriori informazioni su **ProcessDefault**, vedere [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services). La sintassi è illustrata nell'esempio seguente:  
   
 ```  
 INSERT INTO [MINING MODEL] <model>  
@@ -60,14 +60,14 @@ INSERT INTO [MINING MODEL] <model>
   
 |.|Stato degli oggetti|Risultato|  
 |---------------|----------------------|------------|  
-|Inserisci nel modello di*\<modello di data mining>*|La struttura di data mining viene elaborata.|Il modello di data mining viene elaborato.|  
+|Inserisci nel modello di modello di data MINING* \<>*|La struttura di data mining viene elaborata.|Il modello di data mining viene elaborato.|  
 ||La struttura di data mining non è elaborata.|Vengono elaborati il modello e la struttura di data mining.|  
 ||La struttura di data mining contiene modelli di data mining aggiuntivi.|L'elaborazione non riesce. È necessario rielaborare la struttura e i modelli di data mining associati.|  
-|Inserisci nella struttura della*\<struttura di data mining>*|La struttura di data mining viene elaborata o non elaborata.|La struttura di data mining e i modelli di data mining associati vengono elaborati.|  
-|Inserimenti nel*\<* modello di modello di data mining>che contiene una query di origine<br /><br /> o<br /><br /> Inserisci nella*\<struttura* della struttura di data mining>che contiene una query di origine|La struttura o il modello include già un contenuto.|L'elaborazione non riesce. È necessario cancellare gli oggetti prima di eseguire questa operazione, utilizzando [DELETE &#40;DMX&#41;](../dmx/delete-dmx.md).|  
+|Inserisci nella struttura della struttura di data MINING* \<>*|La struttura di data mining viene elaborata o non elaborata.|La struttura di data mining e i modelli di data mining associati vengono elaborati.|  
+|Inserimenti nel modello di modello di data MINING* \<>* che contiene una query di origine<br /><br /> oppure<br /><br /> Inserisci nella struttura della struttura di data MINING* \<>* che contiene una query di origine|La struttura o il modello include già un contenuto.|L'elaborazione non riesce. È necessario cancellare gli oggetti prima di eseguire questa operazione, utilizzando [DELETE &#40;DMX&#41;](../dmx/delete-dmx.md).|  
   
 ## <a name="mapped-model-columns"></a>Elemento mapped model columns  
- Utilizzando le colonne \<del modello mappate> elemento, è possibile eseguire il mapping delle colonne dall'origine dati alle colonne nel modello di data mining. Le \<colonne del modello di cui è stato eseguito il mapping> elemento hanno il formato seguente:  
+ Utilizzando le \< colonne del modello mappate> elemento, è possibile eseguire il mapping delle colonne dall'origine dati alle colonne nel modello di data mining. Le \< colonne del modello di cui è stato eseguito il mapping> elemento hanno il formato seguente:  
   
 ```  
 <column identifier> | SKIP | <table identifier> (<column identifier> | SKIP), ...  
@@ -80,7 +80,7 @@ INSERT INTO [MINING MODEL] <model>
  La sintassi di SKIP richiede che SKIP venga inserito nella posizione della colonna singola nel set di righe di input che non dispone di una colonna della struttura di data mining corrispondente. Ad esempio, nella seguente tabella nidificata, OrderNumber deve essere selezionato nella clausola APPEND in modo da poter essere utilizzato nella clausola RELATE per specificare il join. Tuttavia, non si desidera inserire i dati di OrderNumber nella tabella nidificata nella struttura di data mining. Nell'esempio è utilizzata pertanto la parola chiave SKIP anziché OrderNumber nell'argomento INSERT INTO.  
   
 ## <a name="source-data-query"></a>Elemento &lt;source data query&gt;  
- L' \<elemento> di query sui dati di origine può includere i tipi di origine dati seguenti:  
+ L' \< elemento> di query sui dati di origine può includere i tipi di origine dati seguenti:  
   
 -   **OPENQUERY**  
   
@@ -93,7 +93,7 @@ INSERT INTO [MINING MODEL] <model>
  Per altre informazioni sui tipi di origine dati, vedere [&#60;&#62;query sui dati di origine ](../dmx/source-data-query.md).  
   
 ## <a name="basic-example"></a>Esempio di base  
- Nell'esempio seguente viene usato **OPENQUERY** per eseguire il training di un modello Naive Bayes basato sui dati di [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] mailing diretto nel database.  
+ Nell'esempio seguente viene usato **OPENQUERY** per eseguire il training di un modello Naive Bayes basato sui dati di mailing diretto nel [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] database.  
   
 ```  
 INSERT INTO NBSample (CustomerKey, Gender, [Number Cars Owned],  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5aebada2f962e2b90f96a9822dbbe76e796f23e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9cf2e37d9a6ae6d0fa93012f72673642d11a2a4c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811052"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547453"
 ---
 # <a name="understanding-the-database-schemas"></a>Informazioni sugli schemi di database
   La Generazione guidata schema consente di generare uno schema relazionale denormalizzato per il database dell'area di interesse in base alle dimensioni e ai gruppi di misure in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La procedura guidata genera una tabella relazionale per ogni dimensione, denominata tabella della dimensione, in cui vengono archiviati i dati della dimensione e una tabella relazionale per ogni gruppo di misure, denominata tabella dei fatti, in cui vengono archiviati i fatti. Durante la generazione di queste tabelle relazionali, la procedura guidata ignora dimensioni collegate, gruppi di misure collegati e dimensioni temporali del server.  
@@ -82,7 +81,7 @@ ms.locfileid: "68811052"
  La procedura guidata genera una tabella separata per l'archiviazione dei valori tradotti per ogni proprietà nel gruppo di misure che richiede una colonna per la traduzione. La procedura guidata crea inoltre una colonna separata per ogni lingua in cui i valori devono essere tradotti.  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>Conversione del tipo di dati e lunghezze predefinite  
- La generazione guidata schema consente di ignorare i tipi di dati in tutti i casi, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` tranne che per le colonne che utilizzano il tipo di dati. La dimensione dei dati `wchar` viene convertita direttamente nel tipo di dati `nvarchar`. Tuttavia, se la lunghezza specificata di una colonna con il tipo di dati `wchar` è maggiore di 4000 byte, la Generazione guidata schema genererà un errore.  
+ La generazione guidata schema consente di ignorare i tipi di dati in tutti i casi, tranne che per le colonne che utilizzano il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` tipo di dati. La dimensione dei dati `wchar` viene convertita direttamente nel tipo di dati `nvarchar`. Tuttavia, se la lunghezza specificata di una colonna con il tipo di dati `wchar` è maggiore di 4000 byte, la Generazione guidata schema genererà un errore.  
   
  Se per un elemento di dati, ad esempio l'associazione di un attributo, non è stata specificata la lunghezza, per la colonna verrà utilizzata la lunghezza predefinita specificata nella tabella seguente.  
   

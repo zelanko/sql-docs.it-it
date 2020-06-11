@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b961282ba6bc25caa260a3e156f843a413a5ef1a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dc1ae000166f075a3c6bac347cd7e3e8a605042b
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893116"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670377"
 ---
 # <a name="usage-dmx"></a>Utilizzo (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Quando si utilizza DMX (Data Mining Extensions) per definire un nuovo modello di data mining [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]in, è necessario specificare il modo in cui l'algoritmo Data mining che compila il modello utilizzerà ogni colonna. Le colonne possono essere dei tipi seguenti:  
+  Quando si utilizza DMX (Data Mining Extensions) per definire un nuovo modello di data mining in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , è necessario specificare il modo in cui l'algoritmo Data mining che compila il modello utilizzerà ogni colonna. Le colonne possono essere dei tipi seguenti:  
   
 -   **Codice**  
   

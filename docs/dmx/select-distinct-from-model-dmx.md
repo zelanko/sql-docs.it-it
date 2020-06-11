@@ -1,21 +1,21 @@
 ---
-title: Selezionare DISTINCT FROM &lt;Model &gt; (DMX) | Microsoft Docs
+title: Selezionare DISTINCT FROM &lt; Model &gt; (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 67ed5236aad0549fa6850114280ee15d8cebcaeb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea538271bf84d7d5b4e0fbea0a860f68bb1f62b6
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892537"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669626"
 ---
-# <a name="select-distinct-from-ltmodel-gt-dmx"></a>Selezionare DISTINCT FROM &lt;Model &gt; (DMX)
+# <a name="select-distinct-from-ltmodel-gt-dmx"></a>Selezionare DISTINCT FROM &lt; Model &gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Restituisce tutti gli stati possibili della colonna selezionata nel modello. I valori restituiti variano a seconda che la colonna specificata contenga valori discreti, valori numerici discretizzati o valori numerici continui.  
@@ -30,7 +30,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
   
 ## <a name="arguments"></a>Argomenti  
  *n*  
- Facoltativo. Valore intero che specifica il numero di righe da restituire.  
+ Facoltativa. Valore intero che specifica il numero di righe da restituire.  
   
  *elenco di espressioni*  
  Elenco delimitato da virgole contenente espressioni o identificatori di colonne correlate (derivati dal modello).  
@@ -42,9 +42,9 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  Condizione per limitare i valori restituiti dall'elenco di colonne.  
   
  *expression*  
- Facoltativo. Espressione che restituisce un valore scalare.  
+ Facoltativa. Espressione che restituisce un valore scalare.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  L'istruzione **SELECT DISTINCT from** funziona solo con una singola colonna o con un set di colonne correlate. Non è possibile utilizzare questa clausola con un set di colonne non correlate.  
   
  L'istruzione **SELECT DISTINCT from** consente di fare riferimento direttamente a una colonna all'interno di una tabella nidificata. Ad esempio:  
@@ -53,13 +53,13 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 <model>.<table column reference>.<column reference>  
 ```  
   
- I risultati dell'istruzione **SELECT DISTINCT FROM \<Model>** variano a seconda del tipo di colonna. Nella tabella seguente sono descritti i tipi di colonna supportati e l'output dell'istruzione.  
+ I risultati dell'istruzione **SELECT DISTINCT FROM \< Model>** variano a seconda del tipo di colonna. Nella tabella seguente sono descritti i tipi di colonna supportati e l'output dell'istruzione.  
   
 |Tipo di colonna|Output|  
 |-----------------|------------|  
 |Discrete|Valori univoci nella colonna.|  
 |Discretizzato|Punto medio di ogni bucket discretizzato nella colonna.|  
-|Continuo|Punto medio dei valori nella colonna.|  
+|Continua|Punto medio dei valori nella colonna.|  
   
 ## <a name="discrete-column-example"></a>Esempio con una colonna discreta  
  L'esempio di codice seguente si basa sul `[TM Decision Tree]` modello creato nell' [esercitazione di base sul data mining](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La query restituisce i valori univoci presenti nella colonna discreta `Gender`.  
@@ -133,7 +133,7 @@ FROM [TM Decision Tree]
 > [!NOTE]  
 >  Il valore minimo del bucket minimo e il valore massimo del bucket massimo rappresentano i valori minimo e massimo osservati. Tutti i valori che non rientrano in questo intervallo osservato vengono considerati appartenenti ai bucket minimo e massimo.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SELEZIONARE &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Le estensioni di data mining &#40;DMX&#41; le istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
  [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  

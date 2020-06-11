@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: eec8da8f-eab4-4ac4-a81d-995c814f88ca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 59bff3eac690b7352b75d02bd7b266dfa8f303f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4207f617b4f6fafde5392fdea013196c54501314
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070207"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547433"
 ---
 # <a name="restrict-rows-partition-wizard"></a>Limitazione righe (Creazione guidata partizione)
   La pagina **Limitazione righe** consente di limitare le righe che verranno recuperate dalla tabella specificata e quindi aggregate e incluse nella partizione.  
@@ -43,7 +42,7 @@ ms.locfileid: "66070207"
  **Controllo**  
  Verifica che l'istruzione presente in **Query** sia un'istruzione SQL valida.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Partizioni &#40;Analysis Services - Dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

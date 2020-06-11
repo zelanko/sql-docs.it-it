@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5535428d89a0d14b60e3ac79d281f63b4c69bfb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f4f4cd71f7ecfaa0f8221f599a2814c153af97be
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889869"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669871"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ USING <algorithm> [(<parameter list>)]
  Nome di un algoritmo di data mining, definito dal provider.  
   
 > [!NOTE]  
->  È possibile recuperare un elenco degli algoritmi supportati dal provider corrente utilizzando [DMSCHEMA_MINING_SERVICES set di righe](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Per visualizzare gli algoritmi supportati nell'istanza corrente di, vedere [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]proprietà di [data mining](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+>  È possibile recuperare un elenco degli algoritmi supportati dal provider corrente utilizzando [DMSCHEMA_MINING_SERVICES set di righe](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Per visualizzare gli algoritmi supportati nell'istanza corrente di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vedere Proprietà di [data mining](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
   
  *elenco di parametri*  
  Facoltativa. Elenco delimitato da virgole dei parametri definiti dal provider per l'algoritmo.  
@@ -63,7 +63,7 @@ USING <algorithm> [(<parameter list>)]
  *criteri di filtro*  
  Espressione di filtro applicata alle colonne della tabella del case.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se la struttura di data mining contiene chiavi composte, il modello di data mining dovrà includere tutte le colonne chiave definite nella struttura.  
   
  Se il modello non richiede una colonna stimabile, come ad esempio i modelli compilati utilizzando gli algoritmi [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering e [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering, non sarà necessario includere una definizione di colonna nell'istruzione. Tutti gli attributi nel modello risultante verranno gestiti come input.  
@@ -161,7 +161,7 @@ USING Microsoft_Naive_Bayes (MAXIMUM_STATES = 50)
 ```  
   
 ## <a name="example-2-add-a-filtered-model-to-a-structure"></a>Esempio 2: Aggiunta di un modello filtrato a una struttura  
- Nell'esempio seguente viene aggiunto un modello `Naive Bayes Women`di data mining alla nuova struttura di data mining **mailing** . Il nuovo modello presenta la stessa struttura di base del modello di data mining aggiunto nell'esempio 1, ma i case della struttura di data mining sono limitati ai clienti di sesso femminile di età superiore a 50 anni.  
+ Nell'esempio seguente viene aggiunto un modello di data mining `Naive Bayes Women` alla nuova struttura di data mining **mailing** . Il nuovo modello presenta la stessa struttura di base del modello di data mining aggiunto nell'esempio 1, ma i case della struttura di data mining sono limitati ai clienti di sesso femminile di età superiore a 50 anni.  
   
 ```  
 ALTER MINING STRUCTURE [New Mailing]  
