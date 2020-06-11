@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8803cdbb-f1b3-436c-994d-ee662ecf64dd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 57efea3fb5134312ac1ec3e7e9c719bb49872c5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 219ff4143b0f673b36ca6092d5ef8d5bf39f06ee
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088181"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527568"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>Scheda Grafico (Visualizzatori modello di data mining)
   Usare il riquadro **Grafico** per visualizzare i dati cronologici utilizzati per il training di un modello Time Series insieme ai valori stimati. L'asse verticale del grafico rappresenta il valore della serie, mentre l'asse orizzontale rappresenta il tempo. Le stime future sono rappresentante dalle linee tratteggiate.  
@@ -58,7 +57,7 @@ ms.locfileid: "66088181"
  **Selezione serie**  
  Consente di aprire una finestra di dialogo in cui è possibile selezionare le serie da includere nel visualizzatore.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  

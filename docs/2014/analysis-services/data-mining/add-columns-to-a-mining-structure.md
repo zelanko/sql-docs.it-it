@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3f879344-9f66-4178-851a-e8c5ccccf4cb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 85a713bb9da24a67ebe8fdd097535c5a9d5ac98e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 13a8343fe83b29499c9fc52f40a7800884cd86cf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086231"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525617"
 ---
 # <a name="add-columns-to-a-mining-structure"></a>Aggiungere colonne a una struttura di data mining
   È possibile utilizzare Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per aggiungere colonne a una struttura di data mining dopo averla definita tramite la Creazione guidata modello di data mining. È possibile aggiungere qualsiasi colonna presente nella vista origine dati utilizzata per definire la struttura di data mining.  
@@ -44,7 +43,7 @@ ms.locfileid: "66086231"
 > [!NOTE]  
 >  Se si aggiunge una colonna già esistente, nella struttura verrà inclusa una copia e al nome verrà aggiunto "1". È possibile specificare un nome più descrittivo per la colonna copiata digitandolo nella proprietà **Nome** della colonna della struttura di data mining.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Attività e procedure relative alla struttura di data mining](mining-structure-tasks-and-how-tos.md)  
   
   

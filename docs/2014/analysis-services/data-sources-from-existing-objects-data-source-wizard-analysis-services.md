@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e6ef6dea-9db8-45c4-8959-f9febd7caf7b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5576e997023e5a00cdecc3c2079ce387c7062ebb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d5884cd7315ce7d2ab88a38900f9bb8b5ae22508
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082382"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528972"
 ---
 # <a name="data-sources-from-existing-objects-data-source-wizard-analysis-services"></a>Origini dati da oggetti esistenti (Creazione guidata origine dati) (Analysis Services)
   La pagina **Origini dati da oggetti esistenti** consente di specificare un'origine dei dati o un progetto esistente su cui basare la nuova origine dei dati.  
@@ -30,12 +29,12 @@ ms.locfileid: "66082382"
  Consente di selezionare un'origine dei dati su cui basare la nuova origine dei dati dall'elenco delle origini dei dati, raggruppate per progetto.  
   
  **Crea un'origine dei dati basata su un progetto di Analysis Services**  
- Selezionare questa finestra per creare una nuova origine dei dati [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che fa riferimento a un altro progetto nella soluzione corrente. La nuova origine dei dati acquisisce le impostazioni dalle proprietà `TargetServer` e `TargetDatabase` del progetto selezionato. Quando un progetto che utilizza la nuova origine dei dati viene compilato, aggiornato o distribuito, la nuova origine dei dati acquisisce le impostazioni dall'origine dei dati specificata quando si seleziona questa opzione.  
+ Selezionare questa finestra per creare una nuova origine dei dati che fa riferimento a un altro [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] progetto nella soluzione corrente. La nuova origine dei dati acquisisce le impostazioni dalle proprietà `TargetServer` e `TargetDatabase` del progetto selezionato. Quando un progetto che utilizza la nuova origine dei dati viene compilato, aggiornato o distribuito, la nuova origine dei dati acquisisce le impostazioni dall'origine dei dati specificata quando si seleziona questa opzione.  
   
  **Project**  
  Consente di selezionare il progetto a cui fare riferimento nella nuova origine dei dati.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto della creazione guidata origine dati &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)   
  [Origini dati nei modelli multidimensionali](multidimensional-models/data-sources-in-multidimensional-models.md)   
  [Origini dati supportate &#40;SSAS multidimensionale&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  

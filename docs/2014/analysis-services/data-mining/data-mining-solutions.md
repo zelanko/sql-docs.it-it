@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 84f6548d-ebb0-4e10-9b29-66253fa0a04a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d5a5126048928e66fd8351bc00226cadb2de54d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 226b8c52fde4c9c4190c9c6c0c1e91c578643f53
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084887"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522730"
 ---
 # <a name="data-mining-solutions"></a>Soluzioni di data mining
   Una soluzione di data mining è una soluzione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che contiene uno o più progetti di data mining.  
   
- Negli argomenti di questa sezione vengono fornite informazioni sulla progettazione e l'implementazione di una soluzione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]data mining integrata utilizzando. Per una panoramica sul processo di progettazione dei modelli di data mining e sugli strumenti correlati, vedere [Concetti di data mining](data-mining-concepts.md).  
+ Negli argomenti di questa sezione vengono fornite informazioni sulla progettazione e l'implementazione di una soluzione di data mining integrata utilizzando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Per una panoramica sul processo di progettazione dei modelli di data mining e sugli strumenti correlati, vedere [Concetti di data mining](data-mining-concepts.md).  
   
  Per altre informazioni su ulteriori tipi di progetti utili per il data mining, vedere [Progetti correlati per soluzioni di data mining](data-mining-solutions.md).  
   
@@ -84,7 +83,7 @@ ms.locfileid: "66084887"
 |Personalizzare un modello di data mining applicando filtri ai dati utilizzati per il training del modello.|[Aggiungere modelli di data mining a una struttura &#40;Analysis Services - Data mining&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |Aggiornare e gestire soluzioni di data mining.|Collegamento|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Esercitazioni sul data mining &#40;Analysis Services&#41;](../data-mining-tutorials-analysis-services.md)  
   
   

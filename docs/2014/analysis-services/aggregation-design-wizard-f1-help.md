@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 39e23cf1-6405-4fb6-bc14-ba103314362d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9778bfde1e63163c8fae89b93d0673cbde16a8cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a29cc4c248b1cdc4d671890f980cb7fe14c8414a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062745"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528167"
 ---
 # <a name="aggregation-design-wizard-f1-help"></a>Guida sensibile al contesto della Progettazione guidata aggregazioni
-  Le aggregazioni garantiscono miglioramenti delle prestazioni [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] consentendo di recuperare i totali precalcolati direttamente dall'archiviazione del cubo anziché ricalcolare i dati da un'origine dati sottostante per ogni query.  
+  Le aggregazioni garantiscono miglioramenti delle prestazioni consentendo [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] di recuperare i totali precalcolati direttamente dall'archiviazione del cubo anziché ricalcolare i dati da un'origine dati sottostante per ogni query.  
   
  Per progettare queste aggregazioni, è possibile utilizzare Progettazione guidata aggregazioni. Questa procedura guidata consente di eseguire in modo semplificato i passaggi seguenti:  
   
@@ -46,7 +45,7 @@ ms.locfileid: "66062745"
   
 -   [Completamento procedura guidata &#40;progettazione guidata aggregazioni&#41;](completing-the-wizard-aggregation-design-wizard.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Aggregazioni e progettazioni delle aggregazioni](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
  [Cubi nei modelli multidimensionali](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Guida sensibile al contesto dell'ottimizzazione guidata basata sull'utilizzo](usage-based-optimization-wizard-f1-help.md)   

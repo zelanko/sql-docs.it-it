@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e075e2de-11cc-4f71-9603-0b161bca8a24
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9c2f11ecbdf90aeeb5e0e5a3ef097152898042d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f41ffd3091ccf38498f1484d9a1bf5a908e50e39
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086426"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525939"
 ---
 # <a name="data-mining-client-for-excel-sql-server-data-mining-add-ins"></a>Client di data mining per Excel (componenti aggiuntivi Data mining di SQL Server)
   Il client di data mining per Excel è un set di strumenti che consentono di eseguire attività comuni di data mining, dalla pulizia dei dati alla compilazione dei modelli e alle query di stima. È possibile utilizzare i dati in intervalli o tabelle di Excel o accedere alle origini dati esterne.  
@@ -155,7 +154,7 @@ ms.locfileid: "66086426"
   
  Nella pagina della Guida sono inoltre presenti collegamenti a risorse online, inclusa la Guida per il componente aggiuntivo, e ulteriori video, demo ed esempi.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Strumenti di analisi tabelle per Excel](table-analysis-tools-for-excel.md)   
  [Risoluzione dei problemi relativi ai diagrammi di data mining di Visio &#40;componenti aggiuntivi Data mining di SQL Server&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md)  
   

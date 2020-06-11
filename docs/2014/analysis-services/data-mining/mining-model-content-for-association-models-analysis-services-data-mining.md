@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d5849bcb-4b8f-4f71-9761-7dc5bb465224
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a1e525d7b42d058343e41ea154f0687fb969839
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1836cb414e8ea7f6e0bedbf0b4fb75cf0bfa264e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083693"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521587"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli di associazione (Analysis Services - Data mining)
   Questo argomento descrive il contenuto dei modelli di data mining specifico dei modelli che usano l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules. Per una spiegazione della terminologia generale e statistica relativa al contenuto dei modelli di data mining applicabile a tutti i tipi di modello, vedere [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -60,7 +59,7 @@ ms.locfileid: "66083693"
  NODE_TYPE  
  Un modello di associazione restituisce solo i tipi di nodo seguenti:  
   
-|ID tipo di nodo|Type|  
+|ID tipo di nodo|Tipo|  
 |------------------|----------|  
 |1 (Model)|Radice o nodo padre.|  
 |7 (Itemset)|Set di elementi, ovvero raccolta di coppie attributo-valore. Esempi:<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> oppure<br /><br /> `Gender = Male`.|  
@@ -95,7 +94,7 @@ ms.locfileid: "66083693"
   
  **Nodo padre** Include un elenco delimitato da virgole delle informazioni seguenti sul modello:  
   
-|Item|Descrizione|  
+|Elemento|Descrizione|  
 |----------|-----------------|  
 |ITEMSET_COUNT|Conteggio di tutti i set di elementi nel modello.|  
 |RULE_COUNT|Conteggio di tutte le regole nel modello.|  
@@ -192,7 +191,7 @@ ms.locfileid: "66083693"
  MSOLAP_NODE_SHORT_CAPTION  
  Vuoto.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Contenuto del modello di data mining &#40;Analysis Services-&#41;di data mining](mining-model-content-analysis-services-data-mining.md)   
  [Algoritmo Microsoft Association](microsoft-association-algorithm.md)   
  [Esempi di query sul modello di associazione](association-model-query-examples.md)  

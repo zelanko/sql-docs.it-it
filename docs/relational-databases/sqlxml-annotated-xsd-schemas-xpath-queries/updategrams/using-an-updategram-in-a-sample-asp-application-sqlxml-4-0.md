@@ -1,5 +1,6 @@
 ---
 title: Usare updategram in un'applicazione ASP di esempio (SQLXML)
+description: Visualizzazione di un esempio di utilizzo di un updategram SQLXML in un'applicazione di Active Server Pages (ASP).
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7b6c69fe48cf64010d530af8a2cda621814cf4ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 96b2454ef4440318c7a386caab9b703ddecf9f83
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246090"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529822"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>Utilizzo di un updategram in un'applicazione ASP di esempio (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -78,7 +79,7 @@ ms.locfileid: "75246090"
 </ROOT>  
 ```  
   
- Il codice seguente è l'applicazione ASP (SampleASP.asp). Salvarlo nella directory associata a una radice virtuale che è possibile creare mediante l'utilità Gestione Internet Services. Questa radice virtuale non viene creata utilizzando la gestione delle directory virtuali IIS per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] l'utilità perché la gestione delle directory virtuali [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] IIS per non può accedere o identificare le applicazioni ASP.  
+ Il codice seguente è l'applicazione ASP (SampleASP.asp). Salvarlo nella directory associata a una radice virtuale che è possibile creare mediante l'utilità Gestione Internet Services. Questa radice virtuale non viene creata utilizzando la gestione delle directory virtuali IIS per l' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilità perché la gestione delle directory virtuali IIS per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non può accedere o identificare le applicazioni ASP.  
   
 > [!NOTE]  
 >  Nel codice è necessario sostituire "ServerName" con il nome del server che esegue Microsoft Internet Information Services (IIS).  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b1c912da-72f6-4d96-89c8-55a2c4f19e88
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 28b623333adaced772f85572091543f124894f4f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 447b350aae97ded341788dd4b398441d6b1efdb2
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084820"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522671"
 ---
 # <a name="data-mining-ssas"></a>Data mining (SSAS)
   In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è disponibile una piattaforma integrata per le soluzioni in cui è incorporato il data mining. Per creare soluzioni di Business Intelligence con analisi predittiva è possibile utilizzare i dati relazionali o del cubo.  
@@ -49,7 +48,7 @@ ms.locfileid: "66084820"
 ## <a name="in-this-section"></a>Contenuto della sezione  
  Negli argomenti di questa sezione sono illustrate le caratteristiche principali di Data mining di SQL Server e le attività correlate.  
   
--   [Concetti di data mining](data-mining-concepts.md)  
+-   [Concetti relativi al data mining](data-mining-concepts.md)  
   
 -   [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   

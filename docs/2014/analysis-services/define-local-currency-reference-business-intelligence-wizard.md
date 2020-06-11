@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 74993b0d-dfca-476b-acba-d66c593680a5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 558e2c7d62edcb9fb314b49d41fd7bd15413218d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 12a32140b2586b440fabcadc8385ab801963280a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082183"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528837"
 ---
 # <a name="define-local-currency-reference-business-intelligence-wizard"></a>Definizione associazioni valute locali (Configurazione guidata funzionalità di Business Intelligence)
   Usare la pagina **Definizione associazioni valute locali** per definire le valute locali per la funzionalità di conversione valuta che riguarda il tipo di conversione molti-a-molti o molti-a-uno specificato nella pagina **Selezione tipo di conversione** . Una valuta locale è la valuta in cui vengono archiviate le transazioni per le misure selezionate nella pagina **Selezione misure** .  
@@ -27,12 +26,12 @@ ms.locfileid: "66082183"
   
 ## <a name="options"></a>Opzioni  
  **Identificatori nella tabella dei fatti**  
- Selezionare questa opzione per specificare un attributo che fornisce gli identificatori di valuta per le valute locali in una dimensione di tipo Valuta a cui fa riferimento la tabella dei fatti contenente le misure selezionate nella pagina **Selezione misure** . Una dimensione di tipo valuta in un `Type` oggetto la cui proprietà è impostata su *Currency*.  
+ Selezionare questa opzione per specificare un attributo che fornisce gli identificatori di valuta per le valute locali in una dimensione di tipo Valuta a cui fa riferimento la tabella dei fatti contenente le misure selezionate nella pagina **Selezione misure** . Una dimensione di tipo valuta in un oggetto la cui `Type` proprietà è impostata su *Currency*.  
   
- Utilizzare questa opzione quando è la transazione stessa a determinare la valuta corrente per la transazione. Nel [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database di esempio, ad esempio[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)], il gruppo di misure Internet Sales ha una relazione di tipo regolare con la dimensione di tipo valuta. La tabella dei fatti per tale gruppo di misure include una colonna chiave esterna che fa riferimento agli identificatori di valuta della tabella della dimensione.  
+ Utilizzare questa opzione quando è la transazione stessa a determinare la valuta corrente per la transazione. Nel database di esempio, ad esempio [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] , il gruppo di misure Internet Sales ha una relazione di tipo regolare con la dimensione di tipo valuta. La tabella dei fatti per tale gruppo di misure include una colonna chiave esterna che fa riferimento agli identificatori di valuta della tabella della dimensione.  
   
  **Dimensione e attributo di valuta a cui fanno riferimento i dati della tabella dei fatti**  
- Consente di selezionare l'attributo di valuta nella dimensione di tipo Valuta i cui membri rappresentano gli identificatori di valuta per le valute locali. Un attributo di valuta è uno la `Type` cui proprietà è impostata su *Currency*.  
+ Consente di selezionare l'attributo di valuta nella dimensione di tipo Valuta i cui membri rappresentano gli identificatori di valuta per le valute locali. Un attributo di valuta è uno la cui `Type` proprietà è impostata su *Currency*.  
   
 > [!NOTE]  
 >   Questa opzione non è disponibile se non è stata selezionata l'opzione **Identificatori nella tabella dei fatti** .  
@@ -40,7 +39,7 @@ ms.locfileid: "66082183"
  **Attributi nella tabella delle dimensioni**  
  Consente di specificare un attributo da una dimensione correlata al gruppo di misure che contiene gli identificatori di valuta per le valute locali.  
   
- Utilizzare questa opzione quando è la relazione tra una transazione e un'altra entità commerciale, ad esempio un percorso, a determinare la valuta locale per la transazione. Nel database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] esempio, ad esempio[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)], il gruppo di misure Financial Reporting dispone di una relazione di dimensione di tipo riferimento con la dimensione di tipo valuta tramite la dimensione Organization. Cioè, la tabella dei fatti per il gruppo di misure Financial Reporting contiene una colonna chiave esterna che fa riferimento a membri nella tabella della dimensione per la dimensione Organization. Questa tabella della dimensione include a sua volta una colonna chiave esterna che fa riferimento agli identificatori di valuta nella tabella della dimensione per la dimensione di tipo Valuta.  
+ Utilizzare questa opzione quando è la relazione tra una transazione e un'altra entità commerciale, ad esempio un percorso, a determinare la valuta locale per la transazione. Nel database di esempio, ad esempio [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] , il gruppo di misure Financial Reporting dispone di una relazione di dimensione di tipo riferimento con la dimensione di tipo valuta tramite la dimensione Organization. Cioè, la tabella dei fatti per il gruppo di misure Financial Reporting contiene una colonna chiave esterna che fa riferimento a membri nella tabella della dimensione per la dimensione Organization. Questa tabella della dimensione include a sua volta una colonna chiave esterna che fa riferimento agli identificatori di valuta nella tabella della dimensione per la dimensione di tipo Valuta.  
   
  **Attributo della dimensione che fa riferimento alla valuta**  
  Consente di selezionare l'attributo all'interno di una dimensione i cui membri fanno riferimento agli identificatori di valuta per la valuta locale.  
@@ -48,7 +47,7 @@ ms.locfileid: "66082183"
 > [!NOTE]  
 >   Questa opzione non è disponibile se non è stata selezionata l'opzione **Attributi nella tabella delle dimensioni** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto della configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Progettazione dimensioni &#40;Analysis Services-Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  

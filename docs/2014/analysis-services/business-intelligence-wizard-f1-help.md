@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 155ac80c-63ae-47aa-9e86-9396e3d920eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 25496be8f8cfc877b72ab6fd511446d9e194e2b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e78754c93393f172e7282df19166536b29a2e640
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088394"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527678"
 ---
 # <a name="business-intelligence-wizard-f1-help"></a>Guida sensibile al contesto della Configurazione guidata funzionalità di Business Intelligence
   Utilizzare questa procedura guidata per definire le funzionalità di Business Intelligence ed impostare le opzioni avanzate di cubi e dimensioni. La procedura guidata consente di impostare proprietà di oggetti esistenti, creare nuovi oggetti e generare script MDX (Multidimensional Expression) per offrire, ad esempio, funzionalità di Business Intelligence per le dimensioni e di conversione di valuta.  
@@ -96,7 +95,7 @@ ms.locfileid: "66088394"
   
 -   [Completamento della procedura guidata &#40;configurazione guidata funzionalità di business intelligence&#41;](completing-the-wizard-business-intelligence-wizard.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Progettazione dimensioni &#40;Analysis Services-Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
  [Procedure guidate di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-wizards-multidimensional-data.md)  

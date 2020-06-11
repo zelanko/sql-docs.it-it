@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 15dcb2c8241b8b4cf7cdb2780ed532e863cf52ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54523b9c2302deafb0faa9c23708224470bd69b8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085486"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523757"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>Creare una query di stima singleton da un modello
   Una query singleton è utile quando si dispone di un modello che si desidera utilizzare per la stima, ma non si desidera eseguirne il mapping a un set di dati di input esterno oppure eseguire stime bulk. Con una query singleton, è possibile fornire uno o più valori al modello e ottenere all'istante il valore stimato.  
@@ -69,20 +68,20 @@ AS [t]
   
 5.  Nella riga del **modello di data mining** digitare il nome del modello di data mining tra quelli presenti nell'elenco dei modelli di data mining visualizzati in **Esplora oggetti**.  
   
-     Per il codice di esempio mostrato all'inizio di questo argomento, la riga del **modello di data mining** è stata impostata `TM_Decision_Tree`sul nome,.  
+     Per il codice di esempio mostrato all'inizio di questo argomento, la riga del **modello di data mining** è stata impostata sul nome, `TM_Decision_Tree` .  
   
 6.  Nella riga del **valore** digitare il nuovo valore dei dati per il quale si desidera effettuare una stima.  
   
-     Per il codice di esempio mostrato all'inizio di questo argomento, la riga del **valore** è stata `2` impostata su per stimare il comportamento di acquisto della bicicletta in base al numero di figli a casa.  
+     Per il codice di esempio mostrato all'inizio di questo argomento, la riga del **valore** è stata impostata su `2` per stimare il comportamento di acquisto della bicicletta in base al numero di figli a casa.  
   
 7.  Nella riga della **colonna** digitare il nome della colonna nel modello di data mining su cui deve essere eseguito il mapping dei nuovi dati.  
   
-     Per il codice di esempio mostrato all'inizio di questo argomento, la riga della **colonna** è stata `Number Children at Home`impostata su.  
+     Per il codice di esempio mostrato all'inizio di questo argomento, la riga della **colonna** è stata impostata su `Number Children at Home` .  
   
     > [!NOTE]  
     >  Quando si usa la finestra di dialogo **Specifica valori per parametri modello** , non è necessario racchiudere il nome della colonna tra parentesi quadre. Le parentesi verranno aggiunte automaticamente.  
   
-8.  Lasciare l' **alias** di input `t`come.  
+8.  Lasciare l' **alias di input** come `t` .  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -92,7 +91,7 @@ AS [t]
   
 11. Fare clic su **Execute**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di stime &#40;Esercitazione di base sul data mining&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
   

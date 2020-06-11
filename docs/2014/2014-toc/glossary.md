@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 author: heidisteen
 ms.author: heidist
-manager: craigg
-ms.openlocfilehash: b84e54a30afc61169f6db8bf0a71081faeb27f96
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f55c4388fdc75eb531e74ffb6ffc5f24804c163
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67412697"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528297"
 ---
 # <a name="glossary"></a>Glossario
 
@@ -52,7 +51,7 @@ ms.technology:
 |ADOMD.NET|Provider di dati gestiti .NET che consente l'accesso a origini dati multidimensionali, ad esempio Microsoft SQL Server Analysis Services.|  
 |funzione di aggregazione|Funzione che esegue un calcolo su più valori e restituisce un singolo valore.|  
 |query di aggregazione|Query (istruzione SQL) che riepiloga informazioni contenute in più righe tramite l'utilizzo di una funzione di aggregazione, ad esempio Sum o Avg.|  
-|aggregazione|Tabella o struttura contenente dati pre-calcolati per un cubo OLAP (elaborazione analitica online). Le aggregazioni consentono un'esecuzione rapida ed efficiente delle query di un database multidimensionale.|  
+|aggregation|Tabella o struttura contenente dati pre-calcolati per un cubo OLAP (elaborazione analitica online). Le aggregazioni consentono un'esecuzione rapida ed efficiente delle query di un database multidimensionale.|  
 |prefisso di aggregazione|Stringa combinata con un ID definito dal sistema per creare un nome univoco per la tabella di aggregazione di una partizione.|  
 |wrapper di aggregazione|Wrapper che incapsula un oggetto COM all'interno di un altro oggetto COM.|  
 |alias|Etichetta alternativa per un oggetto, ad esempio un file o una raccolta dati.|  
@@ -81,7 +80,7 @@ ms.technology:
 |matrice associativa|Matrice composta da una raccolta di chiavi e da una raccolta di valori, dove ogni chiave è associata a un valore. Le chiavi e i valori possono essere di qualsiasi tipo.|  
 |feed atom|Struttura XML che contiene i metadati relativi al contenuto, ad esempio la versione linguistica e la data dell'ultima modifica del contenuto, che viene inviata ai sottoscrittori tramite il protocollo Atom Publishing Protocol (AtomPub).|  
 |atomico|Riguarda un'operazione in cui devono essere eseguite tutte le modifiche ai dati della transazione. Vengono eseguite tutte le modifiche ai dati della transazione oppure non ne viene eseguita alcuna.|  
-|attributo|Singola caratteristica o informazione (finanziaria o non finanziaria) che esiste in un database.|  
+|Attributo|Singola caratteristica o informazione (finanziaria o non finanziaria) che esiste in un database.|  
 |gerarchia attributi|Gerarchia semplice, che in genere presenta un livello Tutti e un livello membro, contenente un singolo attributo. Viene creata da una colonna di una tabella delle dimensioni, se supportata dal cubo.|  
 |relazione tra attributi|Gerarchia associata a un attributo che contiene un unico livello basato sulla colonna corrispondente in una tabella delle dimensioni.|  
 |tipo di attributo|Tipo di informazioni contenute in un attributo, ad esempio trimestri o mesi in una dimensione temporale, a cui può essere riservato un trattamento specifico da parte delle applicazioni client e server.|  
@@ -111,7 +110,7 @@ ms.technology:
 |block|Istruzione Transact-SQL racchiusa tra BEGIN ed END.|  
 |cursore rettangolare|Cursore con dimensioni del set di righe maggiori di 1.|  
 |transazione bloccante|Transazione che impedisce la riuscita di un'altra transazione.|  
-|espressione booleana|Espressione che produce un valore booleano (true o false). Tali espressioni possono comportare confronti (test di valori per l'uguaglianza o, per valori \< non booleani, la relazione [minore di] o > [maggiore di]) e combinazione logica (tramite operatori BOOLEANI quali and, or e XOR) di espressioni booleane.|  
+|espressione booleana|Espressione che produce un valore booleano (true o false). Tali espressioni possono comportare confronti (test di valori per l'uguaglianza o, per valori non booleani, la \< [less than] or > relazione [maggiore di]) e combinazione logica (tramite operatori booleani quali and, or e XOR) di espressioni booleane.|  
 |operatore booleano|Operatore progettato per l'utilizzo di valori booleani. I quattro operatori booleani più comuni utilizzati nella programmazione sono AND (congiunzione logica), OR (inclusione logica), XOR (OR esclusivo) e NOT (negazione logica).|  
 |flusso associato|Flusso di eventi contenente tutte le informazioni necessarie per produrre eventi. Le informazioni provengono da un'origine dati di cui è già stata creata un'istanza oppure sono sufficienti per consentire al server StreamInsight di avviare l'origine dati.|  
 |rettangolo di selezione|La più piccola area rettangolare che circonderà un percorso, una forma o un gruppo di oggetti.|  
@@ -296,7 +295,7 @@ ms.technology:
 |conflitto di concorrenza|Conflitto che si verifica quando lo stesso elemento o unità di modifica viene modificata in due repliche diverse che verranno sincronizzate in un momento successivo.|  
 |modello di concorrenza|Modalità di progettazione di un'applicazione per tenere conto delle operazioni simultanee che utilizzano gli stessi dati memorizzati nella cache. In Windows Server AppFabric sono supportati i modelli di concorrenza ottimistica e pessimistica.|  
 |operazione simultanea|Operazione del computer in cui due o più processi (programmi) hanno accesso al tempo del microprocessore e pertanto vengono eseguiti quasi simultaneamente. Poiché un microprocessore può funzionare con unità di tempo molto più piccole di quanto non sia umanamente percettibile, i processi sembrano avere luogo simultaneamente anche se in realtà non è così.|  
-|espressione condizionale|Espressione che produce un valore booleano (true o false). Tali espressioni possono comportare confronti (test di valori per l'uguaglianza o, per valori \< non booleani, la relazione [minore di] o > [maggiore di]) e combinazione logica (tramite operatori BOOLEANI quali and, or e XOR) di espressioni booleane.|  
+|espressione condizionale|Espressione che produce un valore booleano (true o false). Tali espressioni possono comportare confronti (test di valori per l'uguaglianza o, per valori non booleani, la \< [less than] or > relazione [maggiore di]) e combinazione logica (tramite operatori booleani quali and, or e XOR) di espressioni booleane.|  
 |suddivisione condizionale|Ripristino di un backup di database completo, del backup di database differenziale più recente, se presente, e di eventuali backup del log eseguiti dopo l'ultimo backup di database completo.|  
 |file config|File contenente specifiche operative leggibili dal computer per un componente hardware o software o informazioni relative a un altro file o a un utente specifico, ad esempio l'ID di accesso.|  
 |configurazione|In riferimento a un microcomputer singolo, somma dei componenti interni ed esterni del sistema, inclusi memoria, unità disco, tastiera, monitor e hardware aggiuntivo generalmente meno critico, ad esempio mouse, modem o stampante. Il software (sistema operativo e diversi driver di dispositivo), le scelte dell'utente effettuate attraverso file di configurazione quali AUTOEXEC.BAT e CONFIG.SYS su PC IBM e compatibili e talvolta componenti hardware (switch e ponticelli) sono necessari affinché la configurazione funzioni correttamente. Sebbene sia possibile modificare la configurazione del sistema, ad esempio aggiungendo ulteriore memoria o capacità del disco, la struttura di base del sistema, ovvero la sua architettura, rimane la stessa.|  
@@ -480,7 +479,7 @@ ms.technology:
 |base differenziale|Backup completo più recente di tutti i dati in un database o in un subset dei relativi file o filegroup.|  
 |recapito digest|Metodo di invio delle notifiche che combina più notifiche in un batch e invia il messaggio risultante a un Sottoscrittore.|  
 |certificato digitale|Documento digitale comunemente utilizzato per l'autenticazione e la sicurezza delle informazioni in una rete. Un certificato associa una chiave pubblica a un'entità che contiene la chiave privata corrispondente. I certificati includono la firma digitale dell'autorità di certificazione che li emette e possono essere destinati a un utente, un computer o un servizio.|  
-|dimensioni|Attributo strutturale di un cubo che organizza dati in livelli. Ad esempio, è possibile che una dimensione Geografia includa Paese, Regione, Stato o provincia e Città dei membri.|  
+|dimension|Attributo strutturale di un cubo che organizza dati in livelli. Ad esempio, è possibile che una dimensione Geografia includa Paese, Regione, Stato o provincia e Città dei membri.|  
 |espressione di dimensione|Espressione MDX (Multidimensional Expression) valida che restituisce una dimensione.|  
 |granularità della dimensione|Livello più basso disponibile per una dimensione specifica in relazione a un determinato gruppo di misure. La granularità naturale o fisica è sempre quella della chiave che unisce in join la tabella delle dimensioni principale alla tabella dei fatti primaria.|  
 |gerarchia di dimensione|Struttura logica ad albero che consente di organizzare i membri di una dimensione in modo tale che ogni membro sia associato a un membro padre e a nessuno o più membri figlio.|  
@@ -559,7 +558,7 @@ ms.technology:
 |evento Edge|Evento il cui payload è valido per un intervallo di tempo specifico, ma solo l'ora di inizio è nota all'arrivo al server CEP. L'ora di fine valida dell'evento viene fornita in un secondo momento in un evento Edge separato.|  
 |criteri validi|Set di criteri abilitati per una destinazione.|  
 |posta elettronica|Scambio di messaggi di testo e file di computer in una rete di comunicazioni, ad esempio una LAN o Internet.|  
-|Crittografia|Processo di conversione di dati leggibili (testo normale) in formato codificato (testo crittografato) per impedirne la lettura da parte di utenti non autorizzati.|  
+|crittografia|Processo di conversione di dati leggibili (testo normale) in formato codificato (testo crittografato) per impedirne la lettura da parte di utenti non autorizzati.|  
 |chiave di crittografia|Stringa di bit utilizzata insieme a un algoritmo di crittografia per crittografare e decrittografare i dati.|  
 |estremità di chiusura|Per percorsi che contengono terminazioni disconnesse, ad esempio linee, la fine di un tratto. È possibile modificare l'aspetto del tratto a ogni estremità applicando uno dei quattro stili di estremità di chiusura: estremità piatta, estremità arrotondata, estremità quadrata o estremità a punta.|  
 |endpoint|Provider di sincronizzazione e relativa replica associata.|  
@@ -585,7 +584,7 @@ ms.technology:
 |categoria di eventi|In Traccia SQL, raggruppamento di classi di evento simili e correlate logicamente.|  
 |cronologia eventi|Tabella in cui sono archiviate informazioni sullo stato degli eventi.|  
 |regola di cronologia degli eventi|Una o più istruzioni Transact-SQL che gestiscono i dati nella cronologia eventi.|  
-|classe di evento|In Traccia SQL, raccolta di proprietà che definiscono un evento.|  
+|Classe event|In Traccia SQL, raccolta di proprietà che definiscono un evento.|  
 |classificazione di evento|Mezzo per differenziare i tipi di eventi che si verificano nel client e nell'host della cache. I sink di log di Windows Server AppFabric seguono la classificazione stabilita con l'enumerazione System.Diagnostics.TraceLevel.|  
 |stored procedure per la raccolta degli eventi|Stored procedure generate dal sistema che possono essere chiamate da un'applicazione per inviare eventi alla tabella eventi nel database dell'applicazione.|  
 |gestore dell'evento|Routine software eseguita in risposta a un evento.|  
@@ -746,7 +745,7 @@ ms.technology:
 |dati di controllo|Percentuale dei dati di training riservata per misurare l'accuratezza della struttura del modello di data mining.|  
 |dati di controllo|Percentuale dei dati di training riservata per misurare l'accuratezza della struttura del modello di data mining.|  
 |archivio dati di controllo|Struttura di data mining utilizzata per memorizzare nella cache i dati di controllo. Contiene riferimenti ai dati di controllo.|  
-|Home|Cartella radice nello spazio dei nomi delle cartelle del server di report.|  
+|Home page|Cartella radice nello spazio dei nomi delle cartelle del server di report.|  
 |home page|Documento che funge da punto iniziale in un sistema di ipertesto. Nel World Wide Web, pagina di ingresso di un set di pagine Web e altri file in un sito Web. La home page viene visualizzata per impostazione predefinita quando un visitatore accede al sito in un Web browser.|  
 |dati omogenei|Dati provenienti da più origini dati che vengono gestiti dallo stesso software.|  
 |hop|Nelle comunicazioni di dati, un segmento del percorso tra i router in una rete geografica.|  
@@ -849,7 +848,7 @@ ms.technology:
 |Key Recovery Agent|Utente designato che collabora con un amministratore di certificati per recuperare la chiave privata di un utente. Un modello di certificato specifico viene applicato a un Key Recovery Agent.|  
 |cursore gestito da keyset|Cursore che visualizza gli effetti degli aggiornamenti apportati alle relative righe membro da altri utenti quando il cursore è aperto, ma non visualizza gli effetti degli inserimenti o delle eliminazioni.|  
 |conoscenza|Metadati relativi a tutte le modifiche che un partecipante vede e mantiene.|  
-|KPI|Misura predefinita utilizzata per tenere traccia delle prestazioni di un obiettivo, un piano, un'iniziativa o un processo aziendale strategico. L'indicatore KPI viene valutato rispetto a un valore di destinazione. Valore esplicito e misurabile ricavato direttamente da un'origine dati. Gli indicatori di prestazioni chiave (indicatori KPI) vengono utilizzati per misurare le prestazioni in un'area specifica, ad esempio i ricavi per cliente.|  
+|Indicatore KPI|Misura predefinita utilizzata per tenere traccia delle prestazioni di un obiettivo, un piano, un'iniziativa o un processo aziendale strategico. L'indicatore KPI viene valutato rispetto a un valore di destinazione. Valore esplicito e misurabile ricavato direttamente da un'origine dati. Gli indicatori di prestazioni chiave (indicatori KPI) vengono utilizzati per misurare le prestazioni in un'area specifica, ad esempio i ricavi per cliente.|  
 |KRA|Utente designato che collabora con un amministratore di certificati per recuperare la chiave privata di un utente. Un modello di certificato specifico viene applicato a un Key Recovery Agent.|  
 |lingua per programmi non Unicode|Impostazione Opzioni internazionali e della lingua che specifica le tabelle codici predefinite e i file del tipo di carattere bitmap associati per un computer specifico che influisce su tutti gli utenti di tale computer. Le tabelle codici e i tipi di carattere predefiniti consentono a un'applicazione non Unicode scritta per una versione in lingua del sistema operativo di essere eseguita correttamente in un'altra versione in lingua del sistema operativo.|  
 |parser servizio di linguaggio|Componente utilizzato per descrivere le funzioni e l'ambito dei token nel codice sorgente.|  
@@ -867,7 +866,7 @@ ms.technology:
 |conoscenza acquisita|Conoscenza corrente di una replica di origine su un set specifico di modifiche e sui conflitti registrati di tale replica.|  
 |utilizzato meno di recente|Tipo di eliminazione utilizzato dal cluster di cache, dove gli oggetti utilizzati meno di recente vengono eliminati prima di quelli utilizzati più di recente.|  
 |left outer join|Tipo di outer join tramite cui vengono incluse tutte le righe della tabella più a sinistra nella clausola JOIN. Se le righe della tabella sinistra non hanno corrispondenza con le righe della tabella destra, a tutte le colonne del set di risultati che provengono dalla tabella destra viene assegnato un valore NULL.|  
-|level|Nome di un set di membri in una gerarchia di dimensione tale che tutti i membri del set sono equidistanti dalla radice della gerarchia. Ad esempio, la gerarchia temporale può includere i livelli Anno, Mese e Giorno.|  
+|livello|Nome di un set di membri in una gerarchia di dimensione tale che tutti i membri del set sono equidistanti dalla radice della gerarchia. Ad esempio, la gerarchia temporale può includere i livelli Anno, Mese e Giorno.|  
 |grafico di accuratezza|In Analysis Services, grafico che confronta l'accuratezza delle stime di ogni modello di data mining nel set di confronti.|  
 |lightweight pooling|Opzione che consente di ridurre l'overhead del sistema associato a un'eccessiva attività di cambio del contesto che talvolta si riscontra negli ambienti SMP (Symmetric Multiprocessing), eseguendo direttamente il cambio del contesto e quindi riducendo le transizioni utente/kernel ring.|  
 |livello linea|Livello in un report di mappa in cui vengono visualizzati dati spaziali come linee, ad esempio, per indicare percorsi o route.|  
@@ -1172,7 +1171,7 @@ ms.technology:
 |vincolo di precedenza|Elemento del flusso di controllo che connette attività e contenitori in un flusso di lavoro ordinato in sequenza.|  
 |partizione pre-calcolata|Ottimizzazione delle prestazioni che può essere utilizzata con le pubblicazioni di tipo merge filtrate.|  
 |colonna stimabile|Colonna di data mining in base a cui l'algoritmo compilerà un modello basato sui valori delle colonne di input. Oltre a servire come una colonna di output, una colonna stimabile può essere utilizzata anche come input per altre colonne stimabili all'interno della stessa struttura di data mining.|  
-|stima|Tecnica di data mining che analizza i dati esistenti e utilizza i risultati per stimare i valori degli attributi dei nuovi record o gli attributi mancanti dei record esistenti. Ad esempio, i dati di una richiesta di credito esistente possono essere utilizzati per stimare il rischio di credito per una nuova richiesta.|  
+|prediction|Tecnica di data mining che analizza i dati esistenti e utilizza i risultati per stimare i valori degli attributi dei nuovi record o gli attributi mancanti dei record esistenti. Ad esempio, i dati di una richiesta di credito esistente possono essere utilizzati per stimare il rischio di credito per una nuova richiesta.|  
 |Calcolo stime|Nuovo report basato su analisi di regressione logistica che presenta ogni fattore di influenza insieme a un punteggio calcolato dall'algoritmo. Il report viene presentato come foglio di lavoro, che facilita l'immissione di dati e l'esecuzione dei calcoli dei probabili risultati, e come report stampato che consente di eseguire le stesse operazioni.|  
 |caratteri di prefisso|Set da 1 a 4 byte da utilizzare come prefisso per ogni campo dati in un file di dati della copia bulk in formato nativo.|  
 |lunghezza di prefisso|Numero di caratteri prefisso che precedono ogni campo non carattere in un file di dati con estensione bcp in formato nativo.|  
@@ -1212,7 +1211,7 @@ ms.technology:
 |database di pubblicazione|Database nel server di pubblicazione dal quale i dati e gli oggetti di database vengono contrassegnati per la replica e propagati ai Sottoscrittori.|  
 |periodo di memorizzazione della pubblicazione|Nella replica di tipo merge, periodo di tempo massimo in cui una sottoscrizione può rimanere non sincronizzata.|  
 |dati pubblicati|Dati replicati nel server di pubblicazione.|  
-|Editore|Server che rende disponibili dati per la replica ad altri server. Un server di pubblicazione rileva inoltre i dati modificati e gestisce le informazioni relative a tutte le pubblicazioni del sito.|  
+|Publisher|Server che rende disponibili dati per la replica ad altri server. Un server di pubblicazione rileva inoltre i dati modificati e gestisce le informazioni relative a tutte le pubblicazioni del sito.|  
 |database del server di pubblicazione|Server che rende disponibili dati per la replica ad altri server. Un server di pubblicazione rileva inoltre i dati modificati e gestisce le informazioni relative a tutte le pubblicazioni del sito.|  
 |server di pubblicazione|Server che esegue un'istanza di Analysis Services in cui viene archiviato il cubo di origine per uno o più cubi collegati.|  
 |tabella di pubblicazione|Tabella nel server di pubblicazione in cui i dati sono stati contrassegnati per la replica e fanno parte di una pubblicazione.|  
@@ -1340,10 +1339,10 @@ ms.technology:
 |schema SQL del repository|Set di tabelle standard utilizzate dal motore del repository per gestire tutti gli oggetti, le relazioni e le raccolte del repository.|  
 |modello informativo del tipo di repository|Modello a oggetti principale che rappresenta le definizioni del tipo del repository per Servizio metadati.|  
 |server di ripubblicazione|Sottoscrittore che pubblica i dati ricevuti da un server di pubblicazione.|  
-|carattere riservato|Carattere della tastiera con un significato specifico per un programma che, di conseguenza, non può essere utilizzato normalmente nell'assegnazione di nomi a file, documenti e altri strumenti generati dall'utente, ad esempio le macro. I caratteri comunemente riservati per usi speciali includono l'asterisco (*), la barra (/), la\\barra rovesciata (), il punto interrogativo (?) e la barra verticale (&#124;).|  
+|carattere riservato|Carattere della tastiera con un significato specifico per un programma che, di conseguenza, non può essere utilizzato normalmente nell'assegnazione di nomi a file, documenti e altri strumenti generati dall'utente, ad esempio le macro. I caratteri comunemente riservati per usi speciali includono l'asterisco (*), la barra (/), la barra rovesciata ( \\ ), il punto interrogativo (?) e la barra verticale (&#124;).|  
 |strategia di risoluzione|Set di criteri valutati in sequenza dal motore del repository durante la selezione di un oggetto nel caso in cui esistano più versioni e le informazioni sulle versioni non siano state specificate nel programma che esegue la chiamata.|  
-|risorse|Variabile speciale che contiene un riferimento a un'istruzione o a una connessione di database.|  
-|risorse|Qualsiasi elemento in un database del server di report diverso da un report, una cartella o un'origine dati condivisa.|  
+|resource|Variabile speciale che contiene un riferimento a un'istruzione o a una connessione di database.|  
+|resource|Qualsiasi elemento in un database del server di report diverso da un report, una cartella o un'origine dati condivisa.|  
 |dati della risorsa|Tipo di dati caratterizzato da operazioni condivise, accessibili contemporaneamente in lettura e scrittura da parte di numerose transazioni. Esempi di dati della risorsa sono account utente e oggetti d'asta.|  
 |Resource Governor|Funzionalità di SQL Server 2008 che consente all'utente di gestire le risorse e il carico di lavoro di SQL Server specificando i limiti sull'utilizzo delle risorse da parte delle richieste in entrata.|  
 |ripristinare|Processo multifase che copia tutti i dati e le pagine di log da un backup specificato a un database specificato (fase di copia dei dati) ed esegue il rollforward di tutte le transazioni registrate nel backup (fase di rollforward). A questo punto, per impostazione predefinita, un ripristino esegue il rollback di tutte le transazioni incomplete (fase di rollback), completando il recupero del database e rendendolo disponibile agli utenti.|  
@@ -1397,8 +1396,8 @@ ms.technology:
 |set di righe dello schema|Set di righe definito in modo specifico che restituisce metadati relativi a oggetti o funzionalità in un'istanza di SQL Server o Analysis Services.  Ad esempio, il set di righe dello schema OLE DB DBSCHEMA_COLUMNS descrive le colonne di una tabella, mentre il set di righe dello schema di Analysis Services MDSCHEMA_MEASURES descrive le misure di un cubo.|  
 |snapshot dello schema|Snapshot che include lo schema per le tabelle e gli oggetti pubblicati necessari per la replica (trigger, tabelle di metadati e così via), ma non i dati utente.|  
 |basato su schema|Si riferisce a un metodo di elaborazione basato su uno schema che definisce elementi, attributi e tipi che verranno utilizzati per convalidare i documenti di input e output.|  
-|ambito|Indica la misura in cui è possibile fare riferimento a un identificatore, ad esempio un oggetto o una proprietà, all'interno di un programma. L'ambito può essere globale in relazione all'applicazione o locale in relazione al documento attivo.|  
-|ambito|Set di dati in fase di sincronizzazione.|  
+|scope|Indica la misura in cui è possibile fare riferimento a un identificatore, ad esempio un oggetto o una proprietà, all'interno di un programma. L'ambito può essere globale in relazione all'applicazione o locale in relazione al documento attivo.|  
+|scope|Set di dati in fase di sincronizzazione.|  
 |memoria script|Memoria locale (RAM lato client) utilizzata da uno script PHP.|  
 |riquadro di script|Parte dell'editor di testo di Progettazione tabelle.|  
 |script|Si riferisce all'automazione di azioni utente o alla configurazione di uno stato standard in un computer mediante script.|  
@@ -1468,7 +1467,7 @@ ms.technology:
 |SKU|Identificatore unico, in genere alfanumerico, per un prodotto. Questo identificatore consente di tenere traccia di un prodotto ai fini dell'inventario e può essere associato a qualsiasi articolo che è possibile acquistare. Il codice SKU di una camicia con numero di stile 3726, taglia 8 può ad esempio essere 3726-8.|  
 |sleep|Sospensione di un'operazione senza terminarla.|  
 |slice|Subset di dati di un cubo, specificato limitando una o più dimensioni in base ai membri della dimensione.|  
-|Filtro dei dati|Funzionalità che garantisce controlli di filtro con un clic per rendere più semplice il restringimento della parte di un set di dati che si sta visualizzando.|  
+|Filtri dei dati|Funzionalità che garantisce controlli di filtro con un clic per rendere più semplice il restringimento della parte di un set di dati che si sta visualizzando.|  
 |finestra temporale scorrevole|Una finestra di lunghezza fissa L che si sposta lungo una sequenza temporale in base agli eventi del flusso. Con ogni evento sulla sequenza temporale, viene creata una nuova finestra, a partire dall'ora di inizio dell'evento.|  
 |integrazione|Integrazione di aggiornamenti, patch o Service Pack nei file di installazione di base del software originale, in modo tale che i file risultanti consentiranno l'installazione del software aggiornato in un unico passaggio.|  
 |installazione integrata|Tipo di installazione che integra i file di installazione di base per un sistema operativo o un programma con i relativi Service Pack, aggiornamenti o patch in modo da consentirne l'installazione in un unico passaggio.|  
@@ -1593,7 +1592,7 @@ ms.technology:
 |Debugger flusso eventi di StreamInsight|Strumento autonomo nella piattaforma Microsoft StreamInsight che fornisce funzionalità di debug e analisi del flusso di eventi.|  
 |piattaforma StreamInsight|Piattaforma costituita dal server StreamInsight, dallo strumento Debug flusso eventi, dall'IDE di Visual Studio e da altri componenti per lo sviluppo di applicazioni CEP (Complex Event Processing, elaborazione di eventi complessi).|  
 |server StreamInsight|Motore centrale e componenti del framework dell'adattatore di Microsoft StreamInsight. Il server StreamInsight può essere utilizzato per elaborare e analizzare i flussi di eventi associati a un'applicazione CEP (Complex Event Processing, elaborazione di eventi complessi).|  
-|stringa|Gruppo di caratteri o di byte di caratteri gestiti da singola entità. I programmi per computer utilizzano le stringhe per archiviare e trasmettere dati e comandi. Nella maggior parte dei linguaggi di programmazione vengono distinte le stringhe, ad esempio 2674:gstmn, dai valori numerici, ad esempio 470924.|  
+|string|Gruppo di caratteri o di byte di caratteri gestiti da singola entità. I programmi per computer utilizzano le stringhe per archiviare e trasmettere dati e comandi. Nella maggior parte dei linguaggi di programmazione vengono distinte le stringhe, ad esempio 2674:gstmn, dai valori numerici, ad esempio 470924.|  
 |striscia|Intervalli orizzontali o verticali che impostano il motivo di sfondo del grafico a intervalli regolari o personalizzati. È possibile utilizzare le strisce per migliorare la leggibilità per la ricerca di singoli valori nel grafico, per evidenziare date che si verificano a intervalli regolari o per evidenziare un intervallo di chiavi specifico.|  
 |striscia|Intervalli orizzontali o verticali che impostano il motivo di sfondo del grafico a intervalli regolari o personalizzati. È possibile utilizzare le strisce per migliorare la leggibilità per la ricerca di singoli valori nel grafico, per evidenziare date che si verificano a intervalli regolari o per evidenziare un intervallo di chiavi specifico.|  
 |set di supporti con striping|Set di supporti che utilizza più dispositivi, tra cui viene distribuito ogni backup.|  
@@ -1645,7 +1644,7 @@ ms.technology:
 |tabelle di sistema|Tabelle predefinite che costituiscono il catalogo di sistema di SQL Server.|  
 |variabile di sistema|Variabile fornita da DTS.|  
 |scheda|Parte di un controllo Struttura a schede costituito dall'elemento dell'interfaccia utente della scheda e dall'area di visualizzazione, che funge da contenitore di dati o di altri controlli, ad esempio caselle di testo, caselle combinate e pulsanti di comando.|  
-|tabella|Oggetto di database che memorizza dati in record (righe) e campi (colonne). I dati riguardano generalmente una particolare categoria di elementi, ad esempio dipendenti o ordini.|  
+|table|Oggetto di database che memorizza dati in record (righe) e campi (colonne). I dati riguardano generalmente una particolare categoria di elementi, ad esempio dipendenti o ordini.|  
 |area dati tabella|Elemento del report in un layout del report in cui i dati vengono visualizzati in formato a colonne.|  
 |Progettazione tabelle|Area di progettazione visiva utilizzata per creare e modificare le tabelle TSQL e gli oggetti correlati.|  
 |blocco di tabella|Blocco su una tabella in cui sono inclusi tutti i dati e gli indici.|  

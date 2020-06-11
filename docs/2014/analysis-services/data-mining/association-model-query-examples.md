@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 68b39f5c-c439-44ac-8046-6f2d36649059
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a31052c0d239010407941141997fca8fc343f9cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a19eb2302639c7f13d48a8778969bbeca4fee18d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086119"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525427"
 ---
 # <a name="association-model-query-examples"></a>Esempi di query sul modello di associazione
   Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto, tramite cui vengono forniti dettagli sulle regole e i set di elementi individuati durante l'analisi oppure una query di stima, in cui vengono utilizzate le associazioni individuate nei dati per eseguire stime. Per un modello di associazione, le stime sono in genere basate su regole e possono essere utilizzate per fornire indicazioni, mentre le query sul contenuto solitamente esplorano la relazione tra set di elementi. È anche possibile recuperare metadati relativi al modello.  
@@ -224,7 +223,7 @@ ORDER BY NODE_SUPPORT DESC
   
 |||  
 |-|-|  
-|Funzione di stima|Uso|  
+|Funzione di stima|Utilizzo|  
 |[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Viene determinato se un nodo è figlio di un altro nodo nel grafico della rete neurale.|  
 |[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|Indica se il nodo specificato contiene o meno il case corrente.|  
 |[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|Viene restituita la probabilità ponderata.|  
@@ -235,7 +234,7 @@ ORDER BY NODE_SUPPORT DESC
 |[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|Viene restituito il valore di supporto per uno stato specificato.|  
 |[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|Viene restituita la varianza per il valore stimato.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Association](microsoft-association-algorithm.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Association](microsoft-association-algorithm-technical-reference.md)   
  [Contenuto dei modelli di data mining per i modelli di associazione &#40;Analysis Services - Data mining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  

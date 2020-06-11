@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6b1337c5-50a0-4fc2-b079-377dc241d2cc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b3080996eca3395e8be3cab5e17eaea7305dbfa2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3dd788c51867924882eba80fb9cbed280143fd6d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071264"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535129"
 ---
 # <a name="powerpivot-data-feeds"></a>Feed di dati PowerPivot
-  Un feed di dati fornisce su richiesta un flusso di dati da un'origine dati online a un'applicazione client. In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]è possibile utilizzare i feed di dati per aggiungere dati da un'applicazione o un servizio Web compatibile con Atom a un'origine dati PowerPivot in una cartella di lavoro di Excel.  
+  Un feed di dati fornisce su richiesta un flusso di dati da un'origine dati online a un'applicazione client. In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è possibile utilizzare i feed di dati per aggiungere dati da un'applicazione o un servizio Web compatibile con Atom a un'origine dati PowerPivot in una cartella di lavoro di Excel.  
   
  In questa sezione vengono fornite informazioni che consentono di utilizzare al meglio i feed di dati per trasferire i dati aziendali o del gruppo di lavoro in cartelle di lavoro PowerPivot. Vengono riportate inoltre informazioni su come condividere feed di dati con altri utenti nell'organizzazione e come costruire e utilizzare i feed di dati nel caso in cui sia necessario risolvere qualsiasi problema insorto.  
   

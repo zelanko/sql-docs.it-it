@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 82fc715c-e08e-447d-8fc8-9c9005f145f0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b094e27a8b7c51afec21fcc4807d3ee6e8b22c37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a01640fec55fbf7c43030135d48707fb7f966280
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072509"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535541"
 ---
 # <a name="view-the-cube-schema"></a>Visualizzare lo schema del cubo
   Lo schema del cubo viene visualizzato nel riquadro **Vista origine dati** della scheda **Struttura cubo** in **Progettazione cubi** . Lo schema è il set di tabelle da cui derivano le misure e le dimensioni per un cubo. Ogni schema del cubo è costituito da una o più tabelle dei fatti e da una o più tabelle delle dimensioni su cui sono basate le misure e le dimensioni nel cubo.  
@@ -24,7 +23,7 @@ ms.locfileid: "66072509"
   
  Quando si crea un cubo, il diagramma visualizzato nel riquadro **Vista origine dati** della scheda **Struttura cubo** corrisponde inizialmente al diagramma **Mostra tutte le tabelle** nella vista origine dati per il progetto o il database. È possibile sostituire questo diagramma con uno esistente nella vista origine dati e apportare modifiche nel riquadro **Vista origine dati** .  
   
- Mentre si utilizza il diagramma in **Progettazione cubi**, i comandi che agiscono sulla scheda o su qualsiasi oggetto selezionato nella scheda sono disponibili nel menu **Vista origine dati** . È anche possibile fare clic con il pulsante destro del mouse sullo sfondo del diagramma o su qualsiasi oggetto nel diagramma per utilizzare i comandi che agiscono sul diagramma o sull'oggetto selezionato. È possibile scegliere:  
+ Mentre si utilizza il diagramma in **Progettazione cubi**, i comandi che agiscono sulla scheda o su qualsiasi oggetto selezionato nella scheda sono disponibili nel menu **Vista origine dati** . È anche possibile fare clic con il pulsante destro del mouse sullo sfondo del diagramma o su qualsiasi oggetto nel diagramma per utilizzare i comandi che agiscono sul diagramma o sull'oggetto selezionato. È possibile:  
   
 -   Passare dal formato diagramma a quello ad albero.  
   

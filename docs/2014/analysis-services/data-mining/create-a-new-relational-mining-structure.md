@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 55bac3bd-700e-4f91-bcc6-f3cd8c026da1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b4ec4bc871723b829d9ce9ec805d4b52b1c649e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 534b27d024feb521be133329c7fe0aef06d9814a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085392"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523877"
 ---
 # <a name="create-a-new-relational-mining-structure"></a>Creare una nuova struttura di data mining relazionale
-  Utilizzare la creazione guidata modello di data mining per creare una nuova struttura di data mining, utilizzando i dati di un database relazionale o di un'altra origine, quindi salvare la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] struttura ed eventuali modelli correlati in un database di.  
+  Utilizzare la creazione guidata modello di data mining per creare una nuova struttura di data mining, utilizzando i dati di un database relazionale o di un'altra origine, quindi salvare la struttura ed eventuali modelli correlati in un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database di.  
   
 ### <a name="to-create-a-relational-mining-structure"></a>Per creare una struttura di data mining relazionale  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66085392"
   
 11. Nella pagina **Completamento procedura guidata** specificare un nome per la struttura di data mining e per il modello di data mining iniziale correlato di cui verrà eseguita la creazione, quindi fare clic su **Fine**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Attività e procedure relative alla struttura di data mining](mining-structure-tasks-and-how-tos.md)  
   
   

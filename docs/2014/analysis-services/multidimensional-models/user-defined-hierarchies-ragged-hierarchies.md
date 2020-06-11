@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 533abbb47db40f16c0d7d5e4d85851975c89e23d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a4f14a1f853a99ccb6b2dbbed72bd38b70f2ea7d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889327"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535633"
 ---
 # <a name="ragged-hierarchies"></a>Gerarchie incomplete
   Una gerarchia incompleta è una gerarchia definita dall'utente contenente un numero di livelli ineguale. Sono esempi comuni un organigramma in cui un responsabile di alto livello ha sia responsabili di reparto sia non responsabili come subalterni oppure le gerarchie geografiche composte da Paese-Regione-Città, in cui alcune città non presentano un elemento padre Stato o Provincia, ad esempio Washington D.C., Città del Vaticano o Nuova Delhi.  
@@ -56,7 +55,7 @@ ms.locfileid: "68889327"
   
     |Impostazione di HideMemberIf|Descrizione|  
     |--------------------------|-----------------|  
-    |`Never`|I membri del livello non vengono mai nascosti. Questo è il valore predefinito.|  
+    |`Never`|I membri del livello non vengono mai nascosti. Si tratta del valore predefinito.|  
     |**OnlyChildWithNoName**|Un membro del livello viene nascosto quando è l'unico elemento figlio del relativo padre e il nome è un valore Null o una stringa vuota.|  
     |**OnlyChildWithParentName**|Un membro del livello viene nascosto quando è l'unico elemento figlio del relativo padre e il nome corrisponde a quello del padre.|  
     |**NoName**|Un membro del livello viene nascosto quando il nome è vuoto.|  
@@ -65,7 +64,7 @@ ms.locfileid: "68889327"
 ##  <a name="set-mdx-compatibility-to-determine-how-placeholders-are-represented-in-client-applications"></a><a name="bkmk_Mdx"></a>Impostare la compatibilità MDX per determinare come vengono rappresentati i segnaposto nelle applicazioni client  
  Dopo aver impostato la proprietà `HideMemberIf` in un livello della gerarchia, è necessario impostare anche la proprietà `MDX Compatibility` nella stringa di connessione inviata dall'applicazione client. L'impostazione di `MDX Compatibility` determina se viene utilizzata la proprietà `HideMemberIf`.  
   
-|Impostazione di MDX Compatibility|Descrizione|Uso|  
+|Impostazione di MDX Compatibility|Descrizione|Utilizzo|  
 |-------------------------------|-----------------|-----------|  
 |**1**|Viene visualizzato un valore di segnaposto.|Questo è il valore predefinito utilizzato da Excel, SSDT e SSMS. Indica al server di restituire i valori di segnaposto quando la navigazione drill-down svuota i livelli in una gerarchia incompleta. Se si fa clic sul valore di segnaposto, è possibile continuare la navigazione verso il basso per ottenere i nodi figlio (foglia).<br /><br /> Excel contiene la stringa di connessione utilizzata per connettersi ad Analysis Services e imposta sempre la proprietà `MDX Compatibility` su 1 per ciascuna nuova connessione. Questo comportamento preserva la compatibilità con le versioni precedenti.|  
 |**2**|Viene nascosto un valore di segnaposto (un valore Null o un duplicato del livello padre) ma vengono visualizzati altri livelli e nodi che hanno valori pertinenti.|`MDX Compatibility`=2 viene in genere visualizzato come impostazione preferita in termini di gerarchie incomplete Un report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e alcune applicazioni client di terze parti possono mantenere questa impostazione.|  

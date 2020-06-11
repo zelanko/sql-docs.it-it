@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c030c725-7763-4c23-9988-4b274a88fc31
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ecd16965c81ccb091d70320bd91c56112d3c15a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b26c912791a18d4bbdcf3def6d282e025b5af89b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088264"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527607"
 ---
 # <a name="calculation-tools-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Strumenti di calcolo (scheda KPI, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Usare il riquadro **Strumenti di calcolo** della scheda **KPI** in Progettazione cubi per esaminare i metadati, le funzioni e i modelli disponibili per gli indicatori di prestazioni chiave (KPI).  
@@ -71,7 +70,7 @@ ms.locfileid: "66088264"
 > [!NOTE]  
 >   Questa opzione viene visualizzata solo se si seleziona **Metadati** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Indicatori KPI &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
  [Barra degli strumenti &#40;scheda KPI, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   

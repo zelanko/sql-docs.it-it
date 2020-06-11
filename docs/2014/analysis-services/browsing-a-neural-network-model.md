@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e4224cb7-115b-4889-ac07-03f096fb55fc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b32db07a67e309d304aeb145be59fd79c0af5f49
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e47f887425c2294785bd6e6624961727bf65eb17
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174230"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527729"
 ---
 # <a name="browsing-a-neural-network-model"></a>Esplorazione di un modello di rete neurale
   Quando si apre un modello di regressione logistica o di rete neurale utilizzando **Sfoglia**, il modello viene visualizzato in un visualizzatore interattivo, simile al visualizzatore del modello di rete neurale in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Il visualizzatore consente di esplorare le correlazioni e ottenere informazioni sugli schemi del modello e sui dati sottostanti.
@@ -29,7 +28,7 @@ ms.locfileid: "78174230"
 ##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>Esplorare il modello
  I modelli basati sugli algoritmi di [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network o Logistic Regression sono simili nel senso che analizzano i dati come set di connessioni tra gli input e gli output noti. Il visualizzatore **Sfoglia** consente di esplorare tali connessioni tramite i controlli seguenti:
 
--   [variables](#BKMK_Variables)
+-   [Variabili](#BKMK_Variables)
 
 -   [Input](#BKMK_Inputs)
 
@@ -89,7 +88,7 @@ ms.locfileid: "78174230"
 
 1.  Si supponga di voler fare riferimento a un gruppo specifico e visualizzare i fattori che hanno influito maggiormente sugli acquisti in tale gruppo.
 
-     Nel riquadro **input** fare clic sulla ** \<cella all>** in **attributo**e selezionare **Age**.
+     Nel riquadro **input** fare clic sulla **\<All>** cella sotto **attributo**e selezionare **Age**.
 
      Per **Valore** selezionare la categoria di età più giovane.
 
@@ -133,7 +132,7 @@ ms.locfileid: "78174230"
 
  Per altre informazioni, vedere [Crea struttura di data mining &#40;componenti aggiuntivi Data Mining di SQL Server&#41;](create-mining-structure-sql-server-data-mining-add-ins.md) e [Aggiunta modello a struttura &#40;componenti aggiuntivi Data Mining per Excel&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md).
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
  [Esplorazione di modelli in Excel &#40;SQL Server componenti aggiuntivi Data mining&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)
 
 

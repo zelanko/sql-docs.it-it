@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5702e3e2e5b12edecff4dd6d6f46b632575d211d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1af06d7ffe12301f6b8b678f41665e5c3146a13
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084271"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522318"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>Architettura logica (Analysis Services – Data mining)
   Il processo di data mining è basato sull'interazione di più componenti.  
@@ -41,7 +40,7 @@ ms.locfileid: "66084271"
 ##  <a name="data-mining-source-data"></a><a name="bkmk_SourceData"></a> Dati di origine di data mining  
  Nella soluzione di data mining vengono archiviate solo le associazioni, non i dati utilizzati nel processo di data mining. I dati potrebbero essere contenuti in un database creato in una versione precedente di SQL Server, in un sistema CRM o anche in un file flat. Quando si esegue il training della struttura o del modello tramite elaborazione, viene creato e archiviato un riepilogo statistico dei dati in una cache che può essere resa persistente per l'utilizzo in operazioni successive o eliminata dopo l'elaborazione. Per altre informazioni, vedere [Strutture di data mining &#40;Analysis Services - Data mining&#41;](mining-structures-analysis-services-data-mining.md).  
   
- Si combinano dati diversi all'interno dell'oggetto vista origine dati (DSV) di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che fornisce un livello di astrazione sopra l'origine dati. È possibile specificare join tra le tabelle o aggiungere tabelle con una relazione molti-a-uno per creare colonne di tabelle nidificate. La definizione di questi oggetti, l'origine dati e la vista origine dati, viene archiviata all'interno della soluzione con le estensioni di file *.ds e \*.dsv. Per ulteriori informazioni sulla creazione e sull' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizzo di origini dati e viste origine dati, vedere [origini dati supportate &#40;SSAS multidimensionale&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
+ Si combinano dati diversi all'interno dell'oggetto vista origine dati (DSV) di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che fornisce un livello di astrazione sopra l'origine dati. È possibile specificare join tra le tabelle o aggiungere tabelle con una relazione molti-a-uno per creare colonne di tabelle nidificate. La definizione di questi oggetti, l'origine dati e la vista origine dati, viene archiviata all'interno della soluzione con le estensioni di file *.ds e \*.dsv. Per ulteriori informazioni sulla creazione e sull'utilizzo di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] origini dati e viste origine dati, vedere [origini dati supportate &#40;SSAS multidimensionale&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
   
  È inoltre possibile definire e modificare origini dati e viste origine dati tramite AMO o XMLA. Per altre informazioni sull'uso di questi oggetti a livello di programmazione, vedere [Panoramica dell'architettura logica &#40;Analysis Services - Dati multidimensionali&#41;](../multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md).  
   
@@ -101,7 +100,7 @@ ms.locfileid: "66084271"
   
 
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Elaborazione di oggetti del modello multidimensionale](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
   

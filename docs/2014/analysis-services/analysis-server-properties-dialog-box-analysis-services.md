@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b32b0fa678df98494f91c1026adebe701d807342
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a876a11f51731fdd7ff6de679f80cdb8d62fff94
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062619"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528102"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>Finestra di dialogo Proprietà computer Analysis Server (Analysis Services)
   Usare la finestra di dialogo **Proprietà computer Analysis Server** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per definire le impostazioni generali, di sicurezza e di lingua e regole di confronto per un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Per visualizzare la finestra di dialogo **Proprietà computer Analysis Server** , è possibile fare clic con il pulsante destro del mouse su un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in **Esplora oggetti** e scegliere **Proprietà** dal menu di scelta rapida. Nella finestra di dialogo **Proprietà computer Analysis Server** sono incluse le proprietà seguenti.  
@@ -28,7 +27,7 @@ ms.locfileid: "66062619"
 ## <a name="information-properties"></a>Proprietà delle informazioni  
  Utilizzare questa pagina per visualizzare la modalità server, la versione e il livello di compatibilità. Ogni istanza viene installata in modalità server tabulare o multidimensionale con la possibilità di caricare modelli tabulari o multidimensionali. Se è necessario supportare entrambe le modalità, installare due istanze.  
   
- Il `DefaultCompatibilityLevel` **livello di compatibilità supportato** equivale alla proprietà in amo. È di sola lettura in base alla modalità di distribuzione del server specificata durante l'installazione. Il server verifica tale proprietà durante l'esecuzione delle operazioni che variano in base alla modalità server o alla versione, ad esempio durante il ripristino di un backup di un database tabulare in un'istanza del server tabulare. Non confonderla con la modalità di compatibilità del database dei modelli tabulari o multidimensionali che hanno nomi e valori simili. I valori validi per questa proprietà del server includono:  
+ Il **livello di compatibilità supportato** equivale alla `DefaultCompatibilityLevel` Proprietà in amo. È di sola lettura in base alla modalità di distribuzione del server specificata durante l'installazione. Il server verifica tale proprietà durante l'esecuzione delle operazioni che variano in base alla modalità server o alla versione, ad esempio durante il ripristino di un backup di un database tabulare in un'istanza del server tabulare. Non confonderla con la modalità di compatibilità del database dei modelli tabulari o multidimensionali che hanno nomi e valori simili. I valori validi per questa proprietà del server includono:  
   
 -   **1100** è il livello di compatibilità predefinito per una modalità di distribuzione 0, per la modalità multimediale e di data mining  
   
@@ -45,13 +44,13 @@ ms.locfileid: "66062619"
   
 -   [Proprietà di data mining](server-properties/data-mining-properties.md)  
   
--   [Proprietà di funzionalità](server-properties/feature-properties.md)  
+-   [Proprietà delle funzionalità](server-properties/feature-properties.md)  
   
--   [FileStore - proprietà](server-properties/filestore-properties.md)  
+-   [Proprietà filestore](server-properties/filestore-properties.md)  
   
--   [Proprietà di Gestione blocchi](server-properties/lock-manager-properties.md)  
+-   [Proprietà di gestione blocchi](server-properties/lock-manager-properties.md)  
   
--   [Proprietà dei log](server-properties/log-properties.md)  
+-   [Proprietà log](server-properties/log-properties.md)  
   
 -   [Proprietà della memoria](server-properties/memory-properties.md)  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66062619"
   
 -   [Proprietà di sicurezza](server-properties/security-properties.md)  
   
--   [Proprietà dei pool di thread](server-properties/thread-pool-properties.md)  
+-   [Proprietà del pool di thread](server-properties/thread-pool-properties.md)  
   
 ## <a name="language-collation-properties"></a>Proprietà di lingua e regole di confronto  
  Utilizzare questa pagina per impostare le opzioni di lingua e regole di confronto predefinite per un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Nell'elenco seguente viene fornita una breve descrizione di ogni opzione. Per altre informazioni, vedere [Languages and Collations &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md) .  
@@ -94,7 +93,7 @@ ms.locfileid: "66062619"
 ## <a name="security-properties"></a>Proprietà di sicurezza  
  Utilizzare questa pagina per specificare gli account utente e di gruppo di Windows appartenenti al ruolo di amministratore del server per un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . L'appartenenza a questo ruolo concede le autorizzazioni necessarie per effettuare attività a livello di intero server, ad esempio la creazione o l'elaborazione di un database, la modifica delle proprietà del server, l'aggiunta o la rimozione di altri membri di questo ruolo oppure l'avvio di una traccia. Per informazioni dettagliate, vedere [concedere le autorizzazioni di amministratore del Server &#40;Analysis Services&#41;](instances/grant-server-admin-rights-to-an-analysis-services-instance.md) .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Determinare la modalità server di un'istanza di Analysis Services](instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [Configurare le proprietà del server in Analysis Services](server-properties/server-properties-in-analysis-services.md)   
  [Metodologie di autenticazione supportate da Analysis Services](instances/authentication-methodologies-supported-by-analysis-services.md)   

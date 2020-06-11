@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: adf29f6f73020ddc265072b3b9f3f67042200506
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5650323524aa0b2146332f76b5582cc58950e203
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085245"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523697"
 ---
 # <a name="create-an-olap-mining-structure"></a>Create an OLAP Mining Structure
   La creazione di un modello di data mining basato su un cubo OLAP o un altro archivio dati multidimensionale presenta numerosi vantaggi. Una soluzione OLAP contiene già enormi quantità di dati ben organizzati, puliti e formattati correttamente; tuttavia, la complessità dei dati è tale che difficilmente gli utenti possono trovare modelli significativi tramite l'esplorazione ad hoc. Il data mining consente di individuare nuove correlazioni e fornire informazioni su cui è possibile eseguire azioni.  
@@ -158,7 +157,7 @@ ms.locfileid: "66085245"
 > [!WARNING]  
 >  Solo questi tipi di modelli supportano la creazione di dimensioni di data mining: modelli basati sull'algoritmo Microsoft Clustering, Microsoft Decision Trees o Microsoft Association.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining-algorithms-analysis-services-data-mining.md)   
  [Colonne struttura di data mining](mining-structure-columns.md)   
  [Colonne del modello di data mining](mining-model-columns.md)   

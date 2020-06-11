@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 986356e6ebf7697bf0b425553f6803659a0fc5cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49258d89858c8cea3a9620f50062d6371e22ec8e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80760308"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527997"
 ---
 # <a name="sql-server-2014-analysis-services"></a>SQL Server 2014 Analysis Services
 
@@ -76,7 +75,7 @@ Un flusso di lavoro tipico include la compilazione di un modello di dati OLAP o 
 > [!NOTE]  
 >  Le funzionalità di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] variano in base all'edizione. I modelli multidimensionali e di data mining sono disponibili nell'edizione Standard, ma con un numero inferiore di funzionalità rispetto alle edizioni superiori. I modelli tabulari e PowerPivot per SharePoint sono funzionalità Premium e non sono disponibili in una licenza Standard Edition. Per ulteriori informazioni, vedere [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Analysis Services esercitazioni &#40;SSAS&#41;](analysis-services-tutorials-ssas.md)   
  [Installazione per SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)   
  [Guida per gli sviluppatori &#40;Analysis Services&#41;](analysis-services-developer-documentation.md)   

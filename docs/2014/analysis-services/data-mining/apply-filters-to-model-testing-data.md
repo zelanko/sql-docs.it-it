@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 16c5a556159caa1227268bc3488a19d25fa9e296
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 70a3a7d525bca5698d972b112d3f6de2f368f38a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086151"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525485"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Applicare filtri ai dati di test del modello
   Quando si specifica un'origine dati esterna da usare per il test di un modello, è possibile applicare un filtro per limitare i dati di input. È ad esempio possibile testare il modello in modo specifico per le stime sui clienti in una determinata fascia di reddito.  
@@ -89,7 +88,7 @@ ms.locfileid: "66086151"
   
      La condizione di filtro viene applicata all'origine dati quando si crea il grafico di accuratezza.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Scegliere ed eseguire il mapping dei dati di test del modello](choose-and-map-model-testing-data.md)   
  [Utilizzo di dati di tabelle nidificate come input per un grafico di accuratezza](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
  [Scegliere un tipo di grafico di accuratezza e impostare le opzioni del grafico](choose-an-accuracy-chart-type-and-set-chart-options.md)  

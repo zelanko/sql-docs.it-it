@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c7e9ebb-d0c9-498e-a9ba-cc13eaa43520
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1c54c6f369d519812bb79cacf51bd1ad00a1dfb5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a507e0d77cd81165b0220e3d09ec10227d32d853
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175230"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528707"
 ---
 # <a name="detect-categories-table-analysis-tools-for-excel"></a>Rileva categorie (Strumenti di analisi tabelle per Excel)
   ![Pulsante Rileva categorie sulla barra multifunzione](media/tat-detectcat.gif "Pulsante Rileva categorie sulla barra multifunzione")

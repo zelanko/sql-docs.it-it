@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0e60be99-3768-499c-a22c-a4ec37e61887
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9a254f685f83e97b14c78c7d6c4c21e2737b636
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9fb624116ca42f32ab20615d1c34fcb786d150a1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493784"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542243"
 ---
 # <a name="defining-and-browsing-translations"></a>Definizione ed esplorazione delle traduzioni
   Una traduzione è una rappresentazione dei nomi degli oggetti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in una lingua specifica. Gli oggetti includono gruppi di misure, misure, dimensioni, attributi, gerarchie, indicatori KPI, azioni e membri calcolati. Le traduzioni offrono supporto server per applicazioni client in grado di supportare più lingue. Con un client di questo tipo, il client passa l'identificatore delle impostazioni locali (LCID) all'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], la quale utilizza tale LCID per determinare il set di traduzioni da utilizzare per generare metadati per oggetti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Se un oggetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] non contiene una traduzione per la lingua in questione oppure per un oggetto specificato, per la restituzione dei metadati dell'oggetto al client verrà utilizzata la lingua predefinita. Se ad esempio un utente aziendale in Francia accede a un cubo da una workstation in cui vengono utilizzate le impostazioni locali francesi, le didascalie dei membri e i valori delle proprietà del membro verranno visualizzati in francese, se è disponibile una traduzione in tale lingua. Se tuttavia un utente aziendale in Germania accede allo stesso cubo da una workstation in cui vengono utilizzate le impostazioni locali tedesche, l'utente vedrà le didascalie dei membri e i valori delle proprietà del membro in tedesco. Per ulteriori informazioni, vedere [traduzioni delle dimensioni](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), [Traduzioni di cubi](multidimensional-models-olap-logical-cube-objects/cube-translations.md), [traduzioni &#40;Analysis Services&#41;](translations-analysis-services.md).  
@@ -40,7 +39,7 @@ ms.locfileid: "69493784"
   
      Viene visualizzata un'altra colonna per la lingua nella quale si definiranno le traduzioni in francese.  
   
-5.  Nella riga relativa all'oggetto **didascalia** per la **dimensione Date** `Fecha` digitare la colonna Traduzione in **spagnolo (Spagna)** e `Temps` nella colonna Traduzione in **francese (Francia)** .  
+5.  Nella riga relativa all'oggetto **didascalia** per la dimensione **date** digitare `Fecha` la colonna Traduzione in **spagnolo (Spagna)** e `Temps` nella colonna Traduzione in **francese (Francia)** .  
   
 6.  Nella riga relativa all'oggetto **didascalia** per l'attributo **Month Name** digitare `Mes del Año` la colonna **spagnolo (Spagna)** translation e `Mois d'Année` la colonna Traduzione in **francese (Francia)** .  
   
@@ -80,11 +79,11 @@ ms.locfileid: "69493784"
   
      Viene visualizzata un'altra colonna per la lingua nella quale si definiranno le traduzioni in francese.  
   
-5.  Nella riga relativa all'oggetto **didascalia** per la **dimensione Date** `Fecha` digitare la colonna Traduzione in **spagnolo (Spagna)** e `Temps` nella colonna Traduzione in **francese (Francia)** .  
+5.  Nella riga relativa all'oggetto **didascalia** per la dimensione **date** digitare `Fecha` la colonna Traduzione in **spagnolo (Spagna)** e `Temps` nella colonna Traduzione in **francese (Francia)** .  
   
 6.  Nella riga relativa all'oggetto **didascalia** per il gruppo di misure **Internet Sales** digitare `Ventas del lnternet` la colonna Traduzione in **spagnolo (Spagna)** e `Ventes D'Internet` nella colonna Traduzione in **francese (Francia)** .  
   
-7.  Nella riga relativa all'oggetto **didascalia** `Cantidad de las Ventas del Internet` per la misura Internet Sales-Sales Amount digitare la colonna **spagnolo (Spagna)** translation e `Quantité de Ventes d'Internet` nella colonna Traduzione in **francese (Francia)** .  
+7.  Nella riga relativa all'oggetto **didascalia** per la misura Internet Sales-Sales Amount digitare `Cantidad de las Ventas del Internet` la colonna **spagnolo (Spagna)** translation e `Quantité de Ventes d'Internet` nella colonna Traduzione in **francese (Francia)** .  
   
      I passaggi della procedura illustrano il processo di definizione delle traduzioni dei metadati per gli oggetti cubo.  
   
@@ -102,13 +101,13 @@ ms.locfileid: "69493784"
   
 5.  Nella barra degli strumenti selezionare **Spagnolo (Spagna)** nell'elenco **Lingua** .  
   
-     Si noti che gli elementi del riquadro Metadati vengono ripopolati. Quando gli elementi del riquadro Metadati sono stati ripopolati, si noti che la misura Internet Sales-Sales Amount non viene più visualizzata nella cartella di visualizzazione Vendite Internet, Viene invece visualizzato in spagnolo in una nuova cartella di visualizzazione denominata `Ventas del lnternet`, come illustrato nella figura seguente.  
+     Si noti che gli elementi del riquadro Metadati vengono ripopolati. Quando gli elementi del riquadro Metadati sono stati ripopolati, si noti che la misura Internet Sales-Sales Amount non viene più visualizzata nella cartella di visualizzazione Vendite Internet, Viene invece visualizzato in spagnolo in una nuova cartella di visualizzazione denominata `Ventas del lnternet` , come illustrato nella figura seguente.  
   
      ![Riquadro dei metadati ripopolato](../../2014/tutorials/media/l9-translations-6.gif "Riquadro dei metadati ripopolato")  
   
-6.  Nel riquadro Metadati fare clic con il pulsante `Cantidad de las Ventas del Internet` destro del mouse e scegliere **Aggiungi a query**.  
+6.  Nel riquadro Metadati fare clic con il pulsante destro del mouse `Cantidad de las Ventas del Internet` e scegliere **Aggiungi a query**.  
   
-7.  Nel `Fecha`riquadro Metadati espandere, espandere **Fecha. Calendar date**, fare clic con il pulsante destro del mouse su **Fecha. Calendar date**, quindi selezionare **Aggiungi a filtro**.  
+7.  Nel riquadro Metadati espandere `Fecha` , espandere **Fecha. Calendar date**, fare clic con il pulsante destro del mouse su **Fecha. Calendar date**, quindi selezionare **Aggiungi a filtro**.  
   
 8.  Nel riquadro **Filtro** selezionare **CY 2007** come espressione di filtro.  
   

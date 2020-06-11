@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1e2b17e9-092b-4af1-8a58-c52b8fe10ff1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1c1114dd63b9082c6be7486ab5e576a6b8270485
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4fe7f7d5b31118369b8ce2a855b955e44f661dbc
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087336"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527227"
 ---
 # <a name="connect-to-a-data-source-ssas"></a>Connessione a un'origine dati (SSAS)
   Questa pagina dell' **Importazione guidata tabella** consente di creare una nuova connessione a diverse origini dati, ad esempio database relazionali, feed di dati e file. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  

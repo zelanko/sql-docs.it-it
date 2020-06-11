@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 8d913e83-7246-44cc-8fc7-31729023c0d8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1fefc72d81129ac4691f35209f25c4f348272c81
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8bb8afc256881c96f70a3dd53a31e75c8fa2b5ce
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081439"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528447"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>Finestra di dialogo Modifica proprietà tabella (SSAS)
   La finestra di dialogo **Modifica proprietà tabella** consente di visualizzare e modificare le proprietà di tabelle importate in Progettazione modelli tramite l'Importazione guidata tabella. Per accedere a questa finestra di dialogo, in Progettazione modelli selezionare una tabella, quindi scegliere **Proprietà tabella** dal menu **Tabella**.  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco elementi dell'interfaccia utente  
  Le opzioni per questa finestra di dialogo sono diverse, a seconda che i dati siano stati originariamente importati selezionando tabelle da un elenco o utilizzando una query SQL.  
   
 ## <a name="table-preview-mode"></a>Modalità Anteprima tabella  
@@ -89,7 +88,7 @@ ms.locfileid: "66081439"
  **Istruzione SQL**  
  Visualizza l'istruzione SQL eseguita sull'origine dati corrente per recuperare le righe. Per impostazione predefinita, vengono recuperate tutte le righe, tuttavia è possibile anche recuperare un subset di righe progettando un filtro o modificando manualmente l'istruzione SQL.  
   
- **Convalida**  
+ **Convalidare**  
  Fare clic per verificare che l'istruzione sia sintatticamente corretta per l'origine dati e il provider selezionati.  
   
  **Progettazione**  
@@ -98,7 +97,7 @@ ms.locfileid: "66081439"
  **OK**  
  Fare clic per applicare tutte le modifiche apportate, inclusa la sostituzione delle colonne.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Tabelle e colonne &#40;SSAS tabulare&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf9483b3-4099-41c4-bbc5-da7005e07bcd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0cc3a132792cca8ecdf5a33a2fe4e4d40116c497
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65a6c852200c72fb9040cf5e93efbac02bb065b3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086645"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526337"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>Convalida incrociata (componenti aggiuntivi Data mining di SQL Server)
   ![Pulsante Convalida incrociata, barra multifunzione Data mining](media/dmc-xvalid.gif "Pulsante Convalida incrociata, barra multifunzione Data mining")  
@@ -75,7 +74,7 @@ ms.locfileid: "66086645"
  Se si sceglie una struttura che supporta sia i modelli di clustering che altri tipi di modelli, i modelli di clustering non vengono testati.  
   
 ## <a name="understanding-cross-validation-results"></a>Informazioni sui risultati della convalida incrociata  
- I risultati della convalida incrociata vengono visualizzati in un nuovo foglio di dati, denominato **report di convalida \<incrociata per nome attributo>**. Il nuovo foglio di lavoro contiene diverse sezioni. La prima sezione è un riepilogo che fornisce importanti metadati sul modello testato, in modo che sia possibile sapere a quale modello o struttura si riferiscono i risultati.  
+ I risultati della convalida incrociata vengono visualizzati in un nuovo foglio di dati, denominato **report di convalida \<attribute name> incrociata per **. Il nuovo foglio di lavoro contiene diverse sezioni. La prima sezione è un riepilogo che fornisce importanti metadati sul modello testato, in modo che sia possibile sapere a quale modello o struttura si riferiscono i risultati.  
   
  La seconda sezione del report fornisce un riepilogo statistico che indica l'efficacia del modello originale. In questo riepilogo, le differenze tra i modelli creati per ogni sezione vengono analizzate per tre misure chiave: *radice errore quadratico*medio, *errore assoluto medio*e *Punteggio di log*. Si tratta di misure statistiche standard utilizzate non solo nel data mining, ma anche nella maggior parte dei tipi di analisi statistica.  
   
@@ -135,7 +134,7 @@ ms.locfileid: "66086645"
   
  Nei modelli di clustering sono previsti due tipi di appartenenza al cluster, a seconda del metodo utilizzato per creare il modello. In alcuni modelli, basati sull'algoritmo K-medie, è previsto che un nuovo case appartenga a un solo cluster. Per impostazione predefinita, tuttavia, l'algoritmo Microsoft Clustering utilizza il metodo EM (Expectation Maximization) che presuppone che un nuovo case possa potenzialmente appartenere a qualsiasi cluster. In questi modelli pertanto un case può avere più valori `CaseLikelihood`, ma il valore indicato per impostazione predefinita corrisponde alla probabilità che il case appartenga al cluster che meglio corrisponde al nuovo case.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Convalida di modelli e utilizzo di modelli per la stima &#40;componenti aggiuntivi Data mining per Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
   

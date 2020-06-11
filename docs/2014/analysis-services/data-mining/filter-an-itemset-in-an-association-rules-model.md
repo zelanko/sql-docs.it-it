@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3ed919ea-8598-45d2-a4a0-b1b3357a4ab1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bef576a32bebc1c80b2ded8ee4831696811ba819
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f841280a6dd39a5f824f2e6a10975b0f80ed0761
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084355"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522457"
 ---
 # <a name="filter-an-itemset-in-an-association-rules-model"></a>Filtrare un set di elementi in un modello Association Rules
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]è possibile filtrare i set di elementi visualizzati nella scheda **Set di elementi** del Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules.  
@@ -34,7 +33,7 @@ ms.locfileid: "66084355"
   
  Il set di elementi verrà filtrato per visualizzare solo i set contenenti gli elementi selezionati. Nella casella non viene fatta distinzione tra maiuscole e minuscole. I filtri vengono archiviati in memoria affinché sia possibile selezionare un filtro già utilizzato nell'elenco.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Attività e procedure relative al visualizzatore modello di data mining](mining-model-viewer-tasks-and-how-tos.md)  
   
   

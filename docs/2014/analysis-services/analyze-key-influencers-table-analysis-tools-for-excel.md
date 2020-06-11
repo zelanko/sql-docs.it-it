@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 54d7b4ce-7b79-407a-985c-aa655ad19280
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: df6622abc3a507d917aefd2a8a5a1bf9505a2622
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a349ea881e463043aea5bb069d3ed34be74a78b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062255"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527987"
 ---
 # <a name="analyze-key-influencers-table-analysis-tools-for-excel"></a>Analizza fattori di influenza chiave (Strumenti di analisi tabelle per Excel)
   ![Pulsante Analizza fattori di influenza chiave sulla barra multifunzione](media/tat-aki.gif "Pulsante Analizza fattori di influenza chiave sulla barra multifunzione")  
@@ -46,7 +45,7 @@ ms.locfileid: "66062255"
   
 6.  Se non sono stati rilevati modelli, tramite la procedura guidata viene creato un nuovo foglio di lavoro contenente una descrizione del problema.  
   
-7.  Se vengono rilevati modelli, tramite la procedura guidata viene creato un report in un nuovo foglio di lavoro in cui sono illustrati i modelli. Il report è denominato **fattori di influenza chiave \<per la colonna>**. È possibile personalizzare il report come descritto nella procedura seguente.  
+7.  Se vengono rilevati modelli, tramite la procedura guidata viene creato un report in un nuovo foglio di lavoro in cui sono illustrati i modelli. Il report è denominato **fattori di influenza chiave \<column> per **. È possibile personalizzare il report come descritto nella procedura seguente.  
   
 #### <a name="create-a-custom-report"></a>Creare un report personalizzato  
   
@@ -101,7 +100,7 @@ ms.locfileid: "66062255"
 -   Creazione di un report che descrive i fattori di influenza chiave, ordinati in base ai punteggi di confidenza.  
   
 ### <a name="requirements"></a>Requisiti  
- Se la colonna di destinazione contiene valori numerici continui, i valori numerici vengono automaticamente segmentati in gruppi. Tali raggruppamenti rappresentano cluster di case con caratteristiche simili. I valori numerici potrebbero tuttavia non essere divisi in gruppi semplici da usare. Ad esempio, il report potrebbe contenere un raggruppamento, ad esempio "\<12,85701", mentre gli utenti del report in genere vogliono visualizzare i raggruppamenti che utilizzano numeri interi, ad esempio 10-19, 20-29 e così via.  
+ Se la colonna di destinazione contiene valori numerici continui, i valori numerici vengono automaticamente segmentati in gruppi. Tali raggruppamenti rappresentano cluster di case con caratteristiche simili. I valori numerici potrebbero tuttavia non essere divisi in gruppi semplici da usare. Ad esempio, il report potrebbe contenere un raggruppamento, ad esempio " \< 12,85701", mentre gli utenti del report in genere vogliono visualizzare i raggruppamenti che utilizzano numeri interi, ad esempio 10-19, 20-29 e così via.  
   
  Se si desidera raggruppare i dati numerici in un modo diverso, è necessario segmentare i dati nel modo desiderato prima di creare l'analisi. È ad esempio possibile utilizzare lo strumento modifica [etichette](relabel-sql-server-data-mining-add-ins.md) nel client di data mining per Excel per creare una nuova etichetta di raggruppamento in una colonna separata e quindi utilizzare solo tale nuova colonna nell'analisi.  
   
@@ -115,7 +114,7 @@ ms.locfileid: "66062255"
   
  Per ulteriori informazioni sull'algoritmo utilizzato dallo strumento **Analizza fattori di influenza chiave** , vedere l'argomento relativo all'algoritmo Microsoft Naive Bayes in documentazione online di SQL Server.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Strumenti di analisi tabelle per Excel](table-analysis-tools-for-excel.md)   
  [Creazione di un modello di data mining](creating-a-data-mining-model.md)  
   

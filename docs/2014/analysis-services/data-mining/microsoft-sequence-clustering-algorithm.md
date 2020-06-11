@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3df71a2facc01abcb3ebdec57aaf243c0b7fda7d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fddf96a5d6ae1089ca2acd67f08ab0989ce75173
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083824"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521628"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Algoritmo Microsoft Sequence Clustering
-  L' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Sequence Clustering è un algoritmo di analisi delle sequenze [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]fornito da. È possibile utilizzare questo algoritmo per esplorare i dati contenenti eventi che possono essere collegati dai percorsi o *sequenze*seguenti. L'algoritmo consente di individuare le sequenze più comuni raggruppando quelle identiche o eseguendone il clustering. Di seguito sono riportati alcuni esempi di dati contenenti sequenze che potrebbero essere utilizzate per il data mining per fornire informazioni su problemi comuni o scenari aziendali:  
+  L' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Sequence Clustering è un algoritmo di analisi delle sequenze fornito da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . È possibile utilizzare questo algoritmo per esplorare i dati contenenti eventi che possono essere collegati dai percorsi o *sequenze*seguenti. L'algoritmo consente di individuare le sequenze più comuni raggruppando quelle identiche o eseguendone il clustering. Di seguito sono riportati alcuni esempi di dati contenenti sequenze che potrebbero essere utilizzate per il data mining per fornire informazioni su problemi comuni o scenari aziendali:  
   
 -   Percorsi creati dagli utenti durante l'utilizzo di un sito Web.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66083824"
   
  Per informazioni sulla creazione di query in base a un modello di data mining, vedere [Query di data mining](data-mining-queries.md). Per alcuni esempi su come usare le query con un modello Sequence Clustering, vedere [Esempi di query sul modello di cluster di sequenza](clustering-model-query-examples.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 -   Non supporta l'utilizzo del linguaggio PMML (Predictive Model Markup Language) per la creazione di modelli di data mining.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "66083824"
   
 -   Supporta l'utilizzo di modelli di data mining OLAP e la creazione di dimensioni di data mining.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining-algorithms-analysis-services-data-mining.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm-technical-reference.md)   
  [Esempi di query sul modello Sequence Clustering](clustering-model-query-examples.md)   

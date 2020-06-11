@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e8a7fa59-bd94-4dab-8c7f-dca6669e97b3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8d1546f9f708a32f6467b0f01c8b0644b610505e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2135a7a15acf999f506f91ef852935725bee5d0b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069970"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538616"
 ---
 # <a name="script-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor script (scheda Calcoli, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Il riquadro **Editor di script** nella scheda **Calcoli** di Progettazione cubi consente di modificare l'espressione per un comando script in visualizzazione Form o l'intero script del cubo in visualizzazione Script.  
@@ -28,7 +27,7 @@ ms.locfileid: "66069970"
 |----------|----------------|  
 |**Espressione**|Digitare le espressioni MDX (Multidimensional Expression) e le istruzioni per il comando script selezionato nel riquadro **Metadati** in visualizzazione Form o per l'intero script del cubo in visualizzazione Script.<br /><br /> Trascinare gli elementi selezionati dal riquadro **Strumenti di calcolo** alla casella di questa opzione per includere la sintassi MDX per l'elemento selezionato.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Espressioni multidimensionali &#40;riferimento&#41; MDX](/sql/mdx/multidimensional-expressions-mdx-reference)   
  [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Barra degli strumenti &#40;scheda calcoli, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   

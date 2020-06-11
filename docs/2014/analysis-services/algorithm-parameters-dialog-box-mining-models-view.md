@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 57f9f6f8-8ca4-4a6e-8f18-85f0571b7060
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c72a3c52da21ca7af10103010500bb43fd46a10a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b942210e653bc3e0a7309a98a4e75e84c5f82168
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062604"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528137"
 ---
 # <a name="algorithm-parameters-dialog-box-mining-models-view"></a>Finestra di dialogo Parametri algoritmo (visualizzazione Modelli di data mining)
   Usare la finestra di dialogo **Parametri algoritmo** per modificare i parametri dell'algoritmo specifici per il modello selezionato. Quando si modifica un parametro dell'algoritmo, i risultati del modello di data mining di solito cambiano. L'influenza che ogni parametro ha sui risultati dipende dall'algoritmo utilizzato e dai dati. Per altre informazioni, vedere [Personalizzare struttura e modelli di data mining](data-mining/customize-mining-models-and-structure.md).  
   
 ## <a name="options"></a>Opzioni  
- **Parametri**  
+ **Parameters**  
  Consente di visualizzare l'elenco dei parametri disponibili per il modello di data mining selezionato.  
   
  Di seguito vengono descritte le colonne disponibili.  
@@ -34,8 +33,8 @@ ms.locfileid: "66062604"
 |------------|-----------------|  
 |**Parametro**|Indica il nome del parametro.|  
 |**Valore**|Immettere un valore solo se si desidera modificare quello predefinito del parametro.|  
-|**Predefinita**|Indica il valore predefinito del parametro usato dall'algoritmo se non si specifica un valore nella colonna **Valore** .|  
-|**Intervallo**|Indica l'intervallo di valori che è possibile immettere nella colonna **Valore** . Gli intervalli possono essere uno dei seguenti:<br /><br /> Elenco discreto, ad esempio 1, 2, 3<br /><br /> Un intervallo inclusivo, ad esempio [0, 100]<br /><br /> Intervallo esclusivo, ad esempio (0,...)<br /><br /> Combinazione, ad esempio [0,...)|  
+|**Default**|Indica il valore predefinito del parametro usato dall'algoritmo se non si specifica un valore nella colonna **Valore** .|  
+|**Range**|Indica l'intervallo di valori che è possibile immettere nella colonna **Valore** . Gli intervalli possono essere uno dei seguenti:<br /><br /> Elenco discreto, ad esempio 1, 2, 3<br /><br /> Un intervallo inclusivo, ad esempio [0, 100]<br /><br /> Intervallo esclusivo, ad esempio (0,...)<br /><br /> Combinazione, ad esempio [0,...)|  
   
  **Descrizione**  
  Descrive il parametro selezionato nell'elenco **Parametri** .  
@@ -48,7 +47,7 @@ ms.locfileid: "66062604"
   
  Se si elimina dall'elenco uno dei parametri dell'algoritmo standard di Analysis Services, il parametro verrà ancora utilizzato nel modello, ma con i valori predefiniti per quel parametro. Il parametro non è eliminato in modo permanente e verrà visualizzato la volta successiva che si apre la finestra di dialogo.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizzazione modelli di data mining &#40;Progettazione modelli di data mining&#41;](mining-models-view-data-mining-model-designer.md)   
  [Spostamento di oggetti di data mining](data-mining/moving-data-mining-objects.md)  

@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: edd96fbe-1b1c-445a-95d6-7a025e0ee868
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5e65c2b8d543455a168bddc1be5ae5594c2ba8c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef89ce093e9cf97926ceae3cc75e17941594e7ff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076417"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536653"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>Creare una dimensione utilizzando una tabella esistente
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]è possibile utilizzare la creazione guidata dimensione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per creare una dimensione da una tabella esistente. A questo scopo selezionare l'opzione **Usa una tabella esistente** nella pagina **Seleziona metodo di creazione** della procedura guidata. L'utilizzo di questa opzione fa sì che la struttura della dimensione venga creata in base alle tabelle della dimensione, alle relative colonne e a tutte le relazioni tra colonne presenti in una vista origine dati esistente. La procedura guidata campiona i dati nella tabella di origine e nelle tabelle correlate. Usa questi dati per definire le colonne attributo basate sulle colonne nelle tabelle delle dimensioni, nonché per definire le gerarchie di attributi, denominate gerarchie *definite dall'utente* . È possibile utilizzare Progettazione dimensioni al termine della Creazione guidata dimensione per aggiungere, rimuovere e configurare attributi e gerarchie nella dimensione.  
+  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è possibile utilizzare la creazione guidata dimensione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per creare una dimensione da una tabella esistente. A questo scopo selezionare l'opzione **Usa una tabella esistente** nella pagina **Seleziona metodo di creazione** della procedura guidata. L'utilizzo di questa opzione fa sì che la struttura della dimensione venga creata in base alle tabelle della dimensione, alle relative colonne e a tutte le relazioni tra colonne presenti in una vista origine dati esistente. La procedura guidata campiona i dati nella tabella di origine e nelle tabelle correlate. Usa questi dati per definire le colonne attributo basate sulle colonne nelle tabelle delle dimensioni, nonché per definire le gerarchie di attributi, denominate gerarchie *definite dall'utente* . È possibile utilizzare Progettazione dimensioni al termine della Creazione guidata dimensione per aggiungere, rimuovere e configurare attributi e gerarchie nella dimensione.  
   
  Durante l’utilizzo di una tabella esistente per creare una dimensione, Creazione guidata dimensione consente di effettuare in modo semplificato i seguenti passaggi:  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66076417"
 ## <a name="selecting-dimension-attributes"></a>Selezione degli attributi della dimensione  
  Dopo avere selezionato tutte le tabelle dimensione, tramite la pagina **Selezione attributi dimensione** scegliere gli attributi che si desidera includere nella dimensione da tali tabelle. Tutte le colonne sottostanti di queste tabelle sono disponibili come potenziali attributi della dimensione. L'attributo chiave della dimensione deve essere selezionato e deve essere abilitato per esplorare.  
   
- Per impostazione predefinita, la procedura guidata imposta il tipo di un attributo su `Regular`. Comunque, è necessario eseguire il mapping di attributi specifici ad un tipo di attributo diverso che meglio rappresenta i dati. Ad esempio, la tabella dbo.DimAccount nel database di esempio [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] DW contiene una colonna AccountCodeAlternateKey che fornisce il numero del conto. Anziché impostare il tipo su `Regular` per questo attributo, è consigliabile eseguire il `Account Number` mapping di questo attributo al tipo.  
+ Per impostazione predefinita, la procedura guidata imposta il tipo di un attributo su `Regular`. Comunque, è necessario eseguire il mapping di attributi specifici ad un tipo di attributo diverso che meglio rappresenta i dati. Ad esempio, la tabella dbo.DimAccount nel database di esempio [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] DW contiene una colonna AccountCodeAlternateKey che fornisce il numero del conto. Anziché impostare il tipo su `Regular` per questo attributo, è consigliabile eseguire il mapping di questo attributo al `Account Number` tipo.  
   
 > [!NOTE]  
 >  Se il tipo di dimensione e i tipi di attributo standard non sono stati definiti al momento della creazione della dimensione, è possibile utilizzare la Configurazione guidata funzionalità di Business Intelligence per impostare tali valori dopo aver creato la dimensione. Per altre informazioni, vedere [Aggiungere funzionalità di Business Intelligence per le dimensioni a una dimensione](bi-wizard-add-dimension-intelligence-to-a-dimension.md) o (per una dimensione di tipo conti) [Aggiungere funzionalità di Business Intelligence per la contabilità a una dimensione](bi-wizard-add-account-intelligence-to-a-dimension.md).  
@@ -85,7 +84,7 @@ ms.locfileid: "66076417"
   
  Nella pagina **Completamento procedura guidata** si completa la procedura guidata digitando un nome per la dimensione nuova e rivedendo la struttura della dimensione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creare una dimensione generando una tabella non temporale nell'origine dati](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)   
  [Creare una dimensione temporale generando una tabella dei tempi](create-a-time-dimension-by-generating-a-time-table.md)   
  [Riferimento alle proprietà degli attributi delle dimensioni](dimension-attribute-properties-reference.md)   

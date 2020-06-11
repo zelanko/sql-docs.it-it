@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4af5b7db-790b-459c-b2b4-00f0cf6b5ce4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc810f56d552fa17cb027598a25bde114a696375
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9027ff3928f40d43f16bb31b52e0c1d52e072847
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084796"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522734"
 ---
 # <a name="data-types-data-mining"></a>Tipi di dati (data mining)
-  Quando si crea un modello di data mining o una struttura [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]di data mining in, è necessario definire i tipi di dati per ogni colonna della struttura di data mining. Il tipo di dati indica al motore di data mining se i dati presenti nell'origine dati sono numerici o di testo e il modo in cui devono essere elaborati. Se nei dati di origine ad esempio sono contenuti dati numerici, è possibile specificare se i numeri devono essere considerati come numeri interi o se devono essere utilizzate posizioni decimali.  
+  Quando si crea un modello di data mining o una struttura di data mining in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , è necessario definire i tipi di dati per ogni colonna della struttura di data mining. Il tipo di dati indica al motore di data mining se i dati presenti nell'origine dati sono numerici o di testo e il modo in cui devono essere elaborati. Se nei dati di origine ad esempio sono contenuti dati numerici, è possibile specificare se i numeri devono essere considerati come numeri interi o se devono essere utilizzate posizioni decimali.  
   
  Ogni tipo di dati supporta uno o più tipi di contenuto. Se si imposta il tipo di contenuto, è possibile personalizzare le modalità di elaborazione o di calcolo dei dati presenti nella colonna nel modello di data mining.  
   
@@ -47,7 +46,7 @@ ms.locfileid: "66084796"
 ## <a name="changing-a-data-type"></a>Modifica di un tipo di dati  
  Se si modifica il tipo di dati di una colonna, è necessario rielaborare sempre la struttura di data mining e qualsiasi modello di data mining basato su tale struttura. Se si modifica il tipo di dati, in alcuni casi tale colonna non può più essere utilizzata in un modello particolare. In una situazione di questo tipo in Analysis Services verrà generato un errore quando si rielabora il modello oppure verrà rielaborato il modello senza la colonna specifica.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Tipi di contenuto &#40;&#41;di data mining](content-types-data-mining.md)   
  [Tipi di contenuto &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
  [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining-algorithms-analysis-services-data-mining.md)   

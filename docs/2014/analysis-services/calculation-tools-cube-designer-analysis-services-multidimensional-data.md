@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b1aa8a1a-6532-45d2-8f53-d3e211d7197a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ff0f13ec91ef1e8796ed5ebd5ccf3cc37ff2f354
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e658ae7d839a55da315619e0870b32c1da52dad8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088282"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527618"
 ---
 # <a name="calculation-tools-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Strumenti di calcolo (scheda Calcoli, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Utilizzare il riquadro **Strumenti di calcolo** della scheda **Calcoli** in Progettazione cubi per analizzare i metadati, le funzioni e i modelli da utilizzare per i calcoli.  
@@ -68,7 +67,7 @@ ms.locfileid: "66088282"
 > [!NOTE]  
 >   Questa opzione viene visualizzata solo se si seleziona **Metadati** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Barra degli strumenti &#40;scheda calcoli, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Libreria script &#40;scheda calcoli, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   

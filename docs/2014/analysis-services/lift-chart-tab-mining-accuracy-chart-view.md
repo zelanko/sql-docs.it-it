@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f1674e2e-d38e-40c7-b8d1-5585ce9a0168
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 66f0d74a3ced6b803249afb93eac85f2681eca6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d083611d7a72164cf2ad7cf63663cfadb0d77a51
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078099"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541893"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>Scheda Grafico di accuratezza (vista Grafico di accuratezza modello di data mining)
   Usare il riquadro **Grafico di accuratezza** per visualizzare un grafico di confronto di tutti i modelli di data mining selezionati nella struttura di data mining specificata.  
@@ -42,7 +41,7 @@ ms.locfileid: "66078099"
  **Copia**  
  Consente di copiare il grafico negli Appunti.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Progettazione Grafico accuratezza modello di data mining &#40;&#41;di data mining](mining-accuracy-chart-designer-data-mining.md)   
  [Attività e procedure di test e convalida &#40;di data mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [Test e convalida &#40;Data mining&#41;](data-mining/testing-and-validation-data-mining.md)  

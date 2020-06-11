@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e03f491c-7df8-46a0-ade9-f2e55b68db85
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 48bbb9eeacc1e3ba2bd31ef10b47b058f0f57239
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b60acaf4254112a53d905340c2750dd1e2e6e8f7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086544"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525996"
 ---
 # <a name="currency-conversions-analysis-services"></a>Conversioni di valuta (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]** Solo multidimensionale  
@@ -184,7 +183,7 @@ ms.locfileid: "66086544"
   
  È possibile modificare i comandi script contenuti in una conversione di valuta in base alle specifiche esigenze. Se si sovrascrive la conversione di valuta, le modifiche andranno perdute.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Scenari di globalizzazione per Analysis Services multidimensionale](globalization-scenarios-for-analysis-services-multiidimensional.md)  
   
   

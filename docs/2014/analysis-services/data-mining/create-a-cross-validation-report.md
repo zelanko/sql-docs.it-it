@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b1fec4c-7053-41eb-b030-5179257967a4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 29a60a5b14b1d9a73e0a9a1bdc84a314b55cd1f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e4e5bb10700ebcac08ca576d07c196163db0f637
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085531"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523987"
 ---
 # <a name="create-a-cross-validation-report"></a>Creare un report di convalida incrociata
   In questo argomento viene illustrata la creazione di un report di convalida incrociata utilizzando la scheda Grafico di accuratezza in Progettazione modelli di data mining. Per informazioni generali sui report di convalida incrociata e sulle misure statistiche in esso contenute, vedere [Convalida incrociata &#40;Analysis Services - Data mining&#41;](cross-validation-analysis-services-data-mining.md).  
@@ -90,7 +89,7 @@ ms.locfileid: "66085531"
   
 4.  Incollare la selezione in una cartella di lavoro di Excel aperta. Se si utilizza l'opzione **Incolla** , il report viene incollato in Excel in formato HTML, mantenendo la formattazione di righe e colonne. Se si usano le opzioni **Incolla speciale** per testo o testo Unicode, il report viene incollato in formato delimitato da righe.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Misure nel report di convalida incrociata](measures-in-the-cross-validation-report.md)  
   
   

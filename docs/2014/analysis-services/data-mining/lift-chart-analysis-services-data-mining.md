@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: feba3688947362847a95aea2d800c1fc6f15f6cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9f7e4f7c9d97878be9f2cd2f3251ac463332faf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174681"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522297"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Grafico di accuratezza (Analysis Services - Data mining)
   Un **grafico di accuratezza** rappresenta graficamente il miglioramento fornito da un modello di data mining rispetto a un'ipotesi casuale e misura la modifica in termini di Punteggio di *accuratezza* . Confrontando i punteggi di accuratezza per diverse parti del set di dati e per modelli diversi, è possibile determinare quale sia il modello migliore e quale percentuale dei case nel set di dati trarrebbe vantaggio dall'applicazione delle stime del modello.
@@ -116,7 +115,7 @@ ms.locfileid: "78174681"
 ### <a name="related-content"></a>Contenuto correlato
  [Torna all'inizio](#bkmk_Top)
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
  [Test e convalida &#40;Data mining&#41;](testing-and-validation-data-mining.md)
 
 

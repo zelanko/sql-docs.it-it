@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3a1a62e4-9fb5-4cdb-a6c6-1b8b30d417ef
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6e0bf6c0c1126dff29107636e0956d92d4b314a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a73ce5a538756a740afd2db72d585fa54f03cae
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086504"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525930"
 ---
 # <a name="data-mining-algorithms-sql-server-data-mining-add-ins"></a>Algoritmi di data mining (componenti aggiuntivi Data mining di SQL Server)
   I componenti aggiuntivi Data mining per Office supportano la creazione di modelli analitici utilizzando gli algoritmi di data mining seguenti. Tutti gli algoritmi sono basati sui metodi di apprendimento automatico noti e sono stati implementati da Microsoft Research.  
@@ -57,7 +56,7 @@ ms.locfileid: "66086504"
   
 -   Nel **client di data mining**, dopo l'avvio della procedura guidata, fare clic su **parametri**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [&#40;di query SQL Server componenti aggiuntivi Data mining&#41;](query-sql-server-data-mining-add-ins.md)   
  [Modellazione avanzata &#40;componenti aggiuntivi Data mining per Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)  
   

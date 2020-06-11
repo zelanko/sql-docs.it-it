@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3dd54d07-1c3b-4b87-b7f0-b962ed8cf844
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 14e86ac2dd32f2a3e1384e08aca597794ee4bc71
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c21c1153289eddf99220279ed8b71b1377088ac
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083961"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521787"
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Algoritmo Microsoft Logistic Regression
   La regressione logistica è una nota tecnica statistica utilizzata per modellare i risultati binari.  
@@ -68,7 +67,7 @@ ms.locfileid: "66083961"
   
 -   Per esempi di query su un modello di regressione lineare, vedere [Esempi di query sul modello di clustering](clustering-model-query-examples.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 -   Non supporta il drill-through. Questo perché la struttura di nodi nel modello di data mining non corrisponde necessariamente in modo diretto ai dati sottostanti.  
   
@@ -78,7 +77,7 @@ ms.locfileid: "66083961"
   
 -   Non supporta l'utilizzo del linguaggio PMML (Predictive Model Markup Language) per la creazione di modelli di data mining.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Contenuto del modello di data mining per i modelli di regressione logistica &#40;Analysis Services-Data mining&#41;](mining-model-content-for-logistic-regression-models.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Logistic regressione](microsoft-logistic-regression-algorithm-technical-reference.md)   
  [Esempi di query sul modello di regressione logistica](logistic-regression-model-query-examples.md)  

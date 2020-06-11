@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d868600a-423c-4892-bb3b-4e6d67798328
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 59c8690a9b71f8a6fecf98e64007eecfbd339b82
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08a9f9214f7a23a86ad631717d68e178bf49fce3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064485"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527797"
 ---
 # <a name="browse-data-source-view-data-mining-wizard"></a>Finestra di dialogo per l'esplorazione della vista origine dati (Creazione guidata modello di data mining)
   Usare la finestra di dialogo per l'esplorazione della vista origine dati **** per visualizzare la vista origine dati selezionata nella pagina **Selezione vista origine dati** della procedura guidata.  
@@ -31,7 +30,7 @@ ms.locfileid: "66064485"
  **Zoom**  
  Utilizzare questa opzione per modificare il livello di dettaglio visualizzato nel diagramma.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto della creazione guidata modello di data mining &#40;Analysis Services-&#41;di data mining](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Selezione vista origine dati &#40;creazione guidata modello di data mining&#41;](select-data-source-view-data-mining-wizard.md)  
   

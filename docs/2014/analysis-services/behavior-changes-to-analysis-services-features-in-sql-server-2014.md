@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 92ebd5cb-afb6-4b62-968f-39f5574a452b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5a5525984fa4b1f1823f526097d271780a072bd4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4856a924bcea68b98336dd77adfdc8762733d548
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284805"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527867"
 ---
 # <a name="behavior-changes-to-analysis-services-features-in-sql-server-2014"></a>Differenze di funzionamento delle funzionalità di Analysis Services in SQL Server 2014
   Questo argomento descrive le modifiche del comportamento in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per le distribuzioni multidimensionali, tabulari, di data mining e di [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] . Tali modifiche influiscono sulle modalità di utilizzo o di interazione delle funzionalità nella versione corrente rispetto alle versioni precedenti di SQL Server.  
@@ -48,7 +47,7 @@ ms.locfileid: "67284805"
 ### <a name="analysis-services-multidimensional-mode"></a>Analysis Services, modalità multidimensionale  
   
 #### <a name="nullprocessing-option-set-to-preserve-is-no-longer-supported-for-distinct-count-measures"></a>L'opzione NullProcessing impostata su Preserve non è più supportata per le misure totale valori distinti  
- Prima di [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], era possibile impostare l' [elemento NullProcessing &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/nullprocessing-element-assl) su `Preserve` per le misure Distinct Count.  Purtroppo questa impostazione produce spesso risultati non validi e a volte causa addirittura l'arresto anomalo del processo di elaborazione. Di conseguenza, questa configurazione non è più valida in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Il tentativo di usarla causerà la visualizzazione dell'errore di convalida seguente: "Errori nella gestione metadati. Preserve non è un valore NullProcessing valido per \<measurename> misura Distinct Count ".  
+ Prima di [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] , era possibile impostare l' [elemento NULLPROCESSING &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/nullprocessing-element-assl) su `Preserve` per le misure Distinct Count.  Purtroppo questa impostazione produce spesso risultati non validi e a volte causa addirittura l'arresto anomalo del processo di elaborazione. Di conseguenza, questa configurazione non è più valida in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Il tentativo di usarla causerà la visualizzazione dell'errore di convalida seguente: "Errori nella gestione metadati. Preserve non è un valore NullProcessing valido per la \<measurename> misura Distinct Count ".  
   
 #### <a name="cube-browser-in-management-studio-and-cube-designer-has-been-removed"></a>Visualizzatore cubi in Management Studio e Progettazione cubi sono stati rimossi  
  Il controllo Visualizzatori cubi, che consente di trascinare campi sulla struttura di una Tabella pivot in Management Studio o in Progettazione cubi, è stato rimosso dal prodotto. Il controllo era un componente OWC (Office Web Control). OWC è stato deprecato da Office e non è più disponibile.  
@@ -104,7 +103,7 @@ ms.locfileid: "67284805"
   
  Se il server è stato aggiornato dalla versione precedente, nell'applicazione del servizio PowerPivot viene mantenuta l'impostazione predefinita precedente (**Round robin**). Per utilizzare l'impostazione del metodo di allocazione **Basato sull'integrità** , è necessario modificare le impostazioni di configurazione. Per altre informazioni, vedere [Create and Configure a PowerPivot Service Application in Central Administration](power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Compatibilità con le versioni precedenti](../../2014/getting-started/backward-compatibility.md)   
  [Modifiche di rilievo nelle funzionalità di Analysis Services in SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md)  
   

@@ -46,20 +46,19 @@ helpviewer_keywords:
 ms.assetid: fcdc3f85-813d-4279-90b0-16e26edd008d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e902272c58f1e841a3108199e53d51ac12f8ae4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6d89f8e1724875268e27a29c2df9053704f0883d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062603"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528127"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>Parametri degli algoritmi (componenti aggiuntivi Data mining di SQL Server)
   Quando si esegue il data mining utilizzando Strumenti di analisi tabelle per Excel, non è necessario configurare l'algoritmo o i parametri di data mining. Ogni strumento analizza i dati e seleziona automaticamente i parametri ottimali. Se tuttavia si desidera modificare il modello o creare un modello di data mining da zero, il client di data mining per Excel offre diverse opzioni per la personalizzazione.  
   
 -   Creare manualmente un modello di data mining, facendo clic su **Avanzate** e quindi su **Aggiungi modello a struttura**.  
   
--   Utilizzare una delle procedure guidate di modellazione nel client di data mining e fare clic su **parametri** per controllare il [!INCLUDE[msCoName](../includes/msconame-md.md)] comportamento degli algoritmi di data mining.  
+-   Utilizzare una delle procedure guidate di modellazione nel client di data mining e fare clic su **parametri** per controllare il comportamento degli [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmi di data mining.  
   
 -   Fare clic su **query** per aprire la creazione guidata modello query, quindi fare clic su **Avanzate** per aprire l' **Editor avanzato query di data mining**. In questo editor è possibile compilare i modelli utilizzando modelli DMX.  
   
@@ -116,7 +115,7 @@ ms.locfileid: "66062603"
 ### <a name="comments"></a>Commenti  
  Per ulteriori informazioni sugli algoritmi, vedere la documentazione online di SQL Server.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmi di data mining &#40;SQL Server componenti aggiuntivi Data mining&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md)  
   
   

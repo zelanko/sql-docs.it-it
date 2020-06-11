@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 37eb7525-b423-4df5-9e62-9f4680d47b9b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3a21ca5383d63d14908df0e7b08fb8419c0ff94a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb68b07a4e14e16a8df5acde7bea986733564253
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081703"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528557"
 ---
 # <a name="dimensions-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Dimensioni (scheda Struttura cubo, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Utilizzare il riquadro **Dimensioni** per visualizzare e modificare le dimensioni di un cubo, inclusi le gerarchie e gli attributi, nella scheda **Struttura cubo** di Progettazione cubi.  
@@ -26,12 +25,12 @@ ms.locfileid: "66081703"
  **Gerarchie**  
  Fare clic su questo pulsante per visualizzare le dimensioni del cubo disponibili e le gerarchie del cubo associate.  
   
- Espandere una dimensione del cubo e **selezionare \<modifica dimensione>** per visualizzare Progettazione dimensioni e modificare la dimensione del database sulla quale è basata la dimensione del cubo. Per altre informazioni su Progettazione dimensioni, vedere [Progettazione dimensioni &#40;Analysis Services - Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
+ Espandere una dimensione del cubo e **selezionare \<dimension> modifica** per visualizzare Progettazione dimensioni e modificare la dimensione del database sulla quale è basata la dimensione del cubo. Per altre informazioni su Progettazione dimensioni, vedere [Progettazione dimensioni &#40;Analysis Services - Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
   
- **Attributi**  
+ **Attributes (Attributi)**  
  Fare clic su questo pulsante per visualizzare le dimensioni del cubo disponibili e gli attributi del cubo associati.  
   
- Espandere una dimensione del cubo e **selezionare \<modifica dimensione>** per visualizzare Progettazione dimensioni e modificare la dimensione del database sulla quale è basata la dimensione del cubo. Per altre informazioni su Progettazione dimensioni, vedere [Progettazione dimensioni &#40;Analysis Services - Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
+ Espandere una dimensione del cubo e **selezionare \<dimension> modifica** per visualizzare Progettazione dimensioni e modificare la dimensione del database sulla quale è basata la dimensione del cubo. Per altre informazioni su Progettazione dimensioni, vedere [Progettazione dimensioni &#40;Analysis Services - Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
   
 ## <a name="context-menu"></a>Menu di scelta rapida  
  Le opzioni seguenti sono disponibili nel menu di scelta rapida visualizzato facendo clic con il pulsante destro del mouse sul riquadro **Dimensioni** :  
@@ -54,7 +53,7 @@ ms.locfileid: "66081703"
 > [!NOTE]  
 >  Questa opzione viene visualizzata solo se è selezionata una dimensione.  
   
- **Elimina**  
+ **Eliminazione**  
  Fare clic su questo pulsante per eliminare la dimensione del cubo selezionata dal cubo.  
   
 > [!NOTE]  
@@ -84,7 +83,7 @@ ms.locfileid: "66081703"
  **Proprietà**  
  Fare clic su questo pulsante per visualizzare la finestra **Proprietà** di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per la dimensione, la gerarchia o l'attributo del cubo selezionato.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Barra degli strumenti &#40;scheda Struttura cubo, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
  [Misure &#40;scheda Struttura cubo, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
  [Vista origine dati &#40;scheda Struttura cubo, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)   

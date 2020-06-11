@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: eaa95278-9ce9-47d5-a6b6-1046e7076599
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c06e40e452fa0db682e2f79b523ddcd90d0450c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7251f9e9422a79c214d27d913112a28ff43d56b1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175790"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536233"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>Creare e gestire una partizione locale (Analysis Services)
   Per migliorare le prestazioni di elaborazione è possibile creare partizioni aggiuntive per un gruppo di misure. Con più partizioni è possibile allocare le tabelle dei fatti in un numero corrispondente di file di dati fisici sia su server locali che su server remoti. In Analysis Services le partizioni possono essere elaborate in modo indipendente e in parallelo, offrendo maggiore controllo sull'elaborazione dei carichi di lavoro sul server.
@@ -27,7 +26,7 @@ ms.locfileid: "78175790"
  È possibile creare le partizioni in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] durante la progettazione dei modelli o dopo la distribuzione della soluzione usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o XMLA. Si consiglia di scegliere un unico approccio. Se si alterna tra gli strumenti, è possibile che le modifiche apportate a un database distribuito in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] vengono sovrascritte quando si ridistribuisce successivamente la soluzione da [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].
 
 ## <a name="before-you-start"></a>Prima di iniziare
- Verificare di disporre della Business Intelligence Edition o della Enterprise Edition. La Standard Edition non supporta più partizioni. Per controllare l'edizione, fare clic con il pulsante destro del [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mouse sul nodo del server in e scegliere **report** | **generale**. Per ulteriori informazioni sulla disponibilità delle funzionalità, vedere [funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).
+ Verificare di disporre della Business Intelligence Edition o della Enterprise Edition. La Standard Edition non supporta più partizioni. Per controllare l'edizione, fare clic con il pulsante destro del mouse sul nodo del server in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e scegliere **report**  |  **generale**. Per ulteriori informazioni sulla disponibilità delle funzionalità, vedere [funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).
 
  È importante tenere presente che, per poter unire le partizioni in secondo momento, è necessario che queste condividano la stessa progettazione delle aggregazioni. Le partizioni possono essere unite solo se dispongono della stessa modalità di archiviazione e della medesima progettazione delle aggregazioni.
 

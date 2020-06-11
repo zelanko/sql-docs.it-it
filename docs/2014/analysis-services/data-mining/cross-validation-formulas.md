@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fd1ea582-29a1-4154-8de2-47bab3539b4d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ccdf0285dc110cde89e08778f6badf56f586a5ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a97fd6800bbdcb8e8d2fb5ce7982ee53fce84bd
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085152"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523399"
 ---
 # <a name="cross-validation-formulas"></a>Formule per la convalida incrociata
   Quando viene generato, un report di convalida incrociata contiene misure di accuratezza per ogni modello, a seconda del tipo di modello di data mining (ovvero dell'algoritmo utilizzato per creare il modello), del tipo di dati dell'attributo stimabile e del valore dell'attributo stimabile, se presente.  
@@ -44,7 +43,7 @@ ms.locfileid: "66085152"
 |**Radice errore quadratico medio**|Attributo discreto. Il valore di destinazione può essere specificato ma non è obbligatorio.|Radice quadrata della media dei quadrati di complemento del punteggio di probabilità, divisa per il numero di case nella partizione, escluse le righe con valori mancanti per l'attributo di destinazione.|  
 |**Radice errore quadratico medio**|Attributo discreto, nessuna destinazione specificata.|Radice quadrata della media dei quadrati di complemento del punteggio di probabilità, divisa per il numero di case nella partizione, esclusi i case con valori mancanti per l'attributo di destinazione.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Test e convalida &#40;&#41;di data mining](testing-and-validation-data-mining.md)   
  [Convalida incrociata &#40;Analysis Services - Data mining&#41;](cross-validation-analysis-services-data-mining.md)  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0ce837a-89ed-46cf-9ce1-801ccb75fa04
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d2e3607426ecbc51b1d04dfc97b12f83faf328b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a963743dff12a239fb5d45a05c0af91af00620eb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085576"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524017"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>Creare una query sul contenuto di un modello di data mining
   È possibile eseguire una query a livello di codice sul contenuto del modello di data mining utilizzando AMO o XML/A, ma è più facile creare query mediante DMX. È anche possibile creare query sui set di righe dello schema di data mining stabilendo una connessione all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e creando una query tramite le viste a gestione dinamica fornite da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -40,11 +39,11 @@ ms.locfileid: "66085576"
   
      Il modello **Query contenuto** si apre nell'editor del codice adatto. Nel riquadro dei metadati sono elencati i modelli disponibili nel database corrente. Per modificare il database, selezionare un altro database nell'elenco **Database disponibili** .  
   
-5.  Immettere il nome di un modello di data mining nella riga `FROM` , [*\<modello di data mining, nome, modello>*].`.CONTENT` Se nel nome del modello di data mining sono inclusi spazi, tale nome deve essere racchiuso tra parentesi.  
+5.  Immettere il nome di un modello di data mining nella riga `FROM` [ *\<mining model, name, MyModel>* ] `.CONTENT` . Se nel nome del modello di data mining sono inclusi spazi, tale nome deve essere racchiuso tra parentesi.  
   
      Se non si vuole digitare il nome, è possibile selezionare un modello di data mining in **Esplora oggetti** e trascinarlo nel modello.  
   
-6.  Nella riga `SELECT` * \<Selezionare list, expr list, \* *digitare i nomi delle colonne nel set di righe dello schema del contenuto del modello di data mining.  
+6.  Nella riga, `SELECT` *\<select list, expr list, \*>* , digitare i nomi delle colonne nel set di righe dello schema del contenuto del modello di data mining.  
   
      Per visualizzare un elenco di colonne che è possibile restituire nelle query del contenuto del modello di data mining, vedere [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
@@ -77,7 +76,7 @@ ms.locfileid: "66085576"
     > [!NOTE]  
     >  Per visualizzare un elenco di tutti i set di righe dello schema su cui è possibile eseguire una query nell'istanza corrente, utilizzare la query `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS. In alternativa, per un elenco di set di righe dello schema specifici del data mining, vedere [Set di righe dello schema di data mining](../../relational-databases/native-client-ole-db-rowsets/rowsets.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Contenuto del modello di data mining &#40;Analysis Services-&#41;di data mining](mining-model-content-analysis-services-data-mining.md)   
  [Set di righe dello schema di data mining](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets) 
   

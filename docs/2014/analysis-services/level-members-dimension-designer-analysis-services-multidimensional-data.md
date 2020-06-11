@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3f61e384-5b4e-4480-a7ed-b408de2fdea7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ad602710cab83e2be25a03a4da6cce0c3407493e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f858f2ba6fe542d84e3bd6e7617b2d1565c0ca2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078105"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542013"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Livello e membri (scheda Esplorazione, Progettazione dimensioni) (Analysis Services – Dati multidimensionali)
   Utilizzare questo riquadro per visualizzare i membri della gerarchia e della lingua attualmente selezionate. Per selezionare una gerarchia o una lingua da visualizzare, utilizzare le opzioni **Gerarchia** e **Lingua** nel riquadro **Barra degli strumenti** . Per altre informazioni sul riquadro Barra degli strumenti, vedere [Toolbar &#40;Browser Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md).  
@@ -83,7 +82,7 @@ ms.locfileid: "66078105"
 > [!NOTE]  
 >  Questa opzione viene visualizzata solo se è abilitata la modalità writeback.  
   
- **Elimina**  
+ **Eliminazione**  
  Consente di rimuovere i membri selezionati dalla gerarchia.  
   
 > [!NOTE]  
@@ -122,7 +121,7 @@ ms.locfileid: "66078105"
  **Writeback**  
  Selezionare questa opzione per abilitare la modalità writeback.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Barra degli strumenti &#40;scheda Esplorazione, Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)   
  [Browser &#40;Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
   

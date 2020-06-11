@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7811ce7d-6c37-4189-bfa6-ef36fb4932db
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a99ce67c4b42cc1def10127c8b1862a859d20723
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96ddf88bd6f071c667a021678b6f5cd2613ae8db
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064375"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527827"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Backup database (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Backup database** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per eseguire il backup di un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in un file di backup in formato file di backup di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] con estensione abf.  
@@ -94,7 +93,7 @@ ms.locfileid: "66064375"
 |**Elenco partizioni**|Visualizza l'elenco delle partizioni remote contenute nel database visualizzato in **Database**.|  
 |**File di backup remoto**|Digitare il percorso completo e il nome di file del file di backup remoto da usare oppure fare clic sul pulsante con i puntini di sospensione (**...**) per visualizzare la finestra di dialogo **Salva file con nome** e selezionare il percorso e il nome di file del file di backup remoto da usare. Per altre informazioni sulla finestra di dialogo **Salva file con nome** vedere [Finestra di dialogo Salva file con nome &#40;Analysis Services - Dati multidimensionali&#41;](save-file-as-dialog-box-analysis-services-multidimensional-data.md).|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Backup e ripristino di database di Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   

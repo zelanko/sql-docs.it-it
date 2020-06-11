@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a175daa5-58ea-474c-a82f-9648c5155dc8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bd25682f12ce0a3ddad5e8f135d82aaf08115762
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f1284d160ca828f75ec39112d614640fcb3ab1cb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086247"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525698"
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>Aggiungere modelli di data mining a una struttura (Analysis Services - Data mining)
   Una struttura di data mining può supportare più modelli di data mining. Pertanto dopo avere completato la procedura guidata è possibile aprire la struttura e aggiungere nuovi modelli di data mining. Ogni volta che si crea un modello, è possibile utilizzare un algoritmo diverso, modificare i parametri o applicare filtri per utilizzare un subset di dati diverso.  
@@ -57,7 +56,7 @@ ms.locfileid: "66086247"
 ## <a name="specifying-column-content"></a>Specifica del contenuto delle colonne  
  In alcuni casi può anche essere necessario specificare il *contenuto della colonna*. Nel data mining di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la proprietà Tipo di contenuto di ogni colonna di dati indica all'algoritmo come devono essere elaborati i dati in tale colonna. Se ad esempio i dati includono una colonna Income, è necessario specificare che la colonna contiene numeri continui impostando il tipo di contenuto su Continuous. Tuttavia, è anche possibile specificare che i numeri della colonna Income devono essere raggruppati in bucket impostando il tipo di contenuto su Discretized e, se si desidera, specificando il numero esatto di bucket. È possibile creare modelli diversi che gestiscono le colonne in modo diverso. Ad esempio, è possibile provare con un modello che raggruppa i clienti in tre bucket di età e un altro che li raggruppa in 10 bucket di età.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Strutture di data mining &#40;Analysis Services-&#41;di data mining](mining-structures-analysis-services-data-mining.md)   
  [Creare una struttura di data mining relazionale](create-a-relational-mining-structure.md)   
  [Proprietà modello di data mining](mining-model-properties.md)   

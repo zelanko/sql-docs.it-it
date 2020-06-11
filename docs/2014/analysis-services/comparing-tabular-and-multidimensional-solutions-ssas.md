@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1da4224387e70ccc76e069aa3ce411dddb79b805
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5cb21b733fd1663f0e26c765f519544597aa9063
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087766"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527427"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>Confronto tra soluzioni tabulari e multidimensionali (SSAS)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]in sono disponibili due approcci distinti per la modellazione dei dati: tabulari e multidimensionali. Benché sia presente una sovrapposizione significativa dei due approcci, ci sono anche differenze importanti quali la decisione su come procedere. In questo argomento vengono confrontate le funzionalità e viene illustrato il modo in cui ogni approccio risolve i requisiti di progetto comuni. Ad esempio, se il supporto di un'origine dati specifica è di importanza fondamentale, la sezione sulle origini dati consente di facilitare la decisione su quale approccio di modellazione adottare.  
@@ -110,7 +109,7 @@ ms.locfileid: "66087766"
 |Relazioni molti-a-molti|[Sì](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|No|  
 |Gerarchie padre-figlio|[Sì](multidimensional-models/parent-child-dimension.md)|Sì (tramite DAX)|  
 |Partizioni|[Sì](tabular-models/partitions-ssas-tabular.md)|  
-|prospettive|[Sì](multidimensional-models/perspectives-in-multidimensional-models.md)|[Sì](tabular-models/partitions-ssas-tabular.md)|  
+|Prospettive|[Sì](multidimensional-models/perspectives-in-multidimensional-models.md)|[Sì](tabular-models/partitions-ssas-tabular.md)|  
 |Misure semiadditive|[Sì](multidimensional-models/define-semiadditive-behavior.md)|Sì (tramite DAX)|  
 |Traduzioni|[Sì](multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|No|  
 |Gerarchie definite dall'utente|[Sì](multidimensional-models/user-defined-hierarchies-create.md)|Sì|  
@@ -201,7 +200,7 @@ ms.locfileid: "66087766"
   
 -   Compilazione di un modello PowerPivot mediante l' [esercitazione su PowerPivot per Excel](https://go.microsoft.com/fwlink/?LinkId=251135).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestione dell'istanza di Analysis Services](instances/analysis-services-instance-management.md)   
  [Novità di Analysis Services e Business Intelligence](what-s-new-in-analysis-services.md)   
  [Novità &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md)   

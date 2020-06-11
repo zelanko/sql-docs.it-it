@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bec845a1-d10c-4d45-9acf-0a302adfee47
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 84e134854770f0096cc99c94698cfd8d7e3e818a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3473a760e49728ae0e91f5ab13f5346f9912ab4c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076563"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536648"
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Creare un cubo tramite una vista origine dati
   Utilizzare questo metodo di compilazione di un nuovo cubo se si desidera utilizzare una vista origine dati esistente. Con questo metodo, è possibile specificare la vista origine dati, nonché selezionare le tabelle dei fatti e delle dimensioni che si desidera utilizzare nella vista origine dati. Successivamente è possibile scegliere le dimensioni e le misure che si desidera includere nel cubo.  
@@ -51,7 +50,7 @@ ms.locfileid: "66076563"
 > [!NOTE]  
 >   Nella scheda **Diagramma** è possibile allargare o ingrandire al massimo la finestra della procedura guidata per visualizzare lo schema.  
   
- Se nella vista origine dati è presente una tabella delle dimensioni temporali, selezionarla nell'elenco **Tabella dimensioni temporali** . Se non è presente alcun valore ** \<** , lasciare selezionata l'opzione Nessuno>. Si tratta dell'elemento predefinito dell'elenco. Se si seleziona una tabella come tabella delle dimensioni temporali, tale tabella viene selezionata anche come tabella delle dimensioni nelle schede **Tabelle** e **Diagramma** .  
+ Se nella vista origine dati è presente una tabella delle dimensioni temporali, selezionarla nell'elenco **Tabella dimensioni temporali** . Se non è presente alcun valore, lasciare **\<None>** selezionata l'opzione. Si tratta dell'elemento predefinito dell'elenco. Se si seleziona una tabella come tabella delle dimensioni temporali, tale tabella viene selezionata anche come tabella delle dimensioni nelle schede **Tabelle** e **Diagramma** .  
   
 ## <a name="defining-time-periods"></a>Definizione dei periodi di tempo  
  Se durante la selezione dei tipi di tabella è stata specificata una tabella delle dimensioni temporali, utilizzare la pagina **Definizione periodi di tempo** della procedura guidata per specificare le colonne della tabella che corrispondono ai periodi di tempo standard. Cercare i periodi standard in **Nome proprietà tempo**. Per ogni riga per cui esiste una colonna corrispondente nella tabella delle dimensioni temporali, scegliere la colonna corretta in **Colonne tabella tempi**. Nella procedura guidata vengono utilizzate le associazioni specificate per creare attributi e suggerire gerarchie temporali utili per i dati. Queste associazioni consentono inoltre di impostare la proprietà **Tipo** per gli attributi corrispondenti nella nuova dimensione temporale. La procedura guidata consente di creare quindi una dimensione temporale basata su una tabella delle dimensioni temporali.  
@@ -61,7 +60,7 @@ ms.locfileid: "66076563"
 ## <a name="selecting-dimensions"></a>Selezione delle dimensioni  
  Utilizzare la pagina per selezionare le dimensioni della procedura guidata per aggiungere dimensioni esistenti al cubo. **** Questa pagina verrà visualizzata solo se sono già presenti dimensioni condivise che corrispondono alle tabelle delle dimensioni nel nuovo cubo.  
   
- Per aggiungere dimensioni esistenti, selezionare una o più dimensioni nell'elenco **Dimensioni condivise** e fare clic sul pulsante con la freccia a destra (**>**) per spostarle nell'elenco **Dimensioni cubo** . Fare clic sul pulsante con la**>>** doppia freccia () per spostare tutte le dimensioni nell'elenco.  
+ Per aggiungere dimensioni esistenti, selezionare una o più dimensioni nell'elenco **Dimensioni condivise** e fare clic sul pulsante con la freccia a destra (**>**) per spostarle nell'elenco **Dimensioni cubo** . Fare clic sul pulsante con la doppia freccia ( **>>** ) per spostare tutte le dimensioni nell'elenco.  
   
  Se una dimensione esistente non viene visualizzata nell'elenco come previsto, è possibile fare clic su **Indietro** e modificare le impostazioni del tipo di tabella per una o più tabelle. Una dimensione esistente deve essere anche correlata ad almeno una delle tabelle dei fatti del cubo per poter essere visualizzata nell'elenco **Dimensioni condivise** .  
   
@@ -88,7 +87,7 @@ ms.locfileid: "66076563"
   
  Per rimuovere un qualsiasi oggetto nell'albero dal cubo, deselezionare la casella di controllo accanto a tale oggetto. La deselezione rimuove anche tutti gli oggetti sotto l'oggetto. Le dipendenze tra oggetti sono imposte, pertanto se si rimuove un attributo, vengono rimossi anche i livelli di gerarchia che dipendono dall'attributo. Ad esempio, deselezionando una casella di controllo accanto a una gerarchia vengono deselezionate le caselle di controllo accanto a tutti i livelli nella gerarchia e vengono rimossi sia i livelli sia le gerarchie. Non è possibile rimuovere l'attributo chiave per una dimensione.  
   
- È possibile rinominare qualsiasi dimensione, attributo, gerarchia o livello facendo clic sul nome oppure facendo clic con il pulsante destro del mouse sul nome e scegliendo **Rinomina \<oggetto>** dal menu di scelta rapida, dove ** \<oggetto>** è **dimensione**, **attributo**o **livello**.  
+ È possibile rinominare qualsiasi dimensione, attributo, gerarchia o livello facendo clic sul nome oppure facendo clic con il pulsante destro del mouse sul nome e scegliendo **Rinomina \<object> **dal menu di scelta rapida, dove **\<object>** è **dimensione**, **attributo**o **livello**.  
   
  Non esiste necessariamente una relazione uno-a-uno tra il numero di tabelle delle dimensioni definito nella pagina **Selezione tabelle dei fatti e delle dimensioni** della procedura guidata e il numero di dimensioni elencate in questa pagina. A seconda delle relazioni tra tabelle nella vista origine dati, nella procedura guidata possono essere utilizzate due o più tabelle per compilare una dimensione, ad esempio come richiesto da uno schema snowflake.  
   

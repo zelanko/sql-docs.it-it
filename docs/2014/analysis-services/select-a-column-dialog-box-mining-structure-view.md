@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6f73a7dc-5401-40c3-8f1d-b41fc1dd91c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7ee69724fbcacad78c6053c1bbdf9c3465482665
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55270f44c15fad735b4252ee9d6b5342f4c4a4b3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069924"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538443"
 ---
 # <a name="select-a-column-dialog-box-mining-structure-view"></a>Finestra di dialogo Seleziona colonna (visualizzazione Struttura di data mining)
   Utilizzare la finestra di dialogo **Seleziona colonna** per aggiungere colonne alla struttura di data mining. Nella finestra di dialogo sono incluse diverse opzioni a seconda che si utilizzi un modello di data mining OLAP o relazionale.  
@@ -45,7 +44,7 @@ ms.locfileid: "66069924"
   
  Questa opzione viene utilizzata solo per i modelli di data mining OLAP.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Visualizzazione struttura di data mining &#40;Progettazione modelli di data mining&#41;](mining-structure-view-data-mining-model-designer.md)   
  [Aggiungere colonne a una struttura di data mining](data-mining/add-columns-to-a-mining-structure.md)  
   

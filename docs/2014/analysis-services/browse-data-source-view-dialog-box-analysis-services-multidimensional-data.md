@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16f077bd-9366-4964-8778-92ea0eddb8bb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 49a98b2710cf1af3a936ba7fa7fe244bb7675bd9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 488911c34df2722d4a4144df173a2975ae0f16f1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064456"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527781"
 ---
 # <a name="browse-data-source-view-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo per la visualizzazione della vista origine dati (Analysis Services - Dati multidimensionali)
   La finestra di dialogo per l'esplorazione della vista origine dati consente di visualizzare un semplice diagramma grafico della vista origine dati selezionata. Il nome della vista origine dati corrisponde inoltre al titolo della finestra di dialogo.  
@@ -31,7 +30,7 @@ ms.locfileid: "66064456"
  **Zoom**  
  Consente di selezionare il fattore di zoom per ridimensionare gli oggetti visualizzati sulla superficie del diagramma.  
   
- **Chiudi**  
+ **Close**  
  Fare clic su per chiudere la finestra di dialogo .  
   
   

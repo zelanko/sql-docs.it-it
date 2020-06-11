@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 49e02de1-4ffa-401c-8eee-471a9c25b86a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a67cadab4ee67bb3f81776ccb658c66fe6a67d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 153369979737dded52609843cd30cf914315e9cc
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085154"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523418"
 ---
 # <a name="data-definition-queries-data-mining"></a>Query di definizione dei dati (Data mining)
   Per il data mining, la *query di definizione dei dati* della categoria indica le istruzioni DMX o i comandi XMLA usati per eseguire le operazioni seguenti:  
@@ -88,7 +87,7 @@ ms.locfileid: "66085154"
 |Informazioni sulla gestione di modelli in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|[Esportare e importare gli oggetti di data mining](export-and-import-data-mining-objects.md)<br /><br /> [EXPORT &#40;DMX&#41;](/sql/dmx/export-dmx)<br /><br /> [IMPORT &#40;DMX&#41;](/sql/dmx/import-dmx)|  
 |Informazioni su OPENROWSET e su altre modalità per eseguire una query sui dati esterni.|[&#60;query origine dati&#62;](/sql/dmx/source-data-query).|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione guidata modello di data mining &#40;Analysis Services - Data mining&#41;](data-mining-wizard-analysis-services-data-mining.md)  
   
   

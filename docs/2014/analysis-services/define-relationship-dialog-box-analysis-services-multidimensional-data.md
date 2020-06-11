@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0fcee7f1-f138-4c2e-ae8c-245395ee0fe8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d80be1c4898ae00dfdbb88e22771c071636cf73c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 134a6dc66ea80bf9bd3d89f1853f30a30e51bd9e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082095"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528797"
 ---
 # <a name="define-relationship-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Definisci relazione (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Definisci relazione** per definire una relazione tra una dimensione del cubo e un gruppo di misure in Progettazioni cubi. Per visualizzare la finestra di dialogo **Definisci relazione** , è possibile fare clic su **...** in una cella del riquadro **Griglia** della scheda **Utilizzo dimensioni** in Progettazione cubi.  
@@ -44,7 +43,7 @@ ms.locfileid: "66082095"
 |||**Tabella del gruppo di misure**: visualizza la tabella dei fatti per il gruppo di misure.|  
 |||**Relazione**: Visualizza una griglia delle colonne della dimensione e del gruppo di misure su cui si basa la relazione. La griglia include le colonne seguenti:<br /><br /> **Colonne dimensione**: visualizza le colonne associate all'attributo di granularità selezionato. Nota: se la dimensione non è stata ancora generata, questa opzione è impostata su **Genera**.<br />**Colonne gruppo di misure** :<br />                              Consente di selezionare le colonne nel gruppo di misure correlate alle colonne della dimensione.|  
 |||**Avanzate**:<br />                      Fare clic su questo pulsante per visualizzare la finestra di dialogo **Associazioni gruppo di misure** e modificare le proprietà avanzate, ad esempio l'elaborazione di valori Null, relative alle relazioni tra attributi e colonne di gruppi di misure. Per ulteriori informazioni sulla finestra di dialogo **Associazioni gruppo di misure** , vedere finestra di [dialogo Associazioni gruppo di misure &#40;Analysis Services-&#41;dati multidimensionali ](measure-group-bindings-dialog-box-analysis-services-multidimensional-data.md).|  
-|**Fatto**|Consente di impostare una relazione di tipo Fatti per la dimensione. Nel riquadro **Dettaglio** vengono visualizzate le opzioni seguenti:|**Attributo di granularità**: consente di selezionare l'attributo che definisce la granularità del gruppo di misure rispetto alla dimensione. Si tratta in genere di un attributo chiave della dimensione.|  
+|**Fact**|Consente di impostare una relazione di tipo Fatti per la dimensione. Nel riquadro **Dettaglio** vengono visualizzate le opzioni seguenti:|**Attributo di granularità**: consente di selezionare l'attributo che definisce la granularità del gruppo di misure rispetto alla dimensione. Si tratta in genere di un attributo chiave della dimensione.|  
 |||**Tabella della dimensione**: visualizza la tabella della dimensione principale.|  
 |||**Tabella del gruppo di misure**: <br />                      Consente di visualizzare la tabella su cui si basa il gruppo di misure.|  
 |**Riferimento**|Consente di impostare una relazione di tipo Riferimento per la dimensione. Nel riquadro **Dettaglio** vengono visualizzate le opzioni seguenti:|**Dimensione di riferimento**: <br />                      Consente di visualizzare la dimensione selezionata.|  
@@ -57,7 +56,7 @@ ms.locfileid: "66082095"
 |**Data Mining**|Consente di impostare una relazione di tipo Data mining per la dimensione. Nel riquadro **Dettaglio** vengono visualizzate le opzioni seguenti:|**Dimensione di destinazione**: Visualizza la dimensione di data mining.<br /><br /> Nota: per creare una relazione di tipo Data mining per una dimensione, è necessario selezionare una dimensione di data mining.|  
 |||**Dimensione di origine**: consente di selezionare la dimensione in base alla quale la dimensione di data mining elabora analisi predittive.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Relazioni tra dimensioni](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Utilizzo dimensioni &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](dimension-usage-cube-designer-analysis-services-multidimensional-data.md)   
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  

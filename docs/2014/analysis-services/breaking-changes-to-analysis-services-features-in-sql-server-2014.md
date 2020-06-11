@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: aeb02542-5a6c-458c-a110-13413dd3e9d9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 65b70cf2bb85bca60a372f09a5d3fc9ffedb90cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d6aac37a1287e597f1c34936e8aae4af8571aa5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064422"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527837"
 ---
 # <a name="breaking-changes-to-analysis-services-features-in-sql-server-2014"></a>Modifiche di rilievo nelle funzionalità di Analysis Services in SQL Server 2014
   In questo argomento vengono descritte le modifiche di rilievo introdotte in [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]. Queste modifiche potrebbero comportare il malfunzionamento di applicazioni, script o funzionalità basate su versioni precedenti di SQL Server.  
@@ -64,7 +63,7 @@ ms.locfileid: "66064422"
 |Si sconsiglia di inserire il percorso della partizione nella cartella Dati.|Il server gestisce la cartella Dati e crea o rimuove cartelle in seguito alla creazione, eliminazione e modifica degli oggetti. La specifica di un percorso di archiviazione per le partizioni nella cartella Dati è pertanto assolutamente sconsigliata, soprattutto nelle sottocartelle relative a database, cubi e dimensioni. Sebbene il server consenta l'esecuzione di questa operazione mediante la creazione o la modifica, verrà visualizzato un avviso. Quando si aggiornano database dalla versione SQL Server 2005 Analysis Services alla versione [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] che include percorsi di archiviazione delle partizioni nella cartella Dati, il server funzionerà. Per le operazioni di ripristino o sincronizzazione sarà necessario spostare i percorsi di archiviazione delle partizioni all'esterno della cartella Dati.|  
 |Si potrebbero ottenere risultati imprevisti per le query che utilizzano la parola chiave MDX "EXISTING" in ProClarity Analytics Server e Microsoft Office PerformancePoint Server 2007.|ProClarity Analytics Server e Microsoft Office PerformancePoint Server 2007 utilizzano erroneamente la parola chiave EXISTING in MDX in determinati scenari. A causa delle modifiche apportate in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] Analysis Services, tramite queste query potrebbero essere restituiti risultati imprevisti.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Analysis Services Backward Compatibility](analysis-services-backward-compatibility.md)  
   
   

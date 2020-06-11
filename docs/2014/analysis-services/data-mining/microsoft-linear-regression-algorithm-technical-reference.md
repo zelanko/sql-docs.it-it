@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: db8b36fbccc4139071f54ddf9f73f876e9517799
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20acb57a4c2ddb60d2daefc6733ac7ef52310f3c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084055"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522007"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Linear Regression
   L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression è una versione speciale dell'algoritmo Microsoft Decision Trees ottimizzata per la modellazione delle coppie di attributi continui. In questo argomento viene illustrata l'implementazione dell'algoritmo, viene mostrato come personalizzarne il comportamento e vengono forniti collegamenti a ulteriori informazioni sull'esecuzione di query sui modelli.  
@@ -64,7 +63,7 @@ ms.locfileid: "66084055"
 ### <a name="regressors-in-linear-regression-models"></a>Regressori nei modelli di regressione lineare  
  I modelli di regressione lineare si basano sull'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees. Tuttavia, anche se non si utilizza l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression, qualsiasi modello di albero delle decisioni può contenere un albero o i nodi che rappresentano una regressione su un attributo continuo.  
   
- Non è necessario specificare che una colonna continua rappresenta un regressore. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees suddividerà il set di dati in aree con modelli significativi anche se non si imposta il flag REGRESSOR nella colonna. La differenza è che quando si imposta il flag di modellazione, l'algoritmo tenterà di trovare equazioni di regressione nel formato a * C1 + b\*C2 +... per adattare i modelli nei nodi dell'albero. Viene calcolata la somma dei residui e, se la deviazione è eccessiva, nell'albero viene forzata una divisione.  
+ Non è necessario specificare che una colonna continua rappresenta un regressore. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees suddividerà il set di dati in aree con modelli significativi anche se non si imposta il flag REGRESSOR nella colonna. La differenza è che quando si imposta il flag di modellazione, l'algoritmo tenterà di trovare equazioni di regressione nel formato a * C1 + b \* C2 +... per adattare i modelli nei nodi dell'albero. Viene calcolata la somma dei residui e, se la deviazione è eccessiva, nell'albero viene forzata una divisione.  
   
  Ad esempio, se si stima il comportamento di acquisto dei clienti usando **Reddito** come attributo e si imposta il flag di modellazione REGRESSOR nella colonna, per prima cosa l'algoritmo tenterà di adattare i valori **Reddito** usando una formula di regressione standard. Se la deviazione è eccessiva, la formula di regressione viene abbandonata e l'albero viene diviso in base a un altro attributo. L'algoritmo Decision Trees tenta quindi di adattare un regressore per il reddito in ognuno dei rami dopo la divisione.  
   
@@ -84,7 +83,7 @@ ms.locfileid: "66084055"
 > [!NOTE]  
 >  I tipi di contenuto `Cyclical` e `Ordered` sono supportati, ma l'algoritmo li considera come valori discreti e non esegue un'elaborazione speciale.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Linear regressione](microsoft-linear-regression-algorithm.md)   
  [Esempi di query sul modello di regressione lineare](linear-regression-model-query-examples.md)   
  [Contenuto dei modelli di data mining per i modelli di regressione lineare &#40;Analysis Services - Data mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  

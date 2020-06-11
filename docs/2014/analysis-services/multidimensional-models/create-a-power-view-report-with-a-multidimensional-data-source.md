@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b9b6f4c9-7e1f-4f61-b657-8986e39a6af2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 895d4a86ed359e0737641e83ea17e77a6c70cb4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 179bb9eed94cd0dbb579bdb06d630b213339d12f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076409"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536479"
 ---
 # <a name="create-a-power-view-report-with-a-multidimensional-data-source"></a>Creare un report Power View con un'origine dati multidimensionale
   La creazione di un report Power View basato su un modello multidimensionale non è diversa dalla creazione di un report basato su una cartella di lavoro di PowerPivot o un modello tabulare di Analysis Services. I report Power View vengono creati da un file di connessione all'origine dati del report (con estensione rsds) in una raccolta di SharePoint. Per ulteriori informazioni sulla creazione di un file con estensione rsds, vedere [Create a Report Data Source](create-a-report-data-source.md).  

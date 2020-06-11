@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: aefaeb7f-d174-48d1-a188-0987a3b1196b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c34cbfd2ea88d863239c068300c65531fd19f5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44313ce14beee0390f12ed0e6566502327b17795
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085875"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525037"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>Modificare le proprietà di un modello di data mining
   Alcune proprietà dei modelli di data mining si applicano all'intero modello, altre solo a singole colonne. Esempi di proprietà che si applicano all'intero modello sono la proprietà `Drillthrough`, che specifica se i dati del case devono essere disponibili per le query, e la proprietà `Description`. Le proprietà che si applicano alle singole colonne sono `Usage` e `ModelingFlags`, che controllano il modo in cui i dati della colonna vengono utilizzati all'interno del modello.  
@@ -46,11 +45,11 @@ ms.locfileid: "66085875"
 2.  Nella finestra **Proprietà** a destra dello schermo evidenziare il valore corrispondente alla proprietà da modificare e quindi immettere il nuovo valore.  
   
     > [!NOTE]  
-    >  Se l'utilizzo della colonna è impostato `Ignore`su, la finestra **Proprietà** per la colonna è vuota.  
+    >  Se l'utilizzo della colonna è impostato su `Ignore` , la finestra **Proprietà** per la colonna è vuota.  
   
      Il nuovo valore diventerà effettivo quando si seleziona un elemento diverso nella finestra di progettazione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Attività e procedure relative al modello di data mining](mining-model-tasks-and-how-tos.md)  
   
   

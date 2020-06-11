@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bd215a68-1ad7-4046-9c44-ec8e2be13a64
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f5a8508218ed6a2b4407943fe962959e3cd4f97d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 867bd6d1abffb29ec3eb2a8a78e562e5cbcc5b29
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086623"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526347"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>Scheda Convalida incrociata (vista Grafico accuratezza modello di data mining)
   La convalida incrociata consente di partizionare una struttura di data mining in sezioni trasversali, eseguire in maniera iterativa il training dei modelli e testarli a fronte di ciascuna sezione trasversale. È possibile specificare un numero di riduzioni in cui suddividere i dati. Ciascuna riduzione viene a sua volta utilizzata come dati di test, mentre i dati rimanenti vengono usati per eseguire il training di un nuovo modello. In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] viene quindi generato un set di misure di accuratezza standard per ogni modello. Confrontando le misure relative ai modelli generati per ogni sezione trasversale, è possibile valutare l'affidabilità del modello di data mining per l'intero set di dati.  
@@ -41,7 +40,7 @@ ms.locfileid: "66086623"
   
 -   Fare clic su **Ottieni risultati** per visualizzare i risultati della convalida incrociata.  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco elementi dell'interfaccia utente  
  **Conteggio di riduzioni**  
  Specificare il numero di riduzioni, o partizioni, da creare. Poiché il valore minimo è 2, metà del set di dati viene utilizzata per il testing e l'altra metà per il training.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "66086623"
   
  Se **0**è il valore specificato, tutti i case nei dati di origine vengono usati per la convalida incrociata.  
   
- Non esistono valori predefiniti.  
+ Non è disponibile alcun valore predefinito.  
   
 > [!NOTE]  
 >  Il tempo di elaborazione è direttamente proporzionale all'aumento del numero di case.  
@@ -96,9 +95,9 @@ ms.locfileid: "66086623"
   
  Si supponga ad esempio che vengano effettuate tre stime per un particolare stato di destinazione e che le probabilità di ogni stima siano 0,05, 0,15 e 0,8. Se si imposta la soglia su 0,5, solo una stima viene conteggiata come corretta. Se si imposta **Soglia** **di destinazione** su 0,10, due stime vengono conteggiate come corrette.  
   
- Quando la **soglia** di **destinazione** è `null`impostata su, ovvero il valore predefinito, la stima più probabile per ogni case viene conteggiata come corretta. Nell'esempio precedente, 0,05, 0,15 e 0,8 sono le probabilità per le stime nei tre diversi case. Nonostante le probabilità siano molto diverse, ciascuna stima viene conteggiata come corretta, perché ogni case genera una sola stima. Si tratta inoltre delle stime migliori per tali case.  
+ Quando la **soglia** di **destinazione** è impostata su `null` , ovvero il valore predefinito, la stima più probabile per ogni case viene conteggiata come corretta. Nell'esempio precedente, 0,05, 0,15 e 0,8 sono le probabilità per le stime nei tre diversi case. Nonostante le probabilità siano molto diverse, ciascuna stima viene conteggiata come corretta, perché ogni case genera una sola stima. Si tratta inoltre delle stime migliori per tali case.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Test e convalida &#40;&#41;di data mining](data-mining/testing-and-validation-data-mining.md)   
  [Convalida incrociata &#40;Analysis Services-&#41;di data mining](data-mining/cross-validation-analysis-services-data-mining.md)   
  [Misure nel report di convalida incrociata](data-mining/measures-in-the-cross-validation-report.md)   

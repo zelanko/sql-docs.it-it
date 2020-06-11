@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0f2902b5-796a-4eb0-be03-01514dc01b9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: faf96ad02005c0385ec56e1f8763da2e82f093ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be4a5f265d83c9346756e82f04d25616551b1af3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086829"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526498"
 ---
 # <a name="create-polling-query-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Crea query di polling (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Crea query di polling** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per creare una query di polling nella scheda **Notifiche** della finestra di dialogo **Opzioni di archiviazione** . Una query di polling è in genere una query singleton che restituisce un valore utilizzabile da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per determinare se sono state apportate modifiche a una tabella o a un altro oggetto relazionale. Per visualizzare la finestra di dialogo **Crea query di polling**, è possibile fare clic sul pulsante con i puntini di sospensione (**...**) nella colonna **Query di polling** della griglia relativa all'opzione **Polling pianificato** nella scheda **Notifiche** della finestra di dialogo **Opzioni di archiviazione**. Per altre informazioni sulla scheda **Notifiche** della finestra di dialogo **Opzioni di archiviazione** vedere [Notifiche &#40;finestra di dialogo Opzioni di archiviazione&#41; &#40;Analysis Services - Dati multidimensionali&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md).  
@@ -57,7 +56,7 @@ ms.locfileid: "66086829"
  **Barra degli strumenti**  
  La barra degli strumenti consente di gestire i set di dati, selezionare i riquadri da visualizzare e controllare le varie funzioni di query.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**Passa a Generatore query generico**|Selezionare questo comando per visualizzare solo le opzioni disponibili nella vista Generatore query generico. Verranno visualizzate solo le opzioni seguenti.<br /><br /> **Riquadro SQL**<br /><br /> **Riquadro risultati**<br /><br /> **Barra degli strumenti**, contenente solo **Passa a Generatore query Visual Database Tools** ed **Esegui**<br /><br /> <br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
 |**Passa a Generatore query Visual Database Tools**|Selezionare questo comando per visualizzare tutte le opzioni disponibili nella vista Generatore query Visual Database Tools.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query generico** .|  
@@ -65,7 +64,7 @@ ms.locfileid: "66086829"
 |**Mostra/Nascondi riquadro griglia**|Consente di visualizzare o nascondere il **riquadro griglia**.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
 |**Mostra/Nascondi riquadro SQL**|Consente di visualizzare o nascondere il **riquadro SQL**.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
 |**Mostra/Nascondi riquadro risultati**|Consente di visualizzare o nascondere il riquadro risultati. ****<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
-|**Correre**|Consente di eseguire la query. I risultati verranno visualizzati nell'apposito riquadro ****.|  
+|**Esegui**|Consente di eseguire la query. I risultati verranno visualizzati nell'apposito riquadro ****.|  
 |**Verifica istruzione SQL**|Consente di verificare l'istruzione SQL nella query.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
 |**Ordinamento crescente**|Consente di disporre in ordine crescente le righe di output della colonna selezionata nel riquadro griglia. ****<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
 |**Ordinamento decrescente**|Consente di disporre in ordine decrescente le righe di output della colonna selezionata nel riquadro griglia. ****<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **Passa a Generatore query Visual Database Tools** .|  
@@ -101,7 +100,7 @@ ms.locfileid: "66086829"
  **Riquadro risultati**  
  Consente di visualizzare i risultati della query quando si fa clic su **Esegui** nel riquadro **Barra degli strumenti** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

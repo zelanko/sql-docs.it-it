@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 457958c4-6baa-474d-99a0-34c195ceba09
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 541b7371cdc05ee316e9fb9de9f50affc4f14fc7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e35eeae8f48fe25e8f0c79455271d83ca1c609f8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062855"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528282"
 ---
 # <a name="add-reference-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Aggiungi riferimento (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Aggiungi riferimento** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per aggiungere a un progetto di sviluppo un riferimento a un assembly [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET Framework o a un altro progetto. Per visualizzare la finestra di dialogo **Aggiungi riferimento** fare clic con il pulsante destro del mouse sulla cartella **Assembly** di un progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in **Esplora soluzioni** e scegliere **Nuovo riferimento ad assembly** dal menu di scelta rapida.  
@@ -36,7 +35,7 @@ ms.locfileid: "66062855"
 |**Rimuovi**|Fare clic per rimuovere un componente selezionato da **Progetti e componenti selezionati**.|  
 |**Recente**|Consente di visualizzare un elenco di riferimenti a componenti da aggiungere al progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Selezionare uno o più elementi nella griglia e quindi fare clic su **Rimuovi** per rimuovere i componenti selezionati dalla griglia. La griglia include le colonne seguenti:<br /><br /> **Nome del componente**: nome completo, o descrittivo, del componente. Selezionare il titolo della colonna per impostare l'ordinamento in base al nome dei componenti.<br /><br /> **Version (versione**): il numero di versione del componente specificato. Selezionare il titolo della colonna per impostare l'ordinamento in base alla versione.<br /><br /> **Runtime**: versione della .NET Framework su cui è basato il componente. Selezionare il titolo della colonna per impostare l'ordinamento in base alla versione run-time.<br /><br /> **Path**: nome del file del componente e percorso in cui si trova. Selezionare il titolo della colonna per impostare l'ordinamento in base al percorso.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Gestione di assembly di modelli multidimensionali](multidimensional-models/multidimensional-model-assemblies-management.md)  
   

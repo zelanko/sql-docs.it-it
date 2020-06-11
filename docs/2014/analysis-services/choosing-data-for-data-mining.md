@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7c72d80e-913c-4bbe-b258-444294a78838
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9bec249e483c5736ee7cf0e66f4aff0af98e08c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 589a1f64a3bed5455f8004e51f6cddf84e83fec5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088028"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527587"
 ---
 # <a name="choosing-data-for-data-mining"></a>Scelta di dati per il data mining
   Quando si inizia data mining, è possibile chiedersi "quanti dati sono necessari?" o "sono previsti requisiti speciali da conoscere quando si puliscono o si formattano i dati?"  
@@ -205,7 +204,7 @@ ms.locfileid: "66088028"
   
  In genere la colonna chiave è un identificatore numerico o di testo che non deve essere utilizzato per l'analisi, ma solo per la registrazione di record. Le eccezioni sono chiavi della serie temporale e chiavi della sequenza.  
   
- Le **chiavi della tabella nidificata** vengono utilizzate solo quando si ottengono dati da un'origine dati esterna definita come vista [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] origine dati. Per ulteriori informazioni sulle tabelle nidificate, [https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx)vedere:  
+ Le **chiavi della tabella nidificata** vengono utilizzate solo quando si ottengono dati da un'origine dati esterna definita come [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] vista origine dati. Per ulteriori informazioni sulle tabelle nidificate, vedere [https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx) :  
   
  Questo tipo di contenuto può essere utilizzato con i tipi di dati seguenti: `Date`, `Double`, `Long` e `Text`.  
   
@@ -219,7 +218,7 @@ ms.locfileid: "66088028"
   
  Questo tipo di contenuto è supportato dai tipi di dati `Double`, `Long` e `Date`.  
   
- **tavolo**  
+ **Tabella**  
  Anche questo tipo di contenuto viene utilizzato solo quando si ottengono dati da un'origine dati esterna definita come vista origine dati di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
  Ciò in pratica significa che ogni riga di dati contiene effettivamente una tabella dati annidata, con una o più colonne e una o più righe.  

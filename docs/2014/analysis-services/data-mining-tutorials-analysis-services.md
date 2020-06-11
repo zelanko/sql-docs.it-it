@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 96eea930-4a4f-42d8-bf72-6c5daf1a5f09
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d358a47631f2ca048e41b9e0d978795e175c5966
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f1e7d35ac11059c57889a0938914f339cc7d8d1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086327"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525857"
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>Esercitazioni sul data mining (Analysis Services)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] consente di creare con semplicità soluzioni di data mining complesse. Gli strumenti disponibili in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] consentono di progettare, creare e gestire modelli di data mining che utilizzano dati relazionali o del cubo. È possibile gestire l'accesso client ai modelli di data mining e creare query di stima da più client.  
@@ -46,7 +45,7 @@ ms.locfileid: "66086327"
   
      I concetti avanzati analizzati in queste lezioni includono l'utilizzo di tabelle nidificate, stime incrociate, viste origine dati e query denominate personalizzate e filtro nelle query di data mining. Verrà inoltre acquisita la capacità di utilizzare gli strumenti di query di stima disponibili in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
-## <a name="reference"></a>Informazioni di riferimento  
+## <a name="reference"></a>Riferimento  
  [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
  [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
@@ -60,7 +59,7 @@ ms.locfileid: "66086327"
   
  [Progetti di data mining](data-mining/data-mining-projects.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Soluzioni di data mining](data-mining/data-mining-solutions.md)   
  [Microsoft SQL Server risorse di data mining](https://go.microsoft.com/fwlink/?LinkId=97965)   
  [Creazione ed esecuzione di query sui modelli di data mining con DMX: esercitazioni &#40;Analysis Services - Data mining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  

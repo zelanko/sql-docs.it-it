@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 548672ce-e403-4aca-b67a-c2c797f053dd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 468686314bb2446415a6883c6233708f9cbd1d2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c90031f3c1191e99ff6274f6198d513225f0927
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087096"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527017"
 ---
 # <a name="connect-to-source-data-data-mining-client-for-excel"></a>Connessione ai dati di origine (client di data mining per Excel)
   In questo argomento viene descritto come creare e utilizzare le connessioni utilizzate per archiviare i modelli di data mining e per accedere a dati esterni archiviati in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -34,7 +33,7 @@ ms.locfileid: "66087096"
  Per connettersi a un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], è necessario disporre delle autorizzazioni per accedere al server di database. È necessario inoltre che le sessioni di data mining siano abilitate e che l'utente disponga delle autorizzazioni di lettura o lettura/scrittura per gli oggetti di database archiviati nel server.  
   
 ##  <a name="creating-data-mining-server-connections"></a><a name="bkmk_connect"></a>Creazione di connessioni al server di data mining  
- Il gruppo **connessioni** del client di data mining per Excel e gli strumenti di analisi tabelle per Excel forniscono gli strumenti per la gestione delle connessioni [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]a un'istanza di.  
+ Il gruppo **connessioni** del client di data mining per Excel e gli strumenti di analisi tabelle per Excel forniscono gli strumenti per la gestione delle connessioni a un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 -   È possibile creare la connessione durante l'installazione del componente aggiuntivo o aggiungere una connessione in un secondo momento.  
   
@@ -45,14 +44,14 @@ ms.locfileid: "66087096"
 -   Solo una connessione può essere attiva in un determinato momento.  
   
 ### <a name="connections-in-the-excel-add-ins"></a>Connessioni nei componenti aggiuntivi per Excel  
- Il gruppo **Connections** nel client di data mining per Excel e gli strumenti di analisi tabelle per Excel consentono di gestire le connessioni a un' [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]istanza di.  
+ Il gruppo **Connections** nel client di data mining per Excel e gli strumenti di analisi tabelle per Excel consentono di gestire le connessioni a un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ##### <a name="create-a-new-server-connection-in-the-excel-add-ins"></a>Creazione di una nuova connessione al server nei componenti aggiuntivi per Excel  
   
 1.  Fare clic sul pulsante **connessione** sulla barra multifunzione **analizza** o **data mining** .  
   
     > [!NOTE]  
-    >  Il testo del pulsante indica se è presente una connessione. Quando non è stata effettuata alcuna connessione nel foglio di foglio, il pulsante contiene il\<testo "nessuna connessione>." Se invece nel foglio di lavoro è stata precedentemente effettuata una connessione, nel pulsante verrà visualizzato il nome della connessione.  
+    >  Il testo del pulsante indica se è presente una connessione. Quando non è stata effettuata alcuna connessione nel foglio di foglio, il pulsante contiene il testo " \<No connection> ." Se nella cartella di lavoro è stata precedentemente effettuata una connessione, il nome di tale connessione viene visualizzato nel pulsante.  
   
 2.  Nella finestra di dialogo **Analysis Services connessioni** fare clic su **nuovo**.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "66087096"
   
 2.  Se è necessario modificare la stringa di connessione per aumentare il timeout per le query o aggiungere altri parametri specifici dell'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], un'opzione consiste nel modificare il file DMC, in cui è archiviata la stringa di connessione.  
   
-     \<unità: > \Users\\<il componente aggiuntivo\>data mining \AppData\Local\Microsoft\Data  
+     \<drive:>\Users \\<utente \> \AppData\Local\Microsoft\Data componente aggiuntivo Data mining  
   
 ##  <a name="connecting-to-external-data-sources"></a><a name="bkmk_extconnections"></a>Connessione a origini dati esterne  
  Mentre gli strumenti della barra multifunzione **analizza** funzionano esclusivamente con i dati in Excel, gli strumenti della barra multifunzione **data mining** consentono di connettersi direttamente alle origini dati esterne da utilizzare come input per il modello o per il campionamento.  
@@ -162,7 +161,7 @@ ms.locfileid: "66087096"
   
 -   BINARY  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Traccia &#40;client di data mining per Excel&#41;](trace-data-mining-client-for-excel.md)  
   
   

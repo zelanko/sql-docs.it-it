@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ed1fc83b-b98c-437e-bf53-4ff001b92d64
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 082241af377c8817c3adbc394a46f1ebc7d6a4e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81d86ba50c76c167e0f6d17cd0dee7e00e6ac938
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085135"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523366"
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>Algoritmi di data mining (Analysis Services - Data mining)
   Un *algoritmo di data mining* è un set di sistemi euristici e calcoli che consente di creare un modello di data mining dai dati. Per creare un modello, tramite l'algoritmo vengono innanzitutto analizzati i dati forniti, ricercando tipi specifici di modelli o tendenze. I risultati dell'analisi vengono utilizzati dall'algoritmo per definire i parametri ottimali per la creazione del modello di data mining. Questi parametri vengono quindi applicati all'intero set di dati per estrarre modelli utilizzabili e statistiche dettagliate.  
@@ -41,7 +40,7 @@ ms.locfileid: "66085135"
   
 -   Set di regole mediante le quali viene descritto in che modo i prodotti vengono raggruppati in una transazione e le probabilità con cui tali prodotti vengano acquistati insieme.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce più algoritmi da usare nelle soluzioni [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data mining. Questi algoritmi sono implementazioni di alcune delle metodologie più diffuse utilizzate in un data mining. Tutti gli algoritmi di data mining di Microsoft possono essere personalizzati e sono completamente programmabili tramite API specificate o utilizzando i componenti di data mining in SQL Server Integration Services.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornisce più algoritmi da usare nelle soluzioni data mining. Questi algoritmi sono implementazioni di alcune delle metodologie più diffuse utilizzate in un data mining. Tutti gli algoritmi di data mining di Microsoft possono essere personalizzati e sono completamente programmabili tramite API specificate o utilizzando i componenti di data mining in SQL Server Integration Services.  
   
  È possibile utilizzare inoltre algoritmi di terze parti che siano conformi alla specifica OLE DB per il data mining o che consentano lo sviluppo di algoritmi personalizzati registrabili come servizi, quindi utilizzati all'interno del framework Data Mining di SQL Server.  
   
@@ -98,7 +97,7 @@ ms.locfileid: "66085135"
 |Visualizzare il contenuto di un modello utilizzando un formato di tabella generico|[Visualizzare un modello utilizzando Microsoft Generic Content Tree Viewer](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)|  
 |Acquisire informazioni sulla configurazione dei dati e sull'utilizzo degli algoritmi per la creazione di modelli|[Strutture di data mining &#40;Analysis Services - Data mining&#41;](mining-structures-analysis-services-data-mining.md)<br /><br /> [Modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-models-analysis-services-data-mining.md)|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Strumenti di data mining](data-mining-tools.md)  
   
   

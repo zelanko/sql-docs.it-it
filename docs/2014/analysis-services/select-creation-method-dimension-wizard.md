@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 291b0b2d-a03a-4df6-82f7-90ad92d4d1cf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d44afc5bb4c352a2cb5dfd39030a52db990e3a0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6cc05e073bdb57033e4e618eb85a9c04fda76f5d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069600"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538214"
 ---
 # <a name="select-creation-method-dimension-wizard"></a>Seleziona metodo di creazione (Creazione guidata dimensione)
   Usare la pagina **Seleziona metodo di creazione** per scegliere la modalità di creazione della dimensione.  
@@ -61,7 +60,7 @@ ms.locfileid: "66069600"
 > [!NOTE]  
 >  Questa opzione è disponibile solo quando l'opzione **Genera una tabella diversa dalla tabella dei tempi nell'origine dati** è stata selezionata.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto della creazione guidata dimensione](dimension-wizard-f1-help.md)   
  [Dimensioni &#40;Analysis Services Dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  

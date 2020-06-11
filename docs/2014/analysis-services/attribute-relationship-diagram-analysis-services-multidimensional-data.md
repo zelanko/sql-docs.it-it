@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 320989ad-bd95-43f4-a2e7-b262d66dbda7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8fbd67f8a6fcc88a3821583d1e06ec3e8a75ab91
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f0e03c8d06d018390a3537ec15c4ab06c927bf4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063095"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527897"
 ---
 # <a name="attribute-relationship-diagram-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Diagramma delle relazioni tra attributi (scheda Relazione tra attributi, Progettazione dimensioni) (Analysis Services - Dati multidimensionali)
   Utilizzare il riquadro immediatamente sotto la barra degli strumenti sulla scheda **Relazione tra attributi** per visualizzare il diagramma delle relazioni tra attributi e per creare, modificare ed eliminare relazioni tra attributi.  
@@ -85,13 +84,13 @@ ms.locfileid: "66063095"
  **Tipo di relazione**  
  Imposta il tipo di relazione su **Flessibile** o **Rigida**. In una relazione flessibile, le relazioni tra membri cambiano nel tempo. In una relazione rigida, le relazioni tra membri non cambiano nel tempo.  
   
- **Elimina**  
+ **Eliminazione**  
  Elimina la relazione tra attributi  
   
  **Proprietà**  
  Visualizza le proprietà della relazione nella finestra **Proprietà** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Relazioni tra attributi &#40;Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   
  [Barra degli strumenti &#40;scheda Progettazione relazione tra attributi, Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
  [Attributi &#40;scheda Progettazione relazione tra attributi, Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)   

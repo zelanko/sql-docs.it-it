@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e107dde8a3f811cbc1a24533705863c954dd85c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b5979ed2e4733609a504d852b5a0bcc8d7660b87
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112159"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523179"
 ---
 # <a name="data-mining-projects"></a>Progetti di data mining
   Un progetto di data mining è parte di una soluzione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Durante il processo di progettazione, gli oggetti creati nel progetto sono disponibili per l'esecuzione di test e query come parte di un database dell'area di lavoro. Per consentire agli utenti di eseguire query o esplorare gli oggetti nel progetto, è necessario distribuire il progetto in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione in modalità multidimensionale.  
@@ -86,7 +85,7 @@ ms.locfileid: "79112159"
   
 
   
-###  <a name="data-source-views"></a><a name="bkmk_DSV"></a> Data Source Views  
+###  <a name="data-source-views"></a><a name="bkmk_DSV"></a>Viste origine dati  
  Dopo avere definito la connessione a un'origine dati, viene creata una vista che individua i dati specifici rilevanti per il modello.  
   
  La vista origine dati consente inoltre di personalizzare la modalità in cui i dati nell'origine dati vengono forniti al modello di data mining. È possibile modificare la struttura dei dati in modo da renderla più rilevante per il progetto oppure scegliere solo determinati tipi di dati.  
@@ -202,7 +201,7 @@ ms.locfileid: "79112159"
 |Vengono fornite informazioni sulle opzioni di elaborazione e sulle autorizzazioni|[Elaborazione di oggetti di data mining](processing-data-mining-objects.md)|  
 |Vengono fornite ulteriori informazioni su Analysis Services|[Database modelli multidimensionali &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Progettazione modelli di data mining](data-mining-designer.md)   
  [Creazione di modelli multidimensionali tramite SQL Server Data Tools &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [Database dell'area di lavoro &#40;SSAS tabulare&#41;](../tabular-models/workspace-database-ssas-tabular.md)  

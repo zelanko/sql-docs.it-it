@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a6abcb75-524e-4e0a-a375-c10475ac0a9d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 933b56aaa6e364ce55cac8832fc577acc061d510
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae4ee781a5c15e38676ca11c4385f271988ba615
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083634"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521582"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli di regressione lineare (Analysis Services - Data mining)
   In questo argomento viene descritto il contenuto dei modelli di data mining specifico dei modelli che utilizzano l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression. Per una spiegazione del modello di data mining applicabile a tutti i tipi di modello, vedere [Contenuto del modello di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -58,7 +57,7 @@ ms.locfileid: "66083634"
  NODE_TYPE  
  Un modello di regressione lineare restituisce i tipi di nodo seguenti:  
   
-|ID tipo di nodo|Type|Descrizione|  
+|ID tipo di nodo|Tipo|Descrizione|  
 |------------------|----------|-----------------|  
 |25|Nodo radice dell'albero di regressione|Contiene la formula che descrive la relazione tra la variabile di input e quella di output.|  
   
@@ -138,7 +137,7 @@ ms.locfileid: "66083634"
  MSOLAP_NODE_SHORT_CAPTION  
  Etichetta utilizzata a scopo di visualizzazione.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Quando si crea un modello tramite l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression, il motore di data mining crea un'istanza speciale di un modello di albero delle decisioni e fornisce i parametri che vincolano l'albero a contenere tutti i dati di training in un singolo nodo. Tutti gli input continui sono contrassegnati e valutati come regressori potenziali, ma solo i regressori che si adattano ai dati vengono mantenuti come regressori nel modello finale. L'analisi produce una sola formula di regressione per ogni regressore oppure non ne produce alcuna.  
   
  È possibile visualizzare la formula di regressione completa in **Legenda data mining**facendo clic sul nodo **Tutti** nel [Visualizzatore Microsoft Decision Trees](browse-a-model-using-the-microsoft-tree-viewer.md).  
@@ -186,7 +185,7 @@ ms.locfileid: "66083634"
   
  Di conseguenza, presupponendo che l'età media è circa 45 anni, l'intercetta (VALUETYPE = 11) per la formula di regressione indica il reddito medio.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Contenuto del modello di data mining &#40;Analysis Services-&#41;di data mining](mining-model-content-analysis-services-data-mining.md)   
  [Algoritmo Microsoft Linear regressione](microsoft-linear-regression-algorithm.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Linear regressione](microsoft-linear-regression-algorithm-technical-reference.md)   

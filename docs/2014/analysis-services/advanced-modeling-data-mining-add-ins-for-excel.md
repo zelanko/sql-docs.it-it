@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 042270a3-6ec7-4b52-b2ba-2adb6c4740d5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 669fa1fcd9e4802a4d4102120a373dd615741017
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6de68fe97c61d90372f77f0fa318221f8f6e3ba7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062740"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528240"
 ---
 # <a name="advanced-modeling-data-mining-add-ins-for-excel"></a>Modellazione avanzata (componenti aggiuntivi Data mining per Excel)
   È possibile usare le opzioni **Avanzate** di modellazione dei dati per creare strutture e modelli di data mining personalizzati con parametri diversi da quelli creati dalle procedure guidate. Le due procedure guidate descritte in questa sezione consentono di creare una struttura di data mining completamente nuova e un nuovo modello di data mining da applicare a una struttura di data mining esistente.  
@@ -48,13 +47,13 @@ ms.locfileid: "66062740"
   
 -   Analisi di associazione sui set di dati nidificati  
   
- Per visualizzare il tipo di strutture di data mining disponibili, è possibile esplorare i modelli e le strutture [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] archiviati in facendo clic su **Gestisci modelli** o **Sfoglia**.  
+ Per visualizzare il tipo di strutture di data mining disponibili, è possibile esplorare i modelli e le strutture archiviati in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] facendo clic su **Gestisci modelli** o **Sfoglia**.  
   
  È possibile utilizzare solo le strutture di data mining create durante la sessione corrente oppure quelle salvate a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
  Per ulteriori informazioni, vedere la pagina relativa [all'aggiunta di un modello a una struttura &#40;componenti aggiuntivi Data mining per Excel&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestire i modelli &#40;SQL Server componenti aggiuntivi Data mining&#41;](manage-models-sql-server-data-mining-add-ins.md)   
  [Esplorazione di modelli in Excel &#40;SQL Server componenti aggiuntivi Data mining&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   

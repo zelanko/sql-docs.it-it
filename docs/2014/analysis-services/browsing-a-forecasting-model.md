@@ -15,23 +15,22 @@ helpviewer_keywords:
 ms.assetid: ad35a528-1949-4048-8678-3b9760c1c88c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 830aea002e8000feeda061f42af9084696ed6fe8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: acf5d2f16271cf525194c1df48ac02c4c4241467
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088484"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527707"
 ---
 # <a name="browsing-a-forecasting-model"></a>Esplorazione di un modello di previsione
-  Quando si apre un modello di previsione utilizzando **Sfoglia**, il modello viene visualizzato in un visualizzatore interattivo, simile al Visualizzatore modello Time Series in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Il visualizzatore consente di esplorare le tendenze, confrontare le serie, creare stime e ottenere informazioni sul modello e sui dati sottostanti.  
+  Quando si apre un modello di previsione utilizzando **Sfoglia**, il modello viene visualizzato in un visualizzatore interattivo, simile al Visualizzatore modello Time Series in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Il visualizzatore consente di esplorare le tendenze, confrontare le serie, creare stime e ottenere informazioni sul modello e sui dati sottostanti.  
   
 ##  <a name="explore-the-model"></a><a name="bkmk_Top"></a>Esplorare il modello  
  Il visualizzatore **Browse** per i modelli di previsione fornisce una visualizzazione del grafico che mostra le tendenze nel tempo e consente di creare stime e una vista modello, che rappresenta le serie temporali come albero delle decisioni o albero di regressione.  
   
 -   [Visualizzazione grafico](#bkmk_charts)  
   
--   [Vista del modello](#bkmk_Model)  
+-   [Visualizzazione modello](#bkmk_Model)  
   
  Per sperimentare un modello di previsione, è possibile utilizzare i dati di esempio nella scheda previsioni della cartella di lavoro dei dati di esempio e compilare un modello Time Series utilizzando la [procedura guidata previsione &#40;componenti aggiuntivi Data mining per excel&#41;](forecast-wizard-data-mining-add-ins-for-excel.md) sulla barra multifunzione **Data** mining o gli [strumenti di analisi tabelle &#40;per Excel&#41;](forecast-table-analysis-tools-for-excel.md) nella barra multifunzione **analizza** .  
   
@@ -66,7 +65,7 @@ ms.locfileid: "66088484"
   
      Le barre di errore consentono di valutare visivamente la variabilità delle stime. La qualità delle stime varia a seconda dei dati di origine, ma quando si aumenta il numero di intervalli per la stima, dovrebbe essere visualizzato un aumento costante delle deviazioni.  
   
- **Consigli**  
+ **Suggerimenti**  
   
 -   Per abilitare o disabilitare la visualizzazione di **Legenda data mining**, fare clic con il pulsante destro del mouse su qualsiasi punto del grafico.  
   
@@ -109,7 +108,7 @@ ms.locfileid: "66088484"
   
  [Esplorazione del modello](#bkmk_Top)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Esplorazione di modelli in Excel &#40;SQL Server componenti aggiuntivi Data mining&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

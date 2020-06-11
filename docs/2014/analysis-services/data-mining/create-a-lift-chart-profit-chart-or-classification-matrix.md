@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: aa3d052f-58a9-4417-8e7a-5e6feb562af0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 033965a6152edaf3d62fcd8c29476651648c1697
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 82514e49b8e991c45bab4d1c32365765cefeeb65
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085409"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523887"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>Creare un grafico di accuratezza, un grafico dei profitti o una matrice di classificazione
   È possibile creare un grafico di accuratezza per un modello di data mining di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in cinque passaggi fondamentali:  
@@ -110,7 +109,7 @@ ms.locfileid: "66085409"
      **Ricavi per singolo utente**  
      Importo dei ricavi associati a ogni vendita effettuata.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Grafico di accuratezza &#40;Analysis Services-&#41;di data mining](lift-chart-analysis-services-data-mining.md)   
  [Matrice di classificazione &#40;Analysis Services - Data mining&#41;](classification-matrix-analysis-services-data-mining.md)  
   

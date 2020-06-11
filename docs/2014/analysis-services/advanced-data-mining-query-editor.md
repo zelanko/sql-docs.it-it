@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 27e7fc46-689d-43a4-9647-1c27d182bdd6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4973ea427cea99d6e3c4527e8686e322a97efe48
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90a64369c76e254e509f5f57b1da29ededeed08f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72313606"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528197"
 ---
 # <a name="advanced-data-mining-query-editor"></a>Editor avanzato query di data mining
   Il **Editor avanzato di query di data mining** è uno strumento che consente di compilare modelli e query personalizzati.  
@@ -24,13 +23,13 @@ ms.locfileid: "72313606"
   
  Per ottenere la **Editor avanzato di query di data mining**, fare clic su **query** e quindi su **Avanzate**.  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco elementi dell'interfaccia utente  
  **Riquadro Query DMX**  
  In questo riquadro è possibile visualizzare l'istruzione DMX corrente.  
   
  Fare clic con il pulsante destro del mouse nel riquadro per copiare l'istruzione DMX corrente.  
   
- È possibile fare clic su una parte evidenziata dell'istruzione per visualizzare le opzioni specifiche della clausola. Per eliminare, aggiungere o modificare un output, ad esempio, fare clic con il pulsante destro del mouse sul ** \<collegamento output>** .  
+ È possibile fare clic su una parte evidenziata dell'istruzione per visualizzare le opzioni specifiche della clausola. Per eliminare, aggiungere o modificare un output, ad esempio, fare clic con il pulsante destro del mouse sul **\<Output>** collegamento.  
   
  **Modifica query/Generatore query**  
  Utilizzare questo pulsante per cambiare l'Editor tra un editor di testo, in cui è possibile scrivere direttamente istruzioni DMX; e la **Generatore di query**, che consente di compilare un'istruzione DMX.  
@@ -47,23 +46,23 @@ ms.locfileid: "72313606"
  È inoltre possibile visualizzare un elenco dei modelli disponibili facendo clic sul nome del modello nell'istruzione DMX nel riquadro **query DMX** . Il nome del modello è in genere evidenziato in rosso.  
   
  **Selezionare l'input**  
- Fare clic per scegliere i dati da utilizzare come input per il modello di data mining. Se non è stata specificata alcuna origine dati, è anche possibile fare ** \<** clic sul collegamento>di input, evidenziato in rosso nel riquadro **query DMX** .  
+ Fare clic per scegliere i dati da utilizzare come input per il modello di data mining. Se non è stata specificata alcuna origine dati, è anche possibile fare clic sul **\<Input>** collegamento, evidenziato in rosso nel riquadro **query DMX** .  
   
- Selezionare ** \@InputRowset** nell'elenco a discesa per aprire la finestra di dialogo **Sostituisci InputRowset** e modificare un input esistente.  
+ Selezionare ** \@ InputRowset** nell'elenco a discesa per aprire la finestra di dialogo **Sostituisci InputRowset** e modificare un input esistente.  
   
  Selezionare **Aggiungi input** per aprire la finestra di dialogo **Aggiungi input** e specificare una nuova origine dati.  
   
- È anche possibile modificare un input esistente facendo clic sul ** \@collegamento InputRowset** , evidenziato in rosso nel riquadro query DMX.  
+ È anche possibile modificare un input esistente facendo clic sul collegamento ** \@ InputRowset** , evidenziato in rosso nel riquadro query DMX.  
   
  **Mappa colonne**  
  Selezionare le colonne del modello di data mining, quindi eseguirne il mapping alle colonne nell'origine dati esterna.  
   
- È inoltre possibile fare clic sul ** \<** collegamento evidenziato del>di mapping nel riquadro query DMX.  
+ È inoltre possibile fare clic sul **\<Mapping>** collegamento evidenziato nel riquadro query DMX.  
   
  **Aggiungi output**  
  Fare clic per scegliere le colonne che devono essere restituite come output come parte di una query di stima.  
   
- È anche possibile fare clic sul collegamento ** \<Aggiungi output>** evidenziato nel riquadro query DMX.  
+ È inoltre possibile fare clic sul **\<Add Output>** collegamento evidenziato nel riquadro query DMX.  
   
  **Colonne modello**  
  Consente di visualizzare l'elenco delle colonne contenute nel modello di data mining selezionato. Un rombo accanto al nome della colonna indica che si tratta di una colonna stimabile.  

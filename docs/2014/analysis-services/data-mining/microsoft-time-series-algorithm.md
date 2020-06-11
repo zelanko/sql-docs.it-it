@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 97132ff64405df19c56c080cc5a1baa704a700d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d840d581fe4dba1ce9d65dfef6878a1e5a697864
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083772"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521636"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Algoritmo Microsoft Time Series
   L' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Time Series fornisce algoritmi di regressione ottimizzati per la previsione di valori continui, ad esempio vendite di prodotti, nel corso del tempo. Altri algoritmi [!INCLUDE[msCoName](../../includes/msconame-md.md)] , come ad esempio gli alberi delle decisioni, richiedono colonne aggiuntive di nuove informazioni come input per stimare una tendenza contrariamente a quanto accade con un modello Time Series. Un modello Time Series può stimare le tendenze basate solo sul set di dati originale utilizzato per creare il modello. È anche possibile aggiungere nuovi dati al modello quando viene eseguita una stima e vengono incorporati automaticamente i nuovi dati nell'analisi della tendenza.  
@@ -47,11 +46,11 @@ ms.locfileid: "66083772"
  Ogni trimestre, l'azienda intende aggiornare il modello con i recenti dati di vendita e aggiornare le stime in base alle tendenze recenti. Per correggere i dati dei punti vendita che non aggiornano i dati in modo accurato o costante, creeranno un modello di previsione generale e lo utilizzeranno per creare previsioni per tutte le regioni.  
   
 ## <a name="how-the-algorithm-works"></a>Funzionamento dell'algoritmo  
- In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Time Series usava un solo algoritmo, ARTXP. L'algoritmo ARTXP è stato ottimizzato per le stime a breve termine e, pertanto, è in grado di stimare il probabile valore successivo in una serie. A partire [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]da, [!INCLUDE[msCoName](../../includes/msconame-md.md)] l'algoritmo Time Series utilizza sia l'algoritmo ARTxp sia un secondo algoritmo, ARIMA. L'algoritmo ARIMA è stato ottimizzato per le stime a lungo termine. Per una spiegazione dettagliata sull'implementazione degli algoritmi ARTXP e ARIMA, vedere [Riferimento tecnico per l'algoritmo Microsoft Time Series](microsoft-time-series-algorithm-technical-reference.md).  
+ In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Time Series usava un solo algoritmo, ARTXP. L'algoritmo ARTXP è stato ottimizzato per le stime a breve termine e, pertanto, è in grado di stimare il probabile valore successivo in una serie. A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Time Series utilizza sia l'algoritmo ARTxp sia un secondo algoritmo, ARIMA. L'algoritmo ARIMA è stato ottimizzato per le stime a lungo termine. Per una spiegazione dettagliata sull'implementazione degli algoritmi ARTXP e ARIMA, vedere [Riferimento tecnico per l'algoritmo Microsoft Time Series](microsoft-time-series-algorithm-technical-reference.md).  
   
  Per impostazione predefinita, nell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series viene usata una combinazione di algoritmi quando consente di analizzare modelli ed eseguire stime. L'algoritmo addestra due modelli separati sugli stessi dati: un modello usa l'algoritmo ARTXP e un modello usa l'algoritmo ARIMA. L'algoritmo mescola quindi i risultati dei due modelli per produrre la migliore stima per un numero variabile di intervalli di tempo. Poiché ARTXP è ottimale per le stime a breve termine, riceve un peso molto maggiore all'inizio di una serie di stime. Tuttavia, con il procedere degli intervalli di tempo stimati nel futuro, ARIMA riceve un peso maggiore.  
   
- È anche possibile controllare la combinazione di algoritmi per favorire le stime a lungo o breve termine nella serie temporale. A partire [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] da standard, è possibile specificare che [!INCLUDE[msCoName](../../includes/msconame-md.md)] l'algoritmo Time Series usi una delle impostazioni seguenti:  
+ È anche possibile controllare la combinazione di algoritmi per favorire le stime a lungo o breve termine nella serie temporale. A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] standard, è possibile specificare che l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Time Series usi una delle impostazioni seguenti:  
   
 -   Per una stima a breve termine utilizzare solo ARTXP.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66083772"
   
 -   Utilizzare la combinazione predefinita dei due algoritmi.  
   
- A partire [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]da, è possibile personalizzare il [!INCLUDE[msCoName](../../includes/msconame-md.md)] modo in cui l'algoritmo Time Series combina i modelli per la stima. Quando si usa un modello misto, l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series consente di combinare i due algoritmi nella modalità seguente:  
+ A partire da [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] , è possibile personalizzare il modo in cui l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Time Series combina i modelli per la stima. Quando si usa un modello misto, l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series consente di combinare i due algoritmi nella modalità seguente:  
   
 -   Per eseguire la prima coppia di stime viene sempre utilizzato solo ARTXP.  
   
@@ -142,7 +141,7 @@ ms.locfileid: "66083772"
   
 -   Un modello Time Series può eseguire stime che differiscono, a volte in modo significativo, a seconda del sistema operativo a 64 bit utilizzato dal server. Queste differenze sono dovute al modo in cui un sistema basato su [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]rappresenta e gestisce i numeri per operazioni aritmetiche a virgola mobile, che è diverso dal modo in cui tali calcoli vengono eseguiti in un sistema basato su [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]. Poiché i risultati della stima possono essere specifici nel sistema operativo, si consiglia di valutare i modelli dello stesso sistema operativo che verrà utilizzato in produzione.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 -   Non supporta l'utilizzo del linguaggio PMML (Predictive Model Markup Language) per la creazione di modelli di data mining.  
   
@@ -152,7 +151,7 @@ ms.locfileid: "66083772"
   
 -   Supporta il drill-through.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizzare un modello utilizzando il Visualizzatore Microsoft Time Series](browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Time Series](microsoft-time-series-algorithm-technical-reference.md)   

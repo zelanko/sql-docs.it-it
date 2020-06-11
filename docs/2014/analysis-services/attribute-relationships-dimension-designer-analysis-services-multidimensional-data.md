@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 228d1d91-7524-4773-9c83-39b04e8534d3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 08d01bb328bcf3e693724475532b6c9a39c79be2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c5113ec1a554f2ae74c3f024fd6cbe8f6398d8bf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063192"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527877"
 ---
 # <a name="attribute-relationships-dimension-designer-analysis-services---multidimensional-data"></a>Relazione tra attributi (Progettazione dimensioni) (Analysis Services - Dati multidimensionali)
   Utilizzare la scheda **Relazioni tra attributi** per creare, modificare o eliminare le relazioni tra attributi della dimensione selezionata.  
@@ -37,7 +36,7 @@ ms.locfileid: "66063192"
  [Elenco relazione tra attributi](attribute-relationships-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
  Utilizzare quest'elenco per trovare una specifica relazione tra attributi nel diagramma delle relazioni tra attributi e per gestire quella relazione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Struttura dimensione &#40;Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
  [Traduzioni &#40;Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
  [Browser &#40;Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)   

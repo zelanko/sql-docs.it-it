@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9a054e59a830895d43d861e6d6533ad5bb876c6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b3de498bcd5643bb8f83d00c9536f57560d30b1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174530"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523209"
 ---
 # <a name="data-mining-concepts"></a>Concetti di data mining
   Il data mining è il processo di individuazione di informazioni utilizzabili da grandi set di dati. Nel data mining viene usata l'analisi matematica per dedurre modelli e tendenze esistenti nei dati. In genere, questi modelli non possono essere individuati tramite l'esplorazione tradizionale dei dati perché le relazioni sono troppo complesse o perché sono presenti troppi dati.
@@ -93,7 +92,7 @@ ms.locfileid: "78174530"
 
  È inoltre necessario considerare i modi in cui incorporare i risultati del modello negli indicatori di prestazioni chiave usati per misurare i progressi aziendali.
 
-##  <a name="preparing-data"></a><a name="PreparingData"></a> Preparazione dei dati
+##  <a name="preparing-data"></a><a name="PreparingData"></a>Preparazione dei dati
  Il secondo passaggio del processo di data mining, illustrato nel diagramma seguente, consiste nel consolidamento e nella pulizia dei dati identificati nel passaggio [Definizione del problema](#DefiningTheProblem) .
 
  ![Secondo passaggio del processo di data mining: preparazione dei dati](../media/dmprocess-preparing.gif "Secondo passaggio del processo di data mining: preparazione dei dati")
@@ -174,7 +173,7 @@ ms.locfileid: "78174530"
 
 -   La pratica di aggiornare dinamicamente i modelli, parallelamente all'ingresso di ulteriori dati nell'organizzazione, e di apportare modifiche costanti per migliorare l'efficacia della soluzione deve essere parte integrante della strategia di distribuzione. Per ulteriori informazioni, vedere [gestione di soluzioni e oggetti di data mining](management-of-data-mining-solutions-and-objects.md)
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
  [Strumenti](data-mining-tools.md) di data mining per [soluzioni di data mining](data-mining-solutions.md)
 
 
