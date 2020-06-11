@@ -12,26 +12,26 @@ ms.assetid: f4dff61c-8c2f-4ff9-abe4-70a34421448f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 187366d9f289804942ba6e7d331a47bfaae68232
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 1701479fe7469769d75f4b8ad3d8e65dcc75af91
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000941"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858677"
 ---
 # <a name="full-text-index-properties-general-page"></a>Proprietà indice full-text (pagina Generale)
   **Per visualizzare o modificare le proprietà modificabili di un indice full-text**  
   
 -   [Gestione di indici full-text.](../relational-databases/indexes/indexes.md)  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco elementi dell'interfaccia utente  
  **Catalogo full-text**  
  Visualizza il nome del catalogo full-text a cui è associato l'indice full-text.  
   
  **Database**  
  Visualizza il nome del database in cui risiede l'indice full-text.  
   
- **tavolo**  
+ **Tabella**  
  Visualizza il nome della tabella utilizzata per la definizione dell'indice full-text.  
   
  **Chiave indice full-text**  

@@ -1,5 +1,6 @@
 ---
 title: Funzione Upper-Case (XQuery) | Microsoft Docs
+description: Viene illustrato come utilizzare la funzione XQuery in lettere maiuscole (), che converte i caratteri nell'equivalente maiuscolo.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0dcbcbc0cd6c0cf479aee7a7c3fd8c5e53a53d28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c757e46f861d6652b3c8c151c3e002dba13e84ef
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004613"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689483"
 ---
 # <a name="functions-on-string-values---upper-case"></a>Funzioni su valori stringa - upper-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +42,13 @@ fn:upper-case($arg as xs:string?) as xs:string
 |Termine|Definizione|  
 |*$arg*|Valore della stringa da convertire in lettere maiuscole.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se il valore di *$arg* è vuoto, viene restituita una stringa di lunghezza zero.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>R. Conversione di una stringa in lettere maiuscole  
- Nell'esempio seguente viene modificata la stringa di input ' abcDEF!' @4in lettere maiuscole.  
+ Nell'esempio seguente viene modificata la stringa di input ' abcDEF! @4 ' in lettere maiuscole.  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  

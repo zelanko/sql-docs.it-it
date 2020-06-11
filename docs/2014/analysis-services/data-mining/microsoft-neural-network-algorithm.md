@@ -22,16 +22,15 @@ helpviewer_keywords:
 ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a7330fab8b4c0ecdff296e0daa5e529442fd8b94
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c8462d5965685986bbb68565ccb24de0f18c645
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083865"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521757"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Neural Network combina ogni possibile stato dell'attributo di input con ogni possibile stato dell'attributo stimabile e utilizza i dati di training per calcolare le probabilità. Queste probabilità potranno quindi essere utilizzate a scopo di classificazione o regressione o per stimare un risultato dell'attributo stimato, sulla base degli attributi di input.  
+  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Neural Network combina ogni possibile stato dell'attributo di input con ogni possibile stato dell'attributo stimabile e utilizza i dati di training per calcolare le probabilità. Queste probabilità potranno quindi essere utilizzate a scopo di classificazione o regressione o per stimare un risultato dell'attributo stimato, sulla base degli attributi di input.  
   
  Un modello di data mining costruito con l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network può includere più reti, a seconda del numero di colonne utilizzate sia per l'input che per la stima o solo per la stima. Il numero di reti incluse in un singolo modello di data mining dipende dal numero di stati contenuti nelle colonne di input e stimabili utilizzate dal modello.  
   
@@ -78,7 +77,7 @@ ms.locfileid: "66083865"
   
  Per informazioni generali sulla creazione di query su un modello di data mining, vedere [Query di data mining](data-mining-queries.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 -   Non supporta il drill-through di dimensioni di data mining. Questo perché la struttura dei nodi nel modello di data mining non corrisponde necessariamente in modo diretto ai dati sottostanti.  
   
@@ -88,7 +87,7 @@ ms.locfileid: "66083865"
   
 -   Non supporta la creazione di dimensioni di data mining.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Riferimento tecnico per l'algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm-technical-reference.md)   
  [Contenuto del modello di data mining per i modelli di rete neurale &#40;Analysis Services-Data mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Esempi di query sul modello di rete neurale](neural-network-model-query-examples.md)   

@@ -4,23 +4,23 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c928d4c96917479f8c37415d5ebe2db9b7f9eb98
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c16a1b25542e38bfc434fbe994ad6bb462069796
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938111"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670005"
 ---
-# <a name="ltsource-data-querygt---shape"></a>&lt;query&gt; dei dati di origine-forma
+# <a name="ltsource-data-querygt---shape"></a>&lt;query dei dati &gt; di origine-forma
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Consente di combinare query da più origini dei dati in una singola tabella gerarchica, ovvero una tabella con tabelle nidificate, che diventa la tabella dei case per il modello di data mining.  
   
- La sintassi completa del comando **Shape** è documentata nel software [!INCLUDE[msCoName](../includes/msconame-md.md)] Development Kit (SDK) di Data Access Components (MDAC).  
+ La sintassi completa del comando **Shape** è documentata nel [!INCLUDE[msCoName](../includes/msconame-md.md)] Software Development Kit (SDK) di Data Access Components (MDAC).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -54,10 +54,10 @@ APPEND ({ <child table query> }
  *Nome tabella colonne*  
  Nome della colonna appena aggiunta nella tabella padre per creare la tabella figlio.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Le query devono essere ordinate in base alla colonna che definisce la correlazione tra la tabella padre e la tabella figlio.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Per eseguire il training di un modello contenente una tabella nidificata, è possibile utilizzare l'esempio seguente all'interno di un'istruzione [INSERT INTO &#40;&#41;DMX](../dmx/insert-into-dmx.md) . Le due tabelle all'interno dell'istruzione **Shape** sono correlate tramite la colonna **OrderNumber** .  
   
 ```  

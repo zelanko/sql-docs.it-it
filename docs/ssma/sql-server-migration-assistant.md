@@ -1,5 +1,6 @@
 ---
 title: SQL Server Migration Assistant | Microsoft Docs
+description: Informazioni su SQL Server Migration Assistant, uno strumento che consente di automatizzare la migrazione del database a SQL Server da Microsoft Access, DB2, MySQL, Oracle e SAP ASE.
 ms.custom: ''
 ms.date: 10/10/2019
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Jtoland
 ms.author: Jtoland
-ms.openlocfilehash: fa87f4ac6f5a4caf5da8d5b00200b1dd8c92d53a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f03fdab2cf2f2593d43c16cef572614b36731ef9
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252130"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84294028"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
 
@@ -43,7 +44,7 @@ Per SSMA sono supportate le seguenti versioni di destinazione.
 - SQL Server 2016
 - SQL Server 2017 in Windows e Linux
 - SQL Server 2019 in Windows e Linux
-- database SQL di Azure
+- Database SQL di Azure
 - Azure SQL Data Warehouse * *
 
 * * Questa destinazione è supportata solo da SSMA per Oracle.
@@ -68,7 +69,7 @@ Per SSMA sono supportate le seguenti versioni di destinazione.
   
   - [Community di SQL Server Developer Center](https://go.microsoft.com/fwlink/?LinkId=42456) : newsgroup, forum e altre risorse della community utili per SQL Server sviluppatori  
   
-- **Supporto assistito** : passare [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) a e cercare "SQL Server Migration Assistant".  Selezionare la versione, quindi selezionare "Avvia richiesta".  Il supporto assistito è incluso nello strumento SQL Server Migration Assistant.  
+- **Supporto assistito** : passare a [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) e cercare "SQL Server Migration Assistant".  Selezionare la versione, quindi selezionare "Avvia richiesta".  Il supporto assistito è incluso nello strumento SQL Server Migration Assistant.  
   
 - **Supporto tecnico** Premier: se si dispone di un contratto Premier, è possibile ottenere il supporto tecnico Premier nel [portale online Premier](https://premier.microsoft.com/).  
   

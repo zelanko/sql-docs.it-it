@@ -1,5 +1,6 @@
 ---
 title: Migrazione di database DB2 a SQL Server (DB2ToSQL) | Microsoft Docs
+description: Usare questa procedura consigliata per eseguire la migrazione di database DB2 a SQL Server o al database SQL di Azure usando SQL Server Migration Assistant (SSMA).
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 14d2e655-af7e-4aa5-ba28-0e3d0d025518
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 79cc961148add0bf2096a716b669199360a565b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a351723f12261e07c4cdbd1d707224278067522e
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084648"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293678"
 ---
 # <a name="migrating-db2-databases-to-sql-server-db2tosql"></a>Migrazione di database DB2 a SQL Server (DB2ToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) per DB2 è un ambiente completo che consente di migrare rapidamente i database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB2 in o nel database SQL di Azure. Utilizzando SSMA per DB2, è possibile esaminare gli oggetti e i dati di database, valutare i database per la migrazione, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eseguire la migrazione di oggetti di database al database SQL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di Azure e quindi eseguire la migrazione dei dati in o nel database SQL di Azure. Si noti che non è possibile eseguire la migrazione di schemi SYS e DB2 di sistema.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) per DB2 è un ambiente completo che consente di migrare rapidamente i database DB2 in o nel database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL di Azure. Utilizzando SSMA per DB2, è possibile esaminare gli oggetti e i dati di database, valutare i database per la migrazione, eseguire la migrazione di oggetti di database al database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL di Azure e quindi eseguire la migrazione dei dati in o nel database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL di Azure. Si noti che non è possibile eseguire la migrazione di schemi SYS e DB2 di sistema.  
   
 ## <a name="recommended-migration-process"></a>Processo di migrazione consigliato  
-Per eseguire correttamente la migrazione di oggetti e dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database DB2 a o da database SQL di Azure, usare il processo seguente:  
+Per eseguire correttamente la migrazione di oggetti e dati da database DB2 a o da database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL di Azure, usare il processo seguente:  
   
 1.  [Nuovo progetto SSMA](https://msdn.microsoft.com/66437b45-4686-4fc7-a91b-ebde45e0f1b0).  
   
@@ -40,7 +41,7 @@ Per eseguire correttamente la migrazione di oggetti e dati da [!INCLUDE[ssNoVers
   
     Questa operazione può essere eseguita in uno dei modi seguenti:  
   
-    -   Salvare uno script ed eseguirlo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+    -   Salvare uno script ed eseguirlo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
     -   Sincronizzare gli oggetti di database.  
   

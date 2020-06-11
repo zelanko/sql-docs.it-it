@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cd2af1f3-cd8b-4651-9e4d-7c4c94353d7e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f049e8a91b072bc49c3c555101fdf9fb1398944c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3fab71693a437906c0458d2231193d828d5a3edd
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062564"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528069"
 ---
 # <a name="analysis-services-designers-and-dialog-boxes-tabular"></a>Finestre di progettazione e finestre di dialogo di Analysis Services (tabulari)
   L'ambiente di creazione del progetto tabulare in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e gli strumenti di gestione del modello tabulare in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] includono numerose finestre di dialogo, pagine delle proprietà e pagine di procedura guidata. È possibile fare clic sul pulsante ? o premere F1 per ulteriori informazioni.  

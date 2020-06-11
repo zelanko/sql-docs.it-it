@@ -1,5 +1,6 @@
 ---
 title: Caricamento di oggetti di database convertiti in SQL Server (OracleToSQL) | Microsoft Docs
+description: Informazioni su come caricare gli oggetti di database convertiti da Oracle nell'istanza di SQL Server usando SSMA per Oracle.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,20 +14,20 @@ ms.assetid: a8ae33b2-1883-4785-922b-ea0e31c0b37a
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 97c34beb0cbe27e8d3c88b922690dc369fb7103b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69c4d30b3a803cfd5eb8e196f540c33952de3bf5
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262993"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293848"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>Caricamento di oggetti di database convertiti in SQL Server (OracleToSQL)
 Una volta convertiti gli schemi Oracle in SQL Server, è possibile caricare gli oggetti di database risultanti in SQL Server. È possibile fare in modo che SSMA crei gli oggetti oppure è possibile creare script per gli oggetti ed eseguire gli script manualmente. SSMA consente inoltre di aggiornare i metadati di destinazione con il contenuto effettivo del database SQL Server.  
   
 ## <a name="choosing-between-synchronization-and-scripts"></a>Scelta tra sincronizzazione e script  
-Se si desidera caricare gli oggetti di database convertiti in SQL Server senza alcuna modifica, è possibile fare in modo che SSMA crei o ricrei direttamente gli oggetti di database. Questo metodo è rapido e semplice, ma non consente la [!INCLUDE[tsql](../../includes/tsql-md.md)] personalizzazione del codice che definisce gli oggetti SQL Server, oltre alle stored procedure.  
+Se si desidera caricare gli oggetti di database convertiti in SQL Server senza alcuna modifica, è possibile fare in modo che SSMA crei o ricrei direttamente gli oggetti di database. Questo metodo è rapido e semplice, ma non consente la personalizzazione del [!INCLUDE[tsql](../../includes/tsql-md.md)] codice che definisce gli oggetti SQL Server, oltre alle stored procedure.  
   
-Se si desidera modificare l' [!INCLUDE[tsql](../../includes/tsql-md.md)] oggetto utilizzato per creare oggetti o se si desidera un maggiore controllo sulla creazione degli oggetti, utilizzare SSMA per creare gli script. È quindi possibile modificare tali script, creare singolarmente ogni oggetto e utilizzare SQL Server Agent per pianificare la creazione di tali oggetti.  
+Se si desidera modificare l'oggetto [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzato per creare oggetti o se si desidera un maggiore controllo sulla creazione degli oggetti, utilizzare SSMA per creare gli script. È quindi possibile modificare tali script, creare singolarmente ogni oggetto e utilizzare SQL Server Agent per pianificare la creazione di tali oggetti.  
   
 ## <a name="using-ssma-to-synchronize-objects-with-sql-server"></a>Utilizzo di SSMA per sincronizzare oggetti con SQL Server  
 Per utilizzare SSMA per creare SQL Server oggetti di database, selezionare gli oggetti in SQL Server Esplora metadati, quindi sincronizzare gli oggetti con SQL Server, come illustrato nella procedura seguente. Per impostazione predefinita, se gli oggetti sono già presenti nel SQL Server e se i metadati SSMA sono più recenti rispetto all'oggetto in SQL Server, SSMA modificherà le definizioni degli oggetti in SQL Server. È possibile modificare il comportamento predefinito modificando **le impostazioni del progetto**.  
@@ -61,7 +62,7 @@ Per utilizzare SSMA per creare SQL Server oggetti di database, selezionare gli o
 Fare clic sul segno di azione per modificare lo stato. La sincronizzazione effettiva verrà eseguita quando si fa clic sul pulsante **OK** della finestra di dialogo **Sincronizza con database** .  
   
 ## <a name="scripting-objects"></a>Oggetti di scripting  
-Per salvare [!INCLUDE[tsql](../../includes/tsql-md.md)] le definizioni degli oggetti di database convertiti o per modificare le definizioni degli oggetti ed eseguire manualmente gli script, è possibile salvare le definizioni degli [!INCLUDE[tsql](../../includes/tsql-md.md)] oggetti di database convertiti in script.  
+Per salvare le definizioni [!INCLUDE[tsql](../../includes/tsql-md.md)] degli oggetti di database convertiti o per modificare le definizioni degli oggetti ed eseguire manualmente gli script, è possibile salvare le definizioni degli oggetti di database convertiti in [!INCLUDE[tsql](../../includes/tsql-md.md)] script.  
   
 **Per salvare oggetti come script**  
   
@@ -87,7 +88,7 @@ Dopo aver salvato le definizioni degli oggetti SQL Server come uno o più script
 4.  Per salvare lo script, scegliere **Salva**dal menu file.  
   
 ### <a name="running-scripts"></a>Esecuzione di script  
-È possibile eseguire uno script o singole istruzioni in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+È possibile eseguire uno script o singole istruzioni in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 **Per eseguire uno script**  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e0ccfb0b-e646-4de8-b7da-f88c986c96e4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f7a8feb912a7987328afa06043b18586f6e9bb29
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33fad74c354d4560a00718292616d842b4ffc7e0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70151834"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527157"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>Connettersi a un report o a un feed di dati (SSAS)
   Questa pagina dell' **Importazione guidata tabella** consente di connettersi a un feed di dati. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
@@ -52,10 +51,10 @@ ms.locfileid: "70151834"
   
  Fare clic su **Visualizza set di dati disponibili di DataMarket Azure** per visualizzare i set di dati disponibili.  
   
- **Chiave account**  
+ **Chiave dell'account**  
  Specificare la chiave dell'account usata per accedere alle sottoscrizioni del set di dati di Azure Marketplace.  
   
- **Trovare**  
+ **Find**  
  Individuare una chiave di account associata a un account di Windows Live.  
   
  **Salva chiave account**  

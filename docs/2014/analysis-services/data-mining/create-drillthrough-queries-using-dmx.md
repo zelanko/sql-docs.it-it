@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 42c896ee-e5ee-4017-b66e-31d1fe66d369
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f28d0503497fd066de2d328e75813f7b77026b2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 618732bfe48f7b1fe777f7841d686b07877d10ae
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085234"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523657"
 ---
 # <a name="create-drillthrough-queries-using-dmx"></a>Creare query drill-through tramite DMX
   Per tutti i modelli che supportano il drill-through, è possibile recuperare i dati del case e della struttura creando una query DMX in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o in qualsiasi altro client che supporta DMX.  
@@ -32,7 +31,7 @@ SELECT <model column list>, StructureColumn('<structure column name') FROM <mode
   
  Per altre informazioni sull'utilizzo di query DMX per restituire dati del case, vedere [SELECT FROM &#60;model&#62;.CASES &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx) e [SELECT FROM &#60;structure&#62;.CASES](/sql/dmx/select-from-structure-cases).  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  La query DMX seguente restituisce i dati del case relativi a una serie di prodotti specifica da un modello Time Series. La query restituisce anche la colonna `Amount` che non viene utilizzata nel modello, ma risulta disponibile nella struttura di data mining.  
   
 ```  
@@ -43,7 +42,7 @@ WHERE [Model Region] = 'M200 Pacific'
   
  In questo esempio viene utilizzato un alias per rinominare la colonna della struttura. Se non si assegna un alias alla colonna della struttura, la colonna viene restituita con il nome 'Expression'. Si tratta del comportamento predefinito per tutte le colonne senza nome.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Query drill-through &#40;&#41;di data mining](drillthrough-queries-data-mining.md)   
  [Drill-through sulle strutture di data mining](drillthrough-on-mining-structures.md)  
   

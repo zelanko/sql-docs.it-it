@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3ddd0ab7-a4a1-4451-bac8-a0ad0b48be09
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 72a18711faf9784efc2202f577e2124f321e0052
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 093aa1043744381848db1c9ec8c46c992d32801b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077672"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537438"
 ---
 # <a name="mining-structure-view-data-mining-model-designer"></a>Visualizzazione Struttura di data mining (Progettazione modelli di data mining)
   Utilizzare le visualizzazioni di **Progettazione struttura di data mining** per modificare le strutture di data mining ed elaborare una struttura di data mining e i relativi modelli di data mining associati.  
@@ -30,7 +29,7 @@ ms.locfileid: "66077672"
   
 -   [Selezionare una finestra di dialogo colonna chiave tabella nidificata &#40;visualizzazione struttura di data mining&#41;](select-a-nested-table-key-column-dialog-box-mining-structure-view.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Visualizzazione modelli di data mining &#40;Progettazione modelli di data mining&#41;](mining-models-view-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Progettazione Grafico accuratezza modello di data mining &#40;&#41;di data mining](mining-accuracy-chart-designer-data-mining.md)   

@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ea0a9915e062d7b6f15b63e18976e88cc339202d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d34ea224efd5b218cafee58dec09ff4590b8511
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76939502"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83668764"
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -30,12 +30,12 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
 ```  
   
 ## <a name="applies-to"></a>Si applica a  
- Algoritmi che contengono tabelle nidificate stimabili, tra cui associazioni e alcuni algoritmi di classificazione. Gli algoritmi di classificazione che supportano le tabelle nidificate includono [!INCLUDE[msCoName](../includes/msconame-md.md)] gli [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmi Decision Trees [!INCLUDE[msCoName](../includes/msconame-md.md)] , Naive Bayes e Neural Network.  
+ Algoritmi che contengono tabelle nidificate stimabili, tra cui associazioni e alcuni algoritmi di classificazione. Gli algoritmi di classificazione che supportano le tabelle nidificate includono gli [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmi Decision Trees, [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes e [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network.  
   
 ## <a name="return-type"></a>Tipo restituito  
  \<espressione di tabella>  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Le opzioni per la funzione **PredictAssociation** includono EXCLUDE_NULL, INCLUDE_NULL, inclusive, Exclusive (default), INPUT_ONLY, INCLUDE_STATISTICS e INCLUDE_NODE_ID.  
   
 > [!NOTE]  
@@ -51,7 +51,7 @@ PredictAssociation(colref, [$AdjustedProbability], n)
   
  Se si include **$AdjustedProbability**, l'istruzione restituisce i primi *n* valori in base al **$AdjustedProbability**.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene utilizzata la funzione **PredictAssociation** per restituire i quattro prodotti del database Adventure Works che con maggiore probabilità verranno venduti insieme.  
   
 ```  

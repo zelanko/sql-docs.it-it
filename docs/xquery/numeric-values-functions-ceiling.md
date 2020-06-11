@@ -1,5 +1,6 @@
 ---
 title: Funzione ceiling (XQuery) | Microsoft Docs
+description: Viene illustrato come utilizzare la funzione XQuery ceiling () per restituire il numero più piccolo senza una parte frazionaria inferiore al valore dell'argomento della funzione.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fe18f488b83c1a8c9236c642751c1dc80bfe7e6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd1d131fadf2fb594b9ad2799791313d0136f39b
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946571"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689768"
 ---
 # <a name="numeric-values-functions---ceiling"></a>Funzioni per valori numerici - ceiling 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ fn:ceiling ( $arg as numeric?) as numeric?
  *$arg*  
  Numero al quale viene applicata la funzione.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se il tipo di *$arg* è uno dei tre tipi numerici di base, **xs: float**, **xs: Double**o **xs: Decimal**, il tipo restituito è uguale al tipo di *$arg* .  
   
  Se il tipo di *$arg* è un tipo derivato da uno dei tipi numerici, il tipo restituito è il tipo numerico di base.  
@@ -47,7 +48,7 @@ fn:ceiling ( $arg as numeric?) as numeric?
   
  Qualsiasi altro tipo di dati genera un errore statico.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
 ### <a name="a-using-the-ceiling-xquery-function"></a>A. Utilizzo della funzione booleana XQuery ceiling()  
@@ -75,11 +76,11 @@ WHERE ProductModelID=7
   
 -   **Le istruzioni** sono una colonna di tipo **XML** . Per specificare XQuery, viene pertanto utilizzato il [metodo query () (tipo di dati XML)](../t-sql/xml/query-method-xml-data-type.md) . L'istruzione XQuery viene specificata come argomento per il metodo di query.  
   
--   **per... Return** è un costrutto di ciclo. Nella query il ciclo **for** identifica un elenco di \<percorsi> elementi. Per ogni centro di lavorazione, l'istruzione **return** nel ciclo **for** descrive il codice XML da generare:  
+-   **per... Return** è un costrutto di ciclo. Nella query il ciclo **for** identifica un elenco di \< percorsi> elementi. Per ogni centro di lavorazione, l'istruzione **return** nel ciclo **for** descrive il codice XML da generare:  
   
-    -   Un \<percorso> elemento con attributi LocationID e LaborHrs. L'espressione corrispondente racchiusa tra parentesi graffe ({ }) recupera i valori necessari dal documento.  
+    -   Un \< percorso> elemento con attributi LocationID e LaborHrs. L'espressione corrispondente racchiusa tra parentesi graffe ({ }) recupera i valori necessari dal documento.  
   
-    -   L'espressione {i/@LotSize $} recupera l'attributo LotSize dal documento, se presente.  
+    -   L'espressione {$ i/@LotSize } Recupera l'attributo LotSize dal documento, se presente.  
   
     -   Risultato:  
   

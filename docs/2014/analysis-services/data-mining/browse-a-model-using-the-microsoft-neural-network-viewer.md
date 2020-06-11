@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2343d746-c4f4-499b-9d3c-17d63310a9a3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1628eff6e5c440071126ce3508b977f9f7508ba5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c9ad60ad7602222572bd1649d2ac503e0535205
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086061"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525297"
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>Visualizzare un modello utilizzando il Visualizzatore Microsoft Neural Network
-  Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] visualizzatore Neural Network in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di visualizzare i modelli di data mining [!INCLUDE[msCoName](../../includes/msconame-md.md)] compilati con l'algoritmo Neural Network. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network, che consente di creare modelli di data mining di classificazione e regressione in grado di analizzare più input e output, è molto utile a scopo di analisi ed esplorazione. Per ulteriori informazioni su questo algoritmo, vedere [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md).  
+  Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visualizzatore Neural Network in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di visualizzare i modelli di data mining compilati con l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Neural Network. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network, che consente di creare modelli di data mining di classificazione e regressione in grado di analizzare più input e output, è molto utile a scopo di analisi ed esplorazione. Per ulteriori informazioni su questo algoritmo, vedere [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md).  
   
  Quando si esplora un modello utilizzando il Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network Viewer, si sceglie in genere un attributo di destinazione e uno stato, quindi si utilizza il visualizzatore per determinare in che modo gli attributi di input influiscono sul risultato.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "66086061"
   
 -   [Output](#BKMK_Outputs)  
   
--   [variables](#BKMK_Characteristics)  
+-   [Variabili](#BKMK_Characteristics)  
   
 ###  <a name="inputs"></a><a name="BKMK_Inputs"></a>Input  
  Usare la scheda **Input** per scegliere gli attributi e i valori che verranno usati come input dal modello. Per impostazione predefinita, il visualizzatore viene aperto con tutti gli attributi. In questa vista predefinita, il modello sceglie quali valori di attributo sono quelli più importanti da visualizzare.  
@@ -75,7 +74,7 @@ ms.locfileid: "66086061"
   
  [Torna all'inizio](#BKMK_ViewerTabs)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm.md)   
  [Attività e procedure relative al Visualizzatore modello di data mining](mining-model-viewer-tasks-and-how-tos.md)   
  [Attività e procedure relative al Visualizzatore modello di data mining](mining-model-viewer-tasks-and-how-tos.md)   

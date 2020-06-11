@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7a7a9c18599d13c4db510793a1d75c85bbb7a829
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54489088aa6edc540dd2da0fb0d9121fc0c6d4b9
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070857"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670409"
 ---
 # <a name="data-mining-extensions-dmx-statements"></a>Istruzioni DMX (Data Mining Extensions)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  L'utilizzo dei modelli di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data mining in prevede le attività primarie seguenti:  
+  L'utilizzo dei modelli di data mining in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prevede le attività primarie seguenti:  
   
 -   Creazione di strutture e modelli di data mining  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68070857"
  Utilizzare l'istruzione [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md) per copiare la struttura di un modello di data mining esistente in un nuovo modello di data mining e per eseguire il training del nuovo modello con gli stessi dati.  
   
  Visualizzazione di modelli di data mining  
- Utilizzare l'istruzione [SELECT &#40;DMX&#41;](../dmx/select-dmx.md) per visualizzare le informazioni calcolate e archiviate dall'algoritmo Data mining nel modello di data mining durante il training del modello. Analogamente a [!INCLUDE[tsql](../includes/tsql-md.md)], è possibile utilizzare più clausole con l'istruzione SELECT per estenderne la potenza. Queste clausole includono [Distinct da \<Model>](../dmx/select-distinct-from-model-dmx.md), [dal \<modello>. Case](../dmx/select-from-model-cases-dmx.md), [da \<Model>. SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md) [dal \<modello>. CONTENUTO](../dmx/select-from-model-content-dmx.md) e [dal \<modello>. DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md).  
+ Utilizzare l'istruzione [SELECT &#40;DMX&#41;](../dmx/select-dmx.md) per visualizzare le informazioni calcolate e archiviate dall'algoritmo Data mining nel modello di data mining durante il training del modello. Analogamente a [!INCLUDE[tsql](../includes/tsql-md.md)] , è possibile utilizzare più clausole con l'istruzione SELECT per estenderne la potenza. Queste clausole includono [Distinct da \< Model>](../dmx/select-distinct-from-model-dmx.md), [dal \< modello>. Case](../dmx/select-from-model-cases-dmx.md), [da \< Model>. SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md) [dal \< modello>. CONTENUTO](../dmx/select-from-model-content-dmx.md) e [dal \< modello>. DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md).  
   
  Generazione di stime basate su modelli di data mining  
  Utilizzare la clausola [PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md) dell'istruzione SELECT per creare stime basate su un modello di data mining esistente.  

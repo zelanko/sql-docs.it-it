@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 00076475-d687-4376-90f4-6536f17631a0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a3c99733ca6853a2e0a5503868e2270fa6585eae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 04b6eb40999ca009184d438e0c0dc514d2c3f009
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083475"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521205"
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>Attività e procedure relative al visualizzatore modello di data mining
   Progettazione modelli di data mining di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] include diversi strumenti che è possibile usare per esplorare i modelli di data mining. Gli argomenti seguenti contengono istruzioni dettagliate su come completare le attività correlate all'uso della scheda **Visualizzatore modello di data mining** nella finestra di progettazione.  
@@ -45,7 +44,7 @@ ms.locfileid: "66083475"
   
 -   [Modificare i colori utilizzati nel visualizzatore data mining](change-the-colors-used-in-the-data-mining-viewer.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Esercitazione di base sul data mining](../../tutorials/basic-data-mining-tutorial.md)   
  [Visualizzatori modello di Data Mining &#40;Progettazione modelli di data mining&#41;](../mining-model-viewers-data-mining-model-designer.md)  
   

@@ -1,5 +1,6 @@
 ---
 title: Connessione a SQL Server (AccessToSQL) | Microsoft Docs
+description: Informazioni su come connettersi a un'istanza di destinazione del database SQL per eseguire la migrazione dei database di Access. SSMA ottiene i metadati relativi ai database nel database SQL.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 4630ae8d92dbf0e9b1c5bf615dd82d436a5751f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6266eb0596b351a7ef54baed6a7a76a7a655ac60
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006643"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293089"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>Connessione a SQL Server (AccessToSQL)
-Per eseguire la migrazione dei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]database di Access a, è necessario connettersi all' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]istanza di destinazione di. Quando si esegue la connessione, SSMA ottiene i metadati relativi ai database nell'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di e Visualizza i metadati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del database in Esplora metadati. SSMA archivia informazioni sull'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui si è connessi, ma non archivia le password.  
+Per eseguire la migrazione dei database di Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario connettersi all'istanza di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando si esegue la connessione, SSMA ottiene i metadati relativi ai database nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Visualizza i metadati del database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Esplora metadati. SSMA archivia informazioni sull'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui si è connessi, ma non archivia le password.  
   
 La connessione a SQL Server rimane attiva fino a quando non si chiude il progetto. Quando si riapre il progetto, è necessario riconnettersi a SQL Server se si desidera una connessione attiva al server. È possibile lavorare offline fino a quando non si caricano oggetti di database in SQL Server e si migrano i dati.  
   
@@ -38,25 +39,25 @@ I metadati relativi all'istanza di SQL Server non vengono sincronizzati automati
 ## <a name="required-sql-server-permissions"></a>Autorizzazioni SQL Server richieste  
 L'account utilizzato per la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richiede autorizzazioni diverse a seconda delle azioni eseguite dall'account.  
   
--   Per convertire gli oggetti di [!INCLUDE[tsql](../../includes/tsql-md.md)] accesso in sintassi, per aggiornare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]i metadati da o per salvare la sintassi convertita in script, l'account deve disporre dell'autorizzazione per accedere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]all'istanza di.  
+-   Per convertire gli oggetti di accesso in [!INCLUDE[tsql](../../includes/tsql-md.md)] sintassi, per aggiornare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i metadati da o per salvare la sintassi convertita in script, l'account deve disporre dell'autorizzazione per accedere all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Per caricare gli oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database in e per eseguire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la migrazione dei dati a, il requisito di autorizzazione minimo è l'appartenenza al ruolo del database **db_owner** nel database di destinazione.  
+-   Per caricare gli oggetti di database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e per eseguire la migrazione dei dati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , il requisito di autorizzazione minimo è l'appartenenza al ruolo del database **db_owner** nel database di destinazione.  
   
 ## <a name="establishing-a-sql-server-connection"></a>Creazione di una connessione SQL Server  
-Prima di convertire gli oggetti di database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di Access nella sintassi, è necessario stabilire una connessione all' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza di in cui si desidera eseguire la migrazione dei database di Access.  
+Prima di convertire gli oggetti di database di Access nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sintassi, è necessario stabilire una connessione all'istanza di in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cui si desidera eseguire la migrazione dei database di Access.  
   
-Quando si definiscono le proprietà di connessione, è inoltre necessario specificare il database in cui verrà eseguita la migrazione degli oggetti e dei dati. È possibile personalizzare questo mapping a livello di database di Access dopo la connessione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a. Per ulteriori informazioni, vedere [mapping di database di origine e di destinazione](mapping-source-and-target-databases-accesstosql.md).  
+Quando si definiscono le proprietà di connessione, è inoltre necessario specificare il database in cui verrà eseguita la migrazione degli oggetti e dei dati. È possibile personalizzare questo mapping a livello di database di Access dopo la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per ulteriori informazioni, vedere [mapping di database di origine e di destinazione](mapping-source-and-target-databases-accesstosql.md).  
   
 > [!IMPORTANT]  
-> Prima di connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], verificare che l'istanza di sia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione e che sia in grado di accettare le connessioni. Per ulteriori informazioni, vedere "connessione al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] motore di database" nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione online di.  
+> Prima di connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , verificare che l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia in esecuzione e che sia in grado di accettare le connessioni. Per ulteriori informazioni, vedere "connessione al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] motore di database" nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione online di.  
   
 **Per eseguire la connessione a SQL Server**  
   
 1.  Scegliere **Connetti a SQL Server**dal menu **file** .  
   
-    Se in precedenza si è [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]connessi a, il nome del comando verrà **riconnesso a SQL Server**.  
+    Se in precedenza si è connessi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , il nome del comando verrà **riconnesso a SQL Server**.  
   
-2.  Nella casella **nome server** immettere o selezionare il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+2.  Nella casella **nome server** immettere o selezionare il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
     -   Se ci si connette all'istanza predefinita nel computer locale, è possibile immettere **localhost** o un punto (**.**).  
   
@@ -64,15 +65,15 @@ Quando si definiscono le proprietà di connessione, è inoltre necessario specif
   
     -   Se ci si connette a un'istanza denominata, immettere il nome del computer, una barra rovesciata e il nome dell'istanza. Ad esempio: MyServer\MyInstance.  
   
-    -   Per connettersi a un'istanza utente attiva di [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], connettersi utilizzando il protocollo Named Pipes e specificando il nome della pipe \\ \\, ad esempio .\pipe\sql\query. Per altre informazioni, vedere la documentazione di [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)].  
+    -   Per connettersi a un'istanza utente attiva di [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] , connettersi utilizzando il protocollo Named Pipes e specificando il nome della pipe, ad esempio \\ \\ .\pipe\sql\query. Per altre informazioni, vedere la documentazione di [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)].  
   
-3.  Se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è configurata in modo da accettare connessioni su una porta non predefinita, immettere il numero di porta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzato per le connessioni nella casella **porta server** . Per l'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il numero di porta predefinito è 1433. Per le istanze denominate, SSMA proverà a ottenere il numero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di porta dal servizio browser.  
+3.  Se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è configurata in modo da accettare connessioni su una porta non predefinita, immettere il numero di porta utilizzato per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le connessioni nella casella **porta server** . Per l'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , il numero di porta predefinito è 1433. Per le istanze denominate, SSMA proverà a ottenere il numero di porta dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servizio browser.  
   
 4.  Nella casella **database** immettere il nome del database di destinazione per la migrazione di oggetti e dati.  
   
-    Questa opzione non è disponibile quando si esegue la riconnessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+    Questa opzione non è disponibile quando si esegue la riconnessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-    Il nome del database di destinazione non può contenere spazi o caratteri speciali. È ad esempio possibile eseguire la migrazione dei database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Access a un database denominato "ABC". Non è tuttavia possibile eseguire la migrazione dei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database di Access a un database denominato "a b-c".  
+    Il nome del database di destinazione non può contenere spazi o caratteri speciali. È ad esempio possibile eseguire la migrazione dei database di Access a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database denominato "ABC". Non è tuttavia possibile eseguire la migrazione dei database di Access a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database denominato "a b-c".  
   
     È possibile personalizzare questo mapping per ogni database dopo la connessione. Per ulteriori informazioni, vedere [mapping di database di origine e di destinazione](mapping-source-and-target-databases-accesstosql.md)  
   
@@ -120,7 +121,7 @@ La connessione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rimane 
 La procedura per la riconnessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è identica alla procedura per stabilire una connessione.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
-Se si desidera personalizzare il mapping tra i database di origine e di destinazione, vedere [mapping di database di origine e di destinazione](mapping-source-and-target-databases-accesstosql.md) in caso contrario, il passaggio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] successivo consiste nel convertire gli oggetti di database nella sintassi utilizzando [Converti oggetti di database](converting-access-database-objects-accesstosql.md) .  
+Se si desidera personalizzare il mapping tra i database di origine e di destinazione, vedere [mapping di database di origine e di destinazione](mapping-source-and-target-databases-accesstosql.md) in caso contrario, il passaggio successivo consiste nel convertire gli oggetti di database nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sintassi utilizzando [Converti oggetti di database](converting-access-database-objects-accesstosql.md) .  
   
 ## <a name="see-also"></a>Vedere anche  
 [Migrazione dei database di Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  

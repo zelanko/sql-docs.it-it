@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d00913b0-cd6d-4de0-a1e7-4ce86fcc078d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 313fdd08234e9dd784d45c65d7ee23cd0a0a308c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c215d2967fdea20cd6828d41bd4c96a70ff4b35e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076236"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536353"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Creare un progetto di Analysis Services (SSDT)
   È possibile definire un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usando il modello di progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o l'Importazione guidata database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per leggere il contenuto di un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Se in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]non è attualmente caricata alcuna soluzione, creando un nuovo progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene automaticamente creata una nuova soluzione. In caso contrario, il nuovo progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sarà aggiunto alla soluzione esistente. Le procedure consigliate per lo sviluppo di soluzioni prevedono la creazione di progetti separati per tipi diversi di dati dell'applicazione, utilizzando una sola soluzione se i progetti sono correlati. Ad esempio, potrebbe essere disponibile una sola soluzione contenente progetti separati per i pacchetti di Integration Services, i database di Analysis Services e i report di Reporting Services utilizzati dalla stessa applicazione aziendale.  
@@ -159,7 +158,7 @@ ms.locfileid: "66076236"
 ||Dimension|Avvia la Creazione guidata dimensione per l'aggiunta di una nuova dimensione del database al progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Struttura di data mining|Avvia la Creazione guidata modello di data mining per l'aggiunta di una nuova struttura di data mining e del modello di data mining associato al progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurare Analysis Services proprietà del progetto &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
  [Creazione di progetti di Analysis Services &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
  [Distribuire progetti di Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d09f32cb21762ca56eab156701ee013ef2c03ec3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0943e3f98ae65ec6c142fb1b98f86da054e88638
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083781"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521618"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
   In seguito alla progettazione e all'elaborazione di un modello di data mining mediante i dati della struttura di data mining sottostante, il modello di data mining è completo e contiene il *contenuto del modello di data mining*. È possibile utilizzare questo contenuto per eseguire stime o analisi di dati.  
@@ -215,7 +214,7 @@ ms.locfileid: "66083781"
 |--------------------|-----------------|---------------------|  
 |1|Missing|Indica che i dati del case non contengono un valore per questo attributo. Lo stato `Missing` è calcolato separatamente dagli attributi con valori.|  
 |2|Existing|Indica che i dati del case contengono un valore per questo attributo.|  
-|3|Continuo|Indica che il valore dell'attributo è un valore numerico continuo che può pertanto essere rappresentato da una media, insieme alle varianza e deviazione standard.|  
+|3|Continua|Indica che il valore dell'attributo è un valore numerico continuo che può pertanto essere rappresentato da una media, insieme alle varianza e deviazione standard.|  
 |4|Discrete|Indica che un valore di testo o numerico viene trattato come discreto.<br /><br /> **Nota** i valori discreti possono anche essere mancanti; tuttavia, vengono gestiti in modo diverso durante l'esecuzione dei calcoli. Per informazioni, vedere [Valori mancanti &#40;Analysis Services - Data mining&#41;](missing-values-analysis-services-data-mining.md).|  
 |5|Discretizzato|Indica che l'attributo contiene valori numerici discretizzati. Il valore sarà una stringa formattata che descrive i bucket di discretizzazione.|  
 |6|Existing|Indica che l'attributo dispone di valori numerici continui e che i valori sono stati forniti nei dati, a fronte di valori mancanti o derivati.|  
@@ -229,7 +228,7 @@ ms.locfileid: "66083781"
 |14|Ordine media mobile|Rappresenta un valore che indica il numero di medie mobili in una serie.<br /><br /> Si applica a modelli Time Series che utilizzano l'algoritmo ARIMA.|  
 |15|Ordine delle differenze|Rappresenta un valore che indica il numero di volte in cui viene differenziata la serie.<br /><br /> Si applica a modelli Time Series che utilizzano l'algoritmo ARIMA.|  
 |16|Boolean|Rappresenta un tipo booleano.|  
-|17|Altri|Rappresenta un valore personalizzato definito dall'algoritmo.|  
+|17|Altro|Rappresenta un valore personalizzato definito dall'algoritmo.|  
 |18|Stringa visualizzabile|Rappresenta un valore personalizzato che viene visualizzato come stringa dall'algoritmo. Non è stata applicata alcuna formattazione dal modello a oggetti.|  
   
  I tipi di valore derivano dall'enumerazione ADMOMD.NET. Per altre informazioni, vedere <xref:Microsoft.AnalysisServices.AdomdServer.MiningValueType>.  
@@ -302,7 +301,7 @@ SELECT * FROM [<mining model name>].CONTENT
   
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]è inoltre possibile accedere alle informazioni sui set di righe dello schema di data mining stabilendo una connessione all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ed eseguendo query sulle tabelle di sistema. Per ulteriori informazioni, vedere [esecuzione di query sui set di righe dello schema di data mining &#40;Analysis Services-&#41;di data mining ](data-mining-schema-rowsets-ssas.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Microsoft Generic Content Tree Viewer &#40;data mining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
  [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   

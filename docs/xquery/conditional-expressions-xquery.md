@@ -1,5 +1,6 @@
 ---
 title: Espressioni condizionali (XQuery) | Microsoft Docs
+description: Informazioni sulle espressioni condizionali supportate da XQuery.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f593455269b8c005a3b4d3725f4360db77ea48f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76570b6b7cbb1ecb55a881d58683e158736e85d0
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68039013"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689712"
 ---
 # <a name="conditional-expressions-xquery"></a>Espressioni condizionali (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +56,7 @@ else
   
 -   L'espressione **else** è obbligatoria. Se non è necessaria, è possibile restituire " ( ) ", come illustrato negli esempi disponibili in questa sezione.  
   
- Ad esempio, la query seguente viene specificata sulla variabile di tipo **XML** . La condizione **if** verifica il valore della variabile SQL (@v) all'interno dell'espressione XQuery usando la funzione di estensione della [funzione SQL: Variable ()](../xquery/xquery-extension-functions-sql-variable.md) . Se il valore della variabile è "FirstName", restituisce l'elemento `FirstName` <>. In caso contrario, restituisce l' `LastName` elemento <>.  
+ Ad esempio, la query seguente viene specificata sulla variabile di tipo **XML** . La condizione **if** verifica il valore della variabile SQL ( @v ) all'interno dell'espressione XQuery usando la funzione di estensione della [funzione SQL: Variable ()](../xquery/xquery-extension-functions-sql-variable.md) . Se il valore della variabile è "FirstName", restituisce l' `FirstName` elemento <>. In caso contrario, restituisce l' `LastName` elemento <>.  
   
 ```  
 declare @x xml  
@@ -122,7 +123,7 @@ WHERE ProductModelID = 19
 </Product>  
 ```  
   
- Nella query seguente viene restituito un elemento `Location` <> con un attributo LocationID se la posizione del centro di lavorazione non specifica le ore di installazione.  
+ Nella query seguente `Location` viene restituito un elemento <> con un attributo LocationID se la posizione del centro di lavorazione non specifica le ore di installazione.  
   
 ```  
 SELECT Instructions.query('  

@@ -1,5 +1,6 @@
 ---
 title: Gestione degli errori (XQuery) | Microsoft Docs
+description: Informazioni sulla gestione degli errori in XQuery e la visualizzazione di esempi di gestione degli errori dinamici.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7dee3c11-aea0-4d10-9126-d54db19448f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1be899b95a4e132c3b5aa42a73df9bd1b0ee057c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b80fda53a6ce0acfd326f6f897cb6cde1bf0e610
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038959"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84305903"
 ---
 # <a name="error-handling-xquery"></a>Gestione degli errori (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "68038959"
  Nei casi in cui l'errore dinamico verrebbe generato all'interno di un predicato, spesso non generare l'errore non modifica la semantica, poiché () viene eseguito il mapping a False. In alcuni casi tuttavia, la restituzione di () invece di un errore dinamico può causare risultati imprevisti, come illustrato negli esempi seguenti.  
   
 ### <a name="example-using-the-avg-function-with-a-string"></a>Esempio: utilizzo della funzione avg () con una stringa  
- Nell'esempio seguente viene chiamata la [funzione AVG](../xquery/aggregate-functions-avg.md) per calcolare la media dei tre valori. Uno dei valori è una stringa. Poiché l'istanza XML in questo caso è non tipizzata, tutti i dati al suo interno sono di tipo atomico non tipizzato. La funzione **AVG ()** esegue prima il cast di questi valori in **xs: Double** prima di calcolare la media. Non è tuttavia possibile eseguire `"Hello"`il cast del valore,, a **xs: Double** e viene creato un errore dinamico. In questo caso, anziché restituire un errore dinamico, il cast di `"Hello"` a **xs: Double** causa una sequenza vuota. La funzione **AVG ()** ignora questo valore, calcola la media degli altri due valori e restituisce 150.  
+ Nell'esempio seguente viene chiamata la [funzione AVG](../xquery/aggregate-functions-avg.md) per calcolare la media dei tre valori. Uno dei valori è una stringa. Poiché l'istanza XML in questo caso è non tipizzata, tutti i dati al suo interno sono di tipo atomico non tipizzato. La funzione **AVG ()** esegue prima il cast di questi valori in **xs: Double** prima di calcolare la media. `"Hello"`Non è tuttavia possibile eseguire il cast del valore,, a **xs: Double** e viene creato un errore dinamico. In questo caso, anziché restituire un errore dinamico, il cast di `"Hello"` a **xs: Double** causa una sequenza vuota. La funzione **AVG ()** ignora questo valore, calcola la media degli altri due valori e restituisce 150.  
   
 ```  
 DECLARE @x xml  
@@ -58,7 +59,7 @@ SELECT @x.query('avg(//*)')
 ```  
   
 ### <a name="example-using-the-not-function"></a>Esempio: utilizzo della funzione not  
- Quando si usa la [funzione not](../xquery/functions-on-boolean-values-not-function.md) in un predicato, ad `/SomeNode[not(Expression)]`esempio, e l'espressione genera un errore dinamico, invece di un errore viene restituita una sequenza vuota. Se si applica **Not ()** alla sequenza vuota, invece di un errore viene restituito true.  
+ Quando si usa la [funzione not](../xquery/functions-on-boolean-values-not-function.md) in un predicato, ad esempio, `/SomeNode[not(Expression)]` e l'espressione genera un errore dinamico, invece di un errore viene restituita una sequenza vuota. Se si applica **Not ()** alla sequenza vuota, invece di un errore viene restituito true.  
   
 ### <a name="example-casting-a-string"></a>Esempio: esecuzione del cast di una stringa  
  Nell'esempio seguente viene eseguito il cast della stringa letterale "NaN" a xs:string, quindi a xs:double. Il risultato è un set di righe vuoto. Anche se non è possibile eseguire correttamente il cast della stringa "NaN" a xs:double, questo fatto non può essere determinato fino al momento dell'esecuzione, perché prima viene eseguito il cast della stringa a xs:string.  

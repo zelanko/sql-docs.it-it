@@ -27,18 +27,17 @@ helpviewer_keywords:
 ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 159760722a62969b79ce738e7928739ff2bb15ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b34fc9d18866572056126b1df408d91c3934e85
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082795"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520419"
 ---
 # <a name="testing-and-validation-data-mining"></a>Test e convalida (Data mining)
   La convalida è il processo che consente di valutare le prestazioni dei modelli di data mining rispetto ai dati reali. Per convalidare in modo corretto i modelli di data mining, è importante comprenderne la qualità e le caratteristiche prima di distribuirli in un ambiente di produzione.  
   
- In questa sezione vengono introdotti alcuni concetti di base relativi alla qualità dei modelli e vengono descritte le strategie per la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]convalida dei modelli fornite in. Per una panoramica sullo scopo della convalida dei modelli nel contesto più ampio del processo di data mining, vedere [Soluzioni di data mining](data-mining-solutions.md).  
+ In questa sezione vengono introdotti alcuni concetti di base relativi alla qualità dei modelli e vengono descritte le strategie per la convalida dei modelli fornite in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Per una panoramica sullo scopo della convalida dei modelli nel contesto più ampio del processo di data mining, vedere [Soluzioni di data mining](data-mining-solutions.md).  
   
 ## <a name="methods-for-testing-and-validation-of-data-mining-models"></a>Metodi di test e convalida dei modelli di data mining  
  La valutazione della qualità e delle caratteristiche di un modello di data mining può essere eseguita in base ad approcci diversi.  
@@ -90,7 +89,7 @@ ms.locfileid: "66082795"
 |Informazioni sui tipi di grafici di accuratezza forniti in [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)].|[Grafico di accuratezza &#40;Analysis Services - Data mining&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Grafico dei profitti &#40;Analysis Services - Data mining&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Grafico a dispersione &#40;Analysis Services - Data mining&#41;](scatter-plot-analysis-services-data-mining.md)|  
 |Informazioni sulla creazione di una matrice di classificazione, talvolta denominata matrice di confusione, per valutare il numero di veri e falsi positivi e di veri e falsi negativi.|[Matrice di classificazione &#40;Analysis Services - Data mining&#41;](classification-matrix-analysis-services-data-mining.md)|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Strumenti di data mining](data-mining-tools.md)   
  [Soluzioni di data mining](data-mining-solutions.md)   
  [Attività e procedure di test e convalida &#40;data mining&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  

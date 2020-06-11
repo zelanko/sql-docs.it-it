@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 46e2fbe2-bb41-4eaa-91f8-eb2bd3b8d00d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 07138beba90f3f863d81a24c7c92b2d9fd4a4276
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 603d5ea6f1e71abd469738b9f116927ca0b69e7d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088285"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527597"
 ---
 # <a name="calculations-cube-designer-analysis-services---multidimensional-data"></a>Calcoli (Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Usare la scheda **Calcoli** in Progettazione cubi per visualizzare e modificare i calcoli, inclusi i membri calcolati, i set denominati e i comandi di script MDX (Multidimensional Expressions) per il cubo selezionato.  
@@ -52,7 +51,7 @@ ms.locfileid: "66088285"
  **Editor form set denominato**  
  Usare il riquadro **Editor form set denominato** nella visualizzazione Form per modificare i set denominati nello script del cubo. Per altre informazioni su questo riquadro, vedere [Editor form set denominato &#40;scheda Calcoli, Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Oggetti Cube &#40;Analysis Services-Dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Calcoli](multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [Nozioni fondamentali sullo scripting MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   

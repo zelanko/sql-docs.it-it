@@ -12,17 +12,17 @@ ms.assetid: c90d7cdf-3309-46f4-b900-220521bb9552
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1b383c290bb507cdafaf824c16b3a1587b998bd3
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: b20ab1851d02e493035414dd4682fc5330296b19
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000622"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858624"
 ---
 # <a name="query-options-execution-ansi-page"></a>Esecuzione di Opzioni query (pagina ANSI)
   Utilizzare questa pagina per specificare che [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eseguirà le query utilizzando tutte o una parte delle impostazioni specificate nello standard ISO (ANSI).  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco elementi dell'interfaccia utente  
  **SET ANSI_DEFAULTS**  
  Consente di selezionare tutte le impostazioni ISO predefinite. Per impostazione predefinita, la casella non è disponibile perché solo alcune impostazioni ISO sono configurate.  
   

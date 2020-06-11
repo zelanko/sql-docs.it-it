@@ -1,5 +1,6 @@
 ---
 title: Componenti per l'accesso ai dati SQLXML 4.0
+description: Informazioni sui componenti di accesso ai dati in SQLXML 4,0-provider SQLXMLOLEDB, classi gestite SQLXML e il SQL Server Native Client (SQLNCLI11).
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: 5001e9fd-555c-4332-a57d-4d29a537454a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16e7aead128623f41076034a0fd313fb384038c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7ad40cdae904b198abc3ad0b17454b4cb58d72ed
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257285"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215883"
 ---
 # <a name="sqlxml-40-data-access-components---sqlxmloledb-provider"></a>SQLXML 4.0 Data Access Components - Provider SQLXMLOLEDB
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 55ebd7a6-2458-4398-911f-fcfeb2413f1b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: faa6198bc9fa42b55be63ec57ff49ed6703ef260
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 558be08d129a1d6d86454cfe20ffb1da1dbbeccd
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081255"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528327"
 ---
 # <a name="filter-and-sort-data-ssas-tabular"></a>Filtrare e ordinare dati (SSAS tabulare)
   Quando si utilizzano tabelle in un modello tabulare, è possibile filtrare o ordinare i dati utilizzando i controlli disponibili in Progettazione modelli. Inoltre, è possibile creare filtri nei calcoli per controllare i dati utilizzati da una colonna o una tabella di dati. Ogni tipo di filtro funziona solo nella rispettiva finestra.  

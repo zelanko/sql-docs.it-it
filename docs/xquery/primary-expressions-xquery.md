@@ -1,5 +1,6 @@
 ---
 title: Espressioni primarie (XQuery) | Microsoft Docs
+description: Informazioni sulle espressioni primarie XQuery che includono valori letterali, riferimenti a variabili, espressioni di elementi di contesto, costruttori e chiamate di funzioni.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e3504b4f04b1b9842f786eeef3ecf1f105563f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: efa06923eeceff312def44ff13ab12b8371439c7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74200520"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529780"
 ---
 # <a name="primary-expressions-xquery"></a>Espressioni primarie (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,12 +43,12 @@ ms.locfileid: "74200520"
 |`&quot;`|"|  
 |`&apos;`|'|  
   
- Un valore letterale stringa può contenere inoltre un riferimento a carattere, un riferimento in stile XML a un carattere Unicode, identificato dal relativo punto di codice decimale o esadecimale. Il simbolo euro, ad esempio, può essere rappresentato dal riferimento al carattere "&\#8364;".  
+ Un valore letterale stringa può contenere inoltre un riferimento a carattere, un riferimento in stile XML a un carattere Unicode, identificato dal relativo punto di codice decimale o esadecimale. Il simbolo euro, ad esempio, può essere rappresentato dal riferimento al carattere "&\# 8364;".  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizza XML versione 1.0 come base per l'analisi.  
   
-### <a name="examples"></a>Esempi  
+### <a name="examples"></a>Esempio  
  Negli esempi seguenti viene illustrato l'utilizzo dei valori letterali, nonché dei riferimenti a entità e di carattere.  
   
  Il codice restituisce un errore, in quanto i caratteri `<'` e `'>` hanno un significato speciale:  
@@ -156,7 +157,7 @@ SELECT @x.query('<value>{sql:variable("@price") }</value>')
 ## <a name="context-item-expressions"></a>Espressioni per elementi di contesto  
  Per elemento di contesto si intende l'elemento corrente elaborato nel contesto di un'espressione di percorso. Viene inizializzato in un'istanza con tipo di dati XML non NULL tramite il nodo di documento. Può anche essere modificato dal metodo nodes () nel contesto di espressioni XPath o dei predicati [].  
   
- L'elemento di contesto viene restituito da un'espressione che contiene un punto (.). Ad esempio, la query seguente valuta ogni elemento <`a`> per la presenza dell'attributo. `attr` Se l'attributo è presente, viene restituito l'elemento. Si noti che la condizione del predicato specifica che il nodo di contesto è specificato da un solo punto.  
+ L'elemento di contesto viene restituito da un'espressione che contiene un punto (.). Ad esempio, la query seguente valuta ogni elemento <`a`> per la presenza dell'attributo `attr` . Se l'attributo è presente, viene restituito l'elemento. Si noti che la condizione del predicato specifica che il nodo di contesto è specificato da un solo punto.  
   
 ```  
 DECLARE @var XML  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d871ba87147f24fdd60c9effe5f279d9ea355db1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d56924f27f7986861895cf4fff21fa758cc47070
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082918"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520429"
 ---
 # <a name="sequence-clustering-model-query-examples"></a>Sequence Clustering Model Query Examples
   Quando si crea una query su un modello di data mining, è possibile scegliere tra due tipi: una query sul contenuto, che fornisce dettagli sulle informazioni archiviate nel modello o una query di stima, che utilizza i criteri presenti nel modello per eseguire stime basate sui nuovi dati forniti. Per un modello Sequence Clustering, le query sul contenuto in genere forniscono dettagli aggiuntivi sui cluster trovati o sulle transizioni all'interno di tali cluster. Utilizzando una query è inoltre possibile recuperare metadati relativi al modello.  
@@ -253,7 +252,7 @@ AS t
   
 |||  
 |-|-|  
-|Funzione di stima|Uso|  
+|Funzione di stima|Utilizzo|  
 |[Cluster &#40;DMX&#41;](/sql/dmx/cluster-dmx)|Viene restituito il cluster con la più alta probabilità di contenere il case di input.|  
 |[ClusterDistance &#40;DMX&#41;](/sql/dmx/clusterdistance-dmx)|Viene restituita la distanza del case di input dal cluster specificato o la distanza del case di input dal cluster più probabile, se non viene specificato alcun cluster.<br /><br /> Questa funzione può essere utilizzata con qualsiasi tipo di modello di clustering (EM, K-medie, ecc.), ma i risultati variano in base all'algoritmo.|  
 |[ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx)|Restituisce la probabilità che il case di input appartenga al cluster specificato.|  
@@ -271,7 +270,7 @@ AS t
   
  Per un elenco delle funzioni comuni a tutti gli algoritmi di [!INCLUDE[msCoName](../../includes/msconame-md.md)], vedere [Funzioni di stima correlate &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx). Per la sintassi di funzioni specifiche, vedere [Guida di riferimento alle funzioni DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Query di data mining](data-mining-queries.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm-technical-reference.md)   
  [Algoritmo Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm.md)   

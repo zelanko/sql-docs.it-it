@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f6b7ca79cefee4d19593d20320da13b4253a89ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03ce064e08e28e4a5245c2cf18d110797e3ebce4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076281"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535993"
 ---
 # <a name="create-calculated-members"></a>Creare membri calcolati
   È possibile creare misure o membri di dimensioni personalizzati, denominati membri calcolati, combinando dati del cubo, operatori aritmetici, numeri e funzioni. È ad esempio possibile creare un membro calcolato denominato Euro in grado di convertire valori in dollari in euro moltiplicando una misura dollaro esistente per un tasso di conversione. Gli importi in euro potranno quindi essere visualizzati agli utenti finali in una riga o una colonna separata.  
@@ -80,7 +79,7 @@ ms.locfileid: "66076281"
   
 -   Se un membro calcolato viene creato nella dimensione delle misure, sarà indirizzabile in tale dimensione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Calcoli nei modelli multidimensionali](calculations-in-multidimensional-models.md)  
   
   

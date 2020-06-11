@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fb8a451d9904edffe665d90dba5bd3ba1c18aac3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b62bcdd7bb492a877572621bd7cfe9a3b150d04
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071736"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547523"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>Configurare la raccolta dati di utilizzo per PowerPivot per SharePoint
   La raccolta dati di utilizzo è una funzionalità di SharePoint a livello di farm. In PowerPivot per SharePoint questo sistema viene utilizzato ed esteso per fornire i report nel dashboard di gestione PowerPivot in cui viene mostrato l'utilizzo dei servizi e dei dati PowerPivot. A seconda dell'installazione di SharePoint, la raccolta dati di utilizzo potrebbe essere disabilitata per la farm. È necessario che un amministratore della farm abiliti la registrazione dell'utilizzo per creare i dati di utilizzo che vengono visualizzati nel dashboard di gestione PowerPivot.  
@@ -179,9 +178,9 @@ ms.locfileid: "66071736"
   
  Nella tabella seguente sono riportati i valori predefiniti per la configurazione della raccolta dei dati sull'utilizzo.  
   
-|Impostazione|Default Value|Type|Intervallo valido|  
+|Impostazione|Default Value|Tipo|Intervallo valido|  
 |-------------|-------------------|----------|-----------------|  
-|**Eventi di uso di Analysis Services** (Connessione, Caricamento, Scaricamento, Richieste)|\<abilitato>|Boolean|Questi valori sono abilitati o disabilitati.|  
+|**Eventi di uso di Analysis Services** (Connessione, Caricamento, Scaricamento, Richieste)|\<enabled>|Boolean|Questi valori sono abilitati o disabilitati.|  
 |**Intervallo di report query**|300 (in secondi)|Integer|Tra 1 e qualsiasi numero intero positivo. Il valore predefinito è 5 minuti.|  
 |**Cronologia dati di utilizzo**|365 (in giorni)|Integer|0 specifica nessun limite, ma è anche possibile impostare un limite massimo per imporre una scadenza sui dati cronologici e l'eliminazione automatica. I valori validi per un periodo di memorizzazione limitato sono compresi tra 1 e 5000 (in giorni).|  
 |Limite massimo risposta semplice|500 (in millisecondi)|Integer|Imposta un limite massimo che definisce uno scambio richiesta-risposta semplice. Qualsiasi richiesta completata entro un intervallo di tempo compreso tra 0 e 500 millisecondi viene considerata una richiesta semplice e ignorata ai fini del report.|  
@@ -189,7 +188,7 @@ ms.locfileid: "66071736"
 |Limite massimo risposta prevista|3000 (in millisecondi)|Integer|Imposta un limite massimo che definisce uno scambio richiesta-risposta previsto.|  
 |Limite massimo risposta con esecuzione prolungata|10000 (in millisecondi)|Integer|Imposta un limite massimo che definisce uno scambio richiesta-risposta con esecuzione prolungata. Tutte le richieste che superano questo limite massimo rientrano nella categoria Superato, che non prevede una soglia massima.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Informazioni di riferimento sulle impostazioni di configurazione &#40;PowerPivot per SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md)   
  [Raccolta dati di utilizzo di PowerPivot](power-pivot-usage-data-collection.md)  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 303973b4-71c0-4cfc-b7bc-92218b52509d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ebe159aed7b27bf00ef47a110de1c7ec5ee70adb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15ba71b6beb46280f1fc3ad972c6252f95842eaa
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062984"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528283"
 ---
 # <a name="accuracy-chart-sql-server-data-mining-add-ins"></a>Grafico di accuratezza (componenti aggiuntivi Data mining di SQL Server)
   ![Pulsante Grafico di accuratezza sulla barra multifunzione Data mining](media/dmc-accchart.gif "Pulsante Grafico di accuratezza sulla barra multifunzione Data mining")  
@@ -83,7 +82,7 @@ ms.locfileid: "66062984"
   
  Per ulteriori informazioni sul funzionamento di un grafico di accuratezza e sul calcolo dell'accuratezza in base alle linee di stima casuali e ideali, vedere l'argomento "Grafico di accuratezza" nella documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Convalida di modelli e utilizzo di modelli per la stima &#40;componenti aggiuntivi Data mining per Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
   

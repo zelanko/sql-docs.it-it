@@ -1,5 +1,6 @@
 ---
 title: 'Filtrare con SQL: limit-field e SQL: Limit-Value (SQLXML)'
+description: 'Informazioni su come usare le annotazioni SQL: limit-field e SQL: limit-value in SQLXML 4,0 per filtrare i dati restituiti da una query in base a un valore di limitazione.'
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,12 +20,12 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0304b2113e6112f5c2777478ae03436d9f24cfb1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8bc7636fb13674b51290417ee9eb639a6633bd3
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257414"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689404"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtrare valori tramite sql:limit-field e sql:limit-value (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "75257414"
 > [!NOTE]  
 >  Quando si usa un oggetto **SQL: limit-field** in cui la colonna SQL mappata è di tipo **real**, SQLXML 4,0 esegue la conversione sul **valore SQL: Limit-Value** come specificato negli schemi XML come valore **nvarchar** specificato. Per questa operazione è necessario che i valori del limite decimale siano specificati tramite la notazione scientifica completa. Per ulteriori informazioni, vedere l'esempio B seguente.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Per creare esempi reali utilizzando questi esempi, è necessario che siano installati gli elementi seguenti.  
   
 -   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

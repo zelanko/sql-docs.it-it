@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a6692467-da88-4312-8b03-d812f2ae5a96
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c0c52d2598c2fff79d9d7dd6cb99468871f12639
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e206bcbddb1f6db8c58ecba8c5550809f79457a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086611"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526207"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>Progettazione cubi (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Progettazione cubi** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per modificare diverse proprietà di un cubo esistente, tra cui i gruppi di misure e le misure, le dimensioni del cubo e le relazioni tra le dimensioni, i calcoli, gli indicatori di prestazioni chiave (KPI), le azioni, le partizioni, le prospettive e le traduzioni inclusi nel cubo e visualizzare i dati contenuti nel cubo. Per visualizzare la finestra di dialogo **Progettazione cubi** è possibile:  
@@ -36,13 +35,13 @@ ms.locfileid: "66086611"
 |**Utilizzo dimensioni**|Utilizzare questa scheda per creare e modificare le relazioni tra le dimensioni del cubo e i gruppi di misure inclusi nel cubo. Per altre informazioni su questa scheda, vedere [Utilizzo dimensioni &#40;Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](dimension-usage-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Calcoli**|Utilizzare questa scheda per creare e modificare calcoli, inclusi i membri calcolati, i set denominati e gli script MDX (Multidimensional Expressions) contenuti nel cubo. Per altre informazioni su questa scheda, vedere [Calcoli &#40;Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md).|  
 |**KPI**|Utilizzare questa scheda per creare e modificare gli indicatori di prestazioni chiave (KPI) inclusi nel cubo. Per altre informazioni su questa scheda, vedere [KPI &#40;Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Azioni**|Utilizzare questa scheda per creare e modificare azioni, incluse le azioni drill-through e le azioni report contenute nel cubo. Per altre informazioni su questa scheda, vedere [Azioni &#40;Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](actions-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Actions**|Utilizzare questa scheda per creare e modificare azioni, incluse le azioni drill-through e le azioni report contenute nel cubo. Per altre informazioni su questa scheda, vedere [Azioni &#40;Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](actions-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Partizioni**|Utilizzare questa scheda per creare e modificare partizioni, incluse le impostazioni di memorizzazione nella cache attiva per i gruppi di misure e le partizioni contenuti nel cubo. Per altre informazioni su questa scheda, vedere [Partizioni &#40;Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](partitions-cube-designer-analysis-services-multidimensional-data.md).|  
-|**prospettive**|Utilizzare questa scheda per creare e modificare le prospettive incluse nel cubo. Per altre informazioni su questa scheda, vedere [Prospettive &#40;Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](perspectives-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Prospettive**|Utilizzare questa scheda per creare e modificare le prospettive incluse nel cubo. Per altre informazioni su questa scheda, vedere [Prospettive &#40;Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](perspectives-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Traduzioni**|Utilizzare questa scheda per creare e modificare traduzioni per gruppi di misure, misure, dimensioni del cubo, prospettive, indicatori di prestazioni chiave (KPI), azioni, set denominati e membri calcolati inclusi nel cubo. Per altre informazioni su questa scheda, vedere [Traduzioni &#40;Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](translations-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Browser**|Utilizzare questa scheda per visualizzare dati e metadati per il cubo. Per altre informazioni su questa scheda, vedere [Esplorazione &#40;Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](browser-cube-designer-analysis-services-multidimensional-data.md).|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Oggetti Cube &#40;Analysis Services-Dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Cubi nei modelli multidimensionali](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  

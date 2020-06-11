@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 409c5076-c4c3-4f09-8f30-d3297df45f13
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a62d937a733ea41b85a83224a043ff4ad7ecdd29
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18cbc54053ddabf79ac6bfa30c8d43d05720c840
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087925"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527507"
 ---
 # <a name="classify-wizard-data-mining-add-ins-for-excel"></a>Procedura guidata Classificazione (componenti aggiuntivi Data mining per Excel)
   ![Procedura guidata Classificazione sulla barra multifunzione Data mining](media/dmc-classify.gif "Procedura guidata Classificazione sulla barra multifunzione Data mining")  
@@ -79,9 +78,9 @@ ms.locfileid: "66087925"
  [Microsoft Neural Network Algorithm Technical Reference](data-mining/microsoft-neural-network-algorithm-technical-reference.md)  
   
 ### <a name="requirements"></a>Requisiti  
- Per utilizzare la procedura guidata **classificazione** , è necessario essere connessi a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] un database di. Per informazioni su come creare una connessione, vedere [connettersi ai dati di origine &#40;client di data mining per&#41;Excel ](connect-to-source-data-data-mining-client-for-excel.md).  
+ Per utilizzare la procedura guidata **classificazione** , è necessario essere connessi a un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database di. Per informazioni su come creare una connessione, vedere [connettersi ai dati di origine &#40;client di data mining per&#41;Excel ](connect-to-source-data-data-mining-client-for-excel.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di un modello di data mining](creating-a-data-mining-model.md)  
   
   

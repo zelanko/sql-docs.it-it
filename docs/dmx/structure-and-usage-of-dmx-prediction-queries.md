@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 99d8ef98ad4e86bce0e1beff819a8d140662aaf7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 167bf7e17b172b9d3e6c58df1f52510f93a668aa
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938066"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669995"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>Struttura e utilizzo di query di stima DMX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]è possibile utilizzare la query di stima in DMX (Data Mining Extensions) per stimare i valori di colonna sconosciuti in un nuovo set di dati, in base ai risultati di un modello di data mining.  
+  In [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] è possibile utilizzare la query di stima in DMX (Data Mining Extensions) per stimare i valori di colonna sconosciuti in un nuovo set di dati, in base ai risultati di un modello di data mining.  
   
  Il tipo di query da utilizzare dipende dal tipo di informazioni che si desidera ottenere dal modello. Per creare semplici stime in tempo reale, ad esempio per sapere se il profilo di un potenziale cliente su un sito Web è quello di un acquirente di biciclette, è necessario utilizzare una query singleton. Se si desidera creare un batch di stime da un set di case contenuti in un'origine dati, utilizzare una query di stima regolare.  
   
@@ -42,11 +42,11 @@ ms.locfileid: "67938066"
   
 -   **SELECT [FLATD]**  
   
--   **TOP**  
+-   **In alto**  
   
--   **FROM***Da\<Model>* **PREDICTION JOIN**      
+-   **Da*** \< Model>* **PREDICTION JOIN**      
   
--   **IN**  
+-   **ON**  
   
 -   **IN cui**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "67938066"
   
 -   Funzioni mediante le quali viene restituita una colonna di dati.  
   
- L'elemento **from** * \<Model>* **PREDICTION JOIN** definisce i dati di origine da utilizzare per creare la stima. Per una query singleton tale origine è costituita da una serie di valori assegnati alle colonne. Per un prediction join vuoto l'origine dei dati viene lasciata vuota.  
+ L'elemento **from** * \< Model>* **PREDICTION JOIN** definisce i dati di origine da utilizzare per creare la stima. Per una query singleton tale origine è costituita da una serie di valori assegnati alle colonne. Per un prediction join vuoto l'origine dei dati viene lasciata vuota.  
   
  L'elemento **on** esegue il mapping delle colonne definite nel modello di data mining alle colonne di un set di dati esterno. Questo elemento non è necessario per la creazione di una query con prediction join vuoto o natural prediction join.  
   

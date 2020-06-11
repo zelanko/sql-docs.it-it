@@ -1,7 +1,7 @@
 ---
 title: SQL dinamico | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 56419723540114f122be2582f0de7c7e7d0c54f3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fa4ac69602761f7c2a8d28e56db76bbfc39fc753
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306689"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423255"
 ---
 # <a name="dynamic-sql"></a>SQL dinamica
 Sebbene SQL statico funzioni correttamente in molte situazioni, esiste una classe di applicazioni in cui non è possibile determinare in anticipo l'accesso ai dati. Si supponga, ad esempio, che un foglio di calcolo consenta a un utente di immettere una query, che il foglio di calcolo invia quindi al sistema DBMS per recuperare i dati. Il contenuto di questa query, ovviamente, non può essere noto al programmatore quando viene scritto il programma di foglio di calcolo.  
@@ -39,4 +39,4 @@ Sebbene SQL statico funzioni correttamente in molte situazioni, esiste una class
   
 3.  Il programma può utilizzare ripetutamente l'istruzione EXECUTE, specificando valori di parametro diversi ogni volta che viene eseguita l'istruzione dinamica.  
   
- L'esecuzione preparata non è ancora identica a SQL statico. In SQL statico, i primi quattro passaggi per l'elaborazione di un'istruzione SQL si verificano in fase di compilazione. Nell'esecuzione preparata, questi passaggi vengono eseguiti in fase di esecuzione, ma vengono eseguiti solo una volta. l'esecuzione del piano si verifica solo quando viene chiamato EXECUTE. Questo consente di eliminare alcuni svantaggi delle prestazioni inerenti all'architettura di SQL dinamico. Nella figura seguente vengono illustrate le differenze tra SQL statico, SQL dinamico con esecuzione immediata e SQL dinamico con esecuzione preparata.
+ L'esecuzione preparata non è ancora identica a SQL statico. In SQL statico, i primi quattro passaggi per l'elaborazione di un'istruzione SQL si verificano in fase di compilazione. Nell'esecuzione preparata, questi passaggi vengono eseguiti in fase di esecuzione, ma vengono eseguiti solo una volta. l'esecuzione del piano si verifica solo quando viene chiamato EXECUTE. Questo consente di eliminare alcuni svantaggi delle prestazioni inerenti all'architettura di SQL dinamico.

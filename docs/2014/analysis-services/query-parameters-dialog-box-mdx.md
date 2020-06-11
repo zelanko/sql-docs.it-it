@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e69b9542-7b54-42bf-b2de-c091e81af7ee
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c7ad326f5205aa7efc3be9aee79af3671d892130
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3be4b3cdfbaf3ed7579fab7a89cc96c5beb0d5e7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070532"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539583"
 ---
 # <a name="query-parameters-dialog-box-mdx"></a>Finestra di dialogo Parametri query (MDX)
   Usare la finestra di dialogo **Parametri query** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per aggiungere parametri alle query MDX usate per definire set, dimensioni e sottocubi. È possibile visualizzare la finestra di dialogo **Parametri query** facendo clic sull'icona **Parametri** nella finestra di dialogo **Generatore di query MDX** .  
@@ -26,7 +25,7 @@ ms.locfileid: "66070532"
  **Parametro**  
  Digitare un nome di parametro per cominciare la creazione di un nuovo parametro o modificare il nome di un parametro esistente.  
   
- **Dimension**  
+ **Dimensione**  
  Scegliere una dimensione esistente dall'elenco.  
   
  **Gerarchia**  
@@ -35,7 +34,7 @@ ms.locfileid: "66070532"
  **Più valori**  
  Descrizione  
   
- **Predefinito**  
+ **Default**  
  Indicare il valore predefinito per il parametro, se disponibile. Per impostazione predefinita, non è assegnato alcun valore.  
   
  **Altro**  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7c2073e5-b40f-4bf8-aa51-021adb08e072
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3a41d72ce6c0234e6419b55a9fe1895226d884fb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee288cccb64535454a3ccfbbc271c4919c220c65
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083489"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521220"
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>Attività e procedure relative al modello di data mining
   La scheda **Modelli di data mining** di Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] consente di gestire ed elaborare i modelli di data mining in una struttura di data mining.  
@@ -55,9 +54,9 @@ ms.locfileid: "66083489"
   
 -   [Creare una dimensione di data mining](create-a-data-mining-dimension.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Attività e procedure relative alla struttura di data mining](mining-structure-tasks-and-how-tos.md)   
  [Modelli di data mining &#40;Analysis Services-&#41;di data mining](mining-models-analysis-services-data-mining.md)   
- [Concetti di data mining](data-mining-concepts.md)  
+ [Concetti relativi al data mining](data-mining-concepts.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: Esecuzione di modelli che contengono query XPath (SQLXMLOLEDB)
+description: Consente di visualizzare un esempio di applicazione ADO che utilizza il provider SQLXMLOLEDB per eseguire un modello contenente query XPath.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2da1b575b2df79321c87cbd88542c1210c9310b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5d746b898aaf0ea050409585b88e8c6861b4fa2e
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257295"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215643"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>Esecuzione di modelli che contengono query XPath (provider SQLXMLOLEDB)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "75257295"
   
 -   Schema di mapping  
   
- In questa applicazione ADO di esempio, un modello XML costituito da una query XPath (radice) viene specificato sullo schema di mapping XSD (schema. Xml) descritto in esecuzione di [query XPath &#40;provider SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).  
+ In questa applicazione ADO di esempio, un modello XML costituito da una query XPath (radice) viene specificato sullo schema di mapping XSD (MySchema.xml) descritto in [esecuzione di query xpath &#40;provider SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).  
   
  La proprietà Schema di mapping fornisce lo schema di mapping XSD sul quale viene eseguita la query XPath. La proprietà percorso di base fornisce il percorso del file allo schema di mapping.  
   

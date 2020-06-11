@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3e8fea8d2a7b92ccca9b139b62d429fafe3a9bc4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e52fae59d05447ef28eac7b9be408279ffcefb96
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083371"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521074"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>Sintassi ed esempi di filtri dei modelli (Analysis Services – Data mining)
   In questa sezione vengono fornite informazioni dettagliate sulla sintassi dei filtri dei modelli, insieme alle espressioni di esempio.  
@@ -240,7 +239,7 @@ FILTER (EXISTS (Products))
 ###  <a name="example-7-complex-filter-combinations"></a><a name="bkmk_Ex7"></a> Esempio 7: Combinazioni di filtri complessi  
  Lo scenario per questo modello è simile a quello dell'esempio 4, ma è molto più complesso. La tabella nidificata, **ProductsOnSale**, ha la condizione `(OnSale)` di filtro che indica che il valore di **OnSale** deve essere `true` per il prodotto elencato in **ProductName**. In questo caso, **OnSale** è una colonna della struttura.  
   
- La seconda parte del filtro, per **ProductsNotOnSale**, ripete questa sintassi, ma filtra i prodotti per i quali il valore di **OnSale** è `not true``(!OnSale)`.  
+ La seconda parte del filtro, per **ProductsNotOnSale**, ripete questa sintassi, ma filtra i prodotti per i quali il valore di **OnSale** è `not true``(!OnSale)` .  
   
  Infine, le condizioni vengono combinate e viene aggiunta un'ulteriore restrizione alla tabella del case. Il risultato è la stima degli acquisti di prodotti nell'elenco **ProductsNotOnSale** , in base ai case inclusi nell'elenco **ProductsOnSale** , per tutti i clienti di età superiore ai 25 anni.  
   
@@ -303,7 +302,7 @@ FILTER (EXISTS (Products))
   
  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Filtri per i modelli di data mining &#40;Analysis Services-&#41;di data mining](mining-models-analysis-services-data-mining.md)   
  [Test e convalida &#40;Data mining&#41;](testing-and-validation-data-mining.md)  
   

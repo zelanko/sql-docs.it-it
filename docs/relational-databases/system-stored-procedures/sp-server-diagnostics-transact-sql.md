@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8d6d418bcdefbb3977a98f04743b7e1b2a58bf54
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 044b5e79ba558dd5bb38331d9b2a07410a3a50de
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82810564"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84294008"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,9 +58,9 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 |Colonna|Tipo di dati|Descrizione|  
 |------------|---------------|-----------------|  
-|**creation_time**|**datetime**|Indica il timestamp della creazione della riga. Ogni riga di un singolo set di righe dispone dello stesso timestamp.|  
+|**create_time**|**datetime**|Indica il timestamp della creazione della riga. Ogni riga di un singolo set di righe dispone dello stesso timestamp.|  
 |**component_type**|**sysname**|Indica se la riga contiene informazioni per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componente a livello di istanza o per un gruppo di disponibilità always on:<br /><br /> instance<br /><br /> Always On: AvailabilityGroup|  
-|**component_name**|**sysname**|Indica il nome del componente o il nome del gruppo di disponibilità:<br /><br /> sistema<br /><br /> risorse<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> eventi<br /><br /> *\<nome del gruppo di disponibilità>*|  
+|**component_name**|**sysname**|Indica il nome del componente o il nome del gruppo di disponibilità:<br /><br /> sistema<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> eventi<br /><br /> *\<name of the availability group>*|  
 |**state**|**int**|Indica lo stato di integrità del componente:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|Descrive la colonna contenente gli stati. Le descrizioni che corrispondono ai valori nella colonna contenente gli stati sono:<br /><br /> 0: Sconosciuto<br /><br /> 1: Pulisci<br /><br /> 2: avviso<br /><br /> 3: errore|  
 |**data**|**varchar (max)**|Indica dati specifici del componente.|  
@@ -77,7 +77,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **eventi**: raccoglie dati e superfici attraverso la stored procedure sugli errori e gli eventi di interesse registrati dal server, inclusi i dettagli sulle eccezioni del buffer circolare, gli eventi del buffer circolare sul broker di memoria, la memoria insufficiente, il monitoraggio dell'utilità di pianificazione, il pool di buffer, gli spinlock, la sicurezza e la connettività. Gli eventi avranno sempre 0 come stato.  
   
--   ** \< nome del gruppo di disponibilità>**: raccoglie i dati per il gruppo di disponibilità specificato (se component_type = "always on: AvailabilityGroup").  
+-   **\<name of the availability group>**: Raccoglie i dati per il gruppo di disponibilità specificato (se component_type = "Always On: AvailabilityGroup").  
   
 ## <a name="remarks"></a>Commenti  
 Da una prospettiva di errore, i componenti di elaborazione di query, risorsa e sistema verranno utilizzati per il rilevamento dell'errore mentre i componenti di eventi e io_subsystem verranno utilizzati solo per gli scopi diagnostici.  
@@ -87,7 +87,7 @@ Nella tabella seguente viene eseguito il mapping dei componenti agli stati di in
 |Componenti|Pulito (1)|Avviso (2)|Errore (3)|Sconosciuto (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |sistema|x|x|x||  
-|risorse|x|x|x||  
+|resource|x|x|x||  
 |query_processing|x|x|x||  
 |io_subsystem|x|x|||  
 |eventi||||x|  

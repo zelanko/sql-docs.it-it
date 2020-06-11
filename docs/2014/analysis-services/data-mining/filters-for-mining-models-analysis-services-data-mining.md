@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 44e60d60764396361122ed16a4e34f76fc3a6ab6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a7695bef91ace5eb6ff8d642c51b379343fb0b1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084432"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522348"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filtri per i modelli di data mining (Analysis Services - Data mining)
   I filtri dei modelli basati sui dati consentono di creare modelli di data mining che utilizzano subset di dati in una struttura di data mining. I filtri garantiscono grande flessibilità per la progettazione di strutture di data mining e origini dati, poiché è possibile creare una sola struttura di data mining sulla base di una vista origine dati completa. Sarà quindi possibile creare filtri per utilizzare solo una parte dei dati per il training e il testing di una varietà di modelli, anziché compilare una struttura diversa e i relativi modelli per ciascun subset di dati.  
@@ -43,7 +42,7 @@ ms.locfileid: "66084432"
   
 -   Usando la scheda **Modelli di data mining** nella Progettazione modelli di data mining per compilare condizioni con l'aiuto delle finestre di dialogo dell'editor filtri.  
   
--   Digitando un'espressione di filtro `Filter` direttamente nella proprietà del modello di data mining.  
+-   Digitando un'espressione di filtro direttamente nella `Filter` proprietà del modello di data mining.  
   
 -   Impostando a livello di codice delle condizioni di filtro in un modello tramite AMO.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "66084432"
 ### <a name="how-can-i-tell-whether-a-filter-is-being-used"></a>Com'è possibile stabilire se viene utilizzato un filtro?  
  Esistono più modalità per determinare se è stato applicato un filtro a un modello:  
   
--   Nella finestra di progettazione fare clic sulla scheda **modelli di data mining** , aprire **Proprietà**e `Filter` visualizzare la proprietà del modello di data mining.  
+-   Nella finestra di progettazione fare clic sulla scheda **modelli di data mining** , aprire **Proprietà**e visualizzare la `Filter` proprietà del modello di data mining.  
   
 -   La DMV, DMSCHEMA_MINING_MODELS, restituisce una colonna che contiene il testo del filtro. È possibile utilizzare la query seguente in una DMV per restituire i nomi di modelli e i relativi filtri:  
   
@@ -120,7 +119,7 @@ ms.locfileid: "66084432"
   
  Per informazioni sull'uso di filtri dei modelli quando si esegue il test di un modello di data mining, vedere [Scegliere un tipo di grafico di accuratezza e impostare le opzioni del grafico](choose-an-accuracy-chart-type-and-set-chart-options.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Sintassi del filtro del modello ed esempi &#40;Analysis Services-&#41;di data mining](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
  [Test e convalida &#40;Data mining&#41;](testing-and-validation-data-mining.md)  
   

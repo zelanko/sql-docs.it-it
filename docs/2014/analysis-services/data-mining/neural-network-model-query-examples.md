@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3a249a83aba62c7881be024caa3931cb5ad07204
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7154ce0ad66346634225734fe829c36e7bf3ad58
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083289"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520898"
 ---
 # <a name="neural-network-model-query-examples"></a>Esempi di query sul modello di rete neurale
   Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto che consente di ottenere dettagli sui criteri individuati durante l'analisi oppure una query di stima in cui vengono utilizzati i criteri presenti nel modello per eseguire stime relative a nuovi dati. Una query sul contenuto per un modello di rete neurale potrebbe ad esempio recuperare metadati del modello, quale il numero di livelli nascosti. In alternativa, una query di stima potrebbe suggerire classificazioni basate su un input e, facoltativamente, indicare le probabilità per ogni classificazione.  
@@ -181,7 +180,7 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
 ###  <a name="sample-query-5-creating-a-singleton-prediction"></a><a name="bkmk_Query5"></a> Esempio di query 5: Creazione di una stima singleton  
  Il modo più semplice per compilare una query di stima su un modello di rete neurale consiste nell'utilizzare il generatore delle query di stima, disponibile nella scheda **Stima modello di data mining** di Progettazione modelli di data mining sia in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , sia in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. È possibile esplorare il modello nel Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network per filtrare gli attributi di interesse e visualizzare le tendenze, quindi passare alla scheda **Stima modello di data mining** per creare una query e stimare i nuovi valori per tali tendenze.  
   
- È ad esempio possibile esplorare il modello Call Center per visualizzare le correlazioni tra i volumi degli ordini e altri attributi. A tale scopo, aprire il modello nel Visualizzatore e in **input**selezionare ** \<tutti>**.  Per **Output**selezionare quindi **Number of Orders**. In **Valore 1**selezionare l'intervallo che rappresenta il maggior numero di ordini e in **Valore 2**selezionare l'intervallo che rappresenta il minor numero di ordini. È possibile visualizzare rapidamente tutti gli attributi correlati dal modello con il volume degli ordini.  
+ È ad esempio possibile esplorare il modello Call Center per visualizzare le correlazioni tra i volumi degli ordini e altri attributi. A tale scopo, aprire il modello nel Visualizzatore e in **input**selezionare **\<All>** .  Per **Output**selezionare quindi **Number of Orders**. In **Valore 1**selezionare l'intervallo che rappresenta il maggior numero di ordini e in **Valore 2**selezionare l'intervallo che rappresenta il minor numero di ordini. È possibile visualizzare rapidamente tutti gli attributi correlati dal modello con il volume degli ordini.  
   
  Esplorando i risultati nel visualizzatore, è possibile notare che in alcuni giorni della settimana i volumi degli ordini sono bassi e che sembra esserci una correlazione tra un aumento delle vendite e un aumento nel numero di operatori. È quindi possibile utilizzare una query di stima sul modello per testare un'ipotesi di simulazione e verificare se un aumento del numero degli operatori del livello 2 in un giorno in cui i volumi di ordini sono bassi comporta un aumento anche degli ordini. A questo scopo, creare una query simile alla seguente:  
   
@@ -210,7 +209,7 @@ NATURAL PREDICTION JOIN
   
 |||  
 |-|-|  
-|Funzione di stima|Uso|  
+|Funzione di stima|Utilizzo|  
 |[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Viene determinato se un nodo è figlio di un altro nodo nel grafico della rete neurale.|  
 |[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|Viene restituita la probabilità ponderata.|  
 |[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Viene restituita una tabella di valori correlati ai valori stimati correnti.|  
@@ -221,7 +220,7 @@ NATURAL PREDICTION JOIN
   
  Per la sintassi di funzioni specifiche, vedere [Guida di riferimento alle funzioni DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm-technical-reference.md)   
  [Contenuto del modello di data mining per i modelli di rete neurale &#40;Analysis Services-Data mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   

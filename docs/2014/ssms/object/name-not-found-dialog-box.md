@@ -14,17 +14,17 @@ ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9274157d5a57e04b03e1a9c71d29c7f46e0a1dec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4580b41b9854b749f4ed6f66d2c7bea77647cef1
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62999549"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859213"
 ---
 # <a name="name-not-found-dialog-box"></a>Nome non trovato - finestra di dialogo
   Non è possibile trovare uno o più oggetti specificati nella finestra di dialogo. Selezionare un'opzione per continuare.  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco elementi dell'interfaccia utente  
  **Correggere le informazioni e ripetere la ricerca**  
  Consente di usare i campi **Selezionare questo tipo di oggetto**, **Tipo oggetto**e **Immettere il nome dell'oggetto** .  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62999549"
  **Immettere il nome dell'oggetto**  
  Contiene il nome dell'oggetto non trovato. Correggere il nome dell'oggetto o digitare un nuovo nome di oggetto.  
   
- **Remove***Rimuovi\<nome oggetto>* **dalla selezione**      
+ **Rimuovi*** \< nome oggetto>* **dalla selezione**      
  Selezionare questa opzione per chiudere la finestra di dialogo **Nome non trovato** e rimuovere l'elemento dalla finestra di dialogo **Seleziona oggetti** .  
   
   

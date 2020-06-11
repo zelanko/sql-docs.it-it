@@ -1,5 +1,6 @@
 ---
 title: Sequence e QName (XQuery) | Microsoft Docs
+description: Informazioni sui concetti fondamentali delle sequenze e QName in XQuery.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c71a7139c3adb354923b3c953b367ab506f30545
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 017c2289864b8d2d475bea63a5828d37543b7292
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80380782"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84305800"
 ---
 # <a name="sequence-and-qnames-xquery"></a>Sequenza e QName (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -111,7 +112,7 @@ SELECT @x.query('/Root/a');
   
  Nell'espressione (`/Root/a`), `Root` e `a` sono QName.  
   
- Nell'esempio seguente viene specificata una query su una colonna **XML** tipizzata. La query esegue l'iterazione \<di tutti i passaggi> gli elementi nella prima posizione WorkCenter.  
+ Nell'esempio seguente viene specificata una query su una colonna **XML** tipizzata. La query esegue l'iterazione su tutti \<step> gli elementi in corrispondenza della prima posizione WorkCenter.  
   
 ```  
 SELECT Instructions.query('  
@@ -146,7 +147,7 @@ WHERE ProductModelID=7;
  Ogni database creato ha la raccolta **sys** XML Schema. Questi schemi sono riservati e pertanto è possibile accedervi da qualsiasi altra raccolta di XML Schema creata dall'utente.  
   
 > [!NOTE]  
->  Questa implementazione non supporta il `local` prefisso, come descritto nella specifica XQuery in. http://www.w3.org/2004/07/xquery-local-functions  
+>  Questa implementazione non supporta il `local` prefisso, come descritto nella specifica XQuery in http://www.w3.org/2004/07/xquery-local-functions .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Nozioni fondamentali su XQuery](../xquery/xquery-basics.md)  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c5194619-8b31-42be-a95f-585711462945
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 030ebd318b310b2c7ca4f85d1f736d168a7adda8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa158dba22938d347030ada0c9b2ea8e589cab5d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083508"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521233"
 ---
 # <a name="mining-model-properties"></a>Proprietà dei modelli di data mining
   I modelli di data mining dispongono dei tipi seguenti di proprietà:  
@@ -56,9 +55,9 @@ ms.locfileid: "66083508"
 |**Nome**|Imposta il nome della colonna del modello di data mining. È possibile digitare un nuovo nome per fornire un alias per la colonna del modello di data mining.|  
 |**ModelingFlags**|Imposta i flag specifici dell'algoritmo per la colonna.|  
 |**SourceColumnID**|Indica il nome della colonna della struttura di data mining su cui si basa la colonna del modello.<br /><br /> Questa proprietà è di sola lettura.|  
-|**Uso**|Imposta la modalità di utilizzo della colonna nel modello di data mining.|  
+|**Utilizzo**|Imposta la modalità di utilizzo della colonna nel modello di data mining.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Colonne del modello di data mining](mining-model-columns.md)   
  [Strutture di data mining &#40;Analysis Services-&#41;di data mining](mining-structures-analysis-services-data-mining.md)   
  [Attività e procedure relative al modello di data mining](mining-model-tasks-and-how-tos.md)   

@@ -1,5 +1,6 @@
 ---
 title: Mapping di tipi di dati Oracle e SQL Server (OracleToSQL) | Microsoft Docs
+description: Informazioni su come personalizzare SSMA per i mapping Oracle tra i tipi di dati Oracle e SQL Server o accettare il valore predefinito.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,15 +13,15 @@ ms.assetid: 05da1495-63b9-47b7-86e2-6746394a2d8a
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: e5f14f79c355317f5e5d7a047b2d2c1ca71a4acb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8a9cb39213ed2809b7074a474edf5e4e20bd9122
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262964"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293838"
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Mapping di tipi di dati Oracle e SQL Server (OracleToSQL)
-I tipi di database Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono diversi da quelli dei tipi di database. Quando si convertono oggetti di database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle in oggetti, è necessario specificare come eseguire il mapping dei tipi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di dati da Oracle a. È possibile accettare i mapping dei tipi di dati predefiniti oppure personalizzare i mapping, come illustrato nelle sezioni seguenti.  
+I tipi di database Oracle sono diversi da quelli dei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di database. Quando si convertono oggetti di database Oracle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti, è necessario specificare come eseguire il mapping dei tipi di dati da Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È possibile accettare i mapping dei tipi di dati predefiniti oppure personalizzare i mapping, come illustrato nelle sezioni seguenti.  
   
 ## <a name="default-mappings"></a>Mapping predefiniti  
 SSMA dispone di un set predefinito di mapping dei tipi di dati. Per l'elenco dei mapping predefiniti, vedere [Impostazioni progetto &#40;mapping dei tipi&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md).  
@@ -51,7 +52,7 @@ Nella procedura seguente viene illustrato come eseguire il mapping dei tipi di d
   
 2.  Per aggiungere un nuovo mapping, eseguire le operazioni seguenti:  
   
-    1.  Fare clic su **Aggiungi**.  
+    1.  Scegliere **Aggiungi**.  
   
     2.  In **tipo di origine**selezionare il tipo di dati Oracle da mappare.  
   
@@ -59,7 +60,7 @@ Nella procedura seguente viene illustrato come eseguire il mapping dei tipi di d
   
         In questo modo è possibile personalizzare il mapping dei dati per valori più piccoli e più grandi dello stesso tipo di dati.  
   
-    4.  In **tipo di destinazione**selezionare il tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di dati di destinazione.  
+    4.  In **tipo di destinazione**selezionare il tipo di dati di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
         Alcuni tipi richiedono una lunghezza del tipo di dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nella casella **Sostituisci con** .  
   
@@ -67,7 +68,7 @@ Nella procedura seguente viene illustrato come eseguire il mapping dei tipi di d
   
 3.  Per modificare un mapping dei tipi di dati, eseguire le operazioni seguenti:  
   
-    1.  Fare clic su **Edit**.  
+    1.  Fare clic su **Modifica**.  
   
     2.  In **tipo di origine**selezionare il tipo di dati Oracle da mappare.  
   
@@ -75,7 +76,7 @@ Nella procedura seguente viene illustrato come eseguire il mapping dei tipi di d
   
         In questo modo è possibile personalizzare il mapping dei dati per valori più piccoli e più grandi dello stesso tipo di dati.  
   
-    4.  In **tipo di destinazione**selezionare il tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di dati di destinazione.  
+    4.  In **tipo di destinazione**selezionare il tipo di dati di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
         Alcuni tipi richiedono una lunghezza del tipo di dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nella casella **Sostituisci con** , quindi[!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

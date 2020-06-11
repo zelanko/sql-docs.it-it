@@ -1,24 +1,24 @@
 ---
-title: '&lt;query&gt; sui dati di origine | Microsoft Docs'
+title: '&lt;query sui dati di origine &gt; | Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e523d33da502a971b950e33ec0bd935149ed26f7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 15767abbbffd7ede7d7ae252c7e84589abad1a98
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892339"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670013"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;query sui dati di origine&gt;
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Per eseguire il training di un modello di data mining e creare stime da un modello di data mining, è necessario accedere ai dati [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] esterni al database. Per definire questi \<dati esterni, è possibile utilizzare la clausola> di query sui dati di origine in DMX (Data Mining Extensions). L'istruzione [Insert into &#40;DMX&#41;](../dmx/insert-into-dmx.md), [Select from &#60;Model&#62; prediction join &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)e [Select from natural prediction join](../dmx/select-from-model-prediction-join-dmx.md) all use ** \<source data query>**.  
+  Per eseguire il training di un modello di data mining e creare stime da un modello di data mining, è necessario accedere ai dati esterni al [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. \<Per definire questi dati esterni, è possibile utilizzare la clausola> di query sui dati di origine in DMX (Data Mining Extensions). L'istruzione [INSERT INTO &#40;dmx&#41;](../dmx/insert-into-dmx.md), [Select from &#60;Model&#62; prediction join &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)e [Select from natural prediction join](../dmx/select-from-model-prediction-join-dmx.md) all use ** \< source data query>**.  
   
 ## <a name="query-types"></a>Tipi di query  
  I tre modi più comuni per specificare i dati di origine sono i seguenti:  

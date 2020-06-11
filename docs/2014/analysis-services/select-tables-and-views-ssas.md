@@ -12,12 +12,12 @@ ms.assetid: 5e8121cc-03f0-4168-98cf-63c5c032bb0b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8ff8ada00af8b70659a19f863a52a5f1005e20b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf29721888fb672c242baa8a5984da4de40cd020
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069235"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858138"
 ---
 # <a name="select-tables-and-views-ssas"></a>Selezione tabelle e viste (SSAS)
   Questa pagina dell' **Importazione guidata tabella** consente di selezionare le tabelle e le viste da cui importare dati. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
@@ -26,7 +26,7 @@ ms.locfileid: "66069235"
   
  Per origini dati in cui viene utilizzata l'autenticazione di Windows, le credenziali dell'utente corrente vengono utilizzate per recuperare le tabelle e le viste nella finestra di dialogo Selezione tabelle e viste. Per altre origini dati, vengono utilizzate le credenziali fornite nella stringa di connessione per il recupero dei dati.  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco elementi dell'interfaccia utente  
  **Server**  
  Viene visualizzato il server al quale si è connessi.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66069235"
  **Tabella di origine**  
  Specifica il nome della tabella di origine in base al tipo di origine dati.  
   
- **Schema**  
+ **SCHEMA**  
  Specifica lo schema in cui è contenuta la tabella di origine. A seconda del tipo di database, un schema funziona come un contenitore per altri oggetti, ad esempio tabelle, nonché indicare la proprietà di tali oggetti.  
   
  **Nome descrittivo**  

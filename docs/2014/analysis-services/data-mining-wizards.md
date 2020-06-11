@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: f949a5f0-d8f5-4da1-a9f8-200b918e29ff
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7db22d59ffa9ce2fcb8b4875bd1dafcf7018e567
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ea224a6c0d435b0d4818a1d86fa2c084ac74b09
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086311"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525809"
 ---
 # <a name="data-mining-wizards"></a>Procedure guidate di data mining
-  [!INCLUDE[msCoName](../includes/msconame-md.md)]fornisce le procedure guidate per [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] l'utilizzo in e [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornisce le procedure guidate per l'utilizzo in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .  
   
  Nella tabella seguente vengono descritte le procedure guidate che è possibile utilizzare per creare origini, viste e oggetti di data mining.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "66086311"
   
  Per informazioni sulle procedure guidate che consentono di progettare e usare dati multidimensionali, vedere [Procedure guidate di Analysis Services &#40;Dati multidimensionali&#41;](analysis-services-wizards-multidimensional-data.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Strumenti di data mining](data-mining/data-mining-tools.md)   
  [Esercitazione di base sul data mining](../../2014/tutorials/basic-data-mining-tutorial.md)   
  [Creare una struttura di data mining OLAP](data-mining/create-an-olap-mining-structure.md)   

@@ -8,13 +8,12 @@ ms.technology: analysis-services
 ms.topic: reference
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8674346aa876cb0e94adfcfefc34569a01005008
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5695f3ec122ff45461208be17094dbacfda352a6
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62731964"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528650"
 ---
 # <a name="analysis-services-developers-guide"></a>Guida per gli sviluppatori di Analysis Services
     
@@ -23,7 +22,7 @@ ms.locfileid: "62731964"
   
 - [Programmazione di data mining](data-mining-programming.md)  
   
-- [Programmazione del modello multidimensionale](../multidimensional-models/multidimensional-model-programming.md)  
+- [Programmazione di modelli multidimensionali](../multidimensional-models/multidimensional-model-programming.md)  
   
 - [Set di righe dello schema di Analysis Services](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)  
   
