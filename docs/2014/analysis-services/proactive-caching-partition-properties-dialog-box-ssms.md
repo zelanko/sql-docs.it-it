@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ecba72a3-703f-4ede-9d85-9a3318a749e5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cb486ec383ab6fa1684bd9d0e9b8f6bc67631eee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d8fae25590d8da3f54ed94bc9d106b44a0aa4d85
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070708"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540213"
 ---
 # <a name="proactive-caching-partition-properties-dialog-box-ssms"></a>Memorizzazione nella cache attiva (finestra di dialogo Proprietà partizione) (SSMS)
   La pagina **Memorizzazione attiva nella cache** della finestra di dialogo **Proprietà partizione** in SQL Server Management Studio consente di impostare le proprietà di archiviazione e memorizzazione attiva nella cache di una partizione in un gruppo di misure per un cubo in un database di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -45,7 +44,7 @@ ms.locfileid: "66070708"
  **Opzioni**  
  Fare clic su questo pulsante per visualizzare la finestra di dialogo **Opzioni di archiviazione** e impostare in modo esplicito la modalità di archiviazione, la memorizzazione nella cache attiva e le opzioni di notifica. Per altre informazioni sulla finestra di dialogo **Opzioni di archiviazione**, vedere [Finestra di dialogo Opzioni di archiviazione &#40;Analysis Services - Dati multidimensionali&#41;](storage-options-dialog-box-analysis-services-multidimensional-data.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Caching attivo &#40;partizioni&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
  [Finestra di dialogo Proprietà partizione &#40;SSMS&#41;](partition-properties-dialog-box-ssms.md)   
  [Selezione &#40;finestra di dialogo Proprietà partizione&#41; &#40;SSMS&#41;](selection-partition-properties-dialog-box-ssms.md)   

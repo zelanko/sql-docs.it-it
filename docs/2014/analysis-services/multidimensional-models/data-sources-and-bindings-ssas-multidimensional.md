@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b909423c431507d7709d814bfa4061eaf0a0e342
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2e3631310e55089647559191dbefed67778d0241
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076075"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547193"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Origini dati e associazioni (SSAS - multidimensionale)
   È possibile associare cubi, dimensioni e altri oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a un'origine dati. Un'origine dati può essere rappresentata da uno dei seguenti oggetti:  
@@ -61,7 +60,7 @@ ms.locfileid: "66076075"
 |BigInt|Intero con segno a 64 bit. Per questo tipo di dati viene eseguito il mapping al tipo di dati Int64 in Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_I8 in OLE DB.|  
 |Bool|Valore booleano. Per questo tipo di dati viene eseguito il mapping al tipo di dati Boolean in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_BOOL in OLE DB.|  
 |Valuta|Valore di valuta compreso nell'intervallo tra -2 63 (o -922337.203.685.477,5808) e 2 63 -1 (o +922.337.203.685.477,5807) con un'approssimazione pari a dieci millesimi di unità di valuta. Per questo tipo di dati viene eseguito il mapping al tipo di dati Decimal in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_CY in OLE DB.|  
-|Date|Dati di data, archiviati come numero a virgola mobile a precisione doppia. La parte intera è il numero di giorni a partire dal 30 dicembre 1899 mentre la parte frazionaria rappresenta una frazione del giorno. Per questo tipo di dati viene eseguito il mapping al tipo di dati DateTime in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_DATE in OLE DB.|  
+|Data|Dati di data, archiviati come numero a virgola mobile a precisione doppia. La parte intera è il numero di giorni a partire dal 30 dicembre 1899 mentre la parte frazionaria rappresenta una frazione del giorno. Per questo tipo di dati viene eseguito il mapping al tipo di dati DateTime in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_DATE in OLE DB.|  
 |Double|Numero a virgola mobile a precisione doppia compreso tra -1.79E +308 e 1.79E +308. Per questo tipo di dati viene eseguito il mapping al tipo di dati Double in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_R8 in OLE DB.|  
 |Integer|Intero con segno a 32 bit. Per questo tipo di dati viene eseguito il mapping al tipo di dati Int32 in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_I4 in OLE DB.|  
 |Single|Numero a virgola mobile a precisione singola compreso tra -3.40E +38 e 3.40E +38. Per questo tipo di dati viene eseguito il mapping al tipo di dati Single in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_R4 in OLE DB.|  
@@ -168,7 +167,7 @@ ms.locfileid: "66076075"
   
  Le associazioni out-of-line vengono specificate includendo l'oggetto raccolta `Bindings` facoltativo nel comando di elaborazione. La raccolta `Bindings` facoltativa contiene i seguenti elementi.  
   
-|Proprietà|Cardinalità|Type|Descrizione|  
+|Proprietà|Cardinalità|Tipo|Descrizione|  
 |--------------|-----------------|----------|-----------------|  
 |`Binding`|0-n|`Binding`|Fornisce una raccolta di nuove associazioni.|  
 |`DataSource`|0-1|`DataSource`|Sostituisce `DataSource` dal server da utilizzare.|  
@@ -177,9 +176,9 @@ ms.locfileid: "66076075"
  Tutti gli elementi che fanno riferimento alle associazioni out-of-line sono facoltativi. Per qualsiasi elemento non specificato, ASSL utilizza la specifica contenuta nell'istruzione DDL dell'oggetto persistente. La specifica di `DataSource` o `DataSourceView` nel comando `Process` è facoltativa. Se `DataSource` o `DataSourceView` è specificato, la relativa istanza non viene creata. Gli oggetti non risultano inoltre persistenti una volta completato il comando `Process`.  
   
 ### <a name="definition-of-the-out-of-line-binding-type"></a>Definizione del tipo di associazione out-of-line  
- Nella raccolta `Bindings` out-of-line, ASSL supporta una raccolta di associazioni per più oggetti, una per ciascuna proprietà `Binding`. Ciascuna proprietà `Binding` ha un riferimento all'oggetto esteso, che è simile al riferimento all'oggetto, ma può riferirsi anche a oggetti minori, ad esempio attributi della dimensione e attributi del gruppo di misure. Questo oggetto prende il formato flat tipico dell' `Object` elemento nei `Process` comandi, ad eccezione del fatto \<che l' *oggetto*>\<*/Object*> tag non sono presenti.  
+ Nella raccolta `Bindings` out-of-line, ASSL supporta una raccolta di associazioni per più oggetti, una per ciascuna proprietà `Binding`. Ciascuna proprietà `Binding` ha un riferimento all'oggetto esteso, che è simile al riferimento all'oggetto, ma può riferirsi anche a oggetti minori, ad esempio attributi della dimensione e attributi del gruppo di misure. Questo oggetto prende il formato flat tipico dell' `Object` elemento nei `Process` comandi, ad eccezione del fatto che i \<*Object*> \<*/Object*> tag non sono presenti.  
   
- Ogni oggetto per il quale è specificata l'associazione è identificato da un elemento XML dell' \< *oggetto* form>ID (ad esempio, `DimensionID`). Dopo aver identificato l'oggetto nel modo più specifico possibile con l' \< *oggetto* form>ID, è possibile identificare l'elemento per il quale viene specificata l'associazione, in genere `Source`. Una situazione comune da tenere in considerazione è quella in cui `Source` è una proprietà in `DataItem`, come nel caso delle associazioni di colonna in un attributo. In questo caso, non specificare il tag `DataItem`. Specificare solo la proprietà `Source`, come se si trovasse direttamente nella colonna da associare.  
+ Ogni oggetto per il quale è specificata l'associazione è identificato da un elemento XML con l' \<*object*> ID del form (ad esempio, `DimensionID` ). Dopo aver identificato l'oggetto nel modo più specifico possibile con l'ID del modulo, è possibile \<*object*> identificare l'elemento per il quale viene specificata l'associazione, in genere `Source` . Una situazione comune da tenere in considerazione è quella in cui `Source` è una proprietà in `DataItem`, come nel caso delle associazioni di colonna in un attributo. In questo caso, non specificare il tag `DataItem`. Specificare solo la proprietà `Source`, come se si trovasse direttamente nella colonna da associare.  
   
  L'identificazione di `KeyColumns` viene effettuata in base all'ordinamento nella raccolta `KeyColumns`. Non è possibile ad esempio specificare solo la prima e la terza colonna chiave di un attributo, perché non è possibile indicare di ignorare la seconda colonna chiave. Tutte le colonne chiave devono essere presenti nell'associazione out-of-line per un attributo della dimensione.  
   

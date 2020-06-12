@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a9602174-b7e2-4e16-8ded-dfd8eb9264d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 89ba538c3ac3dfd7a262e4ae17cb9ddd6cf7265c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fbc9c9b7a09b0d7f06db624be9d94978ab996621
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082606"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529017"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>Finestra di dialogo Filtro dei set di dati o Filtro modello
   Questa finestra di dialogo consente di compilare i filtri che è possibile applicare a un set di dati.  Il set di dati può essere un set esterno utilizzato per eseguire il test o un set di dati di case per un modello di data mining. Il nome della finestra di dialogo varia a seconda che il filtro venga utilizzato per un set di dati esterno o per un modello di data mining.  
@@ -37,7 +36,7 @@ ms.locfileid: "66082606"
  **Condizioni**  
  Consente di visualizzare nomi di tabelle seguiti da nomi di colonne con condizioni.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**E/o**|Scegliere un operatore per eseguire il join di più condizioni.|  
 |**Colonne struttura di data mining**|Fare clic per selezionare un'origine dati, quindi fare clic sulle righe successive della griglia per aggiungere le colonne dall'origine dati.<br /><br /> La prima riga nella griglia specifica la vista origine dati. Dopo avere selezionato una vista origine dati, vengono visualizzate un'icona di tabella in **Colonna struttura di data mining** e la combinazione di tutti i criteri definiti per quell'origine dati nel campo **Valore** .<br /><br /> Dopo avere selezionato un'origine dati, nella casella **Colonna struttura di data mining** diventa disponibile un elenco a discesa di singole colonne dell'origine dati.|  
@@ -56,7 +55,7 @@ ms.locfileid: "66082606"
  **Annulla modifiche query**  
  Consente di ripristinare la griglia allo stato precedente e annullare qualsiasi modifica apportata all'espressione di filtro.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Attività e procedure di test e convalida &#40;di data mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [Progettazione Grafico accuratezza modello di data mining &#40;&#41;di data mining](mining-accuracy-chart-designer-data-mining.md)  
   

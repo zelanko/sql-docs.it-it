@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01b54e6f-66e5-485c-acaa-3f9aa53119c9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9f042a937b1ce2a51bc6d8dbb50b8fc39c4fb78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18c879aaaa5bc63b4312f0461404e830dcbc2029
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175630"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547693"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2010"></a>Aggiornamento di dati PowerPivot con SharePoint 2010
   L'aggiornamento dati [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] è un'operazione lato server pianificata che esegue query sulle origini dati esterne per aggiornare i dati [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] in una cartella di lavoro di Excel archiviata in una raccolta contenuto.
@@ -75,7 +74,7 @@ ms.locfileid: "78175630"
 
 5.  In **database**specificare il SQL Server istanza di che ospiterà il database per questa applicazione di servizio. Il valore predefinito è l'istanza del motore di database di SQL Server che ospita i database di configurazione della farm.
 
-6.  In **nome database**immettere il nome del database dell'applicazione di servizio. Il valore predefinito è Secure_Store_Service_DB_\<> GUID. Il nome predefinito corrisponde al nome predefinito dell'applicazione di servizio. Se è stato immesso un nome univoco per l'applicazione del servizio, seguire una convenzione di denominazione simile per il nome del database in modo da poterli gestire insieme.
+6.  In **nome database**immettere il nome del database dell'applicazione di servizio. Il valore predefinito è Secure_Store_Service_DB_ \<guid> . Il nome predefinito corrisponde al nome predefinito dell'applicazione di servizio. Se è stato immesso un nome univoco per l'applicazione del servizio, seguire una convenzione di denominazione simile per il nome del database in modo da poterli gestire insieme.
 
 7.  In **Autenticazione database**l'impostazione predefinita è Autenticazione di Windows. Se si sceglie Autenticazione di SQL Server, fare riferimento alla guida dell'amministratore di SharePoint per le procedure consigliate sull'utilizzo di questo tipo di autenticazione nella farm in uso.
 
@@ -116,7 +115,7 @@ ms.locfileid: "78175630"
 
  ![SSAS_PPS_ScheduleDataRefreshCreds](media/ssas-pps-scheduledatarefreshcreds.gif "SSAS_PPS_ScheduleDataRefreshCreds")
 
- Per impostazione predefinita, questa opzione relativa alla credenziali è abilitata. Quando questa opzione viene abilitata, tramite il servizio di sistema PowerPivot viene generata un'applicazione di destinazione nel servizio di archiviazione sicura per l'archiviazione del nome utente e della password immessi dal proprietario della pianificazione. Un'applicazione di destinazione generata viene creata utilizzando questa convenzione di denominazione\<: guid PowerPivotDataRefresh_>. Viene creata un'applicazione di destinazione per ogni set di credenziali di Windows. Se esiste già un'applicazione di destinazione di proprietà del servizio di sistema PowerPivot in cui sono archiviati il nome utente e la password immessi dal proprietario della pianificazione, tale applicazione di destinazione verrà utilizzata dal servizio di sistema PowerPivot che quindi eviterà di crearne una nuova.
+ Per impostazione predefinita, questa opzione relativa alla credenziali è abilitata. Quando questa opzione viene abilitata, tramite il servizio di sistema PowerPivot viene generata un'applicazione di destinazione nel servizio di archiviazione sicura per l'archiviazione del nome utente e della password immessi dal proprietario della pianificazione. Un'applicazione di destinazione generata viene creata utilizzando questa convenzione di denominazione: PowerPivotDataRefresh_ \<guid> . Viene creata un'applicazione di destinazione per ogni set di credenziali di Windows. Se esiste già un'applicazione di destinazione di proprietà del servizio di sistema PowerPivot in cui sono archiviati il nome utente e la password immessi dal proprietario della pianificazione, tale applicazione di destinazione verrà utilizzata dal servizio di sistema PowerPivot che quindi eviterà di crearne una nuova.
 
  I principali vantaggi derivanti dall'utilizzo di questa opzione relativa alle credenziali sono la semplicità e la facilità di utilizzo. Il lavoro preliminare è minimo perché le applicazioni di destinazione vengono create automaticamente. Inoltre, l'esecuzione dell'aggiornamento dati con le credenziali del proprietario della pianificazione, che con tutta probabilità è anche l'utente che ha creato la cartella di lavoro, semplifica i requisiti relativi alle autorizzazioni a valle. Quasi sicuramente, questo utente dispone già delle autorizzazioni per il database di destinazione. Quando l'aggiornamento dati viene eseguito con l'identità utente di Windows di questa persona, le connessioni dati che specificano l'utente corrente funzioneranno automaticamente.
 
@@ -204,7 +203,7 @@ ms.locfileid: "78175630"
 
  Se nella stringa di connessione viene visualizzato **Integrated Security = SSPI** , non è possibile eseguire l'override delle credenziali nella stringa di connessione. La connessione utilizzerà sempre l'utente corrente. Eventuali credenziali fornite verranno ignorate.
 
- Se viene visualizzato **Mantieni sicurezza Info = False, password =\*\*\*\*\*\*\*\*\*\*\*, UserID =\<userlogin>**, sarà presente una stringa di connessione che accetterà le sostituzioni delle credenziali. Le credenziali contenute in una stringa di connessione, ad esempio ID utente e Password, non sono credenziali di Windows, ma account di accesso del database o altri account validi per l'origine dati di destinazione.
+ Se viene visualizzato **Mantieni sicurezza Info = False, password = \* \* \* \* \* \* \* \* \* \* \* , UserID = \<userlogin> **, sarà presente una stringa di connessione che accetterà le sostituzioni delle credenziali. Le credenziali contenute in una stringa di connessione, ad esempio ID utente e Password, non sono credenziali di Windows, ma account di accesso del database o altri account validi per l'origine dati di destinazione.
 
  **Come ignorare le credenziali nella stringa di connessione**
 

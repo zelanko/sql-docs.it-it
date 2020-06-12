@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c745ade0-738e-4a98-a3f0-3eabfd3eeba2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 892198c217918fd2b2a374261c6eac5e31d0a428
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b310c3fd762274a038198f7d88456b85d156ba3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074079"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546243"
 ---
 # <a name="specifying-the-contents-of-a-query-axis-mdx"></a>Impostazione del contenuto di un asse della query (MDX)
   Gli assi della query specificano i bordi di un set di celle restituito dall'istruzione SELECT di MDX (Multidimensional Expression). L'impostazione dei bordi di un set di celle consente di limitare i dati restituiti visibili al client.  
@@ -48,7 +47,7 @@ ms.locfileid: "66074079"
   
  Nella sintassi dell'asse della query riportata in precedenza, ogni valore `Set_Expression` specifica il set che definisce il contenuto dell'asse della query. Per altre informazioni sui set, vedere [Utilizzo di membri, tuple e set &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md).  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  L'istruzione SELECT semplice seguente restituisce la misura Internet Sales Amount nell'asse Columns e utilizza la funzione MDX MEMBERS per restituire tutti i membri della gerarchia Calendar nella dimensione Date sull'asse delle righe:  
   
 ```  
@@ -114,7 +113,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Impostazione del contenuto di un asse di sezionamento &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

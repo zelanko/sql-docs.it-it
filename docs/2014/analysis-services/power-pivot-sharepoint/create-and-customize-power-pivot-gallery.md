@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a912bab0c43764c0c09844fd26ca66a708b3c495
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d75636280033ff0dcedfc3c281939a2484a4cac0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175670"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540613"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>Creare e personalizzare la raccolta PowerPivot
   La raccolta PowerPivot è un tipo particolare di raccolta documenti di SharePoint tramite cui vengono fornite un'anteprima dettagliata e la gestione dei documenti per cartelle di lavoro pubblicate di Excel e per report di Reporting Services contenenti dati PowerPivot.
@@ -53,7 +52,7 @@ ms.locfileid: "78175670"
 
 -   Per visualizzare o creare un report Reporting Services basato su una cartella di lavoro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , sia la cartella di lavoro sia il report devono trovarsi nella stessa Raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Il report deve usare una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] contenente dati incorporati oppure la cartella di lavoro deve contenere al massimo un'origine dati esterna costituita da una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .
 
-##  <a name="overview"></a>Panoramica di <a name="overview"></a>
+##  <a name="overview"></a><a name="overview"></a> Panoramica
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è un modello di raccolta disponibile quando si installa [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] in un server SharePoint. La raccolta di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] consente di combinare un'anteprima accurata del contenuto dei file e informazioni relative all'origine dei documenti. È possibile dedurre immediatamente l'utente che ha creato il documento e la data dell'ultima modifica. Per creare immagini di anteprima, la raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] usa un servizio snapshot in grado di leggere le cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e i report di Reporting Services che contengono dati PowerPivot. Se si pubblica un file che il servizio snapshot non è in grado di leggere, nessuna immagine di anteprima sarà disponibile per quel file.
 
  Le immagini di anteprima si basano sul modo in cui viene eseguito il rendering della cartella di lavoro mediante Excel Services. La rappresentazione nella raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve corrispondere a ciò che viene visualizzato quando si apre una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in un browser. L'anteprima tuttavia presenta una superficie di attacco limitata. Parti di una cartella di lavoro o di un report potrebbero essere tagliate per adattarsi allo spazio disponibile. Per visualizzare il documento completo potrebbe essere necessario aprire una cartella di lavoro o un report.

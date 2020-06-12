@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: dda2dc57-923d-4db9-93a7-38e95770f3df
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 73340613b14c8f0e90340b589c8b97bad7cd5599
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60294db73475d97c487b33d41dd6f9637ae94ba1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070644"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539983"
 ---
 # <a name="processing-and-storage-locations-partition-wizard"></a>Posizioni di elaborazione e archiviazione (Creazione guidata partizione)
   La pagina **Posizioni di elaborazione e archiviazione** consente di specificare l'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] del cubo proprietario della partizione e l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in cui sono archiviati i dati per la partizione. La partizione può essere definita come partizione remota specificando un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] remota o una posizione di archiviazione diversa da quella predefinita. Per altre informazioni sulle partizioni remote, vedere [Partizioni remote](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md).  
@@ -34,7 +33,7 @@ ms.locfileid: "66070644"
 > [!NOTE]  
 >  Se si seleziona un'origine dei dati in cui la proprietà della stringa di connessione `Initial Catalog` non è impostata su un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] valido oppure se il database specificato nella proprietà della stringa di connessione `Initial Catalog` non supporta le partizioni remote (ovvero la proprietà `MasterDatasourceID` del database specificato non è impostata su un valore valido), si verifica un errore.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova origine dei dati che rappresenta l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] remota responsabile dell'elaborazione della partizione.  
   
 ## <a name="storage-location-options"></a>Opzioni Percorso di archiviazione  
@@ -47,7 +46,7 @@ ms.locfileid: "66070644"
  **...**  
  Consente di visualizzare la finestra di dialogo **Cerca cartella remota** in cui è possibile selezionare una cartella per **Cartella specificata**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto della creazione guidata partizione &#40;Analysis Services-Dati multidimensionali&#41;](partition-wizard-f1-help-analysis-services-multidimensional-data.md)   
  [Partizioni &#40;Analysis Services Dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Finestra di dialogo Cerca cartella remota &#40;Analysis Services-Dati multidimensionali&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3b2125fc-afc5-4d7a-82b8-9e1fdbc6b115
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dbf47c696b33e368b5b957d2d6fcf961abf417b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a59e64b51a1e700803a32d708e344832566085b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080522"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544183"
 ---
 # <a name="import-summary-ssas"></a>Riepilogo importazione (SSAS)
   Questa pagina dell' **Importazione guidata tabella** consente di visualizzare i filtri specificati per l'importazione dei dati. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  

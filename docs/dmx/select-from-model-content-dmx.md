@@ -1,21 +1,21 @@
 ---
-title: Selezionare da &lt;modello&gt;. CONTENUTO (DMX) | Microsoft Docs
+title: Selezionare da &lt; modello &gt; . CONTENUTO (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 61cbacee45147b7b6203e9cb2164c02cdc2c7453
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0fe7de8ce6ee6f40d0d50ce76a148dc3d000a808
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892834"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669595"
 ---
-# <a name="select-from-ltmodelgtcontent-dmx"></a>Selezionare da &lt;modello&gt;. CONTENUTO (DMX)
+# <a name="select-from-ltmodelgtcontent-dmx"></a>Selezionare da &lt; modello &gt; . CONTENUTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Restituisce il set di righe dello schema del modello di data mining per il modello di data mining specificato.  
@@ -45,8 +45,8 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  *expression*  
  Facoltativa. Espressione che restituisce un valore scalare.  
   
-## <a name="remarks"></a>Osservazioni  
- >**di selezione dal** _ \<modello _ **. **L'istruzione Content restituisce contenuto specifico per ogni algoritmo. È ad esempio possibile utilizzare le descrizioni di tutte le regole di un modello Association Rules in un'applicazione personalizzata. È possibile utilizzare una **selezione da \<modello>. Istruzione CONTENT** per restituire valori nella colonna NODE_RULE del modello.  
+## <a name="remarks"></a>Commenti  
+ >**di selezione dal** _ \< modello _ **. **L'istruzione Content restituisce contenuto specifico per ogni algoritmo. È ad esempio possibile utilizzare le descrizioni di tutte le regole di un modello Association Rules in un'applicazione personalizzata. È possibile utilizzare una **selezione da \< modello>. Istruzione CONTENT** per restituire valori nella colonna NODE_RULE del modello.  
   
  Nella tabella seguente vengono elencate le colonne incluse nel contenuto del modello di data mining.  
   
@@ -74,7 +74,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 |NODE_DISTRIBUTION|Tabella contenente le statistiche che descrivono la distribuzione dei valori nel nodo.|  
 |NODE_SUPPORT|Numero di case di supporto al nodo.|  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nel codice seguente viene restituito l'ID del nodo padre per il modello di albero delle decisioni aggiunto alla struttura di data mining Targeted Mailing.  
   
 ```  

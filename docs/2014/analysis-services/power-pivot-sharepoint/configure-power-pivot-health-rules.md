@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cd62e74083ec7e6ad8d55b9127376297567a4413
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 216721a187d86e56154d5d25c5e3174d231f7f36
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797631"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547543"
 ---
 # <a name="powerpivot-health-rules---configure"></a>Regole di integrità di PowerPivot: configurazione
   PowerPivot per SharePoint include regole di integrità SharePoint che consentono di monitorare e porre rimedio ai problemi di disponibilità e configurazione. Le regole di analisi dell'integrità che si applicano a PowerPivot per SharePoint vengono visualizzate nella pagina Rivedi definizioni regole.  

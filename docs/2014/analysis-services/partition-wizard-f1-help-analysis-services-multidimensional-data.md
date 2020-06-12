@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3b6d7053-aeef-4d9e-af70-f5b40256e859
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 86976ac183fc592deab50ebdf5599ef3e7231c28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 257f6decac024126228d0da2462bc1615be58d83
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072127"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547643"
 ---
 # <a name="partition-wizard-f1-help-analysis-services---multidimensional-data"></a>Guida sensibile al contesto della Creazione guidata partizione (Analysis Services - Dati multidimensionali)
   La Creazione guidata partizione può essere utilizzata per definire le partizioni per un gruppo di misure in un cubo. Per impostazione predefinita, viene definita un'unica partizione per ogni gruppo di misure in un cubo. Ciò può avere tuttavia ripercussioni negative sulle prestazioni di accesso ed elaborazione nel caso di partizioni di dimensioni elevate. La creazione di più partizioni, contenenti ciascuna una parte dei dati per un gruppo di misure, consente di migliorare le prestazioni di accesso ed elaborazione di tale gruppo di misure.  
@@ -47,7 +46,7 @@ ms.locfileid: "66072127"
   
 -   [Finestra di dialogo Cerca cartella remota &#40;Analysis Services-Dati multidimensionali&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Partizioni &#40;Analysis Services - Dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

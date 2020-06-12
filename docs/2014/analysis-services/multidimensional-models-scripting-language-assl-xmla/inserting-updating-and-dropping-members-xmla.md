@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: bba922b5-8b88-4051-9506-ff055248182a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 98da3e0f7a9b61b178372d9b24b8b595ab6b6626
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aef124abc8398f1b314a391291b52340a90689ff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727165"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544975"
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>Inserimento, aggiornamento ed eliminazione di membri (XMLA)
   È possibile utilizzare i comandi [Insert](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla), [Update](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)e [Drop](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla) in XML for Analysis (XMLA) rispettivamente per inserire, aggiornare o eliminare membri da una dimensione abilitata per la scrittura. Per altre informazioni sulle dimensioni abilitate per la scrittura, vedere [dimensioni abilitate](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)per la scrittura.  
@@ -81,7 +80,7 @@ ms.locfileid: "62727165"
     >  Ad eccezione dei nuovi membri, il comando `Update` consente di aggiornare solo i valori di chiave dell'attributo per attributi non inclusi nella clausola `Where`. Quando ad esempio viene aggiornato un cliente, il relativo nome di città non può essere aggiornato. In caso contrario, il nome di città viene modificato per tutti i clienti.  
   
 ### <a name="updating-members-in-parent-attributes"></a>Aggiornamento di membri in attributi padre  
- Per supportare gli attributi padre, `Update` il comando facoltativo [MoveWithDescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/movewithdescendants-element-xmla)MovewithDescedants proprietà. L'impostazione della proprietà `MoveWithDescendants` su true indica che lo spostamento del membro padre comporta lo spostamento dei relativi discendenti quando l'identificatore di tale membro padre viene modificato. Se questo valore è impostato su false, lo spostamento di un membro padre comporta la promozione dei relativi discendenti immediati al livello in cui il membro padre si trovava in precedenza.  
+ Per supportare gli attributi padre, il `Update` comando facoltativo [MoveWithDescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/movewithdescendants-element-xmla)MovewithDescedants proprietà. L'impostazione della proprietà `MoveWithDescendants` su true indica che lo spostamento del membro padre comporta lo spostamento dei relativi discendenti quando l'identificatore di tale membro padre viene modificato. Se questo valore è impostato su false, lo spostamento di un membro padre comporta la promozione dei relativi discendenti immediati al livello in cui il membro padre si trovava in precedenza.  
   
  Durante l'aggiornamento dei membri di un attributo padre, il comando `Update` non può aggiornare membri di altri attributi.  
   
@@ -109,7 +108,7 @@ ms.locfileid: "62727165"
 > [!IMPORTANT]  
 >  Per eliminare sia il membro padre che i relativi discendenti, è sufficiente che un utente disponga delle autorizzazioni per l'eliminazione del solo membro padre e non è necessario che disponga delle autorizzazioni per l'eliminazione dei discendenti.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Elemento Drop &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla)   
  [Elemento Insert &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla)   
  [Elemento Update &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)   

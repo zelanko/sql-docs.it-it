@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74f53ddb6e7e3fc6b9d14ddcc726c2766a598860
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b97bee2099ea82508ba9e66414bb9527a3c3a8c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727577"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545323"
 ---
 # <a name="partition-storage-modes-and-processing"></a>Elaborazione e modalità di archiviazione delle partizioni
   La modalità di archiviazione di una partizione influisce sulle prestazioni di esecuzione delle query e di elaborazione e su requisiti e percorsi di archiviazione della partizione e del relativo cubo e gruppo di misure padre. La scelta della modalità di archiviazione influisce inoltre sulle opzioni di elaborazione.  
@@ -39,7 +38,7 @@ ms.locfileid: "62727577"
   
 -   OLAP ibrido (HOLAP)  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta tutte e tre le modalità di archiviazione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base. Supporta inoltre la memorizzazione nella cache attiva, che consente di combinare le caratteristiche dell'archiviazione ROLAP e MOLAP ai fini dell'attualità dei dati e delle prestazioni di esecuzione delle query. Per altre informazioni, vedere [Memorizzazione nella cache attiva &#40;partizioni&#41;](partitions-proactive-caching.md).  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta tutte e tre le modalità di archiviazione di base. Supporta inoltre la memorizzazione nella cache attiva, che consente di combinare le caratteristiche dell'archiviazione ROLAP e MOLAP ai fini dell'attualità dei dati e delle prestazioni di esecuzione delle query. Per altre informazioni, vedere [Memorizzazione nella cache attiva &#40;partizioni&#41;](partitions-proactive-caching.md).  
   
 ## <a name="molap"></a>MOLAP  
  La modalità di archiviazione MOLAP determina l'archiviazione delle aggregazioni della partizione e di una copia dei dati di origine in una struttura multidimensionale di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] durante l'elaborazione della partizione. Questa struttura MOLAP è ottimizzata in modo da garantire le massime prestazioni di esecuzione delle query. L'archiviazione può essere eseguita in un percorso sul computer in cui la partizione è definita o su un altro computer che esegue [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Poiché una copia dei dati di origine risiede nella struttura multidimensionale, le query possono essere risolte senza accedere ai dati di origine della partizione. I tempi di risposta alle query possono essere ridotti significativamente utilizzando le aggregazioni. I dati nella struttura MOLAP della partizione sono aggiornati all'elaborazione più recente della partizione.  
@@ -72,18 +71,18 @@ ms.locfileid: "62727577"
   
     -   QUOTED_IDENTIFIER  
   
--   Le dimensioni totali di una chiave dell'indice, in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], non possono essere maggiori di 900 byte. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]Questa condizione verrà asserita in base alle colonne chiave a lunghezza fissa durante l'elaborazione dell'istruzione CREATE INDEX. Tuttavia, se sono presenti colonne a lunghezza variabile nella chiave dell'indice [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , asserirà anche questa condizione per ogni aggiornamento alle tabelle di base. Poiché aggregazioni diverse utilizzano definizioni di viste diverse, l'elaborazione ROLAP con viste indicizzate avrà esito positivo o negativo in base alla progettazione delle aggregazioni.  
+-   Le dimensioni totali di una chiave dell'indice, in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], non possono essere maggiori di 900 byte. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]Questa condizione verrà asserita in base alle colonne chiave a lunghezza fissa durante l'elaborazione dell'istruzione CREATE INDEX. Tuttavia, se sono presenti colonne a lunghezza variabile nella chiave dell'indice, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] asserirà anche questa condizione per ogni aggiornamento alle tabelle di base. Poiché aggregazioni diverse utilizzano definizioni di viste diverse, l'elaborazione ROLAP con viste indicizzate avrà esito positivo o negativo in base alla progettazione delle aggregazioni.  
   
 -   Nella sessione con cui viene creata la vista indicizzata le opzioni seguenti devono essere impostate su ON: ARITHABORT, CONCAT_NULL_YEILDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING e ANSI_WARNING. Questa impostazione può essere eseguita in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 -   Nella sessione con cui viene creata la vista indicizzata l'opzione NUMERIC_ROUNDABORT deve essere impostata su OFF. Questa impostazione può essere eseguita in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="holap"></a>HOLAP  
- La modalità di archiviazione HOLAP combina attributi sia di MOLAP che di ROLAP. Analogamente a MOLAP, HOLAP fa sì che le aggregazioni della partizione vengano archiviate in una struttura multidimensionale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un'istanza di. HOLAP non prevede l'archiviazione di una copia dei dati di origine. Per le query che accedono esclusivamente ai dati di riepilogo nelle aggregazioni di una partizione, la modalità HOLAP equivale a MOLAP. Query che accedono ai dati di origine. ad esempio, se si desidera eseguire il drill-down in una cella del cubo atomica per la quale non sono presenti dati di aggregazione, è necessario recuperare i dati dal database relazionale e non sarà così veloce come sarebbero se i dati di origine fossero archiviati nella struttura MOLAP. Con la modalità di archiviazione HOLAP, gli utenti riscontrano in genere differenze significative nei tempi di esecuzione delle query a seconda che la query possa essere risolta dalla cache o dalle aggregazioni oppure dai dati di origine.  
+ La modalità di archiviazione HOLAP combina attributi sia di MOLAP che di ROLAP. Analogamente a MOLAP, HOLAP fa sì che le aggregazioni della partizione vengano archiviate in una struttura multidimensionale in un' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza di. HOLAP non prevede l'archiviazione di una copia dei dati di origine. Per le query che accedono esclusivamente ai dati di riepilogo nelle aggregazioni di una partizione, la modalità HOLAP equivale a MOLAP. Query che accedono ai dati di origine. ad esempio, se si desidera eseguire il drill-down in una cella del cubo atomica per la quale non sono presenti dati di aggregazione, è necessario recuperare i dati dal database relazionale e non sarà così veloce come sarebbero se i dati di origine fossero archiviati nella struttura MOLAP. Con la modalità di archiviazione HOLAP, gli utenti riscontrano in genere differenze significative nei tempi di esecuzione delle query a seconda che la query possa essere risolta dalla cache o dalle aggregazioni oppure dai dati di origine.  
   
  Le partizioni archiviate come HOLAP presentano dimensioni inferiori rispetto alle partizioni MOLAP equivalenti, poiché non contengono i dati di origine, e garantiscono tempi di risposta più rapidi rispetto alle partizioni ROLAP per le query in cui sono coinvolti dati di riepilogo. La modalità di archiviazione HOLAP è in genere appropriata per partizioni di cubi che necessitano di tempi di risposta alle query rapidi per riepiloghi basati su un'ingente quantità di dati di origine. Nei casi in cui gli utenti generano query che devono accedere ai dati a livello foglia, ad esempio per il calcolo di mediane, è in genere preferibile la modalità MOLAP.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Caching attivo &#40;partizioni&#41;](partitions-proactive-caching.md)   
  [Sincronizzare Analysis Services database](../multidimensional-models/synchronize-analysis-services-databases.md)   
  [Partizioni &#40;Analysis Services - Dati multidimensionali&#41;](partitions-analysis-services-multidimensional-data.md)  

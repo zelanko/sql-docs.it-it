@@ -21,16 +21,15 @@ helpviewer_keywords:
 ms.assetid: 5cf2f407-accc-4baf-b54f-7703af338325
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3cc874831f9f96c2540d58f2ffe3b89f8c4dc7aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7e2c52ec93b46418b82b681fbacc1d31338a0d88
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077270"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544783"
 ---
 # <a name="group-attribute-members-discretization"></a>Raggruppare membri di attributo (discretizzazione)
-  Un gruppo di membri è una raccolta generata dal sistema di membri consecutivi di una dimensione. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]i membri di un attributo possono essere raggruppati in un numero di gruppi di membri tramite un processo denominato discretizzazione. Un livello di una gerarchia contiene gruppi di membri o membri, ma non entrambi. Esplorando un livello contenente gruppi di membri, gli utenti aziendali visualizzano i nomi e i valori delle celle dei gruppi di membri. I membri generati da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per supportare i gruppi di membri vengono denominati membri di raggruppamento e vengono visualizzati come membri ordinari.  
+  Un gruppo di membri è una raccolta generata dal sistema di membri consecutivi di una dimensione. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] i membri di un attributo possono essere raggruppati in un numero di gruppi di membri tramite un processo denominato discretizzazione. Un livello di una gerarchia contiene gruppi di membri o membri, ma non entrambi. Esplorando un livello contenente gruppi di membri, gli utenti aziendali visualizzano i nomi e i valori delle celle dei gruppi di membri. I membri generati da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per supportare i gruppi di membri vengono denominati membri di raggruppamento e vengono visualizzati come membri ordinari.  
   
  La proprietà `DiscretizationMethod` di un attributo controlla la modalità di raggruppamento dei membri.  
   
@@ -109,7 +108,7 @@ ms.locfileid: "66077270"
   
 -   Se la tabella di una dimensione contenente gruppi di membri viene aggiornata e la dimensione viene quindi completamente elaborata, verrà generato un nuovo set di gruppi di membri. I nomi e gli elementi figlio dei nuovi gruppi di membri potranno essere diversi da quelli dei gruppi di membri precedenti.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Attributi e gerarchie di attributi](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   

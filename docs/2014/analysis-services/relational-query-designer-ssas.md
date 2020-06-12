@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d9d3ea17d614a9c5cff48c35ae1864f1672bf8bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d3bd6b89713edad4429dc0a93aa96cf041a9562a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251214"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539683"
 ---
 # <a name="relational-query-designer-ssas"></a>Progettazione query relazionale (SSAS)
-  La finestra Progettazione query relazionale consente di creare una query che specifica i dati da recuperare [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dai [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] database relazionali di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]e e da. Utilizzare Progettazione query con interfaccia grafica per esplorare i metadati, compilare in modo interattivo la query e visualizzarne i risultati.  Utilizzare Progettazione query basata su testo per visualizzare la query compilata nella finestra Progettazione query con interfaccia grafica o per modificare una query. È inoltre possibile importare una query esistente da un file o un report.  
+  La finestra Progettazione query relazionale consente di creare una query che specifica i dati da recuperare dai [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] database relazionali di e e da [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] . Utilizzare Progettazione query con interfaccia grafica per esplorare i metadati, compilare in modo interattivo la query e visualizzarne i risultati.  Utilizzare Progettazione query basata su testo per visualizzare la query compilata nella finestra Progettazione query con interfaccia grafica o per modificare una query. È inoltre possibile importare una query esistente da un file o un report.  
   
  Se si preferisce, è possibile scrivere la query nel linguaggio SQL tramite l'editor basato su testo. Per passare alla finestra Progettazione query basata su testo, fare clic su **Modifica come testo**sulla barra degli strumenti. Una volta modificata una query in Progettazione query basata su testo, non è più possibile utilizzare finestra Progettazione query con interfaccia grafica.  
   
@@ -80,7 +79,7 @@ ms.locfileid: "72251214"
   
  Le aggregazioni forniscono un riepilogo dei dati. Per supportare l'aggregazione che recapita i dati di riepilogo, i dati vengono raggruppati. Quando si utilizza un'aggregazione nella query, gli altri campi restituiti dalla query vengono raggruppati automaticamente e la query include la clausola SQL GROUP BY. È possibile riepilogare i dati senza aggiungere un'aggregazione semplicemente usando l'opzione **Raggruppato per** nell'elenco **Raggruppa e aggrega** . In gran parte delle aggregazioni è inclusa una versione che utilizza la parola chiave DISTINCT. L'inclusione di DISTINCT consente di eliminare i valori duplicati.  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] USA [!INCLUDE[tsql](../includes/tsql-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] e [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] USA [!INCLUDE[DWsql](../includes/dwsql-md.md)]. Entrambi i dialetti del linguaggio SQL supportano la clausola, la parola chiave e le aggregazioni fornite dalla finestra Progettazione query.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Usa [!INCLUDE[tsql](../includes/tsql-md.md)] e [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] Usa [!INCLUDE[DWsql](../includes/dwsql-md.md)] . Entrambi i dialetti del linguaggio SQL supportano la clausola, la parola chiave e le aggregazioni fornite dalla finestra Progettazione query.  
   
  Per altre informazioni su [!INCLUDE[tsql](../includes/tsql-md.md)], vedere la [Guida di riferimento a Transact-SQL &#40;Motore di database& #41;](/sql/t-sql/language-reference) nella [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Documentazione online](https://go.microsoft.com/fwlink/?LinkId=141687) di  sul sito msdn.microsoft.com.  
   
@@ -247,7 +246,7 @@ SELECT Name FROM ContactType
 uspGetWhereUsedProductID  
 ```  
   
- Fare clic sul pulsante **Esegui** (**!**). Nella tabella seguente viene fornito un esempio `uspGetWhereUsedProductID` di parametri per i quali vengono forniti valori nella finestra di dialogo **Definisci parametri query** .  
+ Fare clic sul pulsante **Esegui** (**!**). Nella tabella seguente viene fornito un esempio di `uspGetWhereUsedProductID` parametri per i quali vengono forniti valori nella finestra di dialogo **Definisci parametri query** .  
   
 |||  
 |-|-|  

@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 36f454ae-a9f2-4a59-b19d-40310af9f901
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 111948911c0fe7bdc0e7ce260a15b8efee50e9db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6279c738ada597984465ff0c1c3db6fa8fbaeb38
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076895"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544596"
 ---
 # <a name="add-account-intelligence-to-a-dimension"></a>Aggiungere funzionalità di Business Intelligence per la contabilità a una dimensione
-  È possibile aggiungere la funzionalità di Business Intelligence per la contabilità a un cubo o una dimensione per assegnare classificazioni standard, ad esempio entrate e uscite, ai membri di un attributo di tipo Conto. Questa funzionalità consente inoltre di identificare i tipi di conto, ad esempio Asset e Liability, e di assegnare l'aggregazione appropriata a ogni tipo di conto. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può usare le classificazioni per aggregare i conti nel [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tempo.  
+  È possibile aggiungere la funzionalità di Business Intelligence per la contabilità a un cubo o una dimensione per assegnare classificazioni standard, ad esempio entrate e uscite, ai membri di un attributo di tipo Conto. Questa funzionalità consente inoltre di identificare i tipi di conto, ad esempio Asset e Liability, e di assegnare l'aggregazione appropriata a ogni tipo di conto. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] può usare le classificazioni per aggregare i conti nel tempo.  
   
 > [!NOTE]  
 >  La funzionalità di Business Intelligence per la contabilità è disponibile solo per le dimensioni basate su origini dei dati esistenti. Per le dimensioni create senza utilizzare un'origine dei dati, prima di aggiungere questa funzionalità è necessario eseguire la Generazione guidata schema per creare una vista origine dati.  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ea21ff9d-857f-475c-bd3d-6d1405bad069
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7e19dfcdc284f048cffbb3a95e076b6e3a57294d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2de6fad32057abdbebab86b880c4edb23b1440e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083593"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521407"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
   In questo argomento viene descritto il contenuto dei modelli di data mining specifico dei modelli che utilizzano l'algoritmo Microsoft Neural Network. Per una spiegazione dell'interpretazione delle statistiche e della struttura condivise da tutti i tipi di modello e per definizioni generali dei termini relativi al contenuto dei modelli di data mining, vedere [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -188,7 +187,7 @@ ms.locfileid: "66083593"
  MSOLAP_NODE_SHORT_CAPTION  
  Per i modelli di rete neurale, sempre vuoto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Lo scopo del training di un modello di rete neurale consiste nel determinare i pesi associati a ogni transizione da un input a un punto medio e da un punto medio a un endpoint. Di conseguenza, il livello di input del modello esiste principalmente per archiviare i valori effettivi utilizzati per la compilazione del modello. Nel livello nascosto vengono archiviati i pesi calcolati e vengono forniti nuovamente i puntatori agli attributi di input. Nel livello di output vengono archiviati i valori stimabili e vengono forniti nuovamente i puntatori ai punti medi nel livello nascosto.  
   
 ##  <a name="using-node-names-and-ids"></a><a name="bkmk_NodeIDs"></a>Utilizzo dei nomi e degli ID dei nodi  
@@ -236,7 +235,7 @@ ms.locfileid: "66083593"
   
  **Attributo continuo:** le due righe finali della tabella NODE_DISTRIBUTION contengono il valore medio dell'attributo, il coefficiente per il nodo nel suo complesso e la varianza del coefficiente.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm-technical-reference.md)   
  [Esempi di query sul modello di rete neurale](neural-network-model-query-examples.md)  

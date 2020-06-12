@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a116be708dd714a48d1cc936a08350237ca98ddf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dbc390b046eed3e0caa0394d9e463625e054192e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074402"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546423"
 ---
 # <a name="language-and-format_string-on-formated_value"></a>LANGUAGE e FORMAT_STRING in FORMATED_VALUE
   La proprietà FORMATTED_VALUE è compilata in base alle interazioni delle proprietà VALUE, FORMAT_STRING e LANGUAGE della cella. In questo argomento viene illustrato come interagiscono queste proprietà per compilare la proprietà FORMATTED_VALUE.  
@@ -37,7 +36,7 @@ ms.locfileid: "66074402"
   
  Se si verifica un conflitto tra il modello FORMAT_STRING e la specifica LANGUAGE, il modello FORMAT_STRING esegue l'override della specifica LANGUAGE. Se, ad esempio, FORMAT_STRING="$ #0", LANGUAGE=1034 (Spagna) e VALUE=123.456, allora FORMATTED_VALUE="$ 123" anziché FORMATTED_VALUE="€ 123". Il formato previsto è in euro perché il valore del modello di formato esegue l'override della lingua specificata.  
   
-### <a name="examples"></a>Esempi  
+### <a name="examples"></a>Esempio  
  Negli esempi seguenti viene illustrato l'output ottenuto quando la proprietà LANGUAGE viene utilizzata insieme a FORMAT_STRING.  
   
  Nel primo esempio vengono illustrati i valori numerici di formattazione, nel secondo vengono illustrati i valori data e ora di formattazione.  
@@ -141,7 +140,7 @@ ms.locfileid: "66074402"
 |K|6:30:00|Le proprietà FORMAT_STRING e LANGUAGE sono impostate in modo esplicito rispettivamente su `Long Time` e `1041` (giapponese).|  
 |L|06:30|Le proprietà FORMAT_STRING e LANGUAGE sono impostate in modo esplicito rispettivamente su `Short Time` e `1041` (giapponese).|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Contenuto FORMAT_STRING &#40;MDX&#41;](mdx-cell-properties-format-string-contents.md)   
  [Utilizzo delle proprietà delle celle &#40;&#41;MDX](mdx-cell-properties-using-cell-properties.md)   
  [Creazione e utilizzo di valori di proprietà &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   

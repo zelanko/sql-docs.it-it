@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 105f52e1-ad3b-4cd0-b67b-06dbb451c304
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3975bee14daad82291b5d343999ef4ebca7e6fbc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e315d21eb6e7b8d5e590ca4cfb655ce232ddf945
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085076"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523189"
 ---
 # <a name="data-mining-architecture"></a>Architettura di data mining
   In questa sezione viene descritta l'architettura delle soluzioni di data mining ospitate in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Negli argomenti di questa sezione viene descritta l'architettura logica e fisica di un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che supporta il data mining e vengono fornite informazioni su client, provider e protocolli che è possibile usare per comunicare con i server di data mining e per usare oggetti di data mining in modalità locale o remota.  
@@ -43,7 +42,7 @@ ms.locfileid: "66085076"
   
  [Panoramica della sicurezza &#40;data mining&#41;](security-overview-data-mining.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Programmazione di modelli multidimensionali](../multidimensional-models/multidimensional-model-programming.md)   
  [Programmazione di data mining](../dev-guide/data-mining-programming.md)  
   

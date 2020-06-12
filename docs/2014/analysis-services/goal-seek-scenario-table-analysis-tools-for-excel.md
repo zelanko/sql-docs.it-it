@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: efe50306-cf7c-46b3-9cc4-e7f0b6968b0c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d547c52bc5d4cb02870fc647469b5f63af9ab7cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f535aa831824b2ab283b2b596d0de49ef0e72515
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080743"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544363"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>Ricerca obiettivo (Strumenti di analisi tabelle per Excel)
   ![Pulsante Ricerca obiettivo in Strumenti di analisi tabelle](media/tat-goalseek.gif "Pulsante Ricerca obiettivo in Strumenti di analisi tabelle")  
@@ -99,9 +98,9 @@ ms.locfileid: "66080743"
 ## <a name="related-tools"></a>Strumenti correlati  
  Il Client di data mining per Excel, un componente aggiuntivo separato che offre funzionalità di data mining più avanzate, include procedure guidate per la creazione di modelli di data mining in grado di stimare il comportamento. Per ulteriori informazioni, vedere [creazione di un modello di data mining](creating-a-data-mining-model.md).  
   
- Per ulteriori informazioni sull'algoritmo utilizzato dallo strumento per lo scenario di **Ricerca obiettivo** , vedere l'argomento "algoritmo di regressione logistica Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] " nella documentazione online di.  
+ Per ulteriori informazioni sull'algoritmo utilizzato dallo strumento per lo scenario di **Ricerca obiettivo** , vedere l'argomento "algoritmo di regressione logistica Microsoft" nella [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] documentazione online di.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Strumenti di analisi tabelle per Excel](table-analysis-tools-for-excel.md)  
   
   

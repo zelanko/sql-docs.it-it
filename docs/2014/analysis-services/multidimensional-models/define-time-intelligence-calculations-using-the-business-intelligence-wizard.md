@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: be36e8fc-f46e-4553-8623-b27d695c330b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c665c894a4e0bb3691c483a8d8bab084ac2fa276
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c0ebb99e8368254e085cc9a4f4b0dc9a040b24c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075442"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546958"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>Definire calcoli delle funzionalità di Business Intelligence per le gerarchie temporali mediante la Configurazione guidata funzionalità di Business Intelligence
   La funzionalità avanzata di Business Intelligence per le gerarchie temporali corrisponde alla funzionalità avanzata a livello di cubo basata sull'aggiunta di calcoli temporali o viste temporali a una gerarchia selezionata. Questa funzionalità avanzata supporta le categorie di calcolo seguenti:  
@@ -72,7 +71,7 @@ ms.locfileid: "66075442"
 |Vista origine dati|Aggiunta di una colonna calcolata nella tabella dei tempi per ogni nuovo attributo nella dimensione temporale.|  
 |Cube|Aggiunta di un membro calcolato che definisce il codice MDX (Multidimensional Expressions) per l'esecuzione del calcolo.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creare membri calcolati](create-calculated-members.md)  
   
   

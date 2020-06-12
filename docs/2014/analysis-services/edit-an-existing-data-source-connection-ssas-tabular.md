@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 97e63f18-a01d-4c91-a411-e7e6d40a0647
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ffc45b255ef609d486f19cf18254ad9ed2937433
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1dd8ac9a27d1bcf46ba14b5f49fee3cc9b3b3b4e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081444"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528457"
 ---
 # <a name="edit-an-existing-data-source-connection-ssas-tabular"></a>Modificare una connessione all'origine dati esistente (SSAS tabulare)
   In questo argomento viene descritto come modificare le proprietà di una connessione all'origine dati esistente in un modello tabulare.  
@@ -77,7 +76,7 @@ ms.locfileid: "66081444"
   
      Quando si salva il set corrente di proprietà della tabella, è possibile che venga visualizzato un messaggio che indica la necessità di elaborare le tabelle. Fare clic su **Elabora** per caricare dati aggiornati nel modello.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Elaborare dati &#40;SSAS tabulare&#41;](process-data-ssas-tabular.md)   
  [Origini dati supportate &#40;SSAS tabulare&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
   

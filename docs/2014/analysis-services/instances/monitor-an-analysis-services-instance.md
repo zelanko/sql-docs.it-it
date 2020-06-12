@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2f0ab717-05f3-427e-b8cd-a8bdca374add
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6a09984f089a88f90798c2ca8f4c2514c06bc1cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b98037ea9f26c339cdf7aba22c37e2cfb3dfbb97
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079751"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543813"
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Monitorare un'istanza di Analysis Services
   È possibile monitorare le prestazioni di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] o Performance Monitor, un'applicazione talvolta denominata **PerfMon**. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] consente di creare e gestire le tracce, nonché analizzare e riprodurre i risultati delle tracce. Tramite Performance Monitor vengono creati report sullo stato del server, indicizzato tramite contatori specifici, che verranno trattati nella sezione successiva.  

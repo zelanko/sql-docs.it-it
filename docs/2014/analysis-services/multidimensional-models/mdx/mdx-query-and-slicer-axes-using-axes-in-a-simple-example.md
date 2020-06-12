@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 85bcb26f-5971-4153-b334-61f8d8b475b5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 53f48d8f23ef8809f9392b1a2c7ede65239e4985
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 324f082fd6659592e56af65680bd4aa623c625d9
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074031"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546233"
 ---
 # <a name="using-query-and-slicer-axes-in-a-simple-example-mdx"></a>Utilizzo di assi di query e assi di sezionamento in un semplice esempio (MDX)
   Il semplice esempio presentato in questo argomento illustra le nozioni fondamentali sull'impostazione e l'utilizzo di assi di query e assi di sezionamento.  
@@ -47,7 +46,7 @@ WHERE ( [Measures].[Packages] )
 |1st quarter|60|50|  
 |2nd quarter|45|45|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Impostazione del contenuto di un asse della query &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)   
  [Impostazione del contenuto di un asse di sezionamento &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   

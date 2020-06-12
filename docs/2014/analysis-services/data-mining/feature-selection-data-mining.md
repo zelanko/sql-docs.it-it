@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a1d79bb3810a56e8a1769845131312eab306f223
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02eb89db44e08daf7de5d89a932a097df277b961
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084420"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522498"
 ---
 # <a name="feature-selection-data-mining"></a>Selezione delle caratteristiche (Data mining)
   La *selezione delle funzioni* è un termine comunemente usato in data mining per descrivere gli strumenti e le tecniche disponibili per ridurre gli input a una dimensione gestibile per l'elaborazione e l'analisi. La selezione delle funzioni implica non solo la *riduzione della cardinalità*, ovvero l'imposizione di un limite arbitrario o predefinito per il numero di attributi che possono essere considerati durante la compilazione di un modello, ma anche la scelta degli attributi, vale a dire che l'analista o lo strumento di modellazione seleziona o Elimina gli attributi in base all'utilità per l'analisi.  
@@ -128,7 +127,7 @@ ms.locfileid: "66084420"
   
  Oltre a questi metodi per la selezione delle caratteristiche, è possibile migliorare la capacità dell'algoritmo di identificare o promuovere attributi significativi impostando i *flag di modellazione* sul modello oppure i *flag di distribuzione* sulla struttura. Per altre informazioni su questi concetti, vedere [Flag di modellazione &#40;Data mining&#41;](modeling-flags-data-mining.md) e [Distribuzioni delle colonne &#40;Data mining&#41;](column-distributions-data-mining.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Personalizzare struttura e modelli di data mining](customize-mining-models-and-structure.md)  
   
   

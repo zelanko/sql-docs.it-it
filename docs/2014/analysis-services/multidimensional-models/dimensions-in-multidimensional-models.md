@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2b62b05c-00fd-4e60-b77f-f707ba83a19b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 520d6f11e5a472d5337a3747cc73c1d3656171c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85694cfbd86e1c6ada9ff326bc3c212d64274201
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075182"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546760"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>Dimensioni nei modelli multidimensionali
   Una dimensione di database è una raccolta di oggetti correlati, denominati attributi, che è possibile utilizzare per offrire informazioni sui dati della tabella dei fatti in uno o più cubi. Gli attributi tipici di una dimensione dei prodotti possono ad esempio essere costituiti da nome del prodotto, categoria di prodotto, linea di prodotti, dimensioni del prodotto e prezzo del prodotto. Tali oggetti sono associati a una o più colonne di una o più tabelle di una vista origine dati Per impostazione predefinita, questi attributi sono visibili come gerarchie di attributo e possono essere utilizzati per acquisire familiarità con le tabelle dei fatti in un cubo. Possono inoltre essere organizzati in gerarchie definite dall'utente che definiscono percorsi di navigazione utili per l'esplorazione dei dati di un cubo.  
@@ -55,7 +54,7 @@ ms.locfileid: "66075182"
  [Utilizzare la Configurazione guidata funzionalità di Business Intelligence per migliorare le dimensioni](../use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
  Descrive come ottimizzare una dimensione di database mediante la Configurazione guidata funzionalità di Business Intelligence.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Cubi nei modelli multidimensionali](cubes-in-multidimensional-models.md)  
   
   

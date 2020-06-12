@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: b028720d-3785-4381-9572-157d13ec4291
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 67bbc67db06e05a0f6a02f8e9efd8dcc46441aeb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5bc6eacf49ceda89a018fd381700dcdff0a9ada0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075056"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546693"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Concedere l'accesso personalizzato ai dati della dimensione (Analysis Services)
   Dopo avere abilitato l'accesso in lettura a un cubo, è possibile impostare ulteriori autorizzazioni che consentono o negano in modo esplicito l'accesso ai membri della dimensione, comprese le misure presenti all'interno della Dimensione di tipo misure in cui sono contenute tutte le misure usate in un cubo. Se ad esempio sono presenti più categorie di rivenditori, si potrebbe voler impostare le autorizzazioni per escludere i dati per un tipo di attività specifico. La seguente figura mostra l'effetto che si ottiene prima e dopo avere negato l'accesso al tipo di attività Warehouse nella dimensione Reseller.  
@@ -46,7 +45,7 @@ ms.locfileid: "66075056"
   
  **Verificare la presenza di limitazioni alla sicurezza delle dimensioni: misure predefinite, membri predefiniti e misure usate in espressioni di misura**  
   
-1.  In SQL Server Management Studio fare clic con il pulsante destro del mouse su un cubo e selezionare Crea **script per cubo come** | **ALTER in** | **nuova finestra Editor di query**.  
+1.  In SQL Server Management Studio fare clic con il pulsante destro del mouse su un cubo e selezionare Crea **script per cubo come**  |  **ALTER in**  |  **nuova finestra Editor di query**.  
   
 2.  Cercare `DefaultMeasure`. Ne verrà trovato uno per il cubo e uno per ogni prospettiva. Quando si definisce la sicurezza delle dimensioni evitare di limitare l'accesso alle misure predefinite.  
   
@@ -56,11 +55,11 @@ ms.locfileid: "66075056"
   
 ## <a name="basic-dimension-security"></a>Sicurezza delle dimensioni di base  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]connettersi all'istanza di, espandere [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **ruoli** per il database appropriato in Esplora oggetti, quindi fare clic su un ruolo del database o creare un nuovo ruolo del database.  
+1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] connettersi all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , espandere **ruoli** per il database appropriato in Esplora oggetti, quindi fare clic su un ruolo del database o creare un nuovo ruolo del database.  
   
      Il ruolo dovrebbe già disporre dell'accesso di lettura al cubo. Per altre informazioni, vedere [Concedere le autorizzazioni per un cubo o un modello &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) .  
   
-2.  In **dati** | dimensione di**base**selezionare la dimensione per la quale si stanno impostando le autorizzazioni.  
+2.  In **dati dimensione**  |  di**base**selezionare la dimensione per la quale si stanno impostando le autorizzazioni.  
   
 3.  Scegliere la gerarchia dell'attributo. Non tutti gli attributi saranno disponibili. Nell'elenco **Gerarchia dell'attributo** sono visualizzati solo gli attributi con **AttributeHierarchyEnabled** .  
   
@@ -68,15 +67,15 @@ ms.locfileid: "66075056"
   
      In alternativa, è possibile usare l'opzione **Deseleziona tutti i membri** per revocare l'accesso a tutti i membri e quindi selezionare i membri a cui consentire l'accesso. Nelle successive operazioni di elaborazione, i nuovi membri non saranno visibili finché non si modifica manualmente la sicurezza dei dati della dimensione per consentirne l'accesso.  
   
-5.  Facoltativamente, fare **Advanced** clic su Avanzate `Visual Totals` per abilitare questa gerarchia dell'attributo. Questa opzione ricalcola le aggregazioni in base ai membri disponibili tramite il ruolo.  
+5.  Facoltativamente, fare clic su **Avanzate** per abilitare `Visual Totals` questa gerarchia dell'attributo. Questa opzione ricalcola le aggregazioni in base ai membri disponibili tramite il ruolo.  
   
     > [!NOTE]  
-    >  Quando si applicano le autorizzazioni che escludono i membri della dimensione, i totali aggregati non vengono ricalcolati automaticamente. Si supponga `All` che il membro di una gerarchia dell'attributo restituisca un conteggio di 200 prima dell'applicazione delle autorizzazioni. Dopo aver applicato le autorizzazioni che negano l'accesso `All` ad alcuni membri, restituisce comunque 200, anche se i valori del membro visibili all'utente sono molto inferiori. Per evitare di confondere gli utenti del cubo, è possibile `All` configurare il membro come aggregato dei soli membri a cui appartengono i membri del ruolo, anziché l'aggregazione di tutti i membri della gerarchia dell'attributo. Per richiamare questo comportamento, è possibile abilitare `Visual Totals` nella scheda **Avanzate** durante la configurazione della sicurezza delle dimensioni. Una volta abilitato, l'aggregato viene calcolato in fase di query anziché recuperato dalle aggregazioni precalcolate. Questa operazione può influire in modo significativo sulle prestazioni. Usarla pertanto solo quando è necessario.  
+    >  Quando si applicano le autorizzazioni che escludono i membri della dimensione, i totali aggregati non vengono ricalcolati automaticamente. Si supponga che il `All` membro di una gerarchia dell'attributo restituisca un conteggio di 200 prima dell'applicazione delle autorizzazioni. Dopo aver applicato le autorizzazioni che negano l'accesso ad alcuni membri, `All` restituisce comunque 200, anche se i valori del membro visibili all'utente sono molto inferiori. Per evitare di confondere gli utenti del cubo, è possibile configurare il `All` membro come aggregato dei soli membri a cui appartengono i membri del ruolo, anziché l'aggregazione di tutti i membri della gerarchia dell'attributo. Per richiamare questo comportamento, è possibile abilitare `Visual Totals` nella scheda **Avanzate** durante la configurazione della sicurezza delle dimensioni. Una volta abilitato, l'aggregato viene calcolato in fase di query anziché recuperato dalle aggregazioni precalcolate. Questa operazione può influire in modo significativo sulle prestazioni. Usarla pertanto solo quando è necessario.  
   
 ## <a name="hiding-measures"></a>Nascondere le misure  
  In [Concedere l'accesso personalizzato ai dati delle celle &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)è stato descritto che per nascondere completamente tutti gli aspetti visivi di una misura, e non solo i dati della cella, sono necessarie le autorizzazioni per i membri della dimensione. Questa sezione descrive come negare l'accesso ai metadati degli oggetti di una misura.  
   
-1.  In **dati** | dimensione di**base**scorrere l'elenco dimensione fino a raggiungere le dimensioni del cubo, quindi selezionare **dimensione misure**.  
+1.  In **dati dimensione**di  |  **base**scorrere l'elenco dimensione fino a raggiungere le dimensioni del cubo, quindi selezionare **dimensione misure**.  
   
 2.  Nell'elenco delle misure deselezionare la casella di controllo per le misure che non devono essere visualizzate dagli utenti che si connettono tramite questo ruolo.  
   
@@ -84,7 +83,7 @@ ms.locfileid: "66075056"
 >  Verificare i prerequisiti per informazioni su come identificare le misure che possono violare la sicurezza dei ruoli.  
   
 ## <a name="advanced-dimension-security"></a>Sicurezza delle dimensioni avanzata  
- Se si è esperti di MDX, un altro approccio consiste nello scrivere espressioni MDX che impostano i criteri in base ai quali viene consentito o negato l'accesso ai membri. Fare clic su **Crea dimensione ruolo** | **dati** | **avanzati** per fornire lo script.  
+ Se si è esperti di MDX, un altro approccio consiste nello scrivere espressioni MDX che impostano i criteri in base ai quali viene consentito o negato l'accesso ai membri. Fare clic su **Crea**  |  **dimensione ruolo dati**  |  **avanzati** per fornire lo script.  
   
  Per scrivere l'istruzione MDX, è possibile usare Generatore MDX. Per informazioni dettagliate, vedere [Generatore MDX &#40;Analysis Services - Dati multidimensionali&#41;](../mdx-builder-analysis-services-multidimensional-data.md). Nella scheda **Avanzate** sono disponibili le opzioni seguenti:  
   
@@ -97,7 +96,7 @@ ms.locfileid: "66075056"
  La creazione di AllowedSet genera una reazione a catena quando l'attributo fa parte di una gerarchia a più livelli. Si supponga, ad esempio, che un ruolo consenta l'accesso allo stato di Washington. Si consideri uno scenario in cui il ruolo conceda le autorizzazioni alla divisione vendite dello stato di Washington di una società. Per gli utenti che si connettono tramite questo ruolo, le query che includono predecessori (Stati Uniti) o discendenti (Seattle e Redmond) visualizzeranno solo i membri in una catena che includono lo stato di Washington. Poiché gli altri stati non vengono consentiti in modo esplicito, l'effetto sarà identico a quello del caso in cui gli stati vengano negati.  
   
 > [!NOTE]  
->  Se si definisce un set vuoto ({}) di membri dell'attributo, nessun membro dell'attributo sarà visibile al ruolo del database. L'assenza di un set delle autorizzazioni concesse non viene interpretata come set vuoto.  
+>  Se si definisce un set vuoto ( {} ) di membri dell'attributo, nessun membro dell'attributo sarà visibile al ruolo del database. L'assenza di un set delle autorizzazioni concesse non viene interpretata come set vuoto.  
   
  **Set di membri non autorizzati**  
  La proprietà DeniedSet può restituire nessun membro, tutti i membri (impostazione predefinita) o alcuni membri dell'attributo. Se il set delle autorizzazioni negate contiene solo un set specifico di membri dell'attributo, al ruolo del database viene negato l'accesso solo a tali membri specifici, oltre ai discendenti se l'attributo fa parte di una gerarchia a più livelli. Si consideri l'esempio della divisione vendite dello stato di Washington. Se Washington viene inserito in DeniedSet, gli utenti che si connettono tramite questo ruolo visualizzeranno tutti gli altri stati eccetto Washington e gli attributi dei relativi discendenti.  
@@ -116,16 +115,16 @@ ms.locfileid: "66075056"
  **Consenti totale visualizzato**  
  La proprietà VisualTotals indica se i valori di cella aggregati visualizzati vengono calcolati in base a tutti i valori di cella o solo in base ai valori di cella visibili al ruolo del database.  
   
- Per impostazione predefinita, la proprietà VisualTotals è disabilitata ( `False`impostata su). L'impostazione predefinita garantisce prestazioni ottimali, in quanto consente di calcolare in modo rapido il totale di tutti i valori di cella tramite [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , anziché dedicare il tempo necessario per selezionare i valori di cella da calcolare.  
+ Per impostazione predefinita, la proprietà VisualTotals è disabilitata (impostata su `False` ). L'impostazione predefinita garantisce prestazioni ottimali, in quanto consente di calcolare in modo rapido il totale di tutti i valori di cella tramite [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , anziché dedicare il tempo necessario per selezionare i valori di cella da calcolare.  
   
  La disabilitazione della proprietà VisualTotals, tuttavia, può creare un problema di sicurezza se un utente può usare i valori di cella aggregati per dedurre i valori relativi ai membri dell'attributo a cui il proprio ruolo del database non può accedere. In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , ad esempio, vengono usati i valori per tre membri dell'attributo per calcolare un valore di cella aggregato. Il ruolo del database può visualizzare due di tali membri dell'attributo. Utilizzando il valore di cella aggregato, un membro di questo ruolo del database sarebbe in grado di dedurre il valore per il terzo membro dell'attributo.  
   
- L'impostazione della proprietà `True` VisualTotals su può eliminare questo rischio. Quando si abilita la proprietà VisualTotals, un ruolo del database può visualizzare solo i totali aggregati per i membri della dimensione per cui dispone delle autorizzazioni.  
+ L'impostazione della proprietà VisualTotals su `True` può eliminare questo rischio. Quando si abilita la proprietà VisualTotals, un ruolo del database può visualizzare solo i totali aggregati per i membri della dimensione per cui dispone delle autorizzazioni.  
   
  **Controllo**  
  Fare clic su questa opzione per testare la sintassi MDX definita in questa pagina.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Concedere le autorizzazioni per il cubo o il modello &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
  [Concessione dell'accesso personalizzato ai dati delle celle &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)   
  [Concedere le autorizzazioni per data mining strutture e modelli &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   

@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 075548ef-08a3-413c-8ee0-4a074c276fcc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d55ecc81d9ae71b33e068b2d1d68ea1775ed6c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 504e190f4c513a8c999c4d7d7ab9eaabb83298c3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62728501"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545190"
 ---
 # <a name="database-dimension-properties"></a>Proprietà delle dimensioni del database
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]le caratteristiche di una dimensione sono definite dai metadati per la dimensione, in base alle impostazioni di varie proprietà della dimensione e agli attributi o alle gerarchie contenute nella dimensione. Nella tabella seguente vengono descritte le proprietà delle dimensioni in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] le caratteristiche di una dimensione sono definite dai metadati per la dimensione, in base alle impostazioni di varie proprietà della dimensione e agli attributi o alle gerarchie contenute nella dimensione. Nella tabella seguente vengono descritte le proprietà delle dimensioni in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 |Proprietà|Descrizione|  
 |--------------|-----------------|  
@@ -51,7 +50,7 @@ ms.locfileid: "62728501"
 > [!NOTE]  
 >  Per ulteriori informazioni sull'impostazione dei valori per le proprietà ErrorConfiguration e UnknownMember in caso di utilizzo di valori null e di altri problemi di integrità dei dati, vedere [gestione di problemi di integrità dei dati in Analysis Services 2005](https://go.microsoft.com/fwlink/?LinkId=81891).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Attributi e gerarchie di attributi](attributes-and-attribute-hierarchies.md)   
  [Gerarchie utente](user-hierarchies.md)   
  [Relazioni tra dimensioni](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

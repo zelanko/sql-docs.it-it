@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 35482dc6206f0ad8807cb0f9a3e46902d14061ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6ae3a34da62ed24d1971540e825f9f8347f413f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074801"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546638"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>Indicatori KPI nei modelli multidimensionali
   Nella terminologia aziendale, un indicatore di prestazioni chiave (KPI) rappresenta una misurazione quantificabile per la valutazione dei risultati aziendali e  
@@ -37,7 +36,7 @@ ms.locfileid: "66074801"
   
  Nella terminologia aziendale, un indicatore di prestazioni chiave (KPI) rappresenta una misurazione quantificabile per la valutazione dei risultati aziendali e viene stimato con una frequenza spesso elevata. Il reparto vendite di un'organizzazione potrebbe ad esempio utilizzare il profitto lordo mensile come indicatore di prestazioni chiave, mentre il reparto risorse umane della stessa organizzazione potrebbe basarsi sull'avvicendamento trimestrale dei dipendenti. Ognuno di questi rappresenta un esempio di utilizzo di un indicatore KPI. I dirigenti aziendali utilizzano spesso indicatori di prestazioni chiave raggruppati in una scorecard aziendale per ottenere un riepilogo cronologico immediato e accurato del successo aziendale.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], un indicatore KPI è una raccolta di calcoli, associati a un gruppo di misure in un cubo, utilizzati per valutare il successo aziendale. Questi calcoli sono in genere una combinazione di espressioni MDX (Multidimensional Expressions) e di membri calcolati. Gli indicatori di prestazioni chiave dispongono inoltre di metadati aggiuntivi che offrono informazioni su come devono venire visualizzati i risultati dei calcoli dell'indicatore nelle applicazioni client.  
+ In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , un indicatore KPI è una raccolta di calcoli, associati a un gruppo di misure in un cubo, utilizzati per valutare il successo aziendale. Questi calcoli sono in genere una combinazione di espressioni MDX (Multidimensional Expressions) e di membri calcolati. Gli indicatori di prestazioni chiave dispongono inoltre di metadati aggiuntivi che offrono informazioni su come devono venire visualizzati i risultati dei calcoli dell'indicatore nelle applicazioni client.  
   
  Un vantaggio fondamentale degli indicatori KPI in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consiste nel fatto che si tratta di indicatori basati sul server che possono essere utilizzati da diverse applicazioni client. Un indicatore di prestazioni chiave basato sul server presenta un'unica versione di verità, rispetto alle diverse versioni di verità di più applicazioni client. Si possono inoltre ottenere vantaggi in termini di prestazioni grazie alla possibilità di eseguire calcoli talvolta complessi nel server anziché in ogni computer client.  
   
@@ -47,7 +46,7 @@ ms.locfileid: "66074801"
 |Termine|Definizione|  
 |----------|----------------|  
 |Obiettivo|Calcolo o espressione numerica MDX che restituisce il valore di destinazione dell'indicatore di prestazioni chiave.|  
-|valore|Espressione numerica MDX che restituisce il valore effettivo dell'indicatore di prestazioni chiave.|  
+|Valore|Espressione numerica MDX che restituisce il valore effettivo dell'indicatore di prestazioni chiave.|  
 |Stato|Espressione MDX che rappresenta lo stato dell'indicatore di prestazioni chiave in un punto nel tempo specifico.<br /><br /> L'espressione MDX relativa allo stato deve restituire un valore normalizzato compreso tra -1 e 1. I valori minori o uguali a -1 vengono interpretati come "errati" o "bassi". Un valore pari a zero (0) viene interpretato come "accettabile" o "medio". I valori maggiori di o uguali a 1 vengono interpretati come "buoni" o "alti".<br /><br /> Facoltativamente, può venire restituito un numero illimitato di valori intermedi e questi valori possono essere utilizzati per visualizzare un numero qualsiasi di stati aggiuntivi, se l'applicazione client lo consente.|  
 |Tendenza|Espressione MDX che valuta il valore dell'indicatore di prestazioni chiave nel tempo. La tendenza può essere rappresentata da qualsiasi criterio basato sul tempo che sia utile in un contesto aziendale specifico.<br /><br /> L'espressione MDX relativa alla tendenza consente a un utente aziendale di determinare se l'indicatore di prestazioni chiave sta migliorando o peggiorando nel tempo.|  
 |Indicatore di stato|Elemento visivo che offre un'indicazione immediata dello stato dell'indicatore di prestazioni chiave. Il tipo di visualizzazione dell'elemento è determinato dal valore dell'espressione MDX che valuta lo stato.|  

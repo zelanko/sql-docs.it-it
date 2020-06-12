@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 849c6109-1453-4fe4-a892-c49a982cfadb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d958fa21380272aa770a9880e294a86fede29de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9035079fc94e0e39344fa89d9e7cf1b6e77fb8de
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493981"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543403"
 ---
 # <a name="browsing-the-deployed-cube"></a>Esplorazione di un cubo distribuito
   Nell'attività seguente si esplorerà il cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. Poiché l'analisi confronta la misura in più dimensioni, verrà utilizzata una tabella pivot di Excel per esplorare i dati. L'utilizzo di una tabella pivot consente di posizionare cliente, data e informazioni sul prodotto su diversi assi in modo da potere visualizzare come cambia Internet Sales quando viene visualizzato in periodi di tempo, dati demografici del cliente e linee di prodotti specifici.  
   
 ### <a name="to-browse-the-deployed-cube"></a>Per esplorare il cubo distribuito  
   
-1.  Per passare a Progettazione cubi in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], fare doppio clic sul ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubo tutorial** nella cartella **cubi** della Esplora soluzioni.  
+1.  Per passare a Progettazione cubi in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] , fare doppio clic sul cubo ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tutorial** nella cartella **cubi** della Esplora soluzioni.  
   
 2.  Aprire la scheda **Esplorazione** , quindi fare clic sul pulsante **Riconnetti** nella barra degli strumenti della finestra di progettazione.  
   

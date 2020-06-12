@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 9184d344-e96d-4025-ad6f-3f75129746df
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 47a46bfd482463de2377470cd11186bd3bfbd5db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d75bf3ec0aa6e7199b1e6f8d31e2602deb8efeff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077054"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544673"
 ---
 # <a name="define-attribute-relationships"></a>Definire relazioni tra attributi
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]gli attributi rappresentano il blocco predefinito fondamentale di una dimensione. Una dimensione contiene un set di attributi organizzato in base alle relazioni tra attributi.  
+  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gli attributi rappresentano il blocco predefinito fondamentale di una dimensione. Una dimensione contiene un set di attributi organizzato in base alle relazioni tra attributi.  
   
  Per ogni tabella inclusa in una dimensione, vi è una relazione tra attributi che mette in relazione l'attributo chiave della tabella agli altri attributi di quella tabella. Si crea questa relazione quando si crea la dimensione.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "66077054"
 > [!NOTE]  
 >  Definire erroneamente relazioni tra attributi può produrre risultati della query non validi.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Relazioni tra attributi](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   

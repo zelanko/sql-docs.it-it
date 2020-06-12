@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 3a38d489-4625-4878-bd18-c6f903be33df
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d8fd34a7e614c1c1bb247f84846e090d22ea053e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03e142f00192e04d5b17bc2041563cea06199c8b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073042"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545715"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>Esecuzione della Distribuzione guidata Analysis Services
   Quando si utilizza la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] distribuzione guidata per distribuire un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] progetto, è possibile eseguire la procedura guidata nei modi seguenti:  
   
 -   **In modo interattivo** Quando viene eseguita in modo interattivo, la Distribuzione guidata [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di generare uno script di distribuzione XML basato sui file in input, in base alle modifiche interattive apportate tramite l'input dell'utente. Tramite la procedura guidata eventuali modifiche apportate dall'utente vengono applicate solo allo script di distribuzione. I file di input non vengono modificati. Per altre informazioni sui file di input, vedere [Informazioni sui file di input usati per creare uno script di distribuzione](deployment-script-files-input-used-to-create-deployment-script.md).  
   
--   **Dal prompt dei comandi** Quando viene eseguito al prompt dei comandi, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] la distribuzione guidata genera uno script di distribuzione di XML for Analysis (XMLA) basato sulle opzioni utilizzate per eseguire la procedura guidata. Tramite la procedura guidata potrebbe venire richiesto l'input dell'utente e potrebbero venire modificati i file di input in base a tale input, potrebbe venire eseguita una distribuzione automatica invisibile all'utente oppure potrebbe venire creato uno script di distribuzione da utilizzare successivamente.  
+-   **Dal prompt dei comandi** Quando viene eseguito al prompt dei comandi, la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] distribuzione guidata genera uno script di distribuzione di XML for Analysis (XMLA) basato sulle opzioni utilizzate per eseguire la procedura guidata. Tramite la procedura guidata potrebbe venire richiesto l'input dell'utente e potrebbero venire modificati i file di input in base a tale input, potrebbe venire eseguita una distribuzione automatica invisibile all'utente oppure potrebbe venire creato uno script di distribuzione da utilizzare successivamente.  
   
 ## <a name="running-the-analysis-services-deployment-wizard-interactively"></a>Esecuzione della Distribuzione guidata Analysis Services in modo interattivo  
  Quando viene eseguita in modo interattivo, la Distribuzione guidata [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] legge i valori dei file di input e presenta le relative informazioni agli utenti. È possibile modificare questi valori di input, ad esempio destinazione di distribuzione, impostazioni di configurazione, opzioni di distribuzione e password della stringa di connessione, oppure lasciarli invariati. Se si modificano i valori di input, le modifiche vengono utilizzate dalla procedura guidata per la creazione dello script di distribuzione XMLA. Tramite la procedura guidata non vengono tuttavia apportate modifiche al file di input.  
@@ -40,10 +39,10 @@ ms.locfileid: "66073042"
   
      -oppure-  
   
--   Nella cartella **progetti** del [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] progetto fare doppio clic sul * \<nome del progetto>* file con estensione asdatabase.  
+-   Nella cartella **progetti** del [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] progetto, fare doppio clic sul file con *\<project name>* estensione asdatabase.  
   
     > [!NOTE]  
-    >  Se non è possibile trovare il * \<nome del progetto>* file asdatabase, provare a usare la ricerca e specificare *. asdatabase.  
+    >  Se non è possibile trovare il *\<project name>* file con estensione asdatabase, provare a usare la ricerca e specificare *. asdatabase.  
   
 ## <a name="running-the-analysis-services-deployment-wizard-at-the-command-prompt"></a>Esecuzione della Distribuzione guidata Analysis Services al prompt dei comandi  
  La Distribuzione guidata [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] può essere inoltre eseguita al prompt dei comandi. In tal caso, è necessario specificare il percorso completo del file con estensione .asdatabase ed eseguire la procedura guidata in una delle modalità indicate di seguito.  
@@ -73,7 +72,7 @@ ms.locfileid: "66073042"
   
 2.  Digitare **Microsoft.AnalysisServices.Deployment.exe** seguito dalle opzioni corrispondenti alla modalità in cui si desidera eseguire la procedura guidata.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Informazioni sullo script di distribuzione Analysis Services](understanding-the-analysis-services-deployment-script.md)   
  [Deploy Model Solutions Using the Deployment Wizard](deploy-model-solutions-using-the-deployment-wizard.md)  
   

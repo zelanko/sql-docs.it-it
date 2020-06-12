@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b4d0ff9e-5ee7-470c-abc2-d748ac4c04e7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 93ad2deb67e1b8526e14ea34eb165659f96fa066
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86983780a94af679c06253e710a582115bb25956
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072055"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540633"
 ---
 # <a name="perspective-details-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>Dettagli prospettiva (scheda Prospettive, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Utilizzare il riquadro dei dettagli della prospettiva **** della scheda **Prospettiva** in Progettazione cubi per gestire i metadati disponibili per gli utenti che eseguono query sulla prospettiva selezionata.  

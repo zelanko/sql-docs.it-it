@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c72cc6b3798d790b4787cb5fcfe3e560b6580fc2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd433f05f17a046ed49f49ea9fbdd9f36b90a3e2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075543"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546933"
 ---
 # <a name="define-semiadditive-behavior"></a>Definire una funzione semiadditiva
   Le misure semiadditive, che non aggregano in modo uniforme di tutte le dimensioni, sono molto comuni in numerosi scenari aziendali. Ogni cubo basato su snapshot di saldi nel tempo sono caratterizzati da questo problema. Questi snapshot si trovano in applicazioni per la gestione di titoli, saldi contabili, budget, risorse umane, polizze e risarcimenti assicurativi e numerosi altri scenari aziendali.  
@@ -50,7 +49,7 @@ ms.locfileid: "66075543"
   
 -   nessuno  
   
- Questa opzione non modifica le misure con una funzione di aggregazione `Sum`regolare `Min`: `Max`, `Count`,, `Distinct``Count`o.  
+ Questa opzione non modifica le misure con una funzione di aggregazione regolare: `Sum` ,, `Min` `Max` , `Count` o `Distinct``Count` .  
   
  **La procedura guidata ha rilevato la dimensione di tipo Conti ' account ', che contiene membri funzioni semiadditive. Il server aggrega i membri di questa dimensione in base al comportamento funzioni semiadditive specificato per ogni tipo di conto.**  
  Tutte le misure di un gruppo di misure dimensionate in base a una dimensione di tipo Conti verranno impostate dal sistema sulla funzione di aggregazione By Account e i membri della dimensione verranno aggregati dal server in base alle funzioni semiadditive specificate per ogni tipo di conto.  

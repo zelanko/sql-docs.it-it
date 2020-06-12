@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 838185def1d562f51d810cebdf79684f341a5903
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 620eb875dfb4b3e7594000777feb23993d9e129e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493857"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528307"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>Impostazione delle relazioni tra gli attributi in una gerarchia definita dall'utente
   Come è già stato illustrato in questa esercitazione, è possibile organizzare le gerarchie degli attributi in livelli all'interno delle gerarchie utente in modo da offrire agli utenti percorsi di navigazione in un cubo. Una gerarchia utente può rappresentare una gerarchia naturale, ad esempio una città, uno stato e un paese, oppure un percorso di navigazione, ad esempio il nome di un dipendente, la funzione e il reparto di appartenenza. Ai fini della navigazione, non esiste differenza tra questi due tipi di gerarchie utente.  
@@ -42,7 +41,7 @@ ms.locfileid: "69493857"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     Nel diagramma viene visualizzata un'icona di avviso perché la relazione è ridondante. La relazione **Full Name** -> **geography**-> **Postal Code** esisteva già ed è appena stata creata la relazione **Full Name** -> **Postal Code**. La relazione **geography**-> **Postal Code** è ora ridondante, quindi verrà rimossa.  
+     Nel diagramma viene visualizzata un'icona di avviso perché la relazione è ridondante. La relazione **Full Name**  ->  **geography** ->  **Postal Code** esisteva già ed è appena stata creata la relazione **Full Name**  ->  **Postal Code**. La relazione **geography** ->  **Postal Code** è ora ridondante, quindi verrà rimossa.  
   
 6.  Nel riquadro **Relazioni tra attributi** fare clic con il pulsante destro del mouse su **Geography**-> **Postal Code** e selezionare **Elimina**.  
   
@@ -54,9 +53,9 @@ ms.locfileid: "69493857"
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     La relazione **geography**-> **City** è ora ridondante, quindi verrà eliminata.  
+     La relazione **geography** ->  **City** è ora ridondante, quindi verrà eliminata.  
   
-11. Nel riquadro relazioni tra attributi fare clic con il pulsante destro del mouse su **geography**-> **City** , quindi scegliere **Elimina**.  
+11. Nel riquadro relazioni tra attributi fare clic con il pulsante destro del mouse su **geography** ->  **City** , quindi scegliere **Elimina**.  
   
 12. Quando viene visualizzata la finestra di dialogo **Elimina oggetti** , fare clic su **OK**.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "69493857"
   
 20. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-21. Nel riquadro relazioni tra attributi fare clic con il pulsante destro del mouse su **geography**-> **Country-Region** e scegliere **Elimina**.  
+21. Nel riquadro relazioni tra attributi fare clic con il pulsante destro del mouse su **geography** ->  **Country-Region** e scegliere **Elimina**.  
   
 22. Quando viene visualizzata la finestra di dialogo **Elimina oggetti** , fare clic su **OK**.  
   

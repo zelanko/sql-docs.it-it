@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 42319d60-ccd0-46b8-af0b-f0968c390d8a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9314494230469cca5e8db9926ddf71cb790b96ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd1a2952c54974d924fdeca23d3173a690579d2b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080649"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544243"
 ---
 # <a name="impersonation-information"></a>Impostazioni di rappresentazione
   Usare la pagina **Impostazioni di rappresentazione** per specificare le credenziali usate da Analysis Services per la connessione all'origine dati.  
@@ -27,7 +26,7 @@ ms.locfileid: "66080649"
  **Nome utente**  
  Digitare il dominio e il nome dell'account utente che verranno usati dall'oggetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] selezionato. Utilizzare il seguente formato:  
   
- Nome di **\\** dominio>* \<nome account utente>* * \<*  
+ *\<Domain name>* **\\** *\<User account name>*  
   
  Questa opzione è abilitata solo se si seleziona l'opzione **Usa nome utente e password specifici** .  
   
@@ -45,7 +44,7 @@ ms.locfileid: "66080649"
  **Ereditare**  
  Selezionare questa opzione per utilizzare il comportamento della rappresentazione, definito al livello del database impostato dall'amministratore del server utilizzando la proprietà del database `DataSourceImpersonation`.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Origini dati nei modelli multidimensionali](multidimensional-models/data-sources-in-multidimensional-models.md)   
  [Origini dati supportate &#40;SSAS multidimensionale&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3bbd5ef006674a61830bf07de31f73c3915b0d4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bfe876f6874193fd0885f16d91caa9f6fe8b172
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62701990"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544943"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Gestione di connessioni e sessioni (XMLA)
   *Informazioni sullo stato* è una condizione durante la quale il server conserva l'identità e il contesto di un client tra le chiamate al metodo. L' *assenza* di stato è una condizione durante la quale il server non memorizza l'identità e il contesto di un client al termine di una chiamata al metodo.  
@@ -45,7 +44,7 @@ ms.locfileid: "62701990"
 |-----------------|-----------------|  
 |BeginSession|Questa intestazione richiede al provider di creare una nuova sessione. Il provider deve rispondere costruendo una nuova sessione e restituendo l'ID di sessione come parte dell'intestazione Session nella risposta SOAP.|  
 |SessionId|Area del valore che contiene l'ID di sessione da utilizzare in ogni chiamata al metodo per il resto della sessione. Nella risposta SOAP il provider invia questo tag, che deve essere inviato inoltre anche dal client con ogni elemento dell'intestazione Session.|  
-|sessione|Per ogni chiamata al metodo che si verifica nella sessione, questa intestazione deve essere utilizzata e l'ID di sessione deve essere incluso nell'area del valore dell'intestazione.|  
+|Sessione|Per ogni chiamata al metodo che si verifica nella sessione, questa intestazione deve essere utilizzata e l'ID di sessione deve essere incluso nell'area del valore dell'intestazione.|  
 |EndSession|Per terminare la sessione, utilizzare questa intestazione. L'ID di sessione deve essere incluso con l'area del valore.|  
   
 > [!NOTE]  
@@ -72,7 +71,7 @@ ms.locfileid: "62701990"
     </SOAP-ENV:Envelope>  
     ```  
   
-2.  Il messaggio di risposta SOAP del provider include l'ID sessione nell'area dell'intestazione restituita, utilizzando il tag \<di intestazione XMLA>.  
+2.  Il messaggio di risposta SOAP del provider include l'ID sessione nell'area dell'intestazione restituita, utilizzando il tag di intestazione XMLA \<SessionId> .  
   
     ```  
     <SOAP-ENV:Header>  
@@ -93,7 +92,7 @@ ms.locfileid: "62701990"
     </SOAP-ENV:Header>  
     ```  
   
-4.  Al termine della sessione, viene usato \<il tag> EndSession, che contiene il valore dell'ID di sessione correlato.  
+4.  Al termine della sessione, \<EndSession> viene usato il tag, che contiene il valore dell'ID di sessione correlato.  
   
     ```  
     <SOAP-ENV:Header>  
@@ -105,7 +104,7 @@ ms.locfileid: "62701990"
     </SOAP-ENV:Header>  
     ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Sviluppo con XMLA in Analysis Services](developing-with-xmla-in-analysis-services.md)  
   
   

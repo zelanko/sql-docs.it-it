@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: be70f63b-58f2-4eff-81bc-c86d8229e617
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cbd64cd4eb3ca686fdbdd1a59c9e84fa387e6a7f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dc38d7977e13fb76c33a0399fd6a7325783abb1e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077917"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541588"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Misure (scheda Struttura cubo, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Utilizzare il riquadro **Misure** per gestire i membri e i gruppi di misure nella scheda **Struttura cubo** di Progettazione cubi.  
@@ -68,7 +67,7 @@ ms.locfileid: "66077917"
  **Rinomina**  
  Selezionare questa opzione per rinominare la misura o il gruppo di misure selezionato.  
   
- **Elimina**  
+ **Eliminazione**  
  Selezionare questa opzione per visualizzare la finestra di dialogo **Elimina oggetti** ed eliminare gli oggetti selezionati nel riquadro **Misure** .  
   
  **Sposta su**  
@@ -89,7 +88,7 @@ ms.locfileid: "66077917"
  **Proprietà**  
  Selezionare questa opzione per visualizzare la finestra **Proprietà** di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] relativa alla misura o al gruppo di misure selezionato.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configura proprietà misura](multidimensional-models/configure-measure-properties.md)   
  [Misure e gruppi di misure](multidimensional-models/measures-and-measure-groups.md)  
   

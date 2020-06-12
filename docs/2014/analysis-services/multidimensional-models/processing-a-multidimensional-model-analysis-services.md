@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7d4952724f19a3c7010884feac0254f4f75d90ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: caf111b2d78032b0a127f978562b2e0138df0109
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073357"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545795"
 ---
 # <a name="multidimensional-model-object-processing"></a>Elaborazione di oggetti del modello multidimensionale
   L'elaborazione è un passaggio, o una serie di passaggi, durante i quali tramite Analysis Services vengono caricati i dati da un'origine dati relazionale in un modello multidimensionale. Per gli oggetti in cui viene utilizzata l'archiviazione MOLAP, i dati vengono salvati su disco nella cartella dei file di database. Per l'archiviazione ROLAP, l'elaborazione avviene su richiesta, in risposta a una query MDX su un oggetto. Per gli oggetti in cui viene utilizzata l'archiviazione ROLAP, l'elaborazione si riferisce all'aggiornamento della cache prima della restituzione dei risultati della query.  
@@ -78,7 +77,7 @@ ms.locfileid: "66073357"
   
  Per l'elaborazione degli oggetti in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è possibile selezionare un'opzione di elaborazione o consentire a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di determinare il tipo di elaborazione appropriata. I metodi di elaborazione disponibili si differenziano l'uno dall'altro e variano sia in base al tipo di oggetto che alle modifiche apportate all'oggetto dopo l'ultima elaborazione. Se si imposta [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per la selezione automatica di un metodo di elaborazione, verrà usato il metodo che restituisce l'oggetto in uno stato di elaborazione completa nel minor tempo possibile. Per altre informazioni, vedere [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Architettura logica &#40;Analysis Services-Dati multidimensionali&#41;](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Oggetti di database &#40;Analysis Services - Dati multidimensionali&#41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   

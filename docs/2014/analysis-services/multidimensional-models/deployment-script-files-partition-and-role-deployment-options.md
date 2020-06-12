@@ -21,28 +21,27 @@ helpviewer_keywords:
 ms.assetid: e9b9ca57-a5cc-4fc0-87b5-305257038d56
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b9b36013f13360a2afcf9546cd1e286b35ae4acd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f4f2f5bb2f3f39636541d5aea5b931b1dcc72534
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075346"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546863"
 ---
 # <a name="specifying-partition-and-role-deployment-options"></a>Impostazione delle opzioni di distribuzione dei ruoli e delle partizioni
-  La [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] distribuzione guidata legge le opzioni di distribuzione delle partizioni e dei \<ruoli dal *nome del progetto*> file con estensione deploymentoptions. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]crea questo file quando si compila il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] progetto. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Usa le opzioni di distribuzione dei ruoli e delle partizioni del progetto corrente \<quando viene creato il *nome del progetto*> file con estensione deploymentoptions. Per altre informazioni sulle impostazioni di configurazione, vedere [Informazioni sui file di input utilizzati per creare uno script di distribuzione](deployment-script-files-input-used-to-create-deployment-script.md).  
+  La [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] distribuzione guidata legge le opzioni di distribuzione delle partizioni e dei ruoli dal \<*project name*> file con estensione deploymentoptions. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]crea questo file quando si compila il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] progetto. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Usa le opzioni di distribuzione dei ruoli e delle partizioni del progetto corrente quando \<*project name*> viene creato il file con estensione deploymentoptions. Per altre informazioni sulle impostazioni di configurazione, vedere [Informazioni sui file di input utilizzati per creare uno script di distribuzione](deployment-script-files-input-used-to-create-deployment-script.md).  
   
 ## <a name="reviewing-the-partition-and-role-deployment-options"></a>Esame delle opzioni di distribuzione dei ruoli e delle partizioni  
- Di seguito sono riportate le opzioni di distribuzione nel \< *nome del progetto*> file con estensione deploymentoptions:  
+ Di seguito sono riportate le opzioni di distribuzione del \<*project name*> file con estensione deploymentoptions:  
   
  **Opzioni di distribuzione delle partizioni**  
- Il \< *nome del progetto*> file deploymentoptions specifica se le partizioni esistenti nel database di destinazione vengono mantenute o sovrascritte (impostazione predefinita). Se le partizioni esistenti vengono mantenute, verranno distribuite solo le nuove partizioni, e le partizioni e le progettazioni delle aggregazioni in tutti i gruppi di misure esistenti non saranno modificate.  
+ Il \<*project name*> file con estensione deploymentoptions specifica se le partizioni esistenti nel database di destinazione vengono mantenute o sovrascritte (impostazione predefinita). Se le partizioni esistenti vengono mantenute, verranno distribuite solo le nuove partizioni, e le partizioni e le progettazioni delle aggregazioni in tutti i gruppi di misure esistenti non saranno modificate.  
   
 > [!NOTE]  
 >  Se il gruppo di misure contenente la partizione viene eliminato, la partizione viene eliminata automaticamente.  
   
  **Opzioni di distribuzione dei ruoli**  
- Il \< *nome del progetto*> file con estensione deploymentoptions specifica una delle opzioni di distribuzione dei ruoli seguenti:  
+ Il \<*project name*> file con estensione deploymentoptions specifica una delle opzioni di distribuzione dei ruoli seguenti:  
   
 -   I ruoli e i membri di ruolo esistenti contenuti nel database di destinazione vengono mantenuti e vengono distribuiti solo i nuovi ruoli e membri di ruolo.  
   
@@ -53,9 +52,9 @@ ms.locfileid: "66075346"
 -   **Nota** Quando vengono mantenuti i ruoli e i membri esistenti, le autorizzazioni associate a tali ruoli vengono reimpostate su nessuna autorizzazione. Le autorizzazioni di sicurezza sono contenute negli oggetti da esse protetti, non nei ruoli di sicurezza a cui sono associate. Per ulteriori informazioni su come utilizzare questo comportamento utilizzando la distribuzione guidata Analysis Services, vedere "Mantieni ruoli e membri" nella Microsoft Knowledge base.  
   
 ## <a name="modifying-the-partition-and-role-deployment-options"></a>Modifica delle opzioni di distribuzione dei ruoli e delle partizioni  
- Potrebbe essere necessario distribuire il [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] progetto usando diverse opzioni di partizione e ruolo rispetto a quelle archiviate \<nel *nome del progetto*> file deploymentoptions. È possibile, ad esempio, mantenere le partizioni, i ruoli e i membri del ruolo esistenti, anziché sostituire tutte le partizioni, i ruoli e i membri esistenti, \<come indicato nel *nome del progetto*> file con estensione deploymentoptions.  
+ Potrebbe essere necessario distribuire il [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] progetto utilizzando diverse opzioni di partizione e ruolo rispetto a quelle archiviate nel \<*project name*> file con estensione deploymentoptions. È possibile, ad esempio, mantenere le partizioni, i ruoli e i membri del ruolo esistenti, anziché sostituire tutte le partizioni, i ruoli e i membri esistenti, come indicato nel \<*project name*> file con estensione deploymentoptions.  
   
- Per modificare la distribuzione di partizioni e ruoli in un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] progetto, non è possibile modificare le impostazioni delle partizioni e dei ruoli all'interno del progetto perché il * \<nome del progetto>* finestra di dialogo **pagine delle proprietà** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] non visualizza queste opzioni. Se si desidera modificare le opzioni di distribuzione per ruoli e partizioni, è necessario modificare queste informazioni all'interno \<del *nome del progetto*> file con estensione deploymentoptions. Nella procedura seguente viene descritto come modificare le opzioni di distribuzione di partizioni e ruoli \<all'interno del *nome del progetto*> file deploymentoptions.  
+ Per modificare la distribuzione di partizioni e ruoli in un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] progetto, non è possibile modificare le impostazioni delle partizioni e dei ruoli all'interno del progetto perché nella finestra *\<project name>* di dialogo **pagine delle proprietà** di non vengono [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] visualizzate tali opzioni. Se si desidera modificare le opzioni di distribuzione per ruoli e partizioni, è necessario modificare queste informazioni all'interno del \<*project name*> file con estensione deploymentoptions. Nella procedura seguente viene descritto come modificare le opzioni di distribuzione di partizioni e ruoli all'interno del \<*project name*> file con estensione deploymentoptions.  
   
 #### <a name="to-change-the-deployment-of-partitions-or-roles-after-the-input-files-have-been-generated"></a>Per modificare la distribuzione delle partizioni o dei ruoli dopo la generazione dei file di input  
   
@@ -67,9 +66,9 @@ ms.locfileid: "66075346"
   
      -oppure-  
   
--   Aprire il \< *nome del progetto*>. deploymentoptions in un qualsiasi editor di testo e modificare manualmente le opzioni.  
+-   Aprire il \<*project name*> deploymentoptions in qualsiasi editor di testo e modificare manualmente le opzioni.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Impostazione della destinazione di installazione](deployment-script-files-specifying-the-installation-target.md)   
  [Specifica delle impostazioni di configurazione per la distribuzione della soluzione](deployment-script-files-solution-deployment-config-settings.md)   
  [Impostazione delle opzioni di elaborazione](deployment-script-files-specifying-processing-options.md)  

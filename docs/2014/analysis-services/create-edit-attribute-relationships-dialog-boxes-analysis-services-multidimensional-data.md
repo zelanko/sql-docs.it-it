@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cb3bc7d8-9d4d-4da9-979d-bdad5e27e526
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 544fc09037c0670c7ba44adf7b270e46899621a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6bcae1b3cb2f1ba25a810b409c8dc796cd6c6c25
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086935"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526687"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Creare finestre di dialogo Relazione tra attributi e Modifica relazione tra attributi (scheda Relazione tra attributi, Progettazione dimensioni) (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Crea relazione tra attributi** per definire nuove relazioni tra attributi e la finestra di dialogo **Modifica relazione tra attributi** per modificare una relazione tra attributi. Per altre informazioni, vedere [Definire relazioni tra attributi](multidimensional-models/attribute-relationships-define.md).  
@@ -53,7 +52,7 @@ ms.locfileid: "66086935"
  **Tipo di relazione**  
  Specifica il tipo di relazione da creare, **Flessibile (può cambiare nel tempo)** o **Rigida (non cambia nel tempo)**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Relazioni tra attributi &#40;Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

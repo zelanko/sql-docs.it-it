@@ -4,25 +4,25 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3f1c43ad454f499429a151dc23177e380f4eac88
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e45433b1a7e031c0aa5e549f9b2d48c036ef91c6
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892859"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669787"
 ---
 # <a name="data-types-dmx"></a>Tipi di dati (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Quando si utilizza DMX (Data Mining Extensions) per definire un nuovo modello di data [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]mining in, è necessario fornire un tipo di dati per ogni colonna del modello. Il tipo di dati descrive i dati che verranno utilizzati dall'algoritmo di data mining durante la compilazione del modello.  
+  Quando si utilizza DMX (Data Mining Extensions) per definire un nuovo modello di data mining in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , è necessario fornire un tipo di dati per ogni colonna del modello. Il tipo di dati descrive i dati che verranno utilizzati dall'algoritmo di data mining durante la compilazione del modello.  
   
  I tipi di dati dipendono dall'algoritmo. Ogni algoritmo determina i tipi di dati supportati e le modalità con cui vengono utilizzati. Gli algoritmi Microsoft supportano i tipi di dati seguenti:  
   
--   Testo  
+-   Text  
   
 -   long  
   
@@ -32,7 +32,7 @@ ms.locfileid: "68892859"
   
 -   Data  
   
- Per ulteriori informazioni sui tipi di dati supportati [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] da, vedere [tipi di dati &#40;&#41;di data mining ](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining).  
+ Per ulteriori informazioni sui tipi di dati [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supportati da, vedere [tipi di dati &#40;&#41;di data mining ](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   

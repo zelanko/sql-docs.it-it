@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 3ada00aa-da9e-488a-9f53-c3e188f81f84
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ad07559c6b380f8fba11f00789f68f9e2c850840
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e7262beef3e9d64a488e255fe5fd9f1b79a8837
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086129"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525274"
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>Visualizzare un modello usando il Visualizzatore Microsoft Sequence Clustering
-  Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] visualizzatore Sequence Clustering [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in consente di visualizzare i modelli di data [!INCLUDE[msCoName](../../includes/msconame-md.md)] mining compilati con l'algoritmo Sequence Clustering. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering è un algoritmo di analisi delle sequenze da usare per l'esplorazione di dati contenenti eventi che possono essere collegati dai percorsi o *sequenze*seguenti. Per altre informazioni su questo algoritmo, vedere [Algoritmo Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm.md).  
+  Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] visualizzatore Sequence Clustering in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di visualizzare i modelli di data mining compilati con l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Sequence Clustering. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering è un algoritmo di analisi delle sequenze da usare per l'esplorazione di dati contenenti eventi che possono essere collegati dai percorsi o *sequenze*seguenti. Per altre informazioni su questo algoritmo, vedere [Algoritmo Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm.md).  
   
 > [!NOTE]  
 >  Per visualizzare informazioni dettagliate sulle equazioni utilizzate nel modello e sui modelli individuati, utilizzare il visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree Viewer. Per altre informazioni, vedere [Visualizzare un modello usando Microsoft Generic Content Tree Viewer](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) o [Microsoft Generic Content Tree Viewer &#40;Data mining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
@@ -61,7 +60,7 @@ ms.locfileid: "66086129"
  [Torna all'inizio](#BKMK_ViewerTabs)  
   
 ###  <a name="cluster-profiles"></a><a name="BKMK_Profile"></a>Profili cluster  
- La scheda **Profili cluster** offre una vista globale dei cluster creati dall'algoritmo nel modello. Ogni colonna che segue la colonna **Popolazione** della griglia rappresenta un cluster individuato dal modello. La \<riga attribute>. Samples rappresenta sequenze diverse di dati presenti nel cluster e l' \<attributo> Row descrive tutti gli elementi contenuti nel cluster e la relativa distribuzione complessiva.  
+ La scheda **Profili cluster** offre una vista globale dei cluster creati dall'algoritmo nel modello. Ogni colonna che segue la colonna **Popolazione** della griglia rappresenta un cluster individuato dal modello. La \<attribute> riga. Samples rappresenta diverse sequenze di dati presenti nel cluster e la \<attribute> riga descrive tutti gli elementi contenuti nel cluster e la relativa distribuzione complessiva.  
   
  L'opzione **Barre istogramma** consente di controllare il numero di barre visibili nell'istogramma. Se esiste un numero di barre superiore a quello che si sceglie di visualizzare, le barre più importanti vengono mantenute mentre le barre rimanenti vengono raggruppate in un bucket grigio.  
   
@@ -90,7 +89,7 @@ ms.locfileid: "66086129"
   
  [Torna all'inizio](#BKMK_ViewerTabs)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Attività e procedure relative al Visualizzatore modello di data mining](mining-model-viewer-tasks-and-how-tos.md)   
  [Attività e procedure relative al Visualizzatore modello di data mining](mining-model-viewer-tasks-and-how-tos.md)   
  [Algoritmo Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm.md)   

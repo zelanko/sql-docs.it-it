@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2d28df68512f9c97faebf3ee00b2aa34a2b8d1a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c4f8c1b48ccc6b3f2c2363671f5e3c072f77042
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028676"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669168"
 ---
 # <a name="update-dmx"></a>UPDATE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -39,8 +39,8 @@ SET NODE_CAPTION='new caption'
  *espressione della condizione*  
  Facoltativa. Condizione per limitare i valori restituiti dall'elenco di colonne.  
   
-## <a name="examples"></a>Esempi  
- Nell'esempio seguente, l'istruzione **Update** modifica il nome predefinito, `Cluster 1`, per il cluster `001` con il nome più descrittivo. `Likely Customers`  
+## <a name="examples"></a>Esempio  
+ Nell'esempio seguente, l'istruzione **Update** modifica il nome predefinito, `Cluster 1` , per il cluster `001` con il nome più descrittivo `Likely Customers` .  
   
 ```  
 UPDATE [TM Clustering].CONTENT  

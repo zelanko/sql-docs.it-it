@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b383621408cc84a65e5f9c5adb711dd9f047be64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 699cc312b2f4b0a716d08259daf189276551e5d4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073209"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545770"
 ---
 # <a name="remote-processing-analysis-services"></a>Elaborazione remota (Analysis Services)
   È possibile eseguire l'elaborazione pianificata o automatica in un'istanza remota di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , dove la richiesta di elaborazione proviene da un computer ma viene eseguita in un computer diverso nella stessa rete.  
@@ -90,7 +89,7 @@ ms.locfileid: "66073209"
   
 2.  Come passaggio finale, modificare il processo da eseguire in base a una pianificazione definita, aggiungendo le notifiche o gli avvisi necessari per amministrare il processo. Potrebbe inoltre essere necessario ridefinire lo script di elaborazione oppure creare più passaggi del processo per elaborare in modo indipendente gli oggetti.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Componenti SQL Server Agent](../../ssms/agent/sql-server-agent.md#Components)   
  [Pianificare le attività amministrative di SSAS con SQL Server Agent](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
  [Elaborazione batch &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 348e49fc-4390-43c1-9b6c-61b386ff4373
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74c5b777dda06cf70a6afa2e6384eb2a3587d431
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 59e63b6be2253c69e0676a0bf33281b441e39b95
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62725985"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546733"
 ---
 # <a name="extending-olap-through-personalizations"></a>Estensione di OLAP tramite personalizzazioni
   In Microsoft [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] sono disponibili diverse funzioni intrinseche da utilizzare con i linguaggi MDX (Multidimensional Expressions) e DMX (Data Mining Extensions). Queste funzioni sono progettate per consentire l'esecuzione di qualsiasi operazione, dai calcoli statistici standard all'attraversamento dei membri di una gerarchia. Come avviene per qualsiasi altro prodotto complesso e affidabile, tuttavia, si è avvertita l'esigenza di estendere ulteriormente le funzionalità di questo servizio.  
@@ -30,7 +29,7 @@ ms.locfileid: "62725985"
 ## <a name="personalized-extensions"></a>Estensioni personalizzate  
  Le estensioni della personalizzazione di SQL Server Analysis Services rappresentano la struttura di base dell'implementazione di un'architettura plug-in. Le estensioni della personalizzazione di Analysis Services rappresentano una semplice ed elegante modifica all'architettura dell'assembly gestito esistente e vengono esposte nel modello a oggetti <xref:Microsoft.AnalysisServices.AdomdServer> di Analysis Services, nella sintassi MDX e nei set di righe degli schemi.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestione di assembly di modelli multidimensionali](../multidimensional-model-assemblies-management.md)   
  [Analysis Services Personalization Extensions](analysis-services-personalization-extensions.md)  
   

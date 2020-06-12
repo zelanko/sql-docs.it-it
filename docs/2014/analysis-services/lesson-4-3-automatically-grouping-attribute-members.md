@@ -9,22 +9,21 @@ ms.topic: conceptual
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7fc8bed16488f1688576d6c5b265811cdc9705a1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 887e3b8c57d0aaf13cc88dea944cf8b74e78266a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175340"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543393"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Raggruppamento automatico dei membri degli attributi
   Quando si esplora un cubo, in genere i membri di una gerarchia di attributi si dimensionano in base a quelli di un'altra gerarchia di attributi. Ad esempio, le vendite clienti si potrebbero raggruppare per città, per prodotto acquistato o per sesso. Tuttavia, con determinati tipi di attributi, è utile [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] creare automaticamente raggruppamenti di membri dell'attributo in base alla distribuzione dei membri all'interno di una gerarchia dell'attributo. In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , ad esempio, è possibile ottenere la creazione di gruppi di valori di reddito annuale per i clienti. In questo caso, gli utenti che esplorano la gerarchia di attributi vedranno i nomi e i valori dei gruppi anziché i membri stessi. L'operazione limiterà inoltre il numero di livelli presentato agli utenti, cosa che può essere più utile per l'analisi.
 
  La proprietà **DiscretizationMethod** determina se [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crea raggruppamenti e stabilisce il tipo di raggruppamento eseguito. Per impostazione predefinita, in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] non viene eseguito alcun raggruppamento. Quando si abilitano i raggruppamenti automatici, è possibile configurare [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] affinché determini automaticamente il miglior metodo di raggruppamento in base alla struttura dell'attributo. In alternativa, è possibile scegliere uno degli algoritmi di raggruppamento inclusi nell'elenco seguente:
 
- **EqualAreas** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crea intervalli di gruppi in modo che la popolazione totale dei membri della dimensione sia distribuita equamente nei gruppi.
+ **EqualAreas** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Crea intervalli di gruppi in modo che la popolazione totale dei membri della dimensione sia distribuita equamente nei gruppi.
 
- I **cluster** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] creano gruppi eseguendo il clustering unidimensionale sui valori di input usando il metodo di clustering K-means con le distribuzioni di Gauss. Questa opzione è valida solo per le colonne numeriche.
+ **Cluster** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Crea gruppi eseguendo il clustering unidimensionale sui valori di input usando il metodo di clustering K-means con le distribuzioni gaussiana. Questa opzione è valida solo per le colonne numeriche.
 
  Dopo avere specificato un metodo di raggruppamento è necessario specificare il numero di gruppi usando la proprietà **DiscretizationBucketCount** . Per ulteriori informazioni, vedere [membri attributo gruppo &#40;discretizzazione&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)
 
@@ -42,7 +41,7 @@ ms.locfileid: "78175340"
 
 4.  Nel riquadro **Attributi** selezionare **Yearly Income**.
 
-5.  Nella Finestra Proprietà modificare il valore della proprietà **DiscretizationMethod** in **Automatic** e modificare il valore della proprietà **DiscretizationBucketCount** in `5`.
+5.  Nella Finestra Proprietà modificare il valore della proprietà **DiscretizationMethod** in **Automatic** e modificare il valore della proprietà **DiscretizationBucketCount** in `5` .
 
      Nella figura seguente vengono illustrate le proprietà modificate per **Yearly Income**.
 
@@ -60,11 +59,11 @@ ms.locfileid: "78175340"
 
 4.  Nel riquadro **Attributi** selezionare **Sick Leave Hours**.
 
-5.  Nel Finestra Proprietà, modificare il valore della proprietà **DiscretizationMethod** in **Clusters** e modificare il valore della proprietà **DiscretizationBucketCount** in `5`.
+5.  Nel Finestra Proprietà, modificare il valore della proprietà **DiscretizationMethod** in **Clusters** e modificare il valore della proprietà **DiscretizationBucketCount** in `5` .
 
 6.  Nel riquadro **Attributi** selezionare **Vacation Hours**.
 
-7.  Nel Finestra Proprietà, modificare il valore della proprietà **DiscretizationMethod** in **Equal areas** e modificare il valore della proprietà **DiscretizationBucketCount** in `5`.
+7.  Nel Finestra Proprietà, modificare il valore della proprietà **DiscretizationMethod** in **Equal areas** e modificare il valore della proprietà **DiscretizationBucketCount** in `5` .
 
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>Esplorazione delle gerarchie di attributi modificati
 

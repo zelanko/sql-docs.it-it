@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: efb5ee1c-de50-4bfc-83ff-08a4f03c3ece
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 902d35dfc20973dbbad5e6608d5934b31245d9d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 221f6d0c51b3c0a688a8bf3f002bfd4d31c04a45
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174300"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527787"
 ---
 # <a name="browser-cube-designer-analysis-services---multidimensional-data"></a>Esplorazione (Progettazione cubi) (Analysis Services - Dati multidimensionali)
   La scheda **Esplorazione** di Progettazione cubi consente di esplorare dimensioni, misure e indicatori KPI in un cubo. In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]il Visualizzatore cubi di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] è stato integrato con Progettazione query MDX e fornisce interfacce utente grafiche per creare query MDX, filtrare e sezionare cubi ed eseguire il drill-down nelle gerarchie.
@@ -57,7 +56,7 @@ ms.locfileid: "78174300"
 
  **Filtrare ed eseguire query** Utilizzare questa area dell'area di progettazione per compilare query MDX, trascinando e rilasciando oggetti dal riquadro **metadati** e specificando criteri di filtro per il cubo o la dimensione di origine. Per altre informazioni, vedere [Query e filtro &#40;scheda Esplorazione, Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md).
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
  [Oggetti Cube &#40;Analysis Services-Dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md) [cubi in Progettazione cubi modelli multidimensionali](multidimensional-models/cubes-in-multidimensional-models.md) [&#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)
 
 

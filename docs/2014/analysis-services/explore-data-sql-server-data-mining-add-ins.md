@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 714845a9-4c27-461a-9ba3-149e1e818386
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0bad2a2e65a65bbafa8218a3e0afbedd4b9f13b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a20484a85b459dad58e5e6687a6cc34a093b130
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081312"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528357"
 ---
 # <a name="explore-data-sql-server-data-mining-add-ins"></a>Esplorazione dati (componenti aggiuntivi Data mining di SQL Server)
   ![Procedura guidata Esplorazione dati](media/dmc-explore.gif "Procedura guidata Esplorazione dati")  
@@ -51,7 +50,7 @@ ms.locfileid: "66081312"
 ### <a name="requirements"></a>Requisiti  
  Per utilizzare la procedura guidata **esplorazione dati** , è necessario che i dati si trovino in una tabella dati di Excel.   
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Elenco di controllo per la preparazione di data mining](checklist-of-preparation-for-data-mining.md)  
   
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a3990d47-55e2-424e-8eac-87edc937e806
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 42649fd9fe8284e89aebd37c2d9b668a3ac34a2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a5007728a9af2032f83b71a7ea5b2aea19d0cf20
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070256"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539143"
 ---
 # <a name="restore-database-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Ripristina Database (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Ripristina database** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per ripristinare un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] da un file di backup usando il formato file di backup di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] con estensione abf.  
@@ -34,14 +33,14 @@ ms.locfileid: "66070256"
   
  La finestra di dialogo **Ripristina database** include le seguenti pagine.  
   
-## <a name="pages"></a>Pagine  
+## <a name="pages"></a>.NET  
  **Generale**  
  Utilizzare questa pagina per selezionare il database da ripristinare, il file di backup dal quale eseguire il ripristino del database, le opzioni generali e la password da utilizzare per il ripristino del database. Per altre informazioni su questa pagina, vedere [Generale &#40;finestra di dialogo Ripristina database&#41; &#40;Analysis Services - Dati multidimensionali&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Partizioni**  
  Utilizzare questa pagina per ripristinare le partizioni locali nei percorsi specificati e per ripristinare le partizioni remote da file di backup remoti. Per altre informazioni su questa pagina, vedere [Partizioni &#40;finestra di dialogo Ripristina database&#41; &#40;Analysis Services - Dati multidimensionali&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Backup e ripristino di database di Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   

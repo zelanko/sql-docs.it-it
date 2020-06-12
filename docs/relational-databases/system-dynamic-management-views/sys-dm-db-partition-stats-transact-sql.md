@@ -1,7 +1,7 @@
 ---
 title: sys. dm_db_partition_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/31/2019
+ms.date: 05/28/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eff14464f5913508d8d95fec8a11a70438f95880
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a947396f3706c877770a10259838f6b860ab34b9
+ms.sourcegitcommit: 38639b67a135ca1a50a8e38fa61a089efe90e3f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828033"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84454424"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "82828033"
   Restituisce informazioni relative al conteggio di pagine e righe per ogni partizione nel database corrente.  
   
 > [!NOTE]  
->  Per chiamare questo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oggetto da o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , usare il nome **sys. dm_pdw_nodes_db_partition_stats**. Il partition_id in sys. dm_pdw_nodes_db_partition_stats differisce dalla partition_id nella vista del catalogo sys. partitions per Azure SQL Data Warehouse.
+> Per chiamare questo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oggetto da o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , usare il nome **sys. dm_pdw_nodes_db_partition_stats**. Il partition_id in sys. dm_pdw_nodes_db_partition_stats differisce dalla partition_id nella vista del catalogo sys. partitions per Azure SQL Data Warehouse.
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -66,14 +66,14 @@ ms.locfileid: "82828033"
  Il conteggio totale relativo a una tabella specifica o un indice specifico può essere ottenuto tramite l'aggiunta dei conteggi per tutte le partizioni rilevanti.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'autorizzazione VIEW DATABASE STATE per eseguire query sulla vista a gestione dinamica **sys.dm_db_partition_stats**. Per ulteriori informazioni sulle autorizzazioni per le viste a gestione dinamica, vedere [funzioni e viste a gestione dinamica &#40;&#41;Transact-SQL ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ `VIEW DATABASE STATE`Sono necessarie `VIEW DEFINITION` le autorizzazioni e per eseguire una query sulla vista a gestione dinamica **sys. dm_db_partition_stats** . Per ulteriori informazioni sulle autorizzazioni per le viste a gestione dinamica, vedere [funzioni e viste a gestione dinamica &#40;&#41;Transact-SQL ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-returning-all-counts-for-all-partitions-of-all-indexes-and-heaps-in-a-database"></a>R. Restituzione di tutti i conteggi per tutte le partizioni di tutti gli indici e heap in un database  
  Nell'esempio seguente vengono visualizzati tutti i conteggi per tutte le partizioni di tutti gli indici e heap nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT * FROM sys.dm_db_partition_stats;  
@@ -83,7 +83,7 @@ GO
 ### <a name="b-returning-all-counts-for-all-partitions-of-a-table-and-its-indexes"></a>B. Restituzione di tutti i conteggi per tutte le partizioni di una tabella e dei relativi indici  
  Nell'esempio seguente vengono visualizzati tutti i conteggi per tutte le partizioni della tabella `HumanResources.Employee` e dei relativi indici.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT * FROM sys.dm_db_partition_stats   
@@ -94,7 +94,7 @@ GO
 ### <a name="c-returning-total-used-pages-and-total-number-of-rows-for-a-heap-or-clustered-index"></a>C. Restituzione del numero totale di pagine utilizzate e del numero totale di righe per un heap o un indice cluster  
  Nell'esempio seguente vengono restituiti il numero totale di pagine utilizzate e il numero totale di righe per l'heap o l'indice cluster della tabella `HumanResources.Employee`. Poiché per impostazione predefinita la tabella `Employee` non è partizionata, la somma include solo una partizione.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT SUM(used_page_count) AS total_number_of_used_pages,   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bb885447-868b-4686-853c-8241f63d4370
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f536ae91cde1301b9499b2d36957d25c877be9c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19a38b4f30b40985236a3e8ad37c7db0ee409751
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073055"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545683"
 ---
 # <a name="roles-and-permissions-analysis-services"></a>Ruoli e autorizzazioni (Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornisce il modello di autorizzazione basata sui ruoli che concede l'accesso a operazioni, oggetti e dati. È necessario che tutti gli utenti che accedono a un database o un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] si attengano a questa procedura all'interno del contesto di un ruolo.  
@@ -56,7 +55,7 @@ ms.locfileid: "66073055"
   
 -   [Concedere l'accesso personalizzato ai dati delle celle &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creare e gestire ruoli &#40;SSAS tabulare&#41;](../tabular-models/roles-ssas-tabular.md)  
   
   

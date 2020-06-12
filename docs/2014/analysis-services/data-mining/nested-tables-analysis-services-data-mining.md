@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: cb192aa2-597e-4d4f-ac34-3556d037fed4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 865eea502ecc7e807533b75501634fb6d3356583
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cdd83e0a0d24a67fb5389b5c836212bffb3fa424
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083252"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520929"
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Tabelle nidificate (Analysis Services - Data mining)
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]i dati devono essere inseriti in un algoritmo di data mining come una serie di case contenuti in una tabella del case. Non è tuttavia possibile descrivere tutti i case con una singola riga di dati. È possibile ad esempio che un case derivi da due tabelle, di cui una contiene informazioni sui clienti, l'altra gli acquisti dei clienti. Poiché a un singolo cliente nella tabella delle informazioni possono essere associati più elementi della tabella degli acquisti, potrebbe risultare difficile descrivere i dati utilizzando una sola riga. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]fornisce un metodo univoco per la gestione di questi casi, tramite *tabelle nidificate*. Nella figura seguente viene illustrato il concetto di tabella nidificata.  
+  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] i dati devono essere inseriti in un algoritmo di data mining come una serie di case contenuti in una tabella del case. Non è tuttavia possibile descrivere tutti i case con una singola riga di dati. È possibile ad esempio che un case derivi da due tabelle, di cui una contiene informazioni sui clienti, l'altra gli acquisti dei clienti. Poiché a un singolo cliente nella tabella delle informazioni possono essere associati più elementi della tabella degli acquisti, potrebbe risultare difficile descrivere i dati utilizzando una sola riga. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]fornisce un metodo univoco per la gestione di questi casi, tramite *tabelle nidificate*. Nella figura seguente viene illustrato il concetto di tabella nidificata.  
   
  ![Due tabelle combinate tramite una tabella nidificata](../media/nested-tables.gif "Due tabelle combinate tramite una tabella nidificata")  
   
@@ -65,7 +64,7 @@ ms.locfileid: "66083252"
   
  Per altre informazioni su come creare e usare i filtri dei modelli, vedere [Filtri per i modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-models-analysis-services-data-mining.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining-algorithms-analysis-services-data-mining.md)   
  [Strutture di data mining &#40;Analysis Services - Data mining&#41;](mining-structures-analysis-services-data-mining.md)  
   

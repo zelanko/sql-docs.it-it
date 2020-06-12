@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5a3d6577-6833-4c24-820c-b65bb856157b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d9c408f79dcecd0a7850c7361716cc29b07f4cf9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c1c645486a0d328a1074f1a25b730bfbac1b14af
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073352"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545839"
 ---
 # <a name="perspectives-in-multidimensional-models"></a>Prospettive nei modelli multidimensionali
   Una prospettiva è un subset di un cubo creato per una determinata applicazione o un determinato gruppo di utenti. La prospettiva predefinita è costituita dal cubo. Una prospettiva viene esposta a un client come un cubo. Quando viene visualizzata da un utente, una prospettiva si presenta come un altro cubo. Qualsiasi modifica apportata ai dati del cubo tramite writeback nella prospettiva viene apportata al cubo originale. Per altre informazioni sulle viste in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [Prospettive](../multidimensional-models-olap-logical-cube-objects/perspectives.md).  
@@ -61,7 +60,7 @@ ms.locfileid: "66073352"
   
  Per visualizzare qualsiasi oggetto, espandere la categoria (**Gruppi di misure**, **Dimensioni**, **KPI**, **Calcoli**o **Azioni**) per qualsiasi tipo di oggetto in **Oggetti cubo**. Per visualizzare le gerarchie o gli attributi di una dimensione, espandere innanzitutto una dimensione e quindi la riga **Gerarchie** o **Attributi** . Per visualizzare le misure in un gruppo di misure, espandere il gruppo di misure.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Cubi nei modelli multidimensionali](cubes-in-multidimensional-models.md)  
   
   

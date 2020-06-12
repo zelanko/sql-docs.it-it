@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ceaf1370-9dd1-4d1a-a143-7f89a723ef80
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 009e8d203d9262ee14702b99ad7d0e31d8a16dbb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a6b158a42c9ca90bf2cfd2e9b981a1e2a735ccc
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084761"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522717"
 ---
 # <a name="decision-trees-model-query-examples"></a>Esempi di query sul modello di alberi delle decisioni
   Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto, che fornisce dettagli sui criteri individuati durante l'analisi, oppure una query di stima, che utilizza i criteri presenti nel modello di data mining per eseguire stime relative a nuovi dati. Una query sul contenuto per un modello Decision Trees, ad esempio, può fornire statistiche sul numero di case a ogni livello dell'albero o le regole che consentono di distinguere i case. In alternativa, una query di stima esegue il mapping del modello ai nuovi dati per generare indicazioni, classificazioni e così via. Utilizzando una query è inoltre possibile recuperare metadati relativi al modello.  
@@ -257,7 +256,7 @@ WHERE NODE_TYPE = 25
   
 |||  
 |-|-|  
-|Funzione di stima|Uso|  
+|Funzione di stima|Utilizzo|  
 |[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Viene determinato se un nodo è figlio di un altro nodo nel modello.|  
 |[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|Indica se il nodo specificato contiene o meno il case corrente.|  
 |[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|Viene restituita la probabilità ponderata.|  
@@ -271,7 +270,7 @@ WHERE NODE_TYPE = 25
   
  Per un elenco delle funzioni comuni a tutti gli algoritmi di [!INCLUDE[msCoName](../../includes/msconame-md.md)], vedere [Funzioni di stima correlate &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx). Per la sintassi di funzioni specifiche, vedere [Guida di riferimento alle funzioni DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Query di data mining](data-mining-queries.md)   
  [Algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm-technical-reference.md)   

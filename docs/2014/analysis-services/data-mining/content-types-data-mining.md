@@ -25,16 +25,15 @@ helpviewer_keywords:
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1cf75c9f6fc12ea84d15aebff5c50d11dd0fd924
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e3400d904bc857bc282bb1ad9220c1e01fe5a4d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085655"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524037"
 ---
 # <a name="content-types-data-mining"></a>Tipi di contenuto (Data mining)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]è possibile definire sia il tipo di dati fisico per una colonna in una struttura di data mining che un tipo di contenuto logico per la colonna quando viene utilizzato in un modello.  
+  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è possibile definire sia il tipo di dati fisico per una colonna in una struttura di data mining che un tipo di contenuto logico per la colonna quando viene utilizzato in un modello.  
   
  Il *tipo di dati* determina il modo in cui gli algoritmi elaborano i dati in tali colonne quando si creano modelli di data mining. La definizione del tipo di dati di una colonna indica all'algoritmo le informazioni sul tipo di dati delle colonne e le modalità di elaborazione dei dati. Ogni tipo di dati in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta uno o più tipi di contenuto per il data mining.  
   
@@ -51,7 +50,7 @@ ms.locfileid: "66085655"
   
  Il tipo di contenuto `Discrete` è supportato da tutti i tipi di dati di data mining.  
   
-## <a name="continuous"></a>Continuo  
+## <a name="continuous"></a>Continua  
  Il tipo di contenuto*Continuous* indica che la colonna contiene valori che rappresentano dati numerici su una scala che consente valori provvisori. A differenza di una colonna discreta, che rappresenta dati numerabili finiti, una colonna continua rappresenta misure scalabili e i dati possono contenere un numero infinito di valori frazionari. Una colonna di temperature è un esempio di colonna attributo continua.  
   
  Quando una colonna contiene dati numerici continui e quando è noto il modo in cui i dati devono essere distribuiti, è possibile migliorare potenzialmente l'accuratezza dell'analisi specificando la distribuzione prevista dei valori. Poiché la distribuzione della colonna viene specificata a livello della struttura di data mining, l'impostazione si applica a tutti i modelli basati sulla struttura. Per altre informazioni, vedere [Distribuzioni delle colonne &#40;Data mining&#41;](column-distributions-data-mining.md).  
@@ -111,7 +110,7 @@ ms.locfileid: "66085655"
 ## <a name="classified"></a>Classified  
  Oltre ai tipi di contenuto precedenti che sono di uso comune con tutti i modelli, per alcuni tipi di dati è possibile utilizzare le colonne classificate per definire i tipi di contenuto. Per altre informazioni sulle colonne classificate, vedere [Colonne classificate &#40;Data mining&#41;](classified-columns-data-mining.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Tipi di contenuto &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
  [Tipi di dati &#40;&#41;di data mining](data-types-data-mining.md)   
  [Tipi di dati &#40;&#41;DMX](/sql/dmx/data-types-dmx)   

@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 03d7cb5c-7ff0-4e15-bcd2-7075d1b0dd69
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d775b8fbfb7d50b5db245073fdc52fc274638eb9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 723eb7c1c0e8547ee411fc54ecd4aca613011b38
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075869"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547113"
 ---
 # <a name="database-readwritemodes"></a>Proprietà ReadWriteMode del database
-  Spesso, un amministratore di database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vuole impostare un database di lettura/scrittura in sola lettura o viceversa. Queste situazioni sono il più delle volte determinate da esigenze aziendali, ad esempio la condivisione della stessa cartella di database tra più server per ottenere la scalabilità orizzontale di una soluzione, e per migliorare le prestazioni. In questi casi, la `ReadWriteMode` proprietà database consente all' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] amministratore di database di modificare facilmente la modalità operativa del database.  
+  Spesso, un amministratore di database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vuole impostare un database di lettura/scrittura in sola lettura o viceversa. Queste situazioni sono il più delle volte determinate da esigenze aziendali, ad esempio la condivisione della stessa cartella di database tra più server per ottenere la scalabilità orizzontale di una soluzione, e per migliorare le prestazioni. In questi casi, la `ReadWriteMode` Proprietà database consente all' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] amministratore di database di modificare facilmente la modalità operativa del database.  
   
 ## <a name="readwritemode-database-property"></a>Proprietà di database ReadWriteMode  
  La proprietà di database `ReadWriteMode` specifica se il database è in modalità lettura/scrittura o in modalità sola lettura. Questi sono i due soli valori possibili della proprietà. Quando il database è in modalità sola lettura, non è possibile applicare modifiche o aggiornamenti. Quando invece il database è in modalità lettura/scrittura, le modifiche e gli aggiornamenti possono verificarsi. La proprietà di database `ReadWriteMode` è definita come proprietà di sola lettura e può essere impostata solo tramite un comando `Attach`.  
@@ -38,14 +37,14 @@ ms.locfileid: "66075869"
 ## <a name="readwritemode-usage"></a>Utilizzo di ReadWriteMode  
  La proprietà di database `ReadWriteMode` deve essere utilizzata come parte di un comando di database `Attach`. Il comando `Attach` consente di impostare la proprietà di database su `ReadWrite` o `ReadOnly`. Il valore della proprietà di database `ReadWriteMode` non può essere aggiornato direttamente perché la proprietà è definita di sola lettura. I database vengono creati con la proprietà `ReadWriteMode` impostata su `ReadWrite`. Non è possibile creare un database in modalità sola lettura.  
   
- Per cambiare la `ReadWriteMode` proprietà del database `ReadWrite` tra `ReadOnly`e, è necessario eseguire una sequenza `Detach/Attach` di comandi.  
+ Per cambiare la `ReadWriteMode` proprietà del database tra `ReadWrite` e `ReadOnly` , è necessario eseguire una sequenza di `Detach/Attach` comandi.  
   
  Tutte le operazioni di database, ad eccezione di `Attach`, mantengono la proprietà di database `ReadWriteMode` nello stato corrente. Ad esempio, operazioni come `Alter`, `Backup`, `Restore` e `Synchronize` mantengono il valore di `ReadWriteMode`.  
   
 > [!NOTE]  
 >  È possibile creare cubi locali da un database di sola lettura.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Collegamento e scollegamento di Analysis Services database](attach-and-detach-analysis-services-databases.md)   

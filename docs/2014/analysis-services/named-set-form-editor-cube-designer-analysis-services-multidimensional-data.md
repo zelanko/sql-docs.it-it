@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0fcdb908-b160-4c66-917f-3185cd272079
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 861824359ff1cd9700f5acaa64d0b2155c870add
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58fe34478e718ef356c03c42b8c2149f9256f1a2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072346"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541253"
 ---
 # <a name="named-set-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor form set denominato (scheda Calcoli, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Utilizzare il riquadro **Editor form set denominato** nella scheda **Calcoli** in Progettazione cubi per creare o modificare un set denominato.  
@@ -37,7 +36,7 @@ ms.locfileid: "66072346"
 > [!NOTE]  
 >  Questa opzione deve includere un'espressione set valida.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Calcoli](multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [Creazione di set denominati](multidimensional-models/create-named-sets.md)   
  [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   

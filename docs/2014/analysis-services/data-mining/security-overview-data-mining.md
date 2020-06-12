@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 387bde00-bcf3-4612-b27b-f9f608dbf71e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c55224b5590d23008de8b6caef7f120748f232bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35bc4a4fdb62373b7ae3fb42199c8717405ea14e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082900"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520517"
 ---
 # <a name="security-overview-data-mining"></a>Panoramica della sicurezza (data mining)
   Il processo di sicurezza [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] si verifica a più livelli. È necessario proteggere ogni istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e le relative origini dati in modo che solo gli utenti autorizzati dispongano di autorizzazioni di lettura o di lettura/scrittura per le dimensioni, i modelli di data mining e le origini dati selezionati. È inoltre necessario proteggere le origini dati sottostanti per evitare che utenti non autorizzati danneggino le informazioni aziendali riservate. Il processo di protezione di un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è descritto negli argomenti seguenti.  
@@ -55,7 +54,7 @@ ms.locfileid: "66082900"
   
  Se si utilizzano pacchetti di Integration Services per pulire i dati, aggiornare modelli di data mining o eseguire stime, è necessario assicurarsi che il servizio Integration Services disponga delle autorizzazioni appropriate per il database in cui è archiviato il modello e delle autorizzazioni appropriate per i dati di origine.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Ruoli e autorizzazioni &#40;Analysis Services&#41;](../multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9f8e3809-507c-496b-b96d-1fa4e028fe1a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ac7fe46583c579c861de7b639fe72e58801f2e5c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7c3a1e5e72f13546f971bedba4af14e4e2d4264
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077135"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544693"
 ---
 # <a name="arrange-shapes-in-the-attribute-relationship-diagram"></a>Disporre le forme nel diagramma di relazione tra attributi
   È possibile modificare il layout delle forme nella scheda **Relazioni tra attributi** della vista Struttura dimensione vista in Progettazione dimensioni in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -30,7 +29,7 @@ ms.locfileid: "66077135"
   
      È anche possibile fare clic su **Disponi forme** per disporre automaticamente tutte le forme in base all'algoritmo di layout utilizzato da Progettazione dimensioni.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Relazioni tra attributi](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
  [Definire relazioni tra attributi](attribute-relationships-define.md)  
   

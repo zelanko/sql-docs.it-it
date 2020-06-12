@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4c12376f-4fc2-492b-9a00-93eec34571ed
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 03419c570b4982a19cf1a958ac6e0391de02fef9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e76f06cab4fba292e5295a4814816c36929c9f4a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076102"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547215"
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>Viste origine dati in modelli multidimensionali
   Una vista origine dati è un'astrazione di un'origine dati relazionale che diventa la base dei cubi e delle dimensioni creati in un progetto multidimensionale. Lo scopo di una vista origine dati è fornire il controllo sulle strutture di dati utilizzate nel progetto e funzionare indipendentemente dalle origini dati sottostanti (ad esempio, con la possibilità di rinominare o concatenare colonne senza modificare direttamente l'origine dati originale).  
@@ -55,7 +54,7 @@ ms.locfileid: "66076102"
   
  [Aggiornare lo schema in una vista origine dati &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Generazione guidata schema &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)   
  [Origini dati supportate &#40;SSAS multidimensionale&#41;](supported-data-sources-ssas-multidimensional.md)  
   

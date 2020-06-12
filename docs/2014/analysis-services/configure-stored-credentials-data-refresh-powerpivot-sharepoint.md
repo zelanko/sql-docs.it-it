@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 987eff0f-bcfe-4bbd-81e0-9aca993a2a75
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 23f35c8998b204182f25f85f8f7694fb60d042b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c29d27d38a72954b1471db21c199c0372cac4036
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087462"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527257"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>Configurare le credenziali archiviate per l'aggiornamento dati PowerPivot (PowerPivot per SharePoint)
   I processi di aggiornamento dati PowerPivot possono essere eseguiti in qualsiasi account utente di Windows purché venga creata un'applicazione di destinazione nel servizio di archiviazione sicura per archiviare le credenziali che si desidera utilizzare. Analogamente, se si desidera fornire un account di accesso al database diverso da quello utilizzato per importare originariamente i dati in PowerPivot per Excel, è possibile eseguire il mapping di queste credenziali a un'applicazione di destinazione del servizio di archiviazione sicura, quindi specificare quell'applicazione di destinazione in una pianificazione dell'aggiornamento dati.  
@@ -188,7 +187,7 @@ ms.locfileid: "66087462"
   
 17. Fare clic su **OK**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Pianificare un aggiornamento dati &#40;PowerPivot per SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)   
  [Aggiornamento di dati PowerPivot con SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b8b1eedc-4d6d-4429-a578-e629ec573934
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ae5244110e6b95434f9008fd7dc99cee259acf8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 485a3e12b46700319c760b878ecbdcfb8c97545d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086822"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526677"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>Crea struttura di data mining (componenti aggiuntivi Data mining di SQL Server)
   ![Pulsante Crea la struttura di data mining, barra multifunzione Data mining](media/dmc-createstruct.gif "Pulsante Crea la struttura di data mining, barra multifunzione Data mining")  
@@ -114,7 +113,7 @@ ms.locfileid: "66086822"
 ### <a name="requirements"></a>Requisiti  
  Per creare una struttura di data mining, è necessario disporre di una connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. È necessaria una connessione anche se si utilizzano strutture temporanee. Per ulteriori informazioni su come creare o modificare una connessione, vedere [connettersi ai dati di origine &#40;client di data mining per&#41;Excel ](connect-to-source-data-data-mining-client-for-excel.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di un modello di data mining](creating-a-data-mining-model.md)  
   
   

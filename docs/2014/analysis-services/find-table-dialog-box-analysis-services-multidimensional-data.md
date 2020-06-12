@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 133d28e8-55eb-4783-bb8b-d3776a95ebda
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2730d14bb0ffc0bab6c0f6dc8a331bae62644da0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80d98b29b4d35978864d4a2289e9d351e20f661b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081092"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544443"
 ---
 # <a name="find-table-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Trova tabella (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Trova tabella** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per trovare una tabella nella vista origine dati associata a una dimensione, a un cubo o a una struttura di data mining. Questa finestra di dialogo può essere visualizzata in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] nei modi seguenti:  
@@ -41,7 +40,7 @@ ms.locfileid: "66081092"
  **Filter**  
  Consente di specificare il filtro usato per limitare il numero di oggetti elencati e quindi di applicare il filtro alle tabelle elencate in **Selezionare una tabella dalla vista origine dati**facendo clic sul pulsante.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Finestra di dialogo Proprietà assembly &#40;Analysis Services-Dati multidimensionali&#41;](assembly-properties-dialog-box-analysis-services-multidimensional-data.md)   
  [Vista origine dati &#40;scheda Struttura dimensione, Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
  [Vista origine dati &#40;scheda Struttura cubo, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  

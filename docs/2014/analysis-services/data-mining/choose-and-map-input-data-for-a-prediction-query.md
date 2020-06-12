@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 00d330a0-879d-4da0-9f29-53c288116f4d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 89eaf3b59f6d779a01168b00d51acbee1e96ca7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20a10c066fc77e8d760bde456be54b366def8f59
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085852"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524888"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>Scegliere ed eseguire il mapping di dati di input per una query di stima
   Quando si creano stime da un modello di data mining, generalmente si procede inserendo nuovi dati nel modello. (L'eccezione è rappresentata dai modelli Time Series che eseguono stime unicamente in base ai dati cronologici.) Per fornire al modello nuovi dati, è necessario assicurarsi che i dati siano disponibili in una vista origine dati. Se si sa in anticipo quali dati si utilizzeranno per la stima, è possibile includerli nella vista origine dati utilizzata per la creazione del modello. In caso contrario, potrebbe essere necessario creare una nuova vista origine dati. Per altre informazioni, vedere [Viste origine dati in modelli multidimensionali](../multidimensional-models/data-source-views-in-multidimensional-models.md).  
@@ -117,7 +116,7 @@ ms.locfileid: "66085852"
   
      Se esiste già una relazione, viene eseguito il mapping automatico tra le colonne del modello di data mining e le colonne con lo stesso nome della tabella di input. È possibile modificare la relazione tra la tabella nidificata e la tabella del case facendo clic su **Modifica join**, che consente di aprire la finestra di dialogo **Crea relazione** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Query di stima &#40;Data Mining&#41;](prediction-queries-data-mining.md)  
   
   

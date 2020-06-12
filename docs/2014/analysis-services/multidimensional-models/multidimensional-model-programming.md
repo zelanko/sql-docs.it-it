@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 871a6d98-85bf-4200-8343-137543029512
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 668878e93d72c9c0b276b95ad090c8570f3fc936
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b84140770b15d6b7b3640cdc0c845c1c1d8554b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62725195"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546036"
 ---
 # <a name="multidimensional-model-programming"></a>Programmazione del modello multidimensionale
   In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono disponibili diverse API per la programmazione in un'istanza di Analysis Services e sui database multidimensionali che vengono da questa resi disponibili. In questa sezione vengono descritti gli approcci disponibili per gli sviluppatori che desiderano creare applicazioni personalizzate utilizzando Analysis Services. È possibile utilizzare queste informazioni per scegliere l'interfaccia di programmazione che più soddisfa i requisiti di un particolare progetto. I progetti di sviluppo di Analysis Services possono essere basati su codice gestito o non gestito eseguito su una piattaforma Windows o altre piattaforme che supportano accesso HTTP.  
@@ -35,7 +34,7 @@ ms.locfileid: "62725195"
   
  [Provider OLE DB per Analysis Services &#40;Analysis Services - Dati multidimensionali&#41;](../dev-guide/analysis-services-ole-db-provider-analysis-services-multidimensional-data.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Programmazione di modelli tabulari](../tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
  [Programmazione di data mining](../dev-guide/data-mining-programming.md)  
   

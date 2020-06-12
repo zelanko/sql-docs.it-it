@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 1b9cae0a-8990-4194-af5f-a1ea5f2aff06
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 074659d42e1960c5f24cf4afa20668a3d8c823b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d93361fb14bc6544ffa7376439c2da0c8e06c3fb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62725485"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545953"
 ---
 # <a name="logical-architecture-analysis-services---multidimensional-data"></a>Architettura logica (Analysis Services - Dati multidimensionali)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa componenti server e client per fornire Online Analytical Processing (OLAP) e data mining funzionalità per le applicazioni [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Business Intelligence:  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] usa componenti server e client per fornire Online Analytical Processing (OLAP) e data mining funzionalità per le applicazioni business intelligence:  
   
--   Il componente server di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] viene implementato come un servizio di Microsoft Windows. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supporta più istanze di nello stesso computer, ognuna delle [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] quali è implementata come istanza separata del servizio Windows.  
+-   Il componente server di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] viene implementato come un servizio di Microsoft Windows. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]supporta più istanze di nello stesso computer, ognuna delle quali è [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] implementata come istanza separata del servizio Windows.  
   
 -   I client comunicano con [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] mediante lo standard pubblico XML for Analysis (XMLA), un protocollo basato su SOAP per l'esecuzione di comandi e la ricezione di risposte che viene esposto come un servizio Web. Tramite XMLA vengono inoltre offerti modelli a oggetti client a cui è possibile accedere usando un provider gestito, ad esempio ADOMD.NET, o un provider OLE DB nativo.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "62725485"
  **Sicurezza dall'accesso utente**  
  [Architettura di sicurezza dall'accesso utente](understanding-microsoft-olap-logical-architecture.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Informazioni sull'architettura Microsoft OLAP](../olap-physical/understanding-microsoft-olap-architecture.md)   
  [Architettura fisica &#40;Analysis Services - Dati multidimensionali&#41;](../olap-physical/understanding-microsoft-olap-physical-architecture.md)  
   

@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6efccad47f0d6670c87aeb1e9cc9ef9ec654a138
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49ec8adeaf5d8726220ed03f29c1be3088f9ccb2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070913"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547703"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>Utilizzare feed di dati (PowerPivot per SharePoint)
   I feed di dati rappresentano uno o più flussi di dati generati da un'origine dati online e trasmessi a un documento o a un'applicazione di destinazione. Se si utilizza PowerPivot per Excel, i feed di dati consentono di trasferire i dati aziendali esistenti da origini dati arbitrarie in nella finestra di PowerPivot nella cartella di lavoro di Excel 2010. Dopo aver importato un feed di dati in una cartella di lavoro, è possibile farvi riferimento successivamente in qualsiasi operazione pianificata di aggiornamento dati in un server SharePoint.  
   
  La modalità di utilizzo di un feed di dati varia a seconda che si utilizzino funzionalità di esportazione predefinite in applicazioni che supportano feed di dati Atom oppure si creino e si utilizzino servizi di dati personalizzati. Le applicazioni che sono in grado di pubblicare e leggere i dati XML Atom offrono un trasferimento di dati continuo che nasconde agli utenti il metodo dei feed di dati e dei servizi dati. Per gli utenti si verifica un semplice spostamento di dati da un'applicazione a un'altra.  
   
- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e Microsoft SharePoint 2010 forniscono feed di dati che possono essere utilizzati nelle cartelle di lavoro di PowerPivot. È possibile utilizzare le informazioni contenute in questo argomento per apprendere le modalità di accesso ai feed di dati da report ed elenchi già disponibili.  
+ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e Microsoft SharePoint 2010 forniscono feed di dati che possono essere utilizzati nelle cartelle di lavoro di PowerPivot. È possibile utilizzare le informazioni contenute in questo argomento per apprendere le modalità di accesso ai feed di dati da report ed elenchi già disponibili.  
   
  In questo argomento sono incluse le sezioni seguenti:  
   
@@ -37,7 +36,7 @@ ms.locfileid: "66070913"
 ##  <a name="prerequisites"></a><a name="prereq"></a> Prerequisiti  
  È necessario disporre di PowerPivot per Excel per importare un feed di dati in Excel 2010.  
   
- È necessario disporre di un servizio Web o di un servizio dati che consenta di fornire dati tabulari XML in formato Atom 1.0. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] E SharePoint 2010 possono fornire dati in questo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] formato.  
+ È necessario disporre di un servizio Web o di un servizio dati che consenta di fornire dati tabulari XML in formato Atom 1.0. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] E SharePoint 2010 possono fornire dati in questo formato.  
   
  Prima di poter esportare un elenco SharePoint come un feed di dati, è necessario installare ADO.NET Data Services nel server SharePoint. Per altre informazioni, vedere [Installare ADO.NET Data Services per supportare esportazioni di feed di dati di elenchi SharePoint](../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md).  
   
@@ -82,13 +81,13 @@ ms.locfileid: "66070913"
   
     1.  **URL di base** è facoltativo. È necessario specificare questo valore se un documento di servizio dati fornisce più feed. L'URL di base specifica la parte di URL comune a tutti i feed, ad esempio il nome del server e il sito. Se si crea un documento di servizio dati in un report di Reporting Services, l'URL di base sarà costituito dall'URL e dal report del server di report.  
   
-    2.  **URL servizio Web** è obbligatorio. Se l'URL di base questo valore deve includere http:// o https:// nell'indirizzo. Se è stato specificato un URL di base, l'URL servizio Web è costituito dalla parte che segue l'URL di base. Ad esempio, se l'URL completo è http://adventure-works/inventory/today.aspx, l'URL di base sarà http://adventure-works/inventorye l'URL del servizio Web sarà/Today.aspx  
+    2.  **URL servizio Web** è obbligatorio. Se l'URL di base questo valore deve includere http:// o https:// nell'indirizzo. Se è stato specificato un URL di base, l'URL servizio Web è costituito dalla parte che segue l'URL di base. Ad esempio, se l'URL completo è http://adventure-works/inventory/today.aspx , l'URL di base sarà http://adventure-works/inventory e l'URL del servizio Web sarà/Today.aspx  
   
          L'URL servizio Web può includere parametri che filtrano o selezionano un subset di dati. L'applicazione o il servizio che fornisce il feed deve supportare i parametri specificati nell'URL.  
   
 6.  Immettere un valore in **Nome tabella**, una tabella per ogni feed. Questo valore è obbligatorio. Il nome della tabella viene utilizzato da un'applicazione client che utilizza il feed di dati. In PowerPivot per Excel, il nome della tabella viene utilizzato per denominare le tabelle nella finestra di PowerPivot che conterrà i dati importati.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Attivare l'integrazione delle funzionalità di PowerPivot per le raccolte siti in Amministrazione centrale](activate-power-pivot-integration-for-site-collections-in-ca.md)   
  [Condividere feed di dati usando una libreria di feed di dati &#40;PowerPivot per SharePoint&#41;](share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md)  
   

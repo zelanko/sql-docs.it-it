@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0d80a58d33cd6475940afaf08de2d251c5646bec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 21c7dd1e5ebe5e7b860a3b1f6a375772f236839c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075395"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546943"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Definizione di una vista origine dati (Analysis Services)
-  Una vista origine dati contiene il modello logico dello schema utilizzato dagli oggetti [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di database multidimensionali, ovvero cubi, dimensioni e strutture di data mining. Una vista origine dati è la definizione di metadati, in formato XML, degli elementi dello schema utilizzati dal modello UDM (Unified Dimensional Model) e dalle strutture di data mining. Una vista origine dati ha le caratteristiche seguenti:  
+  Una vista origine dati contiene il modello logico dello schema utilizzato dagli [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oggetti di database multidimensionali, ovvero cubi, dimensioni e strutture di data mining. Una vista origine dati è la definizione di metadati, in formato XML, degli elementi dello schema utilizzati dal modello UDM (Unified Dimensional Model) e dalle strutture di data mining. Una vista origine dati ha le caratteristiche seguenti:  
   
 -   Include i metadati che rappresentano oggetti selezionati da una o più origini dati sottostanti oppure i metadati che verranno utilizzati per generare un archivio dati relazionale sottostante, se per la generazione dello schema viene seguito l'approccio dall'alto verso il basso.  
   
@@ -130,7 +129,7 @@ ms.locfileid: "66075395"
 > [!NOTE]  
 >  Al termine della Creazione guidata vista origine dati, è possibile aggiungere o rimuovere le relazioni nel riquadro degli schemi di Progettazione vista origine dati. Per altre informazioni, vedere [Definire relazioni logiche in una vista origine dati &#40;Analysis Services&#41;](define-logical-relationships-in-a-data-source-view-analysis-services.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Aggiunta o rimozione di tabelle o viste in una vista origine dati &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
  [Definire chiavi primarie logiche in una vista origine dati &#40;Analysis Services&#41;](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
  [Definire calcoli denominati in una vista origine dati &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)   

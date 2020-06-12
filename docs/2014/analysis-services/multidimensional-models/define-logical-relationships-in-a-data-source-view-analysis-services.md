@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a20d6dae-e769-4131-8a59-7ef56f174220
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: caa1b9ee8af054f7fcc5f10869553343d50a9c2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a356fa721f6e95289ab92579bbc580900f32f507
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075615"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546973"
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>Definire relazioni logiche in una vista origine dati (Analysis Services)
   Creazione guidata vista origine dati e Progettazione vista origine dati consentono di definire automaticamente le relazioni tra le tabelle aggiunte a una vista origine dati, in base alle relazioni di database sottostanti o ai criteri di corrispondenza nomi specificati.  
@@ -84,7 +83,7 @@ ms.locfileid: "66075615"
   
 3.  Fare clic con il pulsante destro del mouse sulla relazione da modificare e quindi scegliere **Modifica relazione**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Viste origine dati in modelli multidimensionali](data-source-views-in-multidimensional-models.md)  
   
   

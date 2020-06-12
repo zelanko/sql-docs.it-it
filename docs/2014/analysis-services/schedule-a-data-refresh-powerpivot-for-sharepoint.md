@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8571208f-6aae-4058-83c6-9f916f5e2f9b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 429b35f6865deb5c0c3dd79e21cfe16cac7fae91
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cfbd8496a700f03ae91e81f1fcf442c1a12bcfa
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070004"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538923"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>Pianificare un aggiornamento dati (PowerPivot per SharePoint)
   È possibile pianificare aggiornamenti automatici dei dati PowerPivot in una cartella di lavoro di Excel pubblicata in un sito di SharePoint.  
@@ -98,7 +97,7 @@ ms.locfileid: "66070004"
   
 7.  In Notifiche tramite posta elettronica immettere l'indirizzo di posta elettronica della persona che deve essere notificata in caso di errore di elaborazione.  
   
-8.  In Credenziali specificare un account usato per eseguire il processo di aggiornamento dati. L'account deve disporre delle autorizzazioni di collaborazione sulla cartella di lavoro, affinché tale cartella possa essere aperta per l'aggiornamento dei relativi dati, e deve essere un account utente di dominio Windows. In molti casi, questo account deve disporre anche delle autorizzazioni di lettura sulle origini dati esterne usate durante l'aggiornamento dati. In particolare, se sono stati importati originalmente i dati usando l'opzione Usa autenticazione di Windows, la stringa di connessione è compilata per usare le credenziali di Windows dell'utente corrente. Se l'utente corrente è l'account di aggiornamento dati, tale account deve disporre delle autorizzazioni di lettura sull'origine dati esterna affinché l'aggiornamento dati venga completato correttamente. Scegliere una delle opzioni seguenti:  
+8.  In Credenziali specificare un account usato per eseguire il processo di aggiornamento dati. L'account deve disporre delle autorizzazioni di collaborazione sulla cartella di lavoro, affinché tale cartella possa essere aperta per l'aggiornamento dei relativi dati, e deve essere un account utente di dominio Windows. In molti casi, questo account deve disporre anche delle autorizzazioni di lettura sulle origini dati esterne usate durante l'aggiornamento dati. In particolare, se sono stati importati originalmente i dati usando l'opzione Usa autenticazione di Windows, la stringa di connessione è compilata per usare le credenziali di Windows dell'utente corrente. Se l'utente corrente è l'account di aggiornamento dati, tale account deve disporre delle autorizzazioni di lettura sull'origine dati esterna affinché l'aggiornamento dati venga completato correttamente. Scegliere una delle seguenti opzioni:  
   
     1.  Scegliere **Utilizza l'account di aggiornamento dati configurato dall'amministratore** per elaborare l'operazione di aggiornamento dati usando l'account di aggiornamento dati automatico PowerPivot.  
   
@@ -158,7 +157,7 @@ ms.locfileid: "66070004"
 > [!NOTE]  
 >  Gli amministratori di SharePoint possono assistere nella risoluzione dei problemi relativi all'aggiornamento dei dati visualizzando i report consolidati sull'aggiornamento dei dati nel Dashboard di gestione PowerPivot in Amministrazione centrale. Per ulteriori informazioni, vedere [PowerPivot Management Dashboard and Usage Data](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Aggiornamento dati PowerPivot con SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)   
  [Visualizzare la cronologia dell'aggiornamento dati &#40;PowerPivot per SharePoint&#41;](power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)   
  [Configurare le credenziali archiviate per l'aggiornamento dati PowerPivot &#40;PowerPivot per SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)  

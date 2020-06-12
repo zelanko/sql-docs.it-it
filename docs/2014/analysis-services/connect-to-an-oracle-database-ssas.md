@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9bd177fb-8539-46cd-bf96-189ade52c2a1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8bc5a08d96dbef0bae412b75c9592e4893e12a0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6d6344fd130a9d84b67c242af93f7a3f2ce204e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087014"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526987"
 ---
 # <a name="connect-to-an-oracle-database-ssas"></a>Connessione a un database Oracle (SSAS)
   Questa pagina dell' **Importazione guidata tabella** consente di specificare le impostazioni per connettersi a un database Oracle. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
@@ -27,7 +26,7 @@ ms.locfileid: "66087014"
 > [!NOTE]  
 >  Le credenziali dell'utente corrente vengono utilizzate in caso di selezione di un database in questa pagina. Tuttavia, l'importazione non verrà completata se l'utente specificato nella pagina Impostazioni di rappresentazione non dispone di privilegi sufficienti per leggere dal database selezionato.  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco elementi dell'interfaccia utente  
  **Nome descrittivo connessione**  
  Digitare un nome univoco per questa connessione all'origine dati. Questo campo è obbligatorio.  
   

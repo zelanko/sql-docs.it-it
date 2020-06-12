@@ -1,5 +1,6 @@
 ---
 title: Altre annotazioni (SQLXML)
+description: Consente di visualizzare un elenco di annotazioni SQLXML con una descrizione del modo in cui ognuno viene interpretato dal caricamento bulk XML.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -22,12 +23,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7eb01a084ec968adbd9fe8ff86623bcca5f9eb26
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 30e59d3fc049d56e8142f241dc5c75c054db837c
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246825"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306260"
 ---
 # <a name="annotation-interpretation---other-annotations"></a>Interpretazione delle annotazioni - Altre annotazioni
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

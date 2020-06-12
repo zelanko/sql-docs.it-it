@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 91220b21-adbc-49a9-b200-8bf0a724eff1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a8b19c9c23857013796885eb8d2d3469607eae17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 12dec570bb4ef4a499c5f141d62b15467212d2ae
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084724"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522597"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>Eliminare un filtro da un modello di data mining
   Quando si crea un filtro in un modello di data mining, è possibile creare modelli in un subset dei dati nella vista origine dati. I filtri sono anche utili per il test dell'accuratezza del modello su un subset dei dati originali.  
@@ -54,11 +53,11 @@ ms.locfileid: "66084724"
   
 1.  In Esplora soluzioni fare clic sul modello di data mining che contiene il filtro.  
   
-2.  Nella finestra **Proprietà** fare clic con il pulsante destro del mouse sul testo `Filter` del filtro nella proprietà, quindi scegliere **Seleziona tutto**.  
+2.  Nella finestra **Proprietà** fare clic con il pulsante destro del mouse sul testo del filtro nella `Filter` proprietà, quindi scegliere **Seleziona tutto**.  
   
 3.  Premere il tasto BACKSPACE o CANC.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Drill-through sui dati del case da un modello di data mining](drill-through-to-case-data-from-a-mining-model.md)   
  [Attività e procedure relative al modello di data mining](mining-model-tasks-and-how-tos.md)   
  [Filtri per i modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-models-analysis-services-data-mining.md)  

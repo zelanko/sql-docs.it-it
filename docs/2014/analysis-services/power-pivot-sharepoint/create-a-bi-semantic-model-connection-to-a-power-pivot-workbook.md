@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f525c45e71c290d3eaab410c0fa0fa62d1e9a61d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55812c7df95b49fecbdbf8ed1a17c7403c04fbcb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071638"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547483"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>Creare una connessione BISM (BI Semantic Model) a una cartella di lavoro di PowerPivot
   Utilizzare le informazioni di questo argomento per impostare una connessione BISM che reindirizza a una cartella di lavoro di PowerPivot nella stessa farm.  
@@ -34,12 +33,12 @@ ms.locfileid: "66071638"
   
  [Passaggi successivi](#bkmk_next)  
   
-##  <a name="review-prerequisites"></a><a name="bkmk_prereq"></a> Verificare i prerequisiti  
+##  <a name="review-prerequisites"></a><a name="bkmk_prereq"></a>Verificare i prerequisiti  
  Per creare un file di connessione BISM, è necessario disporre delle autorizzazioni di collaborazione.  
   
  È necessario disporre di una raccolta che supporta il tipo di contenuto della connessione BISM. Per ulteriori informazioni, vedere [aggiungere un tipo di contenuto connessione BI Semantic Model a una raccolta &#40;PowerPivot per SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  
   
- È necessario essere a conoscenza dell'URL della cartella di lavoro di PowerPivot per la quale si sta configurando una connessione BI http://adventure-works/shared Semantic Model (ad esempio, Documents/Workbook. xlsx). La cartella di lavoro deve essere nella stessa farm.  
+ È necessario essere a conoscenza dell'URL della cartella di lavoro di PowerPivot per la quale si sta configurando una connessione BI Semantic Model (ad esempio, http://adventure-works/shared Documents/myworkbook.xlsx). La cartella di lavoro deve essere nella stessa farm.  
   
  Tutti i computer e gli utenti che partecipano nella sequenza di connessione devono essere nello stesso dominio o nel dominio attendibile (attendibilità bidirezionale).  
   
@@ -49,7 +48,7 @@ ms.locfileid: "66071638"
   
      ![Sottomenu Nuovo documento in una raccolta di SharePoint](../media/ssas-bismconnection-new.gif "Sottomenu Nuovo documento in una raccolta di SharePoint")  
   
-2.  Impostare la proprietà **Server** sull'URL di SharePoint della cartella di lavoro di PowerPivot, ** http://mysharepoint/shared ad esempio Documents/Workbook. xlsx**. In una distribuzione di PowerPivot per SharePoint i dati possono essere caricati in qualsiasi server nella farm. Per questo motivo, le connessioni alle origine dati ai dati PowerPivot consentono di specificare solo il percorso alla cartella di lavoro. Il servizio di sistema PowerPivot consente di determinare il server tramite cui vengono caricati i dati.  
+2.  Impostare la proprietà **Server** sull'URL di SharePoint della cartella di lavoro di PowerPivot, ad esempio ** http://mysharepoint/shared Documents/myWorkbook.xlsx**. In una distribuzione di PowerPivot per SharePoint i dati possono essere caricati in qualsiasi server nella farm. Per questo motivo, le connessioni alle origine dati ai dati PowerPivot consentono di specificare solo il percorso alla cartella di lavoro. Il servizio di sistema PowerPivot consente di determinare il server tramite cui vengono caricati i dati.  
   
      Non utilizzare la proprietà **database** . non viene utilizzato quando si specifica il percorso di una cartella di lavoro di PowerPivot.  
   
@@ -96,7 +95,7 @@ ms.locfileid: "66071638"
 ##  <a name="next-steps"></a><a name="bkmk_next"></a> Passaggi successivi  
  Dopo avere creato e protetto una connessione BISM è possibile specificarla come origine dati. Per altre informazioni, vedere [Utilizzare una connessione BISM (BI Semantic Model) in Excel o Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Connessione BI Semantic Model di PowerPivot &#40;. BISM&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
  [Usare una connessione BI Semantic Model in Excel o Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
  [Creare una connessione BISM a un database modello tabulare](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  

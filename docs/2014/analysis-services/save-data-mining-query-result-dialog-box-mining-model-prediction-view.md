@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 112fb527-7466-4fd4-9cf1-75596135648f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 97b391e24f98b230dbfe352e0cf1a574c7549984
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0838c90f0797a0db9c8a66cd8c5f877aaecdad0a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070017"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538933"
 ---
 # <a name="save-data-mining-query-result-dialog-box-mining-model-prediction-view"></a>Finestra di dialogo Salva risultati query di data mining (visualizzazione Stima modello di data mining)
   Utilizzare la finestra di dialogo **Salva risultati query di data mining** per salvare i risultati di una query di data mining in una nuova tabella.  
@@ -30,7 +29,7 @@ ms.locfileid: "66070017"
  **Origine dati**  
  Consente di selezionare un'origine dati nel progetto corrente. Se l'origine dati corretta non esiste, fare clic su **Nuova** per creare una nuova origine dati.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di avviare la **Creazione guidata origine dati**.  
   
  **Nome tabella**  
@@ -54,7 +53,7 @@ ms.locfileid: "66070017"
   
  Questa opzione è utile se si desidera utilizzare tutte le tabelle correlate per un modello, ad esempio i dati di training, i dati di origine della stima e i risultati delle query, nella stessa origine dati.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Generatore di query di stima &#40;&#41;di data mining](prediction-query-builder-data-mining.md)   
  [Interfacce di query di data mining](data-mining/data-mining-query-tools.md)   
  [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-statements)  

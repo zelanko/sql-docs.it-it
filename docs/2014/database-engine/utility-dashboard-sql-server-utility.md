@@ -10,19 +10,19 @@ ms.assetid: 999eb741-4a60-43f6-ab37-2df7dce845c1
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ce0c700e7e53ef1b055fa476e1e259fefe6c0aa
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773813"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83857773"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>Dashboard Utilità (Utilità SQL Server)
   Per visualizzare i dati inclusi nel dashboard Utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], nell'albero Gestione Utilità selezionare il nodo principale, con l'etichetta "Utilità<Nome_PuntoDiControlloUtilità">\\(NomeComputer\PuntoDiControlloUtilità)". Il dashboard include i dati di riepilogo e i dettagli relativi a tutte le istanze gestite di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e a tutte le applicazioni di livello dati nell'utilità di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per aggiornare dati nel dashboard, fare clic con il pulsante destro del mouse sul nodo principale nell'albero Esplora utilità e selezionare **Aggiorna**.  
   
  Per altre informazioni su come creare un punto di controllo dell'utilità, vedere [Creare un punto di controllo dell'Utilità SQL Server &#40;Utilità SQL Server&#41;](../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md). Per altre informazioni su come aggiungere un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] all'utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , vedere [Registrare un'istanza di SQL Server &#40;Utilità SQL Server&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md).  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco elementi dell'interfaccia utente  
  Integrità istanze gestite  
  Lo stato di integrità per le istanze gestite di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene visualizzato sul lato sinistro del riquadro contenuto di Esplora utilità.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62773813"
  Utilizzo di spazio di archiviazione utilità  
  Nella parte inferiore destra del dashboard, il grafico a torta relativo all'utilizzo dello spazio di archiviazione restituisce la percentuale di spazio utilizzato rispetto allo spazio disponibile nei volumi che si trovano in computer contenenti istanze gestite di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. I dati contenuti in questa visualizzazione vengono aggiornati ogni 15 minuti.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzare Esplora utilità per gestire la Utilità SQL Server](../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   
  [Registrare un'istanza di SQL Server &#40;Utilità SQL Server&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)   
  [Modificare una definizione dei criteri di integrità delle risorse &#40;Utilità SQL Server&#41;](../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)  

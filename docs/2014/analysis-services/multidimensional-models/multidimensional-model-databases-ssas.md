@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78b2f22a-b7bd-4a2b-b6fc-0bff4d2b3168
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5da033881d2a993ea4be6674dcf8b228cad80bf8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 966403d15843d7b2b572581d930f1c37416ddbe5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073514"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546053"
 ---
 # <a name="multidimensional-model-databases-ssas"></a>Database modelli multidimensionali (SSAS)
   Un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è una raccolta di origini dati, viste origine dati, cubi, dimensioni e ruoli. Facoltativamente, in un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] possono essere incluse strutture per data mining e assembly personalizzati che consentono di aggiungere funzioni definite dall'utente al database.  
@@ -59,7 +58,7 @@ ms.locfileid: "66073514"
   
  [Passare un database di Analysis Services tra le modalità ReadOnly e ReadWrite](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Connettersi in modalità online a un database di Analysis Services](connect-in-online-mode-to-an-analysis-services-database.md)   
  [Creare un progetto Analysis Services &#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)   
  [Query su dati multidimensionali con MDX](mdx/querying-multidimensional-data-with-mdx.md)  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1ad4dde5-4651-4069-875c-7ab73cd8b4f4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a0c28420d711fd009dfc2b1e36ef4a613b3ecfaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 489076bed7238f9367eeb8a353da358239673edb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072110"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540743"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Partizioni (finestra di dialogo Ripristina Database) (Analysis Services - Dati multidimensionali)
   Usare la pagina **Partizioni** della finestra di dialogo **Ripristina database** di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per specificare il percorso di ripristino delle partizioni locali, nel caso in cui debbano essere ripristinate partizioni remote e i file di backup remoto da usare per eseguire questa operazione.  
@@ -83,7 +82,7 @@ ms.locfileid: "66072110"
 |**File di backup**|Consente di digitare il nome e il percorso completo del file di backup remoto da usare. È inoltre possibile fare clic sul pulsante con i puntini di sospensione (**...**) per visualizzare la finestra di dialogo **Individua file di database** e selezionare il percorso e il nome del file di backup remoto da usare. Per altre informazioni sulla finestra di dialogo **Trova file di database**, vedere [Finestra di dialogo Individua file di database &#40;Analysis Services - Dati multidimensionali&#41;](locate-database-files-dialog-box-analysis-services-multidimensional-data.md).|  
 |**...**|Fare clic su questo pulsante per visualizzare la finestra di dialogo **Partizioni remote - Impostazioni avanzate** e modificare le opzioni avanzate, ad esempio la stringa di connessione all'origine dati, per il ripristino della partizione remota. Per altre informazioni sulla finestra di dialogo **Partizioni remote - Impostazioni avanzate**, vedere [Finestra di dialogo Partizioni remote – Impostazioni avanzate &#40;Analysis Services - Dati multidimensionali&#41;](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md).|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Finestra di dialogo Ripristina database &#40;Analysis Services-Dati multidimensionali&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Generale &#40;finestra di dialogo Ripristina database&#41; &#40;Analysis Services Dati multidimensionali&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Backup e ripristino di database di Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  

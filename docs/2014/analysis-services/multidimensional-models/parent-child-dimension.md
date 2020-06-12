@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4657f5dc-d88e-48d2-a448-08f79bc89546
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d0eac17d30d8a8870d03a0b5b81610fad1344333
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b08641e9ba17e6ad2e2f4112e01073d448aa8564
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073389"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545853"
 ---
 # <a name="parent-child-hierarchy"></a>Gerarchia padre-figlio
   Una gerarchia padre-figlio è una gerarchia in una dimensione standard contenente un attributo padre. Un attributo padre descrive una *relazione autoreferenziale*, o *self join*, in una tabella della dimensione principale. Le gerarchie padre-figlio vengono create da un unico attributo padre. A una gerarchia padre-figlio viene assegnato un solo livello, in quanto i livelli presenti nella gerarchia sono derivati dalle relazioni padre-figlio tra i membri associati all'attributo padre. La posizione di un membro in una gerarchia padre-figlio è determinata dalle proprietà `KeyColumns` e `RootMemberIf` dell'attributo padre, mentre la posizione di un membro in un livello è determinata dalla proprietà `OrderBy` dell'attributo padre. Per altre informazioni sulle proprietà degli attributi, vedere [Attributi e gerarchie di attributi](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
@@ -51,7 +50,7 @@ ms.locfileid: "66073389"
   
  Nelle gerarchie padre-figlio potrebbero tuttavia essere presenti membri non foglia contenenti dati derivati dalle origini dei dati sottostanti oltre ai dati aggregati dai membri figlio. Per questi membri non foglia di una gerarchia padre-figlio, è possibile creare membri figlio speciali generati dal sistema contenenti i dati della tabella dei fatti sottostante. Questi membri figlio speciali, denominati *membri dei dati*, contengono un valore associato direttamente a un membro non foglia e indipendente dal valore di riepilogo calcolato dai discendenti del membro non foglia. Per altre informazioni sui membri dei dati, vedere [Attributi nelle gerarchie padre-figlio](parent-child-dimension-attributes.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Attributi nelle gerarchie padre-figlio](parent-child-dimension-attributes.md)   
  [Proprietà delle dimensioni del database](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)  
   

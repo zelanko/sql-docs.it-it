@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 12eb2a2f6ea7501e03830724b24c5808375db7c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 491a863031af677a719db97503ce8aac57686fb6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075030"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546713"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Concedere le autorizzazioni per un cubo o un modello (Analysis Services)
   Un cubo o un modello tabulare è l'oggetto query primario in un modello di dati di Analysis Services. Quando un utente si connette ai dati tabulari o multidimensionali da Excel per l'esplorazione ad hoc dei dati, in genere inizia selezionando un cubo o un modello tabulare specifico come struttura di dati necessaria per l'oggetto report Pivot. Questo argomento illustra come concedere le autorizzazioni necessarie per l'accesso ai dati tabulari o del cubo.  
@@ -93,14 +92,14 @@ ms.locfileid: "66075030"
   
 2.  In SSMS passare alla cartella **Ruoli** e fare clic con il pulsante destro del mouse su un ruolo esistente.  
   
-3.  Selezionare **script Role come** | **Crea nel** | **file**.  
+3.  Selezionare **script Role come**  |  **Crea nel**  |  **file**.  
   
 4.  Salvare il file con estensione xmla. Per testare lo script, eliminare il ruolo corrente, aprire il file in SSMS e premere F5 per eseguire lo script.  
   
 ## <a name="next-step"></a>Passaggio successivo  
  È possibile ottimizzare le autorizzazioni del cubo per limitare l'accesso ai dati delle celle o della dimensione. Per informazioni dettagliate, vedere [Concedere l'accesso personalizzato ai dati della dimensione &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) e [Concedere l'accesso personalizzato ai dati delle celle &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Metodologie di autenticazione supportate da Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md)   
  [Concedere le autorizzazioni per data mining strutture e modelli &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
  [Concedere le autorizzazioni per un oggetto origine dati &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  

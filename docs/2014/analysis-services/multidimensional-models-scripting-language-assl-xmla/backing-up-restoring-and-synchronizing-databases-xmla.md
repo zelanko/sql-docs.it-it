@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6163a538c4e8872016f7ec572e4c177cfe92de94
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 500435a585ffed84a8f16e2b3bd1c4db14509103
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702274"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545083"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Backup, ripristino e sincronizzazione di database (XMLA)
   In XML for Analysis sono disponibili i tre comandi seguenti per l'esecuzione del backup, del ripristino e della sincronizzazione dei database:  
   
--   Il [comando backup](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla) esegue il backup di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] un database utilizzando [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] un file di backup (con estensione abf), come descritto nella sezione backup dei [database](#backing_up_databases).  
+-   Il comando [backup](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla) esegue il backup di un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database utilizzando un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] file di backup (con estensione abf), come descritto nella sezione backup dei [database](#backing_up_databases).  
   
 -   Tramite il comando [Restore](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/restore-element-xmla) viene ripristinato un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database da un file con estensione abf, come descritto nella sezione [ripristino dei database](#restoring_databases).  
   
@@ -55,20 +54,20 @@ ms.locfileid: "62702274"
     >  Se le proprietà `ApplyCompression` e `Password` non vengono specificate, nel file di backup i nomi utente e le password contenuti nelle stringhe di connessione vengono archiviati in testo non crittografato. I dati archiviati in testo non crittografato possono essere recuperati. Per aumentare la sicurezza, utilizzare le impostazioni relative a `ApplyCompression` e `Password` sia per comprimere che per crittografare il file di backup.  
   
 ### <a name="backing-up-security-settings"></a>Backup delle impostazioni di sicurezza  
- La proprietà di [sicurezza](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/security-element-xmla) determina se `Backup` il comando esegue il backup delle definizioni di sicurezza, ad esempio ruoli e autorizzazioni, definite [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un database. La proprietà `Security` determina inoltre se nel file di backup vengono inclusi gli account utente e i gruppi di Windows definiti come membri delle definizioni di sicurezza.  
+ La proprietà di [sicurezza](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/security-element-xmla) determina se il `Backup` comando esegue il backup delle definizioni di sicurezza, ad esempio ruoli e autorizzazioni, definite in un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. La proprietà `Security` determina inoltre se nel file di backup vengono inclusi gli account utente e i gruppi di Windows definiti come membri delle definizioni di sicurezza.  
   
  Il valore della proprietà `Security` è limitato a una delle stringhe elencate nella tabella seguente.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |*SkipMembership*|Include nel file di backup le definizioni di sicurezza, ma ne esclude le informazioni sull'appartenenza.|  
 |*CopyAll*|Include nel file di backup le definizioni di sicurezza e le informazioni sull'appartenenza.|  
 |*IgnoreSecurity*|Esclude le definizioni di sicurezza dal file di backup.|  
   
 ### <a name="backing-up-remote-partitions"></a>Backup di partizioni remote  
- Per eseguire il backup delle partizioni remote [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nel database, impostare la proprietà [backupRemotePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/backupremotepartitions-element-xmla) del `Backup` comando su true. In questo modo il comando `Backup` crea un file di backup remoto per ogni origine dati remota utilizzata per archiviare partizioni remote per il database.  
+ Per eseguire il backup delle partizioni remote nel [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database, impostare la proprietà [backupRemotePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/backupremotepartitions-element-xmla) del `Backup` comando su true. In questo modo il comando `Backup` crea un file di backup remoto per ogni origine dati remota utilizzata per archiviare partizioni remote per il database.  
   
- Per ogni origine dati remota di cui eseguire il `Backup` backup, è possibile specificare il file di backup corrispondente includendo un elemento [location](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/location-element-xmla) nella proprietà [locations](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/locations-element-xmla) del comando. L' `Location` elemento deve avere la `File` proprietà impostata sul percorso UNC e il nome file del file di backup remoto e la relativa proprietà [DataSourceID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) è impostata sull'identificatore dell'origine dati remota definita nel database.  
+ Per ogni origine dati remota di cui eseguire il backup, è possibile specificare il file di backup corrispondente includendo un elemento [location](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/location-element-xmla) nella proprietà [locations](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/locations-element-xmla) del `Backup` comando. L' `Location` elemento deve avere la `File` proprietà impostata sul percorso UNC e il nome file del file di backup remoto e la relativa proprietà [DataSourceID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) è impostata sull'identificatore dell'origine dati remota definita nel database.  
   
 ##  <a name="restoring-databases"></a><a name="restoring_databases"></a>Ripristino dei database  
  Il comando `Restore` consente di ripristinare un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] specificato da un file di backup. Al comando `Restore` sono associate varie proprietà che consentono di specificare il database da ripristinare, il file di backup da utilizzare, le modalità di ripristino delle definizioni di sicurezza, le partizioni remote da archiviare e la rilocazione di oggetti OLAP relazionali (ROLAP).  
@@ -89,7 +88,7 @@ ms.locfileid: "62702274"
   
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |*SkipMembership*|Include nel database le definizioni di sicurezza, ma ne esclude le informazioni sull'appartenenza.|  
 |*CopyAll*|Include nel database le definizioni di sicurezza e le informazioni sull'appartenenza.|  
@@ -116,7 +115,7 @@ ms.locfileid: "62702274"
 >  Il comando `Synchronize` può essere eseguito solo dagli amministratori del server e del database. Sia il database di origine sia quello di destinazione devono disporre dello stesso livello di compatibilità.  
   
 ### <a name="specifying-the-source-database"></a>Specifica del database di origine  
- La proprietà [source](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) del `Synchronize` comando contiene due proprietà, `ConnectionString` e. `Object` Nella proprietà `ConnectionString` è inclusa la stringa di connessione dell'istanza in cui è contenuto il database di origine, mentre nella proprietà `Object` è contenuto l'identificatore di oggetto per il database di origine.  
+ La proprietà [source](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) del `Synchronize` comando contiene due proprietà, `ConnectionString` e `Object` . Nella proprietà `ConnectionString` è inclusa la stringa di connessione dell'istanza in cui è contenuto il database di origine, mentre nella proprietà `Object` è contenuto l'identificatore di oggetto per il database di origine.  
   
  Il database di destinazione è il database corrente per la sessione in cui viene eseguito il comando `Synchronize`.  
   
@@ -127,7 +126,7 @@ ms.locfileid: "62702274"
   
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |*SkipMembership*|Include nel database di destinazione le definizioni di sicurezza, ma ne esclude le informazioni sull'appartenenza.|  
 |*CopyAll*|Include nel database di destinazione le definizioni di sicurezza e le informazioni sull'appartenenza.|  
@@ -136,7 +135,7 @@ ms.locfileid: "62702274"
 ### <a name="synchronizing-remote-partitions"></a>Sincronizzazione di partizioni remote  
  Per ogni origine dati remota presente nel database di origine, è possibile sincronizzare ogni partizione remota associata includendo un elemento `Location` nella proprietà `Locations` del comando `Synchronize`. Per ogni `Location` elemento, la `DataSourceType` proprietà deve essere esclusa o impostata in modo esplicito su *Remote*.  
   
- Per definire un'origine dati remota nel database di destinazione e stabilire una connessione a essa, il comando `Synchronize` utilizza la stringa di connessione definita nella proprietà `ConnectionString` dell'elemento `Location`. Il comando `Synchronize` utilizza quindi la proprietà `DataSourceID` dell'elemento `Location` per identificare le partizioni remote da sincronizzare. Il `Synchronize`comando Sincronizza le partizioni remote nell'origine dati remota specificata nella `DataSourceID` proprietà del database di origine con l'origine dati remota specificata nella `DataSourceID` proprietà del database di destinazione.  
+ Per definire un'origine dati remota nel database di destinazione e stabilire una connessione a essa, il comando `Synchronize` utilizza la stringa di connessione definita nella proprietà `ConnectionString` dell'elemento `Location`. Il comando `Synchronize` utilizza quindi la proprietà `DataSourceID` dell'elemento `Location` per identificare le partizioni remote da sincronizzare. Il `Synchronize` comando Sincronizza le partizioni remote nell'origine dati remota specificata nella `DataSourceID` proprietà del database di origine con l'origine dati remota specificata nella `DataSourceID` proprietà del database di destinazione.  
   
  Per ogni cartella originale utilizzata per archiviare le partizioni remote nell'origine dati remota del database di origine, è possibile inoltre specificare un elemento `Folder` nell'elemento `Location`. L'elemento `Folder` indica la nuova cartella per il database di destinazione in cui sincronizzare tutte le partizioni remote archiviate nella cartella originale nell'origine dati remota. Se non è specificato alcun elemento `Folder`, il comando Synchronize utilizza le cartelle originali specificate per le partizioni remote contenute nel database di origine.  
   
@@ -145,7 +144,7 @@ ms.locfileid: "62702274"
   
  Per sincronizzare oggetti ROLAP, è possibile utilizzare l'elemento `Location` in un comando Synchronize. Per ogni `Location` elemento utilizzato per spostare un'origine dati, la `DataSourceType` proprietà deve essere impostata in modo esplicito su *local*. . È inoltre necessario impostare la proprietà `ConnectionString` dell'elemento `Location` sulla stringa di connessione del nuovo percorso. Durante la sincronizzazione, il comando `Synchronize` sostituirà la stringa di connessione per l'origine dati identificata dalla proprietà `DataSourceID` dell'elemento `Location` con il valore della proprietà `ConnectionString` dell'elemento `Location`.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Elemento backup &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla)   
  [Elemento Restore &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/restore-element-xmla)   
  [Elemento Synchronize &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   

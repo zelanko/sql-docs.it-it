@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: af00938a-5a06-4fae-b2fc-f3fb0ca3cea5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 939186d48f7dd8a0cc33b24778bf8948f9938a70
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b1810eb23a8d0d0541606cb69197b8030463748
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079278"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543653"
 ---
 # <a name="defining-a-data-source-view"></a>Definizione di una vista origine dati
   Dopo aver definito le origini dati che si utilizzeranno in un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , il passaggio successivo consiste in genere nella definizione di una vista origine dati per il progetto. Una vista origine dati è una vista singola unificata dei metadati delle tabelle e delle viste specificate definite dall'origine dati nel progetto. L'archiviazione dei metadati nella vista origine dati consente di lavorare con i metadati durante lo sviluppo senza una connessione aperta con un'origine dati sottostante. Per altre informazioni, vedere [Viste origine dati in modelli multidimensionali](multidimensional-models/data-source-views-in-multidimensional-models.md).  
@@ -50,7 +49,7 @@ ms.locfileid: "66079278"
   
     -   **FactInternetSales (dbo)**  
   
-5.  Fare **>** clic su questo pulsante per aggiungere le tabelle selezionate all'elenco **oggetti inclusi** .  
+5.  Fare clic su questo pulsante **>** per aggiungere le tabelle selezionate all'elenco **oggetti inclusi** .  
   
 6.  Fare clic su **Avanti.**  
   
@@ -79,7 +78,7 @@ ms.locfileid: "66079278"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Modifica dei nomi predefiniti delle tabelle](lesson-1-4-modifying-default-table-names.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Viste origine dati in modelli multidimensionali](multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

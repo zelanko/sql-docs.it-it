@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6ae48fe00fb9c24e2d6d0ddde61302cff3ceba0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e09018fad9c291ec1f47bbb776797d634950381
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083840"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521702"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Sequence Clustering
   L'algoritmo Microsoft Sequence Clustering è un algoritmo ibrido in cui viene usata l'analisi delle catene di Markov per identificare le sequenze ordinate e consente di combinare i risultati di tale analisi con le tecniche di clustering per generare cluster in base alle sequenze e agli altri attributi del modello. In questo argomento viene illustrato come implementare e personalizzare l'algoritmo e vengono descritti requisiti speciali per i modelli Sequence Clustering.  
@@ -99,7 +98,7 @@ ms.locfileid: "66083840"
  Il valore predefinito è 64.  
   
  MAXIMUM_STATES  
- Specifica il numero massimo di stati per un attributo fuori sequenza supportato dall'algoritmo. Se il numero di stati per un attributo non di sequenza è maggiore del numero massimo di Stati, l'algoritmo utilizza gli Stati più frequenti dell'attributo e considera gli stati rimanenti come `Missing`.  
+ Specifica il numero massimo di stati per un attributo fuori sequenza supportato dall'algoritmo. Se il numero di stati per un attributo non di sequenza è maggiore del numero massimo di Stati, l'algoritmo utilizza gli Stati più frequenti dell'attributo e considera gli stati rimanenti come `Missing` .  
   
  Il valore predefinito è 100.  
   
@@ -134,15 +133,15 @@ ms.locfileid: "66083840"
 |Attributo di input|Continuous, Cyclical, Discrete, Discretized, Key, Key Sequence, Table e Ordered|  
 |Attributo stimabile|Continuous, Cyclical, Discrete, Discretized, Table e Ordered|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
--   Usare la funzione [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) per la stima delle sequenze. Per ulteriori informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supportano la stima delle sequenze, vedere [funzionalità supportate dalle edizioni di SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (.https://go.microsoft.com/fwlink/?linkid=232473)  
+-   Usare la funzione [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) per la stima delle sequenze. Per ulteriori informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supportano la stima delle sequenze, vedere [funzionalità supportate dalle edizioni di SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) ( https://go.microsoft.com/fwlink/?linkid=232473) .  
   
 -   L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering non supporta l'uso dello standard PMML (Predictive Model Markup Language) per la creazione dei modelli di data mining.  
   
 -   L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering supporta il drill-through, l'utilizzo di modelli di data mining OLAP e l'utilizzo di dimensioni di data mining.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm.md)   
  [Esempi di query sul modello Sequence Clustering](clustering-model-query-examples.md)   
  [Contenuto dei modelli di data mining per i modelli Sequence Clustering &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-sequence-clustering-models.md)  

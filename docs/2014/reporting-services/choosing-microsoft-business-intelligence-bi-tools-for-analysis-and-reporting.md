@@ -10,12 +10,12 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 7c76ec1a74032b5f35bc42ab4a901d95574e0900
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fe5e48613ad5a4290e881c7b26a830af11eb60f9
+ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75688220"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83868320"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Analisi dei dati e creazione di report con gli strumenti di business intelligence (BI) di Microsoft
 
@@ -30,13 +30,13 @@ ms.locfileid: "75688220"
 |||**Excel**|**SharePoint**|**SharePoint Online**|**Power BI**|**SQL Server**|  
 |**Business Intelligence in modalità self-service**|Analisti/utenti finali||||||  
 |Individuare facilmente e accedere ai dati pubblici e aziendali||[Power Query](https://go.microsoft.com/fwlink/p/?LinkId=391845)||[Azure Data Catalog](https://azure.microsoft.com/services/data-catalog/)<br /><br />||  
-|Creare modelli di dati potenti||[Power Pivot](https://support.office.com/article/power-pivot-overview-and-learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
+|Creare modelli di dati potenti||[Power Pivot](https://support.office.com/article/power-pivot-overview-and-learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](/power-bi/fundamentals/desktop-get-the-desktop)||  
 |Eseguire analisi predittive self-service||||||[Componenti aggiuntivi Data mining per Excel](../analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins.md)|  
 |Visualizzare ed esplorare i dati||[Power View](https://go.microsoft.com/fwlink/p/?LinkId=391847)<br /><br /> [Mappe 3D](https://support.office.com/article/visualize-your-data-in-3d-maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||||  
 |Porre domande tramite query in linguaggio naturale|||||[D & A](https://docs.microsoft.com/power-bi/consumer/end-user-q-and-a)||  
 |Accedere ai report tramite i dispositivi mobili||||[HTML 5 (supporta la visualizzazione di file <10 MB)](https://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (supporta la visualizzazione di file <250 MB)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [App Power BI per dispositivi mobili su dispositivi iOS](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [App Power BI per dispositivi mobili su dispositivi Android](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br />[App Power BI per dispositivi mobili per Windows 10](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)||  
 |Collaborare e condividere|||[Siti di SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=391849)|[Siti del team SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=391850)|[Siti di Power BI](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
-|**Business Intelligence aziendale**|Professionisti IT||||||  
+|**Business Intelligence aziendale**|Professionista IT||||||  
 |Creare modelli aziendali multidimensionali e tabulari||||||[Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-overview)|  
 |Creare visualizzazioni di dati ad hoc|||[Power View per SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=391858)||||  
 |Creare dashboard|||[Dashboard di SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=391859)<br /><br /> [PerformancePoint Services](https://technet.microsoft.com/library/ee424392.aspx)||||  

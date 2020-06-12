@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9566f6a2-c750-4125-ba5e-42c7251a78c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ef951825144f381ab37a83526ec96321fe43cfec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 755a7f9c8708664dbb3a65c223873cf1dd4e20c8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082275"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528867"
 ---
 # <a name="decision-tree-diagram-walkthrough--data-mining-add-ins"></a>Procedura dettagliata relativa al diagramma dell'albero delle decisioni (componenti aggiuntivi Data mining)
   Se è stato creato un modello di albero delle decisioni, è possibile creare un diagramma personalizzato in Visio tramite la forma Albero delle decisioni o la forma Rete di dipendenze. In questo argomento vengono descritte le personalizzazioni che è possibile eseguire utilizzando la forma **albero delle decisioni** e i controlli seguenti:  
@@ -40,7 +39,7 @@ ms.locfileid: "66082275"
   
 1.  Se non vengono visualizzate le **forme di data mining di Microsoft** nell'elenco **forme** , fare clic su **altre forme**, selezionare **Apri stencil**e aprire il modello dal percorso di installazione predefinito.  
   
-     \<unità>: \Program Files (X85) \Microsoft SQL Server 2012 DM Add-ins  
+     \<drive>: \Program Files (X85) \Microsoft SQL Server 2012 DM Add-ins  
   
 2.  Trascinare la forma **albero delle decisioni** nella pagina.  
   
@@ -137,7 +136,7 @@ ms.locfileid: "66082275"
      **Espandi nodi figlio**  
      Consente di visualizzare i nodi figlio del nodo attualmente selezionato.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Risoluzione dei problemi relativi ai diagrammi di data mining di Visio &#40;componenti aggiuntivi Data mining di SQL Server&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md)  
   
   

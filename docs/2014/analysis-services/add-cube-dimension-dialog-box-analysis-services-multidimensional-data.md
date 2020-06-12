@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 625a3b1f-183b-445f-9bb7-96945c324767
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f147c438e16c00e0e1b979f2d3e2fe6e16cf7428
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d0de75c02c39b0690184f35f2b0b6a07d7ed9a4f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062953"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528229"
 ---
 # <a name="add-cube-dimension-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Aggiungi dimensione al cubo (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Aggiungi dimensione al cubo** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per aggiungere a un cubo un riferimento a una dimensione del database. Per visualizzare la finestra di dialogo **Aggiungi dimensione al cubo** è possibile eseguire una delle operazioni seguenti:  
@@ -40,7 +39,7 @@ ms.locfileid: "66062953"
 > [!NOTE]  
 >  Se a un cubo vengono aggiunte più dimensioni del cubo basate sulla stessa dimensione del database, le dimensioni del cubo aggiuntive sono denominate dimensioni con ruoli multipli.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

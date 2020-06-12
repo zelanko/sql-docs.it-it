@@ -18,16 +18,15 @@ helpviewer_keywords:
 ms.assetid: 8d74b932-2174-4e1f-8414-636455880b6a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ce5bf2a376712d603be3099f7ccefa0e6b799219
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: afa68ebcfa8f4136bcd4a131842c852665ee9851
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62728489"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545144"
 ---
 # <a name="dimension-storage"></a>Archiviazione di dimensioni
-  Le dimensioni [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in supportano due modalità di archiviazione:  
+  Le dimensioni in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supportano due modalità di archiviazione:  
   
 -   OLAP relazionale (ROLAP)  
   
@@ -44,7 +43,7 @@ ms.locfileid: "62728489"
 > [!IMPORTANT]  
 >  Se una dimensione utilizza la modalità di archiviazione ROLAP ed è inclusa in un cubo che utilizza l'archiviazione MOLAP, qualsiasi modifica dello schema nella tabella di origine deve essere seguita dall'immediata elaborazione della dimensione. In caso contrario, i risultati delle query eseguite sui cubi potrebbero essere inconsistenti. **Argomento correlato:**[automatizzare Analysis Services attività amministrative con SSIS](../instances/automate-analysis-services-administrative-tasks-with-ssis.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Elaborazione e modalità di archiviazione delle partizioni](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)  
   
   

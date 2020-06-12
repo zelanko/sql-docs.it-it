@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 137b2f40-5dfb-4141-9110-70f961f259cb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 35e22807ed64cce3bc6f7c186978d4c9ee82c51d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dfeab1166a7554c0e0b721c16ed3bd5b7413e358
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077086"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544683"
 ---
 # <a name="create-modify-or-delete-an-attribute-relationship"></a>Creare, modificare o eliminare una relazione tra attributi
   È possibile creare, modificare o eliminare una relazione tra attributi per attributi di una dimensione usando la scheda **Relazione tra attributi** di Progettazione Dimensioni in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -59,7 +58,7 @@ ms.locfileid: "66077086"
   
 3.  Nella finestra di dialogo **Elimina oggetti** fare clic su **OK**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Relazioni tra attributi](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   

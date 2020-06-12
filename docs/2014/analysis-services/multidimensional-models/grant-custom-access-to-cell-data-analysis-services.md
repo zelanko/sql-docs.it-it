@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3b13a4ae-f3df-4523-bd30-b3fdf71e95cf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5db12886384089afe87ffb5fa659c34b09a9fe23
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ac8113348a749837867a6dacba7fa23fb5e85f2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074976"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546703"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>Concedere l'accesso personalizzato ai dati delle celle (Analysis Services)
   La sicurezza della cella viene usata per consentire o negare l'accesso ai dati di misura all'interno di un cubo. La figura seguente mostra una combinazione di misure consentite e negate in una tabella pivot quando il ruolo dell'utente connesso consente l'accesso a determinate misure. In questo esempio, **Reseller Sales Amount** e **Reseller Total Product Cost** sono le uniche misure disponibili tramite questo ruolo. Tutte le altre misure vengono negate in modo implicito. I passaggi usati per ottenere tale risultato vengono forniti nella sezione "Consentire l'accesso a misure specifiche" riportata di seguito.  
@@ -37,7 +36,7 @@ ms.locfileid: "66074976"
   
  L'amministratore può specificare se i membri del ruolo dispongono delle autorizzazioni di lettura, lettura condizionale o lettura/scrittura nelle celle di un cubo. Poiché l'assegnazione delle autorizzazioni in una cella rappresenta il livello di sicurezza più basso consentito, prima di iniziare ad applicare le autorizzazioni a questo livello è importante tenere presenti alcuni concetti:  
   
--   La sicurezza a livello di cella non può espandere i diritti limitati a un livello superiore. Ad esempio, se un ruolo nega l'accesso ai dati di dimensione, la sicurezza a livello di cella non può sostituire il set delle autorizzazioni negate. Un altro esempio: si consideri un ruolo con `Read` l'autorizzazione per un cubo e l'autorizzazione di **lettura/scrittura** in una cella. l'autorizzazione per i dati della cella non sarà di **lettura/scrittura**; sarà `Read`.  
+-   La sicurezza a livello di cella non può espandere i diritti limitati a un livello superiore. Ad esempio, se un ruolo nega l'accesso ai dati di dimensione, la sicurezza a livello di cella non può sostituire il set delle autorizzazioni negate. Un altro esempio: si consideri un ruolo con `Read` l'autorizzazione per un cubo e l'autorizzazione di **lettura/scrittura** in una cella. l'autorizzazione per i dati della cella non sarà di **lettura/scrittura**, ma sarà `Read` .  
   
 -   Le autorizzazioni personalizzate spesso devono essere coordinate tra i membri della dimensione e le celle all'interno dello stesso ruolo. Si supponga ad esempio di volere negare l'accesso ad alcune misure correlate allo sconto per diverse combinazioni di rivenditori. Se si specifica **Resellers** come dati di dimensione e **Discount Amount come misura** , sarà necessario combinare all'interno dello stesso ruolo le autorizzazioni sia nella misura (usando le istruzioni illustrate in questo argomento) che nei membri della dimensione. Per informazioni dettagliate sull'impostazione delle autorizzazioni per la dimensione, vedere [Concedere l'accesso personalizzato ai dati della dimensione &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) .  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66074976"
      Questa espressione identifica in modo esplicito le misure visibili agli utenti. Tutte le altre misure non saranno disponibili agli utenti che si connettono tramite questo ruolo. Si noti che [CurrentMember &#40;MDX&#41;](/sql/mdx/current-mdx) imposta il contesto e viene seguito dalla misura consentita. L'effetto di questa espressione sarà quello di visualizzare il valore, se il membro corrente include **Reseller Sales Amount** o **Reseller Total Product Cost**. In caso contrario, verrà negato l'accesso. L'espressione è costituita da più parti, ognuna delle quali è racchiusa tra parentesi. Per specificare più misure viene usato l'operatore `OR`.  
   
 ## <a name="deny-access-to-specific-measures"></a>Negare l'accesso a misure specifiche  
- L'espressione MDX seguente, anch ' essa specificata in **Crea ruolo** | **dati** | delle celle**Consenti lettura del contenuto del cubo**, ha l'effetto opposto, rendendo alcune misure non disponibili. In questo esempio, **l'importo dello sconto** e la percentuale di **sconto** vengono `NOT` resi `AND` non disponibili usando gli operatori e. Tutte le altre misure saranno visibili agli utenti che si connettono tramite questo ruolo.  
+ L'espressione MDX seguente, anch ' essa specificata in **Crea ruolo**  |  **dati delle celle**  |  **Consenti lettura del contenuto del cubo**, ha l'effetto opposto, rendendo alcune misure non disponibili. In questo esempio, l' **importo dello sconto** e la percentuale di **sconto** vengono resi non disponibili usando gli `NOT` operatori e `AND` . Tutte le altre misure saranno visibili agli utenti che si connettono tramite questo ruolo.  
   
 ```  
 (NOT Measures.CurrentMember IS [Measures].[Discount Amount]) AND (NOT Measures.CurrentMember IS [Measures].[Discount Percentage])  
@@ -74,7 +73,7 @@ ms.locfileid: "66074976"
 ## <a name="set-read-permissions-on-calculated-measures"></a>Impostare le autorizzazioni di lettura nelle misure calcolate  
  Le autorizzazioni in una misura calcolata possono essere impostate indipendentemente dalle parti che la costituiscono. Passare direttamente alla sezione successiva relativa alle autorizzazioni di lettura condizionale se si vogliono coordinare le autorizzazioni tra una misura calcolata e le relative misure dipendenti.  
   
- Per comprendere il funzionamento delle autorizzazioni di lettura per una misura calcolata, usare **Reseller Gross Profit** in AdventureWorks. Deriva dalle misure **Reseller Sales Amount** e **Reseller Total Product Cost** . Se un ruolo dispone dell'autorizzazione di lettura nelle celle di **Reseller Gross Profit** , questa misura può essere visualizzata anche se le autorizzazioni sono espressamente negate nelle altre misure. Come dimostrazione, copiare la seguente espressione MDX in **Crea ruolo** | **dati** | delle celle**Consenti lettura del contenuto del cubo**.  
+ Per comprendere il funzionamento delle autorizzazioni di lettura per una misura calcolata, usare **Reseller Gross Profit** in AdventureWorks. Deriva dalle misure **Reseller Sales Amount** e **Reseller Total Product Cost** . Se un ruolo dispone dell'autorizzazione di lettura nelle celle di **Reseller Gross Profit** , questa misura può essere visualizzata anche se le autorizzazioni sono espressamente negate nelle altre misure. Come dimostrazione, copiare la seguente espressione MDX in **Crea ruolo**  |  **dati delle celle**  |  **Consenti lettura del contenuto del cubo**.  
   
 ```  
 (NOT Measures.CurrentMember IS [Measures].[Reseller Sales Amount])  
@@ -86,7 +85,7 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
  ![Tabella di Excel con celle disponibili e non disponibili](../media/ssas-permscalculatedcells.png "Tabella di Excel con celle disponibili e non disponibili")  
   
 ## <a name="set-read-contingent-permissions-on-calculated-measures"></a>Impostare le autorizzazioni di lettura condizionale nelle misure calcolate  
- La sicurezza della cella offre un'alternativa, ovvero l'impostazione delle autorizzazioni di lettura condizionale nelle celle correlate che fanno parte di un calcolo. Usare anche in questo caso l'esempio **Reseller Gross Profit** . Quando si immette la stessa espressione MDX fornita nella sezione precedente, questa volta inserita nella seconda area di testo della finestra di dialogo per la creazione di**dati delle celle** del **ruolo** | (nell'area di testo sottostante **Consenti lettura del contenuto della cella**in caso di sicurezza della cella), il risultato è evidente quando viene visualizzato in Excel. Poiché **Reseller Gross Profit** dipende da **Reseller Sales Amount** e **Reseller Total Product Cost**, il profitto lordo sarà ora inaccessibile perché le parti che lo costituiscono sono inaccessibili.  
+ La sicurezza della cella offre un'alternativa, ovvero l'impostazione delle autorizzazioni di lettura condizionale nelle celle correlate che fanno parte di un calcolo. Usare anche in questo caso l'esempio **Reseller Gross Profit** . Quando si immette la stessa espressione MDX fornita nella sezione precedente, questa volta inserita nella seconda area di testo della finestra di dialogo per la **creazione**di  |  **dati delle celle** del ruolo (nell'area di testo sottostante **Consenti lettura del contenuto della cella**in caso di sicurezza della cella), il risultato è evidente quando viene visualizzato in Excel. Poiché **Reseller Gross Profit** dipende da **Reseller Sales Amount** e **Reseller Total Product Cost**, il profitto lordo sarà ora inaccessibile perché le parti che lo costituiscono sono inaccessibili.  
   
 > [!NOTE]  
 >  Cosa accade se si impostano le autorizzazioni di lettura e di lettura condizionale in una cella all'interno dello stesso ruolo? Il ruolo fornirà nella cella le autorizzazioni di lettura ma non quelle di lettura condizionale.  
@@ -96,7 +95,7 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
 ## <a name="set-readwrite-permissions-on-a-cell"></a>Impostare le autorizzazioni di lettura/scrittura in una cella  
  Le autorizzazioni di lettura/scrittura in una cella vengono usate per consentire il writeback, a condizione che i membri dispongano delle autorizzazioni di lettura/scrittura per il cubo stesso. Le autorizzazioni concesse a livello di cella non possono essere superiori rispetto a quelle concesse a livello di cubo. Per altri dettagli, vedere [Impostare tabelle writeback delle partizioni](set-partition-writeback.md) .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Generatore MDX &#40;Analysis Services-Dati multidimensionali&#41;](../mdx-builder-analysis-services-multidimensional-data.md)   
  [Script MDX di base &#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)   
  [Concedere le autorizzazioni di elaborazione &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)   

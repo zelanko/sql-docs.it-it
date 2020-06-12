@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fbc0698f-93d3-4292-86cd-afe3a2ec5b0a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 703080418566b761741575c69fb6be6a7572988e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8ab0103a32ef674a3521f7ce13be721a8ea60df8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073572"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546013"
 ---
 # <a name="multidimensional-model-solutions-ssas"></a>Soluzioni di modelli multidimensionali (SSAS)
     
@@ -44,6 +43,6 @@ ms.locfileid: "66073572"
  Descrive come progettare oggetti di database multidimensionali senza una schema relazionale esistente.  
   
  [Analysis Services Personalization Extensions](extending-olap/analysis-services-personalization-extensions.md)  
- Viene descritto come progettare estensioni della personalizzazione [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]per.  
+ Viene descritto come progettare estensioni della personalizzazione per [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
   

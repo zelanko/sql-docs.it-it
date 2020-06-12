@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 213b0035-e96d-4ba0-83f2-ded206905603
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 98d363ab09e75905b13503687fe425a981c790e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91296f8c5d47afb15c67f0b60435c7f961734573
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074152"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546303"
 ---
 # <a name="building-named-sets-in-mdx-mdx"></a>Compilazione di set denominati in MDX (MDX)
   Un'espressione set può essere costituita da una dichiarazione lunga e complessa e risultare pertanto difficile da seguire o comprendere oppure essere utilizzata con tale frequenza che la presenza di definizioni ripetute del set può creare confusione. Per semplificare l'utilizzo di espressioni lunghe, complesse o usate di frequente, le espressioni MDX (Multidimensional Expressions) consentono di definire un'espressione di questo tipo come *set denominato*.  
@@ -39,7 +38,7 @@ ms.locfileid: "66074152"
   
      Per altre informazioni sull'uso dell'istruzione CREATE SET per la creazione di set denominati in una sessione, vedere [Creazione di set denominati con ambito sessione &#40;MDX&#41;](mdx-named-sets-creating-session-scoped-named-sets.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Istruzione SELECT &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
  [Istruzione CREATE SET &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)   
  [Nozioni fondamentali sulle query MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  

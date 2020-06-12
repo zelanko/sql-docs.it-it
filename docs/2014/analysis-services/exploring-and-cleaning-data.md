@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7c888c95-8986-461e-9f11-2395044b9d97
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 79d356aa1b14ac30ba5bc9a8f579fc66ddebea92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a31ed2e8e79e6f3ebf6cbecfeac14d24b56bf303
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081265"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528337"
 ---
 # <a name="exploring-and-cleaning-data"></a>Esplorazione e pulizia dei dati
   La preparazione dei dati non è una semplice pulizia dei dati. Si tenga presente che la modalità con cui i dati vengono preparati influisce anche su come i risultati alla fine vengono interpretati. La preparazione dei dati include le attività seguenti:  
@@ -98,7 +97,7 @@ ms.locfileid: "66081265"
   
  [&#40;di dati di esempio SQL Server&#41;componenti aggiuntivi Data mining ](sample-data-sql-server-data-mining-add-ins.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di un modello di data mining](creating-a-data-mining-model.md)   
  [Convalida di modelli e utilizzo di modelli per la stima &#40;componenti aggiuntivi Data mining per Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
  [Distribuzione e scalabilità di modelli di data mining &#40;componenti aggiuntivi Data mining per Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  

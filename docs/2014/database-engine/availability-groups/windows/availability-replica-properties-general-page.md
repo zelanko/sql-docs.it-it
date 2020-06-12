@@ -12,12 +12,12 @@ ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 07652cec7b3b7a17c4b994eb68afd939e15244a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c1455e4330ef4d9c8c0c6e3e07e285cf548c7b4
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62791905"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858915"
 ---
 # <a name="availability-replica-properties-general-page"></a>Proprietà replica di disponibilità (Pagina Generale)
   Usare questa finestra di dialogo per visualizzare le proprietà di una replica di disponibilità.  
@@ -25,11 +25,11 @@ ms.locfileid: "62791905"
 ## <a name="task-list"></a>Elenco attività  
  **Per visualizzare le proprietà della replica di disponibilità**  
   
--   [Visualizzare le proprietà della replica di disponibilità &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
+-   [Visualizzazione delle proprietà della replica di disponibilità &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
   
 -   [Usare il Dashboard Always On &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco elementi dell'interfaccia utente  
  **Nome gruppo di disponibilità**  
  Nome del gruppo di disponibilità. Si tratta di un nome specificato dall'utente che deve essere univoco all'interno del cluster di failover di Windows Server (WSFC).  
   
@@ -37,10 +37,10 @@ ms.locfileid: "62791905"
  Nome del server dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospita la replica corrente e, per un'istanza non predefinita, il nome dell'istanza.  
   
  **Ruolo**  
- **Primario**  
+ **Principale**  
  Attualmente la replica primaria.  
   
- **Secondari**  
+ **Secondario**  
  Attualmente una replica secondaria.  
   
  **Risoluzione**  
@@ -60,7 +60,7 @@ ms.locfileid: "62791905"
  **Modalità di failover**  
  Modalità di failover della replica. I valori possibili sono:  
   
- **Automatico**  
+ **Automatic** (Automatica)  
  Failover automatico. La replica è una destinazione per i failover automatici. Questa opzione è supportata solo se la modalità di disponibilità è impostata sul commit sincrono.  
   
  **Manuale**  
@@ -73,7 +73,7 @@ ms.locfileid: "62791905"
  Sono consentite tutte le connessioni ai database nella replica primaria. Si tratta dell'impostazione predefinita.  
   
  **Consenti connessioni in lettura/scrittura**  
- Le connessioni in cui la proprietà di connessione finalità dell'applicazione è impostata su **ReadOnly** non sono consentite. Se la proprietà finalità dell'applicazione è impostata su **ReadWrite** o se la proprietà di connessione finalità dell'applicazione non è impostata, la connessione è consentita.  
+ Non sono consentite le connessioni in cui la proprietà di connessione Finalità dell'applicazione è impostata su **ReadOnly** . Se la proprietà finalità dell'applicazione è impostata su **ReadWrite** o se la proprietà di connessione finalità dell'applicazione non è impostata, la connessione è consentita.  
   
  **Secondario leggibile**  
  Specifica se una replica di disponibilità che esegue il ruolo secondario, ovvero una replica secondaria, può accettare connessioni dai client. I valori possibili sono:  
@@ -98,7 +98,7 @@ ms.locfileid: "62791905"
  **URL endpoint**  
  Rappresentazione di stringa dell'endpoint del mirroring di database specificato dall'utente usato dalle connessioni tra repliche primarie e secondarie per la sincronizzazione dei dati. Per informazioni sulla sintassi degli URL dell'endpoint, vedere [Specificare l'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

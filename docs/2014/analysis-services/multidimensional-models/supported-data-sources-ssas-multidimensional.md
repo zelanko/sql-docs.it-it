@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c97e0f8d-7ddd-4941-8b51-e7832f30fbbe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5a8cdeb912d1ead21571f1ec7f86e15b0d009514
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e750e286d7a58bee8c6979515fe163119175d529
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072854"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547336"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>Data Sources Supported (SSAS Multidimensional)
   In questo argomento vengono descritti i tipi di origini dati che possono essere utilizzati in un modello multidimensionale.  
@@ -46,7 +45,7 @@ ms.locfileid: "66072854"
   
  <sup>1</sup> le origini dati ODBC non sono supportate per le soluzioni multidimensionali. Anche se la connessione viene gestita direttamente da Analysis Services, le finestre di progettazione in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] usate per la compilazione di soluzioni non sono in grado di connettersi a un'origine dati ODBC, anche quando si usano driver MSDASQL. Se i requisiti aziendali includono un'origine dati ODBC, provare invece a compilare una soluzione tabulare.  
   
- <sup>2</sup> per altre informazioni, vedere [!INCLUDE[ssSDS](../../includes/sssds-md.md)], su [Azure.Microsoft.com](https://go.microsoft.com/fwlink/?LinkID=157856).  
+ <sup>2</sup> per altre informazioni, vedere [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , su [Azure.Microsoft.com](https://go.microsoft.com/fwlink/?LinkID=157856).  
   
  <sup>3</sup> per altre informazioni su [!INCLUDE[ssSDS](../../includes/sssds-md.md)] PDW, vedere [SQL Server Data Warehouse parallele](https://go.microsoft.com/fwlink/?LinkId=150895).  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66072854"
   
  <sup>5</sup> per alcune funzionalità è necessario un SQL Server database relazionale in esecuzione in locale. In particolare, per il writeback e l'archiviazione ROLAP viene richiesto che l'origine dati sottostante sia un database relazionale di SQL Server.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Origini dati supportate &#40;SSAS tabulare&#41;](../tabular-models/data-sources-supported-ssas-tabular.md)   
  [Origini dati nei modelli multidimensionali](data-sources-in-multidimensional-models.md)   
  [Viste origine dati in modelli multidimensionali](data-source-views-in-multidimensional-models.md)  

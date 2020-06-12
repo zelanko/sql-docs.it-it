@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 450a42a4564d3a59b5b609f2ca8faf6c1f99a128
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e02f4624dc0ec25ee0c3d8950c83550ca3d9ed57
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175270"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542733"
 ---
 # <a name="defining-named-sets"></a>Definizione dei set denominati
   Un set denominato è un'espressione MDX (Multidimensional Expressions) che restituisce un set di membri della dimensione. È possibile definire set denominati e salvarli come parte della definizione del cubo, nonché creare set denominati in applicazioni client. I set denominati possono essere creati combinando dati del cubo, operatori aritmetici, numeri e funzioni. I set denominati possono essere utilizzati dagli utenti nelle query MDX in applicazioni client, nonché per definire set nei sottocubi. Un sottocubo è una raccolta di set di crossjoin che limita lo spazio del cubo nel sottospazio definito per istruzioni successive. La definizione di uno spazio del cubo limitato costituisce un concetto fondamentale dello scripting MDX.
@@ -32,11 +31,11 @@ ms.locfileid: "78175270"
 
      Quando si definisce un nuovo calcolo nella scheda **Calcoli** ricordare che i calcoli vengono risolti seguendo l'ordine di visualizzazione del riquadro **Libreria script** . Il calcolo selezionato all'interno di tale riquadro al momento della creazione di un nuovo calcolo ne determina l'ordine di esecuzione. Un nuovo calcolo viene definito immediatamente dopo il calcolo selezionato.
 
-3.  Nella casella **nome** modificare il nome del nuovo set denominato in `[Core Products]`.
+3.  Nella casella **nome** modificare il nome del nuovo set denominato in `[Core Products]` .
 
      Si noti nel riquadro **Libreria script** l'icona speciale che distingue un set denominato da un comando script o da un membro calcolato.
 
-4.  Nella scheda **metadati** del riquadro **strumenti di calcolo** espandere **prodotto**, espandere **categoria**, espandere `Members`, quindi espandere **tutti i prodotti**.
+4.  Nella scheda **metadati** del riquadro **strumenti di calcolo** espandere **prodotto**, espandere **categoria**, espandere `Members` , quindi espandere **tutti i prodotti**.
 
     > [!NOTE]
     >  Se non è possibile visualizzare i metadati nel riquadro **Strumenti di calcolo** , fare clic su **Riconnetti** sulla barra degli strumenti. Se questo sistema non funziona, può essere necessario elaborare il cubo o avviare l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].
@@ -47,11 +46,11 @@ ms.locfileid: "78175270"
 
 ## <a name="defining-a-large-resellers-named-set"></a>Definizione di un set denominato Large Resellers
 
-1.  Fare clic con `[Core Products]` il pulsante destro del mouse sul riquadro **Libreria script** , quindi scegliere **nuovo set denominato**.
+1.  Fare clic con il pulsante destro del mouse sul `[Core Products]` riquadro **Libreria script** , quindi scegliere **nuovo set denominato**.
 
-2.  Nella casella **nome** modificare il nome di questo set denominato in `[Large Resellers]`.
+2.  Nella casella **nome** modificare il nome di questo set denominato in `[Large Resellers]` .
 
-3.  Nella casella **espressione** Digitare `Exists()`.
+3.  Nella casella **espressione** Digitare `Exists()` .
 
      La funzione Exists verrà usata per restituire il set di membri della gerarchia dell'attributo Reseller Name che si interseca con il set di membri della gerarchia dell'attributo Number of Employees contenente il maggior numero di dipendenti.
 
@@ -69,29 +68,29 @@ ms.locfileid: "78175270"
 
      Ora che è stato definito il primo set per l'espressione set Exists, è possibile aggiungere il secondo set, ovvero il set di membri della dimensione Reseller che contiene il maggior numero di dipendenti.
 
-7.  Nella scheda **metadati** del riquadro **strumenti di calcolo** espandere **Number of Employees** nella dimensione Reseller, espandere `Members`e quindi espandere **All Resellers**.
+7.  Nella scheda **metadati** del riquadro **strumenti di calcolo** espandere **Number of Employees** nella dimensione Reseller, espandere `Members` e quindi espandere **All Resellers**.
 
      Si noti che i membri di questa gerarchia dell'attributo non sono raggruppati.
 
 8.  Aprire Progettazione dimensioni per la dimensione **Reseller** e quindi fare clic su **Number of Employees** nel riquadro **Attributi** .
 
-9. Nella Finestra Proprietà `DiscretizationMethod` impostare la proprietà su **Automatic**, quindi modificare la `DiscretizationBucketCount` proprietà in. `5` Per altre informazioni, vedere [Raggruppare membri di attributo &#40;discretizzazione&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).
+9. Nella Finestra Proprietà impostare la `DiscretizationMethod` proprietà su **Automatic**, quindi modificare la `DiscretizationBucketCount` Proprietà in `5` . Per altre informazioni, vedere [Raggruppare membri di attributo &#40;discretizzazione&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).
 
 10. Scegliere **Distribuisci Analysis Services Tutorial** dal menu [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Compila **di**.
 
 11. Dopo aver completato la distribuzione, passare a Progettazione cubi per il cubo di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial e fare clic su **Riconnetti** nella barra degli strumenti della scheda **Calcoli** .
 
-12. Nella scheda **metadati** del riquadro **strumenti di calcolo** espandere **Number of Employees** nella dimensione **Reseller** , espandere `Members`e quindi espandere **All Resellers**.
+12. Nella scheda **metadati** del riquadro **strumenti di calcolo** espandere **Number of Employees** nella dimensione **Reseller** , espandere `Members` e quindi espandere **All Resellers**.
 
      Si noti che i membri di questa gerarchia di attributi sono ora contenuti in cinque gruppi, numerati da 0 a 4. Per visualizzare il numero di un gruppo, posizionare il puntatore sul gruppo per visualizzare una finestra popup. Per l'intervallo `2 -17`InfoTip deve contenere `[Reseller].[Number of Employees].&[0]`.
 
-     I membri di questa gerarchia dell'attributo sono raggruppati perché la proprietà DiscretizationBucketCount è impostata `5` su e la proprietà DiscretizationMethod è impostata su **Automatic**.
+     I membri di questa gerarchia dell'attributo sono raggruppati perché la proprietà DiscretizationBucketCount è impostata su `5` e la proprietà DiscretizationMethod è impostata su **Automatic**.
 
 13. Nell'espressione set Exists contenuta nella casella **Espressione** aggiungere una virgola dopo la funzione Members e prima della parentesi di chiusura, quindi trascinare **83 - 100** dal riquadro **Metadati** e posizionarlo dopo la virgola.
 
      È stata ora completata l'espressione set Exists che restituirà il set di membri che si interseca con i due set specificati, ovvero il set di tutti i rivenditori e il set dei rivenditori con un numero di dipendenti compreso tra 83 e 100, quando il set denominato Large Resellers viene posto su un'asse.
 
-     Nell'immagine seguente viene illustrato il riquadro **espressioni** di calcolo `[Large Resellers]` per il set denominato.
+     Nell'immagine seguente viene illustrato il riquadro **espressioni di calcolo** per il `[Large Resellers]` set denominato.
 
      ![Riquadro Espressioni di calcolo per [Large Resellers]](../../2014/tutorials/media/l6-named-set-02.gif "Riquadro Espressioni di calcolo per [Large Resellers]")
 

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: be52b351-f376-42ee-adba-2dcaa0c0f69c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b46e9e42d212ca8f92f905c241915fdccec679f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2e9fd625b521e6de4693cf31fa2d1edb3ceb0da8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075891"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547123"
 ---
 # <a name="modify-or-delete-a-database-dimension-in-solution-explorer"></a>Modificare o eliminare una dimensione di database in Esplora soluzioni
   È possibile modificare o eliminare una dimensione mediante Progettazione dimensioni in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Le modifiche apportate a una dimensione risultano disponibili agli utenti solo dopo che la dimensione è stata elaborata. Per ulteriori informazioni, vedere [elaborazione di oggetti del modello multidimensionale](processing-a-multidimensional-model-analysis-services.md).  
@@ -38,7 +37,7 @@ ms.locfileid: "66075891"
   
 -   In Esplora soluzioni fare clic con il pulsante destro del mouse sulla dimensione da eliminare, quindi scegliere **Elimina**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Dimensioni nei modelli multidimensionali](dimensions-in-multidimensional-models.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: Esecuzione di query XPath con spazi dei nomi (SQLXMLOLEDB)
+description: Informazioni su come specificare gli spazi dei nomi in SQLXML 4,0 durante l'esecuzione di query XPath con il provider SQLXMLOLEDB.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b1559beee9838920c5e219c4e13e5a8b0c130b51
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81d8b40501df0cd18765c684a4cce217d2b87ef2
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257301"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215865"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>Esecuzione di query XPath con spazi dei nomi (provider SQLXMLOLEDB)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75257301"
   
  Poiché l'utilizzo del carattere jolly (*) non è supportato in SQLXML 4.0, è necessario specificare la query XPath utilizzando un prefisso dello spazio dei nomi. Per risolvere questo prefisso, utilizzare la proprietà Namespaces per specificare l'associazione dello spazio dei nomi.  
   
- Nell'esempio seguente, la query XPath specifica gli spazi dei nomi usando il carattere jolly (\*) e le funzioni XPath local-name () e Namespace-URI (). Questa query XPath restituisce tutti gli elementi in cui il nome locale è **Contact** e l'URI dello spazio dei nomi è **urn: schema: Contacts**.  
+ Nell'esempio seguente, la query XPath specifica gli spazi dei nomi usando il carattere jolly ( \* ) e le funzioni XPath local-name () e Namespace-URI (). Questa query XPath restituisce tutti gli elementi in cui il nome locale è **Contact** e l'URI dello spazio dei nomi è **urn: schema: Contacts**.  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  

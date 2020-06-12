@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1137740d-3063-4ab1-9cfe-8319194db937
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4efca206c40c685f81c2c4629714e285ba6119af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c728f865cb905414525048e5b4678005a1613a28
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087601"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527340"
 ---
 # <a name="completing-the-wizard-dimension-wizard"></a>Completamento procedura guidata (Creazione guidata dimensione)
   Usare la pagina **Completamento procedura guidata** per eseguire le procedure seguenti:  
@@ -45,7 +44,7 @@ ms.locfileid: "66087601"
 > [!NOTE]  
 >  Questa opzione viene visualizzata solo se è stato selezionato **Genera una tabella dei tempi nell'origine dati** oppure **Genera una tabella diversa dalla tabella dei tempi nell'origine dati** nella pagina **Seleziona metodo di creazione **. Per altre informazioni, vedere [Seleziona metodo di creazione &#40;Creazione guidata dimensione&#41;](select-creation-method-dimension-wizard.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto della creazione guidata dimensione](dimension-wizard-f1-help.md)   
  [Dimensioni &#40;Analysis Services Dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  

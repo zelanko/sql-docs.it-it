@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: be5b2746-0336-4b12-827e-131462bdf605
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3efce85f27db9d0695ea56e9940ab563ed40537a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 626211f974b41ce44655d0b79cf82eb9cb8373ab
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074963"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546663"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>Concedere le autorizzazioni per una dimensione (Analysis Services)
   La sicurezza delle dimensioni viene usata per impostare le autorizzazioni su un oggetto dimensione e non sui relativi dati. In genere, consentire o negare l'accesso alle operazioni di elaborazione rappresenta l'obiettivo principale quando si impostano le autorizzazioni su una dimensione.  
@@ -45,7 +44,7 @@ ms.locfileid: "66074963"
 ## <a name="set-permissions-on-a-database-dimension"></a>Impostare le autorizzazioni su una dimensione del database  
  Le dimensioni del database sono oggetti autonomi all'interno di un database, consentendo il riuso della dimensione all'interno dello stesso modello. Considerare la dimensione DATE del database usata più volte in un modello come dimensioni Order Date, Ship Date e Due Date del cubo. Poiché le dimensioni del cubo e del database sono oggetti peer in un database, è possibile impostare le autorizzazioni di elaborazione indipendentemente per ogni oggetto.  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]connettersi all'istanza di, espandere [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **ruoli** per il database appropriato in Esplora oggetti, quindi fare clic su un ruolo del database o creare un nuovo ruolo del database.  
+1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] connettersi all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , espandere **ruoli** per il database appropriato in Esplora oggetti, quindi fare clic su un ruolo del database o creare un nuovo ruolo del database.  
   
 2.  Nel riquadro **Dimensioni** il set di dimensioni deve essere impostato su **Tutte le dimensioni del database**.  
   
@@ -58,16 +57,16 @@ ms.locfileid: "66074963"
 ## <a name="set-permissions-on-a-cube-dimension"></a>Impostare le autorizzazioni su una dimensione del cubo  
  Le dimensioni del cubo sono dimensioni del database che sono state aggiunte a un cubo. Di conseguenza, sono strutturalmente dipendenti dai gruppi di misure associati. Sebbene sia possibile elaborare questi oggetti in modo atomico, in relazione all'autorizzazione è consigliabile gestire il cubo e le dimensioni del cubo come una sola entità.  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]connettersi all'istanza di, espandere [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **ruoli** per il database appropriato in Esplora oggetti, quindi fare clic su un ruolo del database o creare un nuovo ruolo del database.  
+1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] connettersi all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , espandere **ruoli** per il database appropriato in Esplora oggetti, quindi fare clic su un ruolo del database o creare un nuovo ruolo del database.  
   
-2.  Nel riquadro **dimensioni** modificare il set di \<dimensioni in nome cubo> **dimensioni cubo**.  
+2.  Nel riquadro **dimensioni** modificare il set di dimensioni in \<cube-name> **dimensioni cubo**.  
   
      Per impostazione predefinita, le autorizzazioni vengono ereditate da una dimensione del database corrispondente. Deselezionare la casella di controllo **Eredita** per modificare le autorizzazioni da **Lettura** a **Lettura/Scrittura**. Prima di usare l'autorizzazione **Lettura/Scrittura**, leggere la nota nella sezione precedente.  
   
 > [!IMPORTANT]  
 >  Se per configurare le autorizzazioni del ruolo del database si usa la libreria AMO (Analysis Management Objects), qualsiasi riferimento a una dimensione del cubo nell'attributo DimensionPermission di un cubo impedisce l'ereditarietà delle autorizzazioni dall'attributo DimensionPermission del database. Per altre informazioni su AMO, vedere [Sviluppo con AMO &#40;Analysis Management Objects&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Ruoli e autorizzazioni &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
  [Concedere le autorizzazioni per il cubo o il modello &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
  [Concedere le autorizzazioni per data mining strutture e modelli &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc9aa519d37b040026414ab826373357a1ddd92f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd35958a364456c12d58392afe3754f6adcf97b8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074725"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546593"
 ---
 # <a name="autoexists"></a>Auto Exist
   Il concetto di *Auto Exist* limita lo spazio del cubo a quelle celle che esistono effettivamente nel cubo, in contrapposizione con quelle che potrebbero esistere come risultato della creazione di tutte le possibili combinazioni di membri delle gerarchie di attributi dalla medesima gerarchia. La distinzione è necessaria perché i membri di una gerarchia di attributi non possono coesistere con membri di un'altra gerarchia di attributi nella stessa dimensione. Quando in un'istruzione SELECT si utilizzano due o più gerarchie di attributi della medesima dimensione, Analysis Services valuta le espressioni degli attributi per verificare che i relativi membri siano correttamente limitati per soddisfare i criteri di tutti gli altri attributi.  
@@ -85,7 +84,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  I valori delle celle restituiti saranno identici, sebbene i metadati nel set di risultati saranno diversi. Con la query precedente, ad esempio, la gerarchia Country è stata spostata sull'asse di sezionamento (nella clausola WHERE) e pertanto non viene visualizzata in modo esplicito nel set di risultati.  
   
- Ognuna di queste tre query precedenti dimostra l'effetto del comportamento di auto exist in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ Ognuna di queste tre query precedenti dimostra l'effetto del comportamento di auto exist in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="deep-and-shallow-autoexists"></a>Auto Exist completo e superficiale  
  La caratteristica Auto Exist può essere applicata in modo completo o superficiale alle espressioni. `Deep Autoexists` significa che tutte le espressioni verranno valutate per soddisfare lo spazio più completo possibile dopo l'applicazione delle espressioni di sezionamento, delle espressioni sub-SELECT nell'asse e così via. `Shallow Autoexists` significa che espressioni esterne vengono valutate prima dell'espressione corrente e i risultati vengono specificati nell'espressione corrente. Per impostazione predefinita la caratteristica Auto Exist viene applicata in modo completo.  
@@ -133,13 +132,13 @@ WHERE (Measures.[Internet Sales Amount],
 |||||  
 |-|-|-|-|  
 ||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
-|**Road-250**|**$9,377,457.68**|**$4,032.47**|**0,04%**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
+|**Road-250**|**$9,377,457.68**|**$4,032.47**|**0.04%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
 |**Road-650**|**$7,442,141.81**|**$39,698.30**|**0.53%**|  
 |**Touring-1000**|**$6,723,794.29**|**$166,144.17**|**2,47%**|  
 |**Road-550-W**|**$3,668,383.88**|**$1,901.97**|**0.05%**|  
-|**Road-350-W**|**$3,665,932.31**|**$20,946.50**|**0.57%**|  
+|**Road-350-W**|**$3,665,932.31**|**$20,946.50**|**0,57%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01%**|  
 |**Road-150**|**$2,363,805.16**|**$0,00**|**0,00%**|  
 |**Touring-3000**|**$2,046,508.26**|**$79,582.15**|**3,89%**|  
@@ -185,13 +184,13 @@ WHERE (Measures.[Internet Sales Amount],
 |||||  
 |-|-|-|-|  
 ||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
-|**Road-250**|**$9,377,457.68**|**$4,032.47**|**0,04%**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
+|**Road-250**|**$9,377,457.68**|**$4,032.47**|**0.04%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
 |**Road-650**|**$7,442,141.81**|**$39,698.30**|**0.53%**|  
 |**Touring-1000**|**$6,723,794.29**|**$166,144.17**|**2,47%**|  
 |**Road-550-W**|**$3,668,383.88**|**$1,901.97**|**0.05%**|  
-|**Road-350-W**|**$3,665,932.31**|**$20,946.50**|**0.57%**|  
+|**Road-350-W**|**$3,665,932.31**|**$20,946.50**|**0,57%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01%**|  
 |**Road-150**|**$2,363,805.16**|**$0,00**|**0,00%**|  
 |**Touring-3000**|**$2,046,508.26**|**$79,582.15**|**3,89%**|  
@@ -217,16 +216,16 @@ WHERE (Measures.[Internet Sales Amount],
 |||||  
 |-|-|-|-|  
 ||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01%**|  
 |**Mountain-300**|**$1,907,249.38**|**$876.95**|**0.05%**|  
 |**Mountain-500**|**$1,067,327.31**|**$17,266.09**|**1,62%**|  
 |**Mountain-400-W**|**$592,450.05**|**$303.49**|**0.05%**|  
 |**LL Mountain Frame**|**$521,864.42**|**$252.41**|**0.05%**|  
-|**ML Mountain Frame-W**|**$482,953.16**|**$206.95**|**0,04%**|  
+|**ML Mountain Frame-W**|**$482,953.16**|**$206.95**|**0.04%**|  
 |**ML Mountain Frame**|**$343,785.29**|**$161.82**|**0.05%**|  
-|**Women's Mountain Shorts**|**$260,304.09**|**$6,675.56**|**2.56%**|  
+|**Women's Mountain Shorts**|**$260,304.09**|**$6,675.56**|**2,56%**|  
   
  Nel set di risultati precedente si registrano sette nuove presenze nell'elenco Top10SellingProducts, mentre Mountain-200, Mountain-100 e HL Mountain Frame sono stati spostati all'inizio dell'elenco. Questi tre valori sono frammisti.  
   
@@ -275,7 +274,7 @@ WHERE (Measures.[Internet Sales Amount],
 |||||  
 |-|-|-|-|  
 ||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01%**|  
   
@@ -304,13 +303,13 @@ WHERE (Measures.[Internet Sales Amount],
 |||||  
 |-|-|-|-|  
 ||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01%**|  
   
  Il comportamento di Auto Exist può essere modificato utilizzando il parametro auto EXISTs = [1 | 2 | 3] nella stringa di connessione. vedere [Proprietà XMLA supportate &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> per l'utilizzo dei parametri.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Concetti chiave di MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Spazio del cubo](cube-space.md)   
  [Tuple](tuples.md)   

@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: c1089021-20d9-4d73-820f-819a0bfd66fc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 88f33a6e2ae78efbe64d7a84af676812df743e60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8ea205d13a9f626e39dad8a1ca0a6e406a8f8fa
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082580"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529028"
 ---
 # <a name="data-source-credentials-ssas"></a>Credenziali origine dati (SSAS)
   Questa pagina dell' **Importazione guidata tabella** consente di immettere il nome utente e la password per la connessione all'origine dati esistente selezionata. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco elementi dell'interfaccia utente  
  **Nome utente**  
  Immettere il nome utente per la connessione all'origine dati.  
   

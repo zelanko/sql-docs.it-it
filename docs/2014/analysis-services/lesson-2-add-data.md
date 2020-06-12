@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 370e368843fa1e9584cc341397853fcdad26922a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e18298e152089f361faa839228415909133663f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078969"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543453"
 ---
 # <a name="lesson-2-add-data"></a>Lezione 2: Aggiungere dati
   In questa lezione verrà utilizzata l'Importazione guidata tabella in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] per connettersi al database SQL AdventureWorksDW, selezionare i dati, visualizzare un'anteprima, filtrare i dati e quindi importarli nell'area di lavoro del modello.  
@@ -39,7 +38,7 @@ ms.locfileid: "66078969"
   
 2.  Nell' **Importazione guidata tabella**, in **Database relazionali**fare clic su **Microsoft SQL Server**e su **Avanti**.  
   
-3.  Nella pagina **connessione a un database di Microsoft SQL Server** , in **nome descrittivo connessione**, digitare `Adventure Works DB from SQL`.  
+3.  Nella pagina **connessione a un database di Microsoft SQL Server** , in **nome descrittivo connessione**, digitare `Adventure Works DB from SQL` .  
   
 4.  In **Nome server**digitare il nome del server in cui è installato il database AdventureWorksDW.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "66078969"
   
     |Nome origine|Nome descrittivo|  
     |-----------------|-------------------|  
-    |DimDate|Date|  
+    |DimDate|Data|  
     |DimGeography|Area geografica|  
     |DimProduct|Prodotto|  
     |DimProductCategory|Categoria di prodotto|  
@@ -95,7 +94,7 @@ ms.locfileid: "66078969"
   
 4.  Filtrare le tabelle restanti deselezionando le caselle di controllo per le colonne seguenti in ogni tabella:  
   
-    |Date|  
+    |Data|  
     |----------|  
     |**DateKey**|  
     |**SpanishDayNameOfWeek**|  
@@ -152,7 +151,7 @@ ms.locfileid: "66078969"
     > [!TIP]  
     >  Per vedere le relazioni create automaticamente tra le tabelle importate, fare clic su **Dettagli** nella riga **Preparazione dati**.  
   
-2.  Fare clic su **Chiudi**.  
+2.  Fare clic su **Close**.  
   
      La procedura guidata verrà chiusa e verrà visualizzata la finestra Progettazione modelli. Ogni tabella è stata aggiunta come nuova scheda in Progettazione modelli.  
   

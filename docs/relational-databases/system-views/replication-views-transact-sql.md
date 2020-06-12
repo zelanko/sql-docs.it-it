@@ -1,5 +1,6 @@
 ---
 title: Viste della replica (Transact-SQL) | Microsoft Docs
+description: Le viste di replica contengono informazioni utilizzate dalla replica in SQL Server. Le viste semplificano l'accesso ai dati nelle tabelle di sistema di replica.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,17 +23,17 @@ helpviewer_keywords:
 ms.assetid: 93e5056d-0d93-4a48-ba33-72762eb995d8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 51cc9434805fbd14204d74edae1594ae01c06bb2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae0c1245bdf9ff7fe1d1eb712745cbc15d2479af
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68129572"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807934"
 ---
 # <a name="replication-views-transact-sql"></a>Viste della replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Queste viste contengono informazioni utilizzate dalla replica in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le visualizzazioni consentono un accesso più semplice ai dati nelle [tabelle del sistema di replica](../../relational-databases/system-tables/replication-tables-transact-sql.md). Le viste vengono create in un database utente quando questo viene abilitato come database di pubblicazione o sottoscrizione. Tutti gli oggetti di replica vengono rimossi da un database utente quando questo viene rimosso dalla topologia di replica. Il metodo preferito per accedere ai metadati di replica consiste nell'utilizzare [le stored procedure di replica](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).  
+  Queste viste contengono informazioni utilizzate dalla replica in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le visualizzazioni consentono un accesso più semplice ai dati nelle [tabelle del sistema di replica](../../relational-databases/system-tables/replication-tables-transact-sql.md). Le viste vengono create in un database utente quando questo viene abilitato come database di pubblicazione o sottoscrizione. Tutti gli oggetti di replica vengono rimossi da un database utente quando questo viene rimosso dalla topologia di replica. Il metodo preferito per accedere ai metadati di replica consiste nell'utilizzare [le stored procedure di replica](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).  
   
 > [!IMPORTANT]  
 >  Gli utenti non devono modificare direttamente le viste di sistema.  

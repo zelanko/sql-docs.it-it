@@ -24,16 +24,15 @@ helpviewer_keywords:
 ms.assetid: e525e708-f719-4905-a4cc-20f6a9a3edcd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8d86734023080c9b7fc62cff636d4f1952d00d0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f921fc106adb88bcf2f9b9e863165153981f904
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072986"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545647"
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>Impostare l'archiviazione delle partizioni (Analysis Services - Multidimensionale)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in sono disponibili diverse configurazioni di archiviazione standard per le modalità di archiviazione e le opzioni di memorizzazione nella [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cache. Si tratta delle configurazioni utilizzate di frequente per notifiche di aggiornamento, latenza e ricompilazione dei dati.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in sono disponibili diverse configurazioni di archiviazione standard per le modalità di archiviazione e le opzioni di memorizzazione nella cache. Si tratta delle configurazioni utilizzate di frequente per notifiche di aggiornamento, latenza e ricompilazione dei dati.  
   
  È possibile specificare l'archiviazione delle partizioni nella scheda Partizioni del cubo in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]o nella pagina delle proprietà delle partizioni in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -77,7 +76,7 @@ ms.locfileid: "66072986"
   
  Se si seleziona la casella di controllo **Applica impostazioni alle dimensioni** , le stesse impostazioni di archiviazione verranno applicate alle dimensioni correlate al gruppo di misure. I valori delle dimensioni sono inizialmente identici ai valori delle partizioni.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Partizioni nei modelli multidimensionali](partitions-in-multidimensional-models.md)  
   
   

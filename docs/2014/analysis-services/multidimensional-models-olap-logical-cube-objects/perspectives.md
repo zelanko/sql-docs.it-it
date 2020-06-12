@@ -17,28 +17,27 @@ helpviewer_keywords:
 ms.assetid: b064171e-b1b4-4f32-95e5-59e1b831c4c9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2856bca26e8a49ffdb2ed5187479434c7762015b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f385fd078500739d97394cd8856fc8bd6a3b87e8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702630"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545211"
 ---
-# <a name="perspectives"></a>prospettive
+# <a name="perspectives"></a>Prospettive
   Una prospettiva è una definizione che consente agli utenti di visualizzare un cubo in modo più semplice. Una prospettiva rappresenta un subset delle caratteristiche di un cubo e consente agli amministratori di creare viste di un cubo, in modo tale che gli utenti possano concentrarsi su dati per loro più importanti. Una prospettiva contiene subset di tutti gli oggetti di un cubo, ma non può includere elementi non definiti nel cubo padre.  
   
  Un oggetto <xref:Microsoft.AnalysisServices.Perspective> semplice è composto da informazioni di base, dimensioni, gruppi di misure, calcoli, indicatori KPI e azioni. Le informazioni di base includono il nome e la misura predefinita della prospettiva. Le dimensioni sono un subset delle dimensioni del cubo. I gruppi di misure sono un subset dei gruppi di misure del cubo. I calcoli sono un subset dei calcoli relativi al cubo. Gli indicatori KPI sono un subset degli indicatori KPI del cubo. Le azioni sono un subset delle azioni del cubo.  
   
  Per utilizzare la prospettiva, è necessario aggiornare ed elaborare un cubo.  
   
- I cubi possono essere oggetti molto complessi per consentire agli utenti [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]di esplorare in. Un singolo cubo può rappresentare il contenuto di un data warehouse completo, con più gruppi di misure che rappresentano più tabelle dei fatti e più dimensioni in base a più tabelle delle dimensioni. Un cubo di questo tipo può essere molto complesso e potente e può quindi costituire un ostacolo per gli utenti che hanno necessità di interagire con solo una parte ridotta del cubo per soddisfare determinati requisiti di Business Intelligence e creazione di report.  
+ I cubi possono essere oggetti molto complessi per consentire agli utenti di esplorare in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Un singolo cubo può rappresentare il contenuto di un data warehouse completo, con più gruppi di misure che rappresentano più tabelle dei fatti e più dimensioni in base a più tabelle delle dimensioni. Un cubo di questo tipo può essere molto complesso e potente e può quindi costituire un ostacolo per gli utenti che hanno necessità di interagire con solo una parte ridotta del cubo per soddisfare determinati requisiti di Business Intelligence e creazione di report.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]è possibile utilizzare una prospettiva per ridurre la complessità percepita di un cubo in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Una prospettiva definisce subset visualizzabili del cubo in grado di offrire punti di vista mirati, specifici di un'attività aziendale o di un'applicazione. La prospettiva controlla la visibilità degli oggetti contenuti in un cubo. In una prospettiva è possibile visualizzare o nascondere gli oggetti seguenti:  
+ In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è possibile utilizzare una prospettiva per ridurre la complessità percepita di un cubo in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Una prospettiva definisce subset visualizzabili del cubo in grado di offrire punti di vista mirati, specifici di un'attività aziendale o di un'applicazione. La prospettiva controlla la visibilità degli oggetti contenuti in un cubo. In una prospettiva è possibile visualizzare o nascondere gli oggetti seguenti:  
   
 -   Dimensioni  
   
--   Attributes  
+-   Attributi  
   
 -   Gerarchie  
   
@@ -52,7 +51,7 @@ ms.locfileid: "62702630"
   
 -   Azioni  
   
- Ad esempio, il cubo **Adventure Works** nel database [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esempio contiene undici gruppi di misure e ventuno dimensioni di cubo diverse, che rappresentano vendite, previsioni di vendita e dati finanziari. Un'applicazione client può fare riferimento direttamente al cubo completo, tuttavia questo punto di vista potrebbe rivelarsi eccessivo per un utente che desidera estrarre solo informazioni di vendita di base. Lo stesso utente può invece utilizzare la prospettiva **Sales Targets** per limitare la visualizzazione del cubo **Adventure Works** solo agli oggetti rilevanti per la previsione delle vendite.  
+ Ad esempio, il cubo **Adventure Works** nel [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] database di esempio [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contiene undici gruppi di misure e ventuno dimensioni di cubo diverse, che rappresentano vendite, previsioni di vendita e dati finanziari. Un'applicazione client può fare riferimento direttamente al cubo completo, tuttavia questo punto di vista potrebbe rivelarsi eccessivo per un utente che desidera estrarre solo informazioni di vendita di base. Lo stesso utente può invece utilizzare la prospettiva **Sales Targets** per limitare la visualizzazione del cubo **Adventure Works** solo agli oggetti rilevanti per la previsione delle vendite.  
   
  Gli oggetti di un cubo che non sono visibili all'utente tramite una prospettiva possono comunque contenere riferimenti diretti e possono essere recuperati utilizzando istruzioni XMLA (XML for Analysis), MDX (Multidimensional Expressions) o DMX (Data Mining Extensions). Le prospettive non limitano l'accesso agli oggetti di un cubo e non dovrebbero essere utilizzate a questo scopo, ma piuttosto come soluzioni per migliorare l'accesso degli utenti a un cubo.  
   

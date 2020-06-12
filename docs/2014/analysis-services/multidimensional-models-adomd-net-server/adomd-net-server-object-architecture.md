@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: bdc81de9-b390-4654-b62a-cd6c0c9ca10d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9b57155285b4758e37af43b0fb4f079d660b97fa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8454d2cbe9153c6a547ae2813c85bf1e45f269ad
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387921"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537388"
 ---
 # <a name="adomdnet-server-object-architecture"></a>Architettura degli oggetti server in ADOMD.NET
-  Gli oggetti del server ADOMD.NET sono oggetti helper che possono essere utilizzati per creare funzioni definite dall'utente o stored procedure in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+  Gli oggetti del server ADOMD.NET sono oggetti helper che possono essere utilizzati per creare funzioni definite dall'utente o stored procedure in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 > [!NOTE]  
 >  Per utilizzare lo spazio dei nomi `Microsoft.AnalysisServices.AdomdServer` e tali oggetti, è necessario aggiungere un riferimento a msmgdsrv.dll nel progetto di una funzione definita dall'utente o di una stored procedure.  

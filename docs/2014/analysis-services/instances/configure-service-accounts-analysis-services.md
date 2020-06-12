@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8dfde906f7cadc01b9c7a4abbe32be1bd0408986
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c48dbe2f224b9b7e2d5e47f6771105adc0524ff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080193"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544053"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Configurare gli account del servizio (Analysis Services)
   Il provisioning dell'account a livello di prodotto è documentato in [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), un argomento che fornisce informazioni complete sull'account del servizio per tutti i servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tra cui [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Fare riferimento a questo argomento per ottenere informazioni sui tipi di account validi, sui privilegi di Windows assegnati dal programma di installazione, sulle autorizzazioni per il file system e il Registro di sistema e altro ancora.  
@@ -49,7 +48,7 @@ ms.locfileid: "66080193"
   
  È possibile visualizzare questo gruppo di sicurezza nelle impostazioni di sicurezza locali:  
   
--   Eseguire compmgmt. msc | **Utenti e gruppi** | **locali gruppi** | `SQLServerMSASUser$`\<nome server>`$MSSQLSERVER` (per un'istanza predefinita).  
+-   Eseguire compmgmt. msc | **Utenti e gruppi locali**  |  **Gruppi**  |  `SQLServerMSASUser$` di \<server-name> `$MSSQLSERVER` (per un'istanza predefinita).  
   
 -   Fare doppio clic sul gruppo di sicurezza per visualizzarne i membri.  
   
@@ -68,13 +67,13 @@ ms.locfileid: "66080193"
 |-|-|  
 |**Aumento di un working set di processo** (SeIncreaseWorkingSetPrivilege)|Questo privilegio è disponibile per tutti gli utenti per impostazione predefinita tramite il gruppo di sicurezza **Utenti** . Se si blocca un server rimuovendo i privilegi per questo gruppo, Analysis Services potrebbe non avviarsi registrando l'errore seguente: "Il privilegio richiesto non appartiene al client". Quando si verifica questo errore, ripristinare il privilegio in Analysis Services concedendo tale privilegio al gruppo di sicurezza di Analysis Services appropriato.|  
 |**Regolazione limite risorse memoria per un processo** (SeIncreaseQuotaSizePrivilege)|Questo privilegio viene usato per richiedere una quantità maggiore di memoria se un processo non dispone di risorse sufficienti per completare l'esecuzione, in base alle soglie di memoria stabilite per l'istanza.|  
-|**Blocco di pagine in memoria** (SeLockMemoryPrivilege)|Questo privilegio è necessario solo se il paging è completamente disattivato. Per impostazione predefinita, un'istanza del server tabulare usa il file di paging di Windows, ma è possibile impedirne l'uso impostando `VertiPaqPagingPolicy` su 0.<br /><br /> `VertiPaqPagingPolicy` impostato su 1 (impostazione predefinita) indica all'istanza del server tabulare di usare il file di paging di Windows. Le allocazioni non vengono bloccate consentendo a Windows di eliminare tramite paging le allocazioni in base alle esigenze. Poiché viene usato il paging, non è necessario bloccare le pagine in memoria. Pertanto, per la configurazione predefinita (dove `VertiPaqPagingPolicy` = 1), non è necessario concedere il privilegio **blocco di pagine in memoria** a un'istanza tabulare.<br /><br /> `VertiPaqPagingPolicy`a 0. Se si disattiva il paging per Analysis Services, le allocazioni vengono bloccate, supponendo che all'istanza tabulare venga concesso il privilegio **Blocco di pagine in memoria** . Con questa impostazione e il privilegio **Blocco di pagine in memoria** , Windows non può eliminare tramite paging le allocazioni di memoria effettuate per Analysis Services quando la quantità di memoria disponibile nel sistema è insufficiente. Analysis Services si basa sull'autorizzazione **Lock Pages in Memory** come applicazione dietro `VertiPaqPagingPolicy` = 0. Si noti che non è consigliabile disattivare il paging di Windows. Si aumenta la frequenza di errori di memoria insufficiente per le operazioni che altrimenti potrebbero riuscire se il paging fosse consentito. Per [Memory Properties](../server-properties/memory-properties.md) ulteriori informazioni su `VertiPaqPagingPolicy`, vedere Proprietà della memoria.|  
+|**Blocco di pagine in memoria** (SeLockMemoryPrivilege)|Questo privilegio è necessario solo se il paging è completamente disattivato. Per impostazione predefinita, un'istanza del server tabulare usa il file di paging di Windows, ma è possibile impedirne l'uso impostando `VertiPaqPagingPolicy` su 0.<br /><br /> `VertiPaqPagingPolicy` impostato su 1 (impostazione predefinita) indica all'istanza del server tabulare di usare il file di paging di Windows. Le allocazioni non vengono bloccate consentendo a Windows di eliminare tramite paging le allocazioni in base alle esigenze. Poiché viene usato il paging, non è necessario bloccare le pagine in memoria. Pertanto, per la configurazione predefinita (dove `VertiPaqPagingPolicy` = 1), non è necessario concedere il privilegio **blocco di pagine in memoria** a un'istanza tabulare.<br /><br /> `VertiPaqPagingPolicy`a 0. Se si disattiva il paging per Analysis Services, le allocazioni vengono bloccate, supponendo che all'istanza tabulare venga concesso il privilegio **Blocco di pagine in memoria** . Con questa impostazione e il privilegio **Blocco di pagine in memoria** , Windows non può eliminare tramite paging le allocazioni di memoria effettuate per Analysis Services quando la quantità di memoria disponibile nel sistema è insufficiente. Analysis Services si basa sull'autorizzazione **Lock Pages in Memory** come applicazione dietro `VertiPaqPagingPolicy` = 0. Si noti che non è consigliabile disattivare il paging di Windows. Si aumenta la frequenza di errori di memoria insufficiente per le operazioni che altrimenti potrebbero riuscire se il paging fosse consentito. Per ulteriori informazioni su, vedere [proprietà della memoria](../server-properties/memory-properties.md) `VertiPaqPagingPolicy` .|  
   
 #### <a name="to-view-or-add-windows-privileges-on-the-service-account"></a>Per visualizzare o aggiungere privilegi di Windows per l'account del servizio  
   
 1.  Eseguire GPEDIT.msc | Criteri del computer locale | Configurazione computer | Impostazioni di Windows | Impostazioni di sicurezza | Criteri locali | Assegnazione diritti utente.  
   
-2.  Esaminare i criteri esistenti che `SQLServerMSASUser$`includono. Si tratta di un gruppo di sicurezza locale presente nei computer in cui è installato Analysis Services. A questo gruppo di sicurezza vengono concessi sia i privilegi di Windows che le autorizzazioni alle cartelle di file. Fare doppio clic sul privilegio **Accesso come servizio** per vedere come il gruppo di sicurezza viene specificato nel sistema. Il nome completo del gruppo di sicurezza varia a seconda che Analysis Services sia stato installato come istanza denominata. Quando si aggiungono i privilegi dell'account, usare questo gruppo di sicurezza anziché l'account del servizio effettivo.  
+2.  Esaminare i criteri esistenti che includono `SQLServerMSASUser$` . Si tratta di un gruppo di sicurezza locale presente nei computer in cui è installato Analysis Services. A questo gruppo di sicurezza vengono concessi sia i privilegi di Windows che le autorizzazioni alle cartelle di file. Fare doppio clic sul privilegio **Accesso come servizio** per vedere come il gruppo di sicurezza viene specificato nel sistema. Il nome completo del gruppo di sicurezza varia a seconda che Analysis Services sia stato installato come istanza denominata. Quando si aggiungono i privilegi dell'account, usare questo gruppo di sicurezza anziché l'account del servizio effettivo.  
   
 3.  Per aggiungere i privilegi dell'account in GPEDIT, fare clic con il pulsante destro del mouse su **Aumento di un working set di processo** e scegliere **Proprietà**.  
   
@@ -104,7 +103,7 @@ ms.locfileid: "66080193"
   
  Il proprietario delle autorizzazioni per i file di dati, gli eseguibili dei file di programma, i file di configurazioni, i file di log e i file temporanei è un gruppo di sicurezza locale creato dal programma di installazione di SQL Server.  
   
- Per ogni istanza installata viene creato un solo gruppo di sicurezza. Il gruppo di sicurezza viene denominato dopo l'istanza di, ovvero **SQLServerMSASUser $ MSSQLSERVER** per l'istanza predefinita `SQLServerMSASUser$` \<oppure ServerName>\<$ NomeIstanza> per un'istanza denominata. Questo gruppo di sicurezza viene fornito dal programma di installazione con le autorizzazioni per i file necessarie per eseguire le operazioni del server. Se si controllano le autorizzazioni di sicurezza per la directory \MSAS12.MSSQLSERVER\OLAP\BIN, si noterà che il proprietario dell'autorizzazione per la directory in questione è il gruppo di sicurezza, non l'account del servizio né il relativo SID per servizio.  
+ Per ogni istanza installata viene creato un solo gruppo di sicurezza. Il gruppo di sicurezza viene denominato dopo l'istanza di **SQLServerMSASUser $ MSSQLSERVER** per l'istanza predefinita o `SQLServerMSASUser$` \<servername> $ \<instancename> per un'istanza denominata. Questo gruppo di sicurezza viene fornito dal programma di installazione con le autorizzazioni per i file necessarie per eseguire le operazioni del server. Se si controllano le autorizzazioni di sicurezza per la directory \MSAS12.MSSQLSERVER\OLAP\BIN, si noterà che il proprietario dell'autorizzazione per la directory in questione è il gruppo di sicurezza, non l'account del servizio né il relativo SID per servizio.  
   
  Nel gruppo di sicurezza è incluso solo un membro, vale a dire il SID per servizio dell'account di avvio dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Il programma di installazione aggiunge il SID per servizio al gruppo di sicurezza locale. L'uso di un gruppo di sicurezza locale con l'appartenenza al SID rappresenta una lieve ma percettibile differenza nel modo in cui il programma di installazione di SQL Server esegue il provisioning di Analysis Services rispetto al Motore di database.  
   
@@ -118,14 +117,14 @@ ms.locfileid: "66080193"
   
      `SC showsid MSOlap$Tabular`  
   
-2.  Utilizzare | **gruppi** di**utenti e gruppi locali**di **gestione** | computer per controllare l'appartenenza del gruppo\<di sicurezza SQLServerMSASUser\<$ ServerName>$ NomeIstanza>.  
+2.  Usare **Computer Manager**  |  gruppi di**utenti e gruppi locali**  |  **Groups** di gestione computer per controllare l'appartenenza del gruppo di sicurezza SQLServerMSASUser $ \<servername> $ \<instancename> .  
   
      Il SID del membro deve corrispondere al SID per servizio del passaggio 1.  
   
-3.  Usare**i file** | di programma di **Esplora risorse** | **Microsoft SQL Server** | MSASxx. MSSQLServer | **OLAP** | **Bin** OLAP per verificare che le proprietà di sicurezza della cartella siano concesse al gruppo di sicurezza nel passaggio 2.  
+3.  Usare i file di programma di **Esplora risorse**  |  **Program Files**  |  **Microsoft SQL Server** | MSASxx. MSSQLServer | **OLAP**  |  **bin** per verificare che le proprietà di sicurezza della cartella siano concesse al gruppo di sicurezza nel passaggio 2.  
   
 > [!NOTE]  
->  Non rimuovere né modificare mai un SID. Per ripristinare un SID per servizio eliminato inavvertitamente, vedere [https://support.microsoft.com/kb/2620201](https://support.microsoft.com/kb/2620201).  
+>  Non rimuovere né modificare mai un SID. Per ripristinare un SID per servizio eliminato inavvertitamente, vedere [https://support.microsoft.com/kb/2620201](https://support.microsoft.com/kb/2620201) .  
   
  **Altre informazioni sui SID per servizio**  
   
@@ -148,7 +147,7 @@ ms.locfileid: "66080193"
 |Writeback|Aggiungere l'account del servizio ai ruoli del database di Analysis Services definiti nel server remoto|Se abilitato in applicazioni client, il writeback è una funzionalità dei modelli multidimensionali che consente la creazione di nuovi valori dei dati durante la relativa analisi. Se il writeback è abilitato in una dimensione o in un cubo, l'account del servizio [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deve disporre di autorizzazioni di scrittura per la tabella writeback nel database relazionale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di origine. Se questa tabella non è già presente e deve essere creata, è necessario che l'account del servizio [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] disponga inoltre di autorizzazioni per la creazione della tabella all'interno del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] designato.|  
 |Scrittura di una tabella del log di query in un database relazionale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Creare un accesso al database per l'account del servizio e assegnare le autorizzazioni di scrittura sulla tabella del log di query|È possibile abilitare la registrazione delle query per raccogliere i dati di utilizzo in una tabella di database per una successiva analisi. L'account del servizio [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deve disporre di autorizzazioni di scrittura per la tabella del log di query nel database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] designato. Se tale tabella non è già presente e deve essere creata, è necessario che l'account di accesso di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] disponga inoltre di autorizzazioni per la creazione della tabella all'interno del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] designato. Per altre informazioni, vedere i post dei blog [Improve SQL Server Analysis Services Performance with the Usage Based Optimization Wizard (Blog)](http://www.mssqltips.com/sqlservertip/2876/improve-sql-server-analysis-services-performance-with-the-usage-based-optimization-wizard/) (Miglioramento delle prestazioni di SQL Server Analysis Services con l'Ottimizzazione guidata basata sulle statistiche di utilizzo) e [Query Logging in Analysis Services (Blog)](http://weblogs.asp.net/miked/archive/2013/07/31/query-logging-in-analysis-services.aspx)(Registrazione delle query in Analysis Services).|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [Account del servizio SQL Server e SID per servizio (Blog)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
  [SQL Server usa un SID del servizio per fornire l'isolamento del servizio (articolo KB)](https://support.microsoft.com/kb/2620201)   

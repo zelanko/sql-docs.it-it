@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 41e5e3d1-cc45-4bb0-ac09-4639d2ffc0ea
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dbc1f6daf1039d24830bc91140f82e061b88ae65
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4529ed3a9c7bb2e4110435dfc9d6b9078e825a4e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069953"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538794"
 ---
 # <a name="schema-generation-wizard-f1-help-analysis-services---multidimensional-data"></a>Guida sensibile al contesto della Generazione guidata schema (Analysis Services - Dati multidimensionali)
   Utilizzare la Generazione guidata schema per generare automaticamente lo schema relazionale per un database dell'area di interesse basato su cubi e dimensioni esistenti. È inoltre possibile popolare tabelle generate dalla procedura guidata per le dimensioni temporali e gestire la convenzione di denominazione e le opzioni per il database dell'area di interesse.  
@@ -44,7 +43,7 @@ ms.locfileid: "66069953"
   
 -   [Completamento procedura guidata &#40;generazione guidata schema&#41; &#40;Analysis Services Dati multidimensionali&#41;](complete-schema-generation-wizard-analysis-services-multidimensional-data.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Procedure guidate di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

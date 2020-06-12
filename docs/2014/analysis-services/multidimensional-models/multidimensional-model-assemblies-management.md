@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6c4f57e12754fc8e32fba8f483a2dfc360d7edc0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4c7a09c9a1c411b639ac1b91027e42899dec158f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073531"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546073"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Gestione di assembly di modelli multidimensionali
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce una grande quantità di funzioni intrinseche da utilizzare con i linguaggi MDX (Multidimensional Expressions) e DMX (Data Mining Extensions), progettate per eseguire qualsiasi tipo di operazione, dai calcoli statistici standard all'attraversamento dei membri di una [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gerarchia. Come avviene per qualsiasi altro prodotto complesso e affidabile, tuttavia, si avverte sempre l'esigenza di estendere ulteriormente la funzionalità di questo servizio.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornisce una grande quantità di funzioni intrinseche da utilizzare con i linguaggi MDX (Multidimensional Expressions) e DMX (Data Mining Extensions), progettate per eseguire qualsiasi tipo di operazione, dai calcoli statistici standard all'attraversamento dei membri di una gerarchia. Come avviene per qualsiasi altro prodotto complesso e affidabile, tuttavia, si avverte sempre l'esigenza di estendere ulteriormente la funzionalità di questo servizio.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente pertanto di aggiungere assembly a un database o a un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Gli assembly consentono di creare funzioni esterne definite dall'utente mediante qualsiasi linguaggio Common Language Runtime (CLR), ad esempio Microsoft Visual Basic .NET o Microsoft Visual C#. È inoltre possibile utilizzare linguaggi di automazione COM (Component Object Model), ad esempio Microsoft Visual Basic o Microsoft Visual C++.  
   
@@ -105,14 +104,14 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
 -   Se esiste un EXECUTE AS intermedio che ha modificato il contesto rispetto a quello del chiamante originale, il tentativo di accesso alla risorsa esterna non riuscirà.  
   
- È possibile impostare la proprietà `ImpersonationMode` su `ImpersonateCurrentUser` o su `ImpersonateAnonymous`. L'impostazione predefinita `ImpersonateCurrentUser` esegue un assembly con l'account di accesso di rete dell'utente corrente. Se viene `ImpersonateAnonymous` utilizzata l'impostazione, il contesto di esecuzione corrisponde all'account utente di accesso di Windows IUSER_*nomeserver* sul server. Questo rappresenta l'account Internet Guest, che dispone di privilegi limitati sul server. Un assembly eseguito in questo contesto può accedere solo a risorse limitate nel server locale.  
+ È possibile impostare la proprietà `ImpersonationMode` su `ImpersonateCurrentUser` o su `ImpersonateAnonymous`. L'impostazione predefinita `ImpersonateCurrentUser` esegue un assembly con l'account di accesso di rete dell'utente corrente. Se `ImpersonateAnonymous` viene utilizzata l'impostazione, il contesto di esecuzione corrisponde all'account utente di accesso di Windows IUSER_*nomeserver* sul server. Questo rappresenta l'account Internet Guest, che dispone di privilegi limitati sul server. Un assembly eseguito in questo contesto può accedere solo a risorse limitate nel server locale.  
   
 ### <a name="application-domains"></a>Domini applicazione  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non espone direttamente i domini delle applicazioni. Per mezzo del set degli assembly in esecuzione nello stesso dominio dell'applicazione, tali domini possono individuarsi a vicenda in fase di esecuzione utilizzando lo spazio dei nomi `System.Reflection` di .NET Framework o in altro modo, nonché eseguire chiamate all'interno con associazione tardiva. Tali chiamate saranno soggette ai controlli delle autorizzazioni utilizzati dalla sicurezza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  La ricerca degli assembly nello stesso dominio dell'applicazione non è affidabile, poiché il confine e gli assembly di ogni dominio dell'applicazione vengono definiti dall'implementazione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Impostazione della sicurezza per le stored procedure](../multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
  [Definizione delle stored procedure](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   

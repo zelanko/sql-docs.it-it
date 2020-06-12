@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7c8e13a3-5c67-46c2-abfa-4881e6ef9c62
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d156a8f015a45ca257bf4f988cf69d229eafe5f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d432d38794e65e8b8bea69608479e330649ee395
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084224"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522227"
 ---
 # <a name="logistic-regression-model-query-examples"></a>Esempi di query sul modello di regressione logistica
   Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto, che fornisce dettagli sui criteri individuati durante l'analisi, oppure una query di stima, che utilizza i criteri presenti nel modello di data mining per eseguire stime utilizzando nuovi dati.  
@@ -145,7 +144,7 @@ NATURAL PREDICTION JOIN
   
 ##### <a name="to-create-a-discretized-version-of-the-call-center-mining-structure-and-models"></a>Per creare una versione discretizzata della struttura di data mining del call center e dei modelli  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], in Esplora soluzioni, espandere **strutture di data mining**.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , in Esplora soluzioni, espandere **strutture di data mining**.  
   
 2.  Fare clic con il pulsante destro del mouse su Call Center.dmm e scegliere **Copia**.  
   
@@ -157,7 +156,7 @@ NATURAL PREDICTION JOIN
   
 6.  Nella scheda **Struttura di data mining** fare clic con il pulsante destro del mouse sulla colonna per il livello di servizio e selezionare **Proprietà**.  
   
-7.  Modificare la `Content` proprietà da **Continuous** a **discretizzazione**. Modificare la `DiscretizationMethod` proprietà in **cluster**. Per il conteggio dei bucket di discretizzazione digitare **3**.  
+7.  Modificare la `Content` proprietà da **Continuous** a **discretizzazione**. Modificare la `DiscretizationMethod` Proprietà in **cluster**. Per il conteggio dei bucket di discretizzazione digitare **3**.  
   
     > [!NOTE]  
     >  Questi parametri vengono utilizzati solo per illustrare il processo, non producono necessariamente un modello valido.  
@@ -193,7 +192,7 @@ NATURAL PREDICTION JOIN
   
 |||  
 |-|-|  
-|Funzione di stima|Uso|  
+|Funzione di stima|Utilizzo|  
 |[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Viene determinato se un nodo è figlio di un altro nodo nel modello.|  
 |[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|Viene restituita la probabilità adattata dello stato specificato.|  
 |[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Viene restituito un valore, o un set di valori, stimato per una colonna specificata.|  
@@ -207,7 +206,7 @@ NATURAL PREDICTION JOIN
 > [!NOTE]  
 >  Per i modelli di reti neurali e di regressione logistica la funzione [PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx) restituisce un solo valore che rappresenta la dimensione del set di training per l'intero modello.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Query di data mining](data-mining-queries.md)   
  [Algoritmo di regressione logistica Microsoft](microsoft-logistic-regression-algorithm.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Logistic regressione](microsoft-logistic-regression-algorithm-technical-reference.md)   

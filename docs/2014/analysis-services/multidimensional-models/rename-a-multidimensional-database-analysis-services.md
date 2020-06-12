@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 15fdaec7-f3e4-44d9-9b78-1a1d78c484e0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 28ec21d4cb0cda01852316c1198bd68df3058ffc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fdcfd54f447a363f4de12f1883455d9f0bf93c54
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073147"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545763"
 ---
 # <a name="rename-a-multidimensional-database-analysis-services"></a>Rinominare un database multidimensionale (Analysis Services)
   Il modo in cui si modifica il nome di un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database dipende dalla modalità di connessione al [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. Per modificare il nome di un database esistente, è necessario connettersi in modalità online. Per modificare il nome del database in cui verranno create istanze degli oggetti di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , è necessario connettersi in modalità progetto.  
@@ -50,7 +49,7 @@ ms.locfileid: "66073147"
   
 -   Fare clic con il pulsante destro del mouse sul database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e modificare la proprietà Name.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurare le proprietà del server in Analysis Services](../server-properties/server-properties-in-analysis-services.md)   
  [Impostazione delle proprietà di database multidimensionali &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)   
  [Configurare Analysis Services proprietà del progetto &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   

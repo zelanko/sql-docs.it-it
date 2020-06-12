@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 55b0f0d0-1cdf-4876-9c3d-d0c848be3f5d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bd395e605bfde9d34ed0dc4f16060812464efb56
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20601a1ece7707e8f798907f21ee5ee7110fe2fe
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078248"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542223"
 ---
 # <a name="lesson-9-create-perspectives"></a>Lezione 9: Creare prospettive
   In questa lezione verrà creata una prospettiva Internet Sales. Una prospettiva definisce un subset visualizzabile di un modello che offre punti di vista mirati, specifici di un'azienda o specifici di un'applicazione. Quando un utente si connette a un modello tramite una prospettiva, vengono visualizzati solo gli oggetti del modello (tabelle, colonne, misure, gerarchie e KPI) come campi definiti in tale prospettiva.  
@@ -39,9 +38,9 @@ ms.locfileid: "66078248"
   
 2.  Nella finestra di dialogo **Prospettive** fare clic su **Nuova prospettiva**.  
   
-3.  Per rinominare la prospettiva, fare doppio clic sull'intestazione di colonna **nuova prospettiva 1** , quindi digitare `Internet Sales`.  
+3.  Per rinominare la prospettiva, fare doppio clic sull'intestazione di colonna **nuova prospettiva 1** , quindi digitare `Internet Sales` .  
   
-4.  In **campi**selezionare le seguenti tabelle **date**, **geography**, **Product**, Product **Category**, **Product Subcategory**e. `Internet Sales`  
+4.  In **campi**selezionare le seguenti tabelle **date**, **geography**, **Product**, Product **Category**, **Product Subcategory**e `Internet Sales` .  
   
      Si noti che sono state escluse la tabella Customer e tutte le colonne relative da questa prospettiva. In un secondo momento, nella Lezione 12 si utilizzerà la funzionalità Analizza in Excel per testare questa prospettiva. L'elenco campi tabella pivot di Excel includerà ogni tabella a eccezione di Customer.  
   

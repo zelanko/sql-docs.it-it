@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a44187fc41409d149501c4cda7e99817be034a12
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4c9f5fe3a3fa9a58b8c1a103bcb2cf359d842190
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488430"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83806764"
 ---
 # <a name="clr-scalar-valued-functions"></a>Funzioni a valori scalari CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Una funzione a valori scalari restituisce un solo valore, ad esempio un valore string, integer o bit. È possibile creare funzioni definite dall'utente a valori scalari nel codice gestito utilizzando qualsiasi linguaggio di programmazione .NET Framework. Queste funzioni sono accessibili a [!INCLUDE[tsql](../../includes/tsql-md.md)] o ad altro codice gestito. Per informazioni sui vantaggi dell'integrazione con CLR e sulla scelta tra codice gestito [!INCLUDE[tsql](../../includes/tsql-md.md)]e, vedere [Cenni preliminari sull'integrazione con CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
+  Una funzione a valori scalari restituisce un solo valore, ad esempio un valore string, integer o bit. È possibile creare funzioni definite dall'utente a valori scalari nel codice gestito utilizzando qualsiasi linguaggio di programmazione .NET Framework. Queste funzioni sono accessibili a [!INCLUDE[tsql](../../includes/tsql-md.md)] o ad altro codice gestito. Per informazioni sui vantaggi dell'integrazione con CLR e sulla scelta tra codice gestito e [!INCLUDE[tsql](../../includes/tsql-md.md)] , vedere [Cenni preliminari sull'integrazione con CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>Requisiti per le funzioni a valori scalari CLR  
- Le funzioni a valori scalari di .NET Framework vengono implementate come metodi in una classe di un assembly .NET Framework. I parametri di input e il tipo restituiti da un SVF possono essere uno qualsiasi dei tipi di dati scalari supportati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]da, ad eccezione di **varchar**, **char**, **rowversion**, **Text**, **ntext**, **Image**, **timestamp**, **Table**o **Cursor**. Le funzioni a valori scalari devono assicurare una corrispondenza tra il tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il tipo dati restituito del metodo di implementazione. Per ulteriori informazioni sulle conversioni di tipi, vedere [mapping dei dati dei parametri CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
+ Le funzioni a valori scalari di .NET Framework vengono implementate come metodi in una classe di un assembly .NET Framework. I parametri di input e il tipo restituiti da un SVF possono essere uno qualsiasi dei tipi di dati scalari supportati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad eccezione di **varchar**, **char**, **rowversion**, **Text**, **ntext**, **Image**, **timestamp**, **Table**o **Cursor**. Le funzioni a valori scalari devono assicurare una corrispondenza tra il tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il tipo dati restituito del metodo di implementazione. Per ulteriori informazioni sulle conversioni di tipi, vedere [mapping dei dati dei parametri CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
   
  Quando si implementa un .NET Framework SVF in una lingua .NET Framework, è possibile specificare l'attributo personalizzato **SqlFunction** per includere informazioni aggiuntive sulla funzione. L'attributo **SqlFunction** indica se la funzione accede o modifica i dati, se è deterministica, e se la funzione prevede operazioni a virgola mobile.  
   
@@ -81,7 +81,7 @@ Public Class T
 End Class  
 ```  
   
- La prima riga di codice fa riferimento a **Microsoft. SqlServer. Server** per accedere agli attributi e a **System. Data. SqlClient** per accedere allo spazio dei nomi ADO.NET. Questo spazio dei nomi contiene **SqlClient**, il .NET Framework provider di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]per.  
+ La prima riga di codice fa riferimento a **Microsoft. SqlServer. Server** per accedere agli attributi e a **System. Data. SqlClient** per accedere allo spazio dei nomi ADO.NET. Questo spazio dei nomi contiene **SqlClient**, il .NET Framework provider di dati per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Successivamente, la funzione riceve l'attributo personalizzato **SqlFunction** , disponibile nello spazio dei nomi **Microsoft. SqlServer. Server** . L'attributo personalizzato indica se la funzione definita dall'utente utilizza il provider in-process per leggere dati nel server. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non consente alle Funzioni definite dall'utente di aggiornare, inserire o eliminare dati. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono ottimizzare l'esecuzione di una UDF che non utilizza il provider in-process. Questo è indicato impostando **DataAccessKind** su **DataAccessKind. None**. Sulla riga successiva il metodo di destinazione è un metodo statico pubblico (condiviso in Visual Basic .NET).  
   
@@ -91,7 +91,7 @@ End Class
   
  [C#]  
   
-```  
+```csharp
 using(SqlConnection conn = new SqlConnection("context connection=true"))   
 {  
    conn.Open();  
@@ -103,7 +103,7 @@ using(SqlConnection conn = new SqlConnection("context connection=true"))
   
  [Visual Basic]  
   
-```  
+```vb
 Using conn As New SqlConnection("context connection=true")  
    conn.Open()  
    Dim cmd As New SqlCommand( _  
@@ -132,11 +132,11 @@ vbc.exe /t:library /out:FirstUdf.dll FirstUdf.vb
 >  `/t:library` indica che è necessario generare una libreria anziché un file eseguibile. I file eseguibili non possono essere registrati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Visual C++ oggetti di database compilati con **/CLR: pure** non sono supportati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]per l'esecuzione in. Questo tipo di oggetti di database include, ad esempio, funzioni a valori scalari.  
+>  Visual C++ oggetti di database compilati con **/CLR: pure** non sono supportati per l'esecuzione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questo tipo di oggetti di database include, ad esempio, funzioni a valori scalari.  
   
  Di seguito sono riportate la query [!INCLUDE[tsql](../../includes/tsql-md.md)] e una chiamata di esempio per registrare l'assembly e la funzione definita dall'utente.  
   
-```  
+```sql
 CREATE ASSEMBLY FirstUdf FROM 'FirstUdf.dll';  
 GO  
   

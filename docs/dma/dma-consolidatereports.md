@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 456d71e2abccdddb4b14c06dc2ad9b2e4ce9a032
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: e7a3c58612761e046b71cddf35c87680bb6e9528
+ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886168"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83868380"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Valutare un'azienda e consolidare i report di valutazione con DMA
 
@@ -33,8 +33,8 @@ Le istruzioni dettagliate riportate di seguito consentono di usare la Data Migra
   - [PowerShell](https://aka.ms/wmf5download) v 5.0 o versioni successive.
   - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) versione 4.5 o successiva.
   - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17,0 o versione successiva.
-  - [Power bi desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).
-  - [Moduli Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
+  - [Power bi desktop](/power-bi/fundamentals/desktop-get-the-desktop).
+  - [Moduli di Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - Scaricare ed estrarre:
   - Il [modello di report DMA Power bi](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip).
   - [Script LoadWarehouse](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/1/LoadWarehouse1.zip).
@@ -113,7 +113,7 @@ Dopo aver caricato i moduli di PowerShell nella directory Modules e aver creato 
 
 I parametri associati alla funzione dmaDataCollector sono descritti nella tabella seguente.
 
-|Parametro  |Description |
+|Parametro  |Descrizione |
 |---------|---------|
 |**getServerListFrom** | L'inventario. I valori possibili sono **SqlServer** e **CSV**.<br/>Per altre informazioni, vedere [creare un inventario di SQL Server](#create-inventory). |
 |**csvPath** | Percorso del file di inventario CSV.  Utilizzato solo quando **getServerListFrom** è impostato su **CSV**. |
@@ -136,7 +136,7 @@ Al termine della valutazione, è ora possibile importare i dati in SQL Server pe
 
 I parametri associati alla funzione dmaProcessor sono descritti nella tabella seguente.
 
-|Parametro  |Description |
+|Parametro  |Descrizione |
 |---------|---------|
 |**processTo** | Percorso in cui verrà elaborato il file JSON. I valori possibili sono **SqlServer** e **AzureSQLDatabase**. |
 |**Nomeserver** | Istanza SQL Server in cui verranno elaborati i dati.  Se si specifica **AzureSQLDatabase** per il parametro **processTo** , includere solo il nome del SQL Server (non includere. database.Windows.NET). Quando la destinazione è il database SQL di Azure, verranno richiesti due account di accesso. il primo è quello delle credenziali del tenant di Azure, mentre il secondo è l'account di accesso amministratore per il SQL Server di Azure. |

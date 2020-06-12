@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e6fa7c62-4005-4792-9211-3b699377a517
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3043c8f63433396f059f5c456512ad4ba2bffd93
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ecc7cba81a394664b2bdb6a60b6c5f8110760f44
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072140"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547278"
 ---
 # <a name="outliers-sql-server-data-mining-add-ins"></a>Outlier (componenti aggiuntivi Data mining di SQL Server)
   ![Procedura guidata Rimozione outlier sulla barra multifunzione Data mining](media/dmc-outliers.gif "Procedura guidata Rimozione outlier sulla barra multifunzione Data mining")  
@@ -94,7 +93,7 @@ ms.locfileid: "66072140"
 |**Gestione di Impostazione valori di soglia**|Impostare una soglia usando il valore **minimo** per escludere i valori presenti in un minor numero di righe rispetto al valore soglia.<br /><br /> Inizialmente, il valore **minimo** è uguale al valore con il minor numero di righe e non è possibile rendere il valore minimo inferiore a tale valore.|  
 |**Gestione outlier**|Se si decide di eliminare gli outlier, è possibile modificare i dati nel foglio di lavoro corrente oppure creare una copia dei dati in un nuovo foglio di lavoro.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Esplorare &#40;dati SQL Server componenti aggiuntivi Data mining&#41;](explore-data-sql-server-data-mining-add-ins.md)  
   
   

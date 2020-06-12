@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 57fe740bdd02c96eb21994f5996c734620793616
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da4e685a1ebc05e27070873b12de99e8cc480a31
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079834"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543873"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Aggiornare le cartelle di lavoro e l'aggiornamento dati pianificato (SharePoint 2013)
   In questo argomento vengono illustrate l'esperienza utente relativamente alle cartelle di lavoro create in ambienti di PowerPivot precedenti e la modalità di aggiornamento delle cartelle di lavoro di PowerPivot in modo che sia possibile avvalersi delle nuove funzionalità introdotte in questa versione. Per ulteriori informazioni sulle nuove funzionalità, vedere Novità di [PowerPivot](https://go.microsoft.com/fwlink/?LinkID=203917).  
@@ -53,7 +52,7 @@ ms.locfileid: "66079834"
 |----------------|--------|--------------------------|--------|  
 ||**SQL Server 2008 R2 PowerPivot per SharePoint 2010**|**SQL Server 2012 PowerPivot per SharePoint 2010**|**SQL Server 2012 SP1 PowerPivot per SharePoint 2013**|  
 |**2008 R2 PowerPivot per Excel 2010**|Tutte le funzionalità|**Esperienza:** gli utenti possono interagire con la cartella di lavoro nel browser e utilizzarla come origine dati per altre soluzioni.<br /><br /> **Aggiornamento:** le cartelle di lavoro verranno aggiornate automaticamente nella raccolta documenti se l'aggiornamento automatico è abilitato per il servizio di sistema PowerPivot nella farm di SharePoint.<br /><br /> **Pianificazione dell'aggiornamento dati:** NON supportata. La cartella di lavoro deve essere aggiornata.|**Esperienza:** gli utenti possono interagire con la cartella di lavoro e utilizzarla come origine dati per altre soluzioni.<br /><br /> **Aggiornamento:** l'aggiornamento automatico non è disponibile. Gli utenti devono aggiornare manualmente le cartelle di lavoro di SQL Server 2008 R2 alla versione 2012 o alla versione di Office 2013.<br /><br /> **Pianificazione dell'aggiornamento dati:** NON supportata. La cartella di lavoro deve essere aggiornata.|  
-|**2012 PowerPivot per Excel**|Non supportato|Tutte le funzionalità|**Esperienza:** gli utenti possono interagire con la cartella di lavoro nel browser e utilizzarla come origine dati per altre soluzioni. La pianificazione dell'aggiornamento dati è disponibile.<br /><br /> **Aggiornamento:** l'aggiornamento automatico non è supportato. Gli utenti possono aggiornare manualmente le cartelle di lavoro alla versione di Office 2013.<br /><br /> **Pianificazione dell'aggiornamento dati:** supportata.|  
+|**2012 PowerPivot per Excel**|Non supportate|Tutte le funzionalità|**Esperienza:** gli utenti possono interagire con la cartella di lavoro nel browser e utilizzarla come origine dati per altre soluzioni. La pianificazione dell'aggiornamento dati è disponibile.<br /><br /> **Aggiornamento:** l'aggiornamento automatico non è supportato. Gli utenti possono aggiornare manualmente le cartelle di lavoro alla versione di Office 2013.<br /><br /> **Pianificazione dell'aggiornamento dati:** supportata.|  
 |**Excel 2013**|Non supportate|Non supportate|Tutte le funzionalità|  
   
 ##  <a name="upgrade-to-sql-server-2012-service-pack-1-sp1-workbooks-from-2008-r2-workbooks"></a><a name="bkmk_to_2012sp1_from_2008r2"></a>Aggiornamento alle cartelle di lavoro di SQL Server 2012 Service Pack 1 (SP1) da cartelle di lavoro di 2008 R2  
@@ -169,7 +168,7 @@ PS C:\Windows\system32> Set-PowerPivotSystemService -WorkbookUpgradeOnDataRefres
   
 2.  Scorrere verso il basso fino a MSOLAP. Verificare che MSOLAP.5 sia elencato fra i provider OLAP installati nel sistema. Verificare che MSOLAP | CurVer sia impostato su MSOLAP.5.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Eseguire la migrazione di PowerPivot a SharePoint 2013](migrate-power-pivot-to-sharepoint-2013.md)   
  [PowerPivot per SharePoint di aggiornamento](../../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
  [Novità di Analysis Services e Business Intelligence](../../what-s-new-in-analysis-services.md)   

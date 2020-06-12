@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 6aef1548-35eb-42fd-ae87-63650a79eda1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 95b1e9822296e26a187b333140ea89c47cb05466
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4fea2db082448fa96ad26733a2fad5f294575a74
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087706"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527367"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>Completamento procedura guidata (Creazione guidata modello di data mining)
   Usare la pagina **Completamento procedura guidata** per esaminare la struttura di data mining che verrà creata al termine della procedura guidata. È anche possibile modificare il nome della struttura di data mining.  
@@ -59,7 +58,7 @@ ms.locfileid: "66087706"
 > [!NOTE]  
 >  Questa opzione è disponibile se sono state selezionate le opzioni **Da cubo esistente** nella pagina **Selezione metodo di definizione** e **Crea dimensione del modello di data mining** nella pagina corrente della procedura guidata.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto della creazione guidata modello di data mining &#40;Analysis Services-&#41;di data mining](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Selezione vista origine dati &#40;creazione guidata modello di data mining&#41;](select-data-source-view-data-mining-wizard.md)   
  [Specificare i dati di training &#40;creazione guidata modello di data mining&#41;](specify-the-training-data-data-mining-wizard.md)  

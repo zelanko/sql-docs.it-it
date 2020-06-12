@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 0bac050d-cd3b-427b-884a-65a91be89500
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f76ba993508807e57e73d5e53ea25a4cbe382529
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f8f0f1c959d44b4d3e133e5676e9aca9365a628d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727444"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545093"
 ---
 # <a name="write-enabled-dimensions"></a>Dimensioni abilitate per la scrittura
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
   
- I dati di una dimensione sono in genere di sola lettura. In determinati scenari, tuttavia, può rivelarsi utile abilitare una dimensione per la scrittura. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], l'abilitazione per la scrittura di una dimensione consente agli utenti aziendali di modificare il contenuto della dimensione e di visualizzare l'effetto immediato delle modifiche sulle gerarchie della dimensione. È possibile abilitare per la scrittura qualsiasi dimensione basata su una singola tabella. In una dimensione abilitata per la scrittura, gli amministratori e gli utenti aziendali possono modificare, spostare, aggiungere ed eliminare membri all'interno della dimensione. Tali operazioni di aggiornamento vengono definite collettivamente come *writeback della dimensione*.  
+ I dati di una dimensione sono in genere di sola lettura. In determinati scenari, tuttavia, può rivelarsi utile abilitare una dimensione per la scrittura. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , l'abilitazione per la scrittura di una dimensione consente agli utenti aziendali di modificare il contenuto della dimensione e di visualizzare l'effetto immediato delle modifiche sulle gerarchie della dimensione. È possibile abilitare per la scrittura qualsiasi dimensione basata su una singola tabella. In una dimensione abilitata per la scrittura, gli amministratori e gli utenti aziendali possono modificare, spostare, aggiungere ed eliminare membri all'interno della dimensione. Tali operazioni di aggiornamento vengono definite collettivamente come *writeback della dimensione*.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta il writeback della dimensione in tutti gli attributi della dimensione e in qualsiasi membro di una dimensione che sia possibile modificare. Per una partizione o un cubo abilitato per la scrittura, gli aggiornamenti vengono archiviati in una tabella writeback separata dalle tabelle di origine del cubo. Per una dimensione abilitata per la scrittura, tuttavia, le modifiche vengono registrate direttamente nella tabella della dimensione. Inoltre, se la dimensione abilitata per la scrittura è inclusa in un cubo con più partizioni in cui alcune o tutte le origini dei dati contengono copie della tabella della dimensione, durante un processo di writeback verrà aggiornata solo la tabella della dimensione originale.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "62727444"
   
  Gli utenti e i gruppi inclusi nel ruolo Administrators possono aggiornare i membri degli attributi di una dimensione abilitata per la scrittura, anche se la dimensione non è inclusa in un cubo.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Proprietà delle dimensioni del database](database-dimension-properties.md)   
  [Partizioni abilitate per la scrittura](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [Dimensioni &#40;Analysis Services - Dati multidimensionali&#41;](dimensions-analysis-services-multidimensional-data.md)  

@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 9945773c-a43b-40d4-91cf-3d2ebc90bca5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 73967427b97a00d88b3d6c372a0228aa28c2024c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0b55e940f75319a965fb1441520a7e16ce7ab2f6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387911"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545309"
 ---
 # <a name="cube-cells-analysis-services---multidimensional-data"></a>Celle del cubo (Analysis Services - Dati multidimensionali)
   Un cubo è composto di celle organizzate per gruppi di misure e dimensioni. Una cella rappresenta l'intersezione logica univoca in un cubo di un membro da ogni dimensione del cubo. Ad esempio, il cubo descritto nella figura seguente contiene un gruppo di due misure organizzato in base a tre dimensioni, denominate Source, Route e Time.  
@@ -76,7 +75,7 @@ ms.locfileid: "81387911"
   
  ![Diagramma del cubo in cui sono evidenziate le celle vuote](../../analysis-services/dev-guide/media/as-cubeintro7.gif "Diagramma del cubo in cui sono evidenziate le celle vuote")  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]una cella vuota è una cella con qualità particolari. Dato che le celle vuote possono distorcere i risultati di cross join, conteggi e così via, molte funzioni MDX consentono di ignorare le celle vuote a scopo di calcolo. Per ulteriori informazioni, vedere [espressioni multidimensionali &#40;riferimento&#41; MDX](/sql/mdx/multidimensional-expressions-mdx-reference)e [concetti chiave in mdx &#40;Analysis Services&#41;](../multidimensional-models/key-concepts-in-mdx-analysis-services.md).  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] una cella vuota è una cella con qualità particolari. Dato che le celle vuote possono distorcere i risultati di cross join, conteggi e così via, molte funzioni MDX consentono di ignorare le celle vuote a scopo di calcolo. Per ulteriori informazioni, vedere [espressioni multidimensionali &#40;riferimento&#41; MDX](/sql/mdx/multidimensional-expressions-mdx-reference)e [concetti chiave in mdx &#40;Analysis Services&#41;](../multidimensional-models/key-concepts-in-mdx-analysis-services.md).  
   
 ## <a name="security"></a>Sicurezza  
  L'accesso ai dati delle celle viene gestito in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a livello di ruolo e può essere controllato con efficacia utilizzando espressioni MDX. Per ulteriori informazioni, vedere [concedere l'accesso personalizzato ai dati della dimensione &#40;Analysis Services&#41;](../multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)e [concedere l'accesso personalizzato ai dati delle celle &#40;Analysis Services&#41;](../multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md).  

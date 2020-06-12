@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7d57fe93-6e5f-4a50-844f-dd2bbdbb94a5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6f5e6bab81e982adbf8ee443bd84a5e806b960db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50c723d46b6c51fae0ccc227b5e58cf96f72c7b4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727299"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545105"
 ---
 # <a name="proactive-caching-dimensions"></a>Memorizzazione nella cache attiva (dimensioni)
   La memorizzazione nella cache attiva fornisce funzionalità automatiche di creazione e gestione della cache MOLAP per gli oggetti OLAP. I cubi incorporano immediatamente le modifiche apportate ai dati nel database, in base alle notifiche ricevute dal database. L'obiettivo della memorizzazione nella cache attiva consiste nel fornire le prestazioni della modalità MOLAP standard, garantendo l'immediatezza e la semplicità di gestione offerte da ROLAP.  

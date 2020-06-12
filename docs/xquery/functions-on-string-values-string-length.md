@@ -1,5 +1,6 @@
 ---
 title: Funzione String-length (XQuery) | Microsoft Docs
+description: Informazioni su come usare la funzione XQuery string-length ().
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 12ae1efbf900a505a5f257f9684842a0ad9ff21f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40cd82dac9c33e6718e4f3bf3270a065af824115
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004658"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689244"
 ---
 # <a name="functions-on-string-values---string-length"></a>Funzioni su valori stringa - string-length
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,14 +40,14 @@ fn:string-length($arg as xs:string?) as xs:integer
  *$arg*  
  Stringa di origine di cui calcolare la lunghezza.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se il valore di *$arg* è una sequenza vuota, viene restituito un valore **xs: integer** pari a 0.  
   
  Il comportamento delle coppie di surrogati nelle funzioni XQuery dipende dal livello di compatibilità del database. Se il livello di compatibilità è 110 o maggiore, ogni coppia di surrogati viene conteggiata come singolo carattere. Per i livelli di compatibilità inferiori, ogni coppia viene conteggiata come due caratteri. Per ulteriori informazioni, vedere [livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [regole di confronto e supporto Unicode](../relational-databases/collations/collation-and-unicode-support.md).  
   
  Se nel valore è contenuto un carattere Unicode a 4 byte rappresentato da due caratteri surrogati, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] consentirà di calcolare i caratteri surrogati singolarmente.  
   
- La **lunghezza della stringa ()** senza un parametro può essere usata solo all'interno di un predicato. Ad esempio, la query seguente restituisce l'elemento `ROOT` <>:  
+ La **lunghezza della stringa ()** senza un parametro può essere usata solo all'interno di un predicato. Ad esempio, la query seguente restituisce l' `ROOT` elemento <>:  
   
 ```  
 DECLARE @x xml;  
@@ -57,11 +58,11 @@ SELECT @x.query('/ROOT[string-length()=5]');
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caratteri supplementari (coppie di surrogati)  
  Il comportamento delle coppie di surrogati nelle funzioni XQuery dipende dal livello di compatibilità del database e, in alcuni casi, dall'URI dello spazio dei nomi predefinito per le funzioni. Per ulteriori informazioni, vedere la sezione "funzioni XQuery sono compatibili con i surrogati" nell'argomento [modifiche di rilievo apportate alle funzionalità di motore di database in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Vedere anche [livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [regole di confronto e supporto Unicode](../relational-databases/collations/collation-and-unicode-support.md).  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
 ### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>A. Utilizzo della funzione XQuery string-length() per il recupero di prodotti con descrizioni di riepilogo lunghe  
- Per i prodotti la cui descrizione di riepilogo è maggiore di 50 caratteri, la query seguente recupera l'ID prodotto, la lunghezza della descrizione di riepilogo e il riepilogo stesso, `Summary` l'elemento <>.  
+ Per i prodotti la cui descrizione di riepilogo è maggiore di 50 caratteri, la query seguente recupera l'ID prodotto, la lunghezza della descrizione di riepilogo e il riepilogo stesso, l' `Summary` elemento <>.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
@@ -99,9 +100,9 @@ Result
 ```  
   
 ### <a name="b-using-the-string-length-xquery-function-to-retrieve-products-whose-warranty-descriptions-are-short"></a>B. Utilizzo della funzione XQuery string-length() per il recupero di prodotti con descrizioni della garanzia brevi  
- Per i prodotti con descrizioni della garanzia di lunghezza inferiore a 20 caratteri, la query seguente recupera il codice XML che include l'ID prodotto, la lunghezza, la `Warranty` Descrizione della garanzia e il <elemento> stesso.  
+ Per i prodotti con descrizioni della garanzia di lunghezza inferiore a 20 caratteri, la query seguente recupera il codice XML che include l'ID prodotto, la lunghezza, la descrizione della garanzia e il <`Warranty` elemento> stesso.  
   
- La garanzia è una delle caratteristiche del prodotto. Un <`Warranty` facoltativo> elemento figlio segue dopo l'elemento `Features` <>.  
+ La garanzia è una delle caratteristiche del prodotto. Un <facoltativo `Warranty`> elemento figlio segue dopo l' `Features` elemento <>.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -129,7 +130,7 @@ WHERE CatalogDescription.exist('/pd:ProductDescription')=1;
   
 -   **PD** e **WM** sono i prefissi degli spazi dei nomi utilizzati in questa query. Identificano gli stessi spazi dei nomi utilizzati nel documento su cui viene eseguita la query.  
   
--   L'espressione XQuery specifica un ciclo FOR nidificato. Il ciclo FOR esterno è obbligatorio perché si desidera recuperare gli attributi **ProductModelID** dell'elemento <`ProductDescription`>. Il ciclo FOR interno è necessario, poiché si desiderano solo i prodotti con descrizioni della caratteristica di garanzia di lunghezza inferiore a 20 caratteri.  
+-   L'espressione XQuery specifica un ciclo FOR nidificato. Il ciclo FOR esterno è obbligatorio perché si desidera recuperare gli attributi **ProductModelID** dell' `ProductDescription` elemento <>. Il ciclo FOR interno è necessario, poiché si desiderano solo i prodotti con descrizioni della caratteristica di garanzia di lunghezza inferiore a 20 caratteri.  
   
  Risultato parziale:  
   

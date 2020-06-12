@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 17bae8ae-2ba0-4978-be70-61c687f59d54
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 26fa80cc770d4bee9163ec18c21b35bd8c807bde
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6e68e92658bcc32530d787630998c52e1295596
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086987"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526827"
 ---
 # <a name="connection-properties-dialog-box-ssas---tabular"></a>Finestra di dialogo Proprietà connessione (SSAS - Tabulare)
   Utilizzare questa pagina per visualizzare o modificare in SQL Server Management Studio le proprietà di connessione di un'origine dati utilizzata da un database modello tabulare.  

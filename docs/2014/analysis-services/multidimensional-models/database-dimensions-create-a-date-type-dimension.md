@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 76b5027f19eade18aa07187c1673f6ad27079391
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c34380e901590062b679129ad66838bbdfff897a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075942"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547143"
 ---
 # <a name="create-a-date-type-dimension"></a>Creare una dimensioni di tipo Date
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]una dimensione temporale è un tipo di dimensione i cui attributi rappresentano periodi di tempo, ad esempio anni, semestri, trimestri, mesi e giorni. Questi periodi in una dimensione temporale offrono livelli di granularità basati sul tempo per l'analisi e la generazione di report. Gli attributi sono organizzati in gerarchie e la granularità della dimensione temporale è determinata principalmente dalle necessità aziendali e di generazione di report per i dati cronologici. Per la maggior parte dei dati finanziari e sulle vendite, ad esempio, nelle applicazioni di Business Intelligence viene utilizzata una granularità mensile o trimestrale.  
+  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] una dimensione temporale è un tipo di dimensione i cui attributi rappresentano periodi di tempo, ad esempio anni, semestri, trimestri, mesi e giorni. Questi periodi in una dimensione temporale offrono livelli di granularità basati sul tempo per l'analisi e la generazione di report. Gli attributi sono organizzati in gerarchie e la granularità della dimensione temporale è determinata principalmente dalle necessità aziendali e di generazione di report per i dati cronologici. Per la maggior parte dei dati finanziari e sulle vendite, ad esempio, nelle applicazioni di Business Intelligence viene utilizzata una granularità mensile o trimestrale.  
   
  In genere, nei cubi di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è inclusa una forma di dimensione temporale. Un cubo può includere più di una dimensione temporale oppure diverse gerarchie dello stesso tipo di dimensione temporale, in base ai requisiti di granularità dei dati e di generazione di report. Non tutti i cubi, tuttavia, necessitano di una dimensione temporale. Alcune applicazioni OLAP, ad esempio quelle per la determinazione dei costi in base alle attività, non richiedono una dimensione temporale, perché in questo caso la determinazione dei costi è basata sulle attività e non sul tempo.  
   
@@ -51,7 +50,7 @@ ms.locfileid: "66075942"
   
  È possibile creare manualmente questi diversi calendari in Progettazione dimensioni. La Creazione guidata dimensione offre tuttavia diversi modelli di gerarchia che è possibile utilizzare per generare automaticamente diversi tipi di calendari quando si crea una dimensione temporale o una dimensione temporale del server. Nella tabella seguente vengono illustrati i diversi calendari che è possibile generare tramite la Creazione guidata dimensione.  
   
-|Calendar|Descrizione|  
+|Calendario|Descrizione|  
 |--------------|-----------------|  
 |Calendario standard|Calendario gregoriano di dodici mesi con inizio l'1 gennaio e fine il 31 dicembre.<br /><br /> Indipendentemente dal fatto che si utilizzi la Creazione guidata dimensione per creare una dimensione temporale o una dimensione temporale del server, tramite la procedura guidata viene generata una gerarchia per un calendario standard dopo che sono stati definiti gli attributi che rappresentano i periodi di tempo per la dimensione. Se si usa la Creazione guidata dimensione per creare una dimensione temporale del server, è possibile modificare la data di inizio del calendario standard impostandola su un giorno diverso rispetto all'1 gennaio.|  
 |Calendario fiscale|Calendario fiscale di dodici mesi. Quando si seleziona questo calendario, è necessario specificare il giorno e il mese di inizio dell'anno fiscale in uso nell'organizzazione.<br /><br /> Nota: questo calendario è disponibile solo se si usa la Creazione guidata dimensione per creare una dimensione temporale del server.|  
@@ -67,7 +66,7 @@ ms.locfileid: "66075942"
 > [!NOTE]  
 >  Non è possibile utilizzare la Configurazione guidata funzionalità di Business Intelligence per aggiungere funzionalità di Business Intelligence per le gerarchie temporali alle dimensioni temporali del server. Tramite la Configurazione guidata funzionalità di Business Intelligence viene aggiunta una gerarchia per supportare le funzionalità di Business Intelligence per le gerarchie temporali e tale gerarchia deve essere associata a una colonna della tabella della dimensione temporale. Le dimensioni temporali del server non dispongono di una tabella della dimensione temporale corrispondente e pertanto non supportano questa gerarchia aggiuntiva.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creare una dimensione temporale generando una tabella dei tempi](create-a-time-dimension-by-generating-a-time-table.md)   
  [Guida sensibile al contesto della configurazione guidata funzionalità di Business Intelligence](../business-intelligence-wizard-f1-help.md)   
  [Tipi di dimensioni](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
