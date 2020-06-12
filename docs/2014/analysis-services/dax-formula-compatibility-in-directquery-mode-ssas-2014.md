@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e588630b4bc9b2dd72e1fb54362b9b024c17bdb5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e7712b7a7e861eb3d588f5217baa02bf26746fd
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67343903"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528902"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>Compatibilità delle formule DAX in modalità DirectQuery (SSAS 2014)
 Data Analysis Expression Language (DAX) può essere utilizzato per creare misure e altre formule personalizzate da utilizzare in Analysis Services modelli tabulari, [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] modelli di dati in cartelle di lavoro di Excel e modelli di dati Power bi desktop. Nella maggior parte dei casi, i modelli creati in questi ambienti sono identici ed è possibile usare le stesse misure, le stesse relazioni e gli indicatori KPI e così via. Tuttavia, se si crea un modello tabulare Analysis Services e lo si distribuisce in modalità DirectQuery, esistono alcune restrizioni per le formule che è possibile utilizzare. Questo argomento fornisce una panoramica di tali differenze, elenca le funzioni che non sono supportate nel modello tabulare di SQL Server 2014 Analysis Services a livello di compatibilità 1100 o 1103 e in modalità DirectQuery ed elenca le funzioni supportate, ma che potrebbero restituire risultati diversi.  
@@ -30,7 +29,7 @@ Ad esempio, esistono differenze nel modo in cui alcuni archivi dati relazionali 
   
 Al contrario, il linguaggio DAX deve emulare il più possibile il comportamento delle funzioni di Microsoft Excel. Ad esempio, per gestire valori Null, stringhe vuote e valori zero, Excel tenta di fornire la risposta migliore, a prescindere dal tipo di dati preciso, di conseguenza anche il motore xVelocity terrà lo stesso comportamento. Tuttavia, quando un modello tabulare viene distribuito nella modalità DirectQuery e le formule vengono passate a un'origine dati relazionale per la valutazione, i dati devono essere gestiti in base alla semantica dell'origine dati relazionale che in genere prevede una gestione separata delle stringhe vuote rispetto a quelle null. Per questo motivo, la stessa formula potrebbe restituire un risultato diverso se valutata rispetto ai dati memorizzati nella cache e rispetto ai dati restituiti solo dall'archivio relazionale.  
   
-Inoltre, alcune funzioni non possono essere utilizzate nella modalità DirectQuery perché il calcolo richiederebbe l'invio dei dati nel contesto corrente all'origine dati relazionale come parametro. Le misure di una [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] cartella di lavoro, ad esempio, utilizzano spesso funzioni di business intelligence che fanno riferimento a intervalli di date disponibili all'interno della cartella di lavoro. Tali formule non possono in genere essere utilizzate nella modalità DirectQuery.  
+Inoltre, alcune funzioni non possono essere utilizzate nella modalità DirectQuery perché il calcolo richiederebbe l'invio dei dati nel contesto corrente all'origine dati relazionale come parametro. Le misure di una cartella di lavoro, ad esempio, [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] utilizzano spesso funzioni di business intelligence che fanno riferimento a intervalli di date disponibili all'interno della cartella di lavoro. Tali formule non possono in genere essere utilizzate nella modalità DirectQuery.  
   
 ## <a name="semantic-differences"></a>Differenze semantiche  
 In questa sezione sono elencati i tipi di differenze semantiche che potrebbero verificarsi e vengono descritte le limitazioni che potrebbero applicarsi all'utilizzo di funzioni o ai risultati delle query.  
@@ -55,7 +54,7 @@ La formula confronta una stringa di testo a un numero. L'espressione è **true**
   
 In un modello in memoria, il risultato è **true** perché viene eseguito il cast implicito dei numeri come stringhe a un tipo di dati numerico per confronti con altri numeri. SQL prevede inoltre il cast implicito di numeri di testo come numeri per il confronto con tipi di dati numerici.  
   
-Si noti che questo rappresenta una modifica del comportamento dalla prima versione di [!INCLUDE[ssGemini](../includes/ssgemini-md.md)], che restituisce **false**, perché il testo "2" verrebbe sempre considerato maggiore di qualsiasi numero.  
+Si noti che questo rappresenta una modifica del comportamento dalla prima versione di [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] , che restituisce **false**, perché il testo "2" verrebbe sempre considerato maggiore di qualsiasi numero.  
   
 **Confronto tra valori di testo e valori booleani**  
 ESEMPIO: `"VERDADERO" = TRUE`  
@@ -85,7 +84,7 @@ Il cast a un tipo di dati booleano di qualsiasi altra stringa genera un errore.
 **Cast da stringa a data/ora**  
 Nella modalità DirectQuery i cast da rappresentazioni stringa di date e ore a valori **datetime** effettivi si comportano come in SQL Server.  
   
-Per informazioni sulle regole che regolano i cast dai tipi di **datetime** dati stringa a DateTime [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] nei modelli, vedere la Guida di [riferimento alla sintassi DAX](/dax/dax-syntax-reference).
+Per informazioni sulle regole che regolano i cast dai tipi di dati stringa a **DateTime** nei [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] modelli, vedere la Guida di [riferimento alla sintassi DAX](/dax/dax-syntax-reference).
   
 I modelli che utilizzano l'archivio dati in memoria supportano una gamma più limitata di formati di testo per le date rispetto ai formati stringa per date supportati in SQL Server. Tuttavia, il linguaggio DAX supporta formati data e ora personalizzati.  
   
@@ -155,7 +154,7 @@ Le espressioni seguenti sono tutte valide nei modelli in memoria, ma generano un
 L'espressione `BLANK/BLANK` è un caso speciale che restituisce `BLANK` sia per i modelli in memoria sia per quelli in modalità DirectQuery.  
   
 ### <a name="supported-numeric-and-date-time-ranges"></a><a name="bkmk_Ranges"></a>Intervalli numerici e data e ora supportati  
-Le formule [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] nei modelli tabulari e in memoria sono soggette alle stesse limitazioni di Excel rispetto ai valori massimi consentiti per i numeri reali e le date. Possono tuttavia sorgere delle differenze quando il valore massimo viene restituito da un calcolo o da una query o quando si esegue la conversione, il cast, l'arrotondamento o il troncamento di valori.  
+Le formule nei [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] modelli tabulari e in memoria sono soggette alle stesse limitazioni di Excel rispetto ai valori massimi consentiti per i numeri reali e le date. Possono tuttavia sorgere delle differenze quando il valore massimo viene restituito da un calcolo o da una query o quando si esegue la conversione, il cast, l'arrotondamento o il troncamento di valori.  
   
 -   Se valori dei tipi **Currency** e **Real** vengono moltiplicati e il risultato è maggiore del valore massimo possibile, nella modalità DirectQuery non viene generato alcun errore e viene restituito un valore Null.  
   
@@ -311,7 +310,7 @@ ESEMPIO: `MID([col], 2, 5)`
   
 Se il testo di input è **varchar** o **nvarchar**, il risultato della formula è sempre lo stesso.  
   
-Tuttavia, se il testo è un carattere a lunghezza fissa e il valore per * &lt;num_chars&gt; * è maggiore della lunghezza della stringa di destinazione, nella modalità DirectQuery viene aggiunto uno spazio vuoto alla fine della stringa di risultato.  
+Tuttavia, se il testo è un carattere a lunghezza fissa e il valore per * &lt; num_chars &gt; * è maggiore della lunghezza della stringa di destinazione, nella modalità DirectQuery viene aggiunto uno spazio vuoto alla fine della stringa di risultato.  
   
 In un modello in memoria il risultato termina in corrispondenza dell'ultimo carattere della stringa, senza riempimento.  
   
@@ -503,7 +502,7 @@ LASTDATE
   
 DATEADD  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
 [Modalità DirectQuery (SSAS tabulare)](https://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 

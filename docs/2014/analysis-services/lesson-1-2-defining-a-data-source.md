@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5a3e83c9-8788-431e-85b0-a68c79377ff3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a9b2b248207d19f99aae3b07837d624fb9bb9cf6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b206facd1a8dc3faa58c58ae97e783d8a5c630b6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079343"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543623"
 ---
 # <a name="defining-a-data-source"></a>Definizione di un'origine dei dati
   Dopo aver creato un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , la prima operazione consiste nel definire una o più origini dati da usare. Quando si definisce un'origine dei dati si specificano le informazioni sulla stringa di connessione che verrà utilizzata per connettersi all'origine dei dati. Per altre informazioni, vedere [Creare un'origine dati &#40;SSAS multidimensionale&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
@@ -34,9 +33,9 @@ ms.locfileid: "66079343"
   
      [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta anche gli altri provider visualizzati nell'elenco **Provider** .  
   
-5.  Nella casella di testo **nome server** Digitare `localhost`.  
+5.  Nella casella di testo **nome server** Digitare `localhost` .  
   
-     Per connettersi a un'istanza denominata nel computer locale, digitare **localhost\\<nome\>istanza**. Per connettersi al computer specifico anziché al computer locale, digitare il nome o l'indirizzo IP del computer.  
+     Per connettersi a un'istanza denominata nel computer locale, digitare **localhost \\<\> nome istanza**. Per connettersi al computer specifico anziché al computer locale, digitare il nome o l'indirizzo IP del computer.  
   
 6.  Verificare che l'opzione **Usa autenticazione di Windows** sia selezionata. Nell'elenco **Selezionare o immettere un nome di database** selezionare **AdventureWorksDW2012**.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66079343"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Definizione di una vista origine dati](lesson-1-3-defining-a-data-source-view.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creare un'origine dati &#40;SSAS multidimensionale&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

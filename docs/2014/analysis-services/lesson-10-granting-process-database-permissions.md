@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 69ba952e-09ae-49a9-9297-00e32e8e89a8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aca2cd956850de245f507e8cf24b93e87404429b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39a1622ceccf6465b616fcc23de7093b4aa45d8c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174294"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543555"
 ---
 # <a name="granting-process-database-permissions"></a>Concessione di autorizzazioni per l'elaborazione di database
   Dopo l'installazione di un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], tutti i membri del ruolo di amministratore del server [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nell'istanza dispongono di autorizzazioni valide per l'intero server per eseguire qualsiasi attività all'interno dell'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Per impostazione predefinita, nessun altro utente dispone dell'autorizzazione per amministrare o visualizzare gli oggetti nell'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].
@@ -30,7 +29,7 @@ ms.locfileid: "78174294"
 
 2.  Selezionare la casella di controllo **Elaborazione database** .
 
-3.  Nella Finestra Proprietà modificare la proprietà **Name** del nuovo ruolo in `Process Database Objects Role`.
+3.  Nella Finestra Proprietà modificare la proprietà **Name** del nuovo ruolo in `Process Database Objects Role` .
 
      ![Progettazione ruoli](../../2014/tutorials/media/l10-security-1.png "Progettazione ruoli")
 

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c922c35-fbcb-45b2-96b1-c7a846d8b419
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: debf1257667ea3aa3380117bbbc4c31399283252
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 28db322a38ae90206ae0c43db1c8c039e6395b8b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075125"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546743"
 ---
 # <a name="explore-data-in-a-data-source-view-analysis-services"></a>Esplorare dati in una vista origine dati (Analysis Services)
   La finestra di dialogo **Esplora dati** in Progettazione vista origine dati di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] consente di esplorare i dati di una tabella, una vista o una query denominata in una vista origine dati. Quando si esplorano i dati in Progettazione vista origine dati, è possibile visualizzare il contenuto di ogni colonna di dati in una tabella, una vista o una query denominata selezionata. La visualizzazione del contenuto effettivo consente di determinare se sono necessarie tutte le colonne, se sono necessari calcoli denominati per incrementare la fruibilità e la facilità di utilizzo per gli utenti e se le query denominate o i calcoli denominati esistenti restituiscono i valori previsti.  
@@ -38,17 +37,17 @@ ms.locfileid: "66075125"
   
 3.  Fare clic con il pulsante destro del mouse sulla tabella, sulla vista o sulla query denominata contenente i dati che si desidera visualizzare, quindi scegliere **Esplora dati**.  
   
-     L'origine dati sottostante la tabella, la vista o la query denominata nella vista origine dati è una query e i risultati vengono visualizzati nella **scheda \<esplora nome oggetto> tabella** .  
+     L'origine dati sottostante la tabella, la vista o la query denominata nella vista origine dati è una query e i risultati vengono visualizzati nella scheda **Esplora \<object name> tabella** .  
   
-4.  Nella barra degli strumenti **Esplora \<nome oggetto> tabella** fare clic sull'icona **Opzioni di campionamento** .  
+4.  Sulla barra degli strumenti **Esplora \<object name> tabella** fare clic sull'icona **Opzioni di campionamento** .  
   
      Verrà visualizzata la finestra di dialogo **Opzioni di esplorazione dati** . In tale finestra di dialogo è possibile specificare il metodo di campionamento (un numero di record inferiore o superiore alla dimensione di campionamento predefinita pari a 5000 righe) o il conteggio campione.  
   
 5.  Fare clic su **OK** o **Annulla** , a seconda dei casi.  
   
-6.  Per ricampionare i dati, fare clic su **Ricampiona dati** sulla barra degli strumenti ** \<> tabella Esplora nome oggetto** .  
+6.  Per ricampionare i dati, fare clic su **Ricampiona dati** sulla barra degli strumenti della ** \<object name> tabella Esplora** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Viste origine dati in modelli multidimensionali](data-source-views-in-multidimensional-models.md)  
   
   

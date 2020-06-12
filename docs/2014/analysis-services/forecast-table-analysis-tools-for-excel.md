@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 22bb0b5e-78f5-484e-883d-2b5985a12749
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dc620811209d854af5a9c874956847236819f462
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a08cdf759ad3accd1f3c1405cefff9cde6b5319f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081050"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544490"
 ---
 # <a name="forecast-table-analysis-tools-for-excel"></a>Previsione (Strumenti di analisi tabelle per Excel)
   ![Pulsante Previsione in Strumenti di analisi tabelle](media/tat-forecast.gif "Pulsante Previsione in Strumenti di analisi tabelle")  
@@ -41,11 +40,11 @@ ms.locfileid: "66081050"
   
 3.  Specificare le colonne per la previsione. Lo strumento seleziona automaticamente le colonne nei dati con tipo di dati stimabile, ovvero dati numerici continui. È possibile che alcune colonne con dati numerici continui non vengano selezionate dallo strumento, se contengono numerosi valori Null o zero, in quanto i dati mancanti potrebbero influire sui risultati. In tal caso, è possibile correggere i dati utilizzando lo strumento modifica [etichette &#40;SQL Server componente aggiuntivo&#41;data mining](relabel-sql-server-data-mining-add-ins.md) .  
   
-4.  Specificare la colonna che contiene l'identificatore di data e ora o altri identificatori di serie. Se si seleziona l'opzione ** \<nessun timestamp>** lo strumento creerà una serie in base alla sequenza di righe nei dati di origine.  
+4.  Specificare la colonna che contiene l'identificatore di data e ora o altri identificatori di serie. Se si seleziona l'opzione **\<no time stamp>** , lo strumento creerà una serie in base alla sequenza di righe nei dati di origine.  
   
 5.  Specificare il numero di stime da effettuare.  
   
-6.  È possibile fornire un hint all'algoritmo per indicare se si prevede che i dati si ripetano su base settimanale, mensile o per altri periodi. Se i dati non rientrano in uno dei modelli specificati o se non si conoscono i modelli, selezionare ** \<rileva automaticamente>** in modo che lo strumento trovi i periodi di tempo ripetuti.  
+6.  È possibile fornire un hint all'algoritmo per indicare se si prevede che i dati si ripetano su base settimanale, mensile o per altri periodi. Se i dati non rientrano in uno dei modelli specificati o se non si conoscono i modelli, selezionare **\<detect automatically>** per fare in modo che lo strumento trovi i periodi di tempo ripetuti.  
   
 7.  Tramite la procedura guidata le stime vengono aggiunte alla tabella di origine e viene creato un report di previsione in un nuovo foglio di lavoro.  
   
@@ -83,7 +82,7 @@ ms.locfileid: "66081050"
 ## <a name="related-tools"></a>Strumenti correlati  
  Il client di data mining per Excel è un componente aggiuntivo separato che offre ulteriori funzionalità avanzate di data mining e una procedura guidata per la previsione.  
   
- Sia lo strumento **previsione** (in strumenti di analisi tabelle per Excel) che la procedura guidata **previsione** (nel client di data mining per Excel) utilizzano [!INCLUDE[msCoName](../includes/msconame-md.md)] l'algoritmo Time Series.  
+ Sia lo strumento **previsione** (in strumenti di analisi tabelle per Excel) che la procedura guidata **previsione** (nel client di data mining per Excel) utilizzano l' [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo Time Series.  
   
 -   Lo strumento **previsione** è più facile da utilizzare perché configura automaticamente l'algoritmo per l'utilizzo delle impostazioni migliori per i dati.  
   
@@ -91,7 +90,7 @@ ms.locfileid: "66081050"
   
  Per ulteriori informazioni sulla procedura guidata **previsione** , vedere la [procedura guidata previsione &#40;componenti aggiuntivi data mining per&#41;Excel ](forecast-wizard-data-mining-add-ins-for-excel.md). Per ulteriori informazioni sull'algoritmo utilizzato per la previsione, vedere l'argomento "Algoritmo Microsoft Time Series" nella documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Strumenti di analisi tabelle per Excel](table-analysis-tools-for-excel.md)  
   
   

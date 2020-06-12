@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a2643be4-8123-4cc3-baf9-e5ec54a1669d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5c5effed34dda946d3c65028aa5834f4fbddf7cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ad5674f576f7a6cf42b396d3e76db457f068e1ee
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077245"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544763"
 ---
 # <a name="modify-the-keycolumn-property-of-an-attribute"></a>Modificare la proprietà KeyColumn di un attributo
   È possibile modificare la proprietà **KeyColumns** di un attributo. Ad esempio, è possibile specificare una chiave composta anziché una chiave semplice come chiave dell'attributo.  
@@ -34,7 +33,7 @@ ms.locfileid: "66077245"
   
          -oppure-  
   
-    -   Nella scheda **Struttura cubo** di Progettazione cubi espandere la dimensione del cubo nel riquadro **dimensioni** e fare clic su ** \<modifica>dimensione **.  
+    -   Nella scheda **Struttura cubo** di Progettazione cubi espandere la dimensione del cubo nel riquadro **dimensioni** e fare clic su **modifica \<dimension> **.  
   
 3.  Nel riquadro **Attributi** della scheda **Struttura dimensione** fare clic sull'attributo per il quale si vuole modificare la proprietà **KeyColumns** .  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66077245"
   
 8.  Per modificare l'ordine delle colonne chiave, selezionare una colonna e quindi fare clic sul pulsante **Su** o **Giù** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Riferimento alle proprietà degli attributo delle dimensioni](dimension-attribute-properties-reference.md)  
   
   

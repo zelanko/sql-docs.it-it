@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fe13ce8b-9369-4126-928a-9426f9119424
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 16174728ac57b0a6380f1780eb550f85e2191d39
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f29f1fcc8e63f688ea1769ee773957979ebef051
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387841"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543913"
 ---
 # <a name="install-or-uninstall-the-powerpivot-for-sharepoint-add-in-sharepoint-2013"></a>Installare o disinstallare il componente aggiuntivo PowerPivot per SharePoint (SharePoint 2013)
   [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] è una raccolta di servizi back-end e componenti del server applicazioni che forniscono l'accesso a dati [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] in una farm di [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] . Il componente aggiuntivo [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint (**spPowerpivot.msi**) è un pacchetto di installazione utilizzato per installare i componenti del server applicazioni.
@@ -32,7 +31,7 @@ ms.locfileid: "81387841"
 
 -   [Background](#bkmk_background)
 
--   [Dove installare spPowerPivot. msi?](#bkmk_where_to_install)
+-   [Dove installare spPowerPivot.msi?](#bkmk_where_to_install)
 
 -   [Requisiti e prerequisiti](#bkmk_prereq)
 
@@ -84,7 +83,7 @@ ms.locfileid: "81387841"
 
 -   **Autorizzazioni:** per installare [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)], è necessario che l'utente corrente sia un amministratore nel computer e un membro del gruppo di amministratori farm di SharePoint.
 
--   Per ulteriori informazioni sui [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] requisiti e i prerequisiti, vedere la pagina relativa ai [requisiti hardware e software per Analysis Services server in modalità SharePoint &#40;SQL Server 2014&#41;](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md).
+-   Per ulteriori informazioni sui [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] requisiti e i prerequisiti, vedere la pagina relativa ai [requisiti hardware e Software per Analysis Services server in modalità SharePoint &#40;SQL Server 2014&#41;](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md).
 
 ##  <a name="to-install-powerpivot-for-sharepoint"></a><a name="bkmk_install"></a>Per installare PowerPivot per SharePoint
  Il pacchetto di installazione **spPowerpivot.msi** supporta sia la modalità interfaccia utente grafica sia quella da riga di comando. Per entrambi i metodi di installazione è richiesta l'esecuzione del file con estensione msi con privilegi di amministratore. Al termine dell'installazione, vedere l'argomento seguente per informazioni sullo strumento di configurazione e sulle funzionalità aggiuntive, [configurare PowerPivot e distribuire soluzioni &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013).
@@ -109,7 +108,7 @@ ms.locfileid: "81387841"
 
  `Msiexec.exe /i SpPowerPivot.msi`.
 
- Per creare un log dell'installazione, utilizzare le opzioni di registrazione standard MsiExec. Nell'esempio seguente viene creato il file di log "Install_Log. txt" tramite l'opzione di registrazione dettagliata "v".
+ Per creare un log dell'installazione, utilizzare le opzioni di registrazione standard MsiExec. Nell'esempio seguente viene creato il file di log "Install_Log.txt" utilizzando l'opzione di registrazione dettagliata "v".
 
 ```cmd
 Msiexec.exe /i SpPowerPivot.msi /L v c:\test\Install_Log.txt
@@ -169,7 +168,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD
 
  ![due strumenti di configurazione PowerPivot](../../media/as-powerpivot-configtools-bothicons.gif "due strumenti di configurazione PowerPivot")
 
- **Oppure**
+ **O**
 
 1.  Andare a **Start**, **Tutti i programmi**.
 
@@ -200,7 +199,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD
     msiexec.exe /f spPowerPivot.msi
     ```
 
- OR
+ OPPURE
 
 -   Per effettuare la disinstallazione, eseguire il comando riportato di seguito:
 

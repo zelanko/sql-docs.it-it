@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f567da3318c7b8fff799475c638c1086613f45b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fabd1de8361d9cc8753b42c35e0597769545c6b1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67826340"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540323"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>Autenticazione e autorizzazione di PowerPivot
   Una distribuzione PowerPivot per SharePoint eseguita in una farm di SharePoint 2010 utilizza il sottosistema di autenticazione e il modello di autorizzazione forniti dai server SharePoint. L'infrastruttura di sicurezza di SharePoint si estende al contenuto e alle operazioni di PowerPivot poiché tutto il contenuto correlato a PowerPivot viene archiviato nei database del contenuto di SharePoint e tutte le operazioni correlate a PowerPivot vengono effettuate dai servizi condivisi PowerPivot nella farm. L'autenticazione degli utenti che richiedono una cartella di lavoro contenente dati PowerPivot avviene tramite un'identità utente di SharePoint basata sull'identità utente di Windows. Le autorizzazioni di visualizzazione nella cartella di lavoro consentono di determinare se la richiesta viene concessa o negata.  
@@ -107,10 +106,10 @@ ms.locfileid: "67826340"
 ||Impostazione dati esterni consentiti|È necessario impostare questo valore su **Raccolte di connessioni dati attendibili e connessioni incorporate**. Le connessioni dati PowerPivot sono incorporate nella cartella di lavoro. Se non si consentono le connessioni incorporate, gli utenti possono visualizzare la cache della tabella pivot, ma non saranno in grado di interagire con i dati PowerPivot.|  
 ||Avvisa in caso di aggiornamento|È necessario disabilitare questo valore se si utilizza la raccolta PowerPivot per archiviare cartelle di lavoro e report. Nella raccolta PowerPivot è inclusa una caratteristica di anteprima di documento che funziona meglio se l'aggiornamento all'apertura e l'avviso in caso di aggiornamento sono disabilitati.|  
 |Provider di dati attendibili|MSOLAP.4<br /><br /> MSOLAP.5|MSOLAP.4 è incluso per impostazione predefinita, tuttavia per l'accesso ai dati PowerPivot viene richiesto che la versione del provider MSOLAP.4 sia SQL Server 2008 R2.<br /><br /> MSOLAP.5 è installato con la versione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] di PowerPivot per SharePoint.<br /><br /> Non rimuovere questi provider dall'elenco di provider di dati attendibili. In alcuni casi, potrebbe essere necessario installare copie aggiuntive di questo provider negli altri server SharePoint della farm. Per altre informazioni, vedere [Installazione del provider OLE DB di Analysis Services nei server di SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).|  
-|Raccolte connessioni dati attendibili|Facoltativo.|Nelle cartelle di lavoro di PowerPivot è possibile utilizzare file ODC (Office Data Connection). Se si utilizzano file odc per fornire informazioni di connessione alle cartelle di lavoro di PowerPivot locali, è possibile aggiungere gli stessi file odc a questa raccolta.|  
+|Raccolte connessioni dati attendibili|Facoltativa.|Nelle cartelle di lavoro di PowerPivot è possibile utilizzare file ODC (Office Data Connection). Se si utilizzano file odc per fornire informazioni di connessione alle cartelle di lavoro di PowerPivot locali, è possibile aggiungere gli stessi file odc a questa raccolta.|  
 |Assembly per la funzione definita dall'utente|Non applicabile.|In PowerPivot per SharePoint vengono ignorati gli assembly per la funzione definita dall'utente compilati e distribuiti per Excel Services. Se si utilizzano gli assembly definiti dall'utente per un comportamento specifico, assicurarsi che per l'elaborazione di query PowerPivot non vengano utilizzate le funzioni definite dall'utente create.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurare gli account del servizio PowerPivot](configure-power-pivot-service-accounts.md)   
  [Configurare l'account di aggiornamento dati automatico PowerPivot &#40;PowerPivot per SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)   
  [Creazione di un percorso attendibile per i siti PowerPivot in Amministrazione centrale](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   

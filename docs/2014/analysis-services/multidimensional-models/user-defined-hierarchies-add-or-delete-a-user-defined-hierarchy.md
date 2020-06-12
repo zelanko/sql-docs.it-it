@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 953818b4-9543-4c01-bb20-1d45ec6dfb91
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 14d63345020fbe76b727d9276585b17bb3406846
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50086ef38d9bd54a4088e9cf647a53553694a09d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072585"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535778"
 ---
 # <a name="add-or-delete-a-user-defined-hierarchy"></a>Aggiungere o eliminare una gerarchia definita dall'utente
   È possibile aggiungere o rimuovere una gerarchia definita dall'utente in una dimensione nella scheda **Struttura dimensione** di Progettazione dimensioni in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -61,7 +60,7 @@ ms.locfileid: "66072585"
   
 -   Trascinare la gerarchia definita dall'utente al di fuori dell'area di progettazione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Gerarchie utente](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [Creare gerarchie definite dall'utente](user-defined-hierarchies-create.md)  
   

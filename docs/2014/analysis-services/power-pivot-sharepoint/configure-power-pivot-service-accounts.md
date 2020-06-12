@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b90944c3260af69f29fbae8a93f5865c1f3c6d1e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4053c7a15d0131773b72f347caab7cbc42d6044
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071854"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547533"
 ---
 # <a name="configure-powerpivot-service-accounts"></a>Configurare gli account del servizio PowerPivot
   In un'installazione di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] sono inclusi due servizi che supportano le operazioni server. Il servizio **SQL Server Analysis Services (PowerPivot)** è un servizio Windows che fornisce l'elaborazione dati PowerPivot e il supporto delle query in un server applicazioni. L'account di accesso per questo servizio viene sempre specificato durante l'installazione di SQL Server quando si installa Analysis Services in modalità integrata SharePoint.  
@@ -103,7 +102,7 @@ ms.locfileid: "66071854"
 |-----------------|-----------------|  
 |Requisito di provisioning|Questo account deve essere specificato durante l'installazione di SQL Server tramite la **pagina configurazione Analysis Services** nell'installazione guidata (o il `ASSVCACCOUNT` parametro di installazione in un'installazione da riga di comando).<br /><br /> È possibile modificare il nome utente o la password tramite Amministrazione centrale, PowerShell o lo strumento di configurazione PowerPivot. Non è consentito usare altri strumenti per modificare account e password.|  
 |Requisito dell'account utente di dominio|Questo account deve essere un account utente di dominio Windows. Gli account del computer predefiniti, ad esempio Servizio di rete o Servizio locale, non sono consentiti. Tramite il programma di installazione di SQL Server viene applicato il requisito dell'account utente di dominio bloccando l'installazione ogni volta che viene specificato un account computer.|  
-|Requisiti relativi alle autorizzazioni|Questo account deve essere membro del gruppo di sicurezza SQLServerMSASUser\<$ server>$PowerPivot e dei gruppi di sicurezza WSS_WPG nel computer locale. Queste autorizzazioni devono essere concesse automaticamente. Per ulteriori informazioni su come controllare o concedere le autorizzazioni, vedere [concedere manualmente le autorizzazioni amministrative dell'account di servizio PowerPivot](#updatemanually) in questo argomento e la [configurazione iniziale &#40;PowerPivot per SharePoint&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md).|  
+|Requisiti relativi alle autorizzazioni|Questo account deve essere membro del gruppo di sicurezza SQLServerMSASUser $ \<server> $PowerPivot e dei gruppi di sicurezza WSS_WPG sul computer locale. Queste autorizzazioni devono essere concesse automaticamente. Per ulteriori informazioni su come controllare o concedere le autorizzazioni, vedere [concedere manualmente le autorizzazioni amministrative dell'account di servizio PowerPivot](#updatemanually) in questo argomento e la [configurazione iniziale &#40;PowerPivot per SharePoint&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md).|  
 |Requisiti relativi alla distribuzione con scalabilità orizzontale|Se si installano più istanze del server PowerPivot per SharePoint in una farm, tutte le istanze del server Analysis Services devono essere in esecuzione con lo stesso account utente di dominio. Se si configura, ad esempio, l'esecuzione della prima istanza del [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] come Contoso\ssas-srv01, anche tutte le istanze del [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] aggiuntive distribuite successivamente nella stessa farm devono essere eseguite come Contoso\ssas-srv01 (o qualsiasi altro account corrente).<br /><br /> La configurazione dell'esecuzione di tutte le istanze del servizio con lo stesso account consente al servizio di sistema PowerPivot di allocare l'elaborazione di query o i processi di aggiornamento dei dati a qualsiasi istanza del servizio Analysis Services nella farm. Inoltre, consente l'utilizzo della funzionalità relativa all'account gestito in Amministrazione centrale per le istanze del server Analysis Services. Usando lo stesso account per tutte le istanze del [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] , è possibile modificare l'account o la password una volta, mentre tutte le istanze del servizio in cui vengono usate quelle credenziali vengono aggiornate automaticamente.<br /><br /> Il programma di installazione di SQL Server consente di applicare il requisito dello stesso account. In una distribuzione con scalabilità orizzontale in cui una farm di SharePoint dispone già di un'istanza di PowerPivot per SharePoint installata, la nuova installazione verrà bloccata dal programma di installazione se l'account del [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] specificato è diverso da quello già usato nella farm.|  
   
 #### <a name="powerpivot-service-application-pool"></a>Pool di applicazioni del servizio PowerPivot  
@@ -113,7 +112,7 @@ ms.locfileid: "66071854"
 |Requisito di provisioning|Il servizio di sistema PowerPivot è una risorsa condivisa nella farm che diventa disponibile quando si crea un'applicazione di servizio. Il pool di applicazioni del servizio deve essere specificato quando viene creata l'applicazione di servizio. Può essere specificato in due modi, cioè tramite lo strumento di configurazione PowerPivot o i comandi PowerShell.<br /><br /> È probabile che l'identità del pool di applicazioni sia stata configurata in modo da essere eseguita in un account univoco. In caso contrario, è consigliabile modificarlo ora per l'esecuzione con un account diverso.|  
 |Requisito dell'account utente di dominio|Questa identità del pool di applicazioni deve essere un account utente di dominio Windows. Gli account del computer predefiniti, ad esempio Servizio di rete o Servizio locale, non sono consentiti.|  
 |Requisiti relativi alle autorizzazioni|Per questo account non sono richieste autorizzazioni di amministratore di sistema locale nel computer. Questo account deve, tuttavia, disporre delle autorizzazioni dell'amministratore di sistema di Analysis Services nel [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] locale installato nello stesso computer. Queste autorizzazioni vengono concesse automaticamente dal programma di installazione di SQL Server o quando si imposta o modifica l'identità del pool di applicazioni in Amministrazione centrale.<br /><br /> Le autorizzazioni amministrative sono necessarie per inoltrare query al [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]. Sono necessarie anche per il monitoraggio dell'integrità, per la chiusura di sessioni inattive e per l'attesa degli eventi di traccia.<br /><br /> L'account deve disporre di autorizzazioni di connessione, lettura e scrittura per il database dell'applicazione del servizio PowerPivot. Queste autorizzazioni vengono concesse automaticamente quando si crea l'applicazione e aggiornate automaticamente quando si modificano gli account o le password in Amministrazione centrale.<br /><br /> L'applicazione del servizio PowerPivot verifica che un utente SharePoint sia autorizzato a visualizzare i dati prima di recuperare il file, ma non rappresenta l'utente. Non esistono requisiti relativi alle autorizzazioni per la rappresentazione.|  
-|Requisiti relativi alla distribuzione con scalabilità orizzontale|Nessuno.|  
+|Requisiti relativi alla distribuzione con scalabilità orizzontale|No.|  
   
 ##  <a name="troubleshooting-grant-administrative-permissions-manually"></a><a name="updatemanually"></a>Risoluzione dei problemi: concedere manualmente le autorizzazioni amministrative  
  Le autorizzazioni amministrative non vengono aggiornate se l'utente che aggiorna le credenziali non è l'amministratore locale del computer. In questo caso, è possibile concedere manualmente le autorizzazioni amministrative. Il modo più semplice per eseguire questa operazione consiste nell'eseguire Processo timer configurazione PowerPivot in Amministrazione centrale. In questo modo è possibile reimpostare le autorizzazioni per tutti i server PowerPivot nella farm. Si noti che questo approccio funziona solo se il processo timer SharePoint è in esecuzione come amministratore della farm e come amministratore locale nel computer.  
@@ -124,17 +123,17 @@ ms.locfileid: "66071854"
   
 3.  Fare clic su **Esegui adesso**.  
   
- Come ultima risorsa, è possibile garantire le autorizzazioni corrette concedendo Analysis Services autorizzazioni di amministrazione del sistema per l'applicazione di servizio PowerPivot, quindi aggiungere specificamente l'identità dell'applicazione del servizio al\<gruppo di sicurezza SQLServerMSASUser $ servername>$PowerPivot Windows. È necessario ripetere questi passaggi per ogni istanza di Analysis Services integrata con la farm SharePoint.  
+ Come ultima risorsa, è possibile garantire le autorizzazioni corrette concedendo Analysis Services autorizzazioni di amministrazione del sistema per l'applicazione di servizio PowerPivot, quindi aggiungere specificamente l'identità dell'applicazione del servizio al \<servername> gruppo di sicurezza SQLServerMSASUser $ $PowerPivot Windows. È necessario ripetere questi passaggi per ogni istanza di Analysis Services integrata con la farm SharePoint.  
   
  È necessario essere un amministratore locale per poter aggiornare i gruppi di sicurezza di Windows.  
   
-1.  In SQL Server Management Studio connettersi all'istanza di Analysis Services come \<nome del server> \PowerPivot.  
+1.  In SQL Server Management Studio connettersi all'istanza di Analysis Services come \<server name> \PowerPivot.  
   
 2.  Fare clic con il pulsante destro del mouse sul nome del server e scegliere **Proprietà**.  
   
 3.  Fare clic su **Sicurezza**.  
   
-4.  Fare clic su **Aggiungi**.  
+4.  Scegliere **Aggiungi**.  
   
 5.  Digitare il nome dell'account utilizzato per il pool di applicazioni del servizio PowerPivot, quindi fare clic su **OK**.  
   
@@ -144,9 +143,9 @@ ms.locfileid: "66071854"
   
 8.  Aprire **Gruppi**.  
   
-9. Fare doppio clic su SQLServerMSASUser\<$ servername>$PowerPivot.  
+9. Fare doppio clic su SQLServerMSASUser $ \<servername> $PowerPivot.  
   
-10. Fare clic su **Aggiungi**.  
+10. Scegliere **Aggiungi**.  
   
 11. Digitare il nome dell'account utilizzato per il pool di applicazioni del servizio PowerPivot, quindi fare clic su **OK**.  
   
@@ -179,7 +178,7 @@ ms.locfileid: "66071854"
   
  Se Reporting Services è installato, usare Gestione configurazione Reporting Services per aggiornare le password per il server di report e la connessione al database del server di report. Per altre informazioni, vedere [Configurazione e amministrazione di un server di report &#40;modalità SharePoint di Reporting Services&#41;](../../reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Avviare o arrestare un server di PowerPivot per SharePoint](start-or-stop-a-power-pivot-for-sharepoint-server.md)   
  [Configurare l'account di aggiornamento dati automatico PowerPivot &#40;PowerPivot per SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)  
   

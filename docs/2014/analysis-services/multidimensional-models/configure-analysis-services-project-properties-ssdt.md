@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d9786c66-7d8c-48e3-950d-3f25044b4ce2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1eabb28250699305952d1d0746dc9487a1a25271
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85f67836e2d7dcb7ea17244398867ce5c3cc3364
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076723"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537063"
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>Configurare proprietà di progetti di Analysis Services (SSDT)
   In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene definito con determinate proprietà predefinite che influiscono sulla compilazione e sulla distribuzione del progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -35,12 +34,12 @@ ms.locfileid: "66076723"
 |Edizione server di compilazione/distribuzione|Versione utilizzata per sviluppare i progetti.|Specifica la versione del server in cui verranno distribuiti i progetti.|  
 |Compila/Output|/bin|Percorso relativo per l'output del processo di compilazione del progetto|  
 |Compila/Rimuovi password|True|Specifica l'eventuale rimozione delle password note dalle stringhe di connessione scritte nella directory di output durante il processo di compilazione. Rimuovendo le password viene incrementato il livello di sicurezza. Se vengono rimosse, le password dovranno essere immesse quando il progetto distribuito viene elaborato per consentire l'accesso di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ai dati di origine.|  
-|Debug/Oggetto di avvio|\<> oggetto attualmente attivo|Determina l'oggetto che viene avviato all'avvio del debug.|  
+|Debug/Oggetto di avvio|\<Currently Active Object>|Determina l'oggetto che viene avviato all'avvio del debug.|  
 |Distribuzione/Modalità di distribuzione|Distribuisci solo modifiche|Per impostazione predefinita, vengono distribuite soltanto le modifiche agli oggetti di progetto (a condizione che non siano state apportate altre modifiche agli oggetti direttamente all'esterno del progetto). È inoltre possibile scegliere di distribuire tutti gli oggetti di progetto durante ogni distribuzione. Per prestazioni ottimali, utilizzare Distribuisci solo modifiche.|  
-|Distribuzione/Opzione di elaborazione|Impostazione predefinita|Per impostazione predefinita, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] determina il tipo di elaborazione necessario quando vengono distribuite le modifiche agli oggetti. Ciò garantisce in genere tempi di distribuzione più rapidi. È inoltre possibile, tuttavia, scegliere di eseguire con ogni distribuzione l'elaborazione completa o nessuna elaborazione.|  
+|Distribuzione/Opzione di elaborazione|Predefinito|Per impostazione predefinita, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] determina il tipo di elaborazione necessario quando vengono distribuite le modifiche agli oggetti. Ciò garantisce in genere tempi di distribuzione più rapidi. È inoltre possibile, tuttavia, scegliere di eseguire con ogni distribuzione l'elaborazione completa o nessuna elaborazione.|  
 |Distribuzione/Distribuzione transazionale|False|Per impostazione predefinita, la distribuzione degli oggetti modificati o di tutti gli oggetti non è transazionale con l'elaborazione degli oggetti distribuiti. La distribuzione può avere esito positivo ed essere persistente anche in caso di esito negativo dell'elaborazione. Questa impostazione predefinita può essere modificata in modo da incorporare la distribuzione e l'elaborazione in una singola transazione.|  
 |Server di distribuzione/destinazione|localhost|Per impostazione predefinita, gli oggetti di database all'interno del progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verranno distribuiti nell'istanza predefinita di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sul computer locale su cui viene usato [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Modificare questa impostazione predefinita per specificare un'istanza denominata sul computer locale o qualsiasi istanza su qualsiasi computer remoto per cui si dispone dell'autorizzazione necessaria per creare oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
-|Distribuzione/Database|\<nome del progetto>|Per impostazione predefinita, il nome del database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in cui verrà creata un'istanza degli oggetti del progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] durante la distribuzione corrisponde al nome del progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] al momento della relativa definizione. Modificare questa proprietà per cambiare il nome del database nell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] specificata dalla proprietà Server.|  
+|Distribuzione/Database|\<project name>|Per impostazione predefinita, il nome del database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in cui verrà creata un'istanza degli oggetti del progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] durante la distribuzione corrisponde al nome del progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] al momento della relativa definizione. Modificare questa proprietà per cambiare il nome del database nell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] specificata dalla proprietà Server.|  
   
 ## <a name="property-configurations"></a>Configurazioni delle proprietà  
  Le proprietà vengono definite in base alla configurazione. Le configurazioni di progetto consentono agli sviluppatori di utilizzare un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con impostazioni di compilazione, debug e distribuzione diverse senza modificare direttamente i file di progetto XML sottostanti.  
@@ -49,7 +48,7 @@ ms.locfileid: "66076723"
   
  Finché non vengono create configurazioni aggiuntive, tutti gli sviluppatori utilizzano questa configurazione comune. Tuttavia, durante le varie fasi dello sviluppo del progetto, ad esempio durante lo sviluppo iniziale e il test di un progetto, sviluppatori diversi potranno utilizzare origini dati diverse e distribuire il progetto in server diversi per scopi diversi. Le configurazioni consentono di mantenere tali impostazioni diverse in file di configurazione diversi.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di progetti di Analysis Services &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
  [Distribuire progetti di Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   

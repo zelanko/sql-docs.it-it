@@ -9,26 +9,25 @@ ms.topic: reference
 ms.assetid: 910be4f4-3010-41cd-9fdc-f0a79a0ce823
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4ecdc64918e582f25f0e017d263c66e78c0d1bee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 06b93090918a0fffc9c98e1560b338177eff3d84
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62725385"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545929"
 ---
 # <a name="data-types-in-analysis-services"></a>Tipi di dati in Analysis Services
-  Per tutti <xref:Microsoft.AnalysisServices.DataItem> gli oggetti [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , supporta il seguente subset `System.Data.OleDb.OleDbType`di. Per impostare o leggere il tipo di dati, utilizzare il [tipo di dati DataItem &#40;&#41;ASSL ](https://docs.microsoft.com/bi-reference/assl/data-type/dataitem-data-type-assl).  
+  Per tutti <xref:Microsoft.AnalysisServices.DataItem> gli oggetti, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supporta il seguente subset di `System.Data.OleDb.OleDbType` . Per impostare o leggere il tipo di dati, utilizzare il [tipo di dati DataItem &#40;&#41;ASSL ](https://docs.microsoft.com/bi-reference/assl/data-type/dataitem-data-type-assl).  
   
 ## <a name="supported-data-types"></a>Tipi di dati supportati  
   
 |||  
 |-|-|  
 |BigInt|Intero con segno a 64 bit. Il tipo di valore *bigint* rappresenta numeri interi con valori compresi tra 9.223.372.036.854.775.808 negativi e 9.223.372.036.854.775.807 positivo.|  
-|Binary|Flusso di dati binari di tipo **byte** . **Byte** è un tipo valore che rappresenta interi senza segno con valori compresi tra 0 e 255.|  
+|Binario|Flusso di dati binari di tipo **byte** . **Byte** è un tipo valore che rappresenta interi senza segno con valori compresi tra 0 e 255.|  
 |Boolean|Istanze di questo tipo dispongono di valori `true` o `false`.|  
 |Valuta|Valore di *valuta* compreso tra-922.337.203.685.477,5808 e + 922.337.203.685.477,5807 con precisione pari a dieci millesimi di unità di valuta (quattro posizioni decimali).|  
-|Date|Dati relativi alla data e all'ora, archiviati come valore Double. La parte intera indica il numero di giorni a partire dal 30 dicembre 1899 mentre la parte frazionaria rappresenta una frazione del giorno o dell'ora del giorno.|  
+|Data|Dati relativi alla data e all'ora, archiviati come valore Double. La parte intera indica il numero di giorni a partire dal 30 dicembre 1899 mentre la parte frazionaria rappresenta una frazione del giorno o dell'ora del giorno.|  
 |Double|Numero a virgola mobile compreso tra -1,79769313486232E +308 e 1,79769313486232E +308. Un valore Double consente di archiviare informazioni sui numeri fino a 15 cifre decimali di precisione.|  
 |Integer|Intero con segno a 32 bit che rappresenta interi con segno con valori compresi tra 2.147.483.648 (negativo) e 2.147.483.647 (positivo).|  
 |Single|Numero a virgola mobile compreso tra - 3,4028235E +38 e 3,4028235E +38. Un valore Single consente di archiviare informazioni sui numeri fino a 7 cifre decimali di precisione.|  
@@ -43,7 +42,7 @@ ms.locfileid: "62725385"
 ## <a name="amo-validations-on-data-types"></a>Convalide AMO nei tipi di dati  
  Nella tabella seguente vengono elencate le convalide aggiuntive eseguite nella libreria AMO (Analysis Management Objects) per determinate associazioni.  
   
-|Oggetto|Associazione|Tipi di dati consentiti|  
+|Oggetto|Binding|Tipi di dati consentiti|  
 |------------|-------------|------------------------|  
 |DimensionAttribute|KeyColumns|Tutti tranne i dati binari|  
 ||NameColumn|Solo WChar|  

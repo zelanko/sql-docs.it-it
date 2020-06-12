@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e8af85ff-ef33-4659-a003-bb34578eb2a2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e7b0d6e4d99c08556cefb31c33deb5238f33c636
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d06ba5f85dadeeaf53616f54b6502754a66852fd
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75225393"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544333"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Scenari di globalizzazione per Analysis Services multidimensionale
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] archivia e gestisce dati e metadati multilingue nei modelli di dati tabulari e multidimensionali. L'archiviazione dei dati è in formato Unicode (UTF-16) nei set di caratteri che usano la codifica Unicode. Se in un modello di dati si caricano dati ANSI, i caratteri vengono archiviati usando elementi di codice Unicode equivalenti.  

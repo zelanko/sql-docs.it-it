@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c56b0a70-cdec-427f-990e-425290344e7d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 12e2d2f543694a1da418f5e8eb4b900eaa123d97
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8620c54970ea14a2ac01c85262a372d2b3db0d68
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074054"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546263"
 ---
 # <a name="specifying-the-contents-of-a-slicer-axis-mdx"></a>Impostazione del contenuto di un asse di sezionamento (MDX)
   L'asse di sezionamento filtra i dati restituiti dall'istruzione SELECT di MDX (Multidimensional Expression), limitando la restituzione ai soli dati che si intersecano con i membri specificati. Può essere considerato un asse aggiuntivo invisibile in una query. L'asse di sezionamento è definito nella clausola WHERE dell'istruzione SELECT in MDX.  
@@ -38,7 +37,7 @@ ms.locfileid: "66074054"
 ### <a name="implicit-slicer-axis"></a>Asse di sezionamento implicito  
  Se un membro di una gerarchia all'interno del cubo non viene incluso in un'asse della query in modo esplicito, il membro predefinito della gerarchia viene incluso nell'asse di sezionamento in modo implicito. Per altre informazioni, vedere [Definire un membro predefinito](../attribute-properties-define-a-default-member.md).  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nella query seguente non è inclusa una clausola WHERE e viene restituito il valore della misura Internet Sales Amount per tutti gli anni di calendario:  
   
 ```  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 88409278-4f8a-4f1f-8730-e602866dbb36
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cb5c593d07d0df235fb173c02229bcf784847306
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00bcf528f8f2c9a1541016d716d9d41c2ea7ee62
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081744"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528583"
 ---
 # <a name="dimension-structure-dimension-designer-analysis-services---multidimensional-data"></a>Struttura dimensione (Progettazione dimensioni) (Analysis Services – Dati multidimensionali)
   Utilizzare la pagina **Struttura dimensione** in Progettazione dimensioni per modificare gli attributi, le gerarchie e i livelli della dimensione selezionata. La pagina **Struttura dimensione** contiene una barra degli strumenti e tre riquadri.  
@@ -40,10 +39,10 @@ ms.locfileid: "66081744"
  [Gerarchie](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)  
  Utilizzare il riquadro **Gerarchie** per gestire le gerarchie e i livelli relativi alla dimensione.  
   
- [Attributi](attributes-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Attributes (Attributi)](attributes-dimension-designer-analysis-services-multidimensional-data.md)  
  Utilizzare il riquadro **Attributi** per esplorare e gestire attributi per una dimensione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Progettazione dimensioni &#40;Analysis Services-Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
  [Dimensioni &#40;Analysis Services Dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  

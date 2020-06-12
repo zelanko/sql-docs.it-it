@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 67dacf68-9ab7-4524-8698-844d0f6e6c6d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 067348432bc7a460b4dbf39444852e14c7ef2ce5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bfd8e0dcb72850dccb2cc6840f3e68baf37528b1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493899"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543090"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>Ordinamento dei membri dell'attributo in base a un attributo secondario
   Nella lezione 3 è stato illustrato l'ordinamento dei membri dell'attributo in base al nome o al valore di chiave. È stato inoltre descritto come utilizzare una chiave composta del membro per influire sui membri dell'attributo e sul tipo di ordinamento. Per altre informazioni, vedere [Modifica della dimensione Date](lesson-3-4-modifying-the-date-dimension.md). Tuttavia, se il nome o la chiave dell'attributo non forniscono il tipo di ordinamento desiderato, è possibile utilizzare un attributo secondario per ottenere i risultati richiesti. Definendo una relazione tra gli attributi, è possibile utilizzare il secondo attributo per ordinare i membri del primo attributo.  

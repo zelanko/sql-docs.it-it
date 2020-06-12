@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 15459396-83c9-48a0-b10a-99ae38768c79
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8293bb8d1f0465d09b296cbd18702b569f073766
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5299599a2431d68e3ea13370f51aceef58efaf14
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078225"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542233"
 ---
 # <a name="lesson-8-defining-actions"></a>Lezione 8: Definizione di azioni
   In questa lezione verranno descritte le procedure per definire le azioni del progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Un'azione è semplicemente un'istruzione MDX (Multidimensional Expressions) archiviata in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , che può essere incorporata in applicazioni client e avviata da un utente.  
@@ -50,7 +49,7 @@ ms.locfileid: "66078225"
 ## <a name="next-lesson"></a>Lezione successiva  
  [Lezione 9: Definizione di prospettive e traduzioni](lesson-9-defining-perspectives-and-translations.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Scenario di Analysis Services Tutorial](analysis-services-tutorial-scenario.md)   
  [Esercitazione di modellazione multidimensionale &#40;Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Azioni &#40;Analysis Services Dati multidimensionali&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   

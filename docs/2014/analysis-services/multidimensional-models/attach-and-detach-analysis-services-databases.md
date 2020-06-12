@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4447f58baaa5ea88a48c67a9a32fcda77681d8d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a0c62698f1aed231128803cb91c80264a2fbdbf4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077491"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544833"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Collegamento e scollegamento di database di Analysis Services
-  Spesso, un amministratore di database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vuole portare un database offline per un determinato periodo e quindi riportarlo online nella stessa istanza del server o in una diversa. Queste situazioni spesso sono determinate da esigenze aziendali, ad esempio lo spostamento del database in un disco diverso per migliorare le prestazioni, la necessità di ottenere più spazio per la crescita del database oppure per aggiornare un prodotto. Per tutti questi e altri casi, i `Attach` comandi `Detach` e consentono all' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] amministratore di database di portare il database offline e di riportarlo online con scarso sforzo.  
+  Spesso, un amministratore di database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vuole portare un database offline per un determinato periodo e quindi riportarlo online nella stessa istanza del server o in una diversa. Queste situazioni spesso sono determinate da esigenze aziendali, ad esempio lo spostamento del database in un disco diverso per migliorare le prestazioni, la necessità di ottenere più spazio per la crescita del database oppure per aggiornare un prodotto. Per tutti questi e altri casi, i `Attach` `Detach` comandi e consentono all' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] amministratore di database di portare il database offline e di riportarlo online con scarso sforzo.  
   
 ## <a name="attach-and-detach-commands"></a>Comandi Attach e Detach  
  Il comando `Attach` consente di portare online un database in precedenza portato offline. È possibile collegare il database all'istanza del server originale o a un'altra istanza. Quando si collega un database, l'utente può specificare l'impostazione **ReadWriteMode** per il database. Il comando `Detach` consente di portare un database offline dal server.  
@@ -48,7 +47,7 @@ ms.locfileid: "66077491"
 |--------------------------------------|-------------------------------------|  
 |1) Il server invia una richiesta per un blocco CommitExclusive sul database<br />2) Il server attende il commit o il rollback di tutte le transazioni in corso<br />3) Il server compila tutti i metadati necessari per scollegare il database<br />4) Il database viene contrassegnato come eliminato<br />5) Il server esegue il commit della transazione|1) Il database viene contrassegnato come eliminato<br />2) Il server esegue il commit della transazione<br /><br /> <br /><br /> Nota: la password di scollegamento non può essere modificata per un database di sola lettura. Se viene fornito il parametro password per un database collegato che contiene già una password, verrà generato un errore.|  
   
- I comandi `Attach` e `Detach` devono essere eseguiti come singole operazioni. Non possono essere combinati con altre operazioni nella stessa transazione. Inoltre, i `Attach` comandi `Detach` e sono comandi transazionali atomici. ovvero l'operazione avrà esito positivo o negativo. Nessun database verrà lasciato in uno stato incompleto.  
+ I comandi `Attach` e `Detach` devono essere eseguiti come singole operazioni. Non possono essere combinati con altre operazioni nella stessa transazione. Inoltre, i `Attach` `Detach` comandi e sono comandi transazionali atomici. ovvero l'operazione avrà esito positivo o negativo. Nessun database verrà lasciato in uno stato incompleto.  
   
 > [!IMPORTANT]  
 >  Per eseguire il comando `Detach`, sono necessari privilegi di amministratore del database o di amministratore del server.  
@@ -56,7 +55,7 @@ ms.locfileid: "66077491"
 > [!IMPORTANT]  
 >  Per eseguire il comando `Attach`, sono necessari privilegi di amministratore del server.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Spostare un database di Analysis Services](move-an-analysis-services-database.md)   

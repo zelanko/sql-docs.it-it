@@ -1,5 +1,6 @@
 ---
 title: Utilizzo del caricamento bulk di SQLXML nell'ambiente .NET
+description: Informazioni su come utilizzare l'oggetto COM SQLXML 4,0 per il caricamento bulk nell'ambiente .NET per eseguire il caricamento bulk dei dati XML in un database.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5800c6323408f7b018021c041fbba17d2e8f6b89
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d60df5334b34061138852340e56876057e398c79
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252444"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529828"
 ---
 # <a name="sqlxml-40-net-framework-support---using-bulk-load"></a>Supporto SQLXML 4.0 per .NET Framework - Uso del caricamento bulk
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -115,7 +116,7 @@ ms.locfileid: "75252444"
   
 6.  Scegliere **Aggiungi riferimento**dal menu **progetto** .  
   
-7.  Nella scheda **com** selezionare la **libreria dei tipi Microsoft SQLXML Bulkload 4,0** (xblkld4. dll) e fare clic su **OK**. Viene visualizzato l'assembly **Interop. SQLXMLBULKLOADLib** creato nel progetto.  
+7.  Nella scheda **com** selezionare **Microsoft SQLXML Bulkload 4,0 Type Library** (xblkld4.dll) e fare clic su **OK**. Viene visualizzato l'assembly **Interop. SQLXMLBULKLOADLib** creato nel progetto.  
   
 8.  Sostituire il metodo Main() con il codice seguente. Aggiornare la proprietà **ConnectionString** e il percorso del file allo schema e ai file di dati.  
   

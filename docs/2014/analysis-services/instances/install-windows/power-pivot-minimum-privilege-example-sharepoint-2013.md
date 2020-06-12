@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: c1e09e6c-52d3-48ab-8c70-818d5d775087
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 147664030dd6e52c4bfaf17efd6fa7aea35d53ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b00bbdf6063bc0451244792ee423825b4f74cc40
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782774"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543863"
 ---
 # <a name="example-of-a-minimum-privilege-configuration-for-powerpivot-for-sharepoint-2013"></a>Esempio di una configurazione con privilegi minimi per PowerPivot per SharePoint 2013
   In questo argomento viene illustrata una configurazione di esempio di PowerPivot per SharePoint 2013 con privilegi minimi. Nella configurazione viene utilizzato un account diverso per ognuno dei tre componenti e ogni account dispone del livello minimo di privilegi.  
   
 ## <a name="summary-of-accounts"></a>Riepilogo degli account  
- PowerPivot per SharePoint 2013 supporta l'utilizzo dell'account Servizio di rete per l'account del servizio Analysis Services. L'account Servizio di rete non è supportato con SharePoint 2010. Per ulteriori informazioni sugli account del servizio, vedere [configurare account di servizio e autorizzazioni di Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (https://msdn.microsoft.com/library/ms143504.aspx).  
+ PowerPivot per SharePoint 2013 supporta l'utilizzo dell'account Servizio di rete per l'account del servizio Analysis Services. L'account Servizio di rete non è supportato con SharePoint 2010. Per ulteriori informazioni sugli account del servizio, vedere [configurare account di servizio e autorizzazioni di Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) ( https://msdn.microsoft.com/library/ms143504.aspx) .  
   
  Nella tabella seguente sono riepilogati i tre account utilizzati nell'esempio di configurazione con privilegi minimi.  
   

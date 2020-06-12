@@ -14,12 +14,12 @@ ms.reviewer: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a2b398a9910926ca2ced339395feaf938c31d519
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96d63f314fd72ba91985d8e2f16759ef05ed9fc2
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67412702"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859253"
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>Attività Pulizia contenuto cronologia (Piano di manutenzione)
 
@@ -27,7 +27,7 @@ ms.locfileid: "67412702"
   
  Questa istruzione usa le istruzioni **sp_purge_jobhistory** e **sp_delete_backuphistory** .  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco elementi dell'interfaccia utente  
  **Connection**  
  Consente di selezionare la connessione server da utilizzare per l'esecuzione dell'attività.  
   

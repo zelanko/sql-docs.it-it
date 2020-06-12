@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a9d83baaecbfdba3612acbdcf7a80c9093aac519
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f67384dc44710cc71ae30b8a558746410171dcbb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073285"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545823"
 ---
 # <a name="processing-analysis-services-objects"></a>Elaborazione di oggetti di Analysis Services
-  L'elaborazione influiscono [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sui tipi di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oggetti seguenti: database, cubi, dimensioni, gruppi di misure, partizioni e strutture e modelli data mining. Per ogni tipo di oggetto è possibile specificare il livello di elaborazione o impostare l'opzione Elaborazione predefinita in modo che [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] selezioni automaticamente il livello di elaborazione ottimale. Per altre informazioni sui diversi livelli di elaborazione per ogni oggetto, vedere [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md).  
+  L'elaborazione influiscono sui [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tipi di oggetti seguenti: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database, cubi, dimensioni, gruppi di misure, partizioni e strutture e modelli data mining. Per ogni tipo di oggetto è possibile specificare il livello di elaborazione o impostare l'opzione Elaborazione predefinita in modo che [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] selezioni automaticamente il livello di elaborazione ottimale. Per altre informazioni sui diversi livelli di elaborazione per ogni oggetto, vedere [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md).  
   
  È importante conoscere le conseguenze dell'elaborazione per ridurre l'occorrenza di ripercussioni negative. Ad esempio, l'elaborazione completa di una dimensione imposta automaticamente tutte le partizioni dipendenti da tale dimensione su uno stato di non elaborazione. In tal modo i cubi interessati diventano non disponibili per l'esecuzione di query fino all'elaborazione delle partizioni dipendenti.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66073285"
 ##  <a name="processing-a-dimension"></a><a name="bkmk_procdim"></a>Elaborazione di una dimensione  
  Quando si elabora una dimensione, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] formula ed esegue query su tabelle delle dimensioni per restituire le informazioni necessarie per l'elaborazione.  
   
-|Country|Sales Region|State|  
+|Paese|Sales Region|State|  
 |-------------|------------------|-----------|  
 |Stati Uniti|West|California|  
 |Stati Uniti|West|Oregon|  
@@ -92,7 +91,7 @@ ms.locfileid: "66073285"
   
  Per altre informazioni sull'elaborazione di strutture e modelli di data mining, vedere [Requisiti e considerazioni sull'elaborazione &#40;Data mining&#41;](../data-mining/processing-requirements-and-considerations-data-mining.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Strumenti e approcci per l'elaborazione di &#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
  [Elaborazione batch &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
  [Elaborazione di oggetti del modello multidimensionale](processing-a-multidimensional-model-analysis-services.md)  

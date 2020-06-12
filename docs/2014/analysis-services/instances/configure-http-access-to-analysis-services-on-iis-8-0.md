@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8431de73b450179592bda39066c72550991a393c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0537d9e23eaf77cb1645de9ac7e0fb8fe49e4af3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79217082"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544063"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>Configurare l'accesso HTTP ad Analysis Services in Internet Information Services (IIS) 8.0
   In questo articolo viene illustrato come configurare un endpoint HTTP per l'accesso a un'istanza di Analysis Services. È possibile abilitare l'accesso HTTP configurando MSMDPUMP.dll, un'estensione ISAPI che viene eseguita in IIS (Internet Information Services) e che consente di eseguire attività di data pump da applicazioni client a un server Analysis Services e viceversa. Questo approccio fornisce un'alternativa per la connessione ad Analysis Services se per le soluzioni Business Intelligence in uso sono richieste le funzionalità seguenti:  
@@ -52,7 +51,7 @@ ms.locfileid: "79217082"
   
 -   [Testare la configurazione](#bkmk_test)  
   
-##  <a name="overview"></a>Panoramica di <a name="bkmk_overview"></a>  
+##  <a name="overview"></a><a name="bkmk_overview"></a> Panoramica  
  MSMDPUMP è un'estensione ISAPI che viene caricata in IIS e fornisce il reindirizzamento a un'istanza di Analysis Services locale o remota. Configurando l'estensione ISAPI, viene creato un endpoint HTTP a un'istanza di Analysis Services.  
   
  Per ogni endpoint HTTP è necessario creare e configurare una directory virtuale. A ogni endpoint dovrà essere associato un proprio set di file MSMDPUMP, per ogni istanza di Analysis Services a cui si desidera effettuare la connessione. In un file di configurazione in questo set di file viene specificato il nome dell'istanza di Analysis Services utilizzata per ciascun endpoint HTTP.  
@@ -78,17 +77,17 @@ ms.locfileid: "79217082"
   
  Nella configurazione predefinita di IIS 8.0 mancano componenti necessari per l'accesso HTTP ad Analysis Services. Questi componenti, disponibili nelle aree funzionali **Sicurezza** e **Sviluppo di applicazioni** del ruolo **Server Web (IIS)** , sono i seguenti:  
   
--   **Sicurezza** | **autenticazione di Windows**o **autenticazione di base**e qualsiasi altra funzionalità di sicurezza necessaria per lo scenario di accesso ai dati.  
+-   **Sicurezza**  |  **Autenticazione di Windows**o **autenticazione di base**e qualsiasi altra funzionalità di sicurezza necessaria per lo scenario di accesso ai dati.  
   
--   **Application Development** | **CGI** per lo sviluppo di applicazioni  
+-   **Sviluppo**  |  di applicazioni **CGI**  
   
--   **Application Development** | **Estensioni ISAPI** per lo sviluppo di applicazioni  
+-   **Sviluppo**  |  di applicazioni **Estensioni ISAPI**  
   
- Per verificare o aggiungere questi componenti, usare **Server Manager** | **Gestisci** | **Aggiungi ruoli e funzionalità**. Eseguire la procedura guidata fino a **Ruoli server**. Scorrere fino a **Server Web (IIS)**.  
+ Per verificare o aggiungere questi componenti, usare **Server Manager**  |  **Gestisci**  |  **Aggiungi ruoli e funzionalità**. Eseguire la procedura guidata fino a **Ruoli server**. Scorrere fino a **Server Web (IIS)**.  
   
-1.  Aprire | **sicurezza** **server Web**e scegliere i metodi di autenticazione.  
+1.  Aprire **sicurezza server Web**  |  **Security** e scegliere i metodi di autenticazione.  
   
-2.  Aprire **Web Server** | **sviluppo applicazioni** server Web e scegliere **CGI** ed **estensioni ISAPI**.  
+2.  Aprire **Web Server**  |  **sviluppo applicazioni** server Web e scegliere **CGI** ed **estensioni ISAPI**.  
   
      ![Pagina Aggiungi funzionalità del ruolo server Web](../media/ssas-httpaccess-isapicgi.png "Pagina Aggiungi funzionalità del ruolo server Web")  
   
@@ -112,21 +111,21 @@ ms.locfileid: "79217082"
   
  È necessario formattare l'unità per il file system NTFS. Il percorso della cartella creata non deve contenere spazi.  
   
-1.  Copiare i file seguenti, disponibili in \<unità>: \programmi\microsoft SQL Server\\<istanza\>\OLAP\bin\isapi: msmdpump. DLL, MSMDPUMP. INI e una cartella Resources.  
+1.  Copiare i file seguenti, disponibili in \<drive> : \programmi\microsoft SQL Server \\<instance \> \OLAP\bin\isapi: MSMDPUMP.DLL, MSMDPUMP.INI e una cartella Resources.  
   
      ![Esplora file con i file da copiare](../media/ssas-httpaccess-msmdpumpfilecopy.PNG "Esplora file con i file da copiare")  
   
-2.  Nel server Web creare una nuova cartella: \<unità>: \Inetpub\Wwwroot\\**OLAP**  
+2.  Nel server Web creare una nuova cartella: \<drive> : \Inetpub\Wwwroot \\ **OLAP**  
   
 3.  Incollare i file copiati in precedenza in questa nuova cartella.  
   
 4.  Verificare che nella cartella \inetpub\wwwroot\OLAP nel server Web siano contenuti i file MSMDPUMP.DLL, MSMDPUMP.INI e una cartella Resources. La struttura di cartelle dovrebbe essere simile alla seguente:  
   
-    -   \<> unità: \inetpub\wwwroot\OLAP\MSMDPUMP.dll  
+    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.dll  
   
-    -   \<> unità: \inetpub\wwwroot\OLAP\MSMDPUMP.ini  
+    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
-    -   \<> unità: \inetpub\wwwroot\OLAP\Resources  
+    -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
   
 ##  <a name="step-2-create-an-application-pool-and-virtual-directory-in-iis"></a><a name="bkmk_appPool"></a> Passaggio 2: Creare un pool di applicazioni e una directory virtuale in IIS  
  Successivamente, creare un pool di applicazioni e un endpoint al data pump.  
@@ -215,7 +214,7 @@ ms.locfileid: "79217082"
   
      ![Icona del mapping gestori nella pagina delle funzionalità](../media/ssas-httpaccess-handlermapping.png "Icona del mapping gestori nella pagina delle funzionalità")  
   
-7.  Fare clic con il pulsante destro del mouse in un punto qualsiasi della pagina e selezionare **Aggiungi mapping di script**. Nella finestra di dialogo Aggiungi mapping di script specificare ** \*. dll** come percorso della richiesta, specificare c:\inetpub\wwwroot\OLAP\msmdpump.dll come file eseguibile e digitare **OLAP** come nome. Mantenere tutte le restrizioni predefinite associate a questo mapping di script.  
+7.  Fare clic con il pulsante destro del mouse in un punto qualsiasi della pagina e selezionare **Aggiungi mapping di script**. Nella finestra di dialogo Aggiungi mapping di script specificare ** \* . dll** come percorso della richiesta, specificare c:\inetpub\wwwroot\OLAP\msmdpump.dll come file eseguibile e digitare **OLAP** come nome. Mantenere tutte le restrizioni predefinite associate a questo mapping di script.  
   
      ![Schermata della finestra di dialogo Aggiungi mapping di script](../media/ssas-httpaccess-addscript.png "Schermata della finestra di dialogo Aggiungi mapping di script")  
   
@@ -237,16 +236,16 @@ ms.locfileid: "79217082"
   
 ```  
   
- Se l'istanza di Analysis Services per la quale si configura l'accesso HTTP si trova sul computer locale e viene installata come predefinita, non esiste alcun motivo per modificare questa impostazione. In caso contrario, è necessario specificare il nome del server ( \<ad esempio nomeserver>ADWRKS\<-SRV01/ServerName>). Per un server installato come istanza denominata, assicurarsi di aggiungere il nome dell'istanza (ad esempio, \<ServerName>ADWRKS-SRV01\Tabular\</ServerName>).  
+ Se l'istanza di Analysis Services per la quale si configura l'accesso HTTP si trova sul computer locale e viene installata come predefinita, non esiste alcun motivo per modificare questa impostazione. In caso contrario, è necessario specificare il nome del server (ad esempio, \<ServerName> ADWRKS-SRV01 \</ServerName> ). Per un server installato come istanza denominata, assicurarsi di aggiungere il nome dell'istanza (ad esempio, \<ServerName> ADWRKS-SRV01\Tabular \</ServerName> ).  
   
  Per impostazione predefinita, Analysis Services è in ascolto sulla porta TCP/IP 2383. Se è stato installato Analysis Services come istanza predefinita, non è necessario specificare alcuna porta in \<ServerName> perché Analysis Services SA come restare in ascolto sulla porta 2383 automaticamente. Tuttavia, è necessario consentire connessioni in ingresso per tale porta in Windows Firewall. Per altre informazioni, vedere [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
- Se è stata configurata un'istanza denominata o predefinita di Analysis Services per restare in attesa su una porta fissa, è necessario aggiungere il numero di porta al nome \<del server (ad esempio, servername\<>AW-SRV01:55555/ServerName>) ed è necessario consentire le connessioni in ingresso in Windows Firewall a tale porta.  
+ Se è stata configurata un'istanza denominata o predefinita di Analysis Services per restare in attesa su una porta fissa, è necessario aggiungere il numero di porta al nome del server (ad esempio, \<ServerName> AW-SRV01:55555 \</ServerName> ) ed è necessario consentire le connessioni in ingresso in Windows Firewall a tale porta.  
   
 ## <a name="step-5-grant-data-access-permissions"></a>Passaggio 5: Concedere le autorizzazioni di accesso ai dati  
  Come indicato in precedenza, sarà necessario concedere le autorizzazioni nell'istanza di Analysis Services. A ogni oggetto di database verranno assegnati ruoli mediante i quali viene fornito un livello specificato di autorizzazioni (lettura o lettura/scrittura) e ogni ruolo disporrà di membri costituiti da identità utente di Windows.  
   
- Per impostare le autorizzazioni è possibile utilizzare SQL Server Management Studio. Nella cartella **Database** | **ruoli** del database è possibile creare ruoli, specificare le autorizzazioni del database, assegnare l'appartenenza agli account di gruppo o utente di Windows, quindi concedere le autorizzazioni di lettura o scrittura per oggetti specifici. In genere, le autorizzazioni di **lettura** per un cubo sono sufficienti per le connessioni client, mediante le quali vengono usati, ma non aggiornati, i dati del modello.  
+ Per impostare le autorizzazioni è possibile utilizzare SQL Server Management Studio. Nella cartella **Database**  |  **ruoli** del database è possibile creare ruoli, specificare le autorizzazioni del database, assegnare l'appartenenza agli account di gruppo o utente di Windows, quindi concedere le autorizzazioni di lettura o scrittura per oggetti specifici. In genere, le autorizzazioni di **lettura** per un cubo sono sufficienti per le connessioni client, mediante le quali vengono usati, ma non aggiornati, i dati del modello.  
   
  L'assegnazione dei ruoli varia a seconda della modalità con cui è stata configurata l'autenticazione.  
   
@@ -261,7 +260,7 @@ ms.locfileid: "79217082"
 ##  <a name="step-6-test-your-configuration"></a><a name="bkmk_test"></a> Passaggio 6: Verificare la configurazione  
  La sintassi della stringa di connessione per MSMDPUMP è l'URL del MSMDPUMP.dll.  
   
- Se l'applicazione Web è in ascolto su una porta fissa, aggiungere il numero di porta al nome o all'indirizzo IP del server, `http://my-web-srv01:8080/OLAP/msmdpump.dll` ad `http://123.456.789.012:8080/OLAP/msmdpump.dll`esempio o.  
+ Se l'applicazione Web è in ascolto su una porta fissa, aggiungere il numero di porta al nome o all'indirizzo IP del server, ad esempio `http://my-web-srv01:8080/OLAP/msmdpump.dll` o `http://123.456.789.012:8080/OLAP/msmdpump.dll` .  
   
  Per testare la connessione in modo rapido, è possibile aprirne una usando Microsoft Excel o SQL Server Management Studio  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c589097f-ad29-4b97-8c7e-b8a910909c1a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f46a518acb4ba647b5b7bf5503ef76af7b6b90d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e9a2555511c422e5553662e2fcd292a5a2ec7c67
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072426"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541403"
 ---
 # <a name="working-with-analysis-services-projects-and-databases-in-a-production-environment"></a>Utilizzo di progetti e database di Analysis Services in un ambiente di produzione
   Dopo aver sviluppato e distribuito il database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dal progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , è necessario decidere come si desidera apportare modifiche agli oggetti del database distribuito. Alcune modifiche, ad esempio quelle relative ai ruoli di sicurezza, al partizionamento e alle impostazioni di archiviazione, possono essere apportate mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Altre modifiche, ad esempio l'aggiunta di attributi o gerarchie definite dall'utente, possono essere apportate soltanto usando [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]in modalità progetto o in modalità online.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 112696db-3838-4b50-91bd-d2ce5fa04ee5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74561047f149ae6a6bdcd0cd54347d842e49569f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5bfc4b3a0890ebf662fd5a4ac2697aa3c63464c6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079089"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543523"
 ---
 # <a name="defining-a-dimension"></a>Definizione di una dimensione
   Nell'attività seguente si utilizzerà la Creazione guidata dimensione per compilare una dimensione Date.  
@@ -45,13 +44,13 @@ ms.locfileid: "66079089"
   
     -   **English Month Name**  
   
-    -   **Calendar Quarter**  
+    -   **Trimestre di calendario**  
   
-    -   **Calendar Year**  
+    -   **Anno di calendario**  
   
     -   **Calendar Semester**  
   
-8.  Modificare l'impostazione della colonna **Tipo attributo** per l'attributo **Full Date Alternate Key** da **Regolare** a **Data**. A tale scopo, fare clic su **Regolare** nella colonna **Tipo attributo** . Fare quindi clic sulla freccia per espandere le opzioni. Quindi, fare clic su **date** > **Calendar** > **date**. Fare clic su **OK**. Ripetere questi passaggi per modificare il tipo di attributo per gli attributi seguenti:  
+8.  Modificare l'impostazione della colonna **Tipo attributo** per l'attributo **Full Date Alternate Key** da **Regolare** a **Data**. A tale scopo, fare clic su **Regolare** nella colonna **Tipo attributo** . Fare quindi clic sulla freccia per espandere le opzioni. Quindi, fare clic su **date**  >  **Calendar**  >  **date**. Fare clic su **OK**. Ripetere questi passaggi per modificare il tipo di attributo per gli attributi seguenti:  
   
     -   **English Month Name** in **Mese**  
   
@@ -74,7 +73,7 @@ ms.locfileid: "66079089"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Definizione di un cubo](lesson-2-2-defining-a-cube.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)   
  [Creare una dimensione utilizzando una tabella esistente](multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
  [Creare una dimensione utilizzando la Creazione guidata dimensione](multidimensional-models/create-a-dimension-using-the-dimension-wizard.md)  

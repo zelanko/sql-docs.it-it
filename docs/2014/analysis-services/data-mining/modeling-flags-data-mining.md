@@ -21,16 +21,15 @@ helpviewer_keywords:
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 37263c42e4e9f37b1b782dc07b8df03f77092b14
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f1c802f6503b84ff4f6879c18d3bffebb46d7ad
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083304"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521079"
 ---
 # <a name="modeling-flags-data-mining"></a>Flag di modellazione (data mining)
-  È possibile utilizzare i flag di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] modellazione in per fornire informazioni aggiuntive a un algoritmo di data mining sui dati definiti in una tabella del case. L'algoritmo può utilizzare tali informazioni per compilare un modello di data mining più accurato.  
+  È possibile utilizzare i flag di modellazione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per fornire informazioni aggiuntive a un algoritmo di data mining sui dati definiti in una tabella del case. L'algoritmo può utilizzare tali informazioni per compilare un modello di data mining più accurato.  
   
  Alcuni flag di modellazione sono definiti al livello della struttura di data mining, mentre altri al livello della colonna del modello di data mining. Ad esempio, il flag di modellazione `NOT NULL` viene utilizzato con le colonne della struttura di data mining. È possibile definire flag di modellazione aggiuntivi sulle colonne del modello di data mining, a seconda dell'algoritmo utilizzato per creare il modello.  
   

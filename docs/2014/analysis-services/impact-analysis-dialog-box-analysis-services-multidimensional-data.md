@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 208268eb-4e14-44db-9c64-6f74b776adb6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0c08690cd2f5b77471392cab3aad1587b4cb0f9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92c7e91e090b8e82e2844cf1999328c6ef7a8684
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080745"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544273"
 ---
 # <a name="impact-analysis-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Analisi di impatto (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Analisi di impatto** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per identificare ed eventualmente elaborare gli oggetti dipendenti sui quali influisce l'elaborazione degli oggetti elencati nella finestra di dialogo **Elabora** . Per visualizzare la finestra di dialogo **Analisi di impatto** , è possibile fare clic su **Analisi di impatto** nella finestra di dialogo **Elabora** .  
@@ -32,7 +31,7 @@ ms.locfileid: "66080745"
  **nome oggetto**  
  Visualizza il nome dell'oggetto dipendente che può essere necessario elaborare. L'icona a sinistra del nome indica il tipo di oggetto.  
   
- **Type**  
+ **Tipo**  
  Indica il tipo di oggetto dipendente che può essere necessario elaborare.  
   
  **Tipo impatto**  
@@ -50,7 +49,7 @@ ms.locfileid: "66080745"
  **Elabora oggetto**  
  Consente di selezionare gli oggetti dipendenti che si desidera includere nell'operazione di elaborazione. Sarà necessario elaborare gli oggetti dipendenti non selezionati al termine dell'operazione di elaborazione. In caso contrario, non sarà possibile utilizzarli.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Finestra di dialogo elabora &#40;Analysis Services-Dati multidimensionali&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
   

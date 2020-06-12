@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ce90f684-bb8c-4eca-b9e6-000794dbee16
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: daa647673653280bfc4cf52398751aedfd65b9c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cbec968f39b8a7cf6ebebaedf55161da2d3cb172
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083054"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520617"
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Proprietà delle strutture di data mining e delle colonne delle strutture di data mining
   Nella scheda **Struttura di data mining** della finestra di progettazione di data mining è possibile impostare o modificare le proprietà di una struttura di data mining e delle colonne e tabelle annidate associate. Le impostazioni delle proprietà eseguite in questa scheda vengono propagate in ogni modello di data mining associato alla struttura.  
@@ -43,9 +42,9 @@ ms.locfileid: "66083054"
 |**Regole di confronto**|Specifica le regole di confronto predefinite per la colonna. Se non specificato, vengono utilizzate le regole di confronto del server.|  
 |**Descrizione**|Descrive la struttura di data mining. È consigliabile che nella descrizione vengano specificati lo scopo e la composizione dei dati nella struttura.|  
 |**ErrorConfiguration (predefinita)**|Specifica le opzioni per la gestione speciale di errori, se presenti.|  
-|**HoldoutMaxCases**|Specifica il numero massimo di case della struttura che possono essere riservati come set di dati di test.  Se i valori vengono specificati per **HoldoutMaxCases** e **HoldoutPercent**, le condizioni vengono combinate.<br /><br /> Nota: per impostare questa proprietà, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve essere impostato su `KeepTrainingCases`.|  
-|**HoldoutPercent**|Specifica la percentuale dei case della struttura da riservare come set di dati di test. Se i valori vengono specificati per **HoldoutMaxCases** e **HoldoutPercent**, le condizioni vengono combinate.<br /><br /> Nota: per impostare questa proprietà, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve essere impostato su `KeepTrainingCases`.|  
-|**HoldoutSeed**|Specifica un valore per l'inizializzazione del partizionamento del set di test di controllo, per assicurare che il set di dati di test possa essere ricreato.<br /><br /> Nota: per impostare questa proprietà, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve essere impostato su `KeepTrainingCases`.|  
+|**HoldoutMaxCases**|Specifica il numero massimo di case della struttura che possono essere riservati come set di dati di test.  Se i valori vengono specificati per **HoldoutMaxCases** e **HoldoutPercent**, le condizioni vengono combinate.<br /><br /> Nota: per impostare questa proprietà, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve essere impostato su `KeepTrainingCases` .|  
+|**HoldoutPercent**|Specifica la percentuale dei case della struttura da riservare come set di dati di test. Se i valori vengono specificati per **HoldoutMaxCases** e **HoldoutPercent**, le condizioni vengono combinate.<br /><br /> Nota: per impostare questa proprietà, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve essere impostato su `KeepTrainingCases` .|  
+|**HoldoutSeed**|Specifica un valore per l'inizializzazione del partizionamento del set di test di controllo, per assicurare che il set di dati di test possa essere ricreato.<br /><br /> Nota: per impostare questa proprietà, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve essere impostato su `KeepTrainingCases` .|  
 |**ID**|Consente di visualizzare l'identificatore univoco della struttura di data mining.<br /><br /> Il nome assegnato alla struttura di data mining quando è stata creata viene utilizzato come ID. Se successivamente si modifica il nome digitando un nuovo valore per la proprietà `Name`, il nuovo nome viene utilizzato solo come alias. L'ID non viene modificato.|  
 |**Lingua**|Specifica la lingua delle didascalie della struttura di data mining.|  
 |`Name`|Specifica il nome o l'alias della struttura di data mining.<br /><br /> Se si modifica il valore della proprietà Name, il nuovo nome viene utilizzato solo come didascalia o alias. L'identificatore della struttura di data mining non viene modificato.|  
@@ -69,11 +68,11 @@ ms.locfileid: "66083054"
 |**NameColumn**|Identifica la colonna che fornisce il nome dell'elemento padre.|  
 |**origine**|Visualizza l'origine della colonna.<br /><br /> Per le origini dati relazionali, il valore è sempre **(nessuno)**.<br /><br /> Per le strutture basate su un cubo OLAP, il valore è l'istruzione MDX che definisce la sezione utilizzata come origine per la tabella nidificata.|  
 |**SourceMeasureGroup**|Visualizza l'origine del gruppo di misure.<br /><br /> Per le origini dati relazionali, il valore è sempre **(nessuno)**.<br /><br /> Per le strutture basate su un cubo OLAP, il valore è l'istruzione MDX che definisce la sezione utilizzata come origine per la tabella nidificata.|  
-|**Type**|Tipo di dati del contenuto della colonna.|  
+|**Tipo**|Tipo di dati del contenuto della colonna.|  
   
  Per altre informazioni sull'impostazione o sulla modifica delle proprietà, vedere [attività e procedure relative alla struttura di data mining](mining-structure-tasks-and-how-tos.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creare una struttura di data mining relazionale](create-a-relational-mining-structure.md)   
  [Colonne della struttura di data mining](mining-structure-columns.md)  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b45441ef-f909-4736-98b9-cc80d0acac99
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1e3b6dc676c11444c8dd45d1874f77942316a462
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d6101c8704579894590994d88e0286197148b694
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075494"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546913"
 ---
 # <a name="delete-a-data-source-in-solution-explorer-ssas-multidimensional"></a>Eliminare un'origine dati in Esplora soluzioni (SSAS multidimensionale)
   È possibile eliminare un oggetto origine dati per rimuoverlo definitivamente da un progetto di modello multidimensionale di Analysis Services.  
@@ -43,7 +42,7 @@ ms.locfileid: "66075494"
   
      Dopo l'eliminazione di un'origine dati da un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , è necessario salvare il progetto modificato. In caso contrario, alla successiva apertura del progetto verrà visualizzato un errore poiché il file XML sottostante per l'origine dati eliminata risulta mancante quando il progetto tenta di caricare tale origine dati.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Origini dati nei modelli multidimensionali](data-sources-in-multidimensional-models.md)   
  [Origini dati supportate &#40;SSAS multidimensionale&#41;](supported-data-sources-ssas-multidimensional.md)  
   

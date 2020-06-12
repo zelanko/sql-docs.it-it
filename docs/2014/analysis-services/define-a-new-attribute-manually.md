@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 554ea10e-b0b0-4987-add8-19113d824787
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6618a7c5023f140fdaee0b512c797c01586c62ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3739728631ae0273150c010600f099623bb98c2a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082342"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528889"
 ---
 # <a name="define-a-new-attribute-manually"></a>Definire manualmente un nuovo attributo
   In questa procedura viene descritto come creare un nuovo attributo in una dimensione utilizzando il riquadro **attributi** in Progettazione dimensioni.  
@@ -31,7 +30,7 @@ ms.locfileid: "66082342"
   
      Fare clic con il pulsante destro del mouse sul riquadro **attributi** , scegliere **Mostra attributi in**e quindi fare clic su **griglia**.  
   
-3.  Scorrere fino all'ultima riga della griglia e quindi fare clic su ** \<nuovo attributo>**.  
+3.  Scorrere fino all'ultima riga della griglia e quindi fare clic su **\<new attribute>** .  
   
 4.  Digitare un nome da assegnare all'attributo per impostare la proprietà `Name` e quindi premere INVIO.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "66082342"
   
 5.  Fare clic con il pulsante destro del mouse sull'attributo e quindi scegliere **Proprietà** per configurare le altre proprietà.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)   
  [Riferimento alle proprietà degli attributo delle dimensioni](multidimensional-models/dimension-attribute-properties-reference.md)  
   

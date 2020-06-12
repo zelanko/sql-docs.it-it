@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 365f89286a59057efa39b503eedaedebb875c039
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65f7c51f3bba2431ce78f6a9287aedeef0fff7b6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073645"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546083"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Unire partizioni in Analysis Services (SSAS - Multidimensionale)
   È possibile unire partizioni in un database [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esistente per consolidare i dati delle tabelle dei fatti da più partizioni dello stesso gruppo di misure.  
@@ -117,7 +116,7 @@ ms.locfileid: "66073645"
   
 1.  In Esplora oggetti espandere il nodo **Gruppi di misure** del cubo contenente le partizioni che si desidera unire, quindi espandere **Partizioni**e fare clic con il pulsante destro del mouse sulla partizione di destinazione dell'operazione di unione. Se ad esempio si spostano dati delle tabelle dei fatti trimestrali in una partizione in cui sono archiviati dati delle tabelle dei fatti annuali, selezionare la partizione che contiene i dati delle tabelle dei fatti annuali.  
   
-2.  Fare clic su **Unisci partizioni** per aprire la finestra di dialogo **Unisci nome partizione partizione \<>** .  
+2.  Fare clic su **Unisci partizioni** per aprire la finestra di dialogo **Unisci partizione \<partition name> ** .  
   
 3.  In **Partizioni di origine**selezionare la casella di controllo accanto a ogni partizione di origine che si desidera unire alla partizione di destinazione, quindi fare clic su **OK**.  
   
@@ -126,12 +125,12 @@ ms.locfileid: "66073645"
   
 4.  Fare clic con il pulsante destro del mouse sulla partizione che contiene i dati accumulati e scegliere **Proprietà**.  
   
-5.  Aprire la `Source` proprietà e modificare la clausola WHERE in modo che includa i dati della partizione appena Uniti. Ricordare che la `Source` proprietà non viene aggiornata automaticamente. Se si esegue la `Source`rielaborazione senza prima aggiornare, è possibile che non si ottengano tutti i dati previsti.  
+5.  Aprire la `Source` proprietà e modificare la clausola WHERE in modo che includa i dati della partizione appena Uniti. Ricordare che la `Source` proprietà non viene aggiornata automaticamente. Se si esegue la rielaborazione senza prima aggiornare `Source` , è possibile che non si ottengano tutti i dati previsti.  
   
 ##  <a name="how-to-merge-partitions-using-xmla"></a><a name="bkmk_partitionsXMLA"></a> Come unire partizioni mediante XMLA  
  Per informazioni, vedere l'argomento [Unione di partizioni &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Elaborazione di oggetti Analysis Services](processing-analysis-services-objects.md)   
  [Partizioni &#40;Analysis Services Dati multidimensionali&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Creare e gestire una partizione locale &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   

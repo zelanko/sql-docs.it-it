@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16af4a6f-18d4-496a-a304-7a13aa32ee76
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dcddeb64b14301f08a7dc723ef89737102f257ad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d0f0212795adcaed220806f8cc1349f95c2a6f3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070475"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539573"
 ---
 # <a name="query-sql-server-data-mining-add-ins"></a>Query (componenti aggiuntivi Data mining di SQL Server)
   ![Pulsante Query modello, barra multifunzione Data mining](media/dmc-query.gif "Pulsante Query modello, barra multifunzione Data mining")  
@@ -48,9 +47,9 @@ ms.locfileid: "66070475"
  In qualsiasi momento, è possibile fare clic su **Avanzate** per passare all' **Editor avanzato query di data mining**, che offre un maggiore controllo su ogni parte dell'istruzione DMX. Per ulteriori informazioni sull'utilizzo degli strumenti avanzati per la modifica delle query, vedere [Advanced Data mining query editor](advanced-data-mining-query-editor.md).  
   
 ### <a name="requirements"></a>Requisiti  
- Per utilizzare la procedura guidata **query** , è necessario essere connessi a un'istanza [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]di. Il server deve inoltre contenere almeno un modello di data mining di tipo appropriato. Se non è disponibile alcun modello di data mining, è possibile crearne uno con le procedure guidate incluse nel client di data mining per Excel. Per informazioni sulla creazione di una nuova modalità di data mining tramite una procedura guidata, vedere [creazione di un modello di data mining](creating-a-data-mining-model.md).  
+ Per utilizzare la procedura guidata **query** , è necessario essere connessi a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Il server deve inoltre contenere almeno un modello di data mining di tipo appropriato. Se non è disponibile alcun modello di data mining, è possibile crearne uno con le procedure guidate incluse nel client di data mining per Excel. Per informazioni sulla creazione di una nuova modalità di data mining tramite una procedura guidata, vedere [creazione di un modello di data mining](creating-a-data-mining-model.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Distribuzione e scalabilità di modelli di data mining &#40;componenti aggiuntivi Data mining per Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)   
  [Client di data mining per Excel &#40;SQL Server componenti aggiuntivi Data mining&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
   

@@ -12,17 +12,17 @@ ms.assetid: 69928b3e-53c8-4e6c-83a5-3dd3cf7ece7c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5afadecc745057344fd86df21b4479dabc1f7685
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c657b4670acaab008bafa24def05102938a99d0e
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068830"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858041"
 ---
 # <a name="set-advanced-properties-ssas"></a>Impostazione delle proprietà avanzate (SSAS)
   Questa pagina dell' **Importazione guidata tabella** consente di specificare ulteriori impostazioni delle proprietà per una connessione all'origine dati. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco elementi dell'interfaccia utente  
  **Provider**  
  Selezionare il provider da utilizzare per la connessione all'origine dati. Per connettersi a un'origine dati, è necessario che nel computer sia installato il provider appropriato.  
   

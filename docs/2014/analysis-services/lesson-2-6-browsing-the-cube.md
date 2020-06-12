@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3819946e-d3fa-4c1d-afe3-599c938b1b2e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 910bb7a425e62221dce932392e1aedfaa401a992
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 62d688230a43305ae0c652891213ba529a378e70
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078974"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543480"
 ---
 # <a name="browsing-the-cube"></a>Esplorazione del cubo
   Dopo aver distribuito un cubo, è possibile visualizzarne i dati nella scheda **Esplorazione** di Progettazione cubi, mentre i dati della dimensione possono essere visualizzati nella scheda **Esplorazione** di Progettazione dimensioni. L'esplorazione dei dati del cubo e delle dimensioni consente di controllare il lavoro in modo incrementale. È possibile verificare che le piccole modifiche a proprietà, relazioni e altri oggetti abbiano l'effetto desiderato dopo l'elaborazione dell'oggetto. Sebbene la scheda Esplorazione venga utilizzata per visualizzare sia i dati del cubo che quelli delle dimensioni, le funzionalità da essa fornite variano a seconda dell'oggetto visualizzato.  
@@ -41,7 +40,7 @@ ms.locfileid: "66078974"
 ## <a name="next-lesson"></a>Lezione successiva  
  [Lezione 3: Modifica di misure, attributi e gerarchie](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Editor di query MDX &#40;Analysis Services - Dati multidimensionali&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)  
   
   

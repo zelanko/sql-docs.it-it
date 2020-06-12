@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 422660b2-4d80-4165-b1c9-3963bcde556b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2c968cb8c75fc5f1fb8e77cc98d8c6a306a62115
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a903d73394b191dbfe96dea710fb2c6c86165402
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727275"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545233"
 ---
 # <a name="proactive-caching-partitions"></a>Memorizzazione nella cache attiva (partizioni)
   La memorizzazione nella cache attiva fornisce funzionalità automatiche di creazione e gestione della cache MOLAP per gli oggetti OLAP. I cubi incorporano immediatamente le modifiche apportate ai dati nel database, in base alle notifiche ricevute dal database. L'obiettivo della memorizzazione nella cache attiva consiste nel fornire le prestazioni della modalità MOLAP standard, garantendo l'immediatezza e la semplicità di gestione offerte da ROLAP.  
@@ -42,7 +41,7 @@ ms.locfileid: "62727275"
 ### <a name="maximizing-performance"></a>Ottimizzazione delle prestazioni  
  Per ottimizzare le prestazioni riducendo al tempo stesso la latenza, è inoltre possibile utilizzare la memorizzazione nella cache senza eliminare gli oggetti MOLAP correnti. Le query in questo caso continuano a essere eseguite sugli oggetti MOLAP mentre i dati vengono letti ed elaborati in una nuova cache. Questa modalità di archiviazione consente di ottenere prestazioni migliori, ma è possibile che i dati restituiti dalle query non siano aggiornati durante la fase di compilazione della nuova cache.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Archiviazione dimensioni](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   
  [Impostare l'archiviazione delle partizioni &#40;Analysis Services - Multidimensionale&#41;](../multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
   

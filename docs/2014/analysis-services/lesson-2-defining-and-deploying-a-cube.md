@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bb62e3c9-462f-4ad2-ac8e-92e2f9e9cc28
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 298f07b5a73e7dfd38ef8eef19893813d96e1892
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e149d5f7a6a8e14fbedc8e85ef31cbf42438b751
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078943"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543467"
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>Lezione 2: Definizione e distribuzione di un cubo
   Dopo aver definito una vista origine dati nel [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] progetto, si è pronti per definire un cubo iniziale [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -48,7 +47,7 @@ ms.locfileid: "66078943"
 ## <a name="next-lesson"></a>Lezione successiva  
  [Lezione 3: Modifica di misure, attributi e gerarchie](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Scenario di Analysis Services Tutorial](analysis-services-tutorial-scenario.md)   
  [Esercitazione di modellazione multidimensionale &#40;Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)   

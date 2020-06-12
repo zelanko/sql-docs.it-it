@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 58e44b24-cfcd-4908-b445-d4374b961b98
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 587b3ef7c784b48c1347276646d366eae5570c97
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 058248b5b2cb66a73124d8632ad6426ee9f3ad59
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077904"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541589"
 ---
 # <a name="measure-groups-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>Gruppi di misure (scheda Partizioni, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Usare il riquadro **Gruppi di misure** della scheda **Partizioni** di Progettazione cubi per gestire le partizioni associate a ogni gruppo di misure nel cubo.  
@@ -65,7 +64,7 @@ ms.locfileid: "66077904"
 |**Aggiungi funzionalità di Business Intelligence**|Fare clic su questa opzione per visualizzare la **Configurazione guidata funzionalità di Business Intelligence** e aggiungere funzionalità di Business Intelligence al cubo. Per altre informazioni sulla **Configurazione guidata funzionalità di Business Intelligence**, vedere [Guida sensibile al contesto della Configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md).|  
 |**Nuova partizione**|Fare clic per visualizzare la **Creazione guidata partizione** e creare una nuova partizione nel gruppo di misure selezionato.|  
 |**Rinomina partizione**|Selezionare questa opzione per rinominare la partizione selezionata.|  
-|**Elimina**|Fare clic per visualizzare la finestra di dialogo **Elimina oggetti** ed eliminare l'azione selezionata.<br /><br /> Nota: questa opzione è disabilitata se è stata selezionata una partizione writeback.|  
+|**Eliminazione**|Fare clic per visualizzare la finestra di dialogo **Elimina oggetti** ed eliminare l'azione selezionata.<br /><br /> Nota: questa opzione è disabilitata se è stata selezionata una partizione writeback.|  
 |**Progetta aggregazioni**|Fare clic per visualizzare la **Progettazione guidata aggregazioni** e creare una progettazione delle aggregazioni per la partizione selezionata.<br /><br /> Nota: questa opzione è disabilitata se è stata selezionata una partizione writeback.|  
 |**Impostazioni di archiviazione**|Fare clic per visualizzare la finestra di dialogo **Impostazioni di archiviazione** e specificare la modalità di archiviazione, la memorizzazione nella cache attiva e le impostazioni di notifica per la partizione selezionata.|  
 |**Impostazioni writeback**|Fare clic su questo pulsante per visualizzare la finestra di dialogo **Abilita/Disabilita writeback** e specificare le impostazioni writeback per il gruppo di misure contenente la partizione selezionata.|  

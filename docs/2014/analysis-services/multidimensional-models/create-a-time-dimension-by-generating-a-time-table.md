@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 58303326-1361-4c0e-9f3d-642ce69c4f6a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b54bfbdb03f6f2220cf66cb988456b2e6e6a0070
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: af1cc0c5838c942d8f04eb5246c9c1714d08d786
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076284"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536463"
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>Create a Time Dimension by Generating a Time Table
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]è possibile utilizzare la creazione guidata dimensione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per creare una dimensione temporale quando non sono disponibili tabelle temporali nel database di origine. È possibile eseguire questa operazione selezionando una delle opzioni seguenti nella pagina **Seleziona metodo di creazione** :  
+  In è [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] possibile utilizzare la creazione guidata dimensione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per creare una dimensione temporale quando non sono disponibili tabelle temporali nel database di origine. È possibile eseguire questa operazione selezionando una delle opzioni seguenti nella pagina **Seleziona metodo di creazione** :  
   
 -   Se si dispone delle autorizzazioni per creare oggetti nell'origine dati sottostante, utilizzare l'opzione**Genera una tabella dei tempi nell'origine dei dati** . La procedura guidata consente di generare una tabella dei tempi e di archiviare questa tabella nell'origine dati. La procedura guidata consente di creare la dimensione temporale dalla tabella dei tempi.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66076284"
 ## <a name="completing-the-dimension-wizard"></a>Completamento di Creazione guidata dimensione  
  Nella pagina **Completamento procedura guidata** controllare gli attributi e le gerarchie creati dalla procedura guidata e quindi assegnare un nome alla dimensione temporale. Fare clic su **Fine** per completare la procedura guidata e creare la dimensione. Dopo avere completato la dimensione, è possibile modificarla in Progettazione dimensioni.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Viste origine dati in modelli multidimensionali](data-source-views-in-multidimensional-models.md)   
  [Creare una dimensione di tipo data](database-dimensions-create-a-date-type-dimension.md)   
  [Proprietà delle dimensioni del database](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   

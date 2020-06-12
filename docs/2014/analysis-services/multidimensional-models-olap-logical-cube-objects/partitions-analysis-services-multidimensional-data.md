@@ -22,20 +22,19 @@ helpviewer_keywords:
 ms.assetid: cd10ad00-468c-4d49-9f8d-873494d04b4f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 47a7b4c2b11a6d17a52af20aef71ee13863ea29c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86057c14655b3fd2f0322387beb16a4a94717b68
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702622"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545263"
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>Partizioni (Analysis Services - Dati multidimensionali)
   Una partizione è un contenitore di una parte di dati dei gruppi di misure. Le partizioni non vengono individuate dalle query MDX. Tutte le query riflettono l'intero contenuto del gruppo di misure, indipendentemente dal numero di partizioni definite per esso. Il contenuto dei dati di una partizione è definito dalle associazioni di query della partizione e dall'espressione di sezionamento.  
   
  Un oggetto <xref:Microsoft.AnalysisServices.Partition> semplice è composto da informazioni di base, dalla definizione di sezionamento, dalla progettazione delle aggregazioni e altro. Le informazioni di base includono il nome della partizione, la modalità di archiviazione, la modalità di elaborazione e altro. La definizione di sezionamento è un'espressione MDX che specifica una tupla o un set. La definizione di sezionamento ha le stesse restrizioni della funzione MDX StrToSet. Se utilizzata con il parametro CONSTRAINED, la definizione di sezionamento può utilizzare nomi, chiavi e nomi univoci di membri, livelli, gerarchie e dimensioni e altri oggetti denominati nel cubo, ma non le funzioni MDX. La progettazione delle aggregazioni è una raccolta di definizioni di aggregazione che possono essere condivise tra più partizioni. L'impostazione predefinita deriva dalla progettazione delle aggregazioni del cubo padre.  
   
- Le partizioni vengono utilizzate [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] da per gestire e archiviare dati e aggregazioni per un gruppo di misure in un cubo. Ogni gruppo di misure dispone di almeno una partizione, che viene creata al momento della definizione del gruppo di misure. Quando si crea una nuova partizione, questa viene aggiunta al set di partizioni già esistenti per il gruppo di misure. Il gruppo di misure riflette i dati combinati di tutte le relative partizioni. È pertanto necessario verificare che i dati di una partizione in un gruppo di misure siano esclusivi rispetto ai dati di qualsiasi altra partizione nel gruppo di misure, in modo da garantire che i dati vengano riflessi nel gruppo di misure una sola volta. La partizione originale per un gruppo di misure si basa su un'unica tabella dei fatti nella vista origine dati del cubo. Se sono presenti più partizioni per lo stesso gruppo di misure, ogni partizione può fare riferimento a una tabella diversa nella vista origine dati oppure nell'origine dei dati relazionali sottostante per il cubo. È possibile che più partizioni in un gruppo di misure facciano riferimento alla stessa tabella, se ogni partizione viene limitata a righe diverse della tabella.  
+ Le partizioni vengono utilizzate da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per gestire e archiviare dati e aggregazioni per un gruppo di misure in un cubo. Ogni gruppo di misure dispone di almeno una partizione, che viene creata al momento della definizione del gruppo di misure. Quando si crea una nuova partizione, questa viene aggiunta al set di partizioni già esistenti per il gruppo di misure. Il gruppo di misure riflette i dati combinati di tutte le relative partizioni. È pertanto necessario verificare che i dati di una partizione in un gruppo di misure siano esclusivi rispetto ai dati di qualsiasi altra partizione nel gruppo di misure, in modo da garantire che i dati vengano riflessi nel gruppo di misure una sola volta. La partizione originale per un gruppo di misure si basa su un'unica tabella dei fatti nella vista origine dati del cubo. Se sono presenti più partizioni per lo stesso gruppo di misure, ogni partizione può fare riferimento a una tabella diversa nella vista origine dati oppure nell'origine dei dati relazionali sottostante per il cubo. È possibile che più partizioni in un gruppo di misure facciano riferimento alla stessa tabella, se ogni partizione viene limitata a righe diverse della tabella.  
   
  Le partizioni sono uno strumento potente e flessibile per la gestione dei cubi, soprattutto se di grandi dimensioni. Ad esempio, un cubo contenente informazioni relative alle vendite può includere una partizione per i dati di ogni anno passato e quattro partizioni per ogni trimestre dell'anno corrente. Quando vengono aggiunte informazioni correnti al cubo deve essere elaborata soltanto la partizione del trimestre corrente. L'elaborazione di una quantità inferiore di dati migliorerà le prestazioni dell'elaborazione riducendone i tempi. Alla fine dell'anno, è possibile unire le quattro partizioni relative ai trimestri in un'unica partizione relativa all'intero anno e creare una nuova partizione per il primo trimestre del nuovo anno. Questo processo di creazione di una nuova partizione può inoltre essere automatizzato nell'ambito delle procedure di caricamento di data warehouse e di elaborazione dei cubi.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "62702622"
 ## <a name="incremental-updates"></a>Aggiornamenti incrementali  
  Quando si creano e gestiscono partizioni in gruppi di misure con più partizioni, è necessario adottare alcune particolari precauzioni per garantire l'accuratezza dei dati del cubo. Sebbene tali precauzioni non siano in genere applicabili ai gruppi di misure con un'unica partizione, in caso di aggiornamento incrementale delle partizioni sono valide anche per questo tipo di gruppo. In caso di aggiornamento incrementale di una partizione, viene creata una nuova partizione temporanea con la stessa struttura della partizione di origine. La partizione temporanea viene elaborata e quindi unita alla partizione di origine. È pertanto necessario verificare che la query di elaborazione con cui viene popolata la partizione temporanea non determini la duplicazione di dati già presenti in una partizione esistente.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configura proprietà misura](../multidimensional-models/configure-measure-properties.md)   
  [Cubi nei modelli multidimensionali](../multidimensional-models/cubes-in-multidimensional-models.md)  
   

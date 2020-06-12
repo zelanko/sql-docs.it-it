@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d7e9edcba3a9645f1b327e698af2336b838915bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b28fb295525821aa2ee8fbbf07db16dc2d06286
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530834"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542103"
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>Lezione 9: Definizione di prospettive e traduzioni
   In questa lezione verranno descritte le procedure per definire prospettive e traduzioni. Le prospettive possono essere definite per ridurre la complessità evidente di un cubo e le traduzioni possono essere definite per consentire agli utenti di visualizzare i metadati di un cubo nella lingua di preferenza.  

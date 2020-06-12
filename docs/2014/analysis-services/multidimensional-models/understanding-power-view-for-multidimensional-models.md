@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 53c14ed48d2b95988b1d7d794e4ea711be659dd1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ddd54c22af1e7130940fb8ff3073de0821f4fc90
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79525462"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536023"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Informazioni su Power View per modelli multidimensionali
   Questo articolo descrive la funzionalità Power View per modelli multidimensionali di Microsoft SQL Server 2014 e fornisce importanti informazioni destinate agli amministratori e ai professionisti di business intelligence che intendono implementare Power View per modelli multidimensionali nelle relative organizzazioni.  
@@ -63,7 +62,7 @@ ms.locfileid: "79525462"
 |Misura senza gruppo di misure|In una tabella denominata Misure|  
 |Relazione gruppo di misure dimensione del cubo|Relazione|  
 |Prospettiva|Prospettiva|  
-|KPI|KPI|  
+|Indicatore KPI|Indicatore KPI|  
 |Gerarchie utente/padre-figlio|Gerarchia|  
 |Cartella di visualizzazione|Cartella di visualizzazione|  
   

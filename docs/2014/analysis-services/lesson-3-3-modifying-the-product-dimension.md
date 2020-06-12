@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8e3ffecd-7f40-41a8-8735-bc9858a310cb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ff912ed43048e00f0ed77989a46b3b7d0b111cff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a23a8ac9467d46190ba8222cf45af0961d9550d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078835"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543423"
 ---
 # <a name="modifying-the-product-dimension"></a>Modifica della dimensione Product
   Nelle attività di questo argomento si utilizzerà un calcolo denominato per fornire nomi più descrittivi per le linee di prodotti, si definirà una gerarchia nella dimensione Product e si specificherà il nome membro (Totale) per la gerarchia. Si raggrupperanno inoltre gli attributi in cartelle di visualizzazione.  
@@ -45,7 +44,7 @@ ms.locfileid: "66078835"
   
      Con questa istruzione **CASE** vengono creati nomi descrittivi per ogni linea di prodotti nel cubo.  
   
-5.  Fare clic su **OK** per `ProductLineName` creare il calcolo denominato. Potrebbe essere necessario attendere alcuni istanti.  
+5.  Fare clic su **OK** per creare il `ProductLineName` calcolo denominato. Potrebbe essere necessario attendere alcuni istanti.  
   
 6.  Scegliere **Salva tutti** dal menu **File**.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "66078835"
   
      Il campo NameColumn ora contiene il testo **Product.EnglishProductName (WChar)**.  
   
-8.  Nella Finestra Proprietà scorrere verso l'alto, fare clic sul campo della proprietà **nome** , quindi `Product Name`digitare.  
+8.  Nella Finestra Proprietà scorrere verso l'alto, fare clic sul campo della proprietà **nome** , quindi digitare `Product Name` .  
   
 ## <a name="creating-a-hierarchy"></a>Creazione di una gerarchia  
   
@@ -79,13 +78,13 @@ ms.locfileid: "66078835"
   
 1.  Trascinare l'attributo **Product Line** dal riquadro **Attributi** al riquadro **Gerarchie** .  
   
-2.  Trascinare l'attributo **Model Name** dal riquadro **attributi** al ** \<nuovo livello>** cella nel riquadro **gerarchie** , sotto il livello **Product Line** .  
+2.  Trascinare l'attributo **Model Name** dal riquadro **Attributi** alla cella **\<new level>** nel riquadro **Gerarchie** , sotto il livello **Product Line** .  
   
-3.  Trascinare l' `Product Name` attributo dal riquadro **attributi** al ** \<nuovo livello>** cella nel riquadro **gerarchie** , sotto il livello **nome modello** . L'attributo Product Key è stato rinominato in Product Name nella sezione precedente.  
+3.  Trascinare l' `Product Name` attributo dal riquadro **attributi** alla **\<new level>** cella nel riquadro **gerarchie** , sotto il livello del **nome del modello** . L'attributo Product Key è stato rinominato in Product Name nella sezione precedente.  
   
-4.  Nel riquadro **gerarchie** della scheda **Struttura dimensione** fare clic con il pulsante destro del mouse sulla barra del titolo della gerarchia **gerarchia** , scegliere **Rinomina**, quindi `Product Model Lines`digitare.  
+4.  Nel riquadro **gerarchie** della scheda **Struttura dimensione** fare clic con il pulsante destro del mouse sulla barra del titolo della gerarchia **gerarchia** , scegliere **Rinomina**, quindi digitare `Product Model Lines` .  
   
-     Il nome della gerarchia è ora `Product Model Lines`.  
+     Il nome della gerarchia è ora `Product Model Lines` .  
   
 5.  Scegliere **Salva tutti** dal menu **File**.  
   
@@ -111,9 +110,9 @@ ms.locfileid: "66078835"
   
     -   **Style**  
   
-    -   **Peso**  
+    -   **Weight**  
   
-2.  Nel campo della proprietà **AttributeHierarchyDisplayFolder** nel finestra Proprietà, digitare `Stocking`.  
+2.  Nel campo della proprietà **AttributeHierarchyDisplayFolder** nel finestra Proprietà, digitare `Stocking` .  
   
      Questi attributi sono stati ora raggruppati in un'unica cartella di visualizzazione.  
   
@@ -125,7 +124,7 @@ ms.locfileid: "66078835"
   
     -   **Standard Cost**  
   
-4.  Nella cella della proprietà **AttributeHierarchyDisplayFolder** del finestra Proprietà, digitare `Financial`.  
+4.  Nella cella della proprietà **AttributeHierarchyDisplayFolder** del finestra Proprietà, digitare `Financial` .  
   
      Questi attributi sono stati ora raggruppati in una seconda cartella di visualizzazione.  
   
@@ -133,17 +132,17 @@ ms.locfileid: "66078835"
   
     -   **Data di fine**  
   
-    -   **Data di inizio**  
+    -   **Data inizio**  
   
-    -   **Stato**  
+    -   **Status**  
   
-6.  Nella cella della proprietà **AttributeHierarchyDisplayFolder** del finestra Proprietà, digitare `History`.  
+6.  Nella cella della proprietà **AttributeHierarchyDisplayFolder** del finestra Proprietà, digitare `History` .  
   
      Questi attributi sono stati ora raggruppati in una terza cartella di visualizzazione.  
   
-7.  Selezionare la `Product Model Lines` gerarchia nel riquadro **gerarchie** , quindi modificare la proprietà **AllMemberName** nel finestra proprietà a `All Products`.  
+7.  Selezionare la `Product Model Lines` gerarchia nel riquadro **gerarchie** , quindi modificare la proprietà **AllMemberName** nel finestra proprietà a `All Products` .  
   
-8.  Fare clic su un'area aperta del riquadro **gerarchie** , quindi modificare la proprietà **AttributeAllMemberName** nella parte superiore del finestra proprietà a `All Products`.  
+8.  Fare clic su un'area aperta del riquadro **gerarchie** , quindi modificare la proprietà **AttributeAllMemberName** nella parte superiore del finestra proprietà a `All Products` .  
   
      Facendo clic su un'area libera è possibile modificare le proprietà della dimensione Product stessa. È inoltre possibile fare clic su **Product** nella parte superiore dell'elenco di attributi nel riquadro **Attributi** .  
   
@@ -174,14 +173,14 @@ ms.locfileid: "66078835"
   
 2.  Dopo la visualizzazione del messaggio **Distribuzione completata** , fare clic sulla scheda **Esplorazione** di **Progettazione dimensioni** per la dimensione **Product** , quindi fare clic sul pulsante Riconnetti sulla barra degli strumenti della finestra di progettazione.  
   
-3.  Verificare che `Product Model Lines` sia selezionato nell'elenco **gerarchia** , quindi espandere `All Products`.  
+3.  Verificare che `Product Model Lines` sia selezionato nell'elenco **gerarchia** , quindi espandere `All Products` .  
   
-     Si noti che il nome del membro **totale** viene visualizzato `All Products`come. Ciò è dovuto al fatto che la proprietà **AllMemberName** della gerarchia è `All Products` stata modificata in precedenza nella lezione. Inoltre, i membri del livello **Product Line** hanno ora nomi descrittivi anziché abbreviazioni costituite da una sola lettera.  
+     Si noti che il nome del membro **totale** viene visualizzato come `All Products` . Ciò è dovuto al fatto che la proprietà **AllMemberName** della gerarchia è stata modificata in `All Products` precedenza nella lezione. Inoltre, i membri del livello **Product Line** hanno ora nomi descrittivi anziché abbreviazioni costituite da una sola lettera.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Modifica della dimensione Date](lesson-3-4-modifying-the-date-dimension.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Definire calcoli denominati in una vista origine dati &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
  [Creazione di gerarchie definite dall'utente](multidimensional-models/user-defined-hierarchies-create.md)   
  [Configurare il livello &#40;Totale&#41; per le gerarchie di attributi](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  

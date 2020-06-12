@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e58ce1b7-20d6-42cb-ade5-916da8471e09
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 819a69ad9c1b1415726d816e2cbc1faa92bd6cd1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dde94a8d08bba3ea529c9edf3fde12ee0260a3f0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081936"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528737"
 ---
 # <a name="dependency-network-tab-mining-model-viewer"></a>Scheda Rete di dipendenze (Visualizzatore modello di data mining)
   La scheda **Rete di dipendenze** consente di visualizzare graficamente tutti gli attributi contenuti nel modello di dati mining e la relativa modalità di correlazione.  
@@ -63,7 +62,7 @@ ms.locfileid: "66081936"
   
  Una regola generale per tutti i tipi di modelli prevede che maggiore è l'attendibilità del collegamento, maggiore sarà l'attendibilità della relazione predittiva tra i due attributi.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 63b035bd0ce315ccf1334c53e7ee1718c7569dac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 066969ef47dbe72732d7ee873f162a6a1e5915d5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073670"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546093"
 ---
 # <a name="measures-and-measure-groups"></a>Misure e gruppi di misure
   Un cubo include *misure* in *gruppi di misure*, logica di business e una raccolta di dimensioni che forniscono il contesto per la valutazione dei dati numerici specificati da una misura. Misure e gruppi di misure sono componenti essenziali di un cubo. Un cubo non può esistere senza almeno una misura e un gruppo di misure.  
@@ -65,7 +64,7 @@ ms.locfileid: "66073670"
   
  Un oggetto <xref:Microsoft.AnalysisServices.MeasureGroup> semplice è composto da informazioni di base come nome del gruppo, modalità di archiviazione e modalità di elaborazione. Contiene inoltre le relative parti costituenti: misure, dimensioni e partizioni che formano la composizione del gruppo di misure.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Cubi nei modelli multidimensionali](cubes-in-multidimensional-models.md)   
  [Creare misure e gruppi di misure nei modelli multidimensionali](create-measures-and-measure-groups-in-multidimensional-models.md)  
   

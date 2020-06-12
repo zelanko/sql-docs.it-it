@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5fc8ba1a-2b30-4775-9b3b-c09dee711b3e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef23d99b4542880d9756bbdad2e5cfb368b4f43c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070323"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539363"
 ---
 # <a name="lesson-3-rename-columns"></a>Lezione 3: Rinominare colonne
   In questa lezione verranno rinominate numerose colonne di ogni tabella importata. La ridenominazione semplifica l'identificazione e l'esplorazione delle colonne, sia in Progettazione di modelli che da parte degli utenti che selezionano campi in un'applicazione client. Per altre informazioni, vedere [Rinominare una tabella o una colonna &#40;SSAS tabulare&#41;](tabular-models/rename-a-table-or-column-ssas-tabular.md).  
@@ -36,7 +35,7 @@ ms.locfileid: "66070323"
   
      Quando si fa clic su una scheda, tale tabella diventa attiva nella finestra di Progettazione modelli.  
   
-2.  Fare doppio clic sul nome della colonna **CustomerKey** , `Customer  Id`quindi digitare e premere INVIO.  
+2.  Fare doppio clic sul nome della colonna **CustomerKey** , quindi digitare `Customer  Id` e premere INVIO.  
   
     > [!TIP]  
     >  È inoltre possibile rinominare una colonna nella proprietà **nome colonna** nella finestra **Proprietà** della colonna o nella vista diagramma.  
@@ -59,13 +58,13 @@ ms.locfileid: "66070323"
     |YearlyIncome|Yearly Income|  
     |TotalChildren|Total Children|  
     |NumberChildrenAtHome|Number of Children At Home|  
-    |EnglishEducation|Formazione|  
+    |EnglishEducation|Education|  
     |EnglishOccupation|Occupation|  
     |HouseOwnerFlag|Owns House|  
     |NumberCarsOwned|Number of Cars Owned|  
     |AddressLine1|Address Line 1|  
     |AddressLine2|Address Line 2|  
-    |Telefono|Numero di telefono|  
+    |Layout|Numero di telefono|  
     |DateFirstPurchase|Date of First Purchase|  
     |CommuteDistance|Commute Distance|  
   
@@ -73,7 +72,7 @@ ms.locfileid: "66070323"
   
     |Nome origine|Nome descrittivo|  
     |-----------------|-------------------|  
-    |FullDateAlternateKey|Date|  
+    |FullDateAlternateKey|Data|  
     |DayNumberOfWeek|Day Number of Week|  
     |EnglishDayNameOfWeek|Day Name|  
     |DayNumberOfMonth|Day of Month|  

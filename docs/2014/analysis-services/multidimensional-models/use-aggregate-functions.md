@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c8d65325f8008756a65a584a2538b9d56ebd579
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83cdc571019cffd8ae99e00f119541736c6f503b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072721"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541283"
 ---
 # <a name="use-aggregate-functions"></a>Utilizzare le funzioni di aggregazione
   Quando una dimensione viene usata per sezionare una misura, la misura viene riepilogata in base alle gerarchie contenute in tale dimensione. Il comportamento della somma dipende dalla funzione di aggregazione specificata per la misura. Per la maggior parte delle misure contenenti dati numerici, la funzione di aggregazione è `Sum`. Il valore della misura sarà la somma di quantità diverse a seconda di quale sarà il livello della gerarchia attivo.  
   
- In Analysis Services, ogni misura creata è supportata da una funzione di aggregazione che determina l'operazione della misura. I tipi di aggregazione `Sum`predefiniti `Min`includono `Max`, `Count`,,, **Distinct Count**e molte altre funzioni più specializzate. In alternativa, se sono necessarie aggregazioni basate su formule complesse o personalizzate, è possibile creare un calcolo MDX anziché una funzione di aggregazione predefinita. Se ad esempio si vuole definire una misura per un valore percentuale, si procede in MDX, usando una misura calcolata. Vedere [Istruzione CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member).  
+ In Analysis Services, ogni misura creata è supportata da una funzione di aggregazione che determina l'operazione della misura. I tipi di aggregazione predefiniti includono `Sum` ,, `Min` `Max` , `Count` , **Distinct Count**e molte altre funzioni più specializzate. In alternativa, se sono necessarie aggregazioni basate su formule complesse o personalizzate, è possibile creare un calcolo MDX anziché una funzione di aggregazione predefinita. Se ad esempio si vuole definire una misura per un valore percentuale, si procede in MDX, usando una misura calcolata. Vedere [Istruzione CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member).  
   
  Le misure create tramite la Creazione guidata cubo vengono assegnate a un tipo di aggregazione come parte della definizione della misura. Il tipo di aggregazione è sempre `Sum`, supponendo che la colonna di origine contenga dati numerici. `Sum`viene assegnato a prescindere dal tipo di dati della colonna di origine. Se ad esempio si usa la Creazione guidata cubo per creare misure, e si inseriscono tutte le colonne di una tabella dei fatti, si noterà che tutte le misure risultanti presentano un'aggregazione di `Sum`, anche se l'origine è una colonna data e ora. Controllare sempre i metodi di aggregazione pre-assegnati per le misure create tramite la procedura guidata, per assicurarsi che la funzione di aggregazione sia adatta.  
   
@@ -66,7 +65,7 @@ ms.locfileid: "66072721"
   
  Una misura totale valori distinti con conteggio dei membri è basata su una colonna chiave esterna nella tabella dei fatti, identificata dalla proprietà **Colonna di origine** della misura. Questa colonna viene unita in join alla colonna della tabella della dimensione che identifica i membri conteggiati mediante la misura totale valori distinti.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Misure e gruppi di misure](measures-and-measure-groups.md)   
  [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](/sql/mdx/mdx-function-reference-mdx)   
  [Definire una funzione semiadditiva](define-semiadditive-behavior.md)  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6d835269f77e563b94c89c3a68c5c82844edc773
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e26faf2ef80f416858665893e14e405eab7254d6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493975"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543903"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>Configurare PowerPivot e distribuire soluzioni (SharePoint 2013)
   In questo argomento vengono descritte la distribuzione e la configurazione di miglioramenti di livello intermedio alle funzionalità di PowerPivot in [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] , tra cui la raccolta PowerPivot, la pianificazione dell'aggiornamento dati, il dashboard di gestione e i provider di dati. Eseguire lo strumento di **configurazione di PowerPivot per SharePoint 2013** per completare le operazioni seguenti:  
@@ -24,7 +23,7 @@ ms.locfileid: "69493975"
   
 -   Creare un'applicazione del servizio PowerPivot.  
   
--   Configurare un'applicazione Excel Services per l'utilizzo di un server [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in modalità SharePoint. Per informazioni sui servizi back-end e [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] sull'installazione di un server in modalità SharePoint, vedere la pagina relativa all' [installazione di PowerPivot per SharePoint 2013](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode).  
+-   Configurare un'applicazione Excel Services per l'utilizzo di un server [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in modalità SharePoint. Per informazioni sui servizi back-end e sull'installazione di un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server in modalità SharePoint, vedere la pagina relativa all' [installazione di PowerPivot per SharePoint 2013](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode).  
   
  Per informazioni sull'installazione dello strumento di configurazione PowerPivot per SharePoint 2013, vedere [installare o disinstallare il componente aggiuntivo PowerPivot per SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)  
   
@@ -79,7 +78,7 @@ ms.locfileid: "69493975"
  Per ulteriori informazioni, vedere [configurare o ripristinare PowerPivot per SharePoint 2010 &#40;strumento di configurazione PowerPivot&#41;](../../configure-repair-powerpivot-sharepoint-2010.md)  
   
 ##  <a name="verify-powerpivot-configuration"></a><a name="bkmk_verify_powerpivot"></a>Verificare la configurazione di PowerPivot  
- **Servizi**  
+ **Servizi:**  
   
 1.  In Impostazioni sistema di amministrazione centrale fare clic **su Gestisci servizi nel server**.  
   
@@ -134,7 +133,7 @@ ms.locfileid: "69493975"
   
 5.  Fare clic su **OK**.  
   
- Per ulteriori informazioni sui problemi relativi all'aggiornamento dei dati, vedere Risoluzione dei problemi relativihttps://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)all' [aggiornamento dati PowerPivot](https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (.  
+ Per ulteriori informazioni sui problemi relativi all'aggiornamento dei dati, vedere Risoluzione dei problemi relativi all' [aggiornamento dati PowerPivot](https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) ( https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) .  
   
  Per ulteriori informazioni sullo strumento di configurazione, vedere [PowerPivot Configuration Tools](../../power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   

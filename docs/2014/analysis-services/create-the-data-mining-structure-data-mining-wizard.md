@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d1ff17b2-fff3-4ed7-a5d6-42d131e59f93
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 812a08d00fca0b3a61f5cb038e1585fee08c06d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef28cbf1da24f9ed287037cb5e88377c3c82718a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086755"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526367"
 ---
 # <a name="create-the-data-mining-structure-data-mining-wizard"></a>Crea la struttura di data mining (Creazione guidata modello di data mining)
   Usare la pagina **Crea la struttura di data mining** per creare una struttura di data mining e facoltativamente un modello di data mining associato.  
@@ -42,7 +41,7 @@ ms.locfileid: "66086755"
  **Descrizione**  
  Visualizza una descrizione dell'algoritmo selezionato.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto della creazione guidata modello di data mining &#40;Analysis Services-&#41;di data mining](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Selezione vista origine dati &#40;creazione guidata modello di data mining&#41;](select-data-source-view-data-mining-wizard.md)   
  [Selezione metodo di definizione &#40;creazione guidata modello di data mining&#41;](select-the-definition-method-data-mining-wizard.md)  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d90a12f8-7bc3-4fdb-95a1-7c89058f0d9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 18bf54b7b97598c6c61d7e282ad5791d926cc25a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab9289705bbea8d1e2c21d5f5820746e58b48cc5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080760"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544293"
 ---
 # <a name="highlight-exceptions-table-analysis-tools-for-excel"></a>Evidenzia eccezioni (Strumenti di analisi tabelle per Excel)
   ![Pulsante Evidenzia eccezioni sulla barra multifunzione](media/tat-highlightex.gif "Pulsante Evidenzia eccezioni sulla barra multifunzione")  
@@ -39,7 +38,7 @@ ms.locfileid: "66080760"
   
 3.  Fare clic su **Esegui**.  
   
-4.  Aprire il foglio di> \<nome tabella outlier per visualizzare un riepilogo degli outlier trovati.  
+4.  Aprire il foglio di gioco intitolato \<table name> outlier per visualizzare un riepilogo degli outlier trovati.  
   
 5.  Per modificare il numero di evidenziazioni, fare clic sulle frecce verso l'alto e verso il basso nella riga **soglia eccezione** del **report evidenzia eccezioni**.  
   
@@ -80,7 +79,7 @@ ms.locfileid: "66080760"
   
  Per ulteriori informazioni sull'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering, vedere l'argomento "Algoritmo Microsoft Clustering" nella documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Strumenti di analisi tabelle per Excel](table-analysis-tools-for-excel.md)  
   
   

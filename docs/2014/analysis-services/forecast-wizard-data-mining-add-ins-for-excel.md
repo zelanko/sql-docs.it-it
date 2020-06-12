@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c5b33f75-42d4-4598-89e7-94815c142ce6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f0717d8a81cc89897de005144dd631d23da42137
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3c4d728f810da7abf96d1addc6ef91156a3d5ea
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081029"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544423"
 ---
 # <a name="forecast-wizard-data-mining-add-ins-for-excel"></a>Procedura guidata Previsione (componenti aggiuntivi Data mining per Excel)
   ![Procedura guidata Associazione sulla barra multifunzione Data mining](media/dmc-forecast.gif "Procedura guidata Associazione sulla barra multifunzione Data mining")  
@@ -41,7 +40,7 @@ ms.locfileid: "66081029"
   
 3.  Nella pagina **previsione** , per **timestamp**, selezionare una colonna contenente un valore numerico univoco (inclusi i valori di data e ora) che può essere utilizzata come serie di casi. L'origine dati deve essere ordinata in ordine crescente in base a questa colonna.  
   
-     Se i dati non includono colonne di questo tipo, è possibile usare l'opzione \<nessun timestamp>. Nella procedura guidata verrà aggiunta una colonna di ordinamento univoca per i dati di input; pertanto, è necessario assicurarsi che i dati vengano ordinati nel modo desiderato prima di eseguire la procedura guidata e di scegliere questa opzione.  
+     Se i dati non includono colonne di questo tipo, è possibile usare l'opzione \<no time stamp> . Nella procedura guidata verrà aggiunta una colonna di ordinamento univoca per i dati di input; pertanto, è necessario assicurarsi che i dati vengano ordinati nel modo desiderato prima di eseguire la procedura guidata e di scegliere questa opzione.  
   
 4.  Facoltativamente, è possibile fare clic su **parametri** e personalizzare il comportamento del modello di data mining.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "66081029"
   
  Se i dati non includono una colonna della data o dell'ora, è possibile assegnare una serie numerica arbitraria o crearne una mediante la procedura guidata. Se si crea la colonna di ordinamento della serie, verificare che le altre colonne vengano ordinate nell'ordine desiderato prima di avviare la procedura guidata.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di un modello di data mining](creating-a-data-mining-model.md)   
  [Strumenti di analisi tabelle di previsione &#40;per Excel&#41;](forecast-table-analysis-tools-for-excel.md)   
  [Esplorazione di un modello di previsione](browsing-a-forecasting-model.md)  

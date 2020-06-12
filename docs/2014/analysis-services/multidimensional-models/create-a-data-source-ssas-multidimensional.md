@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d78f2523e539d72f506d074d102507fca1d0a986
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0e7f387bb62f15acff8e3443e7e9fdc8888896e8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175920"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536701"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Crea un' origine dati (SSAS multidimensionale)
   In un modello multidimensionale di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] un oggetto di origine dati rappresenta una connessione all'origine dati dalla quale si elaborano o si importano dati. Un modello multidimensionale deve contenere almeno un oggetto di origine dati, tuttavia è possibile aggiungerne altri per combinare dati provenienti da diversi data warehouse. Utilizzare le istruzioni in questo argomento per creare un oggetto di origine dati per il modello. Per altre informazioni sull'impostazione delle proprietà per questo oggetto, vedere [Impostare le proprietà dell'origine dati &#40;SSAS multidimensionale&#41;](set-data-source-properties-ssas-multidimensional.md).  
@@ -82,11 +81,11 @@ ms.locfileid: "70175920"
   
      Il provider predefinito per una nuova connessione è il provider OLE DB nativo\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Questo provider viene usato per connettersi a un'istanza del motore di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite OLE DB. Per le connessioni a un database relazionale SQL Server, l'utilizzo di OLE DB nativo\SQL Server Native Client 11.0 è spesso più veloce dell'utilizzo di provider alternativi.  
   
-     È possibile scegliere un provider diverso per accedere ad altre origini dati. Per un elenco dei provider e dei database relazionali supportati da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vedere [origini dati supportate &#40;SSAS multidimensionale&#41;](supported-data-sources-ssas-multidimensional.md).  
+     È possibile scegliere un provider diverso per accedere ad altre origini dati. Per un elenco dei provider e dei database relazionali supportati da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vedere [origini dati supportate &#40;SSAS multidimensionale&#41;](supported-data-sources-ssas-multidimensional.md).  
   
 5.  Immettere le informazioni richieste dal provider selezionato per la connessione all'origine dei dati sottostante. In caso di selezione del provider **OLE DB nativo\SQL Server Native Client** , immettere le informazioni seguenti:  
   
-    1.  **Nome server** è il nome di rete dell'istanza del motore di database. Può essere specificato come l'indirizzo IP, il nome NETBIOS del computer, o un nome di dominio completo. Se il server è installato come istanza denominata, è necessario includere il nome dell'istanza (ad esempio, \<nomecomputer>\\<NomeIstanza\>).  
+    1.  **Nome server** è il nome di rete dell'istanza del motore di database. Può essere specificato come l'indirizzo IP, il nome NETBIOS del computer, o un nome di dominio completo. Se il server è installato come istanza denominata, è necessario includere il nome dell'istanza (ad esempio, \<computername> \\<NomeIstanza \> ).  
   
     2.  **Accesso al server** specifica la modalità di autenticazione della connessione. **Usa autenticazione di Windows** consente di usare l'autenticazione di Windows. **Usa autenticazione SQL Server** specifica un account di accesso utente del database per un database SQL di Azure o un'istanza di SQL Server che supporta l'autenticazione in modalità mista.  
   

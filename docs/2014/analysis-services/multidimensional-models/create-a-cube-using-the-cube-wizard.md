@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d46d659c-3a4e-4364-94ac-f5eb6ba0ec25
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7ffd5880120184249d89c4d702b30c8d6e01e1f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79a675d0d27c5bfe033075c92e7ed06aa9c914c5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076497"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536719"
 ---
 # <a name="create-a-cube-using-the-cube-wizard"></a>Creare un cubo mediante la Creazione guidata cubo
   È possibile creare un nuovo cubo usando la Creazione guidata cubo in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5193c976-9dcd-459c-abba-8c3c44e7a7f2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 535d1e05fc82882e0a2b5ea43ac9b2147e62338b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b60d721a69213ad52536830b49b40d6bb82a3811
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388010"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545923"
 ---
 # <a name="olap-engine-server-components"></a>Componenti del server del motore OLAP
-  Il componente server di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] è l'applicazione **msmdsrv. exe** , che viene eseguita come servizio Windows. Questa applicazione è costituita da componenti di sicurezza, un componente listener XML for Analysis (XMLA), un componente di elaborazione delle query e numerosi altri componenti interni che svolgono le funzioni seguenti:
+  Il componente server di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] è l'applicazione **msmdsrv.exe** , che viene eseguita come servizio Windows. Questa applicazione è costituita da componenti di sicurezza, un componente listener XML for Analysis (XMLA), un componente di elaborazione delle query e numerosi altri componenti interni che svolgono le funzioni seguenti:
 
 -   Analisi di istruzioni ricevute dai client
 
@@ -51,13 +50,13 @@ ms.locfileid: "81388010"
  ![Diagramma dell'architettura di sistema di Analysis Services](../../../analysis-services/dev-guide/media/analysisservicessystemarchitecture.gif "Diagramma dell'architettura di sistema di Analysis Services")
 
 ## <a name="xmla-listener"></a>Listener XMLA
- Il componente listener XMLA gestisce tutte le comunicazioni XMLA tra [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e i relativi client. L' [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] `Port` impostazione di configurazione nel file msmdsrv. ini può essere utilizzata per specificare una porta su cui un' [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza è in ascolto. Un valore 0 in questo file indica che [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] è in ascolto sulla porta predefinita. Se non specificato diversamente, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] userà le porte TCP predefinite seguenti:
+ Il componente listener XMLA gestisce tutte le comunicazioni XMLA tra [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e i relativi client. L' [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] `Port` impostazione di configurazione nel file di msmdsrv.ini può essere utilizzata per specificare una porta su cui un'istanza è in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ascolto. Un valore 0 in questo file indica che [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] è in ascolto sulla porta predefinita. Se non specificato diversamente, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] userà le porte TCP predefinite seguenti:
 
 |Porta|Descrizione|
 |----------|-----------------|
-|2383|Istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|
-|2382|Redirector per altre istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|
-|Assegnata dinamicamente all'avvio del server|Istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|
+|2383|Istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .|
+|2382|Redirector per altre istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .|
+|Assegnata dinamicamente all'avvio del server|Istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .|
 
  Per altri dettagli, vedere [configurare la Windows Firewall per consentire l'accesso Analysis Services](../../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) .
 

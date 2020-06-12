@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fd074e705c5ae135eb8161a0ea5d2919d1c183e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c87de5fb72036848088afd2fbfd651be5d7b850
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076259"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536123"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Creare e gestire una partizione remota (Analysis Services)
   In caso di partizionamento di un gruppo di misure, è possibile configurare un database secondario in un'istanza remota di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] come archiviazione della partizione.  
@@ -45,7 +44,7 @@ ms.locfileid: "66076259"
 -   È necessario verificare che il piano di ripristino di emergenza preveda il backup e il ripristino delle partizioni remote. L'utilizzo di partizioni remote può complicare le operazioni di backup e ripristino. Controllare approfonditamente il piano in modo da verificare che sia possibile ripristinare i dati necessari.  
   
 ## <a name="configure-remote-partitions"></a>Configurare partizioni remote  
- Due computer distinti in cui è in esecuzione un' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza di sono necessari per creare una disposizione di partizione remota che designa un computer come server master e l'altro computer come server subordinato.  
+ Due computer distinti in cui è in esecuzione un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono necessari per creare una disposizione di partizione remota che designa un computer come server master e l'altro computer come server subordinato.  
   
  Nella procedura indicata di seguito si presuppone che siano presenti due istanze del server, con un database del cubo distribuito nel server master. Ai fini di questa procedura, il database del cubo viene definito come db-master. Il database di archiviazione contenente le partizioni remote viene definito come db-storage.  
   
@@ -80,7 +79,7 @@ ms.locfileid: "66076259"
   
 #### <a name="set-the-masterdatasourceid-database-property-on-the-remote-server-in-ssms"></a>Impostare la proprietà di database MasterDataSourceID nel server remoto (in SSMS)  
   
-1.  Nel server subordinato: fare clic con il pulsante destro del mouse sul database di archiviazione, DB-storage, scegliere Crea **script per database come** | **ALTER in** | **nuova finestra Editor di query**.  
+1.  Nel server subordinato: fare clic con il pulsante destro del mouse sul database di archiviazione, DB-storage, scegliere Crea **script per database come**  |  **ALTER in**  |  **nuova finestra Editor di query**.  
   
 2.  Aggiungere **MasterDataSourceID** al codice XMLA e quindi specificare l'ID del database del cubo, db-master, come valore. Il codice XMLA dovrebbe essere simile a quello riportato di seguito.  
   
@@ -131,7 +130,7 @@ ms.locfileid: "66076259"
 > [!NOTE]  
 >  Anche se database dedicati all'archiviazione di partizioni remote non sono esposti a set di righe dello schema, le applicazioni in cui viene utilizzata la libreria AMO (Analysis Management Objects) possono ancora individuare un database dedicato utilizzando il comando di individuazione (Discover) di XML for Analysis. Un comando CREATE o DELETE inviato direttamente a un database dedicato tramite un client TCP o HTTP avrà esito positivo, tuttavia verrà restituito un avviso dal server indicante che l'azione può danneggiare notevolmente questo database gestito.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Partizioni &#40;Analysis Services - Dati multidimensionali&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

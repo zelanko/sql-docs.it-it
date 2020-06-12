@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 344af8f8-12f3-48c0-b934-4503779d37ff
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 413272be4ac4ce913704494a26e9642666deeb92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4f40703f0e86874e8eef75a28696c63c4104526
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727316"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545053"
 ---
 # <a name="user-hierarchy-properties"></a>Proprietà delle gerarchie definite dall'utente
   Nella tabella seguente vengono descritte le proprietà di una gerarchia definita dall'utente.  
@@ -34,7 +33,7 @@ ms.locfileid: "62727316"
 |MemberNamesUnique|Determina se i nomi dei membri nella gerarchia devono essere univoci. I valori sono True e False. Il valore predefinito è False.|  
 |Nome|Contiene il nome della gerarchia.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Gerarchie utente](user-hierarchies.md)   
  [Proprietà di livello](user-hierarchies-level-properties.md)  
   

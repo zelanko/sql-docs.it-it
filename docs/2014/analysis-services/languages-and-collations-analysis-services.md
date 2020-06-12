@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 62956774e203b1438de1ea07708940d0711053ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 641f161ede6daebdd879c3316ce73a2e446c21c1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079374"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543663"
 ---
 # <a name="languages-and-collations-analysis-services"></a>Lingue e regole di confronto (Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta le lingue e le regole di confronto fornite dai sistemi operativi [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. Le proprietà `Language` e `Collation` vengono inizialmente impostate a livello di istanza durante l'installazione, ma in seguito possono essere modificate a livelli diversi della gerarchia di oggetti.  
@@ -51,7 +50,7 @@ ms.locfileid: "66079374"
 -   [Supporto di GB18030 in Analysis Services](#bkmk_gb18030)  
   
 ##  <a name="objects-that-support-language-and-collation-properties"></a><a name="bkmk_object"></a>Oggetti che supportano le proprietà Language e Collation  
- `Language`le `Collation` proprietà e vengono spesso esposte insieme, dove `Language`è possibile impostare, è `Collation`anche possibile impostare.  
+ `Language`le `Collation` proprietà e vengono spesso esposte insieme, dove è possibile impostare `Language` , è anche possibile impostare `Collation` .  
   
  Le proprietà `Language` e `Collation` possono essere impostate negli oggetti seguenti:  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66079374"
   
      La lingua e le regole di confronto impostate per il cubo vengono usate da tutte le misure e le dimensioni incluse nel cubo. È possibile impostare proprietà delle regole di confronto più dettagliate solo se si creano traduzioni in un attributo della dimensione. In caso contrario, supponendo che non vi siano traduzioni a livello di attributo, ci sarà un unico set di regole di confronto per ogni cubo.  
   
- Inoltre, è possibile impostare `Language`, da solo, in un oggetto **Translation** .  
+ Inoltre, è possibile impostare `Language` , da solo, in un oggetto **Translation** .  
   
  Un oggetto Translation vien creato quando si aggiungono traduzioni a un cubo o una dimensione. `Language`fa parte della definizione di traduzione. `Collation` invece viene impostato per il cubo o a livello superiore ed è condiviso da tutte le traduzioni. Ciò è evidente nel codice XMLA di un cubo contenente traduzioni, dove si avranno più proprietà della lingua (una per ogni traduzione), ma un solo set di regole di confronto. Si noti che esiste un'eccezione per le traduzioni dell'attributo della dimensione, in cui è possibile eseguire l'override delle regole di confronto del cubo per specificare un set di regole di confronto dell'attributo che corrisponda alla colonna di origine (il motore di database supporta l'impostazione delle regole di confronto per singole colonne ed è frequente configurare le singole traduzioni per ottenere i dati dei membri da colonne di origine diverse). Per tutte le altre traduzioni invece la proprietà `Language` viene usata da sola senza la proprietà `Collation` conseguente. Per informazioni dettagliate, vedere [Traduzioni &#40;Analysis Services&#41;](translations-analysis-services.md).  
   
@@ -83,7 +82,7 @@ ms.locfileid: "66079374"
   
  Sebbene in Analysis Services le lingue vengono elencate in base al nome, il valore effettivo archiviato per la proprietà è un LCID. Per l'impostazione di una proprietà della lingua a livello di codice o tramite il file msmdsrv.ini, usare l' [identificatore delle impostazioni locali (LCID)](http://en.wikipedia.org/wiki/Locale) come valore. Un LCID è un valore a 32 bit costituito da un ID lingua, un ID di ordinamento e bit riservati che identificano una particolare lingua. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa gli LCID per specificare la lingua selezionata per gli oggetti e le istanze di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
- È possibile impostare l'identificatore LCID usando il formato decimale o esadecimale. Di seguito sono riportati alcuni esempi di valori `Language` validi per la proprietà:  
+ È possibile impostare l'identificatore LCID usando il formato decimale o esadecimale. Di seguito sono riportati alcuni esempi di valori validi per la `Language` proprietà:  
   
 -   0x0409 o 1033 per **Inglese (Stati Uniti)**  
   
@@ -140,9 +139,9 @@ ms.locfileid: "66079374"
   
 -   Rielaborazione delle partizioni e delle dimensioni dopo l'aggiornamento delle regole di confronto.  
   
- Per modificare la lingua o le regole di confronto predefinite a livello di server, è possibile usare SQL Server Management Studio o PowerShell per AMO. In alternativa, è possibile modificare le ** \<** impostazioni del>di lingua e ** \<del>di CollationName** nel file msmdsrv. ini, specificando l'identificatore LCID della lingua.  
+ Per modificare la lingua o le regole di confronto predefinite a livello di server, è possibile usare SQL Server Management Studio o PowerShell per AMO. In alternativa, è possibile modificare le **\<Language>** **\<CollationName>** Impostazioni e nel file di msmdsrv.ini, specificando l'identificatore LCID della lingua.  
   
-1.  In Management Studio fare clic con il pulsante destro del mouse su nome server | **Properties** | **Lingua/regole di confronto**della proprietà.  
+1.  In Management Studio fare clic con il pulsante destro del mouse su nome server | **Proprietà**  |  di **Lingua/regole di confronto**.  
   
 2.  Scegliere le opzioni di ordinamento. Per selezionare **Binario** o **Binario 2**, deselezionare prima la casella di controllo **Distinzione caratteri accentati/non accentati**.  
   
@@ -169,7 +168,7 @@ ms.locfileid: "66079374"
   
  Prima di usare XMLA per modificare un database esistente, assicurarsi di non introdurre discrepanze tra il database e i file di origine usati per compilarlo. Ad esempio, si potrebbe voler usare XMLA per modificare rapidamente la lingua o le regole di confronto per il test di prova, ma continuare poi con le modifiche al file di origine (vedere [Modificare la lingua o le regole di confronto per un cubo](#bkmk_cube)), ridistribuendo la soluzione con le procedure operative esistenti già definite.  
   
-1.  In Management Studio fare clic con il pulsante destro del mouse sul database | Crea **script per database come** | **ALTER in** | **nuova finestra Editor di query**.  
+1.  In Management Studio fare clic con il pulsante destro del mouse sul database | Crea **script per database**  |  **Modifica a**  |  **Nuova finestra dell'editor di query**.  
   
 2.  Cercare e sostituire la lingua o le regole di confronto esistenti con un valore diverso.  
   
@@ -183,7 +182,7 @@ ms.locfileid: "66079374"
 ##  <a name="gb18030-support-in-analysis-services"></a><a name="bkmk_gb18030"></a> Supporto di GB18030 in Analysis Services  
  GB18030 è uno standard separato usato nella Repubblica popolare Cinese per la codifica dei caratteri cinesi. In GB18030, i caratteri possono essere di 1, 2 o 4 byte di lunghezza. In Analysis Services non viene eseguita alcuna conversione dei dati durante l'elaborazione dei dati da origini esterne. I dati vengono archiviati semplicemente in formato Unicode. In fase di query viene eseguita una conversione GB18030 tramite le librerie client di Analysis Services (in particolare, il provider OLE DB MSOLAP.dll) quando vengono restituiti i dati di testo nei risultati della query, in base alle impostazioni del sistema operativo client. Anche il motore di database supporta GB18030. Per informazioni dettagliate, vedere [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Scenari di globalizzazione per Analysis Services multidimensionale](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Suggerimenti per la globalizzazione e procedure consigliate &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)   
  [Regole di confronto e supporto Unicode](../relational-databases/collations/collation-and-unicode-support.md)  

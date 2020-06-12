@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3ef94fc86c78e896eab03bffb318b58e4b328245
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f92fdd7ea01cb9a373bafc3357de65fd2e622add
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079615"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543783"
 ---
 # <a name="rename-an-analysis-services-instance"></a>Rinominare un'istanza di Analysis Services
-  È possibile rinominare un'istanza esistente di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizzando la finestra di dialogo **Rinomina istanza** .  
+  È possibile rinominare un'istanza esistente di utilizzando la finestra di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dialogo **Rinomina istanza** .  
   
 > [!IMPORTANT]  
 >  Mentre si rinomina l'istanza, lo strumento Rinomina istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene eseguito con privilegi elevati, aggiornando il nome del servizio Windows, gli account di sicurezza e le voci del Registro di sistema associati a quell'istanza. Per accertarsi che queste azioni vengono effettuate, eseguire questo strumento come amministratore di sistema locale.  
@@ -35,7 +34,7 @@ ms.locfileid: "66079615"
   
 ### <a name="to-rename-an-instance-of-analysis-services"></a>Per rinominare un'istanza di Analysis Services  
   
-1.  Avviare lo strumento **Rinomina istanza** , **asinstancerename. exe**, da c:\Programmi\Microsoft SQL Server\110\Tools\Binn\ManagementStudio.  
+1.  Avviare lo strumento **Rinomina istanza** , **asinstancerename.exe**, da c:\Programmi\Microsoft SQL Server\110\Tools\Binn\ManagementStudio.  
   
 2.  Nell'elenco **Istanza da rinominare** della finestra di dialogo **Rinomina istanza** selezionare l'istanza che si desidera rinominare.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66079615"
   
      Di seguito ne viene illustrato un esempio. Si supponga di avere installato un server in modalità tabulare come istanza denominata "tabulare" utilizzando l'account virtuale predefinito, ottenendo la seguente configurazione:  
   
-    1.  Nome istanza = \<server> \tabular  
+    1.  Nome istanza = \<server> \TABULAR  
   
     2.  Nome servizio = MSOLAP$TABULAR  
   

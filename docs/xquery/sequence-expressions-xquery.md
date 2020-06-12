@@ -1,5 +1,6 @@
 ---
 title: Espressioni Sequence (XQuery) | Microsoft Docs
+description: Informazioni sulle espressioni di sequenza XQuery che creano, filtrano e combinano una sequenza di elementi.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fa45029557cc217b89293fa7963bf29b39f373f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 72b8a066ce1480cd70f46658c8756b2548174b5b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946300"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529765"
 ---
 # <a name="sequence-expressions-xquery"></a>Espressioni di sequenze (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +100,7 @@ go
 ```  
   
 ### <a name="example-c"></a>Esempio C  
- La query seguente viene specificata sulla colonna AdditionalContactInfo del tipo **XML** nella tabella Contact. In questa colonna sono archiviate le informazioni aggiuntive sul contatto, ad esempio numeri di telefono aggiuntivi, numeri di cercapersone e indirizzi. Il \<> telephoneNumber, \<> cercapersone e altri nodi possono comparire in qualsiasi punto del documento. La query crea una sequenza che contiene tutti gli \<elementi figlio di telephoneNumber> del nodo di contesto, seguiti \<dal cercapersone> elementi figlio. Si noti che nell'espressione restituita, `($a//act:telephoneNumber, $a//act:pager)`, viene utilizzato l'operatore di sequenza virgola.  
+ La query seguente viene specificata sulla colonna AdditionalContactInfo del tipo **XML** nella tabella Contact. In questa colonna sono archiviate le informazioni aggiuntive sul contatto, ad esempio numeri di telefono aggiuntivi, numeri di cercapersone e indirizzi. Gli \<telephoneNumber> \<pager> altri nodi, e possono essere visualizzati in qualsiasi punto del documento. La query crea una sequenza che contiene tutti gli \<telephoneNumber> elementi figlio del nodo di contesto, seguiti dagli \<pager> elementi figlio. Si noti che nell'espressione restituita, `($a//act:telephoneNumber, $a//act:pager)`, viene utilizzato l'operatore di sequenza virgola.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
@@ -202,7 +203,7 @@ SELECT @x.query('
 <c>C under b</c>  
 ```  
   
- Nell'esempio seguente viene applicato un filtro del predicato. L'espressione trova gli elementi `a` <> e `b` <> che contengono l' `c` elemento <>.  
+ Nell'esempio seguente viene applicato un filtro del predicato. L'espressione trova gli elementi <`a`> e <`b`> che contengono l'elemento <`c`>.  
   
 ```  
 declare @x xml  

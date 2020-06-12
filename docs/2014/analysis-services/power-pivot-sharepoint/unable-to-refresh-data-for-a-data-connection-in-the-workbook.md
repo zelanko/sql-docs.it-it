@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81e99fc17cb8f369967ff4c26699e67f0ed91d33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81a72e0009659e06fd27e9c402f17ddab259d228
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070940"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540173"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>Impossibile aggiornare i dati per una connessione dati della cartella di lavoro. Riprovare o contattare l'amministratore di sistema. Impossibile aggiornare le connessioni seguenti: Dati di PowerPivot
   Per cartelle di lavoro di Excel contenenti dati PowerPivot, in Excel Services viene restituito questo errore se viene inviata una richiesta di connessione a un server PowerPivot che non verrà completata.  
@@ -40,7 +39,7 @@ ms.locfileid: "66070940"
   
  La cartella di lavoro che si sta tentando di aprire potrebbe essere stata creata con la versione SQL Server 2008 R2 di PowerPivot per Excel. Molto probabilmente, il provider di dati di Analysis Services specificato nella stringa di connessione dati non è presente sul computer che sta gestendo la richiesta.  
   
- In tal caso, il messaggio verrà trovato nel log ULS: "aggiornamento non riuscito per ' dati PowerPivot ' nella cartella di lavoro '\<URL della cartella di lavoro>'", seguito da "Impossibile ottenere una connessione".  
+ In tal caso, il messaggio verrà trovato nel log ULS: "aggiornamento non riuscito per ' dati PowerPivot ' nella cartella di lavoro ' \<URL to workbook> '", seguito da "Impossibile ottenere una connessione".  
   
  Per determinare la versione della cartella di lavoro, aprirla in Excel e controllare il provider di dati specificato nella stringa di connessione. In una cartella di lavoro SQL Server 2008 R2 viene utilizzato MSOLAP.4 come provider di dati.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "66070940"
   
  Per risolvere questo problema, unire in join il computer allo stesso dominio del server PowerPivot o installare un controller di dominio nel computer locale. La seconda soluzione, cioè l'installazione del controller di dominio, richiederà la creazione di account di dominio locali per tutti i servizi e gli utenti. Sarà necessario configurare gli account di servizio e le autorizzazioni di SharePoint per gli account definiti.  
   
- L'installazione di un controller di dominio nel computer è utile se si intende utilizzare PowerPivot per SharePoint in uno stato offline. Per istruzioni dettagliate su come utilizzare PowerPivot offline, vedere il post di Blog relativo alla disconnessione del server PowerPivot in [http://www.powerpivotgeek.com](https://go.microsoft.com/fwlink/?LinkId=184241)rete.  
+ L'installazione di un controller di dominio nel computer è utile se si intende utilizzare PowerPivot per SharePoint in uno stato offline. Per istruzioni dettagliate su come utilizzare PowerPivot offline, vedere il post di Blog relativo alla disconnessione del server PowerPivot in rete [http://www.powerpivotgeek.com](https://go.microsoft.com/fwlink/?LinkId=184241) .  
   
  **Scenario 4: server instabile**  
   

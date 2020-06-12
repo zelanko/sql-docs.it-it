@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f058516059c0cadf92b9d558a47990af0a54725f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 37ce07dd3ae9cbd46a6ddd1860c3178fe154513a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071656"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535187"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>Creare una connessione BISM a un database modello tabulare
   Utilizzare le informazioni fornite in questo argomento per impostare una connessione BISM che esegue il reindirizzamento a un database modello tabulare in esecuzione in un'istanza di Analysis Services esterna alla farm di SharePoint.  
@@ -36,7 +35,7 @@ ms.locfileid: "66071656"
   
  [Passaggi successivi](#bkmk_next)  
   
-##  <a name="review-prerequisites"></a><a name="bkmk_prereq"></a> Verificare i prerequisiti  
+##  <a name="review-prerequisites"></a><a name="bkmk_prereq"></a>Verificare i prerequisiti  
  Per creare un file di connessione BISM, è necessario disporre delle autorizzazioni di collaborazione.  
   
  È necessario disporre di una raccolta che supporta il tipo di contenuto della connessione BISM. Per ulteriori informazioni, vedere [aggiungere un tipo di contenuto connessione BI Semantic Model a una raccolta &#40;PowerPivot per SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  
@@ -142,7 +141,7 @@ ms.locfileid: "66071656"
 ##  <a name="next-steps"></a><a name="bkmk_next"></a> Passaggi successivi  
  Dopo avere creato e protetto una connessione BISM è possibile specificarla come origine dati. Per altre informazioni, vedere [Utilizzare una connessione BISM (BI Semantic Model) in Excel o Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Connessione BI Semantic Model di PowerPivot &#40;. BISM&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
  [Creare una connessione BISM (BI Semantic Model) a una cartella di lavoro di PowerPivot](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   

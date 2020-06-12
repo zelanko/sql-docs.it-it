@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ce717071-193b-4c99-9654-c7a613e16327
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6a1564a2b190703e011624162ad4bc25fd5de794
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 509f44565a1535e1502cb3862250cf04f654711e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079185"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543543"
 ---
 # <a name="lesson-13-analyze-in-excel"></a>Lezione 13: Analizza in Excel
   In questa lezione verrà utilizzata la funzionalità Analizza in Excel di [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] per aprire Microsoft Excel, creare automaticamente una connessione all'origine dati nell'area di lavoro del modello e aggiungere automaticamente una tabella pivot al foglio di lavoro. La funzionalità Analizza in Excel è progettata per offrire un modo rapido e semplice per testare l'efficacia della progettazione del modello prima di distribuirlo. Non si eseguirà alcuna analisi dei dati in questa lezione. Lo scopo è invece quello di permettere agli autori di modelli di acquisire familiarità con gli strumenti disponibili per testare la progettazione del modello. A differenza dell'utilizzo della funzionalità Analizza in Excel, destinata agli autori di modelli, gli utenti finali utilizzeranno applicazioni di creazione report client quali Excel o [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] per connettersi e sfogliare i dati del modello distribuito.  

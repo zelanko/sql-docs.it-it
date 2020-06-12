@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: b8ef549c-5458-458a-bf1a-fd743a1417fd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 25c1acf7a1fadbc79b7781488143ce57881c81fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 330a9011956b90e1259c221610e98093843c0bd9
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073450"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545903"
 ---
 # <a name="unary-operators-in-parent-child-dimensions"></a>Operatori unari nelle dimensioni padre-figlio
-  In una dimensione che contiene una relazione padre-figlio in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è necessario specificare una colonna dell'operatore unario (o rollup personalizzato) che determina il rollup personalizzato per tutti i membri non calcolati dell'attributo padre. L'operatore unario viene applicato ai membri ogni volta che i valori dei membri padre vengono valutati. La proprietà **UnaryOperatorColumn** in un attributo padre (**Usage**=Parent) specifica la colonna di una tabella nella vista origine dati contenente gli operatori unari. I valori per gli operatori di rollup personalizzato archiviati in questa colonna vengono applicati a ogni membro dell'attributo.  
+  In una dimensione che contiene una relazione padre-figlio in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , è necessario specificare una colonna dell'operatore unario (o rollup personalizzato) che determina il rollup personalizzato per tutti i membri non calcolati dell'attributo padre. L'operatore unario viene applicato ai membri ogni volta che i valori dei membri padre vengono valutati. La proprietà **UnaryOperatorColumn** in un attributo padre (**Usage**=Parent) specifica la colonna di una tabella nella vista origine dati contenente gli operatori unari. I valori per gli operatori di rollup personalizzato archiviati in questa colonna vengono applicati a ogni membro dell'attributo.  
   
  È possibile creare e specificare un calcolo denominato in una tabella della dimensione nella vista origine dati come colonna dell'operatore unario. L'espressione più semplice, ad esempio '+', restituisce lo stesso operatore per tutti i membri. È tuttavia possibile utilizzare qualsiasi espressione a condizione che restituisca un operatore per ogni membro.  
   
@@ -32,7 +31,7 @@ ms.locfileid: "66073450"
   
 |Operatore unario|Descrizione|  
 |--------------------|-----------------|  
-|+ (segno di addizione)|Il valore del membro viene aggiunto al valore aggregato dei membri di pari livello precedenti. Si tratta dell'operatore predefinito se per un attributo non viene definita alcuna colonna dell'operatore unario.|  
+|+ (segno più)|Il valore del membro viene aggiunto al valore aggregato dei membri di pari livello precedenti. Si tratta dell'operatore predefinito se per un attributo non viene definita alcuna colonna dell'operatore unario.|  
 |-(segno meno)|Il valore del membro viene sottratto dal valore aggregato dei membri di pari livello precedenti.|  
 |* (asterisco)|Il valore del membro viene moltiplicato per il valore aggregato dei membri di pari livello precedenti.|  
 |/ (barra)|Il valore del membro viene diviso per il valore aggregato dei membri di pari livello precedenti.|  
@@ -44,7 +43,7 @@ ms.locfileid: "66073450"
   
  Nella scheda **Esplorazione** di Progettazione dimensioni è possibile visualizzare gli operatori unari accanto a ogni membro di una gerarchia. È inoltre possibile modificare gli operatori unari in caso di utilizzo di una dimensione abilitata per la scrittura. Se la dimensione non è abilitata per la scrittura, è necessario utilizzare uno strumento per modificare direttamente l'origine dei dati.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Riferimento alle proprietà degli attributi delle dimensioni](dimension-attribute-properties-reference.md)   
  [Operatori di rollup personalizzati nelle dimensioni padre-figlio](parent-child-dimension-attributes-custom-rollup-operators.md)   
  [Avviare la Configurazione guidata funzionalità di Business Intelligence in Progettazione dimensioni](database-dimensions-bi-wizard-in-dimension-designer.md)  

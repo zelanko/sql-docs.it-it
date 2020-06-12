@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 299b40b92b3d2f8c5559a5e10e511f80ab5a5bc9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: de11cdaf304b3010dcf21725edd2d3cbfa84ae0a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175660"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540251"
 ---
 # <a name="powerpivot-configuration-tools"></a>PowerPivot Configuration Tools
   Configurare, ripristinare o rimuovere un [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] con la strumenti di configurazione di PowerPivot.
@@ -62,7 +61,7 @@ ms.locfileid: "78175660"
 |configurazione di PowerPivot per SharePoint 2013|Strumento di configurazione PowerPivot|
 |--------------------------------------------------|-----------------------------------|
 |La pagina principale contiene una nuova opzione per **Server PowerPivot per Excel Services**. L'opzione supporta la nuova architettura con [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione all'esterno della farm di SharePoint. Configurare Excel Services per utilizzare uno o più server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione in modalità SharePoint.<br /><br /> ![Server PowerPivot nel nuovo strumento di configurazione](../media/as-powerpivot-configtool-differences-new-mainpage.gif "Server PowerPivot nel nuovo strumento di configurazione")||
-||Lo strumento 2010 include la pagina **Register SQL Server Analysis Services (PowerPivot) sul server locale** per configurare un'istanza locale di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Questa pagina non fa parte dello strumento 2013 perché non è presente alcuna istanza locale di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].<br /><br /> ![Account di servizio per AS nello strumento di configurazione precedente](../media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "Account di servizio per AS nello strumento di configurazione precedente")|
+||Lo strumento 2010 include la pagina **Register SQL Server Analysis Services (PowerPivot) sul server locale** per configurare un'istanza locale di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Questa pagina non fa parte dello strumento 2013 perché non è presente alcuna istanza locale di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].<br /><br /> ![Account di servizio per AS nello strumento di configurazione precedente](../media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "Account di servizio per AS nello strumento di configurazione precedente")|
 ||La pagina **Creare applicazione del servizio PowerPivot** contiene un'opzione aggiuntiva **Aggiorna le cartelle di lavoro per abilitare l'aggiornamento dati**. Questa opzione non è disponibile nello strumento 2013.<br /><br /> ![aggiornamento delle cartelle di lavoro nello strumento di configurazione precedente](../media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "aggiornamento delle cartelle di lavoro nello strumento di configurazione precedente")|
 |Lo strumento 2013 contiene una nuova pagina **Configura server PowerPivot**. Questa pagina supporta la nuova architettura di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione all'esterno della farm di SharePoint. Per impostazione predefinita, il nome del server digitato nella pagina principale nella casella di testo **Server PowerPivot per Excel Services**viene elencato anche in **Configura server PowerPivot**.<br /><br /> ![Registrazione di server PowerPivot nel nuovo strumento di configurazione](../media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "Registrazione di server PowerPivot nel nuovo strumento di configurazione")||
 |Lo strumento 2013 contiene una nuova pagina **Registra componente aggiuntivo di PowerPivot come Analisi utilizzo di Excel Services**. SharePoint 2010 Excel Services non tiene traccia dei dati sull'utilizzo di PowerPivot.||
@@ -91,11 +90,11 @@ ms.locfileid: "78175660"
 
 1.  Nella schermata **Start** Digitare`powerpivot`
 
-     Nella schermata **Start** Digitare `powerpivot` o nel menu **Start** , fare clic su **tutti i programmi**, fare [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]clic su, fare clic su **strumenti di configurazione**e quindi su una delle opzioni seguenti:
+     Nella schermata **Start** Digitare `powerpivot` o nel menu **Start** , fare clic su **tutti i programmi**, fare clic su [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] , fare clic su **strumenti di configurazione**e quindi su una delle opzioni seguenti:
 
     -   **Strumento di configurazione PowerPivot**.
 
-    -   **O**
+    -   **OR**
 
     -   **Configurazione di PowerPivot per SharePoint 2013**.
 

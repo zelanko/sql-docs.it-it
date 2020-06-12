@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 2c664138-e8a1-4c47-8e7d-ee01c57e4692
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ab618eaa2d8d54b08e3d01fa238d19451084eff8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3fd3d7607cad8c8e721e21f4e5ad00255817792
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069623"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538263"
 ---
 # <a name="select-conversion-type-business-intelligence-wizard"></a>Selezione tipo di conversione (Configurazione guidata funzionalità di Business Intelligence)
   Utilizzare la pagina **Selezione tipo di conversione** per definire le relazioni tra le valute locali e le valute report per le transazioni archiviate in più valute. Una valuta locale è la valuta in cui vengono archiviate le transazioni per le misure selezionate nella pagina **Selezione misure** . La valuta report è la valuta in cui vengono convertite le transazioni selezionate nella pagina **Selezione misure** .  
@@ -47,7 +46,7 @@ ms.locfileid: "66069623"
   
  Se, ad esempio, si imposta la valuta pivot sul dollaro statunitense (USD), le transazioni vengono archiviate nella tabella dei fatti in questa valuta. Selezionando questa opzione le transazioni vengono convertite dalla valuta pivot alle valute report specificate. Di conseguenza le transazioni possono essere archiviate nella valuta pivot specificata e visualizzate sia nella valuta pivot specificata che in una delle valute report specificate nella pagina **Impostazione valute report** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto della configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Progettazione dimensioni &#40;Analysis Services-Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  

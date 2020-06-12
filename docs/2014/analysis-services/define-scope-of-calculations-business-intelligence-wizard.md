@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 19c231bb-9a17-4369-ba14-79309603c727
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e017a792f2554b757170a7669b83fada43dfb6a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f00b42620e0014de32550db28a79058f5162b77a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082033"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528787"
 ---
 # <a name="define-scope-of-calculations-business-intelligence-wizard"></a>Definizione ambito dei calcoli (Configurazione guidata funzionalità di Business Intelligence)
   Utilizzare la pagina **Definizione ambito dei calcoli** per associare i nuovi calcoli temporali a singole misure.  
@@ -32,7 +31,7 @@ ms.locfileid: "66082033"
  **Cancella tutto**  
  Consente di deselezionare tutte le misure presenti nell'elenco **Misure disponibili**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto della configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Progettazione dimensioni &#40;Analysis Services-Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  

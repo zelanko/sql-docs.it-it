@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 31aeb271-47a1-433b-a8a5-120bcb4584d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 765d983bcd3c9e12b29235eb5ee5dac91e3c2d8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 250c1ec9e384eaac7613cb15ae51d0bf9c982245
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078414"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542703"
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>Lezione 5: Definizione delle relazioni tra dimensioni e gruppi di misure
   Nelle lezioni precedenti di questa esercitazione è stato spiegato che le dimensioni del database aggiunte a un cubo possono essere utilizzate come base per una o più dimensioni del cubo. In questa lezione verranno illustrate le procedure per definire tipi diversi di relazioni tra dimensioni e gruppi di misure del cubo, nonché per specificare le proprietà di tali relazioni.  
@@ -42,7 +41,7 @@ ms.locfileid: "66078414"
 ## <a name="next-lesson"></a>Lezione successiva  
  [Lezione 6: Definizione di calcoli](lesson-6-defining-calculations.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Scenario di Analysis Services Tutorial](analysis-services-tutorial-scenario.md)   
  [Esercitazione di modellazione multidimensionale &#40;Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Relazioni tra dimensioni](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9e68187207798a04b49f87b2a4b004661d873834
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 08c0eeb1315b9ca7ab63a870e2e31ad4896b2d59
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175300"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542923"
 ---
 # <a name="defining-a-referenced-relationship"></a>Definizione di una relazione di tipo Riferimento
   Fino a questo punto dell'esercitazione, ogni dimensione del cubo definita è stata basata su una tabella direttamente collegata alla tabella dei fatti per un gruppo di misure tramite una relazione chiave primaria–chiave esterna. Nelle attività di questo argomento la dimensione **Geography** verrà collegata alla tabella dei fatti relativa alle vendite dei rivenditori tramite la dimensione **Reseller** , denominata *dimensione di riferimento*. Ciò consente agli utenti di dimensionare le vendite dei rivenditori in base all'area geografica. Per altre informazioni, vedere [Definire una relazione di tipo Riferimento e le relative proprietà](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).
@@ -104,7 +103,7 @@ ms.locfileid: "78175300"
 
 9. Nell'elenco **Dimensioni** della scheda **Utilizzo dimensioni** fare clic con il pulsante destro del mouse su **Geography**e quindi scegliere **Rinomina**.
 
-10. Modificare il nome della dimensione del cubo in `Reseller Geography`.
+10. Modificare il nome della dimensione del cubo in `Reseller Geography` .
 
      Dal momento che la dimensione del cubo è ora collegata al gruppo di misure **Reseller Sales** , per gli utenti sarà vantaggioso definirne esplicitamente l'uso nel cubo evitando possibili confusioni.
 
@@ -114,7 +113,7 @@ ms.locfileid: "78175300"
 
 2.  Una volta completata la distribuzione, selezionare la scheda **Esplorazione** in Progettazione cubi per il cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial e fare clic sul pulsante **Riconnetti** .
 
-3.  Nel riquadro Metadati espandere `Reseller Geography`, fare clic con il pulsante destro del mouse su **Geographies**e quindi scegliere **Aggiungi all'area riga**.
+3.  Nel riquadro Metadati espandere `Reseller Geography` , fare clic con il pulsante destro del mouse su **Geographies**e quindi scegliere **Aggiungi all'area riga**.
 
      Si noti che la misura **Reseller Sales-Sales Amount** è ora dimensionata correttamente dall'attributo **Country-Region** della gerarchia definita dall'utente **Geographies** , come illustrato nella figura seguente.
 

@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 9394e9a3-2242-4f0e-85e0-25d499d2d3b6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e65da7af45aa2c5dbb18a560b05a5d943a9e64c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 533b244a8a5b6ec5e2866b068cfbf5eb6f31a7a3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72811595"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545113"
 ---
 # <a name="user-hierarchies"></a>Gerarchie definite dall'utente
   Le gerarchie definite dall'utente sono gerarchie definite dall'utente degli attributi utilizzati in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per organizzare i membri di una dimensione in strutture gerarchiche e fornire percorsi di navigazione in un cubo. Nella tabella seguente viene ad esempio definita una tabella per una dimensione temporale. La tabella delle dimensioni supporta tre attributi, Year, Quarter e Month.  
@@ -80,7 +79,7 @@ ms.locfileid: "72811595"
  Il livello Province viene popolato con i membri associati ad altri membri nel livello CountryRegion e i membri nel livello City vengono associati ai membri corrispondenti nel livello Province. Tuttavia, dato che il membro Vatican City nel livello CountryRegion non ha membri associati nel livello Province, i membri devono essere associati dal livello City direttamente al membro Vatican City nel livello CountryRegion. A causa delle modifiche, la gerarchia della dimensione ora risulta incompleta. Il membro padre della città Vatican City è il paese/regione Vatican City che non si trova nel livello immediatamente superiore al membro Vatican City nel livello City. Per altre informazioni, vedere [Gerarchie incomplete](../multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md).  
   
 ### <a name="parent-child-hierarchies"></a>Gerarchie padre-figlio  
- Le gerarchie padre-figlio delle dimensioni vengono definite utilizzando un attributo speciale, denominato attributo padre, per determinare il tipo di relazione esistente tra i membri. Un attributo padre descrive una *relazione autoreferenziale*, o *self join*, in una tabella della dimensione principale. Le gerarchie padre-figlio vengono create da un unico attributo padre. A una gerarchia padre-figlio viene assegnato un solo livello, in quanto i livelli presenti nella gerarchia sono derivati dalle relazioni padre-figlio tra i membri associati all'attributo padre. Lo schema della dimensione di una gerarchia padre-figlio dipende da una relazione autoreferenziale presente nella tabella della dimensione principale. Nel diagramma seguente, ad esempio, viene illustrata la tabella principale della dimensione di **dimorgan** nel database di [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esempio.  
+ Le gerarchie padre-figlio delle dimensioni vengono definite utilizzando un attributo speciale, denominato attributo padre, per determinare il tipo di relazione esistente tra i membri. Un attributo padre descrive una *relazione autoreferenziale*, o *self join*, in una tabella della dimensione principale. Le gerarchie padre-figlio vengono create da un unico attributo padre. A una gerarchia padre-figlio viene assegnato un solo livello, in quanto i livelli presenti nella gerarchia sono derivati dalle relazioni padre-figlio tra i membri associati all'attributo padre. Lo schema della dimensione di una gerarchia padre-figlio dipende da una relazione autoreferenziale presente nella tabella della dimensione principale. Nel diagramma seguente, ad esempio, viene illustrata la tabella principale della dimensione di **dimorgan** nel [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database di esempio.  
   
  ![Join autoreferenziale nella tabella DimOrganization](../dev-guide/media/dimorganization.gif "Join autoreferenziale nella tabella DimOrganization")  
   

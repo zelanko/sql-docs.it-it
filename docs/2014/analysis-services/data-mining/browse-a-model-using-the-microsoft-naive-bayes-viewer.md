@@ -21,16 +21,15 @@ helpviewer_keywords:
 ms.assetid: 19743095-63c1-4486-8c1d-2efc143243be
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 668ca4cfae7b660ff9e44de06c8523d8f9324cc9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83ba32e732a590881803d87c73d9853ee6c20abf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086025"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525437"
 ---
 # <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>Visualizzare un modello utilizzando il Visualizzatore Microsoft Naive Bayes
-  Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] visualizzatore Naive Bayes in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di visualizzare i modelli di data mining [!INCLUDE[msCoName](../../includes/msconame-md.md)] compilati con l'algoritmo Naive Bayes. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes è un algoritmo di classificazione altamente adattabile alle attività di modellazione predittiva. Per altre informazioni su questo algoritmo, vedere [Algoritmo Microsoft Naive Bayes](microsoft-naive-bayes-algorithm.md).  
+  Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visualizzatore Naive Bayes in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di visualizzare i modelli di data mining compilati con l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Naive Bayes. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes è un algoritmo di classificazione altamente adattabile alle attività di modellazione predittiva. Per altre informazioni su questo algoritmo, vedere [Algoritmo Microsoft Naive Bayes](microsoft-naive-bayes-algorithm.md).  
   
  Poiché uno degli scopi principali di un modello Naive Bayes consiste nell'esplorare rapidamente i dati di un set, il Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes include diversi metodi per la visualizzazione dell'interazione tra gli attributi stimabili e gli attributi di input per una tabella del case.  
   
@@ -80,15 +79,15 @@ ms.locfileid: "66086025"
  **Valori**  
  Mostra il valore dell'attributo nella colonna **Attributo**.  
   
- **Predilige \<il valore 1>**  
+ **Predilige\<value 1>**  
  Mostra una barra colorata che indica in quale misura il valore dell'attributo predilige il valore dell'attributo stimabile mostrato in **Valore 1**.  
   
- **Predilige \<il valore 2>**  
+ **Predilige\<value 2>**  
  Mostra una barra colorata che indica in quale misura il valore dell'attributo predilige il valore dell'attributo stimabile mostrato in **Valore 2**.  
   
  [Torna all'inizio](#BKMK_ViewerTabs)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Naive Bayes](microsoft-naive-bayes-algorithm.md)   
  [Attività e procedure relative al Visualizzatore modello di data mining](mining-model-viewer-tasks-and-how-tos.md)   
  [Strumenti di data mining](data-mining-tools.md)   

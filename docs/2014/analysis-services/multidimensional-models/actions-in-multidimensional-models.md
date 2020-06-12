@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 825343c58feeb7ffb217a8b1c8c53d8f81ae7441
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19754c99e87c50121fc79b80649d7555b79ca59e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077497"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544875"
 ---
 # <a name="actions-in-multidimensional-models"></a>Azioni nei modelli multidimensionali
   Un'azione è un'operazione inizializzata dall'utente finale su un cubo o una parte di un cubo selezionati. L'operazione consente di avviare un'applicazione con l'elemento selezionato come parametro oppure di recuperare informazioni sull'elemento selezionato. Per altre informazioni sulle azioni, vedere [Azioni &#40;Analysis Services - Dati multidimensionali&41#;](actions-analysis-services-multidimensional-data.md).  
@@ -57,7 +56,7 @@ ms.locfileid: "66077497"
  **Contenuto azione**  
  Selezionare il tipo di azione. Nella tabella seguente vengono riepilogati i tipi disponibili.  
   
-|Type|Description|  
+|Tipo|Description|  
 |----------|-----------------|  
 |Set di dati|Consente di recuperare un set di dati.|  
 |Proprietario|Esegue un'operazione utilizzando un'interfaccia diversa da quelle elencate in questa tabella.|  
@@ -72,10 +71,10 @@ ms.locfileid: "66077497"
   
 |Proprietà|Descrizione|  
 |--------------|-----------------|  
-|**Chiamata**|Specifica la modalità di esecuzione dell'azione. L'impostazione predefinita Interattiva specifica che l'azione viene eseguita quando un utente accede a un oggetto. Le impostazioni possibili sono:<br /><br /> Batch<br /><br /> Interactive (Interattivo)<br /><br /> Su apertura|  
+|**Chiamata**|Specifica la modalità di esecuzione dell'azione. L'impostazione predefinita Interattiva specifica che l'azione viene eseguita quando un utente accede a un oggetto. Le impostazioni possibili sono:<br /><br /> Batch<br /><br /> Interattività<br /><br /> Su apertura|  
 |**Applicazione**|Descrive l'applicazione dell'azione.|  
 |**Descrizione**|Descrive l'azione.|  
-|**Didascalia**|Visualizza una didascalia da associare all'azione. Se la didascalia è MDX, `True` specificare per la **Didascalia MDX**.|  
+|**Didascalia**|Visualizza una didascalia da associare all'azione. Se la didascalia è MDX, specificare `True` per la **Didascalia MDX**.|  
 |**Didascalia MDX**|Specificare `True` se la didascalia è MDX, in caso contrario specificare `False`.|  
   
 > [!NOTE]  
@@ -123,7 +122,7 @@ http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Regi
  **Colonne drill-through**  
  Selezionare una o più dimensioni e per ogni dimensione selezionare le colonne drill-through restituite all'applicazione client dall'azione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Cubi nei modelli multidimensionali](cubes-in-multidimensional-models.md)  
   
   

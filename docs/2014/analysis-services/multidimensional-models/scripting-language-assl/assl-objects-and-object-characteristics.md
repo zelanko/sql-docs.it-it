@@ -18,19 +18,18 @@ helpviewer_keywords:
 ms.assetid: 6e5c28b5-c0bc-4ccd-82e5-e174bbb71386
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aee5e7b94aaaca2b35e34f8c4d49c2834189f114
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76d57bb421a7f486983476a6549a5121ce88ee9b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736616"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545694"
 ---
 # <a name="assl-objects-and-object-characteristics"></a>Oggetti ASSL e relative caratteristiche
   In ASSL (Analysis Services Scripting Language) gli oggetti seguono linee guida specifiche in relazione ai gruppi di oggetti, all'ereditarietà, alla denominazione, all'espansione e all'elaborazione.  
   
 ## <a name="object-groups"></a>Gruppi di oggetti  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Tutti [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] gli oggetti hanno una rappresentazione XML. Gli oggetti sono suddivisi in due gruppi:  
+ Tutti [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] gli oggetti hanno una rappresentazione XML. Gli oggetti sono suddivisi in due gruppi:  
   
  **Oggetti principali**  
  Gli oggetti principali possono essere creati, modificati ed eliminati in modo indipendente. Di seguito vengono riportati gli oggetti principali:  
@@ -47,7 +46,7 @@ ms.locfileid: "62736616"
   
 -   Partizioni  
   
--   prospettive  
+-   Prospettive  
   
 -   Modelli di data mining  
   
@@ -73,7 +72,7 @@ ms.locfileid: "62736616"
   
 -   Gerarchie e livelli  
   
--   Attributes  
+-   Attributi  
   
 -   Misure  
   
@@ -86,7 +85,7 @@ ms.locfileid: "62736616"
 ## <a name="object-expansion"></a>Espansione di oggetti  
  La restrizione `ObjectExpansion` può essere utilizzata per controllare il grado di espansione dell'oggetto XML ASSL restituito dal server. Per questa restrizione sono disponibili le opzioni elencate nella tabella seguente.  
   
-|Valore di enumerazione|Consentito per \<alter>|Descrizione|  
+|Valore di enumerazione|Consentito per\<Alter>|Descrizione|  
 |-----------------------|---------------------------|-----------------|  
 |*ReferenceOnly*|no|Restituisce solo il nome, l'ID e il timestamp per l'oggetto richiesto e per tutti gli oggetti principali contenuti in modo ricorsivo.|  
 |*ObjectProperties*|sì|Espande l'oggetto richiesto e gli oggetti secondari contenuti, ma non restituisce alcun oggetto principale contenuto.|  

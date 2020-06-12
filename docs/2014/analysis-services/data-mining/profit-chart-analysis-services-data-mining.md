@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 760ee051-6fd8-48e3-8d2e-82db3ab45e45
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1a64eacb1219e239ad894d9922db5a5032ed525b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e574aaf4ab748ad61dc47984360e531ca98a3238
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083086"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520627"
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>Grafico profitti (Analysis Services - Data mining)
   In un grafico dei profitti viene visualizzata la redditività associata all'utilizzo di un modello di data mining. Si supponga, ad esempio, che il modello stima i clienti che una società dovrebbe contattare in uno scenario aziendale. In tal caso, sarebbe necessario aggiungere le informazioni del grafico dei profitti in merito al costo della campagna di mailing diretto. Successivamente, nel grafico completato verrà visualizzato il profitto stimato della campagna indirizzata ai clienti corretti, rispetto a quello di una campagna con clienti contattati casualmente.  
@@ -59,7 +58,7 @@ ms.locfileid: "66083086"
   
      Questa finestra di dialogo consente di specificare i costi e i vantaggi associati a una campagna di mailing diretto. Per il grafico mostrato in questi esempi, sono stati utilizzati i valori seguenti:  
   
-    |Impostazione|valore|Commenti|  
+    |Impostazione|Valore|Commenti|  
     |-------------|-----------|--------------|  
     |**Popolazione**|20.000|Impostare il valore per la popolazione target totale<br /><br /> Il database può contenere molti clienti, ma per risparmiare sulle spese di mailing è possibile scegliere di individuare come destinatari solo i primi 20.000 clienti aventi maggiore probabilità di rispondere. È possibile ottenere questo elenco eseguendo una query di stima e ordinando i dati in base alla probabilità restituita dal modello predittivo.|  
     |**Costi fissi**|500|Immettere il costo una tantum per la configurazione di una campagna di mailing diretto per 20.000 persone. Nel costo possono essere incluse le spese di stampa o le spese di configurazione di una campagna di posta elettronica.|  
@@ -96,7 +95,7 @@ ms.locfileid: "66083086"
 |Viene descritta la convalida incrociata per modelli e strutture di data mining.|[Convalida incrociata &#40;Analysis Services - Data mining&#41;](cross-validation-analysis-services-data-mining.md)|  
 |Vengono descritti i passaggi per la creazione di grafici di accuratezza e di altri grafici simili.|[Attività e procedure di test e convalida &#40;data mining&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Test e convalida &#40;&#41;di data mining](testing-and-validation-data-mining.md)   
  [Test dell'accuratezza con i grafici di accuratezza &#40;Esercitazione di base sul data mining&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   

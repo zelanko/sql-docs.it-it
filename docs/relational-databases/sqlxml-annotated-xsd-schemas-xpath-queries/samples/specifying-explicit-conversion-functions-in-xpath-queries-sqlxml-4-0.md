@@ -1,5 +1,6 @@
 ---
 title: Usare le funzioni di conversione in query XPath (SQLXML)
+description: Informazioni su come specificare le funzioni di conversione esplicita String () e Number () nelle query XPath 4,0 di SQLXML.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58611edabcfeaeb9a97de3da6c7305fb169c14ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f38cb1b18b096fe73f9d6b587162e7fcbe6f69a8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252559"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529897"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>Specifica di funzioni di conversione esplicita in query XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "75252559"
 ### <a name="a-use-the-number-explicit-conversion-function"></a>R. Utilizzo della funzione di conversione esplicita number ()  
  La funzione **Number ()** converte un argomento in un numero.  
   
- Supponendo che il valore di **ContactID** sia non numerico, la query seguente converte **ContactID** in un numero e lo confronta con il valore 4. La query restituisce quindi tutti ** \<i dipendenti>** elemento figlio del nodo di contesto con l'attributo **ContactID** con valore numerico 4:  
+ Supponendo che il valore di **ContactID** sia non numerico, la query seguente converte **ContactID** in un numero e lo confronta con il valore 4. La query restituisce quindi tutti gli **\<Employee>** elementi figlio del nodo di contesto con l'attributo **ContactID** con valore numerico 4:  
   
 ```  
 /child::Contact[number(attribute::ContactID)= 4]  
@@ -81,7 +82,7 @@ ms.locfileid: "75252559"
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. Utilizzo della funzione di conversione esplicita string ()  
  La funzione **String ()** converte un argomento in una stringa.  
   
- La query seguente converte **ContactID** in una stringa e la confronta con il valore di stringa "4". La query restituisce tutti ** \<i dipendenti>** elemento figlio del nodo di contesto con un **ContactID** con un valore stringa "4":  
+ La query seguente converte **ContactID** in una stringa e la confronta con il valore di stringa "4". La query restituisce tutti gli **\<Employee>** elementi figlio del nodo di contesto con un **ContactID** con un valore stringa "4":  
   
 ```  
 /child::Contact[string(attribute::ContactID)="4"]  

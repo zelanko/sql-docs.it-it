@@ -12,17 +12,17 @@ ms.assetid: 2d45fcd2-0f0f-4167-9027-316d6696c106
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2cab8e460b2091f9b4be90f32b7e08b15b4cf60b
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 205ee5d7c316c9a81e82edc0b2b6d132ed5c0ae1
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000951"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858680"
 ---
 # <a name="full-text-catalog-properties-tables-and-views-page"></a>Proprietà catalogo full-text (pagina Tabelle e viste)
   Utilizzare questa finestra di dialogo per visualizzare o modificare le tabelle e le viste assegnate al catalogo full-text.  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco elementi dell'interfaccia utente  
  **Tutti gli oggetti tabella/vista idonei nel database**  
  Elenca le tabelle e le viste che hanno un indice univoco definito, ma che non fanno già parte del catalogo full-text. Per selezionare una tabella o una vista e assegnarla al catalogo, selezionare gli elementi nella casella di riepilogo e premere il pulsante "->".  
   

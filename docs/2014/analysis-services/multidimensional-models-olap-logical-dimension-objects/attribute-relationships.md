@@ -23,16 +23,15 @@ helpviewer_keywords:
 ms.assetid: 2491422a-4cf5-4b23-b6ab-289222b22ce8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81d51c8778cfbc6e3891dfb3b6783db48f0c65a2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 122638a2728a8a85ee58661196797383da20eef8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62728517"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545206"
 ---
 # <a name="attribute-relationships"></a>Relazioni tra attributi
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]gli attributi all'interno di una dimensione sono sempre correlati direttamente o indirettamente all'attributo chiave. Quando si definisce una dimensione in base a uno schema star, in cui tutti gli attributi della dimensione sono derivati dalla stessa tabella relazionale, viene automaticamente definita una relazione tra l'attributo chiave e ogni attributo non chiave della dimensione. Quando si definisce una dimensione in base a uno schema snowflake, in cui gli attributi della dimensione sono derivati da più tabelle correlate, viene automaticamente definita una relazione tra attributi come indicato di seguito:  
+  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gli attributi all'interno di una dimensione sono sempre correlati direttamente o indirettamente all'attributo chiave. Quando si definisce una dimensione in base a uno schema star, in cui tutti gli attributi della dimensione sono derivati dalla stessa tabella relazionale, viene automaticamente definita una relazione tra l'attributo chiave e ogni attributo non chiave della dimensione. Quando si definisce una dimensione in base a uno schema snowflake, in cui gli attributi della dimensione sono derivati da più tabelle correlate, viene automaticamente definita una relazione tra attributi come indicato di seguito:  
   
 -   Tra l'attributo chiave e ogni attributo non chiave associato alle colonne della tabella principale della dimensione.  
   
@@ -56,11 +55,11 @@ ms.locfileid: "62728517"
   
 -   Sesso  
   
--   Posta elettronica  
+-   E-mail  
   
 -   city  
   
--   Country  
+-   Paese  
   
 -   Region  
   
@@ -82,7 +81,7 @@ ms.locfileid: "62728517"
   
  La proprietà `SourceAttribute` di un livello determina l'attributo utilizzato per descrivere il livello. La proprietà `KeyColumns` dell'attributo specifica la colonna della vista origine dati che definisce i membri. La proprietà `NameColumn` dell'attributo può specificare una colonna dei nomi differente per i membri.  
   
- Per definire un livello in una gerarchia definita dall'utente utilizzando [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], **Progettazione dimensioni** consente di selezionare un attributo della dimensione, una colonna in una tabella della dimensione o una colonna di una tabella correlata inclusa nella vista origine dati per il cubo. Per ulteriori informazioni sulla creazione di gerarchie definite dall'utente, vedere [creare gerarchie definite dall'utente](../multidimensional-models/user-defined-hierarchies-create.md).  
+ Per definire un livello in una gerarchia definita dall'utente utilizzando [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , **Progettazione dimensioni** consente di selezionare un attributo della dimensione, una colonna in una tabella della dimensione o una colonna di una tabella correlata inclusa nella vista origine dati per il cubo. Per ulteriori informazioni sulla creazione di gerarchie definite dall'utente, vedere [creare gerarchie definite dall'utente](../multidimensional-models/user-defined-hierarchies-create.md).  
   
  Relativamente al contenuto dei membri, in Analysis Services ci si basa in genere sul presupposto che i membri foglia non abbiano discendenti e contengano dati derivati dalle origini dei dati sottostanti, mentre i membri non foglia abbiano discendenti e contengano dati derivati dalle aggregazioni eseguite sui membri figlio. Nei livelli aggregati i membri sono basati sulle aggregazioni di livelli subordinati. Quando, perciò, la proprietà `IsAggregatable` viene impostata su `False` in un attributo di origine per un livello, non devono essere aggiunti attributi che possono essere aggregati come livelli al di sopra di esso.  
   
@@ -92,7 +91,7 @@ ms.locfileid: "62728517"
 ## <a name="attribute-relationship-queries"></a>Query sulla relazione tra attributi  
  È possibile utilizzare query MDX per recuperare dati dalle relazioni tra attributi in forma di proprietà del membro, tramite la parola chiave `PROPERTIES` dell'istruzione `SELECT` MDX. Per ulteriori informazioni sull'utilizzo di MDX per recuperare le proprietà dei membri, vedere [utilizzo delle proprietà dei membri &#40;&#41;MDX ](../multidimensional-models/mdx/mdx-member-properties.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Attributi e gerarchie di attributi](attributes-and-attribute-hierarchies.md)   
  [Riferimento alle proprietà degli attributi delle dimensioni](../multidimensional-models/dimension-attribute-properties-reference.md)   
  [Gerarchie utente](user-hierarchies.md)   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 64997cb3db784ea78a72a7c812c8f88034c2358d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a48211455a8ac3de9ef0f4b0c7e2fb3cba5f473
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071580"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540504"
 ---
 # <a name="create-and-configure-a-powerpivot-service-application-in-central-administration"></a>Creare e configurare un'applicazione del servizio PowerPivot in Amministrazione centrale
   Un'applicazione del servizio PowerPivot è un'istanza del servizio condiviso del servizio di sistema PowerPivot. Ogni applicazione del servizio possiede impostazioni di configurazione, proprietà, un'identità e un sistema di archiviazione dati interno propri.  
@@ -57,13 +56,13 @@ ms.locfileid: "66071580"
   
 3.  Selezionare **SQL Server applicazione di servizio PowerPivot**. Se non è presente nell'elenco, PowerPivot per SharePoint non è installato o configurato correttamente.  
   
-4.  Nella pagina **Crea nuova applicazione di servizio PowerPivot** immettere un nome per l'applicazione. Il valore predefinito è\<PowerPivotServiceApplication Number>. Se si creano più applicazioni di servizio PowerPivot, un nome descrittivo sarà utile per capire come viene utilizzata l'applicazione.  
+4.  Nella pagina **Crea nuova applicazione di servizio PowerPivot** immettere un nome per l'applicazione. Il valore predefinito è PowerPivotServiceApplication \<number> . Se si creano più applicazioni di servizio PowerPivot, un nome descrittivo sarà utile per capire come viene utilizzata l'applicazione.  
   
 5.  In Pool di applicazioni, creare un nuovo pool di applicazioni per l'applicazione (consigliato). Selezionare o creare un account gestito di sicurezza per il pool di applicazioni. Assicurarsi di specificare un account utente di dominio. Un account utente di dominio permette di utilizzare la funzionalità dell'account gestito di SharePoint, che consente di aggiornare password e informazioni sull'account da un'unica posizione. Gli account di dominio sono inoltre obbligatori se si prevede di ridimensionare la distribuzione per includere istanze del servizio aggiuntive da eseguire con la stessa identità.  
   
 6.  In **Server di database**il valore predefinito è l'istanza del Motore di database di SQL Server che esegue l'hosting dei database di configurazione della farm. È possibile utilizzare questo server o sceglierne uno diverso.  
   
-7.  In **nome database**il valore predefinito è PowerPivotServiceApplication1_\<> GUID. È necessario creare un database univoco per ogni applicazione di servizio PowerPivot. Il nome del database predefinito corrisponde al nome predefinito dell'applicazione di servizio. Se è stato immesso un nome univoco per l'applicazione del servizio, seguire una convenzione di denominazione simile per il nome del database in modo da poterli gestire insieme.  
+7.  In **nome database**il valore predefinito è PowerPivotServiceApplication1_ \<guid> . È necessario creare un database univoco per ogni applicazione di servizio PowerPivot. Il nome del database predefinito corrisponde al nome predefinito dell'applicazione di servizio. Se è stato immesso un nome univoco per l'applicazione del servizio, seguire una convenzione di denominazione simile per il nome del database in modo da poterli gestire insieme.  
   
 8.  In **Autenticazione database**l'impostazione predefinita è Autenticazione di Windows. Se si sceglie **Autenticazione di SQL Server**, fare riferimento alla guida dell'amministratore di SharePoint per le procedure consigliate sull'utilizzo di questo tipo di autenticazione in una distribuzione di SharePoint.  
   
@@ -152,7 +151,7 @@ ms.locfileid: "66071580"
   
 3.  Sulla barra multifunzione fare clic su **Proprietà** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Amministrazione e configurazione del server PowerPivot in Amministrazione centrale](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

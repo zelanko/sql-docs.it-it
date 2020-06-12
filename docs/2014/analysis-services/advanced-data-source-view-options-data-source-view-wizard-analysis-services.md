@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: db736863-3fc2-4166-af05-4c7d0323d4d1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 40a1c9ab87a608aa9d39f77fb4693acdc1b57efa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9512d0986b862b5865f8873b75a607f549cdac39
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062849"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528187"
 ---
 # <a name="advanced-data-source-view-options-dialog-box-data-source-view-wizard-analysis-services"></a>Finestra di dialogo Opzioni avanzate vista origine dati (Creazione guidata vista origine dati) (Analysis Services)
   La finestra di dialogo **Opzioni avanzate vista origine dati** mette a disposizioni opzioni aggiuntive per controllare il modo in cui la vista dell'origine dati attinge schemi e relazioni dall'origine dati per compilare la vista.  
@@ -31,7 +30,7 @@ ms.locfileid: "66062849"
  **Limita agli schemi seguenti**  
  Consente di specificare un elenco separato da virgole di nomi di schemi da utilizzare per limitare gli schemi recuperati dall'origine dati. Se per questa opzione non è disponibile un elenco di nomi di schemi, non vi saranno restrizioni sugli schemi utilizzabili.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Origini dati nei modelli multidimensionali](multidimensional-models/data-sources-in-multidimensional-models.md)   
  [Origini dati supportate &#40;SSAS multidimensionale&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   

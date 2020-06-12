@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ede0a23a6e37c47a1af242748233ca49b0cdfab7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9be99e5f5107491e2bac14c3a1590ccb1e1c778f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493879"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542843"
 ---
 # <a name="defining-calculated-members"></a>Definizione dei membri calcolati
   I membri calcolati sono membri di una dimensione o di un gruppo di misure definiti in base a una combinazione di dati del cubo, di operatori aritmetici, di numeri e di funzioni. È possibile ad esempio creare un membro calcolato che calcoli la somma di due misure fisiche del cubo. Le definizioni dei membri calcolati vengono archiviate nei cubi, ma i loro valori vengono calcolati in fase di query.  
@@ -42,7 +41,7 @@ ms.locfileid: "69493879"
   
      ![Form del riquadro Espressioni di calcolo](../../2014/tutorials/media/l6-calculatedmembers-02.gif "Form del riquadro Espressioni di calcolo")  
   
-3.  Nella casella **nome** modificare il nome della misura calcolata in `[Total Sales Amount]`.  
+3.  Nella casella **nome** modificare il nome della misura calcolata in `[Total Sales Amount]` .  
   
      Se il nome di un membro calcolato contiene uno spazio, tale nome deve essere racchiuso tra parentesi quadre.  
   
@@ -85,9 +84,9 @@ ms.locfileid: "69493879"
   
      ![Script nel riquadro Espressioni di calcolo](../../2014/tutorials/media/l6-calculatedmembers-04.gif "Script nel riquadro Espressioni di calcolo")  
   
-12. Sulla barra degli strumenti della scheda **calcoli** fare clic **su visualizzazione form**, verificare `[Total Sales Amount]` che sia selezionato nel riquadro **Libreria script** , quindi fare clic su **nuovo membro calcolato**.  
+12. Sulla barra degli strumenti della scheda **calcoli** fare clic su **visualizzazione form**, verificare che `[Total Sales Amount]` sia selezionato nel riquadro **Libreria script** , quindi fare clic su **nuovo membro calcolato**.  
   
-13. Modificare il nome del nuovo membro calcolato in `[Total Product Cost]`, quindi creare l'espressione seguente nella casella **espressione** :  
+13. Modificare il nome del nuovo membro calcolato in `[Total Product Cost]` , quindi creare l'espressione seguente nella casella **espressione** :  
   
     ```  
     [Measures].[Internet Sales-Total Product Cost] + [Measures].[Reseller Sales-Total Product Cost]  
@@ -103,7 +102,7 @@ ms.locfileid: "69493879"
   
 1.  Verificare che `[Total Product Cost]` sia selezionato nel riquadro **Libreria script** , quindi fare clic su **nuovo membro calcolato** nella barra degli strumenti della scheda **calcoli** .  
   
-2.  Nella casella **nome** modificare il nome della nuova misura calcolata in `[Internet GPM]`.  
+2.  Nella casella **nome** modificare il nome della nuova misura calcolata in `[Internet GPM]` .  
   
 3.  Nella casella **Espressione** creare l'espressione MDX seguente:  
   
@@ -119,7 +118,7 @@ ms.locfileid: "69493879"
   
 6.  Fare clic su **Nuovo membro calcolato** sulla barra degli strumenti della scheda **Calcoli**.  
   
-7.  Nella casella **nome** modificare il nome della nuova misura calcolata in `[Reseller GPM]`.  
+7.  Nella casella **nome** modificare il nome della nuova misura calcolata in `[Reseller GPM]` .  
   
 8.  Nella casella **Espressione** creare l'espressione MDX seguente:  
   
@@ -135,7 +134,7 @@ ms.locfileid: "69493879"
   
 11. Fare clic su **Nuovo membro calcolato** sulla barra degli strumenti della scheda **Calcoli**.  
   
-12. Nella casella **nome** modificare il nome della misura calcolata in `[Total GPM]`.  
+12. Nella casella **nome** modificare il nome della misura calcolata in `[Total GPM]` .  
   
 13. Nella casella **Espressione** creare l'espressione MDX seguente:  
   
@@ -167,11 +166,11 @@ ms.locfileid: "69493879"
   
 1.  Fare clic su **Visualizzazione Form** sulla barra degli strumenti della scheda **Calcoli**.  
   
-2.  Nel riquadro **Libreria script** selezionare `[Total GPM]`, quindi fare clic su **nuovo membro calcolato** nella barra degli strumenti della scheda **calcoli** .  
+2.  Nel riquadro **Libreria script** selezionare `[Total GPM]` , quindi fare clic su **nuovo membro calcolato** nella barra degli strumenti della scheda **calcoli** .  
   
      Facendo clic sull'ultimo membro calcolato nel riquadro **Libreria script** prima di selezionare **Nuovo membro calcolato** si garantisce che il nuovo membro calcolato venga immesso alla fine dello script. L'esecuzione degli script seguirà l'ordine visualizzato nel riquadro **Libreria script** .  
   
-3.  Modificare il nome del nuovo membro calcolato in `[Internet Sales Ratio to All Products]`.  
+3.  Modificare il nome del nuovo membro calcolato in `[Internet Sales Ratio to All Products]` .  
   
 4.  Digitare l'espressione seguente nella casella **Espressione** :  
   
@@ -194,7 +193,7 @@ ms.locfileid: "69493879"
   
 7.  Fare clic su **Nuovo membro calcolato** sulla barra degli strumenti della scheda **Calcoli**.  
   
-8.  Modificare il nome del membro calcolato in `[Reseller Sales Ratio to All Products]`.  
+8.  Modificare il nome del membro calcolato in `[Reseller Sales Ratio to All Products]` .  
   
 9. Digitare l'espressione seguente nella casella **Espressione** :  
   
@@ -215,7 +214,7 @@ ms.locfileid: "69493879"
   
 12. Fare clic su **Nuovo membro calcolato** sulla barra degli strumenti della scheda **Calcoli**.  
   
-13. Modificare il nome del membro calcolato in `[Total Sales Ratio to All Products]`.  
+13. Modificare il nome del membro calcolato in `[Total Sales Ratio to All Products]` .  
   
 14. Digitare l'espressione seguente nella casella **Espressione** :  
   

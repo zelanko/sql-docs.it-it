@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81450789395dfef84f81896990fa251514d3489e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 632cc071605cff6e42adec4acd32c9bd9949fc77
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702124"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545043"
 ---
 # <a name="designing-aggregations-xmla"></a>Progettazione di aggregazioni (XMLA)
   Le progettazioni delle aggregazioni sono associate alle partizioni di un gruppo di misure specifico per garantire che utilizzino la stessa struttura nell'archiviazione delle aggregazioni. L'uso della stessa struttura di archiviazione per le partizioni consente di definire facilmente partizioni che possono essere unite in un secondo momento tramite il comando [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) . Per ulteriori informazioni sulle progettazioni delle aggregazioni, vedere [aggregazioni e progettazioni delle aggregazioni](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
@@ -38,16 +37,16 @@ ms.locfileid: "62702124"
   
 -   La proprietà [Steps](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/steps-element-xmla) determina il numero di iterazioni che il `DesignAggregations` comando deve eseguire prima di restituire il controllo all'applicazione client.  
   
--   La proprietà [Time](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/time-element-xmla) determina il numero di millisecondi `DesignAggregations` che il comando deve eseguire prima di restituire il controllo all'applicazione client.  
+-   La proprietà [Time](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/time-element-xmla) determina il numero di millisecondi che il `DesignAggregations` comando deve eseguire prima di restituire il controllo all'applicazione client.  
   
--   La proprietà di [ottimizzazione](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/optimization-element-xmla) determina la percentuale stimata di miglioramento `DesignAggregations` delle prestazioni che il comando deve tentare di ottenere. Se si progettano le aggregazioni in modo iterativo, è necessario inviare questa proprietà solo al primo comando.  
+-   La proprietà di [ottimizzazione](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/optimization-element-xmla) determina la percentuale stimata di miglioramento delle prestazioni `DesignAggregations` che il comando deve tentare di ottenere. Se si progettano le aggregazioni in modo iterativo, è necessario inviare questa proprietà solo al primo comando.  
   
--   La proprietà [storage](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/storage-element-xmla) determina la quantità stimata di spazio di archiviazione su disco, in byte `DesignAggregations` , usata dal comando. Se si progettano le aggregazioni in modo iterativo, è necessario inviare questa proprietà solo al primo comando.  
+-   La proprietà [storage](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/storage-element-xmla) determina la quantità stimata di spazio di archiviazione su disco, in byte, usata dal `DesignAggregations` comando. Se si progettano le aggregazioni in modo iterativo, è necessario inviare questa proprietà solo al primo comando.  
   
 -   La proprietà [materializza](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/materialize-element-xmla) determina se il `DesignAggregations` comando deve creare le aggregazioni definite durante il processo di progettazione. Se si progettano le aggregazioni in modo iterativo, questa proprietà deve essere impostata su false fino a quando non è possibile salvare le aggregazioni progettate. Quando la proprietà viene impostata su true, il processo di progettazione corrente termina e le aggregazioni definite vengono aggiunte alla progettazione delle aggregazioni specificata.  
   
 ## <a name="specifying-queries"></a>Specifica di query  
- Il comando DesignAggregations supporta il comando di ottimizzazione basata sull'utilizzo includendo uno `Query` o più elementi nella proprietà [query](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/queries-element-xmla) . La `Queries` proprietà può contenere uno o più elementi [query](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/query-element-xmla) . Se la proprietà `Queries` non contiene alcun elemento `Query`, la progettazione delle aggregazioni specificata nell'elemento `Object` utilizza una struttura predefinita che contiene un set generale di aggregazioni appositamente progettato per soddisfare i criteri specificati nelle proprietà `Optimization` e `Storage` del comando `DesignAggregations`.  
+ Il comando DesignAggregations supporta il comando di ottimizzazione basata sull'utilizzo includendo uno o più `Query` elementi nella proprietà [query](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/queries-element-xmla) . La `Queries` proprietà può contenere uno o più elementi [query](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/query-element-xmla) . Se la proprietà `Queries` non contiene alcun elemento `Query`, la progettazione delle aggregazioni specificata nell'elemento `Object` utilizza una struttura predefinita che contiene un set generale di aggregazioni appositamente progettato per soddisfare i criteri specificati nelle proprietà `Optimization` e `Storage` del comando `DesignAggregations`.  
   
  Ogni elemento `Query` rappresenta una query di tipo goal utilizzata dal processo di progettazione per definire le aggregazioni destinate alle query utilizzate più di frequente. È possibile specificare query di tipo goal personalizzate oppure utilizzare le informazioni archiviate da un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nel log di query per recuperare informazioni sulle query utilizzate più di frequente. Il log di query viene utilizzato dall'Ottimizzazione guidata basata sulle statistiche di utilizzo per recuperare query di tipo goal in base all'ora, all'utilizzo oppure all'utente specificato quando viene inviato un comando `DesignAggregations`. Per ulteriori informazioni, vedere [Guida sensibile al contesto della procedura guidata ottimizzazione basata sull'utilizzo](../usage-based-optimization-wizard-f1-help.md).  
   
@@ -68,7 +67,7 @@ ms.locfileid: "62702124"
 > [!NOTE]  
 >  Alcuni attributi non vengono considerati nel set di dati. Per ulteriori informazioni sugli attributi esclusi, vedere [elemento Query &#40;&#41;XMLA ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/query-element-xmla).  
   
- Ogni dimensione del gruppo di misure che contiene la progettazione delle aggregazioni è rappresentata da un valore `Query` del set di *dati* nell'elemento. L'ordine dei valori *Dataset* deve corrispondere all'ordine delle dimensioni incluse nel gruppo di misure.  
+ Ogni dimensione del gruppo di misure che contiene la progettazione delle aggregazioni è rappresentata da un valore del *set di dati* nell' `Query` elemento. L'ordine dei valori *Dataset* deve corrispondere all'ordine delle dimensioni incluse nel gruppo di misure.  
   
 ## <a name="designing-aggregations-using-iterative-or-batch-processes"></a>Progettazione di aggregazioni tramite processi iterativi o elaborazioni batch  
  È possibile utilizzare il comando `DesignAggregations` come parte di un processo iterativo o di un'elaborazione batch, in base all'interattività richiesta dal processo di progettazione.  
@@ -105,14 +104,14 @@ ms.locfileid: "62702124"
 |------------|---------------|-----------------|  
 |Passaggi|Integer|Numero di passaggi eseguiti dal comando prima di restituire il controllo all'applicazione client.|  
 |Tempo|Long integer|Numero di millisecondi necessari al comando prima di restituire il controllo all'applicazione client.|  
-|Ottimizzazione|Double|Percentuale stimata di miglioramento delle prestazioni ottenuta dal comando prima di restituire il controllo all'applicazione client.|  
+|Optimization|Double|Percentuale stimata di miglioramento delle prestazioni ottenuta dal comando prima di restituire il controllo all'applicazione client.|  
 |Archiviazione|Long integer|Numero stimato di byte necessari al comando prima di restituire il controllo all'applicazione client.|  
 |Aggregations|Long integer|Numero di aggregazioni definite dal comando prima di restituire il controllo all'applicazione client.|  
 |LastStep|Boolean|Indica se i dati nel set di righe rappresentano l'ultimo passaggio del processo di progettazione. Se la proprietà `Materialize` del comando è impostata su true, il valore di questa colonna viene impostato su true.|  
   
  È possibile utilizzare le statistiche relative alla progettazione contenute nel set di righe restituito dopo ogni comando `DesignAggregations` sia nella progettazione di tipo iterativo che in quella di tipo batch. Nella progettazione di tipo iterativo è possibile utilizzare le statistiche relative alla progettazione per determinare e visualizzare lo stato di avanzamento. Quando si progettano le aggregazioni in batch, è possibile utilizzare le statistiche relative alla progettazione per determinare il numero di aggregazioni create dal comando.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Sviluppo con XMLA in Analysis Services](developing-with-xmla-in-analysis-services.md)  
   
   

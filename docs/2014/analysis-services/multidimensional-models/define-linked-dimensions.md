@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ca4b3c0b2f2a6c63e62a44499d6e33e651ca9bae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c120afe4f4cd873c91ae67bad73b2baab2d18fa
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075582"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547009"
 ---
 # <a name="define-linked-dimensions"></a>Definizione delle dimensioni collegate
   Una dimensione collegata è basata su una dimensione creata e archiviata in un altro database di Analysis Services con la stessa versione e lo stesso livello di compatibilità. Utilizzando una dimensione collegata è possibile creare, archiviare e mantenere una dimensione in un database facendo in modo che tale dimensione sia disponibile per gli utenti di più database. Per gli utenti una dimensione collegata ha lo stesso aspetto di qualsiasi altra dimensione.  
@@ -62,7 +61,7 @@ ms.locfileid: "66075582"
   
 2.  In Gestione connessione, verificare che il provider sia impostato su **Provider OLE DB\Microsoft OLE DB nativo per Analysis Services 11.0**.  
   
-3.  Immettere il nome del server (utilizzare *ServerName*\\*NomeIstanza* per un'istanza denominata)<sup>1</sup> o digitare **localhost** per connettersi a un Analysis Services server in esecuzione nello stesso computer.  
+3.  Immettere il nome del server (utilizzare *ServerName* \\ *NomeIstanza* per un'istanza denominata)<sup>1</sup> o digitare **localhost** per connettersi a un Analysis Services server in esecuzione nello stesso computer.  
   
 4.  Utilizzare l'autenticazione di Windows per la connessione.  
   
@@ -75,7 +74,7 @@ ms.locfileid: "66075582"
 ## <a name="next-steps"></a>Passaggi successivi  
  Non è possibile modificare la struttura di una dimensione collegata e per questo motivo non è possibile visualizzarla nella scheda **Struttura dimensione** di Progettazione dimensioni. Dopo l'elaborazione della dimensione collegata, è possibile visualizzarla nella scheda **esplorazione** . È anche possibile modificare il nome e creare una traduzione per il nome.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Impostazione del livello di compatibilità di un database multidimensionale &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)   
  [Gruppi di misure collegati](linked-measure-groups.md)   
  [Relazioni tra dimensioni](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  

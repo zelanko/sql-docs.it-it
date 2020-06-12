@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: c11380f0-7c24-4668-9cdf-9c53e4aff665
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6d5f0619e7291cc08b1750c0b35f9639cb7a9872
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f37939fea1188c18079fc7e619cee6a336876e24
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078042"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541853"
 ---
 # <a name="manage-models-sql-server-data-mining-add-ins"></a>Gestione modelli (componenti aggiuntivi Data mining di SQL Server)
   ![Pulsante Gestione modelli, barra multifunzione Data mining](media/dmc-manage.gif "Pulsante Gestione modelli, barra multifunzione Data mining")  
   
- La finestra di dialogo **Gestisci modelli** consente di interagire con i modelli di data mining e le strutture di data [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] mining esistenti archiviati nel server al quale si è attualmente connessi. È inoltre possibile visualizzare e gestire strutture e modelli temporanei creati durante la connessione corrente. Se sono stati utilizzati sia modelli di sessione che modelli archiviati in un server, nella finestra di dialogo saranno visibili entrambi i tipi di modelli.  
+ La finestra di dialogo **Gestisci modelli** consente di interagire con i modelli di data mining e le strutture di data mining esistenti archiviati nel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server al quale si è attualmente connessi. È inoltre possibile visualizzare e gestire strutture e modelli temporanei creati durante la connessione corrente. Se sono stati utilizzati sia modelli di sessione che modelli archiviati in un server, nella finestra di dialogo saranno visibili entrambi i tipi di modelli.  
   
 ## <a name="using-the-manage-models-wizard"></a>Utilizzo della procedura guidata Gestione modelli  
  Quando si fa clic su **Gestisci modelli**, viene visualizzata la finestra di dialogo **Gestisci strutture e modelli di data mining** , che consente di accedere alle seguenti funzionalità per la gestione di modelli e strutture data mining esistenti:  
@@ -50,7 +49,7 @@ ms.locfileid: "66078042"
   
  Se l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a cui si è connessi non contiene strutture o modelli di data mining esistenti, sarà possibile crearli utilizzando le procedure guidate e altri strumenti disponibili in questo componente aggiuntivo. È inoltre possibile creare nuovi modelli utilizzando il **modello di Data Mining Editor avanzato**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Documentazione di modelli di data mining &#40;componenti aggiuntivi Data mining per Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)   
  [Distribuzione e scalabilità di modelli di data mining &#40;componenti aggiuntivi Data mining per Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)   
 

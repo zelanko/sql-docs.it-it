@@ -1,5 +1,6 @@
 ---
 title: Introduzione con SSMA per MySQL (MySQLToSQL) | Microsoft Docs
+description: Informazioni sul processo di installazione di SQL Server Migration Assistant (SSMA) per MySQL e acquisire familiarità con l'interfaccia utente di SSMA.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 5a1adb6d9354dc870c11fab0a68f6c92e704ebfb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a6dce90d0c8626032d92c9ecec61cbbaf2556e90
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67984542"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293798"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Introduzione a SSMA per MySQL (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) per MySQL consente di convertire rapidamente gli schemi di database MySQL in SQL Server o negli schemi del database SQL di Azure, caricare gli schemi risultanti in SQL Server o nel database SQL di Azure ed eseguire la migrazione dei dati da MySQL a SQL Server o al database SQL di Azure.  
@@ -100,7 +101,7 @@ La tabella seguente illustra i comandi della barra degli strumenti di migrazione
 |**Creazione di report**|Converte gli oggetti MySQL selezionati in SQL Server o oggetti database SQL di Azure, quindi crea un report che mostra la riuscita della conversione.<br /><br />Questo comando è disabilitato, a meno che gli oggetti non siano selezionati in MySQL Metadata Explorer.|  
 |**Converti schema**|Converte gli oggetti MySQL selezionati in SQL Server o oggetti del database SQL di Azure.<br /><br />Questo comando è disabilitato, a meno che gli oggetti non siano selezionati in MySQL Metadata Explorer.|  
 |**Eseguire la migrazione dei dati**|Esegue la migrazione dei dati dal database MySQL a SQL Server o al database SQL di Azure. Prima di eseguire questo comando, è necessario convertire gli schemi MySQL in SQL Server o negli schemi del database SQL di Azure e quindi caricare gli oggetti in SQL Server o nel database SQL di Azure.<br /><br />Questo comando è disabilitato, a meno che gli oggetti non siano selezionati in MySQL Metadata Explorer.|  
-|**Arresta**|Arresta il processo corrente.|  
+|**Stop**|Arresta il processo corrente.|  
   
 ### <a name="menus"></a>Menu  
 La tabella seguente illustra i menu SSMA.  

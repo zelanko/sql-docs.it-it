@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b7aee903-d33a-4c20-86c2-aa013a50949f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a57aff903d41e8bcddef25e21def39a45e33d23f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92e8aa42a3e4c7e725ced23d85ded836cc3dde6a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080336"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544089"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Metodologie di autenticazione supportate da Analysis Services
   Per la connessione a un'istanza di Analysis Services da un'applicazione client è necessaria l'autenticazione di Windows (integrata). È possibile fornire un'identità utente di Windows utilizzando uno dei metodi seguenti:  
@@ -78,7 +77,7 @@ ms.locfileid: "66080336"
   
  Per altre informazioni sulle credenziali archiviate, vedere [Creare, modificare ed eliminare origini dati condivise &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) e [Use Excel Services with Secure Store Service in SharePoint Server 2013](https://go.microsoft.com/fwlink/?LinkID=309869) (Utilizzare Excel Services con il servizio di archiviazione sicura in SharePoint Server 2013).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzo della rappresentazione con la sicurezza del trasporto](https://go.microsoft.com/fwlink/?LinkId=311727)   
  [Configurare l'accesso HTTP per Analysis Services in Internet Information Services &#40;IIS&#41; 8,0](configure-http-access-to-analysis-services-on-iis-8-0.md)   
  [Configurare Analysis Services per la delega vincolata Kerberos](configure-analysis-services-for-kerberos-constrained-delegation.md)   

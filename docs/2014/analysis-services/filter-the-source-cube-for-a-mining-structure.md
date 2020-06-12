@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 05dce7e1-2fe5-4500-bacf-c1a8a76e1424
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74220f2385e27484c5cc511c84be5625290a28db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 058ba6e78fd6c6e5aa7b06fbd5d34c256dac07b3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081145"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544453"
 ---
 # <a name="filter-the-source-cube-for-a-mining-structure"></a>Filtrare il cubo di origine per una struttura di data mining
   Quando si crea una struttura di data mining basata sui dati in un modello multidimensionale (un cubo OLAP), è possibile *sezionare* il cubo su cui è basata la struttura di data mining. Il sezionamento consente di creare subset di dati, come un filtro da applicare ai dati utilizzati per il training del modello di data mining.  
   
 ### <a name="to-slice-a-cube"></a>Per sezionare un cubo  
   
-1.  In Progettazione modelli di data [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]mining in selezionare la scheda **struttura** di data mining o **modelli di data mining** .  
+1.  In Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] selezionare la scheda **struttura** di data mining o modelli di **data mining** .  
   
 2.  Scegliere **Definisci sezione del cubo della struttura di data**mining dal menu **modello di data mining** .  
   
@@ -51,7 +50,7 @@ ms.locfileid: "66081145"
   
      A questo punto, il cubo di origine è filtrato come definito dalla sezione del cubo.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Attività e procedure relative alla struttura di data mining](data-mining/mining-structure-tasks-and-how-tos.md)   
  [Creare una nuova struttura di data mining OLAP](data-mining/create-a-new-olap-mining-structure.md)  
   

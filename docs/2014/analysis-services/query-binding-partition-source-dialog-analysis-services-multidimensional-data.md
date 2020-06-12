@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 697874d4-3f7a-4126-96f5-37cc8e2ee306
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 604a42cc0b3519f1034733e12f72dc1a7c969ce6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 59d2ae1fed9d22366786e21a287a621f08418a5d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070568"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539753"
 ---
 # <a name="query-binding-detail-partition-source-dialog-box-analysis-services---multidimensional-data"></a>Dettagli dell'associazione di query (finestra di dialogo Origine partizione) (Analysis Services - Dati multidimensionali)
   Usare l'opzione **Associazione di query** della finestra di dialogo **Origine partizione** per specificare la query che restituisce i dati per la partizione. Per visualizzare questo riquadro è possibile selezionare **Associazione di query** nell'opzione **Tipo di associazione** della finestra di dialogo **Origine partizione** .  
@@ -35,7 +34,7 @@ ms.locfileid: "66070568"
  **Controllo**  
  Fare clic per verificare che l'istruzione contenuta in **Query** sia un'istruzione SQL valida.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Finestra di dialogo origine partizione &#40;Analysis Services-Dati multidimensionali&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md)  
   
   

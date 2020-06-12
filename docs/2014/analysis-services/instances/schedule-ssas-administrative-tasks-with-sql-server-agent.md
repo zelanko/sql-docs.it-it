@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9b24e99ac31b126888a1fa49f3ef5547a4f82dda
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd751efccc038c131bc61338d7adcd8e10a67d93
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079679"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543773"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Pianificare attività amministrative SSAS con SQL Server Agent
   Usando il servizio SQL Server Agent, è possibile pianificare l'esecuzione delle attività amministrative di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nell'ordine e agli orari necessari. Le attività pianificate consentono di automatizzare processi eseguiti in cicli regolari o prevedibili. È possibile pianificare l'esecuzione di attività amministrative, ad esempio l'elaborazione di cubi, nei periodi in cui l'attività aziendale è ridotta. È inoltre possibile determinare l'ordine di esecuzione delle attività creando passaggi di processo in un processo di SQL Server Agent. È possibile ad esempio elaborare un cubo ed eseguirne quindi un backup.  
@@ -27,7 +26,7 @@ ms.locfileid: "66079679"
 ## <a name="prerequisites"></a>Prerequisiti  
  È necessario che il servizio SQL Server Agent sia installato.  
   
- Per impostazione predefinita, i processi vengono eseguiti con l'account del servizio. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]l'account predefinito per SQL Server Agent è NT Service\SQLAgent $\<NomeIstanza>. Per eseguire un backup o un'attività di elaborazione, è necessario utilizzare un account amministratore di sistema nell'istanza di Analysis Services. Per ulteriori informazioni, vedere [concedere le autorizzazioni di amministratore del Server &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md).  
+ Per impostazione predefinita, i processi vengono eseguiti con l'account del servizio. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] l'account predefinito per SQL Server Agent è NT Service\SQLAgent $ \<instancename> . Per eseguire un backup o un'attività di elaborazione, è necessario utilizzare un account amministratore di sistema nell'istanza di Analysis Services. Per ulteriori informazioni, vedere [concedere le autorizzazioni di amministratore del Server &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
  È consigliabile utilizzare un database di test. È possibile distribuire il database di esempio multidimensionale AdventureWorks o un progetto dell'esercitazione multidimensionale di Analysis Services da utilizzare in questa procedura dettagliata. Per altre informazioni, vedere [Installare dati di esempio e progetti per l'esercitazione di modellazione multidimensionale di Analysis Services](../install-sample-data-and-projects.md).  
   
@@ -81,9 +80,9 @@ ms.locfileid: "66079679"
   
 6.  Nella finestra di dialogo **Nuovo passaggio di processo** immettere il nome del passaggio nella casella **Nome passaggio**.  
   
-7.  In **Server** digitare **localhost** per un'istanza predefinita di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e **localhost\\**\<*nome istanza*> per un'istanza denominata.  
+7.  In **Server**Digitare **localhost** per un'istanza predefinita di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e **localhost \\ ** \<*instance name*> per un'istanza denominata.  
   
-     Se si eseguirà il processo da un computer remoto, utilizzare il nome del server e il nome dell'istanza in cui il processo verrà eseguito. Utilizzare il formato \< *nome server*> \<per un'istanza predefinita e nome *Server*>\\<nome*istanza*> per un'istanza denominata.  
+     Se si eseguirà il processo da un computer remoto, utilizzare il nome del server e il nome dell'istanza in cui il processo verrà eseguito. Utilizzare il formato \<*server name*> per un'istanza predefinita e il \<*server name*> \\ < *nome dell'istanza*> per un'istanza denominata.  
   
 8.  In **Tipo**selezionare **Comando di SQL Server Analysis Services**.  
   
@@ -221,7 +220,7 @@ ms.locfileid: "66079679"
   
 16. Al termine del processo fare clic su **Chiudi**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)   
  [Creare script per le attività amministrative in Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
   

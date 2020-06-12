@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4b80cfeae2957753cfe96d54dcbe0052e19db741
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d8a68b0c6145d24ae5ae543b6132e222fe611b77
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074470"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546403"
 ---
 # <a name="format_string-contents-mdx"></a>Contenuto di FORMAT_STRING (MDX)
   La proprietà `FORMAT_STRING` di una cella determina la formattazione della proprietà `VALUE` della cella, creando il valore della proprietà `FORMATTED_VALUE` della cella. La proprietà `FORMAT_STRING` delle celle è in grado di gestire valori non elaborati di tipo stringa e numerici, applicando un'espressione di formato a un valore per restituire un valore formattato per la proprietà `FORMATTED_VALUE`. Nelle tabelle seguenti vengono indicati in dettaglio la sintassi e i caratteri di formattazione utilizzati per gestire valori di tipo stringa e numerici.  
@@ -29,7 +28,7 @@ ms.locfileid: "66074470"
 ## <a name="string-values"></a>Valori stringa  
  Un'espressione di formato per le stringhe può includere una sezione oppure due sezioni separate da un punto e virgola (;).  
   
-|Uso|Risultato|  
+|Utilizzo|Risultato|  
 |-----------|------------|  
 |Una sezione|Il formato viene applicato a tutti i valori stringa.|  
 |Due sezioni|La prima sezione viene applicata ai dati stringa, mentre la seconda sezione viene applicata ai valori Null e alle stringhe di lunghezza zero ("").|  
@@ -47,7 +46,7 @@ ms.locfileid: "66074470"
 ## <a name="numeric-values"></a>Valori numerici  
  Un'espressione di formato definita dall'utente per i numeri può includere da una a quattro sezioni separate da punti e virgola. Se l'argomento del formato include un formato numerico predefinito, sarà possibile utilizzare una sola sezione.  
   
-|Uso|Risultato|  
+|Utilizzo|Risultato|  
 |-----------|------------|  
 |Una sezione|L'espressione di formato viene applicata a tutti i valori.|  
 |Due sezioni|La prima sezione viene applicata ai valori positivi e agli zeri, la seconda ai valori negativi.|  
@@ -72,15 +71,15 @@ ms.locfileid: "66074470"
 |---------------|-----------------|  
 |nessuno|Visualizza il numero senza formattazione.|  
 |**0**|Rappresenta un segnaposto di cifra al posto del quale viene visualizzata una cifra o uno zero (0).<br /><br /> Se nel numero è presente una cifra nella posizione in cui nella stringa di formato è presente lo zero, nel valore formattato verrà visualizzata la cifra. In caso contrario, in tale posizione del valore formattato verrà visualizzato uno zero.<br /><br /> Se il numero include meno cifre di quanti sono gli zeri nella stringa di formato, su entrambi i lati del separatore decimale, nel valore formattato verranno visualizzati zeri iniziali o finali.<br /><br /> Se, a destra del separatore decimale, il numero include più cifre di quanti sono gli zeri a destra del separatore decimale nell'espressione di formato, il valore formattato verrà arrotondato specificando tante cifre decimali quanti sono gli zeri.<br /><br /> Se, a sinistra del separatore decimale, il numero include più cifre di quanti sono gli zeri a sinistra del separatore decimale nell'espressione di formato, nel valore formattato le cifre aggiuntive verranno visualizzate senza modifiche.|  
-|**#**|Rappresenta un segnaposto di cifra al posto del quale viene visualizzata una cifra oppure nulla.<br /><br /> Se nell'espressione è presente una cifra nella posizione in cui il simbolo di**#** cancelletto () viene visualizzato nella stringa di formato, il valore formattato Visualizza la cifra. In caso contrario, in tale posizione del valore formattato non verrà visualizzato nulla.<br /><br /> Il segnaposto cancelletto (**#**) funziona come il segnaposto zero (**0**) digit, ad eccezione del fatto che gli zeri iniziali e finali non vengono visualizzati se il numero ha le stesse cifre **#** o un numero inferiore di caratteri rispetto a entrambi i lati del separatore decimale nell'espressione di formato.|  
-|**.**|Rappresenta un segnaposto di decimali che determina il numero di cifre visualizzate a sinistra e a destra del separatore decimale.<br /><br /> Se l'espressione di formato contiene solo caratteri di**#** cancelletto () a sinistra del punto (**.**), i numeri inferiori a 1 iniziano con un separatore decimale. Per visualizzare uno zero iniziale con i numeri frazionari, utilizzare zero (0) come primo segnaposto di cifra a sinistra del separatore decimale.<br /><br /> Il carattere effettivo utilizzato come segnaposto di decimali nell'output formattato dipende dal formato numerico riconosciuto dal computer in uso.<br /><br /> Nota: in alcune impostazioni locali viene usata la virgola come separatore decimale.|  
-|**%**|Rappresenta un segnaposto di percentuale. L'espressione viene moltiplicata per 100. Il carattere di percentuale**%**() viene inserito nella posizione in cui la percentuale viene visualizzata nella stringa di formato.|  
+|**#**|Rappresenta un segnaposto di cifra al posto del quale viene visualizzata una cifra oppure nulla.<br /><br /> Se nell'espressione è presente una cifra nella posizione in cui il simbolo di cancelletto ( **#** ) viene visualizzato nella stringa di formato, il valore formattato Visualizza la cifra. In caso contrario, in tale posizione del valore formattato non verrà visualizzato nulla.<br /><br /> Il segnaposto cancelletto ( **#** ) funziona come il segnaposto zero (**0**) digit, ad eccezione del fatto che gli zeri iniziali e finali non vengono visualizzati se il numero ha le stesse cifre o un numero inferiore di caratteri rispetto a **#** entrambi i lati del separatore decimale nell'espressione di formato.|  
+|**.**|Rappresenta un segnaposto di decimali che determina il numero di cifre visualizzate a sinistra e a destra del separatore decimale.<br /><br /> Se l'espressione di formato contiene solo caratteri di cancelletto ( **#** ) a sinistra del punto (**.**), i numeri inferiori a 1 iniziano con un separatore decimale. Per visualizzare uno zero iniziale con i numeri frazionari, utilizzare zero (0) come primo segnaposto di cifra a sinistra del separatore decimale.<br /><br /> Il carattere effettivo utilizzato come segnaposto di decimali nell'output formattato dipende dal formato numerico riconosciuto dal computer in uso.<br /><br /> Nota: in alcune impostazioni locali viene usata la virgola come separatore decimale.|  
+|**%**|Rappresenta un segnaposto di percentuale. L'espressione viene moltiplicata per 100. Il carattere di percentuale ( **%** ) viene inserito nella posizione in cui la percentuale viene visualizzata nella stringa di formato.|  
 |**,**|Rappresenta il separatore delle migliaia, che separa le migliaia dalle centinaia all'interno di un numero con quattro o più posizioni a sinistra del separatore decimale.<br /><br /> Se il formato include un separatore delle migliaia racchiuso tra segnaposti di cifra (**0** o **#**), il separatore delle migliaia verrà usato in modo standard.<br /><br /> Se sono presenti due separatori delle migliaia consecutivi oppure un separatore delle migliaia immediatamente a sinistra del separatore decimale, indipendentemente dal fatto che sia specificato un decimale, il numero verrà diviso per 1000 e arrotondato come necessario. È possibile, ad esempio, usare la stringa di formato "**##0**,," per rappresentare 100 milioni come 100. I numeri minori di 1 milione vengono visualizzati come 0. Due separatori delle migliaia adiacenti in una posizione diversa da quella immediatamente a sinistra del separatore decimale vengono considerati elementi che specificano l'utilizzo di un separatore delle migliaia.<br /><br /> Il carattere effettivo utilizzato come separatore delle migliaia nell'output formattato dipende dal formato numerico riconosciuto dal computer in uso.<br /><br /> Nota: in alcune impostazioni locali viene usato il punto come separatore delle migliaia.|  
 |**:**|Rappresenta il separatore dell'ora che separa le ore, i minuti e i secondi nei valori di ora formattati.<br /><br /> Nota: in alcune impostazioni locali potrebbero essere usati altri caratteri come separatore dell'ora.<br /><br /> Il carattere effettivo utilizzato come separatore dell'ora nell'output formattato è determinato dalle impostazioni di sistema del computer in uso.|  
 |**/**|Rappresenta il separatore della data che separa il giorno, il mese e l'anno nei valori di data formattati.<br /><br /> Il carattere effettivo utilizzato come separatore della data nell'output formattato è determinato dalle impostazioni di sistema del computer in uso.<br /><br /> Nota: in alcune impostazioni locali potrebbero essere usati altri caratteri come separatore della data.|  
 |**E- E+ e- e+**|Rappresenta il formato scientifico.<br /><br /> Se l'espressione di formato contiene almeno un segnaposto di cifra (**0** o **#**) a destra di **E-**, **E+**, **e-** o **e+**, il valore formattato verrà visualizzato in formato scientifico e tra il numero e l'esponente verrà inserito il carattere E o e. Il numero di segnaposti di cifra a destra determina il numero di cifre nell'esponente. Usare **E-** o **e-** per inserire un segno di sottrazione accanto agli esponenti negativi. Usare **E+** o **e+** per inserire un segno di sottrazione accanto agli esponenti negativi e un segno di addizione accanto agli esponenti positivi.|  
-|**- + $ ( )**|Visualizza un carattere letterale.<br /><br /> Per visualizzare un carattere diverso da uno di quelli elencati, inserire una barra rovesciata (**\\**) prima del carattere o racchiudere il carattere tra virgolette doppie (**""**).|  
-|**\\**|Visualizza il carattere successivo nella stringa di formato.<br /><br /> Per visualizzare un carattere con un significato speciale come carattere letterale, inserire una barra rovesciata (**\\**) prima del carattere. La barra rovesciata non viene visualizzata. Utilizzare una barra rovesciata equivale a racchiudere il carattere successivo tra virgolette doppie. Per visualizzare una barra rovesciata, usare due barre rovesciate (**\\**). I caratteri che non possono essere visualizzati come caratteri letterali includono i seguenti:<br /><br /> I caratteri di formattazione di data e ora:**a**, **c**, **d**, **h**, **m**, **n**, **p**, **q**, **s**, **t**, **w**, **y**, **/** e **:**<br /><br /> Caratteri**#** di formattazione numerica, ovvero **0**, **%**, **e**, **e**, **virgola**e **punto**<br /><br /> Caratteri di formattazione delle**@** stringhe, **&** **\<** **>**,,, e **!**|  
+|**- + $ ( )**|Visualizza un carattere letterale.<br /><br /> Per visualizzare un carattere diverso da uno di quelli elencati, inserire una barra rovesciata ( **\\** ) prima del carattere o racchiudere il carattere tra virgolette doppie (**""**).|  
+|**\\**|Visualizza il carattere successivo nella stringa di formato.<br /><br /> Per visualizzare un carattere con un significato speciale come carattere letterale, inserire una barra rovesciata ( **\\** ) prima del carattere. La barra rovesciata non viene visualizzata. Utilizzare una barra rovesciata equivale a racchiudere il carattere successivo tra virgolette doppie. Per visualizzare una barra rovesciata, usare due barre rovesciate ( **\\\\** ). I caratteri che non possono essere visualizzati come caratteri letterali includono i seguenti:<br /><br /> I caratteri di formattazione di data e ora:**a**, **c**, **d**, **h**, **m**, **n**, **p**, **q**, **s**, **t**, **w**, **y**, **/** e **:**<br /><br /> Caratteri di formattazione numerica, **#** ovvero **0**, **%** , **e**, **e**, **virgola**e **punto**<br /><br /> Caratteri di formattazione delle stringhe **@** ,, **&** , **\<**, **>** e **!**|  
 |**ABC**|Visualizza la stringa racchiusa tra virgolette doppie (**" "**).<br /><br /> Per includere una stringa formattata dal codice, racchiudere il testo tra due Chr(**34**). **34**è il codice carattere per la virgoletta doppia.|  
   
 ### <a name="named-numeric-formats"></a>Formati numerici denominati  
@@ -120,14 +119,14 @@ ms.locfileid: "66074470"
 |**mmmm**|Visualizza il nome completo del mese (gennaio-dicembre).|  
 |**d**|Consente di visualizzare il trimestre dell'anno sotto forma di numero (1-4).|  
 |**y**|Visualizza il giorno dell'anno sotto forma di numero (1-366).|  
-|**yy**|Visualizza l'anno come numero a due cifre (00-99).|  
+|**AA**|Visualizza l'anno come numero a due cifre (00-99).|  
 |**aaaa**|Visualizza l'anno come numero a quattro cifre (100-9999).|  
 |**h**|Visualizza l'ora sotto forma di numero senza zeri iniziali (0-23).|  
 |**hh**|Visualizza l'ora sotto forma di numero con zeri iniziali (00-23).|  
 |**n**|Visualizza il minuto sotto forma di numero senza zeri iniziali (0-59).|  
 |**nn**|Visualizza il minuto sotto forma di numero con zeri iniziali (00-59).|  
 |**s**|Visualizza il secondo sotto forma di numero senza zeri iniziali (0-59).|  
-|**ss**|Visualizza il secondo sotto forma di numero con zeri iniziali (00-59).|  
+|**SS**|Visualizza il secondo sotto forma di numero con zeri iniziali (00-59).|  
 |**t t t t t**|Visualizza l'ora completa, inclusi ora, minuti e secondi, formattata utilizzando il separatore dell'ora definito dal formato di ora riconosciuto dal computer in uso.<br /><br /> Se è selezionata l'opzione relativa allo zero iniziale e l'ora è anteriore alle 10.00, verrà visualizzato uno zero iniziale nel ciclo mattutino o pomeridiano . Ad esempio, 09.59.<br /><br /> In Windows il formato di ora predefinito è **h.mm.ss**.|  
 |**AM/PM**|Visualizza i caratteri **AM** maiuscoli accanto a tutte le ore da mezzanotte a mezzogiorno e i caratteri **PM** maiuscoli accanto a tutte le ore da mezzogiorno a mezzanotte.<br /><br /> Nota: usa il formato a 12 ore.|  
 |**AM/PM**|Visualizza i caratteri **am** minuscoli accanto a tutte le ore da mezzanotte a mezzogiorno e i caratteri **pm** minuscoli accanto a tutte le ore da mezzogiorno a mezzanotte.<br /><br /> Nota: usa il formato a 12 ore.|  
@@ -148,7 +147,7 @@ ms.locfileid: "66074470"
 |`Medium Time`|Viene visualizzata l'ora nel formato a 12 ore utilizzando ore e minuti e l'identificatore AM/PM.|  
 |`Short Time`|Viene visualizzata l'ora utilizzando il formato a 24 ore, ad esempio, 17:45.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [LINGUA e FORMAT_STRING FORMATED_VALUE](mdx-cell-properties-formatted-value-property.md)   
  [Utilizzo delle proprietà delle celle &#40;&#41;MDX](mdx-cell-properties-using-cell-properties.md)   
  [Creazione e utilizzo di valori di proprietà &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   

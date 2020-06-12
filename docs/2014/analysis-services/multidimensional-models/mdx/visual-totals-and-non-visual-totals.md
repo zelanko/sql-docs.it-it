@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ea9d02f2-a668-4547-ade5-e3d077a2e1bd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f110b54d1a8a057f16b5e5682adc3beb04c54f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79497b0fd84116ab69187bd7d1733101357ffbce
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073725"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546103"
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>Totali visualizzati e non visualizzati
   I totali visualizzati sono totali alla fine di una colonna o riga in cui vengono sommati tutti gli elementi visibili della colonna o riga. Questo è il comportamento predefinito per la maggior parte delle tabelle visualizzate. Tuttavia, in alcuni casi per l'utente è utile visualizzare solo alcune colonne di una tabella, conservando però i totali per la riga intera, compresi gli elementi non visualizzati. Questi vengono chiamati `Non Visual Totals`, perché il totale è il risultato di valori visualizzati e non visualizzati.  
@@ -36,7 +35,7 @@ ms.locfileid: "66073725"
   
 |||||||  
 |-|-|-|-|-|-|  
-||**All Products**|**Accessories**|**Bikes**|**Clothing**|**Componenti**|  
+||**All Products**|**Accessori**|**Biciclette**|**Abbigliamento**|**Componenti**|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$66,302,381.56**|**$1,777,840.84**|**$11,799,076.66**|  
 |**Specialty Bike Shop**|**$6,756,166.18**|**$65,125.48**|**$6,080,117.73**|**$252,933.91**|**$357,989.07**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$30,892,354.33**|**$592,385.71**|**$3,307,774.48**|  
@@ -61,7 +60,7 @@ ms.locfileid: "66073725"
   
 |||||  
 |-|-|-|-|  
-||**All Products**|**Accessories**|**Clothing**|  
+||**All Products**|**Accessori**|**Abbigliamento**|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$1,777,840.84**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$592,385.71**|  
 |**Warehouse**|**$38,726,913.48**|**$331,169.64**|**$932,521.23**|  
@@ -89,14 +88,14 @@ ms.locfileid: "66073725"
   
 |||||  
 |-|-|-|-|  
-||All Products|Accessories|Clothing|  
+||All Products|Accessori|Abbigliamento|  
 |All Resellers|$73,694,430.80|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  
 |Warehouse|$38,726,913.48|$331,169.64|$932,521.23|  
   
  Se si confrontano i risultati precedenti, è possibile osservare che la riga [All Resellers] si aggiunge ai valori visualizzati di [Value Added Reseller] e [Warehouse] ma che la colonna [All Products] mostra il valore totale per tutti i prodotti, compresi quelli non visualizzati.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Concetti chiave di MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Autoexists](autoexists.md)   
  [Utilizzo di membri, Tuple e set &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   

@@ -1,24 +1,32 @@
 ---
 title: Novità di SSMA per Oracle (OracleToSQL) | Microsoft Docs
+description: Scopri le modifiche apportate a SQL Server Migration Assistant (SSMA) per Oracle (OracleToSQL) per ogni versione.
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/27/2020
+ms.date: 6/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 07dd930a853926be98dba5f2ca91bd7080b9a808
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 39da9754b75ebf1ce7dd5adb3df55d4d07718b32
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220686"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84294068"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Novità di SSMA per Oracle (OracleToSQL)
 
 Questo articolo elenca SQL Server Migration Assistant (SSMA) per le modifiche Oracle in ogni versione.
+
+## <a name="ssma-v810"></a>SSMA v 8.10
+
+La versione v 8.10 di SSMA per Oracle contiene piccoli miglioramenti delle prestazioni e le modifiche seguenti:
+
+* Correzione per il problema del tester con le tabelle organizzate dall'indice
+* Correzione per i nomi delle stored procedure estese nel pacchetto di estensione
 
 ## <a name="ssma-v89"></a>SSMA v 8.9
 
@@ -287,7 +295,7 @@ La versione 2016 di SSMA per Oracle contiene le seguenti modifiche:
 * Correzione della conversione dei tipi di dati carattere per Oracle.
 * Correzione del bug nelle impostazioni globali.
 
-## <a name="march-2016"></a>marzo 2016
+## <a name="march-2016"></a>Marzo 2016
 
 La versione di anteprima 2016 di SSMA per Oracle ha aggiunto il supporto per:
 

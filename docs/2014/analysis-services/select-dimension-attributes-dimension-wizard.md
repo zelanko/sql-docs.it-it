@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f58a3e14-ab27-44d3-8c26-f5c9ee7583b0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 482e4ebbd467f3bc8946d90b9ad77bb892e85504
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dcaf18ea2df3bbd3b227c8948d2fb15f54828853
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67624347"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537923"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>Selezione attributi dimensione (Creazione guidata dimensione)
   La pagina **Selezione attributi dimensione** consente di selezionare e modificare gli attributi della dimensione da creare.  
@@ -59,7 +58,7 @@ ms.locfileid: "67624347"
  **Tipo di attributo**  
  (Facoltativo) Impostare il tipo per l'attributo. Il valore predefinito è **Regolare**. Il tipo di attributo fornisce l’istruzione alle applicazioni client riguardo le informazioni che l'attributo potrebbe contenere.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto della creazione guidata dimensione](dimension-wizard-f1-help.md)   
  [Dimensioni &#40;Analysis Services Dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  

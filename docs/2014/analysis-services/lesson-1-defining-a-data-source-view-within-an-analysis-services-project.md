@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7d3ffabd-78ae-4204-8323-29949d030c16
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 08d4d24f9049c2fd68e827664ecb07393262d8bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f224afd100c0869e8e8683cc3bea39498a342ad0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079206"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543598"
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Lezione 1: Definizione di una vista origine dati in un progetto di Analysis Services
   La progettazione di un'applicazione di Business Intelligence in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] inizia con la creazione di un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Nel progetto vengono definiti tutti gli elementi della soluzione, a partire da una vista origine dati.  
@@ -39,7 +38,7 @@ ms.locfileid: "66079206"
 ## <a name="next-lesson"></a>Lezione successiva  
  [Lezione 2: Definizione e distribuzione di un cubo](lesson-2-defining-and-deploying-a-cube.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creare un progetto Analysis Services &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)   
  [Origini dati supportate &#40;SSAS multidimensionale&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
  [Viste origine dati in modelli multidimensionali](multidimensional-models/data-source-views-in-multidimensional-models.md)   

@@ -14,17 +14,17 @@ ms.assetid: 49541441-179c-40d3-ba0c-01bcae545984
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8912b0e3cac7ccde8f89c1818fd9737c29ebc0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6e1326a00a940b488487f9d602595e6528cb048
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211241"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83856534"
 ---
 # <a name="delete-objects"></a>Elimina oggetti
   Utilizzare questa finestra di dialogo per eliminare un database o un oggetto di database.  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco elementi dell'interfaccia utente  
  **Oggetto da eliminare**  
  Consente di visualizzare i nomi, i tipi, i proprietari e lo stato degli oggetti da eliminare, nonché gli eventuali messaggi relativi agli errori verificatisi durante l'esecuzione.  
   

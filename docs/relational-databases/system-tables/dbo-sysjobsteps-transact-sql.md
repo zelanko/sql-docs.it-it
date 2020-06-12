@@ -1,5 +1,5 @@
 ---
-title: dbo. sysjobsteps (Transact-SQL) | Microsoft Docs
+title: dbo.sysJobSteps (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d98b1ccc4dc8da3ba9d494a78bfea3727102da07
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4bf7ed1c52aedb63ffe1e2e257022e004b327787
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827320"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423385"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,15 +37,15 @@ ms.locfileid: "82827320"
 |**step_id**|**int**|ID del passaggio del processo.|  
 |**step_name**|**sysname**|Nome del passaggio del processo.|  
 |**sottosistema**|**nvarchar(40)**|Nome del sottosistema utilizzato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per eseguire il passaggio del processo|  
-|**comando**|**nvarchar(max)**|Comando che deve essere eseguito dal **sottosistema**.|  
+|**command**|**nvarchar(max)**|Comando che deve essere eseguito dal **sottosistema**.|  
 |**flags**|**int**|Riservato.|  
 |**additional_parameters**|**ntext**|Riservato.|  
 |**cmdexec_success_code**|**int**|Valore a livello di errore restituito dai passaggi del sottosistema **CmdExec** per indicare l'esito positivo.|  
-|**on_success_action**|**tinyint**|Azione da eseguire quando un passaggio viene eseguito correttamente.|  
+|**on_success_action**|**tinyint**|Azione da eseguire quando un passaggio viene eseguito correttamente.<br /><br /> **1** = (impostazione predefinita) termina con esito positivo<br /><br /> **2** = Esci con errore<br /><br /> **3** = Vai al passaggio successivo<br /><br /> **4** = Vai al passaggio _on_success_step_id_|
 |**on_success_step_id**|**int**|ID del passaggio successivo da eseguire quando un passaggio viene eseguito correttamente.|  
-|**on_fail_action**|**tinyint**|Azione da eseguire quando un passaggio non viene eseguito correttamente.|  
+|**on_fail_action**|**tinyint**|Azione da eseguire quando un passaggio non viene eseguito correttamente.<br /><br /> **1** = Esci con esito positivo<br /><br /> **2** = (impostazione predefinita) termina con errore<br /><br /> **3** = Vai al passaggio successivo<br /><br /> **4** = Vai al passaggio _on_fail_step_id_|
 |**on_fail_step_id**|**int**|ID del passaggio successivo da eseguire quando un passaggio non viene eseguito correttamente.|  
-|**Server**|**sysname**|Riservato.|  
+|**server**|**sysname**|Riservato.|  
 |**database_name**|**sysname**|Nome del database in cui viene eseguito il **comando** se **sottosistema** è TSQL.|  
 |**database_user_name**|**sysname**|Nome dell'utente del database di cui viene utilizzato l'account quando si esegue il passaggio.|  
 |**retry_attempts**|**int**|Numero di tentativi in caso di esecuzione errata del passaggio.|  

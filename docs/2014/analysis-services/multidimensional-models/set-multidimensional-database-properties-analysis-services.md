@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: a8be5b3f-3148-448a-976c-7222705155d9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aa3e1544f625183df3240359aa22b117144244d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45379f12358b5e25d4f576bd01f11f777d688c64
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072996"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545659"
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>Impostare le proprietà dei database multidimensionali (Analysis Services)
-  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] progettazione [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] database è possibile configurare diverse proprietà del database.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] In Progettazione database è possibile configurare diverse proprietà del database [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
   
  In questa finestra di progettazione è possibile eseguire i tipi di attività seguenti:  
   
@@ -44,7 +43,7 @@ ms.locfileid: "66072996"
 |Linguaggio|Quando il progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene distribuito in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , il database eredita la proprietà Lingua del server a meno che non venga specificato un valore diverso in questa finestra.|  
 |MasterDataSourceID|Utilizzata con le partizioni remote. Per altre informazioni, vedere [Partizioni remote](../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md).|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Finestra di dialogo Proprietà database &#40;SSAS-&#41;multidimensionale](../database-properties-dialog-box-ssas-multidimensional.md)   
  [Configurare proprietà di progetti di Analysis Services &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)  
   

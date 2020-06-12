@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cd90dd467d0e09f96901847b6a167477f35eeab8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63a3d08a4458ce9347f4e26238d8a28c2b49a22a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175240"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543893"
 ---
 # <a name="migrate-powerpivot-to-sharepoint-2013"></a>Eseguire la migrazione di PowerPivot a SharePoint 2013
 
@@ -72,7 +71,7 @@ ms.locfileid: "78175240"
 5.  **Impostare il database in lettura/scrittura:** impostare **Database di sola lettura** su **False**.
 
 ##  <a name="3-prepare-web-applications-and-mount-content-databases"></a><a name="bkmk_prepare_mount_databases"></a>3) preparare le applicazioni Web e montare i database del contenuto
- Per una spiegazione più dettagliata delle procedure riportate di seguito, vedere [aggiornare i database da sharepoint 2010 a sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690).
+ Per una spiegazione più dettagliata delle procedure riportate di seguito, vedere [aggiornare i database da sharepoint 2010 a sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) ( https://go.microsoft.com/fwlink/p/?LinkId=256690) .
 
 1.  **Portare i database offline:**
 
@@ -96,7 +95,7 @@ ms.locfileid: "78175240"
     Mount-SPContentDatabase "SharePoint_Content_O14-KJSP1" -DatabaseServer "[server name]\powerpivot" -WebApplication [web application URL]
     ```
 
-     Per ulteriori informazioni, vedere [collegamento o scollegamento di database del contenuto (SharePoint Server 2010)](https://technet.microsoft.com/library/ff628582.aspx) (https://technet.microsoft.com/library/ff628582.aspx).
+     Per ulteriori informazioni, vedere [collegamento o scollegamento di database del contenuto (SharePoint Server 2010)](https://technet.microsoft.com/library/ff628582.aspx) ( https://technet.microsoft.com/library/ff628582.aspx) .
 
      **Stato al completamento del passaggio:**  al termine dell'operazione di montaggio, gli utenti possono visualizzare i file disponibili nel database del contenuto precedente. Di conseguenza, essi possono visualizzare e aprire le cartelle di lavoro nella raccolta documenti.
 
@@ -170,8 +169,8 @@ ms.locfileid: "78175240"
 
 -   [Aggiornare le cartelle di lavoro e l'aggiornamento dati pianificato &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013).
 
--   [Panoramica del processo di aggiornamento a SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256688) (https://go.microsoft.com/fwlink/p/?LinkId=256688).
+-   [Panoramica del processo di aggiornamento a SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256688) ( https://go.microsoft.com/fwlink/p/?LinkId=256688) .
 
--   [Pulire le preparazioni prima di un aggiornamento a SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256689) (https://go.microsoft.com/fwlink/p/?LinkId=256689).
+-   [Pulire le preparazioni prima di un aggiornamento a SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256689) ( https://go.microsoft.com/fwlink/p/?LinkId=256689) .
 
--   [Aggiornare i database da sharepoint 2010 a sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690).
+-   [Aggiornare i database da sharepoint 2010 a sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) ( https://go.microsoft.com/fwlink/p/?LinkId=256690) .

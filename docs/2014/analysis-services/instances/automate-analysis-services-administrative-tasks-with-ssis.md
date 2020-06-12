@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: e960a9a2-80b4-45da-9369-bc560ecdccac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 23efdeddd568c815ad22ce6cf0b5d2026bab813e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a8b44e09f929ad6a331bb335e801838ed3de64de
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080329"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544113"
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>Automatizzare le attività amministrative di Analysis Services con SSIS
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di automatizzare l'esecuzione di script DDL, attività di elaborazione di cubi e modelli di data mining e data mining attività di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] query. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] può essere considerato come una raccolta di attività di flusso di controllo e manutenzione che possono essere collegate per formare processi di elaborazione dati sequenziali e paralleli.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consente di automatizzare l'esecuzione di script DDL, attività di elaborazione di cubi e modelli di data mining e data mining attività di query. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] può essere considerato come una raccolta di attività di flusso di controllo e manutenzione che possono essere collegate per formare processi di elaborazione dati sequenziali e paralleli.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è progettato per l'esecuzione di operazioni di pulitura dei dati durante le attività di elaborazione dei dati e per il raggruppamento di dati da diverse origini dei dati. Quando si usano cubi e modelli di data mining, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consente di trasformare i dati non numerici in dati numerici e di garantire che i valori dei dati rientrino nei limiti previsti, creando pertanto dati puliti con cui popolare dimensioni e tabelle dei fatti.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "66080329"
 ## <a name="data-mining-query-task"></a>Attività Query di data mining  
  In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] l'attività Query di data mining consente di estrarre le informazioni dai modelli di data mining e di archiviarle. Spesso le informazioni vengono archiviate in un database relazionale e possono ad esempio essere utilizzate per isolare un elenco di clienti potenziali per una campagna di marketing diretta. Tramite il data mining è possibile identificare il valore di un cliente e la probabilità con cui il cliente risponderà a una strategia di marketing particolare. L'attività Query di data mining può essere utilizzata per estrarre e modificare i dati nel formato desiderato. Per ulteriori informazioni sull'implementazione di questa attività, vedere [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Destinazione elaborazione partizione](../../integration-services/data-flow/partition-processing-destination.md)   
  [Destinazione elaborazione dimensione](../../integration-services/data-flow/dimension-processing-destination.md)   
  [Trasformazione query di data mining](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)   

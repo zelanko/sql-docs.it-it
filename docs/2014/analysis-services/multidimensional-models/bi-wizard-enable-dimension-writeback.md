@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4b5eb5a-366d-4fc8-ad0d-5bdb8e7b4163
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6051f62caac2878b689a50e5773b047cb8df7afe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2164c617bae69264dce2a237ca48a125b096765
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076845"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544543"
 ---
 # <a name="enable-dimension-writeback"></a>Attivazione writeback della dimensione
   Aggiungere a un cubo o a una dimensione la funzionalità avanzata di writeback della dimensione per consentire agli utenti di modificare manualmente la struttura e i membri della dimensione. Gli aggiornamenti di una dimensione abilitata per la scrittura vengono registrati direttamente nella tabella della dimensione. Questa funzionalità avanzata modifica l'impostazione della proprietà `WriteEnabled` per una dimensione.  
@@ -40,7 +39,7 @@ ms.locfileid: "66076845"
 ## <a name="setting-dimension-writeback-capability"></a>Impostazione della funzionalità di writeback della dimensione  
  Nella seconda pagina della procedura guidata **Abilitazione writeback della dimensione** è possibile effettivamente impostare l'opzione **Consenti writeback della dimensione** . Selezionando questa opzione, la proprietà `WriteEnabled` della dimensione viene impostata automaticamente su `True`. Deselezionando questa opzione la proprietà viene impostata automaticamente su `False`.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Quando si crea un nuovo membro, è necessario includere ogni attributo di una dimensione. Non è possibile inserire un membro senza specificare un valore per l'attributo chiave della dimensione. La creazione di membri è pertanto soggetta a tutti i vincoli, ad esempio valori di chiave non Null, definiti nella tabella della dimensione. È consigliabile considerare inoltre le colonne che possono essere specificate dalle proprietà della dimensione, ad esempio le colonne specificate nelle proprietà della dimensione `CustomRollupColumn`, `CustomRollupPropertiesColumn` o `UnaryOperatorColumn`.  
   
 > [!WARNING]  
@@ -52,7 +51,7 @@ ms.locfileid: "66076845"
 >   
 >  Per ulteriori informazioni, vedere [utilizzo di più set di risultati attivi &#40;&#41;Mars ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Dimensioni abilitate per la scrittura](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   

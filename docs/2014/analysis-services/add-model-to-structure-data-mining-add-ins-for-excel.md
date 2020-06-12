@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8efd5bf4-4e6a-4ee8-971a-6efaed5f3b76
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ce68071f27897e181063299e561dfaa7d9f8aab7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 606d453235529fbfed4dc0f07178ce2ae7132067
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062880"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528257"
 ---
 # <a name="add-model-to-structure-data-mining-add-ins-for-excel"></a>Aggiunta modello a struttura (componenti aggiuntivi Data mining per Excel)
   ![Pulsante Aggiunta modello a struttura](media/dmc-addmodel.gif "Pulsante Aggiunta modello a struttura")  
@@ -89,7 +88,7 @@ ms.locfileid: "66062880"
 |Opzione|Commenti|  
 |------------|--------------|  
 |Finestra di dialogo **Seleziona struttura o modello**|Scegliere una struttura di data mining esistente da utilizzare come base per la compilazione di un nuovo modello.  La struttura selezionata deve trovarsi nella connessione corrente. In caso contrario, modificare le connessioni utilizzando lo strumento [Connetti a dati di origine &#40;client di data mining per&#41;Excel](connect-to-source-data-data-mining-client-for-excel.md) .|  
-|**Selezione algoritmo di data mining** -finestra di dialogo|L'elenco di algoritmi di data mining dipende dal server a cui si è connessi. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornisce algoritmi diversi nelle versioni Standard ed Enterprise. Inoltre, è possibile che l'amministratore abbia aggiunto algoritmi personalizzati.<br /><br /> Se non è possibile visualizzare alcun algoritmo, verificare di essere connessi a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
+|**Selezione algoritmo di data mining** -finestra di dialogo|L'elenco di algoritmi di data mining dipende dal server a cui si è connessi. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornisce algoritmi diversi nelle versioni Standard ed Enterprise. Inoltre, è possibile che l'amministratore abbia aggiunto algoritmi personalizzati.<br /><br /> Se non è possibile visualizzare alcun algoritmo, verificare di essere connessi a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
 |**Parametri dell'algoritmo** Finestra di dialogo|In queste impostazioni è possibile personalizzare ogni algoritmo utilizzando parametri specifici del metodo analitico. È inoltre possibile impostare un valore di inizializzazione per garantire che i risultati del modello possano essere riprodotti in più sessioni di training.<br /><br /> Per ulteriori informazioni, vedere [parametri algoritmo &#40;SQL Server componenti aggiuntivi Data Mining&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md).|  
 |**Imposta flag di modellazione colonna** Finestra di dialogo|Con i flag di modellazione è possibile migliorare il modello specificando la modalità con cui i dati mancanti devono essere gestiti. Per altre informazioni, vedere [Flag di modellazione &#40;data mining&#41;](data-mining/modeling-flags-data-mining.md).|  
   
@@ -117,5 +116,5 @@ ms.locfileid: "66062880"
   
  Se non è possibile visualizzare la struttura di data mining desiderata, è possibile che la struttura sia stata salvata in un'istanza o in un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] diverso. Per informazioni su come passare a una connessione data mining diversa, vedere [connettersi a un server di data mining](connect-to-a-data-mining-server.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di un modello di data mining](creating-a-data-mining-model.md)   

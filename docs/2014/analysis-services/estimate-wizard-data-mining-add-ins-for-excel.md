@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7f2b1d5f-c9b3-4939-b35a-34ae099af15f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9b7ffc1b77d90946a119dc462da2057cf3fe4988
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2706dae37c1dc303aa6708fe1f7387a39835e4d5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081250"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528369"
 ---
 # <a name="estimate-wizard-data-mining-add-ins-for-excel"></a>Procedura guidata Stima (componenti aggiuntivi Data mining per Excel)
   ![Procedura guidata Stima sulla barra multifunzione Data mining](media/dmc-estimate.gif "Procedura guidata Stima sulla barra multifunzione Data mining")  
@@ -96,7 +95,7 @@ ms.locfileid: "66081250"
   
  Per utilizzare l'algoritmo di valutazione, il risultato che si sta tentando di stimare deve essere espresso come valore numerico, ad esempio valuta, importo delle vendite, data oppure ora.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di un modello di data mining](creating-a-data-mining-model.md)   
  [Diagramma dell'albero delle decisioni procedura dettagliata &#40;componenti aggiuntivi Data mining&#41;](decision-tree-diagram-walkthrough-data-mining-add-ins.md)  
   

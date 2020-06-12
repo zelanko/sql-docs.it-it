@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0686e519-67c2-4f9b-8cd2-84a4871499ee
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bcb3a1cbcabc66492bbd780be4716ce69f15de37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f1343f8234e23156981e416613cd2b899cf57f2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080565"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544223"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>Importare da un feed di dati (SSAS tabulare)
   I feed di dati rappresentano uno o più flussi di dati XML generati da un'origine dati online e trasmessi a un documento o a un'applicazione di destinazione. È possibile importare dati da un feed di dati nel modello tramite l'Importazione guidata tabella.  
@@ -122,7 +121,7 @@ ms.locfileid: "66080565"
   
 3.  Nella pagina **Connessione a un feed di dati** digitare un nome descrittivo per il feed a cui si sta eseguendo l'accesso. Se si importano più feed o origini dati, l'utilizzo di nomi descrittivi per la connessione consente di ricordare come viene utilizzata la connessione.  
   
-4.  In URL feed di dati digitare un indirizzo per il servizio dati elenco, sostituendo \<nome-server> con il nome effettivo del server SharePoint:  
+4.  In URL feed di dati digitare un indirizzo per il servizio dati elenco, sostituendo \<server-name> con il nome effettivo del server SharePoint:  
   
     ```  
     http://<server-name>/_vti_bin/listdata.svc  
@@ -156,7 +155,7 @@ ms.locfileid: "66080565"
   
 4.  Fare clic su **Sfoglia** e selezionare un server di report.  
   
-     Se si usano normalmente i report in un server di report, è possibile che il server sia elencato in **Siti e server recenti**. In caso contrario, digitare in Nome l'indirizzo di un server di report e fare clic su **Apri** per esplorare le cartelle nel sito del server di report. Un indirizzo di esempio per un server di report potrebbe\<essere http://nomecomputer>/ReportServer.  
+     Se si usano normalmente i report in un server di report, è possibile che il server sia elencato in **Siti e server recenti**. In caso contrario, digitare in Nome l'indirizzo di un server di report e fare clic su **Apri** per esplorare le cartelle nel sito del server di report. Un indirizzo di esempio per un server di report potrebbe essere http:// \<computername> /ReportServer.  
   
 5.  Selezionare il report e fare clic su **Apri**. In alternativa, è possibile incollare un collegamento al report, compresi il percorso completo e il nome del report, nella casella di testo **Nome** . L'Importazione guidata tabella si connetterà al report e ne eseguirà il rendering nell'area di anteprima.  
   
@@ -189,7 +188,7 @@ ms.locfileid: "66080565"
   
 12. Nella pagina **Selezione tabelle e viste** fare clic su **Fine**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Origini dati supportate &#40;SSAS tabulare&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
  [Tipi di dati supportati &#40;SSAS tabulare&#41;](tabular-models/data-types-supported-ssas-tabular.md)   
  [Rappresentazione &#40;SSAS tabulare&#41;](tabular-models/impersonation-ssas-tabular.md)   

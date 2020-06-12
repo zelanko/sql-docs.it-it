@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f97698f8-6f0f-49d8-86b0-5bfac3c4e627
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8f526c1327f67bdcf84dce44e670eb195de9a96a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00ccbf26d040eb5285595a43a9eead93d1eeddbb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082104"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528807"
 ---
 # <a name="define-new-measures-cube-wizard"></a>Definizione nuove misure (Creazione guidata cubo)
   La pagina **Definizione nuove misure** consente di definire nuove misure per un cubo creato senza utilizzare un'origine dei dati.  
@@ -93,7 +92,7 @@ ms.locfileid: "66082104"
   
  Per rimuovere una nuova misura dal cubo, fare clic sul pulsante **X** relativo a tale misura.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto della creazione guidata cubo](cube-wizard-f1-help.md)   
  [Oggetti Cube &#40;Analysis Services-Dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Cubi nei modelli multidimensionali](multidimensional-models/cubes-in-multidimensional-models.md)   

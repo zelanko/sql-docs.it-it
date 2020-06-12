@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fe493927d269c092e775970b3089550203271f0e
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 6327f7e825906635864777e9c993ae16790e6116
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000511"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528386"
 ---
 # <a name="sql-server-index-design-guide"></a>Guida per la progettazione di indici di SQL Server
 
@@ -29,19 +28,19 @@ ms.locfileid: "83000511"
 
  [Nozioni fondamentali sulla progettazione di indici](#Basics)  
   
- [Linee guida generali per la progettazione di indici](#General_Design)  
+ [Linee guida generali per la progettazione degli indici](#General_Design)  
   
  [Linee guida per la progettazione di indici cluster](#Clustered)  
   
- [Linee guida per la progettazione di un indice non cluster](#Nonclustered)  
+ [Linee guida per la progettazione di indici non cluster](#Nonclustered)  
   
- [Linee guida per la progettazione di indici univoci](#Unique)  
+ [Linee guida di progettazione di indici univoci](#Unique)  
   
- [Linee guida per la progettazione di indici filtrati](#Filtered)  
+ [Linee guida sulla progettazione di indici filtrati](#Filtered)  
   
  [Letture aggiuntive](#Additional_Reading)  
   
-##  <a name="index-design-basics"></a><a name="Basics"></a>Nozioni fondamentali sulla progettazione di indici  
+##  <a name="index-design-basics"></a><a name="Basics"></a> Nozioni fondamentali sulla progettazione di indici  
 
  Un indice è una struttura su disco associata a una tabella o a una vista che consente di recuperare in modo rapido le righe della tabella o della vista. L'indice contiene chiavi costituite da una o più colonne della tabella o della vista. Queste chiavi vengono archiviate in una struttura (albero B) che consente a SQL Server di individuare con rapidità ed efficienza la riga o le righe associate ai valori di chiave.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "83000511"
   
      In alternativa, per gli indici cluster e non cluster è possibile utilizzare uno schema di partizione in più filegroup. Il partizionamento semplifica la gestione di tabelle o indici di grandi dimensioni in quanto consente di gestire o accedere a subset di dati in modo rapido ed efficace mantenendo l'integrità della raccolta. Per ulteriori informazioni, vedere [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md). Quando si considera il partizionamento, determinare se è necessario che l'indice sia allineato, ovvero partizionato nello stesso modo della tabella, o partizionato in modo indipendente.  
   
-##  <a name="general-index-design-guidelines"></a><a name="General_Design"></a>Linee guida generali per la progettazione degli indici  
+##  <a name="general-index-design-guidelines"></a><a name="General_Design"></a> Linee guida generali per la progettazione di indici  
 
  Gli amministratori di database esperti in genere sono in grado di progettare un set di indici adeguato, ma questa attività è molto complessa, richiede tempo ed è soggetta ad errori anche nel caso di database e carichi di lavoro di media complessità. Conoscere le caratteristiche del database, delle query e delle colonne di dati può aiutare a progettare indici ottimali.  
   
@@ -137,7 +136,7 @@ ms.locfileid: "83000511"
   
  È inoltre possibile personalizzare le caratteristiche iniziali dell'archiviazione dell'indice per ottimizzarne le prestazioni o la gestione impostando un'opzione quale FILLFACTOR. È inoltre possibile determinare la posizione di archiviazione dell'indice utilizzando filegroup o schemi di partizione per ottimizzare le prestazioni.  
   
-###  <a name="index-placement-on-filegroups-or-partitions-schemes"></a><a name="Index_placement"></a>Posizionamento degli indici nei filegroup o negli schemi di partizioni  
+###  <a name="index-placement-on-filegroups-or-partitions-schemes"></a><a name="Index_placement"></a> Posizione degli indici nei filegroup o negli schemi di partizioni  
 
  Durante lo sviluppo della strategia di progettazione degli indici, è opportuno considerare la posizione degli indici nei filegroup associati al database. Un'attenta selezione dello schema di filegroup o di partizione può contribuire a migliorare le prestazioni delle query.  
   
@@ -165,7 +164,7 @@ ms.locfileid: "83000511"
   
  Per ulteriori informazioni, vedere [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
-###  <a name="index-sort-order-design-guidelines"></a><a name="Sort_Order"></a>Linee guida per la progettazione di un ordinamento degli indici  
+###  <a name="index-sort-order-design-guidelines"></a><a name="Sort_Order"></a> Linee guida per la progettazione dell'ordinamento dell'indice  
 
  Quando si definiscono gli indici, è necessario valutare se la colonna chiave dell'indice deve essere archiviata in ordine crescente o decrescente. L'ordine crescente rappresenta l'impostazione predefinita e consente di garantire la compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La sintassi delle istruzioni CREATE INDEX, CREATE TABLE e ALTER TABLE supporta le parole chiave ASC (ascending, crescente) e DESC (descending, decrescente) per singole colonne di indici e vincoli.  
   
@@ -200,7 +199,7 @@ ON Purchasing.PurchaseOrderDetail
   
  ![Icona freccia usata con il collegamento Torna all'inizio](media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [in questa guida](#Top)  
   
-##  <a name="clustered-index-design-guidelines"></a><a name="Clustered"></a>Linee guida per la progettazione di indici cluster  
+##  <a name="clustered-index-design-guidelines"></a><a name="Clustered"></a> Linee guida per la progettazione di indici cluster  
 
  Gli indici cluster ordinano e archiviano le righe di dati della tabella in base ai valori di chiave. Per ogni tabella è disponibile un solo indice cluster poiché le righe di dati possono essere ordinate con un solo tipo di ordinamento. Con poche eccezioni, è opportuno definire un indice cluster sulla colonna o sulle colonne di tutte le tabelle che presentano le caratteristiche seguenti:  
   
@@ -275,7 +274,7 @@ ON Purchasing.PurchaseOrderDetail
   
  ![Icona freccia usata con il collegamento Torna all'inizio](media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [in questa guida](#Top)  
   
-##  <a name="nonclustered-index-design-guidelines"></a><a name="Nonclustered"></a>Linee guida per la progettazione di indici non cluster  
+##  <a name="nonclustered-index-design-guidelines"></a><a name="Nonclustered"></a> Linee guida per la progettazione di un indice non cluster  
 
  Un indice non cluster contiene i valori della chiave di indice e gli indicatori di posizione delle righe che puntano al percorso di archiviazione dei dati della tabella. In una vista tabella o indicizzata è possibile creare più indici non cluster. In genere, gli indici non cluster consentono di migliorare le prestazioni di query utilizzate di frequente non coperte da un indice cluster.  
   
@@ -343,7 +342,7 @@ ON Purchasing.PurchaseOrderDetail
   
      Se sono presenti soltanto pochi valori distinct, ad esempio 1 e 0, la maggior parte delle query non utilizzerà l'indice in quanto una scansione della tabella risulta in genere più efficiente. Per questo tipo di dati, creare un indice filtrato su un valore distinto che presente solo in un numero ridotto di righe. Se la maggior parte dei valori è impostata su 0, Query Optimizer potrebbe utilizzare un indice filtrato per le righe di dati che contengono il valore 1.  
   
-####  <a name="use-included-columns-to-extend-nonclustered-indexes"></a><a name="Included_Columns"></a>Usare colonne incluse per estendere gli indici non cluster  
+####  <a name="use-included-columns-to-extend-nonclustered-indexes"></a><a name="Included_Columns"></a> Utilizzare colonne incluse per estendere gli indici non cluster  
 
  È possibile estendere le funzionalità degli indici non cluster aggiungendo colonne non chiave a livello foglia dell'indice non cluster. Con l'inclusione di colonne non chiave è possibile creare indici non cluster in grado di coprire più query. Ciò è possibile perché le colonne non chiave presentano i vantaggi seguenti:  
   
@@ -455,7 +454,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  ![Icona freccia usata con il collegamento Torna all'inizio](media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [in questa guida](#Top)  
   
-##  <a name="unique-index-design-guidelines"></a><a name="Unique"></a>Linee guida di progettazione di indici univoci  
+##  <a name="unique-index-design-guidelines"></a><a name="Unique"></a> Linee guida per la progettazione di indici univoci  
 
  Un indice univoco consente di garantire che nella chiave dell'indice non siano contenuti valori duplicati e che pertanto ogni riga della tabella sia univoca. È consigliabile specificare un indice univoco solo se l'unicità è una caratteristica dei dati stessi. Per verificare, ad esempio, che i valori della colonna `NationalIDNumber` nella tabella `HumanResources.Employee` siano univoci quando la chiave primaria è `EmployeeID`, creare un vincolo UNIQUE nella colonna `NationalIDNumber` . Se l'utente tenta di inserire nella colonna lo stesso valore per più dipendenti, verrà visualizzato un messaggio di errore e il valore duplicato non verrà inserito.  
   
@@ -481,7 +480,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  ![Icona freccia usata con il collegamento Torna all'inizio](media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [in questa guida](#Top)  
   
-##  <a name="filtered-index-design-guidelines"></a><a name="Filtered"></a>Linee guida sulla progettazione di indici filtrati  
+##  <a name="filtered-index-design-guidelines"></a><a name="Filtered"></a> Linee guida per la progettazione di indici filtrati  
 
  Un indice filtrato è un indice non cluster ottimizzato, particolarmente indicato per coprire query che selezionano dati da un subset ben definito. Un indice di questo tipo utilizza un predicato del filtro per indicizzare una parte di righe nella tabella. Se confrontato con indici di tabella completa, un indice filtrato progettato correttamente consente di migliorare le prestazioni di esecuzione delle query e di ridurre i costi di manutenzione e di archiviazione dell'indice stesso.  
   

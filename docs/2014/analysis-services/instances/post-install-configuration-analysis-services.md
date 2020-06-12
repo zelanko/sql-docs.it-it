@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6a339ee307ed7a10f2ff7d2b1ce51d2e2177ee37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d5299fb250858a0c75ea3f80e254bd143e49df2b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079661"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543793"
 ---
 # <a name="post-install-configuration-analysis-services"></a>Configurazione successiva all'installazione (Analysis Services)
   Dopo aver installato Analysis Services, è necessario eseguire ulteriori attività di configurazione per rendere il server completamente operativo e disponibile per l'utilizzo generale. In questa sezione vengono illustrate le attività aggiuntive per completare l'installazione. A seconda dei requisiti di connessione, potrebbe essere inoltre necessario configurare l'autenticazione (vedere [Connessione a un database di Analysis Services](connect-to-analysis-services.md)).  
@@ -39,7 +38,7 @@ ms.locfileid: "66079661"
 ## <a name="next-steps"></a>Passaggi successivi  
  Sono disponibili informazioni su come connettersi ad Analysis Services da applicazioni Microsoft o personalizzate mediante le librerie client. A seconda dei requisiti della soluzione, potrebbe essere inoltre necessario configurare il servizio per l'autenticazione Kerberos. Le connessioni che devono attraversare i limiti di dominio richiedono l'accesso HTTP. Per istruzioni sui passaggi successivi, vedere [Connect to Analysis Services](connect-to-analysis-services.md) .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Installazione per SQL Server 2014](../../../2014/database-engine/install-windows/installation-for-sql-server.md)   
  [Installare Analysis Services in modalità multidimensionale e di data mining](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
  [Installare Analysis Services in modalità tabulare](install-windows/install-analysis-services.md)   

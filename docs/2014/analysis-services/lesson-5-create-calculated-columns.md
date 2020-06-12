@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d126766a-5699-4e9f-8213-8c7eea0fc14e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 58ba761f3e32f13ddcf81dc9875057195298c705
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b39909acacb29f68b0de49ba2093c9b812510172
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078555"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542713"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>Lezione 6: Creare colonne calcolate
   In questa lezione verranno creati nuovi dati nel modello aggiungendo colonne calcolate. Una colonna calcolata è basata sui dati già presenti nel modello. Per altre informazioni, vedere [Colonne calcolate &#40;SSAS tabulare&#41;](tabular-models/ssas-calculated-columns.md).  
@@ -52,7 +51,7 @@ ms.locfileid: "66078555"
     > [!NOTE]  
     >  Se viene visualizzato un errore, verificare che i nomi di colonna nella formula corrispondano ai nomi di colonna modificati in [Lezione 3: Rinominare colonne](rename-columns.md).  
   
-5.  Rinominare la colonna in `Month Calendar`.  
+5.  Rinominare la colonna in `Month Calendar` .  
   
  La colonna calcolata Month Calendar fornisce un nome ordinabile per il mese.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66078555"
   
      Dopo avere completato la compilazione della formula, premere INVIO.  
   
-3.  Rinominare la colonna in `Day of Week`.  
+3.  Rinominare la colonna in `Day of Week` .  
   
 4.  Fare clic sull'intestazione di colonna, quindi trascinare la colonna tra le colonne **Day Name** e **Day of Month** .  
   
@@ -89,7 +88,7 @@ ms.locfileid: "66078555"
   
      Dopo avere completato la compilazione della formula, premere INVIO.  
   
-4.  Rinominare la colonna in `Product Subcategory Name`.  
+4.  Rinominare la colonna in `Product Subcategory Name` .  
   
  La colonna calcolata Product Subcategory Name viene utilizzata per creare una gerarchia nella tabella Product, che include dati della colonna Product Subcategory Name della tabella Product Subcategory. Le gerarchie non possono essere estese a più di una tabella. La creazione di gerarchie verrà eseguita più avanti, nella lezione 7.  
   
@@ -103,7 +102,7 @@ ms.locfileid: "66078555"
   
      Dopo avere completato la compilazione della formula, premere INVIO.  
   
-3.  Rinominare la colonna in `Product Category Name`.  
+3.  Rinominare la colonna in `Product Category Name` .  
   
  La colonna calcolata Product Category Name viene utilizzata per creare una gerarchia nella tabella Product, che include dati della colonna Product Category Name della tabella Product Category. Le gerarchie non possono essere estese a più di una tabella.  
   
@@ -119,7 +118,7 @@ ms.locfileid: "66078555"
   
      Dopo avere completato la compilazione della formula, premere INVIO.  
   
-4.  Rinominare la colonna in `Margin`.  
+4.  Rinominare la colonna in `Margin` .  
   
 5.  Trascinare la colonna tra le colonne **Sales Amount** e **Tax Amt** .  
   

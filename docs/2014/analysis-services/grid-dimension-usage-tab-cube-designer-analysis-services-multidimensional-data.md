@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ed63b1da-0fce-4f24-a722-5cff378831e8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 294b40d07731f588267e94ff748adaf871a8ac3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d14dced8054edc2f744d309e6c8f0d8d4966c79
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080806"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544286"
 ---
 # <a name="grid-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>Griglia (scheda Utilizzo dimensioni, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Il riquadro **Griglia** nella scheda **Utilizzo dimensioni** di Progettazione cubi consente di visualizzare e modificare le relazioni tra le dimensioni del cubo e i gruppi di misure. Ogni relazione tra dimensioni viene rappresentata come cella in una griglia, nella quale i gruppi di misure vengono visualizzati come colonne e le dimensioni come righe.  
@@ -38,11 +37,11 @@ ms.locfileid: "66080806"
 |**Taglia**|Nota: questa opzione è disabilitata.|  
 |**Copia**|Nota: questa opzione è disabilitata.|  
 |**Incolla**|Nota: questa opzione è disabilitata.|  
-|**Elimina**|Selezionare questa opzione per eliminare dal cubo la dimensione del cubo, il gruppo di misure o la relazione tra dimensioni selezionati.|  
+|**Eliminazione**|Selezionare questa opzione per eliminare dal cubo la dimensione del cubo, il gruppo di misure o la relazione tra dimensioni selezionati.|  
 |**Rinomina**|Selezionare questa opzione per rinominare la dimensione del cubo, il gruppo di misure o la relazione tra dimensioni selezionati.|  
 |**Proprietà**|Selezionare questa opzione per visualizzare la finestra **Proprietà** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per la dimensione del cubo, il gruppo di misure o la relazione tra dimensioni selezionati.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Oggetti Cube &#40;Analysis Services-Dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Cubi nei modelli multidimensionali](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Utilizzo dimensioni &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](dimension-usage-cube-designer-analysis-services-multidimensional-data.md)   

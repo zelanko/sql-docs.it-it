@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 96a9660d-875b-4ee4-b339-90020b1d9895
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 55569f23ae943e96a495905434bb0d39f2796a63
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c9da6edef576a6ab25c183cbc87ff95cc056845
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727757"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545381"
 ---
 # <a name="calling-stored-procedures"></a>Chiamata di stored procedure
   È possibile chiamare stored procedure nel server o da un'applicazione client. In entrambi i casi le stored procedure vengono sempre eseguite nel server, nel contesto del server o di un database. Non sono richieste autorizzazioni speciali per eseguire una stored procedure. Dopo che una stored procedure viene aggiunta da un assembly al contesto del server o del database, qualsiasi utente può eseguire la stored procedure purché il ruolo di quell'utente consenta le operazioni eseguite dalla stored procedure.  
@@ -81,7 +80,7 @@ Call MyStoredProcedure(a,b,c)
 CALL(MyVoidFunction)  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestione di assembly di modelli multidimensionali](../multidimensional-models/multidimensional-model-assemblies-management.md)   
  [Definizione delle stored procedure](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   

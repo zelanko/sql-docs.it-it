@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 39e2f36c-2c02-4a71-af8f-5dbd373190dc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 687f7fb96ee5a2b96d80562c20d536eeeb308379
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9c28c39ef94c5dd28821e23c6ddbe83efd7fd11
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088121"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527578"
 ---
 # <a name="choose-enhancement-business-intelligence-wizard"></a>Scelta funzionalità avanzata (Configurazione guidata funzionalità di Business Intelligence)
   Usare la pagina **Scelta funzionalità avanzata** per scegliere la funzionalità avanzata di Business Intelligence da aggiungere al cubo o alla dimensione.  
@@ -41,7 +40,7 @@ ms.locfileid: "66088121"
  **Descrizione**  
  Consente di visualizzare una breve descrizione della funzionalità avanzata di Business Intelligence selezionata.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto della configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Progettazione dimensioni &#40;Analysis Services-Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  

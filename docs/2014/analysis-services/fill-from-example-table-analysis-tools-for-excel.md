@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: dac57d8f-1c65-4878-8ea0-9c680df5e4fb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d1e09e439469f23412c84ea7bab65c0aa748f286
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3894f8ea42c0c5c91c3b6a5c5e7a6677b763b02
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081323"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528347"
 ---
 # <a name="fill-from-example-table-analysis-tools-for-excel"></a>Estendi da esempio (Strumenti di analisi tabelle per Excel)
   ![Pulsante Estendi da esempio in Strumenti di analisi tabelle](media/tat-fillex.gif "Pulsante Estendi da esempio in Strumenti di analisi tabelle")  
@@ -59,7 +58,7 @@ ms.locfileid: "66081323"
   
  Ad esempio, se è necessario completare un foglio di lavoro che indica la distanza di spedizione per gli ordini, è prevedibile da un punto di vista logico che la destinazione abbia un impatto significativo sul valore della distanza di spedizione. In questo caso, il report potrebbe contenere la riga seguente:  
   
-|Colonna|valore|Predilige|Impatto relativo|  
+|Colonna|Valore|Predilige|Impatto relativo|  
 |------------|-----------|------------|---------------------|  
 |StateProvinceCode|AB|>500 chilometri|80%|  
   
@@ -70,14 +69,14 @@ ms.locfileid: "66081323"
 > [!NOTE]  
 >  L' **effetto relativo** viene visualizzato come una barra ombreggiata. Più lunga è la barra, maggiore è la probabilità che la regola sia predittiva per il valore inserito.  
   
- Lo strumento aggiunge anche una nuova colonna alla tabella dati originale, denominata \<nome colonna> Extended.  
+ Lo strumento aggiunge anche una nuova colonna alla tabella dati originale, denominata \<column name> Extended.  
   
  Se la colonna dei dati originale contiene un valore, tale valore viene copiato nella nuova colonna. Se la colonna originale contiene una cella vuota, invece, la nuova colonna conterrà il valore stimato dalla procedura guidata.  
   
 ## <a name="related-tools-and-information"></a>Strumenti e informazioni correlati  
  È inoltre possibile utilizzare la procedura guidata [esplorazione dati](explore-data-sql-server-data-mining-add-ins.md) , disponibile nel client di data mining per Excel, per esaminare la distribuzione dei valori in una colonna di Excel. Per ulteriori informazioni, vedere [esplorazione e pulizia dei dati](exploring-and-cleaning-data.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Strumenti di analisi tabelle per Excel](table-analysis-tools-for-excel.md)  
   
   
