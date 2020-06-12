@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6cf9c701-9cff-4fae-94c2-73796c24ef59
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 86894159dd702466823bed8f2185caaa4295b3ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97d52ba1e5167c988b89421ff784428725ccec37
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086357"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525607"
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>Aggiungere una tabella nidificata a una struttura di data mining
   È possibile utilizzare Progettazione modelli di data mining per aggiungere una tabella nidificata a una struttura di data mining dopo averla creata tramite la Creazione guidata modello di data mining.  
@@ -43,7 +42,7 @@ ms.locfileid: "66086357"
   
      Alla struttura di data mining verrà aggiunta una nuova colonna della tabella contenente la colonna chiave. Per informazioni su come aggiungere altre colonne, vedere [Aggiungere colonne a una struttura di data mining](add-columns-to-a-mining-structure.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Attività e procedure relative alla struttura di data mining](mining-structure-tasks-and-how-tos.md)  
   
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2715c245-f206-43af-8bf5-e6bd2585477a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dc721d58c69b0275c9846863f761d60db66e5aaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c29bd841ea0dd2d4676e087c9886f678eedc9a8f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084682"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522672"
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>Distribuire una soluzione di data mining in versioni precedenti di SQL Server
   In questa sezione vengono descritti i problemi di compatibilità noti che possono verificarsi quando si tenta di distribuire in un database che utilizza SQL Server 2005 Analysis Services una struttura o un modello di data mining creato in un'istanza di [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] oppure quando si distribuiscono in un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]modelli creati in SQL Server 2005.  
@@ -60,7 +59,7 @@ ms.locfileid: "66084682"
   
  Quando si apre la struttura di data mining in SQL Server 2005 Analysis Services, in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] viene generato un errore e la struttura viene rigenerata per rimuovere la partizione di dati di controllo.  
   
- Dopo la ricompilazione della struttura, la dimensione della partizione di dati di dati non è più disponibile nella Finestra Proprietà; Tuttavia, il valore \<Ddl100_100: HoldoutMaxPercent>30\</ddl100_100: HoldoutMaxPercent>) potrebbe essere ancora presente nel file script ASSL.  
+ Dopo la ricompilazione della struttura, la dimensione della partizione di dati di dati non è più disponibile nella Finestra Proprietà; Tuttavia, il valore \<ddl100_100:HoldoutMaxPercent> 30 \</ddl100_100:HoldoutMaxPercent> ) potrebbe essere ancora presente nel file script ASSL.  
   
 ##  <a name="deploying-models-with-filters"></a><a name="bkmk_Filter"></a>Distribuzione di modelli con filtri  
  Se si utilizza [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] per applicare un filtro a un modello di data mining, è possibile distribuire il modello in un'istanza di SQL Server 2005, ma il filtro non verrà applicato.  
@@ -77,7 +76,7 @@ ms.locfileid: "66084682"
   
  Se si tenta di sincronizzare un database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , il server restituisce un errore e la sincronizzazione del database non riesce.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Analysis Services Backward Compatibility](../analysis-services-backward-compatibility.md)  
   
   

@@ -3,19 +3,19 @@ title: sys. pdw_health_alerts (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
-ms.technology: system-objects
 ms.reviewer: ''
+ms.technology: system-objects
 ms.topic: conceptual
 ms.assetid: 49c01e5f-ee47-41a0-871d-35a759f50851
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c47bcc342bf8a052aed93649ca0ad8475d937608
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e3ab735a19342e1ecc1a941a185832edae61262
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68127536"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627444"
 ---
 # <a name="syspdw_health_alerts-transact-sql"></a>sys. pdw_health_alerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68127536"
 |alert_name|**nvarchar(255)**|Nome dell'avviso.|NOT NULL|  
 |state|**nvarchar(32)**|Stato dell'avviso.|NOT NULL<br /><br /> Valori possibili:<br /><br /> Operativo<br /><br /> ' Non operativo '<br /><br /> Degradato<br /><br /> Fallito|  
 |severity|**nvarchar(32)**|Gravità dell'avviso|NOT NULL<br /><br /> Valori possibili:<br /><br /> Informativo<br /><br /> Avviso<br /><br /> Errore|  
-|type|**nvarchar(32)**|Tipo di avviso.|NOT NULL<br /><br /> Valori possibili:<br /><br /> StatusChange-lo stato del dispositivo è stato modificato.<br /><br /> Soglia: un valore ha superato il valore di soglia.|  
+|tipo|**nvarchar(32)**|Tipo di avviso.|NOT NULL<br /><br /> Valori possibili:<br /><br /> StatusChange-lo stato del dispositivo è stato modificato.<br /><br /> Soglia: un valore ha superato il valore di soglia.|  
 |description|**nvarchar(4000)**|Descrizione dell'avviso.|NOT NULL|  
 |condizione|**nvarchar(255)**|Utilizzato quando Type = Threshold. Definisce la modalità di calcolo della soglia di avviso.|NULL|  
 |status|**nvarchar(32)**|Stato dell'avviso|NULL|  

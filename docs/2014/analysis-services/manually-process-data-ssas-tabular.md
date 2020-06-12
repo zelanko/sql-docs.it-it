@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0918c04c-c1e6-45b4-acfa-96fa578e684b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5de1215bd9646e115c6b2730c4e8a750a3f4040f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a861225414ec5bb63f77a0c4ce6c76a9c58c153d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077967"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541841"
 ---
 # <a name="manually-process-data-ssas-tabular"></a>Elaborare manualmente i dati (SSAS tabulare)
   In questo argomento viene illustrato come elaborare manualmente i dati dell'area di lavoro in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -50,7 +49,7 @@ ms.locfileid: "66077967"
   
 2.  In **Modalità** della finestra di dialogo **Elabora partizioni**selezionare una delle modalità di elaborazione seguenti:  
   
-    |Mode|Descrizione|  
+    |Modalità|Descrizione|  
     |----------|-----------------|  
     |**Elaborazione predefinita**|Rileva lo stato di elaborazione di un oggetto partizione ed esegue l'elaborazione necessaria per recapitare oggetti partizione non elaborati o elaborati parzialmente in uno stato di elaborazione completa. Vengono caricati i dati per le tabelle vuote e le partizioni; vengono compilate o ricompilate le gerarchie, le colonne calcolate e le relazioni.|  
     |**Elaborazione completa**|Elabora un oggetto partizione e tutti gli oggetti in esso contenuti. Quando viene eseguita l'elaborazione completa per un oggetto che è stato già elaborato, in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] vengono eliminati tutti i dati dell'oggetto, quindi quest'ultimo viene elaborato. Questo tipo di elaborazione è necessario quando è stata apportata una modifica strutturale a un oggetto.|  
@@ -63,7 +62,7 @@ ms.locfileid: "66077967"
 ##  <a name="data-process-progress"></a><a name="bkmk_data_process_progress"></a>Stato elaborazione dati  
  La finestra di dialogo **Stato elaborazione dati** consente di monitorare l'elaborazione di dati importati nel modello da un'origine esterna. Per accedere a questa finestra di dialogo, scegliere **Elabora partizioni** , **Elabora tabella**o **Elabora tutto** dal menu **Modello**.  
   
- **Stato**  
+ **Status**  
  Viene indicato se l'operazione di elaborazione ha avuto esito positivo o negativo.  
   
  **Dettagli**  
@@ -72,7 +71,7 @@ ms.locfileid: "66077967"
  **Arresta aggiornamento**  
  Fare clic per arrestare l'operazione di elaborazione. Questa opzione è utile se l'operazione è troppo lunga o se si sono verificati troppi errori.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Elaborare dati &#40;SSAS tabulare&#41;](process-data-ssas-tabular.md)   
  [Risolvere i problemi relativi all'elaborazione dei dati &#40;SSAS tabulare&#41;](troubleshoot-process-data-ssas-tabular.md)  
   

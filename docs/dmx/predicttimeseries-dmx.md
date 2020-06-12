@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 48b656283cbe251b0c8ecb4e7c7b41681cddc7ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d0888082380c7380e5fb025bb70d4bd3c2e518b
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893887"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83666690"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *riferimento a colonna di tabella>, colonna scalare referenc>\< * * \<*  
+ * \< riferimento a colonna di tabella>*, * \< colonna scalare referenc>*  
  Specifica il nome della colonna da stimare. La colonna può contenere dati scalari o tabulari.  
   
  *n*  
@@ -65,9 +65,9 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
  È possibile utilizzare questi argomenti solo quando i dati nuovi sono aggiunti mediante un'istruzione PREDICTION JOIN. Se si utilizza una query PREDICTION JOIN e non si specifica un argomento, l'impostazione predefinita è EXTEND_MODEL_CASES.  
   
 ## <a name="return-type"></a>Tipo restituito  
- > \<un' *espressione di tabella* .  
+ > un' \< *espressione di tabella* .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  L'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series non supporta la stima cronologica quando i dati nuovi sono aggiunti mediante l'istruzione PREDICTION JOIN.  
   
  In un'istruzione PREDICTION JOIN, il processo di stima inizia sempre immediatamente dopo la fine della serie di training originale anche se si aggiungono dati nuovi. Pertanto, i valori dei parametri *n* e *n-Start* devono essere un numero intero maggiore di 0.  
@@ -75,7 +75,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 > [!NOTE]  
 >  La lunghezza dei dati nuovi non influisce sul punto iniziale di stima. Pertanto, per aggiungere dati nuovi ed eseguire anche stime nuove, accertarsi di impostare il punto di inizio della stima su un valore maggiore della lunghezza dei dati nuovi oppure estendere il punto finale della stima in base alla lunghezza dei dati nuovi.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Negli esempi seguenti viene illustrato come eseguire stime in base a un modello Time Series esistente:  
   
 -   Nel primo esempio è illustrato come eseguire un numero specifico di stime in base al modello corrente.  
@@ -90,7 +90,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 >  È possibile che vengano restituiti risultati diversi dal modello utilizzato. I risultati degli esempi seguenti sono forniti solo per illustrare il formato del risultato.  
   
 ### <a name="example-1-predicting-a-number-of-time-slices"></a>Esempio 1: Stima di un numero di intervalli di tempo  
- Nell'esempio seguente viene usata la funzione **PredictTimeSeries** per restituire una stima per i successivi tre passaggi temporali e vengono limitati i risultati alla serie M200 nelle aree Europe e Pacific. In questo particolare modello, l'attributo stimabile è Quantity, quindi è necessario `[Quantity]` usare come primo argomento per la funzione PredictTimeSeries.  
+ Nell'esempio seguente viene usata la funzione **PredictTimeSeries** per restituire una stima per i successivi tre passaggi temporali e vengono limitati i risultati alla serie M200 nelle aree Europe e Pacific. In questo particolare modello, l'attributo stimabile è Quantity, quindi è necessario usare `[Quantity]` come primo argomento per la funzione PredictTimeSeries.  
   
 ```  
 SELECT FLATTENED  
@@ -220,7 +220,7 @@ WHERE ([Model Region] = 'M200 Europe'
 ## <a name="example-4-returning-statistics-in-a-time-series-prediction"></a>Esempio 4: Restituzione di statistiche in una stima basata su serie temporali  
  La funzione **PredictTimeSeries** non supporta *INCLUDE_STATISTICS* come parametro. Tuttavia, è possibile utilizzare la query seguente per visualizzare le statistiche di stima relative a una query di serie temporale. Questo approccio può essere utilizzato anche nel caso di modelli con colonne della tabella nidificate.  
   
- In questo particolare modello, l'attributo stimabile è Quantity, quindi è necessario `[Quantity]` usare come primo argomento per la funzione PredictTimeSeries. Se nel modello viene utilizzato un attributo stimabile diverso, è possibile sostituire un nome della colonna diverso.  
+ In questo particolare modello, l'attributo stimabile è Quantity, quindi è necessario usare `[Quantity]` come primo argomento per la funzione PredictTimeSeries. Se nel modello viene utilizzato un attributo stimabile diverso, è possibile sostituire un nome della colonna diverso.  
   
 ```  
 SELECT FLATTENED [Model Region],  

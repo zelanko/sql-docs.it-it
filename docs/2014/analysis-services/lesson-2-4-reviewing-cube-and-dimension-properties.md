@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dda922b8-6d75-4662-b09e-8a317c6a1c70
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c95d241d136f290110ac8a2b72540011a3922e24
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e30096bcd23f517e640903b0c9036633ad5427d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078995"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543503"
 ---
 # <a name="reviewing-cube-and-dimension-properties"></a>Esame delle proprietà del cubo e delle dimensioni
   Dopo avere definito un cubo, è possibile verificare i risultati tramite Progettazione cubi. Nell'attività seguente si esaminerà la struttura del cubo nel progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial.  
@@ -52,14 +51,14 @@ ms.locfileid: "66078995"
   
 9. In Esplora soluzioni fare clic con il pulsante destro del mouse su **Analysis Services Tutorial** nel nodo **Cubi** e fare clic su **Visualizza codice**. Potrebbe essere necessario attendere alcuni istanti.  
   
-     Il codice XML per il [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubo tutorial viene visualizzato nella scheda ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tutorial. Cube [XML]** . Si tratta del codice effettivo utilizzato per creare il cubo in un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] durante la distribuzione. Per altre informazioni, vedere [Visualizzare il codice XML per un progetto di Analysis Services &#40;SSDT&#41;](multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md).  
+     Il codice XML per il [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubo tutorial viene visualizzato nella scheda ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tutorial. Cube [XML]** . Si tratta del codice effettivo utilizzato per creare il cubo in un'istanza di durante la [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] distribuzione. Per altre informazioni, vedere [Visualizzare il codice XML per un progetto di Analysis Services &#40;SSDT&#41;](multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md).  
   
 10. Chiudere la scheda del codice XML.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Distribuzione di un progetto di Analysis Services](lesson-2-5-deploying-an-analysis-services-project.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Esplorare i dati di una dimensione in Progettazione dimensioni](multidimensional-models/database-dimensions-browse-dimension-data-in-dimension-designer.md)  
   
   

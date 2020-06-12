@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4f1b965c-9ca6-427b-8f4d-0ce1eea7c0fe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8e3cca216f7c2312b4e7b54f2236a5d1f7bafd9e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 689fe598cff74873c0a31f0e7aa47b15f760a789
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080106"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543993"
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Creare script per Analysis Services in Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] include funzionalità di generazione di script, modelli ed editor che è possibile usare per generare script per oggetti e attività di Analysis Services.  
@@ -64,7 +63,7 @@ ms.locfileid: "66080106"
     > [!NOTE]  
     >  In genere, è consigliabile selezionare **File** per creare più versioni diverse del file.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di script per attività amministrative in Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
  [Editor di query XMLA &#40;Analysis Services - Dati multidimensionali&#41;](../xmla-query-editor-analysis-services-multidimensional-data.md)  
   

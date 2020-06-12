@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f2a4a4eb3ddbf272968485f37fd3ceb25e973864
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9d8293cd61ef105352e6c6e1aaccb7f44494b2d5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077457"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544863"
 ---
 # <a name="add-a-standard-action"></a>Aggiungere un'azione standard
   Utilizzando la visualizzazione Azioni in Progettazione cubi è possibile aggiungere un'azione a un database. L'accesso a tale visualizzazione può essere effettuato da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Una volta creata, un'azione diventa disponibile agli utenti dopo aver rielaborato il cubo attinente. Per altre informazioni, vedere [Elaborazione di oggetti di Analysis Services](processing-analysis-services-objects.md).  
@@ -47,7 +46,7 @@ ms.locfileid: "66077457"
   
     -   Nell'elenco a discesa **Tipo** selezionare il tipo di azione che si desidera creare. Nella tabella seguente sono elencati i tipi di azioni disponibili.  
   
-        |Type|Description|  
+        |Tipo|Descrizione|  
         |----------|-----------------|  
         |Set di dati|Consente di recuperare un set di dati.|  
         |Proprietario|Consente di eseguire un'operazione utilizzando un'interfaccia diversa da quelle elencate in questa tabella.|  
@@ -63,7 +62,7 @@ ms.locfileid: "66077457"
   
         |Opzione|Descrizione|  
         |------------|-----------------|  
-        |Interactive (Interattivo)|L'azione viene attivata dall'interazione dell'utente.|  
+        |Interattività|L'azione viene attivata dall'interazione dell'utente.|  
         |Batch|L'azione viene eseguita come operazione batch.|  
         |Su apertura|L'azione viene eseguita in seguito all'apertura del cubo da parte dell'utente.|  
   
@@ -72,7 +71,7 @@ ms.locfileid: "66077457"
         > [!NOTE]  
         >  Le azioni proprietarie non vengono restituite al server a meno che l'applicazione client non consenta di limitare in modo esplicito il set di righe dello schema in modo da restituire solo le azioni che corrispondono al nome specificato in **Applicazione**.  
   
-    -   Nel **contenuto dell'azione**, se si usa il tipo di URL, racchiudere l'indirizzo Internet tra virgolette, ad esempiohttp://www.adventure-works.com"".  
+    -   Nel **contenuto dell'azione**, se si usa il tipo di URL, racchiudere l'indirizzo Internet tra virgolette, ad esempio " http://www.adventure-works.com ".  
   
     -   In **Descrizione**digitare una descrizione per l'azione.  
   

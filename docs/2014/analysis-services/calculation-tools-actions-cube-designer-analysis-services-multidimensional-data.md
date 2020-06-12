@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a3370370-43cd-4cc2-bb9f-c0d988b96f05
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 087f5f5e3383fd66244541fea35160946936bc1c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42336656ce19d36cf0eadc986450dd8f3b81f669
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088340"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527644"
 ---
 # <a name="calculation-tools-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Strumenti di calcolo (scheda Azioni, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Utilizzare il riquadro **Strumenti di calcolo** della scheda **Azioni** in Progettazione cubi per esplorare i metadati, le funzioni e i modelli disponibili per le azioni, le azioni drill-through e le azioni report.  
@@ -50,7 +49,7 @@ ms.locfileid: "66088340"
 |**Filtra membri**|Selezionare questa opzione per visualizzare la finestra di dialogo **Filtra membri** e filtrare i membri visualizzati per l'elemento selezionato in **Metadati**. Per altre informazioni sulla finestra di dialogo **Filtra membri** vedere [Finestra di dialogo Filtra membri &#40;Analysis Services - Dati multidimensionali&#41;](filter-members-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Si noti che questa opzione viene visualizzata solo se si seleziona **metadati** . Si noti inoltre che questa opzione è abilitata solo se nei **metadati**è selezionato un livello per un attributo.|  
 |**Aggiungi modello**|Scegliere questa opzione per aggiungere al cubo una nuova azione, una nuova azione drill-through o una nuova azione report basata sul modello selezionato e visualizzare rispettivamente l'editor dei form delle azioni ****, l'editor dei form delle azioni drill-through **** oppure l'editor dei form delle azioni report ****.<br /><br /> Nota: questa opzione viene visualizzata solo se si seleziona **metadati** .|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Nozioni fondamentali sullo scripting MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [Azioni &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
  [Barra degli strumenti &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   

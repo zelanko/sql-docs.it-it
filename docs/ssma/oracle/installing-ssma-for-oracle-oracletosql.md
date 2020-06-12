@@ -1,5 +1,6 @@
 ---
 title: Installazione di SSMA per Oracle (OracleToSQL) | Microsoft Docs
+description: Usare questi articoli per installare, aggiornare e disinstallare SQL Server Migration Assistant (SSMA) per Oracle, che include un'applicazione client e un pacchetto di estensione.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,27 +11,27 @@ ms.assetid: 9211013a-ab24-4c52-9b26-87994b35e502
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 0b146c1585bdcddcf2d45c6b9efbd24f7e90d718
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b97da15fb97c348afa694eb399d2a0c9a2f08928
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68263024"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292906"
 ---
 # <a name="installing-ssma--for-oracle-oracletosql"></a>Installazione di SSMA per Oracle (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) per Oracle è costituito da un'applicazione client usata per eseguire una migrazione da Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e da database SQL di Azure. Contiene inoltre un pacchetto di estensione che supporta la migrazione dei dati e l'utilizzo di funzioni di sistema Oracle nei database migrati.  
   
-Installare l'applicazione client nel computer da cui si eseguiranno i passaggi di migrazione. È necessario installare i file del pacchetto di estensione nel computer in cui verranno ospitati i database migrati. Il computer deve essere in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]esecuzione.  
+Installare l'applicazione client nel computer da cui si eseguiranno i passaggi di migrazione. È necessario installare i file del pacchetto di estensione nel computer in cui verranno ospitati i database migrati. Il computer deve essere in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="upgrading-ssma-for-oracle"></a>Aggiornamento di SSMA per Oracle  
 Se si desidera eseguire l'aggiornamento a una versione più recente di SSMA per Oracle, è necessario disinstallare il client e il pacchetto di estensione del server e quindi installare la versione più recente.  
   
-## <a name="contents"></a>Sommario  
+## <a name="contents"></a>Contenuto  
   
 |Argomento|Descrizione|  
 |---------|---------------|  
 |[Installazione di SSMA per il client Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)|Vengono fornite informazioni e istruzioni per l'installazione del client SSMA.|  
-|[Installazione dei componenti di SSMA in SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)|Vengono fornite informazioni e istruzioni per l'installazione del pacchetto di estensione nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]istanze di.|  
+|[Installazione dei componenti di SSMA in SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)|Vengono fornite informazioni e istruzioni per l'installazione del pacchetto di estensione nelle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Rimozione di SSMA per i componenti Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/removing-ssma-for-oracle-components-oracletosql.md)|Vengono fornite istruzioni per la disinstallazione del programma client e del pacchetto di estensione.|  
   
 ## <a name="see-also"></a>Vedere anche  

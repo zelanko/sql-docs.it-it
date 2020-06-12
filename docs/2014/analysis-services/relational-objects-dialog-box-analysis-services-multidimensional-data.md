@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 662ff835-2132-4171-b0d4-649d5873d052
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0571271f347c2aebcc2a0e0e25f2fff09b98fa89
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 13669994e7f12d5aeed85e71bd6c4a9a1f6805a3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070349"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539394"
 ---
 # <a name="relational-objects-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Oggetti relazionali (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Oggetti relazionali** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per selezionare tabelle, viste o altri oggetti di un'origine dati in cui si desidera impostare la memorizzazione nella cache attiva. Per visualizzare questa finestra di dialogo di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] è possibile fare clic sul pulsante con i punti di sospensione (**...**) per una delle opzioni disponibili in **Specifica tabelle di rilevamento** della scheda **Notifiche** della finestra di dialogo **Opzioni di archiviazione** .  
@@ -32,7 +31,7 @@ ms.locfileid: "66070349"
  **Show system objects**  
  Selezionare questa opzione per visualizzare gli oggetti di sistema per l'origine dei dati specificata in **Selezionare gli oggetti relazionali per cui si desidera impostare la memorizzazione nella cache attiva**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Notifiche &#40;finestra di dialogo Opzioni di archiviazione&#41; &#40;Analysis Services Dati multidimensionali&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md)  
   

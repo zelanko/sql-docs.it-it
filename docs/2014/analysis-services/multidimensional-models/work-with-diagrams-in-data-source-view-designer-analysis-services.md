@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 491fdd22-2326-4f27-a0dd-0a02faae3fd8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1aa03174d82c7319ce0c7b1cf455916e37a1b117
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 006f1090faed746737a89041593222d95637d387
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072374"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541203"
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>Utilizzare diagrammi in Progettazione vista origine dati (Analysis Services)
   Un diagramma vista origine dati è una rappresentazione visiva degli oggetti contenuti in tale vista. È possibile utilizzare il diagramma in modo interattivo per aggiungere, nascondere, eliminare o modificare oggetti specifici. Inoltre, è possibile creare più diagrammi nella stessa vista origine dati per concentrare l'attenzione su un subset degli oggetti.  
@@ -46,11 +45,11 @@ ms.locfileid: "66072374"
   
  Per creare un nuovo diagramma, fare clic con il pulsante destro del mouse in qualsiasi punto del riquadro **Libreria diagrammi** e scegliere **Nuovo diagramma**.  
   
- Quando si definisce inizialmente una vista origine dati in un progetto di Analysis Services, tutte le tabelle e le viste aggiunte alla vista origine dati vengono aggiunte a tutte le \<tabelle> diagramma. Questo diagramma viene visualizzato nel riquadro Libreria diagrammi di Progettazione vista origine dati, mentre le tabelle di tale diagramma e le relative colonne e relazioni vengono elencate nel riquadro Tabelle e visualizzate graficamente nel riquadro degli schemi. Tuttavia, quando si aggiungono tabelle, viste e query denominate a tutte le \<tabelle> diagramma, il numero totale di oggetti in questo diagramma rende difficile la visualizzazione delle relazioni, in particolare quando vengono aggiunte più tabelle dei fatti al diagramma e le tabelle delle dimensioni sono correlate a più tabelle dei fatti.  
+ Quando si definisce inizialmente una vista origine dati (DSV) in un progetto Analysis Services, tutte le tabelle e le viste aggiunte alla vista origine dati vengono aggiunte al \<All Tables> diagramma. Questo diagramma viene visualizzato nel riquadro Libreria diagrammi di Progettazione vista origine dati, mentre le tabelle di tale diagramma e le relative colonne e relazioni vengono elencate nel riquadro Tabelle e visualizzate graficamente nel riquadro degli schemi. Tuttavia, quando si aggiungono tabelle, viste e query denominate al \<All Tables> diagramma, il numero totale di oggetti in questo diagramma rende difficile la visualizzazione delle relazioni, in particolare quando vengono aggiunte più tabelle dei fatti al diagramma e le tabelle delle dimensioni sono correlate a più tabelle dei fatti.  
   
  Per semplificare la rappresentazione visiva quando si desidera visualizzare soltanto un subset delle tabelle della vista origine dati, è possibile definire diagrammi secondari, denominati semplicemente diagrammi, costituiti da subset selezionati delle tabelle, delle viste e delle query denominate della vista origine dati. È possibile utilizzare i diagrammi per raggruppare gli elementi nella vista origine dati in base alle esigenze aziendali o ai requisiti delle soluzioni.  
   
- È possibile raggruppare query denominate e tabelle correlate in diagrammi separati per scopi aziendali, nonché per rendere maggiormente comprensibile una vista origine dati contenente un numero elevato di tabelle e query denominate. La stessa tabella o query denominata può essere inclusa in più diagrammi, ad \<eccezione di tutte le tabelle> diagramma. Nel diagramma \<tutte le tabelle> tutti gli oggetti contenuti nella vista origine dati vengono visualizzati esattamente una volta.  
+ È possibile raggruppare query denominate e tabelle correlate in diagrammi separati per scopi aziendali, nonché per rendere maggiormente comprensibile una vista origine dati contenente un numero elevato di tabelle e query denominate. La stessa tabella o query denominata può essere inclusa in più diagrammi, ad eccezione del \<All Tables> diagramma. Nel \<All Tables> diagramma tutti gli oggetti contenuti nella vista origine dati vengono visualizzati esattamente una volta.  
   
 ##  <a name="edit-or-delete-a-diagram"></a><a name="bkmk_edit"></a>Modificare o eliminare un diagramma  
  Quando si utilizza un diagramma, prestare molta attenzione ai comandi utilizzati per l'aggiunta e la rimozione di oggetti. Ad esempio, l'eliminazione di un oggetto da un diagramma ne comporterà l'eliminazione anche dalla vista origine dati. Se si desidera eliminare l'oggetto solo dal diagramma, usare invece **Nascondi tabella** .  
@@ -88,7 +87,7 @@ ms.locfileid: "66072374"
   
  Per evitare il problema, aggiungere tutte le tabelle prima di procedere alle modifiche finali. In tal modo gli oggetti dovrebbero mantenere la relativa posizione nel diagramma quando verrà riaperto.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Viste origine dati in modelli multidimensionali](data-source-views-in-multidimensional-models.md)   
  [Progettazione vista origine dati &#40;Analysis Services - Dati multidimensionali&#41;](../data-source-view-designer-analysis-services-multidimensional-data.md)  
   

@@ -18,17 +18,17 @@ ms.assetid: 79c41dd9-abcb-434e-9326-00a341d5c867
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0ca9186b93e96c60e1c5128e385b5b77d5f2b94e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c66359dde77a8dcaceca26304df9ac5b32d5339b
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754097"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858693"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>Dettagli delle applicazioni livello dati distribuite (Utilità SQL Server)
   Le informazioni incluse nella vista Applicazioni livello dati distribuite di Gestione Utilità forniscono dati di utilizzo relativi a singole applicazioni livello dati, cronologia dell'utilizzo della CPU, dettagli sull'utilizzo dello spazio di archiviazione a livello di file e la possibilità di visualizzare e aggiornare le soglie dei criteri. È possibile controllare le soglie dei criteri a livello di applicazione del livello dati per utilizzo della CPU, file di database e file di log. È inoltre possibile visualizzare dettagli delle proprietà per le singole applicazioni di livello dati.  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco elementi dell'interfaccia utente  
  Vista Elenco  
  La visualizzazione Elenco nel riquadro superiore include dati sulle singole applicazioni di livello dati. Le icone di stato di integrità forniscono lo stato riepilogativo per ogni applicazione del livello dati in base alle categorie di utilizzo:  
   
@@ -165,10 +165,10 @@ ms.locfileid: "62754097"
   
 -   Ultima ora registrata - Questa colonna restituisce la data e l'ora locale del punto di controllo utilità utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) nella documentazione online di SQL Server. Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) nella documentazione online di SQL Server.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Istanza gestita dettagli &#40;Utilità SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
  [Dashboard utilità &#40;Utilità SQL Server&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
  [Monitorare le istanze di SQL Server nel Utilità SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
- [Attività e funzionalità di Utilità SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
+ [Funzionalità e attività di Utilità SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   

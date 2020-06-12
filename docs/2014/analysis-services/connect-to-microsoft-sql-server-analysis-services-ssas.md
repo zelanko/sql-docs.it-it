@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7f3244ee-b690-471c-893d-68e361c2d416
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fe8eee02d019b5cf68e257b3fac4266a18ead795
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 558f9936b7a8e78b3ef75f3bb525185ae497959c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087033"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526967"
 ---
 # <a name="connect-to-microsoft-sql-server-analysis-services-ssas"></a>Connessione a Microsoft SQL Server Analysis Services (SSAS)
   Questa pagina dell' **importazione guidata tabella** consente di specificare le impostazioni per l'importazione di dati da un Microsoft SQL Server Analysis Services cubo o da una cartella di lavoro di PowerPivot ospitata in SharePoint. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
@@ -27,7 +26,7 @@ ms.locfileid: "66087033"
 > [!NOTE]  
 >  Le credenziali dell'utente corrente vengono utilizzate in caso di selezione di un database in questa pagina. Tuttavia, l'importazione non verrà completata se l'utente specificato nella pagina Impostazioni di rappresentazione non dispone di privilegi sufficienti per leggere dal database selezionato.  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco elementi dell'interfaccia utente  
  **Nome descrittivo connessione**  
  Digitare un nome univoco per questa connessione all'origine dati. Questo campo è obbligatorio.  
   

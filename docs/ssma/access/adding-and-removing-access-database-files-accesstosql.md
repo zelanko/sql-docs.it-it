@@ -1,5 +1,6 @@
 ---
 title: Aggiunta e rimozione di file di database di Access (AccessToSQL) | Microsoft Docs
+description: Informazioni su come aggiungere o rimuovere database di Access da o verso il progetto SSMA per eseguire la migrazione dei dati di accesso a SQL Server o al database SQL di Azure.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -28,24 +29,24 @@ helpviewer_keywords:
 ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 39df13a3cab2d842a313ca37fc4a98d0c331ba83
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6806792fa828a5ebb4ea3a7a5a7e813626bff523
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68104210"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293688"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Aggiunta e rimozione di file di database di Access (AccessToSQL)
-Per eseguire la migrazione dei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dati di accesso a o SQL Azure, è necessario aggiungere uno o più database di Access al progetto SSMA. Questi database devono essere Access 97 o versioni successive. Se si dispone di database di una versione precedente di Access, è necessario convertire i database in una versione più recente. A tale scopo, aprire e salvare i database in Access 97 o versioni successive prima di aggiungerli a SSMA.  
+Per eseguire la migrazione dei dati di accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, è necessario aggiungere uno o più database di Access al progetto SSMA. Questi database devono essere Access 97 o versioni successive. Se si dispone di database di una versione precedente di Access, è necessario convertire i database in una versione più recente. A tale scopo, aprire e salvare i database in Access 97 o versioni successive prima di aggiungerli a SSMA.  
   
 ## <a name="what-happens-when-you-add-access-database-files"></a>Cosa accade quando si aggiungono i file di database di Access?  
-Quando si aggiunge un database di Access a un progetto SSMA, SSMA legge i metadati del database, quindi aggiunge i metadati al file di progetto. Questi metadati descrivono il database e i relativi oggetti. SSMA usa i metadati quando converte gli oggetti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure la sintassi e quando esegue la migrazione dei dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a o SQL Azure. È possibile esplorare questi metadati in Esplora metadati di Access ed esaminare le proprietà dei singoli oggetti di database.  
+Quando si aggiunge un database di Access a un progetto SSMA, SSMA legge i metadati del database, quindi aggiunge i metadati al file di progetto. Questi metadati descrivono il database e i relativi oggetti. SSMA usa i metadati quando converte gli oggetti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure la sintassi e quando esegue la migrazione dei dati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. È possibile esplorare questi metadati in Esplora metadati di Access ed esaminare le proprietà dei singoli oggetti di database.  
   
 > [!NOTE]  
-> Un database di Access può essere suddiviso in più file: un database back-end che contiene tabelle e database front-end che contengono query, moduli, report, macro, moduli e collegamenti. Se si desidera eseguire la migrazione di un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suddiviso a o SQL Azure, aggiungere il database front-end a SSMA.  
+> Un database di Access può essere suddiviso in più file: un database back-end che contiene tabelle e database front-end che contengono query, moduli, report, macro, moduli e collegamenti. Se si desidera eseguire la migrazione di un database suddiviso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, aggiungere il database front-end a SSMA.  
   
 ## <a name="permissions-that-are-required-by-ssma"></a>Autorizzazioni richieste da SSMA  
-Per eseguire la migrazione di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database di Access a o SQL Azure, il gruppo Users e l'utente amministratore devono disporre delle autorizzazioni di amministrazione. Per informazioni su come eseguire la migrazione dei database con la protezione del gruppo di lavoro, vedere [preparazione dei database di Access per la migrazione](preparing-access-databases-for-migration-accesstosql.md).  
+Per eseguire la migrazione di un database di Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, il gruppo Users e l'utente amministratore devono disporre delle autorizzazioni di amministrazione. Per informazioni su come eseguire la migrazione dei database con la protezione del gruppo di lavoro, vedere [preparazione dei database di Access per la migrazione](preparing-access-databases-for-migration-accesstosql.md).  
   
 ## <a name="selecting-databases-to-add"></a>Selezione dei database da aggiungere  
 Se si desidera aggiungere uno o più database a un progetto SSMA e i file si trovano in un percorso noto, è possibile aggiungere i file utilizzando la procedura seguente.  

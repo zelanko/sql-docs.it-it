@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f6b20c32ee955023ea24af2f70a83a7793ba1d64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44b162c34f5f505462a713205d8434484473afa4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085644"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524057"
 ---
 # <a name="content-queries-data-mining"></a>Query sul contenuto (Data mining)
   Una query sul contenuto consente di estrarre informazioni sulle statistiche interne e sulla struttura del modello di data mining. Talvolta una query sul contenuto può fornire dettagli che non sono immediatamente disponibili nel visualizzatore. I risultati di una query sul contenuto possono essere utilizzati anche per estrarre a livello di codice informazioni per altri utilizzi.  
@@ -28,7 +27,7 @@ ms.locfileid: "66085644"
   
 -   [Query sugli schemi del modello](#bkmk_Patterns)  
   
- [Esempi](#bkmk_Examples)  
+ [esempi](#bkmk_Examples)  
   
 -   [Query sul contenuto su un modello di associazione](#bkmk_Assoc)  
   
@@ -195,7 +194,7 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
   
  Per ulteriori informazioni sull'utilizzo di set di righe gerarchici, vedere la specifica OLE DB su MSDN.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Informazioni sull'istruzione DMX SELECT](/sql/dmx/understanding-the-dmx-select-statement)   
  [Query di data mining](data-mining-queries.md)  
   

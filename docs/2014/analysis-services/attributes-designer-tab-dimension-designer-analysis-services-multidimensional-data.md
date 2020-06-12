@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 850a68aa-1d70-4f0f-ba39-aeca834596c1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2c534fc23e2bc4938349d7874c1ce1fbd9b374dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d114e9aa025f3c3967372e8cb026a278b45f492e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064483"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527854"
 ---
 # <a name="attributes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Attributi (scheda Relazione tra attributi, Progettazione dimensioni) (Analysis Services - Dati multidimensionali)
   Utilizzare l'elenco **Attributi** per trovare un attributo specifico nel diagramma delle relazioni tra attributi o per definire una nuova relazione tra attributi. Questo riquadro appare immediatamente sotto il riquadro che contiene il diagramma delle relazioni tra attributi.  
@@ -50,7 +49,7 @@ ms.locfileid: "66064483"
  **Proprietà**  
  Visualizza le proprietà dell'attributo nella finestra **Proprietà** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Relazioni tra attributi &#40;Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   
  [Barra degli strumenti &#40;scheda Progettazione relazione tra attributi, Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
  [Diagramma delle relazioni tra attributi &#40;scheda Progettazione relazione tra attributi, Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](attribute-relationship-diagram-analysis-services-multidimensional-data.md)   

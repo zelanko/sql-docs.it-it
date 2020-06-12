@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d88f2dc9-2933-4be5-9bf3-48ffbc2d0a1a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0a0ca45681866e0ba96edaa81c21445a89f94275
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e2066cb6d871f43dda719cab3539253db97bfca7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070695"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540063"
 ---
 # <a name="process-data-ssas-tabular"></a>Elaborare dati (SSAS tabulare)
   Quando si importano dati in un modello tabulare, nella modalità cache si acquisisce uno snapshot di tali dati al momento dell'importazione. In alcuni casi, tali dati potrebbero non cambiare mai, pertanto non devono essere aggiornati nel modello. Tuttavia, è più probabile che i dati che si importano cambino regolarmente, pertanto affinché il modello rifletta i dati più recenti delle origini dati, è necessario elaborarli (aggiornarli) e calcolare nuovamente i dati calcolati. Per aggiornare i dati nel modello, è necessario eseguire un'azione di elaborazione in tutte le tabelle, in una singola tabella, in base a una partizione o a una connessione all'origine dati.  

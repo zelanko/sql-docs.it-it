@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0d6bea885a03d09da28d5f49ada36cf17375a507
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c8cd8da4cc1128d125009c0f3bd9d6e62c468d83
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79217143"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546173"
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>Accesso ai dati di modelli multidimensionali (Analysis Services - Dati multidimensionali)
   Utilizzare le informazioni in questo argomento per accedere ai dati multidimensionali di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] utilizzando metodi a livello di codice, script o applicazioni client che includono il supporto integrato per la connessione a un server [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] sulla rete locale.  

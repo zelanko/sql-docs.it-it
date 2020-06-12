@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 70f000b7-917f-4699-b142-7a0d13ff767c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: be4133aa143ecf0e1fb9b50c40a38a73b4207f30
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 281dc08a4674949758e4abbc8142f78eb97700f6
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082314"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528937"
 ---
 # <a name="database-properties-dialog-box-ssas---multidimensional"></a>Finestra di dialogo Proprietà database (SSAS - Multidimensionale)
   Utilizzare la finestra di dialogo **Proprietà database** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per impostare le proprietà di un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Per visualizzare la finestra di dialogo **Proprietà database** è possibile fare clic con il pulsante destro del mouse su un database in Esplora oggetti e scegliere **Proprietà**.  
@@ -37,7 +36,7 @@ ms.locfileid: "66082314"
 |**Dimensioni stimate**|Consente di visualizzare le dimensioni stimate del database.|  
 |**Percorso di archiviazione**|Specifica la posizione del database. Se il database si trova nella directory dati predefinita, questo valore sarà vuoto.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Database modelli multidimensionali &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)  
   

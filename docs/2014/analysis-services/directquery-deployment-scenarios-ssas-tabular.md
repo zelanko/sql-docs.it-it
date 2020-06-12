@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2aaf5cb8-294b-4031-94b3-fe605d7fc4c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a62a05c8908391b9ce925ecfe08ae30540b8fa29
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23f7debc1d2253938f235461279f39bb085c2b2f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081644"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528547"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>Scenari di distribuzione DirectQuery (SSAS tabulare)
   In questo argomento viene fornita una procedura dettagliata del processo di progettazione e distribuzione per i modelli DirectQuery. È possibile configurare DirectQuery per l'utilizzo dei soli dati relazionali (solo DirectQuery) oppure è possibile configurare il modello per alternare l'utilizzo dei soli dati memorizzati nella cache o dei soli dati relazionali (modalità ibrida). In questo argomento viene illustrato il processo di implementazione per entrambe le modalità e vengono descritte le possibili differenze nei risultati della query a seconda della modalità e della configurazione della sicurezza.  
@@ -39,7 +38,7 @@ ms.locfileid: "66081644"
   
  Per impostazione predefinita, la modalità DirectQuery è disabilitata. Pertanto, è necessario configurare l'ambiente di progettazione per supportare la modalità DirectQuery.  
   
- Fare clic con il pulsante destro del mouse sul nodo **Model. BIM** in Esplora soluzioni e impostare la proprietà `On` **DirectQuery Mode**su.  
+ Fare clic con il pulsante destro del mouse sul nodo **Model. BIM** in Esplora soluzioni e impostare la proprietà **DirectQuery Mode**su `On` .  
   
  È possibile attivare la modalità DirectQuery in qualsiasi momento. Tuttavia, per assicurarsi di non creare colonne o formule incompatibili con la modalità DirectQuery, è consigliabile abilitare da subito la modalità DirectQuery.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66081644"
   
 |||  
 |-|-|  
-|**Solo DirectQuery**|Facoltativo. Per un modello di tipo solo DirectQuery non occorre una partizione.<br /><br /> Tuttavia, se sono state create partizioni nel modello durante la fase di progettazione, solo una partizione può essere utilizzata come origine dati. Per impostazione predefinita, la prima partizione creata verrà utilizzata come partizione DirectQuery.<br /><br /> Per assicurarsi che tutti i dati richiesti dal modello siano disponibili nella partizione DirectQuery, scegliere una partizione DirectQuery e modificare l'istruzione SQL per ottenere l'intero set di dati.|  
+|**Solo DirectQuery**|Facoltativa. Per un modello di tipo solo DirectQuery non occorre una partizione.<br /><br /> Tuttavia, se sono state create partizioni nel modello durante la fase di progettazione, solo una partizione può essere utilizzata come origine dati. Per impostazione predefinita, la prima partizione creata verrà utilizzata come partizione DirectQuery.<br /><br /> Per assicurarsi che tutti i dati richiesti dal modello siano disponibili nella partizione DirectQuery, scegliere una partizione DirectQuery e modificare l'istruzione SQL per ottenere l'intero set di dati.|  
 |**Modalità ibrida**|Se una tabella nel modello dispone di più partizioni, è necessario scegliere una sola partizione come *partizione DirectQuery*. Se non si assegna una partizione, per impostazione predefinita la prima partizione creata verrà utilizzata come partizione DirectQuery.<br /><br /> Impostare le opzioni di elaborazione su tutte le partizioni tranne DirectQuery In genere, la partizione DirectQuery non viene mai elaborata perché i dati vengono passati dall'origine relazionale.<br /><br /> Per altre informazioni, vedere [partizioni e modalità DirectQuery &#40;&#41;tabulare di SSAS ](tabular-models/define-partitions-in-directquery-models-ssas-tabular.md).|  
   
  **Passaggio 6. Configurare la rappresentazione**  
@@ -111,8 +110,8 @@ ms.locfileid: "66081644"
   
 |||  
 |-|-|  
-|**DirectQuery senza cache**|Non sono stati caricati dati nella cache. Il modello non potrà mai essere elaborato.<br /><br /> Sarà possibile eseguire query sul modello solo utilizzando client che supportano le query DAX. I risultati delle query vengono sempre restituiti dall'origine dati originale.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode** = **DirectQuery** QueryMode|  
-|**DirectQuery con query solo sulla cache**|La distribuzione non viene eseguita. Questa configurazione non è supportata.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode** = **in memoria**|  
+|**DirectQuery senza cache**|Non sono stati caricati dati nella cache. Il modello non potrà mai essere elaborato.<br /><br /> Sarà possibile eseguire query sul modello solo utilizzando client che supportano le query DAX. I risultati delle query vengono sempre restituiti dall'origine dati originale.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode**  =  **DirectQuery**|  
+|**DirectQuery con query solo sulla cache**|La distribuzione non viene eseguita. Questa configurazione non è supportata.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode**  =  **In memoria**|  
   
  **Modalità ibrida**  
  La distribuzione del modello in una modalità ibrida comporta molti vantaggi: la possibilità di ottenere dati aggiornati dall'origine dati SQL Server secondo necessità, ma conservando la cache, consente di lavorare con i dati in memoria e di ottenere prestazioni più elevate durante la progettazione di report o il test del modello.  
@@ -123,10 +122,10 @@ ms.locfileid: "66081644"
   
 |||  
 |-|-|  
-|**Modalità ibrida con cache preferita**|Il modello può essere elaborato e i dati possono essere caricati nella cache. Per impostazione predefinita, per le query viene utilizzata la cache.  Se un client desidera utilizzare l'origine DirectQuery, è necessario inserire un parametro nella stringa di connessione.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode** = **in memoria con DirectQuery**|  
-|**Modalità ibrida con DirectQuery preferita**|Il modello viene elaborato e i dati possono essere caricati nella cache. Per impostazione predefinita, le query utilizzano tuttavia DirectQuery. Se un client desidera utilizzare i dati memorizzati nella cache, è necessario inserire un parametro nella stringa di connessione. Se le tabelle del modello sono partizionate, anche la partizione principale della cache viene impostata su **In-Memory con DirectQuery**.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode** = **DirectQuery con in-Memory**|  
+|**Modalità ibrida con cache preferita**|Il modello può essere elaborato e i dati possono essere caricati nella cache. Per impostazione predefinita, per le query viene utilizzata la cache.  Se un client desidera utilizzare l'origine DirectQuery, è necessario inserire un parametro nella stringa di connessione.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode**  =  **In memoria con DirectQuery**|  
+|**Modalità ibrida con DirectQuery preferita**|Il modello viene elaborato e i dati possono essere caricati nella cache. Per impostazione predefinita, le query utilizzano tuttavia DirectQuery. Se un client desidera utilizzare i dati memorizzati nella cache, è necessario inserire un parametro nella stringa di connessione. Se le tabelle del modello sono partizionate, anche la partizione principale della cache viene impostata su **In-Memory con DirectQuery**.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode**  =  **DirectQuery con in-Memory**|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Modalità DirectQuery &#40;SSAS tabulare&#41;](tabular-models/directquery-mode-ssas-tabular.md)   
  [Accesso ai dati di modello tabulare](tabular-models/tabular-model-data-access.md)  
   

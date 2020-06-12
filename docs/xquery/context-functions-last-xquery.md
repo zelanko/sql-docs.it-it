@@ -1,5 +1,6 @@
 ---
 title: Funzione Last (XQuery) | Microsoft Docs
+description: Informazioni sulla funzione XQuery last () che restituisce l'indice Integer dell'ultimo elemento in una sequenza.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dc92086e-3b01-4b0b-9f54-3bbf306cf7ae
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 04cb465c5180b829ff7d125c1695c3865c3f33c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f88c438206551e170810f467e7944b21232e245d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038999"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529705"
 ---
 # <a name="context-functions---last-xquery"></a>Funzioni di contesto - last (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ fn:last() as xs:integer
 ## <a name="remarks"></a>Osservazioni  
  In SQL Server, **FN: Last ()** può essere usato solo nel contesto di un predicato dipendente dal contesto. In particolare, può essere utilizzata solo tra parentesi (`[ ]`).  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
 ### <a name="a-using-the-last-xquery-function-to-retrieve-the-last-two-manufacturing-steps"></a>A. Utilizzo della funzione XQuery last() per recuperare le ultime due fasi di produzione  
@@ -59,7 +60,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- Nella query precedente, la funzione **Last ()** in/`/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]` restituisce il numero di fasi di produzione. Tale valore viene utilizzato per recuperare l'ultima fase di produzione nel centro di lavorazione.  
+ Nella query precedente, la funzione **Last ()** in/ `/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]` restituisce il numero di fasi di produzione. Tale valore viene utilizzato per recuperare l'ultima fase di produzione nel centro di lavorazione.  
   
  Risultato:  
   

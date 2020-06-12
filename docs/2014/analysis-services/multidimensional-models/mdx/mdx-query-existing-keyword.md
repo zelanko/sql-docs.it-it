@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 651ee9ac-04ef-4316-87c9-a3df5ac27d22
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a6c5e8dbe3e1b1ad44286bcbb79132010cad618a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 115444c832fe8fe9b258a0c23b97b97553f32e8e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073971"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546213"
 ---
 # <a name="existing-keyword-mdx"></a>Parola chiave EXISTING (MDX)
   Forza la valutazione di un determinato set all'interno del contesto corrente.  
@@ -35,11 +34,11 @@ Existing Set_Expression
  *Set_Expression*  
  Espressione set MDX (Multidimensional Expression) valida.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Per impostazione predefinita, i set vengono valutati all'interno del contesto del cubo che include i membri del set. È tuttavia possibile forzare la valutazione di un set specificato all'interno del contesto corrente utilizzando la parola chiave `Existing`.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene restituito il numero dei rivenditori le cui vendite sono diminuite nel periodo di tempo precedente, in base ai valori del membro State-Province selezionati dall'utente valutati tramite la funzione `Aggregate`. È tuttavia possibile forzare la valutazione di un set specificato all'interno del contesto corrente utilizzando la parola chiave [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx) e [DrilldownLevel (MDX)](/sql/mdx/drilldownlevel-mdx) vengono usate per restituire i valori relativi alla diminuzione delle vendite per le categorie di prodotti nella dimensione Product. La `Existing` parola chiave impone la valutazione del `Filter` set nella funzione nel contesto corrente, ovvero per i membri Washington e Oregon della gerarchia dell'attributo State-Province.  
+ Nell'esempio seguente viene restituito il numero dei rivenditori le cui vendite sono diminuite nel periodo di tempo precedente, in base ai valori del membro State-Province selezionati dall'utente valutati tramite la funzione `Aggregate`. È tuttavia possibile forzare la valutazione di un set specificato all'interno del contesto corrente utilizzando la parola chiave [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx) e [DrilldownLevel (MDX)](/sql/mdx/drilldownlevel-mdx) vengono usate per restituire i valori relativi alla diminuzione delle vendite per le categorie di prodotti nella dimensione Product. La `Existing` parola chiave impone la valutazione del set nella `Filter` funzione nel contesto corrente, ovvero per i membri Washington e Oregon della gerarchia dell'attributo State-Province.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS  
@@ -76,7 +75,7 @@ WHERE
   
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Conteggio &#40;set&#41; &#40;MDX&#41;](/sql/mdx/count-set-mdx)   
  [AddCalculatedMembers &#40;&#41;MDX](/sql/mdx/addcalculatedmembers-mdx)   
  [Aggregazione MDX &#40;&#41;](/sql/mdx/aggregate-mdx)   

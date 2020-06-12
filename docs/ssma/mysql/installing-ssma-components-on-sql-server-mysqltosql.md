@@ -1,5 +1,6 @@
 ---
 title: Installazione dei componenti di SSMA in SQL Server (MySQLToSql) | Microsoft Docs
+description: Installare i componenti nel server che esegue SQL Server per supportare la conversione del database MySQL con SSMA, inclusi i provider di estensioni SSMA e MySQL.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: 6772d0c5-258f-4d7b-afb0-b5f810e71af1
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 64040f4a0caf8253e6d6e8a3b00ff21e0cebe6d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 502f42a961cfbd64b0dcd6ac6c6867d0cdcf501a
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68075354"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293788"
 ---
 # <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>Installazione dei componenti SSMA in SQL Server (MySQLToSql)
-Oltre a installare SSMA, è necessario installare anche i componenti nel computer in cui è in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]esecuzione. Questi componenti includono il pacchetto di estensioni SSMA, che supporta la migrazione dei dati e i provider MySQL, per abilitare la connettività da server a server.  
+Oltre a installare SSMA, è necessario installare anche i componenti nel computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questi componenti includono il pacchetto di estensioni SSMA, che supporta la migrazione dei dati e i provider MySQL, per abilitare la connettività da server a server.  
   
 ## <a name="ssma-for-mysql-extension-pack"></a>Pacchetto di estensione SSMA per MySQL  
-Il pacchetto di estensione SSMA aggiunge un database, **sysdb**, all'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo database contiene le tabelle e le stored procedure necessarie per eseguire la migrazione dei dati.  
+Il pacchetto di estensione SSMA aggiunge un database, **sysdb**, all'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questo database contiene le tabelle e le stored procedure necessarie per eseguire la migrazione dei dati.  
   
-Inoltre, quando si esegue la migrazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dei dati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , SSMA crea i processi di Agent, quando viene utilizzato il motore di migrazione dei dati lato server per la migrazione dei dati.  
+Inoltre, quando si esegue la migrazione dei dati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , SSMA crea [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i processi di Agent, quando viene utilizzato il motore di migrazione dei dati lato server per la migrazione dei dati.  
   
 ### <a name="prerequisites"></a>Prerequisiti  
-Prima di installare i componenti di SSMA per MySQL server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in, verificare che il computer soddisfi i requisiti seguenti:  
+Prima di installare i componenti di SSMA per MySQL server in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , verificare che il computer soddisfi i requisiti seguenti:  
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3,1 o versione successiva.  
   
@@ -39,16 +40,16 @@ Prima di installare i componenti di SSMA per MySQL server [!INCLUDE[ssNoVersion]
     > Se il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servizio browser è in esecuzione, ma non viene ancora visualizzato un elenco di istanze nel programma di installazione, è necessario sbloccare la porta UDP 1434. È possibile utilizzare Windows Firewall per sbloccare temporaneamente la porta oppure è possibile disabilitare temporaneamente Windows Firewall. Potrebbe anche essere necessario disabilitare temporaneamente il software antivirus. Assicurarsi di abilitare i firewall e il software antivirus dopo l'installazione.  
   
 ### <a name="installing-the-extension-pack"></a>Installazione del pacchetto di estensione  
-È possibile installare il pacchetto di estensione in qualsiasi momento prima di eseguire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la migrazione dei dati a.  
+È possibile installare il pacchetto di estensione in qualsiasi momento prima di eseguire la migrazione dei dati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
-> Per installare il pacchetto di estensione, è necessario essere un membro del ruolo del server **sysadmin** nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+> Per installare il pacchetto di estensione, è necessario essere un membro del ruolo del server **sysadmin** nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 **Per installare il pacchetto di estensione**  
   
-1.  Copiare SSMA per MySQL Extension Pack. *n*. Installare. exe, dove *n* è il numero di build, nel computer in cui è [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in esecuzione.  
+1.  Copiare SSMA per MySQL Extension Pack. *n*.Install.exe, dove *n* è il numero di build, nel computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-2.  Fare doppio clic su SSMA per MySQL Extension Pack. *n*. Installare. exe.  
+2.  Fare doppio clic su SSMA per MySQL Extension Pack. *n*.Install.exe.  
   
 3.  Nella finestra di dialogo di benvenuto fare clic su **Avanti**.  
   
@@ -60,21 +61,21 @@ Prima di installare i componenti di SSMA per MySQL server [!INCLUDE[ssNoVersion]
   
 7.  Nella finestra di dialogo completato il primo passaggio dell'installazione fare clic su **Avanti**.  
   
-    Verrà visualizzata una nuova finestra di dialogo in cui è possibile selezionare l'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di per l'installazione del pacchetto di estensione.  
+    Verrà visualizzata una nuova finestra di dialogo in cui è possibile selezionare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'installazione del pacchetto di estensione.  
   
-8.  Selezionare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui verrà eseguita la migrazione degli schemi MySQL e quindi fare clic su **Avanti**.  
+8.  Selezionare l'istanza di in cui verrà eseguita la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] migrazione degli schemi MySQL e quindi fare clic su **Avanti**.  
   
     L'istanza predefinita ha lo stesso nome del computer. Le istanze denominate saranno seguite da una barra rovesciata e dal nome dell'istanza.  
   
 9. Nella finestra di dialogo connessione selezionare il metodo di autenticazione e quindi fare clic su **Avanti**.  
   
-    L'autenticazione di Windows utilizzerà le credenziali di Windows per tentare di accedere all'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di. Se si seleziona [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione di, è necessario [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] immettere un nome di account di accesso e una password.  
+    L'autenticazione di Windows utilizzerà le credenziali di Windows per tentare di accedere all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se si seleziona [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione di, è necessario immettere un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nome di account di accesso e una password.  
   
 10. Nella finestra di dialogo successiva selezionare **Install Utilities database** *n*, dove *n* è il numero di versione, quindi fare clic su **Avanti**.  
   
     Il database **sysdb** viene creato con le tabelle e le stored procedure necessarie per la migrazione dei dati (tramite il motore di migrazione dei dati sul lato server) in tale database.  
   
-11. Per installare le utilità in un'altra istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di, selezionare **Sì**e quindi fare clic su **Avanti**. In alternativa, fare clic su **No**per uscire dalla procedura guidata.  
+11. Per installare le utilità in un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , selezionare **Sì**e quindi fare clic su **Avanti**. In alternativa, fare clic su **No**per uscire dalla procedura guidata.  
   
 ## <a name="see-also"></a>Vedere anche  
 [Installazione di SSMA per il client MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  

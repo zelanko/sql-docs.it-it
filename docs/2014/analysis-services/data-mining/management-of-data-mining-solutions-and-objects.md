@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 15574819cf0f0fec0d95fa2353c187cc55091e56
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae3e672932dd320c6b369f23f03c1f056d30d4ba
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084200"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522177"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Gestione degli oggetti e delle soluzioni di data mining
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] include strumenti client che è possibile utilizzare per gestire strutture e modelli di data mining esistenti. In questa sezione vengono descritte le operazioni di gestione che è possibile eseguire utilizzando ciascun ambiente.  
@@ -75,7 +74,7 @@ ms.locfileid: "66084200"
 ### <a name="analysis-management-objects-amo"></a>AMO (Analysis Management Objects)  
  Gli oggetti AMO (Analysis Management Objects) sono un modello a oggetti compilato su XMLA che offre il controllo completo sugli oggetti di data mining. Tramite AMO, è possibile creare, distribuire e monitorare le strutture e i modelli di data mining.  
   
--   [Modello a oggetti AMO e concetti relativi](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)  
+-   [Modelli a oggetti e concetti di AMO](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)  
   
 -   <xref:Microsoft.AnalysisServices>  
   
@@ -93,7 +92,7 @@ ms.locfileid: "66084200"
   
  **Restrizioni:** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] genera alcune istruzioni XMLA supportate solo per uso interno, che non possono essere usate negli script DDL XML.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida per gli sviluppatori &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)  
   
   

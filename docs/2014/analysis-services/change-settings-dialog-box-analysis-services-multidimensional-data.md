@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0041e042-d7ce-48f9-a690-a6dc65471ff3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 43dfc1dca2e60fe2f5e467556ee36c3add1a9da3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 717eabb3db136f048f7a39f2fc40f61ee60c253c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088245"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527637"
 ---
 # <a name="change-settings-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Cambia impostazioni (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Cambia impostazioni** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per cambiare le impostazioni mediante le quali viene controllata l'elaborazione degli oggetti elencati nella finestra di dialogo **Elabora** . Per visualizzare la finestra di dialogo **Cambia impostazioni** , è possibile fare clic su **Cambia impostazioni** nella finestra di dialogo **Elabora** .  
@@ -29,7 +28,7 @@ ms.locfileid: "66088245"
  **Opzioni di elaborazione**  
  Utilizzare questa scheda per modificare le impostazioni relative all'ordine di elaborazione, alla tabella writeback e agli oggetti interessati nell'ambito dell'operazione di elaborazione. Nella scheda sono incluse le opzioni seguenti:  
   
- **Parallelo**  
+ **Parallel**  
  Fare clic su questa opzione per elaborare gli oggetti in parallelo.  
   
  **Numero massimo attività parallele**  
@@ -137,7 +136,7 @@ ms.locfileid: "66088245"
  **Elabora oggetti interessati**  
  Fare clic su questa opzione per elaborare gli oggetti dipendenti da altri oggetti selezionati nella finestra di dialogo **Elabora** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Finestra di dialogo elabora &#40;Analysis Services-Dati multidimensionali&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
   

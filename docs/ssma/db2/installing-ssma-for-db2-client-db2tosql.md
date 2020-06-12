@@ -1,5 +1,6 @@
 ---
 title: Installazione di SSMA per il client DB2 (DB2ToSQL) | Microsoft Docs
+description: Informazioni sui prerequisiti di installazione per il client di SQL Server Migration Assistant (SSMA) per DB2 e su come installare.
 ms.prod: sql
 ms.custom: ''
 ms.date: 09/07/2019
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ae2a470-6afd-4512-b6d1-fcbe6afe88ad
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 1623430eed752db7fa387caf33124082eb318490
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7615f775a43da2853a0c98f8402f738e73dc8bb6
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70774190"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293808"
 ---
 # <a name="installing-ssma-for-db2-client-db2tosql"></a>Installazione di SSMA per il client DB2 (DB2ToSQL)
 
@@ -24,11 +25,11 @@ Il client SSMA è costituito dai file di programma che eseguono le attività seg
   
 - Connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-- Convertire gli oggetti di database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB2 in sintassi.  
+- Convertire gli oggetti di database DB2 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sintassi.  
   
-- Caricare gli oggetti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+- Caricare gli oggetti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-- Eseguire la migrazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dei dati a.  
+- Eseguire la migrazione dei dati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 In questo argomento vengono forniti i prerequisiti e le istruzioni per l'installazione di SSMA.  
   
@@ -42,11 +43,11 @@ Prima di installare SSMA, verificare che il computer soddisfi i requisiti seguen
   
 - [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3,1 o versioni successive.  
   
-- [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] successiva. La [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] versione 4,0 è disponibile sul supporto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del prodotto. È anche possibile ottenerlo dal [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882).  
+- [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] Versione 4,0 o successiva. La [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] versione 4,0 è disponibile sul [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporto del prodotto. È anche possibile ottenerlo dal [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882).  
   
 - Provider Microsoft OLEDB per DB2 versione 5 o successiva e connettività ai database DB2 di cui si vuole eseguire la migrazione.  
   
-- Accesso a e autorizzazioni sufficienti per il computer che ospita l'istanza di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di o database SQL di Azure in cui si eseguirà la migrazione di dati e oggetti di database. Per ulteriori informazioni, vedere [connessione a SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md).  
+- Accesso a e autorizzazioni sufficienti per il computer che ospita l'istanza di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o database SQL di Azure in cui si eseguirà la migrazione di dati e oggetti di database. Per ulteriori informazioni, vedere [connessione a SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md).  
   
 - 4 GB di RAM consigliata.  
   
@@ -60,7 +61,7 @@ Dopo aver scaricato la versione più recente, estrarre i file di installazione i
   
 Per installare il client di SSMA:
   
-1. Fare doppio clic su SSMA per DB2 *n*. Installare. exe, dove *n* è il numero di Build.  
+1. Fare doppio clic su SSMA per DB2 *n*.Install.exe, dove *n* è il numero di Build.  
   
 2. Nella pagina di **benvenuto** selezionare **Avanti**.  
   

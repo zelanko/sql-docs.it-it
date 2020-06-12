@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f2d14a89-6286-4e74-9afb-091076f93f21
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4388ef278c0762184859162dc55f656aae1c9a15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 199de07778a153cd1bc40b5033d364e5e0055bd3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074434"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546433"
 ---
 # <a name="creating-session-scoped-calculated-cells"></a>Creazione di celle calcolate con ambito sessione
     
@@ -80,9 +79,9 @@ FOR String_Expression AS 'MDX_Expression'
 |Set vuoto|Espressione set MDX che restituisce un set vuoto. In questo caso l'ambito della cella calcolata è costituito dall'intero cubo.|  
 |Set con un singolo membro|Espressione set MDX che restituisce un singolo membro.|  
 |Set di membri di un livello|Espressione set MDX che restituisce i membri di un singolo livello. Un esempio è la *Level_Expression*.`Members` . Per includere i membri calcolati, utilizzare il *Level_Expression*.`AllMembers` .<br /><br /> Per altre informazioni, vedere [AllMembers &#40;MDX&#41;](/sql/mdx/allmembers-mdx).|  
-|Set di discendenti|Espressione set MDX che restituisce i discendenti di un membro specificato. Un `Descendants`esempio è la funzione MDX (*Member_Expression*, *Level_Expression* *Desc_Flag*).<br /><br /> Per altre informazioni, vedere [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx).|  
+|Set di discendenti|Espressione set MDX che restituisce i discendenti di un membro specificato. Un esempio è la `Descendants` funzione MDX (*Member_Expression*, *Level_Expression* *Desc_Flag*).<br /><br /> Per altre informazioni, vedere [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx).|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Compilazione di formule per il calcolo di celle in MDX &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
   
   

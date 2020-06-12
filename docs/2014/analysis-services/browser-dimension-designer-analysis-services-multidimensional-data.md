@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c7772d73-31c9-4b22-a899-bac424d603bb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1b3448891baed6fe91bb0339030f74569a096377
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2925542236adfc7e79ea1dccd0ca3ca1008e7de1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064624"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527767"
 ---
 # <a name="browser-dimension-designer-analysis-services---multidimensional-data"></a>Browser (Progettazione dimensioni) (Analysis Services – Dati multidimensionali)
   La scheda **Esplorazione** di Progettazione dimensioni consente di esplorare i dati e i metadati relativi a una dimensione. Se il writeback della dimensione è abilitato per la dimensione selezionata, utilizzare questa visualizzazione per modificare i dati membro per la dimensione.  
@@ -33,7 +32,7 @@ ms.locfileid: "66064624"
  [Livelli e membri](level-members-dimension-designer-analysis-services-multidimensional-data.md)  
  Usare il riquadro **Livelli e membri** per esplorare e modificare i membri della gerarchia selezionata, nella lingua selezionata.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Progettazione dimensioni &#40;Analysis Services-Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
  [Dimensioni &#40;Analysis Services Dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)   

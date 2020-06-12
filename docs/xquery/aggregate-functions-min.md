@@ -1,5 +1,6 @@
 ---
 title: Funzione min (XQuery) | Microsoft Docs
+description: Informazioni sulla funzione XQuery min () che restituisce un elemento in una sequenza il cui valore è minore di quello di tutti gli altri.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: db0b7d94-3fa6-488f-96d6-6a9a7d6eda23
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 29e5718debadb4725bc9d9ebcd499c261ed23d54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b209f6d46c47de5a604eee3c14c681a333bcdec8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67985754"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529970"
 ---
 # <a name="aggregate-functions---min"></a>Funzioni di aggregazione - min
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,14 +39,14 @@ fn:min($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  *$arg*  
  Sequenza di elementi da cui viene restituito il valore minimo.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Tutti i tipi di valori atomizzati passati a **min ()** devono essere sottotipi dello stesso tipo di base. I tipi di base accettati sono i tipi che supportano l'operazione **gt** . Tra questi tipi sono inclusi i tre tipi di base numerici predefiniti, ovvero i tipi di base di data/ora xs:string, xs:boolean e xdt:untypedAtomic. Per i valori di tipo xdt:untypedAtomic viene eseguito il cast a xs:double. Se è presente una combinazione di questi tipi o se vengono passati altri valori di altri tipi, viene generato un errore statico.  
   
  Il risultato di **min ()** riceve il tipo di base dei tipi passati, ad esempio xs: Double nel caso di xdt: untypedAtomic. Se l'input è una sequenza vuota calcolata in modo statico, la sequenza vuota è implicita e viene restituito un errore statico.  
   
  La funzione **min ()** restituisce un valore nella sequenza minore di qualsiasi altro oggetto nella sequenza di input. Per i valori xs:string, vengono utilizzate le regole di confronto predefinite dei punti di codice Unicode. Se non è possibile eseguire il cast di un valore xdt: untypedAtomic a xs: Double, il valore viene ignorato nella sequenza di input *$arg*. Se l'input è una sequenza vuota calcolata in modo dinamico, viene restituita la sequenza vuota.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
 ### <a name="a-using-the-min-xquery-function-to-find-the-work-center-location-that-has-the-fewest-labor-hours"></a>A. Utilizzo della funzione XQuery min() per l'individuazione del centro di lavorazione con il numero minimo di ore di manodopera  
@@ -70,7 +71,7 @@ WHERE ProductModelID=7
   
 -   La parola chiave **namespace** nel prologo XQuery definisce un prefisso dello spazio dei nomi. In seguito, tale prefisso viene utilizzato nel corpo della query XQuery.  
   
- Il corpo XQuery costruisce il codice XML con un \<percorso> elemento con gli attributi wcid e **LaborHrs** .  
+ Il corpo XQuery costruisce il codice XML che include un \<Location> elemento con gli attributi wcid e **LaborHrs** .  
   
 -   La query recupera inoltre i valori del modello del prodotto ProductModelID e dei nomi.  
   

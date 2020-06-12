@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 79d6a1e8-2825-4eb9-97df-5071aecae8f0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9f0f960c531fac8bae8f03479bacd507ffc3078
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72ae6e19f879651feb47841d70b444e9f845c74e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074595"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546513"
 ---
 # <a name="establishing-cube-context-in-a-query-mdx"></a>Definizione del contesto di cubo in una query (MDX)
   Ogni query MDX viene eseguita nel contesto di cubo specificato. Tale contesto definisce i membri che vengono valutati dalle espressioni incluse nella query.  
@@ -58,7 +57,7 @@ FROM [Adventure Works]
   
  Tramite la funzione MDX [LookupCube](/sql/mdx/lookupcube-mdx) è possibile recuperare dati di cubi all'esterno del contesto di cubo. Sono inoltre disponibili funzioni che consentono una limitazione temporale del contesto durante la valutazione della query, ad esempio la funzione [Filter](/sql/mdx/filter-mdx) .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Nozioni fondamentali sulle query MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

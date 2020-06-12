@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: af175693a93535b21b399cf4916ca4291fc94dfa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc0f235871607363b436867d44affd561876bf1e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082993"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520597"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Progetti correlati per soluzioni di data mining
   Come minimo, per una soluzione di data mining è richiesto il progetto di data mining, in cui si definiscono origini dati, viste origine dati, strutture di data mining e modelli di data mining. Tuttavia, quando i modelli di data mining vengono utilizzati nei processi decisionali quotidiani, è importante che il data mining sia integrato con altre parti di una soluzione analitica predittiva, che può includere i seguenti processi e componenti:  
@@ -59,7 +58,7 @@ ms.locfileid: "66082993"
   
 -   [Attività Esegui DDL Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
   
--   [Elaborazione Analysis Services - attività](../../integration-services/control-flow/analysis-services-processing-task.md)  
+-   [Attività Elaborazione Analysis Services](../../integration-services/control-flow/analysis-services-processing-task.md)  
   
 -   [Attività di controllo CDC](../../integration-services/control-flow/cdc-control-task.md)  
   
@@ -75,15 +74,15 @@ ms.locfileid: "66082993"
   
 -   [Trasformazione Suddivisione condizionale](../../integration-services/data-flow/transformations/conditional-split-transformation.md)  
   
--   [Conversione dati - trasformazione](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
+-   [Trasformazione Conversione dati](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
   
 -   [Training modello di data mining - destinazione](../../integration-services/data-flow/data-mining-model-training-destination.md)  
   
 -   [Query di data mining - trasformazione](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)  
   
--   [Trasformazione colonna derivata](../../integration-services/data-flow/transformations/derived-column-transformation.md)  
+-   [Trasformazione Colonna derivata](../../integration-services/data-flow/transformations/derived-column-transformation.md)  
   
--   [Campionamento percentuale - trasformazione](../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)  
+-   [Trasformazione Campionamento percentuale](../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)  
   
 -   [Estrazione termini - trasformazione](../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
   
@@ -200,7 +199,7 @@ ms.locfileid: "66082993"
   
 -   Non tutte le lingue full-text supportano l'indicizzazione semantica. Per un elenco delle lingue supportate, vedere [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Soluzioni di modelli multidimensionali &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [Soluzioni di modelli tabulari &#40;SSAS tabulare&#41;](../tabular-model-solutions-ssas-tabular.md)  
   

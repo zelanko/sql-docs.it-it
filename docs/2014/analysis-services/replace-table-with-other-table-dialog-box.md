@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ca304bf-a01f-43db-bbbc-0572976425b2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b1ab26f596a669a5a0d13b6bb0c283a55851bd58
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac74a4147541837e642c9d3ab9637555ef16fb0d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070264"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539296"
 ---
 # <a name="replace-table-with-other-table-dialog-box"></a>Finestra di dialogo Sostituisci tabella con un'altra tabella
   Utilizzare la finestra di dialogo **Sostituisci tabella con un'altra tabella** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per sostituire una tabella esistente in una vista origine dati con una tabella dell'origine dati sottostante che non è ancora stata inclusa nella vista origine dati. Per visualizzare la finestra di dialogo **Sostituisci tabella con un'altra tabella** è possibile fare clic con il pulsante destro del mouse sul nome di una tabella nel riquadro **Diagramma** o **Tabelle** di **Progettazione vista origine dati** e scegliere **Con altra tabella** da **Sostituisci tabella**.  
@@ -37,7 +36,7 @@ ms.locfileid: "66070264"
  **Show system objects**  
  Selezionare questa opzione per visualizzare gli oggetti di sistema per l'origine dei dati selezionata in **Griglia**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Progettazione vista origine dati &#40;Analysis Services - Dati multidimensionali&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b64cc581-e784-42c4-bec8-932abd687423
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ead5a45bf163ca4e7998c30ab5c83f94cca9075b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75e5df5a0677ee205b5517f4c7ca89a390426971
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074257"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546293"
 ---
 # <a name="user-defined-member-properties-mdx"></a>Proprietà dei membri definite dall'utente (MDX)
   Le proprietà dei membri definite dall'utente possono essere aggiunte a uno specifico livello denominato di una dimensione come relazioni tra attributi. Le proprietà dei membri definite dall'utente non possono essere aggiunte al livello `(All)` di una gerarchia né alla gerarchia stessa.  
@@ -30,7 +29,7 @@ ms.locfileid: "66074257"
 -   Per aggiungere proprietà dei membri definite dall'utente a livello di programmazione, è possibile utilizzare AMO (Analysis Manager Objects) o una combinazione di XMLA (XML for Analysis) e ASSL (Analysis Services Scripting Language). Per altre informazioni, vedere [Relazioni tra attributi](../../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md).  
   
 ## <a name="retrieving-user-defined-member-properties"></a>Recupero delle proprietà dei membri definite dall'utente  
- È possibile recuperare le proprietà dei membri definite dall'utente usando `PROPERTIES` la parola chiave o la funzione [Properties](/sql/mdx/properties-mdx) .  
+ È possibile recuperare le proprietà dei membri definite dall'utente usando la `PROPERTIES` parola chiave o la funzione [Properties](/sql/mdx/properties-mdx) .  
   
 ### <a name="using-the-properties-keyword-to-retrieve-user-defined-member-properties"></a>Utilizzo della parola chiave PROPERTIES per il recupero delle proprietà dei membri definite dall'utente  
  La sintassi da utilizzare per il recupero delle proprietà dei membri definite dall'utente è simile a quella utilizzata per il recupero delle proprietà intrinseche dei membri dei livelli, come illustrato di seguito:  
@@ -66,7 +65,7 @@ FROM [Adventure Works]
   
  Per altre informazioni sulla compilazione di membri calcolati, vedere [Compilazione di membri calcolati in MDX &#40;MDX&#41;](mdx-calculated-members-building-calculated-members.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzo delle proprietà del membro &#40;&#41;MDX](mdx-member-properties.md)   
  [Properties &#40;MDX&#41;](/sql/mdx/properties-mdx)  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cbcff072-3a7e-4e98-858f-1b4265461561
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e7bbc2b890c61e2864aa727f42276f01c87e94a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b218c10826253bc63985e2eb970a4102873e699
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082155"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528857"
 ---
 # <a name="define-account-intelligence-dimension-wizard"></a>Definizione funzionalità di Business Intelligence per la contabilità (Creazione guidata dimensione)
   La pagina **Funzionalità di Business Intelligence per la contabilità** consente di eseguire il mapping tra i tipi di conto definiti nell'istanza [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e i tipi di conto definiti nell'attributo della dimensione associato al tipo di attributo **Tipo conto** nella dimensione.  
@@ -34,7 +33,7 @@ ms.locfileid: "66082155"
   
  Nella tabella seguente vengono elencati i tipi di conto definiti in un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**Asset**|Valore degli elementi posseduti in un determinato momento.|  
 |**Balance**|Conteggio di alcuni elementi in un determinato momento.|  
@@ -44,7 +43,7 @@ ms.locfileid: "66082155"
 |**Liability**|Valore degli elementi dovuti in un determinato momento.|  
 |**Statistiche**|Rapporto calcolato di alcuni elementi oppure conteggio di elementi non aggregabili.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto della creazione guidata dimensione](dimension-wizard-f1-help.md)   
  [Dimensioni &#40;Analysis Services Dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  

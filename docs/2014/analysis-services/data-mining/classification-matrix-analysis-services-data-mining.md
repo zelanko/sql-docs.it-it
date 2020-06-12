@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5c12f202-2ed9-41fa-bee2-0f7ab3ff058a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 22f8733c816014bbdd29b44c4ed85d5fc3d2127d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac1067bf817051f28c939ce5f438dd617e4a9495
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085785"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524834"
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>Matrice di classificazione (Analysis Services - Data mining)
   Una *matrice di classificazione* consente di ordinare tutti i case del modello in categorie, determinando se il valore stimato corrisponde a quello effettivo. Vengono calcolati tutti i case di ogni categoria, quindi vengono visualizzati i totali nella matrice. La matrice di classificazione è uno strumento standard per la valutazione di modelli statistici, talvolta definita *matrice di confusione*.  
@@ -83,7 +82,7 @@ ms.locfileid: "66085785"
 |Vengono descritti gli utilizzi della convalida incrociata per modelli e strutture di data mining.|[Convalida incrociata &#40;Analysis Services - Data mining&#41;](cross-validation-analysis-services-data-mining.md)|  
 |Vengono descritti i passaggi per la creazione di grafici di accuratezza e di altri grafici simili.|[Attività e procedure di test e convalida &#40;data mining&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Test e convalida &#40;Data mining&#41;](testing-and-validation-data-mining.md)  
   
   

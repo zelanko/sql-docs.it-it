@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0e056c95-ba06-413e-8dc1-4d411a447c3b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a20fde7ebe09a3e57af504846cf010c8120ffbc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 099f97ac1195f58ae9bf9dbc7c6b0671e6aada2c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088145"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527557"
 ---
 # <a name="checklist-of-preparation-for-data-mining"></a>Elenco di controllo per la preparazione di data mining
   Sebbene i componenti aggiuntivi Data mining forniscano un modo piuttosto semplice e divertente per creare e provare i modelli, quando è necessario ottenere risultati ripetibili e utilizzabili, è necessario concedere il tempo appropriato per la formulazione dei requisiti aziendali di base e per il recupero e la preparazione dei dati. In questa sezione viene fornito un elenco di controllo per pianificare la ricerca e vengono descritti i problemi comuni.  
@@ -110,7 +109,7 @@ ms.locfileid: "66088145"
   
 -   Gli esperti di dominio possono aiutare a interpretare i risultati e suggerire miglioramenti?  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Scelta di dati per il data mining](choosing-data-for-data-mining.md)  
   
   

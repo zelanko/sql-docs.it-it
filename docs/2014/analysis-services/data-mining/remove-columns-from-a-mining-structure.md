@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 41073ffe-9351-416b-9f0c-62634bc213f9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ebc79ed1221b729cfac3fb3d34ed5d9683dc6875
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b2377aa37747a1e6e58f4494129afd2b2adcd78
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082956"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520459"
 ---
 # <a name="remove-columns-from-a-mining-structure"></a>Rimuovere colonne da una struttura di data mining
   È possibile utilizzare Progettazione modelli di data mining per rimuovere le colonne da una struttura di data mining dopo averla creata. I motivi per cui rimuovere una colonna della struttura di data mining possono includere i seguenti:  
@@ -43,7 +42,7 @@ ms.locfileid: "66082956"
   
 4.  Nella finestra di dialogo **Elimina oggetti** fare clic su **OK**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Attività e procedure relative alla struttura di data mining](mining-structure-tasks-and-how-tos.md)  
   
   

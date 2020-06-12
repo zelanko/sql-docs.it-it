@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a64b8172-cd73-42f9-8847-52e967b9697a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3290bc5892280cda5e8042de79ff581b305e8ec3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed4d50aa40d2915c60f887e64cdc3ef8a6d52c5c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074035"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546273"
 ---
 # <a name="restricting-the-query-with-query-and-slicer-axes-mdx"></a>Restrizione della query con gli assi della query e di sezionamento (MDX)
   Per la formulazione di un'istruzione SELECT di MDX (Multidimensional Expression), un'applicazione in genere analizza il cubo e suddivide il set di gerarchie in due subset:  
@@ -33,7 +32,7 @@ ms.locfileid: "66074035"
   
  Per vedere un semplice esempio di uso degli assi delle query e degli assi di sezionamento, vedere [Utilizzo di assi di query e assi di sezionamento in un semplice esempio &#40;MDX&#41;](mdx-query-and-slicer-axes-using-axes-in-a-simple-example.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzo di membri, Tuple e set &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
  [Nozioni fondamentali sulle query MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   

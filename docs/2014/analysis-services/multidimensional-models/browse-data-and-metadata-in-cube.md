@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c2e82ff5158f64c95b0e66f327c6d57ebf2def29
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 371b515bbd548b544fba0125cf3d6b58b0098470
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076763"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544553"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Esplorare dati e metadati in un cubo
   Usare la scheda **Esplorazione** di Progettazione cubi per visualizzare i dati di un cubo. Questa vista può essere utilizzata per esaminare la struttura di un cubo e per controllare dati, calcoli, formattazione e sicurezza di oggetti di database. È possibile esaminare rapidamente un cubo quando gli utenti finali lo visualizzano negli strumenti di report o in altre applicazioni client. Quando si visualizzano dati del cubo, è possibile visualizzare dimensioni diverse, eseguire il drill-down dei membri, nonché eseguire sezionamenti tramite dimensioni.  
@@ -57,15 +56,15 @@ ms.locfileid: "66076763"
   
      \- - oppure -  
   
--   Nella colonna **dimensione** del riquadro **filtro** fare clic su ** \<seleziona>dimensione** e selezionare una dimensione nell'elenco, quindi fare clic su ** \<seleziona>gerarchia** nella colonna **gerarchia** e selezionare una gerarchia nell'elenco.  
+-   Nella colonna **dimensione** del riquadro **filtro** fare clic **\<Select dimension>** e selezionare una dimensione nell'elenco, quindi fare clic **\<Select hierarchy>** nella colonna **gerarchia** e selezionare una gerarchia nell'elenco.  
   
  Dopo aver specificato la gerarchia, indicare l'operatore e l'espressione di filtro. Nella tabella seguente vengono descritti gli operatori e le espressioni di filtro.  
   
 |Operatore|Espressione filtro|Descrizione|  
 |--------------|-----------------------|-----------------|  
 |Uguale|Uno o più membri|I valori devono essere uguali a un membro specificato.<br /><br /> Fornisce la selezione di più membri per le gerarchie di attributi, a eccezione delle gerarchie padre-figlio, e la selezione di un solo membro per le altre gerarchie.|  
-|Diverso|Uno o più membri|I valori devono essere diversi da un membro specificato.<br /><br /> Fornisce la selezione di più membri per le gerarchie di attributi, a eccezione delle gerarchie padre-figlio, e la selezione di un solo membro per le altre gerarchie.|  
-|In ingresso|Uno o più set denominati|I valori devono trovarsi in un set denominato specificato.<br /><br /> Supportato solo per le gerarchie di attributi.|  
+|Diverso da|Uno o più membri|I valori devono essere diversi da un membro specificato.<br /><br /> Fornisce la selezione di più membri per le gerarchie di attributi, a eccezione delle gerarchie padre-figlio, e la selezione di un solo membro per le altre gerarchie.|  
+|In|Uno o più set denominati|I valori devono trovarsi in un set denominato specificato.<br /><br /> Supportato solo per le gerarchie di attributi.|  
 |Non incluso|Uno o più set denominati|I valori non devono trovarsi in un set denominato specificato.<br /><br /> Supportato solo per le gerarchie di attributi.|  
 |Intervallo (inclusivo)|Uno o due membri di delimitazione di un intervallo|I valori devono essere compresi tra o uguali ai membri di delimitazione. Se i membri di delimitazione sono uguali o solo un membro viene specificato, non viene applicato alcun intervallo e tutti i valori sono consentiti.<br /><br /> Supportato solo per le gerarchie di attributi. L'intervallo deve trovarsi in un livello di una gerarchia. Gli intervalli non associati non sono attualmente supportati.|  
 |Intervallo (esclusivo)|Uno o due membri di delimitazione di un intervallo|I valori devono essere compresi tra i membri di delimitazione. Se i membri di delimitazione sono uguali o solo un membro viene specificato, i valori devono essere maggiori o minori del membro di delimitazione.<br /><br /> Supportato solo per le gerarchie di attributi. L'intervallo deve trovarsi in un livello di una gerarchia. Gli intervalli non associati non sono attualmente supportati.|  

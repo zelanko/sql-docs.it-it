@@ -1,5 +1,6 @@
 ---
 title: Valore booleano effettivo (XQuery) | Microsoft Docs
+description: Informazioni sui valori booleani effettivi in XQuery.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 506682b1-b6c9-45e2-aa54-7abd5844c3f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4eb94e51896e08f60389edde0c2a6cd0461e8538
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 282f88f92d8ed5e0bb811783363e05b456bc37c8
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929952"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84305850"
 ---
 # <a name="effective-boolean-value-xquery"></a>Valore booleano effettivo (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

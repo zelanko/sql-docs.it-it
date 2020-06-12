@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: da8a5e5602b877c12284d8410f6b2a1c7da6bc58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 30f5496247bb817d4ea7da08f95fe4a1b54dea5d
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889148"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669788"
 ---
 # <a name="content-types-dmx"></a>Tipi di contenuto (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "68889148"
   
  Ogni algoritmo supporta tipi di contenuto specifici. L'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes, ad esempio, non può utilizzare colonne continue. Per utilizzare colonne continue in un modello [!INCLUDE[msCoName](../includes/msconame-md.md)], è necessario discretizzarne i dati. Per funzionare correttamente alcuni algoritmi richiedono tipi di contenuto specifici. L'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series, ad esempio, richiede una colonna chiave temporale per identificare il periodo di tempo in cui sono stati raccolti i dati.  
   
- Per una descrizione completa dei tipi di contenuto supportati [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] da, vedere [tipi di contenuto &#40;&#41;di data mining ](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining).  
+ Per una descrizione completa dei tipi di contenuto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supportati da, vedere [tipi di contenuto &#40;&#41;di data mining ](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   

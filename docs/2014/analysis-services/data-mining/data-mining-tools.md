@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 003ada6a-0bcd-4f16-8c34-1a9ffc75cd2c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dd0e6b696e692a9e88edd234d22f41983acbe961
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4be2f343f0fb7969f76b63ec1eb1677c1c9e589f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084830"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522917"
 ---
 # <a name="data-mining-tools"></a>Strumenti di data mining
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in sono disponibili gli strumenti seguenti che è possibile utilizzare per creare soluzioni [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data mining:  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in sono disponibili gli strumenti seguenti che è possibile utilizzare per creare soluzioni data mining:  
   
 -   La **Creazione guidata modello di data mining** di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] consente di semplificare la creazione di strutture e modelli di data mining, usando origini dati relazionali o dati multidimensionali in cubi.  
   
@@ -35,7 +34,7 @@ ms.locfileid: "66084830"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è l'interfaccia in cui è possibile gestire soluzioni di data mining esistenti distribuite in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. È possibile rielaborare strutture e modelli per aggiornare i dati in essi contenuti.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contiene strumenti che è possibile utilizzare per pulire i dati, automatizzare attività quali la creazione di stime e l'aggiornamento di modelli e la creazione di soluzioni di data mining di testo.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]contiene strumenti che è possibile utilizzare per pulire i dati, automatizzare attività quali la creazione di stime e l'aggiornamento di modelli e la creazione di soluzioni di data mining di testo.  
   
  Nelle sezioni seguenti sono disponibili ulteriori informazioni sugli strumenti di data mining inclusi in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -69,7 +68,7 @@ ms.locfileid: "66084830"
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] contiene inoltre editor di query che è possibile usare per progettare ed eseguire query DMX (Data Mining Extensions) o per utilizzare oggetti di data mining tramite XMLA.  
   
 ## <a name="integration-services-data-mining-tasks-and-transformations"></a>Attività di data mining e trasformazioni in Integration Services  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in sono disponibili molti componenti che supportano data mining.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in sono [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] disponibili molti componenti che supportano data mining.  
   
  Alcuni strumenti in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono progettati per consentire di automatizzare attività di data mining comuni, tra cui stime, compilazioni di modelli ed elaborazioni. Ad esempio:  
   
@@ -89,7 +88,7 @@ ms.locfileid: "66084830"
   
  **Per altre informazioni, vedere** [Progetti correlati per soluzioni di data mining](data-mining-solutions.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento alle estensioni di data mining &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)   
  [Attività e procedure relative al modello di data mining](mining-model-tasks-and-how-tos.md)   
  [Attività e procedure relative al Visualizzatore modello di data mining](mining-model-viewer-tasks-and-how-tos.md)   

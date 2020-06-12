@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f8a95c5819d88013a0e4f0e0be0aa21c11c1949
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6044c22f84abdc17adf7015804627266ccff09b1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175250"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542433"
 ---
 # <a name="defining-and-browsing-kpis"></a>Definizione ed esplorazione dei KPI
   Per definire gli indicatori di prestazioni chiave (KPI), è innanzitutto necessario definire un nome per l'indicatore KPI e il gruppo di misure a cui è associato. Un indicatore KPI può essere associato a tutti i gruppi di misure o a un unico gruppo di misure. In seguito è possibile definire gli elementi seguenti dell'indicatore KPI:
@@ -67,7 +66,7 @@ ms.locfileid: "78175250"
 
      ![Modello di indicatore KPI vuoto nel riquadro di visualizzazione](../../2014/tutorials/media/l7-kpi-2.gif "Modello di indicatore KPI vuoto nel riquadro di visualizzazione")
 
-3.  Nella casella **nome** Digitare `Reseller Revenue`e quindi selezionare **Reseller Sales** nell'elenco **gruppo di misure associato** .
+3.  Nella casella **nome** Digitare `Reseller Revenue` e quindi selezionare **Reseller Sales** nell'elenco **gruppo di misure associato** .
 
 4.  Nella scheda **Metadati** del riquadro **Strumenti di calcolo** , espandere **Misure**e **Vendite rivenditore**e quindi trascinare la misura **Reseller Sales-Sales Amount** nella casella **Espressione valore** .
 
@@ -152,7 +151,7 @@ ms.locfileid: "78175250"
 
 1.  Fare clic sul pulsante **Visualizzazione Form** nella barra degli strumenti della scheda **KPI** e fare clic sul pulsante **Nuovo indicatore KPI** .
 
-2.  Nella casella **nome** Digitare `Product Gross Profit Margin`, quindi verificare che ** \<tutti>** siano visualizzati nell'elenco gruppo di **misure associato** .
+2.  Nella casella **nome** Digitare `Product Gross Profit Margin` , quindi verificare che **\<All>** venga visualizzato nell'elenco gruppo di **misure associato** .
 
 3.  Nella scheda **Metadati** del riquadro **Strumenti di calcolo** trascinare la misura **Total GPM** nella casella **Espressione valore** .
 
@@ -261,7 +260,7 @@ ms.locfileid: "78175250"
 
 2.  Quando la distribuzione ha avuto esito positivo, fare clic su **Riconnetti** nella barra degli strumenti della scheda **KPI** e scegliere **Visualizzazione Esplorazione**.
 
-     Viene `Product Gross Profit Margin` visualizzato l'indicatore KPI e viene visualizzato il valore KPI per **Q3 CY 2007** e il **America del Nord** Sales Territory.
+     `Product Gross Profit Margin`Viene visualizzato l'indicatore KPI e viene visualizzato il valore KPI per **Q3 CY 2007** e il **America del Nord** Sales Territory.
 
 3.  Nel riquadro **Filtro** selezionare **Product** nell'elenco **Dimensione** , selezionare **Category** nell'elenco **Gerarchia** , selezionare **Uguale a** nell'elenco **Operatore** , quindi selezionare **Bikes** nell'elenco **Espressione filtro** e infine fare clic su **OK**.
 

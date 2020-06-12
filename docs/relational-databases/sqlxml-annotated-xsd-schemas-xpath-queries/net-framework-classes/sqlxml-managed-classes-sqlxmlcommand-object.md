@@ -1,5 +1,6 @@
 ---
 title: Oggetto SqlXmlCommand (SQLXML)
+description: Informazioni sui metodi e sulle proprietà dell'oggetto SqlXmlCommand.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -31,12 +32,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb307599c48c72697f696e78eb7ed988dc03ca37
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: afebd1c659015e3daf4a357b12871687207b607e
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252646"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306160"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>Classi gestite SQLXML - Oggetto SqlXmlCommand
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "75252646"
 public SqlXmlCommand(string cnString)  
 ```  
   
- Dove `cnString` è la stringa di connessione ADO o OLEDB che identifica il server, il database e le informazioni di accesso, ad `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`esempio.  
+ Dove `cnString` è la stringa di connessione ADO o OLEDB che identifica il server, il database e le informazioni di accesso, ad esempio `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"` .  
   
  Nella stringa di connessione `Provider` deve essere SQLOLEDB e `Data Provider` non deve essere incluso nella stringa del provider.  
   
@@ -65,7 +66,7 @@ public SqlXmlCommand(string cnString)
  Scrive i risultati della query in un flusso esistente. Questo metodo è utile quando si dispone di un flusso a cui è necessario aggiungere i risultati, ad esempio per fare in modo che i risultati della query vengano scritti in System. Web. HttpResponse. OutputStream. Per un esempio funzionante, vedere [esecuzione di query SQL &#40;classi gestite SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md).  
   
  ExecuteXmlReader XmlReader ()  
- Restituisce un oggetto XmlReader. È possibile utilizzare questo metodo per modificare direttamente i dati nell'oggetto XmlReader o per collegare l'architettura concatenabile di System. XML. Per ulteriori informazioni, vedere la documentazione di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Per un esempio funzionante, vedere [esecuzione di query SQL tramite il metodo ExecuteXmlReader](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md).  
+ Restituisce un oggetto XmlReader. È possibile utilizzare questo metodo per modificare direttamente i dati nell'oggetto XmlReader o per collegare l'architettura concatenabile di System.Xml. Per ulteriori informazioni, vedere la documentazione di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Per un esempio funzionante, vedere [esecuzione di query SQL tramite il metodo ExecuteXmlReader](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md).  
   
  L'oggetto SqlXmlCommand supporta inoltre questi metodi aggiuntivi:  
   
@@ -108,7 +109,7 @@ public SqlXmlCommand(string cnString)
  CommandType  
  Identifica il tipo di comando. Questa proprietà viene utilizzata per specificare il tipo di comando che si desidera eseguire. I valori nella tabella seguente determinano il tipo del comando. Per un esempio funzionante, vedere [accesso alla funzionalità SQLXML nell'ambiente .NET](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |SqlXmlCommandType. SQL|Esegue un comando SQL, ad esempio `SELECT * FROM Employees FOR XML AUTO`.|  
 |SqlXmlCommandType. XPath|Esegue un comando XPath, ad esempio `Employees[@EmployeeID=1]`.|  

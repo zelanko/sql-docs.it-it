@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 2f61bde6-e6ec-4511-8645-c272374014ad
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 41000c78c4ff3a68e1d3acd107ce57c221a16e28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b6d15cbb75f3528546c566a72f8b23323df8772
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079495"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543725"
 ---
 # <a name="kpi-browser-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Visualizzatore KPI (scheda KPI, Progettazione cubi) (Analysis Services - Dati multidimensionali)
-  Usare il riquadro **Visualizzatore KPI** della scheda **KPI** in Progettazione cubi per visualizzare e testare i risultati degli indicatori di prestazioni chiave (KPI). Prima di eseguire l'esplorazione, gli [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] indicatori KPI devono essere prima distribuiti in un'istanza di.  
+  Usare il riquadro **Visualizzatore KPI** della scheda **KPI** in Progettazione cubi per visualizzare e testare i risultati degli indicatori di prestazioni chiave (KPI). Prima di eseguire l' [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] esplorazione, gli indicatori KPI devono essere prima distribuiti in un' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] istanza di.  
   
 > [!NOTE]  
 >  Questo riquadro viene visualizzato solo nella visualizzazione Esplorazione.  
@@ -29,7 +28,7 @@ ms.locfileid: "66079495"
  **Griglia del sottocubo**  
  Usare questa opzione per definire un sottocubo e limitare i risultati degli indicatori KPI da visualizzare nel riquadro **Risultati** . La griglia include le colonne seguenti:  
   
- **Dimension**  
+ **Dimensione**  
  Consente di selezionare la dimensione alla quale viene applicato il filtro.  
   
  **Gerarchia**  
@@ -38,10 +37,10 @@ ms.locfileid: "66079495"
  **Operatore**  
  Consente di selezionare l'operatore che definisce il modo in cui l'espressione contenuta in **Espressione filtro** viene applicata alla gerarchia selezionata. Nella tabella seguente vengono descritti gli operatori disponibili.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**Uguale**|I risultati sono limitati al set definito in **Espressione filtro**.|  
-|**Diverso**|I risultati sono limitati ai membri esclusi dal set definito in **Espressione filtro**.|  
+|**Diverso da**|I risultati sono limitati ai membri esclusi dal set definito in **Espressione filtro**.|  
 |**In**|I risultati sono limitati al set denominato scelto in **Espressione filtro**.|  
 |**Non incluso**|I risultati sono limitati ai membri esclusi dal set denominato scelto in **Espressione filtro**.|  
 |**Contiene**|I risultati sono limitati ai membri i cui nomi contengono la stringa inclusa in **Espressione filtro**.|  
@@ -68,13 +67,13 @@ ms.locfileid: "66079495"
  **Obiettivo**  
  Consente di visualizzare il valore dell'obiettivo dell'indicatore KPI.  
   
- **Stato**  
+ **Status**  
  Consente di visualizzare l'icona di stato dell'indicatore KPI.  
   
  **Tendenza**  
  Consente di visualizzare l'icona di tendenza dell'indicatore KPI.  
   
- **Peso**  
+ **Weight**  
  Consente di visualizzare il fattore di ponderazione dell'indicatore KPI.  
   
  **Descrizione**  
@@ -85,7 +84,7 @@ ms.locfileid: "66079495"
 > [!NOTE]  
 >  Se viene generato un errore durante il calcolo di un indicatore KPI nell'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , questa opzione visualizza le informazioni associate all'errore.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Indicatori KPI &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)  
   
   

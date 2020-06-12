@@ -1,5 +1,6 @@
 ---
 title: Uso della sintassi abbreviata in un'espressione di percorso | Microsoft Docs
+description: Informazioni su come utilizzare la sintassi abbreviata nelle espressioni di percorso XQuery.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f83c2e41-5722-47c3-b5b8-bf0f8cbe05d3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e75db08f283631cf9b5daf064790786a1abc10f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eeb7026f341af60f289a1d3854e24656073add61
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946410"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306010"
 ---
 # <a name="path-expressions---using-abbreviated-syntax"></a>Espressioni di percorso - Uso di sintassi abbreviata
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +38,11 @@ child::ProductDescription[attribute::ProductModelID=19]
   
 -   L'asse **figlio** è l'asse predefinito. Pertanto, l'asse **child::** può essere omesso da un passaggio in un'espressione. Ad esempio, è possibile scrivere `/child::ProductDescription/child::Summary` nel formato `/ProductDescription/Summary`.  
   
--   Un asse dell' **attributo** può essere abbreviato come @. Ad esempio, è possibile scrivere `/child::ProductDescription[attribute::ProductModelID=10]` nel formato `/ProudctDescription[@ProductModelID=10]`.  
+-   Un asse dell' **attributo** può essere abbreviato come @ . Ad esempio, è possibile scrivere `/child::ProductDescription[attribute::ProductModelID=10]` nel formato `/ProudctDescription[@ProductModelID=10]`.  
   
 -   Un **/descendant-or-self:: node ()/** può essere abbreviato come//. Ad esempio, è possibile scrivere `/descendant-or-self::node()/child::act:telephoneNumber` nel formato `//act:telephoneNumber`.  
   
-     La query precedente recupera tutti i numeri di telefono archiviati nella colonna AdditionalContactInfo della tabella Contact. Lo schema per AdditionalContactInfo viene definito in modo che un \<elemento> telephoneNumber possa essere visualizzato in qualsiasi punto del documento. Per recuperare tutti i numeri di telefono, pertanto, è necessario eseguire la ricerca in ogni nodo del documento. La ricerca inizia alla radice del documento e continua in tutti i nodi discendenti.  
+     La query precedente recupera tutti i numeri di telefono archiviati nella colonna AdditionalContactInfo della tabella Contact. Lo schema per AdditionalContactInfo viene definito in modo che un \<telephoneNumber> elemento possa essere visualizzato in qualsiasi punto del documento. Per recuperare tutti i numeri di telefono, pertanto, è necessario eseguire la ricerca in ogni nodo del documento. La ricerca inizia alla radice del documento e continua in tutti i nodi discendenti.  
   
      La query seguente recupera tutti i numeri di telefono relativi a un contatto di un cliente specifico:  
   

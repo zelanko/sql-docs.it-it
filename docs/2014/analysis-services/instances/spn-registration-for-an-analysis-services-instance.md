@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ee52be5eb8c9110e4486a1fa199e3e00572081f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 984ee1c0bbceb236da6bf00fd220a15f601495ae
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079565"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543753"
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>Registrazione del nome SPN per un'istanza di Analysis Services
   Un nome SPN (Service Principle Name) identifica in modo univoco un'istanza del servizio in un dominio Active Directory quando Kerberos viene usato per l'autenticazione reciproca delle identità del servizio e del client. Il nome SPN è associato all'account di accesso con cui viene eseguita l'istanza del servizio.  
@@ -29,10 +28,10 @@ ms.locfileid: "66079565"
  La registrazione del nome SPN non è necessaria se il servizio viene eseguito con un account del servizio gestito predefinito creato da un amministratore di dominio. Si noti che a seconda del livello funzionale del dominio, è possibile che per registrare un nome SPN siano necessarie le autorizzazioni di amministratore di dominio.  
   
 > [!TIP]  
->  Kerberos Configuration Manager per è uno strumento di diagnostica che consente di risolvere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] problemi di connettività correlati a Kerberos [!INCLUDE[msCoName](../../includes/msconame-md.md)] ** con. Per altre informazioni, vedere [Microsoft Kerberos Configuration Manager per SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
+>  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** è uno strumento di diagnostica che semplifica la risoluzione dei problemi di connettività correlati a Kerberos con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Microsoft Kerberos Configuration Manager per SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
 > [!TIP]  
->  Kerberos Configuration Manager per è uno strumento di diagnostica che consente di risolvere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] problemi di connettività correlati a Kerberos [!INCLUDE[msCoName](../../includes/msconame-md.md)] ** con. Per altre informazioni, vedere [Microsoft Kerberos Configuration Manager per SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
+>  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** è uno strumento di diagnostica che semplifica la risoluzione dei problemi di connettività correlati a Kerberos con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Microsoft Kerberos Configuration Manager per SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
  In questo argomento sono incluse le sezioni seguenti:  
   
@@ -76,10 +75,10 @@ ms.locfileid: "66079565"
 |Nome host|Viene identificato il computer in cui viene eseguito il servizio. Può trattarsi di un nome di dominio completo o di un nome NetBIOS. È consigliabile registrare un nome SPN per entrambi.<br /><br /> Quando si registra un nome SPN per il nome NetBIOS di un server, accertarsi di usare `SetupSPN -S` per verificare eventuali registrazioni duplicate. Per i nomi NetBIOS non viene garantita l'univocità nella foresta e l'esistenza di una registrazione duplicata del nome SPN causerà un errore di connessione.<br /><br /> Per i cluster con carico bilanciato di Analysis Services, il nome host deve essere il nome virtuale assegnato al cluster.<br /><br /> Non creare mai un nome SPN usando l'indirizzo IP. Kerberos usano le funzionalità di risoluzione DNS del dominio. Specificando un indirizzo IP si ignora tale funzionalità.|  
 |Numero di porta|Sebbene il numero di porta faccia parte della sintassi del nome SPN, non specificare mai un numero di porta quando si registra un nome SPN di Analysis Services. I due punti (:), in genere utilizzati per fornire un numero di porta nella sintassi standard del nome SPN, vengono utilizzati da Analysis Services per specificare il nome dell'istanza. Per un'istanza di Analysis Services, si presume che la porta usata sia la porta predefinita (TCP 2383) o una porta assegnata dal servizio SQL Server Browser (TCP 2382).|  
 |Nome istanza|Analysis Services è un servizio replicabile che è possibile installare più volte nello stesso computer. Ogni istanza viene identificata tramite il nome.<br /><br /> Il nome dell'istanza è preceduto dai due punti (:). Ad esempio, per un computer host denominato SRV01 e un'istanza denominata SSAS-Tabular, il nome SPN sarà SRV01:SSAS-Tabular.<br /><br /> Si noti che la sintassi per specificare un'istanza denominata di Analysis Services differisce da quella usata da altre istanze di SQL Server. Altri servizi usano una barra rovesciata (\) per aggiungere il nome dell'istanza in un nome SPN.|  
-|Account servizio|Si tratta dell'account di avvio del servizio Windows **MSSQLServerOLAPService** . Può essere un account utente di dominio di Windows, un account virtuale, un account dei servizi gestiti o un account predefinito, ad esempio un SID per servizio, NetworkService o LocalSystem. Un account utente di dominio di Windows può essere formattato user@domaincome dominio\utente o.|  
+|Account servizio|Si tratta dell'account di avvio del servizio Windows **MSSQLServerOLAPService** . Può essere un account utente di dominio di Windows, un account virtuale, un account dei servizi gestiti o un account predefinito, ad esempio un SID per servizio, NetworkService o LocalSystem. Un account utente di dominio di Windows può essere formattato come dominio\utente o user@domain .|  
   
 ##  <a name="spn-registration-for-a-virtual-account"></a><a name="bkmk_virtual"></a> Registrazione del nome SPN per un account virtuale  
- Gli account virtuali sono il tipo di account predefinito per i servizi di SQL Server. L'account virtuale è **NT Service\MSOLAPService** per un'istanza predefinita e **NT Service\MSOLAP $**\<nome-istanza> per un'istanza denominata.  
+ Gli account virtuali sono il tipo di account predefinito per i servizi di SQL Server. L'account virtuale è **NT Service\MSOLAPService** per un'istanza predefinita e **NT Service\MSOLAP $** \<instance-name> per un'istanza denominata.  
   
  Come indicato dal nome, questi account non esistono in Active Directory. Un account virtuale esiste solo nel computer locale. Quando si effettua la connessione a servizi, applicazioni o dispositivi esterni, l'operazione viene eseguita tramite l'account del computer locale. Per questo motivo, la registrazione di un nome SPN per Analysis Services in esecuzione con un account virtuale è in effetti la registrazione di un nome SPN per l'account del computer.  
   
@@ -94,9 +93,9 @@ Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01
 > [!NOTE]  
 >  Ricordarsi di creare due registrazioni del nome SPN, una per il nome host NetBIOS e una seconda per il nome di dominio completo dell'host. In applicazioni client differenti vengono usare convenzioni di nomi host diversi per la connessione ad Analysis Services. La presenza di due registrazioni del nome SPN garantisce che sono state considerate entrambe le versioni del nome host.  
   
- **Sintassi di esempio per un'istanza denominata in esecuzione come NT\<Service\MSOLAP $ instance-name>**  
+ **Sintassi di esempio per un'istanza denominata in esecuzione come NT Service\MSOLAP $\<instance-name>**  
   
- In questo esempio viene mostrata la sintassi **setspn** per un'istanza denominata in esecuzione con l'account virtuale predefinito. Nell'esempio, il nome host del computer è **AW-SRV02** e il nome dell'istanza è **AW-FINANCE**. Anche in questo caso, si tratta dell'account del computer specificato per il nome SPN, anziché dell'account virtuale **NT Service\MSOLAP $**\<instance-name>.  
+ In questo esempio viene mostrata la sintassi **setspn** per un'istanza denominata in esecuzione con l'account virtuale predefinito. Nell'esempio, il nome host del computer è **AW-SRV02** e il nome dell'istanza è **AW-FINANCE**. Anche in questo caso, si tratta dell'account del computer specificato per il nome SPN, anziché dell'account virtuale **NT Service\MSOLAP $** \<instance-name> .  
   
 ```  
 Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02  
@@ -116,7 +115,7 @@ Setspn -s msolapsvc.3\AW-SRV01.Adventureworks.com AdventureWorks\SSAS-Service
 ```  
   
 > [!TIP]  
->  Verificare se il nome SPN è stato creato per il server Analysis Services eseguendo `Setspn -L <domain account>` o `Setspn -L <machinename>`, a seconda della modalità di registrazione del nome SPN. Nell'elenco verrà visualizzato MSOLAPSVC. 3\</hostname>.  
+>  Verificare se il nome SPN è stato creato per il server Analysis Services eseguendo `Setspn -L <domain account>` o `Setspn -L <machinename>`, a seconda della modalità di registrazione del nome SPN. Nell'elenco verrà visualizzato MSOLAPSVC. 3/ \<hostname> .  
   
 ##  <a name="spn-registration-for-a-built-in-account"></a><a name="bkmk_builtin"></a> Registrazione del nome SPN per un account predefinito  
  Anche se questa pratica non è consigliata, le installazioni precedenti di Analysis Services sono talvolta configurate per l'esecuzione con account predefiniti come Servizio di rete, Servizio locale o Sistema locale.  
@@ -141,7 +140,7 @@ Setspn -S MSOLAPDisco.3/AW-SRV01.AdventureWorks.com AW-SRV01
 ```  
   
 ##  <a name="spn-registration-for-an-ssas-cluster"></a><a name="bkmk_spnCluster"></a> Registrazione del nome SPN per un cluster SSAS  
- Per i cluster di failover Analysis Services, il nome host deve essere il nome virtuale assegnato al cluster. Si tratta del nome di rete SQL Server, specificato durante l'installazione di SQL Server quando si è installato Analysis Services in un cluster WSFC esistente. È possibile trovare questo nome in Active Directory, È anche possibile trovarlo nella scheda**risorse** **ruolo** |  **Gestione cluster di failover** | . Il nome del server nella scheda risorse è quello da usare come "nome virtuale" nel comando SPN.  
+ Per i cluster di failover Analysis Services, il nome host deve essere il nome virtuale assegnato al cluster. Si tratta del nome di rete SQL Server, specificato durante l'installazione di SQL Server quando si è installato Analysis Services in un cluster WSFC esistente. È possibile trovare questo nome in Active Directory, È anche possibile trovarlo nella **Failover Cluster Manager**  |  **Role**  |  scheda**risorse** ruolo Gestione cluster di failover. Il nome del server nella scheda risorse è quello da usare come "nome virtuale" nel comando SPN.  
   
  **Sintassi SPN per un cluster di Analysis Services**  
   
@@ -165,11 +164,11 @@ Setspn -s msolapsvc.3/<virtualname.FQDN > <domain user account>
   
  Un'istanza di Analysis Services può restare in ascolto solo su una singola porta. L'utilizzo di più porte non è supportato. Per altre informazioni sulla configurazione della porta, vedere [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Delega di identità e autenticazione di Microsoft Business Intelligence](https://go.microsoft.com/fwlink/?LinkID=286576)   
  [Autenticazione reciproca tramite Kerberos](https://go.microsoft.com/fwlink/?LinkId=299283)   
  [Come configurare SQL Server 2008 Analysis Services e SQL Server 2005 Analysis Services per l'uso dell'autenticazione Kerberos](https://support.microsoft.com/kb/917409)   
- [Sintassi SetSPN dei nomi dell'entità servizio (SPN) (Setspn. exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [Sintassi SetSPN dei nomi dell'entità servizio (SPN) (Setspn.exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
  [Quale nome SPN usare e come funziona?](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
  [SetSPN](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx)   
  [Guida dettagliata agli account di servizio](https://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   

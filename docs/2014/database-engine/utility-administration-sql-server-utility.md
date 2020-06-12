@@ -10,17 +10,17 @@ ms.assetid: 3e5a00c3-8905-40f0-9ddc-d924df9c2f0d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e67ee4d0ff2dba6edb8b9f485dc5efd903b100cf
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773753"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83857853"
 ---
 # <a name="utility-administration-sql-server-utility"></a>Amministrazione utilità (Utilità SQL Server)
   Utilizzare le schede Amministrazione utilità per gestire le impostazioni di criteri, sicurezza e data warehouse per un'utilità di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per altre informazioni sui concetti di Utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , vedere [Attività e funzionalità di Utilità SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco elementi dell'interfaccia utente  
  Scheda Criteri - Utilizzare la scheda Criteri per visualizzare o specificare criteri di monitoraggio globali.  
   
  Consente di impostare i criteri di monitoraggio globali dell'applicazione del livello dati. Per espandere l'elenco dei valori disponibili per questa opzione, fare clic sulla freccia accanto al nome dei criteri o fare clic sul titolo dei criteri.  
@@ -64,7 +64,7 @@ ms.locfileid: "62773753"
  Riduzione dei disturbi di violazione dei criteri da risorse estremamente volatili. Per espandere i controlli per questa caratteristica, fare clic sulla freccia in giù sul lato destro della visualizzazione.  
  Per ulteriori informazioni, vedere ridurre le segnalazioni non [significative nei criteri di utilizzo della CPU &#40;Utilità SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco elementi dell'interfaccia utente  
  Scheda Sicurezza - Consente di visualizzare i nomi degli account di accesso con le autorizzazioni necessarie per amministrare o leggere dal punto di controllo dell'utilità.  
   
  Seleziona gli account di accesso del punto di controllo dell'utilità che verranno aggiunti al ruolo Utility Reader.  
@@ -80,7 +80,7 @@ ms.locfileid: "62773753"
   
  Per essere un amministratore di utilità, è necessario avere privilegi sysadmin sull'istanza di SQL Server. Per aggiungere o modificare gli account utente per il punto di controllo dell'utilità di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], utilizzare Esplora oggetti di SSMS per aggiungere l'utente agli account di accesso al server dell'istanza punto di controllo dell'utilità di SQL Server. Per altre informazioni, vedere [sp_addlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogin-transact-sql).  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco elementi dell'interfaccia utente  
  Scheda Data warehouse - Consente di visualizzare i dettagli relativi alla configurazione per il data warehouse di gestione dell'utilità.  
   
  Conservazione dei dati  
@@ -101,7 +101,7 @@ ms.locfileid: "62773753"
  Ritorna ai valori predefiniti  
  Per ripristinare i valori predefiniti delle impostazioni in questa scheda, fare clic sul pulsante **Ripristina impostazioni predefinite** , quindi fare clic su **Applica**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Dashboard utilità &#40;Utilità SQL Server&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
  [Dettagli dell'applicazione livello dati distribuita &#40;Utilità SQL Server&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
  [Istanza gestita dettagli &#40;Utilità SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   

@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: eb853898d91533a61ae220ff2d73c032f2c65330
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0fb91b5343bd6f45eaadb93f71a73b85cb7f3a1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084736"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522779"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>Creazione guidata modello di data mining (Analysis Services - Data mining)
-  La creazione guidata modello di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data mining in viene avviata ogni volta che si aggiunge una nuova struttura di data mining a un progetto data mining. La procedura guidata consente di scegliere un'origine dati e di configurare una vista origine dati per definire i dati da utilizzare per l'analisi, quindi consente di creare un modello iniziale.  
+  La creazione guidata modello di data mining in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene avviata ogni volta che si aggiunge una nuova struttura di data mining a un progetto data mining. La procedura guidata consente di scegliere un'origine dati e di configurare una vista origine dati per definire i dati da utilizzare per l'analisi, quindi consente di creare un modello iniziale.  
   
  Nella fase finale della procedura guidata, è possibile dividere facoltativamente i dati in set di training e di testing e abilitare funzionalità quali il drill-through.  
   
@@ -116,7 +115,7 @@ ms.locfileid: "66084736"
   
  [Drill-through sui modelli di data mining](drillthrough-on-mining-models.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Strumenti di data mining](data-mining-tools.md)   
  [Soluzioni di data mining](data-mining-solutions.md)  
   

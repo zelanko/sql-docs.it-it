@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d6f620f4-39af-4714-9628-28ce3c361fca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 78f8581839b6b4bdd761c25a1a207e942ae37f62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8af87605bb8c4c2cf4bcd53cce3f7ab0019b7d94
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087965"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527517"
 ---
 # <a name="classification-matrix-sql-server-data-mining-add-ins"></a>Matrice di classificazione (componenti aggiuntivi Data mining di SQL Server)
   ![Pulsante Matrice di classificazione, barra multifunzione Data mining](media/dmc-cmatrix.gif "Pulsante Matrice di classificazione, barra multifunzione Data mining")  
@@ -87,7 +86,7 @@ ms.locfileid: "66087965"
 ### <a name="known-issues"></a>Problemi noti  
  In SQL Server 2012 e SQL Server 2014, la possibilità di eseguire il mapping del set di dati di test interno al modello non funziona nello strumento **matrice di classificazione** . Tuttavia, è possibile specificare un set di dati esterno e selezionare il set di training come input per determinare l'errore nel set di dati originale.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Convalida di modelli e utilizzo di modelli per la stima &#40;componenti aggiuntivi Data mining per Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
  [Esplorare &#40;dati SQL Server componenti aggiuntivi Data mining&#41;](explore-data-sql-server-data-mining-add-ins.md)   
  [Rilevare le categorie &#40;strumenti di analisi tabelle per Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)  

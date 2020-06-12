@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 11a821d9-1c0a-442e-b735-92208ce479dc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6ebe206d4f4942e9a9456ba10b00d33514ef6212
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d30456ac3685aa3dc40af6f1c79f92796fc1404
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086400"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525777"
 ---
 # <a name="data-mining-shapes-for-visio"></a>Forme di data mining per Visio
   Le forme di data mining per Visio forniscono il modelli personalizzati per la visualizzazione dei modelli di data mining. Tramite questi modelli, è possibile connettersi a un modello creato in precedenza e creare presentazioni interattive per illustrare i risultati del processo di data mining.  
@@ -38,7 +37,7 @@ ms.locfileid: "66086400"
 -   **Diagramma cluster:** Utilizzare questa procedura guidata per creare grafici colorati per i modelli di segmentazione. È possibile spostarsi tra varie viste, ad esempio discriminante attributi, profili dei cluster e dipendenze, e personalizzare l'aspetto dei cluster.  
   
 ## <a name="installation"></a>Installazione  
- Quando si installano i modelli di data mining per Visio, per impostazione predefinita vengono installati i \<file seguenti per l'unità> \programmi\microsoft SQL Server 2012 DM Add- \<ins (oppure unità> \ o programmi (x86) \Microsoft SQL Server 2012 DM Add-ins):  
+ Quando si installano i modelli di data mining per Visio, per impostazione predefinita vengono installati i file seguenti in \<drive> \programmi\microsoft SQL Server 2012 DM Add-ins (o \<drive> \ o programmi (x86) \microsoft SQL Server 2012 DM Add-ins):  
   
 -   **Microsoft Data mining. VST** Questo modello contiene la formattazione, il layout e le procedure guidate preprogettate per semplificare l'utilizzo delle forme data mining.  
   

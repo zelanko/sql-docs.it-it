@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a63ebee9-9848-48f1-82ad-64ecf2e47019
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a9436d33cdc99cf979509a40f06ceea15c0cd765
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25df0b377918316e54a14787d7492a681c81778d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072662"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536013"
 ---
 # <a name="understanding-the-analysis-services-deployment-script"></a>Informazioni sullo script di distribuzione di Analysis Services
   Lo script di distribuzione XMLA generato dalla Distribuzione guidata [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] include due sezioni:  
@@ -34,7 +33,7 @@ ms.locfileid: "66072662"
 > [!IMPORTANT]  
 >  Tramite la Distribuzione guidata [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è possibile distribuire oggetti solo in un singolo database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Non è possibile distribuire alcun oggetto o dato a livello del server.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Esecuzione della distribuzione guidata Analysis Services](running-the-analysis-services-deployment-wizard.md)   
  [Informazioni sui file di input utilizzati per creare uno script di distribuzione](deployment-script-files-input-used-to-create-deployment-script.md)  
   

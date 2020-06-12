@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d6962452b5615b9b2607007ed86c09eed495f6f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d17fa458e1699ab73bb8105fa2cc4cccc44dd597
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077018"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544665"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Autorizzazione dell'accesso a oggetti e operazioni (Analysis Services)
   L'accesso degli utenti non amministratori a cubi, dimensioni e modelli di data mining all'interno di un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene concesso tramite l'appartenenza a uno o più ruoli del database. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gli amministratori creano questi ruoli del database, concedendo le autorizzazioni di Lettura o Lettura/Scrittura sugli oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e quindi assegnando utenti e gruppi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows a ciascun ruolo.  
@@ -37,7 +36,7 @@ ms.locfileid: "66077018"
 ## <a name="list-roles-defined-for-your-database"></a>Visualizzare un elenco dei ruoli definiti per il database  
  Gli amministratori possono eseguire una semplice query DMV in SQL Server Management Studio per ottenere un elenco di tutti i ruoli definiti nel server.  
   
-1.  In SSMS fare clic con il pulsante destro del mouse su un database e scegliere **nuova query** | **MDX**.  
+1.  In SSMS fare clic con il pulsante destro del mouse su un database e scegliere **nuova query**  |  **MDX**.  
   
 2.  Digitare la query seguente e premere F5 per avviare l'esecuzione:  
   
@@ -90,7 +89,7 @@ ms.locfileid: "66077018"
   
  L'uso di un approccio come questo riduce la varianza nelle definizioni dei ruoli e nell'appartenenza ai ruoli all'interno del modello nonché fornisce visibilità nelle assegnazioni dei ruoli semplificando l'implementazione e la gestione delle autorizzazioni dei cubi.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Concedere le autorizzazioni di amministratore del server &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [Ruoli e autorizzazioni &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
  [Metodologie di autenticazione supportate da Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md)  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fd443f55-d725-43d4-ae2e-9847f0105a7c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 44fd7290f48c995ae9cfc92476f1a33fbdc0e8be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1164689720cbe65d406160b457b3016998000f0c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086304"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525738"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>Guida sensibile al contesto della Creazione guidata modello di data mining (Analysis Services - Data mining)
   Usare la **Creazione guidata modello di data mining** per creare una nuova struttura di data mining e un modello di data mining associato facoltativo.  
@@ -56,7 +55,7 @@ ms.locfileid: "66086304"
   
  Dopo aver creato la struttura di data mining e un modello di data mining facoltativo, è possibile usare **Progettazione modelli di data mining** per modificare le proprietà.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione guidata modello di data mining &#40;Analysis Services-&#41;di data mining](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
  [Progettazione modelli di data mining](data-mining/data-mining-designer.md)   
  [Creare una struttura di data mining relazionale](data-mining/create-a-relational-mining-structure.md)   

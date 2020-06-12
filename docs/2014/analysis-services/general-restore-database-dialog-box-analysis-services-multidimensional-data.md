@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 319e7ef5-c9c7-4e50-8690-02a90aed006f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2ebc1bc72a15545412adcc71d10feb08f3f05b16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 787488570627e2c8c7fc9a37e8f814847c40f3ca
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080950"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544383"
 ---
 # <a name="general-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Generale (finestra di dialogo Ripristina Database) (Analysis Services - Dati multidimensionali)
   Utilizzare la pagina **Generale** della finestra di dialogo **Ripristina database** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per specificare il file di backup e le impostazioni generali da utilizzare per ripristinare un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -73,7 +72,7 @@ ms.locfileid: "66080950"
  **Password**  
  Se il file di backup è crittografato, digitare la password utilizzata per crittografare il file di backup.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Finestra di dialogo Ripristina database &#40;Analysis Services-Dati multidimensionali&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Partizioni &#40;finestra di dialogo Ripristina database&#41; &#40;Analysis Services Dati multidimensionali&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Backup e ripristino di database di Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  

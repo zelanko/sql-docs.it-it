@@ -13,17 +13,17 @@ ms.assetid: 4aab04bc-e1ab-4d4b-ab74-b287fc805bc2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78573a21a5aa6a719a9bb55d0ee17bf9837258f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd040bbf0f6e3f5e150d45df41ea676a71c6e03a
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63277075"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859223"
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>Impostazioni filtro (Esplora oggetti ed Esplora utilità)
   Utilizzare questa finestra di dialogo per specificare un filtro. Un filtro consente di configurare Esplora oggetti e Gestione Utilità in modo da visualizzare solo gli elementi che soddisfano determinati criteri. È possibile, ad esempio, utilizzare un filtro per visualizzare solo i processi i cui nomi contengono la parola "Manutenzione". L'intestazione della finestra di dialogo **Impostazioni filtro** contiene il nome del server e può contenere anche il nome del database.  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco elementi dell'interfaccia utente  
  **Proprietà**  
  Consente di visualizzare la proprietà in base a cui applicare il filtro.  
   
@@ -74,6 +74,6 @@ ms.locfileid: "63277075"
   
 ## <a name="see-also"></a>Vedere anche  
  [Usa SQL Server Management Studio](../sql-server-management-studio-ssms.md)   
- [Attività e funzionalità di Utilità SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
+ [Funzionalità e attività di Utilità SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   

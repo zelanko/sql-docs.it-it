@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cf9a97e2-c249-441b-af12-c977c1a91c44
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 41c7c447af3eb7e0f40c10b98be827caa59867e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fde9de00adaa1712a9db6e18aabc6a83dd660efb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086134"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525319"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Applicare le funzioni di stima a un modello
   Per creare una query di stima, è innanzitutto necessario selezionare il modello di data mining su cui basare la query. È possibile selezionare qualsiasi modello di data mining esistente nel progetto corrente.  
@@ -67,7 +66,7 @@ ms.locfileid: "66086134"
   
     |||  
     |-|-|  
-    |**\<Nome modello>**|Selezionare questa opzione per includere i valori del modello di data mining nell'output. È possibile aggiungere unicamente colonne stimabili.<br /><br /> Quando si aggiunge una colonna dal modello, il risultato restituito è l'elenco non distinto di valori in quella colonna.<br /><br /> Le colonne che si aggiungono tramite questa opzione sono incluse nella parte SELECT dell'istruzione DMX risultante.|  
+    |**\<model name>**|Selezionare questa opzione per includere i valori del modello di data mining nell'output. È possibile aggiungere unicamente colonne stimabili.<br /><br /> Quando si aggiunge una colonna dal modello, il risultato restituito è l'elenco non distinto di valori in quella colonna.<br /><br /> Le colonne che si aggiungono tramite questa opzione sono incluse nella parte SELECT dell'istruzione DMX risultante.|  
     |**Prediction Function**|Selezionare questa opzione per esplorare un elenco di funzioni di stima.<br /><br /> I valori o le funzioni selezionate vengono aggiunte alla parte SELECT dell'istruzione DMX risultante.<br /><br /> L'elenco di funzioni di stima non è filtrato o vincolato dal tipo di modello selezionato. Pertanto, se non si sa con sicurezza se la funzione è supportata per il tipo di modello corrente, è possibile aggiungerla all'elenco e assicurarsi che non si verifichi alcun errore.<br /><br /> Gli elementi dell'elenco preceduti da $ (AdjustedProbability $) rappresentano le colonne della tabella nidificata che viene restituita quando si utilizza la funzione, `PredictHistogram`. Si tratta di collegamenti che è possibile utilizzare per restituire una singola colonna e non una tabella nidificata.|  
     |**Espressione personalizzata**|Selezionare questa opzione per digitare un'espressione personalizzata e quindi assegnare un alias all'output.<br /><br /> L'espressione personalizzata viene aggiunta alla parte SELECT della query di stima DMX risultante.<br /><br /> Questa opzione è utile se si desidera aggiungere del testo per l'output con ogni riga, per chiamare funzioni VB o stored procedure personalizzate.<br /><br /> Per informazioni sull'uso di funzioni VBA e di Excel da DMX, vedere [Funzioni VBA in MDX e DAX](/sql/mdx/vba-functions-in-mdx-and-dax).|  
   
@@ -92,9 +91,9 @@ ms.locfileid: "66086134"
   
 5.  Nella griglia della query per **Origine**selezionare il modello di data mining TM_Clustering e aggiungere la colonna [Bike Buyer].  
   
-6.  Per **origine**, selezionare **funzione di stima**e aggiungere la funzione, `Cluster`.  
+6.  Per **origine**, selezionare **funzione di stima**e aggiungere la funzione, `Cluster` .  
   
-7.  Per **origine**selezionare **funzione di stima**, aggiungere la funzione, `PredictSupport`e trascinare la colonna del modello [Bike Buyer] nella casella **criteri/argomento** . Digitare **Supporto** nella colonna **Alias** .  
+7.  Per **origine**selezionare **funzione di stima**, aggiungere la funzione, `PredictSupport` e trascinare la colonna del modello [Bike Buyer] nella casella **criteri/argomento** . Digitare **Supporto** nella colonna **Alias** .  
   
      Copiare l'espressione che rappresenta la funzione di stima e il riferimento alla colonna dalla casella **Criteri/Argomento** .  
   
@@ -124,7 +123,7 @@ ms.locfileid: "66086134"
   
  Se si desidera aggiungere altre clausole altrove nell'istruzione, ad esempio se si desidera aggiungere una clausola WHERE, non è possibile aggiungerla utilizzando la griglia; per prima cosa, è necessario passare alla visualizzazione DMX.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Query di data mining](data-mining-queries.md)  
   
   

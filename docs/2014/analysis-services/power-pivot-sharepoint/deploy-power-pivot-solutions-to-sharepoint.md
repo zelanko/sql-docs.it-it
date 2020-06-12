@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c91225761c76a58b81d8895698ca059014969f0f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7345ae056c97bb0d84433e9cf15b8ca3d8cffd5e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782827"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540313"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>Distribuire soluzioni PowerPivot in SharePoint
   Utilizzare le seguenti istruzioni per distribuire manualmente due pacchetti di soluzioni che consentono di aggiungere funzionalità di PowerPivot a un ambiente SharePoint Server 2010. La distribuzione delle soluzioni è un passaggio obbligatorio per la configurazione di PowerPivot per SharePoint in un server SharePoint 2010. Per visualizzare l'elenco completo dei passaggi necessari, vedere [amministrazione e configurazione del server PowerPivot in Amministrazione centrale](power-pivot-server-administration-and-configuration-in-central-administration.md).  

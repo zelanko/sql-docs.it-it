@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 92624ca4-de67-4ebd-aab2-8adb527d327e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c8c8484089bf3aa1f9c88b3b2163a49b445bf8d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 494b3a6e4c05a88e68da34aca34bfbdce2944fbe
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069929"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538563"
 ---
 # <a name="script-organizer-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Libreria script (scheda Calcoli, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Usare il riquadro **Libreria script** della scheda **Calcoli** in Progettazione cubi per accedere ai membri calcolati, ai set denominati e ai comandi di script contenuti nello script del cubo per il cubo specificato e riordinarli.  
@@ -31,7 +30,7 @@ ms.locfileid: "66069929"
   
  Fare clic su **Sposta su** o **Sposta giù** nel riquadro **Barra degli strumenti** oppure scegliere i comandi corrispondenti dal menu di scelta rapida per modificare l'ordine di esecuzione dei calcoli.  
   
- **Type**  
+ **Tipo**  
  Consente di visualizzare un'icona che identifica il calcolo come membro calcolato, set denominato o comando di script.  
   
  **Comando**  
@@ -49,9 +48,9 @@ ms.locfileid: "66069929"
 |**Nuovo comando script**|Scegliere questa opzione per visualizzare **Script Editor** (Editor script) e creare un nuovo comando di script. Per altre informazioni sul riquadro **Script Editor**(Editor form membro calcolato), vedere [Script Editor &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Sposta su**|Scegliere questa opzione per spostare il calcolo selezionato verso l'alto di una posizione.<br /><br /> Nota: questa opzione è disabilitata se il calcolo selezionato non può essere ulteriormente spostato.|  
 |**Sposta giù**|Scegliere questa opzione per spostare il calcolo selezionato verso il basso di una posizione.<br /><br /> Nota: questa opzione è disabilitata se il calcolo selezionato non può essere ulteriormente spostato.|  
-|**Elimina**|Scegliere questa opzione per eliminare il calcolo selezionato.|  
+|**Eliminazione**|Scegliere questa opzione per eliminare il calcolo selezionato.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Barra degli strumenti &#40;scheda calcoli, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Strumenti di calcolo &#40;scheda calcoli, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   

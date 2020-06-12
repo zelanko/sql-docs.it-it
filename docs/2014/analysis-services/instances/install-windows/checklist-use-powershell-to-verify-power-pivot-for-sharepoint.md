@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0dea40f9c4e4c0672db78ca7e841cb7cedca857e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 755b38d1f42432818f87d92b0d2bf097d58795f0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174350"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543951"
 ---
 # <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>Elenco di controllo: utilizzare PowerShell per verificare PowerPivot per SharePoint
   Senza il superamento della prova di verifica con cui viene confermata l'operatività dei servizi e dei dati in uso, non vengono completate né le installazioni di [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] né le operazioni di recupero. In questo articolo viene illustrata la modalità di esecuzione di queste procedure tramite Windows PowerShell. Ogni passaggio è inserito nella relativa sezione in modo da poter accedere direttamente ad attività specifiche. Ad esempio, eseguire lo script nella sezione [Database](#bkmk_databases) di questo argomento per verificare il nome dell'applicazione di servizio e i database del contenuto, se si desidera programmarli per la manutenzione o il backup.
@@ -69,7 +68,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0
 |Aggiornamento dati non in fase di esecuzione|Vedere la sezione [Timer Jobs](#bkmk_timer_jobs) e verificare che **Processo timer di aggiornamento dati PowerPivot** sia online.|
 |Dati del dashboard di gestione obsoleti|Vedere la sezione [Processi timer](#bkmk_timer_jobs) e verificare che **Processo timer di elaborazione dashboard di gestione dati PowerPivot** sia online.|
 |Alcune parti del dashboard di gestione|Se si installa PowerPivot per SharePoint in una farm che dispone della topologia di Amministrazione centrale, senza Excel Services o PowerPivot per SharePoint, è necessario scaricare e installare la libreria client Microsoft ADOMD.NET se si desidera l'accesso completo ai report incorporati nel dashboard di gestione PowerPivot. Alcuni report nel dashboard utilizzano ADOMD.NET per accedere a dati interni relativi all'integrità del server e all'elaborazione query di PowerPivot nella farm. Vedere la sezione [Libreria client ADOMD.NET](#bkmk_adomd) e l'argomento [Installare ADOMD.NET in server front-end Web in cui viene eseguita Amministrazione centrale](../../../sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md).|
-|\<contenuti futuri>||
+|\<future content>||
 
 ##  <a name="analysis-services-windows-service"></a><a name="bkmk_windows_service"></a>Servizio Analysis Services Windows
  Con lo script in questa sezione viene verificata l'istanza di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in modalità SharePoint. Verificare che il servizio sia **in esecuzione**.

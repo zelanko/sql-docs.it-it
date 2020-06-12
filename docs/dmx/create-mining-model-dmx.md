@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e7215f50705b593130a69cfe076f0878b0ac03d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c0355c8f0286fe894b7c723177c4146b1e460758
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889074"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669468"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  Nome di un algoritmo di data mining, secondo quanto definito dal provider corrente.  
   
 > [!NOTE]  
->  È possibile recuperare un elenco degli algoritmi supportati dal provider corrente utilizzando [DMSCHEMA_MINING_SERVICES set di righe](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Per visualizzare gli algoritmi supportati nell'istanza corrente di, vedere [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]proprietà di [data mining](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+>  È possibile recuperare un elenco degli algoritmi supportati dal provider corrente utilizzando [DMSCHEMA_MINING_SERVICES set di righe](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Per visualizzare gli algoritmi supportati nell'istanza corrente di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vedere Proprietà di [data mining](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
   
  *elenco di parametri*  
  Facoltativa. Elenco delimitato da virgole dei parametri definiti dal provider per l'algoritmo.  
@@ -102,7 +102,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   [Flag di modellazione &#40;data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
- Per descrivere la relazione tra due colonne, è possibile aggiungere una clausola alla descrizione. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]supporta l'utilizzo della clausola> \<della relazione di colonna seguente.  
+ Per descrivere la relazione tra due colonne, è possibile aggiungere una clausola alla descrizione. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]supporta l'utilizzo della \< clausola> della relazione di colonna seguente.  
   
  **CORRELATO A**  
  Questa forma indica una gerarchia di valori. La destinazione di una colonna con clausola RELATED TO può essere una colonna chiave in una tabella nidificata, una colonna con valori discreti nella riga dei case oppure un'altra colonna con una clausola RELATED TO, che indica una gerarchia con più livelli.  
@@ -123,7 +123,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Per un elenco dei parametri associati a ogni algoritmo, vedere [algoritmi di data mining &#40;Analysis Services-&#41;di data mining ](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Per creare un modello che dispone di un set di dati di testing incorporati, è necessario utilizzare l'istruzione CREATE MINING STRUCTURE seguita da ALTER MINING STRUCTURE. Tuttavia, non tutti i tipi di modello supportano un set di dati di controllo. Per altre informazioni, vedere [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
   
  Per una procedura dettagliata relativa alla creazione di un modello di data mining tramite l'istruzione CREATEMODEL, vedere l' [esercitazione su Time Series Prediction DMX](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
@@ -174,7 +174,7 @@ USING Microsoft_Sequence_Clustering
  Nell'esempio seguente viene utilizzato l'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Times Series per creare un nuovo modello di data mining utilizzando l'algoritmo ARTxp. ReportingDate è la colonna chiave per la serie temporale e ModelRegion è la colonna chiave per la serie di dati. In questo esempio si presuppone che i dati abbiano una periodicità di 12 mesi. Pertanto, il parametro *PERIODICITY_HINT* è impostato su 12.  
   
 > [!NOTE]  
->  È necessario specificare il parametro *PERIODICITY_HINT* usando caratteri di parentesi graffe. Inoltre, poiché il valore è una stringa, deve essere racchiuso tra virgolette singole: "{\<valore numerico>}".  
+>  È necessario specificare il parametro *PERIODICITY_HINT* usando caratteri di parentesi graffe. Inoltre, poiché il valore è una stringa, deve essere racchiuso tra virgolette singole: "{ \< valore numerico>}".  
   
 ```  
 CREATE MINING MODEL SalesForecast (  

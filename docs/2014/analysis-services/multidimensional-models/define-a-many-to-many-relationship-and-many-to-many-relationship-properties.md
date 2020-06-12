@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f679387dd1282dba3a4521f40bd11a2e0ba4b26f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e60456afe700d3bfb793d214331871445190eb10
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075782"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547083"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Definire una relazione molti-a-molti e le relative proprietà
   In questo argomento vengono illustrate le dimensioni molti-a-molti in Analysis Services, quando utilizzarle e come crearle.  
@@ -142,7 +141,7 @@ ms.locfileid: "66075782"
   
 1.  Distribuire il progetto ed esplorare il cubo per verificare la validità delle aggregazioni.  
   
-2.  In Excel fare clic su **dati** | **di altre origini** | **da Analysis Services**. Inserire il nome del server e selezionare database e cubo.  
+2.  In Excel fare clic su **dati**  |  **di altre origini**  |  **da Analysis Services**. Inserire il nome del server e selezionare database e cubo.  
   
 3.  Creare una tabella pivot che utilizzi:  
   
@@ -185,7 +184,7 @@ ms.locfileid: "66075782"
   
  [Esercitazione: esempio di dimensione molti-a-molti per SQL Server Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324761)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Relazioni tra dimensioni](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Installare dati di esempio e progetti per l'esercitazione di modellazione multidimensionale Analysis Services](../install-sample-data-and-projects.md)   
  [Distribuzione di progetti Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)   

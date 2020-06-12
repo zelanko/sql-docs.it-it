@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 39748290-c32a-48e6-92a6-0c3a9223773a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1cfc630ffc943a989348e350c3668452a2777298
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4bca58767285718b733dd820970cc48a99d0ea14
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083383"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521243"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>Strutture di data mining (Analysis Services – Data mining)
   La struttura di data mining definisce i dati in base ai quali vengono compilati i modelli di data mining: specifica la vista dell'origine dati, il numero e il tipo di colonne e una partizione facoltativa in set di training e di testing. Una singola struttura di data mining può supportare più modelli di data mining che condividono lo stesso dominio. Nel diagramma seguente viene illustrata la relazione della struttura di data mining con l'origine dati e con i modelli di data mining che la compongono.  
@@ -120,7 +119,7 @@ ms.locfileid: "66083383"
 |Eseguire una query sulle proprietà e sui dati della struttura di data mining o modificarli|[Modificare le proprietà di una struttura di data mining](change-the-properties-of-a-mining-structure.md)|  
 |Utilizzare le origini dati sottostanti e aggiornare i dati di origine|[Modificare la vista origine dati utilizzata per una struttura di data mining](edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [Elaborare una struttura di data mining](process-a-mining-structure.md)|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Oggetti di database &#40;Analysis Services-Dati multidimensionali&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
  [Modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-models-analysis-services-data-mining.md)  
   

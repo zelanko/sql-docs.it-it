@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9d83a7111bbea13733190eeb612373d9136dd058
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: afba038563ec5934a874811c804dd7a4aa9fff1e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79217123"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523087"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Servizi di data mining e origini dati
   Il data mining richiede una connessione a un'istanza di SQL Server Analysis Services. I dati di un cubo non sono necessari per il data mining, pertanto è consigliabile l'uso di origini relazionali. Tuttavia, il data mining usa i componenti forniti dal motore di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -23,7 +22,7 @@ ms.locfileid: "79217123"
  In questo argomento vengono fornite informazioni necessarie per la connessione a un'istanza di SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per creare, elaborare, distribuire modelli di data mining o eseguire query su di essi.  
   
 ## <a name="data-mining-services"></a>Servizi di data mining  
- Il componente server di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è l'applicazione msmdsrv. exe, che in genere viene eseguita come servizio Windows. Questa applicazione è costituita da componenti di sicurezza, un componente listener XML for Analysis (XMLA), un componente di elaborazione delle query e numerosi altri componenti interni che svolgono le funzioni seguenti:  
+ Il componente server di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è l'applicazione msmdsrv.exe, che in genere viene eseguita come servizio Windows. Questa applicazione è costituita da componenti di sicurezza, un componente listener XML for Analysis (XMLA), un componente di elaborazione delle query e numerosi altri componenti interni che svolgono le funzioni seguenti:  
   
 -   Analisi di istruzioni ricevute dai client  
   
@@ -44,13 +43,13 @@ ms.locfileid: "79217123"
 -   Gestione di risorse del server  
   
 ### <a name="xmla-listener"></a>Listener XMLA  
- Il componente listener XMLA gestisce tutte le comunicazioni XMLA tra [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e i relativi client. L' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port` impostazione di configurazione nel file msmdsrv. ini può essere utilizzata per specificare una porta su cui un' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza è in ascolto. Un valore 0 in questo file indica che [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è in ascolto sulla porta predefinita. Se non specificato diversamente, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] userà le porte TCP predefinite seguenti:  
+ Il componente listener XMLA gestisce tutte le comunicazioni XMLA tra [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e i relativi client. L' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port` impostazione di configurazione nel file di msmdsrv.ini può essere utilizzata per specificare una porta su cui un'istanza è in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ascolto. Un valore 0 in questo file indica che [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è in ascolto sulla porta predefinita. Se non specificato diversamente, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] userà le porte TCP predefinite seguenti:  
   
 |Porta|Descrizione|  
 |----------|-----------------|  
-|2383|Istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
-|2382|Redirector per altre istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
-|Assegnata dinamicamente all'avvio del server|Istanza denominata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
+|2383|Istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|2382|Redirector per altre istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|Assegnata dinamicamente all'avvio del server|Istanza denominata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
  Per altre informazioni sul controllo delle porte usate da questo servizio, vedere [Configurare Windows Firewall per consentire l'accesso ad Analysis Services](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
@@ -88,7 +87,7 @@ ms.locfileid: "79217123"
  È inoltre possibile impostare proprietà che consentono di ottimizzare il server e controllare la sicurezza per l'utilizzo client. Per altre informazioni, vedere [Proprietà di funzionalità](../server-properties/feature-properties.md).  
   
 > [!NOTE]  
->  Per ulteriori informazioni sul supporto per gli algoritmi plug-in delle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [funzionalità supportate dalle edizioni di SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (.https://go.microsoft.com/fwlink/?linkid=232473)  
+>  Per ulteriori informazioni sul supporto per gli algoritmi plug-in delle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [funzionalità supportate dalle edizioni di SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) ( https://go.microsoft.com/fwlink/?linkid=232473) .  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>Accesso a livello di codice agli oggetti di data mining  
  Per creare una connessione a un database di Analysis Services e utilizzare oggetti di data mining, è possibile utilizzare i modelli a oggetti seguenti:  
@@ -122,7 +121,7 @@ ms.locfileid: "79217123"
 > [!NOTE]  
 >  Non è possibile utilizzare le stored procedure per modificare la sicurezza per gli oggetti server dei dati. Quando si esegue una stored procedure, viene utilizzato il contesto corrente dell'utente per determinare l'accesso a tutti gli oggetti server. Gli utenti devono pertanto disporre delle autorizzazioni appropriate per qualsiasi oggetto di database a cui accedono.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Architettura fisica &#40;Analysis Services-Dati multidimensionali&#41;](../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
  [Architettura fisica &#40;Analysis Services-&#41;di data mining](physical-architecture-analysis-services-data-mining.md)   
  [Gestione degli oggetti e delle soluzioni di data mining](management-of-data-mining-solutions-and-objects.md)  

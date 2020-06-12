@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f3bd5278-3a83-4fd9-9903-e81bdd4b6892
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f4720d361fdd9a7d93d91f5e8fe873473816c2ef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a96e3e434e8f4ff3d8df4b4837bffb0d96649741
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070682"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540003"
 ---
 # <a name="process-progress-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Stato elaborazione (Analysis Services - Dati multidimensionali)
   Utilizzare la finestra di dialogo **Stato elaborazione** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per monitorare l'elaborazione in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La finestra di dialogo **Stato elaborazione** viene visualizzata all'inizio dell'elaborazione in un oggetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -29,7 +28,7 @@ ms.locfileid: "66070682"
  **Descrizione dello stato**  
  Consente di visualizzare lo stato corrente dell'operazione di elaborazione.  
   
- **Arresta**  
+ **Stop**  
  Fare clic su questo pulsante per arrestare l'operazione di elaborazione.  
   
  **Rielabora**  
@@ -38,7 +37,7 @@ ms.locfileid: "66070682"
  **Visualizza dettagli**  
  Fare clic su questo pulsante per aprire la finestra di dialogo **Visualizza dettagli** e visualizzare i dettagli relativi all'elemento selezionato nella visualizzazione **Albero stato**. Per altre informazioni sulla finestra di dialogo **Visualizza dettagli** vedere [Finestra di dialogo Visualizza dettagli &#40;Analysis Services - Dati multidimensionali&#41;](view-details-dialog-box-analysis-services-multidimensional-data.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Elaborazione di oggetti del modello multidimensionale](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   

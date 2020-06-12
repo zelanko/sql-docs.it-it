@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2bb5ad7c-2962-4559-8c95-cf7148bd2e72
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9cc86a5712dae9c231fa6e03d86a82d7dc172a75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9af22f47531f468c3ba43d119644790af0c48457
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072193"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540973"
 ---
 # <a name="object-binding-dialog-box"></a>Finestra di dialogo Associazione oggetto
   Utilizzare la finestra di dialogo **Associazione oggetto** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per definire associazioni tra la proprietà di un oggetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e una tabella o una colonna di una vista origine dati. Per visualizzare la finestra di dialogo **Associazione oggetto** selezionare **(nuovo)** nell'elenco a discesa per il valore delle proprietà seguenti di un oggetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nella finestra **Proprietà** di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]:  
@@ -56,7 +55,7 @@ ms.locfileid: "66072193"
  **Colonna di origine**  
  Consente di visualizzare un elenco di colonne nella tabella selezionata in **Tabella di origine**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

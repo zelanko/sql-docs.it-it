@@ -1,5 +1,6 @@
 ---
 title: Specifica del test di nodo in un passaggio dell'espressione di percorso | Microsoft Docs
+description: Informazioni su come specificare un test di nodo nel passaggio dell'asse di un'espressione di percorso XQuery.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28ac10e211d57fc9e118f47ccb9d506d6cb846e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dba7904f4e28b6bea50c802fd83b9c24c147defb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946426"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524491"
 ---
 # <a name="path-expressions---specifying-node-test"></a>Espressioni di percorso - Specifica test di nodo
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,9 +70,9 @@ child::ProductDescription
   
  L'espressione di percorso `/child::PD:ProductDescription/child::PD:Features/descendant::*,` include tre passi. Tali passi specificano gli assi child e descendant. In ogni passo, il nome di nodo viene specificato come test di nodo. Il carattere jolly (`*`) nel terzo passo indica tutti i nodi del tipo di nodo principale per l'asse descendant. Il tipo di nodo principale dell'asse determina il tipo di nodi selezionati, che vengono filtrati in base al nome di nodo.  
   
- Di conseguenza, quando questa espressione viene eseguita sui documenti XML del catalogo dei prodotti nella tabella **ProductModel** , recupera tutti i nodi elemento figlio dell'elemento \<features> elemento figlio dell'elemento \<ProductDescription>.  
+ Di conseguenza, quando questa espressione viene eseguita sui documenti XML del catalogo dei prodotti nella tabella **ProductModel** , recupera tutti gli elementi figlio del nodo dell'elemento \<Features> figlio dell' \<ProductDescription> elemento.  
   
- L'espressione di percorso `/child::PD:ProductDescription/attribute::ProductModelID`,, è costituita da due passaggi. Entrambi i passi specificano un nome di nodo come test di nodo. Inoltre, il secondo passo utilizza l'asse attribute. Pertanto, ogni passo seleziona i nodi del tipo di nodo principale dell'asse corrispondente con il nome specificato come test di nodo. Pertanto, l'espressione restituisce **ProductModelID** il nodo dell'attributo ProductModelID \<del nodo dell'elemento> ProductDescription.  
+ L'espressione di percorso, `/child::PD:ProductDescription/attribute::ProductModelID` , è costituita da due passaggi. Entrambi i passi specificano un nome di nodo come test di nodo. Inoltre, il secondo passo utilizza l'asse attribute. Pertanto, ogni passo seleziona i nodi del tipo di nodo principale dell'asse corrispondente con il nome specificato come test di nodo. Pertanto, l'espressione restituisce il nodo dell'attributo **ProductModelID** del \<ProductDescription> nodo dell'elemento.  
   
  Quando si specificano i nomi dei nodi per i test di nodo, è inoltre possibile utilizzare il carattere jolly (*) per specificare il nome locale di un nodo o il relativo prefisso dello spazio dei nomi, come illustrato nell'esempio seguente:  
   
@@ -92,7 +93,7 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
 ## <a name="node-type-as-node-test"></a>Tipo di nodo specificato come test di nodo  
  Per le query su tipi di nodo diversi dai nodi elemento, è necessario utilizzare un test del tipo di nodo. Come illustrato nella tabella seguente, sono disponibili quattro test del tipo di nodo.  
   
-|Tipo di nodo|Valori di codice restituiti|Esempio|  
+|Tipo di nodo|Restituisce|Esempio|  
 |---------------|-------------|-------------|  
 |`comment()`|True per un nodo di commento.|`following::comment()` seleziona tutti i nodi di commento che seguono il nodo di contesto.|  
 |`node()`|True per un nodo di qualsiasi tipo.|`preceding::node()` seleziona tutti nodi che precedono il nodo di contesto.|  
@@ -105,9 +106,9 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
 child::comment()  
 ```  
   
- Analogamente `/child::ProductDescription/child::Features/child::comment()` , recupera gli elementi figlio del \<nodo di commento delle funzionalità> nodo \<figlio del nodo elemento> ProductDescription.  
+ Analogamente, `/child::ProductDescription/child::Features/child::comment()` Recupera i nodi di commento figlio del nodo \<Features> elemento figlio del \<ProductDescription> nodo elemento.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Negli esempi seguenti vengono confrontati il nome di nodo e il tipo di nodo.  
   
 ### <a name="a-results-of-specifying-the-node-name-and-the-node-type-as-node-tests-in-a-path-expression"></a>A. Risultati della definizione del nome di nodo e del tipo di nodo come test di nodo in un'espressione di percorso  
@@ -221,7 +222,7 @@ WHERE ProductModelID=19
   
 -   La parte facoltativa relativa al qualificatore di passo del passo dell'asse non viene specificata nei passi dell'espressione.  
   
- La query restituisce gli elementi `Warranty` figlio di <> dell'elemento `Features` figlio dell'elemento <> dell' `ProductDescription` elemento <>.  
+ La query restituisce gli `Warranty` elementi figlio di <> dell'elemento figlio dell'elemento <`Features`> dell' `ProductDescription` elemento <>.  
   
  Risultato:  
   
@@ -244,7 +245,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- Il carattere jolly viene specificato per il nome di nodo. Quindi, la query restituisce tutti gli elementi figlio del nodo elemento dell' `Features` <> nodo elemento figlio del nodo `ProductDescription` elemento <>.  
+ Il carattere jolly viene specificato per il nome di nodo. Quindi, la query restituisce tutti gli elementi figlio del nodo elemento dell'<`Features`> nodo elemento figlio del `ProductDescription` nodo elemento <>.  
   
  La query seguente è simile alla precedente tranne per il fatto che, insieme al carattere jolly, viene specificato uno spazio dei nomi. Di conseguenza, vengono restituiti tutti i nodi elemento figlio in tale spazio dei nomi. Si noti che l' `Features` elemento <> può contenere elementi di spazi dei nomi diversi.  
   
@@ -295,7 +296,7 @@ WHERE ProductModelID=19
   
 -   I primi due passi specificano un nome di nodo come test di nodo, mentre il terzo passo specifica un tipo di nodo come test di nodo.  
   
--   L'espressione restituisce gli elementi figlio del nodo di `Features` testo della <elemento figlio> `ProductDescription` del nodo elemento> <.  
+-   L'espressione restituisce gli elementi figlio del nodo di testo della <`Features` elemento figlio> del `ProductDescription` nodo elemento> <.  
   
  Viene restituito solo un nodo di testo. Risultato:  
   
@@ -303,7 +304,7 @@ WHERE ProductModelID=19
 These are the product highlights.   
 ```  
   
- La query seguente restituisce gli elementi figlio del nodo di commento `ProductDescription` dell'elemento <>:  
+ La query seguente restituisce gli elementi figlio del nodo di commento dell' `ProductDescription` elemento <>:  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -319,7 +320,7 @@ WHERE ProductModelID=19
   
 -   Il secondo passo specifica un tipo di nodo come test di nodo.  
   
--   Di conseguenza, l'espressione restituisce gli elementi figlio del nodo di commento dell' `ProductDescription` <> nodi dell'elemento.  
+-   Di conseguenza, l'espressione restituisce gli elementi figlio del nodo di commento dell'<`ProductDescription`> nodi dell'elemento.  
   
  Risultato:  
   

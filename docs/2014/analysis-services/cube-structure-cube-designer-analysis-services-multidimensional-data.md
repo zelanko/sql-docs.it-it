@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 00f0b605-5352-4b42-84f5-bd6c3e42d3d1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d4a60b80b19bd8c04964e30c035cf2330605fc25
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19a1fd2e52e680c4efb3ab7ec3ba826a6892d2a9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086583"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526067"
 ---
 # <a name="cube-structure-cube-designer-analysis-services---multidimensional-data"></a>Struttura cubo (Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Utilizzare la scheda **Struttura cubo** in **Progettazione cubi** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per creare e modificare misure e gruppi di misure, aggiungere dimensioni al cubo e visualizzare gli oggetti inclusi nel cubo nella vista origine dati associata.  
@@ -33,7 +32,7 @@ ms.locfileid: "66086583"
 |**Dimensioni**|Utilizzare il riquadro **Dimensioni** per includere e modificare dimensioni cubo per il cubo selezionato. Per altre informazioni su questo riquadro, vedere [Dimensioni &#40;scheda Struttura cubo, Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Vista origine dati**|Utilizzare il riquadro **Vista origine dati** per visualizzare e modificare la vista origine dati associata al cubo selezionato. Per altre informazioni su questo riquadro, vedere [Vista origine dati &#40;scheda Struttura cubo, Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md).|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Architettura logica &#40;Analysis Services-Dati multidimensionali&#41;](multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Cubi nei modelli multidimensionali](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Configura proprietà misura](multidimensional-models/configure-measure-properties.md)   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 26e01dc7-fa49-4b1f-99eb-7799d1b4dcd2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 00d17af3ce46ee5b20a730e536321140bb69f4ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a36489037607ad046689e55825f5958cb9ee611
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073325"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545838"
 ---
 # <a name="partitions-in-multidimensional-models"></a>Partizioni nei modelli multidimensionali
   In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]una *partizione* consente l'archiviazione fisica delle tabelle dei fatti in un gruppo di misure. Per ogni gruppo di misure viene automaticamente creata una singola partizione, ma è frequente creare partizioni aggiuntive per l'ulteriore segmentazione dei dati, con il conseguente miglioramento dell'elaborazione e delle prestazioni delle query.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8aa4ac2d-857f-4048-baa0-0f314e207cf6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 167121188939bcf82ed359ac3f8cf7e3aae47635
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b69cf276335267e283db35dce37a6192cc7f866
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079062"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543513"
 ---
 # <a name="defining-a-cube"></a>Definizione di un cubo
   La Creazione guidata cubo consente di definire i gruppi di misure e le dimensioni per un cubo. Nell'attività seguente si utilizzerà la Creazione guidata cubo per compilare un cubo.  
@@ -56,7 +55,7 @@ ms.locfileid: "66079062"
   
 11. Fare clic su **Avanti**.  
   
-12. Nella pagina **Completamento procedura guidata** modificare il nome del cubo in `Analysis Services Tutorial`. Nel riquadro Anteprima è possibile visualizzare il gruppo di misure **InternetSales** e le relative misure. È inoltre possibile visualizzare le dimensioni **Date**, **Customer** e **Product** .  
+12. Nella pagina **Completamento procedura guidata** modificare il nome del cubo in `Analysis Services Tutorial` . Nel riquadro Anteprima è possibile visualizzare il gruppo di misure **InternetSales** e le relative misure. È inoltre possibile visualizzare le dimensioni **Date**, **Customer** e **Product** .  
   
 13. Fare clic su **Fine** per completare la procedura guidata.  
   
@@ -69,7 +68,7 @@ ms.locfileid: "66079062"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Aggiunta di attributi alle dimensioni](lesson-2-3-adding-attributes-to-dimensions.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Cubi nei modelli multidimensionali](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

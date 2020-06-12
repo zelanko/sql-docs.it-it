@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 50570bb4-fcac-411e-b530-0398437efda7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 05c0a25ceded07264e4dbe10467e9dc6f093f6c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42285f94057441d01259c5fd54ce896dd0316b94
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077614"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537363"
 ---
 # <a name="model-tab-mining-model-viewers"></a>Scheda Modello (Visualizzatori modello di data mining)
   Nella scheda **Modello** del Visualizzatore Microsoft Time Series viene visualizzata una rappresentazione di una serie temporale come nodo in un grafico, simile a quella usata nei modelli di albero delle decisioni.  
@@ -69,7 +68,7 @@ ms.locfileid: "66077614"
  **Mostra livello**  
  Consente di modificare il numero di livelli visualizzati nell'albero.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  

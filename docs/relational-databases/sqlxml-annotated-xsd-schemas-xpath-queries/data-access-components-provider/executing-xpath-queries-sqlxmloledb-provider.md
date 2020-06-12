@@ -1,5 +1,6 @@
 ---
 title: Esecuzione di query XPath (provider SQLXMLOLEDB)
+description: Informazioni su come usare le proprietà specifiche del provider SQLXMLOLEDB durante l'esecuzione di query XPath.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ ms.assetid: 19063222-dc9c-48ae-a55f-778103674a9e
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cbed0ee01fbe2f2a632f81265e0722eb1ad32727
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 175c2e82b29c9c7c3895b8764e835db11295ebdb
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246626"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306234"
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>Esecuzione di query XPath (provider SQLXMLOLEDB)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "75246626"
   
 -   **Schema di mapping**  
   
- In questa applicazione ADO di esempio viene specificata una query XPath (radice) su uno schema di mapping XSD (MySchema.xml). Lo schema include un ** \<elemento Contacts>** con gli attributi **ContactID**, **FirstName**e **LastName** . Nello schema viene eseguito il mapping predefinito, ovvero un nome di elemento viene mappato alla tabella con lo stesso nome e gli attributi di tipo semplice vengono mappati alle colonne con gli stessi nomi.  
+ In questa applicazione ADO di esempio viene specificata una query XPath (radice) su uno schema di mapping XSD (MySchema.xml). Nello schema è presente un **\<Contacts>** elemento con gli attributi **ContactID**, **FirstName**e **LastName** . Nello schema viene eseguito il mapping predefinito, ovvero un nome di elemento viene mappato alla tabella con lo stesso nome e gli attributi di tipo semplice vengono mappati alle colonne con gli stessi nomi.  
   
 ```  
 <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  

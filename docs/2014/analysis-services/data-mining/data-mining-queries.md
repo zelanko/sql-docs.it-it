@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2bfce63f3686f06c0289c818daac82f336fb2b17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab6725ddd86d18132de9c408125fa9084161a187
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084965"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523110"
 ---
 # <a name="data-mining-queries"></a>Query di data mining
-  Le query di data mining sono utili per molti scopi. È possibile scegliere:  
+  Le query di data mining sono utili per molti scopi. È possibile:  
   
 -   Applicare il modello ai nuovi dati per eseguire una o più stime. È possibile fornire valori di input come parametri o in un batch.  
   
@@ -166,7 +165,7 @@ ms.locfileid: "66084965"
 |Impostare opzioni di query e risolvere problemi relativi ad autorizzazioni ed errori attinenti alle query|[Modificare il valore di timeout per le query di data mining](data-mining-queries.md)|  
 |Utilizzare i componenti di data mining in Integration Services|[Attività Query di data mining](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Query di data mining - trasformazione](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining-algorithms-analysis-services-data-mining.md)   
  [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md)  
   

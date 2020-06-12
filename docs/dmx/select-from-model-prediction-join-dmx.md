@@ -1,21 +1,21 @@
 ---
-title: SELECT FROM &lt;Model&gt; prediction join (DMX) | Microsoft Docs
+title: SELECT FROM &lt; Model &gt; PREDICTION JOIN (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b592aef0ba3831c5513e039ee4552d826468e819
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0156d12fe2d3d3f62105dccf05f99c2eebab8833
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928336"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670132"
 ---
-# <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;Model&gt; prediction join (DMX)
+# <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt; Model &gt; PREDICTION JOIN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Utilizza un modello di data mining per stimare gli stati delle colonne in un'origine dati esterna. L'istruzione **PREDICTION JOIN** consente di associare ogni case della query di origine al modello.  
@@ -56,8 +56,8 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  *expression*  
  Facoltativa. Espressione che restituisce un valore scalare.  
   
-## <a name="remarks"></a>Osservazioni  
- La clausola ON definisce il mapping tra le colonne della query di origine e quelle del modello di data mining. Tale mapping viene utilizzato per dirigere le colonne dalla query di origine alle colonne nel modello di data mining, di modo che possano essere utilizzate come input durante la creazione delle stime. Le \<colonne nell' *elenco di mapping di join*> sono correlate usando un segno di uguale (=), come illustrato nell'esempio seguente:  
+## <a name="remarks"></a>Commenti  
+ La clausola ON definisce il mapping tra le colonne della query di origine e quelle del modello di data mining. Tale mapping viene utilizzato per dirigere le colonne dalla query di origine alle colonne nel modello di data mining, di modo che possano essere utilizzate come input durante la creazione delle stime. Le colonne nell' \< *elenco di mapping di join*> sono correlate usando un segno di uguale (=), come illustrato nell'esempio seguente:  
   
 ```  
 [MiningModel].ColumnA = [source data query].Column1 AND   
@@ -69,7 +69,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  La query di origine del PREDICTION JOIN può essere una query singleton o di tabella.  
   
- È possibile specificare funzioni di stima che non restituiscono un'espressione di tabella nell' \< *elenco di espressioni SELECT*> e \<l' *espressione della condizione*>.  
+ È possibile specificare funzioni di stima che non restituiscono un'espressione di tabella nell' \< *elenco di espressioni SELECT*> e l' \< *espressione della condizione*>.  
   
  **Natural prediction join** esegue automaticamente il mapping tra i nomi di colonna della query di origine che corrispondono ai nomi di colonna nel modello. Se si utilizza la **stima naturale**, è possibile omettere la clausola on.  
   
@@ -105,7 +105,7 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="example-2-using-openquery"></a>Esempio 2: Utilizzo di OPENQUERY  
- Nell'esempio seguente viene illustrato come creare una query di stima batch utilizzando un elenco di clienti potenziali archiviato in un set di dati esterno. Poiché la tabella fa parte di una vista origine dati definita in un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], la query può utilizzare [OPENQUERY](../dmx/source-data-query-openquery.md) per recuperare i dati. Poiché i nomi delle colonne della tabella sono diversi da quelli presenti nel modello di data mining, è necessario utilizzare la clausola **on** per eseguire il mapping delle colonne della tabella alle colonne del modello.  
+ Nell'esempio seguente viene illustrato come creare una query di stima batch utilizzando un elenco di clienti potenziali archiviato in un set di dati esterno. Poiché la tabella fa parte di una vista origine dati definita in un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , la query può utilizzare [OPENQUERY](../dmx/source-data-query-openquery.md) per recuperare i dati. Poiché i nomi delle colonne della tabella sono diversi da quelli presenti nel modello di data mining, è necessario utilizzare la clausola **on** per eseguire il mapping delle colonne della tabella alle colonne del modello.  
   
  La query restituisce il nome e il cognome di ogni persona presente nella tabella, oltre a una colonna booleana che indica la probabilità che la persona acquisti una bicicletta, dove 0 indica "è improbabile che acquisti una bicicletta" e 1 indica "è probabile che acquisti una bicicletta". L'ultima colonna contiene la probabilità per il risultato stimato.  
   

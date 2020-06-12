@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: aac732a8-5262-4649-b7d7-3ccf6f9cfa8b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: db069b243a0d06c142651ab4dcadd68e1e06657f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8138cef980e7b040a99a6e1db21f1b67fd84aeb5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081964"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528777"
 ---
 # <a name="dependency-network-diagram-walkthrough-data-mining-add-ins"></a>Descrizione dettagliata del diagramma della rete di dipendenze (componenti aggiuntivi Data mining)
   In vari tipi differenti di modelli di data mining viene utilizzato un grafico della rete come modalità di esplorazione delle relazioni nei dati. È possibile importare questi modelli in Visio utilizzando la forma **rete di dipendenze** , quindi continuare a personalizzare e migliorare il layout. Nelle **forme di data mining per Visio** sono inclusi i seguenti controlli personalizzati per l'utilizzo di diagrammi di rete di dipendenze:  
@@ -43,13 +42,13 @@ ms.locfileid: "66081964"
   
 1.  Se non vengono visualizzate le **forme di data mining di Microsoft** nell'elenco **forme** , fare clic su **altre forme**, selezionare **Apri stencil**e aprire il modello dal percorso di installazione predefinito.  
   
-     \<unità>: \Program Files (X85) \Microsoft SQL Server 2012 DM Add-ins  
+     \<drive>: \Program Files (X85) \Microsoft SQL Server 2012 DM Add-ins  
   
 2.  Trascinare la forma **rete di dipendenze** nella pagina per avviare la procedura guidata. Fare clic su **Avanti**.  
   
 3.  Nella pagina iniziale della **procedura guidata forma di Visio per rete di dipendenze**fare clic su **Avanti**.  
   
-4.  Nella pagina **Selezione origine dati** della **procedura guidata forma di Visio per rete di dipendenze**scegliere una connessione a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] un server che disponga del modello che si desidera visualizzare.  
+4.  Nella pagina **Selezione origine dati** della **procedura guidata forma di Visio per rete di dipendenze**scegliere una connessione a un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server che disponga del modello che si desidera visualizzare.  
   
 5.  Selezionare un modello di data mining appropriato e fare clic su **Avanti**.  
   
@@ -105,7 +104,7 @@ ms.locfileid: "66081964"
      **Livello attendibilità bordo**  
      Consente di attivare e disattivare la visualizzazione del livello di attendibilità bordo per l'intero grafico. Un bordo è un collegamento tra nodi. È possibile utilizzare il controllo dispositivo di scorrimento per escludere tramite filtro i collegamenti non attendibili.  
   
-     **Slider**  
+     **Dispositivo di scorrimento**  
      Il **dispositivo di scorrimento** consente di controllare il livello di attendibilità delle relazioni visualizzate nel diagramma della rete di dipendenze.  
   
      Ogni nodo del grafico rappresenta uno stato. Una freccia rappresenta una transizione tra due stati e la probabilità associata alla transizione. Per ridurre il numero di nodi nel grafico, spostare il dispositivo di scorrimento verso l'alto.  
@@ -122,7 +121,7 @@ ms.locfileid: "66081964"
 > [!WARNING]  
 >  L'evidenziazione di nodi dipendenti e altre opzioni del menu di scelta rapida disponibili nelle versioni precedenti dei componenti aggiuntivi non funzionano in Office 2013.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Risoluzione dei problemi relativi ai diagrammi di data mining di Visio &#40;componenti aggiuntivi Data mining di SQL Server&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md)  
   
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1827cf0acf8e600c58efca82bb3223a00efb3e41
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e3ea13dc58815e82d82a3f3b5ffdd3c5d666d7e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79217113"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543716"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Utilizzare DMV per monitorare Analysis Services
   Le DMV (viste a gestione dinamica) di Analysis Services sono strutture di query che consentono di esporre informazioni sulle operazioni del server locali e sull'integrità del server. La struttura di query è un'interfaccia dei set di righe dello schema tramite cui vengono restituiti i metadati e le informazioni di monitoraggio per un'istanza di Analysis Services.  
@@ -98,7 +97,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  Se non è disponibile una DMV per un determinato set di righe, il server restituisce l'errore seguente: \<"SchemaRowset> tipo di richiesta non è stato riconosciuto dal server". Tutti gli altri errori indicano problemi con la sintassi.  
+>  Se non è disponibile una DMV per un determinato set di righe, il server restituisce l'errore seguente: "il \<schemarowset> tipo di richiesta non è stato riconosciuto dal server". Tutti gli altri errori indicano problemi con la sintassi.  
   
 |Set di righe|Descrizione|  
 |------------|-----------------|  

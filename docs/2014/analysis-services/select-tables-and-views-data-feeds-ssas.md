@@ -12,12 +12,12 @@ ms.assetid: 6c4fafe0-e02e-47d1-b8bc-e70e872690af
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 82fcf08a84a06d33c33a520ce351f6c685092a15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ee72d4347e85851388b4a4ab1f4d29b33a89134
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069274"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858126"
 ---
 # <a name="select-tables-and-views-data-feeds-ssas"></a>Selezione tabelle e viste (Feed di dati) (SSAS)
   Questa pagina dell' **Importazione guidata tabella** consente di selezionare le tabelle e le viste da cui importare dati. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
@@ -26,7 +26,7 @@ ms.locfileid: "66069274"
   
  Per origini dati in cui viene utilizzata l'autenticazione di Windows, le credenziali dell'utente corrente vengono utilizzate per recuperare le tabelle e le viste nella finestra di dialogo Selezione tabelle e viste. Per altre origini dati, vengono utilizzate le credenziali fornite nella stringa di connessione per il recupero dei dati.  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco elementi dell'interfaccia utente  
  **URL feed di dati**  
  Viene visualizzato l'URL per il feed di dati selezionato.  
   

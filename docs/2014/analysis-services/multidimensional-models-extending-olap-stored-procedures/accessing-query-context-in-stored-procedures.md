@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bdc7dad8-2f22-4265-aba4-a3a451527840
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 93624a612126e9103144b8b53272122e66202b8a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9da8ddb223ed03c0208fe524ea5cd7195a039c97
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702673"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545372"
 ---
 # <a name="accessing-query-context-in-stored-procedures"></a>Accesso al contesto di query nelle stored procedure
   Il contesto di esecuzione di una stored procedure è disponibile all'interno del codice della stored procedure stessa sotto forma di oggetto `Context` del modello a oggetti server ADOMD.NET. Si tratta di un contesto di sola lettura che non può essere modificato dalla stored procedure. Per questo oggetto sono disponibili le proprietà seguenti.  
@@ -29,12 +28,12 @@ ms.locfileid: "62702673"
 |--------------|----------|-----------------|  
 |**CurrentCube**|Cube|Cubo per il contesto di query corrente.|  
 |**CurrentDatabaseName**|string|Identificatore del database corrente.|  
-|**CurrentConnection**|Connessione|Riferimento all'oggetto connessione nel contesto corrente.|  
+|**CurrentConnection**|Connessioni|Riferimento all'oggetto connessione nel contesto corrente.|  
 |**Corretto**|Integer|Numero della sessione di calcolo per il contesto corrente.|  
   
  L'oggetto `Context` è presente se in una stored procedure viene utilizzato un modello a oggetti MDX (Multidimensional Expressions), mentre non è disponibile se il modello a oggetti MDX viene utilizzato in un client. L'oggetto `Context` non viene esplicitamente passato a o restituito dalla stored procedure, ma è disponibile durante l'esecuzione della stored procedure stessa.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestione di assembly di modelli multidimensionali](../multidimensional-models/multidimensional-model-assemblies-management.md)   
  [Definizione delle stored procedure](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   

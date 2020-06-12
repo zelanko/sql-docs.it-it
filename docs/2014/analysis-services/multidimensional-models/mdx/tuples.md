@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 35b629ae-b1ef-44b1-b556-96956aeb56e7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5025d76d439933f7392d55661ca52d3f33992db8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c39d03d60cb66f3b2e26b2e660bd85f4e5e9d4ec
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073770"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546133"
 ---
 # <a name="tuples"></a>Tuple
   Una tupla consente di identificare in modo univoco una sezione di dati di un cubo. La tupla viene creata da una combinazione di membri di dimensione, finché non esistono due o più membri che appartengono alla medesima gerarchia.  
@@ -62,7 +61,7 @@ FROM [Adventure Works]
 > [!NOTE]  
 >  È possibile fare riferimento a un membro dell'attributo tramite il nome o la chiave del membro. Nell'esempio precedente, è possibile sostituire il riferimento a [CY 2004] con &[2004].  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Concetti chiave di MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Spazio del cubo](cube-space.md)   
  [Autoexists](autoexists.md)   

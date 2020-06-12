@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f0347835-4983-4d26-acbb-6c8fae7992bd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7587e3304d1464beb7ef94cd7d3093982f394bcc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac49d37f11584bfbc5d372241056da39e7dd8c93
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074593"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546503"
 ---
 # <a name="building-measures-in-mdx"></a>Compilazione di misure in MDX
   Nelle espressioni MDX una misura è un'espressione DAX denominata che viene risolta tramite il calcolo dell'espressione per la restituzione di un valore in un modello tabulare. Dietro a questa definizione apparentemente semplice si nasconde un'enorme quantità di informazioni. La possibilità di creare e utilizzare misure in una query MDX offre capacità notevoli per la manipolazione dei dati tabulari.  
@@ -42,7 +41,7 @@ from [Model]
 |2003|41993729.72||  
 |2004|25808962.34||  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Istruzione CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
  [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](/sql/mdx/mdx-function-reference-mdx)   
  [Istruzione SELECT &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)  

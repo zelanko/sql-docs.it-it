@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1e2561d3-4890-4495-a9cd-84eb88508938
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: eb70d7d495d88ee62e98bf27f2b92bf569c98387
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6b57669eed30abf010b9d2775950bf0cd6c6e67
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078185"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542153"
 ---
 # <a name="lesson-10-create-hierarchies"></a>Lezione 10: Creare gerarchie
   In questa lezione si procederà alla creazione di gerarchie. Le gerarchie sono gruppi di colonne disposti in livelli. Una gerarchia Geografia potrebbe ad esempio includere i sottolivelli Paese, Stato, Regione e Città. Le gerarchie possono essere visualizzate separatamente da altre colonne in un elenco di campi dell'applicazione client per la creazione di report, in modo che sia più semplice per gli utenti del client individuare i campi appropriati da includere in un report. Per altre informazioni, vedere [Gerarchie &#40;SSAS tabulare&#41;](tabular-models/hierarchies-ssas-tabular.md).  
@@ -36,22 +35,22 @@ ms.locfileid: "66078185"
     > [!TIP]  
     >  Utilizzare i controlli della mini mappa in alto a destra in Progettazione modelli per modificare la modalità di visualizzazione degli oggetti nella vista diagramma. Se si riposizionano gli oggetti nella vista diagramma, la vista verrà mantenuta quando si salva il progetto.  
   
-2.  In Progettazione modelli fare clic con il pulsante destro `Product` del mouse sulla tabella, quindi scegliere **Crea gerarchia**. Verrà visualizzata una nuova gerarchia nella parte inferiore della finestra della tabella.  
+2.  In Progettazione modelli fare clic con il pulsante destro del mouse sulla `Product` tabella, quindi scegliere **Crea gerarchia**. Verrà visualizzata una nuova gerarchia nella parte inferiore della finestra della tabella.  
   
-3.  Nel nome della gerarchia rinominare la gerarchia digitando `Category`e quindi premere INVIO.  
+3.  Nel nome della gerarchia rinominare la gerarchia digitando `Category` e quindi premere INVIO.  
   
 4.  Nella `Product` tabella fare clic sulla colonna **Product Category Name** , quindi trascinarla nella `Category` gerarchia e quindi rilasciare il pulsante sopra il `Category` nome.  
   
-5.  Nella `Category` gerarchia, fare clic con il pulsante destro del mouse sulla colonna **Product Category Name** , scegliere **Rinomina**, `Category`quindi digitare.  
+5.  Nella `Category` gerarchia, fare clic con il pulsante destro del mouse sulla colonna **Product Category Name** , scegliere **Rinomina**, quindi digitare `Category` .  
   
     > [!NOTE]  
     >  La ridenominazione di una colonna in una gerarchia non comporta la ridenominazione della colonna nella tabella. Una colonna in una gerarchia è solo una rappresentazione della colonna nella tabella.  
   
-6.  Nella `Product` tabella fare clic con il pulsante destro del mouse sulla colonna **Product Subcategory Name** , scegliere **Aggiungi a gerarchia**dal menu di scelta rapida e quindi fare `Category`clic su.  
+6.  Nella `Product` tabella fare clic con il pulsante destro del mouse sulla colonna **Product Subcategory Name** , scegliere **Aggiungi a gerarchia**dal menu di scelta rapida e quindi fare clic su `Category` .  
   
-7.  Rinominare **Product Subcategory Name** in `Subcategory`.  
+7.  Rinominare **Product Subcategory Name** in `Subcategory` .  
   
-8.  Utilizzando clic e trascina o utilizzando il comando **Aggiungi a gerarchia** nel menu di scelta rapida, aggiungere le colonne **nome modello** e **nome prodotto** (in ordine) e posizionarle sotto la colonna **Product Subcategory Name** . Rinominare queste colonne `Model` e `Product`, rispettivamente.  
+8.  Utilizzando clic e trascina o utilizzando il comando **Aggiungi a gerarchia** nel menu di scelta rapida, aggiungere le colonne **nome modello** e **nome prodotto** (in ordine) e posizionarle sotto la colonna **Product Subcategory Name** . Rinominare queste colonne `Model` e `Product` , rispettivamente.  
   
 #### <a name="to-create-hierarchies-in-the-date-table"></a>Per creare gerarchie nella tabella Date  
   
@@ -84,7 +83,7 @@ ms.locfileid: "66078185"
     |Colonna|Rinominare in:|  
     |------------|----------------|  
     |Calendar Year|Year|  
-    |Week Number Of Year|Week|  
+    |Week Number Of Year|Settimana|  
     |Day Of Week|Giorno|  
   
 ## <a name="next-steps"></a>Passaggi successivi  

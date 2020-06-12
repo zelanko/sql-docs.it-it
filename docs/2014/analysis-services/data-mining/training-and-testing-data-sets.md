@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 34aefc2895057c499e54c572340ca63dc28ed68f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e050a59da542041b9ce825f573625bdb6afc289
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082741"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520344"
 ---
 # <a name="training-and-testing-data-sets"></a>Set di dati di training e di testing
   La separazione dei dati in set di training e set di testing rappresenta una parte importante della valutazione dei modelli di data mining. In genere, quando si separa un set di dati in un set di training e un set di testing, la maggior parte dei dati viene utilizzata per il training e una parte più piccola per il testing. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esegue un campionamento casuale dei dati per assicurare che i set di testing e i training set siano simili. Utilizzando dati simili per il training e il testing, è possibile ridurre al minimo gli effetti delle discrepanze di dati e comprendere meglio le caratteristiche del modello.  
@@ -103,11 +102,11 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
 |------------|-----------|  
 |Viene descritto come i filtri in un modello interagiscono con i training set e set di dati di test.|[Filtri per i modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-models-analysis-services-data-mining.md)|  
 |Viene descritto come l'utilizzo dei dati di training e di testing influiscono sulla convalida incrociata.|[Convalida incrociata &#40;Analysis Services - Data mining&#41;](cross-validation-analysis-services-data-mining.md)|  
-|Vengono fornite informazioni sulle interfacce di programmazione per l'utilizzo di training set e set di testing in una struttura di data mining.|[Modello a oggetti AMO e concetti relativi](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)<br /><br /> [Elemento MiningStructure &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/miningstructure-element-assl)|  
+|Vengono fornite informazioni sulle interfacce di programmazione per l'utilizzo di training set e set di testing in una struttura di data mining.|[Modelli a oggetti e concetti di AMO](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)<br /><br /> [Elemento MiningStructure &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/miningstructure-element-assl)|  
 |Viene fornita la sintassi DMX per la creazione di set di dati di controllo.|[CREATE MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx)|  
 |Vengono recuperate informazioni sui case nei set di training e di testing.|[Set di righe dello schema di data mining](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)<br /><br /> [Esecuzione di query sui set di righe dello schema di data mining &#40;Analysis Services-Data mining&#41;](data-mining-schema-rowsets-ssas.md)|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Strumenti di data mining](data-mining-tools.md)   
  [Concetti relativi al data mining](data-mining-concepts.md)   
  [Soluzioni di data mining](data-mining-solutions.md)   

@@ -1,5 +1,6 @@
 ---
 title: Regole di cast del tipo in XQuery | Microsoft Docs
+description: Informazioni sulle regole applicate quando si esegue il cast esplicito o implicito da un tipo di dati a un altro in XQuery.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8372e5079b79cc694ccf51f1b6f7cddcf0fed43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9dcae8facc642d43620bde77ab7f01467a8a54d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946218"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520128"
 ---
 # <a name="type-casting-rules-in-xquery"></a>Regole del cast dei tipi in XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "67946218"
   
  In questo argomento vengono descritte le regole del cast dei tipi applicate per il cast da un tipo all'altro tramite i metodi seguenti:  
   
--   Cast esplicito **eseguito tramite cast come** o le funzioni del costruttore del tipo (ad esempio, `xs:integer("5")`).  
+-   Cast esplicito **eseguito tramite cast come** o le funzioni del costruttore del tipo (ad esempio, `xs:integer("5")` ).  
   
 -   Cast implicito durante la promozione dei tipi  
   
@@ -95,7 +96,7 @@ create xml schema collection myCollection as N'
 go  
 ```  
   
- La query seguente restituisce un errore statico, perché non si conosce il numero di elementi <`root`> di primo livello presenti nell'istanza del documento.  
+ La query seguente restituisce un errore statico, perché non si conosce il numero `root` di elementi <> di primo livello presenti nell'istanza del documento.  
   
 ```  
 declare @x xml(myCollection)  
@@ -167,7 +168,7 @@ min(xs:integer("1"), xs:double("1.1"))
  Nel caso del cast a tipi binari quali xs:base64Binary o xs:hexBinary da un tipo string o untypedAtomic, per i valori di input deve essere utilizzato rispettivamente il formato di codifica base64 o hex.  
   
 ##### <a name="casting-a-value-to-a-string-or-untypedatomic-type"></a>Cast di un valore a un tipo string o untypedAtomic  
- Il cast a un tipo string o untypedAtomic trasforma il valore nella relativa rappresentazione lessicale canonica XQuery. In particolare, è possibile che un valore conforme a un pattern specifico o a un altro vincolo durante l'input non venga rappresentato in base a tale vincolo.  Per informare gli utenti su questo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , contrassegna i tipi in cui il vincolo di tipo può essere un problema fornendo un avviso quando tali tipi vengono caricati nella raccolta di schemi.  
+ Il cast a un tipo string o untypedAtomic trasforma il valore nella relativa rappresentazione lessicale canonica XQuery. In particolare, è possibile che un valore conforme a un pattern specifico o a un altro vincolo durante l'input non venga rappresentato in base a tale vincolo.  Per informare gli utenti su questo, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Contrassegna i tipi in cui il vincolo di tipo può essere un problema fornendo un avviso quando tali tipi vengono caricati nella raccolta di schemi.  
   
  Nel cast di un valore di tipo xs:float o xs:double o di uno qualsiasi dei relativi sottotipi a un tipo string o untypedAtomic, il valore viene rappresentato nella notazione scientifica, ma solo se il valore assoluto del valore è minore di 1.0E-6 oppure maggiore o uguale a 1.0E6. Per tale motivo, 0 viene serializzato nella notazione scientifica come 0.0E0.  
   

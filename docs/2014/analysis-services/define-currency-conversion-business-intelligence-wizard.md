@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 37dd65b7-9d8d-44ad-b316-96a92c622472
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b463363e2e239c348c626cf1ef1d61e621877814
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3131b38ad76f9b8cc51fac7cea2f82fbd788e086
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082147"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528827"
 ---
 # <a name="define-currency-conversion-business-intelligence-wizard"></a>Definizione conversione valuta (Configurazione guidata funzionalità di Business Intelligence)
   Usare la pagina **Definizione conversione valuta** per esaminare lo script MDX (Multidimensional Expressions) contenente la funzionalità di conversione valuta generata dalla Configurazione guidata funzionalità di Business Intelligence. Sarà quindi possibile sovrascrivere la funzionalità di conversione valuta precedentemente definita nello script MDX del cubo con lo script MDX generato dalla procedura guidata o accodare il nuovo script a quello esistente.  
@@ -50,7 +49,7 @@ ms.locfileid: "66082147"
  **Script di conversione valuta esistente**  
  Consente di selezionare la sezione dello script MDX esistente che contiene la funzionalità di conversione valuta precedentemente definita da sovrascrivere o a cui accodare il nuovo script.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto della configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Progettazione dimensioni &#40;Analysis Services-Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
