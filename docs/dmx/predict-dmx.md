@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: eb939c45d298117fa81b05d6188aa3a4c5cd7c4b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9a21336db54ab6fadaa219a3ef3d743dcf860087
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68008165"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669270"
 ---
 # <a name="predict-dmx"></a>Predict (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 ## <a name="return-type"></a>Tipo restituito  
  \<riferimento a colonna scalare>  
   
- o  
+ oppure  
   
  \<riferimento a colonne di tabella>  
   
@@ -43,7 +43,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 > [!NOTE]  
 >  INCLUSIVE, EXCLUSIVE, INPUT_ONLY e INCLUDE_STATISTICS sono applicabili solo a riferimenti a colonne di tabella, mentre EXCLUDE_NULL e INCLUDE_NULL sono applicabili solo a riferimenti a colonne scalari.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Le opzioni disponibili includono EXCLUDE_NULL (predefinita), INCLUDE_NULL, INCLUSIVE, EXCLUSIVE (predefinita), INPUT_ONLY e INCLUDE_STATISTICS.  
   
 > [!NOTE]  
@@ -66,7 +66,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
   
  Il passaggio di INCLUDE_STATISTICS a una stima in una colonna con valori di tabella aggiunge le colonne **$Probability** e **$support** alla tabella risultante. che descrivono la probabilità dell'esistenza del record della tabella nidificata associato.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene utilizzata la funzione Predict per restituire i quattro prodotti del database Adventure Works che con maggiore probabilità verranno venduti insieme. Poiché la funzione stima in base a un modello di data mining Association Rules, USA automaticamente la funzione **PredictAssociation** , come descritto in precedenza.  
   
 ```  

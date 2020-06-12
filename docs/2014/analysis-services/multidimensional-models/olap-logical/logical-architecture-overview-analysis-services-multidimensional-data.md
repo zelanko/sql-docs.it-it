@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8ad62267358ac48525a4c933a796ac70f3638665
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8dc9c46cf4ddcc7ff04f0c9002bff59cdb3ba370
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175720"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545997"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Panoramica dell'architettura logica (Analysis Services - Dati multidimensionali)
   Analysis Services viene eseguito in una modalità di distribuzione server che determina l'architettura di memoria e l'ambiente di runtime utilizzati dai diversi tipi di modelli di Analysis Services. La modalità server viene determinata durante l'installazione. La **modalità multidimensionale e di data mining** supporta OLAP e data mining tradizionali. La **modalità tabulare** supporta i modelli tabulari. La **modalità integrata SharePoint** fa riferimento a un'istanza di Analysis Services installata come PowerPivot per SharePoint, utilizzata per il caricamento e l'esecuzione di query sui modelli di dati di Excel o PowerPivot all'interno di una cartella di lavoro.
@@ -26,7 +25,7 @@ ms.locfileid: "78175720"
  In questo argomento viene illustrata l'architettura di base di Analysis Services quando viene utilizzato nella modalità multidimensionale e di data mining. Per ulteriori informazioni su altre modalità, vedere [modellazione tabulare &#40;SSAS tabulare&#41;](../../tabular-models/tabular-models-ssas.md) e [confronto tra soluzioni tabulari e multidimensionali &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas).
 
 ## <a name="basic-architecture"></a>Architettura di base
- Un'istanza di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] può contenere più database e un database può includere contemporaneamente oggetti OLAP e oggetti di data mining. Le applicazioni si connettono a un'istanza specifica di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e a un database specifico. Un computer server può ospitare più istanze di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Le istanze [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] di sono denominate\<" \\ ServerName>\><NomeIstanza". Nella figura seguente sono illustrate tutte le [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] relazioni tra oggetti.
+ Un'istanza di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] può contenere più database e un database può includere contemporaneamente oggetti OLAP e oggetti di data mining. Le applicazioni si connettono a un'istanza specifica di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e a un database specifico. Un computer server può ospitare più istanze di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Le istanze di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] sono denominate " \<ServerName> \\<NomeIstanza \> ". Nella figura seguente sono illustrate tutte le relazioni tra [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] oggetti.
 
  ![Esecuzione di relazioni tra oggetti da parte di AMO](../../dev-guide/media/amo-runningobjects.gif "Esecuzione di relazioni tra oggetti da parte di AMO")
 
@@ -43,7 +42,7 @@ ms.locfileid: "78175720"
  Oggetti Cube ogni oggetto di database contiene uno o più oggetti Cube. Un cubo è definito dalle relative misure e dimensioni. Le misure e le dimensioni di un cubo derivano dalle tabelle e dalle viste della vista origine dati su cui il cubo si basa o che viene generata dalle definizioni delle misure e delle dimensioni.
 
 ## <a name="object-inheritance"></a>Ereditarietà degli oggetti
- Il modello a oggetti ASSL contiene molti gruppi di elementi ripetuti. Il gruppo di elementi "`Dimensions` contain `Hierarchies`", ad esempio, definisce la gerarchia di dimensione di un elemento. `Cubes` e `MeasureGroups` contengono entrambi il gruppo di elementi "`Dimensions` contain `Hierarchies`".
+ Il modello a oggetti ASSL contiene molti gruppi di elementi ripetuti. Il gruppo di elementi "contain", ad esempio, `Dimensions` `Hierarchies` definisce la gerarchia di dimensione di un elemento. `Cubes` e `MeasureGroups` contengono entrambi il gruppo di elementi "`Dimensions` contain `Hierarchies`".
 
  Se non viene sottoposto a override in modo esplicito, un elemento eredita i dettagli di tali gruppi di elementi ripetuti dal livello più elevato. `Translations` per `CubeDimension` corrisponde ad esempio a `Translations` del relativo elemento predecessore `Cube`.
 
@@ -91,7 +90,7 @@ ms.locfileid: "78175720"
 ### <a name="mapping-measures-attributes-and-hierarchies"></a>Mapping di misure, attributi e gerarchie
  Le misure, gli attributi e le gerarchie del cubo di esempio derivano dalle colonne seguenti nelle tabelle dei fatti e delle dimensioni del cubo.
 
-|Misura o attributo (livello)|Members|Tabella di origine|Colonna di origine|Valore della colonna di esempio|
+|Misura o attributo (livello)|Membri|Tabella di origine|Colonna di origine|Valore della colonna di esempio|
 |------------------------------------|-------------|------------------|-------------------|-------------------------|
 |Misura Packages|Non applicabile|ImportsFactTable|Pacchetti|12|
 |Misura Last|Non applicabile|ImportsFactTable|Last (Ultimo)|May-03-99|

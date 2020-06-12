@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cbc9ad315792fc4198988a53713f978ff119d2ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b34883d3dfa5a3d38f26a7ed905b5f00e7bcf8e6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493818"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542313"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Definizione e utilizzo di un'azione drill-through
   Il dimensionamento dei dati della tabella dei fatti tramite una dimensione dei fatti senza l'applicazione di un filtro appropriato sui dati restituiti dalla query può causare un rallentamento delle prestazioni. Per evitare questo problema, è possibile definire un'azione drill-through che limita il numero complessivo di righe restituite. In questo modo è possibile migliorare in modo significativo le prestazioni delle query.  
@@ -38,7 +37,7 @@ ms.locfileid: "69493818"
   
      ![Modello di azione vuota nel riquadro di visualizzazione](../../2014/tutorials/media/l8-action2.gif "Modello di azione vuota nel riquadro di visualizzazione")  
   
-3.  Nella casella **nome** modificare il nome dell'azione in `Internet Sales Details Drillthrough Action`.  
+3.  Nella casella **nome** modificare il nome dell'azione in `Internet Sales Details Drillthrough Action` .  
   
 4.  Selezionare **Internet Sales** dall'elenco **Membri gruppo di misure**.  
   
@@ -52,9 +51,9 @@ ms.locfileid: "69493818"
   
      ![Casella Proprietà aggiuntive](../../2014/tutorials/media/l8-action4.gif "Casella Proprietà aggiuntive")  
   
-8.  Nella casella **numero massimo di righe** Digitare `10`.  
+8.  Nella casella **numero massimo di righe** Digitare `10` .  
   
-9. Nella casella **didascalia** Digitare `Drillthrough to Order Details...`.  
+9. Nella casella **didascalia** Digitare `Drillthrough to Order Details...` .  
   
      Queste impostazioni limitano il numero di righe restituite e specificano la didascalia che viene visualizzata nel menu dell'applicazione client. La figura seguente illustra tali impostazioni all'interno della casella **Proprietà aggiuntive** .  
   
@@ -104,11 +103,11 @@ ms.locfileid: "69493818"
   
     -   ShipDateKey  
   
-6.  Modificare la **proprietà Name** dell'attributo **Order Date Key** su Then `Order Date` , fare clic sul pulsante Browse per la proprietà **nome colonna** e nella finestra di dialogo **colonna nome** selezionare **date** come tabella di origine e selezionare SimpleDate come colonna di origine. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  Modificare la proprietà **Name** dell'attributo **Order Date Key** su `Order Date` then, fare clic sul pulsante Browse per la proprietà **nome colonna** e nella finestra di dialogo **colonna nome** selezionare **date** come tabella di origine e selezionare SimpleDate come colonna di origine. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Modificare la **proprietà Name** dell'attributo **date date Key** in `Due Date`, quindi, usando lo stesso metodo dell'attributo **Order Date Key** , modificare la proprietà **Name Column** di questo attributo in **date. SimpleDate (WCHAR)**.  
+7.  Modificare la proprietà **Name** dell'attributo **date date Key** in `Due Date` , quindi, usando lo stesso metodo dell'attributo **Order Date Key** , modificare la proprietà **Name Column** di questo attributo in **date. SimpleDate (WCHAR)**.  
   
-8.  Modificare la proprietà **Name** dell'attributo **Ship Date Key** in `Ship Date`, quindi modificare la proprietà **Name Column** di questo attributo in **date. SimpleDate (WCHAR)**.  
+8.  Modificare la proprietà **Name** dell'attributo **Ship Date Key** in `Ship Date` , quindi modificare la proprietà **Name Column** di questo attributo in **date. SimpleDate (WCHAR)**.  
   
 9. Passare alla scheda **Azioni[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] di Progettazione cubi per il cubo ** Tutorial.  
   

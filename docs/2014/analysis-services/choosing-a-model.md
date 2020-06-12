@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 444bbf9c-cec8-460e-881d-38784fb146fa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bd75efa13d6761c058b9e3b1f1878036d3d3e928
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f3b1e504b7e027e888458b8cc2eaee169ca272f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088088"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527537"
 ---
 # <a name="choosing-a-model"></a>Scelta di un modello
   **Algoritmo di data mining:** L' *algoritmo* data mining è il meccanismo che consente di creare modelli dai dati. L'algoritmo definisce come vengono conteggiati i dati, come vengono derivate le relazioni e come vengono archiviati i modelli. La scelta di un algoritmo dipende parzialmente dal tipo di dati che si desidera analizzare. Alcuni algoritmi, ad esempio, possono essere utilizzati solo con numeri continui, mentre altri sono più adatti ad essere utilizzati con un numero limitato di valori distinct.  
@@ -75,7 +74,7 @@ ms.locfileid: "66088088"
   
      Consentono di riepilogare le sequenze o gli episodi frequenti nei dati, ad esempio i percorsi seguiti dagli utenti per l'esplorazione di un sito Web.  
   
- Gli algoritmi utilizzati dai componenti aggiuntivi Data mining di SQL Server per Office sono basati sugli algoritmi disponibili in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. È inoltre possibile utilizzare algoritmi di terze parti che siano conformi al OLE DB per la specifica di data mining, se [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] l'istanza di a cui si è connessi è stata configurata in modo da consentire algoritmi di terze parti.  
+ Gli algoritmi utilizzati dai componenti aggiuntivi Data mining di SQL Server per Office sono basati sugli algoritmi disponibili in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. È inoltre possibile utilizzare algoritmi di terze parti che siano conformi al OLE DB per la specifica di data mining, se l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a cui si è connessi è stata configurata in modo da consentire algoritmi di terze parti.  
   
 ## <a name="requirements"></a>Requisiti  
  Ciascun algoritmo differisce nel genere di dati con cui può essere utilizzato.  
@@ -116,7 +115,7 @@ ms.locfileid: "66088088"
 |Microsoft Sequence Clustering|Consente di identificare i cluster di eventi ordinati in modo analogo in una sequenza.<br /><br /> Offre una combinazione delle funzionalità di clustering e analisi delle sequenze.|Questo algoritmo è disponibile solo in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Tuttavia, nei componenti aggiuntivi Data mining per Office è possibile creare un modello che utilizza questo algoritmo creando una struttura, quindi aggiungendo manualmente un modello.<br /><br /> Per ulteriori informazioni, vedere la pagina relativa alla [modellazione avanzata &#40;componenti aggiuntivi Data mining per&#41;Excel ](advanced-modeling-data-mining-add-ins-for-excel.md).|  
 |Microsoft Time Series|Consente di analizzare dati temporali mediante un albero delle decisioni lineare.<br /><br /> È possibile utilizzare modelli per stimare valori futuri nelle serie temporali.|[Strumenti di analisi tabelle di previsione &#40;per Excel&#41;](forecast-table-analysis-tools-for-excel.md)<br /><br /> [Procedura guidata previsione &#40;componenti aggiuntivi Data mining per Excel&#41;](forecast-wizard-data-mining-add-ins-for-excel.md)|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Elementi inclusi nei componenti aggiuntivi Data mining per Office](what-s-included-in-the-data-mining-add-ins-for-office.md)  
   
   

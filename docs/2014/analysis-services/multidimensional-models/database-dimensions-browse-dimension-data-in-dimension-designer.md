@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d033e74c-f8ec-46a3-8dc7-1c1eb8574c23
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d553f0fbb7e8c4188ff8fec2ac292213547e43b3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb2a149c9e96af29b32f41153b340c2ab653c968
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075985"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547159"
 ---
 # <a name="browse-dimension-data-in-dimension-designer"></a>Esplorare i dati di una dimensione in Progettazione dimensioni
   È possibile esplorare i dati di una dimensione mediante la visualizzazione **Esplorazione** di Progettazione dimensioni, accessibile da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -36,7 +35,7 @@ ms.locfileid: "66075985"
     > [!NOTE]  
     >  È necessario che nella dimensione sia disponibile una traduzione definita per la lingua selezionata.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Introduzione alle dimensioni &#40;Analysis Services Dati multidimensionali&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](dimensions-in-multidimensional-models.md)  
   

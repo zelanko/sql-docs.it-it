@@ -1,5 +1,6 @@
 ---
 title: Funzione local-name (XQuery) | Microsoft Docs
+description: Informazioni su come usare la funzione XQuery local-name () per restituire la parte del nome locale di un nodo.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 382bbc9aeedacf37c7fe38abd592bcee7e154f5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3a10ab445bfcf9f61b7eb6c952100af9b6fadbb
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038867"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689567"
 ---
 # <a name="functions-on-nodes---local-name"></a>Funzioni su nodi - local-name
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ fn:local-name($arg as node()?) as xs:string
  *$arg*  
  Nome del nodo di cui verrà recuperata la parte local-name.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 -   In SQL Server, **FN: local-name ()** senza un argomento può essere usato solo nel contesto di un predicato dipendente dal contesto. In particolare, può essere utilizzata solo tra parentesi (`[ ]`).  
   
@@ -46,7 +47,7 @@ fn:local-name($arg as node()?) as xs:string
   
 -   Se il nodo di destinazione non dispone di un nome specifico, in quanto è un nodo di documento, un nodo di commento o un nodo di testo, la funzione restituisce la stringa di lunghezza zero.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
 ### <a name="a-retrieve-local-name-of-a-specific-node"></a>A. Recupero del nome locale di un nodo specifico  
@@ -81,7 +82,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- La query restituisce tutti gli elementi `Location` figlio <> dell'elemento <`root`>.  
+ La query restituisce tutti gli `Location` elementi figlio <> dell'elemento <`root`>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni sui nodi](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   

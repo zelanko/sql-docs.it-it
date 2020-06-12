@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: b6ec2439-caef-46d3-9fd7-5f4526cee334
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7a8532b20ae5b71a9ef2353893272c628b9a80b3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ce3bf2d5ad7df2b1cd74897b3b49c7cef97e8ed
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073674"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546123"
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>Utilizzo di membri, tuple e set (MDX)
   MDX offre numerose funzioni che restituiscono uno o più membri, tuple o set oppure eseguono operazioni su un membro, una tupla o un set.  
@@ -122,10 +121,10 @@ FROM [Adventure Works]
 ## <a name="numeric-functions"></a>Funzioni numeriche  
  Con una funzione numerica vengono eseguite operazioni su un'espressione MDX per la restituzione di un valore scalare. La funzione [Aggregate &#40;MDX&#41;](/sql/mdx/aggregate-mdx), ad esempio, restituisce un valore scalare calcolato mediante l'aggregazione di misure sulle tuple in un set specificato. Per altre informazioni sulle funzioni numeriche, vedere [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx).  
   
-## <a name="string-functions"></a>Funzioni stringa  
+## <a name="string-functions"></a>Funzioni di stringa  
  Con una funzione per i valori stringa vengono eseguite operazioni su un'espressione MDX per la restituzione di una stringa. La funzione [UniqueName &#40;MDX&#41;](/sql/mdx/uniquename-mdx), ad esempio, restituisce un valore stringa contenente il nome univoco di una dimensione, una gerarchia, un livello o un membro. Per altre informazioni sulle funzioni per i valori stringa, vedere [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Concetti chiave di MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Nozioni fondamentali sulle query MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
  [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  

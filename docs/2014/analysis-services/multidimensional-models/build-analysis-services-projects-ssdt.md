@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: caac03cb-b2b4-4652-8913-3dd39c4b0127
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 97e32b80d19675b3763101d1c226529a48e23e68
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e239176c970a73b5a110c47bca77d8963017487e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076776"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537343"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Compilare progetti di Analysis Services (SSDT)
   In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]la compilazione di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è molto simile alla compilazione di qualsiasi progetto di programmazione in Visual Studio. Quando si compila il progetto, nella directory di output viene creato un set di file XML. Questi file XML sono basati su Analysis Services Scripting Language (ASSL), il sottolinguaggio XML utilizzato dalle applicazioni client come [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per comunicare con un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] allo scopo di creare o modificare oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Questi file XML permettono di distribuire definizioni di oggetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un'istanza specificata di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -47,17 +46,17 @@ ms.locfileid: "66076776"
 |*Nomeprogetto*.configsettings|Contiene le impostazioni di configurazione usate durante la distribuzione, che possono essere modificate direttamente oppure usando la Distribuzione guidata [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ad esempio, la stringa di connessione per le origini dati).|  
 |*Nomeprogetto*.deploymenttargets|Contiene le impostazioni relative alla destinazione utilizzate durante la distribuzione, modificabili direttamente oppure nella Distribuzione guidata [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ad esempio, i nomi di server e database).|  
 |*Nomeprogetto*.deploymentoptions|Contiene diverse impostazioni di opzioni usate durante la distribuzione, che possono essere modificate direttamente oppure usando la Distribuzione guidata [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ad esempio, i percorsi di archiviazione).|  
-|*AssemblyName*/*dllname.* dll|Cartelle separate per ogni assembly a cui viene fatto riferimento, ognuna delle quali contiene la DLL per l'assembly, qualsiasi assembly di riferimento e qualsiasi file con estensione pdb associato per le informazioni di debug dell'output.|  
+|*AssemblyName* / *dllname.* dll|Cartelle separate per ogni assembly a cui viene fatto riferimento, ognuna delle quali contiene la DLL per l'assembly, qualsiasi assembly di riferimento e qualsiasi file con estensione pdb associato per le informazioni di debug dell'output.|  
   
 |File (nella cartella obj)|Descrizione|  
 |-----------------------------|-----------------|  
-|\<Nome configurazione> \LastBuilt.xml|Contiene il timestamp e il codice hash che identificano l'ultima compilazione del progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|\<Configuration Name>\LastBuilt.xml|Contiene il timestamp e il codice hash che identificano l'ultima compilazione del progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
- Questi file XML non contengono \<i tag create> \<e alter>, che vengono costruiti durante la distribuzione.  
+ Questi file XML non contengono \<Create> tag e \<Alter> , che vengono costruiti durante la distribuzione.  
   
  Nella directory di output vengono inoltre copiati gli assembly a cui viene fatto riferimento, ad eccezione degli assembly di sistema standard e di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . In presenza di riferimenti ad altri progetti di una soluzione, tali progetti vengono innanzitutto compilati, utilizzando la configurazione di progetto appropriata e le dipendenze di compilazione stabilite dai riferimenti ai progetti, e quindi copiati nella cartella di output del progetto.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Analysis Services linguaggio di scripting &#40;riferimento&#41; ASSL](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
  [Distribuire progetti di Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   

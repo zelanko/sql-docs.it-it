@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d0a44b59-ffbd-45fc-baa8-6b8046b1a2f5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9f0e4d1a384995c0c49c346102f8fddbcdf47f68
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84dd9e307279c83b955d6569571772414123f0f5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086786"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526475"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>Crea set di testing (Creazione guidata modello di data mining)
   Usare la pagina **Crea set di testing** per specificare la quantità di dati da usare per il training e la quantità di dati da riservare per l'uso come set di test. La separazione dei dati in set di training e set di testing durante la creazione di una struttura di data mining rende molto più facile la determinazione dell'accuratezza dei modelli di data mining che vengono creati successivamente.  
@@ -26,9 +25,9 @@ ms.locfileid: "66086786"
   
  Per impostazione predefinita, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] genera un valore di inizializzazione numerico che viene utilizzato per avviare il partizionamento. Questo valore di inizializzazione è basato sul nome della struttura di data mining. Per assicurarsi che la partizione non venga modificata se viene modificato il nome della struttura di data mining, è possibile specificare un valore per il valore di inizializzazione, configurando la proprietà HoldoutSeed della struttura di data mining. Se si modifica il valore di inizializzazione di controllo, è necessario rielaborare la struttura.  
   
- Se in seguito si vuole modificare la quantità di dati di testing o di training, è `HoldoutMaxCases` possibile `HoldoutMaxPercent` modificare le proprietà e nella struttura data mining usando la finestra **proprietà** . Tuttavia, dopo avere apportato la modifica è necessario rielaborare la struttura di data mining e tutti i modelli di data mining associati. Vengono applicate anche le seguenti limitazioni:  
+ Se in seguito si vuole modificare la quantità di dati di testing o di training, è possibile modificare le `HoldoutMaxCases` `HoldoutMaxPercent` proprietà e nella struttura data mining usando la finestra **proprietà** . Tuttavia, dopo avere apportato la modifica è necessario rielaborare la struttura di data mining e tutti i modelli di data mining associati. Vengono applicate anche le seguenti limitazioni:  
   
--   Il partizionamento di una struttura di data mining è supportato solo quando la struttura di data mining è archiviata in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Le versioni precedenti [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] di non supportano la memorizzazione nella cache delle informazioni sulle partizioni per le strutture di data mining.  
+-   Il partizionamento di una struttura di data mining è supportato solo quando la struttura di data mining è archiviata in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Le versioni precedenti di non [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supportano la memorizzazione nella cache delle informazioni sulle partizioni per le strutture di data mining.  
   
 -   Non è possibile partizionare una struttura di data mining se contiene una colonna Key Time, necessaria per i modelli di data mining della serie temporale.  
   
@@ -47,7 +46,7 @@ ms.locfileid: "66086786"
   
  Il valore predefinito è NULL. Ciò significa che non sono presenti limiti.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto della creazione guidata modello di data mining &#40;Analysis Services-&#41;di data mining](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Suggerisci colonne correlate &#40;creazione guidata modello di data mining&#41;](suggest-related-columns-data-mining-wizard.md)   
  [Impostazione tipi di tabella &#40;creazione guidata modello di data mining&#41;](specify-table-types-data-mining-wizard.md)   

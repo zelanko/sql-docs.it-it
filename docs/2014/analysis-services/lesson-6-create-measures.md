@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 01bd2ad7-09b7-49ae-ad80-83f25da301aa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ef207028ab1b4f6bc084f3f4e515ae37630b771d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef487927098e63c7fc870aa65e55f57faa26767d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078425"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542563"
 ---
 # <a name="lesson-7-create-measures"></a>Lezione 7: Creare misure
   In questa lezione verranno create misure da includere nel modello. Analogamente alle colonne calcolate create nella lezione precedente, una misura è essenzialmente un calcolo creato utilizzando una formula DAX. A differenza delle colonne calcolate, tuttavia, le misure vengono valutate in base a un *filtro*selezionato dall'utente, ad esempio una colonna o un filtro dei dati specifico aggiunto al campo Etichette di riga in una tabella pivot.   Con la misura applicata viene quindi calcolato un valore per ogni cella nel filtro. Le misure sono calcoli potenti e flessibili che può essere utile includere in pressoché tutti i modelli tabulari per eseguire calcoli dinamici sui dati numerici. Per altre informazioni, vedere [Misure &#40;SSAS tabulare&#41;](tabular-models/measures-ssas-tabular.md).  
@@ -49,7 +48,7 @@ ms.locfileid: "66078425"
   
      Si noti che la cella in alto a sinistra contiene ora un nome di misura, **Measure 1**, seguito dal risultato **30**. Il nome di misura precede inoltre la formula sulla barra della formula.  
   
-5.  Per rinominare la misura, nella barra della formula evidenziare il nome, **Measure 1**, quindi digitare `Days Current Quarter to Date`, quindi premere INVIO.  
+5.  Per rinominare la misura, nella barra della formula evidenziare il nome, **Measure 1**, quindi digitare `Days Current Quarter to Date` , quindi premere INVIO.  
   
     > [!TIP]  
     >  Quando si digita una formula sulla barra della formula, è anche possibile digitare innanzitutto il nome della misura seguito dai due punti (:), quindi uno spazio e infine la formula. Utilizzando questo metodo, non è necessario rinominare la misura.  

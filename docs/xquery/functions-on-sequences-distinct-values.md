@@ -1,5 +1,6 @@
 ---
 title: Funzione distinct-values (XQuery) | Microsoft Docs
+description: Informazioni su come usare la funzione distinct-values in un'espressione XQuery per rimuovere i valori duplicati da una sequenza.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f4c2bb53-2bec-4f1a-9c00-cf997fb7ae5b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2f856c9b351c776651f08e66f90c7f567a5dcfc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c6e52209713ca94ab9cecc9f3c7910b6fc76ce9
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68223728"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215824"
 ---
 # <a name="functions-on-sequences---distinct-values"></a>Funzioni su sequenze - distinct-values
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,14 +39,14 @@ fn:distinct-values($arg as xdt:anyAtomicType*) as xdt:anyAtomicType*
  *$arg*  
  Sequenza di valori atomici.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Tutti i tipi di valori atomizzati passati a **distinct-values ()** devono essere sottotipi dello stesso tipo di base. I tipi di base accettati sono i tipi che supportano l'operazione **EQ** . Tra questi tipi sono inclusi i tre tipi di base numerici predefiniti, ovvero i tipi di base di data/ora xs:string, xs:boolean e xdt:untypedAtomic. Per i valori di tipo xdt:untypedAtomic viene eseguito il cast a xs:string. In presenza di una combinazione di questi tipi o nel caso in cui vengano passati altri valori di altri tipi, viene restituito un errore statico.  
   
  Il risultato di **distinct-values ()** riceve il tipo di base dei tipi passati, ad esempio xs: String nel caso di xdt: untypedAtomic, con la cardinalità originale. Se l'input è una sequenza vuota calcolata in modo statico, la sequenza vuota è implicita e viene restituito un errore statico.  
   
  I valori di tipo xs:string vengono confrontati con le regole di confronto dei punti di codice Unicode predefinite XQuery.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
 ### <a name="a-using-the-distinct-values-function-to-remove-duplicate-values-from-the-sequence"></a>A. Utilizzo della funzione distinct-values() per rimuovere valori duplicati dalla sequenza  

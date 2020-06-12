@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8bf766c6f0a7fd757b280b0f950a43cfdc025929
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 544071565a18ade74b3dd4f26945991987295cbc
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928422"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669601"
 ---
 # <a name="select-dmx"></a>SELECT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,11 +46,11 @@ FROM <model/structure>[.aspect]
 SELECT FLATTENED <select list> FROM ...  
 ```  
   
-## <a name="top-n-and-order-by"></a>PRIMI \<n> e order by  
- È possibile ordinare i risultati di una query utilizzando un'espressione e può restituire un subset dei risultati utilizzando una combinazione delle clausole **Order by** e **Top** . Questo è utile ad esempio in uno scenario di mailing diretto in cui si desidera inviare i risultati solo ai destinatari che hanno la maggiore probabilità di rispondere. È possibile ordinare i risultati di una query di stima mailing di destinazione in base alla probabilità di stima, quindi restituire solo \<i primi n> risultati.  
+## <a name="top-n-and-order-by"></a>PRIMI \< n> e order by  
+ È possibile ordinare i risultati di una query utilizzando un'espressione e può restituire un subset dei risultati utilizzando una combinazione delle clausole **Order by** e **Top** . Questo è utile ad esempio in uno scenario di mailing diretto in cui si desidera inviare i risultati solo ai destinatari che hanno la maggiore probabilità di rispondere. È possibile ordinare i risultati di una query di stima mailing di destinazione in base alla probabilità di stima, quindi restituire solo i primi \< n> risultati.  
   
 ## <a name="select-list"></a>Elenco di selezione  
- L' * \<elenco di selezione>* può includere riferimenti a colonne scalari, funzioni di stima ed espressioni. Le opzioni disponibili variano in base all'algoritmo e ai contesti seguenti:  
+ L' * \< elenco di selezione>* può includere riferimenti a colonne scalari, funzioni di stima ed espressioni. Le opzioni disponibili variano in base all'algoritmo e ai contesti seguenti:  
   
 -   È in corso l'esecuzione di una query su una struttura di data mining o su un modello di data mining  
   
@@ -76,7 +76,7 @@ JOIN <source data query>
 ```  
   
 ## <a name="where"></a>WHERE  
- È possibile limitare i case restituiti dalla query utilizzando una clausola **where** . La clausola **where** specifica che i riferimenti di colonna nell'espressione **where** devono avere la stessa semantica dei riferimenti di colonna nell'elenco di * \<selezione>* dell'istruzione **Select** e possono restituire solo un'espressione booleana. La sintassi per la clausola **where** è la seguente:  
+ È possibile limitare i case restituiti dalla query utilizzando una clausola **where** . La clausola **where** specifica che i riferimenti di colonna nell'espressione **where** devono avere la stessa semantica dei riferimenti di colonna nell' * \< elenco di selezione>* dell'istruzione **Select** e possono restituire solo un'espressione booleana. La sintassi per la clausola **where** è la seguente:  
   
 ```  
 WHERE < condition expression >  
@@ -126,7 +126,7 @@ SELECT FROM PREDICTION JOIN (<SELECT statement>) AS t, WHERE <SELECT statement>
   
  [Selezionare una&#62; struttura &#60;. CASI](../dmx/select-from-structure-cases.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Le estensioni di data mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
  [Le estensioni di data mining &#40;DMX&#41; le istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
  [Guida di riferimento alle istruzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)   

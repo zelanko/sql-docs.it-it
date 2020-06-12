@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5f591a5a8c8099e496c10958b43694e98ae7a24b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 322b755357da597d3bdcb41e4a83685075f4d991
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077025"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544641"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Backup e ripristino di database di Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è disponibile una funzionalità di backup e ripristino per poter eseguire il recupero temporizzato di un database e dei relativi oggetti. Tale funzionalità rappresenta anche una tecnica valida per l'esecuzione della migrazione dei database a server aggiornati, per lo spostamento di database tra server o per la distribuzione di un database in un server di produzione. Per il recupero dei dati, se non è già disponibile un piano di backup per i dati importanti, è consigliabile progettarlo e implementarlo appena possibile.  
@@ -123,7 +122,7 @@ ms.locfileid: "66077025"
   
  Per altre informazioni sul ripristino di un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vedere [Opzioni di ripristino](restore-options.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Backup, ripristino e sincronizzazione di database &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)   
  [PowerShell per Analysis Services](../analysis-services-powershell.md)  
   

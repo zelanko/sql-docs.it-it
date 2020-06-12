@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8bb8c318-e85f-4fd6-b32b-4cdfb13ca1b5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e57aee7142da5c256a213ddd2eb0390a0f3b042a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa763516511f3d2fd68ca5275cdeb6fe0af7d57b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070855"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547670"
 ---
 # <a name="prediction-calculator-table-analysis-tools-for-excel"></a>Calcolo stime (Strumenti di analisi tabelle per Excel)
   ![Strumento Calcolo stime](media/tat-predcal.gif "Strumento Calcolo stime")  
@@ -73,12 +72,12 @@ ms.locfileid: "66070855"
 -   In questa sezione vengono descritte le informazioni incluse in ogni report e viene illustrato come utilizzare le varie opzioni dei report.  
   
 ### <a name="prediction-report-with-graphs"></a>Report di stima con grafici  
- Il primo report di stima è denominato **Calcolo stime report per lo \<stato di destinazione> della \<>degli attributi di destinazione **. Questo report contiene una tabella di fattori derivati dall'analisi, insieme agli strumenti che consentono di valutare l'impatto finanziario di una determinata analisi.  
+ Il primo report di stima è denominato **Calcolo stime report per il \<target state> di \<target attribute> **. Questo report contiene una tabella di fattori derivati dall'analisi, insieme agli strumenti che consentono di valutare l'impatto finanziario di una determinata analisi.  
   
 #### <a name="table-for-specifying-costs-and-profits"></a>Tabella per la specifica di costi e profitti  
  Il primo strumento di questo report, che si trova in alto a sinistra nel report, è una tabella in cui è possibile specificare i costi e i profitti associati alla stima corretta e non corretta di un valore.  Questi costi e profitti sono necessari per calcolare il valore di soglia ottimale per il punteggio per lo strumento di calcolo.  
   
-|Item|Descrizione ed esempio|  
+|Elemento|Descrizione ed esempio|  
 |----------|-----------------------------|  
 |Costo falso positivo|Costo da sostenere quando si presuppone che il modello abbia stimato correttamente un risultato positivo mentre in realtà la stima è errata.<br /><br /> Questo avviene, ad esempio, quando tramite il modello viene stimato che un cliente acquisterà un determinato oggetto e, in base a tale stima, si concepisce una campagna destinata a tale cliente. In questo caso è possibile immettere in questo campo il costo sostenuto per raggiungere il cliente.|  
 |Costo falso negativo|Costo da sostenere quando si presuppone che il modello abbia stimato correttamente un risultato negativo mentre in realtà la stima è errata.<br /><br /> Questo avviene, ad esempio, quando tramite il modello viene stimato che è improbabile che i clienti meno giovani acquistino una bicicletta, ma ci si accorge di una distorsione del modello a causa della quale si è persa l'opportunità di rivolgersi ai clienti meno giovani. In questo caso è possibile immettere in questo campo il costo legato all'opportunità persa.|  
@@ -97,7 +96,7 @@ ms.locfileid: "66070855"
   
  I valori nella colonna **Impact relativa** sono probabilità, rappresentati come percentuali. La cella è ombreggiata per rappresentare visivamente l'impatto di questo valore sui risultati.  
   
-|Attributo|valore|Impatto relativo|  
+|Attributo|Valore|Impatto relativo|  
 |---------------|-----------|---------------------|  
 |Marital Status|Married|0|  
 |Marital Status|Single|71|  
@@ -120,20 +119,20 @@ ms.locfileid: "66070855"
  Anche se, ad esempio, il primo grafico suggerisce che rivolgendosi ai primi 500 clienti stimati dal modello è possibile ottenere il massimo profitto, dopo aver analizzato il secondo grafico è possibile stabilire che i costi da sostenere rivolgendosi ai clienti errati sono troppo elevati e decidere pertanto di limitare la campagna di marketing ai primi 400 clienti.  
   
 ### <a name="interactive-prediction-calculator"></a>Calcolo stime interattivo  
- Il secondo foglio di lavorazione creato dallo strumento Calcolo stime è denominato **Calcolo stime per lo \<stato di destinazione> \<dell'attributo di destinazione>**. Si tratta di un foglio di lavoro interattivo che è possibile utilizzare per calcolare i singoli punteggi. Poiché in questo foglio di lavoro vengono utilizzati modelli e statistiche archiviati nel modello, è possibile provare a utilizzare valori diversi e vedere in che modo questi influiscono sul punteggio stimato. Anche questo report è costituito da due sezioni, una interattiva e una fornita come riferimento.  
+ Il secondo foglio di lavorazione creato dallo strumento Calcolo stime è denominato **Calcolo stime per il \<target state> di \<target attribute> **. Si tratta di un foglio di lavoro interattivo che è possibile utilizzare per calcolare i singoli punteggi. Poiché in questo foglio di lavoro vengono utilizzati modelli e statistiche archiviati nel modello, è possibile provare a utilizzare valori diversi e vedere in che modo questi influiscono sul punteggio stimato. Anche questo report è costituito da due sezioni, una interattiva e una fornita come riferimento.  
   
 #### <a name="first-table"></a>Prima tabella  
  È possibile selezionare o digitare un nuovo valore nella colonna **valore** della tabella per vedere come la modifica del valore influisca sul punteggio.  
   
  Se, ad esempio, il report contiene i valori seguenti, è possibile ridurre il valore di Cars a 1, quindi a 0 per vedere in che modo questo valore influisce sul comportamento di acquisto del cliente. Quando si imposta il valore di **Cars** su 0, la stima nella parte inferiore diventa true.  
   
-|Attributo|valore|Impatto relativo|  
+|Attributo|Valore|Impatto relativo|  
 |---------------|-----------|---------------------|  
 |Marital Status|Married|0|  
 |Sesso|Male|0|  
 |Income|39050-71062|117|  
 |Children|0|157|  
-|Formazione|Bachelors|22|  
+|Education|Bachelors|22|  
 |Occupation|Skilled Manual|33|  
 |Home Owner|Sì|8|  
 |Cars|2|50|  
@@ -152,11 +151,11 @@ ms.locfileid: "66070855"
  In questa tabella sono indicati i singoli punteggi per ogni possibile stato delle colonne di input e l'impatto relativo del punteggio sui risultati. Questa tabella è statica e serve solo come riferimento.  
   
 ### <a name="printable-prediction-calculator"></a>Calcolo stime stampabile  
- Il terzo foglio di calcolo creato dallo strumento Calcolo stime è denominato **PrintablePrediction Calculator per lo \<stato di destinazione> \<dell'attributo di destinazione>**. Questa scorecard può essere stampata e utilizzata per calcolare manualmente i punteggi quando non si è al computer.  
+ Il terzo foglio di calcolo creato dallo strumento Calcolo stime è denominato **PrintablePrediction Calculator per il \<target state> di \<target attribute> **. Questa scorecard può essere stampata e utilizzata per calcolare manualmente i punteggi quando non si è al computer.  
   
 ##### <a name="to-print-and-use-the-scoring-report-generated-by-the-prediction-calculator"></a>Per stampare e utilizzare il report per l'assegnazione dei punteggi generato da Calcolo stime  
   
-1.  Fare clic sulla scheda denominata **stampabile Calcolo stime per \<attributo>**.  
+1.  Fare clic sulla scheda denominata **Calcolo stime stampabile per \<attribute> **.  
   
 2.  Scegliere **Anteprima di stampa**dal menu file di Excel.  
   
@@ -175,9 +174,9 @@ ms.locfileid: "66070855"
 8.  Convertire il punteggio in un risultato stimato usando i criteri stampati nel foglio immediatamente dopo la riga del **totale** .  
   
 ## <a name="related-tools"></a>Strumenti correlati  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornisce l'algoritmo Microsoft Logistic Regression per l'utilizzo con questo tipo di analisi. Se si ha già familiarità con la regressione logistica, è possibile creare facilmente modelli di regressione logistica utilizzando l'opzione **Avanzate** del client di data mining per Excel. Per ulteriori informazioni, vedere la pagina relativa alla [modellazione avanzata &#40;componenti aggiuntivi Data mining per&#41;Excel ](advanced-modeling-data-mining-add-ins-for-excel.md). Per ulteriori informazioni sulle opzioni e sui parametri per i modelli di regressione logistica, vedere l'argomento "algoritmo di regressione logistica [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Microsoft" nella documentazione online di.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornisce l'algoritmo Microsoft Logistic Regression per l'utilizzo con questo tipo di analisi. Se si ha già familiarità con la regressione logistica, è possibile creare facilmente modelli di regressione logistica utilizzando l'opzione **Avanzate** del client di data mining per Excel. Per ulteriori informazioni, vedere la pagina relativa alla [modellazione avanzata &#40;componenti aggiuntivi Data mining per&#41;Excel ](advanced-modeling-data-mining-add-ins-for-excel.md). Per ulteriori informazioni sulle opzioni e sui parametri per i modelli di regressione logistica, vedere l'argomento "algoritmo di regressione logistica Microsoft" nella [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] documentazione online di.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Strumenti di analisi tabelle per Excel](table-analysis-tools-for-excel.md)  
   
   

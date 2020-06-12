@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f8a31fd2e6659f4d971ebb30bad7b2876dafa6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6c55141db6491fe1532dfcdc37a6d7a688c7274
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493947"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543363"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Utilizzo di una versione modificata del progetto Analysis Services Tutorial
   Le lezioni rimanenti di questa esercitazione sono basate su una versione migliorata del progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial completato nelle prime tre lezioni. Altre tabelle e calcoli denominati sono stati aggiunti alla vista origine dati **Adventure Works DW 2012** ; sono state aggiunte altre dimensioni al progetto e al cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. Infine, è stato aggiunto un secondo gruppo di misure contenente le misure di una seconda tabella dei fatti. Il progetto migliorato consente di approfondire la conoscenza delle tecniche per l'aggiunta di funzionalità alla propria applicazione di Business Intelligence senza la necessità di tornare su informazioni già acquisite.  
@@ -40,7 +39,7 @@ ms.locfileid: "69493947"
   
 ## <a name="loading-and-processing-the-enhanced-project"></a>Caricamento ed elaborazione del progetto migliorato  
   
-1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]scegliere **Chiudi soluzione** dal menu **file** per chiudere i file che non verranno utilizzati.  
+1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] scegliere **Chiudi soluzione** dal menu **file** per chiudere i file che non verranno utilizzati.  
   
 2.  Scegliere **Apri** dal menu **File**e fare clic su **Progetto/Soluzione**.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "69493947"
 ### <a name="data-source-view"></a>Vista origine dati  
  Nella vista origine dati del progetto migliorato è inclusa un'ulteriore tabella dei fatti e quattro tabelle delle dimensioni aggiuntive del database [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
   
- Si noti che con dieci tabelle nella vista origine dati, tutte \<le tabelle> diagramma sta diventando affollato. Di conseguenza, risulta difficile individuare sia le relazioni tra le tabelle che tabelle specifiche. Per risolvere questo problema, le tabelle vengono organizzate in due diagrammi logici, ovvero **Internet Sales** e **Reseller Sales** . Ogni diagramma è organizzato in base a una singola tabella dei fatti. La creazione di diagrammi logici consente di visualizzare e utilizzare un subset specifico delle tabelle in una vista origine dati anziché visualizzare sempre tutte le tabelle e le relative relazioni in un unico diagramma.  
+ Si noti che con dieci tabelle nella vista origine dati, il diagramma \<All Tables> risulta molto pieno. Di conseguenza, risulta difficile individuare sia le relazioni tra le tabelle che tabelle specifiche. Per risolvere questo problema, le tabelle vengono organizzate in due diagrammi logici, ovvero **Internet Sales** e **Reseller Sales** . Ogni diagramma è organizzato in base a una singola tabella dei fatti. La creazione di diagrammi logici consente di visualizzare e utilizzare un subset specifico delle tabelle in una vista origine dati anziché visualizzare sempre tutte le tabelle e le relative relazioni in un unico diagramma.  
   
 #### <a name="internet-sales-diagram"></a>Diagramma Internet Sales  
  Il diagramma **Internet Sales** contiene le tabelle relative alla vendita dei prodotti [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] direttamente ai clienti tramite Internet. Le tabelle del diagramma sono le quattro tabelle delle dimensioni e una sola tabella dei fatti aggiunte alla vista origine dati di **Adventure Works DW 2012** nella Lezione 1. Le tabelle sono le seguenti:  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4865192e-f46b-4ce5-b51c-9e08dbad5b85
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 29e569ec781d0015017d3009746c3299f0865c80
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a1de8b9a3431d79573cd916fa7273b6d8fa7f0b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074363"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546377"
 ---
 # <a name="manipulating-data-mdx"></a>Manipolazione dei dati (MDX)
 
@@ -43,6 +42,6 @@ Also, I had to add its leading '|' character, for consistency to aid bulk automa
 GeneMi , 2019/01/19
 -->
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [Nozioni fondamentali sulle query MDX (Analysis Services)](mdx-query-fundamentals-analysis-services.md)

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1e39c910-5c10-4624-be27-ca02a461b46b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b5c5f1389e0761ba0665e37e842b23b58c70cfe2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a922f23cf667068ff51c315563b8fc3b35fceefe
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082533"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528993"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Vista origine dati (scheda Struttura cubo, Progettazione cubo) (Analysis Services - Dati multidimensionali)
   Utilizzare il riquadro **Vista origine dati** per visualizzare tabelle e colonne della vista origine dati associate al cubo selezionato. Il riquadro **Vista origine dati** consente di creare misure e gruppi di misure trascinando le colonne disponibili nel riquadro **Misure** .  
@@ -136,7 +135,7 @@ ms.locfileid: "66082533"
  **Proprietà**  
  Consente di visualizzare la finestra **Proprietà** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] relativa alla relazione selezionata.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Barra degli strumenti &#40;scheda Struttura cubo, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
  [Misure &#40;scheda Struttura cubo, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
  [Dimensioni &#40;scheda Struttura cubo, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   

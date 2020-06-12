@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7f811e02-0fe6-45c9-a7b7-29c61032d96b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 866bdea710033a0cfa3bdadb34282c96c810d730
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69f68beecc8f4ce7f8f4da3e36f2f9f400575c9d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072400"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541263"
 ---
 # <a name="name-matching-data-source-view-wizard-analysis-services"></a>Corrispondenza nomi (Configurazione guidata vista origine dati) (Analysis Services)
   Utilizzare la pagina **Corrispondenza nomi** per selezionare il criterio da utilizzare per il rilevamento delle possibili relazioni esistenti tra le tabelle selezionate per la vista origine dati e le altre tabelle dello schema. Se non esistono relazioni fisiche di chiave esterna tra le tabelle, questo criterio consente all'utente di identificare e aggiungere tabelle correlate alla vista origine dati. Anche le relazioni logiche identificate mediante la corrispondenza dei nomi vengono aggiunte alla vista origine dati.  
@@ -32,7 +31,7 @@ ms.locfileid: "66072400"
  **Corrispondenze chiavi esterne**  
  Consente di selezionare il criterio da utilizzare per la creazione di relazioni logiche tra le tabelle e le viste dell'origine dei dati. I caratteri non alfanumerici contenuti nelle stringhe di corrispondenza vengono ignorati. Ad esempio, le stringhe "Customer ID", "Customer_ID" e "CustomerID" corrispondono. Selezionare una delle opzioni riportate nella tabella seguente per creare relazioni in base alle condizioni specificate.  
   
-|Select|Per creare|  
+|Seleziona|Per creare|  
 |------------|---------------|  
 |**Stesso nome della chiave primaria**|Una relazione logica a qualsiasi tabella che dispone di un nome di colonna che corrisponde alla colonna chiave primaria nella tabella selezionata.|  
 |**Stesso nome della tabella di destinazione**|Una relazione logica a qualsiasi tabella che dispone di un nome di colonna che corrisponde al nome di una tabella selezionata.|  

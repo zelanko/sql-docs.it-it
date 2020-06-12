@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c0b0abaa-5c9b-4182-9d5f-fc16cd941d54
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6fb2888ba5cba2d3ab2701d934f83dc55cf362ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f909dae8db02007ee69a240d0b29c6c5cc566d8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077436"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544843"
 ---
 # <a name="bind-an-attribute-to-a-key-column"></a>Associare un attributo a una colonna chiave
   In questo argomento viene descritta la procedura per modificare l'impostazione della proprietà `Name` di un attributo in una dimensione.  
@@ -35,6 +34,6 @@ ms.locfileid: "66077436"
 4.  Digitare il nuovo nome.  
   
     > [!NOTE]  
-    >  È inoltre possibile impostare la `Name` proprietà di un attributo selezionato nella finestra **Proprietà** di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+    >  È inoltre possibile impostare la `Name` proprietà di un attributo selezionato nella finestra **Proprietà** di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
   
   

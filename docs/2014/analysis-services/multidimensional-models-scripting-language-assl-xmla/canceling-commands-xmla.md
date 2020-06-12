@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: b59f8197-c33d-4e65-9022-848ccba540f5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 80bddac8f800c1b9394c1ed605007ab0f2137b88
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 003c70362c38ae1838b4679abf6485fa031a9143
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727465"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545063"
 ---
 # <a name="canceling-commands-xmla"></a>Annullamento di comandi (XMLA)
   A seconda delle autorizzazioni amministrative dell'utente che ha emesso il comando, il comando [Annulla](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla) in XML for Analysis (XMLA) può annullare un comando in una sessione, una sessione, una connessione, un processo server o una sessione o una connessione associata.  
@@ -44,7 +43,7 @@ ms.locfileid: "62727465"
 ## <a name="canceling-sessions"></a>Annullamento di sessioni  
  Specificando un identificatore di sessione per una sessione esplicita nella proprietà [SessionID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) del `Cancel` comando, un amministratore del database o un amministratore del server può annullare una sessione, incluso il comando attualmente in esecuzione. Un amministratore di database può annullare solo sessioni per i database per i quali dispone delle autorizzazioni amministrative.  
   
- Un amministratore di database può recuperare le sessioni attive per un database specifico recuperando il set di righe dello schema DISCOVER_SESSIONS. Per recuperare il set di righe dello schema DISCOVER_SESSIONS, l'amministratore del `Discover` database utilizza il metodo XMLA e specifica l'identificatore di database appropriato per la colonna di restrizione `Discover` SESSION_CURRENT_DATABASE nella proprietà [restrictions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/restrictions-element-xmla) del metodo.  
+ Un amministratore di database può recuperare le sessioni attive per un database specifico recuperando il set di righe dello schema DISCOVER_SESSIONS. Per recuperare il set di righe dello schema DISCOVER_SESSIONS, l'amministratore del database utilizza il `Discover` metodo XMLA e specifica l'identificatore di database appropriato per la colonna di restrizione SESSION_CURRENT_DATABASE nella proprietà [restrictions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/restrictions-element-xmla) del `Discover` metodo.  
   
 ## <a name="canceling-connections"></a>Annullamento di connessioni  
  Specificando un identificatore di connessione nella proprietà [ConnectionId](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/connectionid-element-xmla) del `Cancel` comando, un amministratore del server può annullare tutte le sessioni associate a una determinata connessione, inclusi tutti i comandi in esecuzione, e annullare la connessione.  
@@ -60,7 +59,7 @@ ms.locfileid: "62727465"
 ## <a name="canceling-associated-sessions-and-connections"></a>Annullamento di sessioni e connessioni associate  
  È possibile impostare la proprietà [CancelAssociated](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cancelassociated-element-xmla) su true per annullare le connessioni, le sessioni e i comandi associati alla connessione, alla sessione o allo SPID specificati nel `Cancel` comando.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Metodo Discover &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover)   
  [Sviluppo con XMLA in Analysis Services](developing-with-xmla-in-analysis-services.md)  
   

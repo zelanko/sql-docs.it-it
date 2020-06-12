@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7bc06d5ece0b81ff3da9d41abb31e2c864a29f5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f0a1dcf4793244a17bb52b38894bba2cb06d219
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083124"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520877"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>Requisiti e considerazioni sull'elaborazione (data mining)
   In questo argomento vengono illustrate alcune considerazioni tecniche da tenere presenti quando si elaborano oggetti di data mining. Per una spiegazione generale dell'elaborazione e della modalità di applicazione al data mining, vedere [Elaborazione di oggetti di data mining](processing-data-mining-objects.md).  
@@ -39,7 +38,7 @@ ms.locfileid: "66083124"
   
  Quando si elabora il modello, quest'ultimo non legge nuovamente i dati dall'origine dati, ma ne ottiene il riepilogo dalla struttura di data mining. Utilizzando il cubo creato e i dati dell'indice e del case memorizzati nella cache, nel server vengono creati thread indipendenti per eseguire il training dei modelli.  
   
- Per ulteriori informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supportano l'elaborazione parallela dei modelli, vedere [funzionalità supportate dalle edizioni di SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (.https://go.microsoft.com/fwlink/?linkid=232473)  
+ Per ulteriori informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supportano l'elaborazione parallela dei modelli, vedere [funzionalità supportate dalle edizioni di SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) ( https://go.microsoft.com/fwlink/?linkid=232473) .  
   
 ##  <a name="processing-mining-structures"></a><a name="bkmk_ProcessStructures"></a>Elaborazione di strutture di data mining  
  È possibile elaborare una struttura di data mining insieme a tutti i modelli dipendenti o separatamente. L'elaborazione di una struttura di data mining separatamente dai modelli può essere utile quando si prevede che l'elaborazione di alcuni modelli richieda molto tempo e si desidera rinviare tale operazione.  
@@ -86,7 +85,7 @@ ms.locfileid: "66083124"
   
  Per altre informazioni, vedere [Esportare e importare gli oggetti di data mining](export-and-import-data-mining-objects.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Strutture di data mining &#40;Analysis Services-&#41;di data mining](mining-structures-analysis-services-data-mining.md)   
  [Strutture di data mining &#40;Analysis Services-&#41;di data mining](mining-structures-analysis-services-data-mining.md)   
  [Elaborazione di oggetti del modello multidimensionale](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  

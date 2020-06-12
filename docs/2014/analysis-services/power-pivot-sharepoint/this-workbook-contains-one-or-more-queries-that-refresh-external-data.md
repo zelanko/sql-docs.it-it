@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aa65c992-eb41-4032-9e11-a9ba871b6a3c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 925821cba91a8a62076f0dcfa327453d035671d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e13b648b35cb0a6b6d9272ec9a2b9d560c3c7f4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070966"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547743"
 ---
 # <a name="this-workbook-contains-one-or-more-queries-that-refresh-external-data"></a>La cartella di lavoro contiene una o più query che aggiornano dati esterni.
   Per le cartelle di lavoro di Excel contenenti dati PowerPivot, in Excel Services viene visualizzato questo avviso quando vengono rilevate le informazioni di connessione e viene richiesto di abilitare o disabilitare le query per questa cartella di lavoro.  

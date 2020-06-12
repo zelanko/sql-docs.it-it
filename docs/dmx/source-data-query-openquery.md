@@ -4,18 +4,18 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: caac43eb176e17a6e92e487f3dedae71a252f5af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d8e3b85f3d18b25f9dda1ef4f442ec0822257fae
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68887722"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670028"
 ---
-# <a name="ltsource-data-querygt---openquery"></a>&lt;query&gt; sui dati di origine-OPENQUERY
+# <a name="ltsource-data-querygt---openquery"></a>&lt;query sui dati &gt; di origine-OPENQUERY
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Sostituisce la query sui dati dell'origine con una query su un'origine dei dati esistente. Le istruzioni INSERT, SELECT FROM PREDICtion JOIN e SELECT FROM NATURAL PREDICtion join supportano **OPENQUERY**.  
@@ -34,7 +34,7 @@ OPENQUERY(<named datasource>, <query syntax>)
  *sintassi di query*  
  Sintassi di una query che restituisce un set di righe.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **OPENQUERY** fornisce un modo più sicuro per accedere ai dati esterni, supportando le autorizzazioni dell'origine dati. Poiché la stringa di connessione viene archiviata nell'origine dati, gli amministratori possono utilizzare le proprietà dell'origine dati per gestire l'accesso ai dati. Per ulteriori informazioni sulle origini dati, vedere [origini dati supportate &#40;SSAS-&#41;multidimensionale ](https://docs.microsoft.com/analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional).  
   
  È possibile ottenere un elenco delle origini dati disponibili in un server eseguendo una query sul set di righe dello schema **MDSCHEMA_INPUT_DATASOURCES** . Per ulteriori informazioni sull'utilizzo di **MDSCHEMA_INPUT_DATASOURCES**, vedere [MDSCHEMA_INPUT_DATASOURCES set di righe](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset).  
@@ -43,7 +43,7 @@ OPENQUERY(<named datasource>, <query syntax>)
   
  `SELECT * FROM $system.MDSCHEMA_INPUT_DATASOURCES`  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene utilizzata l'origine dati MyDS già definita nel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database per creare una connessione al [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] database ed eseguire una query sulla vista **vTargetMail** .  
   
 ```  

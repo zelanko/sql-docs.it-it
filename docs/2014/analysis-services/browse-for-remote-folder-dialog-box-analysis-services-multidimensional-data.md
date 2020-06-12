@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1438c355-6a2c-4cf8-9b1d-19116fab45e7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 23b0125ab578ebb4fb8837c95ec61db900880ec6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a4b8978c895d1da2b9e63f4e66a39f2f0fff478
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064525"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527811"
 ---
 # <a name="browse-for-remote-folder-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Cerca cartella remota (Analysis Services - Dati multidimensionali)
   Nella finestra di dialogo **Cerca cartella remota** viene visualizzato un elenco di cartelle di dati e log disponibili definite per un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. È possibile selezionare una delle cartelle incluse nell'elenco oppure specificarne un'altra. Per visualizzare la finestra di dialogo **Cerca cartella remota** , eseguire uno dei passaggi seguenti:  
@@ -37,7 +36,7 @@ ms.locfileid: "66064525"
  **Percorso selezionato**  
  Consente di modificare il percorso selezionato in **Selezionare la cartella**oppure di selezionare una cartella non inclusa in tale **** elenco.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Posizioni di elaborazione e archiviazione &#40;creazione guidata partizione&#41;](processing-and-storage-locations-partition-wizard.md)   
  [Partizioni &#40;finestra di dialogo Ripristina database&#41; &#40;Analysis Services Dati multidimensionali&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   

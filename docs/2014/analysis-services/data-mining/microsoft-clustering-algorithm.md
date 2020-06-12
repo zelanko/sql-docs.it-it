@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 92a1e67e-f46e-4960-99b2-4d20f6192fbd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d6edc91257b31703573923ae8d7e63f2e1ccf1c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dc1a06de710276d5f8b60a44d0f1259026a9a973
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174705"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522126"
 ---
 # <a name="microsoft-clustering-algorithm"></a>Algoritmo Microsoft Clustering
   L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering è un algoritmo di segmentazione incluso in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. L'algoritmo utilizza tecniche iterative per raggruppare i case di un set di dati in cluster con caratteristiche simili. Tali raggruppamenti sono utili per l'esplorazione dei dati, l'identificazione delle relative anomalie e la creazione di stime.
@@ -73,7 +72,7 @@ ms.locfileid: "78174705"
 
  Per informazioni sulla creazione di query in base a un modello di data mining, vedere [Query di data mining](data-mining-queries.md). Per alcuni esempi su come usare le query con un modello di clustering, vedere [Esempi di query sul modello di clustering](clustering-model-query-examples.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 -   Supporta l'utilizzo del linguaggio PMML (Predictive Model Markup Language) per la creazione di modelli di data mining.
 
@@ -81,7 +80,7 @@ ms.locfileid: "78174705"
 
 -   Supporta l'utilizzo di modelli di data mining OLAP e la creazione di dimensioni di data mining.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
  [Algoritmi di data mining &#40;Analysis Services-Data mining&#41;](data-mining-algorithms-analysis-services-data-mining.md) il contenuto del modello di data mining di [riferimento tecnico](microsoft-clustering-algorithm-technical-reference.md) [per i &#40;modelli di Clustering Analysis Services esempi di](mining-model-content-for-clustering-models-analysis-services-data-mining.md) [query sul modello](clustering-model-query-examples.md) di clustering&#41;data mining
 
 

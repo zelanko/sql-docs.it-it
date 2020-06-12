@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 11991c4658514ecf7b596a039bf5c4668a302cd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a9b2613c4ca9c706e549aca9ed577a6defacd0e0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174512"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521857"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Logistic Regression
   L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression è una variante dell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network, in cui il parametro *HIDDEN_NODE_RATIO* è impostato su 0. Questa impostazione creerà un modello di rete neurale che non contiene un livello nascosto e che pertanto è equivalente alla regressione logistica.
@@ -84,7 +83,7 @@ WHERE NODE_TYPE = 23
 
  Per ogni valore di output, questa query restituisce i coefficienti e un ID che punta nuovamente al nodo di input correlato. Restituisce anche una riga che contiene il valore dell'output e l'intercetta. Ogni input X ha un proprio coefficiente (ci), ma la tabella nidificata contiene anche un coefficiente (CO) "libero" calcolato in base alla formula seguente:
 
- F (X) = x1 * C1 + X2\*C2 +... + xn\*CN + X0
+ F (X) = x1 * C1 + X2 \* C2 +... + xn \* CN + X0
 
  Attivazione: esp(F(X)) / (1 + esp(F(X)) )
 
@@ -129,7 +128,7 @@ WHERE NODE_TYPE = 23
 
  Si applica alle colonne della struttura di data mining.
 
- MODEL_EXISTENCE_ONLY significa che la colonna verrà considerata come se presentasse due stati possibili `Missing` : `Existing`e. Un valore Null è un valore mancante.
+ MODEL_EXISTENCE_ONLY significa che la colonna verrà considerata come se presentasse due stati possibili: `Missing` e `Existing` . Un valore Null è un valore mancante.
 
  Si applica alla colonna del modello di data mining.
 
@@ -144,7 +143,7 @@ WHERE NODE_TYPE = 23
 |Attributo di input|Continuous, Discrete, Discretized, Key, Table|
 |Attributo stimabile|Continuous, Discrete, Discretized|
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
  [Esempi di query sul modello](linear-regression-model-query-examples.md) di regressione lineare degli algoritmi di regressione lineare di [Microsoft logistica](microsoft-logistic-regression-algorithm.md) [per i modelli di regressione logistica &#40;Analysis Services-Data mining&#41;](mining-model-content-for-logistic-regression-models.md) [algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm.md)
 
 

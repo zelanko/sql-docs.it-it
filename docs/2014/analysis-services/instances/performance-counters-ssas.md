@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aa9d5a5352afd10617358a032824d275b14b6c5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2909ec00d184dc06eaa5ee05108752b47ac7186b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079705"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543833"
 ---
 # <a name="performance-counters-ssas"></a>Contatori delle prestazioni (SSAS)
   Con Performance Monitor è possibile monitorare le prestazioni di un'istanza di Microsoft SQL Server Analysis Services (SSAS) tramite i contatori delle prestazioni.  
@@ -33,10 +32,10 @@ ms.locfileid: "66079705"
 |Gruppo|Descrizione|  
 |-----------|-----------------|  
 |[Cache](#bkmk_Cache)|Statistiche correlate alla cache delle aggregazioni di Analysis Services.|  
-|[Connessione](#bkmk_Connection)|Statistiche correlate alle connessioni di Microsoft Analysis Services.|  
+|[Connection](#bkmk_Connection)|Statistiche correlate alle connessioni di Microsoft Analysis Services.|  
 |[Stima data mining](#bkmk_DataMiningPrediction)|Statistiche correlate all'elaborazione del modello di data mining.|  
 |[Elaborazione modello di data mining](#bkmk_DataMiningModelProcessing)|Statistiche correlate alla creazione di stime dai modelli di data mining.|  
-|[Locks](#bkmk_Locks)|Statistiche correlate ai blocchi del server interni di Microsoft Analysis Services.|  
+|[Serrature](#bkmk_Locks)|Statistiche correlate ai blocchi del server interni di Microsoft Analysis Services.|  
 |[MDX](#bkmk_MDX)|Statistiche correlate ai calcoli MDX di Microsoft Analysis Services.|  
 |[Memoria](#bkmk_Memory)|Statistiche correlate alla memoria interna del server di Microsoft Analysis Services.|  
 |[Memorizzazione nella cache attiva](#bkmk_ProactiveCaching)|Statistiche correlate al caching attivo di Microsoft Analysis Services.|  
@@ -44,7 +43,7 @@ ms.locfileid: "66079705"
 |[Elaborazione di indici](#bkmk_ProcIndexes)|Statistiche correlate all'elaborazione degli indici per i file di dati MOLAP.|  
 |[Elaborazione in corso](#bkmk_Processing)|Statistiche correlate all'elaborazione dei dati.|  
 |[Query motore di archiviazione](#bkmk_StorageEngineQuery)|Statistiche correlate alle query del motore di archiviazione di Microsoft Analysis Services.|  
-|[Thread](#bkmk_Threads)|Statistiche correlate ai thread di Microsoft Analysis Services.|  
+|[Threads](#bkmk_Threads)|Statistiche correlate ai thread di Microsoft Analysis Services.|  
   
 ###  <a name="cache"></a><a name="bkmk_Cache"></a>Cache  
  Statistiche correlate alla cache delle aggregazioni di Microsoft Analysis Services.  

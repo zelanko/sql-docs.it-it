@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 00c9c42b-db2b-4620-8fb6-1e165ff0cbdd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bf87f2441488810286523a75137a3285aabc1956
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1e7b2e1e72263d8edf362941985bb775457fc6d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081074"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544477"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>Generale (Progettazione database) (Analysis Services - Dati multidimensionali)
   Utilizzare la scheda **Generale** per modificare le proprietà di un database di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -48,7 +47,7 @@ ms.locfileid: "66081074"
  **Lingua**  
  Consente di selezionare la lingua per la transazione specificata.  
   
- Per aggiungere una nuova traduzione alla griglia, fare clic su ** \<Aggiungi nuova traduzione>**.  
+ Per aggiungere una nuova traduzione alla griglia, fare clic su **\<Add new translation>** .  
   
  **Didascalia tradotta**  
  Consente di digitare la didascalia del database nella lingua della traduzione. Se vuota, viene utilizzata la didascalia predefinita del database.  
@@ -67,7 +66,7 @@ ms.locfileid: "66081074"
  **Nome**  
  Consente di digitare il nome del tipo di conto.  
   
- Per aggiungere un nuovo tipo di conto, fare clic su ** \<Aggiungi nuovo tipo di account>**.  
+ Per aggiungere un nuovo tipo di conto, fare clic su **\<Add new account type>** .  
   
  **Alias**  
  Consente di impostare il nome predefinito del tipo di conto per l'utilizzo con Configurazione guidata funzionalità di Business Intelligence. Se la colonna è lasciata vuota, viene utilizzato il valore predefinito indicato nella colonna **Nome** .  
@@ -75,7 +74,7 @@ ms.locfileid: "66081074"
  **Funzione di aggregazione**  
  Consente di selezionare la funzione di aggregazione da utilizzare per il tipo di conto selezionato.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Database modello multidimensionale &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)   
  [Avvisi &#40;progettazione database&#41; &#40;Analysis Services Dati multidimensionali&#41;](warnings-database-designer-analysis-services-multidimensional-data.md)  

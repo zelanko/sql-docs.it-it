@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 03b4264e421756fb1234a306f3834ca89a97489b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8569d07e5833b6a98d28484b578a8094a1eed2ce
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174701"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521703"
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Time Series
   Nell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series sono inclusi due algoritmi distinti per l'analisi delle serie temporali:
@@ -166,7 +165,7 @@ ms.locfileid: "78174701"
 > [!NOTE]
 >  Sono supportati i tipi di contenuto Cyclical e Ordered ma l'algoritmo li considera come valori discreti e non esegue un'elaborazione speciale.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
  Esempi di query sul modello Time Series [algoritmo Microsoft Time Series](microsoft-time-series-algorithm.md) [modello](time-series-model-query-examples.md) [di data mining per i modelli Time Series &#40;Analysis Services-Data mining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)
 
 

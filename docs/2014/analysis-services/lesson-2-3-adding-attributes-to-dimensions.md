@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 80551dad-97ac-40d0-90af-b810780321ce
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7a30424ce322ed356870465422c4f82fb8d7d88d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c0411e2e19fbec88ab9c1bae8536d96725554f5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079026"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543493"
 ---
 # <a name="adding-attributes-to-dimensions"></a>Aggiunta di attributi alle dimensioni
   Dopo avere definito le dimensioni, è possibile popolarle con gli attributi che rappresentano ogni elemento dati nella dimensione. Gli attributi si basano in genere sui campi di una vista origine dati. Quando si aggiungono gli attributi a una dimensione, è possibile includere campi di qualsiasi tabella nella vista origine dati.  
@@ -56,7 +55,7 @@ ms.locfileid: "66079026"
   
     -   **NumberCarsOwned**  
   
-    -   **Phone**  
+    -   **Layout**  
   
     -   **DateFirstPurchase**  
   
@@ -100,7 +99,7 @@ ms.locfileid: "66079026"
   
     -   **SizeRange**  
   
-    -   **Peso**  
+    -   **Weight**  
   
     -   **DaysToManufacture**  
   
@@ -118,14 +117,14 @@ ms.locfileid: "66079026"
   
     -   **EndDate**  
   
-    -   **Stato**  
+    -   **Status**  
   
 5.  Scegliere Salva tutti dal menu **File**.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Esame delle proprietà del cubo e delle dimensioni](lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Riferimento alle proprietà degli attributo delle dimensioni](multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

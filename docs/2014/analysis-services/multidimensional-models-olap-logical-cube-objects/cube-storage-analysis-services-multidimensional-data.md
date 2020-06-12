@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1b1ad360-9a9b-4996-bee9-84238a2bb4ac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d780010d0cae7dbbe358c9ae5e6430ed0fff4d2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eef1dd188b0038c637dc15750a6538c929359299
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727665"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545289"
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>Archiviazione di cubi (Analysis Services - Dati multidimensionali)
-  L'archiviazione può coinvolgere solo i metadati del cubo oppure tutti i dati di origine della tabella dei fatti nonché le aggregazioni definite dalle dimensioni correlate al gruppo di misure. La quantità di dati archiviata dipende dalla modalità di archiviazione selezionata e dal numero di aggregazioni. La quantità di dati archiviata direttamente influisce sulle prestazioni di esecuzione delle query. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa diverse tecniche per ridurre al minimo lo spazio necessario per l'archiviazione dei dati e delle aggregazioni del [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cubo:  
+  L'archiviazione può coinvolgere solo i metadati del cubo oppure tutti i dati di origine della tabella dei fatti nonché le aggregazioni definite dalle dimensioni correlate al gruppo di misure. La quantità di dati archiviata dipende dalla modalità di archiviazione selezionata e dal numero di aggregazioni. La quantità di dati archiviata direttamente influisce sulle prestazioni di esecuzione delle query. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Usa diverse tecniche per ridurre al minimo lo spazio necessario per l'archiviazione dei dati e delle aggregazioni del cubo:  
   
 -   Le opzioni di archiviazione consentono di selezionare le modalità e le posizioni di archiviazione appropriate per i dati del cubo.  
   
@@ -47,7 +46,7 @@ ms.locfileid: "62727665"
 ## <a name="linked-measure-groups"></a>Gruppi di misure collegati  
  Sebbene l'archiviazione di più copie di un cubo in più istanze di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]possa richiedere uno spazio su disco notevole, tale operazione consente di ridurre considerevolmente lo spazio necessario sostituendo le copie del gruppo di misure con i gruppi di misure collegati. Un gruppo di misure collegato si basa su un gruppo di misure di un cubo in un altro database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , nella stessa istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]oppure in un'istanza diversa. I gruppi di misure collegati possono essere utilizzati anche con le dimensioni collegate dello stesso cubo di origine. Le dimensioni e i gruppi di misure collegati utilizzano le aggregazioni del cubo di origine e non prevedono quindi requisiti di archiviazione dei dati propri. Pertanto, se si archiviano i gruppi di misure e le dimensioni di un'origine in un database e si creano cubi e dimensioni collegati in cubi di altri database, lo spazio su disco necessario per l'archiviazione sarà decisamente inferiore. Per ulteriori informazioni, vedere [Linked Measure Groups](../multidimensional-models/linked-measure-groups.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Aggregations and Aggregation Designs](aggregations-and-aggregation-designs.md)  
   
   

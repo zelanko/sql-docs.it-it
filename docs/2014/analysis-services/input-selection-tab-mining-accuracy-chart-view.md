@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f8b1193c-5c86-4c7e-8e35-158d293184fa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3fb4771c7345eb270e91a377d2755a25606f9a93
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4331773f9c80fee37de1c145beeafd37cee2466d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080419"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544153"
 ---
 # <a name="input-selection-tab-mining-accuracy-chart-view"></a>Scheda Selezione input (vista Grafico accuratezza modello di data mining)
   Usare la scheda **Selezione input** della finestra di progettazione **Grafico accuratezza modello di data mining** per specificare l'origine dati usata per eseguire il test del modello e compilare il grafico di accuratezza.  
@@ -33,7 +32,7 @@ ms.locfileid: "66080419"
  **Selezionare le colonne stimabili del modello di data mining da visualizzare nel grafico di accuratezza**  
  Griglia contenente colonne che consentono di controllare i modelli inclusi nel grafico di accuratezza e controllarne la modalità di utilizzo.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**Mostra**|Consente di selezionare la casella accanto al nome di ogni colonna stimabile nel modello di data mining che si desidera visualizzare nel grafico.<br /><br /> Se il grafico è troppo complesso per essere visualizzato in modo semplice, deselezionare la casella accanto a una o più colonne per semplificare il grafico.<br /><br /> Nota: è possibile creare un grafico di accuratezza solo se è stata selezionata almeno una colonna.|  
 |**Modello di data mining**|Consente di visualizzare l'elenco di modelli di data mining contenuti nella struttura di data mining.|  
@@ -43,7 +42,7 @@ ms.locfileid: "66080419"
  **Seleziona set di dati da utilizzare per il grafico di accuratezza**  
  Gruppo di tre opzioni per la specifica dei dati del test di accuratezza.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**Utilizza test case del modello di data mining**|Consente di utilizzare il set di testing creato durante la partizione della struttura di data mining e di applicare il filtro definito sul modello. Per informazioni sui filtri dei modelli, vedere [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-models-analysis-services-data-mining.md)|  
 |**Utilizza test case della struttura di data mining**|Consente di utilizzare il set di testing creato durante la partizione della struttura di data mining.|  
@@ -67,7 +66,7 @@ ms.locfileid: "66080419"
  **Apri editor filtri**  
  Consente di aprire la finestra di dialogo **Filtro dei set di dati** , in cui è possibile selezionare le tabelle esterne e impostare le condizioni sulle colonne delle tabelle del case e la finestra di dialogo **Filtro** in cui è possibile compilare condizioni che si applicano alle singole colonne della tabella selezionata o alle colonne delle tabelle annidate.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Attività e procedure di test e convalida &#40;di data mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [Progettazione Grafico accuratezza modello di data mining &#40;&#41;di data mining](mining-accuracy-chart-designer-data-mining.md)   
  [Applicare un filtro a un modello di data mining](data-mining/apply-a-filter-to-a-mining-model.md)   

@@ -1,5 +1,6 @@
 ---
 title: Utilizzo di DiffGram per la modifica dei dati in SQLXML 4.0
+description: Visualizzare informazioni sull'utilizzo di Microsoft .NET Framework DiffGram in SQLXML 4,0 per modificare i dati nelle tabelle Microsoft SQL Server database.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -26,12 +27,12 @@ ms.assetid: 48b8a8f9-f3af-404f-8c84-f4c3703364d9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1a1b713288c49cb922c758fd2b68b9bdc456ae8d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c547e3c80110f71a6dcd822ecdfca3eeede54504
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246612"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529963"
 ---
 # <a name="sqlxml-40-net-framework-support---using-diffgrams-to-modify-data"></a>Supporto SQLXML 4.0 per .NET Framework - Uso di DiffGram per modificare i dati
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

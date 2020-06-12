@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 25eeecf0-6e85-4527-b94d-5503d27edaed
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f034e8892a8f5a77c7a049da6e33336592cb5294
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9d90d0483b81f2a21b187b6132efc1c93861d8a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175200"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520902"
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>Architettura fisica (Analysis Services – Data mining)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa componenti server e client per fornire data mining funzionalità per le applicazioni business intelligence:
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]usa componenti server e client per fornire data mining funzionalità per le applicazioni business intelligence:
 
 -   Il componente server viene implementato come un servizio di Microsoft Windows. È possibile avere più istanze di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sullo stesso computer, ognuna delle quali viene implementata come istanza separata del servizio di Windows.
 
@@ -50,7 +49,7 @@ ms.locfileid: "78175200"
 
  Per tutte le comunicazioni tra un client e il server Analysis Services viene utilizzato XMLA, un protocollo indipendente da piattaforma e linguaggio. Quando viene ricevuta una richiesta da un client, Analysis Services determina se tale richiesta è correlata a OLAP o al data mining, quindi la indirizza nel modo appropriato. Per altre informazioni sui componenti server, vedere [Componenti del server del motore OLAP](../multidimensional-models/olap-physical/olap-engine-server-components.md).
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
  [Architettura logica &#40;Analysis Services - Data mining&#41;](logical-architecture-analysis-services-data-mining.md)
 
 

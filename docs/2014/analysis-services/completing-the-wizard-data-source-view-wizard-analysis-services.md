@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5e18d9d8-4a5e-45db-b721-6b7968239b48
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d5dce0aa56997537e4911b0607ca9fba392dd847
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2eac3b37a2d627fe5550e5a7eb41f2539d0323d3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087637"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527357"
 ---
 # <a name="completing-the-wizard-data-source-view-wizard-analysis-services"></a>Completamento procedura guidata (Configurazione guidata vista origine dati) (Analysis Services)
   Utilizzare la pagina **Completamento procedura guidata** della procedura guidata per specificare un nome per la vista origine dati e modificare le tabelle e le viste incluse nella vista. Dopo aver fatto clic su **Fine**, è possibile utilizzare Progettazione vista origine dati per modificare le proprietà della vista in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Per altre informazioni su Progettazione vista origine dati, vedere [Progettazione vista origine dati &#40;Analysis Services - Dati multidimensionali&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
@@ -29,7 +28,7 @@ ms.locfileid: "66087637"
  **Anteprima**  
  Consente di visualizzare le tabelle e le viste incluse nella vista origine dati. Fare clic su **Indietro** per apportare modifiche.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto della creazione guidata vista origine dati &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)  
   
   

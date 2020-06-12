@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 790e509dd29e388dfb697ba577958395a4a046ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d028c4ca47567a1f0f6b7d4b874ad78c98ea2d1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072892"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547343"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Passare un database di Analysis Services tra le modalità ReadOnly e ReadWrite
-  In alcune situazioni frequenti, un amministratore del database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] potrebbe voler modificare la modalità lettura/scrittura di un database tabulare o multidimensionale. Queste situazioni sono spesso determinate da esigenze aziendali, ad esempio la condivisione del database tra un pool [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di server per una migliore esperienza utente.  
+  In alcune situazioni frequenti, un amministratore del database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] potrebbe voler modificare la modalità lettura/scrittura di un database tabulare o multidimensionale. Queste situazioni sono spesso determinate da esigenze aziendali, ad esempio la condivisione del database tra un pool di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Server per una migliore esperienza utente.  
   
  In un database è possibile passare da una modalità all'altra in vari modi. In questo documento vengono illustrati gli scenari comuni seguenti:  
   
@@ -47,7 +46,7 @@ ms.locfileid: "66072892"
   
 4.  Assegnare una password al database da scollegare, quindi fare clic su **OK** per eseguire il comando.  
   
-5.  Individuare la cartella **database** nel riquadro sinistro o destro di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+5.  Individuare la cartella **database** nel riquadro sinistro o destro di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] .  
   
 6.  Fare clic con il pulsante destro del mouse sulla cartella **database** e scegliere **Connetti...**  
   
@@ -166,7 +165,7 @@ ms.locfileid: "66072892"
   
 2.  Eseguire il comando XMLA.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Collegamento e scollegamento di Analysis Services database](attach-and-detach-analysis-services-databases.md)   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 02d084aea4491982d560f1cf0b8dc449b8502f09
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f10901625ece0a154248f99370e427c7a999c87
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073596"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546063"
 ---
 # <a name="move-an-analysis-services-database"></a>Spostare un database di Analysis Services
   Spesso, un amministratore del database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] desidera spostare un database multidimensionale o tabulare in un percorso diverso. Queste situazioni spesso sono determinate da esigenze aziendali, ad esempio lo spostamento del database in un disco diverso per migliorare le prestazioni, la necessità di ottenere più spazio per la crescita del database oppure per aggiornare un prodotto.  
@@ -55,7 +54,7 @@ ms.locfileid: "66073596"
   
 7.  Nella casella di testo **cartella** digitare il nuovo percorso della cartella del database. In alternativa, è possibile utilizzare il pulsante Sfoglia (**...**) per individuare la cartella del database.  
   
-8.  Consente di `ReadWrite` selezionare la modalità del database.  
+8.  Consente di selezionare la `ReadWrite` modalità del database.  
   
 9. Digitare la password usata nel passaggio 3, quindi fare clic su **OK** per eseguire il comando di collegamento.  
   
@@ -139,7 +138,7 @@ ms.locfileid: "66073596"
   
 2.  Eseguire il comando XMLA.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Collegamento e scollegamento di Analysis Services database](attach-and-detach-analysis-services-databases.md)   

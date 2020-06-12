@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4a5f7c51-c704-4214-b05d-21cf735e6d96
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bb080721ccb3e5b5aef190eda3d1088df09762c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9d21773bb4c2108511b2e7db852d0cb108f7b63b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086072"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525426"
 ---
 # <a name="browse-a-model-using-the-microsoft-generic-content-tree-viewer"></a>Visualizzare un modello utilizzando Microsoft Generic Content Tree Viewer
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree Viewer visualizza informazioni dettagliate sui modelli individuati dall'algoritmo di data mining e fornisce anche l'accesso a varie statistiche generate durante il processo di analisi. La quantità e il tipo di informazioni variano a seconda dell'algoritmo utilizzato, ma è possibile includere le categorie seguenti:  
@@ -48,7 +47,7 @@ SELECT * FROM [<mining model name>].CONTENT
   
  Per altre informazioni, vedere [Query di data mining](data-mining-queries.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Microsoft Generic Content Tree Viewer &#40;data mining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
  [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   

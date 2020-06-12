@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 2f8d8b3d-810b-4c31-98f2-341015e13da8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ad25ecae16a9b5e5f32554350a315156e9818241
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30d7e6aafe613e5ca43307aa75540d8fb1cea3ec
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086972"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526837"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>Copiare e incollare dati (SSAS tabulare)
   È possibile copiare i dati delle tabelle da applicazioni esterne e incollarli in una tabella nuova o esistente in Progettazione modelli. I dati incollati dagli Appunti devono essere in formato HTML, come i dati copiati da Excel o Word. Progettazione modelli rileverà e applicherà automaticamente i tipi di dati ai dati incollati. È anche possibile modificare manualmente il tipo di dati o la formattazione di visualizzazione di una colonna.  
@@ -85,7 +84,7 @@ ms.locfileid: "66086972"
  **Dati da incollare**  
  Consente di visualizzare un esempio del contenuto degli Appunti. I dati esistenti nella tabella di destinazione saranno eliminati e le nuove righe saranno inserite nella tabella.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Importare dati &#40;SSAS tabulare&#41;](import-data-ssas-tabular.md)   
  [Origini dati supportate &#40;SSAS tabulare&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
  [Impostare il tipo di dati di una colonna &#40;SSAS tabulare&#41;](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  

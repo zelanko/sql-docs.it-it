@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d9aa028b-bad9-49c7-a81c-c2150e4dd481
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e8973d9dd6fb5d96afc9cf66ded4b894f0dfe6df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef6ba1926d23990399be8571ed117b87dd2edb8b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081364"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528385"
 ---
 # <a name="error-configuration-mining-structure-dialog-box-analysis-services---multidimensional-data"></a>Configurazione errori (finestra di dialogo Struttura di data mining) (Analysis Services - Dati multidimensionali)
   La pagina **Configurazione errori** della finestra di dialogo **Proprietà struttura di data mining** in **SQL Server Management Studio** consente di impostare le proprietà di configurazione degli errori di una struttura di data mining in un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -88,7 +87,7 @@ ms.locfileid: "66081364"
  **Percorso log degli errori**  
  Consente di digitare il percorso completo e il nome del file di log degli errori.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Finestra di dialogo Proprietà struttura di data mining &#40;Analysis Services-&#41;di data mining](mining-structure-properties-dialog-analysis-services-data-mining.md)   
  [&#40;finestra di dialogo struttura di data mining generale&#41; &#40;Analysis Services di data mining&#41;](general-mining-structure-dialog-box-analysis-services-data-mining.md)  
   

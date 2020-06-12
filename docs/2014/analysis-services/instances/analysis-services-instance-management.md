@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0455fa4f-b92d-4a8b-a8f0-f2a268a5c84e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ac0c6637dd08dc2ea8927853b7a6bf8dccca454d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef72741b09666a4059fc0fdd09f282d749e4e99c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080344"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544143"
 ---
 # <a name="analysis-services-instance-management"></a>Gestione di un'istanza di Analysis Services
   Un'istanza di Analysis Services è una copia del file eseguibile `msmdsrv.exe` che viene eseguita come un servizio del sistema operativo. Ogni istanza è completamente indipendente dalle altre istanze nello stesso server, disponendo di impostazioni proprie di configurazione, autorizzazioni, porte, account di avvio, archiviazione di file e proprietà della modalità server.  
@@ -53,7 +52,7 @@ ms.locfileid: "66080344"
 |[Scenari di globalizzazione per Analysis Services multidimensionale](../globalization-scenarios-for-analysis-services-multiidimensional.md)|Illustra il supporto per la lingua e le regole di confronto, i passaggi per modificare entrambe le proprietà e i suggerimenti per l'impostazione e il test dei comportamenti della lingua e delle regole di confronto.|  
 |[Registrare le operazioni in Analysis Services](log-operations-in-analysis-services.md)|Descrive i log e illustra come configurarli.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Confronto tra soluzioni tabulari e multidimensionali &#40;SSAS&#41;](../comparing-tabular-and-multidimensional-solutions-ssas.md)   
  [Strumenti di configurazione PowerPivot](../power-pivot-sharepoint/power-pivot-configuration-tools.md)   
  [Amministrazione e configurazione del server PowerPivot in Amministrazione centrale](../power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   

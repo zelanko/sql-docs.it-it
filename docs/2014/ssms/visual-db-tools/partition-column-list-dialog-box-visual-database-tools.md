@@ -12,19 +12,19 @@ ms.assetid: b554b6e6-3435-4b43-89ab-7a4c7a241236
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ea7bd1ada1c5efcc4ce64d0703192df8ddd6d9ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44da1a0e95acd6713bef4988de6e4d28a99aa577
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63280380"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858973"
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>Finestra di dialogo Elenco colonne partizione (Visual Database Tools)
   Se una tabella è associata a uno schema di partizione, è possibile utilizzare questa finestra di dialogo per scegliere una o più colonne a cui applicare la funzione Partition. Perché la funzione sia valida, è necessario che il tipo di dati della colonna su cui ci si posiziona sia lo stesso della colonna definita nella funzione Partition.  
   
  Per ulteriori informazioni sulle funzioni e sugli schemi di partizione, vedere la documentazione online di SQL Server.  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco elementi dell'interfaccia utente  
  Tipo di dati  
  Visualizza i tipi di dati delle colonne definite nello schema di partizione.  
   

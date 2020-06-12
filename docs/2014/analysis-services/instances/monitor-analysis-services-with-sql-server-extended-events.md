@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6d6abfca98386ef691add200d433af827ed44836
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60f1811d1bf4714284e9676623422870345c8261
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079738"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543803"
 ---
 # <a name="use-sql-server-extended-events-xevents-to-monitor-analysis-services"></a>Utilizzare eventi estesi di SQL Server (XEvent) per il monitoraggio di Analysis Services
   Analysis Services fornisce funzionalità di traccia tramite l'utilizzo degli [eventi estesi](../../relational-databases/extended-events/extended-events.md).  
@@ -98,7 +97,7 @@ ms.locfileid: "66079738"
  *trace_id*  
  Consente di definire l'identificatore univoco della traccia da eliminare.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../../relational-databases/extended-events/extended-events.md)  
   
   

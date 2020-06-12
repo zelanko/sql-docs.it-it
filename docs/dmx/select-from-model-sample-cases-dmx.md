@@ -1,21 +1,21 @@
 ---
-title: Selezionare da &lt;modello&gt;. SAMPLE_CASES (DMX) | Microsoft Docs
+title: Selezionare da &lt; modello &gt; . SAMPLE_CASES (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e0838c688b0518bf1fc7ed6c5d65c3ef03d0a7aa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9e88ec6673a00e3776032f33390451207c2f399f
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928313"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670114"
 ---
-# <a name="select-from-ltmodelgtsample_cases-dmx"></a>Selezionare da &lt;modello&gt;. SAMPLE_CASES (DMX)
+# <a name="select-from-ltmodelgtsample_cases-dmx"></a>Selezionare da &lt; modello &gt; . SAMPLE_CASES (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Restituisce case di esempio rappresentativi dei case utilizzati per il training del modello di data mining.  
@@ -46,12 +46,12 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
  *expression*  
  Facoltativa. Espressione che restituisce un valore scalare.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  I case di esempio potrebbero essere generati e potrebbero non esistere effettivamente nei dati utilizzati per il training. Il case restituito è rappresentativo del nodo di contenuto specificato.  
   
- Sebbene l' [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo Sequence Clustering sia l'unico [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo che supporta l'utilizzo di \<Select from Model>. SAMPLE_CASES, gli algoritmi di terze parti possono anche supportarla.  
+ Sebbene l' [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo Sequence Clustering sia l'unico [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo che supporta l'utilizzo di SELECT FROM \< Model>. SAMPLE_CASES, gli algoritmi di terze parti possono anche supportarla.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituiti i case di esempio utilizzati per il training del modello di data mining Target Mail. Utilizzando la funzione [IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md) nella clausola **where** vengono restituiti solo i case associati al nodo ' 000000003'. La stringa del nodo si trova nella colonna NODE_UNIQUE_NAME del set di righe dello schema.  
   
 ```  
