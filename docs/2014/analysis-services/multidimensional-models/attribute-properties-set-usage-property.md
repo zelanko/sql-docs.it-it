@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7b0ebc58-94b9-4523-8994-e7bc796b0bd8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: def616b09e6d5378257c3e5c377f2724c9d09676
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c01db1cdafc0a3e624cc8e92815a791c08ee4188
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077173"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544713"
 ---
 # <a name="set-usage-property"></a>Impostare la proprietà Usage
   È possibile impostare l'utilizzo di un attributo mediante la visualizzazione **Struttura dimensione** di Progettazione dimensioni, accessibile da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -39,7 +38,7 @@ ms.locfileid: "66077173"
   
     -   **Parent**  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Attributi e gerarchie di attributi](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Aggiungere un attributo a una dimensione](attribute-properties-add-an-attribute-to-a-dimension.md)  
   

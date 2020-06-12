@@ -1,5 +1,6 @@
 ---
 title: Comandi di menu e altri tasti di scelta rapida (da Oracle a SQL) | Microsoft Docs
+description: Informazioni sulle scelte rapide da tastiera per accedere ai comandi di menu e ad altri tasti di scelta rapida usati in varie finestre di dialogo dell'applicazione SSMA per Oracle.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.assetid: fc00e683-189e-4765-b280-84927d635126
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 723f9c644d0e327919134baee5267197bb0f71b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b9534020525ace1df2976ee732d9016c02d5ed2e
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264557"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293928"
 ---
 # <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>Comandi di menu e altri tasti di scelta rapida (OracleToSQL)
 Nelle sezioni seguenti vengono descritti i tasti di scelta rapida per accedere ai comandi di menu e ad altri tasti di scelta rapida utilizzati in diverse finestre di dialogo di SSMA per l'applicazione Oracle.  

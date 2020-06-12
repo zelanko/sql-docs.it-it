@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: a1c61496-36ee-4bce-98d9-d13440d349aa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f0eab50aa7e70aedee93eef2cefee648e6ceb5c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2c3d9a7c27533666c75102d9eac3b8311bfe4af6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387891"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544913"
 ---
 # <a name="updating-cells-xmla"></a>Aggiornamento di celle (XMLA)
-  È possibile utilizzare il comando [UpdateCells](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/updatecells-element-xmla) per modificare il valore di una o più celle in un cubo abilitato per il writeback del cubo. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivia le informazioni aggiornate in una tabella writeback separata per ogni partizione che contiene le celle da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] aggiornare.  
+  È possibile utilizzare il comando [UpdateCells](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/updatecells-element-xmla) per modificare il valore di una o più celle in un cubo abilitato per il writeback del cubo. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] archivia le informazioni aggiornate in una tabella writeback separata per ogni partizione che contiene le celle da aggiornare.  
   
 > [!NOTE]  
 >  Il comando `UpdateCells` non supporta le allocazioni durante il writeback del cubo. Per utilizzare il writeback allocato, è necessario utilizzare il comando [Statement](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) per inviare un'istruzione di aggiornamento MDX (Multidimensional Expressions). Per ulteriori informazioni, vedere [istruzione UPDATE CUBE &#40;&#41;MDX ](/sql/mdx/mdx-data-manipulation-update-cube).  

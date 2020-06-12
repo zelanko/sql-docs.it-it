@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4c617375-6b01-4a71-9680-de0cbf2cff05
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4f32d0adb196fbe23e90ae2bc28d8f65ad1326c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 682987b276a850104b6c4e10811423666eb4ffb0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081932"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528727"
 ---
 # <a name="deploying-and-scaling-mining-models-data-mining-add-ins-for-excel"></a>Distribuzione e scalabilità di modelli di data mining (componenti aggiuntivi Data mining per Excel)
   Gli strumenti del gruppo di **gestione** e **utilizzo del modello** vengono forniti per semplificare la gestione e la visualizzazione dei modelli di data mining esistenti. È possibile utilizzare questi strumenti per visualizzare tutti i modelli archiviati in un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e non solo quelli creati utilizzando i componenti aggiuntivi.  
@@ -26,7 +25,7 @@ ms.locfileid: "66081932"
   
 ## <a name="model-usage-toolbar"></a>Barra degli strumenti Utilizzo modelli  
   
-### <a name="browse"></a>Sfoglia  
+### <a name="browse"></a>Esplora  
  Utilizzare la procedura guidata **Sfoglia** per selezionare un modello di data mining esistente, quindi visualizzare ed esplorare il modello in un visualizzatore che contiene più grafici e strumenti.  
   
  Per ulteriori informazioni, vedere [esplorazione di modelli in Excel &#40;SQL Server componenti aggiuntivi Data Mining&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md).  
@@ -53,7 +52,7 @@ ms.locfileid: "66081932"
   
  Per ulteriori informazioni, vedere [Manage models &#40;SQL Server Data Mining Add-ins&#41;](manage-models-sql-server-data-mining-add-ins.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di un modello di data mining](creating-a-data-mining-model.md)   
  [Convalida di modelli e utilizzo di modelli per la stima &#40;componenti aggiuntivi Data mining per Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 404fe5fe-3ba2-4b9b-8780-0d02343d467f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 70049092909b625a1f304f16f153bf4287d5bcdf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30affebc143184c6287858f60b5d4f5d089c322a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084562"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522492"
 ---
 # <a name="exclude-a-column-from-a-mining-model"></a>Escludere una colonna da un modello di data mining
   Quando si crea un nuovo modello di data mining, potrebbe non essere necessario utilizzare tutte le colonne presenti nella struttura di data mining su cui il modello è basato. Ad esempio, è possibile che sia stata aggiunta una colonna nome cliente per il drill-through, ma non si desidera utilizzarla per la modellazione. In alternativa, è possibile decidere di creare più copie di una colonna con discretizzazioni diverse e utilizzare solo una delle copie in ogni modello e ignorare il resto. È anche possibile aggiungere in modo selettivo le colonne di input in molti modelli diversi per capire come la variabile aggiunta influisce sulla colonna di output.  
@@ -32,7 +31,7 @@ ms.locfileid: "66084562"
   
 2.  Selezionare **Ignora** nell'elenco a discesa.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Attività e procedure relative al modello di data mining](mining-model-tasks-and-how-tos.md)  
   
   

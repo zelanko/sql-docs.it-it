@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8e2099ba-c5b0-4940-8e48-7d696485fa4c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 007e37c7e093828cb3ea452a2bea5972f9ee5b9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 247f5153189cdfa5943e42b2d922ed0cc40d5dd7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070044"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538903"
 ---
 # <a name="save-file-as-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Salva file con nome (Analysis Services - Dati multidimensionali)
   La finestra di dialogo **Salva file con nome** visualizza un elenco di file disponibili nelle cartelle dei log e dei dati definiti per un istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . È possibile selezionare un file elencato oppure specificare una cartella e un file diversi, se necessario. Per visualizzare la finestra di dialogo **Salva file con nome** è possibile:  
@@ -36,7 +35,7 @@ ms.locfileid: "66070044"
  **Nome file**  
  Consente di digitare un testo per modificare il file selezionato da **Selezionare la cartella**o per specificare un file non elencato in **Selezionare la cartella**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Finestra di dialogo Backup database &#40;Analysis Services - Dati multidimensionali&#41;](backup-database-dialog-box-analysis-services-multidimensional-data.md)  
   

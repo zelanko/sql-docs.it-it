@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7259c201-ff54-43e8-bda5-a6d51474e0e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9ec674c1eb64f2e5191df600864fa38aa3da0749
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 21bbf20dfdc15470adc6277149679d2e5b403d9e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073547"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546025"
 ---
 # <a name="multidimensional-model-solution-deployment"></a>Distribuzione di soluzioni di modelli multidimensionali
   Dopo aver completato lo sviluppo di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , è possibile distribuire il database in un server Analysis Services. In Analysis Services sono disponibili sei possibili metodi di distribuzione che possono essere utilizzati per spostare il database in un server di prova o di produzione. I metodi di distribuzione sono elencati di seguito in ordine di convenienza: automazione AMO, XMLA, Distribuzione guidata, Utilità di distribuzione, Sincronizzazione guidata database, Backup e ripristino.  

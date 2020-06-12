@@ -1,5 +1,5 @@
 ---
-title: sys. Configurations (Transact-SQL) | Microsoft Docs
+title: sys.configurations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 885b736424dfa0b1a83f0d0c854fc11b80f67ade
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7986fc4286cf681507a80a72f2f308b6a96f413a
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832766"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215853"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "82832766"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**configuration_id**|**int**|ID univoco del valore di configurazione.|  
-|**name**|**nvarchar(35)**|Nome dell'opzione di configurazione.|  
+|**nome**|**nvarchar(35)**|Nome dell'opzione di configurazione.|  
 |**value**|**sql_variant**|Valore configurato per l'opzione.|  
 |**minimo**|**sql_variant**|Valore minimo dell'opzione di configurazione.|  
 |**massimo**|**sql_variant**|Valore massimo dell'opzione di configurazione.|  
@@ -43,13 +43,38 @@ ms.locfileid: "82832766"
 |**is_dynamic**|**bit**|1 = La variabile viene applicata quando viene eseguita l'istruzione RECONFIGURE.|  
 |**is_advanced**|**bit**|1 = la variabile viene visualizzata solo quando è impostato il **advancedoption di visualizzazione** .|  
   
- Per un elenco di tutte le opzioni di configurazione del server, vedere [Opzioni di configurazione del server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+ ## <a name="remarks"></a>Commenti
+  Per un elenco di tutte le opzioni di configurazione del server, vedere [Opzioni di configurazione del server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 > [!NOTE]  
 >  Per le opzioni di configurazione a livello di database, vedere [ALTER database scoped configuration &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Per configurare Soft-NUMA, vedere [&#41;Soft-numa &#40;SQL Server ](../../database-engine/configure-windows/soft-numa-sql-server.md).  
-  
+ 
+La vista del catalogo sys.configurations può essere utilizzata per determinare l'config_value (colonna valore), il run_value (la colonna value_in_use) e se l'opzione di configurazione è dinamica (non richiede un riavvio del motore Server o la colonna is_dynamic).
+
+> [!NOTE]
+> Il config_value nel set di risultati di sp_configure è equivalente alla colonna **sys.configurations. Value** . Il **run_value** è equivalente alla colonna **sys.configurations. value_in_use** .
+
+La query seguente può essere utilizzata per determinare se i valori configurati non sono stati installati:
+
+```SQL
+select * from sys.configurations where value != value_in_use
+```
+
+Se il valore è uguale alla modifica per l'opzione di configurazione eseguita, ma la **value_in_use** non è la stessa, il comando RECONFIGURE non è stato eseguito o ha avuto esito negativo oppure è necessario riavviare il motore Server.
+
+Sono disponibili opzioni di configurazione in cui il valore e value_in_use potrebbero non essere uguali e si tratta di un comportamento previsto. Ad esempio:
+
+"max server memory (MB)": il valore configurato predefinito 0 viene visualizzato come value_in_use = 2147483647 "min server memory (MB)". il valore predefinito configurato di 0 può essere visualizzato come value_in_use = 8 (a 32 bit) o 16 (a 64 bit). 
+
+In alcuni casi, il **value_in_use** sarà 0. In questa situazione, il **value_in_use** "true" è 8 (a 32 bit) o 16 (a 64 bit)
+
+È possibile utilizzare la colonna **is_dynamic** per determinare se l'opzione di configurazione richiede un riavvio. is_dynamic = 1 indica che, quando viene eseguito il Esegui di RECONFIGURE (T-SQL), il nuovo valore diverrà effettivo "immediatamente" (in alcuni casi, il motore del server potrebbe non valutare immediatamente il nuovo valore, ma eseguirlo nel corso normale della relativa esecuzione). is_dynamic = 0 significa che il valore di configurazione modificato non verrà applicato finché il server non viene riavviato anche se è stato eseguito il comando RECONFIGURE (T-SQL).
+
+Per un'opzione di configurazione non dinamica non è possibile stabilire se è stato eseguito il comando RECONFIGURE (T-SQL) per eseguire il primo passaggio dell'installazione della modifica della configurazione. Prima di riavviare SQL Server per installare una modifica della configurazione, eseguire il comando RECONFIGURE (T-SQL) per assicurarsi che tutte le modifiche alla configurazione abbiano effetto dopo il riavvio di un SQL Server. 
+ 
+ 
 ## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza al ruolo **public** .  Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ È richiesta l'appartenenza al ruolo **public** . Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo di configurazione a livello di server &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)   

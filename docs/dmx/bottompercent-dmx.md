@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9d8b1665c6e6978af7dc673f7dd51a363da5c48d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6fdb1563f644b544fd9c0bd2ee0857bf4b403329
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892874"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669832"
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,10 +40,10 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
 ## <a name="result-type"></a>Tipo di risultato  
  Tabella.  
   
-## <a name="remarks"></a>Osservazioni  
- La funzione **BottomPercent** restituisce le righe più in basso in ordine crescente di rango. Il rango è basato sul valore valutato dell'espressione di \<rango> argomento per ogni riga, in modo che la somma dei valori \<dell'espressione di rango> sia uguale almeno alla percentuale specificata dall' \<argomento percentuale>. **BottomPercent** restituisce il più piccolo numero di elementi possibile mentre soddisfa ancora il valore percentuale specificato.  
+## <a name="remarks"></a>Commenti  
+ La funzione **BottomPercent** restituisce le righe più in basso in ordine crescente di rango. Il rango è basato sul valore valutato dell'espressione di \< rango> argomento per ogni riga, in modo che la somma dei \< valori dell'espressione di rango> sia uguale almeno alla percentuale specificata dall' \< argomento percentuale>. **BottomPercent** restituisce il più piccolo numero di elementi possibile mentre soddisfa ancora il valore percentuale specificato.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene creata una query di stima sul modello di associazione compilato nell'esercitazione di [base sul data mining](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
  Per comprendere il funzionamento di BottomPercent, può essere utile eseguire prima una query di stima che restituisca solo la tabella nidificata.  

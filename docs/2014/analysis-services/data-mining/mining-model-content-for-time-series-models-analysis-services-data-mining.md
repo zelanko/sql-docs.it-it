@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 73539ddcf9162cbedabfc0bad82da1fd9788d241
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 550dd2bad920dc3538de011b7841c0174912e718
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083524"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521255"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli Time Series (Analysis Services - Data mining)
   Tutti i modelli di data mining utilizzano la stessa struttura per archiviare i propri contenuti. Tale struttura viene definita secondo il set di righe dello schema relativo al contenuto di data mining. Tuttavia, all'interno della struttura standard i nodi che contengono informazioni vengono disposti in modi diversi per rappresentare vari tipi di albero. In questo argomento vengono descritti l'organizzazione e il significato dei nodi per i modelli di data mining basati sull'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series.  
@@ -259,7 +258,7 @@ ms.locfileid: "66083524"
   
  Quantity = 21,322  
   
- -0,293 * Quantity (R250 America del Nord,-7) + \* 0,069 Quantity (R250 Europe,-1) + 0,023\*  
+ -0,293 * Quantity (R250 America del Nord,-7) + 0,069 \* Quantity (R250 Europe,-1) + 0,023\*  
   
  Quantity(R250 Europe,-3) -0,142 * Quantity(R750 Europe,-8)  
   
@@ -311,7 +310,7 @@ WHERE NODE_TYPE = 15
 ##  <a name="understanding-the-arima-tree"></a><a name="bkmk_ARIMA_1"></a> Informazioni sull'albero ARIMA  
  Ogni struttura in un modello ARIMA corrisponde a una *periodicità* o a una *struttura periodica*. Una struttura periodica è uno schema di dati ripetuto in tutta la serie di dati. Sono consentite variazioni secondarie entro limiti statistici. La periodicità viene misurata secondo le unità di tempo predefinite utilizzate nei dati di training. Ad esempio, se i dati di training forniscono dati di vendita per ogni giorno, l'unità di tempo predefinita è un giorno e tutte le strutture periodiche vengono definite come un numero specifico di giorni.  
   
- Ogni periodo rilevato dall'algoritmo ottiene il proprio nodo della struttura. Ad esempio, se si analizzano i dati di vendita giornalieri, potrebbero essere rilevate strutture periodiche che rappresentano le settimane. In questo caso, l'algoritmo creerà due strutture periodiche nel modello finito: una per il periodo giornaliero predefinito, indicata come {1}e una per le settimane, indicata da. {7}  
+ Ogni periodo rilevato dall'algoritmo ottiene il proprio nodo della struttura. Ad esempio, se si analizzano i dati di vendita giornalieri, potrebbero essere rilevate strutture periodiche che rappresentano le settimane. In questo caso, l'algoritmo creerà due strutture periodiche nel modello finito: una per il periodo giornaliero predefinito, {1} indicata come e una per le settimane, indicata da {7} .  
   
  Ad esempio, nella query seguente vengono restituite tutte le strutture ARIMA da un modello di data mining.  
   
@@ -384,9 +383,9 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  Equazione ARIMA:  
   
- ARIMA ({1,1}, 0, {1, 1.49791920964142, 1.10640053499397, 0.888873034670339,-5.05429403071953 e-02,-0.905265316720334,-0.961908900643379,-0.649991020901922}) intercetta: 56.8888888888889  
+ ARIMA ( {1,1} , 0, {1, 1.49791920964142, 1.10640053499397, 0.888873034670339,-5.05429403071953 e-02,-0.905265316720334,-0.961908900643379,-0.649991020901922}) intercetta: 56.8888888888889  
   
- L'equazione è il formato ARIMA lungo, in cui sono inclusi i valori dei coefficienti e l'intersezione. Il formato abbreviato per questa equazione {1,0,7}sarebbe, dove 1 indica il periodo come conteggio di intervalli di tempo, 0 indica l'ordine delle differenze del termine e 7 indica il numero di coefficienti.  
+ L'equazione è il formato ARIMA lungo, in cui sono inclusi i valori dei coefficienti e l'intersezione. Il formato abbreviato per questa equazione sarebbe {1,0,7} , dove 1 indica il periodo come conteggio di intervalli di tempo, 0 indica l'ordine delle differenze del termine e 7 indica il numero di coefficienti.  
   
 > [!NOTE]  
 >  In Analysis Services viene calcolata una costante per il calcolo della varianza, ma la costante non viene visualizzata nell'interfaccia utente. È possibile, tuttavia, visualizzare la varianza per qualsiasi punto della serie come funzione di questa costante selezionando **Mostra deviazioni** nella vista **Grafico** . La descrizione comando per ogni serie di dati mostra la varianza di un punto stimato specifico.  
@@ -396,7 +395,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  Un modello ARIMA per una serie di dati contiene l'equazione periodica di base in quattro formati diversi, selezionabili a seconda dell'applicazione.  
   
- **NODE_CAPTION:** visualizza il formato abbreviato dell'equazione. Il formato abbreviato indica la quantità di strutture periodiche rappresentate e dei relativi coefficienti. Se, ad esempio, il formato abbreviato dell'equazione è {4,0,6}, il nodo rappresenta una struttura periodica con 6 coefficienti. Se il formato abbreviato è {2,0,8} simile {1,0,0}a x (4), il nodo contiene due strutture periodiche.  
+ **NODE_CAPTION:** visualizza il formato abbreviato dell'equazione. Il formato abbreviato indica la quantità di strutture periodiche rappresentate e dei relativi coefficienti. Se, ad esempio, il formato abbreviato dell'equazione è {4,0,6}, il nodo rappresenta una struttura periodica con 6 coefficienti. Se il formato abbreviato è simile a {2,0,8} x {1,0,0} (4), il nodo contiene due strutture periodiche.  
   
  **NODE DESCRIPTION:** viene visualizzato il formato esteso dell'equazione, corrispondente al formato dell'equazione visualizzata in **Legenda data mining**. La forma estesa dell'equazione è simile alla forma breve, con l'eccezione che i valori effettivi dei coefficienti vengono visualizzati anziché contati.  
   
@@ -437,10 +436,10 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
 -   Rappresentazione XML: Utilizzare una query XML.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il recupero di informazioni da un albero ARTXP potrebbe risultare difficile, poiché le informazioni di ciascuna divisione si trovano in un punto diverso dell'albero. Pertanto, con un modello ARTXP è necessario ottenere tutte le parti, quindi procedere alla ricostruzione della formula completa. Il recupero di un'equazione da un modello ARIMA è più facile, poiché la formula è stata resa disponibile in tutto l'albero. Per altre informazioni su come creare una query per recuperare queste informazioni, vedere [Esempi di query sul modello di serie temporale](time-series-model-query-examples.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Contenuto del modello di data mining &#40;Analysis Services-&#41;di data mining](mining-model-content-analysis-services-data-mining.md)   
  [Algoritmo Microsoft Time Series](microsoft-time-series-algorithm.md)   
  [Esempi di query sul modello Time Series](time-series-model-query-examples.md)   

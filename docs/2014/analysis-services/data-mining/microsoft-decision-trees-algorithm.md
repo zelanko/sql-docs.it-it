@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 95ffe66f-c261-4dc5-ad57-14d2d73205ff
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 809cbf259f9eddbb684170fd320c44972e56c90f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd55af5914bcc6409a3e5d6c899cbfd8b7f939f5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174655"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522151"
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Algoritmo Microsoft Decision Trees
   L' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Decision Trees è un algoritmo di classificazione e di regressione fornito da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per l'utilizzo nella modellazione predittiva di attributi sia discreti che continui.
@@ -92,7 +91,7 @@ ms.locfileid: "78174655"
 
  Per informazioni generali sulla creazione di query in base ai modelli di data mining, vedere [Query di data mining](data-mining-queries.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 -   Supporta l'utilizzo del linguaggio PMML (Predictive Model Markup Language) per la creazione di modelli di data mining.
 
@@ -100,7 +99,7 @@ ms.locfileid: "78174655"
 
 -   Supporta l'utilizzo di modelli di data mining OLAP e la creazione di dimensioni di data mining.
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
  [Algoritmi di data mining &#40;Analysis Services-Data mining&#41;](data-mining-algorithms-analysis-services-data-mining.md) l' [algoritmo Microsoft Decision](microsoft-decision-trees-algorithm-technical-reference.md) Trees [esempi di query sul modello](decision-trees-model-query-examples.md) [di albero delle decisioni modelli di modello di data mining per i modelli di albero delle decisioni &#40;Analysis Services-Data mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)
 
 

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 442d8c29-07c7-45de-9a15-d556059f68d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 30a4a503b16693a3774aa7f68771fb0f9dd70810
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8775ec4dbfb7d851d98e0a943d052589f45b1ade
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084906"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523067"
 ---
 # <a name="querying-the-data-mining-schema-rowsets-analysis-services---data-mining"></a>Esecuzione di query sui set di righe dello schema di data mining (Analysis Services - Data mining)
   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]molti dei set di righe esistenti dello schema di data mining OLE DB sono esposti come set di tabelle di sistema su cui è possibile eseguire query tramite istruzioni DMX (Data Mining Extensions). Mediante la creazione di query sul set di righe dello schema di data mining, è possibile identificare i servizi disponibili, ottenere aggiornamenti sullo stato dei modelli e delle strutture e trovare dettagli sul contenuto del modello o sui parametri. Per una descrizione dei set di righe dello schema di data mining, vedere [Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md).  
@@ -48,7 +47,7 @@ ms.locfileid: "66084906"
 > [!NOTE]  
 >  L'elenco nella tabella non è completo in quanto contiene solo i set di righe che possono essere utili per la risoluzione dei problemi.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nella sezione seguente sono riportati alcuni esempi di query sui set di righe dello schema di data mining.  
   
 ### <a name="example-1-list-data-mining-services"></a>Esempio 1: Elenco di servizi di data mining  
@@ -76,7 +75,7 @@ SELECT *
 FROM $system.DBSCHEMA_TABLES  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Concetti relativi alla risoluzione dei problemi (Analysis Services - Dati mining)](https://msdn.microsoft.com/library/cc645881.aspx)  
   
   

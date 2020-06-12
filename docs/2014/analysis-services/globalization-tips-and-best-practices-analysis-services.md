@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d8d98d2a45ff50c60a37ee04e576567db7f96e26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2018c557b8fd7dffdceb14c0a872595a3ce21da
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874409"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544342"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>Suggerimenti e procedure consigliate per la globalizzazione (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]** Solo multidimensionale  
@@ -102,7 +101,7 @@ ms.locfileid: "70874409"
   
 -   Aggiungere `Locale Identifier=1036` alla stringa di connessione. Salvare e chiudere il file.  
   
--   Apri Excel | **Data** | **Connessioni esistenti**ai dati. Filtrare l'elenco per visualizzare solo i file delle connessioni presenti nel computer in uso. Trovare la connessione per Adventure Works (controllare il nome con attenzione perché potrebbero essercene più di uno). Aprire la connessione.  
+-   Apri Excel | **Dati**  |  di **Connessioni esistenti**. Filtrare l'elenco per visualizzare solo i file delle connessioni presenti nel computer in uso. Trovare la connessione per Adventure Works (controllare il nome con attenzione perché potrebbero essercene più di uno). Aprire la connessione.  
   
      Verranno visualizzate le traduzioni francesi dal database di esempio Adventure Works.  
   
@@ -112,7 +111,7 @@ ms.locfileid: "70874409"
   
  In Management Studio è possibile specificare l'identificatore delle impostazioni locali in una connessione al server.  
   
--   In Esplora oggetti | **Connetti** | **Analysis Services**Analysis Services | **Opzioni**, fare clic sulla scheda **parametri aggiuntivi** per la connessione.  
+-   In Esplora oggetti | **Connetti**  |  **Analysis Services**  |  **Opzioni**, fare clic sulla scheda **parametri aggiuntivi** per la connessione.  
   
 -   Immettere `Local Identifier=1036` , quindi fare clic su **Connetti**.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 60bb9610-7229-42eb-a95f-a377268a8720
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f75298a4701f15a1fc0f3f471bf7628f4a7030c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a6bbeab13d3a29c9dd7cf769dd28d776d3ae229
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782645"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528027"
 ---
 # <a name="analysis-services-powershell"></a>PowerShell per Analysis Services
   In [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] sono inclusi cmdlet e un provider PowerShell per Analysis Services (SQLAS) in modo che sia possibile utilizzare Windows PowerShell per la navigazione, l'amministrazione e l'esecuzione di query sugli oggetti di Analysis Services.  
@@ -28,7 +27,7 @@ ms.locfileid: "72782645"
   
 -   Cmdlet specifici dell'attività per operazioni di routine, quali elaborazione, gestione dei ruoli, gestione delle partizioni, nonché per backup e ripristino.  
   
-## <a name="in-this-article"></a>Contenuto dell'articolo  
+## <a name="in-this-article"></a>In questo articolo  
  [Prerequisiti](#bkmk_prereq)  
   
  [Versioni e modalità supportate di Analysis Services](#bkmk_vers)  
@@ -46,7 +45,7 @@ Per ulteriori informazioni sulla sintassi e gli esempi, vedere [Analysis Service
   
  È necessario installare una funzionalità di SQL Server che include il modulo SQL Server PowerShell (SQLPS) e librerie client. Il modo più semplice per effettuare questa operazione consiste nell'installare SQL Server Management Studio che include automaticamente la funzionalità PowerShell e librerie client. Nel modulo SQL Server PowerShell (SQLPS) sono inclusi tutti i cmdlet e i provider PowerShell per tutte le funzionalità di SQL Server, tra cui il modulo SQLASCmdlets e il provider SQLAS utilizzati per la navigazione nella gerarchia di oggetti di Analysis Services.  
   
- Prima di poter utilizzare **SQLPS** il provider e i `SQLAS` cmdlet, è necessario importare il modulo sqlps. Il provider SQLAS è un'estensione del `SQLServer` provider. Sono disponibili diversi modi per importare il modulo SQLPS. Per altre informazioni, vedere [Importare il modulo SQLPS](../../2014/database-engine/import-the-sqlps-module.md).  
+ Prima di poter utilizzare il provider e i cmdlet, è necessario importare il modulo **sqlps** `SQLAS` . Il provider SQLAS è un'estensione del `SQLServer` provider. Sono disponibili diversi modi per importare il modulo SQLPS. Per altre informazioni, vedere [Importare il modulo SQLPS](../../2014/database-engine/import-the-sqlps-module.md).  
   
  Per l'accesso remoto a un'istanza di Analysis Services è necessaria l'abilitazione dell'amministrazione remota e la condivisione di file. Per ulteriori informazioni, vedere [Enable Remote Administration](#bkmk_remote) in questo argomento.  
   
@@ -60,10 +59,10 @@ Per ulteriori informazioni sulla sintassi e gli esempi, vedere [Analysis Service
 |Istanze e database multidimensionali|Supportata per l'amministrazione locale e remota.<br /><br /> La partizione di tipo merge richiede una connessione locale.|  
 |Istanze e database tabulari|Supportata per l'amministrazione locale e remota.<br /><br /> Per ulteriori informazioni, vedere il Blog di agosto 2011 relativo alla [gestione dei modelli tabulari tramite PowerShell](https://go.microsoft.com/fwlink/?linkID=227685).|  
 |Database e istanze di PowerPivot per SharePoint|Supporto limitato. È possibile utilizzare connessioni HTTP e il provider per SQLAS per visualizzare informazioni sulle istanze e sui database.<br /><br /> Tuttavia, l'utilizzo che i cmdlet non è supportato. Non utilizzare PowerShell per Analysis Services per eseguire il backup e ripristino in memoria del database PowerPivot, né aggiungere o rimuovere ruoli, elaborare dati o eseguire script XMLA arbitrario.<br /><br /> Per scopi di configurazione, in PowerPivot per SharePoint è disponibile il supporto PowerShell predefinito che viene fornito separatamente. Per ulteriori informazioni, vedere [la Guida di riferimento a PowerShell per PowerPivot per SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint).|  
-|Connessioni native a cubi locali<br /><br /> "Data Source = c:\backup\test.Cub"|Non supportato.|  
-|Connessioni HTTP a file di connessione (con estensione bism) di Business Intelligence Semantic Model in SharePoint<br /><br /> "Data Source =http://server/shared_docs/name.bism"|Non supportato.|  
-|Connessioni incorporate ai database PowerPivot<br /><br /> "Data Source = $Embedded $"|Non supportato.|  
-|Contesto del server locale nelle stored procedure di Analysis Services<br /><br /> "Data Source = *"|Non supportato.|  
+|Connessioni native a cubi locali<br /><br /> "Data Source = c:\backup\test.Cub"|Non supportata.|  
+|Connessioni HTTP a file di connessione (con estensione bism) di Business Intelligence Semantic Model in SharePoint<br /><br /> "Data Source = http://server/shared_docs/name.bism "|Non supportata.|  
+|Connessioni incorporate ai database PowerPivot<br /><br /> "Data Source = $Embedded $"|Non supportata.|  
+|Contesto del server locale nelle stored procedure di Analysis Services<br /><br /> "Data Source = *"|Non supportata.|  
   
 ##  <a name="authentication-requirements-and-security-considerations"></a><a name="bkmk_auth"></a>Considerazioni sulla sicurezza e sui requisiti di autenticazione  
  Quando si stabilisce la connessione ad Analysis Services, è necessario creare tale connessione utilizzando un'identità utente di Windows. Nella maggior parte dei casi, una connessione viene creata tramite la sicurezza integrata di Windows, dove l'identità dell'utente corrente imposta il contesto di sicurezza nel quale vengono eseguite le operazioni del server. Tuttavia, metodi di autenticazione aggiuntivi diventano disponibili quando si configura l'accesso HTTP ad Analysis Services. In questa sezione viene illustrato in che modo il tipo di connessione determina quali opzioni di autenticazione è possibile utilizzare.  
@@ -82,7 +81,7 @@ Per ulteriori informazioni sulla sintassi e gli esempi, vedere [Analysis Service
   
 3.  Il nome utente e la password forniti dall'oggetto Credential vengono risolti nell'identità di un utente di Windows. Questa identità viene utilizzata in Analysis Services come utente corrente. Se l'utente non è un utente di Windows, o non dispone di autorizzazioni sufficienti per eseguire l'operazione richiesta, la richiesta non verrà completata.  
   
- Per creare un oggetto Credential, è possibile utilizzare il cmdlet Get-Credential per raccogliere le credenziali dall'operatore. È quindi possibile utilizzare l'oggetto Credential in un comando che stabilisce la connessione ad Analysis Services. Nell'esempio seguente vien illustrato un approccio. In questo esempio, la connessione è a un'istanza locale (`SQLSERVER:\SQLAS\HTTP_DS`) configurata per l'accesso HTTP.  
+ Per creare un oggetto Credential, è possibile utilizzare il cmdlet Get-Credential per raccogliere le credenziali dall'operatore. È quindi possibile utilizzare l'oggetto Credential in un comando che stabilisce la connessione ad Analysis Services. Nell'esempio seguente vien illustrato un approccio. In questo esempio, la connessione è a un'istanza locale ( `SQLSERVER:\SQLAS\HTTP_DS` ) configurata per l'accesso HTTP.  
   
 ```powershell
 $cred = Get-Credential adventureworks\dbadmin  
@@ -201,7 +200,7 @@ PS SQLSERVER\sqlas\localhost\default:> dir
   
  Le connessioni HTTP sono utili se è stato configurato il server per l'accesso HTTP seguendo le istruzioni riportate in questo argomento: [configurare l'accesso HTTP per Analysis Services in Internet Information Services &#40;IIS&#41; 8,0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
- Supponendo che l'URL http://localhost/olap/msmdpump.dlldel server sia, una connessione potrebbe essere simile alla seguente:  
+ Supponendo che l'URL del server http://localhost/olap/msmdpump.dll sia, una connessione potrebbe essere simile alla seguente:  
   
 ```  
 PS SQLSERVER\sqlas:> cd http_ds  
@@ -273,7 +272,7 @@ Restart-Service mssqlserverolapservice
     Get-PSDrive  
     ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Installa SQL Server PowerShell](../database-engine/install-windows/install-sql-server-powershell.md)   
  [Gestire i modelli tabulari tramite PowerShell (Blog)](https://go.microsoft.com/fwlink/?linkID=227685)   
  [Configurare l'accesso HTTP ad Analysis Services in Internet Information Services &#40;IIS&#41; 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  

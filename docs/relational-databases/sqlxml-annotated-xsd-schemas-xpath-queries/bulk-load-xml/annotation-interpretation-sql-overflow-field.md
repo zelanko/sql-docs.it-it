@@ -1,5 +1,6 @@
 ---
 title: 'SQL: overflow-field (SQLXML)'
+description: "Informazioni su come utilizzare l'annotazione sql: overflow-field per identificare una colonna come colonna di overflow che riceverà tutti i dati non utilizzati dal documento XML."
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5757ce66dd0905f6c381d05caa99c6bb664021e9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8909a0eee54667ea74af44e774bb5262599084b
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246805"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689233"
 ---
 # <a name="annotation-interpretation---sqloverflow-field"></a>Interpretazione delle annotazioni - sql:overflow-field
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75246805"
   
  Mentre archivia i dati nella colonna di overflow, il caricamento bulk XML archivia anche i tag di apertura e chiusura dell'elemento padre per cui è definito **SQL: overflow-field** .  
   
- Nello schema seguente, ad esempio, vengono descritti gli ** \<elementi Customers>** e ** \<CustOrder>** . Ognuno di questi elementi identifica una colonna di overflow:  
+ Nello schema seguente, ad esempio, vengono descritti gli elementi ** \< customers>** e ** \< CustOrder>** . Ognuno di questi elementi identifica una colonna di overflow:  
   
 ```  
 <?xml version="1.0" ?>  
@@ -75,9 +76,9 @@ ms.locfileid: "75246805"
 </xsd:schema>  
 ```  
   
- Nello schema, l' ** \<elemento Customer>** viene mappato alla tabella Cust e l' ** \<elemento Order>** viene mappato alla tabella CustOrder.  
+ Nello schema, l'elemento ** \< Customer>** viene mappato alla tabella Cust e l'elemento ** \< Order>** viene mappato alla tabella CustOrder.  
   
- Gli ** \<elementi Customer>** e ** \<Order>** identificano una colonna di overflow. Pertanto, il caricamento bulk XML salva tutti gli attributi e gli elementi figlio non utilizzati dell'elemento ** \<Customer>** nella colonna di overflow della tabella Cust e tutti gli attributi e gli elementi figlio non utilizzati dell'elemento ** \<Order>** nella colonna di overflow della tabella CustOrder.  
+ Gli elementi ** \< Customer>** e ** \< Order>** identificano una colonna di overflow. Pertanto, il caricamento bulk XML salva tutti gli attributi e gli elementi figlio non utilizzati dell'elemento ** \< Customer>** nella colonna di overflow della tabella Cust e tutti gli attributi e gli elementi figlio non utilizzati dell'elemento ** \< Order>** nella colonna di overflow della tabella CustOrder.  
   
 ### <a name="to-test-a-working-sample"></a>Per testare un esempio reale  
   

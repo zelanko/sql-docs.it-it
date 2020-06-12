@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2a577e52-821d-4bd3-ba35-075a6be285c9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3bf7682ce42422efb0e47e4272e53933eba92a4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6973256746d668569d977cedbc2500ee007cd6ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081555"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528514"
 ---
 # <a name="dmx-templates"></a>Modelli DMX
   I modelli di data mining consentono di compilare rapidamente query sofisticate. Sebbene la sintassi generale per le query DMX sia ben documentata, l'utilizzo dei modelli semplifica la compilazione delle query facendo clic e scegliendo gli argomenti e le origini dati.  
@@ -52,7 +51,7 @@ ms.locfileid: "66081555"
 ## <a name="list-of-dmx-templates"></a>Elenco dei modelli DMX  
  I seguenti modelli DMX sono inclusi nel client di data mining per Excel.  
   
- **Previsioni**  
+ **Stima**  
   
  Utilizzare tali modelli per creare query di stima avanzate, comprese le query non supportate dalle procedure guidate nei componenti aggiuntivi, ad esempio le query che utilizzano tabelle annidate o origini dati esterne.  
   
@@ -72,9 +71,9 @@ ms.locfileid: "66081555"
   
 -   Query di stima TOP sulla tabella nidificata  
   
- **Crea**  
+ **Creare**  
   
- Utilizzare tali modelli per compilare modelli o strutture dei dati personalizzati. Non si è limitati ai modelli supportati dalle procedure guidate: è possibile usare qualsiasi algoritmo data mining supportato dall'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a cui si è connessi, inclusi gli algoritmi plug-in.  
+ Utilizzare tali modelli per compilare modelli o strutture dei dati personalizzati. Non si è limitati ai modelli supportati dalle procedure guidate: è possibile usare qualsiasi algoritmo data mining supportato dall'istanza di a cui [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] si è connessi, inclusi gli algoritmi plug-in.  
   
 -   Modello di data mining  
   
@@ -86,7 +85,7 @@ ms.locfileid: "66081555"
   
 -   Struttura temporanea  
   
- **Proprietà dei modelli**  
+ **Proprietà modello**  
   
  Utilizzare tali modelli per creare query che ottengono i metadati sul modello e il set di training. È inoltre possibile recuperare i dettagli dal contenuto del modello o ottenere un profilo statistico dei dati di training.  
   
@@ -125,7 +124,7 @@ ms.locfileid: "66081555"
 ### <a name="requirements"></a>Requisiti  
  A seconda del modello utilizzato, potrebbero essere necessarie autorizzazioni amministrative per l'accesso al server [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e l'esecuzione della query.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di un modello di data mining](creating-a-data-mining-model.md)  
   
   

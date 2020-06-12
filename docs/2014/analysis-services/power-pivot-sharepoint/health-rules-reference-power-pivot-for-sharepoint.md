@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47ae04ce-7b9d-49c2-8dbc-bafcb73d4603
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bae8efeda0a82873498af93b0b79061f6135fd0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4698c24ace37a8dd804c9fc1eff9002d9487d352
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797604"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540334"
 ---
 # <a name="health-rules-reference-powerpivot-for-sharepoint"></a>Guida di riferimento alle regole di integrità (PowerPivot per SharePoint)
   In questo argomento di riferimento vengono descritte le regole di analisi dell'integrità di SharePoint aggiunte da un'installazione di PowerPivot per SharePoint. Queste regole vengono utilizzate per segnalare problemi relativi a integrità del server, disponibilità o configurazione di un'applicazione del servizio [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] o dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] associata.  

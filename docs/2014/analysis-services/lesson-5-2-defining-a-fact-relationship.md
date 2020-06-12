@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8b43e36072e7151570c0b0fa610c3b7e4709616a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b2473157bed334345f6c18177f97ac0415612232
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175280"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542783"
 ---
 # <a name="defining-a-fact-relationship"></a>Definizione di una relazione di tipo Fatti
   Talvolta può essere necessario dimensionare le misure in base ai dati contenuti nella tabella dei fatti o eseguire query per trovare informazioni correlate specifiche aggiuntive, come ad esempio i numeri delle fatture o degli ordini di acquisto collegati a operazioni di vendita specifiche. Quando viene definita una dimensione basata su un elemento della tabella dei fatti di questo tipo, la dimensione viene denominata *dimensione dei fatti*. Le dimensioni dei fatti sono inoltre note come dimensioni degeneri. Le dimensioni dei fatti sono utili per raggruppare righe di tabelle dei fatti collegate, come ad esempio tutte le righe collegate a un particolare numero di fattura. Sebbene sia possibile inserire queste informazioni in una tabella della dimensione separata del database relazionale, la creazione di una tale tabella non si rivela vantaggiosa in quanto la tabella della dimensione aumenterebbe allo stesso modo della tabella dei fatti determinando un'inutile duplicazione dei dati nonché un'inutile complessità.
@@ -69,7 +68,7 @@ ms.locfileid: "78175280"
 
 16. Aggiungere l'attributo **Sales Order Number** alla dimensione trascinando la colonna **SalesOrderNumber** dalla tabella **InternetSales** del riquadro **Vista origine dati** al riquadro **Attributi** .
 
-17. Modificare la proprietà **Name** del nuovo attributo **Sales Order Number** in `Order Number`e modificare la proprietà **OrderBy** in **Key**.
+17. Modificare la proprietà **Name** del nuovo attributo **Sales Order Number** in `Order Number` e modificare la proprietà **OrderBy** in **Key**.
 
 18. Nel riquadro **gerarchie** creare una gerarchia utente **Internet Sales Orders** contenente i livelli di `Order Number` **Descrizione dell'elemento** e, in questo ordine.
 

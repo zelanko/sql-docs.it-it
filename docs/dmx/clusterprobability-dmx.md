@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9beac713ec9a8b5a549602809d3612e4e29e67c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e06563d9b6a69bc8903a55ee1e67cda962f246ba
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68071947"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669356"
 ---
 # <a name="clusterprobability-dmx"></a>ClusterProbability (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ ClusterProbability([<Node_Caption>])
 ## <a name="return-type"></a>Tipo restituito  
  Valore scalare.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La sintassi seguente utilizza il set di righe dello schema relativo al contenuto del modello di data mining per restituire le didascalie dei nodi esistenti nel modello di data mining.  
   
 ```  
@@ -42,9 +42,9 @@ SELECT NODE_CAPTION FROM <model>.CONTENT
   
  Per ulteriori informazioni sull'utilizzo di questa sintassi, vedere [selezionare da &#60;modello&#62;. CONTENUTO &#40;&#41;DMX ](../dmx/select-from-model-content-dmx.md). Per ulteriori informazioni sul set di righe dello schema del contenuto del modello di data mining, vedere [DMSCHEMA_MINING_MODEL_CONTENT set di righe](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
   
- Se non \<viene specificata una didascalia del nodo>, la funzione restituisce la probabilità che i case di input appartengano al cluster più probabile. Usare la funzione **cluster** per restituire il cluster più probabile.  
+ Se \< non viene specificata una didascalia del nodo>, la funzione restituisce la probabilità che i case di input appartengano al cluster più probabile. Usare la funzione **cluster** per restituire il cluster più probabile.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene restituita la probabilità che il case specificato esista nel cluster con etichetta Cluster 2.  
   
 ```  

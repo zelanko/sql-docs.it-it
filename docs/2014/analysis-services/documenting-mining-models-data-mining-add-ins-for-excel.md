@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0a663e11-e40c-4708-ad18-fabb6c976fa4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: afe304e3fa76be805a64e9bd662bc21500ac2fa7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92ed5c43fa2b7484485b915d42946121487386d9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081585"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528487"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>Documentazione di modelli di data mining (componenti aggiuntivi Data mining per Excel)
   ![Pulsante Modello di documento, barra multifunzione Data mining](media/dmc-docmodel.gif "Pulsante Modello di documento, barra multifunzione Data mining")  
@@ -55,7 +54,7 @@ ms.locfileid: "66081585"
   
 ||||  
 |-|-|-|  
-|**Metadati**|Nome modello<br /><br /> Descrizione modello<br /><br /> Nome algoritmo<br /><br /> Data ultima elaborazione||  
+|**Metadati**|Nome modello<br /><br /> Descrizione del modello<br /><br /> Nome algoritmo<br /><br /> Data ultima elaborazione||  
 |**Risultati modello**|Association Rules|Numero di set di elementi<br /><br /> Numero di regole|  
 ||Clustering|Numero di cluster<br /><br /> Supporto per ogni cluster|  
 ||Albero delle decisioni|Numero di alberi<br /><br /> Numero di nodi in ogni albero|  
@@ -70,14 +69,14 @@ ms.locfileid: "66081585"
 ||||  
 |-|-|-|  
 |**Metadati**|Metadati modello|Valori e parametri dell'algoritmo|  
-||Metadati colonna|Nome colonna<br /><br /> Uso<br /><br /> Tipo di dati<br /><br /> Tipo di contenuto<br /><br /> Valori (elenco di valori discreti o intervallo di valori)|  
+||Metadati colonna|Nome colonna<br /><br /> Utilizzo<br /><br /> Tipo di dati<br /><br /> Tipo di contenuto<br /><br /> Valori (elenco di valori discreti o intervallo di valori)|  
 |**Statistiche modello**|Colonne continue|Valore medio<br /><br /> Valore minimo<br /><br /> Valore massimo<br /><br /> Radice errore quadratico medio<br /><br /> Errore assoluto medio<br /><br /> Punteggio in forma logaritmica<br /><br /> Formula di regressione (solo per i modelli per la regressione lineare)|  
 ||Colonne discrete|Numero di test superati<br /><br /> Numero di test non superati<br /><br /> Punteggio in forma logaritmica<br /><br /> Accuratezza|  
   
 > [!NOTE]  
 >  È possibile documentare qualsiasi tipo di modello supportato da SQL Server Analysis Services. Nella tabella sono pertanto inclusi alcuni tipi di modelli che non è possibile creare tramite Strumenti di analisi tabelle o utilizzando le procedure guidate in Client di data mining. Tuttavia, è possibile creare tutti i tipi di modello utilizzando l' **Editor avanzato query di data mining**. Per ulteriori informazioni, vedere [Query &#40;SQL Server componenti aggiuntivi Data Mining&#41;](query-sql-server-data-mining-add-ins.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Distribuzione e scalabilità di modelli di data mining &#40;componenti aggiuntivi Data mining per Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
   
   

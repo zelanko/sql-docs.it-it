@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 73ee8171-3379-4384-bfc8-071b3eebbc8f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 654d659900d01ae9d5caf5188b9146510de483ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a019de00f932a8992b9adde426d1b9d953acb49f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080115"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544013"
 ---
 # <a name="connect-to-analysis-services"></a>Connetti ad Analysis Services
   In questa sezione sono contenute le informazioni sulle proprietà della stringa di connessione, sulle librerie client usate per le connessioni, quali metodi di autenticazione sono supportati da Analysis Services e come impostare o cancellare le connessioni prima di disconnettere un server.  
@@ -40,7 +39,7 @@ ms.locfileid: "66080115"
 |[Provider di dati usati per le connessioni ad Analysis Services](data-providers-used-for-analysis-services-connections.md)|Analysis Services offre tre librerie client per accedere alle operazioni server o ai dati di Analysis Services. Questo argomento offre una sintetica introduzione ad ADOMD.NET, agli oggetti di gestione di Analysis Services (AMO) e al provider OLE DB di Analysis Services (MSOLAP).|  
 |[Disconnettere utenti e sessioni sul server Analysis Services](disconnect-users-and-sessions-on-analysis-services-server.md)|Cancellare le connessioni e le sessioni esistenti prima di portare un server offline o eseguire test delle prestazioni di base.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurazione post-installazione &#40;Analysis Services&#41;](post-install-configuration-analysis-services.md)   
  [Configurare le proprietà del server in Analysis Services](../server-properties/server-properties-in-analysis-services.md)   
  [Creare script per le attività amministrative in Analysis Services](../script-administrative-tasks-in-analysis-services.md)  

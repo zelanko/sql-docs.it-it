@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 095039c2-7104-414c-a9a6-327b03ce79df
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7b283286edb07bbf4028fb32f86991cd72e2688a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 723f48aadd1681583946f357479e7cf0e1c88513
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175320"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543273"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>Come nascondere e disabilitare le gerarchie degli attributi
   Per impostazione predefinita, una gerarchia dell'attributo viene creata per ogni attributo di una dimensione e ogni gerarchia è disponibile per il dimensionamento dei dati delle tabelle dei fatti. Questa gerarchia include un livello Totale e un livello di dettaglio contenente tutti i membri della gerarchia. Come illustrato in precedenza, è possibile organizzare gli attributi in gerarchie definite dall'utente per offrire percorsi di navigazione in un cubo. In alcuni casi è possibile disabilitare o nascondere determinati attributi o le rispettive gerarchie. Alcuni attributi, ad esempio i numeri della previdenza sociale o il codice fiscale, le retribuzioni, le date di nascita e le informazioni di accesso non sono attributi in base ai quali gli utenti dimensionano le informazioni sul cubo. Queste informazioni vengono invece generalmente visualizzate come dettagli di un particolare membro dell'attributo. È possibile nascondere queste gerarchie degli attributi lasciando gli attributi visibili come proprietà del membro di un attributo specifico. È inoltre possibile rendere visibili i membri di altri attributi, come ad esempio i nomi dei clienti o i codici postali, solo quando vengono visualizzati tramite una gerarchia utente anziché indipendentemente tramite una gerarchia dell'attributo. Ciò può essere determinato dal numero dei membri distinti nella gerarchia dell'attributo. Per migliorare le prestazioni di elaborazione, è infine consigliabile disabilitare le gerarchie degli attributi non utilizzate dagli utenti a fini di esplorazione.

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ef00476e7c469a98532e58302c560c805669421d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 34a4cc6b16e22a20e0e8be3ded12b0465ba46eab
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74683582"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535123"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot per SharePoint (SSAS)
   PowerPivot per SharePoint è un server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eseguito in modalità SharePoint. PowerPivot per SharePoint offre l'hosting nel server dei dati PowerPivot in una farm di SharePoint 2010. I dati PowerPivot sono un modello di dati analitici che viene compilato con uno degli elementi seguenti:  
@@ -24,12 +23,12 @@ ms.locfileid: "74683582"
   
 -   Excel 2013  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]2013 | [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]2013 | [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]2010  
   
  L'hosting nel server di tali dati richiede SharePoint, Excel Services e un'installazione di PowerPivot per SharePoint. I dati vengono caricati nelle istanze di PowerPivot per SharePoint, dove è possibile effettuare aggiornamenti a intervalli programmati tramite la funzionalità di aggiornamento dati di PowerPivot fornita dal server per le cartelle di lavoro di Excel 2010 o da SharePoint 2013 Excel Services per le cartelle di lavoro di Excel 2013.  
   
 ## <a name="powerpivot-for-sharepoint-2013"></a>PowerPivot per SharePoint 2013  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] supporta [!INCLUDE[msCoName](../../includes/msconame-md.md)] l'utilizzo di SharePoint 2013 Excel Services di cartelle di lavoro di Excel [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contenenti modelli di dati e report Power View.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]supporta [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint 2013 Excel Services utilizzo di cartelle di lavoro di Excel contenenti modelli di dati e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report Power View.  
   
  In Excel Services in SharePoint 2013 è inclusa la funzionalità del modello di dati per consentire l'interazione con una cartella di lavoro di PowerPivot nel browser. Non è necessario distribuire il componente aggiuntivo PowerPivot per SharePoint 2013 nella farm. È sufficiente installare un server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in modalità SharePoint e registrarlo nelle impostazioni **Modello di dati** di Excel Services.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "74683582"
   
  Un'istanza del server Analysis Services in modalità integrata SharePoint completa la distribuzione. Carica, esegue query e scarica i dati. Elabora inoltre i dati se la cartella di lavoro viene configurata per l'aggiornamento dati PowerPivot.  Ogni istanza è strettamente associata al servizio di sistema PowerPivot locale che fa parte della stessa installazione.  
   
-##  <a name="in-this-section"></a><a name="bkmk_RelatedContent"></a>Contenuto della sezione  
+##  <a name="in-this-section"></a><a name="bkmk_RelatedContent"></a> Contenuto della sezione  
  [Amministrazione e configurazione del server PowerPivot in Amministrazione centrale](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
  [Configurazione di PowerPivot tramite Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  

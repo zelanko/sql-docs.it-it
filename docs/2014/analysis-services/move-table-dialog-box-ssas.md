@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 6466e075-3345-4d6b-9e20-1ffb4c8f30c3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d6c680dd48f3588b92a2c87d9fa8d3c3a04dde39
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7befaa35fb520bda23cfe8cd216df521090cce58
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077613"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537338"
 ---
 # <a name="move-table-dialog-box-ssas"></a>Finestra di dialogo Sposta tabella (SSAS)
   La finestra di dialogo **Sposta tabella** consente di modificare l'ordine di visualizzazione delle tabelle in Progettazione modelli. Per accedere a questa finestra di dialogo, fare clic con il pulsante destro del mouse sulla scheda nella parte inferiore della tabella che si vuole spostare e quindi scegliere **Sposta**.  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco elementi dell'interfaccia utente  
  **Sposta la tabella selezionata prima della tabella**  
  La tabella che si desidera spostare verrà inserita nella posizione precedente la tabella scelta da questo elenco. Se si vuole spostare una tabella alla fine del set di tabelle, scegliere **(sposta alla fine)**.  
   

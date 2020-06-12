@@ -1,5 +1,6 @@
 ---
 title: Esecuzione di un DiffGram tramite ADO (SQLXML)
+description: Informazioni su come eseguire un file DiffGram in un'applicazione Visual Basic Microsoft utilizzando ADO (SQLXML 4,0) per stabilire una connessione a un'istanza di Microsoft SQL Server.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b7ca55bdea021127d73bcef8bb2e695a5fe45123
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64835df5e298f85af2cf4560273a1ece16683b0c
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246647"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306216"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>Esecuzione di un DiffGram mediante ADO (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "75246647"
   
 -   Il flusso di output del comando è impostato sull'oggetto **StrmOut** (**ADODB. Stream**) per ricevere i dati restituiti.  
   
--   Quando si utilizza il provider SQLOLEDB, per impostazione predefinita si otterrà la funzionalità Microsoft SQLXML fornita da Sqlxmlx.dll. Per utilizzare Sqlxml4. dll con il provider SQLOLEDB, è necessario impostare la proprietà della **versione SQLXML** su **SQLXML. 4.0** nell'oggetto **connessione** del provider SQLOLEDB.  
+-   Quando si utilizza il provider SQLOLEDB, per impostazione predefinita si otterrà la funzionalità Microsoft SQLXML fornita da Sqlxmlx.dll. Per utilizzare Sqlxml4.dll con il provider SQLOLEDB, è necessario impostare la proprietà della **versione SQLXML** su **SQLXML. 4.0** nell'oggetto **connessione** del provider SQLOLEDB.  
   
 -   Il comando (DiffGram) viene eseguito.  
   

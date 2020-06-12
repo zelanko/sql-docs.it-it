@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: faffe208-7a64-4ec6-825f-ecbaa79caff7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 30ff9705949be3fb9bf99d985d0db1aa17d93ab1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69002d17205a5631d555e1022b8adeb9e51d3db2
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088466"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527737"
 ---
 # <a name="browsing-an-association-rules-model"></a>Esplorazione di un modello Association Rules
-  Quando si apre un modello di associazione utilizzando **Sfoglia**, il modello viene visualizzato in un visualizzatore interattivo, simile al visualizzatore Association Rules [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]in.  Il visualizzatore consente di visualizzare immediatamente gli elementi correlati l'uno con l'altro e le regole che è possibile utilizzare per la stima o creare indicazioni.  
+  Quando si apre un modello di associazione utilizzando **Sfoglia**, il modello viene visualizzato in un visualizzatore interattivo, simile al visualizzatore Association Rules in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  Il visualizzatore consente di visualizzare immediatamente gli elementi correlati l'uno con l'altro e le regole che è possibile utilizzare per la stima o creare indicazioni.  
   
 ##  <a name="explore-the-model"></a><a name="BKMK_ViewerTabs"></a>Esplorare il modello  
  Quando si apre un modello di data mining creato utilizzando l' [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo Association Rules, nella finestra **Sfoglia** sono incluse le visualizzazioni seguenti, ciascuna progettata per consentire l'esplorazione di un aspetto diverso del modello:  
@@ -53,7 +52,7 @@ ms.locfileid: "66088466"
   
  È possibile filtrare il numero di set di elementi visualizzati nella scheda modificando il **supporto minimo** e i valori **massimi delle righe** . Se si aumenta il valore di **supporto minimo** , nell'elenco verranno visualizzati meno set di elementi, ma i set di elementi saranno quelli più comuni nei dati di input. La scelta comune è la stessa importante è un'altra domanda, che è possibile esplorare usando la scheda **regole** .  
   
- Si noti che la modifica del valore di supporto o di altri controlli nella scheda **set** di elementi modifica solo gli elementi visualizzati e non influisce sul modello sottostante. Se si desidera generare meno o più set di elementi o limitarne le dimensioni, è necessario utilizzare i parametri `MINIMUM_SUPPORT` e `MAXIMUM_SUPPORT`, disponibili nella finestra di dialogo **parametri algoritmo** .  
+ Si noti che la modifica del valore di supporto o di altri controlli nella scheda **set** di elementi modifica solo gli elementi visualizzati e non influisce sul modello sottostante. Se si desidera generare meno o più set di elementi o limitarne le dimensioni, è necessario utilizzare i parametri `MINIMUM_SUPPORT` e `MAXIMUM_SUPPORT` , disponibili nella finestra di dialogo **parametri algoritmo** .  
   
 ##### <a name="explore-the-itemsets-list"></a>Esplorare l'elenco dei set di elementi  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66088466"
   
 2.  Per concentrarsi su un particolare set di elementi di interesse, da molte migliaia di combinazioni possibili, digitare del testo nella casella **Filtra set di elementi** .  
   
-     Qui abbiamo digitato `Gloves`. Quando si applica il filtro, l'elenco viene aggiornato per mostrare solo i set di elementi che contengono guanti. Ciò consente di concentrarsi sulle transazioni in cui i clienti hanno acquistato guanti e qualche altro elemento.  
+     Qui abbiamo digitato `Gloves` . Quando si applica il filtro, l'elenco viene aggiornato per mostrare solo i set di elementi che contengono guanti. Ciò consente di concentrarsi sulle transazioni in cui i clienti hanno acquistato guanti e qualche altro elemento.  
   
      L'opzione **Filtra set di elementi** consente inoltre di visualizzare un elenco dei filtri utilizzati in precedenza.  
   
@@ -142,7 +141,7 @@ ms.locfileid: "66088466"
  [Torna all'inizio](#BKMK_ViewerTabs)  
   
 ## <a name="more-about-association-models"></a>Ulteriori informazioni sui modelli di associazione  
- È possibile utilizzare la funzionalità **Sfoglia** per aprire ed esplorare qualsiasi modello creato utilizzando l'algoritmo Microsoft Association Rules. Sono inclusi i modelli compilati mediante lo strumento Market [Basket Analysis &#40;Table AnalysisTools per Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md) , nella barra multifunzione strumenti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] **analisi tabelle** o in.  
+ È possibile utilizzare la funzionalità **Sfoglia** per aprire ed esplorare qualsiasi modello creato utilizzando l'algoritmo Microsoft Association Rules. Sono inclusi i modelli compilati mediante lo strumento Market [Basket Analysis &#40;Table AnalysisTools per Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md) , nella barra multifunzione **strumenti di analisi tabelle** o in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  Se si crea un modello Association Rules utilizzando lo strumento Market basket analysis, molte delle opzioni avanzate vengono configurate automaticamente.  
   
@@ -154,7 +153,7 @@ ms.locfileid: "66088466"
   
  Per ulteriori informazioni sulla configurazione di parametri avanzati, vedere [algoritmi di data mining &#40;SQL Server componenti aggiuntivi Data mining&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Esplorazione di modelli in Excel &#40;SQL Server componenti aggiuntivi Data mining&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

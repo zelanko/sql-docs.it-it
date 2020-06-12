@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f0c3350d-84c0-4ab8-9fb8-1527c2647299
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e35cf7db00effb5ce700a1ac883877f67650d3cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e62e42dc1cc405f5515e40b0b050036b673a7b89
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063053"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527939"
 ---
 # <a name="attribute-characteristics-tab-mining-model-viewer"></a>Scheda Caratteristiche attributo (Visualizzatore modello di data mining)
   Usare il riquadro **Caratteristiche attributo** per esplorare le relazioni tra i risultati e gli attributi di input in un modello Naive Bayes. È possibile scegliere il valore dell'attributo di destinazione, quindi visualizzare un elenco degli attributi di input che influiscono maggiormente sui risultati.  
@@ -40,16 +39,16 @@ ms.locfileid: "66063053"
  **Valore**  
  Consente di scegliere uno stato per l'attributo stimabile impostato in **Attributo**. Poiché i modelli Naive Bayes non supportano le variabili continue, tutti gli attributi di destinazione dispongono di risultati discreti o discretizzati. L'attributo Missing viene sempre aggiunto automaticamente all'elenco.  
   
- **Caratteristiche per \<lo stato stimabile>**  
+ **Caratteristiche per\<predictable state>**  
  Nel grafico sono contenute le colonne seguenti in cui viene descritta la modalità di correlazione tra gli stati dell'attributo di input e lo stato dell'attributo stimabile selezionato.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**Variabile**|Vengono elencati gli attributi di input nel modello di data mining.|  
 |**Valori**|Viene elencato ogni stato dell'attributo di input in **Variabile**.|  
 |**Probabilità**|La barra rappresenta la probabilità che l'attributo e il valore in tale riga siano associati allo stato selezionato dell'attributo stimabile. Posizionare il mouse sulla barra per visualizzare la probabilità in percentuale.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  
