@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c363a29b-6099-473c-9625-460cc15b3d95
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f7c0a9b232a30fbaa4358bf9b23eb28ff16d79b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0353d2af250f620237a165a3f9878a4efc14fdf0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062963"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528267"
 ---
 # <a name="action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor dei form delle azioni (scheda Azioni, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Usare il riquadro dell'editor dei form delle azioni della scheda **Azioni** in Progettazione cubi per creare e modificare azioni standard.  
@@ -32,7 +31,7 @@ ms.locfileid: "66062963"
  **Tipo di destinazione**  
  Consente di selezionare il tipo di oggetto a cui associare l'azione. Il server restituisce al client solo le azioni del tipo specificato relative all'oggetto. L'azione è disponibile per il client se il valore di **Condizione** viene soddisfatto e se sono selezionati gli oggetti specificati nella tabella seguente.  
   
-|valore|Oggetto selezionato|  
+|Valore|Oggetto selezionato|  
 |-----------|---------------------|  
 |Membri dell'attributo|In **Oggetto di destinazione**è selezionato un membro dell'attributo da un livello basato sull'attributo.|  
 |Celle|In **Oggetto di destinazione** è selezionato il set denominato. Selezionare **Tutte le celle** per selezionare tutte le celle del cubo.|  
@@ -54,10 +53,10 @@ ms.locfileid: "66062963"
  **Contenuto azione**  
  Espandere per visualizzare le opzioni **Tipo** ed **Espressione azione** .  
   
- **Type**  
+ **Tipo**  
  Consente di selezionare il tipo di azione da intraprendere quando l'azione viene eseguita. Sono disponibili i tipi di azione seguenti:  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |Set di dati|Restituisce un'istruzione MDX che rappresenta un set di dati multidimensionale e deve essere eseguita e visualizzata dall'applicazione client.|  
 |Proprietario|Restituisce una stringa sul proprietario che può essere interpretata dalle applicazioni client associate all'impostazione **Applicazione** relativa a questa azione.|  
@@ -81,10 +80,10 @@ ms.locfileid: "66062963"
   
  Nella tabella seguente vengono descritte le impostazioni disponibili.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |Batch|L'azione deve essere eseguita come parte di un'operazione batch o di un'attività di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
-|Interactive (Interattivo)|L'azione viene eseguita in seguito alla chiamata dell'utente.|  
+|Interattività|L'azione viene eseguita in seguito alla chiamata dell'utente.|  
 |Su apertura|L'azione viene eseguita quando il cubo viene aperto per la prima volta.|  
   
  **Applicazione**  
@@ -108,7 +107,7 @@ ms.locfileid: "66062963"
   
  Selezionare **True** per indicare che **Didascalia** contiene un'espressione MDX che restituisce una stringa che rappresenta una didascalia da visualizzare per l'azione nell'applicazione client. L'espressione MDX deve essere risolta prima che l'azione venga restituita all'applicazione client.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Azioni &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
  [Barra degli strumenti &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Libreria azioni &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   

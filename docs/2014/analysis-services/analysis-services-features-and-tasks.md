@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 02bcccd0-99e1-4a08-9401-f1f1147d184b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9c0e42f289c5d5aa0aebf546e1adeb0a31683d82
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80eddefc7b4bafb28a1f4e4f166bfac1169632c2
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062540"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528047"
 ---
 # <a name="analysis-services-features-and-tasks"></a>Funzionalità e attività di Analysis Services
   La documentazione fondamentale per Analysis Services è organizzata in base alla modalità per la modellizzazione e a quella server affinché sia possibile concentrare l'attenzione solo sugli strumenti, le attività e le funzionalità disponibili nella modalità installata. Le attività amministrative del server estese a più modalità possono essere trovate nelle istanze del server.  

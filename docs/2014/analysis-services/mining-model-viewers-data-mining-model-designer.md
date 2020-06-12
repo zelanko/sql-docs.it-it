@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4ba391d5-c97b-4848-ba7c-7d096fa4b7dd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9458f2c1fb3d170bf1b4a2887acae94b55ed877e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a08f7fbccf1192f946043ebe932020d0fe5d3409
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175805"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537613"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>Visualizzatori modello di data mining (Progettazione modelli di data mining)
   Usare la scheda **Visualizzatore modello di data mining** per l'esplorazione dei modelli di data mining contenuti in una struttura di data mining.
@@ -31,7 +30,7 @@ ms.locfileid: "78175805"
 
  **Modello di data mining** Fare clic su un modello di data mining da visualizzare contenuto nella struttura di data mining corrente. Il modello di data mining verrà prima aperto nel visualizzatore personalizzato associato.
 
- **Visualizzatore** Consente di scegliere un visualizzatore da utilizzare per l'esplorazione del modello di data mining selezionato. In questo elenco sono inclusi i [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] visualizzatori forniti da per ogni modello [!INCLUDE[msCoName](../includes/msconame-md.md)] di data mining, il Visualizzatore contenuto di data mining e gli eventuali visualizzatori plug-in.
+ **Visualizzatore** Consente di scegliere un visualizzatore da utilizzare per l'esplorazione del modello di data mining selezionato. In questo elenco sono inclusi i visualizzatori [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] forniti da per ogni modello di data mining, il [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizzatore contenuto di data mining e gli eventuali visualizzatori plug-in.
 
  Nel diagramma seguente vengono mostrati il visualizzatore personalizzato e quello generico per lo stesso modello.
 

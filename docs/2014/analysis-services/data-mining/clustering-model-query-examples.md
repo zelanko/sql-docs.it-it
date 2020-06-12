@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4996ba378319e442df07a4ff09af3404034474d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe12b82ce2d237acd060b1e387e7a6dfbf958851
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085714"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524207"
 ---
 # <a name="clustering-model-query-examples"></a>Esempi di query sul modello di clustering
   Quando si crea una query su un modello di data mining, è possibile recuperare i metadati sul modello oppure creare una query contenuto che fornisca dettagli sui modelli individuati nell'analisi. In alternativa, è possibile creare una query di stima che utilizza i modelli nel modello per eseguire stime per i nuovi dati. Ogni tipo di query fornirà informazioni diverse. Ad esempio, tramite una query contenuto potrebbero essere forniti dettagli aggiuntivi sui cluster trovati, mentre tramite una query di stima potrebbe venir indicato a quale cluster è più probabile che appartenga un nuovo punto dati.  
@@ -192,7 +191,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterCh
   
  Risultati dell'esempio:  
   
-|Attributes|Valori|Frequenza|Supporto|  
+|Attributi|Valori|Frequenza|Supporto|  
 |----------------|------------|---------------|-------------|  
 |Number Children at Home|0|0.999999829076798|899|  
 |Region|America del Nord|0.999852875241508|899|  
@@ -216,7 +215,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
   
  Risultati dell'esempio:  
   
-|Attributes|Valori|Punteggio|  
+|Attributi|Valori|Punteggio|  
 |----------------|------------|-----------|  
 |Region|America del Nord|100|  
 |English Occupation|Skilled Manual|94.9003803898654|  
@@ -273,13 +272,13 @@ NATURAL PREDICTION JOIN
   
  Esempio dei risultati quando l'utilizzo è impostato su `Predict`:  
   
-|Bike Buyer|Expression|  
+|Bike Buyer|Espressione|  
 |----------------|----------------|  
 |1|0.592924735740338|  
   
  Esempio dei risultati quando l'utilizzo è impostato su `PredictOnly` e il modello viene rielaborato:  
   
-|Bike Buyer|Expression|  
+|Bike Buyer|Espressione|  
 |----------------|----------------|  
 |1|0.55843544003102|  
   
@@ -324,11 +323,11 @@ NATURAL PREDICTION JOIN
   
  Risultati dell'esempio:  
   
-|$CLUSTER|Expression|  
+|$CLUSTER|Espressione|  
 |--------------|----------------|  
 |Cluster 2|0.397918596951617|  
   
- **Nota** Per impostazione predefinita, `ClusterProbability` la funzione restituisce la probabilità del cluster più probabile. Tuttavia, è possibile specificare un cluster diverso usando la sintassi `ClusterProbability('cluster name')`. In questo caso, tenere presente che i risultati di ogni funzione di stima sono indipendenti dagli altri risultati. Pertanto, il punteggio di probabilità nella seconda colonna può fare riferimento a un cluster diverso rispetto a quello specificato nella prima colonna.  
+ **Nota** Per impostazione predefinita, la `ClusterProbability` funzione restituisce la probabilità del cluster più probabile. Tuttavia, è possibile specificare un cluster diverso usando la sintassi `ClusterProbability('cluster name')`. In questo caso, tenere presente che i risultati di ogni funzione di stima sono indipendenti dagli altri risultati. Pertanto, il punteggio di probabilità nella seconda colonna può fare riferimento a un cluster diverso rispetto a quello specificato nella prima colonna.  
   
  [Torna all'inizio](#bkmk_top2)  
   
@@ -369,7 +368,7 @@ NATURAL PREDICTION JOIN
   
 |||  
 |-|-|  
-|Funzione di stima|Uso|  
+|Funzione di stima|Utilizzo|  
 |[Cluster &#40;DMX&#41;](/sql/dmx/cluster-dmx)|Restituisce il cluster che con maggiore probabilità contiene il case di input.|  
 |[ClusterDistance &#40;DMX&#41;](/sql/dmx/clusterdistance-dmx)|Viene restituita la distanza del case di input dal cluster specificato o la distanza del case di input dal cluster più probabile, se non viene specificato alcun cluster.<br /><br /> Restituisce la probabilità che il case di input appartenga al cluster specificato.|  
 |[ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx)|Restituisce la probabilità che il case di input appartenga al cluster specificato.|  
@@ -387,7 +386,7 @@ NATURAL PREDICTION JOIN
   
  Per la sintassi di funzioni specifiche, vedere [Guida di riferimento alle funzioni DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Query di data mining](data-mining-queries.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md)   
  [Algoritmo Microsoft Clustering](microsoft-clustering-algorithm.md)  

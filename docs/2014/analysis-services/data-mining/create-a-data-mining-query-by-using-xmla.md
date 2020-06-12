@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8f6b6008-006c-4792-9bd1-64c30dc3fd41
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ec69c7225d4c509d93787e667612269c4de91e23
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77b65e8361287ba09fa7f28cd74dd5f88d188f97
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085553"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523967"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>Creare una query di data mining usando XMLA
   È possibile creare diverse query sugli oggetti di data mining utilizzando AMO, DMX o XML/A.  
@@ -44,9 +43,9 @@ ms.locfileid: "66085553"
   
      Viene visualizzato un elenco di set di righe dello schema nel riquadro **Risultati** che contiene i nomi e le colonne di tutti i set di righe disponibili nell'istanza corrente.  
   
-2.  Nel riquadro **query** posizionare il cursore dopo ** \<l'elenco di restrizioni>** e premere INVIO per aggiungere una nuova riga.  
+2.  Nel riquadro **query** posizionare il cursore dopo **\<Restriction List>** e premere INVIO per aggiungere una nuova riga.  
   
-3.  Posizionare il cursore sulla riga vuota e digitare ** \<SchemaName>DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName>**  
+3.  Posizionare il cursore sulla riga vuota e digitare ** \<SchemaName> DMSCHEMA_MINING_MODEL_CONTENT \</SchemaName> **  
   
      La sezione completa delle restrizioni visualizzata sarà simile alla seguente:  
   
@@ -98,7 +97,7 @@ ms.locfileid: "66085553"
   
      Nel riquadro Risultati viene visualizzata la definizione dello schema insieme ai valori del modello specificato.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Contenuto del modello di data mining &#40;Analysis Services-&#41;di data mining](mining-model-content-analysis-services-data-mining.md)   
  [Set di righe dello schema di data mining](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets) 
   

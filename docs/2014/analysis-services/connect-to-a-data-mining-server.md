@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 85962ad6-d840-4bc6-905e-c667c3276944
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3c9abd1b891d47f1711db21eec017ec755526e02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e7fca367c72aaff5f02280829740942a36915ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087350"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527237"
 ---
 # <a name="connect-to-a-data-mining-server"></a>Connessione al server di data mining
   ![Pulsante Connessioni](media/misc-connection.gif "Pulsante Connessioni")  
   
- Fare clic sul pulsante **connessione** per selezionare una connessione esistente o per creare una nuova connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+ Fare clic sul pulsante **connessione** per selezionare una connessione esistente o per creare una nuova connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  **Perché è necessario connettersi a un server?**  
   
@@ -113,7 +112,7 @@ ms.locfileid: "66087350"
   
 4.  Fare clic su Esporta modello di data mining per generare un file script in un percorso specificato.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Connettersi ai dati di origine &#40;client di data mining per Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md)   
  [Utilità di configurazione del server &#40;componenti aggiuntivi Data mining per Excel&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   

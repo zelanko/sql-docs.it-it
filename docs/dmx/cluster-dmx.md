@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fa7df2782b8102e386c70d5e874a25f7868dbb1c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c14bc8189bdea705ab37c66863d74bcef66e23c
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68071083"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669826"
 ---
 # <a name="cluster-dmx"></a>Cluster (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,12 +33,12 @@ Cluster()
 ## <a name="return-type"></a>Tipo restituito  
  La funzione **cluster** non richiede parametri.  
   
- La funzione **cluster** restituisce un valore scalare di un nome di cluster. Tuttavia, se si utilizza questa funzione come argomento di un'altra funzione, è necessario considerarla come riferimento \<a una colonna cluster>.  
+ La funzione **cluster** restituisce un valore scalare di un nome di cluster. Tuttavia, se si utilizza questa funzione come argomento di un'altra funzione, è necessario considerarla come riferimento a una \< colonna cluster>.  
   
-## <a name="remarks"></a>Osservazioni  
- Il **cluster** può essere usato anche come `<`riferimento`>` a una colonna cluster per una funzione **PredictHistogram** .  
+## <a name="remarks"></a>Commenti  
+ Il **cluster** può essere usato anche come `<` riferimento a una colonna cluster `>` per una funzione **PredictHistogram** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene utilizzata una query singleton con [PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md) e funzioni cluster per restituire la distanza del singolo case da ogni cluster del modello di data mining TM clustering e la probabilità che il singolo case sia presente in ogni cluster.  
   
 ```  

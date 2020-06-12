@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 97e367f9-f95a-4163-add1-c74fd22db249
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6857ece2f81ffdba839ec1a7f0ef420ec5d0acdf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: adeb16a91ef4d7b540e09b5e1f8b5b004be472e4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086594"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526257"
 ---
 # <a name="cube-or-model-properties-dialog-box-ssas"></a>Finestra di dialogo Proprietà cubo o modello (SSAS)
   Utilizzare la finestra di dialogo **Proprietà database** di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per impostare le proprietà di un cubo o di un database modello. È possibile visualizzare la finestra di dialogo facendo clic con il pulsante destro del mouse su un cubo o un modello in **Esplora oggetti** e selezionando **Proprietà**.  
@@ -45,7 +44,7 @@ ms.locfileid: "66086594"
 |**State**|Consente di visualizzare lo stato di elaborazione del cubo o del modello. Per ulteriori informazioni sui valori per questa proprietà, vedere <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**LastProcessed**|Consente di visualizzare la data e l'ora dell'ultima elaborazione del cubo o del modello.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Oggetti Cube &#40;Analysis Services-Dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)  
   

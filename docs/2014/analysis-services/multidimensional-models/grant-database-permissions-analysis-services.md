@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: be7e5f64-af43-47d6-84a5-c5c1c277d644
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9529fbcb784d0f6a2a2ae88f5a976e8607e0705a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9b4e5ac88a81728d6e29d32b0d330ba8fd408633
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175733"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546683"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>Concedere le autorizzazioni per il database (Analysis Services)
   Se si affronta l'amministrazione del database di Analysis Services avendo già esperienza con i database relazionali, il primo aspetto da comprendere è che, per quanto riguarda l'accesso ai dati, il database non è l'oggetto principale a protezione diretta in Analysis Services.
@@ -72,10 +71,10 @@ ms.locfileid: "78175733"
 5.  Fare clic su **OK** per completare la creazione del ruolo.
 
 ## <a name="process-database"></a>Elaborazione database
- Quando si definisce un ruolo che concede le autorizzazioni di database, `Full Control` è possibile ignorare `Process Database`e scegliere semplicemente. Tale autorizzazione, impostata a livello di database, consente l'elaborazione in tutti gli oggetti all'interno del database. Per altre informazioni, vedere [Concedere le autorizzazioni di elaborazione &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)
+ Quando si definisce un ruolo che concede le autorizzazioni di database, è possibile ignorare `Full Control` e scegliere semplicemente `Process Database` . Tale autorizzazione, impostata a livello di database, consente l'elaborazione in tutti gli oggetti all'interno del database. Per altre informazioni, vedere [Concedere le autorizzazioni di elaborazione &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)
 
 ## <a name="read-definition"></a>Lettura definizione
- Analogamente `Process Database`, `Read Definition` l'impostazione delle autorizzazioni a livello di database ha un effetto a catena sugli altri oggetti all'interno del database. Se si vogliono impostare le autorizzazioni Lettura definizione a un livello più granulare, è necessario deselezionare Lettura definizione come proprietà del database nel riquadro Generale. Per altre informazioni, vedere [Concedere le autorizzazioni di lettura definizione per i metadati degli oggetti &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md).
+ Analogamente `Process Database` , l'impostazione `Read Definition` delle autorizzazioni a livello di database ha un effetto a catena sugli altri oggetti all'interno del database. Se si vogliono impostare le autorizzazioni Lettura definizione a un livello più granulare, è necessario deselezionare Lettura definizione come proprietà del database nel riquadro Generale. Per altre informazioni, vedere [Concedere le autorizzazioni di lettura definizione per i metadati degli oggetti &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md).
 
 ## <a name="see-also"></a>Vedere anche
  [Concedere le autorizzazioni di amministratore del Server &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) [concedere le autorizzazioni di elaborazione &#40;Analysis Services](grant-process-permissions-analysis-services.md)&#41;

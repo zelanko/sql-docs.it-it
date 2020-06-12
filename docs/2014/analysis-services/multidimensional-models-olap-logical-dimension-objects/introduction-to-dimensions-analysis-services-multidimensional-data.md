@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ab170fdd-4144-42db-9497-690b9189fc25
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e1a78735cd5aee5ebc87adaac6fab48bb4e183d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8df85723676df5f9fb1475465c8f7585384013ab
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387901"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545123"
 ---
 # <a name="introduction-to-dimensions-analysis-services---multidimensional-data"></a>Introduzione alle dimensioni (Analysis Services - Dati multidimensionali)
   Tutte le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dimensioni di Microsoft sono gruppi di attributi basati su colonne di tabelle o viste in una vista origine dati. Le dimensioni esistono indipendentemente da un cubo, possono essere utilizzate in più cubi, possono essere utilizzate più volte in un singolo cubo e possono essere collegate tra istanze di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Una dimensione indipendente da un cubo viene denominata dimensione del database e un'istanza di una dimensione del database all'interno di un cubo viene denominata dimensione del cubo.  
@@ -29,7 +28,7 @@ ms.locfileid: "81387901"
 ## <a name="dimension-based-on-a-star-schema-design"></a>Dimensione basata su una progettazione con schema star  
  La struttura di una dimensione è per lo più determinata dalla struttura della tabella della dimensione o delle tabelle delle dimensioni sottostanti. La struttura più semplice è detta schema star, dove ogni dimensione è basata su un'unica tabella delle dimensioni direttamente collegata alla tabella dei fatti tramite una relazione chiave primaria/chiave esterna.  
   
- Nel diagramma seguente viene illustrata una sottosezione del database [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] di esempio, in cui la tabella dei fatti **FactResellerSales** è correlata a due tabelle delle dimensioni, **DimReseller** e **DimPromotion**. La colonna **ResellerKey** nella tabella dei fatti **FactResellerSales** definisce una relazione di chiave esterna con la colonna chiave primaria **ResellerKey** nella tabella della dimensione **DimReseller** . Analogamente, la colonna **PromotionKey** nella tabella dei fatti **FactResellerSales** definisce una relazione di chiave esterna con la colonna chiave primaria **PromotionKey** nella tabella della dimensione **DimPromotion** .  
+ Nel diagramma seguente viene illustrata una sottosezione del [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] database di esempio, in cui la tabella dei fatti **FactResellerSales** è correlata a due tabelle delle dimensioni, **DimReseller** e **DimPromotion**. La colonna **ResellerKey** nella tabella dei fatti **FactResellerSales** definisce una relazione di chiave esterna con la colonna chiave primaria **ResellerKey** nella tabella della dimensione **DimReseller** . Analogamente, la colonna **PromotionKey** nella tabella dei fatti **FactResellerSales** definisce una relazione di chiave esterna con la colonna chiave primaria **PromotionKey** nella tabella della dimensione **DimPromotion** .  
   
  ![Schema logico per la relazione tra dimensioni dei fatti](../../analysis-services/dev-guide/media/dimfactrelationship.gif "Schema logico per la relazione tra dimensioni dei fatti")  
   

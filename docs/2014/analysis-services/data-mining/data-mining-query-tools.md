@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7c59d3a18c1fd36f82e8ea60e42d1b9f6e2f34c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1702ad82c65b5a7370a62c4bc31a08007f374c9f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084975"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523159"
 ---
 # <a name="data-mining-query-interfaces"></a>Interfacce di query di data mining
   Le query di data mining sono basate sul linguaggio DMX (Data Mining Extensions). È possibile utilizzare DMX per tutte le attività di stima e di modellazione, tra cui la classificazione, l'analisi dei rischi, la generazione di indicazioni e la regressione lineare. È inoltre possibile recuperare i modelli e le statistiche generate durante l'elaborazione del modello.  
@@ -61,7 +60,7 @@ ms.locfileid: "66084975"
  Quando si utilizza il generatore delle query, è possibile utilizzare strumenti grafici per selezionare un modello di data mining e aggiungere nuovi dati del case e funzioni di stima. Il Generatore di query di stima include un editor di testo che è possibile utilizzare per modificare manualmente la query e un riquadro **risultati** semplice per visualizzare i risultati della query.  
   
 ###  <a name="query-editor"></a><a name="bkmk_QueryEditor"></a> Editor query  
- Nell'editor di query [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] di sono disponibili strumenti che è possibile utilizzare per compilare ed eseguire query DMX. È possibile connettersi a un'istanza di SQL Server Analysis Services e selezionare un database, le colonne della struttura di data mining e un modello di data mining. **Visualizzatore metadati** contiene un elenco di funzioni di stima che è possibile esplorare.  
+ Nell'editor di query di sono [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] disponibili strumenti che è possibile utilizzare per compilare ed eseguire query DMX. È possibile connettersi a un'istanza di SQL Server Analysis Services e selezionare un database, le colonne della struttura di data mining e un modello di data mining. **Visualizzatore metadati** contiene un elenco di funzioni di stima che è possibile esplorare.  
   
 ###  <a name="dmx-templates"></a><a name="bkmk_Templates"></a>Modelli DMX  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] include modelli di query DMX interattivi che consentono di compilare query di questo tipo. Se l'elenco di modelli non è visualizzato, fare clic su **Visualizza** sulla barra degli strumenti e selezionare **Esplora modelli**. Per visualizzare tutti i modelli di Analysis Services, inclusi i modelli per DMX, MDX e XMLA, fare clic sull'icona del cubo.  
@@ -90,7 +89,7 @@ ms.locfileid: "66084975"
   
 -   Per recuperare il **contenuto del modello** e i **metadati del modello**, ad esempio il numero di cluster, gli attributi usati negli alberi delle decisioni, la data dell'ultima elaborazione del modello e i parametri dell'algoritmo usati durante la creazione del modello, è possibile usare il [metodo Discover &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) e specificare uno dei set di righe dello schema di data mining nell'intestazione dell'[elemento RequestType &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla). Per restringere l'ambito della query, immettere i criteri come restrizioni all'interno dell'elemento [RestrictionList Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/restrictionlist-element-xmla).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento alle estensioni di data mining &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)   
  [Soluzioni di data mining](data-mining-solutions.md)   
  [Informazioni sull'istruzione DMX SELECT](/sql/dmx/understanding-the-dmx-select-statement)   

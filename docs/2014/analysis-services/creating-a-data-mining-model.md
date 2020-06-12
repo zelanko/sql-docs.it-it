@@ -18,23 +18,22 @@ helpviewer_keywords:
 ms.assetid: 804b7db3-1f6a-4f73-a81d-bbe02520d7c6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1a8893960b5177563ccf98dbd21cb528ce399ea3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cce03fab2757b366fbe67dc6c68cb3be1c075e3c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086730"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526449"
 ---
 # <a name="creating-a-data-mining-model"></a>Creazione di un modello di data mining
   La modellazione dei dati è il passaggio di data mining in cui è possibile creare modelli e tendenze applicando *algoritmi* ai dati. Successivamente è possibile utilizzare tali modelli per l'analisi o per eseguire stime.  
   
  I componenti aggiuntivi Data mining per Office supportano il data mining tramite le procedure guidate che semplificano la creazione di modelli. Le procedure guidate consentono di analizzare i dati, identificare le correlazioni, calcolare il significato statistico di tutte le variabili e selezionare automaticamente il modello migliore.  
   
- Sebbene questa funzionalità sia molto potente quanto gli strumenti data mining forniti da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], la combinazione di procedure guidate e la nota interfaccia di Excel semplifica la creazione, la modifica e l'utilizzo di data mining.  
+ Sebbene questa funzionalità sia molto potente quanto gli strumenti data mining forniti da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , la combinazione di procedure guidate e la nota interfaccia di Excel semplifica la creazione, la modifica e l'utilizzo di data mining.  
   
 ## <a name="advanced-data-mining"></a>Avanzate (Data mining)  
- Le procedure guidate avanzate consentono di creare nuovi modelli di data mining, basati sui dati archiviati in Excel, utilizzando uno degli algoritmi di data mining in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+ Le procedure guidate avanzate consentono di creare nuovi modelli di data mining, basati sui dati archiviati in Excel, utilizzando uno degli algoritmi di data mining in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ### <a name="create-mining-structure"></a>Crea struttura di data mining  
  La procedura guidata Crea struttura di data mining consente di compilare una nuova struttura di data mining da utilizzare come base per più modelli di data mining. La procedura guidata consente di riservare una parte dei dati da utilizzare come set di testing, in modo che sia possibile valutare tutti i modelli che utilizzano gli stessi dati in base a standard di test coerenti.  
@@ -140,7 +139,7 @@ ms.locfileid: "66086730"
   
  [Shopping Basket Analysis &#40;Table AnalysisTools per Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Esplorazione e pulizia dei dati](exploring-and-cleaning-data.md)   
  [Convalida di modelli e utilizzo di modelli per la stima &#40;componenti aggiuntivi Data mining per Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
  [Distribuzione e scalabilità di modelli di data mining &#40;componenti aggiuntivi Data mining per Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  

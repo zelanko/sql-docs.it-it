@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6b3dd1ae-caff-41c3-817b-802dc020ff88
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 17b3a2765781813c832b0b654e4a02475b3ab623
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a4f41e548746d443ff9cbed5eca17e557127240
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064665"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527747"
 ---
 # <a name="browsing-a-decision-trees-model"></a>Esplorazione di un modello Decision Trees
-  Quando si apre un modello di classificazione utilizzando **Sfoglia**, il modello viene visualizzato in un visualizzatore albero delle decisioni interattivo, simile [!INCLUDE[msCoName](../includes/msconame-md.md)] al Visualizzatore Decision Trees in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Nell visualizzatore vengono visualizzati i risultati di classificazione come grafico progettato per evidenziare i criteri che differenziano un gruppo di dati da un altro. È inoltre possibile eseguire il drill-down in singoli subset dell'albero e recuperare i dati sottostanti.  
+  Quando si apre un modello di classificazione utilizzando **Sfoglia**, il modello viene visualizzato in un visualizzatore albero delle decisioni interattivo, simile al [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizzatore Decision Trees in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Nell visualizzatore vengono visualizzati i risultati di classificazione come grafico progettato per evidenziare i criteri che differenziano un gruppo di dati da un altro. È inoltre possibile eseguire il drill-down in singoli subset dell'albero e recuperare i dati sottostanti.  
   
 ##  <a name="explore-the-model"></a><a name="bkmk_Top"></a>Esplorare il modello  
  I modelli basati sull'algoritmo Decision Trees contengono molte informazioni interessanti da esplorare. La finestra **Esplora** include le schede e i riquadri seguenti che consentono di acquisire familiarità con i modelli e prevedere i risultati mediante il grafo:  
@@ -87,13 +86,13 @@ ms.locfileid: "66064665"
   
      Esaminando solo l'intensità dell'ombreggiatura, è possibile concentrarsi su un paio di gruppi di interesse e ottenere dati più dettagliati su di essi per il confronto. Ad esempio, questi gruppi hanno una probabilità piuttosto elevata di acquistare biciclette:  
   
-    -   Age >= 32 e \< 53 e Yearly income >= 26000 e Children = 0  
+    -   Age >= 32 e \< 53 and Yearly Income > = 26000 e Children = 0  
   
          Case totali: 1150  
   
          Probabilità per gli acquirenti di biciclette: 18%  
   
-    -   Age >= 32 e \< 53 e Yearly income >= 26000 e Children not = 0 e coniuge status =' single '  
+    -   Age >= 32 e \< 53 and Yearly Income > = 26000 e Children not = 0 e coniuge status =' single '  
   
          Totale dei case: 402  
   
@@ -103,7 +102,7 @@ ms.locfileid: "66064665"
   
      ![Grafico della rete di dipendenze per un modello di associazione](media/dm13-dec-tree-background-no.gif "Grafico della rete di dipendenze per un modello di associazione")  
   
- **Consigli**  
+ **Suggerimenti**  
   
 -   Se i dati possono essere suddivisi in più serie, viene compilato un modello diverso per ogni set di dati che si desidera modellare.  
   
@@ -153,7 +152,7 @@ ms.locfileid: "66064665"
   
      ![risultati di drill-through salvati in Excel](media/dm13-dectree-drillthroughresults.gif "risultati di drill-through salvati in Excel")  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Esplorazione di modelli in Excel &#40;SQL Server componenti aggiuntivi Data mining&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

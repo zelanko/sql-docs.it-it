@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 678c6d2312261475f4b970b1535ce1faa1f00930
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2ca181b7c194fdd3909875f881d1030a77ae039
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62729072"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544926"
 ---
 # <a name="monitoring-traces-xmla"></a>Monitoraggio di tracce (XMLA)
-  È possibile utilizzare il comando [Subscribe](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla) in XML for Analysis (XMLA) per monitorare una traccia esistente definita in un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Il comando `Subscribe` restituisce i risultati di una traccia come set di righe.  
+  È possibile utilizzare il comando [Subscribe](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla) in XML for Analysis (XMLA) per monitorare una traccia esistente definita in un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Il comando `Subscribe` restituisce i risultati di una traccia come set di righe.  
   
 ## <a name="specifying-a-trace"></a>Specifica di una traccia  
- La proprietà [Object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) del `Subscribe` comando deve contenere un riferimento a un oggetto a un' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza di o a una traccia [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un'istanza di. Se la proprietà `Object` non viene specificata o se un identificatore di traccia non viene specificato nella proprietà `Object`, il comando `Subscribe` consente di monitorare la traccia della sessione predefinita per la sessione esplicita specificata nell'intestazione SOAP per il comando.  
+ La proprietà [Object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) del `Subscribe` comando deve contenere un riferimento a un oggetto a un' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza di o a una traccia in un' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza di. Se la proprietà `Object` non viene specificata o se un identificatore di traccia non viene specificato nella proprietà `Object`, il comando `Subscribe` consente di monitorare la traccia della sessione predefinita per la sessione esplicita specificata nell'intestazione SOAP per il comando.  
   
 ## <a name="returning-results"></a>Restituzione di risultati  
  Il comando `Subscribe` restituisce un set di righe che contiene gli eventi di traccia acquisiti dalla traccia specificata. Il `Subscribe` comando restituisce i risultati della traccia fino a quando il comando non viene annullato dal comando [Annulla](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla) .  
@@ -40,7 +39,7 @@ ms.locfileid: "62729072"
 |CurrentTime|Datetime|Ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
 |StartTime|Datetime|Ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
 |EndTime|Datetime|Ora di fine dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".<br /><br /> Questa colonna non viene popolata per classi di evento che descrivono l'inizio di un processo o di un'azione.|  
-|Durata|Long integer|Durata dell'evento (in millisecondi).|  
+|Duration|Long integer|Durata dell'evento (in millisecondi).|  
 |CPUTime|Long integer|Tempo processore utilizzato per l'evento (in millisecondi).|  
 |JobID|Long integer|Identificatore di processo.|  
 |SessionID|string|Identificatore della sessione per cui si è verificato l'evento.|  
@@ -71,7 +70,7 @@ ms.locfileid: "62729072"
 |RequestParameters|string|Parametri della query con parametri o del comando XMLA per cui si è verificato l'evento.|  
 |RequestProperties|string|Proprietà del metodo XMLA per cui si è verificato l'evento.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Sviluppo con XMLA in Analysis Services](developing-with-xmla-in-analysis-services.md)  
   
   

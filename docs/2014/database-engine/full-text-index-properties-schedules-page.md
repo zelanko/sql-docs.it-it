@@ -12,12 +12,12 @@ ms.assetid: a828e284-097e-4854-8c49-931934eb73bf
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4188a76609df3829455da05365d60776b8f6b815
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 9dda41e229e36c0c4b86c5bdb00782c3b5871bfa
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000901"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858646"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>Proprietà indice full-text (pagina Pianificazioni)
   Utilizzare questa pagina per visualizzare e creare pianificazioni per l'esecuzione di un processo di SQL Server Agent che avvia un popolamento incrementale di aggiornamenti nella tabella di base dell'indice full-text. Se la tabella di base o la vista indicizzata non contiene una colonna del tipo di dati `timestamp`, viene eseguito un popolamento completo.  
@@ -26,7 +26,7 @@ ms.locfileid: "83000901"
   
 -   [Gestione di indici full-text.](../relational-databases/indexes/indexes.md)  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco elementi dell'interfaccia utente  
  **Pianificazioni**  
  Vengono elencati tutti i popolamenti incrementali, se disponibili, della tabella di base per l'indice full-text.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "83000901"
  **Tipo popolamento**  
  Visualizza il tipo di ogni popolamento pianificato.  
   
- **Attivata**  
+ **Enabled**  
  Indica se il popolamento pianificato è attualmente abilitato o disabilitato.  
   
  **Descrizione**  

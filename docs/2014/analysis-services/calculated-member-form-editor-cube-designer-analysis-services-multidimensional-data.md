@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f7719b9e-b1e6-4792-90a6-30d9d8eb1196
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 432300f54a7678970f394b27712bcb28ba8a7e7d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35c9ee36bf30b18859fa3ded540e607a48d0beb9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088364"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527658"
 ---
 # <a name="calculated-member-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor form membro calcolato (scheda Calcoli, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Il riquadro **Editor form membro calcolato** nella scheda **Calcoli** di Progettazione cubi consente di creare o modificare un membro calcolato.  
@@ -39,7 +38,7 @@ ms.locfileid: "66088364"
   
  **Nota** Questa opzione è disponibile se **Gerarchia padre** specifica una gerarchia diversa da MEASURES.  
   
- **Modificare**  
+ **Modifica**  
  Selezionare questa opzione per visualizzare la finestra di dialogo **Seleziona membro padre** e scegliere un membro per **Membro padre**. Per altre informazioni sulla finestra di dialogo **Seleziona membro padre**, vedere [Finestra di dialogo Seleziona membro padre &#40;Analysis Services - Dati multidimensionali&#41;](select-parent-member-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Espressione**  
@@ -94,7 +93,7 @@ ms.locfileid: "66088364"
   
  Fare clic sul pulsante di selezione del carattere per visualizzare la finestra di dialogo **Carattere** e inserire i valori di proprietà relativi a un carattere specificato nell'espressione MDX. Per altre informazioni sui valori delle proprietà, vedere [Creazione e utilizzo di valori di proprietà &#40;MDX&#41;](creating-and-using-property-values-mdx.md).  
   
- **Dimensioni carattere**  
+ **Dimensioni del carattere**  
  Consente di digitare l'espressione MDX che offre le dimensioni del carattere utilizzato per il membro calcolato.  
   
  Trascinare gli elementi selezionati dal riquadro **Strumenti di calcolo** alla casella di questa opzione per includere la sintassi MDX per l'elemento selezionato.  
@@ -108,7 +107,7 @@ ms.locfileid: "66088364"
   
  Fare clic sul pulsante di selezione del carattere per visualizzare la finestra di dialogo **Carattere** e inserire i valori di proprietà relativi a un carattere specificato nell'espressione MDX. Per altre informazioni sui valori delle proprietà, vedere [Creazione e utilizzo di valori di proprietà &#40;MDX&#41;](creating-and-using-property-values-mdx.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Calcoli](multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [Creazione di membri calcolati](multidimensional-models/create-calculated-members.md)   
  [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   

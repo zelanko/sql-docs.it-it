@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 37c54602-ab25-48be-ae7a-59819deea8ed
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f27398948ed2c89578921bf6404244bcf5072652
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d22d6201c48ac77de5ab1e86ebed276478de683
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084381"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522387"
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>Trovare un nodo specifico in una rete di dipendenze
-  Una rete di dipendenze [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un modello di data mining può contenere molti nodi, rendendo difficile l'individuazione dei dati a cui si è interessati. Per risolvere il problema, è possibile usare la finestra di dialogo **Trova nodo** nella scheda **Rete di dipendenze** di Progettazione modelli di data mining per cercare un nodo specifico.  
+  Una rete di dipendenze in un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] modello di data mining può contenere molti nodi, rendendo difficile l'individuazione dei dati a cui si è interessati. Per risolvere il problema, è possibile usare la finestra di dialogo **Trova nodo** nella scheda **Rete di dipendenze** di Progettazione modelli di data mining per cercare un nodo specifico.  
   
 ### <a name="to-find-a-specific-node-in-a-dependency-network"></a>Per trovare un nodo specifico in una rete di dipendenze  
   
@@ -36,7 +35,7 @@ ms.locfileid: "66084381"
   
 3.  Selezionare il nodo corretto nell'elenco e quindi fare clic su **OK**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Attività e procedure relative al visualizzatore modello di data mining](mining-model-viewer-tasks-and-how-tos.md)  
   
   

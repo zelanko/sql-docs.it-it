@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 81401eac-c619-4fad-ad3e-599e7a6f8493
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 894e7d4fb5a0234643cf237e767a8ae999e67496
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7f373dfa85e80de6bfd3a0bb33e9b28ab33a697
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087415"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527247"
 ---
 # <a name="configure-the-powerpivot-unattended-data-refresh-account-powerpivot-for-sharepoint"></a>Configurare l'account di aggiornamento dati automatico PowerPivot (PowerPivot per SharePoint)
   L'account di aggiornamento dati automatico PowerPivot è un account progettato per l'esecuzione dei processi di aggiornamento dei dati PowerPivot in una farm di SharePoint. Configurando l'opzione, si Abilita l'opzione **Usa l'account di aggiornamento dati configurato dall'amministratore** in una pagina della pianificazione dell'aggiornamento dati (vedere di seguito). Gli autori delle cartelle di lavoro che pianificano l'aggiornamento dati possono scegliere questa opzione se desiderano utilizzare l'account di aggiornamento dati automatico per eseguire un processo di aggiornamento dati. Per ulteriori informazioni su come visualizzare le opzioni relative alle credenziali in una pianificazione dell'aggiornamento dati, vedere [pianificare un aggiornamento dati &#40;PowerPivot per SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
@@ -188,7 +187,7 @@ ms.locfileid: "66087415"
   
  Se si modifica non solo la password, ma anche il nome utente dell'account, è necessario eseguire ulteriori passaggi di configurazione, ad esempio concedere autorizzazioni di lettura a origini dati esterne e autorizzazioni di SharePoint per aggiornare la cartella di lavoro di PowerPivot. Per istruzioni, passare a questo passaggio nella configurazione dell'account di aggiornamento dati automatico PowerPivot: [passaggio 3: concedere le autorizzazioni di collaborazione all'account](#bkmk_grant), quindi continuare con tutti i passaggi rimanenti, terminando con la verifica che l'account sia configurato correttamente.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Aggiornamento dati PowerPivot con SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)   
  [Pianificare un aggiornamento dati &#40;PowerPivot per SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)   
  [Aggiornamento dei dati PowerPivot](power-pivot-sharepoint/power-pivot-data-refresh.md)  

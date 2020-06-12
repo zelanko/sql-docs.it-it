@@ -12,17 +12,17 @@ ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8561661b2893cceb1cea9a31326d856bc1287acb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7575fc5d539c31e901b5229d215a3bfeb42b221c
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917206"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859445"
 ---
 # <a name="database-object-extended-properties-page"></a>Oggetto di database (pagina Proprietà estese)
   La pagina Proprietà estese consente di aggiungere proprietà personalizzate a oggetti di database. Utilizzare questa pagina per visualizzare o modificare le proprietà estese relative all'oggetto selezionato. La pagina **Proprietà estese** è la stessa per tutti i tipi di oggetti di database.  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco elementi dell'interfaccia utente  
  **Database**  
  Consente di visualizzare il nome del database selezionato. Questo campo è di sola lettura.  
   

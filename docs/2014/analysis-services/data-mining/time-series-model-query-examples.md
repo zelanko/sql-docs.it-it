@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d7451c82261e23c75b748d4b1cde473191b7749
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f6b6ed2674d5f1d852b6281c6244af4f2f6ad3a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082747"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520319"
 ---
 # <a name="time-series-model-query-examples"></a>Time Series Model Query Examples
   Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto, che consente di fornire dettagli sui criteri individuati durante l'analisi, o una query di stima, che consente di utilizzare i criteri presenti nel modello di data mining per eseguire stime relative ai nuovi dati. Una query sul contenuto per un modello Time Series, ad esempio, potrebbe fornire dettagli aggiuntivi sulle strutture periodiche rilevate, mentre una query di stima potrebbe fornire stime per i 5-10 intervalli di tempo successivi. Utilizzando una query è inoltre possibile recuperare metadati relativi al modello.  
@@ -66,7 +65,7 @@ WHERE MODEL_NAME = '<model name>'
   
 |MINING_PARAMETERS|  
 |------------------------|  
-|COMPLEXITY_PENALTY = 0.1, MINIMUM_SUPPORT = 10, PERIODICITY_HINT ={1,3},....|  
+|COMPLEXITY_PENALTY = 0.1, MINIMUM_SUPPORT = 10, PERIODICITY_HINT = {1,3} ,....|  
   
  L'hint di periodicità predefinito è {1} ed è presente in tutti i modelli. Questo modello di esempio è stato creato con un hint aggiuntivo che potrebbe non essere presente nel modello finale.  
   
@@ -156,7 +155,7 @@ AND NODE_TYPE = 15
   
  Si supponga ad esempio che il modello esistente contenga dati relativi a sei mesi. Si desidera estendere il modello aggiungendo le cifre relative alle vendite degli ultimi tre mesi ed effettuare una stima sui prossimi tre mesi. Per ottenere solo le nuove stime quando si aggiungono i nuovi dati, specificare l'intervallo di tempo 4 come punto iniziale e l'intervallo di tempo 7 come punto finale. È anche possibile richiedere un totale di sei stime, ma, in questo caso, gli intervalli di tempo per le prime tre stime si sovrapporrebbero ai nuovi dati aggiunti.  
   
- Per esempi di query e ulteriori informazioni sulla sintassi per l' `REPLACE_MODEL_CASES` utilizzo `EXTEND_MODEL_CASES`di e, vedere [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
+ Per esempi di query e ulteriori informazioni sulla sintassi per l'utilizzo di `REPLACE_MODEL_CASES` e `EXTEND_MODEL_CASES` , vedere [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
   
 ###  <a name="making-predictions-with-extend_model_cases"></a><a name="bkmk_EXTEND"></a> Esecuzione di stime con EXTEND_MODEL_CASES  
  Il comportamento delle stime varia a seconda se si esegue l'estensione o la sostituzione dei case del modello. Se si estende un modello, i nuovi dati vengono aggiunti alla fine della serie e le dimensioni del set di training aumentano. Gli intervalli di tempo utilizzati per le query di stima iniziano tuttavia sempre alla fine della serie originale. Se si aggiungono pertanto tre nuovi punti dati e si richiedono sei stime, le prime tre stime restituite si sovrappongono tuttavia ai nuovi dati. In questo caso, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] restituisce i nuovi punti dati effettivi anziché eseguire una stima, finché non vengono utilizzati tutti i nuovi punti dati. In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono quindi eseguite le stime in base alla serie composta.  
@@ -198,17 +197,17 @@ AND NODE_TYPE = 15
     > [!NOTE]  
     >  Se con REPLACE_MODEL_CASES si utilizza il timestamp 1 come punto iniziale, si ottengono nuove stime basate sui nuovi dati, che sostituiscono i dati di training precedenti.  
   
- Per esempi di query e ulteriori informazioni sulla sintassi per l' `REPLACE_MODEL_CASES` utilizzo `EXTEND_MODEL_CASES`di e, vedere [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
+ Per esempi di query e ulteriori informazioni sulla sintassi per l'utilizzo di `REPLACE_MODEL_CASES` e `EXTEND_MODEL_CASES` , vedere [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
   
 ###  <a name="missing-value-substitution-in-time-series-models"></a><a name="bkmk_MissingValues"></a>Sostituzione di valori mancanti nei modelli Time Series  
- Quando si aggiungono nuovi dati a un modello Time Series utilizzando un'istruzione `PREDICTION JOIN`, nel nuovo set di dati non può mancare alcun valore. Se una serie è incompleta, il modello deve fornire i valori mancanti utilizzando un valore Null, più medie numeriche, una media numerica specifica o un valore stimato. Se si specifica `EXTEND_MODEL_CASES`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] i valori mancanti vengono sostituiti con stime basate sul modello originale. Se si usa `REPLACE_MODEL_CASES`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sostituisce i valori mancanti con il valore specificato nel parametro *MISSING_VALUE_SUBSTITUTION* .  
+ Quando si aggiungono nuovi dati a un modello Time Series utilizzando un'istruzione `PREDICTION JOIN`, nel nuovo set di dati non può mancare alcun valore. Se una serie è incompleta, il modello deve fornire i valori mancanti utilizzando un valore Null, più medie numeriche, una media numerica specifica o un valore stimato. Se si specifica `EXTEND_MODEL_CASES`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] i valori mancanti vengono sostituiti con stime basate sul modello originale. Se si usa `REPLACE_MODEL_CASES` , [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sostituisce i valori mancanti con il valore specificato nel parametro *MISSING_VALUE_SUBSTITUTION* .  
   
 ## <a name="list-of-prediction-functions"></a>Elenco delle funzioni di stima  
  Tutti gli algoritmi [!INCLUDE[msCoName](../../includes/msconame-md.md)] supportano un set comune di funzioni. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series, tuttavia, supporta funzioni aggiuntive, elencate nella tabella seguente.  
   
 |||  
 |-|-|  
-|Funzione di stima|Uso|  
+|Funzione di stima|Utilizzo|  
 |[Lag &#40;DMX&#41;](/sql/dmx/lag-dmx)|Viene restituito un numero di intervalli di tempo tra la data del case corrente e l'ultima data del set di training.<br /><br /> Un tipico utilizzo di questa funzione consiste nell'identificare i case di training recenti per poter recuperare dati dettagliati sui case.|  
 |[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|Restituisce l'ID nodo per la colonna stimabile specificata.<br /><br /> Un tipico utilizzo di questa funzione consiste nell'identificare il nodo che genera un determinato valore stimato per poter esaminare i case associati al nodo o recuperare l'equazione e altri dettagli.|  
 |[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|Restituisce la deviazione standard delle stime nella colonna stimabile specificata.<br /><br /> Questa funzione sostituisce l'argomento INCLUDE_STATISTICS, non supportato per i modelli Time Series.|  
@@ -217,7 +216,7 @@ AND NODE_TYPE = 15
   
  Per un elenco delle funzioni comuni a tutti gli algoritmi di [!INCLUDE[msCoName](../../includes/msconame-md.md)], vedere [Funzioni di stima correlate &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx). Per la sintassi di funzioni specifiche, vedere [Guida di riferimento alle funzioni DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Query di data mining](data-mining-queries.md)   
  [Algoritmo Microsoft Time Series](microsoft-time-series-algorithm.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Time Series](microsoft-time-series-algorithm-technical-reference.md)   

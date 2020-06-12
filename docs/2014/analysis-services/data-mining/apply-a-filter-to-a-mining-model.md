@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0370d4fceada5c0a287c4a071691ea20d5a28f6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a7f00e4d9ecbcc539b470cf5b2afe5864eb6114
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086214"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525527"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Applicare un filtro a un modello di data mining
   Se la struttura di data mining contiene una tabella nidificata, è possibile applicare un filtro alla tabella del case, alla tabella nidificata o a entrambe.  
@@ -66,11 +65,11 @@ WHERE [Model] <> 'Water Bottle' )
   
 8.  Fare clic nella casella di testo **Valore** e digitare un valore.  
   
-     Ad esempio, selezionare `Income` come colonna, selezionare l'operatore maggiore di (>), quindi digitare `30000`.  
+     Ad esempio, selezionare `Income` come colonna, selezionare l'operatore maggiore di (>), quindi digitare `30000` .  
   
 9. Fare clic sulla riga successiva nella griglia.  
   
-     La condizione di filtro creata viene aggiunta automaticamente nella casella di testo Espressione. Ad esempio: `[Income] > '30000'`  
+     La condizione di filtro creata viene aggiunta automaticamente nella casella di testo Espressione. Ad esempio, usare `[Income] > '30000'`  
   
 10. Fare clic nella casella di testo **AND/OR** nella riga successiva della griglia per aggiungere una condizione.  
   
@@ -78,7 +77,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 11. Selezionare un operatore e digitare un valore come descritto nei passaggi 7 e 8.  
   
-     Ad esempio, selezionare `Income` di nuovo come colonna, selezionare l'operatore minore di (<), quindi digitare `40000`.  
+     Ad esempio, selezionare di `Income` nuovo come colonna, selezionare l'operatore minore di (<), quindi digitare `40000` .  
   
 12. Fare clic sulla riga successiva nella griglia.  
   
@@ -86,7 +85,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 ### <a name="to-add-a-filter-on-the-nested-table-in-a-mining-model"></a>Per aggiungere un filtro nella tabella nidificata in un modello di data mining  
   
-1.  Nella finestra di dialogo ** \<nome>filtro modello** fare clic su una riga vuota della griglia sotto **colonna struttura di data mining**.  
+1.  Nella finestra di dialogo ** \<name> filtro modello** fare clic su una riga vuota della griglia sotto **colonna struttura di data mining**.  
   
 2.  Selezionare il nome della tabella nidificata dall'elenco a discesa.  
   
@@ -98,7 +97,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 4.  Fare clic sulla casella **valore** e quindi sul pulsante **(...)** per compilare un'espressione.  
   
-     Verrà visualizzata la finestra di ** \<dialogo nome>filtro** . Questa finestra di dialogo consente di impostare condizioni solo nella tabella corrente, che in questo caso è la tabella nidificata.  
+     Verrà visualizzata la finestra di dialogo ** \<name> filtro** . Questa finestra di dialogo consente di impostare condizioni solo nella tabella corrente, che in questo caso è la tabella nidificata.  
   
 5.  Fare clic sulla casella **Colonna struttura di data mining** e selezionare un nome di colonna dagli elenchi a discesa di colonne della tabella nidificata.  
   
@@ -106,7 +105,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 7.  Fare clic su **Valore** e digitare un valore.  
   
-     Ad esempio, per **colonna struttura di data mining** selezionare `Model`. Per **operator**selezionare `<>`e digitare il valore `Water Bottle`. Questa condizione crea l'espressione di filtro seguente:  
+     Ad esempio, per **colonna struttura di data mining** selezionare `Model` . Per **operator**selezionare `<>` e digitare il valore `Water Bottle` . Questa condizione crea l'espressione di filtro seguente:  
   
 ```  
 EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )   
@@ -115,7 +114,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
 > [!NOTE]  
 >  Poiché il numero di attributi della tabella nidificata è potenzialmente illimitato, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non viene fornito un elenco di valori possibili da cui effettuare una selezione. È necessario digitare il valore esatto. Inoltre, non è possibile utilizzare un operatore LIKE in una tabella nidificata.  
   
-1.  Aggiungere altre condizioni in base alle esigenze, combinando le `AND` condizioni `OR` selezionando o nella casella **e/o** sul lato sinistro della griglia **condizioni** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+1.  Aggiungere altre condizioni in base alle esigenze, combinando le condizioni selezionando `AND` o `OR` nella casella **e/o** sul lato sinistro della griglia **condizioni** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 2.  Nella finestra di dialogo **Filtro modello** esaminare le condizioni create utilizzando la finestra di dialogo **Filtro** . Le condizioni per la tabella nidificata vengono aggiunte alle condizioni per la tabella del case e il set completo di condizioni di filtro viene visualizzato nella casella di testo **Espressione** .  
   
@@ -125,7 +124,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
     >  Se si modifica manualmente una parte di un'espressione di filtro, la griglia verrà disabilitata e da quel momento sarà necessario utilizzare l'espressione di filtro solo in modalità di modifica di testo. Per ripristinare la modalità di modifica della griglia, è necessario cancellare l'espressione di filtro e ricominciare.  
   
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Filtri per i modelli di data mining &#40;Analysis Services-&#41;di data mining](mining-models-analysis-services-data-mining.md)   
  [Attività e procedure relative al modello di data mining](mining-model-tasks-and-how-tos.md)   
  [Eliminare un filtro da un modello di data mining](delete-a-filter-from-a-mining-model.md)  

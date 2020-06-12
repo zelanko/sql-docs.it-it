@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 82c406ce-9e92-40c7-8374-cdbaf8b63d8f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0cc1b7eec5ceb3b74e575dce9fd5d1d71897a3f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8311b2c3a2cfec2e3bac00a9082ca83d2d927b25
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081662"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528577"
 ---
 # <a name="dimension-wizard-f1-help"></a>Guida sensibile al contesto della Creazione guidata dimensione
-  Utilizzare la creazione guidata dimensione [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] in per creare una dimensione del database [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in un progetto di. Dopo aver creato una dimensione del database, è possibile utilizzare Progettazione dimensioni per modificare le proprietà corrispondenti. Per altre informazioni su Progettazione dimensioni, vedere [Progettazione dimensioni &#40;Analysis Services - Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
+  Utilizzare la creazione guidata dimensione in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per creare una dimensione del database in un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] progetto di. Dopo aver creato una dimensione del database, è possibile utilizzare Progettazione dimensioni per modificare le proprietà corrispondenti. Per altre informazioni su Progettazione dimensioni, vedere [Progettazione dimensioni &#40;Analysis Services - Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
   
  **Per aprire la Creazione guidata dimensione.**  
   
@@ -50,7 +49,7 @@ ms.locfileid: "66081662"
   
 -   [Completamento procedura guidata &#40;dimensione guidata&#41;](completing-the-wizard-dimension-wizard.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Dimensioni &#40;Analysis Services Dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)   
  [Procedure guidate di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-wizards-multidimensional-data.md)  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a6c8ac2b-64ba-456f-b418-7bf0afe145d1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d9d3145583670fb849321bac5b57928caacfbc2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 123393c061d151240949f41e59e5d14b19056c52
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078365"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542320"
 ---
 # <a name="lesson-8-create-key-performance-indicators"></a>Lezione 8: Creare indicatori di prestazioni chiave
   In questa lezione verranno creati indicatori di prestazioni chiave (KPI). Gli indicatori di prestazioni chiave vengono usati per misurare le prestazioni di un valore, definito mediante una misura di *base* , rispetto a un valore *target* , definito anch'esso da una misura o da un valore assoluto. Nelle applicazioni client per la creazione di report, gli indicatori KPI possono fornire ai professionisti aziendali un modo rapido e semplice per comprendere i risultati aziendali positivi nel loro complesso o per identificare tendenze significative. Per altre informazioni, vedere [KPI &#40;SSAS tabulare&#41;](tabular-models/kpis-ssas-tabular.md).  
@@ -47,9 +46,9 @@ ms.locfileid: "66078365"
   
 5.  Nella finestra di dialogo **Indicatore di prestazioni chiave** selezionare l'opzione **Valore assoluto**in **Definisci valore di destinazione** .  
   
-6.  Nel campo **valore assoluto** Digitare `1.1`, quindi premere INVIO.  
+6.  Nel campo **valore assoluto** Digitare `1.1` , quindi premere INVIO.  
   
-7.  In **Definisci soglie stato**, nel campo del dispositivo di scorrimento a sinistra ( `1`in basso), digitare e quindi nel campo del dispositivo di scorrimento `1.07`a destra (alto), digitare.  
+7.  In **Definisci soglie stato**, nel campo del dispositivo di scorrimento a sinistra (in basso), digitare `1` e quindi nel campo del dispositivo di scorrimento a destra (alto), digitare `1.07` .  
   
 8.  In **Seleziona stile icona**selezionare un tipo di icona a rombo (rosso), triangolo (giallo) o cerchio (verde).  
   
@@ -74,7 +73,7 @@ ms.locfileid: "66078365"
   
 4.  Nella finestra di dialogo **Indicatore di prestazioni chiave** selezionare l'opzione **Valore assoluto**in **Definisci valore di destinazione** .  
   
-5.  Nel campo **valore assoluto** Digitare `1.25`.  
+5.  Nel campo **valore assoluto** Digitare `1.25` .  
   
 6.  In **Definisci soglie stato**far scorrere il dispositivo di scorrimento sinistro (in basso) fino a quando non viene visualizzato **0.8**, quindi far scorrere il dispositivo di scorrimento destro (in alto) fino a quando non viene visualizzato **1.03**.  
   

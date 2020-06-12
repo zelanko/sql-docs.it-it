@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 40ab2360-efb6-4ba6-bf23-e84964e51008
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0c86975f273b2efa5d1384df676519ee622a1677
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c1e5b046bfa57302baefc43a4da989be9c70e08
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62731986"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528643"
 ---
 # <a name="xml-elements-xmla"></a>Elementi XML (XMLA)
-  Negli argomenti seguenti vengono descritte le diverse categorie di elementi XML for Analysis (XMLA) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]supportate da.  
+  Negli argomenti seguenti vengono descritte le diverse categorie di elementi XML for Analysis (XMLA) supportate da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
@@ -34,7 +33,7 @@ ms.locfileid: "62731986"
 |[Oggetti &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)|Descrive gli elementi superiori ricevuti da un'applicazione in una busta SOAP da un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in risposta a un metodo XMLA.|  
 |[Proprietà &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/xml-elements-properties)|Descrive gli elementi figlio per intestazioni, metodi, oggetti o comandi XMLA.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Tipi di dati XML &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-data-types/xml-data-types-xmla)   
  [Sviluppo con Analysis Services Scripting Language &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   

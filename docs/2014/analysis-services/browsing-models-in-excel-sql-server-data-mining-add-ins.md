@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a8cca1d7-602a-449a-875c-99da564965bc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 961b32e84d41e021fbad185189981adb90ba44b8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2132f999bb8c613143e7313f46d623f76fdbf4b3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088462"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527700"
 ---
 # <a name="browsing-models-in-excel-sql-server-data-mining-add-ins"></a>Esplorazione di modelli in Excel (componenti aggiuntivi Data mining di SQL Server)
   ![Pulsante Esplora modello sulla barra multifunzione Data mining](media/dmc-browse.gif "Pulsante Esplora modello sulla barra multifunzione Data mining")  
@@ -55,7 +54,7 @@ ms.locfileid: "66088462"
   
  [Esplorazione di un modello di rete neurale](browsing-a-neural-network-model.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Visualizzazione di modelli di data mining in Visio &#40;componenti aggiuntivi Data mining&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)   
  [Gestire i modelli &#40;SQL Server componenti aggiuntivi Data mining&#41;](manage-models-sql-server-data-mining-add-ins.md)  
   

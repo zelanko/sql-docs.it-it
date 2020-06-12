@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 373fe2f1458b30412f4ee5852baa57b930af4878
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5a616db3e2fd0927faf9273bfaf55bb31e94391c
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893038"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669898"
 ---
 # <a name="topsum-dmx"></a>TopSum (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,15 +28,15 @@ TopSum(<table expression>, <rank expression>, <sum>)
 ```  
   
 ## <a name="applies-to"></a>Si applica a  
- Espressione che restituisce una tabella, ad esempio un riferimento \<a una colonna di tabella>, o una funzione che restituisce una tabella.  
+ Espressione che restituisce una tabella, ad esempio un riferimento a una \< colonna di tabella>, o una funzione che restituisce una tabella.  
   
 ## <a name="return-type"></a>Tipo restituito  
  \<espressione di tabella>  
   
-## <a name="remarks"></a>Osservazioni  
- La funzione **TopSum** restituisce le righe più in alto in ordine di rango decrescente in base al valore valutato dell'espressione \<di rango> argomento per ogni riga, in modo che la somma dell' \<espressione di rango> valori sia almeno il totale specificato dall'argomento \<Sum>. **TopSum** restituisce il più piccolo numero di elementi possibile mentre soddisfa ancora il valore della somma specificato.  
+## <a name="remarks"></a>Commenti  
+ La funzione **TopSum** restituisce le righe più in alto in ordine di rango decrescente in base al valore valutato dell' \< espressione di rango> argomento per ogni riga, in modo che la somma dell' \< espressione di rango> valori sia almeno il totale specificato dall' \< argomento Sum>. **TopSum** restituisce il più piccolo numero di elementi possibile mentre soddisfa ancora il valore della somma specificato.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene creata una query di stima sul modello di associazione compilato mediante l'esercitazione di [base sul data mining](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
  Per comprendere il funzionamento della percentuale di indisponibilità, potrebbe essere utile eseguire prima una query di stima che restituisca solo la tabella nidificata.  

@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7b6b436527aa36fb8f048a3b3c8fc55b970ef284
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 82317f4a4e5f4c4fddd4ffaf45c5897dfd4d0df5
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68065393"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669984"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,14 +32,14 @@ StructureColumn('structure column name')
  Nome della colonna della struttura di data mining di un case o di una tabella nidificata.  
   
 ## <a name="result-type"></a>Tipo di risultato  
- Il tipo restituito dipende dal tipo della colonna a cui si fa riferimento nel nome della colonna della \<struttura> parametro. Ad esempio, se la colonna della struttura di data mining a cui viene fatto riferimento contiene un valore scalare, la funzione restituisce un valore scalare.  
+ Il tipo restituito dipende dal tipo della colonna a cui si fa riferimento nel \< nome della colonna della struttura> parametro. Ad esempio, se la colonna della struttura di data mining a cui viene fatto riferimento contiene un valore scalare, la funzione restituisce un valore scalare.  
   
  Se la colonna della struttura di data mining alla quale viene fatto riferimento è una tabella nidificata, la funzione restituisce un valore di tabella. Il valore di tabella restituito può essere utilizzato nella clausola FROM di un'istruzione sub-SELECT.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questa funzione è polimorfica e può essere utilizzata in qualunque posizione in un'istruzione che consente espressioni, comprese un elenco di espressioni SELECT, un'espressione di condizione WHERE e un'espressione ORDER BY.  
   
- Il nome della colonna nella struttura di data mining è un valore stringa e, di conseguenza, deve essere racchiuso tra virgolette singole: `StructureColumn('`ad esempio, **colonna 1**`')`. Nel caso in cui siano presenti più colonne con lo stesso nome, il nome è risolto nel contesto dell'istruzione SELECT che lo racchiude.  
+ Il nome della colonna nella struttura di data mining è un valore stringa e, di conseguenza, deve essere racchiuso tra virgolette singole: ad esempio, `StructureColumn('` **colonna 1** `')` . Nel caso in cui siano presenti più colonne con lo stesso nome, il nome è risolto nel contesto dell'istruzione SELECT che lo racchiude.  
   
  I risultati restituiti da una query che utilizza la funzione **StructureColumn** sono interessati dalla presenza di filtri nel modello. ovvero il filtro del modello controlla i case inclusi nel modello di data mining. Una query nella colonna della struttura può pertanto restituire solo i case utilizzati nel modello di data mining. Per un esempio di codice che illustra l'effetto dei filtri del modello di data mining sia in tabelle del case che in tabelle nidificate, vedere la sezione Esempi di questo argomento.  
   
@@ -54,7 +54,7 @@ StructureColumn('structure column name')
   
  Impossibile trovare la colonna della struttura di data mining '% {Structure-Column-Name/}' nella struttura di data mining padre '% {Structure/}' nel contesto corrente (riga% {line/}, colonna% {column/}).  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Per questi esempi sarà utilizzata la struttura di data mining riportata di seguito. Si noti che la struttura di data mining contiene due colonne di tabelle nidificate, `Products` e `Hobbies`. La tabella nidificata nella colonna `Hobbies` contiene una singola colonna che viene utilizzata come chiave per la tabella nidificata. La tabella nidificata nella colonna `Products` è una tabella nidificata complessa con una colonna chiave e altre colonne utilizzate per l'input. Negli esempi seguenti viene illustrato come progettare una struttura di data mining per includere colonne diverse, anche se un modello potrebbe non utilizzare tutte le colonne. Alcune di queste colonne potrebbero non essere utili a livello di modello per la generalizzazione dei modelli, ma rivelarsi molto indicate per il drill-through.  
   
 ```  
@@ -112,10 +112,10 @@ SELECT CustomerName, Age,
 WHERE StructureColumn('Occupation') = 'Architect'  
 ```  
   
- Si noti che, in questo esempio, viene applicato un filtro alla colonna della struttura per limitare i case ai clienti la cui occupazione è "Architect`WHERE StructureColumn('Occupation') = 'Architect'`" (). Poiché la condizione di filtro del modello viene sempre applicata ai case al momento della creazione del modello, vengono inclusi nei case del modello solo i case con almeno una riga risultante nella tabella `Products`. Vengono pertanto applicati sia il filtro sulla tabella nidificata `Products` che il filtro sul case `('Occupation')`.  
+ Si noti che, in questo esempio, viene applicato un filtro alla colonna della struttura per limitare i case ai clienti la cui occupazione è "Architect" ( `WHERE StructureColumn('Occupation') = 'Architect'` ). Poiché la condizione di filtro del modello viene sempre applicata ai case al momento della creazione del modello, vengono inclusi nei case del modello solo i case con almeno una riga risultante nella tabella `Products`. Vengono pertanto applicati sia il filtro sulla tabella nidificata `Products` che il filtro sul case `('Occupation')`.  
   
 ### <a name="sample-query-3-selecting-columns-from-a-nested-table"></a>Esempio di query 3: Selezione di colonne da una tabella nidificata  
- Nella query di esempio seguente vengono restituiti i nomi dei clienti che sono stati utilizzati come case di training dal modello. Per ogni cliente, la query restituisce anche una tabella nidificata contenente i dettagli dell'acquisto. Sebbene il modello includa `ProductName` la colonna, il modello non utilizza il valore della `ProductName` colonna. Il modello controlla solo se il prodotto è stato acquistato al prezzo`NOT``OnSale`normale (). Questa query non solo restituisce il nome del prodotto, ma anche la quantità acquistata che non è inclusa nel modello.  
+ Nella query di esempio seguente vengono restituiti i nomi dei clienti che sono stati utilizzati come case di training dal modello. Per ogni cliente, la query restituisce anche una tabella nidificata contenente i dettagli dell'acquisto. Sebbene il modello includa la `ProductName` colonna, il modello non utilizza il valore della `ProductName` colonna. Il modello controlla solo se il prodotto è stato acquistato al prezzo normale ( `NOT``OnSale` ). Questa query non solo restituisce il nome del prodotto, ma anche la quantità acquistata che non è inclusa nel modello.  
   
 ```  
 SELECT CustomerName,    

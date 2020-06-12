@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 41e0a3fcf4348efcb2108a1205c1d2d8eabfb85c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b70742b07fd6450b01cf205147a05f40c4b6121
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736394"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545673"
 ---
 # <a name="assl-xml-conventions"></a>Convenzioni XML di ASSL
   Nel linguaggio ASSL (Analysis Services Scripting Language) la gerarchia di oggetti viene rappresentata come un set di tipi di elementi, ciascuno dei quali definisce gli elementi figlio che può contenere.  
@@ -135,10 +134,10 @@ ms.locfileid: "62736394"
   
 -   Mantenimento degli spazi vuoti interni.  
   
- Per le proprietà `Name` e `ID` sono presenti limitazioni speciali relative ai caratteri validi negli elementi della stringa. Per ulteriori informazioni sulle `Name` convenzioni e `ID` , vedere [oggetti ASSL e caratteristiche degli](assl-objects-and-object-characteristics.md)oggetti.  
+ Per le proprietà `Name` e `ID` sono presenti limitazioni speciali relative ai caratteri validi negli elementi della stringa. Per ulteriori informazioni sulle `Name` `ID` convenzioni e, vedere [oggetti ASSL e caratteristiche degli](assl-objects-and-object-characteristics.md)oggetti.  
   
  `DateTime`  
- `DateTime` Struttura dalla .NET Framework. Un valore `DateTime` non può essere NULL. La data meno recente supportata dal tipo di dati `DataTime` è rappresentata dall'1 gennaio 1601, disponibile per i programmatori come `DateTime.MinValue`. La data meno recente supportata indica che un valore `DateTime` è mancante.  
+ `DateTime`Struttura dalla .NET Framework. Un valore `DateTime` non può essere NULL. La data meno recente supportata dal tipo di dati `DataTime` è rappresentata dall'1 gennaio 1601, disponibile per i programmatori come `DateTime.MinValue`. La data meno recente supportata indica che un valore `DateTime` è mancante.  
   
  `Boolean`  
  Enumerazione con due soli valori, ovvero {true, false} o {0, 1}.  

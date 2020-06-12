@@ -1,5 +1,6 @@
 ---
 title: Corrispondenza del tipo di sequenza | Microsoft Docs
+description: Informazioni su come abbinare il tipo di sequenza restituito da un'espressione XQuery con un tipo specifico.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 164092d91a6450815662c5022ac6eb62941e3b16
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8904ab2ea9e8f78037b03f886e6b61d692b65e60
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946220"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306070"
 ---
 # <a name="type-system---sequence-type-matching"></a>Sistema di tipi - Corrispondenza per il tipo di sequenza
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "67946220"
 ### <a name="example-determining-whether-a-sequence-is-empty"></a>Esempio: determinazione di una sequenza vuota  
  Il tipo di sequenza **Empty ()** può essere utilizzato in un'espressione di tipo sequenza per determinare se la sequenza restituita dall'espressione specificata è una sequenza vuota.  
   
- Nell'esempio seguente, il XML Schema consente di supporta <`root` elemento>:  
+ Nell'esempio seguente, il XML Schema consente `root` di supporta <elemento>:  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -51,7 +52,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- A questo punto, se un'istanza XML tipizzata specifica un valore `root` per l'elemento `instance of empty()` <>, restituisce false.  
+ A questo punto, se un'istanza XML tipizzata specifica un valore per l' `root` elemento <>, `instance of empty()` restituisce false.  
   
 ```  
 DECLARE @var XML(SC1)  
@@ -61,7 +62,7 @@ SELECT @var.query('data(/root[1]) instance of  empty() ')
 GO  
 ```  
   
- Se l'elemento `root` <> è supporta nell'istanza, il relativo valore è una sequenza vuota e `instance of empty()` restituisce true.  
+ Se l' `root` elemento <> è supporta nell'istanza, il relativo valore è una sequenza vuota e `instance of empty()` restituisce true.  
   
 ```  
 DECLARE @var XML(SC)  
@@ -213,7 +214,7 @@ SELECT @var.query('(/root/*)[1] instance of text()')
 SELECT @var.query('(/root/*)[1] instance of document-node()')   
 ```  
   
- Nella query seguente, l' `instance of document-node()` espressione restituisce true perché l'elemento padre dell'elemento <`root`> è un nodo del documento.  
+ Nella query seguente, l' `instance of document-node()` espressione restituisce true perché l'elemento padre dell' `root` elemento <> è un nodo del documento.  
   
 ```  
 SELECT @var.query('(/root/..)[1] instance of document-node()') -- true  
@@ -255,7 +256,7 @@ element(*, ElementType?)
  Negli esempi seguenti vengono illustrati scenari nei quali i test dell'elemento e dell'attributo possono risultare utili.  
   
 ### <a name="example-a"></a>Esempio A  
- Nell'XML Schema seguente viene definito `CustomerType` il tipo complesso in `firstName` cui gli elementi `lastName` <> e <> sono facoltativi. Per un'istanza XML specificata, potrebbe essere necessario stabilire se esiste il nome di un cliente specifico.  
+ Nell'XML Schema seguente viene definito il `CustomerType` tipo complesso in cui gli `firstName` elementi <> e <`lastName`> sono facoltativi. Per un'istanza XML specificata, potrebbe essere necessario stabilire se esiste il nome di un cliente specifico.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -279,7 +280,7 @@ SET @var = '<x:customer xmlns:x="myNS">
 </x:customer>'  
 ```  
   
- Nella query seguente viene utilizzata `instance of element (firstName)` un'espressione per determinare se il primo elemento figlio di `customer` <> è un elemento il cui nome `firstName` è <>. In caso affermativo, restituisce True.  
+ Nella query seguente viene utilizzata un' `instance of element (firstName)` espressione per determinare se il primo elemento figlio di <`customer`> è un elemento il cui nome è <`firstName`>. In caso affermativo, restituisce True.  
   
 ```  
 SELECT @var.query('declare namespace x="myNS";   
@@ -287,7 +288,7 @@ SELECT @var.query('declare namespace x="myNS";
 GO  
 ```  
   
- Se si rimuove l'elemento `firstName` <> dall'istanza, la query restituirà false.  
+ Se si rimuove l' `firstName` elemento <> dall'istanza, la query restituirà false.  
   
  È inoltre possibile utilizzare:  
   
@@ -308,7 +309,7 @@ GO
 ### <a name="example-b"></a>Esempio B  
  Nell'esempio seguente viene illustrato come determinare se il nodo restituito da un'espressione è un nodo elemento con un nome specifico, Usa il test **Element ()** .  
   
- Nell'esempio seguente, i due <`Customer`> elementi nell'istanza XML su cui viene eseguita la query sono di due tipi diversi, `CustomerType` e. `SpecialCustomerType` Si supponga di voler ottenere informazioni sul tipo di <`Customer` elemento> restituito dall'espressione. La raccolta di XML Schema seguente definisce i tipi `CustomerType` e `SpecialCustomerType`.  
+ Nell'esempio seguente, i due <`Customer`> elementi nell'istanza XML su cui viene eseguita la query sono di due tipi diversi, `CustomerType` e `SpecialCustomerType` . Si supponga di voler ottenere informazioni sul tipo di <`Customer` elemento> restituito dall'espressione. La raccolta di XML Schema seguente definisce i tipi `CustomerType` e `SpecialCustomerType`.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -335,7 +336,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- Questa raccolta di XML Schema viene utilizzata per creare una variabile **XML** tipizzata. L'istanza XML assegnata a questa variabile presenta due `customer` <> elementi di due tipi diversi. Il primo elemento è di tipo `CustomerType` e il secondo elemento è di tipo `SpecialCustomerType`.  
+ Questa raccolta di XML Schema viene utilizzata per creare una variabile **XML** tipizzata. L'istanza XML assegnata a questa variabile presenta due <`customer`> elementi di due tipi diversi. Il primo elemento è di tipo `CustomerType` e il secondo elemento è di tipo `SpecialCustomerType`.  
   
 ```  
 DECLARE @var XML(SC)  
@@ -358,10 +359,10 @@ SELECT @var.query('declare namespace x="myNS";
     (/x:customer)[1] instance of element (*, x:SpecialCustomerType ?)')  
 ```  
   
- Se si modifica l'espressione della query precedente e si recupera il secondo <`customer` elemento> (`/x:customer)[2]`), il `instance of` restituisce true.  
+ Se si modifica l'espressione della query precedente e si recupera il secondo <`customer` elemento> ( `/x:customer)[2]` ), il `instance of` restituisce true.  
   
 ### <a name="example-c"></a>Esempio C  
- In questo esempio viene utilizzato il test dell'attributo. L'XML Schema seguente definisce il tipo complesso CustomerType con gli attributi CustomerID e Age. L'attributo Age è facoltativo. Per un'istanza XML specifica, può essere utile determinare se l'attributo Age è presente nell'elemento <`customer`>.  
+ In questo esempio viene utilizzato il test dell'attributo. L'XML Schema seguente definisce il tipo complesso CustomerType con gli attributi CustomerID e Age. L'attributo Age è facoltativo. Per un'istanza XML specifica, può essere utile determinare se l'attributo Age è presente nell' `customer` elemento <>.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -424,7 +425,7 @@ RETURN
   
 -   l' **elemento (ElementName, typeName)** non è supportato.  
   
--   **elemento (\*, typeName)** non supportato.  
+-   **elemento ( \* , typeName)** non supportato.  
   
 -   **Schema-Element ()** non è supportato.  
   

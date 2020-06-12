@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cebfdd07-e376-46d6-86ef-b6f816a2f360
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: eeb3df670097c0d511a9f5b779b6705f40a5e897
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b514d2d85a01fdb4b13c922e81a39e694308334
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070303"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539303"
 ---
 # <a name="report-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor dei form delle azioni report (scheda Azioni, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Usare il riquadro **Editor dei form delle azioni report** nella scheda **Azioni** in Progettazione cubi per modificare l'azione del report selezionata nel riquadro **Libreria azioni** .  
@@ -32,7 +31,7 @@ ms.locfileid: "66070303"
  **Tipo di destinazione**  
  Consente di selezionare il tipo di oggetto a cui associare l'azione. Il server restituisce al client solo le azioni del tipo specificato relative all'oggetto. L'azione è disponibile per il client se il valore di **Condizione** viene soddisfatto e se sono selezionati gli oggetti specificati nella tabella seguente.  
   
-|valore|Oggetto selezionato|  
+|Valore|Oggetto selezionato|  
 |-----------|---------------------|  
 |Membri dell'attributo|In **Oggetto di destinazione**è selezionato un membro dell'attributo da un livello basato sull'attributo.<br /><br /> Nota: altre gerarchie utente che usano l'attributo selezionato ereditano l'azione del report.|  
 |Celle|In **Oggetto di destinazione** è selezionato il set denominato. Selezionare **Tutte le celle** per selezionare tutte le celle del cubo.|  
@@ -55,7 +54,7 @@ ms.locfileid: "66070303"
  Espandere la finestra per visualizzare le opzioni **Nome server**, **Percorso server**e **Formato report** .  
   
  **Nome server**  
- Consente di digitare il nome [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dell'istanza in cui l'azione esegue il report.  
+ Consente di digitare il nome dell' [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] istanza in cui l'azione esegue il report.  
   
  **Percorso server**  
  Consente di digitare il percorso del report nell'istanza di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Ad esempio, digitare **Vendite/VenditeAnnualiPerCategoria**.  
@@ -63,7 +62,7 @@ ms.locfileid: "66070303"
  **Formato report**  
  Consente di selezionare il formato in cui viene restituito il report. Nella tabella seguente vengono descritti i formati disponibili.  
   
-|valore|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
 |HTML5|Il report viene restituito in un formato conforme a HTML 5.0.|  
 |HTML3|Il report viene restituito in un formato conforme a HTML 3.2.|  
@@ -89,10 +88,10 @@ ms.locfileid: "66070303"
   
  Nella tabella seguente vengono descritte le impostazioni disponibili.  
   
-|valore|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
-|Batch|L'azione deve essere eseguita come parte di un'operazione batch o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] di un'attività.|  
-|Interactive (Interattivo)|L'azione viene eseguita in seguito alla chiamata dell'utente.|  
+|Batch|L'azione deve essere eseguita come parte di un'operazione batch o di un' [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] attività.|  
+|Interattività|L'azione viene eseguita in seguito alla chiamata dell'utente.|  
 |Su apertura|L'azione viene eseguita quando il cubo viene aperto per la prima volta.|  
   
  **Applicazione**  
@@ -116,7 +115,7 @@ ms.locfileid: "66070303"
   
  Selezionare **True** per indicare che **Didascalia** contiene un'espressione MDX che restituisce una stringa che rappresenta una didascalia da visualizzare per l'azione nell'applicazione client. L'espressione MDX deve essere risolta prima che l'azione venga restituita all'applicazione client.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Azioni &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
  [Barra degli strumenti &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Libreria azioni &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   

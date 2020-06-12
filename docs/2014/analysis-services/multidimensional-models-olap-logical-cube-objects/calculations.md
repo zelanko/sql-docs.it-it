@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6be84916-fd05-4efc-ab98-6adbbad80154
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 871d248eec557033c181bbd3d162cd17875dd30c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4457a5fa434be3865edf770f7ca69a676c051893
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702687"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545343"
 ---
 # <a name="calculations"></a>Calcoli
-  Un calcolo è un'espressione MDX (Multidimensional Expressions) o uno script utilizzato per definire un membro calcolato, un set denominato o un'assegnazione con ambito in un cubo in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. I calcoli consentono di aggiungere oggetti definiti non dai dati del cubo, ma da espressioni che possono fare riferimento ad altre parti del cubo, ad altri cubi o persino a informazioni esterne al database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. I calcoli consentono di estendere le funzionalità di un cubo, aggiungendo flessibilità e potenza alle applicazioni di Business Intelligence. Per ulteriori informazioni sui calcoli di scripting, vedere [Introduzione allo scripting MDX in Microsoft SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81892). Per ulteriori informazioni sui problemi di prestazioni relativi a query e calcoli MDX, vedere la [Guida alle prestazioni SQL Server 2005 Analysis Services](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide).  
+  Un calcolo è un'espressione MDX (Multidimensional Expressions) o uno script utilizzato per definire un membro calcolato, un set denominato o un'assegnazione con ambito in un cubo in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . I calcoli consentono di aggiungere oggetti definiti non dai dati del cubo, ma da espressioni che possono fare riferimento ad altre parti del cubo, ad altri cubi o persino a informazioni esterne al database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. I calcoli consentono di estendere le funzionalità di un cubo, aggiungendo flessibilità e potenza alle applicazioni di Business Intelligence. Per ulteriori informazioni sui calcoli di scripting, vedere [Introduzione allo scripting MDX in Microsoft SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81892). Per ulteriori informazioni sui problemi di prestazioni relativi a query e calcoli MDX, vedere la [Guida alle prestazioni SQL Server 2005 Analysis Services](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide).  
   
 ## <a name="calculated-members"></a>Membri calcolati  
  Un membro calcolato è un membro il cui valore viene calcolato in fase di esecuzione utilizzando un'espressione MDX (Multidimensional Expressions) specificata dall'utente durante la definizione del membro stesso. Un membro calcolato è disponibile per le applicazioni di Business Intelligence come qualsiasi altro membro. I membri calcolati non aumentano le dimensioni del cubo dato che solo le definizioni vengono archiviate nel cubo, mentre il calcolo dei valori, necessario per rispondere alle query, viene eseguito in memoria.  
@@ -45,16 +44,16 @@ ms.locfileid: "62702687"
  Per creare membri calcolati, utilizzare la scheda **calcoli**in Progettazione cubi. Per altre informazioni, vedere [creare membri calcolati](../multidimensional-models/create-calculated-members.md)  
   
 ## <a name="named-sets"></a>Set denominati  
- Un set denominato è un'istruzione CREATE SET MDX che restituisce un set. L'espressione MDX viene salvata come parte della definizione di un cubo in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Un set denominato viene creato per il riutilizzo in query MDX e consente agli utenti aziendali di semplificare le query e utilizzare un nome di set anziché un'espressione set per le espressioni set complesse utilizzate di frequente. **Argomento correlato:** [creare set denominati](../multidimensional-models/create-named-sets.md)  
+ Un set denominato è un'istruzione CREATE SET MDX che restituisce un set. L'espressione MDX viene salvata come parte della definizione di un cubo in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Un set denominato viene creato per il riutilizzo in query MDX e consente agli utenti aziendali di semplificare le query e utilizzare un nome di set anziché un'espressione set per le espressioni set complesse utilizzate di frequente. **Argomento correlato:** [creare set denominati](../multidimensional-models/create-named-sets.md)  
   
 ## <a name="script-commands"></a>Comandi script  
- Un comando script è uno script MDX incluso nella definizione del cubo. I comandi script consentono di eseguire quasi tutte le operazioni supportate da MDX in un cubo, ad esempio la definizione dell'ambito di un calcolo da applicare solo a parte del cubo. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]gli script MDX possono essere applicati all'intero cubo o a sezioni specifiche del cubo, in punti specifici durante l'esecuzione dello script. L'istruzione CALCULATE, che è il comando script predefinito, popola le celle del cubo con dati aggregati in base all'ambito predefinito.  
+ Un comando script è uno script MDX incluso nella definizione del cubo. I comandi script consentono di eseguire quasi tutte le operazioni supportate da MDX in un cubo, ad esempio la definizione dell'ambito di un calcolo da applicare solo a parte del cubo. In gli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] script MDX possono essere applicati all'intero cubo o a sezioni specifiche del cubo, in punti specifici durante l'esecuzione dello script. L'istruzione CALCULATE, che è il comando script predefinito, popola le celle del cubo con dati aggregati in base all'ambito predefinito.  
   
  L'ambito predefinito è l'intero cubo, ma è possibile definire un ambito più limitato, noto come sottocubo, e quindi applicare uno script MDX solo a tale area del cubo. L'istruzione SCOPE definisce l'ambito di tutte le successive espressioni e istruzioni MDX nello script di calcolo fino a quando l'ambito non viene terminato o ridefinito. Viene quindi utilizzata l'istruzione THIS per applicare un'espressione MDX all'ambito corrente. È possibile utilizzare l'istruzione BACK_COLOR per applicare alle celle nell'ambito corrente un colore di sfondo che agevoli le operazioni di debug.  
   
  È ad esempio possibile utilizzare un comando script per allocare obiettivi di vendita ai dipendenti, suddivisi per periodo di tempo e territorio di vendita, in base ai valori ponderati delle vendite in un periodo di tempo precedente.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Calcoli nei modelli multidimensionali](../multidimensional-models/calculations-in-multidimensional-models.md)  
   
   

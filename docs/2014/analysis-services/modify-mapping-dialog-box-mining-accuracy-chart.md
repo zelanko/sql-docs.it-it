@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: a99f5330-efe0-47c7-8393-8dfd9bb2d490
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a4a4a6362d76afc39234acccc6366c7169244663
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b968046a09214c4b5d7922302c911ca4d1f2b875
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077676"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537442"
 ---
 # <a name="modify-mapping-dialog-box-mining-accuracy-chart"></a>Finestra di dialogo Modifica mapping (Grafico accuratezza modello di data mining)
-  Utilizzare la finestra di dialogo **Modifica mapping** per modificare la modalità con cui le colonne di input vengono unite in join alle colonne nel modello di data mining. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] eseguirà automaticamente il mapping delle colonne in base al nome e al tipo di dati della colonna, ma è possibile utilizzare questa finestra di dialogo per modificare i mapping delle colonne. Se si apportano modifiche, è necessario assicurare che le colonne nell'origine dati esterna dispongano di tipi di dati e di contenuto corrispondenti alle colonne nel modello di data mining di cui si sta eseguendo il test.  
+  Utilizzare la finestra di dialogo **Modifica mapping** per modificare la modalità con cui le colonne di input vengono unite in join alle colonne nel modello di data mining. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]eseguirà automaticamente il mapping delle colonne in base al nome e al tipo di dati della colonna, ma è possibile utilizzare questa finestra di dialogo per modificare i mapping delle colonne. Se si apportano modifiche, è necessario assicurare che le colonne nell'origine dati esterna dispongano di tipi di dati e di contenuto corrispondenti alle colonne nel modello di data mining di cui si sta eseguendo il test.  
   
 ## <a name="options"></a>Opzioni  
  **Colonne struttura di data mining**  
@@ -29,7 +28,7 @@ ms.locfileid: "66077676"
  **Colonne della tabella**  
  Elenco di colonne di input associate a ogni colonna della struttura di data mining. Per modificare la colonna di input, fare clic su una cella e selezionare una nuova colonna di input nell'elenco di colonne incluse nella tabella di input.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Progettazione Grafico accuratezza modello di data mining &#40;&#41;di data mining](mining-accuracy-chart-designer-data-mining.md)   
  [Attività e procedure di test e convalida &#40;di data mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [Test e convalida &#40;Data mining&#41;](data-mining/testing-and-validation-data-mining.md)  

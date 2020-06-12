@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a646d152abaa3c352bf5ca1c576760e1715c3578
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 09cf6ff2e755dd8493b4d923f8bd328d7b07c351
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080209"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544033"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>Connessione dalle applicazioni client (Analysis Services)
   Se non si ha familiarità con Analysis Services, utilizzare le informazioni contenute in questo argomento per connettersi a un'istanza esistente di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizzando strumenti e applicazioni comuni. In questo argomento viene inoltre illustrato come connettersi con identità utente diverse a scopo di test.  
@@ -95,7 +94,7 @@ ms.locfileid: "66080209"
   
 -   [Tipo di connessione Analysis Services per MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
   
--   [Analysis Services - gestione connessione](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
+-   [Gestione connessione Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
 > [!NOTE]  
 >  Quando si utilizza SQL Server Data Tools per lavorare con un progetto esistente di Analysis Services, è possibile connettersi offline utilizzando un progetto locale o un progetto con controllo della versione o connettersi in modalità online per aggiornare gli oggetti di Analysis Services mentre il database è in esecuzione. Per ulteriori informazioni, vedere [Connect in Online Mode to an Analysis Services Database](../multidimensional-models/connect-in-online-mode-to-an-analysis-services-database.md). Più comunemente, le connessioni da [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] sono in modalità progetto, dove le modifiche vengono distribuite al database solo quando si distribuisce in modo esplicito il progetto.  
@@ -127,7 +126,7 @@ ms.locfileid: "66080209"
   
  [Risoluzione di problemi di connettività comuni negli scenari di connettività di SQL Server 2005 Analysis Services](https://technet.microsoft.com/library/cc917670.aspx). Il documento è stato scritto da alcuni anni, ma le informazioni e le metodologie sono comunque valide.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Connetti a Analysis Services](connect-to-analysis-services.md)   
  [Metodologie di autenticazione supportate da Analysis Services](authentication-methodologies-supported-by-analysis-services.md)   
  [Rappresentazione &#40;SSAS tabulare&#41;](../tabular-models/impersonation-ssas-tabular.md)   

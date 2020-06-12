@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1f72832fd684dd59e27ce58576a7f65fa8796347
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9dfbe291c1aa7d856862de54ed10c845b4e5544
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68074807"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670392"
 ---
 # <a name="identifiers-dmx"></a>Identificatori (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Tutti gli oggetti [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in devono avere un identificatore. Il nome di un oggetto ne costituisce l'identificatore. Sono dotati di identificatori anche i server, i database e gli oggetti di database quali origini dei dati, viste origine dati, cubi, dimensioni, modelli di data mining e così via.  
+  Tutti gli oggetti in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] devono avere un identificatore. Il nome di un oggetto ne costituisce l'identificatore. Sono dotati di identificatori anche i server, i database e gli oggetti di database quali origini dei dati, viste origine dati, cubi, dimensioni, modelli di data mining e così via.  
   
  In DMX (Data Mining Extensions) esistono due classi di identificatori:  
   
@@ -75,7 +75,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
   
 -   Quando si utilizzano parole riservate come nomi di oggetti o parti di nomi di oggetti.  
   
-     È consigliabile evitare di utilizzare parole chiave riservate come nomi di oggetti. I database [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] aggiornati da versioni precedenti di possono contenere identificatori che includono parole che non erano riservate nella versione precedente di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , ma che sono parole riservate[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]per. Per fare riferimento a oggetti di questo tipo, è possibile utilizzare un identificatore delimitato finché non sarà possibile modificare il nome dell'oggetto.  
+     È consigliabile evitare di utilizzare parole chiave riservate come nomi di oggetti. I database aggiornati da versioni precedenti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] possono contenere identificatori che includono parole che non erano riservate nella versione precedente di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , ma che sono parole riservate per [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Per fare riferimento a oggetti di questo tipo, è possibile utilizzare un identificatore delimitato finché non sarà possibile modificare il nome dell'oggetto.  
   
 -   Quando si utilizzano caratteri non elencati come identificatori qualificati.  
   

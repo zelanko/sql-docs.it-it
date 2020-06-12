@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7cd6ea975462a7967c7938de8900d5b1877ff524
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3888642f73fc0898c12ed471c7bc09d678303989
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79217071"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544023"
 ---
 # <a name="connection-string-properties-analysis-services"></a>Proprietà delle stringhe di connessione (Analysis Services)
   In questo argomento vengono illustrate le proprietà delle stringhe di connessione che è possibile impostare in uno degli strumenti di progettazione o di amministrazione o trovare nelle stringhe di connessione create dalle applicazioni client che si connettono ai dati di Analysis Services ed eseguono query su di essi. Viene pertanto preso in considerazione solo un subset delle proprietà disponibili. L'elenco completo include numerose proprietà del server e del database attraverso cui è possibile personalizzare una connessione per un'applicazione specifica indipendentemente dal tipo di configurazione dell'istanza o del database nel server.  
@@ -52,7 +51,7 @@ ms.locfileid: "79217071"
 |--------------|-----------------|-------------|  
 |`Data Source` o `DataSource`|Specifica l'istanza del server. Questa proprietà è obbligatoria per tutte le connessioni. I valori validi includono il nome di rete o l'indirizzo IP del server, local o localhost per le connessioni locali, l'URL se il server è configurato per l'accesso HTTP o HTTPS oppure il nome di un file di cubo locale (con estensione cub).|`Data source=AW-SRV01` per l'istanza e la porta predefinite (TCP 2383).<br /><br /> `Data source=AW-SRV01$Finance:8081` per un'istanza denominata ($Finance) e una porta fissa.<br /><br /> `Data source=AW-SRV01.corp.Adventure-Works.com` per un nome di dominio completo, presupponendo che si utilizzino l'istanza e la porta predefinite.<br /><br /> `Data source=172.16.254.1` per un indirizzo IP del server in modo da ignorare la ricerca nel server DNS, utile per la risoluzione dei problemi di connessione.|  
 |`Initial Catalog` o `Catalog`|Specifica il nome del database di Analysis Services a cui connettersi. Il database deve essere distribuito in Analysis Services e l'utente deve disporre delle autorizzazioni necessarie per la connessione. Questa proprietà è facoltativa per le connessioni AMO, ma obbligatoria per ADOMD.NET.|`Initial catalog=AdventureWorks2012`|  
-|`Provider`|I valori validi includono MSOLAP o MSOLAP. \<Version>, dove \<Version> è 3, 4 o 5. Nel file system il nome del provider di dati è msolap110.dll per la versione SQL Server 2012, msolap100.dll per SQL Server 2008 e 2008 R2 e msolap90.dll per SQL Server 2005.<br /><br /> La versione corrente è MSOLAP.5. Questa proprietà è facoltativa. Per impostazione predefinita, le librerie client leggono la versione corrente del provider OLE DB dal Registro di sistema. È necessario impostare questa proprietà solo se occorre una versione specifica del provider di dati, ad esempio per la connessione a un'istanza di SQL Server 2008.<br /><br /> I provider di dati corrispondono alle versioni di SQL Server. Se l'organizzazione usano la versione corrente e le versioni precedenti di Analysis Services, sarà probabilmente necessario specificare il provider da usare nelle stringhe di connessione create manualmente. Potrebbe inoltre essere necessario scaricare e installare versioni specifiche del provider di dati in computer che non dispongono della versione richiesta. È possibile scaricare il provider OLE DB dalle pagine del Feature Pack di SQL Server nell'Area download. Visitare la pagina [Feature Pack di Microsoft SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=296473) per scaricare il provider OLE DB di Analysis Services per SQL Server 2012.<br /><br /> MSOLAP.4 è stato rilasciato sia in SQL Server 2008 sia in SQL Server 2008 R2. La versione 2008 R2 supporta le cartelle di lavoro PowerPivot ed è talvolta necessario installarlo manualmente nei server SharePoint. Per distinguere tra queste versioni, è necessario controllare il numero di build nelle proprietà del file del provider. A questo scopo, passare a Programmi\Microsoft Analysis Services\AS OLEDB\10. Fare clic con il pulsante destro del mouse sul file msolap110.dll e scegliere **Proprietà**. Fare clic su **Dettagli**. Visualizzare le informazioni sulla versione del file. La versione deve includere 10,50. \<BuildNumber> per SQL Server 2008 R2. Per altre informazioni, vedere [Installare il provider OLE DB di Analysis Services nei server di SharePointt](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) e [Provider di dati usati per le connessioni ad Analysis Services](data-providers-used-for-analysis-services-connections.md).<br /><br /> MSOLAP. 3 è stato rilasciato nel SQL Server 2005.<br /><br /> MSOLAP. 4 è stato rilasciato nel SQL Server 2008 e di nuovo SQL Server 2008 R2<br /><br /> MSOLAP. 5 è stato rilasciato nel SQL Server 2012|`Provider=MSOLAP.3` viene usato per le connessioni che richiedono la versione di SQL Server 2005 del provider OLE DB per Analysis Services.|  
+|`Provider`|I valori validi includono MSOLAP o MSOLAP. \<version> , dove \<version> è 3, 4 o 5. Nel file system il nome del provider di dati è msolap110.dll per la versione SQL Server 2012, msolap100.dll per SQL Server 2008 e 2008 R2 e msolap90.dll per SQL Server 2005.<br /><br /> La versione corrente è MSOLAP.5. Questa proprietà è facoltativa. Per impostazione predefinita, le librerie client leggono la versione corrente del provider OLE DB dal Registro di sistema. È necessario impostare questa proprietà solo se occorre una versione specifica del provider di dati, ad esempio per la connessione a un'istanza di SQL Server 2008.<br /><br /> I provider di dati corrispondono alle versioni di SQL Server. Se l'organizzazione usano la versione corrente e le versioni precedenti di Analysis Services, sarà probabilmente necessario specificare il provider da usare nelle stringhe di connessione create manualmente. Potrebbe inoltre essere necessario scaricare e installare versioni specifiche del provider di dati in computer che non dispongono della versione richiesta. È possibile scaricare il provider OLE DB dalle pagine del Feature Pack di SQL Server nell'Area download. Visitare la pagina [Feature Pack di Microsoft SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=296473) per scaricare il provider OLE DB di Analysis Services per SQL Server 2012.<br /><br /> MSOLAP.4 è stato rilasciato sia in SQL Server 2008 sia in SQL Server 2008 R2. La versione 2008 R2 supporta le cartelle di lavoro PowerPivot ed è talvolta necessario installarlo manualmente nei server SharePoint. Per distinguere tra queste versioni, è necessario controllare il numero di build nelle proprietà del file del provider. A questo scopo, passare a Programmi\Microsoft Analysis Services\AS OLEDB\10. Fare clic con il pulsante destro del mouse sul file msolap110.dll e scegliere **Proprietà**. Fare clic su **Dettagli**. Visualizzare le informazioni sulla versione del file. La versione deve includere 10,50.\<buildnumber> per SQL Server 2008 R2. Per altre informazioni, vedere [Installare il provider OLE DB di Analysis Services nei server di SharePointt](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) e [Provider di dati usati per le connessioni ad Analysis Services](data-providers-used-for-analysis-services-connections.md).<br /><br /> MSOLAP. 3 è stato rilasciato nel SQL Server 2005.<br /><br /> MSOLAP. 4 è stato rilasciato nel SQL Server 2008 e di nuovo SQL Server 2008 R2<br /><br /> MSOLAP. 5 è stato rilasciato nel SQL Server 2012|`Provider=MSOLAP.3` viene usato per le connessioni che richiedono la versione di SQL Server 2005 del provider OLE DB per Analysis Services.|  
 |`Cube`|Nome del cubo o della prospettiva. Un database può contenere più cubi e prospettive. Se sono possibili più destinazioni, includere il nome del cubo o della prospettiva nella stringa di connessione.|`Cube=SalesPerspective` indica che è possibile usare la proprietà Cube della stringa di connessione per specificare il nome di un cubo o di una prospettiva.|  
   
 ##  <a name="authentication-and-security"></a><a name="bkmk_auth"></a>Autenticazione e sicurezza  
@@ -120,7 +119,7 @@ ms.locfileid: "79217071"
   
 -   Modalità di debug  
   
--   Mode  
+-   Modalità  
   
 -   SQLCompatibility  
   
@@ -166,11 +165,11 @@ ms.locfileid: "79217071"
   
  **Connessioni http(s) alle cartelle di lavoro di PowerPivot (file con estensione xlsx, xlsb o xlsm)**  
   
- `Data Source=<URL>`, dove l'URL è il percorso di SharePoint a una cartella di lavoro di PowerPivot pubblicata in una libreria di SharePoint. Ad esempio, "Data Source =<http://localhost/Shared> Documents/Sales. xlsx".  
+ `Data Source=<URL>`, dove l'URL è il percorso di SharePoint a una cartella di lavoro di PowerPivot pubblicata in una libreria di SharePoint. Ad esempio, "Data Source = <http://localhost/Shared> Documents/Sales.xlsx".  
   
  **Connessioni http(s) a file di connessione BI Semantic Model**  
   
- `Data Source=<URL>` dove l'URL è il percorso di SharePoint al file con estensione bism. Ad esempio, "Data Source =<http://localhost/Shared> Documents/Sales. bism".  
+ `Data Source=<URL>` dove l'URL è il percorso di SharePoint al file con estensione bism. Ad esempio, "Data Source = <http://localhost/Shared> Documents/Sales. bism".  
   
  **Connessioni a PowerPivot incorporate**  
   

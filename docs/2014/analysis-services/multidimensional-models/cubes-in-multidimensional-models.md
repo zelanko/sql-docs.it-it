@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e0f7acf3-4b07-41fc-a5fc-ac30b4a56c54
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c7ce00bc87ca17c97996023d7cb9a4745b9882f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab1051981ddcac948a447e814c278fab4fb61496
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076112"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547201"
 ---
 # <a name="cubes-in-multidimensional-models"></a>Cubi nei modelli multidimensionali
   Un cubo è una struttura multidimensionale che contiene informazioni per scopi analitici. Un cubo è principalmente costituito da dimensioni e misure. Le dimensioni definiscono la struttura del cubo utilizzata per effettuare delle sezioni, mentre le misure forniscono valori numerici aggregati di interesse per l'utente finale. Come struttura logica, un cubo consente a un'applicazione client di recuperare i valori delle misure, come se si trovassero nelle celle del cubo. Le celle vengono definite per ogni possibile valore riepilogato. Una cella del cubo è definita dall'intersezione dei membri della dimensione e contiene i valori aggregati delle misure a quell'intersezione specifica.  
@@ -36,7 +35,7 @@ ms.locfileid: "66076112"
 |Dimensioni|[Dimensioni nei modelli multidimensionali](dimensions-in-multidimensional-models.md)|  
 |Misure e gruppi di misure|[Creare misure e gruppi di misure nei modelli multidimensionali](create-measures-and-measure-groups-in-multidimensional-models.md)|  
 |Partizioni|[Partizioni nei modelli multidimensionali](partitions-in-multidimensional-models.md)|  
-|prospettive|[Prospettive nei modelli multidimensionali](perspectives-in-multidimensional-models.md)|  
+|Prospettive|[Prospettive nei modelli multidimensionali](perspectives-in-multidimensional-models.md)|  
 |Gerarchie|[Creare gerarchie definite dall'utente](user-defined-hierarchies-create.md)|  
 |Azioni|[Azioni nei modelli multidimensionali](actions-in-multidimensional-models.md)|  
 |Indicatori KPI|[Indicatori KPI nei modelli multidimensionali](key-performance-indicators-kpis-in-multidimensional-models.md)|  

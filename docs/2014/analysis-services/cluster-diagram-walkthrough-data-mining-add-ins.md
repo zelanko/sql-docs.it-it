@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 761bef6a-37d4-4b19-944e-f2aadc75a242
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc2df250b0728934f258c8217d29adfb91e66ff5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 578b5b8e55fd3ae660db985eed2e608667dc768b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087907"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527487"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>Descrizione dettagliata del diagramma cluster (componenti aggiuntivi Data mining)
   Dopo aver creato un modello di clustering, è possibile importarlo in Visio utilizzando la forma **cluster** e quindi continuare a personalizzare e migliorare il layout. Nelle **forme di data mining per Visio** sono inclusi i seguenti controlli personalizzati per l'utilizzo di diagrammi data mining:  
@@ -43,7 +42,7 @@ ms.locfileid: "66087907"
   
 1.  Se non vengono visualizzate le **forme di data mining di Microsoft** nell'elenco **forme** , fare clic su **altre forme**, selezionare **Apri stencil**e aprire il modello dal percorso di installazione predefinito.  
   
-     \<unità>: \Programmi\Microsoft SQL Server 2012 DM Add-ins  
+     \<drive>: \Programmi\Microsoft SQL Server 2012 DM Add-ins  
   
 2.  Trascinare la forma **cluster** nella pagina.  
   
@@ -123,7 +122,7 @@ ms.locfileid: "66087907"
   
      Tuttavia, se si applica una qualsiasi formattazione speciale diversa da quella predefinita generata dalla procedura guidata, inclusi alcuni sfondi, questi numeri potrebbero non essere visibili.  
   
-     **Slider**  
+     **Dispositivo di scorrimento**  
      Consente di filtrare le linee tra i cluster. Spostando il dispositivo di scorrimento verso l'alto vengono rimosse tutte le associazioni tranne quelle più importanti.  
   
      **Ombreggiatura**  
@@ -139,7 +138,7 @@ ms.locfileid: "66087907"
   
     -   Aggiungere un grafico dell'analisi discriminante del cluster.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Risoluzione dei problemi relativi ai diagrammi di data mining di Visio &#40;componenti aggiuntivi Data mining di SQL Server&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md)  
   
   

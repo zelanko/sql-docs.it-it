@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 560d1846-8da2-475f-b021-13ff31fb49d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2b8c46cc7bb06a66c358c0be4adc9be050774172
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fe64248d34db8a1e0cf1e24dc77446e8b9fa6b8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082495"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528973"
 ---
 # <a name="data-source-view-properties-dialog-box-ssas"></a>Finestra di dialogo Proprietà vista origine dati (SSAS)
   Utilizzare la finestra di dialogo **Proprietà vista origine dati** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per impostare le proprietà di una vista origine dati in un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Per visualizzare la finestra di dialogo **Proprietà vista origine dati** , fare clic con il pulsante destro del mouse su una vista origine dati in **Esplora oggetti** e quindi scegliere **Proprietà**.  

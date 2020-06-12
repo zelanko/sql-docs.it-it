@@ -3,9 +3,9 @@ title: sys. dm_user_db_resource_governance (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2019
 ms.prod: sql
-ms.technology: system-objects
 ms.prod_service: sql-database
 ms.reviewer: ''
+ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_governance
@@ -20,12 +20,12 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: aa7c7e7a7c510f797377c3cbbceb7c2751418da3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f853f1778a62b345accff745aade5fb5608322fd
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74165915"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627395"
 ---
 # <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys. dm_user_db_resource_governance (Transact-SQL)
 
@@ -61,7 +61,7 @@ Restituisce le impostazioni di configurazione e capacità effettive utilizzate d
 |**initial_db_file_size_in_mb**|bigint|Dimensioni predefinite per il nuovo file di dati, in MB. Vedere [sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
 |**log_size_in_mb**|bigint|Dimensioni predefinite per il nuovo file di log, in MB. Vedere [sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
 |**instance_cap_cpu**|INT|Solo per uso interno.|
-|**instance_max_log_rate**|bigint|Limite di velocità di generazione del log per l'istanza di SQL Server, in byte al secondo. Si applica a tutti i log generati dall'istanza, `tempdb` inclusi e altri database di sistema. In un pool elastico si applica al log generato da tutti i database nel pool.|
+|**instance_max_log_rate**|bigint|Limite di velocità di generazione del log per l'istanza di SQL Server, in byte al secondo. Si applica a tutti i log generati dall'istanza, inclusi `tempdb` e altri database di sistema. In un pool elastico si applica al log generato da tutti i database nel pool.|
 |**instance_max_worker_threads**|INT|Limite di thread di lavoro per l'istanza di SQL Server.|
 |**replica_type**|INT|Tipo di replica, dove 0 è primario e 1 è secondario.|
 |**max_transaction_size**|bigint|Spazio di log massimo utilizzato da qualsiasi transazione, in KB.|
@@ -94,14 +94,14 @@ Restituisce le impostazioni di configurazione e capacità effettive utilizzate d
 
 Questa vista richiede l'autorizzazione VIEW DATABASE STATE.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Per una descrizione della governance delle risorse nel database SQL di Azure, vedere [limiti delle risorse del database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server).
 
 > [!IMPORTANT]
 > La maggior parte dei dati restituiti da questa DMV è destinata al consumo interno ed è soggetta a modifiche in qualsiasi momento.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 La query seguente, eseguita nel contesto di un database utente, restituisce la velocità massima di log e il numero massimo di IOPS a livello del gruppo di carico di lavoro e del pool di risorse dell'utente. Per un singolo database, viene restituita una riga. Per un database in un pool elastico, viene restituita una riga per ogni database nel pool.
 

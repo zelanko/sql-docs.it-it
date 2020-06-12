@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: a65b3249-303d-49c6-98af-6ac6eed11a03
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ab38ea9b58e891d813a3ca73f43d20a364275da0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2e59c7953ae8fc7d3cfceafa7b0e9d8c7186daf8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727597"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544929"
 ---
 # <a name="processing-objects-xmla"></a>Elaborazione di oggetti (XMLA)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]l'elaborazione è il passaggio o la serie di passaggi che trasformano i dati in informazioni per l'analisi aziendale. L'elaborazione varia a seconda del tipo di oggetto, ma rappresenta sempre una fase della trasformazione dei dati in informazioni.  
+  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] l'elaborazione è il passaggio o la serie di passaggi che trasformano i dati in informazioni per l'analisi aziendale. L'elaborazione varia a seconda del tipo di oggetto, ma rappresenta sempre una fase della trasformazione dei dati in informazioni.  
   
  Per elaborare un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oggetto, è possibile usare il comando [Process](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/process-element-xmla) . In un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] il comando `Process` può elaborare gli oggetti seguenti:  
   
@@ -67,12 +66,12 @@ ms.locfileid: "62727597"
 |*ProcessClearStructureOnly*|Struttura di data mining|  
 |*ProcessScriptCache*|Cube|  
   
- Per ulteriori informazioni sull'elaborazione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di oggetti, vedere elaborazione di oggetti del [modello multidimensionale](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ Per ulteriori informazioni sull'elaborazione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oggetti, vedere elaborazione di oggetti del [modello multidimensionale](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
 ## <a name="specifying-objects-to-be-processed"></a>Specifica degli oggetti da elaborare  
  La proprietà [Object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) del `Process` comando contiene l'identificatore di oggetto dell'oggetto da elaborare. In un comando `Process` è possibile specificare solo un oggetto, ma l'elaborazione di un oggetto determina anche l'elaborazione di qualsiasi oggetto figlio. L'elaborazione di un gruppo di misure in un cubo, ad esempio, determina l'elaborazione di tutte le partizioni di tale gruppo, mentre l'elaborazione di un database determina l'elaborazione di tutti gli oggetti, quali cubi, dimensioni e strutture di data mining, contenuti nel database.  
   
- Se si imposta l'attributo `ProcessAffectedObjects` del comando `Process` su true, viene elaborato qualsiasi oggetto correlato interessato dall'elaborazione di quello specificato. Se, ad esempio, una dimensione viene aggiornata in modo incrementale *ProcessUpdate* tramite l'opzione di elaborazione `Process` ProcessUpdate nel comando, qualsiasi partizione le cui aggregazioni vengono invalidate a causa dei membri aggiunti o eliminati viene [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] elaborata anche da se `ProcessAffectedObjects` è impostato su true. In questo caso, un unico comando `Process` può elaborare più oggetti in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], ma in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono determinati gli ulteriori oggetti da elaborare oltre all'oggetto specificato nel comando `Process`.  
+ Se si imposta l'attributo `ProcessAffectedObjects` del comando `Process` su true, viene elaborato qualsiasi oggetto correlato interessato dall'elaborazione di quello specificato. Se, ad esempio, una dimensione viene aggiornata in modo incrementale tramite l'opzione di elaborazione *ProcessUpdate* nel `Process` comando, qualsiasi partizione le cui aggregazioni vengono invalidate a causa dei membri aggiunti o eliminati viene elaborata anche da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se `ProcessAffectedObjects` è impostato su true. In questo caso, un unico comando `Process` può elaborare più oggetti in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], ma in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono determinati gli ulteriori oggetti da elaborare oltre all'oggetto specificato nel comando `Process`.  
   
  È possibile tuttavia elaborare più oggetti contemporaneamente, ad esempio dimensioni, tramite più comandi `Process` in un comando `Batch`. Le operazioni batch consentono di controllare a livello più dettagliato l'elaborazione in serie o parallela di oggetti in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] rispetto all'utilizzo dell'attributo `ProcessAffectedObjects` e consentono di ottimizzare l'approccio all'elaborazione per i database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di dimensioni maggiori. Per ulteriori informazioni sull'esecuzione di operazioni batch, vedere [esecuzione di operazioni batch &#40;&#41;XMLA ](performing-batch-operations-xmla.md).  
   
@@ -83,7 +82,7 @@ ms.locfileid: "62727597"
   
 -   Elaborazione incrementale di una partizione in cui è necessario specificare una tabella dei fatti alternativa o un filtro sulla tabella dei fatti esistente per garantire che le righe non vengono contate due volte.  
   
--   Utilizzo di un'attività flusso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dati in per fornire dati durante l'elaborazione di una dimensione, un modello di data mining o una partizione.  
+-   Utilizzo di un'attività flusso di dati in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per fornire dati durante l'elaborazione di una dimensione, un modello di data mining o una partizione.  
   
  Le associazioni out-of-line vengono descritte come parte del linguaggio ASSL (Analysis Services Scripting Language). Per ulteriori informazioni sulle associazioni out-of-line in ASSL, vedere [origini dati e associazioni &#40;SSAS multidimensionale&#41;](../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
@@ -99,7 +98,7 @@ ms.locfileid: "62727597"
  Per ulteriori informazioni sull'Unione di partizioni mediante XML for Analysis (XMLA), vedere [Unione di partizioni &#40;&#41;XMLA ](merging-partitions-xmla.md).  
   
 ## <a name="handling-processing-errors"></a>Gestione degli errori di elaborazione  
- La proprietà [ErrorConfiguration](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/errorconfiguration-element-xmla) del `Process` comando consente di specificare come gestire gli errori rilevati durante l'elaborazione di un oggetto. Ad esempio durante l'elaborazione di una dimensione in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene rilevato un valore duplicato nella colonna chiave dell'attributo chiave. Poiché le chiavi dell'attributo devono essere univoche, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] elimina i record duplicati. In base alla proprietà di [duplicazione](https://docs.microsoft.com/bi-reference/assl/properties/keyduplicate-element-assl) `ErrorConfiguration`di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , è possibile:  
+ La proprietà [ErrorConfiguration](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/errorconfiguration-element-xmla) del `Process` comando consente di specificare come gestire gli errori rilevati durante l'elaborazione di un oggetto. Ad esempio durante l'elaborazione di una dimensione in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene rilevato un valore duplicato nella colonna chiave dell'attributo chiave. Poiché le chiavi dell'attributo devono essere univoche, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] elimina i record duplicati. In base alla proprietà di [duplicazione](https://docs.microsoft.com/bi-reference/assl/properties/keyduplicate-element-assl) di `ErrorConfiguration` , è [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] possibile:  
   
 -   Continuazione dell'elaborazione della dimensione poiché il messaggio viene ignorato.  
   
@@ -128,7 +127,7 @@ ms.locfileid: "62727597"
 ```  
   
 ### <a name="description"></a>Descrizione  
- Nell'esempio seguente viene elaborata in modo incrementale la partizione **Internet_Sales_2004** nel gruppo di misure **Internet Sales** del cubo **Adventure Works DW** del database di [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] esempio. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Il `Process` comando aggiunge le aggregazioni per le date di ordine successive al 31 dicembre 2006 alla partizione utilizzando un'associazione di query out-of-line nella `Bindings` proprietà del `Process` comando per recuperare le righe della tabella dei fatti da cui generare le aggregazioni da aggiungere alla partizione.  
+ Nell'esempio seguente viene elaborata in modo incrementale la partizione **Internet_Sales_2004** nel gruppo di misure **Internet Sales** del cubo **Adventure Works DW** del [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] database di esempio [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Il `Process` comando aggiunge le aggregazioni per le date di ordine successive al 31 dicembre 2006 alla partizione utilizzando un'associazione di query out-of-line nella `Bindings` proprietà del `Process` comando per recuperare le righe della tabella dei fatti da cui generare le aggregazioni da aggiungere alla partizione.  
   
 ### <a name="code"></a>Codice  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1018bb2e-b89b-489e-aead-450dec5dca3b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fb8ade48f56a6b8bec4a8de5094a271080a1eab7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42d48d088b72c28c6e44b6f96aab1e1493e47577
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175770"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536053"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>Creare misure e gruppi di misure nei modelli multidimensionali
   Una *misura* è un'aggregazione di valori di dati numerici, ad esempio somme, conteggi, valori minimi, valori massimi, medie o un'espressione MDX personalizzata creata. Un *gruppo di misure* è un contenitore per una o più misure. Tutte le misure sono disponibili in un gruppo di misure, anche se esiste una sola misura. Un cubo deve avere almeno una misura e un gruppo di misure.
@@ -49,8 +48,8 @@ ms.locfileid: "78175770"
 
 |||
 |-|-|
-|**origine**|La maggior parte delle misure deriva da colonne numeriche presenti nelle tabelle dei fatti in un data warehouse esterno, ad esempio la colonna Sales Amount nelle tabelle Internet Sales e Reseller Sales del data warehouse AdventureWorks, ma è anche possibile creare nuove misure basate interamente sui calcoli definiti.<br /><br /> Per definire le misure è possibile usare le colonne degli attributi delle tabelle delle dimensioni. Queste misure, tuttavia, in genere sono di tipo semiadditivo o non additivo per quanto riguarda la modalità di aggregazione. Per altre informazioni sulle funzioni semiadditive, vedere [Definire una funzione semiadditiva](define-semiadditive-behavior.md).|
-|**aggregazione**|Per impostazione predefinita, le misure vengono sommate in ogni dimensione. La proprietà `AggregateFunction` consente tuttavia di modificare tale comportamento. Vedere [Use Aggregate Functions](use-aggregate-functions.md) per un elenco.|
+|**source**|La maggior parte delle misure deriva da colonne numeriche presenti nelle tabelle dei fatti in un data warehouse esterno, ad esempio la colonna Sales Amount nelle tabelle Internet Sales e Reseller Sales del data warehouse AdventureWorks, ma è anche possibile creare nuove misure basate interamente sui calcoli definiti.<br /><br /> Per definire le misure è possibile usare le colonne degli attributi delle tabelle delle dimensioni. Queste misure, tuttavia, in genere sono di tipo semiadditivo o non additivo per quanto riguarda la modalità di aggregazione. Per altre informazioni sulle funzioni semiadditive, vedere [Definire una funzione semiadditiva](define-semiadditive-behavior.md).|
+|**aggregation**|Per impostazione predefinita, le misure vengono sommate in ogni dimensione. La proprietà `AggregateFunction` consente tuttavia di modificare tale comportamento. Vedere [Use Aggregate Functions](use-aggregate-functions.md) per un elenco.|
 |**Proprietà**|Vedere [Configure Measure Properties](configure-measure-properties.md) per le descrizioni di proprietà aggiuntive.|
 
 ##  <a name="modeling-measures-and-measure-groups-on-facts-and-fact-tables"></a><a name="bkmk_modeling"></a>Modellazione di misure e gruppi di misure su fatti e tabelle dei fatti

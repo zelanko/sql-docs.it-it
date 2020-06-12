@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5521f8ef-b10a-4861-9df7-1e43e0a1fb3f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a80c7950ec4079021bbcf03d9ccee6970d68786b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d01aeb00c7cf96bf993867388d6a2cbbede82d90
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072736"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547313"
 ---
 # <a name="translations-in-multidimensional-models"></a>Traduzioni nei modelli multidimensionali
   Il supporto multilingue in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene eseguito tramite le traduzioni. Ogni traduzione include un identificatore di lingua e le associazioni per le proprietà degli oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che possono essere visualizzati in più lingue. Ad esempio, è possibile definire una traduzione per un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] al fine di visualizzare la didascalia e la descrizione di tale database nella lingua specificata. Per ulteriori informazioni sulle traduzioni, vedere la pagina relativa alle [traduzioni dei cubi](../multidimensional-models-olap-logical-cube-objects/cube-translations.md).  
@@ -27,7 +26,7 @@ ms.locfileid: "66072736"
   
  Agli oggetti e alle proprietà seguenti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] possono essere associate le traduzioni corrispondenti:  
   
-|Oggetto|Proprietà|Finestra di progettazione|  
+|Oggetto|Proprietà|Designer|  
 |------------|----------------|--------------|  
 |Database|`Caption`, `Description`|[&#40;generale di progettazione database&#41; &#40;Analysis Services Dati multidimensionali&#41;](../general-database-designer-analysis-services-multidimensional-data.md)|  
 |Cube|`Caption`, `Description`|[Traduzioni &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
@@ -40,7 +39,7 @@ ms.locfileid: "66072736"
 |Set denominato|`Caption`|[Traduzioni &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |membro calcolato|`Caption`|[Traduzioni &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |Dimensione del database|`Caption`, `AttributeAllMember`|[Traduzioni &#40;Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
-|Attributo|`Caption`, `CaptionColumn` <sup>1</sup>, `AttributeHierarchyDisplayFolder`, `NamingTemplate`,`MembersWithDataCaption`|[Traduzioni &#40;Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
+|Attributo|`Caption`, `CaptionColumn` <sup>1</sup>, `AttributeHierarchyDisplayFolder` , `NamingTemplate` ,`MembersWithDataCaption`|[Traduzioni &#40;Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
 |Gerarchia|`Caption`, `AllMemberName`|[Traduzioni &#40;Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
 |Level|`Caption`|[Traduzioni &#40;Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
   
@@ -76,7 +75,7 @@ ms.locfileid: "66072736"
 ## <a name="deleting-translation-objects"></a>Eliminazione di oggetti Translation  
  È possibile fare clic con il pulsante destro del mouse su un oggetto di questo tipo in Progettazione dimensioni o Progettazione cubi per rimuoverlo definitivamente. Non è possibile ripristinare o riciclare un oggetto eliminato, quindi è opportuno accertarsi di controllare l'elenco degli oggetti interessati prima di continuare.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Scenari di globalizzazione per Analysis Services multidimensionale](../globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Lingue e regole di confronto &#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md)  
   

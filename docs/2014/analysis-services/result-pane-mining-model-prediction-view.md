@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d154477d-3e4b-4e9b-a306-8166a0d83d21
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 41579af945bcf546eb2c32b5a337ba10bd59510a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ec2b1ec7c4f9a3dc0053ad323fcc54cf36522da
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070175"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547423"
 ---
 # <a name="result-pane-mining-model-prediction-view"></a>Riquadro Risultati (visualizzazione Stima modello di data mining)
   Nel riquadro **Risultati** vengono visualizzati i risultati della query di stima di data mining progettata nella visualizzazione **Progettazione** del generatore delle query di stima. È possibile copiare una parte o l'intera griglia dei risultati negli Appunti.  
@@ -35,7 +34,7 @@ ms.locfileid: "66070175"
  **Aggiorna risultati query**  
  Consente di rielaborare la query di stima.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Generatore di query di stima &#40;&#41;di data mining](prediction-query-builder-data-mining.md)   
  [Interfacce di query di data mining](data-mining/data-mining-query-tools.md)   
  [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-statements)  

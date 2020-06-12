@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d41f61233bbbcb6c49d4980a3265726280627860
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc862bcad512123dd7c31ce59a8c777c2423bedc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073167"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545733"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Requisiti e considerazioni per la distribuzione di Analysis Services
   Le prestazioni e la disponibilità di una soluzione dipendono da molti fattori, tra cui le funzionalità dell'hardware sottostante, la topologia della distribuzione server, le caratteristiche della soluzione (ad esempio, con partizioni distribuite in più server o usando l'archiviazione ROLAP per la quale è richiesto l'accesso diretto al motore relazionale), i contratti di servizio e la complessità del modello di dati.  
@@ -87,7 +86,7 @@ ms.locfileid: "66073167"
  Per elaborare in modo trasparente gli aggiornamenti incrementali ai dati di origine, abilitare il caching attivo. Tramite il caching attivo i cubi vengono aggiornati con i nuovi dati di origine senza che sia necessaria l'elaborazione manuale e senza influire sulla disponibilità dei cubi. Per altre informazioni, vedere [Memorizzazione nella cache attiva &#40;partizioni&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
   
 ##  <a name="scalability-considerations"></a><a name="BKMK_Scalability"></a>Considerazioni sulla scalabilità  
- Più istanze di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nello stesso computer possono causare problemi di prestazioni. Per risolvere questi problemi, un'opzione consiste nell'aumentare le risorse di memoria, processore e disco nel server. Potrebbe inoltre essere necessario distribuire le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in più computer.  
+ Più istanze di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nello [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stesso computer possono causare problemi di prestazioni. Per risolvere questi problemi, un'opzione consiste nell'aumentare le risorse di memoria, processore e disco nel server. Potrebbe inoltre essere necessario distribuire le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in più computer.  
   
 ### <a name="scaling-analysis-services-across-multiple-computers"></a>Distribuzione di Analysis Services in più computer  
  È possibile distribuire un'installazione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in più computer in diversi modi. Le opzioni disponibili sono descritte nell'elenco seguente.  

@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: 72ca3387-620d-4473-8e23-7fe1f2b3d5bf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d2b99362f242ff7f815e9ceb9f67db9c80983c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 27d4202774107795eaddf76c27e21010d534d977
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727647"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545253"
 ---
 # <a name="cube-properties"></a>Proprietà dei cubi
   I cubi dispongono di proprietà che è possibile impostare per influire sul funzionamento a livello di cubo. Nella tabella seguente è disponibile un riepilogo di tali proprietà.  
@@ -58,19 +57,19 @@ ms.locfileid: "62727647"
 |`Language`|Specifica l'identificatore della lingua predefinita del cubo.|  
 |`Name`|Specifica il nome descrittivo del cubo.|  
 |`ProactiveCaching`|Definisce le impostazioni di memorizzazione nella cache attiva per il cubo.|  
-|`ProcessingMode`|Indica se l'indicizzazione e l'aggregazione devono essere eseguite durante o dopo l'elaborazione. Le opzioni **regular** sono regular `lazy`o.|  
+|`ProcessingMode`|Indica se l'indicizzazione e l'aggregazione devono essere eseguite durante o dopo l'elaborazione. Le opzioni sono **Regular** o `lazy` .|  
 |`ProcessingPriority`|Determina la priorità di elaborazione del cubo durante operazioni in background, ad esempio indicizzazione e aggregazioni lente Il valore predefinito è **0**.|  
-|`ScriptCacheProcessingMode`|Indica se la cache script deve essere compilata durante o dopo l'elaborazione. Le opzioni **regular** sono regular `lazy`e.|  
+|`ScriptCacheProcessingMode`|Indica se la cache script deve essere compilata durante o dopo l'elaborazione. Le opzioni sono **Regular** e `lazy` .|  
 |`ScriptErrorHandlingMode`|Determina la gestione degli errori. Le opzioni disponibili sono `IgnoreNone` o `IgnoreAll`.|  
 |`Source`|Visualizza la vista origine dati utilizzata per il cubo.|  
 |`StorageLocation`|Specifica il percorso di archiviazione nel file system per il cubo. Se non viene specificato alcun valore, il percorso viene ereditato dal database contenente l'oggetto del cubo.|  
-|`StorageMode`|Specifica la modalità di archiviazione per il cubo. I valori `MOLAP`sono `ROLAP`, o`HOLAP``.`|  
+|`StorageMode`|Specifica la modalità di archiviazione per il cubo. I valori sono `MOLAP` , `ROLAP` o`HOLAP``.`|  
 |`Visible`|Determina la visibilità del cubo.|  
   
 > [!NOTE]  
 >  Per ulteriori informazioni sull'impostazione dei valori per la proprietà ErrorConfiguration quando si utilizzano valori null e altri problemi di integrità dei dati, vedere [gestione dei problemi di integrità dei dati in Analysis Services 2005](https://go.microsoft.com/fwlink/?LinkId=81891).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Caching attivo &#40;partizioni&#41;](partitions-proactive-caching.md)  
   
   

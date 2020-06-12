@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 52c6da1d-9fb5-4dbc-bffa-248d11cd337c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 00725279ef55d2cd69662d30e16c1bdc0954adae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66980b1afe9d4eed353ae18c37ed1fdd052e62b9
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081163"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544464"
 ---
 # <a name="filter-members-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Filtra membri (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Filtra membri** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per filtrare i membri della dimensione in base alla didascalia dei membri, al nome dei membri, al nome univoco dei membri, al valore di colonna chiave o al valore di colonna valore per il livello corrente quando si visualizza una dimensione nella scheda **Esplorazione** di **Progettazione dimensioni**.  
@@ -32,7 +31,7 @@ ms.locfileid: "66081163"
 |**Riquadro Test**|Quando si fa clic sul pulsante **Test** questo riquadro visualizza i membri restituiti dall'espressione di filtro. Se non viene restituito alcun membro usando i criteri specificati in **Espressione filtro**verrà visualizzato un avviso.|  
 |**Test**|Fare clic su questo pulsante per eseguire un test dei criteri specificati in **Espressione filtro**.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Browser &#40;Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
   

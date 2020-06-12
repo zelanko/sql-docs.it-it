@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7bd48810-15ce-45ff-862b-372d08606995
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 663ef21dc9c4d0f3698ae468637fe0a8fd55a16e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ce255a2dfe9e959ed0d68da62266e3a8acc353e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078894"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543433"
 ---
 # <a name="modifying-measures"></a>Modifica delle misure
   È possibile usare la proprietà **FormatString** per definire impostazioni di formattazione che controllano la modalità di visualizzazione delle misure agli utenti. In questa attività vengono impostate le proprietà di formattazione per le misure di valuta e di percentuale nel cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial.  
@@ -56,9 +55,9 @@ ms.locfileid: "66078894"
   
 7.  Nell'elenco a discesa nella parte superiore della finestra Proprietà sotto la barra del titolo selezionare la misura **Unit Price Discount Pct**, quindi selezionare **Percent** nell'elenco **FormatString** .  
   
-8.  Nella Finestra Proprietà modificare la proprietà **Name** per la misura **Unit Price Discount Pct** in `Unit Price Discount Percentage`.  
+8.  Nella Finestra Proprietà modificare la proprietà **Name** per la misura **Unit Price Discount Pct** in `Unit Price Discount Percentage` .  
   
-9. Nel riquadro **misure** fare clic su **Tax Amt** e modificare il nome della misura in `Tax Amount`.  
+9. Nel riquadro **misure** fare clic su **Tax Amt** e modificare il nome della misura in `Tax Amount` .  
   
 10. Nella finestra Proprietà fare clic sull'icona **Nascondi automaticamente** per nascondere la finestra Proprietà, quindi fare clic su **Mostra albero delle misure** sulla barra degli strumenti della scheda **Struttura cubo** .  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66078894"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Modifica della dimensione Customer](lesson-3-2-modifying-the-customer-dimension.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Definire le dimensioni del database](multidimensional-models/define-database-dimensions.md)   
  [Configurare le proprietà delle misure](multidimensional-models/configure-measure-properties.md)  
   

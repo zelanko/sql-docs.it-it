@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0a561b348b30afcbfe5305681f56e4f8314fa510
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e3f47b6cfe97806f093ee4ac1c9c8574056042d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072845"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547353"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Sincronizzare database di Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] include una funzionalità di sincronizzazione database che consente di rendere due database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] equivalenti, copiando i dati e i metadati di un database situato su un server di origine in‌ un altro database situato su un server di destinazione. Utilizzare la funzionalità Sincronizzazione database per completare le attività seguenti:  
@@ -129,7 +128,7 @@ ms.locfileid: "66072845"
   
      L'opzione **Percorsi** consente di visualizzare una griglia nella quale vengono elencate informazioni dettagliate sui percorsi in cui vengono archiviate le partizioni remote per il database di origine, incluse informazioni sulla destinazione e l'origine e le dimensioni di archiviazione usate da ogni percorso, disponibili dal database selezionato. La griglia include le colonne seguenti:  
   
-     **Sincronizza**  
+     **Sincrono**  
      Selezionare questa opzione per includere un percorso contenente le partizioni remote durante la sincronizzazione.  
   
     > [!NOTE]  
@@ -186,7 +185,7 @@ ms.locfileid: "66072845"
 ## <a name="next-steps"></a>Passaggi successivi  
  Se non viene eseguita la sincronizzazione di ruoli o appartenenze, ricordarsi di specificare ora le autorizzazioni di accesso utente nel database di destinazione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Elemento Synchronize &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   
  [Distribuire soluzioni di modelli tramite XMLA](deploy-model-solutions-using-xmla.md)   
  [Deploy Model Solutions Using the Deployment Wizard](deploy-model-solutions-using-the-deployment-wizard.md)  

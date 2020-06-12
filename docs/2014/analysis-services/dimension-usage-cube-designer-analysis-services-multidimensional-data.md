@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 52e62633-856c-4af2-8c8a-d4a5a57351b6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 90eddd7949cee5067e5a00c4d9918d997a2d0df3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10858ca8d245a9a63169b555674941bf29a6363a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081670"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528567"
 ---
 # <a name="dimension-usage-cube-designer-analysis-services---multidimensional-data"></a>Utilizzo dimensioni (Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Utilizzare la scheda **Utilizzo dimensioni** in Progettazione cubi per visualizzare e modificare le relazioni tra le dimensioni del cubo e i gruppi di misure nel cubo.  
@@ -29,7 +28,7 @@ ms.locfileid: "66081670"
 |**Barra degli strumenti**|Utilizzare la barra degli strumenti per eseguire operazioni frequenti in questa scheda. Per ulteriori informazioni su questo riquadro, vedere [barra degli strumenti &#40;scheda Utilizzo dimensioni, Progettazione cubi&#41; &#40;Analysis Services-&#41;dati ](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md)multidimensionali.|  
 |**Grid**|Utilizzare la griglia per visualizzare e modificare relazioni tra le dimensioni del cubo e i gruppi di misure nel cubo. Per altre informazioni su questo riquadro, vedere [Griglia &#40;scheda Utilizzo dimensioni, Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md).|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Relazioni tra dimensioni](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Struttura Cube &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)   

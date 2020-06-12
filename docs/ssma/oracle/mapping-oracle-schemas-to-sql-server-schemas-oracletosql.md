@@ -1,5 +1,6 @@
 ---
 title: Mapping di schemi Oracle a schemi SQL Server (OracleToSQL) | Microsoft Docs
+description: Informazioni su come personalizzare SSMA per i mapping Oracle tra gli schemi Oracle e SQL Server oppure accettare il valore predefinito.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,25 +11,25 @@ ms.assetid: 0edeaa08-9c5d-4e3a-bc15-b9a1f0c8a9dc
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: e375c07ceddc995b599930c14f00710af040d6c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5639687a22749ccb8315262347807bb44ac79210
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262906"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293829"
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>Mapping di schemi Oracle a schemi SQL Server (OracleToSQL)
-In Oracle ogni database dispone di uno o più schemi. Per impostazione predefinita, SSMA esegue la migrazione di tutti gli oggetti in uno [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schema Oracle a un database denominato per lo schema. Tuttavia, è possibile personalizzare il mapping tra gli schemi e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i database Oracle.  
+In Oracle ogni database dispone di uno o più schemi. Per impostazione predefinita, SSMA esegue la migrazione di tutti gli oggetti in uno schema Oracle a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database denominato per lo schema. Tuttavia, è possibile personalizzare il mapping tra gli schemi e i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database Oracle.  
   
 ## <a name="oracle-and-sql-server-schemas"></a>Schemi Oracle e SQL Server  
 Un database Oracle contiene schemi. Un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene più database, ognuno dei quali può disporre di più schemi.  
   
-Il concetto Oracle di uno schema viene mappato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al concetto di database e di uno dei relativi schemi. Ad esempio, Oracle potrebbe avere uno schema denominato **HR**. Un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe disporre di un database denominato **HR**e all'interno di tale database sono schemi. Uno schema è lo schema **dbo** (o Owner database). Per impostazione predefinita, verrà eseguito il mapping dell' **ora** dello schema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle al database e allo schema **HR. dbo**. SSMA fa riferimento alla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] combinazione di database e schema come schema.  
+Il concetto Oracle di uno schema viene mappato al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] concetto di database e di uno dei relativi schemi. Ad esempio, Oracle potrebbe avere uno schema denominato **HR**. Un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe disporre di un database denominato **HR**e all'interno di tale database sono schemi. Uno schema è lo schema **dbo** (o Owner database). Per impostazione predefinita, verrà eseguito il mapping dell' **ora** dello schema Oracle al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database e allo schema **HR. dbo**. SSMA fa riferimento alla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] combinazione di database e schema come schema.  
   
-È possibile modificare il mapping tra Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli schemi.  
+È possibile modificare il mapping tra Oracle e gli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schemi.  
   
 ## <a name="modifying-the-target-database-and-schema"></a>Modifica del database di destinazione e dello schema  
-In SSMA è possibile eseguire il mapping di uno schema Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qualsiasi schema disponibile.  
+In SSMA è possibile eseguire il mapping di uno schema Oracle a qualsiasi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schema disponibile.  
   
 **Per modificare il database e lo schema**  
   
@@ -50,7 +51,7 @@ In SSMA è possibile eseguire il mapping di uno schema Oracle a [!INCLUDE[ssNoVe
   
 -   Mapping a SQL Server  
   
-È possibile eseguire il mapping del database di origine a qualsiasi database di destinazione. Per impostazione predefinita, il database di origine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene mappato al database di destinazione con il quale è stata effettuata la connessione tramite SSMA. Se il database di destinazione di cui è stato eseguito il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mapping non è presente in, verrà visualizzato un messaggio che indica che **il database e/o lo schema non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esiste nei metadati di destinazione. Verrà creata durante la sincronizzazione. Continuare? "** Fare clic su Sì. Analogamente, è possibile eseguire il mapping dello schema a uno schema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non esistente nel database di destinazione che verrà creato durante la sincronizzazione.  
+È possibile eseguire il mapping del database di origine a qualsiasi database di destinazione. Per impostazione predefinita, il database di origine viene mappato al database di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con il quale è stata effettuata la connessione tramite SSMA. Se il database di destinazione di cui è stato eseguito il mapping non è presente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , verrà visualizzato un messaggio che indica che **il database e/o lo schema non esiste nei metadati di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Verrà creata durante la sincronizzazione. Continuare? "** Fare clic su Sì. Analogamente, è possibile eseguire il mapping dello schema a uno schema non esistente nel database di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che verrà creato durante la sincronizzazione.  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>Ripristino del database e dello schema predefiniti  
 Se si Personalizza il mapping tra uno schema Oracle e uno [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schema, è possibile ripristinare i valori predefiniti del mapping.  

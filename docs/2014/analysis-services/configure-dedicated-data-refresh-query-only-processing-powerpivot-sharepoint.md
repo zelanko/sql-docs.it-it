@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5e027605-1086-4941-bb01-f315df8f829b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: eaf62d2bbe6e6becc21bbf5e870c9fe442c96f74
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f67cc581c177f5d07df035927eb979c09061a537
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087507"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527297"
 ---
 # <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>Configurare l'aggiornamento dati o l'elaborazione di sole query dedicato (PowerPivot per SharePoint)
   Nella modalità integrata SharePoint, è possibile configurare un'istanza del server Analysis Services per supportare un tipo specifico di richiesta di elaborazione, ad esempio l'aggiornamento dei dati o l'elaborazione di sole query. Per impostazione predefinita, sono abilitati entrambi i tipi di richieste di caricamento. È possibile disabilitare uno dei due tipi per creare un motore di query o un server di aggiornamento dei dati dedicato.  
@@ -82,7 +81,7 @@ ms.locfileid: "66087507"
   
  Ogni processo di aggiornamento dei dati disporrà di caratteristiche di caricamento diverse a seconda del numero e delle dimensioni delle origini dati aggiornate. Il carico di elaborazione delle cartelle di lavoro che dispongono di una sola origine dati con un numero più piccolo di righe è molto più leggero rispetto a quello di una cartella di lavoro che dispone di numerose origini dati e di set di righe molto grandi.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Aggiornamento di dati PowerPivot con SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)  
   
   

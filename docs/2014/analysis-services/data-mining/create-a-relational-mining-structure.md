@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d5dbf64a128cb21c7ac0e3d956a3dbdc6b320317
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2342cde485968bb40c523b9c7c3ae68d889f6fa
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085376"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523707"
 ---
 # <a name="create-a-relational-mining-structure"></a>Creare una struttura di data mining relazionale
   La maggior parte dei modelli di data mining sono basati su origini dati relazionali. La creazione di un modello di data mining relazionale offre il vantaggio di poter assemblare dati ad hoc e aggiornare ed eseguire il training di un modello evitando la complessità di dover creare un cubo.  
@@ -124,7 +123,7 @@ ms.locfileid: "66085376"
 > [!WARNING]  
 >  Per utilizzare il drill-through è necessario abilitarlo durante la creazione della struttura di data mining. È possibile abilitare il drill-through sui modelli in un secondo momento, impostando una proprietà sul modello, ma per le strutture di data mining questa opzione deve essere impostata all'inizio. Per altre informazioni, vedere [Query drill-through &#40;Data mining&#41;](drillthrough-queries-data-mining.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Progettazione modelli di data mining](data-mining-designer.md)   
  [Creazione guidata modello di data mining &#40;Analysis Services-&#41;di data mining](data-mining-wizard-analysis-services-data-mining.md)   
  [Proprietà modello di data mining](mining-model-properties.md)   

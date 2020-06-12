@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 180e6f48-5c4d-4160-b84d-608b98f7b840
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 127ff0c386a1f93c00178624b54499e33cf9042a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1855150cdfbb4d2132c1edc7c08604dd90b87a9d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088010"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527457"
 ---
 # <a name="cluster-diagram-tab-mining-model-viewer"></a>Scheda Diagramma dei cluster (Visualizzatore modello di data mining)
   La scheda **Diagramma dei cluster** offre una visualizzazione grafica di tutti i cluster contenuti nel modello di clustering.  
@@ -69,7 +68,7 @@ ms.locfileid: "66088010"
  **Collegamenti**  
  Consente di impostare il numero di collegamenti mostrati tra i cluster, spostando il dispositivo di scorrimento in alto o in basso. Abbassando il dispositivo di scorrimento vengono mantenute solo le associazioni più forti tra i cluster.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  
