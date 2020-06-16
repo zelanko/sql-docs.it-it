@@ -1,5 +1,6 @@
 ---
 title: Stored procedure di gestione temporanea
+description: Utilizzare una delle tre stored procedure per avviare il processo di gestione temporanea da SQL Server Management Studio in Master Data Services.
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 103c43f012f6cf7025139fd29656a42d00fc233f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 82b068612f0699cdba3788e4931fb6bdfe8c7e69
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727889"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796502"
 ---
 # <a name="staging-stored-procedure-master-data-services"></a>Stored procedure di gestione temporanea (Master Data Services)
 
@@ -23,11 +24,11 @@ ms.locfileid: "73727889"
 
   Quando si inizia il processo di gestione temporanea da [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], viene usata una delle tre stored procedure seguenti.  
   
--   stg.udp_\<name>_Leaf  
+-   STG. udp_ \<name> _Leaf  
   
--   stg.udp_\<name>_Consolidated  
+-   STG. udp_ \<name> _Consolidated  
   
--   stg.udp_\<name>_Relationship  
+-   STG. udp_ \<name> _Relationship  
   
  Dove name è il nome della tabella di staging specificata alla creazione dell'entità.  
   

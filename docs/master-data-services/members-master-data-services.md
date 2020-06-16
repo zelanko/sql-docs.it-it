@@ -1,5 +1,6 @@
 ---
-title: Members
+title: Membri
+description: In Master Data Services i membri sono i dati master fisici, ad esempio una bicicletta Road-150 in un'entità Product o un cliente specifico in un'entità Customer.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d6e663ef23c472b2a78ec71c58086824adae185e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c027f6403a8d3f156eedc5a1962cde44633e40a5
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728011"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84800558"
 ---
 # <a name="members-master-data-services"></a>Membri (Master Data Services)
 

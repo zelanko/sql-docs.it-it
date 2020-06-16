@@ -1,5 +1,6 @@
 ---
 title: Installazione e configurazione
+description: Informazioni su come installare Master Data Services in un computer Windows Server 2012 R2, configurare il database MDS e il sito Web e distribuire i modelli e i dati di esempio.
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 60ee313b41a3882c07c98dce08382a98fec9c962
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f9a0a43bb913437e4818c46fc81c0794019639c7
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289779"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796282"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Installazione e configurazione di Master Data Services
 
@@ -33,8 +34,8 @@ Per una panoramica sull'organizzazione dei dati in [!INCLUDE[ssMDSshort_md](../i
  
 Per i link a video e altre risorse di training per [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], vedere [Informazioni su SQL Server Master Data Services](../master-data-services/learn-sql-server-master-data-services.md). 
   
-> **Scarica**  
-> -   Per scaricare [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], passare a  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**.  
+> **Scaricare**  
+> -   Per scaricare [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], passare a  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** .  
 > -   Se si ha un account di Azure,  Fare clic **[qui](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** per creare rapidamente una macchina virtuale in cui è già installato SQL Server.  
 > 
 > **Impossibile creare un sito Web di MDS**
@@ -46,7 +47,7 @@ Per i link a video e altre risorse di training per [!INCLUDE[ssMDSshort_md](../i
 - Per funzionare nell'applicazione Web, è necessario installare Silverlight 5 nel computer client. Se non si possiede la versione richiesta di Silverlight, viene richiesto di installarla quando si passa a un'area dell'applicazione Web in cui è necessaria. Silverlight 5 può essere installato da **[qui](https://www.microsoft.com/silverlight/)**.
 
 ## <a name="ssmdsshort_md-on-an-azure-virtual-machine"></a>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] in una macchina virtuale di Azure
-Per impostazione predefinita, quando si avvia una macchina virtuale di Azure [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] in cui è [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] già installato, viene installato anche. 
+Per impostazione predefinita, quando si avvia una macchina virtuale di Azure in cui [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] è già installato, [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] viene installato anche. 
 
 La fase successiva consiste nell'installazione di Internet Information Services (IIS). Vedere la sezione [Installazione e configurazione di IIS](#InstallIIS). 
 
@@ -133,12 +134,12 @@ Se si vogliono apportare modifiche all'installazione di [!INCLUDE[ssCurrent_md](
 
 4. Selezionare il **tipo di autenticazione** e quindi fare clic su **Test connessione** per confermare che è possibile connettersi al database usando le credenziali per il tipo di autenticazione selezionato. Fare clic su **Avanti**.
 
-    >Per [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)], per connettersi all'istanza gestita di database SQL di Azure, usare uno dei seguenti tipi di autenticazione:
+    >Per [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] , per connettersi all'istanza gestita di database SQL di Azure, usare uno dei seguenti tipi di autenticazione:
     >
     >- Azure Active Directory autenticazione integrata: **utente corrente-Active Directory integrato**
     >- Autenticazione SQL Server: **SQL Server account**.
     >
-    >Nell'istanza gestita di database SQL di Azure, l'utente deve essere un membro `sysadmin` del ruolo predefinito del server.
+    >Nell'istanza gestita di database SQL di Azure, l'utente deve essere un membro del `sysadmin` ruolo predefinito del server.
 
     > [!NOTE]  
     >  Quando si seleziona la **sicurezza integrata dall'utente corrente** come tipo di autenticazione, la casella **nome utente** è di sola lettura e visualizza il nome dell'account utente di Windows che ha eseguito l'accesso al computer. Se si esegue [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] in una macchina virtuale (VM) Azure, nella casella **Nome utente** viene visualizzato il nome della macchina virtuale e il nome utente per l'account amministratore locale nella macchina virtuale. 
@@ -155,13 +156,13 @@ Se si vogliono apportare modifiche all'installazione di [!INCLUDE[ssCurrent_md](
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_AdminPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-adminpage.png)  
   
-6.  Fare clic su **Avanti** per visualizzare un riepilogo delle impostazioni per [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] il database e quindi fare di nuovo clic su **Avanti** per creare il database. Viene visualizzata la pagina **Continua e termina**.
+6.  Fare clic su **Avanti** per visualizzare un riepilogo delle impostazioni per il [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database e quindi fare di nuovo clic su **Avanti** per creare il database. Viene visualizzata la pagina **Continua e termina**.
 
 7. Quando il database viene creato e configurato, fare clic su **Fine**.  
   
      Per altre informazioni sulle impostazioni della **Creazione guidata database**, vedere [Procedura guidata Crea database &#40;Gestione configurazione Master Data Services&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md).  
   
-7.  Nella [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]pagina **Configurazione database** della fare clic su **Seleziona database**.  
+7.  Nella pagina **Configurazione database** della [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] fare clic su **Seleziona database**.  
   
 8.  Fare clic su **Connetti**, selezionare il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] creato nel passaggio 7 e quindi fare clic su **OK**. 
 
@@ -203,7 +204,7 @@ Se si vogliono apportare modifiche all'installazione di [!INCLUDE[ssCurrent_md](
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. Fare clic su **Applica**. Viene visualizzata la finestra di messaggio **Configurazione completata**. Fare clic su **OK** nella finestra di messaggio per avviare l'applicazione Web. L'indirizzo del sito Web è https://*nome*/server*Web Application*/. 
+15. Fare clic su **Applica**. Viene visualizzata la finestra di messaggio **Configurazione completata**. Fare clic su **OK** nella finestra di messaggio per avviare l'applicazione Web. L'indirizzo del sito Web è https://*nome server* / *Web Application*/. 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
@@ -281,7 +282,7 @@ Se si vogliono apportare modifiche all'installazione di [!INCLUDE[ssCurrent_md](
   
     1.  Passare al sito Web di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] impostato. Vedere la sezione [Impostazione del database e del sito Web](#SetUpWeb) .  
   
-         L'indirizzo del sito Web è https://*nome*/server*Web Application*/.  
+         L'indirizzo del sito Web è https://*nome server* / *Web Application*/.  
   
     2.  Selezionare un modello dalla casella di riepilogo **Modello** e fare clic su **Visualizzatore**.  
   

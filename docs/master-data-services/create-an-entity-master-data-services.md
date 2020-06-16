@@ -1,5 +1,6 @@
 ---
 title: Creare un'entità
+description: Informazioni su come creare un'entità in Master Data Services per contenere i membri e i relativi attributi. È necessario disporre delle autorizzazioni per l'area Amministrazione sistema.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6b06d77f562864a1b18e492d1db70563b62d4647
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a43ffa259fd30d7aeaf4e2336780a2b92b2ef289
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728459"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796397"
 ---
 # <a name="create-an-entity-master-data-services"></a>Creare un'entità (Master Data Services)
 
@@ -80,7 +81,7 @@ ms.locfileid: "73728459"
 |Compressione dei dati|Specifica se la compressione dei dati è abilitata per l'entità.|  
 |Destinazione di sincronizzazione|Specifica se l'entità rappresenta la destinazione di una relazione di sincronizzazione.|  
 |Abilitata per le gerarchie|Specifica se l'entità è abilitata per le operazioni con le gerarchie esplicite. Questa colonna mostra Sì se almeno una gerarchia esplicita viene creata per l'entità.|  
-|Created By (Creato da)|Nome utente dell'utente che ha creato l'entità.|  
+|Autore|Nome utente dell'utente che ha creato l'entità.|  
 |Data creazione|Data e ora di creazione dell'entità.|  
 |Aggiornato da|Nome utente dell'ultimo utente che ha aggiornato l'entità.|  
 |Aggiornato il|Data e ora dell'ultimo aggiornamento dell'entità.|  

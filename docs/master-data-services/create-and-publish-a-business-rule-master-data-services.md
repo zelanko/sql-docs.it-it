@@ -1,5 +1,6 @@
 ---
 title: Creare e pubblicare una regola business
+description: Informazioni su come creare una regola di business in Master Data Services per garantire l'accuratezza dei dati master. Dopo aver creato una regola, pubblicarla per applicare la regola.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e8deee97bd80404df5851f0845aa02b51bfe0cfc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2dfc03bc292d7c39024116eca9cf49a5179a5b7c
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729447"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796398"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>Creare e pubblicare una regola business (Master Data Services)
 
@@ -45,7 +46,7 @@ ms.locfileid: "73729447"
   
 5.  Nell'elenco a discesa **Tipi di membri** selezionare un tipo di membro a cui applicare la regola di business.  
   
-6.  Fare clic su **Aggiungi**.  
+6.  Scegliere **Aggiungi**.  
   
 7.  Nella casella **Nome** digitare un nome per la regola business.  
   

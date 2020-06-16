@@ -1,5 +1,6 @@
 ---
 title: Traccia
+description: Il file di Web.config contiene una sezione di traccia, nuova SQL Server Master Data Services 2016. Informazioni sul comportamento di traccia predefinito.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: fe2c0096aecd1296f7f10ce90a1acae706f3f3af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0af3075f66eefff2de2199d18710de0bf7e62e71
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727850"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796478"
 ---
 # <a name="tracing-master-data-services"></a>Traccia (Master Data Services)
 
@@ -62,7 +63,7 @@ ms.locfileid: "73727850"
   
     |Elemento|Descrizione|  
     |-------------|-----------------|  
-    |Tempo|La data e l'ora della voce di traccia.|  
+    |Ora|La data e l'ora della voce di traccia.|  
     |CorrelationID|Per ogni richiesta viene assegnato un ID di correlazione. Tutte le tracce attivate dalla richiesta condividono lo stesso ID di correlazione.<br /><br /> Quando si verifica un errore nell'interfaccia utente, l'ID di correlazione viene visualizzato nel messaggio di errore.|  
     |Operazione|Nome dell'operazione di richiesta. Se la richiesta è una richiesta dell'interfaccia utente Web, il nome dell'operazione è l'URL. Se la richiesta è una richiesta API, il nome dell'operazione è il nome del servizio.|  
     |Level|Livello di questa voce di traccia.|  

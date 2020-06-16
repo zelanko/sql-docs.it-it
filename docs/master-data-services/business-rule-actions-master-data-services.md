@@ -1,5 +1,6 @@
 ---
 title: Azioni Regola business
+description: In Master Data Services, le regole business generano azioni. Informazioni sulle azioni con valori predefiniti, sulle azioni di modifica del valore, sulle azioni di convalida e sulle azioni esterne.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3aa704289844143dc07f63a384269a1ff45f31b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: adb0a6798291148cc03c7e9a0a80ca8a59f3952f
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729741"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796548"
 ---
 # <a name="business-rule-actions-master-data-services"></a>Azioni Regola business (Master Data Services)
 

@@ -1,5 +1,6 @@
 ---
 title: Tabella di gestione temporanea dei membri foglia
+description: Utilizzare la tabella di staging dei membri foglia nel database di Master Data Services per creare, aggiornare, disattivare ed eliminare i membri foglia.
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a8c953da-ec20-47dc-8656-ed5f0dfed89b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 626452bb0247b355cff7e8f1e9584e2fdc0c32c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0a23e37608597b1f746b53d15deca99ff49031bc
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729059"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796612"
 ---
 # <a name="leaf-member-staging-table-master-data-services"></a>Tabella di gestione temporanea dei membri foglia (Master Data Services)
 
@@ -40,7 +41,7 @@ ms.locfileid: "73729059"
 |**Codice**<br /><br /> Richiesto, tranne quando i codici vengono generati automaticamente per **ImportType1** o **2**. Per altre informazioni, vedere [Creazione di codice automatica &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)|Un codice univoco per il membro.||  
 |**Nome**<br /><br /> Facoltativo|Nome per il membro.||  
 |**NewCode**|Utilizzare solo se si sta modificando il codice membro.||  
-|\<Nome attributo >|Esiste una colonna per ogni attributo dell'entità. Utilizzarlo con **ImportType** uguale a **0** o a **2**. Per gli attributi in formato libero specificare il nuovo testo o valore stringa per l'attributo. Per gli attributi basati su dominio specificare il codice del membro che sarà utilizzato come attributo. Per gli attributi di collegamento, l'URL deve iniziare con **https://**.<br /><br /> Nota: non è possibile usare la gestione temporanea per gli attributi di file.||  
+|\<Attribute name>|Esiste una colonna per ogni attributo dell'entità. Utilizzarlo con **ImportType** uguale a **0** o a **2**. Per gli attributi in formato libero specificare il nuovo testo o valore stringa per l'attributo. Per gli attributi basati su dominio specificare il codice del membro che sarà utilizzato come attributo. Per gli attributi di collegamento, l'URL deve iniziare con **https://**.<br /><br /> Nota: non è possibile usare la gestione temporanea per gli attributi di file.||  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica: importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   

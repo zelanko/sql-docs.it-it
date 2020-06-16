@@ -1,5 +1,6 @@
 ---
 title: Applicazione Web Gestione dati master
+description: Informazioni su come usare l'applicazione Web Gestione dati master per eseguire attività amministrative per Master Data Services.
 ms.custom: ''
 ms.date: 12/20/2016
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cc881f7d3b232e8d2ae31041fd990e833acac901
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ce1a7470b6304b924f3fcc7ae0fcec70b08b634
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729093"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796583"
 ---
 # <a name="master-data-manager-web-application"></a>Applicazione Web Gestione dati master
 
@@ -24,7 +25,7 @@ ms.locfileid: "73729093"
   L'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] viene usata principalmente dagli amministratori per eseguire attività amministrative. Ad esempio, solo gli amministratori possono creare modelli, regole business o versioni di dati. Per altre informazioni sugli amministratori, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 > [!IMPORTANT]
->  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] funziona solo in Internet Explorer (IE) 9 o versioni successive. IE 8 e le versioni precedenti, Microsoft Edge e Chrome non sono supportati.  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]funziona solo in Internet Explorer (IE) 9 o versioni successive. IE 8 e le versioni precedenti, Microsoft Edge e Chrome non sono supportati.  
 > 
 > **Impossibile creare un sito Web di MDS**
 > >Leggere quest'articolo del supporto tecnico Microsoft per istruzioni sulla risoluzione del problema.
