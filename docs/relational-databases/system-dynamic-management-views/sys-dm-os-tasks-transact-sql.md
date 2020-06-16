@@ -20,12 +20,12 @@ ms.assetid: 180a3c41-e71b-4670-819d-85ea7ef98bac
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2bea6efbfe3f3703df80325a08ccbcf617aea54f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5a81eff384622a31df5bba8bb0c1fbc51932f95d
+ms.sourcegitcommit: 05fdc50006a9abdda79c3a4685b075796068c4fa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829295"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84748727"
 ---
 # <a name="sysdm_os_tasks-transact-sql"></a>sys.dm_os_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,12 +59,12 @@ Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-monitoring-parallel-requests"></a>R. Monitoraggio di richieste in parallelo  
- Per le richieste eseguite in parallelo, vengono visualizzate più righe per la stessa combinazione di ( \< **session_id**>, \< **request_id**>). Usare la query seguente per trovare l' [opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) per tutte le richieste attive.  
+ Per le richieste eseguite in parallelo, vengono visualizzate più righe per la stessa combinazione di ( \<**session_id**> , \<**request_id**> ). Usare la query seguente per trovare l' [opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) per tutte le richieste attive.  
   
 > [!NOTE]  
 >  Una **request_id** è univoca all'interno di una sessione.  
   
-```  
+```sql  
 SELECT  
     task_address,  
     task_state,  
@@ -85,7 +85,7 @@ SELECT
 ### <a name="b-associating-session-ids-with-windows-threads"></a>B. Associazione di ID di sessione con thread di Windows  
  È possibile utilizzare la query seguente per associare un valore di ID di sessione a un ID di thread di Windows. È possibile monitorare le prestazioni del thread utilizzando Performance Monitor di Windows. La query seguente non restituisce informazioni per le sessioni sospese.  
   
-```  
+```sql  
 SELECT STasks.session_id, SThreads.os_thread_id  
   FROM sys.dm_os_tasks AS STasks  
   INNER JOIN sys.dm_os_threads AS SThreads  
@@ -94,10 +94,10 @@ SELECT STasks.session_id, SThreads.os_thread_id
   ORDER BY STasks.session_id;  
 GO  
 ```  
-  
+
 ## <a name="see-also"></a>Vedere anche  
 [SQL Server viste a gestione dinamica relative al sistema operativo &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)    
-[Guida all'architettura di thread e attività](../../relational-databases/thread-and-task-architecture-guide.md)     
+[Guida sull'architettura dei thread e delle attività](../../relational-databases/thread-and-task-architecture-guide.md)     
   
 
 

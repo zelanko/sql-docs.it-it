@@ -1,18 +1,19 @@
 ---
 title: Emulazione di record e raccolte tramite UDT CLR
 description: Illustra il modo in cui il SQL Server Migration Assistant (SSMA) per Oracle utilizza i tipi di dati definiti dall'utente SQL Server CLR (Common Language Runtime) per emulare i record e le raccolte Oracle.
-authors: nahk-ivanov
-ms.service: ssma
+author: nahk-ivanov
+ms.prod: sql
+ms.technology: ssma
 ms.devlang: sql
 ms.topic: article
 ms.date: 1/22/2020
 ms.author: alexiva
-ms.openlocfilehash: 39a7e8d59425db7ce2d7e81083012321caac35ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 73991999cf0a6e7bd2c8cd541ec58a37d1f18f09
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76762815"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779381"
 ---
 # <a name="emulating-records-and-collections-via-clr-udt"></a>Emulazione di record e raccolte tramite UDT CLR
 
@@ -26,7 +27,7 @@ SSMA crea tre tipi definiti dall'utente basati su CLR:
 * `CollectionIndexString`
 * `Record`
 
-Il `CollectionIndexInt` tipo è concepito per l'emulazione di raccolte indicizzate in base `VARRAY`a Integer, ad esempio s, tabelle nidificate e matrici associative basate su chiavi intere. Il `CollectionIndexString` tipo viene utilizzato per le matrici associativi indicizzate in base ai tasti carattere. La funzionalità di record Oracle è emulata dal `Record` tipo.
+Il `CollectionIndexInt` tipo è concepito per l'emulazione di raccolte indicizzate in base a Integer, ad esempio `VARRAY` s, tabelle nidificate e matrici associative basate su chiavi intere. Il `CollectionIndexString` tipo viene utilizzato per le matrici associativi indicizzate in base ai tasti carattere. La funzionalità di record Oracle è emulata dal `Record` tipo.
 
 Tutte le dichiarazioni dei tipi di record o di raccolta vengono convertite in questa dichiarazione Transact-SQL:
 
@@ -34,7 +35,7 @@ Tutte le dichiarazioni dei tipi di record o di raccolta vengono convertite in qu
 declare @Collection$TYPE varchar(max) = '<type definition>'
 ```
 
-Di `<type definition>` seguito è riportato un testo descrittivo che identifica in modo univoco il tipo di origine PL/SQL.
+`<type definition>`Di seguito è riportato un testo descrittivo che identifica in modo univoco il tipo di origine PL/SQL.
 
 Prendere in considerazione gli esempi seguenti:
 
@@ -101,7 +102,7 @@ BEGIN
 END
 ```
 
-Qui, poiché la `Manager` tabella è associata a un indice numerico (`INDEX BY PLS_INTEGER`), la dichiarazione T-SQL corrispondente utilizzata è di tipo `@CollectionIndexInt$TYPE`. Se la tabella è stata associata a un indice del set di `VARCHAR2`caratteri, ad esempio, la dichiarazione T-SQL corrispondente `@CollectionIndexString$TYPE`sarà di tipo:
+Qui, poiché la `Manager` tabella è associata a un indice numerico ( `INDEX BY PLS_INTEGER` ), la dichiarazione T-SQL corrispondente utilizzata è di tipo `@CollectionIndexInt$TYPE` . Se la tabella è stata associata a un indice del set di caratteri, ad esempio `VARCHAR2` , la dichiarazione T-SQL corrispondente sarà di tipo `@CollectionIndexString$TYPE` :
 
 ```sql
 -- Oracle
@@ -112,13 +113,13 @@ TYPE Manager_table is TABLE OF Manager INDEX BY VARCHAR2(40);
     ' TABLE INDEX BY STRING OF ( RECORD ( MGRID INT , MGRNAME STRING , HIREDATE DATETIME ) )'
 ```
 
-La funzionalità di record Oracle è emulata solo `Record` dal tipo.
+La funzionalità di record Oracle è emulata `Record` solo dal tipo.
 
-Ognuno `CollectionIndexInt`dei tipi, `CollectionIndexString`, e `Record`, ha una proprietà `[Null]` statica che restituisce un'istanza vuota. Il `SetType` metodo viene chiamato per ricevere un oggetto vuoto di un tipo specifico (come illustrato nell'esempio precedente).
+Ognuno dei tipi,, `CollectionIndexInt` `CollectionIndexString` e `Record` , ha una proprietà statica che `[Null]` restituisce un'istanza vuota. Il `SetType` metodo viene chiamato per ricevere un oggetto vuoto di un tipo specifico (come illustrato nell'esempio precedente).
 
 ## <a name="constructor-call-conversions"></a>Conversioni di chiamata del costruttore
 
-La notazione del costruttore può essere utilizzata solo per le `VARRAY`tabelle nidificate e i, pertanto tutte le chiamate esplicite `CollectionIndexInt` al costruttore vengono convertite utilizzando il tipo. Le chiamate al costruttore vuote vengono `SetType` convertite tramite chiamata richiamata `CollectionIndexInt`sull'istanza null di. La `[Null]` proprietà restituisce l'istanza null. Se il costruttore contiene un elenco di elementi, le chiamate speciali al metodo vengono applicate in sequenza per aggiungere il valore alla raccolta.
+La notazione del costruttore può essere utilizzata solo per le tabelle nidificate e i `VARRAY` , pertanto tutte le chiamate esplicite al costruttore vengono convertite utilizzando il `CollectionIndexInt` tipo. Le chiamate al costruttore vuote vengono convertite tramite chiamata richiamata `SetType` sull'istanza null di `CollectionIndexInt` . La `[Null]` proprietà restituisce l'istanza null. Se il costruttore contiene un elenco di elementi, le chiamate speciali al metodo vengono applicate in sequenza per aggiungere il valore alla raccolta.
 
 Ad esempio:
 
@@ -166,7 +167,7 @@ END
 
 ## <a name="referencing-and-assigning-record-and-collection-elements"></a>Riferimento e assegnazione di elementi di record e raccolta
 
-Ognuno dei tipi definiti dall'utente dispone di un set di metodi che utilizzano gli elementi dei vari tipi di dati. Il `SetDouble` metodo, ad esempio, assegna un `float(53)` valore a record o raccolta ed `GetDouble` è in grado di leggere questo valore. Di seguito è riportato l'elenco completo dei metodi:
+Ognuno dei tipi definiti dall'utente dispone di un set di metodi che utilizzano gli elementi dei vari tipi di dati. Il metodo, ad esempio, `SetDouble` assegna un `float(53)` valore a record o raccolta ed è in `GetDouble` grado di leggere questo valore. Di seguito è riportato l'elenco completo dei metodi:
 
 ```sql
 GetCollectionIndexInt(@key <KeyType>) returns CollectionIndexInt;
@@ -255,12 +256,12 @@ TRIM (n) | `TrimN(@count int) returns <UDT_type>`
 
 ## <a name="bulk-collect-operation"></a>Operazione di raccolta BULK
 
-SSMA converte `BULK COLLECT INTO` le istruzioni in `SELECT ... FOR XML PATH` SQL Server istruzione, il cui risultato è incluso in una delle funzioni seguenti:
+SSMA converte `BULK COLLECT INTO` le istruzioni in SQL Server `SELECT ... FOR XML PATH` istruzione, il cui risultato è incluso in una delle funzioni seguenti:
 
 * `ssma_oracle.fn_bulk_collect2CollectionSimple`
 * `ssma_oracle.fn_bulk_collect2CollectionComplex`
 
-La scelta dipende dal tipo di oggetto di destinazione. Queste funzioni restituiscono valori XML che possono essere analizzati `CollectionIndexInt`dai `CollectionIndexString` tipi `Record` e. Una funzione `AssignData` speciale assegna una raccolta basata su XML al tipo definito dall'utente.
+La scelta dipende dal tipo di oggetto di destinazione. Queste funzioni restituiscono valori XML che possono essere analizzati `CollectionIndexInt` dai `CollectionIndexString` `Record` tipi e. Una `AssignData` funzione speciale assegna una raccolta basata su XML al tipo definito dall'utente.
 
 SSMA riconosce tre tipi di `BULK COLLECT INTO` istruzioni.
 
@@ -340,4 +341,4 @@ SELECT
 
 ## <a name="select-into-record"></a>Record SELECT INTO
 
-Quando il risultato della query Oracle viene salvato in una variabile di record PL/SQL, sono disponibili due opzioni, a seconda dell'impostazione di SSMA **per Convert record come elenco di variabili separate** (disponibili nel menu **strumenti** , **Impostazioni progetto**, quindi **General** -> **conversione**generale). Se il valore di questa impostazione è **Sì** (impostazione predefinita), SSMA non crea un'istanza del tipo di record. Suddivide invece il record nei campi costitutivi creando una variabile Transact-SQL separata per ogni campo di record. Se l'impostazione è **No**, viene creata un'istanza del record e a ogni campo viene assegnato un `Set` valore tramite i metodi.
+Quando il risultato della query Oracle viene salvato in una variabile di record PL/SQL, sono disponibili due opzioni, a seconda dell'impostazione di SSMA per **Convert record come elenco di variabili separate** (disponibili nel menu **strumenti** , **Impostazioni progetto**, quindi **General**  ->  **conversione**generale). Se il valore di questa impostazione è **Sì** (impostazione predefinita), SSMA non crea un'istanza del tipo di record. Suddivide invece il record nei campi costitutivi creando una variabile Transact-SQL separata per ogni campo di record. Se l'impostazione è **No**, viene creata un'istanza del record e a ogni campo viene assegnato un valore tramite i `Set` metodi.

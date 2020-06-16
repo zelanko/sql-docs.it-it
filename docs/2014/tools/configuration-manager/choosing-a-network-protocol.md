@@ -1,5 +1,6 @@
 ---
 title: Scelta di un protocollo di rete | Microsoft Docs
+description: Confrontare e contrapporre i protocolli di rete disponibili per la connessione a SQL Server motore di database, ad esempio Shared Memory, TCP/IP e Named Pipes.
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,12 +24,12 @@ ms.assetid: 6565fb7d-b076-4447-be90-e10d0dec359a
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9046541411d472c7fe557cfad78ca903107513ab
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 0b1212117f5428da0a2b1a8e01232a2b97e5cc12
+ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001091"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84716698"
 ---
 # <a name="choosing-a-network-protocol"></a>Scelta di un protocollo di rete
   Per connettersi al [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] è necessario che sia abilitato un protocollo di rete. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]consente di soddisfare le richieste su più protocolli contemporaneamente. I client eseguono la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con un unico protocollo. Se il programma client non conosce il protocollo sul quale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in attesa, configurarlo per l'esecuzione di tentativi in sequenza su più protocolli. Utilizzare Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per abilitare, disabilitare e configurare i protocolli di rete.  

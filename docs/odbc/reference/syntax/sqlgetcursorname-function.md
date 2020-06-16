@@ -1,7 +1,7 @@
 ---
 title: Funzione SQLGetCursorName | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 06/12/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d3ac65dc07897ddc789ee03b06b1bc1f71d37c3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 413b1a6982a5411d9af204a54536c4778b5593b9
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285549"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779063"
 ---
 # <a name="sqlgetcursorname-function"></a>Funzione SQLGetCursorName
 **Conformità**  
@@ -54,12 +54,12 @@ SQLRETURN SQLGetCursorName(
  Se *CursorName* è null, *NameLengthPtr* restituirà comunque il numero totale di caratteri, escluso il carattere di terminazione null per i dati di tipo carattere, disponibile per restituire nel buffer a cui punta il *cursore*.  
   
  *BufferLength*  
- Input Lunghezza di \* *CursorName*, in caratteri. Se il valore in * \*CursorName* è una stringa Unicode (quando si chiama **SQLGetCursorNameW**), l'argomento *bufferLength* deve essere un numero pari.  
+ Input Lunghezza di \* *CursorName*, in caratteri. 
   
  *NameLengthPtr*  
  Output Puntatore alla memoria in cui restituire il numero totale di caratteri, escluso il carattere di terminazione null, disponibile per la restituzione in \* *CursorName*. Se il numero di caratteri disponibili per restituire è maggiore o uguale a *bufferLength*, il nome del cursore in \* *CursorName* viene troncato in *bufferLength* meno la lunghezza di un carattere di terminazione null.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
@@ -69,7 +69,7 @@ SQLRETURN SQLGetCursorName(
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
 |01004|Dati stringa, troncati a destra|Il buffer \* *CursorName* non è abbastanza grande per restituire l'intero nome del cursore, quindi il nome del cursore è stato troncato. La lunghezza del nome del cursore non troncato viene restituita in **NameLengthPtr*. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \*MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona per l'handle di connessione associato a *statementHandle*. Questa funzione asincrona era ancora in esecuzione quando è stata chiamata la funzione **SQLGetCursorName** .<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** è stato chiamato per *statementHandle* e restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona per *statementHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** è stato chiamato per *statementHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché non è possibile accedere agli oggetti memoria sottostante, probabilmente a causa di condizioni di memoria insufficiente.|  
