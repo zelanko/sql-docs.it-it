@@ -1,5 +1,6 @@
 ---
 title: Inserimento di dati mediante updategram XML (SQLXML)
+description: Informazioni su come inserire dati utilizzando updategram XML in SQLXML 4,0.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -34,16 +35,16 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 671dc9c8a0091a2fb14a4aa1c42ea8246b376c7a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 305a167d233ee5a11348b0cc8a050dc2f61548ae
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112264"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84883213"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Inserimento di dati mediante updategram XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Un updategram indica un'operazione di inserimento quando un'istanza di record viene visualizzata nel blocco ** \<after>** ma non nel blocco ** \<before>** corrispondente. In questo caso, l'updategram inserisce il record in ** \<dopo>** blocco nel database.  
+  Un updategram indica un'operazione di inserimento quando un'istanza di record viene visualizzata nel **\<after>** blocco ma non nel **\<before>** blocco corrispondente. In questo caso, l'updategram inserisce il record nel **\<after>** blocco nel database.  
   
  Il formato dell'updategram per un'operazione di inserimento è il seguente:  
   
@@ -66,13 +67,13 @@ ms.locfileid: "79112264"
 </ROOT>  
 ```  
   
-## <a name="before-block"></a>\<prima del blocco>  
- È possibile omettere il ** \<blocco before>** per un'operazione di inserimento. Se non si specifica l'attributo **mapping-schema** facoltativo, l' ** \<elemento ElementName>** specificato nell'updategram esegue il mapping a una tabella di database e gli attributi o gli elementi figlio vengono mappati alle colonne della tabella.  
+## <a name="before-block"></a>\<before>Blocco  
+ Il **\<before>** blocco può essere omesso per un'operazione di inserimento. Se l'attributo **mapping-schema** facoltativo non è specificato, l' **\<ElementName>** elemento specificato nell'updategram esegue il mapping a una tabella di database e gli attributi o gli elementi figlio vengono mappati alle colonne della tabella.  
   
-## <a name="after-block"></a>\<dopo> blocco  
- È possibile specificare uno o più record nel blocco ** \<after>** .  
+## <a name="after-block"></a>\<after>Blocco  
+ È possibile specificare uno o più record nel **\<after>** blocco.  
   
- Se il ** \<blocco after>** non fornisce un valore per una colonna specifica, l'updategram utilizzerà il valore predefinito specificato nello schema con annotazioni (se è stato specificato uno schema). Se lo schema non specifica un valore predefinito per la colonna, l'updategram non specifica alcun valore esplicito per questa colonna e, invece, assegna il [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valore predefinito (se specificato) a questa colonna. Se non è presente alcun valore predefinito di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e la colonna accetta un valore NULL, l'updategram imposta il valore della colonna su NULL. Se la colonna non ha un valore predefinito e non accetta un valore NULL, il comando non riesce e l'updategram restituisce un errore. L'attributo facoltativo **attributo updg: returnid** viene usato per restituire il valore Identity generato dal sistema quando viene aggiunto un record in una tabella con una colonna di tipo Identity.  
+ Se il **\<after>** blocco non fornisce un valore per una colonna specifica, l'updategram utilizzerà il valore predefinito specificato nello schema con annotazioni (se è stato specificato uno schema). Se lo schema non specifica un valore predefinito per la colonna, l'updategram non specifica alcun valore esplicito per questa colonna e, invece, assegna il [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valore predefinito (se specificato) a questa colonna. Se non è presente alcun valore predefinito di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e la colonna accetta un valore NULL, l'updategram imposta il valore della colonna su NULL. Se la colonna non ha un valore predefinito e non accetta un valore NULL, il comando non riesce e l'updategram restituisce un errore. L'attributo facoltativo **attributo updg: returnid** viene usato per restituire il valore Identity generato dal sistema quando viene aggiunto un record in una tabella con una colonna di tipo Identity.  
   
 ## <a name="updgid-attribute"></a>Attributo updg:id  
  Se l'updategram sta inserendo solo i record, l'updategram non richiede l'attributo **attributo updg: ID** . Per ulteriori informazioni su **attributo updg: ID**, vedere [aggiornamento di dati mediante UPDATEGRAM XML &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md).  
@@ -81,7 +82,7 @@ ms.locfileid: "79112264"
  Quando un updategram inserisce un record in una tabella con una colonna di tipo IDENTITY, l'updategram può acquisire il valore assegnato dal sistema utilizzando l'attributo facoltativo **attributo updg: at-identity** . L'updategram potrà quindi utilizzare questo valore nelle operazioni successive. Al momento dell'esecuzione dell'updategram, è possibile restituire il valore Identity generato specificando l'attributo **attributo updg: returnid** .  
   
 ## <a name="updgguid-attribute"></a>Attributo updg:guid  
- L'attributo **attributo updg: GUID** è un attributo facoltativo che genera un identificatore univoco globale. Questo valore rimane nell'ambito per l'intero ** \<blocco>di sincronizzazione** in cui è specificato. È possibile utilizzare questo valore in qualsiasi punto del blocco del ** \<>di sincronizzazione** . L'attributo chiama la funzione **NewGuid ()** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per generare l'identificatore univoco.  
+ L'attributo **attributo updg: GUID** è un attributo facoltativo che genera un identificatore univoco globale. Questo valore rimane nell'ambito per l'intero **\<sync>** blocco in cui è specificato. È possibile utilizzare questo valore in qualsiasi punto del **\<sync>** blocco. L'attributo chiama la funzione **NewGuid ()** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per generare l'identificatore univoco.  
   
 ## <a name="examples"></a>Esempi  
  Per creare esempi funzionanti utilizzando gli esempi seguenti, è necessario soddisfare i requisiti specificati nei [requisiti per l'esecuzione di esempi SQLXML](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
@@ -92,7 +93,7 @@ ms.locfileid: "79112264"
   
 -   Nella maggior parte degli esempi viene utilizzato il database di esempio [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]. Tutti gli aggiornamenti vengono applicati alle tabelle di questo database.  
   
-### <a name="a-inserting-a-record-by-using-an-updategram"></a>A. Inserimento di un record mediante un updategram  
+### <a name="a-inserting-a-record-by-using-an-updategram"></a>R. Inserimento di un record mediante un updategram  
  Questo updategram incentrato sugli attributi inserisce un record nella tabella HumanResources.Employee del database [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)].  
   
  In questo esempio l'updategram non specifica uno schema di mapping, pertanto utilizza il mapping predefinito nel quale il nome dell'elemento esegue il mapping a un nome di tabella e gli attributi o gli elementi figlio eseguono il mapping alle colonne della tabella stessa.  
@@ -159,7 +160,7 @@ ms.locfileid: "79112264"
 ```  
   
 ### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>B. Inserimento di più record mediante un updategram  
- Questo updategram aggiunge due nuovi record di spostamento alla tabella HumanResources.Shift. L'updategram non specifica il blocco facoltativo ** \<before>** .  
+ Questo updategram aggiunge due nuovi record di spostamento alla tabella HumanResources.Shift. L'updategram non specifica il blocco facoltativo **\<before>** .  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -186,7 +187,7 @@ ms.locfileid: "79112264"
   
      Per ulteriori informazioni, vedere [utilizzo di ADO per eseguire query SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Un'altra versione di questo esempio è un updategram che usa due blocchi ** \<after>** separati anziché un blocco per inserire i due dipendenti. Questo updategram è valido e può essere codificato come segue:  
+ Un'altra versione di questo esempio è un updategram che usa due **\<after>** blocchi separati anziché un blocco per inserire i due dipendenti. Questo updategram è valido e può essere codificato come segue:  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -210,12 +211,12 @@ ms.locfileid: "79112264"
 ```  
   
 ### <a name="c-working-with-valid-sql-server-characters-that-are-not-valid-in-xml"></a>C. Utilizzo di caratteri validi in SQL Server che non sono validi in XML  
- In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] i nomi di tabella possono includere uno spazio, ad esempio la tabella Dettagli ordine nel database Northwind. Tuttavia, questo non è valido nei caratteri XML che sono identificatori validi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ma non è possibile codificare identificatori XML validi con ' __xHHHH\_\_' come valore di codifica, dove HHHH rappresenta il codice UCS-2 esadecimale a quattro cifre per il carattere nell'ordine del primo bit più significativo.  
+ In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] i nomi di tabella possono includere uno spazio, ad esempio la tabella Dettagli ordine nel database Northwind. Tuttavia, questo non è valido nei caratteri XML che sono [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identificatori validi, ma non è possibile codificare identificatori XML validi con ' __xHHHH \_ \_ ' come valore di codifica, dove HHHH rappresenta il codice UCS-2 esadecimale a quattro cifre per il carattere nell'ordine del primo bit più significativo.  
   
 > [!NOTE]  
 >  In questo esempio viene utilizzato il database Northwind, È possibile installare il database Northwind utilizzando uno script SQL disponibile per il download da questo [sito Web Microsoft](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs).  
   
- Il nome dell'elemento deve inoltre essere racchiuso tra parentesi ([ ]). Poiché i caratteri [e] non sono validi in XML, è necessario codificarli come _x005B\_ e _x005D\_rispettivamente. Se si utilizza uno schema di mapping, è possibile fornire nomi di elemento che non contengono caratteri non validi, ad esempio spazi vuoti. Lo schema di mapping esegue il mapping richiesto, pertanto non è necessario eseguire la codifica per questi caratteri.  
+ Il nome dell'elemento deve inoltre essere racchiuso tra parentesi ([ ]). Poiché i caratteri [e] non sono validi in XML, è necessario codificarli come _x005B \_ e _x005D \_ rispettivamente. Se si utilizza uno schema di mapping, è possibile fornire nomi di elemento che non contengono caratteri non validi, ad esempio spazi vuoti. Lo schema di mapping esegue il mapping richiesto, pertanto non è necessario eseguire la codifica per questi caratteri.  
   
  Questo updategram aggiunge un record alla tabella Dettagli ordine del database Northwind:  
   
@@ -250,7 +251,7 @@ ms.locfileid: "79112264"
 ### <a name="d-using-the-at-identity-attribute-to-retrieve-the-value-that-has-been-inserted-in-the-identity-type-column"></a>D. Utilizzo dell'attributo at-identity per recuperare il valore inserito nella colonna di tipo IDENTITY  
  Nell'updategram seguente sono inseriti due record: uno nella tabella Sales.SalesOrderHeader e un altro nella tabella Sales.SalesOrderDetail.  
   
- L'updategram aggiunge prima un record alla tabella Sales.SalesOrderHeader. In questa tabella la colonna SalesOrderID è una colonna di tipo IDENTITY, Pertanto, quando si aggiunge questo record alla tabella, l'updategram utilizza l'attributo **at-identity** per acquisire il valore SalesOrderID assegnato come "x" (un valore segnaposto). Utilizza specifica quindi questa variabile **at-identity** come valore dell'attributo SalesOrderID nell'elemento> \<Sales. SalesOrderDetail.  
+ L'updategram aggiunge prima un record alla tabella Sales.SalesOrderHeader. In questa tabella la colonna SalesOrderID è una colonna di tipo IDENTITY, Pertanto, quando si aggiunge questo record alla tabella, l'updategram utilizza l'attributo **at-identity** per acquisire il valore SalesOrderID assegnato come "x" (un valore segnaposto). Utilizza specifica quindi questa variabile **at-identity** come valore dell'attributo SalesOrderID nell' \<Sales.SalesOrderDetail> elemento.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -384,7 +385,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
  In questo updategram viene specificato uno schema XSD, ovvero non è presente alcun mapping predefinito degli attributi e degli elementi dell'updategram. Lo schema fornisce il mapping necessario degli elementi e degli attributi alle colonne e alle tabelle di database.  
   
- Nello schema seguente (CustOrderSchema. Xml) viene descritto un ** \<elemento>CustOrder** costituito dagli attributi **OrderID** e **EmployeeID** . Per rendere più interessante lo schema, all'attributo **EmployeeID** viene assegnato un valore predefinito. Un updategram utilizza il valore predefinito di un attributo solo per le operazioni di inserimento e quindi solo se nell'updategram non è specificato l'attributo in questione.  
+ Nello schema seguente (CustOrderSchema.xml) viene descritto un **\<CustOrder>** elemento costituito dagli attributi **OrderID** e **EmployeeID** . Per rendere più interessante lo schema, all'attributo **EmployeeID** viene assegnato un valore predefinito. Un updategram utilizza il valore predefinito di un attributo solo per le operazioni di inserimento e quindi solo se nell'updategram non è specificato l'attributo in questione.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -483,7 +484,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </xsd:schema>  
 ```  
   
- Nello schema XSD viene specificato **nillable = "true"** per l' ** \<elemento fname>** . Questo schema viene utilizzato nell'updategram seguente.  
+ Nello schema XSD viene specificato **nillable = "true"** per l' **\<fname>** elemento. Questo schema viene utilizzato nell'updategram seguente.  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql"  
@@ -503,7 +504,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </ROOT>  
 ```  
   
- L'updategram specifica **xsi: nil** per l' ** \<elemento fname>** nel blocco ** \<after>** . pertanto quando questo updategram viene eseguito, viene inserito un valore NULL per la colonna first_name della tabella.  
+ L'updategram specifica **xsi: nil** per l' **\<fname>** elemento nel **\<after>** blocco. pertanto quando questo updategram viene eseguito, viene inserito un valore NULL per la colonna first_name della tabella.  
   
 ##### <a name="to-test-the-updategram"></a>Per testare l'updategram  
   
@@ -531,7 +532,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 ### <a name="h-specifying-namespaces-in-an-updategram"></a>H. Specifica degli spazi dei nomi in un updategram  
  In un updategram possono essere presenti elementi che appartengono a uno spazio dei nomi dichiarato nello stesso elemento all'interno dell'updategram. In questo caso anche lo schema corrispondente deve dichiarare lo stesso spazio dei nomi e l'elemento deve appartenere allo spazio dei nomi di destinazione.  
   
- Nell'updategram seguente (updategram-ElementHavingNamespace. Xml), ad esempio, l' ** \<elemento Order>** appartiene a uno spazio dei nomi dichiarato nell'elemento.  
+ Nell'updategram seguente (UpdateGram-ElementHavingNamespace.xml), ad esempio, l' **\<Order>** elemento appartiene a uno spazio dei nomi dichiarato nell'elemento.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -612,13 +613,13 @@ CustOrder(OrderID, EmployeeID, OrderType)
      Per ulteriori informazioni, vedere [utilizzo di ADO per eseguire query SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ### <a name="i-inserting-data-into-an-xml-data-type-column"></a>I. Inserimento di dati in una colonna con tipo di dati XML  
- Il tipo di dati **XML** è stato [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]introdotto in. È possibile utilizzare gli updategram per inserire e aggiornare i dati archiviati nelle colonne con tipo di dati **XML** con le seguenti clausole:  
+ Il tipo di dati **XML** è stato introdotto in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] . È possibile utilizzare gli updategram per inserire e aggiornare i dati archiviati nelle colonne con tipo di dati **XML** con le seguenti clausole:  
   
 -   Impossibile utilizzare la colonna **XML** per identificare una riga esistente. Pertanto, non può essere incluso nella sezione **attributo updg: before** di un updategram.  
   
 -   Gli spazi dei nomi inclusi nell'ambito del frammento XML inserito nella colonna **XML** verranno mantenuti e le relative dichiarazioni dello spazio dei nomi vengono aggiunte all'elemento superiore del frammento inserito.  
   
- Nell'updategram seguente (SampleUpdateGram. Xml), ad esempio, l' [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] ** \<elemento desc>** aggiorna la colonna ProductDescription nella tabella Production>ProductModel del database di esempio. Il risultato di questo updategram è che il contenuto XML della colonna ProductDescription viene aggiornato con il contenuto XML dell'elemento ** \<desc>** .  
+ Nell'updategram seguente (SampleUpdateGram.xml), ad esempio, l' **\<Desc>** elemento Aggiorna la colonna ProductDescription nella tabella production>ProductModel del database di [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] esempio. Il risultato di questo updategram è che il contenuto XML della colonna ProductDescription viene aggiornato con il contenuto XML dell' **\<Desc>** elemento.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

@@ -1,5 +1,6 @@
 ---
 title: Prologo XQuery | Microsoft Docs
+description: Informazioni sul prologo XQuery che contiene una serie di dichiarazioni e definizioni che creano l'ambiente necessario per l'elaborazione delle query.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 84f4093fe9c4693c50d6ae89c7b2ba111191db9d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3c1d73fca8bdc91205110d89cceb3a694725c18
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946602"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881666"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>Moduli e prologhi - Prologo XQuery
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ WHERE ProductModelID=7
   
  Dalla query precedente si noti quanto segue:  
   
--   Il prologo XQuery include una dichiarazione di prefisso dello spazio dei `(namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`nomi (AWMI),.  
+-   Il prologo XQuery include una dichiarazione di prefisso dello spazio dei nomi (AWMI), `(namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";` .  
   
 -   La parola chiave `declare namespace` definisce un prefisso dello spazio dei nomi che viene utilizzato successivamente nel corpo della query.  
   

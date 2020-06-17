@@ -1,5 +1,6 @@
 ---
 title: Query XQuery che coinvolgono la gerarchia | Microsoft Docs
+description: Visualizzare esempi di query XQuery che coinvolgono le gerarchie.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8aa762af8e08c72f7f00369219771c371ce39aac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c4ab17b99dc1d90d867689c5f79425fde0775a4b
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946108"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880635"
 ---
 # <a name="xqueries-involving-hierarchy"></a>Esecuzione di query XQuery che coinvolgono gerarchie
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,9 +31,9 @@ ms.locfileid: "67946108"
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>R. Recupero delle posizioni dei centri di lavorazione, insieme al primo passaggio di produzione eseguito in tali centri, dai documenti contenenti le istruzioni per la produzione  
- Per il modello di prodotto 7, la query costruisce il codice XML `ManuInstr` che include l'elemento <>, con gli attributi **ProductModelID** e **ProductModelName** e `Location` uno o più <> elementi figlio.  
+ Per il modello di prodotto 7, la query costruisce il codice XML che include l' `ManuInstr` elemento <>, con gli attributi **ProductModelID** e **ProductModelName** e uno o più <`Location`> elementi figlio.  
   
- Ogni elemento `Location` <> dispone di un proprio set di attributi e di `step` uno <> elemento figlio. Questo <`step`> elemento figlio è il primo passaggio di produzione nella posizione del centro di lavorazione.  
+ Ogni `Location` elemento <> dispone di un proprio set di attributi e di uno <`step`> elemento figlio. Questo <`step`> elemento figlio è il primo passaggio di produzione nella posizione del centro di lavorazione.  
   
 ```sql
 SELECT Instructions.query('  
@@ -84,7 +85,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>B. Ricerca di tutti i numeri di telefono nella colonna AdditionalContactInfo  
- La query seguente recupera i numeri di telefono aggiuntivi per un contatto del cliente specifico eseguendo una ricerca nell'intera `telephoneNumber` gerarchia per l'elemento <>. Poiché l'elemento `telephoneNumber` <> può trovarsi in qualsiasi punto della gerarchia, la query usa il discendente e l'operatore autonomo (//) nella ricerca.  
+ La query seguente recupera i numeri di telefono aggiuntivi per un contatto del cliente specifico eseguendo una ricerca nell'intera gerarchia per l' `telephoneNumber` elemento <>. Poiché l' `telephoneNumber` elemento <> può trovarsi in qualsiasi punto della gerarchia, la query usa il discendente e l'operatore autonomo (//) nella ricerca.  
   
 ```sql
 SELECT AdditionalContactInfo.query('  
@@ -111,7 +112,7 @@ WHERE ContactID = 1
 \</act:number>  
 ```  
   
- Per recuperare solo i numeri di telefono di primo livello, in particolare `telephoneNumber` il <> elementi figlio `AdditionalContactInfo` di <>, l'espressione for nella query viene modificata in  
+ Per recuperare solo i numeri di telefono di primo livello, in particolare il <`telephoneNumber`> elementi figlio di <`AdditionalContactInfo`>, l'espressione for nella query viene modificata in  
   
  `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`.  
   

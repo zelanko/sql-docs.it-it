@@ -1,5 +1,6 @@
 ---
 title: Formattazione XML sul lato client e sul lato server (SQLXML)
+description: Informazioni sulle differenze generali tra la formattazione XML sul lato client e sul lato server in SQLXML 4,0.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,19 +20,19 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 421c48590098f9dbf4ce075c213fcd1cda720649
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 34eb3a31a9b2affc473338cb730dddeee2f87904
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247006"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882896"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>Lato client e Formattazione XML sul lato server (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In questo argomento vengono descritte le differenze generali tra la formattazione XML sul lato client e quella sul lato server in SQLXML.  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>Query su più set di righe non supportate nella formattazione sul lato client  
- Le query che generano più set di righe non sono supportate quando si utilizza la formattazione XML sul lato client. Supporre, ad esempio, di disporre di una directory virtuale nella quale è stata specificata la formattazione sul lato client. Si consideri questo modello di esempio, in cui sono presenti due istruzioni SELECT in un ** \<blocco SQL: query>** :  
+ Le query che generano più set di righe non sono supportate quando si utilizza la formattazione XML sul lato client. Supporre, ad esempio, di disporre di una directory virtuale nella quale è stata specificata la formattazione sul lato client. Si consideri questo modello di esempio, in cui sono presenti due istruzioni SELECT in un **\<sql:query>** blocco:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -42,12 +43,12 @@ ms.locfileid: "75247006"
 </ROOT>  
 ```  
   
- È possibile eseguire questo modello nel codice dell'applicazione ma viene restituito un errore, poiché la formattazione XML sul lato client non supporta la formattazione di più set di righe. Se si specificano le query in due blocchi ** \<SQL: query>** distinti, si otterranno i risultati desiderati.  
+ È possibile eseguire questo modello nel codice dell'applicazione ma viene restituito un errore, poiché la formattazione XML sul lato client non supporta la formattazione di più set di righe. Se si specificano le query in due **\<sql:query>** blocchi distinti, si otterranno i risultati desiderati.  
   
 ## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>timestamp viene mappato in modo diverso nella formattazione sul lato client e in quella sul lato server  
  Nella formattazione XML sul lato server, la colonna del database di tipo **timestamp** esegue il mapping al tipo XDR i8 (se nella query è specificata l'opzione XMLDATA).  
   
- Nella formattazione XML sul lato client, la colonna del database di tipo **timestamp** è mappata all' **URI** o al tipo XDR **bin. Base64** , a seconda che l'opzione binary base64 sia specificata nella query. Il tipo XDR **bin. Base64** è utile se si usano le funzionalità updategram e Bulkload, perché questo tipo viene convertito [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel tipo **timestamp** . In questo modo, l'operazione di inserimento, aggiornamento o eliminazione viene eseguita correttamente.  
+ Nella formattazione XML sul lato client, la colonna del database di tipo **timestamp** è mappata all' **URI** o al tipo XDR **bin. Base64** , a seconda che l'opzione binary base64 sia specificata nella query. Il tipo XDR **bin. Base64** è utile se si usano le funzionalità updategram e Bulkload, perché questo tipo viene convertito nel tipo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **timestamp** . In questo modo, l'operazione di inserimento, aggiornamento o eliminazione viene eseguita correttamente.  
   
 ## <a name="deep-variants-are-used-in-server-side-formatting"></a>Tipi VARIANT completi utilizzati nella formattazione sul lato server  
  Nella formattazione XML sul lato server vengono utilizzati i tipi VARIANT completi. Se si utilizza la formattazione XML sul lato client, le varianti vengono convertite in una stringa Unicode e i sottotipi di VARIANT non vengono utilizzati.  

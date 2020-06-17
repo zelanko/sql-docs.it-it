@@ -1,5 +1,6 @@
 ---
 title: Processo di generazione di record (SQLXML)
+description: Informazioni dettagliate sul processo di generazione di record di caricamento bulk XML in SQLXML 4,0.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -22,12 +23,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e5b1919afda67f421146d028ef0d5247977175a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c4d5ed47b77d32fed9d8775bc43f9e052ce6fcb
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246696"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882890"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>Processo di generazione di record (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -78,7 +79,7 @@ ms.locfileid: "75246696"
 </xsd:schema>  
 ```  
   
- Lo schema specifica un ** \<elemento Customer>** con gli attributi **CustomerID** e **CompanyName** . L'annotazione **SQL: relation** esegue il mapping dell' ** \<elemento Customer>** alla tabella Customers.  
+ Lo schema specifica un **\<Customer>** elemento con gli attributi **CustomerID** e **CompanyName** . L'annotazione **SQL: relation** esegue il mapping dell' **\<Customer>** elemento alla tabella Customers.  
   
  Si consideri il frammento seguente di un documento XML:  
   
@@ -90,19 +91,19 @@ ms.locfileid: "75246696"
   
  Quando il caricamento bulk XML riceve lo schema descritto nei paragrafi precedenti e i dati XML come input, elabora i nodi (elementi e attributi) nei dati di origine nel modo seguente:  
   
--   Il tag di inizio del primo ** \<elemento Customer>** porta tale elemento nell'ambito. Questo nodo viene mappato alla tabella Customers. Il caricamento bulk XML genera pertanto un record per la tabella Customers.  
+-   Il tag di inizio del primo **\<Customer>** elemento porta l'elemento nell'ambito. Questo nodo viene mappato alla tabella Customers. Il caricamento bulk XML genera pertanto un record per la tabella Customers.  
   
--   Nello schema tutti gli attributi dell'elemento ** \<Customer>** vengono mappati alle colonne della tabella Customers. Poiché questi attributi entrano nell'ambito, il caricamento bulk XML ne copia i valori nel record del cliente già generato dall'ambito padre.  
+-   Nello schema tutti gli attributi dell'elemento vengono **\<Customer>** mappati alle colonne della tabella Customers. Poiché questi attributi entrano nell'ambito, il caricamento bulk XML ne copia i valori nel record del cliente già generato dall'ambito padre.  
   
--   Quando il caricamento bulk XML raggiunge il tag di fine per l' ** \<elemento Customer>** , l'elemento esce dall'ambito. Di conseguenza, il caricamento bulk XML considera il record completo e lo invia a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Quando il caricamento bulk XML raggiunge il tag di fine per l' **\<Customer>** elemento, l'elemento esce dall'ambito. Di conseguenza, il caricamento bulk XML considera il record completo e lo invia a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Il caricamento bulk XML segue questo processo per ogni elemento ** \<>Customer** successivo.  
+ Il caricamento bulk XML segue questo processo per ogni **\<Customer>** elemento successivo.  
   
 > [!IMPORTANT]  
 >  In questo modello, poiché viene inserito un record quando viene raggiunto il tag di fine (o il nodo è esterno all'ambito), è necessario definire tutti i dati associati al record all'interno dell'ambito del nodo.  
   
 ## <a name="record-subset-and-the-key-ordering-rule"></a>Subset di record e regola di ordinamento delle chiavi  
- Quando si specifica uno schema di mapping che utilizza ** \<SQL: Relationship>**, il termine del subset fa riferimento al set di record generato sul lato esterno della relazione. Nell'esempio seguente, i record CustOrder si trovano sul lato esterno, ** \<SQL: Relationship>**.  
+ Quando si specifica uno schema di mapping utilizzato da **\<sql:relationship>** , il termine del subset si riferisce al set di record generato sul lato esterno della relazione. Nell'esempio seguente, i record CustOrder si trovano sul lato esterno, **\<sql:relationship>** .  
   
  Si supponga, ad esempio, un database contenente le tabelle seguenti:  
   
@@ -112,7 +113,7 @@ ms.locfileid: "75246696"
   
  CustomerID nella tabella CustOrder è una chiave esterna che fa riferimento alla chiave primaria CustomerID nella tabella Cust.  
   
- Si consideri a questo punto la vista XML specificata nello schema XSD con annotazioni seguente. Questo schema utilizza ** \<SQL: Relationship>** per specificare la relazione tra le tabelle Cust e CustOrder.  
+ Si consideri a questo punto la vista XML specificata nello schema XSD con annotazioni seguente. Questo schema utilizza **\<sql:relationship>** per specificare la relazione tra le tabelle Cust e CustOrder.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -148,19 +149,19 @@ ms.locfileid: "75246696"
   
  I dati XML di esempio e la procedura per creare un esempio reale vengono forniti di seguito.  
   
--   Quando un ** \<** nodo dell'elemento Customer>nel file di dati XML entra nell'ambito, il caricamento bulk XML genera un record per la tabella Cust. Il caricamento bulk XML copia quindi i valori di colonna necessari (CustomerID, CompanyName e City) dai ** \<>CustomerID **, ** \<CompanyName>** e ** \<City>** gli elementi figlio quando questi elementi entrano nell'ambito.  
+-   Quando un **\<Customer>** nodo di elemento nel file di dati XML entra nell'ambito, il caricamento bulk XML genera un record per la tabella Cust. Il caricamento bulk XML copia quindi i valori di colonna necessari (CustomerID, CompanyName e City) dagli **\<CustomerID>** **\<CompanyName>** elementi, e **\<City>** figlio quando questi elementi entrano nell'ambito.  
   
--   Quando un ** \<ordine>** nodo elemento entra nell'ambito, il caricamento bulk XML genera un record per la tabella CustOrder. Il caricamento bulk XML copia il valore dell'attributo **OrderID** in questo record. Il valore richiesto per la colonna CustomerID viene ottenuto dall'elemento ** \<CustomerID>** elemento figlio dell'elemento ** \<Customer>** . Il caricamento bulk XML utilizza le informazioni specificate in ** \<SQL: Relationship>** per ottenere il valore della chiave esterna CustomerID per questo record, a meno che non sia stato specificato l'attributo **CustomerID** nell'elemento ** \<Order>** . La regola generale è che se l'elemento figlio specifica in modo esplicito un valore per l'attributo di chiave esterna, il caricamento bulk XML utilizza tale valore e non ottiene il valore dall'elemento padre utilizzando il ** \<>SQL: Relationship **specificato. Poiché questo ** \<ordine>** nodo elemento esula dall'ambito, il caricamento bulk XML Invia il record [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a, quindi elabora tutti gli ** \<ordini successivi>** nodi degli elementi nello stesso modo.  
+-   Quando un **\<Order>** nodo elemento entra nell'ambito, il caricamento bulk XML genera un record per la tabella CustOrder. Il caricamento bulk XML copia il valore dell'attributo **OrderID** in questo record. Il valore richiesto per la colonna CustomerID viene ottenuto dall' **\<CustomerID>** elemento figlio dell' **\<Customer>** elemento. Il caricamento bulk XML utilizza le informazioni specificate in **\<sql:relationship>** per ottenere il valore della chiave esterna CustomerID per questo record, a meno che non sia stato specificato l'attributo **CustomerID** nell' **\<Order>** elemento. La regola generale è che se l'elemento figlio specifica in modo esplicito un valore per l'attributo di chiave esterna, il caricamento bulk XML utilizza tale valore e non ottiene il valore dall'elemento padre utilizzando l'oggetto specificato **\<sql:relationship>** . Poiché il **\<Order>** nodo di questo elemento esula dall'ambito, il caricamento bulk XML Invia il record a, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quindi elabora tutti i **\<Order>** nodi elemento successivi nello stesso modo.  
   
--   Infine, il nodo dell' ** \<elemento Customer>** esce dall'ambito. A questo punto, il caricamento bulk XML invia il record del cliente a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il caricamento bulk XML segue questo processo per tutti i clienti successivi nel flusso di dati XML.  
+-   Infine, il **\<Customer>** nodo dell'elemento esce dall'ambito. A questo punto, il caricamento bulk XML invia il record del cliente a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il caricamento bulk XML segue questo processo per tutti i clienti successivi nel flusso di dati XML.  
   
  Di seguito sono riportate due osservazioni sullo schema di mapping:  
   
--   Quando lo schema soddisfa la regola di "contenimento" (ad esempio, tutti i dati associati al cliente e all'ordine vengono definiti all'interno dell'ambito dei nodi degli elementi ** \<>** e ** \<Order>** ) associati, il caricamento bulk ha esito positivo.  
+-   Quando lo schema soddisfa la regola di "contenimento", ad esempio quando tutti i dati associati al cliente e all'ordine vengono definiti all'interno dell'ambito dei **\<Customer>** nodi elemento e associati **\<Order>** , il caricamento bulk ha esito positivo.  
   
--   Nel descrivere l' ** \<elemento Customer>** , i relativi elementi figlio vengono specificati nell'ordine appropriato. In questo caso, il ** \<CustomerID>** elemento figlio viene specificato prima dell' ** \<ordine>** elemento figlio. Ciò significa che nel file di dati XML di input il valore dell' ** \<elemento>CustomerID** è disponibile come valore di chiave esterna quando l' ** \<elemento Order>** entra nell'ambito. Gli attributi chiave vengono specificati per primi. Questo comportamento è denominato "regola di ordinamento delle chiavi".  
+-   Per descrivere l' **\<Customer>** elemento, i relativi elementi figlio vengono specificati nell'ordine appropriato. In questo caso, l' **\<CustomerID>** elemento figlio viene specificato prima dell' **\<Order>** elemento figlio. Ciò significa che nel file di dati XML di input il **\<CustomerID>** valore dell'elemento è disponibile come valore di chiave esterna quando l' **\<Order>** elemento entra nell'ambito. Gli attributi chiave vengono specificati per primi. Questo comportamento è denominato "regola di ordinamento delle chiavi".  
   
-     Se si specifica ** \<CustomerID>** elemento figlio dopo l' ** \<ordine>** elemento figlio, il valore non è disponibile quando l' ** \<elemento Order>** entra nell'ambito. Quando viene ** \<** letto il tag di fine>/Order, il record per la tabella CustOrder è considerato completo e viene inserito nella tabella CustOrder con un valore null per la colonna CustomerID, che non è il risultato desiderato.  
+     Se si specifica l' **\<CustomerID>** elemento figlio dopo l' **\<Order>** elemento figlio, il valore non è disponibile quando l' **\<Order>** elemento entra nell'ambito. Quando il **\</Order>** tag di fine viene letto, il record per la tabella CustOrder viene considerato completo e viene inserito nella tabella CustOrder con un valore null per la colonna CustomerID, che non è il risultato desiderato.  
   
 #### <a name="to-create-a-working-sample"></a>Per creare un esempio reale  
   
@@ -220,7 +221,7 @@ ms.locfileid: "75246696"
 ## <a name="exceptions-to-the-record-generation-rule"></a>Eccezioni alla regola di generazione di record  
  Il caricamento bulk XML non genera un record per un nodo quando entra nell'ambito se il nodo è un tipo IDREF o IDREFS. È necessario verificare che sia presente una descrizione completa del record in un punto dello schema. Le annotazioni **DT: Type = "NMTOKENS"** vengono ignorate proprio come il tipo IDREFS viene ignorato.  
   
- Si consideri, ad esempio, lo schema ** \<** XSD seguente che descrive gli elementi Customer>e ** \<Order>** . L' ** \<elemento Customer>** include un attributo **ordery** del tipo IDREFS. Il ** \<Tag>SQL: Relationship** specifica la relazione uno-a-molti tra il cliente e l'elenco degli ordini.  
+ Si consideri, ad esempio, lo schema XSD seguente che descrive **\<Customer>** **\<Order>** gli elementi e. L' **\<Customer>** elemento include un attributo **ordery** del tipo IDREFS. Il **\<sql:relationship>** tag specifica la relazione uno-a-molti tra il cliente e l'elenco di ordini.  
   
  Lo schema è il seguente:  
   
@@ -261,9 +262,9 @@ ms.locfileid: "75246696"
 </xsd:schema>  
 ```  
   
- Poiché il caricamento bulk ignora i nodi di tipo IDREFS, non esiste alcuna generazione di record quando il nodo dell'attributo **ordery** entra nell'ambito. Se pertanto si desidera che i record relativi agli ordini vengano aggiunti alla tabella Orders, è necessario descrivere tali ordini in un punto dello schema. In questo schema, specificando l' ** \<elemento Order>** si garantisce che il caricamento bulk XML aggiunga i record degli ordini alla tabella Orders. L' ** \<elemento Order>** descrive tutti gli attributi necessari per riempire il record per la tabella CustOrder.  
+ Poiché il caricamento bulk ignora i nodi di tipo IDREFS, non esiste alcuna generazione di record quando il nodo dell'attributo **ordery** entra nell'ambito. Se pertanto si desidera che i record relativi agli ordini vengano aggiunti alla tabella Orders, è necessario descrivere tali ordini in un punto dello schema. In questo schema, specificando l' **\<Order>** elemento si garantisce che il caricamento bulk XML aggiunga i record degli ordini alla tabella Orders. L' **\<Order>** elemento descrive tutti gli attributi necessari per riempire il record per la tabella CustOrder.  
   
- È necessario assicurarsi che i valori **CustomerID** e **OrderID** nell'elemento ** \<Customer>** corrispondano ai valori nell'elemento ** \<Order>** . L'utente è responsabile del mantenimento dell'integrità referenziale.  
+ È necessario assicurarsi che i valori **CustomerID** e **OrderID** nell' **\<Customer>** elemento corrispondano ai valori nell' **\<Order>** elemento. L'utente è responsabile del mantenimento dell'integrità referenziale.  
   
 #### <a name="to-test-a-working-sample"></a>Per testare un esempio reale  
   

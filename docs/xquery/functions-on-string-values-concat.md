@@ -1,5 +1,6 @@
 ---
 title: Funzione Concat (XQuery) | Microsoft Docs
+description: Informazioni sulla funzione XQuery Concat () che restituisce una stringa creata concatenando zero o più stringhe specificate come argomenti.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 063eca49a6a4d69e84e8a3d05221b632d0690bef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02d3762f419789732406564606ad7a3b990e30fd
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68099833"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881815"
 ---
 # <a name="functions-on-string-values---concat"></a>Funzioni su valori stringa - concat
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,8 +50,8 @@ fn:concat ($string as xs:string?
 ## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database di esempio AdventureWorks.  
   
-### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>A. Utilizzo della funzione XQuery concat() per la concatenazione di stringhe  
- Per un modello di prodotto specifico, questa query restituisce una stringa creata concatenando il periodo di validità e la descrizione della garanzia. Nel documento di descrizione del catalogo, l' `Warranty` elemento <> è costituito da `WarrantyPeriod` <> e `Description` <> elementi figlio.  
+### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>R. Utilizzo della funzione XQuery concat() per la concatenazione di stringhe  
+ Per un modello di prodotto specifico, questa query restituisce una stringa creata concatenando il periodo di validità e la descrizione della garanzia. Nel documento di descrizione del catalogo, l' `Warranty` elemento <> è costituito da <`WarrantyPeriod`> e <`Description`> elementi figlio.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -83,7 +84,7 @@ WHERE  PD.ProductModelID=28
 <Product ProductModelID="28" ProductModelName="Road-450">1 year-parts and labor</Product>  
 ```  
   
- La query precedente recupera le informazioni relative a un prodotto specifico. La query seguente recupera le stesse informazioni per tutti i prodotti per i quali vengono archiviate descrizioni di catalogo XML. Il metodo **exist ()** del tipo di dati **XML** nella clausola WHERE restituisce true se il documento XML nelle righe contiene un elemento <`ProductDescription`>.  
+ La query precedente recupera le informazioni relative a un prodotto specifico. La query seguente recupera le stesse informazioni per tutti i prodotti per i quali vengono archiviate descrizioni di catalogo XML. Il metodo **exist ()** del tipo di dati **XML** nella clausola WHERE restituisce true se il documento XML nelle righe contiene un `ProductDescription` elemento <>.  
   
 ```  
 WITH XMLNAMESPACES (  

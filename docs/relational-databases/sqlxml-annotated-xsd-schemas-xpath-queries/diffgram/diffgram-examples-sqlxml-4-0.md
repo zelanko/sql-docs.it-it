@@ -1,5 +1,6 @@
 ---
 title: Esempi di DiffGram (SQLXML)
+description: Visualizzazione di esempi di DiffGram in SQLXML 4,0 che consentono di eseguire operazioni di inserimento, aggiornamento ed eliminazione in un database.
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6fe05c49f44bc0e210687b63e0eb8878b479a07f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e2ac740e844f06ce35416077f4568e19ffb6f52f
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257257"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882446"
 ---
 # <a name="diffgram-examples-sqlxml-40"></a>Esempi di DiffGram (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,7 +75,7 @@ ms.locfileid: "75257257"
   
      Salvare questo schema con il nome DiffGramSchema.xml nella stessa cartella in cui vengono salvati gli altri file utilizzati negli esempi.  
   
-## <a name="a-deleting-a-record-by-using-a-diffgram"></a>A. Eliminazione di un record mediante DiffGram  
+## <a name="a-deleting-a-record-by-using-a-diffgram"></a>R. Eliminazione di un record mediante DiffGram  
  In questo esempio DiffGram viene utilizzato per eliminare un record del cliente (il cui CustomerID è ALFKI) dalla tabella Cust e per eliminare il record dell'ordine corrispondente (il cui OrderID è 1) dalla tabella Ord.  
   
 ```  
@@ -101,7 +102,7 @@ ms.locfileid: "75257257"
 </ROOT>  
 ```  
   
- Nel blocco ** \<before>** è presente un ** \<elemento Order>** (**diffgr: ID = "Order1"**) e un ** \<elemento Customer>** (**diffgr: ID = "Customer1"**). Questi elementi rappresentano i record esistenti nel database. L' ** \<elemento>DataInstance** non contiene i record corrispondenti (con lo stesso **diffgr: ID**). indicando un'operazione di eliminazione.  
+ Nel **\<before>** blocco è presente un **\<Order>** elemento (**diffgr: ID = "Order1"**) e un **\<Customer>** elemento (**diffgr: ID = "Customer1"**). Questi elementi rappresentano i record esistenti nel database. L' **\<DataInstance>** elemento non contiene i record corrispondenti (con lo stesso **diffgr: ID**). indicando un'operazione di eliminazione.  
   
 #### <a name="to-test-the-diffgram"></a>Per testare DiffGram  
   
@@ -168,7 +169,7 @@ ms.locfileid: "75257257"
 </ROOT>  
 ```  
   
- In questo DiffGram il blocco ** \<before>** non è specificato (nessun record di database esistente identificato). Sono presenti due istanze dei record (identificate dagli elementi ** \<Customer>** e ** \<Order>** nel blocco ** \<>DataInstance** ) che eseguono il mapping rispettivamente alle tabelle Cust e Ord. Entrambi gli elementi specificano l'attributo **diffgr: hasChanges** (**HasChanges = "inserted"**). indicando un'operazione di inserimento. In questo DiffGram, se si specifica **HasChanges = "modified"**, si indica che si desidera modificare un record che non esiste, generando un errore.  
+ In questo DiffGram il **\<before>** blocco non è specificato (non sono stati identificati record di database esistenti). Sono presenti due istanze dei record (identificate **\<Customer>** dagli **\<Order>** elementi e nel **\<DataInstance>** blocco) che eseguono il mapping rispettivamente alle tabelle Cust e Ord. Entrambi gli elementi specificano l'attributo **diffgr: hasChanges** (**HasChanges = "inserted"**). indicando un'operazione di inserimento. In questo DiffGram, se si specifica **HasChanges = "modified"**, si indica che si desidera modificare un record che non esiste, generando un errore.  
   
 #### <a name="to-test-the-diffgram"></a>Per testare DiffGram  
   
@@ -240,7 +241,7 @@ ms.locfileid: "75257257"
 </ROOT>  
 ```  
   
- Il ** \<blocco before>** include un ** \<elemento Customer>** (**diffgr: ID = "Customer1"**). Il ** \<blocco>DataInstance** include l'elemento ** \<Customer>** corrispondente con lo stesso **ID**. L' ** \<elemento Customer>** nel ** \<>NewDataSet** specifica anche **diffgr: hasChanges = "modified"**. Ciò indica un'operazione di aggiornamento e il record del cliente nella tabella **cust** viene aggiornato di conseguenza. Si noti che se l'attributo **diffgr: hasChanges** non è specificato, la logica di elaborazione DiffGram ignora questo elemento e non viene eseguito alcun aggiornamento.  
+ Il **\<before>** blocco include un **\<Customer>** elemento (**diffgr: ID = "Customer1"**). Il **\<DataInstance>** blocco include l' **\<Customer>** elemento corrispondente con lo stesso **ID**. L' **\<customer>** elemento in **\<NewDataSet>** specifica anche **diffgr: hasChanges = "modified"**. Ciò indica un'operazione di aggiornamento e il record del cliente nella tabella **cust** viene aggiornato di conseguenza. Si noti che se l'attributo **diffgr: hasChanges** non è specificato, la logica di elaborazione DiffGram ignora questo elemento e non viene eseguito alcun aggiornamento.  
   
 #### <a name="to-test-the-diffgram"></a>Per testare DiffGram  
   
@@ -341,15 +342,15 @@ ms.locfileid: "75257257"
   
  La logica DiffGram elabora questo DiffGram nel modo seguente:  
   
--   In conformità alla logica di elaborazione DiffGram, tutti gli elementi di primo livello nel ** \<>prima** di bloccare il mapping alle tabelle corrispondenti, come descritto nello schema di mapping.  
+-   In conformità alla logica di elaborazione DiffGram, tutti gli elementi di livello superiore nel **\<before>** blocco sono mappati alle tabelle corrispondenti, come descritto nello schema di mapping.  
   
--   Il ** \<blocco before>** ha un ** \<elemento Order>** (**dffgr: ID = "Order1"**) e un ** \<elemento Customer>** (**diffgr: ID = "Customer1"**) per il ** \<** quale non è presente alcun elemento corrispondente nel blocco>DataInstance (con lo stesso ID). indicando un'operazione di eliminazione e i record vengono eliminati dalle tabelle Cust e Ord.  
+-   Il **\<before>** blocco contiene un elemento **\<Order>** (**dffgr: ID = "Order1"**) e un **\<Customer>** elemento (**diffgr: ID = "Customer1"**) per il quale non è presente alcun elemento corrispondente nel **\<DataInstance>** blocco (con lo stesso ID). indicando un'operazione di eliminazione e i record vengono eliminati dalle tabelle Cust e Ord.  
   
--   Il ** \<blocco before>** dispone di un ** \<elemento Customer>** (**diffgr: ID = "customer2"**) per il quale è presente un elemento ** \<Customer>** corrispondente nel ** \<blocco di>DataInstance** (con lo stesso ID). L'elemento nel ** \<blocco>DataInstance** specifica **diffgr: hasChanges = "modified"**. Si tratta di un'operazione di aggiornamento in cui, per il cliente Anat, le informazioni CompanyName e ContactName vengono aggiornate nella tabella Cust utilizzando i valori specificati nel ** \<blocco>DataInstance** .  
+-   Il **\<before>** blocco contiene un **\<Customer>** elemento (**diffgr: ID = "customer2"**) per il quale è presente un **\<Customer>** elemento corrispondente nel **\<DataInstance>** blocco (con lo stesso ID). L'elemento nel **\<DataInstance>** blocco specifica **diffgr: hasChanges = "modified"**. Si tratta di un'operazione di aggiornamento in cui, per il cliente ANAT, le informazioni CompanyName e ContactName vengono aggiornate nella tabella Cust utilizzando i valori specificati nel **\<DataInstance>** blocco.  
   
--   Il ** \<blocco di>DataInstance** include un ** \<elemento Customer>** (**diffgr: ID = "Customer3"**) e un ** \<elemento Order>** (**diffgr: ID = "pagamento3"**). Nessuno di questi elementi specifica l'attributo **diffgr: hasChanges** . Pertanto, la logica di elaborazione di DiffGram ignora tali elementi.  
+-   Il **\<DataInstance>** blocco contiene un **\<Customer>** elemento (**diffgr: ID = "Customer3"**) e un **\<Order>** elemento (**diffgr: ID = "pagamento3"**). Nessuno di questi elementi specifica l'attributo **diffgr: hasChanges** . Pertanto, la logica di elaborazione di DiffGram ignora tali elementi.  
   
--   Il ** \<blocco di>DataInstance** include un ** \<elemento Customer>** (**diffgr: ID = "Customer4"**) e un ** \<elemento Order>** (**diffgr: ID = "Order4"**) per il quale non sono presenti elementi corrispondenti \<nel blocco before>. Questi elementi nel ** \<blocco>DataInstance** specificano **diffgr: hasChanges = "inserted"**. Pertanto, viene aggiunto un nuovo record nella tabella Cust e nella tabella Ord.  
+-   Il **\<DataInstance>** blocco contiene un **\<Customer>** elemento (**diffgr: ID = "Customer4"**) e un **\<Order>** elemento (**diffgr: ID = "Order4"**) per il quale non sono presenti elementi corrispondenti nel \<before> blocco. Questi elementi nel **\<DataInstance>** blocco specificano **diffgr: hasChanges = "inserted"**. Pertanto, viene aggiunto un nuovo record nella tabella Cust e nella tabella Ord.  
   
 #### <a name="to-test-the-diffgram"></a>Per testare DiffGram  
   
@@ -392,7 +393,7 @@ ms.locfileid: "75257257"
      Per ulteriori informazioni, vedere [utilizzo di ADO per eseguire query SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ## <a name="e-applying-updates-by-using-a-diffgram-with-the-diffgrparentid-annotation"></a>E. Applicazione degli aggiornamenti mediante DiffGram con l'annotazione diffgr:parentID  
- In questo esempio viene illustrato il modo in cui l'annotazione **parentID** specificata nella ** \<prima>** blocco del DiffGram viene utilizzata per l'applicazione degli aggiornamenti.  
+ In questo esempio viene illustrato il modo in cui l'annotazione **parentID** specificata nel **\<before>** blocco del DiffGram viene utilizzata per l'applicazione degli aggiornamenti.  
   
 ```  
 <NewDataSet />  
@@ -413,6 +414,6 @@ ms.locfileid: "75257257"
 </diffgr:diffgram>  
 ```  
   
- Questo DiffGram specifica un'operazione di eliminazione poiché è presente solo un ** \<blocco before>** . Nel DiffGram l'annotazione **parentID** viene utilizzata per specificare una relazione padre-figlio tra gli ordini e i dettagli dell'ordine. Quando vengono eliminati i record con SQLXML, questi vengono eliminati prima dalla tabella figlio identificata da questa relazione e poi dalla tabella padre corrispondente.  
+ Questo DiffGram specifica un'operazione di eliminazione poiché è presente solo un **\<before>** blocco. Nel DiffGram l'annotazione **parentID** viene utilizzata per specificare una relazione padre-figlio tra gli ordini e i dettagli dell'ordine. Quando vengono eliminati i record con SQLXML, questi vengono eliminati prima dalla tabella figlio identificata da questa relazione e poi dalla tabella padre corrispondente.  
   
   

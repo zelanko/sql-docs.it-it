@@ -1,5 +1,6 @@
 ---
 title: Mapping XSD personalizzati a tabelle/colonne (SQLXML)
+description: Viene illustrato come creare un mapping personalizzato in una query XPath SQLXML tra gli elementi e gli attributi di uno schema XSD e le tabelle e le colonne di un database relazionale.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -29,12 +30,12 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5fafcd918dda0001c316fd68cae3b19e6cd805a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8e4d7e4c58234ff5db68cdf51265100b88df5cef
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257435"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84885596"
 ---
 # <a name="custom-xsd-mappings-to-tablescolumns-sqlxml"></a>Mapping XSD personalizzati a tabelle/colonne (SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "75257435"
   
  Quando **SQL: relation** viene specificato in un elemento, l'ambito di questa annotazione si applica a tutti gli attributi e agli elementi figlio descritti nella definizione del tipo complesso di tale elemento, offrendo quindi un collegamento per la scrittura delle annotazioni.  
   
- L'annotazione **SQL: relation** è utile anche quando gli identificatori validi [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in non sono validi in XML. "Order Details", ad esempio, è un nome di tabella valido in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ma non in XML. In questi casi, è possibile usare l'annotazione **SQL: relation** per specificare il mapping, ad esempio:  
+ L'annotazione **SQL: relation** è utile anche quando gli identificatori validi in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sono validi in XML. "Order Details", ad esempio, è un nome di tabella valido in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ma non in XML. In questi casi, è possibile usare l'annotazione **SQL: relation** per specificare il mapping, ad esempio:  
   
 ```  
 <xsd:element name="OD" sql:relation="[Order Details]">  
@@ -59,10 +60,10 @@ ms.locfileid: "75257435"
 ## <a name="examples"></a>Esempi  
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per l'esecuzione di esempi SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. Specifica delle annotazioni sql:relation e sql:field  
- In questo esempio lo schema XSD è costituito da un ** \<elemento Contact>** di tipo complesso con ** \<fname>** e ** \<lname>** elementi figlio e l'attributo **ContactID** .  
+### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>R. Specifica delle annotazioni sql:relation e sql:field  
+ In questo esempio lo schema XSD è costituito da un **\<Contact>** elemento di tipo complesso **\<FName>** con **\<LName>** gli elementi figlio e e l'attributo **ContactID** .  
   
- L'annotazione **SQL: relation** esegue il mapping dell' ** \<elemento Contact>** alla tabella Person. Contact del database AdventureWorks. L'annotazione **SQL: Field** esegue il mapping dell' ** \<elemento fname>** alla colonna FirstName e dell' ** \<elemento>lname** alla colonna LastName.  
+ L'annotazione **SQL: relation** esegue il mapping dell' **\<Contact>** elemento alla tabella Person. Contact del database AdventureWorks. L'annotazione **SQL: Field** esegue il mapping dell' **\<FName>** elemento alla colonna FirstName e dell' **\<LName>** elemento alla colonna LastName.  
   
  Non è stata specificata alcuna annotazione per l'attributo **ContactID** . Il risultato ottenuto è un mapping predefinito dell'attributo alla colonna con lo stesso nome.  
   

@@ -1,5 +1,6 @@
 ---
 title: Mapping XSD predefinito a tabelle/colonne (SQLXML)
+description: Per informazioni sul modo in cui viene eseguito il mapping predefinito di elementi e attributi in uno schema XSD a tabelle e colonne in SQLXML 4,0.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -27,12 +28,12 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9a1c2ec82a539eb509950580ddea0b8164167bb1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cabf0e7eb0fd65121cab717ffc2b94b22b4cc354
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257449"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84885458"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Mapping predefinito di elementi e attributi XSD a tabelle e colonne (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,8 +42,8 @@ ms.locfileid: "75257449"
 ## <a name="examples"></a>Esempi  
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per l'esecuzione di esempi SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-default-mapping"></a>A. Definizione del mapping predefinito  
- In questo esempio non viene specificata alcuna annotazione nello schema XSD. L' ** \<elemento Person. Contact>** è di tipo complesso e, pertanto, esegue il mapping per impostazione predefinita alla tabella Person. Contact del database AdventureWorks. Tutti gli attributi (ContactID, FirstName, LastName) dell'elemento ** \<person. Contact>** sono di tipo semplice ed eseguono il mapping per impostazione predefinita alle colonne con gli stessi nomi nella tabella Person. Contact.  
+### <a name="a-specifying-default-mapping"></a>R. Definizione del mapping predefinito  
+ In questo esempio non viene specificata alcuna annotazione nello schema XSD. L' **\<Person.Contact>** elemento è di tipo complesso e, pertanto, esegue il mapping per impostazione predefinita alla tabella Person. Contact del database AdventureWorks. Tutti gli attributi (ContactID, FirstName, LastName) dell' **\<Person.Contact>** elemento sono di tipo semplice ed eseguono il mapping per impostazione predefinita alle colonne con gli stessi nomi nella tabella Person. Contact.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -93,7 +94,7 @@ ms.locfileid: "75257449"
 ```  
   
 ### <a name="b-mapping-an-xml-element-to-a-database-column"></a>B. Mapping di un elemento XML a una colonna del database  
- Anche in questo esempio viene eseguito un mapping predefinito, in quanto non viene utilizzata alcuna annotazione. L' ** \<elemento Person. Contact>** è di tipo complesso e viene mappato alla tabella con lo stesso nome nel database. Gli elementi ** \<FirstName>** e ** \<LastName>** e l'attributo **EmployeeID** sono di tipo semplice e, pertanto, eseguono il mapping alle colonne con gli stessi nomi. L'unica differenza tra questo e l'esempio precedente consiste nel fatto che gli elementi vengono utilizzati per eseguire il mapping dei campi FirstName e LastName.  
+ Anche in questo esempio viene eseguito un mapping predefinito, in quanto non viene utilizzata alcuna annotazione. L' **\<Person.Contact>** elemento è di tipo complesso e viene mappato alla tabella con lo stesso nome nel database. Gli elementi **\<FirstName>** e e **\<LastName>** l'attributo **EmployeeID** sono di tipo semplice e, pertanto, eseguono il mapping alle colonne con gli stessi nomi. L'unica differenza tra questo e l'esempio precedente consiste nel fatto che gli elementi vengono utilizzati per eseguire il mapping dei campi FirstName e LastName.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -147,7 +148,7 @@ ms.locfileid: "75257449"
 ```  
   
 ### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>C. Mapping di un elemento XML a una colonna con tipo di dati XML  
- Anche in questo esempio viene eseguito un mapping predefinito, in quanto non viene utilizzata alcuna annotazione. L' ** \<elemento>di Production. ProductModel** è di tipo complesso e viene mappato alla tabella con lo stesso nome nel database. L'attributo **ProductModelID** è di tipo semplice e, pertanto, viene mappato alle colonne con gli stessi nomi. L'unica differenza tra questo e gli esempi precedenti consiste nel fatto che l' ** \<elemento instructions>** viene mappato a una colonna che utilizza il tipo di dati **XML** utilizzando il tipo **xsd: anyType** .  
+ Anche in questo esempio viene eseguito un mapping predefinito, in quanto non viene utilizzata alcuna annotazione. L' **\<Production.ProductModel>** elemento è di tipo complesso e viene mappato alla tabella con lo stesso nome nel database. L'attributo **ProductModelID** è di tipo semplice e, pertanto, viene mappato alle colonne con gli stessi nomi. L'unica differenza tra questo e gli esempi precedenti consiste nel fatto che l' **\<Instructions>** elemento sta eseguendo il mapping a una colonna che utilizza il tipo di dati **XML** utilizzando il tipo **xsd: anyType** .  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -163,7 +164,7 @@ ms.locfileid: "75257449"
 </xsd:schema>  
 ```  
   
- Il tipo di dati **XML** è stato [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]introdotto in.  
+ Il tipo di dati **XML** è stato introdotto in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Per testare una query Xpath di esempio sullo schema  
   

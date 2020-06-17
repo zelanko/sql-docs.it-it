@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c16a1b25542e38bfc434fbe994ad6bb462069796
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: c6bdacd512dce26d423980cb5af3c91d5947cb24
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670005"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881801"
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;query dei dati &gt; di origine-forma
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -26,38 +26,38 @@ ms.locfileid: "83670005"
   
 ```  
   
-SHAPE {<master query>}  
+SHAPE {<primary query>}  
 APPEND ({ <child table query> }   
-     RELATE <master column> TO <child column>)   
+     RELATE <primary column> TO <child column>)   
           AS <column table name>  
 [  
      ({ <child table query> }   
-     RELATE <master column> TO <child column>)   
+     RELATE <primary column> TO <child column>)   
           AS < column table name>  
 ...  
 ]       
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *query master*  
+ *query primaria*  
  Query che restituisce la tabella padre.  
   
  *query tabella figlio*  
  Query che restituisce la tabella nidificata.  
   
- *colonna master*  
+ *colonna primaria*  
  Colonna della tabella padre utilizzata per identificare le righe figlio tra i risultati di una query che restituisce una tabella figlio.  
   
  *colonna figlio*  
- Colonna della tabella figlio utilizzata per identificare le righe padre tra i risultati di una query che restituisce la tabella padre.  
+ Colonna nella tabella figlio per identificare la riga padre dal risultato di una query primaria.  
   
  *Nome tabella colonne*  
  Nome della colonna appena aggiunta nella tabella padre per creare la tabella figlio.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Le query devono essere ordinate in base alla colonna che definisce la correlazione tra la tabella padre e la tabella figlio.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Per eseguire il training di un modello contenente una tabella nidificata, è possibile utilizzare l'esempio seguente all'interno di un'istruzione [INSERT INTO &#40;&#41;DMX](../dmx/insert-into-dmx.md) . Le due tabelle all'interno dell'istruzione **Shape** sono correlate tramite la colonna **OrderNumber** .  
   
 ```  

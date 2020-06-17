@@ -1,5 +1,6 @@
 ---
 title: Funzione Number (XQuery) | Microsoft Docs
+description: Informazioni sul numero di funzione XQuery () che restituisce il valore numerico di un argomento specificato.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dff6d19b-765c-4df9-afff-9a0e7be9b91b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 31a52f86692d5769fe22f4cf0b5a04ad324c3ac0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19e94b01667d666a714db22d85d866b0df2ec3fc
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930111"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881841"
 ---
 # <a name="functions-on-nodes---number"></a>Funzioni su nodi - number
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ fn:number($arg as node()?) as xs:double?
  Nodo per il quale verrà restituito un valore numerico.  
   
 ## <a name="remarks"></a>Osservazioni  
- Se *$arg* viene omesso, viene restituito il valore numerico del nodo di contesto, convertito in un valore Double. In SQL Server, **FN: Number ()** senza un argomento può essere usato solo nel contesto di un predicato dipendente dal contesto. In particolare, può essere utilizzata solo tra parentesi ([ ]). Ad esempio, l'espressione seguente restituisce l'elemento `ROOT` <>.  
+ Se *$arg* viene omesso, viene restituito il valore numerico del nodo di contesto, convertito in un valore Double. In SQL Server, **FN: Number ()** senza un argomento può essere usato solo nel contesto di un predicato dipendente dal contesto. In particolare, può essere utilizzata solo tra parentesi ([ ]). Ad esempio, l'espressione seguente restituisce l' `ROOT` elemento <>.  
   
 ```  
 declare @x xml  
@@ -53,7 +54,7 @@ select @x.query('/ROOT[number()=111]')
 ## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
-### <a name="a-using-the-number-xquery-function-to-retrieve-the-numeric-value-of-an-attribute"></a>A. Utilizzo della funzione XQuery number() per recuperare il valore numerico di un attributo  
+### <a name="a-using-the-number-xquery-function-to-retrieve-the-numeric-value-of-an-attribute"></a>R. Utilizzo della funzione XQuery number() per recuperare il valore numerico di un attributo  
  La query seguente recupera il valore numerico dell'attributo lotsize dal primo centro di lavorazione nel processo di produzione del modello di prodotto 7.  
   
 ```  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2f5b1a42-b814-4d7d-b603-5383d9ac66b9
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 71e2d7f2bce555cca469a46a95a1fc3e000eea76
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 7609ecdf63f1bec0a344c9c6c8456a009ca3bbfa
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84528037"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880660"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Scenario di Analysis Services Tutorial
   Questa esercitazione si riferisce alla società fittizia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] è una multinazionale che produce e commercializza biciclette in acciaio e in materiali compositi sui mercati dell'America del Nord, dell'Europa e dell'Asia. La sede centrale di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] si trova a Bothell, nello stato di Washington, e vi lavorano 500 dipendenti. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] dispone inoltre di numerosi team di vendita dislocati nelle diverse aree di mercato.  
@@ -26,7 +26,7 @@ ms.locfileid: "84528037"
 ## <a name="current-analysis-environment"></a>Ambiente di analisi attuale  
  Per supportare la necessità di analisi dei dati dei reparti vendite e marketing nonché della direzione, la società attualmente estrae i dati transazionali dal database [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] e le informazioni non transazionali, come ad esempio gli obiettivi di vendita, da fogli di calcolo. Tali informazioni vengono poi consolidate nel data warehouse relazionale **AdventureWorksDW2012** . Il data warehouse, tuttavia, presenta i seguenti problemi:  
   
--   I report sono statici. Gli utenti non possono esplorare i dati in modo interattivo nei report per ottenere informazioni più dettagliate, come è invece possibile fare utilizzando una tabella pivot di [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel. Sebbene il set di report predefiniti esistente si riveli sufficiente per molti utenti, gli utenti più esperti devono disporre di accesso diretto alle query del database per generare query interattive e report specializzati. Data la complessità del database **AdventureWorksDW2012** , tali utenti, tuttavia, impiegano una quantità eccessiva di tempo per capire come creare query efficienti.  
+-   I report sono statici. Gli utenti non possono esplorare i dati in modo interattivo nei report per ottenere informazioni più dettagliate, come è invece possibile fare utilizzando una tabella pivot di [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel. Sebbene il set di report predefiniti esistente si riveli sufficiente per molti utenti, gli utenti più esperti devono disporre di accesso diretto alle query del database per generare query interattive e report specializzati. Tuttavia, a causa della complessità del database **AdventureWorksDW2012** , è necessario troppo tempo per consentire a tali utenti di apprendere come creare query efficienti.  
   
 -   Le prestazioni delle query sono estremamente variabili. Alcune query, ad esempio, restituiscono i risultati molto rapidamente, in pochi secondi, mentre altre impiegano molti minuti.  
   

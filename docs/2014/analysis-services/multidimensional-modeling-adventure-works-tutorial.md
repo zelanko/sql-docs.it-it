@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: db55e226-601a-4026-8651-573195555a59
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 634ad200cc8c46282eeb6146a8a590811e6d69a3
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 6709c8fb5a4e0eda8b973582ae51fe9458f6377a
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84537373"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880297"
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>Modellazione multidimensionale (esercitazione di AdventureWorks)
   Introduzione all'esercitazione [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. In questa esercitazione viene descritto come utilizzare [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] per sviluppare e distribuire un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilizzando la società fittizia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] per tutti gli esempi.  
@@ -61,7 +61,7 @@ ms.locfileid: "84537373"
 |[Lezione 10: Definizione dei ruoli amministrativi](lesson-10-defining-administrative-roles.md)|15 minuti|  
   
 > [!NOTE]  
->  Il database del cubo che verrà creato in questa esercitazione è una versione semplificata del progetto di modello multidimensionale di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che fa parte dei database di esempio di Adventure Works disponibile per il download sul sito codeplex. La versione per l'esercitazione del database multidimensionale Adventure Works è semplificata per focalizzare maggiormente l'attenzione sulle specifiche competenze con cui si desidera subito familiarizzare. Dopo avere completato l'esercitazione, esplorare il progetto di modello multidimensionale per proprio conto per accrescere la comprensione della modellazione multidimensionale in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
+>  Il database del cubo che verrà creato in questa esercitazione è una versione semplificata del progetto di modello multidimensionale di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che fa parte dei database di esempio di Adventure Works disponibile per il download sul sito codeplex. La versione dell'esercitazione del database multidimensionale Adventure Works è stata semplificata per concentrarsi maggiormente sulle competenze specifiche che si desidera migliorare subito. Dopo avere completato l'esercitazione, esplorare il progetto di modello multidimensionale per proprio conto per accrescere la comprensione della modellazione multidimensionale in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ## <a name="next-step"></a>passaggio successivo  
  Per iniziare questa esercitazione, passare alla prima lezione: [Lesson 1: Defining a Data Source View within an Analysis Services Project](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md).  

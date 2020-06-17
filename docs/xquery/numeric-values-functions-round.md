@@ -1,5 +1,6 @@
 ---
 title: Funzione round (XQuery) | Microsoft Docs
+description: Informazioni sulla funzione XQuery round () che restituisce il numero che non ha una parte frazionaria più vicina all'argomento specificato.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 320b572f-bd5b-4055-95a6-dec5718c0041
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1927d6e483683699196cfc7e87928f27bf23446a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53686410ff6dc36af5cc50a0210e33e9a1fb6ad1
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946548"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881480"
 ---
 # <a name="numeric-values-functions---round"></a>Funzioni per valori numerici - round
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

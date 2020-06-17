@@ -1,5 +1,6 @@
 ---
 title: Sistema di tipi (XQuery) | Microsoft Docs
+description: Informazioni sul sistema di tipi XQuery che include tipi incorporati di XML Schema e tipi definiti nello spazio dei nomi XPath-DataTypes.
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0736bc39ceaa6d9a0aa541d2af3b2b784614322b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f82cfc060b021e28c5b5e73602285b1edc3fcf20
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946207"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886552"
 ---
 # <a name="type-system-xquery"></a>Sistema di tipi (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "67946207"
 ## <a name="built-in-types-of-xml-schema"></a>Tipi predefiniti di XML Schema  
  I tipi predefiniti di XML Schema hanno un prefisso predefinito xs Alcuni di questi tipi includono **xs: integer** e **xs: String**. Tutti questi tipi predefiniti sono supportati ed è possibile utilizzarli per la creazione di una raccolta di XML Schema.  
   
- Quando si esegue una query su codice XML tipizzato, il tipo statico e dinamico dei nodi è determinato dalla raccolta di XML Schema associata alla colonna o alla variabile su cui viene eseguita la query. Per ulteriori informazioni sui tipi statici e dinamici, vedere il [contesto dell'espressione e la valutazione delle Query &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md). Ad esempio, la query seguente viene specificata in base a **xml** una colonna XML`Instructions`tipizzata (). Nell'espressione viene utilizzato l'elemento `instance of` per verificare che il valore tipizzato dell'attributo `LotSize` restituito sia di tipo `xs:decimal`.  
+ Quando si esegue una query su codice XML tipizzato, il tipo statico e dinamico dei nodi è determinato dalla raccolta di XML Schema associata alla colonna o alla variabile su cui viene eseguita la query. Per ulteriori informazioni sui tipi statici e dinamici, vedere il [contesto dell'espressione e la valutazione delle Query &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md). Ad esempio, la query seguente viene specificata in base a una colonna **XML** tipizzata ( `Instructions` ). Nell'espressione viene utilizzato l'elemento `instance of` per verificare che il valore tipizzato dell'attributo `LotSize` restituito sia di tipo `xs:decimal`.  
   
 ```  
 SELECT Instructions.query('  
@@ -105,7 +106,7 @@ SELECT @x.query( '/a[1] instance of element()')
   
 -   La [funzione stringa &#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md) restituisce il valore stringa del nodo.  
   
- Nella raccolta di XML Schema seguente viene definito l' `root` elemento> <del tipo Integer:  
+ Nella raccolta di XML Schema seguente `root` viene definito l'elemento> <del tipo Integer:  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -132,7 +133,7 @@ SET @x='<root>5</root>'
 SELECT @x.query('string(/root[1]) + 3')  
 ```  
   
- Nell'esempio seguente viene calcolato il totale degli attributi `LaborHours`. La `data()` funzione recupera i valori tipizzati `LaborHours` degli attributi da tutti gli `Location` elementi <> per un modello di prodotto. In base alla XML Schema associata alla `Instruction` colonna, `LaborHours` è di tipo **xs: Decimal** .  
+ Nell'esempio seguente viene calcolato il totale degli attributi `LaborHours`. La `data()` funzione recupera i valori tipizzati degli `LaborHours` attributi da tutti gli `Location` elementi <> per un modello di prodotto. In base alla XML Schema associata alla `Instruction` colonna, `LaborHours` è di tipo **xs: Decimal** .  
   
 ```  
 SELECT Instructions.query('   

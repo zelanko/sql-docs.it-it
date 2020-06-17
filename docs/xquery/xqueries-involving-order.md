@@ -1,5 +1,6 @@
 ---
 title: Query XQuery che coinvolgono l'ordine | Microsoft Docs
+description: Esempi di query XQuery basati sulla sequenza di visualizzazione dei nodi in un documento.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4fc30086978e26f53f7a4fdbab8a731ac2334181
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36c7e512c1e691d0341cb802a61e57d46d4b076a
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946117"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880518"
 ---
 # <a name="xqueries-involving-order"></a>Query XQuery che implicano l'ordinamento
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Nei database relazionali non esiste il concetto di sequenza. Ad esempio, non è possibile eseguire una richiesta per ottenere il primo cliente del database, Tuttavia, è possibile eseguire una query su un documento XML e \<recuperare il primo elemento Customer>. In questo modo si otterrà lo stesso cliente.  
+  Nei database relazionali non esiste il concetto di sequenza. Ad esempio, non è possibile eseguire una richiesta per ottenere il primo cliente del database, Tuttavia, è possibile eseguire una query su un documento XML e recuperare il primo \<Customer> elemento. In questo modo si otterrà lo stesso cliente.  
   
  In questo argomento vengono illustrate le query basate sulla sequenza di visualizzazione dei nodi nel documento.  
   
@@ -115,7 +116,7 @@ where ProductModelID=7
   
  Dalla query precedente si noti quanto segue:  
   
--   La query crea l'elemento <loca`tion`> e recupera i relativi valori di attributo dal database.  
+-   La query crea l'elemento <loca `tion`> e recupera i relativi valori di attributo dal database.  
   
 -   La query utilizza due iterazioni di FLWOR (for...return), una per recuperare gli strumenti e l'altra per recuperare i materiali utilizzati.  
   
@@ -157,7 +158,7 @@ where ProductModelID=19
   
  Dalla query precedente si noti quanto segue:  
   
- Il corpo della query costruisce il codice XML che `ProductModel` include l'elemento <> con gli attributi ProductModelID e ProductModelName.  
+ Il corpo della query costruisce il codice XML che include l' `ProductModel` elemento <> con gli attributi ProductModelID e ProductModelName.  
   
 -   La query usa un per... Restituisce un ciclo per recuperare le descrizioni delle caratteristiche del modello di prodotto. La funzione **Position ()** viene utilizzata per recuperare le prime due funzionalità.  
   

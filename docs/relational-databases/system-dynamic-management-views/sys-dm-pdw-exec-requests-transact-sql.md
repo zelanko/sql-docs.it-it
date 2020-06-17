@@ -12,12 +12,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 982096893cdce9c4b604df9c3fb0258cefaaf93d
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: a3ee27ca4f92efb950c35ab0d8174676246c14b3
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796522"
+ms.locfileid: "84818049"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests (Transact-SQL)
 
@@ -34,7 +34,7 @@ ms.locfileid: "84796522"
 |start_time|**datetime**|Ora in cui è stata avviata l'esecuzione della richiesta.|NULL per le richieste in coda; in caso contrario, **DateTime** valido minore o uguale all'ora corrente.|  
 |end_compile_time|**datetime**|Ora di completamento della compilazione della richiesta da parte del motore.|NULL per le richieste che non sono state ancora compilate; in caso contrario, un valore **DateTime** valido minore di start_time e minore o uguale all'ora corrente.|
 |end_time|**datetime**|Ora in cui l'esecuzione della richiesta è stata completata, non riuscita o è stata annullata.|Null per le richieste in coda o attive; in caso contrario, un valore **DateTime** valido minore o uguale all'ora corrente.|  
-|total_elapsed_time|**int**|Tempo trascorso nell'esecuzione dall'avvio della richiesta, in millisecondi.|Compreso tra 0 e la differenza tra start_time e end_time.</br></br> Se total_elapsed_time supera il valore massimo per un numero intero, total_elapsed_time continuerà a essere il valore massimo. Questa condizione genererà l'avviso "è stato superato il valore massimo".</br></br> Il valore massimo in millisecondi è uguale a 24,8 giorni.|  
+|total_elapsed_time|**int**|Tempo trascorso nell'esecuzione dall'avvio della richiesta, in millisecondi.|Compreso tra 0 e la differenza tra submit_time e end_time.</br></br> Se total_elapsed_time supera il valore massimo per un numero intero, total_elapsed_time continuerà a essere il valore massimo. Questa condizione genererà l'avviso "è stato superato il valore massimo".</br></br> Il valore massimo in millisecondi è uguale a 24,8 giorni.|  
 |label|**nvarchar(255)**|Stringa di etichetta facoltativa associata ad alcune istruzioni di query SELECT.|Qualsiasi stringa contenente ' a-z ',' A-Z ',' 0-9',' _'.|  
 |error_id|**nvarchar (36)**|ID univoco dell'errore associato alla richiesta, se disponibile.|Vedere [sys. dm_pdw_errors &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md); impostare su NULL se non si è verificato alcun errore.|  
 |database_id|**int**|Identificatore del database usato dal contesto esplicito, ad esempio usare DB_X.|Vedere ID in [sys. databases &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  

@@ -1,5 +1,6 @@
 ---
 title: Specifica di un asse (SQLXML)
+description: Informazioni su come specificare un asse in una query XPath 4,0 XPath specifica la relazione di struttura ad albero tra i nodi selezionati dal location step e il nodo di contesto.
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a219c2093832b979171584d5559da359b574552e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 43daf972eacd67dcd7e75eabd1aca87bb3f67932
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75253059"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882179"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>Specifica di un asse (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "75253059"
   
      Contiene l'elemento figlio del nodo di contesto.  
   
-     L'espressione XPath seguente (percorso) Seleziona dal nodo di contesto corrente tutti gli elementi figlio del ** \<cliente>** :  
+     L'espressione XPath seguente (percorso) Seleziona dal nodo di contesto corrente tutti gli **\<Customer>** elementi figlio:  
   
     ```  
     child::Customer  
@@ -47,7 +48,7 @@ ms.locfileid: "75253059"
   
      Contiene l'elemento padre del nodo di contesto.  
   
-     L'espressione XPath seguente seleziona tutti gli ** \<** elementi padre>del cliente dell' ** \<ordine>** figli:  
+     L'espressione XPath seguente seleziona tutti gli **\<Customer>** elementi padre degli **\<Order>** elementi figlio:  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
@@ -69,7 +70,7 @@ ms.locfileid: "75253059"
   
      Contiene il nodo di contesto stesso.  
   
-     L'espressione XPath seguente seleziona il nodo corrente se si tratta dell' ** \<ordine>** nodo:  
+     L'espressione XPath seguente seleziona il nodo corrente se si tratta del **\<Order>** nodo:  
   
     ```  
     self::Order  

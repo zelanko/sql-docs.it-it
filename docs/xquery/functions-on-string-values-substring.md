@@ -1,5 +1,6 @@
 ---
 title: Funzione SUBSTRING (XQuery) | Microsoft Docs
+description: Informazioni sulla funzione XQuery substring () che restituisce la parte specificata di una stringa di origine.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2188cff20411fe90d4858763f65cff7f6fe9c9d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 694fb912675a15055688956a18714185e25995c4
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004647"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881920"
 ---
 # <a name="functions-on-string-values---substring"></a>Funzioni su valori stringa - substring
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -69,9 +70,9 @@ fn:substring($sourceString as xs:string?,
  SQL Server consente *$startingLoc* e *$length* la sequenza vuota, perché la sequenza vuota è un possibile valore in seguito a errori dinamici di cui è stato eseguito il mapping a ().  
   
 ## <a name="examples"></a>Esempi  
- In questo argomento vengono forniti esempi di XQuery sulle istanze XML **xml** archiviate in diverse colonne [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] di tipo XML nel database.  
+ In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
   
-### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>A. Utilizzo della funzione XQuery substring() per recuperare le descrizioni parziali del modello del prodotto disponibili nell'elemento Summary  
+### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>R. Utilizzo della funzione XQuery substring() per recuperare le descrizioni parziali del modello del prodotto disponibili nell'elemento Summary  
  La query recupera i primi 50 caratteri del testo che descrive il modello del prodotto, il <`Summary`> elemento nel documento.  
   
 ```  
@@ -85,7 +86,7 @@ where CatalogDescription.exist('/pd:ProductDescription')  = 1;
   
  Dalla query precedente si noti quanto segue:  
   
--   La funzione **String ()** restituisce il valore stringa dell'elemento<`Summary`>. Questa funzione viene usata, perché l'elemento `Summary` <> contiene sia il testo che i sottoelementi (elementi di formattazione HTML) e perché si ignoreranno questi elementi e si recupererà tutto il testo.  
+-   La funzione **String ()** restituisce il valore stringa dell'elemento<`Summary`>. Questa funzione viene usata, perché l' `Summary` elemento <> contiene sia il testo che i sottoelementi (elementi di formattazione HTML) e perché si ignoreranno questi elementi e si recupererà tutto il testo.  
   
 -   La funzione **substring ()** recupera i primi 50 caratteri dal valore stringa recuperato dalla **stringa ()**.  
   

@@ -1,5 +1,6 @@
 ---
 title: Usare operatori booleani in query XPath (SQLXML)
+description: Informazioni su come usare gli operatori booleani nelle query XPath 4,0 di SQLXML.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 00a53f9d1b04d0f96e854a9e85c1588aa33e60fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 41c521f2e8d1984ab8c10b8970c83c7ebe495f99
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252575"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84884181"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>Specifica di operatori booleani in query XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75252575"
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>R. Specificare l'operatore booleano OR  
- Questa query XPath restituisce **CustomerID** gli ** \<** elementi figlio del>Customer del nodo di contesto con il valore dell'attributo CustomerID 13 o 31:  
+ Questa query XPath restituisce gli **\<Customer>** elementi figlio del nodo di contesto il cui valore di attributo **CustomerID** è 13 o 31:  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
@@ -43,7 +44,7 @@ ms.locfileid: "75252575"
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- Nel predicato `attribute` è l'asse e `CustomerID` è il test di nodo (true se **CustomerID** è un ** \<attributo>** nodo, perché l' ** \<attributo>** nodo è il nodo primario per l'asse degli **attributi** ). Il predicato filtra gli ** \<elementi Customer>** e restituisce solo quelli che soddisfano la condizione specificata nel predicato.  
+ Nel predicato `attribute` è l'asse e `CustomerID` è il test di nodo (true se **CustomerID** è un **\<attribute>** nodo, perché il **\<attribute>** nodo è il nodo primario per l'asse degli **attributi** ). Il predicato filtra gli **\<Customer>** elementi e restituisce solo quelli che soddisfano la condizione specificata nel predicato.  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>Per testare query Xpath sullo schema di mapping  
   

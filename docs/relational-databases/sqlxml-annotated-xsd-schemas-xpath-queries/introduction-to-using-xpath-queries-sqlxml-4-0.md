@@ -1,5 +1,6 @@
 ---
 title: Introduzione all'utilizzo di query XPath (SQLXML)
+description: Informazioni di base sull'utilizzo di query XPath in SQLXML 4,0.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f82c330e2d18f05d0f358171a4ffeabc63ac9c3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3ed8de737a350181a62eb12b8c9f2f19a762a44c
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246589"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882247"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introduzione all'utilizzo di query XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,17 +48,17 @@ ms.locfileid: "75246589"
 </root>  
 ```  
   
- In questo documento, ** \<Customer>** è un nodo elemento, **CID** è un nodo attributo e **"important"** è un nodo di testo.  
+ In questo documento, **\<Customer>** è un nodo di elemento, **CID** è un nodo di attributo e **"important"** è un nodo di testo.  
   
- XPath è un linguaggio di navigazione grafica utilizzato per selezionare un set di nodi da un documento XML. Ogni operatore XPath consente di selezionare un set di nodi in base a un set di nodi selezionato da un operatore XPath precedente. Ad esempio, dato un set di ** \<nodi Customer>** , XPath può selezionare tutti ** \<i nodi Order>** con il valore di **Data** Attribute **"7/14/1999"**. Il set di nodi risultante contiene tutti gli ordini con data 7/14/1999.  
+ XPath è un linguaggio di navigazione grafica utilizzato per selezionare un set di nodi da un documento XML. Ogni operatore XPath consente di selezionare un set di nodi in base a un set di nodi selezionato da un operatore XPath precedente. Dato un set di **\<Customer>** nodi, ad esempio, XPath può selezionare tutti **\<Order>** i nodi con il valore dell'attributo **date** **"7/14/1999"**. Il set di nodi risultante contiene tutti gli ordini con data 7/14/1999.  
   
- Il linguaggio XPath è definito dal World Wide Web Consortium (W3C) come linguaggio di navigazione standard. SQLXML 4,0 implementa un subset della specifica XPath W3C, disponibile in http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
+ Il linguaggio XPath è definito dal World Wide Web Consortium (W3C) come linguaggio di navigazione standard. SQLXML 4,0 implementa un subset della specifica XPath W3C, disponibile in http://www.w3.org/TR/1999/PR-xpath-19991008.html .  
   
  Di seguito vengono elencate alcune delle differenze principali tra l'implementazione di XPath del W3C e l'implementazione di SQLXML 4.0.  
   
 -   **Query radice**  
   
-     SQLXML 4.0 non supporta la query radice (/). Ogni query XPath deve iniziare a una ** \<>ElementType** di primo livello nello schema.  
+     SQLXML 4.0 non supporta la query radice (/). Ogni query XPath deve iniziare a un livello superiore dello **\<ElementType>** schema.  
   
 -   **Segnalazione di errori**  
   
@@ -95,7 +96,7 @@ ms.locfileid: "75246589"
 |-------------|----------|----------------------------|  
 |Assi|**attributi**, **figlio**, **padre**e assi **autonomi**|[Specifica di assi in query XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |Predicati con valori booleani, tra i quali sono inclusi predicati successivi e nidificati||[Specifica di operatori aritmetici nelle query XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|Tutti gli operatori relazionali|=,! =, <, \<=, >, >=|[Specifica di operatori relazionali nelle query XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|Tutti gli operatori relazionali|=,! =, <, \<=, > , >=|[Specifica di operatori relazionali nelle query XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Operatori aritmetici|+, -, *, div|[Specifica di operatori aritmetici nelle query XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Funzioni di conversione esplicita|**numero ()**, **stringa ()**, **booleano ()**|[Specifica di funzioni di conversione esplicita nelle query XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |operatori booleani|AND, OR|[Specifica di operatori booleani in query XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  

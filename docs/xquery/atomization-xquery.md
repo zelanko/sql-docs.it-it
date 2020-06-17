@@ -1,5 +1,6 @@
 ---
 title: Atomizzazione (XQuery) | Microsoft Docs
+description: Informazioni sul processo di atomizzazione in XQuery in cui vengono estratti i valori tipizzati di un elemento.
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e3d7cf2f-c6fb-43c2-8538-4470a6375af5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e034e6464e395c1516eed874ed1c0cff2c32238f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 70d623d8583535aae7ddcc23f26ab7c5e4e36fc7
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67985704"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886890"
 ---
 # <a name="atomization-xquery"></a>Atomizzazione (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ SELECT @x.query('sum(data(ROOT/Location/@LaborHours))')
   
 -   Nella costruzione dell'attributo OrignialLaborHours, l'atomizzazione viene applicata in modo implicito alla sequenza singleton restituita da (`$WC/@LaborHours`). Il valore tipizzato dell'attributo LaborHours viene assegnato a OrignialLaborHours.  
   
--   Nella costruzione dell'attributo UpdatedLaborHoursV1, l'operatore aritmetico richiede valori atomici. Pertanto, **Data ()** viene applicato in modo implicito all'attributo LaborHours restituito da (`$WC/@LaborHours`). Successivamente, viene aggiunto il valore atomico 1. La costruzione dell'attributo UpdatedLaborHoursV2 Mostra l'applicazione esplicita dei **dati ()**, ma non è obbligatoria.  
+-   Nella costruzione dell'attributo UpdatedLaborHoursV1, l'operatore aritmetico richiede valori atomici. Pertanto, **Data ()** viene applicato in modo implicito all'attributo LaborHours restituito da ( `$WC/@LaborHours` ). Successivamente, viene aggiunto il valore atomico 1. La costruzione dell'attributo UpdatedLaborHoursV2 Mostra l'applicazione esplicita dei **dati ()**, ma non è obbligatoria.  
   
 ```  
 SELECT Instructions.query('  

@@ -1,5 +1,6 @@
 ---
 title: Modello a oggetti per il caricamento bulk XML di SQL Server (SQLXML)
+description: Informazioni sui metodi e sulle proprietà dell'oggetto SQLXMLBulkLoad usato per il caricamento bulk di XML in SQLXML 4,0.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -32,16 +33,16 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a71a5c756953c6b70e51422b5c1032b117eb7785
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56dff7936e236ae76333543e902f588fa8ead1be
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246707"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882557"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>Modello a oggetti per il caricamento bulk XML di SQL Server (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Il modello [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a oggetti Microsoft XML bulk load è costituito dall'oggetto SQLXMLBulkLoad. Questo oggetto supporta i metodi e le proprietà seguenti.  
+  Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] modello a oggetti Microsoft XML bulk load è costituito dall'oggetto SQLXMLBulkLoad. Questo oggetto supporta i metodi e le proprietà seguenti.  
   
 ## <a name="methods"></a>Metodi  
  Execute  
@@ -145,7 +146,7 @@ ms.locfileid: "75246707"
  Specifica se il caricamento bulk deve essere eseguito come transazione. In questo caso, è garantito il rollback se il caricamento bulk ha esito negativo. Si tratta di una proprietà booleana. Se la proprietà è impostata su TRUE, il caricamento bulk viene eseguito in un contesto transazionale. La proprietà TempFilePath è utile solo quando Transaction è impostato su TRUE.  
   
 > [!NOTE]  
->  Se si caricano dati binari (ad esempio i tipi di dati XML bin. Hex, bin. Base64 nei tipi di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Binary, image), la proprietà Transaction deve essere impostata su false.  
+>  Se si caricano dati binari (ad esempio i tipi di dati XML bin. Hex, bin. Base64 nei tipi di dati binary, Image [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), la proprietà Transaction deve essere impostata su false.  
   
  Il valore predefinito è FALSE.  
   

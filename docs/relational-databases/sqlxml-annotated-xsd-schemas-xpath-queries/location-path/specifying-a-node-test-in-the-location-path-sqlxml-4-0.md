@@ -1,5 +1,6 @@
 ---
 title: Specifica di un test di nodo nel percorso (SQLXML)
+description: Informazioni su come specificare un test di nodo nel percorso di una query XPath 4,0 XPath.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,32 +17,32 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f94f155ee86df6daf0c039a18f27c30e294d57df
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc00f51a357bf87b5031b669528c72c261a21017
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75254742"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882176"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>Specifica di un test di nodo nel percorso (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Un test di nodo specifica il tipo di nodo selezionato dal passo. Ogni asse (**figlio**, **padre**, **attributo**o **auto**) ha un tipo di nodo principale. Per l'asse degli **attributi** , il tipo di nodo principale è ** \<attribute>**. Per gli assi **padre**, **figlio**e **self** , il tipo di nodo principale è ** \<elemento>**.  
+  Un test di nodo specifica il tipo di nodo selezionato dal passo. Ogni asse (**figlio**, **padre**, **attributo**o **auto**) ha un tipo di nodo principale. Per l'asse degli **attributi** , il tipo di nodo principale è **\<attribute>** . Per gli assi **padre**, **figlio**e **self** , il tipo di nodo principale è **\<element>** .  
   
 > [!NOTE]  
 >  Il test di nodo con carattere jolly *, ad esempio `child::*`, non è supportato.  
   
 ## <a name="node-test-example-1"></a>Test del nodo: esempio 1  
- Il percorso `child::Customer` seleziona ** \<il cliente>** elementi figlio del nodo di contesto.  
+ Il percorso `child::Customer` Seleziona gli **\<Customer>** elementi figlio del nodo di contesto.  
   
- In questo esempio `child` è l'asse e `Customer` è il test di nodo. Il tipo di nodo principale per l'asse **figlio** è ** \<>elemento **. Pertanto, il test di nodo è true se il ** \<nodo Customer>** è un ** \<elemento>** nodo. Se il nodo di contesto non ha alcun ** \<cliente>** figli, viene restituito un set di nodi vuoto.  
+ In questo esempio `child` è l'asse e `Customer` è il test di nodo. Il tipo di nodo principale per l'asse **figlio** è **\<element>** . Pertanto, il test di nodo è TRUE se il **\<Customer>** nodo è un **\<element>** nodo. Se il nodo di contesto non dispone **\<Customer>** di elementi figlio, viene restituito un set di nodi vuoto.  
   
 ## <a name="node-test-example-2"></a>Test di nodo: esempio 2  
- Il percorso `attribute::CustomerID` consente di selezionare l'attributo **CustomerID** del nodo di contesto.  
+ Il percorso consente `attribute::CustomerID` di selezionare l'attributo **CustomerID** del nodo di contesto.  
   
- Nell'esempio `attribute` è l'asse e `CustomerID` è il test di nodo. Il tipo di nodo principale dell'asse dell' **attributo** è ** \<>attributo **. Pertanto, il test di nodo è true se **CustomerID** è un ** \<attributo>** nodo. Se il nodo di contesto non dispone di **CustomerID**, viene restituito un set di nodi vuoto.  
+ Nell'esempio `attribute` è l'asse e `CustomerID` è il test di nodo. Il tipo di nodo principale dell'asse dell' **attributo** è **\<attribute>** . Pertanto, il test di nodo è TRUE se **CustomerID** è un **\<attribute>** nodo. Se il nodo di contesto non dispone di **CustomerID**, viene restituito un set di nodi vuoto.  
   
 > [!NOTE]  
->  In questa implementazione di XPath, se un passaggio del percorso fa riferimento a un ** \<elemento>** o a un ** \<** tipo di>di attributo non dichiarato nello schema, viene generato un errore. a differenza di quanto avviene con l'implementazione di XPath in MSXML, che restituisce un set di nodi vuoto.  
+>  In questa implementazione di XPath, se un passaggio del percorso si riferisce a un **\<element>** **\<attribute>** tipo o non dichiarato nello schema, viene generato un errore. a differenza di quanto avviene con l'implementazione di XPath in MSXML, che restituisce un set di nodi vuoto.  
   
 ## <a name="abbreviated-syntax-for-the-axes"></a>Sintassi abbreviata per gli assi  
  Per il percorso è supportata la sintassi abbreviata seguente:  

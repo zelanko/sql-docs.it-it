@@ -1,5 +1,6 @@
 ---
 title: Autorizzazioni utenti e gruppi sovrapposte
+description: Informazioni sul modo in cui le autorizzazioni per l'appartenenza al gruppo e le autorizzazioni assegnate agli utenti interagiscono nelle schede modelli e membri gerarchia in Master Data Services.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2df45ce2a08e545bc7da11ab3f97df8aa86b0c26
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8f98fdc789ab534898a3cb08dde3222ebc1b71b
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727941"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84800533"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>Autorizzazioni utenti e gruppi sovrapposte (Master Data Services)
 

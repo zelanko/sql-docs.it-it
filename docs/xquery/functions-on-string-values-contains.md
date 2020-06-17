@@ -1,5 +1,6 @@
 ---
 title: Funzione Contains (XQuery) | Microsoft Docs
+description: Informazioni sull'utilizzo della funzione contains in un XQuery per determinare se un valore di stringa specificato contiene il valore della sottostringa specificato.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54b3603c18d814276d700a220fbee5e16ed77502
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d65e533f8bc808a7f3828cad797f22441905cea8
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899024"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881868"
 ---
 # <a name="functions-on-string-values---contains"></a>Funzioni su valori stringa - contains
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,8 +59,8 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
 ## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo XML nel database AdventureWorks.  
   
-### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>A. Utilizzo della funzione XQuery contains() per cercare una stringa di caratteri specifica  
- La query seguente trova i prodotti per i quali la descrizione di riepilogo contiene la parola Aerodynamic. La query restituisce il ProductID e l'elemento `Summary` <> per tali prodotti.  
+### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>R. Utilizzo della funzione XQuery contains() per cercare una stringa di caratteri specifica  
+ La query seguente trova i prodotti per i quali la descrizione di riepilogo contiene la parola Aerodynamic. La query restituisce il ProductID e l' `Summary` elemento <> per tali prodotti.  
   
 ```  
 --The product model description document uses  
@@ -108,7 +109,7 @@ where CatalogDescription.exist('
   
  `</Prod>`  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzioni XQuery per il tipo di dati XML](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

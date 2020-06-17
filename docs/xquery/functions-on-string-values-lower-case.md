@@ -1,5 +1,6 @@
 ---
 title: Funzione lower-case (XQuery) | Microsoft Docs
+description: Informazioni sulla funzione XQuery Lower-case () che converte ogni carattere di una stringa specificata nell'equivalente minuscolo.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a80d869afe67317476a1d68c28afa5456a4a7366
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9202f357ebf09bef666edfe9a9e18d6dc685545
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68077666"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886587"
 ---
 # <a name="functions-on-string-values---lower-case"></a>Funzioni su valori stringa - lower-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ fn:lower-case($arg as xs:string?) as xs:string
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>R. Conversione di una stringa in lettere maiuscole  
- Nell'esempio seguente viene modificata la stringa di input ' abcDEF!' @4' in lettere minuscole.  
+ Nell'esempio seguente viene modificata la stringa di input ' abcDEF! @4 ' per minuscole.  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  

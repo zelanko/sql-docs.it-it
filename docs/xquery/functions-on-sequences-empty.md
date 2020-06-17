@@ -1,5 +1,6 @@
 ---
 title: Funzione Empty (XQuery) | Microsoft Docs
+description: Informazioni sulla funzione XQuery Empty () che restituisce un valore che indica se una sequenza di elementi specificata è vuota.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 888739807a79163a8188f3b2f27b7f7860032bc4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b80437f4c5a51fa649a291673fc212483fd43ae
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004677"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881835"
 ---
 # <a name="functions-on-sequences---empty"></a>Funzioni su sequenze - empty
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ fn:empty($arg as item()*) as xs:boolean
 ## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
-### <a name="a-using-the-empty-xquery-function-to-determine-if-an-attribute-is-present"></a>A. Utilizzo della funzione XQuery empty() per determinare se un attributo è presente  
+### <a name="a-using-the-empty-xquery-function-to-determine-if-an-attribute-is-present"></a>R. Utilizzo della funzione XQuery empty() per determinare se un attributo è presente  
  Nel processo di produzione per il modello di prodotto 7, questa query restituisce tutti i centri di lavorazione che non dispongono di un attributo **MachineHours** .  
   
 ```  
