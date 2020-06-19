@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ab9d8e8e-b7da-44b2-b89f-b215d799f032
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4086ab60e4f9fab576ba2d28ab0bbe332435ba58
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfeed4c8d067c97e012bdd72ef0c7ebaac340098
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055654"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963071"
 ---
 # <a name="set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu"></a>Impostazione del valore di un vincolo di precedenza tramite il menu di scelta rapida
   Questa procedura descrive l'impostazione del valore di un vincolo di precedenza tramite il menu di scelta rapida.  
@@ -34,7 +33,7 @@ ms.locfileid: "66055654"
   
 5.  Per salvare il pacchetto aggiornato scegliere **Salva elementi selezionati** dal menu **File** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Vincoli di precedenza](control-flow/precedence-constraints.md)   
  [Connessione di attività e contenitori tramite un vincolo di precedenza predefinito](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [Impostare le proprietà di un vincolo di precedenza](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)   

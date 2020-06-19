@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e6a5d83c-5809-4c56-907a-73d0c7ccdd7a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 939e3befd0cbec87dbba7046761637c4b7655e22
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a615e26ac966fcf0c2af580825019c344889a5d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812748"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936052"
 ---
 # <a name="change-source-control"></a>Modificare il controllo del codice sorgente
   Consente di creare e gestire le connessioni e le associazioni che collegano una soluzione o un progetto salvato localmente a una cartella del database del controllo del codice sorgente.  
@@ -46,7 +45,7 @@ ms.locfileid: "62812748"
  **Connesso**  
  Consente di visualizzare lo stato di connessione di una soluzione o di un progetto selezionato.  
   
- **Disconnettere**  
+ **Disconnetti**  
  Consente di disconnettere la copia locale di una soluzione o di un progetto archiviata nel computer dalla corrispondente copia master memorizzata nel database. Utilizzare questo comando prima di disconnettere il computer dal server di controllo del codice sorgente, ad esempio durante una sessione di lavoro sul portatile in modalità offline.  
   
  **OK**  
@@ -55,7 +54,7 @@ ms.locfileid: "62812748"
  **Provider**  
  Consente di visualizzare il nome del plug-in del controllo del codice sorgente.  
   
- **Aggiorna**  
+ **Refresh** (Aggiornamento)  
  Consente di aggiornare le informazioni sulla connessione di tutti i progetti elencati in questa finestra di dialogo.  
   
  **Associazione server**  
@@ -70,7 +69,7 @@ ms.locfileid: "62812748"
  **Ordina**  
  Consente di eseguire l'ordinamento delle colonne visualizzate.  
   
- **Stato**  
+ **Status**  
  Consente di identificare lo stato di associazione e di connessione di un elemento. Le opzioni possibili sono:  
   
 |**Opzione**|**Descrizione**|  
@@ -80,10 +79,10 @@ ms.locfileid: "62812748"
 |Sconosciuto|Lo stato dell'elemento incluso nel controllo del codice sorgente non è ancora stato determinato.|  
 |Non incluso nel controllo del codice sorgente|L'elemento non è inserito nel controllo del codice sorgente.|  
   
- **Disassociare**  
+ **Separa**  
  Consente di visualizzare la finestra di dialogo **controllo del codice sorgente** che consente di rimuovere gli elementi selezionati dal controllo del codice sorgente e di annullare in modo definitivo gli elementi delle cartelle presenti.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Controllo del codice sorgente di Esplora soluzioni](../../2014/database-engine/solution-explorer-source-control.md)  
   
   

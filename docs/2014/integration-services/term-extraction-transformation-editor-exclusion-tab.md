@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 90110d95-fd97-4542-9cda-832c86606130
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4b1032a0fc11ab07069309b7053e756d28329b77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5539544afba4e2752baaefb2324b33d3ac897b0a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055233"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962241"
 ---
 # <a name="term-extraction-transformation-editor-exclusion-tab"></a>Editor trasformazione Estrazione termini (scheda Esclusione)
   Utilizzare la scheda **Esclusione** della finestra di dialogo **Editor trasformazione Estrazione termini** per impostare una connessione a una tabella di esclusione e specificare le colonne che contengono termini di esclusione.  
@@ -33,7 +32,7 @@ ms.locfileid: "66055233"
  **Gestione connessione OLE DB**  
  Selezionare una gestione connessione OLE DB esistente oppure fare clic su **Nuova**per creare una nuova connessione.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova connessione a un database usando la finestra di dialogo **Configura gestione connessione OLE DB** .  
   
  **Tabella o vista**  
@@ -45,7 +44,7 @@ ms.locfileid: "66055233"
  **Configura output errori**  
  Usare la finestra di dialogo [Configura output errori](../../2014/integration-services/configure-error-output.md) per specificare la gestione degli errori per le righe che causano errori.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor trasformazione Estrazione termini &#40;scheda Estrazione termini&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
  [Editor trasformazione Estrazione termini &#40;scheda Avanzate&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3ca00cf8-3460-43e9-9705-af4c530f7fbd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1c687b82433a8491fbdd1b54b9f92d9de62ad418
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2ad2ed1689494918080aaad85eb8f84efedc711
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055479"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962671"
 ---
 # <a name="sql-destination-editor-mappings-page"></a>Editor destinazione SQL Server (pagina Mapping)
   Utilizzare la pagina **Mapping** della finestra di dialogo **Editor destinazione SQL** per eseguire il mapping tra colonne di input e colonne di destinazione.  
@@ -39,7 +38,7 @@ ms.locfileid: "66055479"
  **Colonna di destinazione**  
  Consente di visualizzare tutte le colonne di destinazione disponibili, indipendentemente dal fatto che siano mappate o meno.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor destinazione SQL &#40;pagina Gestione connessione&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
  [Editor destinazione SQL &#40;pagina avanzate&#41;](../../2014/integration-services/sql-destination-editor-advanced-page.md)   

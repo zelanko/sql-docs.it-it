@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c626dcac-0474-432d-acc0-cfa643345372
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96eea051fbf4a34257d61ff8eaf4f796debf49a6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786736"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936012"
 ---
 # <a name="collations-and-code-pages"></a>Tabelle codici e regole di confronto
   In [!INCLUDE[hek_2](../includes/hek-2-md.md)] sono presenti restrizioni per le tabelle codici supportate per le colonne di tipo (var)char nelle tabelle ottimizzate per la memoria e nelle regole di confronto supportate utilizzate negli indici e nelle stored procedure compilate in modo nativo.  
@@ -82,7 +81,7 @@ GO
   
 -   In tutte espressioni e le operazioni di ordinamento nelle stored procedure compilate in modo nativo devono essere utilizzate le regole di confronto BIN2. L'implicazione è che tutti i confronti e le operazioni di ordinamento si basano sugli elementi di codice Unicode dei caratteri (rappresentazioni binarie). Ad esempio, in tutte le operazioni di ordinamento viene fatta distinzione tra maiuscole e minuscole (" Z" viene prima di "a "). Se necessario, utilizzare codice [!INCLUDE[tsql](../includes/tsql-md.md)] interpretato per le operazioni di ordinamento e confronto senza distinzione tra maiuscole e minuscole.  
   
--   Il troncamento dei dati UTF-16 non è supportato nelle stored procedure compilate in modo nativo. Ciò significa che i valori n (VAR) char (*n*) non possono essere convertiti nel tipo n (VAR) char (*i*) *, se* < i*n*, se le regole di confronto hanno _SC proprietà. Ad esempio, il codice seguente non è supportato:  
+-   Il troncamento dei dati UTF-16 non è supportato nelle stored procedure compilate in modo nativo. Ciò significa che i valori n (VAR) char (*n*) non possono essere convertiti nel tipo n (VAR) char (*i*) *, se i*  <  *n*, se le regole di confronto hanno _SC proprietà. Ad esempio, il codice seguente non è supportato:  
   
     ```sql  
     -- column definition using an _SC collation  
@@ -142,7 +141,7 @@ EXEC usp_EmployeeByName 'thomas', 'John'
 EXEC usp_EmployeeByName 'thomas', 'john'  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [OLTP in memoria &#40;ottimizzazione per la memoria&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

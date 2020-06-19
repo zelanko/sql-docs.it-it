@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 728811c4-5d7a-4420-abce-f56c5a0994d2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 36f447ce365f25135a521ea7e1760599aa17f9bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f29bf7098f0c73d0b672e20b973b1347349b31f2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812595"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936002"
 ---
 # <a name="compare-files"></a>Confronto di file
   È possibile confrontare i file per stabilire come hanno acquisito lo stato presente. Se viene rilevato, ad esempio, un difetto in una build del progetto del codice dopo l'archiviazione di una particolare versione del file di origine, è possibile confrontare la versione attuale con una precedente. Questo confronto aiuta a individuare il codice responsabile del difetto.  
@@ -34,7 +33,7 @@ ms.locfileid: "62812595"
   
 3.  Nella finestra di dialogo **Opzioni differenze** selezionare le opzioni appropriate e quindi fare clic su **report**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Impostare e recuperare le informazioni sulla versione](../../2014/database-engine/set-and-retrieve-version-information.md)   
  [Visualizza cronologia file](../../2014/database-engine/view-file-history.md)   
  [Visualizza cronologia progetto](../../2014/database-engine/view-project-history.md)   

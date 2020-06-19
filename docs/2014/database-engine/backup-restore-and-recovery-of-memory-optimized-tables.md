@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3f083347-0fbb-4b19-a6fb-1818d545e281
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1b710812bdc0ca8992b6eb865be8fac7787acff0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 902ed324a4823267e49331b75dbc78f51f63937d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812605"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936116"
 ---
 # <a name="backup-restore-and-recovery-of-memory-optimized-tables"></a>Eseguire il backup, ripristinare e recuperare tabelle con ottimizzazione per la memoria
   Contenuto della sezione:  
@@ -26,7 +25,7 @@ ms.locfileid: "62812605"
   
 -   [Ripristinare e recuperare tabelle con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/restore-and-recovery-of-memory-optimized-tables.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [OLTP in memoria &#40;ottimizzazione per la memoria&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

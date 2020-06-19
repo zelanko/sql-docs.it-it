@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 5654cb30-cad2-470c-97b3-59cb331033e5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e67c5448a6625b37c7fb17bc24ea6bdd7cb879ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5723ba6fcbcd8e5b2280fc977aa5f405d461b805
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061594"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925562"
 ---
 # <a name="analysis-of-data-flow"></a>Analisi del flusso di dati
-  È possibile utilizzare la vista [Catalog. execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` database per analizzare il flusso di dati dei pacchetti. In questa vista viene visualizzata una riga ogni volta che un componente del flusso di dati invia dati a un componente a valle. Le informazioni possono essere utilizzate per acquisire una comprensione più approfondita delle righe inviate a ciascun componente.  
+  È possibile utilizzare la vista [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` database per analizzare il flusso di dati dei pacchetti. In questa vista viene visualizzata una riga ogni volta che un componente del flusso di dati invia dati a un componente a valle. Le informazioni possono essere utilizzate per acquisire una comprensione più approfondita delle righe inviate a ciascun componente.  
   
 > [!NOTE]  
 >  Il livello di registrazione deve essere impostato su **Dettagliato** per acquisire informazioni con la vista catalog.execution_data_statistics.  
@@ -63,7 +62,7 @@ order by source_component_name desc
   
  [Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto](troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Dati nei flussi di dati](data-flow/data-in-data-flows.md)  
   
   

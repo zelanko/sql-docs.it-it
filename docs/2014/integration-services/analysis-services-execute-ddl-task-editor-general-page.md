@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 28788cc5-7c84-4c6f-9650-62372c519728
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6a8178eeb65c83836a979d79c605260692b549cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7e8780fd707e82093bb5df50a423cb2aaa0ff5d2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061549"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925602"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Editor attività Esegui DDL Analysis Services (pagina Generale)
   Usare la pagina **Generale** della finestra di dialogo **Editor attività Esegui DDL Analysis Services** per assegnare un nome e una descrizione all'attività Esegui DDL [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -36,7 +35,7 @@ ms.locfileid: "66061549"
  **Descrizione**  
  Consente di digitare una descrizione per l'attività Esegui DDL Analysis Services di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività Esegui DDL Analysis Services &#40;pagina DDL&#41;](../../2014/integration-services/analysis-services-execute-ddl-task-editor-ddl-page.md)   
  [Pagina espressioni](expressions/expressions-page.md)   

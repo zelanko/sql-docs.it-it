@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 538e3beb-f99c-4095-bd65-6413e872d26e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d57f5938cb888a955645f5a9e0b01eeacfc1142b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 077a09cdca0c0aff777184f04467ca39592690aa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812790"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936073"
 ---
 # <a name="change-source-control-connections"></a>Modifica delle connessioni del controllo del codice sorgente
   La prima volta che viene aggiunta o aperta una soluzione dal controllo del codice sorgente, il provider del controllo crea un'associazione tra la cartella radice della directory della soluzione locale e la cartella corrispondente del server.  
@@ -33,7 +32,7 @@ ms.locfileid: "62812790"
   
 1.  Scegliere **controllo del codice sorgente**dal menu **file** e quindi fare clic su **avvia Microsoft Visual SourceSafe**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Nozioni fondamentali sul controllo del codice sorgente](../../2014/database-engine/source-control-basics.md)   
  [Impostare le opzioni di controllo del codice sorgente](../../2014/database-engine/set-source-control-options.md)   
  [Esclusione di file dal controllo del codice sorgente](../../2014/database-engine/exclude-files-from-source-control.md)  

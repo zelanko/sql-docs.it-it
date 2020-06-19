@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 00dc0fbda03bb7f729123a84e7e91fb2361aee9f
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: cbe807237651bd8bb81fa1c9f028847654b97889
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001078"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936178"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>Differenze di comportamento nella ricerca full-text
   In questo argomento vengono descritte le modifiche del comportamento nella ricerca full-text. Queste modifiche influiscono sulle modalità di utilizzo o di interazione delle funzionalità in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] rispetto alle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -69,7 +68,7 @@ ms.locfileid: "83001078"
 |**Termine**|**Risultati con word breaker e stemmer precedenti**|**Risultati con word breaker e stemmer nuovi**|  
 |--------------|--------------------------------------------------------|---------------------------------------------------|  
 |jě ˊ ÿqCžl<br /><br /> *(dove i nomi sono caratteri inglesi non validi)*|' jě ˊ ÿqCžl '|je yq zl|  
-|table's|table's<br /><br /> tabella|table's|  
+|table's|table's<br /><br /> table|table's|  
 |cat-|cat<br /><br /> cat-|cat|  
 |v-z *(dove v e z sono parole non significative)*|*(nessun risultato)*|v-z|  
 |$100 000 USD|$100<br /><br /> 7000<br /><br /> nn000<br /><br /> nn100$<br /><br /> usd|$100 000 USD<br /><br /> nn100000usd|  

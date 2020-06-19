@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d990f600-5c09-4cd5-8528-0a58d79dc9f2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bc83e1b636aa03e37717ac62de1a44e9c6f1cfd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 679e61c37df7d31b80f47fff186589ce0081f838
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055735"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963121"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>Impostazione delle proprietà di un vincolo di precedenza
   Per impostare le proprietà dei vincoli di precedenza, è possibile utilizzare uno dei seguenti strumenti:  
@@ -43,14 +42,14 @@ ms.locfileid: "66055735"
   
 5.  Nell'elenco a discesa **Operazione valutazione** selezionare un'operazione di valutazione.  
   
-6.  Nell'elenco `Value` a discesa selezionare il risultato dell'esecuzione dell'eseguibile con precedenza.  
+6.  Nell' `Value` elenco a discesa selezionare il risultato dell'esecuzione dell'eseguibile con precedenza.  
   
-7.  Se l'operazione di valutazione utilizza un'espressione, digitare `Expression` un'espressione nella casella e fare clic su **test** per valutare l'espressione.  
+7.  Se l'operazione di valutazione utilizza un'espressione, `Expression` digitare un'espressione nella casella e fare clic su **test** per valutare l'espressione.  
   
     > [!NOTE]  
     >  Per i nomi delle variabili viene fatta distinzione tra maiuscole e minuscole.  
   
-8.  Se all'eseguibile soggetto al vincolo sono connessi più contenitori o attività, selezionare **and logico** per specificare che i risultati dell'esecuzione di tutti i file eseguibili precedenti `true`devono restituire. Selezionare **OR logico** per specificare che un solo risultato di `true`esecuzione deve restituire.  
+8.  Se all'eseguibile soggetto al vincolo sono connessi più contenitori o attività, selezionare **and logico** per specificare che i risultati dell'esecuzione di tutti i file eseguibili precedenti devono restituire `true` . Selezionare **OR logico** per specificare che un solo risultato di esecuzione deve restituire `true` .  
   
 9. Scegliere **OK** per chiudere la finestra **Editor vincoli di precedenza**.  
   
@@ -68,8 +67,8 @@ ms.locfileid: "66055735"
   
     |Proprietà di lettura/scrittura|Azione di configurazione|  
     |--------------------------|--------------------------|  
-    |Descrizione|Specificare una descrizione.|  
-    |EvalOp|Selezionare un'operazione di valutazione. Se è `Expression`selezionata l'operazione, **ExpressionAndConstant**o **ExpressionOrConstant** , è possibile specificare un'espressione.|  
+    |Description|Specificare una descrizione.|  
+    |EvalOp|Selezionare un'operazione di valutazione. Se `Expression` è selezionata l'operazione, **ExpressionAndConstant**o **ExpressionOrConstant** , è possibile specificare un'espressione.|  
     |Expression|Se l'operazione di valutazione include un'espressione, specificare l'espressione. L'espressione deve restituire un valore booleano. Per altre informazioni sul linguaggio delle espressioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).|  
     |LogicalAnd|Impostare `LogicalAnd` per specificare se il vincolo di precedenza viene valutato insieme ad altri vincoli di precedenza, quando più eseguibili precedono e sono collegati all'eseguibile soggetto al vincolo|  
     |Nome|Aggiornare il nome del vincolo di precedenza.|  
@@ -80,7 +79,7 @@ ms.locfileid: "66055735"
   
 6.  Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Vincoli di precedenza](control-flow/precedence-constraints.md)   
  [Connessione di attività e contenitori tramite un vincolo di precedenza predefinito](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [Impostare il valore di un vincolo di precedenza tramite il menu di scelta rapida](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   

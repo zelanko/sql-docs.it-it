@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 32786a34-5870-4fde-83c7-ec74d62404b8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9d31f297b9544c75e416fe798facd6a1c328ff0d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a58d216b33f5fb8fd582050374d06463fd2c99e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061423"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925526"
 ---
 # <a name="audit-transformation-editor"></a>Editor trasformazione Controllo
   La trasformazione Controllo consente di includere nel flusso di dati di un pacchetto informazioni sull'ambiente in cui viene eseguito il pacchetto. Ad esempio, il nome del pacchetto, del computer e dell'operatore può essere aggiunto al flusso di dati. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include variabili di sistema che forniscono queste informazioni.  
@@ -37,7 +36,7 @@ ms.locfileid: "66061423"
 |-----------|-----------------|  
 |**GUID istanza esecuzione**|Consente di specificare il GUID che identifica in modo univoco l'istanza di esecuzione del pacchetto.|  
 |**ID pacchetto**|Consente di specificare il GUID che identifica in modo univoco il pacchetto.|  
-|**Nome pacchetto**|Consente di specificare il nome del pacchetto.|  
+|**Nome del pacchetto**|Consente di specificare il nome del pacchetto.|  
 |**ID versione**|Consente di specificare il GUID che identifica in modo univoco la versione del pacchetto.|  
 |**Ora di inizio esecuzione**|Consente di specificare l'ora di inizio dell'esecuzione del pacchetto.|  
 |**Nome computer**|Consente di specificare il nome del computer sul quale è stato avviato il pacchetto.|  
@@ -45,7 +44,7 @@ ms.locfileid: "66061423"
 |**Nome attività**|Consente di specificare il nome dell'attività Flusso di dati a cui è associata la trasformazione Controllo.|  
 |**ID attività**|Consente di specificare il GUID che identifica in modo univoco l'attività Flusso di dati a cui è associata la trasformazione Controllo.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

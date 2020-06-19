@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5545b36aba250a04744b66abad5434f8573c053e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 419f1cd22e0a7aa314f6a1036793091bb7b385fc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62788324"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936302"
 ---
 # <a name="use-the-object-explorer-details-to-monitor-availability-groups-sql-server-management-studio"></a>Utilizzare Dettagli Esplora oggetti per monitorare Gruppi di disponibilità (SQL Server Management Studio)
   In questo argomento viene illustrato come utilizzare il riquadro **Dettagli Esplora oggetti** di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] per monitorare e gestire i database di disponibilità AlwaysOn, le repliche di disponibilità e i gruppi di disponibilità esistenti.  
@@ -79,7 +78,7 @@ ms.locfileid: "62788324"
  **Istanza del server**  
  Contiene il nome dell'istanza del server che ospita la replica di disponibilità, insieme a un'icona che indica lo stato di connessione corrente dell'istanza del server all'istanza del server locale.  
   
- **Ruolo**  
+ **Role**  
  Indica il ruolo corrente della replica di disponibilità, ovvero **Primario** o **Secondario**. Per informazioni sui ruoli di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
   
  **Modalità di connessione nel ruolo secondario**  
@@ -87,7 +86,7 @@ ms.locfileid: "62788324"
   
  I valori possibili sono i seguenti:  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Non consentire connessioni**|Le connessioni dirette ai database di disponibilità non sono consentite quando questa replica di disponibilità agisce come una replica secondaria. I database secondari non sono disponibili per l'accesso in lettura.|  
 |**Consenti solo connessioni con finalità di lettura**|Sono consentite solo connessioni dirette in sola lettura quando questa replica agisce come una replica secondaria. Tutti i database nella replica sono disponibili per l'accesso in lettura.|  
@@ -96,7 +95,7 @@ ms.locfileid: "62788324"
  **Stato connessione**  
  Indica se una replica secondaria è attualmente connessa alla replica primaria. I valori possibili sono i seguenti:  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Disconnesso**|Per una replica di disponibilità remota, indica che è disconnessa dalla replica di disponibilità locale. La risposta della replica locale allo stato Disconnesso dipende dal relativo ruolo:<br /><br /> Sulla replica primaria, se una replica secondaria è disconnessa, i database secondari sono contrassegnati come **Non sincronizzato** sulla replica primaria e la replica primaria attende che la replica secondaria venga riconnessa.<br /><br /> Sulla replica secondaria, dopo avere rilevato che è disconnessa, tenta di riconnettersi alla replica primaria.|  
 |**Connesso**|Una replica di disponibilità remota attualmente connessa alla replica locale.|  
@@ -105,7 +104,7 @@ ms.locfileid: "62788324"
  **Stato di sincronizzazione**  
  Indica se una replica secondaria è attualmente sincronizzata con la replica primaria. I valori possibili sono i seguenti:  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Non sincronizzato**|Il database non è sincronizzato o non è stato ancora aggiunto al gruppo di disponibilità.|  
 |**Sincronizzati**|Il database è sincronizzato con il database primario sulla replica primaria corrente o sull'ultima replica primaria.<br /><br /> Nota: nella modalità prestazioni, il database non si trova mai nello stato sincronizzato.|  
@@ -125,16 +124,16 @@ ms.locfileid: "62788324"
   
  Gli stati di sincronizzazione possibili sono:  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |Sincronizzazione in corso|Il database secondario ha ricevuto i record del log delle transazioni per il database primario che non sono ancora scritti su disco (finali).<br /><br /> Nota: nella modalità con commit asincrono, lo stato di sincronizzazione è sempre **Sincronizzazione**.|  
   
- **Sospeso**  
+ **Suspended**  
  Indica se il database di disponibilità è attualmente online. I valori possibili sono i seguenti:  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
-|**Sospeso**|Questo stato indica che il database è stato sospeso in locale e che deve essere ripreso manualmente.<br /><br /> Sulla replica primaria, il valore non è attendibile per un database secondario. Per determinare in modo affidabile se un database secondario è sospeso, eseguire una query sulla replica secondaria che ospita il database.|  
+|**Suspended**|Questo stato indica che il database è stato sospeso in locale e che deve essere ripreso manualmente.<br /><br /> Sulla replica primaria, il valore non è attendibile per un database secondario. Per determinare in modo affidabile se un database secondario è sospeso, eseguire una query sulla replica secondaria che ospita il database.|  
 |**Non unito in join**|Indica che il database secondario non è stato aggiunto al gruppo di disponibilità o stato rimosso dal gruppo.|  
 |**Online**|Indica che il database non è sospeso sulla replica di disponibilità locale e che il database è connesso.|  
 |**Non connesso**|Indica che la replica secondaria non è attualmente in grado di connettersi alla replica primaria.|  
@@ -142,10 +141,10 @@ ms.locfileid: "62788324"
 > [!NOTE]  
 >  Per informazioni sui contatori delle prestazioni per i database di disponibilità, vedere [SQL Server, replica di database](../../../relational-databases/performance-monitor/sql-server-database-replica.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sys. dm_os_performance_counters &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)   
  [Usare il dashboard AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)   
  [Visualizzare le proprietà del gruppo di disponibilità &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)   
- [Visualizzare le proprietà della replica di disponibilità &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
+ [Visualizzazione delle proprietà della replica di disponibilità &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
   
   

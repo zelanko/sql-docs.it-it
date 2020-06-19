@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8b85278a-aa1f-4587-9e13-db3b7fcbadfb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 549ab9aa3a447c13939e352233acc42b974d92af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d3ffccf359e96583ba6d480b1ae46947c5e468b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061823"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925853"
 ---
 # <a name="add-ssis-connection-manager"></a>Aggiungi gestione connessione SSIS
   Utilizzare la finestra di dialogo **Aggiungi gestione connessione SSIS** per selezionare il tipo di connessione da aggiungere a un pacchetto.  
@@ -33,7 +32,7 @@ ms.locfileid: "66061823"
  **Aggiungere**  
  Consente di specificare le proprietà della connessione utilizzando l'editor per ogni tipo di connessione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Aggiunta, eliminazione o condivisione di una gestione connessione in un pacchetto](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)  
   

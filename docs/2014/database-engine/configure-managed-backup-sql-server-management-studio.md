@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 79397cf6-0611-450a-b0d8-e784a76e3091
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d8e7e02f844df026c597e93e43ebee7f8e786a72
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: e952ef1102ac67bd0ed9f72d0c201d54b320b5ca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849439"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935992"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>Configurare il backup gestito (SQL Server Management Studio)
   La finestra di dialogo **backup gestito** consente di configurare [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] le impostazioni predefinite per l'istanza. In questo argomento viene descritto come usare questa finestra di dialogo per configurare le impostazioni predefinite di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per l'istanza e le opzioni che è necessario considerare quando si esegue questa operazione. Quando [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] è configurato per l'istanza, le impostazioni vengono applicate a qualsiasi nuovo database creato successivamente.  
@@ -69,7 +68,7 @@ ms.locfileid: "82849439"
   
  Specificare l' **URL di archiviazione** per l'account di archiviazione di Azure, le credenziali SQL che archiviano le informazioni di autenticazione per l'account di archiviazione e il periodo di memorizzazione per i file di backup.  
   
- Il formato dell'URL di archiviazione è: https:// \< StorageAccount>. blob.Core.Windows.NET/  
+ Il formato dell'URL di archiviazione è: https:// \<StorageAccount> . blob.Core.Windows.NET/  
   
  Per impostare le impostazioni di crittografia a livello di istanza, selezionare l'opzione **Crittografa backup** e specificare l'algoritmo e un certificato o una chiave asimmetrica da utilizzare per la crittografia.  Questa proprietà è impostata a livello di istanza e viene usata per tutti i nuovi database creati dopo l'applicazione di questa configurazione.  
   

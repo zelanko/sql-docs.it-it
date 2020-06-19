@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c55a6748-e5d9-4fdb-9a1f-714475a419c5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9a223060768c35b2daf00837153e59218ff1c50e
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 260b1a303685ad9247154504400ef1519ecaa219
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001021"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936122"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>Modifiche di rilievo alla ricerca full-text
   In questo argomento vengono descritte le modifiche di rilievo apportate alla ricerca full-text. Tali modifiche potrebbero interrompere il funzionamento di applicazioni, funzionalità o script basati su versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. È possibile che questi problemi si verifichino quando viene effettuato un aggiornamento. Per altre informazioni, vedere [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -36,7 +35,7 @@ ms.locfileid: "83001021"
 ## <a name="breaking-changes-in-full-text-search-in-sql-server-2008"></a>Modifiche di rilievo nella ricerca full-text in SQL Server 2008  
  Le modifiche di rilievo riportate di seguito vengono applicate alla ricerca full-text tra [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] e [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] e versioni successive.  
   
-|Feature|Scenario|SQL Server 2005|SQL Server 2008 e versioni successive|  
+|Funzionalità|Scenario|SQL Server 2005|SQL Server 2008 e versioni successive|  
 |-------------|--------------|---------------------|----------------------------------------|  
 |[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) con tipi definiti dall'utente (UDT)|La chiave full-text è un tipo definito dall'utente (UDT) di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], ad esempio `MyType = char(1)`.|La chiave restituita è del tipo assegnato al tipo definito dall'utente (UDT).<br /><br /> Nell'esempio, questo sarebbe **char (1)**.|La chiave restituita è del tipo definito dall'utente (UDT). Nell'esempio, si tratta di **MyType**.|  
 |*top_n_by_rank* parametro (delle istruzioni CONTAINSTABLE e [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) [!INCLUDE[tsql](../includes/tsql-md.md)] )|*top_n_by_rank* le query che utilizzano 0 come parametro.|Ha esito negativo e viene restituito un messaggio di errore indicante che è necessario utilizzare un valore maggiore di zero.|Ha esito positivo e vengono restituite zero righe.|  
