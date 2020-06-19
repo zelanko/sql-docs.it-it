@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 91c34cb4-dc14-4a2b-86a1-9c950642fb23
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ddc24d5204a6b047540fdeff4a5ddff92acc00f7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 184473773e520f2ea0cd0c9d01a9c3738d1d5c78
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706938"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926953"
 ---
 # <a name="documentation-for-sql-server-2014-tools-and-add-in-components"></a>Documentazione per gli strumenti e i componenti aggiuntivi di SQL Server 2014
     
@@ -33,7 +32,7 @@ ms.locfileid: "82706938"
 |[Microsoft Connector 1.1 for SAP BW](https://go.microsoft.com/fwlink/?LinkId=299181)|Microsoft Connector 1.1 for SAP BW è un set di tre componenti che consente di estrarre o caricare i dati in un sistema SAP NetWeaver BW versione 7.|  
 |[Playback Capture per Assistente aggiornamento](https://go.microsoft.com/fwlink/?LinkId=299182)|Il flusso di lavoro di Playback Capture in Assistente aggiornamento consente di automatizzare il processo di acquisizione della traccia del carico di lavoro da usare per la riproduzione in un secondo momento.|  
 |[Microsoft ODBC Driver 11 for SQL Server in Windows](https://go.microsoft.com/fwlink/?LinkId=299183)|Microsoft ODBC Driver 11 per Windows è un driver autonomo che fornisce un'API che implementa l'interfaccia ODBC standard in Microsoft Windows.|  
-|[PowerPivot per SharePoint](https://go.microsoft.com/fwlink/?LinkId=299184)|PowerPivot per SharePoint è un server Analysis Services eseguito in modalità SharePoint.|  
+|[Power Pivot per SharePoint](https://go.microsoft.com/fwlink/?LinkId=299184)|PowerPivot per SharePoint è un server Analysis Services eseguito in modalità SharePoint.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Documentazione di SQL Server 2014](../2014-toc/index.yml)  

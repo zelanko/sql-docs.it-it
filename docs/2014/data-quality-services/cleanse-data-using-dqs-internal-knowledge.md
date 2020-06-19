@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 26e4c7394f1af445534e32f9a960cb71480f72c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9962cdc87fca0014d8e70738069bb52b5a36092d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481134"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938022"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Pulizia dei dati mediante le informazioni interne di DQS
   In questo argomento viene descritto come eseguire la pulizia dei dati utilizzando un progetto Data Quality in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). La pulizia dei dati viene eseguita sui dati di origine utilizzando una Knowledge Base incorporata in DQS e confrontando tali dati con un set di dati di alta qualità. Per altre informazioni, vedere [Compilazione di una Knowledge Base](../../2014/data-quality-services/building-a-knowledge-base.md).  
@@ -103,10 +102,10 @@ ms.locfileid: "65481134"
   
  In base al livello di confidenza, i valori vengono visualizzati nelle cinque schede seguenti:  
   
-|Scheda|Descrizione|  
+|Scheda|Description|  
 |---------|-----------------|  
-|**Suggeriti**|Mostra i valori del dominio per il quale tramite DQS sono stati trovati valori suggeriti che dispongono di un livello di confidenza più elevato del valore *soglia di suggerimento automatico* , ma inferiore al valore *soglia di correzione automatica* .<br /><br /> Nella colonna **Correggi in** vengono visualizzati i valori suggeriti rispetto al valore originale. È possibile fare clic sul pulsante di opzione nella colonna **Approva** o **Rifiuta** rispetto a un valore nella griglia superiore per accettare o rifiutare il suggerimento per tutte le istanze di tale valore. In questo caso, il valore accettato viene spostato nella scheda **Con correzione** e il valore respinto viene spostato nella scheda **Non validi** .|  
-|**Nuova**|Consente di visualizzare il dominio valido per il quale DQS non dispone di informazioni sufficienti e pertanto non è possibile eseguirne il mapping a qualsiasi altra scheda. Inoltre, questa scheda contiene anche valori con un livello di confidenza inferiore al valore *soglia di suggerimento automatico* , ma sufficientemente elevato per essere contrassegnati come validi.<br /><br /> Se il valore è ritenuto corretto, fare clic sul pulsante di opzione nella colonna **Approva** . Altrimenti, fare clic sul pulsante di opzione nella colonna **Rifiuta** . Il valore accettato viene spostato nella scheda **corretti** e il valore rifiutato passa alla scheda **non valida** . È anche possibile digitare manualmente il valore corretto come sostituzione del valore originale nella colonna **Correggi** in rispetto al valore, quindi fare clic sul pulsante di opzione nella colonna **approva** per accettare la modifica. In questo caso, il valore viene spostato nella scheda **Con correzione** .|  
+|**Suggerito**|Mostra i valori del dominio per il quale tramite DQS sono stati trovati valori suggeriti che dispongono di un livello di confidenza più elevato del valore *soglia di suggerimento automatico* , ma inferiore al valore *soglia di correzione automatica* .<br /><br /> Nella colonna **Correggi in** vengono visualizzati i valori suggeriti rispetto al valore originale. È possibile fare clic sul pulsante di opzione nella colonna **Approva** o **Rifiuta** rispetto a un valore nella griglia superiore per accettare o rifiutare il suggerimento per tutte le istanze di tale valore. In questo caso, il valore accettato viene spostato nella scheda **Con correzione** e il valore respinto viene spostato nella scheda **Non validi** .|  
+|**Nuovo**|Consente di visualizzare il dominio valido per il quale DQS non dispone di informazioni sufficienti e pertanto non è possibile eseguirne il mapping a qualsiasi altra scheda. Inoltre, questa scheda contiene anche valori con un livello di confidenza inferiore al valore *soglia di suggerimento automatico* , ma sufficientemente elevato per essere contrassegnati come validi.<br /><br /> Se il valore è ritenuto corretto, fare clic sul pulsante di opzione nella colonna **Approva** . Altrimenti, fare clic sul pulsante di opzione nella colonna **Rifiuta** . Il valore accettato viene spostato nella scheda **corretti** e il valore rifiutato passa alla scheda **non valida** . È anche possibile digitare manualmente il valore corretto come sostituzione del valore originale nella colonna **Correggi** in rispetto al valore, quindi fare clic sul pulsante di opzione nella colonna **approva** per accettare la modifica. In questo caso, il valore viene spostato nella scheda **Con correzione** .|  
 |**Non valido**|Mostra i valori del dominio contrassegnati come non validi nel dominio della Knowledge Base o i valori che non hanno superato una regola di dominio. Questa scheda contiene inoltre i valori rifiutati dall'utente in qualsiasi delle altre quattro schede.<br /><br /> Se il valore è ritenuto corretto, tuttavia, è possibile fare clic sul pulsante di opzione nella colonna **Approva** . Il valore accettato viene spostato nella scheda **corretta** . È anche possibile digitare manualmente il valore corretto come sostituzione del valore originale nella colonna **Correggi** in rispetto al valore, quindi fare clic sul pulsante di opzione nella colonna **approva** per accettare la modifica. In questo caso, il valore viene spostato nella scheda **Con correzione** .|  
 |**Con correzione**|Visualizza i valori di dominio corretti da DQS durante il processo automatico di pulizia, nel caso in cui sia stata trovata una correzione per il valore con un livello di confidenza superiore al valore soglia di correzione automatica.<br /><br /> Nella colonna **Correggi in** vengono visualizzati i valori con correzione rispetto al valore originale. Per impostazione predefinita, il pulsante di opzione nella colonna **Approva** per il valore viene selezionato. Se necessario, è possibile rifiutare la correzione proposta facendo clic sul pulsante di opzione nella colonna **Rifiuta** per spostarlo nella scheda **Non validi** o digitare manualmente il valore corretto nella colonna **Correggi in** , quindi fare clic sul pulsante di opzione nella colonna **Approva** per accettare la modifica e spostare il valore nella scheda **Con correzione** .|  
 |**Corretti**|Mostra i valori di dominio che sono risultati corretti, Ad esempio, un valore corrispondente a un valore di dominio. Questa scheda contiene anche valori approvati dall'utente facendo clic sul pulsante di opzione nella colonna **Approva** nelle schede **Nuovi** e **Non validi** .<br /><br /> Per impostazione predefinita, il pulsante di opzione nella colonna **Approva** è selezionato per ciascun valore. Se tuttavia si ritiene che un valore in questa scheda sia errato, è possibile fare clic sul pulsante di opzione nella colonna **Rifiuta** per quel valore e spostarlo nella scheda **Non validi** oppure digitare manualmente il valore corretto con cui sostituirlo nella colonna **Correggi in** , quindi fare clic sul pulsante di opzione nella colonna **Approva** per accettare la modifica e spostarlo nella scheda **Con correzione** .|  
@@ -157,17 +156,17 @@ ms.locfileid: "65481134"
   
     -   **Dati e informazioni pulizia**: fare clic sul pulsante di opzione per esportare i dati seguenti per ogni dominio:  
   
-        -   >_Source di dominio: il valore originale nel dominio. ** \<**  
+        -   ** \<Domain> _Source**: il valore originale nel dominio.  
   
-        -   >_Output di dominio: i valori puliti nel dominio. ** \<**  
+        -   ** \<Domain> _Output**: i valori puliti nel dominio.  
   
-        -   >_Reason di dominio: il motivo specificato per la correzione del valore. ** \<**  
+        -   ** \<Domain> _Reason**: il motivo specificato per la correzione del valore.  
   
-        -   >_Confidence di dominio: il livello di confidenza per tutti i termini corretti. ** \<** Viene visualizzato come valore decimale equivalente al valore percentuale corrispondente. Un livello di confidenza del 95% viene ad esempio visualizzato come 0,9500000.  
+        -   ** \<Domain> _Confidence**: il livello di confidenza per tutti i termini corretti. Viene visualizzato come valore decimale equivalente al valore percentuale corrispondente. Un livello di confidenza del 95% viene ad esempio visualizzato come 0,9500000.  
   
-        -   >_Status di dominio: stato del valore del dominio dopo la pulizia dei dati. ** \<** Ad esempio **Suggeriti**, **Nuovi**, **Non validi**, **Con correzione**o **Corretti**.  
+        -   ** \<Domain> _Status**: stato del valore del dominio dopo la pulizia dei dati. Ad esempio **Suggeriti**, **Nuovi**, **Non validi**, **Con correzione**o **Corretti**.  
   
-        -   **Stato record**: oltre a includere un campo di stato per ogni dominio di cui è stato eseguito il mapping **(\<NomeDominio>_Status**), il campo **Stato record** visualizza lo stato di un record. Se uno stato del dominio nel record è *nuovo* o *corretto*, lo **stato del record** è impostato su *corretto*. Se uno stato del dominio nel record è *suggerito*, *non valido*o con *correzione*, lo stato del **record** viene impostato sul rispettivo valore. Se, ad esempio, viene *suggerito*uno stato del dominio nel record, lo stato del **record** viene impostato su *suggerito*.  
+        -   **Stato record**: oltre a avere un campo stato per ogni dominio mappato **( \<DomainName> _Status**), il campo **stato record** Visualizza lo stato di un record. Se uno stato del dominio nel record è *nuovo* o *corretto*, lo **stato del record** è impostato su *corretto*. Se uno stato del dominio nel record è *suggerito*, *non valido*o con *correzione*, lo stato del **record** viene impostato sul rispettivo valore. Se, ad esempio, viene *suggerito*uno stato del dominio nel record, lo stato del **record** viene impostato su *suggerito*.  
   
             > [!NOTE]  
             >  Se si utilizza un servizio dati di riferimento per l'operazione di pulizia, sono disponibili dati aggiuntivi sui valori di dominio per l'esportazione. Per altre informazioni, vedere [Pulire i dati mediante le informazioni dei dati di riferimento &#40;esterni&#41;](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  

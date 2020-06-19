@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3469c60a-8f4f-46ba-999a-cb9070197fea
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8572feb3e9eb3ac5ba7ba8a3d61abb2ad2dc1b5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88ad528bfe581639dfa7e5dde35a7b53278b44b7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059717"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951835"
 ---
 # <a name="data-profile-viewer-f1-help"></a>Guida sensibile al contesto del Visualizzatore profilo dati
   Utilizzare il Visualizzatore profilo dati per visualizzare l'output dell'attività Profiling dati.  
@@ -46,7 +45,7 @@ ms.locfileid: "66059717"
   
 ### <a name="profile-type--column-length-distribution-profile"></a>Tipo di profilo: profilo Distribuzione lunghezze di colonna  
   
-#### <a name="column-length-distribution-profile---column-pane"></a>Profilo Distribuzione lunghezze di colonna - riquadro \<colonna>  
+#### <a name="column-length-distribution-profile---column-pane"></a>Profilo Distribuzione lunghezze di colonna- \<column> riquadro  
  **Lunghezza minima**  
  Visualizza la lunghezza minima dei valori nella colonna.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66059717"
  **Ignora spazi finali**  
  Indica se il profilo è stato calcolato con un valore `IgnoreTrailingSpaces` impostato su True o False. Questa proprietà è stata impostata nella pagina **Richieste profilo** in Editor attività Profiling dati.  
   
- **Conteggio righe**  
+ **Row Count**  
  Visualizza il numero di righe della tabella o della vista.  
   
 #### <a name="detailed-length-distribution-pane"></a>Riquadro Distribuzione dettagliata lunghezze  
@@ -74,20 +73,20 @@ ms.locfileid: "66059717"
   
 ### <a name="profile-type--column-null-ratio-profile"></a>Tipo di profilo: profilo Rapporto di valori Null nella colonna  
   
-#### <a name="column-null-ratio-profile---column-pane"></a>Profilo Rapporto di valori Null - riquadro \<colonna>  
+#### <a name="column-null-ratio-profile---column-pane"></a>Profilo rapporto di valori null nella colonna- \<column> riquadro  
  **Conteggio valori Null**  
  Visualizza il numero di righe in cui il valore della colonna analizzata è un valore Null.  
   
  **Percentuale valori Null**  
  Visualizza la percentuale di righe in cui il valore della colonna analizzata è un valore Null.  
   
- **Conteggio righe**  
+ **Row Count**  
  Visualizza il numero di righe della tabella o della vista.  
   
 ### <a name="profile-type--column-pattern-profile"></a>Tipo di profilo: profilo Criteri di ricerca colonna  
   
-#### <a name="column-pattern-profile---column-pane"></a>Profilo Criteri di ricerca colonna - riquadro \<colonna>  
- **Conteggio righe**  
+#### <a name="column-pattern-profile---column-pane"></a>Riquadro profilo Criteri di ricerca colonna \<column>  
+ **Row Count**  
  Visualizza il numero di righe della tabella o della vista.  
   
 #### <a name="pattern-distribution-pane"></a>Riquadro Distribuzione criteri di ricerca  
@@ -99,8 +98,8 @@ ms.locfileid: "66059717"
   
 ### <a name="profile-type--column-statistics-profile"></a>Tipo di profilo: profilo Statistiche di colonna  
   
-#### <a name="column-statistics-profile---column-pane"></a>Profilo Statistiche di colonna - riquadro \<colonna>  
- **Minimo**  
+#### <a name="column-statistics-profile---column-pane"></a>Profilo Statistiche di colonna- \<column> riquadro  
+ **Minima**  
  Visualizza il valore minimo rilevato nella colonna analizzata.  
   
  **Massimo**  
@@ -114,11 +113,11 @@ ms.locfileid: "66059717"
   
 ### <a name="profile-type--column-value-distribution-profile"></a>Tipo di profilo: profilo Distribuzione valori di colonna  
   
-#### <a name="column-value-distribution-profile---column-pane"></a>Profilo Distribuzione valori di colonna - riquadro \<colonna>  
+#### <a name="column-value-distribution-profile---column-pane"></a>Profilo Distribuzione valori di colonna- \<column> riquadro  
  **Numero di valori distinct**  
  Visualizza il conteggio dei valori distinct rilevati nella colonna analizzata.  
   
- **Conteggio righe**  
+ **Row Count**  
  Visualizza il numero di righe della tabella o della vista.  
   
 #### <a name="detailed-value-distribution-pane"></a>Riquadro Distribuzione dettagliata valori  
@@ -133,7 +132,7 @@ ms.locfileid: "66059717"
   
 ### <a name="profile-type--candidate-key-profile"></a>Tipo di profilo: profilo Chiave candidata  
   
-#### <a name="candidate-key-profile---table-pane"></a>Profilo Chiave candidata - riquadro \<tabella>  
+#### <a name="candidate-key-profile---table-pane"></a>Profilo chiave candidata- \<table> riquadro  
  **Colonne chiave**  
  Visualizza le colonne selezionate per l'analisi come chiave candidata.  
   
@@ -141,7 +140,7 @@ ms.locfileid: "66059717"
  Visualizza il livello di attendibilità (come percentuale) della colonna o combinazione di colonne chiave candidata. Un livello di attendibilità inferiore al 100% indica la presenza di valori duplicati.  
   
 #### <a name="key-violations-pane"></a>Riquadro Violazioni chiave  
- **\<Column1>, \<Column2> e così via.**  
+ **\<column1>, \<column2> e così via.**  
  Visualizza i valori duplicati rilevati nella colonna analizzata.  
   
  **Numero**  
@@ -164,17 +163,17 @@ ms.locfileid: "66059717"
 > [!NOTE]  
 >  Una percentuale elevata di valori non corretti nei dati può provocare risultati imprevisti da un profilo Dipendenza funzionale. Ad esempio, il 90% delle righe contiene il valore di stato "WI" per il valore di codice postale ZIP "98052". Il profilo segnala le righe che contengono il valore di stato "WA" corretto come violazioni.  
   
- **\<Nome colonna determinante>**  
+ **\<determinant column name>**  
  Visualizza il valore della colonna determinante o della combinazione di colonne determinanti in questa istanza di una violazione della dipendenza funzionale.  
   
- **\<Nome colonna dipendente>**  
+ **\<dependent column name>**  
  Visualizza il valore della colonna dipendente in questa istanza di una violazione della dipendenza funzionale.  
   
  **Conteggio del supporto**  
  Visualizza il numero di righe in cui il valore della colonna determinante determina la colonna dipendente.  
   
  **Conteggio violazioni**  
- Visualizza il numero di righe in cui il valore della colonna determinante non determina la colonna dipendente. (Si tratta delle righe in cui il valore dipendente corrisponde al valore indicato nel ** \<nome della colonna dipendente>** colonna).  
+ Visualizza il numero di righe in cui il valore della colonna determinante non determina la colonna dipendente. Si tratta delle righe in cui il valore dipendente corrisponde al valore visualizzato nella **\<dependent column name>** colonna.  
   
  **Percentuale del supporto**  
  Visualizza la percentuale di righe in cui la colonna determinante determina la colonna dipendente.  
@@ -192,13 +191,13 @@ ms.locfileid: "66059717"
  Visualizza il livello di attendibilità (come percentuale) della sovrapposizione tra colonne. Un livello di attendibilità inferiore al 100% indica che vi sono casi in cui il valore del subset non viene rilevato tra i valori del superset.  
   
 #### <a name="inclusion-violations-pane"></a>Riquadro Violazioni inclusione  
- **\<Column1>, \<Column2> e così via.**  
+ **\<column1>, \<column2> e così via.**  
  Visualizza i valori nella colonna o colonne del subset che non sono disponibili nella colonna o colonne del superset.  
   
  **Numero**  
  Visualizza il numero di righe in cui la colonna specificata ha il valore indicato nella prima colonna.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Visualizzatore profilo dati](control-flow/data-profile-viewer.md)   
  [Attività Profiling dati e visualizzatore](control-flow/data-profiling-task-and-viewer.md)  
   

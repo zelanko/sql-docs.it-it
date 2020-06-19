@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0553b1cbbd75196fa8534cf6bf64c58c1dad206b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e70a6ac51e21950110772e62930a8f636e03f9d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770907"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914692"
 ---
 # <a name="recordset-destination"></a>recordset - destinazione
   La destinazione recordset crea e popola un recordset ADO in memoria. La forma del recordset è definita dall'input della destinazione recordset in fase di progettazione.  

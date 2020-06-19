@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 30841d1f-0c3b-4575-8f4a-27a1492e248c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 27a03aaf94d518caa6b649b7ccd826e08798dacb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a612b7b5005fb603be30d697a18fc92a7c481933
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284885"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938642"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular"></a>Specificare Contrassegna come tabella data per l'utilizzo con funzionalità di Business Intelligence per le gerarchie temporali (SSAS tabulare)
   Per utilizzare le funzionalità di Business Intelligence per le gerarchie temporali nelle formule DAX, è necessario specificare una tabella relativa alla data e una colonna (datetime) dell'identificatore univoco del tipo di dati Date. Una volta specificata una colonna nella tabella relativa alla data come identificatore univoco, è possibile creare le relazioni tra le colonne nella tabella in questione e tutte le tabelle dei fatti.  
@@ -40,7 +39,7 @@ ms.locfileid: "67284885"
   
 3.  Nella casella di riepilogo **Data** della finestra di dialogo **Contrassegna come tabella data** selezionare una colonna da utilizzare come identificatore univoco. In questa colonna devono essere inclusi valori univoci e il tipo di dati utilizzato deve essere Date. Ad esempio:  
   
-    |Date|  
+    |Data|  
     |----------|  
     |7/1/2010 12:00:00 AM|  
     |7/2/2010 12:00:00 AM|  
@@ -50,7 +49,7 @@ ms.locfileid: "67284885"
   
 4.  Se necessario, creare tutte le relazioni tra le tabelle dei fatti e la tabella relativa alla data.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Calcoli &#40;SSAS tabulare&#41;](calculations-ssas-tabular.md)   
  [Funzioni di Business Intelligence per le attività temporali &#40;&#41;DAX](/dax/time-intelligence-functions-dax)  
   

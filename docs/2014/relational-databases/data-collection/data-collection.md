@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3b83ce9b00ead21d2f067f95ece0234d92682991
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 70a7b7c959283f934ed94f654293d1de2ef8cd9d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175983"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970502"
 ---
 # <a name="data-collection"></a>Raccolta di dati
   L'agente di raccolta dati è un componente di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] che consente di raccogliere set diversi di dati. La raccolta dati viene eseguita costantemente o in base a una pianificazione definita dall'utente. L'agente di raccolta dati archivia quindi i dati raccolti in un database relazionale noto come data warehouse di gestione.
@@ -67,7 +66,7 @@ ms.locfileid: "78175983"
 
  provider di dati un'origine dati nota, specifica di un tipo di destinazione, che fornisce dati a un tipo di agente di raccolta.
 
- agente di raccolta consente di digitare un [!INCLUDE[ssIS](../../includes/ssis-md.md)] wrapper logico intorno ai pacchetti che forniscono il meccanismo effettivo per raccogliere dati e caricarli nel data warehouse di gestione.
+ agente di raccolta consente di digitare un wrapper logico intorno ai [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacchetti che forniscono il meccanismo effettivo per raccogliere dati e caricarli nel data warehouse di gestione.
 
  elemento della raccolta un'istanza di un tipo di agente di raccolta. Un elemento della raccolta viene creato con uno specifico set di proprietà di input e con una frequenza di raccolta.
 

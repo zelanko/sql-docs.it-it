@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa75b3a71832eaba4064de5a9dd90e73236e8177
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 06d31a4244da2a751bc501080cdf501d540fbc92
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891057"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951532"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>Passaggio 2: Abilitazione e impostazione delle configurazioni dei pacchetti
   In questa attività si convertirà il progetto nel modello di distribuzione del pacchetto e si abiliteranno le configurazioni di pacchetto utilizzando la Configurazione guidata pacchetto. Questa procedura guidata consente di generare un file di configurazione XML contenente le impostazioni di configurazione per la proprietà `Directory` del contenitore Ciclo Foreach. Il valore della proprietà Directory è specificato da una variabile a livello di pacchetto che è possibile aggiornare in fase di esecuzione. Verrà inoltre popolata una cartella di dati di esempio da utilizzare durante il test.  
@@ -41,7 +40,7 @@ ms.locfileid: "62891057"
   
 8.  Nella pagina **Raccolta** di **Editor ciclo Foreach** fare clic su **Espressioni** e quindi sul pulsante con i puntini di sospensione **(...)**.  
   
-9. Nell' **Editor espressioni di proprietà**fare clic nell'elenco **Proprietà** e selezionare `Directory`.  
+9. Nell' **Editor espressioni di proprietà**fare clic nell'elenco **Proprietà** e selezionare `Directory` .  
   
 10. Nella casella **espressione** fare clic sul pulsante con i puntini di sospensione **(...)**.  
   
@@ -85,24 +84,24 @@ ms.locfileid: "62891057"
   
 15. Fare clic su **Fine**.  
   
-16. Fare clic su **Chiudi**.  
+16. Fare clic su **Close**.  
   
-17. La procedura guidata crea un file di configurazione denominato SSISTutorial. dtsConfig che contiene le impostazioni `value` di configurazione per della variabile che a sua volta imposta `Directory` la proprietà dell'enumeratore.  
+17. La procedura guidata crea un file di configurazione denominato SSISTutorial. dtsConfig che contiene le impostazioni di configurazione per `value` della variabile che a sua volta imposta la `Directory` proprietà dell'enumeratore.  
   
     > [!NOTE]  
     >  In un file di configurazione in genere sono incluse informazioni complesse sulle proprietà del pacchetto; tuttavia per questa esercitazione le uniche informazioni di configurazione saranno  
     > <Configuration ConfiguredType="Property"  
     > Path = "\Pacchetto.variabili [user:: varFolderName]. Properties [valore] "ValueType =" stringa "\>  
     >  \<ConfiguredValue>\</ConfiguredValue>  
-    > \<>/configurazione.  
+    > \</Configuration>.  
   
 ### <a name="to-create-and-populate-a-new-sample-data-folder"></a>Per creare e popolare una nuova cartella di dati di esempio  
   
-1.  In Esplora risorse, al livello radice dell'unità (ad esempio, C:\\), creare una nuova cartella denominata. `New Sample Data`  
+1.  In Esplora risorse, al livello radice dell'unità (ad esempio, C: \\ ), creare una nuova cartella denominata `New Sample Data` .  
   
 2.  Individuare i file di esempio nel computer e copiare tre dei file nella cartella.  
   
-3.  Incollare i `New Sample Data` file copiati nella cartella.  
+3.  `New Sample Data`Incollare i file copiati nella cartella.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Passaggio 3: Modifica del valore di configurazione della proprietà Directory](lesson-5-3-modifying-the-directory-property-configuration-value.md)  

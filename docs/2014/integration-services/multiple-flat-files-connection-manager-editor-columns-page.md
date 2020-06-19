@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ad0cb668-0df2-4d4e-9a20-d20692a0b67a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b44fe16f89e154c1008c73400a6815e9e548bb69
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 365a22cc515a971ff460a6433973f884c640c973
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057502"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950811"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-columns-page"></a>Editor gestione connessione per più file flat (pagina Colonne)
   Utilizzare il nodo **Colonne** della finestra di dialogo **Editor gestione connessione per più file flat** per specificare informazioni sulla riga e la colonna e visualizzare l'anteprima del primo file selezionato.  
@@ -39,10 +38,10 @@ ms.locfileid: "66057502"
  **Delimitatore di riga**  
  Consente di selezionare il delimitatore di riga desiderato nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Le righe sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
-|**{CR}**|Le righe sono delimitate da un ritorno a capo.|  
+|**CR**|Le righe sono delimitate da un ritorno a capo.|  
 |**{LF}**|Le righe sono delimitate da un avanzamento riga.|  
 |**Punto e virgola {;}**|Le righe sono delimitate da un punto e virgola.|  
 |**Due punti {:}**|Le righe sono delimitate da un carattere due punti.|  
@@ -53,10 +52,10 @@ ms.locfileid: "66057502"
  **Delimitatore di colonna**  
  Consente di selezionare il delimitatore di colonna desiderato nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Le colonne sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
-|**{CR}**|Le colonne sono delimitate da un ritorno a capo.|  
+|**CR**|Le colonne sono delimitate da un ritorno a capo.|  
 |**{LF}**|Le colonne sono delimitate da un avanzamento riga.|  
 |**Punto e virgola {;}**|Le colonne sono delimitate da un punto e virgola.|  
 |**Due punti {:}**|Le colonne sono delimitate da due punti.|  
@@ -94,10 +93,10 @@ ms.locfileid: "66057502"
  **Delimitatore di riga**  
  Consente di selezionare il delimitatore di riga desiderato nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Le righe sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
-|**{CR}**|Le righe sono delimitate da un ritorno a capo.|  
+|**CR**|Le righe sono delimitate da un ritorno a capo.|  
 |**{LF}**|Le righe sono delimitate da un avanzamento riga.|  
 |**Punto e virgola {;}**|Le righe sono delimitate da un punto e virgola.|  
 |**Due punti {:}**|Le righe sono delimitate da un carattere due punti.|  
@@ -108,7 +107,7 @@ ms.locfileid: "66057502"
  **Reimposta colonne**  
  Il pulsante **Reimposta colonne**consente di rimuovere tutte le colonne tranne quelle originali.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor gestione connessione per più file flat &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor gestione connessione per più file flat &#40;pagina avanzate&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   

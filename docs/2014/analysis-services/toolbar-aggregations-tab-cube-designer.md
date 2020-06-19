@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 8741ff3e-44c3-4bfa-a56a-de590e01576e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4114610833d9e661e72e80db4bbe529e0ec39493
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8105ded62017fad035b1b2d756f0c797f6b94154
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066185"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938452"
 ---
 # <a name="toolbar-aggregations-tab-cube-designer"></a>Barra degli strumenti (scheda Aggregazioni, Progettazione cubi)
   Utilizzare il riquadro **Barra degli strumenti** per eseguire operazioni frequenti nella scheda **Aggregazioni** di Progettazione cubi.  
   
 ## <a name="options"></a>Opzioni  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |**Progetta aggregazioni**|Fare clic per visualizzare **Progettazione guidata aggregazioni**.<br /><br /> Nota: questa opzione è visualizzata solo nella vista standard di progettazione delle aggregazioni.|  
 |**Ottimizzazione basata sulle statistiche di utilizzo**|Fare clic per visualizzare l' **Ottimizzazione guidata basata sulle**informazioni di utilizzo.<br /><br /> Nota: questa opzione è visualizzata solo nella vista standard di progettazione delle aggregazioni.|  
@@ -32,7 +31,7 @@ ms.locfileid: "66066185"
 |**Nuova progettazione aggregazioni**|Fare clic per visualizzare la finestra di dialogo **Nuova progettazione aggregazioni** . È possibile creare una progettazione delle aggregazioni vuota oppure la copia di una progettazione delle aggregazioni esistente.<br /><br /> Nota: questa opzione è visualizzata solo nella vista avanzata della progettazione delle aggregazioni.|  
 |**Elimina**|Fare clic per eliminare la progettazione delle aggregazioni selezionata.  Nella vista avanzata di progettazione delle aggregazioni consente di eliminare anche un'aggregazione da una progettazione di aggregazioni.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Aggregazioni &#40;Progettazione cubi&#41;](aggregations-cube-design.md)  
   
   

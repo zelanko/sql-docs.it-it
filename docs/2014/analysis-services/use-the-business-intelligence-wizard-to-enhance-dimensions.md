@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 12d995d1-75ca-4890-bf4b-a2656910b8d0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 331820704691d86ab06c1a46934f7aca6154e1cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ca8531a42d6e4ee73530ba061759c9ecbd80130c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065512"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938177"
 ---
 # <a name="use-the-business-intelligence-wizard-to-enhance-dimensions"></a>Utilizzare la Configurazione guidata funzionalità di Business Intelligence per migliorare le dimensioni
   Oltre a modificare direttamente le proprietà di dimensioni e oggetti delle dimensioni, è possibile configurare e ottimizzare le dimensioni mediante la Configurazione guidata funzionalità di Business Intelligence.  
@@ -34,7 +33,7 @@ ms.locfileid: "66065512"
   
 -   [Attivazione writeback della dimensione](multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Definire le dimensioni del database](multidimensional-models/define-database-dimensions.md)   
  [Riferimento alle proprietà degli attributi delle dimensioni](multidimensional-models/dimension-attribute-properties-reference.md)   
  [Creazione di gerarchie definite dall'utente](multidimensional-models/user-defined-hierarchies-create.md)   

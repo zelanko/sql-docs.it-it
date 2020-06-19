@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 085b1783214e7f629f1cb91084303edacd151c25
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e08fd0455e42717a5efcc33f9cb9757e81867ab
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874638"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970742"
 ---
 # <a name="retrieving-udt-data"></a>Recupero di dati UDT
   Per creare un tipo definito dall'utente (UDT) nel client, l'assembly registrato come tipo definito dall'utente in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere disponibile per l'applicazione client. L'assembly UDT può essere posizionato nella stessa directory dell'applicazione oppure nella Global Assembly Cache (GAC). È inoltre possibile impostare un riferimento all'assembly nel progetto.  
@@ -157,10 +156,10 @@ static void Main()
 ```  
   
 ## <a name="binding-udts-as-bytes"></a>Associazione di tipi definiti dall'utente come byte  
- In alcune situazioni può risultare utile recuperare i dati non elaborati dalla colonna con tipo definito dall'utente. Può accadere che il tipo non sia disponibile localmente o non si desideri creare un'istanza del tipo definito dall'utente. È possibile leggere i byte non elaborati in una matrice di byte usando il metodo **GetBytes** di un oggetto `SqlDataReader`. Tale metodo legge un flusso di byte dall'offset di colonna specificato nel buffer di una matrice, a partire dall'offset del buffer specificato. Un'altra opzione consiste nell'usare uno dei metodi **GetSqlBytes** o **GetSqlBinary** e leggere tutto il contenuto in una singola operazione. In entrambi i casi non viene mai creata un'istanza dell'oggetto UDT, pertanto non è necessario impostare un riferimento al tipo definito dall'utente nell'assembly client.  
+ In alcune situazioni può risultare utile recuperare i dati non elaborati dalla colonna con tipo definito dall'utente. Può accadere che il tipo non sia disponibile localmente o non si desideri creare un'istanza del tipo definito dall'utente. È possibile leggere i byte non elaborati in una matrice di byte usando il metodo **GetBytes** di un oggetto `SqlDataReader` . Tale metodo legge un flusso di byte dall'offset di colonna specificato nel buffer di una matrice, a partire dall'offset del buffer specificato. Un'altra opzione consiste nell'usare uno dei metodi **GetSqlBytes** o **GetSqlBinary** e leggere tutto il contenuto in una singola operazione. In entrambi i casi non viene mai creata un'istanza dell'oggetto UDT, pertanto non è necessario impostare un riferimento al tipo definito dall'utente nell'assembly client.  
   
 ### <a name="example"></a>Esempio  
- In questo esempio viene illustrato come recuperare i dati **punto** come byte non elaborati in una matrice `SqlDataReader`di byte utilizzando un oggetto. Il codice utilizza un oggetto `System.Text.StringBuilder` per convertire i byte non elaborati in una rappresentazione di stringa da visualizzare nella finestra della console.  
+ In questo esempio viene illustrato come recuperare i dati **punto** come byte non elaborati in una matrice di byte utilizzando un oggetto `SqlDataReader` . Il codice utilizza un oggetto `System.Text.StringBuilder` per convertire i byte non elaborati in una rappresentazione di stringa da visualizzare nella finestra della console.  
   
 ```vb  
 Option Explicit On  
@@ -452,7 +451,7 @@ static void Main()
 }  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Accesso ai tipi definiti dall'utente in ADO .NET](accessing-user-defined-types-in-ado-net.md)  
   
   

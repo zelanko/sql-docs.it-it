@@ -1,5 +1,6 @@
 ---
 title: Proprietà SQL Server (scheda disponibilità elevata AlwaysOn) | Microsoft Docs
+description: Informazioni su come attivare o disattivare la funzionalità Gruppi di disponibilità AlwaysOn in SQL Server 2014. Visualizzare i prerequisiti che l'istanza del server deve soddisfare per questa funzionalità.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +11,12 @@ ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 44282a8495bdefc9c817de1bd8340bca1379944c
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 4e15cc28354d8dc77b579008feabbc6d13efb63d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83857743"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939092"
 ---
 # <a name="sql-server-properties-alwayson-high-availability-tab"></a>Proprietà SQL Server (scheda Disponibilità elevata AlwaysOn)
   Utilizzare la scheda **Disponibilità elevata AlwaysOn** della finestra di dialogo **Proprietà SQL Server** in Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per abilitare o disabilitare la caratteristica dei gruppi di disponibilità AlwaysOn in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. L'abilitazione dei gruppi di disponibilità AlwaysOn rappresenta un prerequisito per consentire a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di utilizzare i gruppi di disponibilità come soluzione a disponibilità elevata e di ripristino di emergenza.  

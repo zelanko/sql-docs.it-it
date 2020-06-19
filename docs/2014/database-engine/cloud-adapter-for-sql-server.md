@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bf57adb31330f5b0c0f18fbcccd4d71f47d3c933
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 44fce4aba87968a9b7e6acc3e18ae5d966f70d07
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176014"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936022"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>Adattatore cloud per SQL Server
   Il servizio adattatore del cloud viene creato come parte del [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provisioning in una macchina virtuale di Azure. Il servizio Adattatore del cloud genera un certificato SSL autofirmato quando viene eseguito per la prima volta, quindi viene eseguito come account di **sistema locale** . Genera un file di configurazione utilizzato per autoconfigurarsi. L’adattatore cloud crea inoltre una regola di Windows Firewall per consentire le connessioni TCP in entrata alla porta 11435 predefinita.  
@@ -51,19 +50,19 @@ ms.locfileid: "70176014"
   
         -   \<appSettings>  
   
-            -   \<Add Key = "WebServicePort" value = ""/>  
+            -   \<add key="WebServicePort" value="" />  
   
-            -   \<Add Key = "WebServiceCertificate" value = "GUID"/>  
+            -   \<add key="WebServiceCertificate" value="GUID" />  
   
-            -   \<Add Key = "ExposeExceptionDetails" value = "true"/>  
+            -   \<add key="ExposeExceptionDetails" value="true" />  
   
-        -   \<>/appSettings  
+        -   \</appSettings>  
   
-    -   \<>/configurazione  
+    -   \</configuration>  
   
 -   **Dettagli del certificato** : il certificato presenta i valori seguenti:  
   
-    -   Subject-"CN = CloudAdapter\<VMName>, dc = SQL Server, DC = Microsoft"  
+    -   Subject-"CN = CloudAdapter \<VMName> , DC = SQL Server, DC = Microsoft"  
   
     -   Il certificato deve disporre di un solo utilizzo chiavi avanzato (EKU) nell'attributo Autenticazione server.  
   
@@ -74,8 +73,8 @@ ms.locfileid: "70176014"
 |Impostazione|Valori|Predefinito|Commenti|  
 |-------------|------------|-------------|--------------|  
 |WebServicePort|1-65535|11435|Se omesso, viene utilizzato 11435.|  
-|WebServiceCertificate|Thumbprint|Empty|Se vuoto, viene generato un nuovo certificato autofirmato.|  
-|ExposeExceptionDetails|True/False|False||  
+|WebServiceCertificate|Identificazione personale|Vuoto|Se vuoto, viene generato un nuovo certificato autofirmato.|  
+|ExposeExceptionDetails|Vero/Falso|False||  
   
 ## <a name="cloud-adapter-troubleshooting"></a>Risoluzione dei problemi dell'adattatore cloud  
  Per risolvere i problemi relativi all'adattatore cloud per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], fare riferimento alle informazioni seguenti:  
@@ -84,7 +83,7 @@ ms.locfileid: "70176014"
   
 -   **Traccia, eventi** : tutti gli eventi vengono scritti nel registro eventi dell'applicazione.  
   
--   **Controllo, configurazione** : usare il file di configurazione che si trova in: C:\Programmi\Microsoft\\SQL Server\120\Tools\CloudAdapter.  
+-   **Controllo, configurazione** : usare il file di configurazione che si trova in: C:\Programmi\Microsoft SQL Server\120\Tools\CloudAdapter \\ .  
   
 |Errore|ID errore|Causa|Risoluzione|  
 |-----------|--------------|-----------|----------------|  
@@ -93,7 +92,7 @@ ms.locfileid: "70176014"
 |Impossibile trovare il certificato SSL [{Identificazione digitale}] nell'archivio certificati.|45564|L'identificazione digitale del certificato è nel file di configurazione, ma l'archivio certificati personale per il servizio non contiene il certificato.<br /><br /> Autorizzazioni insufficienti.|Verificare che il certificato sia nell'archivio certificati personale per il servizio.<br /><br /> Verificare che il servizio disponga delle autorizzazioni corrette per l'archivio.|  
 |Impossibile avviare il servizio Web. {Testo dell'eccezione}.|45570|Descritto nell'eccezione.|Abilitare ExposeExceptionDetails e utilizzare le informazioni estese dell'eccezione.|  
 |Il certificato [{Identificazione digitale}] è scaduto.|45565|Si fa riferimento a un certificato scaduto nel file di configurazione.|Aggiungere un certificato valido e aggiornare il file di configurazione con la relativa identificazione digitale.|  
-|Errore del servizio Web {0}:.|45571|Descritto nell'eccezione.|Abilitare ExposeExceptionDetails e utilizzare le informazioni estese dell'eccezione.|  
+|Errore del servizio Web: {0} .|45571|Descritto nell'eccezione.|Abilitare ExposeExceptionDetails e utilizzare le informazioni estese dell'eccezione.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Distribuire un database di SQL Server a una macchina virtuale di Microsoft Azure](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md)  

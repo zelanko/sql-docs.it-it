@@ -1,5 +1,6 @@
 ---
 title: Uso di ADO
+description: Per utilizzare le nuove funzionalità introdotte in SQL Server 2005, le applicazioni esistenti che utilizzano ADO devono utilizzare il provider di OLE DB SQL Server Native Client.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ ms.assetid: 118a7cac-4c0d-44fd-b63e-3d542932d239
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 94c241e4dd089b0db667e5b24dbde541584bba41
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 47a7021093710c8ebb4e300880ea58af037dcd70
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388262"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84949579"
 ---
 # <a name="using-ado-with-sql-server-native-client"></a>Utilizzo di ADO con SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Per sfruttare i vantaggi delle nuove funzionalità introdotte in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , ad esempio Mars (Multiple Active Result Set), notifiche delle query, tipi definiti dall'utente (UDT) o il nuovo tipo di dati **XML** , le applicazioni esistenti che utilizzano ActiveX Data Objects (ADO) utilizzano [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] il provider OLE DB di Native client come provider di accesso ai dati.  
+  Per sfruttare i vantaggi delle nuove funzionalità introdotte in, [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ad esempio Mars (Multiple Active Result Set), notifiche delle query, tipi definiti dall'utente (UDT) o il nuovo tipo di dati **XML** , le applicazioni esistenti che utilizzano ActiveX Data Objects (ADO) utilizzano il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB di Native client come provider di accesso ai dati.  
   
  L'uso del provider OLE DB di [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client è necessario solo per utilizzare una delle caratteristiche introdotte in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se non si intende utilizzare tali caratteristiche, è possibile continuare a usare il provider di accesso ai dati corrente, generalmente SQLOLEDB. L'uso del provider OLE DB di [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client è consigliabile se si intende potenziare un'applicazione esistente e si ha l'esigenza di utilizzare le nuove caratteristiche introdotte in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -44,9 +45,9 @@ ms.locfileid: "81388262"
   
 -   `DataTypeCompatibility=80`  
   
- Per ulteriori informazioni sulle parole chiave delle stringhe di connessione ADO [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supportate in native client, vedere [utilizzo delle parole chiave delle stringhe di connessione con SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Per ulteriori informazioni sulle parole chiave delle stringhe di connessione ADO supportate in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client, vedere [utilizzo delle parole chiave delle stringhe di connessione con SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- Di seguito è riportato un esempio di creazione di una stringa di connessione ADO completamente abilitata per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] l'utilizzo con Native client, inclusa l'abilitazione della funzionalità Mars:  
+ Di seguito è riportato un esempio di creazione di una stringa di connessione ADO completamente abilitata per l'utilizzo con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client, inclusa l'abilitazione della funzionalità Mars:  
   
 ```  
 Dim con As New ADODB.Connection  
@@ -61,7 +62,7 @@ con.Open
 ```  
   
 ## <a name="examples"></a>Esempi  
- Nelle sezioni seguenti vengono forniti esempi di come è possibile utilizzare ADO con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] il provider di OLE DB di Native Client.  
+ Nelle sezioni seguenti vengono forniti esempi di come è possibile utilizzare ADO con il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client.  
   
 ### <a name="retrieving-xml-column-data"></a>Recupero dei dati delle colonne XML  
  In questo esempio viene usato un recordset per recuperare e visualizzare i dati da una colonna XML nel database di esempio **AdventureWorks** di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -143,7 +144,7 @@ Set con = Nothing
 ```  
   
 ### <a name="enabling-and-using-mars"></a>Abilitazione e utilizzo di MARS  
- In questo esempio, la stringa di connessione viene costruita per abilitare MARS tramite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] il provider di OLE DB di Native client e quindi vengono creati due oggetti recordset da eseguire utilizzando la stessa connessione.  
+ In questo esempio, la stringa di connessione viene costruita per abilitare MARS tramite il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native client e quindi vengono creati due oggetti recordset da eseguire utilizzando la stessa connessione.  
   
 ```  
 Dim con As New ADODB.Connection  
@@ -167,7 +168,7 @@ con.Close
 Set con = Nothing  
 ```  
   
- Nelle versioni precedenti del provider OLE DB questo codice determinerebbe la creazione di una connessione implicita alla seconda esecuzione, in quanto per una sola connessione sarebbe possibile aprire un solo set attivo di risultati. Poiché la connessione implicita non sarebbe inserita nel pool di connessioni OLE DB, questa situazione provocherebbe overhead aggiuntivo. Con la funzionalità MARS esposta dal provider [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di OLE DB di Native client, si ottengono più risultati attivi in una connessione.  
+ Nelle versioni precedenti del provider OLE DB questo codice determinerebbe la creazione di una connessione implicita alla seconda esecuzione, in quanto per una sola connessione sarebbe possibile aprire un solo set attivo di risultati. Poiché la connessione implicita non sarebbe inserita nel pool di connessioni OLE DB, questa situazione provocherebbe overhead aggiuntivo. Con la funzionalità MARS esposta dal [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native client, si ottengono più risultati attivi in una connessione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Compilazione di applicazioni con SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  

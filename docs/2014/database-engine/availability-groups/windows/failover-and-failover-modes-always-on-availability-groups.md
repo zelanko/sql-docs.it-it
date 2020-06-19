@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cab3797092b4f87c9831dcfe5fd26d77b5ec2884
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb904cd0f0649c43553b5d6c8b031c5f284901f4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814508"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936812"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>Failover e modalità di failover (gruppi di disponibilità AlwaysOn)
   Nel contesto di un gruppo di disponibilità, il ruolo primario e il ruolo secondario delle repliche di disponibilità sono generalmente intercambiabili in un processo noto come *failover*. Sono disponibili tre tipi di failover: failover automatico (senza perdita di dati), failover manuale pianificato (senza perdita di dati) e failover manuale forzato (con possibile perdita di dati), in genere chiamato *failover forzato*. Con il failover automatico e il failover manuale pianificato vengono conservati tutti i dati. Per un gruppo di disponibilità il failover si verifica a livello di replica di disponibilità. In pratica, il failover di un gruppo di disponibilità viene eseguito in una delle relative repliche secondarie, la *destinazione di failover*corrente.  
@@ -78,11 +77,11 @@ ms.locfileid: "62814508"
 ### <a name="failover-sets"></a>Set di failover  
  Le forme di failover possibili per un gruppo di disponibilità specificato possono essere comprese in termini di set di failover. Un set di failover è composto dalla replica primaria e dalle repliche secondarie che supportano una forma specificata di failover, come riportato di seguito.  
   
--   (facoltativo): ** [!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] **  All'interno di un determinato gruppo di disponibilità, coppia di repliche di disponibilità, inclusa la replica primaria corrente, configurata per la modalità commit sincrono con failover automatico, se presente. Un failover automatico impostato diventa effettivo solo se la replica secondaria si trova attualmente nello stato SYNCHRONIZED con la replica primaria.  
+-   ** [!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] (facoltativo):** in un determinato gruppo di disponibilità, coppia di repliche di disponibilità, inclusa la replica primaria corrente, configurata per la modalità commit sincrono con failover automatico, se presente. Un failover automatico impostato diventa effettivo solo se la replica secondaria si trova attualmente nello stato SYNCHRONIZED con la replica primaria.  
   
--   (facoltativo): ** [!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] **  All'interno di un gruppo di disponibilità specifico, un set di due o tre repliche di disponibilità, inclusa la replica primaria corrente, configurate per la modalità commit sincrono, se disponibile. Un failover con commit sincrono impostato diventa effettivo solo se le repliche secondarie sono configurate per la modalità di failover manuale e almeno una replica secondaria si trova nello stato SYNCHRONIZED con la replica primaria.  
+-   ** [!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (facoltativo):** in un determinato gruppo di disponibilità, set di due o tre repliche di disponibilità, inclusa la replica primaria corrente, configurate per la modalità commit sincrono, se disponibile. Un failover con commit sincrono impostato diventa effettivo solo se le repliche secondarie sono configurate per la modalità di failover manuale e almeno una replica secondaria si trova nello stato SYNCHRONIZED con la replica primaria.  
   
--   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :**  All'interno di un determinato gruppo di disponibilità, il set di tutte le repliche di disponibilità il cui stato operativo è attualmente ONLINE, indipendentemente dalla modalità di disponibilità e dalla modalità di failover. L'intero set di failover diventa rilevante quando nessuna replica secondaria si trova attualmente nello stato SYNCHRONIZED con la replica primaria.  
+-   ** [!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :** All'interno di un determinato gruppo di disponibilità, il set di tutte le repliche di disponibilità il cui stato operativo è attualmente online, indipendentemente dalla modalità di disponibilità e dalla modalità di failover. L'intero set di failover diventa rilevante quando nessuna replica secondaria si trova attualmente nello stato SYNCHRONIZED con la replica primaria.  
   
  Quando si configura una replica di disponibilità come commit sincrono con failover automatico, la replica di disponibilità diventa parte del [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]. Il fatto che un set diventi effettivo o meno dipende tuttavia dal database primario corrente. Le forme di failover effettivamente possibili in un determinato momento dipendono dai set di failover attualmente effettivi.  
   
@@ -90,8 +89,8 @@ ms.locfileid: "62814508"
   
 |Replica|Impostazioni delle modalità di disponibilità e di failover|  
 |-------------|--------------------------------------------------|  
-|Una|Commit sincrono con failover automatico|  
-|b|Commit sincrono con failover automatico|  
+|A|Commit sincrono con failover automatico|  
+|B|Commit sincrono con failover automatico|  
 |C|Commit sincrono solo con failover manuale pianificato|  
 |D|Commit asincrono (solo con failover forzato)|  
   
@@ -235,7 +234,7 @@ ms.locfileid: "62814508"
   
 1.  Connettersi alla replica primaria.  
   
-2.  Eseguire una `last_commit_lsn` query sull'(LSN dell'ultima transazione di cui `last_commit_time` è stato eseguito il commit) e (ora dell'ultimo commit) colonne della vista a gestione dinamica [sys. dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) .  
+2.  Eseguire una query sull' `last_commit_lsn` (LSN dell'ultima transazione di cui è stato eseguito il commit) e `last_commit_time` (ora dell'ultimo commit) colonne della vista a gestione dinamica [sys. dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) .  
   
 3.  Confrontare i valori restituiti per ogni database primario e tutti i relativi database secondari. La differenza tra gli LSN ultimo commit indica la quantità di ritardo.  
   
@@ -311,7 +310,7 @@ ms.locfileid: "62814508"
   
 -   [Blog del team di SQL Server AlwaysOn: Blog del team ufficiale di SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Modalità di disponibilità &#40;Gruppi di disponibilità AlwaysOn&#41;](availability-modes-always-on-availability-groups.md)   
  [Windows Server failover clustering &#40;&#41; WSFC con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 491c8a63c7ee3ed06c90356c58820f34ed3c0bf9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dedd2c5b8d075dee8aeeb438904137558c664d95
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872094"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970214"
 ---
 # <a name="database-instant-file-initialization"></a>Inizializzazione immediata dei file di database
   I file di dati e di log vengono inizializzati per sovrascrivere eventuali dati esistenti rimasti nel disco in seguito all'eliminazione precedente di file. I file di dati e di log vengono innanzitutto inizializzati riempiendo i file con zeri quando si eseguono le operazioni seguenti:  
@@ -55,7 +54,7 @@ ms.locfileid: "62872094"
   
 4.  Fare clic su **Aggiungi utente o gruppo** e aggiungere tutti gli account utente usati per i backup.  
   
-5.  Fare clic su **applica**, quindi chiudere `Local Security Policy` tutte le finestre di dialogo.  
+5.  Fare clic su **applica**, quindi chiudere tutte le `Local Security Policy` finestre di dialogo.  
   
 ### <a name="security-considerations"></a>Considerazioni relative alla sicurezza  
  Poiché il contenuto eliminato del disco viene sovrascritto solo quando vengono scritti nuovi dati nei file, il contenuto eliminato potrebbe essere accessibile a utenti o servizi non autorizzati. Finché il file di database è collegato all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa minaccia di accesso alle informazioni è ridotta dall'elenco di controllo di accesso discrezionale (DACL) per il file. Questo elenco consente l'accesso al file solo all'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e all'amministratore locale. Quando il file viene scollegato, tuttavia, diventa accessibile a un utente o a un servizio privo del diritto SE_MANAGE_VOLUME_NAME. Una minaccia analoga è presente quando si esegue il backup del database. Il contenuto eliminato può diventare disponibile a un utente o a un servizio non autorizzato se il file di backup non è protetto con un elenco di controllo di accesso discrezionale (DACL) appropriato.  
@@ -69,7 +68,7 @@ ms.locfileid: "62872094"
 > [!NOTE]  
 >  La disabilitazione dell'inizializzazione immediata dei file ha effetto solo sui file che sono stati creati o le cui dimensioni sono aumentate dopo la revoca del diritto utente.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
   

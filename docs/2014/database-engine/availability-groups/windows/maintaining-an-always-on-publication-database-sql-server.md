@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a862c5c9cea1087f54a4dbff13b6c39eb5e39385
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfe3ca671dd333db50d232cd07dda86ffdd6d9fc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62791989"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936752"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>Gestione di un database di pubblicazione AlwaysOn (SQL Server)
   In questo argomento verranno illustrate alcune considerazioni speciali per la gestione di un database di pubblicazione quando si utilizzano gruppi di disponibilità AlwaysOn.  
@@ -32,17 +31,17 @@ ms.locfileid: "62791989"
   
 -   In Monitoraggio replica le informazioni sulla pubblicazione vengono sempre visualizzate nel server di pubblicazione originale. Queste informazioni possono tuttavia essere visualizzate in Monitoraggio replica da qualsiasi replica aggiungendo il server di pubblicazione originale come server.  
   
--   Se l'amministrazione viene effettuata nella replica primaria corrente mediante oggetti RMO (Replication Management Objects) o stored procedure, nei casi in cui si specifica il nome del server di pubblicazione è necessario specificare il nome dell'istanza in cui il database è stato abilitato per la replica, ovvero il server di pubblicazione originale. Per determinare il nome appropriato, utilizzare la funzione `PUBLISHINGSERVERNAME`. Quando un database di pubblicazione viene unito in join a un gruppo di disponibilità, i metadati di replica archiviati nelle repliche di database secondarie sono identici a quelli della replica primaria. Ne consegue che, per i database di pubblicazione abilitati per la replica nel database primario, il nome dell'istanza del server di pubblicazione archiviato in tabelle di sistema nel database secondario equivale al nome del database primario e non a quello del database secondario. Ciò influisce sulla manutenzione e sulla configurazione della replica se viene eseguito il failover del database di pubblicazione su un database secondario. Se, ad esempio, si configura la replica con stored procedure in un database secondario dopo il failover e si desidera una sottoscrizione pull a un database di pubblicazione abilitato in una replica diversa, è necessario specificare il nome del server di pubblicazione originale anziché del server di pubblicazione *@publisher* corrente come `sp_addpullsubscription` parametro `sp_addmergepulllsubscription`di o. Se tuttavia si abilita un database di pubblicazione dopo il failover, il nome dell'istanza del server di pubblicazione archiviato nelle tabelle di sistema corrisponde al nome dell'host primario corrente. In questo caso, si utilizzerà il nome host della replica primaria corrente per il *@publisher* parametro.  
+-   Se l'amministrazione viene effettuata nella replica primaria corrente mediante oggetti RMO (Replication Management Objects) o stored procedure, nei casi in cui si specifica il nome del server di pubblicazione è necessario specificare il nome dell'istanza in cui il database è stato abilitato per la replica, ovvero il server di pubblicazione originale. Per determinare il nome appropriato, utilizzare la funzione `PUBLISHINGSERVERNAME`. Quando un database di pubblicazione viene unito in join a un gruppo di disponibilità, i metadati di replica archiviati nelle repliche di database secondarie sono identici a quelli della replica primaria. Ne consegue che, per i database di pubblicazione abilitati per la replica nel database primario, il nome dell'istanza del server di pubblicazione archiviato in tabelle di sistema nel database secondario equivale al nome del database primario e non a quello del database secondario. Ciò influisce sulla manutenzione e sulla configurazione della replica se viene eseguito il failover del database di pubblicazione su un database secondario. Se, ad esempio, si configura la replica con stored procedure in un database secondario dopo il failover e si desidera una sottoscrizione pull a un database di pubblicazione abilitato in una replica diversa, è necessario specificare il nome del server di pubblicazione originale anziché del server di pubblicazione corrente come *@publisher* parametro di `sp_addpullsubscription` o `sp_addmergepulllsubscription` . Se tuttavia si abilita un database di pubblicazione dopo il failover, il nome dell'istanza del server di pubblicazione archiviato nelle tabelle di sistema corrisponde al nome dell'host primario corrente. In questo caso, si utilizzerà il nome host della replica primaria corrente per il *@publisher* parametro.  
   
     > [!NOTE]  
-    >  Per alcune procedure, ad esempio `sp_addpublication`, il *@publisher* parametro è supportato solo per i Publisher che non sono istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. in questi casi, non è pertinente per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn.  
+    >  Per alcune procedure, ad esempio `sp_addpublication` , il *@publisher* parametro è supportato solo per i Publisher che non sono istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ; in questi casi, non è pertinente per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn.  
   
 -   Per sincronizzare una sottoscrizione in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] dopo un failover, sincronizzare le sottoscrizioni pull dal Sottoscrittore e le sottoscrizioni push dal server di pubblicazione attivo.  
   
 ##  <a name="removing-a-published-database-from-an-availability-group"></a><a name="RemovePublDb"></a> Rimozione di un database di pubblicazione da un gruppo di disponibilità  
  Considerare i problemi seguenti se un database pubblicato viene rimosso da un gruppo di disponibilità o se un gruppo di disponibilità che dispone di un database del membro pubblicato viene eliminato.  
   
--   Se il database di pubblicazione nel server di pubblicazione originale viene rimosso da una replica primaria del gruppo di disponibilità `sp_redirect_publisher` , è necessario eseguire senza specificare *@redirected_publisher* un valore per il parametro per rimuovere il reindirizzamento per la coppia server di pubblicazione/database.  
+-   Se il database di pubblicazione nel server di pubblicazione originale viene rimosso da una replica primaria del gruppo di disponibilità, è necessario eseguire `sp_redirect_publisher` senza specificare un valore per il *@redirected_publisher* parametro per rimuovere il reindirizzamento per la coppia server di pubblicazione/database.  
   
     ```  
     EXEC sys.sp_redirect_publisher   
@@ -110,7 +109,7 @@ ms.locfileid: "62791989"
   
 -   [Sottoscrittori della replica e Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Prerequisiti, restrizioni e consigli per Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Gruppi di disponibilità AlwaysOn: interoperabilità (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   

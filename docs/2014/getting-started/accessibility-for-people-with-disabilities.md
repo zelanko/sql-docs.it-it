@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0f85627e-e9d0-4b17-896a-218c9f31d339
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e8f3786ac7f031510d8985cb97634cbfc92024c4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bc4a3e976fb504839215e48096d5b6c024324dd2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707018"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927272"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>Accessibilità per utenti disabili
   [!INCLUDE[msCoName](../includes/msconame-md.md)] cerca di sviluppare prodotti e servizi che siano facili da utilizzare per chiunque. In questo argomento vengono fornite informazioni sulle caratteristiche, i prodotti e i servizi seguenti in grado di semplificare l'accesso di utenti disabili alla famiglia di server [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows.  

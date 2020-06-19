@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 39bd24414e2382557a22469da502bad91abe20b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d7f7af7d70cb136b530cfb761cb402ecf0dc6b58
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873409"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970415"
 ---
 # <a name="system-data-collection-set-reports"></a>Report per i set di raccolta dati di sistema
   L'agente di raccolta dati fornisce un report cronologico per ognuno dei set di raccolta dati di sistema. Ognuno dei report seguenti utilizza i dati archiviati nel data warehouse di gestione:  
@@ -132,7 +131,7 @@ ms.locfileid: "62873409"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Attese|Nel grafico Attese [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono visualizzate le attese rilevate dai thread eseguiti per categoria di attesa. È possibile accedere a un report dettagliato facendo clic su qualsiasi segmento del grafico. Oltre a fornire statistiche di attesa per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in formato grafico in un intervallo di tempo più ridotto, questo report include informazioni sulle categorie di attesa in formato tabella. Per ogni categoria, ad esempio la CPU e le relative sottocategorie, la tabella include il numero di attese, il tempo di attesa e la percentuale di tempo di attesa totale.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Attività|È possibile accedere ai diversi aspetti dell'attività di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dal grafico Attività di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Di seguito vengono indicati i report che è possibile ottenere facendo clic su un punto della linea del grafico Compilazioni SQL/sec:<br /><br /> Connessioni e sessioni<br /><br /> Requests<br /><br /> Percentuale riscontri cache piano<br /><br /> Caratteristiche TempDb|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Raccolta dati](data-collection.md)   
  [Visualizzare un report sui set di raccolta &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md)  
   

@@ -17,19 +17,18 @@ helpviewer_keywords:
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5a35156a465e521ceea60fa090142836da6a4c1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a8ffed36767f961f7482aa0dccf755118c80c019
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917468"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952128"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copiare database tramite backup e ripristino
   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] è possibile creare un nuovo database ripristinando un backup di un database utente creato tramite [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o una versione successiva. Tuttavia, i backup di **master**, **model** e **msdb** creati con una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non possono essere ripristinati da [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Inoltre, i backup di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] non possono essere ripristinati da una qualsiasi versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] viene utilizzato un percorso predefinito diverso rispetto alle versioni precedenti. Pertanto, per ripristinare i backup di un database creato nel percorso predefinito di versioni precedenti, è necessario utilizzare l'opzione MOVE. Per informazioni sul nuovo percorso predefinito, vedere [percorsi dei file per le istanze predefinite e denominate di SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). Per altre informazioni sullo spostamento dei file di database, vedere "Spostamento dei file di database" di seguito in questo argomento.  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] viene utilizzato un percorso predefinito diverso rispetto alle versioni precedenti. Pertanto, per ripristinare i backup di un database creato nel percorso predefinito di versioni precedenti, è necessario utilizzare l'opzione MOVE. Per informazioni sul nuovo percorso predefinito, vedere [Percorsi dei file per le istanze predefinite e denominate di SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). Per altre informazioni sullo spostamento dei file di database, vedere "Spostamento dei file di database" di seguito in questo argomento.  
   
 ## <a name="general-steps-for-using-backup-and-restore-to-copy-a-database"></a>Procedura generale per l'utilizzo di operazioni di backup e ripristino per copiare un database  
  Quando si utilizza un'operazione di backup e ripristino per copiare un database in un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i computer di origine e di destinazione possono utilizzare qualsiasi piattaforma sulla quale viene eseguito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -78,7 +77,7 @@ ms.locfileid: "62917468"
  Il nome del database specificato esplicitamente al momento del ripristino viene utilizzato automaticamente come nuovo nome del database. Poiché il nome del database non esiste, viene creato un database con il nuovo nome tramite i file presenti nel backup.  
   
 ## <a name="when-upgrading-a-database-by-using-restore"></a>Aggiornamento di un database utilizzando il ripristino  
- Nel ripristino dei backup da una versione precedente può essere utile sapere in anticipo se il percorso (unità e directory) di ogni catalogo full-text di un backup sia esistente sul computer di destinazione. Per un elenco dei nomi logici e fisici (percorso e nome file) di ogni file in un backup, inclusi i file di catalogo, usare un'istruzione RESTORE FILELISTONLY FROM *<dispositivo_backup>*. Per altre informazioni, vedere [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql).  
+ Nel ripristino dei backup da una versione precedente può essere utile sapere in anticipo se il percorso (unità e directory) di ogni catalogo full-text di un backup sia esistente sul computer di destinazione. Per un elenco dei nomi logici e fisici (percorso e nome file) di ogni file in un backup, inclusi i file di catalogo, usare un'istruzione RESTORE FILELISTONLY FROM *<dispositivo_backup>* . Per altre informazioni, vedere [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql).  
   
  Se lo stesso percorso non esiste sul computer di destinazione, sono disponibili due alternative:  
   
@@ -92,7 +91,7 @@ ms.locfileid: "62917468"
  Quando un database viene ripristinato in un altro computer, l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o l'utente di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows che inizia l'operazione di ripristino diventa automaticamente il proprietario del nuovo database. Al momento del ripristino, l'amministratore di sistema o il nuovo proprietario del database possono modificare il proprietario del database. Per evitare ripristini non autorizzati di un database, impostare password per i supporti o i set di backup.  
   
 ## <a name="managing-metadata-when-restoring-to-another-server-instance"></a>Gestione dei metadati durante il ripristino di un'altra istanza del server  
- Quando si ripristina un database in un'altra istanza del server per offrire a utenti e applicazioni un sistema più coerente, può essere necessario ricreare alcuni o tutti i metadati del database, ad esempio account di accesso e processi, nell'altra istanza del server. Per ulteriori informazioni, vedere [gestire i metadati quando si rende disponibile un database in un'altra istanza del Server &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md).  
+ Quando si ripristina un database in un'altra istanza del server per offrire a utenti e applicazioni un sistema più coerente, può essere necessario ricreare alcuni o tutti i metadati del database, ad esempio account di accesso e processi, nell'altra istanza del server. Per altre informazioni, vedere [Gestione dei metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md).  
   
  **Per visualizzare i file di dati e i file di log in un set di backup**  
   
@@ -130,10 +129,10 @@ ms.locfileid: "62917468"
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore>  
   
-## <a name="see-also"></a>Vedi anche  
- [Copiare database in altri server](copy-databases-to-other-servers.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Copia di database in altri server](copy-databases-to-other-servers.md)   
  [Percorsi dei file per le istanze predefinite e denominate di SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
- [RESTOre FILELISTONLY &#40;&#41;Transact-SQL](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   
+ [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

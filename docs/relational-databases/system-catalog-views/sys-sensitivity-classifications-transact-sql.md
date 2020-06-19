@@ -23,12 +23,12 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4ee73a840be6ec29e3ac34c4c43fe0c8e87185f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9b8f6bf20fa02981e3275299849d1cb04036dfa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77903906"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939042"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -49,7 +49,7 @@ Restituisce una riga per ogni elemento classificato nel database.
 |**rank_desc**|**sysname**|Rappresentazione testuale del rango:  <br><br>NONE, LOW, MEDIUM, HIGH, CRITICAL|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 
 - Questa visualizzazione fornisce visibilità sullo stato di classificazione del database. Può essere utilizzato per la gestione delle classificazioni dei database, nonché per la generazione di report.
 - Attualmente è supportata solo la classificazione delle colonne del database.
@@ -58,7 +58,7 @@ Restituisce una riga per ogni elemento classificato nel database.
 
 ### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>R. Elenco di tutte le colonne classificate e della classificazione corrispondente
 
-Nell'esempio seguente viene restituita una tabella in cui sono elencati il nome della tabella, il nome della colonna, l'etichetta, l'ID dell'etichetta, il tipo di informazioni e l'ID del tipo di informazioni per ogni colonna classificata
+Nell'esempio seguente viene restituita una tabella in cui sono elencati il nome della tabella, il nome della colonna, l'etichetta, l'ID dell'etichetta, il tipo di informazioni, l'ID del tipo di informazione, il rango e la descrizione di rango per ogni colonna classificata nel
 
 > [!NOTE]
 > Label è una parola chiave per Azure SQL Data Warehouse.

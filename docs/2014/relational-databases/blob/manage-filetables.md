@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b6653f2340dfbcf6265c527f85d87d60a3680f30
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a15a914c243f1fafd3b913d98113e984bf533086
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66009984"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970873"
 ---
 # <a name="manage-filetables"></a>Gestione di tabelle FileTable
   Vengono descritte attività amministrative comuni per la gestione di tabelle FileTable.  
@@ -62,7 +61,7 @@ GO
   
      Se il comando ALTER DATABASE è annullato o termina con un timeout, il livello di accesso transazionale non viene modificato.  
   
--   Se viene chiamata l'istruzione ALTER DATABASE con una clausola WITH \<terminazione> (ROLLBACK AFTER integer [ SECONDS ] | ROLLBACK IMMEDIATE | NO_WAIT), vengono terminati tutti gli handle di file non transazionali aperti.  
+-   Se si chiama l'istruzione ALTER DATABASE con una \<termination> clausola with (rollback after Integer [seconds] | ROLLBACK IMMEDIATO | NO_WAIT), vengono terminati tutti gli handle di file non transazionali aperti.  
   
 > [!WARNING]  
 >  La terminazione di handle di file aperti può causare la perdita dei dati non salvati da parte degli utenti. Questo comportamento è coerente con quello del file system stesso.  

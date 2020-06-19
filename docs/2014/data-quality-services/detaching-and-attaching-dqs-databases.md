@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: aca595e33a831e472f06a349e12920aced6dd71f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87af29b64e7185148ead0f089d539bc0519911a5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480688"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937772"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Scollegamento e collegamento di database DQS
   In questo argomento viene descritto come scollegare e collegare i database DQS.  
@@ -71,7 +70,7 @@ ms.locfileid: "65480688"
     C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\DQS_MAIN.mdf  
     ```  
   
-5.  Nel riquadro (inferiore) **Dettagli database** vengono visualizzati i nomi dei file da collegare. Per verificare o modificare il percorso di un file, fare clic sul pulsante **Sfoglia** (...).  
+5.  Nel riquadro (inferiore) **Dettagli database** vengono visualizzati i nomi dei file da collegare. Per verificare o modificare il percorso di un file, fare clic sul pulsante **Sfoglia** ( ... ).  
   
 6.  Fare clic su **OK** per collegare il database DQS_MAIN.  
   
@@ -99,7 +98,7 @@ ms.locfileid: "65480688"
   
  È inoltre possibile collegare i database DQS utilizzando le istruzioni Transact-SQL. Per ulteriori informazioni sul collegamento di database tramite istruzioni Transact-SQL, vedere [Using Transact-SQL](../relational-databases/databases/attach-a-database.md#TsqlProcedure) in [Attach a Database](../relational-databases/databases/attach-a-database.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Manage DQS Databases](../../2014/data-quality-services/manage-dqs-databases.md)  
   
   

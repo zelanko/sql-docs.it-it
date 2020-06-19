@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4219830c82710861ee7b079ce78d1b5859681753
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83b489db3e5324febe26da10c980814d5dd50f8f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479520"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971501"
 ---
 # <a name="entity-permissions-master-data-services"></a>Autorizzazioni per le entità (Master Data Services)
   Le autorizzazioni per le entità si applicano a:  
@@ -34,13 +33,13 @@ ms.locfileid: "65479520"
 > [!NOTE]  
 >  Queste autorizzazioni si applicano solo all'area funzionale **Visualizzatore** dell'interfaccia utente.  
   
-|Autorizzazione|Descrizione|  
+|Autorizzazione|Description|  
 |----------------|-----------------|  
 |**Sola lettura**|L'entità viene visualizzata, ma l'utente non può aggiungere, rimuovere o modificare i membri.|  
-|**Aggiornamento**|L'entità viene visualizzata e l'utente può aggiungere, rimuovere e modificare i membri.|  
-|**Negare**|L'entità non viene visualizzata.|  
+|**Update**|L'entità viene visualizzata e l'utente può aggiungere, rimuovere e modificare i membri.|  
+|**Nega**|L'entità non viene visualizzata.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Assegnare autorizzazioni per oggetti modello &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   
  [Autorizzazioni per oggetti modello &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [Entità &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  

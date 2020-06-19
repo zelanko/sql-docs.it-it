@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5e573274-a170-4132-bfc8-a8ff3a8411e4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cbd45caac75d4fac3b5fffc305a9f359193191a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a7698276ece16f3c1c9db53deec94912c89db01
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062089"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926432"
 ---
 # <a name="add-a-data-viewer-to-a-data-flow"></a>Aggiunta di un visualizzatore dati a un flusso di dati
   In questo argomento viene descritta la procedura per l'aggiunta e la configurazione di un visualizzatore dati in un flusso di dati. In un visualizzatore dati vengono visualizzati i dati in transito tra due componenti flusso di dati, ad esempio i dati estratti da un'origine dei dati prima che vengano modificati da una trasformazione del flusso di dati.  
@@ -53,7 +52,7 @@ ms.locfileid: "66062089"
   
 10. Fare clic su **OK**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Trasformazioni Integration Services](data-flow/transformations/integration-services-transformations.md)   
  [Percorsi di Integration Services](data-flow/integration-services-paths.md)   
  [Flusso di dati](data-flow/data-flow.md)   

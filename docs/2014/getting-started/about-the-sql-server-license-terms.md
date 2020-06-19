@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 51d130a1-2b48-439e-9447-783e1fc3f4fb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 75be591f1910f5a55f6b7a019dad366a49ea921a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 14a2ddb95c3e36076b02901e5fb6f431c1dfb12e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707043"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927307"
 ---
 # <a name="about-the-sql-server-license-terms"></a>Informazioni sulle condizioni di licenza di SQL Server
   Le condizioni di licenza software [!INCLUDE[msCoName](../includes/msconame-md.md)] vengono copiate nel computer locale durante l'installazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Quando più istanze della stessa edizione e lingua di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono installate nello stesso computer, a tutte le istanze della stessa edizione e lingua verrà applicata una sola copia delle condizioni di licenza. I file vengono scritti in:% ProgramFiles% \\ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] \120\condizioni termini \ o% ProgramFiles (x86)% \ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Termini di \120\Condizioni \\ .  
   
  Quando più istanze della stessa edizione e lingua di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono installate nello stesso computer, a tutte le istanze della stessa edizione e lingua verrà applicata una sola copia delle condizioni di licenza.  
   
- Nel nome di file delle condizioni di licenza sono indicate l'edizione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e l'edizione localizzata installata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il nome del file delle condizioni di licenza è in formato: SQLServer2014_License_Edition_ \< tipo>_ \< LCID>. RTF. ad esempio:  
+ Nel nome di file delle condizioni di licenza sono indicate l'edizione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e l'edizione localizzata installata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il nome del file delle condizioni di licenza è in formato: SQLServer2014_License_Edition_ \<TYPE> _ \<LCID> . RTF. Ad esempio:  
   
 -   SQLServer2014_License_DEV_1033.rtf per [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Developer, edizione in lingua inglese.  
   

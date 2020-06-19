@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4519ed412e3148d8e0c70a77c00db969be73a9c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f72e00f9dab422652237b4b85579c544d0cda9fb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917721"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952371"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>Aggiungere file di dati o file di log a un database
   In questo argomento si descrive come aggiungere file di dati o di log a un database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -71,7 +70,7 @@ ms.locfileid: "62917721"
   
 6.  Selezionare il tipo di file, dati oppure log.  
   
-7.  Per un file di dati, selezionare il filegroup nel quale includere il file dall'elenco oppure selezionare **\<NuovoFilegroup>** per creare un nuovo filegroup. Non è possibile inserire log delle transazioni nei filegroup.  
+7.  Per un file di dati, selezionare il filegroup nel quale includere il file dall'elenco oppure selezionare **\<new filegroup>** per creare un nuovo filegroup. Non è possibile inserire log delle transazioni nei filegroup.  
   
 8.  Specificare le dimensioni iniziali del file. Creare file di dati delle dimensioni maggiori possibili, corrispondenti alla quantità massima di dati che si prevede di includere nel database.  
   

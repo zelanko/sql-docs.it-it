@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a113803c9d6e5c688ea6eddca9446d96d79e82be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9d85f5704a3a091f2f4b652812a66977eb11c93f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483402"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971841"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>Creare un membro foglia (Master Data Services)
-  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]creare un membro foglia quando si desidera aggiungere dati master al sistema e non si utilizzano tabelle [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] di staging o per importare dati.  
+  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] creare un membro foglia quando si desidera aggiungere dati master al sistema e non si utilizzano tabelle di staging o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] per importare dati.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
@@ -45,11 +44,11 @@ ms.locfileid: "65483402"
   
 6.  Nel riquadro **Dettagli** completare i campi.  
   
-7.  Facoltativo. Nella casella **Annotazioni** , digitare un commento indicando il perché è stato aggiunto il membro. Tutti gli utenti che dispongono di accesso al membro possono visualizzare l'annotazione.  
+7.  Facoltativa. Nella casella **Annotazioni** , digitare un commento indicando il perché è stato aggiunto il membro. Tutti gli utenti che dispongono di accesso al membro possono visualizzare l'annotazione.  
   
 8.  Fare clic su **OK**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Caricare o aggiornare membri in Master Data Services tramite il processo di gestione temporanea](add-update-and-delete-data-master-data-services.md)   
  [Creazione di un membro consolidato &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)   
  [Membri &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3e5a00c3-8905-40f0-9ddc-d924df9c2f0d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e67ee4d0ff2dba6edb8b9f485dc5efd903b100cf
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: fca4ea655ffdcf8471d1340016d16f2c5b9c352a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83857853"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927682"
 ---
 # <a name="utility-administration-sql-server-utility"></a>Amministrazione utilità (Utilità SQL Server)
   Utilizzare le schede Amministrazione utilità per gestire le impostazioni di criteri, sicurezza e data warehouse per un'utilità di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per altre informazioni sui concetti di Utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , vedere [Attività e funzionalità di Utilità SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
@@ -89,11 +88,11 @@ ms.locfileid: "83857853"
  Informazioni di configurazione data warehouse dell'utilità  
  Le impostazioni di configurazione seguenti non sono configurabili in questa versione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
--   Nome del data warehouse di gestione dell'utilità (UMDW): Sysutility_mdw_\<GUID>_DATA.  
+-   Nome UMDW: Sysutility_mdw_ \<GUID> _DATA.  
   
 -   Frequenza di caricamento del set di raccolta: ogni 15 minuti.  
   
- La directory dell'utilità UMDW è configurabile: \<Unità di sistema>:\Programmi\Microsoft SQL Server\MSSQL10_50.<Nome_UCP>\MSSQL\Data\\, dove \<Unità di sistema> è in genere l'unità C:\. Il file di log UMDW_\<GUID>_LOG si trova nella stessa directory.  
+ La directory UMDW è configurabile: \<System drive> : \programmi\microsoft SQL Server \ MSSQL10_50. <UCP_Name> \MSSQL\Data \\ , dove \<System drive> è in genere il C:\ unità. Il file di log, UMDW_ \<GUID> _LOG, si trova nella stessa directory.  
   
 > [!NOTE]  
 >  È possibile modificare la posizione del file data warehouse di gestione dell'utilità (UMDW) sysutility_mdw utilizzando i comandi collega/scollega o l'istruzione ALTER DATABASE. È consigliabile utilizzare l'istruzione ALTER DATABASE. Per altre informazioni, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  

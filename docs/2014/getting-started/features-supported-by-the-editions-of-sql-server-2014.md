@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 118fe59e76f23089ce56371ea4ba981bb4ab1f7f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 93555bbbc6c7a10955e8fc869f6ddadc38572830
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706967"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927132"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Funzionalità supportate dalle edizioni di SQL Server 2014
 
@@ -34,7 +33,7 @@ ms.locfileid: "82706967"
   
  [Scalabilità e prestazioni](#Scalability)  
   
- [Security](#Enterprise_security)  
+ [Sicurezza](#Enterprise_security)  
   
  [Replica](#Replication)  
   
@@ -44,7 +43,7 @@ ms.locfileid: "82706967"
   
  [Strumenti di sviluppo](#Dev_tools)  
   
- [Programmabilità](#Programmability)  
+ [Programmazione](#Programmability)  
   
  [Integration Services](#SSIS)  
   
@@ -184,7 +183,7 @@ ms.locfileid: "82706967"
 |Nome funzionalità|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Istanze utente|||||Sì|Sì|Sì|  
-|DB locale|||||Sì|Sì||  
+|LocalDB|||||Sì|Sì||  
 |Connessione amministrativa dedicata|Sì|Sì|Sì|Sì|Sì (con flag di traccia)|Sì (con flag di traccia)|Sì (con flag di traccia)|  
 |Supporto per script di PowerShell|Sì|Sì|Sì|Sì|Sì|Sì|Sì|  
 |Supporto SysPrep<sup>1</sup>|Sì|Sì|Sì|Sì|Sì|Sì|Sì|  
@@ -312,7 +311,7 @@ ms.locfileid: "82706967"
 |Misure semiadditive|Sì|Sì|Nessun<sup>1</sup>|||||  
 |Gerarchie|Sì|Sì|Sì|||||  
 |KPI|Sì|Sì|Sì|||||  
-|prospettive|Sì|Sì||||||  
+|Prospettive|Sì|Sì||||||  
 |Azioni|Sì|Sì|Sì|||||  
 |Funzionalità di Business Intelligence per la contabilità|Sì|Sì|Sì|||||  
 |Business Intelligence per gerarchie temporali|Sì|Sì|Sì|||||  
@@ -348,7 +347,7 @@ ms.locfileid: "82706967"
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Gerarchie|Sì|Sì||||||  
 |KPI|Sì|Sì||||||  
-|prospettive|Sì|Sì||||||  
+|Prospettive|Sì|Sì||||||  
 |Traduzioni|Sì|Sì||||||  
 |Calcoli DAX, query DAX, query MDX|Sì|Sì||||||  
 |Sicurezza a livello di riga|Sì|Sì||||||  

@@ -31,13 +31,12 @@ helpviewer_keywords:
 ms.assetid: 27c4889b-c543-47a8-a630-ad06804f92df
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7044fdc4c29110870e20cd2f9fe4f2140659e551
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61f4d13550fa1812e6de3fdc98a8e4e4113fe5bd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874442"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970719"
 ---
 # <a name="clr-user-defined-types"></a>Tipi CLR definiti dall'utente
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di creare oggetti di database programmati in un assembly creato in Common Language Runtime (CLR) di .NET Framework. Tra gli oggetti di database che consentono l'utilizzo del ricco modello di programmazione offerto da CLR vi sono trigger, stored procedure, funzioni, funzioni di aggregazione e tipi.  
@@ -45,7 +44,7 @@ ms.locfileid: "62874442"
 > [!NOTE]  
 >  Per impostazione predefinita, l'esecuzione di codice CLR in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disattivata. CLR può essere abilitato tramite l'stored procedure di sistema **sp_configure** .  
   
- A partire [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]da, è possibile usare i tipi definiti dall'utente (UDT) per estendere il sistema di tipi scalari del server, abilitando l'archiviazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di oggetti CLR in un database. I tipi definiti dall'utente possono contenere più elementi e assumere vari comportamenti. Questo li differenzia dai tipi di dati alias tradizionali costituiti da un singolo tipo di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , è possibile usare i tipi definiti dall'utente (UDT) per estendere il sistema di tipi scalari del server, abilitando l'archiviazione di oggetti CLR in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. I tipi definiti dall'utente possono contenere più elementi e assumere vari comportamenti. Questo li differenzia dai tipi di dati alias tradizionali costituiti da un singolo tipo di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Poiché il sistema accede ai tipi definiti dall'utente nella loro interezza, l'utilizzo che ne viene fatto per i tipi di dati complessi può influire negativamente sulle prestazioni. Il modo migliore per modellare i dati complessi in genere consiste nell'utilizzare righe e tabelle tradizionali. I tipi definiti dall'utente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] risultano particolarmente adatti per:  
   
@@ -66,7 +65,7 @@ ms.locfileid: "62874442"
     > [!NOTE]  
     >  Prima di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], i tipi definiti dall'utente creati dagli assembly di .NET Framework non erano supportati. Tuttavia, è comunque possibile usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i tipi di dati alias usando **sp_addtype**. La sintassi CREATE TYPE può essere utilizzata per creare tipi di dati definiti dall'utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nativi e tipi definiti dall'utente.  
   
-4.  **Creare tabelle, variabili o parametri usando il tipo definito dall'utente** A partire [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]da, un tipo definito dall'utente può essere utilizzato come definizione di colonna di una tabella, come variabile in un [!INCLUDE[tsql](../../includes/tsql-md.md)] batch o come argomento di una [!INCLUDE[tsql](../../includes/tsql-md.md)] funzione o stored procedure.  
+4.  **Creare tabelle, variabili o parametri usando il tipo definito dall'utente** A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , un tipo definito dall'utente può essere utilizzato come definizione di colonna di una tabella, come variabile in un [!INCLUDE[tsql](../../includes/tsql-md.md)] batch o come argomento di una [!INCLUDE[tsql](../../includes/tsql-md.md)] funzione o stored procedure.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Creazione di un tipo definito dall'utente](creating-user-defined-types.md)  

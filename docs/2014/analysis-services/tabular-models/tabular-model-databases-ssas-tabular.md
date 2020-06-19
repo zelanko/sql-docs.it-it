@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 539c6b5f-f4b6-42f9-af81-7c02f74d5efe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 24c9487484857d61acede622b1467a1d8c0b7345
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 669d39c3f76cc8e925932b238bd7b0fd1c1a89c0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066414"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938572"
 ---
 # <a name="tabular-model-databases-ssas-tabular"></a>Database modello tabulare (SSAS tabulare)
   Un database modello tabulare è un database di Analysis Services creato in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] tramite il modello di progetto di modello tabulare di Analysis Services, in cui tabelle e relazioni sono le strutture primarie per la rappresentazione di dati.  
