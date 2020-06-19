@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9e435ab4cec86d439a7e2fba31f6099bf8668ec0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42a8873f4046a307e3b8ec1ce703a34bf8cb0df2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175432"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935892"
 ---
 # <a name="buffer-pool-extension"></a>Estensione pool di buffer
   Introdotta in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], l'estensione del pool di buffer offre l'integrazione diretta di una estensione di RAM non volatile (ossia, un'unità SSD) al pool di buffer del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per migliorare la velocità effettiva di I/O in maniera significativa. L'estensione del pool di buffer non è disponibile in tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per ulteriori informazioni, vedere [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).
@@ -46,7 +45,7 @@ ms.locfileid: "78175432"
 
  Le unità SSD (Solid State Drive) archiviano i dati in memoria (RAM) in modo permanente. Per ulteriori informazioni vedere [questa definizione](http://en.wikipedia.org/wiki/Solid-state_drive).
 
- Buffer in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un buffer è una pagina da 8 KB in memoria, le stesse dimensioni di una pagina di dati o di indice. La cache del buffer è quindi suddivisa in pagine da 8 KB. Una pagina rimane nella cache del buffer fino a quando per Gestione buffer non è necessaria l'area del buffer per leggere un maggior numero di dati. I dati vengono riscritti sul disco solo se vengono modificati. Queste pagine modificate in memoria sono dette pagine dirty. Una pagina è detta clean quando è equivalente alla propria immagine del database sul disco. I dati nella cache del buffer possono essere modificati più volte prima di venire riscritti sul disco.
+ Buffer in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , un buffer è una pagina da 8 KB in memoria, le stesse dimensioni di una pagina di dati o di indice. La cache del buffer è quindi suddivisa in pagine da 8 KB. Una pagina rimane nella cache del buffer fino a quando per Gestione buffer non è necessaria l'area del buffer per leggere un maggior numero di dati. I dati vengono riscritti sul disco solo se vengono modificati. Queste pagine modificate in memoria sono dette pagine dirty. Una pagina è detta clean quando è equivalente alla propria immagine del database sul disco. I dati nella cache del buffer possono essere modificati più volte prima di venire riscritti sul disco.
 
  Pool di buffer chiamato anche cache del buffer. Il pool di buffer è una risorsa globale condivisa da tutti i database per le pagine di dati memorizzate nella cache. Le dimensioni massime e minime della cache del pool di buffer sono determinate all'avvio o quando l'istanza di SQL Server viene riconfigurata dinamicamente tramite sp_configure. Tali dimensioni determinano il numero massimo di pagine che possono essere memorizzate nella cache del pool di buffer dell'istanza in esecuzione in un momento qualsiasi.
 
@@ -81,7 +80,7 @@ ms.locfileid: "78175432"
 
  Sono disponibili i seguenti XEvent.
 
-|XEvent|Descrizione|Parametri|
+|XEvent|Description|Parametri|
 |------------|-----------------|----------------|
 |sqlserver.buffer_pool_extension_pages_written|Viene attivato quando una pagina o un gruppo di pagine vengono eliminate dal pool di buffer e vengono scritte nel file di estensione del pool di buffer.|number_page<br /><br /> first_page_id<br /><br /> first_page_offset<br /><br /> initiator_numa_node_id|
 |sqlserver.buffer_pool_extension_pages_read|Viene attivato quando una pagina viene letta dal file di estensione del pool di buffer nel pool di buffer.|number_page<br /><br /> first_page_id<br /><br /> first_page_offset<br /><br /> initiator_numa_node_id|

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4177d7e8ebc96e40e831a6558c7d8b5073c86bc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6d724d5dc6a9859674f8ae64c9e08486b3ea7cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209872"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063565"
 ---
 # <a name="resource-governor-resource-pool"></a>Pool di risorse di Resource Governor
   In Resource Governor di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , un pool di risorse rappresenta un subset delle risorse fisiche di un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Resource Governor permette di specificare i limiti sulla quantità di CPU, I/O fisico e memoria che le richieste dell'applicazione in ingresso possono utilizzare nel pool di risorse. Ogni pool di risorse può contenere uno o più gruppi di carico di lavoro. Una volta avviata, la sessione viene assegnata a un gruppo di carico di lavoro specifico tramite la funzione di classificazione di Resource Governor e deve essere eseguita utilizzando le risorse assegnate a tale gruppo.  
@@ -63,7 +62,7 @@ ms.locfileid: "63209872"
   
 -   Percentuale condivisa = Valore effettivo MAX% - MIN%.  
   
-|Nome pool|Impostazione MIN%|Impostazione MAX%|Valore MAX% effettivo calcolato|Percentuale condivisa calcolata|Commento|  
+|Nome pool|Impostazione MIN%|Impostazione MAX%|Valore MAX% effettivo calcolato|Percentuale condivisa calcolata|Comment|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
 |internal|0|100|100|0|I valori MAX% effettivo e % condivisa non sono applicabili al pool interno.|  
 |default|0|100|30|30|Il valore MAX effettivo viene calcolato come: min(100,100-(20+50)) = 30. La percentuale condivisa calcolata è il valore effettivo MAX - MIN = 30.|  
@@ -116,11 +115,11 @@ ms.locfileid: "63209872"
 |Viene descritto come modificare le impostazioni del pool di risorse.|[Modificare le impostazioni del pool di risorse](change-resource-pool-settings.md)|  
 |Viene descritto come eliminare un pool di risorse.|[Eliminare un pool di risorse](delete-a-resource-pool.md)|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Resource Governor](resource-governor.md)   
- [Gruppo del carico di lavoro Resource Governor](resource-governor-workload-group.md)   
+ [Gruppo di carico di lavoro di Resource Governor](resource-governor-workload-group.md)   
  [Funzione di classificazione Resource Governor](resource-governor-classifier-function.md)   
- [Configurare Resource Governor usando un modello](configure-resource-governor-using-a-template.md)   
- [View Resource Governor Properties](view-resource-governor-properties.md)  
+ [Configurare Resource Governor utilizzando un modello](configure-resource-governor-using-a-template.md)   
+ [Visualizzare proprietà di Resource Governor](view-resource-governor-properties.md)  
   
   

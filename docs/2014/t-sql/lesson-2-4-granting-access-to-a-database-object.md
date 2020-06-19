@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a44d9bbf-f58e-4734-b7f4-eb3b492b777b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 19381b0c5dbe690a60b2c536a8da759205c08c31
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22bd0bb1f01e59ec30f7cf1bbf128c890d3d5d64
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62643447"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008442"
 ---
 # <a name="granting-access-to-a-database-object"></a>Concessione dell'accesso a un oggetto di database
   In qualità di amministratore, l'utente è autorizzato a eseguire l'istruzione SELECT dalla tabella **Products** e dalla vista **vw_Names** , nonché a eseguire la procedura **pr_Names** . All'utente Mary non sono tuttavia concesse tali autorizzazioni. Per concedere a tale utente le autorizzazioni necessarie, utilizzare l'istruzione GRANT.  
@@ -42,7 +41,7 @@ ms.locfileid: "62643447"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Riepilogo: Configurazione delle autorizzazioni per gli oggetti di database](lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [CONCEDERE &#40;&#41;Transact-SQL](/sql/t-sql/statements/grant-transact-sql)   
  [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)  
   

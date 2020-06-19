@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 158d442f-2225-4173-8545-fb1cf611b4d0
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0a6c6da76bd89b4686791087e558ae1f329f57a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20ec4981a7a4c7f2d09315416deddc5e0e195fda
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088795"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928358"
 ---
 # <a name="trace-file-properties-events-selection-tab"></a>Proprietà file di traccia (scheda Selezione eventi)
   Utilizzare la scheda **Selezione eventi** della finestra di dialogo **Proprietà modello di traccia** per visualizzare le proprietà delle colonne della traccia o per eliminare colonne di dati dalla traccia.  
@@ -47,7 +46,7 @@ ms.locfileid: "66088795"
  **Organizza colonne**  
  Dopo avere selezionato **Eventi** e le colonne di dati da inserire nella traccia, fare clic su **Organizza colonne** per forzare il riordinamento della colonna nella finestra dei risultati della traccia.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Specificare eventi e colonne di dati per un file di traccia &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
  [Filtrare gli eventi in una traccia &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
  [Visualizza informazioni sui filtri &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   

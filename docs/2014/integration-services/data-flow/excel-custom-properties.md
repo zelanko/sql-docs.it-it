@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d8d556a199b608659a9ceaaeb3b7036155886d6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d03e321ddacd2e033880420f427145c99d30ff88
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827234"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915731"
 ---
 # <a name="excel-custom-properties"></a>Proprietà personalizzate di Excel
   **Proprietà personalizzate delle origini**  
@@ -26,7 +25,7 @@ ms.locfileid: "62827234"
   
 |Nome proprietà|Tipo di dati|Descrizione|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer|Modalità utilizzata per accedere al database. I valori possibili sono **Apri set di righe**, **Apri set di righe da variabile**, `SQL Command`e **comando SQL da variabile**. Il valore predefinito è **OpenRowset**.|  
+|AccessMode|Integer|Modalità utilizzata per accedere al database. I valori possibili sono **Apri set di righe**, **Apri set di righe da variabile**, `SQL Command` e **comando SQL da variabile**. Il valore predefinito è **OpenRowset**.|  
 |CommandTimeout|Integer|Numero di secondi prima del timeout del comando.  Il valore 0 indica un timeout infinito.<br /><br /> **Nota** Questa proprietà non è disponibile in **Editor origine Excel**, ma può essere impostata tramite **Editor avanzato**.|  
 |OpenRowset|string|Nome dell'oggetto di database utilizzato per aprire un set di righe.|  
 |OpenRowsetVariable|string|Variabile che contiene il nome dell'oggetto di database utilizzato per aprire un set di righe.|  
@@ -52,9 +51,9 @@ ms.locfileid: "62827234"
 |FastLoadKeepNulls|Boolean|Valore che specifica se copiare i valori Null durante il caricamento dei dati. Questa proprietà è disponibile solo con una delle opzioni di caricamento rapido. Il valore predefinito di questa proprietà è **False**.|  
 |FastLoadMaxInsertCommitSize|Integer|Valore che specifica le dimensioni del batch di cui la destinazione Excel tenta di eseguire il commit durante le operazioni di caricamento rapido. Il valore predefinito è **2147483647**. Il valore **0** indica una singola operazione di commit in seguito all'elaborazione di tutte le righe.|  
 |FastLoadOptions|string|Raccolta di opzioni di caricamento rapido. Tra le opzioni di caricamento rapido sono inclusi il blocco delle tabelle e la verifica dei vincoli. È possibile specificare una, nessuna o entrambe le opzioni.<br /><br /> Nota: Alcune opzioni valide per questa proprietà non sono disponibili in **Editor destinazione Excel**, ma possono essere impostate tramite **Editor avanzato**.|  
-|OpenRowset|string|Quando AccessMode è `OpenRowset`, il nome della tabella o della vista a cui accede la destinazione Excel.|  
-|OpenRowsetVariable|string|Quando AccessMode è `OpenRowset from Variable`, il nome della variabile che contiene il nome della tabella o della vista a cui accede la destinazione Excel.|  
-|SqlCommand|string|Quando AccessMode è `SQL Command`, istruzione Transact-SQL utilizzata dalla destinazione Excel per specificare le colonne di destinazione per i dati.|  
+|OpenRowset|string|Quando AccessMode è `OpenRowset` , il nome della tabella o della vista a cui accede la destinazione Excel.|  
+|OpenRowsetVariable|string|Quando AccessMode è `OpenRowset from Variable` , il nome della variabile che contiene il nome della tabella o della vista a cui accede la destinazione Excel.|  
+|SqlCommand|string|Quando AccessMode è `SQL Command` , istruzione Transact-SQL utilizzata dalla destinazione Excel per specificare le colonne di destinazione per i dati.|  
   
  L'input e le colonne di input della destinazione Excel non includono proprietà personalizzate.  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0d0c4862-19c0-4513-a5f4-3fe97f635cf6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 44245b7e64a1ccb16180fd0ceaa0f1dde0937133
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4820fd7f9aeeec02b82b7c55493b3d8bf77c92cb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060395"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920152"
 ---
 # <a name="connection-managers-area"></a>Area Gestioni connessioni
   Nei pacchetti vengono utilizzate gestioni connessioni per stabilire la connessione a origini dati, quali file, database relazionali e server.  
@@ -26,7 +25,7 @@ ms.locfileid: "66060395"
   
  Fare clic con il pulsante destro del mouse in questa area e quindi scegliere l'opzione per l'attività che si desidera eseguire dal menu di scelta rapida.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services &#40;connessioni SSIS&#41;](connection-manager/integration-services-ssis-connections.md)   
  [Progettazione SSIS](ssis-designer.md)  
   

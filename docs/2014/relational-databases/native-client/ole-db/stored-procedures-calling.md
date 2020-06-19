@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 33fedf2957203b1a750aba8fd086087c03ffc934
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 695848c8633d310f5e8ee21e9e738749d1550e4a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704189"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055854"
 ---
 # <a name="calling-a-stored-procedure-ole-db"></a>Esecuzione di una chiamata a una stored procedure (OLE DB)
   Una stored procedure può avere zero o più parametri. Può inoltre restituire un valore. Quando si utilizza il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native client, è possibile passare i parametri di un stored procedure:  

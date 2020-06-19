@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: bad88d10-fdd5-4d3d-b5ea-a4f063847485
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 33cfb7faaa7f332292df8e4a087925b2f1605250
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9a2b488b13eeb4df7754e331960faedef49b9bdf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718482"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063377"
 ---
 # <a name="breakpoints-window"></a>Finestra Punti di interruzione
   Nella finestra **Punti di interruzione** sono elencati tutti i punti di interruzione impostati nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] corrente. Per gestire i punti di interruzione, usare la barra degli strumenti nella finestra **Punti di interruzione** . I punti di interruzione sono posizioni nel codice in cui viene sospesa l'esecuzione in modalità di debug per consentire la visualizzazione dei dati di debug.  

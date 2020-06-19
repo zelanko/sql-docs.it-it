@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 25227268-143b-477e-aac9-8268bcaf2078
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 573c8d13b9a7431c33d8c3b104712a2bf31b3fbf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84a80b4690597f9274bb7ff334b5879ef465c6e6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089526"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928302"
 ---
 # <a name="trace-properties-general-tab"></a>Proprietà traccia (scheda Generale)
   Usare la scheda **Generale** della finestra di dialogo **Proprietà traccia** per visualizzare o specificare le proprietà di una traccia.  
@@ -46,7 +45,7 @@ ms.locfileid: "66089526"
  **Dimensioni massime del file (MB)**  
  Se si sceglie di salvare i dati di traccia in un file, è necessario specificare le dimensioni massime del file di traccia. Il valore predefinito è 5 megabyte (MB). Le dimensioni massime sono limitate solo dal file system (NTFS, FAT) in cui viene salvato il file.  
   
- \<Grafico> **Salva con nome**  
+ \<Graphic>**Salva con nome**  
  Se si è scelto di eseguire il salvataggio, è possibile fare clic su questa icona per modificare il nome del file.  
   
  **Consenti rollover dei file**  
@@ -58,7 +57,7 @@ ms.locfileid: "66089526"
  **Salva nella tabella**  
  Consente di memorizzare i dati di traccia in una tabella di database. Il salvataggio dei dati di traccia risulta utile per eseguire analisi e controlli successivi. Tuttavia il salvataggio dei dati di traccia in una tabella può causare un notevole overhead nel server in cui viene salvata la traccia. Se possibile, non salvare la tabella di traccia sullo stesso server tracciato.  
   
- \<Grafico> **tabella di destinazione**  
+ \<Graphic>**Tabella di destinazione**  
  Se si è scelto di eseguire il salvataggio dei dati della traccia in una tabella di database, è possibile fare clic su questa icona per modificare il nome della tabella.  
   
  **Numero massimo di righe (in migliaia)**  
@@ -67,7 +66,7 @@ ms.locfileid: "66089526"
  **Data e ora di arresto della traccia**  
  Consente di impostare la data e l'ora di interruzione della traccia e la relativa chiusura.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creare una traccia &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
   
   

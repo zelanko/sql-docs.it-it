@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a229b02f60c56b9979d2d31788910b3faa63cb2f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b2db0f80599be6f4437636d978532f640af3cdd9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706643"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027572"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Gestire sessioni di eventi in Esplora oggetti
   In questo argomento vengono illustrate le azioni eseguibili in **Esplora oggetti** che influiscono su Eventi estesi:  
@@ -96,7 +95,7 @@ STATE = STOP
   
 4.  Espandere la casella di riepilogo a discesa **Modello** .  
   
-5.  Fare clic su ** \< file da... >aprire** e cercare la sessione (file XML) che si vuole importare.  
+5.  Fare clic su ** \<File From ...> Apri** e selezionare la sessione (file XML) che si desidera importare.  
   
  La sessione verrà visualizzata nel nodo **Sessioni** . Per impostazione predefinita,la sessione non viene avviata.  
   

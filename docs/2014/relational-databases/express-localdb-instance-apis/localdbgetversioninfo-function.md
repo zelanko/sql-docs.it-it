@@ -15,18 +15,17 @@ topic_type:
 ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 4350badedcaf2a4e2b977b57cf9e6cfde6c1b275
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cce316685bccb2724eb89965e4e466fe58fb807e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032225"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027728"
 ---
 # <a name="localdbgetversioninfo-function"></a>Funzione LocalDBGetVersionInfo
   Vengono restituite le informazioni per la versione del database locale di SQL Server Express specificata, se esistente, e il numero completo della versione del database locale, ovvero con i numeri di compilazione e della versione inclusi.  
   
- Le informazioni vengono restituite sotto forma di un `struct` oggetto denominato **LocalDBVersionInfostruct**, che presenta la definizione seguente.  
+ Le informazioni vengono restituite sotto forma di un oggetto `struct` denominato **LocalDBVersionInfostruct**, che presenta la definizione seguente.  
   
 ```  
 typedef struct _LocalDBVersionInfo  
@@ -68,7 +67,7 @@ HRESULT LocalDBGetVersionInfo(
  *dwVersionInfoSize*  
  Input Include le dimensioni del buffer *VERSIONINFO* .  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  S_OK  
  Funzione completata.  
   
@@ -85,7 +84,7 @@ HRESULT LocalDBGetVersionInfo(
  Si è verificato un errore imprevisto. Per informazioni, vedere il registro eventi.  
   
 ## <a name="details"></a>Dettagli  
- La logica alla base dell'introduzione dell'argomento `struct` size (*lpVersionInfoSize*) consiste nell'abilitare l'API per la restituzione di versioni diverse di **LocalDBVersionInfostruct**, abilitando in modo efficace la compatibilità con le versioni precedenti e precedenti.  
+ La logica alla base dell'introduzione dell' `struct` argomento size (*lpVersionInfoSize*) consiste nell'abilitare l'API per la restituzione di versioni diverse di **LocalDBVersionInfostruct**, abilitando in modo efficace la compatibilità con le versioni precedenti e precedenti.  
   
  Se l' `struct` argomento size (*lpVersionInfoSize*) corrisponde alle dimensioni di una versione nota di **LocalDBVersionInfostruct**, `struct` viene restituita tale versione di. In caso contrario, viene restituito LOCALDB_ERROR_INVALID_PARAMETER.  
   
@@ -100,7 +99,7 @@ LocalDBVersionInfo(L"11.0", &vi, sizeof(LocalDBVersionInfo));
 ## <a name="remarks"></a>Osservazioni  
  Per un esempio di codice in cui viene utilizzata l'API del database locale, vedere [SQL Server Express riferimento al database locale](../sql-server-express-localdb-reference.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Informazioni sulla versione e intestazione di SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
   
   

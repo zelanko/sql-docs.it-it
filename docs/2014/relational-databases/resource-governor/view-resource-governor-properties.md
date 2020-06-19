@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 35d4720a8fe8b8c1b404a97e27b36896f36dd5f7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3cd7af8f4f8eb3cd0531bc907011846f73f94f6f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209690"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063516"
 ---
 # <a name="view-resource-governor-properties"></a>View Resource Governor Properties
   È possibile creare o configurare entità Resource Governor, ad esempio pool di risorse e gruppi di carico di lavoro, tramite la pagina Proprietà di Resource Governor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -37,7 +36,7 @@ ms.locfileid: "63209690"
   
 -   [Creare un pool di risorse](create-a-resource-pool.md)  
   
--   [Creazione di un gruppo di carico di lavoro](create-a-workload-group.md)  
+-   [Creare un gruppo di carico di lavoro](create-a-workload-group.md)  
   
 -   [Modificare le impostazioni del pool di risorse](change-resource-pool-settings.md)  
   
@@ -125,11 +124,11 @@ ms.locfileid: "63209690"
   
 2.  Per visualizzare le configurazioni correnti delle entità resource governor, usare le [Viste a gestione dinamica relative a Resource Governor &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Resource Governor](resource-governor.md)   
- [Abilita Resource Governor](enable-resource-governor.md)   
- [Pool di risorse Resource Governor](resource-governor-resource-pool.md)   
- [Gruppo del carico di lavoro Resource Governor](resource-governor-workload-group.md)   
+ [Abilitare Resource Governor](enable-resource-governor.md)   
+ [Pool di risorse di Resource Governor](resource-governor-resource-pool.md)   
+ [Gruppo di carico di lavoro di Resource Governor](resource-governor-workload-group.md)   
  [Funzione di classificazione di Resource Governor](resource-governor-classifier-function.md)  
   
   

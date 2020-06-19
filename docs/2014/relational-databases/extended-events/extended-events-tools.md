@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2521810771713833a10f7e01f1e83480c3050369
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7a74080352beeda4f92ad6afa7b8266a8ebee5a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706766"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027625"
 ---
 # <a name="extended-events-tools"></a>Strumenti degli eventi estesi
   È possibile utilizzare gli strumenti seguenti per creare e gestire sessioni Eventi estesi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  

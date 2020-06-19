@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f2153076-32c9-4a52-8e1b-fc9618153543
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 18b166472cff011b3766645dde61f562c766ff2c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14235b544d495f0f6ce23a797adafec97dd29fc0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63140453"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027084"
 ---
 # <a name="srv_wsendmsg-extended-stored-procedure-api"></a>srv_wsendmsg (API Stored procedure estesa)
     
@@ -68,7 +67,7 @@ msglen
  *msglen*  
  Specifica la lunghezza, espressa in caratteri, di *message*.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SUCCEED o FAIL.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -85,7 +84,7 @@ msglen
 > [!IMPORTANT]  
 >  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [srv_sendmsg &#40;API Stored procedure estesa&#41;](srv-sendmsg-extended-stored-procedure-api.md)  
   
   

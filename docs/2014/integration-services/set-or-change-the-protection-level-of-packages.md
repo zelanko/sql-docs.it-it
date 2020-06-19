@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 904a5580-82ba-4a26-b0c5-d1c989975f61
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ee8ee5b2113d6fda6aaac72b407c899a610960bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bcb8f4da5f39647665b3f07355ea8eed2506cda5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055847"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963411"
 ---
 # <a name="set-or-change-the-protection-level-of-packages"></a>Impostazione o modifica del livello di protezione dei pacchetti
   Per controllare l'accesso al contenuto dei pacchetti e ai valori sensibili contenuti, ad esempio password, impostare il valore della proprietà `ProtectionLevel`. Per poter compilare il progetto, ai pacchetti contenuti in un progetto deve essere assegnato lo stesso livello di protezione del progetto. Se si modifica l'impostazione della proprietà `ProtectionLevel` nel progetto, è necessario aggiornare manualmente l'impostazione delle proprietà per i pacchetti.  
@@ -42,7 +41,7 @@ ms.locfileid: "66055847"
   
 4.  Se nella finestra Proprietà non sono riportate le proprietà del pacchetto, fare clic sull'area di progettazione.  
   
-5.  Nella Finestra Proprietà, nel gruppo di **sicurezza** , selezionare il valore appropriato per la `ProtectionLevel` proprietà.  
+5.  Nella Finestra Proprietà, nel gruppo di **sicurezza** , selezionare il valore appropriato per la `ProtectionLevel` Proprietà.  
   
      Se si seleziona un livello di protezione che richiede una password, immettere la password come valore della proprietà **PackagePassword** .  
   
@@ -52,7 +51,7 @@ ms.locfileid: "66055847"
   
 1.  Esaminare i valori disponibili per la `ProtectionLevel` proprietà nell'argomento [impostazione del livello di protezione dei pacchetti](security/access-control-for-sensitive-data-in-packages.md)e determinare il valore appropriato per il pacchetto.  
   
-2.  Esaminare i mapping per l' `Encrypt` opzione nell'argomento [Utilità dtutil](dtutil-utility.md)e determinare l'intero appropriato da utilizzare come valore della proprietà selezionata. `ProtectionLevel`  
+2.  Esaminare i mapping per l' `Encrypt` opzione nell'argomento [Utilità dtutil](dtutil-utility.md)e determinare l'intero appropriato da utilizzare come valore della `ProtectionLevel` proprietà selezionata.  
   
 3.  Aprire una finestra del prompt dei comandi.  
   
@@ -72,7 +71,7 @@ ms.locfileid: "66055847"
   
          Se si utilizza un comando simile in un file batch, immettere il segnaposto del file "% f" come "%% f" nel file batch.  
   
-## <a name="see-also"></a>Vedi anche  
- [utilità dtutil](dtutil-utility.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Utilità dtutil](dtutil-utility.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 10b14aa8a1f68b32c00ecb321c1af36fb15b868e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e181a0d4ebdb2acde1709b18e452f5a290f13c8f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900944"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84913880"
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>Aggregazione di valori in un set di dati utilizzando la trasformazione Aggregazione
   È possibile aggiungere e configurare una trasformazione Aggregazione solo se il pacchetto include almeno un'attività Flusso di dati e un'origine.  

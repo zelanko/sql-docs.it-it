@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f13db8a1e22c88c4433cd8928479a6ed1af540f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc86d269d3b286aeee5ccc67ddf6dddc4bfb1c95
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833136"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920182"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Aggiunta o eliminazione di un'attività o un contenitore in un flusso di controllo
   Quando si usa la progettazione dei flussi di controllo, nella casella degli strumenti di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] sono elencate le attività disponibili in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per la compilazione del flusso di controllo in un pacchetto. Per altre informazioni sulla casella degli strumenti, vedere [Casella degli strumenti SSIS](../ssis-toolbox.md).  
@@ -61,7 +60,7 @@ ms.locfileid: "62833136"
   
 3.  Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Attività Integration Services](integration-services-tasks.md)   
  [Contenitori di Integration Services](integration-services-containers.md)   
  [Flusso di controllo](control-flow.md)  

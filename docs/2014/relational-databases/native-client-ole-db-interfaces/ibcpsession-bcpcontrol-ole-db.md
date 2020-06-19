@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d58f3fe1-45e3-4e46-8e9c-000971829d99
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 594bdc64ac926388a327c4ec57bf47330d820565
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 879836ec6628f70ace9a0168e9db77910e7a32f7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82695765"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048034"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
   Imposta le opzioni per un'operazione di copia bulk.  
@@ -42,7 +41,7 @@ void *iValue);
   
  I valori possibili per *eOption* sono:  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |BCP_OPTION_ABORT|Arresta un'operazione di copia bulk già in corso. È possibile chiamare il metodo **BCPControl** con un argomento *eOption* di BCP_OPTION_ABORT da un altro thread per arrestare un'operazione di copia bulk in esecuzione. L'argomento *iValue* viene ignorato.|  
 |BCP_OPTION_BATCH|Numero di righe per batch. L'impostazione predefinita è 0 e indica tutte le righe di una tabella quando i dati vengono estratti oppure tutte le righe nel file di dati dell'utente quando i dati vengono copiati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un valore minore di 1 consente di reimpostare BCP_OPTION_BATCH sul valore predefinito.|  

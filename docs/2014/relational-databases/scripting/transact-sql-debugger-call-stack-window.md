@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ddb0b19c-87cd-4883-bcb8-ec09ffb30369
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 34b01bc737e35705a7ec4f49ea07a47faaf2b11d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 720a42b2b3ddf46318ac5412181d70a79b142026
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718441"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063358"
 ---
 # <a name="call-stack-window"></a>Finestra Stack di chiamate
   Nella finestra **Stack di chiamate** vengono visualizzati i moduli nello stack di chiamate e i tipi di dati e i valori di qualsiasi parametro passati ai moduli. [!INCLUDE[tsql](../../includes/tsql-md.md)] i moduli includono stored procedure, funzioni e trigger. Per visualizzare lo stack di chiamate, è necessario utilizzare la modalità di debug.  

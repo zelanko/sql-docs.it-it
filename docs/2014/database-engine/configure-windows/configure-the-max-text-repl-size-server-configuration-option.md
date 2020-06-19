@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e55268f499069fb6714aa07944997e1e92e7fc23
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2af0cf426583ee328f0a484de1c3539836c0d8af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811575"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935642"
 ---
 # <a name="configure-the-max-text-repl-size-server-configuration-option"></a>Configurare l'opzione di configurazione del server max text repl size
-  In questo argomento si illustra come configurare l'opzione di configurazione del server **max text repl size** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. L' **opzione max text repl size** specifica la dimensione massima (in byte) dei `text`dati `ntext`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, `xml`, e `image` che è possibile aggiungere a una colonna replicata o a una colonna acquisita in un'unica istruzione INSERT, Update, WRITETEXT o UPDATETEXT. Il valore predefinito è 65536 byte. Il valore -1 indica che non esiste alcun limite di dimensioni, tranne il limite imposto dal tipo di dati.  
+  In questo argomento si illustra come configurare l'opzione di configurazione del server **max text repl size** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'opzione **max text repl size** specifica la dimensione massima (in byte) dei `text` `ntext` dati,, `varchar(max)` , `nvarchar(max)` , `varbinary(max)` , `xml` e `image` che è possibile aggiungere a una colonna replicata o a una colonna acquisita in un'unica istruzione INSERT, Update, WRITETEXT o UPDATETEXT. Il valore predefinito è 65536 byte. Il valore -1 indica che non esiste alcun limite di dimensioni, tranne il limite imposto dal tipo di dati.  
   
  **Contenuto dell'articolo**  
   

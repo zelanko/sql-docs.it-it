@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 07c803ca-299a-42c5-ba02-360b9631d15f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d47e668a2c31e9fb00a8f3582a3538fa9127ef65
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b5573fe1fef39f29329e373323f5f8aaf15f2c58
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82694657"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055954"
 ---
 # <a name="fetching-a-single-row-with-irow"></a>Recupero di una sola riga utilizzando IRow
   L'implementazione dell'interfaccia **IRow** nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB di Native Client è stata semplificata per migliorare le prestazioni. **IRow** consente l'accesso diretto alle colonne di un singolo oggetto riga. Se si prevede che il risultato dell'esecuzione di un comando produca esattamente una riga, **IRow** recupererà le colonne della riga in questione. Se il set di risultati include più righe, **IRow** esporrà solo la prima.  

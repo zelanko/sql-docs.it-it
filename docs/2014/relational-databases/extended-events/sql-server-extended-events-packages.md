@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 93691dccde430e7f636f956229b5305b211449f8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 45c452300c008d486bd1f4ab4c92b5f76b96ecd8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719173"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027382"
 ---
 # <a name="sql-server-extended-events-packages"></a>Pacchetti degli eventi estesi di SQL Server
   Un pacchetto è un contenitore per oggetti eventi estesi di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Di seguito vengono indicati i tre tipi di pacchetti di eventi estesi:  
@@ -70,13 +69,13 @@ ms.locfileid: "82719173"
 #### <a name="event-categorization"></a>Categorizzazione dell'evento  
  Negli eventi estesi viene utilizzato un modello di categorizzazione dell'evento simile a Analisi eventi per Windows (ETW). Due proprietà dell'evento sono utilizzate per categorizzazione, canale e parola chiave. L'utilizzo di queste proprietà supporta l'integrazione degli eventi estesi con ETW e i suoi strumenti.  
   
- **Canale**  
+ **Channel**  
   
  Un canale identifica il pubblico per un evento. Questi canali sono descritti nella tabella seguente.  
   
 |Termine|Definizione|  
 |----------|----------------|  
-|Admin|Gli eventi amministrativi sono indirizzati principalmente agli utenti finali, agli 'amministratori e al supporto. Gli eventi trovati nei canali amministrativi indicano un problema con una soluzione ben definita sul quale può agire un amministratore. Un esempio di evento amministrativo è quando un'applicazione non riesce a connettersi a una stampante. Questi eventi sono ben documentati oppure hanno un messaggio ad essi associato che comunica a chi legge che cosa fare per risolvere il problema.|  
+|Amministrativi|Gli eventi amministrativi sono indirizzati principalmente agli utenti finali, agli 'amministratori e al supporto. Gli eventi trovati nei canali amministrativi indicano un problema con una soluzione ben definita sul quale può agire un amministratore. Un esempio di evento amministrativo è quando un'applicazione non riesce a connettersi a una stampante. Questi eventi sono ben documentati oppure hanno un messaggio ad essi associato che comunica a chi legge che cosa fare per risolvere il problema.|  
 |Operativo|Gli eventi operativi sono utilizzati per l'analisi e la diagnostica di un problema o di un'occorrenza. Possono essere utilizzati per attivare strumenti o attività basate su un problema o un'occorrenza. Un esempio di un evento operativo è quando una stampante viene aggiunta o rimossa da un sistema.|  
 |Analitici|Gli eventi analitici sono pubblicati in volumi elevati. Descrivono il funzionamento del programma e sono in genere utilizzati nell'analisi delle prestazioni.|  
 |Debug|Gli eventi di debug sono utilizzati solamente dagli sviluppatori per diagnosticare un problema nelle operazioni di debug.<br /><br /> Nota: gli eventi nel canale di debug restituiscono dati di stato interni specifici dell'implementazione. Gli schemi e i dati restituiti dagli eventi potrebbero cambiare o non essere più validi nelle versioni future di SQL Server. Pertanto, gli eventi nel canale di debug potrebbero cambiare o essere rimossi senza preavviso nelle versioni future di SQL Server.|  
@@ -147,7 +146,7 @@ where name = 'keyword_map'
   
 -   pred_compare  
   
--   tipo  
+-   type  
   
  Per altre informazioni, vedere [sys.dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql).  
   

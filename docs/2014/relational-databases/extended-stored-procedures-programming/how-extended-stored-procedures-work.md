@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6e946d8c-3268-4b59-8a1c-1637909cd701
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9b52e8fd5cda7d0b05ebbddbb422f74bd81b1993
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75082fed6b70c214b4f55b85034ffa371824d24f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62512993"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027134"
 ---
 # <a name="how-extended-stored-procedures-work"></a>Funzionamento delle stored procedure estese
     
@@ -26,7 +25,7 @@ ms.locfileid: "62512993"
   
  Il funzionamento di una stored procedure estesa è il seguente:  
   
-1.  Quando un client esegue una stored procedure estesa, la richiesta viene trasmessa nel formato TDS (Tabular Data Stream) o Simple Object Access Protocol (SOAP) dall'applicazione client a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  Quando un client esegue una stored procedure estesa, la richiesta viene trasmessa nel formato TDS (Tabular Data Stream) o Simple Object Access Protocol (SOAP) dall'applicazione client a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue la ricerca della DLL associata alla stored procedure estesa e, se non è già caricata, la carica.  
   
@@ -34,7 +33,7 @@ ms.locfileid: "62512993"
   
 4.  La stored procedure estesa passa set di risultati e restituisce parametri al server mediante l'API Stored procedure estesa.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Programmazione di stored procedure estese del Motore di database](../database-engine-extended-stored-procedure-programming.md)  
   
   

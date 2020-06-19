@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e4359a546c350c666190331ab6a8484ca9a99a83
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b80f07393b9c66a5e2c7ec72840fc58fd096a022
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704088"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063484"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>Corrispondenza automatica di coppie della sintassi
   La corrispondenza automatica di coppie della sintassi consente di verificare immediatamente se gli elementi della sintassi che devono essere codificati in coppie sono abbinati correttamente. Questa corrispondenza è nota come corrispondenza tra delimitatori nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , corrispondenza tra parentesi graffe nell'editor di query XMLA di Analysis Services e corrispondenza tra parentesi negli editor MDX e DMX.  
@@ -56,7 +55,7 @@ ms.locfileid: "82704088"
   
 -   Tag di inizio e di fine corrispondenti.  
   
--   Qualsiasi coppia di parentesi angolari "\<" e ">".  
+-   Qualsiasi coppia di \<" and "> parentesi angolari "".  
   
 -   Inizio e fine di commenti.  
   

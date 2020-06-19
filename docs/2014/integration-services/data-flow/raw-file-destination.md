@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6a4610a5f0963cbe94c82c33a63f08490cec36d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bf4d31a05977cc34cf9aaee8fff38867aa302f37
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487012"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914811"
 ---
 # <a name="raw-file-destination"></a>file non elaborato - destinazione
   La destinazione file non elaborato scrive dati non elaborati in un file. Poiché il formato dei dati è nativo della destinazione, non è necessaria alcuna conversione e quasi nessuna analisi dei dati. Questo significa che la destinazione file non elaborato è in grado di scrivere i dati più rapidamente rispetto ad altre destinazioni, quali le destinazioni file flat e OLE DB.  
@@ -113,7 +112,7 @@ ms.locfileid: "81487012"
   
 1.  Impostare la proprietà WriteOption su **CreateOnce** o **CreateAlways**ed eseguire un'iterazione del ciclo. Il file viene creato e viene garantita così la corrispondenza tra i metadati dei dati accodati e il file.  
   
-2.  Reimpostare la proprietà WriteOption su **Append** e impostare la proprietà ValidateExternalMetadata `False`su.  
+2.  Reimpostare la proprietà WriteOption su **Append** e impostare la proprietà ValidateExternalMetadata su `False` .  
   
  Se si usa l'opzione **TruncateAppend** invece di **Append** , le righe aggiunte in qualsiasi iterazione precedente verranno troncate e quindi verranno accodate nuove righe. Per usare l'opzione **TruncateAppend** , è anche necessario che i dati corrispondano al formato del file.  
   

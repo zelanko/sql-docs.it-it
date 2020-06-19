@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7341919e54a4f669c5251d578ae929f1f4f3e22f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d624f5cbfd72a68541890e39674bc5bcad50716
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010115"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955181"
 ---
 # <a name="filetable-schema"></a>Schema delle tabelle FileTable
   Viene descritto lo schema predefinito e fisso di una tabella FileTable.  
@@ -42,7 +41,7 @@ ms.locfileid: "66010115"
 |**is_system**|`bit`<br /><br /> `not null`|1 byte|FALSE|Attributo di file di sistema.|Calcolato automaticamente. Può essere impostato anche tramite API di Windows.|  
 |**is_temporary**|`bit`<br /><br /> `not null`|1 byte|FALSE|Attributo di file temporaneo.|Calcolato automaticamente. Può essere impostato anche tramite API di Windows.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creare, modificare e rilasciare FileTables](create-alter-and-drop-filetables.md)  
   
   

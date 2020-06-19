@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a57b4666-2177-419c-b9b6-28be93485b0f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1c61e1b980e729cb936c00410a156d8c0dc47d0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7468843aa111e8317efe4a9a088e93b675bc93c1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62842977"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928782"
 ---
 # <a name="sql-server-management-tools-backward-compatibility"></a>Compatibilità con le versioni precedenti degli strumenti di gestione di SQL Server
   Negli argomenti della sezione relativa alla compatibilità con le versioni precedenti vengono descritte le modifiche di comportamento tra le versioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -27,7 +26,7 @@ ms.locfileid: "62842977"
 |[Modifiche di rilievo nelle funzionalità degli strumenti di gestione in SQL Server 2014](../../2014/database-engine/breaking-changes-to-management-tools-features-in-sql-server-2014.md)|Modifiche delle caratteristiche degli strumenti di gestione che possono richiedere modifiche alle applicazioni.|  
 |[Modifiche delle funzionalità degli strumenti di gestione in SQL Server 2014](../../2014/database-engine/behavior-changes-to-management-tools-features-in-sql-server-2014.md)|Altre modifiche delle caratteristiche degli strumenti di gestione di questa versione.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Compatibilità con le versioni precedenti](../../2014/getting-started/backward-compatibility.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6e0eafd8a8eb1d9d73f71ab069dc8bf0795a87bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c0e2da7ef135a5e2a631c05b6815154188a99fb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812298"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935802"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>Configurazione di Windows Firewall per l'accesso al Motore di database
   In questo argomento viene descritto come configurare Windows Firewall per l'accesso al Motore di database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite Gestione configurazione SQL Server. I sistemi firewall contribuiscono a impedire l'accesso non autorizzato alle risorse del computer. Per accedere a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] attraverso un firewall, è necessario configurare il firewall nel computer in cui viene eseguito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modo che consenta l'accesso.  
@@ -68,7 +67,7 @@ ms.locfileid: "62812298"
   
 3.  Nella finestra di dialogo **Tipo di regola** selezionare **Porta**, quindi fare clic su **Avanti**.  
   
-4.  Nella finestra di dialogo **Protocollo e porte** selezionare **TCP**. Selezionare **porte locali specifiche**e quindi digitare il numero di porta dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)], ad esempio `1433` per l'istanza predefinita. Fare clic su **Avanti**.  
+4.  Nella finestra di dialogo **Protocollo e porte** selezionare **TCP**. Selezionare **porte locali specifiche**e quindi digitare il numero di porta dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , ad esempio `1433` per l'istanza predefinita. Fare clic su **Avanti**.  
   
 5.  Nella finestra di dialogo **Azione** selezionare **Consenti la connessione**, quindi fare clic su **Avanti**.  
   

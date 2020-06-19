@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7ebd1394-cc8d-4bcf-92f3-c374a26e7ba0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8c4d9ba6fb3a28bd54e51c4e87946919f0dae286
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9ed8a3011efa95df0ceed438341de9015d252d9d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704748"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056028"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>Avvio di una connessione a un'origine dati
   Per accedere al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB di Native client, il consumer deve prima creare un'istanza di un oggetto origine dati chiamando il metodo **CoCreateInstance** . Un identificatore univoco di classe (CLSID) identifica ogni provider OLE DB. Per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client, l'identificatore di classe è CLSID_SQLNCLI10. È inoltre possibile utilizzare il simbolo SQLNCLI_CLSID che verrà risolto nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB di Native client utilizzato nel sqlncli. h a cui si fa riferimento.  

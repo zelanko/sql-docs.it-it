@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cfb1fd563506c06ede5832a06ba98eaae18e58ed
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9ee69e5072bbaacf86b69e15550495b09b58765d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718246"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063270"
 ---
 # <a name="transact-sql-debugger"></a>Debugger Transact-SQL
   Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] consente di individuare errori nel codice [!INCLUDE[tsql](../../includes/tsql-md.md)] esaminandone il comportamento in fase di esecuzione. Dopo avere impostato la finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] sulla modalità di debug, è possibile sospendere l'esecuzione di righe specifiche di codice e controllare le informazioni e i dati utilizzati o restituiti da tali istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] .  

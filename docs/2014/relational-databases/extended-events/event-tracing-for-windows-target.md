@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 34c367d6ea7663a262c7ccead1e85702af9cf499
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 55f247af30b5278f614b6505a94266cc07ec6c54
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706830"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027585"
 ---
 # <a name="event-tracing-for-windows-target"></a>destinazione di Event Tracing for Windows
   Prima di utilizzare Event Tracing for Windows (ETW) come destinazione, è consigliabile acquisire familiarità con tale funzionalità. L'analisi ETW è utilizzata in abbinamento a Eventi estesi o come un consumer di eventi estesi. I collegamenti esterni seguenti rappresentano un punto iniziale per ottenere informazioni di base su ETW:  
@@ -75,7 +74,7 @@ ms.locfileid: "82706830"
     > [!IMPORTANT]  
     >  Impossibile modificare il percorso del file dopo l'inizio della prima sessione.  
   
--   I file Managed Object Format (MOF) si trovano nel * \< percorso di installazione>* \Microsoft SQL Server\Shared. Per altre informazioni, vedere [Managed Object Format (MOF)](https://go.microsoft.com/fwlink/?LinkId=92851) su MSDN.  
+-   I file di Managed Object Format (MOF) si trovano in *\<your install path>* \Microsoft SQL Server\Shared. Per altre informazioni, vedere [Managed Object Format (MOF)](https://go.microsoft.com/fwlink/?LinkId=92851) su MSDN.  
   
 ## <a name="adding-the-target-to-a-session"></a>Aggiunta della destinazione a una sessione  
  Per aggiungere la destinazione ETW a una sessione di Eventi estesi, è necessario includere l'istruzione seguente quando si crea o modifica una sessione eventi:  

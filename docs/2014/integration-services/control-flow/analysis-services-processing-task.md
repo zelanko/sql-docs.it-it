@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 02023482a2f3537872b50ac70f8bfd68d2128e1b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: efb7193eb79624a483fc728cf80308c4b6e1c959
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832966"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920232"
 ---
 # <a name="analysis-services-processing-task"></a>Elaborazione Analysis Services - attività
   Con l'attività Elaborazione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è possibile elaborare gli oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quali modelli tabulari, cubi, dimensioni e modelli di data mining.  

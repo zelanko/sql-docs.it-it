@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ea7f5f06816b6dd4ddf840f63119bebb0ebf80e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 917c5af173fa1e7087d47789b17b0845ab426dad
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889214"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963371"
 ---
 # <a name="set-package-properties"></a>Impostazione delle proprietà di un pacchetto
   Quando viene creato un pacchetto in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] utilizzando l'interfaccia grafica offerta da [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , è possibile impostare le proprietà dell'oggetto pacchetto nella finestra Proprietà.  
@@ -82,7 +81,7 @@ ms.locfileid: "62889214"
 |Proprietà|Descrizione|  
 |--------------|-----------------|  
 |`DelayValidation`|Indica se la convalida del pacchetto viene posticipata fino all'esecuzione del pacchetto. Il valore predefinito di questa proprietà è `False`.|  
-|**Disabilitazione**|Indica se il pacchetto è disabilitato. Il valore predefinito di questa proprietà è `False`.|  
+|**Disable**|Indica se il pacchetto è disabilitato. Il valore predefinito di questa proprietà è `False`.|  
 |`DisableEventHandlers`|Specifica se i gestori di eventi del pacchetto vengono eseguiti. Il valore predefinito di questa proprietà è `False`.|  
 |`FailPackageOnFailure`|Indica se il pacchetto deve essere interrotto in caso di errore in uno dei suoi componenti. L'unico valore valido di questa proprietà è `False`.|  
 |`FailParentOnError`|Indica se il contenitore padre deve essere interrotto in caso di errore in uno dei contenitori figli. Il valore predefinito della proprietà è `False`.|  
@@ -95,7 +94,7 @@ ms.locfileid: "62889214"
   
 |Proprietà|Descrizione|  
 |--------------|-----------------|  
-|`ForcedExecutionValue`|Se proprietà ForceExecutionValue è impostato su `True`, valore che specifica il valore di esecuzione facoltativo restituito dal pacchetto. Il valore predefinito di questa proprietà è **0**.|  
+|`ForcedExecutionValue`|Se proprietà ForceExecutionValue è impostato su `True` , valore che specifica il valore di esecuzione facoltativo restituito dal pacchetto. Il valore predefinito di questa proprietà è **0**.|  
 |`ForcedExecutionValueType`|Il tipo di dati di ForcedExecutionValue. Il valore predefinito di questa proprietà è `Int32`.|  
 |`ForceExecutionValue`|Valore booleano che specifica se il valore di esecuzione facoltativo del contenitore deve essere forzato in modo da contenere un valore specifico. Il valore predefinito di questa proprietà è `False`.|  
   
@@ -108,7 +107,7 @@ ms.locfileid: "62889214"
 |`CreatorComputerName`|Nome del computer in cui è stato creato il pacchetto.|  
 |`CreatorName`|Nome dell'utente che ha creato il pacchetto.|  
 |`Description`|Descrizione delle funzionalità del pacchetto.|  
-|`ID`|GUID del pacchetto, assegnato al momento della creazione. Questa proprietà è di sola lettura. Per generare un nuovo valore casuale per la `ID` proprietà, selezionare ** \<genera nuovo ID>** nell'elenco a discesa.|  
+|`ID`|GUID del pacchetto, assegnato al momento della creazione. Questa proprietà è di sola lettura. Per generare un nuovo valore casuale per la `ID` proprietà, selezionare **\<Generate New ID>** nell'elenco a discesa.|  
 |`Name`|Nome del pacchetto.|  
 |`PackageType`|Tipo di pacchetto. I possibili valori sono `Default`, `DTSDesigner`, `DTSDesigner100`, `DTSWizard`, `SQLDBMaint` e `SQLReplication`. Il valore predefinito di questa proprietà è `Default`. Per altre informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>.|  
   
@@ -131,8 +130,8 @@ ms.locfileid: "62889214"
   
 |Proprietà|Descrizione|  
 |--------------|-----------------|  
-|`PackagePassword`|Password per i livelli di protezione del`EncryptSensitiveWithPassword` pacchetto `EncryptAllWithPassword`(e) che richiedono le password.|  
-|`ProtectionLevel`|Livello di protezione del pacchetto. I valori sono `DontSaveSensitive`, `EncryptSensitiveWithUserKey`, `EncryptSensitiveWithPassword`, `EncryptAllWithPassword`e **ServerStorage**. Il valore predefinito di questa proprietà è `EncryptSensitiveWithUserKey`. Per altre informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel>.|  
+|`PackagePassword`|Password per i livelli di protezione del pacchetto ( `EncryptSensitiveWithPassword` e `EncryptAllWithPassword` ) che richiedono le password.|  
+|`ProtectionLevel`|Livello di protezione del pacchetto. I valori sono `DontSaveSensitive` , `EncryptSensitiveWithUserKey` , `EncryptSensitiveWithPassword` , `EncryptAllWithPassword` e **ServerStorage**. Il valore predefinito di questa proprietà è `EncryptSensitiveWithUserKey`. Per altre informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel>.|  
   
 ###  <a name="transactions"></a><a name="Transactions"></a>Transazioni  
  Le proprietà di questa categoria consentono di configurare il livello di isolamento e l'opzione relativa alle transazioni per il pacchetto. Per altre informazioni, vedere [Transazioni di Integration Services](integration-services-transactions.md).  

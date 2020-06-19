@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6338c7a306f163f786f2c1e7d44ae4dbc66504ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c013a531fe5e432da690bf10c6c1463d375af1ee
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62902449"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915501"
 ---
 # <a name="flat-file-source"></a>origine file flat
   L'origine file flat legge dati da un file di testo. Tale file può essere in formato delimitato, a larghezza fissa o misto.  
@@ -44,7 +43,7 @@ ms.locfileid: "62902449"
   
  Le colonne di output nell'output dell'origine file flat includono la proprietà FastParse. FastParse indica se la colonna usa le routine di analisi più veloci ma indipendenti dalle impostazioni locali disponibili in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] oppure le routine di analisi standard dipendenti dalle impostazioni locali. Per altre informazioni, vedere [Analisi veloce](../fast-parse.md) e [Analisi standard](../standard-parse.md).  
   
- Le colonne di output includono anche la proprietà UseBinaryFormat, utilizzata per implementare il supporto per i dati binari, ad esempio i dati con formato decimale packed, all'interno dei file. Per impostazione predefinita, UseBinaryFormat è `false`impostato su. Se si desidera utilizzare un formato binario, impostare UseBinaryFormat su `true` e il tipo di dati della colonna di `DT_BYTES`output su. In questo modo, nell'origine file flat viene saltata la conversione dei dati e i dati vengono passati alla colonna di output così come sono. È quindi possibile utilizzare una trasformazione, ad esempio Colonna derivata o Conversione dati, per eseguire il cast dei dati `DT_BYTES` in un diverso tipo di dati oppure scrivere uno script personalizzato in una trasformazione Script per interpretare i dati. Per l'interpretazione dei dati è inoltre possibile scrivere un componente del flusso di dati personalizzato. Per ulteriori informazioni sui tipi di dati di cui è `DT_BYTES` possibile eseguire il cast, vedere [cast &#40;espressione SSIS&#41;](../expressions/cast-ssis-expression.md).  
+ Le colonne di output includono anche la proprietà UseBinaryFormat, utilizzata per implementare il supporto per i dati binari, ad esempio i dati con formato decimale packed, all'interno dei file. Per impostazione predefinita, UseBinaryFormat è impostato su `false` . Se si desidera utilizzare un formato binario, impostare UseBinaryFormat `true` su e il tipo di dati della colonna di output su `DT_BYTES` . In questo modo, nell'origine file flat viene saltata la conversione dei dati e i dati vengono passati alla colonna di output così come sono. È quindi possibile utilizzare una trasformazione, ad esempio Colonna derivata o Conversione dati, per eseguire il cast dei dati `DT_BYTES` in un diverso tipo di dati oppure scrivere uno script personalizzato in una trasformazione Script per interpretare i dati. Per l'interpretazione dei dati è inoltre possibile scrivere un componente del flusso di dati personalizzato. Per ulteriori informazioni sui tipi di dati di cui è possibile eseguire il cast `DT_BYTES` , vedere [cast &#40;espressione SSIS&#41;](../expressions/cast-ssis-expression.md).  
   
  Per accedere al file di testo, questa origine utilizza una gestione connessione file flat. Impostando le proprietà di tale gestione connessione è possibile fornire informazioni sul file e le singole colonne contenute, nonché specificare la modalità con cui l'origine file flat deve gestire i dati del file di testo. È ad esempio possibile specificare i caratteri che delimitano le righe e le colonne del file, oltre al tipo di dati e alla lunghezza di ogni colonna. Per ulteriori informazioni, vedere [Flat File Connection Manager](../connection-manager/file-connection-manager.md).  
   
@@ -70,7 +69,7 @@ ms.locfileid: "62902449"
 ## <a name="related-tasks"></a>Attività correlate  
  Per informazioni su come impostare le proprietà di un componente del flusso di dati, vedere [Impostazione delle proprietà di un componente del flusso di dati](set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Destinazione file flat](flat-file-destination.md)   
  [Flusso di dati](data-flow.md)  
   

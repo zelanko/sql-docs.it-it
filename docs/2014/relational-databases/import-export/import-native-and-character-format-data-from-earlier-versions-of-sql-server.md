@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8f41e323faeb898be1f44159760bb1c28b7ab024
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 274c984d6ecec8af8f5bea27496450a45fc2f1df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011921"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026795"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>Importare dati in formato nativo e carattere da versioni precedenti di SQL Server
   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]è possibile usare **bcp** per importare dati in formato nativo e carattere da [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]o da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] usando l'opzione **-V** . Se si usa l'opzione **-V** , in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vengono usati tipi di dati della versione precedente specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e il formato del file di dati corrisponderà al formato della versione precedente in questione.  
@@ -52,15 +51,15 @@ ms.locfileid: "66011921"
  <sup>1</sup> UDT indica un tipo definito dall'utente.  
   
 ## <a name="exporting-using--v-80"></a>Esportazione usando –V 80  
- Quando si esegue l'esportazione bulk di dati tramite l'opzione **-V80** , `varbinary(max)` `text` `image` `nvarchar(max)` `varchar(max)`i dati di tipo,,, XML e UDT in modalità nativa vengono archiviati con un prefisso a 4 byte, `ntext` ad esempio i dati, e, anziché con un prefisso a 8 byte, che [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] è l'impostazione predefinita per e versioni successive.  
+ Quando si esegue l'esportazione bulk di dati tramite l'opzione **-V80** , i dati di tipo,,, `nvarchar(max)` `varchar(max)` `varbinary(max)` XML e UDT in modalità nativa vengono archiviati con un prefisso a 4 byte, ad esempio i `text` `image` dati, e `ntext` , anziché con un prefisso a 8 byte, che è l'impostazione predefinita per [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive.  
   
 ## <a name="copying-date-values"></a>Copia dei valori di data  
  **bcp** consente di usare l'API della copia bulk ODBC. Quindi, per importare i valori di dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **bcp** usa il formato di data ODBC (*aaaa-mm-gg hh:mm:ss*[ *.f...* ]).  
   
- Il comando **bcp** Esporta i file di dati in formato carattere usando il formato predefinito `datetime` ODBC `smalldatetime` per i valori e. Ad esempio, per una colonna `datetime` contenente la data `12 Aug 1998` verrà eseguita la copia bulk in un file di dati come stringa di caratteri `1998-08-12 00:00:00.000`.  
+ Il comando **bcp** Esporta i file di dati in formato carattere usando il formato predefinito ODBC per `datetime` `smalldatetime` i valori e. Ad esempio, per una colonna `datetime` contenente la data `12 Aug 1998` verrà eseguita la copia bulk in un file di dati come stringa di caratteri `1998-08-12 00:00:00.000`.  
   
 > [!IMPORTANT]  
->  Quando si importano `smalldatetime` dati in un campo con **bcp**, assicurarsi che il valore per seconds sia 00,000; in caso contrario, l'operazione avrà esito negativo. Il tipo di dati `smalldatetime` contiene solo valori approssimati al minuto più vicino. In questa istanza, le istruzioni BULK INSERT e INSERT ... SELECT * FROM OPENROWSET(BULK...) verranno eseguite ma il valore dei secondi verrà troncato.  
+>  Quando si importano dati in un `smalldatetime` campo con **bcp**, assicurarsi che il valore per seconds sia 00,000; in caso contrario, l'operazione avrà esito negativo. Il tipo di dati `smalldatetime` contiene solo valori approssimati al minuto più vicino. In questa istanza, le istruzioni BULK INSERT e INSERT ... SELECT * FROM OPENROWSET(BULK...) verranno eseguite ma il valore dei secondi verrà troncato.  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Per utilizzare formati di dati per l'importazione o l'esportazione bulk**  

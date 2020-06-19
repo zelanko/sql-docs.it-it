@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9596aefb51c8b895abdb69ddf179282d5d930d76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa0d34f100af614a1e2187c265bf01a24f3be7ec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66265154"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026891"
 ---
 # <a name="create-a-format-file-sql-server"></a>Creazione di un file di formato (SQL Server)
   Quando si esegue l'importazione bulk in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dei dati da una tabella, è possibile utilizzare un file di formato per un sistema flessibile per la scrittura di file di dati che non richiede alcuna modifica o richiede modifiche minime per la conformità con altri formati di dati o la lettura di file di dati da un altro programma software.  
@@ -27,7 +26,7 @@ ms.locfileid: "66265154"
  In generale, i file di formato XML e non XML sono intercambiabili. È tuttavia consigliabile utilizzare la sintassi XML per i nuovi file di formato, in quanto questo tipo di file offre numerosi vantaggi rispetto ai file di formato non XML.  
   
 > [!NOTE]  
->  La versione dell'utilità **bcp** (Bcp.exe) usata per leggere un file di formato deve essere uguale o successiva alla versione usata per creare il file di formato. Ad esempio, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp** può leggere un file di formato versione 10,0, generato da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**, ma [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp** non è in grado di leggere un file di formato versione 11,0, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]generato da **bcp**.  
+>  La versione dell'utilità **bcp** (Bcp.exe) usata per leggere un file di formato deve essere uguale o successiva alla versione usata per creare il file di formato. Ad esempio, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp** può leggere un file di formato versione 10,0, generato da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**, ma [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp** non è in grado di leggere un file di formato versione 11,0, generato da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp**.  
   
  Questo argomento descrive come usare l' [utilità bcp](../../tools/bcp-utility.md) per creare un file di formato per una tabella specifica. Il file di formato è basato sull'opzione relativa al tipo di dati specificata ( **-n**, **-c**, **-w**o **-N**) e sui delimitatori della tabella o della vista.  
   
@@ -44,7 +43,7 @@ ms.locfileid: "66265154"
 ### <a name="examples"></a>Esempi  
  Questa sezione contiene gli esempi seguenti che illustrano come usare i comandi **bcp** per creare un file di formato non XML:  
   
--   A. Creazione di un file di formato non XML per dati nativi  
+-   R. Creazione di un file di formato non XML per dati nativi  
   
 -   B. Creazione di un file di formato non XML per dati di tipo carattere  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66265154"
   
  Negli esempi viene utilizzata la tabella `HumanResources.Department` del database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . La tabella `HumanResources.Department` contiene quattro colonne, ovvero `DepartmentID`, `Name`, `GroupName`e `ModifiedDate`.  
   
-#### <a name="a-creating-a-non-xml-format-file-for-native-data"></a>A. Creazione di un file di formato non XML per dati nativi  
+#### <a name="a-creating-a-non-xml-format-file-for-native-data"></a>R. Creazione di un file di formato non XML per dati nativi  
  Nell'esempio seguente viene creato un file di formato XML, `Department-n.xml`, per la tabella [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`HumanResources.Department` . Nel file di formato vengono utilizzati tipi di dati nativi. Il contenuto del file di formato generato viene visualizzato dopo il comando.  
   
  Per il comando **bcp** sono disponibili i qualificatori seguenti.  

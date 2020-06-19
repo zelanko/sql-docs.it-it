@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bdfce092-3cf1-4b5e-99d5-fd8c6f9ad560
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c358973ad93360d7b9cd54efa0e70d9114bbc7de
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1ecbee10f53ca2a45513bc3386940d96b7e82dce
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706775"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027597"
 ---
 # <a name="determine-which-queries-are-holding-locks"></a>Individuare le query che mantengono attivi i blocchi
   Gli amministratori di database hanno spesso la necessità di individuare l'origine dei blocchi che hanno effetti negativi sulle prestazioni del database.  

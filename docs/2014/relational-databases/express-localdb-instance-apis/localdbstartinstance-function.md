@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ad86f5989fe9ff90132637d062b708423f23eef1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 881c332e2f9c7d2958e001c04b1b6281adc23999
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63131497"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027525"
 ---
 # <a name="localdbstartinstance-function"></a>Funzione LocalDBStartInstance
   Avvia l'istanza specificata del database locale di SQL Server Express.  
@@ -52,7 +51,7 @@ HRESULT LocalDBStartInstance(
  *lpcchSqlConnection*  
  [Input/output] In input contiene la dimensione del buffer *wszSqlConnection* in caratteri, inclusi eventuali valori Null finali. In fase di output, se le dimensioni del buffer specificate sono troppo piccole, nel parametro sono contenute le dimensioni del buffer richieste in caratteri, inclusi gli spazi vuoti finali.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  S_OK  
  Funzione completata.  
   
@@ -116,7 +115,7 @@ HRESULT LocalDBStartInstance(
   
  Per un esempio di codice in cui viene utilizzata l'API del database locale, vedere [SQL Server Express riferimento al database locale](../sql-server-express-localdb-reference.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Informazioni sulla versione e intestazione di SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
   
   

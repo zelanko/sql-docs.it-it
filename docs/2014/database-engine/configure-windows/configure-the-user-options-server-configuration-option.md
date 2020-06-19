@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b0588bbc8c21c9946ac72a2db92c593e48973dfa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d7ee40d0f6de532b93ce9d8075b609c80f09df7e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787073"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935486"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>Configurare l'opzione di configurazione del server user options
   In questo argomento si illustra come configurare l'opzione di configurazione del server **user options** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'opzione **user options** consente di specificare impostazioni globali predefinite per tutti gli utenti. Viene creato un elenco di opzioni predefinite per l'elaborazione delle query, che rimane valido per tutta la durata della sessione di lavoro dell'utente. L'opzione **user options** consente di modificare i valori predefiniti delle opzioni SET, se le impostazioni predefinite del server non risultano appropriate.  

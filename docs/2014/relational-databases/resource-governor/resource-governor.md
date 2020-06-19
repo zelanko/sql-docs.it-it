@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8d2cdad589ac9c669ae06672260bd99a1de72e8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72d392837da4abd28aaf48ed460113c561bd688d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704864"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063584"
 ---
 # <a name="resource-governor"></a>Resource Governor
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] La funzionalità Resource Governor consente di gestire il carico di lavoro e l'utilizzo delle risorse di sistema in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Resource Governor consente di specificare i limiti sulla quantità di CPU, I/O fisici e memoria che può essere usata dalle richieste in ingresso dell'applicazione.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e2eec829c3c8909bd318a86ecf35eedb9ac0f222
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67599d64429666c718c9a59f514d39e3657ced1f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010085"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955249"
 ---
 # <a name="filetables-sql-server"></a>FileTable (SQL Server)
   La funzionalità FileTable fornisce supporto per lo spazio dei nomi dei file di Windows e la compatibilità con le applicazioni di Windows ai dati dei file archiviati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. FileTable consente l'integrazione dei componenti di archiviazione e gestione dei dati da parte di un'applicazione e fornisce servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrati, incluse la ricerca full-text e la ricerca semantica, su dati e metadati non strutturati.  
@@ -118,10 +117,10 @@ ms.locfileid: "66010085"
  [Accesso a tabelle FileTable tramite Transact-SQL](access-filetables-with-transact-sql.md)  
  Viene descritto il funzionamento dei comandi Transact-SQL DML (Data Manipulation Language) con una tabella FileTable.  
   
- [Accedere alle tabelle FileTable con API di Input-Output dei file](access-filetables-with-file-input-output-apis.md)  
+ [Accedere alle tabelle FileTable con API di input/output dei file](access-filetables-with-file-input-output-apis.md)  
  Viene descritto il funzionamento dell'I/O del file system in una tabella FileTable.  
   
- [Gestione di tabelle FileTable](manage-filetables.md)  
+ [Gestire tabelle FileTable](manage-filetables.md)  
  Vengono descritte attività amministrative comuni per la gestione di tabelle FileTable.  
   
   

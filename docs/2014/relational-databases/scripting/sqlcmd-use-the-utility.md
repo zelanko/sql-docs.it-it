@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 35f7bcf1c8e5ebcb225a9198944cf4144321bad3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1c2a07ae5d4248b4c37ab5fa8124582c99a1e6f7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703687"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063414"
 ---
 # <a name="use-the-sqlcmd-utility"></a>Utilizzo dell'utilità sqlcmd
   L'utilità `sqlcmd` è un'utilità della riga di comando per l'esecuzione interattiva ad hoc di istruzioni e script [!INCLUDE[tsql](../../includes/tsql-md.md)], nonché per l'automazione di attività di scripting [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per utilizzare `sqlcmd` in modo interattivo o per compilare file script da eseguire tramite `sqlcmd`, è necessario conoscano [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'utilità `sqlcmd` viene in genere utilizzata nei modi seguenti:  
@@ -69,7 +68,7 @@ ms.locfileid: "82703687"
     sqlcmd -S <ComputerName>\<InstanceName>  
     ```  
   
-     oppure  
+     o  
   
     ```  
     sqlcmd -S .\<InstanceName>  
@@ -562,9 +561,9 @@ SQLCMD -E -N -C
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilità sqlcmd](../../tools/sqlcmd-utility.md)   
- [Usare sqlcmd con variabili di scripting](sqlcmd-use-with-scripting-variables.md)   
+ [Utilizzo di sqlcmd con variabili di scripting](sqlcmd-use-with-scripting-variables.md)   
  [Modifica di script SQLCMD con l'editor di query](edit-sqlcmd-scripts-with-query-editor.md)   
- [Gestire i passaggi del processo](../../ssms/agent/manage-job-steps.md)   
- [Create a CmdExec Job Step](../../ssms/agent/create-a-cmdexec-job-step.md)  
+ [Gestire passaggi di processo](../../ssms/agent/manage-job-steps.md)   
+ [Creare un passaggio di processo CmdExec](../../ssms/agent/create-a-cmdexec-job-step.md)  
   
   
