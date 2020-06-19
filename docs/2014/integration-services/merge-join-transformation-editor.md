@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ac06f419-30b3-42aa-8b34-42000bec4285
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 118d68d1cacd5035535c6f1ac578542909356c7b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 222e21e83ef0b722ea33c45ff5413dd77b88fe12
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057704"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951081"
 ---
 # <a name="merge-join-transformation-editor"></a>Editor trasformazione Merge join
   Utilizzare la finestra di dialogo **Editor trasformazione Merge join** per specificare il tipo di join, le colonne di join e le colonne di output per l'unione di due input combinati tramite un join.  
@@ -47,11 +46,11 @@ ms.locfileid: "66057704"
  **Alias di output**  
  Consente di digitare un alias per ogni colonna di output. Per impostazione predefinita viene suggerito il nome della colonna di input. È comunque possibile scegliere qualsiasi nome descrittivo univoco.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Ordinare i dati per le trasformazioni Unione e merge join](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
  [Estendere un set di dati tramite la trasformazione Merge join](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
  [Trasformazione Unione](data-flow/transformations/merge-transformation.md)   
- [Unione input multipli - trasformazione](data-flow/transformations/union-all-transformation.md)  
+ [Trasformazione Unione input multipli](data-flow/transformations/union-all-transformation.md)  
   
   

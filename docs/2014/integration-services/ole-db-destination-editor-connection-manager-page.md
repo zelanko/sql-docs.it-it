@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ae2200c6-8ba0-49b7-b01a-53425b84d2ed
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 436b758abdde0c05539bc17aabd2c11b240642df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b19c61cf736ad888cdcb2ecb1f36060eebf30812
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057141"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964991"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>Editor destinazione OLE DB (pagina Gestione connessione)
   Usare la pagina **Gestione connessione** della finestra di dialogo **Editor destinazione OLE DB** per selezionare la connessione OLE DB per la destinazione. Tramite questa pagina è inoltre possibile selezionare una tabella o una vista del database.  
@@ -33,13 +32,13 @@ ms.locfileid: "66057141"
  **Gestione connessione OLE DB**  
  Selezionare una gestione connessione esistente nell'elenco o crearne una nuova facendo clic su **Nuova**.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova gestione connessione usando la finestra di dialogo **Configura gestione connessione OLE DB** .  
   
  **Modalità di accesso ai dati**  
  Consente di specificare il metodo di caricamento dei dati nella destinazione. Per i dati DBCS (Double-Byte Character Set) è necessario utilizzare una delle opzioni di caricamento rapido. Per altre informazioni sulle modalità di accesso ai dati con caricamento rapido, ottimizzate per gli inserimenti bulk, vedere [Destinazione OLE DB](data-flow/ole-db-destination.md).  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |Tabella o vista|Consente di caricare i dati in una tabella o vista nella destinazione OLE DB.|  
 |Tabella o vista - Caricamento rapido|Consente di caricare i dati in una tabella o vista nella destinazione OLE DB e di utilizzare l'opzione di caricamento rapido. Per altre informazioni sulle modalità di accesso ai dati con caricamento rapido, ottimizzate per gli inserimenti bulk, vedere [Destinazione OLE DB](data-flow/ole-db-destination.md).|  
@@ -57,21 +56,21 @@ ms.locfileid: "66057141"
  **Nome tabella o vista**  
  Consente di selezionare il nome della tabella o della vista nell'elenco dei nomi disponibili nell'origine dei dati.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova tabella usando la finestra di dialogo **Crea tabella** .  
   
 > [!NOTE]  
->  Quando si fa **New**clic su [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] nuovo, viene generata un'istruzione CREATE TABLE predefinita basata sull'origine dati connessa. Questa istruzione CREATE TABLE predefinita non includerà l'attributo FILESTREAM anche se la tabella di origine include una colonna con l'attributo FILESTREAM dichiarato. Per eseguire un componente [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] con l'attributo FILESTREAM, implementare innanzitutto l'archiviazione di FILESTREAM nel database di destinazione. Aggiungere quindi l'attributo FILESTREAM all'istruzione CREATE TABLE nella finestra di dialogo **Crea tabella** . Per altre informazioni, vedere [Dati BLOB &#40;Binary Large Object&#41; &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+>  Quando si fa clic su **nuovo**, viene [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] generata un'istruzione CREATE TABLE predefinita basata sull'origine dati connessa. Questa istruzione CREATE TABLE predefinita non includerà l'attributo FILESTREAM anche se la tabella di origine include una colonna con l'attributo FILESTREAM dichiarato. Per eseguire un componente [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] con l'attributo FILESTREAM, implementare innanzitutto l'archiviazione di FILESTREAM nel database di destinazione. Aggiungere quindi l'attributo FILESTREAM all'istruzione CREATE TABLE nella finestra di dialogo **Crea tabella** . Per altre informazioni, vedere [Dati BLOB &#40;Binary Large Object&#41; &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
 ### <a name="data-access-mode--table-or-view---fast-load"></a>Modalità di accesso ai dati = Tabella o vista - Caricamento rapido  
  **Nome tabella o vista**  
  Consente di selezionare una tabella o vista del database nell'elenco o di creare una nuova tabella facendo clic su **Nuova**.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova tabella usando la finestra di dialogo **Crea tabella** .  
   
 > [!NOTE]  
->  Quando si fa **New**clic su [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] nuovo, viene generata un'istruzione CREATE TABLE predefinita basata sull'origine dati connessa. Questa istruzione CREATE TABLE predefinita non includerà l'attributo FILESTREAM anche se la tabella di origine include una colonna con l'attributo FILESTREAM dichiarato. Per eseguire un componente [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] con l'attributo FILESTREAM, implementare innanzitutto l'archiviazione di FILESTREAM nel database di destinazione. Aggiungere quindi l'attributo FILESTREAM all'istruzione CREATE TABLE nella finestra di dialogo **Crea tabella** . Per altre informazioni, vedere [Dati BLOB &#40;Binary Large Object&#41; &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+>  Quando si fa clic su **nuovo**, viene [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] generata un'istruzione CREATE TABLE predefinita basata sull'origine dati connessa. Questa istruzione CREATE TABLE predefinita non includerà l'attributo FILESTREAM anche se la tabella di origine include una colonna con l'attributo FILESTREAM dichiarato. Per eseguire un componente [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] con l'attributo FILESTREAM, implementare innanzitutto l'archiviazione di FILESTREAM nel database di destinazione. Aggiungere quindi l'attributo FILESTREAM all'istruzione CREATE TABLE nella finestra di dialogo **Crea tabella** . Per altre informazioni, vedere [Dati BLOB &#40;Binary Large Object&#41; &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
  **Mantieni valori Identity**  
  Consente di specificare se copiare i valori Identity durante il caricamento dei dati. Questa proprietà è disponibile solo con l'opzione di caricamento rapido. Il valore predefinito di questa proprietà è `false`.  
@@ -110,11 +109,11 @@ ms.locfileid: "66057141"
  **Nome variabile**  
  Consente di selezionare la variabile che contiene il nome della tabella o vista.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova tabella usando la finestra di dialogo **Crea tabella** .  
   
 > [!NOTE]  
->  Quando si fa **New**clic su [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] nuovo, viene generata un'istruzione CREATE TABLE predefinita basata sull'origine dati connessa. Questa istruzione CREATE TABLE predefinita non includerà l'attributo FILESTREAM anche se la tabella di origine include una colonna con l'attributo FILESTREAM dichiarato. Per eseguire un componente [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] con l'attributo FILESTREAM, implementare innanzitutto l'archiviazione di FILESTREAM nel database di destinazione. Aggiungere quindi l'attributo FILESTREAM all'istruzione CREATE TABLE nella finestra di dialogo **Crea tabella** . Per altre informazioni, vedere [Dati BLOB &#40;Binary Large Object&#41; &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+>  Quando si fa clic su **nuovo**, viene [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] generata un'istruzione CREATE TABLE predefinita basata sull'origine dati connessa. Questa istruzione CREATE TABLE predefinita non includerà l'attributo FILESTREAM anche se la tabella di origine include una colonna con l'attributo FILESTREAM dichiarato. Per eseguire un componente [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] con l'attributo FILESTREAM, implementare innanzitutto l'archiviazione di FILESTREAM nel database di destinazione. Aggiungere quindi l'attributo FILESTREAM all'istruzione CREATE TABLE nella finestra di dialogo **Crea tabella** . Per altre informazioni, vedere [Dati BLOB &#40;Binary Large Object&#41; &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
  **Mantieni valori Identity**  
  Consente di specificare se copiare i valori Identity durante il caricamento dei dati. Questa proprietà è disponibile solo con l'opzione di caricamento rapido. Il valore predefinito di questa proprietà è `false`.  
@@ -156,7 +155,7 @@ ms.locfileid: "66057141"
  **Analizza query**  
  Consente di verificare la sintassi del testo della query.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor destinazione OLE DB &#40;pagina mapping&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
  [Editor destinazione OLE DB &#40;pagina output degli errori&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   

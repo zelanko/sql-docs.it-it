@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: eec13d8d-c15a-4542-bfc4-da66b1a6bfe0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d72ece429ae04e8cb6ee3af3acd872fa751d3a57
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b622fe35bd4b349057168464f8d42fa3f1160f52
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835453"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922728"
 ---
 # <a name="oracle-cdc-instance-data-types"></a>Tipi di dati dell'istanza di Oracle CDC
   L'istanza di Oracle CDC supporta la maggior parte dei tipi di dati Oracle. Nelle sezioni seguenti vengono descritti i tipi di dati supportati e non.  

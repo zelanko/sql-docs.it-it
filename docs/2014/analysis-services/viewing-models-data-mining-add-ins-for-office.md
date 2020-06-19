@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2054d1b0-3828-443e-b60e-529adb9afa7f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9fbd8b24b490123c337c9f7510899da12bcae749
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a512b41620dd9af62c509fbeb54f8de596beb0ad
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065532"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938102"
 ---
 # <a name="viewing-models-data-mining-add-ins-for-office"></a>Visualizzazione di modelli (componenti aggiuntivi Data mining per Office)
   I componenti aggiuntivi Data mining per Excel consentono di esplorare i modelli analitici creati nei modi seguenti:  
@@ -37,7 +36,7 @@ ms.locfileid: "66065532"
   
      [Documentazione di modelli di data mining &#40;componenti aggiuntivi Data mining per Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [&#40;di query SQL Server componenti aggiuntivi Data mining&#41;](query-sql-server-data-mining-add-ins.md)  
   
   

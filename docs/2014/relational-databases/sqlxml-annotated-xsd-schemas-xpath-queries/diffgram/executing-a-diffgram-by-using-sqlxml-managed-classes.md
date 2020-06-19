@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 81c687ca-8c9f-4f58-801f-8dabcc508a06
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b0f84dae66bee63d1e7646a6b4e7018d4f071390
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 117a6e90541c22489f225d27dd2c0c8b498c81f9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703186"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062959"
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>Esecuzione di un DiffGram mediante classi gestite SQLXML
   Questo esempio illustra come eseguire un file DiffGram nell' [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ambiente .NET Framework per applicare gli aggiornamenti dei dati alle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabelle usando le classi gestite SQLXML (Microsoft. Data. SQLXML).  
@@ -52,7 +51,7 @@ ms.locfileid: "82703186"
 </ROOT>  
 ```  
   
- Il blocco ** \< before>** include un elemento ** \< Customer>** (**diffgr: ID = "Customer1"**). Il blocco ** \<>DataInstance** include l'elemento ** \< Customer>** corrispondente con lo stesso **ID**. L'elemento ** \< Customer>** nel ** \<>NewDataSet** specifica anche **diffgr: hasChanges = "modified"**. indicando un'operazione di aggiornamento e il record del cliente nella tabella Cust viene aggiornato di conseguenza. Si noti che se l'attributo **diffgr: hasChanges** non è specificato, la logica di elaborazione DiffGram ignora questo elemento e non viene eseguito alcun aggiornamento.  
+ Il **\<before>** blocco include un **\<Customer>** elemento (**diffgr: ID = "Customer1"**). Il **\<DataInstance>** blocco include l' **\<Customer>** elemento corrispondente con lo stesso **ID**. L' **\<customer>** elemento in **\<NewDataSet>** specifica anche **diffgr: hasChanges = "modified"**. indicando un'operazione di aggiornamento e il record del cliente nella tabella Cust viene aggiornato di conseguenza. Si noti che se l'attributo **diffgr: hasChanges** non è specificato, la logica di elaborazione DiffGram ignora questo elemento e non viene eseguito alcun aggiornamento.  
   
  Di seguito è riportato il codice per un'applicazione di esercitazione in C# che illustra come utilizzare le classi gestite SQLXML per eseguire il DiffGram precedente e aggiornare due tabelle (cust, ORD) che verrà creato anche nel database **tempdb** .  
   

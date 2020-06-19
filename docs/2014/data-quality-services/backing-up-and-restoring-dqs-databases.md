@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 50b051cf2780fc1a94830c461d9ae30674bb7dad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 327217aee7f3e7abf8e09de30542b488a2be5108
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481149"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938052"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>Backup e ripristino di database DQS
   In questo argomento viene descritto come eseguire il backup e il ripristino dei database DQS.  
@@ -60,7 +59,7 @@ ms.locfileid: "65481149"
   
 10. In Esplora oggetti fare clic con il pulsante destro del mouse sul server, quindi fare clic su **Nuova query**.  
   
-11. Nella finestra dell'editor di query copiare le istruzioni SQL seguenti e sostituire * \<>password* con la password specificata durante l'installazione di DQS per la chiave master del database:  
+11. Nella finestra dell'editor di query copiare le istruzioni SQL seguenti e sostituire *\<PASSWORD>* con la password specificata durante l'installazione di DQS per la chiave master del database:  
   
     ```  
     USE [DQS_MAIN]  
@@ -72,7 +71,7 @@ ms.locfileid: "65481149"
   
 12. Premere F5 per eseguire le istruzioni. Esaminare il riquadro **Risultati** per verificare che le istruzioni siano state eseguite correttamente.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Manage DQS Databases](../../2014/data-quality-services/manage-dqs-databases.md)  
   
   

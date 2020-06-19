@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 00129d43-2772-413b-bdf8-ac5de81cf4a5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6d4b926d08096087735458ed309e5bc4189a87df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11c56c29f685eb8f3746431a79b4d6a42a4b9fe5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057478"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965141"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-general-page"></a>Editor gestione connessione per più file flat (pagina Generale)
   Utilizzare la pagina **Generale** della finestra di dialogo **Editor gestione connessione per più file flat** per selezionare un gruppo di file con lo stesso formato di dati e per specificare il loro formato dei dati. Una connessione per più file flat consente la connessione di un pacchetto a un gruppo di file di testo aventi lo stesso formato.  
@@ -51,7 +50,7 @@ ms.locfileid: "66057478"
  **Formato**  
  Consente di indicare se utilizzare la formattazione non allineata a destra, a larghezza fissa o delimitata. Tutti i file devono avere lo stesso formato data.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |Delimitato|Le colonne sono separate dai delimitatori specificati nella pagina **Colonne** .|  
 |File a larghezza fissa|Le colonne hanno una larghezza fissa, specificata trascinando le linee dei marcatori nella pagina **Colonne** .|  
@@ -63,10 +62,10 @@ ms.locfileid: "66057478"
  **Delimitatore riga di intestazione**  
  Consente di selezionare il delimitatore per la riga di intestazione nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|La riga di intestazione è delimitata dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
-|**{CR}**|La riga di intestazione è delimitata da un carattere di ritorno a capo.|  
+|**CR**|La riga di intestazione è delimitata da un carattere di ritorno a capo.|  
 |**{LF}**|La riga di intestazione è delimitata da un carattere di avanzamento riga.|  
 |**Punto e virgola {;}**|La riga di intestazione è delimitata da un carattere punto e virgola.|  
 |**Due punti {:}**|La riga di intestazione è delimitata da un carattere due punti.|  
@@ -80,7 +79,7 @@ ms.locfileid: "66057478"
  **Nomi di colonne nella prima riga di dati**  
  Consente di indicare se prevedere o fornire nomi di colonne nella prima riga di dati.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor gestione connessione per più file flat &#40;pagina colonne&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
  [Editor gestione connessione per più file flat &#40;pagina avanzate&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cf8689c4-2a63-4d05-b202-21b5ff187d7f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 61f1c621a44605db890c9f63ec0a7d1c71212e3c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0f2901f02f8b4a8fc7b77dcb6c1cb166cb6af6ec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703150"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062945"
 ---
 # <a name="guidelines-and-limitations-of-diffgrams-in-sqlxml"></a>Linee guida e limitazioni per i Diffgram in SQLXML
   Quando si utilizzano Diffgram con SQLXML 4.0, tenere presenti le considerazioni seguenti:  

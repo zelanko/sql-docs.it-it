@@ -17,17 +17,16 @@ helpviewer_keywords:
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d60518f64bd44b9b2498c9d27711d47753b04cf9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d72c84a7ed84503e0c88d2a46c808196903900b4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011964"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026742"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Esempi di importazione ed esportazione bulk di documenti XML (SQL Server)
     
-##  <a name="you-can-bulk-import-xml-documents-into-a-ssnoversion-database-or-bulk-export-them-from-a-ssnoversion-database-this-topic-provides-examples-of-both"></a><a name="top"></a>È possibile eseguire l'importazione bulk di documenti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML in un database di o esportarli in blocco da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database di. In questo argomento vengono forniti esempi di entrambe le situazioni.  
+##  <a name="you-can-bulk-import-xml-documents-into-a-ssnoversion-database-or-bulk-export-them-from-a-ssnoversion-database-this-topic-provides-examples-of-both"></a><a name="top"></a>È possibile eseguire l'importazione bulk di documenti XML in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database di o esportarli in blocco da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database di. In questo argomento vengono forniti esempi di entrambe le situazioni.  
   
  Per l'importazione bulk di dati da un file di dati a una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a una vista non partizionata, è possibile utilizzare quanto segue:  
   
@@ -44,7 +43,7 @@ ms.locfileid: "66011964"
 ## <a name="examples"></a>Esempi  
  Gli esempi sono i seguenti:  
   
--   A. [Importazione BULK di dati XML come flusso di byte binario](#binary_byte_stream)  
+-   R. [Importazione BULK di dati XML come flusso di byte binario](#binary_byte_stream)  
   
 -   B. [Importazione bulk di dati XML in una riga esistente](#existing_row)  
   

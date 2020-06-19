@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7fc2b8f7-10a8-4adc-a5d3-a4ddf5db651c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8319699dd58039b918f0715e5b2293a7990108f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a202c97b858e234657340232cef22ea3f25ba432
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057378"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965101"
 ---
 # <a name="odata-connection-manager-editor"></a>Editor gestione connessione OData
   Utilizzare la finestra di dialogo **Editor gestione connessione OData** per aggiungere una connessione o modificare una connessione esistente a un'origine OData.  
@@ -35,7 +34,7 @@ ms.locfileid: "66057378"
  **Test connessione**  
  Fare clic su questo pulsante per testare la connessione all'origine OData.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestione connessione OData](connection-manager/odata-connection-manager.md)  
   
   

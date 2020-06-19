@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 20bcd347-4547-4fad-b182-9571030101df
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0e36c0a3449566db9a2acee360243c77ee548f92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 64d40dd2a6f0f2568e7e7817a3a9366be8f83cc4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057320"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965081"
 ---
 # <a name="odata-source-editor-connection-page"></a>Editor origine OData (pagina Connessione)
   Usare la pagina **Connessione** della finestra di dialogo **Editor origine OData** per selezionare la gestione connessione OData per l'origine OData. In questa pagina è inoltre possibile specificare una raccolta o un percorso della risorsa, nonché tutte le opzioni query per scegliere i dati che devono essere recuperati dall'origine OData. Per altre informazioni sull'origine OData, vedere [Origine OData](data-flow/odata-source.md).  
@@ -26,13 +25,13 @@ ms.locfileid: "66057320"
  **Gestione connessione OData**  
  Selezionare una gestione connessione esistente nell'elenco o crearne una nuova facendo clic su **Nuova**.  
   
- **Nuova**  
+ **Nuovo**  
  Creare una nuova gestione connessione usando la finestra di dialogo **Editor gestione connessione OData** .  
   
  **Usa percorso risorsa o raccolta**  
  Consente di specificare il metodo per la selezione dei dati dall'origine.  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |Raccolta|Recuperare i dati dall'origine OData utilizzando il nome di una raccolta.|  
 |Percorso risorsa|Recuperare i dati dall'origine OData utilizzando un percorso della risorsa.|  
@@ -56,7 +55,7 @@ ms.locfileid: "66057320"
  **Resource path**  
  Digitare un percorso della risorsa. Ad esempio: Dipendenti  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Editor origine OData &#40;pagina colonne&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
  [Editor origine OData &#40;pagina output degli errori&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
  [Gestione connessione OData](connection-manager/odata-connection-manager.md)  

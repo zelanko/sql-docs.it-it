@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ae0b33dd-f44b-42df-b6f6-69861770ce10
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ec61ee62bf952e64e746ae132ce6ee35c89d468a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c14603a1c27bde829d119521389c1a35f9f8178c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770604"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84913801"
 ---
 # <a name="balanced-data-distributor-transformation"></a>Trasformazione del server di distribuzione di dati bilanciati
   La trasformazione del server di distribuzione di dati bilanciati (BDD) sfrutta le funzionalità di elaborazione simultanea delle CPU più recenti. Vengono distribuiti in modo uniforme i buffer di righe in entrata in output di thread distinti. Tramite i thread distinti di ogni percorso di output, con il componente BDD vengono migliorate le prestazioni di un pacchetto SSIS in computer con più processori e più core. Il componente BDD fa parte del Feature Pack per [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Scaricare e installare l'app da [qui](https://go.microsoft.com/fwlink/p/?LinkId=391999).  

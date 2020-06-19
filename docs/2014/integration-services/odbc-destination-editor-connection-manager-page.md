@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f6d9c6c2-e4c4-468b-9e0d-af7b9609614d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 281bbda38a6711efd4e2ffae7afbfa17d689254b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 57a45cb3e9eace357477c0c9f2adfc25384466a1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057211"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965051"
 ---
 # <a name="odbc-destination-editor-connection-manager-page"></a>Editor destinazione ODBC (pagina Gestione connessione)
   Utilizzare la pagina **Gestione connessione** della finestra di dialogo **ODBC Destination Editor** per selezionare la gestione connessione ODBC per la destinazione. Tramite questa pagina è inoltre possibile selezionare una tabella o una vista del database  
@@ -39,13 +38,13 @@ ms.locfileid: "66057211"
 ### <a name="connection-manager"></a>Gestione connessione  
  Consente di selezionare una gestione connessione ODBC esistente nell'elenco o di creare una nuova connessione facendo clic su Nuova. La connessione può essere a qualsiasi database supportato da ODBC.  
   
-### <a name="new"></a>Nuova  
+### <a name="new"></a>Nuovo  
  Fare clic su **New**. Viene visualizzata la finestra di dialogo **Configura gestione connessione ODBC** in cui è possibile creare una nuova gestione connessione.  
   
 ### <a name="data-access-mode"></a>Modalità di accesso ai dati  
  Consente di selezionare il metodo di caricamento dei dati nella destinazione. Le opzioni disponibili vengono visualizzate nella tabella seguente.  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |Nome tabella - Batch|Selezionare questa opzione per configurare la destinazione ODBC per l'utilizzo della modalità batch. Se si seleziona questa opzione, sono disponibili le opzioni seguenti.|  
 ||**Nome tabella o vista**: selezionare una tabella o vista disponibile nell'elenco.<br /><br /> Questo elenco contiene solo le prime 1000 tabelle. Se il database contiene più di 1000 tabelle, è possibile digitare l'inizio di un nome di tabella o usare il carattere jolly (\*) per immettere qualsiasi parte del nome e visualizzare la tabella o le tabelle che si vuole usare.<br /><br /> **Dimensioni batch**: digitare la dimensione del batch per il caricamento bulk. Si tratta del numero di righe caricato come un batch|  
@@ -55,7 +54,7 @@ ms.locfileid: "66057211"
 ### <a name="preview"></a>Anteprima  
  Fare clic su **Anteprima** per visualizzare fino a 200 dati per la tabella selezionata.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Proprietà personalizzate della destinazione ODBC](data-flow/odbc-destination-custom-properties.md)   
  [Editor destinazione ODBC pagina mapping &#40;&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)   
  [Editor destinazione ODBC &#40;pagina Output degli errori&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  

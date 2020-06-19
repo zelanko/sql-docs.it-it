@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a3646aa6ef61c820ca5512203b0ff1e36894cab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c1f3ad2a94ffe3e0f1db19a8e66f85497e7143dc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011814"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026490"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Specifica del tipo di archiviazione di file tramite bcp (SQL Server)
   Il *tipo di archiviazione di file* indica la modalità con la quale vengono archiviati i dati in un file. I dati possono essere esportati in un file utilizzando il tipo di dati della tabella del database in cui si trovano (formato nativo), come caratteri (formato carattere) o utilizzando qualsiasi tipo di dati nel caso in cui sia supportata la conversione implicita. È possibile ad esempio copiare il tipo `smallint` come `int`. I tipi di dati definiti dall'utente vengono esportati utilizzando il tipo di dati di base corrispondente.  
@@ -41,7 +40,7 @@ ms.locfileid: "66011814"
   
     |tipo di archiviazione di file|Parametro da specificare nel prompt dei comandi|  
     |-----------------------|-----------------------------|  
-    |`char`<sup>1</sup>|`c`[`har`]|  
+    |`char` <sup>1</sup>|`c`[`har`]|  
     |`varchar`|`c[har]`|  
     |`nchar`|`w`|  
     |`nvarchar`|`w`|  
@@ -73,16 +72,16 @@ ms.locfileid: "66011814"
     |`UDT` (tipo di dati definito dall'utente)|`U`|  
     |`XML`|`X`|  
   
-     <sup>1</sup> l'interazione tra lunghezza del campo, lunghezza del prefisso e caratteri di terminazione determina la quantità di spazio di archiviazione allocata in un file di dati per i dati non carattere `char` esportati come tipo di archiviazione file.  
+     <sup>1</sup> l'interazione tra lunghezza del campo, lunghezza del prefisso e caratteri di terminazione determina la quantità di spazio di archiviazione allocata in un file di dati per i dati non carattere esportati come `char` tipo di archiviazione file.  
   
-     <sup>2</sup> i `ntext`tipi `text`di dati `image` , e verranno rimossi in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare questi tipi di dati in nuovi progetti di sviluppo e pianificare la modifica delle applicazioni che ne fanno uso. In alternativa, usare `nvarchar(max)`, `varchar(max)` e `varbinary(max)`.  
+     <sup>2</sup> i `ntext` `text` `image` tipi di dati, e verranno rimossi in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Evitare di utilizzare questi tipi di dati in nuovi progetti di sviluppo e pianificare la modifica delle applicazioni che ne fanno uso. In alternativa, usare `nvarchar(max)`, `varchar(max)` e `varbinary(max)`.  
   
 ## <a name="native-file-storage-types"></a>Tipi di archiviazione di file nativi  
  I tipi di archiviazione di file nativi vengono registrati nel file di formato come tipo di dati del file host corrispondente.  
   
 |tipo di archiviazione di file|Tipo di dati del file host|  
 |-----------------------|-------------------------|  
-|`char`<sup>1</sup>|SQLCHAR|  
+|`char` <sup>1</sup>|SQLCHAR|  
 |`varchar`|SQLCHAR|  
 |`nchar`|SQLNCHAR|  
 |`nvarchar`|SQLNCHAR|  
@@ -111,14 +110,14 @@ ms.locfileid: "66011814"
   
  <sup>1</sup> i file di dati archiviati in formato carattere utilizzano `char` come tipo di archiviazione di file. Per questi file di dati di tipo carattere SQLCHAR costituisce pertanto l'unico tipo di dati incluso in file di formato.  
   
- <sup>2</sup> non è possibile eseguire l'importazione `text`bulk `ntext`di dati `image` in colonne, e con valori predefiniti.  
+ <sup>2</sup> non è possibile eseguire l'importazione bulk di dati in `text` `ntext` colonne, e con `image` valori predefiniti.  
   
 ## <a name="additional-considerations-for-file-storage-types"></a>Ulteriori considerazioni sui tipi di archiviazione di file  
  Quando si esegue l'esportazione bulk da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un file di dati:  
   
 -   È sempre possibile specificare il tipo di archiviazione di file `char`.  
   
--   Se si immette un tipo di archiviazione di file che rappresenta una conversione implicita non valida, **bcp** avrà esito negativo. ad esempio, anche se è possibile `int` specificare `smallint` per i dati, se `smallint` si `int` specifica per i dati, risultano errori di overflow.  
+-   Se si immette un tipo di archiviazione di file che rappresenta una conversione implicita non valida, **bcp** avrà esito negativo. ad esempio, anche se è possibile specificare `int` per `smallint` i dati, se si specifica `smallint` per `int` i dati, risultano errori di overflow.  
   
 -   Se i tipi di dati non carattere, quali `float`, `money`, `datetime` o `int`, vengono archiviati in base al tipo dei relativi database, i dati verranno scritti nel file di dati nel formato nativo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

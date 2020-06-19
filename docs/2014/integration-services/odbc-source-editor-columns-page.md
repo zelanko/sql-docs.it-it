@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 565984eb-8318-4be7-bebc-262209cf5065
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5bfda61e5a57dabd62289f32d04d6367695b070b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61311dfa6428c9dd1e67fe783389c2a4b20ac1d8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057165"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965031"
 ---
 # <a name="odbc-source-editor-columns-page"></a>Editor origine ODBC (pagina Colonne)
   Usare la pagina **Colonne** della finestra di dialogo **Editor origine ODBC** per eseguire il mapping tra una colonna di output e ogni colonna esterna (di origine).  
@@ -46,7 +45,7 @@ ms.locfileid: "66057165"
 ### <a name="output-column"></a>Colonna di output  
  Consente di immettere un nome univoco per ogni colonna di output. Per impostazione predefinita viene suggerito il nome della colonna esterna (di origine) selezionata. È comunque possibile scegliere qualsiasi nome descrittivo univoco. Il nome immesso viene visualizzato in Progettazione SSIS.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Editor origine ODBC &#40;pagina Gestione connessione&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
  [Editor origine ODBC &#40;pagina Output degli errori&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
   

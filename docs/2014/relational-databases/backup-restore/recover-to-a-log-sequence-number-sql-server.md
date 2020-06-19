@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 835057cdef6b7d2a336b64480515a5046cfde070
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4df55c3468fc009d86cffd58a837d6935f5ce14b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875764"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957506"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>Recupero fino a un numero di sequenza del file di log (SQL Server)
   Le informazioni contenute in questo argomento sono rilevanti solo per i database che utilizzano il modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk.  
@@ -38,7 +37,7 @@ ms.locfileid: "62875764"
   
  Ogni record presente nel log delle transazioni è identificato in modo univoco da un numero di sequenza dei file di log (LSN). Gli LSN sono ordinati in modo tale che se LSN è maggiore di LSN1, la modifica descritta dal record di log cui fa riferimento LSN2 si verifica dopo la modifica descritta dall'LSN del record di log.  
   
- L'LSN di un record di log in corrispondenza del quale si è verificato un evento significativo può essere utile per creare sequenze di ripristino corrette. Poiché LSN sono ordinati, è possibile confrontarli per verificarne l'uguaglianza e la disuguaglianza ( **\<** ovvero **>** **=** ** \< **,,, **>=**,). Questi confronti sono utili nella creazione di sequenze di ripristino.  
+ L'LSN di un record di log in corrispondenza del quale si è verificato un evento significativo può essere utile per creare sequenze di ripristino corrette. Poiché LSN sono ordinati, possono essere confrontati per verificarne l'uguaglianza e la disuguaglianza (ovvero,, **\<**, **>** **=** **\<=**, **>=** ). Questi confronti sono utili nella creazione di sequenze di ripristino.  
   
 > [!NOTE]  
 >  Gli LSN sono valori di tipo di dati `numeric`(25,0). Gli operatori matematici, ad esempio addizione o sottrazione, non sono significativi e non devono essere utilizzati con gli LSN.  
@@ -64,11 +63,11 @@ ms.locfileid: "62875764"
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>Sintassi Transact-SQL per il ripristino fino a un numero di sequenza del file di log (LSN)  
  Un'istruzione [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) consente di arrestare il processo esattamente in corrispondenza dell'LSN o immediatamente prima, come illustrato di seguito:  
   
--   Utilizzare la clausola WITH STOPATMARK **='** LSN:_<lsn_number>_ **'** , dove LSN:*\<numerolsn>* è una stringa che specifica che il punto di recupero corrisponde al record di log contenente l'LSN specificato.  
+-   Utilizzare la clausola WITH STOPATMARK **='** LSN:_<lsn_number>_ **'** , dove LSN: *\<lsnNumber>* è una stringa che specifica che il punto di recupero corrisponde al record di log contenente l'LSN specificato.  
   
      STOPATMARK esegue il rollforward al numero di sequenza del file di log (LSN) includendo anche tale record del log.  
   
--   Usare la clausola WITH STOPBEFOREMARK **='** LSN:_<lsn_number>_ **'** , dove LSN:*\<numerolsn>* è una stringa che specifica che il punto di recupero è il record del log immediatamente precedente al record di log che contiene il numero LSN specificato.  
+-   Utilizzare la clausola WITH STOPBEFOREMARK **='** LSN:_<lsn_number>_ **'** , dove LSN: *\<lsnNumber>* è una stringa che specifica che il punto di recupero è il record del log immediatamente precedente al record di log che contiene il numero LSN specificato.  
   
      Tramite STOPBEFOREMARK viene eseguito il rollforward fino all'LSN escludendo tale record di log.  
   
@@ -97,8 +96,8 @@ GO
   
 -   [Ripristinare un database di SQL Server fino a un punto specifico &#40;modello di recupero con registrazione completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
-## <a name="see-also"></a>Vedi anche  
- [Applicare i backup del log delle transazioni &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Applicare backup del log delle transazioni &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [Log delle transazioni &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   

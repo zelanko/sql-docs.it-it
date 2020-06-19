@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 55520388424e110420ad96d329081ee7a61fe028
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ebc4ea11780908f847946a01338571211b57678a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876083"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957763"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Ripristini a fasi (SQL Server)
   Le informazioni contenute in questo argomento sono rilevanti solo per i database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition in cui sono contenuti più file o filegroup e, nel modello di recupero con registrazione minima, solo per i filegroup di sola lettura.  
@@ -172,10 +171,10 @@ ms.locfileid: "62876083"
   
 4.  Il backup differenziale seguito da tutti i backup ripristinati durante la sequenza del ripristino a fasi originale per ripristinare i dati fino al punto di recupero originale.  
   
-## <a name="see-also"></a>Vedi anche  
- [Applicare i backup del log delle transazioni &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Applicare backup del log delle transazioni &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Ripristino temporizzato di un database di SQL Server &#40;modello di recupero con esecuzione completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
+ [Ripristinare un database di SQL Server fino a un punto specifico &#40;Modello di recupero con registrazione completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [Panoramica del ripristino e del recupero &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [Pianificare ed eseguire sequenze di ripristino &#40;Modello di recupero con registrazione completa&#41;](plan-and-perform-restore-sequences-full-recovery-model.md)  
   

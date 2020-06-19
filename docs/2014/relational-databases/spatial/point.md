@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: b5027eb9be355348e00b6f17128b821a2bfc2af4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b12069d84e00738e3ddac8c414f33903f4f0999
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014146"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063037"
 ---
 # <a name="point"></a>Point
   Nei dati spaziali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un `Point` è un oggetto senza dimensioni che rappresenta una sola posizione e può contenere valori Z (innalzamento) e M (misura).  
@@ -59,7 +58,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('POINT(3 4 NULL NULL)');  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [MultiPoint](multipoint.md)   
  [Tipo di dati STX &#40;Geometry&#41;](/sql/t-sql/spatial-geometry/stx-geometry-data-type)   
  [Tipo di dati &#40;geometrico porcile&#41;](/sql/t-sql/spatial-geometry/sty-geometry-data-type)   

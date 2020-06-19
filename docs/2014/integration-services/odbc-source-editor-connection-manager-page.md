@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e2c8dc83-6394-4d6c-9232-97e94be72431
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bea70ca9d5d511660ff19a84165a7fc7921b6de1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a9c4049681e671993f48594eb7ac18bad403e3e2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057215"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965011"
 ---
 # <a name="odbc-source-editor-connection-manager-page"></a>Editor origine ODBC (pagina Gestione connessione)
   Utilizzare la pagina **Gestione connessione** della finestra di dialogo **ODBC Source Editor** per selezionare la gestione connessione ODBC per l'origine. Tramite questa pagina è inoltre possibile selezionare una tabella o una vista del database.  
@@ -36,13 +35,13 @@ ms.locfileid: "66057215"
 ### <a name="connection-manager"></a>Gestione connessione  
  Selezionare una gestione connessione ODBC esistente nell'elenco oppure fare clic su **nuova** per creare una nuova connessione. La connessione può essere a qualsiasi database supportato da ODBC.  
   
-### <a name="new"></a>Nuova  
+### <a name="new"></a>Nuovo  
  Fare clic su **New**. Viene visualizzata la finestra di dialogo **Configura gestione connessione ODBC** in cui è possibile creare una nuova gestione connessione ODBC.  
   
 ### <a name="data-access-mode"></a>Modalità di accesso ai dati  
  Consente di selezionare il metodo per la selezione dei dati dall'origine. Le opzioni disponibili vengono visualizzate nella tabella seguente.  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |Nome tabella|Consente di recuperare dati da una tabella o da una vista nell'origine dati ODBC. Se si seleziona questa opzione, scegliere un valore nell'elenco per le opzioni seguenti:|  
 ||**Nome tabella o vista**: selezionare una tabella o vista disponibile nell'elenco o digitare un'espressione regolare per identificare la tabella.|  
@@ -55,7 +54,7 @@ ms.locfileid: "66057215"
 ### <a name="preview"></a>Anteprima  
  Fare clic su **Anteprima** per visualizzare un massimo di 200 righe dei dati estratti dalla tabella o dalla vista selezionata.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Proprietà personalizzate dell'origine ODBC](data-flow/odbc-source-custom-properties.md)   
  [Editor origine ODBC &#40;pagina colonne&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)   
  [Editor origine ODBC &#40;pagina Output degli errori&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  

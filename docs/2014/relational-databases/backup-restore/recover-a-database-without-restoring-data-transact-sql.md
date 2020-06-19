@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7e8fa620-315d-4e10-a718-23fa5171c09e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2109346c60ca807dcc818941f9baff862a211247
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 04e4f78e51adb803bb65530c0b3b903aa7f76419
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921798"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957601"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>Recupero di un database senza ripristino dei dati (Transact-SQL)
   Generalmente, tutti i dati in un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono ripristinati prima che venga recuperato il database. È tuttavia possibile che un'operazione di ripristino recuperi il database senza ripristinare effettivamente un backup, ad esempio nel caso di recupero di un file di sola lettura compatibile con il database. Questa operazione viene definita *ripristino con solo recupero*. Quando i dati offline sono già compatibili con il database è necessario solo renderli disponibili; un'operazione di ripristino con solo recupero completa il recupero del database e porta i dati online.  
@@ -42,7 +41,7 @@ ms.locfileid: "62921798"
  RESTORE DATABASE *nome_database* WITH RECOVERY  
   
 > [!NOTE]  
->  La clausola **=** \<from *backup_device>* non viene utilizzata per i ripristini solo recupero perché non è necessario alcun backup.  
+>  La **=** \<*backup_device> clausola from * non viene utilizzata per i ripristini solo recupero perché non è necessario alcun backup.  
   
  **Esempio**  
   
@@ -63,7 +62,7 @@ RESTORE DATABASE AdventureWorks2012
   
  La sintassi dell'istruzione [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) per un ripristino del file con solo recupero è la seguente:  
   
- Restore database *database_name* { **=** file _logical_file_name_ | Filegroup **=** _logical_filegroup_name_ } [ **,**... *n* ] con ripristino  
+ RESTOre DATABASE *database_name* {file **=** _logical_file_name_ | FILEgroup **=** _logical_filegroup_name_ } [ **,**... *n* ] con ripristino  
   
  **Esempio**  
   
@@ -88,11 +87,11 @@ RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A>  
   
-## <a name="see-also"></a>Vedi anche  
- [Ripristino in linea &#40;SQL Server&#41;](online-restore-sql-server.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Ripristino online &#40;SQL Server&#41;](online-restore-sql-server.md)   
  [Ripristini a fasi &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
  [Ripristini di file &#40;modello di recupero con registrazione minima&#41;](file-restores-simple-recovery-model.md)   
- [Ripristini di file &#40;modello di recupero con versione completa&#41;](file-restores-full-recovery-model.md)   
+ [Ripristini di file &#40;modello di recupero con registrazione completa&#41;](file-restores-full-recovery-model.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

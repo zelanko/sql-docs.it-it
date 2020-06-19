@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a54a067ed9da68e25f9394a463fa352ccc165f21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: edf390d5f127065b23c6ae479af1145209774332
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72781926"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063064"
 ---
 # <a name="scripting"></a>Scripting
-  In SMO la generazione di script è controllata dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.Scripter> e dai relativi oggetti figlio oppure dal metodo `Script` in oggetti singoli. L' <xref:Microsoft.SqlServer.Management.Smo.Scripter> oggetto controlla il mapping tra le relazioni di dipendenza per gli oggetti in un' [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]istanza di.  
+  In SMO la generazione di script è controllata dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.Scripter> e dai relativi oggetti figlio oppure dal metodo `Script` in oggetti singoli. L' <xref:Microsoft.SqlServer.Management.Smo.Scripter> oggetto controlla il mapping tra le relazioni di dipendenza per gli oggetti in un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  La generazione di script avanzata tramite l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Scripter> e i relativi oggetti figlio è un processo a tre fasi:  
   
