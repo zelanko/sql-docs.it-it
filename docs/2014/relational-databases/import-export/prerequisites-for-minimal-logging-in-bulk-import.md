@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ccb9642982b8680e4111346298e7a70bbc606dbb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4711e25dcfcc99e14894e47166638673c61a6831
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011893"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026518"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prerequisiti per la registrazione minima nell'importazione bulk
   Per un database con modello di recupero con registrazione completa, tutte le operazioni di inserimento di righe eseguite durante l'importazione bulk vengono registrate in modo completo nel log delle transazioni. In caso di importazioni di grandi quantità di dati, l'utilizzo del modello di recupero con registrazione completa può causare un rapido esaurimento dello spazio disponibile nel log. Nel caso si utilizzi un modello di recupero con registrazione minima o un modello di recupero con registrazione minima delle operazioni bulk invece, la registrazione minima delle operazioni di importazione bulk riduce la possibilità che un'operazione di questo tipo esaurisca lo spazio nel log. La registrazione minima inoltre è più efficiente di quella completa.  

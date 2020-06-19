@@ -49,13 +49,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f74d26366e0c7c586f466b8fd227cd78ba8ab598
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 8a2fc385e7235e1857931e187086911b52ef14b8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269410"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935532"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurare account di servizio e autorizzazioni di Windows
   Ogni servizio in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rappresenta un processo o un set di processi destinato a gestire l'autenticazione delle operazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con Windows. Nel presente argomento viene fornita la descrizione della configurazione predefinita dei servizi disponibili in questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e delle opzioni di configurazione per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che è possibile impostare durante e dopo l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -140,9 +139,9 @@ ms.locfileid: "83269410"
   
 -   **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]**-Fornisce Online Analytical Processing (OLAP) e data mining funzionalità per business intelligence applicazioni. Il file eseguibile è \<MSSQLPATH>\OLAP\Bin\msmdsrv.exe.  
   
--   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**-Gestisce, esegue, crea, pianifica e recapita report. Il file eseguibile è \<MSSQLPATH>\Reporting Services\ReportServer\Bin\ReportingServicesService.exe.  
+-   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**-Gestisce, esegue, crea, pianifica e recapita report. Il file eseguibile è \<MSSQLPATH> \Reporting Services\ReportServer\Bin\ReportingServicesService.exe.  
   
--   **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]**: Fornisce il supporto di gestione per [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] l'archiviazione e l'esecuzione di pacchetti. Il percorso dell'eseguibile è \< MSSQLPATH> \120\dts\binn\msdtssrvr.exe  
+-   **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]**: Fornisce il supporto di gestione per [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] l'archiviazione e l'esecuzione di pacchetti. Il percorso eseguibile è \<MSSQLPATH>\120\DTS\Binn\MsDtsSrvr.exe  
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser** : servizio di risoluzione dei nomi che fornisce informazioni di connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per i computer client. Il percorso dell'eseguibile è c:\Programmi (x86)\Microsoft SQL Server\90\Shared\sqlbrowser.exe  
   
@@ -230,7 +229,7 @@ ms.locfileid: "83269410"
   
 -   <a name="VA_Desc"></a>**Account virtuali**  
   
-     Gli account virtuali a partire da Windows Server 2008 R2 e Windows 7 sono *account locali gestiti* che forniscono le funzionalità seguenti per semplificare l'amministrazione dei servizi. L'account virtuale è gestito automaticamente e consente di accedere alla rete in un ambiente di dominio. Se durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene usato il valore predefinito per gli account di servizio, sarà usato un account virtuale con il nome dell'istanza come nome del servizio, nel formato **NT SERVICE\\** _\<SERVICENAME>_ . I servizi eseguiti come account virtuali consentono di accedere alle risorse di rete usando le credenziali dell'account del computer nel formato _<nome_dominio>_ **\\** _<nome_computer>_ **$** .  Quando si specifica un account virtuale per avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], lasciare vuoto il campo della password. Se tramite l'account virtuale non è possibile registrare il nome dell'entità servizio (SPN), registrarlo manualmente. Per altre informazioni sulla registrazione manuale di un SPN, vedere [Registrazione manuale del nome SPN](register-a-service-principal-name-for-kerberos-connections.md#Manual).  
+     Gli account virtuali a partire da Windows Server 2008 R2 e Windows 7 sono *account locali gestiti* che forniscono le funzionalità seguenti per semplificare l'amministrazione dei servizi. L'account virtuale è gestito automaticamente e consente di accedere alla rete in un ambiente di dominio. Se durante l'installazione viene utilizzato il valore predefinito per gli account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , viene utilizzato un account virtuale che utilizza il nome dell'istanza come nome del servizio, nel formato **NT Service \\ ** _\<SERVICENAME>_ . I servizi eseguiti come account virtuali consentono di accedere alle risorse di rete usando le credenziali dell'account del computer nel formato _<nome_dominio>_ **\\** _<nome_computer>_ **$** .  Quando si specifica un account virtuale per avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], lasciare vuoto il campo della password. Se tramite l'account virtuale non è possibile registrare il nome dell'entità servizio (SPN), registrarlo manualmente. Per altre informazioni sulla registrazione manuale di un SPN, vedere [Registrazione manuale del nome SPN](register-a-service-principal-name-for-kerberos-connections.md#Manual).  
   
     > [!NOTE]  
     >  Non è possibile usare gli account virtuali per l'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , poiché non dispongono dello stesso SID in ogni nodo del cluster.  
@@ -301,7 +300,7 @@ ms.locfileid: "83269410"
 -   [Named Pipe](#Pipes)  
   
 ###  <a name="service-configuration-and-access-control"></a><a name="Serv_SID"></a> Configurazione e controllo di accesso del servizio  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] abilita SID per servizio per ognuno dei servizi in modo da fornire isolamento e protezione avanzata dei servizi. Il SID per servizio deriva dal nome del servizio ed è univoco per il servizio. Un nome di SID per un servizio [!INCLUDE[ssDE](../../includes/ssde-md.md)] potrebbe ad esempio essere **NT Service\MSSQL$** _\<NomeIstanza>_ . Attraverso l'isolamento, è possibile accedere a oggetti specifici anche se non vengono eseguiti in un account con privilegi elevati e senza indebolire la sicurezza dell'oggetto. Mediante una voce di controllo di accesso contenente un SID del servizio, un servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può limitare l'accesso alle proprie risorse.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] abilita SID per servizio per ognuno dei servizi in modo da fornire isolamento e protezione avanzata dei servizi. Il SID per servizio deriva dal nome del servizio ed è univoco per il servizio. Ad esempio, un nome di SID del servizio per il [!INCLUDE[ssDE](../../includes/ssde-md.md)] servizio potrebbe essere **NT SERVICE\MSSQL $** _\<InstanceName>_ . Attraverso l'isolamento, è possibile accedere a oggetti specifici anche se non vengono eseguiti in un account con privilegi elevati e senza indebolire la sicurezza dell'oggetto. Mediante una voce di controllo di accesso contenente un SID del servizio, un servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può limitare l'accesso alle proprie risorse.  
   
 > [!NOTE]  
 >  In Windows 7, [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 e versioni successive il SID per servizio può essere l'account virtuale usato dal servizio.  
@@ -404,15 +403,15 @@ ms.locfileid: "83269410"
 ||Microsoft SQL Server\120\Setup Bootstrap|Lettura, Esecuzione|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|\<ToolsDir>\DReplayController\Log\ (directory vuota)|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
 ||\<ToolsDir>\DReplayController\DReplayController.exe|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
-||\<ToolsDir>\DReplayController\resources\|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
-||\<ToolsDir>\DReplayController\\{all dlls}|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
+||\<ToolsDir>\DReplayController\resources \| lettura, esecuzione, visualizzazione contenuto cartella|  
+||\<ToolsDir>\DReplayController \\ {tutte le dll}|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
 ||\<ToolsDir>\DReplayController\DReplayController.config|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
 ||\<ToolsDir>\DReplayController\IRTemplate.tdf|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
 ||\<ToolsDir>\DReplayController\IRDefinition.xml|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|\<ToolsDir>\DReplayClient\Log\|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|\<ToolsDir>\DReplayClient\Log \| lettura, esecuzione, visualizzazione contenuto cartella|  
 ||\<ToolsDir>\DReplayClient\DReplayClient.exe|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
-||\<ToolsDir>\DReplayClient\resources\|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
-||\<ToolsDir>\DReplayClient\ (all dlls)|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
+||\<ToolsDir>\DReplayClient\resources \| lettura, esecuzione, visualizzazione contenuto cartella|  
+||\<ToolsDir>\DReplayClient\ (tutte le dll)|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
 ||\<ToolsDir>\DReplayClient\DReplayClient.config|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
 ||\<ToolsDir>\DReplayClient\IRTemplate.tdf|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
 ||\<ToolsDir>\DReplayClient\IRDefinition.xml|Lettura, Esecuzione, Visualizzazione contenuto cartella|  
@@ -432,12 +431,12 @@ ms.locfileid: "83269410"
 ||Solo Amministratore|\\\\.\root\Microsoft\SqlServer\ServerEvents \\<sql_instance_name><sup>1</sup>|Controllo completo|  
 ||Administrators, Sistema|\tools\binn\schemas\sqlserver\2004\07\showplan|Controllo completo|  
 ||Utenti|\tools\binn\schemas\sqlserver\2004\07\showplan|Lettura, Esecuzione|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Account del servizio Windows del server di report|*\<installazione>* \Reporting Services\LogFiles|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
-||Account del servizio Windows ReportServer, Everyone|* \< installare>* \Reporting Services\ReportManager, * \< installare>* \Reporting Services\ReportManager\Pages \\ \* . \* , * \< installare>* \Reporting Services\ReportManager\Styles \\ \* . \* , * \< installare>* \Reporting Services\ReportManager\ webctrl_client \ 1_0 \\ *.\*|Lettura, Esecuzione|  
-||Account del servizio Windows del server di report|*\<installazione>* \Reporting Services\ReportServer|Lettura|  
-||Account del servizio Windows del server di report|*\<installazione>* \Reporting Services\ReportServer\global.asax|Full|  
-||Tutti|*\<installazione>* \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
-||Account servizi Windows ReportServer|*\<installazione>* \Reporting Services\ReportServer\rsreportserver.config|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Account del servizio Windows del server di report|*\<install>* Services\LogFiles \Reporting|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+||Account del servizio Windows ReportServer, Everyone|*\<install>* \Reporting Services\ReportManager, *\<install>* \Reporting Services\ReportManager\Pages \\ \* . \* , *\<install>* \Reporting Services\ReportManager\Styles \\ \* . \* , *\<install>* \Reporting Services\ReportManager\ webctrl_client \ 1_0 \\ *.\*|Lettura, Esecuzione|  
+||Account del servizio Windows del server di report|*\<install>* Services\ReportServer \Reporting|Lettura|  
+||Account del servizio Windows del server di report|*\<install>* Services\ReportServer\global.asax \Reporting|Full|  
+||Tutti|*\<install>* Services\ReportServer\global.asax \Reporting|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
+||Account servizi Windows ReportServer|*\<install>* Services\ReportServer\rsreportserver.config \Reporting|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
 ||Tutti|Chiavi del server di report (hive Instid)|Richiedi valore<br /><br /> Enumera sottochiavi<br /><br /> Notifica<br /><br /> Controllo in lettura|  
 ||Utente di Servizi terminali|Chiavi del server di report (hive Instid)|Richiedi valore<br /><br /> Imposta valore<br /><br /> Creazione sottochiave<br /><br /> Enumerazione sottochiavi<br /><br /> Notifica<br /><br /> Delete<br /><br /> Controllo in lettura|  
 ||Power Users|Chiavi del server di report (hive Instid)|Richiedi valore<br /><br /> Imposta valore<br /><br /> Creazione sottochiave<br /><br /> Enumera sottochiavi<br /><br /> Notifica<br /><br /> Delete<br /><br /> Controllo in lettura|  
@@ -638,7 +637,7 @@ ms.locfileid: "83269410"
   
      Il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è disabilitato nelle istanze di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] e [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services.  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<sup>1</sup>  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] <sup>1</sup>  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   

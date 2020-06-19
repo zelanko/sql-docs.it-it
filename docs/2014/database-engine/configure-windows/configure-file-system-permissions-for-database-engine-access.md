@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 78bba43c-4edb-4216-84ac-d6246ae5546d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b23ed3a3a1f128d24bfec2a0066e63b09753311a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7115a4f8953ade5fc91e4be3197772f4bc3784c3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811325"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935752"
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>Configurare le autorizzazioni del file system per l'accesso al motore di database
   In questo argomento viene illustrato come concedere al [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]l'accesso al file system nel percorso in cui sono archiviati i file di database. Il servizio [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve disporre dell'autorizzazione del file system di Windows per accedere alla cartella file in cui sono archiviati i file di database. L'autorizzazione per il percorso predefinito viene configurata durante l'installazione. Se si posizionano i file di database in un percorso diverso, potrebbe essere necessario seguire questi passaggi per concedere al [!INCLUDE[ssDE](../../includes/ssde-md.md)] l'autorizzazione di controllo completo per il percorso in questione.  
@@ -42,7 +41,7 @@ ms.locfileid: "62811325"
   
 7.  Fare di nuovo clic su **OK** per tornare alla finestra di dialogo **autorizzazioni** .  
   
-8.  Nella casella nome **gruppo o utente** selezionare il SID per servizio e quindi nella casella **autorizzazioni per** \<nome> selezionare la casella di controllo **Consenti** per **controllo completo**.  
+8.  Nella casella nome **gruppo o utente** selezionare il SID per servizio e quindi nella casella **autorizzazioni per** \<name> selezionare la casella di controllo **Consenti** per **controllo completo**.  
   
 9. Fare clic su **Applica**quindi due volte su **OK** per uscire.  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d94e81b6-f2e6-47ef-b497-ec3d827a1646
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 973d14a238f109def82cf49f223a1ce2f37888b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c31c1d87c8b743132dd90d495f73ef711dc1f813
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787039"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935507"
 ---
 # <a name="configure-the-two-digit-year-cutoff-server-configuration-option"></a>Configurare l'opzione di configurazione del server two-digit year cutoff
   In questo argomento si illustra come configurare l'opzione di configurazione del server **two digit year cutoff** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'opzione **two digit year cutoff** è possibile specificare un intero compreso tra 1753 e 9999 che rappresenta l'anno di cambio data per l'interpretazione degli anni a due cifre come anni a quattro cifre. Il periodo di tempo predefinito in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è 1950-2049, dove 2049 rappresenta l'anno di cambio data. Questo significa che in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'anno a due cifre 49 viene interpretato come 2049, l'anno a due cifre 50 viene interpretato come 1950 e l'anno a due cifre 99 viene interpretato come 1999. Per compatibilità con versioni precedenti è consigliabile mantenere il valore predefinito.  

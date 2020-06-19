@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5c284e5e-7775-435d-ac49-f3f12a27ddc7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3fc6099fa9f523b351489ce4301596aeb90c1509
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56b159952c83ed243c4c5d8012c76e5a2a248519
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211302"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001737"
 ---
 # <a name="view-job-activity"></a>Visualizza attività processi
   In questo argomento viene illustrato come visualizzare lo stato di runtime dei processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -48,7 +47,7 @@ ms.locfileid: "68211302"
   
 #### <a name="to-view-job-activity"></a>Per visualizzare l'attività del processo  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del, quindi [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]espandere l'istanza.  
+1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , quindi espandere l'istanza.  
   
 2.  Espandere **SQL Server Agent**.  
   

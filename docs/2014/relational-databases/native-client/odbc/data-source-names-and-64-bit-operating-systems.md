@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: c2f86810-2775-4ddd-8df7-e8373785a7fc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d529786fdb8643338c3a0d004c4a409e8e85a420
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ae31584ca3c076919f688d1ef9bdef80706c6940
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704299"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055851"
 ---
 # <a name="data-source-names-and-64-bit-operating-systems"></a>Nomi di origine dati e sistemi operativi a 64 bit
   Per compilare ed eseguire un'applicazione come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  

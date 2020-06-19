@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 208af6ed-b271-4ab8-803e-7666025385c8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e7d89c05ebd0b181b63f66fa0e0e0db99d54b952
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df8a4de014552d3aca00b3eb244f7ff8df56756b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916145"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969751"
 ---
 # <a name="mssqlserver_10737"></a>MSSQLSERVER_10737
     
@@ -33,6 +32,6 @@ ms.locfileid: "62916145"
 |Testo del messaggio|Quando in un'istruzione ALTER TABLE REBUILD o ALTER INDEX REBUILD si specifica una partizione in una clausola DATA_COMPRESSION, è necessario specificare PARTITION=ALL. La clausola PARTITION=ALL viene utilizzata per ribadire che tutte le partizioni della tabella o dell'indice verranno ricompilate anche se nella clausola DATA_COMPRESSION viene specificato un solo subset.|  
   
 ## <a name="user-action"></a>Azione dell'utente  
- Aggiungere la clausola PARTITION=ALL all'istruzione ALTER TABLE o ALTER INDEX. In alternativa, per ricompilare una partizione specifica, usare REBUILD PARTITION = \<partition-number-expr> WITH (DATA_COMPRESSION={ON | OFF}).  
+ Aggiungere la clausola PARTITION=ALL all'istruzione ALTER TABLE o ALTER INDEX. In alternativa, per ricompilare una partizione specifica, usare RICOMPILA partizione = \<partition-number-expr> with (DATA_COMPRESSION = {on | OFF}).  
   
   

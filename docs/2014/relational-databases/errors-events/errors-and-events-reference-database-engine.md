@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 537ea93edb56b84be0cbeff5633b943252a98ff8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e991accfd0e6fdd4fa25746499308455eff85ce3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62870903"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969921"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Guida di riferimento a errori ed eventi (Motore di database)
 
 Questa sezione contiene i messaggi di errore motore di database che richiedono un'ulteriore spiegazione.
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
- [Eventi ed errori di motore di database](database-engine-events-and-errors.md) Viene descritto il formato [!INCLUDE[ssDE](../../includes/ssde-md.md)] dei messaggi di errore e viene illustrato come visualizzare i messaggi di errore e restituire messaggi di errore alle applicazioni.  
+ [Eventi ed errori di motore di database](database-engine-events-and-errors.md) Viene descritto il formato dei [!INCLUDE[ssDE](../../includes/ssde-md.md)] messaggi di errore e viene illustrato come visualizzare i messaggi di errore e restituire messaggi di errore alle applicazioni.  
   
  Contiene le spiegazioni dei messaggi di errori di [!INCLUDE[ssDE](../../includes/ssde-md.md)] , le possibili cause e le azioni che è possibile eseguire per risolvere il problema.  
   
@@ -35,7 +34,7 @@ Questa sezione contiene i messaggi di errore motore di database che richiedono u
   
  Nella tabella seguente sono elencati i collegamenti a tali risorse insieme a una descrizione delle principali caratteristiche.  
   
-|Risorsa|Descrizione|  
+|Resource|Description|  
 |--------------|-----------------|  
 |[Community di SQL Server](https://go.microsoft.com/fwlink/?LinkId=42455)|Questo sito contiene collegamenti a newsgroup e forum monitorati dalla community di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Elenca inoltre le fonti di informazione della community, quali Blog e siti Web. La community di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è molto utile per ottenere la risposta a eventuali domande. Non è tuttavia garantita una risposta.|  
 |[Community del centro per sviluppatori di SQL Server](https://go.microsoft.com/fwlink/?LinkId=42456)|Questo sito è incentrato sui newsgroup, i forum e le altre risorse della community utili per gli sviluppatori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  

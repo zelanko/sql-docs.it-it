@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 87205984-507a-49f3-b27c-36a0075c234d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e07bd6ead9ce0dfc20249f5db50a8b0b78ba242a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3be95dc906b55caaf6a7f33bd66c3137303ecee4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832762"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919578"
 ---
 # <a name="column-statistics-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Statistiche di colonna (Attività Profiling dati)
   Usare il riquadro **Proprietà richiesta** della pagina **Richieste profilo** per impostare le opzioni di **Richiesta profilo Statistiche di colonna** selezionata nel riquadro delle richieste. Il profilo Statistiche di colonna segnala le statistiche, ad esempio relative a deviazione minima, massima, media e standard, per le colonne numeriche, nonché la deviazione minima e massima per le colonne di tipo `datetime`. Consente inoltre di identificare eventuali problemi nei dati, ad esempio le date non valide. Si analizza, ad esempio, una colonna di date cronologiche e si individua una data massima successiva alla data corrente.  

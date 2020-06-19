@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: e4734b3b-8fbe-4b65-9c48-91b5a3dd18e1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 89449cbc31e1ec36fa37a5bb36b1f505cdd2e14d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 560d514ba8dd1503b59b3b59ecf404d876e24cd2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787123"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935570"
 ---
 # <a name="configure-the-recovery-interval-server-configuration-option"></a>Configurare l'opzione di configurazione del server recovery interval
   In questo argomento si illustra come configurare l'opzione di configurazione del server **recovery interval** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'opzione **recovery interval** è possibile definire un limite superiore di tempo da impiegare per il recupero di un database. Il valore specificato per questa opzione viene utilizzato nel [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] per stabilire approssimativamente la frequenza di generazione dei checkpoint automatici in un database specificato tramite [checkpoint automatici](../../relational-databases/logs/database-checkpoints-sql-server.md) .  

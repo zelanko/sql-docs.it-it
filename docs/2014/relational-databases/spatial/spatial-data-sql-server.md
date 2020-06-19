@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 7bd529f67f9184f86d4a9ec704e9cf7af972f3f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dccec5ca3c42f605145853b2e864e861b17535fb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014061"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063031"
 ---
 # <a name="spatial-data-sql-server"></a>Dati spaziali (SQL Server)
   I dati spaziali rappresentano informazioni sulla posizione fisica e sulla forma degli oggetti geometrici. Questi oggetti possono essere dei punti oppure oggetti più complessi, come ad esempio paesi, strade o laghi.  

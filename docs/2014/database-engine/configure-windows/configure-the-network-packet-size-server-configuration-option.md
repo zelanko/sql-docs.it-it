@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4bd992f16158e7286db668256dc5963d83dbd4b8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69e5963675349bceff6a0ee022f6dc28da03db59
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787000"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935614"
 ---
 # <a name="configure-the-network-packet-size-server-configuration-option"></a>Configurare l'opzione di configurazione del server network packet size
-  In questo argomento viene descritto come configurare `network packet size` l'opzione di configurazione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] del server [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[tsql](../../includes/tsql-md.md)]tramite o. L' `network packet size` opzione consente di impostare le dimensioni del pacchetto (in byte) utilizzate nell'intera rete. I pacchetti sono i blocchi di dati di dimensioni fisse utilizzati per il trasferimento delle richieste e delle risposte tra client e server. Le dimensioni predefinite del pacchetto sono di 4.096 byte.  
+  In questo argomento viene descritto come configurare l' `network packet size` opzione di configurazione del server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] . L' `network packet size` opzione consente di impostare le dimensioni del pacchetto (in byte) utilizzate nell'intera rete. I pacchetti sono i blocchi di dati di dimensioni fisse utilizzati per il trasferimento delle richieste e delle risposte tra client e server. Le dimensioni predefinite del pacchetto sono di 4.096 byte.  
   
 > [!NOTE]  
 >  È consigliabile modificare le dimensioni dei pacchetti solo se si è certi che l'operazione determinerà un miglioramento delle prestazioni. Per la maggior parte delle applicazioni, le dimensioni predefinite risultano ottimali.  

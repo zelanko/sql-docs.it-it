@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f07d9b2f613ca1face8be3bb23bac78202da6655
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e82debe452a1fb4214c297d781e3a95146ec52aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192133"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063149"
 ---
 # <a name="setting-properties"></a>Impostazione delle proprietà
-  Le proprietà sono valori in cui sono archiviate informazioni descrittive sull'oggetto. Le opzioni di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] configurazione, ad esempio, sono <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> rappresentate dalle proprietà dell'oggetto. Alle proprietà è possibile accedere direttamente o indirettamente utilizzando la relativa raccolta. Per l'accesso diretto alle proprietà viene utilizzata la sintassi seguente:  
+  Le proprietà sono valori in cui sono archiviate informazioni descrittive sull'oggetto. Le opzioni di configurazione, ad esempio, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sono rappresentate dalle <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> proprietà dell'oggetto. Alle proprietà è possibile accedere direttamente o indirettamente utilizzando la relativa raccolta. Per l'accesso diretto alle proprietà viene utilizzata la sintassi seguente:  
   
  `objInstance.PropertyName`  
   

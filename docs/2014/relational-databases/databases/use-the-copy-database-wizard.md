@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e72b960db0fd5b733119cafeca98f124eaa15f38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0baaeef6cb196a67b2f615aa280b61b61fbc5119
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871138"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970007"
 ---
 # <a name="use-the-copy-database-wizard"></a>Utilizzo di Copia guidata database
   Tramite Copia guidata database è possibile spostare o copiare con semplicità i database e i relativi oggetti da un server a un altro, senza alcun tempo di inattività del server. È inoltre possibile aggiornare i database da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Mediante questa procedura guidata è possibile effettuare le operazioni seguenti:  
@@ -98,7 +97,7 @@ ms.locfileid: "62871138"
   
 -   Per garantire prestazioni ottimali del database aggiornato, aggiornare le statistiche eseguendo sp_updatestats (aggiornamento delle statistiche) sul database aggiornato.  
   
--   Quando si copia un database in un'altra istanza del server, per garantire un utilizzo coerente a utenti e applicazioni, potrebbe essere necessario ricreare nell'altra istanza del server alcuni o tutti i metadati per il database, ad esempio account di accesso e processi. Per ulteriori informazioni, vedere [gestire i metadati quando si rende disponibile un database in un'altra istanza del Server &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md).  
+-   Quando si copia un database in un'altra istanza del server, per garantire un utilizzo coerente a utenti e applicazioni, potrebbe essere necessario ricreare nell'altra istanza del server alcuni o tutti i metadati per il database, ad esempio account di accesso e processi. Per altre informazioni, vedere [Gestione dei metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
@@ -180,10 +179,10 @@ ms.locfileid: "62871138"
      **origine**  
      Consente di visualizzare i database disponibili nel server di origine.  
   
-     **Stato**  
+     **Status**  
      Se il database può essere spostato, viene visualizzato **OK** . In caso contrario, viene visualizzato il motivo per cui il database non può essere spostato.  
   
-     **Aggiorna**  
+     **Refresh** (Aggiornamento)  
      Consente di aggiornare l'elenco dei database.  
   
      **Avanti**  
@@ -191,7 +190,7 @@ ms.locfileid: "62871138"
   
 6.  Nella pagina **Configurazione database di destinazione** modificare il nome del database, se necessario, e specificare il percorso e i nomi dei file di database. Questa pagina viene visualizzata solo una volta per ogni database spostato o copiato.  
   
-7.  Nella pagina **Selezione oggetti database** selezionare gli oggetti da spostare o copiare. Questa pagina è disponibile solo se l'origine e la destinazione si trovano in server diversi. Per includere un oggetto, fare clic sul relativo nome nella casella **Oggetti correlati disponibili** , quindi fare clic sul pulsante **>>** per spostare l'oggetto nella casella **Oggetti correlati selezionati** . Per escludere un oggetto, fare clic sul nome dell'oggetto nella casella **oggetti correlati selezionati** , quindi fare ** < ** clic sul pulsante per spostare l'oggetto nella casella **oggetti correlati disponibili** . Per impostazione predefinita, vengono trasferiti tutti gli oggetti di ogni tipo selezionato, ad eccezione degli account di accesso. Per scegliere singoli oggetti di un tipo, fare clic sul pulsante con i puntini di sospensione accanto al tipo di oggetti nella casella **Oggetti correlati selezionati** . Verrà aperta una finestra di dialogo in cui è possibile selezionare i singoli oggetti.  
+7.  Nella pagina **Selezione oggetti database** selezionare gli oggetti da spostare o copiare. Questa pagina è disponibile solo se l'origine e la destinazione si trovano in server diversi. Per includere un oggetto, fare clic sul relativo nome nella casella **Oggetti correlati disponibili** , quindi fare clic sul pulsante **>>** per spostare l'oggetto nella casella **Oggetti correlati selezionati** . Per escludere un oggetto, fare clic sul nome dell'oggetto nella casella **oggetti correlati selezionati** , quindi fare clic sul **<\<** pulsante per spostare l'oggetto nella casella **oggetti correlati disponibili** . Per impostazione predefinita, vengono trasferiti tutti gli oggetti di ogni tipo selezionato, ad eccezione degli account di accesso. Per scegliere singoli oggetti di un tipo, fare clic sul pulsante con i puntini di sospensione accanto al tipo di oggetti nella casella **Oggetti correlati selezionati** . Verrà aperta una finestra di dialogo in cui è possibile selezionare i singoli oggetti.  
   
      **Account di accesso (tutti gli account di accesso in fase di esecuzione)**  
      Consente di includere gli account di accesso nell'operazione di spostamento o di copia. L'opzione è selezionata per impostazione predefinita.  
@@ -208,7 +207,7 @@ ms.locfileid: "62871138"
      **Messaggi di errore definiti dall'utente**  
      Consente di includere i messaggi di errore definiti dall'utente nell'operazione di copia o spostamento.  
   
-     **Endpoint**  
+     **Endpoints**  
      Consente di includere gli endpoint definiti nel database di origine.  
   
      **Catalogo full-text**  
@@ -233,14 +232,14 @@ ms.locfileid: "62871138"
      **Condivisione file nel server di origine**  
      Consente di specificare il percorso dei file del database di origine come percorso di una condivisione file.  
   
-     Ad esempio: "\\\\*server_name*\c $ \Programmi\Microsoft SQL Server\MSSQL110. MSSQLSERVER\MSSQL\Data  
+     Ad esempio: " \\ \\ *server_name*\c $ \Programmi\Microsoft SQL Server\MSSQL110. MSSQLSERVER\MSSQL\Data  
   
 9. Tramite Copia guidata database è possibile creare un pacchetto [!INCLUDE[ssIS](../../includes/ssis-md.md)] per trasferire il database dalla pagina **Configurazione pacchetto** e, se necessario, personalizzare il pacchetto.  
   
      **Posizione pacchetto**  
      Consente di visualizzare il punto in cui verrà scritto il pacchetto [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
-     **Nome pacchetto**  
+     **Nome del pacchetto**  
      Consente di immettere un nome per il pacchetto [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
      **Opzioni di registrazione**  
@@ -251,13 +250,13 @@ ms.locfileid: "62871138"
   
 10. Nella pagina **Pianificazione pacchetto** specificare il momento in cui si desidera venga avviata l'operazione di copia o spostamento. Se non si è un amministratore di sistema, è necessario specificare un account proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent con accesso al sottosistema di esecuzione dei pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS).  
   
-     **Esegui immediatamente**  
+     **Run immediately**  
      L'operazione di spostamento o copia viene avviata dopo aver fatto clic su **Avanti**.  
   
-     **Pianificazione**  
+     **Pianifica**  
      L'operazione di spostamento o copia viene avviata in un secondo momento. Le impostazioni di pianificazione correnti vengono visualizzate nella casella della descrizione. Per modificare la pianificazione fare clic su **Cambia pianificazione**.  
   
-     **Modificare**  
+     **Modifica**  
      Consente di aprire la finestra di dialogo **Nuova pianificazione processo** .  
   
      **Account proxy Integration Services**  
@@ -272,10 +271,10 @@ ms.locfileid: "62871138"
      **Azione**  
      Vengono elencate tutte le azioni eseguite.  
   
-     **Stato**  
+     **Status**  
      Viene indicato se l'azione è stata completata correttamente o meno.  
   
-     **Messaggio**  
+     **Message**  
      Viene fornito qualsiasi messaggio restituito a ogni passaggio.  
   
 ##  <a name="follow-up-after-upgrading-a-sql-server-database"></a><a name="FollowUp"></a> Completamento: Dopo l'aggiornamento di un database di SQL Server  
@@ -283,7 +282,7 @@ ms.locfileid: "62871138"
   
  Se il livello di compatibilità di un database utente è 100 o superiore prima dell'aggiornamento, rimane invariato dopo l'aggiornamento. Se il livello di compatibilità era 90 prima dell'aggiornamento, nel database aggiornato questo valore viene impostato su 100, cioè sul livello di compatibilità più basso supportato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per altre informazioni, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Aggiornare un database utilizzando le operazioni di scollegamento e collegamento &#40;Transact-SQL&#41;](upgrade-a-database-using-detach-and-attach-transact-sql.md)   
  [Creazione di un proxy di SQL Server Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md)  
   

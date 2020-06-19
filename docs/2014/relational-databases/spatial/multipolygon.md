@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 182a0f4b7e74490f9600b7ef43cd2baa511080f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f18fd2485c9b2e62586d9f3e81f76f6cf680dbfc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176641"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063009"
 ---
 # <a name="multipolygon"></a>MultiPolygon
   Un'istanza `MultiPolygon` è una raccolta di zero o più istanze `Polygon`.
@@ -38,7 +37,7 @@ ms.locfileid: "78176641"
 
 -   È un'istanza `MultiPolygon` vuota.
 
--   Tutte le istanze che comprendono l'istanza `MultiPolygon` sono istanze `Polygon` accettate. Per ulteriori informazioni sulle istanze `Polygon` accettate, vedere [Polygon](../spatial/polygon.md).
+-   Tutte le istanze che comprendono l'istanza `MultiPolygon` sono istanze `Polygon` accettate. Per ulteriori informazioni sulle istanze accettate `Polygon` , vedere [Polygon](../spatial/polygon.md).
 
  Negli esempi seguenti vengono illustrate alcune istanze `MultiPolygon` accettate.
 

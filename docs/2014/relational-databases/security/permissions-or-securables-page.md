@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c83d92da6708c8c63e1ba4c2cea60b1497a54883
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80417c720258833850f07eb67f83f5c47f487ad2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63284551"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063137"
 ---
 # <a name="permissions-or-securables-page"></a>Pagina Autorizzazioni o Entità a sicurezza diretta
   Usare la pagina **Autorizzazioni** o la pagina **Entità a protezione diretta** per visualizzare o impostare le autorizzazioni per le entità a protezione diretta. È possibile accedere a questa pagina da diversi tipi di oggetti. Il contenuto della pagina può modificare leggermente, in base alle modalità in cui la pagina è aperta e al contenuto. Quando la pagina viene visualizzata, la griglia superiore della pagina potrebbe contenere alcuni elementi o potrebbe essere vuota. Per aggiungere elementi alla griglia superiore, fare clic su **Cerca**. Selezionare un elemento in tale griglia, quindi impostare le autorizzazioni appropriate nella scheda **Esplicita** . Per visualizzare autorizzazioni aggregate, usare la scheda **Valide** .  

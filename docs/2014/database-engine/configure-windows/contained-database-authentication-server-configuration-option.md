@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b80768d2-ac20-4035-a335-d9adb74b3f6e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4efcddfb4c8cb53603614f3ffbdc3cb088990ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf5bf07c8b0913ff81f31ff0ca64a18eee0f2ac2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62782908"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935442"
 ---
 # <a name="contained-database-authentication-server-configuration-option"></a>Opzione di configurazione del server contained database authentication
   Utilizzare l'opzione **contained database authentication** per abilitare database indipendenti nell'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
@@ -49,7 +48,7 @@ RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [Opzioni di configurazione del server &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  

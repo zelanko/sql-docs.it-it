@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2a68c66eaaccfa3ea32a4fb940eba71026d49361
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d9abcaf4ad4256fb600e57567ed7e7bf0d54e61e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82694414"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055925"
 ---
 # <a name="fetching-rows"></a>Recupero di righe
   **IRowset** è l'interfaccia di base dei set di righe. L'interfaccia **IRowset** comprende metodi che consentono di recuperare le righe in modo sequenziale, ottenere dati dalle righe e gestire le righe. I consumer utilizzano i metodi disponibili in **IRowset** per tutte le operazioni di base relative ai set di righe, incluse quelle che consentono di recuperare e rilasciare le righe nonché ottenere i valori delle colonne.  

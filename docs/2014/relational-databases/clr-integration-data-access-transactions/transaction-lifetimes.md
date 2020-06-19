@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cb076fda-6488-4959-a6a4-7adaccf3f25c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 627dafb26a4368261e820dd03525f147429cdbcb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8c00050ee323cade7493d44c4c296ba4ce6811e0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874437"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955121"
 ---
 # <a name="transaction-lifetimes"></a>Durata delle transazioni
   Vi è un'importante differenza tra le transazioni avviate nelle stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] e quelle avviate in codice gestito: il codice CLR (Common Language Runtime) non può sbilanciare lo stato della transazione all'immissione o all'uscita di una chiamata CLR. Tenere presenti le implicazioni seguenti correlate a questa differenza:  

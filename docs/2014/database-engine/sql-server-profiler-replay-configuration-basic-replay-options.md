@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 85a1dec6-9bbc-477a-86c5-b463db9ebb31
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6ea9517047321f54734b3ccd8d072ba8f3f23152
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d95ca6c63903adff866ce0e6c25146b8e77d6b1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089716"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928582"
 ---
 # <a name="sql-server-profiler---replay-configuration-basic-replay-options"></a>SQL Server Profiler - Configurazione riproduzione (Opzioni di base di riproduzione)
   Nella finestra di dialogo **Configurazione riproduzione** usare la pagina **Opzioni di base di riproduzione** per specificare la modalità di riproduzione di un file o una tabella di traccia.  
@@ -51,7 +50,7 @@ ms.locfileid: "66089716"
  **Visualizza risultati di riproduzione**  
  Consente di visualizzare i risultati di riproduzione in [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)].  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Riprodurre una tabella di traccia &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [Riprodurre un file di traccia &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [Riprodurre le tracce](../tools/sql-server-profiler/replay-traces.md)  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c50a286002d245bf05f24d74653a2697866f1dec
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c2a3db9b095902fcb5620af91fb86d80f773d606
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718293"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063255"
 ---
 # <a name="watch-window"></a>finestra Espressioni di controllo
   Nella finestra **Espressione di controllo** vengono visualizzate informazioni sulle espressioni selezionate. Sono disponibili fino a quattro finestre di visualizzazione delle espressioni di controllo: **Espressione di controllo 1**, **Espressione di controllo 2, Espressione di controllo 3**ed **Espressione di controllo 4**. Le espressioni vengono valutate nell'ambito del frame dello stack di chiamate corrente selezionato nella finestra **Stack di chiamate** . Per controllare variabili ed espressioni, è necessario utilizzare la modalità di debug.  

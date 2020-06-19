@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 512249a4-83a6-4087-980d-a4344da48371
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1172143ebfa44deb19d15bf596db1df0e9399ed0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07af1256f4935467d1230bf2987fde4cd02c5de7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055727"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963143"
 ---
 # <a name="set-the-properties-of-a-path-by-using-the-data-flow-path-editor"></a>Impostazione delle proprietà di un percorso tramite l'Editor percorso flusso di dati
   I percorsi connettono due componenti flusso di dati. Affinché sia possibile impostare le proprietà di un percorso, il flusso di dati deve contenere almeno due componenti connessi. Per altre informazioni, vedere [Aggiunta o eliminazione di un componente in un flusso di dati](data-flow/add-or-delete-a-component-in-a-data-flow.md) e [Connessione di componenti in un flusso di dati](data-flow/connect-components-in-a-data-flow.md).  
@@ -36,7 +35,7 @@ ms.locfileid: "66055727"
   
 6.  Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Percorsi di Integration Services](data-flow/integration-services-paths.md)   
  [Flusso di dati](data-flow/data-flow.md)  
   

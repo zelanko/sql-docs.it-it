@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1a4de41f-f38d-40ea-ba1b-6c0ef67ea52a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a34e5f5af82103709b1e08c22860b1f87288422e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4fa7b494745c70ae63c8c51f3aa9ae8249040f50
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832567"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919616"
 ---
 # <a name="column-length-distribution-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Distribuzione lunghezze di colonna (Attività Profiling dati)
   Usare il riquadro **Proprietà richiesta** della pagina **Richieste profilo** per impostare le opzioni della richiesta **Richiesta profilo Distribuzione lunghezze di colonna** selezionata nel riquadro delle richieste. Il profilo Distribuzione lunghezze di colonna segnala tutte le singole lunghezze dei valori stringa nella colonna selezionata e la percentuale di righe nella tabella rappresentata da ogni lunghezza. Questo profilo consente inoltre di identificare eventuali problemi nei dati, ad esempio valori non validi. Si analizza, ad esempio, una colonna di codici a due caratteri degli stati degli Stati Uniti e si individuano valori con lunghezza maggiore di due caratteri.  

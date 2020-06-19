@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: de920425-fa44-469f-b83d-49e3f97e97f4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3835f83efff9e720f7f8631d527b9547e3b4239a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c4505817838d881e3d37c93d6e159652caeadf4d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245604"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001671"
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
   In questo argomento viene descritto come visualizzare il log degli errori di  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -75,10 +74,10 @@ ms.locfileid: "63245604"
      **Carica log**  
      Consente di aprire una finestra di dialogo in cui è possibile specificare un file di log da caricare.  
   
-     **Esporta**  
+     **Export**  
      Consente di aprire una finestra di dialogo in cui è possibile esportare in un file di testo le informazioni visualizzate nella griglia **Riepilogo file di log** .  
   
-     **Aggiorna**  
+     **Refresh** (Aggiornamento)  
      Consente di aggiornare la visualizzazione dei log selezionati. Il pulsante **Aggiorna** consente di leggere nuovamente i log selezionati dal server di destinazione applicando qualsiasi impostazione di filtro.  
   
      **Filter**  
@@ -87,25 +86,25 @@ ms.locfileid: "63245604"
      **Ricerca**  
      Consente di cercare testo specifico nel file di log. La ricerca con caratteri jolly non è supportata.  
   
-     **Arresta**  
+     **Stop**  
      Consente di arrestare il caricamento delle voci del file di log. È ad esempio possibile utilizzare questa opzione se il caricamento di un file di log remoto o offline richiede parecchio tempo e si desidera visualizzare solo le voci più recenti.  
   
      **Riepilogo file di log**  
-     Consente di visualizzare un riepilogo dei filtri del file di log. Se non è stato applicato alcun filtro al file, verrà visualizzato il testo **Nessun filtro applicato**. Se è stato applicato un filtro al log, verrà visualizzato il testo seguente: **Filtra voci del log in cui:** \<criteri di filtro>.  
+     Consente di visualizzare un riepilogo dei filtri del file di log. Se non è stato applicato alcun filtro al file, verrà visualizzato il testo **Nessun filtro applicato**. Se è stato applicato un filtro al log, verrà visualizzato il testo **Filtra voci del log in cui:** \<filter criteria>.  
   
      **Dettagli riga selezionata**  
      Consente di selezionare una riga di evento nella parte inferiore della pagina per visualizzare dettagli aggiuntivi sulla riga. È possibile riordinare le colonne trascinandole su nuove posizioni all'interno della griglia. Le colonne possono inoltre essere ridimensionate trascinando verso destra o verso sinistra le corrispondenti barre di separazione nell'intestazione della griglia. Per adattare automaticamente le dimensioni della colonna al contenuto, fare doppio clic sulle barre di separazione nell'intestazione della griglia.  
   
      **Istanza**  
-     Nome dell'istanza in cui si è verificato l'evento. Viene visualizzato come nome *computer*\\*nome istanza*.  
+     Nome dell'istanza in cui si è verificato l'evento. Viene visualizzato come nome *computer* \\ *nome istanza*.  
   
      **Data**  
      Visualizza la data dell'evento.  
   
-     **origine**  
+     **Origine**  
      Consente di visualizzare la funzionalità di origine da cui è stato creato l'evento, ad esempio il nome del servizio, come MSSQLSERVER. Questa opzione non viene visualizzata per tutti i tipi di log.  
   
-     **Messaggio**  
+     **Message**  
      Consente di visualizzare i messaggi associati all'evento.  
   
      **Tipo di log**  

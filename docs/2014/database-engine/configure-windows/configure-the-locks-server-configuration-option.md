@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b0cf0f86-7652-4574-a9fb-908e10d03973
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 22f47a80a73efc8d462ef8f26f2e6b0fb5b3f3c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e45f4cc539be585966eb0beb30d4938b504c3419
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787212"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935683"
 ---
 # <a name="configure-the-locks-server-configuration-option"></a>Configurare l'opzione di configurazione del server locks
   In questo argomento si illustra come configurare l'opzione di configurazione del server **locks** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'opzione **locks** è possibile impostare il numero massimo di blocchi disponibili e pertanto limitare la quantità di memoria utilizzata per i blocchi stessi dal [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . L'impostazione predefinita è 0, che consente al [!INCLUDE[ssDE](../../includes/ssde-md.md)] di allocare e deallocare le strutture di blocco in modo dinamico, in base alle variazioni dei requisiti di sistema.  

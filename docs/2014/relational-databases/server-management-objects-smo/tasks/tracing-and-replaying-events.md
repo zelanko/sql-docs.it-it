@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f41b3f85-2f6c-4c3e-9776-8c73d2cc7a53
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d478fa9203988d043212e4187792d816a69c0402
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd75fdae7fc871101aa07785561c8277783a424f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62724791"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063054"
 ---
 # <a name="tracing-and-replaying-events"></a>Traccia e riproduzione di eventi
   In SMO gli oggetti `Trace` e `Replay` nello spazio dei nomi <xref:Microsoft.SqlServer.Management.Trace> forniscono l'accesso a livello di programmazione alla funzionalità [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)], utilizzata per monitorare un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. È possibile acquisire e salvare i dati di ogni evento in un file o in una tabella per operazioni di analisi successive. È ad esempio possibile monitorare un ambiente di produzione per verificare le stored procedure che influiscono sulle prestazioni a causa di un'esecuzione troppo lenta.  
@@ -51,7 +50,7 @@ ms.locfileid: "62724791"
   
 -   Riprodurre file di traccia o tabelle di traccia.  
   
- I dati di traccia degli `Trace` oggetti `Replay` e possono essere usati dall'applicazione SMO oppure possono essere esaminati manualmente usando [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md). I dati di traccia sono inoltre compatibili con le stored procedure di [traccia SQL](../../sql-trace/sql-trace.md) che forniscono anche le funzionalità di traccia.  
+ I dati di traccia degli `Trace` `Replay` oggetti e possono essere usati dall'applicazione SMO oppure possono essere esaminati manualmente usando [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md). I dati di traccia sono inoltre compatibili con le stored procedure di [traccia SQL](../../sql-trace/sql-trace.md) che forniscono anche le funzionalità di traccia.  
   
  Gli oggetti di traccia SMO risiedono nello spazio dei nomi <xref:Microsoft.SqlServer.Management.Trace>, che richiede un riferimento al file Microsoft.SQLServer.ConnectionInfo.dll.  
   

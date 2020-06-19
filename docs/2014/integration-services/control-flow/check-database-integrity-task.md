@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5a82fe99-4503-429f-9337-e6bac7649fe4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a123557bdeb84ed8d36664b6451772b669edbbec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e6eed81f7a4a149de3912b5e9142fbdbd4a2f2c8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832850"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919682"
 ---
 # <a name="check-database-integrity-task"></a>Attività Controlla integrità database
   L'attività Controlla integrità database consente di verificare l'integrità strutturale e di allocazione di tutti gli oggetti nel database specificato. È possibile utilizzare questa attività per controllare uno o più database e scegliere se verificarne anche gli indici.  

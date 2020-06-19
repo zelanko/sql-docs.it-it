@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3cf8d726-0a90-4f80-98d0-352a2a59be0f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a860db611154f9f7a130ee6be90dd43a96b50af5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9fc5b55465e6d526bd1cbba2c316fdeb2e250509
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62510427"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84994895"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>Aggiunta di un report personalizzato a Management Studio
   In questo argomento viene descritto come creare un report semplice di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] salvato come file con estensione rdl e quindi aggiungere tale file a [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] come report personalizzato. [!INCLUDE[ssRS](../../includes/ssrs.md)] consente di creare una vasta gamma di sofisticati report. Per creare un report in base a questo argomento, è necessario che nel computer sia installato [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Per eseguire un report personalizzato mediante [!INCLUDE[ssRS](../../includes/ssrs.md)] non è necessario installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -67,7 +66,7 @@ ms.locfileid: "62510427"
   
     2.  Modificare il numero in **Display files in recently used list**(Visualizza file nell'elenco degli ultimi file usati).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Report personalizzati in Management Studio](custom-reports-in-management-studio.md)   
  [Usare i report personalizzati con le proprietà del nodo Esplora oggetti](use-custom-reports-with-object-explorer-node-properties.md)   
  [Annulla l'esecuzione degli avvisi del report personalizzato](unsuppress-run-custom-report-warnings.md)   

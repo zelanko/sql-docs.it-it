@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1cac8403327ecf3888439290554f059bb00bce2c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d50d8fa3cb23e6eef42dd7866fb2d9437a0e24b6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770868"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914461"
 ---
 # <a name="sap-bw-destination"></a>Destinazione SAP BW
   La destinazione SAP BW è il componente di destinazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Pertanto, la destinazione SAP BW carica i dati dal flusso di dati in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in un sistema SAP Netweaver BW versione 7.  

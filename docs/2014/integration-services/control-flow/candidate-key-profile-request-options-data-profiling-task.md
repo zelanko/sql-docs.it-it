@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d682bacdc2bce10a118190108a2237419d4b9e27
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a7597e5ebf967bd9da590057a085a72ee8b1a17
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832956"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919912"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Chiave candidata (Attività Profiling dati)
   Usare il riquadro **Proprietà richiesta** della pagina **Richieste profilo** per impostare le opzioni di **Richiesta profilo Chiave candidata** selezionata nel riquadro delle richieste. Il profilo Chiave candidata segnala se una colonna o un set di colonne è una chiave o una chiave approssimativa per la tabella selezionata. Questo profilo consente inoltre di identificare eventuali problemi nei dati, ad esempio i valori duplicati in una possibile colonna chiave.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c233a5e9755e910a53a53fa1366faef733370474
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5c58abd60ecc6236e52e302f6e11daaaa244ff21
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487160"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063175"
 ---
 # <a name="permissions-database-engine"></a>Autorizzazioni (Motore di database)
   Ogni entità a protezione diretta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispone di autorizzazioni associate che possono essere concesse a un'entità. Questo argomento contiene informazioni sui seguenti aspetti:  
@@ -36,7 +35,7 @@ ms.locfileid: "81487160"
   
 -   [Algoritmo di controllo delle autorizzazioni](#_algorithm)  
   
--   [Esempi](#_examples)  
+-   [esempi](#_examples)  
   
 ##  <a name="permissions-naming-conventions"></a><a name="_conventions"></a>Convenzioni di denominazione delle autorizzazioni  
  Di seguito vengono descritte le convenzioni generali adottate per la denominazione delle autorizzazioni:  
@@ -49,11 +48,11 @@ ms.locfileid: "81487160"
   
      Conferisce la capacità di modificare le proprietà, eccetto il diritto di proprietà, di una particolare entità a protezione diretta. Quando viene concessa in un ambito, l'autorizzazione ALTER concede la capacità di modificare, creare o eliminare una qualsiasi entità a protezione diretta contenuta in tale ambito. Un'autorizzazione ALTER in uno schema, ad esempio, include la capacità di creare, modificare ed eliminare oggetti contenuti nello schema.  
   
--   ALTER ANY \< *server a protezione* diretta>, in cui l' *entità a protezione diretta del server* può essere qualsiasi entità a protezione diretta del server.  
+-   ALTER ANY \<*Server Securable*> , in cui l' *entità a protezione diretta del server* può essere qualsiasi entità a protezione diretta del server.  
   
      Conferisce la capacità di creare, modificare o eliminare singole istanze dell' *Entità a protezione diretta del server*. L'autorizzazione ALTER ANY LOGIN, ad esempio, conferisce la capacità di creare, modificare o eliminare un qualsiasi account di accesso nell'istanza.  
   
--   ALTER ANY \< *database a protezione* diretta>, in cui l' *entità a protezione diretta del database* può essere qualsiasi entità a sicurezza diretta a livello di database.  
+-   ALTER ANY \<*Database Securable*> , in cui l' *entità a protezione diretta del database* può essere qualsiasi entità a sicurezza diretta a livello di database.  
   
      Conferisce la capacità di creare, modificare o eliminare singole istanze dell' *Entità a protezione diretta del database*. L'autorizzazione ALTER ANY SCHEMA, ad esempio, conferisce la capacità di creare, modificare o eliminare un qualsiasi schema contenuto nel database.  
   
@@ -61,23 +60,23 @@ ms.locfileid: "81487160"
   
      Consente al beneficiario di prendere possesso dell'entità a protezione diretta sulla quale viene concessa questa autorizzazione.  
   
--   Impersonate \< *login*>  
+-   RAPPRESENTARE\<*Login*>  
   
      Consente al beneficiario di rappresentare l'account di accesso.  
   
--   Rappresenta \< *utente*>  
+-   RAPPRESENTARE\<*User*>  
   
      Consente al beneficiario di rappresentare l'utente.  
   
--   Creazione \<di *entità a protezione diretta del server*>  
+-   CREARE\<*Server Securable*>  
   
      Conferisce al beneficiario la capacità di creare l' *Entità a protezione diretta del server*.  
   
--   Creare \<un' *entità a protezione diretta del database*>  
+-   CREARE\<*Database Securable*>  
   
      Conferisce al beneficiario la capacità di creare l' *Entità a protezione diretta del database*.  
   
--   Crea \< *entità a protezione diretta contenuta nello schema*>  
+-   CREARE\<*Schema-contained Securable*>  
   
      Conferisce la capacità di creare un'entità a protezione diretta contenuta in uno schema. Per creare un'entità a protezione diretta in un particolare schema, è però necessario avere un'autorizzazione ALTER sullo schema.  
   
@@ -85,14 +84,14 @@ ms.locfileid: "81487160"
   
      Consente al beneficiario di accedere a metadati.  
   
--   REFERENCES  
+-   RIFERIMENTI  
   
      L'autorizzazione REFERENCES su una tabella è necessaria per creare un vincolo FOREIGN KEY che faccia riferimento alla tabella stessa.  
   
      L'autorizzazione REFERENCES è necessaria su un oggetto per creare FUNCTION o VIEW con la clausola `WITH SCHEMABINDING` che faccia riferimento all'oggetto stesso.  
   
 ## <a name="chart-of-sql-server-permissions"></a>Grafico delle autorizzazioni di SQL Server  
- Per un grafico con dimensioni poster di [!INCLUDE[ssDE](../../includes/ssde-md.md)] tutte le autorizzazioni in formato PDF [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf), vedere.  
+ Per un grafico con dimensioni poster di tutte le [!INCLUDE[ssDE](../../includes/ssde-md.md)] autorizzazioni in formato PDF, vedere [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf) .  
   
 ##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a>Autorizzazioni applicabili a entità a protezione diretta specifiche  
  Nella tabella seguente vengono elencati le classi principali di autorizzazione e i tipi di entità a protezione diretta a cui possono essere applicati.  
@@ -102,15 +101,15 @@ ms.locfileid: "81487160"
 |SELECT|Sinonimi<br /><br /> Tabelle e colonne<br /><br /> Funzioni con valori di tabella, [!INCLUDE[tsql](../../includes/tsql-md.md)] e Common Language Runtime (CLR), e colonne<br /><br /> Viste e colonne|  
 |VIEW CHANGE TRACKING|Tabelle<br /><br /> Schemi|  
 |UPDATE|Sinonimi<br /><br /> Tabelle e colonne<br /><br /> Viste e colonne<br /><br /> Oggetti sequenza|  
-|REFERENCES|Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Code di[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Tabelle e colonne<br /><br /> Funzioni con valori di tabella ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR) e colonne<br /><br /> Tipi<br /><br /> Viste e colonne<br /><br /> Oggetti sequenza|  
+|RIFERIMENTI|Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Code di[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Tabelle e colonne<br /><br /> Funzioni con valori di tabella ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR) e colonne<br /><br /> Tipi<br /><br /> Viste e colonne<br /><br /> Oggetti sequenza|  
 |INSERT|Sinonimi<br /><br /> Tabelle e colonne<br /><br /> Viste e colonne|  
 |DELETE|Sinonimi<br /><br /> Tabelle e colonne<br /><br /> Viste e colonne|  
 |EXECUTE|Procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Sinonimi<br /><br /> Tipi CLR|  
 |RECEIVE|Code di[!INCLUDE[ssSB](../../includes/sssb-md.md)]|  
-|VIEW DEFINITION|Gruppi di disponibilità<br /><br /> Procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Code di[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Account di accesso, utenti e ruoli<br /><br /> Sinonimi<br /><br /> Tabelle<br /><br /> Funzioni con valori di tabella ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Visualizzazioni<br /><br /> Oggetti sequenza|  
-|ALTER|Gruppi di disponibilità<br /><br /> Procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Oggetti sequenza<br /><br /> Account di accesso, utenti e ruoli<br /><br /> Code di[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Tabelle<br /><br /> Funzioni con valori di tabella ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Visualizzazioni|  
-|TAKE OWNERSHIP|Gruppi di disponibilità<br /><br /> Ruoli<br /><br /> Procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Ruoli server<br /><br /> Sinonimi<br /><br /> Tabelle<br /><br /> Funzioni con valori di tabella ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Visualizzazioni<br /><br /> Oggetti sequenza|  
-|CONTROL|Gruppi di disponibilità<br /><br /> Procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Account di accesso, utenti e ruoli<br /><br /> Code di[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Sinonimi<br /><br /> Tabelle<br /><br /> Funzioni con valori di tabella ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Visualizzazioni<br /><br /> Oggetti sequenza|  
+|VIEW DEFINITION|Gruppi di disponibilità<br /><br /> Procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Code di[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Account di accesso, utenti e ruoli<br /><br /> Sinonimi<br /><br /> Tabelle<br /><br /> Funzioni con valori di tabella ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Viste<br /><br /> Oggetti sequenza|  
+|ALTER|Gruppi di disponibilità<br /><br /> Procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Oggetti sequenza<br /><br /> Account di accesso, utenti e ruoli<br /><br /> Code di[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Tabelle<br /><br /> Funzioni con valori di tabella ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Viste|  
+|TAKE OWNERSHIP|Gruppi di disponibilità<br /><br /> Ruoli<br /><br /> Procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Ruoli server<br /><br /> Sinonimi<br /><br /> Tabelle<br /><br /> Funzioni con valori di tabella ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Viste<br /><br /> Oggetti sequenza|  
+|CONTROL|Gruppi di disponibilità<br /><br /> Procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Account di accesso, utenti e ruoli<br /><br /> Code di[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Sinonimi<br /><br /> Tabelle<br /><br /> Funzioni con valori di tabella ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Viste<br /><br /> Oggetti sequenza|  
 |IMPERSONATE|Account di accesso e utenti|  
   
 > [!CAUTION]  
@@ -126,12 +125,12 @@ ms.locfileid: "81487160"
 |APPLICATION ROLE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |ASSEMBLY|ALTER|AL|DATABASE|ALTER ANY ASSEMBLY|  
 |ASSEMBLY|CONTROL|CL|DATABASE|CONTROL|  
-|ASSEMBLY|REFERENCES|RF|DATABASE|REFERENCES|  
+|ASSEMBLY|RIFERIMENTI|RF|DATABASE|RIFERIMENTI|  
 |ASSEMBLY|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
 |ASSEMBLY|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |ASYMMETRIC KEY|ALTER|AL|DATABASE|ALTER ANY ASYMMETRIC KEY|  
 |ASYMMETRIC KEY|CONTROL|CL|DATABASE|CONTROL|  
-|ASYMMETRIC KEY|REFERENCES|RF|DATABASE|REFERENCES|  
+|ASYMMETRIC KEY|RIFERIMENTI|RF|DATABASE|RIFERIMENTI|  
 |ASYMMETRIC KEY|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
 |ASYMMETRIC KEY|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |AVAILABILITY GROUP|ALTER|AL|SERVER|ALTER ANY AVAILABILITY GROUP|  
@@ -140,12 +139,12 @@ ms.locfileid: "81487160"
 |AVAILABILITY GROUP|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |CERTIFICATE|ALTER|AL|DATABASE|ALTER ANY CERTIFICATE|  
 |CERTIFICATE|CONTROL|CL|DATABASE|CONTROL|  
-|CERTIFICATE|REFERENCES|RF|DATABASE|REFERENCES|  
+|CERTIFICATE|RIFERIMENTI|RF|DATABASE|RIFERIMENTI|  
 |CERTIFICATE|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
 |CERTIFICATE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |CONTRACT|ALTER|AL|DATABASE|ALTER ANY CONTRACT|  
 |CONTRACT|CONTROL|CL|DATABASE|CONTROL|  
-|CONTRACT|REFERENCES|RF|DATABASE|REFERENCES|  
+|CONTRACT|RIFERIMENTI|RF|DATABASE|RIFERIMENTI|  
 |CONTRACT|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
 |CONTRACT|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |DATABASE|ALTER|AL|SERVER|ALTER ANY DATABASE|  
@@ -157,7 +156,7 @@ ms.locfileid: "81487160"
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Nota: si applica solo [!INCLUDE[ssSDS](../../includes/sssds-md.md)]a.|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Nota: si applica solo a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] .|SERVER|ALTER ANY EVENT SESSION|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
@@ -165,7 +164,7 @@ ms.locfileid: "81487160"
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Nota: si applica solo [!INCLUDE[ssSDS](../../includes/sssds-md.md)]a.|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Nota: si applica solo a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] .|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -204,8 +203,8 @@ ms.locfileid: "81487160"
 |DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Nota: si applica solo [!INCLUDE[ssSDS](../../includes/sssds-md.md)]a. Usare ALTER ANY CONNECTION in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
-|DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Nota: si applica solo a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Usare ALTER ANY CONNECTION in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|RIFERIMENTI|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
 |DATABASE|SUBSCRIBE QUERY NOTIFICATIONS|SUQN|SERVER|CONTROL SERVER|  
@@ -220,12 +219,12 @@ ms.locfileid: "81487160"
 |ENDPOINT|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |FULLTEXT CATALOG|ALTER|AL|DATABASE|ALTER ANY FULLTEXT CATALOG|  
 |FULLTEXT CATALOG|CONTROL|CL|DATABASE|CONTROL|  
-|FULLTEXT CATALOG|REFERENCES|RF|DATABASE|REFERENCES|  
+|FULLTEXT CATALOG|RIFERIMENTI|RF|DATABASE|RIFERIMENTI|  
 |FULLTEXT CATALOG|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
 |FULLTEXT CATALOG|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |FULLTEXT STOPLIST|ALTER|AL|DATABASE|ALTER ANY FULLTEXT CATALOG|  
 |FULLTEXT STOPLIST|CONTROL|CL|DATABASE|CONTROL|  
-|FULLTEXT STOPLIST|REFERENCES|RF|DATABASE|REFERENCES|  
+|FULLTEXT STOPLIST|RIFERIMENTI|RF|DATABASE|RIFERIMENTI|  
 |FULLTEXT STOPLIST|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
 |FULLTEXT STOPLIST|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |LOGIN|ALTER|AL|SERVER|ALTER ANY LOGIN|  
@@ -234,7 +233,7 @@ ms.locfileid: "81487160"
 |LOGIN|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |MESSAGE TYPE|ALTER|AL|DATABASE|ALTER ANY MESSAGE TYPE|  
 |MESSAGE TYPE|CONTROL|CL|DATABASE|CONTROL|  
-|MESSAGE TYPE|REFERENCES|RF|DATABASE|REFERENCES|  
+|MESSAGE TYPE|RIFERIMENTI|RF|DATABASE|RIFERIMENTI|  
 |MESSAGE TYPE|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
 |MESSAGE TYPE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |OBJECT|ALTER|AL|SCHEMA|ALTER|  
@@ -243,7 +242,7 @@ ms.locfileid: "81487160"
 |OBJECT|EXECUTE|EX|SCHEMA|EXECUTE|  
 |OBJECT|INSERT|IN|SCHEMA|INSERT|  
 |OBJECT|RECEIVE|RC|SCHEMA|CONTROL|  
-|OBJECT|REFERENCES|RF|SCHEMA|REFERENCES|  
+|OBJECT|RIFERIMENTI|RF|SCHEMA|RIFERIMENTI|  
 |OBJECT|SELECT|SL|SCHEMA|SELECT|  
 |OBJECT|TAKE OWNERSHIP|A|SCHEMA|CONTROL|  
 |OBJECT|UPDATE|UP|SCHEMA|UPDATE|  
@@ -263,7 +262,7 @@ ms.locfileid: "81487160"
 |ROUTE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |SEARCH PROPERTY LIST|ALTER|AL|SERVER|ALTER ANY FULLTEXT CATALOG|  
 |SEARCH PROPERTY LIST|CONTROL|CL|SERVER|CONTROL|  
-|SEARCH PROPERTY LIST|REFERENCES|RF|SERVER|REFERENCES|  
+|SEARCH PROPERTY LIST|RIFERIMENTI|RF|SERVER|RIFERIMENTI|  
 |SEARCH PROPERTY LIST|TAKE OWNERSHIP|A|SERVER|CONTROL|  
 |SEARCH PROPERTY LIST|VIEW DEFINITION|VW|SERVER|VIEW DEFINITION|  
 |SCHEMA|ALTER|AL|DATABASE|ALTER ANY SCHEMA|  
@@ -272,7 +271,7 @@ ms.locfileid: "81487160"
 |SCHEMA|DELETE|DL|DATABASE|DELETE|  
 |SCHEMA|EXECUTE|EX|DATABASE|EXECUTE|  
 |SCHEMA|INSERT|IN|DATABASE|INSERT|  
-|SCHEMA|REFERENCES|RF|DATABASE|REFERENCES|  
+|SCHEMA|RIFERIMENTI|RF|DATABASE|RIFERIMENTI|  
 |SCHEMA|SELECT|SL|DATABASE|SELECT|  
 |SCHEMA|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
 |SCHEMA|UPDATE|UP|DATABASE|UPDATE|  
@@ -323,12 +322,12 @@ ms.locfileid: "81487160"
 |SERVICE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |SYMMETRIC KEY|ALTER|AL|DATABASE|ALTER ANY SYMMETRIC KEY|  
 |SYMMETRIC KEY|CONTROL|CL|DATABASE|CONTROL|  
-|SYMMETRIC KEY|REFERENCES|RF|DATABASE|REFERENCES|  
+|SYMMETRIC KEY|RIFERIMENTI|RF|DATABASE|RIFERIMENTI|  
 |SYMMETRIC KEY|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
 |SYMMETRIC KEY|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |TYPE|CONTROL|CL|SCHEMA|CONTROL|  
 |TYPE|EXECUTE|EX|SCHEMA|EXECUTE|  
-|TYPE|REFERENCES|RF|SCHEMA|REFERENCES|  
+|TYPE|RIFERIMENTI|RF|SCHEMA|RIFERIMENTI|  
 |TYPE|TAKE OWNERSHIP|A|SCHEMA|CONTROL|  
 |TYPE|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
 |USER|ALTER|AL|DATABASE|ALTER ANY USER|  
@@ -338,7 +337,7 @@ ms.locfileid: "81487160"
 |XML SCHEMA COLLECTION|ALTER|AL|SCHEMA|ALTER|  
 |XML SCHEMA COLLECTION|CONTROL|CL|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|EXECUTE|EX|SCHEMA|EXECUTE|  
-|XML SCHEMA COLLECTION|REFERENCES|RF|SCHEMA|REFERENCES|  
+|XML SCHEMA COLLECTION|RIFERIMENTI|RF|SCHEMA|RIFERIMENTI|  
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|A|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
@@ -399,7 +398,7 @@ ms.locfileid: "81487160"
 ##  <a name="examples"></a><a name="_examples"></a> Esempi  
  Negli esempi inclusi in questa sezione viene illustrato come recuperare le informazioni sulle autorizzazioni.  
   
-### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. A. Restituzione dell'elenco completo delle autorizzazioni che è possibile concedere  
+### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>R. A. Restituzione dell'elenco completo delle autorizzazioni che è possibile concedere  
  L'istruzione seguente restituisce tutte le autorizzazioni del [!INCLUDE[ssDE](../../includes/ssde-md.md)] tramite la funzione `fn_builtin_permissions` . Per altre informazioni, vedere [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql).  
   
 ```  
