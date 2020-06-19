@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7cccc230-3b20-4074-804f-3448d9616a83
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7b9da99cb8d88c3e01b034db50e67e02a2d125f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b0e53d710c6c3310641a30144a42ea5f614dffd6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054681"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972581"
 ---
 # <a name="variable-grid-options"></a>Opzioni griglia variabili
   Utilizzare la finestra di dialogo **Opzioni griglia variabili** per selezionare le colonne che verranno visualizzate nella finestra **Variabili** e per selezionare i filtri da applicare all'elenco di variabili. Per altre informazioni sulle proprietà delle variabili corrispondenti, vedere [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md).  
@@ -52,7 +51,7 @@ ms.locfileid: "66054681"
   
 -   **Espressione**  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Finestra variabili](../../2014/integration-services/variables-window.md)   
  [Integration Services &#40;variabili&#41; SSIS](integration-services-ssis-variables.md)   
  [Usare variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)   

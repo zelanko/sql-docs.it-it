@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0108004bc7fb5743ab92c455f4aee99a9f3df498
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f3266bbbc100af3eac03bc18805c82b753d7aa7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62893042"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965634"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Mapping colonne (Importazione/Esportazione guidata SQL Server)
   Utilizzare la finestra di dialogo **Mapping colonne** per modificare i parametri di trasformazione.  
   
 > [!NOTE]  
->  Non è necessario copiare tutte le colonne in una tabella quando si seleziona l'opzione Copia tabella. Selezionare ** \<ignora>** nella colonna **destinazione** della finestra di dialogo per le colonne che si desidera ignorare.  
+>  Non è necessario copiare tutte le colonne in una tabella quando si seleziona l'opzione Copia tabella. Selezionare **\<ignore>** nella colonna **destinazione** della finestra di dialogo per le colonne che si desidera ignorare.  
   
  Per ulteriori informazioni su questa procedura guidata, vedere [SQL Server importazione/esportazione guidata](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Per informazioni sulle opzioni di avvio della procedura guidata, nonché sulle autorizzazioni necessarie per eseguire la procedura guidata, vedere [eseguire l'importazione/esportazione guidata SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
@@ -33,7 +32,7 @@ ms.locfileid: "62893042"
  **origine**  
  Identifica la tabella, la visualizzazione o la query di origine selezionata.  
   
- **Destination**  
+ **Destinazione**  
  Identifica la tabella, la visualizzazione o la query di destinazione selezionata.  
   
  **Crea tabella di destinazione/file**  
@@ -62,10 +61,10 @@ ms.locfileid: "62893042"
  **origine**  
  Consente di visualizzare ogni colonna di origine da cui è possibile impostare parametri di trasformazione.  
   
- **Destination**  
- Consente di specificare se ignorare una colonna durante l'operazione di copia. È possibile copiare solo un subset di colonne selezionando ** \<ignora>** in questa colonna per le colonne che si desidera ignorare. Prima di eseguire il mapping delle colonne, è necessario ignorare tutte le colonne di cui non verrà eseguito il mapping.  
+ **Destinazione**  
+ Consente di specificare se ignorare una colonna durante l'operazione di copia. È possibile copiare solo un subset di colonne selezionando **\<ignore>** in questa colonna le colonne che si desidera ignorare. Prima di eseguire il mapping delle colonne, è necessario ignorare tutte le colonne di cui non verrà eseguito il mapping.  
   
- **Type**  
+ **Tipo**  
  Consente di selezionare un tipo di dati per la colonna.  
   
  **Ammette i valori Null**  
@@ -77,7 +76,7 @@ ms.locfileid: "62893042"
  **Precisione**  
  Consente di specificare la precisione dei dati visualizzati, indicando il numero di cifre.  
   
- **Ridimensionare**  
+ **Ridimensionamento**  
  Consente di specificare la scala dei dati visualizzati, indicando il numero di posizioni decimali.  
   
   

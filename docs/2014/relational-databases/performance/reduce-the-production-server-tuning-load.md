@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bb95ecaf-444a-4771-a625-e0a91c8f0709
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 44a63e55d6a0868ac8395828e5f386573665fcaa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0e437b561a44ab84e95b7c1dbef4fe2c2c4ff1bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175830"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063882"
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>Riduzione del carico di ottimizzazione del server di produzione
   [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Ottimizzazione guidata si basa su Query Optimizer per analizzare un carico di lavoro e fornire indicazioni di ottimizzazione. L'esecuzione di questa analisi sul server di produzione aumenta il carico del server e può ridurre le prestazioni del server durante la sessione di ottimizzazione. È possibile diminuire l'impatto sul carico del server durante una sessione di ottimizzazione utilizzando un server di prova oltre al server di produzione.

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8330702d8c886cc9197dcd944878c3f794780205
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fac51c7916e6fda90d4f04d5e6f3603709e48dd0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775407"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931832"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>Eseguire l'aggiornamento a SQL Server 2014 utilizzando l'Installazione guidata (programma di installazione)
   Nell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disponibile un singolo albero delle funzionalità per aggiornare i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È inoltre possibile eseguire l'installazione side-by-side di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a una versione precedente oppure eseguire la migrazione di database e impostazioni di configurazione esistenti da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e applicarli a un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -54,7 +53,7 @@ ms.locfileid: "62775407"
 -   [Compatibilità con le versioni precedenti del motore di database di SQL Server](../sql-server-database-engine-backward-compatibility.md)  
   
 > [!WARNING]  
->  Non è possibile modificare le funzionalità da aggiornare, né aggiungere funzionalità durante l'operazione di aggiornamento. Per ulteriori informazioni su come aggiungere funzionalità a un'istanza aggiornata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] al termine dell'operazione di aggiornamento, vedere [aggiungere funzionalità a un'istanza di SQL Server 2014 &#40;&#41;di installazione ](add-features-to-an-instance-of-sql-server-setup.md).  
+>  Non è possibile modificare le funzionalità da aggiornare, né aggiungere funzionalità durante l'operazione di aggiornamento. Per ulteriori informazioni su come aggiungere funzionalità a un'istanza aggiornata di al [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] termine dell'operazione di aggiornamento, vedere [aggiungere funzionalità a un'istanza di SQL Server 2014 &#40;&#41;di installazione ](add-features-to-an-instance-of-sql-server-setup.md).  
   
 ## <a name="procedure"></a>Procedura  
   
@@ -62,7 +61,7 @@ ms.locfileid: "62775407"
   
 1.  Inserire il supporto di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , quindi nella cartella radice fare doppio clic sul file Setup.exe. Per eseguire l'installazione da una condivisione di rete, passare alla cartella radice nella condivisione, quindi fare doppio clic sul file Setup.exe.  
   
-2.  L'Installazione guidata consente di avviare il Centro installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per aggiornare un'istanza esistente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], fare clic su **installazione** nell'area di navigazione a sinistra, quindi fare clic su **Aggiorna [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)],, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]o **.  
+2.  L'Installazione guidata consente di avviare il Centro installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per aggiornare un'istanza esistente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , fare clic su **installazione** nell'area di navigazione a sinistra, quindi fare clic su **Aggiorna da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ,, [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **.  
   
 3.  Nella pagina relativa al codice Product Key selezionare un'opzione per indicare se si intende eseguire l'aggiornamento a un'edizione gratuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o se si dispone di una chiave PID per una versione di produzione del prodotto. Per ulteriori informazioni, vedere [edizioni e componenti di SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) e [aggiornamenti di versione ed edizione supportati](supported-version-and-edition-upgrades.md).  
   
@@ -85,7 +84,7 @@ ms.locfileid: "62775407"
      I prerequisiti per le funzionalità selezionate vengono visualizzati nel riquadro di destra. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno installati i prerequisiti che non sono stati ancora installati durante la procedura di installazione descritta più avanti in questo argomento.  
   
     > [!NOTE]  
-    >  Se si è scelto di aggiornare le funzionalità condivise selezionando ** \<aggiorna solo le funzionalità condivise>** nella pagina **Seleziona istanza** , tutte le funzionalità condivise sono preselezionate nella pagina Selezione funzionalità. Tutti i componenti condivisi vengono aggiornati contemporaneamente.  
+    >  Se si è scelto di aggiornare le funzionalità condivise selezionando **\<Upgrade shared features only>** nella pagina **Seleziona istanza** , tutte le funzionalità condivise sono preselezionate nella pagina Selezione funzionalità. Tutti i componenti condivisi vengono aggiornati contemporaneamente.  
   
 12. Nella pagina Configurazione istanza specificare l'ID istanza per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -122,13 +121,13 @@ ms.locfileid: "62775407"
 ## <a name="next-steps"></a>Passaggi successivi  
  Al termine dell'aggiornamento a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], completare le attività seguenti:  
   
--   **Registrare i server** : l'aggiornamento rimuove le impostazioni del registro di sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]per l'istanza precedente di. in seguito all'aggiornamento è necessario registrare nuovamente i server.  
+-   **Registrare i server** : l'aggiornamento rimuove le impostazioni del registro di sistema per l'istanza precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . in seguito all'aggiornamento è necessario registrare nuovamente i server.  
   
 -   **Aggiornare le statistiche** : per ottimizzare le prestazioni delle query, è consigliabile aggiornare le statistiche per tutti i database in seguito all'aggiornamento. Utilizzare la stored procedure `sp_updatestats` per aggiornare le statistiche nelle tabelle definite dall'utente dei database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Configurare la nuova [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installazione** : per ridurre la superficie di attacco di un sistema, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in vengono installati e abilitati in modo selettivo i servizi e le funzionalità principali. Per ulteriori informazioni sulla configurazione della superficie di attacco, vedere il file Leggimi per questa versione.  
+-   **Configurare la nuova [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installazione** : per ridurre la superficie di attacco di un sistema, in vengono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installati e abilitati in modo selettivo i servizi e le funzionalità principali. Per ulteriori informazioni sulla configurazione della superficie di attacco, vedere il file Leggimi per questa versione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Eseguire l'aggiornamento a SQL Server 2014](upgrade-sql-server.md)   
  [Compatibilità con le versioni precedenti](../../getting-started/backward-compatibility.md)  
   

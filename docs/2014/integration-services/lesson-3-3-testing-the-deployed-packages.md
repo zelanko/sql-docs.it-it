@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 687a3c6e92dad953d39199afb446389bc11b9841
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 31f12cd8abde0262c499d8a889f28041a9e3974c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176140"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965237"
 ---
 # <a name="step-3-testing-the-deployed-packages"></a>Passaggio 3: Test dei pacchetti distribuiti
   In questa attività si procederà al test dei pacchetti distribuiti in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cdb842e3-2e59-4ede-b127-be4fde46875c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 686354531b89a43cb2e9ddc669ff136ef7b87216
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95c4a27a6ef20ac52521c707ae4a83329a81716d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054741"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972661"
 ---
 # <a name="upgrading-the-packages-ssis-package-upgrade-wizard"></a>Aggiornamento pacchetti (Aggiornamento guidato pacchetti SSIS)
   Utilizzare la pagina **Aggiornamento pacchetti** per visualizzare lo stato dell'aggiornamento dei pacchetti e per interrompere l'aggiornamento. L'Aggiornamento guidato pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] consente di aggiornare uno per uno i pacchetti selezionati.  
@@ -37,13 +36,13 @@ ms.locfileid: "66054741"
  **Azione**  
  Consente di visualizzare le azioni incluse nell'aggiornamento.  
   
- **Stato**  
+ **Status**  
  Consente di visualizzare il risultato di ogni azione.  
   
- **Messaggio**  
+ **Message**  
  Consente di visualizzare i messaggi di errore generati da ogni azione.  
   
- **Arresta**  
+ **Stop**  
  Consente di arrestare l'aggiornamento del pacchetto.  
   
  **Report**  
@@ -57,7 +56,7 @@ ms.locfileid: "66054741"
   
 -   Inviare il report come messaggio di posta elettronica.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Aggiornare pacchetti di Integration Services](install-windows/upgrade-integration-services-packages.md)  
   
   

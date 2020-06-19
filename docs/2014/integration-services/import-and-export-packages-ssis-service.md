@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef18ec11-b536-47d9-abd1-794099f43486
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9a1d50afde56843942c470017a8534ffa797eb69
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce04befcb4c8558216cecded6cb1892c3106295f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058145"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965672"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>Importare ed esportare pacchetti (servizio SSIS)
     
@@ -50,7 +49,7 @@ ms.locfileid: "66058145"
   
  È possibile importare o esportare un pacchetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] da o nei percorsi seguenti:  
   
--   È possibile importare un pacchetto archiviato in un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], nel file System o nell'archivio [!INCLUDE[ssIS](../includes/ssis-md.md)] pacchetti. Il pacchetto importato viene salvato in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o in una cartella nell'archivio pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
+-   È possibile importare un pacchetto archiviato in un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , nel file System o nell' [!INCLUDE[ssIS](../includes/ssis-md.md)] Archivio pacchetti. Il pacchetto importato viene salvato in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o in una cartella nell'archivio pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
 -   Un pacchetto archiviato nel file system, in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]o nell'archivio pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] può essere esportato in un percorso e un formato di archiviazione diverso.  
   
@@ -70,11 +69,11 @@ ms.locfileid: "66058145"
   
     -   Nella casella **Tipo server** selezionare **Integration Services**.  
   
-    -   Nella casella **nome server** specificare un nome di server oppure fare clic su ** \<Sfoglia per ulteriori informazioni... >** e individuare il server da utilizzare.  
+    -   Nella casella **nome server** specificare il nome di un server oppure fare clic su **\<Browse for more...>** e individuare il server da utilizzare.  
   
 3.  Se il riquadro Esplora oggetti non è visualizzato, scegliere **Esplora oggetti** dal menu **Visualizza**.  
   
-4.  In Esplora oggetti espandere la cartella **pacchetti archiviati** .  
+4.  In Esplora oggetti espandere la cartella **Pacchetti archiviati** .  
   
 5.  Espandere le sottocartelle per individuare la cartella in cui si desidera importare un pacchetto.  
   
@@ -106,11 +105,11 @@ ms.locfileid: "66058145"
   
     -   Nella casella **Tipo server** selezionare **Integration Services**.  
   
-    -   Nella casella **nome server** specificare un nome di server oppure fare clic su ** \<Sfoglia per ulteriori informazioni... >** e individuare il server da utilizzare.  
+    -   Nella casella **nome server** specificare il nome di un server oppure fare clic su **\<Browse for more...>** e individuare il server da utilizzare.  
   
 3.  Se il riquadro Esplora oggetti non è visualizzato, scegliere **Esplora oggetti** dal menu **Visualizza**.  
   
-4.  In Esplora oggetti espandere la cartella **pacchetti archiviati** .  
+4.  In Esplora oggetti espandere la cartella **Pacchetti archiviati** .  
   
 5.  Espandere le sottocartelle per individuare il pacchetto da esportare.  
   
@@ -132,7 +131,7 @@ ms.locfileid: "66058145"
   
 8.  Scegliere **OK** per completare l'esportazione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestione dei pacchetti &#40;servizio SSIS&#41;](service/package-management-ssis-service.md)  
   
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d85fc4c21f200bcdc5a489cfcee6b50bc9f4b98e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50cf10a9a745b3a111deb5db6be356d10d204d4a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479910"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971721"
 ---
 # <a name="create-an-entity-master-data-services"></a>Creare un'entità (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare un'entità in cui siano contenuti i membri e i relativi attributi.  
@@ -49,7 +48,7 @@ ms.locfileid: "65479910"
     > [!TIP]  
     >  Usare il nome del modello come parte del nome della tabella di staging, ad esempio *Nomemodello_Nomeentità*. In questo modo risulta più agevole trovare le tabelle nel database. Per ulteriori informazioni sulle tabelle di staging, vedere [Data Import &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
   
-7.  Facoltativo. Selezionare la casella di controllo **Crea valori Code automaticamente** . Per ulteriori informazioni, vedere [creazione automatica di codice &#40;Master Data Services&#41;](../../2014/master-data-services/automatic-code-creation-master-data-services.md).  
+7.  Facoltativa. Selezionare la casella di controllo **Crea valori Code automaticamente** . Per ulteriori informazioni, vedere [creazione automatica di codice &#40;Master Data Services&#41;](../../2014/master-data-services/automatic-code-creation-master-data-services.md).  
   
 8.  Dall'elenco **Abilita gerarchie esplicite e raccolte** , selezionare una delle opzioni seguenti:  
   
@@ -67,7 +66,7 @@ ms.locfileid: "65479910"
   
 -   [Creare un attributo di file &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Entità &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   
  [Gerarchie esplicite &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
  [Modificare il nome di un'entità &#40;Master Data Services&#41;](edit-an-entity-master-data-services.md)   

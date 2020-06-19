@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 773426ed91039ee4c0c6fd224547e44102f9846b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80330d03853c984cfd26100b02918eb218705085
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175420"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931142"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>Aggiornare il log shipping a SQL Server 2014 (Transact-SQL)
   Quando si effettua l'aggiornamento da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], è possibile mantenere le configurazioni per il log shipping. In questo argomento vengono descritti scenari alternativi e procedure consigliate per aggiornare una configurazione per il log shipping.
@@ -181,7 +180,7 @@ ms.locfileid: "78175420"
 5.  Eseguire il failover del database reindirizzando i client dal server primario originale (server A) al server secondario online (server B).
 
     > [!IMPORTANT]
-    >  Quando si esegue il failover sul nuovo database primario, è necessario verificare che tutti i relativi metadati siano coerenti con quelli del database primario originale. Per ulteriori informazioni, vedere [gestire i metadati quando si rende disponibile un database in un'altra istanza del Server &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).
+    >  Quando si esegue il failover sul nuovo database primario, è necessario verificare che tutti i relativi metadati siano coerenti con quelli del database primario originale. Per altre informazioni, vedere [Gestione dei metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).
 
 ##  <a name="upgrading-multiple-secondary-server-instances"></a><a name="MultipleSecondaries"></a>Aggiornamento di più istanze del server secondario
  Tale configurazione è rappresentata nella figura seguente, in cui vengono illustrate un'istanza del server primario, A, e due istanze del server secondario, B e C.

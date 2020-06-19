@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6229bf3f-1182-4bc6-8451-cedc37f4b62e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3dd87c1e2bd08ce5bb1d05e9d51d92e3f62bcc7a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f95aab55d402ac72228dcc4326ad00ea15e7471f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110191"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048381"
 ---
 # <a name="tuning-a-workload"></a>Ottimizzazione di un carico di lavoro
   Per individuare la migliore struttura fisica di database per l'esecuzione di query sulle tabelle e i database selezionati per l'ottimizzazione, è possibile utilizzare Ottimizzazione guidata motore di database.  
@@ -44,7 +43,7 @@ ms.locfileid: "66110191"
   
 8.  Dopo aver completato l'analisi, salvare le indicazioni come script [!INCLUDE[tsql](../../includes/tsql-md.md)] scegliendo **Salva indicazioni** dal menu **Azioni** . Nella finestra di dialogo **Salva con nome** trovare la directory in cui si vuole salvare lo script delle indicazioni e digitare il nome file **MyRecommendations**.  
   
-## <a name="summary"></a>Riepilogo  
+## <a name="summary"></a>Summary  
  In questo modo è stata completata l'ottimizzazione di un carico di lavoro di un'istruzione SELECT semplice sul database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Ottimizzazione guidata motore di database accetta inoltre file di traccia e tabelle [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] come carichi di lavoro da ottimizzare. Nell'attività successiva verranno illustrate le procedure per visualizzare e interpretare le indicazioni scaturite dall'esercitazione sull'ottimizzazione.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  

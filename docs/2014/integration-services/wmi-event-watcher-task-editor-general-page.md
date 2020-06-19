@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5813279b-52ca-4232-8826-38001467d9bd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bf462fc9084468b3a76b7c6bd61f07a16ae4f466
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a6ae5036e64f4d9dd103d8d3cd78d70a2b98b40
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054345"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972391"
 ---
 # <a name="wmi-event-watcher-task-editor-general-page"></a>Editor attività Monitoraggio eventi WMI (pagina Generale)
   Utilizzare la pagina **Generale** della finestra di dialogo **Editor attività Monitoraggio eventi WMI** per specificare un nome e una descrizione per l'attività Monitoraggio eventi WMI.  
@@ -36,7 +35,7 @@ ms.locfileid: "66054345"
  **Descrizione**  
  Consente di digitare una descrizione dell'attività Monitoraggio eventi WMI.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività Monitoraggio eventi WMI &#40;pagina Opzioni WMI&#41;](../../2014/integration-services/wmi-event-watcher-task-editor-wmi-options-page.md)   
  [Pagina espressioni](expressions/expressions-page.md)   

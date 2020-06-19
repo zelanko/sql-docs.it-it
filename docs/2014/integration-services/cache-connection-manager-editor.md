@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0d8f9324-0c35-4eea-b06d-da3cc2426d2c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0802ed589813a43ffac516c05a3a52de382d36c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 403210fd8a60cdfb7e92b18f9bb66ccb0a6f1f4c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061080"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924622"
 ---
 # <a name="cache-connection-manager-editor"></a>Editor gestione connessione cache
   La Gestione connessione cache consente di leggere un set di dati di riferimento dalla trasformazione cache o da un file di cache (.caw) e può salvare i dati in un file di cache. I dati vengono sempre archiviati in memoria.  
@@ -83,7 +82,7 @@ ms.locfileid: "66061080"
 > [!NOTE]  
 >  Quando la trasformazione Ricerca viene configurata per utilizzare una Gestione connessione cache, è possibile eseguire il mapping solo delle colonne di indice nel set di dati di riferimento alle colonne di input. Inoltre, è necessario eseguire il mapping di tutte le colonne di indice.  
   
- **Type**  
+ **Tipo**  
  Consente di specificare il tipo di dati della colonna.  
   
  `Length`  
@@ -98,7 +97,7 @@ ms.locfileid: "66061080"
  `Code Page`  
  Specifica la tabella codici per il tipo di colonna. Se applicabile al tipo di dati, è possibile aggiornare `Code Page`.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Trasformazione Ricerca](data-flow/transformations/lookup-transformation.md)  
   
   

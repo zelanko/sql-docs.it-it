@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0354c73a14b249065b69f41d5f7534fd97de5081
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 86441b7ec5750ca4b7fce07fb7e0b5025e8a6eef
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890717"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939122"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>Editor attività Query di data mining (scheda Query)
   Usare la scheda **Query** della finestra di dialogo **Attività Query di data mining** per creare query di stima basate su un modello di data mining. In questa finestra di dialogo è inoltre possibile associare parametri e set di risultati a variabili.  

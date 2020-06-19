@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 99b5a2e9-b44a-48a0-993e-04bd15c7fef4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b9e6c04a0ae0000284f3550d39e47c973adbe8ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f64a81709e63510af507996cc2d2968a765e0fad
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061919"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002129"
 ---
 # <a name="processid-class-sqlservice-class"></a>Classe ProcessId (classe SqlService)
   Ottiene l'ID di processo di sistema che identifica in modo univoco un servizio.  
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  Oggetto della [classe SqlService](sqlservice-class.md) che rappresenta il servizio.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
@@ -51,7 +50,7 @@ object
 mysqlservice.ProcessId = 324  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Avvio e arresto di servizi](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

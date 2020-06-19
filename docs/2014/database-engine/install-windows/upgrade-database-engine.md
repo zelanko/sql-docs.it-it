@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed13712678ab599e55b539d6226142b686106fe5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774975"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931972"
 ---
 # <a name="upgrade-database-engine"></a>Aggiornare il motore di database
   In questo argomento vengono fornite le informazioni necessarie per la preparazione e la comprensione del processo di aggiornamento, ovvero:  
@@ -102,7 +101,7 @@ ms.locfileid: "62774975"
  È possibile aggiornare il [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando l'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ### <a name="database-compatibility-level-after-upgrade"></a>Livello di compatibilità del database dopo l'aggiornamento  
- I livelli di compatibilità dei `tempdb`database `model`delle `msdb` **risorse** , e sono impostati su 120 dopo l'aggiornamento. Per il database di sistema `master` viene mantenuto il livello di compatibilità precedente l'aggiornamento.  
+ I livelli di compatibilità dei `tempdb` `model` database delle `msdb` **risorse** , e sono impostati su 120 dopo l'aggiornamento. Per il database di sistema `master` viene mantenuto il livello di compatibilità precedente l'aggiornamento.  
   
  Se il livello di compatibilità di un database utente era 100 o superiore prima dell'aggiornamento, rimane invariato dopo l'aggiornamento. Se il livello di compatibilità è 90 prima dell'aggiornamento, nel database aggiornato viene impostato su 100, ovvero sul livello di compatibilità supportato più basso in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -162,7 +161,7 @@ EXEC sp_fulltext_service 'pause_indexing', 1;
 EXEC sp_fulltext_service 'pause_indexing', 0;  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Aggiornamenti di versione ed edizione supportati](supported-version-and-edition-upgrades.md)   
  [Usare più versioni e istanze di SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
  [Compatibilità con le versioni precedenti](../../getting-started/backward-compatibility.md)   

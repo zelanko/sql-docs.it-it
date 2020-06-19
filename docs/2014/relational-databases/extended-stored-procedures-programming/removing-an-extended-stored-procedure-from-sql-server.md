@@ -14,28 +14,27 @@ helpviewer_keywords:
 ms.assetid: 7827e574-3f59-4279-9a9b-532582e041cb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bcb58ac180861641803147d1dfea621bd52df9a6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 284da815de073248669da032c06ddeeb68c697a3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62512026"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027017"
 ---
 # <a name="removing-an-extended-stored-procedure-from-sql-server"></a>Rimozione di una stored procedure estesa da SQL Server
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilizzare invece la funzionalità di integrazione con CLR.  
   
- Per eliminare ogni funzione di stored procedure estesa in una DLL di stored procedure estesa definita dall'utente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario che un amministratore di sistema esegua il stored procedure di sistema **sp_dropextendedproc** , specificando il nome della funzione e il nome della dll in cui risiede la funzione. Ad esempio, questo comando rimuove la funzione **xp_hello**, che si trova in una dll denominata xp_hello. dll [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], da:  
+ Per eliminare ogni funzione di stored procedure estesa in una DLL di stored procedure estesa definita dall'utente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è necessario che un amministratore di sistema esegua il stored procedure di sistema **sp_dropextendedproc** , specificando il nome della funzione e il nome della dll in cui risiede la funzione. Ad esempio, questo comando rimuove la funzione **xp_hello**, che si trova in una DLL denominata xp_hello.dll, da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 ```  
 sp_dropextendedproc 'xp_hello'  
 ```  
   
- A partire [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]da, **sp_dropextendedproc** non elimina le stored procedure estese di sistema. L'amministratore di sistema deve invece negare l'autorizzazione EXECUTE per il stored procedure esteso al ruolo **public** .  
+ A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , **sp_dropextendedproc** non elimina le stored procedure estese di sistema. L'amministratore di sistema deve invece negare l'autorizzazione EXECUTE per il stored procedure esteso al ruolo **public** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_dropextendedproc &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql)  
   
   

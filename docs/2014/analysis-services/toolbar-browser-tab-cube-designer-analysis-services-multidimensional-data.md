@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: a1c6272d-e514-456b-9995-b73fec0112a2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d1135be55065ab62e649d84c00cec4eebf60b58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cba90d60a9ec3b3651c4889be423a5c1311fc9c1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175580"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938483"
 ---
 # <a name="toolbar-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra degli strumenti (scheda Esplorazione, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Usare le funzionalità in **Barra degli strumenti** in Progettazione cubi per eseguire operazioni comuni durante la progettazione o l'esplorazione di un cubo o del relativo oggetto oppure durante la creazione di una query MDX. Le operazioni comuni sia in fase di progettazione che in visualizzazione query includono l'impostazione del contesto utente, l'elaborazione di oggetti e l'impostazione della lingua predefinita.
 
  La tabella seguente elenca i pulsanti della **Barra degli strumenti** con le relative funzioni.
 
-|Button|Descrizione|
+|Button|Description|
 |------------|-----------------|
 |**Modifica come testo**|Non abilitato per questo tipo di origine dati.|
 |**Importa**|Consente di importare una query esistente da un file di definizione di report (con estensione rdl) nel file system.|
@@ -32,7 +31,7 @@ ms.locfileid: "78175580"
 |![Mostrare/Nascondere le celle vuote](media/rsqdicon-showemptycells.gif "Mostrare/Nascondere le celle vuote")|Consente di visualizzare o nascondere le celle vuote nel riquadro Dati. Questa operazione equivale a utilizzare la clausola NON EMPTY in MDX.|
 |![Esecuzione automatica della query](media/rsqdicon-autoexecute.gif "Esecuzione automatica della query")|Consente di eseguire automaticamente la query e di visualizzarne i risultati ogni volta che viene apportata una modifica. I risultati verranno visualizzati nel riquadro Dati.|
 |![Pulsante Mostra aggregazioni](media/rsqdicon-showaggregations.gif "Pulsante Mostra aggregazioni")|Consente di visualizzare le aggregazioni nel riquadro Dati.|
-|![Elimina](media/rsqdicon-delete.gif "Delete")|Consente di eliminare dalla query la colonna selezionata nel riquadro Dati.|
+|![Elimina](media/rsqdicon-delete.gif "Elimina")|Consente di eliminare dalla query la colonna selezionata nel riquadro Dati.|
 |![Icona della finestra di dialogo Parametri query](media/iconqueryparameter.gif "Icona della finestra di dialogo Parametri query")|Consente di visualizzare la finestra di dialogo **Parametri query** . Quando si specificano valori per un parametro di query, viene creato automaticamente un parametro con lo stesso nome.|
 |![Pulsante Prepara query](media/rsqdicon-preparequery.gif "Pulsante Prepara query")|Consente di preparare la query.|
 |![Eseguire la query](media/rsqdicon-run.gif "Eseguire la query")|Consente di eseguire la query di e visualizzare i risultati nel riquadro Dati.|
@@ -53,12 +52,12 @@ ms.locfileid: "78175580"
 
 ## <a name="options"></a>Opzioni
 
-|Opzione|Descrizione|
+|Opzione|Description|
 |------------|-----------------|
 |**Processo**|Fare clic su questo pulsante per visualizzare la finestra di dialogo **Elabora** ed elaborare il cubo. Per altre informazioni sulla finestra di dialogo **Elabora** vedere [Finestra di dialogo Elabora &#40;Analysis Services - Dati multidimensionali&#41;](process-dialog-box-analysis-services-multidimensional-data.md).|
 |**Cambia utente**|Fare clic su questo pulsante per visualizzare la finestra di dialogo **contesto di sicurezza** e modificare l'utente e il ruolo utilizzati nella scheda **esplorazione** . Per ulteriori informazioni sulla finestra di dialogo **contesto di sicurezza** , vedere finestra di [dialogo contesto di sicurezza &#40;Analysis Services-&#41;dati multidimensionali ](security-context-dialog-box-analysis-services-multidimensional-data.md).|
 |**Riconnetti**|Fare clic su questo pulsante per riconnettere la scheda **Calcoli** all'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e al database contenente il cubo nel caso in cui la sessione per la scheda **Esplorazione** sia stata disconnessa a causa della perdita della connessione o per il verificarsi del timeout.|
-|**Aggiorna**|Fare clic su questo pulsante per aggiornare i riquadri **Metadati** e **Report** .|
+|**Refresh** (Aggiornamento)|Fare clic su questo pulsante per aggiornare i riquadri **Metadati** e **Report** .|
 |**Ordinamento crescente**|Fare clic su questo pulsante per ordinare gli elementi di pari livello della riga selezionata nel riquadro **Report** in ordine crescente in base alla lingua specificata in **Lingua**.<br /><br /> **Nota** Questa opzione è attivata solo se nel riquadro **Report** è selezionata una cella.|
 |**Ordinamento decrescente**|Fare clic su questo pulsante per ordinare gli elementi di pari livello della riga selezionata nel riquadro **Report** in ordine decrescente in base alla lingua specificata in **Lingua**.<br /><br /> Nota: questa opzione è abilitata solo se è selezionata una cella nel riquadro **report** .|
 |**Filtro automatico**|Fare clic per filtrare automaticamente i risultati nel riquadro **Risultato** .|

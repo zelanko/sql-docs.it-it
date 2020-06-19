@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 01b6388dbec5ed563dd8e7fa4476335a3ace998d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cc4ec27de159735b43f88dd978e7070cb0f0983
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770317"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939270"
 ---
 # <a name="term-lookup-transformation"></a>Ricerca termini - trasformazione
   La trasformazione Ricerca termini rileva le corrispondenze tra i termini estratti dal testo in una colonna di input della trasformazione e quelli contenuti in una tabella di riferimento, quindi conta il numero delle occorrenze di un termine della tabella di ricerca nel set di dati di input e scrive tale numero nelle colonne di output della trasformazione, insieme al termine della tabella di riferimento. Questa trasformazione può essere utilizzata per creare un elenco di termini personalizzato basato sul testo di input, completo di statistiche sulla frequenza dei termini.  
@@ -62,7 +61,7 @@ ms.locfileid: "62770317"
 |Termini di riferimento|Windows 7 x64 Professional|  
 |Output|Windows|  
   
- La trasformazione Ricerca termini può trovare anche sostantivi e sintagmi nominali contenenti caratteri speciali che possono essere presenti anche nei dati della tabella di riferimento. I caratteri speciali sono i seguenti: %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " e '.  
+ La trasformazione Ricerca termini può trovare anche sostantivi e sintagmi nominali contenenti caratteri speciali che possono essere presenti anche nei dati della tabella di riferimento. I caratteri speciali sono i seguenti:%, @, &, $, #, \* ,:,;,., **,** ,!,?, \<, > , +, =, ^, ~, |, \\ ,/, (,), [,], {,}, "è.  
   
 ## <a name="data-types"></a>Tipi di dati  
  La trasformazione Ricerca termini può utilizzare solo colonne con tipo di dati DT_WSTR o DT_NTEXT. Se una colonna contiene testo ma non ha uno di questi tipi di dati, sarà possibile utilizzare la trasformazione Conversione dati per aggiungere al flusso di dati una colonna con tipo di dati DT_WSTR o DT_NTEXT e copiare nella nuova colonna i valori della colonna originale. L'output della trasformazione Conversione dati può essere quindi utilizzato come input della trasformazione Ricerca termini. Per altre informazioni, vedere [Trasformazione Conversione dati](data-conversion-transformation.md).  

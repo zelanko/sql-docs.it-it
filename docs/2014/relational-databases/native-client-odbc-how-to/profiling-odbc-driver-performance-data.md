@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b997790a-8cc6-4800-8867-74c1bef07be3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 957e99d67360d72e1d8920d3bad2611c67f747de
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 303de22f2eb5ec40c76266116ada843fbf3905c4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82712971"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048224"
 ---
 # <a name="profile-driver-performance-data-odbc"></a>Analizzare i dati relativi alle prestazioni del driver (ODBC)
   In questo esempio vengono illustrate le opzioni specifiche del driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la registrazione delle statistiche relative alle prestazioni. Nell'esempio viene creato il file odbcperf.log e vengono illustrate sia la creazione di un file di log dei dati relativi alle prestazioni che la visualizzazione dei dati relativi alle prestazioni direttamente dalla struttura di dati SQLPERF, definita in Odbcss.h. L'esempio è stato sviluppato per ODBC versione 3.0 o successiva.  
@@ -41,7 +40,7 @@ ms.locfileid: "82712971"
   
 ### <a name="to-log-driver-performance-data-programmatically"></a>Per registrare i dati relativi alle prestazioni del driver a livello di programmazione  
   
-1.  Chiamare [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_DATA_LOG e il percorso completo e il nome file del file di log dei dati sulle prestazioni. ad esempio:  
+1.  Chiamare [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_DATA_LOG e il percorso completo e il nome file del file di log dei dati sulle prestazioni. Ad esempio:  
   
     ```  
     "C:\\Odbcperf.log"  

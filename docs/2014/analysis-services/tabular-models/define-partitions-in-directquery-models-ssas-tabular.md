@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5f179ba9-6efb-46ae-90e5-945bbfddb719
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1fe22de3cc0718647de84345260017a4dd4e477e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d79b78fbec2a7af13e54547baf294857cebd8dfd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067305"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939752"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>Partizioni e modalità DirectQuery (SSAS tabulare)
   In questa sezione viene illustrato come utilizzare le partizioni nei modelli DirectQuery. Per informazioni più generali sulle partizioni nei modelli tabulari, vedere [Partizioni &#40;SSAS tabulare&#41;](partitions-ssas-tabular.md).  
@@ -47,7 +46,7 @@ ms.locfileid: "66067305"
 |DirectQuery|Non elaborare mai questa partizione|Se il modello utilizza solo DirectQuery, l'elaborazione non è mai necessaria.<br /><br /> Nei modelli ibridi è possibile configurare la partizione DirectQuery in modo che non venga mai elaborata. Ad esempio, se si lavora su un set di dati di grandi dimensioni e non si desidera che i risultati completi vengano aggiunti alla cache, è possibile specificare che la partizione DirectQuery includa l'unione dei risultati di tutte le altre partizioni nella tabella e quindi non elaborare mai l'unione. Le query dirette all'origine relazionale non saranno interessate, mentre le query sui dati memorizzati nella cache combineranno i dati delle altre partizioni.|  
 |In-Memory con DirectQuery|Consenti l'elaborazione della partizione|Se il modello utilizza la modalità ibrida, è necessario utilizzare la stessa partizione per le query su In-Memory e sull'origine dati DirectQuery.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Partizioni &#40;SSAS tabulare&#41;](partitions-ssas-tabular.md)  
   
   

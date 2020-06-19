@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 57f649b8-190c-4304-abd7-7ca5297deab7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 87e5644329742712e112fd3df97f601838f7faea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d0d731d25c20597be3ac84adfacd8973e4a51cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245515"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001714"
 ---
 # <a name="view-or-modify-jobs"></a>Visualizzare o modificare processi
   È possibile visualizzare tutti i processi creati. Dopo l'esecuzione di un processo, è inoltre possibile visualizzarne la cronologia. Ciò consente di verificare quando un processo è stato eseguito, lo stato dell'intero processo e lo stato di ogni relativo passaggio. È inoltre possibile verificare se in precedenza si sono verificati errori nel processo, l'ultima volta che il processo è stato completato e l'output creato a ogni esecuzione del processo. I membri del ruolo predefinito del server **sysadmin** possono visualizzare o modificare qualsiasi processo, indipendentemente dal proprietario.  
@@ -66,7 +65,7 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
 |Descrive come impostare le dimensioni massime per i log cronologia processi di [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent.|[Modificare le dimensioni del log di cronologia processi](resize-the-job-history-log.md)|  
 |Illustra la procedura per la modifica delle proprietà dei processi di [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent.|[Modificare un processo](modify-a-job.md)|  
   
-## <a name="see-also"></a>Vedi anche  
- [dbo. sysjobhistory &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)  
+## <a name="see-also"></a>Vedere anche  
+ [dbo.sysjobhistory &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)  
   
   

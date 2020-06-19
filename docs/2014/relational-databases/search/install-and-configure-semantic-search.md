@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 164ae15bdd93034ebcca109a01142b3106a78592
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8d95e0bb2adf3bacf7057b881ab2e85afd50feef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637913"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063234"
 ---
 # <a name="install-and-configure-semantic-search"></a>Installazione e configurazione della ricerca semantica
   Vengono descritti i prerequisiti per la ricerca semantica statistica e viene indicato come installarli o verificarli.  
@@ -61,9 +60,9 @@ GO
   
     -   Individuare il pacchetto di Windows Installer denominato **SemanticLanguageDatabase.msi** sui supporti di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Individuare la versione a 32 bit o la versione a 64 bit del pacchetto di installazione a seconda del sistema di destinazione. Il nome della cartella che contiene il file ne identifica la versione a 32 bit o a 64 bit; il nome del file stesso è uguale per entrambe versioni.  
   
-    -   Scaricare il pacchetto del programma di installazione da [Microsoft? SQL Server?? 2014 Semantic Language Statistics](https://go.microsoft.com/fwlink/?LinkID=296743) pagina nell'area [!INCLUDE[msCoName](../../../includes/msconame-md.md)] download.  
+    -   Scaricare il pacchetto del programma di installazione da [Microsoft? SQL Server?? 2014 Semantic Language Statistics](https://go.microsoft.com/fwlink/?LinkID=296743) pagina nell' [!INCLUDE[msCoName](../../../includes/msconame-md.md)] area download.  
   
-2.  Eseguire il pacchetto di Windows Installer **SemanticLanguageDatabase. msi** per estrarre il database e il file di log.  
+2.  Eseguire il pacchetto di Windows Installer **SemanticLanguageDatabase.msi** per estrarre il database e il file di log.  
   
      Se lo si desidera, è possibile modificare la directory di destinazione. Per impostazione predefinita, il programma di installazione estrae i file in una cartella denominata **Microsoft Semantic Language Database** nella cartella Programmi a 32 o a 64 bit. Il file MSI contiene un file di database compresso e un file di log.  
   

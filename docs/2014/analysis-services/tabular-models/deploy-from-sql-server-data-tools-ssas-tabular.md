@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 67dde3fe-ba43-41f3-b56c-c656029ee93f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6429fb7f30c748c7ac0a8ab69bc16c3d63b4d3ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1690e2772de50258a69a4a33b048f16f7da2caca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067294"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939718"
 ---
 # <a name="deploy-from-sql-server-data-tools-ssas-tabular"></a>Distribuire da SQL Server Data Tools (SSAS tabulare)
   Utilizzare le attività contenute in questo argomento per distribuire una soluzione del modello tabulare utilizzando il comando Distribuisci in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -37,7 +36,7 @@ ms.locfileid: "66067294"
   
 1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]Esplora soluzioni **di**fare clic con il pulsante destro del mouse sul nome del progetto, quindi scegliere **Proprietà**.  
   
-2.  Nella finestra di dialogo ** \<nome progetto> proprietà** , in **Opzioni di distribuzione**, specificare le impostazioni delle proprietà se diverse dalle impostazioni predefinite.  
+2.  In **Opzioni di distribuzione**della finestra di dialogo ** \<project name> Proprietà** specificare le impostazioni delle proprietà se diverse dalle impostazioni predefinite.  
   
     > [!NOTE]  
     >  Per i modelli in modalità cache, in corrispondenza di **Modalità query** è sempre selezionata l'opzione **In-Memory**.  
@@ -54,14 +53,14 @@ ms.locfileid: "66067294"
   
 #### <a name="to-deploy-a-tabular-model-solution"></a>Per distribuire una soluzione del modello tabulare  
   
--   In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]scegliere **Distribuisci \<nome progetto>** dal menu **Compila** .  
+-   In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] scegliere **Distribuisci \<project name> **dal menu **Compila** .  
   
      Verrà visualizzata la finestra di dialogo **Distribuisci** e verrà fornita l'indicazione dello stato della distribuzione dei metadati e dell'elaborazione di ogni tabella inclusa nel modello, a meno che la proprietà Opzione di elaborazione non sia impostata su Non elaborare. Una volta completato il processo di distribuzione, utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per connettersi all'istanza di Analysis Services e verificare il nuovo oggetto di database modello creato. In alternativa, utilizzare un'applicazione client di creazione report per connettersi al modello distribuito.  
   
 ##  <a name="deploy-status"></a><a name="bkmk_deploy_status"></a>Stato distribuzione  
  La finestra di dialogo **Distribuisci** consente di monitorare lo stato di un'operazione di distribuzione. Inoltre è possibile arrestare un'operazione di distribuzione.  
   
- **Stato**  
+ **Status**  
  Viene indicato se l'operazione di distribuzione ha avuto esito positivo o negativo.  
   
  **Dettagli**  
@@ -70,7 +69,7 @@ ms.locfileid: "66067294"
  **Arresta distribuzione**  
  Fare clic su questa opzione per arrestare l'operazione di distribuzione. Questa opzione è utile se l'operazione di distribuzione è troppo lunga o se si sono verificati troppi errori.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Distribuzione di soluzioni di modelli tabulari &#40;SSAS tabulare&#41;](tabular-model-solution-deployment-ssas-tabular.md)   
  [Configurare la modellazione dei dati e le proprietà di distribuzione predefinite &#40;SSAS tabulare&#41;](properties-ssas-tabular.md)  
   

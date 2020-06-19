@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fc883131-c03d-4ab3-8220-b51cbe243a82
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: de238c1012a255ceb59086e542d5529b8b907915
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5da68a6379c0d65c4d5a83af2b359f96784d4ae2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057553"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950911"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>Editor gestione connessione per più file flat (pagina Avanzate)
   Usare la pagina **Avanzate** della finestra di dialogo **Editor gestione connessione per più file flat** per impostare proprietà come il tipo di dati e i delimitatori di ogni colonna nei file di testo a cui si connette la gestione connessione per i file flat.  
@@ -46,14 +45,14 @@ ms.locfileid: "66057553"
 |**TextQualified**|Consente di specificare se i dati di testo sono qualificati mediante un carattere qualificatore di testo. I valori validi sono:<br /><br /> **True**: i dati di testo nel file flat sono qualificati.<br /><br /> **False**: i dati di tipo testo nel file flat non sono qualificati.|  
 |**Nome**|Consente di specificare un nome per la colonna. Per impostazione predefinita, si tratta di un elenco numerato di colonne. È comunque possibile scegliere qualsiasi nome descrittivo univoco.|  
 |**DataScale**|Consente di specificare la scala dei dati numerici. Per scala si intende il numero di posizioni decimali. Per ulteriori informazioni, vedere [Integration Services tipi di dati](data-flow/integration-services-data-types.md).|  
-|**ColumnDelimiter**|Consente di selezionare i delimitatori di colonna disponibili nell'apposito elenco. Scegliere come delimitatori caratteri che non siano già presenti nel testo. Questo valore viene ignorato per le colonne a larghezza fissa.<br /><br /> **{CR} {LF}** : le colonne sono delimitate da una combinazione di ritorno a capo/avanzamento riga<br /><br /> **{CR}** : le colonne sono delimitate da un ritorno a capo<br /><br /> **{LF}** : le colonne sono delimitate da un avanzamento riga<br /><br /> **Punto e virgola {;}** -le colonne sono delimitate da un punto e virgola<br /><br /> **Due punti {:}** : le colonne sono delimitate da due punti<br /><br /> **Virgole {,} ** : le colonne sono delimitate da una virgola<br /><br /> **Tabulazione {t}**: le colonne sono delimitate da una tabulazione<br /><br /> **Barra verticale {&#124;}**: le colonne sono delimitate da una barra verticale|  
+|**ColumnDelimiter**|Consente di selezionare i delimitatori di colonna disponibili nell'apposito elenco. Scegliere come delimitatori caratteri che non siano già presenti nel testo. Questo valore viene ignorato per le colonne a larghezza fissa.<br /><br /> **{CR} {LF}** : le colonne sono delimitate da una combinazione di ritorno a capo/avanzamento riga<br /><br /> **{CR}** : le colonne sono delimitate da un ritorno a capo<br /><br /> **{LF}** : le colonne sono delimitate da un avanzamento riga<br /><br /> **Punto e virgola {;}** -le colonne sono delimitate da un punto e virgola<br /><br /> **Due punti {:}** : le colonne sono delimitate da due punti<br /><br /> **Virgola {,} ** -le colonne sono delimitate da una virgola<br /><br /> **Tabulazione {t}**: le colonne sono delimitate da una tabulazione<br /><br /> **Barra verticale {&#124;}**: le colonne sono delimitate da una barra verticale|  
 |**DataPrecision**|Consente di specificare la precisione dei dati numerici. Per precisione si intende il numero di cifre. Per ulteriori informazioni, vedere [Integration Services tipi di dati](data-flow/integration-services-data-types.md).|  
 |**InputColumnWidth**|Consente di specificare il valore da archiviare come conteggio di byte. Nel caso dei file Unicode tale valore verrà visualizzato come conteggio di caratteri. Questo valore viene ignorato nelle colonne delimitate.<br /><br /> **Nota** : nel modello a oggetti il nome di questa proprietà è ColumnWidth.|  
   
- **Nuova**  
+ **Nuovo**  
  Consente di aggiungere una **nuova**colonna. Per impostazione predefinita, il pulsante **Nuova** aggiunge una colonna alla fine dell'elenco. Il pulsante offre inoltre le opzioni seguenti che è possibile selezionare dall'elenco a discesa.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Aggiungi colonna**|Consente di aggiungere una nuova colonna alla fine dell'elenco.|  
 |**Inserisci prima**|Consente di inserire una nuova colonna prima di quella selezionata.|  
@@ -65,7 +64,7 @@ ms.locfileid: "66057553"
  **Suggerisci tipi**  
  Usare la finestra di dialogo **Suggerisci tipi di colonne** per restituire dati di esempio nel primo file selezionato e ottenere suggerimenti relativi al tipo di dati e alla lunghezza di ogni colonna. Per altre informazioni, vedere [Riferimento all'interfaccia utente della finestra di dialogo Suggerisci tipi di colonne](connection-manager/suggest-column-types-dialog-box-ui-reference.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor gestione connessione per più file flat &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor gestione connessione per più file flat &#40;pagina colonne&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   

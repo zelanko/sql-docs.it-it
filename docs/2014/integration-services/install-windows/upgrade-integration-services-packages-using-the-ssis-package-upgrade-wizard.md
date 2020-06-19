@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e44b755748dcbda6af30e0570b667f9ba3ee75a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0f31c514b8fbb68be7a326f3fd94ac67f0805ad
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62767889"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965491"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>Aggiornare i pacchetti di Integration Services mediante l'Aggiornamento guidato pacchetti SSIS
   È possibile aggiornare i pacchetti creati nelle versioni precedenti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] al formato [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilizzato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce l'Aggiornamento guidato pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] che consente di semplificare il processo. Poiché è possibile configurare la procedura guidata in modo da eseguire il backup dei pacchetti originali, sarà possibile continuare a utilizzarli nel caso in cui si riscontrino difficoltà nell'aggiornamento.  
@@ -50,7 +49,7 @@ ms.locfileid: "62767889"
   
 #### <a name="to-run-the-wizard-at-the-command-prompt"></a>Per eseguire la procedura guidata dal prompt dei comandi  
   
--   Al prompt dei comandi, eseguire il file file SSISUpgrade. exe dalla cartella c:\Programmi\Microsoft **SQL Server\120\DTS\Binn**  
+-   Al prompt dei comandi, eseguire il file SSISUpgrade.exe dalla cartella c:\Programmi\Microsoft **SQL Server\120\DTS\Binn**  
   
 ## <a name="backing-up-the-original-packages"></a>Esecuzione del backup dei pacchetti originali  
  Per eseguire il backup dei pacchetti originali, è necessario che i pacchetti originali e i pacchetti aggiornati siano archiviati nella stessa cartella del file system. A seconda di come viene eseguita la procedura guidata, è possibile che il percorso di archiviazione venga selezionato automaticamente.  
@@ -86,7 +85,7 @@ ms.locfileid: "62767889"
 2.  Nella pagina **Seleziona opzioni di gestione pacchetti** della procedura guidata selezionare l'opzione **Esegui backup pacchetti originali** .  
   
     > [!WARNING]  
-    >  L'opzione **Esegui backup pacchetti originali** non viene visualizzata quando si apre [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] un [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] progetto di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]o in, che avvia automaticamente la procedura guidata.  
+    >  L'opzione **Esegui backup pacchetti originali** non viene visualizzata quando si apre [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] un [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] progetto di o in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , che avvia automaticamente la procedura guidata.  
   
 3.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]eseguire l'Aggiornamento guidato pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
