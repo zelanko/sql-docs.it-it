@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 8c9bb3b3-ea77-4a5b-ba35-7451ed11083d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7dff59c26c057caec1df1f5850be41dcc6f85711
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4fc3fdb873a567bef9326232e5435cea5649b041
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952314"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054877"
 ---
 # <a name="database-ssrs-native-mode"></a>Database (modalità nativa SSRS)
   Utilizzare la pagina Database per creare e configurare i database del server di report che forniscono spazio di archiviazione interno per una o più istanze del server di report. Se si configura un server di report per l'utilizzo di un database del server di report remoto, è necessario utilizzare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per creare il database.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità nativa.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modalità nativa.  
   
  Il processo per la creazione del database di un server di report e la configurazione della connessione include più passaggi. Per semplificare l'esecuzione dei passaggi necessari, in questa pagina sono disponibili procedure guidate per ogni tipo di attività. Le autorizzazioni e gli account di accesso vengono creati o aggiornati automaticamente. È possibile controllare lo stato di ogni passaggio nella pagina Stato. Se si verifica un errore, è possibile fare clic sull'errore per visualizzare informazioni su come risolverlo.  
   
@@ -31,7 +30,7 @@ ms.locfileid: "71952314"
  Per aprire questa pagina, avviare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e fare clic su **Database** nel riquadro di navigazione. Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opzioni  
- **Nome server SQL**  
+ **Nome SQL Server**  
  In Database server di report corrente l'opzione **Nome SQL Server** specifica il nome dell'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] in cui è in esecuzione il database del server di report. È possibile utilizzare un'istanza predefinita o denominata su un computer locale o remoto.  
   
  **Nome database**  
@@ -47,7 +46,7 @@ ms.locfileid: "71952314"
  Consente di specificare le credenziali utilizzate dal server di report per eseguire la connessione al database. Tra i tipi di credenziali che è possibile specificare sono inclusi l'account del servizio, un utente di dominio di Windows o un account di accesso al database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per ulteriori informazioni sulla selezione delle credenziali, vedere [configurare una connessione del database del server di Report &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
  **Nome utente**  
- Consente di specificare un account utente di dominio se si utilizzano le credenziali di Windows oppure un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se si utilizzano le credenziali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se si utilizzano le credenziali di Windows, specificarle nel formato: * \<dominio>\\<account\>*.  
+ Consente di specificare un account utente di dominio se si utilizzano le credenziali di Windows oppure un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se si utilizzano le credenziali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se si utilizzano le credenziali di Windows, specificarle nel formato: * \<domain> \\<account \> *.  
   
  **Password**  
  Consente di specificare la password per l'account.  

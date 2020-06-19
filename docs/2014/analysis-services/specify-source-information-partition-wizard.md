@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b6c13587-c690-45d9-af90-b3d652afc55b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aca14c9462d847d91ae2b51dfdf179650ee06732
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a597d1f8f3b5720f2f7a688fdf2aabc7941a0ce1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068164"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940302"
 ---
 # <a name="specify-source-information-partition-wizard"></a>Impostazione informazioni origine (Creazione guidata partizione)
   Utilizzare la pagina **Impostazione informazioni origine** per selezionare il gruppo di misure in cui creare la partizione, nonché la vista origine dati e le tabelle di filtro per la partizione.  
@@ -48,7 +47,7 @@ ms.locfileid: "66068164"
 > [!NOTE]  
 >  Se sono selezionate più tabelle, non sarà possibile visualizzare la pagina **Limitazione righe** , né ridurre le righe per le partizioni create dalle tabelle specificate. Per limitare le righe per ogni partizione, eseguire la Creazione guidata partizione una volta per ogni tabella da cui deve essere creata la partizione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Partizioni &#40;Analysis Services - Dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 14b9cda05bca998bd113a316692c4c2c2111d091
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc9695e711379247590a849651bc6573bd2f04fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035067"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007024"
 ---
 # <a name="sqllogship-application"></a>Applicazione sqllogship
   L'applicazione **sqllogship** esegue un'operazione di backup, copia o ripristino e le attività di pulizia associate per una configurazione per il log shipping. L'operazione viene eseguita su una specifica istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per un database specifico.  
@@ -74,7 +73,7 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
   
  La cronologia di log shipping creata da **sqllogship** è intercalata dalla cronologia creata dai processi di backup, copia e ripristino del log shipping. Se si prevede di usare ripetutamente **sqllogship** per eseguire operazioni di backup, copia o ripristino per una configurazione per il log shipping, prendere in considerazione di disabilitare il processo o i processi per il log shipping corrispondenti. Per altre informazioni, vedere [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md).  
   
- L'applicazione **sqllogship** , sqllogship. exe, è installata nella directory X:\Programmi\Microsoft Files\Microsoft SQL Server\120\Tools\Binn  
+ L'applicazione **sqllogship** , SqlLogShip.exe, viene installata nella directory X:\Programmi\Microsoft Files\Microsoft SQL Server\120\Tools\Binn  
   
 ## <a name="permissions"></a>Autorizzazioni  
  **sqllogship** usa l'autenticazione di Windows. L'account con autenticazione di Windows utilizzato per l'esecuzione del comando deve disporre delle autorizzazioni di accesso alle directory di Windows e delle autorizzazioni per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Il requisito dipende dal fatto che il comando **sqllogship** specifichi l'opzione **-backup**, **-copy**oppure **-restore** .  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7fa6b709-e023-49c8-8f0d-b4476402cd73
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e011d1dc3f4690f78821a2bd47aced8e06b8e768
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb1feb9212a69106961d27702778dedb7965b40d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225854"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061862"
 ---
 # <a name="copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools"></a>Copia negli Appunti di un'immagine di un diagramma di database (Visual Database Tools)
   È possibile creare un'immagine di un diagramma di database e copiarla in un'altra applicazione.  

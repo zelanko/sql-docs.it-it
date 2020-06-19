@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 57941e52-374a-4c07-84eb-9899ff1bb119
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8ca32cdc72bb5c062be4c3745d3f742f39753afa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2423afc2a16751ddb60c6ca679a2ee21121d238
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62830405"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918271"
 ---
 # <a name="select-objects-to-transfer"></a>Selezione oggetti da trasferire
   Utilizzare questa finestra di dialogo per selezionare gli oggetti da trasferire tra due istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante un'attività di trasferimento di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  

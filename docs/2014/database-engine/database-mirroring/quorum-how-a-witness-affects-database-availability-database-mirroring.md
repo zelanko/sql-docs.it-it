@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 26abcc214c4f4304019bbc855379b56cab7cfc96
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a76d1d1c3621700028107fab87e40929332b14ee
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754406"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934015"
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quorum: Impatto di un server di controllo del mirroring sulla disponibilità del database (mirroring del database)
    Ogni volta che viene impostato un server di controllo del mirroring per una sessione di mirroring del database, è necessario che esista il *quorum*. Il quorum è una relazione esistente quando due o più istanze del server in una sessione di mirroring del database sono connesse l'una all'altra. In genere, un quorum coinvolge tre istanze del server interconnesse. Quando è impostato un server di controllo del mirroring, il quorum è necessario per rendere disponibile il database. Progettato per la modalità a protezione elevata con failover automatico, il quorum garantisce che un database sia di proprietà di un singolo partner alla volta.  
@@ -101,7 +100,7 @@ ms.locfileid: "62754406"
   
  Nello scenario 2 il server di controllo del mirroring perde il quorum, mentre i partner **Partner_A** e **Partner_B**mantengono il quorum l'uno nei confronti dell'altro e il database rimane online. Il quorum viene quindi perso anche dai partner e il database risulta offline. Il server principale, ovvero **Partner_A**, successivamente si riconnette al server di controllo del mirroring riottenendo il quorum. Il server di controllo del mirroring conferma che il ruolo di server principale appartiene ancora a **Partner_A** e **Partner_A** riattiva la modalità online per il database.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Modalità operative per il mirroring del database](database-mirroring-operating-modes.md)   
  [Cambio di ruolo durante una sessione di mirroring del database &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Server di controllo del mirroring del database](database-mirroring-witness.md)   

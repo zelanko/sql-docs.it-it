@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7e97197b-ed4d-40d1-9a52-9ab1d92401d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c0b0b8236187698917dddd3ca98830add6c3fde9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43dd1343a9d5b478a2258510657e9108f99c2dfa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245671"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84994882"
 ---
 # <a name="configure-wmi-to-show-server-status-in-sql-server-tools"></a>Configurazione di WMI per mostrare lo stato del server in Strumenti SQL Server
   In questo argomento viene descritto come configurare WMI per mostrare lo stato del server negli strumenti di SQL Server in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Durante la connessione ai server i componenti Server registrati e Esplora oggetti di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], nonché Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , utilizzano Strumentazione gestione Windows (WMI) per ottenere lo stato dei servizi [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (MSSQLSERVER) e [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent (MSSQLSERVER). Per visualizzare lo stato del servizio, l'utente deve disporre dei diritti per accedere in remoto all'oggetto WMI. Per configurare questa autorizzazione, nel server deve essere installato WMI.  
@@ -27,7 +26,7 @@ ms.locfileid: "63245671"
   
 1.  Scegliere **Esegui** dal menu **Start**nel server remoto.  
   
-2.  Nella casella **Apri** Digitare `wmimgmt.msc`, quindi fare clic su **OK**.  
+2.  Nella casella **Apri** Digitare `wmimgmt.msc` , quindi fare clic su **OK**.  
   
 3.  Nel programma **Windows Management Infrastructure** fare clic con il pulsante destro del mouse su **Controllo WMI (Locale)** e scegliere **Proprietà**.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "63245671"
   
 6.  Aggiungere un gruppo o un utente alla casella **Nomi utente o gruppo** e selezionarlo.  
   
-7.  Nella casella **autorizzazioni per**_\<gruppo o utente>_ selezionare la colonna **Consenti** per l'autorizzazione **Abilita remoto** per gli utenti per i quali si desidera rilevare in remoto lo stato del servizio.  
+7.  Nella casella **Autorizzazioni per** _\<group or user>_ , selezionare la colonna **Consenti** per l'autorizzazione **Abilita remoto** relativa agli utenti per i quali si vuole rilevare in remoto lo stato del servizio.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Avvio, arresto o sospensione del servizio SQL Server Agent](agent/start-stop-or-pause-the-sql-server-agent-service.md)  

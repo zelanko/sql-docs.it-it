@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f13a16e7c8f507914abe8529e02b76161072c5bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 168a343c208c7b9d98f3f03a802e40488602a7d0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035400"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007074"
 ---
 # <a name="sqllocaldb-utility"></a>Utilità SqlLocalDB
-  Utilizzare l' `SqlLocalDB` utilità per creare un'istanza del [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **database locale**. L' `SqlLocalDB` utilità (SqlLocalDB. exe) è un semplice strumento da riga di comando che consente a utenti e sviluppatori di creare e gestire [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]un'istanza del **database locale**. Per informazioni sull'uso del **database locale**, vedere [SQL Server 2014 Express](../database-engine/configure-windows/sql-server-2016-express-localdb.md)local DB.  
+  Utilizzare l' `SqlLocalDB` utilità per creare un'istanza del [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **database locale**. L' `SqlLocalDB` utilità (SqlLocalDB.exe) è un semplice strumento da riga di comando che consente a utenti e sviluppatori di creare e gestire un'istanza del [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **database locale**. Per informazioni sull'uso del **database locale**, vedere [SQL Server 2014 Express](../database-engine/configure-windows/sql-server-2016-express-localdb.md)local DB.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,8 +42,8 @@ SqlLocalDB.exe
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **create** | **c** ] *\<instance-name>* *\<instance-version>* [ **-s** ]  
- Crea una nuova istanza di **LocalDB** di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. `SqlLocalDB`Usa la versione dei [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] file binari specificati dall'argomento * \<>di versione dell'istanza* . Il numero di versione viene specificato in formato numerico con almeno un numero decimale. I numeri di versione secondari (Service Pack) sono facoltativi. Ad esempio, i due numeri di versione seguenti sono entrambi accettabili: 11.0 o 11.0.1186. La versione specificata deve essere installata nel computer. Se non è specificato, il numero di versione viene impostato per impostazione predefinita `SqlLocalDB` sulla versione dell'utilità. Aggiungere **-s** per avviare la nuova istanza di **LocalDB**.  
+ [ **Crea**  |  **c** ] *\<instance-name>* *\<instance-version>* [**-s** ]  
+ Crea una nuova istanza di **LocalDB** di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. `SqlLocalDB`Usa la versione dei [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] file binari specificati dall' *\<instance-version>* argomento. Il numero di versione viene specificato in formato numerico con almeno un numero decimale. I numeri di versione secondari (Service Pack) sono facoltativi. Ad esempio, i due numeri di versione seguenti sono entrambi accettabili: 11.0 o 11.0.1186. La versione specificata deve essere installata nel computer. Se non è specificato, il numero di versione viene impostato per impostazione predefinita sulla versione dell' `SqlLocalDB` utilità. Aggiungere **-s** per avviare la nuova istanza di **LocalDB**.  
   
  [ **share** | **h** ]  
  Condivide l'istanza privata specificata di **LocalDB** tramite il nome condiviso indicato. Se viene omesso il SID dell'utente o il nome dell'account, il valore predefinito è l'utente corrente.  
@@ -52,22 +51,22 @@ SqlLocalDB.exe
  [ **unshared** | **u** ]  
  Arresta la condivisione dell'istanza condivisa specificata di **LocalDB**.  
   
- [ **delete** | **d** ] *\<instance-name>*  
+ [ **Elimina**  |  **d** ]*\<instance-name>*  
  Elimina l'istanza specificata di **LocalDB** di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)].  
   
- [ **start** | **s** ] " *\<instance-name>* "  
+ [ **avvio**  |  **s** ] " *\<instance-name>* "  
  Avvia l'istanza specificata di **LocalDB** di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. Quando ha esito positivo, l'istruzione restituisce l'indirizzo della named pipe del **database locale**.  
   
- [ **stop** | **p** ] *\<instance-name>* [ **-i** ] [ **-k** ]  
- Arresta l'istanza specificata di **LocalDB** di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. L'aggiunta di **-i** richiede l'arresto dell' `NOWAIT` istanza con l'opzione. Aggiungere **-k** per terminare il processo dell'istanza senza contattarlo.  
+ [ **Arresta**  |  **p** ] *\<instance-name>* [**-i** ] [**-k** ]  
+ Arresta l'istanza specificata di **LocalDB** di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. L'aggiunta di **-i** richiede l'arresto dell'istanza con l' `NOWAIT` opzione. Aggiungere **-k** per terminare il processo dell'istanza senza contattarlo.  
   
- [ **info** | **i** ] [ *\<instance-name>* ]  
+ [ **informazioni**  |  **i** ] [ *\<instance-name>* ]  
  Elenca tutte le istanze di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** di proprietà dell'utente corrente.  
   
- *\<<instance-name>* restituisce il nome, la versione, lo stato (In esecuzione o Arrestato), l'ultima ora di inizio per l'istanza specificata di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** e il nome della pipe locale di **LocalDB**.  
+ *\<instance-name>* Restituisce il nome, la versione, lo stato (in esecuzione o arrestato), l'ultima ora di inizio per l'istanza specificata del [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **database**locale e il nome della pipe locale del **database**locale.  
   
  [ **trace** | **t** ] **on** | **off**  
- **Trace on** Abilita la traccia per `SqlLocalDB` le chiamate API per l'utente corrente. **trace off** disabilita la traccia.  
+ **Trace on** Abilita la traccia per le `SqlLocalDB` chiamate API per l'utente corrente. **trace off** disabilita la traccia.  
   
  **-?**  
  Restituisce brevi descrizioni di ogni `SqlLocalDB` opzione.  
@@ -111,7 +110,7 @@ EXIT
 sqlcmd -S (localdb)\.\DeptSharedLocalDB -U NewLogin -P Passw0rd!!@52  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server 2014 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)  
   
   

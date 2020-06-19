@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b99fb881fc6bf09aa848bd41a42f8254e5f3acd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0dafd98f721bfc2d2d0dd64a9f97689466529407
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754209"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933875"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>Risolvere i problemi relativi alla configurazione del mirroring del database (SQL Server)
   In questo argomento vengono fornite informazioni sulla risoluzione dei problemi relativi all'impostazione di una sessione di mirroring del database.  
@@ -28,7 +27,7 @@ ms.locfileid: "62754209"
 > [!NOTE]  
 >  Assicurarsi che vengano soddisfatti tutti i [prerequisiti per il mirroring del database](prerequisites-restrictions-and-recommendations-for-database-mirroring.md).  
   
-|Problema|Riepilogo|  
+|Problema|Summary|  
 |-----------|-------------|  
 |Messaggio di errore 1418|Questo messaggio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indica che l'indirizzo di rete del server non è raggiungibile o non esiste, pertanto si consiglia di controllare il nome dell'indirizzo di rete e quindi eseguire nuovamente il comando. Per altre informazioni, vedere l'argomento [MSSQLSERVER_1418](../../relational-databases/errors-events/mssqlserver-1418-database-engine-error.md) .|  
 |[Accounts](#Accounts)|Illustra i requisiti per la corretta configurazione degli account in cui viene eseguito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
@@ -164,7 +163,7 @@ ms.locfileid: "62754209"
   
  Per altre informazioni, vedere [Transazioni tra database non supportate per il mirroring del database o i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Impostazione del mirroring del database &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
  [Sicurezza del trasporto per il mirroring del database e Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)  
   

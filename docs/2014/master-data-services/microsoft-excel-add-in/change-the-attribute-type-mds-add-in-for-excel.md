@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4406eb225002bbf5df93f8c67385694922d7d2c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81349af5984f7fafda863f0091cae3375f3dd8d5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482758"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961461"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>Modificare il tipo di attributo (componente aggiuntivo MDS per Excel)
   Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]gli amministratori possono modificare il tipo di attributo quando il tipo di dati o il numero di caratteri consentiti non è corretto.  
@@ -72,7 +71,7 @@ ms.locfileid: "65482758"
 > [!TIP]  
 >  Modificare i tipi di dati per gli attributi MDS con dati esistenti ed entità correlate è un'operazione complessa, soprattutto se è presente una regola business o una vista sottoscrizioni dichiarata che dipende dall'entità. La procedura consigliata consiste nell'iniziare con un tipo di dati sufficientemente flessibile per contenere i valori necessari. Ad esempio, le stringhe potrebbero essere brevi inizialmente, ma con il tempo potrebbe essere necessario allungarle, quindi è consigliabile considerare il peggiore dei casi. Una lunghezza aggiuntiva della stringa di testo può essere gravosa, ad esempio le caselle di testo di grandi dimensioni della GUI sono difficili da adattare alla schermata, quindi è opportuno evitare stringhe troppo lunghe.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Attributi &#40;Master Data Services&#41;](../attributes-master-data-services.md)   
  [Compilazione di un modello &#40;componente aggiuntivo MDS per Excel&#41;](building-a-model-mds-add-in-for-excel.md)  
   

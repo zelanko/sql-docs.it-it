@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bbcea29ad75eb84b9c8099e5998e307ecbd7943c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 142cef139d315d3db492651716c2ec8fb9b6e03c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62895030"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968491"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>Esecuzione di query su Active Directory tramite l'attività Script
   Le applicazioni di elaborazione di dati aziendali, ad esempio i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], devono in genere elaborare i dati in modo diverso a seconda del grado, della posizione o di altre caratteristiche dei dipendenti archiviati in Active Directory. Active Directory è un servizio directory di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows che rende disponibile un archivio centralizzato di metadati sugli utenti e su altre risorse dell'organizzazione, come computer e stampanti. Lo spazio dei nomi `System.DirectoryServices` in Microsoft .NET Framework fornisce le classi per l'utilizzo di Active Directory, che consente di indirizzare il flusso di lavoro dell'elaborazione dei dati in base alle informazioni archiviate.  
@@ -37,7 +36,7 @@ ms.locfileid: "62895030"
   
 1.  Creare le tre variabili stringa `email`, `name` e `title`. Immettere un indirizzo di posta elettronica aziendale valido come valore della variabile `email`.  
   
-2.  Nella pagina **script** dell' **Editor attività script**aggiungere la `email` variabile alla `ReadOnlyVariables` proprietà.  
+2.  Nella pagina **script** dell' **Editor attività script**aggiungere la `email` variabile alla `ReadOnlyVariables` Proprietà.  
   
 3.  Aggiungere le variabili `name` e `title` alla proprietà `ReadWriteVariables`.  
   
