@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 8959b1ca4ea719ce571cb8609b817bba965185bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c69caf370d454c708484a61576716c213663f3d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798326"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054695"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>Installazione di PowerPivot dal prompt dei comandi
   È possibile eseguire il programma di installazione dalla riga di comando per installare SQL Server PowerPivot per SharePoint. È necessario includere il parametro `/ROLE` nel comando ed escludere il parametro `/FEATURES`.  
@@ -41,7 +40,7 @@ ms.locfileid: "72798326"
  A differenza delle versioni precedenti, tutte le attività di configurazione del server vengono eseguite successivamente all'installazione. In caso di automazione delle procedure di installazione e configurazione, è possibile utilizzare PowerShell per configurare il server. Per ulteriori informazioni, vedere [configurazione di PowerPivot mediante Windows PowerShell](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell).  
   
 ## <a name="example-commands"></a>Comando di esempio  
- Negli esempi seguenti viene illustrato l'utilizzo di ogni opzione. Nell'esempio 1 `SPI_AS_ExistingFarm`viene illustrato.  
+ Negli esempi seguenti viene illustrato l'utilizzo di ogni opzione. Nell'esempio 1 viene illustrato `SPI_AS_ExistingFarm` .  
   
 ```cmd
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
@@ -80,7 +79,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
     /PID=<product key for an Enterprise installation>  
     ```  
   
-3.  Sostituire i segnaposto per \<dominio\nomeutente> e \<strongpassword>con account utente e password validi.  
+3.  Sostituire i segnaposto per \<domain\username> e \<StrongPassword> con account utente e password validi.  
   
      I `/assvaccount` parametri e **/ASSVCPASSWORD** vengono utilizzati per configurare l' [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] istanza nel server applicazioni. Sostituire questi segnaposto con informazioni sull'account valide.  
   

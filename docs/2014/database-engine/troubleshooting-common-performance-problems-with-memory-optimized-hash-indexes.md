@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1954a997-7585-4713-81fd-76d429b8d095
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d7ed4098feb8bfd2d156e3de2f81fbf7329915aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ebf3f066dec03ba9e9f74dfdf551ccaababf032
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62842536"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927972"
 ---
 # <a name="troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes"></a>Risoluzione dei problemi comuni di prestazioni con gli indici hash con ottimizzazione per la memoria
   In questo argomento verrà presentata la risoluzione di problemi comuni relativi agli indici hash.  
@@ -25,7 +24,7 @@ ms.locfileid: "62842536"
   
  Al contrario, gli indici ordinati, come gli indici non cluster basati su disco e gli indici non cluster ottimizzati per la memoria supportano la ricerca nell'indice in un subset di colonne chiave di indice, purché siano colonne iniziali nell'indice.  
   
- **Sintomo:** Ciò comporta una riduzione delle prestazioni, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] quanto è necessario eseguire scansioni di tabella complete anziché una ricerca nell'indice, che in genere è un'operazione più veloce.  
+ **Sintomo:** Ciò comporta una riduzione delle prestazioni, in quanto [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è necessario eseguire scansioni di tabella complete anziché una ricerca nell'indice, che in genere è un'operazione più veloce.  
   
  **Come risolvere i problemi:** Oltre alla riduzione delle prestazioni, l'ispezione dei piani di query mostrerà un'analisi anziché una ricerca nell'indice. Se la query è relativamente semplice, l'analisi del testo della query e della definizione dell'indice indicherà se la ricerca richiede un subset delle colonne chiave di indice.  
   
@@ -72,7 +71,7 @@ WITH (MEMORY_OPTIMIZED = ON)
   
  Si noti che le prestazioni di un indice hash ottimizzato per la memoria non sono ottimali se sono presenti molte righe duplicate per un determinato valore di chiave di indice: nell'esempio, se il numero di valori univoci per la colonna o_id è molto minore del numero di righe nella tabella, non è ottimale aggiungere un indice su (o_id); in alternativa, la modifica del tipo dell'indice PK_od da hash a non cluster potrebbe essere la soluzione migliore. Per ulteriori informazioni, vedere [Determining the Correct Bucket Count for Hash Indexes](../relational-databases/indexes/indexes.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Indici in tabelle con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e38cc3a111eb68688fcc9c30ef01bb607349afcb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d0aefc34ace8c8ec9d78780778007dc5b9f134ec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022229"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068561"
 ---
 # <a name="oracle-subscribers"></a>Sottoscrittori Oracle
   A partire da [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta le sottoscrizioni push a Oracle tramite il provider Oracle OLE DB fornito da Oracle.  
@@ -123,7 +122,7 @@ ms.locfileid: "63022229"
 |`nvarchar(1-1000)`|VARCHAR2(1-2000)|  
 |`nvarchar(1001-4000)`|NCLOB|  
 |`nvarchar(max)`|NCLOB|  
-|`real`|real|  
+|`real`|REAL|  
 |`smalldatetime`|DATE|  
 |`smallint`|NUMBER(5,0)|  
 |`smallmoney`|NUMBER(10,4)|  
@@ -142,7 +141,7 @@ ms.locfileid: "63022229"
 |`varchar(max)`|CLOB|  
 |`xml`|NCLOB|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
  [Subscribe to Publications](../subscribe-to-publications.md)  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6c816c68-c6d6-44e4-bb34-c8e060a958a1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f2534aef1fedb2a7991c5d2e0341e46711cc7b55
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ee8ee285d395425e925f2d5ec1e8a169d4ac5fa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62830415"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918411"
 ---
 # <a name="notify-operator-task"></a>Notifica operatori - attività
   L'attività Notifica operatori consente di inviare messaggi di notifica agli operatori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Un operatore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è l'alias di una persona o di un gruppo che può ricevere notifiche elettroniche. Per altre informazioni sugli operatori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Operatori](../../ssms/agent//operators.md).  

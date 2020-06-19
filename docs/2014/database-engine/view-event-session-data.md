@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ac742a01-2a95-42c7-b65e-ad565020dc49
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e2fecf8a71854d7f8df160ba3ff63912086a34e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e60fdb986e24c2fa682caaf56ad7209ca555c966
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67131796"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927632"
 ---
 # <a name="view-event-session-data"></a>Visualizzare i dati della sessione eventi
   In questo argomento verrà descritto l'utilizzo dell'interfaccia utente visualizzata per vedere e analizzare i dati degli eventi estesi:  
@@ -44,9 +43,9 @@ ms.locfileid: "67131796"
   
 -   Per una destinazione event_file, visualizzare i dati di destinazione del file (file XEL) utilizzando uno dei metodi seguenti:  
   
-    -   Usare file > Apri in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
+    -   Usare file > Apri in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] .
     
-    -   Trascinare e rilasciare il file in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. 
+    -   Trascinare e rilasciare il file in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . 
     
     -   Fare doppio clic sul file XEL.  
     
@@ -147,7 +146,7 @@ ms.locfileid: "67131796"
   
 -   Sum  
   
--   Min  
+-   min  
   
 -   max  
   
@@ -219,7 +218,7 @@ ms.locfileid: "67131796"
   
 -   File XEL  
   
--   tabella  
+-   table  
   
 -   File CSV  
   

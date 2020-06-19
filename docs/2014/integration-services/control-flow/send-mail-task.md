@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3308899190aa63ebb9be93c4c9af15d5e0f94600
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 701416b401d428cda9fe0e78b9219dfb2ef53167
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62830395"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918211"
 ---
 # <a name="send-mail-task"></a>Invia messaggi - attività
   L'attività Invia messaggi consente di inviare un messaggio di posta elettronica. Tramite l'attività Invia messaggi un pacchetto può inviare messaggi quando le attività nel flusso di lavoro del pacchetto vengono completate o non riescono oppure in risposta a un evento generato dal pacchetto in fase di esecuzione. È ad esempio possibile utilizzare questa attività per notificare all'amministratore di un database l'esito positivo o negativo dell'attività Backup database.  
@@ -86,7 +85,7 @@ ms.locfileid: "62830395"
   
 -   Articolo tecnico relativo all' [invio della posta elettronica con notifica di recapito in C#](https://go.microsoft.com/fwlink/?LinkId=237625)su shareourideas.com  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Attività Integration Services](integration-services-tasks.md)   
  [Flusso di controllo](control-flow.md)  
   

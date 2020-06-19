@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 0ad77fd5-95bf-4da3-9797-c1e1b9a1102e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4b65f5a5d337877010c4704b6ac067ced655e99f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2237c11e848d25a4b081f68a1969a2b496b3dd4e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62662072"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062075"
 ---
 # <a name="options-environment-keyboard-page"></a>Opzioni (ambiente-pagina tastiera)
   La finestra di dialogo **Opzioni** consente di personalizzare lo schema della tastiera per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Utilizzare questa opzione per scegliere uno schema della tastiera. Per accedere alla pagina, scegliere **Opzioni** dal menu **Strumenti** , selezionare la cartella **Ambiente** e quindi fare clic su **Tastiera**.  

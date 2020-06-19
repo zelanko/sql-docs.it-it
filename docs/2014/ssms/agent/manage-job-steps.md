@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 27dfa9f596d63021eb5f22b2e0b25a306e7fa2b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7362df13956e44b73d6984691e882bec2f39a1e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798215"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062226"
 ---
 # <a name="manage-job-steps"></a>Gestire passaggi di processo
   Un passaggio di processo è un'operazione eseguita dal processo in un database o in un server. Ogni processo deve essere composto da almeno un passaggio. I passaggi di processo possono essere costituiti dagli elementi seguenti:  
@@ -101,7 +100,7 @@ ms.locfileid: "72798215"
   
 -   Un file script di PowerShell esistente da aprire.  
   
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottosistema PowerShell di Agent apre una sessione di PowerShell e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] carica gli snap-in di PowerShell. Lo script di PowerShell usato come comando per il passaggio di processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può fare riferimento al provider e ai cmdlet di PowerShell. Per altre informazioni sulla scrittura di script di PowerShell tramite gli snap-in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, vedere [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
+ Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottosistema PowerShell di Agent apre una sessione di PowerShell e carica gli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] snap-in di PowerShell. Lo script di PowerShell usato come comando per il passaggio di processo può fare riferimento al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider e ai cmdlet di PowerShell. Per altre informazioni sulla scrittura di script di PowerShell tramite gli snap-in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, vedere [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
   
 ## <a name="activex-scripting-job-steps"></a>Utilizzo di Script ActiveX come passaggi di processo  
   
@@ -199,7 +198,7 @@ Set oServer = nothing
 |||  
 |-|-|  
 |**Descrizione**|**Argomento**|  
-|Viene descritto come creare un passaggio di processo con un programma eseguibile.|[Create a CmdExec Job Step](create-a-cmdexec-job-step.md)|  
+|Viene descritto come creare un passaggio di processo con un programma eseguibile.|[Creare un passaggio di processo CmdExec](create-a-cmdexec-job-step.md)|  
 |Viene descritto come reimpostare le autorizzazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Configure a User to Create and Manage SQL Server Agent Jobs](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |Viene descritto come creare un passaggio di processo di [!INCLUDE[tsql](../../includes/tsql-md.md)] Agent.|[Create a Transact-SQL Job Step](create-a-transact-sql-job-step.md)|  
 |Viene descritto come definire le opzioni per i passaggi di processo Transact-SQL di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Definire le opzioni del passaggio di processo Transact-SQL](define-transact-sql-job-step-options.md)|  
@@ -210,6 +209,6 @@ Set oServer = nothing
 |Viene descritto come eliminare un log dei passaggi di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Delete a Job Step Log](delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [dbo. nella sysjobstepslogs &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
+ [dbo.sysjobstepslogs &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
  [Creazione di processi](create-jobs.md)   
  [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  

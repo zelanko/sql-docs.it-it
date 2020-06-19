@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d8e70541-d563-4ce4-bf66-bc888a0d3026
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 03d8cdb35372ed9850f3329f26e2647e018d9583
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 317748ee2e5df7f64c15afd5f4d5661a739f4f88
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060296"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917511"
 ---
 # <a name="copy-column-transformation-editor"></a>Editor trasformazione Copia colonna
   La finestra di dialogo **Editor trasformazione Copia colonna** consente di selezionare le colonne da copiare e di assegnare nomi alle nuove colonne di output.  
@@ -39,7 +38,7 @@ ms.locfileid: "66060296"
  **Alias di output**  
  Consente di digitare un alias per ogni colonna di output. Per impostazione predefinita viene suggerito **Copia di**seguito dal nome della colonna di input. È comunque possibile scegliere qualsiasi nome descrittivo univoco.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

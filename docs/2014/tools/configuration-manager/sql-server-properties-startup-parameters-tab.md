@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5ab3d9e9e4178b1ee2e10e5be63f0ea9252fd4a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f45a017ab1d04643b4bc85454f9dfe0db0d17792
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62679164"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000517"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Proprietà di SQL Server (scheda Parametri di avvio)
   Utilizzare questa finestra di dialogo per aggiungere o rimuovere parametri di avvio per [!INCLUDE[ssDE](../../includes/ssde-md.md)]. I parametri di avvio possono avere un effetto significativo sulle prestazioni di [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Prima di aggiungere o modificare i parametri di avvio, vedere l'argomento "Utilizzo delle opzioni di avvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 12050c8d2e5d440ef8f4d7f6584f6c08c210f4f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a26aca7b33a7355500350572ea5e8ed21bddeacb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250592"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068714"
 ---
 # <a name="replication-snapshot-agent"></a>Agente snapshot repliche
   Agente snapshot repliche è un file eseguibile che consente di preparare i file di snapshot contenenti lo schema e i dati delle tabelle pubblicate e degli oggetti di database, di archiviare i file nella cartella snapshot e di registrare i processi di sincronizzazione nel database di distribuzione.  
@@ -138,7 +137,7 @@ ms.locfileid: "63250592"
  Per ulteriori informazioni, vedere [replica di SQL Server sicurezza](../security/view-and-modify-replication-security-settings.md).  
   
  **-FieldDelimiter** _field_delimiter_  
- Carattere o sequenza di caratteri che contrassegna la fine di un campo nel file di dati di copia bulk [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Il valore predefinito è \n\<x$3>\n.  
+ Carattere o sequenza di caratteri che contrassegna la fine di un campo nel file di dati di copia bulk [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Il valore predefinito è \n \<x$3> \n.  
   
  **-HistoryVerboseLevel** [ **1**| **2**| **3**]  
  Specifica la quantità di cronologia registrata durante un'operazione snapshot. Per ridurre al minimo l'effetto della registrazione della cronologia sulle prestazioni, selezionare **1**.  
@@ -181,7 +180,7 @@ ms.locfileid: "63250592"
  Indica se le eliminazioni irrilevanti vengono inviate al Sottoscrittore. Le eliminazioni irrilevanti sono comandi DELETE inviati ai Sottoscrittori per righe che non appartengono alla partizione del Sottoscrittore. Le eliminazioni irrilevanti non influiscono sulla convergenza o sull'integrità dei dati, ma possono comportare traffico di rete non necessario. Il valore predefinito di **MaxNetworkOptimization** è **0**. Impostando **MaxNetworkOptimization** su **1** è possibile ridurre al minimo le possibilità di eliminazioni irrilevanti, riducendo pertanto il traffico e ottimizzando le prestazioni di rete. L'impostazione di questo parametro su **1** comporta inoltre l'aumento dell'archiviazione di metadati e può provocare una riduzione delle prestazioni nel server di pubblicazione se sono presenti più livelli di filtri di join e filtri di subset complessi. Valutare inoltre attentamente la topologia di replica e impostare **MaxNetworkOptimization** su **1** solo se il traffico di rete dovuto a eliminazioni irrilevanti è eccessivo.  
   
 > [!NOTE]
->  L'impostazione di questo parametro su **1** è utile solo quando l'opzione di ottimizzazione della sincronizzazione della pubblicazione di tipo merge è **@keep_partition_changes** impostata su **true** (il parametro di [sp_addmergepublication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)).  
+>  L'impostazione di questo parametro su **1** è utile solo quando l'opzione di ottimizzazione della sincronizzazione della pubblicazione di tipo merge è impostata su **true** (il **@keep_partition_changes** parametro di [sp_addmergepublication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)).  
   
  **-Output** _output_path_and_file_name_  
  Percorso del file di output dell'agente. Se non viene specificato il nome file, l'output viene inviato alla console. Se il nome file specificato esiste già, l'output viene aggiunto al file.  
@@ -243,10 +242,10 @@ ms.locfileid: "63250592"
  Specifica il tipo di replica. Un valore **1** indica la replica transazionale, mentre un valore **2** indica la replica di tipo merge.  
   
  **-RowDelimiter** _row_delimiter_  
- Carattere o sequenza di caratteri che contrassegna la fine di una riga nel file di dati di copia bulk [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Il valore predefinito è \n\<,@g>\n.  
+ Carattere o sequenza di caratteri che contrassegna la fine di una riga nel file di dati di copia bulk [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Il valore predefinito è \n \<,@g> \n.  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- Numero massimo di secondi di attesa da parte del agente di snapshot quando il numero di processi di snapshot dinamici simultanei in esecuzione è al limite impostato dalla **@max_concurrent_dynamic_snapshots** proprietà di [Sp_addmergepublication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Se viene raggiunto il numero massimo di secondi e l'agente snapshot è ancora in attesa, si chiude. Un valore 0 indica che l'agente attende indefinitamente, sebbene possa essere annullato.  
+ Numero massimo di secondi di attesa da parte del agente di snapshot quando il numero di processi di snapshot dinamici simultanei in esecuzione è al limite impostato dalla **@max_concurrent_dynamic_snapshots** proprietà di [sp_addmergepublication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Se viene raggiunto il numero massimo di secondi e l'agente snapshot è ancora in attesa, si chiude. Un valore 0 indica che l'agente attende indefinitamente, sebbene possa essere annullato.  
   
  \- **UsePerArticleContentsView** _use_per_article_contents_view_  
  Questo parametro è deprecato ed è ancora supportato solo per garantire la compatibilità con le versioni precedenti.  

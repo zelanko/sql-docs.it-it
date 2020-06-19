@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d0fa941-f9ea-4a14-aed9-34df593fc6f2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c0cabfb4cd21de54dad2be1323fd29d8bb3bf076
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a73af1c1f3a7196d87f77681ee9d62a3ef248a4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62629723"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068777"
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>Amministrazione di una topologia peer-to-peer (programmazione Transact-SQL della replica)
   L'amministrazione di una topologia peer-to-peer è simile all'amministrazione di una tipica topologia di replica transazionale, sebbene diverse aree richiedano speciali considerazioni. La differenza principale nell'amministrazione di una topologia peer-to-peer consiste nella necessità di mettere il sistema in *stato di inattività*in caso di determinate modifiche. Mettere in stato di inattività un sistema significa arrestare le attività sulle tabelle pubblicate in tutti i nodi e verificare che ogni nodo abbia ricevuto tutte le modifiche dagli altri nodi. Per altre informazioni, vedere [Come mettere una topologia di replica in stato di inattività &#40;programmazione Transact-SQL della replica&#41;](quiesce-a-replication-topology-replication-transact-sql-programming.md).  
@@ -61,9 +60,9 @@ ms.locfileid: "62629723"
   
  [!code-sql[HowTo#sp_addp2particle_createarticle](../../../snippets/tsql/SQL15/replication/howto/tsql/addp2particle.sql#sp_addp2particle_createarticle)]  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Domande frequenti sull'amministrazione della replica](frequently-asked-questions-for-replication-administrators.md)   
- [Backup e ripristino di database di SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [Backup e ripristino di database SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Replica transazionale peer-to-peer](../transactional/peer-to-peer-transactional-replication.md)  
   
   

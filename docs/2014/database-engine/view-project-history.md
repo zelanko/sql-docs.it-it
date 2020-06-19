@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: be0ea2ac-4a35-429c-9c9e-4001ea9035a4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8be44100e733833c0982f46965544f8e34e57db0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a595df602a6506f96d9f645dadecb14c5d5f4b2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773497"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927384"
 ---
 # <a name="view-project-history"></a>Visualizzare cronologia progetti
   Nella cronologia di un progetto di [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe (VSS) è incluso un elenco di tutte le azioni eseguite su ognuno dei file del progetto, ad esempio la creazione, l'aggiunta, l'eliminazione e il recupero di file.  
@@ -36,7 +35,7 @@ ms.locfileid: "62773497"
   
 2.  Scegliere **controllo del codice sorgente** dal menu **file** e fare clic su **Visualizza cronologia**.  
   
-3.  Nella finestra **di dialogo cronologia del** \<progetto> eseguire una delle azioni seguenti:  
+3.  Nella finestra **di dialogo cronologia di** \<Project> eseguire una delle azioni seguenti:  
   
     -   Visualizzare una copia del sistema di controllo del codice sorgente di un file selezionato.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "62773497"
   
     -   Esportare il report della cronologia su una stampante, su un file o negli Appunti.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Impostare e recuperare le informazioni sulla versione](../../2014/database-engine/set-and-retrieve-version-information.md)   
  [Visualizza stato file](../../2014/database-engine/view-file-status.md)   
  [Recuperare i file](../../2014/database-engine/retrieve-files.md)   

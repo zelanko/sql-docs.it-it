@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 27964211-ea30-4390-b791-dcf225fb9ae7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 414b26cf860ab32bb11beaa1ccbef3316c68f557
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ba48ed2bd80961a4949dc13f04fed0637ecc27ec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093365"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054682"
 ---
 # <a name="read-only-databases-cannot-be-upgraded"></a>Non è possibile aggiornare database di sola lettura
   Alcuni database di questa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non possono essere aggiornati.  
@@ -29,7 +28,7 @@ ms.locfileid: "66093365"
  È stato rilevato un database di sola lettura. Per aggiornare il database, è necessario che sia accessibile in scrittura dal programma di installazione.  
   
 ## <a name="corrective-action"></a>Azione correttiva  
- Quando nessuno utilizza il database, utilizzare l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istruzione di Enterprise Manager, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]o alter database per modificare il database in lettura/scrittura. Per impostare il database in lettura/scrittura, utilizzare l'istruzione seguente.  
+ Quando nessuno utilizza il database, utilizzare l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istruzione di Enterprise Manager, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o alter database per modificare il database in lettura/scrittura. Per impostare il database in lettura/scrittura, utilizzare l'istruzione seguente.  
   
 ```  
 USE master;  
@@ -41,7 +40,7 @@ GO
   
  Per ulteriori informazioni sull'istruzione ALTER DATABASE, vedere l'argomento "ALTER DATABASE ([!INCLUDE[tsql](../../includes/tsql-md.md)])" argomento nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Problemi di aggiornamento motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [SQL Server 2014 preparazione aggiornamento &#91;nuova&#93;](sql-server-2014-upgrade-advisor.md)  
   

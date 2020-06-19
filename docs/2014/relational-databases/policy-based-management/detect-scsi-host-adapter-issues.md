@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 75225b64-c102-4f1b-888a-fe72710dbfcd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4762b2aec13821402c8b38bd5da207855fd1ea76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eda91751ecde2dd1282453759ba66f8483b755f0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62705109"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068857"
 ---
 # <a name="detect-scsi-host-adapter-issues"></a>Rilevamento dei problemi relativi all'adattatore host SCSI
   Questa regola consente di controllare l'evento con ID 1066 nel registro eventi di sistema. Questo errore è dovuto a problemi di configurazione dell'adattatore host SCSI o da un funzionamento non corretto del dispositivo.  

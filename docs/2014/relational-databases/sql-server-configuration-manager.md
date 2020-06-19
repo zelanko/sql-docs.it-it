@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 123f0fcececee98826bf70b929a9857bbaff32dc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2ec44d192f688e25f2c9a12452de141eca7ca22
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044456"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068372"
 ---
 # <a name="sql-server-configuration-manager"></a>Gestione configurazione SQL Server
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è uno strumento che consente di gestire i servizi associati a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], di configurare i protocolli di rete utilizzati da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]e di gestire la configurazione della connettività di rete da computer client [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Gestione configurazione è uno snap-in di [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console disponibile tramite il menu Start o che può essere aggiunto a qualsiasi altra visualizzazione di [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console. [!INCLUDE[msCoName](../includes/msconame-md.md)]Management Console (MMC. exe) utilizza il file SQLServerManager10. msc nella cartella system32 di Windows per aprire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è uno strumento che consente di gestire i servizi associati a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], di configurare i protocolli di rete utilizzati da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]e di gestire la configurazione della connettività di rete da computer client [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Gestione configurazione è uno snap-in di [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console disponibile tramite il menu Start o che può essere aggiunto a qualsiasi altra visualizzazione di [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console. [!INCLUDE[msCoName](../includes/msconame-md.md)]La console di gestione (mmc.exe) usa il file SQLServerManager10. msc nella cartella system32 di Windows per aprire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager.  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Gestione configurazione e SQL Server Management Studio usano Strumentazione gestione Windows (WMI) per la visualizzazione e la modifica di alcune impostazioni server. WMI offre una modalità unificata di interfacciamento con le chiamate API che gestiscono le operazioni del Registro di sistema richieste dagli strumenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e per fornire un controllo e una manipolazione avanzati dei servizi SQL selezionati del componente snap-in Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per informazioni sulla configurazione delle autorizzazioni relative a WMI, vedere [Configurazione di WMI per mostrare lo stato del server in Strumenti SQL Server](../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md).  
   
@@ -37,9 +36,9 @@ ms.locfileid: "63044456"
 >  Poiché Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è uno snap-in per il programma [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console e non un programma autonomo, Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non viene visualizzato come applicazione nelle versioni più recenti di Windows.  
 > 
 >  -   **Windows 10**:  
->          Per aprire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, nella **pagina iniziale**digitare SQLServerManager12. msc (per [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]). Per le versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , sostituire 12 con un numero inferiore. Se si fa clic su SQLServerManager12.msc, viene aperto Gestione configurazione. Per aggiungere la Configuration Manager alla pagina iniziale o alla barra delle applicazioni, fare clic con il pulsante destro del mouse su SQLServerManager12. msc, quindi scegliere **Apri percorso file**. In Esplora file di Windows fare clic con il pulsante destro del mouse su SQLServerManager12. msc, quindi scegliere **Aggiungi a Start** o **Aggiungi alla barra delle applicazioni**.  
+>          Per aprire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, nella **pagina iniziale**digitare SQLServerManager12. msc (per [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] ). Per le versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , sostituire 12 con un numero inferiore. Se si fa clic su SQLServerManager12.msc, viene aperto Gestione configurazione. Per aggiungere la Configuration Manager alla pagina iniziale o alla barra delle applicazioni, fare clic con il pulsante destro del mouse su SQLServerManager12. msc, quindi scegliere **Apri percorso file**. In Esplora file di Windows fare clic con il pulsante destro del mouse su SQLServerManager12. msc, quindi scegliere **Aggiungi a Start** o **Aggiungi alla barra delle applicazioni**.  
 > -   **Windows 8**.  
->          Per aprire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, nell'accesso alla **ricerca** in **app**digitare **SQLServerManager\<Version>. msc** , ad esempio `SQLServerManager12.msc`, quindi premere **invio**.  
+>          Per aprire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, nell'accesso alla **ricerca** , in **app**digitare **SQLServerManager \<version> . msc** , ad esempio `SQLServerManager12.msc` , quindi premere **invio**.  
   
  Per avviare, arrestare, sospendere, riprendere o configurare i servizi in un altro computer tramite Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vedere [Connessione a un altro computer &#40;Gestione configurazione SQL Server&#41;](../database-engine/configure-windows/scm-services-connect-to-another-computer.md).  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e965579e-d006-41a3-89ec-cfd5398c67d2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0cd08ce16341022072c76fc1bf073d1a469d9273
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e263b0e38da7e5f5aa422f898f2118469b2ed4c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192909"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000366"
 ---
 # <a name="filter-events-based-on-the-event-start-time-sql-server-profiler"></a>Filtrare gli eventi in base all'ora di inizio (SQL Server Profiler)
   In questo argomento viene descritta la procedura per filtrare gli eventi di traccia in base all'ora di inizio mediante [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

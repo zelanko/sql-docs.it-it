@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9b307c48da04e32691afa12ff1b05f6a4e8c33d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15cea1ab511324cad52ed197f9f612bbedb2b162
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62897465"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969171"
 ---
 # <a name="literals-ssis"></a>Valori letterali (SSIS)
   Le espressioni possono includere valori letterali numerici, stringa e booleani. L'analizzatore di espressioni supporta un'ampia gamma di valori letterali numerici, quali costanti intere, decimali e a virgola mobile. Supporta inoltre i suffissi per valori di tipo long e float, che specificano come gestire tali valori, e la notazione scientifica nei valori letterali numerici.  
@@ -97,7 +96,7 @@ ms.locfileid: "62897465"
   
  Le stringhe possono includere altri caratteri che richiedono una sequenza di escape. Le sequenze di escape per i valori letterali stringa sono elencate nella tabella seguente.  
   
-|Sequenza di escape|Descrizione|  
+|Sequenza di escape|Description|  
 |---------------------|-----------------|  
 |\a|Avviso|  
 |\b|Backspace|  

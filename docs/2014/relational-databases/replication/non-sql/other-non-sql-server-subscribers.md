@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 135d317d74a720d51c966ed92f1c305f8c04b838
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0e6a01bfc16041db89ea6160c36af1a7536290ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021943"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068544"
 ---
 # <a name="other-non-sql-server-subscribers"></a>Altri Sottoscrittori non SQL Server
   Per un elenco di Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supportati da [!INCLUDE[msCoName](../../../includes/msconame-md.md)], vedere [Non-SQL Server Subscribers](non-sql-server-subscribers.md). In questo argomento vengono fornite informazioni sui requisiti per i driver ODBC e i provider OLE DB.  
@@ -113,7 +112,7 @@ ms.locfileid: "63021943"
   
  Per ulteriori informazioni sul provider OLE DB, vedere la relativa documentazione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Non-SQL Server Subscribers](non-sql-server-subscribers.md)  
   
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 481bb43d-6fe5-497c-9096-971fb6bf733b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8e04ec8fa809f4bea8c19e2e0167b943767224c6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 41735f374b811df4400282cbdde67e914ef7ec67
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62705332"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068841"
 ---
 # <a name="disable-lightweight-pooling"></a>Disabilitazione di lightweight pooling
   Questa regola consente di controllare che l'opzione lightweight pooling sia disabilitata nel server. Se si imposta lightweight pooling su 1, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] passerà alla pianificazione in modalità fiber. La modalità fiber deve essere utilizzata in situazioni specifiche in cui il cambio di contesto dei thread di lavoro UMS costituisce un importante collo di bottiglia per le prestazioni. Poiché questa situazione è poco frequente, la modalità fiber consente raramente di ottimizzare le prestazioni o la scalabilità in un sistema tipico.  

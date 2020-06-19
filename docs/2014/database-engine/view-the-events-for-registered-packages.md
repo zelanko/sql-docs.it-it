@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9a90b1a2-aa69-43f6-bdeb-cc5f57a26c6f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1156a7272edc8ad1ecfb8e173f81bc678800c855
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e3665a695bd3f40407a8680872c9b0dc79fbc53
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089624"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927393"
 ---
 # <a name="view-the-events-for-registered-packages"></a>Visualizzare gli eventi per i pacchetti registrati
   Prima di creare una sessione degli eventi estesi di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , è utile individuare gli eventi disponibili nei pacchetti registrati. Per ulteriori informazioni, vedere [SQL Server Extended Events Packages](../relational-databases/extended-events/sql-server-extended-events-packages.md).  
@@ -70,7 +69,7 @@ ms.locfileid: "66089624"
     ORDER BY keyword desc, channel, event  
     ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server pacchetti di eventi estesi](../relational-databases/extended-events/sql-server-extended-events-packages.md)   
  [sys. dm_xe_objects &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)   
  [sys.dm_xe_packages &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-packages-transact-sql)  

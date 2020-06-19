@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 050242e1-9b79-4ade-91a9-580707b9d2d9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9fa238a639321e9464ca3de2cc074b516f7df1e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8e19977300bc32bf832028b0d7e060fbaeb1665
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63246001"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062126"
 ---
 # <a name="specify-job-responses"></a>Specifica delle risposte ai processi
   Le risposte ai processi specificano azioni che verranno eseguite dal servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent al termine di un processo. Tramite le risposte ai processi gli amministratori del database vengono informati in merito al completamento e alla frequenza di esecuzione dei processi. Le risposte ai processi tipiche includono:  
@@ -45,7 +44,7 @@ ms.locfileid: "63246001"
 |Viene descritto come notificare lo stato del processo a un operatore.|[Notify an Operator of Job Status](notify-an-operator-of-job-status.md)|  
 |Viene descritto come scrivere lo stato del processo nel registro applicazioni di Windows.|[Registrare lo stato del processo nel registro applicazioni di Windows](../../reporting-services/report-server/windows-application-log.md)|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Monitoraggio e risposta agli eventi](monitor-and-respond-to-events.md)  
   
   

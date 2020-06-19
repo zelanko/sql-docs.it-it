@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c2a298c6-01b3-4ad1-884d-6108165eb56e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 33ea6f845c323a858d1bd89318f2b8e07b734edd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d55463001f880cdc831a9c49ad86c5978c5e1d3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896097"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968831"
 ---
 # <a name="upgrading-the-version-of-a-data-flow-component"></a>Aggiornamento della versione di un componente del flusso di dati
   I pacchetti creati con una versione precedente del componente possono contenere metadati non più validi, ad esempio proprietà personalizzate il cui utilizzo è stato modificato nelle versioni più recenti del componente. È possibile eseguire l'override del metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> della classe di base <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> per aggiornare i metadati salvati in precedenza in pacchetti meno recenti in base alle proprietà correnti del componente.  

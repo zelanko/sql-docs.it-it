@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6f3c180ed4eef217eb338b3b180c39702a3a89bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6ec4513b62056d7054c06373ddaea7fbca11a511
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479608"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961581"
 ---
 # <a name="master-data-services-database"></a>Database Master Data Services
   Nel database sono contenute tutte le informazioni per il sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . È l'elemento centrale di una distribuzione di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] :  
@@ -43,7 +42,7 @@ ms.locfileid: "65479608"
   
 -   [Errori del processo di gestione temporanea &#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di un database di Master Data Services](install-windows/create-a-master-data-services-database.md)   
  [&#40;di sicurezza degli oggetti di database Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)   
  [Account di accesso, utenti e ruoli di database &#40;Master Data Services&#41;](../../2014/master-data-services/database-logins-users-and-roles-master-data-services.md)  

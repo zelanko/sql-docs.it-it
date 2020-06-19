@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d92a15ae855c5521319abd252b1f5a7efc2bf300
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d27b24d6e4b0d89dc53d66fb9955ca39892b581f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191671"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068742"
 ---
 # <a name="replication-queue-reader-agent"></a>Agente di lettura coda repliche
   L'agente di lettura coda repliche è un eseguibile che consente di leggere i messaggi archiviati in una coda [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Message Queue e di applicare tali messaggi al server di pubblicazione. L'agente di lettura coda viene utilizzato con le pubblicazioni snapshot e transazionali che consentono l'aggiornamento in coda.  

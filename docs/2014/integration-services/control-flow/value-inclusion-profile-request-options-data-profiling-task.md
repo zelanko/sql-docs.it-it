@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0a2037297db3f8a303ffd08fb31241e51505aeff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e524fcb3a107384853a5c6fa2114cadb58f80636
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62829471"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917781"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Inclusione valore (Attività Profiling dati)
   Usare il riquadro **Proprietà richiesta** della pagina **Richieste profilo** per impostare le opzioni per **Richiesta profilo Inclusione valore** selezionata nel riquadro delle richieste. Il profilo Inclusione valore calcola la sovrapposizione dei valori tra due colonne o set di colonne. Di conseguenza, il profilo può inoltre determinare se una colonna o un set di colonne è adatto per fungere da chiave esterna tra le tabelle selezionate. Questo profilo consente inoltre di identificare eventuali problemi nei dati, ad esempio valori non validi. È possibile utilizzare un profilo Inclusione valore, ad esempio, per analizzare la colonna ProductId di una tabella Sales. Il profilo individua che la colonna contiene valori non inclusi nella colonna ProductID della tabella Products.  

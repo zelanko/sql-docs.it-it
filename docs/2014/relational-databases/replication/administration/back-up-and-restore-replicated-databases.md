@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 04588807-21e7-4bbe-9727-b72f692cffa7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: af4229037b9c34bbc9a0316ef073f294209be6d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e91505bacf67f7f4628bd1b3f6b2cc78a6bc4c3a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62629643"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068732"
 ---
 # <a name="back-up-and-restore-replicated-databases"></a>Backup e ripristino di database replicati
   Il backup e il ripristino dei dati dei database replicati richiedono un'attenzione particolare. In questo argomento sono fornite informazioni introduttive e collegamenti ad informazioni più approfondite sulle strategie di backup e ripristino per ogni tipo di replica.  

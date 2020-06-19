@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a34d35b0-48eb-4ed1-9f19-ea14754650da
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: db55c753317f945a8156b671fa9cbcd72ce4c641
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: 9c7ed5dd25ed2b02445bfae5eb78ac03b2270552
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849599"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927952"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-azure"></a>Risoluzione dei problemi relativi al backup gestito di SQL Server in Azure
   In questo argomento vengono descritti gli strumenti e le attività utilizzabili per la risoluzione dei problemi relativi agli errori che si possono verificare durante le operazioni di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
@@ -102,7 +101,7 @@ ms.locfileid: "82849599"
 ### <a name="troubleshooting-system-issues"></a>Risoluzione dei problemi relativi al sistema  
  Di seguito vengono illustrati alcuni scenari quando si verifica un problema con il sistema (SQL Server, SQL Server Agent) e i relativi effetti su [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]:  
   
--   **Sqlservr. exe smette di rispondere o smette di funzionare quando [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] è in esecuzione:** se SQL Server smette di funzionare, SQL Agent verrà arrestato normalmente, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] inoltre si interrompe e gli eventi vengono registrati nel file SQL Agent. out.  
+-   **Sqlservr.exe smette di rispondere o smette di funzionare quando [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] è in esecuzione:** se SQL Server smette di funzionare, SQL Agent si arresterà normalmente, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] inoltre si interrompe e gli eventi vengono registrati nel file SQL Agent. out.  
   
      Se SQL Server non risponde, gli eventi vengono registrati nel canale di amministrazione.  Un esempio del registro eventi:  
   

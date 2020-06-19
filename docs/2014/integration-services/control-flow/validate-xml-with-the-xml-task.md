@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a67ab14cbf756784f9e89112afb2893a157d6abd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4f34e133e7aa7699f49660684cafce6c3a9e2fde
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176501"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917941"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
   È possibile convalidare documenti XML e ottenere output avanzato degli errori abilitando la proprietà `ValidationDetails` dell'Attività XML.
@@ -32,7 +31,7 @@ ms.locfileid: "78176501"
  La funzionalità di convalida XML è facilmente scalabile per documenti XML di grandi dimensioni e un numero elevato di errori. Dato che il file di output è in formato XML, è possibile eseguire una query e analizzare l'output. Ad esempio, se l'output contiene un numero elevato di errori, è possibile raggrupparli usando un [!INCLUDE[tsql](../../../includes/tsql-md.md)] , come descritto in questo argomento.
 
 > [!NOTE]
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) ha introdotto `ValidationDetails` la proprietà [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] in Service Pack 2. La proprietà è disponibile anche in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e in SQL Server 2016.
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]( [!INCLUDE[ssIS](../../includes/ssis-md.md)] ) ha introdotto la `ValidationDetails` Proprietà in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2. La proprietà è disponibile anche in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e in SQL Server 2016.
 
 ## <a name="sample-output-for-xml-thats-valid"></a>Esempio di output per un file XML valido
  Ecco un file di output di esempio con i risultati della convalida per un file XML valido.
@@ -54,7 +53,7 @@ ms.locfileid: "78176501"
 ```
 
 ## <a name="sample-output-for-xml-thats-not-valid"></a>Esempio di output per un file XML non valido
- Ecco un file di output di esempio con i risultati della convalida per un file XML che contiene un numero ridotto di errori. Il testo degli elementi \<errore> è stato mandato a capo per migliorare la leggibilità.
+ Ecco un file di output di esempio con i risultati della convalida per un file XML che contiene un numero ridotto di errori. Il testo degli \<error> elementi è stato incapsulato per migliorare la leggibilità.
 
 ```xml
 

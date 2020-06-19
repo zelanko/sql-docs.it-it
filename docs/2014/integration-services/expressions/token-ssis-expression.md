@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: af82c187fce638ddd1f28ab98a5109898f7cad25
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43381593b6a43f9e912088a67d5e10401ef3fc6c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768707"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969001"
 ---
 # <a name="token--ssis-expression"></a>TOKEN (espressione SSIS)
   Restituisce un token (sottostringa) da una stringa in base ai delimitatori specificati che separano i token nella stringa e al numero del token che indica quale token deve essere restituito.  
@@ -40,13 +39,13 @@ TOKEN(character_expression, delimiter_string, occurrence)
  DT_WSTR  
   
 ## <a name="remarks"></a>Osservazioni  
- Questa funzione suddivide la stringa <character_expression> in un set di token separati dai delimitatori specificati nella <delimiter_string>, quindi restituisce l'N token dove N è il numero di occorrenze del token specificato dal parametro \<occurrence>. Per utilizzi di esempio di questa funzione, vedere la sezione Esempi.  
+ Questa funzione suddivide il <character_expression> stringa in un set di token separati dai delimitatori specificati nel <delimiter_string> e quindi restituisce l'ennesimo token dove N è il numero di occorrenze del token specificato dal \<occurrence> parametro. Per utilizzi di esempio di questa funzione, vedere la sezione Esempi.  
   
  Le osservazioni seguenti riguardano la funzione TOKEN:  
   
 -   La stringa di delimitazione può contenere uno o più caratteri delimitatori.  
   
--   Se il valore del parametro \<occurrence> è maggiore del numero totale di token nella stringa, la funzione restituisce NULL.  
+-   Se il valore del \<occurrence> parametro è maggiore del numero totale di token nella stringa, la funzione restituisce null.  
   
 -   I delimitatori iniziali vengono ignorati.  
   
