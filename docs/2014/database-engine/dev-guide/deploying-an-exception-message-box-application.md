@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: d8ecc67a-ef33-4d44-8ae6-eaacb8ca3e74
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 162c878c5d39356f08f01c4eb51a0f88e3ed2d45
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f66c87a106c87969b029f67410d82a65021cc00d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753258"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933628"
 ---
 # <a name="deploying-an-exception-message-box-application"></a>Distribuzione di un'applicazione finestra di messaggio eccezione
-  La finestra di messaggio eccezione viene installata [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da ed è supportata per l'utilizzo nelle applicazioni Windows personalizzate per migliorare la gestione delle eccezioni. Poiché la finestra di messaggio eccezione viene installata in tutte le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edizioni [!INCLUDE[ssEW](../../includes/ssew-md.md)]di, ad eccezione di, è possibile utilizzarla senza alcuna configurazione aggiuntiva in qualsiasi computer in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono stati installati i componenti client, incluso SDK.  
+  La finestra di messaggio eccezione viene installata da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed è supportata per l'utilizzo nelle applicazioni Windows personalizzate per migliorare la gestione delle eccezioni. Poiché la finestra di messaggio eccezione viene installata in tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad eccezione di [!INCLUDE[ssEW](../../includes/ssew-md.md)] , è possibile utilizzarla senza alcuna configurazione aggiuntiva in qualsiasi computer in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono stati installati i componenti client, incluso SDK.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Finestra di messaggio eccezione programma](../../../2014/database-engine/dev-guide/program-exception-message-box.md)   
  [Guida di riferimento alla finestra di messaggio eccezione](../../../2014/database-engine/dev-guide/exception-message-box-reference.md)  
   

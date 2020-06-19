@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: df516567-8689-45c2-b418-16473f8d43e4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 53faaae001e177f1d48d394e06961e89c563d124
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fb4a2b48343c6424007a590f7a54e40290c6a345
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637641"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933652"
 ---
 # <a name="currency-type-and-conversion-function"></a>Tipo Currency e funzione di conversione
   In questo esempio viene definito un tipo di dati Currency definito dall'utente mediante C#. Questo tipo di dati definito dall'utente incapsula un importo e impostazioni cultura che consentono di determinare il modo corretto per rappresentare l'importo come valuta del paese delle impostazioni cultura in oggetto. Nell'esempio viene inoltre fornita una funzione di conversione di valuta che restituisce un'istanza del tipo di dati Currency definito dall'utente. Se il database AdventureWorks prevede un tasso di conversione da dollari US (USD) nella valuta associata alle impostazioni cultura specificate, la funzione di conversione restituisce un tipo di dati Currency definito dall'utente con conversione e impostazioni cultura corrispondenti alle impostazioni cultura specificate. In caso contrario, viene restituito un tipo di dati Currency definito dall'utente con l'importo originale in dollari USA e con le impostazioni cultura `en-us`. Nell'esempio viene illustrato come registrare assembly e metodi CLR (Common Language Runtime) e annullarne la registrazione mediante Transact-SQL.  

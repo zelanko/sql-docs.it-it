@@ -9,18 +9,17 @@ ms.topic: reference
 ms.assetid: 161afa9d-74a1-40f5-af17-162e355e7a46
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5ccbf276057e5fb67cea9a0520f39e8b002eb4cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5bb0555485927076a2f0b845d4fd06b194ea60ce
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753893"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933753"
 ---
 # <a name="accessing-native-code-from-a-clr-udf"></a>Accesso al codice nativo da un funzione CLR definita dall'utente
   In questo esempio viene illustrato come richiamare una funzione in codice C++ nativo (non gestito) da una funzione definita dall'utente in un assembly, nel database.  
   
- Per questo esempio, la directory di lavoro deve `c:\test`essere.  
+ Per questo esempio, la directory di lavoro deve essere `c:\test` .  
   
  Compilare innanzitutto il codice C++:  
   
@@ -102,7 +101,7 @@ EXEC SleepProc 5
 GO  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Scenari di utilizzo ed esempi per l'integrazione con CLR &#40;Common Language Runtime&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 29e265db3d0751f306fcd50125502c287cac8f62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb6d525235db93e10fcf14b73e80fc9c096d9c9f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768527"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968701"
 ---
 # <a name="persisting-custom-objects"></a>Persistenza degli oggetti personalizzati
   Non è necessario implementare la persistenza personalizzata per gli oggetti personalizzati creati, purché le relative proprietà utilizzino solo tipi di dati semplici, ad esempio `integer` e `string`. L'implementazione predefinita della persistenza salva i metadati per l'oggetto insieme ai valori di tutte le relative proprietà.  
@@ -154,7 +153,7 @@ public void SaveToXML(System.Xml.XmlDocument doc,
   
 ![Integration Services icona (piccola)](../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina relativa a Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Sviluppo di oggetti personalizzati per Integration Services](developing-custom-objects-for-integration-services.md)   
  [Compilazione, distribuzione e debug di oggetti personalizzati](building-deploying-and-debugging-custom-objects.md)  
   

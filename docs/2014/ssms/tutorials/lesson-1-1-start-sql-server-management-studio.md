@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: af3f08bcde8b2a325784ef7a99ba5ffad89ce617
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8c74a4c427e4fc89d32c0dcf961bf5f4b839fff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78288988"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061965"
 ---
 # <a name="start-sql-server-management-studio"></a>Avviare SQL Server Management Studio
   Prima di iniziare questa esercitazione è opportuno esaminare brevemente [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -24,12 +23,12 @@ ms.locfileid: "78288988"
   
 #### <a name="to-open-sql-server-management-studio"></a>Per aprire SQL Server Management Studio  
   
-1.  Dal menu **Start** scegliere **tutti i programmi**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]e quindi fare clic su **SQL Server Management Studio**.  
+1.  Dal menu **Start** scegliere **tutti i programmi**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] e quindi fare clic su **SQL Server Management Studio**.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] non è installato per impostazione predefinita. Se [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] non è disponibile, installarlo eseguendo il programma di installazione. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] non è disponibile con [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Express è disponibile come download gratuito dall' [area download Microsoft](https://www.microsoft.com/download/details.aspx?id=14630), ma dispone di un'interfaccia utente diversa da quella descritta in questa esercitazione.  
   
-2.  Nella finestra di dialogo **Connetti al server** verificare le impostazioni predefinite e quindi fare clic su **Connetti**. Per connettersi, nella casella **nome server** deve essere contenuto il nome del computer in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cui è installato. Se [!INCLUDE[ssDE](../../includes/ssde-md.md)] è un'istanza denominata, nella casella **nome server** deve essere contenuto anche il nome dell'istanza nel formato \< *computer_name*>\\<*instance_name*>.  
+2.  Nella finestra di dialogo **Connetti al server** verificare le impostazioni predefinite e quindi fare clic su **Connetti**. Per connettersi, nella casella **nome server** deve essere contenuto il nome del computer in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è installato. Se [!INCLUDE[ssDE](../../includes/ssde-md.md)] è un'istanza denominata, nella casella **nome server** deve essere contenuto anche il nome dell'istanza nel formato \<*computer_name*> \\ < *instance_name*>.  
   
 ## <a name="management-studio-components"></a>Componenti di Management Studio  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] offre informazioni in finestre dedicate a tipi di informazioni specifiche. Le informazioni di database vengono visualizzate in Esplora oggetti e nelle finestre dei documenti.  

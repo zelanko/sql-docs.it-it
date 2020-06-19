@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 381f616ec0732616a7c9c1a5d181e5d1ea002ce6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40139962f6c5fd77611ccd486785cd6afadeff69
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769017"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968601"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>Analisi di formati di file di testo non standard con il componente script
   Quando i dati di origine sono disposti in un formato non standard, può risultare utile consolidare tutta la logica di analisi in un singolo script anziché concatenare più trasformazioni di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per ottenere lo stesso risultato.  
@@ -94,7 +93,7 @@ ms.locfileid: "62769017"
   
 11. Nella pagina **Colonne di input** dell'**Editor trasformazione Script** selezionare l'unica colonna di input disponibile.  
   
-12. Nella pagina **input e output** di **Editor trasformazione script**Selezionare output 0 e impostare il relativo `SynchronousInputID` valore su nessuno. Creare 5 colonne di output, tutte di tipo string [DT_STR] con lunghezza 32:  
+12. Nella pagina **input e output** di **Editor trasformazione script**Selezionare output 0 e impostare il relativo valore `SynchronousInputID` su nessuno. Creare 5 colonne di output, tutte di tipo string [DT_STR] con lunghezza 32:  
   
     -   FirstName  
   
@@ -253,7 +252,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 11. Nella pagina **Colonne di input** dell'**Editor trasformazione Script** selezionare l'unica colonna di input disponibile.  
   
-12. Nella pagina **input e output** di **Editor trasformazione script**Selezionare output 0, rinominarlo in ParentRecords e impostare il relativo `SynchronousInputID` valore su None. Creare 2 colonne di output:  
+12. Nella pagina **input e output** di **Editor trasformazione script**Selezionare output 0, rinominarlo in ParentRecords e impostare il relativo valore `SynchronousInputID` su None. Creare 2 colonne di output:  
   
     -   ParentID (chiave primaria), di tipo integer con segno a quattro byte [DT_I4]  
   
@@ -348,7 +347,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 ![Integration Services icona (piccola)](../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina relativa a Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di una trasformazione sincrona con il componente script](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  
  [Creazione di una trasformazione asincrona con il componente script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  
   

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 2db60e24-79b5-4943-8891-f1684e16ce3d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9f0c4b1dbdaa7a2b4a15dd8e28586b182d93374a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6760ec93961075afa09ef265a80e8beb8434a5e5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63241161"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044187"
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>Finestra di dialogo Salva (Visual Database Tools)
   Viene visualizzata quando in Progettazione tabelle si salva un lavoro che influisce su altre tabelle. Questa finestra di dialogo consente di confermare le tabelle che verranno salvate.  

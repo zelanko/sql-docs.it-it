@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ce118ee5-70e2-472e-8e09-7ed3bfed59fa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7a45ff3544fa85f1bfe9cbe7bdd00968c004a3b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39e84cf00810a45e48d1d1210bca54cd30ddfff6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62634273"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061893"
 ---
 # <a name="change-the-environment-layout"></a>Modificare il layout ambiente
   I componenti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] si contendono lo spazio sullo schermo. Per creare spazio, è possibile chiudere, nascondere o spostare i componenti di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Le procedure descritte in questa pagina consentono di spostare i componenti in posizioni diverse.  
@@ -52,7 +51,7 @@ ms.locfileid: "62634273"
   
     -   Float  
   
-    -   Ancora  
+    -   Dock  
   
     -   Ancora come Documento a schede  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ab35a363-421d-4665-946b-ae3f6397af50
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 63ec11b8575017ffbb3a1b1468ef3150a20326e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b396f2738f6895684d828884d4822ea9165e0a9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63028351"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054595"
 ---
 # <a name="exclude-duplicate-rows-visual-database-tools"></a>Escludere le righe duplicate (Visual Database Tools)
   Per visualizzare solo valori univoci in un set di risultati, è possibile impostare l'esclusione dei duplicati dai risultati.  

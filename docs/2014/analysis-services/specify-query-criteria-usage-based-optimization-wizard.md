@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3193adc2-af9f-4234-a4cc-dea0c280a724
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 41690da6a4a87bf79d411e2b467aeddfa56b5f00
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ba9e131a8986b01a6bb897e35b2e45b2bb70ccd0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068217"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940345"
 ---
 # <a name="specify-query-criteria-usage-based-optimization-wizard"></a>Impostazione criteri di query (Ottimizzazione guidata basata sulle statistiche di utilizzo)
   Utilizzare la pagina **Impostazione criteri di query** per scegliere una o più opzioni di filtro per identificare le query da ottimizzare.  
@@ -54,7 +53,7 @@ ms.locfileid: "66068217"
  **Query più frequenti**  
  Consente di filtrare le query del log di query in base alla percentuale maggiore di query distinte eseguite più spesso per le partizioni selezionate. Selezionare o digitare un valore percentuale nella casella di testo.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto dell'ottimizzazione guidata basata sull'utilizzo](usage-based-optimization-wizard-f1-help.md)   
  [Procedure guidate di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-wizards-multidimensional-data.md)  
   

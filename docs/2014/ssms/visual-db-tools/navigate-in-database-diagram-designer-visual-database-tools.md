@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ff94dbf-434d-4e2c-b8cb-a3c04e8613c9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e56a15d10bc267e6613d24ff934daf4561831c1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6d1d93518a2b11ed55620aa39448faac9f0bc424
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63254457"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044311"
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>Navigare all'interno di Progettazione diagrammi di database (Visual Database Tools)
   In Progettazione diagrammi di database è possibile utilizzare sia la tastiera che il mouse. Nelle tabelle riportate di seguito vengono illustrati alcuni metodi specifici utilizzati in Progettazione diagrammi di database.  

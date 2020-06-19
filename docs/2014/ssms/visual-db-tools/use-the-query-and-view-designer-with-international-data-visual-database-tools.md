@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4b51c56f-f902-4e72-b919-e36127369b63
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 673ad13ff5688fb17eaa4b975644256f072a3aef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 905e4c6909c792b019c11ef95662a7ec1a113bb4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204624"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054574"
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>Utilizzazione di Progettazione query e Progettazione viste con dati internazionali (Visual Database Tools)
   È possibile usare [Progettazione query e Progettazione viste](visual-database-tools.md) con dati in qualsiasi lingua e con qualsiasi versione del sistema operativo Windows. Le seguenti indicazioni evidenziano le differenze esistenti e forniscono informazioni sulla gestione di dati in applicazioni internazionali.  

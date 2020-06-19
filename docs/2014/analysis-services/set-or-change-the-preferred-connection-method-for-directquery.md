@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f10d5678-d678-4251-8cce-4e30cfe15751
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9737b829a5ccab1ddc0362f2d8ac81285f0f6e1c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0513b300939b935dbf138d2bd8484e86740f31c9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068694"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940532"
 ---
 # <a name="set-or-change-the-preferred-connection-method-for-directquery"></a>Impostare o modificare il metodo di connessione preferito per DirectQuery
   Quando si crea un modello per l'utilizzo nella modalità DirectQuery, è innanzitutto necessario configurare l'ambiente di progettazione affinché supporti l'utilizzo di DirectQuery. Per eseguire questa operazione, vedere [abilitare la modalità di progettazione DirectQuery &#40;SSAS tabulare&#41;](tabular-models/enable-directquery-mode-in-ssdt.md).  
@@ -62,7 +61,7 @@ ms.locfileid: "66068694"
   
  Si noti che queste proprietà corrispondono alle proprietà impostate sul progetto prima della distribuzione in Visual Studio. È possibile modificare in qualsiasi momento la modalità di connessione preferita per la modalità DirectQuery, a condizione che il modello sia stato configurato per supportare l'utilizzo di DirectQuery.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Modalità DirectQuery &#40;SSAS tabulare&#41;](tabular-models/directquery-mode-ssas-tabular.md)   
  [Abilitare la modalità di progettazione DirectQuery &#40;SSAS tabulare&#41;](tabular-models/enable-directquery-mode-in-ssdt.md)  
   

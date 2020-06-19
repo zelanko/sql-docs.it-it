@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16376e7c1be1e22968846e7cbfbfc361fa8bb16e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 441ed50984ef6bbfcdaec47be0fb29aa37cf69c7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62510320"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062006"
 ---
 # <a name="save-as"></a>Save As
-  Utilizzare questa finestra di dialogo per salvare un'istanza dell'elemento corrente nel percorso e nel formato di file specificati. Per visualizzare questa finestra di dialogo, fare clic su **Salva** * \<file>* **come** nel menu **file** (dove * \<file>* è il nome dell'elemento corrente) oppure premere ALT + F, a nell'editor di codice.  
+  Utilizzare questa finestra di dialogo per salvare un'istanza dell'elemento corrente nel percorso e nel formato di file specificati. Per visualizzare questa finestra di dialogo, fare clic su **Salva** *\<file>* **con** nome nel menu **file** (dove *\<file>* è il nome dell'elemento corrente) oppure premere ALT + F, a nell'editor di codice.  
   
 ## <a name="central-panel"></a>Pannello centrale  
  **Salva in**  

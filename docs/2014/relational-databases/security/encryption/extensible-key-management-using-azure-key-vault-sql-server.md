@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: f826ce7ff54bb28738f79fbf22c8c8435035008c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0e4bbc4f0c371c927988e6b91fdbf47307ad9d3f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289449"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068374"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Extensible Key Management tramite l'insieme di credenziali delle chiavi di Azure (SQL Server)
   Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] connettore per [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault consente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la crittografia per sfruttare il servizio Azure Key Vault come provider di [gestione delle chiavi estendibile &#40;EKM&#41;](extensible-key-management-ekm.md) per proteggere le chiavi di crittografia.
@@ -94,7 +93,7 @@ ms.locfileid: "79289449"
 
      Collegamenti alla documentazione dell'insieme di credenziali delle chiavi di Azure
 
-    -   [Informazioni sull'insieme di credenziali delle chiavi di Azure](https://go.microsoft.com/fwlink/?LinkId=521401)
+    -   [Cos'è l'insieme di credenziali chiave di Azure?](https://go.microsoft.com/fwlink/?LinkId=521401)
 
     -   [Inizia a usare Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)
 
@@ -159,9 +158,9 @@ ms.locfileid: "79289449"
 2.  Configurare le credenziali di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per un account di accesso di amministratore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per usare l'insieme di credenziali delle chiavi in modo da configurare e gestire gli scenari di crittografia di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .
 
     > [!IMPORTANT]
-    >  L'argomento **Identity** di `CREATE CREDENTIAL` richiede il nome dell'insieme di credenziali delle chiavi. L'argomento **Secret** di `CREATE CREDENTIAL` richiede che l' * \<ID client>* (senza trattini) e * \<il segreto>* essere passati insieme senza uno spazio tra di essi.
+    >  L'argomento **Identity** di richiede il nome dell'insieme di credenziali delle `CREATE CREDENTIAL` chiavi. L'argomento **Secret** di `CREATE CREDENTIAL` richiede *\<Client ID>* (senza trattini) e *\<Secret>* da passare insieme senza uno spazio tra di essi.
 
-     Nell'esempio seguente l' **ID client** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) viene rimosso dai trattini e viene immesso come stringa `EF5C8E094D2A4A769998D93440D8115D` e il **segreto** è rappresentato dalla stringa *SECRET_sysadmin_login*.
+     Nell'esempio seguente l' **ID client** ( `EF5C8E09-4D2A-4A76-9998-D93440D8115D` ) viene rimosso dai trattini e viene immesso come stringa `EF5C8E094D2A4A769998D93440D8115D` e il **segreto** è rappresentato dalla stringa *SECRET_sysadmin_login*.
 
     ```sql
     USE master;
@@ -175,7 +174,7 @@ ms.locfileid: "79289449"
     ADD CREDENTIAL sysadmin_ekm_cred;
     ```
 
-     Per un esempio dell'uso delle variabili per `CREATE CREDENTIAL` gli argomenti e della rimozione dei trattini dall'ID client a livello di codice, vedere [create Credential &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql).
+     Per un esempio dell'uso delle variabili per gli `CREATE CREDENTIAL` argomenti e della rimozione dei trattini dall'ID client a livello di codice, vedere [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql).
 
 3.  Se è stata importata una chiave asimmetrica come descritto in precedenza nella sezione 3 del passaggio 1, aprire la chiave, fornendo il nome della chiave nell'esempio seguente.
 
@@ -224,9 +223,9 @@ ms.locfileid: "79289449"
 1.  Creare le credenziali di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per il [!INCLUDE[ssDE](../../../includes/ssde-md.md)] da usare per l'accesso a EKM con l'insieme di credenziali delle chiavi durante il caricamento del database.
 
     > [!IMPORTANT]
-    >  L'argomento **Identity** di `CREATE CREDENTIAL` richiede il nome dell'insieme di credenziali delle chiavi. L'argomento **Secret** di `CREATE CREDENTIAL` richiede che l' * \<ID client>* (senza trattini) e * \<il segreto>* essere passati insieme senza uno spazio tra di essi.
+    >  L'argomento **Identity** di richiede il nome dell'insieme di credenziali delle `CREATE CREDENTIAL` chiavi. L'argomento **Secret** di `CREATE CREDENTIAL` richiede *\<Client ID>* (senza trattini) e *\<Secret>* da passare insieme senza uno spazio tra di essi.
 
-     Nell'esempio seguente l' **ID client** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) viene rimosso dai trattini e viene immesso come stringa `EF5C8E094D2A4A769998D93440D8115D` e il **segreto** è rappresentato dalla stringa *SECRET_DBEngine*.
+     Nell'esempio seguente l' **ID client** ( `EF5C8E09-4D2A-4A76-9998-D93440D8115D` ) viene rimosso dai trattini e viene immesso come stringa `EF5C8E094D2A4A769998D93440D8115D` e il **segreto** è rappresentato dalla stringa *SECRET_DBEngine*.
 
     ```sql
     USE master;

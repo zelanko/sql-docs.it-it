@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a0f7e10a39896efffa5159911ebd753b1d649e45
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d055769a8f854b58e455eec873c1c94a7f740393
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768584"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968731"
 ---
 # <a name="coding-a-custom-log-provider"></a>Scrittura del codice di un provider di log personalizzato
   Dopo avere creato una classe che eredita dalla classe di base <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase> e avere applicato l'attributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> alla classe, è necessario eseguire l'override dell'implementazione delle proprietà e dei metodi della classe di base per fornire la funzionalità personalizzata.  
@@ -132,7 +131,7 @@ End Sub
 ```  
   
 ### <a name="writing-log-entries"></a>Scrittura di voci di log  
- Il metodo <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> viene chiamato ogni volta che un oggetto del pacchetto genera un evento chiamando un metodo Fire\<evento> in una delle interfacce degli eventi. Ogni evento viene generato con informazioni sul relativo contesto e in genere con un messaggio descrittivo. Tuttavia, non tutte le chiamate al metodo <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> includono informazioni per ogni parametro del metodo. Ad esempio, alcuni eventi standard i cui nomi sono autodescrittivi non forniscono MessageText, mentre DataCode e DataBytes vengono utilizzati per fornire informazioni supplementari facoltative.  
+ Il <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> metodo viene chiamato ogni volta che un oggetto del pacchetto genera un evento chiamando un \<event> metodo Fire su una delle interfacce evento. Ogni evento viene generato con informazioni sul relativo contesto e in genere con un messaggio descrittivo. Tuttavia, non tutte le chiamate al metodo <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> includono informazioni per ogni parametro del metodo. Ad esempio, alcuni eventi standard i cui nomi sono autodescrittivi non forniscono MessageText, mentre DataCode e DataBytes vengono utilizzati per fornire informazioni supplementari facoltative.  
   
  Nell'esempio di codice seguente viene implementato il metodo <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> e vengono scritti gli eventi nel flusso aperto nella sezione precedente.  
   
@@ -190,7 +189,7 @@ End Sub
   
 ![Integration Services icona (piccola)](../../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina relativa a Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di un provider di log personalizzato](creating-a-custom-log-provider.md)   
  [Sviluppo di un'interfaccia utente per un provider di log personalizzato](developing-a-user-interface-for-a-custom-log-provider.md)  
   

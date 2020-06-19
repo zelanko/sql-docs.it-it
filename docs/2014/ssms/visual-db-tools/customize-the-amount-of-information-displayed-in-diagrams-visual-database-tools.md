@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31bb6772-7974-4329-bca0-c16d5875483d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a15613c61db7469b242bbd5b76e5d1e51912e6be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cbf419209e4a297e3b7a2dfdcce6d4aa5daefb23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270557"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061819"
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>Personalizzazione della quantità di informazioni visualizzate nei diagrammi (Visual Database Tools)
   Quando si aggiunge una tabella a un diagramma di database, la tabella viene visualizzata con un determinato numero di proprietà. È infatti possibile scegliere da un menu di possibili alternative la quantità di informazioni da visualizzare oppure creare un set di proprietà personalizzato.  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5d8ef6822b623e546aa0215964ba0ae237862687
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 908b234143bc7e2140fe1c98d85ba150ea69b28d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754034"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933852"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Utilizzare valori di soglia avvisi e avvisi sulle metriche delle prestazioni di mirroring (SQL Server)
   In questo argomento sono incluse informazioni sugli eventi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per cui è possibile configurare e gestire valori soglia degli avvisi per il mirroring del database. È possibile usare Monitoraggio mirroring del database o le stored procedure **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert**e **sp_dbmmonitordropalert** . Nell'argomento sono inoltre incluse informazioni relative alle configurazione degli avvisi per gli eventi di mirroring del database.  
@@ -66,14 +65,14 @@ ms.locfileid: "62754034"
   
      Il set seguente di stored procedure di sistema consente a un amministratore di impostare e gestire le soglie di avviso su database con mirroring di un partner alla volta.  
   
-    |Procedura|Descrizione|  
+    |Procedura|Description|  
     |---------------|-----------------|  
     |[sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql)|Aggiunge o modifica la soglia di avviso per una misurazione delle prestazioni di mirroring specificata.|  
     |[sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql)|Restituisce informazioni sulle soglie di avviso su una o tutte le misurazioni delle prestazioni di monitoraggio del mirroring del database.|  
     |[sp_dbmmonitordropalert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql)|Elimina l'avviso per una misurazione delle prestazioni specificata.|  
   
 ## <a name="performance-threshold-events-sent-to-the-windows-event-log"></a>Eventi di soglia delle prestazioni inviati al registro eventi di Windows  
- Se viene definito un valore soglia avviso per una misurazione delle prestazioni, quando viene aggiornata la tabella di stato viene valutato il valore più recente rispetto al valore soglia. Se è stata raggiunta la soglia, la procedura di aggiornamento, **sp_dbmmonitorupdate**, genera un evento informativo, un evento di *soglia delle prestazioni*, per la metrica e scrive [!INCLUDE[msCoName](../../includes/msconame-md.md)] l'evento nel registro eventi di Windows. Nella tabella seguente sono elencati gli ID degli eventi di soglia delle prestazioni.  
+ Se viene definito un valore soglia avviso per una misurazione delle prestazioni, quando viene aggiornata la tabella di stato viene valutato il valore più recente rispetto al valore soglia. Se è stata raggiunta la soglia, la procedura di aggiornamento, **sp_dbmmonitorupdate**, genera un evento informativo, un evento di *soglia delle prestazioni*, per la metrica e scrive l'evento nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] registro eventi di Windows. Nella tabella seguente sono elencati gli ID degli eventi di soglia delle prestazioni.  
   
 |Misurazione delle prestazioni|ID evento|  
 |------------------------|--------------|  
@@ -139,7 +138,7 @@ ms.locfileid: "62754034"
   
 -   [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [&#40;SQL Server di mirroring del database&#41;](database-mirroring-sql-server.md)   
  [Monitoraggio del mirroring del database &#40;SQL Server&#41;](monitoring-database-mirroring-sql-server.md)  
   

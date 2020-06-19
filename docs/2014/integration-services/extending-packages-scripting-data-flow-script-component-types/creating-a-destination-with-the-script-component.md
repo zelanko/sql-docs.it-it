@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4058a059f1f8690f636e00ac1c68957b68c85f76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f4151c889e83555e81352f606bd1876961a933fe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176294"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968576"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Creazione di una destinazione con il componente script
   Utilizzare un componente di destinazione nel flusso di dati di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per salvare in un'origine dati i dati ricevuti dalle origini e dalle trasformazioni upstream. Normalmente, il componente di destinazione si connette all'origine dati tramite una gestione connessione esistente.
@@ -66,9 +65,9 @@ ms.locfileid: "78176294"
  Per altre informazioni sulla pagina **Input e output** di **Editor trasformazione Script**, vedere [Editor trasformazione Script &#40;pagina Input e output&#41;](../script-transformation-editor-inputs-and-outputs-page.md).
 
 ### <a name="adding-variables"></a>Aggiunta di variabili
- Se si desidera utilizzare le variabili esistenti nello script, è possibile aggiungerle nei campi delle `ReadOnlyVariables` proprietà `ReadWriteVariables` e nella pagina **script** di **Editor trasformazione script**.
+ Se si desidera utilizzare le variabili esistenti nello script, è possibile aggiungerle nei campi delle `ReadOnlyVariables` proprietà e nella `ReadWriteVariables` pagina **script** di **Editor trasformazione script**.
 
- Quando si aggiungono più variabili nei campi delle proprietà, separare i relativi nomi con virgole. È anche possibile selezionare più variabili facendo clic sul pulsante con i puntini di sospensione (**...**) accanto ai campi delle `ReadOnlyVariables` proprietà e `ReadWriteVariables` e quindi selezionando le variabili nella finestra di dialogo **Seleziona variabili** .
+ Quando si aggiungono più variabili nei campi delle proprietà, separare i relativi nomi con virgole. È anche possibile selezionare più variabili facendo clic sul pulsante con i puntini di sospensione (**...**) accanto ai `ReadOnlyVariables` campi delle `ReadWriteVariables` proprietà e e quindi selezionando le variabili nella finestra di dialogo **Seleziona variabili** .
 
  Per informazioni generali sull'uso delle variabili con il componente script, vedere [Uso di variabili nel componente script](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).
 
@@ -82,7 +81,7 @@ ms.locfileid: "78176294"
 ### <a name="understanding-the-auto-generated-code"></a>Informazioni sul codice generato automaticamente
  Quando si apre l'IDE di VSTA dopo la creazione e la configurazione di un componente di destinazione, la classe `ScriptMain` modificabile viene visualizzata nell'editor del codice con uno stub per il metodo `ProcessInputRow`. La classe `ScriptMain` è quella in cui si scriverà il codice personalizzato, mentre `ProcessInputRow` è il metodo più importante in un componente di destinazione.
 
- Se si apre la finestra **Esplora progetti** in VSTA, è possibile osservare che il componente script ha generato anche gli elementi di `BufferWrapper` progetto `ComponentWrapper` e di sola lettura. La classe `ScriptMain` eredita dalla classe `UserComponent` nell'elemento di progetto `ComponentWrapper`.
+ Se si apre la finestra **Esplora progetti** in VSTA, è possibile osservare che il componente script ha generato anche gli elementi di `BufferWrapper` progetto e di sola lettura `ComponentWrapper` . La classe `ScriptMain` eredita dalla classe `UserComponent` nell'elemento di progetto `ComponentWrapper`.
 
  In fase di esecuzione il motore flusso di dati richiama il metodo `ProcessInput` nella classe `UserComponent`, che esegue l'override del metodo <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> della classe padre <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. Il metodo `ProcessInput` a sua volta esegue il ciclo delle righe nel buffer di input e chiama il metodo `ProcessInputRow` una volta per ogni riga.
 
@@ -101,7 +100,7 @@ ms.locfileid: "78176294"
  Negli esempi seguenti è illustrato il codice necessario nella classe `ScriptMain` per creare un componente di destinazione.
 
 > [!NOTE]
->  In questi esempi viene utilizzata la tabella **Person. Address** nel database di `AdventureWorks` esempio e vengono passate la prima e la quarta colonna, ovvero le colonne **int * AddressID*** e **nvarchar (30) City** , attraverso il flusso di dati. Gli stessi dati vengono utilizzati negli esempi relativi a origine, trasformazione e destinazione in questa sezione. Per ogni esempio, sono documentati ulteriori prerequisiti e presupposti.
+>  In questi esempi viene utilizzata la tabella **Person. Address** nel `AdventureWorks` database di esempio e vengono passate la prima e la quarta colonna, ovvero le colonne **int * AddressID*** e **nvarchar (30) City** , attraverso il flusso di dati. Gli stessi dati vengono utilizzati negli esempi relativi a origine, trasformazione e destinazione in questa sezione. Per ogni esempio, sono documentati ulteriori prerequisiti e presupposti.
 
 ### <a name="adonet-destination-example"></a>Esempio di destinazione ADO.NET
  In questo esempio è illustrato un componente di destinazione che usa una gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] esistente per salvare i dati del flusso di dati in una tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
@@ -119,7 +118,7 @@ ms.locfileid: "78176294"
 
 3.  Aggiungere un nuovo componente script all'area di progettazione del flusso di dati e configurarlo come destinazione.
 
-4.  Connettere l'output di un'origine o di una trasformazione a monte al componente di destinazione in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)]. È possibile connettere un'origine direttamente a una destinazione senza alcuna trasformazione. Questo output deve fornire i dati della tabella **Person. Address** del database `AdventureWorks` di esempio che contiene almeno le colonne **AddressID** e **City** .
+4.  Connettere l'output di un'origine o di una trasformazione a monte al componente di destinazione in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)]. È possibile connettere un'origine direttamente a una destinazione senza alcuna trasformazione. Questo output deve fornire i dati della tabella **Person. Address** del `AdventureWorks` database di esempio che contiene almeno le colonne **AddressID** e **City** .
 
 5.  Aprire l'**Editor trasformazione Script**. Nella pagina **Colonne di input** selezionare le colonne di input **AddressID** e **City**.
 
@@ -236,7 +235,7 @@ public class ScriptMain:
 
 2.  Aggiungere un nuovo componente script all'area di progettazione del flusso di dati e configurarlo come destinazione.
 
-3.  Connettere l'output di un'origine o di una trasformazione a monte al componente di destinazione in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)]. È possibile connettere un'origine direttamente a una destinazione senza alcuna trasformazione. Questo output deve fornire i dati della tabella **Person. Address** del database `AdventureWorks` di esempio e deve contenere almeno le colonne **AddressID** e **City** .
+3.  Connettere l'output di un'origine o di una trasformazione a monte al componente di destinazione in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)]. È possibile connettere un'origine direttamente a una destinazione senza alcuna trasformazione. Questo output deve fornire i dati della tabella **Person. Address** del `AdventureWorks` database di esempio e deve contenere almeno le colonne **AddressID** e **City** .
 
 4.  Aprire l'**Editor trasformazione Script**. Nella pagina **Colonne di input** selezionare le colonne **AddressID** e **City**.
 

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3f715b95-7074-4f5c-8ae2-246998052e78
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: af3478e254f01f7cf53d5a09b6febab3b1e85e8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 257fec0f1d7ce59ce84cc3c54b9b5d105440a6f1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176299"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968718"
 ---
 # <a name="developing-a-custom-log-provider"></a>Sviluppo di un provider di log personalizzato
   In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sono disponibili funzionalità di registrazione estese che consentono di acquisire eventi che si verificano durante l'esecuzione dei pacchetti. In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] è inclusa una varietà di provider di log che consentono di creare e archiviare log in formati quali XML, testo, database o nel registro eventi di Windows. Se i provider di log e i formati di output disponibili non soddisfano completamente specifici requisiti, è possibile creare un provider di log personalizzato.
@@ -36,14 +35,14 @@ ms.locfileid: "78176299"
 
  [Codifica di un provider di log personalizzato](coding-a-custom-log-provider.md) Viene descritto come implementare un provider di log personalizzato eseguendo l'override dei metodi e delle proprietà della classe di base.
 
- [Sviluppo di un'interfaccia utente per un provider di log personalizzato](developing-a-user-interface-for-a-custom-log-provider.md) Le interfacce utente personalizzate per i provider di log personalizzati non [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]sono supportate in.
+ [Sviluppo di un'interfaccia utente per un provider di log personalizzato](developing-a-user-interface-for-a-custom-log-provider.md) Le interfacce utente personalizzate per i provider di log personalizzati non sono supportate in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .
 
 ## <a name="related-topics"></a>Argomenti correlati
 
 ### <a name="information-common-to-all-custom-objects"></a>Informazioni comuni per tutti gli oggetti personalizzati
  Per informazioni comuni a tutti i tipi di oggetti personalizzati che è possibile creare in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], vedere gli argomenti seguenti:
 
- [Sviluppo di oggetti personalizzati per Integration Services](../developing-custom-objects-for-integration-services.md) Vengono descritti i passaggi di base per l'implementazione di tutti i [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]tipi di oggetti personalizzati per.
+ [Sviluppo di oggetti personalizzati per Integration Services](../developing-custom-objects-for-integration-services.md) Vengono descritti i passaggi di base per l'implementazione di tutti i tipi di oggetti personalizzati per [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .
 
  [Salvataggio permanente di oggetti personalizzati](../persisting-custom-objects.md) Viene descritta la persistenza personalizzata e viene spiegato quando è necessario.
 

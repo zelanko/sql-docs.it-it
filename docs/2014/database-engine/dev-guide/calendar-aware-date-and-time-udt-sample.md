@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: cfcf8516-0e7b-4ca4-8bd8-8b2511a50308
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c2636d417bb9956ac56885686b3512cc3c119cd7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2a8d632b538104e490fb70542cdd0f8bd73b87f9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76929497"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933734"
 ---
 # <a name="calendar-aware-date-and-time-udt-sample"></a>Esempio di data e ora in grado di riconoscere il calendario
   L'archiviazione di date sotto forma di stringhe può provocare confusione in quanto le date non hanno alcun significato se non si conosce il sistema di calendario utilizzato. Nell'esempio `CADatetime` vengono illustrati due tipi di dati definiti dall'utente, `CADatetime` e `CADate`, che consentono la gestione di data e ora con supporto del calendario.  

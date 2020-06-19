@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 45768952-23a6-45a5-b541-e7bf192b4a78
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: dd4ff661a10eca71781aee9d1886e80936f6246d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 53eaf828dd3fe6f5fa4056bda9dbc428dfa5d385
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952415"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054636"
 ---
 # <a name="report-manager-url-ssrs-native-mode"></a>URL di Gestione report (modalità nativa SSRS)
   Utilizzare la pagina URL Gestione report per configurare o modificare l'URL utilizzato per accedere a Gestione report. Per impostazione predefinita, l'URL di Gestione report eredita il prefisso, l'indirizzo IP e la porta dell'URL del servizio Web ReportServer. Ciò è dovuto al fatto che Gestione report fornisce accesso front-end al servizio Web in cui è in esecuzione lo stesso servizio del server di report. Se si isolano le applicazioni del servizio e si utilizza Gestione report per accedere a un servizio Web ReportServer in un computer diverso, è necessario modificare il file RSReportServer.config perché Gestione report punti a un'istanza diversa. Per ulteriori informazioni sulla configurazione di una connessione Gestione report a un server di report remoto, vedere [Reporting Services Configuration Manager &#40;modalità nativa&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità nativa.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modalità nativa.  
   
  Se il server di report viene configurato per l'esecuzione in modalità integrata SharePoint, non creare un URL di Gestione report. Gestione report non è supportato nei server di report eseguiti in modalità integrata SharePoint. Se è già presente un URL per Gestione report, l'URL non sarà più disponibile in seguito alla configurazione del server di report per l'esecuzione in modalità integrata SharePoint.  
   

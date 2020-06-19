@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e297bad605e839dc37f757906df2367926eb522e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b82b7776bf9a56e5c72b5ffabdf6d8398b5d183
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176271"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968577"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>Creazione di un'origine con il componente script
   Utilizzare un componente di origine nel flusso di dati di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per caricare dati da un'origine dati da passare a trasformazioni e destinazioni a valle. Normalmente, ci si connette all'origine dati tramite una gestione connessione esistente.
@@ -60,7 +59,7 @@ ms.locfileid: "78176271"
 -   È possibile creare uno o più output aggiuntivi, ad esempio un output degli errori simulati per le righe che contengono valori imprevisti. Usare i pulsanti **Aggiungi output** e **Rimuovi output** per gestire gli output del componente di origine. Tutte le righe di input vengono indirizzate a tutti gli output disponibili, a meno che non venga anche specificato un valore identico diverso da zero per la proprietà `ExclusionGroup` di tali output nei casi in cui si intenda indirizzare ogni riga a uno solo degli output che condividono lo stesso valore di `ExclusionGroup`. Il valore intero specifico selezionato per identificare `ExclusionGroup` non è significativo.
 
     > [!NOTE]
-    >  È anche possibile utilizzare un valore diverso da zero per la proprietà `ExclusionGroup` con un singolo output quando non si desidera restituire tutte le righe come output. In questo caso è tuttavia necessario chiamare in modo esplicito il metodo **DirectRowTo\<outputbuffer>** per ogni riga che si vuole inviare all'output.
+    >  È anche possibile utilizzare un valore diverso da zero per la proprietà `ExclusionGroup` con un singolo output quando non si desidera restituire tutte le righe come output. In questo caso, tuttavia, è necessario chiamare in modo esplicito il metodo **Metodo DirectRowTo \<outputbuffer> ** per ogni riga che si desidera inviare all'output.
 
 -   È necessario assegnare un nome descrittivo agli output. In seguito, si farà riferimento agli output in base ai nomi presenti nello script, utilizzando le proprietà delle funzioni di accesso tipizzate create nel codice generato automaticamente.
 
@@ -69,9 +68,9 @@ ms.locfileid: "78176271"
  Per altre informazioni sulla pagina **Input e output** di **Editor trasformazione Script**, vedere [Editor trasformazione Script &#40;pagina Input e output&#41;](../script-transformation-editor-inputs-and-outputs-page.md).
 
 ### <a name="adding-variables"></a>Aggiunta di variabili
- Se sono presenti variabili esistenti i cui valori si desidera usare nello script, è possibile aggiungerli nei campi delle proprietà `ReadOnlyVariables` e `ReadWriteVariables` nella pagina **script** di **Editor trasformazione script**.
+ Se sono presenti variabili esistenti i cui valori si desidera usare nello script, è possibile aggiungerli nei `ReadOnlyVariables` campi delle proprietà e nella `ReadWriteVariables` pagina **script** di **Editor trasformazione script**.
 
- Quando si immettono più variabili nei campi delle proprietà, separare i relativi nomi con virgole. È anche possibile immettere più variabili facendo clic sul pulsante con i puntini di sospensione (**...**) accanto ai campi delle `ReadOnlyVariables` proprietà e `ReadWriteVariables` e selezionando variabili nella finestra di dialogo **Seleziona variabili** .
+ Quando si immettono più variabili nei campi delle proprietà, separare i relativi nomi con virgole. È anche possibile immettere più variabili facendo clic sul pulsante con i puntini di sospensione (**...**) accanto ai `ReadOnlyVariables` campi delle `ReadWriteVariables` proprietà e e selezionando variabili nella finestra di dialogo **Seleziona variabili** .
 
  Per informazioni generali sull'uso delle variabili con il componente script, vedere [Uso di variabili nel componente script](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).
 
@@ -87,7 +86,7 @@ ms.locfileid: "78176271"
 
  La classe `ScriptMain` include uno stub per il metodo `CreateNewOutputRows`. `CreateNewOutputRows` è il metodo più importante di un componente di origine.
 
- Se si apre la finestra **Esplora progetti** in VSTA, è possibile osservare che il componente script ha generato anche gli elementi di `BufferWrapper` progetto `ComponentWrapper` e di sola lettura. La classe `ScriptMain` eredita dalla classe `UserComponent` nell'elemento di progetto `ComponentWrapper`.
+ Se si apre la finestra **Esplora progetti** in VSTA, è possibile osservare che il componente script ha generato anche gli elementi di `BufferWrapper` progetto e di sola lettura `ComponentWrapper` . La classe `ScriptMain` eredita dalla classe `UserComponent` nell'elemento di progetto `ComponentWrapper`.
 
  In fase di esecuzione il motore flusso di dati richiama il metodo `PrimeOutput` nella classe `UserComponent`, che esegue l'override del metodo <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> della classe padre <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. Il metodo `PrimeOutput` chiama a sua volta i metodi seguenti:
 
@@ -114,7 +113,7 @@ ms.locfileid: "78176271"
  Negli esempi seguenti è illustrato il codice personalizzato necessario nella classe `ScriptMain` per creare un componente di origine.
 
 > [!NOTE]
->  In questi esempi viene utilizzata la tabella **Person. Address** nel database di `AdventureWorks` esempio e vengono passate la prima e la quarta colonna, ovvero le colonne **intAddressID** e **nvarchar (30) City** , attraverso il flusso di dati. Gli stessi dati vengono utilizzati negli esempi relativi a origine, trasformazione e destinazione in questa sezione. Per ogni esempio, sono documentati ulteriori prerequisiti e presupposti.
+>  In questi esempi viene utilizzata la tabella **Person. Address** nel `AdventureWorks` database di esempio e vengono passate la prima e la quarta colonna, ovvero le colonne **intAddressID** e **nvarchar (30) City** , attraverso il flusso di dati. Gli stessi dati vengono utilizzati negli esempi relativi a origine, trasformazione e destinazione in questa sezione. Per ogni esempio, sono documentati ulteriori prerequisiti e presupposti.
 
 ### <a name="adonet-source-example"></a>Esempio di origine ADO.NET
  In questo esempio è illustrato un componente di origine che usa una gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] esistente per caricare dati da una tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel flusso di dati.
@@ -134,7 +133,7 @@ ms.locfileid: "78176271"
 
 5.  Nella pagina **Script** fare clic su **Modifica script** e immettere lo script seguente. Chiudere quindi l'ambiente di sviluppo dello script e **Editor trasformazione Script**.
 
-6.  Creare e configurare un componente di destinazione, ad esempio una destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o il componente di destinazione di esempio illustrato in [Creazione di una destinazione con il componente script](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md), in cui sono previste le colonne **AddressID** e **City**. Quindi, connettere il componente di origine alla destinazione. È possibile connettere un'origine direttamente a una destinazione senza alcuna trasformazione. È possibile creare una tabella di destinazione eseguendo il comando [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente nel `AdventureWorks` database:
+6.  Creare e configurare un componente di destinazione, ad esempio una destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o il componente di destinazione di esempio illustrato in [Creazione di una destinazione con il componente script](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md), in cui sono previste le colonne **AddressID** e **City**. Quindi, connettere il componente di origine alla destinazione. È possibile connettere un'origine direttamente a una destinazione senza alcuna trasformazione. È possibile creare una tabella di destinazione eseguendo il [!INCLUDE[tsql](../../includes/tsql-md.md)] comando seguente nel `AdventureWorks` database:
 
     ```
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,
@@ -255,7 +254,7 @@ ms.locfileid: "78176271"
 
  Se si desidera eseguire questo codice di esempio, è necessario configurare il pacchetto e il componente come segue:
 
-1.  Utilizzare l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importazione/esportazione guidata per esportare la tabella **Person. Address** dal database `AdventureWorks` di esempio in un file flat delimitato da virgole. In questo esempio viene utilizzato il nome file ExportedAddresses.txt.
+1.  Utilizzare l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importazione/esportazione guidata per esportare la tabella **Person. Address** dal `AdventureWorks` database di esempio in un file flat delimitato da virgole. In questo esempio viene utilizzato il nome file ExportedAddresses.txt.
 
 2.  Creare una gestione connessione file flat che si connette al file di dati esportato.
 
@@ -267,7 +266,7 @@ ms.locfileid: "78176271"
 
 6.  Nella pagina **Script** fare clic su **Modifica script** e immettere lo script seguente. Chiudere quindi l'ambiente di sviluppo dello script e **Editor trasformazione Script**.
 
-7.  Creare e configurare un componente di destinazione, ad esempio una destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o il componente di destinazione di esempio illustrato in [Creazione di una destinazione con il componente script](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). Quindi, connettere il componente di origine alla destinazione. È possibile connettere un'origine direttamente a una destinazione senza alcuna trasformazione. È possibile creare una tabella di destinazione eseguendo il comando [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente nel `AdventureWorks` database:
+7.  Creare e configurare un componente di destinazione, ad esempio una destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o il componente di destinazione di esempio illustrato in [Creazione di una destinazione con il componente script](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). Quindi, connettere il componente di origine alla destinazione. È possibile connettere un'origine direttamente a una destinazione senza alcuna trasformazione. È possibile creare una tabella di destinazione eseguendo il [!INCLUDE[tsql](../../includes/tsql-md.md)] comando seguente nel `AdventureWorks` database:
 
     ```
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0634be64-4c38-4381-9b19-fe9a5889306c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d224a321ed78f89a798966bd28c0ff7f16d55134
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f23bc2e0f21f15c0af1a26d64e528c65632d75a2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068473"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940422"
 ---
 # <a name="specify-column-content-and-data-type-data-mining-wizard"></a>Impostazione tipo di contenuto e dati delle colonne (Creazione guidata modello di data mining)
   Usare la pagina **Impostazione tipo di contenuto e dati delle colonne** per specificare l'uso e il tipo di dati di ogni colonna selezionata nella pagina precedente della procedura guidata. Per ignorare la colonna, fare clic su **Indietro** per tornare alla pagina **Impostazione dati di training**e deselezionare tutte le caselle di controllo.  
@@ -44,9 +43,9 @@ ms.locfileid: "66068473"
   
  Se si seleziona la colonna come colonna non chiave, sono disponibili i seguenti valori a seconda del tipo di dati:  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
-|Continuo|Consente di specificare che la colonna contiene valori numerici continui.|  
+|Continua|Consente di specificare che la colonna contiene valori numerici continui.|  
 |Discretizzato|Consente di specificare che la colonna contiene valori numerici discretizzati o che possono essere trattati come valori discreti.|  
 |Discrete|Consente di specificare che la colonna contiene testo o altri valori non numerici.|  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66068473"
  **Detect**  
  Consente di analizzare un esempio di dati in tutte le colonne numeriche. Consente di sostituire i valori **Tipo di contenuto** con un tipo di contenuto consigliato.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto della creazione guidata modello di data mining &#40;Analysis Services-&#41;di data mining](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Suggerisci colonne correlate &#40;creazione guidata modello di data mining&#41;](suggest-related-columns-data-mining-wizard.md)   
  [Impostazione tipi di tabella &#40;creazione guidata modello di data mining&#41;](specify-table-types-data-mining-wizard.md)   

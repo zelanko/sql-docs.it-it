@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: dd29389b-928c-4e50-995c-c6af27f97805
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bbe1188773d0770ff345cd54ea47e03a3c05555f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: acfec7a6d86f55e35ef7b3e6f1fa1af481ef87d0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482709"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961123"
 ---
 # <a name="load-data-from-mds-into-excel"></a>Caricare i dati da MDS in Excel
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]In è necessario caricare i dati dal repository MDS per utilizzarli [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)].  
+  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] è necessario caricare i dati dal repository MDS per utilizzarli.  
   
  Se si desidera filtrare il set di dati prima del caricamento, vedere [filtrare i dati prima di caricare &#40;Componente aggiuntivo MDS per Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md) .  
   
@@ -41,7 +40,7 @@ ms.locfileid: "65482709"
   
     > [!NOTE]  
     >  -   Solo il primo milione di membri viene caricato in Excel. Per filtrare l'elenco prima di caricarlo, sulla barra multifunzione del gruppo **Connetti e carica** fare clic su **Filtro**.  
-    > -   Nelle colonne che sono elenchi vincolati (attributi basati su dominio) vengono caricati solo i primi 25.000 valori. È possibile modificare questo numero nella proprietà MaximumDbaEntitySize nel file excelusersettings.config che si trova nel computer in cui è installato Excel. Questo file si trova in C:\Users\\<utente\>\AppData\Local\Microsoft\Microsoft SQL Server\120\MasterDataServices\\.  
+    > -   Nelle colonne che sono elenchi vincolati (attributi basati su dominio) vengono caricati solo i primi 25.000 valori. È possibile modificare questo numero nella proprietà MaximumDbaEntitySize nel file excelusersettings.config che si trova nel computer in cui è installato Excel. Questo file si trova in C:\Users \\<utente \> \AppData\Local\Microsoft\Microsoft SQL Server\120\MasterDataServices \\ .  
   
     > [!NOTE]  
     >  Quando si caricano dati delimitati da testo usando il componente aggiuntivo per Microsoft Excel con Excel a 32 bit e le impostazioni per le proprietà relative al **numero di celle da caricare** e al **numero di celle da pubblicare** sono entrambe impostate sul valore massimo 1000, si verificherà un errore di memoria insufficiente. È necessario usare Excel a 64 bit per usare le impostazioni massime per le due proprietà relative al **numero di celle da caricare** e al **numero di celle da pubblicare**.  
@@ -49,7 +48,7 @@ ms.locfileid: "65482709"
 ## <a name="next-steps"></a>Passaggi successivi  
  [Pubblicare dati da Excel a MDS &#40;Componente aggiuntivo MDS per Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Caricamento dei dati &#40;Componente aggiuntivo MDS per Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
  [Finestra di dialogo filtro &#40;Componente aggiuntivo MDS per Excel&#41;](filter-dialog-box-mds-add-in-for-excel.md)   
  [Pubblicazione dei dati &#40;Componente aggiuntivo MDS per Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
