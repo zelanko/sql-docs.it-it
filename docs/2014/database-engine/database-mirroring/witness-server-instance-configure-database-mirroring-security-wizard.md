@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b5763663-984a-473b-93a3-6cd3322ad41c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7db00b9deeb5faad62731aa666c54fa385be765b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fcea7d39e1bc2c6161b5c6e1edd4852d9fdeb073
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753973"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933842"
 ---
 # <a name="witness-server-instance-configure-database-mirroring-security-wizard"></a>Istanza server di controllo del mirroring (Configurazione guidata sicurezza mirroring del database)
   Utilizzare questa pagina per specificare informazioni sull'istanza del server che opera come istanza di controllo del mirroring per la sessione.  
@@ -63,7 +62,7 @@ ms.locfileid: "62753973"
   
  Per disabilitare la crittografia, deselezionare la casella di controllo. Per abilitare di nuovo la crittografia, selezionare la casella di controllo.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [&#40;SQL Server dell'endpoint del mirroring del database&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [Proprietà database &#40;pagina Mirroring&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Creazione di un endpoint del mirroring del database per l'autenticazione di Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   

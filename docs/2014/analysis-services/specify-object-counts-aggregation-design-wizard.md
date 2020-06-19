@@ -11,23 +11,22 @@ f1_keywords:
 ms.assetid: 305d9d79-d1ab-4704-a7b5-3283842b3996
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7d616997d3764aad42691d9ef3c213d553b5f311
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c66b972395f86746b2d08df234db8aa0c71d03fd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068312"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940322"
 ---
 # <a name="specify-object-counts-aggregation-design-wizard"></a>Impostazione conteggi oggetti (Progettazione guidata aggregazioni)
   Utilizzare la pagina **Impostazione conteggi oggetti** per eseguire automaticamente il conteggio degli oggetti nel cubo o per digitare manualmente conteggi stimati. La Progettazione guidata aggregazioni utilizza i conteggi degli oggetti per stimare i requisiti di archiviazione.  
   
 ## <a name="options"></a>Opzioni  
  **Oggetti cubo**  
- Consente di valutare le dimensioni e gli attributi nel cubo. Vengono visualizzati solo gli attributi che non hanno `AggregationUsage` la proprietà impostata `None` su nella pagina **verifica utilizzo aggregazioni** della procedura guidata, perché questi sono gli unici attributi che richiedono la specifica dei conteggi.  
+ Consente di valutare le dimensioni e gli attributi nel cubo. Vengono visualizzati solo gli attributi che non hanno la `AggregationUsage` proprietà impostata su `None` nella pagina **verifica utilizzo aggregazioni** della procedura guidata, perché questi sono gli unici attributi che richiedono la specifica dei conteggi.  
   
  **Conteggio stimato**  
- Viene visualizzato il numero stimato di righe nel gruppo di misure e il numero di membri di attributi stimato nelle dimensioni del database. È possibile digitare un valore da utilizzare come conteggio stimato o è possibile calcolare i totali stimati. Per calcolare i valori di conteggio, `0` Digitare nel campo e quindi fare clic su **conteggio**. I campi che presentano già un conteggio non vengono aggiornati.  
+ Viene visualizzato il numero stimato di righe nel gruppo di misure e il numero di membri di attributi stimato nelle dimensioni del database. È possibile digitare un valore da utilizzare come conteggio stimato o è possibile calcolare i totali stimati. Per calcolare i valori di conteggio, digitare `0` nel campo e quindi fare clic su **conteggio**. I campi che presentano già un conteggio non vengono aggiornati.  
   
  **Numero di partizioni**  
  (Facoltativo) Digitare il numero stimato di righe nel gruppo di misure e il numero di membri di attributi stimato nelle dimensioni del database.  
@@ -35,7 +34,7 @@ ms.locfileid: "66068312"
  **Numero**  
  Consente di calcolare e di ripopolare i valori nella colonna **Conteggio stimato** per tutti i campi vuoti. I campi che presentano già un conteggio non vengono aggiornati.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto della progettazione guidata aggregazioni](aggregation-design-wizard-f1-help.md)   
  [Procedure guidate di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-wizards-multidimensional-data.md)  
   

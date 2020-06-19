@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 6acd02b9-2311-49b0-a5f8-3852beecb4b0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b5be7eb52d0aa8c0a94b1a4ff63493e7f641bdbd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b44447ae8a706a3f9ca22746efea52e2046a04b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754459"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934002"
 ---
 # <a name="register-mirrored-database"></a>Registra database con mirroring
   Utilizzare questa finestra di dialogo per registrare uno o più database con mirroring su una determinata istanza del server aggiungendo il database o i database a Monitoraggio mirroring del database. Quando viene aggiunto un database, Monitoraggio mirroring del database memorizza nella cache le informazioni relative al database, ai suoi partner e alla modalità di connessione a questi ultimi.  
@@ -49,7 +48,7 @@ ms.locfileid: "62754459"
 |**Registra**|Consente di controllare ogni database da registrare. Se un database è attualmente monitorato, la relativa casella di controllo è selezionata e disabilitata.<br /><br /> Nota: per annullare la registrazione di un database, chiudere la finestra di dialogo **Registra database con mirroring** , selezionare il database nell'albero di navigazione e scegliere **Annulla registrazione** dal menu **Azione** .|  
 |**Database**|Nome di un database con mirroring sull'istanza del server selezionata.|  
 |**Ruolo corrente**|Ruolo del mirroring corrente del database, Principale o Mirror, sull'istanza del server selezionata.|  
-|**Partner (Connetti come)**|Nome del partner di failover per il database. **Autenticazione di Windows dell'utente della console** o **Autenticazione di SQL Server di '***\<nome account di accesso>***'** sono le stringhe visualizzate tra parentesi. Si tratta delle informazioni di autenticazione attualmente utilizzate, se l'istanza è stata aggiunta in precedenza, o che verranno utilizzate se l'istanza non è stata aggiunta al monitoraggio.|  
+|**Partner (Connetti come)**|Nome del partner di failover per il database. All'interno delle parentesi viene visualizzata l'autenticazione **di Windows dell'utente della console** o **l'autenticazione SQL Server dell'account di accesso ' ***\<login name>*** '** . Si tratta delle informazioni di autenticazione attualmente utilizzate, se l'istanza è stata aggiunta in precedenza, o che verranno utilizzate se l'istanza non è stata aggiunta al monitoraggio.|  
   
  **Quando viene scelto OK visualizza la finestra di dialogo Gestione connessioni a istanze server.**  
  Per impostazione predefinita, Monitoraggio mirroring del database utilizza le credenziali per l'autenticazione di Windows per le istanze del server partner per le quali le credenziali non siano state specificate in precedenza. Abilitare l'opzione per modificare le credenziali per una o più istanze del server al termine della registrazione dei database.  

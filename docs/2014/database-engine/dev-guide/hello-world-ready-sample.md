@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 1cb94266-f702-4a57-a1ae-689a89c98757
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8303c387ff38ab5448d15e478534df165e05bddf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64a693738df444e91fa4c9277b8a7dbc3eaca1a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637650"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933567"
 ---
 # <a name="hello-world-ready-sample"></a>Esempio Hello World Ready
   Nell'esempio Hello World Ready vengono illustrate le operazioni di base per la creazione, la distribuzione e il test di una stored procedure basata sull'integrazione con CLR semplice e internazionalizzata. Un componente internazionalizzato può essere facilmente localizzato in diverse lingue per diversi mercati in tutto il mondo senza dover modificare il codice sorgente del componente. Nell'esempio viene illustrato anche come restituire dati tramite un parametro di output e tramite un record costruito dinamicamente dalla stored procedure e restituito al client. L'esempio è quasi identico all'esempio Hello World, ad eccezione del fatto che la localizzazione di questa applicazione è molto più semplice e sicura. Per modificare il testo localizzato è necessario effettuare le operazioni seguenti:  

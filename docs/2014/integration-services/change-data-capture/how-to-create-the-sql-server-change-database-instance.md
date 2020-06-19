@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3895097e-28fa-4808-a3a8-ba821b4ba4d4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f189bacee19f7377ae36a15f6b62f05de94fa5a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 507eec4a374647cffe158527acff97b7fa0ca377
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835398"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923072"
 ---
 # <a name="how-to-create-the-sql-server-change-database-instance"></a>Procedura di creazione dell'istanza del database delle modifiche di SQL Server
   In questa procedura viene illustrato come utilizzare CDC Designer Console per creare istanze di CDC.  

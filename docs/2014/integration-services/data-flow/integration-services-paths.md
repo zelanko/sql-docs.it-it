@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 832ea48478eb28b94caf292067344a3754040b2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 06746ae92c4e5d868cf5aff709ceccbbd200b68e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901795"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915445"
 ---
 # <a name="integration-services-paths"></a>Percorsi in Integration Services
   Un percorso collega due componenti in un flusso di dati connettendo l'output di un componente all'input dell'altro. Un percorso ha un'origine e una destinazione. Se un percorso connette, ad esempio, un'origine OLE DB e una trasformazione Ordinamento, l'origine OLE DB costituirà l'origine del percorso e la trasformazione Ordinamento ne costituirà la destinazione. L'origine è il componente da cui inizia il percorso, mentre la destinazione è il componente in cui termina.  
@@ -55,7 +54,7 @@ ms.locfileid: "62901795"
   
 -   [Connessione di componenti in un flusso di dati](connect-components-in-a-data-flow.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Flusso di dati](data-flow.md)  
   
   

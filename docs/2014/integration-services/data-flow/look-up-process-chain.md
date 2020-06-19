@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f6303ea4-fbbf-4cba-bc60-828df62be8c2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 01c30422e6f0a1beb65c5f72259fce2aa8f80806
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a41cdeec7730fe26e6902a77d3da07c52a0da42d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771157"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915361"
 ---
 # <a name="look-up-process-chain"></a>Cerca ProcessChain
   Utilizzare la finestra di dialogo **Cerca ProcessChain** per cercare una catena di processi definita nel sistema SAP Netweaver BW. Quando viene visualizzato l'elenco delle catene di processi disponibili, selezionare la catena desiderata e le opzioni associate verranno compilate con i valori richiesti dall'origine.  

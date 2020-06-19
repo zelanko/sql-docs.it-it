@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 663bab775aff9a04a4a9d93f2bcbd0e193b18f37
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8301c1f88eb8cf928066a3c12b14452ddbd98cda
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783059"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958511"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>Eliminazione dei file BLOB di backup con lease attivi
   Quando si esegue il backup o il ripristino da archiviazione di Azure, SQL Server acquisisce un lease infinito per bloccare l'accesso esclusivo al BLOB. Quando il processo di backup o ripristino viene completato correttamente, il lease viene rilasciato. Se il backup o il ripristino non viene completato, il processo di backup tenta di eliminare i BLOB non validi. Tuttavia, se il backup non viene completato a causa di un problema di connettività di rete che persiste nel tempo, è possibile che il processo di backup non sia in grado di accedere al BLOB e che quindi quest'ultimo rimanga orfano. Di conseguenza, il BLOB non può essere scritto o eliminato finché il lease non viene rilasciato. In questo argomento viene descritto come rilasciare il lease ed eliminare il BLOB.  
@@ -31,7 +30,7 @@ ms.locfileid: "72783059"
   
 1.  **Identificazione di BLOB con lease:** se si dispone di uno script o un processo in cui vengono eseguiti i processi di backup, è possibile rilevare l'errore nello script o nel processo e usarlo per rimuovere i BLOB.   È inoltre possibile utilizzare le proprietà LeastState e LeaseStats per identificare i BLOB con lease. Dopo aver identificato i BLOB, è consigliabile rivedere l'elenco e verificare la validità del file di backup prima di eliminare il BLOB.  
   
-2.  **Interruzione del lease:** tramite una richiesta autorizzata è possibile interrompere il lease senza specificare un relativo ID. Per ulteriori informazioni, vedere [qui](https://go.microsoft.com/fwlink/?LinkID=275664) .  
+2.  **Interruzione del lease:** tramite una richiesta autorizzata è possibile interrompere il lease senza specificare un relativo ID. Per altre informazioni, fare clic [qui](https://go.microsoft.com/fwlink/?LinkID=275664) .  
   
     > [!TIP]  
     >  Tramite SQL Server viene generato un ID lease per stabilire l'accesso esclusivo durante l'operazione di ripristino. L'ID lease di ripristino è BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
@@ -39,7 +38,7 @@ ms.locfileid: "72783059"
 3.  **Eliminazione del BLOB:** per eliminare un BLOB con un lease attivo è innanzitutto necessario interrompere il lease.  
   
 ###  <a name="powershell-script-example"></a><a name="Code_Example"></a>Esempio di script di PowerShell  
- ** \* Importante \* \* ** Se si esegue PowerShell 2,0, è possibile che si verifichino problemi durante il caricamento dell'assembly Microsoft WindowsAzure. storage. dll. È consigliabile effettuare l'aggiornamento a Powershell 3.0 per risolvere il problema. È inoltre possibile utilizzare la soluzione alternativa per PowerShell 2.0:  
+ Importante se si esegue PowerShell 2,0, è possibile che si verifichino problemi durante il caricamento dell'assembly di Microsoft WindowsAzure.Storage.dll. ** \* \* \* \* ** È consigliabile effettuare l'aggiornamento a Powershell 3.0 per risolvere il problema. È inoltre possibile utilizzare la soluzione alternativa per PowerShell 2.0:  
   
 -   Creare o modificare il file powershell.exe.config per caricare gli assembly .NET 2.0 e .NET 4.0 in fase di esecuzione con quanto riportato di seguito:  
   
@@ -79,9 +78,9 @@ ms.locfileid: "72783059"
   
      **Interruzione lease**  
   
-     **Il lease nell'\<URL del BLOB> è un lease di ripristino: questo messaggio verrà visualizzato solo se è presente un BLOB con un lease di ripristino ancora attivo.**  
+     **Il lease in \<URL of the Blob> è un lease di ripristino: questo messaggio verrà visualizzato solo se è presente un BLOB con un lease di ripristino ancora attivo.**  
   
-     **Il lease nell'\<URL del BLOB> non è un lease di ripristino. Interruzione lease nell'\<URL del BOB>.**  
+     **Il lease on \<URL of the Blob> non è un lease di ripristino in cui si interrompe il lease \<URL of the Bob> .**  
   
 ```powershell
 param(  

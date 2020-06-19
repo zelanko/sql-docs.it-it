@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ed71e8c4-e013-4bf2-8b6c-1e833ff2a41d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0152594c213196860e80ff5d5267356977404b7d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff324da58b3761c12c7fae910dd4c7e22af32260
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771191"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922282"
 ---
 # <a name="the-oracle-cdc-instance"></a>Istanza di Oracle CDC
   L'istanza di Oracle CDC è un processo creato dal servizio Oracle CDC per elaborare le modifiche acquisite da un solo database di origine Oracle. Tramite l'istanza di Oracle CDC viene recuperata la configurazione dalla tabella **cdc.xdbcdc_config** e viene gestito lo stato nella tabella **cdc.xdbcdc_state** . Queste tabelle fanno parte del database CDC che definisce l'istanza di Oracle CDC. Per ulteriori informazioni sul database e le tabelle xdbcdc, vedere [The CDC Databases](the-oracle-cdc-service.md).  

@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4464b0ca035bc19695b37aea01385f737549fec1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50d0914efce0fd8b91d0a4ac2e93d01d910849e4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768397"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967216"
 ---
 # <a name="connecting-to-data-sources-in-the-script-task"></a>Connessione a origini dati nell'attività Script
   Le gestioni connessioni forniscono accesso a origini dati configurate nel pacchetto. Per altre informazioni, vedere [Connessioni in Integration Services &#40;SSIS&#41;](../../connection-manager/integration-services-ssis-connections.md).  
@@ -43,7 +42,7 @@ ms.locfileid: "62768397"
  È possibile utilizzare il metodo <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Contains%2A> della raccolta <xref:Microsoft.SqlServer.Dts.Runtime.Connections> restituita dalla proprietà <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A> per cercare una connessione esistente prima di utilizzare la connessione nel codice.  
   
 > [!IMPORTANT]  
->  Non è possibile chiamare il metodo AcquireConnection delle gestioni connessioni che restituiscono oggetti non gestiti, ad esempio la gestione connessione OLE DB e la gestione connessione Excel, nel codice gestito di un'attività Script. Tuttavia, è possibile leggere la proprietà ConnectionString di queste gestioni connessioni e connettersi direttamente all'origine dati nel codice utilizzando la stringa di connessione con un oggetto `OledbConnection` dello spazio dei nomi **System. Data. OleDb** .  
+>  Non è possibile chiamare il metodo AcquireConnection delle gestioni connessioni che restituiscono oggetti non gestiti, ad esempio la gestione connessione OLE DB e la gestione connessione Excel, nel codice gestito di un'attività Script. Tuttavia, è possibile leggere la proprietà ConnectionString di queste gestioni connessioni e connettersi direttamente all'origine dati nel codice utilizzando la stringa di connessione con un oggetto dello `OledbConnection` spazio dei nomi **System. Data. OleDb** .  
 >   
 >  Se è necessario chiamare il metodo AcquireConnection di una gestione connessione che restituisce un oggetto non gestito, usare una gestione connessione [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Quando si configura la gestione connessione [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] per l'utilizzo di un provider OLE DB, la connessione viene eseguita tramite il provider di dati [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] per OLE DB. In questo caso, il metodo AcquireConnection restituisce un `System.Data.OleDb.OleDbConnection` anziché un oggetto non gestito. Per configurare una gestione connessione [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] per l'uso con un'origine dati Excel, selezionare il provider OLE DB [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per Jet, specificare un file di Excel e immettere `Excel 8.0` (per Excel 97 e versioni successive) come valore di **Proprietà estese** nella pagina **Tutte** della finestra di dialogo **Gestione connessione**.  
   
@@ -100,7 +99,7 @@ public class ScriptMain
   
 ![Integration Services icona (piccola)](../../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina relativa a Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services &#40;connessioni SSIS&#41;](../../connection-manager/integration-services-ssis-connections.md)   
  [Creazione di gestioni connessioni](../../create-connection-managers.md)  
   

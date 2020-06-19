@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2f8854dba3c1d998d572481c285ee75dc933e480
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb8b61bf8cfa9a2b26646df19810a94705a30d14
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771181"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922152"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Utilizzo del servizio Oracle CDC
   In questa sezione vengono descritti alcuni concetti importanti relativi al servizio Oracle CDC. I concetti inclusi in questa sezione sono i seguenti:  
@@ -108,7 +107,7 @@ ms.locfileid: "62771181"
 |ref_count|Tramite questo elemento viene contato il numero di computer in cui è installato lo stesso servizio Oracle CDC. A ogni aggiunta di un servizio Oracle CDC con lo stesso nome il conteggio aumenta, mentre diminuisce alla rimozione di un servizio. Quando il conteggio raggiunge lo zero, questa riga viene eliminata.|  
 |active_service_node|Nome del nodo Windows che attualmente gestisce il servizio CDC. Quando il servizio viene arrestato correttamente, questa colonna viene impostata su null, per indicare che non vi sono più servizi attivi.|  
 |active_service_heartbeat|Tramite questo elemento si tiene traccia del servizio CDC corrente per determinare se è ancora attivo.<br /><br /> Questo elemento viene aggiornato con il timestamp UTC del database corrente per il servizio CDC attivo a intervalli regolari. L'intervallo predefinito è 30 secondi, anche se può essere configurato.<br /><br /> Quando un servizio CDC in sospeso rileva che l'heartbeat non è stato aggiornato dopo il superamento dell'intervallo configurato, il servizio in sospeso tenta di assumere il ruolo del servizio CDC attivo.|  
-|opzioni|Questo elemento specifica le opzioni secondarie, ad esempio traccia o ottimizzazione. Presenta il formato **name[=value][; ]** . La stringa delle opzioni utilizza la stessa semantica della stringa di connessione ODBC. Se l'opzione è Boolean (con un valore yes/no), il valore può includere solo il nome.<br /><br /> Trace presenta i valori possibili seguenti:<br /><br /> true<br /><br /> on<br /><br /> false<br /><br /> spento<br /><br /> \<nome classe[,nome classe>]<br /><br /> Il valore predefinito è **false**.<br /><br /> <br /><br /> **service_heartbeat_interval** è l'intervallo di tempo (in secondi) entro il quale il servizio può aggiornare la colonna active_service_heartbeat. Il valore predefinito è **30**. Il valore massimo è **3600**.<br /><br /> **service_config_polling_interval** è l'intervallo di polling (in secondi) entro il quale il servizio CDC deve individuare eventuali modifiche apportate alla configurazione. Il valore predefinito è **30**. Il valore massimo è **3600**.<br /><br /> **sql_command_timeout** è il timeout comando che funziona con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il valore predefinito è **1**. Il valore massimo è **3600**.|  
+|opzioni|Questo elemento specifica le opzioni secondarie, ad esempio traccia o ottimizzazione. Presenta il formato **name[=value][; ]** . La stringa delle opzioni utilizza la stessa semantica della stringa di connessione ODBC. Se l'opzione è Boolean (con un valore yes/no), il valore può includere solo il nome.<br /><br /> Trace presenta i valori possibili seguenti:<br /><br /> true<br /><br /> on<br /><br /> false<br /><br /> spento<br /><br /> \<class name>[, nome classe>]<br /><br /> Il valore predefinito è **false**.<br /><br /> <br /><br /> **service_heartbeat_interval** è l'intervallo di tempo (in secondi) entro il quale il servizio può aggiornare la colonna active_service_heartbeat. Il valore predefinito è **30**. Il valore massimo è **3600**.<br /><br /> **service_config_polling_interval** è l'intervallo di polling (in secondi) entro il quale il servizio CDC deve individuare eventuali modifiche apportate alla configurazione. Il valore predefinito è **30**. Il valore massimo è **3600**.<br /><br /> **sql_command_timeout** è il timeout comando che funziona con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il valore predefinito è **1**. Il valore massimo è **3600**.|  
 ||  
   
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>Stored procedure del database MSXDBCDC  
@@ -157,7 +156,7 @@ ms.locfileid: "62771181"
 ###  <a name="dboxcbcdc_add_servicesvcnamesqlusr"></a><a name="BKMK_dboxcbcdc_add_service"></a> dbo.xcbcdc_add_service(svcname,sqlusr)  
  Tramite la stored procedure **dbo.xcbcdc_add_service** è possibile aggiungere una voce alla tabella **MSXDBCDC.xdbcdc_services** e un incremento di uno alla colonna ref_count per il nome del servizio nella tabella **MSXDBCDC.xdbcdc_services** . Quando **ref_count** è pari a 0, la riga viene eliminata.  
   
- Per usare la stored procedure **dbo.xcbcdc_add_service\<nome servizio, nome utente>** , l'utente deve essere un membro del ruolo del database **db_owner** per l'istanza di CDC da rinominare oppure un membro del ruolo predefinito del server **sysadmin** o **serveradmin**.  
+ Per utilizzare la stored procedure **dbo \<service name, username> . xcbcdc_add_service** , è necessario che l'utente sia un membro del ruolo del database **db_owner** per il database dell'istanza di CDC denominato o membro del ruolo predefinito del server **sysadmin** o **serveradmin** .  
   
 ###  <a name="dboxdbcdc_startdbname"></a><a name="BKMK_dboxdbcdc_start"></a> dbo.xdbcdc_start(dbname)  
  Tramite la stored procedure **dbo.xdbcdc_start** è possibile inviare una richiesta di avvio al servizio CDC che gestisce l'istanza di CDC selezionata per avviare l'elaborazione delle modifiche.  

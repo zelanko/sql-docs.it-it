@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 02d830ea-5b1f-4485-9f94-d64b8bea592b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6b767484af8266b03cf34ebfe4f625fee6c1ca97
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a25a0b266645f11e23edaa3fc586a2b836521106
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068350"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940372"
 ---
 # <a name="specify-naming-conventions-schema-generation-wizard-analysis-services---multidimensional-data"></a>Impostazione convenzioni di denominazione (Generazione guidata schema) (Analysis Services - Dati multidimensionali)
   Utilizzare la pagina **Impostazione convenzioni di denominazione** per definire le convenzioni di denominazione utilizzate in Generazione guidata schema per la creazione di oggetti dello schema.  
@@ -26,7 +25,7 @@ ms.locfileid: "66068350"
  **Opzione**  
  Consente di impostare le convenzioni di denominazione utilizzate nella procedura guidata. Nella tabella seguente vengono descritte le opzioni disponibili.  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |**Separatore**|Consente di specificare il carattere che separa le parole in un nome di oggetto. Nella colonna **Valore** selezionare **Carattere di sottolineatura**, **Spazio**o **Nessuno**. Il valore predefinito è **Carattere di sottolineatura**.|  
 |**Prefisso colonna chiave primaria**|Consente di specificare la stringa utilizzata come prefisso per il nome di ogni colonna chiave primaria. Il valore predefinito è **PK**.|  
@@ -39,7 +38,7 @@ ms.locfileid: "66068350"
  **Valore**  
  Consente di indicare un valore per l'opzione specificata in **Opzione** da usare per la generazione dello schema.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto della generazione guidata schema &#40;Analysis Services-Dati multidimensionali&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)   
  [Procedure guidate di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-wizards-multidimensional-data.md)  
   

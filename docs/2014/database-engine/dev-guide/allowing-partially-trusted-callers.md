@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 20b0248f-36da-4fc3-97d2-3789fcf6e084
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bed854ba13bec4206f3ee869795af91c4da4f525
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e76005b6314f074d4f54f64d42a03b4b79dcef3a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754199"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933772"
 ---
 # <a name="allowing-partially-trusted-callers"></a>Accettazione di chiamanti parzialmente attendibili
   La condivisione delle librerie di codice rappresenta uno scenario comune quando si utilizza l'integrazione con Common Language Runtime (CLR), in cui a un assembly che contiene un tipo definito dall'utente, una stored procedure, una funzione definita dall'utente, un'aggregazione definita dall'utente, un trigger o una classe di utilità spesso accede un altro assembly o applicazione. Le librerie di codice per le quali è prevista la condivisione da parte di più applicazioni devono essere firmate con un nome sicuro.  
@@ -1098,7 +1097,7 @@ DROP ASSEMBLY ResultSet;
 GO  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Sicurezza per l'integrazione con CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

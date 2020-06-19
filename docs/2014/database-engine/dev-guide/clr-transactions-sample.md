@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: b09161af-6ac1-406c-9d62-e40be3b4cf8d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 00a5db60a0bccdd3deec1d1ac845e926b6af5fb9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e73e11c582a2a8fc310423551e6e618718e375a2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637750"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933699"
 ---
 # <a name="clr-transactions-sample"></a>Esempio CLR Transactions
   In questo esempio viene illustrato il controllo delle transazioni tramite le API gestite dello spazio dei nomi `System.Transactions` . In particolare, viene utilizzata la classe `System.Transactions.TransactionScope` per stabilire un limite della transazione al fine di garantire che i valori delle scorte non vengano rettificati a meno che siano presenti scorte sufficienti per soddisfare la richiesta. Se le scorte sono sufficienti, si garantisce che il trasferimento dal magazzino o da una posizione a un'altra avvenga in modo atomico. La registrazione automatica in una transazione distribuita viene dimostrata registrando le modifiche alle scorte in un database di controllo presente in un'istanza distinta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0579a98e3302b6944f68ca449d3e7cda0ecc01d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754243"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933782"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Determinazione del numero di bucket corretto per gli indici hash
   È necessario specificare un valore per il parametro `BUCKET_COUNT` durante la creazione della tabella ottimizzata per la memoria. In questo argomento vengono fornite indicazioni per determinare il valore appropriato per il parametro `BUCKET_COUNT`. Se non è possibile determinare il numero di bucket corretto, utilizzare in alternativa un indice non cluster.  Un valore `BUCKET_COUNT` errato, in particolare se troppo basso, può influire in modo significativo sulle prestazioni del carico di lavoro e sul tempo di recupero del database. È consigliabile sovrastimare il numero di bucket.  
@@ -24,7 +23,7 @@ ms.locfileid: "62754243"
   
  Per ulteriori informazioni sugli indici hash non cluster, vedere [Hash Indexes](hash-indexes.md) e [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
- Una tabella hash viene allocata per ogni indice hash in una tabella ottimizzata per la memoria. Le dimensioni della tabella hash allocata per un indice sono specificate dal `BUCKET_COUNT` parametro in [Create Table &#40;transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) o [CREATE TYPE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql). Il numero di bucket verrà arrotondato internamente per eccesso alla potenza più vicina di due. Se, ad esempio, si specifica un numero di bucket pari a 300.000 si avrà un numero di bucket effettivo pari a 524.288.  
+ Una tabella hash viene allocata per ogni indice hash in una tabella ottimizzata per la memoria. Le dimensioni della tabella hash allocata per un indice sono specificate dal `BUCKET_COUNT` parametro in [Create Table &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) o [create Type &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql). Il numero di bucket verrà arrotondato internamente per eccesso alla potenza più vicina di due. Se, ad esempio, si specifica un numero di bucket pari a 300.000 si avrà un numero di bucket effettivo pari a 524.288.  
   
  Per i collegamenti a un articolo e a un video sul numero di bucket, vedere [Come determinare 'esatto numero di bucket per gli indici hash (OLTP in memoria)](https://www.mssqltips.com/sqlservertip/3104/determine-bucketcount-for-hash-indexes-for-sql-server-memory-optimized-tables/).  
   
@@ -177,7 +176,7 @@ GO
 -   Se le scansioni complete dell'indice sono le operazioni critiche per le prestazioni più frequenti, utilizzare un numero di bucket simile al numero effettivo dei valori di chiave di indice.  
   
 ### <a name="big-tables"></a>Tabelle di grandi dimensioni  
- Per le tabelle di grandi dimensioni, l'utilizzo della memoria può costituire un problema. Ad esempio, con una tabella di 250 milioni righe con 4 indici hash, ognuno con un numero di bucket pari a 1 miliardo, l'overhead per le tabelle hash è 4 indici \* * 1 miliardo bucket 8 byte = 32 gigabyte di utilizzo della memoria. Quando si sceglie un numero di bucket di 250 milioni per ciascun indice, l'overhead totale per le tabelle hash sarà di 8 GB. Si noti che questo è in aggiunta agli 8 byte di utilizzo della memoria, ogni indice aggiunge a ogni singola riga, ovvero 8 gigabyte in questo scenario (4 \* indici \* 8 byte 250 milioni righe).  
+ Per le tabelle di grandi dimensioni, l'utilizzo della memoria può costituire un problema. Ad esempio, con una tabella di 250 milioni righe con 4 indici hash, ognuno con un numero di bucket pari a 1 miliardo, l'overhead per le tabelle hash è 4 indici * 1 miliardo bucket \* 8 byte = 32 gigabyte di utilizzo della memoria. Quando si sceglie un numero di bucket di 250 milioni per ciascun indice, l'overhead totale per le tabelle hash sarà di 8 GB. Si noti che questo è in aggiunta agli 8 byte di utilizzo della memoria, ogni indice aggiunge a ogni singola riga, ovvero 8 gigabyte in questo scenario (4 indici \* 8 byte \* 250 milioni righe).  
   
  Le scansioni complete delle tabelle non fanno in genere parte del percorso critico per le prestazioni per i carichi di lavoro OLTP. Pertanto, occorre scegliere tra l'utilizzo della memoria e le prestazioni della operazioni di ricerca di punti e di inserimento:  
   
@@ -185,7 +184,7 @@ GO
   
 -   Per ottimizzare le prestazioni per le ricerche di punti, è consigliabile un numero di bucket superiore di due o persino tre volte al numero di valori di indice univoci. Un numero di bucket più alto comporterebbe un aumento dell'utilizzo della memoria e del tempo richiesto per un'analisi completa dell'indice.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Indici in tabelle con ottimizzazione per la memoria](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
   
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 165d3833-0493-490c-9f63-8a134a7fafb8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 521d40529501d761b8e50300c16a816284109695
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab8d49965a612657b0b355d69ec93b59515b46c6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770888"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914681"
 ---
 # <a name="request-log"></a>Log richieste
   Usare la finestra di dialogo **Log richieste** per visualizzare gli eventi registrati durante la richiesta fatta al sistema SAP Netweaver BW per i dati di esempio. Queste informazioni possono essere utili se è necessario risolvere i problemi relativi alla configurazione dell'origine SAP BW.  

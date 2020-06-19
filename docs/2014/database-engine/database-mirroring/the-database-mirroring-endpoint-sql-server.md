@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1afac17b04c968c6685e356e3bbc8101161a36b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5d9728ad642d978378305a21de4b6a9db068c397
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797898"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933902"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>Endpoint del mirroring del database (SQL Server)
   Per fare parte del mirroring del database e di [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , un'istanza del server richiede un *endpoint del mirroring del database*dedicato. Si tratta di un endpoint speciale utilizzato solo per ricevere connessioni da altre istanze del server. In un'istanza del server specificata, ogni connessione del mirroring del database o di [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] a qualsiasi altra istanza del server utilizza un solo endpoint del mirroring di database.  
@@ -76,7 +75,7 @@ ms.locfileid: "72797898"
   
 -   [Creare un endpoint del mirroring del database per l'autenticazione Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [Usare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [Utilizzare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
     -   [Impostazione dell'endpoint del mirroring del database per l'utilizzo di certificati per le connessioni in uscita &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
   

@@ -1,5 +1,6 @@
 ---
 title: Risultati dell'elaborazione (ODBC) | Microsoft Docs
+description: Sono disponibili informazioni sull'elaborazione dei dati restituiti da SQL Server quando un'applicazione ODBC invia un'istruzione SQL.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: 61a8db19-6571-47dd-84e8-fcc97cb60b45
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 39dafbb865ef951356bb01c4fd8f646bf943346b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 53c7b25cfe1429e18ee944f296ca8ebe6b50ce17
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304592"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967565"
 ---
 # <a name="processing-results-odbc"></a>Risultati dell'elaborazione (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3f1dbcf9-9cca-4606-bdcc-7ea6ad48cdf3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 76f2c5e517ca81ae667df3efa6ccd2f49384f090
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6d769112c95b88becfd1ec9bfbe7beabd0130cdd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060978"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922105"
 ---
 # <a name="character-map-transformation-editor"></a>Editor trasformazione Mappa caratteri
   Usare la finestra di dialogo **Editor trasformazione Mappa caratteri** per selezionare le funzioni per i valori stringa da applicare ai dati di colonna e per specificare se il mapping è una modifica sul posto o viene aggiunto come nuova colonna.  
@@ -63,7 +62,7 @@ ms.locfileid: "66060978"
  **Configura output errori**  
  Usare la finestra di dialogo [Configura output errori](../../2014/integration-services/configure-error-output.md) per specificare le opzioni di gestione degli errori per la trasformazione corrente.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1c846950-0a2d-45df-b0d5-193e455f7cd5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b9f9d698496c05ca28d0d2a8b8341007bca13e8b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fab3a0a48633f70a91d4e65bd31b7d3f9c314ca3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754441"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933862"
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard-sql-server-management-studio"></a>Avvio della Configurazione guidata sicurezza mirroring del database (SQL Server Management Studio)
   È possibile utilizzare la Configurazione guidata sicurezza mirroring del database per eseguire la configurazione iniziale delle impostazioni di sicurezza in tutte o alcune istanze del server coinvolte nel mirroring. Questa procedura guidata viene eseguita insieme alla pagina **Mirroring** della finestra di dialogo **Proprietà database** .  
@@ -33,7 +32,7 @@ ms.locfileid: "62754441"
   
 4.  Fare clic su **Configura sicurezza**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [&#40;SQL Server di mirroring del database&#41;](database-mirroring-sql-server.md)   
  [Proprietà database &#40;pagina Mirroring&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Stabilire una sessione di mirroring del database tramite autenticazione di Windows &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  

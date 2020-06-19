@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0538b490-5185-49e1-a783-4ce3539a0de5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 30234275a724dddce95cdad66e5e37a382a25e62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5015589854780f334dfa3b82b4f4ab544a4b7145
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068174"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940360"
 ---
 # <a name="specify-source-information-dimension-wizard"></a>Impostazione informazioni origine (Creazione guidata dimensione)
   Utilizzare la pagina **Selezione tabella principale della dimensione** per selezionare la vista origine dati, la tabella principale della dimensione, le colonne chiave e le colonne nome membro per la dimensione da creare.  
@@ -42,7 +41,7 @@ ms.locfileid: "66068174"
  **Colonna nome**  
  Consente di selezionare la colonna contenente i nomi membro per la dimensione nella tabella specificata nell'opzione **Tabella principale** . È necessario specificare una colonna nome quando si utilizza una chiave composta. Per creare una colonna nome per una chiave composta, si consiglia di creare un calcolo denominato nella vista origine dati che concatena le colonne chiave specificate. Quando si utilizza una chiave singola, la colonna nome è facoltativa.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto della creazione guidata dimensione](dimension-wizard-f1-help.md)   
  [Dimensioni &#40;Analysis Services Dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 5d7034ca-ce88-4a7e-8dd9-82f867479e7f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 822dc7f3d66afc44c187d199674a22f20977f535
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a670b2e4f4a7a276f9e026cb650855c8aa2108a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74055908"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933739"
 ---
 # <a name="array-parameter-sample"></a>Esempio Array Parameter
   Talvolta può risultare utile creare, aggiornare o eliminare un set di righe in un database. Sono disponibili diversi modi per eseguire queste operazioni. Uno di questi consiste nel passare una matrice di informazioni da un client a una stored procedure basata sull'integrazione con CLR nel server mediante un tipo di dati per l'integrazione con CLR definito dall'utente. La natura di tale tipo di dati limita a 8.000 byte le dimensioni dei dati forniti al server. Questa opzione non è pertanto utile in caso di dati complessi o di grandi dimensioni. Se i dati disponibili sono semplici e di piccole dimensioni, questa opzione risulta più efficace rispetto alla chiamata di una stored procedure per ogni riga. Passando una matrice, l'ordine dei dati viene mantenuto per le applicazioni in cui tale ordine è importante. Nell'esempio sono inclusi gli elementi seguenti:  

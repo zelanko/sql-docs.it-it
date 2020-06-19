@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7d9b75cc79f1f127858ce8547aa222524614ac09
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f414053bcc3f51ffc737a84a3b693fb0e924a7b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901550"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915061"
 ---
 # <a name="ole-db-destination"></a>Destinazione OLE DB
   La destinazione OLE DB consente di caricare dati in un'ampia gamma di database conformi con OLE DB, tramite una tabella o vista di database oppure un comando SQL. L'origine OLE DB, ad esempio, può caricare dati nelle tabelle dei database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -45,7 +44,7 @@ ms.locfileid: "62901550"
 > [!NOTE]  
 >  La destinazione OLE DB non supporta parametri. Per eseguire un'istruzione INSERT con parametri, è possibile utilizzare la trasformazione Comando OLE DB. Per altre informazioni, vedere [Trasformazione Comando OLE DB](transformations/ole-db-command-transformation.md).  
   
- Quando nella destinazione OLE DB vengono caricati dati che utilizzano un Double-Byte Character Set (DBCS), è possibile che tali dati vengano danneggiati se nella modalità di accesso non viene utilizzata l'opzione di caricamento rapido e la gestione connessione OLE DB utilizza il provider [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB). Per assicurare l'integrità dei dati DBCS è necessario configurare Gestione connessione OLE DB in modo da usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client o una delle modalità di accesso con caricamento rapido: **Tabella o vista - Caricamento rapido** o **Variabile nome vista o nome tabella - Caricamento rapido**. Entrambe le opzioni sono disponibili nella finestra di dialogo **Editor destinazione OLE DB** . Durante la programmazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] del modello a oggetti, è necessario impostare la proprietà `OpenRowset Using FastLoad`AccessMode su `OpenRowset Using FastLoad From Variable`, o.  
+ Quando nella destinazione OLE DB vengono caricati dati che utilizzano un Double-Byte Character Set (DBCS), è possibile che tali dati vengano danneggiati se nella modalità di accesso non viene utilizzata l'opzione di caricamento rapido e la gestione connessione OLE DB utilizza il provider [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB). Per assicurare l'integrità dei dati DBCS è necessario configurare Gestione connessione OLE DB in modo da usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client o una delle modalità di accesso con caricamento rapido: **Tabella o vista - Caricamento rapido** o **Variabile nome vista o nome tabella - Caricamento rapido**. Entrambe le opzioni sono disponibili nella finestra di dialogo **Editor destinazione OLE DB** . Durante la programmazione del [!INCLUDE[ssIS](../../includes/ssis-md.md)] modello a oggetti, è necessario impostare la proprietà AccessMode su `OpenRowset Using FastLoad` , o `OpenRowset Using FastLoad From Variable` .  
   
 > [!NOTE]  
 >  Se si usa la finestra di dialogo **Editor destinazione OLE DB[!INCLUDE[ssIS](../../includes/ssis-md.md)] in Progettazione ** per creare la tabella di destinazione in cui la destinazione OLE DB inserisce i dati, sarà necessario selezionare la nuova tabella manualmente. È necessario eseguire la selezione manuale quando un provider OLE DB, ad esempio il provider Microsoft OLE DB per DB2, aggiunge automaticamente gli identificatori di schema al nome della tabella.  
@@ -76,18 +75,18 @@ ms.locfileid: "62901550"
   
 -   È possibile specificare il numero di righe nel batch e le dimensioni del commit.  
   
- Alcune opzioni di caricamento rapido sono archiviate in proprietà specifiche della destinazione OLE DB. Ad esempio, FastLoadKeepIdentity specifica se mantenere i valori Identity, FastLoadKeepNulls specifica se mantenere i valori Null e FastLoadMaxInsertCommitSize specifica il numero di righe di cui eseguire il commit come batch. Altre opzioni di caricamento rapido sono archiviate in un elenco con valori delimitati da virgole nella proprietà FastLoadOptions. Se la destinazione OLE DB utilizza tutte le opzioni di caricamento rapido archiviate in FastLoadOptions ed elencate nella finestra di dialogo **Editor destinazione OLE DB** , il valore della proprietà è impostato su `TABLOCK, CHECK_CONSTRAINTS, ROWS_PER_BATCH=1000`. Il valore 1000 indica che la destinazione è configurata per l'utilizzo di batch di 1000 righe.  
+ Alcune opzioni di caricamento rapido sono archiviate in proprietà specifiche della destinazione OLE DB. Ad esempio, FastLoadKeepIdentity specifica se mantenere i valori Identity, FastLoadKeepNulls specifica se mantenere i valori Null e FastLoadMaxInsertCommitSize specifica il numero di righe di cui eseguire il commit come batch. Altre opzioni di caricamento rapido sono archiviate in un elenco con valori delimitati da virgole nella proprietà FastLoadOptions. Se la destinazione OLE DB utilizza tutte le opzioni di caricamento rapido archiviate in FastLoadOptions ed elencate nella finestra di dialogo **Editor destinazione OLE DB** , il valore della proprietà è impostato su `TABLOCK, CHECK_CONSTRAINTS, ROWS_PER_BATCH=1000` . Il valore 1000 indica che la destinazione è configurata per l'utilizzo di batch di 1000 righe.  
   
 > [!NOTE]  
 >  Un eventuale esito negativo della verifica dei vincoli nella destinazione causa l'interruzione dell'intero batch di righe definito da FastLoadMaxInsertCommitSize.  
   
  Oltre alle opzioni di caricamento rapido elencate nella finestra di dialogo **Editor destinazione OLE DB** , è possibile configurare la destinazione OLE DB in modo da usare le opzioni per il caricamento bulk seguenti digitandole nella proprietà FastLoadOptions della finestra di dialogo **Editor avanzato** .  
   
-|Opzione per il caricamento rapido|Descrizione|  
+|Opzione per il caricamento rapido|Description|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|Specifica le dimensioni in kilobyte del batch da inserire. L'opzione ha un valore `KILOBYTES_PER_BATCH`  =  \<**>** Integer positivo del form.|  
+|KILOBYTES_PER_BATCH|Specifica le dimensioni in kilobyte del batch da inserire. Il formato dell'opzione è `KILOBYTES_PER_BATCH`  =  \<positive integer value**> * *.|  
 |FIRE_TRIGGERS|Specifica se attivare o meno i trigger sulla tabella inserita. La sintassi dell'opzione è **FIRE_TRIGGERS**. La presenza dell'opzione indica che i trigger vengono attivati.|  
-|ORDER|Specifica la modalità con ordinare i dati in input. La sintassi dell'opzione è ORDER \<nome colonna> ASC&#124;DESC. È possibile elencare qualsiasi numero di colonne e l'indicazione del tipo di ordinamento è facoltativa. Se il tipo di ordinamento viene omesso, l'operazione di inserimento verrà eseguita presupponendo che i dati non siano ordinati.<br /><br /> Nota: è possibile migliorare le prestazioni usando l'opzione ORDER per ordinare i dati di input in base all'indice cluster nella tabella.|  
+|ORDER|Specifica la modalità con ordinare i dati in input. L'opzione ha il formato ORDER \<column name> ASC&#124;desc. È possibile elencare qualsiasi numero di colonne e l'indicazione del tipo di ordinamento è facoltativa. Se il tipo di ordinamento viene omesso, l'operazione di inserimento verrà eseguita presupponendo che i dati non siano ordinati.<br /><br /> Nota: è possibile migliorare le prestazioni usando l'opzione ORDER per ordinare i dati di input in base all'indice cluster nella tabella.|  
   
  Anche se nelle parole chiave non viene rilevata la distinzione tra maiuscole e minuscole, le parole chiave [!INCLUDE[tsql](../../includes/tsql-md.md)] vengono in genere digitate in maiuscolo.  
   

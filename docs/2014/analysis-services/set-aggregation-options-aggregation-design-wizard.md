@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4672d686-10c0-43f8-a53e-a16dfa840c81
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d82d19836147514a4a03296ebc40a047b80410b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: faca5e882a89d14fc18e29e3d4c87cc757d6512e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068805"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940552"
 ---
 # <a name="set-aggregation-options-aggregation-design-wizard"></a>Impostazione opzioni di aggregazione (Progettazione guidata aggregazioni)
   Utilizzare la pagina **Impostazione opzioni di aggregazione** per avviare il processo di progettazione delle aggregazioni e specificare limiti di archiviazione o di prestazioni per le aggregazioni generate.  
@@ -38,13 +37,13 @@ ms.locfileid: "66068805"
  **Inizia**  
  Avvia il processo di progettazione delle aggregazioni.  
   
- **Arresta**  
+ **Stop**  
  Termina il processo di progettazione delle aggregazioni.  
   
  **Reimposta**  
  Reimposta i valori predefiniti di tutte le opzioni di aggregazione presenti in questa pagina.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto della progettazione guidata aggregazioni](aggregation-design-wizard-f1-help.md)   
  [Procedure guidate di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-wizards-multidimensional-data.md)  
   

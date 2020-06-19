@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9d22511424ff9a7b72edba8c8e3987a8a3185217
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 853451ea5a7c43cd073fdf75703b3c4651b442d0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175974"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958069"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Set di supporti, gruppi di supporti e set di backup (SQL Server)
   In questo argomento viene presentata la terminologia di base relativa ai supporti per le procedure di backup e ripristino di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed è rivolto ai nuovi utenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vengono descritti il formato usato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per i supporti di backup, la corrispondenza tra supporti e dispositivi di backup, l'organizzazione dei backup nei relativi supporti e vengono elencate alcune considerazioni relative ai set e ai gruppi di supporti. In questo argomento vengono inoltre illustrati i passaggi per inizializzare e formattare i supporti di backup in occasione del primo utilizzo o della sostituzione di un set di supporti precedente con uno nuovo e vengono elencate le operazioni necessarie per sovrascrivere set di backup precedenti in un set di supporti e per aggiungere nuovi set di backup a set di supporti esistenti.
@@ -86,7 +85,7 @@ ms.locfileid: "78175974"
 -   Indicazione della presenza o meno di un'etichetta del supporto MTF o di una descrizione dei supporti nella descrizione del supporto.
 
     > [!NOTE]
-    >  Tutti i supporti usati per un'operazione di backup o ripristino usano un formato di backup standard [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] denominato conserva qualsiasi etichetta del supporto MTF scritta da un'altra applicazione ma non scrive le etichette dei supporti MTF.
+    >  Tutti i supporti usati per un'operazione di backup o ripristino usano un formato di backup standard denominato [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] conserva qualsiasi etichetta del supporto MTF scritta da un'altra applicazione ma non scrive le etichette dei supporti MTF.
 
 -   Etichetta del supporto MTF ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Tape Format) o descrizione del supporto (testo in formato libero).
 
@@ -137,7 +136,7 @@ WITH
 
  ![Secondo set di backup distribuito su 3 nastri del set di supporti](../../database-engine/media/bnr-mediaset-appendedto.gif "Secondo set di backup distribuito su 3 nastri del set di supporti")
 
- Quando si ripristinano i backup, è possibile usare l'opzione FILE per specificare quali backup si desidera usare. Nell'esempio seguente viene illustrato l'utilizzo delle **=** clausole file _backup_set_file_number_ durante il ripristino di un backup completo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] del database seguito da un backup differenziale del database nello stesso set di supporti. Il set di supporti usano tre nastri di backup, che si trovano sulle unità nastro `\\.\tape0`, `tape1`e `tape2`.
+ Quando si ripristinano i backup, è possibile usare l'opzione FILE per specificare quali backup si desidera usare. L'esempio seguente illustra l'uso delle clausole FILE **=** _numero_file_set_backup_ quando si ripristina un backup completo del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] seguito da un backup differenziale del database sullo stesso set di supporti. Il set di supporti usano tre nastri di backup, che si trovano sulle unità nastro `\\.\tape0`, `tape1`e `tape2`.
 
 ```
 RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'
@@ -244,7 +243,7 @@ GO
 
      Un numero di sequenza di supporti indica l'ordine applicato ai supporti fisici in un gruppo di supporti. Il numero di sequenza è 1 per il supporto di backup iniziale. A esso è associato il tag 1, al secondo (il primo nastro di continuità) il tag 2 e così via. Quando il set di backup viene ripristinato, i numeri di sequenza dei supporti assicurano che l'operatore che ripristina i backup monti i supporti corretti nell'ordine corretto.
 
-###  <a name="multiple-devices"></a><a name="MultipleDevices"></a>Più dispositivi
+###  <a name="multiple-devices"></a><a name="MultipleDevices"></a> Utilizzo di più dispositivi
  Quando si usano più unità nastro o file su disco, si applicano le considerazioni seguenti:
 
 -   Per il backup:

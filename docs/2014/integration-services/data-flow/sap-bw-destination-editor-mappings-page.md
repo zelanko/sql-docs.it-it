@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0af079eaa96fd7925ef361b398cd628641c55a3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56d267e6cc1e3343dc92dac6cc247b9308ba072d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770877"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914476"
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>Editor destinazione SAP BW (pagina Mapping)
   Usare la pagina **Mapping** dell' **Editor destinazione SAP BW** per eseguire il mapping delle colonne di input alle colonne di destinazione.  
@@ -71,7 +70,7 @@ ms.locfileid: "62770877"
  **Colonna di input**  
  Visualizzare le colonne di input selezionate.  
   
- Per eseguire il mapping di un'altra colonna di input alla stessa colonna di destinazione, selezionare un'altra colonna di input nell'elenco. Per rimuovere un mapping, selezionare **\<ignora>** per escludere la colonna di input dall'output.  
+ Per eseguire il mapping di un'altra colonna di input alla stessa colonna di destinazione, selezionare un'altra colonna di input nell'elenco. Per rimuovere un mapping, selezionare questa impostazione **\<ignore>** per escludere la colonna di input dall'output.  
   
  **Colonna di destinazione**  
  Visualizzare ogni colonna di destinazione disponibile, indipendentemente dal fatto che ne venga eseguito il mapping.  

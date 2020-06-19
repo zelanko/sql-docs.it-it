@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 713e2e507fd98f6d3d87fe60e075e587725ddaf2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ee871b6cabbe6c2b2cb4f444fd1e2d42d711dfbc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890351"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957976"
 ---
 # <a name="full-database-backups-sql-server"></a>Backup completo del database (SQL Server)
   Un backup completo del database consente di eseguire il backup dell'intero database. Tale backup include la parte del log delle transazioni sufficiente per consentire il recupero del database completo dopo il ripristino del backup completo del database. I backup completi del database rappresentano il database al momento del completamento del backup.  

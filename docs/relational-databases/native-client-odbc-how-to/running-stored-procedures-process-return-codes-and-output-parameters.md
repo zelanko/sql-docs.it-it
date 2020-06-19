@@ -1,5 +1,6 @@
 ---
 title: Elaborare i codici restituiti e i parametri di output (ODBC) | Microsoft Docs
+description: Informazioni su SQLSTATE, che fornisce informazioni dettagliate sulla ragione di un avviso o di un errore in SQL Server Native Client driver ODBC.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a32310288b14ca49a53f68c6fd632f884fa78ec6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3c0f9fadf13ae32581e66b55a0f0ea13b48d47c1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281927"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967590"
 ---
 # <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>Esecuzione delle stored procedure - Elaborare i codici restituiti e i parametri di output
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,11 +49,11 @@ ms.locfileid: "81281927"
   
  In questo esempio viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. Per connettersi a un'istanza denominata, modificare la definizione dell'origine dati ODBC per specificare l'istanza in base al formato: server\istanzadenominata. Per impostazione predefinita, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] viene installato in un'istanza denominata.  
   
- Il primo listato di codice ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) crea un stored procedure usato da questo esempio.  
+ Il primo [!INCLUDE[tsql](../../includes/tsql-md.md)] Listato di codice () crea un stored procedure usato da questo esempio.  
   
  Compilare il secondo listato di codice (C++) con odbc32.lib. Eseguire quindi il programma.  
   
- Il terzo listato di codice ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) elimina il stored procedure usato da questo esempio.  
+ Il terzo [!INCLUDE[tsql](../../includes/tsql-md.md)] Listato di codice () Elimina il stored procedure usato da questo esempio.  
   
 ```  
 use AdventureWorks  

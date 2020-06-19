@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 69aedf4a3712b79672a0630e953e399c08f23338
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4db4d5b5ce08c50646857099d82964bb944bc8af
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876192"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957841"
 ---
 # <a name="online-restore-sql-server"></a>Ripristino in linea (SQL Server)
   Il ripristino in linea è supportato solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition. In questa edizione un ripristino di file, pagina o a fasi viene eseguito online per impostazione predefinita. Le informazioni contenute in questo argomento sono importanti per i database che includono più file o filegroup e, in base al modello di recupero con registrazione minima, solo per i filegroup di sola lettura.  
@@ -59,12 +58,12 @@ ms.locfileid: "62876192"
     > [!NOTE]  
     >  In alternativa, è possibile attivare manualmente la modalità offline per il file prima di eseguire la sequenza di ripristino. Per ulteriori informazioni, vedere "Attivazione della modalità offline per un database o un file" di seguito in questo argomento.  
   
-##  <a name="taking-a-database-or-file-offline"></a><a name="taking_db_or_file_offline"></a>Esecuzione offline di un database o un file  
+##  <a name="taking-a-database-or-file-offline"></a><a name="taking_db_or_file_offline"></a> Attivazione della modalità offline per un database o un file  
  Se non si desidera utilizzare il ripristino online, è possibile attivare la modalità offline per il database prima di avviare la sequenza di ripristino utilizzando una delle modalità seguenti:  
   
 -   Con qualsiasi modello di recupero è possibile attivare la modalità offline per il database utilizzando l'istruzione [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) seguente:  
   
-     ALTER DATABASE *database_name* set offline  
+     ALTER DATABASE *nome_database* SET OFFLINE  
   
 -   In alternativa, se si utilizza il modello di recupero con registrazione completa, è possibile forzare un ripristino di file o pagina offline utilizzando l'istruzione [BACKUP LOG](/sql/t-sql/statements/backup-transact-sql) seguente per attivare lo stato di ripristino per il database:  
   
@@ -81,7 +80,7 @@ ms.locfileid: "62876192"
   
 -   [Esempio: Ripristino a fasi di alcuni filegroup &#40;Modello di recupero con registrazione minima&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
--   [Esempio: Ripristino online di un file di sola lettura &#40;modello di recupero con registrazione minima&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [Esempio: Ripristino online di un file di sola lettura &#40;Modello di recupero con registrazione minima&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
 -   [Esempio: Ripristino a fasi di un database &#40;Modello di recupero con registrazione completa&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
   
@@ -89,13 +88,13 @@ ms.locfileid: "62876192"
   
 -   [Esempio: Ripristino online di un file di lettura/scrittura &#40;modello di recupero con registrazione completa&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
--   [Esempio: Ripristino online di un file di sola lettura &#40;modello di recupero con registrazione completa&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
+-   [Esempio: Ripristino online di un file di sola lettura &#40;Modello di recupero con registrazione completa&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 -   [Ripristino di file e filegroup &#40;SQL Server&#41;](restore-files-and-filegroups-sql-server.md)  
   
--   [Ripristino di pagine &#40;SQL Server&#41;](restore-pages-sql-server.md)  
+-   [Ripristinare pagine &#40;SQL Server&#41;](restore-pages-sql-server.md)  
   
 -   [Gestione della tabella suspect_pages &#40;SQL Server&#41;](manage-the-suspect-pages-table-sql-server.md)  
   
@@ -103,10 +102,10 @@ ms.locfileid: "62876192"
   
 -   [Rimuovere filegroup inattivi &#40;SQL Server&#41;](remove-defunct-filegroups-sql-server.md)  
   
-## <a name="see-also"></a>Vedi anche  
- [Ripristini di file &#40;modello di recupero con versione completa&#41;](file-restores-full-recovery-model.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Ripristini di file &#40;modello di recupero con registrazione completa&#41;](file-restores-full-recovery-model.md)   
  [Ripristini di file &#40;modello di recupero con registrazione minima&#41;](file-restores-simple-recovery-model.md)   
- [Ripristina pagine &#40;SQL Server&#41;](restore-pages-sql-server.md)   
+ [Ripristino di pagine &#40;SQL Server&#41;](restore-pages-sql-server.md)   
  [Ripristini a fasi &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
  [Panoramica del ripristino e del recupero &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2c5509699945db857bd0b763192c7aea21ac90da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80126a2f1955356ae451e2f1092869e962674689
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771218"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922488"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Definizione di un intervallo dei dati delle modifiche
   Nel flusso di controllo di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che esegue un carico incrementale dei dati delle modifiche, la prima attività consiste nel calcolare gli endpoint dell'intervallo di modifiche. Tali endpoint sono valori `datetime` e verranno archiviati in variabili del pacchetto per l'utilizzo successivo nel pacchetto.  
@@ -73,7 +72,7 @@ ms.locfileid: "62771218"
   
 -   **Calcolo della data e dell'ora di inizio**. Utilizzare la data e l'ora di fine del caricamento precedente come data e ora di inizio correnti. Se si utilizza un intervallo fisso per i caricamenti incrementali, è possibile calcolare questo valore utilizzando le funzioni `datetime` di Transact-SQL o del linguaggio delle espressioni [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. In caso contrario, potrebbe essere necessario impostare la persistenza degli endpoint tra le esecuzioni e utilizzare un'attività Esegui SQL o un'attività Script per caricare l'endpoint precedente.  
   
--   **Calcolo della data e dell'ora di fine**. Se si utilizza un intervallo fisso per i carichi incrementali, calcolare la data e l'ora di fine correnti come offset della data e dell'ora di inizio. Anche in questo caso, è possibile calcolare questo valore `datetime` utilizzando le funzioni di Transact-SQL o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] del linguaggio delle espressioni.  
+-   **Calcolo della data e dell'ora di fine**. Se si utilizza un intervallo fisso per i carichi incrementali, calcolare la data e l'ora di fine correnti come offset della data e dell'ora di inizio. Anche in questo caso, è possibile calcolare questo valore utilizzando le `datetime` funzioni di Transact-SQL o del [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] linguaggio delle espressioni.  
   
  Nella procedura seguente l'intervallo di modifiche è un intervallo fisso e si presuppone che il pacchetto del caricamento incrementale venga eseguito ogni giorno senza eccezione. In caso contrario, i dati delle modifiche per gli intervalli in cui non viene eseguito il caricamento andranno perduti. Il punto iniziale per l'intervallo è costituito dalla mezzanotte del giorno precedente a ieri, ovvero tra le 24 e le 48 ore precedenti. Il punto finale per l'intervallo è costituito dalla mezzanotte di ieri, ovvero la notte precedente, tra le 0 e le 24 ore precedenti.  
   

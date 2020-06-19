@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b19b2e960aa2383568d3977d19368576f4178949
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d94df6a59043bee136b0dc42ad8fb013c6c77456
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176441"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967481"
 ---
 # <a name="cast-ssis-expression"></a>Cast (espressione SSIS)
   Viene convertita esplicitamente un'espressione da un tipo di dati a un altro. L'operatore cast può essere utilizzato anche come operatore di troncamento.
@@ -35,14 +34,14 @@ ms.locfileid: "78176441"
 ```
 
 ## <a name="arguments"></a>Argomenti
- *type_spec* È un tipo [!INCLUDE[ssIS](../../includes/ssis-md.md)] di dati valido.
+ *type_spec* È un [!INCLUDE[ssIS](../../includes/ssis-md.md)] tipo di dati valido.
 
  *espressione* Espressione valida.
 
 ## <a name="result-types"></a>Tipi restituiti
  Tipo di dati *type_spec*. Per ulteriori informazioni, vedere [Integration Services tipi di dati](../data-flow/integration-services-data-types.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
  Nella figura seguente vengono illustrate alcune operazioni di cast valide.
 
  ![Cast validi e non validi tra tipi di dati](../media/data-conversion.gif "Cast validi e non validi tra tipi di dati")
@@ -54,8 +53,8 @@ ms.locfileid: "78176441"
 |DT_STR|*charcount*<br /><br /> *CodePage*|(DT_STR,30,1252): esegue il cast di 30 byte, ovvero 30 caratteri singoli, al tipo di dati DT_STR utilizzando la tabella codici 1252.|
 |DT_WSTR|*CharCount*|(DT_WSTR,20): esegue il cast di 20 coppie di byte, ovvero 20 caratteri Unicode, al tipo di dati DT_WSTR.|
 |DT_BYTES|*ByteCount*|(DT_BYTES,50): esegue il cast di 50 byte al tipo di dati DT_BYTES.|
-|DT_DECIMAL|*Ridimensionare*|(DT_DECIMAL,2): esegue il cast di un valore numerico al tipo di dati DT_DECIMAL, utilizzando una scala pari a 2.|
-|DT_NUMERIC|*Precisione*<br /><br /> *Ridimensionare*|(DT_NUMERIC,10,3): esegue il cast di un valore numerico al tipo di dati DT_NUMERIC, utilizzando una precisione pari a 10 e una scala pari a 3.|
+|DT_DECIMAL|*Ridimensionamento*|(DT_DECIMAL,2): esegue il cast di un valore numerico al tipo di dati DT_DECIMAL, utilizzando una scala pari a 2.|
+|DT_NUMERIC|*Precisione*<br /><br /> *Ridimensionamento*|(DT_NUMERIC,10,3): esegue il cast di un valore numerico al tipo di dati DT_NUMERIC, utilizzando una precisione pari a 10 e una scala pari a 3.|
 |DT_TEXT|*CodePage*|(DT_TEXT,1252): esegue il cast di un valore al tipo di dati DT_TEXT utilizzando la tabella codici 1252.|
 
  Quando si esegue il cast di una stringa a un tipo di dati DT_DATE, o viceversa, vengono utilizzate le impostazioni locali della trasformazione. Tuttavia, la data è nel formato ISO AAAA-MM-GG, indipendentemente dal fatto che le impostazioni locali utilizzino il formato ISO.

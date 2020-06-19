@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0e4f36dab5b953b1a631f4510e11bba47798bf62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c231876b11303992e0e3300c9cb73c0cf53b3af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754519"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934070"
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>Sospensione e ripresa del mirroring del database (SQL Server)
   Il proprietario del database può sospendere una sessione di mirroring del database, riprenderla in qualsiasi momento e preservare così lo stato della sessione durante la sospensione del mirroring. In caso di colli di bottiglia, la sospensione può essere utile per migliorare le prestazioni del server principale.  
@@ -67,7 +66,7 @@ ms.locfileid: "62754519"
   
 -   [Rimuovere il mirroring del database &#40;SQL Server&#41;](remove-database-mirroring-sql-server.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [&#40;SQL Server di mirroring del database&#41;](database-mirroring-sql-server.md)   
  [Rimozione del mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 96041fa9b632be0162259d72cd4001e9d7defdd5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0fb6ccc97c2f0f5a3a69d2caa61ca67327015415
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768457"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967281"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>Connessione a origini dati nel componente script
   Una gestione connessione è un'unità pratica che incapsula e archivia le informazioni necessarie per la connessione a un'origine dati di un determinato tipo. Per altre informazioni, vedere [Connessioni in Integration Services &#40;SSIS&#41;](../../connection-manager/integration-services-ssis-connections.md).  
@@ -56,7 +55,7 @@ ms.locfileid: "62768457"
   
 ![Integration Services icona (piccola)](../../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina relativa a Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services &#40;connessioni SSIS&#41;](../../connection-manager/integration-services-ssis-connections.md)   
  [Creazione di gestioni connessioni](../../create-connection-managers.md)  
   

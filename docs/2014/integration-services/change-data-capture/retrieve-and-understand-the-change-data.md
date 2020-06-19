@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: af366697-6942-42bb-aea5-18fdef018965
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 76635a5c1f1140bb66adf1d9ac40885c3dc43269
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e4f14ae8513e62e9af4c129cc0a2aea25c88e42
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771247"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922612"
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>Recupero e comprensione dei dati delle modifiche
   La prima attività nel flusso di dati di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che esegue un caricamento incrementale dei dati delle modifiche consiste nell'eseguire la query per il recupero dei dati delle modifiche. Questa query deve essere eseguita all'interno di un componente di origine in un'attività Flusso di dati. È quindi possibile utilizzare trasformazioni a valle e destinazioni per applicare i dati delle modifiche alla destinazione.  

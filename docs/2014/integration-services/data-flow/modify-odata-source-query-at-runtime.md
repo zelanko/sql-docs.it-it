@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f1fac598789c53f460ed5239f304de2a39acff81
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c355c95c5e6c686a063c4c32081aa0740f8e2fd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901188"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915211"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>Modificare la query di origine OData in fase di esecuzione
   È possibile modificare la query di origine OData in fase di esecuzione aggiungendo un'espressione alla proprietà **[Origine OData].[Query]** dell'attività Flusso di dati.  
@@ -29,7 +28,7 @@ ms.locfileid: "62901188"
   
 1.  Fare clic con il pulsante destro del mouse sull'**attività Flusso di dati** e selezionare l'opzione **Imposta parametri**.  
   
-2.  Nella finestra di dialogo **Imposta parametri** selezionare **[\<< nome del componente di origine OData].[Query]** per **Proprietà**.  
+2.  Nella finestra di dialogo imposta **parametri** selezionare **[ \<Name of the OData Source Component> ]. [ Query]** per la **Proprietà**.  
   
 3.  Scegliere se **creare un nuovo parametro** o **usare un parametro esistente**.  
   

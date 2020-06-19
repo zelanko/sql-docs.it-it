@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1a89632ad5502cee9599d1eea6e1cd0a0bebe7d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d8c8943c837be852c11d65201d0a8b71de7bec4e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770997"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915031"
 ---
 # <a name="ole-db-source"></a>Origine OLE DB
   L'origine OLE DB consente di estrarre dati da un'ampia gamma di database relazionali conformi con OLE DB, tramite una tabella o vista di database oppure un comando SQL. L'origine OLE DB consente ad esempio di estrarre dati dalle tabelle nei database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -115,7 +114,7 @@ ms.locfileid: "62770997"
 ## <a name="related-content"></a>Contenuto correlato  
  Articolo del wiki, [SSIS con connettori Oracle](https://go.microsoft.com/fwlink/?LinkId=220670), su social.technet.Microsoft.com.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Destinazione OLE DB](ole-db-destination.md)   
  [Integration Services &#40;variabili&#41; SSIS](../integration-services-ssis-variables.md)   
  [Flusso di dati](data-flow.md)  

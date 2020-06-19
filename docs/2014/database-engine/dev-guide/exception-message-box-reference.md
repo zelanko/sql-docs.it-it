@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: ff5f79f0-401f-498a-8218-860f5ab46652
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 33e64636e195a9f7048b21f2fd5ad7d37e03f9db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a6c4b0edcf3e38c85146a3e0f96199f5dd0e657
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62752983"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933610"
 ---
 # <a name="exception-message-box-reference"></a>Guida di riferimento alla finestra di messaggio eccezione
   La finestra di messaggio eccezione viene implementata dalla classe <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> nell'assembly Microsoft.ExceptionMessageBox.dll. La cartella di installazione predefinita per questo assembly è [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]. La finestra di messaggio eccezione è documentata nella documentazione di riferimento dello spazio dei nomi <xref:Microsoft.SqlServer.MessageBox>. Negli esempi seguenti viene utilizzato l'oggetto <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> durante la gestione delle eccezioni.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Programmare la finestra di messaggio eccezione](../../../2014/database-engine/dev-guide/program-exception-message-box.md)  
   
   

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 18b52163cb1e8c6be0cf7fdea37861662d6e4830
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 944f66f3a08ff008720d78802aadfb0fee3801e4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754291"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933892"
 ---
 # <a name="transport-security-for-database-mirroring-and-alwayson-availability-groups-sql-server"></a>Sicurezza trasporto per il mirroring del database e i gruppi di disponibilità AlwaysOn (SQL Server)
   La sicurezza del trasporto implica l'utilizzo dell'autenticazione e, facoltativamente, della crittografia dei messaggi scambiati tra i database. Per il mirroring del database e [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], l'autenticazione e la crittografia devono essere configurate nell'endpoint del mirroring del database. Per un'introduzione agli endpoint del mirroring del database, vedere [Endpoint del mirroring del database &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md).  
@@ -63,9 +62,9 @@ ms.locfileid: "62754291"
   
  Facoltativamente, è possibile controllare gli algoritmi di crittografia che possono essere utilizzati da un endpoint specificando uno dei valori seguenti per l'opzione ALGORITHM in un'istruzione CREATE ENDPOINT o ALTER ENDPOINT:  
   
-|Valore di ALGORITHM|Descrizione|  
+|Valore di ALGORITHM|Description|  
 |---------------------|-----------------|  
-|RC4|Specifica che l'endpoint deve utilizzare l'algoritmo RC4. Questa è la modalità predefinita.<br /><br /> Nota: l'algoritmo RC4 è deprecato. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] È consigliabile utilizzare AES.|  
+|RC4|Specifica che l'endpoint deve utilizzare l'algoritmo RC4. Questo è il valore predefinito.<br /><br /> Nota: l'algoritmo RC4 è deprecato. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] È consigliabile utilizzare AES.|  
 |AES|Specifica che l'endpoint deve utilizzare l'algoritmo AES.|  
 |AES RC4|Specifica che due endpoint eseguiranno la negoziazione di un algoritmo di crittografia con l'endpoint corrente, dando la priorità all'algoritmo AES.|  
 |RC4 AES|Specifica che due endpoint eseguiranno la negoziazione di un algoritmo di crittografia con l'endpoint corrente, dando la priorità all'algoritmo RC4.|  
@@ -90,7 +89,7 @@ ms.locfileid: "62754291"
   
 -   [Impostazione dell'endpoint del mirroring del database per l'utilizzo di certificati per le connessioni in uscita &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Scegliere un algoritmo di crittografia](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
  [DROP ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-endpoint-transact-sql)   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7f29463784436918834fe94c3ac5e4a8c5420703
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c92cbb557484e3bd879e9712121b2bbc52d4732
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835611"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922912"
 ---
 # <a name="manage-a-cdc-instance"></a>Gestire un'istanza di CDC
   È possibile utilizzare CDC Designer Console per visualizzare le informazioni relative alle istanze create e per gestire l'operazione delle istanze.  
@@ -103,17 +102,17 @@ ms.locfileid: "62835611"
     -   **Written changes**: numero di modifiche scritte nelle tabelle delle modifiche di SQL Server.  
   
  **Oracle**  
- Vengono visualizzate informazioni sull'istanza di CDC e sulla relativa connessione al database Oracle. Questa scheda è di sola lettura. Per modificare queste proprietà, fare clic con il pulsante destro del mouse sull'istanza nel riquadro sinistro e selezionare **Proprietà** oppure scegliere **Proprietà** nel riquadro destro per aprire la finestra di dialogo delle proprietà dell'\<istanza>.  
+ Vengono visualizzate informazioni sull'istanza di CDC e sulla relativa connessione al database Oracle. Questa scheda è di sola lettura. Per modificare queste proprietà, fare clic con il pulsante destro del mouse sull'istanza nel riquadro sinistro e scegliere **Proprietà** oppure fare clic su **Proprietà** nel riquadro destro per aprire la finestra di \<instance> dialogo Proprietà.  
   
  Per informazioni su queste proprietà e su come modificarle, vedere [Edit the Oracle Database Properties](edit-the-oracle-database-properties.md).  
   
  **Tabelle**  
- Vengono visualizzate informazioni sulle tabelle incluse nell'istanza di CDC. Sono anche disponibili informazioni sulle colonne. Questa scheda è di sola lettura. Per modificare queste proprietà, fare clic con il pulsante destro del mouse sull'istanza nel riquadro sinistro e selezionare **Proprietà** oppure scegliere **Proprietà** nel riquadro destro per aprire la finestra di dialogo delle proprietà dell'\<istanza>.  
+ Vengono visualizzate informazioni sulle tabelle incluse nell'istanza di CDC. Sono anche disponibili informazioni sulle colonne. Questa scheda è di sola lettura. Per modificare queste proprietà, fare clic con il pulsante destro del mouse sull'istanza nel riquadro sinistro e scegliere **Proprietà** oppure fare clic su **Proprietà** nel riquadro destro per aprire la finestra di \<instance> dialogo Proprietà.  
   
  Per informazioni su queste proprietà e su come modificarle, vedere [Edit Tables](edit-tables.md).  
   
  **Funzionalità avanzate**  
- Vengono visualizzate le proprietà avanzate per l'istanza di CDC e i valori delle proprietà. Questa scheda è di sola lettura. Per modificare queste proprietà, fare clic con il pulsante destro del mouse sull'istanza nel riquadro sinistro e selezionare **Proprietà** oppure scegliere **Proprietà** nel riquadro destro per aprire la finestra di dialogo delle proprietà dell'\<istanza>.  
+ Vengono visualizzate le proprietà avanzate per l'istanza di CDC e i valori delle proprietà. Questa scheda è di sola lettura. Per modificare queste proprietà, fare clic con il pulsante destro del mouse sull'istanza nel riquadro sinistro e scegliere **Proprietà** oppure fare clic su **Proprietà** nel riquadro destro per aprire la finestra di \<instance> dialogo Proprietà.  
   
  Per informazioni su queste proprietà e su come modificarle, vedere [Edit the Advanced Properties](edit-the-advanced-properties.md).  
   

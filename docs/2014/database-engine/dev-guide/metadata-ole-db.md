@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 605e3be5-aeea-4573-9847-b866ed3c8bff
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 27511f209dbf73906f77c0c5b1721d3cceec287f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88a5dcd54dac7a0886d1c33d2e121af8779bf6b0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780895"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933472"
 ---
 # <a name="metadata-ole-db"></a>Metadati (OLE DB)
   In questa sezione vengono descritti i metadati dei parametri, i metadati delle colonne dei set di risultati e i metadati dei set di righe dello schema.  
@@ -30,7 +29,7 @@ ms.locfileid: "62780895"
  [Data e ora e set di righe dello schema](../../relational-databases/native-client-ole-db-date-time/metadata-date-and-time-and-schema-rowsets.md)  
  Sono contenute informazioni sugli aggiornamenti ai set di righe dello schema OLE DB.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Miglioramenti relativi a data e ora &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 68e9e2d2-173f-4363-a515-fc60bfee3af0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4416a51ea32500d56c209d745065da20bf8010c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 625a3f2870590b77db84b3266ebf90f5081152d1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068415"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940410"
 ---
 # <a name="specify-column-mapping-dialog-box-mining-accuracy-chart"></a>Finestra di dialogo Impostazione mapping colonne (Grafico accuratezza modello di data mining)
   Usare la scheda **Impostazione mapping colonne** per selezionare tabelle da un'origine dati esterna ed eseguire il mapping delle colonne a un modello di data mining. È quindi possibile utilizzare i dati esterni per eseguire il test dell'accuratezza di un modello di data mining e visualizzare i risultati nel grafico di accuratezza.  
@@ -51,7 +50,7 @@ ms.locfileid: "66068415"
  **Modifica join**  
  Consente di aprire la finestra di dialogo **Specifica join nidificato** . Questo pulsante è attivo solo se si seleziona una tabella nidificata.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Attività e procedure di test e convalida &#40;di data mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [Progettazione Grafico accuratezza modello di data mining &#40;&#41;di data mining](mining-accuracy-chart-designer-data-mining.md)  
   

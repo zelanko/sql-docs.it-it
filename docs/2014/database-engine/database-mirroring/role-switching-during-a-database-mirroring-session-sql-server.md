@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 184018d0c0973f41e686f9111b9664e12f91cd20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e16adbad2106d623279edf9d443eae3755c7be5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754488"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934022"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Cambio di ruolo durante una sessione di mirroring del database (SQL Server)
   Nel contesto di una sessione di mirroring del database, in genere i ruoli principale e mirror sono intercambiabili tramite un processo denominato *cambio di ruolo*. Nel cambio di ruolo, il server mirror funge da *partner di failover* per il server principale, assumendo il ruolo principale e recuperando la propria copia del database e portandola online come nuovo database principale. Il server principale precedente, quando disponibile, assume il ruolo di mirror, e il suo database diventa il nuovo database mirror. Potenzialmente, i ruoli possono essere scambiati nei due sensi in seguito a più errori o per scopi amministrativi.  
@@ -287,12 +286,12 @@ ms.locfileid: "62754488"
   
 -   [Stabilire una sessione di mirroring del database tramite autenticazione di Windows &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Stimare l'interruzione del servizio durante il cambio di ruolo &#40;il mirroring del database&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
  [Possibili errori durante il mirroring del database](possible-failures-during-database-mirroring.md)   
  [Connettere i client a una sessione di mirroring del database &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Server di controllo del mirroring del database](database-mirroring-witness.md)   
- [Ripristini di database completi &#40;modello di recupero con versione completa&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
+ [Ripristini di database completi &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
  [Modalità operative per il mirroring del database](database-mirroring-operating-modes.md)   
  [Stati di mirroring &#40;SQL Server&#41;](mirroring-states-sql-server.md)  
   

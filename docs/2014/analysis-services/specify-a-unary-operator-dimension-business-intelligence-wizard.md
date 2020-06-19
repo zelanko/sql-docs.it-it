@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0c8ce9ce-f5ce-4bea-830d-05836ea17112
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 72807eca5fb43c81bf51c20a93cd69f4d618c241
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aeeed1f69513979a566a7db4385e4dc00b4855b9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068610"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940458"
 ---
 # <a name="specify-a-unary-operator-dimension-business-intelligence-wizard"></a>Impostazione operatore unario (Dimensione) (Configurazione guidata funzionalità di Business Intelligence)
   Utilizzare la pagina **Impostazione operatore unario** per selezionare una dimensione provvista di un attributo padre e alla quale verranno applicati operatori unari durante la Configurazione guidata funzionalità di Business Intelligence. Per altre informazioni sugli attributi padre, vedere [Attributi e gerarchie di attributi](multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
@@ -26,10 +25,10 @@ ms.locfileid: "66068610"
 >  Questa pagina non viene visualizzata se la Configurazione guidata funzionalità di Business Intelligence viene avviata da Progettazione dimensioni oppure facendo clic con il pulsante destro del mouse su una dimensione in Esplora soluzioni in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="options"></a>Opzioni  
- **Dimension**  
+ **Dimensione**  
  Consente di selezionare la dimensione contenente l'attributo padre e a cui verranno applicati gli operatori unari durante la procedura guidata.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto della configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Progettazione dimensioni &#40;Analysis Services-Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  

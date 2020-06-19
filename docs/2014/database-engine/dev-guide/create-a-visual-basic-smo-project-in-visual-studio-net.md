@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7a3892c-0f1c-4c4d-8480-b58dce3720bc
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 662916720b9953e0374bedb29890a36ced0cfac0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49eb94833d10b2e901c008092aea29eab8e4ad48
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753344"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933682"
 ---
 # <a name="create-a-visual-basic-smo-project-in-visual-studio-net"></a>Creare un progetto SMO per Visual Basic in Visual Studio .NET
   In questa sezione viene descritto come compilare un'applicazione console SMO semplice.  
@@ -32,11 +31,11 @@ ms.locfileid: "62753344"
   
 2.  Scegliere **Nuovo progetto** dal menu **File**. Verrà visualizzata la finestra di dialogo **Nuovo progetto** .  
   
-3.  Nella finestra di dialogo **Tipi progetto** selezionare **Visual Basic**, quindi selezionare **Windows**. Nel riquadro [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] modelli installati selezionare **applicazione console.**  
+3.  Nella finestra di dialogo **Tipi progetto** selezionare **Visual Basic**, quindi selezionare **Windows**. Nel [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] riquadro Modelli installati selezionare **applicazione console.**  
   
 4.  Opzionale Nel campo **nome** Digitare il nome della nuova applicazione.  
   
-5.  Fare clic su **OK** per [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] caricare il modello applicazione console.  
+5.  Fare clic su **OK** per caricare il [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] modello applicazione console.  
   
 6.  Scegliere **Aggiungi riferimento** dal menu **Progetto**. Verrà visualizzata la finestra di dialogo **Aggiungi riferimento**.  
   

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 51973502-5cc6-4125-9fce-e60fa1b7b796
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5b20a0d2f47e89070712a4063acba4da0225b85d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77bb61af021bb7499f6656d2fd604f4bdc06bfeb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060954"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922112"
 ---
 # <a name="common-properties"></a>Proprietà comuni
   Gli oggetti flusso di dati nel [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] modello a oggetti hanno proprietà comuni e proprietà personalizzate a livello di componente, input e output e colonna di input e colonna di output. Molte proprietà hanno valori di sola lettura assegnati in fase di esecuzione dal motore del flusso di dati.  
@@ -37,7 +36,7 @@ ms.locfileid: "66060954"
   
 -   [Colonne di input](#inputcolumns)  
   
--   [Output](#outputs)  
+-   [Uscite](#outputs)  
   
 -   [Colonne di output](#outputcolumns)  
   
@@ -109,7 +108,7 @@ ms.locfileid: "66060954"
 |Descrizione|string|Descrizione dell'input.|  
 |ErrorOrTruncationOperation|string|Stringa facoltativa che specifica i tipi di errori o troncamenti che possono verificarsi durante l'elaborazione di una riga.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valore che specifica la gestione degli errori. I possibili valori sono `Fail component`, `Ignore failure` e `Redirect row`.|  
-|HasSideEffects|Boolean|Indica se un componente può essere rimosso dal piano di esecuzione del flusso di dati quando non è collegato a un componente downstream e quando `RunInOptimizedMode` è. `true`|  
+|HasSideEffects|Boolean|Indica se un componente può essere rimosso dal piano di esecuzione del flusso di dati quando non è collegato a un componente downstream e quando `RunInOptimizedMode` è `true` .|  
 |ID|Integer|Valore che identifica l'input in modo univoco.|  
 |IdentificationString|string|Stringa che identifica l'input.|  
 |IsSorted|Boolean|Indica se i dati nell'input sono ordinati.|  
@@ -158,7 +157,7 @@ ms.locfileid: "66060954"
 |ID|Integer|Valore che identifica l'output in modo univoco.|  
 |IdentificationString|string|Stringa che identifica l'output.|  
 |IsErrorOut|Boolean|Indica se l'output è un output degli errori.|  
-|IsSorted|Boolean|Indica se l'output è ordinato. Il valore predefinito è `False`.<br /><br /> ** \* Importante \* \* ** L'impostazione del valore della `IsSorted` proprietà su `True` non consente di ordinare i dati. Questa proprietà fornisce solo un hint ai componenti a valle in relazione all'ordinamento precedente dei dati. Per altre informazioni, vedere [Ordinamento dei dati per le trasformazioni Unione e Merge Join](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
+|IsSorted|Boolean|Indica se l'output è ordinato. Il valore predefinito è `False`.<br /><br /> Importante l'impostazione del valore della proprietà su **non \* \* consente di ordinare i dati. \* \* ** `IsSorted` `True` Questa proprietà fornisce solo un hint ai componenti a valle in relazione all'ordinamento precedente dei dati. Per altre informazioni, vedere [Ordinamento dei dati per le trasformazioni Unione e Merge Join](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |Nome|string|Nome dell'output.|  
 |SynchronousInputID|Integer|ID di un input sincrono all'output.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valore che determina la gestione dei troncamenti da parte del componente durante l'elaborazione delle righe. I possibili valori sono `Fail component`, `Ignore failure` e `Redirect row`.|  
@@ -212,7 +211,7 @@ ms.locfileid: "66060954"
 |Precision|Integer|Precisione di una colonna numerica.|  
 |Scalabilità|Integer|Scala di una colonna numerica.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Flusso di dati](data-flow/data-flow.md)   
  [Proprietà personalizzate della trasformazione](data-flow/transformations/transformation-custom-properties.md)   
  [Proprietà percorso](../../2014/integration-services/path-properties.md)   

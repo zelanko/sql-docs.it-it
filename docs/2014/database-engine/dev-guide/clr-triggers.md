@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 302a4e4a-3172-42b6-9cc0-4a971ab49c1c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 87d822e97a75bbd08375980fe6a6f0341d8f9c60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91f12b0d97d2e2065c5bb08d175253c22dffb032
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755249"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933696"
 ---
 # <a name="clr-triggers"></a>Trigger CLR
   Grazie all'integrazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con CLR (Common Language Runtime) di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], è possibile utilizzare qualsiasi linguaggio [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per creare trigger CLR. In questa sezione vengono fornite informazioni specifiche relative ai trigger implementati utilizzando l'integrazione con CLR. Per una descrizione completa dei trigger, vedere [trigger DDL](../../relational-databases/triggers/ddl-triggers.md).  
@@ -49,7 +48,7 @@ ms.locfileid: "62755249"
   
 -   Accedere alle informazioni sugli oggetti di database interessati dall'esecuzione di istruzioni DDL.  
   
- Queste funzionalità vengono fornite implicitamente nel linguaggio di query o dalla classe `SqlTriggerContext`. Per informazioni sui vantaggi dell'integrazione con CLR e sulla scelta tra codice gestito [!INCLUDE[tsql](../../includes/tsql-md.md)]e, vedere [Cenni preliminari sull'integrazione con CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
+ Queste funzionalità vengono fornite implicitamente nel linguaggio di query o dalla classe `SqlTriggerContext`. Per informazioni sui vantaggi dell'integrazione con CLR e sulla scelta tra codice gestito e [!INCLUDE[tsql](../../includes/tsql-md.md)] , vedere [Cenni preliminari sull'integrazione con CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="using-the-sqltriggercontext-class"></a>Utilizzo della classe SqlTriggerContext  
  La classe `SqlTriggerContext` non può essere costruita pubblicamente e può essere ottenuta solo accedendo alla proprietà `SqlContext.TriggerContext` all'interno del corpo di un trigger CLR. È possibile ottenere la classe `SqlTriggerContext` dall'oggetto `SqlContext` attivo chiamando la proprietà `SqlContext.TriggerContext`:  
@@ -480,7 +479,7 @@ GO CREATE TABLE UserNameAudit
 )  
 ```  
   
- L' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione che crea il trigger in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è la seguente e presuppone che l'assembly **SQLCLRTest** sia già registrato nel database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrente.  
+ L' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione che crea il trigger in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è la seguente e presuppone che l'assembly **SQLCLRTest** sia già registrato nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database corrente.  
   
 ```  
 CREATE TRIGGER EmailAudit  

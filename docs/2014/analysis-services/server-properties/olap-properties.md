@@ -94,13 +94,12 @@ helpviewer_keywords:
 ms.assetid: 06eb0d78-96c0-42ff-b759-f4c794597c8d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4b26323f99d0b31cdb31e12b64eabdd2a855d907
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 627aae71f32230ccbd78e7ee1c042ca78ba71985
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068865"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940618"
 ---
 # <a name="olap-properties"></a>Proprietà OLAP
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta le proprietà del server OLAP elencate nelle tabelle seguenti. Per altre informazioni sulle proprietà aggiuntive del server e sulla relativa impostazione, vedere [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
@@ -196,7 +195,7 @@ ms.locfileid: "66068865"
  `PartitionLatencyAccuracy`  
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="process"></a>Process  
+## <a name="process"></a>Processo  
  `AggregationMemoryLimitMax`  
  Proprietà con numero a virgola mobile e precisione doppia a 64 bit con segno che definisce la quantità massima di memoria dedicata all'elaborazione di aggregazioni, espressa come percentuale della memoria fisica.  
   
@@ -477,7 +476,7 @@ ms.locfileid: "66068865"
  `ProcessAggregation\ ProcessProperty\ Tax`  
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurare le proprietà del server in Analysis Services](server-properties-in-analysis-services.md)   
  [Determinare la modalità server di un'istanza di Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

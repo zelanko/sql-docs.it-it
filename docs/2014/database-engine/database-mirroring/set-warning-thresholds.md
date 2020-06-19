@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9f1c7c05a02c67fda968ea26bd114d16b0b73925
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a02fa726d7fef74c4baf3ba44a24519a5cbb680
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65805165"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933922"
 ---
 # <a name="set-warning-thresholds"></a>Imposta valori soglia avvisi
   Usare questa finestra di dialogo per abilitare e configurare una o più soglie degli avvisi per il database selezionato nell'albero di navigazione della finestra di dialogo **Monitoraggio mirroring del database** .  
@@ -30,7 +29,7 @@ ms.locfileid: "65805165"
   
 ## <a name="options"></a>Opzioni  
  *Istanza del server e relativo stato di connessione*  
- Nome di un'istanza del server partner nel form _SYSTEM_**\\**_instance_name_di sistema. Per un'istanza del server predefinita, viene visualizzato solo il nome di sistema.  
+ Nome di un'istanza del server partner nel form _SYSTEM_ **\\** _instance_name_di sistema. Per un'istanza del server predefinita, viene visualizzato solo il nome di sistema.  
   
  Il campo indica inoltre se il monitoraggio è attualmente connesso all'istanza del server. I possibili stati di connessione sono i seguenti:  
   
@@ -72,10 +71,10 @@ ms.locfileid: "65805165"
 |**Avvisa se il tempo di memorizzazione della transazione non inviata meno recente è superiore alla soglia**|La soglia indica il numero di minuti delle transazioni non ancora inviate dalla coda di invio all'istanza del server mirror. Questo valore consente di misurare la potenziale perdita di dati in termini di tempo.|  
 |**Avvisa se l'overhead di commit del mirror supera la soglia**|La soglia indica il numero di millisecondi di ritardo per transazione (rilevante solo in modalità a protezione elevata). Questo ritardo rappresenta la quantità di overhead generato mentre l'istanza del server principale è in attesa che l'istanza del server mirror scriva il record di log della transazione nella coda di rollforward.|  
   
- **Abilitato su '** *\<istanza server>* **'**  
+ **Abilitato in '** *\<server instance>* **'**  
  Una casella di controllo deselezionata indica che l'avviso è attualmente disabilitato sull'istanza del server. Per abilitare un avviso, selezionare la relativa casella di controllo.  
   
- **Valore soglia su '** *\<<istanza server>* **'**  
+ **Valore di soglia su'** *\<server instance>* **'**  
  Quando un avviso è abilitato, impostare la soglia nella parte sinistra della colonna. Un evento si verifica se la soglia specificata viene raggiunta all'aggiornamento della tabella dello stato. Se si disabilita una soglia dopo aver configurato un valore, il valore configurato rimane nel campo e verrà utilizzato in caso di riabilitazione dell'avviso.  
   
  Quando un avviso non è abilitato, il campo non è attivo.  

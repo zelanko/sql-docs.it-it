@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e7e79307e2c913841ae1e017e6a5c180dfd55b6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4998058d55cd49c0eecfdecce2edc609a4d62c1f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77213966"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933718"
 ---
 # <a name="clr-stored-procedures"></a>Stored procedure CLR
-  Le stored procedure sono routine che non possono essere utilizzate in espressioni scalari. Diversamente dalle funzioni scalari, possono restituire risultati tabulari e messaggi al client, richiamare istruzioni DDL (Data Definition Language) e DML (Data Manipulation Language) e restituire parametri di output. Per informazioni sui vantaggi dell'integrazione con CLR e sulla scelta tra codice gestito [!INCLUDE[tsql](../../includes/tsql-md.md)]e, vedere [Cenni preliminari sull'integrazione con CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
+  Le stored procedure sono routine che non possono essere utilizzate in espressioni scalari. Diversamente dalle funzioni scalari, possono restituire risultati tabulari e messaggi al client, richiamare istruzioni DDL (Data Definition Language) e DML (Data Manipulation Language) e restituire parametri di output. Per informazioni sui vantaggi dell'integrazione con CLR e sulla scelta tra codice gestito e [!INCLUDE[tsql](../../includes/tsql-md.md)] , vedere [Cenni preliminari sull'integrazione con CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="requirements-for-clr-stored-procedures"></a>Requisiti per le stored procedure CLR  
- Nel Common Language Runtime (CLR), le stored procedure vengono implementate come metodi statici pubblici su una classe in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] un assembly. Il metodo statico può essere dichiarato come void o restituisce un valore integer. Se restituisce un valore integer, il numero intero restituito viene considerato come codice restituito dalla procedura. Ad esempio:  
+ Nel Common Language Runtime (CLR), le stored procedure vengono implementate come metodi statici pubblici su una classe in un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly. Il metodo statico può essere dichiarato come void o restituisce un valore integer. Se restituisce un valore integer, il numero intero restituito viene considerato come codice restituito dalla procedura. Ad esempio:  
   
  `EXECUTE @return_status = procedure_name`  
   
@@ -48,7 +47,7 @@ ms.locfileid: "77213966"
  Le informazioni possono essere restituite in diversi modi dalle stored procedure [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], ad esempio come parametri di output, risultati tabulari e messaggi.  
   
 ### <a name="output-parameters-and-clr-stored-procedures"></a>Parametri di output e stored procedure CLR  
- Analogamente alle stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)], le informazioni possono essere restituite dalle stored procedure [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] utilizzando parametri OUTPUT. La sintassi DML di [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzata per la creazione di stored procedure [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] è la stessa utilizzata per la creazione di stored procedure scritte in [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il parametro corrispondente nel codice di implementazione nella classe [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] deve utilizzare un parametro di passaggio per riferimento come argomento. Si noti che Visual Basic non supporta i parametri di output nello stesso modo in cui avviene in C#. È necessario specificare il parametro per riferimento e applicare l' \<attributo out () > per rappresentare un parametro di output, come nell'esempio seguente:  
+ Analogamente alle stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)], le informazioni possono essere restituite dalle stored procedure [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] utilizzando parametri OUTPUT. La sintassi DML di [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzata per la creazione di stored procedure [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] è la stessa utilizzata per la creazione di stored procedure scritte in [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il parametro corrispondente nel codice di implementazione nella classe [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] deve utilizzare un parametro di passaggio per riferimento come argomento. Si noti che Visual Basic non supporta i parametri di output nello stesso modo in cui avviene in C#. È necessario specificare il parametro per riferimento e applicare l' \<Out()> attributo per rappresentare un parametro di output, come nell'esempio seguente:  
   
 ```vb
 Imports System.Runtime.InteropServices  
@@ -122,7 +121,7 @@ Partial Public Class StoredProcedures
 End Class  
 ```  
   
- Dopo che l'assembly contenente il stored procedure CLR precedente è stato compilato e creato nel server, per creare [!INCLUDE[tsql](../../includes/tsql-md.md)] la stored procedure nel database viene utilizzato il codice seguente e viene specificato *Sum* come parametro di output.  
+ Dopo che l'assembly contenente il stored procedure CLR precedente è stato compilato e creato nel server, [!INCLUDE[tsql](../../includes/tsql-md.md)] per creare la stored procedure nel database viene utilizzato il codice seguente e viene specificato *Sum* come parametro di output.  
   
 ```sql
 CREATE PROCEDURE PriceSum (@sum int OUTPUT)  
@@ -132,7 +131,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 -- AS EXTERNAL NAME TestStoredProc.[MyNS.StoredProcedures].PriceSum  
 ```  
   
- Si noti *che Sum* viene dichiarato come `int` tipo di dati SQL Server e che il parametro *value* definito nel stored procedure CLR viene specificato come tipo di `SqlInt32` dati CLR. Quando un programma chiamante esegue la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedure CLR, converte automaticamente il `SqlInt32` tipo di dati CLR in un `int` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati.  Per ulteriori informazioni sui tipi di dati CLR che possono e non possono essere convertiti, vedere [mapping dei dati dei parametri CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
+ Si noti che *Sum* viene dichiarato come `int` tipo di dati SQL Server e che il parametro *value* definito nel stored procedure CLR viene specificato come tipo di `SqlInt32` dati CLR. Quando un programma chiamante esegue la stored procedure CLR, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte automaticamente il `SqlInt32` tipo di dati CLR in un `int` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati.  Per ulteriori informazioni sui tipi di dati CLR che possono e non possono essere convertiti, vedere [mapping dei dati dei parametri CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
   
 ### <a name="returning-tabular-results-and-messages"></a>Restituzione di risultati tabulari e messaggi  
  La restituzione di risultati tabulari e messaggi al client viene eseguita tramite l'oggetto `SqlPipe`, ottenuto tramite la proprietà `Pipe` della classe `SqlContext`. L'oggetto `SqlPipe` include un metodo `Send`. Chiamando il metodo `Send`, è possibile trasmettere dati tramite la pipe all'applicazione chiamante.  
@@ -366,7 +365,7 @@ END;
 ```  
   
 > [!NOTE]  
->  Messaggi e set di risultati vengono recuperati in modo diverso nell'applicazione client. I set di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] risultati, ad esempio, vengono visualizzati nella visualizzazione **risultati** e i messaggi vengono visualizzati nel riquadro **messaggi** .  
+>  Messaggi e set di risultati vengono recuperati in modo diverso nell'applicazione client. I set di risultati, ad esempio, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] vengono visualizzati nella visualizzazione **risultati** e i messaggi vengono visualizzati nel riquadro **messaggi** .  
   
  Se il codice di Visual C# precedente viene salvato in un file MyFirstUdp.cs e compilato con:  
   

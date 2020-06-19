@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: ba40cf43-f286-49ad-8316-70f5b11f1dae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3dadc054a3f9927c09e9e236044dd5ddee7f3a9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f5d571d1a3f88f20600947d3093bf1e37feeee2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068682"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940522"
 ---
 # <a name="shopping-basket-analysis-table-analysistools-for-excel"></a>Market basket analysis (Strumenti di analisi tabelle per Excel)
   ![Strumento per gli acquisti](media/tat-shopbskt.gif "Strumento per gli acquisti")  
   
- Lo strumento Market **Basket Analysis** consente di trovare `associations` i dati. Un'associazione può indicare quali elementi vengono frequentemente acquistati insieme. In data mining, questa tecnica è un metodo noto noto come *Market Basket Analysis*, usato per analizzare il comportamento di acquisto dei clienti in set di dati di grandi dimensioni. Gli esperti di marketing possono utilizzare le informazioni per consigliare prodotti correlati ai clienti e promuovere i prodotti correlati posizionandoli in prossimità nelle pagine Web, nei cataloghi o sugli scaffali.  
+ Lo strumento Market **Basket Analysis** consente di trovare i `associations` dati. Un'associazione può indicare quali elementi vengono frequentemente acquistati insieme. In data mining, questa tecnica è un metodo noto noto come *Market Basket Analysis*, usato per analizzare il comportamento di acquisto dei clienti in set di dati di grandi dimensioni. Gli esperti di marketing possono utilizzare le informazioni per consigliare prodotti correlati ai clienti e promuovere i prodotti correlati posizionandoli in prossimità nelle pagine Web, nei cataloghi o sugli scaffali.  
   
  Per utilizzare l'analisi di tipo Market basket analysis, gli elementi che si desidera analizzare devono essere correlati da un ID di transazione. Se, ad esempio, si analizzano tutti gli ordini ricevuti tramite un sito Web, ogni ordine dispone di un ID di ordine o di un ID di transazione associato a uno o più elementi acquistati.  
   
@@ -129,7 +128,7 @@ ms.locfileid: "66068682"
   
  Per ulteriori informazioni sull'algoritmo utilizzato per eseguire questa analisi, vedere l'argomento "Algoritmo Microsoft Association Rules" nella documentazione online di SQL Server.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Strumenti di analisi tabelle per Excel](table-analysis-tools-for-excel.md)  
   
   

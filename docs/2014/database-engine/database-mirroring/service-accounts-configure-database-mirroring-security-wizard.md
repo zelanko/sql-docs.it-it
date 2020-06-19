@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d58d8f93-7888-4d66-af4d-969ef6a2dbee
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 69877c6a20e37e012925185d0b807e9579066e35
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a6497e3e28f5ea3347cc735292cc3502a42301ce
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754391"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933992"
 ---
 # <a name="service-accounts-configure-database-mirroring-security-wizard"></a>Account di servizio (Configurazione guidata sicurezza mirroring del database)
   Quando si utilizza l'autenticazione di Windows, se le istanze del server utilizzano account diversi, specificare gli account di servizio per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tali account di servizio devono essere tutti account di dominio negli stessi domini o in domini di tipo trusted.  
@@ -37,19 +36,19 @@ ms.locfileid: "62754391"
  **Principale**  
  Consente di specificare l'account di servizio dell'istanza del server principale. Immettere il nome di dominio in lettere maiuscole:  
   
- *DOMAINNAME*Nome utente NomeDominio*username* \\  
+ *NomeDominio* \\ *nome utente*  
   
  **Mirror**  
  Consente di specificare l'account di servizio dell'istanza del server mirror. Immettere il nome di dominio in lettere maiuscole:  
   
- *DOMAINNAME*Nome utente NomeDominio*username* \\  
+ *NomeDominio* \\ *nome utente*  
   
  **Controllo**  
  Consente di specificare l'account di servizio dell'istanza del server di controllo del mirroring. Immettere il nome di dominio in lettere maiuscole:  
   
- *DOMAINNAME*Nome utente NomeDominio*username* \\  
+ *NomeDominio* \\ *nome utente*  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Proprietà database &#40;pagina Mirroring&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Avvia Monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [&#40;SQL Server di mirroring del database&#41;](database-mirroring-sql-server.md)   
