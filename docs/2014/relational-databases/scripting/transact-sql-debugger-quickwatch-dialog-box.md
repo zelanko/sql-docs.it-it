@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0b25d06e69b24cf31d3bc84d69ccdcbc8a034588
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 48e4bda558b75bec0c81815c90feff9d6500a803
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718318"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063277"
 ---
 # <a name="quickwatch-dialog-box"></a>Finestra di dialogo Controllo immediato
   Utilizzare la finestra di dialogo **Controllo immediato** per visualizzare rapidamente il tipo di dati e il valore di un'espressione [!INCLUDE[tsql](../../includes/tsql-md.md)] , ad esempio una variabile o un parametro, quando si esegue il debug di codice [!INCLUDE[tsql](../../includes/tsql-md.md)] . Per controllare più espressioni, è anche possibile aggiungere l'espressione a una finestra **Espressione di controllo** .  

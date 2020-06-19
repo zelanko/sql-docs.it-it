@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7a76c87b38dc333f55745c61620398f086a3db5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9211f91d81d1da1d3c1b96286aac0fa53306f6e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789012"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936512"
 ---
 # <a name="results-page-alwayson-availability-group-wizards"></a>Pagina Risultati (procedure guidate gruppi di disponibilità AlwaysOn)
   In questo argomento della Guida vengono descritte le opzioni della pagina **Risultati** . Questo argomento si applica alla [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], alla [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], alla [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]e alla [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Utilizzare questa pagina per visualizzare i risultati della procedura guidata.  
@@ -34,10 +33,10 @@ ms.locfileid: "62789012"
  **Risultato**  
  Per ogni passaggio completato, viene visualizzato uno dei seguenti testi di collegamenti ipertestuali.  
   
-|Risultato|Descrizione|  
+|Risultato|Description|  
 |------------|-----------------|  
 |**Error (Errore) (Error (Errore)e)**|Indica che il passaggio di convalida non è riuscito. Fare clic sul collegamento per visualizzare il messaggio di errore.|  
-|**Operazione completata**|Indica che il passaggio di convalida è riuscito.|  
+|**Success**|Indica che il passaggio di convalida è riuscito.|  
   
 
   
@@ -53,7 +52,7 @@ ms.locfileid: "62789012"
   
 
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

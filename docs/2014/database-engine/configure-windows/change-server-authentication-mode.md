@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43919e335700a23a4174eb1bdf42c36c0c08fe2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8bda31ca7d0c5949173a9a3e5ea656c1757c04f7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812299"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935862"
 ---
 # <a name="change-server-authentication-mode"></a>Modifica della modalità di autenticazione del server
   In questo argomento viene descritto come modificare la modalità di autenticazione del server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Durante l'installazione [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] è impostato su **Autenticazione di Windows** o **Autenticazione di SQL Server e di Windows**. Dopo l'installazione, è possibile modificare in qualsiasi momento la modalità di autenticazione.  
@@ -58,7 +57,7 @@ ms.locfileid: "62812299"
   
 #### <a name="to-enable-the-sa-login"></a>Per abilitare l'account di accesso sa  
   
-1.  In Esplora oggetti espandere **sicurezza**, espandere account di accesso, fare clic con `sa`il pulsante destro del mouse su, quindi scegliere **proprietà**.  
+1.  In Esplora oggetti espandere **sicurezza**, espandere account di accesso, fare clic con il pulsante destro del mouse su `sa` , quindi scegliere **proprietà**.  
   
 2.  Nella pagina **Generale** potrebbe essere necessario creare e confermare una password per l'account di accesso.  
   
@@ -81,7 +80,7 @@ ms.locfileid: "62812299"
   
     ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Password complesse](../../relational-databases/security/strong-passwords.md)   
  [Considerazioni sulla sicurezza per un'installazione di SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)   

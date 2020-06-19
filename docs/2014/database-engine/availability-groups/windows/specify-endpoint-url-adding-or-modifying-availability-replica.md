@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 524f9d4b3173a70d3491f2efc0f00f4061c4d6b4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da1eb2bacd4d5a2f7d0b2a623343f62b5e89597d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797971"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936399"
 ---
 # <a name="specify-the-endpoint-url-when-adding-or-modifying-an-availability-replica-sql-server"></a>Specifica dell'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità (SQL Server)
   Per ospitare una replica di disponibilità per un gruppo di disponibilità, un'istanza del server deve possedere un endpoint del mirroring del database. L'istanza del server utilizza questo endpoint per rimanere in attesa dei messaggi [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] dalle repliche di disponibilità ospitate da altre istanze del server. Per definire una replica di disponibilità per un gruppo di disponibilità, è necessario specificare l'URL dell'endpoint dell'istanza del server che ospiterà la replica. L' *URL dell'endpoint* identifica il protocollo di trasporto dell'endpoint del mirroring del database TCP, l'indirizzo di sistema dell'istanza del server e il numero di porta associato all'endpoint.  
@@ -39,11 +38,11 @@ ms.locfileid: "72797971"
 ##  <a name="syntax-for-an-endpoint-url"></a><a name="SyntaxOfURL"></a> Sintassi per un URL dell'endpoint  
  La sintassi per un URL dell'endpoint è la seguente:  
   
- TCP<strong>://</strong>*\<System-Address>* <strong>:</strong>*\<porta>*  
+ TCP<strong>://</strong> *\<system-address>* <strong>:</strong>*\<port>*  
   
- where  
+ dove  
   
--   System-Address>è una stringa che identifica in modo univoco il computer di destinazione. * \<* In genere, l'indirizzo del server è un nome di sistema, se i sistemi si trovano nello stesso dominio, un nome di dominio completo o un indirizzo IP.  
+-   *\<system-address>* è una stringa che identifica in modo univoco il computer di destinazione. In genere, l'indirizzo del server è un nome di sistema, se i sistemi si trovano nello stesso dominio, un nome di dominio completo o un indirizzo IP.  
   
     -   Poiché i nodi del cluster WSFC (Windows Server Failover Clustering) si trovano nello stesso dominio, è possibile utilizzare il nome del computer, ad esempio `SYSTEM46`.  
   
@@ -55,11 +54,11 @@ ms.locfileid: "72797971"
   
          _nome_computer_ **.** _domain_segment_[... **.** _domain_segment_]  
   
-         dove *computer_name*è il nome di rete del computer che esegue l'istanza del server e *domain_segment*[... **.** _domain_segment_] informazioni sul dominio rimanente del server. ad esempio: `localinfo.corp.Adventure-Works.com`.  
+         dove *computer_name*è il nome di rete del computer che esegue l'istanza del server e *domain_segment*[... **.** _domain_segment_] informazioni sul dominio rimanente del server. ad esempio: `localinfo.corp.Adventure-Works.com` .  
   
          Il contenuto e il numero dei segmenti di dominio sono determinati all'interno della società o dell'organizzazione. Per ulteriori informazioni, vedere [Individuazione del nome di dominio completo](#Finding_FQDN), più avanti in questo argomento.  
   
--   >porta è il numero di porta utilizzato dall'endpoint del mirroring dell'istanza del server partner. * \<*  
+-   *\<port>* numero di porta utilizzato dall'endpoint del mirroring dell'istanza del server partner.  
   
      Un endpoint del mirroring del database può utilizzare qualsiasi porta disponibile nel computer. Ogni numero di porta deve essere associato a un solo endpoint e ogni endpoint a una singola istanza del server. In questo modo, istanze del server diverse sullo stesso server restano in attesa su endpoint diversi con porte diverse. Pertanto, la porta specificata nell'URL dell'endpoint quando si specifica una replica di disponibilità indirizzerà sempre i messaggi in arrivo all'istanza del server il cui endpoint è associato a tale porta.  
   
@@ -126,7 +125,7 @@ ms.locfileid: "72797971"
   
 -   [Creare un endpoint del mirroring del database per l'autenticazione Windows &#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [Usare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [Utilizzare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
     -   [Impostazione dell'endpoint del mirroring del database per l'utilizzo di certificati per le connessioni in uscita &#40;Transact-SQL&#41;](../../database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
@@ -151,6 +150,6 @@ ms.locfileid: "72797971"
 -   [Pagina relativa alla guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione e configurazione dei gruppi di disponibilità &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
+ [Creazione e configurazione di gruppi di disponibilità &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  

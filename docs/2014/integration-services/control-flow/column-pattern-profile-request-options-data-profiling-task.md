@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4ceb9402780788d3a2a45e8d2b838c156c28faab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a00c72e6f444ec1e62082f254d6b77894b479d09
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832608"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919642"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Criteri di ricerca colonna (Attività Profiling dati)
   Usare il riquadro **Proprietà richiesta** della pagina **Richieste profilo** per impostare le opzioni per la **Richiesta profilo Criteri di ricerca colonna** selezionata nel riquadro delle richieste. Un profilo Criteri di ricerca colonna segnala un set di espressioni regolari che analizzano la percentuale specificata di valori in una colonna stringa. Questo profilo consente di identificare eventuali problemi nei dati, ad esempio le stringhe non valide, e può indicare le possibili espressioni regolari da utilizzare in futuro per convalidare nuovi valori. Un profilo di criteri di ricerca di una colonna contenente i codici postali ZIP (Stati Uniti), ad esempio, può produrre le espressioni regolari \d{5}-\d{4}, \d{5} e \d{9}. Se vengono visualizzate altre espressioni regolari, è probabile che i dati contengano valori non validi o in formato non corretto.  
@@ -32,7 +31,7 @@ ms.locfileid: "62832608"
   
 -   **Delimiters** Per impostazione predefinita, l'elenco dei delimitatori contiene i caratteri seguenti: spazio, tabulazione orizzontale (\t), nuova riga (\n) e ritorno a capo (\r). È possibile specificare delimitatori aggiuntivi, ma non è possibile rimuovere i delimitatori predefiniti.  
   
--   **Simboli** Per impostazione predefinita, l'elenco di **simboli** contiene i caratteri seguenti `,.;:-"'`: ~ =&/@!? () <> []{}| # * ^%`. For example, if the symbols are "`()-' ", il valore" (425) 123-4567 "viene suddiviso in token come [" ("," 425 ",") "," 123 ","-"," 4567 ",") "].  
+-   **Simboli** Per impostazione predefinita, l'elenco di **simboli** contiene i caratteri seguenti: `,.;:-"'` ~ =&/@!? () <> [] {} | # * ^% `. For example, if the symbols are "` ()-' ", il valore" (425) 123-4567 "viene suddiviso in token come [" ("," 425 ",") "," 123 ","-"," 4567 ",") "].  
   
  Un carattere non può essere simultaneamente un delimitatore e un simbolo.  
   
@@ -54,10 +53,10 @@ ms.locfileid: "62832608"
   
 |Tag|Termine|  
 |---------|----------|  
-|Street|Street|  
+|Via|Street|  
 |Street|Avenue|  
-|Street|Posizione|  
-|Street|Way|  
+|Via|Posizione|  
+|Via|Way|  
   
  In base a questa combinazione di tag, il criterio di ricerca risultante per un indirizzo stradale potrebbe essere simile al seguente:  
   
@@ -87,7 +86,7 @@ ms.locfileid: "62832608"
  Per ulteriori informazioni, vedere la sezione "Opzioni TableorView" in questo argomento.  
   
  **Colonna**  
- Consente di selezionare la colonna esistente da analizzare. Selezionare **(\*)** per profilare tutte le colonne.  
+ Consente di selezionare la colonna esistente da analizzare. Selezionare **( \* )** per profilare tutte le colonne.  
   
  Per ulteriori informazioni, vedere la sezione "Opzioni Column" in questo argomento.  
   
@@ -95,15 +94,15 @@ ms.locfileid: "62832608"
  **Schema**  
  Specifica lo schema a cui appartiene la tabella selezionata. Questa opzione è di sola lettura.  
   
- **tavolo**  
+ **Tabella**  
  Visualizza il nome della tabella selezionata. Questa opzione è di sola lettura.  
   
 #### <a name="column-options"></a>Opzioni relative alle colonne  
  **IsWildCard**  
- Specifica se è stato selezionato il carattere jolly **(\*)** . Questa opzione è impostata su **True** se è stato selezionato **(\*)** per profilare tutte le colonne. È impostata su **False** se è stata selezionata una singola colonna da analizzare. Questa opzione è di sola lettura.  
+ Specifica se è stato selezionato il carattere jolly **( \* )** . Questa opzione è impostata su **True** se è stato selezionato **(\*)** per profilare tutte le colonne. È impostata su **False** se è stata selezionata una singola colonna da analizzare. Questa opzione è di sola lettura.  
   
  **ColumnName**  
- Visualizza il nome della colonna selezionata. Questa opzione è vuota se è stato selezionato **(\*)** per profilare tutte le colonne. Questa opzione è di sola lettura.  
+ Visualizza il nome della colonna selezionata. Questa opzione è vuota se è stato selezionato **( \* )** per profilare tutte le colonne. Questa opzione è di sola lettura.  
   
  **StringCompareOptions**  
  Questa opzione non si applica al profilo Criteri di ricerca colonna.  
@@ -127,8 +126,8 @@ ms.locfileid: "62832608"
   
  Per ulteriori informazioni, tornare alla sezione "Informazioni sull'utilizzo di delimitatori e simboli" di questo argomento.  
   
- **Symbols**  
- Elenco dei simboli che devono essere mantenuti come parte dei criteri di ricerca. I simboli, ad esempio, possono includere "/" per le date, "." per le ore e "@" per gli indirizzi di posta elettronica. Per impostazione predefinita, l'elenco di **simboli** contiene i caratteri seguenti `,.;:-"'`: ~ =&/@!? () <> []{}| # * ^%'.  
+ **Simboli**  
+ Elenco dei simboli che devono essere mantenuti come parte dei criteri di ricerca. I simboli, ad esempio, possono includere "/" per le date, "." per le ore e "@" per gli indirizzi di posta elettronica. Per impostazione predefinita, l'elenco di **simboli** contiene i caratteri seguenti: `,.;:-"'` ~ =&/@!? () <> [] {} | # * ^%'.  
   
  Per ulteriori informazioni, tornare alla sezione "Informazioni sull'utilizzo di delimitatori e simboli" di questo argomento.  
   
@@ -142,7 +141,7 @@ ms.locfileid: "62832608"
   
  Per ulteriori informazioni, tornare alla sezione "Utilizzo della tabella dei tag" di questo argomento.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Editor attività Profiling dati &#40;pagina generale&#41;](../general-page-of-integration-services-designers-options.md)   
  [Form profilo rapido singola tabella &#40;Attività Profiling dati&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   

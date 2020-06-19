@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c8ea6a5fcfe99926c264fc2116a637f8d30c05df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a6ac6668ff362a986646c4e01b1f0e5e722611c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010149"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955351"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>Compatibilità di FileTable con altre funzionalità di SQL Server
   Viene descritto il funzionamento delle tabelle FileTable con altre funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -119,7 +118,7 @@ ms.locfileid: "66010149"
   
  È possibile impostare l'indipendenza del database su PARTIAL se si desidera utilizzare alcune funzionalità dei database indipendenti, ad esempio gli utenti indipendenti. In tal caso, tuttavia, è necessario tenere presente che alcune impostazioni del database non sono contenute nel database e non vengono spostate automaticamente quando viene spostato il database.  
   
-## <a name="see-also"></a>Vedi anche  
- [Gestione di tabelle FileTable](manage-filetables.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Gestire tabelle FileTable](manage-filetables.md)  
   
   

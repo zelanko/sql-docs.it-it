@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2dfc75b2af19165931dc50e76f04bc7362b59ea8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0da23febcc1f2e97b1dfaff29a5df5ced16c7e4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873052"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970277"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Distribuire un database tramite un'applicazione livello dati
   Usare la procedura guidata **Distribuisci database in SQL Azure** per distribuire un database tra un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e un server [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] o tra due server [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -100,7 +99,7 @@ ms.locfileid: "62873052"
   
  **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]Impostazioni database:**  
   
--   edizione: selezionare l'edizione di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] dal menu a discesa. ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] **  
+-   ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] edizione** : selezionare l'edizione di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] dal menu a discesa.  
   
 -   **Dimensioni massime database**: selezionare le dimensioni massime del database dal menu a discesa.  
   
@@ -111,7 +110,7 @@ ms.locfileid: "62873052"
 ##  <a name="summary-page"></a><a name="Summary"></a> Pagina Riepilogo  
  Utilizzare questa pagina per esaminare le impostazioni di origine e destinazione specificate per l'operazione. Per completare l'operazione di distribuzione usando le impostazioni specificate, fare clic su **Fine**. Per annullare l'operazione di distribuzione e uscire dalla procedura guidata, fare clic su **Annulla**.  
   
-##  <a name="progress-page"></a><a name="Progress"></a>Pagina di stato  
+##  <a name="progress-page"></a><a name="Progress"></a> Pagina Stato  
  In questa pagina viene visualizzato un indicatore di stato che indica lo stato dell'operazione. Per visualizzare lo stato dettagliato, fare clic sull'opzione **Visualizza dettagli** .  
   
 ##  <a name="results-page"></a><a name="Results"></a>Pagina dei risultati  
@@ -136,7 +135,7 @@ ms.locfileid: "62873052"
   
 6.  Utilizzare il metodo `Import` del tipo `Microsoft.SqlServer.Management.Dac.DacStore` per importare il file BACPAC. Specificare il file BACPAC creato dall'esportazione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Applicazioni livello dati](data-tier-applications.md)   
  [Esportare un'applicazione livello dati](export-a-data-tier-application.md)   
  [Importare un file BACPAC per creare un nuovo database utente](import-a-bacpac-file-to-create-a-new-user-database.md)  

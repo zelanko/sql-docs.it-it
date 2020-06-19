@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 42aa89a111697f17f23613761eeeb462494bdd27
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51b5913e9c3ce65faa5a1fddc5846cc7c94d149f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011255"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063252"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Miglioramento delle prestazioni di indici full-text
   Le prestazioni di esecuzione dell'indicizzazione e delle query full-text possono dipendere da risorse hardware quali memoria e velocità del disco e della CPU, nonché dall'architettura del computer.  
@@ -58,7 +57,7 @@ ms.locfileid: "66011255"
 ##  <a name="tuning-the-performance-of-full-text-indexes"></a><a name="tuning"></a>Ottimizzazione delle prestazioni degli indici full-text  
  Per ottimizzare le prestazioni degli indici full-text, implementare le procedure consigliate seguenti:  
   
--   Per usare tutti i processori o i core al massimo, impostare [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)'`max full-text crawl ranges`' sul numero di CPU nel sistema. Per informazioni su questa opzione di configurazione, vedere [Opzione di configurazione del server max full-text crawl range](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
+-   Per usare tutti i processori o i core al massimo, impostare [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)' `max full-text crawl ranges` ' sul numero di CPU nel sistema. Per informazioni su questa opzione di configurazione, vedere [Opzione di configurazione del server max full-text crawl range](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
   
 -   Verificare che la tabella di base includa un indice cluster. Utilizzare un tipo di dati integer per la prima colonna dell'indice cluster. Evitare l'utilizzo di GUID nella prima colonna dell'indice cluster. Un popolamento a più intervalli in un indice cluster garantisce la massima velocità di popolamento. È consigliabile che la colonna utilizzata come chiave full-text sia di un tipo di dati integer.  
   
@@ -105,7 +104,7 @@ ms.locfileid: "66011255"
   
  È possibile stimare approssimativamente la quantità di memoria (in byte) utilizzata dall'host del daemon di filtri tramite la formula seguente:  
   
- *number_of_crawl_ranges* \`ism_size '*max_outstanding_isms* \* 2  
+ *number_of_crawl_ranges* \` ism_size '*max_outstanding_isms* \* 2  
   
  I valori predefiniti delle variabili nella formula precedente sono i seguenti:  
   
@@ -121,17 +120,17 @@ ms.locfileid: "66011255"
   
 -   *T*: memoria fisica totale disponibile nel sistema (in MB).  
   
--   *M*, che rappresenta l'impostazione `max server memory` ottimale.  
+-   *M*, che rappresenta l' `max server memory` impostazione ottimale.  
   
 > [!IMPORTANT]  
 >  Per informazioni essenziali sulle formule, vedere <sup>1</sup>, <sup>2</sup>e <sup>3</sup>sotto.  
   
-|Piattaforma|Stima dei requisiti di memoria di FDHOST. exe in MB-*F*<sup>1</sup>|Formula per il calcolo di max server memory-*M*<sup>2</sup>|  
+|Piattaforma|Stima dei requisiti di memoria fdhost.exe in MB-*F*<sup>1</sup>|Formula per il calcolo di max server memory-*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|Numero _F_ **=** _di intervalli di ricerca per indicizzazione_ **&#42;** 50|_M_ **= minimo (** _T_ **,** 2000 **)-*`F`* ** 500|  
-|x64|_Numero F_ **=** _di intervalli di ricerca per indicizzazione_ **&#42;** 10 **&#42;** 8|_M_ **=** _T_ T **-** _F_ F **-** 500|  
+|x86|_F_ **=** _Numero F di intervalli di ricerca per indicizzazione_ **&#42;** 50|_M_ **= minimo (** _T_ **,** 2000 **)- *`F`* - ** 500|  
+|x64|_F_ **=** _Numero F di intervalli di ricerca per indicizzazione_ **&#42;** 10 **&#42;** 8|_M_ **=** _T_ **-** _F_ **-** 500|  
   
- <sup>1</sup> se sono in corso più popolamenti completi, calcolare i requisiti di memoria di FDHOST. exe per ciascuno separatamente, ad esempio *F1*, *F2*e così via. Calcolare quindi *M* come _T_**-** sigma **(**_F_i **)**.  
+ <sup>1</sup> se sono in corso più popolamenti completi, calcolare i requisiti di memoria fdhost.exe per ognuno separatamente, ad esempio *F1*, *F2*e così via. Calcolare quindi *M* come _T_**-** sigma **(**_F_i **)**.  
   
  <sup>2</sup> 500 MB è una stima della memoria richiesta da altri processi nel sistema. Se nel sistema sono in corso processi aggiuntivi, aumentare questo valore di conseguenza.  
   
@@ -143,13 +142,13 @@ ms.locfileid: "66011255"
   
  `F = 8*10*8=640`  
   
- Il calcolo successivo ottiene il valore ottimale per `max server memory` - *M*. *T*Il totale della memoria fisica disponibile in questo sistema in MB-*T*-è `8192`.  
+ Il calcolo successivo ottiene il valore ottimale per `max server memory` - *M*. *T*Il totale della memoria fisica disponibile in questo sistema in MB-*T*-è `8192` .  
   
  `M = 8192-640-500=7052`  
   
  **Esempio: Impostazione del valore max server memory**  
   
- Questo esempio usa le istruzioni [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) e [RECONFIGURE](/sql/t-sql/language-elements/reconfigure-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] per impostare `max server memory` sul valore calcolato per *M* nell'esempio precedente, `7052`:  
+ Questo esempio usa le istruzioni [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) e [RECONFIGURE](/sql/t-sql/language-elements/reconfigure-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] per impostare sul `max server memory` valore calcolato per *M* nell'esempio precedente, `7052` :  
   
 ```  
 USE master;  
@@ -203,11 +202,11 @@ GO
   
  Ai fini della sicurezza, i filtri vengono caricati dai processi dell'host del daemon di filtri. In un'istanza del server viene utilizzato un processo a thread multipli per tutti i filtri a thread multipli e un processo a thread singolo per tutti i filtri a thread singolo. Quando un documento che utilizza un filtro multithread contiene un documento incorporato che utilizza un filtro a thread singolo, il motore di ricerca full-text avvia un processo a thread singolo per il documento incorporato. Nel caso di un documento di Word che contiene un documento PDF, il motore di ricerca full-text usa il processo multithread per esaminare il contenuto in formato Word e avvia un processo a thread singolo per esaminare il contenuto in formato PDF. Un filtro a thread singolo potrebbe tuttavia non funzionare in modo corretto in questo ambiente e potrebbe destabilizzare il processo di filtraggio. In alcune situazioni in cui i documenti incorporati rappresentano una prassi comune, la destabilizzazione potrebbe provocare errori irreversibili nel processo di filtraggio. In questo caso, il motore di ricerca full-text reindirizza tutti i documenti che hanno provocato l'errore, ad esempio un documento di Word in cui è incorporato contenuto in formato PDF, al processo di filtraggio a thread singolo. Se il reindirizzamento viene eseguito di frequente, le prestazioni del processo di indicizzazione full-text risultano ridotte.  
   
- Per risolvere questo problema, è necessario contrassegnare il filtro per il documento contenitore, in questo caso il documento di Word, come filtro a thread singolo. È possibile modificare il valore del Registro di sistema per il filtro per contrassegnare un filtro specifico come filtro a thread singolo. Per contrassegnare un filtro come filtro a thread singolo, è necessario impostare il valore del registro di sistema **ThreadingModel** per il filtro `Apartment Threaded`su. Per informazioni sugli apartment a thread singolo, vedere il white paper [Understanding and Using COM Threading Models](https://go.microsoft.com/fwlink/?LinkId=209159).  
+ Per risolvere questo problema, è necessario contrassegnare il filtro per il documento contenitore, in questo caso il documento di Word, come filtro a thread singolo. È possibile modificare il valore del Registro di sistema per il filtro per contrassegnare un filtro specifico come filtro a thread singolo. Per contrassegnare un filtro come filtro a thread singolo, è necessario impostare il valore del registro di sistema **ThreadingModel** per il filtro su `Apartment Threaded` . Per informazioni sugli apartment a thread singolo, vedere il white paper [Understanding and Using COM Threading Models](https://go.microsoft.com/fwlink/?LinkId=209159).  
   
   
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni di configurazione del server di memoria server](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [Opzione di configurazione del server max full-text crawl range](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)   
  [Popolamento degli indici full-text](populate-full-text-indexes.md)   

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 37bb440288ccbc832d89180855566a969830e2ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: adc5a8eb0317e53b51927402608a8d9b1a09a76f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797991"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970235"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Estrarre un'applicazione livello dati da un database
   Usare la **procedura guidata Estrai applicazione livello dati** o uno script di Windows PowerShell per estrarre un pacchetto di applicazione livello dati da un database di SQL Server esistente. Il processo di estrazione crea un file di pacchetto DAC che contiene le definizioni degli oggetti di database e i relativi elementi a livello di istanza. Ad esempio, un file di pacchetto di applicazione livello dati contiene tutte le tabelle di database, le stored procedure, le viste e gli utenti, nonché gli account di accesso che eseguono il mapping agli utenti del database.  
@@ -36,7 +35,7 @@ ms.locfileid: "72797991"
 -   **Per estrarre un'applicazione livello dati, utilizzando:**  [la procedura guidata Estrai applicazione livello dati](#UsingDACExtractWizard), [PowerShell](#ExtractDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
- È possibile estrarre un'applicazione livello dati dai database che risiedono in istanze di [!INCLUDE[ssSDS](../../includes/sssds-md.md)], o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4, o versioni successive. Se il processo di estrazione viene eseguito rispetto a un database distribuito da un'applicazione livello dati, vengono estratte solo le definizioni degli oggetti nel database. Il processo non fa riferimento all'applicazione livello dati `msdb` registrata in ( [!INCLUDE[ssSDS](../../includes/sssds-md.md)]**Master** in). Il processo di estrazione non consente di registrare la definizione DAC nell'istanza corrente del motore di database. Per ulteriori informazioni sulla registrazione di un'applicazione livello dati, vedere [Register a Database As a DAC](register-a-database-as-a-dac.md).  
+ È possibile estrarre un'applicazione livello dati dai database che risiedono in istanze di [!INCLUDE[ssSDS](../../includes/sssds-md.md)], o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4, o versioni successive. Se il processo di estrazione viene eseguito rispetto a un database distribuito da un'applicazione livello dati, vengono estratte solo le definizioni degli oggetti nel database. Il processo non fa riferimento all'applicazione livello dati registrata in `msdb` (**Master** in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ). Il processo di estrazione non consente di registrare la definizione DAC nell'istanza corrente del motore di database. Per ulteriori informazioni sulla registrazione di un'applicazione livello dati, vedere [Register a Database As a DAC](register-a-database-as-a-dac.md).  
   
 ###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
  Un'applicazione livello dati può essere estratta solo da un database in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o versioni successive. Non è possibile estrarre un'applicazione livello dati se il database include oggetti non supportati nell'applicazione livello dati o utenti contenuti. Per ulteriori informazioni sui tipi di oggetti supportati in un'applicazione livello dati, vedere [DAC Support For SQL Server Objects and Versions](dac-support-for-sql-server-objects-and-versions.md).  
@@ -86,9 +85,9 @@ ms.locfileid: "72797991"
   
  **Nome** identifica l'applicazione livello dati. Può essere diverso dal nome del file del pacchetto di applicazione livello dati e deve descrivere l'applicazione. Ad esempio, se il database viene utilizzato per un'applicazione finanziaria, si può chiamare DAC Finanza.  
   
- **Versione (usare xx.xx.xx.xx, dove x è un numero)** : valore numerico che identifica la versione dell'applicazione livello dati. La versione DAC viene utilizzata in Visual Studio per identificare la versione della DAC alla quale stanno lavorando gli sviluppatori. Quando si distribuisce un'applicazione livello dati, la versione `msdb` viene archiviata nel database e può essere visualizzata successivamente nel nodo **applicazioni livello dati** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ **Versione (usare xx.xx.xx.xx, dove x è un numero)** : valore numerico che identifica la versione dell'applicazione livello dati. La versione DAC viene utilizzata in Visual Studio per identificare la versione della DAC alla quale stanno lavorando gli sviluppatori. Quando si distribuisce un'applicazione livello dati, la versione viene archiviata nel `msdb` database e può essere visualizzata successivamente nel nodo **applicazioni livello dati** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
- **Descrizione** : facoltativa. Viene descritta l'applicazione livello dati. Quando si distribuisce un'applicazione livello dati, la descrizione `msdb` viene archiviata nel database e può essere visualizzata successivamente nel nodo **applicazioni livello dati** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+ **Descrizione** : facoltativa. Viene descritta l'applicazione livello dati. Quando si distribuisce un'applicazione livello dati, la descrizione viene archiviata nel `msdb` database e può essere visualizzata successivamente nel nodo **applicazioni livello dati** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] .  
   
  **Salva nel file del pacchetto di applicazione livello dati (nome file con estensione dacpac):** salva l'applicazione livello dati in un file del pacchetto di applicazione livello dati, con estensione dacpac. Fare clic sul pulsante **Sfoglia** per specificare il nome e il percorso del file.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bed52d80-ed2a-4bf4-bf7c-481b6e228ca4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dff18b4aac5a97e7bfa12daed107662790fa854a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd7d4696015110fc2df11bea87f045580424c361
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055603"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962951"
 ---
 # <a name="smo-connection-manager-editor"></a>Editor gestione connessione SMO
   L' **editor gestione connessione SMO** consente di configurare una connessione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che può essere utilizzata dalle varie attività di trasferimento di oggetti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -30,7 +29,7 @@ ms.locfileid: "66055603"
  **Nome server**  
  Digitare il nome dell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o selezionare il nome del server nell'elenco.  
   
- **Aggiorna**  
+ **Refresh** (Aggiornamento)  
  Consente di aggiornare l'elenco delle istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] disponibili che possono essere rilevate sulla rete.  
   
  **Usa autenticazione di Windows**  
@@ -48,7 +47,7 @@ ms.locfileid: "66055603"
  **Test connessione**  
  Consente di testare la connessione configurata.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

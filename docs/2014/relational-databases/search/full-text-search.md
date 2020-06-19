@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 61faaa7854aa362e7d269cf3f00911470126f42c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49751128273fd052dd0ecd9423238f6c71a15925
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176841"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063323"
 ---
 # <a name="full-text-search"></a>Ricerca full-text
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] la ricerca full-text consente a utenti e applicazioni di eseguire query full-text su dati di tipo carattere in tabelle di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Affinché le query full-text possano essere eseguite in una determinata tabella, l'amministratore del database deve prima creare un indice full-text nella tabella in questione. L'indice full-text include una o più colonne basate su caratteri nella tabella. In queste colonne possono essere presenti i seguenti tipi di dati: `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, o `varbinary(max)` e FILESTREAM. Ogni indice full-text consente di indicizzare una o più colonne della tabella e ciascuna colonna può essere utilizzata con una lingua specifica.
@@ -134,7 +133,7 @@ ms.locfileid: "78176841"
 ###  <a name="full-text-indexing-process"></a><a name="indexing"></a>Processo di indicizzazione full-text
  Quando viene iniziato un popolamento full-text, noto anche come ricerca per indicizzazione, tramite il motore di ricerca full-text viene eseguito il push di batch di grandi dimensioni di dati in memoria e viene inviata una notifica all'host del daemon di filtri. L'host filtra ed esegue il word breaking dei dati ed esegue inoltre la conversione dei dati convertiti in elenchi di parole invertiti. La ricerca full-text effettua quindi il pull dei dati convertiti dagli elenchi di parole, elabora i dati per rimuovere le parole non significative e salva in modo permanente gli elenchi di parole per un batch in uno o più indici invertiti.
 
- Quando si indicizzano i dati archiviati `varbinary(max)` in `image` una colonna o, il filtro, che implementa l'interfaccia **IFilter** , estrae il testo in base al formato di file specificato per tali dati [!INCLUDE[msCoName](../../includes/msconame-md.md)] , ad esempio Word. In alcuni casi, i componenti filtro richiedono che `varbinary(max)`i dati `image` , o vengano scritti nella cartella FilterData, anziché essere inseriti in memoria.
+ Quando si indicizzano i dati archiviati in una `varbinary(max)` `image` colonna o, il filtro, che implementa l'interfaccia **IFilter** , estrae il testo in base al formato di file specificato per tali dati, ad esempio [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word. In alcuni casi, i componenti filtro richiedono che i `varbinary(max)` dati, o vengano `image` scritti nella cartella FilterData, anziché essere inseriti in memoria.
 
  Nell'ambito dell'elaborazione, i dati di testo raccolti vengono sottoposti a un word breaker per separare il testo in singoli token o parole chiave. La lingua utilizzata per la suddivisione in token viene specificata a livello di colonna o può essere identificata all'interno dei dati `varbinary(max)`, `image` o `xml` dal componente filtro.
 

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1c6d747fe98e08ee21305525302563d1c8025aa2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1ba44f1bf0906dfd4265ce07cf6f7dd5d350ee5b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703683"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063412"
 ---
 # <a name="run-transact-sql-script-files-using-sqlcmd"></a>Esecuzione di file script Transact-SQL mediante sqlcmd
   È possibile utilizzare `sqlcmd` per eseguire un file script [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un file script [!INCLUDE[tsql](../../includes/tsql-md.md)] è un file di testo che può contenere una combinazione di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)], comandi di `sqlcmd` e variabili di scripting.  
@@ -66,7 +65,7 @@ ms.locfileid: "82703683"
  Nella finestra del prompt dei comandi non verrà restituito alcun output. L'output verrà invece inviato al file EmpAdds.txt. È possibile verificare l'output aprendo il file EmpAdds.txt.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Avviare l'utilità sqlcmd](sqlcmd-start-the-utility.md)   
+ [Avvio dell'utilità sqlcmd](sqlcmd-start-the-utility.md)   
  [Utilità sqlcmd](../../tools/sqlcmd-utility.md)  
   
   

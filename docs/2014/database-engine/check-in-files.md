@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0657a387-8411-4406-bef9-d262a5bfa269
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5debb7c80e7365e67d8661709b09b16f5d25b7b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 052859e4605162daa87789b5c61d2ef9d33d4177
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812585"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936042"
 ---
 # <a name="check-in-files"></a>Archiviazione di file
   Per rendere accessibili ad altri utenti i file modificati inclusi nel controllo del codice sorgente, è necessario archiviarli nel controllo del codice sorgente. Quando un file viene archiviato, la versione archiviata viene scritta nel provider del controllo del codice sorgente e diventa la versione più recente del file.  
@@ -32,7 +31,7 @@ ms.locfileid: "62812585"
   
 2.  Se viene visualizzata la finestra **di dialogo Archivia** , selezionare le opzioni appropriate e quindi fare clic su **OK**.  
   
-     **Archiviare**  
+     **Archivia**  
      Consente di archiviare tutti gli elementi selezionati.  
   
      **Colonne**  
@@ -61,7 +60,7 @@ ms.locfileid: "62812585"
   
  Se il file archiviato non fa parte di un'estrazione condivisa, nell'ambiente [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ne viene immediatamente eseguita l'archiviazione. In caso contrario, può venire chiesto di unire la versione utilizzata a quelle create da altri utenti.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Visualizzare un elenco di file modificati](../../2014/database-engine/view-a-list-of-modified-files.md)   
  [Gestione delle archiviazioni](../../2014/database-engine/manage-checkins.md)  
   

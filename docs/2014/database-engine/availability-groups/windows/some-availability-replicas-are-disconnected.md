@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: aea808be-6f0f-40c2-9aa2-a2a435ec6443
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b7393fe6d415f8b68758d75fafba91c9ab0a420c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ff3efc9f98745154960f18945d806d28043d73c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62788416"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936462"
 ---
 # <a name="some-availability-replicas-are-disconnected"></a>Alcune repliche di disponibilità sono disconnesse
     
@@ -32,7 +31,7 @@ ms.locfileid: "62788416"
 |**Categoria**|**Avviso**|  
 |**Facet**|gruppo di disponibilità|  
   
-## <a name="description"></a>Descrizione  
+## <a name="description"></a>Description  
  Questi criteri consentono di eseguire il rollup dello stato di connessione di tutte le repliche di disponibilità e di verificare tutte le repliche di disponibilità che sono disconnesse. I criteri sono in uno stato non integro quando una replica di disponibilità è disconnessa. Altrimenti, sono in uno stato integro.  
   
 > [!NOTE]  
@@ -44,7 +43,7 @@ ms.locfileid: "62788416"
 ## <a name="possible-solution"></a>Possibile soluzione  
  Utilizzare lo stato dei criteri della replica di disponibilità per trovare quella disconnessa e risolvere il problema.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Usare il Dashboard Always On &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   

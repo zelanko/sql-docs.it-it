@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2e38b572535011737f33ba1e4c438540ecdd6849
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae89ee9f60e740a4e20486e7dcbe99316fd4ed04
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811232"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935402"
 ---
 # <a name="database-engine-instances-sql-server"></a>Istanza del motore di database (SQL Server)
   Un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] è una copia del file eseguibile `sqlservr.exe` che viene eseguita come un servizio del sistema operativo. Ogni istanza gestisce diversi database di sistema e uno o più database utente. Ciascun computer può eseguire più istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Le applicazioni si connettono all'istanza per eseguire attività in un database gestito dall'istanza.  

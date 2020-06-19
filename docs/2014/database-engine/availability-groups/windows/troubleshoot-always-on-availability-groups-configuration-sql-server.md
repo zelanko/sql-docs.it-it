@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5041882c3eadb4e7f6f28a118e45c6e42f13cea6
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 165036ba539c3392b1944282bd9d6126eb471a97
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82924895"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936342"
 ---
 # <a name="troubleshoot-alwayson-availability-groups-configuration-sql-server"></a>Risolvere i problemi relativi alla configurazione di Gruppi di disponibilità AlwaysOn (SQL Server)
   In questo argomento vengono fornite informazioni per la risoluzione dei problemi tipici relativi alla configurazione delle istanze del server per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Tra i problemi di configurazione tipici sono inclusi la disabilitazione di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , la configurazione errata degli account, l'endpoint del mirroring del database inesistente, l'endpoint inaccessibile (errore di SQL Server 1418), l'accesso alla rete inesistente e l'esito negativo di un comando di creazione di join del database (errore di SQL Server 35250).
@@ -29,11 +28,11 @@ ms.locfileid: "82924895"
 
  **Contenuto dell'argomento:**
 
-|Sezione|Description|
+|Sezione|Descrizione|
 |-------------|-----------------|
 |[Funzionalità Gruppi di disponibilità AlwaysOn non abilitata](#IsHadrEnabled)|Se un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non è abilitata per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], l'istanza non supporta la creazione del gruppo di disponibilità e non è in grado di ospitare alcuna replica di disponibilità.|
 |[Account](#Accounts)|Illustra i requisiti per la corretta configurazione degli account in cui viene eseguito [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|
-|[Endpoint](#Endpoints)|Illustra come diagnosticare problemi relativi all'endpoint del mirroring del database di un'istanza del server.|
+|[Endpoints](#Endpoints)|Illustra come diagnosticare problemi relativi all'endpoint del mirroring del database di un'istanza del server.|
 |[Nome sistema](#SystemName)|Riepiloga le alternative per la specifica del nome di sistema di un'istanza del server in un URL endpoint.|
 |[Accesso alla rete](#NetworkAccess)|Documenta il requisito in base a cui ogni istanza del server che ospita una replica di disponibilità deve essere in grado di accedere alla porta di ciascuna altra istanza del server su TCP.|
 |[Accesso all'endpoint (errore di SQL Server 1418)](#Msg1418)|Contiene informazioni su questo messaggio di errore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|

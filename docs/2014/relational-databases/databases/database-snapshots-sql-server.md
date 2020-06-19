@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d15db702cb196842a5ddba25dbc3fa9cc18df5f9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 017a8b10376279af6a8c89dda08452b0f61a9d73
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917146"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970101"
 ---
 # <a name="database-snapshots-sql-server"></a>Snapshot del database (SQL Server)
   Uno snapshot del database è una vista statica di sola lettura di un database [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ovvero il *database di origine*. Lo snapshot del database è consistente dal punto di vista transazionale con il database di origine al momento della creazione dello snapshot. Lo snapshot di un database deve risiedere sempre nella stessa istanza del server dove si trova il relativo database di origine. Con l'aggiornamento del database di origine, viene aggiornato anche lo snapshot del database. Pertanto, più a lungo viene conservato uno snapshot del database, più è probabile che utilizzi tutto il proprio spazio disponibile su disco.  
@@ -192,7 +191,7 @@ ms.locfileid: "62917146"
     > [!NOTE]  
     >  Un'istruzione SELECT eseguita in uno snapshot del database non deve specificare una colonna FILESTREAM. In caso contrario, verrà restituito il seguente messaggio di errore: `Could not continue scan with NOLOCK due to data movement.`  
   
--   Se le statistiche relative a uno snapshot di sola lettura mancano o non sono aggiornate, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea e gestisce statistiche temporanee in tempdb. Per ulteriori informazioni, vedere [statistiche](../statistics/statistics.md).  
+-   Se le statistiche relative a uno snapshot di sola lettura mancano o non sono aggiornate, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea e gestisce statistiche temporanee in tempdb. Per altre informazioni, vedere l'articolo relativo alle [statistiche](../statistics/statistics.md).  
   
 ###  <a name="disk-space-requirements"></a><a name="DiskSpace"></a>Requisiti di spazio su disco  
  Gli snapshot del database richiedono spazio su disco. Se uno snapshot del database esaurisce lo spazio su disco, viene contrassegnato come sospetto e deve essere eliminato. Il database di origine, tuttavia, non viene influenzato e continua a funzionare normalmente. Gli snapshot tuttavia utilizzano lo spazio su disco in maniera molto più efficiente rispetto a una copia completa di un database. Uno snapshot richiede esclusivamente lo spazio necessario per le pagine che vengono modificate durante la sua durata. Poiché in genere gli snapshot vengono conservati per periodi di tempo limitati, le loro dimensioni non rappresentano un problema.  

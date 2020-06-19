@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c018a020fd86925ff14efcb37e2f5734c7e5f141
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 078f38058c612037a8013f7955349e94d6db610e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925019"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936662"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-alwayson-availability-groups-sql-server"></a>Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn (SQL Server)
   In questo argomento si illustrano le considerazioni sulla distribuzione di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], inclusi prerequisiti, restrizioni e indicazioni su computer host, cluster WSCF (Windows Server Failover Clustering), istanze del server e gruppi di disponibilità. Per ognuno di questi componenti sono indicate le eventuali considerazioni sulla sicurezza e le autorizzazioni richieste.  
@@ -99,7 +98,7 @@ ms.locfileid: "82925019"
   
 3.  Utilizzare li cmdlet `Get-ClusterResource` per cercare la risorsa nome di rete, quindi utilizzare il cmdlet `Set-ClusterParameter` per impostare il valore `HostRecordTTL`, come segue:  
   
-     Get-ClusterResource "* \< NetworkResourceName>*" | Set-ClusterParameter HostRecordTTL * \< Tempoinsecondi>*  
+     Get-ClusterResource " *\<NetworkResourceName>* " | Set-ClusterParameter HostRecordTTL*\<TimeInSeconds>*  
   
      Nell'esempio di PowerShell seguente impostare HostRecordTTL su 300 secondi per una risorsa nome di rete denominata "`SQL Network Name (SQL35)`".  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9cf17ecc4219ed0ee0b917bdecb94f936246f225
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 47ec51a82b1369210447b7d853d39a5a61e055ba
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871946"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970151"
 ---
 # <a name="database-properties-mirroring-page"></a>Proprietà database (pagina Mirroring)
   Accedere a questa pagina dal database principale e utilizzarla per configurare e modificare le proprietà del mirroring del database per un database. Utilizzare inoltre la pagina per avviare la Configurazione guidata sicurezza mirroring del database, per visualizzare lo stato di una sessione di mirroring e per sospendere o rimuovere la sessione di mirroring del database.  
@@ -49,7 +48,7 @@ ms.locfileid: "62871946"
   
  TCP **://**_fully_qualified_domain_name_**:**_port_  
   
- where  
+ dove  
   
 -   *fully_qualified_domain_name* è il server sul quale si trova l'istanza del server.  
   
@@ -128,13 +127,13 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
  Per altre informazioni, vedere [Modalità di funzionamento del mirroring del database](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
   
- **Stato**  
+ **Status**  
  Dopo l'inizio del mirroring, il pannello **Stato** visualizza lo stato della sessione di mirroring del database al momento della selezione della pagina **Mirroring** . Per aggiornare il pannello **Stato** fare clic sul pulsante **Aggiorna** . Gli stati possibili sono indicati di seguito:  
   
 |Stati|Spiegazione|  
 |------------|-----------------|  
 |**Il database non è stato configurato per il mirroring**|Non esiste alcuna sessione di mirroring del database e non ci sono attività da segnalare nella pagina **Mirroring** .|  
-|**In pausa**|Il database principale è disponibile, ma non viene inviato alcun log al server mirror.|  
+|**Sospeso**|Il database principale è disponibile, ma non viene inviato alcun log al server mirror.|  
 |**Nessuna connessione**|L'istanza del server principale non può connettersi al proprio partner.|  
 |**Sincronizzazione in corso**|Il contenuto del database mirror è in ritardo rispetto a quello del database principale. L'istanza del server principale invia record di log all'istanza del server mirror, che applica le modifiche al database mirror per eseguirne il rollforward.<br /><br /> All'avvio della sessione di mirroring del database, i database mirror e principale sono in questo stato.|  
 |**Failover**|Sull'istanza del server principale, è stato avviato un failover manuale (cambio di ruolo) e il server è attualmente in fase di transizione al ruolo mirror. In questo stato, le connessioni utente al database principale vengono terminate rapidamente e il database assume il ruolo di mirror subito dopo.|  
@@ -142,10 +141,10 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
  Per altre informazioni, vedere [Stati di mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md).  
   
- **Aggiorna**  
+ **Refresh** (Aggiornamento)  
  Fare clic su questo pulsante per aggiornare la casella **Stato** .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se non si ha familiarità con il mirroring del database, vedere [Mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 ### <a name="adding-a-witness-to-an-existing-session"></a>Aggiunta di un server di controllo del mirroring a una sessione esistente  
@@ -181,7 +180,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
 -   [Avviare il monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Sicurezza del trasporto per il mirroring del database e Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Cambio di ruolo durante una sessione di mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Monitoraggio del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   

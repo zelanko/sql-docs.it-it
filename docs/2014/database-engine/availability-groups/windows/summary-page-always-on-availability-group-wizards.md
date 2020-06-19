@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b0bdeebb2d064bd647c19ea143474ef7738a4ab5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e0aeae7b7207c9b469504cf4115f371d00f5d7a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814067"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936382"
 ---
 # <a name="summary-page-alwayson-availability-group-wizards"></a>Pagina Riepilogo (procedure guidate gruppi di disponibilità AlwaysOn)
   In questo argomento della Guida vengono descritte le opzioni della pagina **Riepilogo** . Questo argomento si applica alla [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], alla [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], alla [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] e alla [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Utilizzare la griglia di questa pagina per rivedere le scelte effettuate per il nuovo gruppo di disponibilità. Per apportare una o più modifiche, fare clic su **Indietro** per tornare alla pagina o alle pagine pertinenti. Al termine, fare clic su **Avanti** per tornare alla pagina **Riepilogo** . Dopo avere effettuato le scelte desiderate, fare clic su **Fine**.  
@@ -52,7 +51,7 @@ ms.locfileid: "62814067"
   
 
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

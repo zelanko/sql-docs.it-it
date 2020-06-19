@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b9d174bb43388af9ea3fe02d839c7a3fcfec202c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9072b851f3512113b23dedc91f8c9b7151136a57
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77646327"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936177"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>Differenze di funzionamento delle funzionalità del Motore di database in SQL Server 2014
   In questo argomento vengono descritte le modifiche di comportamento introdotte nel [!INCLUDE[ssDE](../includes/ssde-md.md)]. Queste modifiche influiscono sulle modalità di utilizzo o di interazione delle funzionalità in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] rispetto alle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -30,15 +29,15 @@ ms.locfileid: "77646327"
 ## <a name="behavior-changes-in-sssql11"></a><a name="Denali"></a>Modifiche del comportamento in[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="metadata-discovery"></a>Individuazione dei metadati  
- I [!INCLUDE[ssDE](../includes/ssde-md.md)] miglioramenti apportati [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] a iniziano con Consenti a SQLDescribeCol di ottenere descrizioni più accurate dei risultati previsti rispetto a quelli restituiti da SQLDescribeCol [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]nelle versioni precedenti di. Per altre informazioni, vedere [Metadata Discovery](../relational-databases/native-client/features/metadata-discovery.md).  
+ I miglioramenti apportati a [!INCLUDE[ssDE](../includes/ssde-md.md)] iniziano con [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Consenti a SQLDescribeCol di ottenere descrizioni più accurate dei risultati previsti rispetto a quelli restituiti da SQLDescribeCol nelle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Metadata Discovery](../relational-databases/native-client/features/metadata-discovery.md).  
   
  L' [opzione SET FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql) per determinare il formato di una risposta senza eseguire effettivamente la query viene sostituita con [sp_describe_first_result_set &#40;&#41;transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql) [sp_describe_undeclared_parameters &#40;Transact-sql ](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql)&#41;, [sys. dm_exec_describe_first_result_set &#40;transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql)e [sys. dm_exec_describe_first_result_set_for_object &#40;Transact- ](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql)SQL&#41;.  
   
 ### <a name="changes-to-behavior-in-scripting-a-sql-server-agent-task"></a>Modifiche al comportamento di script di un'attività di SQL Server Agent  
-A partire [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]da, se si crea un nuovo processo copiando lo script da un processo esistente, il nuovo processo potrebbe inavvertitamente influire sul processo esistente. Per creare un nuovo processo utilizzando lo script di un processo esistente, eliminare manualmente il parametro * \@schedule_uid* che in genere è l'ultimo parametro della sezione che crea la pianificazione del processo nel processo esistente. Verrà creata una nuova pianificazione indipendente per il nuovo processo senza influire sui processi esistenti.  
+A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] , se si crea un nuovo processo copiando lo script da un processo esistente, il nuovo processo potrebbe inavvertitamente influire sul processo esistente. Per creare un nuovo processo utilizzando lo script di un processo esistente, eliminare manualmente il parametro * \@ schedule_uid* che in genere è l'ultimo parametro della sezione che crea la pianificazione del processo nel processo esistente. Verrà creata una nuova pianificazione indipendente per il nuovo processo senza influire sui processi esistenti.  
   
 ### <a name="constant-folding-for-clr-user-defined-functions-and-methods"></a>Elaborazione delle costanti in fase di compilazione per funzioni e metodi CLR definiti dall'utente  
-A partire [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]da, i seguenti oggetti CLR definiti dall'utente sono ora ripieghevoli:  
+A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] , i seguenti oggetti CLR definiti dall'utente sono ora ripieghevoli:  
 
 -   Funzioni CLR definite dall'utente con valori scalari deterministici.  
 -   Metodi deterministici di tipi CLR definiti dall'utente.  
@@ -97,12 +96,12 @@ Il comportamento interno del metodo `value` del tipo di dati `xml` è cambiato. 
  `Arithmetic overflow error converting expression to data type smallint.`  
   
 ### <a name="sqlcmdexe-behavior-change-in-xml-mode"></a>Modifica del comportamento del file sqlcmd.exe in modalità XML  
- Se si utilizza sqlcmd. exe con la modalità XML (comando: XML ON) quando si esegue un'istruzione SELECT * from T FOR XML, si verificano modifiche del comportamento.  
+ Se si usa sqlcmd.exe con la modalità XML (comando: XML ON) quando si esegue SELECT * from T FOR XML, sono presenti modifiche del comportamento....  
   
 ### <a name="dbcc-checkident-revised-message"></a>Revisione del messaggio restituito da DBCC CHECKIDENT  
- In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]il messaggio restituito dal comando DBCC CHECKIDENT è cambiato solo se utilizzato con RESEED *new_reseed_value*  per modificare il valore Identity corrente. Il nuovo messaggio è *"verifica delle informazioni sull'identità: valore Identity\<corrente ' valore Identity corrente>'"*. Esecuzione DBCC completata. Se sono stati visualizzati messaggi di errore DBCC, rivolgersi all'amministratore di sistema".  
+ In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]il messaggio restituito dal comando DBCC CHECKIDENT è cambiato solo se utilizzato con RESEED *new_reseed_value*  per modificare il valore Identity corrente. Il nuovo messaggio è *"verifica delle informazioni sull'identità: valore Identity corrente ' \<current identity value> '"*. Esecuzione DBCC completata. Se sono stati visualizzati messaggi di errore DBCC, rivolgersi all'amministratore di sistema".  
   
- Nelle versioni precedenti il messaggio è *"verifica delle informazioni di identità: valore Identity corrente\<' valore Identity corrente>', valore di colonna\<corrente ' valore colonna corrente>'. Esecuzione DBCC completata. Se sono stati visualizzati messaggi di errore DBCC, contattare l'amministratore di sistema. "* Il messaggio è invariato quando `DBCC CHECKIDENT` viene specificato con `NORESEED`, senza un secondo parametro o senza un valore di RESEED. Per altre informazioni, vedere [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql).  
+ Nelle versioni precedenti il messaggio è *"verifica delle informazioni di identità: valore Identity corrente ' \<current identity value> ', valore di colonna corrente ' \<current column value> '. Esecuzione DBCC completata. Se sono stati visualizzati messaggi di errore DBCC, contattare l'amministratore di sistema. "* Il messaggio è invariato quando `DBCC CHECKIDENT` viene specificato con `NORESEED` , senza un secondo parametro o senza un valore di RESEED. Per altre informazioni, vedere [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql).  
   
 ### <a name="behavior-of-exist-function-on-xml-datatype-has-changed"></a>Modifica del comportamento della funzione exist() nel tipo di dati di XML  
  Il comportamento della `exist()` funzione è stato modificato quando si confronta un tipo di dati XML con un valore null a 0 (zero). Prendere in considerazione gli esempi seguenti:  

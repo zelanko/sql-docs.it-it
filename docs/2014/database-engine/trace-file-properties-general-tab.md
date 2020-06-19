@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2464bb8d-1139-4b2b-8f98-0983e62167ea
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bf665b0ea1cae89257d6368af9b307845a2cb3c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f9dfa0d120460ea6a2d6501ba93bab9e00ea4be
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089613"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928352"
 ---
 # <a name="trace-file-properties-general-tab"></a>Proprietà file di traccia (scheda Generale)
   Utilizzare la scheda **Generale** della finestra di dialogo **Proprietà file di traccia** per visualizzare le proprietà di un file di traccia.  
@@ -45,10 +44,10 @@ ms.locfileid: "66089613"
  **Creato**  
  Data e ora di creazione del file di traccia.  
   
- **Ultima modifica**  
+ **Modificato**  
  Data e ora di modifica del file di traccia.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Aprire un file di traccia &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)   
  [Modelli e autorizzazioni di SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  

@@ -18,19 +18,18 @@ f1_keywords:
 ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 25b16d4380157b49031cd05fb1ecbe5dac1ba811
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 4722e844e527f04ccde62c699d46b0fbc955a416
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858703"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936622"
 ---
 # <a name="progress-page-alwayson-availability-group-wizards"></a>Pagina Stato installazione (procedure guidate gruppi di disponibilità AlwaysOn)
   Utilizzare questa finestra di dialogo per visualizzare lo stato di avanzamento di una procedura guidata [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] eseguita in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. L'indicatore di stato segnala lo stato di avanzamento relativo dei passaggi eseguiti dalla procedura guidata.  
   
 ## <a name="ui-element-list"></a>Elenco elementi dell'interfaccia utente  
- **Ulteriori dettagli**  
+ **Altri dettagli**  
  Fare clic sulla freccia GIÙ per visualizzare una griglia dello stato di avanzamento in cui sono elencati i passaggi completati, seguiti dall'attuale operazione in corso. La griglia include le colonne seguenti:  
   
  **Nome**  
@@ -39,9 +38,9 @@ ms.locfileid: "83858703"
  **Status**  
  Indica il risultato dei passaggi completati e la percentuale di completamento del passaggio corrente, come segue:  
   
-|Risultato|Descrizione|  
+|Risultato|Description|  
 |------------|-----------------|  
-|**Erroree**|Indica che si è verificato un errore nell'operazione relativa a questo passaggio. Fare clic sul collegamento per visualizzare una finestra di dialogo del messaggio in cui viene descritto l'errore.|  
+|**Error (Errore) (Error (Errore)e)**|Indica che si è verificato un errore nell'operazione relativa a questo passaggio. Fare clic sul collegamento per visualizzare una finestra di dialogo del messaggio in cui viene descritto l'errore.|  
 |**In corso (** *percentuale di completamento* **)**|Indica che l'operazione è in corso e stima la percentuale di completamento di questo passaggio.|  
 |**Success**|Indica che l'operazione per questo passaggio è stata completata.|  
   

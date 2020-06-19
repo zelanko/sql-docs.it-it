@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9808e00c-c8f6-45cc-896e-192b8420f747
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cc15a7f6002675c4e81b3ae8169a78648b210f44
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1d490f4355f1dac4c337002e22f2d4dae82a7e9a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718379"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063305"
 ---
 # <a name="output-window"></a>Finestra di output
   Questa finestra visualizza i messaggi di stato per le diverse caratteristiche disponibili in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. L'output viene visualizzato in riquadri speciali della finestra **Output** dal debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] , usando caratteristiche di strumenti esterni oppure comandi eseguiti in **Finestra di comando**del debugger. È disponibile anche l'output visualizzato nella finestra del prompt dei comandi da strumenti esterni, ad esempio i file con estensione bat o com.  

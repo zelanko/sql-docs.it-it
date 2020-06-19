@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 431124cff2fcf293ccf1e8e8bcb74321245a661e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8b02f89903475462265ffc154553c176951c259
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032288"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027668"
 ---
 # <a name="localdbgetversions-function"></a>Funzione LocalDBGetVersions
   Vengono restituite tutte le versioni del database locale di SQL Server Express disponibili nel computer.  
@@ -42,7 +41,7 @@ ms.locfileid: "63032288"
  [Input/output] In input include il numero di slot per le versioni nel buffer di *pVersionNames* .   
 In fase di output, è contenuto il numero di versioni del database locale esistenti.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  S_OK  
  Funzione completata.  
   
@@ -61,7 +60,7 @@ In fase di output, è contenuto il numero di versioni del database locale esiste
 ## <a name="remarks"></a>Osservazioni  
  Per un esempio di codice in cui viene utilizzata l'API del database locale, vedere [SQL Server Express riferimento al database locale](../sql-server-express-localdb-reference.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Informazioni sulla versione e intestazione di SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
   
   
