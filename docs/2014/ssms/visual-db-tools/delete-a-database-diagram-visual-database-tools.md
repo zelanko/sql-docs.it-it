@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2e558164-f1cb-4e43-b966-3567ed0190ee
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b8e3854d98833354fd859d687bfa7e85e99601de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee4f3e08ea53730a0f6a1c5df4a9fb2398288825
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62670444"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061791"
 ---
 # <a name="delete-a-database-diagram-visual-database-tools"></a>Eliminazione di un diagramma di database (Visual Database Tools)
   Quando un diagramma di database non serve più, è possibile eliminarlo.  

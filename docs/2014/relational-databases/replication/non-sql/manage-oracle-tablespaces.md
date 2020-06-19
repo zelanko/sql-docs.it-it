@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b8ea6c3b-01d6-4efc-bbfb-03b264530bbd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9a6bf22c7649646506b65628f556b52fead23375
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a3624aed38a7a5bf75e0c0807aa8d3657156264f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022292"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068600"
 ---
 # <a name="manage-oracle-tablespaces"></a>Gestione di spazi di tabella Oracle
   Uno spazio di tabella è un'unità di archiviazione di database approssimativamente equivalente a un filegroup in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Gli spazi di tabella consentono l'archiviazione e la gestione di oggetti di database all'interno di singoli gruppi. Per ulteriori informazioni, vedere la documentazione di Oracle.  
@@ -31,15 +30,15 @@ ms.locfileid: "63022292"
   
 -   Usare [sp_changearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql). Per utilizzare **sp_changearticle**, specificare quanto segue:  
   
-    -   Nome del server di pubblicazione Oracle per il parametro **@publisher**.  
+    -   Nome del server di pubblicazione Oracle per il parametro **@publisher** .  
   
-    -   Nome della pubblicazione Oracle per il parametro **@publication**.  
+    -   Nome della pubblicazione Oracle per il parametro **@publication** .  
   
-    -   Nome dell'articolo per il parametro **@article**.  
+    -   Nome dell'articolo per il parametro **@article** .  
   
-    -   Valore "tablespace" per il parametro **@property**.  
+    -   Valore "tablespace" per il parametro **@property** .  
   
-    -   Nome dello spazio di tabella per il parametro **@value**.  
+    -   Nome dello spazio di tabella per il parametro **@value** .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare un server di pubblicazione Oracle](configure-an-oracle-publisher.md)   

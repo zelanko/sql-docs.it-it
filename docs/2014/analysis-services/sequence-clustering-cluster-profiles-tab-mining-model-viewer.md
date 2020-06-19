@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 44230895-0a42-4032-8d6c-0cdb8a2dbb8c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4f277abea585715f6a3656fffe7672f347233507
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b7aff4d6a7f4f685fe589e2fb141848296bb82b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069100"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940701"
 ---
 # <a name="sequence-clustering-cluster-profiles-tab-mining-model-viewer"></a>Scheda Profili cluster Sequence Clustering (Visualizzatore modello di data mining)
   Nella scheda **Profili cluster** in **Visualizzatore Microsoft Sequence Clustering** è disponibile una vista contraddistinta dal colore delle sequenze incluse in ogni cluster.  
@@ -49,14 +48,14 @@ ms.locfileid: "66069100"
   
  Due set di istogrammi vengono visualizzati per ogni cluster nel modello, ognuno in una riga diversa del grafico:  
   
--   **nome attributo>. Samples: gli istogrammi di questa riga mostrano le sequenze di elementi rappresentativi di ogni cluster. \<** In termini DMX, si tratta dei case di esempio per ogni cluster.  
+-   ** \<attribute name> . Samples**: gli istogrammi di questa riga mostrano le sequenze di elementi rappresentativi di ogni cluster. In termini DMX, si tratta dei case di esempio per ogni cluster.  
   
--   nome attributo>: gli istogrammi in questa riga descrivono tutti gli elementi contenuti nel cluster e la relativa distribuzione complessiva. ** \< ** Fare clic su un istogramma quando **Legenda data mining** è visibile ed è possibile visualizzare i valori numerici per ognuno  
+-   **\<attribute name>**: Gli istogrammi in questa riga descrivono tutti gli elementi contenuti nel cluster e la relativa distribuzione complessiva. Fare clic su un istogramma quando **Legenda data mining** è visibile ed è possibile visualizzare i valori numerici per ognuno  
   
  **Stati**  
  Questa colonna del grafico è facoltativa e può essere visualizzata o rimossa selezionando l'opzione **Mostra legenda** . Tramite la colonna **Stati** è possibile comprendere la correlazione tra stati e colori nell'istogramma dei cluster corrispondente.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Algoritmo Microsoft Sequence Clustering](data-mining/microsoft-sequence-clustering-algorithm.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   

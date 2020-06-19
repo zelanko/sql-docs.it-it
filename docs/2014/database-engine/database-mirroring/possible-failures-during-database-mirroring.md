@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a380b3c4f27df6ad9d60fc27f14a4f5072c676a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 25ba1ccc87c024fa3da370f2ff19251a1bee9f30
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874507"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934085"
 ---
 # <a name="possible-failures-during-database-mirroring"></a>Possibili errori durante il mirroring del database
   Gli errori in una sessione di mirroring del database possono essere causati da problemi di tipo fisico, del sistema operativo o di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il mirroring del database non controlla regolarmente i componenti sui quali Sqlservr.exe si basa per verificare se stiano funzionando correttamente o abbiano generato un errore. In alcuni casi, tuttavia, il componente interessato invia una segnalazione di errore a Sqlservr.exe. Un errore segnalato da un altro componente è denominato *errore hardware*. Per rilevare altri errori che altrimenti non verrebbero rilevati, il mirroring del database implementa un proprio meccanismo di timeout. Quando si verifica un timeout di mirroring, il mirroring del database presuppone che si sia verificato un errore e dichiara un *errore software*. Tuttavia, alcuni errori che si verificano a livello dell'istanza di SQL Server non provocano il timeout del mirroring a timeout e possono non essere rilevati.  
@@ -98,7 +97,7 @@ ms.locfileid: "70874507"
   
  **Per modificare il valore di timeout (solo modalità a protezione elevata)**  
   
--   Usare l'istruzione [ALTER DATABASE \<database> SET PARTNER TIMEOUT \<integer>](/sql/t-sql/statements/alter-database-transact-sql).  
+-   Utilizzare l'istruzione [ALTER database \<database> set partner \<integer> timeout](/sql/t-sql/statements/alter-database-transact-sql) .  
   
  **Per visualizzare il valore di timeout corrente**  
   

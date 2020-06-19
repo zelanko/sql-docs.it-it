@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 64479cdc-661a-4e32-a381-8f8b5a238337
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b5b2b43d899041d501039ade4d0493a7fdbf0164
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1e91b1b3af5c8531800f60478a4cb31d31ac3fbc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094633"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054750"
 ---
 # <a name="install-distributed-replay-setup"></a>Installare i componenti Riesecuzione distribuita (programma di installazione)
   Installare le funzionalità di Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'Installazione guidata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Quando si pianifica il percorso di installazione delle funzionalità, considerare gli aspetti seguenti:  
@@ -35,7 +34,7 @@ ms.locfileid: "66094633"
 > [!NOTE]  
 >  Per rimuovere o modificare le funzionalità di Riesecuzione distribuita, utilizzare la finestra **Programmi e funzionalità** di Windows nel **Pannello di controllo**. Selezionare [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nella finestra **Disinstalla o modifica programma** , quindi fare clic su **Rimuovi** per aprire l'Installazione guidata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Nella pagina **Seleziona funzionalità** selezionare le funzionalità di Riesecuzione distribuita che si desidera rimuovere.  
   
- **Prerequisiti**  
+ **Prerequisiti:**  
   
 -   Verificare che i computer che si desidera utilizzare dispongano dei requisiti descritti nell'argomento [Requisiti relativi a Riesecuzione distribuita](../../tools/sql-server-profiler/replay-requirements.md).  
   
@@ -54,15 +53,15 @@ ms.locfileid: "66094633"
   
      \- OPPURE -  
   
-     \<directory della funzionalità condivisa\Tools\\(directory della funzionalità condivisa alternativa specificata dall'utente)  
+     \<Share Feature Directory>\Tools \\ (directory della funzionalità condivisa alternativa fornita dall'utente)  
   
 -   In un sistema a 64 bit:  
   
-     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] C:\Programmi\\ (x86) \120\Tools  
+     C:\Programmi \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (x86) \120\Tools  
   
      \- OPPURE -  
   
-     \<directory della funzionalità condivisa (x86)>\Tools\\(directory (x86) della funzionalità condivisa alternativa specificata dall'utente)  
+     \<Share Feature Directory (x86)>\Tools \\ (directory della funzionalità condivisa alternativa (x86) fornita dall'utente)  
   
 ### <a name="to-install-distributed-replay-features"></a>Per installare le funzionalità di Riesecuzione distribuita  
   
@@ -76,7 +75,7 @@ ms.locfileid: "66094633"
   
 5.  Nella pagina **File di supporto per l'installazione** fare clic su **Installa** per installare o aggiornare i file di supporto dell'installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-6.  Nella pagina **impostazione ruolo** selezionare ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installazione funzionalità**, quindi fare clic su **Avanti** per passare alla pagina **Selezione funzionalità** .  
+6.  Nella pagina **Impostazione ruolo** selezionare **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installazione funzionalità**, quindi fare clic su **Avanti** per passare alla pagina **Selezione funzionalità** .  
   
 7.  Nella pagina **Selezione funzionalità** specificare le funzionalità che si desidera installare.  
   
@@ -86,7 +85,7 @@ ms.locfileid: "66094633"
   
     -   Per installare il servizio client, selezionare **Client Riesecuzione distribuita**.  
   
-     **Importante**: quando si configura il controller di Riesecuzione distribuita, è possibile specificare uno o più account utente da utilizzare per eseguire i servizi client Riesecuzione distribuita. Di seguito viene fornito l'elenco degli account supportati:  
+     **Importante**: quando si configura il controller di Riesecuzione distribuita, è possibile specificare uno o più account utente da usare per eseguire i servizi client di Riesecuzione distribuita. Di seguito viene fornito l'elenco degli account supportati:  
   
     -   Account utente di dominio  
   
@@ -102,11 +101,11 @@ ms.locfileid: "66094633"
   
 8.  Facoltativamente, fare clic sul pulsante con i puntini di sospensione (...) per modificare il percorso della directory delle funzionalità condivise.  
   
-    1.  Nei computer a 32 bit il percorso di installazione predefinito è **c:\Programmi\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **  
+    1.  Nei computer a 32 bit il percorso di installazione predefinito è **C:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
-    2.  Nei computer a 64 bit il percorso di installazione predefinito è **c:\Programmi (x86)\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **  
+    2.  Nei computer a 64 bit il percorso di installazione predefinito è **C:\Programmi (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
-9. Una volta finito, fare clic su **Avanti**.  
+9. Al termine dell'operazione, scegliere **Avanti**.  
   
 10. Nella pagina **Regole di installazione** viene convalidata la configurazione del computer tramite il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Una volta completato il processo di convalida, fare clic su **Avanti**.  
   
@@ -116,7 +115,7 @@ ms.locfileid: "66094633"
   
 13. Nella pagina **Regole di configurazione per l'installazione** Controllo configurazione sistema consentirà di eseguire uno o più set di regole per convalidare la configurazione del computer con le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificate.  
   
-14. Nella pagina **Installazione del programma**, fare clic su **Installa**.  
+14. Nella pagina **Installazione del programma** fare clic su **Installa**.  
   
     > [!IMPORTANT]  
     >  Dopo aver installato i componenti Riesecuzione distribuita, è necessario creare regole del firewall nei computer controller e client e concedere a ogni computer client autorizzazioni nel server di destinazione. Per altre informazioni, vedere [Completare i passaggi successivi all'installazione](../../tools/distributed-replay/complete-the-post-installation-steps.md).  
@@ -130,11 +129,11 @@ ms.locfileid: "66094633"
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  Per installare qualsiasi funzionalità di Riesecuzione distribuita, è necessario disporre di autorizzazioni di amministratore. Solo un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che dispone di autorizzazioni sysadmin può aggiungere gli account del servizio client al ruolo del server sysadmin del server di prova. Per alcune considerazioni relative alla sicurezza di Riesecuzione distribuita, vedere [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzionalità supportate dalle edizioni di SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
- [SQL Server Riesecuzione distribuita](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Requisiti di Riesecuzione distribuita](../../tools/sql-server-profiler/replay-requirements.md)   
- [Opzioni della riga di comando dello strumento di amministrazione &#40;Riesecuzione distribuita Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [Requisiti relativi a Riesecuzione distribuita](../../tools/sql-server-profiler/replay-requirements.md)   
+ [Opzioni della riga di comando dello strumento di amministrazione &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Configurare Riesecuzione distribuita](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

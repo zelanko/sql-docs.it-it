@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8e5b7592ba97f779d3c1aeb83f34317ef7c6833d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b1f285243e2b925cca9d263a53c9b70087ea5d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022242"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068588"
 ---
 # <a name="non-sql-server-subscribers"></a>Sottoscrittori non SQL Server
   Tramite i Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] riportati di seguito è possibile eseguire la sottoscrizione di pubblicazioni snapshot e transazionali utilizzando sottoscrizioni push. Le sottoscrizioni sono supportate per le due versioni più recenti di ogni database elencato utilizzando la versione più recente del provider OLE DB elencato.  
@@ -49,7 +48,7 @@ ms.locfileid: "63022242"
   
 -   La replica supporta la pubblicazione di tabelle e viste indicizzate come tabelle in Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (le viste indicizzate non possono essere replicate come viste indicizzate).  
   
--   Quando si crea una pubblicazione nella creazione guidata nuova pubblicazione e quindi si abilita tale pubblicazione per Sottoscrittori non SQL Server utilizzando la finestra di dialogo Proprietà pubblicazione, il proprietario di tutti gli oggetti nel database di sottoscrizione non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene specificato per i Sottoscrittori non, mentre per [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] i sottoscrittori viene impostato sul proprietario dell'oggetto corrispondente nel database di pubblicazione.  
+-   Quando si crea una pubblicazione nella creazione guidata nuova pubblicazione e quindi si abilita tale pubblicazione per Sottoscrittori non SQL Server utilizzando la finestra di dialogo Proprietà pubblicazione, il proprietario di tutti gli oggetti nel database di sottoscrizione non viene specificato per i [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Sottoscrittori non, mentre per i [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sottoscrittori viene impostato sul proprietario dell'oggetto corrispondente nel database di pubblicazione.  
   
 -   Se una pubblicazione include Sottoscrittori [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , è necessario abilitarla per i Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prima di creare le sottoscrizioni per i Sottoscrittori [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -95,7 +94,7 @@ ms.locfileid: "63022242"
   
 -   I Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non possono essere inizializzati automaticamente da un backup.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Replica di database eterogenei](heterogeneous-database-replication.md)   
  [Subscribe to Publications](../subscribe-to-publications.md)  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6dc42752-1fcd-4ab9-8194-c3001ea342e7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a005ab43ff33023827ea57fc6dbd9584c8da1f2d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 93282199db986ab8bcf18b05f9ae8b61a5a45b9a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706908"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926742"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>Introduzione al cloud ibrido di SQL Server 2014
  L'obiettivo della maggior parte delle applicazioni è affrontare alcuni problemi chiave, quali efficienza elevata, valore aziendale, configurazioni hardware complesse, picchi notevoli su richiesta, nonché conformità a norme aziendali e del settore. Le operazioni necessarie per prendere in considerazione tutti questi fattori e sviluppare una tecnologia aziendale possono risultare molto complesse. La strategia Microsoft di un cloud ibrido intende risolvere questi problemi offrendo il supporto per cloud tradizionali e privati, cloud pubblici e ambienti cloud ibridi. 

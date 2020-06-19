@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d8bac9ba8afafa6b5141d90c51f8029f596ba8f4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f84048371eac930974ebbd3d0693e25761f9a784
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482618"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961161"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Componente aggiuntivo Master Data Services per Microsoft Excel
-  Con, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]gli elenchi master dei dati di riferimento possono essere distribuiti a tutti gli utenti dell'organizzazione che utilizzano Excel. La sicurezza determina quali utenti dei dati possono eseguire operazioni di visualizzazione e aggiornamento.  
+  Con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] , gli elenchi master dei dati di riferimento possono essere distribuiti a tutti gli utenti dell'organizzazione che utilizzano Excel. La sicurezza determina quali utenti dei dati possono eseguire operazioni di visualizzazione e aggiornamento.  
   
  È possibile caricare gli elenchi filtrati di dati da MDS in Excel, dove è possibile usarlo come qualsiasi altro tipo di dati. Una volta completata l'operazione, è possibile pubblicare di nuovo i dati in MDS, dove vengono archiviati centralmente.  
   

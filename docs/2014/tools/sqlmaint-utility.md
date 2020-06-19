@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2e15dbb5b7cb21d29936fce5c9b0d1f215d244ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80e60b75305ee91e8b62a201d9c86af301326789
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63187005"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007032"
 ---
 # <a name="sqlmaint-utility"></a>utilità sqlmaint
   L'utilità**sqlmaint** consente di eseguire un set specifico di operazioni di manutenzione in uno o più database. Usare l'utilità **sqlmaint** per eseguire controlli DBCC, backup di un database e del relativo log delle transazioni, aggiornare statistiche e ricompilare indici. Tutte le attività di manutenzione dei database generano un report che può essere inviato a un file di testo, un file HTML o un account di posta elettronica specificato. **sqlmaint** esegue i piani di manutenzione dei database creati con le versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per eseguire i piani di manutenzione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dal prompt dei comandi, usare l' [utilità dtexec](../integration-services/packages/dtexec-utility.md).  
@@ -79,8 +78,8 @@ number[minutes | hours | days | weeks | months]
  **-?**  
  Specifica che deve essere restituito il diagramma della sintassi di **sqlmaint** . Questo parametro deve essere utilizzato da solo.  
   
- **-S** _server_name_[ **\\**_instance_name_]  
- Specifica l'istanza di destinazione di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specificare il *nome_server* per connettersi all'istanza predefinita di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] su tale server. Specificare *server_name**_\\_** instance_name* per connettersi a un'istanza denominata di [!INCLUDE[ssDE](../includes/ssde-md.md)] in tale server. Se non si specifica alcun server, **sqlmaint** si connette all'istanza predefinita di [!INCLUDE[ssDE](../includes/ssde-md.md)] nel computer locale.  
+ **-S** _server_name_[ **\\** _instance_name_]  
+ Specifica l'istanza di destinazione di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specificare il *nome_server* per connettersi all'istanza predefinita di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] su tale server. Specificare *server_name **_\\_** instance_name* per connettersi a un'istanza denominata di [!INCLUDE[ssDE](../includes/ssde-md.md)] in tale server. Se non si specifica alcun server, **sqlmaint** si connette all'istanza predefinita di [!INCLUDE[ssDE](../includes/ssde-md.md)] nel computer locale.  
   
  **-U** _login_ID_  
  Specifica l'ID di accesso utilizzato per la connessione al server. Se omesso, **sqlmaint** prova a usare l'autenticazione di Windows [!INCLUDE[msCoName](../includes/msconame-md.md)] . Se *login_ID* contiene caratteri speciali, il valore deve essere racchiuso tra virgolette doppie ("). In caso contrario, le virgolette doppie sono facoltative.  
@@ -120,7 +119,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
   
  Quando si accede a un server remoto con *sqlmaint* , è necessario specificare il nome UNC (Universal Naming Convention) completo del file per **text_file** .  
   
- **-To** _operator_name_  
+ **-Per** _operator_name_  
  Specifica l'operatore al quale il report generato viene inviato tramite SQL Mail.  
   
  **-HtmlRpt** _html_file_  
@@ -129,7 +128,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  Quando si accede a un server remoto con *sqlmaint* , è necessario specificare il nome UNC completo del file per **html_file** .  
   
  **-DelHtmlRpt** \<*time_period*>  
- Specifica che è necessario eliminare dalla directory dei report tutti i report HTML se l'intervallo di tempo dopo la creazione del file di report supera \<*time_period*>. **-DelHtmlRpt** cerca i file con nome corrispondente al modello generato dal parametro *html_file*. Se *html_file* è c:\Programmi\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm, **-DelHtmlRpt** fa sì che **sqlmaint** elimini tutti i file i cui nomi corrispondono al modello C:\Programmi\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm e successivi al valore specificato per \<*time_period*>.  
+ Specifica che tutti i report HTML nella directory dei report vengano eliminati se l'intervallo di tempo dopo la creazione del file di report supera \<*time_period*> . **-DelHtmlRpt** cerca i file con nome corrispondente al modello generato dal parametro *html_file*. Se *html_file* è c:\programmi\microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm, **-DelHtmlRpt** fa sì che **SQLMaint** elimini tutti i file i cui nomi corrispondono al modello c:\Programmi\Microsoft SQL server\mssql\backup\ AdventureWorks2012_maint \* . htm e precedenti al parametro specificato \<*time_period*> .  
   
  **-RmUnusedSpace** _threshold_percent free_percent_  
  Specifica la rimozione dello spazio inutilizzato dal database indicato in **-D**. Questa opzione è utile solo nel caso di database per i quali è stato impostato l'aumento automatico delle dimensioni. *Threshold_percent* specifica le dimensioni, in megabyte, che il database deve raggiungere prima che **sqlmaint** rimuova lo spazio inutilizzato. Se le dimensioni del database sono inferiori a *threshold_percent*, non viene eseguita alcuna azione. *Free_percent* specifica la quantità di spazio inutilizzato che deve rimanere nel database, in termini di percentuale delle dimensioni finali del database. Se ad esempio un database di 200 MB contiene 100 MB di dati e si specifica 10 per *free_percent* , le dimensioni finali del database saranno di 110 MB. Le dimensioni del database non vengono aumentate se sono inferiori a *free_percent* più la quantità di dati del database. Se ad esempio un database di 108 MB contiene 100 MB di dati e si specifica 10 per *free_percent* , il database non viene esteso a 110 MB, ma resta di 108 MB.  
@@ -199,7 +198,7 @@ dbname_log_yyyymmddhhmm.BAK
  Indica che il supporto di backup è un disco.  
   
  **-DelBkUps**\< *time_period* >  
- Per i backup su disco, specifica che è necessario eliminare dalla directory di backup tutti i file di backup se l'intervallo di tempo dopo la creazione del backup supera \<*time_period*>.  
+ Per i backup su disco, specifica che tutti i file di backup nella directory di backup vengano eliminati se l'intervallo di tempo dopo la creazione del backup supera \<*time_period*> .  
   
  **-CrBkSubDir**  
  Per i backup su disco, specifica la creazione di una sottodirectory nella directory [*backup_path*] o nella directory di backup predefinita, se si usa anche **-UseDefDir** . Il nome della sottodirectory viene generato in base al nome del database specificato in **-D**. **-CrBkSubDir** consente di memorizzare in modo semplice tutti i backup di database diversi in sottodirectory separate senza dover modificare il parametro *backup_path* .  

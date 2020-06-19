@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fceed0b4bcfb8d5c41046cd4faf555ca2847899c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 72c119ab3188321be97b2c51ddc0a77f8a585aee
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706379"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023033"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
   **SQLBrowseConnect** utilizza parole chiave che possono essere categorizzate in tre livelli di informazioni di connessione. Per ogni parola chiave nella tabella seguente è indicato se viene restituito un elenco di valori validi e se la parola chiave è facoltativa.  

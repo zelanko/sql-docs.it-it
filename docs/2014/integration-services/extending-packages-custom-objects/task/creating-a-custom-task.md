@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 42965c09-1782-4cdb-9ce1-216af4c23e0a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9123834f1c07a61fa0e1c48d29667d4d71ada359
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84ce9053d16e0b00cfb5d04b0ee23fc08067a28c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896117"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968651"
 ---
 # <a name="creating-a-custom-task"></a>Creazione di un'attività personalizzata.
   I passaggi per la creazione di un'attività personalizzata sono simili a quelli richiesti per la creazione di qualsiasi altro oggetto personalizzato per [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]:  
@@ -93,7 +92,7 @@ End Class 'MyTask
   
 ![Integration Services icona (piccola)](../../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina relativa a Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di un'attività personalizzata](creating-a-custom-task.md)   
  [Codifica di un'attività personalizzata](coding-a-custom-task.md)   
  [Sviluppo di un'interfaccia utente per un'attività personalizzata](developing-a-user-interface-for-a-custom-task.md)  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4b705397-9af4-4678-9eda-149bc5d762fa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d8cff96e3ed2d36db93abb3583a08b5c9d8153d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a3e27ccc67858edd8e1f95bb910300a93a3e0db8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069108"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940752"
 ---
 # <a name="sequence-clustering-cluster-diagram-tab-mining-model-viewer"></a>Scheda Diagramma dei cluster in Sequence Clustering (Visualizzatore modello di data mining)
   La scheda **Diagramma dei cluster** in **Visualizzatore Microsoft Sequence Clustering** consente di visualizzare graficamente tutti i cluster contenuti nel modello Sequence Clustering.  
@@ -75,7 +74,7 @@ ms.locfileid: "66069108"
  **Collegamenti**  
  Le righe del diagramma indicano le associazioni tra i cluster di sequenza. È possibile modificare il numero di collegamenti mostrati dal visualizzatore regolando il dispositivo di scorrimento a destra dei cluster. Se si sposta il dispositivo di scorrimento verso il basso, vengono visualizzati solo i collegamenti più attendibili.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  

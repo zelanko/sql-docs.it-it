@@ -52,13 +52,12 @@ helpviewer_keywords:
 ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81653d9b93a7dc8ec71a88e70cee8b2d68f33a8e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: af365a21443f3feeb54ce2f76c729ba40909b9df
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068923"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940652"
 ---
 # <a name="log-properties"></a>Proprietà dei log
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta le proprietà dei log server elencate nelle tabelle seguenti. Per altre informazioni sulle proprietà aggiuntive del server e sulla relativa impostazione, vedere [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
@@ -76,7 +75,7 @@ ms.locfileid: "66068923"
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="error-log"></a>log degli errori  
- È possibile impostare queste proprietà a livello di istanza del server per modificare i valori predefiniti per la configurazione errori visualizzati in altri strumenti e finestre di progettazione. Per ulteriori informazioni [, vedere la pagina relativa alla configurazione degli errori per l'elaborazione di cubi, partizioni e dimensioni &#40;SSAS-&#41;multidimensionali.](../multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A>  
+ È possibile impostare queste proprietà a livello di istanza del server per modificare i valori predefiniti per la configurazione errori visualizzati in altri strumenti e finestre di progettazione. Per ulteriori informazioni [, vedere la pagina relativa alla configurazione degli errori per l'elaborazione di cubi, partizioni e dimensioni &#40;SSAS-&#41;multidimensionali](../multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> .  
   
  **ErrorLog\ErrorLogFileName**  
  Proprietà usata come impostazione predefinita durante operazioni di elaborazione eseguite sul server.  
@@ -231,7 +230,7 @@ ms.locfileid: "66068923"
  **Trace\TraceRowsetBackgroundFlushPeriod**  
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurare le proprietà del server in Analysis Services](server-properties-in-analysis-services.md)   
  [Determinare la modalità server di un'istanza di Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

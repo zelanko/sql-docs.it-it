@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4add98b6c085d52238a528c313008bc688ae6e54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee713086be138a204ca5b79f3ec172f8e376ea86
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62829499"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917671"
 ---
 # <a name="wmi-event-watcher-task"></a>Attività Monitoraggio eventi WMI
   L'attività Monitoraggio eventi WMI consente di monitorare gli eventi di WMI (Windows Management Instrumentation, Strumentazione gestione Windows) utilizzando una query WQL (Management Instrumentation Query Language) per specificare gli eventi desiderati. È possibile utilizzare l'attività Monitoraggio eventi WMI per gli scopi seguenti:  
@@ -75,7 +74,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 -   Definire la risposta dell'attività all'evento. È possibile configurare l'attività in modo da riuscire o non riuscire, a seconda dell'evento, oppure da riprendere semplicemente il monitoraggio dell'evento.  
   
--   Specificare l'azione eseguita dall'attività quando si verifica il timeout della query WMI. È possibile registrare il timeout e lo stato dopo il timeout oppure generare un evento personalizzato [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , che indica che si è verificato il timeout dell'evento WMI e che è stato registrato il timeout e lo stato del timeout.  
+-   Specificare l'azione eseguita dall'attività quando si verifica il timeout della query WMI. È possibile registrare il timeout e lo stato dopo il timeout oppure generare un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] evento personalizzato, che indica che si è verificato il timeout dell'evento WMI e che è stato registrato il timeout e lo stato del timeout.  
   
 -   Consente di definire la modalità di risposta dell'attività al timeout. L'attività può essere configurata in modo da avere esito positivo o negativo oppure l'attività può semplicemente controllare l'evento.  
   

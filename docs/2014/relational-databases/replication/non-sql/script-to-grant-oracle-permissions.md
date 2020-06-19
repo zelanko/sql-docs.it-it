@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: d742fd30-347a-452f-b5fc-b03232360c6b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d7c61a21f149a50c4893c9c82d3624e0905a481b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79df95cff33b18379d126e2ea5fe5db9e84a98aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022422"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068524"
 ---
 # <a name="script-to-grant-oracle-permissions"></a>Script per la concessione di autorizzazioni per Oracle
-  Lo script descritto in questo argomento viene usato durante la configurazione di un database Oracle che pubblicherà i dati tramite la replica [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Questo script è disponibile anche nella directory seguente dopo l'installazione: *\<unità>* :\\\Programmi\Microsoft SQL Server\\ *\<NomeIstanza>* \MSSQL\Install\oracleadmin.sql. Per altre informazioni sulla configurazione del database Oracle, vedere [Configurare un server di pubblicazione Oracle](configure-an-oracle-publisher.md).  
+  Lo script descritto in questo argomento viene usato durante la configurazione di un database Oracle che pubblicherà i dati tramite la replica [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Questo script è disponibile anche nella directory seguente dopo l'installazione: *\<drive>* : \\ \Programmi\microsoft SQL Server \\ *\<InstanceName>* \MSSQL\Install\oracleadmin.SQL. Per altre informazioni sulla configurazione del database Oracle, vedere [Configurare un server di pubblicazione Oracle](configure-an-oracle-publisher.md).  
   
 > [!NOTE]  
 >  Nello script è inclusa l'istruzione `GRANT CREATE ANY TRIGGER TO &&AdminLogin;`, obbligatoria per i trigger utilizzati nella replica transazionale. Se si utilizza soltanto la replica snapshot, rimuovere questa riga dallo script.  

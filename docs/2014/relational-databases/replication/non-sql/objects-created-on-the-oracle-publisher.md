@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 99e1d1f0692e5460e2c7003b0ab8dca860deca4f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50580bcb80e58b73931fd867a1be83cac58a9911
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022142"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068577"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Oggetti creati nel server di pubblicazione Oracle
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la replica installa gli oggetti di database nel server di pubblicazione Oracle per abilitare il rilevamento[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] delle modifiche e l'invio (non installa alcun file binario nel server di pubblicazione Oracle). Nella tabella seguente vengono elencati gli oggetti creati nel server di pubblicazione Oracle quando viene identificato come server di pubblicazione nel server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Le descrizioni degli oggetti hanno esclusivamente scopo informativo. Non modificare tali oggetti.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]la replica installa gli oggetti di database nel server di pubblicazione Oracle per abilitare il rilevamento delle modifiche e l'invio (non [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installa alcun file binario nel server di pubblicazione Oracle). Nella tabella seguente vengono elencati gli oggetti creati nel server di pubblicazione Oracle quando viene identificato come server di pubblicazione nel server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Le descrizioni degli oggetti hanno esclusivamente scopo informativo. Non modificare tali oggetti.  
   
 |Nome oggetto|Tipo di oggetto|Descrizione|  
 |-----------------|-----------------|-----------------|  

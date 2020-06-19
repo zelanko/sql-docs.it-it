@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: 50a55014-e2c3-4ecd-84e1-3e877c55a260
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 956a73f76e113eb0a50f628150e47ed33791cc97
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fdb702c890097965b8058258f78c8572ad911a72
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176240"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968511"
 ---
 # <a name="finding-installed-printers-with-the-script-task"></a>Ricerca di stampanti installate con l'attività Script
-  La destinazione finale dei dati trasformati dai pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è spesso costituita da un report stampato. Lo `System.Drawing.Printing` spazio dei nomi [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] in fornisce le classi per l'utilizzo delle stampanti.
+  La destinazione finale dei dati trasformati dai pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è spesso costituita da un report stampato. Lo `System.Drawing.Printing` spazio dei nomi in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fornisce le classi per l'utilizzo delle stampanti.
 
 > [!NOTE]
 >  Se si desidera creare un'attività da riutilizzare più facilmente con più pacchetti, è possibile utilizzare il codice di questo esempio di attività Script come punto iniziale per un'attività personalizzata. Per altre informazioni, vedere [Sviluppo di un'attività personalizzata](../extending-packages-custom-objects/task/developing-a-custom-task.md).
@@ -45,7 +44,7 @@ ms.locfileid: "78176240"
 
 3.  Nel progetto di script aggiungere un riferimento allo spazio dei nomi **System.Drawing**.
 
-4.  Nel codice usare `Imports` le istruzioni per importare gli `System.Drawing.Printing` spazi dei nomi **System. Collections** e.
+4.  Nel codice usare le `Imports` istruzioni per importare gli spazi dei nomi **System. Collections** e `System.Drawing.Printing` .
 
 ### <a name="code"></a>Codice
 

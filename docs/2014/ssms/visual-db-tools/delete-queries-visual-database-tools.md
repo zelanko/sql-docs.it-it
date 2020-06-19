@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 084e1504-3d2f-4bd9-b97c-b9c8c874751c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9e046aef7cd5fb4049b4bfb92c99272f625224c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5b7cd5584485f12912f39ee940cdd960ab95b5bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62670474"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061767"
 ---
 # <a name="delete-queries-visual-database-tools"></a>Eliminazione di query (Visual Database Tools)
   Se una query non è più necessaria, è possibile rimuoverla dal progetto oppure eliminarla definitivamente dal file system. Le query eliminate mediante la procedura descritta di seguito non vengono spostate nel Cestino e pertanto non possono essere recuperate.  

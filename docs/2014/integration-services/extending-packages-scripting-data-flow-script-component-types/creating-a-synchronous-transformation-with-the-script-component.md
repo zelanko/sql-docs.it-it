@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2599fc6f5373b7bf048ab173bccd9c44be6ae58e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a1e40603dc9cbe86e32c59037350b25f31bddf14
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176261"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968565"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>Creazione di una trasformazione sincrona con il componente script
   Utilizzare un componente di trasformazione nel flusso di dati di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per modificare e analizzare i dati quando vengono passati dall'origine alla destinazione. Una trasformazione con output sincroni elabora ogni riga di input non appena viene passata attraverso il componente. Una trasformazione con output asincroni attende di aver ricevuto tutte le righe di input per completare la relativa elaborazione. In questo argomento viene descritta una trasformazione sincrona. Per informazioni sulle trasformazioni asincrone, vedere [Creazione di una trasformazione asincrona con il componente script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md). Per altre informazioni sulla differenza tra componenti sincroni e asincroni, vedere [Informazioni sulle trasformazioni sincrone e asincrone](../understanding-synchronous-and-asynchronous-transformations.md).
@@ -58,7 +57,7 @@ ms.locfileid: "78176261"
 -   Creare uno o più output aggiuntivi, ad esempio un output degli errori simulati per le righe che contengono valori imprevisti. Usare i pulsanti **Aggiungi output** e **Rimuovi output** per gestire gli output del componente di trasformazione sincrono. Tutte le righe di input vengono indirizzate a tutti gli output disponibili, a meno che non si indichi che si intende reindirizzare ogni riga a uno o all'altro output. Indicare che si intende reindirizzare le righe specificando un valore integer diverso da zero per la proprietà `ExclusionGroup` degli output. Il valore integer specifico immesso in `ExclusionGroup` per identificare gli output non è significativo, ma è necessario utilizzare sempre lo stesso valore per il gruppo specificato di output.
 
     > [!NOTE]
-    >  È anche possibile utilizzare un valore diverso da zero per la proprietà `ExclusionGroup` con un singolo output quando non si desidera restituire tutte le righe come output. In questo caso, tuttavia, è necessario chiamare in modo esplicito il metodo **DirectRowTo\<outputbuffer>** per ogni riga che si vuole inviare all'output.
+    >  È anche possibile utilizzare un valore diverso da zero per la proprietà `ExclusionGroup` con un singolo output quando non si desidera restituire tutte le righe come output. Tuttavia, in questo caso, è necessario chiamare in modo esplicito il metodo **Metodo DirectRowTo \<outputbuffer> ** per ogni riga che si desidera inviare all'output.
 
 -   Assegnare un nome più descrittivo all'input e agli output. Il componente script utilizza questi nomi per generare le proprietà delle funzioni di accesso tipizzate che verranno utilizzate per fare riferimento all'input e agli output nello script.
 
@@ -69,9 +68,9 @@ ms.locfileid: "78176261"
  Per altre informazioni sulla pagina **Input e output** di **Editor trasformazione Script**, vedere [Editor trasformazione Script &#40;pagina Input e output&#41;](../script-transformation-editor-inputs-and-outputs-page.md).
 
 ### <a name="adding-variables"></a>Aggiunta di variabili
- Se si desidera utilizzare le variabili esistenti nello script, è possibile aggiungerle nei campi delle `ReadOnlyVariables` proprietà `ReadWriteVariables` e nella pagina **script** di **Editor trasformazione script**.
+ Se si desidera utilizzare le variabili esistenti nello script, è possibile aggiungerle nei campi delle `ReadOnlyVariables` proprietà e nella `ReadWriteVariables` pagina **script** di **Editor trasformazione script**.
 
- Quando si aggiungono più variabili nei campi delle proprietà, separare i relativi nomi con virgole. È anche possibile selezionare più variabili facendo clic sul pulsante con i puntini di sospensione (**...**) accanto ai campi delle `ReadOnlyVariables` proprietà e `ReadWriteVariables` e quindi selezionando le variabili nella finestra di dialogo **Seleziona variabili** .
+ Quando si aggiungono più variabili nei campi delle proprietà, separare i relativi nomi con virgole. È anche possibile selezionare più variabili facendo clic sul pulsante con i puntini di sospensione (**...**) accanto ai `ReadOnlyVariables` campi delle `ReadWriteVariables` proprietà e e quindi selezionando le variabili nella finestra di dialogo **Seleziona variabili** .
 
  Per informazioni generali sull'uso delle variabili con il componente script, vedere [Uso di variabili nel componente script](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).
 
@@ -85,7 +84,7 @@ ms.locfileid: "78176261"
 ### <a name="understanding-the-auto-generated-code"></a>Informazioni sul codice generato automaticamente
  Quando si apre l'IDE di VSTA dopo la creazione e la configurazione di un componente di trasformazione, la classe `ScriptMain` modificabile viene visualizzata nell'editor del codice con uno stub per il metodo `ProcessInputRow`. La classe `ScriptMain` è quella in cui si scriverà il codice personalizzato, mentre `ProcessInputRow` è il metodo più importante in un componente di trasformazione.
 
- Se si apre la finestra **Esplora progetti** in VSTA, è possibile osservare che il componente script ha generato anche gli elementi di `BufferWrapper` progetto `ComponentWrapper` e di sola lettura. La classe `ScriptMain` eredita dalla classe `UserComponent` nell'elemento di progetto `ComponentWrapper`.
+ Se si apre la finestra **Esplora progetti** in VSTA, è possibile osservare che il componente script ha generato anche gli elementi di `BufferWrapper` progetto e di sola lettura `ComponentWrapper` . La classe `ScriptMain` eredita dalla classe `UserComponent` nell'elemento di progetto `ComponentWrapper`.
 
  In fase di esecuzione il motore flusso di dati richiama il metodo `ProcessInput` nella classe `UserComponent`, che esegue l'override del metodo <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> della classe padre <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. Il metodo `ProcessInput` a sua volta esegue il ciclo delle righe nel buffer di input e chiama il metodo `ProcessInputRow` una volta per ogni riga.
 
@@ -130,13 +129,13 @@ else
 }
 ```
 
- In questo esempio il componente script genera automaticamente i metodi **DirectRowTo\<OutputBufferX>** , in base ai nomi degli output configurati. È possibile utilizzare codice simile per indirizzare le righe di errore a un output degli errori simulati.
+ In questo esempio il componente script genera automaticamente i **metodi \<OutputBufferX> Metodo DirectRowTo** , in base ai nomi degli output configurati. È possibile utilizzare codice simile per indirizzare le righe di errore a un output degli errori simulati.
 
 ## <a name="examples"></a>Esempi
  Negli esempi seguenti è illustrato il codice personalizzato necessario nella classe `ScriptMain` per creare un componente di trasformazione sincrono.
 
 > [!NOTE]
->  In questi esempi viene utilizzata la tabella **Person. Address** nel database di `AdventureWorks` esempio e vengono passate la prima e la quarta colonna, ovvero le colonne **intAddressID** e **nvarchar (30) City** , attraverso il flusso di dati. Gli stessi dati vengono utilizzati negli esempi relativi a origine, trasformazione e destinazione in questa sezione. Per ogni esempio, sono documentati ulteriori prerequisiti e presupposti.
+>  In questi esempi viene utilizzata la tabella **Person. Address** nel `AdventureWorks` database di esempio e vengono passate la prima e la quarta colonna, ovvero le colonne **intAddressID** e **nvarchar (30) City** , attraverso il flusso di dati. Gli stessi dati vengono utilizzati negli esempi relativi a origine, trasformazione e destinazione in questa sezione. Per ogni esempio, sono documentati ulteriori prerequisiti e presupposti.
 
 ### <a name="single-output-synchronous-transformation-example"></a>Esempio di trasformazione sincrona a singolo output
  In questo esempio viene illustrato un componente di trasformazione sincrono con un singolo output. La trasformazione passa la colonna **AddressID** e converte la colonna **City** in lettere maiuscole.
@@ -145,7 +144,7 @@ else
 
 1.  Aggiungere un nuovo componente script all'area di progettazione del flusso di dati e configurarlo come trasformazione.
 
-2.  Connettere l'output di un'origine o di un'altra trasformazione al nuovo componente di trasformazione in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Questo output deve fornire i dati della tabella **Person. Address** del database `AdventureWorks` di esempio che contiene le colonne **AddressID** e **City** .
+2.  Connettere l'output di un'origine o di un'altra trasformazione al nuovo componente di trasformazione in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Questo output deve fornire i dati della tabella **Person. Address** del `AdventureWorks` database di esempio che contiene le colonne **AddressID** e **City** .
 
 3.  Aprire l'**Editor trasformazione Script**. Nella pagina **Colonne di input** selezionare le colonne **AddressID** e **City**. Contrassegnare la colonna **City** come Lettura/Scrittura.
 
@@ -197,7 +196,7 @@ public class ScriptMain:
 
 1.  Aggiungere un nuovo componente script all'area di progettazione del flusso di dati e configurarlo come trasformazione.
 
-2.  Connettere l'output di un'origine o di un'altra trasformazione al nuovo componente di trasformazione in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Questo output deve fornire i dati della tabella **Person. Address** del database `AdventureWorks` di esempio che contiene almeno le colonne **AddressID** e **City** .
+2.  Connettere l'output di un'origine o di un'altra trasformazione al nuovo componente di trasformazione in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Questo output deve fornire i dati della tabella **Person. Address** del `AdventureWorks` database di esempio che contiene almeno le colonne **AddressID** e **City** .
 
 3.  Aprire l'**Editor trasformazione Script**. Nella pagina **Colonne di input** selezionare le colonne **AddressID** e **City**. Contrassegnare la colonna **City** come Lettura/Scrittura.
 

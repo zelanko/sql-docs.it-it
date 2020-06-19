@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 24a52b9dd190032a55306c1fe738c3c1e1787dad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 58d8e0c835cfcb47adbf837c1322b51a7b30c2e8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112212"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054788"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>Configurazione iniziale (PowerPivot per SharePoint)
   Seguire i passaggi descritti in questo argomento per configurare un'installazione iniziale di PowerPivot per SharePoint. Il modo più semplice per eseguire questa operazione consiste nell'utilizzare lo strumento di configurazione PowerPivot. Tale strumento consente di eseguire in modo automatico tutti i passaggi di configurazione descritti di seguito.  
@@ -103,13 +102,13 @@ ms.locfileid: "79112212"
   
 3.  Selezionare **SQL Server applicazione di servizio PowerPivot**. Se non è presente nell'elenco, PowerPivot per SharePoint non è installato o la soluzione non è distribuita.  
   
-4.  Nella pagina **Crea nuova applicazione di servizio PowerPivot** immettere un nome per l'applicazione. Il valore predefinito è\<PowerPivotServiceApplication Number>. Se si creano più applicazioni di servizio PowerPivot, un nome descrittivo sarà utile per capire come viene utilizzata l'applicazione.  
+4.  Nella pagina **Crea nuova applicazione di servizio PowerPivot** immettere un nome per l'applicazione. Il valore predefinito è PowerPivotServiceApplication \<number> . Se si creano più applicazioni di servizio PowerPivot, un nome descrittivo sarà utile per capire come viene utilizzata l'applicazione.  
   
 5.  In Pool di applicazioni creare un nuovo pool di applicazioni e selezionare un account di sicurezza. L'account utente di dominio è obbligatorio.  
   
 6.  In **server database**scegliere un server di database in cui creare il database dell'applicazione di servizio. Il valore predefinito è l'istanza del motore di database di SQL Server che ospita i database di configurazione della farm.  
   
-7.  In **nome database**il valore predefinito è PowerPivotServiceApplication1_\<> GUID. Il nome del database predefinito corrisponde al nome predefinito dell'applicazione di servizio. Se è stato immesso un nome univoco per l'applicazione del servizio, seguire una convenzione di denominazione simile per il nome del database in modo da poterli gestire insieme.  
+7.  In **nome database**il valore predefinito è PowerPivotServiceApplication1_ \<guid> . Il nome del database predefinito corrisponde al nome predefinito dell'applicazione di servizio. Se è stato immesso un nome univoco per l'applicazione del servizio, seguire una convenzione di denominazione simile per il nome del database in modo da poterli gestire insieme.  
   
 8.  In **Autenticazione database**l'impostazione predefinita è Autenticazione di Windows. Se si sceglie **Autenticazione di SQL Server**, fare riferimento alla guida dell'amministratore di SharePoint per le procedure consigliate sull'utilizzo di questo tipo di autenticazione in una distribuzione di SharePoint.  
   
@@ -170,7 +169,7 @@ ms.locfileid: "79112212"
   
 5.  In **database**specificare il SQL Server istanza di che ospiterà il database per questa applicazione di servizio. Il valore predefinito è l'istanza del motore di database di SQL Server che ospita i database di configurazione della farm.  
   
-6.  In **nome database**immettere il nome del database dell'applicazione di servizio. Il valore predefinito è Secure_Store_Service_DB_\<> GUID. Il nome predefinito corrisponde al nome predefinito dell'applicazione di servizio. Se è stato immesso un nome univoco per l'applicazione del servizio, seguire una convenzione di denominazione simile per il nome del database in modo da poterli gestire insieme.  
+6.  In **nome database**immettere il nome del database dell'applicazione di servizio. Il valore predefinito è Secure_Store_Service_DB_ \<guid> . Il nome predefinito corrisponde al nome predefinito dell'applicazione di servizio. Se è stato immesso un nome univoco per l'applicazione del servizio, seguire una convenzione di denominazione simile per il nome del database in modo da poterli gestire insieme.  
   
 7.  In **Autenticazione database**l'impostazione predefinita è Autenticazione di Windows. Se si sceglie Autenticazione di SQL Server, fare riferimento alla guida dell'amministratore di SharePoint per le procedure consigliate sull'utilizzo di questo tipo di autenticazione nella farm in uso.  
   
@@ -208,7 +207,7 @@ ms.locfileid: "79112212"
   
 1.  Da un sito di SharePoint scegliere **Azioni sito**.  
   
-     Per impostazione predefinita, l'accesso alle applicazioni Web SharePoint viene effettuato tramite la porta 80. Ciò significa che spesso è possibile accedere a un sito di SharePoint immettendo il nome del computer http://\<> per aprire la raccolta siti radice.  
+     Per impostazione predefinita, l'accesso alle applicazioni Web SharePoint viene effettuato tramite la porta 80. Ciò significa che spesso è possibile accedere a un sito di SharePoint immettendo http://\<computer name> per aprire la raccolta siti radice.  
   
 2.  Fare clic su **Impostazioni sito**.  
   
@@ -236,7 +235,7 @@ ms.locfileid: "79112212"
   
  Per verificare l'integrazione di PowerPivot con un sito di SharePoint, effettuare le operazioni seguenti:  
   
-1.  In un browser aprire l'applicazione Web creata. Se sono stati usati i valori predefiniti, è possibile\<specificare http://il nome del computer> nell'indirizzo URL.  
+1.  In un browser aprire l'applicazione Web creata. Se sono stati usati i valori predefiniti, è possibile specificare http:// \<your computer name> nell'indirizzo URL.  
   
 2.  Verificare che le funzionalità di elaborazione e di accesso ai dati PowerPivot siano disponibili nell'applicazione. È possibile effettuare questa operazione verificando la presenza di modelli di libreria forniti da PowerPivot:  
   
@@ -254,9 +253,9 @@ ms.locfileid: "79112212"
   
 4.  Avviare SQL Server Management Studio dal gruppo di programmi Microsoft SQL Server 2008 R2 nel menu Start. Se questo strumento non è installato nel server, è possibile ignorare l'ultimo passaggio per confermare la presenza di file memorizzati nella cache.  
   
-5.  In Tipo di server selezionare **Analysis Services**.  
+5.  In tipo server selezionare **Analysis Services**.  
   
-6.  In nome server immettere ** \<nome-server> \powerpivot**, dove ** \<Server-Name>** è il nome del computer in cui è installato PowerPivot per SharePoint.  
+6.  In nome server immettere ** \<server-name> \PowerPivot**, dove **\<server-name>** è il nome del computer in cui è presente l'installazione di PowerPivot per SharePoint.  
   
 7.  Fare clic su **Connetti**.  
   

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2fc7fe10-0cbb-49ac-aa8c-8ec3f7a7705f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9316827245adfbcf64bd798869f570dc5f0af14c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a6b5880a67afde3efaf34eb9050dc9c95b472bf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068912"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940606"
 ---
 # <a name="security-properties"></a>Proprietà di sicurezza
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta le proprietà di sicurezza del server elencate nella tabella seguente. Per altre informazioni sulle proprietà aggiuntive del server e sulla relativa impostazione, vedere [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
@@ -68,7 +67,7 @@ ms.locfileid: "66068912"
  `AdministrativeDataProtection\ RequiredProtectionLevel`  
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurare le proprietà del server in Analysis Services](server-properties-in-analysis-services.md)   
  [Determinare la modalità server di un'istanza di Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
