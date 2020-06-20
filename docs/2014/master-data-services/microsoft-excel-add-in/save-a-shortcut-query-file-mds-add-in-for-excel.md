@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 98385f84-67cc-421a-b729-91847954e03e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bebddfcb9f6dc433831e2649428bd9c99646628f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81d70e4f9330db23c9cce54f7c615163c4dcee4f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482858"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960861"
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>Salvare un file di query collegamento (componente aggiuntivo MDS per Excel)
   Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], salvare un file di query collegamento quando è necessario accedere frequentemente allo stesso set di dati.  
@@ -29,7 +28,7 @@ ms.locfileid: "65482858"
   
 1.  Nel gruppo **Salva e invia** fare clic sulla freccia sotto **Salva query** e fare clic su **Salva come query**.  
   
-2.  Facoltativo. Per rinominare la query, fare clic sulla freccia sotto **Salva query** e fare clic su **Gestisci query**. Selezionare la query e fare clic su **Rinomina**.  
+2.  Facoltativa. Per rinominare la query, fare clic sulla freccia sotto **Salva query** e fare clic su **Gestisci query**. Selezionare la query e fare clic su **Rinomina**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
   
@@ -37,7 +36,7 @@ ms.locfileid: "65482858"
   
 -   [Inviare tramite posta elettronica un file di query collegamento &#40;componente aggiuntivo MDS per Excel&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [File di query collegamento &#40;componente aggiuntivo MDS per Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
   
   

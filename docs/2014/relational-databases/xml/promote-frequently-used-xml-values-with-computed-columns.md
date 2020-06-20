@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d9c86eef119ce121dfb5ff964e64f1970eda16db
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fd8bf917bd293cd4aab3d5c8c7fe526a557fec8a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702551"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065511"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promuovere i valori XML di uso frequente mediante colonne calcolate
   Se le query vengono eseguite principalmente su un piccolo numero di valori di attributi e di elementi, sarà possibile promuovere tali quantità al livello di colonne relazionali. Ciò risulta utile quando le query vengono eseguite su una piccola parte dei dati XML mentre viene recuperata l'intera istanza XML. Non è necessario creare un indice XML sulla colonna XML, ma è possibile indicizzare la colonna promossa. Le query devono essere scritte in modo da utilizzare la colonna promossa, poiché il Query Optimizer non reindirizza alla colonna promossa le query eseguite sulla colonna XML.  

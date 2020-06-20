@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 47fb4212-2165-4fec-bc41-6d548465d7be
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2eaaadc4e1cc1f2f360fe3d45e2dea4c082b7b76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0142cd53006609e9274972e4f5964132f5982c2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62915688"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967971"
 ---
 # <a name="mssqlserver_137"></a>MSSQLSERVER_137
     
@@ -33,13 +32,13 @@ ms.locfileid: "62915688"
 |Testo del messaggio|Dichiarare la variabile scalare "%.*ls".|  
   
 ## <a name="explanation"></a>Spiegazione  
- Questo errore si verifica quando una variabile viene utilizzata in uno script SQL senza essere stata dichiarata in precedenza. Nell'esempio seguente viene restituito l'errore 137 per entrambe le istruzioni SET e **@mycol** Select perché non è dichiarato.  
+ Questo errore si verifica quando una variabile viene utilizzata in uno script SQL senza essere stata dichiarata in precedenza. Nell'esempio seguente viene restituito l'errore 137 per entrambe le istruzioni SET e SELECT perché **@mycol** non è dichiarato.  
   
  SET @mycol = 'ContactName';  
   
  SELECT @mycol;  
   
- Una delle cause più complesse di questo errore include l'utilizzo di una variabile dichiarata al di fuori dell'istruzione EXECUTE. La variabile **@mycol** specificata nell'istruzione SELECT, ad esempio, è locale per l'istruzione SELECT. quindi è esterno all'istruzione EXECUTE.  
+ Una delle cause più complesse di questo errore include l'utilizzo di una variabile dichiarata al di fuori dell'istruzione EXECUTE. La variabile **@mycol** specificata nell'istruzione SELECT, ad esempio, è locale per l'istruzione SELECT, quindi è esterna all'istruzione Execute.  
   
  USE AdventureWorks2012;  
   

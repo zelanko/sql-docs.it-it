@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 942f93a3-e264-4ec4-ba72-a28e0509a527
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ec14f86b283fa8ccbc037feec4a8a54983126403
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e8c391010cdcccce4631fff894e7cbd72001342
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774955"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930479"
 ---
 # <a name="open-projects-from-source-control"></a>Apertura di progetti dal controllo del codice sorgente
-  È possibile utilizzare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per aprire i progetti direttamente dal controllo del codice sorgente. Quando si esegue questa operazione [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , recupera la versione più recente del progetto e la copia nel disco locale. Nell'ambiente [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] viene inoltre creata automaticamente una soluzione per il progetto.  
+  È possibile utilizzare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per aprire i progetti direttamente dal controllo del codice sorgente. Quando si esegue questa operazione, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Recupera la versione più recente del progetto e la copia nel disco locale. Nell'ambiente [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] viene inoltre creata automaticamente una soluzione per il progetto.  
   
  Dopo aver aperto un progetto dal controllo del codice sorgente, è possibile estrarre e modificare i file di progetto.  
   
@@ -42,7 +41,7 @@ ms.locfileid: "62774955"
   
 6.  Nella finestra di dialogo **Apri soluzione** selezionare il progetto che si desidera aprire e fare clic su **Apri**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Apri soluzioni e progetti dal controllo del codice sorgente](../../2014/database-engine/open-solutions-and-projects-from-source-control.md)   
  [Aprire Soluzioni dal controllo del codice sorgente](../../2014/database-engine/open-solutions-from-source-control.md)  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 78c83277-1dbb-4e07-95bd-47b14d2b5cd4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 65777f25066cfb42093313b90ac198c6bc1796a6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 761ce75ed8fc80b467c33024beee546162e6013b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918219"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970320"
 ---
 # <a name="page-compression-implementation"></a>Implementazione della compressione di pagina
   Questo argomento offre un riepilogo delle modalità di implementazione della compressione di pagina nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Tale riepilogo fornisce informazioni di base che consentono di pianificare lo spazio di archiviazione necessario per i dati.  

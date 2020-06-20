@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ccf03e32-6bd9-43c0-b9b6-9fe0d9163339
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3eb00922b4f6e21dd4cfc8a46d8c0c27ed9a5be1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72336f2f012ad6f2da03440f431d2fe5be294b07
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095481"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012713"
 ---
 # <a name="distributed-replay-client-configuration"></a>Configurazione client Riesecuzione distribuita
   Usare la pagina di **Configurazione client Riesecuzione distribuita** dell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per specificare gli utenti a cui si desidera concedere autorizzazioni amministrative per il servizio client Riesecuzione distribuita.  
@@ -24,7 +23,7 @@ ms.locfileid: "66095481"
   
 ## <a name="options"></a>Opzioni  
  **Nome controller**  
- Si tratta di un parametro facoltativo e il valore predefinito è \< *blank*>.  
+ Si tratta di un parametro facoltativo e il valore predefinito è \<*blank*> .  
   
  Immettere il nome del controller che il computer client comunicherà con per il servizio client Riesecuzione distribuita. Tenere presente quanto segue:  
   
@@ -37,11 +36,11 @@ ms.locfileid: "66095481"
  **Directory di lavoro**  
  Specificare la directory di lavoro per il servizio client Riesecuzione distribuita.  
   
- La directory di lavoro predefinita \<corrisponde alla *lettera di unità*>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:\\\Program Files \DReplayClient\WorkingDir.  
+ La directory di lavoro predefinita è \<*drive letter*> : \Program Files \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \DReplayClient\WorkingDir \\ .  
   
  **Directory dei risultati**  
  Specificare la directory dei risultati per il servizio client Riesecuzione distribuita.  
   
- La directory dei risultati predefinita \< *è lettera di unità*>:\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Program\\files \DReplayClient\ResultDir.  
+ La directory dei risultati predefinita è \<*drive letter*> : \Program Files \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \DReplayClient\ResultDir \\ .  
   
   

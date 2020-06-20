@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ee9d1c22a216024f388d30978dbb62be933425cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3efd231a1aa4d2b348bcfe887bd05825fcd40c90
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917570"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952163"
 ---
 # <a name="contained-databases"></a>Database indipendenti
   Un*database indipendente* è un database isolato dagli altri database e dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita il database.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] offre all'utente quattro modalità per isolare il database dall'istanza.  

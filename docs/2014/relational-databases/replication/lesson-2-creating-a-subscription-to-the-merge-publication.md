@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a39b3395a26fdbe3c235f429f312f4d6b3aff512
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: ffa99b2271697302e9cfa284bd814ccc923e46d1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000441"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065932"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>Lezione 2: Creazione di una sottoscrizione per una pubblicazione di tipo merge
   In questa lezione verranno descritte le procedure per creare una sottoscrizione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Verranno quindi impostate le autorizzazioni per il database di sottoscrizione e verrà generato manualmente lo snapshot dei dati filtrati per la nuova sottoscrizione. Per eseguire questa lezione è necessario aver completato la lezione precedente [Lezione 1: Pubblicazione dei dati tramite la replica di tipo merge](lesson-1-publishing-data-using-merge-replication.md).  
@@ -36,11 +35,11 @@ ms.locfileid: "83000441"
   
 5.  Nella pagina Posizione in cui eseguire l'agente di merge fare clic su **Esegui ogni agente nel relativo Sottoscrittore**e su **Avanti**.  
   
-6.  Nella pagina Sottoscrittori selezionare il nome dell'istanza del server Sottoscrittore e in **database di sottoscrizione**selezionare ** \< nuovo database>** dall'elenco.  
+6.  Nella pagina Sottoscrittori selezionare il nome dell'istanza del server del sottoscrittore e selezionare **dall'elenco in**Database di sottoscrizione **\<New Database>** .  
   
 7.  Nella finestra di dialogo **Nuovo database** immettere **SalesOrdersReplica** nella casella **Nome database** , selezionare **OK**e fare clic su **Avanti**.  
   
-8.  Nella pagina sicurezza agente di merge fare clic sul pulsante con i puntini di sospensione (**..**.), immettere \< _Machine_Name>_ **\ repl_merge** nella casella **account processo** , specificare la password per l'account, fare clic su **OK**, su **Avanti**e quindi di nuovo su **Avanti** .  
+8.  Nella pagina sicurezza agente di merge fare clic sul pulsante con i puntini di sospensione (**..**.), immettere \<_Machine_Name> _**\ Repl_merge** nella casella **account processo** , specificare la password per l'account, fare clic su **OK**, su **Avanti**e quindi di nuovo su **Avanti** .  
   
 9. Nella pagina Inizializzazione sottoscrizioni selezionare **Alla prima sincronizzazione** dall'elenco **Quando** , fare clic su **Avanti**e di nuovo su **Avanti** .  
   
@@ -52,7 +51,7 @@ ms.locfileid: "83000441"
   
 1.  Connettersi al Sottoscrittore in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], espandere **Database**, **SalesOrdersReplica**e **Sicurezza**, fare clic con il pulsante destro del mouse su **Utenti**e scegliere **Nuovo utente**.  
   
-2.  Nella pagina **generale** immettere \< _Machine_Name>_ **\ repl_merge** nella casella **nome utente** , fare clic sul pulsante con i puntini di sospensione (**...**), fare clic su **Sfoglia**, selezionare \< _Machine_Name>_ **\ repl_merge**, fare clic su **OK**, fare clic su **Controlla nomi**e quindi su **OK**.  
+2.  Nella pagina **generale** immettere \<_Machine_Name> _ **\ repl_merge** nella casella **nome utente** , fare clic sul pulsante con i puntini di sospensione (**...**), fare \<_Machine_Name> clic su **Sfoglia**, selezionare _ **\ repl_merge**, fare clic su **OK**, quindi su **Controlla nomi**e infine su **OK**.  
   
 3.  In **Appartenenza a ruoli del database**selezionare **db_owner**e fare clic su **OK** per creare l'utente.  
   

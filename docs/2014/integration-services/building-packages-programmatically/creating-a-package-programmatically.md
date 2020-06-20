@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3f7ebe0c0c5d23210a5111e8b4daaa69f8c73bb0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c3b94bef3cf3549720321a0bcd47f7314ff1ff8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62836388"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924932"
 ---
 # <a name="creating-a-package-programmatically"></a>Creazione di un pacchetto a livello di programmazione
   L'oggetto <xref:Microsoft.SqlServer.Dts.Runtime.Package> rappresenta il contenitore di livello principale per tutti gli altri oggetti di una soluzione di progetto di [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Essendo il contenitore di livello principale, il pacchetto è il primo oggetto creato. Gli oggetti successivi vengono aggiunti e quindi eseguiti nel contesto del pacchetto. Il pacchetto non sposta né trasforma dati, ma si basa sulle attività che contiene per eseguire questa operazione. Le attività eseguono la maggior parte delle operazioni del pacchetto e ne definiscono la funzionalità. Per creare un pacchetto sono sufficienti tre righe di codice, ma vengono aggiunti vari oggetti <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e attività per fornire funzionalità aggiuntive. In questa sezione viene descritto come creare un pacchetto a livello di programmazione. Non vengono fornite informazioni sulla creazione di attività o di oggetti <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>, che verranno descritti nelle sezioni successive.  
@@ -63,13 +62,13 @@ Module Module1
 End Module  
 ```  
   
- Per compilare ed eseguire l'esempio, premere F5 in Visual Studio. Per compilare il codice usando il compilatore C#, **csc.exe**, dal prompt dei comandi per la compilazione usare il comando e i riferimenti di file seguenti, sostituendo *\<filename>* con il nome del file con estensione cs o vb e assegnando un *\<outputfilename>* a scelta.  
+ Per compilare ed eseguire l'esempio, premere F5 in Visual Studio. Per compilare il codice usando il compilatore C#, **csc.exe**al prompt dei comandi per la compilazione, usare il comando e i riferimenti di file seguenti, sostituendo *\<filename>* con il nome del file con estensione cs o VB e assegnando un oggetto *\<outputfilename>* di propria scelta.  
   
- **csc /target:library /out: \<outputfilename>.dll \<filename>.cs /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
+ **csc/target: library/out: \<outputfilename> . dll \<filename> . cs/R: Microsoft. SqlServer. managed DTS.dll "/r:System.dll**  
   
  Per compilare il codice usando il compilatore Visual Basic .NET, **vbc.exe**, dal prompt dei comandi per la compilazione usare il comando e i riferimenti di file seguenti.  
   
- **vbc /target:library /out: \<outputfilename>.dll \<filename>.vb /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
+ **vbc/target: library/out: \<outputfilename> . dll \<filename> . vb/R: Microsoft. SqlServer. managed DTS.dll "/r:System.dll**  
   
  È anche possibile creare un pacchetto caricando un pacchetto esistente salvato su disco, nel file system o in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La differenza è che viene dapprima creato l'oggetto <xref:Microsoft.SqlServer.Dts.Runtime.Application> e quindi nell'oggetto del pacchetto viene inserito uno dei metodi di overload dell'applicazione: `LoadPackage` per i file flat, `LoadFromSQLServer` per i pacchetti salvati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> per i pacchetti salvati nel file system. Nell'esempio seguente viene caricato un pacchetto esistente da disco, quindi vengono visualizzate diverse proprietà del pacchetto.  
   
@@ -156,7 +155,7 @@ End Module
   
 ![Integration Services icona (piccola)](../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina relativa a Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Aggiunta di attività a livello di programmazione](../building-packages-programmatically/adding-tasks-programmatically.md)  
   
   

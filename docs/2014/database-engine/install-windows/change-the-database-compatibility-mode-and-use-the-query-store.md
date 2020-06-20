@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 66f1f8f57dca3ad2edba3f4b63100b2de3ae5659
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dafd3a5f8a460bb08e63919c2cb853ad74dc2f1f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779113"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932760"
 ---
 # <a name="migrate-query-plans"></a>Migrare piani di query
   Nella maggior parte dei casi, l'aggiornamento di un database alla versione più recente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comporta un miglioramento delle prestazioni di esecuzione delle query. Tuttavia, se sono presenti query critiche attentamente ottimizzate per le prestazioni, potrebbe essere necessario mantenere i piani per tali query prima di eseguire l'aggiornamento creando una guida di piano per ciascuna query. Se, dopo aver eseguito l'aggiornamento, Query Optimizer sceglie un piano meno efficiente per una o più query, è possibile abilitare le guide di piano e forzare il Query Optimizer a utilizzare i piani precedenti all'aggiornamento.  
@@ -50,7 +49,7 @@ ms.locfileid: "62779113"
   
 -   Esecuzione di query sulla colonna query_plan della funzione a gestione dinamica [sys. dm_exec_query_plan](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql) .  
   
--   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] Classi di evento [Showplan XML](../../relational-databases/event-classes/showplan-xml-event-class.md), [Showplan XML Statistics Profile](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md)e [Showplan XML for Query Compile](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md) .  
+-   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Classi di evento [Showplan XML](../../relational-databases/event-classes/showplan-xml-event-class.md), [Showplan XML Statistics Profile](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md)e [Showplan XML for Query Compile](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md) .  
   
  Nell'esempio seguente viene raccolto il piano di query per l'istruzione `SELECT City, StateProvinceID, PostalCode FROM Person.Address ORDER BY PostalCode DESC;` eseguendo una query sulle DMV.  
   
@@ -91,9 +90,9 @@ GO
 ### <a name="step-3-verify-that-the-plan-guide-is-applied-to-the-query"></a>Passaggio 3: Verifica dell'applicazione della guida di piano alla query  
  Eseguire nuovamente la query ed esaminare il piano di query prodotto. Verificare che il piano corrisponda a quello di cui specificato nella guida.  
   
-## <a name="see-also"></a>Vedi anche  
- [sp_create_plan_guide &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
- [Hint per la query &#40;&#41;Transact-SQL](/sql/t-sql/queries/hints-transact-sql-query)   
+## <a name="see-also"></a>Vedere anche  
+ [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [Hint di query &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
  [Guide di piano](../../relational-databases/performance/plan-guides.md)  
   
   

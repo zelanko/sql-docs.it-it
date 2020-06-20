@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9d06a2ec19b4a84dcd0d69fb70389d68974813be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 897c0f48c27f8836e4ccb0f84b43069bfcac9233
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62894980"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968481"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Raccolta di un elenco per il ciclo ForEach con l'attività Script
   L'enumeratore Foreach da variabile enumera gli elementi in un elenco passato in una variabile ed esegue le stesse attività su ogni elemento. È possibile utilizzare codice personalizzato in un'attività Script per popolare un elenco a questo scopo. Per altre informazioni sull'enumeratore, vedere [Contenitore ciclo Foreach](../control-flow/foreach-loop-container.md).  
@@ -247,7 +246,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
   
 ![Integration Services icona (piccola)](../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina relativa a Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Contenitore ciclo foreach](../control-flow/foreach-loop-container.md)   
  [Configurare un contenitore ciclo foreach](../configure-a-foreach-loop-container.md)  
   

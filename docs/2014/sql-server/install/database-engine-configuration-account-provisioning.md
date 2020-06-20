@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 834b26bc-49de-4033-88d5-6aa7b1609720
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 300e3dd81ae7a3de2361c79864130c1361c19588
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd3e075f187118c6c2ab7f6898b911be44d2cf31
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095868"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012885"
 ---
 # <a name="database-engine-configuration---account-provisioning"></a>Configurazione Motore di database - Provisioning account
   Utilizzare questa pagina per impostare la modalità di sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aggiungere utenti o gruppi di Windows come amministratori del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
@@ -49,7 +48,7 @@ ms.locfileid: "66095868"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Non impostare mai password vuote o vulnerabili.  
   
- **Modalità mista (autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows o autenticazione di)**  
+ **Modalità mista (autenticazione di Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione di)**  
  Consente agli utenti di connettersi tramite l'autenticazione di Windows o l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Gli utenti che utilizzano un account utente di Windows per la connessione possono utilizzare connessioni trusted convalidate da Windows.  
   
  Se è necessario selezionare l'autenticazione Modalità mista e utilizzare account di accesso SQL per le applicazioni legacy, sarà necessario impostare password complesse per tutti gli account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -101,7 +100,7 @@ ms.locfileid: "66095868"
   
  Per altre informazioni sulla scelta di un account per l'esecuzione del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], vedere l'argomento **Configurare account di servizio e autorizzazioni di Windows** nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
   
   

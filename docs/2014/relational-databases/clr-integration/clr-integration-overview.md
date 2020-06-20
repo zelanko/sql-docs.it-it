@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8ffa3e3508fef50491f20b47e13c12865cb5432d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29c6c0195b8a6be73e70542a6b995f46ccaff51b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874976"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953641"
 ---
 # <a name="overview-of-clr-integration"></a>Panoramica dell'integrazione con CLR
   Common Language Runtime (CLR) rappresenta il fulcro di Microsoft .NET Framework e fornisce l'ambiente di esecuzione per tutto il codice .NET Framework. Il codice eseguito in CLR viene chiamato codice gestito. CLR fornisce varie funzioni e servizi necessari per l'esecuzione del programma, incluse le funzioni di compilazione JIT (Just-In-Time), di allocazione e gestione della memoria, di imposizione dell'indipendenza dai tipi, di gestione delle eccezioni, di gestione dei thread e di sicurezza.  Per ulteriori informazioni, vedere .NET Framework SDK.  
@@ -55,7 +54,7 @@ ms.locfileid: "62874976"
 ## <a name="choosing-between-extended-stored-procedures-and-managed-code"></a>Scelta tra stored procedure estese e codice gestito  
  Le stored procedure estese consentono di ottenere funzionalità altrimenti non disponibili con le stored procedure [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Diversamente dal codice gestito indipendente dai tipi, tuttavia, le stored procedure estese possono compromettere l'integrità del processo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La gestione della memoria, la pianificazione di thread e fiber e i servizi di sincronizzazione sono, inoltre, notevolmente più integrati tra il codice gestito di CLR e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Grazie all'integrazione con CLR, è possibile scrivere le stored procedure necessarie per eseguire attività non consentite in [!INCLUDE[tsql](../../../includes/tsql-md.md)] in modo più sicuro rispetto alle stored procedure estese. Per ulteriori informazioni sull'integrazione con CLR e sulle stored procedure estese, vedere [prestazioni dell'integrazione CLR](clr-integration-architecture-performance.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Installazione del .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
  [Architettura dell'integrazione con CLR](../../database-engine/dev-guide/architecture-of-clr-integration.md)   
  [Accesso ai dati da oggetti di database CLR](data-access/data-access-from-clr-database-objects.md)   

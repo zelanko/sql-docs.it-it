@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 94fc8916-8032-490c-b9d5-ded8b6217e49
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d4d614f3479dac0abcf5b1d6c5ae69dff3dfedf5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4bd7e159a148b134d744481a76ac910af572c0c2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059290"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969411"
 ---
 # <a name="event-handlers-tab"></a>Scheda Gestori eventi
   Utilizzare la scheda **Gestori eventi** dello strumento Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] per compilare un flusso di controllo in un pacchetto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Un gestore di evento viene eseguito in risposta a un evento generato dal pacchetto oppure da un'attività o da un contenitore incluso nel pacchetto.  
@@ -32,14 +31,14 @@ ms.locfileid: "66059290"
  **Elimina**  
  Dopo aver selezionato un gestore di evento, fare clic su **Elimina** per rimuoverlo dal pacchetto.  
   
- **Fare clic qui per creare \<un nome del gestore eventi> per \<il nome eseguibile eseguibile>**  
+ **Fare clic qui per creare un oggetto \<event handler name> per il file eseguibile\<executable name>**  
  Fare clic per creare il gestore di evento.  
   
  Creare il flusso di controllo trascinando gli oggetti grafici che rappresentano i contenitori e le attività di [!INCLUDE[ssIS](../includes/ssis-md.md)] dalla **casella degli strumenti** all'area di progettazione della scheda **Gestori eventi** e quindi trascinando il connettore per collegare gli oggetti.  
   
  È inoltre possibile fare clic con il pulsante destro del mouse sull'area di progettazione, quindi scegliere **Aggiungi annotazione**dal menu per aggiungere annotazioni.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services &#40;i gestori eventi&#41; SSIS](integration-services-ssis-event-handlers.md)   
  [Flusso di controllo](control-flow/control-flow.md)   
  [Progettazione SSIS](ssis-designer.md)   

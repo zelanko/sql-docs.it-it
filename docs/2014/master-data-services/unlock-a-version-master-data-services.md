@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b4cf4404-40f3-46fb-801d-cbf80a95448c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8541dec5d64de7e0e98e30bbc48c5a5c4eeea9fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab1be29725369777df423e2fe18fb346a2d7297c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482588"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960558"
 ---
 # <a name="unlock-a-version-master-data-services"></a>Sbloccare una versione (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]sbloccare una versione di un modello per abilitare modifiche ai membri del modello e ai relativi attributi.  
@@ -46,7 +45,7 @@ ms.locfileid: "65482588"
   
 -   [Bloccare una versione &#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Versioni &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
   
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f2810e19-e513-458b-8925-5756b6ee1313
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 26dd8add089f27c3ea9db22204548196bc887faf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c1bfdd083973dd5dc3a27b9087ca912812815bca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127131"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050649"
 ---
 # <a name="srv_paramsetoutput-extended-stored-procedure-api"></a>srv_paramsetoutput (API Stored procedure estesa)
     
@@ -73,7 +72,7 @@ fNull
  *fNull*  
  Flag che indica se il valore del parametro restituito è NULL. Impostare questo flag su TRUE se il parametro deve essere impostato su NULL. Il valore predefinito è FALSE. Se *fNull* è impostato su TRUE, *cbLen* deve essere impostato su 0; in caso contrario la funzione avrà esito negativo.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  Se le informazioni sul parametro sono state impostate correttamente, viene restituito SUCCEED; in caso contrario, FAIL. FAIL viene restituito nei seguenti casi:  
   
 -   Il parametro non è un parametro restituito.  

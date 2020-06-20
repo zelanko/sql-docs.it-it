@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c3f253c4-4e3d-48e8-8d90-bd6ee899faf7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 68113c6de003aea94924f6e220373664212becf1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8dd7119d66dbd2e904e83d434f1319867b7aa7e7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62843482"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929202"
 ---
 # <a name="set-and-retrieve-version-information"></a>Impostazione e recupero delle informazioni sulla versione
   Le informazioni sulla versione comprendono la cronologia e lo stato corrente di un file incluso nel controllo del codice sorgente. Per ogni file incluso nel controllo del codice sorgente, [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe conserva una cronologia completa che consente di tenere traccia dell'evoluzione di uno o più file nel tempo. È inoltre possibile utilizzare queste informazioni per recuperare una copia locale di qualsiasi versione del file oppure eseguire il confronto tra due versioni qualsiasi del file.  
@@ -69,7 +68,7 @@ ms.locfileid: "62843482"
   
 -   [Creazione di report relativi alla cronologia e allo stato](../../2014/database-engine/create-history-and-status-reports.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Nozioni fondamentali sul controllo del codice sorgente](../../2014/database-engine/source-control-basics.md)  
   
   

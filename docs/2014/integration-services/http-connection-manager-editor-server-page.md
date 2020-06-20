@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 774778a0-ece6-4971-b93f-b121d8fc1fc1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 197a2668beb60acf2473a1f53786d7b553e08cf6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3694eeb93e9edbc053a8534841a1edf438489ca9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058249"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968331"
 ---
 # <a name="http-connection-manager-editor-server-page"></a>Editor gestione connessione HTTP (pagina Server)
   La scheda **Server** della finestra di dialogo **Editor gestione connessione HTTP** consente di configurare la gestione connessione HTTP specificando proprietà quali l'URL e le credenziali di sicurezza. Una connessione HTTP consente a un pacchetto di accedere al server Web utilizzando il protocollo HTTP per l'invio o la ricezione di file. Dopo aver configurato la gestione connessione HTTP sarà inoltre possibile verificare la connessione.  
@@ -50,7 +49,7 @@ ms.locfileid: "66058249"
  **Usa certificato client**  
  Consente di specificare se si desidera che per la gestione connessione HTTP venga utilizzato un certificato client per l'autenticazione.  
   
- **Certificato**  
+ **Certificate**  
  Consente di selezionare un certificato nell'elenco usando la finestra di dialogo **Seleziona certificato** . Nella casella di testo viene visualizzato il nome associato al certificato.  
   
  **Timeout (in secondi)**  
@@ -62,7 +61,7 @@ ms.locfileid: "66058249"
  **Test connessione**  
  Dopo aver configurato la gestione connessione HTTP, fare clic su **Test connessione**per assicurarsi che la connessione sia operativa.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor gestione connessione HTTP &#40;pagina Proxy&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)  
   

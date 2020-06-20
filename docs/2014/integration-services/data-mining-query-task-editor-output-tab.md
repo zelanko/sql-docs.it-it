@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 62f9e015-6fe0-4396-ad90-3ad51bf00025
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7b381ec722125bfa6ad8a4b8102e2fa3b7a5c309
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dca81c082f936913a5844a7920a561325e87ceb5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890464"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939132"
 ---
 # <a name="data-mining-query-task-editor-output-tab"></a>Editor attività Query di data mining (Scheda Output)
   Utilizzare la scheda **Output** della finestra di dialogo **Editor attività Query di data mining** per specificare la destinazione della query di stima.  
@@ -37,10 +36,10 @@ ms.locfileid: "68890464"
  Consente di digitare una descrizione dell'attività Query di data mining.  
   
 ## <a name="output-tab-options"></a>Opzioni della scheda Output  
- **Connessione**  
+ **Connection**  
  Selezionare una gestione connessione nell'elenco oppure fare clic su **Nuova** per creare una nuova gestione connessione.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova gestione connessione. È possibile utilizzare solo i tipi di gestione connessione ADO.NET e OLE DB.  
   
  **Tabella di output**  

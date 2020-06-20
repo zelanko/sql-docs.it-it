@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 0ceb461e-12c1-44ea-97ac-b99bf308676b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1c9b04245e14be67242d5cd1ea6d257ac4fc6038
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2565ed28a882750ab9b37beadbce698d3a0abb19
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79525432"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939962"
 ---
 # <a name="tabular-model-programming"></a>Programmazione di modelli tabulari
   I modelli tabulari utilizzano costrutti relazionali per modellare i dati di Analysis Services utilizzati dalle applicazioni analitiche e di report. Questi modelli vengono eseguiti in un'istanza di Analysis Services configurata per la modalità tabulare, utilizzando un motore di analisi in memoria per l'archiviazione in memoria e rapide scansioni di tabella in grado di aggregare e calcolare i dati in base alle esigenze.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9c346ae8-87fa-44e5-b88a-47e804fedf20
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b3c44976781f12b4a3bbc62d58b45ba59bc14ac0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ef1ecca2beb0513fd8f691de9af459ebb8ef6ae1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952401"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059051"
 ---
 # <a name="repair-powerpivot-for-sharepoint"></a>Ripristino di PowerPivot per SharePoint
   Lo strumento di configurazione PowerPivot può essere utilizzato per ripristinare un'installazione esistente PowerPivot per SharePoint. Lo strumento consente di leggere le impostazioni di configurazione di un'istanza di PowerPivot per SharePoint locale, fornendo le azioni per riconfigurare un'impostazione non coerente con un'installazione di PowerPivot per SharePoint. Ad esempio, se si arresta un servizio o si ritira una soluzione, con le azioni offerte dallo strumento sarà possibile avviare il servizio o distribuire la soluzione.  

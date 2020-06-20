@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b3be16ea856b5d632ba5a0285bad2c4d2d93709c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8df3e34c2c70c81f9710ade0d6855446b930fb50
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62473148"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011803"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Amministrazione automatizzata in un'organizzazione
   L'automazione dell'amministrazione in più istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene definita *amministrazione multiserver*. Utilizzare l'amministrazione multiserver per eseguire le operazioni seguenti:  
@@ -92,8 +91,8 @@ ms.locfileid: "62473148"
  [sp_help_targetservergroup &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)   
  [sp_resync_targetserver &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)   
  [sp_update_targetservergroup &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql)   
- [dbo. sysjobservers &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-sysjobservers-transact-sql)   
- [sys. syslogins &#40;&#41;Transact-SQL](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)   
- [dbo. systargetservers &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-systargetservers-transact-sql)  
+ [dbo.sysjobservers &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-sysjobservers-transact-sql)   
+ [sys.sysaccount di accesso &#40;&#41;Transact-SQL](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)   
+ [dbo.systargetServers &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-systargetservers-transact-sql)  
   
   

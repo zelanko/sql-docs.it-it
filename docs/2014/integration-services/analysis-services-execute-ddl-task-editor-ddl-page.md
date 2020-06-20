@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f21bf8d0-ec5f-4c18-9de0-8875addb927b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2b57ad76be3811352bbfb8774fb56c748efa1ac8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7cb1c84cccf4123f6ca1894baba5676937d80a15
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061612"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925642"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Editor attività Esegui DDL Analysis Services (pagina DDL)
   La pagina **DDL** della finestra di dialogo **Editor attività Esegui DDL Analysis Services** consente di specificare una connessione a un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o a un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per offrire informazioni sull'origine delle istruzioni DDL (Data Definition Language).  
@@ -27,8 +26,8 @@ ms.locfileid: "66061612"
  Per altre informazioni su questa attività, vedere [Attività Esegui DDL Analysis Services](control-flow/analysis-services-execute-ddl-task.md).  
   
 ## <a name="static-options"></a>Opzioni statiche  
- **Connessione**  
- Selezionare un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o una gestione connessione [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dall'elenco oppure fare clic su <\<**Nuova connessione**> e usare la finestra di dialogo **Aggiungi gestione connessione Analysis Services** per creare una nuova connessione.  
+ **Connection**  
+ Selezionare un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] progetto o una [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] gestione connessione nell'elenco oppure fare clic su \<**New connection...**> e utilizzare la finestra di dialogo **Aggiungi Analysis Services gestione connessione** per creare una nuova connessione.  
   
  **Argomenti correlati:** [Riferimento all'interfaccia utente della finestra di dialogo Aggiungi gestione connessione Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Gestione connessione Analysis Services](connection-manager/analysis-services-connection-manager.md)  
   
@@ -49,17 +48,17 @@ ms.locfileid: "66061612"
   
 ### <a name="sourcetype--file-connection"></a>SourceType = File Connection  
  **origine**  
- Selezionare una connessione file dall'elenco oppure fare clic su \<**Nuova connessione...**> e usare la finestra di dialogo **Gestione connessione file** per creare una nuova connessione.  
+ Selezionare una connessione file nell'elenco oppure fare clic su \<**New connection...**> e utilizzare la finestra di dialogo **gestione connessione file** per creare una nuova connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](connection-manager/file-connection-manager.md)  
   
 ### <a name="sourcetype--variable"></a>SourceType = Variable  
  **origine**  
- Selezionare una variabile dall'elenco oppure fare clic su \<**Nuova variabile**> e usare la finestra di dialogo **Aggiungi variabile** per creare una nuova variabile.  
+ Selezionare una variabile nell'elenco oppure fare clic su \<**New variable...**> e utilizzare la finestra di dialogo **Aggiungi variabile** per creare una nuova variabile.  
   
  **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Analysis Services Editor attività Esegui DDL &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Pagina espressioni](expressions/expressions-page.md)   

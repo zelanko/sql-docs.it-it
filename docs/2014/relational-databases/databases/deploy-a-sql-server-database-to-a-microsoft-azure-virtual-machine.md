@@ -41,16 +41,15 @@ helpviewer_keywords:
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c7d84fbe56d36bd91f2b7f8b49a3df73fb383c6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 085f8ae1699e6a7bc1ceecb31075dff83d2b79ea
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175734"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970045"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Distribuire un database di SQL Server a una macchina virtuale di Microsoft Azure
-  Usare la procedura guidata **Distribuisci un database di SQL Server in una** macchina virtuale di Azure per distribuire un database [!INCLUDE[ssDE](../../includes/ssde-md.md)] da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un'istanza del a in una macchina virtuale (VM) di Azure. La procedura guidata usa un'operazione di backup completo del database, pertanto copia sempre lo schema completo del database e i dati da un database utente SQL Server. La procedura guidata esegue inoltre tutta la configurazione della macchina virtuale di Azure automaticamente, pertanto non sono necessarie operazioni preliminari per la configurazione della VM.  
+  Usare la procedura guidata **Distribuisci un database di SQL Server in una** macchina virtuale di Azure per distribuire un database da un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in una macchina virtuale (VM) di Azure. La procedura guidata usa un'operazione di backup completo del database, pertanto copia sempre lo schema completo del database e i dati da un database utente SQL Server. La procedura guidata esegue inoltre tutta la configurazione della macchina virtuale di Azure automaticamente, pertanto non sono necessarie operazioni preliminari per la configurazione della VM.  
   
  Non è possibile usare la procedura guidata per i backup differenziali perché non sovrascrive un database esistente avente lo stesso nome di database. Per sostituire un database esistente sulla VM, è innanzitutto necessario eliminare il database esistente o modificare il nome del database. Se si verifica un conflitto di denominazione tra il nome del database per un'operazione di distribuzione in transito e un database esistente sulla VM, la procedura guidata suggerirà un nome di database aggiunto per il database in transito per consentire il completamento dell'operazione.  
   
@@ -148,19 +147,19 @@ ms.locfileid: "70175734"
   
         -   <OtherSettings  
   
-            -   TraceLevel="Debug" \<!-- Livello di registrazione -->  
+            -   TraceLevel = "debug"\<!-- Logging level -->  
   
-            -   BackupPath="\\\\[nome server]\\[volume]\\" \<!-- Ultimo percorso usato per il backup. Usato come impostazione predefinita nella procedura guidata. -->  
+            -   BackupPath = " \\ \\ [nome server] \\ [volume] \\ "\<!-- The last used path for backup. Used as default in the wizard. -->  
   
-            -   CleanupDisabled = false/> \<!--procedura guidata non eliminerà i file intermedi e gli oggetti di Azure (VM, CS, SA). -->  
+            -   CleanupDisabled = false/>\<!-- Wizard will not delete intermediate files and Azure objects (VM, CS, SA). -->  
   
-        -   <PublishProfile \<! -- Informazioni sull'ultimo profilo di pubblicazione usato. -->  
+        -   <PublishProfile\<!-- The last used publish profile information. -->  
   
-            -   Certificate="12A34B567890123ABCD4EF567A8" \<!-- Il certificato da usare nella procedura guidata. -->  
+            -   Certificate = "12A34B567890123ABCD4EF567A8"\<!-- The certificate for use in the wizard. -->  
   
-            -   Subscription="1a2b34c5-67d8-90ef-ab12-xxxxxxxxxxxxx" \<!-- La sottoscrizione da usare nella procedura guidata. -->  
+            -   Subscription = "1a2b34c5-67d8-90EF-AB12-xxxxxxxxxxxxx"\<!-- The subscription for use in the wizard. -->  
   
-            -   Name="My Subscription" \<!-- Nome della sottoscrizione. -->  
+            -   Nome = "sottoscrizione personale"\<!-- The name of the subscription. -->  
   
             -   Publisher="" />  
   
@@ -200,7 +199,7 @@ ms.locfileid: "70175734"
   
  **Opzioni**  
   
--   Fare clic su **Connetti** e quindi specificare i dettagli della connessione per l'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di che ospita il database da distribuire.  
+-   Fare clic su **Connetti** e quindi specificare i dettagli della connessione per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita il database da distribuire.  
   
 -   Usare l'elenco a discesa **Selezione database** per specificare il database da distribuire.  
   

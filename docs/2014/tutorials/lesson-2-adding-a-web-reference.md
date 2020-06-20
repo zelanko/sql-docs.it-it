@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a2c2b8b8-6b13-45ca-ab3b-1582447b6807
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: dd4b9edc8c054a7fa2ec84bdc8d892e5b5a903a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e455dd25c2b5d4ffa28bd2bdc28ff679861f1f1d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316006"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011406"
 ---
 # <a name="lesson-2-adding-a-web-reference"></a>Lezione 2: Aggiunta di un riferimento Web
   L'individuazione di un servizio Web è il processo che consente a un client di individuare un servizio Web e ottenerne la descrizione. Il processo di individuazione di un servizio Web in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] implica l'interrogazione di un sito Web in base a un algoritmo predeterminato. Scopo di questo processo è quello di individuare la descrizione del servizio, ovvero un documento XML scritto nel linguaggio WSDL (Web Services Description Language).  
@@ -32,7 +31,7 @@ ms.locfileid: "63316006"
   
 3.  Nella finestra di dialogo **Impostazioni riferimento al servizio** fare clic su **Aggiungi riferimento Web**.  
   
-4.  Nella casella **URL** della finestra di dialogo **Aggiungi riferimento Web** digitare l'URL per ottenere la descrizione del servizio Web ReportServer, ad esempio http://localhost/reportserver/reportservice2010.asmx. Fare quindi clic sul pulsante **Vai** per recuperare le informazioni sul servizio Web.  
+4.  Nella casella **URL** della finestra di dialogo **Aggiungi riferimento Web** digitare l'URL per ottenere la descrizione del servizio Web ReportServer, ad esempio http://localhost/reportserver/reportservice2010.asmx . Fare quindi clic sul pulsante **Vai** per recuperare le informazioni sul servizio Web.  
   
      \- - oppure -  
   
@@ -50,7 +49,7 @@ ms.locfileid: "63316006"
   
  Per altre informazioni, vedere [Accesso all'API SOAP](../reporting-services/report-server-web-service/accessing-the-soap-api.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Servizio Web ReportServer](../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Lezione 3: accesso al servizio Web](../../2014/tutorials/lesson-3-accessing-the-web-service.md)   
  [Accesso al servizio Web ReportServer utilizzando Visual Basic o Visual C&#35; &#40;SSRS tutorial&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  

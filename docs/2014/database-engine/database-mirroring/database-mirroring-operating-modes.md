@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5975008849ec4ef8a4d50aa559bb69554b65132a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c944b402b8b1ba9b78036d667ec728ccaf561a91
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807663"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934282"
 ---
 # <a name="database-mirroring-operating-modes"></a>Modalità di funzionamento del mirroring del database
   In questo argomento vengono illustrate le modalità di funzionamento sincrona e asincrona per le sessioni di mirroring del database.  
@@ -227,7 +226,7 @@ ms.locfileid: "62807663"
 ###  <a name="viewing-the-safety-setting-and-state-of-the-witness"></a><a name="ViewWitness"></a>Visualizzazione dell'impostazione di sicurezza e dello stato del server di controllo del mirroring  
  Per visualizzare l'impostazione di sicurezza e lo stato del server di controllo del mirroring per un database, usare la vista del catalogo **sys.database_mirroring** . Le colonne rilevanti sono le seguenti:  
   
-|Fattore|Colonne|Descrizione|  
+|Fattore|Colonne|Description|  
 |------------|-------------|-----------------|  
 |Livello di sicurezza delle transazioni|**mirroring_safety_level** o **mirroring_safety_level_desc**|Impostazione del livello di protezione delle transazioni per gli aggiornamenti nel database mirror, scelta tra le seguenti:<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL = database non online|  
 |Disponibilità di un server di controllo del mirroring|**mirroring_witness_name**|Nome del server di controllo del mirroring del database o valore NULL se tale server non esiste.|  
@@ -263,6 +262,6 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
   
 -   [Modifica della protezione delle transazioni in una sessione di mirroring del database &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Monitoraggio del mirroring del database &#40;SQL Server&#41;](monitoring-database-mirroring-sql-server.md)   
  [Server di controllo del mirroring del database](database-mirroring-witness.md)  

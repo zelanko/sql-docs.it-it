@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7a799707dc57e07528afb29c135a5ee394c56354
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61a49ccb89343984b29018f293656fd2a9137b37
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770217"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939192"
 ---
 # <a name="tutorial-using-the-odata-source-ssis"></a>Esercitazione: utilizzo dell'origine OData [SSIS]
   In questa esercitazione viene eseguito il processo per estrarre la raccolta **Dipendenti** del servizio **Northwind** OData di esempio (http://services.odata.org/V3/Northwind/Northwind.svc/) e caricarla in un file flat.  
@@ -44,7 +43,7 @@ ms.locfileid: "62770217"
   
 5.  Fare clic su **Nuovo** per aggiungere una nuova gestione connessione OData.  
   
-6.  Immettere l'URL del servizio OData in **percorso documento di servizio**. Può essere l'URL del documento di servizio o l'URL di un'entità o di un feed specifico. Ai fini di questa esercitazione, digitare [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/).  
+6.  Immettere l'URL del servizio OData in **percorso documento di servizio**. Può essere l'URL del documento di servizio o l'URL di un'entità o di un feed specifico. Ai fini di questa esercitazione, digitare [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/) .  
   
 7.  Verificare che sia selezionato **Autenticazione di Windows** come **autenticazione** da utilizzare per accedere al servizio OData. **Autenticazione di Windows** è selezionato per impostazione predefinita. Per utilizzare l'autenticazione di base, selezionare **Usa il nome utente e la password seguenti**.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "62770217"
   
 10. Selezionare **Dipendenti** nell'elenco a discesa **Raccolta**.  
   
-11. Immettere tutti i filtri o le opzioni query OData aggiuntive per **Opzioni query**. Ad esempio, $orderby=CompanyName&$top=100. Ai fini di questa esercitazione immettere **$top=5**.  
+11. Immettere tutti i filtri o le opzioni query OData aggiuntive per **Opzioni query**. Ex. $orderby=CompanyName&$top=100. Ai fini di questa esercitazione immettere **$top=5**.  
   
 12. Fare clic su **Anteprima** per visualizzare un'anteprima dei dati.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a19d5d39a3133ffc664f5ea7050645e2a28a8a20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 457f3ef946b5cfaf86a4a19774af63c5d7635882
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774283"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930972"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>Gestione di account di accesso e processi per i database di un gruppo di disponibilità (SQL Server)
   È necessario gestire periodicamente lo stesso set di account di accesso utente e processi [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent in ogni database primario di un gruppo di disponibilità AlwaysOn e nei database secondari corrispondenti. Gli account di accesso e i processi devono essere riprodotti in ogni istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in cui è ospitata una replica di disponibilità per il gruppo di disponibilità.  
@@ -32,7 +31,7 @@ ms.locfileid: "62774283"
   
      I processi di backup possono usare la funzione [sys.fn_hadr_is_preferred_backup_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) per identificare se la replica locale è quella preferita per i backup, in base alle preferenze di backup del gruppo di disponibilità. I processi di backup creati tramite la [Creazione guidata piano di manutenzione](../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) a livello nativo usano questa funzione. Per altri processi di backup, è consigliabile utilizzare questa funzione come condizione nei processi di backup, pertanto vengono eseguiti solo nella replica preferita. Per ulteriori informazioni, vedere [repliche secondarie attive: backup in repliche secondarie (gruppi di disponibilità AlwaysOn)](availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
--   **Logins**  
+-   **Account di accesso**  
   
      Se si utilizzano database indipendenti, è possibile configurare utenti indipendenti nei database per i quali non è necessario creare account di accesso nelle istanze del server che ospitano una replica secondaria. Per un database di disponibilità non indipendente, sarà necessario creare utenti per gli account di accesso nelle istanze del server che ospitano le repliche di disponibilità. Per altre informazioni, vedere [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql).  
   
@@ -43,7 +42,7 @@ ms.locfileid: "62774283"
   
 -   **Metadati aggiuntivi**  
   
-     Gli account di accesso e i processi non sono le uniche informazioni che è necessario ricreare in ogni istanza del server in cui è ospitata una replica secondaria per uno specifico gruppo di disponibilità. Potrebbe ad esempio essere necessario ricreare le impostazioni di configurazione del server, credenziali, dati crittografati, autorizzazioni, impostazioni di replica, applicazioni di Service Broker, trigger (a livello di server) e così via. Per ulteriori informazioni, vedere [gestire i metadati quando si rende disponibile un database in un'altra istanza del Server &#40;SQL Server&#41;](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+     Gli account di accesso e i processi non sono le uniche informazioni che è necessario ricreare in ogni istanza del server in cui è ospitata una replica secondaria per uno specifico gruppo di disponibilità. Potrebbe ad esempio essere necessario ricreare le impostazioni di configurazione del server, credenziali, dati crittografati, autorizzazioni, impostazioni di replica, applicazioni di Service Broker, trigger (a livello di server) e così via. Per altre informazioni, vedere [Gestione dei metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ##  <a name="logins-of-applications-that-use-sql-server-authentication-or-a-local-windows-login"></a><a name="SSauthentication"></a> Account di accesso di applicazioni in cui viene utilizzata l'autenticazione di SQL Server o un account di accesso di Windows locale  
  Se in un'applicazione viene utilizzata l'autenticazione di SQL Server o un account di accesso di Windows locale, i SID non corrispondenti possono impedire la risoluzione in un'istanza remota di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]da parte dell'account di accesso dell'applicazione. In caso di SID non corrispondenti, l'account di accesso diventa un utente orfano nell'istanza del server remoto. Questo problema si può verificare quando tramite un'applicazione si effettua la connessione a un database di log shipping o con mirroring dopo un failover o a un database Sottoscrittore di replica inizializzato da un backup.  
@@ -57,7 +56,7 @@ ms.locfileid: "62774283"
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
--   [Creazione di un account di accesso](../relational-databases/security/authentication-access/create-a-login.md)  
+-   [Creare un account di accesso](../relational-databases/security/authentication-access/create-a-login.md)  
   
 -   [Creare un utente del database](../relational-databases/security/authentication-access/create-a-database-user.md).  
   
@@ -65,7 +64,7 @@ ms.locfileid: "62774283"
   
 -   [Gestire i metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Database indipendenti](../relational-databases/databases/contained-databases.md)   
  [Creazione di processi](../ssms/agent/create-jobs.md)  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 66761a14-d646-44bb-9dff-be5ab2c40e88
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dcf8984e678a9aba926be1fdc50dff073f82b6ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c24027a73cc36ea0cae4915b93d9968adf3e70b1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808662"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934642"
 ---
 # <a name="connect-to-server-connection-properties-page-reporting-services"></a>Connetti al server (pagina Proprietà connessione) Reporting Services
   Usare questa scheda per visualizzare o specificare le opzioni relative alla connessione a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] o alla registrazione di [!INCLUDE[ssRS](../includes/ssrs.md)] in **Server registrati**. Le opzioni**Connetti** e **Opzioni** vengono visualizzate in questa finestra di dialogo solamente durante la connessione. Le opzioni**Test** e **Salva** vengono visualizzate in questa finestra di dialogo solamente durante la registrazione del [!INCLUDE[ssRS](../includes/ssrs.md)].  
@@ -41,7 +40,7 @@ ms.locfileid: "62808662"
  **Salva**  
  Consente di salvare le impostazioni in **Server registrati**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurare una connessione al database del server di report &#40;Configuration Manager SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Connettersi a un server di report in Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Autenticazione con il server di report](../reporting-services/security/authentication-with-the-report-server.md)  

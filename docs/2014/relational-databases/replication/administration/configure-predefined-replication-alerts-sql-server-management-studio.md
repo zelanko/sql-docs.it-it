@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c0414147-7ffe-4f9a-908c-71c1b5201584
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 103f461c29e2bd7534ad5cb96836f06c972a6c5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 191ffcfe0fb5ac041956a42500da650f6d8cc453
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63187256"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066026"
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>Configurazione degli avvisi di replica predefiniti (SQL Server Management Studio)
   La replica offre gli avvisi predefiniti seguenti, configurabili in risposta a eventi di replica:  
@@ -41,7 +40,7 @@ ms.locfileid: "63187256"
 1.  Connettersi al database di distribuzione in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], quindi espandere il nodo del server.    
 2.  Espandere la cartella **SQL Server Agent** e quindi la cartella **Avvisi** .    
 3.  Fare clic con il pulsante destro del mouse su un avviso di replica e quindi scegliere **Proprietà**.    
-4.  Impostare le ** \<** opzioni nella finestra di dialogo Proprietà avviso> alertName:    
+4.  Impostare le opzioni nella finestra di dialogo ** \<AlertName> Proprietà avviso** :    
     -   Nella pagina **Generale** fare clic su **Abilita**e specificare il database a cui si desidera applicare l'avviso.    
     -   Nella pagina **Risposta** specificare se si desidera inviare un messaggio di posta elettronica e/o eseguire un processo.  
   
@@ -53,15 +52,15 @@ ms.locfileid: "63187256"
   
 1.  Nella scheda **Avvisi** fare clic su **Configura avvisi**.    
 2.  Nella finestra di dialogo **Configura avvisi di replica** selezionare un avviso e quindi fare clic su **Configura**.    
-3.  Impostare le ** \<** opzioni nella finestra di dialogo Proprietà avviso> alertName:    
+3.  Impostare le opzioni nella finestra di dialogo ** \<AlertName> Proprietà avviso** :    
     -   Nella pagina **Generale** fare clic su **Abilita**e specificare il database a cui si desidera applicare l'avviso.    
     -   Nella pagina **Risposta** specificare se si desidera inviare un messaggio di posta elettronica e/o eseguire un processo.    
          Se l'avviso è **replica: la convalida dei dati del Sottoscrittore non è riuscita**, è possibile specificare il processo di risposta fornito dalla replica per questo avviso: selezionare **Esegui processo**e quindi fare clic sul pulsante Sfoglia (**...**). Nella finestra di dialogo **Individua processo** fare clic su **Sfoglia**. Nella finestra di dialogo **Cerca oggetti** selezionare **Reinizializzazione delle sottoscrizioni con errori di convalida dei dati**. Fare clic su **OK** in entrambe le finestre di dialogo aperte. Durante l'esecuzione il processo utilizza una chiamata di procedura remota (RPC) a una stored procedure che reinizializza la sottoscrizione. Se il server di pubblicazione utilizza un server di distribuzione remoto, è necessario definire un account di accesso al server remoto sul server di pubblicazione in modo che sia possibile eseguire la chiamata di procedura remota (RPC) dal server di distribuzione al server di pubblicazione.   
     -   Nella pagina **Opzioni** personalizzare il testo della risposta.    
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]    
-5.  Fare clic su **Chiudi**.  
+5.  Fare clic su **Close**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Usare gli avvisi per gli eventi degli agenti di replica](../agents/use-alerts-for-replication-agent-events.md)  
   
   

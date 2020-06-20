@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 812c205c1e612604c0c39a5effb3b9da50308d7a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03afd5bdafe30a8684165fef5febae49f210f042
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067955"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940212"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>Configurare le proprietà di creazione di report per i report Power View
   In questa lezione supplementare si imposteranno le proprietà dei report per il progetto Adventure Works Internet Sales Model. Con le proprietà dei report risulta più semplice, per gli utenti finali, selezionare e visualizzare i dati del modello in Power View. Si imposteranno inoltre le proprietà per nascondere alcune colonne e tabelle, nonché per creare nuovi dati da utilizzare nei grafici.  
@@ -164,7 +163,7 @@ ms.locfileid: "66067955"
   
     |Colonna|Proprietà|valore|  
     |------------|--------------|-----------|  
-    |Date|Formato dati|Short Date|  
+    |Data|Formato dati|Short Date|  
     |Day Number of Week|Nascosto|True|  
     |Day Name|Sort By Column|Day Number of Week|  
     |Day of Week|Nascosto|True|  

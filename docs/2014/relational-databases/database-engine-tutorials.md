@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1b2f4b080287dd4481a121def388f327112f21ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eb5c7603d15a5245b0c76a6dc79374bc8e28f865
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154616"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953031"
 ---
 # <a name="database-engine-tutorials"></a>Esercitazioni del motore di database
   In questa sezione sono disponibili le esercitazioni per il [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  

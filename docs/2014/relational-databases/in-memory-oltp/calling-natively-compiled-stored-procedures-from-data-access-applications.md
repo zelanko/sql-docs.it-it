@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 09f68c2a8f316189b1b28e9b252950ce6761d19d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5583137d4c159756246938a83bf8c8e1fad6cdea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63156837"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050344"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Chiamata di stored procedure compilate in modo nativo da applicazioni di accesso ai dati
   In questo argomento vengono fornite informazioni aggiuntive per chiamare stored procedure compilate in modo nativo da applicazioni di accesso ai dati.  
@@ -392,7 +391,7 @@ int _tmain() {
 }  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [stored procedure compilate in modo nativo](natively-compiled-stored-procedures.md)  
   
   

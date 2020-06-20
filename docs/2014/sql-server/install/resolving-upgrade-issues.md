@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: 113eb435-8d36-4ed6-9790-b5e4c14809c8
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 85de606ecea93aba80714d4266e9897dd856879f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c00b08d40bc8c17013e6af19b5d11b0b7ad78c4b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092497"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058984"
 ---
 # <a name="resolving-upgrade-issues"></a>Risoluzione dei problemi di aggiornamento
   Negli argomenti di questa sezione vengono descritti i problemi relativi all'aggiornamento rilevabili e quelli non rilevabili che possono tuttavia influire sull'esecuzione dell'aggiornamento o del post-aggiornamento. I problemi sono organizzati per componente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -68,7 +67,7 @@ ms.locfileid: "66092497"
   
 -   [Utilizzare sp_rename per rinominare gli indici duplicati](../../../2014/sql-server/install/use-sp-rename-to-rename-duplicate-index-name.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server 2014 preparazione aggiornamento &#91;nuova&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

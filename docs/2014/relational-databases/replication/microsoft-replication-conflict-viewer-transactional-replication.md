@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 293048b191fff03b11b7e28d7778a34793b4c7f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60d6ba6ab84615e43e872c4e8d4238a263a0b767
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62714868"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065843"
 ---
 # <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Visualizzatore conflitti di replica Microsoft (replica transazionale)
   Il Visualizzatore conflitti di replica consente di visualizzare conflitti che si sono verificati durante la sincronizzazione per la replica transazionale peer-to-peer e la replica transazionale con sottoscrizioni ad aggiornamento in coda. Per altre informazioni, vedere [Visualizzare i conflitti di dati per le pubblicazioni transazionali &#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md).  
@@ -36,7 +35,7 @@ ms.locfileid: "62714868"
  **Pubblicazione**  
  Consente di scegliere una pubblicazione contenente tabelle con conflitti.  
   
- **tavolo**  
+ **Tabella**  
  Consente di scegliere una tabella contenente conflitti.  
   
  **Definisci filtro**  
@@ -48,7 +47,7 @@ ms.locfileid: "62714868"
  **Seleziona tutto**  
  Fare clic su questo pulsante per selezionare tutti i conflitti elencati nella griglia.  
   
- **Deseleziona tutto**  
+ **Selezionare nessuno**  
  Fare clic su questo pulsante per deselezionare tutti i conflitti elencati nella griglia.  
   
  **Rimuovi**  
@@ -66,7 +65,7 @@ ms.locfileid: "62714868"
  **Registra informazioni dettagliate sul conflitto**  
  Selezionare questa casella per registrare le informazioni dettagliate sul conflitto in un file. Per specificare il percorso del file, scegliere **Opzioni** dal menu **Visualizza**. Immettere un valore oppure fare clic sul pulsante **...** e spostarsi sul file appropriato. Fare clic su **OK** per chiudere la finestra di dialogo **Opzioni** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Rilevamento dei conflitti nella replica peer-to-peer](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
  [Visualizzare i conflitti di dati per le pubblicazioni transazionali &#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   

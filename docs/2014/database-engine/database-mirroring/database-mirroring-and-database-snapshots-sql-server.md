@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3c643ad9a84c6afe5b6ff08fd6716753ef42f79e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1e807db72a84e210d8781aa53a3dcc50a1d2f194
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807265"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934362"
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>Mirroring e snapshot del database (SQL Server)
   Per ripartire il carico di lavoro dei report, è possibile avvalersi di un database mirror gestito per scopi di disponibilità. Per utilizzare un database mirror per la gestione dei report, creare nel database mirror uno snapshot del database e indirizzare le richieste di connessione client allo snapshot più recente. Uno snapshot del database è uno snapshot statico, in sola lettura e consistente a livello di transazioni del relativo database di origine nello stato in cui quest'ultimo si trovava al momento della creazione dello snapshot. Per creare uno snapshot del database in un database mirror, è necessario che il database si trovi nello stato di mirroring sincronizzato.  

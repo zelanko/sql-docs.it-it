@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b81d4e1aeb2192e6a32a34bed74b9cd55a1cb9a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 384234072c312fca2c91da8ab4e6ac09eb0f79fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149698"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011594"
 ---
 # <a name="review-the-replay-results"></a>Controllo dei risultati della riproduzione
   Al termine di una riesecuzione distribuita in Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'attività di riesecuzione per ogni client può essere acquisita e salvata in file di traccia dei risultati in ogni client. Per acquisire questa attività, è necessario usare il parametro **-o** quando si esegue lo strumento di amministrazione con l'opzione **replay** . Per altre informazioni sull'opzione replay, vedere [Opzione replay &#40;Distributed Replay Administration Tool&#41;](replay-option-distributed-replay-administration-tool.md).  
@@ -71,15 +70,15 @@ ms.locfileid: "63149698"
 |ConnectionID|`int`|ID univoco della connessione di acquisizione per l'evento.|11|  
 |ReplaySPID|`int`|ID univoco della sessione di riproduzione per l'evento.|12|  
 |DatabaseName|`nvarchar`|Nome del database in cui viene eseguita l'istruzione dell'utente.|13|  
-|LoginName|`nvarchar`|Nome di accesso dell'utente. Può trattarsi di un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] account di accesso di sicurezza di o delle credenziali di accesso di Microsoft Windows, nel formato *Domain_name*\\*user_name*.|14|  
+|LoginName|`nvarchar`|Nome di accesso dell'utente. Può corrispondere a un account di accesso di sicurezza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o alle credenziali di accesso di Microsoft Windows, nel formato *nome_dominio*\\*nome_utent*.|14|  
 |CaptureHostName|`nvarchar`|Nome del computer in cui viene eseguito il servizio client durante l'acquisizione.|15|  
 |ReplayHostName|`nvarchar`|Nome del computer in cui viene eseguito il client durante la riproduzione.|16|  
 |ApplicationName|`nvarchar`|Nome dell'applicazione client che ha creato la connessione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] durante l'acquisizione.|17|  
   
-## <a name="see-also"></a>Vedi anche  
- [SQL Server Riesecuzione distribuita](sql-server-distributed-replay.md)   
- [Requisiti di Riesecuzione distribuita](distributed-replay-requirements.md)   
- [Opzioni della riga di comando dello strumento di amministrazione &#40;Riesecuzione distribuita Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+## <a name="see-also"></a>Vedere anche  
+ [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
+ [Requisiti relativi a Riesecuzione distribuita](distributed-replay-requirements.md)   
+ [Opzioni della riga di comando dello strumento di amministrazione &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [Configurare Riesecuzione distribuita](configure-distributed-replay.md)  
   
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 258ec0640a5281152fcce6faa771272c3f94de64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a3f35ce0c8d8bc2891d5233ae4fd4c1d3e97dcd3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809345"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934862"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>Servizio SQL Server Browser (Motore database e SSAS)
   Il programma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser viene eseguito come servizio Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser rimane in attesa delle richieste in entrata di risorse di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fornisce informazioni sulle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installate nel computer. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser consente di eseguire le azioni seguenti:  
@@ -127,7 +126,7 @@ ms.locfileid: "62809345"
 ### <a name="using-a-firewall"></a>Utilizzo di un firewall  
  Per comunicare con il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser in un server protetto da un firewall, aprire la porta UDP 1434 oltre alla porta TCP usata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio la porta 1433. Per informazioni sull'utilizzo di un firewall, vedere "Procedura: Configurazione di un firewall per l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Protocolli e librerie di rete](../../sql-server/install/network-protocols-and-network-libraries.md)  
   
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c1ca545e081826f1b81117e377f370136a7b4998
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c42809ab5057d4234b992ec81db0b6571c3e68c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067004"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938822"
 ---
 # <a name="measures-ssas-tabular"></a>Misure (SSAS tabulare)
   Nei modelli tabulari una misura è un calcolo creato utilizzando una formula DAX per l'utilizzo in un client di creazione report. Le misure vengono valutate in base ai campi, ai filtri e ai filtri dei dati selezionati dagli utenti nell'applicazione client di creazione report.  
@@ -32,7 +31,7 @@ ms.locfileid: "66067004"
   
 -   [Attività correlate](#bkmk_rel_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_understanding"></a>Vantaggi  
+##  <a name="benefits"></a><a name="bkmk_understanding"></a> Vantaggi  
  Le misure possono essere basate sulle funzioni di aggregazione standard, ad esempio AVERAGE, COUNT o SUM. In alternativa, è possibile definire formule personalizzate tramite DAX. Oltre alla formula, ogni misura dispone di proprietà definite dal tipo di dati della misura, ad esempio Nome, Dettagli tabella, Formato e Cifre decimali.  
   
  Quando le misure sono state definite in un modello, gli utenti possono aggiungerle a un report o una tabella pivot. A seconda delle prospettive e dei ruoli, le misure vengono visualizzate nell'elenco dei campi con la relativa tabella associata e sono disponibili per tutti gli utenti del modello. In genere, le misure vengono create nelle tabelle dei fatti, tuttavia possono anche essere indipendenti dalla tabella alla quale sono associate.  
@@ -82,7 +81,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 ##  <a name="measure-properties"></a><a name="bkmk_properties"></a>Proprietà misura  
  Ogni misura dispone di proprietà che ne consentono la definizione. Le proprietà delle misure, insieme a quelle della colonna associata, possono essere modificate nella finestra Proprietà. Di seguito sono riportate le proprietà delle misure:  
   
-|Proprietà|Impostazione predefinita|Descrizione|  
+|Proprietà|Impostazione predefinita|Description|  
 |--------------|---------------------|-----------------|  
 |**Descrizione**|Vuoto|Descrizione della misura. La descrizione non verrà visualizzata con la misura in uno strumento client di creazione report.|  
 |**Formato**|Determinato automaticamente in base al tipo di dati della colonna a cui viene fatto riferimento nell'espressione della formula.|Formato della misura, ad esempio, valuta o percentuale.|  
@@ -96,11 +95,11 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
 ##  <a name="related-tasks"></a><a name="bkmk_rel_tasks"></a> Attività correlate  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |-----------|-----------------|  
 |[Creare e gestire misure &#40;SSAS tabulare&#41;](measures-ssas-tabular.md)|Viene descritto come creare e gestire misure utilizzando la griglia delle misure in Progettazione modelli.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Indicatori KPI &#40;&#41;tabulare SSAS](kpis-ssas-tabular.md)   
  [Creare e gestire indicatori KPI &#40;SSAS tabulare&#41;](create-and-manage-kpis-ssas-tabular.md)   
  [Colonne calcolate &#40;SSAS tabulare&#41;](ssas-calculated-columns.md)  
