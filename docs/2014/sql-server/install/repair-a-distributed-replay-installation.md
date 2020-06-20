@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6fcd8ca8-1ceb-457d-9545-096c74e274d7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ca42f1dda184bf5cd99cad7d34f5ae9fce79478b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f8002bfe0f1142cea43704dc88aacb99316eca6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092962"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059111"
 ---
 # <a name="repair-a-distributed-replay-installation"></a>Ripristinare un'installazione di Riesecuzione distribuita
   Il ripristino di un componente Riesecuzione distribuita (controller o client) comporta le operazioni seguenti:  
@@ -32,7 +31,7 @@ ms.locfileid: "66092962"
   
 2.  Selezionare [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nella finestra **Disinstalla o modifica programma** , quindi nella finestra di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dialogo fare clic su **Ripristina**.  
   
-3.  Seguire i passaggi della [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] procedura guidata e nella pagina **Selezione funzionalità** Selezionare i componenti riesecuzione distribuita che si desidera ripristinare, quindi fare clic su **Avanti.**  
+3.  Seguire i passaggi della [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] procedura guidata e nella pagina **Selezione funzionalità** selezionare i componenti riesecuzione distribuita che si desidera ripristinare, quindi fare clic su **Avanti.**  
   
 4.  Completare l'Installazione guidata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] per ripristinare le funzionalità di Riesecuzione distribuita selezionate.  
   

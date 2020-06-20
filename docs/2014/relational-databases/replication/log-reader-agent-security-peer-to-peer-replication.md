@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 6575e2a8-16bb-449c-bdca-4a4202d0972f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d6bcf7d78fd550404f81f9cc303414303ad82504
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae5c8d56c1d51290c35a04c22474fcc04ddff61d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63000354"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065906"
 ---
 # <a name="log-reader-agent-security-peer-to-peer-replication"></a>Sicurezza agente di lettura log (replica peer-to-peer)
    La pagina **Sicurezza agente di lettura log** consente di specificare gli account con cui viene eseguito l'agente di lettura in ogni peer e vengono stabilite le connessioni. Per informazioni sulle autorizzazioni necessarie per gli agenti e le procedure migliori per la sicurezza della replica, vedere [Modello di sicurezza dell'agente di replica](security/replication-agent-security-model.md) e [Procedure consigliate per la sicurezza della replica](security/replication-security-best-practices.md).  
@@ -37,12 +36,12 @@ ms.locfileid: "63000354"
  Database che funge da database di pubblicazione e da database di sottoscrizione in ogni peer.  
   
  **Connessione al server di distribuzione**  
- Contesto in cui viene creata la connessione al server di distribuzione. La connessione locale al server di distribuzione viene sempre stabilita usando il contesto dell'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con cui viene eseguito l'agente e in questo campo, quindi, verrà sempre visualizzato **Rappresenta '\<Dominio>\\<Login\>'** oppure **Rappresenta '\<Computer>\\<Login\>'**.  
+ Contesto in cui viene creata la connessione al server di distribuzione. La connessione locale al server di distribuzione viene sempre eseguita utilizzando il contesto dell' [!INCLUDE[msCoName](../../includes/msconame-md.md)] account di Windows con cui viene eseguito l'agente, pertanto in questo campo viene sempre visualizzato rappresenta **' \<Domain> \\<account di accesso \> '** o **rappresenta ' \<Computer> \\<account di accesso \> '**.  
   
  **Connessione server di pubblicazione**  
- Contesto nel quale viene stabilita la connessione al server di pubblicazione. La connessione al server di pubblicazione può essere effettuata utilizzando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un account di accesso di oppure utilizzando il contesto dell'account di Windows con cui viene eseguito l'agente. Nel campo viene visualizzato uno dei valori seguenti: **Usa l'account di accesso '\<Account accesso>'**, **Rappresenta '\<Dominio>\\<AccountDiAccesso\>'** oppure **Rappresenta '\<Computer>\\<AccountDiAccesso\>'**. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di stabilire tutte le connessioni utilizzando il contesto dell'account di Windows.  
+ Contesto nel quale viene stabilita la connessione al server di pubblicazione. La connessione al server di pubblicazione può essere effettuata utilizzando un account [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di accesso di oppure utilizzando il contesto dell'account di Windows con cui viene eseguito l'agente. Nel campo viene visualizzato uno dei seguenti elementi: **Usa account di accesso ' \<Login> '**, **rappresenta ' \<Domain> \\<account di accesso \> '** o **rappresenta ' \<Computer> \\<account di accesso \> '**. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di stabilire tutte le connessioni utilizzando il contesto dell'account di Windows.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Amministrare una topologia peer-to-peer &#40;la programmazione Transact-SQL della replica&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Replica transazionale peer-to-peer](transactional/peer-to-peer-transactional-replication.md)  
   

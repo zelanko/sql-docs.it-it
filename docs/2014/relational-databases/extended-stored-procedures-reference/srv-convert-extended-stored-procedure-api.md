@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6bc430354ca8ef220caed882f1f8c7942b44d158
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39d738898db75cffd1d979b150628d7c3484b887
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127274"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050792"
 ---
 # <a name="srv_convert-extended-stored-procedure-api"></a>srv_convert (API Stored procedure estesa)
     
@@ -87,7 +86,7 @@ destlen
  *destlen*  
  Specifica la lunghezza, espressa in byte, della variabile di destinazione. Questo parametro viene ignorato per i tipi di dati a lunghezza fissa. Per una variabile di destinazione di tipo SRVCHAR, il valore di *destlen* deve essere la lunghezza totale dello spazio del buffer di destinazione. Una lunghezza di -1 per una variabile di destinazione di tipo SRVCHAR o SRVBINARY indica che lo spazio disponibile è sufficiente. Per una variabile di destinazione di tipo *srvchar*, se la lunghezza è pari a -1 la stringa di caratteri include una terminazione Null.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  La lunghezza dei dati convertiti, espressa in byte, se la conversione del tipo di dati viene eseguita correttamente. Quando **srv_convert** rileva una richiesta di conversione non supportata, chiama il gestore degli errori specificato dallo sviluppatore, se disponibile, imposta un numero di errore globale e restituisce -1.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -114,7 +113,7 @@ destlen
 > [!IMPORTANT]  
 >  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [srv_setutype &#40;API stored procedure estesa&#41;](srv-setutype-extended-stored-procedure-api.md)   
  [srv_willconvert &#40;API Stored procedure estesa&#41;](srv-willconvert-extended-stored-procedure-api.md)  
   

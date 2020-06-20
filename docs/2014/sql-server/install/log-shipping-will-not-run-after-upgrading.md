@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 6727cb7d-ac01-4972-a730-dbb7cdc29705
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 952a47eaa2028819908ef7e93326c31a289a0cc2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2af60743cb2cbf9bf455397fe052c4e81f5a06d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093976"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036620"
 ---
 # <a name="log-shipping-will-not-run-after-upgrading"></a>Il log shipping non verrà eseguito dopo l'aggiornamento
   È in uso il log shipping. Il log shipping di [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] non è compatibile con quello di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e non può essere direttamente aggiornato. Dopo l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], riconfigurare il log shipping utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o le stored procedure.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server Agent log shipping categoria di processi causa l'esito negativo dell'aggiornamento](../../../2014/sql-server/install/sql-server-agent-log-shipping-job-category-causes-upgrade-to-fail.md)   
  [L'aggiornamento modificherà l'account proxy utente SQL Server Agent al UpgradedProxyAccount temporaneo](../../../2014/sql-server/install/upgrading-changes-sql-server-agent-user-proxy-account-to-temporary-account.md)   
  [Problemi di aggiornamento motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

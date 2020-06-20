@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 28437f0903459616a574e713c0f138e8bb459870
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807425"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934482"
 ---
 # <a name="cross-container-transactions"></a>Transazioni tra contenitori
   Le transazioni tra contenitori sono transazioni utente implicite o esplicite che includono chiamate a stored procedure compilate in modo nativo o operazioni in tabelle ottimizzate per la memoria.  
@@ -65,7 +64,7 @@ commit
 ### <a name="isolation-semantics-for-individual-operations"></a>Semantica di isolamento per singole operazioni  
  Una transazione T serializzabile viene eseguita in isolamento completo. È come se per tutte le altre transazioni fosse stato eseguito il commit prima dell'avvio di T o l'avvio dopo il commit di T. Il comportamento diventa più complesso quando operazioni diverse in una transazione presentano livelli di isolamento diversi.  
   
- La semantica generale dei livelli di isolamento delle transazioni [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]in, insieme alle implicazioni sul blocco, viene illustrata in [set Transaction isolation level &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
+ La semantica generale dei livelli di isolamento delle transazioni in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , insieme alle implicazioni sul blocco, viene illustrata in [set Transaction isolation level &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
   
  Per le transazioni tra contenitori in cui operazioni diverse possono avere livelli di isolamento diversi, è necessario comprendere la semantica di isolamento delle singole operazioni di lettura. Le operazioni di scrittura sono sempre isolate. Le scritture in transazioni diverse non possono avere un'influenza reciproca.  
   
@@ -135,7 +134,7 @@ commit
   
  Il lato basato su disco di una transazione T specificata raggiunge un determinato livello di isolamento X se viene soddisfatta una delle condizioni indicate di seguito:  
   
--   Inizia in X. Ovvero, il valore predefinito della sessione è X, perché è stato `SET TRANSACTION ISOLATION LEVEL`eseguito o è l' [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] impostazione predefinita.  
+-   Inizia in X. Ovvero, il valore predefinito della sessione è X, perché è stato eseguito `SET TRANSACTION ISOLATION LEVEL` o è l' [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] impostazione predefinita.  
   
 -   Durante la transazione il livello di isolamento predefinito viene modificato in X utilizzando `SET TRANSACTION ISOLATION LEVEL`.  
   
@@ -185,7 +184,7 @@ commit
   
  Le transazioni tra contenitori di sola lettura implicite o esplicite eseguono la convalida in fase di commit se la transazione accede alle tabelle ottimizzate per la memoria nell'isolamento REPEATABLE READ o SERIALIZABLE. Per informazioni dettagliate sulla convalida, vedere la sezione relativa ai controlli di rilevamento dei conflitti, convalida e dipendenza di commit nelle [transazioni nelle tabelle ottimizzate](../relational-databases/in-memory-oltp/memory-optimized-tables.md)per la memoria.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Informazioni sulle transazioni nelle tabelle ottimizzate per la memoria](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
  [Linee guida per i livelli di isolamento delle transazioni con tabelle con ottimizzazione per la memoria](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)   
  [Linee guida per la logica di riesecuzione per le transazioni in tabelle con ottimizzazione per la memoria](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  

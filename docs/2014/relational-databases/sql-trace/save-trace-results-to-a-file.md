@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 74f80667-62f3-4e14-bb1a-f0c2b6ef3402
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a55662b38fbd69dc45d8f0031856ad4da5929038
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 644fc812bbb4863c336ff2f53f5b2d67ee0a4d5e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63136448"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996430"
 ---
 # <a name="save-trace-results-to-a-file"></a>Salvare i risultati della traccia in un file
   È possibile salvare i risultati della traccia in un file. Un file di traccia è un file nel quale vengono scritti i risultati della traccia. Un file di traccia può trovarsi in una directory locale (ad esempio C:\\*nomecartella*\\*nomefile.trc*) o in una directory di rete (ad esempio \\\nomecomputer\nomecondivisione\nomefile.trc).  
@@ -34,7 +33,7 @@ ms.locfileid: "63136448"
   
 -   Eseguire l'ottimizzazione delle query  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Salva i risultati della traccia in un file quando vengono specificati un percorso e un nome **@tracefile** file per l'argomento della **sp_trace_create**stored procedure.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Salva i risultati della traccia in un file quando vengono specificati un percorso e un nome file per l' **@tracefile** argomento della **sp_trace_create**stored procedure.  
   
 > [!NOTE]  
 >  Se nella stored procedure **sp_trace_create** si specifica un percorso per il salvataggio del file di traccia, è necessario che la directory sia accessibile al server. Si noti anche che se viene specificata una directory locale in **sp_trace_create**, si tratta di una directory locale nel computer server.  

@@ -9,22 +9,21 @@ ms.topic: conceptual
 ms.assetid: b6295ead-bd2f-49dd-8756-35c6afb59648
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2212e7424f22ecca2619ef7215bf94b0dbb62875
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a12c6dd3b0691d62f5509a363311b1deb1584078
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054270"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972291"
 ---
 # <a name="add-update-and-delete-data-master-data-services"></a>Aggiungere, aggiornare ed eliminare dati (Master Data Services)
   È possibile aggiungere dati e apportare modifiche ai dati in bulk a un modello in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
  **Prerequisiti**  
   
--   È necessario avere l'autorizzazione per inserire dati nella tabella stg.\<name>_Leaf, stg.\<name>_Consolidated o stg.\<name>_Relationship del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
+-   È necessario disporre dell'autorizzazione per inserire i dati nel STG. \<name> _Leaf, il STG. \<name> _Consolidated, STG. \<name> _Relationship tabella nel [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  
   
--   È necessario avere l'autorizzazione per eseguire la stored procedure stg.udp_\<name>_Leaf, stg.udp\_\<name>_Consolidated o stg.udp\_\<name>_Relationship nel database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
+-   È necessario disporre delle autorizzazioni per l'esecuzione del _Leaf STG. udp_ \<name> , STG. udp \_ \<name> _Consolidated o del _Relationship stg. UDP \_ \<name> stored procedure nel [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  
   
 -   Il modello non deve avere uno stato di **Commit completato**.  
   
@@ -32,11 +31,11 @@ ms.locfileid: "66054270"
   
 1.  Preparare i membri da importare nella tabella di staging appropriata del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], ad esempio fornire valori per i campi obbligatori. Per una panoramica delle tabelle di staging, vedere [importazione di dati &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
-    -   Per i membri foglia la tabella è stg.\<name>_Leaf, dove \<name> si riferisce all'entità corrispondente. Per informazioni sui campi obbligatori, vedere [Tabella di gestione temporanea dei membri foglia &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)  
+    -   Per i membri foglia la tabella è STG. \<name> _Leaf, dove \<name> fa riferimento all'entità corrispondente. Per informazioni sui campi obbligatori, vedere [Tabella di gestione temporanea dei membri foglia &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)  
   
-    -   Per i membri consolidati la tabella è stg.\<name>_Consolidated. Per informazioni sui campi obbligatori, vedere [Tabella di gestione temporanea di membri consolidati &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md).  
+    -   Per i membri consolidati, la tabella è STG. \<name> _Consolidated. Per informazioni sui campi obbligatori, vedere [Tabella di gestione temporanea di membri consolidati &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md).  
   
-    -   Per spostare la posizione dei membri nelle gerarchie esplicite, la tabella è stg.\<name>_Relationship. Per informazioni sui campi obbligatori, vedere [Tabella di gestione temporanea delle relazioni &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md).  
+    -   Per lo spostamento della posizione dei membri nelle gerarchie esplicite, la tabella è STG. \<name> _Relationship. Per informazioni sui campi obbligatori, vedere [Tabella di gestione temporanea delle relazioni &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md).  
   
          Per una panoramica sullo stato di trasferimento di membri nelle gerarchie esplicite, vedere [&#40;di importazione dati Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
   
@@ -74,7 +73,7 @@ ms.locfileid: "66054270"
   
      Quando si caricano dati dalle tabelle di staging, i dati non vengono convalidati automaticamente rispetto alle regole di business. Per altre informazioni sulla convalida e sulla sua esecuzione, vedere [Convalida &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Importazione dati &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
   

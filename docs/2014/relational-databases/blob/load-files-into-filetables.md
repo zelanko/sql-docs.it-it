@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43e5a9a6adcca7504aa90825ecd10e53e669c7e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43ea31523da2dfa8b387f68ce4f7c7f07868dd6f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010005"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970880"
 ---
 # <a name="load-files-into-filetables"></a>Caricamento di file in FileTable
   Viene descritto come caricare o eseguire la migrazione dei file in tabelle FileTable.  
@@ -44,7 +43,7 @@ ms.locfileid: "66010005"
 ###  <a name="example-migrating-files-from-the-file-system-into-a-filetable"></a><a name="HowToMigrateFiles"></a> Esempio: Migrazione di file dal file system in una tabella FileTable  
  In questo scenario i file vengono archiviati nel file system ed è disponibile una tabella di metadati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contenente puntatori ai file. Si desidera spostare i file in una tabella FileTable, quindi sostituire il percorso UNC originale per ogni file nei metadati con il percorso UNC della tabella FileTable. La funzione [GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) consente di raggiungere tale obiettivo.  
   
- Per questo esempio, si supponga di disporre di una tabella di database `PhotoMetadata`esistente,, che contiene dati sulle fotografie. Questa tabella contiene una colonna `UNCPath` di tipo `varchar`(512) contenente il percorso UNC effettivo di un file con estensione jpg.  
+ Per questo esempio, si supponga di disporre di una tabella di database esistente, `PhotoMetadata` , che contiene dati sulle fotografie. Questa tabella contiene una colonna `UNCPath` di tipo `varchar`(512) contenente il percorso UNC effettivo di un file con estensione jpg.  
   
  Per eseguire la migrazione dei file di immagine dal file system in una tabella FileTable, è necessario effettuare le operazioni seguenti:  
   
@@ -123,8 +122,8 @@ UPDATE PhotoMetadata
 ###  <a name="how-to-disable-filetable-constraints-for-bulk-loading"></a><a name="disabling"></a> Procedura: Disabilitare i vincoli FileTable per il caricamento bulk  
  Per eseguire il caricamento bulk di file in una tabella FileTable senza la necessità di applicare vincoli definiti dal sistema, è possibile disabilitare temporaneamente i vincoli. Per altre informazioni, vedere [Gestire le tabelle FileTable](manage-filetables.md).  
   
-## <a name="see-also"></a>Vedi anche  
- [Accedere a tabelle FileTable con Transact-SQL](access-filetables-with-transact-sql.md)   
- [Accedere alle tabelle FileTable con API di Input-Output dei file](access-filetables-with-file-input-output-apis.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Accesso a tabelle FileTable tramite Transact-SQL](access-filetables-with-transact-sql.md)   
+ [Accedere alle tabelle FileTable con API di input/output dei file](access-filetables-with-file-input-output-apis.md)  
   
   

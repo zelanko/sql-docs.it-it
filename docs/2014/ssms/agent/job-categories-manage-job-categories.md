@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 38276438-40b1-43ce-9aae-6805be6d9332
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c9a9c5f01bd682e68e44a7a974cbbaeade8008d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c08c423e7e5d3e59bfe75d388363f5d70dd885db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62937018"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035768"
 ---
 # <a name="job-categories-manage-job-categories"></a>Categorie di processi: Gestisci categorie di processi
   Utilizzare la finestra di dialogo **Categorie di processi** per aggiungere o eliminare categorie di processi. Le categorie di processi predefinite non possono essere eliminate.  
@@ -40,7 +39,7 @@ ms.locfileid: "62937018"
  **Elimina**  
  Consente di eliminare la categoria di processi selezionata. Questa opzione è abilitata solo per le categorie di processi definite dall'utente.  
   
- **Aggiorna**  
+ **Refresh** (Aggiornamento)  
  Esegue una query sul server per ottenere informazioni correnti.  
   
 #### <a name="to-access-the-job-categories-dialog-box"></a>Per accedere alla finestra di dialogo Categorie di processi  

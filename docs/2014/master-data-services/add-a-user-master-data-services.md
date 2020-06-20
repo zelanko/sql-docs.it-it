@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: dacfbba3ea17a46f68745850f2d51b3e016a2e08
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 47c42afc2f09c43a678bb99c22ec7275cf2ca20f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483774"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972330"
 ---
 # <a name="add-a-user-master-data-services"></a>Aggiungere un utente (Master Data Services)
   Aggiungere un utente all'elenco **Utenti** in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] per iniziare il processo di assegnazione dell'autorizzazione all'applicazione Web. Prima che un utente nell'elenco possa accedere a [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], è necessario assegnare all'utente l'autorizzazione per una o più aree funzionali e oggetti modello.  
@@ -34,7 +33,7 @@ ms.locfileid: "65483774"
   
 2.  Nella pagina **Utenti** fare clic su **Aggiungi utenti**.  
   
-3.  Digitare il nome dell'utente preceduto dal nome di dominio Active Directory o dal nome del computer server, come in*user_name* di *dominio*\\o *computer \ user_name*.  
+3.  Digitare il nome dell'utente preceduto dal nome di dominio Active Directory o dal nome del computer server, come in user_name di *dominio* \\ *user_name* o *computer \ user_name*.  
   
 4.  Facoltativamente, fare clic su **Controlla nomi**.  
   
@@ -44,7 +43,7 @@ ms.locfileid: "65483774"
   
 -   [Assegnare autorizzazioni per aree funzionali &#40;Master Data Services&#41;](assign-functional-area-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Sicurezza &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
   
   

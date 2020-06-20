@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a6841cc2-ca13-4b1c-9343-9e4d54312c3a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4b694af5b760ae3c1ead1e4984c35ef61c0fa602
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 738e1ef203f4c9c83e42c7d8255f82978465eadf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094340"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065285"
 ---
 # <a name="installing-upgrade-advisor-from-the-command-prompt"></a>Installazione di Preparazione aggiornamento dal prompt dei comandi
   È possibile installare Preparazione aggiornamento utilizzando l'Installazione guidata o dal prompt dei comandi. Il prompt dei comandi consente di eseguire installazioni automatiche e automatizzate.  
@@ -35,7 +34,7 @@ ms.locfileid: "66094340"
 |Argomento|Descrizione|  
 |--------------|-----------------|  
 |/q [n&#124;b&#124;r&#124;f]|Imposta il livello dell'interfaccia utente:<br /><br /> n = nessuna interfaccia utente<br /><br /> b = interfaccia utente di base (solo stato di avanzamento, nessun prompt)<br /><br /> r = interfaccia utente ridotta (finestra di dialogo alla fine dell'installazione)<br /><br /> f = interfaccia utente completa|  
-|/L|Specifica le opzioni del file di log. Per registrare tutti i messaggi in *log_file_name*, usare **-\*L v**_log_file_name_. Per registrare solo i messaggi di errore `-Le`, utilizzare *log_file_name*.|  
+|/L|Specifica le opzioni del file di log. Per registrare tutti i messaggi in *log_file_name*, usare **-L \* v**_log_file_name_. Per registrare solo i messaggi di errore, utilizzare `-Le` *log_file_name*.|  
 |ADDLOCAL = ALL&#124; REMOVE = ALL&#124;REINSTALL = ALL|Specifica se installare (ADDLOCAL), rimuovere (REMOVE) o reinstallare (REINSTALL) Preparazione aggiornamento.|  
 |UAINSTALLDIR=path|Installa Preparazione aggiornamento nel percorso specificato da path.|  
   
@@ -67,7 +66,7 @@ SQLUA.msi /qn REMOVE=ALL
 Msiexec.exe /i C:\Downloads\SQLUA.msi /qn REMOVE=ALL  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Installazione di preparazione aggiornamento](../../../2014/sql-server/install/installing-upgrade-advisor.md)   
  [Prerequisiti di Preparazione aggiornamento](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md)  
   

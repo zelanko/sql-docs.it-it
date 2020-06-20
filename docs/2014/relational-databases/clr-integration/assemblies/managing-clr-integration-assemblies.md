@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: bdbbf325-14f6-460e-a35a-d3861d3c961e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1e65bb5c651862a82d78faede158234d20392c1c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9acc56d72d2ed994f497676813e45ef0a914431
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919690"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953781"
 ---
 # <a name="managing-clr-integration-assemblies"></a>Gestione degli assembly dell'integrazione con CLR
-  Il codice gestito viene compilato e quindi distribuito in unità denominate assembly. Un assembly viene compresso come DLL o file eseguibile (con estensione exe). Mentre un file eseguibile può essere eseguito in modo autonomo, una DLL deve essere ospitata in un'applicazione esistente. Gli assembly DLL gestiti possono essere caricati e ospitati [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]da. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]database che utilizza l'istruzione CREATE ASSEMBLY, prima che possa essere caricato nel processo e utilizzato. Gli assembly possono inoltre essere aggiornati a una versione più recente tramite l'istruzione ALTER ASSEMBLY o rimossi da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite l'istruzione DROP ASSEMBLY.  
+  Il codice gestito viene compilato e quindi distribuito in unità denominate assembly. Un assembly viene compresso come DLL o file eseguibile (con estensione exe). Mentre un file eseguibile può essere eseguito in modo autonomo, una DLL deve essere ospitata in un'applicazione esistente. Gli assembly DLL gestiti possono essere caricati e ospitati da [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]database che utilizza l'istruzione CREATE ASSEMBLY, prima che possa essere caricato nel processo e utilizzato. Gli assembly possono inoltre essere aggiornati a una versione più recente tramite l'istruzione ALTER ASSEMBLY o rimossi da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite l'istruzione DROP ASSEMBLY.  
   
  Le informazioni sugli assembly vengono archiviate nella tabella `sys.assembly_files` del database in cui è stato installato l'assembly. La tabella `sys.assembly_files` contiene le colonne seguenti.  
   
@@ -33,7 +32,7 @@ ms.locfileid: "62919690"
 |assembly_id|Identificatore definito per l'assembly. Questo numero viene assegnato a tutti gli oggetti relativi allo stesso assembly.|  
 |name|Nome dell'oggetto .|  
 |file_id|Numero che identifica ogni oggetto. Al primo oggetto associato a un valore `assembly_id` specifico viene assegnato il valore 1. Se più oggetti sono associati allo stesso valore `assembly_id`, ogni valore `file_id` successivo verrà incrementato di 1.|  
-|content|Rappresentazione esadecimale dell'assembly o del file.|  
+|contenuto|Rappresentazione esadecimale dell'assembly o del file.|  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Creazione di un assembly](creating-an-assembly.md)  
@@ -45,7 +44,7 @@ ms.locfileid: "62919690"
  [Eliminazione di un assembly](dropping-an-assembly.md)  
  Viene descritta l'eliminazione di assembly CLR da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Sicurezza dell'integrazione con CLR](../security/clr-integration-security.md)   
  [Sicurezza da accesso di codice dell'integrazione con CLR](../security/clr-integration-code-access-security.md)  
   

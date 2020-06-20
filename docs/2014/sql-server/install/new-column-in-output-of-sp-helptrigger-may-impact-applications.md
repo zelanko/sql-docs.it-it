@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b7c42a8f-f2e0-4fa3-b046-3cf39c854c47
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 33d47c858a03766260e8ed8c098fef79e9e4a82f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b1f5e936843ed84a5c6b88e2f3685e7a4272bc2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093743"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012172"
 ---
 # <a name="new-column-in-output-of-sp_helptrigger-may-impact-applications"></a>La nuova colonna nell'output di sp_helptrigger potrebbe influire sulle applicazioni
   trigger_schemaias l'ultima colonna del set di risultati restituito dalla stored procedure di sistema di sp_helptrigger.  
@@ -31,7 +30,7 @@ ms.locfileid: "66093743"
 ## <a name="corrective-action"></a>Azione correttiva  
  Esaminare l'utilizzo di sp_helptrigger nelle applicazioni. Può essere necessario modificare le applicazioni in modo da gestire la colonna aggiuntiva. In alternativa, è possibile utilizzare la vista del catalogo sys. Triggers.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Problemi di aggiornamento motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [SQL Server 2014 preparazione aggiornamento &#91;nuova&#93;](sql-server-2014-upgrade-advisor.md)  
   

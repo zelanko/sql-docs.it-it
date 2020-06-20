@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67b21f48-4795-4128-81dc-743f7a95ef74
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c901c3f10198a1516279b9e93d9c5ddb6a9c49ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a89818eac194ff6d980fcfc801014584ee1f724
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055079"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972851"
 ---
 # <a name="transfer-error-messages-task-editor-general-page"></a>Editor attività Trasferisci messaggi di errore (pagina Generale)
   Utilizzare la pagina **Generale** della finestra di dialogo **Editor attività Trasferisci messaggi di errore** per assegnare un nome e una descrizione all'attività Trasferisci messaggi di errore. L'attività Trasferisci messaggi di errore trasferisce uno o più messaggi di errore definiti dall'utente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tra istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per ulteriori informazioni su questa attività, vedere [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md).  
@@ -34,7 +33,7 @@ ms.locfileid: "66055079"
  **Descrizione**  
  Consente di digitare una descrizione dell'attività Trasferisci messaggi di errore.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Attività Integration Services](control-flow/integration-services-tasks.md)   
  [Editor attività Trasferisci messaggi di errore &#40;pagina messaggi&#41;](../../2014/integration-services/transfer-error-messages-task-editor-messages-page.md)   

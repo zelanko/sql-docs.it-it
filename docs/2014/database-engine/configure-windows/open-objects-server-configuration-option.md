@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c8424d3c-86ba-4cc5-bf0c-be4ce44bdd04
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8795d9ea157857c38f1c9a6aa452114947fa5760
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6d22a3d6dd358afe9cf921376664c2d25705a6a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781793"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935182"
 ---
 # <a name="open-objects-server-configuration-option"></a>Opzione di configurazione del server open objects
   Questa opzione è ancora presente in **sp_configure**, anche se in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la relativa funzionalità è stata disabilitata. L'impostazione non ha alcun effetto. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il numero degli oggetti di database aperti viene gestito in modo dinamico ed è limitato soltanto dalla memoria disponibile. L'opzione **open objects** è stata mantenuta in **sp_configure** per garantire la compatibilità con le versioni precedenti per gli script esistenti.  
