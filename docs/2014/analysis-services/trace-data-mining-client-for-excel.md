@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 4aea3e17-cd0f-48dd-8f22-b54a6c716426
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 19a30107af159c1cd87324290844172371f02752
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f394e54252c382bb2f70dccc531f306f7264d87f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175570"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938362"
 ---
 # <a name="trace-data-mining-client-for-excel"></a>Traccia (client di data mining per Excel)
   ![Pulsante Traccia](media/misc-trace.gif "Pulsante Traccia")
 
- La finestra di dialogo **traccia** consente di monitorare le istruzioni inviate all'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilizzata per data mining. Dopo aver creato una connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], tutte le interazioni tra il client e il server vengono registrate nel riquadro di analisi, incluse le istruzioni che consentono di creare strutture, aggiungere modelli di data mining ed eseguire stime, nonché alcuni messaggi restituiti dal server. **Tracer**
+ La finestra di dialogo **traccia** consente di monitorare le istruzioni inviate all'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilizzata per data mining. Dopo aver creato una connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , tutte le interazioni tra il client e il server vengono registrate nel riquadro **Tracer** di analisi, incluse le istruzioni che consentono di creare strutture, aggiungere modelli di data mining ed eseguire stime, nonché alcuni messaggi restituiti dal server.
 
  A seconda dell'azione richiesta, l'istruzione potrebbe essere una query di modifica o di definizione dati DMX (Data Mining Extensions), un pacchetto ASSL (Analysis Services Scripting Language) o una chiamata a una stored procedure di Analysis Services. Non vengono tuttavia visualizzati i risultati numerici e i valori dei dati effettivi.
 

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 13f58b4d-f345-4fbc-ae2d-b3c8290a797d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 90eeca203c672c21551b8aff2e24feb164d8fda5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 113f644d9f1da48790e7c8d59d34e6b143a1175a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065431"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938122"
 ---
 # <a name="warnings-database-designer-analysis-services---multidimensional-data"></a>Avvisi (Progettazione database) (Analysis Services - Dati multidimensionali)
   Usare la scheda **Avvisi** per visualizzare e ignorare totalmente le regole e per visualizzare e riattivare istanze specifiche di avvisi ignorati. La scheda **Avvisi** visualizza due griglie: **Regole per gli avvisi di progettazione** e **Avvisi ignorati**.  
@@ -47,10 +46,10 @@ ms.locfileid: "66065431"
   
  La griglia **Avvisi ignorati** ha i seguenti elementi :  
   
- **Oggetto**  
+ **Object**  
  Visualizza un'icona che rappresenta il tipo di oggetto e il nome dell'oggetto.  
   
- **Type**  
+ **Tipo**  
  Visualizza il tipo di oggetto.  
   
  **Descrizione**  
@@ -68,7 +67,7 @@ ms.locfileid: "66065431"
 > [!NOTE]  
 >  Se un oggetto ha un avviso, ma è in uno stato non valido o è stato rimosso manualmente dal progetto, verrà visualizzata un'icona Errori nell'elenco accanto all'avviso. Per ignorare l'avviso, selezionarlo, quindi fare clic su **Riabilita**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Finestra di dialogo Ignora avviso &#40;Analysis Services-Dati multidimensionali&#41;](dismiss-warning-dialog-box-analysis-services-multidimensional-data.md)   
  [&#40;generale di progettazione database&#41; &#40;Analysis Services Dati multidimensionali&#41;](general-database-designer-analysis-services-multidimensional-data.md)  
   

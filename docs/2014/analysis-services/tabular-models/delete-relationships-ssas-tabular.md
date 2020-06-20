@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d40e3f05-54e8-4c4b-807a-0b06f446079b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: abe35e51764a7d16c49c8d15d9e2031e0cdabe05
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9fd6535c8f2c0f77efc1cc2871de77d29cd6615
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067331"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939723"
 ---
 # <a name="delete-relationships-ssas-tabular"></a>Eliminare relazioni (SSAS tabulare)
   È possibile eliminare relazioni esistenti utilizzando Progettazione modelli nella Vista diagramma o la finestra di dialogo Gestisci relazioni. Per informazioni sulla modalità d'uso delle relazioni nei modelli tabulari, vedere [Relazioni &#40;SSAS tabulare&#41;](relationships-ssas-tabular.md).  
@@ -51,7 +50,7 @@ ms.locfileid: "66067331"
   
 4.  Fare clic su **Chiudi** nella finestra di dialogo **Gestisci relazioni**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Relazioni &#40;SSAS tabulare&#41;](relationships-ssas-tabular.md)   
  [Creare una relazione tra due tabelle &#40;SSAS tabulare&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)  
   

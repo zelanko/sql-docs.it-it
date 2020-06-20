@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f70a956834108c21dd7b17bb9f3e04db38f29bfa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3d23037bc09b735fc28e52eabb1852d1af303d15
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059935"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916951"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Proprietà del flusso di dati che è possibile impostare tramite espressioni
   I valori di determinate proprietà di oggetti del flusso di dati possono essere specificati utilizzando espressioni di proprietà disponibili nel contenitore dell'attività Flusso di dati.  
@@ -35,7 +34,7 @@ ms.locfileid: "66059935"
   
  Per specificare un'espressione di proprietà per una delle proprietà degli oggetti del flusso di dati elencate in questo argomento, visualizzare la finestra **Proprietà** per l'attività flusso di dati selezionando l'attività flusso di dati nell'area di progettazione **Flusso di controllo** o selezionando la scheda **Flusso di dati** della finestra di progettazione senza selezionare componenti o percorsi singoli. Selezionare la proprietà **Espressioni** e fare clic sui puntini di sospensione per visualizzare la finestra di dialogo **Editor espressioni di proprietà** . Visualizzare l'elenco a discesa **Proprietà** per selezionare una proprietà, quindi digitare un'espressione nella casella di testo **Espressione** o fare clic sui puntini di sospensione per visualizzare la finestra di dialogo **Generatore di espressioni** .  
   
- Nell'elenco **Proprietà** vengono visualizzate le proprietà disponibili per gli oggetti del flusso di dati già posizionati nell'area di progettazione **Flusso di dati** . Pertanto, non è possibile usare l'elenco **Proprietà** per visualizzare tutte le possibili proprietà degli oggetti del flusso di dati che supportano le espressioni di proprietà. Se, ad esempio, è stata posizionata un'origine ADO NET nell'area di progettazione, l'elenco delle **Proprietà** contiene una `[ADO NET Source].[SqlCommand]` voce per la proprietà. Nell'elenco vengono anche visualizzate molte proprietà dell'attività Flusso di dati.  
+ Nell'elenco **Proprietà** vengono visualizzate le proprietà disponibili per gli oggetti del flusso di dati già posizionati nell'area di progettazione **Flusso di dati** . Pertanto, non è possibile usare l'elenco **Proprietà** per visualizzare tutte le possibili proprietà degli oggetti del flusso di dati che supportano le espressioni di proprietà. Se, ad esempio, è stata posizionata un'origine ADO NET nell'area di progettazione, l'elenco delle **Proprietà** contiene una voce per la `[ADO NET Source].[SqlCommand]` Proprietà. Nell'elenco vengono anche visualizzate molte proprietà dell'attività Flusso di dati.  
   
 ## <a name="properties-of-data-flow-objects-that-support-property-expressions"></a>Proprietà degli oggetti del flusso di dati che supportano le espressioni Proprietà  
  È possibile specificare i valori delle proprietà del seguente elenco utilizzando le espressioni di proprietà.  
@@ -80,7 +79,7 @@ ms.locfileid: "66059935"
 ## <a name="related-content"></a>Contenuto correlato  
  Articolo tecnico relativo al [foglio d'aiuto per le espressioni SSIS](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)sul sito Web pragmaticworks.com  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Usare espressioni di proprietà nei pacchetti](expressions/use-property-expressions-in-packages.md)   
  [Proprietà comuni](../../2014/integration-services/common-properties.md)   
  [Proprietà personalizzate della trasformazione](data-flow/transformations/transformation-custom-properties.md)   

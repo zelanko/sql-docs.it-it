@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5ccb8df947d31376707f81c0ce7cd7c28cc62d6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae8bbd7b0b6a07193987dae5f5fe99d3244bfe3c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900018"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939302"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>Guida sensibile al contesto della Configurazione guidata dimensioni a modifica lenta
   Utilizzare la **Configurazione guidata dimensioni a modifica lenta** per configurare il caricamento dei dati in diversi tipi di dimensioni a modifica lenta. In questa sezione viene fornita la Guida sensibile al contesto della **Configurazione guidata dimensioni a modificata lenta**. Gli argomenti disponibili in questa sezione sono descritti nella tabella seguente.  

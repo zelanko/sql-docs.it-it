@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f31702a2-df76-4589-ac3b-da5412c03dc2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 18cb81205a6e7036f34c7bb6f73f822bf0a6e173
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9071c6821e6edeb577b639223e42899d2927bced
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707126"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055901"
 ---
 # <a name="asynchronous-mode-and-sqlcancel"></a>Modalità asincrona e SQLCancel
   Alcune funzioni ODBC possono essere utilizzate in modo sincrono o in modo asincrono. Le operazioni asincrone possono essere abilitate per un handle di istruzione o per un handle di connessione. Se l'opzione viene impostata per un handle di connessione, sarà valida per tutti gli handle di istruzione nell'handle di connessione. Per abilitare o disabilitare le operazioni asincrone vengono utilizzate le istruzioni seguenti:  

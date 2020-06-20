@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 59417a54-55f1-4468-ba41-368aa852c2d4
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8becd7ad30acf1ea2a63feae4760091aede70c06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b098f7929f762992f55995836dc03f95001e33d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033503"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063936"
 ---
 # <a name="schedule-the-policies"></a>Pianificazione criteri
   In questa attività verrà eseguita la pianificazione dei criteri per procedure consigliate importati nell'attività precedente.  
@@ -38,7 +37,7 @@ ms.locfileid: "63033503"
     > [!NOTE]  
     >  Per visualizzare i risultati di valutazione dopo l'esecuzione di criteri pianificati, aprire il log Cronologia criteri nell'istanza di destinazione. Per aprire il log, fare clic con il pulsante destro del mouse su **Gestione criteri**, quindi scegliere **Visualizza cronologia**.  
   
-## <a name="summary"></a>Riepilogo  
+## <a name="summary"></a>Summary  
  I criteri pianificati sono stati configurati per essere eseguiti in un'istanza singola di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Se si desidera distribuire i criteri pianificati in più istanze, continuare con la prossima attività in questa esercitazione.  
   
 ## <a name="next-steps"></a>Passaggi successivi  

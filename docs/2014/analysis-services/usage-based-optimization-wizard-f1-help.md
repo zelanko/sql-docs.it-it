@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: e5f5a938-ae7c-4f4e-9416-a7f94ac82763
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e5e94818245ba1e87d90f87539ae07e9531e5450
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea3aedff3f7bfa931b900bdeab59495a35853ae1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065565"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938242"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>Guida sensibile al contesto dell'Ottimizzazione guidata basata sulle statistiche di utilizzo
-  L'Ottimizzazione guidata basata sulle statistiche di utilizzo è simile alla Progettazione guidata aggregazioni per quanto concerne l'output e consente di progettare aggregazioni per una partizione. Le aggregazioni progettate tramite l'Ottimizzazione guidata basata sulle statistiche di utilizzo, tuttavia, sono basate su un modello di utilizzo specifico delle query registrate nel log di query di un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Le aggregazioni garantiscono miglioramenti delle prestazioni [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] consentendo di recuperare i totali precalcolati direttamente dall'archiviazione del cubo anziché ricalcolare i dati da un'origine dati sottostante per ogni query.  
+  L'Ottimizzazione guidata basata sulle statistiche di utilizzo è simile alla Progettazione guidata aggregazioni per quanto concerne l'output e consente di progettare aggregazioni per una partizione. Le aggregazioni progettate tramite l'Ottimizzazione guidata basata sulle statistiche di utilizzo, tuttavia, sono basate su un modello di utilizzo specifico delle query registrate nel log di query di un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Le aggregazioni garantiscono miglioramenti delle prestazioni consentendo [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] di recuperare i totali precalcolati direttamente dall'archiviazione del cubo anziché ricalcolare i dati da un'origine dati sottostante per ogni query.  
   
- Per aprire l'ottimizzazione guidata basata sulle informazioni di utilizzo [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]dall'interno di, aprire Progettazione cubi [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per un progetto, quindi fare clic sulla scheda **aggregazioni** . fare clic sul pulsante **Ottimizzazione basata sull'utilizzo** sulla barra degli strumenti.  
+ Per aprire l'ottimizzazione guidata basata sulle informazioni di utilizzo dall'interno di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , aprire Progettazione cubi per un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] progetto, quindi fare clic sulla scheda **aggregazioni** . fare clic sul pulsante **Ottimizzazione basata sull'utilizzo** sulla barra degli strumenti.  
   
  Per aprire l'Ottimizzazione guidata basata sulle statistiche di utilizzo dall'interno di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], collegarsi a un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e aprire la cartella **Cubi** . Selezionare un cubo, quindi aprire la cartella **Gruppi di misure** ed espandere il gruppo di misure che si desidera modificare. Fare clic con il pulsante destro del mouse sulla cartella **Partizioni** , quindi selezionare **Ottimizzazione basata sulle statistiche di utilizzo**.  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66065565"
   
 -   [Completamento della procedura guidata &#40;Ottimizzazione guidata basata sulle utilizzo&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Aggregazioni e progettazioni delle aggregazioni](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
  [Cubi nei modelli multidimensionali](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Guida sensibile al contesto della progettazione guidata aggregazioni](aggregation-design-wizard-f1-help.md)   

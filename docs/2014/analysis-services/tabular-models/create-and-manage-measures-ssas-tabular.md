@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: edc1a4b2-96d3-4f34-bb70-6cacec79e819
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6087d5fa39dd023d13ce3f49fbdfb855f12b921c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fbc0d47c523be7a6a1dd421535862ac30748168a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067445"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939812"
 ---
 # <a name="create-and-manage-measures-ssas-tabular"></a>Creare e gestire misure (SSAS tabulare)
   Una misura è una formula creata per l'utilizzo in un report o in una tabella pivot o grafico pivot. Le misure possono essere basate sulle funzioni di aggregazione standard, ad esempio COUNT o SUM. In alternativa, è possibile definire formule personalizzate tramite DAX. Nelle attività di questo argomento viene descritto come creare e gestire misure utilizzando la griglia delle misure di una tabella.  
@@ -59,7 +58,7 @@ ms.locfileid: "66067445"
   
 -   Nella griglia delle misure fare clic con il pulsante destro del mouse su una misura, quindi scegliere **Elimina**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Misure &#40;SSAS tabulare&#41;](measures-ssas-tabular.md)   
  [Indicatori KPI &#40;&#41;tabulare SSAS](kpis-ssas-tabular.md)   
  [Colonne calcolate &#40;SSAS tabulare&#41;](ssas-calculated-columns.md)  

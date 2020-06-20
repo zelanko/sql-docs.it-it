@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4f94de4e-b222-4bf9-95af-7aefd3f8dcee
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8c8ea7af0102e9525eac15420a960ec357f9062e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10c216f07d092f98b861eaedaa62dd58a69f920a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069446"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940972"
 ---
 # <a name="select-measures-cube-wizard"></a>Selezione misure (Creazione guidata cubo)
   Utilizzare la pagina **Selezione misure** per selezionare le misure e i gruppi di misure da creare.  
@@ -30,7 +29,7 @@ ms.locfileid: "66069446"
   
  Per modificare il nome di una misura o di un gruppo di misure fare clic sul nome corrispondente e digitarne uno nuovo.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto della creazione guidata cubo](cube-wizard-f1-help.md)   
  [Oggetti Cube &#40;Analysis Services-Dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Cubi nei modelli multidimensionali](multidimensional-models/cubes-in-multidimensional-models.md)   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1111cb5d-2bd9-4bdb-8de2-dc0e47452dd6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d2153e92f87e87ef152542a1934b9cdfd596fef9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 07e2e67c1c30302c6d3e758f76805e92e509f6c4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717754"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002873"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>Specifica di funzioni di conversione esplicita in query XPath (SQLXML 4.0)
   Negli esempi seguenti viene illustrato come specificare le funzioni di conversione esplicita nelle query XPath. Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [schema XSD con annotazioni di esempio per gli esempi XPath &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -30,7 +29,7 @@ ms.locfileid: "82717754"
 ### <a name="a-use-the-number-explicit-conversion-function"></a>R. Utilizzo della funzione di conversione esplicita number ()  
  La funzione `number()` converte un argomento in un numero.  
   
- Supponendo che il valore di **ContactID** sia non numerico, la query seguente converte **ContactID** in un numero e lo confronta con il valore 4. La query restituisce quindi tutti i ** \< dipendenti>** elemento figlio del nodo di contesto con l'attributo **ContactID** con valore numerico 4:  
+ Supponendo che il valore di **ContactID** sia non numerico, la query seguente converte **ContactID** in un numero e lo confronta con il valore 4. La query restituisce quindi tutti gli **\<Employee>** elementi figlio del nodo di contesto con l'attributo **ContactID** con valore numerico 4:  
   
 ```  
 /child::Contact[number(attribute::ContactID)= 4]  
@@ -79,7 +78,7 @@ ms.locfileid: "82717754"
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. Utilizzo della funzione di conversione esplicita string ()  
  La funzione `string()` converte un argomento in una stringa.  
   
- La query seguente converte **ContactID** in una stringa e la confronta con il valore di stringa "4". La query restituisce tutti i ** \< dipendenti>** elemento figlio del nodo di contesto con un **ContactID** con un valore stringa "4":  
+ La query seguente converte **ContactID** in una stringa e la confronta con il valore di stringa "4". La query restituisce tutti gli **\<Employee>** elementi figlio del nodo di contesto con un **ContactID** con un valore stringa "4":  
   
 ```  
 /child::Contact[string(attribute::ContactID)="4"]  

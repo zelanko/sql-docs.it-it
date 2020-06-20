@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1345051d06493a456172a183defce3a8bd555ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e5c51426bd68a4e1bd69aa4f81d097e7af3fe6f5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872055"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952086"
 ---
 # <a name="contained-database-collations"></a>Regole di confronto dei database indipendenti
   Varie proprietà incidono sull'ordinamento e sulla semantica di uguaglianza dei dati testuali, ad esempio distinzione maiuscole/minuscole, distinzione caratteri accentati/non accentati e linguaggio di base utilizzato. Queste qualità vengono espresse in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite la scelta di regole di confronto per i dati. Per informazioni dettagliate sulle regole di confronto, vedere [Regole di confronto e supporto Unicode](../collations/collation-and-unicode-support.md).  
@@ -58,7 +57,7 @@ mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS
 mycolumn2       Frisian_100_CS_AS  
 ```  
   
- Questo approccio sembra relativamente semplice, ma insorgono vari problemi. Poiché le regole di confronto per una colonna dipendono dal database in cui viene creata la tabella, si verificano problemi con l'utilizzo di tabelle temporanee archiviate in `tempdb`. Le regole di confronto `tempdb` di in genere corrispondono alle regole di confronto per l'istanza di, che non devono corrispondere alle regole di confronto del database.  
+ Questo approccio sembra relativamente semplice, ma insorgono vari problemi. Poiché le regole di confronto per una colonna dipendono dal database in cui viene creata la tabella, si verificano problemi con l'utilizzo di tabelle temporanee archiviate in `tempdb` . Le regole di confronto di `tempdb` in genere corrispondono alle regole di confronto per l'istanza di, che non devono corrispondere alle regole di confronto del database.  
   
 ### <a name="example-2"></a>Esempio 2  
  Si consideri, ad esempio, il database precedente (cinese) usato in un'istanza con regole di confronto **Latin1_General** :  
@@ -111,7 +110,7 @@ AS BEGIN
 END;  
 ```  
   
- Si tratta di una funzione piuttosto particolare. Nelle regole di confronto con distinzione tra maiuscole @i e minuscole, nella clausola return non @I è possibile eseguire l'associazione a o @??. Nelle regole di confronto Latin1_General senza distinzione tra maiuscole e minuscole, @i viene associato a @I e la funzione restituisce 1. Tuttavia, nelle regole di confronto turche senza distinzione tra maiuscole e minuscole, @i viene associato a @??, e la funzione restituisce 2. Questa funzione può causare seri problemi in un database che passa da un'istanza all'altra con regole di confronto diverse.  
+ Si tratta di una funzione piuttosto particolare. Nelle regole di confronto con distinzione tra maiuscole e minuscole, nella @i clausola return non è possibile eseguire l'associazione a @I o @??. Nelle regole di confronto Latin1_General senza distinzione tra maiuscole e minuscole, @i viene associato a @I e la funzione restituisce 1. Tuttavia, nelle regole di confronto turche senza distinzione tra maiuscole e minuscole, viene @i associato a @??, e la funzione restituisce 2. Questa funzione può causare seri problemi in un database che passa da un'istanza all'altra con regole di confronto diverse.  
   
 ## <a name="contained-databases"></a>Database indipendenti  
  Poiché uno degli obiettivi di progettazione dei database indipendenti è di renderli autosufficienti, è necessario eliminare la dipendenza dalle regole di confronto di istanza e `tempdb`. A questo scopo, nei database indipendenti viene introdotto il concetto di regole di confronto del catalogo. Tali regole vengono utilizzate per metadati di sistema e oggetti temporanei. Di seguito vengono illustrati i dettagli.  

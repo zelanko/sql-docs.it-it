@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dc5013c1-692c-4cc4-820c-1c09482c6886
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 792fd974d4f6d326265d06ef51f5a5fdaaf61399
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c867ae0052706910de980bad1eaebd2134de47ce
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62473060"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056575"
 ---
 # <a name="alerts-node-sql-server-agent-f1-help"></a>Nodo Avvisi (Guida sensibile al contesto di SQL Server Agent)
    Questa sezione contiene gli argomenti della Guida sensibile al contesto per il nodo **Avvisi** di Esplora oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

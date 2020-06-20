@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
 author: Minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cdd9e34e57694efc1234a2f0245833596644cb73
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0cc839659d289eeccfe2e7893f054699e34b1fc0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889191"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932062"
 ---
 # <a name="upgrade-analysis-services"></a>Aggiornare Analysis Services
   Utilizzare il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per aggiornare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per informazioni dettagliate sull'aggiornamento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità SharePoint, vedere [upgrade PowerPivot per SharePoint](upgrade-power-pivot-for-sharepoint.md). Per ulteriori informazioni sull'aggiornamento di un'istanza di SQL Server esistente, vedere [eseguire l'aggiornamento a SQL Server 2014 utilizzando l'installazione guidata &#40;&#41;di ](upgrade-sql-server-using-the-installation-wizard-setup.md)installazione.  
@@ -57,7 +56,7 @@ ms.locfileid: "68889191"
   
 -   Un **aggiornamento sul posto** sostituisce i file di programma esistenti con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] i file di programma. I database rimangono nello stesso percorso. Le cartelle del programma vengono aggiornate in modo da riflettere il nuovo nome.  
   
--   Un **aggiornamento affiancato** è una nuova installazione di nello stesso computer [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in cui è presente un'istanza di Analysis Services esistente. È possibile spostare database nella nuova istanza dello stesso computer, quindi disinstallare la versione precedente se non viene più utilizzata.  
+-   Un **aggiornamento affiancato** è una nuova installazione di nello [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] stesso computer in cui è presente un'istanza di Analysis Services esistente. È possibile spostare database nella nuova istanza dello stesso computer, quindi disinstallare la versione precedente se non viene più utilizzata.  
   
 -   È possibile inoltre installare Analysis Services in un nuovo hardware e, successivamente, eseguire la migrazione dei database esistenti in tale server.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 215c14de-fc3f-46de-a022-bf69b9ea2a96
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b99676a9f51bf76dc9db294365a5a628dd25fa2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3186cbac127244131f45e2cbe7e3131b2e6d4895
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65488478"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063981"
 ---
 # <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>Lezione 2: Pulizia dei dati fornitore tramite la Knowledge Base Suppliers
   In questa lezione vengono puliti i dati del fornitore in un file di Excel utilizzando la Knowledge base **Suppliers** creata nella prima lezione. La pulizia dei dati in DQS comprende un **processo computerizzato** che analizza il modo in cui i dati sono conformi alle informazioni in una Knowledge base e un **processo interattivo** che consente di esaminare e modificare i risultati del processo assistito da computer. Tramite la funzionalità di pulizia dei dati vengono identificati i dati errati nell'origine dati e, successivamente, vengono corretti o vengono forniti suggerimenti di correzione. Vengono inoltre standardizzati e arricchiti i dati dei clienti utilizzando i valori di dominio, i valori iniziali per sinonimi, le regole di dominio, le relazioni basate su termini e i dati di riferimento. È possibile approvare o rifiutare in modo interattivo le modifiche proposte dal processo computerizzato. Per ulteriori informazioni, vedere [pulizia dei dati](https://msdn.microsoft.com/library/gg524800.aspx) .  

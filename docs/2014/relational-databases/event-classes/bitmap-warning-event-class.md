@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5bf9b4e3-0eba-4e67-8ba9-30ca4b48e1d4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 812ba207d699cbbdb2156a4c5f3799cbfa8a74db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a59a1ecfc740cc7c3a07d8a41acfa51fb1623716
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023438"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030728"
 ---
 # <a name="bitmap-warning-event-class"></a>Classe di evento Bitmap Warning
   La classe di evento **Bitmap Warning** può essere usata per monitorare l'utilizzo del filtro bitmap nelle query. La sottoclasse dell'evento può essere utilizzata per segnalare quando i filtri bitmap sono stati disabilitati in una query.  
@@ -37,7 +36,7 @@ ms.locfileid: "63023438"
 |**EventSubClass**|`int`|Tipo di sottoclasse di evento. 0 = il filtro bitmap è disabilitato.|21|Sì|  
 |**HostName**|`nvarchar`|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
 |**IsSystem**|`int`|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|Sì|  
-|**LoginName**|`nvarchar`|Nome dell'account di accesso dell'utente (account [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di accesso di sicurezza di o credenziali di accesso di Windows nel formato *DOMINIO\nomeutente*).|11|Sì|  
+|**LoginName**|`nvarchar`|Nome dell'account di accesso dell'utente (account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sicurezza di o credenziali di accesso di Windows nel formato *DOMINIO\nomeutente*).|11|Sì|  
 |**LoginSid**|`image`|ID di sicurezza (SID) dell'utente connesso. Queste informazioni sono disponibili nella vista del catalogo **sys.server_principals** . Il SID è univoco per ogni account di accesso nel server.|41|Sì|  
 |**NTDomainName**|`nvarchar`|Dominio Windows di appartenenza dell'utente.|7|Sì|  
 |**NTUserName**|`nvarchar`|Nome utente di Windows.|6|Sì|  

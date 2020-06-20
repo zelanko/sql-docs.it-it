@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a772188438d0dcd29b97e5233eac1152a2998e21
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 245dd5a511b9366a80d1e57aa0d7bc3d21d8f23d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704376"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049621"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>Utilizzo dei file di intestazione e della libreria di SQL Server Native Client
   I file di intestazione e di libreria di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client vengono installati con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Quando si sviluppa un'applicazione, è importante copiare e installare nell'ambiente di sviluppo tutti i file necessari per lo sviluppo. Per ulteriori informazioni sull'installazione e la ridistribuzione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client, vedere [installazione di SQL Server Native Client](installing-sql-server-native-client.md).  

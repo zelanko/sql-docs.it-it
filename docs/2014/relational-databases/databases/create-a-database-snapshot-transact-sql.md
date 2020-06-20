@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3f577f7798da2ba7b7ee4259ecc98994f713cfc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bae68c2d507e1dd3809e76a9d842b765d72234e9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62762338"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952111"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Creare uno snapshot del database (Transact-SQL)
   L'unico modo per creare uno snapshot del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] non supporta la creazione di snapshot del database.  
@@ -37,7 +36,7 @@ ms.locfileid: "62762338"
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
  Il database di origine, in cui può essere utilizzato qualsiasi modello di recupero, deve soddisfare i prerequisiti seguenti:  
   
--   L'istanza del server deve essere in esecuzione in un'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supporta gli snapshot del database. Per informazioni sul supporto per gli snapshot del database [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]in, vedere [funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+-   L'istanza del server deve essere in esecuzione in un'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supporta gli snapshot del database. Per informazioni sul supporto per gli snapshot del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , vedere [funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 -   Il database di origine deve essere online, a meno che non si tratti di un database mirror nell'ambito di una sessione di mirroring del database.  
   
@@ -134,7 +133,7 @@ AdventureWorks_snapshot_evening
   
  Questa sezione contiene gli esempi seguenti:  
   
--   A. [Creazione di uno snapshot del database AdventureWorks](#Creating_on_AW)  
+-   R. [Creazione di uno snapshot del database AdventureWorks](#Creating_on_AW)  
   
 -   B. [Creazione di uno snapshot del database Sales](#Creating_on_Sales)  
   

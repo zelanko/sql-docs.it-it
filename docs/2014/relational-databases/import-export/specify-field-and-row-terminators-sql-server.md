@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5f00a8330673dc15eed57f770635a251d5aa97e4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 548beeae68f5585c5cf2ba56b67027532ab43b71
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011854"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026593"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Impostazione dei caratteri di terminazione del campo e della riga (SQL Server)
   Per i campi dati di tipo carattere è facoltativamente possibile contrassegnare la fine di ogni campo di un file di dati con un *carattere di terminazione del campo* a e la fine di ogni riga con un *carattere di terminazione della riga*. I caratteri di terminazione costituiscono un mezzo per indicare ai programmi che leggono il file di dati dove termina un campo o una riga e dove inizia un altro campo o un'altra riga.  
@@ -56,7 +55,7 @@ ms.locfileid: "66011854"
 >  Se si usa l'utilità **bcp** in modalità interattiva e si specifica il carattere di nuova riga \n come carattere di terminazione della riga, il comando **bcp** aggiunge automaticamente il carattere di ritorno a capo \r come prefisso, generando il carattere di terminazione della riga \r\n.  
   
 ## <a name="specifying-terminators-for-bulk-export"></a>Impostazione dei caratteri di terminazione per l'esportazione bulk  
- Quando si esegue l' `char` esportazione `nchar` bulk di dati o e si vuole usare un carattere di terminazione non predefinito, è necessario specificare il carattere di terminazione per il comando **bcp** . È possibile specificare i caratteri di terminazione in uno dei modi seguenti:  
+ Quando si esegue l'esportazione bulk `char` `nchar` di dati o e si vuole usare un carattere di terminazione non predefinito, è necessario specificare il carattere di terminazione per il comando **bcp** . È possibile specificare i caratteri di terminazione in uno dei modi seguenti:  
   
 -   Con un file di formato che specifica il carattere di terminazione per ogni singolo campo.  
   
@@ -127,8 +126,8 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
     |Qualifier|Descrizione|  
     |---------------|-----------------|  
-    |FIELDTERMINATOR **='*`field_terminator`*'**|Specifica il carattere di terminazione del campo da utilizzare per i file di dati di tipo carattere e carattere Unicode.<br /><br /> Il valore predefinito è il carattere di tabulazione (\t).|  
-    |ROWTERMINATOR **='*`row_terminator`*'**|Specifica il carattere di terminazione della riga da utilizzare per i file di dati di tipo carattere e carattere Unicode.<br /><br /> Il valore predefinito è \n (carattere di nuova riga).|  
+    |FIELDTERMINATOR **=' *`field_terminator`* '**|Specifica il carattere di terminazione del campo da utilizzare per i file di dati di tipo carattere e carattere Unicode.<br /><br /> Il valore predefinito è il carattere di tabulazione (\t).|  
+    |ROWTERMINATOR **=' *`row_terminator`* '**|Specifica il carattere di terminazione della riga da utilizzare per i file di dati di tipo carattere e carattere Unicode.<br /><br /> Il valore predefinito è \n (carattere di nuova riga).|  
   
      Per altre informazioni, vedere [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
@@ -169,7 +168,7 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
   
 |Opzione|Attributo|  
 |------------|---------------|  
-|FileType **=`char`''**|Specifica che i campi dati devono essere caricati come dati di tipo carattere.|  
+|FileType **=' `char` '**|Specifica che i campi dati devono essere caricati come dati di tipo carattere.|  
 |FIELDTERMINATOR **='** `,` **'**|Specifica la virgola (`,`) come carattere di terminazione del campo.|  
 |ROWTERMINATOR **='** `\n` **'**|Specifica il carattere di nuova riga come carattere di terminazione della riga.|  
   

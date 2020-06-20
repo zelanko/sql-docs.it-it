@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 351a5a4aa6bc1655b8da5fced3e51385dd498bdf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289189"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027095"
 ---
 # <a name="hierarchical-data-sql-server"></a>Dati gerarchici [SQL Server]
-  Il tipo di `hierarchyid` dati incorporato rende più semplice archiviare ed eseguire query sui dati gerarchici. `hierarchyid`è ottimizzato per la rappresentazione di alberi, che sono il tipo più comune di dati gerarchici.  
+  Il `hierarchyid` tipo di dati incorporato rende più semplice archiviare ed eseguire query sui dati gerarchici. `hierarchyid`è ottimizzato per la rappresentazione di alberi, che sono il tipo più comune di dati gerarchici.  
   
  I dati gerarchici vengono definiti come un set di elementi di dati correlati tra loro tramite relazioni gerarchiche. Si parla di relazioni gerarchiche quando un elemento di dati è l'elemento padre di un altro elemento. Di seguito sono riportati alcuni esempi dei dati gerarchici comunemente archiviati nei database:  
   
@@ -108,7 +107,7 @@ GO
   
 -   Le query vengono eseguite raramente sulle sezioni della gerarchia. In altre parole, le query di solito vengono eseguite solo su un singolo punto della gerarchia. In questi casi la condivisione percorso non è importante. Ad esempio, la relazione elemento padre/figlio è superiore se la tabella dell'organizzazione viene utilizzata solo per l'elaborazione del libro paga per i singoli dipendenti.  
   
--   I sottoalberi non-foglia vengono spostati frequentemente e le prestazioni sono molto importanti. In una rappresentazione padre/figlio, la modifica del percorso di una riga in una gerarchia influisce su una sola riga. La modifica della posizione di una riga in `hierarchyid` un utilizzo influiscono su *n* righe, dove *n* è il numero di nodi nel sottoalbero spostato.  
+-   I sottoalberi non-foglia vengono spostati frequentemente e le prestazioni sono molto importanti. In una rappresentazione padre/figlio, la modifica del percorso di una riga in una gerarchia influisce su una sola riga. La modifica della posizione di una riga in un `hierarchyid` utilizzo influiscono su *n* righe, dove *n* è il numero di nodi nel sottoalbero spostato.  
   
      Se i sottoalberi non-foglia vengono spostati frequentemente e le prestazioni sono importanti, ma la maggior parte degli spostamenti è a un livello ben definito della gerarchia, suddividere i livelli superiori e inferiori in due gerarchie. In questo modo, tutti gli spostamenti si verificano a livello di foglia nella gerarchia più elevata. Ad esempio, considerare una gerarchia di siti Web ospitata da un servizio. I siti contengono molte pagine disposte in modo gerarchico. I siti ospitati potrebbero essere spostati in altri percorsi nella gerarchia del sito, tuttavia le pagine subordinate vengono raramente disposte in modo nuovo. Questo potrebbe essere rappresentato tramite:  
   
@@ -319,7 +318,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>Esempio di utilizzo di una transazione serializzabile  
- Al tipo di dati **Org_BreadthFirst** viene assicurato che per la determinazione di **@last_child** venga usata una ricerca di intervallo. Oltre ad altri casi di errore che un'applicazione potrebbe voler controllare, una violazione di chiave duplicata dopo l'inserimento indica un tentativo di aggiungere più dipendenti con lo stesso ID e **@last_child** pertanto deve essere ricalcolato. Nel codice seguente sono utilizzati una transazione serializzabile e un indice breadth-first per calcolare il valore del nodo nuovo:  
+ Al tipo di dati **Org_BreadthFirst** viene assicurato che per la determinazione di **@last_child** venga usata una ricerca di intervallo. Oltre ad altri casi di errore che un'applicazione potrebbe voler controllare, una violazione di chiave duplicata dopo l'inserimento indica un tentativo di aggiungere più dipendenti con lo stesso ID e pertanto **@last_child** deve essere ricalcolato. Nel codice seguente sono utilizzati una transazione serializzabile e un indice breadth-first per calcolare il valore del nodo nuovo:  
   
 ```  
 CREATE TABLE Org_T2  
@@ -497,7 +496,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="moving-subtrees"></a><a name="BKMK_MovingSubtrees"></a> Spostamento di sottoalberi  
- Un'altra operazione comune è lo spostamento di sottoalberi. La procedura seguente prende il sottoalbero **@oldMgr** di e lo rende ( **@oldMgr**incluso) un sottoalbero di **@newMgr**.  
+ Un'altra operazione comune è lo spostamento di sottoalberi. La procedura seguente prende il sottoalbero di **@oldMgr** e lo rende (incluso **@oldMgr** ) un sottoalbero di **@newMgr** .  
   
 ```  
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  

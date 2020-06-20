@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4a245aab71292e1482bd5a17bd32a27bded640ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53fbe7568050927e8ddd43085181125214e7f86a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775222"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932222"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>Aggiornamenti di versione ed edizione supportati
   È possibile eseguire l'aggiornamento da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]e [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. In questo argomento sono elencati i percorsi di aggiornamento supportati da queste versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e gli aggiornamenti di edizione supportati per [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
@@ -73,7 +72,7 @@ ms.locfileid: "62775222"
   
  Nella tabella seguente sono elencati gli scenari di aggiornamento supportati da versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
-|Aggiornamento da|Percorso di aggiornamento supportato|  
+|Eseguire l'aggiornamento da|Percorso di aggiornamento supportato|  
 |------------------|----------------------------|  
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 Enterprise|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 Developer|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer|  
@@ -121,7 +120,7 @@ ms.locfileid: "62775222"
   
 -   Connettersi a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]usando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 2014.  
   
- Quando un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] viene aggiornato a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], il livello di compatibilità del database viene modificato da 90 a 100. In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]i valori validi per il livello di compatibilità del database sono 100, 110 e 120. [ALTER DATABASE Compatibility level &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) illustra il modo in cui la modifica del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] livello di compatibilità potrebbe influire sulle applicazioni.  
+ Quando un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] viene aggiornato a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], il livello di compatibilità del database viene modificato da 90 a 100. In i [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] valori validi per il livello di compatibilità del database sono 100, 110 e 120. [ALTER DATABASE Compatibility level &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) illustra il modo in cui la modifica del livello di compatibilità potrebbe influire sulle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applicazioni.  
   
  Tutti gli scenari non specificati nell'elenco sopra indicato non sono supportati, inclusi, a titolo esemplificativo, i seguenti:  
   
@@ -167,9 +166,9 @@ ms.locfileid: "62775222"
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise (server + licenza CAL) <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Core)|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Core)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licenza Server+CAL)|  
   
- <sup>1</sup> si applica anche [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a Express with Tools [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ed Express with Advanced Services.  
+ <sup>1</sup> si applica anche a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express with Tools ed [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express with Advanced Services.  
   
- <sup>2</sup> la modifica dell'edizione di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] un cluster di failover è limitata. Gli scenari seguenti non sono supportati per i cluster di failover di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] :  
+ <sup>2</sup> la modifica dell'edizione di un [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] cluster di failover è limitata. Gli scenari seguenti non sono supportati per i cluster di failover di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] :  
   
 -   Da SQL Server 2014 Enterprise a SQL Server 2014 Developer, Standard o Enterprise Evaluation.  
   
@@ -179,7 +178,7 @@ ms.locfileid: "62775222"
   
 -   Da SQL Server 2014 Enterprise Evaluation a SQL Server 2014 Standard.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzionalità supportate dalle edizioni di SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Requisiti hardware e software per l'installazione di SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Eseguire l'aggiornamento a SQL Server 2014](upgrade-sql-server.md)   

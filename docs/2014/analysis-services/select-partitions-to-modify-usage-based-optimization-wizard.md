@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1de6e214-5efa-4efa-9336-edbe2310cfbe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e98a7c30869428f4cc31428f35eaf6c6f86e97c6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff9f2c372d6857257fa71e771f6eabe50eaf8fb9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069324"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940842"
 ---
 # <a name="select-partitions-to-modify-usage-based-optimization-wizard"></a>Selezione partizioni da modificare (Ottimizzazione guidata basata sulle statistiche di utilizzo)
   Utilizzare la pagina **Selezione partizioni da modificare** per selezionare le partizioni per le quali si desidera progettare le aggregazioni.  
@@ -37,7 +36,7 @@ ms.locfileid: "66069324"
  **Progettazioni delle aggregazioni**  
  Consente di visualizzare una stringa che descrive la progettazione delle aggregazioni utilizzata dalla partizione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto dell'ottimizzazione guidata basata sull'utilizzo](usage-based-optimization-wizard-f1-help.md)   
  [Procedure guidate di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-wizards-multidimensional-data.md)  
   
