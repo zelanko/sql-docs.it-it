@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 654fb295-f0a5-4d66-93e0-5d43e4d7d535
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5452b53bf6171b7e516f246972aa0d9d56e321a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 699f06460d2cf78aa502fde925d9475035c979ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050749"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051667"
 ---
 # <a name="sqlfulltextquery-event-class"></a>SQL:FullTextQuery - classe di evento
   La classe di evento SQL:FullTextQuery viene generata quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue una query full-text. È consigliabile includere questa classe di evento nelle tracce che eseguono il monitoraggio dei problemi associati ai cataloghi full-text.  
@@ -34,7 +33,7 @@ ms.locfileid: "63050749"
 |ClientProcessID|`int`|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se tramite il client viene indicato l'ID del processo client.|9|Sì|  
 |DatabaseID|`int`|ID del database specificato nell'istruzione USE *database* oppure ID del database predefinito, se per una determinata istanza non viene eseguita un'istruzione USE *database*. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |DatabaseName|`nvarchar`|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Sì|  
-|Durata|`bigint`|Intervallo di tempo richiesto per l'esecuzione della query full-text.|13|No|  
+|Duration|`bigint`|Intervallo di tempo richiesto per l'esecuzione della query full-text.|13|No|  
 |EndTime|`datetime`|Ora di fine dell'evento.|15|Sì|  
 |Errore|`int`|Numero del messaggio di errore.|31|Sì|  
 |EventClass|`int`|Tipo di evento registrato = 123.|27|No|  
@@ -56,7 +55,7 @@ ms.locfileid: "63050749"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|`bigint`|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

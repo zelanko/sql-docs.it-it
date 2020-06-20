@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c801e6da-0159-4bb0-9144-eb28b5127ff7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6b69d3e84938f93828a908141a4a05365bd0f07a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73e38c305b9aba5413b41fa27fa13ac4dc73cbe9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091671"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011822"
 ---
 # <a name="update-token-syntax-in-sql-server-agent-job-steps"></a>Aggiornare la sintassi del token nei passaggi del processo di SQL Server Agent
   La sintassi per l'uso di token nei passaggi di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è stata modificata.  
@@ -27,11 +26,11 @@ ms.locfileid: "66091671"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
 ## <a name="description"></a>Descrizione  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilizza le parentesi, ad esempio $ (date), anziché le parentesi quadre, ad esempio [DATE].  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilizza le parentesi, ad esempio $ (date), anziché le parentesi quadre, ad esempio [DATE].  
   
  Per ulteriori informazioni, vedere "Utilizzo dei token nei passaggi dei processi" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Problemi di aggiornamento di SQL Server Agent](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  
   
   

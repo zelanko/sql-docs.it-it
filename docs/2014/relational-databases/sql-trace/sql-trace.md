@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a1dd2e117207f3737f54e2cd0269c51918a199f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 82ed0e5dd67738b705b4991b90669198495d497a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63286540"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060254"
 ---
 # <a name="sql-trace"></a>Traccia SQL
   In Traccia SQL vengono raccolti unicamente gli eventi che rappresentano istanze delle classi di evento elencate nella definizione di traccia. Tali eventi possono essere esclusi dalla traccia tramite un filtro oppure essere inseriti in coda per la relativa destinazione. La destinazione può essere un file o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO), che è in grado di utilizzare le informazioni della traccia nelle applicazioni che gestiscono [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -35,7 +34,7 @@ ms.locfileid: "63286540"
  Di seguito vengono definiti i concetti fondamentali di Traccia SQL.  
   
  **Event**  
- Occorrenza di un'azione all'interno di un'istanza [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]di.  
+ Occorrenza di un'azione all'interno di un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] .  
   
  **Colonna di dati**  
  Attributo di un evento.  
@@ -75,16 +74,16 @@ ms.locfileid: "63286540"
 |**ApplicationName** <sup>1</sup>|10|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione anziché con il nome visualizzato del programma.|  
 |**BigintData1**|52|Valore (tipo di dati `bigint`) che dipende dalla classe di evento specificata nella traccia.|  
 |**BigintData2**|53|Valore (tipo di dati `bigint`) che dipende dalla classe di evento specificata nella traccia.|  
-|**Binary Data**|2|Valore binario che dipende dalla classe di evento acquisita nella traccia.|  
+|**Dati binari**|2|Valore binario che dipende dalla classe di evento acquisita nella traccia.|  
 |**ClientProcessID** <sup>1</sup>|9|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se l'ID del processo client viene fornito dal client.|  
 |**ColumnPermissions**|44|Indica se è stata impostata un'autorizzazione a livello di colonna. È possibile analizzare il testo dell'istruzione per determinare con esattezza quali autorizzazioni sono state impostate per quali colonne.|  
 |**CPU**|18|Tempo della CPU in millisecondi utilizzato dall'evento.|  
 |**ID database** <sup>1</sup>|3|ID del database specificato nell'istruzione USE *nome_database* oppure ID del database predefinito, se per una determinata istanza non viene eseguita un'istruzione USE *nome_database*. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|  
 |**DatabaseName**|35|Nome del database in cui viene eseguita l'istruzione dell'utente.|  
 |**DBUserName** <sup>1</sup>|40|Nome utente di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del client.|  
-|**Durata**|13|Durata dell'evento in microsecondi.<br /><br /> Il server indica la durata di un evento in microsecondi (un milionesimo o 10<sup>-6</sup>di secondo) e la quantità di tempo della CPU usato dall'evento in millisecondi (un millesimo o 10<sup>-3</sup>di secondo). Nell'interfaccia utente grafica di [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] il valore della colonna **Duration** viene visualizzato in millisecondi. Tuttavia, quando si salva una traccia in un file o in una tabella di database, il valore della colonna **Duration** viene scritto in microsecondi.|  
+|**Duration**|13|Durata dell'evento in microsecondi.<br /><br /> Il server indica la durata di un evento in microsecondi (un milionesimo o 10<sup>-6</sup>di secondo) e la quantità di tempo della CPU usato dall'evento in millisecondi (un millesimo o 10<sup>-3</sup>di secondo). Nell'interfaccia utente grafica di [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] il valore della colonna **Duration** viene visualizzato in millisecondi. Tuttavia, quando si salva una traccia in un file o in una tabella di database, il valore della colonna **Duration** viene scritto in microsecondi.|  
 |**EndTime**|15|Ora di fine dell'evento. Questa colonna non viene popolata per le classi di evento che fanno riferimento all'avvio di un evento, quali **SQL:BatchStarting** o **SP:Starting**.|  
-|**Error (Errore) (Error (Errore)e)**|31|Numero di errore di un determinato evento. In genere corrisponde al numero di errore archiviato in **sysmessages**.|  
+|**Errore**|31|Numero di errore di un determinato evento. In genere corrisponde al numero di errore archiviato in **sysmessages**.|  
 |**EventClass** <sup>1</sup>|27|Tipo di classe di evento acquisita.|  
 |**EventSequence**|51|Numero di sequenza dell'evento.|  
 |**EventSubClass** <sup>1</sup>|21|Tipo di sottoclasse di evento, che offre informazioni aggiuntive su ogni classe di evento. Ad esempio, i valori della sottoclasse della classe di evento **Execution Warning** rappresentano il tipo di avviso di esecuzione:<br /><br /> **1** = attesa della query. Tempo di attesa delle risorse, ad esempio della memoria, prima dell'esecuzione della query.<br /><br /> **2** = timeout della query. Timeout della query durante l'attesa delle risorse necessarie per l'esecuzione. Questa colonna di dati non viene popolata per tutte le classi di evento.|  
@@ -127,13 +126,13 @@ ms.locfileid: "63286540"
 |**SqlHandle**|63|Hash a 64 bit basato sul testo di una query ad hoc oppure ID del database e dell'oggetto di un oggetto SQL. Questo valore può essere passato a **sys. dm_exec_sql_text ()** per recuperare il testo SQL associato.|  
 |**StartTime** <sup>1</sup>|14|Ora di inizio dell'evento, se disponibile.|  
 |**State**|30|Codice di stato dell'errore.|  
-|**Operazione completata**|23|Indica l'esito dell'evento. I possibili valori sono:<br /><br /> **1** = esito positivo.<br /><br /> **0** = esito negativo<br /><br /> Ad esempio, **1** indica l'esito positivo di un controllo delle autorizzazioni e **0** indica l'esito negativo di tale controllo.|  
+|**Success**|23|Indica l'esito dell'evento. I possibili valori sono:<br /><br /> **1** = esito positivo.<br /><br /> **0** = esito negativo<br /><br /> Ad esempio, **1** indica l'esito positivo di un controllo delle autorizzazioni e **0** indica l'esito negativo di tale controllo.|  
 |**TargetLoginName**|42|Per le azioni relative a un account di accesso, ad esempio l'aggiunta di un nuovo account di accesso, il nome dell'account di accesso specifico.|  
 |**TargetLoginSid**|43|Per le azioni relative a un account di accesso, ad esempio l'aggiunta di un nuovo account di accesso, il SID dell'account di accesso specifico.|  
 |**TargetUserName**|39|Per le azioni relative a un utente del database, ad esempio la concessione di un'autorizzazione a un utente, il nome di tale utente.|  
 |**TextData**|1|Valore di testo che dipende dalla classe di evento acquisita nella traccia. Se si esegue la traccia di una query con parametri, le variabili visualizzate non includeranno valori di dati nella colonna **TextData** .|  
 |**TransactionID**|4|ID della transazione assegnato dal sistema.|  
-|**Type**|57|Valore intero che dipende dalla classe di evento acquisita nella traccia.|  
+|**Tipo**|57|Valore intero che dipende dalla classe di evento acquisita nella traccia.|  
 |**Scrive**|17|Numero di operazioni di scrittura fisiche su disco eseguite dal server in relazione all'evento.|  
 |**XactSequence**|50|Token utilizzato per descrivere la transazione corrente.|  
   
@@ -160,7 +159,7 @@ ms.locfileid: "63286540"
 |Descrive come ridurre la quantità di dati raccolta dalla traccia.|[Limitare le dimensioni di file di traccia e tabelle](../sql-trace/limit-trace-file-and-table-sizes.md)|  
 |Descrive i due modi per pianificare le tracce in Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|[Pianificare tracce](../sql-trace/schedule-traces.md)|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Modelli e autorizzazioni di SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Guida alla programmazione di SQL Server Management Objects &#40;SMO&#41;](../server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   

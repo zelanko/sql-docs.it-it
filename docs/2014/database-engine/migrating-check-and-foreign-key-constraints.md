@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: e0a1a1e4-0062-4872-93c3-cd91b7a43c23
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2494ab96cc3b4964c26a1ce17593e9b5aece2e7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f1622e87d971a32dcf478dfb036a504e0959fd76
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774932"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930742"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>Migrazione di vincoli CHECK e di chiave esterna
-  I vincoli check e Foreign Key non sono supportati [!INCLUDE[hek_2](../includes/hek-2-md.md)] in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]in. Questi costrutti vengono in genere utilizzati per applicare l'integrità dei dati logici nello schema e possono essere importanti per mantenere la correttezza funzionale delle applicazioni.  
+  I vincoli check e Foreign Key non sono supportati in [!INCLUDE[hek_2](../includes/hek-2-md.md)] in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] . Questi costrutti vengono in genere utilizzati per applicare l'integrità dei dati logici nello schema e possono essere importanti per mantenere la correttezza funzionale delle applicazioni.  
   
  I controlli di integrità logica in una tabella, ad esempio i vincoli check e Foreign Key, richiedono un'elaborazione aggiuntiva sulle transazioni e in genere devono essere evitati per le applicazioni sensibili alle prestazioni. Tuttavia, se tali controlli sono cruciali per l'applicazione, esistono due soluzioni alternative.  
   
@@ -99,7 +98,7 @@ GO
   
  Dopo la conversione in una tabella ottimizzata per la memoria, la definizione di [Sales]. [SalesOrderDetail] è il seguente:  
   
- Si noti che ROWGUID non è più un ROWGUIDCOL perché non è supportato in [!INCLUDE[hek_2](../includes/hek-2-md.md)]. La colonna è stata rimossa. Inoltre, LineTotal è una colonna calcolata e non rientra nell'ambito di questo articolo, quindi è stata anche rimossa.  
+ Si noti che ROWGUID non è più un ROWGUIDCOL perché non è supportato in [!INCLUDE[hek_2](../includes/hek-2-md.md)] . La colonna è stata rimossa. Inoltre, LineTotal è una colonna calcolata e non rientra nell'ambito di questo articolo, quindi è stata anche rimossa.  
   
 ```sql  
 USE [AdventureWorks2012]  
@@ -240,7 +239,7 @@ END CATCH
 END  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Migrazione a OLTP in memoria](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

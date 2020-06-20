@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: efcb50b9-f8ff-4121-bf67-05830171b928
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 12a7ae2db2d0e1c91e85eeb4a2c2691579c2da70
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73b82f154e206d59b92c84c7b8f72df572774430
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745552"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050535"
 ---
 # <a name="srv_sendmsg-extended-stored-procedure-api"></a>srv_sendmsg (API Stored procedure estesa)
     
@@ -82,7 +81,7 @@ msglen
  *msgnum*  
  Numero di messaggio a 4 byte.  
   
- *classe*  
+ *class*  
  Specifica la gravità dell'errore. Un livello di gravità minore o uguale a 10 è considerato un messaggio informativo.  
   
  *state*  
@@ -103,7 +102,7 @@ msglen
  *msglen*  
  Specifica la lunghezza, espressa in byte, di *message*. Se *message* è con terminazione Null, impostare *msglen* su SRV_NULLTERM.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SUCCEED o FAIL  
   
 ## <a name="remarks"></a>Osservazioni  

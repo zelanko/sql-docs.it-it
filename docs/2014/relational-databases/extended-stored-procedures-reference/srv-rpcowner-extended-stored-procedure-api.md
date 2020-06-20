@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e81a60e6-14ea-47bc-a11c-3d7635344447
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 68e5d0214a2bd14a466b7a0c40f792031d3fac5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b589d55c8e30e3882ebb25bc46c51bc382e3e2df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62745502"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050584"
 ---
 # <a name="srv_rpcowner-extended-stored-procedure-api"></a>srv_rpcowner (API Stored procedure estesa)
     
@@ -55,7 +54,7 @@ len
  *Len*  
  Puntatore a una variabile di tipo integer che riceve la lunghezza del nome del proprietario. Il parametro *len* può essere NULL. In tal caso, non viene restituita la lunghezza del componente proprietario.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  Puntatore DBCHAR al componente proprietario con terminazione Null per la stored procedure remota corrente. Se non è presente alcuna stored procedure remota corrente, viene restituito NULL e *len* viene impostato su -1.  
   
 ## <a name="remarks"></a>Osservazioni  

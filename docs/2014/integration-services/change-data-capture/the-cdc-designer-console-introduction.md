@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fba97c2e348b238702206ebf194c2390f155ad16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a2ab8f20002188684b09fbd574b1cfe5e26feba
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62834643"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922302"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Introduzione a CDC Designer Console
   In questa sezione vengono illustrate le procedure di installazione relative a Progettazione Change Data Capture per Oracle di Attunity.  
   
 ## <a name="installation"></a>Installazione  
- In questa sezione vengono illustrate le procedure di installazione relative a Progettazione Change Data Capture per Oracle di Attunity. Per installare la console di CDC Designer, eseguire manualmente **AttunityOracleCdcDesigner. msi** dal supporto di installazione di SQL Server.  I pacchetti di installazione per x86 e x64 si trovano in **.\Tools\AttunityCDCOracle\\ ** sul supporto di installazione di SQL Server.  
+ In questa sezione vengono illustrate le procedure di installazione relative a Progettazione Change Data Capture per Oracle di Attunity. Per installare la console di CDC Designer, eseguire manualmente **AttunityOracleCdcDesigner.msi** dal supporto di installazione di SQL Server.  I pacchetti di installazione per x86 e x64 si trovano in **.\Tools\AttunityCDCOracle \\ ** sul supporto di installazione di SQL Server.  
   
 ## <a name="supported-windows-environments"></a>Ambienti Windows supportati  
  CDC Designer Console può essere eseguita negli ambienti Windows seguenti:  
@@ -30,14 +29,14 @@ ms.locfileid: "62834643"
   
 -   Windows 7 a 32 bit (x86) e a 64 bit (x64)  
   
--   Windows Server 2008 R2  
+-   Windows Server 2008 R2  
   
 -   Windows Server 2008 a 32 bit (x86) e a 64 bit (x64) con Service Pack 2  
   
 ## <a name="database-prerequisites"></a>Prerequisiti del database  
  Per utilizzare Progettazione Change Data Capture per Oracle di Attunity, si utilizza un database Oracle. Progettazione Change Data Capture per Oracle di Attunity supporta le versioni seguenti:  
   
- **Oracle Database**  
+ **Database Oracle**  
   
 -   Database Oracle 10g Release 2: 10.2.0.1-10.2.0.5 (set di patch a partire da aprile 2010)  
   

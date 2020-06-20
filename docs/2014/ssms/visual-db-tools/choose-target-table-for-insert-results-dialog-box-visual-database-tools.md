@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 4ffd62c1-da72-4daf-832b-cc1268abf351
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8d69745b3316222f9ebabbad29fbc12e023351d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: caa9be1a61ed579aa8bfaaf1bc6c83282f52c42c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067527"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066206"
 ---
 # <a name="choose-target-table-for-insert-results-dialog-box-visual-database-tools"></a>Finestra di dialogo Scegliere la tabella di destinazione per Accodamento (Visual Database Tools)
   Consente di specificare la tabella a cui verranno aggiunte righe di dati come risultato di una query di accodamento. Questa finestra di dialogo viene visualizzata quando si avvia una query di accodamento.  

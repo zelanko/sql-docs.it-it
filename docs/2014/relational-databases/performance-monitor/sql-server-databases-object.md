@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b4c0c7a5626f3eb48509d7a4cfbf239f7cb931da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f4f46bd388476934226e41d371c85fa13b94d23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250645"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066091"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, oggetto di database
   L'oggetto **SQLServer:Database** in SQL Server include contatori per il monitoraggio delle operazioni di copia bulk, della velocità effettiva dei backup e del ripristino e delle attività del log delle transazioni. Eseguire il monitoraggio delle transazioni e del log delle transazioni per determinare la quantità di attività degli utenti eseguita nel database e lo spazio disponibile nel log delle transazioni. La quantità di attività degli utenti ha effetto sulle prestazioni del database e sulle dimensioni del log, sul blocco e sulla replica. Il monitoraggio dell'attività del log di basso livello per misurare l'attività degli utenti e l'utilizzo delle risorse può essere utile per identificare eventuali colli di bottiglia.  
@@ -58,9 +57,9 @@ ms.locfileid: "63250645"
 |**Byte/sec spostamento dati per compattazione**|Quantità di dati spostati al secondo tramite le operazioni di compattazione automatica o l'istruzione DBCC SHRINKDATABASE o DBCC SHRINKFILE.|  
 |**Transazioni rilevate al secondo**|Numero di transazioni di cui è stato eseguito il commit nella tabella di commit per il database.|  
 |**Transazioni/sec**|Numero di transazioni avviate al secondo per il database.<br /><br /> **Transazioni/sec** non conteggia le transazioni solo XTP (transazioni avviate da una stored procedure compilata in modo nativo).|  
-|**Scrittura transazioni/sec**|Numero di transazioni che hanno scritto nel database e di cui è stato eseguito il commit nell'ultimo secondo.|  
+|**Transazioni di scrittura/sec**|Numero di transazioni che hanno scritto nel database e di cui è stato eseguito il commit nell'ultimo secondo.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Monitorare l'utilizzo delle risorse &#40;monitoraggio di sistema&#41;](monitor-resource-usage-system-monitor.md)   
  [SQL Server, replica di database](sql-server-database-replica.md)  
   

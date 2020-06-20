@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2ee479c8-66e4-45e9-a4c9-49d418e25a72
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 637d06160afba1fc1f93bea0da3aae0a09f954ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9da9bc9dbef30b1ad2743e9dbab4ae541538c689
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050937"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051994"
 ---
 # <a name="sort-warnings-event-class"></a>Sort Warnings - classe di evento
   La classe di evento Sort Warnings indica che per le operazioni di ordinamento non è disponibile memoria sufficiente. Ciò vale soltanto per le operazioni di ordinamento eseguite in una query, ad esempio una clausola ORDER BY in un'istruzione SELECT, e non per le operazioni di ordinamento che implicano la creazione di indici.  
@@ -52,7 +51,7 @@ ms.locfileid: "63050937"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|`bigint`|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

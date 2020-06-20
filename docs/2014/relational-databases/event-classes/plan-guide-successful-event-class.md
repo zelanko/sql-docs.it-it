@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fecfbb6c-56c9-4db4-84d3-00d6e338355a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 56157ce2c29a95d35198ab44835b50e45d7831a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b521c230d1789b031903aecdf8f42f9be3ffc0b0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827204"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052824"
 ---
 # <a name="plan-guide-successful-event-class"></a>Classe di evento Plan Guide Successful
   Questa classe di evento indica che in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è stato correttamente creato un piano di esecuzione per una query o un batch contenente una guida di piano. L'evento viene generato quando vengono soddisfatte le condizioni seguenti:  
@@ -42,7 +41,7 @@ ms.locfileid: "62827204"
 |EventSequence|`int`|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
 |HostName|`nvarchar`|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
 |IsSystem|`int`|Indica se l'evento si è verificato in un processo di sistema o in un processo utente: 1 = sistema, 0 = utente.|60|Sì|  
-|LoginName|`nvarchar`|Nome dell'account di accesso dell'utente (account [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di accesso di sicurezza [!INCLUDE[msCoName](../../includes/msconame-md.md)] di o credenziali di accesso di Windows nel\\formato dominio*nomeutente*).|11|Sì|  
+|LoginName|`nvarchar`|Nome dell'account di accesso dell'utente (account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sicurezza di o [!INCLUDE[msCoName](../../includes/msconame-md.md)] credenziali di accesso di Windows nel formato dominio \\ *nomeutente*).|11|Sì|  
 |LoginSid|`image`|ID di sicurezza (SID) dell'utente connesso. Tali informazioni sono disponibili nelle viste del catalogo [sys.server_principals](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql) o [sys.sql_logins](/sql/relational-databases/system-catalog-views/sys-sql-logins-transact-sql) . Il SID è univoco per ogni account di accesso nel server.|41|Sì|  
 |NTDomainName|`nvarchar`|Dominio Windows di appartenenza dell'utente.|7|Sì|  
 |NTUserName|`nvarchar`|Nome utente di Windows.|6|Sì|  
@@ -56,7 +55,7 @@ ms.locfileid: "62827204"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|`bigint`|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe di evento Plan Guide Unsuccessful](plan-guide-unsuccessful-event-class.md)   
  [Eventi estesi](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  

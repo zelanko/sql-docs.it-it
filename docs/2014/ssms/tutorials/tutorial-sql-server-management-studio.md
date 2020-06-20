@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b6cd02b0679990e7781faf2195b17444cadb53e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 005e71195fc294ef7c2590886208d7184ec00474
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753455"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066344"
 ---
 # <a name="tutorial-sql-server-management-studio"></a>Esercitazione su SQL Server Management Studio
   Nell'esercitazione di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] viene illustrato l'ambiente integrato per gestire l'infrastruttura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] presenta un'interfaccia grafica per la configurazione, il monitoraggio e l'amministrazione di istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Inoltre, consente di distribuire, monitorare e aggiornare i componenti livello dati utilizzati dalle applicazioni, ad esempio i database e i data warehouse. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] offre anche [!INCLUDE[tsql](../../includes/tsql-md.md)]e gli editor di linguaggio MDX, DMX e XML per la modifica e il debug di script.  
@@ -57,7 +56,7 @@ ms.locfileid: "62753455"
   
 -   Internet Explorer 9.0 o versione successiva.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Esercitazioni del motore di database](../../relational-databases/database-engine-tutorials.md)  
   
   

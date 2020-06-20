@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dbc91bf7-687c-4083-9694-02f3e102c175
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 898a36e6f8dc65be24f386159a34158f23c1125a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4fe72aa8b6c38a25baf537eb01bac7924d43e290
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662404"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053002"
 ---
 # <a name="ftcrawl-stopped-event-class"></a>Classe di evento FT:Crawl Stopped
   Con la classe di evento **:Crawl Stopped** viene indicato l'arresto di una ricerca per indicizzazione (popolamento) full-text. L'arresto potrebbe essere conseguenza di un errore irreversibile oppure del completamento della ricerca per indicizzazione.  

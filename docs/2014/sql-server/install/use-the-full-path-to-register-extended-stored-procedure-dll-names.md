@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f648d57c-af32-4c71-9882-47b6766f3c2b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e560ec0fd617d4da46235803da8cbd69ef4f80d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ec4ef3fc2e0f2c4834ffa7479a00562ae15d07f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091286"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058825"
 ---
 # <a name="use-the-full-path-to-register-extended-stored-procedure-dll-names"></a>Utilizzare il percorso completo per registrare i nomi delle DLL delle stored procedure estese
   Le stored procedure estese registrate precedentemente senza il percorso completo per il nome DLL possono non funzionare dopo l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -38,7 +37,7 @@ ms.locfileid: "66091286"
   
 2.  Per registrare la stored procedure estesa con il percorso completo eseguire sp_addextendedproc.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Problemi di aggiornamento motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [SQL Server 2014 preparazione aggiornamento &#91;nuova&#93;](sql-server-2014-upgrade-advisor.md)  
   

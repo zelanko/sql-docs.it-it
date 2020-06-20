@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 481b0704-ce79-4543-b141-67306128aa2b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0de86b9690f0647803938218ce566508662da20e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac1488cd9a42a8f7e212fe533615dbb131fe7290
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094914"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059304"
 ---
 # <a name="how-to-install-upgrade-advisor"></a>Procedura: Installazione di Preparazione aggiornamento
   Preparazione aggiornamento supporta l'analisi remota di tutti i componenti supportati, ad eccezione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Se non si prevede di analizzare le istanze di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è possibile installare Preparazione aggiornamento in qualsiasi computer in grado di connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e che soddisfi i prerequisiti di Preparazione aggiornamento. Se si prevede di analizzare le istanze di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è necessario installare Preparazione aggiornamento nel server di report.  
@@ -31,16 +30,16 @@ ms.locfileid: "66094914"
   
 1.  Avviare l'installazione utilizzando uno dei metodi seguenti:  
   
-    -   Se si sta eseguendo l'installazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] dal sito Web, fare clic sul collegamento **download** , quindi fare clic sul pulsante **Esegui** per avviare l'installazione.  
+    -   Se si sta eseguendo l'installazione dal [!INCLUDE[msCoName](../../includes/msconame-md.md)] sito Web, fare clic sul collegamento **download** , quindi fare clic sul pulsante **Esegui** per avviare l'installazione.  
   
-    -   Se si sta eseguendo l'installazione dal supporto del prodotto, aprire la cartella **Redist** , aprire la cartella **Preparazione aggiornamento** , quindi fare doppio clic su **SQLUA. msi**.  
+    -   Se si sta eseguendo l'installazione dal supporto del prodotto, aprire la cartella **Redist** , aprire la cartella **Preparazione aggiornamento** , quindi fare doppio clic su **SQLUA.msi**.  
   
     > [!NOTE]  
     >  Preparazione aggiornamento richiede [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 4. Se non è installato, o se si dispone di una versione non definitiva, verrà visualizzato un messaggio di errore. Disinstallare qualsiasi versione precedente di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], quindi installare la versione più recente di .NET Framework 4.  
     >   
-    >  ScriptDom [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] è un prerequisito per l' [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installazione di preparazione aggiornamento e non viene installato tramite l'installazione di preparazione aggiornamento. Per il programma di installazione è necessario scaricare e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] installare ScriptDom dal [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Feature Pack.  
+    >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom è un prerequisito per l'installazione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] di preparazione aggiornamento e non viene installato tramite l'installazione di preparazione aggiornamento. Per il programma di installazione è necessario scaricare e installare [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom dal [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Feature Pack.  
   
-2.  Nella pagina **installazione di preparazione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aggiornamento** , fare clic su **Avanti**.  
+2.  Nella pagina ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installazione di preparazione aggiornamento** , fare clic su **Avanti**.  
   
 3.  Nella pagina **contratto di licenza** leggere il contratto di licenza. Se si accettano le condizioni, selezionare Accetto **il contratto di licenza** e quindi fare clic su **Avanti**.  
   
@@ -52,7 +51,7 @@ ms.locfileid: "66094914"
   
 7.  Fare clic su **Fine** per uscire dalla procedura guidata.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Prerequisiti di Preparazione aggiornamento](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md)  
   
   

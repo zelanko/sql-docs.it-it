@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0dc485a0-5a50-41eb-a29d-f2b2fb920174
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f294ad3868670783d3010498dd0ba89e1e6a48be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 74c00479e5587c8662d81e554cae5add2e295183
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127056"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068762"
 ---
 # <a name="run-replication-maintenance-jobs-sql-server-management-studio"></a>Esecuzione di processi di manutenzione della replica (SQL Server Management Studio)
   Nella replica vengono utilizzati i seguenti processi di manutenzione:  
@@ -27,9 +26,9 @@ ms.locfileid: "63127056"
 -   **Aggiornamento del monitoraggio della replica per la distribuzione.**
 -   **Controllo degli agenti di replica**
 -   **Eliminazione del contenuto della distribuzione: distribuzione**
--   **Pulizia della sottoscrizione scaduta**  
+-   **Pulizia dei riferimenti alla sottoscrizione scaduta**  
   
- Avviare e arrestare questi processi dalla cartella **Processi** in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e dalla scheda **Agenti** in Monitoraggio replica. Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](../monitor/start-the-replication-monitor.md). Visualizzare e modificare le proprietà per ogni processo nella finestra di dialogo **Proprietà processo - \<Processo>**, disponibile dalla stessa cartella e dalla stessa scheda.  
+ Avviare e arrestare questi processi dalla cartella **Processi** in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e dalla scheda **Agenti** in Monitoraggio replica. Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](../monitor/start-the-replication-monitor.md). Visualizzare e modificare le proprietà per ogni processo nella finestra di dialogo **Proprietà processo- \<Job> ** , disponibile dalla stessa cartella e dalla stessa scheda.  
   
 ### <a name="to-start-or-stop-a-replication-maintenance-job-in-management-studio"></a>Per avviare e arrestare un processo di manutenzione della replica in Management Studio  
   
@@ -55,7 +54,7 @@ ms.locfileid: "63127056"
   
 3.  Fare clic con il pulsante destro del mouse su un processo e scegliere **Proprietà**.  
   
-4.  Nella finestra di dialogo **Proprietà processo - \<Processo>** modificare le proprietà, se necessario, quindi fare clic su **OK**.  
+4.  Nella finestra di dialogo **proprietà \<Job> processo-** modificare le proprietà, se necessario, quindi fare clic su **OK**.  
   
 ### <a name="to-view-and-modify-properties-for-a-replication-maintenance-job-in-replication-monitor"></a>Per visualizzare e modificare le proprietà per un processo di manutenzione della replica in Monitoraggio replica  
   
@@ -65,9 +64,9 @@ ms.locfileid: "63127056"
   
 3.  Fare clic con il pulsante destro del mouse su un processo nella griglia e quindi scegliere **Proprietà**.  
   
-4.  Nella finestra di dialogo **Proprietà processo - \<Processo>** modificare le proprietà, se necessario, quindi fare clic su **OK**.  
+4.  Nella finestra di dialogo **proprietà \<Job> processo-** modificare le proprietà, se necessario, quindi fare clic su **OK**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Avviare e arrestare un agente di replica &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
  [Visualizzazione delle informazioni ed esecuzione di attività tramite Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Amministrazione dell'agente di replica](../agents/replication-agent-administration.md)  

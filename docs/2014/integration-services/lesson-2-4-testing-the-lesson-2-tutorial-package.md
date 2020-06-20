@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1a9b8361c83201fa2e3c6aa0c6a091e09f7c12f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b4483facba1a1233dda7f3330f432ef8d3f9c2b5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767485"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968228"
 ---
 # <a name="step-4-testing-the-lesson-2-tutorial-package"></a>Passaggio 4: Test del pacchetto creato nella lezione 2 dell'esercitazione
   Dopo aver configurato il contenitore Ciclo Foreach e la gestione connessione file flat, il pacchetto creato nella lezione 2 consente di eseguire un'iterazione dell'insieme di 14 file flat contenuti nella cartella Sample Data. Ogni volta che viene trovato un nome di file corrispondente ai criteri specificati, il contenitore Ciclo Foreach popola la variabile definita dall'utente con il nome del file. Tale variabile aggiorna di conseguenza la proprietà ConnectionString della gestione connessione file flat e viene stabilita una connessione al nuovo file flat. Il contenitore Ciclo Foreach quindi esegue l'attività del flusso di dati non modificati sui dati del nuovo file flat prima di connettersi al file successivo contenuto nella cartella.  
@@ -40,14 +39,14 @@ ms.locfileid: "62767485"
   
 1.  In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **Lesson 2.dtsx** e scegliere **Esegui pacchetto**.  
   
-     Il pacchetto verrà eseguito. È possibile verificare lo stato di ogni ciclo nella finestra output o facendo clic sulla scheda **stato** . Ad esempio, è possibile osservare che 1097 righe sono state aggiunte alla tabella di destinazione dal file Currency_VEB. txt.  
+     Il pacchetto verrà eseguito. È possibile verificare lo stato di ogni ciclo nella finestra output o facendo clic sulla scheda **stato** . Si noterà, ad esempio, che 1097 righe sono state aggiunte alla tabella di destinazione dal file Currency_VEB.txt.  
   
 2.  Al termine dell'esecuzione del pacchetto, scegliere **Arresta debug** dal menu **Debug**.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
  [Lezione 5: Aggiunta di configurazioni del pacchetto per il modello di distribuzione del pacchetto](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Esecuzione di progetti e pacchetti](packages/run-integration-services-ssis-packages.md)  
   
   

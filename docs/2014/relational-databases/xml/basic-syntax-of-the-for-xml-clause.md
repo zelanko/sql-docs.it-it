@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: df19ecbf-d28e-4e9c-aaa3-700f8bbd3be4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e09323a96a5a2fc282c1595c2606ea7e9b9a6bee
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: dc0410e7a54674673f64442d8a3cf9476d250033
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717359"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059561"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>Sintassi di base della clausola FOR XML
   La modalità FOR XML può essere RAW, AUTO, EXPLICIT o PATH. Tale modalità determina la forma della struttura XML risultante.  
@@ -60,9 +59,9 @@ XML
    [ , ROOT [ ('RootName') ] ]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argomenti  
  RAW[('*ElementName*')]  
- Converte ogni riga del set dei risultati della query in un elemento XML con l'identificatore generico \<row /> come tag dell'elemento. È possibile specificare facoltativamente il nome dell'elemento riga quando si utilizza questa direttiva. La struttura XML risultante utilizzerà il valore *ElementName* specificato come elemento riga generato per ogni riga. Per altre informazioni, vedere [Usare la modalità RAW con FOR XML](use-raw-mode-with-for-xml.md).  
+ Accetta il risultato della query e trasforma ogni riga del set di risultati in un elemento XML con un identificatore generico, \<row /> , come tag dell'elemento. È possibile specificare facoltativamente il nome dell'elemento riga quando si utilizza questa direttiva. La struttura XML risultante utilizzerà il valore *ElementName* specificato come elemento riga generato per ogni riga. Per altre informazioni, vedere [Usare la modalità RAW con FOR XML](use-raw-mode-with-for-xml.md).  
   
  AUTO  
  Restituisce i risultati della query in un semplice albero XML nidificato. Ogni tabella nella clausola FROM, per cui è specificata almeno una colonna nella clausola SELECT, viene rappresentata come elemento XML. Le colonne elencate nella clausola SELECT vengono mappate agli attributi di elemento appropriati. Per altre informazioni, vedere [Usare la modalità AUTO con FOR XML](use-auto-mode-with-for-xml.md).  
@@ -71,7 +70,7 @@ XML
  Specifica che la forma dell'albero XML risultante viene definita in modo esplicito. Con questa modalità è tuttavia necessario che le query siano scritte in modo che le informazioni aggiuntive sulla nidificazione desiderata vengano specificate in modo esplicito. Per altre informazioni, vedere [Usare la modalità EXPLICIT con FOR XML](use-explicit-mode-with-for-xml.md).  
   
  PATH  
- Consente di combinare facilmente elementi e attributi, nonché di introdurre una nidificazione aggiuntiva per rappresentare proprietà complesse. È possibile utilizzare le query in modalità FOR XML EXPLICIT per costruire questo tipo di struttura XML da un set di righe, ma la modalità PATH costituisce un'alternativa più semplice. La modalità PATH, insieme alla possibilità di scrivere query FOR XML nidificate e alla direttiva TYPE per restituire istanze di tipo **xml** , consente di formulare più facilmente le query. e rappresenta un'alternativa alla scrittura della maggior parte delle query in modalità EXPLICIT. Per impostazione predefinita, la modalità PATH genera un wrapper dell'elemento \<row /> per ogni riga nel set dei risultati. È possibile specificare facoltativamente il nome di un elemento. In tal caso, il nome specificato viene utilizzato come nome dell'elemento wrapper. Se si specifica una stringa vuota (FOR XML PATH ('')), non viene generato alcun elemento wrapper. Per altre informazioni, vedere [Usare la modalità PATH con FOR XML](use-path-mode-with-for-xml.md).  
+ Consente di combinare facilmente elementi e attributi, nonché di introdurre una nidificazione aggiuntiva per rappresentare proprietà complesse. È possibile utilizzare le query in modalità FOR XML EXPLICIT per costruire questo tipo di struttura XML da un set di righe, ma la modalità PATH costituisce un'alternativa più semplice. La modalità PATH, insieme alla possibilità di scrivere query FOR XML nidificate e alla direttiva TYPE per restituire istanze di tipo **xml** , consente di formulare più facilmente le query. e rappresenta un'alternativa alla scrittura della maggior parte delle query in modalità EXPLICIT. Per impostazione predefinita, la modalità PATH genera un \<row> wrapper di elemento per ogni riga del set di risultati. È possibile specificare facoltativamente il nome di un elemento. In tal caso, il nome specificato viene utilizzato come nome dell'elemento wrapper. Se si specifica una stringa vuota (FOR XML PATH ('')), non viene generato alcun elemento wrapper. Per altre informazioni, vedere [Usare la modalità PATH con FOR XML](use-path-mode-with-for-xml.md).  
   
  XMLDATA  
  Specifica che deve essere restituito uno schema XDR (XML-Data Reduced) inline. Lo schema viene aggiunto all'inizio del documento come schema inline. Per un esempio funzionante, vedere [Usare la modalità RAW con FOR XML](use-raw-mode-with-for-xml.md).  

@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6e4327de10dd03b3ff8cf034ade64391d18d2a86
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e64551075920f2f08bf84fe22086c06387b4439a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192894"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068746"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters-sql-server-management-studio"></a>Visualizzare e modificare i parametri del prompt dei comandi dell'agente di replica (SQL Server Management Studio)
-  Gli agenti di replica sono file eseguibili che accettano parametri della riga di comando. Per impostazione predefinita, gli agenti vengono eseguiti in passaggi di processi di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent. In questo modo, è possibile visualizzare e modificare tali parametri usando la finestra di dialogo **Proprietà processo - \<Processo>**, accessibile dalla cartella **Processi** di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e dalla scheda **Agenti** di Monitoraggio replica. Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](../monitor/start-the-replication-monitor.md).  
+  Gli agenti di replica sono file eseguibili che accettano parametri della riga di comando. Per impostazione predefinita, gli agenti vengono eseguiti in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] passaggi di processo di Agent, quindi questi parametri possono essere visualizzati e modificati tramite la finestra di dialogo **Proprietà processo- \<Job> ** . accessibile dalla cartella **Processi** di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e dalla scheda **Agenti** di Monitoraggio replica. Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](../monitor/start-the-replication-monitor.md).  
   
 > [!NOTE]  
 >  Le modifiche apportate al parametro dell'agente verranno applicate al successivo avvio dell'agente. Se l'agente viene eseguito in modo continuo, è necessario arrestarlo e riavviarlo.  
@@ -31,19 +30,19 @@ ms.locfileid: "63192894"
   
 |Agente|Nome processo|Per un elenco dei parametri, vedere...|  
 |-----------|--------------|------------------------------------|  
-|agente snapshot|**\<Server di pubblicazione\<>-databasepubblicazione\<>-publication>-\<Integer>**|[Agente snapshot repliche](replication-snapshot-agent.md)|  
-|Agente snapshot per una partizione di una pubblicazione di tipo merge|**Dyn_\<ServerPubblicazione>-\<DatabasePubblicazione>-\<Pubblicazione>-\<GUID>**|[Agente snapshot repliche](replication-snapshot-agent.md)|  
-|Agente di lettura log|**\<Server di pubblicazione\<>-databasepubblicazione\<>-Integer>**|[Agente lettura log repliche](replication-log-reader-agent.md)|  
-|Agente di merge per le sottoscrizioni pull|**\<Server di pubblicazione\<>-databasepubblicazione\<>-publication>\<-\<Subscriber>-\<databasesottoscrizione>-Integer>**|[Replication Merge Agent](replication-merge-agent.md)|  
-|Agente di merge per le sottoscrizioni push|**\<Server di pubblicazione\<>-databasepubblicazione\<>-publication>\<-\<Subscriber>-Integer>**|[Replication Merge Agent](replication-merge-agent.md)|  
-|Agente di distribuzione per le sottoscrizioni push|Server di pubblicazione **>-\<databasepubblicazione\<>-publication>\<-\<Subscriber>-Integer>1 \<** <sup>1</sup>|[Agente distribuzione repliche](replication-distribution-agent.md)|  
-|Agente di distribuzione per le sottoscrizioni pull|**\<\<\<\<Publisher>-databasepubblicazione>-publication>-Subscriber>-databasesottoscrizione>\<-GUID>2 \<** <sup>2</sup>|[Agente distribuzione repliche](replication-distribution-agent.md)|  
-|Agente di distribuzione per le sottoscrizioni push di Sottoscrittori non SQL Server|**\<Server di pubblicazione\<>-databasepubblicazione\<>-publication>\<-\<Subscriber>-Integer>**|[Agente distribuzione repliche](replication-distribution-agent.md)|  
-|Agente di lettura coda|**[\<Database di distribuzione>]. \<>Integer**|[Agente di lettura coda repliche](replication-queue-reader-agent.md)|  
+|agente snapshot|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<integer>**|[Replication Snapshot Agent](replication-snapshot-agent.md)|  
+|Agente snapshot per una partizione di una pubblicazione di tipo merge|**Dyn_\<Publisher>-\<PublicationDatabase>-\<Publication>-\<GUID>**|[Replication Snapshot Agent](replication-snapshot-agent.md)|  
+|Agente di lettura log|**\<Publisher>-\<PublicationDatabase>-\<integer>**|[Agente lettura log repliche](replication-log-reader-agent.md)|  
+|Agente di merge per le sottoscrizioni pull|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<integer>**|[Replication Merge Agent](replication-merge-agent.md)|  
+|Agente di merge per le sottoscrizioni push|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|[Replication Merge Agent](replication-merge-agent.md)|  
+|Agente di distribuzione per le sottoscrizioni push|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**<sup>1</sup>|[Replication Distribution Agent](replication-distribution-agent.md)|  
+|Agente di distribuzione per le sottoscrizioni pull|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>**<sup>2</sup>|[Replication Distribution Agent](replication-distribution-agent.md)|  
+|Agente di distribuzione per le sottoscrizioni push di Sottoscrittori non SQL Server|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|[Replication Distribution Agent](replication-distribution-agent.md)|  
+|Agente di lettura coda|**[\<Distributor>].\<integer>**|[Agente di lettura coda repliche](replication-queue-reader-agent.md)|  
   
- <sup>1</sup> Per le sottoscrizioni push di pubblicazioni Oracle, è **\<ServerPubblicazione>-\<ServerPubblicazione**> invece di **\<ServerPubblicazione>-\<DatabasePubblicazione>**  
+ <sup>1</sup> per le sottoscrizioni push di pubblicazioni Oracle, è * * \<Publisher> - \<Publisher**> anziché**\<Publisher>-\<PublicationDatabase>**  
   
- <sup>2</sup> Per le sottoscrizioni pull di pubblicazioni Oracle, è **\<ServerPubblicazione>-\<DatabaseDistribuzione**> invece di **\<ServerPubblicazione>-\<DatabasePubblicazione>**  
+ <sup>2</sup> per le sottoscrizioni pull di pubblicazioni Oracle, è * * \<Publisher> - \<DistributionDatabase**> anziché**\<Publisher>-\<PublicationDatabase>**  
   
 ### <a name="to-view-and-modify-replication-agent-command-line-parameters-from-management-studio"></a>Per visualizzare e modificare i parametri della riga di comando dell'agente di replica in Management Studio  
   
@@ -57,7 +56,7 @@ ms.locfileid: "63192894"
   
 3.  Fare clic con il pulsante destro del mouse su un processo e scegliere **Proprietà**.  
   
-4.  Nella pagina **Passaggi** della finestra di dialogo **Proprietà processo - \<Processo>** selezionare il passaggio **Esecuzione agente** e quindi fare clic su **Modifica**.  
+4.  Nella pagina **passaggi** della finestra di dialogo **Proprietà processo \<Job> -** selezionare il passaggio **esecuzione agente**e quindi fare clic su **modifica**.  
   
 5.  Nella finestra di dialogo **Proprietà passaggio processo - Esecuzione agente** modificare il campo **Comando** .  
   
@@ -71,9 +70,9 @@ ms.locfileid: "63192894"
   
 3.  Fare clic con il pulsante destro del mouse su una sottoscrizione e quindi scegliere **Visualizza dettagli**.  
   
-4.  Nella finestra **Subscription \< subscriptionname>** fare clic su **Action**, quindi fare clic su ** \<AgentName> Job Properties**.  
+4.  Nella finestra **sottoscrizione \< SubscriptionName> ** fare clic su **azione**e quindi su ** \<AgentName> Proprietà processo**.  
   
-5.  Nella pagina **Passaggi** della finestra di dialogo **Proprietà processo - \<Processo>** selezionare il passaggio **Esecuzione agente** e quindi fare clic su **Modifica**.  
+5.  Nella pagina **passaggi** della finestra di dialogo **Proprietà processo \<Job> -** selezionare il passaggio **esecuzione agente**e quindi fare clic su **modifica**.  
   
 6.  Nella finestra di dialogo **Proprietà passaggio processo - Esecuzione agente** modificare il campo **Comando** .  
   
@@ -87,13 +86,13 @@ ms.locfileid: "63192894"
   
 3.  Fare clic con il pulsante destro del mouse su un punto all'interno del riquadro della griglia e quindi scegliere **Proprietà**.  
   
-4.  Nella pagina **Passaggi** della finestra di dialogo **Proprietà processo - \<Processo>** selezionare il passaggio **Esecuzione agente** e quindi fare clic su **Modifica**.  
+4.  Nella pagina **passaggi** della finestra di dialogo **Proprietà processo \<Job> -** selezionare il passaggio **esecuzione agente**e quindi fare clic su **modifica**.  
   
 5.  Nella finestra di dialogo **Proprietà passaggio processo - Esecuzione agente** modificare il campo **Comando** .  
   
 6.  Fare clic su **OK** in entrambe le finestre di dialogo.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Amministrazione dell'agente di replica](replication-agent-administration.md)   
  [Concetti relativi ai file eseguibili dell'agente di replica](../concepts/replication-agent-executables-concepts.md)   
  [Panoramica degli agenti di replica](replication-agents-overview.md)  

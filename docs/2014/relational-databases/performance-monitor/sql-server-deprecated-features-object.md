@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96abc6def3f4ab8cdb76b548e7717ae6c030c00f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206965"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067022"
 ---
 # <a name="sql-server-deprecated-features-object"></a>Oggetto SQL Server:Deprecated Features
   L'oggetto SQLServer:Caratteristiche deprecate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce un contatore per monitorare le caratteristiche definite deprecate. In ognuno dei casi il contatore fornisce un conteggio dell'utilizzo indicante il numero di volte in cui è stata rilevata la funzionalità deprecata dall'ultimo avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -30,9 +29,9 @@ ms.locfileid: "68206965"
 |Istanze del contatore SQL Server Deprecated Features|Descrizione|  
 |------------------------------------------------------|-----------------|  
 |'#' e '##' come nomi di tabelle e stored procedure temporanee|È stato rilevato un identificatore che non contiene alcun carattere diverso da #. Usare almeno un carattere aggiuntivo. Si verifica una volta per ogni compilazione.|  
-|Sintassi per la chiamata di funzioni '::'|È stata rilevata la sintassi per la chiamata di funzioni :: per una funzione con valori di tabella. Sostituire con `SELECT column_list FROM` * \< function_name>* `()`. Sostituire, ad esempio, `SELECT * FROM ::fn_virtualfilestats(2,1)`con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Si verifica una volta per ogni compilazione.|  
+|Sintassi per la chiamata di funzioni '::'|È stata rilevata la sintassi per la chiamata di funzioni :: per una funzione con valori di tabella. Sostituire con `SELECT column_list FROM` *\< function_name>* `()` . Sostituire, ad esempio, `SELECT * FROM ::fn_virtualfilestats(2,1)`con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Si verifica una volta per ogni compilazione.|  
 |"\@" e nomi che iniziano con "\@\@" come identificatori [!INCLUDE[tsql](../../includes/tsql-md.md)]|È stato rilevato un identificatore che inizia con \@ o \@\@. Non usare come identificatori \@ o \@\@ o nomi che iniziano con \@\@. Si verifica una volta per ogni compilazione.|  
-|ADDING TAPE DEVICE|È stata rilevata la`tape`funzionalità deprecata sp_addumpdevice ''. Usare invece sp_addumpdevice`disk`''. Si verifica una volta per ogni utilizzo.|  
+|ADDING TAPE DEVICE|È stata rilevata la funzionalità deprecata sp_addumpdevice ' `tape` '. Usare invece sp_addumpdevice ' `disk` '. Si verifica una volta per ogni utilizzo.|  
 |Autorizzazione ALL|Numero totale di volte in cui è stata rilevata la sintassi GRANT ALL, DENY ALL o REVOKE ALL. Modificare la sintassi in modo da negare autorizzazioni specifiche. Si verifica una volta per ogni query.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Numero totale di volte in cui è stata usata la funzionalità deprecata TORN_PAGE_DETECTION di ALTER DATABASE dall'avvio dell'istanza del server. Usare la sintassi PAGE_VERIFY. Si verifica una volta per ogni utilizzo in un'istruzione DDL.|  
 |ALTER LOGIN WITH SET CREDENTIAL|È stata rilevata la sintassi deprecata ALTER LOGIN WITH SET CREDENTIAL o ALTER LOGIN WITH NO CREDENTIAL. Usare la sintassi ADD o DROP CREDENTIAL. Si verifica una volta per ogni compilazione.|  
@@ -262,7 +261,7 @@ ms.locfileid: "68206965"
 |xp_loginConfig|È stata rilevata la procedura xp_loginconfig. In alternativa, usare l'argomento IsIntegratedSecurityOnly di SERVERPROPERTY. Si verifica una volta per ogni query.|  
 |xp_revokelogin|È stata rilevata la procedura xp_revokelogin. In alternativa, usare ALTER LOGIN DISABLE o DROP LOGIN. Si verifica una volta per ogni compilazione.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzionalità di motore di database deprecate SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [Funzionalità deprecate della ricerca full-text in SQL Server 2014](../search/deprecated-full-text-search-features-in-sql-server-2016.md)   
  [Classe di evento Deprecation annuncio](../event-classes/deprecation-announcement-event-class.md)   

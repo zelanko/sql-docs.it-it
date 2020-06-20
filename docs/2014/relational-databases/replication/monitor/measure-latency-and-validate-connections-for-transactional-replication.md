@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 89149645524adedf01b8d9fb7c116cf0ab0f26c5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3ba1e5eddfdcffa5fbefdea323f110ba9d15ca8c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667816"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005824"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Misurazione della latenza e convalida delle connessioni per la replica transazionale
   In questo argomento viene descritto come misurare le connessione di convalida e latenza per la replica transazionale in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite Monitoraggio replica, [!INCLUDE[tsql](../../../includes/tsql-md.md)]o RMO (Replication Management Objects). La replica transazionale offre la funzionalità token di traccia, che rappresenta una modalità pratica di misurazione della latenza nelle topologie di replica transazionale e di convalida delle connessioni tra server di pubblicazione, database di distribuzione e Sottoscrittori. Un token, ovvero una piccola quantità di dati, viene scritto nel log delle transazioni del database di pubblicazione, contrassegnato come se fosse una comune transazione replicata e inviato tramite il sistema in modo da consentire:  
@@ -55,15 +54,15 @@ ms.locfileid: "62667816"
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
  I token di traccia possono inoltre essere utili quando si mette un sistema in stato di inattività, il che richiede l'arresto di tutte le attività e la verifica dell'avvenuta ricezione di tutte le modifiche in attesa da parte di tutti i nodi. Per altre informazioni, vedere [Come mettere una topologia di replica in stato di inattività &#40;programmazione Transact-SQL della replica&#41;](../administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
- Per utilizzare i token di traccia, è necessario utilizzare determinate versioni [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]di:  
+ Per utilizzare i token di traccia, è necessario utilizzare determinate versioni di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
--   Il server di distribuzione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] deve essere o versione successiva.  
+-   Il server di distribuzione deve essere [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o versione successiva.  
   
 -   Il server di pubblicazione deve essere [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o versione successiva, oppure deve essere un server di pubblicazione Oracle.  
   
--   Per le sottoscrizioni push, le statistiche dei token di traccia vengono raccolte dal server di pubblicazione, dal server di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] distribuzione e dai Sottoscrittori se il Sottoscrittore è 7,0.  
+-   Per le sottoscrizioni push, le statistiche dei token di traccia vengono raccolte dal server di pubblicazione, dal server di distribuzione e dai Sottoscrittori se il Sottoscrittore è [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7,0.  
   
--   Per le sottoscrizioni pull, le statistiche dei token di traccia vengono raccolte dai soli Sottoscrittori se il Sottoscrittore è [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o versione successiva. Se il Sottoscrittore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]7,0 o, le statistiche vengono raccolte solo dal server di pubblicazione e dal server di distribuzione.  
+-   Per le sottoscrizioni pull, le statistiche dei token di traccia vengono raccolte dai soli Sottoscrittori se il Sottoscrittore è [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o versione successiva. Se il Sottoscrittore è [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7,0 o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] , le statistiche vengono raccolte solo dal server di pubblicazione e dal server di distribuzione.  
   
  È inoltre necessario considerare altre problematiche e limitazioni, ovvero:  
   

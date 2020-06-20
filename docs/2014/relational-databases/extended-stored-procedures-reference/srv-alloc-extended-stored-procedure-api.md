@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 91505c59-a273-452f-b71d-5e8205c21863
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 61157ab8ba2b9f47caf89b6a16a3edd830437abf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 729675f7df3a4e394bb28f4074644289489ef248
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63138908"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050799"
 ---
 # <a name="srv_alloc-extended-stored-procedure-api"></a>srv_alloc (API delle stored procedure estese)
     
@@ -48,7 +47,7 @@ size
  *size*  
  Specifica il numero di byte da allocare.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  Un puntatore al nuovo spazio allocato. Se i byte di *size* non possono essere allocati, viene restituito un puntatore Null.  
   
 ## <a name="remarks"></a>Osservazioni  

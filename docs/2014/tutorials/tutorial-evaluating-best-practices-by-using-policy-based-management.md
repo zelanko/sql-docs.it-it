@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c7867f9b-7acc-4fae-bde1-63808c403ebc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c41edcfc545e69e6e8174003ca765a4c2f1d551b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42e6b505c71abecce7b56b5cb2544b4e9f4e8f71
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064424"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061102"
 ---
 # <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>Esercitazione: Valutazione di procedure consigliate tramite la gestione basata su criteri
   Questa esercitazione per la valutazione di procedure consigliate tramite la gestione basata su criteri è destinata agli utenti che hanno una certa familiarità con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], ma non con la gestione basata su criteri. La gestione basata su criteri è un sistema per definire i criteri che possono essere utilizzati per applicare gli standard di amministrazione del sito. In questa gestione è incluso un set di criteri per procedure consigliate utilizzabili per analizzare un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in modo da poter determinare se l'istanza soddisfa le linee guida e le indicazioni delle procedure consigliate.  
@@ -47,7 +46,7 @@ ms.locfileid: "66064424"
 ## <a name="start-the-tutorial"></a>Avviare l'esercitazione  
  [Lezione 1: Valutazione delle procedure consigliate su richiesta](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Amministrazione di server tramite la gestione basata su criteri](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

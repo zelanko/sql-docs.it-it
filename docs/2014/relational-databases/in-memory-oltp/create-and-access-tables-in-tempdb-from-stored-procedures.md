@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 12be8011-b76c-45c1-8f55-7f46e0e374e9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 11c9cd6f9084deaa2cb16acf8bf489a8aa28a353
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6c66b43d4bad56724817a4d38a810fd150b2b3fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706522"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050254"
 ---
 # <a name="creating-and-accessing-tables-in-tempdb-from-natively-compiled-stored-procedures"></a>Creazione e accesso alle tabelle in TempDB dalle stored procedure compilate in modo nativo
-  La creazione e l'accesso alle tabelle in TempDB dalle stored procedure compilate in modo nativo non è supportato. Utilizzare in alternativa variabili di tabella e tipi di tabella. ad esempio:  
+  La creazione e l'accesso alle tabelle in TempDB dalle stored procedure compilate in modo nativo non è supportato. Utilizzare in alternativa variabili di tabella e tipi di tabella. Ad esempio:  
   
 ```sql  
 CREATE TYPE dbo.OrderQuantityByProduct   

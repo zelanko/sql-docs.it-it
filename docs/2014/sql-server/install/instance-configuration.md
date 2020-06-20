@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 66329d4c25a23a6b3dbc3570723bab8aecfa3d4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86a9538e81881a3b42b95447f4264200e2fe9d4c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68190962"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065305"
 ---
 # <a name="instance-configuration"></a>Configurazione istanza
   Utilizzare la pagina **Configurazione dell'istanza** dell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per specificare se creare un'istanza predefinita oppure un'istanza denominata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è già installata, verrà creata un'istanza predefinita a meno che non si specifichi un'istanza denominata.  
@@ -71,7 +70,7 @@ ms.locfileid: "68190962"
   
 -   Nei nomi di istanza non sono consentiti spazi interni o altri caratteri speciali. La barra rovesciata (\\), la virgola (,) i due punti (:), il punto e virgola (;), la virgoletta singola ('), la e commerciale (&), il segno meno (-) e la chiocciola (@) rappresentano altri caratteri non consentiti.  
   
--   **Solo i caratteri validi nella tabella codici di Windows corrente possono essere utilizzati nei nomi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di istanza. Se viene utilizzato un carattere Unicode non supportato, si verificherà un errore di installazione.**  
+-   **Solo i caratteri validi nella tabella codici di Windows corrente possono essere utilizzati nei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nomi di istanza. Se viene utilizzato un carattere Unicode non supportato, si verificherà un errore di installazione.**  
   
  **Istanze e caratteristiche rilevate**  
  È possibile visualizzare un elenco dei componenti e delle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installati sul computer su cui viene eseguito il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

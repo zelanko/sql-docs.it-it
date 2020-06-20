@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ab9c51ba125a7489d693a1af6b16e432e8fb7099
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5fa2fce50d7f62f134ef96175ed359c86ea84080
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73632730"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058846"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>Utilizzare Preparazione aggiornamento per preparare gli aggiornamenti
   Preparazione aggiornamento a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] semplifica le attività di preparazione per l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Preparazione aggiornamento consente di analizzare i componenti installati dalle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di generare un report contenente i problemi da correggere prima o dopo l'aggiornamento.  
@@ -66,7 +65,7 @@ ms.locfileid: "73632730"
   
 -   Windows Installer a partire dalla versione 4.5. È possibile installare Windows Installer dal [sito Web di Windows Installer](https://www.microsoft.com/download/details.aspx?id=8483).  
   
--   Microsoft .NET Framework 4. .NET Framework 4 è disponibile sul supporto [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] del prodotto e dalla pagina di [download di .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=209895).  
+-   Microsoft .NET Framework 4. .NET Framework 4 è disponibile sul [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporto del prodotto e dalla pagina di [download di .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=209895).  
   
     -   Per eseguire l'installazione di .NET Framework 4 dai supporti di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], individuare la radice dell'unità disco. Fare quindi doppio clic sulla cartella \redist, sulla cartella DotNetFrameworks ed eseguire dotNetFx40_Full_x86_x64.exe (sia per i sistemi operativi a 32 bit che per quelli a 64 bit).  
   
@@ -74,7 +73,7 @@ ms.locfileid: "73632730"
   
  Dopo aver installato Preparazione aggiornamento, è possibile aprirlo dal menu **Start** :  
   
--   Fare clic sul pulsante **Start**, scegliere **tutti i programmi**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], quindi fare clic su ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] preparazione aggiornamento**.  
+-   Fare clic sul pulsante **Start**, scegliere **tutti i programmi**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] , quindi fare clic su ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Preparazione aggiornamento**.  
   
  Per ulteriori informazioni, vedere la documentazione inclusa nel download di Preparazione aggiornamento e le note sulla versione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
