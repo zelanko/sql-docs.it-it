@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd78e5f1e85510ec7a14548280a616a9b32aec55
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922436"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959471"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Backup e ripristino: interoperabilità e coesistenza (SQL Server)
   In questo argomento vengono fornite alcune considerazioni sul backup e il ripristino di alcune funzionalità di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], tra cui ripristino dei file e avvio del database, ripristino online e indici disabilitati, mirroring del database, ripristino a fasi e indici full-text.  
@@ -48,7 +47,7 @@ ms.locfileid: "62922436"
   
  Se si verifica un problema durante l'avvio del database, il recupero non riesce e il database viene contrassegnato come sospetto. Se è possibile isolare uno o più file in cui è presente il problema, l'amministratore del database può attivare la modalità offline per i file e tentare di riavviare il database. Per attivare la modalità offline per un file, è possibile utilizzare l'istruzione [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) seguente:  
   
- ALTER database *database_name* modify file (Name **='*`filename`*'**, offline)  
+ ALTER database *database_name* modify file (Name **=' *`filename`* '**, offline)  
   
  Se l'avvio ha esito positivo, tutti i filegroup che includono un file offline rimangono in modalità offline.  
   

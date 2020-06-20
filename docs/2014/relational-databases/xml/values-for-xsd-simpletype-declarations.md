@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 557b972d-3af9-40bf-8382-72b05c9de1c1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6682bdb7443ae9ee41bd1a7f77d7b5d5ae4d7359
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 17d2e52175022afd9be34c4200158bfb2ed1ec12
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702298"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013036"
 ---
 # <a name="values-for-ltxsdsimpletypegt-declarations"></a>Valori per dichiarazioni &lt;xsd:simpleType&gt;
   Nella tabella seguente vengono descritte le restrizioni applicate, basate su tutte le enumerazioni di tipi semplici XSD riconosciute.  
   
- Inoltre, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta l'uso del valore NaN nelle dichiarazioni **\<xsd:simpleType>** . Gli schemi che includono valori NaN verranno rifiutati dal server.  
+ Inoltre, non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta il valore NaN nelle **\<xsd:simpleType>** dichiarazioni. Gli schemi che includono valori NaN verranno rifiutati dal server.  
   
 |Tipo semplice|Limitazione|  
 |-----------------|----------------|  

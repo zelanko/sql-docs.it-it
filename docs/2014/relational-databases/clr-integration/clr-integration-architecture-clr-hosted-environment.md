@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dbbc884a32f892830ec4b7b66e3a67c45fc37416
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11eae15e50c26c4abde212ef273d6ede63ffe30d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922565"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953901"
 ---
 # <a name="clr-hosted-environment"></a>Ambiente CLR
   CLR (Common Language Runtime) di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework è un ambiente che esegue molti linguaggi di programmazione attuali, inclusi [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic e [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C++. CLR include memoria sottoposta a Garbage Collection, threading preemptive, Servizio metadati (riflessione dei tipi), verificabilità del codice e sicurezza dall'accesso di codice. CLR utilizza metadati per individuare e caricare classi, disporre istanze in memoria, risolvere chiamate a metodi, generare codice nativo, implementare la sicurezza e impostare limiti di contesto per la fase di esecuzione.  
@@ -142,7 +141,7 @@ ms.locfileid: "62922565"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] impedisce inoltre le chiamate ad API di .NET Framework annotate tramite gli attributi di protezione host `SharedState`, `Synchronization` e `ExternalProcessMgmt`. In questo modo, viene impedito agli assembly SAFE ed EXTERNAL_ACCESS di chiamare qualsiasi API che consente la condivisione dello stato, di eseguire la sincronizzazione e di influire sull'integrità del processo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [restrizioni del modello di programmazione dell'integrazione CLR](database-objects/clr-integration-programming-model-restrictions.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Sicurezza dell'integrazione con CLR](security/clr-integration-security.md)   
  [Prestazioni dell'integrazione con CLR](clr-integration-architecture-performance.md)  
   

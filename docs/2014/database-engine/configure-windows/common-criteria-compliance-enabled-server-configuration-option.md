@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8fef699da6e63c534d19e0d66bfa076f85348d29
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6722d05351b8b9e80240abb4edef0633a97b6da0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786640"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935812"
 ---
 # <a name="common-criteria-compliance-enabled-server-configuration-option"></a>Opzione di configurazione del server common criteria compliance enabled
   L'opzione Attiva conformità criteri comuni attiva gli elementi seguenti, necessari per i criteri comuni.  
@@ -58,7 +57,7 @@ RECONFIGURE
 GO  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni di configurazione del server &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

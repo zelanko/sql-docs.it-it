@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0153a31-5794-410b-8816-d9f1290a5b36
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3a1509f9debebe1370c416bc780e4a367d3d88db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f718c40a990ecd6ef080a4611303db08518ea1b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62662826"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052993"
 ---
 # <a name="errorlog-event-class"></a>ErrorLog - classe di evento
   La classe di evento ErrorLog indica che nel log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono stati registrati messaggi.  
@@ -50,7 +49,7 @@ ms.locfileid: "62662826"
 |TextData|`ntext`|Testo del messaggio di errore.|1|Sì|  
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

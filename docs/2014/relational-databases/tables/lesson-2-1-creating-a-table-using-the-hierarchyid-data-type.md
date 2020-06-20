@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0d1f361f-336c-4571-99d1-f4813b2d9fc4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 98ce16a3630032001a1191b09b1b0ade13aacb73
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92d07c0c4525c08960f8e36c551852ff501648af
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110123"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068042"
 ---
 # <a name="creating-a-table-using-the-hierarchyid-data-type"></a>Creazione di una tabella utilizzando il tipo di dati hierarchyid
   Nell'esempio seguente viene creata una tabella denominata EmployeeOrg che include i dati del dipendente e la gerarchia del report. L'esempio crea la tabella nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , ma questo è facoltativo. Per mantenere l'esempio semplice, in questa tabella sono incluse solo cinque colonne:  

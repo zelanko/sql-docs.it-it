@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9268f0d06e0bf960ce3fb8879dfc219232ea822e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b126aeb8ccd24932706b8798ebfe7088308918e2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807461"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934342"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Mirroring e replica del database (SQL Server)
   Per migliorare la disponibilità del database di pubblicazione è possibile utilizzare il mirroring del database in combinazione con la replica. Il mirroring del database coinvolge due copie di un unico database che in genere risiedono in computer diversi. In un momento dato solo una copia del database risulta disponibile per i client. Questa copia viene definita database principale. Gli aggiornamenti apportati dai client al database principale vengono applicati all'altra copia del database, definita database mirror. Il processo di mirroring prevede l'applicazione nel database mirror del log delle transazioni relativo a ogni operazione di inserimento, aggiornamento o eliminazione eseguita sul database principale.  
@@ -91,7 +90,7 @@ ms.locfileid: "62807461"
   
      Questo parametro non è necessario per l'agente di distribuzione e il controllo ActiveX distribuzione SQL in quanto questi ultimi non si connettono al server di pubblicazione.  
   
-     Le modifiche apportate al parametro dell'agente verranno applicate al successivo avvio dell'agente. Se l'agente viene eseguito in modo continuo, è necessario arrestarlo e riavviarlo. I parametri possono essere specificati nei profili agenti e al prompt dei comandi. Per altre informazioni, vedi:  
+     Le modifiche apportate al parametro dell'agente verranno applicate al successivo avvio dell'agente. Se l'agente viene eseguito in modo continuo, è necessario arrestarlo e riavviarlo. I parametri possono essere specificati nei profili agenti e al prompt dei comandi. Per altre informazioni, vedere:  
   
     -   [Visualizzare e modificare i parametri del prompt dei comandi dell'agente di replica &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
@@ -160,7 +159,7 @@ ms.locfileid: "62807461"
 |Modalità a prestazioni elevate|Se il database mirror non è disponibile, il database principale è in esecuzione non protetta, ovvero è senza mirroring. Tuttavia, l'agente di lettura log replica solo le transazioni salvate nel database mirror. Se il servizio è forzato e il server mirror diventa server principale, l'agente di lettura log viene eseguito nel database mirror e recupera tutte le nuove transazioni.<br /><br /> La latenza di replica aumenta se il server mirror non è sincronizzato con il server principale.|  
 |Modalità a sicurezza elevata senza failover automatico|Tutte le transazioni di cui è stato eseguito il commit vengono salvate su disco nel database mirror. L'agente di lettura log replica solo le transazioni salvate nel server mirror. Se il server mirror non è disponibile, il server principale non consente alcuna operazione nel database. L'agente di lettura log non può pertanto replicare alcuna transazione.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [replica di SQL Server](../../relational-databases/replication/sql-server-replication.md)   
  [Log shipping e replica &#40;SQL Server&#41;](../log-shipping/log-shipping-and-replication-sql-server.md)  
   

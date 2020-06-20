@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: b1bb3ea3-8097-4e76-b9c2-78a0f46a23bc
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 100e796bb27d1e60db000a364a0432273dd5cafb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76a5ebe7018fdc58f02a4d2454d40f172c752c4e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094239"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059272"
 ---
 # <a name="integration-services-parameters"></a>Parametri di Integration Services
-  Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], è possibile decidere di analizzare [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] i pacchetti nel computer o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] i file del pacchetto nel file System. Se si sceglie di analizzare i file nel file system, specificare il percorso della cartella che contiene i pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+  Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , è possibile decidere di analizzare i [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacchetti nel computer o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] i file del pacchetto nel file System. Se si sceglie di analizzare i file nel file system, specificare il percorso della cartella che contiene i pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 ## <a name="options"></a>Opzioni  
  **Analizza pacchetti SSIS nel computer**  
@@ -32,7 +31,7 @@ ms.locfileid: "66094239"
  **Percorso pacchetti SSIS**  
  Individuare il percorso UNC o locale in cui sono memorizzati i pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Non è necessario includere i nomi di file. Se il percorso immesso non è accessibile, non è possibile fare clic su **Avanti**. Per impostazione predefinita, il percorso è vuoto. Questo campo è abilitato solo quando si seleziona **Analizza file di pacchetto SSIS**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzo di preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [Guida di riferimento all'interfaccia utente di Preparazione aggiornamento](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
   

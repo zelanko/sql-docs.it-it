@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8b03bb82-8589-4558-8545-9942fe008391
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a79010a4fa59eaebfc743543799a1e83cc5e687d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d8bc9d0fb639770d33507c29a6ec67f60bd0434a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754932"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934395"
 ---
 # <a name="change-transaction-safety-in-a-database-mirroring-session-transact-sql"></a>Modifica della protezione delle transazioni in una sessione di mirroring del database (Transact-SQL)
   La protezione delle transazioni è l'attributo che controlla la modalità operativa della sessione. Il proprietario del database può tuttavia modificare in qualsiasi momento tale protezione. Per impostazione predefinita, il livello di protezione delle transazioni è impostato su FULL (modalità operativa sincrona).  
@@ -34,7 +33,7 @@ ms.locfileid: "62754932"
     ALTER DATABASE <database> SET PARTNER SAFETY FULL  
     ```  
   
-     dove * \<database>* è il nome del database con mirroring.  
+     dove *\<database>* è il nome del database con mirroring.  
   
 ### <a name="to-turn-off-transaction-safety"></a>Per disabilitare la protezione delle transazioni  
   
@@ -46,9 +45,9 @@ ms.locfileid: "62754932"
     ALTER DATABASE <database> SET PARTNER SAFETY OFF  
     ```  
   
-     dove * \<database>* è il database con mirroring.  
+     dove *\<database>* è il database con mirroring.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Mirroring del database ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [Modalità di funzionamento del mirroring del database](database-mirroring-operating-modes.md)  
   

@@ -17,19 +17,18 @@ helpviewer_keywords:
 ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4b721a2abeaf941cd7169b731b5d1a74e15c4396
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bec00de11d0873577cbb71f9c830b7df2be9e2a6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702878"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996119"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>Lato client e Formattazione XML sul lato server (SQLXML 4.0)
   In questo argomento vengono descritte le differenze generali tra la formattazione XML sul lato client e quella sul lato server in SQLXML.  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>Query su più set di righe non supportate nella formattazione sul lato client  
- Le query che generano più set di righe non sono supportate quando si utilizza la formattazione XML sul lato client. Supporre, ad esempio, di disporre di una directory virtuale nella quale è stata specificata la formattazione sul lato client. Si consideri questo modello di esempio, in cui sono presenti due istruzioni SELECT in un blocco ** \< SQL: query>** :  
+ Le query che generano più set di righe non sono supportate quando si utilizza la formattazione XML sul lato client. Supporre, ad esempio, di disporre di una directory virtuale nella quale è stata specificata la formattazione sul lato client. Si consideri questo modello di esempio, in cui sono presenti due istruzioni SELECT in un **\<sql:query>** blocco:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -40,7 +39,7 @@ ms.locfileid: "82702878"
 </ROOT>  
 ```  
   
- È possibile eseguire questo modello nel codice dell'applicazione ma viene restituito un errore, poiché la formattazione XML sul lato client non supporta la formattazione di più set di righe. Se si specificano le query in due blocchi ** \< SQL: query>** distinti, si otterranno i risultati desiderati.  
+ È possibile eseguire questo modello nel codice dell'applicazione ma viene restituito un errore, poiché la formattazione XML sul lato client non supporta la formattazione di più set di righe. Se si specificano le query in due **\<sql:query>** blocchi distinti, si otterranno i risultati desiderati.  
   
 ## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>timestamp viene mappato in modo diverso nella formattazione sul lato client e in quella sul lato server  
  Nella formattazione XML sul lato server la colonna di database del tipo `timestamp` esegue il mapping al tipo XDR i8, quando viene specificata l'opzione XMLDATA nella query.  

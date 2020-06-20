@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cb04deeb-0f89-4bba-b3f1-efccada16825
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c3bbeb708cdb0c2882b85d55081446b3dc12b56b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c17dd78c42427027ebbac181b4f42edff082439e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068071"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940262"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>Impostazione dati di training (Creazione guidata modello di data mining)
   Usare la pagina **Impostazione dati di training** per identificare le colonne da includere nella struttura di data mining. È possibile selezionare le colonne da includere nella struttura anche se non vengono utilizzate in tutti i modelli. Ad esempio, se si vuole eseguire il drill-through delle colonne dal modello di data mining, è possibile includerle nella struttura ma non nel modello.  
@@ -33,7 +32,7 @@ ms.locfileid: "66068071"
  **Tabelle/Colonne**  
  Consente di visualizzare le tabelle e le colonne selezionate nella pagina precedente della procedura guidata.  
   
- **\<casella di controllo>**  
+ **\<check box>**  
  Consente di selezionare le colonne da includere nella struttura di data mining.  
   
  Se l'origine dati include tabelle nidificate o più viste, espandere l'elenco delle colonne per visualizzare le tabelle nidificate.  
@@ -63,7 +62,7 @@ ms.locfileid: "66068071"
   
  **Nota** Questa colonna è disponibile solo quando si crea un modello di data mining insieme alla struttura di data mining.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto della creazione guidata modello di data mining &#40;Analysis Services-&#41;di data mining](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Suggerisci colonne correlate &#40;creazione guidata modello di data mining&#41;](suggest-related-columns-data-mining-wizard.md)   
  [Impostazione tipi di tabella &#40;creazione guidata modello di data mining&#41;](specify-table-types-data-mining-wizard.md)   

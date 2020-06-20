@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: 17f0cc47-52f9-413d-8c7a-b4298dd874ed
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c1bfe78e7ac5cb497a39ab0b0679bcb2bd9a43a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a5fa76e11cf7d04c5fa2068cf8ea8ea40939f0e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068060"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940252"
 ---
 # <a name="standard-view-aggregations-tab-cube-designer"></a>Vista standard (scheda Aggregazioni, Progettazione cubi)
   Utilizzare **Vista standard** nella progettazione delle aggregazioni per visualizzare le aggregazioni. È anche possibile creare e modificare progettazioni delle aggregazioni in questa vista utilizzando **Progettazione guidata aggregazioni** oppure la procedura guidata **Ottimizzazione basata sulle statistiche di utilizzo**.  
   
 ## <a name="options"></a>Opzioni  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |**Progetta aggregazioni**|Fare clic per visualizzare **Progettazione guidata aggregazioni**.|  
 |**Ottimizzazione basata sulle statistiche di utilizzo**|Fare clic per visualizzare la procedura guidata **Ottimizzazione basata sulle statistiche di utilizzo** .|  
@@ -32,7 +31,7 @@ ms.locfileid: "66068060"
 |**Elimina**|Fare clic per eliminare la progettazione delle aggregazioni selezionata.|  
 |**Proprietà**|Fare clic per visualizzare le proprietà dell'aggregazione.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Aggregazioni &#40;Progettazione cubi&#41;](aggregations-cube-design.md)  
   
   

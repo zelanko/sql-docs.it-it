@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9189617e7d572cd46805e34eaa258e81362827d7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 364515afaea17ce403f8eb38cb10bbe6003dfe2b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703343"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037343"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>Modello a oggetti per il caricamento bulk XML di SQL Server (SQLXML 4.0)
   Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] modello a oggetti Microsoft XML bulk load è costituito dall'oggetto SQLXMLBulkLoad. Questo oggetto supporta i metodi e le proprietà seguenti.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3a8ffc33de161c71c6f72eebf8616d1e814fb994
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 71e8a21d4e83a37e647ff3bb27aaae14cd62c5a8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770390"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939382"
 ---
 # <a name="ole-db-command-transformation"></a>Comando OLE DB - trasformazione
   La trasformazione Comando OLE DB esegue un'istruzione SQL per ogni riga in un flusso di dati. È ad esempio possibile eseguire un'istruzione SQL che inserisce, aggiorna o elimina righe in una tabella di database.  
@@ -49,7 +48,7 @@ ms.locfileid: "62770390"
 ## <a name="related-tasks"></a>Attività correlate  
  È possibile configurare la trasformazione utilizzando Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o il modello a oggetti. Per informazioni dettagliate sulla configurazione della trasformazione usando Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , vedere  [Configurazione della trasformazione Comando OLE DB](../../configure-the-ole-db-command-transformation.md). Vedere la Guida per gli sviluppatori per informazioni dettagliate sulla configurazione a livello di codice di questa trasformazione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Flusso di dati](../data-flow.md)   
  [Trasformazioni di Integration Services](integration-services-transformations.md)  
   

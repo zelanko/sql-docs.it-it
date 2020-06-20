@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 086790cbd654a101d4bced989848d9aaac80d7ad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20be558522d0f5df2aa4f5bcd0557626cff0e64c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833640"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920612"
 ---
 # <a name="multiple-files-connection-manager"></a>gestione connessione per più file
   Una gestione connessione per più file consente a un pacchetto di fare riferimento a file e cartelle esistenti o di creare file e cartelle in fase di esecuzione.  
@@ -57,9 +56,9 @@ ms.locfileid: "62833640"
   
  Se la gestione connessione per più file fa riferimento a più file e cartelle, i percorsi dei file e delle cartelle sono separati da una barra verticale. La proprietà `ConnectionString` della gestione connessione ha il formato seguente:  
   
- \<*percorso*>|\<*percorso*>  
+ \<*path*>|\<*path*>  
   
- Per specificare più file o cartelle è inoltre possibile utilizzare caratteri jolly. Ad esempio, per fare riferimento a tutti i file di testo sull'unità C, il valore `ConnectionString` della proprietà può essere impostato su C\\: *. txt.  
+ Per specificare più file o cartelle è inoltre possibile utilizzare caratteri jolly. Ad esempio, per fare riferimento a tutti i file di testo sull'unità C, il valore della `ConnectionString` proprietà può essere impostato su C: \\ *. txt.  
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   

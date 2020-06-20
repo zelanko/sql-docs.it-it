@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3ab1d101-7ae0-488f-9b57-468e2517b737
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8f327cefbb916bf83f695db40a1d3c3025b7a5d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1114ed9e206c49a5993028e180ed70bbb7bf1747
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010942"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003770"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Impostazione dell'account del servizio dell'Utilità di avvio del daemon di filtri full-text
   In questo argomento viene illustrato come impostare l'account del servizio Utilità di avvio del daemon filtri full-text di SQL (MSSQLFDLauncher) utilizzando Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il servizio Utilità di avvio del daemon filtri full-text di SQL viene usato dalla ricerca full-text ssNoVersion per avviare il processo host del daemon di filtri che gestisce il word breaking e l'applicazione di filtri per la ricerca full-text. Per utilizzare la ricerca full-text, questo servizio deve essere in esecuzione.  
@@ -32,7 +31,7 @@ ms.locfileid: "66010942"
   
 1.  Fare clic sul menu **Start** , scegliere **Tutti i programmi**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Strumenti di configurazione**e quindi **Gestione configurazione SQL Server**.  
   
-2.  In **Gestione configurazione SQL Server**fare clic su **servizi SQL Server**, fare clic con il pulsante destro del mouse su ***`instance name`* utilità di avvio del daemon filtri full-text di SQL ()** e quindi scegliere **Proprietà**.  
+2.  In **Gestione configurazione SQL Server**fare clic su **servizi SQL Server**, fare clic con il pulsante destro del mouse su **utilità di avvio del daemon filtri full-text di SQL ( *`instance name`* )** e quindi scegliere **Proprietà**.  
   
 3.  Fare clic sulla scheda **Accesso** della finestra di dialogo, quindi selezionare o immettere l'account con il quale eseguire ogni processo creato dal servizio Utilità di avvio del daemon filtri full-text di SQL.  
   
@@ -73,7 +72,7 @@ ms.locfileid: "66010942"
      Durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], al gruppo di servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene concessa l'autorizzazione predefinita per gestire, eseguire query sul e avviare il servizio Utilità di avvio del daemon filtri full-text di SQL. Se le autorizzazioni del gruppo di servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'account del servizio Utilità di avvio del daemon filtri full-text sono state rimosse dopo l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , questo servizio non viene avviato e la ricerca full-text viene disabilitata. Assicurarsi che il gruppo di servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abbia le autorizzazioni necessarie per l'account del servizio Utilità di avvio del daemon filtri full-text di SQL.  
   
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Procedure per la gestione dei servizi &#40;Gestione configurazione SQL Server&#41;](../../database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md)  
  [Aggiornamento della ricerca full-text](upgrade-full-text-search.md)  
   

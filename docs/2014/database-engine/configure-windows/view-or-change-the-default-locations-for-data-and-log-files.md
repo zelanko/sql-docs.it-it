@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 70a57fda-fcfe-490f-9cf6-5df620e32b2a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 06d17a4feaec0db614f61fb7761b37ea415efc24
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: def6be137aecbab7f2730fa4c2bf210b374a3a7a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808711"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934725"
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files-sql-server-management-studio"></a>Visualizzazione o modifica dei percorsi predefiniti per i file di dati e di log (SQL Server Management Studio)
   In questo argomento si descrive come visualizzare e modificare i percorsi predefiniti dei nuovi file di dati e di log in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Il percorso predefinito viene ottenuto dal Registro di sistema. Dopo la modifica, il percorso viene utilizzato in tutti i nuovi database creati nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se non è specificato un percorso diverso.  
@@ -57,8 +56,8 @@ ms.locfileid: "62808711"
 ##  <a name="follow-up-after-changing-the-default-locations"></a><a name="FollowUp"></a>Completamento: dopo la modifica dei percorsi predefiniti  
  È necessario arrestare e avviare il servizio SQL Server per completare la modifica.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
- [Creare un database](../../relational-databases/databases/create-a-database.md)  
+ [Creazione di un database](../../relational-databases/databases/create-a-database.md)  
   
   

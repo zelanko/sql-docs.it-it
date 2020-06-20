@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 40ce7537-abd0-4973-97fd-6ccb90fddfa0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6dad0ca9855cfad8811b1598356ab624ea3fc5ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc4c008445837341dca21211e2c5e943afe50dc7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058731"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967111"
 ---
 # <a name="flat-file-connection-manager-editor-columns-page"></a>Editor gestione connessione file flat (pagina Colonne)
   Utilizzare la pagina **Colonne** della finestra di dialogo **Editor gestione connessione file flat** per specificare le informazioni di riga e di colonna e per visualizzare un'anteprima del file.  
@@ -39,10 +38,10 @@ ms.locfileid: "66058731"
  **Delimitatore di riga**  
  Consente di selezionare il delimitatore di riga desiderato nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Le righe sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
-|**{CR}**|Le righe sono delimitate da un ritorno a capo.|  
+|**CR**|Le righe sono delimitate da un ritorno a capo.|  
 |**{LF}**|Le righe sono delimitate da un avanzamento riga.|  
 |**Punto e virgola {;}**|Le righe sono delimitate da un punto e virgola.|  
 |**Due punti {:}**|Le righe sono delimitate da un carattere due punti.|  
@@ -53,10 +52,10 @@ ms.locfileid: "66058731"
  **Delimitatore di colonna**  
  Consente di selezionare il delimitatore di colonna desiderato nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Le colonne sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
-|**{CR}**|Le colonne sono delimitate da un ritorno a capo.|  
+|**CR**|Le colonne sono delimitate da un ritorno a capo.|  
 |**{LF}**|Le colonne sono delimitate da un avanzamento riga.|  
 |**Punto e virgola {;}**|Le colonne sono delimitate da un punto e virgola.|  
 |**Due punti {:}**|Le colonne sono delimitate da due punti.|  
@@ -64,7 +63,7 @@ ms.locfileid: "66058731"
 |**Tab {t}**|Le colonne sono delimitate da una tabulazione.|  
 |**Barra verticale {&#124;}**|Le colonne sono delimitate da una barra verticale.|  
   
- **Aggiorna**  
+ **Refresh** (Aggiornamento)  
  Se si fa clic su **Aggiorna**è possibile visualizzare gli effetti delle modifiche ai delimitatori da ignorare. Questo pulsante viene visualizzato solo dopo la modifica di altre opzioni della connessione.  
   
  **Anteprima righe**  
@@ -100,10 +99,10 @@ ms.locfileid: "66058731"
  **Delimitatore di riga**  
  Consente di selezionare il delimitatore di riga desiderato nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Le righe sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
-|**{CR}**|Le righe sono delimitate da un ritorno a capo.|  
+|**CR**|Le righe sono delimitate da un ritorno a capo.|  
 |**{LF}**|Le righe sono delimitate da un avanzamento riga.|  
 |**Punto e virgola {;}**|Le righe sono delimitate da un punto e virgola.|  
 |**Due punti {:}**|Le righe sono delimitate da un carattere due punti.|  
@@ -114,7 +113,7 @@ ms.locfileid: "66058731"
  **Reimposta colonne**  
  Il pulsante **Reimposta colonne**consente di rimuovere tutte le colonne tranne quelle originali.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor gestione connessione file flat &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor gestione connessione file flat &#40;pagina avanzate&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)   

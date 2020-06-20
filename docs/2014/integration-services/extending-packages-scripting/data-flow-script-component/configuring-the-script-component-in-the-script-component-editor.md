@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 40f354f190093c0c689e708301bed9fcba8c87c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2544c0249567e05eb3a3e3d7a297ec45fdedc8d8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176219"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967301"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>Configurazione del componente script nell'editor corrispondente
   Prima di scrivere codice personalizzato nel componente script, è necessario selezionare il tipo di componente flusso di dati che si vuole creare, ovvero origine, trasformazione o destinazione, quindi configurare i relativi metadati e le relative proprietà nell'**Editor trasformazione Script**.
@@ -49,7 +48,7 @@ ms.locfileid: "78176219"
 ### <a name="inputs-columns-page-of-the-script-transformation-editor"></a>Pagina Colonne di input dell'editor trasformazione Script
  La pagina **Colonne di input** dell'**Editor trasformazione Script** viene visualizzata per trasformazioni e destinazioni, ma non per le origini. In questa pagina selezionare le colonne di input che si desidera rendere disponibili per lo script personalizzato, quindi specificare l'accesso di sola lettura o di lettura/scrittura a tali colonne.
 
- Nel progetto di codice che verrà generato in base a questi metadati, l'elemento di progetto BufferWrapper contiene una classe per ogni input, la quale contiene proprietà delle funzioni di accesso tipizzate per ogni colonna di input selezionata. Se ad esempio si seleziona una colonna **CustomerID** Integer e una colonna **CustomerName** `CustomerInput`stringa da un input denominato, l'elemento del progetto BufferWrapper conterrà una `CustomerInput` classe che deriva da <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>e la `CustomerInput` classe esporrà una proprietà integer denominata **CustomerID** e una proprietà stringa denominata **CustomerName**. Con questa convenzione è possibile scrivere codice con controllo dei tipi come riportato di seguito:
+ Nel progetto di codice che verrà generato in base a questi metadati, l'elemento di progetto BufferWrapper contiene una classe per ogni input, la quale contiene proprietà delle funzioni di accesso tipizzate per ogni colonna di input selezionata. Se ad esempio si seleziona una colonna **CustomerID** Integer e una colonna **CustomerName** stringa da un input denominato `CustomerInput` , l'elemento del progetto BufferWrapper conterrà una `CustomerInput` classe che deriva da <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> e la `CustomerInput` classe esporrà una proprietà integer denominata **CustomerID** e una proprietà stringa denominata **CustomerName**. Con questa convenzione è possibile scrivere codice con controllo dei tipi come riportato di seguito:
 
 ```vb
 Dim currentCustomerID as Integer = CustomerInput.CustomerID
@@ -67,7 +66,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 
 -   Se utilizzato come destinazione, il componente script supporta un input e non include output.
 
- Nel progetto di codice che verrà generato in base a questi metadati, l'elemento di progetto BufferWrapper contiene una classe per ogni input e output. Se, ad esempio, si crea un output `CustomerOutput`denominato, l'elemento del progetto BufferWrapper conterrà una `CustomerOutput` classe che deriva <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>da e la `CustomerOutput` classe conterrà le proprietà delle funzioni di accesso tipizzate per ogni colonna di output creata.
+ Nel progetto di codice che verrà generato in base a questi metadati, l'elemento di progetto BufferWrapper contiene una classe per ogni input e output. Se, ad esempio, si crea un output denominato `CustomerOutput` , l'elemento del progetto BufferWrapper conterrà una `CustomerOutput` classe che deriva da <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> e la classe conterrà le `CustomerOutput` proprietà delle funzioni di accesso tipizzate per ogni colonna di output creata.
 
  È possibile configurare colonne di output solo nella pagina **Input e output**. È possibile selezionare colonne di input per trasformazioni e destinazioni nella pagina **Colonne di input**. Le proprietà delle funzioni di accesso tipizzate create nell'elemento di progetto BufferWrapper saranno di sola scrittura per le colonne di output. Le proprietà delle funzioni di accesso per le colonne di input saranno di sola lettura o di lettura/scrittura a seconda del tipo di utilizzo selezionato per ogni colonna nella pagina **Colonne di input**.
 
@@ -86,7 +85,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 > 
 >  Se si crea un componente con output sincroni, ogni output deve avere la `SynchronousInputID` proprietà impostata sul valore `ID` dell'input del componente. Pertanto, è necessario che il valore `SynchronousInputID` di ogni output creato dall'editor dopo il primo venga modificato da zero nel valore `ID` dell'input del componente.
 > 
->  Se si crea un componente con output asincroni, per ogni output è necessario che la proprietà `SynchronousInputID` sia impostata su zero. Pertanto, il `SynchronousInputID` valore del primo output deve essere cambiato da `ID` dell'input del componente a zero.
+>  Se si crea un componente con output asincroni, per ogni output è necessario che la proprietà `SynchronousInputID` sia impostata su zero. Pertanto, il valore del primo output deve essere `SynchronousInputID` cambiato da `ID` dell'input del componente a zero.
 
  Per un esempio di indirizzamento delle righe a uno dei due output sincroni nel componente script, vedere [Creazione di una trasformazione sincrona con il componente script](../../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md).
 

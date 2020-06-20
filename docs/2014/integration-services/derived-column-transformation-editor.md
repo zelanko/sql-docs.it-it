@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ff73923e-d245-43d8-bf24-af3bdc942e51
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4fc2701ad53cd0071be40100d168d5d5571d2958
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3983e75bdde3379fac48a74a595959af2568a3ab
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059564"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951651"
 ---
 # <a name="derived-column-transformation-editor"></a>Editor trasformazione Colonna derivata
   Usare la finestra di dialogo **Editor trasformazione Colonna derivata** per creare espressioni che popolino le colonne nuove o di sostituzione.  
@@ -55,7 +54,7 @@ ms.locfileid: "66059564"
  **Precisione**  
  Se si aggiungono dati a una nuova colonna, nella finestra di dialogo **Editor trasformazione Colonna derivata** viene impostata automaticamente la precisione per i dati numerici in base al tipo di dati. Il valore di questa colonna è di sola lettura.  
   
- **Ridimensionare**  
+ **Ridimensionamento**  
  Se si aggiungono dati a una nuova colonna, nella finestra di dialogo **Editor trasformazione Colonna derivata** viene impostata automaticamente la scala per i dati numerici in base al tipo di dati. Il valore di questa colonna è di sola lettura.  
   
  **Tabella codici**  
@@ -64,7 +63,7 @@ ms.locfileid: "66059564"
  **Configurare l'output degli errori**  
  Consente di indicare come gestire gli errori tramite la finestra di dialogo [Configura output errori](../../2014/integration-services/configure-error-output.md) .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Derivazione di valori di colonna tramite la trasformazione Colonna derivata](data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md)  
   

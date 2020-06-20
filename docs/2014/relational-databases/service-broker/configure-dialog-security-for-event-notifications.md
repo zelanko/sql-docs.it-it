@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1c62812b138afef0244bbad5f3d17bafb4064537
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d83bfe63c3a9b24c2be8d08916dd2384c59edc93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62630719"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996561"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>Configurazione della sicurezza del dialogo per le notifiche degli eventi
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] per le notifiche degli eventi che prevedono l'invio di messaggi a Service Broker su un server remoto. È necessario configurare manualmente la sicurezza del dialogo in base al modello di sicurezza avanzata del dialogo di [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Il modello di sicurezza avanzata attiva la crittografia e la decrittografia di messaggi inviati da e a server remoti. Sebbene le notifiche degli eventi vengano inviate in una sola direzione, gli altri messaggi, ad esempio gli errori, vengono anche restituiti nella direzione opposta.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 10813b7bc0a97f0ba8a81f3f48447142659cd596
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7242f9fda74288a2b7354ac0550ff4966e05c555
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091326"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058782"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-system_function_schema"></a>In system_function_schema non sono consentite funzioni definite dall'utente
   Sono state rilevate funzioni definite dall'utente di proprietà dell'utente non documentato **system_function_schema**. Non è possibile creare una funzione di sistema definita dall'utente specificando tale utente. Il nome utente **system_function_schema** non esiste e l'ID utente associato a questo nome (UID = 4) è riservato allo schema **sys** ed è limitato a un uso interno.  
@@ -39,9 +38,9 @@ ms.locfileid: "66091326"
   
  Queste modifiche hanno l'effetto seguente sulle funzioni di sistema definite dall'utente:  
   
--   Le istruzioni DDL (Data Definition Language) che fanno riferimento a **system_function_schema** avranno esito negativo. Ad esempio, l'istruzione `CREATE FUNCTION system`_`function` \_ `schema.fn` \_ `MySystemFunction` ... avrà esito negativo.  
+-   Le istruzioni DDL (Data Definition Language) che fanno riferimento a **system_function_schema** avranno esito negativo. Ad esempio, l'istruzione `CREATE FUNCTION system` _ `function` \_ `schema.fn` \_ `MySystemFunction` ... avrà esito negativo.  
   
--   Dopo l'aggiornamento a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], gli oggetti esistenti di proprietà di **system_function_schema** sono contenuti solo nello schema **sys** del database **Master** . Poiché gli oggetti di sistema non possono essere modificati, queste funzioni non possono mai essere modificate o eliminate dal database **Master** . Inoltre, non possono essere richiamate da altri database specificando un nome di funzione composto da una sola parte.  
+-   Dopo l'aggiornamento a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , gli oggetti esistenti di proprietà di **system_function_schema** sono contenuti solo nello schema **sys** del database **Master** . Poiché gli oggetti di sistema non possono essere modificati, queste funzioni non possono mai essere modificate o eliminate dal database **Master** . Inoltre, non possono essere richiamate da altri database specificando un nome di funzione composto da una sola parte.  
   
 ## <a name="corrective-action"></a>Azione correttiva  
  Prima di eseguire l'aggiornamento, completare le attività seguenti:  
@@ -64,7 +63,7 @@ ms.locfileid: "66091326"
   
 -   "Database Resource"  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server 2014 preparazione aggiornamento &#91;nuova&#93;](sql-server-2014-upgrade-advisor.md)   
  [Problemi di aggiornamento motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Rimuovere istruzioni che modificano oggetti di sistema](../../../2014/sql-server/install/remove-statements-that-modify-system-objects.md)   

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 6d2636c4-dae4-448f-a1d4-dbee739e177c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c4704fc56ae1eacfb8481533c9d743afff80e923
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ca8a66d3134748fd524dc0c6b524d944213533e2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62757745"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940082"
 ---
 # <a name="perspective-representation-tabular"></a>Rappresentazione della prospettiva (tabulare)
   Una prospettiva è un meccanismo per semplificare o concentrare il modello in una parte più piccola per l'applicazione client.  
