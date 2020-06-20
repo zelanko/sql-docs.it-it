@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76e4cfab-4b15-4da4-bb2f-8aac6f927f79
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: daa5635fc64e46dd8b6ccf6b9ab4cf38dc5d492d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d57d1859e12cb86ba18779b104402cc09c979946
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62735894"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056711"
 ---
 # <a name="setdefaults-method-serversettings-class"></a>Metodo SetDefaults (classe ServerSettings)
   Imposta tutti i valori predefiniti per l'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con l'opzione per sovrascrivere i dati esistenti.  
@@ -40,7 +39,7 @@ OverwriteAll
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  Oggetto della [classe ServerSettings](serversettings-class.md) che rappresenta un' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza del client.  
   
 #### <a name="parameters"></a>Parametri  
@@ -54,7 +53,7 @@ OverwriteAll
   
 ## <a name="remarks"></a>Osservazioni  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurazione di protocolli di rete server e di librerie di rete](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

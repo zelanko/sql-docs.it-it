@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6cc3dbb9-817e-4329-9f45-c3adcff3b511
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 99f3b353231da86af00bc4531e2645fe0a5b1994
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a3359de449dcce4a976dec2debd9b5be99addd2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012435"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85031082"
 ---
 # <a name="audit-server-operation-event-class"></a>Audit Server Operation - classe di evento
   La classe di evento **Audit Server Operation** si verifica quando si usano operazioni di controllo della sicurezza, ad esempio modifiche delle impostazioni, delle risorse, dell'accesso esterno o delle autorizzazioni.  

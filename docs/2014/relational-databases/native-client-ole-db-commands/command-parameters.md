@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 072ead49-ebaf-41eb-9a0f-613e9d990f26
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 93ec7e88dba785b1559512601adebdee64ea9fdb
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f6da29add8fd92530e40ebbfb7b94dedd619adf4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82708198"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056435"
 ---
 # <a name="command-parameters"></a>Parametri dei comandi
   I parametri sono contrassegnati nel testo dei comandi dal carattere del punto interrogativo. L'istruzione SQL seguente è ad esempio contrassegnata per un solo parametro di input:  
@@ -59,6 +58,6 @@ ms.locfileid: "82708198"
 >  Per esporre il supporto per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i tipi XML e definiti dall'utente (UDT), il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client implementa una nuova interfaccia [ISSCommandWithParameters](../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Comandi:](commands.md)  
+ [Comandi](commands.md)  
   
   

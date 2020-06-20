@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 224100f1-51f6-4f1f-91a2-054819c76ae8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ccf14ace0a160be4ca9ecc5287ca45f077ba7e16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f67103eedf14bb405ad1655d21803ec84e6ff0ca
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056016"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963741"
 ---
 # <a name="select-packages-ssis-package-upgrade-wizard"></a>Seleziona pacchetti (Aggiornamento guidato pacchetti SSIS)
   Utilizzare la pagina **Seleziona pacchetti** per selezionare i pacchetti da aggiornare. In questa pagina vengono elencati i pacchetti archiviati nel percorso specificato nella pagina **Seleziona posizione di origine** della procedura guidata.  
@@ -42,7 +41,7 @@ ms.locfileid: "66056016"
  **Applica a selezione**  
  Consente di applicare la password specificata per decrittografare i pacchetti di aggiornamento selezionati.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Selezionare il percorso di origine &#40;aggiornamento guidato pacchetti SSIS&#41;](../../2014/integration-services/select-source-location-ssis-package-upgrade-wizard.md)   
  [Aggiornare pacchetti di Integration Services](install-windows/upgrade-integration-services-packages.md)  
   

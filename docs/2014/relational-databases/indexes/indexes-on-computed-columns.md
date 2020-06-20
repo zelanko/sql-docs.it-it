@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c5aa2bd118d99afea6a1ee6ea8f41c646146c32f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ecbca9e7838c4c9395a8bcb6e11351c40f7037f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162442"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049886"
 ---
 # <a name="indexes-on-computed-columns"></a>Indici per le colonne calcolate
   È possibile definire gli indici per le colonne calcolate purché siano soddisfatti i requisiti seguenti:  
@@ -88,7 +87,7 @@ ms.locfileid: "63162442"
   
  **Data Type Requirements**  
   
--   Il *computed_column_expression* definito per la colonna calcolata non può restituire i `text`tipi `ntext`di dati `image` , o.  
+-   Il *computed_column_expression* definito per la colonna calcolata non può restituire i `text` `ntext` tipi di dati, o `image` .  
   
 -   Le colonne calcolate derivate dai tipi di dati `image`, `ntext`, `text`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)` e `xml` possono essere indicizzate purché il tipo di dati della colonna calcolata sia consentito come colonna chiave indice.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "63162442"
      Quando il livello di compatibilità del database è impostato su 90 o su un valore maggiore, l'impostazione di ANSI_WARNINGS su ON comporta anche l'impostazione implicita di ARITHABORT su ON.  
   
 ##  <a name="creating-indexes-on-persisted-computed-columns"></a><a name="BKMK_persisted"></a> Creazione di indici per colonne calcolate persistenti  
- È possibile creare un indice su una colonna calcolata. definita da un'espressione deterministica, ma non precisa, se la colonna è contrassegnata come PERSISTED nell'istruzione CREATE TABLE oppure ALTER TABLE. Ciò significa che [!INCLUDE[ssDE](../../../includes/ssde-md.md)] utilizza questi valori salvati in modo permanente quando crea un indice sulla colonna e quando viene fatto riferimento all'indice in una query. Questa opzione consente di creare un indice in una colonna calcolata quando [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)]è deterministico e preciso.  
+ È possibile creare un indice su una colonna calcolata. definita da un'espressione deterministica, ma non precisa, se la colonna è contrassegnata come PERSISTED nell'istruzione CREATE TABLE oppure ALTER TABLE. Ciò significa che [!INCLUDE[ssDE](../../../includes/ssde-md.md)] utilizza questi valori salvati in modo permanente quando crea un indice sulla colonna e quando viene fatto riferimento all'indice in una query. Questa opzione consente di creare un indice in una colonna calcolata quando [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)] è deterministico e preciso.  
   
 ## <a name="related-content"></a>Contenuto correlato  
  [COLUMNPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/columnproperty-transact-sql)  

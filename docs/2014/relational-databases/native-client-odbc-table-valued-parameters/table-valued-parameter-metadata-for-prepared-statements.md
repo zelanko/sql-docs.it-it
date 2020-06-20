@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fd2fc705-2e98-4011-9822-c7e6cca4a535
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8e526b01f8e33006c01861cdafef1fd9cd03d2ef
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ad1394bd5e5bedc69a98308ba67a98434559c146
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705176"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998896"
 ---
 # <a name="table-valued-parameter-metadata-for-prepared-statements"></a>Metadati del parametro con valori di tabella per le istruzioni preparate
   Un'applicazione può ottenere i metadati per una chiamata di procedura preparata tramite SQLNumParams e SQLDescribeParam. Per i parametri con valori di tabella, *DataTypePTR* è impostato su SQL_SS_TABLE. I metadati aggiuntivi sono disponibili tramite SQLGetDescField per SQL_CA_SS_TYPE_NAME, SQL_CA_SS_CATALOG_NAME e SQL_CA_SS_SCHEMA_NAME.  

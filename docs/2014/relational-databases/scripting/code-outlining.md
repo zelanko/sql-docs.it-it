@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 01383ffade91cde641018b90be30dc92e644b151
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 03abb1dc601c7b329742f290b9ce62aefd08e7bf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704073"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056886"
 ---
 # <a name="code-outlining"></a>Struttura del codice
   La modalità struttura negli editor di query di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] consente di nascondere in modo selettivo il codice quando si modificano query. In questo modo è possibile visualizzare più facilmente il codice utilizzato, soprattutto in file di query di dimensioni elevate.
@@ -36,7 +35,7 @@ ms.locfileid: "82704073"
 
  ![Codice XML in cui è illustrata la struttura](../../database-engine/media/editoutlinexmlfull.gif "Codice XML in cui è illustrata la struttura")
 
- Quando si fa clic sul segno meno nella riga \<InnerTag, viene compressa solo la parte relativa a InnerTag, come illustrato nella figura seguente.
+ Quando si fa clic sul segno meno sulla \<InnerTag> riga, solo InnerTag viene compresso, come illustrato nella figura seguente.
 
  ![Codice XML con il nodo interno nascosto](../../database-engine/media/editoutlinexmlinnercol.gif "Codice XML con il nodo interno nascosto")
 
@@ -44,11 +43,11 @@ ms.locfileid: "82704073"
 
  ![Codice XML con una descrizione comandi in cui è illustrato il codice nascosto](../../database-engine/media/editoutlinexmlmouse.gif "Codice XML con una descrizione comandi in cui è illustrato il codice nascosto")
 
- Quando si fa clic sul segno meno nella riga \<MiddleTag>, vengono compresse le parti relative a MiddleTag e InnerTag, come illustrato nella figura seguente.
+ Quando si fa clic sul segno meno sulla \<MiddleTag> riga, MiddleTag e InnerTag vengono compressi, come illustrato nella figura seguente.
 
  ![Codice XML con i tag interni e centrali nascosti](../../database-engine/media/editoutlinexmlmiddlecol.gif "Codice XML con i tag interni e centrali nascosti")
 
- Quando si fa clic sul segno meno nella riga \<OuterTag>, vengono compresse tutte e tre le righe, come illustrato nella figura seguente.
+ Quando si fa clic sul segno meno sulla \<OuterTag> riga, vengono compresse tutte e tre le righe, come illustrato nella figura seguente.
 
  ![Codice XML in cui sono illustrati tutti e tre i tag nascosti](../../database-engine/media/editoutlinexmloutercol.gif "Codice XML in cui sono illustrati tutti e tre i tag nascosti")
 

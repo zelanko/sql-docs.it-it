@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4567668d-35fd-4162-b61f-f7536862cdcb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 29ce1e2c701db485d8251bc9c017a9b192576a7c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8d78b0144e112ca868f990ab87d5c58a798b0c55
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707818"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056416"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Comandi che generano risultati con più set di righe
   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client può restituire più set di righe dalle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istruzioni. Tramite le istruzioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono restituiti più set di righe nelle condizioni seguenti:  
@@ -49,6 +48,6 @@ WCHAR*       wSQLString = L"SELECT * FROM Categories; "
 -   [Utilizzo dell'interfaccia IMultipleResults per elaborare più set di risultati](using-imultipleresults-to-process-multiple-result-sets.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Comandi:](commands.md)  
+ [Comandi](commands.md)  
   
   

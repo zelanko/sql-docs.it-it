@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ebffc2246f0940c4643af2267086e727882a0633
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c5dfd7df8104519cf09ad72ffee3c5214af2a3d8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63031970"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058164"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>Creazione di query di accodamento (Visual Database Tools)
   Le query di accodamento consentono di copiare righe da una tabella a un'altra oppure all'interno di una stessa tabella. Ad esempio, in una tabella `titles` è possibile utilizzare una query di accodamento per copiare le informazioni riguardanti tutti i titoli di un editore in una seconda tabella da presentare all'editore stesso. La query di accodamento è analoga alla query di creazione tabella, con la differenza che le righe vengono copiate in una tabella esistente.  
@@ -80,7 +79,7 @@ WHERE (pub_id = '0766')
   
      Le colonne selezionate verranno aggiunte alla colonna **Colonna** del riquadro Criteri.  
   
-5.  Nella colonna **Aggiungi** del riquadro Criteri selezionare una colonna di destinazione nella tabella di destinazione per ogni colonna da copiare. Scegliere *TableName.\* * se si stanno copiando intere righe. I tipi di dati nelle colonne della tabella di destinazione devono essere uguali o compatibili con quelli delle colonne nella tabella di origine.  
+5.  Nella colonna **Aggiungi** del riquadro Criteri selezionare una colonna di destinazione nella tabella di destinazione per ogni colonna da copiare. Scegliere *TableName. \* * se si stanno copiando intere righe. I tipi di dati nelle colonne della tabella di destinazione devono essere uguali o compatibili con quelli delle colonne nella tabella di origine.  
   
 6.  Se si desidera copiare le righe in un particolare ordine, specificare il criterio di ordinamento. Per informazioni dettagliate, vedere [Ordinare e raggruppare i risultati delle query &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md).  
   

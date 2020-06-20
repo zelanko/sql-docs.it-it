@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c63b7c0d1acad34bb273e4a49921d55818965e80
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a9a7c6c48229aa827aaed178e5ed4448c20431b9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72688728"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970571"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
   Le regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] forniscono regole di ordinamento e proprietà di distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati per i dati. Le regole di confronto usate con dati di tipo carattere, quali `char` e `varchar`, definiscono la tabella codici e i caratteri corrispondenti che possono essere rappresentati per quel tipo di dati. Sia che si installi una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si ripristini il backup di un database o si stabiliscano connessioni tra database server e client, è importante comprendere i requisiti delle impostazioni locali, l'ordinamento e la modalità di distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati dei dati da usare. Per visualizzare l'elenco delle regole di confronto disponibili nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [sys.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql).  
@@ -49,7 +48,7 @@ ms.locfileid: "72688728"
   
  Le opzioni associate alle regole di confronto sono: distinzione tra maiuscole e minuscole, distinzione tra caratteri accentati e non accentati, distinzione Kana e distinzione di larghezza. Tali opzioni vengono specificate aggiungendole al nome delle regole di confronto. Ad esempio, le regole di confronto `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS` prevedono: distinzione tra maiuscole e minuscole, distinzione tra caratteri accentati e non accentati, distinzione Kana e distinzione di larghezza. Nella tabella riportata di seguito viene descritto il comportamento associato a queste opzioni.  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |Distinzione maiuscole/minuscole (_CS)|Opera una distinzione tra lettere maiuscole e minuscole. Se viene selezionata questa opzione, le lettere minuscole precedono le versioni maiuscole corrispondenti nell'ordinamento. Se questa opzione non viene selezionata, le regole di confronto non effettueranno distinzione tra maiuscole e minuscole. Ovvero, in SQL Server non viene operata una distinzione tra lettere maiuscole e minuscole, che vengono considerate identiche ai fini dell'ordinamento. È possibile selezionare in modo esplicito l'esclusione della distinzione tra maiuscole e minuscole specificando _CI.|  
 |Distinzione caratteri accentati/non accentati (_AS)|Opera una distinzione tra caratteri accentati e non accentati. Ad esempio,' a' non è uguale a' &#x1EA5;'. Se questa opzione non viene selezionata, le regole di confronto non effettueranno distinzione tra caratteri accentati e non accentati. Ovvero, in SQL Server non viene opera una distinzione tra caratteri accentati e non accentati, che vengono considerati identici ai fini dell'ordinamento. È possibile selezionare in modo esplicito l'esclusione della distinzione tra caratteri accentati e non accentati specificando _AI.|  
@@ -175,7 +174,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 |Funzione per i valori stringa o operatore di stringa|Con regole di confronto SC|Senza regole di confronto SC|  
 |---------------------------------|--------------------------|-----------------------------|  
 |[CHARINDEX](/sql/t-sql/functions/charindex-transact-sql)<br /><br /> [LEN](/sql/t-sql/functions/len-transact-sql)<br /><br /> [PATINDEX](/sql/t-sql/functions/patindex-transact-sql)|La coppia di surrogati UTF-16 viene conteggiata come singolo punto di codice.|La coppia di surrogati UTF-16 viene conteggiata come due punti di codice.|  
-|[LEFT](/sql/t-sql/functions/left-transact-sql)<br /><br /> [REPLACE](/sql/t-sql/functions/replace-transact-sql)<br /><br /> [REVERSE](/sql/t-sql/functions/reverse-transact-sql)<br /><br /> [RIGHT](/sql/t-sql/functions/right-transact-sql)<br /><br /> [SUBSTRING](/sql/t-sql/functions/substring-transact-sql)<br /><br /> [STUFF](/sql/t-sql/functions/stuff-transact-sql)|Queste funzioni considerano ogni coppia di surrogati un singolo punto di codice e funzionano come previsto.|Queste funzioni possono dividere qualsiasi coppia di surrogati e provocare risultati imprevisti.|  
+|[LEFT](/sql/t-sql/functions/left-transact-sql)<br /><br /> [SOSTITUIRE](/sql/t-sql/functions/replace-transact-sql)<br /><br /> [INVERSO](/sql/t-sql/functions/reverse-transact-sql)<br /><br /> [RIGHT](/sql/t-sql/functions/right-transact-sql)<br /><br /> [SOTTOSTRINGA](/sql/t-sql/functions/substring-transact-sql)<br /><br /> [STUFF](/sql/t-sql/functions/stuff-transact-sql)|Queste funzioni considerano ogni coppia di surrogati un singolo punto di codice e funzionano come previsto.|Queste funzioni possono dividere qualsiasi coppia di surrogati e provocare risultati imprevisti.|  
 |[NCHAR](/sql/t-sql/functions/nchar-transact-sql)|Restituisce il carattere corrispondente al valore del punto di codice Unicode specificato nell'intervallo compreso tra 0 e 0x10FFFF. Se il valore specificato è incluso nell'intervallo compreso tra 0 e 0xFFFF, viene restituito un carattere. Per valori superiori, viene restituito il surrogato corrispondente.|Un valore maggiore di 0xFFFF restituisce NULL anziché il surrogato corrispondente.|  
 |[UNICODE](/sql/t-sql/functions/unicode-transact-sql)|Restituisce un punto di codice UTF-16 nell'intervallo compreso tra 0 e 0x10FFFF.|Restituisce un punto di codice UCS-2 nell'intervallo compreso tra 0 e 0xFFFF.|  
 |[Carattere jolly per corrispondenze di singoli caratteri](/sql/t-sql/language-elements/wildcard-match-one-character-transact-sql)<br /><br /> [Carattere jolly per la mancata corrispondenza dei caratteri](/sql/t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql)|Sono supportati caratteri supplementari per tutte le operazioni con caratteri jolly.|Non sono supportati caratteri supplementari per queste operazioni con caratteri jolly. Sono supportati altri operatori jolly.|  

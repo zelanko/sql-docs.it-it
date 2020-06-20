@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ac0eae2ad0f6b856495cb3a329cfe2f7e635dc1a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 706b029dbd811f2e1794e451291830bf15d37274
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719041"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026229"
 ---
 # <a name="migrating-computed-columns"></a>Migrazione di colonne calcolate
   Le colonne calcolate non sono supportate nelle tabelle ottimizzate per la memoria. Tuttavia, è possibile simulare una colonna calcolata.  

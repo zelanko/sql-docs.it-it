@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 48299e2cf318071624c8a7649c52dd9b2f932a77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b76d4df23f5d8bb25664ba0f1d294deca9be0418
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62668987"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057168"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Panoramica dell'interfaccia di Monitoraggio replica
   Monitoraggio replica per [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] offre una visualizzazione incentrata sul server di pubblicazione o sul server di distribuzione di tutte le attività di replica, suddivise in due riquadri. Se si aggiunge un server di pubblicazione nel riquadro sinistro di Monitoraggio replica, verranno visualizzate nel riquadro sinistro informazioni sul server di pubblicazione, sulle relative pubblicazioni, sulle sottoscrizioni a tali pubblicazioni e sui diversi agenti di replica. Oltre a visualizzare informazioni per la topologia di replica, Monitoraggio replica consente di eseguire numerose attività, quali l'avvio e l'arresto degli agenti e la convalida dei dati.  
@@ -225,7 +224,7 @@ ms.locfileid: "62668987"
   
      In questa finestra di dialogo è possibile modificare le proprietà dei profili, creare ed eliminare i profili, specificare un profilo predefinito e specificare che tutti gli agenti di un tipo specifico, ad esempio gli agenti snapshot, debbano utilizzare un determinato profilo.  
   
--   **\<NomeProfiloAgente> Proprietà**  
+-   **\<AgentProfileName>Proprietà**  
   
      Questa finestra di dialogo consente di visualizzare e modificare le impostazioni dei parametri in un profilo.  
   

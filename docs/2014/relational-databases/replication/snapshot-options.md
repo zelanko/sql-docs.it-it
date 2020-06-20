@@ -12,22 +12,21 @@ helpviewer_keywords:
 ms.assetid: 759fab42-66c7-4541-a7a3-bb6fb868493c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a611de458537156740521dae8b732eed3e2653c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 946d9035730512a626e710b1140a1ba01290908a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289479"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055643"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>Modificare le opzioni di inizializzazione dello snapshot per la replica di SQL
 
 Questo articolo illustra come modificare diverse opzioni durante l' [inizializzazione di una sottoscrizione con uno snapshot](initialize-a-subscription-with-a-snapshot.md).
 
 ## <a name="snapshot-format"></a>Formato snapshot
-   Specificare il formato dello snapshot nella pagina **Snapshot** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
+  Specificare il formato dello snapshot nella pagina **snapshot** della finestra di dialogo **Proprietà pubblicazione- \<Publication> ** . Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
 
-1.  Nella pagina **Snapshot** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** selezionare **Formato nativo di SQL Server: tutti i Sottoscrittori devono essere server che eseguono SQL Server** oppure **Carattere: obbligatorio se in un server di pubblicazione o in un Sottoscrittore non è in esecuzione SQL Server**. 
+1.  Nella pagina **snapshot** della finestra di dialogo **Proprietà pubblicazione \<Publication> -** selezionare **SQL Server nativo: tutti i Sottoscrittori devono essere server che eseguono SQL Server** o **carattere: obbligatorio se un server di pubblicazione o un Sottoscrittore non è in esecuzione SQL Server**. 
 
     > [!NOTE]  
     >  È consigliabile selezionare il formato nativo a meno che la pubblicazione non debba supportare sottoscrizioni a un database di [!INCLUDE[ssEW](../../../includes/ssew-md.md)] o a un database non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .    
@@ -38,24 +37,24 @@ Questo articolo illustra come modificare diverse opzioni durante l' [inizializza
 ### <a name="default-snapshot-location"></a>Posizione predefinita degli snapshot
 Specificare la posizione predefinita degli snapshot (SQL Server Management Studio) specificare la posizione predefinita degli snapshot nella pagina **cartella snapshot** della configurazione guidata distribuzione. Per altre informazioni sull'uso di questa procedura guidata, vedere [Configurare la pubblicazione e la distribuzione](configure-publishing-and-distribution.md). Se si crea una pubblicazione su un server non configurato come server di distribuzione, specificare una posizione predefinita degli snapshot nella pagina **Cartella snapshot** della Creazione guidata nuova pubblicazione. Per altre informazioni sull'uso di questa procedura guidata, vedere [Creare una pubblicazione](publish/create-a-publication.md).  
   
- Modificare la posizione predefinita degli snapshot nella pagina **Server di pubblicazione** della finestra di dialogo **Proprietà database di distribuzione - \<DatabaseDistribuzione>**. Per altre informazioni, vedere [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](view-and-modify-distributor-and-publisher-properties.md). Impostare la cartella snapshot per ogni pubblicazione nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione**. Per altre informazioni, vedere [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
+ Modificare la posizione predefinita degli snapshot nella pagina server di **pubblicazione** della finestra di dialogo Proprietà database di **distribuzione- \<Distributor> ** . Per altre informazioni, vedere [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](view-and-modify-distributor-and-publisher-properties.md). Impostare la cartella snapshot per ogni pubblicazione nella finestra di dialogo **proprietà \<Publication> pubblicazione-** . Per altre informazioni, vedere [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
   
 #### <a name="modify-the-default-snapshot-location"></a>Modificare la posizione predefinita degli snapshot  
   
-1.  Nella pagina server di **pubblicazione** della finestra di dialogo Proprietà database di **distribuzione \<-database di distribuzione>** fare clic sul pulsante delle proprietà (**...**) per il server di pubblicazione per il quale si desidera modificare la posizione predefinita degli snapshot.    
-2.  Nella finestra di dialogo **Proprietà server di pubblicazione - \<Server di pubblicazione>** immettere un valore per la proprietà **Cartella snapshot predefinita**.
+1.  Nella pagina server di **pubblicazione** della finestra di dialogo Proprietà database di **distribuzione- \<Distributor> ** fare clic sul pulsante delle proprietà (**...**) per il server di pubblicazione per il quale si desidera modificare la posizione predefinita degli snapshot.    
+2.  Nella finestra di dialogo **proprietà \<Publisher> server di pubblicazione-** immettere un valore per la proprietà **cartella snapshot predefinita** .
 
     > [!NOTE]  
     >  L'agente snapshot deve disporre delle autorizzazioni di scrittura per la directory specificata, mentre l'agente di distribuzione o l'agente di merge deve disporre delle autorizzazioni di lettura. Se si usano sottoscrizioni pull, è necessario specificare una directory condivisa come percorso UNC (Universal Naming Convention), ad esempio \\\nomecomputer\snapshot. Per altre informazioni, vedere [proteggere la cartella snapshot](security/secure-the-snapshot-folder.md).    
 1.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
 ### <a name="alternate-snapshot-location"></a>Posizione alternativa snapshot
-  Specificare un percorso alternativo per lo snapshot nella pagina **Snapshot** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md). 
+  Specificare un percorso alternativo per lo snapshot nella pagina **snapshot** della finestra di dialogo **Proprietà pubblicazione- \<Publication> ** . Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md). 
 
   
 #### <a name="specify-an-alternate-snapshot-location"></a>Specificare un percorso alternativo per lo snapshot  
   
-1.  Nella pagina **Snapshot** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**:    
+1.  Nella pagina **snapshot** della finestra di dialogo **Proprietà pubblicazione \<Publication> -** :    
     1.  Selezionare **Inserisci i file nella cartella seguente**e quindi fare clic su **Sfoglia** per passare a una directory oppure immettere il percorso della directory in cui devono essere archiviati i file di snapshot.    
 
         > [!NOTE]  
@@ -66,9 +65,9 @@ Specificare la posizione predefinita degli snapshot (SQL Server Management Studi
 
 
 ## <a name="compress-snapshot-files"></a>Comprimi file di snapshot
-Specificare che i file devono essere compressi nella pagina **Snapshot** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
+Specificare che i file devono essere compressi nella pagina **snapshot** della finestra di dialogo **proprietà \<Publication> pubblicazione-** . Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
   
-1.  Nella pagina **Snapshot** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**:  
+1.  Nella pagina **snapshot** della finestra di dialogo **Proprietà pubblicazione \<Publication> -** :  
   
     1.  Selezionare **Inserisci i file nella cartella seguente**e quindi fare clic su **Sfoglia** per passare a una directory oppure immettere il percorso della directory in cui devono essere archiviati i file di snapshot.    
         > [!NOTE]  
@@ -91,10 +90,10 @@ Specificare che i file devono essere compressi nella pagina **Snapshot** della f
  Se il file di snapshot viene compresso in formato [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB, vengono compressi e inclusi nel file CAB anche gli script. Dopo il trasferimento e la decompressione del file di snapshot compresso in una directory di lavoro nel Sottoscrittore, vengono eseguiti tutti gli script indicati come pre-snapshot. In modo analogo, tutti gli script post-snapshot vengono decompressi ed eseguiti nel Sottoscrittore come ultimo passaggio dell'applicazione dello snapshot.  
 
 ### <a name="execute-a-script-before-or-after-a-snapshot-is-applied"></a>Eseguire uno script prima o dopo l'applicazione di uno snapshot  
-  Specificare uno script facoltativo da eseguire prima o dopo l'applicazione dello snapshot nella pagina **Snapshot** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
+ Specificare uno script facoltativo da eseguire prima o dopo l'applicazione dello snapshot nella pagina **snapshot** della finestra di dialogo **Proprietà pubblicazione \<Publication> -** . Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
 
 
-1.  Nella pagina **Snapshot** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**:    
+1.  Nella pagina **snapshot** della finestra di dialogo **Proprietà pubblicazione \<Publication> -** :    
     -   Per specificare uno script da eseguire prima dell'applicazione dello snapshot, fare clic su **Sfoglia** per passare allo script oppure immettere un percorso per lo script nella casella di testo **Prima di applicare lo snapshot, esegui lo script seguente** . 
    
         > [!NOTE]  

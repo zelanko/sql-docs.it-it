@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 6e4f41aa-832d-46ba-b6b5-cf1d3b15d33f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 69f467af1c797b9bf1cfa55c7def8456ad4a32bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b84c2472c56d50fa5c0595ea7046ed3ab9a2b352
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061272"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056595"
 ---
 # <a name="alert-properties-new-alert-options-page"></a>Proprietà avviso: Nuovo avviso (pagina Opzioni)
-  Utilizzare questa pagina per visualizzare e modificare le opzioni [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per gli avvisi di Agent.  
+  Utilizzare questa pagina per visualizzare e modificare le opzioni per gli [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avvisi di Agent.  
   
 ## <a name="options"></a>Opzioni  
  **Posta elettronica**  
@@ -44,7 +43,7 @@ ms.locfileid: "63061272"
  **Secondi**  
  Consente di specificare un ritardo in secondi. Per attivare una risposta ogni volta che si verifica l'evento, specificare 0 minuti e 0 secondi.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Avvisi](alerts.md)  
   
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f7ea763aa9c0bd187b2207dc50a1f678c295f3b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92627b1f66b91af63979b25f5a8d69d1a341ec73
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483397"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971911"
 ---
 # <a name="create-a-collection-master-data-services"></a>Creare una raccolta (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare una raccolta quando si vuole creare elenchi semplici di membri foglia e membri consolidati. Non è necessario includere nelle raccolte tutti i membri dell'entità.  
@@ -56,7 +55,7 @@ ms.locfileid: "65483397"
   
 -   [Aggiungere membri a una raccolta &#40;Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Raccolte &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)   
  [Eliminare un membro o una raccolta &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)   
  [Creare una gerarchia esplicita &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)  

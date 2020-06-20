@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 802882dc-c997-4e3f-8a01-994bb43169ae
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 840096c197a2e827281bb0023ad03a6d407f3758
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b5391479ad7f1db64383049a5a6c9aefa3abadd4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704049"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056867"
 ---
 # <a name="color-coding-in-query-editors"></a>Codifica con colori negli editor di query
   Al testo immesso negli editor del codice viene assegnata una categoria. Ogni categoria viene identificata con un colore. I colore consentono di individuare rapidamente il testo nel codice. I commenti ad esempio vengono evidenziati con il colore verde scuro. Nella tabella seguente sono riportati i colori più comuni. È possibile visualizzare l'intero elenco dei colori e le relative categorie e configurare uno schema di colori personalizzato dal menu **Strumenti**, **Opzioni** . Per altre informazioni su come modificare i colori predefiniti, vedere [Modificare lo stile, le dimensioni e il colore del carattere](change-font-color-size-and-style.md).  

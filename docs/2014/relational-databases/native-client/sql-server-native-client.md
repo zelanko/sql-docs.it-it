@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 003abb67cd66d02294210ddb3f55061abcc804f4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 84d394784a8cd6c85840d155766ac6ece374c184
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704137"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057225"
 ---
 # <a name="what39s-new-in-sql-server-native-client"></a>Novità di SQL Server Native Client&#39;
   Tramite [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] viene installato [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client. Non esistono versioni di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Native Client.  

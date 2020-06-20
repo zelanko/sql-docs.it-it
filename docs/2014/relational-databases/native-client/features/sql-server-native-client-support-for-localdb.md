@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 127569d1-a9f7-49bf-a561-c084986a8871
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 503bae580d2bacffbd143a1b4530f83b7c81a269
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d1adfcc0beba3b06028ddf4e4c7ddc6ca44faae9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707218"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011157"
 ---
 # <a name="sql-server-native-client-support-for-localdb"></a>Supporto SQL Server Native Client per il database locale
   A partire da [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], sarà disponibile una versione lightweight di SQL Server, chiamato Database locale. In questo argomento viene discussa la modalità di connessione a un database in un'istanza del database locale.  

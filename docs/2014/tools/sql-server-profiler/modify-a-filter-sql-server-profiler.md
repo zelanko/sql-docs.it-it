@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8b317813-4918-4485-b930-77b1951aa00c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: db6d6220fbb0f756b539e63dc2496d9ddb46d9f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a7bab18952820a3dc49c9479797a411521f8e71
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63228497"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057693"
 ---
 # <a name="modify-a-filter-sql-server-profiler"></a>Modificare un filtro (SQL Server Profiler)
   Per limitare il numero di eventi raccolti da una traccia, è possibile aggiungere filtri ai modelli di traccia che contengono le definizioni di traccia. La limitazione del numero di eventi raccolti può ridurre gli effetti negativi delle operazioni di traccia sulle prestazioni. Se si impostano filtri per un modello di traccia e si rileva che il tipo di informazioni raccolte nella traccia non corrisponde a quello desiderato, è possibile modificare il filtro.  

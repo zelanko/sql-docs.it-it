@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 79510fcf-4c83-4426-bdd4-15b4170ecfbd
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 07642b9a47d23893e67ff035e9967b940aedb813
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42bc20c41d41ff56b9445b100e5f0a0750613aac
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483589"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972051"
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>Modificare il nome di un gruppo di attributi (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è possibile modificare il nome di un gruppo di attributi.  
@@ -49,7 +48,7 @@ ms.locfileid: "65483589"
   
 9. Fare clic su **Salva gruppo**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Gruppi di attributi &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   
  [Creazione di un gruppo di attributi &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)   
  [Eliminare un gruppo di attributi &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)  

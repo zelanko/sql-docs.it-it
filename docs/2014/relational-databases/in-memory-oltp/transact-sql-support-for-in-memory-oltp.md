@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b1cc7c30-1747-4c21-88ac-e95a5e58baac
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8042534c8b22863c5a00abf4969bdb9754cef892
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bf3708a258e3bb97231e45b10bea2c59351a06a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702208"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025487"
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>Supporto di Transact-SQL per OLTP in memoria
   È possibile accedere alle tabelle ottimizzate per la memoria usando qualsiasi query Transact-SQL o istruzione DML sta(SELECT, INSERT, UPDATE o DELETE), query ad hoc e modulo SQL, ad esempio stored procedure, funzioni con valori di tabella, funzioni scalari, trigger e visualizzazioni. Per altre informazioni, vedere [accesso alle tabelle ottimizzate per la memoria usando Transact-SQL interpretato](accessing-memory-optimized-tables-using-interpreted-transact-sql.md).  

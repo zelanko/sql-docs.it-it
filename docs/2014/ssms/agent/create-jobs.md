@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 465fb7fc-7622-4252-a178-ea51691c935b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 986e38ef42fe1af2aba8ba1625225a336f29158d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f9424846c714070ff6bf22043d174762f873117
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162469"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008941"
 ---
 # <a name="create-jobs"></a>Crea processi
   Un processo include una serie di operazioni specificate eseguite in sequenza da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Tramite un processo è possibile eseguire un'ampia gamma di attività, inclusa l'esecuzione di script [!INCLUDE[tsql](../../includes/tsql-md.md)] , applicazioni da riga di comando, script Microsoft ActiveX, pacchetti Integration Services, comandi e query di Analysis Services o attività di replica. I processi possono eseguire attività ripetitive o pianificabili e inviare agli utenti notifiche automatiche sullo stato del processo tramite la generazione di avvisi, semplificando significativamente l'amministrazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -38,8 +37,8 @@ ms.locfileid: "63162469"
 |Viene descritto come riassegnare la proprietà dei processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a un altro utente.|[Give Others Ownership of a Job](give-others-ownership-of-a-job.md)|  
 |Viene descritto come impostare il log di cronologia processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Impostare il log di cronologia processi](set-up-the-job-history-log.md)|  
   
-## <a name="see-also"></a>Vedi anche  
- [Gestire i passaggi del processo](manage-job-steps.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Gestire passaggi di processo](manage-job-steps.md)   
  [Amministrazione automatizzata in un'organizzazione](automated-administration-across-an-enterprise.md)   
  [Creazione e alconnessione di pianificazioni ai processi](create-and-attach-schedules-to-jobs.md)   
  [Esegui processi](run-jobs.md)   

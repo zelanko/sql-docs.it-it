@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: b2a47057-f6fb-432b-a7b6-5d61f33a5d9c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 769e4cb9298ce2a92f7200d9e04743d6b16f842d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10e732e41193e08ffa8f0c57ac8d7b421b10a590
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62523884"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008873"
 ---
 # <a name="define-transact-sql-job-step-options"></a>Definire le opzioni del passaggio di processo Transact-SQL
-  In questo argomento viene descritto come definire le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] opzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] per i passaggi [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] di processo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] di Agent in tramite o SQL Server Management Objects.  
+  In questo argomento viene descritto come definire le opzioni per i [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] passaggi di processo di Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o SQL Server Management Objects.  
   
  **Contenuto dell'articolo**  
   

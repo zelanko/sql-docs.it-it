@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0b36a61e-b542-400d-a3d2-e6f643caf2c6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 87027481170d8f72f91b1923ae6703b9796d5541
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b7336a8076a8e6550e3b36d7ba43545f19f61921
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704769"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056047"
 ---
 # <a name="about-ole-db-properties"></a>Informazioni sulle proprietà OLE DB
   I consumer impostano i valori delle proprietà per richiedere specifici comportamenti degli oggetti. Utilizzano, ad esempio, proprietà per specificare le interfacce che devono essere esposte da un set di righe. I consumer recuperano i valori delle proprietà per determinare le funzionalità di un oggetto, ad esempio un set di righe, una sessione o un oggetto origine dati.  
