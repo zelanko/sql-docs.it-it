@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2bcb160a3468d2d135d63c5184b7e07d097d5050
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cdfbc4825908f409392f7dcca67749cbe08a407c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066998"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938834"
 ---
 # <a name="kpis-ssas-tabular"></a>Indicatori KPI (SSAS tabulare)
   In un modello tabulare un indicatore di prestazioni chiave ( *KPI* ) viene usato per misurare le prestazioni di un valore, definito da una misura di *base* , rispetto a un valore di *destinazione* , definito anch'esso da una misura o da un valore assoluto. In questo argomento vengono fornite ai creatori di modelli tabulari informazioni di base sugli indicatori KPI in un modello tabulare.  
@@ -30,7 +29,7 @@ ms.locfileid: "66066998"
   
 -   [Attività correlate](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>Vantaggi  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> Vantaggi  
  Nella terminologia aziendale un indicatore KPI rappresenta una misurazione quantificabile per la valutazione degli obiettivi aziendali e viene stimato con una frequenza spesso elevata. Il reparto vendite di un'organizzazione può ad esempio utilizzare un indicatore KPI per misurare il profitto lordo mensile rispetto al profitto lordo previsto. Il reparto contabilità può misurare le spese mensili rispetto ai ricavi per valutare i costi, mentre un reparto risorse umane può misurare l'avvicendamento trimestrale dei dipendenti. Ognuno di questi rappresenta un esempio di utilizzo di un indicatore KPI. I professionisti aziendali utilizzano spesso gli indicatori di prestazioni chiave raggruppati in una scorecard aziendale per ottenere un riepilogo cronologico immediato e accurato del successo aziendale o per identificare le tendenze.  
   
  Un indicatore KPI di un modello tabulare include gli elementi seguenti:  
@@ -81,11 +80,11 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
 ##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> Attività correlate  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |-----------|-----------------|  
 |[Creare e gestire indicatori KPI &#40;SSAS tabulare&#41;](kpis-ssas-tabular.md)|Viene descritto come creare un indicatore KPI con una misura di base, una misura di destinazione e soglie di stato.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Misure &#40;SSAS tabulare&#41;](measures-ssas-tabular.md)   
  [Prospettive &#40;SSAS tabulare&#41;](perspectives-ssas-tabular.md)  
   

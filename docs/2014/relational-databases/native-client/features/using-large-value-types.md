@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4782a640d38c4f7a282f37fecb4765ce7677f93e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8a2e93ee36eb4bfadf18c5b78f552380d1c94266
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707208"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043553"
 ---
 # <a name="using-large-value-types"></a>Utilizzo di tipi di dati per valori di grandi dimensioni
   Nelle versioni precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], l'utilizzo dei tipi di dati per valori di grandi dimensioni richiede una gestione speciale. I tipi di dati per valori di grandi dimensioni sono quelli che superano le dimensioni di riga massime di 8 KB. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]ha introdotto un identificatore **Max** per i tipi di dati **varchar**, **nvarchar** e **varbinary** per consentire l'archiviazione di valori di dimensioni pari a 2 ^ 31-1 byte. Le colonne della tabella e le [!INCLUDE[tsql](../../../includes/tsql-md.md)] variabili possono specificare tipi di dati **varchar (max)**, **nvarchar (max)** o **varbinary (max)** .  

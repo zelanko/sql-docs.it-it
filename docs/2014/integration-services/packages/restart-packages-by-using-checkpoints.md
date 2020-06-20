@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1f41ed858bedd18ec68794d5e7d1c13100af5254
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7ea97a56ad10fd0545e9a550defcf673f05542c8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767033"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964781"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Riavvio dei pacchetti tramite checkpoint
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] può riavviare i pacchetti non eseguiti correttamente a partire dal punto in cui si è verificato l'errore, invece di eseguire di nuovo l'intero pacchetto. Se un pacchetto è configurato per l'utilizzo di checkpoint, le informazioni sull'esecuzione del pacchetto vengono scritte in un file del checkpoint. Questo file viene quindi utilizzato per il riavvio di un pacchetto dal punto in cui si è verificato l'errore. Se il pacchetto viene eseguito correttamente, il file del checkpoint viene eliminato e quindi creato nuovamente alla successiva esecuzione del pacchetto.  
@@ -73,7 +72,7 @@ ms.locfileid: "62767033"
 |`IfExists`|Specifica che il file del checkpoint viene utilizzato, se disponibile. Se il file del checkpoint è disponibile, il pacchetto viene riavviato a partire dal punto in cui si è verificato l'errore. In caso contrario, viene eseguito dall'inizio del flusso di lavoro.|  
   
 > [!NOTE]  
->  L'opzione **/CheckPointing on on** di dtexec equivale a impostare la `SaveCheckpoints` proprietà del pacchetto `True`su e la `CheckpointUsage` proprietà su Always. Per altre informazioni, vedere [dtexec Utility](dtexec-utility.md).  
+>  L'opzione **/CheckPointing on on** di dtexec equivale a impostare la `SaveCheckpoints` proprietà del pacchetto su `True` e la `CheckpointUsage` proprietà su Always. Per altre informazioni, vedere [dtexec Utility](dtexec-utility.md).  
   
 ## <a name="securing-checkpoint-files"></a>Sicurezza dei file del checkpoint  
  Poiché la protezione a livello di pacchetto non include la protezione dei file del checkpoint, è necessario proteggere tali file separatamente. I dati di checkpoint possono essere archiviati esclusivamente nel file system ed è necessario utilizzare un elenco di controllo di accesso (ACL) del sistema operativo per proteggere il percorso o la cartella in cui è archiviato il file. È importante proteggere i file del checkpoint perché contengono informazioni sullo stato del pacchetto, inclusi i valori correnti delle variabili. Un variabile può ad esempio contenere un recordset con numerose righe di dati privati, quali numeri di telefono. Per altre informazioni, vedere [Accesso ai file utilizzati dai pacchetti](../access-to-files-used-by-packages.md).  
@@ -88,7 +87,7 @@ ms.locfileid: "62767033"
   
 -   Articolo del supporto tecnico [SSIS Checkpoints are not honored for For Loop or Foreach Loop container items](https://go.microsoft.com/fwlink/?LinkId=241633)(Mancata applicazione dei checkpoint SSIS per gli elementi contenitori Ciclo For e Foreach) nel sito Web support.microsoft.com.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server Integration Services](../sql-server-integration-services.md)  
   
   

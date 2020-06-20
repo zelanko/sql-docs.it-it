@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd102e95-53e2-4da6-9b8b-0e4f02d286d3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48f78615e20ac194f6d11d4aa2f31610ff6bb963
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774416"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930844"
 ---
 # <a name="memory-optimized-table-variables"></a>Variabili di tabella con ottimizzazione per la memoria
   Oltre alle tabelle ottimizzate per la memoria per l'accesso efficiente ai dati e alle stored procedure compilate in modo nativo per l'elaborazione efficiente delle query e l'esecuzione della logica di business, [!INCLUDE[hek_2](../includes/hek-2-md.md)] introduce un terzo tipo di oggetto: il tipo di tabella ottimizzata per la memoria. Una variabile di tabella creata utilizzando un tipo di tabella ottimizzata per la memoria è una variabile di tabella ottimizzata per la memoria.  
@@ -186,7 +185,7 @@ GO
   
  La memoria viene rappresentata come parte di un singolo consumer di memoria di PGPOOL del database.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Supporto di Transact-SQL per OLTP in memoria](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   
   

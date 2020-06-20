@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 963fe86b0d5939c82bffb9c07d5adacbadadba89
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f432b1e402c51646efba54ed4aacba3287b0c2d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68199418"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060592"
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>Abilitazione delle sottoscrizioni aggiornabili per le pubblicazioni transazionali
   In questo argomento viene descritto come abilitare l'aggiornamento delle sottoscrizioni per pubblicazioni transazionali in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -59,11 +58,11 @@ ms.locfileid: "68199418"
   
     -   Per sapere se un processo dell'agente di lettura log esiste già per un database pubblicato, eseguire [sp_helplogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql) nel database di pubblicazione nel server di pubblicazione. Se il set di risultati è vuoto, sarà necessario creare un processo dell'agente di lettura log.  
   
-    -   Nel server di pubblicazione eseguire [sp_addlogreader_agent &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Specificare le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] credenziali di Windows utilizzate per l'esecuzione dell' **@job_name** agente **@password**per e. Se l'agente utilizza l'autenticazione di SQL Server per la connessione al server di pubblicazione, è inoltre necessario specificare il valore **0** per **@publisher_security_mode** e le informazioni sull'account di accesso di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per **@publisher_login** e **@publisher_password**.  
+    -   Nel server di pubblicazione eseguire [sp_addlogreader_agent &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Specificare le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] credenziali di Windows utilizzate per l'esecuzione dell'agente per **@job_name** e **@password** . Se l'agente utilizza l'autenticazione di SQL Server per la connessione al server di pubblicazione, è inoltre necessario specificare il valore **0** per **@publisher_security_mode** e le informazioni sull'account di accesso di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per **@publisher_login** e **@publisher_password**.  
   
 2.  Eseguire [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql), specificando il valore **true** per il parametro **@allow_sync_tran**.  
   
-3.  Nel server di pubblicazione eseguire [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Specificare il nome della pubblicazione usato nel passaggio 2 **@publication** per e le credenziali di Windows con cui viene eseguito **@job_name** il **@password**agente di snapshot per e. Se l'agente utilizza l'autenticazione di SQL Server per la connessione al server di pubblicazione, è inoltre necessario specificare il valore **0** per **@publisher_security_mode** e le informazioni sull'account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per **@publisher_login** e **@publisher_password**. Verrà creato un processo dell'agente snapshot per la pubblicazione.  
+3.  Nel server di pubblicazione eseguire [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Specificare il nome della pubblicazione usato nel passaggio 2 per **@publication** e le credenziali di Windows con cui viene eseguito il agente di snapshot per **@job_name** e **@password** . Se l'agente utilizza l'autenticazione di SQL Server per la connessione al server di pubblicazione, è inoltre necessario specificare il valore **0** per **@publisher_security_mode** e le informazioni sull'account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per **@publisher_login** e **@publisher_password**. Verrà creato un processo dell'agente snapshot per la pubblicazione.  
   
 4.  Aggiungere articoli alla pubblicazione. Per altre informazioni, vedere [definire un articolo](define-an-article.md).  
   
@@ -77,7 +76,7 @@ ms.locfileid: "68199418"
   
     -   Per sapere se un processo dell'agente di lettura log esiste già per un database pubblicato, eseguire [sp_helplogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql) nel database di pubblicazione nel server di pubblicazione. Se il set di risultati è vuoto, sarà necessario creare un processo dell'agente di lettura log.  
   
-    -   Nel server di pubblicazione eseguire [sp_addlogreader_agent &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Specificare le credenziali di Windows utilizzate per l'esecuzione dell' **@job_name** agente **@password**per e. Se l'agente utilizza l'autenticazione di SQL Server per la connessione al server di pubblicazione, è inoltre necessario specificare il valore **0** per **@publisher_security_mode** e le informazioni sull'account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per **@publisher_login** e **@publisher_password**.  
+    -   Nel server di pubblicazione eseguire [sp_addlogreader_agent &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Specificare le credenziali di Windows utilizzate per l'esecuzione dell'agente per **@job_name** e **@password** . Se l'agente utilizza l'autenticazione di SQL Server per la connessione al server di pubblicazione, è inoltre necessario specificare il valore **0** per **@publisher_security_mode** e le informazioni sull'account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per **@publisher_login** e **@publisher_password**.  
   
 2.  Se necessario, creare un processo dell'agente di lettura coda per il server di distribuzione.  
   
@@ -85,11 +84,11 @@ ms.locfileid: "68199418"
   
     -   Per sapere se un processo dell'agente di lettura coda esiste già per un database di distribuzione, eseguire [sp_helpqreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpqreader-agent-transact-sql) nel database di distribuzione nel server di distribuzione. Se il set di risultati è vuoto, sarà necessario creare un processo dell'agente di lettura coda.  
   
-    -   Nel database di distribuzione eseguire [sp_addqreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql). Specificare le credenziali di Windows utilizzate per l'esecuzione dell' **@job_name** agente **@password**per e. Queste credenziali vengono utilizzate quando l'agente di lettura coda si connette al server di pubblicazione e al Sottoscrittore. Per ulteriori informazioni, vedere [Replication Agent Security Model](../security/replication-agent-security-model.md).  
+    -   Nel database di distribuzione eseguire [sp_addqreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql). Specificare le credenziali di Windows utilizzate per l'esecuzione dell'agente per **@job_name** e **@password** . Queste credenziali vengono utilizzate quando l'agente di lettura coda si connette al server di pubblicazione e al Sottoscrittore. Per ulteriori informazioni, vedere [Replication Agent Security Model](../security/replication-agent-security-model.md).  
   
 3.  Eseguire [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql), specificando il valore **true** per il parametro **@allow_queued_tran** e il valore **pub wins**, **sub reinit** o **sub wins** per **@conflict_policy**.  
   
-4.  Nel server di pubblicazione eseguire [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Specificare il nome della pubblicazione usato nel passaggio 3 **@publication** per e le credenziali di Windows con cui viene eseguito **@snapshot_job_name** il **@password**agente di snapshot per e. Se l'agente utilizza l'autenticazione di SQL Server per la connessione al server di pubblicazione, è inoltre necessario specificare il valore **0** per **@publisher_security_mode** e le informazioni sull'account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per **@publisher_login** e **@publisher_password**. Verrà creato un processo dell'agente snapshot per la pubblicazione.  
+4.  Nel server di pubblicazione eseguire [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Specificare il nome della pubblicazione usato nel passaggio 3 per **@publication** e le credenziali di Windows con cui viene eseguito il agente di snapshot per **@snapshot_job_name** e **@password** . Se l'agente utilizza l'autenticazione di SQL Server per la connessione al server di pubblicazione, è inoltre necessario specificare il valore **0** per **@publisher_security_mode** e le informazioni sull'account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per **@publisher_login** e **@publisher_password**. Verrà creato un processo dell'agente snapshot per la pubblicazione.  
   
 5.  Aggiungere articoli alla pubblicazione. Per altre informazioni, vedere [definire un articolo](define-an-article.md).  
   
@@ -104,7 +103,7 @@ ms.locfileid: "68199418"
   
  [!code-sql[HowTo#sp_createtranupdatingpub](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpubupdate.sql#sp_createtranupdatingpub)]  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Imposta le opzioni di risoluzione dei conflitti per l'aggiornamento in coda &#40;SQL Server Management Studio&#41;](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Tipi di pubblicazioni per la replica transazionale](../transactional/transactional-replication.md)   
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   

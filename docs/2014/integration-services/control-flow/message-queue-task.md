@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e7857294534f1c3c434f43c302cee8864925d953
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc6d8745d10ffac0d708da9a14ee838449f78fae
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831478"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918528"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   L'attività Message Queue consente di usare Microsoft Message Queuing (noto anche come MSMQ) per scambiare messaggi tra pacchetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] o per inviare messaggi a una coda di applicazione elaborata da un'applicazione personalizzata. I messaggi possono essere in forma di testo semplice, di file o di variabili con i rispettivi valori.  
@@ -101,7 +100,7 @@ ms.locfileid: "62831478"
 ## <a name="related-tasks"></a>Attività correlate  
  Per altre informazioni su come impostare queste proprietà nella finestra di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vedere [Impostazione delle proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Attività Integration Services](integration-services-tasks.md)   
  [Flusso di controllo](control-flow.md)  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b402fd9e-0bea-4c38-a371-6ed7fea12e96
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b4518884b3fe17ea3a638ed21210775af7c4921c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 668fc8f9478c66ea7564d99c455ac43dc905de4b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62640333"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023426"
 ---
 # <a name="move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility"></a>Spostare un punto di controllo dell'utilità da un'istanza di SQL Server a un'altra (Utilità SQL Server)
   In questo argomento viene illustrato come spostare un punto di controllo dell'utilità da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un'altra in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -30,7 +29,7 @@ ms.locfileid: "62640333"
   
 3.  Rimuovere tutte le istanze gestite dal vecchio punto di controllo dell'utilità. Per altre informazioni, vedere [Rimuovere un'istanza di SQL Server da Utilità SQL Server](remove-an-instance-of-sql-server-from-the-sql-server-utility.md).  
   
-4.  Eseguire il backup del data warehouse di gestione dell'utilità dal vecchio punto di controllo dell'utilità. Il nome del file è Sysutility_mdw_\<GUID>_DATA e il percorso predefinito del database è \<Unità di sistema>:\Programmi\Microsoft SQL Server\MSSQL10_50.<Nome_punto di controllo dell'utilità>\MSSQL\Data\\, dove \<Unità di sistema> è in genere l'unità C:\. Per altre informazioni, vedere [Copiare database tramite backup e ripristino](../databases/copy-databases-with-backup-and-restore.md).  
+4.  Eseguire il backup del data warehouse di gestione dell'utilità dal vecchio punto di controllo dell'utilità. Il nome del file è Sysutility_mdw_ \<GUID> _DATA e il percorso predefinito del database è \<System drive> : \Programmi\Microsoft SQL Server \ MSSQL10_50. <UCP_Name> \MSSQL\Data \\ , dove \<System drive> è in genere il C:\ unità. Per altre informazioni, vedere [Copiare database tramite backup e ripristino](../databases/copy-databases-with-backup-and-restore.md).  
   
 5.  Ripristinare il backup del data warehouse di gestione dell'utilità nel nuovo punto di controllo dell'utilità. Per altre informazioni, vedere [Copiare database tramite backup e ripristino](../databases/copy-databases-with-backup-and-restore.md).  
   

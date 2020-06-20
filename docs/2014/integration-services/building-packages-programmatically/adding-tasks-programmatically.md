@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: da9a2e5bf8338b8188f00f3c340d50ef32f1204f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db7f6d541462348d464f69f6abf122aaa2acca7d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771837"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925092"
 ---
 # <a name="adding-tasks-programmatically"></a>Aggiunta di attività a livello di programmazione
   È possibile aggiungere attività ai tipi di oggetti seguenti nel motore di runtime:  
@@ -414,7 +413,7 @@ End Module
   
 ![Integration Services icona (piccola)](../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina relativa a Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Connessione di attività a livello di programmazione](../building-packages-programmatically/connecting-tasks-programmatically.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7f60ff18-9ad6-4169-af62-edcb04525b0e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a482a4d615c12023cceb6995eb9f261b6dd86a98
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 24bd24e4247fb739441f041c38907580ba157629
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060666"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921752"
 ---
 # <a name="configure-data-viewer-general-tab"></a>Configura visualizzatore dati (scheda Generale)
   In un visualizzatore dati vengono visualizzati i dati mentre vengono spostati nel percorso tra due componenti del flusso di dati durante l'esecuzione di un pacchetto.  
@@ -30,13 +29,13 @@ ms.locfileid: "66060666"
  **Nome**  
  Consente di digitare un nome univoco per il visualizzatore dati.  
   
- **Type**  
+ **Tipo**  
  Elenca i tipi di visualizzatori dati. Fare clic su un tipo per visualizzare un grafico di esempio.  
   
  **Descrizione**  
  Visualizza un grafico di esempio seguito da una descrizione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurare Visualizzatore dati &#40;scheda Istogramma&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
  [Configurare la scheda griglia &#40;visualizzatore dati&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   
  [Configurare il Visualizzatore dati &#40;scheda Istogramma&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   

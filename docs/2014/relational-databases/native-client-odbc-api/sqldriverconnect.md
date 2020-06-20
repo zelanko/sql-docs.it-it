@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a1e38e2c-3a97-42d1-9c45-a0ca3282ffd1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5f5ef42a9d04a4d1ae72382f44fdf01b62fc6b14
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 40691dfb381883b59155607fb56f4933820e3e44
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706272"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022636"
 ---
 # <a name="sqldriverconnect"></a>SQLDriverConnect
   Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client definisce attributi di connessione che sostituiscono o migliorano le parole chiave della stringa di connessione. Per diverse parole chiave della stringa di connessione sono disponibili valori predefiniti specificati dal driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -58,7 +57,7 @@ ms.locfileid: "82706272"
   
  Per ulteriori informazioni sui nomi SPN, vedere [nomi dell'entità servizio &#40;spn&#41; nelle connessioni Client &#40;ODBC&#41;](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nella chiamata seguente viene illustrata la quantità minima di dati necessaria per `SQLDriverConnect` :  
   
 ```  

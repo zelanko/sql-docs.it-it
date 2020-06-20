@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a7b3c15af012675bfccecad7e8f74f99882fed11
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1de9cd9b8692a92d902e96caefa986335fa0d1db
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480830"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937752"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>Knowledge Base e domini DQS
   In questo argomento viene descritto che cos'è una Knowledge Base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Per pulire i dati, è necessario avere informazioni su di essi. Per preparare le informazioni per un progetto Data Quality, è necessario compilare e mantenere una Knowledge Base (KB) che è possibile utilizzare in DQS per identificare dati errati o non validi. DQS consente di utilizzare sia processi assistiti da computer che interattivi per creare, compilare e aggiornare la Knowledge Base. Le informazioni in una Knowledge Base sono mantenute in domini, ognuno dei quali è specifico per un campo dati. La Knowledge Base è un repository di informazioni sui dati che consente di comprenderli e mantenerne l'integrità.  

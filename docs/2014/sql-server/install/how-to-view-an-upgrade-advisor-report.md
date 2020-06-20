@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d13b38af-0ac3-4030-83cd-e7d7825dd09f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c0ae231e380530f11d4c97a917927ed62e99fb47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0cbe8746faeba10fa023aa51e7d91a6fb074776e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094799"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042436"
 ---
 # <a name="how-to-view-an-upgrade-advisor-report"></a>Procedura: Visualizzazione di un report di Preparazione aggiornamento
   Preparazione aggiornamento crea report per ogni componente selezionato da analizzare. In questo argomento viene descritto come visualizzare un report di Preparazione aggiornamento dalla pagina iniziale di Preparazione aggiornamento.  
@@ -31,7 +30,7 @@ ms.locfileid: "66094799"
   
 ### <a name="to-view-a-report"></a>Per visualizzare un report  
   
-1.  Fare clic su **Start**, scegliere **tutti i programmi**, fare **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** clic su, quindi su ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] preparazione aggiornamento**.  
+1.  Fare clic su **Start**, scegliere **tutti i programmi**, fare clic su **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** , quindi su ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Preparazione aggiornamento**.  
   
 2.  Nella pagina iniziale di preparazione aggiornamento fare clic su **Avvia Visualizzatore report di preparazione aggiornamento**.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66094799"
   
     -   **Importanza**, che indica l'importanza della risoluzione del problema.  
   
-    -   **Quando correggere**, che indica se è necessario (o) correggere il problema prima o dopo l'aggiornamento a, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]prima o dopo la migrazione dell'applicazione o dei dati o in qualsiasi momento.  
+    -   **Quando correggere**, che indica se è necessario (o) correggere il problema prima o dopo l'aggiornamento a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , prima o dopo la migrazione dell'applicazione o dei dati o in qualsiasi momento.  
   
     -   Breve descrizione del problema.  
   
@@ -72,7 +71,7 @@ ms.locfileid: "66094799"
 > [!NOTE]  
 >  Il report può contenere un elemento relativo a problemi non rilevabili, ovvero problemi che non è possibile rilevare o che genererebbero un numero eccessivo di risultati falsi positivi. Fare clic sul collegamento **ulteriori informazioni su questo problema e su come risolverlo** per visualizzare un elenco di problemi non rilevabili per il componente.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Procedura: esportazione di report](../../../2014/sql-server/install/how-to-export-reports.md)   
  [Procedura: esecuzione dell'analisi guidata di preparazione aggiornamento](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Risoluzione dei problemi di aggiornamento](../../../2014/sql-server/install/resolving-upgrade-issues.md)   

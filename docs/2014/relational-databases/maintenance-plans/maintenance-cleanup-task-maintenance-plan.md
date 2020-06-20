@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 175998d210bec502199922831adc3508cc9171a6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96b3628576e430c2a9d7b5ab7211b3b42229af6b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035735"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024422"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>Attività Pulizia file manutenzione (Piano di manutenzione)
   Usare l' **Attività Pulizia file di manutenzione** per rimuovere file obsoleti correlati ai piani di manutenzione, inclusi i report in formato testo creati dai piani di manutenzione e i file di backup del database.  
@@ -95,7 +94,7 @@ ms.locfileid: "63035735"
  **Password**  
  Consente di specificare una password da utilizzare per l'autenticazione. Questa opzione non è disponibile.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Piani di manutenzione](maintenance-plans.md)  
   
   

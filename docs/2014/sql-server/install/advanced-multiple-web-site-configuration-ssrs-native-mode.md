@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: af4ede43-2225-45b5-ae7e-9202411551ba
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b331015abd90fbff4c3810118666dbc9b356369b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c04b5cc4dd75d2f9f8305b7af00e389317a92537
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952673"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045779"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>Configurazione avanzata più siti Web (modalità nativa SSRS)
   Questa finestra di dialogo consente di creare e gestire gli URL utilizzati per accedere a un server di report o a Gestione report. La finestra di dialogo **Configurazione avanzata più siti Web** viene utilizzata per creare URL aggiuntivi, URL personalizzati che includono un nome di intestazione host o per specificare un indirizzo IP in formato IPv4 o IPv6.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità nativa.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modalità nativa.  
   
  La creazione di più URL è utile se si desidera configurare modalità di accesso diverse a un server di report. L'accesso al server di report tramite connessioni Intranet ed Extranet, ad esempio, richiede in genere che siano presenti più URL per ogni tipo di connessione.  
   
@@ -40,12 +39,12 @@ ms.locfileid: "71952673"
   
 -   **127.0.0.1** : utilizzato per accedere a localhost. Tale indirizzo supporta l'amministrazione locale nel computer server di report. Se si seleziona solo questo valore, potranno accedere all'applicazione solo gli utenti connessi localmente al computer server di report.  
   
--   *Nnn.nnn.nnn.nnn* : indirizzo IPv4 di una scheda di rete nel computer. Se la rete utilizza l'indirizzamento IPv6, l'indirizzo IP sarà un valore a 128 bit di campi da 8 4 byte simile al formato seguente: \<header>:*nnnn: nnnn: nnnn: nnnn*.  
+-   *Nnn.nnn.nnn.nnn* : indirizzo IPv4 di una scheda di rete nel computer. Se la rete utilizza l'indirizzamento IPv6, l'indirizzo IP sarà un valore a 128 bit di campi da 8 4 byte simile al formato seguente: \<header> :*nnnn: nnnn: nnnn: nnnn*.  
   
      Se si dispone di più schede, verrà visualizzato un indirizzo IP per ognuna. Se si seleziona solo questo valore, l'accesso all'applicazione sarà limitato all'indirizzo IP specificato e a qualsiasi nome host di cui il DNS esegue il mapping all'indirizzo. Non è possibile utilizzare localhost per accedere a un server di report, né utilizzare gli indirizzi IP di altre schede di rete installate nel computer server di report.  
   
  **Porta**  
- Consente di specificare la porta monitorata dal server di report per le richieste. Il numero di porta predefinito è 80. Se si utilizza la porta 80, non è necessario includerla nell'URL. Se si utilizza qualsiasi altro numero di porta, è sempre necessario includerlo nell'URL, ad esempio http://localhost:8181/reports).  
+ Consente di specificare la porta monitorata dal server di report per le richieste. Il numero di porta predefinito è 80. Se si utilizza la porta 80, non è necessario includerla nell'URL. Se si utilizza qualsiasi altro numero di porta, è sempre necessario includerlo nell'URL, ad esempio http://localhost:8181/reports) .  
   
  **Intestazione host**  
  Se è già stata definita un'intestazione host in un DNS risolto nel computer, è possibile specificare tale intestazione host in un URL configurato per l'accesso al server di report.  

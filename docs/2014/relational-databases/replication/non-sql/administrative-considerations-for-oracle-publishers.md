@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cfd81fb5-419b-4a1b-97c4-be7c9d4ee289
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 42791ed9e60ad633ee1331dfc8326d58c0546000
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c3d242351927276120b8d8f67c94eab9d60db7fe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022558"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060624"
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Considerazioni amministrative per i server di pubblicazione Oracle
   Dopo la configurazione di un server di pubblicazione Oracle e l'implementazione dei meccanismi di rilevamento delle modifiche della replica, gli amministratori del sistema di database Oracle possono utilizzare utilità di database Oracle standard ed eseguire attività tipiche di amministrazione dei sistemi. È tuttavia opportuno considerare gli effetti sui dati pubblicati di determinate attività amministrative.  
@@ -62,7 +61,7 @@ ms.locfileid: "63022558"
   
  Per informazioni sull'eliminazione e sulla riconfigurazione del server di pubblicazione, vedere la sezione relativa alle modifiche che richiedono la riconfigurazione del server di pubblicazione nell'argomento [Troubleshooting Oracle Publishers](troubleshooting-oracle-publishers.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurare un server di pubblicazione Oracle](configure-an-oracle-publisher.md)   
  [Considerazioni e limitazioni relative alla progettazione per i Publisher Oracle](design-considerations-and-limitations-for-oracle-publishers.md)   
  [Panoramica della pubblicazione Oracle](oracle-publishing-overview.md)  

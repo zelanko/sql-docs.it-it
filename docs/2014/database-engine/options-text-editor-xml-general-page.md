@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 46a9f913-d0b9-40ff-b382-9bbdec7461a6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b32dcfc95c5fc6929454add71ff4452e00fdda6e
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: f79745bdb8699d288797f41d69b53fd1b6998589
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001044"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929645"
 ---
 # <a name="options-text-editor---xml---general-page"></a>Opzioni (Editor di testo - XML - pagina Generale)
   Utilizzare questa finestra di dialogo per cambiare il comportamento di modifica generale dell'editor XML utilizzato per modificare i documenti XML. Per visualizzare le impostazioni scegliere **Opzioni** dal menu **Strumenti** , espandere la sottocartella **XML** e quindi fare clic su **Generale**.  

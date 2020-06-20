@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c9a2244c5e6cddbc53ccd3aaec7faaaa3836a923
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bbe47dbba2def9a40caf506fe9d0b5cb914d1052
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831746"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918901"
 ---
 # <a name="file-system-task"></a>Attività File system
   L'attività File system consente di eseguire operazioni su file e directory nel file system. Tramite l'attività File system un pacchetto può ad esempio creare, spostare o eliminare file e directory. È inoltre possibile utilizzare l'attività File system per impostare attributi su file e directory, ad esempio per impostare file come nascosti o in sola lettura.  
@@ -77,7 +76,7 @@ ms.locfileid: "62831746"
 ## <a name="related-tasks"></a>Attività correlate  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include un'attività che consente di eseguire il download e il caricamento di file di dati, nonché di gestire directory sui server. Per altre informazioni, vedere [Attività FTP](ftp-task.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Attività Integration Services](integration-services-tasks.md)   
  [Flusso di controllo](control-flow.md)  
   

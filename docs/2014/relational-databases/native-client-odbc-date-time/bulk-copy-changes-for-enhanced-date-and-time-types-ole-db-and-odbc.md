@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0cf98fadc2f194390f87bca14afcac545ac51df1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 73b901a60a6dd634857b72a67f7f2a2490483cff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705536"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020435"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>Modifiche della copia bulk per i tipi di data e ora migliorati (OLE DB e ODBC)
   In questo argomento vengono descritti i miglioramenti apportati ai tipi di data/ora per supportare la funzionalità di copia bulk. Le informazioni incluse in questo argomento sono valide sia per OLE DB sia per ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -26,7 +25,7 @@ ms.locfileid: "82705536"
 ## <a name="format-files"></a>File di formato  
  Nella tabella seguente viene descritto l'input utilizzato per specificare i tipi di data/ora e i nomi dei tipi di dati del file host corrispondenti quando si compilano file di formato in modo interattivo.  
   
-|tipo di archiviazione di file|Tipo di dati del file host|Risposta alla richiesta: "Specificare il tipo di archiviazione di file del campo <nome_campo> [\<impostazione predefinita>]:"|  
+|tipo di archiviazione di file|Tipo di dati del file host|Risposta al messaggio di richiesta: "immettere il tipo di archiviazione di file del campo <field_name> [ \<default> ]:"|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
 |Datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
@@ -71,7 +70,7 @@ ms.locfileid: "82705536"
 |-----------------------|---------------------------|  
 |Datetime|8|  
 |smalldatetime|4|  
-|data|3|  
+|Data|3|  
 |time|6|  
 |datetime2|9|  
 |datetimeoffset|11|  
@@ -90,7 +89,7 @@ ms.locfileid: "82705536"
 ## <a name="bcp-types-in-sqlnclih"></a>Tipi BCP in sqlncli.h  
  Di seguito vengono indicati i tipi definiti in sqlncli.h per l'utilizzo con le estensioni API BCP in ODBC. Questi tipi vengono passati con il parametro *eUserDataType* di IBCPSession::BCPColFmt in OLE DB.  
   
-|tipo di archiviazione di file|Tipo di dati del file host|Digitare sqlncli. h per l'utilizzo con IBCPSession:: BCPColFmt|Valore|  
+|tipo di archiviazione di file|Tipo di dati del file host|Digitare sqlncli. h per l'utilizzo con IBCPSession:: BCPColFmt|valore|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  

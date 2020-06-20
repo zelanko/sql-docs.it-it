@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 85eb934b93d22acc2534d1eb34aa967cbb4f2714
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d6c372a9b1f9af9e5948732e3bfb9384362f545
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774253"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930941"
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>Visualizzare il report di log shipping (SQL Server Management Studio)
   In questo argomento viene descritta la procedura per visualizzare il report Stato log shipping delle transazioni in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È possibile eseguire un report sullo stato in un server di monitoraggio, in un server primario o in un server secondario. Per visualizzare le informazioni più complete sulla configurazione per il log shipping, eseguire il report nell'istanza del server di monitoraggio.  
@@ -32,8 +31,8 @@ ms.locfileid: "62774253"
 |Ruolo|Informazioni visualizzate|  
 |----------|---------------------------|  
 |Monitorare|Nome e stato di ogni server primario e secondario in cui questa istanza del server è utilizzata come server di monitoraggio.|  
-|Primaria|Per ogni database primario, stato e nome dell'istanza del server corrente, come server primario, e nome del database primario. Nel report viene visualizzato lo stato del processo di backup, archiviato localmente nel server primario.<br /><br /> È inoltre presente una riga per ogni server secondario corrispondente. Se nella configurazione è in uso un server di monitoraggio a cui la stored procedure può effettuare la connessione, nelle righe vengono visualizzati lo stato di copia e ripristino del backup del log più recente.|  
-|Secondari|Per ogni database secondario, stato e nome dell'istanza del server corrente, come server secondario, e nome del database secondario.<br /><br /> Nel report viene indicato lo stato dei processi di copia e ripristino nel server secondario.<br /><br /> È inoltre presente una riga per il server primario corrispondente. Se nella configurazione è in uso un server di monitoraggio a cui la stored procedure può effettuare la connessione, nelle righe viene visualizzato lo stato del backup del log più recente.|  
+|Principale|Per ogni database primario, stato e nome dell'istanza del server corrente, come server primario, e nome del database primario. Nel report viene visualizzato lo stato del processo di backup, archiviato localmente nel server primario.<br /><br /> È inoltre presente una riga per ogni server secondario corrispondente. Se nella configurazione è in uso un server di monitoraggio a cui la stored procedure può effettuare la connessione, nelle righe vengono visualizzati lo stato di copia e ripristino del backup del log più recente.|  
+|Secondario|Per ogni database secondario, stato e nome dell'istanza del server corrente, come server secondario, e nome del database secondario.<br /><br /> Nel report viene indicato lo stato dei processi di copia e ripristino nel server secondario.<br /><br /> È inoltre presente una riga per il server primario corrispondente. Se nella configurazione è in uso un server di monitoraggio a cui la stored procedure può effettuare la connessione, nelle righe viene visualizzato lo stato del backup del log più recente.|  
   
  Le informazioni visualizzate dipendono dal fatto che l'istanza del server sia un server di monitoraggio, primario o secondario. Se non sono disponibili informazioni, le celle corrispondenti sono disattivate.  
   
@@ -47,7 +46,7 @@ ms.locfileid: "62774253"
   
 3.  Fare clic su **Stato log shipping delle transazioni**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Monitorare il log shipping &#40;Transact-SQL&#41;](monitor-log-shipping-transact-sql.md)  
   
   

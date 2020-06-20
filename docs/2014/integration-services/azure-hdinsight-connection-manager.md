@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 850a978d-5dba-45b6-a10e-306aafbc353d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dfeade50b36e39f9a4bfa354f71a6bca53e03c16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f4a54b2b7c7f809c570eacd0541d798b3f583a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061373"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925250"
 ---
 # <a name="azure-hdinsight-connection-manager"></a>Gestione connessione Azure HDInsight
 La **gestione connessione Azure HDInsight** consente a un pacchetto SSIS di connettersi a un cluster HDInsight di Azure.

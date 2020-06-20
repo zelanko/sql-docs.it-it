@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 22902fd0-eb39-4f18-af94-3fcb69d2a3a4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 51a3deffc9db182f7b3ad8f50d27c24e0f74dc6d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 486ef2da96785ed200900f497435117ef6437cb5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807116"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023872"
 ---
 # <a name="update-statistics-task-maintenance-plan"></a>Attività Aggiorna statistiche (Piano di manutenzione)
   Usare la finestra di dialogo **Attività Aggiorna statistiche** per aggiornare le informazioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sui dati contenuti nelle tabelle e negli indici. Questa attività consente di eseguire un nuovo campionamento delle statistiche di distribuzione di tutti gli indice creati per le tabelle utente del database. Le statistiche di distribuzione vengono utilizzate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per ottimizzare le operazioni di navigazione tra le tabelle durante l'elaborazione delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] . Per compilare automaticamente le statistiche di distribuzione, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue, per ogni indice, un campionamento periodico dei dati della tabella corrispondente La dimensione del campione è basata sul numero di righe della tabella e sulla frequenza di modifica dei dati. Questa opzione consente di eseguire un ulteriore campionamento utilizzando una determinata percentuale di dati delle tabelle. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa queste informazioni per creare piani di query più efficienti.  

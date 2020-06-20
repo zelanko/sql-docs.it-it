@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6fca44d9-5001-4644-bcf3-c2d10a674b97
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2f907127ff9863b696843a7d17e8df9950cd99c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b51049f0a55a10ae83af9e0f253c1c717f6d4962
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056831"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964861"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>Riferimento all'interfaccia utente dell'Installazione guidata pacchetti
   Usare l' **Installazione guidata pacchetti** per distribuire un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , inclusi i pacchetti, i file contenuti ed eventuali dipendenze dei pacchetti.  
@@ -61,7 +60,7 @@ ms.locfileid: "66056831"
  **Percorso**  
  Indica il percorso della proprietà da configurare.  
   
- **Type**  
+ **Tipo**  
  Indica il tipo di dati della proprietà.  
   
  **Valore**  
@@ -79,7 +78,7 @@ ms.locfileid: "66056831"
  **Avanti**  
  Consente di installare i pacchetti e le relative dipendenze, quindi di passare alla pagina successiva della procedura al termine dell'installazione.  
   
- **Stato**  
+ **Status**  
  Mostra lo stato dell'installazione del pacchetto.  
   
  **Fine**  
@@ -168,7 +167,7 @@ ms.locfileid: "66056831"
  **Fine**  
  Fare clic su **Fine**per uscire dalla procedura guidata.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Distribuzione di pacchetti &#40;&#41;SSIS](packages/legacy-package-deployment-ssis.md)  
   
   

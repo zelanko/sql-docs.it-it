@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 71614aaf-0fa4-4fe0-b522-68e2e0b66f43
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2d206de44f9408e932d91a0097c1228b112b05ba
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 16bb9e98691aea829eb71a16ddabddb371d7bcf3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705038"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043752"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>Miglioramenti relativi a data e ora (OLE DB)
   In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sono stati introdotti nuovi tipi di dati di data e ora. In questa sezione viene descritto il modo in cui questi nuovi tipi vengono esposti come estensioni in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Per una panoramica del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporto di Native Client per i nuovi tipi di dati di data e ora, vedere [miglioramenti di data e ora](../native-client/features/date-and-time-improvements.md). Per un esempio, vedere [Usare le funzionalità avanzate di data e ora &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md).  

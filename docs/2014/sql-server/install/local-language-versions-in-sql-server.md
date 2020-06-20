@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 20b99363-0490-4aa3-9a3d-262f827d81e8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2565e4cc8aa9bddb83af5e8e9077987ebd27663f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c857b6e77e6fbf4ea7eb4d5e11b72d76708ad86a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63195068"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045127"
 ---
 # <a name="local-language-versions-in-sql-server"></a>Versioni in lingua locale di SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta tutte le lingue supportate dai sistemi operativi di Windows.  

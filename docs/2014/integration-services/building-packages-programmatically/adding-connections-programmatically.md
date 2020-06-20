@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b1258797d76df49a2622335ee798120632706c78
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4db1a3f76c6ebbef22d0bbe01e19dd6aca56e3c7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62772224"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925238"
 ---
 # <a name="adding-connections-programmatically"></a>Aggiunta di connessioni a livello di programmazione
   La classe <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> rappresenta le connessioni fisiche alle origini dati esterne. La classe <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> isola i dettagli di implementazione della connessione dal runtime. In questo modo il runtime è in grado di interagire con ogni gestione connessione in modo coerente e stimabile. Le gestioni connessione contengono un set di proprietà predefinite comuni a tutte le connessioni, ad esempio <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>. Le proprietà <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>, tuttavia, sono in genere le uniche necessarie per configurare una gestione connessione. A differenza di altri paradigmi di programmazione, in cui le classi di connessione espongono metodi quali `Open` o `Connect` per stabilire fisicamente una connessione all'origine dati, il motore di run-time gestisce tutte le connessioni per il pacchetto mentre è in esecuzione.  
@@ -211,7 +210,7 @@ End Class
   
 ![Integration Services icona (piccola)](../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina relativa a Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services &#40;connessioni SSIS&#41;](../connection-manager/integration-services-ssis-connections.md)   
  [Creazione di gestioni connessioni](../create-connection-managers.md)  
   

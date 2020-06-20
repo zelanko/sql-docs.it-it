@@ -16,34 +16,33 @@ helpviewer_keywords:
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e9352910554e5f946f21eae3b51a7d87ff1106bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 416ae500d940eb31eee3294edd07c289b124b6c4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479749"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971651"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Account di accesso, utenti e ruoli di database (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] sono inclusi account di accesso, utenti e ruoli installati automaticamente nell'istanza del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] in cui è ospitato il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Questi account di accesso, utenti e ruoli non devono essere modificati.  
   
 ## <a name="logins"></a>Logins  
   
-|Login|Descrizione|  
+|Accedi|Description|  
 |-----------|-----------------|  
 |`mds_dlp_login`|Consente la creazione di assembly UNSAFE.<br /><br /> - Account di accesso disabilitato con password generata casualmente.<br /><br /> - Esegue il mapping a dbo per il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .<br /><br /> - Per msdb, mds_clr_user esegue il mapping a questo account di accesso.<br /><br /> <br /><br /> Per altre informazioni, vedere [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).|  
 |`mds_email_login`|Account di accesso abilitato utilizzato per le notifiche.<br /><br /> Per msdb e il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , mds_email_user esegue il mapping a questo account di accesso.|  
   
 ## <a name="msdb-users"></a>Utenti di msdb  
   
-|Utente|Descrizione|  
+|Utente|Description|  
 |----------|-----------------|  
 |`mds_clr_user`|Non usato.<br /><br /> Esegue il mapping a mds_dlp_login.|  
 |`mds_email_user`|Utilizzato per le notifiche.<br /><br /> Esegue il mapping a mds_email_login.<br /><br /> È un membro del ruolo DatabaseMailUserRole.|  
   
 ## <a name="master-data-services-database-users"></a>Utenti del database Master Data Services  
   
-|Utente|Descrizione|  
+|Utente|Description|  
 |----------|-----------------|  
 |`mds_email_user`|Utilizzato per le notifiche.<br /><br /> Dispone dell'autorizzazione SELECT per lo schema mdm.<br /><br /> Dispone dell'autorizzazione EXECUTE per il tipo di tabella mdm.MemberGetCriteria definito dall'utente.<br /><br /> Dispone dell'autorizzazione EXECUTE per la stored procedure mdm.udpNotificationQueueActivate.|  
 |**mds_schema_user**|È proprietario degli schemi mdm e mdq. Lo schema predefinito è mdm.<br /><br /> Non disporre di un account di accesso di cui è stato eseguito il mapping.|  
@@ -63,7 +62,7 @@ ms.locfileid: "65479749"
 |`mdq`|Sono contenute le funzioni del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] relative al filtro dei risultati dei membri in base a espressioni regolari o somiglianza e per la formattazione di messaggi di posta elettronica di notifica.|  
 |**stg**|Contiene tabelle di database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , stored procedure e viste correlate al processo di gestione temporanea. Non eliminare alcun oggetto. Per ulteriori informazioni sul processo di gestione temporanea, vedere [&#40;di importazione dati Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Sicurezza di oggetti di database &#40;Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)  
   
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 35f07d23facba97288881d7ee3c011c368d4736a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8f99e6a65a699bae09df61f1de8a1a7c1ee88c52
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289269"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922323"
 ---
 # <a name="the-oracle-cdc-databases"></a>Database Oracle CDC
   Un'istanza di Oracle CDC è associata a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dallo stesso nome nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di destinazione. Questo database è denominato database Oracle CDC o CDC.  
@@ -45,7 +44,7 @@ ms.locfileid: "79289269"
  Quando viene creato un database CDC e vengono impostate le tabelle Oracle dell'origine CDC, il proprietario del database CDC può concedere l'autorizzazione SELECT delle tabelle mirror e definire ruoli di controllo di SQL Server CDC per controllare chi accede ai dati delle modifiche.  
   
 ## <a name="mirror-tables"></a>Tabelle mirror  
- Per ogni tabella acquisita, \<nome-schema>\<.nome-tabella>, nel database di origine Oracle, viene creata una tabella vuota analoga nel database CDC, con lo stesso nome di schema e di tabella. Non è possibile acquisire tabelle di origine Oracle con il nome di schema `cdc` (senza distinzione tra maiuscole e minuscole) perché lo schema `cdc` in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è riservato a SQL Server CDC.  
+ Per ogni tabella acquisita, \<schema-name> . \<table-name> , nel database di origine Oracle viene creata una tabella vuota analoga nel database CDC, con lo stesso nome di schema e di tabella. Non è possibile acquisire tabelle di origine Oracle con il nome di schema `cdc` (senza distinzione tra maiuscole e minuscole) perché lo schema `cdc` in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è riservato a SQL Server CDC.  
   
  Le tabelle mirror sono vuote; in esse non vengono archiviati dati. Vengono utilizzate per abilitare l'infrastruttura di SQL Server CDC standard utilizzata dall'istanza di Oracle CDC. Per evitare l'inserimento o l'aggiornamento di dati nelle tabelle mirror, tutte le operazioni UPDATE, DELETE e INSERT sono negate per PUBLIC. Ciò impedisce la modifica delle tabelle.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "79289269"
 ###  <a name="change-tables-_ct"></a><a name="bkmk_change_tables_ct"></a> Tabelle delle modifiche (_CT)  
  Le tabelle delle modifiche vengono create dalle tabelle mirror. Contengono i dati delle modifiche acquisiti dal database Oracle. Le tabelle sono denominate secondo la convenzione seguente:  
   
- **[cdc].[\<capture-instance>_CT]**  
+ **[CDC]. [ \<capture-instance> _CT]**  
   
  Quando l'acquisizione è abilitata inizialmente per la tabella `<schema-name>.<table-name>`, il nome dell'istanza di acquisizione predefinito è `<schema-name>_<table-name>`. Ad esempio, il nome dell'istanza di acquisizione predefinito per la tabella Oracle HR.EMPLOYEES è HR_EMPLOYEES e la tabella delle modifiche associata è [cdc]. [HR_EMPLOYEES_CT].  
   

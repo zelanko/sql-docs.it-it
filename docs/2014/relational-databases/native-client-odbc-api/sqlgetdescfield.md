@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b635716617c84185efdef0e2e23d2f3b65bbac91
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d3e1a4a09d13e6bae34e77aa12e8df994ecf3eaf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706040"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022316"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client espone solo i campi di descrizione specifici del driver per il descrittore della riga di implementazione (IRD). All'interno di IRD, ai [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] campi del descrittore viene fatto riferimento tramite attributi di colonna specifici del driver. Per informazioni su un elenco completo dei campi di descrizione specifici del driver disponibili, vedere [SQLColAttribute](sqlcolattribute.md).  

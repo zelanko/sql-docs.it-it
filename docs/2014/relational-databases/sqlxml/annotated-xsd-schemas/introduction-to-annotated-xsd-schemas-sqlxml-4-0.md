@@ -20,22 +20,21 @@ helpviewer_keywords:
 ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8b00f2a5f7d6bf9b0ac127b5df736d4a40c94219
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d3f3764a8f41d0d6ce8d59cc5aa727676d9282e9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702933"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043045"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>Introduzione agli schemi XSD con annotazioni (SQLXML 4.0)
   È possibile creare viste XML di dati relazionali mediante il linguaggio di definizione di XML Schema (XSD). In tali viste è possibile eseguire query utilizzando le query XPath (XML Path language). La procedura è simile a quella utilizzata per creare viste mediante le istruzioni CREATE VIEW e quindi specificare query SQL in tali viste.  
   
  Un elemento XML Schema descrive la struttura di un documento XML e i vari vincoli presenti sui dati del documento. Quando si specificano query XPath nello schema, la struttura del documento XML restituita è determinata dallo schema nel quale viene eseguita la query XPath.  
   
- In uno schema XSD l'elemento ** \< xsd: schema>** racchiude l'intero schema. tutte le dichiarazioni di elemento devono essere contenute all'interno dell'elemento ** \< xsd: schema>** . È possibile descrivere gli attributi che definiscono lo spazio dei nomi in cui si trova lo schema e gli spazi dei nomi utilizzati nello schema come proprietà dell'elemento ** \< xsd: schema>** .  
+ In uno schema XSD l' **\<xsd:schema>** elemento racchiude l'intero schema. tutte le dichiarazioni di elemento devono essere contenute all'interno dell' **\<xsd:schema>** elemento. È possibile descrivere gli attributi che definiscono lo spazio dei nomi in cui si trova lo schema e gli spazi dei nomi utilizzati nello schema come proprietà dell' **\<xsd:schema>** elemento.  
   
- Uno schema XSD valido deve contenere l'elemento ** \< xsd: schema>** definito come segue:  
+ Uno schema XSD valido deve contenere l' **\<xsd:schema>** elemento definito come segue:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -44,7 +43,7 @@ ms.locfileid: "82702933"
 </xsd:schema>  
 ```  
   
- L'elemento ** \< xsd: schema>** deriva dalla specifica dello spazio dei nomi XML Schema in http://www.w3.org/2001/XMLSchema .  
+ L' **\<xsd:schema>** elemento è derivato dalla specifica dello spazio dei nomi XML Schema in http://www.w3.org/2001/XMLSchema .  
   
 ## <a name="annotations-to-the-xsd-schema"></a>Annotazioni dello schema XSD  
  È possibile utilizzare uno schema XSD con annotazioni che descrivono il mapping a un database, eseguire query nel database e restituire i risultati nel formato di un documento XML. Le annotazioni vengono fornite per eseguire il mapping di uno schema XSD a colonne e tabelle di database. È possibile specificare le query XPath nella vista XML creata dallo schema XSD per eseguire query nel database e ottenere risultati in formato XML.  
@@ -55,7 +54,7 @@ ms.locfileid: "82702933"
  Nel contesto del database relazionale risulta utile per eseguire il mapping dello schema XSD arbitrario a un archivio relazionale. Un modo per ottenere questo risultato è annotare lo schema XSD. Uno schema XSD con annotazioni viene definito *schema di mapping*, che fornisce informazioni relative alla modalità di mapping dei dati XML all'archivio relazionale. Uno schema di mapping è, di fatto, una vista XML dei dati relazionali. I mapping possono essere utilizzati per recuperare dati relazionali come documento XML.  
   
 ## <a name="namespace-for-annotations"></a>Spazio dei nomi per le annotazioni  
- In uno schema XSD le annotazioni vengono specificate tramite lo spazio dei nomi **urn: schemas-microsoft-com: mapping-schema**. Come illustrato nell'esempio seguente, il modo più semplice per specificare lo spazio dei nomi consiste nel specificarlo nel tag ** \< xsd: schema>** .  
+ In uno schema XSD le annotazioni vengono specificate tramite lo spazio dei nomi **urn: schemas-microsoft-com: mapping-schema**. Come illustrato nell'esempio seguente, il modo più semplice per specificare lo spazio dei nomi consiste nel specificarlo nel **\<xsd:schema>** tag.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -67,7 +66,7 @@ ms.locfileid: "82702933"
  Il prefisso dello spazio dei nomi utilizzato è arbitrario. In questa documentazione viene usato il prefisso **SQL** per indicare lo spazio dei nomi di annotazione e per distinguere le annotazioni in questo spazio dei nomi da quelle di altri spazi dei nomi.  
   
 ## <a name="example-of-an-annotated-xsd-schema"></a>Esempio di schema XSD con annotazioni  
- Nell'esempio seguente lo schema XSD è costituito da un elemento ** \< Person. Contact>** . L'elemento ** \< Employee>** ha un attributo **ContactID** e ** \< FirstName>** e ** \< LastName>** elementi figlio:  
+ Nell'esempio seguente lo schema XSD è costituito da un **\<Person.Contact>** elemento. L' **\<Employee>** elemento ha un attributo **ContactID** e **\<FirstName>** **\<LastName>** gli elementi figlio:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
@@ -108,7 +107,7 @@ ms.locfileid: "82702933"
 </xsd:schema>  
 ```  
   
- Nello schema di mapping, l'elemento ** \< Contact>** viene mappato alla tabella Person. Contact nel database AdventureWorks di esempio tramite l' `sql:relation` annotazione. Viene eseguito il mapping degli attributi ConID, il FName e LName alle colonne ContactID, FirstName e LastName nella tabella Person.Contact mediante le annotazioni `sql:field`.  
+ Nello schema di mapping **\<Contact>** viene eseguito il mapping dell'elemento alla tabella Person. Contact nel database AdventureWorks di esempio tramite l' `sql:relation` annotazione. Viene eseguito il mapping degli attributi ConID, il FName e LName alle colonne ContactID, FirstName e LastName nella tabella Person.Contact mediante le annotazioni `sql:field`.  
   
  Questo schema XSD con annotazioni fornisce la vista XML dei dati relazionali. In questa vista XML possono essere eseguite query mediante il linguaggio XPath. Una query XPath restituisce come risultato un documento XML anziché il set di righe restituito dalle query SQL.  
   

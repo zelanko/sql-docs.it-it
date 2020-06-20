@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cd8b57de-364d-42a3-9273-c1c6b992bb40
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5be296ceca85eb2032f2a409beefaed603c63f98
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6e33f83d4eb80e0b04869967b245cd3e8e30059
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483315"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971761"
 ---
 # <a name="create-a-text-attribute-master-data-services"></a>Creare un attributo di testo (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare un attributo di testo quando si desidera che gli utenti immettano una stringa di testo come valore di attributo.  
@@ -68,7 +67,7 @@ ms.locfileid: "65483315"
   
 14. Nella pagina **Gestione entità** , fare clic su **Salva entità**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Attributi &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
  [Modificare il nome di un attributo &#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
  [Creare un attributo basato su dominio &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   

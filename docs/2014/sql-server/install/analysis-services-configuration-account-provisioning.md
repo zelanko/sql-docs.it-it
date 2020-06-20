@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 169b1af2-6fe2-467f-8ca4-919f24c620ce
 author: heidisteen
 ms.author: heidist
-manager: craigg
-ms.openlocfilehash: 033c1ec1b0ad478e525f3ea9e8f172c5e5e31eef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 109b5d9ddddf2b78c0bb8947cfa876d233f804ea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096802"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042705"
 ---
 # <a name="analysis-services-configuration---account-provisioning"></a>Configurazione di Analysis Services - Provisioning account
   Utilizzare questa pagina per impostare la modalità server e per concedere le autorizzazioni amministrative a utenti o servizi che richiedono l'accesso illimitato ad [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Durante l'installazione non viene aggiunto automaticamente il gruppo locale BUILTIN\Administrators di Windows al ruolo di amministratore del server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dell'istanza che viene installata. Se si desidera aggiungere il gruppo Administrators locale al ruolo di amministratore del server, è necessario specificare in modo esplicito tale gruppo.  
@@ -33,7 +32,7 @@ ms.locfileid: "66096802"
 > [!NOTE]  
 >  Controllo account utente è una caratteristica di sicurezza di Windows che richiede a un amministratore di approvare in modo specifico azioni o applicazioni amministrative prima di poterle eseguire. Poiché Controllo account utente è attivato per impostazione predefinita, verrà richiesto di consentire operazioni specifiche che necessitano di privilegi elevati. È possibile configurare Controllo account utente per modificare il comportamento predefinito oppure è possibile personalizzarlo per programmi specifici. Per ulteriori informazioni sulla configurazione del controllo dell'account utente e dell'UAC, vedere [Guida dettagliata al controllo dell'account utente e al](https://go.microsoft.com/fwlink/?linkid=196350) [controllo dell'account utente (Wikipedia)](https://go.microsoft.com/fwlink/?linkid=196351).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurare gli account del servizio &#40;Analysis Services&#41;](../../../2014/analysis-services/instances/configure-service-accounts-analysis-services.md)   
  [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
   

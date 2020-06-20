@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 13aabe2d-67fe-4c67-8d49-2928dd705b7a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 744ebc5411e626c083676440502489029e888a28
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bd60a19234d186bb0912978589fa60fd8e8a8c22
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798190"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008659"
 ---
 # <a name="make-a-target-server"></a>Configurare un server di destinazione
   In questo argomento viene descritto come configurare un server di destinazione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o SQL Server Management Objects (SMO).  
@@ -48,7 +47,7 @@ ms.locfileid: "72798190"
 ###  <a name="security"></a><a name="Security"></a> Sicurezza  
  I processi distribuiti con passaggi associati a un proxy vengono eseguiti nel contesto dell'account proxy nel server di destinazione. Verificare che siano soddisfatte le condizioni seguenti, per assicurare che i passaggi di processo associati a un proxy vengano scaricati dal server master a quello di destinazione:  
   
--   La sottochiave del registro di sistema del server master **\ HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Microsoft SQL Server\\<*instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) è impostata su 1 (true). Per impostazione predefinita, questa sottochiave è impostata su 0 (False).  
+-   La sottochiave del registro di sistema del server master **\ HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Microsoft SQL Server \\ < *instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) è impostata su 1 (true). Per impostazione predefinita, questa sottochiave è impostata su 0 (False).  
   
 -   Nel server di destinazione deve esistere un account proxy con lo stesso nome dell'account proxy del server master utilizzato per l'esecuzione del passaggio del processo.  
   

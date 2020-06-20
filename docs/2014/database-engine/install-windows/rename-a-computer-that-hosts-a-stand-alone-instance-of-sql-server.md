@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1bd9e18d1dfe7226d043a7c8c968999da680da08
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 079348921900a7cbf880027433280253df1a9e30
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775008"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932172"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>Rinominare un computer che ospita un'istanza autonoma di SQL Server
   Quando si modifica il nome del computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il nuovo nome viene riconosciuto durante l'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Non è necessario eseguire nuovamente il programma di installazione per reimpostare il nome del computer. Utilizzare invece la procedura riportata di seguito per aggiornare i metadati di sistema archiviati in sys.servers e restituiti dalla funzione di sistema @@SERVERNAME . Aggiornare i metadati di sistema in modo da riflettere le modifiche apportate al nome del computer per le connessioni remote e le applicazioni che utilizzano @@SERVERNAME o che eseguono query sul nome del server da sys.servers.  
@@ -109,7 +108,7 @@ ms.locfileid: "62775008"
   
  **Nomi alias per i client**: gli alias per i client che usano named pipe verranno interessati dall'operazione di ridenominazione del computer. Se ad esempio è stato creato un alias "PROD_SRVR" per puntare a SRVR1 e viene utilizzato il protocollo Named Pipes, il nome pipe sarà simile al seguente: `\\SRVR1\pipe\sql\query`. Dopo la ridenominazione del computer, il percorso di named pipe non sarà più valido. Per altre informazioni sulle named pipe, vedere l'argomento [Creazione di una stringa di connessione valida tramite named pipe](https://go.microsoft.com/fwlink/?LinkId=111063).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Installare SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)  
   
   

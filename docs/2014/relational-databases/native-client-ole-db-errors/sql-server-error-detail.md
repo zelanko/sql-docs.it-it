@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 51500ee3-3d78-47ec-b90f-ebfc55642e06
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d3d8c392312f98140f2a75becb175fab26c4e590
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4c03cf62dd274f9bcca213d33fb8969b26c9d980
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704953"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043516"
 ---
 # <a name="sql-server-error-detail"></a>Dettagli relativi agli errori SQL Server
   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client definisce l'interfaccia di errore specifica del provider [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md). L'interfaccia restituisce maggiori dettagli relativi agli errori [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e risulta molto utile quando operazioni di esecuzione di comandi o del set di righe non riescono.  
@@ -44,7 +43,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
   
  I membri di struttura SSERRORINFO vengono interpretati dal consumer come segue.  
   
-|Membro|Description|  
+|Membro|Descrizione|  
 |------------|-----------------|  
 |*pwszMessage*|Messaggio di errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Identico alla stringa restituita in **IErrorInfo::GetDescription**.|  
 |*pwszServer*|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la sessione.|  

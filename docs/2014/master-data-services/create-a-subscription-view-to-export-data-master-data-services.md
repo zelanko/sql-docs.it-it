@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c4a2f747192b1cddefeac256d4470a2b345305de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: de6ee4b3ba52dec87d71bb97707a8cd8f748d854
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479942"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971771"
 ---
 # <a name="create-a-subscription-view-master-data-services"></a>Creare una vista sottoscrizioni (Master Data Services)
-  Creare una vista sottoscrizioni quando si desidera creare una vista dei dati nel database per [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] l'utilizzo da parte dei sistemi di sottoscrizione.  
+  Creare una vista sottoscrizioni quando si desidera creare una vista dei dati nel [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database per l'utilizzo da parte dei sistemi di sottoscrizione.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
@@ -53,9 +52,9 @@ ms.locfileid: "65479942"
   
 9. Se si sceglie **Livelli espliciti** o **Livelli derivati** dall'elenco **Formato** , digitare il numero di livelli della gerarchia da includere nella vista.  
   
-10. Fare clic su **Save**.  
+10. Fare clic su **Salva**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Esportazione dei dati &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)   
  [Eliminare una vista sottoscrizioni &#40;Master Data Services&#41;](delete-a-subscription-view-master-data-services.md)   
  [Creare un flag di versione &#40;Master Data Services&#41;](create-a-version-flag-master-data-services.md)  

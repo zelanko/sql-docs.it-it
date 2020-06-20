@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a82e0c98-efaa-4b0b-9582-3c879ee42444
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 907840b051a4230a06525e8c3d6574aee4f40bcc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81605229acc7dccdcd77a3b3f001bf13fc6bf273
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035270"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008212"
 ---
 # <a name="analysis-server-properties-log-on-tab"></a>Proprietà - Analysis Server (scheda Accesso)
   Utilizzare la scheda **Accesso** della finestra di dialogo **Proprietà - Analysis Server** per specificare l'account utilizzato dal servizio [!INCLUDE[ssAS](../../includes/ssas-md.md)] e avviare e arrestare il servizio.  

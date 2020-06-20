@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: deb9ddbc59e8ff76c8c459022d73cca7e7de81d3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: eba957ad1b5b9648bdc6676cd33a33afedc8c158
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706344"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022890"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
   È possibile utilizzare `SQLColAttribute` per recuperare un attributo di una colonna del set di risultati per istruzioni ODBC preparate o eseguite. `SQLColAttribute`La chiamata su istruzioni preparate genera un round trip a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client riceve i dati della colonna del set di risultati come parte dell'esecuzione dell'istruzione, quindi `SQLColAttribute` la chiamata al completamento di **SQLExecute** o **SQLExecDirect** non comporta un round trip del server.  
@@ -76,7 +75,7 @@ ms.locfileid: "82706344"
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]sono stati introdotti campi di descrizione specifici del driver per fornire informazioni aggiuntive per indicare rispettivamente il nome della raccolta XML Schema, il nome dello schema e il nome del catalogo. Tali proprietà non richiedono virgolette o un carattere di escape se contengono caratteri non alfanumerici. Nella tabella seguente sono inclusi i nuovi campi di descrizione:  
   
-|Nome colonna|Tipo|Descrizione|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|Nome del catalogo in cui viene definito il nome di una raccolta di XML Schema. Se non è possibile trovare il nome del catalogo, questa variabile contiene una stringa vuota.<br /><br /> Queste informazioni vengono restituite dal campo del record SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME del descrittore delle righe di implementazione, che è un campo di lettura/scrittura.|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|CharacterAttributePtr|Nome dello schema in cui viene definito il nome di una raccolta di XML Schema. Se non è possibile trovare il nome dello schema, questa variabile contiene una stringa vuota.<br /><br /> Queste informazioni vengono restituite dal campo del record SQL_DESC_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME del descrittore delle righe di implementazione, che è un campo di lettura/scrittura.|  
@@ -84,7 +83,7 @@ ms.locfileid: "82706344"
   
  In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sono stati inoltre introdotti nuovi campi di descrizione specifici del driver per fornire informazioni aggiuntive per una colonna con tipo definito dall'utente di un set di risultati o un parametro con tipo definito dall'utente di una stored procedure o di una query con parametri. Tali proprietà non richiedono virgolette o un carattere di escape se contengono caratteri non alfanumerici. Nella tabella seguente sono inclusi i nuovi campi di descrizione:  
   
-|Nome colonna|Tipo|Descrizione|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_UDT_CATALOG_NAME|CharacterAttributePtr|Nome del catalogo contenente il tipo definito dall'utente.|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|Nome dello schema contenente il tipo definito dall'utente.|  

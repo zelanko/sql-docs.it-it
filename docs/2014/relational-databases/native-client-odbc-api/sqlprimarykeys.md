@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bc61cd5b-d2f4-4f87-abc7-743cf9ea772d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bf00ecd74b64b3910ba19365920baf914f86939c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 67a932996ccbf52f5ab21fd6aa62381184ebc510
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705893"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021806"
 ---
 # <a name="sqlprimarykeys"></a>SQLPrimaryKeys
   Una tabella potrebbe includere una colonna o colonne che possono essere utilizzate come identificatori di riga univoci, mentre le tabelle create senza un vincolo PRIMARY KEY restituiscono un set di risultati vuoto a SQLPrimaryKeys. La funzione ODBC [SQLSpecialColumns](sqlspecialcolumns.md) segnala l'identificatore di riga candidati per le tabelle senza chiavi primarie.  

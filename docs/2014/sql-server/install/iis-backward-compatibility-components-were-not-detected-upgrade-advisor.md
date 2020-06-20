@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e794185a-0a77-480a-9aea-d09f8760a6b8
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: dbf5686d4a947cb8629675368c59c8039c93835e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b5557b86eb52416d77b46301be3601848079d2e0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952497"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042486"
 ---
 # <a name="iis-backward-compatibility-components-were-not-detected-upgrade-advisor"></a>Non sono stati rilevati componenti di compatibilità con le versioni precedenti di IIS (Upgrade Advisor)
   Non sono stati rilevati componenti e impostazioni IIS che forniscono le informazioni utilizzate dal programma di installazione per creare nuovi URL di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

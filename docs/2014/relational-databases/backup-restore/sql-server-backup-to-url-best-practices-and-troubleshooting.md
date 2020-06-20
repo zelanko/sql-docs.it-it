@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ac34c95e7ee4dc6f57ef7d8806a7db1bb981a944
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4d46820f3542e562f43fc4ae4c4d4ee1f91fcdf3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175970"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956461"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Procedure consigliate e risoluzione dei problemi per il backup di SQL Server nell'URL
   In questo argomento sono inclusi i suggerimenti per la risoluzione dei problemi e le procedure consigliate relativi al backup e ripristino di SQL Server nel servizio BLOB di Azure.  
@@ -77,7 +76,7 @@ ms.locfileid: "70175970"
   
     -   Impostare il flag di traccia 3051 per abilitare la registrazione in un log degli errori specifico con il formato seguente in:  
   
-         BackupToUrl-\<nomeist>-\<nomedb>-azione-\<PID.log Dove \<azione> è uno dei valori seguenti:  
+         BackupToUrl- \<instname> - \<dbname> -Action- \<PID> . log in cui \<action> è uno dei seguenti:  
   
         -   `DB`  
   
@@ -94,7 +93,7 @@ ms.locfileid: "70175970"
 -   Quando si esegue il ripristino da un backup compresso, è possibile che venga visualizzato l'errore seguente:  
   
     -   **Si è verificato il 3284 SqlException. Gravità: 16 stato: 5**  
-        **Il contrassegno dei messaggi nel dispositivohttps://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak'' non è allineato. Eseguire nuovamente l'istruzione RESTORE con le stesse dimensioni del blocco utilizzate per creare il set di backupset:' 65536' è un possibile valore.**  
+        **Il contrassegno dei messaggi nel dispositivo ' https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak ' non è allineato. Eseguire nuovamente l'istruzione RESTORE con le stesse dimensioni del blocco utilizzate per creare il set di backupset:' 65536' è un possibile valore.**  
   
          Per risolvere il problema, eseguire nuovamente l'istruzione `BACKUP` con il valore `BLOCKSIZE = 65536` specificato.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "70175970"
   
  Nei server proxy possono essere presenti impostazioni che limitano il numero di connessioni al minuto. Il backup su URL è un processo multithread e pertanto può superare il limite. In questo caso, il server proxy termina la connessione. Per risolvere il problema, modificare le impostazioni del proxy in modo che non venga utilizzato in SQL Server.   Di seguito sono riportati alcuni esempi di tipi o messaggi di errore visualizzati nel log degli errori:  
   
--   Scrittura in "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" non riuscita: il backup nell'URL ha ricevuto un'eccezione dall'endpoint remoto. Messaggio di eccezione: Impossibile leggere dati dalla connessione del trasporto. La connessione è stata chiusa.  
+-   Scrittura in " http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak " non riuscita: il backup nell'URL ha ricevuto un'eccezione dall'endpoint remoto. Messaggio di eccezione: Impossibile leggere dati dalla connessione del trasporto. La connessione è stata chiusa.  
   
 -   Si è verificato un errore di I/O irreversibile nel file "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" Impossibile recuperare l'errore dall'endpoint remoto.  
   
@@ -125,7 +124,7 @@ ms.locfileid: "70175970"
   
      Interruzione anomala di BACKUP DATABASE in corso.  
   
--   BackupIoRequest:: ReportIoError: errore di scrittura nel dispositivo dihttp://storageaccount.blob.core.windows.net/container/BackupAzurefile.bakbackup ''. Errore del sistema operativo: Il backup nell'URL ha ricevuto un'eccezione dall'endpoint remoto. Messaggio di eccezione: Impossibile leggere dati dalla connessione del trasporto. La connessione è stata chiusa.  
+-   BackupIoRequest:: ReportIoError: errore di scrittura nel dispositivo di backup ' http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak '. Errore del sistema operativo: Il backup nell'URL ha ricevuto un'eccezione dall'endpoint remoto. Messaggio di eccezione: Impossibile leggere dati dalla connessione del trasporto. La connessione è stata chiusa.  
   
  Se si abilita la registrazione dettagliata mediante il flag di traccia 3051, è inoltre possibile che nei log venga visualizzato il messaggio seguente:  
   
@@ -133,7 +132,7 @@ ms.locfileid: "70175970"
   
  **Impostazioni proxy predefinite non rilevate:**  
   
- Talvolta le impostazioni predefinite non vengono prelevate, causando errori di autenticazione del proxy come quello riportato di seguito:*si è verificato un errore di i/http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:O irreversibile nel file "". il backup nell'URL ha ricevuto un'eccezione dall'endpoint remoto. Messaggio eccezione: il server remoto ha restituito un errore: (407)* è **richiesta l'autenticazione proxy**.  
+ Talvolta le impostazioni predefinite non vengono prelevate, causando errori di autenticazione del proxy come quello riportato di seguito:*si è verificato un errore di i/O irreversibile nel file " http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: ". il backup nell'URL ha ricevuto un'eccezione dall'endpoint remoto. Messaggio eccezione: il server remoto ha restituito un errore: (407)* è **richiesta l'autenticazione proxy**.  
   
  Per risolvere il problema, creare un file di configurazione che consenta al processo di backup su URL di utilizzare le impostazioni predefinite del proxy effettuando i passaggi indicati di seguito.  
   
@@ -151,9 +150,9 @@ ms.locfileid: "70175970"
   
     ```  
   
-2.  Inserire il file di configurazione nella cartella Binn dell'istanza di SQL Server. Se, ad esempio, il SQL Server è installato nell'unità C del computer, inserire il file di configurazione in: *C:\Programmi\Microsoft SQL Server\MSSQL12.\< Nomeistanza> \MSSQL\Binn*.  
+2.  Inserire il file di configurazione nella cartella Binn dell'istanza di SQL Server. Se, ad esempio, il SQL Server è installato nell'unità C del computer, inserire il file di configurazione in: *C:\Programmi\Microsoft SQL Server\MSSQL12. \<InstanceName> \MSSQL\Binn*.  
   
-## <a name="troubleshooting-sql-server-managed-backup-to-azure"></a>Risoluzione dei problemi di SQL Server backup gestito in Azure  
+## <a name="troubleshooting-sql-server-managed-backup-to-azure"></a>Risoluzione dei problemi relativi al backup gestito di SQL Server in Azure  
  Poiché Backup gestito di SQL Server è compilato in Backup nell'URL, i suggerimenti per la risoluzione di problemi descritti nelle sezioni precedenti vengono applicati ai database o alle istanze tramite Backup gestito di SQL Server.  Informazioni dettagliate sulla risoluzione dei problemi di SQL Server backup gestito in Azure sono descritte in [risoluzione dei problemi di SQL Server backup gestito in Azure](sql-server-managed-backup-to-microsoft-azure.md).  
   
 ## <a name="see-also"></a>Vedere anche  

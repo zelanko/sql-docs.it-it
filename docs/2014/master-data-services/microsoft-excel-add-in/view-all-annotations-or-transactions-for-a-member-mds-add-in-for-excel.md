@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: de90c81c-9e7f-4997-bf96-e22b97b2862c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8de36a4d7929ddba4fcb2a7e046ee81db8d08520
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b78d41895c6e2f12f167bd9567f4a9105d7a1a5c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482705"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971221"
 ---
 # <a name="view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel"></a>Visualizzare tutte le annotazioni o transazioni per un membro (componente aggiuntivo MDS per Excel)
   Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]visualizzare le annotazioni (commenti) e le transazioni per le righe di dati (membri) quando si vuole visualizzare gli aggiornamenti ai dati nel corso del tempo.  
@@ -33,7 +32,7 @@ ms.locfileid: "65482705"
   
 3.  Nella finestra di dialogo **Visualizza transazioni** viene visualizzato l'elenco di transazioni. Per visualizzare tutte le annotazioni associate a una transazione, fare clic su una riga nella griglia.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Pubblicazione dei dati &#40;Componente aggiuntivo MDS per Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

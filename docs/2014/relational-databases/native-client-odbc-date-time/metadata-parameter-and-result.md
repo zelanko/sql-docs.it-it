@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fcac538ee01da719d43015408337f63a09f15d18
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 94cce7c3debc467d2c06f97d9a390455245f5606
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705438"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020152"
 ---
 # <a name="parameter-and-result-metadata"></a>Metadati per parametri e risultati
   In questo argomento viene descritto ciò che viene restituito nel campo di descrizione del parametro di implementazione (IPD, Implementation Parameter Descriptor) e in quello di descrizione della riga di implementazione (IRD, Implementation Row Descriptor) per i tipi di dati date e time.  

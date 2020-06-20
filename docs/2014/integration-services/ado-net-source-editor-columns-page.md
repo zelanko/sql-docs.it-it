@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: fbc205b9-2001-4737-a76b-1ba777344bd9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1eba4cb2f1f5c8825e9cae5751fe230fbe45a835
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44781385a12f880e71e635d2d5e6f76809923453
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061696"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925832"
 ---
 # <a name="ado-net-source-editor-columns-page"></a>Editor origine ADO NET (pagina Colonne)
   Usare la pagina **Colonne** della finestra di dialogo **Editor origine ADO NET** per eseguire il mapping tra una colonna di output e ogni colonna esterna (di origine).  
@@ -42,7 +41,7 @@ ms.locfileid: "66061696"
  **Colonna di output**  
  Consente di specificare un nome univoco per ogni colonna di output. Per impostazione predefinita viene suggerito il nome della colonna esterna (di origine) selezionata. È comunque possibile scegliere qualsiasi nome descrittivo univoco. Il nome specificato verrà visualizzato in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Editor origine ADO NET &#40;pagina Gestione connessione&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
  [Editor origine ADO NET &#40;pagina output degli errori&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
  [Gestione connessione ADO.NET](connection-manager/ado-net-connection-manager.md)  
