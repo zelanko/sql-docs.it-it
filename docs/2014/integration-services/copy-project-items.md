@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1606c54d-20f9-49f3-a4ef-caad83a772aa
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ef503e88e66bd6f89cac8d235f7175fb4cefe4e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 32b5f3f11bb15576ca30b83f1c0709cb4b77ff6d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060342"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917481"
 ---
 # <a name="copy-project-items"></a>Copia di elementi di progetto
   Questo argomento descrive come copiare gli oggetti all'interno di un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] o tra progetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. È anche possibile copiare oggetti tra gli altri tipi di progetti di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Per copiare tra progetti, il progetto deve far parte della stessa soluzione di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Per altre informazioni, vedere [Progetti di Integration Services &#40;SSIS&#41;](integration-services-ssis-projects-and-solutions.md).  
@@ -39,7 +38,7 @@ ms.locfileid: "66060342"
   
      Gli elementi vengono copiati automaticamente nella cartella corretta. Se gli elementi copiati nel progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] non sono pacchetti, verranno copiati nella cartella **Varie**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services &#40;pacchetti&#41; SSIS](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Copia di oggetti di pacchetto](../../2014/integration-services/copy-package-objects.md)  
   

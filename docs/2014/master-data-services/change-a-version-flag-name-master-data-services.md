@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: bc08b69d-a38d-4f27-a356-5bce29e6248c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6037c1d31b52fba0f961020f1e514b3354e535b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce3fd9d9758c878ed091d1d3125da6d5a7c299b5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484039"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972071"
 ---
 # <a name="change-a-version-flag-name-master-data-services"></a>Modificare il nome di un flag di versione (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è possibile modificare il nome di un flag di versione.  
@@ -43,7 +42,7 @@ ms.locfileid: "65484039"
   
 6.  Premere INVIO.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Versioni &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
  [Assegnare un flag a una versione &#40;Master Data Services&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   

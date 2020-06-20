@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 85f2095d-2590-4f59-8a29-7e100edd02bb
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: 6a802cfadfa48c7dbba7479ca169daedf70fe8b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: baeeffd49ac89ce85cf64932fbfd4982d7243887
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957136"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060270"
 ---
 # <a name="service-master-key"></a>chiave master del servizio
   La chiave master del servizio è la radice della gerarchia di crittografia di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e viene generata automaticamente la prima volta che risulta necessaria per crittografare un'altra chiave. Per impostazione predefinita, la chiave master del servizio viene crittografata mediante l'API Windows per la protezione dei dati e la chiave del computer locale. La chiave master del servizio può essere aperta solo dall'account di servizio Windows nel quale è stata creata oppure da un'entità con accesso sia al nome che alla password del'account di servizio.  

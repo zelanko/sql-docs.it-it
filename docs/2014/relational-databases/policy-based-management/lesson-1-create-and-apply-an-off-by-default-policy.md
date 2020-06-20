@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2e0a99559312704459c41514d53711cfbea4353e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a76df1a72b93d09c5c1c199cb0246dbb51c9cbc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63057241"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061634"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Lezione 1: Creare e applicare criteri Disattivata per impostazione predefinita
   Tramite i criteri della gestione basata su criteri è possibile amministrare una o più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], uno o più oggetti dell'istanza, una o più istanze del server, uno o più database o uno o più oggetti di database. Gli amministratori del database desiderano impedire che in determinati server sia abilitato Posta elettronica database. In questa lezione verranno creati una condizione e i criteri per l'impostazione dell'opzione server in questione. Il server verrà quindi testato per verificarne la conformità ai criteri. Si utilizzeranno infine i criteri per riconfigurare il server per renderlo conforme.  

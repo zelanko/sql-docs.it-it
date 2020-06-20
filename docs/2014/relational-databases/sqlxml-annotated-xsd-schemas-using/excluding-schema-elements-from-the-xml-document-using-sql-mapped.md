@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bbf5bad0a8c8e633149e2868047b88833a400849
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ceb1d222131c14810d3d71bdd8faf13509f97614
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703591"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055136"
 ---
 # <a name="excluding-schema-elements-from-the-resulting-xml-document-using-sqlmapped-sqlxml-40"></a>Esclusione di elementi dello schema dal documento XML risultante tramite sql:mapped (SQLXML 4.0)
   A causa del mapping predefinito, viene eseguito il mapping di ogni elemento e attributo nello schema XSD a una vista/tabella e a una colonna di database. Se si desidera creare un elemento nello schema XSD di cui non venga eseguito il mapping a qualsiasi tabella (vista) o colonna di database e che non venga visualizzato in XML, è possibile specificare l'annotazione `sql:mapped`.  
@@ -36,15 +35,15 @@ ms.locfileid: "82703591"
   
  L'annotazione `sql:mapped` accetta un valore booleano (0=false, 1=true). I valori possibili sono 0, 1, true e false.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per l'esecuzione di esempi SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>R. Specifica dell'annotazione sql:mapped  
- Si supponga di disporre di uno schema XSD di un'altra origine. Questo schema XSD è costituito da una ** \< persona. Contattare>** elemento con gli attributi **ContactID**, **FirstName**, **LastName**e **HomeAddress** .  
+ Si supponga di disporre di uno schema XSD di un'altra origine. Questo schema XSD è costituito da un **\<Person.Contact>** elemento con gli attributi **ContactID**, **FirstName**, **LastName**e **HomeAddress** .  
   
  Per eseguire il mapping di questo schema XSD alla tabella Person. Contact nel database AdventureWorks, `sql:mapped` viene specificato nell'attributo **HomeAddress** perché la tabella Employees non archivia gli indirizzi Home dei dipendenti. Di conseguenza, questo attributo non viene mappato al database e non viene restituito nel documento XML risultante quando viene specificata una query XPath sullo schema di mapping.  
   
- Per il resto dello schema viene eseguito il mapping predefinito. L'elemento ** \< Person. Contact>** viene mappato alla tabella Person. Contact e tutti gli attributi vengono mappati alle colonne con lo stesso nome nella tabella Person. Contact.  
+ Per il resto dello schema viene eseguito il mapping predefinito. L' **\<Person.Contact>** elemento viene mappato alla tabella Person. Contact e tutti gli attributi vengono mappati alle colonne con lo stesso nome nella tabella Person. Contact.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

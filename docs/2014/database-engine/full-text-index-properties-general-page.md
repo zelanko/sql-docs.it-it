@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f4dff61c-8c2f-4ff9-abe4-70a34421448f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1701479fe7469769d75f4b8ad3d8e65dcc75af91
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: b2ca5eef7905806f551b960d2ec912d1d5a8a09f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858677"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932982"
 ---
 # <a name="full-text-index-properties-general-page"></a>Proprietà indice full-text (pagina Generale)
   **Per visualizzare o modificare le proprietà modificabili di un indice full-text**  
@@ -65,7 +64,7 @@ ms.locfileid: "83858677"
  Filegroup cui appartiene l'indice full-text.  
   
  **Elenco di parole non significative indice full-text**  
- Elenco di parole non significative associate all'indice full-text. Un elenco di [parole non significative](../relational-databases/search/full-text-search.md) eventualmente associato a un indice full-text viene applicato alle query full-text su tale indice. È possibile rimuovere l'elenco di parole non significative dall'indice selezionando ** \<>** dall'elenco oppure è possibile selezionare un elenco di parole non significative diverso; ** \< System>** indica l'oggetto di parole non significative di sistema.  
+ Elenco di parole non significative associate all'indice full-text. Un elenco di [parole non significative](../relational-databases/search/full-text-search.md) eventualmente associato a un indice full-text viene applicato alle query full-text su tale indice. È possibile rimuovere l'elenco di parole non significative dall'indice selezionando **\<OFF>** dall'elenco oppure è possibile selezionare un elenco di parole non significative diverso; indica l'elenco di parole non significative di **\<SYSTEM>** sistema.  
   
  **Per creare un elenco di parole non significative**  
   
@@ -74,7 +73,7 @@ ms.locfileid: "83858677"
  **Elenco delle proprietà di ricerca**  
  Elenco delle proprietà di ricerca, se presente, attualmente associato all'indice full-text. Un elenco delle proprietà di ricerca specifica un set di proprietà del documento incluse nell'indice full-text associato al momento del popolamento. Per altre informazioni, vedere [Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
- ** \< Off>** indica che all'indice non è attualmente associato alcun elenco di proprietà di ricerca. È possibile rimuovere l'elenco delle proprietà di ricerca corrente dall'indice selezionando ** \< off>** dall'elenco oppure è possibile selezionare un elenco di proprietà di ricerca diverso nell'elenco. Questo elenco contiene solo gli elenchi delle proprietà di ricerca inclusi nel database corrente.  
+ **\<Off>** indica che all'indice non è attualmente associato alcun elenco di proprietà di ricerca. È possibile rimuovere l'elenco delle proprietà di ricerca corrente dall'indice selezionando **\<Off>** nell'elenco oppure è possibile selezionare un elenco di proprietà di ricerca diverso nell'elenco. Questo elenco contiene solo gli elenchi delle proprietà di ricerca inclusi nel database corrente.  
   
 > [!NOTE]  
 >  È possibile associare un elenco delle proprietà di ricerca specificato a più indici full-text nello stesso database.  
@@ -140,7 +139,7 @@ ms.locfileid: "83858677"
 |-|-|  
 |**Completo**|Durante il popolamento di una tabella, vengono create voci di indice per tutte le righe.|  
 |**Incrementale**|Il popolamento incrementale aggiorna l'indice full-text relativamente alle righe aggiunte, eliminate o modificate dopo l'ultimo popolamento o durante la sua esecuzione. Per eseguire un popolamento incrementale, è necessario che la tabella di base contenga una colonna del tipo di dati `timestamp`.|  
-|**Aggiornamento**|L'indice full-text viene aggiornato ogni qual volta i dati della tabella di base vengono modificati.|  
+|**Update**|L'indice full-text viene aggiornato ogni qual volta i dati della tabella di base vengono modificati.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Introduzione alla ricerca full-text](../relational-databases/search/get-started-with-full-text-search.md)  

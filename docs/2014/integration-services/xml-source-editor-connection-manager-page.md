@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e6507403-a3ce-4b6f-91fc-a7de9f7b6283
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5965c48f91387944f223e1d0cfe666b19aba0e63
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0df8c4cf72574df16ad42445434592faeae8548
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054301"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972371"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>Editor origine XML (pagina Gestione connessione)
   Utilizzare la pagina **Gestione connessione** di **Editor origine XML** per specificare un file XML e il file XSD che trasforma i dati XML.  
@@ -30,7 +29,7 @@ ms.locfileid: "66054301"
  **Modalità di accesso ai dati**  
  Consente di specificare il metodo per la selezione dei dati dall'origine.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |Percorso file XML|Consente di recuperare i dati da un file XML.|  
 |File XML da variabile|Consente di specificare il nome del file XML in una variabile.<br /><br /> **Informazioni correlate**: [Utilizzo di variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)|  
@@ -65,7 +64,7 @@ ms.locfileid: "66054301"
  **Nome variabile**  
  Consente di selezionare la variabile contenente i dati XML.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor origine XML &#40;pagina colonne&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
  [Editor origine XML &#40;pagina output degli errori&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   

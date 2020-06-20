@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 264eb3c9b16c5eb12a578090d55e4f64884177c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b9725997a5e5f8e40a10ecc6b845068432c4393c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62649695"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067384"
 ---
 # <a name="external-tools"></a>Strumenti esterni
   Usare questa finestra di dialogo per aggiungere strumenti esterni, ad esempio Gestione configurazione SQL Server o Blocco note, al menu **Strumenti** . Aggiungendo strumenti esterni, sarà più semplice avviare altre applicazioni quando si utilizza [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Durante l'avvio dello strumento, è possibile specificare argomenti e una directory di lavoro. Gli output generati da alcuni strumenti verranno inoltre visualizzati nella finestra di output. La finestra di dialogo **Strumenti esterni** è accessibile dal menu **Strumenti** .  
@@ -70,7 +69,7 @@ ms.locfileid: "62649695"
   
 2.  Nella casella **Titolo** digitare **Gestione configurazione SQL Server**.  
   
-3.  Nella casella **comando** Digitare il percorso del file eseguibile [!INCLUDE[msCoName](../../includes/msconame-md.md)] di Management Console, ad esempio`C:\WINNT\system32\mmc.exe`  
+3.  Nella casella **comando** Digitare il percorso del [!INCLUDE[msCoName](../../includes/msconame-md.md)] file eseguibile di Management Console, ad esempio`C:\WINNT\system32\mmc.exe`  
   
 4.  Nella casella **argomenti** Digitare il percorso del file con estensione msc, ad esempio`"C:\WINNT\system32\SQLServerManager.msc"`  
   

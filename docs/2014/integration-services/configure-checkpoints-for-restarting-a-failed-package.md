@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9afffa5a-d803-4653-8afc-386453fc163f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e22e47af568ecf723b54a35fb6b83bd5ce74e333
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d743341d7d1d6cae23165c7c1e4b1ddb15779927
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060764"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921842"
 ---
 # <a name="configure-checkpoints-for-restarting-a-failed-package"></a>Configurazione dei checkpoint per il riavvio di un pacchetto non riuscito
   Impostando le proprietà relative ai checkpoint, è possibile configurare i pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in modo che vengano riavviati dal momento dell'errore, anziché essere eseguiti nuovamente dall'inizio.  
@@ -34,7 +33,7 @@ ms.locfileid: "66060764"
   
 4.  Fare clic con il pulsante destro del mouse in un punto qualsiasi dello sfondo dell'area di progettazione del flusso di controllo, quindi scegliere **Proprietà**.  
   
-5.  Impostare la proprietà SaveCheckpoints su `True`.  
+5.  Impostare la proprietà SaveCheckpoints su `True` .  
   
 6.  Digitare il nome del file del checkpoint nella proprietà CheckpointFileName.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66060764"
   
     -   Impostare la proprietà FailPackageOnFailure su `True` per ogni attività e contenitore selezionati.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Riavvio dei pacchetti tramite checkpoint](packages/restart-packages-by-using-checkpoints.md)  
   
   

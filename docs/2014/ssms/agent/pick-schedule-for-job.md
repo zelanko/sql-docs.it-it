@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6de2025d-c25c-47b9-9a25-18c294935c15
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 58076b9ad8c32563ae8502de148803ac762b35f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67855ba7841c06181240f220945dda0f4a719629
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62472931"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067716"
 ---
 # <a name="pick-schedule-for-job"></a>Seleziona pianificazione per il processo
-  Utilizzare questa finestra di dialogo per selezionare una pianificazione esistente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per il processo di Agent.  
+  Utilizzare questa finestra di dialogo per selezionare una pianificazione esistente per il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processo di Agent.  
   
 ## <a name="options"></a>Opzioni  
  **Pianificazioni disponibili**  
@@ -31,7 +30,7 @@ ms.locfileid: "62472931"
  **Nome**  
  Consente di visualizzare il nome della pianificazione.  
   
- **Attivata**  
+ **Enabled**  
  Questa opzione è selezionata se la pianificazione è abilitata.  
   
  **Descrizione**  
@@ -43,7 +42,7 @@ ms.locfileid: "62472931"
  **Proprietà**  
  Apre la finestra di dialogo **Proprietà pianificazione processo** tramite la quale è possibile visualizzare informazioni sulla pianificazione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione e collegamento di pianificazioni ai processi](create-and-attach-schedules-to-jobs.md)  
   
   

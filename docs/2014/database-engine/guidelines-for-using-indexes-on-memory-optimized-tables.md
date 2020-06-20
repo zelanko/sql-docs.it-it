@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 16ef63a4-367a-46ac-917d-9eebc81ab29b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f00d643088634c918eb626917eae64a001ce3678
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779225"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932872"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>Linee guida per l'utilizzo di indici nelle tabelle con ottimizzazione per la memoria
   Gli indici vengono utilizzati per accedere in modo efficiente ai dati nelle tabelle di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La definizione degli indici corretti può migliorare notevolmente le prestazioni delle query. Si consideri, ad esempio, la query riportata di seguito:  
@@ -71,7 +70,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
 |---------------|-------------------------------------------------|------------------------------------------|-----------------------|  
 |Index Scan, recupera tutte le righe della tabella.|Sì|Sì|Sì|  
 |Index Seek su predicati di uguaglianza (=).|Sì<br /><br /> (chiave completa necessaria)|Sì <sup>1</sup>|Sì|  
-|Index Seek su predicati di disuguaglianza (>, < \<, =, >=, between).|No (risultati in un'analisi di indice)|Sì <sup>1</sup>|Sì|  
+|Index Seek su predicati di disuguaglianza (>, <, \<=, > =, between).|No (risultati in un'analisi di indice)|Sì <sup>1</sup>|Sì|  
 |Recupero di righe con un ordinamento corrispondente alla definizione dell'indice.|No|Sì|Sì|  
 |Recupero di righe con un ordinamento inverso alla definizione dell'indice.|No|No|Sì|  
   
@@ -172,7 +171,7 @@ create table t (
 go  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Indici nelle tabelle ottimizzate per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
  [Determinazione del numero di bucket corretto per gli indici hash](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md)   
  [Indici hash](hash-indexes.md)  

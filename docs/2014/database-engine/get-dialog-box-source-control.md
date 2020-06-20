@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 048564d3-6c58-405b-8b57-b690fbfdbe9e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 051e3b93761511db07a2f381be5c94ea3247e76a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f8b9f5968cf68762178602ced64078248f3badb0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779008"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932932"
 ---
 # <a name="get-dialog-box-source-control"></a>Finestra di dialogo Aggiungi (Controllo del codice sorgente)
   Consente di recuperare una copia in sola lettura dell'elemento selezionato dal database del controllo del codice sorgente e di inserire tale copia nella propria cartella di lavoro o in un'altra cartella specificata.  
@@ -55,7 +54,7 @@ ms.locfileid: "62779008"
  **Visualizzazione albero**  
  Consente di visualizzare la gerarchia di cartelle e file per gli elementi da recuperare.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Recuperare i file](../../2014/database-engine/retrieve-files.md)   
  [Controllo del codice sorgente di Esplora soluzioni](../../2014/database-engine/solution-explorer-source-control.md)  
   

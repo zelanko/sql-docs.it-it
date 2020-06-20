@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 57ad9d3e-8f95-4df6-af01-c291ccf49164
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d9828c02625ae2bc5a85859577a237b4c4fa99c5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1649582f97e9e08691726745e4ba14b2f8226bd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81484681"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061080"
 ---
 # <a name="task-16-verifying-with-master-data-manager"></a>Attività 16: Verifica con Gestione dati master
   In questa attività viene verificato lo stato del processo batch inviato dal pacchetto SSIS e viene controllato che i dati siano stati caricati nel server MDS tramite Gestione dati master.  
   
-1.  Avviare **Gestione dati master** (`http://localhost/MDS`). Se è già aperto, fare clic su **Microsoft SQL Server Master Data Services** nella parte superiore per passare al **Home page**.  
+1.  Avviare **Gestione dati master** ( `http://localhost/MDS` ). Se è già aperto, fare clic su **Microsoft SQL Server Master Data Services** nella parte superiore per passare al **Home page**.  
   
 2.  Fare clic su **Gestione integrazione**.  
   

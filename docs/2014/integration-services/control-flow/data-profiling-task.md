@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0a895fd1dc3fe51296a110902fb1dd4c27d3d5a1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bfde82079c32b9aaba8db0ba9e52b02886bd2c47
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831885"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919252"
 ---
 # <a name="data-profiling-task"></a>Attività Profiling dati
   L'attività Profiling dati calcola i diversi profili che consentono di familiarizzare con un'origine dati e identificare i problemi nei dati che devono essere corretti.  
@@ -82,7 +81,7 @@ ms.locfileid: "62831885"
 |FunctionalDependencyProfile|Colonne di tipo `integer`, tipo `char` e tipo `datetime`|  
 |InclusionProfile|Colonne di tipo `integer`, tipo `char` e tipo `datetime`|  
   
- \*Nella tabella precedente di tipi di dati validi, i `integer`tipi `char`, `datetime`, e `numeric` includono i tipi di dati specifici seguenti:  
+ \*Nella tabella precedente di tipi di dati validi, i tipi `integer` ,, `char` `datetime` e `numeric` includono i tipi di dati specifici seguenti:  
   
  I tipi integer includono `bit`, `tinyint`, `smallint`, `int` e `bigint`.  
   
@@ -92,7 +91,7 @@ ms.locfileid: "62831885"
   
  I tipi numerici includono i tipi `integer` (tranne `bit`), `money`, `smallmoney`, `decimal`, `float`, `real` e `numeric`.  
   
- \*\*`image`i `text`tipi `XML`, `udt`,, `variant` e non sono supportati per profili diversi dal profilo rapporto di valori null nella colonna.  
+ \*\*`image` `text` `XML` i tipi,,, `udt` e `variant` non sono supportati per profili diversi dal profilo rapporto di valori null nella colonna.  
   
 ### <a name="valid-tables-and-columns"></a>Tabelle e colonne valide  
  Se la tabella o la colonna è vuota, l'attività Profiling dati esegue le seguenti azioni:  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 521fc35b8ada4b1eb6c62e75fed4e1d9f99d21c4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 82c3c7191ab686550885ebdc050f5fb1ac818cb9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154784"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957329"
 ---
 # <a name="restore-a-database-backup-sql-server-management-studio"></a>Ripristino di un backup del database (SQL Server Management Studio)
   In questo argomento viene descritto come ripristinare un backup completo del database.  
@@ -36,7 +35,7 @@ ms.locfileid: "70154784"
   
 ### <a name="to-restore-a-full-database-backup"></a>Per ripristinare un backup completo del database  
   
-1.  Dopo aver eseguito la connessione all'istanza appropriata del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Esplora oggetti fare clic sul nome del server per espandere l'albero del server.  
+1.  Dopo aver stabilito la connessione all'istanza appropriata di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Esplora oggetti fare clic sul nome del server per espanderne l'albero.  
   
 2.  Espandere **Database**. A seconda del database, selezionare un database utente oppure espandere **Database di sistema**e selezionare un database di sistema.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "70154784"
   
     -   **Dispositivo**  
   
-         Fare clic sul pulsante Sfoglia (**..**.) per aprire la finestra di dialogo **Seleziona dispositivi di backup** . Nella casella **Tipi di supporti di backup** selezionare uno dei tipi di dispositivi elencati. Per selezionare uno o più dispositivi per la casella **Supporti di backup** , fare clic su **Aggiungi**.  
+         Fare clic sul pulsante Sfoglia ( **...** ) per aprire la finestra di dialogo **Seleziona dispositivi di backup** . Nella casella **Tipi di supporti di backup** selezionare uno dei tipi di dispositivi elencati. Per selezionare uno o più dispositivi per la casella **Supporti di backup** , fare clic su **Aggiungi**.  
   
          Dopo avere aggiunto i dispositivi desiderati nella casella di riepilogo **Dispositivi di backup** , fare clic su **OK** per tornare alla pagina **Generale** .  
   
@@ -83,7 +82,7 @@ ms.locfileid: "70154784"
          **Rimuovi**  
          Consente di rimuovere uno o più file, nastri o dispositivi di backup logici selezionati.  
   
-         **Sommario**  
+         **Contents**  
          Consente di visualizzare il contenuto del supporto di un file, un nastro o un dispositivo di backup logico selezionato.  
   
 5.  Nella sezione **Destinazione** , la casella **Database** viene popolata automaticamente con il nome del database da ripristinare. Per modificare il nome del database, immettere il nome nuovo nella casella **Database** .  
@@ -102,7 +101,7 @@ ms.locfileid: "70154784"
   
         -   **Mantieni le impostazioni di replica (WITH KEEP_REPLICATION)**  
   
-        -   **Limitazione dell'accesso al database ripristinato (con RESTRICTED_USER)**  
+        -   **Limita accesso al database ripristinato (WITH RESTRICTED_USER)**  
   
     2.  Selezionare un'opzione per la casella **Stato di recupero** . Questa casella determina lo stato del database al termine dell'operazione di ripristino.  
   
@@ -123,12 +122,12 @@ ms.locfileid: "70154784"
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Eseguire il backup di un log delle transazioni &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
- [Creazione di un backup completo del database &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)   
- [Ripristinare un database in un nuovo percorso &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)   
+ [Backup di un log delle transazioni &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
+ [Creare un backup completo del database &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)   
+ [Ripristinare un database in una nuova posizione &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)   
  [Ripristinare un backup del log delle transazioni &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Pagina Opzioni di ripristino &#40;database&#41;](restore-database-options-page.md)   
+ [Ripristina database &#40;pagina Opzioni&#41;](restore-database-options-page.md)   
  [Ripristina database &#40;pagina Generale&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
   

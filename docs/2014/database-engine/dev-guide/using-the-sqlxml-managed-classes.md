@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 3f021290-00ee-44e1-af4b-33d3ba8c6302
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ad1756d3943f6a9db68633c59013bcb85037ffa7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 634a0e4110b13931201edd026ee95028cb94e859
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780330"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933192"
 ---
 # <a name="using-the-sqlxml-managed-classes"></a>Utilizzo di classi gestite SQLXML
   In questa sezione vengono fornite applicazioni di esempio in cui viene mostrato come utilizzare le classi gestite [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML.  
   
- Per informazioni sull'accesso e la modifica dei dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] all'interno [!INCLUDE[msCoName](../../includes/msconame-md.md)] del .NET Framework e sull'utilizzo di DiffGram per aggiornare i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dati nelle tabelle, vedere [accesso alla funzionalità SQLXML nell'ambiente .NET](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  
+ Per informazioni sull'accesso e la modifica dei dati all' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interno del [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework e sull'utilizzo di DiffGram per aggiornare i dati nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabelle, vedere [accesso alla funzionalità SQLXML nell'ambiente .NET](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  
   
 > [!NOTE]  
 >  È anche possibile scrivere applicazioni [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio per eseguire il caricamento bulk di documenti XML utilizzando il caricamento bulk XML. Per ulteriori informazioni, vedere [esecuzione del caricamento bulk di dati XML &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md). È necessario aggiungere all'applicazione un riferimento alla DLL del caricamento bulk XML (Xblkld4.dll). Si tratta di una DLL COM per la quale in Visual Studio .NET viene creata automaticamente la libreria di wrapper.  

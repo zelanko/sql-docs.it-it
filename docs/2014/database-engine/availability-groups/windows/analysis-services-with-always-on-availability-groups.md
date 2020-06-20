@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a0ccca3f8c9f6307f9715286a3496002dd7e1278
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbe92bf5f783bb1b71c1020d0ff808aafa0594b8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889229"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937162"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services con i gruppi di disponibilità AlwaysOn
   Un gruppo di disponibilità AlwaysOn è una raccolta predefinita di database relazionali di SQL Server per cui è previsto un failover reciproco quando le condizioni attivano un failover in uno dei database, reindirizzando le richieste a un database con mirroring su un'altra istanza nello stesso gruppo di disponibilità. Se i gruppi di disponibilità vengono utilizzati come soluzione di disponibilità elevata, è possibile utilizzare un database di questo gruppo come origine dati in una soluzione multidimensionale o tabulare di Analysis Services. Tutte le operazioni di Analysis Services elencate di seguito funzionano nel modo previsto quando si utilizza un database di disponibilità: elaborazione o importazione di dati, query dirette su dati relazionali (utilizzando la modalità DirectQuery o l'archiviazione ROLAP) e writeback.  
@@ -55,7 +54,7 @@ ms.locfileid: "68889229"
   
     -   Nell'elenco a discesa **Secondario leggibile** selezionare **Solo finalità di lettura**.  
   
-    -   Nell'elenco a discesa **Connessioni nel ruolo primario** selezionare **Consenti tutte le connessioni**. Questa è la modalità predefinita.  
+    -   Nell'elenco a discesa **Connessioni nel ruolo primario** selezionare **Consenti tutte le connessioni**. Questo è il valore predefinito.  
   
     -   Facoltativamente, nell'elenco a discesa **Modalità di disponibilità** selezionare **Commit sincrono**. Questo passaggio non è obbligatorio, ma assicura la parità dei dati tra la replica primaria e quella secondaria.  
   
@@ -148,7 +147,7 @@ ms.locfileid: "68889229"
   
  L'origine dati è ora definita. È ora possibile procedere alla compilazione di un modello, partendo dalla vista origine dati o, nel caso di modelli tabulari, dalla creazione di relazioni. Quando è il momento di recuperare dati dal database di disponibilità, ad esempio quando si è pronti a elaborare o distribuire la soluzione, è possibile testare la configurazione per verificare che i dati siano accessibili dalla replica secondaria.  
   
-##  <a name="test-the-configuration"></a><a name="bkmk_test"></a> Testare la configurazione  
+##  <a name="test-the-configuration"></a><a name="bkmk_test"></a>Testare la configurazione  
  Dopo avere configurato la replica secondaria e creato una connessione all'origine dati in Analysis Services, è possibile confermare che i comandi di query ed elaborazione vengano reindirizzati alla replica secondaria. È anche possibile eseguire un failover manuale pianificato per verificare il piano di recupero per questo scenario.  
   
 #### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>Passaggio 1: Confermare che la connessione all'origine dati venga reindirizzata alla replica secondaria  
