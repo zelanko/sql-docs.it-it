@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 67d74db6faf9b40ad323ed2948c2c0a596a63016
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 849f1a549a45b9c7e640b536e3f6ebe93a9c1b40
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149746"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054432"
 ---
 # <a name="install-distributed-replay-from-the-command-prompt"></a>Installare Riesecuzione distribuita dal prompt dei comandi
   L'installazione di una nuova istanza di Riesecuzione distribuita dal prompt dei comandi consente di specificare le funzionalità da installare e le relative modalità di configurazione. L'installazione dal prompt dei comandi supporta l'installazione, il ripristino, l'aggiornamento e la disinstallazione dei componenti Riesecuzione distribuita. Quando l'installazione viene eseguita tramite il prompt dei comandi, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è supportata la modalità non interattiva completa tramite il parametro /Q.  
@@ -42,7 +41,7 @@ ms.locfileid: "63149746"
 |/CTLRSVCACCOUNT<br /><br /> **Facoltativo**|Account del servizio per controller di Riesecuzione distribuita.|Vengono controllati l'account e la password|  
 |/CTLRSVCPASSWORD<br /><br /> **Facoltativo**|Password per l'account del servizio controller di Riesecuzione distribuita.|Vengono controllati l'account e la password|  
 |/CTLRSTARTUPTYPE<br /><br /> **Facoltativo**|Tipo di avvio per il servizio controller di Riesecuzione distribuita.|Automatico<br /><br /> Disabled<br /><br /> Manuale|  
-|/CTLRUSERS<br /><br /> **Facoltativo**|Specifica gli utenti che dispongono di autorizzazioni per il servizio controller di Riesecuzione distribuita.|Set di stringhe di account utente in cui vengono usati i caratteri " " (spazio) come delimitatore<br /><br /> **Importante**: quando si configura il servizio controller di Riesecuzione distribuita, è possibile specificare uno o più account utente da utilizzare per eseguire i servizi client Riesecuzione distribuita. Di seguito viene fornito l'elenco degli account supportati:<br /><br /> Account utente di dominio<br /><br /> Account utente locale creato dall'utente<br /><br /> Amministratore<br /><br /> Account virtuale e account del servizio gestito<br /><br /> Servizi di rete, Servizi locali e Sistema<br /><br /> <br /><br /> Gli account di gruppo (locale o dominio) e gli altri account predefiniti (come Everyone) non sono accettati.|  
+|/CTLRUSERS<br /><br /> **Facoltativo**|Specifica gli utenti che dispongono di autorizzazioni per il servizio controller di Riesecuzione distribuita.|Set di stringhe di account utente in cui vengono usati i caratteri " " (spazio) come delimitatore<br /><br /> **Importante**: quando si configura il servizio controller di Riesecuzione distribuita, è possibile specificare uno o più account utente da usare per eseguire i servizi client di Riesecuzione distribuita. Di seguito viene fornito l'elenco degli account supportati:<br /><br /> Account utente di dominio<br /><br /> Account utente locale creato dall'utente<br /><br /> Amministratore<br /><br /> Account virtuale e account del servizio gestito<br /><br /> Servizi di rete, Servizi locali e Sistema<br /><br /> <br /><br /> Gli account di gruppo (locale o dominio) e gli altri account predefiniti (come Everyone) non sono accettati.|  
 |/CLTSVCACCOUNT<br /><br /> **Facoltativo**|Account del servizio per client Riesecuzione distribuita.|Vengono controllati l'account e la password|  
 |/CLTSVCPASSWORD<br /><br /> **Facoltativo**|Password per l'account del servizio client Riesecuzione distribuita.|Vengono controllati l'account e la password|  
 |/CLTSTARTUPTYPE<br /><br /> **Facoltativo**|Tipo di avvio per il servizio client Riesecuzione distribuita.|Automatico<br /><br /> Disabled<br /><br /> Manuale|  

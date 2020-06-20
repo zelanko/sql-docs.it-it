@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 34a35b0e-7bd1-480d-8cc8-00614adae84e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 649ab6329c0bdc2f059b8be0e282e0e68f33e2d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5dec12ec13882f779709295c53f77ebc52b78e3a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061353"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051415"
 ---
 # <a name="tm-begin-tran-starting-event-class"></a>TM: Begin Tran Starting - classe di evento
   La classe di evento TM: Begin Tran Starting indica l'avvio di una richiesta BEGIN TRANSACTION. inviata dal client tramite l'interfaccia di gestione delle transazioni.  
@@ -50,7 +49,7 @@ ms.locfileid: "63061353"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|`bigint`|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-transaction-transact-sql)  
   

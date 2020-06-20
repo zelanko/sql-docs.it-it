@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e9b023db-6944-4035-9a83-300f34a58454
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 49590cafe124410e74c150d228fbc621db93f779
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7e2df6f0c16ce747617af7db180398042fbb30b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023406"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052895"
 ---
 # <a name="log-file-auto-grow-event-class"></a>Log File Auto Grow - classe di evento
   La classe di evento **Log File Auto Grow** indica che le dimensioni del file di log sono aumentate automaticamente. L'evento non viene generato se le dimensioni del file di log vengono incrementate in modo esplicito tramite ALTER DATABASE.  

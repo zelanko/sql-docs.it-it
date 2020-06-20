@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d33ff37caca04f46edd6ad92d0686713829bb270
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196433"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061521"
 ---
 # <a name="create-indexed-views"></a>Creazione di viste indicizzate
   In questo argomento si illustra come creare una vista indicizzata in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il primo indice creato per una vista deve essere un indice cluster univoco. Dopo aver creato l'indice cluster univoco, è possibile creare più indici non cluster. La creazione di un indice cluster univoco per una vista consente un miglioramento delle prestazioni delle query, in quanto la vista viene archiviata nel database in modo analogo a una tabella con un indice cluster. Le viste indicizzate possono essere usate da Query Optimizer per velocizzare l'esecuzione delle query. Non è necessario fare riferimento alla vista nella query affinché venga usata da Query Optimizer per una sostituzione.  
@@ -55,7 +54,7 @@ ms.locfileid: "68196433"
   
 -   Quando la vista indicizzata viene usata in Query Optimizer per generare il piano di query.  
   
-    |Opzioni SET|Valore richiesto|Valore server predefinito|Impostazione predefinita<br /><br /> OLE DB e ODBC predefinito|Impostazione predefinita<br /><br /> DB-Library predefinito|  
+    |Opzioni SET|Valore obbligatorio|Valore server predefinito|Predefinito<br /><br /> OLE DB e ODBC predefinito|Predefinito<br /><br /> DB-Library predefinito|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ATTIVA|ATTIVA|ON|OFF|  
@@ -116,7 +115,7 @@ ms.locfileid: "68196433"
     |COUNT|Funzioni ROWSET (OPENDATASOURCE, OPENQUERY, OPENROWSET E OPENXML)|OUTER join (LEFT, RIGHT o FULL)|  
     |Tabella derivata (definita specificando un'istruzione SELECT nella clausola FROM)|Self-join|Specifica delle colonne tramite SELECT \* o SELECT *nome_tabella*.*|  
     |DISTINCT|STDEV, STDEVP, VAR, VARP o AVG|Espressione di tabella comune (CTE)|  
-    |`float`\*colonne `text`, `ntext`, `image`, `XML`, o `filestream`|Sottoquery|La clausola OVER, che include funzioni di rango o funzioni finestra di aggregazione|  
+    |`float`\*colonne,, `text` `ntext` , `image` , `XML` o `filestream`|Sottoquery|La clausola OVER, che include funzioni di rango o funzioni finestra di aggregazione|  
     |Predicati full-text (CONTAIN, FREETEXT)|Funzione SUM che fa riferimento a un'espressione che ammette i valori Null|ORDER BY|  
     |Funzione di aggregazione CLR definita dall'utente|TOP|Operatori CUBE, ROLLUP o GROUPING SETS|  
     |MIN, MAX|Operatori UNION, EXCEPT o INTERSECT|TABLESAMPLE|  
@@ -124,7 +123,7 @@ ms.locfileid: "68196433"
     |Set di colonne di tipo sparse|Funzioni inline o a più istruzioni con valori di tabella|OFFSET|  
     |CHECKSUM_AGG|||  
   
-     \*La vista indicizzata può contenere `float` colonne; tali colonne, tuttavia, non possono essere incluse nella chiave di indice cluster.  
+     \*La vista indicizzata può contenere `float` colonne. tali colonne, tuttavia, non possono essere incluse nella chiave di indice cluster.  
   
 -   Se è presente la clausola GROUP BY, la definizione di VIEW deve contenere COUNT_BIG(*) e non deve contenere HAVING. Queste restrizioni relative alla clausola GROUP BY vengono applicate solo alla definizione della vista indicizzata. Una query può usare una vista indicizzata nel relativo piano di esecuzione anche se non soddisfa tali restrizioni.  
   
@@ -210,7 +209,7 @@ ms.locfileid: "68196433"
   
  Per altre informazioni, vedere [CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
  [IMPOSTA ANSI_NULLS &#40;&#41;Transact-SQL](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
  [IMPOSTA ANSI_PADDING &#40;&#41;Transact-SQL](/sql/t-sql/statements/set-ansi-padding-transact-sql)   

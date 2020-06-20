@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 49828927-1727-4d1d-9ef5-3de43f68c026
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e64bf4d4642d8091cd0892283a996e7dccc56e26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67eee8d7d6f44c9ff83795bf2a8bd612309bf0a5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62877145"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958989"
 ---
 # <a name="complete-database-restores-simple-recovery-model"></a>Ripristini di database completi (modello di recupero con registrazione minima)
   L'obiettivo di un ripristino completo del database è il ripristino dell'intero database. L'intero database è offline per la tutta la durata del ripristino. Prima che sia possibile portare online una o più parti del database, tutti i dati vengono recuperati fino a un punto coerente in cui tutte le parti del database sono aggiornate allo stesso punto nel tempo e non sono presenti transazioni di cui non è stato eseguito il commit.  
@@ -113,11 +112,11 @@ GO
   
 
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [sp_addumpdevice &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
- [Backup completi del database &#40;SQL Server&#41;](full-database-backups-sql-server.md)   
+ [sp_addumpdevice &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
+ [Backup completo del database &#40;SQL Server&#41;](full-database-backups-sql-server.md)   
  [Backup differenziali &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Panoramica del backup &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [Panoramica del ripristino e del recupero &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  

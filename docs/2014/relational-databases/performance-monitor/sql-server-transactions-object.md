@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c7dffaac161a61496c296ec99ec1f9ad2e1951a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 921f8cde043bab21a0ef2d2a54440b07a826a52c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63182996"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038663"
 ---
 # <a name="sql-server-transactions-object"></a>Oggetto Transactions di SQL Server
   L'oggetto **Transactions** , disponibile in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , include i contatori per il monitoraggio del numero di transazioni attive in un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)], nonché per valutare gli effetti di tali transazioni sulle risorse, ad esempio l'archivio delle versioni di riga del livello di isolamento dello snapshot in **tempdb**. Le transazioni sono unità logiche di lavoro. Per salvaguardare l'integrità logica dei dati, l'intero set di operazioni deve essere eseguito correttamente o cancellato da un database. Le transazioni vengono utilizzate per tutte le modifiche apportate ai dati nei database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -45,7 +44,7 @@ ms.locfileid: "63182996"
 |**Creazione unità archivio versioni**|Numero di unità di allocazione create nell'archivio delle versioni di riga del livello di isolamento snapshot dall'avvio dell'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|  
 |**Troncamento unità archivio versioni**|Numero di unità di allocazione rimosse dall'archivio delle versioni di riga del livello di isolamento snapshot dall'avvio dell'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Monitorare l'utilizzo delle risorse &#40;Monitor di sistema&#41;](monitor-resource-usage-system-monitor.md)  
   
   

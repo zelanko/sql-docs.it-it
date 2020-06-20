@@ -2,7 +2,6 @@
 title: Novità
 description: Vedere Novità di piattaforma di strumenti analitici Microsoft, un'appliance locale con scalabilità orizzontale che ospita MPP SQL Server data warehouse parallele.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
@@ -10,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: faf3bd1f487fb5c850759fdde3ddecd32bdd3b1f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e609beb77b92a6dbaf95f39bf5a2a6971a7ae5c4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80625544"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039827"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Novità del sistema di piattaforma di analisi, un MPP con scalabilità orizzontale data warehouse
 Vedere Novità degli aggiornamenti più recenti degli appliance per piattaforma di strumenti analitici Microsoft (APS). APS è un'appliance locale con scalabilità orizzontale che ospita MPP SQL Server data warehouse parallele. 
@@ -263,7 +262,7 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [BULK INSERT]:/sql/t-sql/statements/bulk-insert-transact-sql
 [Utilità bcp]:/sql/tools/bcp-utility
 [UNIQUEIDENTIFIER]:/sql/t-sql/data-types/uniqueidentifier-transact-sql
-[NUMERIC]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
+[NUMERICO]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
 [RIGHE o intervallo]:/sql/t-sql/queries/select-over-clause-transact-sql
 [FIRST_VALUE]:/sql/t-sql/functions/first-value-transact-sql
 [LAST_VALUE]:/sql/t-sql/functions/last-value-transact-sql

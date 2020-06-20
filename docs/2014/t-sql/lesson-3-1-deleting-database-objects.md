@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: dbb94fdf-c85b-477b-8e84-f830d259bade
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a23d307cc33e5b8e59111819b245bc9df1df67df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6bd69935dbfac020c4c75bb391e7932009fd4197
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63063119"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054558"
 ---
 # <a name="deleting-database-objects"></a>Eliminazione degli oggetti di database
   Per rimuovere completamente tutte le tracce di questa esercitazione, è sufficiente eliminare il database. In questo argomento verranno comunque illustrate le procedure per annullare ogni azione eseguita nell'ambito dell'esercitazione.  
@@ -102,7 +101,7 @@ ms.locfileid: "63063119"
 ## <a name="return-to-sql-server-tools-portal"></a>Torna al portale degli strumenti di SQL Server  
  [Esercitazione: Scrittura di istruzioni Transact-SQL](tutorial-writing-transact-sql-statements.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Revoke &#40;&#41;Transact-SQL](/sql/t-sql/statements/revoke-transact-sql)   
  [DROP USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-user-transact-sql)   
  [DROP LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-login-transact-sql)   

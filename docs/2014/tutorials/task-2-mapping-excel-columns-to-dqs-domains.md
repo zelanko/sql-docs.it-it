@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: f347cc92-950f-4021-b7af-393640dfe821
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 29d45e06dcd3e67af3abbc6b356d44877e40f46b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 646204e2c40c09ac0fac9259f5acc43c7f422894
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484698"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006649"
 ---
 # <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>Attività 2: Mapping delle colonne di Excel ai domini DQS
     
 1.  Nella pagina **Mappa** selezionare **File di Excel** per **Origine dati**.  
   
-2.  Fare clic su **Sfoglia**, selezionare **Suppliers. xlsx**, quindi fare clic su **Apri**.  
+2.  Fare clic su **Sfoglia**, selezionare **Suppliers.xlsx**e fare clic su **Apri**.  
   
 3.  Selezionare **IncomingSuppliers $** per il **foglio di foglio**.  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7aa2eb52-b6b7-4dd3-8483-8ef00d9f0435
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 35399614c69d63f3d7daae2a64f670d7ccfbaef0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f3a9bd579441c1838d911ffdca94dd7c1ac16bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021660"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068497"
 ---
 # <a name="publication-information-warnings-snapshot-publication-sql-server-2005-and-later"></a>Informazioni sulla pubblicazione, Avvisi (pubblicazione snapshot, SQL Server 2005 e versioni successive)
   La scheda **Avvisi** è disponibile per i server di distribuzione che eseguono [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. La scheda **Avvisi** consente di eseguire le attività seguenti per la pubblicazione selezionata:  

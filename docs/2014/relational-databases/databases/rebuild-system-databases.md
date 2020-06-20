@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b58378e8ba2193a186fb58e3e784bf9bc3cb4d4c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a273f23d0b5f9bf21f20bc17427c7a2dc3f82ae8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871278"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965819"
 ---
 # <a name="rebuild-system-databases"></a>Ricompilare database di sistema
   Il processo di ricompilazione deve essere eseguito per correggere problemi di danneggiamento nei database di sistema [master](master-database.md), [model](model-database.md), [msdb](msdb-database.md)e [resource](resource-database.md) oppure per modificare le regole di confronto predefinite a livello di server. In questo argomento sono incluse istruzioni dettagliate per la ricompilazione di database di sistema in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -105,8 +104,8 @@ ms.locfileid: "62871278"
     |/ACTION=REBUILDDATABASE|Specifica che il programma di installazione dovrà ricreare i database di sistema.|  
     |/INSTANCENAME =*NomeIstanza*|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per l'istanza predefinita, immettere MSSQLSERVER.|  
     |/SQLSYSADMINACCOUNTS=*accounts*|Specifica i gruppi o i singoli account di Windows da aggiungere al ruolo predefinito del server `sysadmin`. Se si specificano più account, separarli con uno spazio. Ad esempio, immettere **BUILTIN\Administrators MyDomain\MyUser**. Quando si specifica un account che contiene uno spazio vuoto all'interno del nome dell'account, racchiudere l'account tra doppie virgolette. Immettere ad esempio `NT AUTHORITY\SYSTEM`.|  
-    |[ /SAPWD=*StrongPassword* ]|Specifica la password per l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` account. Questo parametro è necessario se l'istanza usa la modalità autenticazione mista (autenticazione di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di Windows).<br /><br /> ** \* Nota sulla sicurezza \* \* ** L' `sa` account è un account noto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed è spesso indirizzato da utenti malintenzionati. È estremamente importante utilizzare una password complessa per l'accesso all'account `sa`.<br /><br /> Non specificare questo parametro per la modalità di autenticazione di Windows.|  
-    |[ /SQLCOLLATION=*CollationName* ]|Vengono specificate nuove regole di confronto a livello di server. Questo parametro è facoltativo e, Se non viene specificato, verranno utilizzate le regole di confronto correnti del server.<br /><br /> ** \* Importante \* \* ** La modifica delle regole di confronto a livello di server non comporta la modifica delle regole di confronto dei database utente esistenti. Tutti i nuovi database utente creati utilizzeranno le nuove regole di confronto per impostazione predefinita.<br /><br /> Per altre informazioni, vedere [Impostare o modificare le regole di confronto del server](../collations/set-or-change-the-server-collation.md).|  
+    |[ /SAPWD=*StrongPassword* ]|Specifica la password per l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` account. Questo parametro è necessario se l'istanza usa la modalità autenticazione mista (autenticazione di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di Windows).<br /><br /> Nota sulla sicurezza l'account è ** \* un account noto ed \* è spesso indirizzato da utenti malintenzionati. \* \* ** `sa` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] È estremamente importante utilizzare una password complessa per l'accesso all'account `sa`.<br /><br /> Non specificare questo parametro per la modalità di autenticazione di Windows.|  
+    |[ /SQLCOLLATION=*CollationName* ]|Vengono specificate nuove regole di confronto a livello di server. Questo parametro è facoltativo e, Se non viene specificato, verranno utilizzate le regole di confronto correnti del server.<br /><br /> Importante la modifica delle regole di confronto a livello di server non comporta la modifica delle regole di confronto dei database utente esistenti. ** \* \* \* \* ** Tutti i nuovi database utente creati utilizzeranno le nuove regole di confronto per impostazione predefinita.<br /><br /> Per altre informazioni, vedere [Impostare o modificare le regole di confronto del server](../collations/set-or-change-the-server-collation.md).|  
   
 3.  Al termine della ricompilazione dei database di sistema, verrà visualizzato di nuovo il prompt dei comandi senza messaggi. Esaminare il file di log Summary.txt per verificare che il processo sia stato completato correttamente. Il percorso di questo file è C:\Programmi\Microsoft SQL Server\120\Setup Bootstrap\Logs.  
   
@@ -142,7 +141,7 @@ ms.locfileid: "62871278"
   
 4.  Nella pagina Seleziona istanza selezionare l'istanza da ripristinare, quindi fare clic su **Avanti**.  
   
-5.  Verranno eseguite le regole di ripristino per convalidare l'operazione. Per continuare, fare clic su **Avanti**.  
+5.  Verranno eseguite le regole di ripristino per convalidare l'operazione. Scegliere **Avanti**per continuare.  
   
 6.  Nella pagina **Ripristino** scegliere **Ripristina**. Nella pagina Operazione completata è indicato che l'operazione è stata completata.  
   
@@ -150,7 +149,7 @@ ms.locfileid: "62871278"
  Se il `msdb` database è danneggiato e non si dispone di un backup del `msdb` database, è possibile crearne uno nuovo `msdb` tramite lo script **lo instmsdb comporterà** .  
   
 > [!WARNING]  
->  La ricompilazione `msdb` del database tramite lo script **lo instmsdb comporterà** eliminerà tutte le informazioni archiviate in `msdb` , ad esempio processi, avvisi, operatori, piani di manutenzione, cronologia di backup, impostazioni della gestione basata su criteri, posta elettronica database, prestazioni data warehouse e così via.  
+>  La ricompilazione del `msdb` database tramite lo script **lo instmsdb comporterà** eliminerà tutte le informazioni archiviate in `msdb` , ad esempio processi, avvisi, operatori, piani di manutenzione, cronologia di backup, impostazioni della gestione basata su criteri, posta elettronica database, prestazioni data warehouse e così via.  
   
 1.  Arrestare tutti i servizi che si connettono al [!INCLUDE[ssDE](../../includes/ssde-md.md)], tra cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, [!INCLUDE[ssRS](../../includes/ssrs.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)]e tutte le applicazioni in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene utilizzato come archivio dati.  
   
@@ -158,15 +157,15 @@ ms.locfileid: "62871278"
   
      Per altre informazioni, vedere [Avviare, arrestare, sospendere, riprendere, riavviare i servizi SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
-3.  In un'altra finestra della riga di comando `msdb` scollegare il database eseguendo il comando seguente, sostituendo * \<ServerName>* con l'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di:`SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
+3.  In un'altra finestra della riga di comando scollegare il `msdb` database eseguendo il comando seguente, sostituendo *\<servername>* con l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :`SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   
-4.  Utilizzando Esplora risorse, rinominare i file `msdb` di database. Per impostazione predefinita, tali file si trovano nella sottocartella DATA per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+4.  Utilizzando Esplora risorse, rinominare i `msdb` file di database. Per impostazione predefinita, tali file si trovano nella sottocartella DATA per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 5.  Utilizzando Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , arrestare e riavviare normalmente il servizio [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 6.  In una finestra della riga di comando connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed eseguire il comando `SQLCMD -E -S<servername> -i"C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Install\instmsdb.sql" -o" C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Install\instmsdb.out"`  
   
-     Sostituire * \<ServerName>* con l'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Utilizzare il percorso del file system dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Sostituire *\<servername>* con l'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Utilizzare il percorso del file system dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 7.  Tramite Blocco note di Windows, aprire il file **instmsdb.out** e verificare la presenza di eventuali errori nell'output.  
   
@@ -189,7 +188,7 @@ ms.locfileid: "62871278"
   
  Al termine dell'operazione di ricompilazione, esaminare i log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per rilevare eventuali errori. Il percorso predefinito dei log è C:\Programmi\Microsoft SQL Server\120\Setup Bootstrap\Logs. Per individuare il file di log che contiene i risultati del processo di ricompilazione, passare alla cartella Logs dal prompt dei comandi, quindi eseguire `findstr /s RebuildDatabase summary*.*`. Con questa ricerca sarà possibile trovare tutti i file di log che contengono i risultati della ricompilazione dei database di sistema. Aprire i file di log ed esaminare i messaggi di errore pertinenti.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Database di sistema](system-databases.md)  
   
   

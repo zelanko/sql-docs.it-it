@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ae4bcd90b17228283859e2dd1a2897406e8ea95f
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 731ddbf67450c917387df7e104d138c0b35df2d6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82924775"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934846"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>Configurare SQL Server per l'utilizzo di Soft-NUMA (SQL Server)
 I processori moderni sono costituiti da multipli a molti core per socket. Ogni socket è solitamente rappresentato come un unico nodo NUMA. Il motore di database di SQL Server suddivide le varie strutture interne e i thread del servizio per nodo NUMA. Con i processori che contengono 10 o più core per socket, l'uso di software NUMA (soft-NUMA) per suddividere i nodi NUMA hardware in genere aumenta la scalabilità e le prestazioni.   

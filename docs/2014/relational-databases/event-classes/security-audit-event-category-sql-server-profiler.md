@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9f2f854c7a6dbd0d1ab569f87bf053a5b9f45058
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81b07c1eb33176533cedbf0d02a71a264419b11e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044218"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052553"
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Categoria di eventi Security Audit (SQL Server Profiler)
   La categoria di eventi **Security Audit** include gli eventi relativi ai controlli di sicurezza.  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9b7865b3b928c6c6291fdd7cb419b76cae8f1e8b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 94100894323d8d15057c966f3298cf4e7d32c469
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82699895"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018401"
 ---
 # <a name="binding-parameters"></a>Associazione di parametri
   Ogni marcatore di parametro in un'istruzione SQL deve essere associato a una variabile nell'applicazione prima di eseguire l'istruzione. Questa operazione viene eseguita chiamando la funzione [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) . **SQLBindParameter** descrive la variabile di programma (indirizzo, tipo di dati C e così via) al driver. La funzione identifica inoltre il marcatore di parametro specificandone il valore ordinale e quindi descrive le caratteristiche dell'oggetto SQL rappresentato (tipo di dati SQL, precisione e così via).

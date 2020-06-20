@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 95692fd0ecf365f1fb54c8c1c3a090227b0d9a38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfa1c9265af255c3dc901bf931e7b70528f2ec64
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721753"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038293"
 ---
 # <a name="replication-agent-profiles"></a>Profili degli agenti di replica
   Durante la configurazione della replica viene installato nel server di distribuzione un set di profili agenti. Un profilo agente contiene un set di parametri utilizzati a ogni esecuzione dell'agente. Durante il processo di avvio ogni agente esegue l'accesso al server di distribuzione ed esegue una query dei parametri nel proprio profilo. Nelle sottoscrizioni di tipo merge che utilizzano la sincronizzazione tramite il Web, i profili vengono scaricati e archiviati nel Sottoscrittore. Se il profilo viene modificato, il profilo nel Sottoscrittore viene aggiornato alla successiva esecuzione dell'agente di merge. Per ulteriori informazioni sulla sincronizzazione Web, vedere [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md).  

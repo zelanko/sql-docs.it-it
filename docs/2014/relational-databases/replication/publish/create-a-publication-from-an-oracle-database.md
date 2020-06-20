@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 61f7e509b715b1156b06362f8e9bcd4a634de0c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29e299e6f2a3b271fe682b319a2f22a671cbd19d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63020863"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037969"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>Creazione di una pubblicazione da un database Oracle
   In questo argomento viene descritto come creare una pubblicazione da un database Oracle in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -44,7 +43,7 @@ ms.locfileid: "63020863"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  Creare una pubblicazione snapshot o transazionale da un database Oracle con la Creazione guidata nuova pubblicazione.  
   
- La prima volta che si crea una pubblicazione da un database Oracle, è necessario identificare il server di pubblicazione Oracle nel database di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Non è necessario ripetere l'operazione per le pubblicazioni successive provenienti dallo stesso database. L'identificazione del server di pubblicazione Oracle può essere effettuata tramite la Creazione guidata nuova pubblicazione o nella finestra di dialogo **Proprietà database di distribuzione - \<DatabaseDistribuzione>** . In questo argomento viene illustrata la finestra di dialogo **Proprietà database di distribuzione - \<DatabaseDistribuzione>** .  
+ La prima volta che si crea una pubblicazione da un database Oracle, è necessario identificare il server di pubblicazione Oracle nel database di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Non è necessario ripetere l'operazione per le pubblicazioni successive provenienti dallo stesso database. L'identificazione del server di pubblicazione Oracle può essere eseguita tramite la creazione guidata nuova pubblicazione o la finestra di dialogo Proprietà database di **distribuzione- \<Distributor> ** . in questo argomento viene illustrata la finestra di dialogo Proprietà database di **distribuzione- \<Distributor> ** .  
   
 #### <a name="to-identify-the-oracle-publisher-at-the-sql-server-distributor"></a>Per identificare il server di pubblicazione Oracle nel server di distribuzione SQL Server  
   
@@ -52,7 +51,7 @@ ms.locfileid: "63020863"
   
 2.  Fare clic con il pulsante destro del mouse sulla cartella **Replica** e quindi scegliere **Proprietà server di distribuzione**.  
   
-3.  Nella pagina **Server di pubblicazione** della finestra di dialogo **Proprietà database di distribuzione - \<DatabaseDistribuzione>** fare clic su **Aggiungi** e quindi su **Aggiungi server di pubblicazione Oracle**.  
+3.  Nella pagina server di **pubblicazione** della finestra di dialogo Proprietà database di **distribuzione- \<Distributor> ** fare clic su **Aggiungi**e quindi su **Aggiungi server di pubblicazione Oracle**.  
   
 4.  Nella finestra di dialogo **Connetti al server** fare clic sul pulsante **Opzioni** .  
   
@@ -70,7 +69,7 @@ ms.locfileid: "63020863"
   
      L'opzione **Completa** è progettata per offrire pubblicazioni snapshot e transazionali con il set completo di caratteristiche supportate per la pubblicazione Oracle. L'opzione **Gateway** consente l'ottimizzazione della progettazione specifica per migliorare le prestazioni per i casi in cui la replica funge da gateway tra i sistemi. Non è possibile utilizzare l'opzione **Gateway** se si intende pubblicare la stessa tabella in più pubblicazioni transazionali. Se si seleziona **Gateway**, una tabella può essere presente al massimo in una pubblicazione transazionale e in un numero qualsiasi di pubblicazioni snapshot.  
   
-7.  Fare clic su **Connetti**per creare una connessione al server di pubblicazione Oracle e configurarla per la replica. La finestra di dialogo **Connetti al server** verrà chiusa e verrà visualizzata di nuovo la finestra di dialogo **Proprietà database di distribuzione - \<DatabaseDistribuzione>** .  
+7.  Fare clic su **Connetti**per creare una connessione al server di pubblicazione Oracle e configurarla per la replica. La finestra di dialogo **Connetti al server** si chiude e si torna alla finestra di dialogo Proprietà database di ** \<Distributor> distribuzione-** .  
   
     > [!NOTE]  
     >  Se si verificano problemi con la configurazione di rete, a questo punto verrà visualizzato un errore. Se si verificano problemi durante la connessione al database Oracle, vedere la sezione relativa all'impossibilità di connessione del server di distribuzione SQL Server all'istanza del database Oracle in [Troubleshooting Oracle Publishers](../non-sql/troubleshooting-oracle-publishers.md).  
@@ -114,7 +113,7 @@ ms.locfileid: "63020863"
   
 2.  Se non esiste un server di distribuzione remoto, configurarlo. Per altre informazioni, vedere [Configure Publishing and Distribution](../configure-publishing-and-distribution.md).  
   
-3.  Nel server di distribuzione remoto che verrà usato dal server di pubblicazione Oracle, eseguire [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql). Specificare il nome TNS (Transparent Network Substrate) dell'istanza del **@publisher** database Oracle per e `ORACLE` il `ORACLE GATEWAY` valore **@publisher_type**o per. `Specify` la modalità di sicurezza utilizzata per la connessione dal server di pubblicazione Oracle al database di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] remoto. I possibili valori sono i seguenti:  
+3.  Nel server di distribuzione remoto che verrà usato dal server di pubblicazione Oracle, eseguire [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql). Specificare il nome TNS (Transparent Network Substrate) dell'istanza del database Oracle per **@publisher** e il valore `ORACLE` o `ORACLE GATEWAY` per **@publisher_type** . `Specify` la modalità di sicurezza utilizzata per la connessione dal server di pubblicazione Oracle al database di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] remoto. I possibili valori sono i seguenti:  
   
     -   Per utilizzare l'autenticazione standard di Oracle, che corrisponde all'impostazione predefinita, specificare il valore **0** per **@security_mode**, l'account di accesso dello schema utente di amministrazione della replica creato nel server di pubblicazione Oracle durante la configurazione per **@login**e la password per **@password**.  
   
@@ -128,18 +127,18 @@ ms.locfileid: "63020863"
   
 4.  Creare un processo dell'agente di lettura log per il database di pubblicazione.  
   
-    -   Per sapere se un processo dell'agente di lettura log esiste per un database pubblicato, eseguire [sp_helplogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql) nel database di distribuzione del server di distribuzione usato dal server di pubblicazione Oracle. Specificare il nome del server di pubblicazione Oracle **@publisher**per. Se il set di risultati è vuoto, sarà necessario creare un processo dell'agente di lettura log.  
+    -   Per sapere se un processo dell'agente di lettura log esiste per un database pubblicato, eseguire [sp_helplogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql) nel database di distribuzione del server di distribuzione usato dal server di pubblicazione Oracle. Specificare il nome del server di pubblicazione Oracle per **@publisher** . Se il set di risultati è vuoto, sarà necessario creare un processo dell'agente di lettura log.  
   
     -   Se per il database di pubblicazione esiste già un processo dell'agente di lettura log, procedere con il passaggio 5.  
   
-    -   Nel database di distribuzione del server di distribuzione usato dal server di pubblicazione Oracle eseguire [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Specificare le credenziali di Windows utilizzate per l'esecuzione dell' **@job_login** agente **@job_password**per e.  
+    -   Nel database di distribuzione del server di distribuzione usato dal server di pubblicazione Oracle eseguire [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Specificare le credenziali di Windows utilizzate per l'esecuzione dell'agente per **@job_login** e **@job_password** .  
   
         > [!NOTE]  
         >  Il **@job_login** parametro deve corrispondere all'account di accesso specificato nel passaggio 3. Non specificare informazioni sulla sicurezza del server di pubblicazione. L'agente di lettura log si connette al server di pubblicazione utilizzando le informazioni sulla sicurezza specificate al passaggio 3.  
   
 5.  Nel database di distribuzione del server di distribuzione eseguire [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) per creare la pubblicazione. Per altre informazioni, vedere [Create a Publication](create-a-publication.md).  
   
-6.  Nel database di distribuzione del server di distribuzione eseguire [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Specificare il nome della pubblicazione usato nel passaggio 4 **@publication** per e le credenziali di Windows con cui viene eseguito **@job_name** il **@password**agente di snapshot per e. Per utilizzare l'autenticazione standard di Oracle per la connessione al server di pubblicazione, è inoltre necessario specificare il valore **0** per **@publisher_security_mode** e le informazioni sull'account di accesso di Oracle per **@publisher_login** e **@publisher_password**. Verrà creato un processo dell'agente snapshot per la pubblicazione.  
+6.  Nel database di distribuzione del server di distribuzione eseguire [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Specificare il nome della pubblicazione usato nel passaggio 4 per **@publication** e le credenziali di Windows con cui viene eseguito il agente di snapshot per **@job_name** e **@password** . Per utilizzare l'autenticazione standard di Oracle per la connessione al server di pubblicazione, è inoltre necessario specificare il valore **0** per **@publisher_security_mode** e le informazioni sull'account di accesso di Oracle per **@publisher_login** e **@publisher_password**. Verrà creato un processo dell'agente snapshot per la pubblicazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare un server di pubblicazione Oracle](../non-sql/configure-an-oracle-publisher.md)   

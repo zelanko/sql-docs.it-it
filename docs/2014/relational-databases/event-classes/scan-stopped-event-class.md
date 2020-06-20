@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b6b20ae9-aebb-454a-b639-6b7bb2f9339b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e287ae5f70ebe325e207d7c1fe593b60a1223f44
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95936887916554f4fd5e18bdff890b7598d32cca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044241"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052632"
 ---
 # <a name="scanstopped-event-class"></a>Scan:Stopped - classe di evento
   La classe di evento Scan:Stopped viene generata quando l'analisi di una tabella o di un indice si arresta.  
@@ -52,7 +51,7 @@ ms.locfileid: "63044241"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|`bigint`|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

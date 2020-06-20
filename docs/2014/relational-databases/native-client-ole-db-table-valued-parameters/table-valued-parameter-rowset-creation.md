@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eee3452c109bcd519cb24ba96b621ec25c0110df
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a4ebbf6e83524988822b6158b3524d7fff4bb40e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704590"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018208"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>Creazione di un set di righe di parametri con valori di tabella
   Sebbene i consumer siano in grado di fornire qualsiasi oggetto set di righe per i parametri con valori di tabella, vengono implementati gli oggetti set di righe tipici rispetto agli archivi dati di back-end, con conseguente limitazione delle prestazioni. Per questo motivo, il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client consente ai consumer di creare un oggetto set di righe specializzato nei dati in memoria. Questo speciale oggetto set di righe in memoria è un nuovo oggetto COM denominato set di righe di parametri con valori di tabella. Tale oggetto fornisce funzionalità simili ai set di parametri.  

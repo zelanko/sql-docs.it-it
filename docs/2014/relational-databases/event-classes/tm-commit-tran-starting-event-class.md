@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e1ac37e-6093-4dc9-9e5d-4270db18b547
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f53d8731ff9d5ef2484b652fc1c7c673ba9b3984
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 82a806dd6beefe98094c4ba1d43ae0ae318aa16c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061363"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051413"
 ---
 # <a name="tm-commit-tran-starting-event-class"></a>TM: Commit Tran Starting - classe di evento
   La classe di evento TM: Commit Tran Starting indica l'avvio di una richiesta COMMIT TRANSACTION. inviata dal client tramite l'interfaccia di gestione delle transazioni. La colonna EventSubClass indica se, in seguito al commit della transazione corrente, verrà avviata una nuova transazione.  
@@ -51,7 +50,7 @@ ms.locfileid: "63061363"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|`bigint`|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [COMMIT TRANSACTION &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/commit-transaction-transact-sql)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

@@ -33,13 +33,12 @@ helpviewer_keywords:
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b87c66eab08243a6339f1eb2bc1912e469f2b80
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5087a925ac163281f4326a5f952c11ce2953c6dd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76929910"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965951"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server-instance-sql-server"></a>Gestione dei metadati quando si rende disponibile un database in un'altra istanza del server (SQL Server)
   Le informazioni contenute in questo argomento sono relative alle situazioni seguenti:  
@@ -124,7 +123,7 @@ ms.locfileid: "76929910"
 ##  <a name="database-ownership"></a><a name="database_ownership"></a>Proprietà del database  
  Quando un database viene ripristinato in un altro computer, l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o l'utente di Windows che ha iniziato l'operazione di ripristino diventa automaticamente il proprietario del nuovo database. Al momento del ripristino, l'amministratore di sistema o il nuovo proprietario del database possono modificare il proprietario del database.  
   
-##  <a name="distributed-queries-and-linked-servers"></a><a name="distributed_queries_and_linked_servers"></a>Query distribuite e server collegati  
+##  <a name="distributed-queries-and-linked-servers"></a><a name="distributed_queries_and_linked_servers"></a> Query distribuite e server collegati  
  Le query distribuite e i server collegati sono supportati per le applicazioni OLE DB. Le query distribuite consentono di accedere ai dati da più origini di dati eterogenee nello stesso computer o in computer diversi. Una configurazione con server collegati consente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di eseguire comandi su origini dei dati OLE DB in server remoti. Per altre informazioni su queste funzionalità, vedere [Server collegati &#40;Motore di database&#41;](../linked-servers/linked-servers-database-engine.md).  
   
  [&#91;Torna all'inizio&#93;](#information_entities_and_objects)  
@@ -354,8 +353,8 @@ ms.locfileid: "76929910"
   
 ## <a name="see-also"></a>Vedere anche  
  [Database indipendenti](contained-databases.md)   
- [Copiare database in altri server](copy-databases-to-other-servers.md)   
- [Scollegamento e collegamento del database &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
+ [Copia di database in altri server](copy-databases-to-other-servers.md)   
+ [Collegamento e scollegamento di un database &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
  [Eseguire il failover a un &#40;secondario per il log shipping SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)   
  [Cambio di ruolo durante una sessione di mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Configurare un database mirror crittografato](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   

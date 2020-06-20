@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5fb76e62e1816be53c312cc263053f854ad3b796
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3f3fb5f308195a5e0b2ecd58e50a4c1c6da25fe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62625931"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068796"
 ---
 # <a name="add-or-edit-join"></a>Aggiungi join o Modifica join
   Le finestre di dialogo **Aggiungi join** e **Modifica join** consentono di aggiungere e modificare filtri join per le pubblicazioni di tipo merge.  
@@ -45,7 +44,7 @@ ms.locfileid: "62625931"
   
     -   Se si aggiunge un nuovo join, selezionare l'opzione **Per creare l'istruzione verrà utilizzato il generatore** o l'opzione **L'istruzione per il join verrà scritta manualmente**. Se si inizia a scrivere manualmente il join non è possibile utilizzare il generatore.  
   
-         Se si sceglie di utilizzare il generatore, utilizzare le colonne della griglia, ovvero**Congiunzione**, **Colonna tabella filtrata**, **Operatore**e **Colonna tabella unita in join**, per compilare un'istruzione per il join. Ogni colonna della griglia contiene un elenco a discesa che consente di selezionare due colonne e un operatore, ovvero **=** , **<>** , **<=** , **\<** , **>=** , **>** , **like**. I risultati vengono visualizzati nell'area di testo **Anteprima** . Se il join include più di una coppia di colonne, selezionare una congiunzione, ovvero**AND** o **OR**, nella colonna **Congiunzione** e quindi digitare altre due colonne e un altro operatore.  
+         Se si sceglie di utilizzare il generatore, utilizzare le colonne della griglia, ovvero**Congiunzione**, **Colonna tabella filtrata**, **Operatore**e **Colonna tabella unita in join**, per compilare un'istruzione per il join. Ogni colonna della griglia contiene un elenco a discesa che consente di selezionare due colonne e un operatore ( **=** ,, **<>** **<=** , **\<**, **>=** , **>** , ad **esempio**). I risultati vengono visualizzati nell'area di testo **Anteprima** . Se il join include più di una coppia di colonne, selezionare una congiunzione, ovvero**AND** o **OR**, nella colonna **Congiunzione** e quindi digitare altre due colonne e un altro operatore.  
   
          Se si sceglie di scrivere manualmente l'istruzione per il join, digitarla nell'area di testo **Istruzione per il join** . Utilizzare le caselle di riepilogo **Colonne tabella filtrata** e **Colonne tabella unita in join** per trascinare le colonne selezionate nell'area di testo **Istruzione per il join** .  
   

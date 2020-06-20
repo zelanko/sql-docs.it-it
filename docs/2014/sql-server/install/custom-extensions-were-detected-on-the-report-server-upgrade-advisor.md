@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fa184bd7-11d6-4ea3-9249-bc1b13db49e5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: f985f41104dd194d851760c3d1c3e5479a65b7e8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2149e0434c13ccc9e284385999cf94c98fb937fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952590"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059382"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>Estensioni personalizzate rilevate nel server di report (Upgrade Advisor)
   Nei file di configurazione sono state rilevate impostazioni di estensioni personalizzate, indicanti che l'installazione include una o più estensioni personalizzate per l'elaborazione dati, il recapito, il rendering, la sicurezza o l'autenticazione. In seguito all'aggiornamento le impostazioni di configurazione delle estensioni verranno spostate con il server di report aggiornato. Tuttavia, se le estensioni personalizzate sono installate nella cartella di installazione del server di report esistente, i file di assembly per tali estensioni non verranno spostate nella nuova cartella di installazione durante il processo di aggiornamento. Dopo che l'aggiornamento è stato completato, è necessario spostare i file di assembly nella nuova cartella di installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -34,7 +33,7 @@ ms.locfileid: "71952590"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>Descrizione  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornisce un'architettura estensibile che consente agli sviluppatori di creare estensioni personalizzate per l'elaborazione dei dati, il recapito, il rendering, la sicurezza e l'autenticazione.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]fornisce un'architettura estensibile che consente agli sviluppatori di creare estensioni personalizzate per l'elaborazione dei dati, il recapito, il rendering, la sicurezza e l'autenticazione.  
   
  Se nell'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono presenti estensioni o assembly personalizzati, è possibile utilizzare il programma di installazione per eseguire un aggiornamento, ma potrebbe essere necessario spostare le estensioni nel nuovo percorso di installazione dopo il completamento dell'aggiornamento oppure eseguire altri passaggi prima dell'aggiornamento.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "71952590"
   
 ##### <a name="post-upgrade-steps-for-custom-data-processing-or-delivery-extensions"></a>Passaggi successivi all'aggiornamento per le estensioni per l'elaborazione dati o per il recapito personalizzate  
   
-1.  Spostare il file o i file di estensione nella nuova cartella di programma per il server di report. Per impostazione predefinita, la cartella del programma del server di report è \Programmi\microsoft SQL Server \ MSRS10_50. \< *instance_name*> server \Report.  
+1.  Spostare il file o i file di estensione nella nuova cartella di programma per il server di report. Per impostazione predefinita, la cartella del programma del server di report è \Programmi\microsoft SQL Server \ MSRS10_50. \<*instance_name*> Server \Report.  
   
  Per ulteriori informazioni, vedere le sezioni relative alla distribuzione di estensioni per l'elaborazione dati e il recapito nella documentazione online di SQL Server.  
   

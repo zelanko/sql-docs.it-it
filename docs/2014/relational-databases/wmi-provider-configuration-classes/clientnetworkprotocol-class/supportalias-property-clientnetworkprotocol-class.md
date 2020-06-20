@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1e7a2e87-c356-40a6-a6d9-e492467629f9
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d28ec166f8954b874f98b7f9f441280ab9064f1f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fd06ad0921dbb113a89af77e46733a28c2226c9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62826757"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061408"
 ---
 # <a name="supportalias-property-clientnetworkprotocol-class"></a>Proprietà SupportAlias (classe ClientNetworkProtocol)
   Ottiene la proprietà booleana che specifica se il protocollo di rete corrente specificato dal [Metodo SetOrderValue (classe ClientNetworkProtocol)](clientnetworkprotocol-class.md) supporta gli alias.  
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  Oggetto della [classe ClientNetworkProtocol](clientnetworkprotocol-class.md) che rappresenta il protocollo di rete utilizzato dal client di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
@@ -49,7 +48,7 @@ object
   
 ## <a name="remarks"></a>Osservazioni  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [configurazione di protocolli client](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 781b812e-eb14-472a-85fa-aa4cdb929bee
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 98781a7258a4fa70f9f8c70c37140445af5bcb76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 37d8aedc1d8f93739c2e9386665adfc67b43e312
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874708"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970789"
 ---
 # <a name="sql-server-in-process-specific-extensions-to-adonet"></a>Estensioni specifiche in-process di SQL Server ad ADO.NET
   Sono disponibili quattro estensioni funzionali principali ad ADO.NET specifiche per l'utilizzo in-process. Tali estensioni verranno analizzate dettagliatamente negli argomenti seguenti.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0fc22406-e79b-47a4-a7e4-108d4ce6202f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa799404777f8f0ef0a8a07a81c8c7961c636004
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6f072f8d748b24489ab68f971abd4872edffdf6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059027"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966791"
 ---
 # <a name="execute-process-task-editor-process-page"></a>Execute Process Task Editor (Process Page)
   Utilizzare la pagina **Processo** della finestra di dialogo **Editor attività Esegui processo** per configurare le opzioni di esecuzione del processo. Tali opzioni includono il file eseguibile da avviare, il relativo percorso, gli argomenti del prompt dei comandi, nonché le variabili per la generazione dell'input e l'acquisizione dell'output.  
@@ -40,15 +39,15 @@ ms.locfileid: "66059027"
  Digitare il percorso della cartella contenente il file eseguibile oppure fare clic sul pulsante sfoglia **(...)** per individuare la cartella.  
   
  **StandardInputVariable**  
- Selezionare una variabile per l'invio dell'input al processo oppure fare clic su \<**Nuova variabile...**> per crearne una nuova:  
+ Selezionare una variabile per fornire l'input al processo oppure fare clic su \<**New variable...**> per creare una nuova variabile:  
   
  **Argomenti correlati:**  [Aggiungi variabile](../../2014/integration-services/add-variable.md)  
   
  **StandardOutputVariable**  
- Selezionare una variabile per l'acquisizione dell'output del processo oppure fare clic su \<**Nuova variabile...**> per crearne una nuova.  
+ Selezionare una variabile per acquisire l'output del processo oppure fare clic su \<**New variable...**> per creare una nuova variabile.  
   
  **StandardErrorVariable**  
- Selezionare una variabile per l'acquisizione dell'output di errore del processore oppure fare clic su \<**Nuova variabile...**> per crearne una nuova.  
+ Selezionare una variabile per acquisire l'output degli errori del processore oppure fare clic su \<**New variable...**> per creare una nuova variabile.  
   
  **FailTaskIfReturnCodeIsNotSuccessValue**  
  Consente di indicare se l'attività deve avere esito negativo nel caso in cui il codice di uscita del processo non corrisponda al valore specificato in **SuccessValue**.  
@@ -65,7 +64,7 @@ ms.locfileid: "66059027"
  **WindowStyle**  
  Consente di specificare lo stile della finestra in cui viene eseguito il processo.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  
   

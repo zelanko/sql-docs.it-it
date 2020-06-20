@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1bbfd7e02b11a9f2a5cc0213c31b453eaa28e446
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51d9f20436bb7009c8439d1b53b9757e044002a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270599"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061833"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>Riquadro Criteri (Visual Database Tools)
   Il riquadro Criteri consente di specificare le opzioni per le query, ad esempio le colonne di dati da visualizzare, come ordinare i risultati e quali righe selezionare, immettendo le proprie scelte in una griglia simile a un foglio di calcolo. Nel riquadro Criteri è possibile specificare quanto segue:  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c69e321-dc9a-4483-886d-81350adae2be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 947866923053c025d125d36bda5eb514ae6c2005
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 155fb8e9dca4f95496196ad167f7976115cef1f6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662414"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052965"
 ---
 # <a name="execution-warnings-event-class"></a>Execution Warnings - classe di evento
   La classe di evento Execution Warnings indica avvisi di concessione di memoria che sono stati generati durante l'esecuzione di un'istruzione o di una stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È possibile monitorare questa classe di evento per determinare se per l'elaborazione delle query è stata necessaria un'attesa di un secondo o maggiore oppure se il tentativo iniziale di utilizzo della memoria non è riuscito. Le informazioni sui tempi di attesa delle query sono utili per rilevare problemi di contesa presenti nel sistema e che possono influire sulle prestazioni.  
@@ -32,7 +31,7 @@ ms.locfileid: "62662414"
 |ClientProcessID|`int`|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se tramite il client viene indicato l'ID del processo client.|9|Sì|  
 |DatabaseID|`int`|ID del database specificato nell'istruzione USE *database* oppure il database predefinito se non è stata eseguita alcuna istruzione USE *database* per una determinata istanza. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |DatabaseName|`nvarchar`|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Sì|  
-|Durata|`bigint`|Tempo, in millisecondi, di attesa della query per ottenere la memoria necessaria. Valore valido solo quando EventSubClass = 1 (attesa della query).|13|Sì|  
+|Duration|`bigint`|Tempo, in millisecondi, di attesa della query per ottenere la memoria necessaria. Valore valido solo quando EventSubClass = 1 (attesa della query).|13|Sì|  
 |Errore|`int`|Non usato.|31|Sì|  
 |EventClass|`int`|Tipo di evento = 67.|27|No|  
 |EventSequence|`int`|Sequenza di un evento specifico nella traccia.|51|No|  
@@ -52,7 +51,7 @@ ms.locfileid: "62662414"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|`bigint`|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

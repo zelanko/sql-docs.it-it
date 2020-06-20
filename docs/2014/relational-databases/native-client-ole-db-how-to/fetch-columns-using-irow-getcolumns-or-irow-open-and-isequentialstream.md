@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 86d2627354fcf3ec6ed80675abeb552f3ff888da
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b843710b9418cfd3f40411e49a30a1c23b7b8113
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704886"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039128"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Recuperare colonne mediante IRow::GetColumns (o IRow::Open) e ISequentialStream
   I dati di grandi dimensioni possono essere associati o recuperati utilizzando l'interfaccia `ISequentialStream`. Per le colonne associate, il flag di stato DBSTATUS_S_TRUNCATED indica che i dati sono troncati.  

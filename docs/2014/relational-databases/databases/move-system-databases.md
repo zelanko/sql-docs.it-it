@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: da6b02061ca12210f78ee48b9d3a78c30d43e0b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 748d781d6bbefb0dc710427a34ebd71ec7037fdb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871538"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965843"
 ---
 # <a name="move-system-databases"></a>Spostare i database di sistema
   In questo argomento viene descritta la procedura per lo spostamento dei database di sistema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Lo spostamento dei database di sistema può risultare utile nelle situazioni seguenti:  
@@ -62,7 +61,7 @@ ms.locfileid: "62871538"
   
 -   [Completamento: Dopo lo spostamento di tutti i database di sistema](#Follow)  
   
--   [Esempi](#Examples)  
+-   [esempi](#Examples)  
   
 ##  <a name="planned-relocation-and-scheduled-disk-maintenance-procedure"></a><a name="Planned"></a>Procedura di rilocazione pianificata e manutenzione pianificata del disco  
  Per spostare un file di dati o di log del database di sistema nell'ambito di un'operazione di rilocazione pianificata o di manutenzione pianificata, attenersi alla procedura seguente. Questa procedura è valida per tutti i database di sistema ad eccezione dei database master e Resource.  
@@ -194,7 +193,7 @@ ms.locfileid: "62871538"
     ```  
   
 ##  <a name="moving-the-resource-database"></a><a name="Resource"></a>Trasferimento del database delle risorse  
- Il percorso del database delle risorse è \<*unità*>: \Programmi\Microsoft SQL Server\MSSQL\<versione>.\<*nome_istanza*>\MSSQL\Binn\\. Il database non può essere spostato.  
+ Il percorso del database Resource è \<*drive*> : \Programmi\Microsoft SQL Server\MSSQL \<version> . \<*instance_name*> \MSSQL\Binn \\ . Il database non può essere spostato.  
   
 ##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a>Completamento: dopo aver spostato tutti i database di sistema  
  Se tutti i database di sistema sono stati spostati in un nuovo volume o unità oppure in un altro server con una lettera di unità diversa, effettuare gli aggiornamenti riportati di seguito.  
@@ -209,7 +208,7 @@ ms.locfileid: "62871538"
   
 2.  Fare clic con il pulsante destro del mouse su **Log degli errori** e scegliere **Configura**.  
   
-3.  Nella finestra di dialogo **Configura log degli errori di SQL Server Agent** specificare il nuovo percorso del file SQLAGENT.OUT. Il percorso predefinito è c:\Programmi\Microsoft SQL Server\MSSQL12. <instance_name> \MSSQL\Log\\.  
+3.  Nella finestra di dialogo **Configura log degli errori di SQL Server Agent** specificare il nuovo percorso del file SQLAGENT.OUT. Il percorso predefinito è c:\Programmi\Microsoft SQL Server\MSSQL12. <instance_name> \MSSQL\Log \\ .  
   
 #### <a name="change-the-database-default-location"></a>Modificare il percorso predefinito del database  
   
@@ -263,12 +262,12 @@ ms.locfileid: "62871538"
   
 5.  Eliminare i file `tempdb.mdf` e `templog.ldf` dal percorso originale.  
   
-## <a name="see-also"></a>Vedi anche  
- [Database delle risorse](resource-database.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Database Resource](resource-database.md)   
  [Database tempdb](tempdb-database.md)   
  [Database master](master-database.md)   
  [Database msdb](msdb-database.md)   
- [Database modello](model-database.md)   
+ [Database model](model-database.md)   
  [Spostare i database utente](move-user-databases.md)   
  [Spostare i file di database](move-database-files.md)   
  [Avviare, arrestare, sospendere, riprendere, riavviare il servizio motore di database, SQL Server Agent o SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   

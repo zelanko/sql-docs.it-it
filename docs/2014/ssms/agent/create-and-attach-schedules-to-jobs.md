@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 079c2984-0052-4a37-a2b8-4ece56e6b6b5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 414ff334139919e08b06291ec910f8531c70cd55
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ced47013b6552725e6350b113a3722b066016a6b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63136278"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009063"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>Creazione e collegamento di pianificazioni ai processi
   La pianificazione dei processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent comporta la definizione della condizione o delle condizioni che provocano l'inizio dell'esecuzione del processo senza interazione dell'utente. È possibile pianificare l'esecuzione automatica di un processo creando una nuova pianificazione per il processo o collegando una pianificazione esistente al processo.  
@@ -86,12 +85,12 @@ ms.locfileid: "63136278"
 |||  
 |-|-|  
 |**Descrizione**|**Argomento**|  
-|Viene descritto come creare una pianificazione per un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Create a Schedule](create-a-schedule.md)|  
+|Viene descritto come creare una pianificazione per un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Creare una pianificazione](create-a-schedule.md)|  
 |Viene descritto come pianificare un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Pianificare un processo](schedule-a-job.md)|  
 |Viene illustrato come definire la condizione di inattività della CPU per il server.|[Impostare tempo e durata di inattività della CPU &#40;SQL Server Management Studio&#41;](set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_help_jobschedule &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql)   
- [dbo. sysjobschedules &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-sysjobschedules-transact-sql)  
+ [dbo.sysJobSchedules &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-sysjobschedules-transact-sql)  
   
   

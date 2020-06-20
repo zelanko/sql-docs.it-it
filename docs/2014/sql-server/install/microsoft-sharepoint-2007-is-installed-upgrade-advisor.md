@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6f1da295-d9b7-4948-99d3-ebd3587337c6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 84672ddf6a9b2912f3d53eef8d40727369376ba5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 44bf9789e98c29f89644a6cd1a191d4b8fa7eef7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952095"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062405"
 ---
 # <a name="microsoft-sharepoint-2007-is-installed-upgrade-advisor"></a>Microsoft SharePoint è installato (Upgrade Advisor)
   È stata rilevata una versione non supportata di un prodotto o una tecnologia SharePoint.  
@@ -28,7 +27,7 @@ ms.locfileid: "71952095"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>Descrizione  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non viene eseguito l'aggiornamento o l'installazione in SharePoint 2007. L'aggiornamento viene bloccato.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]non viene eseguito l'aggiornamento o l'installazione in SharePoint 2007. L'aggiornamento viene bloccato.  
   
 ## <a name="corrective-action"></a>Azione correttiva  
  Per procedere con l'aggiornamento, è necessario disinstallare SharePoint 2007 o passare da SharePoint 2007 a un prodotto SharePoint 2010. Dopo aver aggiornato l'installazione di SharePoint, eseguire nuovamente Upgrade Advisor per confermare che non sono presenti altri errori di aggiornamento.  

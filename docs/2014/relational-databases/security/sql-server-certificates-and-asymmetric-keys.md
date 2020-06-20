@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ddb7e84f69f501a7857b0d55b1b8a14d11a85694
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8af2d92b31fee4f220b4c950fb6b7bd9c519885
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244505"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037809"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Certificati SQL Server e chiavi simmetriche
    La crittografia a chiave pubblica (PKI) è un sistema di tutela della segretezza dei messaggi in cui un utente crea una chiave *pubblica* e una chiave *privata*. La chiave privata viene tenuta segreta, mentre la chiave pubblica può essere distribuita ad altri. Sebbene le chiavi siano collegate da una relazione matematica, non è possibile estrapolare facilmente la chiave privata utilizzando la chiave pubblica. La chiave pubblica viene utilizzata per crittografare dati mentre quella privata viene impiegata per decrittografarli. Un messaggio crittografato con la chiave pubblica può essere decrittografato solo utilizzando la chiave privata corretta. Poiché si tratta di due chiavi diverse, queste chiavi sono *asimmetriche*.  
@@ -46,7 +45,7 @@ ms.locfileid: "75244505"
 |-----------|-----------------|  
 |[CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)|Viene descritto il comando per la creazione di certificati.|  
 |[Identificazione dell'origine dei pacchetti con firme digitali](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)|Vengono fornite informazioni sull'utilizzo di certificati per la firma di pacchetti software.|  
-|[Usare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|Vengono fornite informazioni sull'utilizzo dei certificati con il mirroring del database.|  
+|[Utilizzare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|Vengono fornite informazioni sull'utilizzo dei certificati con il mirroring del database.|  
   
 ## <a name="asymmetric-keys"></a>Chiavi asimmetriche  
  Le chiavi asimmetriche sono utilizzate per proteggere le chiavi simmetriche. È possibile utilizzarle anche per una crittografia limitata dei dati e per la firma digitale di oggetti di database. Una chiave asimmetrica consiste in una chiave privata e in una chiave pubblica corrispondente. Per altre informazioni sulle chiavi simmetriche, vedere [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql).  
@@ -67,7 +66,7 @@ ms.locfileid: "75244505"
 |||  
 |-|-|  
 |Strumento|Scopo|  
-|[Makecert](https://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|Vengono creati certificati.|  
+|[makecert](https://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|Vengono creati certificati.|  
 |[sn](https://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|Vengono creati nomi sicuri per le chiavi simmetriche.|  
   
 ## <a name="related-tasks"></a>Attività correlate  
@@ -78,6 +77,6 @@ ms.locfileid: "75244505"
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys. Certificates &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)   
+ [sys.certificates &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)   
  [Transparent Data Encryption &#40;TDE&#41;](encryption/transparent-data-encryption.md)  
   

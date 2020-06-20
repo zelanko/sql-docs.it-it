@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 451f4e7d-1c8e-4784-b540-df0806509bf1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4c9fb11308ae60cf061f184ade467d814d6a10fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3efdb863b0a067d3d52405c5caa5a78e85555c62
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058312"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966274"
 ---
 # <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>Editor trasformazione Ricerca fuzzy (scheda Tabella di riferimento)
   Usare la scheda **Tabella di riferimento** della finestra di dialogo **Editor trasformazione Ricerca fuzzy** per specificare la tabella di origine e l'indice da usare per la ricerca. Tale origine deve essere una tabella di un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -28,7 +27,7 @@ ms.locfileid: "66058312"
 >  La trasformazione Ricerca fuzzy crea una copia di lavoro della tabella di riferimento. Gli indici descritti di seguito vengono creati su tale tabella di lavoro usando una tabella speciale invece di un normale indice [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . La trasformazione non modifica le tabelle di origine esistenti, a meno che non sia stata selezionata l'opzione **Manutenzione indice archiviato**. In questo caso viene creato un trigger sulla tabella di riferimento che aggiorna la tabella di lavoro e la tabella dell'indice di ricerca in base alle modifiche apportate alla tabella di riferimento.  
   
 > [!NOTE]  
->  Le `Exhaustive` `MaxMemoryUsage` proprietà e della trasformazione Ricerca fuzzy non sono disponibili nell' **Editor trasformazione Ricerca fuzzy**, ma possono essere impostate tramite il **Editor avanzato**. Inoltre, è possibile specificare un valore maggiore di `MaxOutputMatchesPerInput` 100 per solo nell' **Editor avanzato**. Per altre informazioni su queste proprietà, vedere la sezione relativa alla trasformazione Ricerca fuzzy in [Proprietà personalizzate delle trasformazioni](data-flow/transformations/transformation-custom-properties.md).  
+>  Le `Exhaustive` proprietà e `MaxMemoryUsage` della trasformazione Ricerca fuzzy non sono disponibili nell' **Editor trasformazione Ricerca fuzzy**, ma possono essere impostate tramite il **Editor avanzato**. Inoltre, è possibile specificare un valore maggiore di 100 per `MaxOutputMatchesPerInput` solo nell' **Editor avanzato**. Per altre informazioni su queste proprietà, vedere la sezione relativa alla trasformazione Ricerca fuzzy in [Proprietà personalizzate delle trasformazioni](data-flow/transformations/transformation-custom-properties.md).  
   
  Per ulteriori informazioni sulla trasformazione Ricerca fuzzy, vedere [Fuzzy Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
@@ -36,7 +35,7 @@ ms.locfileid: "66058312"
  **Gestione connessione OLE DB**  
  Selezionare una gestione connessione OLE DB esistente nell'elenco o fare clic su **Nuova**per creare una nuova connessione.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova connessione usando la finestra di dialogo **Configura gestione connessione OLE DB** .  
   
  **Genera nuovo indice**  
@@ -65,7 +64,7 @@ ms.locfileid: "66058312"
  **Nome di un indice esistente**  
  Consente di selezionare nell'elenco un indice di ricerca creato precedentemente.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor trasformazione Ricerca fuzzy &#40;scheda colonne&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-columns-tab.md)   
  [Editor trasformazione Ricerca fuzzy &#40;scheda Avanzate&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 806fafa8-bf89-4ce8-a082-8081dde9fcc3
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 309991d7dd187ca40d3eba40d43c0e58692b24bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9dbd9c90eb04df8cff4499b60d0bf6e0f3abed34
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191378"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061462"
 ---
 # <a name="instancename-property-cinstance-class"></a>Proprietà InstanceName (classe CInstance)
   Ottiene il nome dell'istanza del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client.  
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  Oggetto della [classe CInstance](cinstance-class.md) che rappresenta un'istanza del client di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
@@ -45,7 +44,7 @@ object
   
 ## <a name="remarks"></a>Osservazioni  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [configurazione di protocolli client](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

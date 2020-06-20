@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f068d4db-2d56-41b1-bed2-0cffa3ca411d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ec6f347cdbc6d14e8f621466a1708b8ee9fe7d36
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90f967b2446e11a27f5a87803bb71d6e1ec53557
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489758"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039838"
 ---
 # <a name="lesson-5-automating-the-cleansing-and-matching-using-ssis"></a>Lezione 5: Automazione della pulizia e della corrispondenza tramite SSIS
   Nella lezione 1 è stata compilata la Knowledge Base Suppliers e utilizzata per pulire i dati nella lezione 2 e le corrispondenze dei dati della lezione 3 mediante lo strumento **client DQS**. In uno scenario reale, potrebbe essere necessario effettuare il pull dei dati da un'origine non supportata da DQS o si desidera automatizzare il processo di pulizia e di corrispondenza senza dover utilizzare lo strumento **client DQS** . SQL Server Integration Services (SSIS) include componenti che è possibile utilizzare per integrare dati da varie origini eterogenee e un componente di **[trasformazione di pulizia DQS](https://msdn.microsoft.com/library/ee677619.aspx)** per richiamare la funzionalità di pulizia esposta da DQS. Attualmente, DQS non espone la funzionalità di corrispondenza per l'utilizzo di SSIS, ma è possibile utilizzare la **[trasformazione Raggruppamento fuzzy](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)** per identificare i duplicati nei dati.  

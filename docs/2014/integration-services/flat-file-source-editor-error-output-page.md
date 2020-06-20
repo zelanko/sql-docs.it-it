@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c50500e7-0c74-42a0-865f-301f03feffab
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2008ec0db5612b7ceb95fe9a8bbf970e19a31a91
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6df7faa3dbb88ba8df836b59c47cad6a391e0d8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058633"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966411"
 ---
 # <a name="flat-file-source-editor-error-output-page"></a>Editor origine file flat (pagina Output degli errori)
   Usare la pagina **Output degli errori** della finestra di dialogo **Editor origine file flat** per selezionare le opzioni di gestione degli errori e impostare le proprietà nelle colonne di output degli errori.\  
@@ -50,10 +49,10 @@ ms.locfileid: "66058633"
  **Applica**  
  Consente di applicare l'opzione di gestione degli errori alle celle selezionate.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor origine file flat &#40;pagina Gestione connessione&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
  [Editor origine file flat &#40;pagina colonne&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
- [Flat File Connection Manager](connection-manager/file-connection-manager.md)  
+ [Gestione connessione file flat](connection-manager/file-connection-manager.md)  
   
   

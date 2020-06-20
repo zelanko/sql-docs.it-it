@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: f7b4d37b-d6d3-4ac3-b2fd-a0b534a924e4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 169d65e801aca6ed34735649757b37a3ffe13193
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b654568c93df0a0c3e08cf6eaa615b7026a9c18a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703456"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003121"
 ---
 # <a name="other-annotations-sqlxml-40"></a>Altre annotazioni (SQLXML 4.0)
   Oltre alle annotazioni descritte negli argomenti precedenti di questa sezione, il caricamento bulk XML interpreta queste altre annotazioni, come segue:  

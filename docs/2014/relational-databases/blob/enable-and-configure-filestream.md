@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f074872f05ff907d88d58e986d33ae128bcb5f2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7312df919f6d182351e86ed41b5aed84fba3e646
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010165"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955551"
 ---
 # <a name="enable-and-configure-filestream"></a>Abilitare e configurare FILESTREAM
   Prima di iniziare a utilizzare FILESTREAM, è necessario abilitarlo nell'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. In questo argomento viene descritto come abilitare FILESTREAM utilizzando Gestione configurazione SQL Server.  
@@ -64,7 +63,7 @@ ms.locfileid: "66010165"
   
 ##  <a name="best-practices"></a><a name="best"></a>Procedure consigliate  
   
-###  <a name="physical-configuration-and-maintenance"></a><a name="config"></a> Configurazione fisica e manutenzione  
+###  <a name="physical-configuration-and-maintenance"></a><a name="config"></a>Configurazione fisica e manutenzione  
  Quando si configurano i volumi di archiviazione FILESTREAM, tenere presenti le linee guida seguenti:  
   
 -   Disabilitare i nomi di file brevi nei sistemi FILESTREAM. La creazione di nomi di file brevi richiede tempi sensibilmente più lunghi. Per disabilitare i nomi di file brevi, usare l'utilità **fsutil** di Windows.  
@@ -82,16 +81,16 @@ ms.locfileid: "66010165"
 ||||||  
 |-|-|-|-|-|  
 |Livello RAID|Prestazioni di scrittura|Prestazioni di lettura|Tolleranza di errore|Osservazioni|  
-|RAID 5|Normale|Normale|Eccellenti|Le prestazioni sono più elevate rispetto all'utilizzo di un unico disco o di JBOD e meno elevate rispetto all'utilizzo di RAID 0 o RAID 5 con striping.|  
-|RAID 0|Eccellenti|Eccellenti|nessuno||  
-|RAID 5 + striping|Eccellenti|Eccellenti|Eccellenti|Opzione più costosa.|  
+|RAID 5|Normale|Normale|Eccellente|Le prestazioni sono più elevate rispetto all'utilizzo di un unico disco o di JBOD e meno elevate rispetto all'utilizzo di RAID 0 o RAID 5 con striping.|  
+|RAID 0|Eccellente|Eccellenti|nessuno||  
+|RAID 5 + striping|Eccellente|Eccellenti|Eccellenti|Opzione più costosa.|  
   
 
   
-###  <a name="physical-database-design"></a><a name="database"></a> Progettazione fisica di database  
+###  <a name="physical-database-design"></a><a name="database"></a>Progettazione fisica di database  
  Quando si progetta un database FILESTREAM, tenere presenti le linee guida seguenti:  
   
--   Le colonne FILESTREAM devono essere associate a una `uniqueidentifier`colonna ROWGUID corrispondente. Questi tipi di tabelle devono inoltre essere associati a un indice univoco. Solitamente questo indice non è cluster. Se la logica di business dei database richiede un indice cluster, è necessario assicurarsi che i valori archiviati nell'indice non siano casuali. In caso contrario, l'indice verrà riordinato ogni volta che viene aggiunta o rimossa una riga dalla tabella.  
+-   Le colonne FILESTREAM devono essere associate a una `uniqueidentifier` colonna ROWGUID corrispondente. Questi tipi di tabelle devono inoltre essere associati a un indice univoco. Solitamente questo indice non è cluster. Se la logica di business dei database richiede un indice cluster, è necessario assicurarsi che i valori archiviati nell'indice non siano casuali. In caso contrario, l'indice verrà riordinato ogni volta che viene aggiunta o rimossa una riga dalla tabella.  
   
 -   Ai fini delle prestazioni, i contenitori e i filegroup FILESTREAM dovrebbero risiedere in volumi anziché nel sistema operativo, nel database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , nel log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o nel file di paging.  
   

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 523891f2f0005c7f6e6752e5d16d3680f680fdfa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f72f15886e7105dde8d0e15dd0598a7474ed7e39
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882331"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038133"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Aggiunta ed eliminazione di articoli a e da pubblicazioni esistenti
   Dopo la creazione di una pubblicazione, è possibile aggiungere ed eliminare articoli. Gli articoli possono essere aggiunti in qualsiasi momento, ma le azioni necessarie per eliminarli dipendono dal tipo di replica e dal momento in cui avviene l'eliminazione.  
@@ -33,7 +32,7 @@ ms.locfileid: "73882331"
  L'aggiunta di un articolo comporta l'aggiunta dell'articolo alla pubblicazione, la creazione di un nuovo snapshot per la pubblicazione e la sincronizzazione della sottoscrizione per applicare lo schema e i dati per il nuovo articolo.  
   
 > [!NOTE]
->  Se si aggiunge un articolo a una pubblicazione di tipo merge e un articolo esistente dipende dal nuovo articolo, è necessario specificare un ordine di elaborazione per entrambi gli articoli ** \@** utilizzando il parametro processing_order di [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) e [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Si consideri lo scenario seguente: viene pubblicata una tabella, ma non viene pubblicata una funzione a cui fa riferimento la tabella. Se non si pubblica la funzione, la tabella non può essere creata nel Sottoscrittore. Quando si aggiunge la funzione alla pubblicazione: specificare il valore **1** per il ** \@parametro processing_order** di **sp_addmergearticle**; e specificano il valore **2** per il ** \@parametro processing_order** di **sp_changemergearticle**, specificando il nome della tabella per l' ** \@articolo**del parametro. Questo ordine di elaborazione consente di creare la funzione nel Sottoscrittore prima della tabella dipendente. È possibile utilizzare numeri diversi per ogni articolo, purché il numero per la funzione sia inferiore a quello per la tabella.  
+>  Se si aggiunge un articolo a una pubblicazione di tipo merge e un articolo esistente dipende dal nuovo articolo, è necessario specificare un ordine di elaborazione per entrambi gli articoli utilizzando il parametro ** \@ processing_order** di [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) e [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Si consideri lo scenario seguente: viene pubblicata una tabella, ma non viene pubblicata una funzione a cui fa riferimento la tabella. Se non si pubblica la funzione, la tabella non può essere creata nel Sottoscrittore. Quando si aggiunge la funzione alla pubblicazione: specificare il valore **1** per il parametro ** \@ processing_order** di **sp_addmergearticle**e specificare il valore **2** per il parametro ** \@ processing_order** di **sp_changemergearticle**, specificando il nome della tabella per l' ** \@ articolo**del parametro. Questo ordine di elaborazione consente di creare la funzione nel Sottoscrittore prima della tabella dipendente. È possibile utilizzare numeri diversi per ogni articolo, purché il numero per la funzione sia inferiore a quello per la tabella.  
   
 1.  Aggiungere uno o più articoli tramite uno dei metodi seguenti:  
   
@@ -56,7 +55,7 @@ ms.locfileid: "73882331"
 ## <a name="dropping-articles"></a>rimozione di articoli  
  Gli articoli possono essere eliminati da una pubblicazione in qualsiasi momento, ma è necessario tenere in considerazione i comportamenti seguenti:  
   
--   L'eliminazione di un articolo da una pubblicazione non comporta la rimozione dell'oggetto dal database di pubblicazione o dell'oggetto corrispondente dal database di sottoscrizione. Usare DROP \<Oggetto> per rimuovere questi oggetti, se necessario. Quando si elimina un articolo correlato ad altri articoli pubblicati tramite vincoli di chiave esterna, è consigliabile eliminare la tabella nel Sottoscrittore manualmente oppure eseguendo uno script su richiesta: specificare uno script che includa le istruzioni DROP \<Oggetto> appropriate. Per altre informazioni, vedere [Eseguire script durante la sincronizzazione &#40;programmazione Transact-SQL della replica&#41;](../execute-scripts-during-synchronization-replication-transact-sql-programming.md).  
+-   L'eliminazione di un articolo da una pubblicazione non comporta la rimozione dell'oggetto dal database di pubblicazione o dell'oggetto corrispondente dal database di sottoscrizione. Usare DROP \<Object> per rimuovere questi oggetti, se necessario. Quando si elimina un articolo correlato ad altri articoli pubblicati tramite vincoli di chiave esterna, è consigliabile eliminare la tabella nel Sottoscrittore manualmente o tramite l'esecuzione di script su richiesta: specificare uno script che includa le istruzioni DROP appropriate \<Object> . Per altre informazioni, vedere [Eseguire script durante la sincronizzazione &#40;programmazione Transact-SQL della replica&#41;](../execute-scripts-during-synchronization-replication-transact-sql-programming.md).  
   
 -   Per pubblicazioni di tipo merge con un livello di compatibilità di 90RTM o superiore, gli articoli possono essere eliminati in qualsiasi momento, ma è necessario un nuovo snapshot. Inoltre:  
   

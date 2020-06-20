@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b4ac6f0e-8e6a-4b1a-9a7e-60e0a69b2180
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4bfaa4ba101a31f6834595e2b2241a7ea6e15b36
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c1919d516c8ad12b9e89eb4759186d8ddde752d5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82714000"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018948"
 ---
 # <a name="add-a-data-source-odbc"></a>Aggiungere un'origine dei dati (ODBC)
   È possibile aggiungere un'origine dati tramite amministratore ODBC, a livello di codice (tramite [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)) o creando un file.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8964399b-ece9-44cd-b7f6-c5f14c295cb2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2905ce39c487a1df04d839b6efe360803674ffb9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a5a1b4986efe0047d210410b848f1174fdb9ea1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255231"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005743"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>Finestra di dialogo Crea nuovi criteri o Apri criteri, pagina Descrizione
   Utilizzare questa finestra di dialogo per aggiungere una descrizione e informazioni aggiuntive ai criteri della gestione basata su criteri.  
@@ -45,10 +44,10 @@ ms.locfileid: "63255231"
  **Ultima modifica**  
  Data dell'ultima modifica dei criteri.  
   
- **Modificato da:**  
+ **Modificato da**  
  Account di accesso che ha apportato la modifica più recente ai criteri.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Amministrazione di server tramite la gestione basata su criteri](administer-servers-by-using-policy-based-management.md)  
   
   
