@@ -22,12 +22,12 @@ ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d4e624323c2794afc38a9d8dcf948db69282af0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 55e5892b9183ab2455cee7aa39a34de0d7bb28bf
+ms.sourcegitcommit: 6b3569977b034554883a94d73d1c4df6e2f74fe2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827922"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107038"
 ---
 # <a name="sysdm_os_sys_info-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "82827922"
 |**physical_memory_kb**|**bigint**|**Si applica a:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> Specifica la quantità totale di memoria fisica disponibile nel computer. Non ammette i valori NULL.|  
 |**virtual_memory_in_bytes**|**bigint**|**Si applica a:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] da a [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .<br /><br /> Quantità di memoria virtuale disponibile per il processo in modalità utente. Questo valore può essere utilizzato per determinare se SQL Server è stato avviato tramite il parametro /3gb.|  
 |**virtual_memory_kb**|**bigint**|**Si applica a:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> Specifica la quantità totale di spazio degli indirizzi virtuali disponibile per il processo in modalità utente. Non ammette i valori NULL.|  
-|**bpool_commited**|**int**|**Si applica a:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] da a [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .<br /><br /> Rappresenta la memoria di cui è stato eseguito il commit in kilobyte (KB) nel gestore della memoria. Non include la memoria riservata nel gestore della memoria. Non ammette i valori NULL.|  
+|**bpool_committed**|**int**|**Si applica a:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] da a [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .<br /><br /> Rappresenta la memoria di cui è stato eseguito il commit in kilobyte (KB) nel gestore della memoria. Non include la memoria riservata nel gestore della memoria. Non ammette i valori NULL.|  
 |**committed_kb**|**int**|**Si applica a:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> Rappresenta la memoria di cui è stato eseguito il commit in kilobyte (KB) nel gestore della memoria. Non include la memoria riservata nel gestore della memoria. Non ammette i valori NULL.|  
 |**bpool_commit_target**|**int**|**Si applica a:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] da a [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .<br /><br /> Rappresenta la quantità di memoria, in kilobyte (KB), che può essere utilizzata dal gestore della memoria di SQL Server.|  
 |**committed_target_kb**|**int**|**Si applica a:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> Rappresenta la quantità di memoria, in kilobyte (KB), che può essere utilizzata dal gestore della memoria di SQL Server. La quantità di destinazione viene calcolata tramite una vasta gamma di input quali:<br /><br /> -lo stato corrente del sistema, incluso il relativo carico<br /><br /> -la memoria richiesta dai processi correnti<br /><br /> -la quantità di memoria installata nel computer<br /><br /> -parametri di configurazione<br /><br /> Se **committed_target_kb** è maggiore di **committed_kb**, il gestore della memoria tenterà di ottenere memoria aggiuntiva. Se **committed_target_kb** è inferiore **committed_kb**, il gestore della memoria tenterà di compattare la quantità di memoria di cui è stato eseguito il commit. Il **committed_target_kb** include sempre la memoria rubata e riservata. Non ammette i valori NULL.|  
