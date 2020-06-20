@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5ed522c64e0f9652e3ffb310f98348c402193ef8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 693b8e82a3ca01616e85fe5e175726a687cfea86
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889248"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932504"
 ---
 # <a name="install-sql-server-2014"></a>Installare SQL Server 2014
 ## <a name="download-sql-server-2014-express"></a>[Scarica SQL Server 2014 Express](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
@@ -32,7 +31,7 @@ ms.locfileid: "68889248"
  Prima di installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esaminare i requisiti di installazione, i controlli di configurazione di sistema e considerazioni sulla sicurezza. Per altre informazioni, vedere [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md). Per informazioni sui vari scenari di installazione per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vedere gli argomenti nella sezione successiva.  
   
   
-## <a name="install-sscurrent-components"></a>Installare [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] i componenti  
+## <a name="install-sscurrent-components"></a>Installare i [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] componenti  
   
 |Argomento|Description|  
 |-----------|-----------------|  
@@ -55,7 +54,7 @@ ms.locfileid: "68889248"
   
 |Argomento|Description|  
 |-----------|-----------------|  
-|[Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|In questo argomento viene fornita una panoramica della configurazione dei firewall e viene illustrato come configurare Windows Firewall.|  
+|[Configurare la Windows Firewall per consentire l'accesso SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|In questo argomento viene fornita una panoramica della configurazione dei firewall e viene illustrato come configurare Windows Firewall.|  
 |[Configurare un computer multihomed per l'accesso a SQL Server](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|In questo argomento viene descritto come configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Windows Firewall con sicurezza avanzata per fornire le connessioni di rete a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un ambiente multihomed.|  
 |[Configurare Windows Firewall per consentire l'accesso ad Analysis Services](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|Le procedure fornite in questo argomento consentono di configurare le impostazioni di porte e firewall necessarie per accedere ad [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o PowerPivot per SharePoint.|  
   

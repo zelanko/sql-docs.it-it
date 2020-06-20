@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: b838f970-d11a-4239-b164-8d11f4581d83
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c2e34258f10033c61f9966e62fa7c14025423613
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5f7d99c3459d7bf41a4b9b6552ad6dbb6fe2213c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952328"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036978"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)
 
@@ -38,7 +37,7 @@ ms.locfileid: "71952328"
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità nativa|  
+|[!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modalità nativa|  
   
  
   
@@ -67,7 +66,7 @@ ms.locfileid: "71952328"
   
 -   Utilizzare Gestione configurazione Reporting Services se si specifica soltanto un server SMTP e un account utente con autorizzazione a inviare posta elettronica. Si tratta delle impostazioni minime necessarie per la configurazione dell'estensione per il recapito tramite posta elettronica di Server report. Per ulteriori informazioni, vedere [Impostazioni posta elettronica-Configuration Manager &#40;modalità nativa SSRS&#41;](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md) e [recapito tramite posta elettronica in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
--   Utilizzare un editor di testo per specificare impostazioni aggiuntive nel file RSreportserver.config (facoltativo). Questo file contiene tutte le impostazioni di configurazione per il recapito tramite posta elettronica del server di report. È necessario specificare impostazioni aggiuntive in questi file se si utilizza un server SMTP locale o se il recapito tramite posta elettronica è limitato a host specifici. Per ulteriori informazioni sull'individuazione e la modifica dei file di configurazione, vedere [modificare un file di configurazione di Reporting Services &#40;&#41;RSReportServer. config](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) documentazione online di SQL Server.  
+-   Utilizzare un editor di testo per specificare impostazioni aggiuntive nel file RSreportserver.config (facoltativo). Questo file contiene tutte le impostazioni di configurazione per il recapito tramite posta elettronica del server di report. È necessario specificare impostazioni aggiuntive in questi file se si utilizza un server SMTP locale o se il recapito tramite posta elettronica è limitato a host specifici. Per ulteriori informazioni sulla ricerca e la modifica dei file di configurazione, vedere [modificare un file di configurazione Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) in documentazione online di SQL Server.  
   
 > [!NOTE]  
 >  Le impostazioni della posta elettronica del server di report sono basate su CDO. Per ulteriori informazioni su impostazioni specifiche, fare riferimento alla documentazione di CDO.  
@@ -148,7 +147,7 @@ ms.locfileid: "71952328"
   
  La connessione tra il server di report e un server SMTP locale o un server d'inoltro viene determinata tramite le impostazioni di configurazione seguenti:  
   
--   `SendUsing`è impostato su **1**.  
+-   **è impostato su `SendUsing`1**.  
   
 -   **SMTPServerPickupDirectory** è impostato su una cartella nell'unità locale.  
   
@@ -181,7 +180,7 @@ ms.locfileid: "71952328"
   
 3.  Verificare che <`UrlRoot`> sia impostato sull'indirizzo URL del server di report. Questo valore viene impostato quando si configura il server di report e quindi dovrebbe essere già inserito. In caso contrario, digitare l'indirizzo URL del server di report.  
   
-4.  Nella sezione relativa al recapito trovare `ReportServerEmail` <>.  
+4.  Nella sezione relativa al recapito trovare <`ReportServerEmail`>.  
   
 5.  In <`SMTPServer`> digitare il nome del server SMTP. Questo valore può corrispondere a un indirizzo IP, un nome UNC di un computer dell'Intranet aziendale o un nome di dominio completo.  
   
@@ -211,7 +210,7 @@ ms.locfileid: "71952328"
   
 7.  Nella console **Servizi** verificare che il servizio sia in esecuzione.  
   
-8.  Aprire il file **RSReportServer. config** in un editor di testo.  
+8.  Aprire il file **RSReportServer.config** in un editor di testo.  
   
 9. Verificare che `<UrlRoot>` sia impostato sull'indirizzo URL del server di report. Questo valore viene impostato quando si configura il server di report e quindi dovrebbe essere già inserito. In caso contrario, digitare l'indirizzo URL del server di report.  
   

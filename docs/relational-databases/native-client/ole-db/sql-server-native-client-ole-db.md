@@ -1,5 +1,6 @@
 ---
 title: OLE DB
+description: Il provider di OLE DB SQL Server Native Client è un'API COM per l'accesso ai dati, usati per strumenti, utilità o componenti di basso livello che richiedono prestazioni elevate.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: da846da4-ec19-4a4f-81fb-7d5a2b2bf80a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6df931b1d79d930aa7900e8fbc6980aec58b9171
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5f945ca5abaa515823ea81ad30ca4292cc42690
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387751"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84948697"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +45,7 @@ Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE 
   
 -   [Oggetti di origine dati &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
--   [Comandi:](../../../relational-databases/native-client-ole-db-commands/commands.md)  
+-   [Comandi](../../../relational-databases/native-client-ole-db-commands/commands.md)  
   
 -   [Set di righe](../../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
@@ -68,7 +69,7 @@ Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE 
   
 -   [Transazioni](../../../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
--   [Errors](../../../relational-databases/native-client-ole-db-errors/errors.md)  
+-   [Errori](../../../relational-databases/native-client-ole-db-errors/errors.md)  
   
 -   [Nomi SPN &#40;Service Principal Name&#41; nelle connessioni client &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
@@ -76,7 +77,7 @@ Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE 
   
 -   [Riferimento SQL Server Native Client &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   
--   [Procedure per OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+-   [Procedure relative a OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Programmazione in SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md)  

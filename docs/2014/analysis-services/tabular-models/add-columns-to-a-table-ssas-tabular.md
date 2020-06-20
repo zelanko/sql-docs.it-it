@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5974a3cc-caf8-4558-8836-6e3c24b1ee23
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7a62460a63bab15499f9aeb4c6510c0e4a9652a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3172d3597a014a9f86a75a61f2f3d8f705527b8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067765"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939922"
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>Aggiungere colonne a una tabella (SSAS tabulare)
   In questo argomento viene descritto come aggiungere colonne a una tabella esistente.  
@@ -61,7 +60,7 @@ ms.locfileid: "66067765"
   
 2.  Fare clic sulla prima cella, quindi digitare un nome e premere INVIO.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Finestra di dialogo Modifica proprietà tabella &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)   
  [Modificare i mapping di filtri tabella, colonna o riga &#40;SSAS tabulare&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   

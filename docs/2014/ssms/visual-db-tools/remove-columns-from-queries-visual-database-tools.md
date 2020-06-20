@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6d9819b8-ee2f-4838-9713-c5e3ad37ab46
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 08230f1937d42247f8eeff09014f7727c6ebfe43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8532f5240729a2516a0c07ae943dd42dc01d9c1c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62659639"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035559"
 ---
 # <a name="remove-columns-from-queries-visual-database-tools"></a>Rimozione di colonne da query (Visual Database Tools)
   Le colonne non più necessarie in una query possono essere eliminate. In questo caso, Progettazione Query e Viste rimuoverà i riferimenti alla colonna nell'elenco di selezione, le preferenze di ordinamento, i criteri di ricerca, il **riquadro SQL**e tutte le specifiche di raggruppamento.  

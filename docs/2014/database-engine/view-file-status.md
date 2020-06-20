@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 96601fc3-64b8-4dd8-9b73-cc6710293eb9
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3034ec95573d2f3c43ab28f2ad31e5ba41661cfc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7082304781a3feab0939b685b16321651b6fda91
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773367"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927365"
 ---
 # <a name="view-file-status"></a>Visualizzazione dello stato dei file
   Il controllo del codice sorgente gestisce informazioni dettagliate sullo stato su ogni elemento incluso nel controllo del codice sorgente. È possibile utilizzare queste informazioni per identificare lo stato corrente del file e creare un report sullo stato dell'elemento.  
@@ -42,7 +41,7 @@ ms.locfileid: "62773367"
   
 2.  Scegliere **controllo del codice sorgente**dal menu **file** e fare clic su **proprietà di SourceSafe**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Impostare e recuperare le informazioni sulla versione](../../2014/database-engine/set-and-retrieve-version-information.md)   
  [Visualizza cronologia progetto](../../2014/database-engine/view-project-history.md)   
  [Recuperare i file](../../2014/database-engine/retrieve-files.md)   

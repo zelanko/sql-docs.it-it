@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d09b5d31-433f-4f7c-8c68-9df3a97785d5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6799bc899a7e65082d83398f79996bea8d9dd2d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6481a2dac7bc23d61b73b2d4f50401952723dc69
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061792"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925824"
 ---
 # <a name="add-variable"></a>Aggiungi variabile
   Usare la finestra di dialogo **Aggiungi variabile** per specificare le proprietà di una nuova variabile.  
@@ -43,7 +42,7 @@ ms.locfileid: "66061792"
  **Sola lettura**  
  Selezionare questa opzione se il valore deve essere di sola lettura.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services &#40;variabili&#41; SSIS](integration-services-ssis-variables.md)   
  [Tipi di dati Integration Services](data-flow/integration-services-data-types.md)   
  [Utilizzo di variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)  

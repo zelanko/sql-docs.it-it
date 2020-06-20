@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: bc4da6702716e845121d2081a166254d4be9449f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 176448aa9d4bab4101ab2db12ffc9a8a7fd1a5b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62468327"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050319"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Backup di un database con tabelle con ottimizzazione per la memoria
   Il backup delle tabelle con ottimizzazione per la memoria viene eseguito durante i normali backup di database. Per le tabelle basate su disco, il CHECKSUM di coppie di file di dati e file differenziali viene convalidato durante il backup del database per rilevare eventuali danneggiamenti di archiviazione.  
@@ -67,7 +66,7 @@ ms.locfileid: "62468327"
   
  Per i carichi di lavoro tipici OLTP, i backup differenziali saranno molto più piccoli dei backup completi del database.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Eseguire il backup, ripristinare e recuperare tabelle con ottimizzazione per la memoria](restore-and-recovery-of-memory-optimized-tables.md)  
   
   

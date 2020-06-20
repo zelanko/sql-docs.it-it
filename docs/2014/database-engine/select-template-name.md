@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 30ac38b8-0c14-474c-b245-d2b8393d2f36
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b0f79a5b61fc7526d87772c6b07c8a217b1baf60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d33d3d1246346ca4affb7ee38bfb62a338c87ce5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089796"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929254"
 ---
 # <a name="select-template-name"></a>Nome modello
   Utilizzare la finestra di dialogo **Seleziona nome modello** per selezionare un modello di traccia esistente di [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] ed esportarlo in un file nel sistema operativo. È inoltre possibile utilizzare questa finestra di dialogo per selezionare o immettere un nome diverso per il salvataggio di un modello di traccia, ad esempio quando si modifica un modello di traccia esistente. Per accedere a questa finestra di dialogo durante l'esportazione di un modello, scegliere **Modelli** dal menu  **File** di [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] e quindi fare clic su **Esporta modello**. Per accedere a questa finestra di dialogo durante la modifica del nome di un modello, scegliere **Modelli** dal menu **File**, quindi scegliere **Modifica modello**e fare clic su **Salva con nome**.  
@@ -31,8 +30,8 @@ ms.locfileid: "66089796"
  **Nome del modello**  
  Digitare un nuovo nome per il modello oppure selezionarne uno nell'elenco. Se si sta esportando un modello, è consentita solo la selezione di un nome di modello nell'elenco.  
   
-## <a name="see-also"></a>Vedi anche  
- [Modificare un modello di traccia &#40;SQL Server Profiler&#41;](modify-a-trace-template-sql-server-profiler.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Modificare modello di traccia &#40;SQL Server Profiler&#41;](modify-a-trace-template-sql-server-profiler.md)   
  [Esportare un modello di traccia &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)  
   
   

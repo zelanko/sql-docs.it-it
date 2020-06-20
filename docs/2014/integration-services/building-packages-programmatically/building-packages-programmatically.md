@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f4227560fbaf3e618a25e3dd214a214ac68a736e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d69416b36969e564b611d1b1274367b6ce5cb86
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176556"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924972"
 ---
 # <a name="building-packages-programmatically"></a>Compilazione di pacchetti a livello di programmazione
   Se è necessario creare pacchetti in modo dinamico oppure gestire ed eseguire pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] all'esterno dell'ambiente di sviluppo, è possibile modificare i pacchetti a livello di programmazione. Questo approccio rende disponibili diverse opzioni:
@@ -63,7 +62,7 @@ ms.locfileid: "78176556"
  [Salvataggio di un pacchetto a livello di programmazione](../building-packages-programmatically/saving-a-package-programmatically.md) Viene descritto come salvare un pacchetto a livello di codice.
 
 ## <a name="reference"></a>Informazioni di riferimento
- [Integration Services riferimento a errori e messaggi](../integration-services-error-and-message-reference.md) Elenca i codici di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] errore predefiniti con i relativi nomi simbolici e le descrizioni.
+ [Integration Services riferimento a errori e messaggi](../integration-services-error-and-message-reference.md) Elenca i [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] codici di errore predefiniti con i relativi nomi simbolici e le descrizioni.
 
 ## <a name="related-sections"></a>Sezioni correlate
  [Estensione di pacchetti tramite scripting](../extending-packages-scripting/extending-packages-with-scripting.md) Viene descritto come estendere il flusso di controllo utilizzando l'attività script e come estendere il flusso di dati utilizzando il componente script.

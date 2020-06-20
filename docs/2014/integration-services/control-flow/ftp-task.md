@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fcc071c10a2daa31190727dfc9f3cbe617bdcb66
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dda1608ae8a7dd59052763aafc8e4313618777c3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831539"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918791"
 ---
 # <a name="ftp-task"></a>Attività FTP
   L'attività FTP consente di caricare e scaricare file di dati, nonché di gestire directory nei server. Un pacchetto può ad esempio scaricare file di dati da un server remoto o da un indirizzo Internet nell'ambito del flusso di lavoro di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . È possibile utilizzare l'attività FTP per gli scopi seguenti:  
@@ -74,7 +73,7 @@ ms.locfileid: "62831539"
   
  Per altre informazioni sull'impostazione di queste proprietà a livello di programmazione, vedere <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Editor attività FTP &#40;pagina generale&#41;](../general-page-of-integration-services-designers-options.md)   
  [Editor attività FTP &#40;pagina trasferimento file&#41;](../ftp-task-editor-file-transfer-page.md)   
  [Attività Integration Services](integration-services-tasks.md)   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d10a381e-b567-4701-aa2d-2db09f62ad81
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a04465712667205674ddd8ea8bab7d82c3250261
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 976597ccb9130220ca6fac7fd422c0daf3122845
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62630689"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067700"
 ---
 # <a name="operator-properties-new-operator-notifications-page"></a>Proprietà operatore: Nuovo operatore (pagina Notifiche)
   Utilizzare questa pagina per impostare gli avvisi e i processi di notifica relativi all'operatore.  
@@ -46,7 +45,7 @@ ms.locfileid: "62630689"
  **NET SEND**  
  Notificare questo operatore tramite **Net Send**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Operatori](operators.md)  
   
   

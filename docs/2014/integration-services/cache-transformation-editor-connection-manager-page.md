@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cec4f3d8-a767-41cb-af67-166d5cdde783
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4828d1d3f509dc40e6a8f818f24ba5a7881783e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc44af33e79f1c419a13444cca021da59f4917ba
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061065"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924570"
 ---
 # <a name="cache-transformation-editor-connection-manager-page"></a>Editor trasformazione cache (pagina Gestione connessioni)
   Utilizzare la scheda **Gestione connessione** della finestra di dialogo **Editor trasformazione cache** per selezionare una gestione connessione esistente o crearne una nuova.  
@@ -30,13 +29,13 @@ ms.locfileid: "66061065"
  **Gestione connessione della cache**  
  Consente di selezionare una gestione connessione della cache esistente utilizzando l'elenco o di creare una nuova connessione usando il pulsante **Nuova** .  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova gestione connessione nella finestra di dialogo Editor gestione connessione cache.  
   
  **Modifica**  
  Consente di modificare una connessione esistente.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Editor trasformazione cache &#40;pagina Mapping&#41;](../../2014/integration-services/cache-transformation-editor-mappings-page.md)  
   
   

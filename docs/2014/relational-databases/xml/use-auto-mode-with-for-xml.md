@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8b1acd069ebbb64c090cd167b2f6feb2903af3b6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 232cc046667c6d31cb9657a7abdc862204507d23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702424"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059412"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>Utilizzo della modalità AUTO con FOR XML
   Come descritto in [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md), la modalità AUTO restituisce i risultati della query come elementi XML annidati. ma non consente di controllare in modo preciso la struttura del valore XML generato. È consigliabile utilizzare query in modalità AUTO solo se si desidera generare gerarchie semplici. Tuttavia, l' [uso della modalità EXPLICIT con FOR XML](use-explicit-mode-with-for-xml.md) e l' [uso della modalità PATH con FOR XML](use-path-mode-with-for-xml.md) assicurano maggiore controllo e flessibilità nella definizione della forma di elementi XML dal risultato di una query.  
@@ -121,7 +120,7 @@ FOR XML AUTO, ELEMENTS
 ...  
 ```  
   
- In questa query, durante la creazione degli elementi \<Cust>, i valori CustomerID di ogni riga vengono confrontati con quelli della riga successiva perché CustomerID è la chiave primaria della tabella. Se CustomerID non viene identificata come chiave primaria della tabella, tutti i valori delle colonne (in questa query, CustomerID e CustomerType) di ogni riga verranno confrontati con quelli della riga successiva. Se i valori sono diversi, al valore XML verrà aggiunto un nuovo elemento \<Cust>.  
+ In questa query, i valori CustomerID vengono confrontati tra una riga e l'altra per la creazione degli \<Cust> elementi, perché CustomerID è la chiave primaria della tabella. Se CustomerID non viene identificata come chiave primaria della tabella, tutti i valori delle colonne (in questa query, CustomerID e CustomerType) di ogni riga verranno confrontati con quelli della riga successiva. Se i valori sono diversi, \<Cust> al codice XML viene aggiunto un nuovo elemento.  
   
  Durante il confronto di questi valori di colonna, se una qualsiasi delle colonne da confrontare è di tipo **text**, **ntext**, **image**o **xml**, FOR XML presupporrà che i valori siano diversi e non eseguirà il confronto, anche se potrebbero essere uguali. Questo avviene perché il confronto di oggetti di grandi dimensioni non è supportato. Vengono aggiunti elementi al risultato per ogni riga selezionata. Si noti che le colonne di tipo **(n)varchar(max)** e **varbinary(max)** vengono confrontate.  
   

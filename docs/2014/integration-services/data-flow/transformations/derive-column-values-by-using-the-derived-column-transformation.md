@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 39b8e065b6b3cbd013089700de07376edc9a656c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d36026ea8543beaed20577bf87f5eb7b0b04f1cb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770688"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939612"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>Derivazione di valori di colonna tramite la trasformazione Colonna derivata
   È possibile aggiungere e configurare una trasformazione Colonna derivata solo se il pacchetto include già almeno un'attività Flusso di dati e un'origine.  
@@ -44,7 +43,7 @@ ms.locfileid: "62770688"
     > [!NOTE]  
     >  Se l'espressione non è valida, il testo dell'espressione viene evidenziato e tramite una descrizione comando nella colonna vengono descritti gli errori.  
   
-7.  Nell'elenco **Colonna derivata** selezionare **\<aggiungi come nuova colonna>** per scrivere il risultato della valutazione dell'espressione in una nuova colonna oppure selezionare una colonna esistente per aggiornarla con il risultato della valutazione.  
+7.  Nell'elenco **colonna derivata** selezionare **\<add as new column>** per scrivere il risultato della valutazione dell'espressione in una nuova colonna oppure selezionare una colonna esistente da aggiornare con il risultato della valutazione.  
   
      Se si è scelto di usare una nuova colonna, nella finestra di dialogo **Editor trasformazione Colonna derivata** viene valutata l'espressione e viene assegnato un tipo di dati alla colonna, a seconda del tipo di dati, della lunghezza, della precisione, della scala e della tabella codici.  
   

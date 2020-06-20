@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 599ff80b-392c-43aa-9db2-dc4ed33d4f6e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7d8b89024d27626516f99a5237c0efcd593bad0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02b112a93cb6098ab873ac2a698303b8a717afd3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021781"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065732"
 ---
 # <a name="publication-information-agents-snapshot-publication"></a>Informazioni sulla pubblicazione, Agenti (pubblicazione snapshot)
    La scheda **Agenti** visualizza informazioni di riepilogo sull'agente di snapshot per la pubblicazione selezionata.  
@@ -35,7 +34,7 @@ ms.locfileid: "63021781"
   
  Le impostazioni di filtro sono specifiche di ogni griglia. La selezione e l'ordinamento delle colonne vengono applicati a tutte le griglie dello stesso tipo, ad esempio la griglia delle pubblicazioni per ogni server di pubblicazione.  
   
- **Stato**  
+ **Status**  
  Stato dell'agente snapshot. Nell'elenco seguente vengono indicati i valori di stato possibili:  
   
 -   Errore  
@@ -46,19 +45,19 @@ ms.locfileid: "63021781"
   
 -   Completi  
   
- **Agente**  
+ **Agent**  
  Agente snapshot. Si tratta dell'unico agente associato a una pubblicazione snapshot. L'agente di distribuzione è associato alle sottoscrizioni della pubblicazione. Per ulteriori informazioni, vedere [visualizzare le informazioni ed eseguire attività tramite Monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  **Ultima ora di inizio**  
  Ultima ora di avvio dell'agente.  
   
- **Durata**  
+ **Duration**  
  Quantità di tempo di esecuzione dell'agente. Il valore di durata rappresenta il tempo trascorso se l'agente è ancora in esecuzione e la durata totale se l'agente è stato eseguito in precedenza.  
   
  **Ultima azione**  
  Ultima azione eseguita durante la più recente esecuzione dell'agente.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Avviare Monitoraggio replica](monitor/start-the-replication-monitor.md)   
  [Visualizzazione delle informazioni ed esecuzione di attività tramite Monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Monitoraggio della replica](monitoring-replication.md)  

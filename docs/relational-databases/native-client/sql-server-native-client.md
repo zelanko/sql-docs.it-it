@@ -1,5 +1,6 @@
 ---
 title: Informazioni
+description: Informazioni sulle funzionalità di SQL Server Native Client (SNAC). SQL Server Native Client si riferisce ai driver ODBC e OLE DB per SQL Server.
 ms.date: 04/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d175942c9d636221868ca12743e6dac79bb2ddcb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eb9d7878f4edc9f81b7b17b5fdf44da5c9dcec48
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388710"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84948665"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +30,7 @@ SNAC, o SQL Server Native Client, è un termine che è stato usato in modo inter
 > Per ulteriori informazioni e per scaricare i driver SNAC o ODBC, vedere il [post di Blog](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/)relativo al ciclo di vita di snac.
 > Per ulteriori informazioni sul driver ODBC per SQL Server, vedere [Microsoft ODBC driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).  
 
- Informazioni sulle funzionalità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di Native Client rilasciate con [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], l'ultima versione disponibile di SQL Server Native Client:
+ Informazioni sulle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funzionalità di Native Client rilasciate con [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , l'ultima versione disponibile di SQL Server Native Client:
 
 -   [Supporto SQL Server Native Client per il database locale](../../relational-databases/native-client/features/sql-server-native-client-support-for-localdb.md)  
 
@@ -39,7 +40,7 @@ SNAC, o SQL Server Native Client, è un termine che è stato usato in modo inter
 
 -   [Supporto di SQL Server Native Client per il ripristino di emergenza a disponibilità elevata](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
 
--   [Accesso alle informazioni di diagnostica nel registro eventi estesi](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
+-   [Accesso alle informazioni di diagnostica nel log degli eventi estesi](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
 
 ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client supporta tre funzionalità che sono state aggiunte a ODBC standard in Windows 7 SDK:  
 

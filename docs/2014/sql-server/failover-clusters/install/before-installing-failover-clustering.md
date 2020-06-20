@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cc959fa8406453230ee133bf6183fa3dc1ba51f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b74de0c0ac044f3bdcadf3381976dcecc777e36c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63190351"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037186"
 ---
 # <a name="before-installing-failover-clustering"></a>Operazioni preliminari all'installazione del clustering di failover
   Prima di installare un cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è necessario selezionare l'hardware e il sistema operativo utilizzati per l'esecuzione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. È inoltre necessario configurare il clustering di failover di Windows Server (WSFC) ed esaminare le considerazioni relative alla rete, alla sicurezza e agli altri software che verranno eseguiti nel cluster di failover.  
@@ -47,7 +46,7 @@ ms.locfileid: "63190351"
   
     -   .NET Framework 3.5 SP1 non viene più installato dal programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], tuttavia può essere richiesto durante l'istallazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in sistemi operativi Windows meno recenti. Per ulteriori informazioni, vedere [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [Note sulla versione](https://go.microsoft.com/fwlink/?LinkId=296445).  
   
-    -   Pacchetto di aggiornamento: ** [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ** Per evitare il riavvio del computer a causa dell'installazione di .NET Framework [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 4 durante l' [!INCLUDE[msCoName](../../../includes/msconame-md.md)] installazione, il programma di installazione richiede l'installazione di un aggiornamento nel computer.  Se si installa [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] in Windows 7 SP1 o in [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2, tale aggiornamento è incluso. Se si sta eseguendo l'installazione in un sistema operativo Windows precedente, scaricarlo da [Microsoft Update per .NET Framework 4.0 in Windows Vista e Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093).  
+    -   ** [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Pacchetto di aggiornamento:** per evitare il riavvio del computer a causa dell'installazione di .NET Framework 4 durante l'installazione, il [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] programma di installazione richiede [!INCLUDE[msCoName](../../../includes/msconame-md.md)] l'installazione di un aggiornamento nel computer.  Se si installa [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] in Windows 7 SP1 o in [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2, tale aggiornamento è incluso. Se si sta eseguendo l'installazione in un sistema operativo Windows precedente, scaricarlo da [Microsoft Update per .NET Framework 4.0 in Windows Vista e Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093).  
   
     -   .NET Framework 4: - il programma di installazione consente di installare .NET Framework 4 in un sistema operativo cluster. Per ridurre il tempo di installazione, è consigliabile installare .NET Framework 4 prima di eseguire il programma di installazione.  
   
@@ -199,7 +198,7 @@ ms.locfileid: "63190351"
   
  <sup>1</sup> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] i cluster non sono supportati nella modalità WOW. inclusi gli aggiornamenti da versioni precedenti di cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che, in origine, erano stati installati nella modalità WOW. Per tali cluster l'unica opzione di aggiornamento consiste nell'installazione side-by-side della nuova versione e nella successiva migrazione.  
   
- <sup>2</sup> supportato per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] il clustering di failover su più subnet.  
+ <sup>2</sup> supportato per il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] clustering di failover su più subnet.  
   
   
   
@@ -220,7 +219,7 @@ ms.locfileid: "63190351"
   
 1.  La dipendenze della risorsa indirizzo IP è impostata su OR in una configurazione di più subnet. Per ulteriori informazioni, vedere la pagina relativa alla [creazione di un nuovo SQL Server cluster di Failover &#40;installazione&#41;](create-a-new-sql-server-failover-cluster-setup.md)  
   
-2.  Le dipendenze AND-OR miste dell'indirizzo IP non sono supportate. Ad esempio, \<IP1> AND \<IP2> OR \<IP3> non è supportato.  
+2.  Le dipendenze AND-OR miste dell'indirizzo IP non sono supportate. Ad esempio, \<IP1> e \<IP2> o \<IP3> non sono supportati.  
   
 3.  L'utilizzo di più indirizzi IP per subnet non è supportato.  
   
@@ -264,7 +263,7 @@ ms.locfileid: "63190351"
   
   
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Requisiti hardware e software per l'installazione di SQL Server 2014](../../install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Parametri di controllo per controllo configurazione sistema](../../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)   
  [Gestione e manutenzione dell'istanza del cluster di failover](../windows/failover-cluster-instance-administration-and-maintenance.md)  

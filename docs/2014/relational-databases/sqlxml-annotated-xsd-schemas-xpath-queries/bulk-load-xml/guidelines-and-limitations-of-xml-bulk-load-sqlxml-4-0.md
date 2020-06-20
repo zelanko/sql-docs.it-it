@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c5885d14-c7c1-47b3-a389-455e99a7ece1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 593e51e34be3b607af121bfcba92497e019eba3f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1b39f5347a7ace6dc449be804144b105957b33e3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703383"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068194"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>Linee guida e limitazioni per il caricamento bulk XML (SQLXML 4.0)
   Quando si utilizza il caricamento bulk XML, è consigliabile disporre di una certa familiarità con le linee guida e le limitazioni seguenti:  
@@ -35,9 +34,9 @@ ms.locfileid: "82703383"
   
 -   Vengono ignorate tutte le informazioni sui prologhi XML.  
   
-     Il caricamento bulk XML ignora tutte le informazioni prima e dopo l' \< elemento radice> nel documento XML. Il caricamento bulk XML, ad esempio, ignora qualsiasi dichiarazione XML, qualsiasi definizione DTD interna e tutti i riferimenti DTD esterni, i commenti e così via.  
+     Il caricamento bulk XML ignora tutte le informazioni prima e dopo l' \<root> elemento nel documento XML. Il caricamento bulk XML, ad esempio, ignora qualsiasi dichiarazione XML, qualsiasi definizione DTD interna e tutti i riferimenti DTD esterni, i commenti e così via.  
   
--   Se è presente uno schema di mapping che definisce una relazione di chiave primaria/chiave esterna tra due tabelle, ad esempio tra Customer e CustOrder, la tabella con la chiave primaria deve essere descritta per prima nello schema. La tabella con la colonna chiave esterna deve essere visualizzata come successiva nello schema. Il motivo è che l'ordine in cui le tabelle vengono identificate nello schema è l'ordine utilizzato per caricarle nel database. Lo schema XDR seguente, ad esempio, genera un errore quando viene utilizzato nel caricamento bulk XML, in quanto l'elemento ** \< Order>** viene descritto prima dell'elemento ** \< Customer>** . La colonna CustomerID in CustOrder è una colonna chiave esterna che fa riferimento alla colonna chiave primaria CustomerID nella tabella Cust.  
+-   Se è presente uno schema di mapping che definisce una relazione di chiave primaria/chiave esterna tra due tabelle, ad esempio tra Customer e CustOrder, la tabella con la chiave primaria deve essere descritta per prima nello schema. La tabella con la colonna chiave esterna deve essere visualizzata come successiva nello schema. Il motivo è che l'ordine in cui le tabelle vengono identificate nello schema è l'ordine utilizzato per caricarle nel database. Lo schema XDR seguente, ad esempio, genera un errore quando viene utilizzato nel caricamento bulk XML, in quanto l' **\<Order>** elemento viene descritto prima dell' **\<Customer>** elemento. La colonna CustomerID in CustOrder è una colonna chiave esterna che fa riferimento alla colonna chiave primaria CustomerID nella tabella Cust.  
   
     ```  
     <?xml version="1.0" ?>  
@@ -77,7 +76,7 @@ ms.locfileid: "82703383"
   
 -   Se lo schema non specifica colonne di overflow tramite l'annotazione `sql:overflow-field`, il caricamento bulk XML ignora tutti i dati presenti nel documento XML ma che non sono descritti nello schema di mapping.  
   
-     Il caricamento bulk XML applica lo schema di mapping specificato ogni volta che rileva tag noti nel flusso di dati XML e ignora i dati presenti nel documento XML ma che non sono descritti nello schema. Si supponga, ad esempio, di disporre di uno schema di mapping che descrive un elemento ** \< Customer>** . Il file di dati XML contiene un tag radice ** \<>AllCustomers** , che non è descritto nello schema, che racchiude tutti gli elementi ** \< Customer>** :  
+     Il caricamento bulk XML applica lo schema di mapping specificato ogni volta che rileva tag noti nel flusso di dati XML e ignora i dati presenti nel documento XML ma che non sono descritti nello schema. Si supponga, ad esempio, di disporre di uno schema di mapping che descrive un **\<Customer>** elemento. Il file di dati XML contiene un **\<AllCustomers>** tag radice, che non è descritto nello schema, che racchiude tutti gli **\<Customer>** elementi:  
   
     ```  
     <AllCustomers>  
@@ -87,9 +86,9 @@ ms.locfileid: "82703383"
     </AllCustomers>  
     ```  
   
-     In questo caso, il caricamento bulk XML ignora l'elemento ** \<>AllCustomers** e inizia il mapping nell'elemento ** \< Customer>** . Il caricamento bulk XML ignora gli elementi non descritti nello schema ma che sono presenti nel documento XML.  
+     In questo caso, il caricamento bulk XML ignora l' **\<AllCustomers>** elemento e inizia il mapping nell' **\<Customer>** elemento. Il caricamento bulk XML ignora gli elementi non descritti nello schema ma che sono presenti nel documento XML.  
   
-     Si consideri un altro file di dati di origine XML che contiene gli elementi ** \< Order>** . Tali elementi non vengono descritti nello schema di mapping:  
+     Si consideri un altro file di dati di origine XML contenente **\<Order>** elementi. Tali elementi non vengono descritti nello schema di mapping:  
   
     ```  
     <AllCustomers>  
@@ -105,11 +104,11 @@ ms.locfileid: "82703383"
     </AllCustomers>  
     ```  
   
-     Il caricamento bulk XML ignora questi elementi dell' ** \< ordine>** . Tuttavia, se si utilizza l' `sql:overflow-field` annotazione nello schema per identificare una colonna come colonna di overflow, il caricamento bulk XML archivia tutti i dati non utilizzati in questa colonna.  
+     Questi elementi vengono ignorati dal caricamento bulk XML **\<Order>** . Tuttavia, se si utilizza l' `sql:overflow-field` annotazione nello schema per identificare una colonna come colonna di overflow, il caricamento bulk XML archivia tutti i dati non utilizzati in questa colonna.  
   
 -   Le sezioni CDATA e i riferimenti a entità vengono convertiti nei rispettivi equivalenti in formato stringa prima di essere archiviati nel database.  
   
-     In questo esempio, una sezione CDATA esegue il wrapping del valore per l'elemento ** \< City>** . Il caricamento bulk XML estrae il valore stringa ("NY") prima di inserire l'elemento ** \< City>** nel database.  
+     In questo esempio una sezione CDATA esegue il wrapping del valore per l' **\<City>** elemento. Il caricamento bulk XML estrae il valore stringa ("NY") prima di inserire l' **\<City>** elemento nel database.  
   
     ```  
     <City><![CDATA[NY]]> </City>  
@@ -142,7 +141,7 @@ ms.locfileid: "82703383"
     </Schema>  
     ```  
   
-     In questi dati XML l'attributo **assoldo** non è presente nel secondo elemento ** \< Customers>** . Quando il caricamento bulk XML inserisce il secondo ** \< cliente>** elemento nel database, utilizza il valore predefinito specificato nello schema.  
+     In questi dati XML non è presente l'attributo **Hiret** dal secondo **\<Customers>** elemento. Quando il caricamento bulk XML inserisce il secondo **\<Customers>** elemento nel database, utilizza il valore predefinito specificato nello schema.  
   
     ```  
     <ROOT>  

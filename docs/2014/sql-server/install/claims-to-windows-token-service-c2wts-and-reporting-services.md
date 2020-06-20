@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: dc6636946f7c94992fc831f814df57baf6397a1f
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 72b88bd1bd2a033683f83dd53cca8404eccb613f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922154"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059348"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Attestazioni per il servizio token Windows (C2WTS) e Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Se si desidera utilizzare l'autenticazione di Windows per le origini dati esterne alla farm di SharePoint, è richiesta la modalità SharePoint Claims to Windows Token Service (C2WTS). La condizione è valida anche se l'utente accede alla origini dati tramite l'autenticazione di Windows perché la comunicazione tra il server front-end Web e il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] condiviso sarà sempre un'autenticazione delle attestazioni.  
@@ -69,9 +68,9 @@ ms.locfileid: "82922154"
   
 2.  Configurare c2WTS ' AllowedCallers '  
   
-     c2WTS richiede che le identità dei "chiamanti" siano elencate in modo esplicito nel file di configurazione **file c2wtshost. exe. config**. c2WTS non accetta richieste da tutti gli utenti autenticati nel sistema a meno che non sia stato configurato per farlo. In questo caso il chiamante è il gruppo di Windows WSS_WPG. Il file c2wtshost.exe.confi viene salvato nel percorso seguente:  
+     c2WTS richiede che le identità dei chiamanti siano elencate in modo esplicito nel file di configurazione **c2wtshost.exe.config**. c2WTS non accetta richieste da tutti gli utenti autenticati nel sistema a meno che non sia stato configurato per farlo. In questo caso il chiamante è il gruppo di Windows WSS_WPG. Il file c2wtshost.exe.confi viene salvato nel percorso seguente:  
   
-     **\Program Foundation\v3.5\c2wtshost.exe.config Identity di Windows**  
+     **\Program Foundation\v3.5\c2wtshost.exe.configidentità di Windows**  
   
      Di seguito viene illustrato un esempio del file di configurazione:  
   

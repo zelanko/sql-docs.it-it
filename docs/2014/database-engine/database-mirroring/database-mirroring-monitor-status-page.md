@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1cec7e92d8c32cd8c50098ece83082b61bca7ae2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91f0fb62636f16cab5e74718c6b9565969b477f1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754702"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934273"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>Monitoraggio mirroring del database (pagina Stato)
   Questa pagina di sola lettura mostra lo stato di mirroring più recente per le istanze del server principale e mirror del database attualmente selezionato nell'albero di navigazione. Se le informazioni relative a un'istanza non sono attualmente disponibili, alcune delle celle nella griglia **Stato** corrispondenti all'istanza sono disattivate e visualizzano la dicitura **Sconosciuto**.  
@@ -44,8 +43,8 @@ ms.locfileid: "62754702"
 |**Connessione server di controllo del mirroring del database**|Stato della connessione del server di controllo del mirroring, preceduto da un'icona di stato: **Sconosciuto**, **Connesso**o **Disconnesso**.|  
 |**History**|Fare clic per visualizzare la cronologia del mirroring sull'istanza del server. Viene aperta la finestra di dialogo **Cronologia mirroring del database** , in cui sono visualizzate la cronologia dello stato del mirroring e le statistiche per un database con mirroring per un'istanza del server determinata.<br /><br /> Il pulsante **Cronologia** è visualizzato in grigio se il monitoraggio non è connesso all'istanza del server.|  
   
- **Log principale (** * \<tempo>* **)**  
- Stato del log nell'istanza del server principale all'ora locale sull'istanza del server, indicato dall' * \<ora>*. Sono visualizzati i parametri seguenti:  
+ **Log principale (** *\<time>* **)**  
+ Stato del log sull'istanza del server principale all'ora locale sull'istanza del server, indicata da *\<time>* . Sono visualizzati i parametri seguenti:  
   
  **Log non inviato**  
  Quantità del log in attesa nella coda di invio, espressa in KB.  
@@ -62,8 +61,8 @@ ms.locfileid: "62754702"
  **Frequenza corrente nuove transazioni**  
  Frequenza alla quale le transazioni in entrata vengono immesse nel log del server principale, espressa in KB al secondo. Per stabilire se il mirroring è in ritardo, procede secondo le previsioni o sta recuperando, confrontare questo valore con il valore **Tempo stimato per l'invio del log** .  
   
- **Log mirror (** * \<ora>* **)**  
- Stato del log sull'istanza del server mirror all'ora locale sull'istanza del server, indicata dall' * \<ora>*. Sono visualizzati i parametri seguenti:  
+ **Log mirror (** *\<time>* **)**  
+ Stato del log sull'istanza del server mirror all'ora locale sull'istanza del server, indicata da *\<time>* . Sono visualizzati i parametri seguenti:  
   
  **Log non ripristinato**  
  Quantità del log in attesa nella coda di rollforward, espressa in KB.  
@@ -92,12 +91,12 @@ ms.locfileid: "62754702"
   
 -   **Protezione elevata con failover automatico (sincrona)**  
   
-## <a name="remarks"></a>Osservazioni  
- I membri del ruolo predefinito del database **dbm_monitor** possono visualizzare lo stato di mirroring esistente usando Monitoraggio mirroring del database o la stored procedure **sp_dbmmonitorresults** . Questi utenti non possono tuttavia aggiornare la tabella dello stato. Dipendono dal **processo di Monitoraggio mirroring del database**per aggiornare la tabella dello stato a intervalli regolari. Per conoscere la durata dello stato visualizzato, un utente può esaminare i tempi nelle etichette **log principale (***\<ora>***)** e **Log mirror (***\<ora>***)** .  
+## <a name="remarks"></a>Commenti  
+ I membri del ruolo predefinito del database **dbm_monitor** possono visualizzare lo stato di mirroring esistente usando Monitoraggio mirroring del database o la stored procedure **sp_dbmmonitorresults** . Questi utenti non possono tuttavia aggiornare la tabella dello stato. Dipendono dal **processo di Monitoraggio mirroring del database**per aggiornare la tabella dello stato a intervalli regolari. Per conoscere la durata dello stato visualizzato, un utente può esaminare i tempi nelle etichette **log principale ( ***\<time>*** )** e **Log mirror ( ***\<time>*** )** .  
   
  Se questo processo non esiste o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è stato arrestato, lo stato diventa sempre più obsoleto ed è possibile che non rifletta più la configurazione della sessione di mirroring. Dopo un failover, ad esempio, può sembrare che i partner condividano lo stesso ruolo, principale o mirror, oppure il server principale corrente può essere indicato come mirror e, viceversa, il server mirror corrente come principale.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Avvia Monitoraggio mirroring del database &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Monitoraggio del mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Avvio della Configurazione guidata sicurezza mirroring del database &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  

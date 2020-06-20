@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 41bcd057-436f-4fa8-8293-fc8057a30877
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f597aa6c9ba9759b606501b0bd72a2166b1805e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd2452a969f290f4d33529eee44d36611c8d7525
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127400"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050737"
 ---
 # <a name="srv_message_handler-extended-stored-procedure-api"></a>srv_message_handler (API Stored procedure estesa)
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
   
- Chiama il gestore dei messaggi dell'API Stored procedure estesa installato. Questa funzione viene in genere utilizzata per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chiamare da un stored procedure esteso per registrare un errore (definito dalla stored procedure estesa) nel file [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di log degli errori o [!INCLUDE[msCoName](../../includes/msconame-md.md)] nel registro applicazioni di Windows.  
+ Chiama il gestore dei messaggi dell'API Stored procedure estesa installato. Questa funzione viene in genere utilizzata per chiamare [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un stored procedure esteso per registrare un errore (definito dalla stored procedure estesa) nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file di log degli errori o nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] registro applicazioni di Windows.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -97,7 +96,7 @@ oserrtextlen
  *oserrtextlen*  
  Lunghezza della stringa dell'errore del sistema operativo *oserrtext*.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SUCCEED o FAIL.  
   
 ## <a name="remarks"></a>Osservazioni  

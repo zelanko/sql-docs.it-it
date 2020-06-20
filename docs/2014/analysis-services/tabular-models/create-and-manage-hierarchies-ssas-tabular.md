@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2e0c1162d196abba660cb1f15091c5d6a5c13884
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ad85e4c70e5185de83a8d3e259e397c5673ac9aa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067500"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939832"
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>Creare e gestire gerarchie (SSAS tabulare)
   Le gerarchie possono essere create e gestite in Progettazione modelli in Vista diagramma. Per visualizzare Progettazione modelli in Vista diagramma, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], fare clic sul menu **Modello** , scegliere **Vista modelli**, quindi **Vista diagramma**.  
@@ -93,7 +92,7 @@ ms.locfileid: "66067500"
   
 -   In alternativa, fare clic sul livello padre della gerarchia e premere CANC. Verranno rimossi anche tutti i livelli figlio.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Progettazione di modelli tabulari &#40;SSAS tabulare&#41;](../tabular-model-designer-ssas-tabular.md)   
  [Gerarchie &#40;SSAS tabulare&#41;](hierarchies-ssas-tabular.md)   
  [Misure &#40;SSAS tabulare&#41;](measures-ssas-tabular.md)  

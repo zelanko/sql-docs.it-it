@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40d245a2-0631-470e-81b3-1feb47e028cb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 18f90bd6c551a6240a49eed9a0ec39723851bce1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5fa59ce825a8731997cc905db636f40dcd7964e8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952071"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012154"
 ---
 # <a name="obsolete-extensions-were-detected-on-the-report-server-computer-upgrade-advisor"></a>Sono state rilevate estensioni obsolete nel computer del server di report (Upgrade Advisor)
   Sono state rilevate una o più estensioni per il rendering non più disponibili nella versione corrente.  

@@ -9,16 +9,15 @@ ms.topic: reference
 ms.assetid: 343a1cd6-94e9-4200-9d17-11cef0d73f73
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2df5fa785f715dbf63c7682148c20bbaf971d0c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 51fe880ce3865e44620e0f7ae88c2103b0796f38
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76928098"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933264"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>Esempio di modifica di stringhe in grado di riconoscere caratteri supplementari
-  In questo esempio per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene illustrata l'elaborazione di stringhe con supporto per i caratteri supplementari. Nell'esempio viene illustrata l'implementazione di cinque funzioni per i valori stringa Transact-SQL che offrono le stesse funzioni di manipolazione dei valori stringa di quelle predefinite, nonché ulteriori capacità di supporto dei caratteri supplementari, che consentono di gestire sia le stringhe Unicode sia quelle contenenti caratteri supplementari. Le cinque funzioni sono Lens ( `lefts(), rights(), subs()` ) e `replace_s()` sono equivalenti alle funzioni predefinite `LEN(), LEFT(), RIGHT(), SUBSTRING()` e `REPLACE()` alle funzioni di stringa.  
+  In questo esempio per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene illustrata l'elaborazione di stringhe con supporto per i caratteri supplementari. Nell'esempio viene illustrata l'implementazione di cinque funzioni per i valori stringa Transact-SQL che offrono le stesse funzioni di manipolazione dei valori stringa di quelle predefinite, nonché ulteriori capacità di supporto dei caratteri supplementari, che consentono di gestire sia le stringhe Unicode sia quelle contenenti caratteri supplementari. Le cinque funzioni sono Lens () `lefts(), rights(), subs()` e `replace_s()` sono equivalenti alle funzioni predefinite e alle funzioni di `LEN(), LEFT(), RIGHT(), SUBSTRING()` `REPLACE()` stringa.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  Per creare ed eseguire questo progetto, è necessario installare il software seguente:  

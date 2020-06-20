@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 89ff6d37-94c0-4773-8be9-dde943fff023
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 952043d5d001fe4fe65e6dd1aa7bb2001290429e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39c09a3a73051e7a61f3a62a125232d83d1570c0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110069"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068074"
 ---
 # <a name="optimizing-the-neworg-table"></a>Ottimizzazione della tabella NewOrg
   La tabella **NewOrd** creata nell'attività popolamento di [una tabella con dati gerarchici esistenti](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) contiene tutte le informazioni sui dipendenti e rappresenta la struttura gerarchica utilizzando un `hierarchyid` tipo di dati. Questa attività aggiunge indici nuovi per supportare ricerche nella colonna `hierarchyid`.  

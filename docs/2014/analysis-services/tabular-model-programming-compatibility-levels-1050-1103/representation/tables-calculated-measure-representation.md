@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 4cb9fea5-1616-467b-a539-d051e5833aea
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9fb706a5175a2eb673e8f175a154f681b3af3c43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b630fa075ae07b84e4886ad8bc115611da8e2d5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62757656"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940042"
 ---
 # <a name="calculated-measure-representation-tabular"></a>Rappresentazione della misura calcolata (tabulare)
   Una misura calcolata è un'espressione DAX denominata che viene valutata ogni volta che viene utilizzata.  

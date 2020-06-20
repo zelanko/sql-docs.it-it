@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bc3dbe16-f6c1-4f07-8d88-2b8e86302c7e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bad387683b2a093f680c00885a50b043e8a890cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a507ba84708a1444c52f49421eda1009ede9adb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094891"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059291"
 ---
 # <a name="how-to-filter-reports"></a>Procedura: Filtraggio di report
   In questo argomento viene illustrato come utilizzare il Visualizzatore report di Preparazione aggiornamento per applicare filtri a un report.  
@@ -41,7 +40,7 @@ ms.locfileid: "66094891"
   
     -   **Problemi non risolti**. Visualizza tutti i problemi che non sono stati ancora risolti.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Procedura: esecuzione dell'analisi guidata di preparazione aggiornamento](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Risoluzione dei problemi di aggiornamento](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Procedure per preparazione aggiornamento](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   

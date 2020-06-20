@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 619e437b-e00f-49a9-a94c-8feafc4af713
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 755f2955e7bcd12ac022b29e6e4d3c7cf3aa80be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed1b5851868705000d5aa04eb885b8e188dd45ea
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061853"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925912"
 ---
 # <a name="add-new-source-dialog-box"></a>Finestra di dialogo Aggiungi nuova origine
   Nella tabella seguente sono elencate le opzioni disponibili nella Finestra di dialogo Aggiungi nuova origine.  
@@ -25,7 +24,7 @@ ms.locfileid: "66061853"
 |Opzione|Descrizione|  
 |------------|-----------------|  
 |Tipi|Selezionare il tipo di origine a cui si desidera connettersi.|  
-|Gestioni connessioni|Selezionare una gestione connessione esistente oppure fare clic su ** \<nuova>** per creare una nuova gestione connessione.|  
+|Gestioni connessioni|Selezionare una gestione connessione esistente oppure fare clic su **\<New>** per creare una nuova gestione connessione.|  
 |Mostra solo installati|Consente di specificare se visualizzare solo le origini installate.|  
 |OK|Fare clic per salvare le modifiche e aprire eventuali finestre di dialogo successive per configurare opzioni aggiuntive.|  
   

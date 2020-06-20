@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 010a4cab-d878-4889-8ac8-7d91db6345d6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0fc22cd7489294e8623596c1ce1e4f38c90706aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 324bee017a307b381fa44ddc4e000f4205c26644
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245719"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067475"
 ---
 # <a name="target-servers-target-server-status-tab"></a>Server di destinazione (scheda Stato server di destinazione)
   Utilizzare questa pagina per visualizzare lo stato dei server di destinazione per questo server master.  
@@ -35,7 +34,7 @@ ms.locfileid: "63245719"
  **Istruzioni non lette**  
  Consente di visualizzare il numero di istruzioni che il server di destinazione non ha ancora ricevuto.  
   
- **Stato**  
+ **Status**  
  Consente di visualizzare lo stato del server di destinazione.  
   
  **Imponi polling**  
@@ -53,7 +52,7 @@ ms.locfileid: "63245719"
  **Aggiorna ogni**  
  Consente di specificare la frequenza di aggiornamento delle informazioni visualizzate in questa pagina.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Amministrazione automatizzata in un'organizzazione](automated-administration-across-an-enterprise.md)  
   
   

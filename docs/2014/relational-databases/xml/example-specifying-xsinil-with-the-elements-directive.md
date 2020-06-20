@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07c873ff-1f9d-480e-8536-862c39eb8249
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 941ac9edde6f0bd0fa1610d2ac4f32f2af169342
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4e736beb22f40008d2a8aa5fac797b9f48904c52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702757"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013295"
 ---
 # <a name="example-specifying-xsinil-with-the-elements-directive"></a>Esempio: specifica di XSINIL con la direttiva ELEMENTS
   Nella query seguente viene specificata la direttiva `ELEMENTS` per generare codice XML incentrato sugli elementi dai risultati della query.  

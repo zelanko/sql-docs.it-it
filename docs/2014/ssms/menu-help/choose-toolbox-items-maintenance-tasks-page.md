@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 24dfd1f587db8d652390be27fa2307a8500c3145
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 949f33ed5893871cb7bf0d646b96278e0932f862
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62470048"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067434"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>Scegli elementi Casella degli strumenti (pagina Attività di manutenzione)
   Questa scheda della finestra di dialogo **Personalizza Casella degli strumenti** visualizza un elenco di tutti i componenti delle attività di manutenzione registrati nel computer e offre la possibilità di modificare quelli visualizzati nella Casella degli strumenti. È possibile aprire la finestra di dialogo **Personalizza Casella degli strumenti** dal menu **Strumenti** . Per ordinare l'elenco di componenti selezionare un'intestazione di colonna.  

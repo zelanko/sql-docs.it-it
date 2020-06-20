@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 39e444077c3dbe27ae243e4292b7a047e21de2b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a1a6beb1c6996e6e12f16c4555fd9dfcab97617d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064853"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933046"
 ---
 # <a name="event-pairing-target"></a>Destinazione di abbinamento degli eventi
   La destinazione di abbinamento degli eventi stabilisce la corrispondenza di due eventi utilizzando una o più colonne di dati presenti in ciascun evento. Molti eventi entrano nelle coppie, ad esempio, le acquisizioni e i rilasci del blocco. Dopo che una sequenza dell'evento viene abbinata, entrambi gli eventi sono ignorati. Il fatto di ignorare i set corrispondenti consente un facile rilevamento di acquisizioni del blocco che non sono state rilasciate.  
@@ -30,7 +29,7 @@ ms.locfileid: "66064853"
   
  Nella tabella seguente vengono descritte le opzioni disponibili per configurare l'abbinamento degli eventi.  
   
-|Opzione|Valori consentiti|Descrizione|  
+|Opzione|Valori consentiti|Description|  
 |------------|--------------------|-----------------|  
 |begin_event|Qualsiasi nome di evento presente nella sessione corrente.|Nome di evento che specifica l'evento di inizio in una sequenza abbinata.|  
 |end_event|Qualsiasi nome di evento presente nella sessione corrente.|Nome di evento che specifica l'evento di fine in una sequenza abbinata.|  
@@ -43,7 +42,7 @@ ms.locfileid: "66064853"
   
  Tutti i dati associati a un evento sono acquisiti e archiviati per un abbinamento futuro. Vengono raccolti anche i dati aggiunti dalle azioni. I dati degli eventi raccolti vengono archiviati in memoria e, come tali, hanno un limite finito. Questo limite è basato sulla capacità e sull'attività del sistema. Anziché utilizzare il valore massimo di memoria come parametro, la quantità di memoria utilizzata sarà basata sulle risorse di sistema disponibili. Quando queste non sono disponibili, gli eventi non abbinati che sono stati mantenuti saranno eliminati. Se un evento non è stato abbinato ed è stato eliminato, l'evento corrispondente comparirà come un evento non abbinato.  
   
- La destinazione abbinamento serializza gli eventi non abbinati a un formato XML. Questo formato non è conforme ad alcuno schema. Il formato contiene solo due tipi di elementi. L' ** \<elemento>non abbinato** è la radice, seguita da uno. evento>elemento per ogni evento non abbinato attualmente rilevato. ** \<** L' ** \<elemento>dell'evento** contiene un attributo che contiene il nome dell'evento non abbinato.  
+ La destinazione abbinamento serializza gli eventi non abbinati a un formato XML. Questo formato non è conforme ad alcuno schema. Il formato contiene solo due tipi di elementi. L' **\<unpaired>** elemento è la radice, seguita da uno. **\<event>** elemento per ogni evento non abbinato attualmente rilevato. L' **\<event>** elemento contiene un attributo che contiene il nome dell'evento non abbinato.  
   
 ## <a name="adding-the-target-to-a-session"></a>Aggiunta della destinazione a una sessione  
  Per aggiungere la destinazione di corrispondenza delle coppie a una sessione di eventi estesi, è necessario includere l'istruzione seguente quando si crea o modifica una sessione eventi:  
@@ -89,7 +88,7 @@ WHERE xe.name = 'session_name'
 </unpaired>  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server destinazioni degli eventi estesi](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [sys. dm_xe_session_targets &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
  [CREARE una sessione eventi &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   

@@ -14,22 +14,21 @@ helpviewer_keywords:
 ms.assetid: 5fd1dbcd-b3bb-4da0-8582-db2e5eeac9a3
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e92668088ce0f30f680d4198ad0c3348a21fbff6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a27b6093fc7fae78d2181dd2358e7f070df75903
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781950"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933288"
 ---
 # <a name="system-requirements"></a>Requisiti di sistema
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]In SMO (Management Objects) [!INCLUDE[msCoName](../../includes/msconame-md.md)] `System.Data.SqlClient` viene utilizzato il driver di oggetto per connettersi a e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]comunicare con istanze di.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]In SMO (Management Objects) viene utilizzato il [!INCLUDE[msCoName](../../includes/msconame-md.md)] `System.Data.SqlClient` driver di oggetto per connettersi a e comunicare con istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  I client SMO richiedono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, incluso in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0.  
   
- Per sviluppare applicazioni tramite SMO, è necessario che 2008 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] sia installato.  
+ Per sviluppare applicazioni tramite SMO, è necessario che [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008 sia installato.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica dell'installazione di SQL Server](https://technet.microsoft.com/library/bb500438\(v=SQL.105\).aspx)  
   
   

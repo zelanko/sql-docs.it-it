@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d57a1876-3fb3-4d82-8b5c-510b6e0d8a11
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 740353035b1bd53a8c99b6336b3a70532eb57b2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9fa2051020babf67d1dfe6c6a99720c491b398f2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110124"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068071"
 ---
 # <a name="summary-converting-a-table-to-a-hierarchical-structure"></a>Riepilogo: Conversione di una tabella in una struttura gerarchica
   Il tipo di dati `hierarchyid` può archiviare una relazione gerarchica in un formato semplice e compatto. Gli indici corretti possono restituire efficientemente dati dal livello di gerarchia, da sottoalberi della gerarchia o dalle ricerche singleton tradizionali.  
@@ -27,7 +26,7 @@ ms.locfileid: "66110124"
 ## <a name="next-lesson"></a>Lezione successiva  
  [Lezione 2: Creazione e gestione di dati in una tabella gerarchica](lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Dati gerarchici &#40;SQL Server&#41;](../hierarchical-data-sql-server.md)  
   
   

@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: f289e978-14ca-46ef-9e61-e1fe5fd593be
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 544d4b40c66f345aa563cbc96380639c729ae1d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 709707caa9087ceadaa11cfd4b415eadd6c3702c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773896"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927932"
 ---
 # <a name="use-sql-server-management-studio"></a>Utilizzo di SQL Server Management Studio
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)](SSMS) è un ambiente integrato per l'accesso, la configurazione, la gestione, l'amministrazione e lo sviluppo di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]tutti i componenti di. SSMS integra un'ampia gamma di strumenti grafici con numerosi editor di script avanzati per offrire accesso a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] agli sviluppatori e agli amministratori qualsiasi sia il livello di competenza.  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)](SSMS) è un ambiente integrato per l'accesso, la configurazione, la gestione, l'amministrazione e lo sviluppo di tutti i componenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . SSMS integra un'ampia gamma di strumenti grafici con numerosi editor di script avanzati per offrire accesso a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] agli sviluppatori e agli amministratori qualsiasi sia il livello di competenza.  
   
  SSMS unisce in un unico ambiente le funzionalità di Enterprise Manager, Query Analyzer e Analysis Manager inclusi nelle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. SSMS funziona inoltre con tutti i componenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , ad esempio [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Gli sviluppatori possono lavorare in un ambiente familiare, mentre gli amministratori di database avranno a disposizione un'unica utilità completa che abbina strumenti grafici di facile utilizzo con ampie capacità di scripting.  
   
@@ -77,7 +76,7 @@ ms.locfileid: "62773896"
  [Strumenti di progettazione di Visual Database Tools](../ssms/visual-db-tools/visual-database-tool-designers.md)  
  Vengono descritti gli strumenti di Visual Database Tools che consentono di creare query, progettare o modificare la struttura di un database o aggiornare dati.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Visualizzare o modificare le proprietà del server &#40;SQL Server&#41;](configure-windows/view-or-change-server-properties-sql-server.md)  
   
   

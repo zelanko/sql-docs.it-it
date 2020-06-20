@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 381007cb26f74cdf945900436d8a9fcea5a4ef39
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: deb1a9825b2079e4836f654605097667d8edb05a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62714718"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068316"
 ---
 # <a name="filter-a-trace"></a>Filtrare una traccia
   I filtri consentono di limitare gli eventi raccolti in una traccia. Se non si imposta un filtro, tutti gli eventi delle classi di evento selezionate vengono restituiti nell'output di traccia. Ad esempio, se si limitano i nomi utente di Windows in una traccia, consentendo solo utenti specifici, i dati dell'output saranno ridotti solo a tali utenti.  
@@ -137,7 +136,7 @@ ms.locfileid: "62714718"
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   
- <sup>1</sup> se si tracciano eventi dall'utilità **osql** o dall'utilità **SQLCMD** , aggiungere **%** sempre ai filtri nella colonna di dati **TextData** .  
+ <sup>1</sup> se si tracciano eventi dall'utilità **osql** o dall'utilità **SQLCMD** , aggiungere sempre **%** ai filtri nella colonna di dati **TextData** .  
   
  A titolo di sicurezza, Traccia SQL omette automaticamente dalla traccia le informazioni sulle stored procedure correlate alla sicurezza che coinvolgono le password. Tale meccanismo di sicurezza non è configurabile ed è sempre attivo. In tale modo viene impedito che le password possano essere acquisite dagli utenti, i quali sono autorizzati a tenere traccia di tutte le attività in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
