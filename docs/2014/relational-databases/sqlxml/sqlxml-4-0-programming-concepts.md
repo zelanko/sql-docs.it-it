@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5a11cda2-b8a3-4453-848f-641afdaa7024
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ea7fe33f087fd814d44592677cc70b9ba1e7e244
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 88bf17fd4b907fe28a49d1ced8300d71eaec6709
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702835"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037206"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>Concetti relativi alla programmazione SQLXML 4.0
   SQLXML 3.0 è stato offerto come versione Web per offrire ulteriori miglioramenti e funzionalità XML sul lato client alle caratteristiche esistenti, ad esempio schemi XSD con annotazioni, caricamento bulk XML, supporto per servizi Web (SOAP) e updategram.  

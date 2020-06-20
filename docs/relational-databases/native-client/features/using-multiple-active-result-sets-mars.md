@@ -1,5 +1,6 @@
 ---
 title: Uso di MARS (Multiple Active Result Set) | Microsoft Docs
+description: SQL Server supporta più set di risultati attivi. Le applicazioni possono avere più di una richiesta in sospeso e un set di risultati predefinito attivo per connessione.
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: ecfd9c6b-7d29-41d8-af2e-89d7fb9a1d83
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdf953bd5cb1835b2d2f6cc0e868a3687e53e852
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b83a79a92680c6499a4f2270ad3707082b324938
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303210"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950496"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>Utilizzo di MARS (Multiple Active Result Set)
 
@@ -50,7 +51,7 @@ ms.locfileid: "81303210"
 -   In MARS la rappresentazione con ambito sessione non è consentita durante l'esecuzione di batch simultanei.  
 
 > [!NOTE]
-> Per impostazione predefinita, la funzionalità MARS non è abilitata dal driver. Per usare MARS quando ci si [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] connette [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a con Native client, è necessario abilitare in modo specifico Mars all'interno di una stringa di connessione. Tuttavia, alcune applicazioni possono abilitare MARS per impostazione predefinita, se l'applicazione rileva che il driver supporta MARS. Per queste applicazioni, è possibile disabilitare MARS nella stringa di connessione in base alle esigenze. Per ulteriori informazioni, vedere le sezioni relative al provider OLE DB di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e al driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, più avanti in questo argomento.
+> Per impostazione predefinita, la funzionalità MARS non è abilitata dal driver. Per usare MARS quando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ci si connette a con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client, è necessario abilitare in modo specifico Mars all'interno di una stringa di connessione. Tuttavia, alcune applicazioni possono abilitare MARS per impostazione predefinita, se l'applicazione rileva che il driver supporta MARS. Per queste applicazioni, è possibile disabilitare MARS nella stringa di connessione in base alle esigenze. Per ulteriori informazioni, vedere le sezioni relative al provider OLE DB di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e al driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, più avanti in questo argomento.
 
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client non limita il numero di istruzioni attive su una connessione.  
   

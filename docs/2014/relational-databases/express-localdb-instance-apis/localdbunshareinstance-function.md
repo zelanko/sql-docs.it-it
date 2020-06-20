@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: 54012ccb-eded-43f7-8ea5-da5ce79224c6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d140eccd547de3be0a62db331416fc9b6bfc8300
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45972029fdb06f447492ec75e1ab64a54f4adce5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128677"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050955"
 ---
 # <a name="localdbunshareinstance-function"></a>Funzione LocalDBUnshareInstance
   Viene arrestata la condivisione dell'istanza del database locale di SQL Server Express specificata.  
@@ -44,7 +43,7 @@ HRESULT LocalDBUnShareInstance(
  *dwFlags*  
  [Input] Riservato per utilizzi futuri. Deve essere impostato attualmente su 0.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  S_OK  
  Funzione completata.  
   
@@ -69,7 +68,7 @@ HRESULT LocalDBUnShareInstance(
 ## <a name="remarks"></a>Osservazioni  
  Per un esempio di codice in cui viene utilizzata l'API del database locale, vedere [SQL Server Express riferimento al database locale](../sql-server-express-localdb-reference.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Informazioni sulla versione e intestazione di SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
   
   

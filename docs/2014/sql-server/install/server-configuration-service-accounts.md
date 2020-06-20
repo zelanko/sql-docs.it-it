@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: c283702d-ab20-4bfa-9272-f0c53c31cb9f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 405e1f8509e67518711eb2330c5f58961a3be77b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a894475f9dbdc95396f27b32f25f56bc409f0348
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76921141"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036723"
 ---
 # <a name="server-configuration---service-accounts"></a>Configurazione Server - Account di servizio
   Utilizzare la pagina Configurazione del server dell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per assegnare account di accesso ai servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I servizi effettivamente configurati in questa pagina dipendono dalle caratteristiche selezionate per l'installazione.  
   
-Gli account di avvio usati per avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed eseguire possono essere account utente di dominio, account utente locali, account del servizio gestito, account virtuali oppure account di sistema predefiniti.  
+Gli account di avvio usati per avviare ed eseguire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono essere account utente di dominio, account utente locali, account del servizio gestito, account virtuali oppure account di sistema predefiniti.  
   
 ## <a name="options"></a>Opzioni  
  È possibile assegnare lo stesso account di accesso a tutti i servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure configurare singolarmente l'account di ogni servizio. È inoltre possibile specificare se i servizi verranno avviati automaticamente, manualmente o se sono disabilitati. Per la maggior parte delle installazioni l'account consigliato è quello predefinito.  
@@ -31,7 +30,7 @@ Gli account di avvio usati per avviare [!INCLUDE[ssNoVersion](../../includes/ssn
   
  Se si configurano i servizi per l'utilizzo di account di dominio, [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di configurare singolarmente gli account del servizio per fornire privilegi minimi per ogni servizio, in modo che i servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispongano delle autorizzazioni minime necessarie per completare le attività. Per altre informazioni, incluse le descrizioni dei tipi di account, vedere [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
- **Configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli account del servizio singolarmente (scelta consigliata)**  
+ **Configurare gli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio singolarmente (scelta consigliata)**  
  Utilizzare la griglia per fornire a ogni servizio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un nome utente di accesso e una password e per impostare il tipo di avvio per il servizio. Per i servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile utilizzare account di sistema predefiniti, un account locale, un gruppo locale, un gruppo di dominio o account utente di dominio.  
   
  Selezionare i servizi seguenti per personalizzarne le impostazioni.  

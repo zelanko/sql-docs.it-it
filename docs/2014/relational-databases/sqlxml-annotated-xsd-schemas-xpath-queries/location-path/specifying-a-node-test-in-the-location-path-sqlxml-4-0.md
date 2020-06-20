@@ -14,32 +14,31 @@ helpviewer_keywords:
 ms.assetid: f46c30bf-1e24-4435-9ac2-f8ba43a8ff94
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e4ff55980c7ca4cae45d568f03fef32ba1ea5155
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 02f78577eab391f1774251ad2c6ca7b9a4bd2dab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703103"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015215"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>Specifica di un test di nodo nel percorso (SQLXML 4.0)
-  Un test di nodo specifica il tipo di nodo selezionato dal passo. Ogni asse (`child`, `parent`, `attribute` o `self`) dispone di un tipo di nodo principale. Per l' `attribute` asse, il tipo di nodo principale è ** \< attribute>**. Per gli `parent` `child` assi, e `self` , il tipo di nodo principale è ** \< elemento>**.  
+  Un test di nodo specifica il tipo di nodo selezionato dal passo. Ogni asse (`child`, `parent`, `attribute` o `self`) dispone di un tipo di nodo principale. Per l' `attribute` asse, il tipo di nodo principale è **\<attribute>** . Per gli `parent` `child` assi, e `self` , il tipo di nodo principale è **\<element>** .  
   
 > [!NOTE]  
 >  Il test di nodo con carattere jolly *, ad esempio `child::*`, non è supportato.  
   
 ## <a name="node-test-example-1"></a>Test del nodo: esempio 1  
- Il percorso `child::Customer` Seleziona il ** \< cliente>** elementi figlio del nodo di contesto.  
+ Il percorso `child::Customer` Seleziona gli **\<Customer>** elementi figlio del nodo di contesto.  
   
- In questo esempio `child` è l'asse e `Customer` è il test di nodo. Il tipo di nodo principale per l' `child` asse è ** \<>elemento **. Pertanto, il test di nodo è TRUE se il nodo ** \< Customer>** è un ** \< elemento>** nodo. Se il nodo di contesto non ha alcun ** \< cliente>** figli, viene restituito un set di nodi vuoto.  
+ In questo esempio `child` è l'asse e `Customer` è il test di nodo. Il tipo di nodo principale per l' `child` asse è **\<element>** . Pertanto, il test di nodo è TRUE se il **\<Customer>** nodo è un **\<element>** nodo. Se il nodo di contesto non dispone **\<Customer>** di elementi figlio, viene restituito un set di nodi vuoto.  
   
 ## <a name="node-test-example-2"></a>Test di nodo: esempio 2  
  Il percorso consente `attribute::CustomerID` di selezionare l'attributo **CustomerID** del nodo di contesto.  
   
- Nell'esempio `attribute` è l'asse e `CustomerID` è il test di nodo. Il tipo di nodo principale dell' `attribute` asse è ** \<>attributo **. Pertanto, il test di nodo è TRUE se **CustomerID** è un ** \< attributo>** nodo. Se il nodo di contesto non dispone di **CustomerID**, viene restituito un set di nodi vuoto.  
+ Nell'esempio `attribute` è l'asse e `CustomerID` è il test di nodo. Il tipo di nodo principale dell' `attribute` asse è **\<attribute>** . Pertanto, il test di nodo è TRUE se **CustomerID** è un **\<attribute>** nodo. Se il nodo di contesto non dispone di **CustomerID**, viene restituito un set di nodi vuoto.  
   
 > [!NOTE]  
->  In questa implementazione di XPath, se un passaggio del percorso fa riferimento a un ** \< elemento>** o a un tipo di ** \<>di attributo** non dichiarato nello schema, viene generato un errore. a differenza di quanto avviene con l'implementazione di XPath in MSXML, che restituisce un set di nodi vuoto.  
+>  In questa implementazione di XPath, se un passaggio del percorso si riferisce a un **\<element>** **\<attribute>** tipo o non dichiarato nello schema, viene generato un errore. a differenza di quanto avviene con l'implementazione di XPath in MSXML, che restituisce un set di nodi vuoto.  
   
 ## <a name="abbreviated-syntax-for-the-axes"></a>Sintassi abbreviata per gli assi  
  Per il percorso è supportata la sintassi abbreviata seguente:  

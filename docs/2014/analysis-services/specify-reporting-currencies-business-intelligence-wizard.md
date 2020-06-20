@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 41bbc3c4-92e0-4b2d-b303-ce62ff9d4348
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1be12aae3f4b4907fe7464aab1ea4bef6ff5f8dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f395000888cccb52356b4e89e1331e1c86ea7e1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068206"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940332"
 ---
 # <a name="specify-reporting-currencies-business-intelligence-wizard"></a>Impostazione valute report (Configurazione guidata funzionalità di Business Intelligence)
   Usare la pagina **Impostazione valute report** per definire le valute report per la funzionalità di conversione valuta che copre il tipo di conversione molti-a-molti o uno-a-molti specificato nella pagina **Selezione tipo di conversione**. La valuta report è la valuta in cui vengono convertiti i valori per le misure selezionate nella pagina **Selezione misure** . I membri selezionati dalla dimensione di tipo Valuta definiscono una dimensione di tipo Valuta report per la conversione di valuta generata dalla Configurazione guidata funzionalità di Business Intelligence.  
@@ -31,7 +30,7 @@ ms.locfileid: "66068206"
   
  Selezionare un membro specifico per includerlo nella dimensione di tipo Valuta report. Deselezionare un membro specifico per escluderlo.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto della configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Progettazione dimensioni &#40;Analysis Services-Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  

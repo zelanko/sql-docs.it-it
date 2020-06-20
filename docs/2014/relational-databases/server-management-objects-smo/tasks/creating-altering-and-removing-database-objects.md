@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 702fd63d-8734-4a02-872e-aecfb037c787
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5bf11ece3797f9bbc580339846efb685876b2d0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14dd0c0175a23f809fc925c5104ac15ac408805b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188631"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996926"
 ---
 # <a name="working-with-database-objects"></a>Utilizzo degli oggetti di database
   Le fasi di creazione di un oggetto SMO sono le seguenti:  
@@ -41,7 +40,7 @@ ms.locfileid: "63188631"
   
  L'istruzione `Drop` viene utilizzata per rimuovere un oggetto e tutti i rispettivi oggetti figlio interdipendenti necessari per creare inizialmente l'oggetto.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Modello a oggetti SMO](../smo-object-model.md)  
   
   

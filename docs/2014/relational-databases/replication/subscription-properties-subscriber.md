@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bef66929-3234-4a45-8ec4-3b271519d07a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: af9cb7612837021b156fb8f467899f0e23ef1555
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a37f7b086f33719d7e55826ff40f2202093119a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250265"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004595"
 ---
 # <a name="sql-server-replication-subscription-properties"></a>Proprietà replica di SQL Server sottoscrizione 
 In questa sezione vengono fornite informazioni sulla finestra di dialogo **Proprietà sottoscrizione** . 
@@ -131,7 +130,7 @@ In questa sezione vengono fornite informazioni sulla finestra di dialogo **Propr
   
  Per ulteriori informazioni sulla configurazione, vedere [Configure Web Synchronization](configure-web-synchronization.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Visualizzare e modificare le proprietà delle sottoscrizioni pull](view-and-modify-pull-subscription-properties.md)   
  [Visualizzare e modificare le proprietà delle sottoscrizioni push](view-and-modify-push-subscription-properties.md)   
  [Subscribe to Publications](subscribe-to-publications.md)  

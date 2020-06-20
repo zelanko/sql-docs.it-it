@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 156a8e765812c14da0888148505311d52c267916
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 300e1b133691d91bf3955fbdd1fd6fbe24274177
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62782384"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935462"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Connettersi a SQL Server se gli amministratori di sistema sono bloccati
   In questo argomento viene descritto come ottenere nuovamente l'accesso al [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] come amministratore di sistema. Un amministratore di sistema può perdere l'accesso a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per uno dei motivi seguenti:  
@@ -58,12 +57,12 @@ ms.locfileid: "62782384"
   
 4.  Nel riquadro a sinistra di Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selezionare **Servizi di SQL Server**. Nel riquadro a destra individuare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nell'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è incluso **(MSSQLSERVER)** dopo il nome del computer. Le istanze denominate vengono visualizzate in maiuscolo con lo stesso nome presente in Server registrati. Fare clic con il pulsante destro del mouse sull'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e quindi scegliere **Proprietà**.  
   
-5.  Nella scheda **parametri di avvio** , nella casella **specificare un parametro di avvio** , digitare `-m` e quindi fare `Add`clic su. .  
+5.  Nella scheda **parametri di avvio** , nella casella **specificare un parametro di avvio** , digitare `-m` e quindi fare clic su `Add` . .  
   
     > [!NOTE]  
     >  In alcune versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è presente alcuna scheda **Parametri di avvio** . In questo caso, nella scheda **Avanzate** fare doppio clic su **Parametri di avvio**. I parametri vengono visualizzati in una finestra molto piccola. Fare attenzione a non modificare nessuno dei parametri esistenti. Al termine, aggiungere un nuovo parametro `;-m` (cioè un punto e virgola seguito da un trattino e una lettera m minuscola), quindi fare clic su `OK` .  
   
-6.  Fare `OK`clic su, quindi, dopo il messaggio di riavvio, fare clic con il pulsante destro del mouse sul nome del server e quindi scegliere **Riavvia**.  
+6.  Fare clic su, quindi, `OK` dopo il messaggio di riavvio, fare clic con il pulsante destro del mouse sul nome del server e quindi scegliere **Riavvia**.  
   
 7.  Dopo il riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , il server sarà in modalità utente singolo. Accertarsi che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent non sia in esecuzione, altrimenti l'unica connessione presente non sarà più disponibile a causa del relativo utilizzo da parte di questo servizio.  
   
@@ -74,16 +73,16 @@ ms.locfileid: "62782384"
   
      In alcune configurazioni, tramite SSMS si tenterà di stabilire diverse connessioni. Non sarà possibile stabilire più connessioni poiché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in modalità utente singolo. È possibile scegliere di effettuare una delle azioni riportate di seguito.  
   
-    1.  Effettuare la connessione con Esplora oggetti mediante l'autenticazione di Windows (in cui sono incluse le credenziali di amministratore). Espandere **Sicurezza**, **Account di accesso**e fare doppio clic sul proprio account di accesso. Nella pagina **ruoli server** selezionare `sysadmin`e quindi fare clic su `OK`.  
+    1.  Effettuare la connessione con Esplora oggetti mediante l'autenticazione di Windows (in cui sono incluse le credenziali di amministratore). Espandere **Sicurezza**, **Account di accesso**e fare doppio clic sul proprio account di accesso. Nella pagina **ruoli server** selezionare `sysadmin` e quindi fare clic su `OK` .  
   
-    2.  Anziché effettuare la connessione con Esplora oggetti, utilizzare una finestra Query tramite l'autenticazione di Windows (in cui sono incluse le credenziali di amministratore) (È possibile connettersi in questo modo solo se non si è connessi con Esplora oggetti). Eseguire codice come il seguente per aggiungere un nuovo account di accesso con autenticazione di Windows che sia un `sysadmin` membro del ruolo predefinito del server. Nell'esempio seguente viene aggiunto un utente di dominio denominato `CONTOSO\PatK`.  
+    2.  Anziché effettuare la connessione con Esplora oggetti, utilizzare una finestra Query tramite l'autenticazione di Windows (in cui sono incluse le credenziali di amministratore) (È possibile connettersi in questo modo solo se non si è connessi con Esplora oggetti). Eseguire codice come il seguente per aggiungere un nuovo account di accesso con autenticazione di Windows che sia un membro del `sysadmin` ruolo predefinito del server. Nell'esempio seguente viene aggiunto un utente di dominio denominato `CONTOSO\PatK`.  
   
         ```  
         CREATE LOGIN [CONTOSO\PatK] FROM WINDOWS;  
         ALTER SERVER ROLE sysadmin ADD MEMBER [CONTOSO\PatK];  
         ```  
   
-    3.  Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione nella modalità di autenticazione mista, effettuare la connessione con una finestra Query utilizzando l'autenticazione di Windows (in cui sono incluse le credenziali di amministratore). Eseguire codice simile al seguente per creare un nuovo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso con autenticazione di che sia membro `sysadmin` del ruolo predefinito del server.  
+    3.  Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione nella modalità di autenticazione mista, effettuare la connessione con una finestra Query utilizzando l'autenticazione di Windows (in cui sono incluse le credenziali di amministratore). Eseguire codice simile al seguente per creare un nuovo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso con autenticazione di che sia membro del `sysadmin` ruolo predefinito del server.  
   
         ```  
         CREATE LOGIN TempLogin WITH PASSWORD = '************';  
@@ -93,7 +92,7 @@ ms.locfileid: "62782384"
         > [!WARNING]  
         >  Sostituire ************ con una password complessa.  
   
-    4.  Se il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione in modalità di autenticazione mista e si desidera reimpostare la `sa` password dell'account, connettersi con una finestra query utilizzando l'autenticazione di Windows (che include le credenziali di amministratore). Modificare la password dell' `sa` account con la sintassi seguente.  
+    4.  Se il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione in modalità di autenticazione mista e si desidera reimpostare la password dell' `sa` account, connettersi con una finestra query utilizzando l'autenticazione di Windows (che include le credenziali di amministratore). Modificare la password dell' `sa` account con la sintassi seguente.  
   
         ```  
         ALTER LOGIN sa WITH PASSWORD = '************';  
@@ -106,16 +105,16 @@ ms.locfileid: "62782384"
   
 10. Nel riquadro a sinistra di Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selezionare **Servizi di SQL Server**. Nel riquadro a destra fare clic con il pulsante destro del mouse sull'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e quindi scegliere **Proprietà**.  
   
-11. Nella casella **parametri esistenti** della scheda **parametri di avvio** selezionare `-m` e quindi fare clic su `Remove`.  
+11. Nella casella **parametri esistenti** della scheda **parametri di avvio** selezionare `-m` e quindi fare clic su `Remove` .  
   
     > [!NOTE]  
-    >  In alcune versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è presente alcuna scheda **Parametri di avvio** . In questo caso, nella scheda **Avanzate** fare doppio clic su **Parametri di avvio**. I parametri vengono visualizzati in una finestra molto piccola. Rimuovere il `;-m` valore aggiunto in precedenza, quindi fare clic `OK`su.  
+    >  In alcune versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è presente alcuna scheda **Parametri di avvio** . In questo caso, nella scheda **Avanzate** fare doppio clic su **Parametri di avvio**. I parametri vengono visualizzati in una finestra molto piccola. Rimuovere il `;-m` valore aggiunto in precedenza, quindi fare clic su `OK` .  
   
 12. Fare clic con il pulsante destro del mouse sul nome del server e quindi scegliere **Riavvia**.  
   
- A questo punto si dovrebbe essere in grado di connettersi normalmente con uno degli account che ora è un membro `sysadmin` del ruolo predefinito del server.  
+ A questo punto si dovrebbe essere in grado di connettersi normalmente con uno degli account che ora è un membro del `sysadmin` ruolo predefinito del server.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Avviare SQL Server in modalità utente singolo](start-sql-server-in-single-user-mode.md)   
  [Opzioni di avvio del servizio del motore di database](database-engine-service-startup-options.md)  
   

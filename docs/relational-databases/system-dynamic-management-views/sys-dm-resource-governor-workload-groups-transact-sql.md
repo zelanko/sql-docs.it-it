@@ -1,7 +1,7 @@
 ---
 title: sys. dm_resource_governor_workload_groups (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/24/2018
+ms.date: 06/15/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5dcd93a0c74d8fc12af14809c8ca66bf59275dee
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 32858f6e508ef0a7de2b981dc17379d7be7fa4c7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821055"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84941034"
 ---
 # <a name="sysdm_resource_governor_workload_groups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "82821055"
 |group_id|**int**|ID del gruppo del carico di lavoro. Non ammette i valori Null.|  
 |name|**sysname**|Nome del gruppo del carico di lavoro. Non ammette i valori Null.|  
 |pool_id|**int**|ID del pool di risorse. Non ammette i valori Null.|  
-|external_pool_id|**int**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive.<br /><br /> ID del pool di risorse esterne. Non ammette i valori Null.|  
+|external_pool_id|**int**|**Si applica a**: a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .<br /><br /> ID del pool di risorse esterne. Non ammette i valori Null.|  
 |statistics_start_time|**datetime**|Ora di reimpostazione della raccolta di statistiche per il gruppo del carico di lavoro. Non ammette i valori Null.|  
 |total_request_count|**bigint**|Conteggio cumulativo delle richieste completate nel gruppo del carico di lavoro. Non ammette i valori Null.|  
 |total_queued_request_count|**bigint**|Conteggio cumulativo delle richieste messe in coda dopo che il limite di GROUP_MAX_REQUESTS è stato raggiunto. Non ammette i valori Null.|  
@@ -62,16 +62,19 @@ ms.locfileid: "82821055"
 |request_max_cpu_time_sec|**int**|Impostazione corrente per il limite massimo di utilizzo della CPU, espresso in secondi, per una singola richiesta. Non ammette i valori Null.|  
 |request_memory_grant_timeout_sec|**int**|Impostazione corrente per il timeout di concessione di memoria, in secondi, per una singola richiesta. Non ammette i valori Null.|  
 |group_max_requests|**int**|Impostazione corrente per il numero massimo di richieste simultanee. Non ammette i valori Null.|  
-|max_dop|**int**|Massimo grado di parallelismo per il gruppo del carico di lavoro. Il valore predefinito, 0, utilizza le impostazioni globali. Non ammette i valori Null.|  
+|max_dop|**int**|Massimo grado di parallelismo configurato per il gruppo del carico di lavoro. Il valore predefinito, 0, utilizza le impostazioni globali. Non ammette i valori Null.| 
+|effective_max_dop|**int**|**Si applica a**: a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .<br /><br />Massimo grado di parallelismo effettivo per il gruppo del carico di lavoro. Non ammette i valori Null.| 
+|total_cpu_usage_preemptive_ms|**bigint**|**Si applica a**: a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .<br /><br />Tempo totale della CPU usato in modalità preemptive per la pianificazione del gruppo di carico di lavoro, misurato in ms. Non ammette i valori Null.<br /><br />Per eseguire codice esterno a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio stored procedure estese e query distribuite, è necessario che un thread venga eseguito esternamente al controllo dell'utilità di pianificazione in modalità non preemptive. A tale scopo, un thread di lavoro passa alla modalità preemptive.| 
+|request_max_memory_grant_percent_numeric|**float**|**Si applica a**: a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] .<br /><br />Impostazione corrente per la concessione massima di memoria, espressa in percentuale, per una singola richiesta. Non ammette i valori Null.| 
 |pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
   
-## <a name="remarks"></a>Osservazioni  
- Questa vista a gestione dinamica mostra la configurazione in memoria. Per visualizzare i metadati di configurazione archiviati, utilizzare la vista del catalogo sys.resource_governor_workload_groups.  
+## <a name="remarks"></a>Commenti  
+ Questa vista a gestione dinamica mostra la configurazione in memoria. Per visualizzare i metadati di configurazione archiviati, utilizzare la vista del catalogo [&#41;Transact-SQL sys. resource_governor_workload_groups &#40;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md) .  
   
- Quando l'istruzione ALTER RESOURCE GOVERNOR RESET STATISTICs viene eseguita correttamente, vengono reimpostati i contatori seguenti: statistics_start_time, total_request_count, total_queued_request_count, total_cpu_limit_violation_count, total_cpu_usage_ms, max_request_cpu_time_ms, total_lock_wait_count, total_lock_wait_time_ms, total_query_optimization_count, total_suboptimal_plan_generation_count, total_reduced_memgrant_count e max_request_grant_memory_kb. statistics_start_time è impostato sulla data e sull'ora correnti del sistema, gli altri contatori vengono impostati su zero (0).  
+ Quando `ALTER RESOURCE GOVERNOR RESET STATISTICS` viene eseguito correttamente, vengono reimpostati i contatori seguenti: `statistics_start_time` ,, `total_request_count` `total_queued_request_count` , `total_cpu_limit_violation_count` , `total_cpu_usage_ms` , `max_request_cpu_time_ms` , `total_lock_wait_count` , `total_lock_wait_time_ms` , `total_query_optimization_count` , `total_suboptimal_plan_generation_count` , `total_reduced_memgrant_count` e `max_request_grant_memory_kb` . Il contatore `statistics_start_time` viene impostato sulla data e sull'ora correnti del sistema, mentre gli altri contatori vengono impostati su zero (0).  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'autorizzazione VIEW SERVER STATE.  
+ È richiesta l'autorizzazione `VIEW SERVER STATE`.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
@@ -79,7 +82,3 @@ ms.locfileid: "82821055"
  [sys. resource_governor_workload_groups &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
-  
-
-
-

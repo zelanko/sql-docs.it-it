@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fee7328f-6e8d-4005-930b-56fb6f17e0b2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1f4328c6a70c00766979a13bbcf8dc2b8bd77f42
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44333d778753a2f8761d32d181681b798e3bc409
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096322"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037093"
 ---
 # <a name="column-aliases-in-order-by-clause-cannot-be-prefixed-by-table-alias"></a>Gli alias di colonna utilizzati nella clausola ORDER BY non possono essere preceduti dall'alias della tabella
   In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versioni successiva gli alias di colonna utilizzati nella clausola ORDER BY non possono essere preceduti dall'alias della tabella.  
@@ -70,7 +69,7 @@ FROM Person.Contact p
 ORDER BY p.LastName  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Problemi di aggiornamento motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [SQL Server 2014 preparazione aggiornamento &#91;nuova&#93;](sql-server-2014-upgrade-advisor.md)  
   

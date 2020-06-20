@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: ee413207-d6f5-4938-82a1-0e245037e246
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 98c76925063c332ef2f537d427ae62bb83bc7024
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6d73ae981f4fc1b04a63fcc34673ceae98fe8d89
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62714908"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051029"
 ---
 # <a name="sql-server-express-localdb-error-message-reference"></a>Riferimento ai messaggi di errore del database locale di SQL Server Express
   In questa sezione vengono fornite le informazioni di riferimento sui messaggi di errore del database locale di SQL Server Express:  

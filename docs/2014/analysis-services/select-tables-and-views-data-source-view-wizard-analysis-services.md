@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ea7d1232-f213-46e9-90d9-0fd616ca003d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f4b940d5cb3c91cc8257ef1a3e6828286bc1c240
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b1b878935ffc0dee51c112581a130dde99043e2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069245"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940812"
 ---
 # <a name="select-tables-and-views-data-source-view-wizard-analysis-services"></a>Selezione tabelle e viste (Creazione guidata vista origine dati) (Analysis Services)
   La pagina **Selezione tabelle e viste** consente di selezionare le tabelle o le viste dall'origine dati da includere nella vista origine dati.  
@@ -51,7 +50,7 @@ ms.locfileid: "66069245"
  **Add related tables**  
  Aggiunge tutte le tabelle correlate a quelle elencate in **Oggetti inclusi**. Questa opzione non consente di aggiungere visualizzazioni, bensì permette di aggiungere tabelle partizionate. Se si seleziona un criterio di corrispondenza dei nomi nella pagina **Corrispondenza nomi** della procedura guidata, questa opzione include anche le tabelle logicamente correlate in base al criterio selezionato. Vengono inoltre incluse le tabelle correlate a nuove tabelle correlate aggiunte e quelle che presentano una struttura identica alla tabella originale.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto della creazione guidata vista origine dati &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
  [Viste origine dati in modelli multidimensionali](multidimensional-models/data-source-views-in-multidimensional-models.md)  
   

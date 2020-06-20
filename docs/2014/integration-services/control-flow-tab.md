@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 986e8fbe-f6ca-469a-9c7b-ad9b0b89f832
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dd46efd60d81134f04a6bbc44e47c1fe8b5f342e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8df8182305eb90be3286a8281169f075555306f1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060358"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920162"
 ---
 # <a name="control-flow-tab"></a>Scheda Flusso di controllo
   Utilizzare la scheda **Flusso di controllo** dello strumento Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] per compilare il flusso di controllo in un pacchetto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -40,7 +39,7 @@ ms.locfileid: "66060358"
   
  Per aggiungere queste funzioni a singole attività o contenitori nello strumento Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] , fare clic con il pulsante destro del mouse sull'oggetto corrispondente nell'area di progettazione e quindi scegliere l'opzione desiderata.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Vincoli di precedenza](control-flow/precedence-constraints.md)   
  [Progettazione SSIS](ssis-designer.md)   
  [Flusso di controllo](control-flow/control-flow.md)  

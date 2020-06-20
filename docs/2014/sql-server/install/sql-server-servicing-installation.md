@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1b52a780-9668-4419-a818-a0e90e89df5b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fd3b78fd168541dc431d248b4a15960e8d1cddee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa4f10873e32740f3647334642b24466774a46e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091823"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035968"
 ---
 # <a name="sql-server-servicing-installation"></a>Installazione dei servizi di SQL Server
   In questa sezione viene descritto come applicare un aggiornamento a qualsiasi componente installato di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] con un aggiornamento dei servizi di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  

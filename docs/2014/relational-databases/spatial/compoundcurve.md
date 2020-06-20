@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 22e63496f3b26ac2c56a72f23ec4489e8a9cdbfb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6a899bbe9a17a64083592e1078e8cac93365f02b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176681"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016002"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
   `CompoundCurve` è una raccolta di zero o più istanze `CircularString` o `LineString` continue di tipo geometry o geography.
@@ -29,7 +28,7 @@ ms.locfileid: "78176681"
 
 2.  La sequenza di istanze `CircularString` o `LineString` deve essere continua.
 
- Se un `CompoundCurve` oggetto contiene una sequenza di `CircularString` più `LineString` istanze e, l'endpoint finale per ogni istanza, ad eccezione dell'ultima istanza, deve essere l'endpoint iniziale per l'istanza successiva nella sequenza. Ciò significa che se il punto finale di un'istanza precedente nella sequenza è (4 3 7 2), il punto iniziale dell'istanza successiva nella sequenza deve essere (4 3 7 2). Si noti che i valori Z (elevazione) e M (misura) del punto devono essere anch'essi uguali. Nel caso di una differenza nei due punti, viene generata un'eccezione `System.FormatException` . I punti in un'istanza `CircularString` non devono avere un valore Z o M. Se non sono presenti valori Z o M per il punto finale dell'istanza precedente, il punto iniziale dell'istanza successiva non potrà includere valori Z o M. Se il punto finale della sequenza precedente è (4 3), il punto iniziale della sequenza successiva dovrà essere (4 3). Non potrà essere (4 3 7 2). Tutti i punti in un'istanza `CompoundCurve` non devono avere alcun valore Z oppure devono avere lo stesso valore Z.
+ Se un oggetto `CompoundCurve` contiene una sequenza di `CircularString` più `LineString` istanze e, l'endpoint finale per ogni istanza, ad eccezione dell'ultima istanza, deve essere l'endpoint iniziale per l'istanza successiva nella sequenza. Ciò significa che se il punto finale di un'istanza precedente nella sequenza è (4 3 7 2), il punto iniziale dell'istanza successiva nella sequenza deve essere (4 3 7 2). Si noti che i valori Z (elevazione) e M (misura) del punto devono essere anch'essi uguali. Nel caso di una differenza nei due punti, viene generata un'eccezione `System.FormatException` . I punti in un'istanza `CircularString` non devono avere un valore Z o M. Se non sono presenti valori Z o M per il punto finale dell'istanza precedente, il punto iniziale dell'istanza successiva non potrà includere valori Z o M. Se il punto finale della sequenza precedente è (4 3), il punto iniziale della sequenza successiva dovrà essere (4 3). Non potrà essere (4 3 7 2). Tutti i punti in un'istanza `CompoundCurve` non devono avere alcun valore Z oppure devono avere lo stesso valore Z.
 
 ## <a name="compoundcurve-instances"></a>Istanze CompoundCurve
  Nell'immagine seguente sono illustrati tipi di `CompoundCurve` validi.
@@ -90,7 +89,7 @@ DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 2 3, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
 ```
 
- `@g1` non è valida perché la seconda istanza non è un'istanza LineString valida. `@g2` non è valida perché l'istanza `LineString` non è valida. `@g3` non è valida perché l'istanza `CircularString` non è valida. Per ulteriori informazioni sulle istanze `CircularString` di `LineString` e valide, vedere [CircularString](circularstring.md) e [LineString](linestring.md).
+ `@g1` non è valida perché la seconda istanza non è un'istanza LineString valida. `@g2` non è valida perché l'istanza `LineString` non è valida. `@g3` non è valida perché l'istanza `CircularString` non è valida. Per ulteriori informazioni sulle `CircularString` istanze di e valide `LineString` , vedere [CircularString](circularstring.md) e [LineString](linestring.md).
 
 ## <a name="examples"></a>Esempi
 

@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 28435f86-5cec-4a1e-9b7d-b2069c1ddddb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bdc8434673d9220f22d31f1736bd67012653dc88
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f8a2006947cf4e4bffee0365ffbbf0b3b1c76bbf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069064"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940732"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>Utilità di configurazione del server (componenti aggiuntivi data mining per Excel)
-  Quando si installano i componenti aggiuntivi Data mining per Excel, viene installata anche un'utilità di configurazione del server, che verrà eseguita la prima volta che si aprono i componenti aggiuntivi. In questo argomento viene descritto come utilizzare l'utilità per connettersi a un'istanza [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] di e impostare un database per l'utilizzo di modelli di data mining.  
+  Quando si installano i componenti aggiuntivi Data mining per Excel, viene installata anche un'utilità di configurazione del server, che verrà eseguita la prima volta che si aprono i componenti aggiuntivi. In questo argomento viene descritto come utilizzare l'utilità per connettersi a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e impostare un database per l'utilizzo di modelli di data mining.  
   
 
   

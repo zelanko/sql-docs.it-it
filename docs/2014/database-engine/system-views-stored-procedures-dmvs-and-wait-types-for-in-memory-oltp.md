@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: efaa59e3-dbfa-407f-b1aa-cb0c6602ea17
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d047cbc4fe3ba3f4945acd9da4f627a05992e779
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f15e1e55f0646f2cd42fe5a7154a606684961af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62842400"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928432"
 ---
 # <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>Viste di sistema, stored procedure, tipi di attesa e DMV per OLTP in memoria
   Questo argomento fornisce brevi descrizioni e collegamenti ai numerosi oggetti di database che supportano OLTP In memoria.  
@@ -61,7 +60,7 @@ ms.locfileid: "62842400"
   
  Per informazioni dettagliate, vedere tipi di attesa con prefisso **WAIT_XTP**e **XTPPROC** nell'argomento [sys. dm_os_wait_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql) .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [OLTP in memoria &#40;l'ottimizzazione in memoria&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)   
  [Supporto di Transact-SQL per OLTP in memoria](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   

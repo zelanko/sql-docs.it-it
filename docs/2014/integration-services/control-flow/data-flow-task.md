@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff5c519fbe9bf8096807962a939677b3a5d58cc5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832455"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919559"
 ---
 # <a name="data-flow-task"></a>Attività Flusso di dati
   L'attività Flusso di dati incapsula il motore flusso di dati che consente di spostare i dati dalle origini alle destinazioni e offre la possibilità di trasformare, pulire e modificare i dati durante lo spostamento. L'aggiunta di un'attività Flusso di dati al flusso di controllo di un pacchetto consente al pacchetto di estrarre, trasformare e caricare dati.  
@@ -88,7 +87,7 @@ ms.locfileid: "62832455"
   
  Nella tabella seguente viene ad esempio illustrato il messaggio "Sono state passate righe come input per un componente del flusso di dati. :  : 1185 : Output origine OLE DB : 1180 : Ordinamento : 1181 : Input ordinamento : 76", scomposto in colonne. Il messaggio è stato scritto dall'evento `OnPipelineRowsSent` quando le righe sono state inviate dall'origine OLE DB alla trasformazione Ordinamento.  
   
-|Colonna|Descrizione|Valore|  
+|Colonna|Descrizione|valore|  
 |------------|-----------------|-----------|  
 |**PathID**|Valore della proprietà `ID` del percorso tra l'origine OLE DB e la trasformazione Ordinamento.|1185|  
 |**PathName**|Valore della proprietà `Name` del percorso.|Output origine OLE DB|  

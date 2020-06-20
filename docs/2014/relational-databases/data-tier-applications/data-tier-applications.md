@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f611367f0b078fb02977c27ee1d61d648de87869
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873102"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970301"
 ---
 # <a name="data-tier-applications"></a>Applicazioni livello dati
   Un'applicazione livello dati è un'entità logica di gestione dei database che definisce tutti gli oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio le tabelle, le viste e gli oggetti istanza, inclusi gli account di accesso, associati a un database dell'utente. Un'applicazione livello dati è un'unità indipendente della distribuzione di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che consente a sviluppatori di livello dati e ad amministratori di database di comprimere gli oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un elemento portabile chiamato pacchetto di applicazione livello dati, noto anche come DACPAC.  
@@ -68,7 +67,7 @@ ms.locfileid: "62873102"
   
     -   Lo sviluppatore può pubblicare autonomamente un progetto di database direttamente in un database, senza generare un pacchetto di applicazione livello dati. L'operazione di pubblicazione segue un comportamento simile all'operazione di distribuzione di altri strumenti.  
   
--   Amministratore di database  
+-   Amministratore del database  
   
     -   Un amministratore di database può utilizzare SQL Server Management Studio per estrarre un pacchetto di applicazione livello dati da un database esistente ed eseguire altre operazioni dell'applicazione livello dati.  
   
@@ -129,7 +128,7 @@ ms.locfileid: "62873102"
 |Viene descritto come posizionare il contenuto di un pacchetto di applicazione livello dati in una cartella dove un amministratore di database può rivedere quello che l'applicazione livello dati fa prima di distribuirlo a un server di produzione.|[Decompressione di un pacchetto di applicazione livello dati](unpack-a-dac-package.md)|  
 |Viene descritto come utilizzare una procedura guidata per distribuire un database esistente. Nella procedura guidata vengono utilizzate applicazioni livello dati per effettuare la distribuzione.|[Distribuire un database tramite un'applicazione livello dati](deploy-a-database-by-using-a-dac.md)|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Supporto dell'applicazione livello dati per oggetti e versioni di SQL Server](dac-support-for-sql-server-objects-and-versions.md)  
   
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ad5135eb8141cc84bc6e5bddc8bd8477f4699b9e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 785ab80a529140a52ec18ef96ccaaeafd03698cd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874923"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954256"
 ---
 # <a name="designing-assemblies"></a>Progettazione di assembly
   In questo argomento vengono illustrati alcuni fattori da prendere in considerazione durante la progettazione degli assembly:  
@@ -116,7 +115,7 @@ System.Data.OracleClient
 System.Configuration  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Assembly &#40;motore di database&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Sicurezza per l'integrazione con CLR](security/clr-integration-security.md)  
   

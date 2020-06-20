@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 766fca7b-6cef-4ce4-97ee-6854f8034717
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 23dbdd4449a72737fd0929a4243ed093013ae643
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6185d9f989faea5940110cef39b4a714fd7139f8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096243"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037022"
 ---
 # <a name="complete---prepare-image"></a>Operazione completata - Preparazione immagine
   Utilizzare la pagina **Operazione completata** per verificare che la preparazione dell'immagine sia completata.  

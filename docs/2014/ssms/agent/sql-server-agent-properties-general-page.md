@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b51601e9-5454-43c6-bb5e-24eb2ff043c8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 66a7b7cd9328f70e5b5ca374a04ad5e9dd6e079a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 667a07744acf4b6d8b0dfa1e83adca738add0b4f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245774"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058706"
 ---
 # <a name="sql-server-agent-properties-general-page"></a>Proprietà SQL Server Agent (pagina Generale)
   Utilizzare questa pagina per visualizzare e modificare le proprietà generali del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servizio Agent.  
@@ -32,7 +31,7 @@ ms.locfileid: "63245774"
  **Riavvia automaticamente SQL Server Agent in caso di arresto imprevisto**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue il riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent quando si verifica un arresto imprevisto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
- **Filename**  
+ **Nome file**  
  Consente di specificare il nome del file per il log degli errori.  
   
  **...**  
@@ -47,7 +46,7 @@ ms.locfileid: "63245774"
  **Destinatario Net Send**  
  Consente di digitare il nome dell'operatore destinato a ricevere la notifica Net Send dei messaggi scritti da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent nel file di log.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Operatori](operators.md)   
  [Log degli errori di SQL Server Agent](sql-server-agent-error-log.md)  
   

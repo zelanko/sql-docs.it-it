@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1b053719-8500-4300-a169-fffca5801dd0
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c35062e6dfa339d0cd37f3905dc801f0f47becba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f500eb460cab8734a062ddf6561cbdf01d0f773
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62773430"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927572"
 ---
 # <a name="view-a-list-of-modified-files"></a>Visualizzazione di un elenco di file modificati
   È possibile utilizzare la finestra **archiviazioni in sospeso** per visualizzare in qualsiasi momento un elenco dei file estratti nella soluzione corrente e per archiviare questi file con un solo clic del mouse.  
@@ -30,9 +29,9 @@ ms.locfileid: "62773430"
   
 1.  Scegliere **archiviazioni in sospeso**dal menu **Visualizza** .  
   
-2.  Per archiviare i file selezionati, fare clic su **Archivia**. In alternativa, è possibile ancorare la finestra **archiviazioni in sospeso** sul lato destro dell' [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] ambiente in modo da poter archiviare i file al termine del lavoro.  
+2.  Per archiviare i file selezionati, fare clic su **Archivia**. In alternativa, è possibile ancorare la finestra **archiviazioni in sospeso** sul lato destro dell'ambiente in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] modo da poter archiviare i file al termine del lavoro.  
   
-     **Archiviare**  
+     **Archivia**  
      Consente di eseguire l'archiviazione della soluzione.  
   
      **Commenti**  
@@ -66,7 +65,7 @@ ms.locfileid: "62773430"
      **Nome**  
      Consente di visualizzare un elenco degli elementi disponibili per l'archiviazione. Accanto a ciascun elemento viene visualizzata la casella di controllo selezionata. Se non si desidera archiviare un determinato elemento, deselezionare la relativa casella di controllo.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestisci archiviazioni](../../2014/database-engine/manage-checkins.md)   
  [Gestione delle estrazioni](../../2014/database-engine/manage-checkouts.md)  
   

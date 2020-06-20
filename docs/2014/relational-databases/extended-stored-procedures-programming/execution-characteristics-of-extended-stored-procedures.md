@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6fe1f7e8-cc02-49df-8a2a-d47a96ec3567
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d21f002ca6b7ea185df2e01f66abf0e1ef5cfd1b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 62c95f0cb6c8239fee86b27b231e3e1830fb5009
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62512218"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050901"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>Caratteristiche dell'esecuzione di stored procedure estese
     
@@ -27,7 +26,7 @@ ms.locfileid: "62512218"
   
  L'esecuzione di una stored procedure estesa presenta tre caratteristiche:  
   
--   La funzione stored procedure estesa viene eseguita nel contesto di sicurezza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   La funzione stored procedure estesa viene eseguita nel contesto di sicurezza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   La funzione della stored procedure estesa viene eseguita nello spazio di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -38,7 +37,7 @@ ms.locfileid: "62512218"
   
 -  
   
- Una volta caricata la DLL di stored procedure estesa, la DLL rimane caricata nello spazio degli indirizzi del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server fino a quando non viene arrestato o l'amministratore Scarica in modo esplicito la dll tramite DBCC *Dll_Name* (free).  
+ Una volta caricata la DLL di stored procedure estesa, la DLL rimane caricata nello spazio degli indirizzi del server fino a quando non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene arrestato o l'amministratore Scarica in modo esplicito la dll tramite DBCC *Dll_Name* (free).  
   
  La stored procedure estesa può essere eseguita da [!INCLUDE[tsql](../../includes/tsql-md.md)] come stored procedure mediante l'istruzione EXECUTE:  
   
@@ -47,7 +46,7 @@ EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT
 ```  
   
 ## <a name="parameters"></a>Parametri  
- \@*retval*  
+ \@ *retval*  
  È un valore restituito.  
   
  \@*param1*  
@@ -59,7 +58,7 @@ EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT
 > [!CAUTION]  
 >  Le stored procedure estese offrono miglioramenti delle prestazioni ed estendono la funzionalità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tuttavia dal momento che la DLL della stored procedure estesa e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] condividono lo stesso spazio degli indirizzi, una procedura problematica può compromettere il funzionamento di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sebbene le eccezioni generate dalla DLL delle stored procedure estese vengano gestite da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile danneggiare le aree dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Come precauzione di sicurezza, solo gli amministratori di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono aggiungere stored procedure estese a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È consigliabile testare completamente tali procedure prima dell'installazione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Programmazione di stored procedure estese](database-engine-extended-stored-procedures-programming.md)   
  [Esecuzione di query su stored procedure estese installate in SQL Server](querying-extended-stored-procedures-installed-in-sql-server.md)  
   

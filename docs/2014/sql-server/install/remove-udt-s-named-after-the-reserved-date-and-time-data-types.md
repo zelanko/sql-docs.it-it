@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 48f109af-b1d1-4f03-a7e3-8a0b05ed94e8
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9692bcc5b3c7685e247730b0f203d273f585f1de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 827f060b309a7a620fd448554b074f45d78d3cb0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092992"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059142"
 ---
 # <a name="remove-udt39s-named-after-the-reserved-date-and-time-data-types"></a>Rimuovi UDT&#39;s denominato dopo i tipi di dati riservati di data e ora
   È stato rilevato un tipo definito dall'utente denominato in base a un termine riservato per i tipi di dati `date` o `time`.  

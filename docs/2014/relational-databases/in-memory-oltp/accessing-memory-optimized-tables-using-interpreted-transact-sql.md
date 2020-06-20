@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c5769a59a8deebfa99a00229f1b1227e427e051a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: af4b3ca7731e7ca13e697f43e76ac3cc3cacb4f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706566"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050398"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Accesso alle tabelle con ottimizzazione per la memoria utilizzando codice Transact-SQL interpretato
   Salvo poche eccezioni, è possibile accedere alle tabelle ottimizzate per la memoria usando qualsiasi query [!INCLUDE[tsql](../../includes/tsql-md.md)] o operazione DML (SELECT, INSERT, UPDATE o DELETE), batch ad hoc e moduli SQL quali stored procedure, funzioni con valori di tabella, trigger e viste.  

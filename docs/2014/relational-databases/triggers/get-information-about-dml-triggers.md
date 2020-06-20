@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dc207c4c1bc7ddc2c7c4f590622e04a0f7739375
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f65976d2f517137e23bd9e5e1c98cc76324bc49
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62698733"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014528"
 ---
 # <a name="get-information-about-dml-triggers"></a>Ottieni informazioni sui trigger DML
   In questo argomento viene descritto come ottenere informazioni sui trigger DML in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Queste informazioni possono includere i tipi di trigger in una tabella, nonché il nome, il proprietario e la data di creazione o modifica di un trigger. Se il trigger non è stato crittografato al momento della creazione, se ne ottiene la definizione. È possibile utilizzare la definizione per comprendere gli effetti del trigger sulla tabella su cui è stato definito. È inoltre possibile rilevare gli oggetti utilizzati da un trigger specifico. Con queste informazioni, è possibile identificare gli oggetti che influiscono sul trigger qualora vengano modificati o eliminati dal database.  
@@ -71,9 +70,9 @@ ms.locfileid: "62698733"
   
 3.  Espandere **Trigger**, fare clic con il pulsante destro del mouse sul trigger desiderato, quindi scegliere **Visualizza dipendenze**.  
   
-4.  Nella finestra di dialogo **Dipendenze oggetto** selezionare **Oggetti che dipendono da \<nome trigger DML>** per visualizzare gli oggetti che dipendono dal trigger DML. Gli oggetti vengono visualizzati nell'area **Dipendenze** .  
+4.  Nella finestra **Dipendenze oggetti** , per visualizzare gli oggetti che dipendono dal trigger DML, selezionare **oggetti \<DML trigger name> che dipendono **da. Gli oggetti vengono visualizzati nell'area **Dipendenze** .  
   
-     Per visualizzare gli oggetti da cui dipende il trigger DML, selezionare **Oggetti da cui dipende \<nome trigger DML>** . Gli oggetti vengono visualizzati nell'area **Dipendenze** . Espandere ogni nodo per visualizzare tutti gli oggetti.  
+     Per visualizzare gli oggetti da cui dipende il DML, selezionare **oggetti da cui \<DML trigger name> dipende**. Gli oggetti vengono visualizzati nell'area **Dipendenze** . Espandere ogni nodo per visualizzare tutti gli oggetti.  
   
 5.  Per ottenere informazioni su un oggetto visualizzato nell'area **Dipendenze** , fare clic sull'oggetto. Nel campo **Oggetto selezionato** le informazioni vengono fornite nelle caselle **Nome**, **Tipo**e **Tipo dipendenza** .  
   
