@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd445949-dc10-42fc-8785-4db74c9723ad
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 22d1b8074fb40cdd7eda3a5f57704b893242cfcd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 652399f44888852d7263020de0fc7e44f3f942e5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62666828"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995050"
 ---
 # <a name="run-jobs"></a>Esecuzione di processi
   Per gestire i processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, è possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] oppure oggetti SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects).  
@@ -32,9 +31,9 @@ ms.locfileid: "62666828"
 |**Descrizione**|**Argomento**|  
 |Viene illustrato come avviare l'esecuzione di un processo di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Avviare un processo](start-a-job.md)|  
 |Viene illustrato come arrestare un processo di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Stop a Job](stop-a-job.md)|  
-|Viene illustrato come disabilitare o abilitare un processo di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Abilitare o disabilitare un processo](disable-or-enable-a-job.md)|  
+|Viene illustrato come disabilitare o abilitare un processo di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Disable or Enable a Job](disable-or-enable-a-job.md)|  
   
-## <a name="see-also"></a>Vedi anche  
- [dbo. sysdownloadlist &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql)  
+## <a name="see-also"></a>Vedere anche  
+ [dbo.sysdownload &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql)  
   
   

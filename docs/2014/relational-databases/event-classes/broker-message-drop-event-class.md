@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f532b7c9-ca34-4bac-8dc3-53f9895fd6af
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d1aadd84d42f797026323023b0cf5be27d01d693
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9030b4f538e997fff3f90c95dee12fca506f523c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663968"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030459"
 ---
 # <a name="brokermessage-undeliverable-event-class"></a>Classe di evento Broker:Message Undeliverable
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento **Broker:Message Undeliverable** quando Service Broker non è in grado di trattenere un messaggio ricevuto che avrebbe dovuto essere recapitato a un servizio dell'istanza. Per i messaggi che avrebbero dovuto essere inoltrati, vedere [Classe di evento Broker:Forwarded Message Dropped](broker-forwarded-message-dropped-event-class.md).  
@@ -34,7 +33,7 @@ ms.locfileid: "62663968"
 |**BigintData2**|`bigint`|Numero di sequenza dell'ultimo messaggio riconosciuto correttamente.|53|No|  
 |**ClientProcessID**|`int`|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se l'ID del processo client viene fornito dal client.|9|Sì|  
 |**DatabaseID**|`int`|ID del database specificato nell'istruzione USE *database* oppure ID del database predefinito, se per una determinata istanza non viene eseguita un'istruzione USE *database* . [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
-|**Error (Errore) (Error (Errore)e)**|`int`|Numero di ID del messaggio in **sys.messages** relativo al testo dell'evento.|31|No|  
+|**Errore**|`int`|Numero di ID del messaggio in **sys.messages** relativo al testo dell'evento.|31|No|  
 |**EventClass**|`int`|Tipo di classe di evento acquisita. Sempre **160** per **Broker:MessageUndeliverable**.|27|No|  
 |**EventSequence**|`int`|Numero di sequenza dell'evento.|51|No|  
 |**EventSubClass**|`nvarchar`|Indica se il messaggio non recapitabile è un messaggio in sequenza. È possibile specificare uno dei due valori seguenti:<br /><br /> **Messaggio in sequenza**. Il messaggio non recapitabile è un messaggio in sequenza.<br /><br /> **Messaggio non in sequenza**. Il messaggio non recapitabile non è un messaggio in sequenza.|21|Sì|  
@@ -57,7 +56,7 @@ ms.locfileid: "62663968"
 |**TextData**|`ntext`|Motivo per cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è riuscito a recapitare il messaggio.|1|Sì|  
 |**TransactionID**|`bigint`|ID della transazione assegnato dal sistema.|4|No|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

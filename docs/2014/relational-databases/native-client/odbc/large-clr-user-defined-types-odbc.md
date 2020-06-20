@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: df59c3a49715791e2f525e4bc5a69ff8991cac44
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 62acbe2e9acbf6ba39f982ad43de7a55453f7e3c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704279"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055839"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Tipi CLR definiti dall'utente di grandi dimensioni (ODBC)
   In questo argomento vengono illustrate le modifiche apportate a ODBC in SQL Server Native Client per supportare i tipi CLR (Common Language Runtime) definiti dall'utente (UDT) di grandi dimensioni.  
@@ -34,7 +33,7 @@ ms.locfileid: "82704279"
   
  Nella tabella seguente viene illustrato il mapping dei tipi di dati nei parametri e nei set di risultati:  
   
-|Tipo di dati di SQL Server|Tipo di dati SQL|Valore|  
+|Tipo di dati di SQL Server|Tipo di dati SQL|valore|  
 |--------------------------|-------------------|-----------|  
 |tipo CLR definito dall'utente|SQL_SS_UDT|-151 (sqlncli.h)|  
   
@@ -210,7 +209,7 @@ ms.locfileid: "82704279"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  I valori restituiti per i tipi definiti dall'utente sono i seguenti:  
   
-|Tipo di dati SQL|Tipo|Sottotipo|Length|Precision|Scalabilità|  
+|Tipo di dati SQL|Type|Sottotipo|Length|Precision|Scalabilità|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (lunghezza minore o uguale a 8.000 byte)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (lunghezza maggiore di 8.000 byte)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -230,7 +229,7 @@ ms.locfileid: "82704279"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  I valori consentiti per i tipi definiti dall'utente sono i seguenti:  
   
-|Tipo di dati SQL|Tipo|Sottotipo|Length|Precision|Scalabilità|  
+|Tipo di dati SQL|Type|Sottotipo|Length|Precision|Scalabilità|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (lunghezza minore o uguale a 8.000 byte)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (lunghezza maggiore di 8.000 byte)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  

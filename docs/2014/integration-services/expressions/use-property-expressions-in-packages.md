@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2a926405f2c35ff62b3589003ebe015fe920b743
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 157f45cd6d6fd7f201998cb3798440573654be58
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176421"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968991"
 ---
 # <a name="use-property-expressions-in-packages"></a>utilizzo delle espressioni di proprietà nei pacchetti
   Un'espressione di proprietà è un'espressione assegnata a una proprietà per consentire l'aggiornamento dinamico della proprietà in fase di esecuzione. Un'espressione di proprietà, ad esempio, consente di aggiornare la riga A utilizzata dall'attività Invia messaggi inserendo un indirizzo di posta elettronica archiviato in una variabile.
@@ -92,7 +91,7 @@ ms.locfileid: "78176421"
  Le espressioni di proprietà vengono caricate dopo il caricamento delle configurazioni di pacchetto. Le variabili, ad esempio, vengono innanzitutto aggiornate dalle relative configurazioni e quindi vengono valutate e caricate le espressioni di proprietà che utilizzano tali variabili. Di conseguenza, le espressioni di proprietà utilizzano sempre i valori delle variabili impostati dalle configurazioni.
 
 > [!NOTE]
->  Non è possibile usare `Set` l'opzione dell'utilità **dtexec** per popolare un'espressione di proprietà.
+>  Non è possibile usare l' `Set` opzione dell'utilità **dtexec** per popolare un'espressione di proprietà.
 
  Nella tabella seguente è indicato quando vengono valutate e caricate le espressioni di proprietà di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .
 
@@ -114,7 +113,7 @@ ms.locfileid: "78176421"
  Le espressioni di esempio seguenti illustrano l'utilizzo di variabili di sistema, operatori, funzioni e valori letterali stringa nelle espressioni di proprietà.
 
 ### <a name="property-expression-for-the-loggingmode-property-of-a-package"></a>Espressione di proprietà per la proprietà LoggingMode di un pacchetto
- L'espressione di proprietà seguente consente di impostare la proprietà LoggingMode di un pacchetto. Nell'espressione sono utilizzate le funzioni DAY e GETDATE per ottenere un valore intero che rappresenta la parte del giorno in una data. Se il numero del giorno è 1 o 15, la registrazione verrà abilitata, altrimenti sarà disabilitata. Il valore 1 è l'intero equivalente del membro `Enabled`dell'enumeratore LoggingMode e il valore 2 è l'intero equivalente del membro. `Disabled` Nell'espressione è necessario utilizzare il valore numerico corrispondente al nome del membro desiderato dell'enumeratore.
+ L'espressione di proprietà seguente consente di impostare la proprietà LoggingMode di un pacchetto. Nell'espressione sono utilizzate le funzioni DAY e GETDATE per ottenere un valore intero che rappresenta la parte del giorno in una data. Se il numero del giorno è 1 o 15, la registrazione verrà abilitata, altrimenti sarà disabilitata. Il valore 1 è l'intero equivalente del membro dell'enumeratore LoggingMode `Enabled` e il valore 2 è l'intero equivalente del membro `Disabled` . Nell'espressione è necessario utilizzare il valore numerico corrispondente al nome del membro desiderato dell'enumeratore.
 
  `DAY((DT_DBTIMESTAMP)GETDATE())==1||DAY((DT_DBTIMESTAMP)GETDATE())==15?1:2`
 

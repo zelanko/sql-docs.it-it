@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 0d9516bb-4ad3-4fcf-bb77-93474dea698f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e266d398debd65a8a03f73d7f8726899c97b7e13
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4228b249a49d2efc54fdd6cbda983ef8651b6d2f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62711137"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048596"
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>Finestra di dialogo Join (Visual Database Tools)
   Questa finestra di dialogo consente di specificare le opzioni per il join delle tabelle. Per accedere a tale finestra di dialogo, nel riquadro **Progettazione** selezionare una linea di join. Nella finestra **Proprietà** fare clic su **Tipo e condizione di join**e sui puntini di sospensione **(...)** a destra della proprietà.  
@@ -34,10 +33,10 @@ ms.locfileid: "62711137"
 |**Tabella**|I nomi delle tabelle o degli oggetti con valori di tabella coinvolti nel join. Non è possibile modificare i nomi delle tabelle in questa casella. Tali nomi vengono visualizzati solo a scopo informativo.|  
 |**Colonna**|I nomi delle colonne utilizzate per l'unione delle tabelle. L'operatore nell'elenco degli operatori specifica la relazione fra i dati nelle colonne. Non è possibile modificare i nomi delle colonne in questa casella. Tali nomi vengono visualizzati solo a scopo informativo.|  
 |**Operatore**|Specifica l'operatore utilizzato per mettere in relazione le colonne join. Per specificare un operatore diverso da uguale (=), selezionarlo nell'elenco. Quando si chiude la pagina delle proprietà, l'operatore selezionato verrà visualizzato nell'immagine a rombo della linea di join, come illustrato di seguito:<br /><br /> ![Icona di Visual Database Tools](../../database-engine/media//dv3wbii.gif "Icona di Visual Database Tools")|  
-|**Tutte le righe \<da Tabella1>**|Specifica che tutte le righe della tabella di sinistra compaiono nell'output anche se non esistono corrispondenze nella tabella di destra. Le colonne senza dati corrispondenti nella tabella di destra appaiono come Null. Selezionare questa opzione equivale a specificare LEFT OUTER JOIN nell'istruzione SQL.|  
-|**Tutte le righe \<da Table2>**|Specifica che tutte le righe della tabella di destra compaiono nell'output anche se non esistono corrispondenze nella tabella di sinistra. Le colonne senza dati corrispondenti nella tabella di sinistra appaiono come Null. Selezionare questa opzione equivale a specificare RIGHT OUTER JOIN nell'istruzione SQL.|  
+|**Tutte le righe da \<table1>**|Specifica che tutte le righe della tabella di sinistra compaiono nell'output anche se non esistono corrispondenze nella tabella di destra. Le colonne senza dati corrispondenti nella tabella di destra appaiono come Null. Selezionare questa opzione equivale a specificare LEFT OUTER JOIN nell'istruzione SQL.|  
+|**Tutte le righe da \<table2>**|Specifica che tutte le righe della tabella di destra compaiono nell'output anche se non esistono corrispondenze nella tabella di sinistra. Le colonne senza dati corrispondenti nella tabella di sinistra appaiono come Null. Selezionare questa opzione equivale a specificare RIGHT OUTER JOIN nell'istruzione SQL.|  
   
- La selezione di tutte le **righe da \<Tabella1>** e di **tutte le righe da \<Table2>** equivale a specificare full outer join nell'istruzione SQL.  
+ Selezionare Tutte le **righe da\<table1>** e **Tutte le righe da \<table2>** equivale a specificare FULL OUTER JOIN nell'istruzione SQL.  
   
  Quando si seleziona un'opzione per creare un outer join, l'immagine a rombo nella linea di join cambia per indicare che il join è di tipo left outer, right outer o full outer.  
   

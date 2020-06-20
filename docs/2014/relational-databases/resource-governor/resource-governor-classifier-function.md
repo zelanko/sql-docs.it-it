@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 32962186ac6fdf7b0cc18801d635e9b5ef9f5d22
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69b6fd10ac0adc6f76925e0d41f110b917111466
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209734"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063543"
 ---
 # <a name="resource-governor-classifier-function"></a>Funzione di classificazione di Resource Governor
   Il processo di classificazione di Resource Governor in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di assegnare sessioni in ingresso a un gruppo di carico di lavoro in base alle caratteristiche della sessione. È possibile personalizzare la logica di classificazione scrivendo una funzione definita dall'utente, chiamata funzione di classificazione.  

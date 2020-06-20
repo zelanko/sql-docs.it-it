@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 922454c7bc04a211d6f54754d48331fdfdffeb07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5dd1ad533b6327786195908452701161a94f9592
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62894970"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967207"
 ---
 # <a name="using-variables-in-the-script-component"></a>Utilizzo di variabili nel componente script
   Nelle variabili vengono archiviati valori che possono essere utilizzati in fase di esecuzione da un pacchetto e dai relativi contenitori, attività e gestori eventi. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services-ssis-variables.md).  
   
- È possibile rendere disponibili le variabili esistenti per l'accesso in sola lettura o in lettura/scrittura da parte dello script personalizzato immettendo elenchi di variabili delimitate da virgole nei `ReadOnlyVariables` campi `ReadWriteVariables` e della pagina **script** di **Editor trasformazione script**. Tenere presente che per i nomi delle variabili viene applicata la distinzione tra maiuscole e minuscole. Utilizzare la proprietà `Value` per leggere e scrivere in singole variabili. Il componente script gestisce automaticamente l'eventuale blocco richiesto mentre lo script modifica le variabili in fase di esecuzione.  
+ È possibile rendere disponibili le variabili esistenti per l'accesso in sola lettura o in lettura/scrittura da parte dello script personalizzato immettendo elenchi di variabili delimitate da virgole nei `ReadOnlyVariables` `ReadWriteVariables` campi e della pagina **script** di **Editor trasformazione script**. Tenere presente che per i nomi delle variabili viene applicata la distinzione tra maiuscole e minuscole. Utilizzare la proprietà `Value` per leggere e scrivere in singole variabili. Il componente script gestisce automaticamente l'eventuale blocco richiesto mentre lo script modifica le variabili in fase di esecuzione.  
   
 > [!IMPORTANT]  
 >  La raccolta di `ReadWriteVariables` è disponibile solo nel metodo `PostExecute` per aumentare le prestazioni e ridurre il rischio di conflitti di blocco. Pertanto, non è possibile incrementare direttamente il valore di una variabile del pacchetto durante l'elaborazione di ogni riga di dati. Al contrario, incrementare il valore di una variabile locale e impostare il valore della variabile del pacchetto sul valore della variabile locale nel metodo `PostExecute` dopo l'elaborazione di tutti i dati. È anche possibile utilizzare la proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A> per ovviare a questa limitazione, come descritto più avanti in questo argomento. Tuttavia, se si scrive direttamente in una variabile del pacchetto durante l'elaborazione di ogni riga, si verificano effetti negativi sulle prestazioni e aumenta il rischio di conflitti di blocco.  
@@ -37,7 +36,7 @@ ms.locfileid: "62894970"
   
 ![Integration Services icona (piccola)](../../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina relativa a Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services &#40;variabili&#41; SSIS](../../integration-services-ssis-variables.md)   
  [Utilizzo di variabili nei pacchetti](../../use-variables-in-packages.md)  
   

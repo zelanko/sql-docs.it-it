@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 11b036fd94d1f18d9e35b6f224def60d3bbade01
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f2606af57bc4a63b86b1066176cbebd886f7d5b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704117"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063526"
 ---
 # <a name="add-transact-sql-snippets"></a>Aggiunta di frammenti Transact-SQL
   È possibile aggiungere frammenti di codice Transact-SQL personalizzati al set di frammenti predefiniti incluso in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

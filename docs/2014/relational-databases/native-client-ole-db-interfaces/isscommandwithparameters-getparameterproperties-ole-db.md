@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7f4cc5ea-d028-4fe5-9192-bd153ab3c26c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ebc423dd019b5a161fd767d7b9ca8eaac8d8e335
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d0d7e930c32b1c602eee835be92c7cd69e5b0ce0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704808"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056072"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
   Restituisce una matrice di strutture di set di proprietà SSPARAMPROPS, un set di proprietà SSPARAMPROPS per ogni tipo definito dall'utente o parametro XML.  
@@ -60,7 +59,7 @@ SSPARAMPROPS **prgParamProperties);
   
  `};`  
   
-|Membro|Description|  
+|Membro|Descrizione|  
 |------------|-----------------|  
 |*iOrdinal*|Numero ordinale del parametro passato.|  
 |*cPropertySets*|Numero di strutture DBPROPSET in *rgPropertySets*.|  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7532f2a6f2c50f53e5af01c2cec979170b493147
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7c0806d84a4d5665397fb8bde0add09938480f2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922936"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959881"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>Applicazione dei backup di log delle transazioni (SQL Server)
   Le informazioni contenute in questo argomento sono rilevanti solo per il modello di recupero con registrazione completa o il modello di recupero con registrazione minima delle operazioni bulk.  
@@ -30,9 +29,9 @@ ms.locfileid: "62922936"
   
  **Contenuto dell'argomento**  
   
--   [Requisiti per ripristinare i backup dei log delle transazioni](#Requirements)  
+-   [Requisiti per il ripristino dei backup del log delle transazioni](#Requirements)  
   
--   [Recupero e log delle transazioni](#RecoveryAndTlogs)  
+-   [Log delle transazioni e ripristino](#RecoveryAndTlogs)  
   
 -   [Utilizzo dei backup del log per eseguire il ripristino fino al momento dell'errore](#PITrestore)  
   
@@ -63,7 +62,7 @@ ms.locfileid: "62922936"
   
 |Tempo|Event|  
 |----------|-----------|  
-|8.00|Backup del database per creare un backup completo del database.|  
+|8\.00|Backup del database per creare un backup completo del database.|  
 |12.00|Backup del log delle transazioni|  
 |16.00|Backup del log delle transazioni|  
 |18.00|Backup del database per creare un backup completo del database.|  
@@ -75,13 +74,13 @@ ms.locfileid: "62922936"
   
  Per ripristinare lo stato del database corrispondente alle ore 21.45 (punto di errore), è possibile utilizzare una delle procedure alternative seguenti:  
   
- **Alternativa 1: ripristino del database dal backup completo più recente**  
+ **Alternativa 1: ripristinare il database da un backup completo più recente**  
   
 1.  Creare un backup della parte finale del log delle transazioni attivo a partire dal momento dell'errore.  
   
 2.  Non ripristinare del backup completo del database delle 18.00. Ripristinare invece il backup completo del database più recente effettuato alle 18.00, quindi applicare il backup del log effettuato alle 20.00 e il backup della parte finale del log.  
   
- **Alternativa 2: ripristino del database da un backup completo precedente**  
+ **Alternativa 2: ripristinare il database da un backup completo precedente**  
   
 > [!NOTE]  
 >  Questa procedura alternativa è utile nel caso non sia possibile utilizzare il backup completo del database effettuato alle 18.00 del backup completo del database delle 18.00. Questa procedura richiede più tempo di quello necessario per il ripristino del backup completo del database delle 18.00.  
@@ -116,7 +115,7 @@ ms.locfileid: "62922936"
   
 -   [Recuperare un database senza ripristino dei dati &#40;Transact-SQL&#41;](recover-a-database-without-restoring-data-transact-sql.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Log delle transazioni &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)  
   
   

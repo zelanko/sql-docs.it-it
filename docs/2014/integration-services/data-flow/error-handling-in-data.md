@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8b5a98877e04a077bf1bb1c0c527500f3102b862
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56963bff1b17cc3cb1fd7f2c26bce452f238b1f7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827147"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915772"
 ---
 # <a name="error-handling-in-data"></a>Gestione degli errori nei dati
   Quando tramite un componente flusso di dati viene applicata una trasformazione ai dati delle colonne, vengono estratti dati dalle origini o vengono caricati dati nelle destinazioni, possono verificarsi errori. Gli errori sono spesso dovuti alla presenza di valori non previsti. Una conversione di dati può ad esempio avere esito negativo perché una colonna contiene una stringa anziché un numero, un inserimento in una colonna di database può avere esito negativo perché i dati rappresentano una data mentre la colonna ha un tipo di dati numeric oppure la valutazione di un'espressione può avere esito negativo perché il valore di una colonna è zero e dà luogo a un'operazione matematica non valida.  
@@ -59,7 +58,7 @@ ms.locfileid: "62827147"
   
  È possibile configurare la modalità di gestione di errori e troncamenti utilizzata da origini, trasformazioni e destinazioni. Nella tabella seguente vengono descritte le opzioni disponibili.  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |Interrompi componente|Quando si verifica un errore o un troncamento l'attività Flusso di dati viene interrotta. Questa è l'opzione predefinita per errori e troncamenti.|  
 |Ignora errore|L'errore o il troncamento viene ignorato e la riga di dati viene indirizzata all'output della trasformazione o dell'origine.|  
@@ -74,7 +73,7 @@ ms.locfileid: "62827147"
   
 -   [Configurazione di un output degli errori in un componente del flusso di dati](../configure-an-error-output-in-a-data-flow-component.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Flusso di dati](data-flow.md)   
  [Trasformare i dati con le trasformazioni](transformations/transform-data-with-transformations.md)   
  [Connettere i componenti con i percorsi](../connect-components-with-paths.md)   

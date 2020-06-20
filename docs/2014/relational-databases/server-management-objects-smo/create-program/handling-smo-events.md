@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b4f120dd-ba78-46ff-99c5-e47effac8544
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d0d309103880a369a88952e19b252fc15693fdd4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bcca4bfbf68bb74b8d0c61c0f434e1b0958d58da
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191930"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063126"
 ---
 # <a name="handling-smo-events"></a>Gestione degli eventi SMO
   Vi sono tipi di eventi del server che possono essere sottoscritti tramite un gestore di eventi e l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
@@ -37,7 +36,7 @@ ms.locfileid: "63191930"
   
  Per gestire gli eventi, è necessario scrivere una classe del gestore evento. La classe del gestore evento può contenere più di una funzione del gestore evento e deve essere installata per poter gestire gli eventi. Le funzioni del gestore eventi ricevono informazioni sull'evento dal parametro *ServerEventNotificatificationArgs* che può essere usato per segnalare le informazioni relative all'evento.  
   
- I tipi di eventi del database e del server che possono essere gestiti sono elencati <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> nella classe e <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>nella classe.  
+ I tipi di eventi del database e del server che possono essere gestiti sono elencati nella <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> classe e nella <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet> classe.  
   
 ## <a name="example"></a>Esempio  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

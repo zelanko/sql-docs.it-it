@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f152af82-bcb6-49ca-af19-48cdb7fc9ac6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bab311878966087ef9b6c3f05bb3023d02fdeb20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a8be1530a24feec56fcba053b784f768667559f4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62711068"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048570"
 ---
 # <a name="join-tables-automatically-visual-database-tools"></a>Unione di tabelle in modo automatico (Visual Database Tools)
   Quando si aggiungono due o più tabelle a una query, in [Progettazione query e Progettazione viste](visual-database-tools.md) viene eseguito un tentativo per determinare se le tabelle sono correlate. In caso affermativo, linee di join verranno inserite automaticamente tra i rettangoli che rappresentano le tabelle o gli oggetti con struttura di tabella.  

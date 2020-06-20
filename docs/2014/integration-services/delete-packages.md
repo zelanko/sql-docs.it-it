@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 85b7d512-0ea7-47f5-8937-b1af6592b5b5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8afb1169749bc80177fcab89402479c66fe423d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 05da7d7dcc5c42595ca3dde401a4a62f11bfdced
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770207"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951809"
 ---
 # <a name="delete-packages"></a>Eliminazione di pacchetti
   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]è possibile eliminare i pacchetti salvati nel file system. Se si elimina un pacchetto, quest'ultimo verrà eliminato definitivamente e non potrà essere ripristinato in un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

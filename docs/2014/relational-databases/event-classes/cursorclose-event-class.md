@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5c9bd070-4e4c-4281-b896-1e61a4bd403e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 386d9ac822b1524169021c5f9c6f27b0701221fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f8c71be97286a18f9b0befea66211916c3a3670e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663787"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030326"
 ---
 # <a name="cursorclose-event-class"></a>CursorClose - classe di evento
   Gli eventi di chiusura del cursore vengono generati quando un cursore viene chiuso e deallocato da [!INCLUDE[ssDE](../../includes/ssde-md.md)] . La classe di evento **CursorClose** descrive gli eventi di chiusura del cursore che si verificano nei cursori API e viene generata quando viene chiusa un'istruzione di cursore [!INCLUDE[tsql](../../includes/tsql-md.md)] di ODBC, OLE DB o DB-Library.  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb4884c0-3658-4763-92d1-636804278b1c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e78e31157f62346baf12d58c146ed99aab205408
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fcbbca7703af5e254f295240888c2fa54938763
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482655"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960711"
 ---
 # <a name="reactivate-a-member-or-collection-master-data-services"></a>Riattivare un membro o una raccolta (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è possibile riattivare un membro che è stato:  
@@ -62,7 +61,7 @@ ms.locfileid: "65482655"
   
 7.  Nella finestra di dialogo di conferma fare clic su **OK**. Viene aggiunta una nuova transazione con l'indicazione **Attivo** nella colonna **Nuovo valore** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Disattivare o eliminare membri utilizzando il processo di gestione temporanea &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)   
  [Eliminare un membro o una raccolta &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)   
  [Membri &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   

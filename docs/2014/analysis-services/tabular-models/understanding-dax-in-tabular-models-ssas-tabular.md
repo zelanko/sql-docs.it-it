@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a218855202eec9109718d5090acf16e80da42b6a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c65fe8a302afd15bc406e0785407865c928797fb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284925"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938522"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>Informazioni su DAX nei modelli tabulari (SSAS tabulare)
   Data Analysis Expressions (DAX) è il linguaggio delle formule usato per creare calcoli personalizzati in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per cartelle di lavoro di Microsoft Excel e progetti di modelli tabulari di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Le formule DAX includono funzioni, operatori e valori che consentono di eseguire calcoli avanzati sui dati in tabelle e colonne.  
@@ -97,13 +96,13 @@ ms.locfileid: "67284925"
   
  I modelli tabulari e DAX supportano i tipi di dati seguenti:  
   
-|Tipo di dati nel modello|Tipi di dati in DAX|Descrizione|  
+|Tipo di dati nel modello|Tipi di dati in DAX|Description|  
 |------------------------|----------------------|-----------------|  
 |Numero intero|Valore intero a 64 bit (otto byte) <sup>1, 2</sup>|Numeri senza cifre decimali. I numeri interi possono essere positivi o negativi ma devono essere numeri interi compresi tra -9.223.372.036.854.775.808 (-2^63) e 9.223.372.036.854.775.807 (2^63-1).|  
 |Numero decimale|Numero reale a 64 bit (otto byte) <sup>1, 2</sup>|I numeri reali sono numeri che possono avere cifre decimali e coprono un ampio intervallo di valori:<br /><br /> Valori negativi compresi tra -1,79E +308 e -2,23E -308<br /><br /> Zero<br /><br /> Valori positivi compresi tra 2,23E -308 e 1,79E + 308<br /><br /> Tuttavia, il numero di cifre significative è limitato a 17 cifre decimali.|  
 |Boolean|Boolean|Valore True o False.|  
-|Testo|string|Stringa di dati di tipo carattere Unicode. Può trattarsi di stringhe, numeri o date rappresentati in un formato di testo.|  
-|Date|Data/ora|Date e ore in una rappresentazione di data e ora valida.<br /><br /> Le date valide sono tutte le date successive al 1 marzo del 1900.|  
+|Text|string|Stringa di dati di tipo carattere Unicode. Può trattarsi di stringhe, numeri o date rappresentati in un formato di testo.|  
+|Data|Data/Ora|Date e ore in una rappresentazione di data e ora valida.<br /><br /> Le date valide sono tutte le date successive al 1 marzo del 1900.|  
 |Valuta|Valuta|Il tipo di dati currency consente valori compresi tra -922.337.203.685.477,5808 e 922.337.203.685.477,5807 con quattro cifre decimali di precisione fissa.|  
 |N/D|Vuoto|Un tipo di dati blank in DAX rappresenta e sostituisce i valori Null di SQL. È possibile creare un tipo di dati blank utilizzando la funzione BLANK, nonché verificare la presenza di tipi di dati blank utilizzando la funzione logica ISBLANK.|  
   
@@ -113,7 +112,7 @@ ms.locfileid: "67284925"
   
  Per informazioni dettagliate sui tipi di dati nei modelli tabulari e sulle conversioni esplicite e implicite di tipi di dati in DAX, vedere [Tipi di dati supportati &#40;SSAS tabulare&#41;](data-types-supported-ssas-tabular.md).  
   
-##  <a name="dax-operators"></a><a name="bkmk_DAX_opertors"></a> Operatori DAX  
+##  <a name="dax-operators"></a><a name="bkmk_DAX_opertors"></a>Operatori DAX  
  Nel linguaggio DAX vengono utilizzati quattro tipi diversi di operatori di calcolo nelle formule:  
   
 -   Operatori di confronto per confrontare valori e restituire un valore logico TRUE\FALSE.  
@@ -136,7 +135,7 @@ ms.locfileid: "67284925"
   
 |||  
 |-|-|  
-|Formula|Descrizione|  
+|Formula|Description|  
 |`=TODAY()`|Consente di inserire la data odierna in ogni riga della colonna.|  
 |`=3`|Consente di inserire il valore 3 in ogni riga della colonna.|  
 |`=[Column1] + [Column2]`|Consente di sommare i valori nella stessa riga di [Column1] e [Column2] e di inserire i risultati nella colonna calcolata della stessa riga.|  
@@ -170,7 +169,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  Questa formula contiene i seguenti elementi:  
   
-|Elemento della formula|Descrizione|  
+|Elemento della formula|Description|  
 |---------------------|-----------------|  
 |`Days in Current Quarter:=`|Nome della misura.|  
 |`=`|Il segno di uguale (=) inizia la formula.|  
@@ -227,7 +226,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  Una funzione informativa analizza la cella o la riga fornita come argomento e indica se il valore corrisponde al tipo previsto. La funzione ISERROR, ad esempio, restituisce TRUE se il valore a cui si fa riferimento contiene un errore. Per ulteriori informazioni, vedere [funzioni Informative &#40;&#41;DAX ](/dax/information-functions-dax).  
   
 ### <a name="logical-functions"></a>Funzioni logiche  
- Le funzioni logiche eseguono operazioni su un'espressione per restituire informazioni sui valori nell'espressione. La funzione TRUE, ad esempio, consente di sapere se un'espressione che si sta valutando restituirà un valore TRUE. Per ulteriori informazioni, vedere [funzioni logiche &#40;&#41;DAX ](/dax/logical-functions-dax).  
+ Le funzioni logiche eseguono operazioni su un'espressione per restituire informazioni sui valori nell'espressione. La funzione TRUE, ad esempio, consente di sapere se un'espressione che si sta valutando restituisce un valore TRUE. Per ulteriori informazioni, vedere [funzioni logiche &#40;&#41;DAX ](/dax/logical-functions-dax).  
   
 ### <a name="mathematical-and-trigonometric-functions"></a>Funzioni matematiche e trigonometriche  
  Le funzioni matematiche in DAX sono molto simili alle funzioni matematiche e trigonometriche di Excel. Esistono tuttavia alcune piccole differenze nei tipi di dati numerici utilizzati dalle funzioni DAX. Per altre informazioni, vedere [funzioni matematiche e trigonometriche &#40;&#41;DAX ](/dax/math-and-trig-functions-dax).  
@@ -239,7 +238,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  Le funzioni di testo in DAX sono molto simili alle funzioni corrispondenti in Excel. È possibile restituire parte di una stringa, cercare testo all'interno di una stringa o concatenare valori stringa. In DAX sono inoltre disponibili funzioni per il controllo dei formati per date, ore e numeri. Per ulteriori informazioni, vedere [funzioni di testo &#40;&#41;DAX ](/dax/text-functions-dax).  
   
 ### <a name="time-intelligence-functions"></a>Funzioni di Business Intelligence per le gerarchie temporali  
- Le funzioni di Business Intelligence per le gerarchie temporali disponibili in DAX consentono di creare calcoli in cui vengono utilizzate informazioni predefinite su calendari e date. Tramite gli intervalli di ore e date in combinazione con aggregazioni o calcoli è possibile compilare confronti significativi tra periodi di tempo paragonabili relativamente a vendite, scorte e così via. Per ulteriori informazioni, vedere [funzioni di Business Intelligence per le attività temporali &#40;&#41;DAX ](/dax/time-intelligence-functions-dax).  
+ Le funzioni di Business Intelligence per le gerarchie temporali disponibili in DAX consentono di creare calcoli in cui vengono utilizzate informazioni predefinite su calendari e date. Usando intervalli di date e ore in combinazione con aggregazioni o calcoli, è possibile creare confronti significativi tra periodi di tempo paragonabili relativi a vendite, scorte e così via. Per ulteriori informazioni, vedere [funzioni di Business Intelligence per le attività temporali &#40;&#41;DAX ](/dax/time-intelligence-functions-dax).  
   
 ###  <a name="table-valued-functions"></a><a name="bkmk_TableFunc"></a>Funzioni con valori di tabella  
  Sono disponibili funzioni DAX che consentono di eseguire l'output di tabelle, che utilizzano le tabelle come input o che svolgono entrambe le funzioni. Dal momento che una tabella può disporre di una sola colonna, le funzioni con valori di tabella utilizzano anche le singole colonne come input. Saper utilizzare tali funzioni con valori di tabella è importante per un utilizzo ottimale delle formule DAX. DAX include i seguenti tipi di funzioni con valori di tabella:  
@@ -416,11 +415,11 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 ##  <a name="additional-resources"></a><a name="bkmk_addional_resources"></a> Risorse aggiuntive  
  In [Modellazione tabulare &#40;esercitazione di AdventureWorks&#41;](../tabular-modeling-adventure-works-tutorial.md) vengono fornite istruzioni dettagliate sulla creazione di un modello tabulare che include molti calcoli in colonne calcolate, misure e filtri di riga. Per la maggior parte delle formule viene fornita una descrizione dello scopo della formula.  
   
- Il [Blog del team di Analysis Services e PowerPivot](https://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) fornisce informazioni, suggerimenti, notizie e annunci [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] su e PowerPivot.  
+ Il [Blog del team di Analysis Services e PowerPivot](https://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) fornisce informazioni, suggerimenti, notizie e annunci su [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] e PowerPivot.  
   
  In [Centro risorse di DAX](https://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) vengono fornite informazioni interne ed esterne su DAX, incluse numerose soluzioni DAX inviate da noti professionisti di Business Intelligence.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Informazioni di riferimento sulle espressioni di analisi dei dati &#40;&#41; DAX](/dax/data-analysis-expressions-dax-reference)   
  [Misure &#40;SSAS tabulare&#41;](measures-ssas-tabular.md)   
  [Colonne calcolate &#40;SSAS tabulare&#41;](ssas-calculated-columns.md)   

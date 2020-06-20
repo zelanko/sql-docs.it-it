@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 10fcf850a770296a81c99bc9b8168857b443df41
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a0f52b9bd12a91d546e33787853dd8883d77b48
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62894785"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968451"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Uso di file di Excel con l'attività Script
   In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili la gestione connessione, l'origine e la destinazione Excel per l'utilizzo di dati archiviati in fogli di calcolo nel formato di file di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. Per le tecniche descritte in questo argomento si utilizza l'attività Script per ottenere informazioni sui database (file di cartelle di lavoro) e sulle tabelle (fogli di lavoro e intervalli denominati) di Excel disponibili. Questi esempi possono essere facilmente modificati per utilizzare una delle altre origini dati basate su file supportate dal provider OLE DB di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet.  
@@ -79,7 +78,7 @@ ms.locfileid: "62894785"
   
 #### <a name="to-configure-this-script-task-example"></a>Per configurare l'esempio di attività Script  
   
-1.  Aggiungere una nuova attività script al pacchetto e modificarne il nome in `ExcelFileExists`.  
+1.  Aggiungere una nuova attività script al pacchetto e modificarne il nome in `ExcelFileExists` .  
   
 2.  Nella scheda **Script** di **Editor attività Script** fare clic su **ReadOnlyVariables** e immettere il valore della proprietà usando uno dei metodi seguenti:  
   
@@ -87,7 +86,7 @@ ms.locfileid: "62894785"
   
          -oppure-  
   
-    -   Fare clic sul pulsante con i puntini di sospensione (**...**) accanto al campo della proprietà e selezionare la `ExcelFile` variabile nella finestra di dialogo **Seleziona variabili** .  
+    -   Fare clic sul pulsante con i puntini di sospensione (**...**) accanto al campo della proprietà e selezionare la variabile nella finestra di dialogo **Seleziona variabili** `ExcelFile` .  
   
 3.  Fare clic su **ReadWriteVariables** e immettere il valore della proprietà usando uno dei metodi seguenti:  
   
@@ -95,7 +94,7 @@ ms.locfileid: "62894785"
   
          -oppure-  
   
-    -   Fare clic sul pulsante con i puntini di sospensione (**...**) accanto al campo della proprietà e selezionare la `ExcelFileExists` variabile nella finestra di dialogo **Seleziona variabili** .  
+    -   Fare clic sul pulsante con i puntini di sospensione (**...**) accanto al campo della proprietà e selezionare la variabile nella finestra di dialogo **Seleziona variabili** `ExcelFileExists` .  
   
 4.  Fare clic su **Modifica script** per aprire l'editor di script.  
   
@@ -149,15 +148,15 @@ public class ScriptMain
   
 #### <a name="to-configure-this-script-task-example"></a>Per configurare l'esempio di attività Script  
   
-1.  Aggiungere una nuova attività script al pacchetto e modificarne il nome in `ExcelTableExists`.  
+1.  Aggiungere una nuova attività script al pacchetto e modificarne il nome in `ExcelTableExists` .  
   
 2.  Nella scheda **Script** di **Editor attività Script** fare clic su **ReadOnlyVariables** e immettere il valore della proprietà usando uno dei metodi seguenti:  
   
-    -   Digitare `ExcelTable` e `ExcelFile` delimitato da virgole`.`  
+    -   Digitare `ExcelTable` e delimitato `ExcelFile` da virgole`.`  
   
          -oppure-  
   
-    -   Fare clic sul pulsante con i puntini di sospensione (**...**) accanto al campo della proprietà e nella finestra di dialogo `ExcelTable` **Seleziona variabili** Selezionare le variabili e `ExcelFile` .  
+    -   Fare clic sul pulsante con i puntini di sospensione (**...**) accanto al campo della proprietà e nella finestra di dialogo **Seleziona variabili** Selezionare le `ExcelTable` `ExcelFile` variabili e.  
   
 3.  Fare clic su **ReadWriteVariables** e immettere il valore della proprietà usando uno dei metodi seguenti:  
   
@@ -165,7 +164,7 @@ public class ScriptMain
   
          -oppure-  
   
-    -   Fare clic sul pulsante con i puntini di sospensione (**...**) accanto al campo della proprietà e selezionare la `ExcelTableExists` variabile nella finestra di dialogo **Seleziona variabili** .  
+    -   Fare clic sul pulsante con i puntini di sospensione (**...**) accanto al campo della proprietà e selezionare la variabile nella finestra di dialogo **Seleziona variabili** `ExcelTableExists` .  
   
 4.  Fare clic su **Modifica script** per aprire l'editor di script.  
   
@@ -543,7 +542,7 @@ public class ScriptMain
   
 ![Integration Services icona (piccola)](../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina relativa a Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestione connessione Excel](../connection-manager/excel-connection-manager.md)   
  [Esecuzione di un ciclo su file e tabelle di Excel utilizzando un contenitore Ciclo Foreach](../control-flow/foreach-loop-container.md)  
   

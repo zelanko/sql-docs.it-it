@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8f4ee7f5-80df-49fd-b2b8-d020e04b6e1b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ed78d5ff91d09f9d8370eef31fd3a6651b301a38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7ca6d56440b06d285cbb90f8d92325d59a452c16
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188204"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008562"
 ---
 # <a name="manage-events"></a>Gestione di eventi
   È possibile inoltrare a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tutti i messaggi di evento con livello di gravità dell'errore corrispondente o superiore a un determinato valore. Questa caratteristica è nota come *inoltro degli eventi*. Il server di inoltro è un server dedicato che può essere anche un server master. L'inoltro degli eventi consente di gestire in modo centralizzato gli avvisi per un gruppo di server, riducendo in tal modo il carico di lavoro per i server utilizzati molto frequentemente.  
@@ -46,7 +45,7 @@ ms.locfileid: "63188204"
   
 -   **Singolo punto di errore**. Se il server di gestione degli avvisi viene portato offline, non verrà generato nessun avviso per qualsiasi evento del gruppo di server gestito.  
   
--   **Carico server**. La gestione degli avvisi per gli eventi inoltrati determina un aumento del carico di elaborazione nel server di gestione degli avvisi.  
+-   **Carico del server**. La gestione degli avvisi per gli eventi inoltrati determina un aumento del carico di elaborazione nel server di gestione degli avvisi.  
   
 ## <a name="guidelines-for-using-an-alerts-management-server"></a>Linee guida per l'utilizzo di un server di gestione degli avvisi  
  Per la configurazione di un server di gestione degli avvisi attenersi alle linee guida riportate di seguito.  
@@ -87,7 +86,7 @@ ms.locfileid: "63188204"
 > [!NOTE]  
 >  Poiché un processo può generare un evento, assicurarsi che non venga creato un ciclo ricorsivo avviso-processo.  
   
-## <a name="see-also"></a>Vedi anche  
- [sys. sysmessages &#40;&#41;Transact-SQL](/sql/relational-databases/system-compatibility-views/sys-sysmessages-transact-sql)  
+## <a name="see-also"></a>Vedere anche  
+ [Messaggi disys.sys&#40;&#41;Transact-SQL](/sql/relational-databases/system-compatibility-views/sys-sysmessages-transact-sql)  
   
   

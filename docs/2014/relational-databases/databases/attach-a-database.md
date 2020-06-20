@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b4c9a3160224078b908059c3902e66ef59608bac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb11b5c257007872e92d3f0a7eadb3e46b4969cd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872250"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952241"
 ---
 # <a name="attach-a-database"></a>Collegare un database
   In questo argomento si illustra come collegare un database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. È possibile usare questa funzionalità per copiare, spostare o aggiornare un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -54,7 +53,7 @@ ms.locfileid: "62872250"
 -   Quando si collega un database, se i file MDF e LDF si trovano in directory diverse e uno dei percorsi include \\\\?\GlobalRoot, l'operazione avrà esito negativo.  
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni  
-Si consiglia di spostare i database utilizzando la procedura `ALTER DATABASE` di rilocazione pianificata, anziché utilizzare lo scollegamento e il collegamento. Per altre informazioni, vedere [Spostare database utente](move-user-databases.md).  
+Si consiglia di spostare i database utilizzando la `ALTER DATABASE` procedura di rilocazione pianificata, anziché utilizzare lo scollegamento e il collegamento. Per altre informazioni, vedere [Spostare database utente](move-user-databases.md).  
   
 ###  <a name="security"></a><a name="Security"></a> Sicurezza  
 Le autorizzazioni di accesso ai file vengono impostate durante l'esecuzione di alcune operazioni del database, inclusi il collegamento e lo scollegamento. Per informazioni sulle autorizzazioni per i file impostate quando un database viene collegato o scollegato, vedere [Protezione dei dati e dei file di log](https://technet.microsoft.com/library/ms189128.aspx) nella documentazione online di [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
@@ -82,7 +81,7 @@ Le autorizzazioni di accesso ai file vengono impostate durante l'esecuzione di a
      **Database da collegare**  
      Consente di visualizzare informazioni sui database selezionati.  
   
-     \<nessuna intestazione di colonna>  
+     \<no column header>  
      Consente di visualizzare un'icona che indica lo stato dell'operazione di collegamento. Le icone possibili sono illustrate di seguito nella descrizione di **Stato** .  
   
      **Percorso file MDF**  
@@ -97,7 +96,7 @@ Le autorizzazioni di accesso ai file vengono impostate durante l'esecuzione di a
      **Proprietario**  
      Consente di visualizzare un elenco a discesa di possibili proprietari del database in cui è possibile selezionare un proprietario diverso.  
   
-     **Stato**  
+     **Status**  
      Consente di visualizzare lo stato del base in base alla tabella seguente.  
   
     |Icona|Testo Stato|Descrizione|  
@@ -109,7 +108,7 @@ Le autorizzazioni di accesso ai file vengono impostate durante l'esecuzione di a
     |Cerchio con due quadranti neri a destra e a sinistra e due quadranti bianchi in alto e in basso|Arrestato|L'operazione di collegamento non è stata completata perché l'utente ne ha arrestato l'esecuzione.|  
     |Cerchio con freccia curva che punta in senso antiorario.|È stato eseguito il rollback|L'operazione di collegamento è stata completata ma ne è stato eseguito il rollback a causa di un errore durante il collegamento di un altro oggetto.|  
   
-     **Messaggio**  
+     **Message**  
      Non viene visualizzato alcun messaggio oppure viene visualizzato il collegamento ipertestuale "Impossibile trovare il file".  
   
      **Aggiungere**  
@@ -118,8 +117,8 @@ Le autorizzazioni di accesso ai file vengono impostate durante l'esecuzione di a
      **Rimuovi**  
      Consente di rimuovere il file selezionato dalla griglia **Database da collegare** .  
   
-     Dettagli del database **"** *<database_name>* **"**  
-     Consente di visualizzare i nomi dei file da collegare. Per verificare o modificare il percorso di un file, fare clic sul pulsante **Sfoglia** (**...**).  
+     **"** *<nome_database>* **" dettagli database**  
+     Consente di visualizzare i nomi dei file da collegare. Per verificare o modificare il percorso di un file, fare clic sul pulsante **Sfoglia** ( **...** ).  
   
     > [!NOTE]  
     > Se il file non esiste, nella colonna **Messaggio** verrà visualizzato il testo "File non trovato". Se non rilevato, un file di log può trovarsi in un'altra directory o essere stato eliminato. È necessario aggiornare il percorso del file nella griglia **Dettagli database** in modo che indichi la posizione corretta oppure rimuovere il file di log dalla griglia. Se non viene rilevato un file di dati con estensione ndf, è necessario aggiornare il percorso nella griglia in modo che indichi la posizione corretta.  
@@ -134,7 +133,7 @@ Le autorizzazioni di accesso ai file vengono impostate durante l'esecuzione di a
      Consente di visualizzare il percorso del file di database selezionato. Il percorso può essere modificato manualmente.  
   
      **Messaggio**  
-     Visualizza un messaggio vuoto o un collegamento ipertestuale "**Impossibile trovare il file**".  
+     Non viene visualizzato alcun messaggio oppure viene visualizzato il collegamento ipertestuale**Impossibile trovare il file**.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
@@ -163,7 +162,7 @@ Le autorizzazioni di accesso ai file vengono impostate durante l'esecuzione di a
   
 Se il livello di compatibilità di un database utente è 100 o superiore prima dell'aggiornamento, rimane invariato dopo l'aggiornamento. Se il livello di compatibilità è 90 prima dell'aggiornamento, nel database aggiornato viene impostato su 100, ovvero sul livello di compatibilità supportato più basso in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per altre informazioni, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [Scollegamento di un database](detach-a-database.md)  
   

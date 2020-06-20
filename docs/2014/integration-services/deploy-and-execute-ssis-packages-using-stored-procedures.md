@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 60914b0c-1f65-45f8-8132-0ca331749fcc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8cc6c9a2961696512c69f9c3e9de6d229eabb509
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af4efe24c58d22738e0e7b38ca68f37ce29603f2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251320"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951791"
 ---
 # <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>Distribuire ed eseguire pacchetti SSIS utilizzando le stored procedure
   Quando un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] viene configurato in modo da utilizzare il relativo modello di distribuzione, è possibile utilizzare le stored procedure nel catalogo di [!INCLUDE[ssIS](../includes/ssis-md.md)] per distribuire il progetto ed eseguire i pacchetti. Per informazioni sui modelli di distribuzione di progetti, vedere [Distribuzione di progetti e pacchetti](packages/deploy-integration-services-ssis-projects-and-packages.md).  
@@ -36,9 +35,9 @@ ms.locfileid: "72251320"
   
 1.  Chiamare [catalog.deploy_project &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database) per distribuire il progetto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] che contiene il pacchetto sul server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
-     Per recuperare il contenuto binario del file [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] di distribuzione del progetto, per il * \@parametro project_stream* usare un'istruzione SELECT con la funzione OPENROWSET e il provider bulk per set di righe. Questo provider consente di leggere i dati da un file. Tramite l'argomento SINGLE_BLOB per il provider BULK per set di righe, il contenuto del file di dati viene restituito come un set di righe a riga e colonna singole di tipo varbinary(max). Per altre informazioni, vedere [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
+     Per recuperare il contenuto binario del [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] file di distribuzione del progetto, per il parametro * \@ project_stream* usare un'istruzione SELECT con la funzione OPENROWSET e il provider bulk per set di righe. Questo provider consente di leggere i dati da un file. Tramite l'argomento SINGLE_BLOB per il provider BULK per set di righe, il contenuto del file di dati viene restituito come un set di righe a riga e colonna singole di tipo varbinary(max). Per altre informazioni, vedere [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
-     Nell'esempio seguente, il progetto SSISPackages_ProjectDeployment viene distribuito nella cartella di pacchetti SSIS nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . I dati binari vengono letti dal file di progetto (SSISPackage_ProjectDeployment. ispac) e vengono archiviati nel parametro * \@ProjectBinary* di tipo varbinary (max). Il * \@* valore del parametro ProjectBinary viene assegnato al parametro * \@project_stream* .  
+     Nell'esempio seguente, il progetto SSISPackages_ProjectDeployment viene distribuito nella cartella di pacchetti SSIS nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . I dati binari vengono letti dal file di progetto (SSISPackage_ProjectDeployment. ispac) e vengono archiviati nel parametro * \@ ProjectBinary* di tipo varbinary (max). Il valore del parametro * \@ ProjectBinary* viene assegnato al parametro * \@ project_stream* .  
   
     ```  
     DECLARE @ProjectBinary as varbinary(max)  

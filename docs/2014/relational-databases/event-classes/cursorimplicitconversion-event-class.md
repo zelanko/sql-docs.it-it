@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: efc615e9aa873a322ef9a31b2c293e6c5c4793da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 410ce293d126190971f3c463d5611761033f6c3c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663527"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030177"
 ---
 # <a name="cursorimplicitconversion-event-class"></a>CursorImplicitConversion - classe di evento
   La classe di evento **CursorImplicitConversion** descrive gli eventi di conversione implicita dei cursori generati nelle API o nei cursori [!INCLUDE[tsql](../../includes/tsql-md.md)] . Gli eventi di conversione implicita dei cursori vengono generati quando [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] esegue un'istruzione Transact-SQL non supportata dai cursori del server del tipo richiesto. [!INCLUDE[ssDE](../../includes/ssde-md.md)] restituisce un errore indicante che il tipo di cursore è stato modificato.  

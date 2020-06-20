@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9c0415a8-b780-40dd-a6dd-6ee0e30a24cb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 580641db4007f5a7e414f641a8a0495030405b38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bff0c172301b1c11a500258e67f4e8f5c69bd3ae
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066231"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938462"
 ---
 # <a name="toolbar-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barra degli strumenti (scheda Relazione tra attributi, Progettazione dimensioni) (Analysis Services –Dati multidimensionali)
   Usare la barra degli strumenti nella scheda **Relazione tra attributi** di Progettazione dimensioni per eseguire le operazioni seguenti:  
