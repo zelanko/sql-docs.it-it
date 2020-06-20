@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 645f5c0a-e949-4e87-8988-85e4d6128464
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9e779a0c0da9920b2efda5f52135e85f31959d10
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79909fcdb09e349798edfe285475f8a898c3bf04
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62843557"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929022"
 ---
 # <a name="share-files"></a>Condivisione di file
   È possibile utilizzare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per condividere elementi nei progetti di controllo del codice sorgente. Quando un elemento viene condiviso, qualsiasi modifica all'elemento apportata verrà applicata in tutti i progetti con i quali l'elemento è condiviso.  
@@ -40,7 +39,7 @@ ms.locfileid: "62843557"
   
 4.  Fare clic su **Condividi**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Nozioni fondamentali sul controllo del codice sorgente](../../2014/database-engine/source-control-basics.md)  
   
   

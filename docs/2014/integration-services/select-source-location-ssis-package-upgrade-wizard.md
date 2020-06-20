@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 429f146e-edb4-4401-a225-f2c8468971c5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1ba348d3a47945bf9bb4f375310c5c92e6be7705
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90cb7110a6b4e9372fe5397ba050f91535a58f94
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055937"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963701"
 ---
 # <a name="select-source-location-ssis-package-upgrade-wizard"></a>Seleziona posizione di origine (Aggiornamento guidato pacchetti SSIS)
   Usare la pagina **Seleziona posizione di origine** per specificare l'origine da cui eseguire l'aggiornamento dei pacchetti.  
@@ -33,9 +32,9 @@ ms.locfileid: "66055937"
  **Origine pacchetto**  
  Selezionare il percorso di archiviazione che contiene i pacchetti da aggiornare. Per questa opzione sono disponibili i valori elencati nella tabella seguente.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
-|**File System**|Indica che i pacchetti da aggiornare si trovano in una cartella nel computer locale.<br /><br /> Per eseguire il backup dei pacchetti originali prima dell'aggiornamento, è necessario archiviare i pacchetti originali nel file system. Per ulteriori informazioni, vedere l'argomento relativo alla procedura.|  
+|**File system**|Indica che i pacchetti da aggiornare si trovano in una cartella nel computer locale.<br /><br /> Per eseguire il backup dei pacchetti originali prima dell'aggiornamento, è necessario archiviare i pacchetti originali nel file system. Per ulteriori informazioni, vedere l'argomento relativo alla procedura.|  
 |**Archivio pacchetti SSIS**|Indica che i pacchetti da aggiornare si trovano nell'archivio pacchetti. L'archivio pacchetti è costituito dal set di cartelle del file system gestito dal servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Per altre informazioni, vedere [Gestione dei pacchetti &#40;servizio SSIS&#41;](service/package-management-ssis-service.md).<br /><br /> La selezione di questo valore determina la visualizzazione delle opzioni dinamiche di **Origine pacchetto** corrispondenti.|  
 |**Microsoft SQL Server**|Indica che i pacchetti da aggiornare provengono da un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]esistente.<br /><br /> La selezione di questo valore determina la visualizzazione delle opzioni dinamiche di **Origine pacchetto** corrispondenti.|  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66055937"
  **Password**  
  Digitare la password usata dall'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per la connessione al server.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Aggiornare pacchetti di Integration Services](install-windows/upgrade-integration-services-packages.md)  
   
   

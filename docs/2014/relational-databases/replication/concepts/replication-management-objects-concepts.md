@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2cbc3571aa26728fa94957bb0c2f207ff769f4c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: edb36bbf0f1a637551a7316748f58f9ed1c7f912
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721793"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047729"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
   RMO (Replication Management Objects) è un assembly di codice gestito che incapsula le funzionalità di replica per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. RMO viene implementato dallo spazio dei nomi <xref:Microsoft.SqlServer.Replication>.  
@@ -185,7 +184,7 @@ ms.locfileid: "62721793"
   
  [!code-csharp[HowTo#rmo_ChangeTranPub_cached](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_ChangeTranPub_cached)]  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Concetti relativi alle stored procedure del sistema di replica](replication-system-stored-procedures-concepts.md)   
  [Concetti di base relativi alla programmazione della replica](replication-programming-concepts.md)  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: bd272abda4b22f220e3fc599111d10cb4979f42e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51d955e53e8a84365b60af5bd7aba68263a468fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211973"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055419"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>Scrittura di eventi di controllo di SQL Server nel registro di sicurezza
   In un ambiente con sicurezza elevata il registro di sicurezza di Windows rappresenta la posizione appropriata per la scrittura di eventi che registrano l'accesso agli oggetti. Sono supportati altre posizioni di controllo che tuttavia sono più soggette alla manomissione.  
@@ -117,7 +116,7 @@ ms.locfileid: "68211973"
   
 7.  Chiudere lo strumento Criteri di sicurezza.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server Audit &#40;Database Engine&#41;](sql-server-audit-database-engine.md)  
   
   

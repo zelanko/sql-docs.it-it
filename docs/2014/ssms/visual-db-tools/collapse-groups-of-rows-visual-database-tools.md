@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7338dad0-965d-44ba-8c1a-b993acb7156d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f7f6cbc6b4150f2f951befcb70c1b09108de3b51
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0534d416d6d821e2d1870e98a42e8281648c6af1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62670484"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066193"
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>Compressione di gruppi di righe (Visual Database Tools)
   È possibile creare un risultato di query in cui ogni riga di risultati corrisponda a un intero gruppo di righe dei dati originali. Quando si comprimono le righe, è necessario tenere presenti alcune considerazioni:  

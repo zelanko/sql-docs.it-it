@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6725bfb9-5f10-4115-be09-fd9c9f5779ea
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8c9ba511746375a902a1643631c86ec8c72dbd02
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f37bee770c40235817b2b492ee34f89082012309
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82698860"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018267"
 ---
 # <a name="odbc-sql-type-for-table-valued-parameters"></a>Tipo SQL ODBC per parametri con valori di tabella
   Il supporto per i parametri con valori di tabella viene fornito da un nuovo tipo ODBC SQL, SQL_SS_TABLE.  

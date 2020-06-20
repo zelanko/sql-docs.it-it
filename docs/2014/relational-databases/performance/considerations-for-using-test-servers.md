@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c1ed99e6ee3ef6385e6041044e9b2cb829b1b3ce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1fedf315703e64ea162f668494bd9929a06d6085
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151146"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066055"
 ---
 # <a name="considerations-for-using-test-servers"></a>Considerazioni relative all'utilizzo di server di prova
   L'utilizzo di un server di prova per ottimizzare un database su un server di produzione è un importante vantaggio offerto da Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Attraverso questa funzionalità è possibile ripartire su un server di prova il carico dell'overhead generato dall'ottimizzazione senza copiare i dati effettivi dal server di produzione al server di prova.  

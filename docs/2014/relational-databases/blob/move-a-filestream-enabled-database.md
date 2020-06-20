@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: dd4d270d-9283-431a-aa6b-e571fced1893
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: aaf6dffd3d8424f5582a43d327ce6f2b3e26af4b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79740ee86a89566113650865e3fd6ec54c7cb918
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66009961"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970861"
 ---
 # <a name="move-a-filestream-enabled-database"></a>Spostamento di un database abilitato per FILESTREAM
   In questo argomento viene illustrato come spostare un database abilitato per FILESTREAM.  

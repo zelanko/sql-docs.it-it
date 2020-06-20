@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c251a77d0272e069d57b46940f8fcb06144653a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a237fac7322ed1529a8962b096c6b918ffee33b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767433"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968211"
 ---
 # <a name="step-3-modifying-the-flat-file-connection-manager"></a>Passaggio 3: Modifica della gestione connessione file flat
   In questa attività verrà modificata la gestione connessione file flat creata e configurata nella lezione 1. Al momento della creazione, la gestione connessione file flat era stata configurata per caricare staticamente un singolo file. Per abilitare Gestione connessione file flat affinché carichi i file in modo iterativo, è necessario modificare la proprietà ConnectionString della gestione connessione in modo che accetti la variabile `User:varFileName`definita dall'utente contenente il percorso del file da caricare in fase di esecuzione.  
@@ -28,7 +27,7 @@ ms.locfileid: "62767433"
   
 2.  Nel Finestra Proprietà, per le **espressioni**, fare clic nella cella vuota, quindi fare clic sul pulsante con i puntini di sospensione **(...)**.  
   
-3.  Nella finestra di dialogo **Editor espressioni di proprietà** Digitare o **Property** selezionare `ConnectionString`nella colonna proprietà.  
+3.  Nella finestra di dialogo **Editor espressioni di proprietà** Digitare o selezionare nella colonna **Proprietà** `ConnectionString` .  
   
 4.  Nella colonna **espressione** fare clic sul pulsante con i puntini di sospensione **(...)** per aprire la finestra di dialogo **Generatore di espressioni** .  
   

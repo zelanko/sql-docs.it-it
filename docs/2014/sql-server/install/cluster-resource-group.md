@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 69a6582f-f1a8-40fe-a991-c3ca42d62540
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c6599a087efa16a1fa83a37e1a26b362b971cbc6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb057c6deaec85ffae2c69fde0bf5f6419bedc88
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096463"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037112"
 ---
 # <a name="cluster-resource-group"></a>Gruppo risorse cluster
   Utilizzare la pagina Gruppo risorse cluster per specificare il disco in cui verranno memorizzate le risorse del server virtuale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -29,7 +28,7 @@ ms.locfileid: "66096463"
   
 -   Digitare il nome di un nuovo gruppo da creare. Il nome "Archiviazione disponibile" non è un nome di gruppo valido.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Procedura: Creazione di un nuovo cluster di failover di SQL Server](https://go.microsoft.com/fwlink/?LinkId=190960)  
   
   

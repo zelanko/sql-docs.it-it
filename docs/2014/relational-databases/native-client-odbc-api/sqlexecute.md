@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 4d7db8b6-611f-4fe4-be85-2a407059de45
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ac50a5abd1f7e87017c6f0c559887b1796032328
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 514436c65ef103cafae2189a03b560255b447eda
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706128"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022531"
 ---
 # <a name="sqlexecute"></a>SQLExecute
   Se l'attributo Statement SQL_SOPT_SS_PARAM_FOCUS non è impostato su 0, SQLExecute restituirà SQL_ERROR e genererà un record di diagnostica con SQLSTATE = HY024 e il messaggio "valore attributo non valido, SQL_SOPT_SS_PARAM_FOCUS (deve essere zero in fase di esecuzione)". Per ulteriori informazioni su SQL_SOPT_SS_PARAM_FOCUS, vedere [SQLSetStmtAttr](sqlsetstmtattr.md).  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Per ulteriori informazioni sui parametri con valori di tabella, vedere [parametri con valori di tabella &#40;&#41;ODBC ](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  

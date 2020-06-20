@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f20ae6cb-9e6a-4d24-88ff-d7a903a4e8d3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d5313118f7949818d341a47744a69cf13c43dbc9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b880e23bdc191da1f34f2261d7c87a32f03fb42
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056970"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964901"
 ---
 # <a name="package-configurations-organizer"></a>Libreria configurazioni pacchetto
   Usare la finestra di dialogo **Libreria configurazioni pacchetto** per abilitare le configurazioni dei pacchetti, visualizzarne un elenco per il pacchetto corrente e specificare l'ordine desiderato in base a cui devono essere caricate.  
@@ -65,7 +64,7 @@ ms.locfileid: "66056970"
  **Frecce**  
  Selezionare una configurazione e utilizzare le frecce in su o in giù per spostarla verso l'alto o il basso nell'elenco. Le configurazioni vengono caricate nella sequenza in base a cui sono ordinate nell'elenco.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di configurazioni dei pacchetti](../../2014/integration-services/create-package-configurations.md)  
   
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f286cde9-c0d0-43ef-b7ba-53c3cbb8906c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bbe571002a1168ca3f60592b86fb58fd482ecd05
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 4b760885a85f29a94affab8f0e016f1596bf0f6d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000420"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065943"
 ---
 # <a name="lesson-2-preparing-the-snapshot-folder"></a>Lezione 2: Preparazione della cartella snapshot
   In questa lezione verrà configurata la cartella snapshot utilizzata per la creazione e l'archiviazione dello snapshot di pubblicazione.  
@@ -36,9 +35,9 @@ ms.locfileid: "83000420"
   
 6.  Nella scheda **Sicurezza** fare clic su **Modifica**.  
   
-7.  Nella finestra di dialogo **Autorizzazioni** fare clic su **Aggiungi**. Nella casella di testo **Seleziona utente, computer, account servizio o gruppi** Digitare il nome dell'account agente di snapshot creato nella lezione 1, come \< _Machine_Name>_ **\ repl_snapshot**, dove \< *Machine_Name>* è il nome del server di pubblicazione. Fare clic su **Controlla nomi** e quindi su **OK**.  
+7.  Nella finestra di dialogo **Autorizzazioni** fare clic su **Aggiungi**. Nella casella di testo **Seleziona utente, computer, account servizio o gruppi** Digitare il nome dell'account agente di snapshot creato nella lezione 1, come \<_Machine_Name> _**\ repl_snapshot**, dove \<*Machine_Name> * è il nome del server di pubblicazione. Fare clic su **Controlla nomi** e quindi su **OK**.  
   
-8.  Ripetere il passaggio precedente per aggiungere le autorizzazioni per il agente di distribuzione, come \< _Machine_Name>_ **\ repl_distribution**e per il agente di merge Machine_Name \< _>_ **\ repl_merge**.  
+8.  Ripetere il passaggio precedente per aggiungere le autorizzazioni per il agente di distribuzione, come \<_Machine_Name> _ **\ repl_distribution**e per il agente di merge come \<_Machine_Name> _ **\ repl_merge**.  
   
 9. Verificare che siano state concesse le autorizzazioni seguenti:  
   

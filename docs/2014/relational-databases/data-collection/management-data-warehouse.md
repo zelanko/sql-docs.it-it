@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 26af58e208527d155b5ddf3506be4509627c1f7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96eb26c3e273832aead4aa0421304df17dc5b8ff
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918339"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970441"
 ---
 # <a name="management-data-warehouse"></a>data warehouse di gestione
   Il data warehouse di gestione è un database relazionale che contiene i dati raccolti da un server che costituisce una destinazione di raccolta dati. Questi dati vengono utilizzati per generare report per i set di raccolta dati di sistema e possono essere utilizzati anche per creare report personalizzati.  
@@ -125,7 +124,7 @@ ms.locfileid: "62918339"
 |Aggiunta della tabella core.performance_counter_report_group_items alla sezione "Schema core".|  
 |Aggiornamento dell'elenco di tabelle nella sezione "Schema snapshot". Aggiunta di snapshots.os_memory_clerks, snapshots.sql_process_and_system_memory e snapshots.io_virtual_file_stats. Rimozione di snapshots.os_process_memory e snapshots.distinct_query_stats.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Stored procedure di gestione data warehouse &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql)   
  [Stored procedure dell'agente di raccolta dati &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
  [Raccolta dati](data-collection.md)   

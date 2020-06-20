@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8e7ee45c8d725e233541f4db34796e89327bc11e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8d33448c7e17897fd1b5fb7f3aa22c302cdcfdc7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717942"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015136"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>Oggetto SqlXmlCommand (classi gestite SQLXML)
   Si tratta del costruttore per l'oggetto SqlXmlCommand:  
@@ -63,7 +62,7 @@ public SqlXmlCommand(string cnString)
  Scrive i risultati della query in un flusso esistente. Questo metodo è utile quando si dispone di un flusso a cui è necessario aggiungere i risultati, ad esempio per fare in modo che i risultati della query vengano scritti in System. Web. HttpResponse. OutputStream. Per un esempio funzionante, vedere [esecuzione di query SQL &#40;classi gestite SQLXML&#41;](sqlxml-4-0-net-framework-support-managed-classes.md).  
   
  ExecuteXmlReader XmlReader ()  
- Restituisce un oggetto XmlReader. È possibile utilizzare questo metodo per modificare direttamente i dati nell'oggetto XmlReader o per collegare l'architettura concatenabile di System. XML. Per ulteriori informazioni, vedere la documentazione di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Per un esempio funzionante, vedere [esecuzione di query SQL tramite il metodo ExecuteXmlReader](executing-sql-queries-by-using-the-executexmlreader-method.md).  
+ Restituisce un oggetto XmlReader. È possibile utilizzare questo metodo per modificare direttamente i dati nell'oggetto XmlReader o per collegare l'architettura concatenabile di System.Xml. Per ulteriori informazioni, vedere la documentazione di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Per un esempio funzionante, vedere [esecuzione di query SQL tramite il metodo ExecuteXmlReader](executing-sql-queries-by-using-the-executexmlreader-method.md).  
   
  L'oggetto SqlXmlCommand supporta inoltre questi metodi aggiuntivi:  
   
@@ -106,7 +105,7 @@ public SqlXmlCommand(string cnString)
  CommandType  
  Identifica il tipo di comando. Questa proprietà viene utilizzata per specificare il tipo di comando che si desidera eseguire. I valori nella tabella seguente determinano il tipo del comando. Per un esempio funzionante, vedere [accesso alla funzionalità SQLXML nell'ambiente .NET](accessing-sqlxml-functionality-in-the-net-environment.md).  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |SqlXmlCommandType. SQL|Esegue un comando SQL, ad esempio `SELECT * FROM Employees FOR XML AUTO`.|  
 |SqlXmlCommandType. XPath|Esegue un comando XPath, ad esempio `Employees[@EmployeeID=1]`.|  

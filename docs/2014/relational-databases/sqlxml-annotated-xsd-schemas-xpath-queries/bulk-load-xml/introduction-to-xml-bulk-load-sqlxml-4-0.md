@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 38bd3cbd-65ef-4c23-9ef3-e70ecf6bb88a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 782b352402e9469fbdb0ce06153d2d80eb9dc84e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4f3e0e78edd967e5fcb7377312c1811d34cb1ef8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703368"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068182"
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>Introduzione al caricamento bulk XML (SQLXML 4.0)
   Il caricamento bulk XML è un oggetto COM autonomo che consente di caricare dati XML semistrutturati nelle tabelle di Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -45,7 +44,7 @@ ms.locfileid: "82703368"
 ## <a name="streaming-of-xml-data"></a>Flusso dei dati XML  
  Poiché le dimensioni del documento XML di origine possono essere elevate, l'intero documento non viene letto in memoria per l'elaborazione del caricamento bulk. Il caricamento bulk XML interpreta invece i dati XML come un flusso e li legge. Durante la lettura dei dati, l'utilità identifica le tabelle di database, genera i record appropriati dall'origine dati XML, quindi invia i record a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per l'inserimento.  
   
- Il documento XML di origine seguente, ad esempio, è costituito dagli elementi ** \< Customer>** e ** \< Order>** elementi figlio:  
+ Il documento XML di origine seguente, ad esempio, è costituito da **\<Customer>** elementi e **\<Order>** elementi figlio:  
   
 ```  
 <Customer ...>  
@@ -56,7 +55,7 @@ ms.locfileid: "82703368"
 ...  
 ```  
   
- Durante la lettura dell'elemento ** \< Customer>** , il caricamento bulk XML genera un record per customerTable. Quando legge il tag di fine ** \<>/Customer** , il caricamento bulk XML inserisce il record nella tabella in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Allo stesso modo, quando legge l'elemento ** \< Order>** , il caricamento bulk XML genera un record per orderTable e quindi inserisce il record nella [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabella durante la lettura del tag ** \< /Order>** end.  
+ Durante la lettura dell'elemento, il caricamento bulk XML **\<Customer>** genera un record per customerTable. Quando legge il **\</Customer>** tag di fine, il caricamento bulk XML inserisce il record nella tabella in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Allo stesso modo, quando legge l' **\<Order>** elemento, il caricamento bulk XML genera un record per orderTable, quindi inserisce il record nella [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabella durante la lettura del **\</Order>** tag di fine.  
   
 ## <a name="transacted-and-nontransacted-xml-bulk-load-operations"></a>Operazioni di caricamento bulk XML in transazioni e non in transazioni  
  Il caricamento bulk XML può funzionare in modalità transazionale e non transazionale. Le prestazioni sono in genere ottimali se si esegue il caricamento bulk in modalità non transazionale, ovvero la proprietà Transaction è impostata su FALSE, e viene soddisfatta una delle condizioni seguenti:  

@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: c88d5c5f-9ff0-4f84-b2b6-24c6b90fa15e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5c3a004d30a5edb20da77e6f93bf51a94472419b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1fb29b1514ca415003aaac483c089b292adf78a0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192165"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055266"
 ---
 # <a name="calling-methods"></a>Chiamata di metodi
-  I metodi eseguono attività specifiche correlate all'oggetto, ad esempio l'emissione di `Checkpoint` un oggetto in un database o la richiesta di un elenco enumerato di accessi per [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]l'istanza di.  
+  I metodi eseguono attività specifiche correlate all'oggetto, ad esempio l'emissione di un oggetto `Checkpoint` in un database o la richiesta di un elenco enumerato di accessi per l'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  I metodi eseguono un'operazione su un oggetto. I metodi possono accettare parametri e spesso restituiscono un valore. Il valore restituito può essere un tipo di dati semplice, un oggetto complesso o una struttura che contiene molti membri.  
   
@@ -207,7 +206,7 @@ foreach ( r in d.Rows) {
 }   
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.SqlServer.Management.Smo.Server>   
  <xref:Microsoft.SqlServer.Management.Common.ServerConnection>  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4bc9f0865ed5ff00099f121f254d17aafc298f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a97732878a8cf0f5113f22eec0289af20184e19d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807458"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934432"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>Aggiunta o sostituzione di un server di controllo del mirroring del database (SQL Server Management Studio)
   Se gli endpoint del mirroring del database utilizzano l'autenticazione di Windows, è possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per aggiungere o sostituire un server di controllo del mirroring. L'aggiunta di un server di controllo del mirroring in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] comporta l'attivazione della modalità a sicurezza elevata con failover automatico.  
@@ -56,7 +55,7 @@ ms.locfileid: "62807458"
   
     -   Se l'istanza del server di controllo del mirroring usa un account di servizio diverso da uno degli altri partner, immettere il nome dell'account nei campi **Server principale**, **Server mirror**e **Server di controllo del mirroring** :  
   
-         **\\** *Nome utente* *NomeDominio*  
+         *NomeDominio* **\\** *nome utente*  
   
          Il nome del dominio deve essere scritto in lettere maiuscole.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "62807458"
   
      Per abilitare il server di controllo del mirroring e impostare la sessione sulla modalità di protezione elevata con failover automatico, fare clic su **OK**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Server di controllo del mirroring del database](database-mirroring-witness.md)   
  [&#40;SQL Server di mirroring del database&#41;](database-mirroring-sql-server.md)   
  [Proprietà database &#40;pagina Mirroring&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   

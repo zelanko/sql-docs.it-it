@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bf8b3b4f00ad2e8a3b9236292ee20948c852b6ef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0770a17ce4c50c9c0e3b8728db85c0f9e80b555b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68199549"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049122"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>Definizione e modifica di un filtro di join tra articoli di merge
   In questo argomento viene descritto come definire e modificare un filtro di join tra articoli di merge in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La replica di tipo merge supporta i filtri di join, solitamente utilizzati in combinazione con filtri con parametri per estendere il partizionamento della tabella ad altri articoli correlati.  
@@ -52,11 +51,11 @@ ms.locfileid: "68199549"
 -   È possibile creare manualmente filtri di join per un set di tabelle oppure generare automaticamente i filtri tramite la replica in base alle relazioni tra le chiavi esterne e le chiavi primarie definite nelle tabelle. Per altre informazioni sulla generazione automatica di un set di filtri di join, vedere [Generare automaticamente un set di filtri di join tra gli articoli di merge &#40;SQL Server Management Studio&#41;](automatically-generate-join-filters-between-merge-articles.md).  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
- Definire, modificare ed eliminare filtri join nella pagina **Filtro righe tabella** della Creazione guidata nuova pubblicazione o nella pagina **Filtro righe** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](view-and-modify-publication-properties.md).  
+ Definire, modificare ed eliminare filtri join nella pagina **Filtro righe tabella** della creazione guidata nuova pubblicazione o nella pagina **Filtro righe** della finestra di dialogo **Proprietà pubblicazione- \<Publication> ** . Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](view-and-modify-publication-properties.md).  
   
 #### <a name="to-define-a-join-filter"></a>Per definire un filtro di join  
   
-1.  Nella pagina **Filtro righe tabella** della Creazione guidata nuova pubblicazione o nella pagina **Filtro righe** di **Proprietà pubblicazione - \<Pubblicazione>** selezionare un filtro di riga o un filtro di join esistente nel riquadro **Tabelle filtrate**.  
+1.  Nella pagina **Filtro righe tabella** della creazione guidata nuova pubblicazione o nella pagina **Filtro righe** della finestra di **dialogo Proprietà pubblicazione \<Publication> - **selezionare un filtro di riga o un filtro join esistente nel riquadro **tabelle filtrate** .  
   
 2.  Fare clic su **Aggiungi**e quindi su **Aggiungi join per estendere il filtro selezionato**.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "68199549"
   
     -   Se si sceglie di utilizzare il generatore, utilizzare le colonne della griglia, ovvero**Congiunzione**, **Colonna tabella filtrata**, **Operatore**e **Colonna tabella unita in join**, per compilare un'istruzione per il join.  
   
-         Ogni colonna della griglia contiene una casella combinata a discesa, che consente di selezionare due colonne e un operatore (**=**, **<>**, **<=**, **\<**, **>=**, **>** e **like**). I risultati vengono visualizzati nell'area di testo **Anteprima** . Se il join è associato a più di due colonne, selezionare una congiunzione (AND oppure OR) dalla colonna **Congiunzione** e quindi immettere altre due colonne e un operatore.  
+         Ogni colonna della griglia contiene una casella combinata a discesa, che consente di selezionare due colonne e un operatore (,, **=** **<>** **<=** , **\<**, **>=** , **>** e **like**). I risultati vengono visualizzati nell'area di testo **Anteprima** . Se il join è associato a più di due colonne, selezionare una congiunzione (AND oppure OR) dalla colonna **Congiunzione** e quindi immettere altre due colonne e un operatore.  
   
     -   Se si sceglie di scrivere manualmente l'istruzione per il join, digitarla nell'area di testo **Istruzione per il join** . Utilizzare le caselle di riepilogo **Colonne tabella filtrata** e **Colonne tabella unita in join** per trascinare le colonne nell'area di testo **Istruzione per il join** .  
   
@@ -83,15 +82,15 @@ ms.locfileid: "68199549"
         > [!CAUTION]  
         >  Selezionando questa opzione si indica che la relazione tra la tabella padre e le tabelle figlio in un filtro join è uno-a-uno o uno-a-molti. Utilizzare questa opzione solo se esiste un vincolo nella colonna di join della tabella figlio che garantisce l'univocità. Se l'opzione è impostata in modo errato può impedire la convergenza dei dati.  
   
-    -   Per impostazione predefinita, durante la sincronizzazione la replica di tipo merge elabora le modifiche riga per riga. Per apportare modifiche correlate nelle righe della tabella filtrata e della tabella unita in join elaborata come unità, selezionare **record logico** ([!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] solo e versioni successive). Questa opzione è disponibile solo se sono soddisfatti i requisiti relativi all'utilizzo dei record logici negli articoli e nelle pubblicazioni. Per altre informazioni, vedere la sezione "Considerazioni sull'utilizzo di record logici" in [Raggruppare modifiche alle righe correlate con record logici](../merge/group-changes-to-related-rows-with-logical-records.md).  
+    -   Per impostazione predefinita, durante la sincronizzazione la replica di tipo merge elabora le modifiche riga per riga. Per apportare modifiche correlate nelle righe della tabella filtrata e della tabella unita in join elaborata come unità, selezionare **record logico** ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] solo e versioni successive). Questa opzione è disponibile solo se sono soddisfatti i requisiti relativi all'utilizzo dei record logici negli articoli e nelle pubblicazioni. Per altre informazioni, vedere la sezione "Considerazioni sull'utilizzo di record logici" in [Raggruppare modifiche alle righe correlate con record logici](../merge/group-changes-to-related-rows-with-logical-records.md).  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-6.  Se è visualizzata la finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** fare clic su **OK** per salvare e chiudere la finestra di dialogo.  
+6.  Se si è nella finestra di dialogo **proprietà \<Publication> pubblicazione-** fare clic su **OK** per salvare e chiudere la finestra di dialogo.  
   
 #### <a name="to-modify-a-join-filter"></a>Per modificare un filtro join  
   
-1.  Nella pagina **Filtro righe tabella** della Creazione guidata nuova pubblicazione o nella pagina **Filtro righe** di **Proprietà pubblicazione - \<Pubblicazione>** selezionare un filtro nel riquadro **Tabelle filtrate** e quindi fare clic su **Modifica**.  
+1.  Nella pagina **Filtro righe tabella** della creazione guidata nuova pubblicazione o nella pagina **Filtra righe** delle proprietà della **pubblicazione- \<Publication> **selezionare un filtro nel riquadro **tabelle filtrate** e quindi fare clic su **Modifica**.  
   
 2.  Nella finestra di dialogo **Modifica join** modificare il filtro.  
   
@@ -99,7 +98,7 @@ ms.locfileid: "68199549"
   
 #### <a name="to-delete-a-join-filter"></a>Per eliminare un filtro join  
   
-1.  Nella pagina **Filtro righe tabella** della Creazione guidata nuova pubblicazione o nella pagina **Filtro righe** di **Proprietà pubblicazione - \<Pubblicazione>** selezionare un filtro nel riquadro **Tabelle filtrate** e quindi fare clic su **Elimina**. Se il filtro di join eliminato è esteso da altri join, anch'essi verranno eliminati.  
+1.  Nella pagina **Filtro righe tabella** della creazione guidata nuova pubblicazione o nella pagina **Filtra righe** delle proprietà della **pubblicazione- \<Publication> **selezionare un filtro nel riquadro **tabelle filtrate** e quindi fare clic su **Elimina**. Se il filtro di join eliminato è esteso da altri join, anch'essi verranno eliminati.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
  Tali procedure indicano un filtro con parametri su un articolo padre con filtri di join tra questo articolo e gli articoli figlio correlati. I filtri join possono essere definiti e modificati a livello di programmazione tramite le stored procedure di replica.  
@@ -114,7 +113,7 @@ ms.locfileid: "68199549"
   
 2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) per definire uno o più articoli correlati, noti anche come articoli figlio, per la pubblicazione. Per altre informazioni, vedere [definire un articolo](define-an-article.md).  
   
-3.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql). Specificare **@publication** **@filtername**un nome univoco per il filtro, il nome dell'articolo figlio creato nel passaggio 2 per **@article**, il nome dell'articolo padre da unire in join **@join_articlename**per e uno dei valori seguenti per: **@join_unique_key**  
+3.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql). Specificare **@publication** un nome univoco per il filtro **@filtername** , il nome dell'articolo figlio creato nel passaggio 2 per **@article** , il nome dell'articolo padre da unire in join per **@join_articlename** e uno dei valori seguenti per **@join_unique_key** :  
   
     -   **0** : indica un join molti-a-uno o molti-a-molti tra gli articoli padre e figlio.  
   
@@ -134,7 +133,7 @@ ms.locfileid: "68199549"
   
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepubdynamic1.sql#sp_mergedynamicpub1)]  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Filtri join](../merge/join-filters.md)   
  [Filtri di riga con parametri](../merge/parameterized-filters-parameterized-row-filters.md)   
  [Modificare le proprietà di pubblicazioni e articoli](change-publication-and-article-properties.md)   

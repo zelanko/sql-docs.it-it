@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9c1a3234-4675-40d3-b473-8df06208f880
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f89e074e8431d9d421b9168e43522412c152e55f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f8685b5180d4c8dc91d0199030ecd04fdcbec994
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704635"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039022"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>Inserimento di dati in parametri con valori di tabella
   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client supporta due modelli che consentono al consumer di specificare i dati per le righe di parametri con valori di tabella: un modello push e un modello pull. Per un esempio in cui viene illustrato il modello pull, vedere la pagina relativa agli [esempi di programmazione dati di SQL Server](https://msftdpprodsamples.codeplex.com/).  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 87fcd7656ff1e86522e4ea398fc49d91acde9a34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: acafd5ba49bec92fd4c6b93c4163affaa42ab7f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62672077"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037357"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>Change Data Capture e altre funzionalità di SQL Server
   In questo argomento viene descritta l'interazione tra Change Data Capture e le funzionalità seguenti:  
@@ -33,7 +32,7 @@ ms.locfileid: "62672077"
 ##  <a name="change-tracking"></a><a name="ChangeTracking"></a>Rilevamento modifiche  
  Le funzionalità Change Data Capture e [rilevamento modifiche](about-change-tracking-sql-server.md) possono essere abilitate nello stesso database. Non richiedono considerazioni particolari. Per altre informazioni, vedere [Usare il rilevamento delle modifiche &#40;SQL Server&#41;](work-with-change-tracking-sql-server.md).  
   
-##  <a name="database-mirroring"></a><a name="DatabaseMirroring"></a>Mirroring del database  
+##  <a name="database-mirroring"></a><a name="DatabaseMirroring"></a> Mirroring del database  
  È possibile eseguire il mirroring di un database per il quale la funzionalità Change Data Capture è abilitata. Per assicurarsi che i processi di acquisizione e pulizia vengano eseguiti automaticamente dopo un failover, effettuare i passaggi seguenti:  
   
 1.  Verificare che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sia in esecuzione nella nuova istanza del server principale.  
@@ -47,7 +46,7 @@ ms.locfileid: "62672077"
  Per informazioni sul mirroring del database, vedere [Mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 ##  <a name="transactional-replication"></a><a name="TransReplication"></a>Replica transazionale  
- Le funzionalità Change Data Capture e replica transazionale possono coesistere nello stesso database, tuttavia il popolamento delle tabelle delle modifiche viene gestito in modo diverso se entrambe le funzionalità sono abilitate. Change Data Capture e la replica transazionale usano sempre la stessa stored procedure, [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql), per leggere le modifiche dal log delle transazioni. Quando Change Data Capture è la sola funzionalità abilitata, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent chiama `sp_replcmds`. Quando entrambe le funzionalità sono abilitate nello stesso database, il agente di lettura log `sp_replcmds`chiama. Questo agente popola sia le tabelle delle modifiche sia le tabelle del database di distribuzione. Per altre informazioni, vedere [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md).  
+ Le funzionalità Change Data Capture e replica transazionale possono coesistere nello stesso database, tuttavia il popolamento delle tabelle delle modifiche viene gestito in modo diverso se entrambe le funzionalità sono abilitate. Change Data Capture e la replica transazionale usano sempre la stessa stored procedure, [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql), per leggere le modifiche dal log delle transazioni. Quando Change Data Capture è la sola funzionalità abilitata, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent chiama `sp_replcmds`. Quando entrambe le funzionalità sono abilitate nello stesso database, il agente di lettura log chiama `sp_replcmds` . Questo agente popola sia le tabelle delle modifiche sia le tabelle del database di distribuzione. Per altre informazioni, vedere [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md).  
   
  Si consideri uno scenario in cui la funzionalità Change Data Capture è abilitata nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] e due tabelle sono abilitate per l'acquisizione. Per popolare le tabelle delle modifiche, il processo di acquisizione chiama `sp_replcmds`. Il database viene abilitato per la replica transazionale e viene creata una pubblicazione. L'agente di lettura log viene creato per il database e il processo di acquisizione viene eliminato. L'agente di lettura log continua ad analizzare il log dall'ultimo numero di sequenza di cui è stato eseguito il commit nella tabella delle modifiche. In questo modo, viene assicurata la coerenza dei dati nelle tabelle delle modifiche. Se la replica transazionale è disabilitata in questo database, l'agente di lettura log viene rimosso e il processo di acquisizione viene ricreato.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "62672077"
   
 -   Se un database viene scollegato e collegato allo stesso o a un altro server, la funzionalità Change Data Capture rimane abilitata.  
   
--   Se un database viene collegato o ripristinato con `KEEP_CDC` l'opzione in qualsiasi edizione diversa da Enterprise, l'operazione viene bloccata perché Change Data Capture [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richiede Enterprise. Viene visualizzato il messaggio di errore 934:  
+-   Se un database viene collegato o ripristinato con l' `KEEP_CDC` opzione in qualsiasi edizione diversa da Enterprise, l'operazione viene bloccata perché Change Data Capture richiede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. Viene visualizzato il messaggio di errore 934:  
   
      `SQL Server cannot load database '%.*ls' because change data capture is enabled. The currently installed edition of SQL Server does not support change data capture. Either disable change data capture in the database by using a supported edition of SQL Server, or upgrade the instance to one that supports change data capture.`  
   
@@ -76,7 +75,7 @@ ms.locfileid: "62672077"
 ## <a name="change-data-capture-and-alwayson"></a>Change Data Capture e AlwaysOn  
  Quando si utilizza AlwaysOn, è consigliabile eseguire un'enumerazione delle modifiche nella replica secondaria per ridurre il carico su disco nella replica primaria.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Amministrare e monitorare Change Data Capture &#40;SQL Server&#41;](../track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   
   

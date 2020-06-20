@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 365a20848416e73e96731722abecfd6d94ebbfc5
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: afcf38e662b152a5039043017624a46b214e263f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703953"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065761"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Modifica di script SQLCMD con l'editor di query
   L'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] consente di scrivere e modificare query come script SQLCMD. Gli script SQLCMD vengono utilizzati quando è necessario elaborare comandi di sistema di Windows e istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] nello stesso script.  
@@ -76,7 +75,7 @@ ms.locfileid: "82703953"
   
     -   (Righe interessate: 6)  
   
-    -   \<Informazioni della directory>  
+    -   \<The directory information>  
   
     -   (Righe interessate: 4)  
   
@@ -138,7 +137,7 @@ ms.locfileid: "82703953"
 > [!NOTE]  
 >  Sia per `:error` sia per `:out`, `stderr` e `stdout` inviano l'output alla scheda Messaggi.  
   
- I comandi SQLCMD non inclusi nell'elenco precedente non sono supportati nell'editor di query. Quando viene eseguito uno script contenente parole chiave SQLCMD non supportate, per ognuna di esse l'editor di query invierà un messaggio "Ignoring command *\<comando ignorato*>" alla destinazione. Lo script verrà eseguito, ma i comandi non supportati verranno ignorati.  
+ I comandi SQLCMD non inclusi nell'elenco precedente non sono supportati nell'editor di query. Quando viene eseguito uno script contenente parole chiave SQLCMD non supportate, l'editor di query invierà un messaggio "ignorando il comando * \<ignored command*> " alla destinazione per ogni parola chiave non supportata. Lo script verrà eseguito, ma i comandi non supportati verranno ignorati.  
   
 > [!CAUTION]  
 >  Poiché SQLCMD non viene avviato dalla riga di comando, l'esecuzione dell'editor di query in modalità SQLCMD presenta alcune limitazioni. Non è possibile passare parametri della riga di comando come variabili e poiché l'editor di query non è in grado di rispondere ai prompt del sistema operativo, evitare di eseguire istruzioni interattive.  

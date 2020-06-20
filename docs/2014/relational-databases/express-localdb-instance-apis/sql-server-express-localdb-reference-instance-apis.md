@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: adfddc5de02f13b592b1f03107a67c4a3c449d0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42b71df860f82fe470cbd01dbd9e1c0f6c07e2a5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128635"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050937"
 ---
 # <a name="sql-server-express-localdb-instance-api-reference"></a>Riferimento all'API dell'istanza del database locale di SQL Server ExpressSQL Server
   In SQL Server basato su servizi, tradizionale, le singole istanze di SQL Server installate in un solo computer sono separate fisicamente; ovvero, ogni istanza deve essere installata e rimossa separatamente. Inoltre, ciascuna istanza dispone di un set separato di file binari e si esegue in un processo del servizio separato. Il nome dell'istanza di SQL Server viene utilizzato per specificare l'istanza di SQL Server a cui l'utente desidera effettuare la connessione.  
@@ -64,7 +63,7 @@ ms.locfileid: "63128635"
 ### <a name="named-instance-naming-rules"></a>Regole di denominazione dell'istanza denominata  
  Il nome di un'istanza del database locale può essere composto da un massimo di 128 caratteri (il limite viene imposto dal tipo di dati `sysname`). Si tratta di una differenza significativa rispetto ai nomi di istanze di SQL Server tradizionali, che sono limitati a nomi NetBIOS di 16 caratteri ASCII. Il motivo di questa differenza è che il database locale considera i database come file e pertanto implica la semantica basata su file, pertanto è intuitivo per gli utenti avere più libertà nella scelta dei nomi di istanza.  
   
- Nel nome di un'istanza del database locale può essere incluso qualsiasi carattere Unicode che sia valido all'interno del componente del nome del file. I caratteri non validi in un componente filename includono in genere i caratteri seguenti: caratteri ASCII/Unicode da 1 a 31, nonché virgolette ("),\<minore di (), maggiore di (>), pipe (|), BACKSPACE (\b), Tab (\t), due punti (:), asterisco (*), punto interrogativo (\\?), barra rovesciata () e barra (/). Si noti che il carattere Null (\0) è consentito perché utilizzato per la chiusura della stringa. Tutti i caratteri successivi al primo carattere Null verranno ignorati.  
+ Nel nome di un'istanza del database locale può essere incluso qualsiasi carattere Unicode che sia valido all'interno del componente del nome del file. I caratteri non validi in un componente filename includono generalmente i caratteri seguenti: caratteri ASCII/Unicode da 1 a 31, nonché virgolette ("), minore di ( \<), greater than (> ), pipe (|), BACKSPACE (\b), Tab (\t), due punti (:), asterisco (*), punto interrogativo (?), barra rovesciata ( \\ ) e barra (/). Si noti che il carattere Null (\0) è consentito perché utilizzato per la chiusura della stringa. Tutti i caratteri successivi al primo carattere Null verranno ignorati.  
   
 > [!NOTE]  
 >  L'elenco di caratteri non consentiti può dipendere dal sistema operativo e può essere modificato nelle versioni successive.  

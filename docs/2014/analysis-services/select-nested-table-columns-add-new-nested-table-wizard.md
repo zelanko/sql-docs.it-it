@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b78a820f-b5a2-4dfc-809a-8d6a949a3f3a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 911525abdf78472cde7c8467357ce846daafc3a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 737a2e6c837baea373262e586e528a7307b1db6e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069363"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940922"
 ---
 # <a name="select-nested-table-columns-add-new-nested-table-wizard"></a>Selezione colonne tabella nidificata (procedura guidata Aggiungi nuova tabella nidificata)
   Usare la pagina **Selezione colonne tabella annidata** per selezionare gli attributi e le misure da includere nella tabella annidata e definire la modalità d'uso di tali attributi e misure da parte del modello di data mining.  
@@ -34,7 +33,7 @@ ms.locfileid: "66069363"
  **Stimabile**  
  Selezionare questa opzione per indicare se una misura o un attributo dovrà essere utilizzato come colonna stimabile nel modello di data mining. È possibile contrassegnare una colonna sia come di input sia stimabile allo stesso tempo.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto della creazione guidata modello di data mining &#40;Analysis Services-&#41;di data mining](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Selezionare la chiave della tabella nidificata &#40;procedura guidata Aggiungi nuova tabella nidificata&#41;](select-nested-table-key-add-new-nested-table-wizard.md)   
  [Impostazione utilizzo colonne modello di data mining &#40;creazione guidata modello di data mining&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  

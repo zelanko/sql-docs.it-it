@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 97fd1ef113ec76a00394da298f1def188168a37d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2e1528d81faa352fdcdf37abe9ad93fda190445c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62955844"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004846"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>Replicare dati in colonne crittografate (SQL Server Management Studio)
   La replica consente di pubblicare dati di colonna crittografati. Per decrittografare e utilizzare tali dati nel Sottoscrittore, la chiave utilizzata per crittografare i dati nel server di pubblicazione deve essere presente anche nel Sottoscrittore. La replica non rappresenta un meccanismo protetto per il trasporto di chiavi di crittografia. La chiave di crittografia deve essere ricreata manualmente nel Sottoscrittore. In questo argomento verrà illustrato come crittografare una colonna nel server di pubblicazione e garantire che la chiave di crittografia sia disponibile nel Sottoscrittore.  
@@ -85,7 +84,7 @@ ms.locfileid: "62955844"
   
  [!code-sql[HowTo#sp_SubscriberEncryptedColumn](../../../snippets/tsql/SQL15/replication/howto/tsql/subscriberencryptedcolumn.sql#sp_subscriberencryptedcolumn)]  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Sicurezza replica di SQL Server](view-and-modify-replication-security-settings.md)   
  [Creare chiavi simmetriche identiche su due server](../../security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   

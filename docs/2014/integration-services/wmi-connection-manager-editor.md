@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ef2c913-0779-4a07-989e-3361cd83170b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 918c0ecd3a1ac1d0f1821ee8f19df291f9a5fa33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4bc74731e0ecb5487d3f52db1af3a7f20c85bd0f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054475"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972431"
 ---
 # <a name="wmi-connection-manager-editor"></a>Editor gestione connessione WMI
   Usare la finestra di dialogo **Editor gestione connessioni WMI** per specificare una connessione del servizio Strumentazione gestione Windows (WMI) a un server.  
@@ -51,7 +50,7 @@ ms.locfileid: "66054475"
  **Test**  
  Consente di verificare le impostazioni della gestione connessioni.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Concetti relativi al provider WMI per la gestione della configurazione](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)   
  [Concetti relativi al provider WMI per eventi del server](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  

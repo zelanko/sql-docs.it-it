@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eec4a1b93be27ca49122e576107f2856dda9f7ca
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: df87dddd9fd4cf067125314c9d798eaa42523576
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717023"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046756"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Definire la serializzazione di dati XML
   Quando si esegue il cast esplicito o implicito del tipo di dati xml a un tipo SQL stringa o binario, il contenuto del tipo di dati xml verrà serializzato in base alle regole illustrate in questo argomento.  
@@ -75,7 +74,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
 ## <a name="entitization-of-xml-characters-during-serialization"></a>Sostituzione dei caratteri XML con entità durante la serializzazione  
  È consigliabile analizzare tutte le strutture XML serializzate. La serializzazione di alcuni caratteri deve pertanto prevedere la sostituzione con entità, in modo tale da mantenere per i caratteri la possibilità di eseguire il round trip durante la fase di normalizzazione del parser XML. La sostituzione di alcuni caratteri con entità deve tuttavia garantire che il documento sia ben formato e possa pertanto essere analizzato. Di seguito sono illustrate le regole della sostituzione con entità applicabili alla serializzazione:  
   
--   I caratteri &, \< e > vengono sempre sostituiti rispettivamente con le entità &amp;, &lt; e &gt; se sono presenti in un valore di attributo o nel contenuto di un elemento.  
+-   I caratteri &, \<, and > sono sempre sostituiti con entità, &amp; &lt; e, &gt; rispettivamente, se si verificano all'interno di un valore di attributo o di un contenuto dell'elemento.  
   
 -   SQL Server racchiude i valori di attributo tra virgolette singole (U+0022) e pertanto la virgoletta nei valori di attributo viene sostituita con l'entità &quot;.  
   

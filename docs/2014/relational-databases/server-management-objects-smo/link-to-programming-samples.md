@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 5eb28044-8437-466e-9c55-60941c237fbb
 author: mikeraymsft
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 79b262bc97cf674c98361d72b0ceedcaef90bb91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54b382d3e5623c6fdc43f0b8f4825fc5535b5606
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244522"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055263"
 ---
 # <a name="link-to-programming-samples"></a>Collegamento agli esempi di programmazione
-  Nella tabella seguente sono elencati gli esempi di programmazione di SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) disponibili nella directory [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)]Programmability\SMO. Questi esempi sono disponibili sia [!INCLUDE[csprcs](../../includes/csprcs-md.md)] in che [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] in .NET.  
+  Nella tabella seguente sono elencati gli esempi di programmazione di SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) disponibili nella directory [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)]Programmability\SMO. Questi esempi sono disponibili sia in [!INCLUDE[csprcs](../../includes/csprcs-md.md)] che in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET.  
   
  Per ulteriori informazioni su come installare gli esempi, vedere [AdventureWorks per SQL Server 2012](https://msftdbprodsamples.codeplex.com/releases/view/55330).  
   
@@ -34,7 +33,7 @@ ms.locfileid: "75244522"
 |DatabaseSearch|Visualizza tutti gli oggetti in un database.|  
 |DependencyExplorer|Implementa l'albero delle dipendenze e la finestra di visualizzazione delle proprietà.|  
 |IndexSizes|Visualizza il nome e le dimensioni dell'indice per il database selezionato.|  
-|LoadRegAssembly|Viene illustrato come caricare e registrare un [!INCLUDE[msCoName](../../includes/msconame-md.md)] assembly .NET in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilizza l'assembly UtilityConversion.|  
+|LoadRegAssembly|Viene illustrato come caricare e registrare un [!INCLUDE[msCoName](../../includes/msconame-md.md)] assembly .NET in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Utilizza l'assembly UtilityConversion.|  
 |ManageDatabases|Illustra come creare, modificare ed eliminare un database, nonché come aggiungere un nuovo filegroup e un file di log.|  
 |ManageDatabaseUsers|Illustra come aggiungere, modificare e rimuovere utenti.|  
 |ManageTables|Illustra come creare, modificare ed eliminare tabelle.|  

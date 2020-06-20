@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c1655e8d-d14c-455a-a7f9-9d2f43e88ab4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4dd5d28bb3b40417ab9c16b957b48db04f44599f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5576331004eca44bc32dbde8f430284f75e6eb70
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255449"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047614"
 ---
 # <a name="types-of-replication"></a>Tipi di replica
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre i tipi di replica seguenti, utilizzabili nelle applicazioni distribuite:  
@@ -34,7 +33,7 @@ ms.locfileid: "63255449"
   
  Le modifiche di dati non vengono rilevate per la replica snapshot. Ogni volta che viene applicato uno snapshot, vengono completamente sovrascritti i dati esistenti. La replica transazionale rileva le modifiche tramite il log delle transazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mentre la replica di tipo merge utilizza a tale scopo trigger e tabelle di metadati.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica degli agenti di replica](agents/replication-agents-overview.md)  
   
   

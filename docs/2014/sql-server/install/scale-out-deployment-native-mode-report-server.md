@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a9fe82102df73ddfa77b4636dd29793ac2694949
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a04a0d0e08804724def9e586c05bb4b6e72cdbd9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952422"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058936"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>Distribuzione con scalabilità orizzontale (server di report in modalità nativa)
   La pagina **Distribuzione con scalabilità orizzontale** di Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consente di visualizzare lo stato di inizializzazione per una distribuzione con scalabilità orizzontale o di creare un join di un server di report per una distribuzione con scalabilità orizzontale. Per *distribuzione con scalabilità orizzontale* si intendono due o più istanze del server di report che condividono un singolo database del server di report.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità nativa.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modalità nativa.  
   
  Per *server di report inizializzato* si intende un server in grado di crittografare e decrittografare dati riservati archiviati in un database del server di report. Le credenziali archiviate e le stringhe di connessione sono esempi di dati crittografati archiviati nel database. L'inizializzazione è un requisito necessario per il funzionamento del server di report.  
   
@@ -37,8 +36,8 @@ ms.locfileid: "71952422"
  Per aprire questa pagina, avviare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e selezionare **Distribuzione con scalabilità orizzontale** nel riquadro di navigazione. Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opzioni  
- **Nome server SQL**  
- Consente di specificare il nome [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] dell'istanza di che ospita il database del server di report.  
+ **Nome SQL Server**  
+ Consente di specificare il nome dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] istanza di che ospita il database del server di report.  
   
  **Nome database**  
  Consente di specificare il nome del database a cui è attualmente connessa l'istanza del server di report.  
@@ -52,7 +51,7 @@ ms.locfileid: "71952422"
  **Istanza**  
  Indica il nome dell'istanza del server di report. Le istanze del server di report sono basate su istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Stato**  
+ **Status**  
  Indica se il server di report è inizializzato o in attesa di essere unito a una distribuzione con scalabilità orizzontale:  
   
 -   Per un server di report autonomo che non fa parte di una distribuzione con scalabilità orizzontale, questa pagina indica che l'istanza del server di report è inizializzata rispetto al relativo database del server di report dedicato. Lo stato è impostato su **Unione eseguita**.  

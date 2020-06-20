@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 690ffef5-fd59-4e95-a27d-4fcf0d6b1c0b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e1a32dcbcee6704cb4fecef7b58cbff8354b910a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e6b410a2a32aadd14631aa02c6c46f8dde5ba9e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057903"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951221"
 ---
 # <a name="lookup-transformation-editor-columns-page"></a>Editor trasformazione Ricerca (pagina Colonne)
   Utilizzare la pagina **Colonne** della finestra di dialogo **Editor trasformazione Ricerca** per specificare il join tra la tabella di origine e la tabella di riferimento e selezionare colonne di ricerca nella tabella di riferimento.  
@@ -52,7 +51,7 @@ ms.locfileid: "66057903"
  **Alias di output**  
  Consente di digitare un alias per l'output relativo a ogni colonna di ricerca. Per impostazione predefinita viene suggerito il nome della colonna di ricerca. È comunque possibile scegliere qualsiasi nome descrittivo univoco.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Editor trasformazione Ricerca &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor trasformazione Ricerca &#40;pagina connessione&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
  [Editor trasformazione Ricerca &#40;pagina avanzate&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   

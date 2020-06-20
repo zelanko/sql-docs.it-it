@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0da64d58-6e03-45f3-8443-6b94d4158891
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4f33066c622e3d1d736b1e8b800db96b0e9c35fb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3884f6cec7cdb1eee6d06281a49d65a0bc16828
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069295"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940862"
 ---
 # <a name="select-partitions-to-modify-aggregation-design-wizard"></a>Selezione partizioni da modificare (Progettazione guidata aggregazioni)
   Utilizzare la pagina **Selezione partizioni da modificare** per selezionare le partizioni per le quali si desidera progettare le aggregazioni.  
@@ -37,7 +36,7 @@ ms.locfileid: "66069295"
  **Aggregazioni**  
  Consente di visualizzare una stringa che descrive la progettazione delle aggregazioni utilizzata dalla partizione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto della progettazione guidata aggregazioni](aggregation-design-wizard-f1-help.md)   
  [Procedure guidate di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-wizards-multidimensional-data.md)  
   

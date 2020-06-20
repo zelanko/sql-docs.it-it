@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: c2513dab-8415-4e0c-9475-6d4ab97fea7c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6eb81944ae4c3abab1d20fb203ee400cb8c01245
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f46eb5206e666caeb928c3718c75f093beb6bf4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755243"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934662"
 ---
 # <a name="connect-to-server-connection-properties-page-integration-services"></a>Integration Services - Connetti al server (pagina Proprietà connessione)
   Usare questa scheda per visualizzare o specificare le opzioni relative alla connessione a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] o alla registrazione di [!INCLUDE[ssIS](../includes/ssis-md.md)] in **Server registrati**. Le opzioni**Connetti** e **Opzioni** vengono visualizzate in questa finestra di dialogo solamente durante la connessione. Le opzioni**Test** e **Salva** vengono visualizzate in questa finestra di dialogo solamente durante la registrazione del [!INCLUDE[ssIS](../includes/ssis-md.md)].  

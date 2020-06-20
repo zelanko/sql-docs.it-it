@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2066eeb7d9b86228ed86aed290e69f2a0e981b95
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3494f4f5b13c422efb8e2a39597e131c10d81ed1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736241"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047223"
 ---
 # <a name="synonyms-database-engine"></a>Sinonimi (Motore di database)
   Un sinonimo è un oggetto di database che viene utilizzato per gli scopi seguenti:  
@@ -112,7 +111,7 @@ EXEC ('ALTER TABLE dbo.MyProduct
  Per altre informazioni sulle funzioni associate a schema, vedere [Creare funzioni definite dall'utente &#40;Motore di database&#41;](../user-defined-functions/create-user-defined-functions-database-engine.md).  
   
 ## <a name="getting-information-about-synonyms"></a>Recupero di informazioni sui sinonimi  
- La vista del catalogo sys.synonyms contiene una voce per ogni sinonimo incluso in un database specifico. La vista del catalogo espone i metadati dei sinonimi, ad esempio il nome del sinonimo e il nome dell'oggetto di base. Per ulteriori informazioni sulla vista `sys.synonyms` del catalogo, vedere [sys. sinonims &#40;&#41;Transact-SQL ](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql).  
+ La vista del catalogo sys.synonyms contiene una voce per ogni sinonimo incluso in un database specifico. La vista del catalogo espone i metadati dei sinonimi, ad esempio il nome del sinonimo e il nome dell'oggetto di base. Per ulteriori informazioni sulla `sys.synonyms` vista del catalogo, vedere [sys. sinonims &#40;&#41;Transact-SQL ](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql).  
   
  Utilizzando proprietà estese, è possibile aggiungere istruzioni o descrizioni, maschere di input e regole di formattazione come proprietà di un sinonimo. Poiché la proprietà viene archiviata nel database, tutte le applicazioni che leggono la proprietà possono valutare l'oggetto nello stesso modo. Per altre informazioni, vedere [sp_addextendedproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql).  
   

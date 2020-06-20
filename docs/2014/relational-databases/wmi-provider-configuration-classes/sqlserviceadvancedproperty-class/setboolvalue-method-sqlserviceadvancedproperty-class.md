@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 876e61b7-875c-43f4-bbce-d7eeb90f6730
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0c2c543343bd602be75d600a489edfd84663790b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 911e40506891894213040a02cb439daa6997701a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62911403"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059677"
 ---
 # <a name="set-breakpoints"></a>Imposta punti di interruzione
   Utilizzare la finestra di dialogo **Imposta punti di interruzione** per specificare gli eventi su cui abilitare i punti di interruzione e per controllarne il funzionamento.  
   
 ## <a name="options"></a>Opzioni  
- **Attivata**  
+ **Enabled**  
  Consente di abilitare un punto di interruzione su un evento.  
   
  **Break Condition**  
@@ -44,7 +43,7 @@ ms.locfileid: "62911403"
  **Passaggi**  
  Consente di specificare il numero di passaggi al raggiungimento del quale attivare un'interruzione. Questa opzione non è disponibile se il punto di interruzione è sempre attivo.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Debug del flusso di controllo](../../../integration-services/troubleshooting/debugging-control-flow.md)  
   
   

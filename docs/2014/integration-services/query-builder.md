@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 780752c9-6e3c-4f44-aaff-4f4d5e5a45c5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1880ceffb03389bc87ee8f25d1817a5e4f593566
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a393352f7ec0f9384ed2d30b2909c9d9f2c1dc0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056637"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964621"
 ---
 # <a name="query-builder"></a>Generatore di query
   Utilizzare la finestra di dialogo **Generatore query** per creare una query da utilizzare nell'attività Esegui SQL, nell'origine e nella destinazione OLE DB, nonché nella trasformazione Ricerca.  
@@ -46,13 +45,13 @@ ms.locfileid: "66056637"
  **Barra degli strumenti**  
  Utilizzare la barra degli strumenti per gestire set di dati, selezionare i riquadri da visualizzare e controllare le funzioni di query.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Mostra/Nascondi riquadro diagramma**|Consente di visualizzare o nascondere il riquadro **diagramma**.|  
 |**Mostra/Nascondi riquadro griglia**|Consente di visualizzare o nascondere il riquadro **griglia**.|  
 |**Mostra/Nascondi riquadro SQL**|Consente di visualizzare o nascondere il riquadro **SQL**.|  
 |**Mostra/Nascondi riquadro Risultati**|Consente di visualizzare o nascondere il riquadro dei **risultati**.|  
-|**Correre**|Consente di eseguire la query. I risultati verranno visualizzati nel riquadro dei risultati.|  
+|**Esegui**|Consente di eseguire la query. I risultati verranno visualizzati nel riquadro dei risultati.|  
 |**Verifica istruzione SQL**|Consente di verificare che l'istruzione sia valida.|  
 |**Ordinamento crescente**|Consente di disporre in ordine crescente le righe di output della colonna selezionata nel riquadro griglia.|  
 |**Ordinamento decrescente**|Consente di disporre in ordine decrescente le righe di output della colonna selezionata nel riquadro griglia.|  
@@ -63,19 +62,19 @@ ms.locfileid: "66056637"
  **Definizione query**  
  Questa opzione mette a disposizione una barra degli strumenti e riquadri in cui è possibile definire e testare la query.  
   
-|Riquadro|Descrizione|  
+|Riquadro|Description|  
 |----------|-----------------|  
 |Riquadro **diagramma**|Visualizza la query in un diagramma. Nel diagramma vengono visualizzate le tabelle incluse nella query e indicate le relative modalità di unione in join. Selezionare o deselezionare la casella di controllo accanto a una colonna nella tabella per aggiungere o rimuovere la colonna dall'output della query.<br /><br /> Quando si aggiungono tabelle alla query, in Generatore query vengono creati join tra le tabelle basati sulle tabelle, in base alle chiavi della tabella. Per aggiungere un join, trascinare un campo da una tabella in un campo di un'altra tabella. Per gestire un join, fare clic su di esso con il pulsante destro del mouse e quindi scegliere un'opzione dal menu.<br /><br /> Fare clic con il pulsante destro del mouse sul riquadro **diagramma** per aggiungere o rimuovere tabelle, selezionare tutte le tabelle e visualizzare o nascondere i riquadri.|  
 |Riquadro **griglia**|Visualizza la query in una griglia. È possibile utilizzare questo riquadro per aggiungere o rimuovere colonne da un query e modificare le impostazioni per ogni colonna.|  
 |Riquadro **SQL**|Visualizza la query come testo di istruzione SQL. Le modifiche apportate nei riquadri **diagramma** e **griglia** vengono visualizzati qui e viceversa, le modifiche apportate qui vengono visualizzate nei riquadri **diagramma** e **griglia**.|  
 |Riquadro **risultati**|Visualizza i risultati della query quando si fa clic su **Esegui** sulla barra degli strumenti.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Attività Esegui SQL](control-flow/execute-sql-task.md)   
  [Origine OLE DB](data-flow/ole-db-source.md)   
  [Destinazione OLE DB](data-flow/ole-db-destination.md)   
  [Trasformazione Ricerca](data-flow/transformations/lookup-transformation.md)   
  [Integration Services &#40;query&#41; SSIS](integration-services-ssis-queries.md)   
- [MERGE in Integration Services Packages](control-flow/merge-in-integration-services-packages.md)  
+ [MERGE nei pacchetti di Integration Services](control-flow/merge-in-integration-services-packages.md)  
   
   

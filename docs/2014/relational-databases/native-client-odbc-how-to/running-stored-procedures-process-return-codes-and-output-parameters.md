@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 38918636fa569b5f9b43e1f93698879863429fb0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4aebcc06fe8442070ae55da81fbb914fea2e2df2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705218"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048202"
 ---
 # <a name="process-return-codes-and-output-parameters-odbc"></a>Elaborare codici restituiti e parametri di output (ODBC)
   Le stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono includere parametri di output e codici restituiti di tipo integer. I codici restituiti e i parametri di output vengono inviati nell'ultimo pacchetto dal server e non sono disponibili per l'applicazione fino a quando [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) non restituisce SQL_NO_DATA. Se viene restituito un errore da un stored procedure, chiamare SQLMoreResults per passare al risultato successivo fino a quando non viene restituito SQL_NO_DATA.  

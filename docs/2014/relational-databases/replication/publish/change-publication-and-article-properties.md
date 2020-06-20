@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c43c81612ffd851d7ea0e0679f79f3c8fec91037
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 185e5d0beb9df2ec8a3dcf263632c1d260a3bcd7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882344"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038058"
 ---
 # <a name="change-publication-and-article-properties"></a>Modifica delle proprietà di pubblicazioni e articoli
   Dopo aver creato una pubblicazione, è possibile modificare la maggior parte delle proprietà della pubblicazione stessa e degli articoli. In alcuni casi è necessario rigenerare lo snapshot e/o reinizializzare le sottoscrizioni. In questo argomento vengono fornite informazioni su tutte le proprietà che, se modificate, richiedono l'esecuzione di una o entrambe le azioni.  
@@ -56,7 +55,7 @@ ms.locfileid: "73882344"
 |Modifica dei comandi INSERT, UPDATE o DELETE.|**sp_changearticle**|**ins_cmd**<br /><br /> **upd_cmd**<br /><br /> **del_cmd**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
 |Modifica del nome della tabella di destinazione.|**sp_changearticle**|**dest_table**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
 |Modifica del proprietario della tabella di destinazione (schema).|**sp_changearticle**|**destination_owner**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
-|Modifica dei mapping dei tipi di dati (si applica solo alla pubblicazione Oracle).|**sp_changearticlecolumndatatype**|**\@tipo**<br /><br /> **\@lunghezza**<br /><br /> **\@precisione**<br /><br /> **\@scala**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
+|Modifica dei mapping dei tipi di dati (si applica solo alla pubblicazione Oracle).|**sp_changearticlecolumndatatype**|**\@type**<br /><br /> **\@length**<br /><br /> **\@precisione**<br /><br /> **\@scala**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
   
 ## <a name="publication-properties-for-merge-replication"></a>Proprietà della pubblicazione per la replica di tipo merge  
   
@@ -73,7 +72,7 @@ ms.locfileid: "73882344"
 |Modifica di un filtro join o di un record logico.|**sp_changemergefilter**|**\@Proprietà**<br /><br /> **\@valore**|Nuovo snapshot<br /><br /> Reinizializzazione delle sottoscrizioni.|  
 |Disabilitazione dell'utilizzo di filtri con parametri (per l'abilitazione dei filtri con parametri non sono necessarie particolari azioni).|**sp_changemergepublication**|Impostazione del valore **false** per **dynamic_filters**.|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
 |Abilitazione o disabilitazione dell'utilizzo di partizioni pre-calcolate.|**sp_changemergepublication**|**use_partition_groups**|Nuovo snapshot.|  
-|Abilitare o disabilitare [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] l'ottimizzazione della partizione.|**sp_changemergepublication**|**keep_partition_changes**|Reinizializzazione delle sottoscrizioni.|  
+|Abilitare o disabilitare l' [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] ottimizzazione della partizione.|**sp_changemergepublication**|**keep_partition_changes**|Reinizializzazione delle sottoscrizioni.|  
 |Abilitazione o disabilitazione della convalida delle partizioni del Sottoscrittore.|**sp_changemergepublication**|**validate_subscriber_info**|Reinizializzazione delle sottoscrizioni.|  
 |Modifica del livello di compatibilità della pubblicazione a 80sp3 o inferiore.|**sp_changemergepublication**|**publication_compatibility_level**|Nuovo snapshot.|  
   
