@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 530cca00459ed1ae170272dfd20a54928f039b38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ddd2342f766edd30af99f6e01d47c4086360ff61
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900333"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939316"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Ordinamento dei dati per le trasformazioni Unione e Merge Join
   In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]le trasformazioni Unione e Merge Join richiedono dati di input ordinati. I dati di input devono essere ordinati fisicamente ed è necessario impostare le opzioni di ordinamento sugli output e sulle colonne di output nell'origine o nella trasformazione a monte. Se le opzioni di ordinamento indicano che i dati sono ordinati, mentre in realtà non lo sono, l'operazione di Unione o Merge join restituisce risultati imprevisti.  
@@ -71,7 +70,7 @@ ms.locfileid: "62900333"
   
 5.  Fare clic sulla scheda **Proprietà input e output** .  
   
-6.  Fare clic su ** \<nome componente> output**e impostare `IsSorted` la proprietà `True`su.  
+6.  Fare clic su ** \<component name> output**e impostare la `IsSorted` proprietà su `True` .  
   
     > [!NOTE]  
     >  Se si imposta manualmente la proprietà `IsSorted` dell'output su `True` e se i dati non sono ordinati, alcuni dati potrebbero essere mancanti o danneggiati nella trasformazione Unione o Merge Join quando si esegue il pacchetto.  

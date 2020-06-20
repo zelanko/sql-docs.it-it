@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 35d8f9cdda7c3b85c77d290f9c793640705438e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b4946ebec1b9f66ba0a680e97b00cb185bc7e65
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815424"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937122"
 ---
 # <a name="availability-group-is-offline"></a>Il gruppo di disponibilità è offline
     
@@ -32,7 +31,7 @@ ms.locfileid: "62815424"
 |**Categoria**|**Critico**|  
 |**Facet**|gruppo di disponibilità|  
   
-## <a name="description"></a>Descrizione  
+## <a name="description"></a>Description  
  Questi criteri consentono di controllare lo stato online o offline del gruppo di disponibilità. I criteri si trovano in uno stato non integro e viene generato un avviso quando la risorsa cluster del gruppo di disponibilità è offline o nel gruppo di disponibilità non è disponibile una replica primaria.  
   
  I criteri si trovano in uno stato integro quando la risorsa cluster del gruppo di disponibilità è online e nel gruppo di disponibilità è disponibile una replica primaria.  
@@ -72,7 +71,7 @@ ms.locfileid: "62815424"
   
 -   Se è in corso un failover, attenderne il completamento.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Usare il Dashboard Always On &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   

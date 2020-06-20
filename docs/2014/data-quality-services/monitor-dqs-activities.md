@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: eceb0d8df8b929a22393c1471e7833954b787a02
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e4fe8f68c87c1d1ce83ccc1dc8b12f0cc80956e3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175480"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937492"
 ---
 # <a name="monitor-dqs-activities"></a>Monitorare le attività DQS
   In questo argomento viene descritto come monitorare a livello centrale le attività seguenti in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS): individuazione delle informazioni, gestione del dominio, criteri di corrispondenza, pulizia dei dati, corrispondenza dei dati e pulizia SSIS.
@@ -53,7 +52,7 @@ ms.locfileid: "78175480"
     |**ID**|Valore intero. Numero univoco dell'attività generato dal sistema per il monitoraggio delle attività.|
     |**Nome**|Nome della Knowledge Base o del progetto Data Quality utilizzato per l'attività.|
     |**Attivo**|Indica se l'attività è attualmente attiva o meno. I valori possibili sono i seguenti:<br /><br /> **Attivo**: l'attività è attualmente in esecuzione.<br /><br /> **Completato**: l'attività è finita.<br /><br /> **Terminato**: l'attività è stata terminata utilizzando la schermata Monitoraggio attività dall'amministratore DQS o l'attività è stata annullata dall'utente durante l'esecuzione nell'area funzionale corrispondente nel [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].|
-    |**Type**|Indica il tipo di attività. Vengono monitorati i tipi di attività seguenti: **Gestione informazioni**, **Progetto DQ**e **Pulizia SSIS**.|
+    |**Tipo**|Indica il tipo di attività. Vengono monitorati i tipi di attività seguenti: **Gestione informazioni**, **Progetto DQ**e **Pulizia SSIS**.|
     |**Sottotipo**|Indica il flusso di lavoro specifico eseguito per un tipo di attività.<br /><br /> Un tipo di attività **Gestione informazioni** può disporre dei flussi di lavoro o sottotipi seguenti: **Individuazione informazioni**, **Gestione dominio**e **Criteri di corrispondenza**.<br /><br /> Un tipo di attività **Progetto DQ** può disporre dei flussi di lavoro o sottotipi seguenti: **Pulizia** e **Corrispondenza**.<br /><br /> Un tipo di attività **Pulizia SSIS** può disporre solo di un flusso di lavoro o di un sottotipo: **Pulizia** .|
     |**Stato corrente**|Indica lo stato corrente di un'attività. Lo stato dell'attività è determinato dall'ultimo processo di calcolo. I valori possibili sono i seguenti:<br /><br /> **In esecuzione**: il processo di calcolo è in esecuzione.<br /><br /> **Riuscito**: prima dell'esecuzione di qualsiasi processo di calcolo, lo stato viene impostato su **Riuscito**. Lo stato viene di nuovo impostato su **Riuscito**dopo la riuscita del processo di calcolo.<br /><br /> **Non riuscito**: il processo di calcolo non è riuscito.<br /><br /> **Arrestato**: il processo di calcolo è stato arrestato.<br /><br /> <br /><br /> Nota: possono essere presenti diversi processi di calcolo in un'attività, ad esempio l'esecuzione più volte del processo di individuazione, all'interno dell'attività di individuazione delle informazioni. Lo stato può pertanto cambiare diverse volte nel corso dell'attività.|
     |**DQKB**|Nome della Knowledge Base utilizzata per l'attività.|
@@ -74,7 +73,7 @@ ms.locfileid: "78175480"
 2.  Fare clic sull'icona **Aggiorna l'elenco di attività** per applicare il filtro e visualizzare solo le attività DQS filtrate.
 
 ##  <a name="view-dqs-activity-details"></a><a name="ActivityDetails"></a> Visualizzare i dettagli delle attività DQS
- È possibile visualizzare le informazioni dettagliate di un'attività DQS, ad esempio le fasi dell'attività e le informazioni sul profiler, nella schermata Monitoraggio attività. A tale scopo:
+ È possibile visualizzare le informazioni dettagliate di un'attività DQS, ad esempio le fasi dell'attività e le informazioni sul profiler, nella schermata Monitoraggio attività. A tale scopo, procedere nel seguente modo:
 
 1.  Selezionare un'attività DQS nella griglia di attività (nel riquadro superiore).
 
@@ -85,7 +84,7 @@ ms.locfileid: "78175480"
     -   **Profiler**: vengono visualizzate le informazioni di profiling per le attività correnti e passate. Per le attività correnti, contiene informazioni parziali ma coerenti. Le informazioni di profiling di un'attività vengono esportate in un file di Excel quando si esportano i dettagli dell'attività corrispondenti in un file di Excel. Le informazioni sono disponibili nei fogli **Profiler-origine** e **Profiler-campi** del file di Excel esportato.
 
 ##  <a name="export-dqs-activity-details"></a><a name="Export"></a> Esportare i dettagli delle attività DQS
- È possibile esportare in un file di Excel le proprietà, i processi e le informazioni di profiling di un'attività presenti nella schermata Monitoraggio attività. A tale scopo:
+ È possibile esportare in un file di Excel le proprietà, i processi e le informazioni di profiling di un'attività presenti nella schermata Monitoraggio attività. A tale scopo, procedere nel seguente modo:
 
 1.  Selezionare un'attività nella griglia di attività (nel riquadro superiore).
 
@@ -93,7 +92,7 @@ ms.locfileid: "78175480"
 
 3.  Viene richiesto di specificare un nome e un percorso per il file di Excel da salvare. Il file di Excel esportato contiene i fogli seguenti:
 
-    |Nome foglio|Descrizione|
+    |Nome foglio|Description|
     |----------------|-----------------|
     |Attività|Contiene le informazioni (colonne) sull'attività come riportato nella griglia di attività.|
     |Processi|Contiene le informazioni (colonne) sui processi nell'attività come riportato nella scheda **Fasi attività** .|

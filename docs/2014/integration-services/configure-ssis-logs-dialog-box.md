@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4b980275-cd9a-4943-8c36-727d51f9a484
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1f881435de01c7c21b80bff00b43c2399d0f7d75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fab2f2e8fad2cd77e5bc27a78e66940fc40544b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060586"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921652"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>Configura log SSIS - finestra di dialogo
   Utilizzare la finestra di dialogo **Configura log SSIS** per definire le opzioni di registrazione per un pacchetto.  
@@ -72,8 +71,8 @@ ms.locfileid: "66060586"
  **Descrizione**  
  Il campo della descrizione è modificabile. Fare clic nel campo e quindi modificare la descrizione predefinita del log.  
   
- **Configurazione**  
- Selezionare una gestione connessione esistente nell'elenco oppure fare clic su \< **nuova connessione...**> per creare una nuova gestione connessione. A seconda del tipo di logger, è possibile configurare una gestione connessione OLE DB o una gestione connessione file. Il logger per il registro eventi di [!INCLUDE[msCoName](../includes/msconame-md.md)] non necessita di connessioni.  
+ **Configuration**  
+ Selezionare una gestione connessione esistente nell'elenco oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione. A seconda del tipo di logger, è possibile configurare una gestione connessione OLE DB o una gestione connessione file. Il logger per il registro eventi di [!INCLUDE[msCoName](../includes/msconame-md.md)] non necessita di connessioni.  
   
  Argomenti correlati: [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md) e [File Connection Manager](connection-manager/file-connection-manager.md)  
   
@@ -103,7 +102,7 @@ ms.locfileid: "66060586"
 |**MessageText**|Messaggio associato alla voce di log.|  
 |**DataBytes**|Riservato per utilizzi futuri.|  
   
- **Basic**  
+ **Base**  
  Consente di selezionare o deselezionare gli eventi da registrare. Questa opzione può essere utilizzata per nascondere i dettagli di registrazione, ad eccezione dell'elenco di eventi. Se si seleziona un evento, per impostazione predefinita verranno selezionati anche tutti i relativi dettagli di registrazione. Fare clic su **Avanzate** per visualizzarli.  
   
  **Carica**  

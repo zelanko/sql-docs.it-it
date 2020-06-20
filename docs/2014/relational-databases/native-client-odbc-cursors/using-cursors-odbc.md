@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 51322f92-0d76-44c9-9c33-9223676cf1d3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 190efb4a3c5343eab9f8654009a4a7b3c6d2a6f2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 61afedab4f4a1e309a08d9c2421ca7889811da8a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705546"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020461"
 ---
 # <a name="using-cursors-odbc"></a>Uso dei cursori (ODBC)
   ODBC supporta un modello di cursore che consente:  

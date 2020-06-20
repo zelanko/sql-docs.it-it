@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2b70684a74677437d0491e1fc724c832bb7e0a67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 916458d2d6b8fbba81940257ee85ffe014d1f12e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797696"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936942"
 ---
 # <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>Configurare la replica per i gruppi di disponibilità AlwaysOn (SQL Server)
   La configurazione della replica in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e dei gruppi di disponibilità AlwaysOn richiede sette passaggi. Ogni passaggio è descritto in dettaglio nelle sezioni seguenti.  
@@ -49,7 +48,7 @@ ms.locfileid: "72797696"
         @security_mode = 1;  
     ```  
   
-3.  Configurare il server di pubblicazione remoto. Se per la configurazione del server di distribuzione vengono utilizzate stored procedure, eseguire `sp_adddistpublisher`. Il *@security_mode* parametro viene utilizzato per determinare il modo in cui la convalida del server di pubblicazione stored procedure eseguita dagli agenti di replica, si connette al database primario corrente. Se impostato su 1, per connettersi alla replica primaria corrente viene utilizzata l'Autenticazione di Windows. Se impostato su 0, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene utilizzata l'autenticazione con i *@login* valori *@password* e specificati. L'account di accesso e la password specificati devono essere validi per ogni replica secondaria per consentire alla stored procedure di convalida di connettersi a tale replica.  
+3.  Configurare il server di pubblicazione remoto. Se per la configurazione del server di distribuzione vengono utilizzate stored procedure, eseguire `sp_adddistpublisher`. Il *@security_mode* parametro viene utilizzato per determinare il modo in cui la convalida del server di pubblicazione stored procedure eseguita dagli agenti di replica, si connette al database primario corrente. Se impostato su 1, per connettersi alla replica primaria corrente viene utilizzata l'Autenticazione di Windows. Se impostato su 0, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene utilizzata l'autenticazione con i *@login* valori e specificati *@password* . L'account di accesso e la password specificati devono essere validi per ogni replica secondaria per consentire alla stored procedure di convalida di connettersi a tale replica.  
   
     > [!NOTE]  
     >  Se gli eventuali agenti di replica modificati vengono eseguiti in un computer diverso dal server di distribuzione, l'utilizzo dell'Autenticazione di Windows per la connessione alla replica primaria richiederà l'autenticazione Kerberos per consentire la configurazione per la comunicazione tra i computer host della replica. L'utilizzo di un account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per la connessione alla replica primaria corrente non richiede l'autenticazione Kerberos.  
@@ -118,7 +117,7 @@ EXEC @installed = sys.sp_MS_replication_installed;
 SELECT @installed;  
 ```  
   
- Se *@installed* è 0, è necessario aggiungere la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replica all'installazione.  
+ Se *@installed* è 0, è necessario aggiungere la replica all' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installazione.  
   
 ##  <a name="4-configure-the-secondary-replica-hosts-as-replication-publishers"></a><a name="step4"></a>4. configurare gli host della replica secondaria come autori della replica  
  Una replica secondaria non può essere utilizzata come server di pubblicazione o di ripubblicazione della replica, ma è necessario configurare la replica in modo che dopo un failover possa essere utilizzata la replica secondaria. Nel server di distribuzione configurare la distribuzione per ogni host della replica secondaria. Specificare lo stesso database di distribuzione e la stessa directory di lavoro specificati quando il server di pubblicazione originale è aggiunto al server di distribuzione. Se si utilizzano stored procedure per configurare la distribuzione, utilizzare `sp_adddistpublisher` per associare i server di pubblicazione remoti al server di distribuzione. Se *@login* e *@password* sono stati utilizzati per il server di pubblicazione originale, specificare gli stessi valori per ognuno quando si aggiungono gli host della replica secondaria come server di pubblicazione.  
@@ -132,7 +131,7 @@ EXEC sys.sp_adddistpublisher
     @password = '**Strong password for publisher**';  
 ```  
   
- Configurare la distribuzione per ogni host della replica secondaria. Identificare il server di distribuzione del server di pubblicazione originale come server di distribuzione remoto. Utilizzare la password specificata quando `sp_adddistributor` è stato eseguito inizialmente nel server di distribuzione. Se per la configurazione della distribuzione vengono usate stored procedure, *@password* il parametro `sp_adddistributor` di viene usato per specificare la password.  
+ Configurare la distribuzione per ogni host della replica secondaria. Identificare il server di distribuzione del server di pubblicazione originale come server di distribuzione remoto. Utilizzare la password specificata quando `sp_adddistributor` è stato eseguito inizialmente nel server di distribuzione. Se per la configurazione della distribuzione vengono usate stored procedure, il *@password* parametro di `sp_adddistributor` viene usato per specificare la password.  
   
 ```sql
 EXEC sp_adddistributor   
@@ -172,7 +171,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
     @redirected_publisher = @redirected_publisher output;  
 ```  
   
- La stored procedure `sp_validate_replica_hosts_as_publishers` deve essere eseguita da un account di accesso con autorizzazione sufficiente in ogni host di replica del gruppo di disponibilità per richiedere informazioni sul gruppo di disponibilità. A differenza `sp_validate_redirected_publisher`di, USA le credenziali del chiamante e non usa l'account di accesso mantenuto in msdb. dbo. MSdistpublishers per connettersi alle repliche del gruppo di disponibilità.  
+ La stored procedure `sp_validate_replica_hosts_as_publishers` deve essere eseguita da un account di accesso con autorizzazione sufficiente in ogni host di replica del gruppo di disponibilità per richiedere informazioni sul gruppo di disponibilità. A differenza di `sp_validate_redirected_publisher` , USA le credenziali del chiamante e non usa l'account di accesso mantenuto in msdb. dbo. MSdistpublishers per connettersi alle repliche del gruppo di disponibilità.  
   
 > [!NOTE]  
 >  `sp_validate_replica_hosts_as_publishers` non riuscirà e verrà visualizzato il seguente errore durante la convalida degli host della replica secondaria che non consentono l'accesso in lettura o richiedono che venga specificata la finalità di lettura.  

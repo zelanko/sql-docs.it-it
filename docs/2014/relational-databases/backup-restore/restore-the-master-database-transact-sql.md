@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 823a6455616b412a41179d831b565e10b3286fb7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7c9cb078b7af60fc5e060bcb144fc9cbaee8ecf7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875146"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956727"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>Ripristinare il database master (Transact-SQL)
   Questo argomento spiega come ripristinare il database **master** da un backup completo del database.  
@@ -43,7 +42,7 @@ ms.locfileid: "62875146"
  Nell'esempio seguente viene ripristinato il database `master` nell'istanza predefinita del server. In questo esempio si presuppone che l'istanza del server sia già in esecuzione in modalità utente singolo. Viene avviata l'utilità `sqlcmd` ed eseguita un'istruzione `RESTORE DATABASE` che ripristina un backup completo del database `master` da un dispositivo disco: `Z:\SQLServerBackups\master.bak`.  
   
 > [!NOTE]
->  Per un'istanza denominata, il comando **sqlcmd** deve specificare l'opzione **-S** _\<NomeComputer>_ \\ *\<NomeIstanza>* .  
+>  Per un'istanza denominata, il comando **SQLCMD** deve specificare l'opzione **-S** _\<ComputerName>_ \\ *\<InstanceName>* .  
   
 ```  
   

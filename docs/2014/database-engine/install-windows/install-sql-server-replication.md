@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c50ad078-060b-4a8d-ad45-9e31a8d85729
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3fd70d208960af1f121795bfdf8a657ceaf59f21
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ba941fda1d463e7bb4a26bd2fbb45d2a82ca27b3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775294"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932472"
 ---
 # <a name="install-sql-server-replication"></a>Installare la replica di SQL Server
   I componenti della replica possono essere installati mediante l'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o dal prompt dei comandi. L'installazione della replica può essere eseguita durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]oppure durante la modifica di un'istanza esistente.  
@@ -41,7 +40,7 @@ ms.locfileid: "62775294"
   
 -   Vedere [Install SQL Server 2014 dal prompt dei comandi](install-sql-server-from-the-command-prompt.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Installare SQL Server 2014](install-sql-server.md)   
  [Installare SQL Server 2014 dal prompt dei comandi](install-sql-server-from-the-command-prompt.md)   
  [Funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  

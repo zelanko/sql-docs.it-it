@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 88061a39-c5aa-403d-a52b-7fdb365fc235
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d9d9f11b8713ea26cd79e95b9edc3f36c0bf3564
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d7d0fa1fde56ab4293e7733a974ec57d77c55151
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066692"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938682"
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>Rinominare una tabella o una colonna (SSAS tabulare)
   È possibile modificare il nome di una tabella durante il processo di importazione digitando un **Nome descrittivo** nella pagina **Selezione tabelle e viste** dell' **Importazione guidata tabella**. È possibile modificare anche i nomi di tabelle e colonne se si importano dati specificando una query nella pagina **Specifica di una query SQL** dell' **Importazione guidata tabella**.  
@@ -46,7 +45,7 @@ ms.locfileid: "66066692"
   
 -   Caratteri di controllo  
   
--   I caratteri seguenti (che non sono validi nei nomi degli oggetti Analysis Services):.,;':/ \\*|? &% $! + = () []{}<>  
+-   I caratteri seguenti (che non sono validi nei nomi degli oggetti Analysis Services):.,;':/ \\ *|? &% $! + = () [] {}<>  
   
 -   Le parole chiave riservate di Analysis Services, inclusi i nomi delle funzioni e gli operatori MDX (Multidimensional Expressions) e DMX (Data Mining Extensions).  
   
@@ -55,7 +54,7 @@ ms.locfileid: "66066692"
   
  È necessario aggiornare inoltre tutti i calcoli che utilizzano la tabella rinominata o le relative colonne, nonché i dati da essi derivati, che devono essere ricalcolati. A seconda del numero di tabelle e di calcoli interessati, l'operazione può richiedere del tempo prima di essere completata. Il momento migliore per rinominare le tabelle ricade pertanto nell'arco del processo di importazione o prima dell'inizio della compilazione di relazioni e calcoli complessi.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Tabelle e colonne &#40;SSAS tabulare&#41;](tables-and-columns-ssas-tabular.md)   
  [Importazione da PowerPivot &#40;SSAS tabulare&#41;](import-from-power-pivot-ssas-tabular.md)   
  [Importare da Analysis Services &#40;SSAS tabulare&#41;](import-from-analysis-services-ssas-tabular.md)  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 34d97e58469469b929e0b7a2e25d52a9c7c3e3fe
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7a63035355cafdbb08c469a093407b7ce2c12e6c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718674"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060314"
 ---
 # <a name="search-text-with-regular-expressions"></a>Testo di ricerca con espressioni regolari
   Le espressioni regolari costituiscono un metodo di notazione conciso e flessibile per la ricerca e la sostituzione di testo che soddisfa determinati criteri. È possibile usare un set specifico di espressioni regolari nel campo **Trova** della finestra di dialogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Trova e sostituisci**di**.  
@@ -106,7 +105,7 @@ ms.locfileid: "82718674"
 |Accenti e segni diacritici|:Mn|Consente di ricercare accenti e segni diacritici.|  
 |Segno di combinazione|:Mc|Consente di ricercare segni di combinazione.|  
 |Segno di inclusione|:Me|Consente di ricercare segni di inclusione.|  
-|Simbolo matematico|:Sm|Consente di ricercare +, =, ~, &#124;, \< e >.|  
+|Simbolo matematico|:Sm|Corrisponde a +, =, ~, &#124;, \<, and > .|  
 |Simbolo di valuta|:Sc|Consente di ricercare il simbolo $ e altri simboli di valuta.|  
 |Simbolo modificatore|:Sk|Consente di ricercare simboli modificatori, ad esempio accenti circonflessi, accenti gravi e macron.|  
 |Altro simbolo|:So|Consente di ricercare altri simboli, ad esempio il simbolo di copyright, il simbolo di paragrafo e quello di grado.|  

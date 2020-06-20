@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2402a69f428fe0c9ba2359f100e2baf16e1a1d04
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 12da6306d7d67cee75fd8aec2397bc6b568ef3a5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481001"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937902"
 ---
 # <a name="create-a-knowledge-base"></a>Creare una Knowledge Base
   In questo argomento viene descritto come creare una Knowledge Base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) e prepararla per le attività di gestione del dominio, individuazione delle informazioni o aggiunta di criteri di corrispondenza.  
@@ -57,7 +56,7 @@ ms.locfileid: "65481001"
   
     -   Selezionare **Criteri di corrispondenza** per creare criteri di corrispondenza e aggiungerli alla Knowledge Base.  
   
-6.  Scegliere **Crea**.  
+6.  Fare clic su **Crea**.  
   
 ##  <a name="follow-up-after-creating-a-knowledge-base"></a><a name="FollowUp"></a> Completamento: fasi successive alla creazione di una Knowledge Base  
  Dopo avere creato una Knowledge Base, vengono visualizzate una procedura guidata che consente di eseguire l'individuazione delle informazioni, una procedura guidata per creare i criteri di corrispondenza o le pagine per eseguire la gestione del dominio. Per altre informazioni sull'individuazione delle informazioni, sulla gestione del dominio o sui criteri di corrispondenza, vedere [Eseguire l'individuazione di informazioni](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../../2014/data-quality-services/managing-a-domain.md), o [Creare criteri di corrispondenza](../../2014/data-quality-services/create-a-matching-policy.md).  

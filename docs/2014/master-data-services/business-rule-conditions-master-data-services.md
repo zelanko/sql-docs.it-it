@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7c824c1298a9bd5c0fd0564688ea76c48e8975c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 12ba98331d2002dab10d462398f7e77389888e32
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480085"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972131"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>Condizioni della regola business (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], le condizioni della regola business determinano le condizioni che devono essere true per una o più azioni da eseguire.  
@@ -25,7 +24,7 @@ ms.locfileid: "65480085"
   
 ## <a name="business-rule-conditions"></a>Condizioni della regola business  
   
-|Nome condizione|Descrizione|  
+|Nome condizione|Description|  
 |--------------------|-----------------|  
 |**è uguale a**|L'attributo selezionato **è uguale a** un attributo specifico o a un valore di attributo specifico oppure è vuoto.<br /><br /> Questa condizione è valida per valori di testo, numerici, di data e di collegamento.|  
 |**è diverso da**|L'attributo selezionato **è diverso da** un attributo specifico o da un valore di attributo specifico oppure è vuoto.<br /><br /> Questa condizione è valida per valori di testo, numerici, di data e di collegamento.|  
@@ -35,7 +34,7 @@ ms.locfileid: "65480085"
 |**è minore o uguale a**|L'attributo selezionato **è minore o uguale a** un attributo specifico o a un valore di attributo specifico oppure è vuoto.<br /><br /> Questa condizione è valida per valori di testo, numerici e di data.|  
 |**inizia con**|L'attributo selezionato **inizia con** un attributo specifico o un valore di attributo specifico oppure è vuoto.<br /><br /> Questa condizione è valida per valori di testo e di collegamento.|  
 |**termina con**|L'attributo selezionato **termina con** un attributo specifico o un valore di attributo specifico oppure è vuoto.<br /><br /> Questa condizione è valida per valori di testo e di collegamento.|  
-|**contiene**|L'attributo selezionato **contiene** un attributo specifico o un valore di attributo specifico oppure è vuoto.<br /><br /> Questa condizione è valida per valori di testo e di collegamento.|  
+|**contains**|L'attributo selezionato **contiene** un attributo specifico o un valore di attributo specifico oppure è vuoto.<br /><br /> Questa condizione è valida per valori di testo e di collegamento.|  
 |**contiene il modello**|L'attributo selezionato **contiene il modello** di un attributo specifico o di un valore di attributo specifico oppure è vuoto. Utilizzare le espressioni regolari di .NET Framework per specificare il modello.<br /><br /> Per ulteriori informazioni su espressioni regolari, vedere [Elementi del linguaggio di espressioni regolari](https://go.microsoft.com/fwlink/?LinkId=164401) in MSDN Library.<br /><br /> Questa condizione è valida per valori di testo e di collegamento.|  
 |**contiene il subset**|L'attributo selezionato **contiene il subset** di un attributo specifico o di un valore di attributo specifico. È necessario specificare la posizione iniziale per la ricerca (ad esempio 1 indica l'inizio della ricerca in corrispondenza del primo carattere).<br /><br /> Questa condizione è valida per valori di testo e di collegamento.|  
 |**è stato modificato**|L'attributo selezionato è stato **modificato** dall'ultima applicazione delle regole business al membro. È necessario specificare il gruppo di modifica di cui l'attributo è un membro.<br /><br /> Per altre informazioni sui gruppi di rilevamento modifiche, vedere [Aggiungere attributi a un gruppo rilevamento modifiche &#40;Master Data Services&#41;](add-attributes-to-a-change-tracking-group-master-data-services.md).<br /><br /> Questa condizione è valida per valori di testo, numerici, di data e di collegamento.|  
@@ -44,7 +43,7 @@ ms.locfileid: "65480085"
 > [!NOTE]  
 >  Quando in una regola business è inclusa una condizione che consente di confrontare due valori e la regola viene applicata a un membro per il quale entrambi i valori sono NULL, la convalida eseguita dal membro in questione non verrà completata.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Azioni regola business &#40;Master Data Services&#41;](../../2014/master-data-services/business-rule-actions-master-data-services.md)   
  [Regole business &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
  [Creare e pubblicare una regola business &#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)  

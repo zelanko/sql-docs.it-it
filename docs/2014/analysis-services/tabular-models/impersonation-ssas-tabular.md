@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81e8f9ae90db3c7613ccb99039d70d9a28c5a113
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e04c7af85592d71d70abf8ea5f61518690599342
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067056"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938882"
 ---
 # <a name="impersonation-ssas-tabular"></a>Rappresentazione (SSAS tabulare)
   In questo argomento vengono fornite agli autori di modelli tabulari informazioni sulla modalità di utilizzo delle credenziali di accesso da parte di Analysis Services in caso di connessione a un'origine dati per importare ed elaborare (aggiornare) i dati.  
@@ -32,7 +31,7 @@ ms.locfileid: "66067056"
   
 -   [Configurazione della rappresentazione](#bkmk_conf_imp_info)  
   
-##  <a name="benefits"></a><a name="bkmk_how_imper"></a>Vantaggi  
+##  <a name="benefits"></a><a name="bkmk_how_imper"></a> Vantaggi  
  La*rappresentazione* è la capacità di un'applicazione server, ad esempio Analysis Services, di assumere l'identità di un'applicazione client. Analysis Services viene eseguito utilizzando un account del servizio, tuttavia, quando tramite il server viene stabilita una connessione a un'origine dati, viene utilizzata la rappresentazione in modo che sia possibile eseguire controlli di accesso per l'importazione e l'elaborazione dei dati.  
   
  Le credenziali utilizzate per la rappresentazione sono diverse da quelle dell'utente attualmente connesso. Le credenziali dell'utente che ha effettuato l'accesso vengono utilizzate per particolari operazioni lato client in caso di creazione di un modello.  
@@ -65,9 +64,9 @@ ms.locfileid: "66067056"
 ##  <a name="options"></a><a name="bkmk_imp_info_options"></a>Opzioni  
  Quando si configura la rappresentazione o si modificano proprietà per una connessione all'origine dati esistente in Analysis Services, è possibile specificare una delle opzioni seguenti:  
   
-|Opzione|ImpersonationMode<sup>1</sup>|Descrizione|  
+|Opzione|ImpersonationMode<sup>1</sup>|Description|  
 |------------|-----------------------------------|-----------------|  
-|**Nome utente e password specifici di Windows** <sup>2</sup>|ImpersonateWindowsUserAccount|Questa opzione consente di specificare che nel modello viene utilizzato un account utente di Windows per importare o elaborare dati dall'origine dati. Il dominio e il nome dell'account utente usano il formato seguente:**\<nome di dominio \\><\>nome dell'account utente**. Si tratta dell'opzione predefinita per la creazione di un nuovo modello tramite l'Importazione guidata tabella.|  
+|**Nome utente e password specifici di Windows** <sup>2</sup>|ImpersonateWindowsUserAccount|Questa opzione consente di specificare che nel modello viene utilizzato un account utente di Windows per importare o elaborare dati dall'origine dati. Il dominio e il nome dell'account utente usano il formato seguente:** \<Domain name> \\<nome \> dell'account utente**. Si tratta dell'opzione predefinita per la creazione di un nuovo modello tramite l'Importazione guidata tabella.|  
 |**Account del servizio**|ImpersonateServiceAccount|Questa opzione consente di specificare che nel modello vengono utilizzate le credenziali di sicurezza associate all'istanza del servizio Analysis Services tramite cui viene gestito il modello.|  
   
  <sup>1</sup> ImpersonationMode specifica il valore per l' [elemento DataSourceImpersonationInfo &#40;proprietà ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl) sull'origine dati.  
@@ -90,9 +89,9 @@ ms.locfileid: "66067056"
 ##  <a name="configuring-impersonation"></a><a name="bkmk_conf_imp_info"></a>Configurazione della rappresentazione  
  La posizione e il contesto di un modello esistente consentiranno di determinare la modalità di configurazione delle informazioni sulla rappresentazione. Per la creazione di modelli in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], è possibile configurare le informazioni sulla rappresentazione nella pagina **Impostazioni di rappresentazione** dell'Importazione guidata tabella o modificando una connessione all'origine dati nella finestra di dialogo **Connessioni esistenti** . Per visualizzare le connessioni esistenti, nel menu [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]Modello **di** fare clic su **Connessioni esistenti**.  
   
- Per i modelli distribuiti in un server di Analysis Services, è possibile configurare le informazioni sulla rappresentazione facendo clic sui puntini di sospensione (...) della proprietà impostazioni di **rappresentazione origine dati** nella finestra di dialogo **Proprietà database** di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ Per i modelli distribuiti in un server di Analysis Services, è possibile configurare le informazioni sulla rappresentazione facendo clic sui puntini di sospensione (...) della proprietà impostazioni di **rappresentazione origine dati** nella finestra di dialogo **Proprietà database** di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Modalità DirectQuery &#40;SSAS tabulare&#41;](directquery-mode-ssas-tabular.md)   
  [Origini dati &#40;SSAS tabulare&#41;](../data-sources-ssas-tabular.md)   
  [Distribuzione di una soluzione del modello tabulare &#40;SSAS tabulare&#41;](tabular-model-solution-deployment-ssas-tabular.md)  

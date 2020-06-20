@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e8e2d7ca2f6ad28e7e1bd072bdeb238199471ad9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cf1a52f1a5b71c33e2df5221fc61d279d014c6a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480117"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972111"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>Modificare il nome di una regola business (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]modificare il nome di una regola di business quando il nome assegnato non soddisfa le esigenze aziendali.  
@@ -55,7 +54,7 @@ ms.locfileid: "65480117"
   
 11. Nella finestra di dialogo di conferma fare clic su **OK**. Lo stato della regola viene modificato in **Attiva**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Regole di business &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

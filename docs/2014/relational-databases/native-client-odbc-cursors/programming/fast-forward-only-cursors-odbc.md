@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0707d07e-fc95-42ed-9280-b7e508ac8c62
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 812419f7ebf9501ab2409876c4cc5c0a775492b9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9d3e94cf4983fb6ee05beff3a495ef6ccbd5c54b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705618"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020791"
 ---
 # <a name="fast-forward-only-cursors-odbc"></a>Cursori fast forward only (ODBC)
   Quando si è connessi a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC di Native Client supporta le ottimizzazioni delle prestazioni per i cursori di sola lettura e di sola lettura. I cursori fast forward only vengono implementati internamente dal driver e dal server in modo molto simile ai set di risultati predefiniti. Oltre a offrire prestazioni elevate, i cursori fast forward only possono presentare anche le caratteristiche seguenti:  

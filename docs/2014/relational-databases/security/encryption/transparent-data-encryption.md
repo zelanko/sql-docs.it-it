@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: 018cc6fa8b85c4a1b09ab53a6a1a94d8a7670bae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a8118f0781d7c9e3d839c029c6bdaf8b01e074b0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176761"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060245"
 ---
 # <a name="transparent-data-encryption-tde"></a>Transparent Data Encryption (TDE)
   *Transparent Data Encryption* (TDE) consente di crittografare i file di dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] mediante un'operazione nota come crittografia dei dati "non operativi". È possibile adottare diverse precauzioni per proteggere il database, ad esempio la progettazione di un sistema sicuro, la crittografia di asset riservati e la creazione di un firewall che protegga i server di database. Tuttavia, nell'ipotesi del furto dei supporti fisici, come unità o nastri di backup, un malintenzionato potrebbe semplicemente ripristinare o collegare il database e accedere ai dati in esso contenuti. Una soluzione per ovviare al problema consiste nel crittografare i dati sensibili nel database e proteggere con un certificato le chiavi usate per la crittografia. In questo modo si impedisce a chi è sprovvisto delle chiavi di usare i dati; tuttavia, questo tipo di protezione deve essere pianificato in anticipo.
@@ -36,19 +35,19 @@ ms.locfileid: "78176761"
 >  **Argomenti correlati:**
 > 
 >  -   [Transparent Data Encryption con il database SQL di Azure](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)
-> -   [Spostare un database protetto con Transparent Data Encryption in un altro SQL Server](move-a-tde-protected-database-to-another-sql-server.md)
+> -   [Spostare un database protetto da TDE in un'altra istanza di SQL Server](move-a-tde-protected-database-to-another-sql-server.md)
 > -   [Abilitare Transparent Data Encryption con EKM](enable-tde-on-sql-server-using-ekm.md)
 
 ## <a name="about-tde"></a>Informazioni su TDE
  La crittografia del file di database viene eseguita a livello di pagina. Le pagine di un database crittografato sono crittografate prima di essere scritte sul disco e decrittografate quando vengono lette in memoria. L'uso di TDE non comporta un aumento delle dimensioni del database crittografato.
 
- **Informazioni applicabili a [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]**
+ **Informazioni applicabili a[!INCLUDE[ssSDS](../../../includes/sssds-md.md)]**
 
  Quando si usa TDE con [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 ([anteprima in alcune aree](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), il certificato a livello di server archiviato nel database master viene creato automaticamente da [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Per spostare un database TDE nel [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] , è necessario decrittografare il database, spostarlo e quindi abilitare nuovamente TDE nel [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]di destinazione. Per istruzioni dettagliate su TDE nel [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], vedere [Transparent Data Encryption with Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md).
 
  L'anteprima dello stato di TDE si applica anche nel subset di aree geografiche in cui la famiglia di versioni V12 di [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] è stata annunciata in stato di disponibilità generale. TDE per [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] non potrà essere usato nei database di produzione finché [!INCLUDE[msCoName](../../../includes/msconame-md.md)] non ne annuncia il passaggio dalla versione di anteprima a quella di disponibilità generale. Per altre informazioni sul [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] V12, vedere l'articolo relativo alle [novità del database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/).
 
- **Informazioni applicabili a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**
+ **Informazioni applicabili a[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**
 
  Una volta protetto, il database può essere ripristinato usando il certificato corretto. Per altre informazioni sui certificati, vedere [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md).
 

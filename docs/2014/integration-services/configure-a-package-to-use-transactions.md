@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8bf14957-27b4-456b-81d9-e1a0e0ca94b7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 16d1f0f4c24f18327ee31da1fb85a74d19588384
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9d16473832d321e252753fa79e8b3178f2c2dcf6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060856"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921940"
 ---
 # <a name="configure-a-package-to-use-transactions"></a>Configurazione di un pacchetto per l'utilizzo di transazioni
   Quando si configura un pacchetto per l'utilizzo di transazioni, sono disponibili due opzioni:  
@@ -29,9 +28,9 @@ ms.locfileid: "66060856"
  Nelle procedure seguenti viene descritto come configurare entrambe le opzioni.  
   
 ## <a name="configuring-a-single-transaction"></a>Configurazione di una transazione singola  
- In questo caso, il pacchetto stesso inizializza un'unica transazione. Il pacchetto viene configurato per avviare la transazione impostando la proprietà TransactionOption del pacchetto su `Required`.  
+ In questo caso, il pacchetto stesso inizializza un'unica transazione. Il pacchetto viene configurato per avviare la transazione impostando la proprietà TransactionOption del pacchetto su `Required` .  
   
- In questa unica transazione verranno quindi inserite le attività e i contenitori specifici. Per integrare un'attività o un contenitore in una transazione, impostare la proprietà TransactionOption dell'attività o del contenitore su `Supported`.  
+ In questa unica transazione verranno quindi inserite le attività e i contenitori specifici. Per integrare un'attività o un contenitore in una transazione, impostare la proprietà TransactionOption dell'attività o del contenitore su `Supported` .  
   
 #### <a name="to-configure-a-package-to-use-a-single-transaction"></a>Per configurare un pacchetto per l'utilizzo di una transazione singola  
   
@@ -43,11 +42,11 @@ ms.locfileid: "66060856"
   
 4.  Fare clic con il pulsante destro del mouse in un punto qualsiasi dello sfondo dell'area di progettazione del flusso di controllo, quindi scegliere **Proprietà**.  
   
-5.  Nella finestra **Proprietà** impostare la proprietà TransactionOption su `Required`.  
+5.  Nella finestra **Proprietà** impostare la proprietà TransactionOption su `Required` .  
   
 6.  Nell'area di progettazione della scheda **Flusso di controllo** fare clic con il pulsante destro del mouse sull'attività o il contenitore che si vuole integrare nella transazione e quindi scegliere **Proprietà**.  
   
-7.  Nella finestra **Proprietà** impostare la proprietà TransactionOption su `Supported`.  
+7.  Nella finestra **Proprietà** impostare la proprietà TransactionOption su `Supported` .  
   
     > [!NOTE]  
     >  Per integrare una connessione in una transazione, integrare nella transazione le attività che la utilizzano. Per altre informazioni, vedere [Connessioni in Integration Services &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md).  
@@ -55,9 +54,9 @@ ms.locfileid: "66060856"
 8.  Ripetere i passaggi 6 e 7 per ogni attività e ogni contenitore che si desidera registrare nella transazione.  
   
 ## <a name="configuring-multiple-transactions"></a>Configurazione di più transazioni  
- In questo caso, il pacchetto supporta le transazioni ma non ne avvia alcuna. Il pacchetto viene configurato per supportare le transazioni impostando la proprietà TransactionOption del pacchetto su `Supported`.  
+ In questo caso, il pacchetto supporta le transazioni ma non ne avvia alcuna. Il pacchetto viene configurato per supportare le transazioni impostando la proprietà TransactionOption del pacchetto su `Supported` .  
   
- Configurare quindi le attività e i contenitori desiderati all'interno del pacchetto in modo che inizializzino la transazione o vengano eseguiti con essa. Per configurare un'attività o un contenitore per avviare una transazione, impostare la proprietà TransactionOption dell'attività o del contenitore su `Required`.  
+ Configurare quindi le attività e i contenitori desiderati all'interno del pacchetto in modo che inizializzino la transazione o vengano eseguiti con essa. Per configurare un'attività o un contenitore per avviare una transazione, impostare la proprietà TransactionOption dell'attività o del contenitore su `Required` .  
   
 #### <a name="to-configure-a-package-to-use-multiple-transactions"></a>Per configurare un pacchetto per l'utilizzo di più transazioni  
   
@@ -69,25 +68,25 @@ ms.locfileid: "66060856"
   
 4.  Fare clic con il pulsante destro del mouse in un punto qualsiasi dello sfondo dell'area di progettazione del flusso di controllo, quindi scegliere **Proprietà**.  
   
-5.  Nella finestra **Proprietà** impostare la proprietà TransactionOption su `Supported`.  
+5.  Nella finestra **Proprietà** impostare la proprietà TransactionOption su `Supported` .  
   
     > [!NOTE]  
     >  Il pacchetto supporta le transazioni, ma le transazioni vengono avviate da attività o contenitori nel pacchetto.  
   
 6.  Nell'area di progettazione della scheda **Flusso di controllo** fare clic con il pulsante destro del mouse sull'attività o il contenitore del pacchetto per il quale si vuole avviare una transazione e quindi scegliere **Proprietà**.  
   
-7.  Nella finestra **Proprietà** impostare la proprietà TransactionOption su `Required`.  
+7.  Nella finestra **Proprietà** impostare la proprietà TransactionOption su `Required` .  
   
 8.  Se la transazione viene avviata da un contenitore, fare clic con il pulsante destro del mouse sull'attività o il contenitore che si vuole includere nella transazione e quindi scegliere **Proprietà**.  
   
-9. Nella finestra **Proprietà** impostare la proprietà TransactionOption su `Supported`.  
+9. Nella finestra **Proprietà** impostare la proprietà TransactionOption su `Supported` .  
   
     > [!NOTE]  
     >  Per integrare una connessione in una transazione, integrare nella transazione le attività che la utilizzano. Per altre informazioni, vedere [Connessioni in Integration Services &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md).  
   
 10. Ripetere i passaggi da 6 a 9 per ogni attività e ogni contenitore che avvierà una transazione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Transazioni di Integration Services](integration-services-transactions.md)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 74dad8dc9795a30637a9ab08c56ce8d0940b6f0e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a1416c0104e07c7bd228a723192ecb35bbe9216
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010481"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955991"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>Accesso ai dati FILESTREAM con OpenSqlFilestream
   L'API OpenSqlFilestream ottiene un handle di file compatibile con Win32 per un BLOB (Binary Large Object) FILESTREAM archiviato nel file system. L'handle può essere passato a una qualsiasi delle API Win32 seguenti: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)o [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Se si passa questo handle a qualsiasi altra API Win32, viene restituito l'errore ERROR_ACCESS_DENIED. L'handle deve essere chiuso passandolo all'API [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) Win32 prima che venga eseguito il commit o il rollback della transazione. La mancata chiusura dell'handle provoca perdite di risorse sul lato server.  
@@ -48,7 +47,7 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
   
 #### <a name="parameters"></a>Parametri  
  *FilestreamPath*  
- in `nvarchar(max)` Percorso restituito dalla funzione [pathname](/sql/relational-databases/system-functions/pathname-transact-sql) . La funzione PathName deve essere chiamata dal contesto di un account che dispone dell'autorizzazione SELECT o UPDATE di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la tabella e la colonna FILESTREAM.  
+ in `nvarchar(max)`Percorso restituito dalla funzione [pathname](/sql/relational-databases/system-functions/pathname-transact-sql) . La funzione PathName deve essere chiamata dal contesto di un account che dispone dell'autorizzazione SELECT o UPDATE di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la tabella e la colonna FILESTREAM.  
   
  *DesiredAccess*  
  [in] Imposta la modalità utilizzata per accedere ai dati BLOB FILESTREAM. Questo valore viene passato alla [funzione DeviceIoControl](https://go.microsoft.com/fwlink/?LinkId=105527).  

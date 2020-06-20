@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 9831b194-9ad5-47b0-8009-59c7aef4319b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 70da82ab5d9ecb37ca08f3cf79801f209f25d86e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2c48ef876dbe3843715496751205f24fcf26f12
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774744"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929692"
 ---
 # <a name="password-expired"></a>Password scaduta
-  Viene visualizzato quando ci si connette a un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] server [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con l'autenticazione di e la password specificata è corretta ma è scaduta. Viene visualizzata anche quando si esegue la connessione a un server usando un nuovo account creato con l'opzione **Cambiamento obbligatorio password all'accesso successivo** . La finestra di dialogo **Password scaduta** consente di cambiare la password per l'account di accesso con autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+  Viene visualizzato quando ci si connette a un server con l' [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autenticazione di e la password specificata è corretta ma è scaduta. Viene visualizzata anche quando si esegue la connessione a un server usando un nuovo account creato con l'opzione **Cambiamento obbligatorio password all'accesso successivo** . La finestra di dialogo **Password scaduta** consente di cambiare la password per l'account di accesso con autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Opzioni  
  **Accesso**  
@@ -34,7 +33,7 @@ ms.locfileid: "62774744"
  **Confirm Password**  
  Consente di digitare nuovamente la nuova password per confermarla.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Password complesse](../relational-databases/security/strong-passwords.md)   
  [Scegliere una modalità di autenticazione](../relational-databases/security/choose-an-authentication-mode.md)   
  [Modificare la modalità di autenticazione del server](configure-windows/change-server-authentication-mode.md)   

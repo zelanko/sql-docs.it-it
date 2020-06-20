@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4466ebd24647520c7cbba2bf0baa93a0f60a72bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e46c1ea54ba178fba73a1bfb2cc8ee296ca2b0d0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833816"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920892"
 ---
 # <a name="flat-file-connection-manager"></a>Flat File Connection Manager
   Una gestione connessione file flat consente a un pacchetto di accedere ai dati contenuti in un file flat. L'origine e la destinazione del file flat possono ad esempio utilizzare gestioni connessioni file flat per estrarre e caricare dati.  
@@ -35,13 +34,13 @@ ms.locfileid: "62833816"
  Se, dopo avere aggiunto e configurato l'origine file flat che utilizza la gestione connessione, si modifica la lunghezza delle colonne nella gestione connessione file flat, non sarà necessario ridimensionare manualmente le colonne di output nell'origine file flat. Nella finestra di dialogo **Origine file flat** è disponibile un'opzione che consente di sincronizzare i metadati delle colonne per l'origine file flat.  
   
 ## <a name="configuration-of-the-flat-file-connection-manager"></a>Configurazione della gestione connessione file flat  
- Quando si aggiunge una gestione connessione file flat a un pacchetto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una gestione connessione che in fase di esecuzione verrà risolta in una connessione file flat, imposta le proprietà della connessione file flat e aggiunge la gestione connessione file flat `Connections` alla raccolta del pacchetto.  
+ Quando si aggiunge una gestione connessione file flat a un pacchetto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Crea una gestione connessione che in fase di esecuzione verrà risolta in una connessione file flat, imposta le proprietà della connessione file flat e aggiunge la gestione connessione file flat alla `Connections` raccolta del pacchetto.  
   
  La proprietà `ConnectionManagerType` della gestione connessione viene impostata su `FLATFILE`.  
   
  Per impostazione predefinita, tramite la gestione connessione file flat viene sempre verificata la presenza di un delimitatore di riga in dati senza virgolette e viene iniziata una nuova riga quando viene individuato un relativo delimitatore. In questo modo, con la gestione connessione è possibile analizzare correttamente i file con righe prive di campi colonna.  
   
- In alcuni casi, la disabilitazione di questa funzionalità potrebbe migliorare le prestazioni del pacchetto. È possibile disabilitare questa funzionalità impostando la proprietà della gestione connessione file flat, **AlwaysCheckForRowDelimiters**, `False`su.  
+ In alcuni casi, la disabilitazione di questa funzionalità potrebbe migliorare le prestazioni del pacchetto. È possibile disabilitare questa funzionalità impostando la proprietà della gestione connessione file flat, **AlwaysCheckForRowDelimiters**, su `False` .  
   
  Per configurare la gestione connessione file flat, procedere nel modo seguente:  
   

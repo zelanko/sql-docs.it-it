@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5fcf171e-cc0b-4c24-8eb5-3a4b4775e64a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f233f0730286a1623ee54c38084d07a2aba903e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 09a9ad4645f430418c39f76178bfe7a6757018dd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054857"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972781"
 ---
 # <a name="transfer-master-stored-procedures-task-editor-stored-procedures-page"></a>Editor attività Trasferisci stored procedure master (pagina Stored procedure)
   Usare la pagina **Stored procedure** della finestra di dialogo **Editor attività Trasferisci stored procedure master** per specificare le proprietà per la copia di una o più stored procedure definite dall'utente dal database **master** di un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a un database **master** di un'altra istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per altre informazioni su questa attività, vedere [Attività Trasferisci stored procedure master](control-flow/transfer-master-stored-procedures-task.md).  
@@ -29,26 +28,26 @@ ms.locfileid: "66054857"
   
 ## <a name="options"></a>Opzioni  
  **SourceConnection**  
- Selezionare una gestione connessione SMO nell'elenco oppure fare clic su ** \<nuova connessione... >** per creare una nuova connessione al server di origine.  
+ Selezionare una gestione connessione SMO nell'elenco oppure fare clic su **\<New connection...>** per creare una nuova connessione al server di origine.  
   
  **DestinationConnection**  
- Selezionare una gestione connessione SMO nell'elenco oppure fare clic su ** \<nuova connessione... >** per creare una nuova connessione al server di destinazione.  
+ Selezionare una gestione connessione SMO nell'elenco oppure fare clic su **\<New connection...>** per creare una nuova connessione al server di destinazione.  
   
  **IfObjectExists**  
  Selezionare la modalità con cui l'attività deve gestire le stored procedure definite dall'utente che hanno lo stesso nome di stored procedure già esistenti nel database **master** del server di destinazione.  
   
  Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**FailTask**|L'attività viene interrotta se nel database **master** del server di destinazione esistono già stored procedure con lo stesso nome.|  
 |**Sovrascrivere**|L'attività sovrascrive le stored procedure con lo stesso nome presenti nel database **master** del server di destinazione.|  
-|**Ignorare**|L'attività ignora le stored procedure con lo stesso nome presenti nel database **master** del server di destinazione.|  
+|**Ignora**|L'attività ignora le stored procedure con lo stesso nome presenti nel database **master** del server di destinazione.|  
   
  **TransferAllStoredProcedures**  
  Selezionare un valore per indicare se nel server di destinazione debbano essere copiate tutte le stored procedure definite dall'utente nel database **master** del server di origine.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**True**|Copia tutte le stored procedure definite dall'utente nel database **master** .|  
 |**False**|Copia solo le stored procedure specificate.|  
@@ -56,11 +55,11 @@ ms.locfileid: "66054857"
  **StoredProceduresList**  
  Selezionare le stored procedure definite dall'utente nel database **master** del server di origine da copiare nel database **master** del server di destinazione. Questa opzione è disponibile solo quando la proprietà **TransferAllStoredProcedures** è impostata su **False**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Attività Integration Services](control-flow/integration-services-tasks.md)   
  [Editor attività Trasferisci stored procedure master &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Pagina espressioni](expressions/expressions-page.md)   
- [gestione connessione SMO](connection-manager/smo-connection-manager.md)  
+ [Gestione connessione SMO](connection-manager/smo-connection-manager.md)  
   
   

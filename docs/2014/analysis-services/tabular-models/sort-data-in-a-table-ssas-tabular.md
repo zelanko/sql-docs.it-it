@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5fa6ad56-bf68-4aac-a226-52556173b7e2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc53b6ccc800e2986bf7a6bfdd01c0ef3c3208df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf1a9c8782e1771d5a53700b5f72c48dbb300c7a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066655"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938652"
 ---
 # <a name="sort-data-in-a-table-ssas-tabular"></a>Ordinare i dati di una tabella (SSAS tabulare)
   È possibile ordinare i dati per testo (da A a Z o da Z ad A) e numeri (dal più piccolo al più grande o dal più grande al più piccolo) in una o più colonne.  
@@ -46,7 +45,7 @@ ms.locfileid: "66066655"
     > [!NOTE]  
     >  Se i risultati non sono quelli previsti, la colonna potrebbe contenere numeri archiviati come testo e non come numeri. Ad esempio numeri negativi importati da alcuni sistemi di contabilità o un numero immesso con carattere apostrofo (') iniziale, vengono archiviati come testo.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Filtrare e ordinare dati &#40;SSAS tabulare&#41;](../filter-and-sort-data-ssas-tabular.md)   
  [Prospettive &#40;SSAS tabulare&#41;](perspectives-ssas-tabular.md)   
  [Ruoli &#40;SSAS tabulare&#41;](roles-ssas-tabular.md)  

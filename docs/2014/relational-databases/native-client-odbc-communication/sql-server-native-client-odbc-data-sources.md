@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a6a50fd0-d439-43fd-b76f-16ec02f478c5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9b7a5ea06fb2b720e635f5d8310cefa425aa1646
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6960118e13f0843640b18056bda655726cbbbd29
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705693"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021010"
 ---
 # <a name="sql-server-native-client-odbc-data-sources"></a>Origini dati ODBC di SQL Server Native Client
   Un nome di origine dati (DSN, Data Source Name) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifica un'origine dati ODBC che contiene tutte le informazioni necessarie a un'applicazione ODBC per connettersi a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un server specifico. Per definire un nome di origine dati ODBC, è possibile procedere in due modi diversi:  

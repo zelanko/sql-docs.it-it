@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 652faac0-1cfc-438b-8119-2f4b090a2381
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 098d9b589396ebd6a9c622f921efd97d0b000929
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d8efab57dd195993ab9ab12c0cb9b3f167bd796
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067041"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938842"
 ---
 # <a name="manage-roles-by-using-ssms-ssas-tabular"></a>Gestire ruoli tramite (SSAS tabulare)
   È possibile creare, modificare e gestire ruoli per un modello tabulare distribuito tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -48,7 +47,7 @@ ms.locfileid: "66067041"
   
 4.  In **Impostare le autorizzazioni del ruolo per il database**selezionare una delle opzioni delle autorizzazioni seguenti:  
   
-    |Autorizzazione|Descrizione|  
+    |Autorizzazione|Description|  
     |----------------|-----------------|  
     |**Controllo completo (amministratore)**|I membri possono apportare modifiche allo schema del modello e visualizzare tutti i dati.|  
     |**Elaborazione database**|I membri possono effettuare le operazioni relative alle opzioni Elabora ed Elabora tutto, ma non possono modificare lo schema del modello, né visualizzare dati.|  
@@ -58,12 +57,12 @@ ms.locfileid: "66067041"
   
 6.  Nella finestra delle impostazioni di appartenenza fare clic su **Aggiungi**e quindi, nella finestra di dialogo **Seleziona utenti o gruppi** , aggiungere gli utenti o i gruppi di Windows che si vuole aggiungere come membri.  
   
-7.  Se il ruolo in fase di creazione dispone dell'autorizzazione Lettura, è possibile aggiungere filtri di riga per qualsiasi tabella utilizzando una formula DAX. Per aggiungere filtri di riga, nella finestra di dialogo **Proprietà ruolo- \<ruoloname>** , in **Selezione pagina**fare clic su **filtri di riga**.  
+7.  Se il ruolo in fase di creazione dispone dell'autorizzazione Lettura, è possibile aggiungere filtri di riga per qualsiasi tabella utilizzando una formula DAX. Per aggiungere filtri di riga, nella finestra di dialogo **Proprietà ruolo- \<rolename> ** in **Selezione pagina**fare clic su **filtri di riga**.  
   
-8.  Nella finestra filtri di riga selezionare una tabella, fare clic sul campo **Filtro DAX** e quindi nel campo **filtro dax \<-TableName>** digitare una formula DAX.  
+8.  Nella finestra filtri di riga selezionare una tabella, fare clic sul campo **Filtro DAX** e quindi digitare una formula DAX nel campo ** \<tablename> Filtro DAX** .  
   
     > [!NOTE]  
-    >  Il campo Filter- \<TableName> di DAX non contiene un editor di query di completamento automatico o una funzionalità di inserimento di funzioni. Per usare il completamento automatico quando si scrive una formula DAX, è necessario usare un editor di formule DAX in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+    >  Il campo Filtro DAX \<tablename> non contiene un editor di query di completamento automatico o una funzione Inserisci funzione. Per usare il completamento automatico quando si scrive una formula DAX, è necessario usare un editor di formule DAX in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 9. Fare clic su **OK** per salvare il ruolo.  
   
@@ -75,13 +74,13 @@ ms.locfileid: "66067041"
   
 -   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]espandere il database del modello tabulare che contiene il ruolo da modificare, espandere **Ruoli**, quindi fare clic con il pulsante destro del mouse sul ruolo e fare clic su **Proprietà**.  
   
-     Nella finestra di dialogo **Proprietà** \<ruolo> ruolo, è possibile modificare le autorizzazioni, aggiungere o rimuovere membri e aggiungere o modificare i filtri di riga.  
+     Nella finestra di dialogo **Proprietà ruolo** \<rolename> è possibile modificare le autorizzazioni, aggiungere o rimuovere membri e aggiungere o modificare i filtri di riga.  
   
 ###  <a name="to-delete-a-role"></a><a name="bkmk_deletet_role"></a>Per eliminare un ruolo  
   
 -   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]espandere il database del modello tabulare che contiene il ruolo da eliminare, espandere **Ruoli**, quindi fare clic con il pulsante destro del mouse sul ruolo e fare clic su **Elimina**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Ruoli &#40;SSAS tabulare&#41;](roles-ssas-tabular.md)  
   
   

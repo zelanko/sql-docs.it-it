@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3d58ac84e394d7b8dfe342430991f2ddefa678be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b1bd7492ada156584b05ebaf2a8afc6dd294f49
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74684452"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067289"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Documentazione per gli utenti in SQL Server Management Studio
   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] la documentazione per gli utenti è disponibile tramite il menu ? e la documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il menu ? in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offre diverse possibilità per ottenere informazioni su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Consente inoltre di accedere alla community di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e alle risorse di MSDN Online che in precedenza non erano disponibili dall'ambiente della Guida. Quest'ultimo può essere inoltre configurato per essere avviato all'interno dell'ambiente [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o in una finestra esterna associata.  
@@ -47,7 +46,7 @@ ms.locfileid: "74684452"
  Uso della Guida (Guida di[!INCLUDE[msCoName](../includes/msconame-md.md)] Document Explorer) collega gli utenti alla documentazione relativa al visualizzatore della Guida, ma gli argomenti si trovano in un insieme separato dalla documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per informazioni sul visualizzatore della Guida, selezionare **Uso della Guida** dal menu ? della Documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per informazioni sull'aggiunta della Guida relativa alla raccolta di argomenti nella documentazione online di, vedere [aggiungere o rimuovere la documentazione del prodotto per SQL Server](../2014-toc/index.yml).  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN Online e community di SQL Server  
- Per ottenere ulteriori informazioni, la Guida di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offre inoltre agli utenti la possibilità di contattare MSDN Online e le community dedicate a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]presenti su Internet. È possibile scegliere:  
+ Per ottenere ulteriori informazioni, la Guida di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offre inoltre agli utenti la possibilità di contattare MSDN Online e le community dedicate a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]presenti su Internet. È possibile:  
   
 -   Accedere alle community di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dalla pagina Ricerca per categorie.  
   
