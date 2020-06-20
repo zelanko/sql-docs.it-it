@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c84e6c6d9e35526f51f010ab27bbc9d46f83d508
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1ef1bec93a1e0ce04c40f4333fa3450118da08df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717553"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060111"
 ---
 # <a name="using-sqlxml-bulk-load-in-the-net-environment"></a>Utilizzo del caricamento bulk di SQLXML nell'ambiente .NET
   In questo argomento viene illustrato l'utilizzo delle funzionalità di caricamento bulk XML nell'ambiente .NET. Per informazioni dettagliate sul caricamento bulk XML, vedere [esecuzione del caricamento bulk di dati xml &#40;SQLXML 4,0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md).  
@@ -113,7 +112,7 @@ ms.locfileid: "82717553"
   
 6.  Scegliere **Aggiungi riferimento**dal menu **progetto** .  
   
-7.  Nella scheda **com** selezionare la **libreria dei tipi Microsoft SQLXML Bulkload 4,0** (xblkld4. dll) e fare clic su **OK**. Viene visualizzato l'assembly **Interop. SQLXMLBULKLOADLib** creato nel progetto.  
+7.  Nella scheda **com** selezionare **Microsoft SQLXML Bulkload 4,0 Type Library** (xblkld4.dll) e fare clic su **OK**. Viene visualizzato l'assembly **Interop. SQLXMLBULKLOADLib** creato nel progetto.  
   
 8.  Sostituire il metodo Main() con il codice seguente. Aggiornare la proprietà **ConnectionString** e il percorso del file allo schema e ai file di dati.  
   
@@ -139,7 +138,7 @@ ms.locfileid: "82717553"
 9. Per caricare i dati XML nella tabella creata, compilare ed eseguire il progetto.  
   
     > [!NOTE]  
-    >  Il riferimento al componente di caricamento bulk (xblkld4.dll) può essere aggiunto anche utilizzando lo strumento tlbimp.exe, disponibile come parte di .NET Framework. Questo strumento crea un wrapper gestito per la DLL nativa (xblkld4.dll) che può quindi essere utilizzato in qualsiasi progetto .NET. ad esempio:  
+    >  Il riferimento al componente di caricamento bulk (xblkld4.dll) può essere aggiunto anche utilizzando lo strumento tlbimp.exe, disponibile come parte di .NET Framework. Questo strumento crea un wrapper gestito per la DLL nativa (xblkld4.dll) che può quindi essere utilizzato in qualsiasi progetto .NET. Ad esempio:  
   
     ```  
     c:\>tlbimp xblkld4.dll  

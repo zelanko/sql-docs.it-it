@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 61a3713b-403a-4806-bfc4-66db72ca1156
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0123027ac9aa87d616b52ac5cc26f36a20f7e1e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b31a8bc38968733de0a23f67a71772721c8baedd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62524015"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008999"
 ---
 # <a name="defect-multiple-target-servers-from-a-master-server"></a>Escludere più server di destinazione da un server master
   In questo argomento viene illustrata la procedura per l'esclusione di più server di destinazione da una configurazione di amministrazione multiserver in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Eseguire questa procedura dal server master.  
@@ -43,7 +42,7 @@ ms.locfileid: "62524015"
   
     -   Fare clic su **Solo i server di destinazione seguenti**e quindi sulla casella **Seleziona** corrispondente per escludere solo alcuni server di destinazione di questo server master.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di un ambiente multiserver](create-a-multiserver-environment.md)   
  [Amministrazione automatizzata in un'organizzazione](automated-administration-across-an-enterprise.md)   
  [Escludere un server di destinazione da un server master](defect-a-target-server-from-a-master-server.md)  

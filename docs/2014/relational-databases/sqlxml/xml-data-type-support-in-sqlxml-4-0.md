@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 75667beed815ef93cd071935ce7e5a24cf5b7166
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7c7338500b68c157d5b555e29cf3a88bea3513c5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702808"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009289"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>Supporto del tipo di dati xml in SQLXML 4.0
   A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta i dati tipizzati XML usando il `xml` tipo di dati. In questo argomento viene descritto il modo in cui SQLXML 4.0 riconosce istanze del tipo di dati `xml` e ne implementa il supporto.  
@@ -34,7 +33,7 @@ ms.locfileid: "82702808"
   
 ## <a name="guidelines-and-limitations"></a>Linee guida e limitazioni  
   
--   ** \< xsd:** non è possibile eseguire il mapping di qualsiasi>a una colonna che include un `xml` tipo di dati. Il supporto in SQLXML per questo scenario viene fornito tramite l'annotazione `sql:overflow-field`. Una soluzione alternativa consiste nell'eseguire il mapping di un campo con tipo di dati `xml` come elemento di `xsd:anyType`. Questa soluzione alternativa viene illustrata nell'esempio "Mapping di un elemento XML a una colonna con tipo di dati XML" citato nella tabella precedente.  
+-   **\<xsd:any>** non è possibile eseguire il mapping a una colonna che include un `xml` tipo di dati. Il supporto in SQLXML per questo scenario viene fornito tramite l'annotazione `sql:overflow-field`. Una soluzione alternativa consiste nell'eseguire il mapping di un campo con tipo di dati `xml` come elemento di `xsd:anyType`. Questa soluzione alternativa viene illustrata nell'esempio "Mapping di un elemento XML a una colonna con tipo di dati XML" citato nella tabella precedente.  
   
 -   Le query XPath nel contenuto di colonne con tipo di dati `xml` non sono supportate.  
   

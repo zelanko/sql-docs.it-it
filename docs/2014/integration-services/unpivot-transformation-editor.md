@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 72a36ef0-4070-4f6c-9c74-0720109617dd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2a0222627860b70059163bff1dd989e230c1cb66
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45430eea18d533855e00021f5fda46d80ac0e0c2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054842"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972651"
 ---
 # <a name="unpivot-transformation-editor"></a>Editor trasformazione UnPivot
   Utilizzare la finestra di dialogo **Editor trasformazione UnPivot** per selezionare le colonne da trasformare in righe tramite Pivot e specificare la colonna di dati e la nuova colonna di output per il valore pivot.  
@@ -61,7 +60,7 @@ ms.locfileid: "66054842"
   
  Nello scenario UnPivot descritto in [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md), il Nome colonna valore chiave pivot è **Product** e designa la nuova colonna **Product** come la colonna in cui viene applicata la trasformazione tramite UnPivot alle colonne **Ham**, **Soda**, **Milk**, **Beer**e **Chips** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Trasformazione pivot](data-flow/transformations/pivot-transformation.md)  
   

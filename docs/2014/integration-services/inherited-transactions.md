@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 90db5564-d41e-4cfe-8c9e-4e68d41eff1c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d8e22375e660e6bcd55c8075edaaba067160279d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 929624cf85f7146fa668632fa586a47caca743f0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058059"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965471"
 ---
 # <a name="inherited-transactions"></a>Transazioni ereditate
   Un pacchetto può eseguire un altro pacchetto tramite l'attività Esegui pacchetto. Il pacchetto figlio, ovvero il pacchetto eseguito dall'attività Esegui pacchetto, può creare la propria transazione del pacchetto o ereditare quella del padre.  

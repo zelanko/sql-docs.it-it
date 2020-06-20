@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e9f5287b-1325-4cda-88a6-19eaaa52a652
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5fd397349bc3fa3ed7f69e9e1293415ea96fc75d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d149016dabd0239bd76eadc8655b6752afd916d9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754316"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933952"
 ---
 # <a name="set-up-login-accounts-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>Configurare gli account di accesso per il mirroring del database o i gruppi di disponibilità AlwaysOn (SQL Server)
   Affinché due istanze del server possano connettersi tra loro al punto dell' [endpoint del mirroring di database](the-database-mirroring-endpoint-sql-server.md) , è necessario che l'account di accesso di ognuna delle istanze possa accedere all'altra. e inoltre che disponga dell'autorizzazione per la connessione all'endpoint del mirroring del database dell'altra istanza.  
@@ -54,13 +53,13 @@ ms.locfileid: "62754316"
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
--   [Creazione di un account di accesso](../../relational-databases/security/authentication-access/create-a-login.md)  
+-   [Creare un account di accesso](../../relational-databases/security/authentication-access/create-a-login.md)  
   
 -   [Concessione dell'accesso alla rete a un endpoint per il mirroring del database utilizzando l'autenticazione di Windows &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md).  
   
--   [Usare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [Utilizzare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [&#40;SQL Server dell'endpoint del mirroring del database&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [Risolvere i problemi relativi alla configurazione del mirroring del database &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
  [Risolvere i problemi di Gruppi di disponibilità AlwaysOn &#40;di configurazione SQL Server&#41;](../availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  

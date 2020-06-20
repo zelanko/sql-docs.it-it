@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d97a3132099a6007f99f6a0119fc3df63a58b9b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe1221b1ff86b96490fb09a5785978dcc16ac40b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807922"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934292"
 ---
 # <a name="database-mirroring-sql-server"></a>Mirroring del database (SQL Server)
     
@@ -211,7 +210,7 @@ ms.locfileid: "62807922"
 > [!NOTE]  
 >  I database con mirroring sono indipendenti tra loro, quindi non possono eseguire il failover come gruppo.  
   
-###  <a name="client-connections"></a><a name="ClientConnections"></a>Connessioni client  
+###  <a name="client-connections"></a><a name="ClientConnections"></a> Connessioni client  
  Le connessioni client per le sessioni di mirroring del database sono supportate da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Data Provider per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [Connettere client a una sessione di mirroring del database &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 ###  <a name="impact-of-pausing-a-session-on-the-principal-transaction-log"></a><a name="ImpactOfPausing"></a> Effetti della sospensione di una sessione sul log delle transazioni principale  
@@ -233,7 +232,7 @@ ms.locfileid: "62807922"
   
 -   [Replica](database-mirroring-and-replication-sql-server.md)  
   
-##  <a name="in-this-section"></a><a name="InThisSection"></a>Contenuto della sezione  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> Contenuto della sezione  
  [Prerequisiti restrizioni e indicazioni per il mirroring del database](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)  
  Vengono descritti i prerequisiti e le indicazioni per la configurazione del mirroring del database.  
   
@@ -270,7 +269,7 @@ ms.locfileid: "62807922"
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
 ### <a name="configuration-tasks"></a>Attività di configurazione  
- **Utilizzo di SQL Server Management Studio**  
+ **Utilizzare SQL Server Management Studio**  
   
 -   [Avvio della Configurazione guidata sicurezza mirroring del database &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   
@@ -325,7 +324,7 @@ ms.locfileid: "62807922"
   
 -   [Rimuovere il mirroring del database &#40;SQL Server&#41;](remove-database-mirroring-sql-server.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [&#40;SQL Server dell'endpoint del mirroring del database&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [&#40;di correzione automatica della pagina per i gruppi di disponibilità e il mirroring del database&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [Risolvere i problemi relativi alla configurazione del mirroring del database &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   

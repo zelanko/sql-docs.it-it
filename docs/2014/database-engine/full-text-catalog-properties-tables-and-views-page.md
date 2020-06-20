@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 2d45fcd2-0f0f-4167-9027-316d6696c106
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 205ee5d7c316c9a81e82edc0b2b6d132ed5c0ae1
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: eb4d968af6c550d19fbb8934b5d76a1bd63cb8da
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858680"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933012"
 ---
 # <a name="full-text-catalog-properties-tables-and-views-page"></a>Proprietà catalogo full-text (pagina Tabelle e viste)
   Utilizzare questa finestra di dialogo per visualizzare o modificare le tabelle e le viste assegnate al catalogo full-text.  

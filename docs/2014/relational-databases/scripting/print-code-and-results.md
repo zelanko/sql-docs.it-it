@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6e60173f-77fb-4a3e-a561-62c4d0128b95
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d0b42a2d64b991089a7bec51a88704834e941432
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 074641e6f3ab9900e3842787e56746ad66a33fbe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703768"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009547"
 ---
 # <a name="print-code-and-results"></a>Stampa di codice e risultati
   Nella stampa di query o file gli elementi colorati vengono stampati a colori se la stampante supporta questa funzionalità e se quest'ultima è abilitata nell'impostazione della stampante.  

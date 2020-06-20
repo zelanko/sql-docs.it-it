@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47dc2b5b-7803-4202-ad53-a431a821ad69
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 271be9656aa7fabc1edbece16f18ae7a60ba3978
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e2b44b84df73df4e6e17b67a9f671eef9a790cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63312615"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061156"
 ---
 # <a name="set-the-startup-options"></a>Impostare le opzioni di avvio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] può essere configurato per visualizzare la superficie di progettazione in base alla configurazione preferita all'avvio di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . La possibilità di configurare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per visualizzare la configurazione preferita consente di risparmiare tempo.  

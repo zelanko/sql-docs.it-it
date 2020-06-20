@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 41ac7c11824457bd6d93a062344eb3b411c95b3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 989e4b1b538144a1ead50cc3e28c64e0ae6e32c0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900560"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939562"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Raggruppamento fuzzy - trasformazione
   La trasformazione Raggruppamento fuzzy consente di eseguire attività di pulizia dei dati identificando le righe che con maggiore probabilità sono duplicate e selezionando una riga canonica di dati da utilizzare per la standardizzazione dei dati.  
@@ -69,7 +68,7 @@ ms.locfileid: "62900560"
  Questa trasformazione include un input e un output. Non supporta un output degli errori.  
   
 ## <a name="row-comparison"></a>Confronto tra righe  
- Quando si configura la trasformazione Raggruppamento fuzzy, è possibile specificare l'algoritmo di confronto utilizzato per confrontare le righe dell'input della trasformazione. Se si imposta la proprietà complete su `true`, la trasformazione confronta ogni riga nell'input con ogni altra riga nell'input. Questo algoritmo di confronto restituisce in genere risultati più precisi, ma la trasformazione viene eseguita più lentamente, a meno che l'input non includa un numero di righe ridotto. Per evitare problemi di prestazioni, è consigliabile impostare la proprietà complete su solo durante `true` lo sviluppo di pacchetti.  
+ Quando si configura la trasformazione Raggruppamento fuzzy, è possibile specificare l'algoritmo di confronto utilizzato per confrontare le righe dell'input della trasformazione. Se si imposta la proprietà complete su `true` , la trasformazione confronta ogni riga nell'input con ogni altra riga nell'input. Questo algoritmo di confronto restituisce in genere risultati più precisi, ma la trasformazione viene eseguita più lentamente, a meno che l'input non includa un numero di righe ridotto. Per evitare problemi di prestazioni, è consigliabile impostare la proprietà complete su `true` solo durante lo sviluppo di pacchetti.  
   
 ## <a name="temporary-tables-and-indexes"></a>Tabelle e indici temporanei  
  In fase di esecuzione, la trasformazione Raggruppamento fuzzy crea oggetti temporanei, quali tabelle e indici, potenzialmente di grandi dimensioni, nel database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a cui la trasformazione si connette. Le dimensioni delle tabelle e degli indici sono proporzionali al numero di righe dell'input della trasformazione Raggruppamento fuzzy e al numero di token creati dalla trasformazione.  
@@ -102,7 +101,7 @@ ms.locfileid: "62900560"
   
 -   [Impostazione delle proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Trasformazione Ricerca fuzzy](lookup-transformation.md)   
  [Trasformazioni di Integration Services](integration-services-transformations.md)  
   

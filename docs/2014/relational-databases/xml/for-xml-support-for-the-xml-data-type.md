@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 537a3aaafcc2a0ad4ba2c59ae8d52f8e5ced5868
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ad905027458e7594a46e3ab416aaa1f4f43cbc59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716478"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061242"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>Supporto del tipo di dati xml in FOR XML
   Se nella clausola SELECT di una query FOR XML è specificata una colonna di tipo `xml`, viene eseguito il mapping dei valori della colonna come elementi nel codice XML risultante, indipendentemente dal fatto che sia stata specificata o meno la direttiva ELEMENTS. Le dichiarazioni XML nella colonna di tipo `xml` non sono serializzate.  

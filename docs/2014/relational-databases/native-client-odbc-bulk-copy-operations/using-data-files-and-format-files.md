@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 51efa12bcb308c64c8c63a425cdc615dab237e04
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a70eed8c362411a3b1b87c66b9277da8aeac1ed4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705798"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021279"
 ---
 # <a name="using-data-files-and-format-files"></a>Utilizzo di file di dati e file di formato
   Il programma per la copia bulk più semplice effettua le operazioni seguenti:  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 49ac4661e533b4c4e56a750f208c3ded09f72d27
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e9009bfb7b44f6690d123697059e105d76688ce0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056792"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964771"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>Parametri e codici restituiti nell’attività Esegui SQL
   Le stored procedure e le istruzioni SQL utilizzano spesso parametri di `input`, parametri di `output`e codici restituiti. In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] l'attività Esegui SQL supporta parametri di tipo `Input`, `Output` e `ReturnValue`. Il tipo `Input` viene utilizzato per i parametri di input, il tipo `Output` per i parametri di output e il tipo `ReturnValue` per i codici restituiti.  
@@ -45,7 +44,7 @@ ms.locfileid: "66056792"
 -   [Configurazione di parametri e di codici restituiti nell'editor attività Esegui SQL](#Configure_parameters_and_return_codes)  
   
 ##  <a name="using-parameter-names-and-markers"></a><a name="Parameter_names_and_markers"></a>Uso di nomi e marcatori di parametro  
- Nella sintassi del comando SQL possono essere utilizzati marcatori di parametro diversi, a seconda del tipo di connessione utilizzato dall'attività Esegui SQL. Per il [!INCLUDE[vstecado](../includes/vstecado-md.md)] tipo di gestione connessione, ad esempio, è necessario che il comando SQL utilizzi un marcatore di parametro nel formato ** \@varParameter**, mentre OLE DB tipo di connessione richiede il marcatore di parametro Question Mark (?).  
+ Nella sintassi del comando SQL possono essere utilizzati marcatori di parametro diversi, a seconda del tipo di connessione utilizzato dall'attività Esegui SQL. Per il tipo di gestione connessione, ad esempio, [!INCLUDE[vstecado](../includes/vstecado-md.md)] è necessario che il comando SQL utilizzi un marcatore di parametro nel formato ** \@ varParameter**, mentre OLE DB tipo di connessione richiede il marcatore di parametro Question Mark (?).  
   
  Anche i nomi che è possibile utilizzare come nomi di parametro nei mapping tra variabili e parametri variano a seconda del tipo di gestione connessione. Il tipo di gestione connessione [!INCLUDE[vstecado](../includes/vstecado-md.md)] usa ad esempio un nome definito dall'utente con prefisso \@, mentre il tipo di gestione connessione OLE DB richiede nomi di parametro costituiti dal valore numerico di un ordinale in base 0.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66056792"
 |Tipo di connessione|Marcatore di parametro|Nome parametro|Comando SQL di esempio|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|\@\<nome parametro>|\@\<nome parametro>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|\@\<parameter name>|\@\<parameter name>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
 |ODBC|?|1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL e OLE DB|?|0, 1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
@@ -152,14 +151,14 @@ ms.locfileid: "66056792"
 ##  <a name="using-parameters-with-stored-procedures"></a><a name="Stored_procedures"></a>Utilizzo di parametri con stored procedure  
  Anche i comandi SQL che eseguono stored procedure possono utilizzare il mapping dei parametri. Come avviene per le regole delle query con parametri, anche le regole che determinano la modalità di utilizzo di marcatori di parametro e nomi di parametro dipendono dal tipo di gestione connessione utilizzato dall'attività Esegui SQL.  
   
- Nella tabella seguente sono elencati esempi di comandi EXEC per tipo di gestione connessione. Gli esempi eseguono la stored procedure **uspGetBillOfMaterials** nel database [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)]. Il stored procedure usa i `@StartProductID` parametri `@CheckDate` `input` e.  
+ Nella tabella seguente sono elencati esempi di comandi EXEC per tipo di gestione connessione. Gli esempi eseguono la stored procedure **uspGetBillOfMaterials** nel database [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)]. Il stored procedure usa i `@StartProductID` `@CheckDate` `input` parametri e.  
   
 |Tipo di connessione|Sintassi dell'istruzione EXEC|  
 |---------------------|-----------------|  
 |EXCEL e OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
 |ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Per altre informazioni sulla sintassi ODBC, vedere l'argomento [Procedure Parameters](https://go.microsoft.com/fwlink/?LinkId=89462)(Parametri di procedura) nella guida di riferimento per programmatori ODBC in MSDN Library.|  
-|ADO|Se IsQueryStoredProcedure è impostato su `False`,`EXEC uspGetBillOfMaterials ?, ?`<br /><br /> Se IsQueryStoredProcedure è impostato su `True`,`uspGetBillOfMaterials`|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Se IsQueryStoredProcedure è impostato su `False`,`EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> Se IsQueryStoredProcedure è impostato su `True`,`uspGetBillOfMaterials`|  
+|ADO|Se IsQueryStoredProcedure è impostato su `False` ,`EXEC uspGetBillOfMaterials ?, ?`<br /><br /> Se IsQueryStoredProcedure è impostato su `True` ,`uspGetBillOfMaterials`|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Se IsQueryStoredProcedure è impostato su `False` ,`EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> Se IsQueryStoredProcedure è impostato su `True` ,`uspGetBillOfMaterials`|  
   
  La sintassi per l'utilizzo dei parametri di output richiede che dopo ogni marcatore di parametro venga specificata la parola chiave OUTPUT. Ad esempio, la sintassi del parametro di output seguente è corretta: `EXEC myStoredProcedure ? OUTPUT`.  
   
@@ -168,7 +167,7 @@ ms.locfileid: "66056792"
 ##  <a name="getting-values-of-return-codes"></a><a name="Return_codes"></a>Recupero dei valori dei codici restituiti  
  Una stored procedure può restituire un valore intero, denominato codice restituito, per indicare lo stato di esecuzione di una procedura. Per implementare codici restituiti nell'attività Esegui SQL, è necessario utilizzare parametri di tipo `ReturnValue`.  
   
- Nella tabella seguente sono elencati, per tipo di gestione connessione, esempi di comandi EXEC che implementano codici restituiti. In tutti gli esempi viene utilizzato un parametro di `input`. Le regole per la modalità di utilizzo di marcatori di parametro e nomi di parametro sono le stesse`Input`per `Output`tutti i `ReturnValue`tipi di parametro,, e.  
+ Nella tabella seguente sono elencati, per tipo di gestione connessione, esempi di comandi EXEC che implementano codici restituiti. In tutti gli esempi viene utilizzato un parametro di `input`. Le regole per la modalità di utilizzo di marcatori di parametro e nomi di parametro sono le stesse per tutti i tipi di parametro `Input` , `Output` , e `ReturnValue` .  
   
  In alcune sintassi non è supportato l'utilizzo di valori letterali come parametri. In tali casi è necessario specificare il valore del parametro utilizzando una variabile.  
   
@@ -176,10 +175,10 @@ ms.locfileid: "66056792"
 |---------------------|-----------------|  
 |EXCEL e OLEDB|`EXEC ? = myStoredProcedure 1`|  
 |ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Per altre informazioni sulla sintassi ODBC, vedere l'argomento [Procedure Parameters](https://go.microsoft.com/fwlink/?LinkId=89462)(Parametri di procedura) nella guida di riferimento per programmatori ODBC in MSDN Library.|  
-|ADO|Se IsQueryStoreProcedure ha valore è impostato su `False`,`EXEC ? = myStoredProcedure 1`<br /><br /> Se IsQueryStoreProcedure ha valore è impostato su `True`,`myStoredProcedure`|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Set IsQueryStoreProcedure ha valore è impostato su `True`.<br /><br /> `myStoredProcedure`|  
+|ADO|Se IsQueryStoreProcedure ha valore è impostato su `False` ,`EXEC ? = myStoredProcedure 1`<br /><br /> Se IsQueryStoreProcedure ha valore è impostato su `True` ,`myStoredProcedure`|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Set IsQueryStoreProcedure ha valore è impostato su `True` .<br /><br /> `myStoredProcedure`|  
   
- Nella sintassi illustrata nella tabella precedente, l'attività Esegui SQL usa il tipo di origine **Input diretto** per eseguire la stored procedure. L'attività Esegui SQL può usare anche il tipo di origine **Connessione file** per eseguire una stored procedure. Indipendentemente dal fatto che l'attività Esegui SQL utilizzi il tipo di origine di **input diretto** o **connessione file** , usare un `ReturnValue` parametro del tipo per implementare il codice restituito. Per altre informazioni sulla configurazione del tipo di origine dell'istruzione SQL eseguita dall'attività Esegui SQL, vedere [Editor attività Esegui SQL &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md).  
+ Nella sintassi illustrata nella tabella precedente, l'attività Esegui SQL usa il tipo di origine **Input diretto** per eseguire la stored procedure. L'attività Esegui SQL può usare anche il tipo di origine **Connessione file** per eseguire una stored procedure. Indipendentemente dal fatto che l'attività Esegui SQL utilizzi il tipo di origine di **input diretto** o **connessione file** , usare un parametro del `ReturnValue` tipo per implementare il codice restituito. Per altre informazioni sulla configurazione del tipo di origine dell'istruzione SQL eseguita dall'attività Esegui SQL, vedere [Editor attività Esegui SQL &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md).  
   
  Per altre informazioni sull'utilizzo di codici restituiti con le stored procedure Transact-SQL, vedere [RETURN &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/return-transact-sql).  
   
@@ -201,7 +200,7 @@ ms.locfileid: "66056792"
   
 -   Esempio CodePlex sull' [esecuzione di parametri SQL e set di risultati](https://go.microsoft.com/fwlink/?LinkId=157863)sul sito Web msftisprodsamples.codeplex.com  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Attività Esegui SQL](control-flow/execute-sql-task.md)   
  [Set di risultati nell’attività Esegui SQL](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)  
   

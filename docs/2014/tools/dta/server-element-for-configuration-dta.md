@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: da9ff870-9cfd-42fe-994b-7b9292681f7d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2bc763d621d15f982a2670483683d3862e678c98
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d569373f80a2f5488e8612cc30da264d283cd7f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63283683"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007646"
 ---
 # <a name="server-element-for-configuration-dta"></a>Elemento Server per Configuration (DTA)
   Contiene le informazioni per l'identificazione del server in cui si desidera che Ottimizzazione guidata motore di database esegua la valutazione della configurazione ipotetica indicata dall'elemento `Configuration`).  
@@ -50,7 +49,7 @@ ms.locfileid: "63283683"
 |**Elementi figlio**|[Elemento Name per Server &#40;DTA&#41;](name-element-for-server-dta.md)<br /><br /> [Elemento Database per Configuration &#40;DTA&#41;](database-element-for-configuration-dta.md)|  
   
 ## <a name="remarks"></a>Osservazioni  
- È possibile specificare un `Server` solo elemento per l' `Configuration` elemento. Questo elemento appartiene al Name **ServerTypecomplexType** nell' [XML Schema dell'ottimizzazione guidata motore di database](https://go.microsoft.com/fwlink/?linkid=43100). Questo elemento `Server` non deve essere confuso con l'elemento figlio di `DTAInput`. Per altre informazioni, vedere [Elemento Server &#40;DTA&#41;](server-element-dta.md).  
+ È possibile specificare un solo `Server` elemento per l' `Configuration` elemento. Questo elemento appartiene al Name **ServerTypecomplexType** nell' [XML Schema dell'ottimizzazione guidata motore di database](https://go.microsoft.com/fwlink/?linkid=43100). Questo elemento `Server` non deve essere confuso con l'elemento figlio di `DTAInput`. Per altre informazioni, vedere [Elemento Server &#40;DTA&#41;](server-element-dta.md).  
   
 ## <a name="example"></a>Esempio  
  Per un esempio di utilizzo, vedere [Esempio di file di input XML con configurazione specificata dall'utente &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  

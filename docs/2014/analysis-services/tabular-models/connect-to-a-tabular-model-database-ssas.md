@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6f73a8e9e79a08c3f4a1f1e2b40ff5f83a0e39b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4685dc65c860776143f25f4299a62427adfcb31f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067662"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939892"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>Connettersi a un database modello tabulare (SSAS)
   Dopo aver compilato un modello tabulare e averlo distribuito in un server modello tabulare di Analysis Services, è necessario impostare le autorizzazioni per renderlo disponibile ad applicazioni client. In questo argomento verrà illustrata la modalità di impostazione delle autorizzazioni e di connessione a un database da applicazioni client.  
@@ -31,7 +30,7 @@ ms.locfileid: "66067662"
   
  [Connessione da Excel o SharePoint](#bkmk_excelconn)  
   
- [Risoluzione dei problemi relativi alla connessione](#bkmk_Tshoot)  
+ [Risoluzione dei problemi di connessione](#bkmk_Tshoot)  
   
 ##  <a name="user-permissions-on-the-database"></a><a name="bkmk_userpermissions"></a>Autorizzazioni utente per il database  
  Gli utenti che si connettono a database tabulari devono disporre dell'appartenenza a un ruolo del database tramite cui viene specificato l'accesso in lettura.  
@@ -81,7 +80,7 @@ ms.locfileid: "66067662"
   
 2.  Selezionare **Da Analysis Services**.  
   
-3.  In **Nome server**specificare l'istanza di Analysis Services in cui viene ospitato il database. Il nome del server è spesso il nome del computer in cui è in esecuzione il software del server. Se il server è stato installato come istanza denominata, è necessario specificare il nome nel formato \<nomeserver>\\<NomeIstanza.\>  
+3.  In **Nome server**specificare l'istanza di Analysis Services in cui viene ospitato il database. Il nome del server è spesso il nome del computer in cui è in esecuzione il software del server. Se il server è stato installato come istanza denominata, è necessario specificare il nome nel formato seguente: \<servername> \\<NomeIstanza \> .  
   
      L'istanza del server deve essere configurata per la distribuzione tabulare autonoma e deve disporre di una regola in ingresso che consenta l'accesso. Per altre informazioni, vedere [Determinare la modalità server di un'istanza di Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md) e [Configurare Windows Firewall per consentire l'accesso ad Analysis Services](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
@@ -101,7 +100,7 @@ ms.locfileid: "66067662"
   
  Durante l'importazione di dati, questo errore di Microsoft Excel si verifica quando si tenta di utilizzare la procedura guidata per connettersi a un database modello tabulare su un server Analysis Services remoto e non si dispone di autorizzazioni sufficienti. Per risolvere l'errore, è necessario disporre di diritti di accesso utente sul database. Fare riferimento alle istruzioni fornite precedentemente in questo argomento per concedere accesso utente ai dati.  
   
- **Si è verificato un errore durante il tentativo di stabilire una connessione all'origine dati esterna. Impossibile aggiornare le connessioni seguenti: \<nome modello> sandbox**  
+ **Si è verificato un errore durante il tentativo di stabilire una connessione all'origine dati esterna. Impossibile aggiornare le connessioni seguenti: \<model name> sandbox**  
   
  In SharePoint questo errore di Microsoft Excel si verifica quando si tenta l'interazione dei dati, ad esempio l'applicazione di filtri a dati, in una tabella pivot in cui vengono utilizzati dati del modello. L'errore si verifica perché non si dispone di autorizzazioni sufficienti sul server Analysis Services remoto. Per risolvere l'errore, è necessario disporre di diritti di accesso utente sul database. Fare riferimento alle istruzioni fornite precedentemente in questo argomento per concedere accesso utente ai dati.  
   
@@ -113,7 +112,7 @@ ms.locfileid: "66067662"
   
  In SharePoint questo errore di Microsoft Excel si verifica quando si tenta l'interazione dei dati, ad esempio l'applicazione di filtri a dati, in una tabella pivot in cui vengono utilizzati dati del modello. L'errore si verifica perché l'utente non dispone di autorizzazioni di SharePoint sufficienti sulla cartella di lavoro. L'utente deve disporre di autorizzazioni **Lettura** o superiori. Le autorizzazioni**Sola visualizzazione** non sono sufficienti per l'accesso ai dati.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Distribuzione di una soluzione del modello tabulare &#40;SSAS tabulare&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

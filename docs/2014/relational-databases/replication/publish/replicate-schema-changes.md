@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c09007f0-9374-4f60-956b-8a87670cd043
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 84918dd3f50d129485911fc880e67c0152fa905c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bec2f363cd8c4f7dea45935568a88722b19323fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882243"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060421"
 ---
 # <a name="replicate-schema-changes"></a>Replica delle modifiche dello schema
   In questo argomento si illustra come replicare le modifiche dello schema in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -54,11 +53,11 @@ ms.locfileid: "73882243"
 -   L'istruzione ALTER TABLE ... DROP COLUMN viene sempre replicata in tutti i Sottoscrittori la cui sottoscrizione contiene le colonne in corso di eliminazione, anche in caso di disabilitazione della replica delle modifiche dello schema.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
- Se non si desidera replicare le modifiche dello schema per una pubblicazione, disabilitare la replica di tali modifiche nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** . Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
+ Se non si desidera replicare le modifiche dello schema per una pubblicazione, disabilitare la replica delle modifiche dello schema nella finestra di dialogo **Proprietà pubblicazione- \<Publication> ** . Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 #### <a name="to-disable-replication-of-schema-changes"></a>Per disabilitare la replica delle modifiche dello schema  
   
-1.  Nella pagina **Opzioni sottoscrizione** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** impostare il valore della proprietà **Replica modifiche dello schema** su **Falso**.  
+1.  Nella pagina **Opzioni sottoscrizione** della finestra di dialogo **Proprietà pubblicazione \<Publication> -** impostare il valore della proprietà **replica modifiche dello schema** su **false**.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -69,27 +68,27 @@ ms.locfileid: "73882243"
   
 #### <a name="to-create-a-snapshot-or-transactional-publication-that-does-not-replicate-schema-changes"></a>Per creare una pubblicazione snapshot o transazionale che non replica le modifiche dello schema  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addpublication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql), specificando il valore **0** per ** \@replicate_ddl**. Per altre informazioni, vedere [Create a Publication](create-a-publication.md).  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addpublication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql), specificando il valore **0** per ** \@ replicate_ddl**. Per altre informazioni, vedere [Create a Publication](create-a-publication.md).  
   
 #### <a name="to-create-a-merge-publication-that-does-not-replicate-schema-changes"></a>Per creare una pubblicazione di tipo merge che non replica le modifiche dello schema  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergepublication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql), specificando il valore **0** per ** \@replicate_ddl**. Per altre informazioni, vedere [Create a Publication](create-a-publication.md).  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergepublication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql), specificando il valore **0** per ** \@ replicate_ddl**. Per altre informazioni, vedere [Create a Publication](create-a-publication.md).  
   
 #### <a name="to-temporarily-disable-replicating-schema-changes-for-a-snapshot-or-transactional-publication"></a>Per disabilitare temporaneamente la replica delle modifiche dello schema per una pubblicazione snapshot o transazionale  
   
-1.  Per una pubblicazione con replica delle modifiche dello schema, eseguire [sp_changepublication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), specificando il **valore replicate_ddl** per ** \@la proprietà** e il valore **0** per ** \@value**.  
+1.  Per una pubblicazione con replica delle modifiche dello schema, eseguire [sp_changepublication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), specificando il valore **replicate_ddl** per la ** \@ Proprietà** e il valore **0** per ** \@ value**.  
   
 2.  Eseguire il comando DDL sull'oggetto pubblicato.  
   
-3.  Opzionale Abilitare di nuovo la replica delle modifiche dello schema eseguendo [sp_changepublication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), specificando il valore **replicate_ddl** per ** \@la proprietà** e il valore **1** per ** \@value**.  
+3.  Opzionale Abilitare di nuovo la replica delle modifiche dello schema eseguendo [sp_changepublication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), specificando il valore **replicate_ddl** per la ** \@ Proprietà** e il valore **1** per ** \@ value**.  
   
 #### <a name="to-temporarily-disable-replicating-schema-changes-for-a-merge-publication"></a>Per disabilitare temporaneamente la replica delle modifiche dello schema per una pubblicazione di tipo merge  
   
-1.  Per una pubblicazione con replica delle modifiche dello schema, eseguire [sp_changemergepublication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), specificando il **valore replicate_ddl** per ** \@la proprietà** e il valore **0** per ** \@value**.  
+1.  Per una pubblicazione con replica delle modifiche dello schema, eseguire [sp_changemergepublication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), specificando il valore **replicate_ddl** per la ** \@ Proprietà** e il valore **0** per ** \@ value**.  
   
 2.  Eseguire il comando DDL sull'oggetto pubblicato.  
   
-3.  Opzionale Abilitare di nuovo la replica delle modifiche dello schema eseguendo [sp_changemergepublication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), specificando il valore **replicate_ddl** per ** \@la proprietà** e il valore **1** per ** \@value**.  
+3.  Opzionale Abilitare di nuovo la replica delle modifiche dello schema eseguendo [sp_changemergepublication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), specificando il valore **replicate_ddl** per la ** \@ Proprietà** e il valore **1** per ** \@ value**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Apportare modifiche allo schema nei database di pubblicazione](make-schema-changes-on-publication-databases.md)   

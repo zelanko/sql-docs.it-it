@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a7a8d5f04808582bd56c106adce0df2c1f66aa77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f2794fd33ee2210b99aead0f79fd3a3ab470c00
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62913724"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046087"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster"></a>Aggiornare un cluster di failover di SQL Server
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta l'aggiornamento separato del [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] dai cluster di failover di [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] e [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] in tutti i nodi del cluster di failover.  
@@ -43,9 +42,9 @@ ms.locfileid: "62913724"
 -   Per altre informazioni, vedere [Istanze del cluster di failover Always On (SQL Server)](always-on-failover-cluster-instances-sql-server.md).  
   
 ## <a name="upgrading-a-ssnoversion-multi-subnet-failover-cluster"></a>Aggiornamento di un cluster di failover su più subnet di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
- Non è possibile aggiornare direttamente un cluster di failover non [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] su più subnet di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a un cluster di failover su più subnet di. Per altre informazioni, vedere [Eseguire l'aggiornamento di un'istanza del cluster di failover di SQL Server &#40;installazione&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md).  
+ Non è possibile aggiornare direttamente un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster di failover non su più subnet di a un cluster di failover su più [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] subnet di. Per altre informazioni, vedere [Eseguire l'aggiornamento di un'istanza del cluster di failover di SQL Server &#40;installazione&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Aggiornamenti di versione ed edizione supportati](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Aggiornare un'istanza del cluster di failover di SQL Server &#40;l'installazione&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md)   
  [Installazione di SQL Server 2014 dal prompt dei comandi](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  

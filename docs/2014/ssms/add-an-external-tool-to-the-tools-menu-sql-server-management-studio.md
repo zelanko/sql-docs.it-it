@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 25c1399e-afb1-4337-b74b-57a199cf26db
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cca14f144e442fbe75e41dec6ce652c4603863b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d0390447c63bcc66428b886595e8c27a795a89f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63226167"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044890"
 ---
 # <a name="add-an-external-tool-to-the-tools-menu-sql-server-management-studio"></a>Aggiunta di uno strumento esterno al menu Strumenti (SQL Server Management Studio)
   È possibile avviare qualsiasi applicazione [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] da [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Le applicazioni esterne possono essere aggiunte ed eseguite dal menu **Strumenti** .  

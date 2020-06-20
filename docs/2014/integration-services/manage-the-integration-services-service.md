@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 45554117-a0df-4830-b41c-5ebb33b764a5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fc3b1eb4e73b3d77b49cc9f485e0a6fc456a8875
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: baa716eec75925c97f987656d11e39ba947918d8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057787"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951371"
 ---
 # <a name="manage-the-integration-services-service"></a>Gestione del servizio Integration Services
     
@@ -28,7 +27,7 @@ ms.locfileid: "66057787"
  Quando viene installato il componente [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], viene installato anche il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Per impostazione predefinita, il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] viene avviato in base al tipo di avvio automatico. È tuttavia necessario installare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per utilizzare il servizio per la gestione di pacchetti [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] archiviati e in esecuzione.  
   
 > [!NOTE]  
->  Non è possibile connettersi a un'istanza del [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] servizio dalla [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] versione di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Ovvero, nella finestra di dialogo **Connetti al server** non è possibile immettere il nome di un server in cui è in esecuzione [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] solo la versione [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] del servizio. È tuttavia possibile modificare il file di configurazione per il servizio e gestire i pacchetti archiviati in un'istanza di [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] dalla versione [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Per altre informazioni, vedere [Configurazione del servizio Integration Services &#40;servizio SSIS&#41;](service/integration-services-service-ssis-service.md).  
+>  Non è possibile connettersi a un'istanza del [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] servizio dalla [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] versione di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] . Ovvero, nella finestra di dialogo **Connetti al server** non è possibile immettere il nome di un server in cui è in esecuzione solo la [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] versione del [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] servizio. È tuttavia possibile modificare il file di configurazione per il servizio e gestire i pacchetti archiviati in un'istanza di [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] dalla versione [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Per altre informazioni, vedere [Configurazione del servizio Integration Services &#40;servizio SSIS&#41;](service/integration-services-service-ssis-service.md).  
   
  È possibile installare solo una singola istanza del servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in un computer. Il servizio non è specifico di una particolare istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)]. Connettersi al servizio utilizzando il nome del computer sul quale è in esecuzione il servizio.  
   
@@ -52,7 +51,7 @@ ms.locfileid: "66057787"
   
 -   [Visualizzare eventi per il servizio Integration Services](../../2014/integration-services/view-events-for-the-integration-services-service.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Servizio Integration Services &#40;servizio SSIS&#41;](service/integration-services-service-ssis-service.md)   
  [Configurazione del servizio Integration Services &#40;servizio SSIS&#41;](configuring-the-integration-services-service-ssis-service.md)   
  [Importazione/esportazione guidata SQL Server](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   

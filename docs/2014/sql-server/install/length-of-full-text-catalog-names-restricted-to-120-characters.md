@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 50633373-83f6-4ed9-99b9-71f92479a14f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5cce05426fdff2aacf40612738ad80b07d9ec0e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa9b06fa6fe4acd79782c19a8814357721e59c24
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094055"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045213"
 ---
 # <a name="length-of-full-text-catalog-names-restricted-to-120-characters"></a>La lunghezza dei nomi di catalogo full-text è limitata a 120 caratteri
   La lunghezza dei nomi di catalogo full-text è limitata a 120 caratteri, rispetto a 128 caratteri nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -28,7 +27,7 @@ ms.locfileid: "66094055"
 ## <a name="corrective-action"></a>Azione correttiva  
  Modificare tutti gli script che creano cataloghi full-text per assicurarsi che la lunghezza dei nomi di catalogo sia limitata a 120 caratteri.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Uso di Preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

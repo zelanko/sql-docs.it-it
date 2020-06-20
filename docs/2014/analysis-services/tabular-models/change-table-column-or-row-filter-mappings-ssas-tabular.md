@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2124c526-5772-4f84-a019-9dd3e906e8dd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dfee215fef54f942bc7b47cff684cc35c509075c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb9da478e240a357fdb38b103db8fb4cab6f3d0d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067643"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939912"
 ---
 # <a name="change-table-column-or-row-filter-mappings-ssas-tabular"></a>Modificare i mapping di filtri tabella, colonna o riga (SSAS tabulare)
   Questo argomento descrive come modificare i mapping di filtri tabella, colonna o riga tramite la finestra di dialogo **Modifica proprietà tabella** di [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -43,7 +42,7 @@ ms.locfileid: "66067643"
   
          Se si commette un errore ed è necessario ricominciare, fare clic su **Cancella filtri di riga**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Finestra di dialogo Modifica proprietà tabella &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)  
   
   

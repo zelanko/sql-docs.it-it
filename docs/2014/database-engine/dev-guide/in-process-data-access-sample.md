@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 155be272-4f9a-4d86-9f4f-714c4f45b49a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5d44c980c7535b05d462d55e6f2aa1e87bf68c98
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14b729156409fcf57b39c4bdefce95d3aa3eafcc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637748"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933545"
 ---
 # <a name="in-process-data-access-sample"></a>Esempio In-Process Data Access
   Nell'esempio `InProcessDataAccess` sono incluse varie funzioni semplici che illustrano diverse caratteristiche del provider di accesso ai dati in-process CLR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -355,7 +354,7 @@ EXTERNAL NAME [InProcDA].[DataAccessDemo].[SendReaderToClient];
 GO  
 ```  
   
- Il codice [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente`test.sql`() consente di testare l'esempio esercitando le stored procedure e la funzione definite nell'esempio.  
+ Il codice seguente [!INCLUDE[tsql](../../includes/tsql-md.md)] ( `test.sql` ) consente di testare l'esempio esercitando le stored procedure e la funzione definite nell'esempio.  
   
 ```  
 USE AdventureWorks;  

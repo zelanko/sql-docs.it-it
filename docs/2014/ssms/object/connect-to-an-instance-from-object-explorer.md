@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 92e3b7b2099aabaa763fb6f6642bcc6267ebe6f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a25a9c376b7443bb23520c26be545c027da0bde6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63277424"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067363"
 ---
 # <a name="connect-to-an-instance-from-object-explorer"></a>Connettersi a un'istanza da Esplora oggetti
   Per gestire oggetti tramite Esplora oggetti, è necessario connettere Esplora oggetti all'istanza che contiene gli oggetti. È possibile connettere Esplora oggetti a più istanze contemporaneamente.  

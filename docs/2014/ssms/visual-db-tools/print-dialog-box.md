@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8019f762d6d80ced2688f0e93f7ad0e0a29bd3f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c55300150e64060cc06594fc4b8847fdb5132151
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63313015"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001083"
 ---
 # <a name="print-dialog-box"></a>Finestra di dialogo Stampa
   Mediante le opzioni disponibili nella finestra di dialogo **Stampa** è possibile specificare la modalità di stampa di un documento.  
@@ -39,7 +38,7 @@ ms.locfileid: "63313015"
  Include ulteriori informazioni sulla stampante selezionata.  
   
  **Proprietà**  
- Fare clic per aprire la finestra di dialogo \<*Proprietà nome stampante*>.  
+ Fare clic per aprire la finestra di \<*printer name properties*> dialogo.  
   
  **Stampa su file**  
  Stampa il documento su file invece che su una stampante.  

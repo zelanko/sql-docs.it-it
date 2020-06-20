@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5765e710-d273-4675-aee2-5718273bfdc4
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5a8bec1ab4bd19fdf11310fb467035eab1ac34b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ef4cd2721fa68ca8523fa97ab1333b5d1766c0e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483614"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972101"
 ---
 # <a name="change-a-derived-hierarchy-name-master-data-services"></a>Modificare il nome di una gerarchia derivata (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è possibile modificare il nome di una gerarchia derivata.  
@@ -47,7 +46,7 @@ ms.locfileid: "65483614"
   
 8.  Fare clic su **Salva gerarchia derivata**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Gerarchie derivate &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)   
  [Creare una gerarchia derivata &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)   
  [Eliminare una gerarchia derivata &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)  

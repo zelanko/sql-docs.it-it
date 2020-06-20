@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b58da11d973d169a0372e59c7e8d7e174e3cf789
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25700bfb9e2cd28fd18efe59a2df4e68f468d39b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767653"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965359"
 ---
 # <a name="step-1-creating-working-folders-and-environment-variables"></a>Passaggio 1: Creazione di cartelle di lavoro e variabili di ambiente
   In questa attività si procederà alla creazione della cartella di lavoro C:\DeploymentTutorial e delle nuove variabili di ambiente`DataTransfer` e `LoadXMLData`che verranno utilizzate nelle attività successive dell'esercitazione.  
@@ -36,7 +35,7 @@ ms.locfileid: "62767653"
   
 3.  Scegliere **Nuovo** dal menu **File**e fare clic su **Cartella**.  
   
-4.  Rinominare la nuova cartella `DeploymentTutorial`in.  
+4.  Rinominare la nuova cartella in `DeploymentTutorial` .  
   
 ### <a name="to-create-local-environment-variables"></a>Per creare le variabili di ambiente locali  
   
@@ -52,7 +51,7 @@ ms.locfileid: "62767653"
   
 6.  Fare clic su **OK**.  
   
-7.  Fare nuovamente clic su **nuovo** e `LoadXMLData` digitare nella casella **nome variabile** e `C:\DeploymentTutorial\loadxmldataconfig.dtsconfig` nella casella **valore variabile** .  
+7.  Fare nuovamente clic su **nuovo** e digitare `LoadXMLData` nella casella **nome variabile** e `C:\DeploymentTutorial\loadxmldataconfig.dtsconfig` nella casella **valore variabile** .  
   
 8.  Fare clic su **OK** per chiudere la finestra di dialogo **Variabili d'ambiente** .  
   
@@ -74,7 +73,7 @@ ms.locfileid: "62767653"
   
 6.  Fare clic su **OK**.  
   
-7.  Fare nuovamente clic su **nuovo** e `LoadXMLData` digitare nella casella **nome variabile** e `C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig` nella casella **valore variabile** .  
+7.  Fare nuovamente clic su **nuovo** e digitare `LoadXMLData` nella casella **nome variabile** e `C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig` nella casella **valore variabile** .  
   
 8.  Fare clic su **OK** per chiudere la finestra di dialogo **Variabili d'ambiente** .  
   

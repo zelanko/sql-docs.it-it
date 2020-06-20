@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a8c0a59-71c4-4280-824c-2dc17999532e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 57eb424087ccef14f4b1ff1aea4216b5dd0a205b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3850cbd99eca927983731ad941f611901d26e6ca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774186"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930197"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>Apertura di Progettazione tabelle (Visual Database Tools)
   Progettazione tabelle è uno strumento grafico che consente di progettare e rappresentare graficamente le tabelle di un database a cui si è connessi. È possibile utilizzare Progettazione tabelle per creare, modificare o eliminare tabelle, colonne, chiavi, indici, relazioni e vincoli.  
@@ -42,7 +41,7 @@ ms.locfileid: "62774186"
   
      Il menu **Progettazione tabelle** viene aggiunto al menu principale e la tabella viene aperta nei riquadri di progettazione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Progettare tabelle &#40;Visual Database Tools&#41;](../ssms/visual-db-tools/visual-database-tools.md)   
  [Tabelle](../relational-databases/tables/tables.md)  
   

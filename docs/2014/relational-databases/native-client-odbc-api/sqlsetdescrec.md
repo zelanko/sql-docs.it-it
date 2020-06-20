@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 203d02a2-aa09-462b-a489-a2cdd6f6023b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 967e2db04a4cf03aa826d5b9f8c3cb1d07417689
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2bbbbcec3f5e5df5bb5d8629329aae6d43599eb9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702171"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021647"
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
   In questo argomento vengono illustrate le funzionalità di SQLSetDescRec specifiche di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -29,7 +28,7 @@ ms.locfileid: "82702171"
   
 |Parametro|Attributo correlato per i tipi di parametro non con valori di tabella, incluse le colonne di parametri con valori di tabella|Attributo correlato per i parametri con valori di tabella|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
-|*Type*|SQL_DESC_TYPE|SQL_SS_TABLE|  
+|*Tipo*|SQL_DESC_TYPE|SQL_SS_TABLE|  
 |*Sottotipo*|Ignorato|Per i record di tipo SQL_DATETIME o SQL_INTERVAL, impostare su SQL_DESC_DATETIME_INTERVAL_CODE.|  
 |*Lunghezza*|SQL_DESC_OCTET_LENGTH|Lunghezza del nome del tipo di parametro con valori di tabella. Può essere SQL_NTS, se il nome del tipo è con terminazione Null oppure zero se il nome del tipo di parametro con valori di tabella non è obbligatorio.|  
 |*Precisione*|SQL_DESC_PRECISION|SQL_DESC_ARRAY_SIZE|  
@@ -43,11 +42,11 @@ ms.locfileid: "82702171"
 ## <a name="sqlsetdescrec-support-for-enhanced-date-and-time-features"></a>Supporto di SQLSetDescRec per le caratteristiche avanzate di data e ora  
  I valori consentiti per i tipi di data/ora sono i seguenti:  
   
-||*Type*|*Sottotipo*|*Lunghezza*|*Precisione*|*Ridimensionamento*|  
+||*Tipo*|*Sottotipo*|*Lunghezza*|*Precisione*|*Ridimensionamento*|  
 |-|------------|---------------|--------------|-----------------|-------------|  
 |Datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
-|data|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
+|Data|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
 |time|SQL_SS_TIME2|0|10|0..7|0..7|  
 |datetime2|SQL_DATETIME|SQL_CODE_TIMESTAMP|16|0..7|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|0|20|0..7|0..7|  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9b2fd7a22c202b1210b17f86903fce32ec8d4b5b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c54dd8b57dc0b1e13b622110d3f4cf9f796610a6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811077"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067628"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Selezionare un account per il servizio SQL Server Agent
   L'account di avvio del servizio definisce l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows in cui viene eseguito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, nonché le relative autorizzazioni di rete. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent viene eseguito con un account utente specificato. Selezionare un account per il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent tramite Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , in cui è possibile scegliere tra le opzioni seguenti:  
@@ -79,8 +78,8 @@ ms.locfileid: "68811077"
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Account di dominio di Windows (membro del gruppo Administrators di Windows)|Supportato|Supportato|Supportato|  
 |Account di dominio di Windows (non amministrativo)|Supportato<sup>1</sup>|Supportato<sup>1</sup>|Supportato<sup>1</sup>|  
 |Account Servizio di rete (NT AUTHORITY\NetworkService)|Supportato<sup>1, 3, 4</sup>|Non supportate|Non supportate|  
-|Account Utente locale (non amministrativo)|Supportato<sup>1</sup>|Non supportato|Non applicabile|  
-|Account Sistema locale (NT AUTHORITY\System)|Supportato<sup>2</sup>|Non supportato|Supportato<sup>2</sup>|  
+|Account Utente locale (non amministrativo)|Supportato<sup>1</sup>|Non supportate|Non applicabile|  
+|Account Sistema locale (NT AUTHORITY\System)|Supportato<sup>2</sup>|Non supportate|Supportato<sup>2</sup>|  
 |Account Servizio locale (NT AUTHORITY\NetworkService)|Non supportate|Non supportate|Non supportate|  
   
  <sup>1</sup> vedere la limitazione 1 riportata di seguito.  

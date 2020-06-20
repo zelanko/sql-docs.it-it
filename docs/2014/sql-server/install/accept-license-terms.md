@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 08dd739d-5817-4418-bcff-74ab7f8bbd33
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 99418b11eecdb3077e3def746eae56e43bab2d60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6d41879b84d98f72e570b00a61341a53d2e6187a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096843"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046447"
 ---
 # <a name="accept-license-terms"></a>Accettazione delle condizioni di licenza
   Usare la pagina **Condizioni di Licenza** dell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per accettare le condizioni di licenza per la versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in uso.  
@@ -46,13 +45,13 @@ ms.locfileid: "66096843"
   
  Le informazioni relative all'utilizzo delle caratteristiche vengono inviate a [!INCLUDE[msCoName](../../includes/msconame-md.md)]e archiviate con diritti di accesso limitati.  
   
- Per disabilitare la segnalazione analisi utilizzo software al termine dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Configuration Tools** ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** installazione, utilizzare lo strumento Segnalazione errori e utilizzo funzionalità nel menu strumenti di configurazione.  
+ Per disabilitare la segnalazione analisi utilizzo software al termine dell'installazione, utilizzare lo strumento ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] segnalazione errori e utilizzo** funzionalità nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] menu **strumenti di configurazione** .  
   
  Per le azioni di installazione quali aggiornamento, ripristino, installazione e così via, le informazioni vengono raccolte e caricate solo durante l'esecuzione del programma di installazione  
   
  Per tutti gli altri componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le informazioni vengono raccolte una volta al giorno per tutte le istanze abilitate di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per impostazione predefinita, la raccolta viene eseguita a mezzanotte per ridurre il carico del server. Se si desidera cambiare l'ora di raccolta, è possibile modificare manualmente la chiave del Registro di sistema che la controlla. È disponibile una chiave del Registro di sistema specifica per ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
- \MSSQL12.\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\HKLM\Software[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \<InstanceId> \cpe\timeofreporting  
+ \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \MSSQL12. \<INSTANCEID> HKLM\Software \CPE\TimeofReporting  
   
  Il valore della chiave del Registro di sistema include l'ora di esecuzione della raccolta espressa in numero di minuti a partire da 00.00 (mezzanotte). Ad esempio, se il valore immesso è 60 la raccolta verrà eseguita alla 1.00, mentre se il valore immesso è 1200 la raccolta verrà eseguita alle 20.00 e così via.  
   
@@ -99,9 +98,9 @@ ms.locfileid: "66096843"
   
  Se dopo avere abilitato la funzionalità Segnalazione errori si verifica un errore irreversibile, è possibile che venga visualizzata una risposta da [!INCLUDE[msCoName](../../includes/msconame-md.md)] nel registro eventi di Windows con un collegamento a un articolo della [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base relativo all'errore specifico.  
   
- Per disabilitare le funzionalità di segnalazione degli errori e dell'utilizzo delle funzionalità per tutte le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e per i relativi componenti dopo l'installazione, aprire la finestra di dialogo **Impostazioni segnalazione errori e utilizzo funzionalità** e deselezionare le caselle di controllo relative a **Utilizzo funzionalità**. Se **la segnalazione errori** è abilitata per più [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componenti di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]i [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]componenti condivisi,, e), è possibile disabilitare la segnalazione errori per ogni istanza di un singolo componente, nonché per i componenti condivisi, elencati come **altri**.  
+ Per disabilitare le funzionalità di segnalazione degli errori e dell'utilizzo delle funzionalità per tutte le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e per i relativi componenti dopo l'installazione, aprire la finestra di dialogo **Impostazioni segnalazione errori e utilizzo funzionalità** e deselezionare le caselle di controllo relative a **Utilizzo funzionalità**. Se la **segnalazione errori** è abilitata per più componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (i [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] componenti condivisi,, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e), è possibile disabilitare la segnalazione errori per ogni istanza di un singolo componente, nonché per i componenti condivisi, elencati come **altri**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Informazioni sulle condizioni di licenza di SQL Server](../../../2014/getting-started/about-the-sql-server-license-terms.md)  
   
   
