@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 65d2c5c1-921f-4eff-9ef7-149170ab61e8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3342af1de84e922ce63848c8fdffe5aa30ec309a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87ba55cab8186b6c63abd0918cd72f33c67e94a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150495"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047828"
 ---
 # <a name="set-up-a-sql-server-database-alert-windows"></a>Impostazione di un avviso del database di SQL Server (Windows)
   Tramite Monitoraggio di sistema è possibile creare un avviso da generare quando viene raggiunto un valore soglia per un contatore di Monitoraggio di sistema. In risposta all'avviso, Monitoraggio di sistema può avviare un'applicazione, ad esempio un'applicazione personalizzata programmata per gestire la condizione dell'avviso. Ad esempio, è possibile creare un avviso che viene generato quando il numero di deadlock supera un valore specifico.  
@@ -50,7 +49,7 @@ ms.locfileid: "63150495"
   
 10. Nella scheda **Pianificazione** impostare l'avvio e l'arresto pianificati per l'analisi dell'avviso.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creare un avviso del database di SQL Server](../performance-monitor/create-a-sql-server-database-alert.md)  
   
   

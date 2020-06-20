@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aa4b0d73d1cba3d612da9f666bb548dfbc54102f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 097c0e5568ba17b12f83d09e347eb3bf8b0bd7da
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054115"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965968"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Stima delle dimensioni di un indice non cluster
   Per stimare la quantità di spazio necessaria per archiviare un indice non cluster, effettuare le operazioni seguenti:  
@@ -181,7 +180,7 @@ ms.locfileid: "66054115"
   
 5.  Calcolare le dimensioni della riga di indice:  
   
-     ***Leaf_Row_Size***  = ***Fixed_Leaf_Size***Fixed_Leaf_Size + ***Variable_Leaf_Size***Variable_Leaf_Size + ***Leaf_Null_Bitmap*** + 1 (per l'overhead dell'intestazione di riga di una riga di indice) + 6 (per il puntatore ID della pagina figlio)  
+     ***Leaf_Row_Size***   =  ***Fixed_Leaf_Size***  +  ***Variable_Leaf_Size***  +  ***Leaf_Null_Bitmap*** + 1 (per l'overhead dell'intestazione di riga di una riga di indice) + 6 (per il puntatore ID della pagina figlio)  
   
 6.  Calcolare il numero di righe di indice per pagina (8096 byte liberi per pagina):  
   
@@ -210,7 +209,7 @@ ms.locfileid: "66054115"
   
 1.  Calcolare il numero di livelli non foglia dell'indice:  
   
-     ***Livelli non foglia*** = 1 + Index_Rows_Per_Page di log (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
+     ***Livelli non foglia*** = 1 + Index_Rows_Per_Page di log (***Num_Leaf_Pages***  /  ***Index_Rows_Per_Page***)  
   
      Arrotondare questo valore per eccesso al numero intero più vicino. Nel valore non è incluso il livello foglia dell'indice non cluster.  
   

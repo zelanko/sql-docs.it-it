@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ee9c43a6-aae9-4cfa-b18e-1da9266fabcd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9f321d8c048697652055723773c0a9868c5a29b1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e4da8be1b15247101917cf7442211bea9fdb0fcd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704018"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055543"
 ---
 # <a name="complete-word-intellisense"></a>Completa parola (IntelliSense)
   L'opzione Completa parola di [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense immette la parte rimanente di un nome di variabile, di comando o di funzione dopo che è stato digitato un numero di caratteri sufficiente per identificare il termine in modo univoco.  

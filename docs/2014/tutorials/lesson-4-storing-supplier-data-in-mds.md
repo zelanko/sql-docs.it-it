@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bacd9eaf-4d12-4f25-aec7-d785dec1b623
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 678a7d6ce075e6a1082856aa7962bb3f6eec522d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15f15ff1fd48321ed4f13826fb239b6cede46242
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489713"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006674"
 ---
 # <a name="lesson-4-storing-supplier-data-in-mds"></a>Lezione 4: Archiviazione dei dati fornitore in MDS
   Master Data Services (MDS) è una soluzione SQL Server per la gestione dei dati master. Nella gestione dei dati master vengono descritti gli sforzi fatti da un'organizzazione per individuare e definire elenchi non transazionali di dati.  
@@ -34,7 +33,7 @@ ms.locfileid: "65489713"
   
 1.  Creare il modello **Suppliers** in **MDS** tramite l' **applicazione Web gestione dati master**.  
   
-2.  Aprire **cleaned and Matched Supplier Data. xls** in Excel e usare il **componente aggiuntivo MDS per Excel** per creare un'entità denominata **Supplier** e caricare i dati in MDS.  
+2.  Aprire **Data.xlsdi fornitori puliti e corrispondenti** in Excel e usare il **componente aggiuntivo MDS per Excel** per creare un'entità denominata **Supplier** e caricare i dati in MDS.  
   
 3.  Verificare che i dati vengano creati in MDS usando il **Gestione dati master**.  
   

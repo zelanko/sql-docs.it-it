@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 525a52894c0e53ed6939c22370e38723ecb1309e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7f9c942b9b17ee544c645df3af6d9862e169bc96
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82714517"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019045"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>Chiamare SQLColumns su un tabella con colonne di tipo sparse
   In questo esempio viene illustrato come chiamare SQLColumns in una tabella con colonne di tipo sparse definite tramite ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

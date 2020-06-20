@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: f56c0736-dccc-41d2-afcf-71344aff143a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c2371109c8fa28c579cd90735a51a4ad3a790385
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f54f2a3520a0d34290cb81b411a5ce41a59d7c8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255067"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062177"
 ---
 # <a name="manage-schedules"></a>Gestione pianificazioni
-  Consente di visualizzare e modificare le proprietà per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le pianificazioni dei processi di Agent.  
+  Consente di visualizzare e modificare le proprietà per le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pianificazioni dei processi di Agent.  
   
 ## <a name="options"></a>Opzioni  
  **Pianificazioni disponibili**  
@@ -29,7 +28,7 @@ ms.locfileid: "63255067"
  **Nome**  
  Consente di visualizzare il nome della pianificazione.  
   
- **Attivata**  
+ **Enabled**  
  Selezionare questa opzione per abilitare la pianificazione.  
   
  **Descrizione**  
@@ -38,7 +37,7 @@ ms.locfileid: "63255067"
  **Processi nella pianificazione**  
  Consente di visualizzare l'elenco dei numeri di processo collegati alla pianificazione. Fare clic su un numero per visualizzare le proprietà del processo.  
   
- **Nuova**  
+ **Nuovo**  
  Fare clic su questo pulsante per creare una nuova pianificazione.  
   
  **Elimina**  
@@ -47,7 +46,7 @@ ms.locfileid: "63255067"
  **Proprietà**  
  Fare clic su questo pulsante per modificare le proprietà della pianificazione selezionata.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione e collegamento di pianificazioni ai processi](create-and-attach-schedules-to-jobs.md)  
   
   

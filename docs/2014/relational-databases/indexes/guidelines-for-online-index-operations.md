@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e2f7a25a4a6a4bb6b8f153a8b04b47aeb542265c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 907fe6a826607fe1cb403ad9b8debe6faf6771fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162481"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025416"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Linee guida per operazioni di indice online
   Quando si eseguono operazioni sugli indici online sono da ritenersi valide le linee guida seguenti:  
   
--   Gli indici cluster devono essere creati, ricompilati o eliminati offline quando la tabella sottostante contiene i tipi di dati LOB (Large Object) `image`seguenti:, **ntext**e `text`.  
+-   Gli indici cluster devono essere creati, ricompilati o eliminati offline quando la tabella sottostante contiene i tipi di dati LOB (Large Object) seguenti: `image` , **ntext**e `text` .  
   
 -   Non è possibile creare, ricompilare o eliminare online indici su tabelle temporanee locali. Questa limitazione non è valida per gli indici su tabelle temporanee globali.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 39651a0a-3a83-40f4-b8eb-b8b869607a94
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 743f8d8930652deadf3698ea16440b3361ae1789
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f742ac646b51a7eed6d5a1cab2877fb4802be59
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059068"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966801"
 ---
 # <a name="execute-process-task-editor-general-page"></a>Editor attività Esegui processo (pagina Generale)
   Usare la pagina **Generale** della finestra di dialogo **Editor attività Esegui processo** per assegnare un nome e una descrizione all'attività Esegui processo.  
@@ -36,7 +35,7 @@ ms.locfileid: "66059068"
  **Descrizione**  
  Consente di digitare una descrizione dell'attività Esegui processo.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività Esegui processo &#40;pagina processo&#41;](../../2014/integration-services/execute-process-task-editor-process-page.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  

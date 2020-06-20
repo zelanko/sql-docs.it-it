@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 402e9e0d787d6f60e069625e908faee4fbecaeca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e65863314943e07150aed8fc45494e7059fea21
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63049441"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062493"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>Gestione e manutenzione dell'istanza del cluster di failover
   Le attività di manutenzione quali l'aggiunta o la rimozione di nodi dall'istanza del cluster di failover (FCI) AlwaysOn esistente vengono portate a termine utilizzando il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le altre attività dell'amministrazione, quali la modifica delle risorse indirizzo IP, il recupero da determinati scenari di FCI, vengono eseguite mediante lo snap-in Gestione cluster di failover che è lo snap-in di gestione per il servizio Windows Server Failover Clustering (WSFC).  
@@ -62,7 +61,7 @@ ms.locfileid: "63049441"
 |Viene descritta la procedura utilizzata per recuperare da un errore di un cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Ripristino da un errore dell'istanza del cluster di failover](recover-from-failover-cluster-instance-failure.md)|  
 |Descrivere la procedura utilizzata per modificare la risorsa indirizzo IP per un'istanza del cluster di failover [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Modificare l'indirizzo IP di un'istanza del cluster di failover](change-the-ip-address-of-a-failover-cluster-instance.md)|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurare le impostazioni delle proprietà HealthCheckTimeout](configure-healthchecktimeout-property-settings.md)   
  [Configurare le impostazioni delle proprietà FailureConditionLevel](configure-failureconditionlevel-property-settings.md)   
  [Visualizzare e leggere il log di diagnostica dell'istanza del cluster di failover](view-and-read-failover-cluster-instance-diagnostics-log.md)  

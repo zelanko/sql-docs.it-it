@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 89d1e2fd7c4f0e414424ad678c7ea9f3936b02f0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 044d4bcb17144b4fcb6e233b1aadec84e20f2876
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176381"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966621"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Compilazione, distribuzione e debug di oggetti personalizzati
   Dopo avere scritto il codice per un oggetto personalizzato per [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], è necessario compilare l'assembly, distribuirlo, integrarlo in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] per renderlo disponibile per l'utilizzo nei pacchetti, quindi sottoporlo a test e debug.
@@ -70,7 +69,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 ```
 
 ##  <a name="deploying-the-assembly"></a><a name="deploying"></a> Distribuzione dell'assembly
- La [!INCLUDE[ssIS](../../includes/ssis-md.md)] finestra di progettazione individua gli oggetti personalizzati disponibili per l'utilizzo nei pacchetti enumerando i file trovati in una serie di cartelle create durante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] l'installazione di. Quando si utilizzano [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le impostazioni di installazione predefinite, questo set di cartelle si trova in **c:\Programmi\Microsoft SQL Server\120\DTS**. Tuttavia, se si crea un programma di installazione per l'oggetto personalizzato, è necessario controllare il valore della chiave del registro di sistema **\SOFTWARE\MICROSOFT\MICROSOFT SQL Server\120\SSIS\Setup\DtsPath di HKEY_LOCAL_MACHINE** per verificare il percorso della cartella.
+ La [!INCLUDE[ssIS](../../includes/ssis-md.md)] finestra di progettazione individua gli oggetti personalizzati disponibili per l'utilizzo nei pacchetti enumerando i file trovati in una serie di cartelle create durante l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installazione di. Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si utilizzano le impostazioni di installazione predefinite, questo set di cartelle si trova in **C:\Programmi\Microsoft SQL Server\120\DTS**. Tuttavia, se si crea un programma di installazione per l'oggetto personalizzato, è necessario controllare il valore della chiave del registro di sistema **\SOFTWARE\MICROSOFT\MICROSOFT SQL Server\120\SSIS\Setup\DtsPath di HKEY_LOCAL_MACHINE** per verificare il percorso della cartella.
 
  È possibile inserire l'assembly nella cartella in due modi:
 
@@ -115,7 +114,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 ##  <a name="testing-and-debugging-your-code"></a><a name="testing"></a> Test e debug del codice
  L'approccio più semplice per l'esecuzione del debug dei metodi di runtime di un oggetto personalizzato consiste nell'avviare **dtexec.exe** da [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] dopo aver compilato l'oggetto e nell'eseguire quindi un pacchetto che usa il componente.
 
- Se si desidera eseguire il debug dei metodi della fase di progettazione del componente, ad `Validate` esempio il metodo, aprire un pacchetto che utilizza il componente in una seconda [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]istanza di e connettersi al relativo processo **devenv. exe** .
+ Se si desidera eseguire il debug dei metodi della fase di progettazione del componente, ad esempio il `Validate` metodo, aprire un pacchetto che utilizza il componente in una seconda istanza di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] e connettersi al relativo **devenv.exe** processo.
 
  Se si vuole eseguire il debug anche dei metodi di runtime del componente quando un pacchetto è aperto e in esecuzione in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)], è necessario forzare una pausa nell'esecuzione del pacchetto in modo che sia possibile connettersi anche al processo **DtsDebugHost.exe**.
 
@@ -123,7 +122,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 
 1.  Firmare e compilare il progetto nella configurazione di debug, distribuirlo e installarlo nella Global Assembly Cache come descritto in questo argomento.
 
-2.  Nella scheda **debug** di **Proprietà progetto**Selezionare **Avvia programma esterno** come **azione di avvio**e individuare **dtexec. exe**, che viene installato per impostazione predefinita in c:\Programmi\Microsoft SQL Server\120\DTS\Binn.
+2.  Nella scheda **debug** di **Proprietà progetto**Selezionare **Avvia programma esterno** come **azione di avvio**e individuare **dtexec.exe**, che viene installato per impostazione predefinita in c:\Programmi\Microsoft SQL Server\120\DTS\Binn.
 
 3.  Nella casella di testo **Opzioni della riga di comando** in **Opzioni di avvio** immettere gli argomenti della riga di comando richiesti per eseguire un pacchetto in cui viene usato il componente. In genere l'argomento della riga di comando sarà costituito dall'opzione /F[ILE] seguita dal percorso e dal nome del file con estensione dtsx. Per altre informazioni, vedere [dtexec Utility](../packages/dtexec-utility.md).
 

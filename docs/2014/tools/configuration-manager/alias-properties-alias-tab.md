@@ -1,5 +1,5 @@
 ---
-title: '&lt;Proprietà&gt; alias (scheda alias) | Microsoft Docs'
+title: '&lt;&gt;Proprietà alias (scheda alias) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 2d1498e2-129c-4ce7-88e5-408e4037243c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2ee874caeaa8be9e7b050336f74bab9487f15884
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 559cc01b1fb2de42c061e21762495019e1896670
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035300"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008348"
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>Proprietà &lt;Alias&gt; (scheda Alias)
-  Un alias rappresenta un nome alternativo che può essere utilizzato per stabilire una connessione. L'alias incapsula gli elementi necessari di una stringa di connessione e li espone con un nome scelto dall'utente. Usare la pagina **Alias** nella finestra di dialogo **Proprietà \<** Nome alias **>** per visualizzare o specificare gli elementi della stringa di connessione di un alias.  
+  Un alias rappresenta un nome alternativo che può essere utilizzato per stabilire una connessione. L'alias incapsula gli elementi necessari di una stringa di connessione e li espone con un nome scelto dall'utente. Utilizzare la pagina **alias** nella finestra di dialogo ** \<**Alias name**> proprietà** per visualizzare o specificare gli elementi della stringa di connessione di un alias.  
   
 ## <a name="options"></a>Opzioni  
  **Nome alias**  

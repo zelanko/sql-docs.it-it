@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6b875808a5a9379f917b246cb871420a339519f7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 65e6e794c5858a68c4b2a9b298513911b487cf52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718809"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025734"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Costrutti supportati in stored procedure compilate in modo nativo
   Questo argomento contiene un elenco delle funzionalità supportate per le stored procedure compilate in modo nativo ([create procedure &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
@@ -66,7 +65,7 @@ ms.locfileid: "82718809"
 ##  <a name="supported-operators"></a><a name="so"></a>Operatori supportati  
  Di seguito vengono elencati gli operatori supportati.  
   
--   [Gli operatori di confronto &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/comparison-operators-transact-sql) (ad esempio, >, \< , >= e <=) sono supportati nelle istruzioni condizionali (se, while).  
+-   [Gli operatori di confronto &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/comparison-operators-transact-sql) (ad esempio, >, \<, > = e <=) sono supportati nelle istruzioni condizionali (if, while).  
   
 -   Operatori unari (+, -).  
   
@@ -112,7 +111,7 @@ ms.locfileid: "82718809"
   
 -   Predicato del filtro IS [NOT] NULL  
   
--   Da \< tabella con ottimizzazione per la memoria>  
+-   FROM \<memory optimized table>  
   
 -   [GROUP BY &#40;&#41;Transact-SQL](/sql/t-sql/queries/select-group-by-transact-sql) è supportato, insieme alle funzioni di aggregazione AVG, COUNT, COUNT_BIG, min, Max e Sum. MIN e MAX non sono supportate per i tipi nvarchar, char, varchar, varchar, varbinary e binary. La [clausola order by &#40;&#41;Transact-SQL](/sql/t-sql/queries/select-order-by-clause-transact-sql) è supportata con [Group by &#40;transact-SQL&#41;](/sql/t-sql/queries/select-group-by-transact-sql) se un'espressione nell'elenco ORDER BY viene visualizzata Verbatim nell'elenco Group by. Ad esempio, l'espressione GROUP BY a + b ORDER BY a + b è supportata, ma GROUP BY a, b ORDER BY a + b non lo è.  
   
@@ -172,7 +171,7 @@ ms.locfileid: "82718809"
 ##  <a name="limitations-on-sorting"></a><a name="los"></a>Limitazioni relative all'ordinamento  
  È possibile ordinare più di 8.000 righe in una query che usa [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) e una clausola [ORDER BY Clause &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql). Tuttavia, senza la [ clausola ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) può ordinare fino a 8.000 righe, meno se sono presenti join.  
   
- Se la query usa sia l'operatore [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) che una [clausola ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), è possibile specificare fino a 8192 righe per l'operatore TOP. Se si specificano più di 8192 righe, viene visualizzato il messaggio di errore: **Messaggio 41398, livello 16, stato 1, procedura *\<nomeProcedura>*, riga *\<<numeroRiga>*. L'operatore TOP può restituire un massimo di 8192 righe. Il numero richiesto è *\<numero>*.**  
+ Se la query usa sia l'operatore [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) che una [clausola ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), è possibile specificare fino a 8192 righe per l'operatore TOP. Se vengono specificate più di 8192 righe, viene restituito il messaggio di errore: messaggio **41398, livello 16, stato 1, procedura *\<procedureName>* , riga *\<lineNumber>* l'operatore Top può restituire un massimo di 8192 righe *\<number>* . è stato richiesto.**  
   
  Se non si dispone di una clausola TOP, è possibile ordinare qualsiasi numero di righe con ORDER BY.  
   

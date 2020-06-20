@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: c0b3f4c2-b77c-4485-be77-cec5fd382c86
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 64b1945ba990278241d38cebb029feab86d6d7bb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ab35cd849d020a265fac097f2a0314a81c20dd8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058026"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965442"
 ---
 # <a name="integration-services-features-and-tasks"></a>Funzionalità e attività di Integration Services
-  Trovare le informazioni necessarie a chiunque-designer, sviluppatore, analista o amministratore per creare e sviluppare [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] i pacchetti. Quindi, imparare come incorporare i pacchetti nelle applicazioni e nei siti Web.  
+  Trovare le informazioni necessarie a chiunque-designer, sviluppatore, analista o amministratore per creare e sviluppare i [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] pacchetti. Quindi, imparare come incorporare i pacchetti nelle applicazioni e nei siti Web.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Integration Services &#40;ambienti SSIS&#41; e studio](integration-services-ssis-development-and-management-tools.md)  

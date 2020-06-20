@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 27aa179a-f3ee-4c70-9e7b-e26dba28bc3c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a19c67f19c6b1b73947ef752a09516449eeec1a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb0cd83ca572a7cf2cb0993524c31808567c0f59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62655354"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055202"
 ---
 # <a name="smo-syntax-conventions"></a>Convenzioni della sintassi SMO
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Le convenzioni tipografiche SMO (Management Objects) sono basate [!INCLUDE[msCoName](../../includes/msconame-md.md)] su quelle utilizzate nei materiali di riferimento di Visual Studio .NET.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Le convenzioni tipografiche SMO (Management Objects) sono basate su quelle utilizzate nei [!INCLUDE[msCoName](../../includes/msconame-md.md)] materiali di riferimento di Visual Studio .NET.  
   
 |Convenzione|Utilizzo|  
 |----------------|--------------|  

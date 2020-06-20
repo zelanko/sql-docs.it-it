@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5b30a9f60f52b8b19875f5fb3c15242ce2c632fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b500c2c9a2e725577ac542b738f2ea6a536cfe34
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175422"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024943"
 ---
 # <a name="lesson-8-restore-a-database-to-azure-storage"></a>Lezione 8. Ripristinare un database in Archiviazione di Azure
   In questa lezione verrà illustrato come creare un file di backup in locale e quindi ripristinarlo in archiviazione di Azure. Si noti che è possibile fare in modo che il database sia in locale o in una macchina virtuale in Azure. È possibile seguire questa lezione anche senza aver completato le lezioni 4, 5, 6 e 7.  
@@ -85,7 +84,7 @@ ms.locfileid: "70175422"
   
 8.  Nella sezione **Ripristina file di database** come digitare quanto segue nel campo **Ripristina come** :  
   
-     Per file di dati, digitare `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`:. Per file di log, digitare `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`:.  
+     Per file di dati, digitare: `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf` . Per file di log, digitare: `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf` .  
   
      ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-8-8.gif "SQL 14 CTP2")  
   

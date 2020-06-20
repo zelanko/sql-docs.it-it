@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b99c2b73-5f77-45c1-a0f4-cfef7921dc84
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ae174bad657020f226f9a7cda2224770be312f97
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdb7531a6f42b19f57a50a6bce5247022ee00e6a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050778"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028373"
 ---
 # <a name="sqlbatchstarting-event-class"></a>SQL:BatchStarting - classe di evento
   La classe di evento SQL:BatchStarting indica l'avvio di un batch [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -50,7 +49,7 @@ ms.locfileid: "63050778"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|`bigint`|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

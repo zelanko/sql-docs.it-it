@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b9892ae3-ac15-48be-8b52-78dbed6467ed
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e8c6534449ffc4e89efcd49c943726bf6ecd9f26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65ace190004cab911dd8996642720620eba94935
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096651"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045158"
 ---
 # <a name="changes-to-behavior-in-syslockinfo-and-sp_lock"></a>Modifiche al comportamento in syslockinfo e sp_lock
   **syslockinfo** e **sp_lock** possono restituire valori imprevisti. Possono inoltre restituire righe aggiuntive, mentre le versioni precedenti di **syslockinfo** e **sp_lock** hanno restituito un massimo di due righe per ogni risorsa di blocco.  
@@ -29,14 +28,14 @@ ms.locfileid: "66096651"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Descrizione  
- In [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]le colonne **rsc_objid** e **rsc_indid** in **syslockinfo** e **objid** e le colonne **indid** in **sp_lock** restituiscono in modo coerente l'ID oggetto e l'ID dell'indice. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] è possibile che venga restituito il valore 0.  
+ In [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] le colonne **rsc_objid** e **rsc_indid** in **syslockinfo** e **objid** e le colonne **indid** in **sp_lock** restituiscono in modo coerente l'ID oggetto e l'ID dell'indice. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] è possibile che venga restituito il valore 0.  
   
- In [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], **syslockinfo** e **sp_lock** restituiscono un massimo di due righe per ogni risorsa di blocco specificata in una singola transazione. A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], quando il partizionamento dei blocchi è abilitato, è possibile che vengano restituite più righe per la stessa risorsa eseguita in una transazione. È possibile che vengano restituite fino a N + 1 righe, dove N è il numero di CPU. È inoltre possibile che vengano visualizzate richieste GRANTED e WAITING per la stessa risorsa, il che non è possibile in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].  
+ In [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] , **syslockinfo** e **sp_lock** restituiscono un massimo di due righe per ogni risorsa di blocco specificata in una singola transazione. A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], quando il partizionamento dei blocchi è abilitato, è possibile che vengano restituite più righe per la stessa risorsa eseguita in una transazione. È possibile che vengano restituite fino a N + 1 righe, dove N è il numero di CPU. È inoltre possibile che vengano visualizzate richieste GRANTED e WAITING per la stessa risorsa, il che non è possibile in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Problemi di aggiornamento motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [SQL Server 2014 preparazione aggiornamento &#91;nuova&#93;](sql-server-2014-upgrade-advisor.md)  
   

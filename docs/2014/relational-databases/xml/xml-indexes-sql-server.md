@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 14c10afd53e219b847625e50f8fc88714cad1111
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bf9a33bc18790bf8821d778746a708f78bbb3d8f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702281"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046356"
 ---
 # <a name="xml-indexes-sql-server"></a>Indici XML (SQL Server)
   È possibile creare indici XML sulle colonne con tipo di dati `xml`. Tutti i tag, i valori e i percorsi delle istanze XML presenti nella colonna vengono indicizzati, migliorando le prestazioni delle query. Per le applicazioni in uso l'utilizzo di un indice XML può risultare vantaggioso nelle situazioni seguenti:  
@@ -132,7 +131,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
   
 -   Se il carico di lavoro recupera più valori da singole istanze XML utilizzando espressioni di percorso, può essere utile eseguire il clustering dei percorsi nell'ambito di ogni istanza XML nell'indice PROPERTY. Questa situazione si presenta in genere negli scenari che prevedono l'utilizzo di contenitori di proprietà, quando vengono recuperate le proprietà di un oggetto di cui è noto il valore della chiave primaria.  
   
--   Se il carico di lavoro richiede l'esecuzione di query per il recupero di valori nelle istanze XML, senza conoscere i nomi degli elementi o attributi che contengono tali valori, sarà possibile creare l'indice VALUE. Questa situazione si verifica in genere nelle ricerche su assi discendenti, ad esempio //author[last-name="Howard"], in cui gli elementi \<author> possono essere presenti a ogni livello della gerarchia. Si verifica anche nelle query che usano caratteri jolly, ad esempio /book [@* = "novel"], in cui la query cerca elementi \<book> contenenti un attributo con valore "novel".  
+-   Se il carico di lavoro richiede l'esecuzione di query per il recupero di valori nelle istanze XML, senza conoscere i nomi degli elementi o attributi che contengono tali valori, sarà possibile creare l'indice VALUE. Questa situazione si verifica in genere con le ricerche di assi discendenti, ad esempio//Author [Last-Name = "Howard"], \<author> in cui gli elementi possono verificarsi a qualsiasi livello della gerarchia. Si verifica anche nelle query con caratteri jolly, ad esempio/Book [@ * = "Novel"], in cui la query Cerca \<book> gli elementi che hanno un attributo con valore "Novel".  
   
 ### <a name="path-secondary-xml-index"></a>Indice XML secondario PATH  
  Se in genere le query specificano espressioni di percorso nelle colonne di tipo `xml`, un indice secondario PATH potrebbe velocizzare la ricerca. Come precedentemente descritto in questo argomento, l'indice primario è utile nel caso di query che specificano il metodo **exist()** nella clausola WHERE. Se si aggiunge un indice secondario PATH, è possibile migliorare le prestazioni della ricerca in tali query.  

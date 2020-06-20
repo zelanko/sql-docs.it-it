@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 95b657064f36045dfd0d916c24097b81c0e44867
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2b5df47d05730b8f6ec6a82045686d462ace1682
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718859"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025563"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Costrutti Transact-SQL non supportati da OLTP in memoria
   Le tabelle con ottimizzazione per la memoria e le stored procedure compilate in modo nativo non supportano la superficie di attacco totale di [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzata dalle tabelle basate su disco e dalle stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretate. Quando si tenta di usare una delle funzionalità non supportate, il server restituisce un errore.  
@@ -35,36 +34,36 @@ ms.locfileid: "82718859"
 ## <a name="databases-that-use-in-memory-oltp"></a>Database che utilizzano OLTP in memoria  
  Nella tabella seguente vengono elencate le funzionalità e le parole chiave [!INCLUDE[tsql](../../includes/tsql-md.md)] che possono essere incluse nel testo del messaggio di un errore relativo a un database OLTP in memoria.  
   
-|Tipo|Nome|Soluzione|  
+|Type|Nome|Risoluzione|  
 |----------|----------|----------------|  
 |Opzione|AUTO_CLOSE|L'opzione di database AUTO_CLOSE=ON non è supportata con i database che contengono un filegroup MEMORY_OPTIMIZED_DATA.|  
 |Opzione|ATTACH_REBUILD_LOG|L'opzione di database CREATE ATTACH_REBUILD_LOG non è supportata con i database contenenti un filegroup MEMORY_OPTIMIZED_DATA.|  
-|Feature|DATABASE SNAPSHOT|La creazione di snapshot del database non è supportata con i database che contengono un filegroup MEMORY_OPTIMIZED_DATA.|  
-|Feature|Replica che utilizza 'database snapshot' o 'database snapshot character' come sync_method|La replica che utilizza 'database snapshot' or 'database snapshot character' come sync_method non è supportata con i database che contengono un filegroup MEMORY_OPTIMIZED_DATA.|  
-|Feature|DBCC CHECKDB<br /><br /> DBCC CHECKTABLE|DBCC CHECKDB ignora le tabelle ottimizzate per la memoria nel database.<br /><br /> DBCC CHECKTABLE avrà esito negativo per le tabelle ottimizzate per la memoria.|  
+|Funzionalità|DATABASE SNAPSHOT|La creazione di snapshot del database non è supportata con i database che contengono un filegroup MEMORY_OPTIMIZED_DATA.|  
+|Funzionalità|Replica che utilizza 'database snapshot' o 'database snapshot character' come sync_method|La replica che utilizza 'database snapshot' or 'database snapshot character' come sync_method non è supportata con i database che contengono un filegroup MEMORY_OPTIMIZED_DATA.|  
+|Funzionalità|DBCC CHECKDB<br /><br /> DBCC CHECKTABLE|DBCC CHECKDB ignora le tabelle ottimizzate per la memoria nel database.<br /><br /> DBCC CHECKTABLE avrà esito negativo per le tabelle ottimizzate per la memoria.|  
   
 ## <a name="memory-optimized-tables"></a>Tabelle con ottimizzazione per la memoria  
  Nella tabella seguente vengono elencate le parole chiave e le funzionalità di [!INCLUDE[tsql](../../includes/tsql-md.md)] che possono essere incluse nel testo del messaggio di un errore che interessa una tabella ottimizzata per la memoria e l'azione correttiva per risolvere l'errore.  
   
-|Tipo|Nome|Soluzione|  
+|Type|Nome|Risoluzione|  
 |----------|----------|----------------|  
-|Feature|ON|Le tabelle con ottimizzazione per la memoria non possono essere posizionate in uno schema di partizione o filegroup. Rimuovere la clausola ON dall'istruzione `CREATE TABLE`.|  
+|Funzionalità|ON|Le tabelle con ottimizzazione per la memoria non possono essere posizionate in uno schema di partizione o filegroup. Rimuovere la clausola ON dall'istruzione `CREATE TABLE`.|  
 |Tipo di dati|*Nome del tipo di dati*|Il tipo di dati indicato non è supportato. Sostituirlo con un tipo di dati supportato. Per ulteriori informazioni, vedere [tipi di dati supportati](supported-data-types-for-in-memory-oltp.md).|  
-|Feature|Colonne calcolate|Le colonne calcolate non sono supportate dalle tabelle ottimizzate per la memoria. Rimuovere le colonne calcolate dall'istruzione `CREATE TABLE`.|  
-|Feature|Replica|La replica non è supportata con le tabelle ottimizzate per la memoria.|  
-|Feature|FILESTREAM|L'archiviazione FILESTREAM non è supportata dalle colonne delle tabelle ottimizzate per la memoria. Rimuovere la parola chiave `FILESTREAM` dalla definizione della colonna.|  
-|Feature|SPARSE|Le colonne delle tabelle ottimizzate per la memoria non possono essere definite come SPARSE. Rimuovere la parola chiave `SPARSE` dalla definizione della colonna.|  
-|Feature|ROWGUIDCOL|L'opzione ROWGUIDCOL non è supportata dalle colonne delle tabelle ottimizzate per la memoria. Rimuovere la parola chiave `ROWGUIDCOL` dalla definizione della colonna.|  
-|Feature|FOREIGN KEY|I vincoli FOREIGN KEY non sono supportati dalle tabelle ottimizzate per la memoria. Rimuovere il vincolo dalla definizione della tabella.<br /><br /> Per informazioni su come ridurre la mancanza di supporto per i vincoli, vedere [migrazione dei vincoli check e Foreign Key](../../database-engine/migrating-check-and-foreign-key-constraints.md).|  
+|Funzionalità|Colonne calcolate|Le colonne calcolate non sono supportate dalle tabelle ottimizzate per la memoria. Rimuovere le colonne calcolate dall'istruzione `CREATE TABLE`.|  
+|Funzionalità|Replica|La replica non è supportata con le tabelle ottimizzate per la memoria.|  
+|Funzionalità|FILESTREAM|L'archiviazione FILESTREAM non è supportata dalle colonne delle tabelle ottimizzate per la memoria. Rimuovere la parola chiave `FILESTREAM` dalla definizione della colonna.|  
+|Funzionalità|SPARSE|Le colonne delle tabelle ottimizzate per la memoria non possono essere definite come SPARSE. Rimuovere la parola chiave `SPARSE` dalla definizione della colonna.|  
+|Funzionalità|ROWGUIDCOL|L'opzione ROWGUIDCOL non è supportata dalle colonne delle tabelle ottimizzate per la memoria. Rimuovere la parola chiave `ROWGUIDCOL` dalla definizione della colonna.|  
+|Funzionalità|FOREIGN KEY|I vincoli FOREIGN KEY non sono supportati dalle tabelle ottimizzate per la memoria. Rimuovere il vincolo dalla definizione della tabella.<br /><br /> Per informazioni su come ridurre la mancanza di supporto per i vincoli, vedere [migrazione dei vincoli check e Foreign Key](../../database-engine/migrating-check-and-foreign-key-constraints.md).|  
 |Funzionalità|CHECK|I vincoli CHECK non sono supportati dalle tabelle ottimizzate per la memoria. Rimuovere il vincolo dalla definizione della tabella.<br /><br /> Per informazioni su come ridurre la mancanza di supporto per i vincoli, vedere [migrazione dei vincoli check e Foreign Key](../../database-engine/migrating-check-and-foreign-key-constraints.md).|  
-|Feature|UNIQUE|I vincoli UNIQUE non sono supportati dalle tabelle ottimizzate per la memoria. Rimuovere il vincolo dalla definizione della tabella.<br /><br /> Per informazioni su come ridurre la mancanza di supporto per i vincoli, vedere [migrazione dei vincoli check e Foreign Key](../../database-engine/migrating-check-and-foreign-key-constraints.md).|  
+|Funzionalità|UNIQUE|I vincoli UNIQUE non sono supportati dalle tabelle ottimizzate per la memoria. Rimuovere il vincolo dalla definizione della tabella.<br /><br /> Per informazioni su come ridurre la mancanza di supporto per i vincoli, vedere [migrazione dei vincoli check e Foreign Key](../../database-engine/migrating-check-and-foreign-key-constraints.md).|  
 |Funzionalità|COLUMNSTORE|Gli indici COLUMNSTORE non sono supportati con le tabelle ottimizzate per la memoria. Specificare invece un indice NON CLUSTER o HASH NON CLUSTER.|  
 |Funzionalità|indice cluster|Specificare un indice non cluster. Nel caso di un indice di chiave primaria assicurarsi di specificare `PRIMARY KEY NONCLUSTERED [HASH]`.|  
 |Funzionalità|tabella codici non 1252|Le colonne delle tabelle ottimizzate per la memoria con tipi di dati `char` e `varchar` devono usare la tabella codici 1252. Utilizzare n(var)char anziché (var)char oppure regole di confronto con tabella codici 1252, ad esempio Latin1_General_BIN2. Per altre informazioni, vedere [Collations and Code Pages](../../database-engine/collations-and-code-pages.md).|  
-|Feature|DDL all'interno delle transazioni|Le tabelle con ottimizzazione per la memoria e le stored procedure compilate in modo nativo non possono essere create o eliminate nel contesto di una transazione utente. Non avviare una transazione e assicurarsi che l'impostazione della sessione IMPLICIT_TRANSACTIONS sia OFF prima di eseguire l'istruzione CREATE o DROP.|  
-|Feature|trigger DDL|Le tabelle con ottimizzazione per la memoria e le stored procedure compilate in modo nativo non possono essere create o eliminate se esiste un trigger di database o di server per l'operazione DDL. Rimuovere i trigger di database e di server da CREATE/DROP TABLE e CREATE/DROP PROCEDURE.|  
-|Feature|EVENT NOTIFICATION|Le tabelle con ottimizzazione per la memoria e le stored procedure compilate in modo nativo non possono essere create o eliminate se esiste una notifica degli eventi di database o di server per l'operazione DDL. Rimuovere le notifiche degli eventi di database e di server in CREATE TABLE o DROP TABLE e CREATE PROCEDURE o DROP PROCEDURE.|  
-|Feature|FileTable|Le tabelle con ottimizzazione per la memoria non possono essere create come tabelle di file. Rimuovere l'argomento `AS FileTable` dall'istruzione `CREATE TABLE`.|  
+|Funzionalità|DDL all'interno delle transazioni|Le tabelle con ottimizzazione per la memoria e le stored procedure compilate in modo nativo non possono essere create o eliminate nel contesto di una transazione utente. Non avviare una transazione e assicurarsi che l'impostazione della sessione IMPLICIT_TRANSACTIONS sia OFF prima di eseguire l'istruzione CREATE o DROP.|  
+|Funzionalità|trigger DDL|Le tabelle con ottimizzazione per la memoria e le stored procedure compilate in modo nativo non possono essere create o eliminate se esiste un trigger di database o di server per l'operazione DDL. Rimuovere i trigger di database e di server da CREATE/DROP TABLE e CREATE/DROP PROCEDURE.|  
+|Funzionalità|EVENT NOTIFICATION|Le tabelle con ottimizzazione per la memoria e le stored procedure compilate in modo nativo non possono essere create o eliminate se esiste una notifica degli eventi di database o di server per l'operazione DDL. Rimuovere le notifiche degli eventi di database e di server in CREATE TABLE o DROP TABLE e CREATE PROCEDURE o DROP PROCEDURE.|  
+|Funzionalità|FileTable|Le tabelle con ottimizzazione per la memoria non possono essere create come tabelle di file. Rimuovere l'argomento `AS FileTable` dall'istruzione `CREATE TABLE`.|  
 |Operazione|Aggiornamento di colonne chiave primaria|Le colonne chiave primaria delle tabelle ottimizzate per la memoria e dei tipi di tabella non possono essere aggiornate. Se la chiave primaria deve essere aggiornata, eliminare la vecchia riga e inserire una nuova riga con la chiave primaria aggiornata.|  
 |Operazione|CREATE INDEX|Gli indici delle tabelle ottimizzate per la memoria devono essere specificati inline con l'istruzione `CREATE TABLE`. Per aggiungere un indice in una tabella ottimizzata per la memoria, eliminare e ricreare la tabella includendo la nuova specifica dell'indice.|  
 |Operazione|MODIFICA TABELLA|La modifica delle tabelle ottimizzate per la memoria non è supportata. Eliminare e ricreare la tabella utilizzando la definizione della tabella aggiornata.|  
@@ -75,22 +74,22 @@ ms.locfileid: "82718859"
 |Operazione|ALTER AUTHORIZATION|La modifica del proprietario di una tabella ottimizzata per la memoria o di una stored procedure compilata in modo nativo non è supportata. Eliminare e ricreare la tabella o la stored procedure per modificare la proprietà.|  
 |Operazione|ALTER SCHEMA|La modifica dello schema di una tabella ottimizzata per la memoria o di una stored procedure compilata in modo nativo esistente non è supportata. Eliminare e ricreare la tabella o la stored procedure per modificare lo schema.|  
 |Operazione|DBCC CHECKTABLE|DBCC CHECKTABLE non è supportato con le tabelle ottimizzate per la memoria.|  
-|Feature|ANSI_PADDING OFF|L'opzione di sessione `ANSI_PADDING` deve essere impostata su ON durante la creazione delle tabelle ottimizzate per la memoria e delle stored procedure compilate in modo nativo. Eseguire `SET ANSI_PADDING ON` prima di eseguire l'istruzione CREATE.|  
+|Funzionalità|ANSI_PADDING OFF|L'opzione di sessione `ANSI_PADDING` deve essere impostata su ON durante la creazione delle tabelle ottimizzate per la memoria e delle stored procedure compilate in modo nativo. Eseguire `SET ANSI_PADDING ON` prima di eseguire l'istruzione CREATE.|  
 |Opzione|DATA_COMPRESSION|La compressione dati non è supportata dalle tabelle ottimizzate per la memoria. Rimuovere l'opzione dalla definizione della tabella.|  
-|Feature|DTC|Non è possibile accedere alle tabelle con ottimizzazione per la memoria e alle stored procedure compilate in modo nativo da transazioni distribuite. Utilizzare le transazioni SQL.|  
-|Feature|MARS (Multiple Active Result Sets)|MARS (Multiple Active Result Set) non è supportato con le tabelle ottimizzate per la memoria. L'errore può inoltre indicare l'utilizzo di un server collegato. Il server collegato può usare MARS. I server collegati non sono supportati con le tabelle ottimizzate per la memoria. Connettersi direttamente al server e al database che ospita le tabelle ottimizzate per la memoria.|  
+|Funzionalità|DTC|Non è possibile accedere alle tabelle con ottimizzazione per la memoria e alle stored procedure compilate in modo nativo da transazioni distribuite. Utilizzare le transazioni SQL.|  
+|Funzionalità|MARS (Multiple Active Result Sets)|MARS (Multiple Active Result Set) non è supportato con le tabelle ottimizzate per la memoria. L'errore può inoltre indicare l'utilizzo di un server collegato. Il server collegato può usare MARS. I server collegati non sono supportati con le tabelle ottimizzate per la memoria. Connettersi direttamente al server e al database che ospita le tabelle ottimizzate per la memoria.|  
 |Operazione|Tabelle con ottimizzazione per la memoria come destinazione di MERGE|Le tabelle con ottimizzazione per la memoria non possono essere la destinazione di un'operazione `MERGE`. Utilizzare l'istruzione `INSERT`, `UPDATE` o `DELETE`.|  
   
 ## <a name="indexes-on-memory-optimized-tables"></a>Indici in tabelle con ottimizzazione per la memoria  
  Nella tabella seguente vengono elencate le parole chiave e le funzionalità di [!INCLUDE[tsql](../../includes/tsql-md.md)] che possono essere inclusi nel testo del messaggio di un errore che interessa l'indice di una tabella ottimizzata per la memoria e l'azione correttiva per risolvere l'errore.  
   
-|Tipo|Nome|Soluzione|  
+|Type|Nome|Risoluzione|  
 |----------|----------|----------------|  
-|Feature|Indice filtrato|Gli indici filtrati non sono supportati con le tabelle ottimizzate per la memoria. Omettere la clausola `WHERE` dalla specifica dell'indice.|  
-|Feature|UNIQUE|Gli indici univoci non sono supportati dalle tabelle ottimizzate per la memoria. Rimuovere l'argomento `UNIQUE` dalla specifica dell'indice.|  
-|Feature|Colonne che ammettono i valori Null|Tutte le colonne della chiave di un indice in una tabella ottimizzata per la memoria devono essere specificate come `NOT NULL`. Includere il vincolo `NOT NULL` per tutte le colonne delle chiavi di indice.|  
-|Feature|regole di confronto non BIN2|Tutte le colonne di caratteri della chiave di un indice ottimizzato per la memoria devono essere dichiarate utilizzando le regole di confronto BIN2. Utilizzare la clausola `COLLATE` per impostare le regole di confronto nella definizione di colonna. Per altre informazioni, vedere [Collations and Code Pages](../../database-engine/collations-and-code-pages.md).|  
-|Feature|included_columns|Non è necessario specificare le colonne incluse per le tabelle ottimizzate per la memoria. Tutte le colonne della tabella ottimizzata per la memoria vengono incluse in modo implicito in ogni indice ottimizzato per la memoria.|  
+|Funzionalità|Indice filtrato|Gli indici filtrati non sono supportati con le tabelle ottimizzate per la memoria. Omettere la clausola `WHERE` dalla specifica dell'indice.|  
+|Funzionalità|UNIQUE|Gli indici univoci non sono supportati dalle tabelle ottimizzate per la memoria. Rimuovere l'argomento `UNIQUE` dalla specifica dell'indice.|  
+|Funzionalità|Colonne che ammettono i valori Null|Tutte le colonne della chiave di un indice in una tabella ottimizzata per la memoria devono essere specificate come `NOT NULL`. Includere il vincolo `NOT NULL` per tutte le colonne delle chiavi di indice.|  
+|Funzionalità|regole di confronto non BIN2|Tutte le colonne di caratteri della chiave di un indice ottimizzato per la memoria devono essere dichiarate utilizzando le regole di confronto BIN2. Utilizzare la clausola `COLLATE` per impostare le regole di confronto nella definizione di colonna. Per altre informazioni, vedere [Collations and Code Pages](../../database-engine/collations-and-code-pages.md).|  
+|Funzionalità|included_columns|Non è necessario specificare le colonne incluse per le tabelle ottimizzate per la memoria. Tutte le colonne della tabella ottimizzata per la memoria vengono incluse in modo implicito in ogni indice ottimizzato per la memoria.|  
 |Operazione|ALTER INDEX|La modifica degli indici nelle tabelle ottimizzate per la memoria non è supportata. In alternativa, eliminare la tabella e ricrearla utilizzando la specifica dell'indice aggiornata.|  
 |Operazione|DROP INDEX|L'eliminazione degli indici nelle tabelle ottimizzate per la memoria non è supportata. In alternativa, eliminare la tabella e ricrearla con gli indici desiderati.|  
 |Opzione dell'indice|*Opzione dell'indice*|L'opzione di indice indicata non è supportata con gli indici delle tabelle ottimizzate per la memoria. Rimuovere l'opzione dalla specifica dell'indice.|  
@@ -98,45 +97,45 @@ ms.locfileid: "82718859"
 ## <a name="nonclustered-hash-indexes"></a>Indici hash non cluster  
  Nella tabella seguente vengono elencate le parole chiave e le funzionalità di [!INCLUDE[tsql](../../includes/tsql-md.md)] che possono essere incluse nel testo del messaggio di un errore che interessa un indice hash non cluster e l'azione correttiva per risolvere l'errore.  
   
-|Tipo|Nome|Soluzione|  
+|Type|Nome|Risoluzione|  
 |----------|----------|----------------|  
 |Opzione|ASC/DESC|Gli indici hash non cluster non sono ordinati. Rimuovere le parole chiave `ASC` e `DESC` dalla specifica della chiave di indice.|  
   
 ## <a name="natively-compiled-stored-procedures"></a>stored procedure compilate in modo nativo  
  Nella tabella seguente vengono elencate le parole chiave e le funzionalità di [!INCLUDE[tsql](../../includes/tsql-md.md)] che possono essere incluse nel testo del messaggio di un errore che interessa le stored procedure compilate in modo nativo e l'azione correttiva per risolvere l'errore.  
   
-|Tipo|Feature|Soluzione|  
+|Type|Funzionalità|Risoluzione|  
 |----------|-------------|----------------|  
-|Feature|Variabili di tabella inline|I tipi di tabella non possono essere dichiarati inline con le dichiarazioni di variabili. I tipi di tabella devono essere dichiarati in modo esplicito utilizzando un'istruzione `CREATE TYPE`.|  
+|Funzionalità|Variabili di tabella inline|I tipi di tabella non possono essere dichiarati inline con le dichiarazioni di variabili. I tipi di tabella devono essere dichiarati in modo esplicito utilizzando un'istruzione `CREATE TYPE`.|  
 |Funzionalità|Cursori|I cursori non sono supportati nelle stored procedure compilate in modo nativo.<br /><br /> -Quando si esegue la procedura dal client, usare RPC anziché l'API del cursore. Con ODBC, evitare l'istruzione `EXECUTE` di [!INCLUDE[tsql](../../includes/tsql-md.md)] e specificare direttamente il nome della procedura.<br /><br /> -Quando si esegue la procedura da un [!INCLUDE[tsql](../../includes/tsql-md.md)] batch o da un altro stored procedure, evitare di usare un cursore con la stored procedure compilata in modo nativo.<br /><br /> -Quando si crea una stored procedure compilata in modo nativo, anziché usare un cursore, usare logica basata su set o un `WHILE` ciclo.|  
 |Funzionalità|Valori predefiniti del parametro non costanti|Quando si utilizzano i valori predefiniti con i parametri nelle stored procedure compilate in modo nativo, i valori devono essere costanti. Rimuovere tutti i caratteri jolly dalle dichiarazioni di parametro.|  
-|Feature|EXTERNAL|Le stored procedure CLR non possono essere compilate in modo nativo. Rimuovere la clausola AS EXTERNAL o l'opzione NATIVE_COMPILATION dall'istruzione CREATE PROCEDURE.|  
-|Feature|Stored procedure numerate|Le stored procedure compilate in modo nativo non possono essere numerate. Rimuovere il `;` *numero* dall' `CREATE PROCEDURE` istruzione.|  
-|Feature|INSERIMENTO a più righe... Istruzioni VALUEs|Non è possibile inserire più righe utilizzando la stessa istruzione `INSERT` in una stored procedure compilata in modo nativo. Creare istruzioni `INSERT` per ogni riga.|  
-|Feature|Espressioni di tabella comuni|Le espressioni di tabella comuni (CTE) non sono supportate nelle stored procedure compilate in modo nativo. Riformulare la query.|  
-|Feature|Sottoquery|Le sottoquery (query annidata in un'altra query) non sono supportate. Riformulare la query.|  
-|Feature|COMPUTE|La clausola `COMPUTE` non è supportata. Rimuoverla dalla query.|  
+|Funzionalità|EXTERNAL|Le stored procedure CLR non possono essere compilate in modo nativo. Rimuovere la clausola AS EXTERNAL o l'opzione NATIVE_COMPILATION dall'istruzione CREATE PROCEDURE.|  
+|Funzionalità|Stored procedure numerate|Le stored procedure compilate in modo nativo non possono essere numerate. Rimuovere il `;` *numero* dall' `CREATE PROCEDURE` istruzione.|  
+|Funzionalità|INSERIMENTO a più righe... Istruzioni VALUEs|Non è possibile inserire più righe utilizzando la stessa istruzione `INSERT` in una stored procedure compilata in modo nativo. Creare istruzioni `INSERT` per ogni riga.|  
+|Funzionalità|Espressioni di tabella comuni|Le espressioni di tabella comuni (CTE) non sono supportate nelle stored procedure compilate in modo nativo. Riformulare la query.|  
+|Funzionalità|Sottoquery|Le sottoquery (query annidata in un'altra query) non sono supportate. Riformulare la query.|  
+|Funzionalità|COMPUTE|La clausola `COMPUTE` non è supportata. Rimuoverla dalla query.|  
 |Funzionalità|SELECT INTO|La clausola `INTO` non è supportata con l'istruzione `SELECT`. Riscrivere la query come `INSERT INTO` *tabella* `SELECT` .|  
-|Feature|OUTPUT|La clausola `OUTPUT` non è supportata. Rimuoverla dalla query.|  
-|Feature|elenco delle colonne di inserimento incompleto|Nelle istruzioni `INSERT`, i valori devono essere specificati per tutte le colonne della tabella.|  
+|Funzionalità|OUTPUT|La clausola `OUTPUT` non è supportata. Rimuoverla dalla query.|  
+|Funzionalità|elenco delle colonne di inserimento incompleto|Nelle istruzioni `INSERT`, i valori devono essere specificati per tutte le colonne della tabella.|  
 |Funzione|*Funzione*|La funzione predefinita non è supportata nelle stored procedure compilate in modo nativo. Rimuovere la funzione dalla stored procedure. Per ulteriori informazioni sulle funzioni predefinite supportate, vedere [stored procedure compilate](../in-memory-oltp/natively-compiled-stored-procedures.md)in modo nativo.|  
 |Funzionalità|CASE|L'istruzione `CASE` non è supportata nelle query all'interno di stored procedure compilate in modo nativo. Creare query per ogni istruzione CASE. Per ulteriori informazioni, vedere [implementazione di un'istruzione case](implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md).|  
-|Feature|funzioni definite dall'utente|Le funzioni definite dall'utente non possono essere utilizzate nelle stored procedure compilate in modo nativo. Rimuovere il riferimento alla funzione dalla definizione delle procedure.|  
-|Feature|aggregazioni definite dall'utente|Le funzioni di aggregazione definite dall'utente non possono essere utilizzate nelle stored procedure compilate in modo nativo. Rimuovere il riferimento alla funzione dalla procedura.|  
-|Feature|metadati in modalità browse|Nelle stored procedure compilate in modo nativo non è ancora previsto il supporto per i metadati in modalità browse. Accertarsi che l'opzione di sessione `NO_BROWSETABLE` sia impostata su OFF.|  
-|Feature|DELETE con clausola FROM|La clausola `FROM` non è supportata dalle istruzioni `DELETE` con un'origine della tabella nelle stored procedure compilate in modo nativo.<br /><br /> `DELETE` con la clausola `FROM` è supportata quando viene utilizzata per indicare la tabella da cui eseguire l'eliminazione.|  
-|Feature|UPDATE con clausola FROM|La clausola `FROM` non è supportata dalle istruzioni `UPDATE` nelle stored procedure compilate in modo nativo.|  
-|Feature|stored procedure temporanee|Le stored procedure temporanee non possono essere compilate in modo nativo. Creare una stored procedure compilata in modo nativo permanente o una stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] temporaneamente interpretata.|  
+|Funzionalità|funzioni definite dall'utente|Le funzioni definite dall'utente non possono essere utilizzate nelle stored procedure compilate in modo nativo. Rimuovere il riferimento alla funzione dalla definizione delle procedure.|  
+|Funzionalità|aggregazioni definite dall'utente|Le funzioni di aggregazione definite dall'utente non possono essere utilizzate nelle stored procedure compilate in modo nativo. Rimuovere il riferimento alla funzione dalla procedura.|  
+|Funzionalità|metadati in modalità browse|Nelle stored procedure compilate in modo nativo non è ancora previsto il supporto per i metadati in modalità browse. Accertarsi che l'opzione di sessione `NO_BROWSETABLE` sia impostata su OFF.|  
+|Funzionalità|DELETE con clausola FROM|La clausola `FROM` non è supportata dalle istruzioni `DELETE` con un'origine della tabella nelle stored procedure compilate in modo nativo.<br /><br /> `DELETE` con la clausola `FROM` è supportata quando viene utilizzata per indicare la tabella da cui eseguire l'eliminazione.|  
+|Funzionalità|UPDATE con clausola FROM|La clausola `FROM` non è supportata dalle istruzioni `UPDATE` nelle stored procedure compilate in modo nativo.|  
+|Funzionalità|stored procedure temporanee|Le stored procedure temporanee non possono essere compilate in modo nativo. Creare una stored procedure compilata in modo nativo permanente o una stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] temporaneamente interpretata.|  
 |Livello di isolamento|READ UNCOMMITTED|Il livello di isolamento READ UNCOMMITTED non è supportato dalle stored procedure compilate in modo nativo. Utilizzare un livello di isolamento supportato, ad esempio SNAPSHOT.|  
 |Livello di isolamento|READ COMMITTED|Il livello di isolamento READ UNCOMMITTED non è supportato dalle stored procedure compilate in modo nativo. Utilizzare un livello di isolamento supportato, ad esempio SNAPSHOT.|  
-|Feature|tabelle temporanee|Le tabelle del tempdb non possono essere utilizzate nelle stored procedure compilate in modo nativo. In alternativa, usare una variabile di tabella o una tabella ottimizzata per la memoria con DURABILITY=SCHEMA_ONLY.|  
-|Feature|MARS|MARS (Multiple Active Result Sets) non è supportato con le stored procedure compilate in modo nativo. L'errore può inoltre indicare l'utilizzo di un server collegato. Il server collegato può usare MARS. I server collegati non sono supportati con le stored procedure compilate in modo nativo. Connettersi direttamente al server e al database che ospita le stored procedure compilate in modo nativo.|  
-|Feature|DTC|Non è possibile accedere alle tabelle con ottimizzazione per la memoria e alle stored procedure compilate in modo nativo da transazioni distribuite. Utilizzare le transazioni SQL.|  
-|Feature|regole di confronto non BIN2|Il confronto, l'ordinamento e altre operazioni delle stringhe di caratteri nelle stored procedure compilate in modo nativo richiedono l'utilizzo di regole di confronto BIN2. Utilizzare la clausola COLLATE oppure le colonne e le variabili con le regole di confronto appropriate. Per altre informazioni, vedere [Collations and Code Pages](../../database-engine/collations-and-code-pages.md).|  
-|Feature|Troncamento delle stringhe di caratteri con regole di confronto SC.|Le stringhe di caratteri con le regole di confronto `_SC` utilizzano la codifica UTF-16. La conversione di un valore n(var)char in un valore n(var)char con lunghezza ridotta comporta il troncamento. Ciò non è supportato per i valori UTF-16 delle stored procedure compilate in modo nativo. Evitare il troncamento delle stringhe UTF-16.|  
-|Feature|EXECUTE WITH RECOMPILE|L'opzione `WITH RECOMPILE` non è supportata dalle stored procedure compilate in modo nativo.|  
-|Feature|LEN e SUBSTRING con un argomento nelle regole di confronto SC|Le stringhe di caratteri con le regole di confronto _SC utilizzano la codifica UTF-16. Le funzioni predefinite LEN e SUBSTRING, quando utilizzate all'interno di stored procedure compilate in modo native, non supportano la codifica UTF-16. Utilizzare regole di confronto diverse o evitare di usare queste funzioni.|  
-|Feature|Esecuzione dalla connessione amministrativa dedicata.|Le stored procedure compilate in modo nativo non possono essere eseguite dalla connessione amministrativa dedicata. Utilizzare una connessione normale.|  
+|Funzionalità|tabelle temporanee|Le tabelle del tempdb non possono essere utilizzate nelle stored procedure compilate in modo nativo. In alternativa, usare una variabile di tabella o una tabella ottimizzata per la memoria con DURABILITY=SCHEMA_ONLY.|  
+|Funzionalità|MARS|MARS (Multiple Active Result Sets) non è supportato con le stored procedure compilate in modo nativo. L'errore può inoltre indicare l'utilizzo di un server collegato. Il server collegato può usare MARS. I server collegati non sono supportati con le stored procedure compilate in modo nativo. Connettersi direttamente al server e al database che ospita le stored procedure compilate in modo nativo.|  
+|Funzionalità|DTC|Non è possibile accedere alle tabelle con ottimizzazione per la memoria e alle stored procedure compilate in modo nativo da transazioni distribuite. Utilizzare le transazioni SQL.|  
+|Funzionalità|regole di confronto non BIN2|Il confronto, l'ordinamento e altre operazioni delle stringhe di caratteri nelle stored procedure compilate in modo nativo richiedono l'utilizzo di regole di confronto BIN2. Utilizzare la clausola COLLATE oppure le colonne e le variabili con le regole di confronto appropriate. Per altre informazioni, vedere [Collations and Code Pages](../../database-engine/collations-and-code-pages.md).|  
+|Funzionalità|Troncamento delle stringhe di caratteri con regole di confronto SC.|Le stringhe di caratteri con le regole di confronto `_SC` utilizzano la codifica UTF-16. La conversione di un valore n(var)char in un valore n(var)char con lunghezza ridotta comporta il troncamento. Ciò non è supportato per i valori UTF-16 delle stored procedure compilate in modo nativo. Evitare il troncamento delle stringhe UTF-16.|  
+|Funzionalità|EXECUTE WITH RECOMPILE|L'opzione `WITH RECOMPILE` non è supportata dalle stored procedure compilate in modo nativo.|  
+|Funzionalità|LEN e SUBSTRING con un argomento nelle regole di confronto SC|Le stringhe di caratteri con le regole di confronto _SC utilizzano la codifica UTF-16. Le funzioni predefinite LEN e SUBSTRING, quando utilizzate all'interno di stored procedure compilate in modo native, non supportano la codifica UTF-16. Utilizzare regole di confronto diverse o evitare di usare queste funzioni.|  
+|Funzionalità|Esecuzione dalla connessione amministrativa dedicata.|Le stored procedure compilate in modo nativo non possono essere eseguite dalla connessione amministrativa dedicata. Utilizzare una connessione normale.|  
 |Operazione|ALTER PROCEDURE|Le stored procedure compilate in modo nativo non possono essere modificate. Per modificare la definizione della procedura, eliminare e ricreare la stored procedure.|  
 |Operazione|punto di salvataggio|Le stored procedure compilate in modo nativo non possono essere richiamate dalle transazioni che hanno un punto di salvataggio attivo. Rimuovere il punto di salvataggio dalla transazione.|  
 |Operazione|ALTER AUTHORIZATION|La modifica del proprietario di una tabella ottimizzata per la memoria o di una stored procedure compilata in modo nativo non è supportata. Eliminare e ricreare la tabella o la stored procedure per modificare la proprietà.|  
@@ -146,7 +145,7 @@ ms.locfileid: "82718859"
 |Operatore|OPENXML|Questo operatore non è supportato. Rimuovere `OPENXML` dalla stored procedure compilata in modo nativo.|  
 |Operatore|CONTAINSTABLE|Questo operatore non è supportato. Rimuovere `CONTAINSTABLE` dalla stored procedure compilata in modo nativo.|  
 |Operatore|FREETEXTTABLE|Questo operatore non è supportato. Rimuovere `FREETEXTTABLE` dalla stored procedure compilata in modo nativo.|  
-|Feature|funzioni con valori di tabella|Non è possibile fare riferimento alle funzioni con valori di tabella nelle stored procedure compilate in modo nativo. Una soluzione alternativa possibile per questa restrizione consiste nell'aggiungere la logica nelle funzioni con valori di tabella al corpo della procedura.|  
+|Funzionalità|funzioni con valori di tabella|Non è possibile fare riferimento alle funzioni con valori di tabella nelle stored procedure compilate in modo nativo. Una soluzione alternativa possibile per questa restrizione consiste nell'aggiungere la logica nelle funzioni con valori di tabella al corpo della procedura.|  
 |Operatore|CHANGETABLE|Questo operatore non è supportato. Rimuovere `CHANGETABLE` dalla stored procedure compilata in modo nativo.|  
 |Operatore|GOTO|Questo operatore non è supportato. Utilizzare altri costrutti procedurali come WHILE.|  
 |Operatore|EXECUTE, INSERT EXEC|L'annidamento di stored procedure compilate in modo nativo non è supportato. Le operazioni necessarie possono essere specificate inline durante la definizione della stored procedure.|  
@@ -181,29 +180,29 @@ ms.locfileid: "82718859"
 |Funzione di rango|*Funzione di rango*|Le funzioni di rango non sono supportate nelle stored procedure compilate in modo nativo. Rimuoverle dalla definizione della procedura.|  
 |Funzione|*Funzione*|Questa funzione non è supportata. Rimuoverla dalla stored procedure compilata in modo nativo.|  
 |.|*Istruzione*|Questa istruzione non è supportata. Rimuoverla dalla stored procedure compilata in modo nativo.|  
-|Feature|MIN e MAX utilizzati con stringhe binarie e di caratteri|Le funzioni di aggregazione `MIN` e `MAX` non possono essere utilizzate per i valori delle stringhe binarie e di caratteri all'interno di stored procedure compilate in modo nativo.|  
-|Feature|GROUP BY senza funzione di aggregazione|Nelle stored procedure compilate in modo nativo, se una query include una clausola `GROUP BY` deve usare anche una funzione di aggregazione nella clausola SELECT o HAVING. Aggiungere una funzione di aggregazione alla query.|  
-|Feature|GROUP BY ALL|ALL non può essere utilizzato con le clausole GROUP BY nelle stored procedure compilate in modo nativo. Rimuovere ALL dalla clausola GROUP BY.|  
-|Feature|GROUP BY ()|il raggruppamento da un elenco vuoto non è supportato. Rimuovere la clausola GROUP BY o includere colonne nell'elenco di raggruppamento.|  
-|Feature|ROLLUP|`ROLLUP` non può essere utilizzato con le clausole `GROUP BY` nelle stored procedure compilate in modo nativo. Rimuovere `ROLLUP` dalla definizione della procedura.|  
-|Feature|CUBE|`CUBE` non può essere utilizzato con le clausole `GROUP BY` nelle stored procedure compilate in modo nativo. Rimuovere `CUBE` dalla definizione della procedura.|  
-|Feature|GROUPING SETS|`GROUPING SETS` non può essere utilizzato con le clausole `GROUP BY` nelle stored procedure compilate in modo nativo. Rimuovere `GROUPING SETS` dalla definizione della procedura.|  
-|Feature|BEGIN TRANSACTION, COMMIT TRANSACTION e ROLLBACK TRANSACTION|Utilizzare i blocchi ATOMIC per controllare le transazioni e la gestione degli errori. Per altre informazioni, vedere [Atomic Blocks](atomic-blocks-in-native-procedures.md).|  
-|Feature|Dichiarazioni di variabili di tabelle inline.|Le variabili di tabella devono fare riferimento ai tipi di tabella ottimizzata per la memoria definiti in modo esplicito. È consigliabile creare un tipo di tabella ottimizzata per la memoria e usare tale tipo per la dichiarazione di variabili, anziché specificare il tipo inline.|  
-|Feature|sp_recompile|La ricompilazione di stored procedure compilate in modo nativo non è supportata. Eliminare e ricreare la stored procedure.|  
-|Feature|EXECUTE AS CALLER|La clausola `EXECUTE AS` è obbligatoria. Ma `EXECUTE AS CALLER` non è supportato. Utilizzare `EXECUTE AS OWNER` , `EXECUTE AS` *User*o `EXECUTE AS SELF` .|  
-|Feature|Tabelle basate su disco|Non è possibile accedere alle tabelle basate su dico dalle stored procedure compilate in modo nativo. Rimuovere i riferimenti alle tabelle basate su disco dalle stored procedure compilate in modo nativo. In alternativa, eseguire la migrazione delle tabelle basate su disco alle tabelle con ottimizzazione per la memoria.|  
-|Feature|Viste|Non è possibile accedere alle viste dalle stored procedure compilate in modo nativo. Anziché alle viste, fare riferimento alle tabelle di base sottostanti.|  
-|Feature|Funzioni con valori di tabella|Non è possibile accedere alle funzioni con valori di tabella dalle stored procedure compilate in modo nativo. Rimuovere i riferimenti alle funzioni con valori di tabella dalle stored procedure compilate in modo nativo.|  
+|Funzionalità|MIN e MAX utilizzati con stringhe binarie e di caratteri|Le funzioni di aggregazione `MIN` e `MAX` non possono essere utilizzate per i valori delle stringhe binarie e di caratteri all'interno di stored procedure compilate in modo nativo.|  
+|Funzionalità|GROUP BY senza funzione di aggregazione|Nelle stored procedure compilate in modo nativo, se una query include una clausola `GROUP BY` deve usare anche una funzione di aggregazione nella clausola SELECT o HAVING. Aggiungere una funzione di aggregazione alla query.|  
+|Funzionalità|GROUP BY ALL|ALL non può essere utilizzato con le clausole GROUP BY nelle stored procedure compilate in modo nativo. Rimuovere ALL dalla clausola GROUP BY.|  
+|Funzionalità|GROUP BY ()|il raggruppamento da un elenco vuoto non è supportato. Rimuovere la clausola GROUP BY o includere colonne nell'elenco di raggruppamento.|  
+|Funzionalità|ROLLUP|`ROLLUP` non può essere utilizzato con le clausole `GROUP BY` nelle stored procedure compilate in modo nativo. Rimuovere `ROLLUP` dalla definizione della procedura.|  
+|Funzionalità|CUBE|`CUBE` non può essere utilizzato con le clausole `GROUP BY` nelle stored procedure compilate in modo nativo. Rimuovere `CUBE` dalla definizione della procedura.|  
+|Funzionalità|GROUPING SETS|`GROUPING SETS` non può essere utilizzato con le clausole `GROUP BY` nelle stored procedure compilate in modo nativo. Rimuovere `GROUPING SETS` dalla definizione della procedura.|  
+|Funzionalità|BEGIN TRANSACTION, COMMIT TRANSACTION e ROLLBACK TRANSACTION|Utilizzare i blocchi ATOMIC per controllare le transazioni e la gestione degli errori. Per altre informazioni, vedere [Atomic Blocks](atomic-blocks-in-native-procedures.md).|  
+|Funzionalità|Dichiarazioni di variabili di tabelle inline.|Le variabili di tabella devono fare riferimento ai tipi di tabella ottimizzata per la memoria definiti in modo esplicito. È consigliabile creare un tipo di tabella ottimizzata per la memoria e usare tale tipo per la dichiarazione di variabili, anziché specificare il tipo inline.|  
+|Funzionalità|sp_recompile|La ricompilazione di stored procedure compilate in modo nativo non è supportata. Eliminare e ricreare la stored procedure.|  
+|Funzionalità|EXECUTE AS CALLER|La clausola `EXECUTE AS` è obbligatoria. Ma `EXECUTE AS CALLER` non è supportato. Utilizzare `EXECUTE AS OWNER` , `EXECUTE AS` *User*o `EXECUTE AS SELF` .|  
+|Funzionalità|Tabelle basate su disco|Non è possibile accedere alle tabelle basate su dico dalle stored procedure compilate in modo nativo. Rimuovere i riferimenti alle tabelle basate su disco dalle stored procedure compilate in modo nativo. In alternativa, eseguire la migrazione delle tabelle basate su disco alle tabelle con ottimizzazione per la memoria.|  
+|Funzionalità|Viste|Non è possibile accedere alle viste dalle stored procedure compilate in modo nativo. Anziché alle viste, fare riferimento alle tabelle di base sottostanti.|  
+|Funzionalità|Funzioni con valori di tabella|Non è possibile accedere alle funzioni con valori di tabella dalle stored procedure compilate in modo nativo. Rimuovere i riferimenti alle funzioni con valori di tabella dalle stored procedure compilate in modo nativo.|  
   
 ## <a name="transactions-that-access-memory-optimized-tables"></a>Transazioni che accedono alle tabelle con ottimizzazione per la memoria  
  Nella tabella seguente vengono elencate le parole chiave e le funzionalità di [!INCLUDE[tsql](../../includes/tsql-md.md)] che possono essere incluse nel testo del messaggio di un errore che interessa le transazioni che accedono alle tabelle ottimizzate per la memoria e l'azione correttiva per risolvere l'errore.  
   
-|Tipo|Nome|Soluzione|  
+|Type|Nome|Risoluzione|  
 |----------|----------|----------------|  
-|Feature|punto di salvataggio|La creazione di punti di salvataggio espliciti nelle transazioni che accedono alle tabelle ottimizzate per la memoria non è supportata.|  
-|Feature|transazione associata|Le sessioni associate non possono partecipare alle transazioni che accedono alle tabelle ottimizzate per la memoria. Non associare la sessione prima di eseguire la procedura.|  
-|Feature|DTC|Le transazioni che accedono alle tabelle ottimizzate per la memoria non possono essere transazioni distribuite.|  
+|Funzionalità|punto di salvataggio|La creazione di punti di salvataggio espliciti nelle transazioni che accedono alle tabelle ottimizzate per la memoria non è supportata.|  
+|Funzionalità|transazione associata|Le sessioni associate non possono partecipare alle transazioni che accedono alle tabelle ottimizzate per la memoria. Non associare la sessione prima di eseguire la procedura.|  
+|Funzionalità|DTC|Le transazioni che accedono alle tabelle ottimizzate per la memoria non possono essere transazioni distribuite.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Migrazione a OLTP in memoria](migrating-to-in-memory-oltp.md)  

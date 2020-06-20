@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9c077fdb85612c5e3f574d9d0236b07f149b9c3a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f82e5eb63122f6a965e3a001b8124445cbe91675
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057980"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965419"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Conversione guidata progetto di Integration Services
   Con la **Conversione guidata progetto di Integration Services** è possibile convertire un progetto nel modello di distribuzione del progetto.  
@@ -100,10 +99,10 @@ ms.locfileid: "66057980"
  **Nome pacchetto**  
  Viene elencato il file del pacchetto.  
   
- **Stato**  
+ **Status**  
  Viene indicato se un pacchetto è pronto per la conversione nel modello di distribuzione del progetto.  
   
- **Messaggio**  
+ **Message**  
  Viene visualizzato un messaggio associato al pacchetto.  
   
  **Password**  
@@ -112,7 +111,7 @@ ms.locfileid: "66057980"
  **Applica a selezione**  
  Fare clic per applicare la password nella casella di testo **Password** ai pacchetti selezionati.  
   
- **Aggiorna**  
+ **Refresh** (Aggiornamento)  
  Viene aggiornato l'elenco dei pacchetti.  
   
 ##  <a name="set-options-on-the-select-destination-page"></a><a name="destination"></a>Impostare le opzioni nella pagina Seleziona destinazione  
@@ -168,19 +167,19 @@ ms.locfileid: "66057980"
  **Pacchetto**  
  Viene elencato il file del pacchetto.  
   
- **Type**  
+ **Tipo**  
  Viene elencato il tipo di configurazione, ad esempio un file di configurazione XML.  
   
  **Stringa di configurazione**  
  Viene elencato il percorso del file di configurazione.  
   
- **Stato**  
+ **Status**  
  Viene visualizzato un messaggio di stato per la configurazione. Fare clic sul messaggio per visualizzare il relativo testo completo.  
   
  **Aggiungi configurazioni**  
  Aggiungere le configurazioni del pacchetto contenute in altri progetti all'elenco delle configurazioni disponibili che si desidera sostituire con i parametri. È possibile selezionare le configurazioni archiviate in un file system o in SQL Server.  
   
- **Aggiorna**  
+ **Refresh** (Aggiornamento)  
  Fare clic su questa opzione per aggiornare l'elenco delle configurazioni.  
   
  **Rimuovi configurazioni da tutti i pacchetti dopo la conversione**  
@@ -241,7 +240,7 @@ ms.locfileid: "66057980"
  **Salvare il report**  
  Fare clic su questa opzione per salvare un riepilogo della conversione del progetto in un file con estensione xml.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Distribuire progetti nel server Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
   
   

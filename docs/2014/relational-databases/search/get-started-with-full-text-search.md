@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fd5ced641ee8fc17f0be7d7b6e19aff17dcb69bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eec806bffba330ac3ab995c1b3bfd3504589ecfd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011290"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063293"
 ---
 # <a name="get-started-with-full-text-search"></a>Introduzione alla ricerca full-text
   Per impostazione predefinita, nei database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è abilitata la funzionalità full-text. Per utilizzare un indice full-text in una tabella, è tuttavia necessario impostare la funzionalità di indicizzazione full-text nelle colonne delle tabelle a cui si desidera accedere mediante il motore di ricerca full-text.  
@@ -34,7 +33,7 @@ ms.locfileid: "66011290"
   
     1.  Identificare ogni colonna di testo che si desidera includere nell'indice full-text.  
   
-    2.  Se una determinata colonna contiene documenti archiviati come dati binari (`varbinary(max)`o `image` dati), è necessario specificare una colonna di tabella (la *colonna del tipo*) che identifichi il tipo di ogni documento nella colonna da indicizzare.  
+    2.  Se una determinata colonna contiene documenti archiviati come dati binari ( `varbinary(max)` o `image` dati), è necessario specificare una colonna di tabella (la *colonna del tipo*) che identifichi il tipo di ogni documento nella colonna da indicizzare.  
   
     3.  Specificare la lingua che verrà utilizzata dalla ricerca full-text nei documenti nella colonna.  
   
@@ -91,7 +90,7 @@ ms.locfileid: "66011290"
   
  Quando si assegna una tabella a un catalogo full-text, considerare le linee guida seguenti:  
   
--   Selezionare sempre il più piccolo indice univoco disponibile per la chiave univoca full-text. Un indice basato su Integer a 4 byte è ottimale. Ciò consente di ridurre significativamente le [!INCLUDE[msCoName](../../includes/msconame-md.md)] risorse richieste dal servizio di ricerca nell'file System. Se la chiave primaria è di grandi dimensioni (oltre 100 byte), considerare la possibilità di scegliere un altro indice univoco nella tabella (o di creare un altro indice univoco) come chiave univoca full-text. In caso contrario, se le dimensioni della chiave univoca raggiungono il massimo consentito (900 byte), non sarà possibile eseguire il popolamento full-text.  
+-   Selezionare sempre il più piccolo indice univoco disponibile per la chiave univoca full-text. Un indice basato su Integer a 4 byte è ottimale. Ciò consente di ridurre significativamente le risorse richieste dal [!INCLUDE[msCoName](../../includes/msconame-md.md)] servizio di ricerca nell'file System. Se la chiave primaria è di grandi dimensioni (oltre 100 byte), considerare la possibilità di scegliere un altro indice univoco nella tabella (o di creare un altro indice univoco) come chiave univoca full-text. In caso contrario, se le dimensioni della chiave univoca raggiungono il massimo consentito (900 byte), non sarà possibile eseguire il popolamento full-text.  
   
 -   Se viene indicizzata una tabella che include milioni di righe, assegnarla al proprio catalogo full-text.  
   
@@ -101,14 +100,14 @@ ms.locfileid: "66011290"
 ### <a name="associating-a-stoplist-with-the-full-text-index"></a>Associazione di un elenco di parole non significative all'indice full-text  
  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sono stati introdotti gli elenchi di parole non significative. Un *elenco di parole non significative* è un elenco di termini che non vengono considerati nelle query, viene associato a ogni indice full-text e le parole in esso contenute vengono applicate alle query full-text di quell'indice. Per impostazione predefinita, a un nuovo indice full-text viene associato l'elenco di parole non significative di sistema. È tuttavia possibile creare e utilizzare un elenco di parole non significative personalizzato. Per altre informazioni, vedere [Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
- Ad esempio, l'[!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzione [CREATE FULLTEXT](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) index seguente crea un nuovo oggetto di parole non significative full-text denominato myStoplist3 effettuando copiando dall'oggetto di parole non significative di sistema:  
+ Ad esempio, l'istruzione [CREATE FULLTEXT](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) index seguente [!INCLUDE[tsql](../../../includes/tsql-md.md)] Crea un nuovo oggetto di parole non significative full-text denominato myStoplist3 effettuando copiando dall'oggetto di parole non significative di sistema:  
   
 ```  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
- L'[!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzione [ALTER FULLTEXT](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql) index seguente modifica un oggetto di parole non significative denominato WordList, aggiungendo la parola ' en ', prima per lo spagnolo e poi per il francese:  
+ L'istruzione [ALTER FULLTEXT](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql) index seguente [!INCLUDE[tsql](../../../includes/tsql-md.md)] modifica un oggetto di parole non significative denominato WordList, aggiungendo la parola ' en ', prima per lo spagnolo e poi per il francese:  
   
 ```  
 ALTER FULLTEXT STOPLIST MyStoplist ADD 'en' LANGUAGE 'Spanish';  
@@ -201,7 +200,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
 |[sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)|Restituisce informazioni sui popolamenti di indici full-text in corso.|  
   
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
  [CREAZIONE di un &#40;di parole non significative full-text&#41;Transact-SQL](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   

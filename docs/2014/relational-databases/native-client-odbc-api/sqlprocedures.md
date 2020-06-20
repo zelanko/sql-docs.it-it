@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ec41f017-f5e0-40ef-913a-65d206068631
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1a0464cd8a91db43f9629bed3cc9e45e48a8f7c3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e37f15841a36eb95c1e9263d137ba2734d622367
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705906"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021803"
 ---
 # <a name="sqlprocedures"></a>SQLProcedures
   Tutte le stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituiscono un valore. **SQLProcedures** restituisce SQL_PT_FUNCTION per la colonna del set di risultati PROCEDURE_TYPE.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a8e278d1-aeaa-48f1-a0c6-5de232c983e4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d5bf593282108c2059e85a542317fb4d38753d83
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9fb02a47da20134925d9b2486ea0c08091af4aa6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011453"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055511"
 ---
 # <a name="customize-the-behavior-of-word-breakers-with-a-custom-dictionary"></a>Personalizzare Comportamento di word breaker con un dizionario personalizzato
   È possibile personalizzare il comportamento del word breaker per una particolare lingua creando un file del dizionario personalizzato specifico della lingua. Ad esempio, è possibile impedire l'attività del word breaker per determinati termini o modelli.  

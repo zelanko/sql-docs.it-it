@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a288f5c9f42e282694b864e4493d02dcd6cfa3a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b28468db1024a9789364e5b6e5c115cba71fa9f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62743496"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024969"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Creazione di server collegati (Motore di database di SQL Server)
   In questo argomento viene illustrato come creare un server collegato e come accedere ai dati da un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La creazione di server collegati consente di utilizzare dati di più origini. Il server collegato non deve essere un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tuttavia si tratta di uno scenario comune.  
@@ -35,7 +34,7 @@ ms.locfileid: "62743496"
 ##  <a name="security"></a><a name="Security"></a> Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
- Quando si [!INCLUDE[tsql](../../includes/tsql-md.md)] usano le istruzioni `ALTER ANY LINKED SERVER` , è richiesta l'autorizzazione per il server o l'appartenenza al ruolo predefinito del server **setupadmin** . Quando si [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] utilizza `CONTROL SERVER` è richiesta l'autorizzazione o l'appartenenza al ruolo predefinito del server **sysadmin** .  
+ Quando si usano le [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni, è richiesta l' `ALTER ANY LINKED SERVER` autorizzazione per il server o l'appartenenza al ruolo predefinito del server **setupadmin** . Quando si utilizza è [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] richiesta `CONTROL SERVER` l'autorizzazione o l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
 ##  <a name="how-to-create-a-linked-server"></a><a name="Procedures"></a> Come creare un server collegato  
  È possibile utilizzare uno degli elementi seguenti:  
@@ -246,7 +245,7 @@ ms.locfileid: "62743496"
   
      Quando viene restituito NULL per l'account di accesso del server collegato, tale account di accesso non è presente nel server collegato. Questi account di accesso non potranno essere utilizzati dal server collegato a meno tale server non sia configurato per passare un contesto di sicurezza differente oppure il server collegato accetta connessioni anonime.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Server collegati &#40;motore di database&#41;](linked-servers-database-engine.md)   
  [sp_addlinkedserver &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)   
  [sp_serveroption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-serveroption-transact-sql)  
