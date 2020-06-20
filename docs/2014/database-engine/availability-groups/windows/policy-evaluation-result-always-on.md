@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 99f32a970ee8cc3c68da6f4fb150ec36e17bcea1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1609b61e0912065edb4a95c24d2f7ca9f36932cc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789081"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936647"
 ---
 # <a name="policy-evaluation-result-alwayson"></a>Risultato della valutazione dei criteri (AlwaysOn)
   Utilizzare la pagina **Risultato di valutazione criteri** del dashboard AlwaysOn per visualizzare qualsiasi problema corrente relativo ai criteri.  
@@ -48,7 +47,7 @@ ms.locfileid: "62789081"
   
 
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica dei criteri di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md) [AlwaysOn per problemi operativi con](always-on-policies-for-operational-issues-always-on-availability.md) gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; 
   
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a263483e-87ba-49c4-b154-3e7bdf33063b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ab0a4af42a6137a78d1d884d7f00dd37911f9ff4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3fa9c65d02de70b93b97d4f31901ea7615574791
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316835"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040712"
 ---
 # <a name="rename-queries-visual-database-tools"></a>Rinominare le query (Visual Database Tools)
   È possibile rinominare qualsiasi query che non sia attualmente aperta per operazioni di modifica. Nella procedura riportata di seguito si presuppone perciò che la query che si desidera rinominare sia chiusa.  

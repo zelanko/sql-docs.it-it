@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c5d487965237395da68bbc8ba3134c8d372f90db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48dc4150c79225e069ea4e340e82458b42b4be6d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815598"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937082"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role"></a>La replica di disponibilità non dispone di un ruolo integro
     
@@ -32,7 +31,7 @@ ms.locfileid: "62815598"
 |**Categoria**|**Critico**|  
 |**Facet**|replica di disponibilità|  
   
-## <a name="description"></a>Descrizione  
+## <a name="description"></a>Description  
  Tramite questi criteri viene controllato lo stato del ruolo della replica di disponibilità. I criteri sono in uno stato non integro quando il ruolo della replica di disponibilità non è né primario né secondario. Altrimenti, sono in uno stato integro.  
   
 > [!NOTE]  
@@ -43,7 +42,7 @@ ms.locfileid: "62815598"
   
 ## <a name="possible-solution-information_still_to_come"></a>Possibile soluzione: Information_still_to_come  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Usare il Dashboard Always On &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   

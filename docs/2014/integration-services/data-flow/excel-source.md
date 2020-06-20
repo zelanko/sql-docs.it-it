@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 37eb17ccaa418a6d81ef4caa461af50e505a8747
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ffedc7e90a31a33e05fc5b4bfe0b97c55be6a2a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82087151"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915799"
 ---
 # <a name="excel-source"></a>Origine Excel
   L'origine Excel consente di estrarre dati da fogli di lavoro o intervalli di una cartella di lavoro di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -51,7 +50,7 @@ ms.locfileid: "82087151"
   
 -   **Origini dati**. L'origine dei dati in una cartella di lavoro di Excel può essere un foglio di lavoro, a cui è necessario aggiungere il simbolo $, ad esempio Sheet1$ o un intervallo denominato, ad esempio MyRange. Nelle istruzioni SQL i nomi dei fogli di lavoro devono essere delimitati (ad esempio, [Sheet1$]) per evitare errori di sintassi dovuti alla presenza del simbolo $. In Generatore query tali delimitatori vengono aggiunti automaticamente. Quando si specifica un foglio di lavoro o un intervallo, il driver legge il blocco di celle contigue che inizia con la prima cella non vuota nell'angolo superiore sinistro del foglio di lavoro o dell'intervallo. Non è pertanto possibile utilizzare origini contenenti righe vuote tra i dati oppure tra il titolo o le righe di intestazione e le righe di dati.  
   
--   **Valori mancanti**. Per determinare il tipo di dati di ogni colonna, il driver per Excel legge un determinato numero di righe (8 per impostazione predefinita) nell'origine specificata. Se una colonna contiene tipi di dati diversi, soprattutto se sono presenti sia dati numerici che di testo, il driver adotta il tipo di dati a cui corrisponde il maggior numero di elementi e restituisce valori Null per le celle che contengono dati di tipo diverso. In caso di parità, viene adottato il tipo numerico. La maggior parte delle opzioni di formattazione utilizzate nei fogli di lavoro di Excel non influisce sulla determinazione del tipo di dati. È possibile modificare questo comportamento del driver per Excel specificando la Modalità di importazione. Per specificare la modalità di importazione `IMEX=1` , aggiungere al valore di proprietà estese nella stringa di connessione della gestione connessione Excel nella finestra **Proprietà** . Per altre informazioni, vedere l'articolo relativo a [PRB sui valori di Excel restituiti come NULL tramite OpenRecordset DAO](https://support.microsoft.com/kb/194124).  
+-   **Valori mancanti**. Per determinare il tipo di dati di ogni colonna, il driver per Excel legge un determinato numero di righe (8 per impostazione predefinita) nell'origine specificata. Se una colonna contiene tipi di dati diversi, soprattutto se sono presenti sia dati numerici che di testo, il driver adotta il tipo di dati a cui corrisponde il maggior numero di elementi e restituisce valori Null per le celle che contengono dati di tipo diverso. In caso di parità, viene adottato il tipo numerico. La maggior parte delle opzioni di formattazione utilizzate nei fogli di lavoro di Excel non influisce sulla determinazione del tipo di dati. È possibile modificare questo comportamento del driver per Excel specificando la Modalità di importazione. Per specificare la modalità di importazione, aggiungere `IMEX=1` al valore di proprietà estese nella stringa di connessione della gestione connessione Excel nella finestra **Proprietà** . Per altre informazioni, vedere l'articolo relativo a [PRB sui valori di Excel restituiti come NULL tramite OpenRecordset DAO](https://support.microsoft.com/kb/194124).  
   
 -   **Testo troncato**. Se il driver determina che una colonna di Excel contiene dati di tipo text, seleziona il tipo di dati (string o memo), in base al più lungo valore campionato. Se il driver non individua valori contenenti più di 255 caratteri nelle righe campionate, gestirà la colonna come una colonna di stringhe di 255 caratteri, anziché come una colonna con tipo di dati memo. I valori contenenti più di 255 caratteri potrebbero essere pertanto troncati. Per evitare troncamenti durante l'importazione di dati da una colonna di tipo memo, è necessario verificare che almeno una delle righe campionate nella colonna di tipo memo contenga un valore con più di 255 caratteri oppure aumentare il numero delle righe campionate dal driver, in modo da includere una riga di questo tipo. È possibile aumentare il numero di righe campionate incrementando il valore di **TypeGuessRows** sotto la chiave del Registro di sistema **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines\Excel** . Per altre informazioni, vedere l'articolo relativo a [PRB sul trasferimento di dati dall'origine Jet 4.0 OLEDB che non si effettua con l'errore di buffer di overflow](https://support.microsoft.com/kb/281517).  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8ea6257cb906177b9eb224d718eecf54fb94119
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814057"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936552"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Replica, Rilevamento modifiche, Change Data Capture e Gruppi di disponibilità AlwaysOn (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Le funzionalità di replica, di rilevamento delle modifiche (CT, Change Tracking) e Change Data Capture (CDC) sono supportate in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] vengono fornite disponibilità elevata e funzionalità aggiuntive di recupero database.  
@@ -109,7 +108,7 @@ ms.locfileid: "62814057"
     ```  
   
     > [!NOTE]  
-    >  È consigliabile creare i processi per tutte le possibili destinazioni di failover prima del failover e contrassegnarli come disabilitati finché la replica di disponibilità in un host non diventa la nuova replica primaria. È inoltre necessario disabilitare i processi CDC in esecuzione nel database primario precedente quando il database locale diventa un database secondario. Per disabilitare e abilitare i processi, usare *@enabled* l'opzione di [Sp_update_job &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql). Per altre informazioni sulla creazione di processi CDC, vedere [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql).  
+    >  È consigliabile creare i processi per tutte le possibili destinazioni di failover prima del failover e contrassegnarli come disabilitati finché la replica di disponibilità in un host non diventa la nuova replica primaria. È inoltre necessario disabilitare i processi CDC in esecuzione nel database primario precedente quando il database locale diventa un database secondario. Per disabilitare e abilitare i processi, usare l' *@enabled* opzione di [sp_update_job &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql). Per altre informazioni sulla creazione di processi CDC, vedere [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql).  
   
 -   **Aggiunta di ruoli CDC a una replica di database primario AlwaysOn**  
   
@@ -156,7 +155,7 @@ ms.locfileid: "62814057"
   
      Per individuare la replica secondaria è possibile usare il nome del listener del gruppo di disponibilità o il nome del nodo esplicito. Se viene usato il nome del listener del gruppo di disponibilità, l'accesso verrà indirizzato a qualsiasi replica secondaria adatta.  
   
-     Quando `sp_addlinkedserver` viene usato per creare un server collegato per accedere al database secondario, *@datasrc* il parametro viene usato per il nome del listener del gruppo di disponibilità o il nome del *@provstr* server esplicito e il parametro viene usato per specificare la finalità di sola lettura.  
+     Quando `sp_addlinkedserver` viene usato per creare un server collegato per accedere al database secondario, il *@datasrc* parametro viene usato per il nome del listener del gruppo di disponibilità o il nome del server esplicito e il *@provstr* parametro viene usato per specificare la finalità di sola lettura.  
   
     ```  
     EXEC sp_addlinkedserver   
@@ -204,17 +203,17 @@ ms.locfileid: "62814057"
   
 |||||  
 |-|-|-|-|  
-||**Editore**|**Server di distribuzione** <sup>3</sup>|**Sottoscrittore**|  
+||**Autore**|**Server di distribuzione** <sup>3</sup>|**Subscriber**|  
 |**Transazionale**|Sì<sup>1</sup>|No|Sì<sup>2</sup>|  
 |**P2P**|No|No|No|  
-|**Merge**|Sì|No|Sì<sup>2</sup>|  
+|**Unione**|Sì|No|Sì<sup>2</sup>|  
 |**Snapshot**|Sì|No|Sì<sup>2</sup>|  
   
  <sup>1</sup> non include il supporto per la replica transazionale bidirezionale e reciproca.  
   
  <sup>2</sup> il failover al database di replica è una procedura manuale. Il failover automatico non è fornito.  
   
- <sup>3</sup> il database del server di distribuzione non è supportato [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] per l'utilizzo con o il mirroring del database.  
+ <sup>3</sup> il database del server di distribuzione non è supportato per l'utilizzo con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] o il mirroring del database.  
   
 ### <a name="considerations"></a>Considerazioni  
   
@@ -241,7 +240,7 @@ ms.locfileid: "62814057"
   
 -   [Usare Change Data &#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
   
- **Rilevamento modifiche**  
+ **Change tracking**  
   
 -   [Abilitare e disabilitare il rilevamento delle modifiche &#40;SQL Server&#41;](../../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)  
   
@@ -249,7 +248,7 @@ ms.locfileid: "62814057"
   
 -   [Utilizzare il rilevamento delle modifiche &#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Sottoscrittori della replica e Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [Prerequisiti, restrizioni e consigli per Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

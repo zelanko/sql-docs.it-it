@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5fb67c488da5f01ac572ec78a369790fc9014513
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56058ff8aa72d2471381dd87fb25a3b68356ed36
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782986"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936882"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-alwayson-availability-groups-sql-server-powershell"></a>Creare un endpoint del mirroring del database per i gruppi di disponibilità AlwaysOn (SQL Server PowerShell)
   In questo argomento viene illustrato come creare un endpoint del mirroring del database che verrà utilizzato da [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite PowerShell.  
@@ -48,7 +47,7 @@ ms.locfileid: "72782986"
 2.  Utilizzare il cmdlet `New-SqlHadrEndpoint` per creare l'endpoint, quindi utilizzare `Set-SqlHadrEndpoint` per avviare l'endpoint.  
   
 ###  <a name="example-powershell"></a><a name="PShellExample"></a> Esempio (PowerShell)  
- I comandi di PowerShell seguenti creano un endpoint del mirroring del database in un'istanza di SQL Server (*istanza*del*computer*\\). L'endpoint utilizza la porta 5022.  
+ I comandi di PowerShell seguenti creano un endpoint del mirroring del database in un'istanza di SQL Server (istanza del*computer* \\ *Instance*). L'endpoint utilizza la porta 5022.  
   
 > [!IMPORTANT]  
 >  Questo esempio funziona solo su un'istanza del server che attualmente non dispone di un endpoint del mirroring del database.  
@@ -66,7 +65,7 @@ Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
   
 -   [Creare un endpoint del mirroring del database per l'autenticazione Windows &#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [Usare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [Utilizzare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
     -   [Impostazione dell'endpoint del mirroring del database per l'utilizzo di certificati per le connessioni in uscita &#40;Transact-SQL&#41;](../../database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   

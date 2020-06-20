@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fd4616b2-a564-4a66-ac53-d1f5cba213c2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c0936af9b97d08c6bcd5033e61d9fa1c9153272e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: de32cbecdf132f1c881ab9fe5637af3a5c6cd400
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62791789"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937362"
 ---
 # <a name="add-projects-to-source-control"></a>Aggiungere progetti al controllo del codice sorgente
   Nelle soluzioni di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] possono essere ospitati più progetti. L'inclusione o meno della soluzione alla quale appartiene un progetto nel controllo del codice sorgente determina il modo in cui il progetto stesso viene aggiunto al controllo. Se si archivia una soluzione inclusa nel controllo del codice sorgente, il progetto verrà aggiunto automaticamente al controllo. Per ulteriori informazioni sull'archiviazione di soluzioni, vedere [archiviare i file](../../2014/database-engine/check-in-files.md).  
@@ -44,7 +43,7 @@ ms.locfileid: "62791789"
   
 5.  Nell'elenco **cartelle** aprire la cartella in cui si vuole inserire il progetto. In alternativa, è possibile fare clic su **Crea** per creare una cartella con il nome visualizzato nella casella **progetto** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Aggiungere soluzioni e progetti al controllo del codice sorgente](../../2014/database-engine/add-solutions-and-projects-to-source-control.md)  
   
   

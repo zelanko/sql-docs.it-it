@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3dc7d153bb9e680d1948f5cddc118d51a2b1e792
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c7b269b3dcea8dee30f149ece8541ba1f7e0e54
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482744"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971031"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>Area funzionale Amministrazione sistema (Gestione dati master)
   Nell'area funzionale Amministrazione sistema, gli amministratori possono creare un modello e tutti i relativi oggetti. Inoltre, possono creare regole business e creare e distribuire i pacchetti del modello. Per altre informazioni sugli amministratori, vedere [Amministratori &#40;Master Data Services&#41;](administrators-master-data-services.md).  
@@ -60,7 +59,7 @@ ms.locfileid: "65482744"
   
  [Azioni Regola business &#40;Master Data Services&#41;](../../2014/master-data-services/business-rule-actions-master-data-services.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Applicazione Web Gestione dati master](../../2014/master-data-services/master-data-manager-web-application.md)  
   
   

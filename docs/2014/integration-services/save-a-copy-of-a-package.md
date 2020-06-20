@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 21482a20-e420-4452-b7eb-8f9fa1929f31
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bdd8754ac3d4a63e038218c054d064f20485344b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4725d05e41ae6335ceae19c46c2c36af14dbcf8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056271"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964397"
 ---
 # <a name="save-a-copy-of-a-package"></a>Salvataggio di una copia di un pacchetto
   Questa procedura descrive come salvare una copia di un pacchetto nel file system, nell'archivio pacchetti o nel database **msdb** in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Quando si specifica il percorso di salvataggio della copia del pacchetto, è inoltre possibile modificarne il nome.  
@@ -37,7 +36,7 @@ ms.locfileid: "66056271"
   
 1.  In Esplora soluzioni fare doppio clic sul pacchetto di cui si desidera salvare una copia.  
   
-2.  Dal menu **File** scegliere **Salva copia di \<file di pacchetto> con nome**.  
+2.  Nel menu **file** fare clic su **Salva copia di \<package file> con nome**.  
   
 3.  Nella finestra di dialogo **Salva copia del pacchetto** selezionare la posizione di un pacchetto dall'elenco **Posizione pacchetto**.  
   
@@ -63,7 +62,7 @@ ms.locfileid: "66056271"
   
 9. Fare clic su **OK**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services &#40;pacchetti&#41; SSIS](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Configurazione del servizio Integration Services &#40;servizio SSIS&#41;](service/integration-services-service-ssis-service.md)  
   

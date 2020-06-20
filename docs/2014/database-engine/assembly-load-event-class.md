@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cfb0b69d-4ce0-4067-a3df-d82775e57886
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 17a2c847e906616c4555d37e641f76eeb73391ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b1a628035fa7469441c670e20dbbf98cdbf8f8a7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065254"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937312"
 ---
 # <a name="assembly-load-event-class"></a>Classe di evento Assembly Load
   La classe di evento **Assembly Load** viene generata quando viene eseguita la richiesta di caricamento di un assembly.  
@@ -48,10 +47,10 @@ ms.locfileid: "66065254"
 |**SessionLoginName**|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se, ad esempio, si stabilisce la connessione a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, **SessionLoginName** indica Login1 e **LoginName** indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
 |**SPID**|**int**|ID della sessione in cui si è verificato l'evento.|12|Sì|  
 |**StartTime**|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  
-|**Operazione completata**|**int**|Indica se il caricamento dell'assembly ha avuto esito positivo (1) o negativo (0).|23|Sì|  
+|**Success**|**int**|Indica se il caricamento dell'assembly ha avuto esito positivo (1) o negativo (0).|23|Sì|  
 |**TextData**|**ntext**|"Assembly Load Succeeded" se il caricamento ha esito positivo, altrimenti "Assembly Load Failed".|1|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../relational-databases/extended-events/extended-events.md)   
  [Assembly &#40;Motore di database&#41;](../relational-databases/clr-integration/assemblies-database-engine.md)  
   

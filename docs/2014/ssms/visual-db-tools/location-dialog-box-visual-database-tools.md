@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b7f94269-d28a-4f30-9e50-2ee1a6e82178
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0d3ee86b85a2eadf990caddc6c92499cf0e706d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c07f0fa1937887f2f685d235232385dd216eb393
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63306221"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040775"
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>Finestra di dialogo Percorso (Visual Database Tools)
   Utilizzare questa finestra di dialogo per individuare e selezionare la cartella contenente i file desiderati. Questa finestra di dialogo restituisce alla finestra di dialogo chiamante il percorso della cartella selezionata. È possibile accedere alla finestra di dialogo nel modo seguente:  

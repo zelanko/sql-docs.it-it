@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6e20d315-05a0-4ab2-8c0b-a6dd8067d1cb
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6b67802e56fa8a19f9fdaf5b4df352a35fa7d05a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81f2d05ebba4d9d45e5d48baea07b1e1911cb813
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088942"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929422"
 ---
 # <a name="run-sql-server-profiler"></a>Eseguire SQL Server Profiler
   Per eseguire [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], dal menu **Start** scegliere **Tutti i programmi**, **Microsoft SQL Server 2014**, **Strumenti per le prestazioni**, quindi fare clic su **SQL Server Profiler**.  
