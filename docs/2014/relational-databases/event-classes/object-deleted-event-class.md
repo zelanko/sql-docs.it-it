@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d4db32bc-972d-4429-809a-a62047c33e79
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3145385db6239df128ead6070ebede48bc96e64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90bcc20e16d775e6497958fc1adc58269fb24296
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63025827"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029382"
 ---
 # <a name="objectdeleted-event-class"></a>Object:Deleted - classe di evento
   La classe di evento Object:Deleted indica che un oggetto è stato eliminato, ad esempio tramite le istruzioni DROP INDEX e DROP TABLE. È possibile utilizzare questa classe di evento per determinare se si sta verificando l'eliminazione di oggetti, ad esempio da parte di applicazioni ODBC che spesso creano stored procedure temporanee.  
@@ -58,7 +57,7 @@ ms.locfileid: "63025827"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|`bigint`|Token usato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

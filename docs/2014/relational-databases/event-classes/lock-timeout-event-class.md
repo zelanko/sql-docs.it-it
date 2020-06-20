@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8492f4be-4ea9-4059-80e0-9e7b71597da9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 67f9d89897ef36d297dbeabfffcc02906677cb29
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a6b2b2e60f0aadaa2000fa9b14975ab5e2f5879
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62663956"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029406"
 ---
 # <a name="locktimeout-event-class"></a>Classe di evento Lock:Timeout
   La classe di evento Lock:Timeout segnala il timeout di una richiesta di blocco su una risorsa, ad esempio una pagina, dovuto alla presenza di un blocco su tale risorsa mantenuto attivo da un'altra transazione. Il valore di timeout è determinato dalla funzione di sistema @@LOCK_TIMEOUT e può essere impostato tramite l'istruzione SET LOCK_TIMEOUT.  
@@ -37,7 +36,7 @@ ms.locfileid: "62663956"
 |ClientProcessID|`int`|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se tramite il client viene indicato l'ID del processo client.|9|Sì|  
 |DatabaseID|`int`|ID del database in cui si è verificato il timeout di blocco. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |DatabaseName|`nvarchar`|Nome del database in cui si è verificato il timeout.|35|Sì|  
-|Durata|`bigint`|Intervallo in microsecondi tra la richiesta del blocco e il timeout.|13|Sì|  
+|Duration|`bigint`|Intervallo in microsecondi tra la richiesta del blocco e il timeout.|13|Sì|  
 |EndTime|`datetime`|Ora di fine dell'evento.|15|Sì|  
 |EventClass|`int`|Tipo di evento = 27.|27|No|  
 |EventSequence|`int`|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
@@ -62,7 +61,7 @@ ms.locfileid: "62663956"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |Type|`int`|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Classe di evento Lock: timeout &#40;timeout &#62; 0&#41;](lock-timeout-timeout-0-event-class.md)   
  [sys.dm_tran_locks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql)  

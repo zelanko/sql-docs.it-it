@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 95ddd3c6-51ef-4ad1-afd0-3aed82c9f724
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54247d32ab508601fb6768e1de493a98a3369b65
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e1703afb1f34d65b92d30ae2b7f2c7e6c9b0eac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061229"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028085"
 ---
 # <a name="tm-begin-tran-completed-event-class"></a>TM: Begin Tran Completed - classe di evento
   La classe di evento TM: Begin Tran Completed indica che è stata completata una richiesta BEGIN TRANSACTION. La richiesta è stata inviata dal client tramite l'interfaccia di gestione delle transazioni.  
@@ -52,7 +51,7 @@ ms.locfileid: "63061229"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|`bigint`|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-transaction-transact-sql)  

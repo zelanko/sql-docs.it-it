@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 396aa22a-4723-47f5-ae72-7de99d92dd6f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: abffd5a1fc77f6cf4935cbf5172210445dbd7006
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6ffc477b299daeda004cca26d95f3d33e2e5509b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050949"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028463"
 ---
 # <a name="spcachehit-event-class"></a>SP:CacheHit - classe di evento
   La classe di evento SP:CacheHit indica la presenza di una stored procedure nella cache dei piani.  
@@ -54,7 +53,7 @@ ms.locfileid: "63050949"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|`bigint`|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

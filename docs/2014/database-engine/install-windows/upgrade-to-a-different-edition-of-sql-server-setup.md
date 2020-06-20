@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5801916d34e45b5d70c9953d8dff0becbf6207cd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774575"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931622"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>Eseguire l'aggiornamento a un'edizione diversa di SQL Server 2014 (programma di installazione)
   Il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta l'aggiornamento dell'edizione fra le varie edizioni di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per informazioni sui percorsi di aggiornamento supportati, vedere [Aggiornamenti di versione ed edizione supportati](supported-version-and-edition-upgrades.md). Prima di iniziare l'aggiornamento dell'edizione di un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], rivedere gli argomenti seguenti:  
@@ -29,7 +28,7 @@ ms.locfileid: "62774575"
 -   [Requisiti hardware e software per l'installazione di SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
->  **in un ambiente cluster: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** È sufficiente eseguire l'aggiornamento dell'edizione in uno [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dei nodi del cluster. Questo nodo può essere attivo o passivo e il motore non imposta le risorse offline durante l'aggiornamento dell'edizione. Dopo l'aggiornamento dell'edizione è necessario per riavviare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o eseguire il failover a un nodo diverso.  
+>  ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un ambiente cluster:** è sufficiente eseguire l'aggiornamento dell'edizione in uno dei nodi del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cluster. Questo nodo può essere attivo o passivo e il motore non imposta le risorse offline durante l'aggiornamento dell'edizione. Dopo l'aggiornamento dell'edizione è necessario per riavviare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o eseguire il failover a un nodo diverso.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  Per le installazioni locali è necessario eseguire il programma di installazione come amministratore. Se si installa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da una condivisione remota, è necessario utilizzare un account di dominio con autorizzazioni di lettura per tale condivisione.  
@@ -79,7 +78,7 @@ ms.locfileid: "62774575"
   
 -   I database modello rimarranno nel computer dopo l'aggiornamento.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Eseguire l'aggiornamento a SQL Server 2014](upgrade-sql-server.md)   
  [Compatibilità con le versioni precedenti](../../getting-started/backward-compatibility.md)  
   

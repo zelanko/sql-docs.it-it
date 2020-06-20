@@ -1,5 +1,6 @@
 ---
 title: Parametri di binding | Microsoft Docs
+description: Informazioni su come associare ogni marcatore di parametro in un'istruzione SQL a una variabile nell'applicazione prima che l'istruzione possa essere eseguita.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,12 +22,12 @@ ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01e179d2abc6ef786f94b6d7938f0e21938c5a59
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c2076acbe29cefbbee12c716d3c555054c5808a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304630"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967577"
 ---
 # <a name="using-statement-parameters---binding-parameters"></a>Uso dei parametri dell'istruzione - Associazione di parametri
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,9 +58,9 @@ ms.locfileid: "81304630"
   
 -   Specificare i parametri in un ordine diverso nell'applicazione rispetto all'ordine specificato alla creazione della stored procedure.  
   
- I parametri denominati sono supportati solo [!INCLUDE[tsql](../../includes/tsql-md.md)] quando si utilizza l'istruzione **Execute** o la sequenza di escape ODBC CALL per eseguire un stored procedure.  
+ I parametri denominati sono supportati solo quando si utilizza l' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione **Execute** o la sequenza di escape ODBC CALL per eseguire un stored procedure.  
   
- Se **SQL_DESC_NAME** è impostato per un parametro di stored procedure, anche tutti i parametri di stored procedure nella query devono impostare **SQL_DESC_NAME**.  Se vengono utilizzati valori letterali nelle chiamate di stored procedure, in cui i parametri sono impostati **SQL_DESC_NAME** , i valori letterali devono utilizzare il formato *' nome*=*valore*', dove *nome* è il nome del @p1parametro stored procedure (ad esempio,). Per ulteriori informazioni, vedere [associazione di parametri in base al nome (parametri denominati)](https://go.microsoft.com/fwlink/?LinkId=167215).  
+ Se **SQL_DESC_NAME** è impostato per un parametro di stored procedure, anche tutti i parametri di stored procedure nella query devono impostare **SQL_DESC_NAME**.  Se vengono utilizzati valori letterali nelle chiamate di stored procedure, in cui i parametri sono impostati **SQL_DESC_NAME** , i valori letterali devono utilizzare il formato *' nome* = *valore*', dove *nome* è il nome del parametro stored procedure (ad esempio, @p1 ). Per ulteriori informazioni, vedere [associazione di parametri in base al nome (parametri denominati)](https://go.microsoft.com/fwlink/?LinkId=167215).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzo dei parametri delle istruzioni](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  

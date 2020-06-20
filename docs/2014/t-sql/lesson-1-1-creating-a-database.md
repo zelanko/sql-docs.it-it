@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e1e2c83f-dfad-4bb8-aa7a-09d3f69517ae
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c0353c89dbfc14032d33dfa49fa0c08e698cb5c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 99d5439c289b5d4e71786d4c6734f158f6bba371
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211214"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048525"
 ---
 # <a name="creating-a-database-tutorial"></a>Esercitazione per la creazione di un database
   Analogamente a numerose altre istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] , l'istruzione CREATE DATABASE ha un parametro obbligatorio, ovvero il nome del database. L'istruzione CREATE DATABASE dispone inoltre di numerosi parametri facoltativi, ad esempio il percorso su disco in cui si desidera inserire i file del database. Quando si esegue CREATE DATABASE senza parametri facoltativi, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono utilizzati i valori predefiniti per molti di tali parametri. In questa esercitazione vengono utilizzati solo alcuni dei parametri facoltativi della sintassi.  
@@ -43,7 +42,7 @@ ms.locfileid: "68211214"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Esercitazione per la creazione di una tabella](lesson-1-2-creating-a-table.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
   

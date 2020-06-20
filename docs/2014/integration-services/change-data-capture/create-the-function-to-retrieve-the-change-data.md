@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 28878f96b843a8a557e95d6c4ddf10681f481b8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90f754abc2e10732c33c011fdaf8fcd06c0175a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771437"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923452"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Creazione della funzione per il recupero dei dati delle modifiche
   Dopo avere completato il flusso di controllo per un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che esegue un caricamento incrementale dei dati delle modifiche, l'attività successiva consiste nella creazione di una funzione con valori di tabella per il recupero di tali dati. Questa funzione deve essere creata solo una volta, prima del primo caricamento incrementale.  
@@ -108,7 +107,7 @@ deallocate #hfunctions
 ```  
   
 ### <a name="understanding-and-using-the-functions-created-by-the-stored-procedure"></a>Informazioni sulle funzioni create dalla stored procedure e relativo utilizzo  
- Per esaminare sistematicamente la sequenza temporale dei dati modificati acquisiti, le funzioni wrapper generate si *@end_time* aspettano che il parametro per un *@start_time* intervallo sia il parametro per l'intervallo successivo. Quando viene rispettata questa convenzione, le funzioni wrapper generate possono effettuare le attività seguenti:  
+ Per esaminare sistematicamente la sequenza temporale dei dati modificati acquisiti, le funzioni wrapper generate si aspettano che il *@end_time* parametro per un intervallo sia il *@start_time* parametro per l'intervallo successivo. Quando viene rispettata questa convenzione, le funzioni wrapper generate possono effettuare le attività seguenti:  
   
 -   Eseguire il mapping dei valori di data e ora ai valori LSN utilizzati internamente.  
   
@@ -126,7 +125,7 @@ deallocate #hfunctions
   
 -   Il valore data/ora di inizio e il valore data/ora di fine per l'intervallo. Mentre le funzioni wrapper utilizzano i valori di data e ora come endpoint per l'intervallo di query, le funzioni Change Data Capture utilizzano due valori LSN come endpoint.  
   
--   Il filtro di riga. Sia per le funzioni wrapper che per le funzioni di Change Data Capture *@row_filter_option* , il parametro è lo stesso. Per altre informazioni, vedere [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql) e [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql).  
+-   Il filtro di riga. Sia per le funzioni wrapper che per le funzioni di Change Data Capture, il *@row_filter_option* parametro è lo stesso. Per altre informazioni, vedere [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql) e [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql).  
   
  Il set di risultati restituito dalle funzioni wrapper include i dati seguenti:  
   
@@ -210,9 +209,9 @@ go
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|`binary(10)`|Valore LSN associato al commit della transazione per la modifica.<br /><br /> Tutte le modifiche di cui è stato eseguito il commit nella stessa transazione condividono lo stesso valore LSN di commit. Se, ad esempio, un'operazione di aggiornamento nella tabella di origine modifica due diverse righe, la tabella delle modifiche conterrà quattro righe, due con i valori precedenti e due con i nuovi valori, ognuna delle quali con lo stesso valore **__$start_lsn** .|  
 |**__$seqval**|`binary(10)`|Valore di sequenza utilizzato per ordinare le modifiche alle righe in una transazione.|  
-|**_ _ $ operation**|`int`|Operazione DML (Data Manipulation Language) associata alla modifica. Può essere uno dei seguenti:<br /><br /> 1 = eliminazione<br /><br /> 2 = inserimento<br /><br /> 3 = aggiornamento (valori precedenti all'operazione di aggiornamento)<br /><br /> 4 = aggiornamento (valori successivi all'operazione di aggiornamento)|  
+|**_ _ $ operation**|`int`|Operazione DML (Data Manipulation Language) associata alla modifica. Può essere uno dei valori seguenti:<br /><br /> 1 = eliminazione<br /><br /> 2 = inserimento<br /><br /> 3 = aggiornamento (valori precedenti all'operazione di aggiornamento)<br /><br /> 4 = aggiornamento (valori successivi all'operazione di aggiornamento)|  
 |**__$update_mask**|`varbinary(128)`|Maschera di bit basata su numeri ordinali di colonna della tabella delle modifiche che identifica le colonne modificate. È possibile esaminare questo valore se è necessario determinare le colonne modificate.|  
-|**\<colonne della tabella di origine acquisite>**|variabile|Le colonne rimanenti restituite dalla funzione sono le colonne della tabella di origine identificate come colonne acquisite durante la creazione dell'istanza di acquisizione. Se in origine non è stata specificata alcuna colonna nell'elenco delle colonne acquisite, verranno restituite tutte le colonne della tabella di origine.|  
+|**\<captured source table columns>**|variabile|Le colonne rimanenti restituite dalla funzione sono le colonne della tabella di origine identificate come colonne acquisite durante la creazione dell'istanza di acquisizione. Se in origine non è stata specificata alcuna colonna nell'elenco delle colonne acquisite, verranno restituite tutte le colonne della tabella di origine.|  
   
  Per altre informazioni, vedere [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql).  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d0c8f942-4c96-456f-ad10-577577c0f74e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bef06da3e6e1702a713aa2b4ca2e448e7ee461af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d130a25fc3c3ec13a57451e89de4d362043a5962
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771265"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922742"
 ---
 # <a name="prepare-sql-server-for-oracle-cdc-view-script"></a>Preparare SQL Server per lo script di visualizzazione di Oracle CDC
   In questa finestra di dialogo viene illustrato lo script di preparazione di SQL mediante il quale viene creato il database MSXDBCDC. Questo database deve trovarsi in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per poter essere utilizzato con Oracle CDC per SQL Server.  

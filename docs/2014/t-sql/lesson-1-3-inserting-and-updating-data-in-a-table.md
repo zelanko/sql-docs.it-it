@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 514dc87a-b829-43b5-8fc8-1a400a260284
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 19e6683baeb0a82c77a858b04f18695ba7120b15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0646019f166e1c2cc126a4cc7d2ed8f27a7bd2f3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250129"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048459"
 ---
 # <a name="inserting-and-updating-data-in-a-table-tutorial"></a>Esercitazione per l'inserimento e l'aggiornamento dei dati in una tabella
   Dopo aver creato la tabella **Products** è possibile inserirvi dati con l'istruzione INSERT. Dopo aver inserito i dati, si procederà alla modifica del contenuto di una riga mediante l'istruzione UPDATE. Per limitare l'operazione di aggiornamento a una sola riga verrà utilizzata la clausola WHERE dell'istruzione UPDATE. Le quattro istruzioni immetteranno i dati seguenti.  
   
-|ProductID|ProductName|Price|ProductDescription|  
+|ProductID|ProductName|Prezzo|ProductDescription|  
 |---------------|-----------------|-----------|------------------------|  
 |1|Clamp|12.48|Workbench clamp|  
 |50|Screwdriver|3,17|Flat head|  

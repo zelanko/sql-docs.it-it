@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 08467118608db6b222bea2a41351eac951449a16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86c29f696c93789cb3815cf14587690c2edb5f6b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774565"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931322"
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>Modificare i ruoli tra i server primario e secondario per il log shipping (SQL Server)
   Dopo aver eseguito il failover di una configurazione per il log shipping [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su un server secondario, è possibile configurare il database secondario per operare come database primario. Sarà quindi possibile scambiare il database primario e quello secondario in base alle proprie esigenze.  
@@ -78,7 +77,7 @@ ms.locfileid: "62774565"
 3.  Abilitare il processo di backup per il log shipping nel server secondario, ovvero il nuovo server primario, e i processi di copia e ripristino nel server primario, ovvero il nuovo server secondario.  
   
 > [!IMPORTANT]  
->  Se si modifica un database secondario in database primario per offrire a utenti e applicazioni un sistema più coerente, potrebbe essere necessario ricreare alcuni o tutti i metadati del database, ad esempio account di accesso e processi, nell'istanza del nuovo server primario. Per ulteriori informazioni, vedere [gestire i metadati quando si rende disponibile un database in un'altra istanza del Server &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+>  Se si modifica un database secondario in database primario per offrire a utenti e applicazioni un sistema più coerente, potrebbe essere necessario ricreare alcuni o tutti i metadati del database, ad esempio account di accesso e processi, nell'istanza del nuovo server primario. Per altre informazioni, vedere [Gestione dei metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
@@ -86,7 +85,7 @@ ms.locfileid: "62774565"
   
 -   [Gestione di account di accesso e di processi dopo un cambio di ruolo &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
   
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5ee2879bc0ef94d8abee20032c83a74d00696ef2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 241087f5da3c7baa09a34fab8ab1886809ce0d36
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289309"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931452"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>Listener del gruppo di disponibilità, connettività client e failover dell'applicazione (SQL Server)
   In questo argomento sono contenute informazioni sulla funzionalità di failover delle applicazioni e sulla connettività client di [!INCLUDE[ssHADR](../includes/sshadr-md.md)] .  
@@ -118,7 +117,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- In questo esempio, il client tenta di connettersi al listener del gruppo di disponibilità denominato `AGListener` sulla porta 1433. (È possibile omettere la porta se il listener del gruppo di disponibilità è in attesa sulla porta 1433).  La `ApplicationIntent` proprietà della stringa di connessione è impostata `ReadOnly`su, rendendola una *stringa di connessione con finalità di lettura*.  Senza questa impostazione, il server non avrebbe tentato di eseguire il routing in sola lettura della connessione.  
+ In questo esempio, il client tenta di connettersi al listener del gruppo di disponibilità denominato `AGListener` sulla porta 1433. (È possibile omettere la porta se il listener del gruppo di disponibilità è in attesa sulla porta 1433).  La proprietà della stringa di connessione è `ApplicationIntent` impostata su `ReadOnly` , rendendola una *stringa di connessione con finalità di lettura*.  Senza questa impostazione, il server non avrebbe tentato di eseguire il routing in sola lettura della connessione.  
   
  Il database primario del gruppo di disponibilità elabora la richiesta di routing in sola lettura in ingresso e tenta di trovare una replica online in sola lettura che sia stata aggiunta alla replica primaria e configurata per il routing in sola lettura.  Il client riceve nuovamente le informazioni di connessione dal server della replica primaria e si connette alla replica in sola lettura identificata.  
   

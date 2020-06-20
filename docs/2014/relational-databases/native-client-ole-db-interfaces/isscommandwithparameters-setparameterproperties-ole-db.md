@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4cd0281a-a2a0-43df-8e46-eb478b64cb4b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d503ffad6c8d723bb0d933120a37e9b680a37cd7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d141c1951066af14e25cb4dd36459f5e87051001
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704789"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056080"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
   Imposta le proprietà dei parametri per i singoli parametri in base al numero ordinale oppure imposta proprietà dei parametri bulk specificando una matrice di strutture SSPARAMPROPS.  
@@ -72,7 +71,7 @@ SSPARAMPROPS rgParamProperties[]);
   
  I miglioramenti apportati al motore di database a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] consentono a ISSCommandWithParameters::SetParameterProperties di ottenere descrizioni più accurate dei risultati previsti. È possibile che questi risultati più accurati differiscano dai valori restituiti da ISSCommandWithParameters::SetParameterProperties nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Metadata Discovery](../native-client/features/metadata-discovery.md).  
   
-|Membro|Description|  
+|Membro|Descrizione|  
 |------------|-----------------|  
 |*iOrdinal*|Numero ordinale del parametro passato.|  
 |*cPropertySets*|Numero di strutture DBPROPSET in *rgPropertySets*.|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0668cb4d-5682-4140-aab5-7b0da5cd3479
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cb2cd178440a2d0ea0cd9842616a52058a63f7b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3c02ce70ace777c171aa981ae6e2f53d235aaa4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662185"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029456"
 ---
 # <a name="missing-join-predicate-event-class"></a>Missing Join Predicate - classe di evento
   La classe di evento Missing Join Predicate indica che è in esecuzione una query priva di predicato join. Ciò può comportare tempi di esecuzione della query prolungati. Per altre informazioni sui predicati di join, vedere [Predicati &#40;Transact-SQL&#41;](/sql/t-sql/queries/predicates).  
@@ -49,7 +48,7 @@ ms.locfileid: "62662185"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|`bigint`|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   

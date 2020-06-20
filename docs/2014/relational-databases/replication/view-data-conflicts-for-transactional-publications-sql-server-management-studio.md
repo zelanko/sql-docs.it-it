@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e046351ca3dc7977691fc98e24453ccbf8e6af53
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 228753c113bcf43ed276d989a3996e9bf23bfc16
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144412"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063654"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>Visualizzazione di conflitti di dati per le pubblicazioni transazionali (SQL Server Management Studio)
   Il Visualizzatore conflitti di replica [!INCLUDE[msCoName](../../includes/msconame-md.md)] consente di visualizzare i conflitti per la replica transazionale peer-to-peer e per la replica transazionale con sottoscrizioni ad aggiornamento in coda. Per informazioni sul rilevamento e la risoluzione dei conflitti, vedere [Rilevamento dei conflitti nella replica peer-to-peer](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md) e [Impostare le opzioni di risoluzione dei conflitti per l'aggiornamento in coda &#40;SQL Server Management Studio&#41;](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
@@ -32,7 +31,7 @@ ms.locfileid: "63144412"
   
     -   Specificare un valore del periodo di memorizzazione per il parametro @conflict_retention di [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql).  
   
-    -   Specificare `'conflict_retention'` il valore per @property il parametro e un valore di memorizzazione per il @value parametro di [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql).  
+    -   Specificare il valore `'conflict_retention'` per il @property parametro e un valore di memorizzazione per il @value parametro di [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql).  
   
 ### <a name="to-view-conflicts"></a>Per visualizzare i conflitti  
   
@@ -62,7 +61,7 @@ ms.locfileid: "63144412"
   
 6.  Chiudere il Visualizzatore conflitti di replica.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Replica transazionale peer-to-peer](transactional/peer-to-peer-transactional-replication.md)   
  [Queued Updating Conflict Detection and Resolution](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)  
   

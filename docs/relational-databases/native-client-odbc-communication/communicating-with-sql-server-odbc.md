@@ -1,5 +1,6 @@
 ---
 title: Comunicazione con SQL Server (ODBC) | Microsoft Docs
+description: Informazioni sul modo in cui un'applicazione ODBC comunica con un'istanza di SQL Server usando le connessioni e le risorse di connessione.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ ms.assetid: cca3dcf0-2a7e-465a-84de-7ce055360eb6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2a7d903dfdc0e25d3dc305b78f716a7146ce25c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07c56e5f6367459cc054a9882432c5bfd04f1c5b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307792"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967706"
 ---
 # <a name="communicating-with-sql-server-odbc"></a>Comunicazione con SQL Server (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Affinché un'applicazione ODBC comunichi con un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], deve allocare gli handle di ambiente e di connessione e connettersi all'origine dati. Una volta stabilita una connessione, l'applicazione può inviare query al server ed elaborare qualsiasi set di risultati. Quando l'applicazione ha completato l'utilizzo dell'origine dati, si disconnette dall'origine dati e rilascia l'handle di connessione. Quando l'applicazione ha rilasciato tutti gli handle di connessione, rilascia l'handle di ambiente.  
+  Affinché un'applicazione ODBC comunichi con un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , deve allocare gli handle di ambiente e di connessione e connettersi all'origine dati. Una volta stabilita una connessione, l'applicazione può inviare query al server ed elaborare qualsiasi set di risultati. Quando l'applicazione ha completato l'utilizzo dell'origine dati, si disconnette dall'origine dati e rilascia l'handle di connessione. Quando l'applicazione ha rilasciato tutti gli handle di connessione, rilascia l'handle di ambiente.  
   
  Un'applicazione può connettersi a qualsiasi numero di origini dati. L'applicazione può utilizzare una combinazione di driver e origini dati, lo stesso driver e una combinazione di origini dati o persino lo stesso driver e più connessioni alla stessa origine dati.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5c76fda112acae7b8a9314d217f5c32d197e87f9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90a5bb55a7ebe460177369d20de8bda9dd23d959
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775631"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931891"
 ---
 # <a name="upgrade-data-quality-services"></a>Aggiornare Data Quality Services
   In questo argomento vengono fornite le informazioni su come aggiornare l'installazione esistente di Data Quality Services (DQS) a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Come parte dell'aggiornamento di Data Quality Server in DQS a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], è inoltre necessario aggiornare lo schema dei database DQS.  
@@ -70,7 +69,7 @@ ms.locfileid: "62775631"
     5.  Se l'aggiornamento dello schema dei database DQS viene terminato correttamente, viene visualizzato un messaggio di completamento.  
   
 ##  <a name="verifying-the-dqs-databases-schema-upgrade"></a><a name="Verify"></a> Verifica dell'aggiornamento dello schema dei database DQS  
- Per verificare che lo schema dei database DQS sia stato aggiornato correttamente, è possibile controllare la versione corrente nei database DQS_MAIN e DQS_PROJECTS eseguendo una query sulla tabella A_DB_VERSION in ogni database. A tale scopo:  
+ Per verificare che lo schema dei database DQS sia stato aggiornato correttamente, è possibile controllare la versione corrente nei database DQS_MAIN e DQS_PROJECTS eseguendo una query sulla tabella A_DB_VERSION in ogni database. A tale scopo, procedere nel seguente modo:  
   
 1.  Avviare SQL Server Management Studio e connettersi all'istanza di SQL Server contenente lo schema dei database DQS aggiornato.  
   
@@ -85,10 +84,10 @@ ms.locfileid: "62775631"
   
     |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATO|ERRORE|  
     |--------|-------------------|-----------------|-----------------------|----------------|------------|-----------|  
-    |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMINIO\NomeUtente>|2||  
-    |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMINIO\NomeUtente>|2||  
+    |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMAIN\UserName>|2||  
+    |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMAIN\UserName>|2||  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Installare Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Rimuovere gli oggetti del server Data Quality](../../sql-server/install/remove-data-quality-server-objects.md)   
  [Aggiornamento a SQL Server 2014](upgrade-sql-server.md)  

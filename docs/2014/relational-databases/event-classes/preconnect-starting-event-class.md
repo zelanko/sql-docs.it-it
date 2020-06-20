@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d43ed0ad-3dbd-42e0-9cef-8320b8d87497
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0986e654430a47cc494bf1646c222b4888fc105b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67b642d369c73cc144af31f835786613766045f9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033513"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028854"
 ---
 # <a name="preconnectstarting-event-class"></a>Classe di evento PreConnect:Starting
   La classe di evento PreConnect:Starting indica l'avvio dell'esecuzione di un trigger LOGON o di una funzione di classificazione di Resource Governor.  
@@ -35,7 +34,7 @@ ms.locfileid: "63033513"
 |ObjectID|`int`|ID dell'oggetto di classificazione definito dall'utente.|22|Sì|  
 |ObjectName|`nvarchar(256)`|Nome in due parti della funzione di classificazione definita dall'utente, ad esempio dbo.classifier.|34|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../extended-events/extended-events.md)   
  [Classe di evento PreConnect: Completed](preconnect-completed-event-class.md)   
  [Resource Governor](../resource-governor/resource-governor.md)  

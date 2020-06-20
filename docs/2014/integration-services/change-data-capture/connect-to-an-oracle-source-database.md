@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f32462ef33af50a08cd933ed5c1a04c4efaa17de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf25496a36a1c5864ee4101226b6432663af111f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835763"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923462"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>Connettersi a un database di origine Oracle
   Utilizzare la pagina Oracle Source per fornire le informazioni necessarie per la connessione al database di origine Oracle. Tramite l'istanza di CDC verranno letti i log di rollforward del database Oracle a cui si è effettuata la connessione.  
@@ -41,7 +40,7 @@ ms.locfileid: "62835763"
 > [!NOTE]
 >  Per poter essere un utente del log mining un utente deve disporre dei privilegi seguenti per il database Oracle.  
 > 
->  -   SELECT on \<qualsiasi-tabella-acquisita>  
+>  -   Seleziona su\<any-captured-table>  
 > -   SELECT ANY TRANSACTION  
 > -   EXECUTE on DBMS LOGMNR  
 > -   SELECT on V$LOGMNR CONTENTS  

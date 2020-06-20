@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 07f438f86a22b866351a0b83ee7634338f3ad2cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c36fbe634fbc2b17547f127290cfbaed6e745c7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775344"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932528"
 ---
 # <a name="install-sql-server-2014-servicing-updates"></a>Installare gli aggiornamenti dei servizi di SQL Server 2014
   In questo argomento vengono fornite informazioni sull'installazione degli aggiornamenti per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. In questa sezione vengono fornite informazioni sui seguenti argomenti:  
@@ -37,14 +36,14 @@ ms.locfileid: "62775344"
   
 -   Condivisione di rete  
   
- Dopo avere individuato le versioni più recenti degli aggiornamenti applicabili, questi vengono scaricati e integrati dal programma di installazione con il processo di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrente. Tramite l'aggiornamento del prodotto è possibile includere un aggiornamento cumulativo, un Service Pack o un Service Pack con aggiornamento cumulativo. La funzionalità di aggiornamento del prodotto è un'estensione della [funzionalità](https://go.microsoft.com/fwlink/?LinkId=219945) di integrazione disponibile [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] in PCU1.  
+ Dopo avere individuato le versioni più recenti degli aggiornamenti applicabili, questi vengono scaricati e integrati dal programma di installazione con il processo di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrente. Tramite l'aggiornamento del prodotto è possibile includere un aggiornamento cumulativo, un Service Pack o un Service Pack con aggiornamento cumulativo. La funzionalità di aggiornamento del prodotto è un'estensione della [funzionalità](https://go.microsoft.com/fwlink/?LinkId=219945) di integrazione disponibile in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] PCU1.  
   
 ## <a name="installing-updates-for-sscurrent-after-it-has-already-been-installed"></a>Installazione di aggiornamenti per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dopo che è stato installato  
- In un'istanza installata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]si consiglia di applicare tutti gli aggiornamenti disponibili, ovvero le versioni di distribuzione generale (GDR-Security/Critical Update), i Service Pack (SP) e l'ultimo aggiornamento cumulativo disponibile (Cu).  
+ In un'istanza installata di si [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] consiglia di applicare tutti gli aggiornamenti disponibili, ovvero le versioni di distribuzione generale (GDR-Security/Critical Update), i Service Pack (SP) e l'ultimo aggiornamento cumulativo disponibile (Cu).  
   
  A seconda del tipo di versione del servizio, SQL Server aggiornamenti sono disponibili tramite Microsoft Update (MU), l'area download Microsoft e/o il server hotfix del servizio supporto tecnico clienti. Gli aggiornamenti della sicurezza e critici per SQL Server vengono forniti automaticamente da Microsoft Update (per poter visualizzare questi aggiornamenti, è necessario acconsentire esplicitamente a MU tramite Windows Update nel pannello di controllo). I Service Pack sono disponibili in MU come download facoltativi/importanti, oltre che nell'area download. Gli aggiornamenti cumulativi sono disponibili nel server di download degli hotfix Microsoft fornito negli articoli della Knowledge base.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Installare SQL Server 2014 dall'installazione guidata &#40;&#41;](install-sql-server-from-the-installation-wizard-setup.md)   
  L' [installazione di aggiornamenti dal prompt dei comandi](installing-updates-from-the-command-prompt.md) [consente di aggiungere funzionalità a un'istanza di SQL Server 2014 &#40;di installazione&#41;](add-features-to-an-instance-of-sql-server-setup.md)   
  [Rimuovere un'installazione di SQL Server 2014](repair-a-failed-sql-server-installation.md)  

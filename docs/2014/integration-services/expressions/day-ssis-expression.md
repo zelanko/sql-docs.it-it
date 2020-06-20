@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d8447187-49df-45b7-a98e-142ad44fd3e2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 47140db35618143522ad217f5eda2aa3d4b7507b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: def17bae422ca35d994f4b4133568a1b220403a0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62898414"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967383"
 ---
 # <a name="day-ssis-expression"></a>DAY (espressione SSIS)
   Viene restituito un valore integer che rappresenta la parte del giorno in una data.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 71efd530222ce548bb867b9e886b1891d5aedb05
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f26689dde5f840eb0e23d9506272056574969003
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62899449"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966936"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Guida di riferimento a errori ed eventi (Integration Services)
   In questa sezione della documentazione vengono fornite informazioni su diversi errori ed eventi correlati a [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Sono inoltre incluse le informazioni sulle cause e la risoluzione dei messaggi di errore.  

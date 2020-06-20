@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: eaf4b56e-2023-4d17-971c-703031da758c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 73b71e83f3b0f0f895b2cc5b8fd3495fb4893a32
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 371a2ba0b88266e076cf4e3e438fbe5b0216cf1f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059616"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951739"
 ---
 # <a name="deploy-packages-by-using-the-deployment-utility"></a>Distribuzione di pacchetti con l'utilità di distribuzione
   Se è stata compilata un'utilità di distribuzione per l'installazione di pacchetti di un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in un computer diverso da quello in cui l'utilità è stata compilata, è prima necessario copiare la cartella di distribuzione nel computer di destinazione.  
   
  Il percorso di tale cartella è specificato nella proprietà DeploymentOutputPath del progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] per il quale è stata creata l'utilità di distribuzione. Il percorso predefinito è bin\Deployment relativo al progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Per altre informazioni, vedere [Creazione di un'utilità di distribuzione](../../2014/integration-services/create-a-deployment-utility.md).  
   
- Per installare i pacchetti è possibile utilizzare Installazione guidata pacchetti, che può essere avviata facendo doppio clic sul file dell'utilità di distribuzione, dopo aver copiato la cartella di distribuzione sul server. Il file è denominato \<nome progetto>.SSISDeploymentManifest ed è disponibile nella cartella di distribuzione nel computer di destinazione.  
+ Per installare i pacchetti è possibile utilizzare Installazione guidata pacchetti, che può essere avviata facendo doppio clic sul file dell'utilità di distribuzione, dopo aver copiato la cartella di distribuzione sul server. Questo file è denominato \<project name> . SSISDeploymentManifest e si trovano nella cartella di distribuzione nel computer di destinazione.  
   
 > [!NOTE]  
 >  In base alla versione del pacchetto che si distribuisce, è possibile rilevare un errore se versioni diverse di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sono state installate in modalità side-by-side. Questo errore può verificarsi perché l'estensione del file SSISDeploymentManifest è uguale per tutte le versioni di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Se si fa doppio clic sul file viene chiamato il programma di installazione (dtsinstall.exe) della versione di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]installata più di recente, che potrebbe non corrispondere a quella del file dell'utilità di distribuzione. Per evitare tale problema, eseguire la versione corretta di dtsinstall.exe dalla riga di comando e specificare il percorso del file dell'utilità di distribuzione.  
@@ -50,7 +49,7 @@ ms.locfileid: "66059616"
   
 1.  Aprire la cartella di distribuzione del computer di destinazione.  
   
-2.  Fare doppio clic sul file di manifesto \<nome progetto>.SSISDeploymentManifest per avviare l'Installazione guidata pacchetti.  
+2.  Fare doppio clic sul file manifesto \<project name> . SSISDeploymentManifest, per avviare l'installazione guidata pacchetti.  
   
 3.  Nella pagina **Distribuzione pacchetti SSIS** selezionare l'opzione **Distribuzione di SQL Server** .  
   
@@ -64,7 +63,7 @@ ms.locfileid: "66059616"
   
 8.  Se è stata impostata la convalida dei pacchetti dopo l'installazione, esaminare i risultati della convalida dei pacchetti distribuiti.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Distribuzione di pacchetti &#40;&#41;SSIS](packages/legacy-package-deployment-ssis.md)  
   
   

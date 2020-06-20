@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: ddee1ce8-9d1b-4017-9894-bf7256aed95d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1a8c9ab517d1f6a122144604d6b147e6f5eeaf6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d34c78589a853c2b73167dbad555ab9da3e0d9fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62650888"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995062"
 ---
 # <a name="resize-the-job-history-log"></a>Modificare le dimensioni del log di cronologia processi
-  In questo argomento viene descritto come impostare i limiti [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] delle dimensioni per i log [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] della cronologia [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]processi di Agent in tramite.  
+  In questo argomento viene descritto come impostare i limiti delle dimensioni per i [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log della cronologia processi di Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 -   **Prima di iniziare:**  
   
@@ -56,7 +55,7 @@ ms.locfileid: "62650888"
   
 #### <a name="to-resize-the-job-history-log-based-on-time"></a>Per ridimensionare il log cronologia processi in base al tempo  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del, quindi [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]espandere l'istanza.  
+1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , quindi espandere l'istanza.  
   
 2.  Fare clic con il pulsante destro del mouse su **SQL Server Agent**, quindi scegliere **Proprietà**.  
   

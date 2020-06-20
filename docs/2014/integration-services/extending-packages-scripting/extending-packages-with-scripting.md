@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67fe18ef-f3aa-41d4-9b9d-5defd4618c4b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bb567bffe0c184907ca61bd583eb5666948a0f03
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ad036177e6265c31697a98c9e24fc4d1c11b310b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176183"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967243"
 ---
 # <a name="extending-packages-with-scripting"></a>Estensione di pacchetti tramite scripting
   Se i componenti predefiniti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] non soddisfano i propri requisiti, è possibile estendere le funzionalità di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilizzando il codice per definire estensioni personalizzate. Per l'estensione dei pacchetti sono disponibili due opzioni discrete: è possibile scrivere codice all'interno dei potenti wrapper forniti dall'attività Script e dal componente script oppure creare da zero estensioni personalizzate di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] derivando dalla classe di base fornita dal modello a oggetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
@@ -40,7 +39,7 @@ ms.locfileid: "78176183"
  [Estensione del flusso di dati con il componente script](data-flow-script-component/extending-the-data-flow-with-the-script-component.md) Viene illustrato come creare origini, trasformazioni e destinazioni personalizzate del flusso di dati utilizzando il componente script. Un componente del flusso di dati viene in genere chiamato una volta per ogni riga di dati che viene elaborata.
 
 ## <a name="reference"></a>Informazioni di riferimento
- [Integration Services riferimento a errori e messaggi](../integration-services-error-and-message-reference.md) Elenca i codici di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] errore predefiniti con i relativi nomi simbolici e le descrizioni.
+ [Integration Services riferimento a errori e messaggi](../integration-services-error-and-message-reference.md) Elenca i [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] codici di errore predefiniti con i relativi nomi simbolici e le descrizioni.
 
 ## <a name="related-sections"></a>Sezioni correlate
  [Estensione di pacchetti con oggetti personalizzati](../extending-packages-custom-objects/extending-packages-with-custom-objects.md) Viene illustrato come creare attività personalizzate del programma, componenti del flusso di dati e altri oggetti di pacchetto da utilizzare in più pacchetti.

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: daee6143-269f-428b-8458-9a3e726d586c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4963a309f6c54998ece968f8a5393e818fd30d07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f435e79b3f03d2fecdf0d2f18d2fd5aad90bfa1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110147"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048316"
 ---
 # <a name="viewing-tuning-reports"></a>Visualizzazione dei report di ottimizzazione
   Nell'attività precedente di questa lezione sono stati esaminati gli script [!INCLUDE[tsql](../../includes/tsql-md.md)] che consentono di creare o eliminare oggetti di database dalle indicazioni di Ottimizzazione guidata motore di database generate come risultato della sessione di ottimizzazione di MySession. La sessione di ottimizzazione di MySession è stata creata in [Ottimizzazione di un carico di lavoro](lesson-1-1-tuning-a-workload.md).  
@@ -36,13 +35,13 @@ ms.locfileid: "66110147"
   
 4.  Nell'elenco **Selezionare il report** del riquadro **Report ottimizzazione** fare clic su **Report costo istruzioni** . Se è necessario più spazio per la visualizzazione del report, trascinare il bordo del riquadro **Monitoraggio sessione** verso sinistra. Ad ogni istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguita su una tabella del database è associato un costo delle prestazioni. Tale costo può essere ridotto creando indici efficaci sulle colonne di una tabella alle quali si accede di frequente. In questo report viene illustrato il miglioramento percentuale previsto tra il costo originale dell'esecuzione di un'istruzione del carico di lavoro e il costo previsto se viene implementata l'indicazione di ottimizzazione. Si noti che la quantità di informazioni contenute nel report dipende dalla lunghezza e dalla complessità del carico di lavoro.  
   
-5.  Fare clic con il pulsante destro del mouse sul riquadro **Report costo istruzioni** nell'area della griglia e quindi scegliere **Esporta in un file**. Salvare il report come `MyReport`. L'estensione xml verrà aggiunta al nome del file automaticamente. Per visualizzare il contenuto del file MyReport.xml, è possibile aprire il report nell'editor XML preferito o in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
+5.  Fare clic con il pulsante destro del mouse sul riquadro **Report costo istruzioni** nell'area della griglia e quindi scegliere **Esporta in un file**. Salvare il report come `MyReport` . L'estensione xml verrà aggiunta al nome del file automaticamente. Per visualizzare il contenuto del file MyReport.xml, è possibile aprire il report nell'editor XML preferito o in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 6.  Tornare alla scheda **Report** di Ottimizzazione guidata motore di database e fare nuovamente clic con il pulsante destro del mouse su **Report costo istruzioni** . Controllare le altre opzioni disponibili. Si noti che è possibile modificare il carattere del report visualizzato. Se la modifica del carattere avviene in questo punto, verranno modificate anche le altre pagine a schede.  
   
 7.  Fare clic sugli altri report disponibili nell'elenco **Selezionare report** in modo da acquisire maggiore familiarità.  
   
-## <a name="summary"></a>Riepilogo  
+## <a name="summary"></a>Summary  
  A questo punto è stata esaminata la scheda **Report** dell'interfaccia utente grafica di Ottimizzazione guidata motore di database per la sessione di ottimizzazione di MySession. È possibile eseguire gli stessi passaggi per esplorare i report creati per la sessione di ottimizzazione di EvaluateMySession. Nel riquadro **Monitoraggio sessione** fare doppio clic su **EvaluateMySession** per iniziare.  
   
 ## <a name="next-lesson"></a>Lezione successiva  

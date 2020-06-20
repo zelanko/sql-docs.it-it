@@ -11,22 +11,21 @@ helpviewer_keywords:
 ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6373f67d40b9da97f652f3bcb05b3414deab5c8d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3cf4ca5d422e9d124c397bbcae8d8b48d12b95b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779362"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932730"
 ---
 # <a name="about-the-sql-server-database-engine"></a>Informazioni sul Motore di database di SQL Server
   Il componente [!INCLUDE[ssDE](../../includes/ssde-md.md)] di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rappresenta il servizio principale per l'archiviazione, l'elaborazione e la protezione dei dati. Grazie all'accesso controllato e all'elaborazione rapida delle transazioni, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] è in grado di soddisfare i requisiti delle applicazioni che richiedono un maggiore utilizzo di dati nell'organizzazione.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta fino a 50 istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in un singolo computer. Per creare un'installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipica di, vedere [installare SQL Server 2014 dall'installazione guidata &#40;&#41;di ](install-sql-server-from-the-installation-wizard-setup.md)installazione.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta fino a 50 istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in un singolo computer. Per creare un'installazione tipica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [installare SQL Server 2014 dall'installazione guidata &#40;&#41;di ](install-sql-server-from-the-installation-wizard-setup.md)installazione.  
   
  **Importante** Per le installazioni locali, è necessario eseguire il programma di installazione come amministratore. Se si installa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da una condivisione remota, è necessario utilizzare un account di dominio con autorizzazioni di lettura ed esecuzione relative a tale condivisione.  
   
- Quando si seleziona ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] motore di database** nella pagina componenti da installare dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installazione guidata di, vengono installate le funzionalità seguenti:  
+ Quando si seleziona ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] motore di database** nella pagina componenti da installare dell'installazione guidata di, vengono installate le funzionalità seguenti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
@@ -58,7 +57,7 @@ ms.locfileid: "62779362"
 > [!NOTE]  
 >  Per impostazione predefinita, i database di esempio e il codice di esempio non vengono installati come parte dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per installare i database di esempio e il codice di esempio, vedere il sito Web [CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Edizioni e componenti di SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md)   
  [Pianificazione di un'installazione di SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   

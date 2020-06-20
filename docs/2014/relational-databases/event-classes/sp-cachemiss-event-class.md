@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 82229233-f772-4558-95a0-d54584d1b1ae
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5f3d74cad3f462d9bd8d2d57cc3b6e37c4739598
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91df12e64c24bb3e21bb69e73f5ac1741f18ba0b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050927"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028400"
 ---
 # <a name="spcachemiss-event-class"></a>SP:CacheMiss - classe di evento
   La classe di evento SP:CacheMiss indica che la procedura non è stata trovata nella cache. Se, ad esempio, la classe di evento SP:CacheMiss si verifica di frequente, questa situazione può indicare che è necessario rendere disponibile una maggiore quantità di memoria per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in modo da aumentare la dimensione della cache delle procedure.  
@@ -52,7 +51,7 @@ ms.locfileid: "63050927"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|`bigint`|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [SP:CacheInsert - classe di evento](sp-cacheinsert-event-class.md)  

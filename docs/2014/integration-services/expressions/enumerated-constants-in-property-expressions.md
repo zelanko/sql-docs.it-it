@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b22e25ad9053ed4da0187035cff00ff7e3ca70af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b691367b8cfbe00c1e383fa3a2fd18e2d545be8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62898899"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967421"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Costanti enumerate in espressioni di proprietà
   Nelle espressioni di proprietà che includono valori di un elenco di membri di un enumeratore è necessario utilizzare i valori numerici dei membri dell'enumeratore, anziché i relativi nomi descrittivi. In un'espressione che imposta la proprietà `LoggingMode`, ad esempio, è necessario utilizzare il valore numerico 2, anziché il nome descrittivo Disabled.  
   
  In questo argomento vengono elencati solo i valori numerici equivalenti ai nomi descrittivi degli enumeratori i cui membri vengono comunemente utilizzati nelle espressioni di proprietà. Nel modello a oggetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono inclusi numerosi enumeratori aggiuntivi che è possibile usare durante la programmazione del modello a oggetti per la compilazione di pacchetti a livello di programmazione o per la creazione di elementi di pacchetto con codice personalizzato, quali attività e componenti dei flussi di dati.  
   
- Oltre alle proprietà personalizzate dei pacchetti e degli oggetti di pacchetto, nella finestra Proprietà di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] è incluso un set di proprietà disponibili per pacchetti, attività e contenitori Ciclo Foreach, Ciclo For e Sequenza. Le proprietà comuni impostate tramite valori di`ForceExecutionResult`enumeratori, `LoggingMode` `IsolationLevel`,, e `Transaction Option`, sono elencate nella sezione Proprietà comuni.  
+ Oltre alle proprietà personalizzate dei pacchetti e degli oggetti di pacchetto, nella finestra Proprietà di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] è incluso un set di proprietà disponibili per pacchetti, attività e contenitori Ciclo Foreach, Ciclo For e Sequenza. Le proprietà comuni impostate tramite valori di enumeratori,,, `ForceExecutionResult` `LoggingMode` e, `IsolationLevel` `Transaction Option` sono elencate nella sezione Proprietà comuni.  
   
  Nelle sezioni seguenti vengono fornite informazioni sulle costanti enumerate:  
   
@@ -118,7 +117,7 @@ ms.locfileid: "62898899"
 |EnumerateRowsInFirstTable|2|  
   
 ### <a name="foreach-nodelist-enumerator"></a>Enumeratore Foreach Nodelist  
- `SourceDocumentType`proprietà `InnerXPathStringSourceType`, e **Proprietà OuterXPathStringSourceType** : impostate utilizzando i valori dell' `SourceType` enumerazione.  
+ `SourceDocumentType``InnerXPathStringSourceType`proprietà, e **Proprietà OuterXPathStringSourceType** : impostate utilizzando i valori dell' `SourceType` enumerazione.  
   
 |Nome descrittivo in SourceType|Valore numerico|  
 |---------------------------------|-------------------|  
@@ -373,7 +372,7 @@ ms.locfileid: "62898899"
 |DirectInput|1|  
 |Variabile|2|  
   
- Proprietà di monitoraggio `ActionAtEvent` eventi WMI: impostata utilizzando i valori dell' `ActionAtEvent` enumerazione.  
+ Proprietà di monitoraggio eventi WMI `ActionAtEvent` : impostata utilizzando i valori dell' `ActionAtEvent` enumerazione.  
   
 |Nome descrittivo in ActionAtEvent|Valore numerico|  
 |------------------------------------|-------------------|  
@@ -423,7 +422,7 @@ ms.locfileid: "62898899"
 |Diff|4|  
 |Patch|5|  
   
- `SourceType`proprietà `SecondOperandType`, e `XPathSourceType` -impostate utilizzando i valori dell' `DTSXMLSourceType` enumerazione.  
+ `SourceType``SecondOperandType`proprietà, e `XPathSourceType` -impostate utilizzando i valori dell' `DTSXMLSourceType` enumerazione.  
   
 |Nome descrittivo in DTSXMLSourceType|Valore numerico|  
 |---------------------------------------|-------------------|  
@@ -532,7 +531,7 @@ ms.locfileid: "62898899"
 |File|1|  
 |File di log|2|  
   
- `BackupDevice`Set di proprietà utilizzando i valori dell'enumerazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMO (Management Objects `DeviceType` ).  
+ `BackupDevice`Set di proprietà utilizzando i valori dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enumerazione SMO (Management Objects) `DeviceType` .  
   
 |Nome descrittivo in DeviceType|Valore numerico|  
 |---------------------------------|-------------------|  
@@ -560,7 +559,7 @@ ms.locfileid: "62898899"
 |Year|3|  
   
 ### <a name="update-statistics-task"></a>Attività Aggiorna statistiche  
- `UpdateType`Set di proprietà utilizzando i valori dell'enumerazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMO (Management Objects `StatisticsTarget` ).  
+ `UpdateType`Set di proprietà utilizzando i valori dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enumerazione SMO (Management Objects) `StatisticsTarget` .  
   
 |Nome descrittivo in StatisticsTarget|Valore numerico|  
 |---------------------------------------|-------------------|  

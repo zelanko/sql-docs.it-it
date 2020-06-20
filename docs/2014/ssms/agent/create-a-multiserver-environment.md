@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: edc2b60d-15da-40a1-8ba3-f1d473366ee6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a6920920aa603c615cdc5f84a34a93204842052d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192966"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995372"
 ---
 # <a name="create-a-multiserver-environment"></a>Creazione di un ambiente multiserver
   L'amministrazione multiserver richiede l'impostazione di un server master (MSX) e di uno o più server di destinazione (TSX). I processi che verranno eseguiti in tutti i server di destinazione vengono innanzitutto definiti nel server master e quindi scaricati nei server di destinazione.  
@@ -60,14 +59,14 @@ ms.locfileid: "63192966"
   
 |Descrizione|Argomento|  
 |-----------------|-----------|  
-|Viene illustrato come creare un server master.|[Make a Master Server](make-a-master-server.md)|  
+|Viene illustrato come creare un server master.|[Configurare un server master](make-a-master-server.md)|  
 |Viene illustrato come creare un server di destinazione.|[Configurare un server di destinazione](make-a-target-server.md)|  
 |Viene illustrato come integrare un server di destinazione in un server master.|[Integrare un server di destinazione in un server master](enlist-a-target-server-to-a-master-server.md)|  
 |Viene illustrato come escludere un server di destinazione da un server master.|[Escludere un server di destinazione da un server master](defect-a-target-server-from-a-master-server.md)|  
 |Viene illustrato come escludere più server di destinazione da un server master.|[Escludere più server di destinazione da un server master](defect-multiple-target-servers-from-a-master-server.md)|  
 |Viene illustrato come verificare lo stato di un server di destinazione.|[sp_help_targetserver &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [sp_help_targetservergroup &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
   
-## <a name="see-also"></a>Vedi anche  
- [Risolvere i problemi relativi a processi multiserver che utilizzano proxy](troubleshoot-multiserver-jobs-that-use-proxies.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Risolvere i problemi relativi a processi multiserver che usano proxy](troubleshoot-multiserver-jobs-that-use-proxies.md)  
   
   

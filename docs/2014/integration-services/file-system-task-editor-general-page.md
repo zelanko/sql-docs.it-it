@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 51fe6614-3418-4eff-a28d-02ea31cc9aa9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 594b87b3e2d58ffe60bd3c31324811a66038c82b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf0c153168c513c98f8b9ac58984cb88ae1811da
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058808"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967131"
 ---
 # <a name="file-system-task-editor-general-page"></a>Editor attività File system (pagina Generale)
   Usare la pagina **Generale** della finestra di dialogo **Editor attività File system** per configurare l'operazione di file system eseguita dall'attività.  
@@ -40,10 +39,10 @@ ms.locfileid: "66058808"
  **IsDestinationPathVariable**  
  Consente di specificare se il percorso di destinazione è archiviato in una variabile. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**True**|Il percorso di destinazione è archiviato in una variabile. Se si seleziona questo valore, viene visualizzata l'opzione dinamica **DestinationVariable**.|  
-|**False**|Il percorso di destinazione è specificato in una gestione connessione file. Selezionando questo valore viene visualizzata l'opzione `DestinationConnection`dinamica.|  
+|**False**|Il percorso di destinazione è specificato in una gestione connessione file. Selezionando questo valore viene visualizzata l'opzione dinamica `DestinationConnection` .|  
   
  **OverwriteDestination**  
  Consente di specificare se l'operazione può sovrascrivere i file nella directory di destinazione.  
@@ -60,7 +59,7 @@ ms.locfileid: "66058808"
  **Operazione**  
  Consente di selezionare l'operazione di file system da eseguire. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Copia directory**|Consente di copiare una directory. Quando si seleziona questo valore vengono visualizzate le opzioni dinamiche per l'origine e la destinazione.|  
 |**Copia file**|Consente di copiare un file. Quando si seleziona questo valore vengono visualizzate le opzioni dinamiche per l'origine e la destinazione.|  
@@ -85,13 +84,13 @@ ms.locfileid: "66058808"
   
 ### <a name="isdestinationpathvariable--true"></a>IsDestinationPathVariable = True  
  **DestinationVariable**  
- Consente di selezionare il nome della variabile nell'elenco o di creare una nuova variabile facendo clic su \<**Nuova variabile...**>.  
+ Selezionare il nome della variabile nell'elenco oppure fare clic su \<**New variable...**> per creare una nuova variabile.  
   
  **Argomenti correlati:** [Integration Services &#40;variabili di&#41; SSIS](integration-services-ssis-variables.md), [Aggiungi variabile](../../2014/integration-services/add-variable.md)  
   
 ### <a name="isdestinationpathvariable--false"></a>IsDestinationPathVariable = False  
  `DestinationConnection`  
- Selezionare una gestione connessione file nell'elenco oppure fare clic su \< **nuova connessione...**> per creare una nuova gestione connessione.  
+ Selezionare una gestione connessione file nell'elenco oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
@@ -99,13 +98,13 @@ ms.locfileid: "66058808"
   
 ### <a name="issourcepathvariable--true"></a>IsSourcePathVariable = True  
  **SourceVariable**  
- Consente di selezionare il nome della variabile nell'elenco o di creare una nuova variabile facendo clic su \<**Nuova variabile...**>.  
+ Selezionare il nome della variabile nell'elenco oppure fare clic su \<**New variable...**> per creare una nuova variabile.  
   
  **Argomenti correlati:** [Integration Services &#40;variabili di&#41; SSIS](integration-services-ssis-variables.md), [Aggiungi variabile](../../2014/integration-services/add-variable.md)  
   
 ### <a name="issourcepathvariable--false"></a>IsSourcePathVariable = False  
  `SourceConnection`  
- Selezionare una gestione connessione file nell'elenco oppure fare clic su \< **nuova connessione...**> per creare una nuova gestione connessione.  
+ Selezionare una gestione connessione file nell'elenco oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
@@ -118,7 +117,7 @@ ms.locfileid: "66058808"
  **ReadOnly**  
  Consente di specificare se il file è di sola lettura.  
   
- **Archiviazione**  
+ **Archivio**  
  Consente di specificare se il file o la directory è pronta per l'archiviazione.  
   
  **Sistema**  
@@ -128,7 +127,7 @@ ms.locfileid: "66058808"
  `UseDirectoryIfExists`  
  Indica se l'operazione **Crea directory** usa una directory esistente con il nome specificato anziché creare una nuova directory.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  
   

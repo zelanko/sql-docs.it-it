@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0e7a87ad14dbe1b12abb4ca4fe0af6b0a439c57b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 860de6d29557b6594c9ec149f09e915b837fa95e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149797"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048513"
 ---
 # <a name="distributed-replay-requirements"></a>Requisiti relativi a Riesecuzione distribuita
   Prima di usare la funzionalità Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , esaminare i requisiti del prodotto indicati in questo argomento.  
@@ -107,7 +106,7 @@ ms.locfileid: "63149797"
   
 -   SPID  
   
--   Start Time  
+-   Ora di Inizio  
   
 -   EndTime  
   
@@ -125,7 +124,7 @@ ms.locfileid: "63149797"
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
   
 ## <a name="operating-system-requirements"></a>Requisiti del sistema operativo  
- I sistemi operativi supportati per l'esecuzione dello strumento di amministrazione e dei servizi client e del controller sono gli stessi dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per ulteriori informazioni sui sistemi operativi supportati per l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza di, vedere [requisiti hardware e software per l'installazione di SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+ I sistemi operativi supportati per l'esecuzione dello strumento di amministrazione e dei servizi client e del controller sono gli stessi dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per ulteriori informazioni sui sistemi operativi supportati per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [requisiti hardware e software per l'installazione di SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
  Le funzionalità di Riesecuzione distribuita sono supportate sia in sistemi operativi x86 che x64. Per i sistemi operativi basati su x64, è supportata solo la modalità Windows on Windows (WOW).  
   
@@ -157,8 +156,8 @@ ms.locfileid: "63149797"
   
  La riproduzione degli eventi associati ad account di accesso mancanti o non corretti genera errori di riproduzione, ma l'operazione non viene interrotta.  
   
-## <a name="see-also"></a>Vedi anche  
- [SQL Server Riesecuzione distribuita](sql-server-distributed-replay.md)   
+## <a name="see-also"></a>Vedere anche  
+ [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Sicurezza Riesecuzione distribuita](distributed-replay-security.md)   
  [Installare Riesecuzione distribuita](install-distributed-replay-overview.md)  
   

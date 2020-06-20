@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 621b6d13-10f1-47d0-b63c-7adb6ab904e0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c442e3e264e36f9d6ffef35947f4f96180c4b799
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e7518ef7933d864da5b8e9827f772e6599b79d95
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82712278"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048180"
 ---
 # <a name="support-for-large-udts"></a>Supporto per tipi definiti dall'utente di grandi dimensioni
   Questa soluzione di esempio include due progetti. Un progetto consente di creare un assembly (DLL) dal codice sorgente C# che contiene il tipo CLR. Nel database verrà aggiunta una tabella con una colonna di un tipo definito nell'assembly. Per impostazione predefinita, in questo esempio verrà utilizzato il database master. Il secondo progetto è un'applicazione C nativa che consente di leggere i dati dalla tabella.  

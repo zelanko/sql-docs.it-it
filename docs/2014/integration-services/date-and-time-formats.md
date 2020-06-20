@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 26bd117cb63ccc623ee54f3370e1d07237de9c52
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9db752a0910abb1a671e50b3a7a34fd2fd9cff68
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059651"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967011"
 ---
 # <a name="date-and-time-formats"></a>Formati di data e ora
   L'analisi veloce offre un set di routine semplici e veloci per l'analisi dei dati. L'analisi veloce supporta i formati seguenti per i tipi di dati data e ora.  
@@ -120,7 +119,7 @@ ms.locfileid: "66059651"
   
  Le stringhe di output dell'analisi veloce sono di tipo DT_DATE, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 e DT_DBTIMESTAMPOFFSET. Ai valori di data e ora con formati troncati viene applicato un riempimento. Nella tabella seguente sono elencati i valori aggiunti per le parti mancanti relative a data e ora.  
   
-|Parte della data o dell'ora|Riempimento|  
+|Parte della data o dell'ora|Spaziatura interna|  
 |---------------------|-------------|  
 |Secondi|Viene aggiunto 00.|  
 |Minuti|Aggiungi 00:00.|  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d770d35c-c8de-4e00-9a85-7d03f45a0f0d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 52537ac126115fbde3d7d0fb1a13f61f1d25cf15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b70449ace66d4e33a547eca1c0b19eafabde5a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63137522"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002003"
 ---
 # <a name="implement-sql-server-agent-security"></a>Implementazione della sicurezza di SQL Server Agent
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent consente all'amministratore del database di eseguire ciascun passaggio di un processo in un contesto di sicurezza in cui sono disponibili solo le autorizzazioni necessarie all'esecuzione di tale passaggio e che viene determinato da un proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Per impostare le autorizzazioni per un particolare passaggio di un processo, è necessario creare un proxy che disponga delle autorizzazioni necessarie e quindi assegnare questo proxy al passaggio del processo. È possibile specificare un proxy per più di un passaggio di processo. Per i passaggi che richiedono le medesime autorizzazioni, viene utilizzato lo stesso proxy.  
@@ -42,7 +41,7 @@ ms.locfileid: "63137522"
   
  I membri del ruolo predefinito del server **sysadmin** sono autorizzati a creare, modificare ed eliminare account proxy. I membri del ruolo **sysadmin** sono autorizzati a creare passaggi di processo che non specificano un proxy ma che invece vengono eseguiti come account di servizio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, vale a dire l'account usato per avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
-## <a name="guidelines"></a>Indicazioni  
+## <a name="guidelines"></a>Linee guida  
  Per migliorare la sicurezza dell'implementazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, attenersi alle seguenti indicazioni generali:  
   
 -   Creare appositi account utente dedicati per i proxy e utilizzare questi account solo per eseguire passaggi di processo.  
@@ -73,7 +72,7 @@ ms.locfileid: "63137522"
   
     -   **Extension**: Microsoft.SqlServer.Configuration.ConfigExtension.dll  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Ruoli predefiniti](../../reporting-services/security/role-definitions-predefined-roles.md)   
  [sp_addrolemember &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)   
  [sp_droprolemember &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)   

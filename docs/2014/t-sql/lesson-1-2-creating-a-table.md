@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 653f2dd3-36a2-4bd5-8703-71a57d244661
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2d4b110446ae27335f65e83958a1a153350ccbcb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c772f2527bd5ddb8a6759cbaa72d8aed9277f5cb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704564"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048480"
 ---
 # <a name="creating-a-table-tutorial"></a>Esercitazione per la creazione di una tabella
   Per creare una tabella, è necessario specificare un nome per la tabella e i nomi e i tipi di dati di ogni colonna di quest'ultima. È inoltre consigliabile indicare se sono consentiti valori Null in ogni colonna.  
@@ -73,7 +72,7 @@ ms.locfileid: "62704564"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Inserimento e aggiornamento di dati in una tabella &#40;esercitazione&#41;](../t-sql/lesson-1-3-inserting-and-updating-data-in-a-table.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c102de15-f312-42a7-b52a-fc4879cc43aa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 224bfd47c31c94e19935a97c6ed1cc726e233bb2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63510581465043fab7c97b3ca78337ff153ea087
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061301"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028139"
 ---
 # <a name="tm-commit-tran-completed-event-class"></a>TM: Commit Tran Completed - classe di evento
   La classe di evento TM: Commit Tran Completed indica che una richiesta COMMIT TRANSACTION è stata completata. La richiesta è stata inviata dal client tramite l'interfaccia di gestione delle transazioni. La colonna EventSubClass indica se, in seguito al commit della transazione corrente, verrà avviata una nuova transazione.  
@@ -53,7 +52,7 @@ ms.locfileid: "63061301"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|`bigint`|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../extended-events/extended-events.md)   
  [COMMIT TRANSACTION &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/commit-transaction-transact-sql)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  

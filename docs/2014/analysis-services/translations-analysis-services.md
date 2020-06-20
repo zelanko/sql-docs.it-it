@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e97c9ba15aab664e9f0c77f9eb84152f75c3e3d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7417efef16ae16ef11b955af12ba8dbbd549939c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065875"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938322"
 ---
 # <a name="translations-analysis-services"></a>Traduzioni (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]** Solo multidimensionale  
@@ -45,7 +44,7 @@ ms.locfileid: "66065875"
   
 1.  Aprire il modello multidimensionale Adventure Works nella finestra di progettazione.  
   
-2.  In Esplora soluzioni aprire viste origine dati e fare doppio clic su Adventure Works DW\<versione>. dsv.  
+2.  In Esplora soluzioni aprire viste origine dati e fare doppio clic su Adventure Works DW \<version> . dsv.  
   
 3.  Trovare dimDate, dimProduct, dimProductCategory o dimProductSubcateogry. Tutte queste dimensioni contengono gli attributi dei membri tradotti per mese, giorno della settimana, nome del prodotto, nome della categoria e così via.  
   
@@ -116,7 +115,7 @@ ms.locfileid: "66065875"
 ## <a name="resolving-translations"></a>Risoluzione di traduzioni  
  Se un'applicazione client richiede un identificatore delle impostazioni locali, l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tenta di risolvere i dati e metadati per gli oggetti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] con l'identificatore LCID corrispondente più vicino. Se l'applicazione client non specifica una lingua predefinita oppure specifica l'identificatore delle impostazioni locali neutro (0) o l'identificatore della lingua predefinita (1024), [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] restituisce i dati e i metadati per l'oggetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nella lingua predefinita.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Scenari di globalizzazione per Analysis Services multidimensionale](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Lingue e regole di confronto &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)   
  [Impostare o modificare le regole di confronto delle colonne](../relational-databases/collations/set-or-change-the-column-collation.md)   

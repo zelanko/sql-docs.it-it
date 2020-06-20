@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 91d00367c0ae8cc0541c4bd9dbec2c508010bb90
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8207e899c98d788ea0cbd618231597b22a6c0793
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703898"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063457"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Generazione di script (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornisce due meccanismi per la generazione di script [!INCLUDE[tsql](../../includes/tsql-md.md)] . È possibile creare script per più oggetti utilizzando la **procedura guidata genera e pubblica script.** È anche possibile generare uno script per un singolo oggetto o per più oggetti usando il menu **Crea script per** in **Esplora oggetti**.  
@@ -42,7 +41,7 @@ ms.locfileid: "82703898"
   
 3.  Espandere la categoria dell'oggetto: ad esempio il nodo **Tabelle** o **Viste** .  
   
-4.  Fare clic con il pulsante destro del mouse sull'oggetto e scegliere **Crea script per \<tipo di oggetto**, ad esempio **Crea script per tabella**.  
+4.  Fare clic con il pulsante destro del mouse sull'oggetto, scegliere Crea **script \<object type> come**, ad esempio, scegliere Crea **script per tabella**.  
   
 5.  Scegliere il tipo di script, ad esempio **Genera codice per istruzione CREATE** o **Genera codice per istruzione ALTER**.  
   
@@ -57,11 +56,11 @@ ms.locfileid: "82703898"
   
 2.  Espandere **Database**, quindi espandere il database che contiene gli oggetti per cui creare lo script.  
   
-3.  Fare clic con il pulsante destro del mouse sul primo oggetto per cui generare lo script, scegliere **Crea per script per \<tipo di oggetto>** e nelle selezioni **Salva con nome** scegliere **Nuova finestra editor di query** come destinazione dell'output.  
+3.  Fare clic con il pulsante destro del mouse sul primo oggetto per cui creare lo script, scegliere Crea **script \<object type> **per e nelle selezioni **Salva con nome** scegliere **nuova finestra Editor di query** come destinazione dell'output.  
   
 4.  Passare al secondo oggetto per cui si desidera creare lo script.  
   
-5.  Fare clic con il pulsante destro del mouse sull'oggetto, scegliere **Crea script per \<tipo di oggetto>** e nelle selezioni **Salva con nome** scegliere **Appunti** come destinazione dell'output.  
+5.  Fare clic con il pulsante destro del mouse sull'oggetto, scegliere Crea **script \<object type> **per e nelle selezioni **Salva con nome** scegliere **Appunti** come destinazione dell'output.  
   
 6.  Nella finestra dell'editor di query aperta per il primo oggetto incollare lo script per il secondo oggetto dagli Appunti.  
   
@@ -82,6 +81,6 @@ ms.locfileid: "82703898"
   
 6.  Tenendo premuto il tasto Crtl fare clic sul secondo oggetto per cui si desidera creare lo script.  
   
-7.  Fare clic con il pulsante destro del mouse su uno degli oggetti selezionati e scegliere **Crea script per \<tipo di oggetto>** .  
+7.  Fare clic con il pulsante destro del mouse su uno degli oggetti selezionati e scegliere Crea **script \<object type> come**.  
   
   

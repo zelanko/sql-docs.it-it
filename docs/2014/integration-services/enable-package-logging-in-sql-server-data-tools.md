@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b69a8593-5bb0-4f04-87d2-f8e7bd7eb4fc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8ef64ee84a90a74d2206fa8cc766e45b1a691566
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73a4c6fc0795fde7a9b8e7378fd0a88447ff5cd2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059274"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966937"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>Abilitare la registrazione di pacchetti in SQL Server Data Tools
   In questo argomento viene descritta la procedura per aggiungere log in un pacchetto, configurare la registrazione a livello di pacchetto e salvare la configurazione di registrazione in un file XML. È possibile aggiungere log solo a livello di pacchetto. Il pacchetto, tuttavia, non deve eseguire necessariamente la registrazione per consentire la registrazione nei contenitori del pacchetto.  
@@ -35,7 +34,7 @@ ms.locfileid: "66059274"
   
 3.  Selezionare un provider di log nell'elenco **Tipo provider** e quindi fare clic su **Aggiungi**.  
   
-4.  Nella colonna **Configurazione** selezionare una gestione connessione oppure fare clic su **\<Nuova connessione>** per creare una nuova gestione connessione del tipo appropriato per il provider di log. A seconda del provider selezionato, utilizzare una delle gestioni connessioni seguenti:  
+4.  Nella colonna **configurazione** selezionare una gestione connessione oppure fare clic su **\<New connection>** per creare una nuova gestione connessione del tipo appropriato per il provider di log. A seconda del provider selezionato, utilizzare una delle gestioni connessioni seguenti:  
   
     -   Per file di testo utilizzare una gestione connessione file. Per ulteriori informazioni, vedere [gestione connessione file](connection-manager/file-connection-manager.md)  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66059274"
   
 11. Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services &#40;la registrazione&#41; SSIS](performance/integration-services-ssis-logging.md)   
  [Registrazione di Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
   

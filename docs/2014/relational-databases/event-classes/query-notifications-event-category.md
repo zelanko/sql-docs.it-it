@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 13c62636-ce8a-410f-9af9-c0a78959fb49
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c83ebac20a86cd490fbfdf2dbd099e103d404ced
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8d9bf18bfbf1cb8ff5c2cb99840b9632c795141
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62650536"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028817"
 ---
 # <a name="query-notifications-event-category"></a>Categoria di eventi di notifica delle query
   Nella categoria di eventi **Query Notifications** sono incluse classi di evento in cui sono disponibili informazioni che gli sviluppatori e gli amministratori possono usare per monitorare e risolvere i problemi relativi alle notifiche delle query.  

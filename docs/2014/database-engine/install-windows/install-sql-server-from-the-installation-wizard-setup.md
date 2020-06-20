@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0e0af29d348ff55b415d22d44bc8e8e48a35d290
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0561ff95fc5fbcfb6a9dc552580e14ff2a5d14f1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775751"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932723"
 ---
 # <a name="install-sql-server-2014-from-the-installation-wizard-setup"></a>Installare SQL Server 2014 dall'Installazione guidata (programma di installazione)
-  In questo argomento vengono fornite istruzioni dettagliate per installare una nuova istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando l'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Poiché nell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disponibile un unico albero delle funzionalità per l'installazione di tutti i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , non è necessario installarli singolarmente. Per ulteriori informazioni sui vari componenti che possono essere installati, vedere [installazione per SQL Server 2014](installation-for-sql-server.md).  Per ulteriori informazioni su come installare i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componenti singolarmente, vedere [Install SQL Server 2014](install-sql-server.md).  
+  In questo argomento vengono fornite istruzioni dettagliate per installare una nuova istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando l'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Poiché nell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disponibile un unico albero delle funzionalità per l'installazione di tutti i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , non è necessario installarli singolarmente. Per ulteriori informazioni sui vari componenti che possono essere installati, vedere [installazione per SQL Server 2014](installation-for-sql-server.md).  Per ulteriori informazioni su come installare i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componenti singolarmente, vedere [install SQL Server 2014](install-sql-server.md).  
   
  In questi argomenti aggiuntivi vengono illustrati altri modi per installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
@@ -50,7 +49,7 @@ ms.locfileid: "62775751"
   
 3.  Nella pagina relativa al codice Product Key selezionare un'opzione per indicare se si intende installare una versione gratuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o una versione di produzione del prodotto con una chiave PID. Per ulteriori informazioni, vedere [edizioni e componenti di SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
-     Per continuare, fare clic su **Avanti**.  
+     Scegliere **Avanti**per continuare.  
   
 4.  Nella pagina Condizioni di licenza leggere il contratto di licenza e, per accettare, selezionare la casella di controllo **Accetto le condizioni di licenza** , quindi fare clic su **Avanti**. Per migliorare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è inoltre possibile abilitare l'opzione relativa all'utilizzo delle funzionalità e inviare report a [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
@@ -62,7 +61,7 @@ ms.locfileid: "62775751"
   
 8.  Nella pagina Installa i file di installazione viene mostrato lo stato di avanzamento del download, dell'estrazione e dell'installazione dei file di installazione. Se viene individuato un aggiornamento per il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ne viene specificata l'inclusione, verrà installato anche questo aggiornamento.  
   
-9. Nella pagina Impostazione ruolo selezionare ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installazione funzionalità**, quindi fare clic su **Avanti** per passare alla pagina Selezione funzionalità.  
+9. Nella pagina Impostazione ruolo selezionare **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installazione funzionalità**, quindi fare clic su **Avanti** per passare alla pagina Selezione funzionalità .  
   
 10. Nella pagina Selezione funzionalità selezionare i componenti per l'installazione. Una volta selezionato il nome della funzionalità desiderata, nel riquadro **Descrizione funzionalità** viene visualizzata una descrizione per ogni gruppo di componenti. È possibile selezionare qualsiasi combinazione di caselle di controllo. Per ulteriori informazioni, vedere [edizioni e componenti di SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) e [funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
@@ -142,21 +141,21 @@ ms.locfileid: "62775751"
   
      Fare clic su **Aggiungi utente corrente** per aggiungere gli utenti a cui concedere le autorizzazioni di accesso per il servizio controller di Riesecuzione distribuita. Fare clic sul pulsante **Aggiungi** per aggiungere autorizzazioni di accesso per il servizio controller di Riesecuzione distribuita. Fare clic sul pulsante **Rimuovi** per rimuovere le autorizzazioni di accesso dal servizio controller di Riesecuzione distribuita.  
   
-     Per continuare, fare clic su **Avanti**.  
+     Scegliere **Avanti**per continuare.  
   
 18. Utilizzare la pagina di configurazione del client Riesecuzione distribuita per specificare gli utenti a cui si desidera concedere autorizzazioni amministrative per il servizio client Riesecuzione distribuita. Gli utenti che dispongono di autorizzazioni amministrative disporranno di accesso illimitato al servizio client Riesecuzione distribuita.  
   
-     **Nome controller** è un parametro facoltativo e il valore predefinito è \<*blank*>. Immettere il nome del controller che il computer client comunicherà con per il servizio client Riesecuzione distribuita. Tenere presente quanto segue:  
+     Il **nome del controller** è un parametro facoltativo e il valore predefinito è \<*blank*> . Immettere il nome del controller che il computer client comunicherà con per il servizio client Riesecuzione distribuita. Tenere presente quanto segue:  
   
     -   Se è già stato configurato un controller, immettere il nome del controller durante la configurazione di ciascuno client.  
   
     -   In caso contrario, è possibile lasciare vuoto il nome del controller. Tuttavia, è necessario immettere manualmente il nome del controller nel file **configurazione client** .  
   
-     Specificare la **directory di lavoro** per il servizio client riesecuzione distribuita. La directory di lavoro predefinita \<corrisponde alla *lettera di unità*>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:\\\Program Files \DReplayClient\WorkingDir.  
+     Specificare la **directory di lavoro** per il servizio client riesecuzione distribuita. La directory di lavoro predefinita è \<*drive letter*> : \Program Files \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \DReplayClient\WorkingDir \\ .  
   
-     Specificare la **directory dei risultati** per il servizio client riesecuzione distribuita. La directory dei risultati predefinita \< *è lettera di unità*>:\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Program\\files \DReplayClient\ResultDir.  
+     Specificare la **directory dei risultati** per il servizio client riesecuzione distribuita. La directory dei risultati predefinita è \<*drive letter*> : \Program Files \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \DReplayClient\ResultDir \\ .  
   
-     Per continuare, fare clic su **Avanti**.  
+     Scegliere **Avanti**per continuare.  
   
 19. Nella pagina Inizio installazione è disponibile una visualizzazione albero delle opzioni specificate durante l'installazione. In questa pagina, tramite il programma di installazione vengono indicati l'eventuale abilitazione o disabilitazione della funzionalità di aggiornamento del prodotto e la versione dell'aggiornamento finale.  
   
@@ -173,7 +172,7 @@ ms.locfileid: "62775751"
   
  Per ridurre la superficie di attacco di un sistema, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono installati e abilitati in modo selettivo i servizi e le funzionalità principali. Per ulteriori informazioni, vedere [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Convalidare un'installazione di SQL Server](validate-a-sql-server-installation.md)   
  [Eliminare un'installazione di SQL Server 2014](repair-a-failed-sql-server-installation.md)   
  [Visualizzare e leggere i file di log del programma di installazione SQL Server](view-and-read-sql-server-setup-log-files.md)   

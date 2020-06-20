@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 51f33f3b-6b7f-41bf-a620-97fd5189e633
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e5f361679d7e2e57024f0ac6859dbc3b0aac32a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50f41313457a468a243af4b7542a9b4aa675157d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065791"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938282"
 ---
 # <a name="translations-cube-designer-analysis-services---multidimensional-data"></a>Traduzioni (Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Utilizzare la scheda **Traduzioni** in Progettazione cubi per creare e modificare le prospettive per il cubo selezionato.  
@@ -31,7 +30,7 @@ ms.locfileid: "66065791"
  **Dettagli della traduzione**  
  Usare il riquadro relativo ai **dettagli di traduzione** per creare e modificare le traduzioni per il cubo selezionato.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Traduzioni di cubi](multidimensional-models-olap-logical-cube-objects/cube-translations.md)   
  [Scenari di globalizzazione per Analysis Services multidimensionale](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)  
