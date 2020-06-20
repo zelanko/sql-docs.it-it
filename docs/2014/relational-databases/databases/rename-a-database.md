@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f014cb37c6c28a0c9a91bd811b9e94d734167e1e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd25a78e3d3b9be2e7191ce6ed3d6bdcbb0f9606
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916771"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965813"
 ---
 # <a name="rename-a-database"></a>Rinominare un database
   In questo argomento si illustra come rinominare un database definito dall'utente in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Nel nome del database è possibile utilizzare qualsiasi carattere conforme alle regole per gli identificatori.  
@@ -54,7 +53,7 @@ ms.locfileid: "62916771"
   
 #### <a name="to-rename-a-database"></a>Per rinominare un database  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del, quindi [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]espandere l'istanza.  
+1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , quindi espandere l'istanza.  
   
 2.  Verificare che nessuno stia usando il database e quindi [impostare il database in modalità utente singolo](set-a-database-to-single-user-mode.md).  
   
@@ -84,7 +83,7 @@ GO
 ##  <a name="follow-up-after-renaming-a-database"></a><a name="FollowUp"></a> Completamento: Dopo la rinomina di un database  
  Dopo aver rinominato un database, eseguire il backup del database **master** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Identificatori del database](database-identifiers.md)  
   

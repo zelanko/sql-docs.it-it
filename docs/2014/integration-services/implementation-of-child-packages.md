@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1f9eb6860a40f6c47e65beb3fe109255d333d628
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7390434b1565c64b63e62c89d1e61b13f18cd6a6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058185"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965701"
 ---
 # <a name="implementation-of-child-packages"></a>Implementazione di pacchetti figlio
   Quando si implementa il bilanciamento del carico tramite [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], i pacchetti figlio vengono installati su altri server per sfruttare il tempo di CPU o di server disponibile. Per creare ed eseguire i pacchetti figlio è necessario attenersi alla procedura seguente:  
@@ -51,7 +50,7 @@ ms.locfileid: "66058185"
 ## <a name="debugging-the-sql-server-agent-jobs-and-child-packages"></a>Debug dei processi di SQL Server Agent e dei pacchetti figlio  
  Per il test dei processi di SQL Server Agent e dei relativi pacchetti figlio è possibile utilizzare uno dei metodi seguenti:  
   
--   Esecuzione di ogni pacchetto figlio in Progettazione SSIS, facendo clic su **debug** / **Avvia senza eseguire debug**.  
+-   Esecuzione di ogni pacchetto figlio in Progettazione SSIS, facendo clic su **debug**  /  **Avvia senza eseguire debug**.  
   
 -   Eseguire ogni singolo processo di SQL Server Agent sul relativo computer remoto, tramite [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], per verificare che il pacchetto venga eseguito.  
   

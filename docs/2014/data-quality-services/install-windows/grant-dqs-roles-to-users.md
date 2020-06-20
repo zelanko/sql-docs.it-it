@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6c5c6cf2953de3b23e55cf75b0287750a4abbb86
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be74494f3cf06732ff49bcfd7c268df723fd957b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480563"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937599"
 ---
 # <a name="grant-dqs-roles-to-users"></a>Concedere ruoli DQS agli utenti
   In questo argomento si descrive come creare account di accesso SQL in un'entità di Windows e come assegnare i ruoli [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) nel database DQS_MAIN.  
@@ -48,8 +47,8 @@ ms.locfileid: "65480563"
 ## <a name="next-steps"></a>Passaggi successivi  
  Provare ad accedere a [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] utilizzando l'account utente di Windows per cui è stato appena creato un account di accesso SQL e a cui è stato concesso un ruolo DQS.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Installare Data Quality Services](install-data-quality-services.md)   
- [Creazione di un account di accesso](../../relational-databases/security/authentication-access/create-a-login.md)  
+ [Creare un account di accesso](../../relational-databases/security/authentication-access/create-a-login.md)  
   
   

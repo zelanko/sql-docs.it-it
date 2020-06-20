@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8c5c6f1998cffc268a57318e0124f74d3411a3b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9aa17642a2b31bcee69fcdc20c20bc506a90557
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63249322"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002374"
 ---
 # <a name="sqlerrorlogfile-class"></a>Classe SqlErrorLogFile
   Fornisce proprietà per la visualizzazione delle informazioni relative a un file di log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -55,7 +54,7 @@ class SQLErrorLogFile
 |Spazio dei nomi|\root\Microsoft\SqlServer\ComputerManagement10|  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come recuperare informazioni su tutti i file di log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per eseguire l'esempio, sostituire \< *Instance_Name*> con il nome dell'istanza, ad esempio, "instance1".  
+ Nell'esempio seguente viene illustrato come recuperare informazioni su tutti i file di log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per eseguire l'esempio, sostituire \<*Instance_Name*> con il nome dell'istanza, ad esempio,' Instance1'.  
   
 ```  
 on error resume next  
@@ -89,13 +88,13 @@ Next
     > [!NOTE]  
     >  Per informazioni su come verificare le autorizzazioni WMI, vedere la sezione relativa alla sicurezza nell'argomento [visualizzare i file di log offline](../logs/view-offline-log-files.md).  
   
--   Autorizzazione di lettura per la cartella che contiene i log degli errori. Per impostazione predefinita, i log degli errori si trovano nel percorso seguente, dove \< *unità>* rappresenta l'unità in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cui \<è stato installato e *NomeIstanza*> è il nome [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dell'istanza di:  
+-   Autorizzazione di lettura per la cartella che contiene i log degli errori. Per impostazione predefinita, i log degli errori si trovano nel percorso seguente \<*Drive> , dove * rappresenta l'unità in cui è stato installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e \<*InstanceName*> è il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
-     **Unità>: \Programmi\Microsoft SQL Server\MSSQL11. \<** **\< Nomeistanza> \MSSQL\Log**  
+     ** \<Drive> : \Programmi\microsoft SQL Server\MSSQL11** **. \<InstanceName> \MSSQL\Log**  
   
  Se si sta eseguendo la connessione attraverso un firewall, assicurarsi che sia impostata un'eccezione nel firewall per WMI nei computer di destinazione remoti. Per ulteriori informazioni, vedere [connessione a WMI in modalità remota a partire da Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178848).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe SqlErrorLogEvent](sqlerrorlogevent-class.md)   
  [Visualizzare file di log offline](../logs/view-offline-log-files.md)  
   

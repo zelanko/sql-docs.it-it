@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b9622c48-3243-4408-a1de-9ba20e32ff70
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: aa0f92cc3275810b73d1dbe661a1f8473c7234df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 26055dde636d299a2a58fdfe0bdbd3fdfbdab012
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054276"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972351"
 ---
 # <a name="xml-task-editor-general-page"></a>XML Task Editor (General Page)
   Utilizzare il nodo **Generale** della finestra di dialogo **Editor attività XML** per specificare il tipo di operazione e configurarla.  
@@ -30,19 +29,19 @@ ms.locfileid: "66054276"
  **Tipo operazione**  
  Selezionare il tipo di operazione dall'elenco. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
-|**Convalida**|Consente di convalidare il documento XML in base a una schema di definizione DTD (Document Type Definition) o XSD (XML Schema Definition). Selezionando questa opzione, verranno visualizzate le opzioni dinamiche nella sezione **Convalida**.|  
+|**Convalidare**|Consente di convalidare il documento XML in base a una schema di definizione DTD (Document Type Definition) o XSD (XML Schema Definition). Selezionando questa opzione, verranno visualizzate le opzioni dinamiche nella sezione **Convalida**.|  
 |**XSLT**|Consente di eseguire trasformazioni XSL in documenti XML. Selezionando questa opzione, verranno visualizzate le opzioni dinamiche nella sezione **XSLT**.|  
 |**XPATH**|Consente di eseguire valutazioni e query XPath. Selezionando questa opzione, verranno visualizzate le opzioni dinamiche nella sezione **XPATH**.|  
-|**Merge**|Consente di unire due documenti XML. Selezionando questa opzione, verranno visualizzate le opzioni dinamiche nella sezione **Merge**.|  
+|**Unione**|Consente di unire due documenti XML. Selezionando questa opzione, verranno visualizzate le opzioni dinamiche nella sezione **Merge**.|  
 |**Diff**|Consente di confrontare due documenti XML. Selezionando questa opzione, verranno visualizzate le opzioni dinamiche nella sezione **Diff**.|  
 |**Patch**|Consente di applicare l'output di un'operazione Diff per la creazione di un nuovo documento. Selezionando questa opzione, verranno visualizzate le opzioni dinamiche nella sezione **Patch**.|  
   
  **SourceType**  
  Consente di selezionare il tipo di origine del documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Input diretto**|Consente di impostare l'origine su un documento XML.|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
@@ -51,11 +50,11 @@ ms.locfileid: "66054276"
  **origine**  
  Se l'opzione **Origine** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(...)** e quindi indicare il codice XML usando la finestra di dialogo **Editor origine documento**.  
   
- Se l'opzione **Origine** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
+ Se l' **origine** è impostata su **connessione file**, selezionare una gestione connessione file oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Se l'opzione **Origine** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su **\<Nuova variabile...>** per creare una nuova variabile.  
+ Se l' **origine** è impostata su **variabile**, selezionare una variabile esistente oppure fare clic su **\<New variable...>** per creare una nuova variabile.  
   
  **Argomenti correlati**: [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Aggiungi variabile](../../2014/integration-services/add-variable.md).  
   
@@ -70,15 +69,15 @@ ms.locfileid: "66054276"
  **OverwriteDestination**  
  Consente di indicare se sovrascrivere il file o la variabile di destinazione.  
   
- **Destination**  
- Selezionare una gestione connessione file esistente o fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
+ **Destinazione**  
+ Selezionare una gestione connessione file esistente o fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **DestinationType**  
  Consente di selezionare il tipo di destinazione del documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
 |**Variabile**|Consente di impostare l'origine su una variabile contenente il documento XML.|  
@@ -86,7 +85,7 @@ ms.locfileid: "66054276"
  **ValidationType**  
  Consente di selezionare il tipo di convalida. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**DTD**|Consente di utilizzare una definizione DTD.|  
 |**XSD**|Consente di utilizzare una definizione XSD. Selezionando questa opzione, verranno visualizzate le opzioni dinamiche nella sezione **ValidationType**.|  
@@ -103,7 +102,7 @@ ms.locfileid: "66054276"
  **SecondOperandType**  
  Consente di selezionare il tipo di origine del secondo documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Input diretto**|Consente di impostare l'origine su un documento XML.|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
@@ -112,11 +111,11 @@ ms.locfileid: "66054276"
  **SecondOperand**  
  Se la proprietà **SecondOperandType** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(...)** e quindi indicare il codice XML usando la finestra di dialogo **Editor origine**.  
   
- Se la proprietà **SecondOperandType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
+ Se **Proprietà SecondOperandType** è impostato su **connessione file**, selezionare una gestione connessione file oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Se l'opzione **XPathStringSourceType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...**> per creare una nuova variabile.  
+ Se **XPathStringSourceType** è impostato su **variabile**, selezionare una variabile esistente oppure fare clic su \<**New variable...**> per creare una nuova variabile.  
   
  **Argomenti correlati**: [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Aggiungi variabile](../../2014/integration-services/add-variable.md).  
   
@@ -129,19 +128,19 @@ ms.locfileid: "66054276"
  **OverwriteDestination**  
  Consente di indicare se sovrascrivere il file o la variabile di destinazione.  
   
- **Destination**  
- Se la proprietà **DestinationType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
+ **Destinazione**  
+ Se **destinationType** è impostato su **connessione file**, selezionare una gestione connessione file oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Se l'opzione **DestinationType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...**> per creare una nuova variabile.  
+ Se **destinationType** è impostato su **variabile**, selezionare una variabile esistente oppure fare clic su \<**New variable...**> per creare una nuova variabile.  
   
  **Argomenti correlati**: [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Aggiungi variabile](../../2014/integration-services/add-variable.md).  
   
  **DestinationType**  
  Consente di selezionare il tipo di destinazione del documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
 |**Variabile**|Consente di impostare l'origine su una variabile contenente il documento XML.|  
@@ -149,7 +148,7 @@ ms.locfileid: "66054276"
  **SecondOperandType**  
  Consente di selezionare il tipo di origine del secondo documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Input diretto**|Consente di impostare l'origine su un documento XML.|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
@@ -158,11 +157,11 @@ ms.locfileid: "66054276"
  **SecondOperand**  
  Se la proprietà **SecondOperandType** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(...)** e quindi indicare il codice XML usando la finestra di dialogo **Editor origine**.  
   
- Se la proprietà **SecondOperandType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
+ Se **Proprietà SecondOperandType** è impostato su **connessione file**, selezionare una gestione connessione file oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Se l'opzione **XPathStringSourceType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...**> per creare una nuova variabile.  
+ Se **XPathStringSourceType** è impostato su **variabile**, selezionare una variabile esistente oppure fare clic su \<**New variable...**> per creare una nuova variabile.  
   
  **Argomenti correlati**: [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Aggiungi variabile](../../2014/integration-services/add-variable.md).  
   
@@ -175,19 +174,19 @@ ms.locfileid: "66054276"
  **OverwriteDestination**  
  Consente di indicare se sovrascrivere il file o la variabile di destinazione.  
   
- **Destination**  
- Se la proprietà **DestinationType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
+ **Destinazione**  
+ Se **destinationType** è impostato su **connessione file**, selezionare una gestione connessione file oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Se l'opzione **DestinationType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...**> per creare una nuova variabile.  
+ Se **destinationType** è impostato su **variabile**, selezionare una variabile esistente oppure fare clic su \<**New variable...**> per creare una nuova variabile.  
   
  **Argomenti correlati**: [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Aggiungi variabile](../../2014/integration-services/add-variable.md).  
   
  **DestinationType**  
  Consente di selezionare il tipo di destinazione del documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
 |**Variabile**|Consente di impostare l'origine su una variabile contenente il documento XML.|  
@@ -195,7 +194,7 @@ ms.locfileid: "66054276"
  **SecondOperandType**  
  Consente di selezionare il tipo di origine del secondo documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Input diretto**|Consente di impostare l'origine su un documento XML.|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
@@ -204,11 +203,11 @@ ms.locfileid: "66054276"
  **SecondOperand**  
  Se la proprietà **SecondOperandType** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(...)** e quindi indicare il codice XML usando la finestra di dialogo **Editor origine**.  
   
- Se la proprietà **SecondOperandType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
+ Se **Proprietà SecondOperandType** è impostato su **connessione file**, selezionare una gestione connessione file oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Se l'opzione **XPathStringSourceType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...**> per creare una nuova variabile.  
+ Se **XPathStringSourceType** è impostato su **variabile**, selezionare una variabile esistente oppure fare clic su \<**New variable...**> per creare una nuova variabile.  
   
  **Argomenti correlati**: [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Aggiungi variabile](../../2014/integration-services/add-variable.md).  
   
@@ -218,7 +217,7 @@ ms.locfileid: "66054276"
  **XPathOperation**  
  Consente di selezionare il tipo di risultato XPath. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Valutazione**|Restituisce i risultati di una funzione XPath.|  
 |**Elenco dei nodi**|Restituisce i nodi selezionati come frammento XML.|  
@@ -230,7 +229,7 @@ ms.locfileid: "66054276"
  **XPathStringSourceType**  
  Consente di selezionare il tipo di origine del documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Input diretto**|Consente di impostare l'origine su un documento XML.|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
@@ -239,11 +238,11 @@ ms.locfileid: "66054276"
  **XPathStringSource**  
  Se la proprietà **XPathStringSourceType** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(...)** e quindi indicare il codice XML usando la finestra di dialogo **Editor origine documento**.  
   
- Se la proprietà **XPathStringSourceType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
+ Se **XPathStringSourceType** è impostato su **connessione file**, selezionare una gestione connessione file oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Se l'opzione **XPathStringSourceType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...**> per creare una nuova variabile.  
+ Se **XPathStringSourceType** è impostato su **variabile**, selezionare una variabile esistente oppure fare clic su \<**New variable...**> per creare una nuova variabile.  
   
  **Argomenti correlati**: [Integration Services &#40;variabili di&#41; SSIS](integration-services-ssis-variables.md), [Aggiungi variabile](../../2014/integration-services/add-variable.md)  
   
@@ -255,19 +254,19 @@ ms.locfileid: "66054276"
  **OverwriteDestination**  
  Consente di indicare se sovrascrivere il file o la variabile di destinazione.  
   
- **Destination**  
- Se la proprietà **DestinationType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
+ **Destinazione**  
+ Se **destinationType** è impostato su **connessione file**, selezionare una gestione connessione file oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Se l'opzione **DestinationType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...**> per creare una nuova variabile.  
+ Se **destinationType** è impostato su **variabile**, selezionare una variabile esistente oppure fare clic su \<**New variable...**> per creare una nuova variabile.  
   
  **Argomenti correlati**: [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Aggiungi variabile](../../2014/integration-services/add-variable.md).  
   
  **DestinationType**  
  Consente di selezionare il tipo di destinazione del documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
 |**Variabile**|Consente di impostare l'origine su una variabile contenente il documento XML.|  
@@ -275,7 +274,7 @@ ms.locfileid: "66054276"
  **SecondOperandType**  
  Consente di selezionare il tipo di destinazione del secondo documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Input diretto**|Consente di impostare l'origine su un documento XML.|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
@@ -284,11 +283,11 @@ ms.locfileid: "66054276"
  **SecondOperand**  
  Se la proprietà **SecondOperandType** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(...)** e quindi indicare il codice XML usando la finestra di dialogo **Editor origine documento**.  
   
- Se la proprietà **SecondOperandType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
+ Se **Proprietà SecondOperandType** è impostato su **connessione file**, selezionare una gestione connessione file oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Se l'opzione **SecondOperandType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...**> per creare una nuova variabile.  
+ Se **Proprietà SecondOperandType** è impostato su **variabile**, selezionare una variabile esistente oppure fare clic su \<**New variable...**> per creare una nuova variabile.  
   
  **Argomenti correlati**: [Integration Services &#40;variabili di&#41; SSIS](integration-services-ssis-variables.md), [Aggiungi variabile](../../2014/integration-services/add-variable.md)  
   
@@ -298,7 +297,7 @@ ms.locfileid: "66054276"
  **DiffAlgorithm**  
  Consente di selezionare l'algoritmo Diff da utilizzare per il confronto dei documenti. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Auto**|Fa sì che l'attività XML determini automaticamente se utilizzare l'algoritmo veloce o esatto.|  
 |**Veloce**|Consente di utilizzare un algoritmo Diff veloce, ma meno preciso.|  
@@ -307,7 +306,7 @@ ms.locfileid: "66054276"
  **Opzioni Diff**  
  Consente di impostare le opzioni Diff da applicare all'operazione Diff. Nella tabella seguente vengono elencate le opzioni.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**IgnoreXMLDeclaration**|Consente di indicare se confrontare la dichiarazione XML.|  
 |**IgnoreDTD**|Consente di indicare se ignorare la definizione DTD.|  
@@ -330,19 +329,19 @@ ms.locfileid: "66054276"
  **OverwriteDestination**  
  Consente di indicare se sovrascrivere il file o la variabile di destinazione.  
   
- **Destination**  
- Se la proprietà **DestinationType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
+ **Destinazione**  
+ Se **destinationType** è impostato su **connessione file**, selezionare una gestione connessione file oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Se l'opzione **DestinationType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...**> per creare una nuova variabile.  
+ Se **destinationType** è impostato su **variabile**, selezionare una variabile esistente oppure fare clic su \<**New variable...**> per creare una nuova variabile.  
   
  **Argomenti correlati**: [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Aggiungi variabile](../../2014/integration-services/add-variable.md).  
   
  **DestinationType**  
  Consente di selezionare il tipo di destinazione del documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
 |**Variabile**|Consente di impostare l'origine su una variabile contenente il documento XML.|  
@@ -350,7 +349,7 @@ ms.locfileid: "66054276"
  **SecondOperandType**  
  Consente di selezionare il tipo di destinazione del documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Input diretto**|Consente di impostare l'origine su un documento XML.|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
@@ -359,11 +358,11 @@ ms.locfileid: "66054276"
  **SecondOperand**  
  Se la proprietà **SecondOperandType** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(...)** e quindi indicare il codice XML usando la finestra di dialogo **Editor origine documento**.  
   
- Se la proprietà **SecondOperandType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
+ Se **Proprietà SecondOperandType** è impostato su **connessione file**, selezionare una gestione connessione file oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Se l'opzione **SecondOperandType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...**> per creare una nuova variabile.  
+ Se **Proprietà SecondOperandType** è impostato su **variabile**, selezionare una variabile esistente oppure fare clic su \<**New variable...**> per creare una nuova variabile.  
   
  **Argomenti correlati**: [Integration Services &#40;variabili di&#41; SSIS](integration-services-ssis-variables.md), [Aggiungi variabile](../../2014/integration-services/add-variable.md)  
   
@@ -376,19 +375,19 @@ ms.locfileid: "66054276"
  **OverwriteDestination**  
  Consente di indicare se sovrascrivere il file o la variabile di destinazione.  
   
- **Destination**  
- Se la proprietà **DestinationType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
+ **Destinazione**  
+ Se **destinationType** è impostato su **connessione file**, selezionare una gestione connessione file oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Se l'opzione **DestinationType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...**> per creare una nuova variabile.  
+ Se **destinationType** è impostato su **variabile**, selezionare una variabile esistente oppure fare clic su \<**New variable...**> per creare una nuova variabile.  
   
  **Argomenti correlati**: [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Aggiungi variabile](../../2014/integration-services/add-variable.md).  
   
  **DestinationType**  
  Consente di selezionare il tipo di destinazione del documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
 |**Variabile**|Consente di impostare l'origine su una variabile contenente il documento XML.|  
@@ -396,7 +395,7 @@ ms.locfileid: "66054276"
  **SecondOperandType**  
  Consente di selezionare il tipo di destinazione del documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Input diretto**|Consente di impostare l'origine su un documento XML.|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
@@ -405,15 +404,15 @@ ms.locfileid: "66054276"
  **SecondOperand**  
  Se la proprietà **SecondOperandType** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(...)** e quindi indicare il codice XML usando la finestra di dialogo **Editor origine documento**.  
   
- Se la proprietà **SecondOperandType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
+ Se **Proprietà SecondOperandType** è impostato su **connessione file**, selezionare una gestione connessione file oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Se l'opzione **SecondOperandType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile...**> per creare una nuova variabile.  
+ Se **Proprietà SecondOperandType** è impostato su **variabile**, selezionare una variabile esistente oppure fare clic su \<**New variable...**> per creare una nuova variabile.  
   
  **Argomenti correlati**: [Integration Services &#40;variabili di&#41; SSIS](integration-services-ssis-variables.md), [Aggiungi variabile](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  
   

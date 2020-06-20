@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 7e5dcd71dec0a2189e9f3b51bb7a68b50b070416
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88de17e8c487d9a965f2e236edac064dc2fe4c7c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014275"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996523"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Creazione, modifica ed eliminazione di indici spaziali
   Un indice spaziale può eseguire in modo più efficiente determinate operazioni su una colonna `geometry` del `geography` tipo di dati o (una *colonna spaziale*). In una colonna spaziale è possibile specificare più di un indice spaziale. Ciò è utile, ad esempio, per indicizzare diversi parametri della suddivisione a mosaico in una sola colonna.  
@@ -54,7 +53,7 @@ ms.locfileid: "66014275"
   
 7.  Per specificare la colonna spaziale che si vuole indicizzare, fare clic su **Aggiungi**.  
   
-8.  Nella finestra di dialogo **Seleziona colonne da** * \<nome tabella>* selezionare una colonna di tipo `geometry` o `geography` selezionando la casella di controllo corrispondente. Le altre colonne spaziali eventualmente presenti diventano non modificabili. Se si desidera selezionare una colonna spaziale diversa, è innanzitutto necessario deselezionare la colonna attualmente selezionata. Al termine, fare clic su **OK**.  
+8.  Nella finestra di dialogo **Seleziona colonne da** *\<table name>* selezionare una colonna di tipo `geometry` o `geography` selezionando la casella di controllo corrispondente. Le altre colonne spaziali eventualmente presenti diventano non modificabili. Se si desidera selezionare una colonna spaziale diversa, è innanzitutto necessario deselezionare la colonna attualmente selezionata. Al termine, fare clic su **OK**.  
   
 9. Verificare la selezione della colonna nella griglia **Colonne chiave indice** .  
   
@@ -62,7 +61,7 @@ ms.locfileid: "66014275"
   
 11. Nella pagina **Spaziale** specificare i valori che si vogliono usare per le proprietà spaziali dell'indice.  
   
-     Quando si crea un indice in `geometry` una colonna di tipo, è necessario specificare le coordinate ***`X-min`*(,*`Y-min`*)** e ***`X-max`*(,*`Y-max`*)** del rettangolo di delimitazione. Per un indice in una `geography` colonna di tipo, i campi del riquadro diventano di sola lettura dopo avere specificato lo schema a mosaico della **griglia geografica** , perché lo schema a mosaico della griglia geografica non utilizza un rettangolo di delimitazione.  
+     Quando si crea un indice in una `geometry` colonna di tipo, è necessario specificare le coordinate **( *`X-min`* , *`Y-min`* )** e **( *`X-max`* , *`Y-max`* )** del rettangolo di delimitazione. Per un indice in una `geography` colonna di tipo, i campi del riquadro diventano di sola lettura dopo avere specificato lo schema a mosaico della **griglia geografica** , perché lo schema a mosaico della griglia geografica non utilizza un rettangolo di delimitazione.  
   
      È eventualmente possibile specificare valori non predefiniti per il campo **Celle per oggetto** e per la densità griglia a qualsiasi livello dello schema a mosaico. Il numero predefinito di celle per oggetto è 16 per [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] o 8 per [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] o versione successiva, mentre la densità della griglia predefinita è **Media** per [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
   

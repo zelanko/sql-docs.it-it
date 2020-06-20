@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fa08a7f84cd413f1212cc73d4242b5da70fd33eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5d2b39a326d59333868b4f8015eb9a2e59d59e44
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882284"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060620"
 ---
 # <a name="delete-a-publication"></a>Eliminazione di una pubblicazione
   In questo argomento viene descritto come eliminare una pubblicazione in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o RMO (Replication Management Objects).  
@@ -58,7 +57,7 @@ ms.locfileid: "73882284"
   
     -   Per eliminare una singola pubblicazione, eseguire [sp_droppublication](/sql/relational-databases/system-stored-procedures/sp-droppublication-transact-sql) nel database di pubblicazione del server di pubblicazione.  
   
-    -   Per eliminare tutte le pubblicazioni e rimuovere tutti gli oggetti di replica da un database pubblicato, eseguire [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) nel server di pubblicazione. Specificare un valore `tran` per ** \@tipo**. (Facoltativo) Se il server di distribuzione non è accessibile oppure se lo stato del database è sospetto oppure offline, specificare il valore **1** per **\@force**. (Facoltativo) Specificare il nome del database per **\@dbname** se [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) non viene eseguita nel database di pubblicazione.  
+    -   Per eliminare tutte le pubblicazioni e rimuovere tutti gli oggetti di replica da un database pubblicato, eseguire [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) nel server di pubblicazione. Specificare un valore `tran` per ** \@ tipo**. (Facoltativo) Se il server di distribuzione non è accessibile oppure se lo stato del database è sospetto oppure offline, specificare il valore **1** per **\@force**. (Facoltativo) Specificare il nome del database per **\@dbname** se [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) non viene eseguita nel database di pubblicazione.  
   
         > [!NOTE]  
         >  Specificando il valore **1** per **\@force**, è possibile che nel database rimangano oggetti di pubblicazione correlati alla replica.  
@@ -73,7 +72,7 @@ ms.locfileid: "73882284"
   
     -   Per eliminare una singola pubblicazione, eseguire [sp_dropmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql) nel database di pubblicazione del server di pubblicazione.  
   
-    -   Per eliminare tutte le pubblicazioni e rimuovere tutti gli oggetti di replica da un database pubblicato, eseguire [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) nel server di pubblicazione. Specificare un valore `merge` per ** \@tipo**. (Facoltativo) Se il server di distribuzione non è accessibile oppure se lo stato del database è sospetto oppure offline, specificare il valore **1** per **\@force**. (Facoltativo) Specificare il nome del database per **\@dbname** se [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) non viene eseguita nel database di pubblicazione.  
+    -   Per eliminare tutte le pubblicazioni e rimuovere tutti gli oggetti di replica da un database pubblicato, eseguire [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) nel server di pubblicazione. Specificare un valore `merge` per ** \@ tipo**. (Facoltativo) Se il server di distribuzione non è accessibile oppure se lo stato del database è sospetto oppure offline, specificare il valore **1** per **\@force**. (Facoltativo) Specificare il nome del database per **\@dbname** se [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) non viene eseguita nel database di pubblicazione.  
   
         > [!NOTE]  
         >  Specificando il valore **1** per **\@force**, è possibile che nel database rimangano oggetti di pubblicazione correlati alla replica.  

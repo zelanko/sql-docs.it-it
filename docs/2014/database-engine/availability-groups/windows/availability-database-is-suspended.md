@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6baee70f-848c-4e86-b20d-78875c0f82cb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 21d788db62fe39b86eb801c028450c16cf845845
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c2656c53dd151825cd10e54e5b63e5ac0a2cee1f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815766"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937142"
 ---
 # <a name="availability-database-is-suspended"></a>Il database di disponibilità è sospeso
     
@@ -32,7 +31,7 @@ ms.locfileid: "62815766"
 |**Categoria**|**Avviso**|  
 |**Facet**|Database di disponibilità|  
   
-## <a name="description"></a>Descrizione  
+## <a name="description"></a>Description  
  Questi criteri consentono di controllare lo stato di spostamento dei dati del database secondario, anche noto come "replica di database secondaria". I criteri sono in uno stato non integro se questo spostamento è sospeso. Altrimenti, sono in uno stato integro.  
   
 > [!NOTE]  
@@ -48,7 +47,7 @@ ms.locfileid: "62815766"
 ## <a name="possible-solution"></a>Possibile soluzione  
  Riprendere la sincronizzazione dei dati. Se il problema persistente, controllare il gruppo di disponibilità nel Registro eventi, quindi diagnosticare il motivo per il quale lo spostamento dei dati è stato sospeso.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Usare il Dashboard Always On &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   

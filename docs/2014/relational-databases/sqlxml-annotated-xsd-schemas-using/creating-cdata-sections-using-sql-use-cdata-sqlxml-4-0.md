@@ -18,18 +18,17 @@ helpviewer_keywords:
 ms.assetid: 26d2b9dc-f857-44ff-bcd4-aaf64ff809d0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8f1442011ddbdb010e5f498dbf3b42fa9ba333ea
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a5d0283837d9344eaf529cf9818e6629cdc68065
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703653"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060173"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>Creazione di sezioni CDATA mediante sql:use-cdata (SQLXML 4.0)
   In XML vengono utilizzate le sezioni CDATA per eseguire l'escape di blocchi di testo contenenti caratteri che, altrimenti, verrebbero riconosciuti come caratteri di markup.  
   
- Un database in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può talvolta contenere caratteri che vengono trattati come caratteri di markup dal parser XML, ad esempio le parentesi angolari ( \< e >), il simbolo di minore o uguale a (<=) e la e commerciale (&) vengono trattati come caratteri di markup. Per evitare che ciò accada, è tuttavia possibile eseguire il wrapping di questo tipo di caratteri speciali in una sezione CDATA. Il testo nella sezione CDATA viene considerato testo normale dal parser XML.  
+ Un database in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può talvolta contenere caratteri che vengono trattati come caratteri di markup dal parser XML, ad esempio le parentesi angolari ( \< and > ), il simbolo di minore o uguale a (<=) e la e commerciale (&) vengono trattati come caratteri di markup. Per evitare che ciò accada, è tuttavia possibile eseguire il wrapping di questo tipo di caratteri speciali in una sezione CDATA. Il testo nella sezione CDATA viene considerato testo normale dal parser XML.  
   
  L'annotazione `sql:use-cdata` viene utilizzata per specificare che è necessario eseguire il wrapping dei dati restituiti da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in una sezione CDATA. In altre parole, indica se il valore di una colonna specificata da `sql:field` deve essere incluso in una sezione CDATA. L'annotazione `sql:use-cdata` può essere specificata solo su elementi che eseguono il mapping a una colonna di database.  
   
@@ -37,11 +36,11 @@ ms.locfileid: "82703653"
   
  Non è possibile utilizzare l'annotazione con `sql:url-encode` o sui tipi di attributo ID, IDREF, IDREFS, NMTOKEN e NMTOKENS.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per l'esecuzione di esempi SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqluse-cdata-on-an-element"></a>R. Specifica di sql:use-cdata su un elemento  
- Nello schema seguente `sql:use-cdata` è impostato su 1 (true) per la ** \<>AddressLine1** all'interno dell'elemento ** \<>Address** . I dati vengono quindi restituiti in una sezione CDATA.  
+ Nello schema seguente, `sql:use-cdata` viene impostato su 1 (true) per l'oggetto **\<AddressLine1>** all'interno dell' **\<Address>** elemento. I dati vengono quindi restituiti in una sezione CDATA.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

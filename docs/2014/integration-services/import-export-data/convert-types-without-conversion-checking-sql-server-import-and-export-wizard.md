@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ea8b678731a10b483c233cdb17b394a22f647060
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f06e60f052dad10b0e69ef0aa6a879e3d29d1f86
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768053"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965641"
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>Converti tipi senza eseguire i controlli di conversione (Importazione/Esportazione guidata SQL Server)
-  Utilizzare la pagina **Converti tipi senza** eseguire il controllo della conversione per esaminare i mapping eseguiti dalla procedura guidata quando la procedura guidata non è in grado [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] di individuare uno o più file di mapping e conversione dei tipi di dati. Nella pagina sono incluse informazioni che semplificano l'individuazione del file o dei file mancanti.  
+  Utilizzare la pagina **Converti tipi senza** eseguire il controllo della conversione per esaminare i mapping eseguiti dalla procedura guidata quando la procedura guidata non è in grado di individuare uno o più [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] file di mapping e conversione dei tipi di dati. Nella pagina sono incluse informazioni che semplificano l'individuazione del file o dei file mancanti.  
   
  Per ulteriori informazioni su questa procedura guidata, vedere [SQL Server importazione/esportazione guidata](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Per informazioni sulle opzioni per avviare la procedura guidata e sulle autorizzazioni necessarie per eseguire la procedura guidata, vedere [eseguire l'importazione/esportazione guidata SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   

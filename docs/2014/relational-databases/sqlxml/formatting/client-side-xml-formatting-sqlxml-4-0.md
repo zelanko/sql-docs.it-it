@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9630a21d-a93b-4d3b-8a25-c4b32399f993
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bd8f6c01a27b0ab973c84ddb0fe10fefa7a608f2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9ac825cf6fa86e6a1f4970cffafc20d2873558b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702888"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996047"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>Formattazione XML sul lato client (SQLXML 4.0)
   Questo argomento fornisce informazioni sulla formattazione XML sul lato client. Per formattazione sul lato client si intende la formattazione di dati XML nel livello intermedio.  
@@ -52,7 +51,7 @@ FROM   Person.Contact
   
  Nella tabella seguente vengono illustrate le modalità che è possibile specificare con la clausola FOR XML sul lato client.  
   
-|Modalità FOR XML sul lato client|Commento|  
+|Modalità FOR XML sul lato client|Comment|  
 |-------------------------------|-------------|  
 |RAW|Produce risultati identici se specificata in FOR XML sul lato client o sul lato server.|  
 |NESTED|È simile alla modalità FOR XML AUTO sul lato server.|  

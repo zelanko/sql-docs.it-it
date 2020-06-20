@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 070681ed-be99-49ae-93bd-6402f2134ace
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b0ade33df500a35f8319a2eb0bc412e16b2d1cf8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b2af1f783a6daa0b232e5e6970c72e4f5813435
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480046"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971931"
 ---
 # <a name="consolidated-member-staging-table-master-data-services"></a>Tabella di gestione temporanea di membri consolidati (Master Data Services)
   Usare la tabella di staging dei membri consolidati (stg.name_Consolidated) nel database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] per creare, aggiornare, disattivare ed eliminare i membri consolidati. Inoltre, è possibile utilizzarla per aggiornare i valori degli attributi per i membri consolidati.  
@@ -38,9 +37,9 @@ ms.locfileid: "65480046"
 |**Codice**<br /><br /> Richiesto, tranne quando i codici vengono generati automaticamente per **ImportType1** o **2**. Per altre informazioni, vedere [Creazione di codice automatica &#40;Master Data Services&#41;](../../2014/master-data-services/automatic-code-creation-master-data-services.md)|Un codice univoco per il membro.|  
 |**Nome**<br /><br /> Facoltativo|Nome per il membro.|  
 |**NewCode**|Utilizzare solo se si sta modificando il codice membro.|  
-|\<Nome attributo >|Esiste una colonna per ogni attributo dell'entità. Utilizzarlo con **ImportType** uguale a **0** o a **2**. Per gli attributi in formato libero specificare il nuovo testo o valore stringa per l'attributo. Per gli attributi basati su dominio specificare il codice del membro che sarà utilizzato come attributo. Per gli attributi di collegamento, l'URL deve iniziare con **http://**.<br /><br /> Nota: non è possibile usare la gestione temporanea per gli attributi di file.|  
+|\<Attribute name>|Esiste una colonna per ogni attributo dell'entità. Utilizzarlo con **ImportType** uguale a **0** o a **2**. Per gli attributi in formato libero specificare il nuovo testo o valore stringa per l'attributo. Per gli attributi basati su dominio specificare il codice del membro che sarà utilizzato come attributo. Per gli attributi di collegamento, l'URL deve iniziare con **http://**.<br /><br /> Nota: non è possibile usare la gestione temporanea per gli attributi di file.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Caricare o aggiornare membri in Master Data Services tramite il processo di gestione temporanea](add-update-and-delete-data-master-data-services.md)   
  [Spostare membri di gerarchie esplicite tramite il processo di gestione temporanea &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)   
  [Importazione dati &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   

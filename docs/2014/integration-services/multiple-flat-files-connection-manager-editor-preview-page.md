@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 52ed1a97-2dbb-4ad8-89b5-4748103e89fa
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ae113a84c55c17c3ba4827fb9368435200a6f190
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f16df0120e58b987009f0e8e674901e27bbfbe43
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057490"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965131"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>Editor gestione connessione per più file flat (pagina Anteprima)
   Usare la pagina **Anteprima** della finestra di dialogo **Editor gestione connessione per più file flat** per visualizzare il contenuto del primo file di origine selezionato suddiviso in colonne in base alle impostazioni definite in precedenza.  
@@ -39,7 +38,7 @@ ms.locfileid: "66057490"
  **Anteprima righe**  
  Consente di visualizzare dati di esempio del primo flat file selezionato, suddivisi in righe e colonne in base alle opzioni selezionate.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor gestione connessione per più file flat &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor gestione connessione per più file flat &#40;pagina colonne&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   

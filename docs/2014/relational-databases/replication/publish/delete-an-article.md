@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 185b58fc-38c0-4abe-822e-6ec20066c863
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4be2287a1c0d43ccfdfaeaca3378f6d10f100134
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 082f90d33c2b8dedfae34dcada9b3935bed134ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882277"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060555"
 ---
 # <a name="delete-an-article"></a>Eliminazione di un articolo
   In questo argomento viene descritto come eliminare un articolo in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)] o RMO (Replication Management Objects). Per informazioni sulle condizioni per l'eliminazione degli articoli e sulla necessità di creare un nuovo snapshot o reinizializzare le sottoscrizioni in seguito all'eliminazione di un articolo, vedere [Aggiungere ed eliminare articoli in pubblicazioni esistenti](add-articles-to-and-drop-articles-from-existing-publications.md).  
@@ -35,22 +34,22 @@ ms.locfileid: "73882277"
   
 #### <a name="to-delete-an-article-from-a-snapshot-or-transactional-publication"></a>Per eliminare un articolo da una pubblicazione snapshot o transazionale  
   
-1.  Eseguire [sp_droparticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql) per eliminare un articolo, specificato da **\@article**, da una pubblicazione, specificata da **\@publication**. Specificare il valore **1** per ** \@force_invalidate_snapshot**.  
+1.  Eseguire [sp_droparticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql) per eliminare un articolo, specificato da **\@article**, da una pubblicazione, specificata da **\@publication**. Specificare il valore **1** per ** \@ force_invalidate_snapshot**.  
   
 2.  (Facoltativo) Per rimuovere completamente l'oggetto pubblicato dal database, eseguire il comando `DROP <objectname>` nel database di pubblicazione del server di pubblicazione.  
   
 #### <a name="to-delete-an-article-from-a-merge-publication"></a>Per eliminare un articolo da una pubblicazione di tipo merge  
   
-1.  Eseguire [sp_dropmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) per eliminare un articolo, specificato da **\@article**, da una pubblicazione, specificata da **\@publication**. Se necessario, specificare il valore **1** per ** \@force_invalidate_snapshot** e il valore **1** per ** \@force_reinit_subscription**.  
+1.  Eseguire [sp_dropmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) per eliminare un articolo, specificato da **\@article**, da una pubblicazione, specificata da **\@publication**. Se necessario, specificare il valore **1** per ** \@ force_invalidate_snapshot** e il valore **1** per ** \@ force_reinit_subscription**.  
   
 2.  (Facoltativo) Per rimuovere completamente l'oggetto pubblicato dal database, eseguire il comando `DROP <objectname>` nel database di pubblicazione del server di pubblicazione.  
   
 ###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Esempi (Transact-SQL)  
- Nell'esempio seguente un articolo viene eliminato da una pubblicazione transazionale. Poiché questa modifica invalida lo snapshot esistente, viene specificato il valore **1** per il ** \@parametro force_invalidate_snapshot** .  
+ Nell'esempio seguente un articolo viene eliminato da una pubblicazione transazionale. Poiché questa modifica invalida lo snapshot esistente, viene specificato il valore **1** per il parametro ** \@ force_invalidate_snapshot** .  
   
  [!code-sql[HowTo#sp_droparticle](../../../snippets/tsql/SQL15/replication/howto/tsql/droptranpub.sql#sp_droparticle)]  
   
- Nell'esempio seguente due articoli vengono eliminati da una pubblicazione di tipo merge. Poiché queste modifiche invalidano lo snapshot esistente, viene specificato il valore **1** per il ** \@parametro force_invalidate_snapshot** .  
+ Nell'esempio seguente due articoli vengono eliminati da una pubblicazione di tipo merge. Poiché queste modifiche invalidano lo snapshot esistente, viene specificato il valore **1** per il parametro ** \@ force_invalidate_snapshot** .  
   
  [!code-sql[HowTo#sp_dropmergearticle](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergepub.sql#sp_dropmergearticle)]
  [!code-sql[HowTo#sp_dropmergearticle](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergearticles.sql#sp_dropmergearticle)]  

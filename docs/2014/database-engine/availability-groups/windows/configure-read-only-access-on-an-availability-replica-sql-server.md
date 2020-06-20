@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2aee8939ed2bba9ffc6f96344a5c4ac1a95fbaab
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: ab13081396aff46d193c1b0449d6b93042ee60d6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922040"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936959"
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>Configurare l'accesso in sola lettura in una replica di disponibilità (SQL Server)
   Per impostazione predefinita, gli accessi in lettura e scrittura e l'accesso con finalità di lettura sono entrambi consentiti alla replica primaria, ma alle repliche secondarie non sono consentite connessioni di un gruppo di disponibilità AlwaysOn. In questo argomento viene illustrato come configurare l'accesso alla connessione su una replica di disponibilità di un gruppo di disponibilità AlwaysOn in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell.  
@@ -76,7 +75,7 @@ ms.locfileid: "82922040"
          Sono consentite tutte le connessioni ai database nella replica primaria. Si tratta dell'impostazione predefinita.  
   
          **Consenti connessioni in lettura/scrittura**  
-         Se la proprietà finalità dell'applicazione è impostata su **ReadWrite** o se la proprietà di connessione finalità dell'applicazione non è impostata, la connessione è consentita. Non sono consentite le connessioni in cui la proprietà di connessione Finalità dell'applicazione è impostata su **Sola lettura** . In questo modo è possibile impedire la connessione, per errore, di un carico di lavoro con finalità di lettura alla replica primaria da parte dei clienti. Per altre informazioni sulla proprietà di connessione Finalità dell'applicazione, vedere [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+         Se la proprietà Finalità dell'applicazione è impostata su **Lettura/Scrittura** o se tale proprietà non è impostata, la connessione è consentita. Non sono consentite le connessioni in cui la proprietà di connessione Finalità dell'applicazione è impostata su **Sola lettura** . In questo modo è possibile impedire la connessione, per errore, di un carico di lavoro con finalità di lettura alla replica primaria da parte dei clienti. Per altre informazioni sulla proprietà di connessione Finalità dell'applicazione, vedere [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
@@ -111,7 +110,7 @@ ms.locfileid: "82922040"
      dove  
   
      READ_WRITE  
-     Le connessioni in cui la proprietà di connessione finalità dell'applicazione è impostata su **ReadOnly** non sono consentite.  Se la proprietà finalità dell'applicazione è impostata su **ReadWrite** o se la proprietà di connessione finalità dell'applicazione non è impostata, la connessione è consentita. Per altre informazioni sulla proprietà di connessione Finalità dell'applicazione, vedere [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+     Non sono consentite le connessioni in cui la proprietà di connessione Finalità dell'applicazione è impostata su **ReadOnly** .  Se la proprietà Finalità dell'applicazione è impostata su **Lettura/Scrittura** o se tale proprietà non è impostata, la connessione è consentita. Per altre informazioni sulla proprietà di connessione Finalità dell'applicazione, vedere [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
      ALL  
      Sono consentite tutte le connessioni ai database nella replica primaria. Si tratta dell'impostazione predefinita.  

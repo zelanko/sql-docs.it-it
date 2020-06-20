@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b2f6866c-db07-4cb3-9f38-889f8d2b03e6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b19a94e71eaef45184c1777ce299809b2b2d7f8d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4653b963bd5e8f997832f153a09d87aaeef9c39c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057126"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965001"
 ---
 # <a name="odbc-source-editor-error-output-page"></a>Editor origine ODBC (pagina Output degli errori)
   Usare la pagina **Output degli errori** della finestra di dialogo **ODBC Source Editor** (Editor origine ODBC) per selezionare le opzioni di gestione degli errori.  
@@ -47,7 +46,7 @@ ms.locfileid: "66057126"
 ### <a name="truncation"></a>Troncamento  
  Consente di selezionare il modo in cui l'origine ODBC deve gestire il troncamento in un flusso: ignorare l'errore, reindirizzare la riga o interrompere il componente.  
   
-### <a name="description"></a>Descrizione  
+### <a name="description"></a>Description  
  Non usato.  
   
 ### <a name="set-this-value-to-selected-cells"></a>Imposta questo valore nelle celle selezionate  
@@ -68,7 +67,7 @@ ms.locfileid: "66057126"
 ### <a name="redirect-flow"></a>Reindirizza flusso  
  La riga che determina l'errore o il troncamento viene inviata all'output degli errori dell'origine ODBC. Per altre informazioni, vedere [Origine ODBC](data-flow/odbc-source.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Editor origine ODBC &#40;pagina Gestione connessione&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
  [Editor origine ODBC &#40;pagina Colonne&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)  
   

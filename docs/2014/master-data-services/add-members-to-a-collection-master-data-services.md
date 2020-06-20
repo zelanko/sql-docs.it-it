@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3b5d76c06096dd2dab13bd6dcf7ff59fbd612302
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22ee1b502487ac191cf5e39c5908a1e44dee969c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483765"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972311"
 ---
 # <a name="add-members-to-a-collection-master-data-services"></a>Aggiungere membri a una raccolta (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è possibile aggiungere membri foglia e membri consolidati a una raccolta.  
@@ -55,7 +54,7 @@ ms.locfileid: "65483765"
   
 11. Facoltativamente, impostare i valori di peso facendo clic sul valore nella colonna **Peso** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Raccolte &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   
   
