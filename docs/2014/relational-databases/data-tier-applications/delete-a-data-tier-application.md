@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: efbd01499940490fd85dfaf1e0786d26b722749c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3fd058eb14b45fe9f5aaaea4e9e37c8741c19d6f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782739"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970281"
 ---
 # <a name="delete-a-data-tier-application"></a>Eliminazione di un'applicazione livello dati
   È possibile eliminare un'applicazione livello dati utilizzando la procedura guidata Elimina applicazione livello dati o uno script Windows PowerShell. È possibile specificare se il database associato viene mantenuto, scollegato o eliminato.  
@@ -101,7 +100,7 @@ ms.locfileid: "72782739"
   
  I dati e i file di log per il database vengono definitivamente eliminati.  
   
- Indietro: consente di tornare alla pagina **Introduzione** . ** \< **  
+ ** \< Indietro** : consente di tornare alla pagina **Introduzione** .  
   
  **Avanti >**: consente di passare alla pagina **Riepilogo**.  
   
@@ -112,7 +111,7 @@ ms.locfileid: "72782739"
   
  **Controlla selezioni** : consente di verificare l'applicazione livello dati, il database e il metodo di eliminazione visualizzato nella casella. Se le informazioni sono corrette, selezionare **Avanti** o **Fine** per eliminare l'applicazione livello dati. Se l'applicazione livello dati e le informazioni del database non sono corrette, selezionare **Annulla** , quindi l'applicazione livello dati corretta. Se il metodo di eliminazione non è corretto, scegliere **Indietro** per tornare alla pagina **Seleziona metodo** e selezionare un altro metodo.  
   
- Indietro: consente di tornare alla pagina **Choose Method** per scegliere un altro metodo Delete. ** \< **  
+ ** \< Indietro** : consente di tornare alla pagina **Choose Method** per scegliere un altro metodo Delete.  
   
  **Avanti >**: consente di eliminare l'istanza DAC usando il metodo selezionato nella pagina precedente e passare alla pagina **Elimina applicazione del livello dati**.  
   
@@ -223,5 +222,5 @@ $dacName  = "MyApplication"
  [Applicazioni livello dati](data-tier-applications.md)   
  [Distribuire un'applicazione livello dati](deploy-a-data-tier-application.md)   
  [Registrare un database come applicazione livello dati](register-a-database-as-a-dac.md)   
- [Backup e ripristino di database di SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [Backup e ripristino di database SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Collegamento e scollegamento di un database &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)  

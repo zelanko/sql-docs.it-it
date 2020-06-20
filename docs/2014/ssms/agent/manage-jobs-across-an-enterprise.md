@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4fe7f6c6-f89b-4430-979c-4994a5dcf7a6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3f051b3de9ba88354f5fded8cd1f429e3b277747
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 385435302b2e987c86afb17eaebf90e91bc93e56
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188182"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062197"
 ---
 # <a name="manage-jobs-across-an-enterprise"></a>Gestire i processi in un'azienda
-  Se si apportano modifiche alle definizioni di processi [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]multiserver al di fuori di, è necessario inviare le modifiche all'elenco di download in modo che i server di destinazione possano scaricare nuovamente il processo aggiornato. Per garantire che i server di destinazione dispongano delle definizioni dei processi più aggiornate, inviare un'istruzione INSERT dopo l'aggiornamento del processo multiserver:  
+  Se si apportano modifiche alle definizioni di processi multiserver al di fuori di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , è necessario inviare le modifiche all'elenco di download in modo che i server di destinazione possano scaricare nuovamente il processo aggiornato. Per garantire che i server di destinazione dispongano delle definizioni dei processi più aggiornate, inviare un'istruzione INSERT dopo l'aggiornamento del processo multiserver:  
   
 ```  
 EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'  
@@ -81,7 +80,7 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestione di eventi](manage-events.md)  
   
   

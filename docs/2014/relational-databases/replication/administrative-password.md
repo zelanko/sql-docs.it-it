@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d43bebc8-e83a-457a-b7f4-a61a735f1904
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 628e9cb70e17271f34ce9b2c7573e918bd9009bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd0182b4657cd034edaad778a16e9fe30f67eb10
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63186948"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055700"
 ---
 # <a name="administrative-password"></a>Password amministrativa
   Se per il server di pubblicazione si seleziona un server di distribuzione remoto nella pagina **Server di distribuzione** di questa procedura guidata, è necessario immettere una password per la connessione stabilita dalla replica tra il server di pubblicazione e il server di distribuzione utilizzando l'account di accesso **distributor_admin** . La password deve corrispondere a quella specificata nella pagina **Password database di distribuzione** della Configurazione guidata distribuzione o nella pagina **Server di pubblicazione** della finestra di dialogo **Proprietà database di distribuzione** .  

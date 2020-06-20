@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7febab9f8ecf6cae4df08f110a16c0bdc512a948
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b1d5ad992c59f252f485f2d65451a72f150bef8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62711436"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046236"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>Modalità quorum WSFC e configurazione del voto (SQL Server)
   Sia i [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sia le istanze del cluster di failover AlwaysOn utilizzano Windows Server Failover Clustering (WSFC) come tecnologia della piattaforma.  WSFC utilizza un approccio basato sul quorum per monitorare l'integrità complessiva del cluster e aumentare al massimo la tolleranza di errore a livello di nodo. Una comprensione di base delle modalità quorum WSFC e della configurazione di voto dei nodi è molto importante per progettare ed eseguire la soluzione di ripristino di emergenza e a disponibilità elevata AlwaysOn, nonché per risolverne i problemi.  
@@ -87,7 +86,7 @@ ms.locfileid: "62711436"
 > [!IMPORTANT]  
 >  Per utilizzare le impostazioni NodeWeight, è necessario applicare l'aggiornamento rapido seguente a tutti i server del cluster WSFC:  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036): è disponibile un hotfix che consente di configurare un nodo del cluster che non dispone di voti quorum [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] in e in[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036): è disponibile un hotfix che consente di configurare un nodo del cluster che non dispone di voti quorum in [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] e in[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 ##  <a name="recommended-adjustments-to-quorum-voting"></a><a name="RecommendedAdjustmentstoQuorumVoting"></a> Modifiche ai voti quorum consigliate  
  Per abilitare o disabilitare il voto di un nodo WSFC specifico, attenersi alle linee guida seguenti:  
@@ -132,7 +131,7 @@ ms.locfileid: "62711436"
   
 -   [Guida dettagliata al cluster di failover: configurazione del quorum in un cluster di failover](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Ripristino di emergenza WSFC tramite quorum forzato &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
  [Windows Server Failover Clustering &#40;WSFC&#41; con SQL Server](windows-server-failover-clustering-wsfc-with-sql-server.md)  
   

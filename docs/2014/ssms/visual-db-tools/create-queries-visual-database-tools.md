@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a7140e3b4511417952246093e5ed82da9f2c099b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec730fdd8f5dd8e00a3493b5ec96a80a3397fad9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184314"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058115"
 ---
 # <a name="create-queries-visual-database-tools"></a>Creazione di query (Visual Database Tools)
   Le query consentono di recuperare dati dalle tabelle e dalle viste del database. Le query vengono create e usate in **Progettazione query e Progettazione viste**, uno strumento che comprende quattro riquadri: il [riquadro Diagramma](visual-database-tools.md), il [riquadro SQL](sql-pane-visual-database-tools.md), il [riquadro Criteri Pane](criteria-pane-visual-database-tools.md)e il [riquadro Risultati](results-pane-visual-database-tools.md).  

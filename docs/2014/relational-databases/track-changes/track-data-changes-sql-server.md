@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 257fdeadceb961fd9080956b3c6725c40e3c3c8e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e9fb2a89aff63a69d7ad8df111d36f2b7ccafdd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63073943"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047179"
 ---
 # <a name="track-data-changes-sql-server"></a>Rilevare le modifiche ai dati (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] offre due funzionalità che consentono di tener traccia delle modifiche ai dati in un database: [Change Data Capture](#Capture) e [Rilevamento modifiche](#Tracking). Tali funzionalità consentono alle applicazioni di determinare le modifiche DML (operazioni di inserimento, aggiornamento ed eliminazione) apportate alle tabelle utente in un database. Change Data Capture e Rilevamento modifiche possono essere abilitati sullo stesso database, non sono richieste considerazioni speciali. Per le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supportano Change Data Capture e rilevamento delle modifiche, vedere [funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -65,7 +64,7 @@ ms.locfileid: "63073943"
 ## <a name="feature-differences-between-change-data-capture-and-change-tracking"></a>Differenze tra le funzionalità di Change Data Capture e del rilevamento delle modifiche  
  Nella tabella seguente vengono elencate le differenze tra le funzionalità di Change Data Capture e del rilevamento delle modifiche. Il meccanismo di rilevamento in Change Data Capture prevede un'acquisizione asincrona delle modifiche dal log delle transazioni in modo che le modifiche siano disponibili dopo l'operazione DML. Nel rilevamento delle modifiche il meccanismo prevede la registrazione sincrona di modifiche in linea con le operazioni DML in modo che le informazioni sulle modifiche siano disponibili immediatamente.  
   
-|Funzionalità|Change Data Capture|Rilevamento modifiche|  
+|Funzionalità|Change Data Capture|Change tracking|  
 |-------------|-------------------------|---------------------|  
 |**Modifiche rilevate**|||  
 |Modifiche DML|Sì|Sì|  
@@ -85,7 +84,7 @@ ms.locfileid: "63073943"
  In questa sezione viene descritto il modello di sicurezza di Change Data Capture.  
   
  **Configurazione e amministrazione**  
- Per abilitare o disabilitare Change Data Capture per un database, il chiamante di [sys. sp_cdc_enable_db &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql) o [sys. sp_cdc_disable_db &#40;transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) deve essere un membro del ruolo predefinito del server `sysadmin` . Per abilitare e disabilitare Change Data Capture a livello di tabella, è necessario che il chiamante di [sys. sp_cdc_enable_table &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql) e [sys. sp_cdc_disable_table &#40;transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql) sia un membro del ruolo sysadmin o un membro del ruolo del `database db_owner` database.  
+ Per abilitare o disabilitare Change Data Capture per un database, il chiamante di [sys. sp_cdc_enable_db &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql) o [sys. sp_cdc_disable_db &#40;transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) deve essere un membro del ruolo predefinito del server `sysadmin` . Per abilitare e disabilitare Change Data Capture a livello di tabella, è necessario che il chiamante di [sys. sp_cdc_enable_table &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql) e [sys. sp_cdc_disable_table &#40;transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql) sia un membro del ruolo sysadmin o un membro del ruolo del database `database db_owner` .  
   
  L'utilizzo delle stored procedure per supportare l'amministrazione dei processi Change Data Capture è limitato ai membri del ruolo del server `sysadmin` e del ruolo `database db_owner`.  
   
@@ -125,7 +124,7 @@ ms.locfileid: "63073943"
  Per altre informazioni sul mirroring del database, vedere [Mirroring del Database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 #### <a name="transactional-replication"></a>Replica transazionale  
- Le funzionalità Change Data Capture e replica transazionale possono coesistere nello stesso database, tuttavia il popolamento delle tabelle delle modifiche viene gestito in modo diverso se entrambe le funzionalità sono abilitate. Change Data Capture e la replica transazionale usano sempre la stessa stored procedure, [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql), per leggere le modifiche dal log delle transazioni. Quando Change Data Capture è la sola funzionalità abilitata, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent chiama `sp_replcmds`. Quando entrambe le funzionalità sono abilitate nello stesso database, il agente di lettura log `sp_replcmds`chiama. Questo agente popola sia le tabelle delle modifiche sia le tabelle del database di distribuzione. Per altre informazioni, vedere [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md).  
+ Le funzionalità Change Data Capture e replica transazionale possono coesistere nello stesso database, tuttavia il popolamento delle tabelle delle modifiche viene gestito in modo diverso se entrambe le funzionalità sono abilitate. Change Data Capture e la replica transazionale usano sempre la stessa stored procedure, [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql), per leggere le modifiche dal log delle transazioni. Quando Change Data Capture è la sola funzionalità abilitata, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent chiama `sp_replcmds`. Quando entrambe le funzionalità sono abilitate nello stesso database, il agente di lettura log chiama `sp_replcmds` . Questo agente popola sia le tabelle delle modifiche sia le tabelle del database di distribuzione. Per altre informazioni, vedere [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md).  
   
  Si consideri uno scenario in cui la funzionalità Change Data Capture è abilitata nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] e due tabelle sono abilitate per l'acquisizione. Per popolare le tabelle delle modifiche, il processo di acquisizione chiama `sp_replcmds`. Il database viene abilitato per la replica transazionale e viene creata una pubblicazione. L'agente di lettura log viene creato per il database e il processo di acquisizione viene eliminato. L'agente di lettura log continua ad analizzare il log dall'ultimo numero di sequenza di cui è stato eseguito il commit nella tabella delle modifiche. In questo modo, viene assicurata la coerenza dei dati nelle tabelle delle modifiche. Se la replica transazionale è disabilitata in questo database, l'agente di lettura log viene rimosso e il processo di acquisizione viene ricreato.  
   
@@ -143,7 +142,7 @@ ms.locfileid: "63073943"
   
 -   Se un database viene scollegato e collegato allo stesso o a un altro server, la funzionalità Change Data Capture rimane abilitata.  
   
--   Se un database viene collegato o ripristinato con `KEEP_CDC` l'opzione in qualsiasi edizione diversa da Enterprise, l'operazione viene bloccata perché Change Data Capture [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richiede Enterprise. Viene visualizzato il messaggio di errore 932:  
+-   Se un database viene collegato o ripristinato con l' `KEEP_CDC` opzione in qualsiasi edizione diversa da Enterprise, l'operazione viene bloccata perché Change Data Capture richiede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. Viene visualizzato il messaggio di errore 932:  
   
      `SQL Server cannot load database '%.*ls' because change data capture is enabled. The currently installed edition of SQL Server does not support change data capture. Either disable change data capture in the database by using a supported edition of SQL Server, or upgrade the instance to one that supports change data capture.`  
   
@@ -185,7 +184,7 @@ ms.locfileid: "63073943"
 |Descrive come gestire il rilevamento delle modifiche, configurare la sicurezza e determinare gli effetti sull'archiviazione e sulle prestazioni quando si utilizza il rilevamento delle modifiche.|[Gestire il rilevamento delle modifiche &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)|  
 |Descrive come le applicazioni che utilizzano il rilevamento delle modifiche possano ottenere le modifiche registrate, applicare tali modifiche a un altro archivio dati e aggiornare il database di origine. In questo argomento viene inoltre descritto il ruolo svolto dal rilevamento delle modifiche quando si verifica un failover ed è necessario ripristinare un database da un backup.|[Utilizzare il rilevamento delle modifiche &#40;SQL Server&#41;](../track-changes/work-with-change-tracking-sql-server.md)|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzioni Change Data Capture &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/change-data-capture-functions-transact-sql)   
  [Funzioni Rilevamento modifiche &#40;&#41;Transact-SQL](/sql/relational-databases/system-functions/change-tracking-functions-transact-sql)   
  [Stored procedure Change Data Capture &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql)   

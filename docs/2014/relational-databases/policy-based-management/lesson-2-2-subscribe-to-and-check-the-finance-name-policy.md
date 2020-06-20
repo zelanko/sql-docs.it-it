@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 126b4c4c-2a1c-4701-a0ad-8de23fbd7306
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3bbf6c9640882ffca2bbdbf82b2ef2667c394096
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0c859bdd982fa7de586c9230754c571eb750944
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66090690"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061620"
 ---
 # <a name="subscribe-to-and-check-the-finance-name-policy"></a>Sottoscrizione e verifica di criteri Nome Finance
   In questa attività verrà configurato il database Finance per la sottoscrizione della categoria di criteri Finance. Verranno quindi verificati i criteri Nome Finance.  
   
 ### <a name="to-subscribe-to-the-finance-policy-category"></a>Per sottoscrivere la categoria di criteri Finance  
   
-1.  In Esplora oggetti espandere **database**, fare clic con il `Finance`pulsante destro del mouse, scegliere **criteri**, quindi fare clic su **categorie**.  
+1.  In Esplora oggetti espandere **database**, fare clic con il pulsante destro del mouse `Finance` , scegliere **criteri**, quindi fare clic su **categorie**.  
   
 2.  Selezionare la casella di controllo **sottoscritto** per la `Finance` categoria.  
   
@@ -64,15 +63,15 @@ ms.locfileid: "66090690"
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] La categoria Finance si applica ora a tutti i database, ma la condizione creata in precedenza limita i criteri Nome Finance al database Finance. In questo esempio viene illustrato come utilizzare combinazioni complesse di condizioni per i criteri in modalità valide per molti server.  
   
-## <a name="summary"></a>Riepilogo  
+## <a name="summary"></a>Summary  
  In questa esercitazione è stato illustrato come creare condizioni, criteri e gruppi di criteri della gestione basata su criteri e come applicare filtri e verificare la conformità delle destinazioni della gestione basata su criteri.  
   
-## <a name="next"></a>Avanti  
+## <a name="next"></a>Prossima  
  L'esercitazione è completata. Per tornare all'inizio, selezionare [Esercitazione: Amministrazione di server tramite la gestione basata su criteri](tutorial-administering-servers-by-using-policy-based-management.md).  
   
  Per un elenco delle esercitazioni, vedere [esercitazioni per SQL Server 2014](../../tutorials/tutorials-for-sql-server-2014.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Amministrazione di server tramite la gestione basata su criteri](administer-servers-by-using-policy-based-management.md)  
   
   

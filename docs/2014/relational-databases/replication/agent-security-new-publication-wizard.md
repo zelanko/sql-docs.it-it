@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 05ae44df-8e9f-46ea-95f6-972ad109c6c0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 555aa4e49887000354e5d31ff5d039a5f0ac75eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 388554360003fe31bc1d7d93063832b6d265e359
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63259155"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055709"
 ---
 # <a name="agent-security-new-publication-wizard"></a>Sicurezza agente (Creazione guidata nuova pubblicazione)
   La pagina **Sicurezza agente** consente di specificare gli account nell'ambito dei quali gli agenti seguenti vengono eseguiti e si connettono ai computer in una topologia di replica.  
@@ -45,7 +44,7 @@ ms.locfileid: "63259155"
 >  esiste un agente di lettura log per ogni database pubblicato tramite la replica transazionale. Se esiste già una replica transazionale nel database, le impostazioni di sicurezza sono di sola lettura. È possibile modificare le impostazioni nella finestra di dialogo **Proprietà pubblicazione** , tuttavia le modifiche avranno effetto su tutte le pubblicazioni transazionali nel database.  
   
  **Agente di lettura coda**  
- Visualizzato per le pubblicazioni transazionali con sottoscrizioni aggiornabili. Fare clic su **Impostazioni di sicurezza** per specificare le impostazioni di sicurezza nella finestra di dialogo **Sicurezza agente di lettura coda** . Un processo di agente di lettura coda viene creato al termine della procedura guidata indipendentemente dalla creazione di sottoscrizioni ad aggiornamento in coda. Se non si prevede di creare sottoscrizioni ad aggiornamento in coda, è possibile disabilitare il processo. Fare clic con il pulsante destro del mouse sul processo, con nome nel formato *[\<ServerPubblicazione>].\<intero>* ., nella cartella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Processi**di** e quindi scegliere **Disabilita**.  
+ Visualizzato per le pubblicazioni transazionali con sottoscrizioni aggiornabili. Fare clic su **Impostazioni di sicurezza** per specificare le impostazioni di sicurezza nella finestra di dialogo **Sicurezza agente di lettura coda** . Un processo di agente di lettura coda viene creato al termine della procedura guidata indipendentemente dalla creazione di sottoscrizioni ad aggiornamento in coda. Se non si prevede di creare sottoscrizioni ad aggiornamento in coda, è possibile disabilitare il processo. Fare clic con il pulsante destro del mouse sul processo (denominato nel formato: *[ \<Publisher> ] \<integer> .*.) nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cartella **processi** di Agent, quindi scegliere **Disabilita**.  
   
  Fare clic su **?** nella finestra di dialogo **Sicurezza agente di lettura coda** per ulteriori informazioni sulle autorizzazioni necessarie per gli account utilizzati dall'agente di lettura coda.  
   

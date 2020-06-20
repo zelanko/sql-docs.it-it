@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 495b03b98e6c497bfd7a1527d9e2e2d81f25b762
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d44d8d8bdda5f8c15fffe8f3aaf0eaf2d099e81
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62805563"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040894"
 ---
 # <a name="create-custom-templates"></a>Creare modelli personalizzati
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] include modelli da usare per molte attività comuni. L'effettivo vantaggio dei modelli, tuttavia, consiste nella possibilità di creare un modello personalizzato per uno script complesso che è necessario creare frequentemente. In questa esercitazione verranno illustrate le procedure per la creazione di uno script semplice con un numero limitato di parametri, ma i modelli risultano utili anche per script complessi e ripetitivi.  
@@ -67,7 +66,7 @@ ms.locfileid: "62805563"
   
 10. Nell'editor di query digitare **EXECUTE dbo.WorkOrdersForBlade**e premere F5 per eseguire la query. Verificare che nel riquadro **Risultati** sia visualizzato l'elenco di ordini di blade richiesto.  
   
-11. Modificare lo script del modello, ovvero lo script del passaggio 7, sostituendo il nome del prodotto Blade con il `nvarchar(50)`parametro <strong> *<* product_name</strong>,, <strong>Name*>*</strong>, in quattro posizioni.  
+11. Modificare lo script del modello, ovvero lo script del passaggio 7, sostituendo il nome del prodotto Blade con il parametro <strong> *<* product_name</strong>, `nvarchar(50)` , <strong> *>* Name</strong>, in quattro posizioni.  
   
     > [!NOTE]  
     >  Per i parametri sono necessari tre elementi, ovvero il nome che si desidera restituire, il tipo di dati e il valore predefinito.  
@@ -103,7 +102,7 @@ ms.locfileid: "62805563"
   
 3.  Scegliere **Imposta valori per parametri modello** dal menu **Query**.  
   
-4.  Nella finestra di dialogo **Sostituisci parametri modello** , per `product_name` il valore, digitare **ruota libera** (sovrascrivendo il contenuto predefinito), quindi fare clic su **OK** per chiudere la finestra di dialogo **Sostituisci parametri modello** e modificare lo script nell'editor di query.  
+4.  Nella finestra di dialogo **Sostituisci parametri modello** , per il `product_name` valore, digitare **ruota libera** (sovrascrivendo il contenuto predefinito), quindi fare clic su **OK** per chiudere la finestra di dialogo **Sostituisci parametri modello** e modificare lo script nell'editor di query.  
   
 5.  Premere F5 per eseguire la query e creare la procedura.  
   

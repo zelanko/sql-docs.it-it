@@ -9,16 +9,15 @@ ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b66a0c9efc94d648eba2f4d4f8cff779def413fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22b22251188f4b175c24610833aa1b74bdb0badb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63131794"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055252"
 ---
 # <a name="overview-smo"></a>Panoramica (SMO)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Gli oggetti SMO (Management Objects) sono oggetti progettati per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la gestione a livello di codice di. È possibile utilizzare SMO per compilare applicazioni di gestione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personalizzate. Sebbene [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sia un'applicazione potente e completa per la gestione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in alcuni casi è possibile che sia necessario utilizzare un'applicazione SMO.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Gli oggetti SMO (Management Objects) sono oggetti progettati per la gestione a livello di codice di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È possibile utilizzare SMO per compilare applicazioni di gestione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personalizzate. Sebbene [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sia un'applicazione potente e completa per la gestione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in alcuni casi è possibile che sia necessario utilizzare un'applicazione SMO.  
   
  È possibile, ad esempio, che sia necessario semplificare le applicazioni utente che controllano le attività di gestione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per soddisfare le necessità di nuovi utenti e ridurre i costi di formazione. È possibile dovere creare database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personalizzati o creare un'applicazione per la creazione e il controllo dell'efficienza degli indici. Un'applicazione SMO può anche essere utilizzata per includere perfettamente hardware o software di terze parti nell'applicazione per la gestione di database.  
   
@@ -180,7 +179,7 @@ ms.locfileid: "63131794"
   
  Durante la transizione alla tecnologia [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] è possibile avere applicazioni scritte in parte in codice gestito e in parte in codice non gestito. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] consente di interfacciarsi con i componenti COM che richiedono un assembly di interoperabilità primario. È necessario un wrapper di runtime per SQL-DMO in modo che possa essere chiamato da un'applicazione basata su [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Concetti di base relativi a RMO (Replication Management Objects)](../replication/concepts/replication-management-objects-concepts.md)  
   
   

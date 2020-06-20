@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: be03754ea8eeb61d838357667da6e37e1be6bc31
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e51f45e06939971ada6166fb977c787ad0354926
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62626152"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047673"
 ---
 # <a name="sql-server-replication"></a>Replica SQL Server
   La replica è costituita da un set di tecnologie per la copia e la distribuzione di dati e oggetti di database da un database a un altro e la successiva sincronizzazione dei database in modo che risultino consistenti. Grazie alla replica è possibile distribuire dati a diverse posizioni e a utenti remoti o mobili tramite reti locali e WAN, connessioni remote, connessioni wireless e Internet.  
@@ -48,7 +47,7 @@ Per informazioni sulla compatibilità con le versioni precedenti, vedere [Compat
   
 ## <a name="publications-and-articles"></a>Pubblicazioni e articoli 
   
--   [Creazione di una pubblicazione](publish/create-a-publication.md)    
+-   [Creare una pubblicazione](publish/create-a-publication.md)    
 -   [Definire un articolo](publish/define-an-article.md)   
 -   [Visualizzare e modificare le proprietà della pubblicazione](publish/view-and-modify-publication-properties.md)   
 -   [Visualizzazione e modifica delle proprietà degli articoli](publish/view-and-modify-article-properties.md)    
@@ -91,7 +90,7 @@ Per informazioni sulla compatibilità con le versioni precedenti, vedere [Compat
 -   [Creazione di una sottoscrizione pull](create-a-pull-subscription.md)    
 -   [Visualizzare e modificare le proprietà delle sottoscrizioni pull](view-and-modify-pull-subscription-properties.md)    
 -   [Eliminazione di una sottoscrizione pull](delete-a-pull-subscription.md)    
--   [Creazione di una sottoscrizione push](create-a-push-subscription.md)   
+-   [Creare una sottoscrizione push](create-a-push-subscription.md)   
 -   [Visualizzazione e modifica delle proprietà delle sottoscrizioni push](view-and-modify-push-subscription-properties.md)   
 -   [Eliminazione di una sottoscrizione push](delete-a-push-subscription.md)   
 -   [Impostazione di pianificazioni della sincronizzazione](specify-synchronization-schedules.md)    

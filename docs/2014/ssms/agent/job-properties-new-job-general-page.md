@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b6832840-1c18-4db8-94fc-080db880ae9f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47f4f0abf784118dd94b62d7b8e08a2e060c639a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c3427d8ab5956d4f95a42876b21ee309677f933
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211380"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062303"
 ---
 # <a name="job-properties-and-new-job-general-page"></a>Proprietà processo e Nuovo processo (pagina Generale)
   Utilizzare questa pagina per visualizzare e modificare le proprietà generali di un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processo di Agent.  
@@ -38,10 +37,10 @@ ms.locfileid: "68211380"
  **Descrizione**  
  Consente di modificare la descrizione del processo.  
   
- **Attivata**  
+ **Enabled**  
  Consente di abilitare il processo. Quando non è abilitato, il processo non viene eseguito in risposta a una pianificazione o a un avviso, sebbene sia comunque possibile avviare il processo usando la stored procedure **sp_start_job** .  
   
- **origine**  
+ **Origine**  
  Visualizza il server master per il processo. Questa opzione è disponibile solo nella pagina **Proprietà processo - Generale** .  
   
  **Creato**  
@@ -56,7 +55,7 @@ ms.locfileid: "68211380"
  **Visualizza cronologia processo**  
  Consente di visualizzare la cronologia processo per il processo. Questa opzione è disponibile solo nella pagina **Proprietà processo - Generale** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Implementare processi](implement-jobs.md)   
  [Categorie di processi: Gestisci categorie di processi](job-categories-manage-job-categories.md)  
   

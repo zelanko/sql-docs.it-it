@@ -25,53 +25,52 @@ helpviewer_keywords:
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 17eeefbe125722c666f9f56394028da8c66a66b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 70274fcc16caec38d4d960f89fe586b32662dc57
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232275"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954781"
 ---
 # <a name="mapping-clr-parameter-data"></a>Mapping dei dati dei parametri CLR
-  Nella tabella seguente sono [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elencati i tipi di dati, gli equivalenti nella Common Language Runtime (CLR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) per `System.Data.SqlTypes` nello spazio dei nomi e i relativi equivalenti CLR [!INCLUDE[msCoName](../../includes/msconame-md.md)] nativi nell'.NET Framework.  
+  Nella tabella seguente sono elencati i [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati, gli equivalenti nella Common Language Runtime (CLR) per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nello `System.Data.SqlTypes` spazio dei nomi e i relativi equivalenti CLR nativi nell' [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
   
 ||||  
 |-|-|-|  
 |**Tipo di dati SQL Server**|Tipo (in System.Data.SqlTypes o Microsoft.SqlServer.Types)|**Tipo di dati CLR (.NET Framework)**|  
 |`bigint`|`SqlInt64`|**Int64, Nullable\<Int64>**|  
 |`binary`|`SqlBytes, SqlBinary`|`Byte[]`|  
-|`bit`|`SqlBoolean`|**Booleano,\<valore booleano nullable>**|  
+|`bit`|`SqlBoolean`|**Booleano, Nullable\<Boolean>**|  
 |`char`|nessuno|nessuno|  
 |`cursor`|nessuno|nessuno|  
 |`date`|`SqlDateTime`|**DateTime, Nullable\<DateTime>**|  
 |`datetime`|`SqlDateTime`|**DateTime, Nullable\<DateTime>**|  
 |`datetime2`|nessuno|**DateTime, Nullable\<DateTime>**|  
-|`DATETIMEOFFSET`|`None`|**DateTimeOffset, DateTimeOffset\<Nullable>**|  
-|`decimal`|`SqlDecimal`|**Decimale\<, Nullable decimale>**|  
+|`DATETIMEOFFSET`|`None`|**DateTimeOffset, Nullable\<DateTimeOffset>**|  
+|`decimal`|`SqlDecimal`|**Decimale, Nullable\<Decimal>**|  
 |`float`|`SqlDouble`|**Double, Nullable\<Double>**|  
-|`geography`|`SqlGeography`<br /><br /> `SqlGeography`è definito in Microsoft. SqlServer. Types. dll, che viene installato con SQL Server e può essere scaricato dal [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164).|nessuno|  
-|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry`è definito in Microsoft. SqlServer. Types. dll, che viene installato con SQL Server e può essere scaricato dal [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164).|nessuno|  
-|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId`è definito in Microsoft. SqlServer. Types. dll, che viene installato con SQL Server e può essere scaricato dal [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164).|nessuno|  
+|`geography`|`SqlGeography`<br /><br /> `SqlGeography`è definito in Microsoft.SqlServer.Types.dll, installato con SQL Server e può essere scaricato dal [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164).|nessuno|  
+|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry`è definito in Microsoft.SqlServer.Types.dll, installato con SQL Server e può essere scaricato dal [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164).|nessuno|  
+|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId`è definito in Microsoft.SqlServer.Types.dll, installato con SQL Server e può essere scaricato dal [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164).|nessuno|  
 |`image`|nessuno|nessuno|  
 |`int`|`SqlInt32`|**Int32, Nullable\<Int32>**|  
-|`money`|`SqlMoney`|**Decimale\<, Nullable decimale>**|  
+|`money`|`SqlMoney`|**Decimale, Nullable\<Decimal>**|  
 |`nchar`|`SqlChars, SqlString`|`String, Char[]`|  
 |`ntext`|nessuno|nessuno|  
-|`numeric`|`SqlDecimal`|**Decimale\<, Nullable decimale>**|  
+|`numeric`|`SqlDecimal`|**Decimale, Nullable\<Decimal>**|  
 |`nvarchar`|`SqlChars, SqlString`<br /><br /> `SQLChars` rappresenta la soluzione migliore per il trasferimento dei dati e l'accesso ai dati, mentre `SQLString` è preferibile per l'esecuzione di operazioni di stringa.|`String, Char[]`|  
 |`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char, String, Char [], Nullable\<char>**|  
-|`real`|`SqlSingle` (la gamma di `SqlSingle`, tuttavia, è maggiore di `real`)|**Single, Nullable\<Single>**|  
+|`real`|`SqlSingle` (la gamma di `SqlSingle`, tuttavia, è maggiore di `real`)|**Singolo, Nullable\<Single>**|  
 |`rowversion`|nessuno|`Byte[]`|  
 |`smallint`|`SqlInt16`|**Int16, Nullable\<Int16>**|  
-|`smallmoney`|`SqlMoney`|**Decimale\<, Nullable decimale>**|  
+|`smallmoney`|`SqlMoney`|**Decimale, Nullable\<Decimal>**|  
 |`sql_variant`|nessuno|`Object`|  
 |`table`|nessuno|nessuno|  
 |`text`|nessuno|nessuno|  
 |`time`|nessuno|**TimeSpan, Nullable\<TimeSpan>**|  
 |`timestamp`|nessuno|nessuno|  
-|`tinyint`|`SqlByte`|**Byte, Nullable\<byte>**|  
-|`uniqueidentifier`|`SqlGuid`|**GUID, GUID\<Nullable>**|  
+|`tinyint`|`SqlByte`|**Byte, Nullable\<Byte>**|  
+|`uniqueidentifier`|`SqlGuid`|**GUID, Nullable\<Guid>**|  
 |`User-defined type(UDT)`|nessuno|La stessa classe associata al tipo definito dall'utente (UDT) nello stesso assembly o un assembly dipendente.|  
 |**varbinary**|`SqlBytes, SqlBinary`|`Byte[]`|  
 |`varbinary(1), binary(1)`|`SqlBytes, SqlBinary`|**byte, byte [], Nullable\<byte>**|  

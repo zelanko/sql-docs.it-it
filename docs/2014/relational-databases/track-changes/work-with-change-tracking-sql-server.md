@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5ed0a510a6b74e3c33e9cb7ed9d789ad8242a499
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdb8205a789894caf8c8e2d3c3f491751757bab6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270217"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047095"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Utilizzare il rilevamento delle modifiche (SQL Server)
   Le applicazioni che utilizzano il rilevamento delle modifiche devono essere in grado di ottenere le modifiche registrate, di applicare tali modifiche a un altro archivio dati e di aggiornare il database di origine. In questo argomento viene descritto come eseguire queste attività e viene illustrato il ruolo svolto dal rilevamento delle modifiche quando si verifica un failover ed è necessario ripristinare un database da un backup.  
@@ -431,7 +430,7 @@ COMMIT TRAN
   
 -   Quando un client esegue una query per le modifiche, registrare il numero dell'ultima versione sincronizzata per ciascun client nel server. Se si verifica un problema con i dati, i numeri delle ultime versioni sincronizzate non corrispondono. Ciò indica che è necessario eseguire la reinizializzazione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Rilevare le modifiche ai dati &#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)   
  [Informazioni su Rilevamento modifiche &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md)   
  [Gestire Rilevamento modifiche &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   

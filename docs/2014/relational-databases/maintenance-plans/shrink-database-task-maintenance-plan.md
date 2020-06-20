@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a9874cac-cded-4145-9c38-8aafd267dbee
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6f96e45cdf5f94e3e8b71514e1bb3e7ed4d99cfb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b8ee6060a4ee6ca3272434cf3d9115638a675e62
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806742"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023933"
 ---
 # <a name="shrink-database-task-maintenance-plan"></a>Attività Compatta database (Piano di manutenzione)
   Usare la finestra di dialogo **Attività Compatta database** per creare un'attività che cerchi di ridurre le dimensioni dei database selezionati. Le opzioni illustrate di seguito consentono di definire la quantità di spazio non utilizzato che deve rimanere nel database dopo la compattazione. Maggiore è la percentuale specificata, minore sarà il livello di compattazione del database. Il valore è basato sulla percentuale dei dati effettivi presenti nel database. Compattando ad esempio un database da 100 MB contenente 60 MB di dati e 40 MB di spazio disponibile con una percentuale di spazio disponibile del 50%, si ottiene un database con 60 MB di dati e 30 MB di spazio disponibile, perché il 50% di 60 MB è pari a 30 MB. Viene eliminato dal database solo lo spazio in eccesso. I valori validi sono compresi tra 0 e 100.  

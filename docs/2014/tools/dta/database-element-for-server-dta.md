@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5cd9a87a-af4b-45f3-8c18-f7fd7e7d3064
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9b23e8d7f68cca0722691863a2c5c8d5e095c33c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87df538858c9294cb8986da3df0d2b3814411326
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62661833"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057755"
 ---
 # <a name="database-element-for-server-dta"></a>Elemento Database per Server (DTA)
   Specifica il database che si desidera ottimizzare in uno specifico server.  
@@ -52,7 +51,7 @@ ms.locfileid: "62661833"
  Questo elemento appartiene al nome **DatabaseDetailsTypecomplexType** nell'XML Schema di Ottimizzazione guidata motore di database. Questo elemento `Database` non deve essere confuso con quello il cui padre radice è l'elemento `Configuration`. Per altre informazioni, vedere [Elemento Database per Configuration &#40;DTA&#41;](database-element-for-configuration-dta.md).  
   
 ## <a name="example"></a>Esempio  
- Per un esempio di utilizzo dell' `Database` elemento, vedere [elemento Server &#40;DTA&#41;](server-element-dta.md).  
+ Per un esempio di utilizzo dell' `Database` elemento, vedere [elemento server &#40;DTA&#41;](server-element-dta.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai file di input XML&#40; (Ottimizzazione guidata motore di database)&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  

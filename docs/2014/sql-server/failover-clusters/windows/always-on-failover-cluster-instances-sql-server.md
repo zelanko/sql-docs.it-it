@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ff76632459f25981041e5585cd9cbb3dbcf906c5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 71c5767bfc023cbe93e8026bb5e67e82fff8ee3f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62520474"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062593"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Istanze del cluster di failover Always On (SQL Server)
-  Nell'ambito dell'offerta [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On, always on istanze del cluster di failover utilizzano la funzionalità WSFC (Windows Server Failover Clustering) per fornire la disponibilità elevata locale tramite la ridondanza a livello di istanza del server, ovvero un' *istanza del cluster* di failover. Un'istanza del cluster di failover è una sola istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installata nei nodi del clustering di failover di Windows Server (WSFC) e, possibilmente, in più subnet. In rete, un'istanza del cluster di failover appare come un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in esecuzione in un singolo computer, le cui funzionalità forniscono il failover da un nodo WSFC a un altro, quando il nodo corrente non è più disponibile.  
+  Nell'ambito dell' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] offerta always on, always on istanze del cluster di failover utilizzano la funzionalità WSFC (Windows Server Failover Clustering) per fornire la disponibilità elevata locale tramite la ridondanza a livello di istanza del server, ovvero un' *istanza del cluster* di failover. Un'istanza del cluster di failover è una sola istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installata nei nodi del clustering di failover di Windows Server (WSFC) e, possibilmente, in più subnet. In rete, un'istanza del cluster di failover appare come un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in esecuzione in un singolo computer, le cui funzionalità forniscono il failover da un nodo WSFC a un altro, quando il nodo corrente non è più disponibile.  
   
  Un'istanza del cluster di failover può sfruttare i [gruppi di disponibilità AlwaysOn](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) per offrire ripristino di emergenza remoto a livello di database. Per altre informazioni, vedere [Clustering di failover e gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).  
   

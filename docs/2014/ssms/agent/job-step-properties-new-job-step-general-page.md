@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8d1885ba-4386-4528-8f2b-68c16852720c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8a957e2032f3be0e48d5bcfa4ed4508775e04477
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c8f8bc17b6a4c4792858c64144788aa12b858a3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62510955"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062251"
 ---
 # <a name="job-step-properties-new-job-step-general-page"></a>Proprietà passaggio processo: Nuovo passaggio di processo (pagina Generale)
   Utilizzare questa pagina per visualizzare e modificare le proprietà di un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] passaggio di processo di Agent oppure per definire un nuovo passaggio di processo.  
@@ -28,7 +27,7 @@ ms.locfileid: "62510955"
  **Nome passaggio**  
  Consente di impostare il nome del passaggio del processo.  
   
- **Type**  
+ **Tipo**  
  Consente di impostare il sottosistema utilizzato dal passaggio del processo. In base al sottosistema scelto, le opzioni visualizzate per la definizione del passaggio del processo sono diverse.  
   
  **Esegui come**  
@@ -67,7 +66,7 @@ ms.locfileid: "62510955"
  **JScript**  
  Consente di specificare JScript come linguaggio per i passaggi del processo.  
   
- **Altro**  
+ **Altri**  
  Consente di digitare il nome del linguaggio per i passaggi del processo scritti in un altro linguaggio di scripting.  
   
  **Apri**  
@@ -366,8 +365,8 @@ ms.locfileid: "62510955"
  **Riga di comando**  
  Consente di digitare le opzioni della riga di comando da utilizzare per il pacchetto.  
   
-## <a name="see-also"></a>Vedi anche  
- [Gestire i passaggi del processo](manage-job-steps.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Gestire passaggi di processo](manage-job-steps.md)   
  [SQL Server Agent processi per i pacchetti](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)   
  [Amministrazione dell'agente di replica](../../relational-databases/replication/agents/replication-agent-administration.md)  
   

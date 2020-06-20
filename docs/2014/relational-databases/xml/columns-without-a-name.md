@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 440de44e-3a56-4531-b4e4-1533ca933cac
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 016d84eb5fee22e2bd8152d0a5eeb283304c456a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c295a0795e8c073ae55fcb61457782496a91526f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717174"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046935"
 ---
 # <a name="columns-without-a-name"></a>Colonne senza nome
   Qualsiasi colonna priva di nome verrà resa inline. Le colonne calcolate o le query scalari nidificate, ad esempio, che non specificano un alias di colonna genereranno colonne senza nome. Se la colonna è di tipo `xml`, viene inserito il contenuto dell'istanza di quel tipo di dati. In caso contrario, il contenuto della colonna viene inserito come nodo di testo.  

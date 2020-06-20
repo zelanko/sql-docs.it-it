@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8462f85dc6c804020f12b9bc989d683c5a4ad0ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72e81e6d34a386c04d18f050fb8010a3bcf6b7a2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832225"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919262"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>Editor attività Profiling dati (pagina Generale)
   Usare la pagina **Generale** di **Editor attività Profiling dati** per configurare le opzioni seguenti:  
@@ -58,9 +57,9 @@ ms.locfileid: "62832225"
  **Destinazione**  
  Consente di specificare la gestione connessione file o la variabile del pacchetto contenente l'output del profilo dei dati:  
   
--   Se l'opzione **DestinationType** è impostata su **FileConnection**, l'opzione **Destination** visualizza le gestioni connessione file disponibili. Selezionare una delle gestioni connessione oppure fare clic su \<Nuova connessione file> per creare una nuova gestione connessione file.  
+-   Se l'opzione **DestinationType** è impostata su **FileConnection**, l'opzione **Destination** visualizza le gestioni connessione file disponibili. Selezionare una di queste gestioni connessioni oppure selezionare \<New File connection> per creare una nuova gestione connessione file.  
   
--   Se l'opzione **DestinationType** è impostata su **Variable**, l'opzione **Destination** visualizza le variabili del pacchetto disponibili nell'elenco **Destination** . Selezionare una delle variabili oppure fare clic su \<Nuova variabile> per crearne una nuova.  
+-   Se l'opzione **DestinationType** è impostata su **Variable**, l'opzione **Destination** visualizza le variabili del pacchetto disponibili nell'elenco **Destination** . Selezionare una di queste variabili oppure selezionare \<New Variable> per creare una nuova variabile.  
   
  **OverwriteDestination**  
  Consente di specificare se sovrascrivere il file di output, se presente. Il valore predefinito è **False**. Il valore di questa proprietà viene utilizzato solo quando l'opzione DestinationType è impostata su FileConnection. Quando l'opzione DestinationType è impostata su Variable, l'attività sovrascrive sempre il valore precedente della variabile.  
@@ -76,7 +75,7 @@ ms.locfileid: "62832225"
  Consente di aprire il Visualizzatore profilo dati. Il Visualizzatore profilo dati autonomo visualizza l'output del profilo dei dati dall'attività Profiling dati. È possibile visualizzare l'output del profilo dei dati dopo avere eseguito l'attività Profiling dati nel pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e aver calcolato i profili dati.  
   
 > [!NOTE]  
->  È anche possibile aprire il Visualizzatore profilo dati eseguendo DataProfileViewer.exe nella cartella *\<unità>* :\Programmi (x86) | Programmi\Microsoft SQL Server\110\DTS\Binn.  
+>  È anche possibile aprire il Visualizzatore profilo dati eseguendo il DataProfileViewer.exe nella cartella *\<drive>* : \Program Files (x86) | Programmi\Microsoft SQL Server\110\DTS\Binn.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Form profilo rapido singola tabella &#40;Attività Profiling dati&#41;](single-table-quick-profile-form-data-profiling-task.md)   

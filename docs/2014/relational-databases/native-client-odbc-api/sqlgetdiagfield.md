@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9a41bde545463964d01e8f0b32a476ee08118eb7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 356a627105c6e6dabbf4b55a5d43f8b37d2712b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706020"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022298"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client specifica i seguenti campi di diagnostica aggiuntivi per `SQLGetDiagField` . Questi campi supportano la segnalazione dettagliata degli errori per le applicazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sono disponibili in tutti i record di diagnostica generati negli handle di istruzione ODBC e di connessione ODBC collegati. I campi sono definiti in sqlncli.h.  
@@ -36,7 +35,7 @@ ms.locfileid: "82706020"
   
  Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client segnala i codici di funzione dinamica aggiuntivi seguenti che identificano l'ultima istruzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tentata. Il codice di funzione dinamica viene restituito nell'intestazione (record 0) del set di record di diagnostica ed è pertanto disponibile a ogni esecuzione, indipendentemente dall'esito di quest'ultima.  
   
-|Codice di funzione dinamica|Origine|  
+|Codice di funzione dinamica|Source (Sorgente)|  
 |---------------------------|------------|  
 |SQL_DIAG_DFC_SS_ALTER_DATABASE|ALTER DATABASE - istruzione|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|Istruzione CHECKPOINT|  

@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 323ccf41b5285f4bc395223025ea164a330c28a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8efc581eebd7d8fa7fa265abb54168af78b57ca2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211002"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057646"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Utilità ssbdiagnose (Service Broker)
   L'utilità **ssbdiagnose** segnala la presenza di problemi in conversazioni di [!INCLUDE[ssSB](../../includes/sssb-md.md)] o nella configurazione di servizi di [!INCLUDE[ssSB](../../includes/sssb-md.md)] . I controlli della configurazione possono essere eseguiti per due servizi oppure per un unico servizio. I problemi vengono segnalati nella finestra del prompt dei comandi in testo leggibile oppure in un file XML formattato che può essere reindirizzato a un file oppure a un altro programma.  
@@ -183,16 +182,16 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  Identificatore univoco di un endpoint di conversazione in un'applicazione. Per un endpoint di una conversazione gli handle di conversazione sono univoci , mentre per gli endpoint dell'Initiator e di destinazione gli handle di conversazione sono diversi.  
   
- Gli handle di conversazione vengono restituiti alle applicazioni *@dialog_handle* dal parametro dell'istruzione **BEGIN DIALOG** e dalla `conversation_handle` colonna nel set di risultati di un'istruzione **Receive** .  
+ Gli handle di conversazione vengono restituiti alle applicazioni dal *@dialog_handle* parametro dell'istruzione **BEGIN DIALOG** e dalla `conversation_handle` colonna nel set di risultati di un'istruzione **Receive** .  
   
- Gli `conversation_handle` handle di conversazione vengono segnalati nella colonna delle viste del catalogo **sys. transmission_queue** e **sys. conversation_endpoints** .  
+ Gli handle di conversazione vengono segnalati nella `conversation_handle` colonna delle viste del catalogo **sys. transmission_queue** e **sys. conversation_endpoints** .  
   
  *conversation_group_id*  
  Identificatore univoco di un gruppo di conversazioni.  
   
- Gli ID del gruppo di conversazioni vengono restituiti alle *@conversation_group_id* applicazioni dal parametro dell'istruzione **Get Conversation Group** e `conversation_group_id` dalla colonna nel set di risultati di un'istruzione **Receive** .  
+ Gli ID del gruppo di conversazioni vengono restituiti alle applicazioni dal *@conversation_group_id* parametro dell'istruzione **Get Conversation Group** e dalla `conversation_group_id` colonna nel set di risultati di un'istruzione **Receive** .  
   
- Gli `conversation_group_id` ID del gruppo di conversazioni vengono indicati nelle colonne delle viste del catalogo **sys. conversation_groups** e **sys. conversation_endpoints** .  
+ Gli ID del gruppo di conversazioni vengono indicati nelle `conversation_group_id` colonne delle viste del catalogo **sys. conversation_groups** e **sys. conversation_endpoints** .  
   
  *conversation_id*  
  Identificatore univoco di una conversazione. Gli ID di conversazione sono gli stessi per sia gli endpoint dell'Initiator che per quelli di destinazione di una conversazione.  
@@ -243,7 +242,7 @@ WHERE database_id = DB_ID();
  **-S** *server_name*[\\*instance_name*]  
  Specifica l'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che contiene i servizi di [!INCLUDE[ssSB](../../includes/sssb-md.md)] da analizzare.  
   
- Specificare *server_name* per connettersi all'istanza predefinita del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in tale server. Specificare *server_name***\\***instance_name* per connettersi a un'istanza denominata del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in tale server. Se **-S** non viene specificata, **ssbdiagnose** usa il valore della variabile di ambiente SQLCMDSERVER. Se SQLCMDSERVER non è impostata, **ssbdiagnose** si connette all'istanza predefinita del [!INCLUDE[ssDE](../../includes/ssde-md.md)] sul computer locale.  
+ Specificare *server_name* per connettersi all'istanza predefinita del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in tale server. Specificare *server_name ***\\*** instance_name* per connettersi a un'istanza denominata del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in tale server. Se **-S** non viene specificata, **ssbdiagnose** usa il valore della variabile di ambiente SQLCMDSERVER. Se SQLCMDSERVER non è impostata, **ssbdiagnose** si connette all'istanza predefinita del [!INCLUDE[ssDE](../../includes/ssde-md.md)] sul computer locale.  
   
  **-d** *database_name*  
  Specifica il database che contiene i servizi di [!INCLUDE[ssSB](../../includes/sssb-md.md)] da analizzare. Se il database non esiste, viene generato un messaggio di errore. Se l'opzione **-d** non è specificata, per impostazione predefinita viene usato il database specificato nella proprietà default-database dell'account di accesso.  

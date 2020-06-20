@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ad369e49298c4d39a7e936ce8acf47ca2035c8f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f9b8ecedf6a1736fa287d082d8d446c5052078d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920013"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955067"
 ---
 # <a name="accessing-the-current-transaction"></a>Accesso alla transazione corrente
   Se una transazione è attiva quando viene immesso il codice CLT (Common Language Runtime) in esecuzione su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la transazione viene esposta mediante la classe `System.Transactions.Transaction`. Per accedere alla transazione corrente viene utilizzata la proprietà `Transaction.Current`. Nella maggior parte dei casi non è necessario accedere in modo esplicito alla transazione. Per le connessioni al database, ADO.NET controlla `Transaction.Current` automaticamente quando viene chiamato il metodo `Connection.Open` e integra in modo trasparente la connessione in tale transazione, a meno che la parola chiave `Enlist` non venga impostata su false nella stringa di connessione.  
@@ -43,7 +42,7 @@ ms.locfileid: "62920013"
   
 -   La funzione o procedura gestita può restituire un valore utilizzando un parametro di output. La procedura [!INCLUDE[tsql](../../includes/tsql-md.md)] chiamante può controllare il valore restituito e, se necessario, eseguire `ROLLBACK TRANSACTION`.  
   
--   La funzione o procedura gestita può generare un'eccezione personalizzata. La procedura [!INCLUDE[tsql](../../includes/tsql-md.md)] chiamante può intercettare l'eccezione generata dalla procedura o dalla funzione gestita in un blocco try/catch ed `ROLLBACK TRANSACTION`eseguire.  
+-   La funzione o procedura gestita può generare un'eccezione personalizzata. La [!INCLUDE[tsql](../../includes/tsql-md.md)] procedura chiamante può intercettare l'eccezione generata dalla procedura o dalla funzione gestita in un blocco try/catch ed eseguire `ROLLBACK TRANSACTION` .  
   
 -   La funzione o procedura gestita può annullare la transazione corrente chiamando il metodo `Transaction.Rollback` se viene soddisfatta una determinata condizione.  
   
@@ -200,7 +199,7 @@ DROP ASSEMBLY TestProcs;
 Go  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integrazione con CLR e transazioni](../native-client-ole-db-transactions/transactions.md)  
   
   

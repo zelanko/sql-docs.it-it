@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb13712b-e7ad-4f1f-b605-4554bad0cb60
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7c0ccfb05b7b9eb6244e6d403c8975c3af1358a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 189667ecd2756ebf0026a22d981f9bb0ddd347c9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250662"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056974"
 ---
 # <a name="reinitialize-subscriptions"></a>Reinizializzare le sottoscrizioni
   La reinizializzazione di una sottoscrizione consiste nell'applicare un nuovo snapshot di uno o più articoli a uno o più Sottoscrittori. Nella replica transazionale e snapshot è possibile reinizializzare singoli articoli, mentre nella replica di tipo merge è necessario reinizializzare tutti gli articoli. In una topologia di replica transazionale peer-to-peer non è possibile reinizializzare i nodi. Per verificare se un nodo dispone di una nuova copia dei dati, ripristinare un backup nel nodo stesso. La reinizializzazione avviene per uno dei due motivi seguenti:  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 834c5950a8f8b0ddf8854d06c6fb1073a264fc22
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779156"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932882"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>Linee guida per i livelli di isolamento delle transazioni con tabelle con ottimizzazione per la memoria
   In molti scenari è necessario specificare il livello di isolamento. L'isolamento delle transazioni per le tabelle ottimizzate per la memoria è diverso dalle tabelle basate su disco.  
@@ -56,7 +55,7 @@ ms.locfileid: "62779156"
   
  La garanzia offerta dal livello di isolamento SNAPSHOT (il livello più basso di isolamento supportato per le tabelle ottimizzate per la memoria) include le garanzie di READ COMMITTED. Ogni istruzione della transazione legge la stessa versione coerente del database. Non solo tutte le righe vengono lette dalla transazione di cui è stato eseguito il commit nel database, ma anche tutte le operazioni di lettura rilevano il set di modifiche apportate dallo stesso set di transazioni.  
   
- **Linee guida**: se è necessaria solo la garanzia di isolamento Read Committed, usare l'isolamento dello snapshot con le stored procedure compilate in modo nativo e per [!INCLUDE[tsql](../includes/tsql-md.md)]accedere alle tabelle ottimizzate per la memoria tramite interpretato.  
+ **Linee guida**: se è necessaria solo la garanzia di isolamento Read Committed, usare l'isolamento dello snapshot con le stored procedure compilate in modo nativo e per accedere alle tabelle ottimizzate per la memoria tramite interpretato [!INCLUDE[tsql](../includes/tsql-md.md)] .  
   
  Per le transazioni in modalità autocommit, viene eseguito il mapping implicito del livello di isolamento READ COMMITTED a SNAPSHOT per le tabelle ottimizzate per la memoria. Pertanto, se il valore della sessione TRANSACTION ISOLATION LEVEL è impostato su READ COMMITTED, non è necessario specificare il livello di isolamento tramite un hint di tabella durante l'accesso alle tabelle ottimizzate per la memoria.  
   
@@ -123,13 +122,13 @@ COMMIT
 ```  
   
 ## <a name="locking-table-hints"></a>Hint di tabella di blocco  
- Gli hint di blocco ([hint di tabella &#40;&#41;Transact-SQL ](/sql/t-sql/queries/hints-transact-sql-table)), ad esempio HOLDLOCK e XLOCK, possono essere utilizzati con le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tabelle basate su disco in modo da richiedere più blocchi rispetto a quelli necessari per il livello di isolamento specificato.  
+ Gli hint di blocco ([hint di tabella &#40;&#41;Transact-SQL ](/sql/t-sql/queries/hints-transact-sql-table)), ad esempio HOLDLOCK e XLOCK, possono essere utilizzati con le tabelle basate su disco in modo da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] richiedere più blocchi rispetto a quelli necessari per il livello di isolamento specificato.  
   
  I blocchi non vengono utilizzati per le tabelle con ottimizzazione per la memoria. I livelli di isolamento più elevati quali REPEATABLE READ e SERIALIZABLE possono essere utilizzati per dichiarare le garanzie desiderate.  
   
  Gli hint di blocco non sono supportati. In alternativa, è possibile dichiarare le garanzie necessarie tramite i livelli di isolamento delle transazioni. NOLOCK è supportato poiché [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non accetta blocchi sulle tabelle ottimizzate per la memoria. Si noti che, diversamente dalle tabelle basate su disco, NOLOCK non implica il comportamento READ UNCOMMITTED per le tabelle ottimizzate per la memoria.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Informazioni sulle transazioni nelle tabelle ottimizzate per la memoria](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
  [Linee guida per la logica di ripetizione tentativi per le transazioni nelle tabelle ottimizzate per la memoria](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)   
  [Livelli di isolamento delle transazioni](../../2014/database-engine/transaction-isolation-levels.md)  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 659bba7156ccc1c3a60bef38a51fd983554e4ead
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c2996a8ca8471ef59d4781e21239a72262daa759
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721198"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068699"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implementazione di un gestore della logica di business per un articolo di merge
   In questo argomento viene descritto come implementare un gestore della logica di business per un articolo di tipo merge in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite la programmazione della replica o RMO (Replication Management Objects).  
@@ -99,10 +98,10 @@ ms.locfileid: "62721198"
   
 1.  Nel server di pubblicazione eseguire [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) per verificare che l'assembly non sia già stato registrato come gestore della logica di business.  
   
-2.  Nel server di distribuzione eseguire [sp_registercustomresolver &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql), specificando un nome descrittivo per il gestore **@article_resolver**della logica di business `true` per **@is_dotnet_assembly**, il valore per, il nome **@dotnet_assembly_name**dell'assembly per e il nome completo della classe che esegue l' <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> override **@dotnet_class_name**di per.  
+2.  Nel server di distribuzione eseguire [sp_registercustomresolver &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql), specificando un nome descrittivo per il gestore della logica di business per **@article_resolver** , `true` il valore per **@is_dotnet_assembly** , il nome dell'assembly per **@dotnet_assembly_name** e il nome completo della classe che esegue l'override di <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> per **@dotnet_class_name** .  
   
     > [!NOTE]  
-    >  Se l'assembly non viene distribuito nella stessa directory del agente di merge eseguibile, nella stessa directory dell'applicazione che avvia in modo sincrono il agente di merge o nella Global Assembly Cache (GAC), è necessario specificare il percorso completo con il nome dell'assembly per **@dotnet_assembly_name**. Quando si utilizza la sincronizzazione tramite il Web, è necessario specificare il percorso dell'assembly nel server Web.  
+    >  Se l'assembly non viene distribuito nella stessa directory del agente di merge eseguibile, nella stessa directory dell'applicazione che avvia in modo sincrono il agente di merge o nella Global Assembly Cache (GAC), è necessario specificare il percorso completo con il nome dell'assembly per **@dotnet_assembly_name** . Quando si utilizza la sincronizzazione tramite il Web, è necessario specificare il percorso dell'assembly nel server Web.  
   
 #### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>Per utilizzare un gestore della logica di business con un nuovo articolo di tabella  
   
@@ -110,7 +109,7 @@ ms.locfileid: "62721198"
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>Per utilizzare un gestore della logica di business con un articolo di tabella esistente  
   
-1.  Eseguire [sp_changemergearticle &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), **@publication**specificando **@article**,, il valore **article_resolver** per **@property**e il nome descrittivo del gestore della logica di **@value**business per.  
+1.  Eseguire [sp_changemergearticle &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), specificando **@publication** , **@article** , il valore **article_resolver** per **@property** e il nome descrittivo del gestore della logica di business per **@value** .  
   
 ###  <a name="examples-replication-programming"></a><a name="TsqlExample"></a> Esempi (programmazione della replica)  
  In questo esempio è illustrato un gestore della logica di business che crea un log di controllo.  
@@ -237,7 +236,7 @@ ms.locfileid: "62721198"
   
  [!code-vb[HowTo#rmo_vb_ChangeMergeArticle_BLH](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changemergearticle_blh)]  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Implementare un sistema di risoluzione dei conflitti personalizzato per un articolo di merge](implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [Eseguire il debug di un gestore della logica di business &#40;la programmazione della replica&#41;](debug-a-business-logic-handler-replication-programming.md)   
  [Procedure consigliate per la sicurezza della replica](security/replication-security-best-practices.md)   

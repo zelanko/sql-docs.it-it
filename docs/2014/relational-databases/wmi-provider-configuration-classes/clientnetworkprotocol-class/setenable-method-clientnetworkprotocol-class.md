@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a66c756a-1311-4f4a-8088-818f8ed90056
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 1aa192f2dc78a424b1d4c8792044caac0934173a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dfba695506dd04ded82083b85bfbb751913fbcbb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62826721"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061435"
 ---
 # <a name="setenable-method-clientnetworkprotocol-class"></a>Metodo SetEnable (classe ClientNetworkProtocol)
   Abilita il protocollo di rete del client specificato dalla [configurazione dei protocolli client](https://technet.microsoft.com/library/ms181035.aspx).  
@@ -38,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  Oggetto della [classe ClientNetworkProtocol](clientnetworkprotocol-class.md) che rappresenta il protocollo di rete utilizzato dal [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
@@ -46,7 +45,7 @@ object
   
 ## <a name="remarks"></a>Osservazioni  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurazione di protocolli di rete client e di librerie di rete](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

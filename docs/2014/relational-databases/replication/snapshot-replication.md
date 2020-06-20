@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ffc03bf3f50c629dc53913959dc01b0a6443edef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec6680e0ff74b49611639b51c82de59522b2e0b1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270177"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055612"
 ---
 # <a name="snapshot-replication"></a>Replica snapshot
   La replica snapshot distribuisce i dati così come appaiono in uno determinato momento e non prevede il monitoraggio degli aggiornamenti ai dati. Quando viene eseguita la sincronizzazione, viene generato e inviato ai Sottoscrittori l'intero snapshot.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3166107c-30c2-468e-bb1b-bb42b79b37c3
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: cd1dae56cf2ea571ca9ab16de178764b807260db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c012de05d9ce4364024ca10eebf805dfe73c79e9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388080"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042467"
 ---
 # <a name="install-sql-server-bi-features-with-sharepoint-powerpivot-and-reporting-services"></a>Installare le funzionalità di Business Intelligence di SQL Server con SharePoint (PowerPivot e Reporting Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] possono essere integrati con una farm di Microsoft SharePoint per abilitare le funzionalità di Business Intelligence (BI) in SharePoint. Tra le funzionalità sono inclusi [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]viene utilizzato per [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] l'accesso ai dati in una farm di SharePoint. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] è il motore dati per le cartelle di lavoro create in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel a cui si accede da una raccolta di SharePoint. Una volta salvata una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in SharePoint, è possibile utilizzarla come origine dati per i report [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .
@@ -63,7 +62,7 @@ ms.locfileid: "81388080"
 |**3**|SharePoint con Reporting Services in modalità SharePoint|Power View|Installare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint.<br /><br /> Installare il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**(rsSharePoint.msi)** per SharePoint. Per ulteriori informazioni, vedere [installare o disinstallare il componente aggiuntivo Reporting Services per sharepoint &#40;sharepoint 2010 e sharepoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)|
 |**4**|Tutte le funzionalità di PowerPivot|Accedere alle cartelle di lavoro come origine dati dall'esterno della farm.<br /><br /> Pianificare l'aggiornamento dati.<br /><br /> Raccolta PowerPivot.<br /><br /> Dashboard di gestione.<br /><br /> Tipo di contenuto del file di collegamento BISM.|Distribuire il componente aggiuntivo PowerPivot per SharePoint 2013 **(spPowerPivot.msi)**. Per altre informazioni, vedere gli argomenti seguenti:<br /><br /> [Installare o disinstallare il componente aggiuntivo PowerPivot per SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)<br /><br /> Per informazioni su come scaricare **spPowerPivot.msi**, vedere [Scaricare SQL Server 2014 PowerPivot per SharePoint](https://go.microsoft.com/fwlink/?LinkID=296473).|
 
- Per ulteriori informazioni sull'abilitazione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] delle funzionalità, vedere la pagina relativa a [SQL Server BI Light-up Story per SharePoint 2013](https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx) (.https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx)
+ Per ulteriori informazioni sull'abilitazione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] delle funzionalità, vedere la pagina relativa a [SQL Server BI Light-up Story per SharePoint 2013](https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx) ( https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx) .
 
 ##  <a name="overview-of-installation"></a><a name="bkmk_install_sharepoint2013_overview"></a>Panoramica dell'installazione
  Se si desidera utilizzare [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], eseguire due volte l'Installazione guidata di SQL Server. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sono opzioni separate nella pagina **impostazione ruolo** dell'installazione guidata di SQL Server.
@@ -94,7 +93,7 @@ ms.locfileid: "81388080"
 
      ![due strumenti di configurazione PowerPivot](../../analysis-services/media/as-powerpivot-configtools-bothicons.gif "due strumenti di configurazione PowerPivot")
 
-5.  Configurare Excel Services in SharePoint Server 2013 l'utilizzo dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Per ulteriori informazioni, vedere la sezione "configurare l'integrazione di base Analysis Services SharePoint" nell' [installazione di PowerPivot per SharePoint 2013](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode). e [gestire le impostazioni del modello di dati di Excel Services (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx) (https://technet.microsoft.com/library/jj219780.aspx).
+5.  Configurare Excel Services in SharePoint Server 2013 l'utilizzo dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Per ulteriori informazioni, vedere la sezione "configurare l'integrazione di base Analysis Services SharePoint" nell' [installazione di PowerPivot per SharePoint 2013](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode). e [gestire le impostazioni del modello di dati di Excel Services (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx) ( https://technet.microsoft.com/library/jj219780.aspx) .
 
 6.  Per ulteriori informazioni, vedere [PowerPivot for SharePoint 2013 Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode).
 

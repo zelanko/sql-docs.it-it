@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 918574b3-c62e-4937-9e5f-37310dedc8f9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 60d7224a764cd0ab506d03cb154cb06456a8c408
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 825482d26d8b1fb071e802534a3166e61a4e20b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704208"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005974"
 ---
 # <a name="sparse-columns-support-ole-db"></a>Supporto per colonne di tipo sparse (OLE DB)
   In questo argomento vengono fornite informazioni sul supporto OLE DB di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client per le colonne di tipo sparse. Per ulteriori informazioni sulle colonne di tipo sparse, vedere [supporto di colonne di tipo sparse in SQL Server Native Client](../features/sparse-columns-support-in-sql-server-native-client.md). Per un esempio, vedere [Visualizzare i metadati della colonna e del catalogo per le colonne di tipo sparse &#40;OLE DB&#41;](../../native-client-ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md).  
@@ -47,7 +46,7 @@ ms.locfileid: "82704208"
 ## <a name="ole-db-support-for-sparse-columns"></a>Supporto OLE DB per colonne di tipo sparse  
  Le interfacce OLE DB seguenti sono state modificate in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client per supportare le colonne di tipo sparse:  
   
-|Tipo o funzione membro|Description|  
+|Tipo o funzione membro|Descrizione|  
 |-----------------------------|-----------------|  
 |IColumnsInfo::GetColumnsInfo|Un nuovo valore del flag DBCOLUMNFLAGS DBCOLUMNFLAGS_SS_ISCOLUMNSET è impostato per le `column_set` colonne in *dwFlags*.<br /><br /> DBCOLUMNFLAGS_WRITE è impostato per le colonne `column_set`.|  
 |IColumsRowset::GetColumnsRowset|Un nuovo valore del flag DBCOLUMNFLAGS, ovvero DBCOLUMNFLAGS_SS_ISCOLUMNSET, è impostato per le colonne `column_set` in DBCOLUMN_FLAGS.<br /><br /> DBCOLUMN_COMPUTEMODE è impostato su DBCOMPUTEMODE_DYNAMIC per le colonne `column_set`.|  

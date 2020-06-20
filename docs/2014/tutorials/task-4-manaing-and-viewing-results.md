@@ -9,22 +9,21 @@ ms.topic: conceptual
 ms.assetid: ecc3ba7e-fecf-478f-8825-6e4764b00e99
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8b97b0129a7cc4ffa21b4a82ad0208a2c1890b27
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ef2599ea202fad2b85881951692f1f04898e94e8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72313651"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006571"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>Attività 4: Gestione e visualizzazione dei risultati
   In questa attività si controllano i risultati della pulizia computerizzata; inoltre, si effettua la pulizia interattiva dei dati del fornitore. Per ulteriori informazioni, vedere [fase di pulizia interattiva](https://msdn.microsoft.com/library/hh213061.aspx#Interactive) .  
   
 1.  Selezionare **Contact email** Domain dall'elenco di domini.  
   
-2.  Passare alla scheda **non valida** nel riquadro di destra. Si noti che alla fine sono presenti due indirizzi di posta elettronica mancanti. Questi due messaggi di posta elettronica che non sono stati trovati come validi dalla regola di dominio che richiede che tutti gli indirizzi di posta elettronica terminino con ** \@Adventure-Works.com** (con ' s'). In DQS viene applicata la regola di dominio durante la pulizia per stabilire la validità di un indirizzo di posta elettronica. In questa scheda vengono visualizzati i valori del dominio contrassegnati come non validi nella Knowledge Base o che non hanno superato una regola di dominio. In questo caso, i valori in questione non hanno superato la regola di dominio (Email Validation).  
+2.  Passare alla scheda **non valida** nel riquadro di destra. Si noti che alla fine sono presenti due indirizzi di posta elettronica mancanti. Questi due messaggi di posta elettronica che non sono stati trovati come validi dalla regola di dominio che richiede che tutti gli indirizzi di posta elettronica terminino con ** \@ Adventure-Works.com** (con ' s'). In DQS viene applicata la regola di dominio durante la pulizia per stabilire la validità di un indirizzo di posta elettronica. In questa scheda vengono visualizzati i valori del dominio contrassegnati come non validi nella Knowledge Base o che non hanno superato una regola di dominio. In questo caso, i valori in questione non hanno superato la regola di dominio (Email Validation).  
   
-3.  Nella colonna **Correggi** in digitare l'indirizzo di posta elettronica corretto che termina con ** \@Adventure-Works.com** (con ' s').  
+3.  Nella colonna **Correggi** in digitare l'indirizzo di posta elettronica corretto che termina con ** \@ Adventure-Works.com** (con ' s').  
   
      ![Correzioni della regola di convalida posta elettronica](../../2014/tutorials/media/et-managingandviewingresults-01.jpg "Correzioni della regola di convalida posta elettronica")  
   
@@ -32,7 +31,7 @@ ms.locfileid: "72313651"
   
 5.  Passare alla scheda **nuovo** nel riquadro destro. I valori in questa scheda sono quelli per i quali DQS non dispone ancora di informazioni sufficienti nella Knowledge Base per stabilire se sono corretti. Pertanto, non è possibile apportare o suggerire modifiche ai valori di dominio.  
   
-6.  Esaminare i valori per confermare che tutti i messaggi di posta elettronica terminano con ** \@Adventure-Works.com** e fare clic su **approva tutti i termini** sulla barra degli strumenti. I valori approvati da questa scheda passano alla scheda **corretta** .  
+6.  Esaminare i valori per confermare che tutti i messaggi di posta elettronica terminano con ** \@ Adventure-Works.com** e fare clic su **approva tutti i termini** sulla barra degli strumenti. I valori approvati da questa scheda passano alla scheda **corretta** .  
   
 7.  Selezionare il dominio **Country** dall'elenco dei domini.  
   

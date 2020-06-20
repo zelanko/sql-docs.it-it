@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d682257669753665ac397133fcdec0f52e46dedd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f7930cd63150b385cd84f48e1bb1c4fdaa9ec0a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010353"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955741"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Confrontare opzioni per l'archiviazione di BLOB (SQL Server)
   Vengono descritte e confrontate le opzioni disponibili per l'archiviazione di file e documenti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -40,10 +39,10 @@ ms.locfileid: "66010353"
 ##  <a name="filestream"></a><a name="Filestream"></a> FILESTREAM  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispone già della funzione FILESTREAM, che fornisce funzionalità di archiviazione, gestione e flusso dati efficienti per i dati non strutturati archiviati come file nel file system. Una soluzione FILESTREAM, tuttavia, richiede programmazione personalizzata e non soddisfa i requisiti per la piena compatibilità delle applicazioni Windows descritta sopra.  
   
-##  <a name="filetables"></a><a name="FileTables"></a>Tabelle FileTable  
+##  <a name="filetables"></a><a name="FileTables"></a> FileTable  
  La caratteristica FileTable si basa sulle funzionalità FILESTREAM esistenti per consentire ai clienti aziendali di archiviare dati di file non strutturati e gerarchie di directory in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , soddisfacendo i requisiti per l'accesso non transazionale e la compatibilità delle applicazioni Windows per i dati basati su file.  
   
-##  <a name="comparing-filestream-and-filetable"></a><a name="CompareFileTable"></a>Confronto tra FILESTREAM e FileTable  
+##  <a name="comparing-filestream-and-filetable"></a><a name="CompareFileTable"></a> Confronto tra FILESTREAM e tabelle FileTable  
   
 |Funzionalità|Soluzione file server e database|Soluzione FILESTREAM|Soluzione FileTable|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
@@ -58,7 +57,7 @@ ms.locfileid: "66010353"
 ##  <a name="comparing-filestream-and-remote-blob-store-rbs"></a><a name="CompareRBS"></a> Confronto tra FILESTREAM e Archivio BLOB remoti (Remote BLOB Store, RBS)  
  Per un confronto tra queste due caratteristiche, vedere il post di blog del team RBS: [Confronto tra le funzionalità Archivio BLOB remoti e FILESTREAM di SQL Server](https://go.microsoft.com/fwlink/?LinkId=210317).  
   
-##  <a name="more-information"></a><a name="more"></a> Altre informazioni  
+##  <a name="more-information"></a><a name="more"></a> Ulteriori informazioni  
  [FILESTREAM &#40;SQL Server&#41;](filestream-sql-server.md)  
  [FileTables &#40;SQL Server&#41;](filetables-sql-server.md)  
  [Archivio Blob remoto &#40;RBS&#41; &#40;SQL Server&#41;](remote-blob-store-rbs-sql-server.md)  

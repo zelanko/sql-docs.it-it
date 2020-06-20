@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 24836939-94ed-4e57-aa85-5d6938d859e4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6485dbee31573fdbd328e41ba74b552df50fcee0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 48198318ec2febe4e79a501ef27d1bb56905f1f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703704"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047537"
 ---
 # <a name="specify-a-hit-count"></a>Specifica di un numero di passaggi
   Un numero di passaggi di un punto di interruzione è un contatore incrementato dal debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] ogni volta che viene raggiunto il punto di interruzione. Se viene raggiunto il numero di passaggi specificato e viene soddisfatta qualsiasi condizione per il punto di interruzione, il debugger esegue l'azione specificata per il punto di interruzione.  

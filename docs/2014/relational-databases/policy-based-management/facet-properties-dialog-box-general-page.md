@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 04f1d325-832d-4889-a5f1-ca004bdce2de
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4c789ea6cececcfacbc428fda393c1c13684765
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e1f29d8e9edcccf093ac85cc134b5b92b9c2173
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704849"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061672"
 ---
 # <a name="facet-properties-dialog-box-general-page"></a>Finestra di dialogo Proprietà facet, pagina Generale
   Utilizzare questa finestra di dialogo per visualizzare le proprietà di un facet della gestione basata su criteri. Ogni facet può essere applicato a uno o più tipi di destinazione, ad esempio server, database o tabella. Utilizzare questa pagina per visualizzare quali tipi di destinazione sono correlati al facet corrente. Le proprietà di un facet vengono definite durante la creazione del facet e non possono essere modificate in questa pagina.  
@@ -32,7 +31,7 @@ ms.locfileid: "62704849"
  **Proprietà**  
  Consente di visualizzare il nome e una descrizione di ogni proprietà del facet.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Amministrazione di server tramite la gestione basata su criteri](administer-servers-by-using-policy-based-management.md)  
   
   

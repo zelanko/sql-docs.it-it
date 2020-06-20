@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7fd80e47-5bd9-41e2-a3d3-091a7c8c5f2b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6defada32a68472e4578cff1622288c973399118
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c10a4e762bbe3421e720753941f5e0a5702832ad
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707447"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056365"
 ---
 # <a name="data-source-information-properties"></a>Proprietà delle informazioni sulle origini dati
   Nel set di proprietà DBPROPSET_SQLSERVERDATASOURCEINFO specifico del provider il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client definisce le seguenti proprietà delle informazioni sulle origini dati.  

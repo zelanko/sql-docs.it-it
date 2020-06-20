@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0c040bde90a54b9327023d1e1889efdd2930d81b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdc220e658cf7ad2153114510ab714ccec9c5572
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150343"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054447"
 ---
 # <a name="distributed-replay-security"></a>Sicurezza di Distributed Replay
   Prima di installare e usare la funzionalità Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario leggere le importanti informazioni sulla sicurezza riportate in questo argomento. In questo argomento vengono descritti i passaggi per la configurazione della sicurezza post-installazione che è necessario eseguire prima di poter utilizzare Distributed Replay. Questo argomento illustra anche considerazioni importanti sulla protezione dei dati e importanti passaggi relativi alla rimozione.  
@@ -29,7 +28,7 @@ ms.locfileid: "63150343"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Account del servizio client di Riesecuzione distribuita|Può essere un account utente di dominio o locale. Se si utilizza un account utente locale, il controller, il client e l'istanza di SQL Server di destinazione devono essere tutti eseguiti nello stesso computer.<br /><br /> **\*\* Nota sulla sicurezza \*\*** È consigliabile evitare che l'account sia un membro del gruppo Administrators locale in Windows.|  
 |Account utente interattivo utilizzato per eseguire lo strumento Distributed Replay Administration Tool|Può essere un account utente locale o di dominio. Per utilizzare un account utente locale, lo strumento di amministrazione e il controller devono essere eseguiti nello stesso computer.|  
   
- **Importante**: quando si configura il controller di Riesecuzione distribuita, è possibile specificare uno o più account utente da utilizzare per eseguire i servizi client Riesecuzione distribuita. Di seguito viene fornito l'elenco degli account supportati:  
+ **Importante**: quando si configura il controller di Riesecuzione distribuita, è possibile specificare uno o più account utente da usare per eseguire i servizi client di Riesecuzione distribuita. Di seguito viene fornito l'elenco degli account supportati:  
   
 -   Account utente di dominio  
   
@@ -47,9 +46,9 @@ ms.locfileid: "63150343"
   
 1.  Effettuare una delle operazioni seguenti a seconda del sistema operativo in uso:  
   
-    -   Fare **Start**clic su Start `services.msc` , digitare nella casella di **ricerca** e quindi premere INVIO.  
+    -   Fare clic su **Start**, digitare `services.msc` nella casella di **ricerca** e quindi premere INVIO.  
   
-    -   Fare clic sul pulsante **Start**, scegliere `services.msc` **Esegui**, digitare e quindi premere INVIO.  
+    -   Fare clic sul pulsante **Start**, scegliere **Esegui**, digitare `services.msc` e quindi premere INVIO.  
   
 2.  Nella finestra di dialogo **Servizi** fare clic con il pulsante destro del mouse sul servizio che si vuole configurare, quindi scegliere **Proprietà**.  
   

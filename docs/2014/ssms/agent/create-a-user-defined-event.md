@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 03d71a35-97fa-4bba-aa9a-23ac9c9cf879
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5625e65b1da45e05002b540774f441f2deabd3f4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2323dc4da3d1a8a67dad41ea189877ade25eff0e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63260952"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041326"
 ---
 # <a name="create-a-user-defined-event"></a>Creazione di un evento definito dall'utente
   Per monitorare eventi diversi da quelli predefiniti da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile creare eventi definiti dall'utente. È inoltre possibile assegnare un livello di gravità a ogni evento definito dall'utente.  
@@ -78,7 +77,7 @@ ms.locfileid: "63260952"
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-update-alert-transact-sql)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_update_alert &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-update-alert-transact-sql)  
   
   

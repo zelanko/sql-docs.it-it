@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 32b97d456c42eab89511d8f5a9d1924914ea81ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c63e48d4c5f5bfad6fe50155cd7fd7a088c2178
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62655392"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047616"
 ---
 # <a name="tutorial-replicating-data-between-continuously-connected-servers"></a>Esercitazione: Replica di dati tra server con connessione continua
   La replica è una buona soluzione al problema legato al trasferimento dei dati tra server con connessione continua. Le procedure guidate relative alla replica consentono di eseguire in modo semplificato i passaggi necessari per configurare e amministrare una topologia di replica. In questa esercitazione viene descritto come configurare una topologia di replica per server con connessione continua.  
@@ -46,7 +45,7 @@ ms.locfileid: "62655392"
     >  Per impostazione predefinita la replica non è installata in [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] .  
   
 > [!NOTE]  
->  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]è necessario connettersi al server di pubblicazione e al Sottoscrittore utilizzando un account di accesso membro del ruolo predefinito del server **sysadmin** .  
+>  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è necessario connettersi al server di pubblicazione e al Sottoscrittore utilizzando un account di accesso membro del ruolo predefinito del server **sysadmin** .  
   
  **Tempo stimato per il completamento di questa esercitazione: 30 minuti.**  
   
@@ -60,7 +59,7 @@ ms.locfileid: "62655392"
   
  [Avviare l'esercitazione](transactional/transactional-replication.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Concetti di base relativi alla programmazione della replica](concepts/replication-programming-concepts.md)  
   
   
