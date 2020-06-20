@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5a0a1527ed97570c715ff383837ebd5a9d5a3354
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7f6e8bda35964b03bf171ac62db7ff3119aa6e1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066695"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938692"
 ---
 # <a name="relationships-ssas-tabular"></a>Relazioni (SSAS tabulare)
   Nei modelli tabulari, una relazione è una connessione tra due tabelle di dati e consente di stabilire in che modo devono essere correlati i dati nelle due tabelle. È ad esempio possibile mettere in correlazione una tabella Clienti e una tabella Ordini per mostrare il nome del cliente associato a ciascun ordine.  
@@ -43,7 +42,7 @@ ms.locfileid: "66066695"
   
 -   [Attività correlate](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="what"></a>Vantaggi  
+##  <a name="benefits"></a><a name="what"></a> Vantaggi  
  Una relazione è una connessione tra due tabelle di dati, in base a una o più colonne in ogni tabella. Per capire perché le relazioni sono utili, provare a immaginare di tenere traccia degli ordini di un cliente della propria azienda. È possibile tenere traccia di tutti i dati in un'unica tabella che dispone di una struttura simile alla seguente:  
   
 |CustomerID|Nome|EMail|DiscountRate|OrderID|OrderDate|Prodotto|Quantità|  
@@ -56,7 +55,7 @@ ms.locfileid: "66066695"
   
 ### <a name="customers"></a>Clienti  
   
-|[CustomerID]|Nome|Posta elettronica|  
+|[CustomerID]|Nome|Email|  
 |--------------------|----------|-----------|  
 |1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
@@ -98,7 +97,7 @@ ms.locfileid: "66066695"
   
  Nella tabella seguente sono riportate le relazioni tra le tre tabelle:  
   
-|Relazione|Type|colonna di ricerca|Colonna|  
+|Relazione|Tipo|colonna di ricerca|Colonna|  
 |------------------|----------|-------------------|------------|  
 |Customers-CustomerDiscounts|uno-a-uno|Customers.CustomerID|CustomerDiscounts.CustomerID|  
 |Customers-Orders|uno-a-molti|Customers.CustomerID|Orders.CustomerID|  
@@ -112,7 +111,7 @@ ms.locfileid: "66066695"
 ### <a name="single-active-relationship-between-tables"></a>Singola relazione attiva tra tabelle  
  Più relazioni possono comportare dipendenze ambigue tra le tabelle. Per creare calcoli accurati, è necessario un unico percorso da una tabella a quella successiva. Di conseguenza, può essere presente una sola relazione attiva tra ogni coppia di tabelle. In AdventureWorks DW 2012, ad esempio, la tabella DimDate contiene una colonna, DateKey, correlata a tre colonne diverse della tabella FactInternetSales: OrderDate, DueDate e ShipDate. Se si tenta di importare queste tabelle, la prima relazione viene creata correttamente, ma per le relazioni successive che riguardano la stessa colonna verrà visualizzato il messaggio di errore seguente:  
   
- \*Relazione: tabella [colonna 1]-> tabella [colonna 2]-stato: errore-motivo: Impossibile creare una relazione tra le tabelle \<tabella 1> e \<tabella 2>. Tra due tabelle può esistere solo una relazione diretta o indiretta.  
+ \*Relazione: tabella [colonna 1]-> tabella [colonna 2]-stato: errore-motivo: Impossibile creare una relazione tra le tabelle \<table 1> e \<table 2> . Tra due tabelle può esistere solo una relazione diretta o indiretta.  
   
  Se sono presenti due tabelle unite da più relazioni, sarà necessario importare più copie della tabella contenente la colonna di ricerca e creare una relazione tra ogni coppia di tabelle.  
   
@@ -184,12 +183,12 @@ ms.locfileid: "66066695"
   
 ##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> Attività correlate  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |-----------|-----------------|  
 |[Creare una relazione tra due tabelle &#40;SSAS tabulare&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)|Viene descritto come creare manualmente una relazione tra due tabelle.|  
 |[Eliminare relazioni &#40;SSAS tabulare&#41;](relationships-ssas-tabular.md)|Viene descritto come eliminare una relazione e le ramificazioni dovute all'eliminazione di relazioni.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Tabelle e colonne &#40;SSAS tabulare&#41;](tables-and-columns-ssas-tabular.md)   
  [Importare dati &#40;SSAS tabulare&#41;](../import-data-ssas-tabular.md)  
   

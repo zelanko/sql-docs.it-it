@@ -12,27 +12,26 @@ f1_keywords:
 ms.assetid: 8ab04656-75a5-485c-9687-7b1ca49f7f80
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 47ca12ee0118e0c2b63da05cf2d508ec0c2f5f92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4106377f2aadfec9173076ece3cf8bf4bc7d183
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066959"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938802"
 ---
 # <a name="model-properties-ssas-tabular"></a>Proprietà modello (SSAS tabulare)
   In questo argomento vengono descritte le proprietà dei modelli tabulari. Ogni progetto di modello tabulare in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] dispone di proprietà del modello che influiscono sulle modalità di compilazione del modello in fase di creazione, di esecuzione del backup, nonché di archiviazione del database dell'area di lavoro. Le proprietà del modello descritte in questo argomento non vengono applicate ai modelli che sono già stati distribuiti.  
   
  Sezioni dell'argomento:  
   
--   [Proprietà dei modelli](#bkmk_model_properties)  
+-   [Proprietà modello](#bkmk_model_properties)  
   
 -   [Per configurare le impostazioni delle proprietà dei modelli](#bkmk_conf)  
   
 ##  <a name="model-properties"></a><a name="bkmk_model_properties"></a>Proprietà modello  
  **Avanzate**  
   
-|Proprietà|Impostazione predefinita|Descrizione|  
+|Proprietà|Impostazione predefinita|Description|  
 |--------------|---------------------|-----------------|  
 |**Azione di compilazione**|Compilazione|Questa proprietà consente di specificare la modalità di correlazione del file al processo di compilazione e distribuzione. Per questa impostazione della proprietà sono disponibili le opzioni seguenti:<br /><br /> **Compilazione** : viene eseguita una normale azione di compilazione. Le definizioni per gli oggetti modello verranno scritte nel file con estensione asdatabase.<br /><br /> **Nessuno** : l'output del file con estensione asdatabase sarà vuoto.|  
 |**Copia nella directory di output**|Non copiare|Questa proprietà consente di specificare il file di origine che sarà copiato nella directory di output. Per questa impostazione della proprietà sono disponibili le opzioni seguenti:<br /><br /> Non **copiare** : non viene creata alcuna copia nella directory di output.<br /><br /> **Copy always** : viene sempre creata una copia nella directory di output.<br /><br /> **Copia se più recente** : viene creata una copia nella directory di output solo se sono state apportate modifiche al file model.bim.|  
@@ -50,7 +49,7 @@ ms.locfileid: "66066959"
 |**Regole di confronto**|Regole di confronto predefinite per il computer per il quale viene installato Visual Studio.|Designazione regole di confronto per il modello.|  
 |**Livello di compatibilità**|Valore predefinito o di altro tipo selezionato in fase di creazione del progetto.|Si applica a SQL Server 2012 Analysis Services SP1 o versione successiva. Specifica le funzionalità e le impostazioni disponibili per il modello. Per ulteriori informazioni, vedere [livello di compatibilità &#40;SSAS tabulare SP1&#41;](compatibility-level-for-tabular-models-in-analysis-services.md).|  
 |**Backup dei dati**|Non eseguire il backup su disco|Viene specificato se viene mantenuto o meno un backup dei dati del modello in un file di backup. Si noti che l'impostazione predefinita per questa proprietà può essere modificata nella pagina modellazione dati in Analysis Server impostazioni della finestra di dialogo Strumenti\finestra. Per questa impostazione della proprietà sono disponibili le opzioni seguenti:<br /><br /> **Esegui il backup su disco** : viene specificato di mantenere un backup dei dati del modello su disco. Quando il modello viene salvato, anche i dati vengono salvati nel file (ABF) di backup. La selezione di questa opzione può comportare tempi di caricamento e salvataggio del modello più lenti.<br /><br /> **Non eseguire il backup su disco** : viene specificato di non mantenere un backup dei dati del modello su disco. Questa opzione consentirà di ridurre i tempi di salvataggio e caricamento del modello.|  
-|**Modalità DirectQuery**|Disattivato|Viene specificato se questo modello funziona nella modalità DirectQuery. Per altre informazioni, vedere [Modalità DirectQuery &#40;SSAS tabulare&#41;](directquery-mode-ssas-tabular.md).|  
+|**Modalità DirectQuery**|Off|Viene specificato se questo modello funziona nella modalità DirectQuery. Per altre informazioni, vedere [Modalità DirectQuery &#40;SSAS tabulare&#41;](directquery-mode-ssas-tabular.md).|  
 |**Nome file**|Model.bim|Viene specificato il nome del file con estensione bim. È consigliabile non modificare il nome del file.|  
 |**Percorso completo**|Percorso specificato durante la creazione del progetto.|Percorso del file model.bim. Questa proprietà non può essere impostata nella finestra Proprietà.|  
 |**Lingua**|Inglese|Lingua predefinita del modello. La lingua predefinita è determinata dalla lingua di Visual Studio. Questa proprietà non può essere impostata nella finestra Proprietà.|  
@@ -65,7 +64,7 @@ ms.locfileid: "66066959"
   
 2.  Nella finestra **Proprietà** fare clic su una proprietà, quindi digitare un valore o fare clic sulla freccia GIÙ per selezionare un'opzione di impostazione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurare la modellazione dei dati e le proprietà di distribuzione predefinite &#40;SSAS tabulare&#41;](properties-ssas-tabular.md)   
  [Proprietà del progetto &#40;SSAS tabulare&#41;](project-properties-ssas-tabular.md)  
   

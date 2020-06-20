@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e9a93fffba5c34d26cdb0305b0f6a97369e51b3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c1e0a9435fd974044b71ac64c1e7762fc709ca9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284895"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938612"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>Colonne calcolate (SSAS tabulare)
   Nei modelli tabulari, le colonne calcolate consentono all'utente di aggiungere nuovi dati al modello. Anziché incollare o importare i valori nella colonna, viene creata una formula DAX che definisce i valori a livello di riga della colonna. La colonna calcolata può quindi essere utilizzata in un report, in una tabella pivot o in un grafico pivot come qualsiasi altra colonna.  
@@ -33,7 +32,7 @@ ms.locfileid: "67284895"
   
 -   [Attività correlate](#bkmk_rel_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_understanding"></a>Vantaggi  
+##  <a name="benefits"></a><a name="bkmk_understanding"></a> Vantaggi  
  Le formule nelle colonne calcolate sono molto simili a quelle in Excel. A differenza di Excel tuttavia, non è possibile creare formule diverse per le diverse righe di una tabella, infatti la formula DAX viene applicata automaticamente a tutta la colonna.  
   
  Se in una colonna è contenuta una formula, il valore viene calcolato per ogni riga. I risultati vengono calcolati per la colonna quando si immette una formula valida. I valori della colonna vengono quindi ricalcolati se necessario, ad esempio quando vengono aggiornati i dati sottostanti.  
@@ -79,11 +78,11 @@ ms.locfileid: "67284895"
   
 ##  <a name="related-tasks"></a><a name="bkmk_rel_tasks"></a> Attività correlate  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |-----------|-----------------|  
 |[Creare una colonna calcolata &#40;SSAS tabulare&#41;](ssas-calculated-columns-create-a-calculated-column.md)|Nelle attività di questo argomento viene descritto come aggiungere una nuova colonna calcolata a una tabella.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Tabelle e colonne &#40;SSAS tabulare&#41;](tables-and-columns-ssas-tabular.md)   
  [Misure &#40;SSAS tabulare&#41;](measures-ssas-tabular.md)   
  [Calcoli &#40;SSAS tabulare&#41;](calculations-ssas-tabular.md)  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 18898388-5158-407b-9774-639af99e8f07
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 619cd537b5ecb45afe2dce3467caa64fc1e9a499
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95e77fe1743406d7206b05470b4559fcfb0a6d59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092753"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011852"
 ---
 # <a name="replication-upgrade-issues"></a>Problemi di aggiornamento della replica
   Negli argomenti seguenti vengono descritti i problemi di replica che possono influire sull'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Vengono illustrate le azioni che è possibile eseguire per tentare di ridurre gli effetti di queste modifiche nell'ambiente.  
@@ -29,7 +28,7 @@ ms.locfileid: "66092753"
   
 -   [Altri problemi di aggiornamento della replica](../../../2014/sql-server/install/other-replication-upgrade-issues.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzo di preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [Risoluzione dei problemi di aggiornamento](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   

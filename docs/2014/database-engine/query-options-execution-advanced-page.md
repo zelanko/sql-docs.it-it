@@ -8,16 +8,15 @@ f1_keywords:
 ms.assetid: 661595ce-99b9-4316-ad80-ed04002d04d5
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/03/2019
-ms.openlocfilehash: 39a43adeb82b154a076fc7bfc24cc56b54cc8640
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b6ab8cc3c788e27946ddb68a3c926e8f926ebd7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71199321"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034916"
 ---
 # <a name="query-options-execution-advanced-page"></a>Esecuzione di Opzioni query (pagina Avanzate)
 
@@ -29,9 +28,9 @@ ms.locfileid: "71199321"
 
 **imposta PARSEONLY** Controlla la sintassi di ogni query senza eseguire le query. Questa opzione è deselezionata per impostazione predefinita.  
 
-**imposta CONCAT_NULL_YIELDS_NULL** Se questa casella di controllo è selezionata, le query che concatenano un valore `NULL`esistente con un oggetto `NULL` restituiscono sempre come risultato. Se questa casella di controllo è deselezionata, un valore esistente concatenato con un valore `NULL` restituisce il valore esistente. Questa opzione è selezionata per impostazione predefinita.
+**imposta CONCAT_NULL_YIELDS_NULL** Se questa casella di controllo è selezionata, le query che concatenano un valore esistente con un oggetto `NULL` restituiscono sempre `NULL` come risultato. Se questa casella di controllo è deselezionata, un valore esistente concatenato con un valore `NULL` restituisce il valore esistente. Questa opzione è selezionata per impostazione predefinita.
 
-**imposta ARITHABORT** Se questa casella di controllo è selezionata, quando `INSERT`un' `DELETE` istruzione `UPDATE` , o rileva un errore aritmetico (overflow, divisione per zero o errore di dominio) durante la valutazione dell'espressione, la query o il batch viene terminato. Se questa casella di controllo è deselezionata, viene fornito un valore `NULL` per quel valore, se possibile, l'esecuzione della query continua e nel risultato viene incluso un messaggio. Per ulteriori informazioni sull'argomento, vedere la documentazione online. Questa opzione è selezionata per impostazione predefinita.
+**imposta ARITHABORT** Se questa casella di controllo è selezionata, quando `INSERT` un' `DELETE` istruzione, o `UPDATE` rileva un errore aritmetico (overflow, divisione per zero o errore di dominio) durante la valutazione dell'espressione, la query o il batch viene terminato. Se questa casella di controllo è deselezionata, viene fornito un valore `NULL` per quel valore, se possibile, l'esecuzione della query continua e nel risultato viene incluso un messaggio. Per ulteriori informazioni sull'argomento, vedere la documentazione online. Questa opzione è selezionata per impostazione predefinita.
   
 **imposta SHOWPLAN_TEXT** Se questa casella di controllo è selezionata, il piano di query viene restituito in formato testo a ogni query. Questa opzione è deselezionata per impostazione predefinita.
   

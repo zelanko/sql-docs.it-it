@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f37f2ce9ec367d136eb853ce3bffe81f22b2dc4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14b233839901167ca92a1d2aed5a8c1441fefe0e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62869596"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034970"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
     
@@ -88,10 +87,10 @@ ms.locfileid: "62869596"
 ## <a name="examples"></a>Esempi  
  In questo esempio, lo stato dell'errore di autenticazione è 8 e indica che la password non è corretta.  
   
-|Date|Source (Sorgente)|Message|  
+|Data|Source (Sorgente)|Message|  
 |----------|------------|-------------|  
 |2007-12-05 20:12:56.34|Accesso|Errore: 18456, gravità: 14, stato: 8.|  
-|2007-12-05 20:12:56.34|Accesso|Accesso non riuscito per l'utente '<nome_utente>'. [CLIENT: \<indirizzo IP>]|  
+|2007-12-05 20:12:56.34|Accesso|Accesso non riuscito per l'utente '<nome_utente>'. [CLIENT: \<ip address>]|  
   
 > [!NOTE]  
 >  Se durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si usa la modalità Autenticazione di Windows e successivamente si passa alla modalità Autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di Windows, l'account di accesso **sa** verrà inizialmente disabilitato. Questo causa l'errore di stato 7: "accesso non riuscito per l'utente ' sa '". Per abilitare l'account di accesso **sa** , vedere [modifica della modalità di autenticazione del server](../../database-engine/configure-windows/change-server-authentication-mode.md).  

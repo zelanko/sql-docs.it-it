@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cbc4270e-6045-45b2-b429-2aec841ef758
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 619e5dda0111bba62682fe44b9d9bdd8d9be4e8b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 98dc95979444a2346a4d58bea93ca618d0e3c93e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091696"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011809"
 ---
 # <a name="update-progress"></a>Stato dell'aggiornamento
   La pagina Stato dell'installazione consente di monitorare il programma di installazione durante l'applicazione dell'aggiornamento all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ai relativi componenti.  

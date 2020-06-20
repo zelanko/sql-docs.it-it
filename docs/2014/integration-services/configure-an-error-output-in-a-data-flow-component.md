@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 53d7eeea-927d-4b45-8ea9-084e65ad5390
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa9df7d84a793c6825ba82b22c3b0cf567f42c3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dc318c3278f7f86aa4946380daffa0652882c0fb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060821"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921913"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>Configurazione di un output degli errori in un componente del flusso di dati
   Molti componenti del flusso di dati supportano l'output degli errori. A seconda del componente, in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] sono disponibili strumenti diversi per la configurazione di un output degli errori. Oltre a configurare un output degli errori, è possibile configurare le relative colonne, tra cui le colonne **ErrorCode** e **ErrorColumn** aggiunte dal componente.  
@@ -82,7 +81,7 @@ ms.locfileid: "66060821"
   
 4.  Fare clic con il pulsante destro del mouse sul componente di cui si desidera configurare le colonne dell'output degli errori, quindi scegliere **Visualizza editor avanzato**.  
   
-5.  Fare clic sulla scheda **Proprietà input e output**. Espandere **Output errori \<nome componente>**, quindi **Colonne di output**.  
+5.  Fare clic sulla scheda **Proprietà input e output** , espandere ** \<component name> output errori** , quindi espandere **colonne di output**.  
   
 6.  Fare clic su una colonna e aggiornarne le proprietà.  
   
@@ -93,7 +92,7 @@ ms.locfileid: "66060821"
   
 8.  Per salvare il pacchetto aggiornato, dal menu **File** scegliere **Salva elementi selezionati**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestione degli errori nei dati](data-flow/error-handling-in-data.md)  
   
   

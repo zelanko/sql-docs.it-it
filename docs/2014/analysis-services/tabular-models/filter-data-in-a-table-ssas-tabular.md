@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 3223059d-f525-4835-bf88-ebc195d9dbdc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 869185e56db9a4ffb07282d3ce51ced191a6bac8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4382d00093187cc4dd3f71a2db0c4488c27aa629
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067125"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938902"
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>Filtrare i dati di una tabella (SSAS tabulare)
   È possibile applicare filtri quando si importano dati per controllare le righe caricate in una tabella. Dopo aver importato i dati, non è possibile eliminare righe singole. Tuttavia, è possibile applicare filtri personalizzati per controllare la modalità in cui visualizzare tali righe. Le righe che non soddisfano i criteri di filtro sono nascoste. È possibile filtrare i dati in base a una o più colonne. I filtri sono additivi, pertanto ciascun filtro aggiuntivo è basato sul filtro corrente e consente di ridurre ulteriormente il subset di dati.  
@@ -43,7 +42,7 @@ ms.locfileid: "66067125"
   
 1.  Fare clic sulla freccia nell'intestazione della colonna per la quale si desidera cancellare un filtro.  
   
-2.  Fare clic su **Cancella \<filtro da nome colonna>**.  
+2.  Fare clic su **Cancella \<Column Name> filtro da **.  
   
 ### <a name="to-clear-all-filters-for-a-table"></a>Per cancellare tutti i filtri per una tabella  
   
@@ -51,7 +50,7 @@ ms.locfileid: "66067125"
   
 2.  Fare clic sul menu **Colonna** , quindi scegliere **Cancella tutti i filtri**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Filtrare e ordinare dati &#40;SSAS tabulare&#41;](../filter-and-sort-data-ssas-tabular.md)   
  [Prospettive &#40;SSAS tabulare&#41;](perspectives-ssas-tabular.md)   
  [Ruoli &#40;SSAS tabulare&#41;](roles-ssas-tabular.md)  

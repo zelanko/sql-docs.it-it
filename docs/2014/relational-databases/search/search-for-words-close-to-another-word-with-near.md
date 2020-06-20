@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fadff7e68404ffae528cb4630e1f6c4b8156ccc0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c2d187ea3ed951ac6f17eb4babc5f4f77451d4e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011071"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004001"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Ricerca di parole vicine a un'altra parola con NEAR
-  Per cercare parole o frasi vicine, è possibile usare un termine di prossimità (NEAR) in un predicato [CONTAINS](/sql/t-sql/queries/contains-transact-sql) o in una funzione [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) . È inoltre possibile specificare il numero massimo di termini non di ricerca che separano il primo e l'ultimo termine di ricerca. È inoltre possibile cercare parole o frasi in qualsiasi ordine o parole e frasi nell'ordine in cui sono state specificate. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]supporta sia il [termine di prossimità generico](#Generic_NEAR)precedente, che è ora deprecato, che il [termine di prossimità personalizzato](#Custom_NEAR), che è [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]nuovo in.  
+  Per cercare parole o frasi vicine, è possibile usare un termine di prossimità (NEAR) in un predicato [CONTAINS](/sql/t-sql/queries/contains-transact-sql) o in una funzione [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) . È inoltre possibile specificare il numero massimo di termini non di ricerca che separano il primo e l'ultimo termine di ricerca. È inoltre possibile cercare parole o frasi in qualsiasi ordine o parole e frasi nell'ordine in cui sono state specificate. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]supporta sia il [termine di prossimità generico](#Generic_NEAR)precedente, che è ora deprecato, che il [termine di prossimità personalizzato](#Custom_NEAR), che è nuovo in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  
   
 ##  <a name="the-custom-proximity-term"></a><a name="Custom_NEAR"></a>Termine di prossimità personalizzato  
  Con il termine di prossimità personalizzato vengono introdotte le seguenti nuove funzionalità:  
@@ -184,7 +183,7 @@ CONTAINSTABLE (Production.ProductDescription,
 )  
 ```  
   
- Non è possibile combinare un termine di prossimità generico con un termine di prossimità personalizzato `NEAR((term1,term2),5)`, ad esempio, un termine ponderato (noabout...) o un termine generazionale (FORMSOF...).  
+ Non è possibile combinare un termine di prossimità generico con un termine di prossimità personalizzato, ad esempio `NEAR((term1,term2),5)` , un termine ponderato (noabout...) o un termine generazionale (FORMSOF...).  
   
 ### <a name="example-using-the-generic-proximity-term"></a>Esempio: Utilizzo del termine di prossimità generico  
  Nell'esempio seguente viene utilizzato il termine di prossimità generico per cercare la parola "reflector" nello stesso documento che contiene la parola "bracket".  
@@ -224,7 +223,7 @@ CONTAINSTABLE(Production.Document, Document, '(reflector ~ bracket ~ installatio
   
 
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/containstable-transact-sql)   
  [Eseguire query con ricerca full-text](query-with-full-text-search.md)   
  [CONTAINS &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql)  

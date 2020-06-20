@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ede9b86-be27-471e-b012-22a65adce579
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e31e64226d826db1ac41d3411a542d4eac281ad1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 41a5d4530be6250795e083726df59acbd2f7f7aa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890779"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939142"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>Editor attività Query di data mining (scheda Modello di data mining)
   Utilizzare la scheda **Modello di data mining** della finestra di dialogo **Editor attività Query di data mining** per specificare la struttura e il modello di data mining da utilizzare.  
@@ -37,12 +36,12 @@ ms.locfileid: "68890779"
  Consente di digitare una descrizione dell'attività Query di data mining.  
   
 ## <a name="mining-model-tab-options"></a>Opzioni della scheda Modello di data mining  
- **Connessione**  
+ **Connection**  
  Consente di selezionare una gestione connessione di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nell'elenco o di creare una nuova gestione connessione facendo clic sul pulsante **Nuova** .  
   
  **Argomenti correlati:**  [Gestione connessione Analysis Services](connection-manager/analysis-services-connection-manager.md)  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova gestione connessione di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  **Argomenti correlati:** [Riferimento all'interfaccia utente della finestra di dialogo Aggiungi gestione connessione Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  

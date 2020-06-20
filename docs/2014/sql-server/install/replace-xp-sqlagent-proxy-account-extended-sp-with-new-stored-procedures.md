@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0e3cc931-6237-41dd-bf0d-0c03f4d8fff2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4faff8420e318f7250cfc67dda173197d8028f0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 46de12faa52fae61e1f11758f40e1ec8242faca1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092755"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011855"
 ---
 # <a name="replace-usage-of-the-xp_sqlagent_proxy_account-extended-stored-procedure-with-new-stored-procedures"></a>Al posto della stored procedure estesa xp_sqlagent_proxy_account utilizzare le nuove stored procedure
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent vengono supportati più proxy. Per definire questi proxy, è necessario utilizzare un nuovo set di stored procedure. Per ulteriori informazioni sulle nuove stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, vedere gli argomenti seguenti nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
@@ -45,12 +44,12 @@ ms.locfileid: "66092755"
 -   "sp_update_proxy ([!INCLUDE[tsql](../../includes/tsql-md.md)])"  
   
 > [!NOTE]  
->  Dopo l'aggiornamento a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], le istruzioni che utilizzano il **xp_sqlagent_proxy_account** stored procedure esteso non funzioneranno. Utilizzare **sp_xp_cmdshell_proxy_account** anziché **xp_sqlagent_proxy_account** per impostare il proxy per **xp_cmdshell**.  
+>  Dopo l'aggiornamento a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , le istruzioni che utilizzano il **xp_sqlagent_proxy_account** stored procedure esteso non funzioneranno. Utilizzare **sp_xp_cmdshell_proxy_account** anziché **xp_sqlagent_proxy_account** per impostare il proxy per **xp_cmdshell**.  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Problemi di aggiornamento di SQL Server Agent](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  
   
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 41f01eed-e50f-44c8-a8e0-97e01bd66bd3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 187e1755154dad23f1f21eb7b15400faa7cdea30
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1770b9ab0284d203f7a5954dd369c5391984c12b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066046"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938412"
 ---
 # <a name="toolbar-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barra degli strumenti (scheda Struttura dimensione, Progettazione dimensioni) (Analysis Services – Dati multidimensionali)
   Utilizzare la barra degli strumenti per eseguire operazioni frequenti nella pagina **Struttura dimensione** di **Progettazione dimensioni**.  
@@ -32,7 +31,7 @@ ms.locfileid: "66066046"
   
 -   Elenco  
   
-     Consente di visualizzare un elenco di attributi per la dimensione corrente. Questa è la modalità predefinita.  
+     Consente di visualizzare un elenco di attributi per la dimensione corrente. Questo è il valore predefinito.  
   
 -   Albero  
   
@@ -69,7 +68,7 @@ ms.locfileid: "66066046"
   
      Consente di visualizzare un diagramma delle tabelle e delle colonne associate alla dimensione corrente.  
   
--   Visualizzazione albero  
+-   Visualizzazione ad albero  
   
      Consente di ottenere una visualizzazione albero delle tabelle e delle colonne associate alla dimensione corrente.  
   

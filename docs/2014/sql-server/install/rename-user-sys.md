@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d622d646-83e4-4b6f-9a21-77b301af04b5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ce8656df63c9d415ca09b54ecb86b87aba8bd83a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3af9d31a54adc5645cab6fcc7104ae7ff27a61b6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092855"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059095"
 ---
 # <a name="rename-user-sys"></a>Rinominare l'utente sys
   È stato rilevato il nome utente **sys** in un database. Questo nome è riservato. Rinominare l'utente prima di eseguire l'aggiornamento. Se l'utente non viene rinominato, il database si troverà in stato sospetto dopo il processo di aggiornamento e non sarà disponibile finché non viene portato online.  
@@ -61,7 +60,7 @@ ms.locfileid: "66092855"
   
 3.  Eseguire l'istruzione `ALTER DATABASE db_name SET MULTI_USER`.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Problemi di aggiornamento motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [SQL Server 2014 preparazione aggiornamento &#91;nuova&#93;](sql-server-2014-upgrade-advisor.md)  
   

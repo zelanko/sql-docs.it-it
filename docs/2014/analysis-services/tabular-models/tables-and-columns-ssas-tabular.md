@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4dcab58a876881cc9ca76e9159d5bcc68ffd5fdb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58c5529d919861709f382f8cc594608e8c9981b1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066506"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938589"
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>Tabelle e colonne (SSAS tabulare)
   Dopo aver aggiunto tabelle e dati in un modello tramite l'Importazione guidata tabella, è possibile iniziare a utilizzare le tabella aggiungendo nuove colonne di dati, creando relazioni tra tabelle, definendo calcoli che consentono di estendere i dati, nonché filtrando e ordinando i dati nelle tabelle per una visualizzazione più semplice.  
@@ -28,7 +27,7 @@ ms.locfileid: "66066506"
   
 -   [Attività correlate](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>Vantaggi  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> Vantaggi  
  Nei modelli tabulari, le tabelle garantiscono il framework con cui vengono definiti le colonne e altri metadati. Nelle tabelle sono inclusi gli elementi seguenti:  
   
  **Definizione della tabella**  
@@ -57,7 +56,7 @@ ms.locfileid: "66066506"
   
 ##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> Attività correlate  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |-----------|-----------------|  
 |[Aggiungere colonne a una tabella &#40;SSAS tabulare&#41;](add-columns-to-a-table-ssas-tabular.md)|Viene descritto come aggiungere una colonna di origine a una definizione della tabella.|  
 |[Eliminare una colonna &#40;SSAS tabulare&#41;](delete-a-column-ssas-tabular.md)|Viene descritto come eliminare una colonna di tabella di un modello utilizzando Progettazione modelli o la finestra di dialogo Proprietà tabella.|  
