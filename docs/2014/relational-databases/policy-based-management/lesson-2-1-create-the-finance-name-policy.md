@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 56b2c852-fd69-4cd2-9b5d-977467b94fd9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a4484f9ccb76ea31c95a5392570e18df2c4b0ff5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 184865166da659ae00308eb1192e832989949da6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67792908"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061631"
 ---
 # <a name="create-the-finance-name-policy"></a>Creazione di criteri Nome Finance
   In questa attività verrà creato un database denominato Finance, quindi una condizione per cui tutti i nomi di tabella devono iniziare con le lettere **fintbl**. Verranno quindi creati i criteri e una categoria di criteri per applicare uno standard di denominazione per le tabelle del database Finance.  
@@ -39,7 +38,7 @@ ms.locfileid: "67792908"
   
 3.  Nell'elenco **Facet** selezionare **Nome a più parti**.  
   
-4.  Nella casella **campo** dell'area **espressione** selezionare ** \@nome**; nella casella **operatore** selezionare **like**; nella casella **valore** Digitare **' fintbl%'** per forzare l'inizio di tutti i nomi di tabella con le lettere **fintbl**.  
+4.  Nella casella **campo** dell'area **espressione** selezionare ** \@ nome**. nella casella **operatore** selezionare **like**e nella casella **valore** digitare **' fintbl%'** per forzare tutti i nomi di tabella in modo che inizino con le lettere **fintbl**.  
   
 5.  Nella pagina **Descrizione** digitare **I nomi di tabella del database Finance devono iniziare con fintbl**e quindi scegliere **OK** per creare la condizione.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "67792908"
   
 6.  Nella finestra di dialogo **Crea nuova condizione** , nella casella **Nome** digitare **Database Finance**.  
   
-7.  Nella casella **espressione** completare l'espressione in modo da includere ** \@il nome = "Finance"**, quindi fare clic su **OK** per chiudere la pagina della condizione.  
+7.  Nella casella **espressione** completare l'espressione in modo da includere il ** \@ nome = "Finance"**, quindi fare clic su **OK** per chiudere la pagina della condizione.  
   
     > [!NOTE]  
     >  Potrebbe essere necessario uscire dalla casella **Valore** premendo TAB per abilitare il pulsante **OK** .  

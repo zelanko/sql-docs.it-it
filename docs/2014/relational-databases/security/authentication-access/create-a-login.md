@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b765248e43dc66b9e1c038df27ca9a8b6135706d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e476880103a69ae016c6720f36e26ef884db6f5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012025"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055402"
 ---
 # <a name="create-a-login"></a>Creazione di un account di accesso
   In questo argomento viene descritto come creare un account di accesso in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Un account di accesso è l'identità della persona o del processo che esegue la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -198,7 +197,7 @@ ms.locfileid: "63012025"
  **Nome**  
  Nome di ogni entità o entità a sicurezza diretta aggiunto alla griglia.  
   
- **Type**  
+ **Tipo**  
  Descrive il tipo di ogni elemento.  
   
  **Scheda Esplicita**  
@@ -210,13 +209,13 @@ ms.locfileid: "63012025"
  **Concedente**  
  Entità che ha concesso l'autorizzazione.  
   
- **Grant**  
+ **Concedi**  
  Selezionare questa opzione per concedere l'autorizzazione all'account di accesso, deselezionarla per revocare l'autorizzazione.  
   
  **Con diritto di concessione**  
  Riflette lo stato dell'opzione WITH GRANT relativo all'autorizzazione elencata. Il contenuto di questa casella è di sola lettura. Per applicare questa autorizzazione, utilizzare l'istruzione [GRANT](/sql/t-sql/statements/grant-transact-sql) .  
   
- **Negare**  
+ **Nega**  
  Selezionare questa opzione per negare l'autorizzazione all'account di accesso, deselezionarla per revocare l'autorizzazione.  
   
 ### <a name="status"></a>Stato  
@@ -237,7 +236,7 @@ ms.locfileid: "63012025"
  Selezionare questa opzione per abilitare o disabilitare l'account di accesso. Questa opzione utilizza l'istruzione ALTER LOGIN insieme all'opzione ENABLE o DISABLE.  
   
  **Autenticazione di SQL Server**  
- L'account di accesso della casella di controllo **è bloccato** è disponibile solo se l'account [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di accesso selezionato si connette utilizzando l'autenticazione di e l'account di accesso è stato bloccato. Questa impostazione è di sola lettura. Per sbloccare un account di accesso bloccato, eseguire l'istruzione ALTER LOGIN con l'opzione UNLOCK.  
+ L'account di accesso della casella di controllo **è bloccato** è disponibile solo se l'account di accesso selezionato si connette utilizzando l' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] autenticazione di e l'account di accesso è stato bloccato. Questa impostazione è di sola lettura. Per sbloccare un account di accesso bloccato, eseguire l'istruzione ALTER LOGIN con l'opzione UNLOCK.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   

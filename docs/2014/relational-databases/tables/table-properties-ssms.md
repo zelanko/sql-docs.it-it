@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 037e56649d3473e3fe09b9533bcc96b4729870d9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196712"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055055"
 ---
 # <a name="table-properties"></a>Table Properties
   In questo argomento vengono descritte le proprietà della tabella visualizzate nella finestra di dialogo Proprietà tabella in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni su come visualizzare queste proprietà, vedere [Visualizzare la definizione di una tabella](view-the-table-definition.md).  
@@ -141,12 +140,12 @@ ms.locfileid: "68196712"
   
 ### <a name="general"></a>Generale  
  **Formato di archiviazione vardecimal abilitato**  
- Se `True`, questo valore di sola lettura indica che `decimal` i `numeric` tipi di dati e vengono archiviati utilizzando il formato di archiviazione vardecimal. Per modificare questa opzione, usare l' `vardecimal storage format` opzione di [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). Il formato di archiviazione vardecimal è deprecato. ed è necessario usare il tipo di compressione ROW.  
+ Se `True` , questo valore di sola lettura indica che `decimal` `numeric` i tipi di dati e vengono archiviati utilizzando il formato di archiviazione vardecimal. Per modificare questa opzione, usare l' `vardecimal storage format` opzione di [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). Il formato di archiviazione vardecimal è deprecato. ed è necessario usare il tipo di compressione ROW.  
   
  **Spazio degli indici**  
  Quantità di spazio occupata dagli indici nella tabella, espresso in megabyte. Questo valore non include lo spazio usato dagli indici XML per la tabella. Se gli indici XML appartengono alla tabella, usare in alternativa [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) .  
   
- **Numero di righe**  
+ **Conteggio righe**  
  Numero di righe della tabella.  
   
  **Spazio dati**  
@@ -169,7 +168,7 @@ ms.locfileid: "68196712"
   
  Lo schema di partizione FILESTREAM deve essere simmetrico rispetto allo schema specificato nell'opzione **Schema partizione** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Visualizzare la definizione della tabella](view-the-table-definition.md)   
  [Modificare colonne &#40;Motore di database&#41;](../tables/modify-columns-database-engine.md)  
   

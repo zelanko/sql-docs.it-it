@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 28b46fdd-b04a-4f97-a99f-883f5735a6d9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ad2605902cb523c0147888e4aedee0df3c9f936e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02ffd6309ae31f538fecdf6af2cb8475608d6cf5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058426"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966338"
 ---
 # <a name="ftp-task-editor-general-page"></a>Editor attività FTP (pagina Generale)
   Utilizzare la pagina **Generale** della finestra di dialogo **Editor attività FTP** per specificare la gestione connessione FTP tramite cui viene stabilita la connessione al server FTP con cui comunica l'attività. È inoltre possibile specificare un nome e una descrizione per l'attività FTP.  
@@ -28,7 +27,7 @@ ms.locfileid: "66058426"
   
 ## <a name="options"></a>Opzioni  
  **FtpConnection**  
- Selezionare una gestione connessione FTP esistente oppure fare clic \<su **nuova connessione...**> per creare una gestione connessione.  
+ Selezionare una gestione connessione FTP esistente oppure fare clic su \<**New connection...**> per creare una gestione connessione.  
   
 > [!IMPORTANT]  
 >  La gestione connessione FTP supporta solo l'autenticazione anonima e l'autenticazione di base. Non supporta l'autenticazione di Windows.  
@@ -47,7 +46,7 @@ ms.locfileid: "66058426"
  **Descrizione**  
  Consente di digitare una descrizione dell'attività FTP.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività FTP &#40;pagina trasferimento file&#41;](../../2014/integration-services/ftp-task-editor-file-transfer-page.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  

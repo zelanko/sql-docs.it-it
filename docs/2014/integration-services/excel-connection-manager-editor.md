@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ff097e4-cafb-4885-a898-05b2a46628c1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0881624f421cba5bda5d2b0ba8f9d3732efd2497
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08dc39cb21eec03a7cbdc5bd56c68212044dd211
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059273"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966891"
 ---
 # <a name="excel-connection-manager-editor"></a>Editor gestione connessione Excel
   Usare la finestra di dialogo **Editor gestione connessione Excel[!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]per aggiungere una connessione a un file di cartella di lavoro di ** nuovo o esistente.  
@@ -42,7 +41,7 @@ ms.locfileid: "66059273"
  **Versione di Excel**  
  Consente di specificare la versione di Microsoft Excel utilizzata per creare il file.  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |Microsoft Excel 97-2005|Il file è stato creato utilizzando Microsoft Excel 97 o versione successiva.|  
 |Excel 3,0|Il file è stato creato con Excel 3,0.|  
@@ -52,7 +51,7 @@ ms.locfileid: "66059273"
  **Nomi di colonna nella prima riga**  
  Consente di specificare se la prima riga di dati del foglio di lavoro selezionato contiene nomi di colonna. Il valore predefinito di questa opzione è **True**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Esecuzione di un ciclo su file e tabelle di Excel utilizzando un contenitore Ciclo Foreach](control-flow/foreach-loop-container.md)  
   

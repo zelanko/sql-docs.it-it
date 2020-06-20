@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c3de6c94-8ef5-4ac6-9529-8f8c11b72ebb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 716ade5265c2bb3325ad08005c98a1e67c474419
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d582db9f9e6604841ca77d948f54608a13abfc4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63130675"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055215"
 ---
 # <a name="smo-object-model-diagram"></a>Diagramma del modello a oggetti SMO
   In questo diagramma viene illustrata la gerarchia di oggetti SMO e le relazioni tra i tipi di oggetti. L'oggetto <xref:Microsoft.SqlServer.Management.Smo.Server> è l'oggetto di livello principale.  

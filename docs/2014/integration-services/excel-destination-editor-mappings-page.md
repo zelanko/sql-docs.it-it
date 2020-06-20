@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ad44268b-d705-422c-a0c2-d532812502e1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a79316eedb95a026d4869442a06ca1916b40ff3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b10711f9c1940bc4cc307cb64a78227746863287
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059178"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966834"
 ---
 # <a name="excel-destination-editor-mappings-page"></a>Editor destinazione Excel (pagina Mapping)
   Utilizzare la pagina **Mapping** della finestra di dialogo **Editor destinazione Excel** per eseguire il mapping tra colonne di input e colonne di destinazione.  
@@ -39,7 +38,7 @@ ms.locfileid: "66059178"
  **Colonna di destinazione**  
  Consente di visualizzare tutte le colonne di destinazione disponibili, indipendentemente dal fatto che siano mappate o meno.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor destinazione Excel &#40;pagina Gestione connessione&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
  [Editor destinazione Excel &#40;pagina output degli errori&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   

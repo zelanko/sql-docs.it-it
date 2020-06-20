@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7ad7eed88b831a74eaf4ae83d1949df25744159d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6c4c1402b37de750fae26cbc811235efa6b32ea3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703837"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009697"
 ---
 # <a name="manage-code-formatting"></a>Gestione della formattazione del codice
   L'editor consente di formattare il codice con rientri, testo nascosto, URL e così via. È inoltre possibile formattare il codice automaticamente durante la digitazione tramite la funzionalità intelligente per la gestione dei rientri.  
