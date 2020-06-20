@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cbd8a79bf9d881d2d4c9055531bac2e290f202a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 12fdb1a41ec764a0fee0817940f95a3d303777e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811014"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050202"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Stimare i requisiti di memoria delle tabelle con ottimizzazione per la memoria
   Se si crea una nuova [!INCLUDE[hek_2](../../includes/hek-2-md.md)] tabella ottimizzata per la memoria o si esegue la migrazione di una tabella basata su disco esistente a una tabella ottimizzata per la memoria, è importante disporre di una stima ragionevole delle esigenze di memoria di ogni tabella, in modo da poter effettuare il provisioning del server con memoria sufficiente. In questa sezione viene descritto come stimare la quantità di memoria necessaria per contenere i dati di una tabella ottimizzata per la memoria.  
@@ -119,7 +118,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  **Impostazione delle dimensioni della matrice dell'indice hash**  
   
- Le dimensioni della matrice di hash vengono `(bucket_count= <value>)` impostate \<da where value> è un valore intero maggiore di zero. Se \<il valore> non è una potenza di 2, il bucket_count effettivo viene arrotondato per eccesso alla potenza di 2 successiva più vicina.  Nella tabella di esempio (bucket_count = 5 milioni), poiché 5 milioni non è una potenza di 2, il numero effettivo di bucket viene arrotondato per eccesso a 8.388.608 (2<sup>23</sup>).  È necessario utilizzare questo numero, non 5.000.000, quando si calcola la memoria necessaria per la matrice di hash.  
+ Le dimensioni della matrice di hash vengono impostate tramite `(bucket_count= <value>)` dove \<value> è un intero maggiore di zero. Se \<value> non è una potenza di 2, il numero effettivo di bucket_count viene arrotondato per eccesso alla potenza di 2 successiva più vicina.  Nella tabella di esempio (bucket_count = 5 milioni), poiché 5 milioni non è una potenza di 2, il numero effettivo di bucket viene arrotondato per eccesso a 8.388.608 (2<sup>23</sup>).  È necessario utilizzare questo numero, non 5.000.000, quando si calcola la memoria necessaria per la matrice di hash.  
   
  Pertanto, nell'esempio, la memoria necessaria per ogni matrice di hash è:  
   

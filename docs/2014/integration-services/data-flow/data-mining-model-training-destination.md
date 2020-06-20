@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5dac84fe42185806ae468593876a6bd439c1c689
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 86fd70a516bfa6a449bfd9146e439b60dcbbbbf1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890649"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916140"
 ---
 # <a name="data-mining-model-training-destination"></a>Training modello di data mining - destinazione
   La destinazione Training modello di data mining consente di eseguire il training dei modelli di data mining passando i dati ricevuti dalla destinazione agli algoritmi dei modelli di data mining. È possibile eseguire il training di più modelli di data mining con una singola destinazione, se i modelli sono compilati in base alla stessa struttura di data mining. Per altre informazioni, vedere [Colonne della struttura di data mining](https://docs.microsoft.com/analysis-services/data-mining/mining-structure-columns) e [Colonne del modello di data mining](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns).  

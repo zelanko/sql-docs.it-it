@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1a2e8d18-5997-482f-a9c1-87d99f7407b8
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: cd81004765b1ba5d15c5929dc661ce1dea04b371
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f164bc5be7929c0bf697f6896b975cdda5a9d5a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952660"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065453"
 ---
 # <a name="change-database-wizard-ssrs-native-mode"></a>Procedura guidata Cambia database (modalità nativa SSRS)
   In Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è inclusa la procedura guidata Cambia database, che consente di eseguire in modo semplificato i passaggi necessari per creare un nuovo database del server di report o selezionare un database del server di report esistente da utilizzare con l'istanza del server di report corrente.  
@@ -29,14 +28,14 @@ ms.locfileid: "71952660"
   
  Per avviare la procedura guidata fare clic su **Cambia database** nella pagina Database di Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per istruzioni su come avviare la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager, vedere [Reporting Services Configuration Manager &#40;modalità nativa&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità nativa.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modalità nativa.  
   
 ## <a name="options"></a>Opzioni  
  **Azione**  
  Consente di selezionare l'attività che si desidera eseguire. È possibile creare un nuovo database in modalità nativa o in modalità integrata SharePoint. In alternativa, è possibile selezionare un database del server di report esistente da utilizzare con l'istanza del server di report corrente.  
   
  **Server di database**  
- Consente di specificare il nome [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] dell'istanza di che ospita il database del server di report. È possibile utilizzare un'istanza predefinita o denominata su un computer locale o remoto. Se ci si connette a un'istanza denominata, immettere il nome del server nel formato: \< *server*>\\<*istanza* del server>.  
+ Consente di specificare il nome dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] istanza di che ospita il database del server di report. È possibile utilizzare un'istanza predefinita o denominata su un computer locale o remoto. Se ci si connette a un'istanza denominata, immettere il nome del server nel formato: \<*server*> \\ < *istanza*>.  
   
  Per connettersi all'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , utilizzare credenziali che dispongono delle autorizzazioni necessarie per accedere al server e aggiornare le informazioni del database. Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilizza le credenziali di Windows correnti, ma se non si dispone di un account di accesso o di autorizzazioni per il database, è necessario specificare un account di accesso al database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Non è possibile specificare credenziali di Windows diverse. Se si desidera connettersi come utente di Windows diverso, accedere utilizzando il nome utente desiderato, quindi avviare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -45,7 +44,7 @@ ms.locfileid: "71952660"
  **Database**  
  Consente di specificare il nome del database del server di report in cui sono archiviati i dati del server. È possibile specificare un database esistente o crearne uno nuovo.  
   
- Le proprietà utilizzate per creare un nuovo database vengono visualizzate nella procedura guidata quando si seleziona **Crea nuovo database** nella pagina Azioni. Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consente di creare due database associati in base al nome, ovvero un database contenente i dati statici e un database temporaneo per l'archiviazione dei dati di lavoro e della sessione. Per ulteriori informazioni, vedere [database del server di Report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Le proprietà utilizzate per creare un nuovo database vengono visualizzate nella procedura guidata quando si seleziona **Crea nuovo database** nella pagina Azioni. Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consente di creare due database associati in base al nome, ovvero un database contenente i dati statici e un database temporaneo per l'archiviazione dei dati di lavoro e della sessione. Per ulteriori informazioni, vedere [database del server di Report &#40;modalità nativa SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md) nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione online di.  
   
  È inoltre possibile scegliere un database esistente del server di report. Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non esclude i database non validi. I database validi sono basati sullo schema del database del server di report. Non è possibile selezionare un database in cui manchino le tabelle, le viste o le stored procedure necessarie. Se si sceglie un database creato per una versione precedente di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], il database verrà aggiornato al formato corrente.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "71952660"
  Se si seleziona un database del server di report diverso, viene visualizzata la modalità del database corrente per indicare il modo in cui il database viene utilizzato.  
   
  **Credenziali**  
- Viene specificato l'account utilizzato dal server di report per la connessione al database del server di report. Tra i valori validi sono inclusi l'account del servizio Web ReportServer, un account di accesso al database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definito nell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizzata per ospitare il server di report o un account di Windows. Se si utilizza un account di Windows, è possibile specificare un account locale (*\<nomecomputer>\\<nomeutente\>*) se il server di report e il database si trovano nello stesso computer oppure un account utente di dominio (*\<dominio>\\<nome\>utente*) se si trovano in computer diversi nello stesso dominio.  
+ Viene specificato l'account utilizzato dal server di report per la connessione al database del server di report. Tra i valori validi sono inclusi l'account del servizio Web ReportServer, un account di accesso al database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definito nell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizzata per ospitare il server di report o un account di Windows. Se si utilizza un account di Windows, è possibile specificare un account locale (* \<computername> \\<nome \> utente*) se il server di report e il database si trovano nello stesso computer oppure un account utente di dominio (* \<domain> \\<nome utente \> *) se si trovano in computer diversi nello stesso dominio.  
   
  Il server di report creerà un account di accesso al database e assegnerà le autorizzazioni per il database all'account specificato.  
   

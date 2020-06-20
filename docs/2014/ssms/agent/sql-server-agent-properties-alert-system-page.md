@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 3e6d3bfd-20ee-4593-86cc-f65b1c08c69d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 00e3643a1beb3f69f8b370715001317e536c42e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e5e87f5a13c8f156cd7d2788bb9004ec20fcd3eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245745"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058725"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>Proprietà SQL Server Agent (pagina Sistema avvisi)
-  Utilizzare questa pagina per visualizzare e modificare le impostazioni per i messaggi inviati [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dagli avvisi di Agent.  
+  Utilizzare questa pagina per visualizzare e modificare le impostazioni per i messaggi inviati dagli [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avvisi di Agent.  
   
 ## <a name="options"></a>Opzioni  
  **Sessione di posta elettronica**  
@@ -36,7 +35,7 @@ ms.locfileid: "63245745"
 >  Dopo avere modificato il sistema di posta elettronica, è necessario riavviare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per rendere operative le modifiche.  
   
  **Profilo posta**  
- Consente di impostare il profilo che deve essere utilizzato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. È anche possibile selezionare ** \<nuovo profilo posta elettronica database >** per creare un nuovo profilo.  
+ Consente di impostare il profilo che deve essere utilizzato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. È anche possibile scegliere **\<new Database Mail profile...>** di creare un nuovo profilo.  
   
  **Messaggi di posta elettronica tramite cercapersone**  
  Le opzioni incluse in questa sezione consentono di configurare i messaggi di posta elettronica inviati a indirizzi di cercapersone in modo che possano funzionare con il sistema di cercapersone utilizzato.  
@@ -103,7 +102,7 @@ ms.locfileid: "63245745"
  **Sostituisci token per tutte le risposte del processo ad avvisi**  
  Selezionare questa casella di controllo per abilitare la sostituzione dei token per i processi attivati dagli avvisi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Operatori](operators.md)   
  [Configurare SQL Server Agent Mail per l'uso di Posta elettronica database](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)   
  [Posta elettronica database](../../relational-databases/database-mail/database-mail.md)  

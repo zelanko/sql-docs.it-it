@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7235f5f333ac7bb4520a6244e103baafba343ea3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5dcad5e767f16054385f30e95e15bd8a598d9fdd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833702"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920633"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>gestione connessione per più file flat
   Una gestione connessione per più file flat consente a un pacchetto di accedere a dati contenuti in più file flat. Ad esempio, un'origine file flat può utilizzare una gestione connessione per più file quando l'attività Flusso di dati si trova in un contenitore Ciclo, ad esempio il contenitore Ciclo For. In ogni ciclo del contenitore, l'origine file flat carica dati dal nome file successivo fornito dalla gestione connessione per più file.  
   
- Quando si aggiunge una gestione connessione per più file flat a un pacchetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , crea una gestione connessione che in fase di esecuzione verrà risolta in una connessione per più file flat, imposta le proprietà della gestione connessione per più file flat e aggiunge la gestione connessione per più `Connections` file flat alla raccolta del pacchetto.  
+ Quando si aggiunge una gestione connessione per più file flat a un pacchetto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Crea una gestione connessione che in fase di esecuzione verrà risolta in una connessione per più file flat, imposta le proprietà della gestione connessione per più file flat e aggiunge la gestione connessione per più file flat alla `Connections` raccolta del pacchetto.  
   
  La proprietà `ConnectionManagerType` della gestione connessione viene impostata su `MULTIFLATFILE`.  
   
@@ -47,9 +46,9 @@ ms.locfileid: "62833702"
   
  Quando la gestione connessione per più file flat fa riferimento a più file, i percorsi dei file sono separati da una barra verticale. La proprietà `ConnectionString` della gestione connessione ha il formato seguente:  
   
- \<*percorso*>|\<*percorso*>  
+ \<*path*>|\<*path*>  
   
- Per specificare più file è inoltre possibile utilizzare caratteri jolly. Ad esempio, per fare riferimento a tutti i file di testo sull'unità C, il valore `ConnectionString` della proprietà può essere impostato su C\\: *. txt.  
+ Per specificare più file è inoltre possibile utilizzare caratteri jolly. Ad esempio, per fare riferimento a tutti i file di testo sull'unità C, il valore della `ConnectionString` proprietà può essere impostato su C: \\ *. txt.  
   
  Se una gestione connessione per più file flat fa riferimento a più file, tutti i file devono avere lo stesso formato.  
   
@@ -72,7 +71,7 @@ ms.locfileid: "62833702"
   
  Per informazioni sulla configurazione di una gestione connessione a livello di programmazione, vedere l'articolo relativo a <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Aggiunta di connessioni a livello di programmazione](../building-packages-programmatically/adding-connections-programmatically.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Origine file flat](../data-flow/flat-file-source.md)   
  [Destinazione file flat](../data-flow/flat-file-destination.md)   
  [Connessioni in Integration Services &#40;SSIS&#41;](integration-services-ssis-connections.md)  

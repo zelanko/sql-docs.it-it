@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ddd4adba-d432-4005-9cb2-bb9ee3163d8e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9de9a1f8ceca0fbb05ab2b6680c5fcc34c951109
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cdfa25cdc27e707d4be705e66b215130c9d70ce1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774535"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930893"
 ---
 # <a name="manage-checkouts"></a>Gestione delle estrazioni
   Dopo aver aggiunto un file al controllo del codice sorgente, prima di poterlo modificare è necessario estrarlo. Quando un file viene estratto dal controllo del codice sorgente, il provider del controllo del codice sorgente crea una copia dell'ultima versione sul disco locale e rimuove l'attributo di sola lettura del file. In alcuni casi potrebbe essere necessario modificare un file senza estrarlo. Per ulteriori informazioni sulla modifica di un file senza estrarlo, vedere [modifica di file archiviati](../../2014/database-engine/edit-checked-in-files.md).  
@@ -30,13 +29,13 @@ ms.locfileid: "62774535"
   
  Gli argomenti disponibili in questa sezione sono descritti nella tabella seguente.  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |-----------|-----------------|  
 |[Estrazione di file](../../2014/database-engine/check-out-files.md)|Vengono fornite istruzioni su come estrarre un file per poterlo modificare.|  
 |[Annullare estrazioni](../../2014/database-engine/undo-checkouts.md)|Viene spiegato come annullare un'estrazione esistente.|  
 |[Estrarre automaticamente i file al momento della modifica](../../2014/database-engine/automatically-check-out-files-upon-edit.md)|Viene spiegato come configurare il controllo del codice sorgente per estrarre un file quando si inizia a modificarlo.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestisci archiviazioni](../../2014/database-engine/manage-checkins.md)   
  [Modificare i file archiviati](../../2014/database-engine/edit-checked-in-files.md)  
   

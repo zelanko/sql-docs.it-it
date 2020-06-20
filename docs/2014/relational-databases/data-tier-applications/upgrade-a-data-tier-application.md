@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 44c4bb7c01f18db6062ad1982fcf5a5f80e4d6b0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9f5d9d53a6dbaf2c0dee01aaa5a85cf4fde98f27
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797982"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953081"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Upgrade a Data-tier Application
   Utilizzare la procedura guidata Aggiorna applicazione livello dati o uno script di Windows PowerShell per modificare lo schema e le proprietà di un'applicazione livello dati (DAC) attualmente distribuita affinché corrispondano allo schema e alle proprietà definite in una nuova versione dell'applicazione livello dati.  
@@ -44,13 +43,13 @@ ms.locfileid: "72797982"
 ###  <a name="choosing-dac-upgrade-options"></a><a name="ChoseDACUpgOptions"></a> Scelta delle opzioni di aggiornamento dell'applicazione livello dati  
  Sono disponibili quattro opzioni per un aggiornamento sul posto:  
   
--   **Ignora perdita di dati** - `True`se, l'aggiornamento continuerà anche se alcune delle operazioni comportano la perdita di dati. Se `False`, queste operazioni comporteranno l'interruzione dell'aggiornamento. Ad esempio, se una tabella nel database corrente non è presente nello schema della nuova applicazione livello dati, la tabella viene eliminata se è specificato `True`. L'impostazione predefinita è `True`.  
+-   **Ignora perdita di dati** -se `True` , l'aggiornamento continuerà anche se alcune delle operazioni comportano la perdita di dati. Se `False`, queste operazioni comporteranno l'interruzione dell'aggiornamento. Ad esempio, se una tabella nel database corrente non è presente nello schema della nuova applicazione livello dati, la tabella viene eliminata se è specificato `True`. L'impostazione predefinita è `True`.  
   
--   **Blocca in** caso di modifiche `True`: se, l'aggiornamento viene terminato se lo schema del database è diverso da quello definito nell'applicazione livello dati precedente. Se `False`, l'aggiornamento continua anche se vengono rilevate delle modifiche. L'impostazione predefinita è `False`.  
+-   **Blocca in** caso di modifiche: se `True` , l'aggiornamento viene terminato se lo schema del database è diverso da quello definito nell'applicazione livello dati precedente. Se `False`, l'aggiornamento continua anche se vengono rilevate delle modifiche. L'impostazione predefinita è `False`.  
   
--   **Rollback in caso di errore** : se `True`, l'aggiornamento è incluso in una transazione e se si verificano errori, verrà effettuato un tentativo di rollback. Se `False`, viene eseguito il commit di tutte le modifiche nel momento in cui vengono apportate e, in caso di errori, potrebbe essere necessario ripristinare un backup precedente del database. L'impostazione predefinita è `False`.  
+-   **Rollback in caso di errore** : se `True` , l'aggiornamento è incluso in una transazione e se si verificano errori, verrà effettuato un tentativo di rollback. Se `False`, viene eseguito il commit di tutte le modifiche nel momento in cui vengono apportate e, in caso di errori, potrebbe essere necessario ripristinare un backup precedente del database. L'impostazione predefinita è `False`.  
   
--   **Ignora convalida criteri** -se `True`, i criteri di selezione del server DAC non vengono valutati. Se `False`, vengono valutati i criteri e l'aggiornamento termina in caso di errore di convalida. L'impostazione predefinita è `False`.  
+-   **Ignora convalida criteri** -se `True` , i criteri di selezione del server DAC non vengono valutati. Se `False`, vengono valutati i criteri e l'aggiornamento termina in caso di errore di convalida. L'impostazione predefinita è `False`.  
   
 ###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
  È possibile eseguire aggiornamenti dell'applicazione livello dati solo in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o versioni successive.  
@@ -124,7 +123,7 @@ ms.locfileid: "72797982"
   
  **Descrizione**: casella di sola lettura in cui viene visualizzata la descrizione immessa durante la creazione o l'estrazione dell'applicazione livello dati da un database.  
   
- Indietro: consente di tornare alla pagina **Introduzione** . ** \< **  
+ ** \< Indietro** : consente di tornare alla pagina **Introduzione** .  
   
  **Avanti >** : consente di visualizzare un indicatore di stato per la verifica della validità del file selezionato come pacchetto di applicazione livello dati.  
   
@@ -135,7 +134,7 @@ ms.locfileid: "72797982"
   
  **Convalida del contenuto dell'applicazione livello dati**: indicatore di stato che segnala lo stato corrente del processo di convalida.  
   
- Indietro: consente di tornare allo stato iniziale della pagina **Seleziona pacchetto** . ** \< **  
+ ** \< Indietro** : consente di tornare allo stato iniziale della pagina **Seleziona pacchetto** .  
   
  **Avanti >** : consente di passare alla versione finale della pagina **Seleziona pacchetto**.  
   
@@ -148,7 +147,7 @@ ms.locfileid: "72797982"
   
  **Ignora le violazioni dei criteri** : usare questa casella di controllo per continuare l'aggiornamento se una o più delle condizioni dei criteri non sono soddisfatte. Selezionare questa opzione solo se si è sicuri che tutte le condizioni non soddisfatte non impediranno la distribuzione del pacchetto DAC.  
   
- Indietro: consente di tornare alla pagina **Seleziona pacchetto** . ** \< **  
+ ** \< Indietro** : consente di tornare alla pagina **Seleziona pacchetto** .  
   
  **Avanti >** : consente di passare alla pagina **Rileva modifiche**.  
   
@@ -169,7 +168,7 @@ ms.locfileid: "72797982"
   
  **Salva report** : fare clic su questo pulsante per salvare un report delle modifiche rilevate dalla procedura guidata tra gli oggetti nel database e le relative controparti nella definizione di applicazione livello dati. È quindi possibile controllare il report per determinare se è necessario eseguire altre operazioni al termine dell'aggiornamento per incorporare alcuni o tutti gli oggetti elencati nel report nel nuovo database.  
   
- Indietro: consente di tornare alla pagina **Seleziona pacchetto di applicazione livello dati** . ** \< **  
+ ** \< Indietro** : consente di tornare alla pagina **Seleziona pacchetto di applicazione livello dati** .  
   
  **Avanti >** : consente di passare alla pagina **Opzioni**.  
   
@@ -182,7 +181,7 @@ ms.locfileid: "72797982"
   
  **Ripristina impostazioni predefinite**: consente di ripristinare l'impostazione predefinita dell'opzione, ovvero False.  
   
- Indietro: consente di tornare alla pagina **rileva modifiche** . ** \< **  
+ ** \< Indietro** : consente di tornare alla pagina **rileva modifiche** .  
   
  **Avanti >** : consente di passare alla pagina **Revisione del piano di aggiornamento**.  
   
@@ -203,7 +202,7 @@ ms.locfileid: "72797982"
   
  **Ripristina impostazioni predefinite**: consente di ripristinare l'impostazione predefinita dell'opzione, ovvero False.  
   
- Indietro: consente di tornare alla pagina **rileva modifiche** . ** \< **  
+ ** \< Indietro** : consente di tornare alla pagina **rileva modifiche** .  
   
  **Avanti >** : consente di passare alla pagina **Riepilogo**.  
   
@@ -214,7 +213,7 @@ ms.locfileid: "72797982"
   
  **Per aggiornare l'applicazione livello dati saranno utilizzate le seguenti impostazioni.** Controllare le informazioni visualizzate per assicurarsi che le azioni che verranno eseguite siano corrette. Nella finestra viene visualizzata l'applicazione livello dati selezionata per l'aggiornamento e il pacchetto di applicazione livello dati che contiene la nuova versione dell'applicazione. Viene inoltre indicato se la versione corrente del database corrisponde alla definizione dell'applicazione livello dati corrente o se il database è stato modificato.  
   
- Indietro: consente di tornare alla pagina **revisione del piano di aggiornamento** . ** \< **  
+ ** \< Indietro** : consente di tornare alla pagina **revisione del piano di aggiornamento** .  
   
  **Avanti >** : consente di distribuire l'applicazione livello dati e visualizzare i risultati nella pagina **Aggiorna applicazione livello dati**.  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: dbcce5d1-d5a1-4379-9597-04e43af5923d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0c97262ab6b3ee42b070511a813fcb4498b78d60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 861c27e94d3717a4dbeba1fe5f2633c2604ee7c4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745820"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050611"
 ---
 # <a name="srv_rpcoptions-extended-stored-procedure-api"></a>srv_rpcoptions (API delle stored procedure estese)
     
@@ -48,7 +47,7 @@ srvproc
  *srvproc*  
  Puntatore alla struttura SRV_PROC che rappresenta l'handle di una determinata connessione client. In questo caso, l'handle che ha ricevuto la stored procedure remota. La struttura contiene informazioni utilizzate dalla libreria dell'API Stored procedure estesa per gestire le comunicazioni e i dati tra l'applicazione e il client.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  Una bitmap che contiene i flag di esecuzione uniti in un'operazione con OR logico per la stored procedure remota corrente. Se non è presente alcuna stored procedure remota corrente, viene restituito 0 e viene generato un messaggio.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -56,7 +55,7 @@ srvproc
   
 |Flag di esecuzione|Descrizione|  
 |--------------------|-----------------|  
-|SRV_NOMETADATA|Il client ha richiesto risultati senza informazioni sui metadati. Questo flag viene utilizzato solo quando il client comunica con un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un'applicazione API delle stored procedure estese non può omettere le informazioni sui metadati.|  
+|SRV_NOMETADATA|Il client ha richiesto risultati senza informazioni sui metadati. Questo flag viene utilizzato solo quando il client comunica con un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un'applicazione API delle stored procedure estese non può omettere le informazioni sui metadati.|  
 |SRV_RECOMPILE|Il client ha richiesto di ricompilare la stored procedure remota prima di eseguirla. Questo flag non può essere applicato a un'applicazione API delle stored procedure estese.|  
   
 > [!IMPORTANT]  

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 00208b1c0f11faf8f392e47e275c7e239249d3d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2344ff0b95e82bd83e801df9ff6bd60328a2ae33
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783064"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970289"
 ---
 # <a name="deploy-a-data-tier-application"></a>Distribuire un'applicazione livello dati
   È possibile distribuire un'applicazione livello dati (DAC) da un pacchetto di applicazione livello dati all'istanza esistente del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] usando una procedura guidata o uno script di PowerShell. Il processo di distribuzione registra un'istanza di applicazione livello dati archiviando la definizione dell'applicazione livello dati nel database di sistema **msdb** (**master** in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]), crea un database e quindi lo popola con tutti gli oggetti di database definiti nell'applicazione livello dati.  
@@ -107,7 +106,7 @@ ms.locfileid: "72783064"
   
  **Descrizione**: casella di sola lettura in cui viene visualizzata la descrizione immessa durante la creazione o l'estrazione dell'applicazione livello dati da un database.  
   
- Indietro: consente di tornare alla pagina **Introduzione** . ** \< **  
+ ** \< Indietro** : consente di tornare alla pagina **Introduzione** .  
   
  **Avanti >**: consente di visualizzare un indicatore di stato per la verifica della validità del file selezionato come pacchetto di applicazione livello dati.  
   
@@ -118,7 +117,7 @@ ms.locfileid: "72783064"
   
  **Convalida del contenuto dell'applicazione livello dati**: indicatore di stato che segnala lo stato corrente del processo di convalida.  
   
- Indietro: consente di tornare allo stato iniziale della pagina **Seleziona pacchetto** . ** \< **  
+ ** \< Indietro** : consente di tornare allo stato iniziale della pagina **Seleziona pacchetto** .  
   
  **Avanti >**: consente di passare alla versione finale della pagina **Seleziona pacchetto**.  
   
@@ -133,7 +132,7 @@ ms.locfileid: "72783064"
   
  **Ignora le violazioni dei criteri** : usare questa casella di controllo per continuare la distribuzione se una o più delle condizioni dei criteri non sono soddisfatte. Selezionare questa opzione solo se si è sicuri che tutte le condizioni non soddisfatte non impediranno la distribuzione del pacchetto DAC.  
   
- Indietro: consente di tornare alla pagina **Seleziona pacchetto** . ** \< **  
+ ** \< Indietro** : consente di tornare alla pagina **Seleziona pacchetto** .  
   
  **Avanti >**: consente di passare alla pagina **Aggiorna configurazione**.  
   
@@ -158,7 +157,7 @@ ms.locfileid: "72783064"
   
  **Percorso e nome file di log** : consente di specificare il percorso completo e il nome del file di log. La casella viene popolata con il percorso e il nome file predefiniti. Modificare la stringa nella casella per modificare l'impostazione predefinita oppure usare il pulsante **Sfoglia** per passare alla cartella in cui si desidera salvare il file di log.  
   
- Indietro: consente di tornare alla pagina **Seleziona pacchetto di applicazione livello dati** . ** \< **  
+ ** \< Indietro** : consente di tornare alla pagina **Seleziona pacchetto di applicazione livello dati** .  
   
  **Avanti >**: consente di passare alla pagina **Riepilogo**.  
   
@@ -169,7 +168,7 @@ ms.locfileid: "72783064"
   
  **Le impostazioni seguenti saranno usate per implementare l'applicazione livello dati.** Controllare le informazioni visualizzate per assicurarsi che le azioni che verranno eseguite siano corrette. Nella finestra viene visualizzato il pacchetto di applicazione livello dati selezionato e il nome selezionato per l'istanza di applicazione livello dati distribuita. Nella finestra vengono inoltre visualizzate le impostazioni che verranno usate durante la creazione del database associato al pacchetto di applicazione livello dati.  
   
- Indietro: consente di tornare alla pagina di **configurazione dell'aggiornamento** per modificare le selezioni effettuate. ** \< **  
+ ** \< Indietro** : consente di tornare alla pagina di **configurazione dell'aggiornamento** per modificare le selezioni effettuate.  
   
  **Avanti >**: consente di distribuire l'applicazione livello dati e visualizzare i risultati nella pagina **Distribuisci DAC**.  
   

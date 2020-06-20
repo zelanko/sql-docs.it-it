@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5841adea-6650-4fae-8526-26af33edbede
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c287e840c07d11a527e980f9f07fb39fb3852739
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe6baff391f108e14a401a0d3b9dcacefa6da406
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065516"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938142"
 ---
 # <a name="viewing-data-mining-models-in-visio-data-mining-add-ins"></a>Visualizzazione di modelli di data mining in Visio (componenti aggiuntivi Data mining)
   Le forme di Visio per il data mining consentono di connettersi a un server e creare un diagramma che rappresenta un modello di data mining esistente. I diagrammi possono quindi essere personalizzati utilizzando i controlli di Visio, ma è anche possibile eseguire il drill-down nei dati, esporre alcune delle statistiche sottostanti e utilizzare il modello sottostante.  
@@ -76,7 +75,7 @@ ms.locfileid: "66065516"
   
  [Descrizione dettagliata del diagramma dell'albero delle decisioni](decision-tree-diagram-walkthrough-data-mining-add-ins.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Esplorazione di modelli in Excel &#40;SQL Server componenti aggiuntivi Data mining&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

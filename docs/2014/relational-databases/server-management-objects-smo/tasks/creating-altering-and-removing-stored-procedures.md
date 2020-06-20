@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 2a072f9c-8f11-4364-ab71-3990735a8d66
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 58890cc7b9e34a3e8ff9262af1f6b1a67b47841e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ec495e7620e6860658c826afdafeaa460f08d35c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782355"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003601"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>Creazione, modifica e rimozione di stored procedure
   In SMO ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects) le stored procedure sono rappresentate dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>.  
   
- La creazione di un oggetto <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> in SMO richiede l'impostazione della proprietà <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> sullo script [!INCLUDE[tsql](../../../includes/tsql-md.md)] che definisce la stored procedure. I parametri richiedono \@ il prefisso e devono essere creati singolarmente <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> utilizzando oggetti e aggiungendo alla <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> raccolta dell' <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> oggetto.  
+ La creazione di un oggetto <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> in SMO richiede l'impostazione della proprietà <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> sullo script [!INCLUDE[tsql](../../../includes/tsql-md.md)] che definisce la stored procedure. I parametri richiedono il \@ prefisso e devono essere creati singolarmente utilizzando <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> oggetti e aggiungendo alla <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> raccolta dell' <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> oggetto.  
   
 ## <a name="example"></a>Esempio  
  Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per ulteriori informazioni, vedere [creare un Visual Basic progetto SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [creare un progetto Visual C&#35; SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  

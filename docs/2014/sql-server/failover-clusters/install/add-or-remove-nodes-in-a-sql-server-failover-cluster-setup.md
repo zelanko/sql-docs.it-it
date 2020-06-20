@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1b6298020c1aa39f2c5c319efa492f6832c301f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f4f9e7bcd1f36387e4a1102b4ec63c8acd92fa52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289659"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065415"
 ---
 # <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>Aggiungere o rimuovere nodi in un cluster di failover di SQL Server (programma di installazione)
   Utilizzare questa procedura per gestire i nodi in un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esistente.  

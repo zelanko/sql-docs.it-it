@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6e9402f4-4d50-49ff-820d-65a77829c4a5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4e260825532f66205e301628f60d68d93f8e7c04
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a41158c6ab83491c10c702619a9da46f096a4bfa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059583"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951684"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Distribuire progetti nel server Integration Services
   Nella versione corrente di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]è possibile distribuire i progetti nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Con il server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è possibile gestire ed eseguire pacchetti, nonché configurare i valori di runtime per i pacchetti tramite ambienti.  

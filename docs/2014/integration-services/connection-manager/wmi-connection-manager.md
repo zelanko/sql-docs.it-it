@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: fbfa4ba7-3d0d-4d6b-94ad-50741a88d03d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5d57a0783c8af0121169f09622b8e5bd8547d1ad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29ddc30f89621e9b4875a57c191a81ef3f10784d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833087"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920270"
 ---
 # <a name="wmi-connection-manager"></a>Gestione connessione WMI
   Una gestione connessione WMI consente a un pacchetto di utilizzare WMI (Windows Management Instrumentation, Strumentazione gestione Windows) per la gestione delle informazioni in un ambiente aziendale. La gestione connessione WMI viene usata dall'attività Servizio Web inclusa in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- Quando si aggiunge una gestione connessione WMI a un pacchetto, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una gestione connessione che in fase di esecuzione verrà risolta in una connessione WMI, imposta le proprietà della gestione connessione e la aggiunge alla `Connections` raccolta del pacchetto. La proprietà `ConnectionManagerType` della gestione connessione viene impostata su `WMI`.  
+ Quando si aggiunge una gestione connessione WMI a un pacchetto, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Crea una gestione connessione che in fase di esecuzione verrà risolta in una connessione WMI, imposta le proprietà della gestione connessione e la aggiunge alla `Connections` raccolta del pacchetto. La proprietà `ConnectionManagerType` della gestione connessione viene impostata su `WMI`.  
   
 ## <a name="configuration-of-the-wmi-connection-manager"></a>Configurazione della gestione connessione WMI  
  Per configurare una gestione connessione WMI, procedere nel modo seguente:  
@@ -41,7 +40,7 @@ ms.locfileid: "62833087"
   
  Per informazioni sulla configurazione di una gestione connessione a livello di programmazione, vedere l'articolo relativo a <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Aggiunta di connessioni a livello di programmazione](../building-packages-programmatically/adding-connections-programmatically.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Attività servizio Web](../control-flow/web-service-task.md)   
  [Connessioni in Integration Services &#40;SSIS&#41;](integration-services-ssis-connections.md)  
   

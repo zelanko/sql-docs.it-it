@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5ca7d915b940296e6de6689e666401b0c3534c9d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b93ffb3ff99a973a4d44e6f190aef26b8c46940
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782725"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959909"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>Utilizzo di percorsi di SQL Server PowerShell
   Dopo essere passati a un nodo in un percorso di provider [!INCLUDE[ssDE](../includes/ssde-md.md)] , è possibile eseguire operazioni o recuperare informazioni utilizzando i metodi e le proprietà dell'oggetto di gestione di [!INCLUDE[ssDE](../includes/ssde-md.md)] associato al nodo in questione.  
@@ -74,7 +73,7 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Table
 Get-ChildItem | Where {$_.Schema -eq "Sales"}  
 ```  
   
- In questo esempio viene utilizzato il metodo di **script** SMO per generare uno script `CREATE VIEW` che contiene le istruzioni necessarie per ricreare le viste in AdventureWorks2012:  
+ In questo esempio viene utilizzato il metodo di **script** SMO per generare uno script che contiene le `CREATE VIEW` istruzioni necessarie per ricreare le viste in AdventureWorks2012:  
   
 ```powershell
 Remove-Item C:\PowerShell\CreateViews.sql  

@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a29a8b9adda07015a7f6fec953db42748a1e752e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1ef4ddd518343a3076c72ecc41f9b15ddf092dc0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918811"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970511"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Configurazione del data warehouse di gestione (SQL Server Management Studio)
   In questo argomento viene descritto come configurare il data warehouse di gestione per supportare l'archiviazione dei dati per una singola istanza o per più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che utilizzano l'agente di raccolta dati. Queste istanze possono essere installate nello stesso server o in server diversi. In questo argomento vengono fornite anche le descrizioni dell'interfaccia utente per la finestra di dialogo [Configurazione guidata data warehouse di gestione](#Wizard) . Per ulteriori informazioni sulla configurazione di un agente di raccolta dati, vedere [Configure Properties of a Data Collector](configure-properties-of-a-data-collector.md).  
@@ -93,7 +92,7 @@ ms.locfileid: "62918811"
   
  Specificare un account di accesso selezionando la casella di controllo **Mapping** .  
   
- **Appartenenza a ruoli del database per:** *\<nome data warehouse>*  
+ **Appartenenza a ruoli del database per:**  *\<data warehouse name>*  
  Selezionare il ruolo del data warehouse di gestione cui viene eseguito il mapping dell'account di accesso facendo clic nella casella di controllo di una o più delle opzioni seguenti:  
   
 -   **mdw_admin**  

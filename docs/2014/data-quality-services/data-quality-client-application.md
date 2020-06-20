@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6b46b7d020e7a9ebd8bd0ac96d0971b63230c2b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d4900eaddf5287824a386e885db9fc66d44a3c6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480760"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937832"
 ---
 # <a name="data-quality-client-application"></a>Applicazione client Data Quality
   L'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] consente di eseguire operazioni relative alla qualità dei dati utilizzando uno strumento autonomo. Con questa applicazione è possibile creare Knowledge Base, creare ed eseguire progetti Data Quality ed eseguire attività amministrative.  
@@ -40,7 +39,7 @@ ms.locfileid: "65480760"
 |Viene descritto come effettuare la corrispondenza in DQS.|[Corrispondenza di dati](../../2014/data-quality-services/data-matching.md)|  
 |Viene descritto come amministrare DQS.|[amministrazione dqs](../../2014/data-quality-services/dqs-administration.md)|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Schermata iniziale del client Data Quality](../../2014/data-quality-services/data-quality-client-home-screen.md)  
   
   

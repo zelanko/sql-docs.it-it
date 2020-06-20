@@ -11,13 +11,12 @@ api_location:
 ms.assetid: 506b5161-b902-4894-b87b-9192d7b1664a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6e390430115daf394c5e94267dad30a87851375d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10468ccd96cd4b68d01e0ef1dae35284b388cd49
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128691"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050945"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>Informazioni sulla versione e intestazione del database locale di SQL Server Express
   Non esiste alcun file di intestazione separato per l'API dell'istanza del database locale di SQL Server Express. Le firme e i codici di errore della funzione del database locale sono definiti nel file di intestazione (sqlncli.h) di SQL Server Native Client. Per utilizzare l'API dell'istanza del database locale, è necessario includere il file di intestazione sqlncli.h nel progetto.  
@@ -44,7 +43,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12E.LOCALDB\ MSS
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions]  
 ```  
   
- In questa chiave è disponibile un elenco di chiavi, una per ogni versione del database locale installata nel computer. Ognuna di queste chiavi è denominata con il numero di versione del database locale nel formato * \<principale-versione>*. versione secondaria>(ad esempio, la chiave per [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] è denominata 12,0). * \<* In ogni chiave della versione è disponibile una coppia nome/valore di `InstanceAPIPath` che consente di definire il percorso completo al file SQLUserInstance.dll installato con tale versione. Nell'esempio seguente vengono mostrate le voci del Registro di sistema per un computer in cui sono installate le versioni 11.0 e 12.0 del database locale:  
+ In questa chiave è disponibile un elenco di chiavi, una per ogni versione del database locale installata nel computer. Ognuna di queste chiavi è denominata con il numero di versione del database locale nel formato *\<major-version>* .*\<minor-version>* ad esempio, la chiave per [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] è denominata 12,0. In ogni chiave della versione è disponibile una coppia nome/valore di `InstanceAPIPath` che consente di definire il percorso completo al file SQLUserInstance.dll installato con tale versione. Nell'esempio seguente vengono mostrate le voci del Registro di sistema per un computer in cui sono installate le versioni 11.0 e 12.0 del database locale:  
   
 ```  
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions\12.0]  
@@ -66,7 +65,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12E.LOCALDB\ MSS
   
 ```  
   
- i programmi a 64 bit che `Installed Versions` leggono la chiave vedranno i valori che puntano a versioni a 64 bit della dll **SQLUserInstance** , mentre i `Wow6432Node` programmi a 32 bit (in esecuzione in Windows a 64 bit in modalità WOW64) verranno `Installed Versions` reindirizzati automaticamente a una chiave che si trova in hive. Questa chiave contiene valori che puntano a versioni a 32 bit della dll **SQLUserInstance** .  
+ i programmi a 64 bit che leggono la chiave vedranno i `Installed Versions` valori che puntano a versioni a 64 bit della dll **SQLUserInstance** , mentre i programmi a 32 bit (in esecuzione in Windows a 64 bit in modalità WOW64) verranno reindirizzati automaticamente a una `Installed Versions` chiave che si trova in `Wow6432Node` hive. Questa chiave contiene valori che puntano a versioni a 32 bit della dll **SQLUserInstance** .  
   
 ## <a name="using-localdb_define_proxy_functions"></a>Utilizzo di LOCALDB_DEFINE_PROXY_FUNCTIONS  
  L'API dell'istanza del database locale definisce una costante denominata LOCALDB_DEFINE_PROXY_FUNCTIONS che automatizza l'individuazione e il caricamento della dll **SQLUserInstance** .  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 465d20f425a479f173ed5a9c2b5f5ec96ec7f707
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c1d5a938c64ee01a70a34e54c6599880ba2f22e8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480812"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937872"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
   La pulizia dei dati è il processo di analisi della qualità dei dati in un'origine dati, con l'approvazione o il rifiuto manuale dei suggerimenti del sistema e la conseguente modifica dei dati. La pulizia dei dati in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) include un processo assistito da computer, che analizza la conformità dei dati alle informazioni in una Knowledge Base, e un processo interattivo, che consente all'amministratore dei dati di rivedere e modificare i risultati del processo assistito da computer per assicurarsi che la pulizia dei dati risponda esattamente alle aspettative.  
@@ -103,7 +102,7 @@ ms.locfileid: "65480812"
 |Viene descritto come pulire i dati utilizzando le informazioni del servizio dati di riferimento.|[Pulire i dati mediante le informazioni dei dati di riferimento &#40;esterni&#41;](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
 |Viene descritto come pulire un dominio composito.|[Pulire i dati in un dominio composito](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md)|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Progetti Data Quality &#40;&#41;DQS](../../2014/data-quality-services/data-quality-projects-dqs.md)   
  [Corrispondenza di dati](../../2014/data-quality-services/data-matching.md)  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f936853c284196b05b6da6369f4410bed2297d4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d93a04281839c4db26cbab16ac166af3cdb7c9a5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736364"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065658"
 ---
 # <a name="specify-parameters"></a>Specificare i parametri
   Se si specificano parametri di procedura, i programmi chiamanti sono in grado di passare i valori nel corpo della procedura. Tali valori possono essere utilizzati per diversi scopi durante l'esecuzione della procedura. Inoltre, i parametri di procedura possono restituire valori al programma chiamante se il parametro è contrassegnato come parametro OUTPUT.  
@@ -126,7 +125,7 @@ EXEC Sales.usp_GetSalesYTD N'Blythe';
 GO  
 ```  
   
- Sebbene sia possibile omettere i parametri per cui sono stati forniti valori predefiniti, è possibile troncare soltanto l'elenco di parametri. Ad esempio, se una procedura dispone di cinque parametri, è possibile omettere sia il quarto sia il quinto parametro. Tuttavia, il quarto parametro non può essere ignorato finché il quinto parametro è incluso, a meno che i parametri non vengano specificati nel formato ** \@Parameter =**_value_.  
+ Sebbene sia possibile omettere i parametri per cui sono stati forniti valori predefiniti, è possibile troncare soltanto l'elenco di parametri. Ad esempio, se una procedura dispone di cinque parametri, è possibile omettere sia il quarto sia il quinto parametro. Tuttavia, il quarto parametro non può essere ignorato finché il quinto parametro è incluso, a meno che i parametri non vengano specificati nel formato ** \@ Parameter =**_value_.  
   
 ## <a name="specifying-parameter-direction"></a>Specifica della direzione di un parametro  
  La direzione di un parametro può essere input, cioè un valore viene passato nel corpo della procedura, o output, vale a dire che tramite la procedura viene restituito un valore al programma chiamante. Il parametro di input è l'impostazione predefinita.  
@@ -164,10 +163,10 @@ GO
   
 ```  
   
- Eseguire `usp_GetList` per restituire un elenco dei prodotti di [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] (biciclette) con un prezzo inferiore a 700 dollari. I parametri ** \@** di output cost e ** \@ComparePrices** vengono utilizzati con il linguaggio per il controllo di flusso per restituire un messaggio nella finestra **messaggi** .  
+ Eseguire `usp_GetList` per restituire un elenco dei prodotti di [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] (biciclette) con un prezzo inferiore a 700 dollari. I parametri di OUTPUT ** \@ cost** e ** \@ ComparePrices** vengono utilizzati con il linguaggio per il controllo di flusso per restituire un messaggio nella finestra **messaggi** .  
   
 > [!NOTE]  
->  La variabile OUTPUT deve essere definita durante la creazione della procedura e durante l'utilizzo della variabile. Il nome di parametro e quello della variabile non devono corrispondere. Il tipo di dati e la posizione del parametro devono tuttavia corrispondere, a meno che non _variable_ ** \@venga utilizzato ListPrice =** variable.  
+>  La variabile OUTPUT deve essere definita durante la creazione della procedura e durante l'utilizzo della variabile. Il nome di parametro e quello della variabile non devono corrispondere. Il tipo di dati e la posizione del parametro devono tuttavia corrispondere, a meno che non venga utilizzato ** \@ ListPrice =** _Variable_ .  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  
@@ -202,7 +201,7 @@ Road-750 Black, 52                                 539.99
 These items can be purchased for less than $700.00.  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)  
   
   

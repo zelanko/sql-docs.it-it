@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: a4d798ee-4c18-40d4-b6af-63d17503738c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aeb0c6c47a9203a7124fbe5d9f4739c52ae430d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 950dbb7a082af95abfe79e48e18e2cb894e71173
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63246234"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058743"
 ---
 # <a name="sql-server-agent-properties-advanced-page"></a>Proprietà SQL Server Agent (pagina Avanzate)
-  Utilizzare questa pagina per visualizzare e modificare le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proprietà avanzate del servizio Agent.  
+  Utilizzare questa pagina per visualizzare e modificare le proprietà avanzate del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servizio Agent.  
   
 ## <a name="options"></a>Opzioni  
  **Inoltro eventi SQL Server**  
@@ -53,7 +52,7 @@ ms.locfileid: "63246234"
  **per almeno**  
  Periodo di tempo durante il quale l'utilizzo medio della CPU deve essere al di sotto del livello specificato prima che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent esegua i processi in base alla pianificazione di inattività della CPU.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione e alconnessione di pianificazioni ai processi](create-and-attach-schedules-to-jobs.md)   
  [Gestione di eventi](manage-events.md)  
   

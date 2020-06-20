@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c29c3385-5043-400f-bb4e-044a4c9a9a4b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 05dc6188a46e0e2d43b7a4bc3275fae7d4cd8da6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9edecefae5154bb66a65e38724d9e77a94fdbb4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917560"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952201"
 ---
 # <a name="change-the-configuration-settings-for-a-database"></a>Modificare le impostazioni di configurazione per un database
   In questo argomento si illustra come modificare le opzioni a livello di database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Queste opzioni sono specifiche di ogni database e non hanno effetto su altri database.  

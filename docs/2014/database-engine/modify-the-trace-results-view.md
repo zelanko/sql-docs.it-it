@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 860a80dc-bac0-4ef0-bf7f-7a9b430d7aa3
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 780772f7703e4499c13eb9373ccad4252097b536
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c5aa031804d2c5f4ad3a3679a6fe1cac96c63b1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089443"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930662"
 ---
 # <a name="modify-the-trace-results-view"></a>Modificare la visualizzazione dei risultati della traccia
   In questo argomento viene descritto come modificare la vista dei risultati di traccia di una sessione di Eventi estesi in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] eseguendo le attività seguenti.  
@@ -229,7 +228,7 @@ ms.locfileid: "66089443"
   
     -   **Dettagli**. Utilizzare questa opzione per eseguire la ricerca in tutte le colonne (promosse e non promosse) della finestra di traccia selezionate prima di aprire la finestra **di dialogo trova in eventi estesi** .  
   
-    -   **Nome della colonna evento>. \< ** Utilizzare questa opzione per eseguire ricerche in una colonna specifica dell'evento dall'elenco a discesa.  
+    -   **\<Event column name>**. Utilizzare questa opzione per eseguire ricerche in una colonna specifica dell'evento dall'elenco a discesa.  
   
 5.  Utilizzare le opzioni seguenti per specificare la modalità con cui si desidera definire la ricerca:  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ffd7ab42-d7ae-4e7c-86a1-a4364a37c91e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 403100ddfbd78609ac0d98dd3ee387d2ecdeec61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a84f6acf89490bf12b09db6017d305e15b45abd3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059903"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916897"
 ---
 # <a name="data-flow-tab"></a>Scheda Flusso di dati
   Utilizzare la scheda **Flusso di dati** di Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] per creare flussi di dati in un pacchetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  
@@ -34,7 +33,7 @@ ms.locfileid: "66059903"
   
  Per aggiungere queste funzioni in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] , fare clic con il pulsante destro del mouse sull'area di progettazione e quindi selezionare l'opzione desiderata.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Percorsi di Integration Services](data-flow/integration-services-paths.md)   
  [Attività flusso di dati](control-flow/data-flow-task.md)   
  [Progettazione SSIS](ssis-designer.md)   

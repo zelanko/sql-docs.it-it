@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e439bb29-60cc-4afd-a79a-f629b8d843c1
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5555e49a85d50b6b5a48002a176055605ee06913
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3b5e8cec1cac3eb1ce4357480c0f994a33d4c40
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484218"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937722"
 ---
 # <a name="enable-or-disable-profiling-notifications-in-dqs"></a>Abilitare o disabilitare le notifiche di profiling in DQS
   In questo argomento viene descritto come abilitare o disabilitare le notifiche di profiling in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Per impostazione predefinita, le notifiche di profiling in DQS sono abilitate. Le notifiche di profiling forniscono informazioni importanti sull'origine dati e sull'efficacia dell'attività corrente in esecuzione sui dati. Per altre informazioni, vedere [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md).  
@@ -41,6 +40,6 @@ ms.locfileid: "65484218"
   
 4.  Deselezionare o selezionare la casella di controllo **Abilita notifiche** per disabilitare o abilitare le notifiche di profiling per le varie attività in DQS.  
   
-5.  Fare clic su **Chiudi**.  
+5.  Fare clic su **Close**.  
   
   

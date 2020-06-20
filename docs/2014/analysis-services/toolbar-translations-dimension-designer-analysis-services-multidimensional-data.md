@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c049ced5-55df-47dd-b855-b2da4b7ce17d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9bf5f9fae501c019a7db3c9d78d578729cf1df42
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40bf92b2a7ca45e7f4033ec6d6aa44c5d99e852a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065996"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938352"
 ---
 # <a name="toolbar-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barra degli strumenti (scheda Traduzioni, Progettazione dimensioni) (Analysis Services – Dati multidimensionali)
   Utilizzare i pulsanti della barra degli strumenti per eseguire operazioni comuni nella vista **Traduzioni** di **Progettazione dimensioni**.  
@@ -57,7 +56,7 @@ ms.locfileid: "66065996"
  **Mostra tutti gli attributi**  
  Fare clic su questo pulsante per attivare o disattivare la visualizzazione di tutti gli attributi definiti per la dimensione selezionata, inclusi quelli per cui le gerarchie di attributo sono disabilitate.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Traduzioni &#40;Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
  [Dettagli traduzione &#40;scheda Traduzioni, Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a1fa03dbb8803c27ba917e662db1958361900b15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ffbfaa1bda561240d64c7548752f0ae18ddddf3c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917593"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952591"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Creazione di un processo di SQL Server Agent per l'archiviazione di messaggi e log eventi di Posta elettronica database
   Oltre al log eventi di Posta elettronica database, nelle tabelle del database **msdb** viene mantenuta una copia dei messaggi di Posta elettronica database e dei relativi allegati. È consigliabile ridurre periodicamente le dimensioni delle tabelle e archiviare i messaggi e gli eventi non più necessari. Nelle procedure seguenti viene illustrato come creare un processo di SQL Server Agent per eseguire queste operazioni in modo automatico.  
@@ -208,7 +207,7 @@ ms.locfileid: "62917593"
   
 5.  Nell'area **Frequenza** selezionare le opzioni che consentono di eseguire il processo periodicamente, ad esempio una volta al mese.  
   
-6.  Nell'area **frequenza giornaliera** selezionare **una volta \<all'ora>**.  
+6.  Nell'area **frequenza giornaliera** selezionare **si verifica una sola volta \<time> alle **.  
   
 7.  Verificare che le altre opzioni siano configurate come desiderato, quindi fare clic su **OK** per salvare la pianificazione.  
   

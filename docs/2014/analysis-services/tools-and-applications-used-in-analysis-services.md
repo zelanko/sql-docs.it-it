@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0ddb3b7a-7464-4d04-8659-11cb2e4cf3c3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4a48b400196a77a9c59219bc28cdff496229ae7e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 13da2ecc244c1596789a1d816bac81a13bcd4c62
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175560"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938332"
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>Strumenti e applicazioni usati in Analysis Services
   È importante trovare gli strumenti e le applicazioni necessari per la creazione di modelli di Analysis Services e la gestione dei database associati in un'istanza di Analysis Services.

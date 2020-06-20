@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 622aabe6-95c7-42cc-8768-ac2e679c5089
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 1d6bb42e4b35a74ef2bd6eefb85ea81b0ed18e40
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 048cd415ec16ef668bbf61a393f9103b522694eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63073846"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050278"
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>Creazione e gestione dell'archiviazione per gli oggetti con ottimizzazione per la memoria
   Il motore di [!INCLUDE[hek_2](../../includes/hek-2-md.md)] è integrato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in modo da consentire la presenza sia di tabelle ottimizzate per la memoria che di tabelle tradizionali basate su disco nello stesso database. Tuttavia, la struttura di archiviazione per le tabelle ottimizzate per la memoria è diversa rispetto alle tabelle basate su disco.  
@@ -62,7 +61,7 @@ ms.locfileid: "63073846"
   
 -   [Monitoraggio e risoluzione di problemi relativi all'unione di coppie di file di dati e differenziali](../../database-engine/monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [OLTP in memoria &#40;ottimizzazione per la memoria&#41;](in-memory-oltp-in-memory-optimization.md)  
   
   

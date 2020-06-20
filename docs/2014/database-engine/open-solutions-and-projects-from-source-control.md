@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1c8d27f2-1741-485f-b56a-cadcb8b5493d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dc6e728ff40d61f2139115c642e0841a3685207f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c04d0295fa6add80eb471d8c4c06b2d588b915bb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774780"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930474"
 ---
 # <a name="open-solutions-and-projects-from-source-control"></a>Apertura di soluzioni e progetti dal controllo del codice sorgente
   È possibile utilizzare [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per aprire una soluzione o un progetto direttamente dal controllo del codice sorgente. Quando viene aperta una soluzione dal controllo del codice sorgente, nell'ambiente [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] viene recuperata automaticamente la sua versione più recente e copiata nel percorso specificato.  
@@ -27,12 +26,12 @@ ms.locfileid: "62774780"
   
  Gli argomenti disponibili in questa sezione sono descritti nella tabella seguente.  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |-----------|-----------------|  
 |[Aprire Soluzioni dal controllo del codice sorgente](../../2014/database-engine/open-solutions-from-source-control.md)|Spiega come utilizzare l'ambiente [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] per aprire soluzioni direttamente dal controllo del codice sorgente.|  
 |[Apertura di progetti dal controllo del codice sorgente](../../2014/database-engine/open-projects-from-source-control.md)|Spiega come aprire un progetto dal controllo del codice sorgente per estrarre e modificare i file del progetto.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Aggiungere soluzioni e progetti al controllo del codice sorgente](../../2014/database-engine/add-solutions-and-projects-to-source-control.md)  
   
   

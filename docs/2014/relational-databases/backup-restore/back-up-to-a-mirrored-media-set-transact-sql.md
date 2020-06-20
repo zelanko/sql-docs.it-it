@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 5fc43a5d-dfd6-4c53-a4ef-3c8da23ccc81
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 88ea15fabe8e8fd6630d3430417879c7104dff67
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 255a3c190139c029f5211dcab9780b6d07d975a4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876976"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959491"
 ---
 # <a name="back-up-to-a-mirrored-media-set-transact-sql"></a>Backup in un set di supporti con mirroring (Transact-SQL)
-  Questo argomento descrive come usare l'istruzione [BACKUP](/sql/t-sql/statements/backup-transact-sql) di [!INCLUDE[tsql](../../includes/tsql-md.md)] per specificare un set di supporti con mirroring durante l'esecuzione del backup di un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nell'istruzione BACKUP specificare il primo mirror nella clausola TO, quindi specificare ogni mirror nella relativa clausola MIRROR TO. È necessario che le clausole TO e MIRROR TO specifichino lo stesso numero e tipo di dispositivo di backup.  
+  In questo argomento viene descritto come utilizzare l' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione [backup](/sql/t-sql/statements/backup-transact-sql) per specificare un set di supporti con mirroring durante l'esecuzione del backup di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Nell'istruzione BACKUP specificare il primo mirror nella clausola TO, quindi specificare ogni mirror nella relativa clausola MIRROR TO. È necessario che le clausole TO e MIRROR TO specifichino lo stesso numero e tipo di dispositivo di backup.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene creato il set di supporti con mirroring indicato nella figura precedente e viene eseguito il backup del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] su entrambi i mirror.  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: badc6d36-8a87-42b5-b28c-9c4f5ded8552
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f2b6c03506139ded1fd4452bb19f23c931ea0c76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc5e8b1636d26349bb3938d4b3bcbdf0fbf43e1a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127100"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050644"
 ---
 # <a name="srv_paramtype-extended-stored-procedure-api"></a>srv_paramtype (API delle stored procedure estese)
     
@@ -55,10 +54,10 @@ n
  *n*  
  Indica il numero del parametro. Il primo parametro è 1.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  Un valore di token per il tipo di dati del parametro. Per informazioni sui tipi di dati, vedere [Tipi di dati &#40;API Stored procedure estesa&#41;](data-types-extended-stored-procedure-api.md). Se non è presente nessun parametro *n* o nessuna stored procedure remota, restituisce -1.  
   
- Questa funzione restituisce i valori seguenti, se il parametro è uno dei tipi [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] di dati.  
+ Questa funzione restituisce i valori seguenti, se il parametro è uno dei [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tipi di dati.  
   
 |Nuovi tipi di dati|Valore restituito|  
 |--------------------|------------------|  
@@ -77,7 +76,7 @@ n
 > [!IMPORTANT]  
 >  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [srv_paraminfo &#40;API stored procedure estesa&#41;](srv-paraminfo-extended-stored-procedure-api.md)   
  [srv_rpcparams &#40;API delle stored procedure estese&#41;](srv-rpcparams-extended-stored-procedure-api.md)  
   

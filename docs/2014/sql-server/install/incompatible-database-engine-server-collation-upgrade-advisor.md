@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 80f499d6-2c90-49eb-a5b3-0bb5b7faaa3b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: fbd4c1e55bb49c6ae8f75d3d12cc243df963018a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c7a9df15948ddea5fe76efa1cce688f704cbe5c9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952227"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065370"
 ---
 # <a name="incompatible-database-engine-server-collation-upgrade-advisor"></a>Regole di confronto del server del motore di database incompatibili (Upgrade Advisor)
-  È stata rilevata [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] l'utilizzo di un' [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] istanza di configurata per l'utilizzo di regole di confronto del server incompatibili.  
+  È stata rilevata l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilizzo di un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] configurata per l'utilizzo di regole di confronto del server incompatibili.  
   
 ||  
 |-|  
@@ -28,9 +27,9 @@ ms.locfileid: "71952227"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>Descrizione  
- È stata rilevata [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] l'utilizzo di un' [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] istanza di configurata per l'utilizzo di regole di confronto del server incompatibili.  
+ È stata rilevata l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilizzo di un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] configurata per l'utilizzo di regole di confronto del server incompatibili.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] In modalità SharePoint viene utilizzata l'architettura dei servizi condivisi di SharePoint. In SharePoint non viene supportato [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] configurato per la distinzione tra maiuscole e minuscole o per regole di confronto del server o per regole di confronto del server binarie. Le regole di confronto incompatibili includono regole di confronto che per impostazione predefinita supportano la distinzione tra maiuscole e minuscole o che sono binarie e regole di confronto di base che per impostazione predefinita sono compatibili ma sono state configurate con alcune delle designazioni delle regole di confronto seguenti:  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modalità SharePoint viene utilizzata l'architettura dei servizi condivisi di SharePoint. In SharePoint non viene supportato [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] configurato per la distinzione tra maiuscole e minuscole o per regole di confronto del server o per regole di confronto del server binarie. Le regole di confronto incompatibili includono regole di confronto che per impostazione predefinita supportano la distinzione tra maiuscole e minuscole o che sono binarie e regole di confronto di base che per impostazione predefinita sono compatibili ma sono state configurate con alcune delle designazioni delle regole di confronto seguenti:  
   
 -   **Binario**  
   

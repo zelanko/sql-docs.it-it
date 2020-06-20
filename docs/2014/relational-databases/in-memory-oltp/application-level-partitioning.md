@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3b1bc12baf31a0e1d5edb344c538341cf2ad1be0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69a22c5d032ca42b64536bb765b037d2cad02a27
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62468337"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050358"
 ---
 # <a name="application-level-partitioning"></a>Partizionamento a livello di applicazione
   Questo esempio illustra il partizionamento a livello di applicazione, in cui i dati vengono archiviati in una tabella ottimizzata per la memoria o una tabella basata su disco, a seconda del fatto che l'ordine si verifichi prima o dopo una data specifica. Tutti gli ordini più recenti o uguali a *hotDate* si trovano nella tabella ottimizzata per la memoria e tutti gli ordini prima di *hotDate* sono nella tabella basata su disco. Si supponga un pesante carico di lavoro OLTP con molte transazioni simultanee. Questa regola di business (ordini recenti in una tabella ottimizzata per la memoria) deve essere applicata anche se diverse transazioni simultanee stanno tentando di modificare *hotDate*.  
@@ -219,7 +218,7 @@ SELECT * FROM [dbo].[SalesOrders_cold] ORDER BY so_date DESC
   
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [OLTP in memoria &#40;l'ottimizzazione in memoria&#41;](in-memory-oltp-in-memory-optimization.md)   
  [Esempi di codice di OLTP in memoria](in-memory-oltp-code-samples.md)  
   

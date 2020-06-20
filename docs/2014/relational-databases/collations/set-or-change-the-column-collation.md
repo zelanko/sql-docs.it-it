@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4a16794bb2cd61829058d9fac7be11438f563d44
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 05b8211569b6ce83faaec043e5eb527a60f0ddab
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918967"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970559"
 ---
 # <a name="set-or-change-the-column-collation"></a>Impostare o modificare le regole di confronto delle colonne
   È possibile ignorare le regole di confronto del database per i dati `char`, `varchar`, `text`, `nchar`, `nvarchar` e `ntext` specificando regole di confronto diverse per una colonna specifica di una tabella e utilizzando uno degli elementi seguenti:  
@@ -38,7 +37,7 @@ ms.locfileid: "62918967"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni, vedere [Regole di confronto e supporto Unicode](collation-and-unicode-support.md).  
   
--   Utilizzo della `Column.Collation` proprietà in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMO (Management Objects).  
+-   Utilizzo della `Column.Collation` Proprietà in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMO (Management Objects).  
   
  Non è possibile modificare le regole di confronto di una colonna a cui fa riferimento uno qualsiasi degli elementi seguenti:  
   
@@ -109,7 +108,7 @@ SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.
        );  
     ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Impostare o modificare le regole di confronto del server](set-or-change-the-server-collation.md)   
  [Impostare o modificare le regole di confronto del database](set-or-change-the-database-collation.md)   
  [Regole di confronto e supporto Unicode](collation-and-unicode-support.md)  

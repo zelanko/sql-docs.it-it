@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ccfca5d9c46bbd63f0d9a8084881c51896b4fe7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289629"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058695"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è un servizio di Microsoft Windows per l'esecuzione di attività amministrative pianificate, denominate *processi* in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -43,7 +42,7 @@ ms.locfileid: "79289629"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilizza i componenti seguenti per definire le attività da eseguire, quando eseguirle e come fornire informazioni in merito alla riuscita o meno delle attività.  
   
 ### <a name="jobs"></a>Processi  
- Un *processo* è una serie specificata di azioni eseguite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da Agent. Usare i processi per definire un'attività amministrativa eseguibile una o più volte e monitorabile per verificarne l'esito positivo o negativo. Un processo può essere eseguito in un server locale o in più server remoti.  
+ Un *processo* è una serie specificata di azioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eseguite da Agent. Usare i processi per definire un'attività amministrativa eseguibile una o più volte e monitorabile per verificarne l'esito positivo o negativo. Un processo può essere eseguito in un server locale o in più server remoti.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che sono in esecuzione al momento di un evento di failover su un'istanza del cluster di failover [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non riprendono dopo il failover su un altro nodo del cluster di failover. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] I processi di Agent che sono in esecuzione quando un nodo Hyper-V viene messo in pausa non riprendono se la pausa provoca un failover in un altro nodo. I processi che iniziano ma che non riescono a essere completati a causa di un evento di failover vengono registrati come avviati, ma non mostrano voci di log aggiuntive per il completamento o l'errore. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in questi scenari sembrano non avere mai termine.  
@@ -117,7 +116,7 @@ ms.locfileid: "79289629"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent utilizza i ruoli predefiniti del database **SQLAgentUserRole**, **SQLAgentReaderRole**e **SQLAgentOperatorRole** nel database **msdb** per controllare l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per gli utenti che non sono membri del `sysadmin` ruolo predefinito del server. Sottosistemi e proxy consentono agli amministratori del database di garantire l'esecuzione di tutti i passaggi di processo con le autorizzazioni minime necessarie all'esecuzione della relativa attività.  
   
 ### <a name="roles"></a>Ruoli  
- I membri dei ruoli predefiniti del database **SQLAgentUserRole**, **SQLAgentReaderRole**e **SQLAgentOperatorRole** in **msdb**e i membri del ruolo `sysadmin` predefinito del server hanno accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Un utente che non appartiene a nessuno di questi ruoli non può utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Per altre informazioni sui ruoli usati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
+ I membri dei ruoli predefiniti del database **SQLAgentUserRole**, **SQLAgentReaderRole**e **SQLAgentOperatorRole** in **msdb**e i membri del `sysadmin` ruolo predefinito del server hanno accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Un utente che non appartiene a nessuno di questi ruoli non può utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Per altre informazioni sui ruoli usati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ### <a name="subsystems"></a>Sottosistemi  
  Un sottosistema è un oggetto predefinito che rappresenta funzionalità disponibili per un passaggio di processo. Ogni proxy ha accesso a uno o più sottosistemi. I sottosistemi offrono sicurezza in quanto delimitano l'accesso alle funzionalità disponibili per un proxy. Ogni passaggio di processo viene eseguito nel contesto di un proxy, ad eccezione dei passaggi di processo [!INCLUDE[tsql](../../includes/tsql-md.md)] . [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzano il comando EXECUTE AS per impostare il contesto di sicurezza.  
@@ -126,7 +125,7 @@ ms.locfileid: "79289629"
   
 |Nome sottosistema|Descrizione|  
 |--------------------|-----------------|  
-|Script Microsoft ActiveX|Esegue un passaggio di processo con script ActiveX.<br /><br /> ** \* Importante \* \* ** Il sottosistema di scripting ActiveX verrà rimosso da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.|  
+|Script Microsoft ActiveX|Esegue un passaggio di processo con script ActiveX.<br /><br /> Importante il sottosistema di scripting ActiveX verrà rimosso da Agent in una versione futura di ** \* . \* \* \* ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.|  
 |Sistema operativo (**CmdExec**)|Esegue un programma eseguibile.|  
 |PowerShell|Esegue un passaggio di processo con script di PowerShell.|  
 |Server di distribuzione repliche|Esegue un passaggio di processo tramite cui viene attivata l'utilità Agente distribuzione repliche.|  

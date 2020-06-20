@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3a1dd63030601ad05e0e2f3ccce09425c5aa829c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66533fb63a76bc92bcb45e7cb8feb058467e6583
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767373"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968187"
 ---
 # <a name="step-4-adding-a-flat-file-destination"></a>Passaggio 4: Aggiunta di una destinazione file flat
   L'output degli errori della trasformazione Lookup Currency Key reindirizza alla trasformazione Script tutte le righe di dati in cui l'operazione di ricerca ha avuto esito negativo. Per migliorare le informazioni sugli errori, la trasformazione Script esegue uno script che ottiene la descrizione degli errori.  
@@ -36,11 +35,11 @@ ms.locfileid: "62767373"
   
 6.  Nella finestra di dialogo **Formato file flat** verificare che sia stato selezionato **Delimitato** e quindi scegliere **OK**.  
   
-7.  Nell' **Editor gestione connessione file flat**Digitare `Error Data`nella casella **Nome gestione connessione** .  
+7.  Nell' **Editor gestione connessione file flat**Digitare nella casella **Nome gestione connessione** `Error Data` .  
   
 8.  Nella finestra di dialogo **Editor gestione connessione file flat** fare clic su **Sfoglia**e individuare la cartella in cui archiviare il file.  
   
-9. Nella finestra di dialogo **Apri** , per **nome file**, digitare `ErrorOutput.txt`, quindi fare clic su **Apri**.  
+9. Nella finestra di dialogo **Apri** , per **nome file**, digitare `ErrorOutput.txt` , quindi fare clic su **Apri**.  
   
 10. Nella finestra di dialogo **Editor gestione connessione file flat** verificare che nella casella **Impostazioni locali** sia presente Inglese (Stati Uniti) e che nella **Tabella codici** sia presente 1252 (ANSI -Latino I).  
   
