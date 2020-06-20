@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f66cb56380f0e027d08e53154c05b7ad1e3be89f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df0a2fd4a2c6ffb2de58d6b52360d1730d0fa7df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62670577"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037278"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Abilitare e disabilitare Change Data Capture (SQL Server)
   In questo argomento viene descritto come abilitare e disabilitare Change Data Capture per un database e una tabella.  
@@ -48,7 +47,7 @@ GO
 ```  
   
 ## <a name="disable-change-data-capture-for-a-database"></a>Disabilitazione di Change Data Capture per un database  
- Un membro del ruolo `sysadmin` predefinito del server può eseguire il stored procedure [sys. sp_cdc_disable_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) nel contesto del database per disabilitare Change Data Capture per un database. Non è necessario disabilitare singole tabelle prima di disabilitare il database. La disabilitazione del database comporta la rimozione di tutti i metadati di Change Data Capture associati, inclusi l'utente e lo schema `cdc` e i processi Change Data Capture. Eventuali ruoli di controllo creati da Change Data Capture, tuttavia, non verranno rimossi automaticamente e devono essere eliminati in modo esplicito. Per determinare se un database è abilitato, eseguire una query sulla colonna `is_cdc_enabled` nella vista del catalogo sys.databases.  
+ Un membro del `sysadmin` ruolo predefinito del server può eseguire il stored procedure [sys. Sp_cdc_disable_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) nel contesto del database per disabilitare Change Data Capture per un database. Non è necessario disabilitare singole tabelle prima di disabilitare il database. La disabilitazione del database comporta la rimozione di tutti i metadati di Change Data Capture associati, inclusi l'utente e lo schema `cdc` e i processi Change Data Capture. Eventuali ruoli di controllo creati da Change Data Capture, tuttavia, non verranno rimossi automaticamente e devono essere eliminati in modo esplicito. Per determinare se un database è abilitato, eseguire una query sulla colonna `is_cdc_enabled` nella vista del catalogo sys.databases.  
   
  Se viene eliminato un database abilitato per Change Data Capture, i processi Change Data Capture vengono automaticamente rimossi.  
   
@@ -78,7 +77,7 @@ GO
   
  `A filegroup to contain the change table.`  
   
- Per impostazione predefinita, la tabella delle modifiche si trova nel filegroup predefinito del database. I proprietari del database che desiderano controllare la posizione di singole tabelle delle modifiche *@filegroup_name* possono utilizzare il parametro per specificare un determinato filegroup per la tabella delle modifiche associata all'istanza di acquisizione. È necessario che il filegroup specificato sia già presente. È in genere consigliabile inserire le tabelle delle modifiche in un filegroup distinto dalle tabelle di origine. Vedere il `Enable a Table Specifying Filegroup Option` modello per un esempio che illustra l'uso *@filegroup_name* del parametro.  
+ Per impostazione predefinita, la tabella delle modifiche si trova nel filegroup predefinito del database. I proprietari del database che desiderano controllare la posizione di singole tabelle delle modifiche possono utilizzare il *@filegroup_name* parametro per specificare un determinato filegroup per la tabella delle modifiche associata all'istanza di acquisizione. È necessario che il filegroup specificato sia già presente. È in genere consigliabile inserire le tabelle delle modifiche in un filegroup distinto dalle tabelle di origine. Vedere il `Enable a Table Specifying Filegroup Option` modello per un esempio che illustra l'uso del *@filegroup_name* parametro.  
   
 ```sql  
 -- =========  
@@ -100,7 +99,7 @@ GO
   
  Lo scopo del ruolo specificato consiste nel controllare l'accesso ai dati delle modifiche. Il ruolo specificato può essere un ruolo predefinito del server esistente o un ruolo del database. Se il ruolo specificato non è già presente, verrà automaticamente creato un ruolo del database con il nome indicato. I membri del ruolo `sysadmin` o `db_owner` dispongono di accesso completo ai dati nelle tabelle delle modifiche. Tutti gli altri utenti devono disporre dell'autorizzazione SELECT per tutte le colonne acquisite della tabella di origine. Quando viene specificato un ruolo, inoltre, gli utenti che non sono membri del ruolo `sysadmin` o `db_owner` devono essere anche membri del ruolo specificato.  
   
- Se non si vuole usare un ruolo di controllo, impostare in modo esplicito *@role_name* il parametro su null. Per un esempio di abilitazione di una tabella senza un ruolo di controllo, vedere il modello `Enable a Table Without Using a Gating Role`.  
+ Se non si vuole usare un ruolo di controllo, impostare in modo esplicito il *@role_name* parametro su null. Per un esempio di abilitazione di una tabella senza un ruolo di controllo, vedere il modello `Enable a Table Without Using a Gating Role`.  
   
 ```sql  
 -- =========  
@@ -164,7 +163,7 @@ EXEC sys.sp_cdc_disable_table
 GO  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Rilevare le modifiche ai dati &#40;SQL Server&#41;](track-data-changes-sql-server.md)   
  [Informazioni su Change Data Capture &#40;SQL Server&#41;](../track-changes/about-change-data-capture-sql-server.md)   
  [Usare i dati delle modifiche &#40;SQL Server&#41;](work-with-change-data-sql-server.md)   

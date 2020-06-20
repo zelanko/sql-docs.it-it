@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b964300c-b220-4244-9fa6-c0c6a57760f6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: bb5dd5968930319532a29ff7c3909c36af99b3a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8800951a2edfa3a71643ba3af65bae2b7cfdc29f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952113"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011843"
 ---
 # <a name="report-server-database-is-not-configured-upgrade-advisor"></a>Il database del server di report non è configurato (Upgrade Advisor)
   L'aggiornamento è bloccato a causa di una configurazione del server di report incompleta. Il database del server di report non è configurato.  
@@ -30,7 +29,7 @@ ms.locfileid: "71952113"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>Descrizione  
- L'installazione può aggiornare solo un'istanza del server di report completamente configurata. Per continuare, è necessario configurare il database del server di report oppure utilizzare il **Pannello di controllo** di Microsoft Windows per rimuovere la funzionalità del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di report dall'installazione di. Dopo la rimozione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è possibile aggiornare gli altri componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ L'installazione può aggiornare solo un'istanza del server di report completamente configurata. Per continuare, è necessario configurare il database del server di report oppure utilizzare il **Pannello di controllo** di Microsoft Windows per rimuovere la funzionalità del server di report dall' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installazione di. Dopo la rimozione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è possibile aggiornare gli altri componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="corrective-action"></a>Azione correttiva  
  Se il database del server di report non è stato configurato, il server di report non è operativo e deve essere rimosso prima dell'aggiornamento.  

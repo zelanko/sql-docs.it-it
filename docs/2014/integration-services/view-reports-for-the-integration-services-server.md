@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dd81edf9-58a9-425a-91ac-2873606e820a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1cfce32afdb334ecba55f082dce80af580a73178
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d80ae1f3f6f29f7ee4dc015c26aa1cf3cc1e891
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054545"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972529"
 ---
 # <a name="view-reports-for-the-integration-services-server"></a>Visualizzare i report per il server Integration Services
   Nella versione corrente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]sono disponibili report standard in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per monitorare i progetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] distribuiti nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  Per altre informazioni sui report, vedere [Report per il server Integration Services](../../2014/integration-services/reports-for-the-integration-services-server.md).  
@@ -38,7 +37,7 @@ ms.locfileid: "66054545"
   
     -   **Tutte le connessioni**  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Report per il server di Integration Services](../../2014/integration-services/reports-for-the-integration-services-server.md)   
  [Distribuire progetti nel server Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
   

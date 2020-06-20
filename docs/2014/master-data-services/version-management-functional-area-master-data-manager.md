@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dc23d80e-9778-44a8-a54e-e81c2ab6e96a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1c9ea0381b9741831b24c0148013925f781b5e02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2a0919c6d1178441ccaa6b81d64bcbe483844ef
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478552"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970891"
 ---
 # <a name="version-management-functional-area-master-data-manager"></a>Area funzionale Gestione versioni (Gestione dati master)
   Nell'area funzionale Gestione versioni, gli amministratori possono convalidare dati, rivedere e invertire transazioni, creare copie di dati con versione e versioni del flag di dati per i sistemi di sottoscrizione. Per altre informazioni sugli amministratori, vedere [Amministratori &#40;Master Data Services&#41;](administrators-master-data-services.md).  
@@ -47,7 +46,7 @@ ms.locfileid: "65478552"
   
  [Invertire una transazione &#40;Master Data Services&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Applicazione Web Gestione dati master](../../2014/master-data-services/master-data-manager-web-application.md)  
   
   

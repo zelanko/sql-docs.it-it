@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8123179285b94377fff758121f535175705f29af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 055482a8cf64527f58ed983b449121a99960f566
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918692"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970534"
 ---
 # <a name="cursors"></a>Cursori
   Nei database relazionali le operazioni vengono eseguite su set di righe completi. Ad esempio, il set di righe restituito dall'istruzione SELECT include tutte le righe che soddisfano le condizioni specificate nella clausola WHERE dell'istruzione. Il set di righe completo restituito dall'istruzione è noto come set di risultati. Le applicazioni, soprattutto le applicazioni online interattive, non sono sempre in grado di gestire in modo efficiente un intero set di risultati come singola unità. In tali applicazioni deve essere pertanto disponibile un meccanismo per l'elaborazione di una riga singola o di un blocco di righe di dimensioni ridotte. I cursori sono un'estensione dei set di risultati che implementano appunto tale meccanismo.  
@@ -61,7 +60,7 @@ ms.locfileid: "62918692"
   
  Anche se i modelli di cursore API del database considerano un cursore forward-only un tipo distinto di cursore, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non fa questa distinzione. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] considera il forward-only e lo scorrimento come opzioni da applicare ai cursori statici, gestiti da keyset e dinamici. [!INCLUDE[tsql](../includes/tsql-md.md)] supportano i cursori dinamici, i cursori gestiti da keyset e i cursori statici forward-only. In base ai modelli di cursore dell'API di database i cursori dinamici, gestiti da keyset o statici sono sempre scorrevoli. I cursori API del database con una proprietà o un attributo impostato su forward-only vengono implementati in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] come cursori forward-only dinamici.  
   
- Static  
+ Statico  
  Il set di risultati completo di un cursore statico viene compilato nel database **tempdb** all'apertura del cursore. Un cursore statico visualizza sempre il set di risultati così come è visualizzato all'apertura del cursore. I cursori statici rilevano poche modifiche o addirittura nessuna, ma utilizzano un numero relativamente ridotto di risorse per lo scorrimento.  
   
  Nel cursore non vengono riportate né le modifiche al database che hanno effetto sull'appartenenza del set di risultati, né le modifiche apportate ai valori inclusi nelle colonne delle righe del set di risultati. Un cursore statico non visualizza le nuove righe inserite nel database dopo l'apertura del cursore, anche se tali righe soddisfano le condizioni di ricerca dell'istruzione SELECT del cursore. Non visualizza inoltre gli aggiornamenti eseguiti da altri utenti nelle righe del set di risultati. Un cursore statico riflette invece le operazioni di eliminazione di righe dal database dopo l'apertura del cursore. Il risultato delle operazioni UPDATE, INSERT e DELETE non viene mai riportato nel cursore statico, né le modifiche eseguite sulla stessa connessione in cui è stato aperto il cursore (a meno che il cursore non venga chiuso e riaperto).  
@@ -115,9 +114,9 @@ ms.locfileid: "62918692"
 ## <a name="related-content"></a>Contenuto correlato  
  [Comportamenti dei cursori](native-client-odbc-cursors/cursor-behaviors.md) [Modalità di implementazione dei cursori](native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [DECLARE CURSOR &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-cursor-transact-sql)   
- [Cursori &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/cursors-transact-sql)   
+ [Cursori &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/cursors-transact-sql)   
  [Funzioni di cursore &#40;&#41;Transact-SQL](/sql/t-sql/functions/cursor-functions-transact-sql)   
  [Stored procedure per cursori &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql)  
   

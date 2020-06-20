@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2776452e0da93cb1f170b6ee3356d95158df6b6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022517"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005380"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Considerazioni e limitazioni relative alla progettazione dei server di pubblicazione Oracle
-  La pubblicazione da un database Oracle è progettata per funzionare in modo quasi identico alla [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pubblicazione da un database. È tuttavia necessario tenere conto delle limitazioni e dei problemi seguenti:  
+  La pubblicazione da un database Oracle è progettata per funzionare in modo quasi identico alla pubblicazione da un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database. È tuttavia necessario tenere conto delle limitazioni e dei problemi seguenti:  
   
 -   L'opzione Oracle Gateway offre prestazioni migliori rispetto all'opzione Oracle Complete, ma non è possibile utilizzarla per pubblicare la stessa tabella in più pubblicazioni transazionali. Una tabella può essere visualizzata al massimo in una pubblicazione transazionale e in qualsiasi numero di pubblicazioni snapshot. Se è necessario pubblicare la stessa tabella in più pubblicazioni transazionali, scegliere l'opzione Oracle Complete.  
   
@@ -149,7 +148,7 @@ ms.locfileid: "63022517"
   
 -   L'account con il quale l'agente snapshot e l'agente di lettura log effettuano la connessione dal server di distribuzione al server di pubblicazione viene specificato mediante uno dei metodi seguenti:  
   
-    -   Il **@security_mode** parametro di [Sp_adddistpublisher &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) (si specificano anche i **@login** valori **@password** per e se viene utilizzata l'autenticazione Oracle)  
+    -   Il **@security_mode** parametro di [sp_adddistpublisher &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) (si specificano anche i valori per **@login** e **@password** se viene utilizzata l'autenticazione Oracle)  
   
     -   La finestra di dialogo **Connetti al server** di SQL Server Management Studio, che viene utilizzata durante la configurazione del server di pubblicazione Oracle nel server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -157,15 +156,15 @@ ms.locfileid: "63022517"
   
 -   Diversamente dalla password, l'account con il quale l'agente snapshot e l'agente di lettura log effettuano le connessioni non può essere modificato con [sp_changedistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql) o mediante una finestra delle proprietà.  
   
--   Se si specifica il valore 1 (autenticazione integrata di Windows) per il **@security_mode** parametro di [Sp_adddistpublisher &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql):  
+-   Se si specifica il valore 1 (autenticazione integrata di Windows) per il **@security_mode** parametro di [sp_adddistpublisher &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql):  
   
-    -   L'account e la password del processo utilizzati per la agente di snapshot e la agente di lettura log **@job_login** ( **@job_password** i parametri e di [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) e sp_addlogreader_agent &#40;[Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)) devono corrispondere all'account e alla password utilizzati per la connessione al server di pubblicazione Oracle.  
+    -   L'account e la password del processo utilizzati per la agente di snapshot e la agente di lettura log (i **@job_login** **@job_password** parametri e di [sp_addpublication_snapshot &#40;transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) e SP_ADDLOGREADER_AGENT &#40;[Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)) devono corrispondere all'account e alla password utilizzati per la connessione al server di pubblicazione Oracle.  
   
-    -   Non è possibile modificare **@job_login** il parametro tramite [Sp_changepublication_snapshot &#40;&#41;Transact-sql](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql) o [SP_CHANGELOGREADER_AGENT &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql), ma è possibile modificare la password.  
+    -   Non è possibile modificare il **@job_login** parametro tramite [sp_changepublication_snapshot &#40;&#41;Transact-sql](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql) o [sp_changelogreader_agent &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql), ma è possibile modificare la password.  
   
  Per ulteriori informazioni sulla sicurezza della replica, vedere [replica di SQL Server sicurezza](../security/view-and-modify-replication-security-settings.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Considerazioni amministrative per i Publisher Oracle](administrative-considerations-for-oracle-publishers.md)   
  [Configurare un server di pubblicazione Oracle](configure-an-oracle-publisher.md)   
  [Panoramica della pubblicazione Oracle](oracle-publishing-overview.md)  

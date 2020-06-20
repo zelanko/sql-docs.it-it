@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5fdf00d1291180197f66cd6cb23cf27f10659c68
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c2ca8360e752146dac13e9cc6a3737ac2373cc9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63183016"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066094"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server - Oggetto Statistiche del pool di risorse
   L'oggetto SQLServer: Statistiche del pool di risorse contiene contatori delle prestazioni che forniscono informazioni sulle statistiche del pool di risorse di Resource Governor.  
@@ -43,14 +42,14 @@ ms.locfileid: "63183016"
 |Memoria di destinazione (KB)|Quantità, in kilobyte (KB), di memoria di destinazione che il pool di risorse tenta di ottenere sulla base delle impostazioni del pool e dello stato del server.|  
 |I/O letti da disco/sec|Numero delle operazioni di lettura dal disco nell'ultimo secondo.|  
 |I/O limitati letti da disco/sec|Numero delle operazioni di lettura limitate nell'ultimo secondo.|  
-|Byte letti da disco/sec |Numero di byte letti dal disco nell'ultimo secondo.|  
+|Byte letti da disco/sec|Numero di byte letti dal disco nell'ultimo secondo.|  
 |I/O letti da disco (ms)|Tempo medio in millisecondi, richiesto per un'operazione di lettura dal disco.|  
 |I/O scritti su disco/sec|Numero delle operazioni di scrittura su disco nell'ultimo secondo.|  
 |I/O limitati scritti su disco/sec|Numero delle operazioni di scrittura limitate nell'ultimo secondo.|  
 |Byte scritti su disco/sec|Numero di byte scritti su disco nell'ultimo secondo.|  
 |I/O scritti su disco (ms)|Tempo medio in millisecondi, richiesto per un'operazione di scrittura su disco.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Monitorare l'utilizzo delle risorse &#40;monitoraggio di sistema&#41;](monitor-resource-usage-system-monitor.md)   
  [SQL Server, oggetto statistiche gruppo del carico di lavoro](sql-server-workload-group-stats-object.md)   
  [Resource Governor](../resource-governor/resource-governor.md)  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e39106ea1c4077d1aee90cedc17c5af07503a136
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40bdbcd98e70ae8ea318ba8ca0243f11107bd61b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919540"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954931"
 ---
 # <a name="using-systemtransactions"></a>Utilizzo di System.Transactions
   Tramite lo spazio dei nomi `System.Transactions` vengono forniti un framework di transazioni pienamente integrato con ADO.NET e l'integrazione con CRL di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La classe `System.Transactions.TransactionScope` rende transazionale un blocco di codice attraverso un'integrazione implicita delle connessioni in una transazione distribuita. È necessario chiamare il metodo `Complete` alla fine del blocco di codice contrassegnato da `TransactionScope`. Il metodo `Dispose` viene richiamato quando l'esecuzione del programma lascia un blocco di codice. Se il metodo `Complete` non viene chiamato, la transazione non viene più utilizzata. Se è stata generata un'eccezione che determina l'uscita del codice dall'ambito, la transazione non viene più utilizzata.  
@@ -105,7 +104,7 @@ using (TransactionScope transScope = new TransactionScope())
 }  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integrazione con CLR e transazioni](../native-client-ole-db-transactions/transactions.md)  
   
   

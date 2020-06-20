@@ -13,24 +13,23 @@ helpviewer_keywords:
 ms.assetid: 8b9ea8d3-827c-4011-9e02-be2eac3bb364
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5bf32c8427679b342bee89d6541b051beed2e8ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da332b609a42c5e03e9463333cf04956e690887e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952295"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036962"
 ---
 # <a name="connect-to-a-native-mode-report-server"></a>Connettersi a un server di report in modalità nativa
   Utilizzare questa finestra di dialogo per connettersi a un'istanza locale o remota del server di report [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versione successiva [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Non è possibile utilizzare questo strumento per connettersi a versioni precedenti di server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . È possibile connettersi a una singola istanza per volta.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità nativa.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modalità nativa.  
   
 > [!NOTE]  
 >  Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è utilizzato per configurare e amministrare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint. Utilizzare Amministrazione centrale SharePoint e script di PowerShell per configurare un server di report in modalità SharePoint. Per ulteriori informazioni, vedere [Install Reporting Services modalità SharePoint per sharepoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)  
   
 > [!TIP]  
->  Il[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager (RSConfigTool. exe) viene installato con un livello di privilegio "highestAvailable". Questo comportamento dipende dalla progettazione. Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] richiede la comunicazione con le API di WMI per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Una parte della comunicazione di WMI per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] richiede un livello superiore o privilegi amministrativi.  
+>  Il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager (RSConfigTool.exe) viene installato con un livello di privilegio "highestAvailable". Questo comportamento dipende dalla progettazione. Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] richiede la comunicazione con le API di WMI per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Una parte della comunicazione di WMI per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] richiede un livello superiore o privilegi amministrativi.  
   
 -   Per connettersi a un'istanza locale del server di report, utilizzare i valori predefiniti e fare clic su **Connetti**. Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornisce il nome del server locale e rileva l'istanza predefinita. Nella maggior parte dei casi, è possibile fare clic su **Connetti** senza dovere modificare i valori. Se sono state installate più istanze, è necessario selezionare quella che si desidera utilizzare.  
   

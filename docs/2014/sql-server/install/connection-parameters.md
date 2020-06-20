@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f754d038-637a-4d8e-85b0-b242e6499d26
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ca5d6ed8f1e8a92d22bd32e39c8afe946a0fcfee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 27eb69dfd2c41710a47861e0992486267f692a3a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095982"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036933"
 ---
 # <a name="connection-parameters"></a>Parametri di connessione
   Per analizzare determinati tipi di server, ad esempio il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], è necessario selezionare un'istanza specifica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Viene automaticamente selezionata l'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile modificare questa selezione, selezionando però solo un'istanza alla volta per l'analisi da Preparazione aggiornamento. Se è stato incluso un tipo di server che richiede l'autenticazione, è necessario immettere la modalità di autenticazione e le credenziali.  
@@ -32,7 +31,7 @@ ms.locfileid: "66095982"
  **Nome server**  
  Questo campo viene prepopolato con il nome del computer immesso nel riquadro Componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **Nome dell'istanza**  
+ **Nome istanza**  
  Selezionare una delle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibili nel computer. Se l'elenco di istanze non viene visualizzato, utilizzare MSSQLSERVER per analizzare l'istanza predefinita. Ciò riguarda soprattutto i computer remoti. È anche possibile utilizzare l'espressione "valore predefinito" per analizzare l'istanza predefinita.  
   
  **autenticazione**  
@@ -47,7 +46,7 @@ ms.locfileid: "66095982"
  **Password**  
  Immettere la password per l'utente specificato.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzo di preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [Guida di riferimento all'interfaccia utente di Preparazione aggiornamento](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
   

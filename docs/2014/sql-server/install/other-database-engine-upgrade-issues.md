@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 78a1d8e8-fa97-476f-8777-84617d145340
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f247f9addde6baa949f3260d7a9d9f86ce0c5bff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2890a61850526f7506713b3f900d67b8d41d0bfb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093694"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012142"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>Altri problemi di aggiornamento del motore di database
   I problemi di aggiornamento seguenti non possono essere rilevati dalla versione corrente di Preparazione aggiornamento. Esaminare i problemi elencati di seguito per valutarne il potenziale impatto sui sistemi.  
@@ -84,7 +83,7 @@ ms.locfileid: "66093694"
   
 4.  Eliminare lo schema CDC utilizzando DROP SCHEMA.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Problemi di aggiornamento del motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
   
   

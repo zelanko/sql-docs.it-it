@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3da1ee6e-489d-4436-9fcb-bb0a57f9ae9a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b48b7b4f106b7be318777d6041c5574f9d6c3039
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 74da8a87ee5ea7797af31d0b01033d361dd9f673
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054504"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972516"
 ---
 # <a name="view-package-objects-in-package-explorer"></a>Visualizzazione degli oggetti dei pacchetti in Esplora pacchetti
   Questa procedura descrive come visualizzare in Esplora pacchetti gli oggetti contenuti in un pacchetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -42,7 +41,7 @@ ms.locfileid: "66054504"
   
 -   Fare clic con il pulsante destro del mouse su un oggetto, quindi scegliere **Elimina**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Visualizzazione di oggetti di pacchetto](view-package-objects.md)  
   
   

@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: a493a459-e7ea-4629-a14c-684d8c57e310
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f6c9f133af7b8054414f6867f41cee3022d68925
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: efd380c4db55086adaf7e7ae522b18a953471dab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091683"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011762"
 ---
 # <a name="upgrade-advisor-errors"></a>Errori di Preparazione aggiornamento
   Gli errori di Preparazione aggiornamento possono essere visualizzati nel Visualizzatore report. Tali errori sono collegati a questo argomento della Guida.  
   
  È possibile ignorare qualsiasi problema elencato nel Visualizzatore report collegato a questo argomento.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Risoluzione dei problemi di aggiornamento](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   
   

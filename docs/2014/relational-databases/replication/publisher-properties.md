@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2ea467b00223e31ec7672d4d54a49150cf05368c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3e14f82e855cc29f83859d85dfdaaf85a1bda37
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63261980"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005098"
 ---
 # <a name="sql-server-replication-publisher-properties"></a>Proprietà del server di replica di SQL Server
   In questa sezione vengono fornite informazioni sulle proprietà del server di pubblicazione disponibili nel server di distribuzione e nel server di pubblicazione. 
@@ -61,7 +60,7 @@ ms.locfileid: "63261980"
  **Transazionale**  
  Selezionare questa casella di controllo per consentire agli utenti membri del ruolo predefinito del database **db_owner** di creare pubblicazioni snapshot o pubblicazioni transazionali nel database. 
   
- **Merge**  
+ **Unione**  
  Selezionare questa casella di controllo per consentire agli utenti membri del ruolo predefinito del database **db_owner** di creare pubblicazioni di tipo merge nel database.  
 
 ## <a name="subscribers"></a>Sottoscrittori
@@ -75,7 +74,7 @@ ms.locfileid: "63261980"
  **Aggiungere**  
  Fare clic su **Aggiungi** per aggiungere un Sottoscrittore e quindi fare clic su **Aggiungi Sottoscrittore SQL Server** o su **Aggiungi Sottoscrittore non SQL Server**.  
 
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](view-and-modify-distributor-and-publisher-properties.md)   
 
   

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 724802f7-7d69-46d3-a330-bd8aa7f53114
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 15f4d85d117b5af09b0f67ef788364be6adad810
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bcd0ff19b892beb9bb46f428f857d465f55fbcb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745492"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004407"
 ---
 # <a name="synchronize-data"></a>Sincronizzare i dati
   La sincronizzazione dei dati è il processo di propagazione dei dati e delle modifiche di schema tra il server di pubblicazione e i Sottoscrittori dopo l'applicazione dello snapshot iniziale al Sottoscrittore. La sincronizzazione può verificarsi:  

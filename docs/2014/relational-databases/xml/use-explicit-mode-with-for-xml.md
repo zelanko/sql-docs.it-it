@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0592a7635b0208624ab511af4ef68382548090c8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7e3db80333c74166301fcff7bb25edea4aca38a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702409"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059395"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Utilizzo della modalità EXPLICIT con FOR XML
   Come illustrato nell'argomento [Costruzione di codice XML tramite la clausola FOR XML](../xml/for-xml-sql-server.md), le modalità RAW e AUTO forniscono scarso controllo sulla forma del codice XML generato dai risultati della query. La modalità EXPLICIT tuttavia offre maggiore flessibilità nella generazione del codice XML desiderato dal risultato di una query.  
@@ -111,7 +110,7 @@ ElementName!TagNumber!AttributeName!Directive
  Di seguito è fornita la descrizione delle parti del formato.  
   
  *ElementName*  
- Identificatore generico risultante dell'elemento. Ad esempio, se **Customers** viene specificato come *ElementName*, verrà generato l'elemento \<Customers>.  
+ Identificatore generico risultante dell'elemento. Se, ad esempio, **Customers** viene specificato come *ElementName*, \<Customers> viene generato l'elemento.  
   
  *TagNumber*  
  È un valore di tag univoco assegnato a un elemento. Questo valore, insieme alle due colonne di metadati **Tag** e **Parent**, determina l'annidamento degli elementi nel codice XML risultante.  

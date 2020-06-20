@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d6f871fabba547268736dca990215b89ae84e9eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ab93a3514fa260c8c3836da85c767da3c3051a1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011183"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004058"
 ---
 # <a name="populate-full-text-indexes"></a>Popolamento degli indici full-text
   La creazione e la gestione di un indice full-text comporta il popolamento dell'indice con un processo denominato *popolamento* , noto anche con il termine *ricerca per indicizzazione*.  
@@ -104,7 +103,7 @@ ms.locfileid: "66011183"
 > [!NOTE]  
 >  Negli esempi inclusi in questa sezione viene utilizzata la tabella `Production.Document` o `HumanResources.JobCandidate` del database di esempio `AdventureWorks` .  
   
-### <a name="a-creating-a-full-text-index-without-running-a-full-population"></a>A. Creazione di un indice full-text senza eseguire un popolamento completo  
+### <a name="a-creating-a-full-text-index-without-running-a-full-population"></a>R. Creazione di un indice full-text senza eseguire un popolamento completo  
  Nell'esempio seguente viene creato un indice full-text nella tabella `Production.Document` del database di esempio `AdventureWorks` . In questo esempio viene utilizzato WITH CHANGE_TRACKING OFF, NO POPULATION per rimandare il popolamento completo iniziale.  
   
 ```  
@@ -211,7 +210,7 @@ GO
 ##  <a name="troubleshooting-errors-in-a-full-text-population-crawl"></a><a name="crawl"></a>Risoluzione degli errori in un popolamento full-text (Ricerca per indicizzazione)  
  Quando si verifica un errore durante una ricerca per indicizzazione, la funzionalità di registrazione corrispondente per la ricerca full-text crea e gestisce un log di tipo ricerca per indicizzazione in formato testo normale. Ogni log di tipo ricerca per indicizzazione corrisponde a un catalogo full-text specifico. Per impostazione predefinita, i log di tipo ricerca per indicizzazione per un'istanza specifica, in questo caso la prima, si trovano nella cartella %Programmi%\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\LOG. Il file del log di tipo ricerca per indicizzazione segue lo schema di denominazione seguente:  
   
- SQLFT\<DatabaseID>\<idcatalogofulltext>. LOG [\<n>]  
+ SQLFT \<DatabaseID> \<FullTextCatalogID> . LOG [ \<n> ]  
   
  <`DatabaseID`>  
  ID di un database. <`dbid`> è un numero a cinque cifre con zeri iniziali.  
@@ -226,7 +225,7 @@ GO
   
 
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sys. dm_fts_index_population &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)   
  [Introduzione alla ricerca full-text](get-started-with-full-text-search.md)   
  [Creazione e gestione di indici full-text](create-and-manage-full-text-indexes.md)   

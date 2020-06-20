@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb403330-8cbe-41c6-bd23-bc432d50f173
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 13ec879395358536485fb0d80e7ab1a2a19d4823
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 98ac88aec42b53012e0f57233a089bddbd3c8cae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316470"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035705"
 ---
 # <a name="development-test-and-production-databases-visual-database-tools"></a>Database di sviluppo, verifica e produzione (Visual Database Tools)
   Se si dispone di due database con la stessa struttura, è possibile apportare alcune modifiche in uno di essi e propagarle nell'altro. Se, ad esempio, si utilizzano un database di sviluppo personale e un database di verifica condiviso dall'intero gruppo di lavoro, è possibile modificare il database di sviluppo e propagare le modifiche al database di verifica.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e281684c-40d1-4cf9-a0d4-7ea1ecffa384
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f7be4c1cc392516ffaf6d1e36fc10b93b517d772
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75270f5ce03de820828da65c765044a7dafdcb8f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088865"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928862"
 ---
 # <a name="sql-server-extended-events-targets"></a>SQL Server Extended Events Targets
   Le destinazioni degli eventi estesi di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sono consumer di eventi. Le destinazioni possono scrivere in un file, archiviare dati evento in un buffer di memoria o dati degli eventi di aggregazione. Le destinazioni possono elaborare i dati in modo sincrono o asincrono.  
@@ -31,7 +30,7 @@ ms.locfileid: "66088865"
   
      Conta tutti gli eventi specificati che si verificano durante una sessione di eventi estesi. Consente di ottenere informazioni sulle funzionalità del carico di lavoro senza aggiungere l'overhead di un'intera raccolta di eventi. Si tratta di una destinazione sincrona.  
   
--   [File di eventi](../../2014/database-engine/event-file-target.md)  
+-   [File di evento](../../2014/database-engine/event-file-target.md)  
   
      Consente di scrivere l'output della sessione eventi restituito dai buffer di memoria completi su disco. Si tratta di una destinazione asincrona.  
   
@@ -51,7 +50,7 @@ ms.locfileid: "66088865"
   
      Consente di mantenere i dati degli eventi in memoria secondo una modalità FIFO o secondo una modalità FIFO basata sul tipo di evento. Si tratta di una destinazione asincrona.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../relational-databases/extended-events/extended-events.md)   
  [SQL Server pacchetti di eventi estesi](../relational-databases/extended-events/sql-server-extended-events-packages.md)   
  [SQL Server sessioni eventi estesi](../relational-databases/extended-events/sql-server-extended-events-sessions.md)   

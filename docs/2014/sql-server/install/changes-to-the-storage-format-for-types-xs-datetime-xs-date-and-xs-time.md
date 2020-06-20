@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b9f758df-030c-4aec-8ade-1bf904aa2c61
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0f631783aad92757edd4faae41cd43c06c431887
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aacaaf8fc69f4b18154e5a4df9a3662fb9ae0650
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096613"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037157"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>Modifiche al formato di archiviazione per i tipi xs:dateTime, xs:date e xs:time
   La regola XMLDATETIME identifica se i database contengono o meno dati XML tipizzati che non saranno più validi dopo l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -29,7 +28,7 @@ ms.locfileid: "66096613"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Descrizione  
- Il formato di archiviazione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in per i tipi xs: DateTime, XS: date e xs: Time è stato modificato per supportare valori con o senza informazioni sul fuso orario e per consentire la conservazione del fuso orario.  
+ Il formato di archiviazione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] per i tipi xs: DateTime, XS: date e xs: Time è stato modificato per supportare valori con o senza informazioni sul fuso orario e per consentire la conservazione del fuso orario.  
   
  Se una raccolta XML Schema fa riferimento a uno di tali tipi, gli indici XML di tutte le colonne associate alla raccolta verranno disabilitati dopo l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Sarà possibile sottoporli a query utilizzando SELECT e/o XQUERIES, ma l'indice XML non verrà utilizzato. Se viene rilevato un valore di anno negativo, verrà generato un errore di runtime.  
   
@@ -185,7 +184,7 @@ EXECUTE DateTimeInvestigation 1;
   
  Per utilizzare indici XML in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], dopo l'aggiornamento è necessario ricompilare gli indici XML o ritipizzare le colonne XML per tutte le colonne che utilizzano xs:date, xs:time o xs:dateTime.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Problemi di aggiornamento del motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
   
   
