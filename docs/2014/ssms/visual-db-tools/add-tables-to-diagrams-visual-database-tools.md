@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5440fdf7-ac04-4325-9f32-181f4cd402e5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 26c13eb6c9cb142cac3ba0981177fb2c605ab5fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bbbbf196000b8eeb19abebecbce48be8bd4ffd6c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63297902"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058205"
 ---
 # <a name="add-tables-to-diagrams-visual-database-tools"></a>Aggiunta di tabelle a diagrammi (Visual Database Tools)
   È possibile aggiungere una tabella al diagramma di database per modificarne la struttura o per correlarla ad altre tabelle nel diagramma, aggiungendo una tabella di database esistente o inserendone una nuova non ancora definita nel database.  

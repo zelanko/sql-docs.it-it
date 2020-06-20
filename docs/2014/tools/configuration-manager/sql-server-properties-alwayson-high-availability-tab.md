@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 author: mikeraymsft
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4e15cc28354d8dc77b579008feabbc6d13efb63d
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: cc145da0b6296d3f6e048905e4ab4e649294d38a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939092"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048486"
 ---
 # <a name="sql-server-properties-alwayson-high-availability-tab"></a>Proprietà SQL Server (scheda Disponibilità elevata AlwaysOn)
   Utilizzare la scheda **Disponibilità elevata AlwaysOn** della finestra di dialogo **Proprietà SQL Server** in Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per abilitare o disabilitare la caratteristica dei gruppi di disponibilità AlwaysOn in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. L'abilitazione dei gruppi di disponibilità AlwaysOn rappresenta un prerequisito per consentire a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di utilizzare i gruppi di disponibilità come soluzione a disponibilità elevata e di ripristino di emergenza.  
@@ -39,7 +38,7 @@ ms.locfileid: "84939092"
  **Nome cluster di failover Windows**  
  Consente di visualizzare il nome del cluster WSFC in cui il computer locale è un nodo.  
   
- **Abilitare Gruppi di disponibilità AlwaysOn**  
+ **Abilitare Gruppi di disponibilità AlwaysOn in Azure**  
  Utilizzare questa casella di controllo per abilitare o disabilitare i gruppi di disponibilità AlwaysOn in questa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nel modo seguente:  
   
 -   Se la casella è deselezionata, i gruppi di disponibilità AlwaysOn sono attualmente disabilitati. Per abilitarli, selezionare la casella di controllo, fare clic su **OK**e riavviare manualmente il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 9244f32b2ee9921d1caaa63b5d6aae9c324049ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fdd093d99d055df8e15fc22e3e570e6805e35d6e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014212"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003308"
 ---
 # <a name="multilinestring"></a>MultiLineString
   Un `MultiLineString` è una raccolta di zero o più `geometry` istanze di o **GeographyLineString** .  
@@ -29,7 +28,7 @@ ms.locfileid: "66014212"
   
  Come indicato nell'illustrazione:  
   
--   La figura 1 è un' `MultiLineString` istanza semplice il cui limite è costituito dai quattro endpoint `LineString` dei due elementi.  
+-   La figura 1 è un' `MultiLineString` istanza semplice il cui limite è costituito dai quattro endpoint dei due `LineString` elementi.  
   
 -   La figura 2 è un'istanza di tipo semplice `MultiLineString` perché si intersecano solo gli endpoint degli elementi `LineString`. Il limite è rappresentato dai due endpoint non sovrapposti.  
   
@@ -42,7 +41,7 @@ ms.locfileid: "66014212"
 -   La figura 6 rappresenta un'istanza di tipo semplice e chiuso `MultiLineString`. È chiusa perché tutti i suoi elementi sono chiusi. È semplice perché nessuno dei suoi elementi si interseca con le parti interne.  
   
 ### <a name="accepted-instances"></a>Istanze accettate  
- Per poter essere accettata, un'istanza di `MultiLineString` deve essere vuota o comprendere esclusivamente istanze di `LineString` accettate. Per ulteriori informazioni sulle istanze `LineString` accettate, vedere [LineString](../spatial/linestring.md). Negli esempi seguenti vengono illustrate alcune istanze `MultiLineString` accettate.  
+ Per poter essere accettata, un'istanza di `MultiLineString` deve essere vuota o comprendere esclusivamente istanze di `LineString` accettate. Per ulteriori informazioni sulle istanze accettate `LineString` , vedere [LineString](../spatial/linestring.md). Negli esempi seguenti vengono illustrate alcune istanze `MultiLineString` accettate.  
   
 ```  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  

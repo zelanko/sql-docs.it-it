@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e7c2a5b5-83f4-4c72-9aca-7b9fb4748b11
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 36a5d580b6edb04f51d2fcf77dcc8ff0c8ba042f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 68188506546e7b4a5dd4c05bc9a94cbf34300001
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706144"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022567"
 ---
 # <a name="sqlexecdirect"></a>SQLExecDirect
   Se l'attributo Statement SQL_SOPT_SS_PARAM_FOCUS non è 0, SQLExecDirect restituirà SQL_ERROR e genererà un record di diagnostica con SQLSTATE = HY024 e il messaggio "valore attributo non valido, SQL_SOPT_SS_PARAM_FOCUS (deve essere zero in fase di esecuzione)". Per ulteriori informazioni su SQL_SOPT_SS_PARAM_FOCUS, vedere [SQLSetStmtAttr](sqlsetstmtattr.md).  

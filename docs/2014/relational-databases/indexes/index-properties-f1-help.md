@@ -17,13 +17,12 @@ f1_keywords:
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d97fecf49f9d74e2a74444c12dfdf598fb1da469
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 390a63d21dc72e052017f2d30b061d71de863bc1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161892"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049896"
 ---
 # <a name="index-properties-f1-help"></a>Guida sensibile al contesto di Proprietà indice
   Le sezioni in questo argomento fanno riferimento a varie proprietà di indice disponibili tramite le finestre di dialogo di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
@@ -93,7 +92,7 @@ ms.locfileid: "63161892"
  Indica se la colonna che partecipa alla chiave dell'indice consente l'archiviazione di valori Null nella colonna della tabella o della vista.  
   
  **Aggiungere**  
- Consente di aggiungere una colonna alla chiave dell'indice. Selezionare le colonne della tabella nella finestra di dialogo **Seleziona colonne da** *\<nome tabella>* che viene visualizzata quando si fa clic su **Aggiungi**. In caso di indice spaziale, questo pulsante viene visualizzato in grigio dopo la selezione di una colonna.  
+ Consente di aggiungere una colonna alla chiave dell'indice. Selezionare le colonne della tabella nella finestra di dialogo **Seleziona colonne da** *\<table name>* che viene visualizzata quando si fa clic su **Aggiungi**. In caso di indice spaziale, questo pulsante viene visualizzato in grigio dopo la selezione di una colonna.  
   
  **Rimuovi**  
  Consente di rimuovere la colonna selezionata dalla partecipazione alla chiave dell'indice.  
@@ -180,7 +179,7 @@ ms.locfileid: "63161892"
 ### <a name="bounding-box"></a>Riquadro  
  Si definisce *riquadro* il perimetro della griglia di livello principale di un piano geometrico. I parametri del riquadro sono presenti solo nello schema a mosaico griglia geometrica. Questi parametri non sono disponibili se **Schema a mosaico** è impostato su **Griglia geografica**.  
   
- Nel pannello vengono visualizzate **le*`X-min`* coordinate*`Y-min`*(,)** e ***`X-max`*(,*`Y-max`*)** del rettangolo di delimitazione. Non esistono valori predefiniti, pertanto, quando si crea un indice spaziale nuovo su una colonna di tipo `geometry`, è necessario specificare i valori delle coordinate.  
+ Nel pannello vengono visualizzate le coordinate **( *`X-min`* , *`Y-min`* )** e **( *`X-max`* , *`Y-max`* )** del rettangolo di delimitazione. Non esistono valori predefiniti, pertanto, quando si crea un indice spaziale nuovo su una colonna di tipo `geometry`, è necessario specificare i valori delle coordinate.  
   
  `X-min`  
  La coordinata X dell'angolo inferiore sinistro del riquadro.  
@@ -226,7 +225,7 @@ ms.locfileid: "63161892"
  **Livello 2**  
  Densità della griglia di secondo livello.  
   
- **Livello 3**  
+ **Level 3**  
  Densità della griglia di terzo livello.  
   
  **Livello 4**  
@@ -236,9 +235,9 @@ ms.locfileid: "63161892"
  Usare questa pagina per immettere il predicato del filtro per un indice filtrato. Per altre informazioni, vedere [Create Filtered Indexes](create-filtered-indexes.md).  
   
  **Espressione filtro**  
- Definisce le righe di dati da includere nell'indice filtrato. Ad esempio: `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
+ Definisce le righe di dati da includere nell'indice filtrato. Ad esempio, usare `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Impostare le opzioni per gli indici](set-index-options.md)   
  [INDEXPROPERTY &#40;&#41;Transact-SQL](/sql/t-sql/functions/indexproperty-transact-sql)   
  [sys.indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)  

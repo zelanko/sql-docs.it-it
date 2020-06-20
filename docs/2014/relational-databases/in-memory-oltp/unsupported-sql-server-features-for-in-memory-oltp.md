@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4a5ec9cefd0106a8e6eb4d796921efe147bea446
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e7eb4324d56c3ab45486063cb8097603ac3a416b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702218"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050013"
 ---
 # <a name="supported-sql-server-features"></a>Funzionalità di SQL Server supportate
   In questo argomento vengono illustrate le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportate o non supportate per l'utilizzo con oggetti ottimizzati per la memoria.  
@@ -33,7 +32,7 @@ ms.locfileid: "82702218"
   
 -   Controllo di più versioni e controllo della concorrenza ottimistica. Per altre informazioni, vedere [Transaction Isolation Levels](../../database-engine/transaction-isolation-levels.md).  
   
--   Backup e ripristino di un database che contiene filegroup di dati ottimizzati per la memoria. Per altre informazioni, vedere [Backup e ripristino di database SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md).  
+-   Backup e ripristino di un database che contiene filegroup di dati ottimizzati per la memoria. Per ulteriori informazioni, vedere [backup e ripristino di database SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
 -   Viste del catalogo, viste a gestione dinamica (DMV) ed eventi estesi per il supporto. Per altre informazioni, vedere [Viste di sistema, stored procedure, tipi di attesa e DMV per OLTP in memoria](../../database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md).  
   
@@ -88,7 +87,7 @@ ms.locfileid: "82702218"
 |Server collegato|Per altre informazioni, vedere [Server collegati &#40;Motore di database&#41;](../linked-servers/linked-servers-database-engine.md).|  
 |Registrazione bulk|Indipendentemente dal modello di recupero del database, tutte le operazioni nelle tabelle durevoli ottimizzate per la memoria vengono sempre registrate completamente.|  
 |Registrazione minima|La registrazione minima non è supportata dalle tabelle ottimizzate per la memoria. Per altre informazioni sulla registrazione minima, vedere [Log delle transazioni &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md) e [Prerequisiti per la registrazione minima nell'importazione in blocco](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md).|  
-|Rilevamento modifiche|È possibile abilitare il rilevamento delle modifiche in un database con oggetti di OLTP in memoria, tuttavia le modifiche nelle tabelle ottimizzate per la memoria non vengono rilevate.|  
+|Change tracking|È possibile abilitare il rilevamento delle modifiche in un database con oggetti di OLTP in memoria, tuttavia le modifiche nelle tabelle ottimizzate per la memoria non vengono rilevate.|  
 |trigger DDL|I trigger DDL a livello di database non sono supportati con tabelle di OLTP in memoria e stored procedure compilate in modo nativo.|  
 |Change Data Capture (CDC)|Evitare di abilitare CDC in un database che include oggetti di OLTP in memoria, poiché impedisce determinate operazioni, ad esempio DROP.|  
 |Indipendenza del database|L'indipendenza del database non è supportata in un database che include stored procedure compilate in modo nativo e tabelle ottimizzate per la memoria. Per altre informazioni, vedere [Contained Databases](../databases/contained-databases.md)|  
@@ -105,7 +104,7 @@ ms.locfileid: "82702218"
   
  Salvo alcune eccezioni, le transazioni tra database non sono supportate. Nella tabella seguente vengono descritti i casi supportati e le relative restrizioni. Vedere anche [Query tra database](cross-database-queries.md).  
   
-|Database|Consentito|Description|  
+|Database|Consentito|Descrizione|  
 |---------------|-------------|-----------------|  
 |Database utente, model e msdb|No|Query e transazioni tra database non sono supportate.<br /><br /> Query e transazioni che accedono a tabelle ottimizzate per la memoria o a stored procedure compilate in modo nativo non possono accedere ad altri database, ad eccezione del master del database di sistema (accesso in sola lettura) e di tempdb.|  
 |Database delle risorse e tempdb|Sì|Non vi sono restrizioni per le transazioni tra database che, oltre a un singolo database utente, utilizzano solo un database delle risorse e tempdb.|  

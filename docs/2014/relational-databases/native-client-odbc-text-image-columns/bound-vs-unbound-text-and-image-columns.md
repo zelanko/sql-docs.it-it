@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ffd3442e-d880-46e9-b848-2365a09a2406
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 306abff20146ec5004b515578f5c71b8cb574bba
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 20a91d26ac8c2d1201386cb19bde13b49a3dbada
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718866"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999008"
 ---
 # <a name="bound-vs-unbound-text-and-image-columns"></a>Colonne di tipo text e image associate e non associate
   Quando si utilizzano i cursori server, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client è ottimizzato per non trasmettere i dati per le colonne di tipo **Text**, **ntext**o **Image** non associato al momento dell'esecuzione di **SQLFetch** . I dati di tipo **Text**, **ntext**o **Image** non vengono effettivamente recuperati dal server fino a quando l'applicazione non rilascia [SQLGetData](../native-client-odbc-api/sqlgetdata.md) per la colonna.  

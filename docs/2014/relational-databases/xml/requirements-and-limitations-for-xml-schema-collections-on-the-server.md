@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: efee2d8c9dea38beda1ba3398230dce8d1163d77
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 41e27204bf472d905f420d665c206b840582e8de
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702530"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065492"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Requisiti e limitazioni per l'utilizzo di raccolte di XML Schema nel server
   Esistono alcune limitazioni relative alla convalida del linguaggio XML Schema Definition (XSD) per le colonne SQL che utilizzano il tipo di dati `xml`. La tabella seguente fornisce informazioni dettagliate su tali limitazioni, nonché alcune linee guida per modificare lo schema XSD in modo che sia supportato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli argomenti in questa sezione forniscono informazioni aggiuntive su limiti specifici e indicazioni per il loro utilizzo.  
@@ -37,20 +36,20 @@ ms.locfileid: "82702530"
 |Elemento|Limitazione|  
 |----------|----------------|  
 |**minOccurs** e **maxOccurs**|I valori degli attributi **minOccurs** e **maxOccurs** devono essere contenibili in Integer a 4 byte. Gli schemi che non sono conformi vengono rifiutati dal server.|  
-|**\<xsd:choice>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rifiuta gli schemi che includono una particella **\<xsd:choice>** senza elementi figlio, a meno che la particella non sia definita con un attributo **minOccurs** di valore pari a zero.|  
-|**\<xsd:include>**|Attualmente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta questo elemento. Gli elementi XML Schema che includono tale elemento vengono rifiutati dal server.<br /><br /> Per risolvere questo problema, è possibile eseguire la pre-elaborazione di XML Schema che includono la direttiva **\<xsd:include>** per copiare e unire il contenuto di tutti gli schemi inclusi in un singolo schema da caricare nel server. Per alte informazioni, vedere [Pre-elaborazione di uno schema per unire schemi inclusi](preprocess-a-schema-to-merge-included-schemas.md).|  
-|**\<xsd:key>** , **\<xsd:keyref>** e **\<xsd:unique>**|Attualmente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta questi seguenti vincoli basati su XSD per imporre l'univocità o stabilire chiavi e relativi riferimenti. Non è possibile registrare XML Schema che contengono questi elementi.|  
+|**\<xsd:choice>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]rifiuta gli schemi che contengono una **\<xsd:choice>** particella senza elementi figlio, a meno che la particella non sia definita con un attributo **minOccurs** di valore pari a zero.|  
+|**\<xsd:include>**|Attualmente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta questo elemento. Gli elementi XML Schema che includono tale elemento vengono rifiutati dal server.<br /><br /> Come soluzione, gli schemi XML che includono la **\<xsd:include>** direttiva possono essere pre-elaborati per copiare e unire il contenuto di tutti gli schemi inclusi in un singolo schema per il caricamento nel server. Per alte informazioni, vedere [Pre-elaborazione di uno schema per unire schemi inclusi](preprocess-a-schema-to-merge-included-schemas.md).|  
+|**\<xsd:key>**, **\<xsd:keyref>** e**\<xsd:unique>**|Attualmente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta questi seguenti vincoli basati su XSD per imporre l'univocità o stabilire chiavi e relativi riferimenti. Non è possibile registrare XML Schema che contengono questi elementi.|  
 |**\<xsd:redefine>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta questo elemento. Per informazioni su un'altra modalità di aggiornamento degli schemi, vedere [Elemento &#60;xsd:redefine&#62;](the-xsd-redefine-element.md).|  
-|Valori **\<xsd:simpleType>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta soltanto la precisione in millisecondi per i tipi semplici che hanno un secondo componente diverso rispetto a `xs:time` e `xs:dateTime` e una precisione da 100 nanosecondi per `xs:time` e `xs:dateTime`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pone limiti a tutte le enumerazioni di tipo semplice XSD riconosciute.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta l'uso del valore "NaN" nelle dichiarazioni **\<xsd:simpleType>** .<br /><br /> Per alte informazioni, vedere[Valori per dichiarazioni &#60;xsd:simpleType&#62;](values-for-xsd-simpletype-declarations.md).|  
+|**\<xsd:simpleType>** valori|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta soltanto la precisione in millisecondi per i tipi semplici che hanno un secondo componente diverso rispetto a `xs:time` e `xs:dateTime` e una precisione da 100 nanosecondi per `xs:time` e `xs:dateTime`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pone limiti a tutte le enumerazioni di tipo semplice XSD riconosciute.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]non supporta l'utilizzo del valore "NaN" nelle **\<xsd:simpleType>** dichiarazioni.<br /><br /> Per alte informazioni, vedere[Valori per dichiarazioni &#60;xsd:simpleType&#62;](values-for-xsd-simpletype-declarations.md).|  
 |**xsi:schemaLocation** e **xsi:noNamespaceSchemaLocation**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignora questi attributi se sono presenti nei dati dell'istanza XML inseriti in una colonna o una variabile con tipo di dati `xml`.|  
-|**xs:QName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta tipi derivati da **xs:QName** che usano un elemento di restrizione XML Schema.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta tipi di unione con **xs:QName** come elemento membro.<br /><br /> Per altre informazioni, vedere [Xs:Tipo QName](the-xs-qname-type.md).|  
+|**XS: QName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]non supporta i tipi derivati da **xs: QName** che usano un elemento di restrizione di XML Schema.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]non supporta tipi di Unione con **xs: QName** come elemento membro.<br /><br /> Per altre informazioni, vedere [Xs:Tipo QName](the-xs-qname-type.md).|  
 |Aggiunta di membri a un gruppo di sostituzione esistente|Non è possibile aggiungere membri a un gruppo di sostituzione esistente in una raccolta di XML Schema. La restrizione relativa a un gruppo di sostituzione in un elemento XML Schema impone che l'elemento Head e tutti gli elementi membri corrispondenti vengano definiti nella stessa istruzione {CREATE &#124; ALTER} XML SCHEMA COLLECTION.|  
 |Forme canoniche e restrizioni di pattern|La rappresentazione canonica di un valore non deve violare la restrizione del pattern per il tipo corrispondente. Per altre informazioni, vedere [Forme canoniche e restrizioni di pattern](canonical-forms-and-pattern-restrictions.md).|  
 |Facet di enumerazione|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta XML Schema con tipi che dispongono di facet basati su pattern o di enumerazioni che violano tali facet.|  
 |Facet per la lunghezza|I facet **length**, **minLength**e **MaxLength** vengono archiviati come `long` tipo. un tipo a 32 bit. Pertanto, l'intervallo di valori accettabili per questi valori è 2 <sup>^</sup> 31.|  
-|Attributo ID|Ogni componente del XML Schema può disporre di un relativo attributo ID. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impone l'univocità delle dichiarazioni **\<xsd:attribute>** di tipo **ID**, ma non archivia tali valori. L'ambito di applicazione dell'univocità è l'istruzione {CREATE &#124; ALTER} XML SCHEMA COLLECTION.|  
-|Tipo ID|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta gli elementi di tipo **xs:ID**, **xs:IDREF**o **xs:IDREFS**. Uno schema potrebbe non dichiarare elementi di questo tipo, o elementi derivati dalla restrizione o dall'estensione da questo tipo.|  
-|Spazio dei nomi locale|Lo spazio dei nomi locale deve essere specificato in modo esplicito per l'elemento **\<xsd:any>** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rifiuta schemi che usano una stringa vuota ("") come valore per l'attributo dello spazio dei nomi. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richiede invece l'utilizzo esplicito di "##local" per indicare un elemento o un attributo non qualificato come istanza del carattere jolly.|  
+|Attributo ID|Ogni componente del XML Schema può disporre di un relativo attributo ID. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]impone l'univocità per **\<xsd:attribute>** le dichiarazioni di tipo **ID** , ma non archivia tali valori. L'ambito di applicazione dell'univocità è l'istruzione {CREATE &#124; ALTER} XML SCHEMA COLLECTION.|  
+|Tipo ID|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]non supporta elementi di tipo **xs: ID**, **xs: IDREF**o **xs: IDREFS**. Uno schema potrebbe non dichiarare elementi di questo tipo, o elementi derivati dalla restrizione o dall'estensione da questo tipo.|  
+|Spazio dei nomi locale|Lo spazio dei nomi locale deve essere specificato in modo esplicito per l' **\<xsd:any>** elemento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rifiuta schemi che usano una stringa vuota ("") come valore per l'attributo dello spazio dei nomi. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richiede invece l'utilizzo esplicito di "##local" per indicare un elemento o un attributo non qualificato come istanza del carattere jolly.|  
 |Tipo misto e contenuto semplice|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta la restrizione di un tipo misto in un contenuto semplice. Per altre informazioni, vedere [Tipo misto e contenuto semplice](mixed-type-and-simple-content.md).|  
 |Tipo NOTATION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta il tipo NOTATION.|  
 |Condizioni di memoria insufficiente|Durante l'utilizzo di raccolte di XML Schema di grandi dimensioni, può verificarsi una condizione di memoria insufficiente. Per le soluzioni a questo problema. vedere [Raccolte di XML Schema di grandi dimensioni e condizioni di memoria insufficiente](large-xml-schema-collections-and-out-of-memory-conditions.md).|  
@@ -66,16 +65,16 @@ ms.locfileid: "82702530"
 |-----------|-----------------|  
 |[Forme canoniche e restrizioni di pattern](canonical-forms-and-pattern-restrictions.md)|Spiegazione delle forme canoniche e delle restrizioni di pattern.|  
 |[Componenti jolly e convalida del contenuto](wildcard-components-and-content-validation.md)|Descrizione delle limitazioni dell'utilizzo di Elementi dei caratteri jolly, della convalida lax e dell'anyType con le raccolte di XML Schema.|  
-|[Elemento &#60;xsd:redefine&#62;](the-xsd-redefine-element.md)|Viene illustrata la limitazione all'uso dell'elemento \<xsd:redefine> e viene descritta una soluzione alternativa.|  
-|[Tipo xs:QName](the-xs-qname-type.md)|Descrizione del limite relativo al tipo xs:QName.|  
-|[Valori per dichiarazioni &#60;xsd:simpleType&#62;](values-for-xsd-simpletype-declarations.md)|Vengono descritte le limitazioni applicate alle dichiarazioni \<xsd:simpleType>.|  
-|[Facet di enumerazione](enumeration-facets.md)|Descrizione della limitazione relativa ai facet dell'enumerazione.|  
+|[Elemento &#60;xsd:redefine&#62;](the-xsd-redefine-element.md)|Viene illustrata la limitazione dell'utilizzo dell' \<xsd:redefine> elemento e viene descritta una soluzione alternativa.|  
+|[Xs:Tipo QName](the-xs-qname-type.md)|Descrizione del limite relativo al tipo xs:QName.|  
+|[Valori per dichiarazioni &#60;xsd:simpleType&#62;](values-for-xsd-simpletype-declarations.md)|Descrive le restrizioni applicate alle \<xsd:simpleType> dichiarazioni.|  
+|[facet di enumerazione](enumeration-facets.md)|Descrizione della limitazione relativa ai facet dell'enumerazione.|  
 |[Tipo misto e contenuto semplice](mixed-type-and-simple-content.md)|Descrizione del limite relativo alla restrizione di un tipo misto a un contenuto semplice.|  
 |[Raccolte di XML Schema di grandi dimensioni e condizioni di memoria insufficiente](large-xml-schema-collections-and-out-of-memory-conditions.md)|Indicazione delle soluzioni per la condizione di memoria insufficiente che qualche volta si verifica con le raccolte di schemi di grandi dimensioni.|  
 |[Modelli di contenuto non deterministici](non-deterministic-content-models.md)|Descrizione dei limiti relativi ai modelli di contenuto non deterministici.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Dati XML &#40;SQL Server&#41;](xml-data-sql-server.md)   
+ [&#40;di dati XML SQL Server&#41;](xml-data-sql-server.md)   
  [Confronto dati XML tipizzati con dati XML non tipizzati](compare-typed-xml-to-untyped-xml.md)   
  [Concedere autorizzazioni per una raccolta di XML Schema](grant-permissions-on-an-xml-schema-collection.md)   
  [Vincolo di attribuzione di particelle univoche](unique-particle-attribution-constraint.md)   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11afcfa1-816b-419c-9bc7-3abf366f4c3c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 776d5fae1aa295f15238397b439cca1015ebe99c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 521843d02f601b22dc8f8ff8f7dffa03af5d5084
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63180734"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064875"
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>Rimozione di tabelle da diagrammi di database (Visual Database Tools)
   È possibile rimuovere una tabella dal diagramma di database. La rimozione di una tabella non comporta la modifica del database. La tabella e le relative relazioni con le altre tabelle continueranno a esistere nel database.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 13e260f9-a75f-430b-88a3-959ddcead8fe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 984bd529dbd9291f00c1aad86e99c979bf73d82f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f72d4924896aebaa5c5facaeb20a74fe5c2df7f2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62999350"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057892"
 ---
 # <a name="sql-full-text-filter-daemon-launcher-log-on-tab"></a>Utilità di avvio del daemon filtri full-text di SQL (scheda Accesso)
   A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], il servizio Utilità di avvio del daemon filtri full-text di SQL (FDHOST Launcher) viene utilizzato dalla ricerca full-text in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se si utilizza la ricerca full-text, questo servizio deve essere in esecuzione. Per informazioni sui processi host del daemon di filtri, vedere "Architettura della ricerca full-text" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

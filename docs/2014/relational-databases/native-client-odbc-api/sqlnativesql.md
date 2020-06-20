@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2d999fec-9e22-4514-ad5f-22a64b82f95b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8329eac48b395467c8c9c7354f28649d44149248
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 433b086dc36a79cb82868edebac9f0a4814c21fe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705961"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021977"
 ---
 # <a name="sqlnativesql"></a>SQLNativeSql
   Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client soddisfa richieste di **SQLNativeSql** senza visitare il server. La funzione verifica in modo efficiente la sintassi di istruzioni SQL. Il controllo della sintassi non determina se gli identificatori o i risultati di espressioni nelle istruzioni SQL sono validi. È possibile che l'esecuzione del formato SQL nativo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito da **SQLNativeSql** non riesca.  

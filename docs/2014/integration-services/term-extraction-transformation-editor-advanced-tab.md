@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 87118281-6e3c-499e-bac4-fa4c24bb12c6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bc333bae08cd9ec658b6e8050b869d1232dbe629
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c783a06d5d5518639e6368f5c1eb572e60206b5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055264"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962261"
 ---
 # <a name="term-extraction-transformation-editor-advanced-tab"></a>Editor trasformazione Estrazione termini (Scheda Avanzate)
   Usare la scheda **Avanzate** della finestra di dialogo **Editor trasformazione Estrazione termini** per specificare le proprietà per l'estrazione, ad esempio la frequenza, la lunghezza e le eventuali parole o frasi da estrarre.  
@@ -54,7 +53,7 @@ ms.locfileid: "66055264"
  **Configura output errori**  
  Usare la finestra di dialogo [Configura output errori](../../2014/integration-services/configure-error-output.md) per specificare la gestione degli errori per le righe che causano errori.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor trasformazione Estrazione termini &#40;scheda Estrazione termini&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
  [Editor trasformazione Estrazione termini &#40;scheda esclusione&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   

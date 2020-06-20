@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 77e303ff-febd-4103-ae5d-6e5b85bc8009
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 598a317bdecb2ed3808a7b5af35316d95d3b87c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac234a757510af5ebfac261ea6d3e7e57d2f426f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092006"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036236"
 ---
 # <a name="sql-server-agent-upgrade-issues"></a>Problemi di aggiornamento di SQL Server Agent
   Negli argomenti seguenti vengono descritti i problemi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che possono influire su un aggiornamento. Vengono illustrate le azioni che è possibile eseguire per tentare di ridurre gli effetti di queste modifiche nell'ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -41,7 +40,7 @@ ms.locfileid: "66092006"
   
 -   [In seguito all'aggiornamento l'account proxy utente per SQL Server Agent verrà sostituito dall'account temporaneo UpgradedProxyAccount](../../../2014/sql-server/install/upgrading-changes-sql-server-agent-user-proxy-account-to-temporary-account.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server 2014 preparazione aggiornamento &#91;nuova&#93;](sql-server-2014-upgrade-advisor.md)   
  [Risoluzione dei problemi di aggiornamento](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   

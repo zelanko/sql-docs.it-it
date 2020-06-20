@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 33d44b48571839d9695893021f6cdc1c8bb63f06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ecdcafb1cb2d2b78a63dbd15ecec148e5eb1b2a9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204615"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057953"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>Riepilogo o aggregazione di valori per tutte le righe di una tabella (Visual Database Tools)
   Con una funzione di aggregazione è possibile creare un riepilogo di tutti i valori di una tabella. Per visualizzare, ad esempio, il prezzo totale di tutti i libri nella tabella `titles` , è possibile creare una query analoga alla seguente:  
@@ -77,7 +76,7 @@ FROM titles
 > [!NOTE]  
 >  In Progettazione query e Progettazione viste le funzioni di aggregazione vengono mantenute nell'istruzione SQL nel riquadro SQL fino a quando non viene disabilitata esplicitamente la modalità di raggruppamento. Se pertanto si modifica la query cambiandone il tipo o cambiando le tabelle o gli oggetti con valori di tabella presenti nel riquadro Diagramma, la query risultante potrebbe includere funzioni di aggregazione non valide.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Ordinare e raggruppare i risultati delle query &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [Creare un riepilogo dei risultati di query &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)  
   

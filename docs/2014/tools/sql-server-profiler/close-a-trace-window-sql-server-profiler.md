@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a0c1bd77-4d82-435d-be75-ed1cd1eaa11a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 19e4ca323ff61f9a5629706e3dcfad7cb7c51688
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dcf6ba52977e1bdbea02a7b5ac0a097bc1fe0b02
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316198"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011467"
 ---
 # <a name="close-a-trace-window-sql-server-profiler"></a>Chiudere una finestra di traccia (SQL Server Profiler)
   In questo argomento viene descritto come chiudere la finestra di traccia relativa alle tracce in esecuzione o alle tracce salvate visualizzate utilizzando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

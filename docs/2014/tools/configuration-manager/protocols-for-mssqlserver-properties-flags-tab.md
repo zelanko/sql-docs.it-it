@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4d38e6e9-f95f-4e79-ae45-89f631037528
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 937485df231bcff089157bd8fee05ebd913a4ff4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ad2a8c4a365894d17508d47816eaaecc8333b94e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63459861"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057905"
 ---
 # <a name="protocols-for-mssqlserver-properties-flags-tab"></a>Proprietà - Protocolli per MSSQLSERVER (scheda Flag)
   Quando un certificato è installato nel server, è possibile usare la scheda **Flag** della finestra di dialogo **Proprietà - Protocolli per MSSQLSERVER** per visualizzare o specificare la crittografia del protocollo e nascondere le opzioni di istanza. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere riavviato per abilitare o disabilitare l'impostazione **ForceEncryption**.  
@@ -32,7 +31,7 @@ ms.locfileid: "63459861"
  Il processo di accesso viene sempre crittografato. Quando **ForceEncryption** è impostato su **Sì**, ogni comunicazione client/server viene crittografata e la connessione dei client a [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve essere configurata in modo da considerare attendibile l'autorità radice del certificato del server. Per ulteriori informazioni, vedere "Enable Encrypted Connections to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager)" (Procedura: Attivazione di connessioni crittografate al Motore database (Gestione configurazione SQL Server)) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="cluster-servers"></a>Server di cluster  
- Se si desidera usare la crittografia in un cluster di failover, è necessario installare il certificato server contenente il nome DNS completo del server virtuale in tutti i nodi del cluster di failover. Se ad esempio si ha un cluster costituito da due nodi, denominati rispettivamente "test1. *\<società.com>* .com" e "test2. *\<società>* .com" e un server virtuale denominato "virtsql", è necessario installare un certificato per "virtsql. *\<società>* .com" in entrambi i nodi. A questo punto, è possibile selezionare la casella di controllo **ForceEncryption** in **Gestione configurazione SQL Server** per configurare il cluster di failover per la crittografia.  
+ Se si desidera usare la crittografia in un cluster di failover, è necessario installare il certificato server contenente il nome DNS completo del server virtuale in tutti i nodi del cluster di failover. Ad esempio, se si dispone di un cluster a due nodi, con nodi denominati "test1. *\<your company>* .. com "e" test2. *\<your company>* . com "e un server virtuale denominato" Virtsql ", è necessario installare un certificato per" virtsql. *\<your company>* .. com "in entrambi i nodi. A questo punto, è possibile selezionare la casella di controllo **ForceEncryption** in **Gestione configurazione SQL Server** per configurare il cluster di failover per la crittografia.  
   
 ## <a name="options"></a>Opzioni  
  **ForceEncryption**  
@@ -41,6 +40,6 @@ ms.locfileid: "63459861"
  **HideInstance**  
  Impedisce al servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser di esporre l'istanza corrente del [!INCLUDE[ssDE](../../includes/ssde-md.md)] ai computer client che tentano di individuarla tramite il pulsante **Sfoglia** . Nel caso di istanze denominate nel server, ai fini della connessione è necessario che le applicazioni specifichino le informazioni sull'endpoint del protocollo, ad esempio il numero di porta o il nome di named pipe, quale `tcp:server,5000`. Per altre informazioni, vedere [Logging In to SQL Server](../../database-engine/configure-windows/logging-in-to-sql-server.md).  
   
- Per ulteriori informazioni, vedere "Procedura: Attivazione di connessioni crittografate al Motore di database (Gestione configurazione SQL Server)" nella documentazione online.  
+ Per altre informazioni, vedere "Procedura: Abilitare connessioni crittografate al motore di database (Gestione configurazione SQL Server)" nella documentazione online.  
   
   

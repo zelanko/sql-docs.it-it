@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9883127b-aa34-4235-88cc-c161cd2112cc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2f993f699be738ea653ab0fc977fb16f84278853
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fb019e0f7922851a76d6a43439c2d3e7dcc6b6f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662390"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029534"
 ---
 # <a name="lockdeadlock-chain-event-class"></a>Classe di evento Lock:Deadlock Chain
   La classe di evento Lock:Deadlock Chain viene generata per ogni partecipante a un deadlock.  
@@ -53,7 +52,7 @@ ms.locfileid: "62662390"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |Type|`int`|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [sys.dm_tran_locks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql)  
   

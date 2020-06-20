@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a7c0cd60-3bec-42be-ad5e-473bd26a06d9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 101badf320f72887d6eb9669224d24fff5b9a299
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a98bdf472c86a3e608da768d884897600efa476
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663646"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030312"
 ---
 # <a name="clr-event-category"></a>Categoria di eventi CLR
   La categoria di eventi **CLR** include le classi di eventi generate dall'esecuzione di oggetti CLR (Common Language Runtime) [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -33,7 +32,7 @@ ms.locfileid: "62663646"
 |[Classe di evento Assembly Load](../../database-engine/assembly-load-event-class.md)|Indica l'esecuzione di una richiesta di caricamento di un assembly.|  
 |[Classe di evento Assembly Load](../../database-engine/assembly-load-event-class.md)|Viene generato al momento dell'esecuzione di una richiesta di caricamento di un assembly.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../extended-events/extended-events.md)  
   
   

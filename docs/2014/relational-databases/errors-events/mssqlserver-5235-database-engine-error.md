@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1aa7e6a5-7ccb-43c8-a1fd-d50e92e0a798
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d6cbfac91613c2374e42da5b33e75ed5cade2bcf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42c807944d7506a6a118de97ccd8c2c488942c8e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62913758"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85032854"
 ---
 # <a name="mssqlserver_5235"></a>MSSQLSERVER_5235
     
@@ -58,7 +57,7 @@ ms.locfileid: "62913758"
 |Stato 4|Contattare il Servizio Supporto Tecnico Clienti Microsoft.|  
 |Stato 5|Eseguire di nuovo il comando. Se il problema persiste, contattare il Servizio Supporto Tecnico Clienti Microsoft.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [DBCC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)  
   
   

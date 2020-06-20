@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 419be334c31aa5c4a0f65f9d9f881dbffc4aef94
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 10a64baa17bd070d9354beaf6ff8c2e460682318
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707255"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049583"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Supporto per nomi SPN nelle connessioni client
   A partire da [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], il supporto per i nomi SPN è stato esteso per consentire l'autenticazione reciproca in tutti i protocolli. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] i nomi SPN sono supportati solo per Kerberos su TCP quando il nome SPN predefinito per l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene registrato con Active Directory.  
@@ -44,7 +43,7 @@ ms.locfileid: "82707255"
   
 -   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
   
-## <a name="usage"></a>Usage  
+## <a name="usage"></a>Uso  
  Nella tabella seguente vengono descritti gli scenari più comuni in cui le applicazioni client possono abilitare l'autenticazione protetta.  
   
 |Scenario|Descrizione|  

@@ -38,13 +38,12 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e480363941d8928d270f978471b5474a8e24b0a1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cbf9af4b5af3043c6ca8fa2cba01ebe43019fb41
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68418878"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952751"
 ---
 # <a name="configure-database-mail"></a>Configurare Posta elettronica database
   In questo argomento viene illustrato come abilitare e configurare Posta elettronica database utilizzando la Configurazione guidata Posta elettronica database e come creare uno script di configurazione per Posta elettronica database utilizzando i modelli.  
@@ -129,7 +128,7 @@ ms.locfileid: "68418878"
  Consente di digitare l'indirizzo di posta elettronica che verrà utilizzato per le risposte ai messaggi di posta elettronica inviati da questo account. L'indirizzo risposte è facoltativo. Le risposte a un account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, ad esempio, possono essere indirizzate all'amministratore del database danw@Adventure-Works.com.  
   
  **Nome server**  
- Digitare il nome o l'indirizzo IP del server SMTP utilizzato dall'account per l'invio della posta. Si tratta in genere di un formato simile `smtp.` a *<your_company>* `.com`. Per informazioni, rivolgersi all'amministratore del sistema di posta.  
+ Digitare il nome o l'indirizzo IP del server SMTP utilizzato dall'account per l'invio della posta. Si tratta in genere di un formato simile a `smtp.` *<your_company>* `.com` . Per informazioni, rivolgersi all'amministratore del sistema di posta.  
   
  **Numero della porta**  
  Digitare il numero di porta del server SMTP per l'account. La maggior parte dei server SMTP utilizza la porta 25.  
@@ -140,7 +139,7 @@ ms.locfileid: "68418878"
  **Autenticazione di Windows con credenziali del servizio Motore di database**  
  Viene eseguita la connessione al server SMTP mediante le credenziali configurate per il servizio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  
   
- **Autenticazione di base**  
+ **Autenticazione base**  
  Consente di specificare il nome utente e la password necessari per il server SMTP.  
   
  **Nome utente**  
@@ -170,13 +169,13 @@ ms.locfileid: "68418878"
  Consente di visualizzare o aggiornare la descrizione dell'account. La descrizione è facoltativa.  
   
  **Indirizzo di posta elettronica**  
- Consente di visualizzare o aggiornare il nome dell'indirizzo di posta elettronica dell'account. Si tratta dell'indirizzo di posta elettronica da cui vengono inviati i messaggi. Ad esempio, un account per Microsoft SQL Server Agent può inviare messaggi di posta elettronica **SqlAgent@Adventure-Works.com**dall'indirizzo.  
+ Consente di visualizzare o aggiornare il nome dell'indirizzo di posta elettronica dell'account. Si tratta dell'indirizzo di posta elettronica da cui vengono inviati i messaggi. Ad esempio, un account per Microsoft SQL Server Agent può inviare messaggi di posta elettronica dall'indirizzo **SqlAgent@Adventure-Works.com** .  
   
  **Nome visualizzato**  
  Consente di visualizzare o aggiornare il nome da visualizzare nei messaggi di posta elettronica inviati da questo account. Il nome visualizzato è facoltativo. Si tratta del nome visualizzato nei messaggi inviati da questo account. Un account di SQL Server Agent, ad esempio, può visualizzare il nome **SQL Server Agent Automated Mailer** nei messaggi di posta elettronica.  
   
  **Indirizzo risposte**  
- Consente di visualizzare o aggiornare l'indirizzo di posta elettronica da utilizzare per le risposte ai messaggi inviati da questo account. L'indirizzo risposte è facoltativo. Ad esempio, le risposte a un account per SQL Server Agent possono accedere all'amministratore del database **danw@Adventure-Works.com**.  
+ Consente di visualizzare o aggiornare l'indirizzo di posta elettronica da utilizzare per le risposte ai messaggi inviati da questo account. L'indirizzo risposte è facoltativo. Ad esempio, le risposte a un account per SQL Server Agent possono accedere all'amministratore del database **danw@Adventure-Works.com** .  
   
  **Nome server**  
  Consente di visualizzare o aggiornare il nome del server SMTP utilizzato dall'account per l'invio della posta. In genere, presenta un formato simile a **smtp.<nome_società>.com**. Per informazioni, rivolgersi all'amministratore del sistema di posta.  
@@ -190,7 +189,7 @@ ms.locfileid: "68418878"
  **Autenticazione di Windows con credenziali del servizio Motore di database**  
  Viene eseguita la connessione al server SMTP mediante le credenziali configurate per il servizio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  
   
- **Autenticazione di base**  
+ **Autenticazione base**  
  Consente di specificare il nome utente e la password necessari per il server SMTP.  
   
  **Nome utente**  
@@ -396,10 +395,10 @@ ms.locfileid: "68418878"
 ###  <a name="send-test-e-mail-page"></a><a name="TestEmail"></a>Pagina Invia messaggio di prova  
  Usare la finestra di dialogo **Invia messaggio di prova da**_<nome_istanza>_ per inviare un messaggio di posta elettronica usando il profilo di Posta elettronica database specificato. Solo i membri del ruolo predefinito del server **sysadmin** possono inviare messaggi di posta elettronica di prova usando questa pagina.  
   
- **Profilo Posta elettronica database**  
+ **Profilo di Posta elettronica database**  
  Selezionare un profilo di Posta elettronica database nell'elenco. Questo campo è obbligatorio. Se non viene visualizzato alcun profilo, non esiste alcun profilo oppure non si dispone dell'autorizzazione per esso. Per creare e configurare profili, usare la **Configurazione guidata posta elettronica database** . Se non è elencato alcun profilo, utilizzare la Configurazione guidata posta elettronica database per crearne uno.  
   
- **A**  
+ **To**  
  Indirizzo di posta elettronica dei destinatari del messaggio. È necessario specificare almeno un destinatario.  
   
  **Oggetto**  

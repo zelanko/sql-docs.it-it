@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7605390f-b485-48cc-8d97-e364a066067b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2db385919c30037612f00e53b2b990c1a7df0429
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 77fe80016cb67e15d8eca6efb3a313d269550533
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72781860"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003571"
 ---
 # <a name="using-database-mail"></a>Utilizzo di Posta elettronica database
   In SMO il sottosistema Posta elettronica database è rappresentato dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> a cui fa riferimento la proprietà <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A>. Tramite l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> SMO, è possibile configurare il sottosistema Posta elettronica database e gestire profili e account di posta elettronica. L'oggetto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> SMO appartiene all'oggetto `Server`, di conseguenza l'ambito degli account di posta elettronica è a livello del server.  
@@ -27,7 +26,7 @@ ms.locfileid: "72781860"
 ## <a name="examples"></a>Esempi  
  Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per ulteriori informazioni, vedere [creare un Visual Basic progetto SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [creare un progetto Visual C&#35; SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
- Per i programmi che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzano posta elettronica database, è necessario includere `Imports` l'istruzione per qualificare lo spazio dei nomi della posta. Inserire l'istruzione dopo le altre istruzioni `Imports`, ma prima di qualsiasi dichiarazione nell'applicazione, ad esempio:  
+ Per i programmi che utilizzano [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] posta elettronica database, è necessario includere l' `Imports` istruzione per qualificare lo spazio dei nomi della posta. Inserire l'istruzione dopo le altre istruzioni `Imports`, ma prima di qualsiasi dichiarazione nell'applicazione, ad esempio:  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   

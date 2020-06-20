@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c60edd0423dbba712d6185a1bfe417b2067378bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 59ab03f1c869f37ea92b3be1fe0fc30d86284a03
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232232"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953209"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importare un file BACPAC per creare un nuovo database utente
   Importare un file dell'applicazione livello dati (DAC), con estensione bacpac, per creare una copia del database originale, completo dei dati, in una nuova istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Le operazioni di importazione ed esportazione possono essere combinate per eseguire la migrazione di un'applicazione livello dati o database tra istanze o per creare un backup logico, quale la creazione di una copia locale di un database distribuito in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -124,24 +123,24 @@ ms.locfileid: "75232232"
   
 -   **Nome nuovo database** : specificare un nome per il database importato.  
   
--   **Edizione di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ** : specificare [!INCLUDE[ssSDS](../../includes/sssds-md.md)] business o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web. Per altre informazioni sulle edizioni di [!INCLUDE[ssSDS](../../includes/sssds-md.md)], visitare il sito Web relativo al [database SQL](https://www.windowsazure.com/home/tour/database/) .  
+-   **Edizione di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ** -Specificare [!INCLUDE[ssSDS](../../includes/sssds-md.md)] business o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web. Per altre informazioni sulle edizioni di [!INCLUDE[ssSDS](../../includes/sssds-md.md)], visitare il sito Web relativo al [database SQL](https://www.windowsazure.com/home/tour/database/) .  
   
 -   **Dimensioni massime database (GB)** : usare il menu a discesa per specificare le dimensioni massime del database.  
   
- Per continuare, fare clic su **Avanti**.  
+ Scegliere **Avanti**per continuare.  
   
 ### <a name="validation-page"></a>Pagina Convalida  
  Usare questa pagina per esaminare gli eventuali problemi che impediscono l'operazione. Per continuare, risolvere i problemi che causano il blocco, quindi fare clic su **Ripeti convalida** per assicurarsi che la convalida venga completata correttamente.  
   
- Per continuare, fare clic su **Avanti**.  
+ Scegliere **Avanti**per continuare.  
   
 ###  <a name="summary-page"></a><a name="Summary"></a> Pagina Riepilogo  
  Utilizzare questa pagina per esaminare le impostazioni di origine e destinazione specificate per l'operazione. Per completare l'operazione di importazione utilizzando le impostazioni specificate, fare clic su **Fine**. Per annullare l'operazione di importazione e chiudere la procedura guidata, fare clic su **Annulla**.  
   
-###  <a name="progress-page"></a><a name="Progress"></a>Pagina di stato  
+###  <a name="progress-page"></a><a name="Progress"></a> Pagina Stato  
  In questa pagina viene visualizzato un indicatore di stato che indica lo stato dell'operazione. Per visualizzare lo stato dettagliato, fare clic sull'opzione **Visualizza dettagli** .  
   
- Per continuare, fare clic su **Avanti**.  
+ Scegliere **Avanti**per continuare.  
   
 ###  <a name="results-page"></a><a name="Results"></a>Pagina dei risultati  
  In questa pagina viene riportato l'esito positivo o negativo delle operazioni di impostazione e creazione del database, con l'indicazione dei risultati positivi o negativi di ogni azione. Ogni azione che ha rilevato un errore avrà un collegamento nella colonna **Risultato** . Fare clic sul collegamento per visualizzare un report dell'errore relativo all'azione.  

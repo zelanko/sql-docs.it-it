@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: fb0f2dec6ac7ad68a6a1aa1de8d4734f99559b54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1d48d671b23d7b7b17557e7829d6f2522c375acd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175950"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050217"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilità per tabelle con ottimizzazione per la memoria
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] fornisce durabilità completa per le tabelle ottimizzate per la memoria. Quando viene eseguito il commit di una transazione che ha modificato una tabella ottimizzata per la memoria, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], come avviene per le tabelle basate su disco, garantisce che le modifiche vengano rese permanenti, ovvero che saranno mantenute in seguito a un riavvio del database, a condizione che lo spazio di archiviazione sottostante sia disponibile. I componenti chiave della durabilità sono due: registrazione delle transazioni e salvataggio in modo permanente delle modifiche ai dati nell'archiviazione su disco.
@@ -52,7 +51,7 @@ ms.locfileid: "78175950"
 
  Operazione Merge l'operazione unisce una o più coppie di file di dati e differenziali e crea una nuova coppia di file di dati e differenziali.
 
- Durante il ripristino dell' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] arresto anomalo del sistema quando viene riavviato o il database viene riportato online, i dati ottimizzati per la memoria vengono popolati utilizzando le coppie di file di dati e differenziali. Il file differenziale svolge la funzione di filtro per le righe eliminate durante la lettura delle righe dal file di dati corrispondente. Poiché ogni coppia di file di dati e differenziale è indipendente, questi file vengono caricati in parallelo per ridurre il tempo necessario per popolare i dati in memoria. Una volta che i dati sono stati caricati in memoria, il motore di OLTP in memoria applica i record del log delle transazioni attivi non ancora coperti dai file di checkpoint in modo da completare i dati ottimizzati per la memoria.
+ Durante il ripristino dell'arresto anomalo del sistema quando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene riavviato o il database viene riportato online, i dati ottimizzati per la memoria vengono popolati utilizzando le coppie di file di dati e differenziali. Il file differenziale svolge la funzione di filtro per le righe eliminate durante la lettura delle righe dal file di dati corrispondente. Poiché ogni coppia di file di dati e differenziale è indipendente, questi file vengono caricati in parallelo per ridurre il tempo necessario per popolare i dati in memoria. Una volta che i dati sono stati caricati in memoria, il motore di OLTP in memoria applica i record del log delle transazioni attivi non ancora coperti dai file di checkpoint in modo da completare i dati ottimizzati per la memoria.
 
  Durante l'operazione di ripristino i file del checkpoint di OLTP in memoria vengono creati dal backup del database, quindi vengono applicati uno o più backup del log delle transazioni. Analogamente al recupero a seguito dell'arresto anomalo del sistema, il motore di OLTP in memoria carica i dati in memoria in parallelo, per ridurre al minimo l'impatto sul tempo di recupero.
 

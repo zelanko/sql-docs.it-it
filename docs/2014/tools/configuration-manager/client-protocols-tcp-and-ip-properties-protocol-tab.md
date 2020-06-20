@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d04f1bce-069c-4a02-b561-c87c3282be36
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 32e1546af52fb411564c2b6d1635971b9f73fc60
-ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
+ms.openlocfilehash: 46e6e7a966db29299c298cb16e460e0a9212e8fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84716677"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011668"
 ---
 # <a name="client-protocols---tcp-and-ip-properties-protocol-tab"></a>Protocolli client e Proprietà TCP IP (scheda Protocollo)
   In Gestione configurazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], usare la scheda **Protocollo** della finestra di dialogo **Proprietà TCP/IP** per visualizzare o specificare le opzioni illustrate di seguito. Per eseguire la connessione a una porta diversa, digitare il numero della porta nella casella **Porta predefinita** . Per altre informazioni sulle stringhe di connessione, vedere [Creazione di una stringa di connessione valida tramite TCP/IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md).  

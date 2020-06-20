@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bf6e9bb278417d69be0ec0a99cb1c47d88ffddff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2da84bd05383092b98e3cd344444a6914cf2762c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62664027"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030465"
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped - classe di evento
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento Broker:Forwarded Message Dropped quando Service Broker elimina un messaggio di cui è previsto l'inoltro.  
@@ -62,7 +61,7 @@ ms.locfileid: "62664027"
   
  La colonna TextData dell'evento contiene una descrizione del motivo per cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha eliminato il messaggio.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

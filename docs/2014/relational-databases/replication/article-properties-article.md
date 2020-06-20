@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2903eef63152af9b2e9af1434ba12ea91b4058fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c9c597c672a1889827f3994c1df9ea65ec4c54a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721783"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049535"
 ---
 # <a name="article-properties---ltarticlegt"></a>Proprietà articolo - &lt;Articolo&gt;
   È possibile accedere alla finestra **Proprietà articolo** dalla Creazione guidata nuova pubblicazione e dalla finestra di dialogo **Proprietà pubblicazione** . Questa finestra di dialogo consente di visualizzare e impostare le proprietà per tutti i tipi di articoli. Alcune proprietà possono essere impostate solo dopo aver creato la pubblicazione, mentre altre possono essere impostate solo se la pubblicazione non dispone di sottoscrizioni attive. Le proprietà non impostabili vengono visualizzate in sola lettura.  
@@ -45,7 +44,7 @@ ms.locfileid: "62721783"
  Determina se convertire tipi di dati definiti dall'utente in tipi di dati di base durante la creazione di oggetti nel Sottoscrittore. I tipi di dati definiti dall'utente includono i tipi di dati CLR definiti dall'utente introdotti in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Specificare il valore **True** se questi tipi di dati verranno replicati in versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]per garantire che vengano gestiti correttamente nel Sottoscrittore.  
   
  **Crea schemi nel Sottoscrittore**  
- In[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sono stati introdotti gli schemi, che vengono definiti utilizzando l'istruzione CREATE SCHEMA. Uno schema è il proprietario di un oggetto e viene utilizzato in un nome in più parti, ad esempio \<Database>.\<Schema>.\<Oggetto>. Se nel database esistono oggetti di proprietà di schemi diversi da DBO, la replica è in grado di creare tali schemi nel Sottoscrittore in modo che sia possibile creare gli oggetti pubblicati.  
+ In[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sono stati introdotti gli schemi, che vengono definiti utilizzando l'istruzione CREATE SCHEMA. Uno schema è il proprietario di un oggetto. viene utilizzato in un nome in più parti, ad esempio \<Database> .. \<Schema> \<Object> . Se nel database sono presenti oggetti di proprietà di schemi diversi da DBO, la replica può creare tali schemi nel Sottoscrittore, in modo che sia possibile creare gli oggetti pubblicati.  
   
  Se i dati verranno replicati in versioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]:  
   
@@ -102,7 +101,7 @@ ms.locfileid: "62721783"
   
  Per altre informazioni, vedere [Ottimizzare le prestazioni della replica di tipo merge con gli articoli di solo download](merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
- **Opzioni partizioni**  
+ **Opzioni partizione**  
  Specifica il tipo di partizioni create da un filtro con parametri. Per ulteriori informazioni, vedere la sezione Impostazione delle opzioni delle partizioni in [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Livello rilevamento**  
@@ -124,7 +123,7 @@ ms.locfileid: "62721783"
  Se si seleziona il sistema di risoluzione predefinito, i conflitti vengono risolti in base alla priorità assegnata a ogni Sottoscrittore o alla prima modifica scritta nel server di pubblicazione, a seconda del tipo di sottoscrizioni utilizzate. Per altre informazioni, vedere [Rilevare e risolvere i conflitti tra repliche di tipo merge](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  **Usa un sistema di risoluzione personalizzato (registrato nel server di distribuzione)**  
- Se si sceglie di utilizzare un sistema di risoluzione dei conflitti dell'articolo fornito da [!INCLUDE[msCoName](../../includes/msconame-md.md)] o scritto dall'utente, è necessario selezionare un sistema di risoluzione nella casella di riepilogo. Per altre informazioni, vedere [Rilevamento e risoluzione avanzati dei conflitti nella replica di tipo merge](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+ Se si sceglie di utilizzare un sistema di risoluzione dei conflitti dell'articolo fornito da [!INCLUDE[msCoName](../../includes/msconame-md.md)] o scritto dall'utente, è necessario selezionare un sistema di risoluzione nella casella di riepilogo. Per ulteriori informazioni, vedere [rilevamento e risoluzione dei conflitti di replica di tipo merge avanzati](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  Se il sistema di risoluzione necessita di un input, specificarlo nella casella di testo **Immettere le informazioni necessarie per il sistema di risoluzione** . Per ulteriori informazioni sull'input richiesto dai sistemi di risoluzione dei conflitti personalizzati forniti da [!INCLUDE[msCoName](../../includes/msconame-md.md)] , vedere [Microsoft COM-Based Resolvers](merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
@@ -176,7 +175,7 @@ ms.locfileid: "62721783"
  [Create a Publication](publish/create-a-publication.md)   
  [Visualizzare e modificare le proprietà della pubblicazione](publish/view-and-modify-publication-properties.md)   
  [Creare e applicare lo snapshot iniziale](create-and-apply-the-initial-snapshot.md)   
- [Reinizializzare una sottoscrizione](reinitialize-a-subscription.md)   
+ [Reinizializza una sottoscrizione](reinitialize-a-subscription.md)   
  [Pubblicare dati e oggetti di database](publish/publish-data-and-database-objects.md)  
   
   

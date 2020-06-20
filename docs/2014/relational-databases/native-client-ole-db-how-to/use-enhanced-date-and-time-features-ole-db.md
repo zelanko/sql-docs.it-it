@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 50f98cab-8c80-43c5-bc9a-5d2f95f67f17
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 70477e5fc741949a42aa5eebfd7a1d0a2b3568b6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 19fcfb169eeeb5e877cf70f1ea675e07be9f37d0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82696228"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049657"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>Usare le funzionalità avanzate di data e ora (OLE DB)
   In questo viene illustrato come utilizzare le caratteristiche di data e ora introdotte in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Nell'esempio vengono utilizzati i quattro nuovi tipi di data e ora ( `date` , **Time**, `datetime2` e `datetimeoffset` ) per eseguire i comandi con parametri e recuperare i risultati del set di righe.  

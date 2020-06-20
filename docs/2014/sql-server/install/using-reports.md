@@ -34,13 +34,12 @@ helpviewer_keywords:
 ms.assetid: 4a3cb94a-a7ac-4cec-94c7-db26fcf6d161
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fc3a08e707f6b51059145c69fdee15f78c933135
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f52afcfdaa7de33d83d64a049f9a350f0463b4c6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091227"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062350"
 ---
 # <a name="using-reports"></a>Utilizzo dei report
   Per ogni componente e, se necessario, per ogni istanza analizzata tramite l'Analisi guidata di Preparazione aggiornamento su un server viene generato un report distinto, in cui sono forniti dettagli su problemi noti che influiscono su un aggiornamento. Il report contiene inoltre collegamenti a informazioni e ad azioni consigliate per la risoluzione dei problemi identificati.  
@@ -77,11 +76,11 @@ ms.locfileid: "66091227"
  È possibile espandere un problema per visualizzare informazioni aggiuntive, un collegamento a informazioni dettagliate sulla risoluzione e un collegamento per visualizzare i dettagli del problema. Quando si fa clic sul collegamento per ottenere informazioni dettagliate per il problema, verrà visualizzato un argomento della Guida con informazioni e istruzioni per risolverlo. Dopo aver risolto un problema o aver gestito gli elementi dell'azione, è possibile contrassegnare i problemi come completi selezionando la casella di controllo **questo problema è stato risolto** . Se si desidera rimuovere i problemi risolti dall'elenco dei problemi di aggiornamento, fare clic su **Aggiorna**. Il problema non viene visualizzato di nuovo fino a quando non si esegue l'analisi guidata di preparazione aggiornamento sullo stesso componente o si applica il filtro **problemi risolti** dall'opzione **Filtra per** .  
   
 ## <a name="report-files"></a>File di report  
- L'analisi guidata di preparazione aggiornamento consente di creare report nella\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directory My Documents upgrade Advisor\110\Reports e di creare una sottodirectory per ogni server analizzato. I file di report sono in formato XML e seguono una convenzione di denominazione specifica. Quando si avvia il Visualizzatore report di Preparazione aggiornamento, vengono visualizzati i file di report della directory predefinita. Se vengono copiati file di report in questa cartella, è necessario che rispettino la convenzione di denominazione, altrimenti non verranno visualizzati automaticamente.  
+ L'analisi guidata di preparazione aggiornamento consente di creare report nella directory My Documents \\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] upgrade Advisor\110\Reports e di creare una sottodirectory per ogni server analizzato. I file di report sono in formato XML e seguono una convenzione di denominazione specifica. Quando si avvia il Visualizzatore report di Preparazione aggiornamento, vengono visualizzati i file di report della directory predefinita. Se vengono copiati file di report in questa cartella, è necessario che rispettino la convenzione di denominazione, altrimenti non verranno visualizzati automaticamente.  
   
  Se si desidera condividere le informazioni con altri utenti, è possibile inviare il report XML. In alternativa, se si desidera utilizzare un'altra applicazione, è possibile esportare il report in un file con valori delimitati da virgole da utilizzare per creare un foglio di calcolo, un file di testo o un messaggio di posta elettronica.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Procedura: visualizzazione di un report di preparazione aggiornamento](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)   
  [Procedura: esportazione di report](../../../2014/sql-server/install/how-to-export-reports.md)   
  [Procedura: filtrare i report](../../../2014/sql-server/install/how-to-filter-reports.md)   

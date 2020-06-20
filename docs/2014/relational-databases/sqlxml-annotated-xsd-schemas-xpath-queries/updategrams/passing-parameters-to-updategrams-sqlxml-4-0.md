@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2354e6e7-1860-471f-8711-4e374c5a4ed2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ea22b1c0bc435006e05fde02043ca9f44a8ca681
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d9e699ea80253934ecc6f3ce744feaed6fd6a392
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703018"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047472"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Passaggio di parametri agli updategram (SQLXML 4.0)
   Gli updategram sono modelli e in quanto tali è possibile passare loro parametri. Per ulteriori informazioni sul passaggio di parametri ai modelli, vedere [considerazioni sulla sicurezza degli Updategram &#40;SQLXML 4,0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md).  
@@ -31,7 +30,7 @@ ms.locfileid: "82703018"
 > [!NOTE]  
 >  In `<sql:header>` e `<updg:header>` è necessario specificare `nullvalue` come non qualificato, mentre in `<updg:sync>``nullvalue` viene specificato come qualificato (ad esempio, `updg:nullvalue`).  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Per creare esempi funzionanti utilizzando gli esempi seguenti, è necessario soddisfare i requisiti specificati nei [requisiti per l'esecuzione di esempi SQLXML](../../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
  Prima di utilizzare gli esempi dell'updategram, si tenga presente quanto segue:  

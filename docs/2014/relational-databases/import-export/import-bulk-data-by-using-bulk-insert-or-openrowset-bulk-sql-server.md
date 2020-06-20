@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e8b09ee01da2dde8e8bf50fbda21c1c8bca1689d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be36167020b96dba6d494685d958c38e0e6afbba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011941"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050486"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>Importazione di dati per operazioni bulk con BULK INSERT o OPENROWSET(BULK...) (SQL Server)
   In questo argomento viene fornita una panoramica sull'utilizzo dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT e dell'istruzione INSERT...SELECT * FROM OPENROWSET(BULK...) per effettuare l'importazione bulk di dati da un file di dati in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'argomento include anche considerazioni sulla sicurezza per l'uso di BULK INSERT e OPENROWSET(BULK…), nonché sull'uso di questi metodi per l'importazione bulk da un'origine dei dati remota.  
@@ -121,7 +120,7 @@ GO
  [Informazioni sull'importazione ed esportazione bulk di dati &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
- [DA &#40;&#41;Transact-SQL](/sql/t-sql/queries/from-transact-sql)   
+ [FROM &#40;Transact-SQL&#41;](/sql/t-sql/queries/from-transact-sql)   
  [Utilità bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)  
   

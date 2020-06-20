@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c3cbc8673d38cc21a92f0d333df1dc485db6d733
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7a76f86f1be8012e0df2ed80960095eb83d6882e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702117"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021454"
 ---
 # <a name="bulk-copying-from-program-variables"></a>Copia bulk da variabili di programma
   È possibile eseguire una copia bulk direttamente dalle variabili di programma. Dopo aver allocato le variabili in modo che contengano i dati per una riga e chiamando [bcp_init](../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) per avviare la copia bulk, chiamare [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) per ogni colonna per specificare il percorso e il formato della variabile di programma da associare alla colonna. Riempire ogni variabile con i dati, quindi chiamare [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) per inviare una riga di dati al server. Ripetere il processo di riempimento delle variabili e chiamando **bcp_sendrow** fino a quando tutte le righe non sono state inviate al server, quindi chiamare [bcp_done](../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) per specificare che l'operazione è stata completata.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2c390e7878e6f7d5d883c1188f87b6c66f915a26
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7796261adc44c3fa9c494cd5f116965fe8f38677
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702692"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065532"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Generazione di uno schema XSD inline
   In una clausola FOR XML è possibile richiedere che la query restituisca uno schema inline oltre ai risultati della query. Per ottenere uno schema XDR, utilizzare la parola chiave XMLDATA nella clausola FOR XML. Per ottenere uno schema XSD, utilizzare invece la parola chiave XMLSCHEMA.  

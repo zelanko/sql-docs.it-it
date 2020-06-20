@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 56c2aac9-c65c-4679-b62c-d9f689876dde
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b50c09f27b458fcb2d940a639bee9cb76c1c0044
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b44033b0af52372e6da8efc68a8916164c2f862e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703783"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009628"
 ---
 # <a name="parameter-info-intellisense"></a>Informazioni parametri (IntelliSense)
   L'opzione [!INCLUDE[msCoName](../../includes/msconame-md.md)] Informazione sul parametro **di** IntelliSense consente di aprire un elenco di parametri che include informazioni relative a numero, nomi e tipi dei parametri necessari per una funzione o per una stored procedure. Il parametro in grassetto indica il parametro successivo necessario quando viene digitata una funzione o una stored procedure.  

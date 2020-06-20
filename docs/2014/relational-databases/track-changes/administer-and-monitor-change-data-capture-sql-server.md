@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 467cb4dab267b04965058f118d798bdd5a7b0909
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8d97929ead145d1b0de1a1f83becb15ade397683
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76929190"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048928"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Amministrare e monitorare Change Data Capture (SQL Server)
   In questo argomento viene descritto come amministrare ed eseguire il monitoraggio dell'acquisizione dati delle modifiche.  
@@ -40,7 +39,7 @@ ms.locfileid: "76929190"
  Il parametro *continuo* controlla se `sp_cdc_scan` cede il controllo in dopo lo svuotamento del log o l'esecuzione del numero massimo di cicli di analisi (modalità di esecuzione singola). Il parametro determina inoltre se l'esecuzione di `sp_cdc_scan` debba continuare fino a quando non viene arrestata in modo esplicito (modalità continua).  
   
 ##### <a name="one-shot-mode"></a>Modalità di esecuzione singola  
- In modalità a colpo singolo, il processo di `sp_cdc_scan` acquisizione richiede di eseguire fino a *maxtrans* analisi per provare a svuotare il log e restituire. Qualsiasi transazione aggiuntiva rispetto al parametro *maxtrans* presente nel log verrà elaborata nelle analisi successive.  
+ In modalità a colpo singolo, il processo di acquisizione richiede `sp_cdc_scan` di eseguire fino a *maxtrans* analisi per provare a svuotare il log e restituire. Qualsiasi transazione aggiuntiva rispetto al parametro *maxtrans* presente nel log verrà elaborata nelle analisi successive.  
   
  La modalità di esecuzione singola viene utilizzata in test controllati, in cui è noto il volume di transazioni da elaborare e in cui la chiusura automatica del processo al suo completamento costituisce un aspetto vantaggioso. L'utilizzo della modalità di esecuzione singola non è consigliabile in un ambiente di produzione, in quanto t si basa sulla pianificazione del processo per gestire la frequenza di esecuzione del ciclo di analisi.  
   

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1aeb6b4cb356cbb2d965ce449e36b2c5cd484ccc
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 175e79f017b795a60088bdaab7939ca51eee9608
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706469"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025980"
 ---
 # <a name="native-compilation-advisor"></a>Assistente compilazione nativa
   Lo strumento dei report sulle prestazioni delle transazioni (vedere [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) indica quali stored procedure interpretate nel database trarranno vantaggio se trasferite per utilizzare la compilazione nativa. Una volta identificata la stored procedure da trasferire per l'utilizzo nella compilazione nativa, è possibile utilizzare l'Assistente compilazione nativa per facilitare la migrazione della stored procedure interpretata alla compilazione nativa. Per altre informazioni sulle stored procedure compilate in modo nativo, vedere [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md).  

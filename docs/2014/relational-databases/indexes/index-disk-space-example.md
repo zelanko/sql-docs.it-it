@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2beb1a7890786e31fb525b61963c235033882247
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 107ba245f19ae77eec2be82d63c62e5c3d45d092
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161802"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025247"
 ---
 # <a name="index-disk-space-example"></a>Esempio di spazio su disco per gli indici
   Ogni volta che viene creato, ricompilato o eliminato un indice, nei file e nei filegroup appropriati è necessario spazio su disco per le strutture di origine (vecchie) e di destinazione (nuove). La struttura di origine non viene deallocata finché non viene eseguito il commit della transazione di creazione dell'indice. Potrebbe essere necessario spazio su disco temporaneo aggiuntivo per le operazioni di ordinamento. Per altre informazioni, vedere [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md).  
@@ -96,7 +95,7 @@ ms.locfileid: "63161802"
   
 -   Determinare lo spazio per l'indice di mapping temporaneo.  
   
-     In questo esempio il vecchio segnalibro è l'ID di riga (RID) dell'heap (8 byte) e il nuovo segnalibro è la chiave di clustering (24 byte `uniqueifier`incluso un). Tra i vecchi e i nuovi segnalibri non vi sono colonne sovrapposte.  
+     In questo esempio il vecchio segnalibro è l'ID di riga (RID) dell'heap (8 byte) e il nuovo segnalibro è la chiave di clustering (24 byte incluso un `uniqueifier` ). Tra i vecchi e i nuovi segnalibri non vi sono colonne sovrapposte.  
   
      Dimensioni dell'indice di mapping temporaneo = 1 milione * (8 byte + 24 byte) / 80% ~ 40 MB.  
   
