@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2d59a42fa7b77e6800218f1eeca4986320c1dcef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b47690162b2418469dcb3f866a7c002981b80a75
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766779"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964101"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Controllo dell'accesso per dati sensibili nei pacchetti
   Per proteggere i dati in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , è possibile impostare un livello di protezione in modo da proteggere i dati sensibili o tutti i dati all'interno del pacchetto. Inoltre, è possibile crittografare questi dati con una password o una chiave utente o utilizzare il sistema di crittografia del database. Inoltre, il livello di protezione che si utilizza per un pacchetto non è necessariamente statico, ma cambia durante tutto il ciclo di vita del pacchetto. Spesso si imposta un livello di protezione durante lo sviluppo e un altro appena si distribuisce il pacchetto.  
@@ -64,7 +63,7 @@ ms.locfileid: "62766779"
 ## <a name="protection-level-setting-and-the-ssisdb-catalog"></a>Impostazione del livello di protezione e catalogo SSISDB  
  Il catalogo SSISDB usano il livello di protezione `ServerStorage`. Quando si distribuisce un progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , il catalogo crittografa automaticamente i dati e i valori sensibili del pacchetto. Il catalogo inoltre decrittografa automaticamente i dati quando viene recuperato.  
   
- Se si esporta il progetto (file con estensione ispac) dal server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nel file system, il livello di protezione viene automaticamente modificato in `EncryptSensitiveWithUserKey` dal sistema. Se si importa il progetto utilizzando la **Integration Services importazione guidata progetto** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], la proprietà **ProtectionLevel** nella finestra **Proprietà** Mostra il valore `EncryptSensitiveWithUserKey`.  
+ Se si esporta il progetto (file con estensione ispac) dal server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nel file system, il livello di protezione viene automaticamente modificato in `EncryptSensitiveWithUserKey` dal sistema. Se si importa il progetto utilizzando la **Integration Services importazione guidata progetto** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , la proprietà **ProtectionLevel** nella finestra **Proprietà** Mostra il valore `EncryptSensitiveWithUserKey` .  
   
 ## <a name="protection-level-setting-based-on-package-life-cycle"></a>Impostazione del livello di protezione sulla base del ciclo di vita del pacchetto  
  Il livello di protezione di un pacchetto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene impostato quando il pacchetto viene sviluppato per la prima volta in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. È possibile aggiornarlo successivamente quando il pacchetto viene distribuito, importato o esportato da [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]oppure copiato da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], nell'archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] o nel file system. Si supponga, ad esempio, che nei computer in uso vengano creati e salvati pacchetti in base a una delle opzioni di livello di protezione con chiave utente. Se successivamente i pacchetti vengono distribuiti ad altri utenti, sarà necessario modificarne il livello di protezione in modo che possano essere aperti dagli altri utenti.  
@@ -81,7 +80,7 @@ ms.locfileid: "62766779"
   
 -   [Impostazione o modifica del livello di protezione dei pacchetti](../set-or-change-the-protection-level-of-packages.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Importare ed esportare pacchetti &#40;servizio SSIS&#41;](../import-and-export-packages-ssis-service.md)   
  [Integration Services &#40;pacchetti&#41; SSIS](../integration-services-ssis-packages.md)   
  [Panoramica sulla sicurezza &#40;Integration Services&#41;](security-overview-integration-services.md)  

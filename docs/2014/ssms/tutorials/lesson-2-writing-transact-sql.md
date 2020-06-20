@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 439cfab5-c049-43a8-8617-59eaa8d24873
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bd776a778f56831fc63fef1ea040e3f69883eff3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7a9f116ccd65e4763e382d1125ca0a8424ecd97
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62470028"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040959"
 ---
 # <a name="lesson-2-writing-transact-sql"></a>Lezione 2: Scrittura di codice Transact-SQL
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è un ambiente di sviluppo integrato per la scrittura di query [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX e XML e di comandi SQLCMD. Nell'esercitazione viene illustrato l'utilizzo dell'editor di query del motore di database per scrivere uno script [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -37,7 +36,7 @@ ms.locfileid: "62470028"
   
 -   Creazione di script per una tabella  
   
--   Riepilogo  
+-   Summary  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Connessione all'editor di query](lesson-2-1-connecting-with-query-editor.md)  

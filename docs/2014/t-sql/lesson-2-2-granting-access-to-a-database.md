@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 686edfe2-3650-48a6-a2da-9d46fa211ad8
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 12e678b8cd5210ba6db0cd326c0cd803ed210735
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0e9a67ddf9ff079c4ff5075b8601aec4c0922e89
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63460051"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000602"
 ---
 # <a name="granting-access-to-a-database"></a>Concessione dell'accesso a un database
   L'utente Mary dispone ora dell'accesso all'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], ma non delle autorizzazioni necessarie per accedere ai database. L'utente non dispone inoltre dell'accesso al proprio database predefinito **TestData** a meno che non lo si autorizzi in qualità di utente del database.  

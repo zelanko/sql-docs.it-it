@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: 748ad4cfe0e399062fd1b13bcf3a05169ef94b1c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b03b4d9ecf31e9953fd3e22cec5c51bbacc0c25
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957169"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060299"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Spostare un database protetto da TDE in un'altra istanza di SQL Server
   Questo argomento illustra come proteggere un database tramite TDE (Transparent Data Encryption) e spostare il database in un'altra istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. TDE esegue la crittografia e la decrittografia delle operazioni di I/O di file di dati e log in tempo reale. La crittografia usa una chiave di crittografia del database (DEK) che viene archiviata nel record di avvio del database per la disponibilità durante il ripristino. La chiave di decrittografia è una chiave simmetrica protetta tramite un certificato archiviato nel database `master` del server o una chiave asimmetrica protetta da un modulo EKM.  
@@ -47,7 +46,7 @@ ms.locfileid: "74957169"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
--   Quando si sposta il database protetto con TDE, è necessario spostare anche la chiave asimmetrica o il certificato usato per aprire la chiave di decrittografia. Il certificato o la chiave asimmetrica deve essere installato nel `master` database del server di destinazione, in modo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che possa accedere ai file del database. Per altre informazioni sulla crittografia trasparente del database, vedere [Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md).  
+-   Quando si sposta il database protetto con TDE, è necessario spostare anche la chiave asimmetrica o il certificato usato per aprire la chiave di decrittografia. Il certificato o la chiave asimmetrica deve essere installato nel `master` database del server di destinazione, in modo che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possa accedere ai file del database. Per altre informazioni sulla crittografia trasparente del database, vedere [Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md).  
   
 -   Ai fini del recupero del certificato, è necessario mantenere copie sia del file del certificato sia del file della chiave privata. La password per la chiave primaria non deve essere uguale a quella della chiave master del database.  
   
@@ -57,9 +56,9 @@ ms.locfileid: "74957169"
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
   
--   È `CONTROL DATABASE` richiesta l'autorizzazione `master` per il database per creare la chiave master del database.  
+-   È richiesta l' `CONTROL DATABASE` autorizzazione `master` per il database per creare la chiave master del database.  
   
--   È `CREATE CERTIFICATE` richiesta l'autorizzazione `master` per il database per creare il certificato che protegge la chiave di crittografia.  
+-   È richiesta l' `CREATE CERTIFICATE` autorizzazione `master` per il database per creare il certificato che protegge la chiave di crittografia.  
   
 -   Sono richieste l'autorizzazione `CONTROL DATABASE` per il database crittografato e l'autorizzazione `VIEW DEFINITION` per la chiave asimmetrica o il certificato usato per crittografare la chiave di crittografia del database.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "74957169"
   
 ###  <a name="using-sql-server-management-studio"></a><a name="SSMSCreate"></a> Utilizzo di SQL Server Management Studio  
   
-1.  Creare una chiave master e un certificato del database `master` nel database. Per altre informazioni, vedere **Uso di Transact-SQL** di seguito.  
+1.  Creare una chiave master e un certificato del database nel `master` database. Per altre informazioni, vedere **Uso di Transact-SQL** di seguito.  
   
 2.  Creare un backup del certificato del server nel `master` database. Per altre informazioni, vedere **Uso di Transact-SQL** di seguito.  
   
@@ -143,7 +142,7 @@ ms.locfileid: "74957169"
     GO  
     ```  
   
- Per altre informazioni, vedi:  
+ Per altre informazioni, vedere:  
   
 -   [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
   
@@ -183,10 +182,10 @@ ms.locfileid: "74957169"
      **Mantieni cataloghi full-text**  
      Per impostazione predefinita, con l'operazione di scollegamento è possibile mantenere eventuali cataloghi full-text associati al database. Per rimuoverli, deselezionare la casella di controllo **Mantieni cataloghi full-text** . Questa opzione è visualizzata solo quando si aggiorna un database da [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
-     **Stato**  
+     **Status**  
      Consente di visualizzare uno degli stati seguenti: **Pronto** o **Non pronto**.  
   
-     **Messaggio**  
+     **Message**  
      Nella colonna **Messaggio** possono essere visualizzate informazioni sul database simili alle seguenti:  
   
     -   Quando un database è coinvolto nella replica, lo **Stato** è **Non pronto** e nella colonna **Messaggio** viene visualizzato **Database replicato**.  
@@ -216,7 +215,7 @@ ms.locfileid: "74957169"
      **Database da collegare**  
      Consente di visualizzare informazioni sui database selezionati.  
   
-     \<nessuna intestazione di colonna>  
+     \<no column header>  
      Consente di visualizzare un'icona che indica lo stato dell'operazione di collegamento. Le icone possibili sono illustrate di seguito nella descrizione di **Stato** .  
   
      **Percorso file MDF**  
@@ -231,7 +230,7 @@ ms.locfileid: "74957169"
      **Proprietario**  
      Consente di visualizzare un elenco a discesa di possibili proprietari del database in cui è possibile selezionare un proprietario diverso.  
   
-     **Stato**  
+     **Status**  
      Consente di visualizzare lo stato del base in base alla tabella seguente.  
   
     |Icona|Testo Stato|Descrizione|  
@@ -243,7 +242,7 @@ ms.locfileid: "74957169"
     |Cerchio con due quadranti neri a destra e a sinistra e due quadranti bianchi in alto e in basso|Arrestato|L'operazione di collegamento non è stata completata perché l'utente ne ha arrestato l'esecuzione.|  
     |Cerchio con freccia curva che punta in senso antiorario.|È stato eseguito il rollback|L'operazione di collegamento è stata completata ma ne è stato eseguito il rollback a causa di un errore durante il collegamento di un altro oggetto.|  
   
-     **Messaggio**  
+     **Message**  
      Non viene visualizzato alcun messaggio oppure viene visualizzato il collegamento ipertestuale "Impossibile trovare il file".  
   
      **Aggiungere**  
@@ -252,8 +251,8 @@ ms.locfileid: "74957169"
      **Rimuovi**  
      Consente di rimuovere il file selezionato dalla griglia **Database da collegare** .  
   
-     Dettagli del database **"** _<database_name>_ **"**  
-     Consente di visualizzare i nomi dei file da collegare. Per verificare o modificare il percorso di un file, fare clic sul pulsante **Sfoglia** (**...**).  
+     **"** _<nome_database>_ **" dettagli database**  
+     Consente di visualizzare i nomi dei file da collegare. Per verificare o modificare il percorso di un file, fare clic sul pulsante **Sfoglia** ( **...** ).  
   
     > [!NOTE]  
     >  Se il file non esiste, nella colonna **Messaggio** verrà visualizzato il testo "File non trovato". Se non rilevato, un file di log può trovarsi in un'altra directory o essere stato eliminato. È necessario aggiornare il percorso del file nella griglia **Dettagli database** in modo che indichi la posizione corretta oppure rimuovere il file di log dalla griglia. Se non viene rilevato un file di dati con estensione ndf, è necessario aggiornare il percorso nella griglia in modo che indichi la posizione corretta.  
@@ -268,7 +267,7 @@ ms.locfileid: "74957169"
      Consente di visualizzare il percorso del file di database selezionato. Il percorso può essere modificato manualmente.  
   
      **Messaggio**  
-     Visualizza un messaggio vuoto o un collegamento ipertestuale "**Impossibile trovare il file**".  
+     Non viene visualizzato alcun messaggio oppure viene visualizzato il collegamento ipertestuale**Impossibile trovare il file**.  
   
 ###  <a name="using-transact-sql"></a><a name="TsqlMove"></a> Uso di Transact-SQL  
   
@@ -311,7 +310,7 @@ ms.locfileid: "74957169"
     GO  
     ```  
   
- Per altre informazioni, vedi:  
+ Per altre informazioni, vedere:  
   
 -   [sp_detach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)  
   

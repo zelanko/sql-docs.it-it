@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 80f9fdde-1f13-4292-a4fc-55da826be3b4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 072a3220ba5c6997c463031733bbbe0ce2587fe1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63b06c9d0564d4e78acf4742e49814c2d39ae6f9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088912"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929342"
 ---
 # <a name="script-an-extended-event-session"></a>Creare uno script per una sessione Eventi estesi
   In questo argomento viene descritto come creare uno script per una sessione eventi. È possibile esportare, modificare o eliminare la sessione eventi oppure eliminare e creare la sessione eventi nelle posizioni seguenti:  
@@ -50,7 +49,7 @@ ms.locfileid: "66088912"
   
 3.  Nella finestra di dialogo **Proprietà sessione** modificare la sessione eventi, quindi selezionare la posizione in cui si desidera creare lo script della sessione modificata dall'elenco a discesa **script** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../relational-databases/extended-events/extended-events.md)  
   
   

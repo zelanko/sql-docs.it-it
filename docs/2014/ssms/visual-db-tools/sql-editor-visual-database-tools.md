@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 029abf7d-6414-47ca-a3a7-b3a057efb6c2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 973ad34d5d24eecd0c3af0e0451b0d2ba9058222
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf3d69608e8508fcc314fe67315de86da98ed53f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63194922"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000767"
 ---
 # <a name="sql-editor-visual-database-tools"></a>Editor SQL (Visual Database Tools)
   Editor SQL consente di modificare stored procedure, funzioni, trigger e script SQL esistenti. Tale finestra viene visualizzata quando si apre uno qualsiasi di questi oggetti. Se si vuole creare una nuova istruzione SQL da eseguire sull'origine dei dati, usare il [riquadro SQL](visual-database-tools.md) di Progettazione query.  

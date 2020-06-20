@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a2512310-bdb6-41dc-858a-e866b2b58afc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7ceed5f82af858f6a2dc3a88df7276d5ba2fda3f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 400a57693fbea10270a51f5735a19b9639112ce9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211200"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000743"
 ---
 # <a name="creating-a-login"></a>Creazione di un account di accesso
   Per accedere a [!INCLUDE[ssDE](../includes/ssde-md.md)]è necessario che gli utenti dispongano di un account di accesso. L'account di accesso può rappresentare l'identità dell'utente come un account di Windows o come membro di un gruppo di Windows oppure un account di accesso di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] esistente solo in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Se possibile, è consigliabile utilizzare l'autenticazione di Windows.  
@@ -26,7 +25,7 @@ ms.locfileid: "68211200"
   
 ### <a name="to-create-a-new-windows-account"></a>Per creare un nuovo account di Windows  
   
-1.  Fare clic sul pulsante **Start**, scegliere **Esegui**, digitare `%SystemRoot%\system32\compmgmt.msc /s`nella casella **Apri** e quindi fare clic su **OK** per aprire il programma di gestione computer.  
+1.  Fare clic sul pulsante **Start**, scegliere **Esegui**, digitare nella casella **Apri** `%SystemRoot%\system32\compmgmt.msc /s` e quindi fare clic su **OK** per aprire il programma di gestione computer.  
   
 2.  In **Utilità di sistema**espandere **Utenti e gruppi locali**, fare clic con il pulsante destro del mouse su **Utenti**e quindi scegliere **Nuovo utente**.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "68211200"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Concessione dell'accesso a un database](lesson-2-2-granting-access-to-a-database.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Crea account di accesso &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-login-transact-sql)   
  [Scegliere una modalità di autenticazione](../relational-databases/security/choose-an-authentication-mode.md)  
   

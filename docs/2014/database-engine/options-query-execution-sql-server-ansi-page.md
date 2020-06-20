@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0f4c6887-0562-417e-806c-b5cffb1e7c5c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 49727ad5168bbd5438a57ae161f669482e412cae
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 198505c5d14b9fda510d4635dbaa3d3d49483ddf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856842"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930152"
 ---
 # <a name="options-query-execution-sql-server-ansi-page"></a>Opzioni (esecuzione query-SQL Server pagina ANSI)
   L'insieme di queste opzioni SET dello standard ANSI (ISO) definisce l'ambiente di elaborazione della query per l'intera durata della query dell'utente o dell'esecuzione di un trigger o di una stored procedure. Queste opzioni SET tuttavia non includono tutte le opzioni necessarie per la conformità allo standard ISO. Utilizzare questa pagina per specificare che [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eseguirà le query utilizzando tutte o una parte delle impostazioni specificate nello standard ISO. Le modifiche apportate a queste opzioni vengono applicate solo alle nuove query di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per modificare le opzioni per le query correnti, scegliere **Opzioni query** dal menu **query** oppure fare clic con il pulsante destro del mouse nella [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] finestra query e scegliere **Opzioni query**. Nella finestra di dialogo **Opzioni query** fare clic su **ANSI**in **Esecuzione**.  

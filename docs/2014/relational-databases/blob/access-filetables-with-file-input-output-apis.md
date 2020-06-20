@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cd43f430f43f31435df6fff71687136f4bd5f9e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56118ef2db319abd270ff51259e3537864fdd57e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010363"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955931"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Accedere alle tabelle FileTable con API di Input-Output dei file
   Viene descritto il funzionamento dell'I/O del file system in una tabella FileTable.  
@@ -77,7 +76,7 @@ ms.locfileid: "66010363"
   
 ##  <a name="additional-considerations-for-file-io-access-to-filetables"></a><a name="considerations"></a> Considerazioni aggiuntive relative all'accesso di I/O dei file in tabelle FileTable  
   
-###  <a name="using-virtual-network-names-vnns-with-alwayson-availability-groups"></a><a name="vnn"></a>Uso dei nomi di rete virtuale (VNN) con Gruppi di disponibilità AlwaysOn  
+###  <a name="using-virtual-network-names-vnns-with-alwayson-availability-groups"></a><a name="vnn"></a> Utilizzo di nomi di rete virtuale con i gruppi di disponibilità AlwaysOn  
  Quando il database che contiene dati FILESTREAM o FileTable appartiene a un gruppo di disponibilità AlwaysOn, quindi ogni accesso a dati FILESTREAM o FileTable tramite le API del file system deve utilizzare VNN anziché nomi computer. Per altre informazioni, vedere [FILESTREAM e FileTable con i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md).  
   
 ###  <a name="partial-updates"></a><a name="partial"></a> Aggiornamenti parziali  

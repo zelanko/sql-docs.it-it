@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5fcd3d72ef3e716cd640d35505b82df459eb37b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19a95cfa5c6780fbdf71ae58bd141aa9aa351efa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920794"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956176"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Utilizzo di Resource Governor per limitare l'utilizzo della CPU da parte della compressione dei backup (Transact-SQL)
   Per impostazione predefinita, l'esecuzione di backup mediante la compressione aumenta in modo significativo l'utilizzo della CPU e la CPU aggiuntiva utilizzata dal processo di compressione può avere un impatto negativo sulle operazioni simultanee. È necessario quindi creare un backup compresso con priorità bassa in una sessione con utilizzo della CPU limitato da[Resource Governor](../resource-governor/resource-governor.md) nel caso in cui si verifichi una contesa di CPU. In questo argomento viene presentato uno scenario che classifica le sessioni di un particolare utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eseguendone mapping a un gruppo del carico di lavoro di Resource Governor che limita l'utilizzo della CPU in tali casi.  
@@ -160,7 +159,7 @@ GO
   
      RETURN @workload_group_name  
   
-     END  
+     FINE  
   
      Per informazioni sui componenti di questa istruzione CREATE FUNCTION, vedere i seguenti argomenti:  
   
@@ -259,7 +258,7 @@ GO
  [&#91;Torna all'inizio&#93;](#Top)  
   
 ##  <a name="compressing-backups-using-a-session-with-limited-cpu"></a><a name="creating_compressed_backup"></a> Compressione di backup utilizzando una sessione con utilizzo della CPU limitato  
- Per creare un backup compresso in una sessione con un utilizzo massimo della CPU limitato, accedere come l'utente specificato nella funzione di classificazione. Nel comando di backup specificare WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) o selezionare **Comprimi backup** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]). Per creare un backup compresso del database, vedere [Creazione di un backup completo del database &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md).  
+ Per creare un backup compresso in una sessione con un utilizzo massimo della CPU limitato, accedere come l'utente specificato nella funzione di classificazione. Nel comando di backup specificare WITH COMPRESSION ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) o selezionare **Comprimi backup** ( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ). Per creare un backup compresso del database, vedere [Creazione di un backup completo del database &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md).  
   
 ### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Esempio C: Creazione di un backup compresso (Transact-SQL)  
  Nell'esempio seguente [BACKUP](/sql/t-sql/statements/backup-transact-sql) viene creato un backup compresso completo del database [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] nel nuovo file di backup formattato `Z:\SQLServerBackups\AdvWorksData.bak`.  

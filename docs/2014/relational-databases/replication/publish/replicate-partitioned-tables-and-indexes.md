@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f2201be33df4346ab2afa812828ab9655b0ed2be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 616707bfb11b48b170fc8f0e8872076d2cd09d1c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67793287"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060361"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>Replica di tabelle e indici partizionati
   Il partizionamento semplifica la gestione di indici e tabelle di grandi dimensioni, in quanto consente di gestire e accedere in modo rapido ed efficace a subset di dati, preservando al contempo l'integrità di una raccolta dati. Per ulteriori informazioni, vedere [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md). La replica supporta il partizionamento fornendo un set di proprietà che specificano la modalità di gestione di tabelle e indici partizionati.  
@@ -70,9 +69,9 @@ ms.locfileid: "67793287"
 ### <a name="enabling-partition-switching"></a>Abilitazione del cambio della partizione  
  Le proprietà seguenti per le pubblicazioni transazionali consentono agli utenti di controllare il comportamento del cambio della partizione in un ambiente replicato:  
   
--   allow_partition_switch, se impostato su `true`, è possibile eseguire switch Partition sul database di pubblicazione. ** \@**  
+-   ** \@ allow_partition_switch**, se impostato su `true` , è possibile eseguire switch Partition sul database di pubblicazione.  
   
--   replicate_partition_switch determina se l'istruzione switch Partition DDL deve essere replicata nei Sottoscrittori. ** \@** Questa opzione è valida solo quando ** \@allow_partition_switch** è impostato su `true`.  
+-   ** \@ replicate_partition_switch** determina se l'istruzione switch Partition DDL deve essere replicata nei Sottoscrittori. Questa opzione è valida solo quando ** \@ allow_partition_switch** è impostato su `true` .  
   
  È possibile impostare queste proprietà utilizzando [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) durante la creazione della pubblicazione oppure [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) al termine della creazione della pubblicazione. Come notato in precedenza, la replica di tipo merge non supporta il cambio della partizione. Per eseguire SWITCH PARTITION in una tabella abilitata per la replica di tipo merge, rimuovere la tabella dalla pubblicazione.  
   

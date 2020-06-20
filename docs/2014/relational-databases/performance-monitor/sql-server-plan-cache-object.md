@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ff1acb1fb3af2708b14b31eeb82aa0989685630c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf5fbc6c3a01b39079c8f63a2998490025c85e8c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210811"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066931"
 ---
 # <a name="sql-server-plan-cache-object"></a>Oggetto Plan Cache di SQL Server
   L'oggetto **Plan Cache** include contatori che consentono di monitorare il modo in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa la memoria per archiviare oggetti quali stored procedure, istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc e preparate e trigger. È possibile monitorare contemporaneamente più istanze dell'oggetto **Plan Cache** , che rappresentano diversi tipi di piani da monitorare.  
@@ -28,7 +27,7 @@ ms.locfileid: "68210811"
 |Contatori di Plan Cache di SQL Server|Descrizione|  
 |------------------------------------|-----------------|  
 |**Percentuale riscontri cache**|Rapporto tra riscontri e ricerche nella cache.|  
-|**Numero oggetti nella cache**|Numero di oggetti disponibili nella cache.|  
+|**Conteggio oggetti cache**|Numero di oggetti disponibili nella cache.|  
 |**Pagine cache**|Numero di pagine da 8 KB usate dagli oggetti della cache.|  
 |**Oggetti cache in uso**|Numero di oggetti della cache in uso.|  
   
@@ -43,7 +42,7 @@ ms.locfileid: "68210811"
 |**Stored procedure estese**|Informazioni di catalogo relative alle stored procedure estese.|  
 |**Tabelle temporanee e variabili tabella**|Informazioni della cache relative a tabelle temporanee e variabili tabella.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni di configurazione del server di memoria server](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [SQL Server, oggetto Gestione buffer](sql-server-buffer-manager-object.md)   
  [Monitorare l'utilizzo delle risorse &#40;Monitor di sistema&#41;](monitor-resource-usage-system-monitor.md)  

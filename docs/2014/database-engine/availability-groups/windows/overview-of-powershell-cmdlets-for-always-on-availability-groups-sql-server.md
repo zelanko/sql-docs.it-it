@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4996a1026b4c85b105efc09b8381913f7a47942a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eecbdf1bd3d3859e272ce2216bde660910795c97
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789458"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936695"
 ---
 # <a name="overview-of-powershell-cmdlets-for-alwayson-availability-groups-sql-server"></a>Panoramica dei cmdlet di PowerShell per Gruppi di disponibilità AlwaysOn (SQL Server)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] PowerShell è una shell della riga di comando basata su attività e un linguaggio di scripting progettato appositamente per l'amministrazione del sistema. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fornisce un set di cmdlet di PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] per distribuire, gestire e monitorare gruppi di disponibilità, repliche di disponibilità e database di disponibilità.  
@@ -44,14 +43,14 @@ ms.locfileid: "62789458"
 -   [Monitoraggio dell'integrità del gruppo di disponibilità](#MonitorTblshtAGs)  
   
 > [!NOTE]  
->  Per un elenco degli argomenti nella [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] documentazione online di che descrivono come usare i cmdlet di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] per eseguire attività, vedere la sezione "attività correlate" di [panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
+>  Per un elenco degli argomenti nella [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] documentazione online di che descrivono come usare i cmdlet di per eseguire [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] attività, vedere la sezione "attività correlate" di [panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
   
 ##  <a name="configuring-a-server-instance-for-alwayson-availability-groups"></a><a name="ConfiguringServerInstance"></a>Configurazione di un'istanza del server per Gruppi di disponibilità AlwaysOn  
   
 |Cmdlet|Descrizione|Supportati in|  
 |-------------|-----------------|------------------|  
 |`Disable-SqlAlwaysOn`|Disabilita la funzionalità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] su un'istanza del server.|L'istanza del server specificata dal parametro `Path`, `InputObject` o `Name`. (L'edizione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve supportare [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]).|  
-|`Enable-SqlAlwaysOn`|Abilita [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] su un'istanza di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] che supporta la funzionalità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Per informazioni sul supporto di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere [Prerequisites, Restrictions, and raccomandazioni for Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).|Qualsiasi edizione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che supporta [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].|  
+|`Enable-SqlAlwaysOn`|Abilita [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] su un'istanza di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] che supporta la funzionalità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Per informazioni sul supporto di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , vedere [Prerequisites, Restrictions, and raccomandazioni for Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).|Qualsiasi edizione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che supporta [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].|  
 |`New-SqlHadrEndPoint`|Crea un nuovo endpoint del mirroring del database in un'istanza del server. Questo endpoint è richiesto per lo spostamento di dati tra il database primario e quelli secondari.|Qualsiasi istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |`Set-SqlHadrEndpoint`|Modifica le proprietà di un endpoint del mirroring del database esistente, ad esempio il nome, lo stato o le proprietà di autenticazione.|Istanza del server che supporta [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e in cui non è presente un endpoint del mirroring del database|  
   
@@ -60,7 +59,7 @@ ms.locfileid: "62789458"
 |Cmdlet|Descrizione|Supportati in|  
 |-------------|-----------------|------------------|  
 |`Backup-SqlDatabase`|Crea un backup dei dati o del log.|Qualsiasi database online (per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], un database nell'istanza del server che ospita la replica primaria)|  
-|`Restore-SqlDatabase`|Ripristina un backup.|Qualsiasi istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], un'istanza del server che ospita una replica secondaria)<br /><br /> **&#42;&#42; importanti &#42;&#42;** Quando si prepara un database secondario, è necessario usare `-NoRecovery` il parametro in `Restore-SqlDatabase` ogni comando.|  
+|`Restore-SqlDatabase`|Ripristina un backup.|Qualsiasi istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], un'istanza del server che ospita una replica secondaria)<br /><br /> **&#42;&#42; importanti &#42;&#42;** Quando si prepara un database secondario, è necessario usare il `-NoRecovery` parametro in ogni `Restore-SqlDatabase` comando.|  
   
  Per informazioni sull'uso di questi cmdlet per preparare un database secondario, vedere [Preparare manualmente un database secondario per un gruppo di disponibilità &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
@@ -75,7 +74,7 @@ ms.locfileid: "62789458"
   
 ##  <a name="creating-and-managing-an-availability-group-listener"></a><a name="AGlisteners"></a> Creazione e gestione di un listener del gruppo di disponibilità  
   
-|Cmdlet|Descrizione|Supportati in|  
+|Cmdlet|Description|Supportati in|  
 |------------|-----------------|------------------|  
 |`New-SqlAvailabilityGroupListener`|Crea un nuovo listener del gruppo di disponibilità e lo collega a un gruppo di disponibilità esistente.|Istanza del server che ospita la replica primaria|  
 |`Set-SqlAvailabilityGroupListener`|Modifica l'impostazione della porta su un listener del gruppo di disponibilità esistente.|Istanza del server che ospita la replica primaria|  
@@ -105,7 +104,7 @@ ms.locfileid: "62789458"
 > [!IMPORTANT]  
 >  È necessario disporre delle autorizzazioni CONNECT, VIEW SERVER STATE e VIEW ANY DEFINITION per eseguire questi cmdlet.  
   
-|Cmdlet|Descrizione|Supportati in|  
+|Cmdlet|Description|Supportati in|  
 |------------|-----------------|------------------|  
 |`Test-SqlAvailabilityGroup`|Valuta l'integrità di un gruppo di disponibilità valutando i criteri della gestione basata su criteri di SQL Server.|Qualsiasi istanza del server che ospita una replica di disponibilità*.|  
 |`Test-SqlAvailabilityReplica`|Valuta l'integrità delle repliche di disponibilità valutando i criteri della gestione basata su criteri di SQL Server.|Qualsiasi istanza del server che ospita una replica di disponibilità*.|  
@@ -115,7 +114,7 @@ ms.locfileid: "62789458"
   
  Per ulteriori informazioni, vedere [utilizzare i criteri AlwaysOn per visualizzare l'integrità di un gruppo di disponibilità &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   

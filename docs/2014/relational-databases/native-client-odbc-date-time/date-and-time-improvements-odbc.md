@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e31d5ca5-2103-498f-954c-1ee93e217186
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 521017e07cf2304186ee0238e72f3274bb3f95c9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6ce8f906fc1949a80bfa8e5a541ecf1e83878775
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705510"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020406"
 ---
 # <a name="date-and-time-improvements-odbc"></a>Miglioramenti relativi a data e ora (ODBC)
   In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sono stati introdotti nuovi tipi di dati di data e ora. In questa sezione viene descritto il modo in cui questi nuovi tipi vengono esposti come estensioni in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Per una panoramica del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporto di Native Client per i nuovi tipi di dati di data e ora, vedere [miglioramenti di data e ora](../native-client/features/date-and-time-improvements.md). Per un esempio che illustra il supporto ODBC per data/ora, vedere [usare i tipi di data e ora](../native-client-odbc-how-to/use-date-and-time-types.md).  

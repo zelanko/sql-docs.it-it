@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 77b6c15c-9cf7-4019-b3f0-3d27d23ef656
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 620e2c0df4a31444635c835b5fa39a4aa65e8332
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2d630660d66eca46d84c8c03fa4cb45e06b3b95f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702110"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021468"
 ---
 # <a name="sqltables"></a>SQLTables
   SQLTables può essere eseguito su un cursore del server statico. Il tentativo di eseguire SQLTables su un cursore aggiornabile (dinamico o keyset) restituirà SQL_SUCCESS_WITH_INFO indicante che il tipo di cursore è stato modificato.  

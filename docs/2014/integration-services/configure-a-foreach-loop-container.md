@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 519c6f96-5e1f-47d2-b96a-d49946948c25
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 461a652999e97907962486cfc05e5b6668f5590d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 840011d1797c7ef9482af31ffc8b3ec3a6419b8a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060880"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921972"
 ---
 # <a name="configure-a-foreach-loop-container"></a>Configurare un contenitore Ciclo Foreach
   Questa procedura descrive la configurazione di un contenitore Ciclo Foreach, incluse le espressioni di proprietà a livello di enumeratore e contenitore.  
@@ -72,7 +71,7 @@ ms.locfileid: "66060880"
   
 7.  Facoltativamente, fare clic su **Mapping variabili** per eseguire il mapping delle proprietà degli oggetti ai valori della raccolta e quindi eseguire le operazioni seguenti:  
   
-    1.  Nell'elenco **variabili** selezionare una variabile oppure fare clic su ** \<nuova variabile>** per creare una nuova variabile.  
+    1.  Nell'elenco **variabili** selezionare una variabile oppure fare clic su **\<New Variable>** per creare una nuova variabile.  
   
     2.  Se si aggiunge una nuova variabile, impostarne le proprietà nella finestra di dialogo **Aggiungi variabile** e fare clic su **OK**.  
   
@@ -85,7 +84,7 @@ ms.locfileid: "66060880"
   
 9. Fare clic su **OK**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Contenitore Ciclo Foreach](control-flow/foreach-loop-container.md)  
   
   

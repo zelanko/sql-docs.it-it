@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ee587881b95821c2ae23580b54d298fa496cec15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf091886adb0a7fe484b2b62f44eb51b6c58d8bc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479176"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971271"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Autorizzazioni per elementi foglia (Master Data Services)
   Le autorizzazioni foglia si applicano ai valori di attributo per tutti i membri foglia di un'entità.  
@@ -34,20 +33,20 @@ ms.locfileid: "65479176"
   
 -   Le autorizzazioni assegnate agli attributi **Name** e **Code** non sono applicate.  
   
-|Autorizzazione|Descrizione|  
+|Autorizzazione|Description|  
 |----------------|-----------------|  
 |**Sola lettura**|I membri foglia vengono visualizzati, ma l'utente non può aggiungerli, rimuoverli o modificarli.<br /><br /> Se esistono membri consolidati, i nomi e i codici vengono visualizzati, ma l'utente non può aggiungerli, rimuoverli o modificarli.|  
-|**Aggiornamento**|I membri foglia vengono visualizzati e l'utente può aggiungerli, rimuoverli e modificarli.<br /><br /> Se esistono membri consolidati, i nomi e i codici vengono visualizzati, ma l'utente non può aggiungerli, rimuoverli o modificarli.|  
-|**Negare**|I membri foglia per l'entità non vengono visualizzati.|  
+|**Update**|I membri foglia vengono visualizzati e l'utente può aggiungerli, rimuoverli e modificarli.<br /><br /> Se esistono membri consolidati, i nomi e i codici vengono visualizzati, ma l'utente non può aggiungerli, rimuoverli o modificarli.|  
+|**Nega**|I membri foglia per l'entità non vengono visualizzati.|  
   
 ## <a name="attribute-permissions"></a>Autorizzazioni per attributi  
  Le autorizzazioni per gli attributi si applicano ai valori degli attributi per l'entità specifica. Gli utenti che dispongono solo delle autorizzazioni per gli attributi non possono aggiungere o rimuovere membri.  
   
-|Autorizzazione|Descrizione|  
+|Autorizzazione|Description|  
 |----------------|-----------------|  
 |**Sola lettura**|L'attributo viene visualizzato, ma l'utente non può modificare i valori di attributo.|  
-|**Aggiornamento**|L'attributo viene visualizzato e l'utente può modificare i valori di attributo.|  
-|**Negare**|L'attributo non viene visualizzato.<br /><br /> Nota: non è possibile negare in modo esplicito l'accesso agli attributi Name e Code.|  
+|**Update**|L'attributo viene visualizzato e l'utente può modificare i valori di attributo.|  
+|**Nega**|L'attributo non viene visualizzato.<br /><br /> Nota: non è possibile negare in modo esplicito l'accesso agli attributi Name e Code.|  
   
 ### <a name="example"></a>Esempio  
  Per l'entità Product, assegnare l'autorizzazione **Update** all'attributo Subcategory. Negare l'autorizzazione per tutti gli altri attributi.  
@@ -62,7 +61,7 @@ ms.locfileid: "65479176"
 > [!NOTE]  
 >  In questo esempio, Subcategory è un attributo basato su dominio, basato sull'entità SubcategoryList. È possibile selezionare una sottocategoria diversa per Mountain-100, ma non è possibile aggiungere o eliminare membri dall'entità SubcategoryList.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Assegnare autorizzazioni per oggetti modello &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   
  [Autorizzazioni consolidate &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)   
  [Autorizzazioni per oggetti modello &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
