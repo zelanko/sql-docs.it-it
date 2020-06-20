@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: a59d3448-8619-4044-923b-8effba926dfa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cbaf5c82f386330fc632c55aab3cd3ec5a3d07b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f1d8c77ffbe8e185e15b716819498fe48295348e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066708"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938707"
 ---
 # <a name="properties-ssas-tabular"></a>Proprietà (SSAS tabulare)
   I progetti di modello tabulare in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] dispongono di varie proprietà che consentono di definire i comportamenti di progetti, modelli, report e distribuzioni. Le impostazioni delle proprietà sono archiviate in formato XML nel file Model.bim, tuttavia, tutte le proprietà descritte in questa sezione possono essere configurate nelle finestre **Proprietà** in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 ## <a name="related-tasks"></a>Attività correlate  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |-----------|-----------------|  
 |[Proprietà report Power View &#40;SSAS tabulare&#41;](power-view-reporting-properties-ssas-tabular.md)|Gli argomenti di questa sezione forniscono descrizioni e opzioni di configurazione per modelli tabulari che saranno connessi e visualizzati da [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].|  
 |[Proprietà del progetto &#40;SSAS tabulare&#41;](project-properties-ssas-tabular.md)|Vengono fornite descrizioni per le proprietà del progetto in cui sono incluse le impostazioni delle opzioni di distribuzione e del file del progetto.|  

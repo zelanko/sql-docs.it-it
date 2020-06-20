@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4916167e-8541-43b4-900e-ec8e6adcbc34
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3fda0f61806c1fa2be33b1a231e877758c4c67ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cebcb693fc6f876c74f375c16de9ad3f09bbe9bd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62650516"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028895"
 ---
 # <a name="qnsubscription-event-class"></a>Classe di evento QN:Subscription
   L'evento QN:Subscription fornisce informazioni sulle sottoscrizioni di notifica.  
@@ -34,7 +33,7 @@ ms.locfileid: "62650516"
 |DatabaseName|`nvarchar`|Nome del database in cui viene eseguita l'istruzione dell'utente.|35|Sì|  
 |EventClass|`int`|Tipo di evento = 199.|27|No|  
 |EventSequence|`int`|Numero di sequenza dell'evento.|51|No|  
-|EventSubClass|`nvarchar`|Tipo di sottoclasse di evento in cui sono disponibili informazioni aggiuntive su ogni classe di evento. Questa colonna può contenere i valori seguenti:<br /><br /> Subscription registered: indica quando la sottoscrizione di notifica delle query viene registrata correttamente nel database.<br /><br /> Subscription Rewound: indica quando [!INCLUDE[ssDE](../../includes/ssde-md.md)] riceve una richiesta di sottoscrizione che corrisponde esattamente a una sottoscrizione esistente. In tal caso, [!INCLUDE[ssDE](../../includes/ssde-md.md)] imposta il valore di timeout della sottoscrizione esistente sul timeout specificato nella nuova richiesta di sottoscrizione.<br /><br /> Subscription fired: indica quando una sottoscrizione di notifica genera un messaggio di notifica.<br /><br /> Generazione non riuscita con errore Broker: indica quando un messaggio di notifica ha esito negativo a causa di un [!INCLUDE[ssSB](../../includes/sssb-md.md)] errore.<br /><br /> Attivazione non riuscita senza Broker Error: indica quando un messaggio di notifica ha esito negativo, [!INCLUDE[ssSB](../../includes/sssb-md.md)] ma non a causa di un errore.<br /><br /> Broker Error intercettated: indica che [!INCLUDE[ssSB](../../includes/sssb-md.md)] ha recapitato un errore nella conversazione utilizzata dalla notifica di query.<br /><br /> Tentativo di eliminazione della sottoscrizione: indica [!INCLUDE[ssDE](../../includes/ssde-md.md)] che il ha provato a eliminare una sottoscrizione scaduta per liberare risorse.<br /><br /> Subscription deletion failed: Indica che il tentativo di eliminazione di una sottoscrizione scaduta non è riuscito. [!INCLUDE[ssDE](../../includes/ssde-md.md)] ripianificherà automaticamente la sottoscrizione per l'eliminazione allo scopo di liberare risorse.<br /><br /> Subscription destroyed: indica che [!INCLUDE[ssDE](../../includes/ssde-md.md)] è stata eliminata correttamente una sottoscrizione scaduta|21|Sì|  
+|EventSubClass|`nvarchar`|Tipo di sottoclasse di evento in cui sono disponibili informazioni aggiuntive su ogni classe di evento. Questa colonna può contenere i valori seguenti:<br /><br /> Subscription registered: indica quando la sottoscrizione di notifica delle query viene registrata correttamente nel database.<br /><br /> Subscription Rewound: indica quando [!INCLUDE[ssDE](../../includes/ssde-md.md)] riceve una richiesta di sottoscrizione che corrisponde esattamente a una sottoscrizione esistente. In tal caso, [!INCLUDE[ssDE](../../includes/ssde-md.md)] imposta il valore di timeout della sottoscrizione esistente sul timeout specificato nella nuova richiesta di sottoscrizione.<br /><br /> Subscription fired: indica quando una sottoscrizione di notifica genera un messaggio di notifica.<br /><br /> Generazione non riuscita con errore Broker: indica quando un messaggio di notifica ha esito negativo a causa di un [!INCLUDE[ssSB](../../includes/sssb-md.md)] errore.<br /><br /> Attivazione non riuscita senza Broker Error: indica quando un messaggio di notifica ha esito negativo, ma non a causa di un [!INCLUDE[ssSB](../../includes/sssb-md.md)] errore.<br /><br /> Broker Error intercettated: indica che ha [!INCLUDE[ssSB](../../includes/sssb-md.md)] recapitato un errore nella conversazione utilizzata dalla notifica di query.<br /><br /> Tentativo di eliminazione della sottoscrizione: indica che il ha [!INCLUDE[ssDE](../../includes/ssde-md.md)] provato a eliminare una sottoscrizione scaduta per liberare risorse.<br /><br /> Subscription deletion failed: Indica che il tentativo di eliminazione di una sottoscrizione scaduta non è riuscito. [!INCLUDE[ssDE](../../includes/ssde-md.md)] ripianificherà automaticamente la sottoscrizione per l'eliminazione allo scopo di liberare risorse.<br /><br /> Subscription destroyed: indica che è stata [!INCLUDE[ssDE](../../includes/ssde-md.md)] eliminata correttamente una sottoscrizione scaduta|21|Sì|  
 |GroupID|`int`|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Sì|  
 |HostName|`nvarchar`|Nome del computer in cui è in esecuzione il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
 |IsSystem|`int`|Indica se l'evento è stato generato per un processo di sistema o un processo utente.<br /><br /> 0 = utente<br /><br /> 1 = sistema|60|No|  

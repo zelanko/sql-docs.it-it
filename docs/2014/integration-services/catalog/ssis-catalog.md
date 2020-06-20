@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d4657bf58a7160f075759a265fef883c92fee0c9
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: f24ea0800107caf026105e306ae39e1461077de5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82921709"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924286"
 ---
 # <a name="ssis-catalog"></a>Catalogo SSIS
   Il `SSISDB` catalogo è il punto centrale per l'utilizzo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] progetti (SSIS) che sono stati distribuiti nel [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Server. Ad esempio, è possibile impostare parametri di progetti e pacchetti, configurare ambienti per specificare valori di runtime per i pacchetti, eseguire e risolvere i problemi dei pacchetti e gestire le operazioni del server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -36,7 +35,7 @@ ms.locfileid: "82921709"
 >  Non è possibile rinominare il `SSISDB` database.  
   
 > [!NOTE]  
->  Se l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza a cui `SSISDB` è collegato il database, viene arrestata o non risponde, il processo ISServerExec. exe termina. Un messaggio verrà scritto nel log eventi di Windows.  
+>  Se l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza a cui `SSISDB` è collegato il database, viene arrestata o non risponde, il processo di ISServerExec.exe termina. Un messaggio verrà scritto nel log eventi di Windows.  
 >   
 >  Se si verifica un failover delle risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come parte del failover di un cluster, i pacchetti in esecuzione non vengono riavviati. È possibile usare i checkpoint per riavviare i pacchetti. Per ulteriori informazioni, vedere [Restart Packages by Using Checkpoints](../packages/restart-packages-by-using-checkpoints.md).  
   
@@ -56,7 +55,7 @@ ms.locfileid: "82921709"
 ### <a name="folder-project-environment"></a>Cartella, progetto, ambiente  
  Quando si rinomina una cartella, un progetto o un ambiente, considerare le regole riportate di seguito.  
   
--   I caratteri non validi includono i caratteri ASCII/Unicode compresi tra 1 e 31, le virgolette ("), i simboli minore di (\<) e maggiore di (>), la barra verticale (|), backspace (\b), il valore Null (\0) e la tabulazione (\t).  
+-   I caratteri non validi includono i caratteri ASCII/Unicode da 1 a 31, virgolette ("), minore di ( \<), greater than (> ), pipe (|), BACKSPACE (\b), null (\ 0) e Tab (\t).  
   
 -   Nel nome potrebbero non essere contenuti spazi iniziali o finali.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "82921709"
 ### <a name="environment-variable"></a>Variabile di ambiente  
  Quando si rinomina una variabile di ambiente, considerare le regole seguenti:  
   
--   I caratteri non validi includono i caratteri ASCII/Unicode compresi tra 1 e 31, le virgolette ("), i simboli minore di (\<) e maggiore di (>), la barra verticale (|), backspace (\b), il valore Null (\0) e la tabulazione (\t).  
+-   I caratteri non validi includono i caratteri ASCII/Unicode da 1 a 31, virgolette ("), minore di ( \<), greater than (> ), pipe (|), BACKSPACE (\b), null (\ 0) e Tab (\t).  
   
 -   Nel nome potrebbero non essere contenuti spazi iniziali o finali.  
   
@@ -131,7 +130,7 @@ ms.locfileid: "82921709"
   
  La modifica dell'algoritmo di crittografia è un'operazione che richiede molto tempo. Innanzitutto, nel server deve essere usato l'algoritmo specificato in precedenza per decrittografare tutti i valori di configurazione. Successivamente, deve essere usato il nuovo algoritmo per crittografare nuovamente i valori. Durante questa fase, nel server non è possibile eseguire altre operazioni usando [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pertanto, per consentire il funzionamento di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] senza interruzioni, l'algoritmo di crittografia è un valore di sola lettura nella finestra di dialogo di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
- Per modificare l'impostazione della proprietà **algoritmo di crittografia** , impostare il `SSISDB` database sulla modalità utente singolo, quindi chiamare catalog. configure_catalog stored procedure. Usare ENCRYPTION_ALGORITHM per l'argomento *property_name* . Per i valori di proprietà supportati, vedere [catalog.catalog_properties &#40;Database SSISDB&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database). Per altre informazioni sulla stored procedure, vedere [catalog.configure_catalog &#40;Database SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
+ Per modificare l'impostazione della proprietà **algoritmo di crittografia** , impostare il `SSISDB` database sulla modalità utente singolo, quindi chiamare il catalog.configure_catalog stored procedure. Usare ENCRYPTION_ALGORITHM per l'argomento *property_name* . Per i valori di proprietà supportati, vedere [catalog.catalog_properties &#40;Database SSISDB&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database). Per altre informazioni sulla stored procedure, vedere [catalog.configure_catalog &#40;Database SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
   
  Per altre informazioni sulla modalità utente singolo, vedere [Impostare un database in modalità utente singolo](../../relational-databases/databases/set-a-database-to-single-user-mode.md). Per informazioni sulla crittografia e sui relativi algoritmi in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere gli argomenti della sezione [Crittografia di SQL Server](../../relational-databases/security/encryption/sql-server-encryption.md).  
   

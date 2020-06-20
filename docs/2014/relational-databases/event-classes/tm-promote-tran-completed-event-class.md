@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 839beaed-b094-467a-9b97-8764e9451fc0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 029b077b034d7b022ea1e27832624df86decb547
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2d3e18b29cef517ef97f6720080b2fdf34ff1d5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061314"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028066"
 ---
 # <a name="tm-promote-tran-completed-event-class"></a>TM: Promote Tran Completed - classe di evento
   La classe di evento TM: Promote Tran Completed indica il completamento di una richiesta PROMOTE TRANSACTION inviata dal client tramite l'interfaccia di gestione delle transazioni.  
@@ -52,7 +51,7 @@ ms.locfileid: "63061314"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|`bigint`|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

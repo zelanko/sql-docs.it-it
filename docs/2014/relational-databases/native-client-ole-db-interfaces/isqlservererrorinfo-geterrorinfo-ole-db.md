@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 83265c9c-eaf9-41f0-9f73-b0ae0972f0d5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fe870479a96ff0d40ddaae6903eadd29edfb64b8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c3e325cd99276e04a178b89c19b233289edc09fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707354"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056134"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
   Restituisce un puntatore a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] struttura SSERRORINFO del provider OLE DB di Native Client contenente i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dettagli dell'errore.  
@@ -52,7 +51,7 @@ OLECHAR**ppErrorStrings);
  E_OUTOFMEMORY  
  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client non è in grado di allocare memoria sufficiente per completare la richiesta.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client alloca memoria per le stringhe SSERRORINFO e OLECHAR restituite tramite i puntatori passati dal consumer. Il consumer deve deallocare questa memoria tramite il metodo **IMalloc::Free** quando l'accesso ai dati dell'errore non è più necessario.  
   
  La struttura SSERRORINFO viene definita nel modo seguente:  

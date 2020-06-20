@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4572e9fc61649f638b7c86ee23c75450216a4342
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3452e504072188ea5f4bacf3fa6f10002335fb4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62828123"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916641"
 ---
 # <a name="cdc-source"></a>Origine CDC
   Tramite l'origine CDC viene letto un intervallo di dati delle modifiche da tabelle delle modifiche di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ; queste vengono poi recapitate a valle ad altri componenti SSIS.  
@@ -38,7 +37,7 @@ ms.locfileid: "62828123"
   
 -   Il nome della variabile del pacchetto dello stato CDC in base alla quale viene determinato l'intervallo di elaborazione CDC. L'origine CDC non modifica questa variabile.  
   
- I dati restituiti dall'origine CDC sono identici a quelli restituiti dalle funzioni CDC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**cdc.fn_cdc_get_all_changes_\<capture-instance-name>** o **cdc.fn_cdc_get_net_changes_\<capture-instance-name>** (se disponibili). L'unica aggiunta facoltativa è la colonna **__$initial_processing** , che indica se l'intervallo di elaborazione corrente può essere sovrapposto a un caricamento iniziale della tabella. Per ulteriori informazioni sull'elaborazione iniziale, vedere [Attività di controllo CDC](../control-flow/cdc-control-task.md).  
+ I dati restituiti dall'origine CDC sono identici a quelli restituiti dalle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funzioni CDC **cdc. \<capture-instance-name> fn_cdc_get_all_changes_** o **CDC. fn_cdc_get_net_changes_ \<capture-instance-name> ** (se disponibili). L'unica aggiunta facoltativa è la colonna **__$initial_processing** , che indica se l'intervallo di elaborazione corrente può essere sovrapposto a un caricamento iniziale della tabella. Per ulteriori informazioni sull'elaborazione iniziale, vedere [Attività di controllo CDC](../control-flow/cdc-control-task.md).  
   
  L'origine CDC include un output regolare e un output degli errori.  
   
@@ -75,20 +74,20 @@ use <cdc-enabled-database-name>
   
  dove:  
   
--   \<cdc-enabled-database-name> è il nome del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contenente le tabelle delle modifiche.  
+-   \<cdc-enabled-database-name>nome del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database contenente le tabelle delle modifiche.  
   
--   \<value-from-state-cs> è il valore visualizzato nella variabile di stato CDC come CS/\<value-from-state-cs>/ (CS indica l'inizio dell'intervallo di elaborazione corrente).  
+-   \<value-from-state-cs>è il valore visualizzato nella variabile di stato CDC come CS/ \<value-from-state-cs> /(CS sta per l'inizio dell'intervallo di elaborazione corrente).  
   
--   \<value-from-state-ce> è il valore visualizzato nella variabile di stato CDC come CE/\<value-from-state-cs>/ (CE indica la fine dell'intervallo di elaborazione corrente).  
+-   \<value-from-state-ce>è il valore visualizzato nella variabile di stato CDC come CE/ \<value-from-state-cs> /(CE sta per Current-Processing-Range-End).  
   
--   \<mode> corrisponde alle modalità di elaborazione CDC. Le modalità di elaborazione hanno uno dei seguenti valori: **All**, **All with Old Values**, **Net**, **Net with Update Mask**, **Net with Merge**.  
+-   \<mode>sono le modalità di elaborazione CDC. Le modalità di elaborazione hanno uno dei seguenti valori: **All**, **All with Old Values**, **Net**, **Net with Update Mask**, **Net with Merge**.  
   
  Questo script consente di isolare i problemi riproducendoli in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in cui è possibile riprodurre e identificare facilmente gli errori.  
   
 #### <a name="sql-server-error-message"></a>Messaggio di errore di SQL Server  
  È possibile che in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]venga restituito il messaggio di errore seguente:  
   
- **Numero di argomenti insufficiente per la routine o funzione cdc.fn_cdc_get_net_changes_\<.>.**  
+ **È stato specificato un numero insufficiente di argomenti per la procedura o la funzione CDC. fn_cdc_get_net_changes_ \<..> .**  
   
  Questo errore non indica che un argomento è mancante. Indica invece che i valori LSN iniziale o finale nella variabile di stato CDC non sono validi.  
   

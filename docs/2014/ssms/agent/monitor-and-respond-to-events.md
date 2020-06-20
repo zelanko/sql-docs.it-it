@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: f7fbe155-5b68-4777-bc71-a47637471f32
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bb16e6e7fc21d3b399d63d2e833eb846d62278ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: afdf1beffd6099fce84f03a8ba65f7de9abb8f0b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62720132"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001953"
 ---
 # <a name="monitor-and-respond-to-events"></a>Monitoraggio e risposta agli eventi
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent può monitorare e rispondere automaticamente agli *eventi*, ad esempio messaggi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a condizioni specifiche delle prestazioni e agli eventi del servizio Strumentazione gestione Windows (WMI).  
@@ -67,7 +66,7 @@ ms.locfileid: "62720132"
   
  Indipendentemente dall'origine dell'evento, il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent risponde all'evento eseguendo le attività specificate nell'avviso corrispondente.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_altermessage &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-altermessage-transact-sql)  
   
   

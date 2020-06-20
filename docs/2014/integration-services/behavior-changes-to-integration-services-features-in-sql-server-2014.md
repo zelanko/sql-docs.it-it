@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 611d22fa-5ac7-485e-9a40-7131e852f794
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 30e1e0d882d249130cbd72ca62088ba3f7978ad3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c5daf489a59273cb31f5a1dc7fba8b4482b5407
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061260"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925237"
 ---
 # <a name="behavior-changes-to-integration-services-features-in-sql-server-2014"></a>Differenze di funzionamento delle funzionalità di Integration Services in SQL Server 2014
-  In questo argomento vengono descritte le modifiche nel funzionamento introdotte in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Le modifiche del comportamento influiscono sulle modalità di utilizzo o di interazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] delle funzionalità nella versione corrente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]rispetto alle versioni precedenti di.  
+  In questo argomento vengono descritte le modifiche nel funzionamento introdotte in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Le modifiche del comportamento influiscono sulle modalità di utilizzo o di interazione delle funzionalità nella versione corrente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] rispetto alle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  Non sono presenti differenze di funzionamento delle funzionalità di Integration Services in SQL Server 2014.  
   

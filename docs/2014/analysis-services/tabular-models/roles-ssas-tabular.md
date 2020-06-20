@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bd4e54a0099e459d52577de23acc5c4f2989edc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdcf47e483c3a52879c66838a657b51d65bff8f8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284849"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938722"
 ---
 # <a name="roles-ssas-tabular"></a>Ruoli (SSAS tabulare)
   I ruoli, nei modelli tabulari, consentono di definire le autorizzazioni dei membri per un modello. In ogni ruolo sono contenuti membri, in base al nome utente o gruppo di Windows, e autorizzazioni, ad esempio per la lettura, l'elaborazione e l'amministratore. I membri del ruolo possono eseguire azioni sul modello, come definito dall'autorizzazione del ruolo. I ruoli definiti con autorizzazioni di lettura possono garantire inoltre sicurezza aggiuntiva a livello di riga tramite i relativi filtri.  
@@ -40,7 +39,7 @@ ms.locfileid: "67284849"
 -   [Attività correlate](#bkmk_rt)  
   
 ##  <a name="understanding-roles"></a><a name="bkmk_underst"></a>Informazioni sui ruoli  
- I ruoli vengono utilizzati [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in per gestire la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sicurezza dei dati e. Sono disponibili due tipi di ruoli in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
+ I ruoli vengono utilizzati in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per gestire la sicurezza dei [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dati e. Sono disponibili due tipi di ruoli in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
   
 -   Ruolo del server, ovvero un ruolo fisso che garantisce l'accesso come amministratore a un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -62,12 +61,12 @@ ms.locfileid: "67284849"
   
  Ciascun ruolo può disporre di una delle seguenti autorizzazioni definite:  
   
-|Autorizzazioni|Descrizione|Filtri di riga tramite DAX|  
+|Autorizzazioni|Description|Filtri di riga tramite DAX|  
 |-----------------|-----------------|----------------------------|  
 |nessuno|I membri non possono apportare alcuna modifica allo schema del database modello, né eseguire query sui dati.|Filtri di riga non applicabili. Agli utenti con questo ruolo non è visibile alcun dato.|  
 |Lettura|I membri possono eseguire query sui dati, in base ai filtri di riga, ma non possono visualizzare il database modello in SSMS, né possono apportare modifiche allo schema del database modello e l'utente non può elaborare il modello.|Filtri di riga applicabili. Agli utenti sono visibili solo i dati specificati nella formula DAX del filtro di riga.|  
 |Lettura ed elaborazione|I membri possono eseguire query sui dati in base ai filtri a livello di riga ed effettuare operazioni di elaborazione eseguendo uno script o un pacchetto contenente un comando di elaborazione, ma non possono apportare alcuna modifica al database, né visualizzare il database modello in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|Filtri di riga applicabili. È possibile eseguire query solo sui dati specificati nella formula DAX del filtro di riga.|  
-|Process|I membri possono effettuare operazioni di elaborazione eseguendo uno script o un pacchetto contenente un comando di elaborazione. Non è possibile modificare lo schema del database modello, Non è eseguire query sui dati. Non è possibile eseguire query sul database modello in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|Filtri di riga non applicabili. Non è possibile eseguire query sui dati in questo ruolo|  
+|Processo|I membri possono effettuare operazioni di elaborazione eseguendo uno script o un pacchetto contenente un comando di elaborazione. Non è possibile modificare lo schema del database modello, Non è eseguire query sui dati. Non è possibile eseguire query sul database modello in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|Filtri di riga non applicabili. Non è possibile eseguire query sui dati in questo ruolo|  
 |Amministratore|I membri possono apportare modifiche allo schema del modello ed eseguire query su tutti i dati in Progettazione modelli, nel client di creazione report e in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|Filtri di riga non applicabili. È possibile eseguire query su tutti i dati in questo ruolo.|  
   
 ##  <a name="row-filters"></a><a name="bkmk_rowfliters"></a>Filtri di riga  
@@ -120,24 +119,24 @@ ms.locfileid: "67284849"
   
 |DepartmentId|DepartmentName|  
 |------------------|--------------------|  
-|1|Corporate|  
+|1|Aziendale|  
 |2|Executive General and Administration|  
 |3|Inventory Management|  
 |4|Produzione|  
 |5|Controllo di qualità|  
 |6|Ricerca e sviluppo|  
-|7|Sales and Marketing|  
+|7|Vendite e marketing|  
   
 ##  <a name="testing-roles"></a><a name="bkmk_testroles"></a>Test dei ruoli  
  Quando si crea un progetto di modello, è possibile utilizzare la funzionalità Analizza in Excel in Progettazione modelli per eseguire un test circa l'efficacia dei ruoli definiti. Se si fa clic su **Analizza in Excel** nel menu **Modello**in Progettazione modelli prima che venga aperto Excel, verrà visualizzata la finestra di dialogo **Scegli credenziali e prospettiva** . In questa finestra di dialogo è possibile specificare il nome utente corrente, un nome utente diverso, un ruolo e una prospettiva che verranno utilizzati per la connessione al modello dell'area di lavoro come origine dati. Per altre informazioni, vedere la sezione [Analizzare in Excel &#40;SSAS tabulare&#41;](analyze-in-excel-ssas-tabular.md).  
   
 ##  <a name="related-tasks"></a><a name="bkmk_rt"></a> Attività correlate  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |-----------|-----------------|  
 |[Creare e gestire ruoli &#40;SSAS tabulare&#41;](create-and-manage-roles-ssas-tabular.md)|Nelle attività di questo argomento viene descritto come creare e gestire ruoli tramite la finestra di dialogo **Gestione ruoli** .|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Prospettive &#40;SSAS tabulare&#41;](perspectives-ssas-tabular.md)   
  [Analizza in Excel &#40;SSAS tabulare&#41;](analyze-in-excel-ssas-tabular.md)   
  [Funzione USERNAME &#40;&#41;DAX](/dax/username-function-dax)   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7061f674-e806-46f2-8c15-e260a3c69a17
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 00113df9f330a2edfce0c75f69d45c1fcd9274ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9f220f8908e92eaa861f64b0f896f78547b950e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068158"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940272"
 ---
 # <a name="specify-the-column39s-content-and-data-type-data-mining-wizard"></a>Specificare il contenuto e il tipo di dati della colonna&#39;(creazione guidata modello di data mining)
   Utilizzare la pagina **Impostazione tipo di dati e contenuto delle colonne** per modificare la colonna e i tipi di contenuto già impostati durante la creazione guidata. Nella creazione guidata vengono utilizzati i tipi di dati delle colonne di origine e le funzionalità dell'algoritmo selezionato per stabilire i dati predefiniti e i tipi di contenuto per ogni colonna.  
@@ -37,7 +36,7 @@ ms.locfileid: "66068158"
  **Detect**  
  Fare clic su questa opzione per rilevare automaticamente i tipi di contenuto continui e discreti per le colonne numeriche. Questa opzione non si applica alle strutture di data mining basate su origini dei dati OLAP. Per le strutture di data mining OLAP, durante la creazione guidata vengono rilevati automaticamente i tipi di contenuto e scelti quelli compatibili con l'algoritmo selezionato.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Completamento della procedura guidata &#40;creazione guidata modello di data mining&#41;](completing-the-wizard-data-mining-wizard.md)   
  [Guida sensibile al contesto della creazione guidata modello di data mining &#40;Analysis Services-&#41;di data mining](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Specificare i dati di training &#40;creazione guidata modello di data mining&#41;](specify-the-training-data-data-mining-wizard.md)  

@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d0caed882338b4ac1ce2f3e1e225693017ff1605
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1655b50f84fae99249b2170d92a49459a143d5b4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62899934"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939279"
 ---
 # <a name="term-extraction-transformation"></a>Estrazione termini - trasformazione
   La trasformazione Estrazione termini consente di estrarre termini da un testo in una colonna di input di una trasformazione e quindi scrivere tali termini in una colonna di output della trasformazione. La trasformazione è applicabile solo a testo in lingua inglese, utilizza un dizionario inglese interno e le proprie informazioni sulla lingua inglese.  
@@ -44,7 +43,7 @@ ms.locfileid: "62899934"
   
  Per ogni termine estratto la trasformazione Estrazione termini genera un punteggio, costituito da un valore TFIDF o dalla frequenza della riga, che indica il numero di corrispondenze con il termine normalizzato presenti nell'input. In entrambi i casi, il punteggio viene rappresentato da un numero reale che è maggiore di 0. Ad esempio, il punteggio TFIDF potrebbe avere il valore 0,5 e la frequenza sarebbe un valore come 1,0 o 2,0.  
   
- L'output della trasformazione Estrazione termini include solo due colonne, una con i termini estratti e l'altra con il punteggio. I nomi predefiniti delle colonne sono **termini** e `Score`. Poiché la colonna di testo nell'input può contenere più termini, l'output della trasformazione Estrazione termini include in genere un numero di righe maggiore rispetto all'input.  
+ L'output della trasformazione Estrazione termini include solo due colonne, una con i termini estratti e l'altra con il punteggio. I nomi predefiniti delle colonne sono **termini** e `Score` . Poiché la colonna di testo nell'input può contenere più termini, l'output della trasformazione Estrazione termini include in genere un numero di righe maggiore rispetto all'input.  
   
  Se i termini estratti vengono scritti in una tabella, potranno essere utilizzati da altre trasformazioni di ricerca, ad esempio le trasformazioni Ricerca termini, Ricerca fuzzy e Ricerca.  
   
@@ -146,7 +145,7 @@ ms.locfileid: "62899934"
   
 -   Combinazioni di numeri, segni di punteggiatura e caratteri alfabetici. Ad esempio, *A23B#99* restituisce il termine *A23B*.  
   
--   Caratteri %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " e '.  
+-   I caratteri,%, @, &, $, #, \* ,:,;,., **,** ,!,?, \<, > , +, =, ^, ~, |, \\ ,/, (,), [,], {,}, "e".  
   
     > [!NOTE]  
     >  Gli acronimi che includono uno o più punti (.) non vengono suddivisi in più frasi.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ef842cb4-82da-4550-85fe-9bedbc1e77c7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 91b448a87408a830464b50f641e6eefa8cf3f12c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d407cc3c0324b80ff63484f4e7c39ea30575ebc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057635"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967041"
 ---
 # <a name="msmq-connection-manager-editor"></a>Editor gestione connessione MSMQ
   Usare la finestra di dialogo **Gestione connessione MSMQ** per specificare il percorso di una coda di messaggi di Microsoft Message Queuing (noto anche come MSMQ).  
@@ -41,15 +40,15 @@ ms.locfileid: "66057635"
   
 |Tipo di coda|Percorso di esempio|  
 |----------------|-----------------|  
-|Public|\<nome computer>\\<nome della coda\>|  
-|Private|\<nome computer>\Private$\\\<nome della coda\>|  
+|Pubblico|\<computer name>\\Nome della coda<\>|  
+|Private|\<computer name>\\Nome coda \Private $<\>|  
   
  Per rappresentare il computer locale è possibile utilizzare ".".  
   
  **Test**  
  Dopo aver configurato la gestione connessione MSMQ, verificare che la connessione può essere stabilita facendo clic su **Test**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

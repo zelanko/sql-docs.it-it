@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 95288931-8eb1-4477-ad80-619cf7073e61
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 95682cc34f67a0d65f62afdc52ec09c5209e3ba4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bca152482145b06aaa4aa89fd035812279bff4fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62642681"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056803"
 ---
 # <a name="setflag-method-servernetworkprotocolproperty-class"></a>Metodo SetFlag (classe ServerNetworkProtocolProperty)
   Imposta il flag della proprietà a cui si fa riferimento.  
@@ -40,8 +39,8 @@ BoolValue
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
- Oggetto [ServerNetworkProtocolProperty Class] ServerNetworkProtocolProperty-class.md) che rappresenta un attributo del protocollo di rete nell'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ *object*  
+ Oggetto [ServerNetworkProtocolProperty Class] ServerNetworkProtocolProperty-class.md) che rappresenta un attributo del protocollo di rete nell'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>Parametri  
   
@@ -54,7 +53,7 @@ BoolValue
   
 ## <a name="remarks"></a>Osservazioni  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurazione di protocolli di rete server e di librerie di rete](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

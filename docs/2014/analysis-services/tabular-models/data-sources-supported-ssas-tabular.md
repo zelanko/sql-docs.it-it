@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 345e733e5c1e90f637efab02a9942e307c2fb9f4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7de3ea085b3e1d104f9d014317c52dce4585a2e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067374"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939772"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>Data Sources Supported (SSAS Tabular)
   In questo argomento vengono descritti i tipi di origini dati che possono essere utilizzati con i modelli tabulari.  
@@ -73,7 +72,7 @@ ms.locfileid: "66067374"
   
 4.  I provider OLE DB offrono talvolta prestazioni migliori in termini di velocità per dati in larga scala. Quando si sceglie tra provider diversi per la stessa origine dati, provare innanzitutto il provider OLE DB.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Origini dati &#40;SSAS tabulare&#41;](../data-sources-ssas-tabular.md)   
  [Importare dati &#40;SSAS tabulare&#41;](../import-data-ssas-tabular.md)  
   

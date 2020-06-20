@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 051c48e5-3d86-49af-b554-ff62e3de3622
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: df54d7fb7562e6019e581b06fd14b00bdba15376
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9128f73dc8fec388ae111781b9beeb52bbab138b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058814"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967151"
 ---
 # <a name="file-connection-manager-editor"></a>Editor gestione connessione file
   Utilizzare la finestra di dialogo **Editor gestione connessione file** per specificare le proprietà utilizzate per la connessione a un file o a una cartella.  
@@ -33,7 +32,7 @@ ms.locfileid: "66058814"
  **Tipo di utilizzo**  
  Consente di specificare se **Gestione connessione file flat** deve connettersi a un file o a una cartella esistente o creare un nuovo file o cartella.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |Crea file|Consente di creare un nuovo file in fase di esecuzione.|  
 |File esistente|Consente di utilizzare un file esistente.|  
@@ -48,7 +47,7 @@ ms.locfileid: "66058814"
  **Sfoglia**  
  Selezionare il file o la cartella usando la finestra di dialogo **Seleziona file** o **Sfoglia cartella** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4f09d040-9ec8-4aaa-b684-f632d571f0a8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a87af3febdab1e98dac0b1546b8b2b8939b739d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a24369829ae8b6fb45098e6ebc0be2f0e676e69
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061121"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924153"
 ---
 # <a name="cdc-control-task-editor"></a>Editor attività Controllo CDC
   Utilizzare la finestra di dialogo **CDC Control Task Editor** per configurare l'attività di controllo CDC. La configurazione dell'attività di controllo CDC include la definizione di una connessione al database CDC, l'operazione dell'attività CDC e le informazioni sulla gestione dello stato.  
@@ -89,7 +88,7 @@ ms.locfileid: "66061121"
  **Nome dello stato**  
  Digitare un nome da associare allo stato CDC persistente. Un nome dello stato comune verrà specificato dal caricamento completo e dai pacchetti CDC che utilizzano lo stesso contesto. Questo nome viene utilizzato per cercare la riga di stato nella tabella di stato  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Proprietà personalizzate dell'attività di controllo CDC](control-flow/cdc-control-task-custom-properties.md)  
   
   

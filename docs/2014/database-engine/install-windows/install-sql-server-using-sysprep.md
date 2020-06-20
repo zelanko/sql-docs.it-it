@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6470cd60eb3b5491b8941685dcae00a49b4e967c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d35b8f27dc0ef6a1deb40bd86ed193973c2c40b0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775304"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932527"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>Installare SQL Server 2014 tramite SysPrep
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le azioni di installazione correlate a SysPrep sono accessibili tramite Centro installazione. Nella pagina **Avanzate** di **Centro installazione** sono disponibili due opzioni: **Preparazione immagine di un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** e **Completamento immagine di un'istanza autonoma predisposta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Nelle sezioni di [preparazione](#prepare) e [completamento](#complete) viene descritto in modo dettagliato il processo di installazione. Per altre informazioni, vedere [Considerazioni sull'installazione di SQL Server tramite SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  
@@ -129,15 +128,15 @@ ms.locfileid: "62775304"
   
 10. Nella pagina **Regole di preparazione immagine** Controllo configurazione sistema consente di verificare lo stato del sistema del computer prima che l'installazione continui. È possibile fare clic su **Mostra dettagli** per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato** per visualizzarlo come report HTML.  
   
-11. Nella pagina Configurazione dell'istanza specificare l'ID istanza per l'istanza. Scegliere **Avanti** per continuare.  
+11. Nella pagina Configurazione dell'istanza specificare l'ID istanza per l'istanza. Fare clic su **Avanti** per continuare.  
   
-     **ID istanza** : ID istanza utilizzato per identificare le directory di installazione e le chiavi del registro di sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]per l'istanza di. Si tratta del caso delle istanze predefinite e delle istanze denominate. Se durante il passaggio per il completamento l'istanza predisposta viene completata come istanza predefinita, il nome dell'istanza viene sovrascritto come MSSQLSERVER. L'ID istanza rimane lo stesso di quello specificato.  
+     **ID istanza** : ID istanza utilizzato per identificare le directory di installazione e le chiavi del registro di sistema per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si tratta del caso delle istanze predefinite e delle istanze denominate. Se durante il passaggio per il completamento l'istanza predisposta viene completata come istanza predefinita, il nome dell'istanza viene sovrascritto come MSSQLSERVER. L'ID istanza rimane lo stesso di quello specificato.  
   
-     **Directory radice istanza** : per impostazione predefinita, la directory radice dell' [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]istanza è. Per specificare una directory radice non predefinita, usare il campo disponibile o fare clic su **Sfoglia** per individuare una cartella di installazione. La directory specificata nel passaggio relativo alla preparazione sarà utilizzata durante la configurazione nel passaggio per il completamento.  
+     **Directory radice istanza** : per impostazione predefinita, la directory radice dell'istanza è [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)] . Per specificare una directory radice non predefinita, usare il campo disponibile o fare clic su **Sfoglia** per individuare una cartella di installazione. La directory specificata nel passaggio relativo alla preparazione sarà utilizzata durante la configurazione nel passaggio per il completamento.  
   
      Tutti i Service Pack e gli aggiornamenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno applicati a ogni componente di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     **Istanze installate** : nella griglia vengono visualizzate le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanze di presenti nel computer in cui è in esecuzione il programma di installazione.  
+     **Istanze installate** : nella griglia vengono visualizzate le istanze di presenti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in cui è in esecuzione il programma di installazione.  
   
 12. Nella pagina **Requisiti di spazio su disco** viene calcolato lo spazio su disco necessario per le funzionalità specificate. Tale spazio viene quindi confrontato con lo spazio su disco disponibile.  
   
@@ -178,9 +177,9 @@ ms.locfileid: "62775304"
     > [!NOTE]  
     >  È possibile aggiungere funzionalità disponibili per la versione del prodotto che si sta installando. Per ulteriori informazioni, vedere [funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
-9. Nella pagina Configurazione dell'istanza specificare il nome dell'istanza per l'istanza predisposta. Questo nome corrisponde a quello dell'istanza una volta che è stata completata la configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Scegliere **Avanti** per continuare.  
+9. Nella pagina Configurazione dell'istanza specificare il nome dell'istanza per l'istanza predisposta. Questo nome corrisponde a quello dell'istanza una volta che è stata completata la configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Fare clic su **Avanti** per continuare.  
   
-     **ID istanza** : ID istanza utilizzato per identificare le directory di installazione e le chiavi del registro di sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]per l'istanza di. Si tratta del caso delle istanze predefinite e delle istanze denominate. Se durante il passaggio per il completamento l'istanza predisposta viene completata come istanza predefinita, il nome dell'istanza viene sovrascritto come MSSQLSERVER. L'ID istanza rimane lo stesso di quello specificato durante il passaggio relativo alla preparazione.  
+     **ID istanza** : ID istanza utilizzato per identificare le directory di installazione e le chiavi del registro di sistema per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si tratta del caso delle istanze predefinite e delle istanze denominate. Se durante il passaggio per il completamento l'istanza predisposta viene completata come istanza predefinita, il nome dell'istanza viene sovrascritto come MSSQLSERVER. L'ID istanza rimane lo stesso di quello specificato durante il passaggio relativo alla preparazione.  
   
      **Directory radice istanza** : verrà usata la directory specificata nel passaggio di preparazione e non sarà possibile modificarla in questo passaggio.  
   
@@ -190,7 +189,7 @@ ms.locfileid: "62775304"
   
 10. Il flusso di lavoro relativo alla restante parte di questo argomento dipende dalle funzionalità selezionate durante il passaggio relativo alla preparazione. Le pagine visualizzate dipendono dalle selezioni effettuate.  
   
-11. Nella pagina **Configurazione server** -account di servizio specificare gli account di accesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per i servizi. I servizi effettivamente configurati in questa pagina dipendono dalle funzionalità selezionate per l'installazione.  
+11. Nella pagina **Configurazione server** -account di servizio specificare gli account di accesso per i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servizi. I servizi effettivamente configurati in questa pagina dipendono dalle funzionalità selezionate per l'installazione.  
   
      È possibile assegnare lo stesso account di accesso a tutti i servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure configurare singolarmente l'account di ogni servizio. È inoltre possibile specificare se i servizi verranno avviati automaticamente, manualmente o se sono disabilitati. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di configurare gli account del servizio singolarmente per assegnare i privilegi minimi a ogni servizio, in modo che ai servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengano concesse le autorizzazioni minime necessarie per completare le attività. Per altre informazioni, vedere [Configurazione Server - Account di servizio](../../sql-server/install/server-configuration-service-accounts.md) e [Configurare account di servizio e autorizzazioni di Windows](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
@@ -200,7 +199,7 @@ ms.locfileid: "62775304"
   
      Dopo aver specificato le informazioni di accesso per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , fare clic su **Avanti**.  
   
-12. Utilizzare la scheda **Configurazione server-regole di confronto** per specificare regole di confronto non predefinite per [!INCLUDE[ssDE](../../includes/ssde-md.md)] il [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e. Per altre informazioni, vedere [Configurazione del server - Regole di confronto](../../sql-server/install/server-configuration-collation.md).  
+12. Utilizzare la scheda **Configurazione server-regole di confronto** per specificare regole di confronto non predefinite per il [!INCLUDE[ssDE](../../includes/ssde-md.md)] e [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Per altre informazioni, vedere [Configurazione del server - Regole di confronto](../../sql-server/install/server-configuration-collation.md).  
   
 13. Utilizzare la pagina Configurazione [!INCLUDE[ssDE](../../includes/ssde-md.md)] - Provisioning account per specificare gli elementi seguenti:  
   
@@ -223,7 +222,7 @@ ms.locfileid: "62775304"
   
 16. Utilizzare la pagina Configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per specificare il tipo di installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] da creare. Per altre informazioni sulle modalità di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [Opzioni di configurazione di Reporting Services &#40;SSRS&#41;](../../sql-server/install/reporting-services-configuration-options-ssrs.md).  
   
-17. Nella pagina **segnalazione errori** specificare le informazioni che si desidera inviare a per contribuire a [!INCLUDE[msCoName](../../includes/msconame-md.md)] migliorare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per impostazione predefinita, l'opzione per la segnalazione di errori è abilitata.  
+17. Nella pagina **segnalazione errori** specificare le informazioni che si desidera inviare a per contribuire a [!INCLUDE[msCoName](../../includes/msconame-md.md)] migliorare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per impostazione predefinita, l'opzione per la segnalazione di errori è abilitata.  
   
 18. Nella pagina **Regole di completamento immagine** Controllo configurazione sistema consente di eseguire le regole di completamento immagine per convalidare la configurazione del computer con le configurazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificate. È possibile fare clic su **Mostra dettagli** per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato** per visualizzarlo come report HTML.  
   
@@ -281,7 +280,7 @@ ms.locfileid: "62775304"
   
 4.  Nella pagina **Seleziona istanza** selezionare l'istanza predisposta che si vuole modificare. Il nome dell'istanza predisposta verrà visualizzato come "PreparedInstanceID non configurata" dove PreparedInstanceID è l'istanza selezionata.  
   
-5.  Nella pagina **Seleziona funzionalità** specificare le funzionalità da rimuovere dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificata. Scegliere **Avanti** per continuare.  
+5.  Nella pagina **Seleziona funzionalità** specificare le funzionalità da rimuovere dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificata. Fare clic su **Avanti** per continuare.  
   
 6.  Verranno eseguite le regole di rimozione per verificare la corretta esecuzione dell'operazione.  
   
@@ -303,7 +302,7 @@ ms.locfileid: "62775304"
   
 4.  Nella pagina **Seleziona istanza** selezionare l'istanza predisposta che si vuole modificare. Il nome dell'istanza predisposta verrà visualizzato come "PreparedInstanceID non configurata" dove PreparedInstanceID è l'istanza selezionata.  
   
-5.  Nella pagina **Seleziona funzionalità** specificare le funzionalità da rimuovere dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificata. Scegliere **Avanti** per continuare.  
+5.  Nella pagina **Seleziona funzionalità** specificare le funzionalità da rimuovere dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificata. Fare clic su **Avanti** per continuare.  
   
 6.  Nella pagina **Regole di rimozione** verranno eseguite le regole per verificare la corretta esecuzione dell'operazione.  
   
@@ -322,6 +321,6 @@ ms.locfileid: "62775304"
   
 -   [Disinstallare un'istanza esistente di SQL Server &#40;Setup&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Informazioni su Windows SysPrep](https://go.microsoft.com/fwlink/?LinkId=143546)   
  [Funzionamento di Windows SysPrepWork](https://go.microsoft.com/fwlink/?LinkId=143547)  

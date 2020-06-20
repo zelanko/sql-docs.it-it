@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ef5450bc9598f86909bbb032adcfa4bfc0fc9040
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b8ed4b8789de70a5a2ebba82779dfc5e7001fcf1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900646"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939652"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>Creazione e distribuzione di una cache per la trasformazione Ricerca
   È possibile creare e distribuire un file di cache (.caw) per la trasformazione Ricerca. Il set di dati di riferimento è archiviato nel file di cache.  
@@ -86,7 +85,7 @@ ms.locfileid: "62900646"
   
 4.  Configurare il progetto per creare un'utilità di distribuzione e quindi compilare il progetto. Per altre informazioni, vedere [Creazione di un'utilità di distribuzione](../../create-a-deployment-utility.md).  
   
-     Viene creato un file manifesto, \<*nome progetto*>.SSISDeploymentManifest.xml, che elenca i vari file nel progetto, i pacchetti e le configurazioni del pacchetto.  
+     Viene creato un file manifesto, \<*project name*>.SSISDeploymentManifest.xml, che elenca i file esterni nel progetto, i pacchetti e le configurazioni del pacchetto.  
   
 5.  Distribuire il pacchetto nel file system. Per altre informazioni, vedere [Distribuzione di pacchetti con l'utilità di distribuzione](../../deploy-packages-by-using-the-deployment-utility.md).  
   

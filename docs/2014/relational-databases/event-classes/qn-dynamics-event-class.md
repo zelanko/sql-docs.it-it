@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c1ffa0c-c9e5-40a6-a26b-28339f60ebc3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eb59abed8be5649d9258bce0f279222e4498b547
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a55c2b2a2392cf5d9993f4bfdea8969e4f4d23f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035723"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028889"
 ---
 # <a name="qndynamics-event-class"></a>Classe di evento QN:Dynamics
   La classe di evento QN:Dynamics fornisce informazioni sull'attività in background eseguita dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] per supportare le notifiche delle query. All'interno di [!INCLUDE[ssDE](../../includes/ssde-md.md)], un thread in background esegue il monitoraggio dei timeout di sottoscrizione, delle sottoscrizioni in attesa di attivazione e dell'eliminazione delle tabelle di parametri.  
@@ -34,11 +33,11 @@ ms.locfileid: "63035723"
 |DatabaseName|`nvarchar`|Nome del database in cui viene eseguita l'istruzione dell'utente.|35|Sì|  
 |EventClass|`int`|Tipo di evento = 202.|27|No|  
 |EventSequence|`int`|Numero di sequenza dell'evento.|51|No|  
-|EventSubClass|`nvarchar`|Tipo di sottoclasse di evento in cui sono disponibili informazioni aggiuntive su ogni classe di evento. Questa colonna può contenere i valori seguenti:<br /><br /> Clock Run started: indica che il thread in background nell' [!INCLUDE[ssDE](../../includes/ssde-md.md)] oggetto che pianifica le tabelle di parametri scadute per la pulizia è stato avviato.<br /><br /> Clock Run finished: indica che il thread in background nell' [!INCLUDE[ssDE](../../includes/ssde-md.md)] oggetto che pianifica le tabelle di parametri scadute per la pulizia è terminato.<br /><br /> Master cleanup task started: Indica quando viene avviata la pulizia (Garbage Collection) per rimuovere i dati di sottoscrizione di notifica delle query scaduti.<br /><br /> Master cleanup task finished: Indica quando termina la pulizia (Garbage Collection) per rimuovere i dati di sottoscrizione di notifica delle query scaduti.<br /><br /> Master Cleanup Task ignorato: indica che l'oggetto [!INCLUDE[ssDE](../../includes/ssde-md.md)] non ha eseguito la pulizia (Garbage Collection) per rimuovere i dati di sottoscrizione di notifica delle query scaduti.|21|Sì|  
+|EventSubClass|`nvarchar`|Tipo di sottoclasse di evento in cui sono disponibili informazioni aggiuntive su ogni classe di evento. Questa colonna può contenere i valori seguenti:<br /><br /> Clock Run started: indica che il thread in background nell'oggetto [!INCLUDE[ssDE](../../includes/ssde-md.md)] che pianifica le tabelle di parametri scadute per la pulizia è stato avviato.<br /><br /> Clock Run finished: indica che il thread in background nell'oggetto [!INCLUDE[ssDE](../../includes/ssde-md.md)] che pianifica le tabelle di parametri scadute per la pulizia è terminato.<br /><br /> Master cleanup task started: Indica quando viene avviata la pulizia (Garbage Collection) per rimuovere i dati di sottoscrizione di notifica delle query scaduti.<br /><br /> Master cleanup task finished: Indica quando termina la pulizia (Garbage Collection) per rimuovere i dati di sottoscrizione di notifica delle query scaduti.<br /><br /> Master Cleanup Task ignorato: indica che l'oggetto [!INCLUDE[ssDE](../../includes/ssde-md.md)] non ha eseguito la pulizia (Garbage Collection) per rimuovere i dati di sottoscrizione di notifica delle query scaduti.|21|Sì|  
 |GroupID|`int`|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Sì|  
 |HostName|`nvarchar`|Nome del computer in cui è in esecuzione il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
 |IsSystem|`int`|Indica se l'evento è stato generato per un processo di sistema o un processo utente.<br /><br /> 0 = utente<br /><br /> 1 = sistema|60|No|  
-|LoginName|`nvarchar`|Nome dell'account di accesso dell'utente (account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accesso di sicurezza di o credenziali di accesso di Windows nel formato *DOMINIO\nomeutente*).|11|No|  
+|LoginName|`nvarchar`|Nome dell'account di accesso dell'utente (account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sicurezza di o credenziali di accesso di Windows nel formato *DOMINIO\nomeutente*).|11|No|  
 |LoginSID|`image`|ID di sicurezza (SID) dell'utente connesso. Queste informazioni sono disponibili nella vista del catalogo sys.server_principals. Il SID è univoco per ogni account di accesso nel server.|41|Sì|  
 |NTDomainName|`nvarchar`|Dominio di Windows a cui appartiene l'utente.|7|Sì|  
 |NTUserName|`nvarchar`|Nome dell'utente proprietario della connessione che ha generato questo evento.|6|Sì|  

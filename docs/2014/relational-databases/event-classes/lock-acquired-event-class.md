@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a6b1df2a-06ed-4fc3-8a84-f0becd5810d5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a49ddbbbff88ca0ae33caf4230954df710f29365
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e781e1ed4e632b11bff6f559392d829ec57bed94
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62665323"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029548"
 ---
 # <a name="lockacquired-event-class"></a>Classe Lock:Acquired Event
   La classe di evento Lock:Acquiredevent indica l'acquisizione di un blocco su una risorsa, ad esempio una pagina di dati.  
@@ -30,12 +29,12 @@ ms.locfileid: "62665323"
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|Nome dell'applicazione client che ha creato la connessione a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione e non con il nome visualizzato del programma.|10|Sì|  
+|ApplicationName|`nvarchar`|Nome dell'applicazione client che ha creato la connessione a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questa colonna viene popolata con i valori passati dall'applicazione e non con il nome visualizzato del programma.|10|Sì|  
 |BigintData1|`bigint`|ID partizione se la risorsa di blocco è partizionata.|52|Sì|  
 |BinaryData|`image`|Identificatore della risorsa blocco.|2|Sì|  
 |ClientProcessID|`int`|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se tramite il client viene indicato l'ID del processo client.|9|Sì|  
 |DatabaseID|`int`|ID del database in cui è stato acquisito il blocco. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
-|Durata|`bigint`|Tempo, espresso in microsecondi, tra la generazione della richiesta di blocco e l'acquisizione del blocco.|13|Sì|  
+|Duration|`bigint`|Tempo, espresso in microsecondi, tra la generazione della richiesta di blocco e l'acquisizione del blocco.|13|Sì|  
 |EndTime|`datetime`|Ora di fine dell'evento.|15|Sì|  
 |EventClass|`int`|Tipo di evento = 24.|27|No|  
 |EventSequence|`int`|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
@@ -60,7 +59,7 @@ ms.locfileid: "62665323"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |Type|`int`|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe di evento Lock: Released](lock-released-event-class.md)   
  [sp_trace_setevent &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [sys.dm_tran_locks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql)  

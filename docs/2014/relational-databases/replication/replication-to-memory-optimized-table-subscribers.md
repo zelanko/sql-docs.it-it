@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b9f58e472b0b6e6d164e45c2d1136c81bc4a46d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af064de0f89d515f2afb87eb2a6d683d7179e4dd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811234"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056910"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replica in sottoscrittori di tabelle con ottimizzazione per la memoria
   Le tabelle con funzione di sottoscrittori di replica transazionale, esclusa la replica transazionale peer-to-peer, possono essere configurate come tabelle ottimizzate per la memoria. Le altre configurazioni di replica non sono compatibili con le tabelle ottimizzate per la memoria.  
@@ -59,7 +58,7 @@ ms.locfileid: "68811234"
     EXEC sp_startpublication_snapshot @publication = N'Publication1';  
     ```  
   
-2.  Passare alla cartella dello snapshot. Il percorso predefinito è "C:\Programmi\Microsoft SQL Server\MSSQL12. \<Istanza> \mssql\repldata\unc\xxx\yyyymmddhhmmss\\".  
+2.  Passare alla cartella dello snapshot. Il percorso predefinito è "C:\Programmi\Microsoft SQL Server\MSSQL12. \<INSTANCE> \MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS \\ ".  
   
 3.  Individuare il **. File SCH** per la tabella e aprirlo in Management Studio. Modificare lo schema della tabella e aggiornare la stored procedure, come descritto di seguito.  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 304e6717-e160-4a7b-a06f-32182449fef8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7e33946220b10f35596a6496637c8572f5b97403
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6ee99e02d9c3c5e78d00abd3e8d9f5673ee4d22
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061058"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924062"
 ---
 # <a name="cdc-source-editor-connection-manager-page"></a>Editor origine CDC (pagina Gestione connessione)
   Usare la pagina **Gestione connessione** della finestra di dialogo **Editor origine CDC** per selezionare la gestione connessione ADO.NET per il database di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] da cui l'origine CDC legge le righe delle modifiche (database CDC). Dopo aver selezionato il database CDC è necessario selezionare una tabella acquisita nel database.  
@@ -37,7 +36,7 @@ ms.locfileid: "66061058"
  **Gestione connessione ADO.NET**  
  Selezionare una gestione connessione esistente nell'elenco o creare una nuova connessione facendo clic su **Nuova** . La connessione deve essere stabilita a un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] abilitato per CDC e in cui si trova la tabella delle modifiche selezionata.  
   
- **Nuova**  
+ **Nuovo**  
  Fare clic su **New**. Verrà visualizzata la finestra di dialogo **Editor della gestione connessione ADO.NET** in cui è possibile creare una nuova gestione connessione  
   
  **CDC Table**  
@@ -46,7 +45,7 @@ ms.locfileid: "66061058"
  **Istanza di acquisizione**  
  Selezionare o digitare il nome dell'istanza di acquisizione CDC con la tabella CDC da leggere.  
   
- Una tabella di origine acquisita può contenere una o due istanze acquisite per gestire la transizione senza problemi della definizione di tabella mediante modifiche dello schema. Se per la tabella di origine in corso di acquisizione sono definite più istanze di acquisizione, selezionare l'istanza di acquisizione che si desidera utilizzare a questo punto. Il nome dell'istanza di acquisizione predefinito per una tabella [schema].[tabella] è \<schema_\<tabella, ma i nomi delle istanze di acquisizione effettivi in uso possono essere diversi. La tabella effettiva da cui viene letta è la tabella CDC **CDC.\<>_CT dell'istanza di acquisizione**.  
+ Una tabella di origine acquisita può contenere una o due istanze acquisite per gestire la transizione senza problemi della definizione di tabella mediante modifiche dello schema. Se per la tabella di origine in corso di acquisizione sono definite più istanze di acquisizione, selezionare l'istanza di acquisizione che si desidera utilizzare a questo punto. Nome dell'istanza di acquisizione predefinita per una tabella [schema]. [Table] è \<schema> _ \<table> , ma i nomi delle istanze di acquisizione effettivi in uso possono essere diversi. La tabella effettiva da cui viene letta è la tabella CDC **CDC. \<capture-instance> _CT**.  
   
  **CDC Processing Mode**  
  Selezionare la modalità di elaborazione più adatta per le esigenze di elaborazione correnti. Di seguito sono elencate le opzioni possibili:  
@@ -57,7 +56,7 @@ ms.locfileid: "66061058"
   
 -   **Net**: restituisce una sola riga delle modifiche per ogni riga di origine modificata nell'intervallo di elaborazione CDC corrente. Se una riga di origine è stata aggiornata più volte, viene restituita la modifica combinata (ad esempio, inserimento+aggiornamento viene prodotto come un singolo aggiornamento e aggiornamento+eliminazione viene prodotto come una singola eliminazione). Quando si utilizza la modalità di elaborazione delle modifiche Net, è possibile suddividere le modifiche negli output Delete, Insert e Update e gestirli in parallelo, perché la singola riga di origine viene visualizzata in più output.  
   
--   **Net with update mask**: questa modalità è simile alla modalità Net standard, ma aggiunge anche colonne booleane con il modello di nome **__$\<<nome-colonna>\___Changed**, che indica la presenza di colonne modificate nella riga delle modifiche corrente.  
+-   **Net with update mask**: questa modalità è simile alla modalità NET standard, ma aggiunge anche colonne booleane con il modello di nome **_ _ $ \<column-name> \_ _Changed** che indica le colonne modificate nella riga delle modifiche corrente.  
   
 -   **Net with merge**: questa modalità è simile alla modalità Net standard, ma con le operazioni Insert e Update unite in una singola operazione Merge (UPSERT).  
   
@@ -74,7 +73,7 @@ ms.locfileid: "66061058"
   
  Per altre informazioni, vedere [Proprietà personalizzate dell'origine CDC](data-flow/cdc-source-custom-properties.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Editor origine CDC &#40;pagina colonne&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)   
  [Editor origine CDC &#40;pagina Output degli errori&#41;](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
   

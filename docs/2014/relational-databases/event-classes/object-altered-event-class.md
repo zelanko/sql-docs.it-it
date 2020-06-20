@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f94e3b59-ff2f-4d8d-8479-e85ce5b3483e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bd38e8d1685b23cfeeb1793d02b0fff1d7de0640
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a0d610b6541439124d2c289dfd319811c1e0d95
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662245"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029364"
 ---
 # <a name="objectaltered-event-class"></a>Object:Altered - classe di evento
   La classe di evento Object:Altered indica che un oggetto è stato modificato, ad esempio mediante un'istruzione ALTER INDEX, ALTER TABLE o ALTER DATABASE. È possibile utilizzare questa classe di evento per determinare se gli oggetti sono stati modificati, ad esempio tramite applicazioni ODBC che spesso creano stored procedure temporanee.  
@@ -60,7 +59,7 @@ ms.locfileid: "62662245"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|`bigint`|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

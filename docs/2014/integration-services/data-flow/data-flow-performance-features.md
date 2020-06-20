@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e48e9fb50ae749bd75162bb458268ecbe9b79d64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8a4834e8a32f5cb2cb512061777715f314f84299
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637829"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916322"
 ---
 # <a name="data-flow-performance-features"></a>Funzionalità delle prestazioni del flusso di dati
   In questo argomento sono inclusi alcuni suggerimenti sulla progettazione di pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per evitare problemi di prestazioni comuni. Sono inoltre fornite informazioni sugli strumenti e sulle funzionalità che è possibile usare per risolvere i problemi relativi alle prestazioni dei pacchetti.  
@@ -94,7 +93,7 @@ ms.locfileid: "73637829"
  Indipendentemente dal componente del flusso di dati, è consigliabile seguire due linee guida generali per migliorare le prestazioni: ottimizzare le query ed evitare stringhe non necessarie.  
   
 #### <a name="optimize-queries"></a>Ottimizzazione delle query  
- Numerosi componenti del flusso di dati usano query in operazioni di estrazione dei dati dalle origini o in operazioni di ricerca per la creazione di tabelle di riferimento. La query predefinita usa la sintassi SELECT * FROM \<nomeTabella>. con cui vengono restituite tutte le colonne della tabella di origine. La disponibilità di tutte le colonne in fase di progettazione consente di scegliere qualsiasi colonna come colonna di ricerca, colonna pass-through o colonna di origine. Dopo avere selezionato le colonne da usare, è tuttavia necessario modificare la query in modo che includa solo le colonne selezionate. La rimozione delle colonne superflue garantisce una maggiore efficienza del flusso di dati in un pacchetto, in quanto un minor numero di colonne comporta la creazione di una riga con dimensioni inferiori. Una riga con dimensioni inferiori fa sì che sia possibile inserire più righe in un buffer e che l'elaborazione di tutte le righe nel set di dati risulti meno complessa.  
+ Numerosi componenti del flusso di dati usano query in operazioni di estrazione dei dati dalle origini o in operazioni di ricerca per la creazione di tabelle di riferimento. La query predefinita Usa la sintassi SELECT * FROM \<tableName> . con cui vengono restituite tutte le colonne della tabella di origine. La disponibilità di tutte le colonne in fase di progettazione consente di scegliere qualsiasi colonna come colonna di ricerca, colonna pass-through o colonna di origine. Dopo avere selezionato le colonne da usare, è tuttavia necessario modificare la query in modo che includa solo le colonne selezionate. La rimozione delle colonne superflue garantisce una maggiore efficienza del flusso di dati in un pacchetto, in quanto un minor numero di colonne comporta la creazione di una riga con dimensioni inferiori. Una riga con dimensioni inferiori fa sì che sia possibile inserire più righe in un buffer e che l'elaborazione di tutte le righe nel set di dati risulti meno complessa.  
   
  Per creare una query, è possibile digitarla o usare Generatore query.  
   
@@ -125,7 +124,7 @@ ms.locfileid: "73637829"
  Usare i suggerimenti inclusi in questa sezione per migliorare la prestazione delle trasformazioni Aggregazione, Ricerca fuzzy, Raggruppamento fuzzy, Ricerca, Merge Join e Dimensione a modifica lenta.  
   
 #### <a name="aggregate-transformation"></a>Trasformazione Aggregazione  
- La trasformazione Aggregazione include le proprietà `Keys`, `KeysScale`, `CountDistinctKeys` e `CountDistinctScale`. Queste proprietà migliorano le prestazioni in quanto consentono alla trasformazione di preallocare la quantità di memoria necessaria per i dati memorizzati nella cache. Se si conosce il numero esatto o approssimativo di gruppi che dovrebbero risultare da un'operazione **Group by** , impostare rispettivamente le `Keys` proprietà `KeysScale` e. Se si conosce il numero esatto o approssimativo di valori distinct che dovrebbero risultare da un'operazione **Distinct Count** , impostare rispettivamente le `CountDistinctKeys` proprietà `CountDistinctScale` e.  
+ La trasformazione Aggregazione include le proprietà `Keys`, `KeysScale`, `CountDistinctKeys` e `CountDistinctScale`. Queste proprietà migliorano le prestazioni in quanto consentono alla trasformazione di preallocare la quantità di memoria necessaria per i dati memorizzati nella cache. Se si conosce il numero esatto o approssimativo di gruppi che dovrebbero risultare da un'operazione **Group by** , impostare rispettivamente le `Keys` `KeysScale` proprietà e. Se si conosce il numero esatto o approssimativo di valori distinct che dovrebbero risultare da un'operazione **Distinct Count** , impostare rispettivamente le `CountDistinctKeys` `CountDistinctScale` proprietà e.  
   
  Se in un flusso di dati è necessario creare più aggregazioni, valutare l'opportunità di creare più aggregazioni che usano una singola trasformazione Aggregazione anziché creare più trasformazioni. Questo approccio consente prestazioni migliori quando un'aggregazione è un subset di un'altra aggregazione, in quanto la trasformazione può ottimizzare l'archiviazione interna ed eseguire l'analisi dei dati in ingresso una sola volta. Nel caso, ad esempio, di un'aggregazione che usa la clausola GROUP BY e l'aggregazione AVG, è possibile migliorare le prestazioni combinando clausola e aggregazione in una sola trasformazione. L'esecuzione di più aggregazioni all'interno di una trasformazione Aggregazione, tuttavia, comporta la serializzazione delle operazioni di aggregazione e può pertanto influire sulle prestazioni quando è necessario calcolare più aggregazioni indipendentemente.  
   

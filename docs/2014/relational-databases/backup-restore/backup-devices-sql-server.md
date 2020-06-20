@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 44cb3f6b8dd16eed44568051e1ef183c0ac8123a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a8abbba087679d263c00484764ecf445d6e5a006
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155051"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959331"
 ---
 # <a name="backup-devices-sql-server"></a>Dispositivi di backup (SQL Server)
   Durante un'operazione di backup su un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , i dati sottoposti a *backup*vengono scritti in un dispositivo di backup fisico. Tale dispositivo di backup fisico viene inizializzato quando si scrive su di esso il primo backup di un set di supporti. I backup disponibili in un set di uno o più dispositivi di backup costituiscono un singolo set di supporti.  
@@ -39,9 +38,9 @@ ms.locfileid: "70155051"
   
 -   [Termini e definizioni](#TermsAndDefinitions)  
   
--   [Utilizzo di dispositivi di backup su disco](#DiskBackups)  
+-   [Uso di dispositivi di backup su disco](#DiskBackups)  
   
--   [Utilizzo di dispositivi nastro](#TapeDevices)  
+-   [Uso di dispositivi nastro](#TapeDevices)  
   
 -   [Utilizzo di un dispositivo di backup logico](#LogicalBackupDevice)  
   
@@ -86,7 +85,7 @@ ms.locfileid: "70155051"
   
  BACKUP DATABASE *database_name*  
   
- Al disco **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
+ TO DISK **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
  Ad esempio:  
   
@@ -100,7 +99,7 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- Dal disco **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
+ FROM DISK **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
  Ad esempio,  
   
@@ -136,7 +135,7 @@ GO
     >  Il backup dei dati in una rete può essere soggetto agli errori della rete stessa. Quando si utilizza un disco remoto, è pertanto consigliabile verificare l'operazione di backup dopo il suo completamento. Per altre informazioni, vedere [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql).  
   
 #### <a name="specifying-a-universal-naming-convention-unc-name"></a>Specifica di un nome UNC (Universal Naming Convention)  
- Per specificare una condivisione di rete in un comando di backup o ripristino, è necessario utilizzare il nome UNC (Universal Naming Convention) completo del file per il dispositivo di backup. Il formato ** \\ **di un nome UNC è _SystemName_**\\**_ShareName_**\\**_path_**\\**_filename_.  
+ Per specificare una condivisione di rete in un comando di backup o ripristino, è necessario utilizzare il nome UNC (Universal Naming Convention) completo del file per il dispositivo di backup. Il formato di un nome UNC è **\\\\** _NomeSistema_ **\\** _NomeCondivisione_ **\\** _Percorso_ **\\** _NomeFile_.  
   
  Ad esempio:  
   
@@ -174,7 +173,7 @@ GO
   
  BACKUP { DATABASE | LOG } *database_name*  
   
- Su nastro **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
+ TO TAPE **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
  Ad esempio:  
   
@@ -188,7 +187,7 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- Dal nastro **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
+ FROM TAPE **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
 ###  <a name="tape-specific-backup-and-restore-options-transact-sql"></a><a name="TapeOptions"></a>Opzioni di BACKUP e ripristino specifiche del nastro (Transact-SQL)  
  Per facilitare la gestione dei nastri, per l'istruzione BACKUP sono disponibili le opzioni seguenti specifiche dei nastri:  
@@ -207,7 +206,7 @@ GO
 ###  <a name="managing-open-tapes"></a><a name="OpenTapes"></a>Gestione dei nastri aperti  
  Per visualizzare un elenco dei dispositivi nastro aperti e lo stato delle richieste di montaggio, eseguire una query nella DMV [sys.dm_io_backup_tapes](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql) . Questa vista contiene tutti i nastri aperti, inclusi i nastri in uso che risultano temporaneamente inattivi in quanto in attesa dell'operazione BACKUP o RESTORE successiva.  
   
- Se un nastro viene accidentalmente lasciato aperto, il modo più rapido per rilasciare il nastro consiste nell'usare il comando seguente: RESTORE REWINDONLY from **=** Tape _backup_device_name_. Per altre informazioni, vedere [RESTORE REWINDONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql).  
+ Se un nastro viene inavvertitamente lasciato aperto, il modo più rapido per rilasciarlo consiste nell'usare il comando seguente: RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_. Per altre informazioni, vedere [RESTORE REWINDONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql).  
   
 ## <a name="using-the-azure-blob-storage-service"></a>Uso del servizio di archiviazione BLOB di Azure  
  I backup di SQL Server possono essere scritti nel servizio Archiviazione BLOB di Azure.  Per altre informazioni su come usare il servizio di archiviazione BLOB di Azure per i backup, vedere [SQL Server backup e ripristino con il servizio di archiviazione BLOB di Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
@@ -293,14 +292,14 @@ GO
 -   [Eliminare un dispositivo di backup &#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server, oggetto dispositivo di backup](../performance-monitor/sql-server-backup-device-object.md)   
+ [Oggetto Backup Device di SQL Server](../performance-monitor/sql-server-backup-device-object.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Piani di manutenzione](../maintenance-plans/maintenance-plans.md)   
  [Set di supporti, gruppi di supporti e set di backup &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [RESTOre LABELONLY &#40;&#41;Transact-SQL](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)   
- [sys. backup_devices &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-backup-devices-transact-sql)   
- [sys. dm_io_backup_tapes &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql)   
+ [RESTORE LABELONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)   
+ [sys.backup_devices &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-backup-devices-transact-sql)   
+ [sys.dm_io_backup_tapes &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql)   
  [Set di supporti di backup con mirroring &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)  
   
   

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: b01d45d9-4598-4ded-9a9e-e3419cc3df8e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 61b6f366843b326a8983c27c3d5ee945604756f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa42e1125629ddef24e4815a2b1ed89283912832
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62757738"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940072"
 ---
 # <a name="querying-a-tabular-model"></a>Esecuzione di query su un modello tabulare
   La query di uno sviluppatore su un modello tabulare produce il recupero dei dati dal database tabulare. Per portare a termine questo obiettivo vi sono due opzioni: utilizzare le query della tabella in DAX o utilizzare MDX e recuperare i dati come se stessero arrivando da un cubo. Tuttavia, a seconda della modalità sottostante del modello tabulare è possibile che l'utilizzo venga limitato alle sole query della tabella DAX. La modalità DirectQuery richiede l'utilizzo di query delle tabelle DAX.  
@@ -63,29 +62,29 @@ FROM [Model]
 |Calendar Year|Product Category Name|Internet Total Sales|Reseller Total Sales|Total Sales|  
 |-------------------|---------------------------|--------------------------|--------------------------|-----------------|  
 |||$29.358.677,22|$80.450.596,98|$109.809.274,20|  
-||Accessories|$700.759,96|$571.297,93|$1.272.057,89|  
-||Bikes|$28.318.144,65|$66.302.381,56|$94.620.526,21|  
-||Clothing|$339.772,61|$1.777.840,84|$2.117.613,45|  
+||Accessori|$700.759,96|$571.297,93|$1.272.057,89|  
+||Biciclette|$28.318.144,65|$66.302.381,56|$94.620.526,21|  
+||Abbigliamento|$339.772,61|$1.777.840,84|$2.117.613,45|  
 ||Componenti||$11.799.076,66|$11.799.076,66|  
 |2001||$3.266.373,66|$8.065.435,31|$11.331.808,96|  
-|2001|Accessories||$20.235,36|$20.235,36|  
-|2001|Bikes|$3.266.373,66|$7.395.348,63|$10.661.722,28|  
-|2001|Clothing||$34.376,34|$34.376,34|  
+|2001|Accessori||$20.235,36|$20.235,36|  
+|2001|Biciclette|$3.266.373,66|$7.395.348,63|$10.661.722,28|  
+|2001|Abbigliamento||$34.376,34|$34.376,34|  
 |2001|Componenti||$615.474,98|$615.474,98|  
 |2002||$6.530.343,53|$24.144.429,65|$30.674.773,18|  
-|2002|Accessories||$92.735,35|$92.735,35|  
-|2002|Bikes|$6.530.343,53|$19.956.014,67|$26.486.358,20|  
-|2002|Clothing||$485.587,15|$485.587,15|  
+|2002|Accessori||$92.735,35|$92.735,35|  
+|2002|Biciclette|$6.530.343,53|$19.956.014,67|$26.486.358,20|  
+|2002|Abbigliamento||$485.587,15|$485.587,15|  
 |2002|Componenti||$3.610.092,47|$3.610.092,47|  
 |2003||$9.791.060,30|$32.202.669,43|$41.993.729,72|  
-|2003|Accessories|$293.709,71|$296.532,88|$590.242,59|  
-|2003|Bikes|$9.359.102,62|$25.551.775,07|$34.910.877,69|  
-|2003|Clothing|$138.247,97|$871.864,19|$1.010.112,16|  
+|2003|Accessori|$293.709,71|$296.532,88|$590.242,59|  
+|2003|Biciclette|$9.359.102,62|$25.551.775,07|$34.910.877,69|  
+|2003|Abbigliamento|$138.247,97|$871.864,19|$1.010.112,16|  
 |2003|Componenti||$5.482.497,29|$5.482.497,29|  
 |2004||$9.770.899,74|$16.038.062,60|$25.808.962,34|  
-|2004|Accessories|$407.050,25|$161.794,33|$568.844,58|  
-|2004|Bikes|$9.162.324,85|$13.399.243,18|$22.561.568,03|  
-|2004|Clothing|$201.524,64|$386.013,16|$587.537,80|  
+|2004|Accessori|$407.050,25|$161.794,33|$568.844,58|  
+|2004|Biciclette|$9.162.324,85|$13.399.243,18|$22.561.568,03|  
+|2004|Abbigliamento|$201.524,64|$386.013,16|$587.537,80|  
 |2004|Componenti||$2.091.011,92|$2.091.011,92|  
   
  Se l'espressione MDX viene sostituita con questa espressione di query della tabella DAX:  
@@ -102,9 +101,9 @@ DEFINE
   
 |Product Category Id|Product Category Alternate Id|Product Category Name|Internet Sales|Reseller Sales|  
 |-------------------------|-----------------------------------|---------------------------|--------------------|--------------------|  
-|4|4|Accessories|$700.759,96|$571.297,93|  
-|1|1|Bikes|$28.318.144,65|$66.302.381,56|  
-|3|3|Clothing|$339.772,61|$1.777.840,84|  
+|4|4|Accessori|$700.759,96|$571.297,93|  
+|1|1|Biciclette|$28.318.144,65|$66.302.381,56|  
+|3|3|Abbigliamento|$339.772,61|$1.777.840,84|  
 |2|2|Componenti||$11.799.076,66|  
   
   

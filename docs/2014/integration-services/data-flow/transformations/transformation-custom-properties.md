@@ -40,13 +40,12 @@ helpviewer_keywords:
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1a3e999975f13654a5f3c2f34a2325324c5a36ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60798bb7bd856dd131592e3c67eb155cf64a6ae7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770734"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939252"
 ---
 # <a name="transformation-custom-properties"></a>proprietà personalizzate della trasformazione
   Oltre alle proprietà comuni alla maggior parte degli oggetti del flusso di dati nel modello a oggetti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], molti oggetti del flusso di dati hanno proprietà personalizzate specifiche dell'oggetto. Tali proprietà personalizzate sono disponibili solo in fase di esecuzione e non sono trattate nella documentazione di riferimento relativa alla programmazione gestita in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
@@ -260,7 +259,7 @@ ms.locfileid: "62770734"
   
 |Proprietà|Tipo di dati|Descrizione|  
 |--------------|---------------|-----------------|  
-|Delimitatori|string|Delimitatori di token utilizzati dalla trasformazione. I delimitatori predefiniti includono i caratteri seguenti: spazio ( ), virgola (,), punto (.), punto e virgola (;), due punti (:), trattino (-), virgolette diritte doppie ("), virgolette diritte singole ('), e commerciale (&), barra (/), barra rovesciata (\\), chiocciola (@), punto esclamativo (!), punto interrogativo (?), parentesi di apertura ((), parentesi di chiusura ()), segno di minore (\<), segno di maggiore (>), parentesi quadra di apertura ([), parentesi quadra di chiusura (]), parentesi graffa di apertura ({), parentesi graffa di chiusura (}), barra verticale (&#124;), cancelletto (#), asterisco (*), accento circonflesso (^) e segno di percentuale (%).|  
+|Delimitatori|string|Delimitatori di token utilizzati dalla trasformazione. I delimitatori predefiniti includono i seguenti caratteri: Space (), virgola (,), punto (.), punto e virgola (;), due punti (:), segno meno (-), virgolette doppie ("), virgolette semplici ('), e commerciale (&), barra (/), barra rovesciata ( \\ ), chiocciola (@)), punto interrogativo (?), parentesi di apertura ((), parentesi di chiusura ()), minore di ( \<), greater than (> ), parentesi quadra aperta ([), parentesi quadra chiusa (]), parentesi graffa aperta ({), parentesi graffa di chiusura (}), barra verticale (&#124;), simbolo di cancelletto (#), asterisco (*), accento circonflesso (^) e percentuale (%).|  
 |Exhaustive|Boolean|Valore che specifica se ogni record di input viene confrontato con tutti gli altri record di input. Il valore `True` è destinato per lo più al debug. Il valore predefinito di questa proprietà è `False`.<br /><br /> Nota: Questa proprietà non è disponibile in **Editor trasformazione Raggruppamento fuzzy**, ma può essere impostata in **Editor avanzato**.|  
 |MaxMemoryUsage|Integer|Quantità di memoria massima che può essere utilizzata dalla trasformazione. Il valore predefinito di questa proprietà è **0**, che consente l'uso della memoria dinamica.<br /><br /> È possibile specificare il valore di questa proprietà tramite un'espressione di proprietà.<br /><br /> Nota: Questa proprietà non è disponibile in **Editor trasformazione Raggruppamento fuzzy**, ma può essere impostata in **Editor avanzato**.|  
 |MinSimilarity|Double|Soglia di somiglianza utilizzata dalla trasformazione per identificare duplicati, espressa come valore compreso tra 0 e 1.  Il valore predefinito di questa proprietà è 0.8.|  
@@ -294,7 +293,7 @@ ms.locfileid: "62770734"
 |Proprietà|Tipo di dati|Descrizione|  
 |--------------|---------------|-----------------|  
 |CopyReferenceTable|Boolean|Specifica se è necessario creare una copia della tabella di riferimento per la creazione dell'indice di ricerca fuzzy e le ricerche successive. Il valore predefinito di questa proprietà è `True`.|  
-|Delimitatori|string|Delimitatori utilizzati dalla trasformazione per suddividere in token i valori di colonna. I delimitatori predefiniti includono i caratteri seguenti: spazio ( ), virgola (,), punto (.), punto e virgola (;), due punti (:), trattino (-), virgolette diritte doppie ("), virgolette diritte singole ('), e commerciale (&), barra (/), barra rovesciata (\\), chiocciola (@), punto esclamativo (!), punto interrogativo (?), parentesi di apertura ((), parentesi di chiusura ()), segno di minore (\<), segno di maggiore (>), parentesi quadra di apertura ([), parentesi quadra di chiusura (]), parentesi graffa di apertura ({), parentesi graffa di chiusura (}), barra verticale (&#124;), cancelletto (#), asterisco (*), accento circonflesso (^) e segno di percentuale (%).|  
+|Delimitatori|string|Delimitatori utilizzati dalla trasformazione per suddividere in token i valori di colonna. I delimitatori predefiniti includono i seguenti caratteri: Space (), virgola (,), punto (.) punto e virgola (;), due punti (:) segno meno (-), virgolette doppie ("), virgolette semplici ('), e commerciale (&), barra (/), barra rovesciata ( \\ ), chiocciola (@), punto esclamativo (!), punto interrogativo (?), parentesi di apertura ((), parentesi di chiusura ()), minore di ( \<), greater than (> ), parentesi quadra aperta ([), parentesi quadra chiusa (]), parentesi graffa di apertura ({), parentesi graffa di chiusura (}), pipe (&#124;). cancelletto (#), asterisco (*), accento circonflesso (^) e segno di percentuale (%).|  
 |DropExistingMatchIndex|Boolean|Un valore che specifica se l'indice delle corrispondenze specificato in MatchIndexName viene eliminato quando MatchIndexOptions non è impostata su ReuseExistingIndex. Il valore predefinito di questa proprietà è `True`.|  
 |Exhaustive|Boolean|Valore che specifica se ogni record di input viene confrontato con tutti gli altri record di input. Il valore `True` è destinato per lo più al debug. Il valore predefinito di questa proprietà è `False`.<br /><br /> Nota: Questa proprietà non è disponibile in **Editor trasformazione Ricerca fuzzy**, ma può essere impostata in **Editor avanzato**.|  
 |MatchIndexName|string|Nome dell'indice delle corrispondenze. L'indice delle corrispondenze è la tabella in cui la trasformazione crea e salva l'indice utilizzato. Se viene riusato l'indice delle corrispondenze, MatchIndexName specifica l'indice da riusare. MatchIndexName deve essere un nome di identificatore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valido. Se il nome contiene spazi, ad esempio, deve essere racchiuso tra parentesi.|  
@@ -319,7 +318,7 @@ ms.locfileid: "62770734"
  Nella tabella seguente vengono descritte le proprietà personalizzate delle colonne di output della trasformazione Ricerca fuzzy. Tutte le proprietà sono di lettura/scrittura.  
   
 > [!NOTE]  
->  Per le colonne di output che contengono valori passthrough dalle colonne di input corrispondenti, CopyFromReferenceColumn è vuoto e SourceInputColumnLineageID `LineageID` contiene l'oggetto della colonna di input corrispondente. Per le colonne di output che contengono risultati di ricerca, CopyFromReferenceColumn contiene il nome della colonna di ricerca, mentre SourceInputColumnLineageID è vuoto.  
+>  Per le colonne di output che contengono valori passthrough dalle colonne di input corrispondenti, CopyFromReferenceColumn è vuoto e SourceInputColumnLineageID contiene l'oggetto `LineageID` della colonna di input corrispondente. Per le colonne di output che contengono risultati di ricerca, CopyFromReferenceColumn contiene il nome della colonna di ricerca, mentre SourceInputColumnLineageID è vuoto.  
   
 |Proprietà|Tipo di dati|Descrizione|  
 |--------------|---------------|-----------------|  
@@ -422,7 +421,7 @@ ms.locfileid: "62770734"
   
 |Nome proprietà|Tipo di dati|Descrizione|  
 |-------------------|---------------|-----------------|  
-|Selezionato|Boolean|Definisce l'output a cui vengono indirizzate le righe campionate. Nell'output selezionato, selezionato è impostato `True`su e nell'output non selezionato, selezionato è impostato su. `False`|  
+|Selezionato|Boolean|Definisce l'output a cui vengono indirizzate le righe campionate. Nell'output selezionato, selezionato è impostato su e nell'output non selezionato `True` , selezionato è impostato su `False` .|  
   
  L'input, le colonne di input e le colonne di output della trasformazione Campionamento percentuale non includono proprietà personalizzate.  
   
@@ -477,7 +476,7 @@ ms.locfileid: "62770734"
   
 |Nome proprietà|Tipo di dati|Descrizione|  
 |-------------------|---------------|-----------------|  
-|Selezionato|Boolean|Definisce l'output a cui vengono indirizzate le righe campionate. Nell'output selezionato, selezionato è impostato `True`su e nell'output non selezionato, selezionato è impostato su. `False`|  
+|Selezionato|Boolean|Definisce l'output a cui vengono indirizzate le righe campionate. Nell'output selezionato, selezionato è impostato su e nell'output non selezionato `True` , selezionato è impostato su `False` .|  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate delle colonne di output della trasformazione Campionamento righe. Tutte le proprietà sono di lettura/scrittura.  
   
@@ -561,7 +560,7 @@ ms.locfileid: "62770734"
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Estrazione termini. Tutte le proprietà sono di lettura/scrittura.  
   
-|Proprietà|Tipo di dati|Descrizione|  
+|Proprietà|Tipo di dati|Description|  
 |--------------|--------------|-----------------|  
 |FrequencyThreshold|Integer|Valore numerico che indica il numero necessario di occorrenze di un termine prima che questo venga estratto. Il valore predefinito di questa proprietà è **2**.|  
 |IsCaseSensitive|Boolean|Valore che specifica se utilizzare la distinzione tra maiuscole e minuscole per l'estrazione di sostantivi e sintagmi nominali. Il valore predefinito di questa proprietà è `False`.|  
@@ -626,7 +625,7 @@ ms.locfileid: "62770734"
   
  Per altre informazioni, vedere [Trasformazione UnPivot](unpivot-transformation.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Trasformazioni Integration Services](integration-services-transformations.md)   
  [Proprietà comuni](../../common-properties.md)   
  [Proprietà percorso](../../path-properties.md)   

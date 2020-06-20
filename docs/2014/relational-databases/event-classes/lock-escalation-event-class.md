@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c85b6983cbff901ae39c365503a6ab1ae0fcede1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9bf476175245000ba63e058ca333953d07276076
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662371"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029432"
 ---
 # <a name="lockescalation-event-class"></a>Classe di evento Lock:Escalation
   La classe di evento **Lock:Escalation** indica che un blocco con granularità fine è stato convertito in un blocco con granularità grossolana, ad esempio un blocco di riga è stato convertito in blocco di oggetto. La classe di evento dell'escalation è l'ID evento 60.  
@@ -58,7 +57,7 @@ ms.locfileid: "62662371"
 |**StartTime**|`datetime`|Ora di inizio dell'evento, se disponibile.|14|Sì|  
 |**TextData**|`ntext`|Testo dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che provoca l'escalation dei blocchi.|1|Sì|  
 |**TransactionID**|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
-|**Type**|`int`|Granularità dell'escalation dei blocchi:<br /><br /> 1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT (livello della tabella)<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=HOBT<br /><br /> 13=ALLOCATION_UNIT|57|Sì|  
+|**Tipo**|`int`|Granularità dell'escalation dei blocchi:<br /><br /> 1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT (livello della tabella)<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=HOBT<br /><br /> 13=ALLOCATION_UNIT|57|Sì|  
   
 ## <a name="examples"></a>Esempi  
  Nel seguente esempio viene utilizzata la procedura `sp_trace_create` per creare una traccia, viene utilizzato `sp_trace_setevent` per aggiungere colonne dell'escalation dei blocchi alla traccia, quindi `sp_trace_setstatus` per avviare la traccia. In istruzioni come `EXEC sp_trace_setevent @TraceID, 60, 22, 1`, il numero `60` indica la classe di evento dell'escalation, `22` indica la colonna **ObjectID** e `1` imposta l'evento di traccia su ON.  
@@ -98,7 +97,7 @@ EXEC sp_trace_setstatus @TraceID, 2;
 GO  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [sys.dm_tran_locks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql)  
   

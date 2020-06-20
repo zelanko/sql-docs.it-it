@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d89cc01f-084b-41b0-8c60-3c6b964d7ad4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c854e26ee7acfc34931e5b08f1179494d2cbd096
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bfcc63a848134b2bb693754222860753aa42dd68
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63252670"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064155"
 ---
 # <a name="sql-server-integration-services-properties-advanced-tab"></a>Proprietà - SQL Server Integration Services (scheda Avanzate)
   Microsoft [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene implementato come servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Se sono state definite proprietà personalizzate, verranno visualizzate in questa scheda con i rispettivi valori. È possibile che questa scheda non contenga proprietà.  

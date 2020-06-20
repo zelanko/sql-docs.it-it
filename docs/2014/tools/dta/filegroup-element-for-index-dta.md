@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7078d2fb-fa77-44fc-beb3-c095088fcb85
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d88acb23573afbd38e24836e254e8f54921806c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a320b0cea686cdec953b2a508d7f0c277fc2e817
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63154603"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048390"
 ---
 # <a name="filegroup-element-for-index-dta"></a>Elemento Filegroup per Index (DTA)
   Specifica il filegroup in cui creare l'indice per una configurazione specificata dall'utente.  

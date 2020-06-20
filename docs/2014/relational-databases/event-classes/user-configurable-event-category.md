@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1791785b-d67d-4cab-8acc-b3cf13af7a1f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3a50b7ce1db0aa390d4fee9fa4e5752c1444dfe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11f3c05128a0bf0b460137e94c94529631042e67
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62864562"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027810"
 ---
 # <a name="user-configurable-event-category"></a>Categoria di eventi Configurabile dall'utente
   La categoria di eventi **Configurabile dall'utente** include le classi di evento **User-Configurable** .  
