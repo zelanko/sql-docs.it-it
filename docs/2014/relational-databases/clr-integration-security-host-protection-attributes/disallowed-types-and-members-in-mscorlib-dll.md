@@ -1,5 +1,5 @@
 ---
-title: Tipi e membri non consentiti in mscorlib. dll | Microsoft Docs
+title: Tipi e membri non consentiti in mscorlib.dll | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: daf82d4b-2f6d-44ca-9148-75193321b6d5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 43f71d7dc73239b240b841e14a11f3f28f755b61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc4e42a0f900231bdd28417420cdab19b7345e66
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874359"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954321"
 ---
 # <a name="disallowed-types-and-members-in-mscorlibdll"></a>Tipi e membri non consentiti in mscorlib.dll
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la programmazione Common Language Integration (CLR) non consente l'utilizzo di un tipo o di un membro che `HostProtectionAttribute` dispone di un `System.Security.Permissions.HostProtectionResource` oggetto che specifica un'enumerazione `ExternalProcessMgmt`con `ExternalThreading`un `MayLeakOnAbort`valore `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`,,, `Synchronization`, **SharedState**, o `UI`. Nella tabella seguente sono elencati i membri e i tipi dell'assembly mscorlib.dll i cui valori degli attributi di protezione host non sono consentiti.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la programmazione Common Language Integration (CLR) non consente l'utilizzo di un tipo o di un membro che dispone di un oggetto `HostProtectionAttribute` che specifica un' `System.Security.Permissions.HostProtectionResource` enumerazione con un valore `ExternalProcessMgmt` , `ExternalThreading` , `MayLeakOnAbort` , `SecurityInfrastructure` , `SelfAffectingProcessMgmnt` , `SelfAffectingThreading` , **SharedState**, `Synchronization` o `UI` . Nella tabella seguente sono elencati i membri e i tipi dell'assembly mscorlib.dll i cui valori degli attributi di protezione host non sono consentiti.  
   
 > [!NOTE]  
 >  Questo elenco è stato generato dagli assembly supportati. Per ulteriori informazioni, vedere [supported .NET Framework libraries](../clr-integration/database-objects/supported-net-framework-libraries.md).  
@@ -30,33 +29,33 @@ ms.locfileid: "62874359"
 |--------------------|--------------------|  
 |SyncStream.BeginRead()|ExternalThreading|  
 |SyncStream.BeginWrite()|ExternalThreading|  
-|System.Collections.ArrayList.Synchronized()|Synchronization|  
-|System.Collections.Hashtable.Synchronized()|Synchronization|  
-|System.Collections.Queue.Synchronized()|Synchronization|  
-|System.Collections.SortedList.Synchronized()|Synchronization|  
-|System.Collections.Stack.Synchronized()|Synchronization|  
-|System.Console.Beep()|UI|  
-|System.Console.get_Error()|UI|  
-|System.Console.get_In()|UI|  
-|System.Console.get_KeyAvailable()|UI|  
-|System.Console.get_Out()|UI|  
-|System.Console.OpenStandardError()|UI|  
-|System.Console.OpenStandardInput()|UI|  
-|System.Console.OpenStandardOutput()|UI|  
-|System.Console.Read()|UI|  
-|System.Console.ReadKey()|UI|  
-|System.Console.ReadLine()|UI|  
-|System.Console.SetError()|UI|  
-|System.Console.SetIn()|UI|  
-|System.Console.SetOut()|UI|  
-|System.Console.Write()|UI|  
-|System.Console.WriteLine()|UI|  
+|System.Collections.ArrayList.Synchronized()|Sincronizzazione|  
+|System.Collections.Hashtable.Synchronized()|Sincronizzazione|  
+|System.Collections.Queue.Synchronized()|Sincronizzazione|  
+|System.Collections.SortedList.Synchronized()|Sincronizzazione|  
+|System.Collections.Stack.Synchronized()|Sincronizzazione|  
+|System.Console.Beep()|Interfaccia utente|  
+|System.Console.get_Error()|Interfaccia utente|  
+|System.Console.get_In()|Interfaccia utente|  
+|System.Console.get_KeyAvailable()|Interfaccia utente|  
+|System.Console.get_Out()|Interfaccia utente|  
+|System.Console.OpenStandardError()|Interfaccia utente|  
+|System.Console.OpenStandardInput()|Interfaccia utente|  
+|System.Console.OpenStandardOutput()|Interfaccia utente|  
+|System.Console.Read()|Interfaccia utente|  
+|System.Console.ReadKey()|Interfaccia utente|  
+|System.Console.ReadLine()|Interfaccia utente|  
+|System.Console.SetError()|Interfaccia utente|  
+|System.Console.SetIn()|Interfaccia utente|  
+|System.Console.SetOut()|Interfaccia utente|  
+|System.Console.Write()|Interfaccia utente|  
+|System.Console.WriteLine()|Interfaccia utente|  
 |System.Diagnostics.LogMessageEventHandler|ExternalThreading, Synchronization|  
 |System.IO.FileStream.BeginRead()|ExternalThreading|  
 |System.IO.FileStream.BeginWrite()|ExternalThreading|  
-|System.IO.Stream.Synchronized()|Synchronization|  
-|System.IO.TextReader.Synchronized()|Synchronization|  
-|System.IO.TextWriter.Synchronized()|Synchronization|  
+|System.IO.Stream.Synchronized()|Sincronizzazione|  
+|System.IO.TextReader.Synchronized()|Sincronizzazione|  
+|System.IO.TextWriter.Synchronized()|Sincronizzazione|  
 |System.Reflection.Emit.AssemblyBuilder|MayLeakOnAbort|  
 |System.Reflection.Emit.ConstructorBuilder|MayLeakOnAbort|  
 |System.Reflection.Emit.CustomAttributeBuilder|MayLeakOnAbort|  
@@ -98,11 +97,11 @@ ms.locfileid: "62874359"
 |System.Threading.Timer|ExternalThreading, Synchronization|  
 |System.Threading.TimerBase|ExternalThreading, Synchronization|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Attributi di protezione host e programmazione dell'integrazione con CLR](host-protection-attributes-and-clr-integration-programming.md)   
- [Tipi e membri non consentiti in Microsoft. VisualBasic. dll](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
- [Tipi e membri non consentiti in System. dll](disallowed-types-and-members-in-system-dll.md)   
- [Tipi e membri non consentiti in System. Data. dll](disallowed-types-and-members-in-system-data-dll.md)   
+ [Tipi e membri non consentiti in Microsoft.VisualBasic.dll](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
+ [Tipi e membri non consentiti in System.dll](disallowed-types-and-members-in-system-dll.md)   
+ [Tipi e membri non consentiti in System.Data.dll](disallowed-types-and-members-in-system-data-dll.md)   
  [Tipi e membri non consentiti in System.Core.dll](disallowed-types-and-members-in-system-core-dll.md)  
   
   

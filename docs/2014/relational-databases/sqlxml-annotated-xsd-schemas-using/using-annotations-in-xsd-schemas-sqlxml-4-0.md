@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 78f318a4-7a36-473b-9852-a4bae6940ce5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 56a8d0daaa7eb64600c7e3a06f4121c45ce25a23
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5237c5c24b302e0ce1996e03e89b3e01ba6d8f51
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703505"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003007"
 ---
 # <a name="using-annotations-in-xsd-schemas-sqlxml-40"></a>Utilizzo delle annotazioni negli schemi XSD (SQLXML 4.0)
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 il linguaggio dello schema XSD supporta le annotazioni in una modalità analoga a quella delle annotazioni introdotte con il linguaggio dello schema XDR (XML-Data Reduced). In XSD sono state introdotte alcune annotazioni aggiuntive che non sono supportate in XDR.  

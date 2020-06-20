@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7de3c043-6c5a-4663-b960-a80492444a99
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 5e742e30ed90bf4415aa4fba8db6c4c92e62389d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ac7f4b96ac54eee847abc440c6b259aadfac401
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63242507"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065585"
 ---
 # <a name="instancename-property-clientsettingsgeneralflag-class"></a>Proprietà InstanceName (classe ClientSettingsGeneralFlag)
   Ottiene il nome dell'istanza del [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client.  
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  Oggetto della [classe ClientSettingsGeneralFlag](clientsettingsgeneralflag-class.md) che rappresenta un flag generale per le impostazioni del server.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
@@ -45,7 +44,7 @@ object
   
 ## <a name="remarks"></a>Osservazioni  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [configurazione di protocolli client](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

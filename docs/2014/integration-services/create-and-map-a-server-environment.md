@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: b1cbb697-713f-48e4-b234-b23724d87451
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 15f45af03125ebd797de0e36cb67516b4f01408d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4043075208fb4435fb777214733dad1d93113452
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060144"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917283"
 ---
 # <a name="create-and-map-a-server-environment"></a>Creare ed eseguire il mapping di un ambiente server
   Creare un ambiente server per specificare i valori di runtime per i pacchetti contenuti in un progetto distribuito nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. È quindi possibile eseguire il mapping delle variabili di ambiente ai parametri, per un pacchetto specifico, per i pacchetti del punto di ingresso o per tutti i pacchetti di un progetto specificato. Un pacchetto del punto di ingresso è in genere un pacchetto padre che esegue un pacchetto figlio.  
@@ -32,7 +31,7 @@ ms.locfileid: "66060144"
   
 ### <a name="to-create-and-use-a-server-environment"></a>Per creare e utilizzare un ambiente server  
   
-1.  In [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]espandere i [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] cataloghi> nodo **SSISDB** in Esplora oggetti e individuare la cartella **ambienti** del progetto per il quale si desidera creare un ambiente.  
+1.  In [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] espandere i [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] cataloghi> nodo **SSISDB** in Esplora oggetti e individuare la cartella **ambienti** del progetto per il quale si desidera creare un ambiente.  
   
 2.  Fare clic con il pulsante destro del mouse sulla cartella **Ambienti** e quindi scegliere **Creazione ambiente**.  
   

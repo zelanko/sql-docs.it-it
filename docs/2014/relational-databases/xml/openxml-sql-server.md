@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cc2a5b9d56f5c4d07c4e998439bd3b38d3c06058
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1849029e6654fcd629499cceeff9957e5389370f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702576"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065548"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
   La parola chiave [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML restituisce un set di righe simile a una tabella o una vista da documenti XML in memoria. OPENXML consente di accedere ai dati XML come se si trattasse di un set di righe relazionali, visualizzando la rappresentazione interna di un documento XML come un set di righe. I record del set di righe possono essere archiviati in tabelle di database.
@@ -38,7 +37,7 @@ ms.locfileid: "82702576"
  Per scrivere query su un documento XML tramite OPENXML, è innanzitutto necessario chiamare `sp_xml_preparedocument` . che analizza il documento XML e restituisce un handle al documento analizzato e pronto per l'utilizzo. Il documento analizzato è una rappresentazione dell'albero del modello a oggetti documento (DOM, Document Object Model) dei vari nodi inclusi nel documento XML. L'handle del documento viene quindi passato a OPENXML, che a sua volta visualizza il documento come un set di righe in base ai parametri passati.
 
 > [!NOTE]
->  `sp_xml_preparedocument`Usa una versione aggiornata di SQL del parser MSXML, Msxmlsql. dll. Questa versione è stata progettata per supportare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e garantire la compatibilità con MSXML versione 2.6.
+>  `sp_xml_preparedocument`Usa una versione aggiornata di SQL del parser MSXML, Msxmlsql.dll. Questa versione è stata progettata per supportare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e garantire la compatibilità con MSXML versione 2.6.
 
  La rappresentazione interna di un documento XML deve essere rimossa dalla memoria tramite una chiamata alla stored procedure di sistema **sp_xml_removedocument** , in modo tale da liberare memoria.
 

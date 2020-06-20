@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e58db16e14c0e959ca83dcdd687159f80bbeaf77
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c8f3f5c10a4b9f78ed77d643b34297336581f43f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717503"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996218"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>Esecuzione di un updategram mediante OLE DB (SQLXML 4.0)
   Questo argomento fornisce un esempio funzionante del database usingOLE per l'esecuzione di un updategram.  
@@ -58,7 +57,7 @@ ms.locfileid: "82717503"
 </Schema>  
 ```  
   
- La query restituisce tutti gli elementi relativi ai dipendenti. Con il mapping predefinito, l'elemento ** \< Person. Contact>** viene mappato alla tabella Person. Contact del database AdventureWorks.  
+ La query restituisce tutti gli elementi relativi ai dipendenti. Con il mapping predefinito, l' **\<Person.Contact>** elemento viene mappato alla tabella Person. Contact del database AdventureWorks.  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>Per impostare XML come comando recuperando il risultato come documento XML  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7d74a60b-8933-4038-bcbb-4e9dcc4f70e9
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 79edd8566f2b3c9b586bc8c8815e1d9bc586fb05
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7ad3b085178c0d0cfe3ece010a571992e7fdb99
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481239"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064863"
 ---
 # <a name="task-1-creating-a-knowledge-base-and-domains"></a>Attività 1: Creazione di una Knowledge Base e dei domini
   In questa attività verrà creata la Knowledge base **Suppliers** e verranno creati i domini utilizzati per la pulizia dei dati e la corrispondenza dei dati per rimuovere i duplicati.  

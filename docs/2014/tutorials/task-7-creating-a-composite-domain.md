@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae778647-1df0-4952-9a69-0ef6177eea9c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bbc00117e10e48adbde37b9f0561610feff8f87e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42936d25e267bcad5ba8ae512750f9e12f041579
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65488960"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064723"
 ---
 # <a name="task-7-creating-a-composite-domain"></a>Attività 7: Creazione di un dominio composito
   In questa attività viene creato un dominio composito, la **convalida dell'indirizzo**, che include i domini della riga dell' **Indirizzo**, **della città**, **dello stato**e del file **zip** . Un dominio composito consente di definire una regola tra domini che interessa più domini di una regola. Vi sono altri vantaggi correlati a un dominio composito, quale la possibilità di analizzare un valore di campo in più domini.  Ad esempio, un valore per un campo Nome completo può essere analizzato in domini diversi First Name, Middle Name e Last Name. In questa esercitazione viene definita solo una regola tra domini. Per altri dettagli, vedere [gestione di un dominio composito](https://msdn.microsoft.com/library/hh510399.aspx) .  

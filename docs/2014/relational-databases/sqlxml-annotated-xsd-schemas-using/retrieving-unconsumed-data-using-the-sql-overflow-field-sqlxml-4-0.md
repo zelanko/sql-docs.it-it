@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5d663cf6a4a2c7edfc7ae206f5a703b10db63106
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e87089d05ec00993900bc8a081ebe43ae3adf448
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703535"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003178"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>Recupero di dati non utilizzati mediante sql:overflow-field (SQLXML 4.0)
-  Quando i record vengono inseriti in un database da un documento XML tramite la funzione OPENXML [!INCLUDE[tsql](../../includes/tsql-md.md)], tutti i dati non utilizzati dal documento XML di origine possono essere archiviati in una colonna. Quando si recuperano dati da un database tramite schemi con annotazioni, è possibile specificare l'attributo `sql:overflow-field` per identificare la colonna nella tabella nella quale vengono archiviati i dati di overflow. L' `sql:overflow-field` attributo può essere specificato nell' ** \< elemento>**.  
+  Quando i record vengono inseriti in un database da un documento XML tramite la funzione OPENXML [!INCLUDE[tsql](../../includes/tsql-md.md)], tutti i dati non utilizzati dal documento XML di origine possono essere archiviati in una colonna. Quando si recuperano dati da un database tramite schemi con annotazioni, è possibile specificare l'attributo `sql:overflow-field` per identificare la colonna nella tabella nella quale vengono archiviati i dati di overflow. L' `sql:overflow-field` attributo può essere specificato in **\<element>** .  
   
  I dati vengono quindi recuperati nei modi seguenti:  
   
@@ -33,7 +32,7 @@ ms.locfileid: "82703535"
   
 -   Gli elementi figlio e i relativi discendenti, archiviati nella colonna di overflow nel database, vengono aggiunti come elementi figlio dopo il contenuto specificato in modo esplicito nello schema. Non viene rispettato alcun ordine.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per l'esecuzione di esempi SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqloverflow-field-for-an-element"></a>R. Specifica di sql:overflow-field per un elemento  

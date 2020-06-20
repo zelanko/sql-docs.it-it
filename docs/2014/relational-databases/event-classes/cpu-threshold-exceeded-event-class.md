@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: eb106f7d-baa3-4a2b-96b2-f9fe0844057d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cc8252d0049953f0958ea331015aae51fd737709
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07b51e1a6f08f48c601b00d2dcb67bc6d09006f6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663484"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030167"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>Classe di evento CPU Threshold Exceeded
   Questa classe di evento indica il rilevamento di una query che supera il valore soglia della CPU specificato per REQUEST_MAX_CPU_TIME_SEC.  
@@ -39,7 +38,7 @@ ms.locfileid: "62663484"
 |SPID|`int`|ID del processo del server che genera l'evento.<br /><br /> Nota: può essere differente dallo SPID effettivo dell'utente se il thread di sistema convalida l'utilizzo della CPU come attività in background.|12|Sì|  
 |StartTime|`datetime`|Ora di generazione dell'evento.|14|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Tipi e membri non consentiti in System. Core. dll | Microsoft Docs
+title: Tipi e membri non consentiti in System.Core.dll | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,16 +9,15 @@ ms.topic: reference
 ms.assetid: dcd24cd6-f4ab-42cc-9786-a1604e8a4b4e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f078caae791e4009a309e7cc70d7af333ca4c90f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 724b9010ecd185054b5c0c173d0bf933a37aed2e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919565"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954261"
 ---
 # <a name="disallowed-types-and-members-in-systemcoredll"></a>Tipi e membri non consentiti in System.Core.dll
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la programmazione Common Language Integration (CLR) non consente l'utilizzo di un tipo o di un membro che `HostProtectionAttribute` dispone di un `System.Security.Permissions.HostProtectionResource` oggetto che specifica un'enumerazione `ExternalProcessMgmt`con `ExternalThreading`un `MayLeakOnAbort`valore `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`,,, `Synchronization`, **SharedState**, o `UI`. Nella tabella seguente sono elencati i membri e i tipi degli assembly System.Core.dll i cui valori degli attributi di protezione host non sono consentiti.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la programmazione Common Language Integration (CLR) non consente l'utilizzo di un tipo o di un membro che dispone di un oggetto `HostProtectionAttribute` che specifica un' `System.Security.Permissions.HostProtectionResource` enumerazione con un valore `ExternalProcessMgmt` , `ExternalThreading` , `MayLeakOnAbort` , `SecurityInfrastructure` , `SelfAffectingProcessMgmnt` , `SelfAffectingThreading` , **SharedState**, `Synchronization` o `UI` . Nella tabella seguente sono elencati i membri e i tipi degli assembly System.Core.dll i cui valori degli attributi di protezione host non sono consentiti.  
   
 > [!NOTE]  
 >  Questo elenco è stato generato dagli assembly supportati. Per ulteriori informazioni, vedere [supported .NET Framework libraries](../clr-integration/database-objects/supported-net-framework-libraries.md).  
@@ -127,11 +126,11 @@ ms.locfileid: "62919565"
 |System.Threading.LockRecursionException|MayLeakOnAbort|  
 |System.Threading.ReaderWriterLockSlim|MayLeakOnAbort|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Attributi di protezione host e programmazione dell'integrazione con CLR](host-protection-attributes-and-clr-integration-programming.md)   
- [Tipi e membri non consentiti in Microsoft. VisualBasic. dll](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
- [Tipi e membri non consentiti in mscorlib. dll](disallowed-types-and-members-in-mscorlib-dll.md)   
- [Tipi e membri non consentiti in System. dll](disallowed-types-and-members-in-system-dll.md)   
+ [Tipi e membri non consentiti in Microsoft.VisualBasic.dll](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
+ [Tipi e membri non consentiti in mscorlib.dll](disallowed-types-and-members-in-mscorlib-dll.md)   
+ [Tipi e membri non consentiti in System.dll](disallowed-types-and-members-in-system-dll.md)   
  [Tipi e membri non consentiti in System.Data.dll](disallowed-types-and-members-in-system-data-dll.md)  
   
   

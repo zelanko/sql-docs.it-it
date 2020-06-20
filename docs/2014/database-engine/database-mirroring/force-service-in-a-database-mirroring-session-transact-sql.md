@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8b6ffe77-35f3-4e2a-a658-8a38a8e1c794
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ef1a7101a0bd16c3ee2868f47a8dc15f29092621
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b909f3602a78f3244ab3cf4479b8745956a7bd62
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806713"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934172"
 ---
 # <a name="force-service-in-a-database-mirroring-session-transact-sql"></a>Utilizzo forzato del servizio in una sessione di mirroring del database (Transact-SQL)
   Nella modalità a prestazioni elevate e in quella a sicurezza elevata senza failover automatico, se si verifica un errore nel server principale mentre è disponibile il server mirror, il proprietario del database può rendere disponibile il database forzando il failover del servizio nel database mirror, sebbene tale operazione implichi la possibile perdita di dati. Questa opzione è disponibile esclusivamente nelle condizioni seguenti:  
@@ -44,7 +43,7 @@ ms.locfileid: "62806713"
   
      Il server mirror esegue immediatamente la transizione al server principale e il mirroring viene sospeso.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Modalità di funzionamento del mirroring del database](database-mirroring-operating-modes.md)  
   

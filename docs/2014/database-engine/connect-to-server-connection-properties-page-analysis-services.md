@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: 26cf53e3-3bcb-4697-8a88-53e93bc68b56
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8a898990af62b66bb330ad490bc614f23a479ad4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9812887ba47b4072236b14b404669c5666dc74b7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755224"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934672"
 ---
 # <a name="connect-to-server-connection-properties-page-analysis-services"></a>Connetti al server (pagina Proprietà connessione) - Analysis Services
   Usare questa scheda per visualizzare o specificare le opzioni relative alla connessione a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o alla registrazione di [!INCLUDE[ssAS](../includes/ssas-md.md)] in **Server registrati**. Le opzioni**Connetti** e **Opzioni** vengono visualizzate in questa finestra di dialogo solamente durante la connessione. Le opzioni**Test** e **Salva** vengono visualizzate in questa finestra di dialogo solamente durante la registrazione del [!INCLUDE[ssAS](../includes/ssas-md.md)].  
   
 ## <a name="options"></a>Opzioni  
  **Connettersi al database**  
- Selezionare dall'elenco un database al quale connettersi. Se si seleziona ** \<>predefinita **, si verrà connessi al database predefinito per il server. Se si seleziona ** \<Sfoglia server>**, è possibile esplorare il server per il database a cui si desidera connettersi.  
+ Selezionare dall'elenco un database al quale connettersi. Se si seleziona **\<default>** , verrà stabilita la connessione al database predefinito per il server. Se si seleziona **\<Browse server>** , è possibile esplorare il server per il database a cui si desidera connettersi.  
   
  **Timeout connessione**  
  Immettere il numero di secondi di attesa prima che venga stabilita una connessione prima del timeout. Il valore predefinito è 15 secondi.  

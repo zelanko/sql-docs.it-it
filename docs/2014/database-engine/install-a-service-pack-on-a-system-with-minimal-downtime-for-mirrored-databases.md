@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bdc63142-027d-4ead-9d3e-147331387ef5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 821fd05e94ac820dff50bd08c70c75e7e9cc653d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e878d31ec926f8b2cc460854f422b4d01d32d414
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779595"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932787"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>Installare un Service Pack in un sistema con tempi di inattività minimi per database con mirroring
   In questo argomento viene descritta la procedura per ridurre al minimo il tempo di inattività per i database con mirroring quando vengono installati Service Pack e hotfix. Questo processo comprende l'aggiornamento sequenziale delle istanze di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] che partecipano al mirroring del database. Questa forma di aggiornamento, nota come *aggiornamento in sequenza*, riduce il tempo di inattività a un singolo failover. Per le sessioni in modalità a prestazioni elevate nelle quali il server mirror è geograficamente distante dal server principale, un aggiornamento in sequenza potrebbe non essere appropriato.  
@@ -125,7 +124,7 @@ ms.locfileid: "62779595"
   
     -   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: modificare l'opzione **Modalità operativa** e impostarla su **Prestazioni elevate (asincrona)** usando la [pagina Mirroring](../relational-databases/databases/database-properties-mirroring-page.md) della finestra di dialogo **Proprietà database** .  
   
-    -   In [!INCLUDE[tsql](../includes/tsql-md.md)]: utilizzare [ALTER database](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) per impostare la protezione delle transazioni su off.  
+    -   In [!INCLUDE[tsql](../includes/tsql-md.md)] : utilizzare [ALTER database](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) per impostare la protezione delle transazioni su off.  
   
 ### <a name="to-return-a-witness-to-a-mirroring-session"></a>Per restituire un server di controllo del mirroring a una sessione di mirroring  
   
@@ -137,7 +136,7 @@ ms.locfileid: "62779595"
   
     -   [Aggiungere un server di controllo del mirroring del database tramite l'autenticazione di Windows &#40;Transact-SQL&#41;](database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Mirroring del database ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [&#40;SQL Server di mirroring del database&#41;](database-mirroring/database-mirroring-sql-server.md)   

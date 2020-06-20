@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2eb63756a6ddf5e8a47f27f9f3d2f349c0bdf339
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea87e2de984107c5a0fda6eb2629ee5cfd197841
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806752"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934186"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Esempio: Impostazione del mirroring del database tramite certificati (Transact-SQL)
   In questo esempio vengono illustrati tutti i passaggi necessari per la creazione di una sessione di mirroring del database tramite l'autenticazione basata sui certificati. Negli esempi di questo argomento viene utilizzato [!INCLUDE[tsql](../../includes/tsql-md.md)]. A meno che la sicurezza della rete in uso non sia già garantita, è consigliabile utilizzare la crittografia per le connessioni per il mirroring del database.  
@@ -257,7 +256,7 @@ ms.locfileid: "62806752"
     ```  
   
     > [!NOTE]  
-    >  Se si prevede di eseguire in modalità a protezione elevata con failover automatico, lasciare la sicurezza delle transazioni impostata su Full (impostazione predefinita) e aggiungere il server di controllo del mirroring non appena possibile dopo l'esecuzione della seconda istruzione set partner **'*`partner_server`*'** . Si osservi che è necessario configurare prima il server di controllo del mirroring per le connessioni in uscita e in ingresso.  
+    >  Se si prevede di eseguire in modalità a protezione elevata con failover automatico, lasciare la sicurezza delle transazioni impostata su Full (impostazione predefinita) e aggiungere il server di controllo del mirroring non appena possibile dopo l'esecuzione della seconda istruzione set partner **' *`partner_server`* '** . Si osservi che è necessario configurare prima il server di controllo del mirroring per le connessioni in uscita e in ingresso.  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
   
@@ -273,7 +272,7 @@ ms.locfileid: "62806752"
   
 -   [Risolvere i problemi relativi alla configurazione del mirroring del database &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Sicurezza del trasporto per il mirroring del database e Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [Specificare un indirizzo di rete del server &#40;il mirroring del database&#41;](specify-a-server-network-address-database-mirroring.md)   
  [&#40;SQL Server dell'endpoint del mirroring del database&#41;](the-database-mirroring-endpoint-sql-server.md)   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7af9e5b2-1b99-4eea-8a49-1129c0d46086
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b409d8d1597fa738aacf180c45dd3eb5af36cf1b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65201802047aad31bb64a612035b4ef610ff0463
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63242501"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065565"
 ---
 # <a name="flagvalue-property-clientsettingsgeneralflag-class"></a>Proprietà FlagValue (classe ClientSettingsGeneralFlag)
   Ottiene il valore del flag.  
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  Oggetto della [classe ClientSettingsGeneralFlag](clientsettingsgeneralflag-class.md) che rappresenta un flag generale per le impostazioni del server.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
@@ -45,7 +44,7 @@ object
   
 ## <a name="remarks"></a>Osservazioni  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [configurazione di protocolli client](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

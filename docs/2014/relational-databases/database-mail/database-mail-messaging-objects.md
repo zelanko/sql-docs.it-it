@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3657e45d18ac84ad737a016150692730f736b55f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d284d3ef1d0ac349dea95b1a6a134cb2429e6e4c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917704"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952456"
 ---
 # <a name="database-mail-messaging-objects"></a>Oggetti di messaggistica di Posta elettronica database
   Il database **msdb** funge da host della posta elettronica. Questo database include le stored procedure e gli oggetti di messaggistica per Posta elettronica database. In Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è disponibile la Configurazione guidata posta elettronica database che consente di abilitare questo componente, creare e gestire profili e account e configurare le opzioni di Posta elettronica database.  
@@ -49,7 +48,7 @@ ms.locfileid: "62917704"
   
 
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Posta elettronica database](database-mail.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   

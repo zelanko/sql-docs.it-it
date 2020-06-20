@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eced622903a0d68369f28d19ff521d99bcedbdc3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2e7bc073e65e5e21d2d3fb199103cc2be4cc2913
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874511"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953858"
 ---
 # <a name="performance-of-clr-integration"></a>Prestazioni dell'integrazione con CLR
   In questo argomento vengono illustrate alcune delle scelte di progettazione che migliorano le prestazioni dell' [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integrazione con il [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework Common Language Runtime (CLR).  
@@ -57,7 +56,7 @@ ms.locfileid: "62874511"
 ### <a name="clr-vs-extended-stored-procedures"></a>Confronto tra CLR e stored procedure estese  
  Le API Microsoft.SqlServer.Server che consentono alle procedure gestite di inviare di nuovo i set di risultati al client offrono prestazioni migliori rispetto alle API ODS (Open Data Services) utilizzate dalle stored procedure estese. Inoltre, le API System.Data.SqlServer supportano tipi di dati come `xml`, `varchar(max)`, `nvarchar(max)`e `varbinary(max)`, introdotti in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], mentre le API ODS non sono state estese per supportare i nuovi tipi di dati.  
   
- Con il codice gestito, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gestisce l'utilizzo di risorse come la memoria, i thread e la sincronizzazione. Questo accade in quanto le API gestite che espongono queste risorse vengono implementate nello strumento di gestione delle risorse di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Viceversa, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non dispone di una vista o di un controllo sull'utilizzo delle risorse della stored procedure estesa. Se, ad esempio, un stored procedure esteso utilizza una quantità eccessiva di risorse di CPU o di memoria, non è possibile rilevare o controllare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]questa operazione con. Il codice gestito consente tuttavia a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di rilevare che un determinato thread non è stato prodotto per un lungo periodo di tempo e quindi imporre l'esecuzione dell'attività in modo da poter pianificare altro lavoro. Di conseguenza, l'utilizzo di codice gestito offre una maggiore scalabilità e un miglior utilizzo delle risorse di sistema.  
+ Con il codice gestito, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gestisce l'utilizzo di risorse come la memoria, i thread e la sincronizzazione. Questo accade in quanto le API gestite che espongono queste risorse vengono implementate nello strumento di gestione delle risorse di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Viceversa, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non dispone di una vista o di un controllo sull'utilizzo delle risorse della stored procedure estesa. Se, ad esempio, un stored procedure esteso utilizza una quantità eccessiva di risorse di CPU o di memoria, non è possibile rilevare o controllare questa operazione con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Il codice gestito consente tuttavia a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di rilevare che un determinato thread non è stato prodotto per un lungo periodo di tempo e quindi imporre l'esecuzione dell'attività in modo da poter pianificare altro lavoro. Di conseguenza, l'utilizzo di codice gestito offre una maggiore scalabilità e un miglior utilizzo delle risorse di sistema.  
   
  Il codice gestito può determinare un overhead aggiuntivo, necessario per gestire l'ambiente di esecuzione ed eseguire controlli di sicurezza. Ciò avviene, ad esempio, qualora siano necessarie l'esecuzione all'interno di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e numerose transizioni da codice gestito a codice nativo. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] richiede infatti l'esecuzione di una manutenzione aggiuntiva sulle impostazioni specifiche del thread se si passa dal codice nativo a un altro tipo di codice, quindi si utilizza di nuovo il codice nativo. Di conseguenza, le stored procedure estese possono offrire prestazioni nettamente superiori rispetto al codice gestito in esecuzione all'interno di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nelle situazioni in cui le transizioni tra codice gestito e codice nativo sono frequenti.  
   
@@ -77,7 +76,7 @@ ms.locfileid: "62874511"
 ### <a name="scalable-memory-usage"></a>Utilizzo della memoria scalabile  
  Per ottenere prestazioni e scalabilità soddisfacenti del processo di Garbage Collection gestito in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], evitare una singola allocazione di grandi dimensioni. Le allocazioni di dimensioni maggiori di 88 kilobyte (KB) vengono inserite nell'heap oggetti grandi che determina prestazioni e scalabilità nettamente inferiori rispetto ad allocazioni più piccole. Se ad esempio è necessario allocare una matrice multidimensionale di dimensioni elevate, è preferibile allocare una matrice di matrici (a dispersione).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Tipi CLR definiti dall'utente](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

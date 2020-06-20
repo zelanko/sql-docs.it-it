@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f5f30232a4f6d382af6e3a21f022b86cdf1a4fd4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20f54b913124cdaa8a7dfeebac01ba070cc37d88
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196614"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002644"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>Visualizzare le dipendenze di una tabella
   Le dipendenze di una tabella possono essere visualizzate in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -52,7 +51,7 @@ ms.locfileid: "68196614"
   
 2.  Fare clic con il pulsante destro del mouse su una tabella e quindi scegliere **Visualizza dipendenze**.  
   
-3.  Nella finestra di dialogo_\<>nome oggetto_ **dipendenze oggetto**selezionare **oggetti che dipendono** da _ \<nome oggetto>_ o **oggetti da cui** **depends**_\<dipende il nome dell'oggetto>_.  
+3.  Nella finestra di dialogo **dipendenze oggetto** _\<object name>_ selezionare **oggetti che dipendono** da _\<object name>_ o **oggetti da cui** _\<object name>_ **dipende**.  
   
 4.  Selezionare un oggetto nella griglia **Dipendenze** . Il tipo di oggetto, ad esempio "Trigger" o "Stored procedure", viene visualizzato nella casella **Tipo** .  
   

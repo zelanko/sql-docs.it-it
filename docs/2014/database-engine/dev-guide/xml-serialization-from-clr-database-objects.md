@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ac84339b-9384-4710-bebc-01607864a344
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 646d15dc3091323e6e7db2af757640122fb2f0fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee93ee4b7bf9cba3f11b329244d4523636cb7704
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779779"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933142"
 ---
 # <a name="xml-serialization-from-clr-database-objects"></a>Serializzazione XML da oggetti di database CLR
   La serializzazione XML è necessaria in due scenari:  
@@ -29,9 +28,9 @@ ms.locfileid: "62779779"
   
 -   Conversione in XML di un tipo definito dall'utente.  
   
- Se la serializzazione XML viene eseguita richiamando la classe `XmlSerializer` di solito viene generato un assembly di serializzazione aggiuntivo che viene sottoposto a overload nel progetto con l'assembly di origine. Tuttavia, per motivi di sicurezza, questo overload è disabilitato in CLR. Pertanto, per chiamare un servizio Web o per eseguire la conversione da UDT a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]XML all'interno di, è necessario creare manualmente l'assembly usando uno strumento denominato **SGen. exe** fornito con la .NET Framework che genera gli assembly di serializzazione necessari. Quando si richiama `XmlSerializer`, l'assembly di serializzazione deve essere creato manualmente tramite la seguente procedura:  
+ Se la serializzazione XML viene eseguita richiamando la classe `XmlSerializer` di solito viene generato un assembly di serializzazione aggiuntivo che viene sottoposto a overload nel progetto con l'assembly di origine. Tuttavia, per motivi di sicurezza, questo overload è disabilitato in CLR. Pertanto, per chiamare un servizio Web o per eseguire la conversione da UDT a XML all'interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario creare manualmente l'assembly usando uno strumento denominato **Sgen.exe** fornito con l'.NET Framework che genera gli assembly di serializzazione necessari. Quando si richiama `XmlSerializer`, l'assembly di serializzazione deve essere creato manualmente tramite la seguente procedura:  
   
-1.  Eseguire lo strumento **SGen. exe** fornito con .NET Framework SDK per creare l'assembly contenente i serializzatori XML per l'assembly di origine.  
+1.  Eseguire lo strumento **Sgen.exe** fornito con .NET Framework SDK per creare l'assembly contenente i serializzatori XML per l'assembly di origine.  
   
 2.  Utilizzando l'istruzione `CREATE ASSEMBLY`, registrare in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'assembly generato.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "62779779"
   
  Per informazioni su tipi di dati che non sono supportati da XMLSerializer, vedere Supporto dell'associazione a XML Schema nella documentazione di .NET Framework.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Accesso ai dati da oggetti di database CLR](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)  
   

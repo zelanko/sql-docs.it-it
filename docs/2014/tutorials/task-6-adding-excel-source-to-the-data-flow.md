@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0209055e-cb6b-4a07-909e-836596727a2c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: eff79fb144c2bbc4d31a21b2dc263c4ccb087104
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0bbb134106fde9607bd51bc84bcd49969aec19ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177239"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064730"
 ---
 # <a name="task-6-adding-excel-source-to-the-data-flow"></a>Attività 6: Aggiunta dell'origine Excel al flusso di dati
   In questa attività viene aggiunta un'origine Excel al flusso di dati per leggere i dati del fornitore dal file di Excel di origine. Tramite l'origine Excel vengono estratti dati da fogli di lavoro o intervalli in cartelle di lavoro di Microsoft Excel. Per ulteriori informazioni, vedere l'argomento [origine Excel](../integration-services/data-flow/excel-source.md) .
@@ -30,7 +29,7 @@ ms.locfileid: "78177239"
 
 5.  Nella finestra di dialogo **Editor origine Excel** fare clic su **nuovo** per creare una connessione Excel.
 
-6.  Nella finestra di dialogo **gestione connessione Excel** fare clic su **Sfoglia**, quindi selezionare il file **Suppliers. xls** nella cartella **EIM tutorial** . Verificare che **Microsoft excel 97-2003** sia selezionato nella casella **versione di Excel** , quindi fare clic su **OK**.
+6.  Nella finestra di dialogo **gestione connessione Excel** fare clic su **Sfoglia**, quindi selezionare il file **Suppliers.xls** nella cartella **EIM tutorial** . Verificare che **Microsoft excel 97-2003** sia selezionato nella casella **versione di Excel** , quindi fare clic su **OK**.
 
      ![Finestra di dialogo Gestione connessioni di Excel](../../2014/tutorials/media/et-addingexcelsourcetothedataflow-01.jpg "Finestra di dialogo Gestione connessioni di Excel")
 

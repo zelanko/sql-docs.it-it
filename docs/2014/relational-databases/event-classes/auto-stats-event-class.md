@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 354c2e39716dc0cfa215e4392945bf9aa5899da0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e34f46200f12861183c4da27863f47f19974dbf1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012366"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030736"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats - classe di evento
   La classe di evento **Auto Stats** indica che si è verificato un evento di aggiornamento automatico delle statistiche di indice e di colonna.  
@@ -32,9 +31,9 @@ ms.locfileid: "63012366"
 |**ClientProcessID**|**int**|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se tramite il client viene indicato l'ID del processo client.|9|Sì|  
 |**DatabaseID**|**int**|ID del database specificato nell'istruzione USE *database* oppure ID del database predefinito, se per una determinata istanza non viene eseguita un'istruzione USE *database* . [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |**DatabaseName**|**nvarchar**|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Sì|  
-|**Durata**|**bigint**|Durata dell'evento in microsecondi.|13|Sì|  
+|**Duration**|**bigint**|Durata dell'evento in microsecondi.|13|Sì|  
 |**EndTime**|**datetime**|Ora di fine dell'evento.|15|Sì|  
-|**Error (Errore) (Error (Errore)e)**|**int**|Numero di errore di un evento specifico. Corrisponde spesso al numero di errore archiviato nella vista del catalogo **sys.messages** .|31|Sì|  
+|**Errore**|**int**|Numero di errore di un evento specifico. Corrisponde spesso al numero di errore archiviato nella vista del catalogo **sys.messages** .|31|Sì|  
 |**EventClass**|**int**|Tipo di evento = 58.|27|No|  
 |**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
 |**EventSubClass**|**int**|Tipo di sottoclasse di evento:<br /><br /> 1: statistiche create/aggiornate in modo sincrono; **TextData** colonna indica le statistiche e se sono state create o aggiornate.<br /><br /> 2: aggiornamento statistiche asincrono; processo in coda.<br /><br /> 3: aggiornamento statistiche asincrono; processo in avvio.<br /><br /> 4: aggiornamento statistiche asincrono; processo completato.|21|Sì|  
@@ -54,12 +53,12 @@ ms.locfileid: "63012366"
 |**SessionLoginName**|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se, ad esempio, si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, **SessionLoginName** indica Login1 e **LoginName** indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
 |**SPID**|**int**|ID della sessione in cui si è verificato l'evento.|12|Sì|  
 |**StartTime**|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  
-|**Operazione completata**|**int**|0 = errore.<br /><br /> 1 = esito positivo.<br /><br /> 2 = ignorato a causa di limitazione del server (MSDE).|23|Sì|  
+|**Success**|**int**|0 = errore.<br /><br /> 1 = esito positivo.<br /><br /> 2 = ignorato a causa di limitazione del server (MSDE).|23|Sì|  
 |**TextData**|**ntext**|Il contenuto della colonna dipende dal fatto che le statistiche vengano aggiornate in modo sincrono (**EventSubClass** 1) o asincrono (**EventSubClass** 2, 3 o 4):<br /><br /> 1: elenca le statistiche aggiornate/create<br /><br /> 2, 3 o 4: NULL; la colonna **IndexID** viene popolata con l'ID dell'indice/statistiche per le statistiche aggiornate.|1|Sì|  
 |**TransactionID**|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
-|**Type**|**int**|Tipo di processo.|57|Sì|  
+|**Tipo**|**int**|Tipo di processo.|57|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

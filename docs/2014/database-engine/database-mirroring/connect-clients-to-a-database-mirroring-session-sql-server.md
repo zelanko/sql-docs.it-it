@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2bae6a0354fc7d24471aa7cb7877fe066421d8b5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755327"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934412"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Connessione di client a una sessione di mirroring del database (SQL Server)
   Per connettersi a una sessione di mirroring del database un client può utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client o il provider di dati .NET Framework per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se configurati per un database [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , questi provider di accesso ai dati supportano entrambi completamente il mirroring del database. Per informazioni relative alle considerazioni di programmazione per l'utilizzo di un database con mirroring, vedere [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). È inoltre necessario che l'istanza del server principale corrente sia disponibile e che l'account di accesso del client sia stato creato nell'istanza del server. Per altre informazioni, vedere [Risolvere i problemi relativi agli utenti isolati &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Le connessioni client a una sessione di mirroring del database non richiedono l'istanza del server di controllo del mirroring, se ne esiste una.  
@@ -85,7 +84,7 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Attributo Server  
  La stringa di connessione deve includere un attributo `Server` indicante il nome partner iniziale, che dovrebbe identificare l'istanza del server principale corrente.  
   
- Il modo più semplice per identificare l'istanza del server è specificarne il nome, *<server_name>*[**\\** _<SQL_Server_instance_name>_]. Ad esempio:  
+ Il modo più semplice per identificare l'istanza del server è specificarne il nome, *<server_name>*[ **\\** _<SQL_Server_instance_name>_]. Ad esempio:  
   
  `Server=Partner_A;`  
   
@@ -98,7 +97,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  Una query SQL Server Browser è necessaria se la stringa di connessione specifica il nome dell'istanza denominata e non la porta.  
   
- Per specificare l'indirizzo IP e la porta, `Server` l'attributo assume il formato seguente `Server=` , *<ip_address porta>* `,` * \<>*, ad esempio:  
+ Per specificare l'indirizzo IP e la porta, l' `Server` attributo assume il formato seguente, `Server=` *<ip_address>* `,` *\<port>* , ad esempio:  
   
 ```  
 Server=123.34.45.56,4724;   
@@ -118,7 +117,7 @@ Server=123.34.45.56,4724;
 >  Le informazioni sull'autenticazione vengono omesse dalla stringa.  
   
 > [!IMPORTANT]  
->  La creazione di un bundle del `Server` prefisso del`Server=tcp:`protocollo con l'attributo (*\<ServerName>*) non è compatibile con l'attributo di **rete** e la specifica del protocollo in entrambe le posizioni genererà probabilmente un errore. Pertanto, è consigliabile che una stringa di connessione specifichi il protocollo usando l'attributo di **rete** e specifichi solo il nome del `Server` server nell'`"Network=dbmssocn; Server=`attributo (*\<ServerName>* `"`).  
+>  La creazione di un bundle del prefisso del protocollo con l' `Server` attributo ( `Server=tcp:` *\<servername>* ) non è compatibile con l'attributo di **rete** e la specifica del protocollo in entrambe le posizioni genererà probabilmente un errore. Pertanto, è consigliabile che una stringa di connessione specifichi il protocollo usando l'attributo di **rete** e specifichi solo il nome del server nell' `Server` attributo ( `"Network=dbmssocn; Server=` *\<servername>* `"` ).  
   
 #### <a name="failover-partner-attribute"></a>Attributo Failover Partner  
  Oltre al nome partner iniziale, il client può anche specificare il nome partner di failover, che identifica l'istanza del server mirror corrente. Il partner di failover viene specificato dalla parola chiave dell'attributo Failover Partner. La parola chiave per questo attributo dipende dall'API utilizzata. Nella seguente tabella vengono elencate le parole chiave:  
@@ -129,7 +128,7 @@ Server=123.34.45.56,4724;
 |Driver ODBC|`Failover_Partner`|  
 |ADO (ActiveX Data Objects)|`Failover Partner`|  
   
- Il modo più semplice per identificare l'istanza del server è tramite il relativo nome di sistema, *<server_name>*[**\\** _<SQL_Server_instance_name>_].  
+ Il modo più semplice per identificare l'istanza del server è tramite il relativo nome di sistema, *<server_name>*[ **\\** _<SQL_Server_instance_name>_].  
   
  In alternativa, è possibile specificare l'indirizzo IP e il numero di porta nell'attributo `Failover Partner`. Se il tentativo di connessione iniziale non riesce durante la prima connessione al database, il tentativo di connessione al partner di failover non dovrà più utilizzare necessariamente il DNS e SQL Server Browser. Una volta stabilita una connessione, il nome partner di failover sarà sovrascritto dal nome partner di failover. In questo modo, se si verifica un failover, le connessioni reindirizzate richiederanno il DNS e SQL Server Browser.  
   
@@ -237,11 +236,11 @@ Server=123.34.45.56,4724;
 |Configurazione|Server principale|Server mirror|Comportamento al tentativo di connessione specificando Partner_A e Partner_B|  
 |-------------------|----------------------|-------------------|------------------------------------------------------------------------------|  
 |Configurazione di mirroring originale.|Partner_A|Partner_B|Partner_A viene memorizzato nella cache come nome partner iniziale. Il client riesce a connettersi a Partner_A. Il client scarica il nome del server mirror, Partner_B, e lo memorizza nella cache, ignorando il nome partner di failover specificato dal client.|  
-|In Partner_A si verifica un errore hardware, che provoca il failover, disconnettendo i client.|Partner_B|none|Partner_A è ancora memorizzato nella cache come nome partner iniziale, ma il nome partner di failover specificato dal client, Partner_B, consente al client di connettersi al server principale corrente.|  
+|In Partner_A si verifica un errore hardware, che provoca il failover, disconnettendo i client.|Partner_B|Nessuno|Partner_A è ancora memorizzato nella cache come nome partner iniziale, ma il nome partner di failover specificato dal client, Partner_B, consente al client di connettersi al server principale corrente.|  
 |L'amministratore del database arresta il mirroring, disconnettendo i client, sostituisce Partner_A con Partner_C e riavvia il mirroring.|Partner_B|Partner_C|Il client tenta di connettersi senza successo a Partner_A. Il client tenta quindi di connettersi a Partner_B, ovvero il server principale corrente, e la connessione ha esito positivo. Il provider di accesso ai dati scarica il nome del server mirror corrente, Partner_C, e lo memorizza nella cache come nome partner di failover corrente.|  
 |Viene eseguito il failover manuale del servizio su Partner_C, disconnettendo i client.|Partner_C|Partner_B|Il client tenta di connettersi inizialmente a Partner_A, quindi a Partner_B. Entrambi i nomi generano errori e infine si verifica il timeout della richiesta di connessione, la quale avrà esito negativo.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [&#40;SQL Server di mirroring del database&#41;](database-mirroring-sql-server.md)   
  [Possibili errori durante il mirroring del database](possible-failures-during-database-mirroring.md)  
   

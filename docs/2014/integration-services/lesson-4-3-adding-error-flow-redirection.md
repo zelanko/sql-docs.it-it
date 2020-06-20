@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3dd2fd95b1ad2d239d055b2b49b991860a58d338
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c2d7be5fa95e92b97e76e28647f4406ee356c5f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891403"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968251"
 ---
 # <a name="step-3-adding-error-flow-redirection"></a>Passaggio 3: Aggiunta del reindirizzamento del flusso degli errori
   Come dimostrato nell'attività precedente, la trasformazione Lookup Currency Key non crea una corrispondenza quando tenta di elaborare il file flat di esempio danneggiato che ha generato un errore. Dato che la trasformazione utilizza le impostazioni predefinite per l'output degli errori, qualsiasi errore determina l'esito negativo della trasformazione. Quando la trasformazione viene interrotta, si interrompe anche il resto del pacchetto.  
@@ -24,7 +23,7 @@ ms.locfileid: "62891403"
   
  In questa attività si configurerà la trasformazione Lookup Currency Key in modo che le righe con esito negativo vengano reindirizzate all'output degli errori. Nel ramo del flusso di dati relativo agli errori, queste righe verranno scritte in un file.  
   
- Per impostazione predefinita, le due colonne supplementari [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in un output degli errori, **ErrorCode** e **ErrorColumn**, contengono solo codici numerici che rappresentano un numero di errore e l'ID della colonna in cui si è verificato l'errore. Questi valori numerici possono avere un'utilità limitata senza la descrizione dell'errore corrispondente.  
+ Per impostazione predefinita, le due colonne supplementari in un [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] output degli errori, **ErrorCode** e **ErrorColumn**, contengono solo codici numerici che rappresentano un numero di errore e l'ID della colonna in cui si è verificato l'errore. Questi valori numerici possono avere un'utilità limitata senza la descrizione dell'errore corrispondente.  
   
  Per aumentare l'utilità dell'output degli errori, prima che il pacchetto scriva le righe con esito negativo nel file è possibile utilizzare un componente script per accedere all'API di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e ottenere una descrizione dell'errore.  
   
@@ -48,7 +47,7 @@ ms.locfileid: "62891403"
   
 8.  Nella pagina **Input e output** espandere **Output 0**, fare clic su **Colonne di output**e fare clic su **Aggiungi colonna**.  
   
-9. Nella `Name` proprietà digitare **ErrorDescription** e impostare la `DataType` proprietà su **stringa Unicode [DT_WSTR]**.  
+9. Nella `Name` Proprietà digitare **ErrorDescription** e impostare la `DataType` proprietà su **stringa Unicode [DT_WSTR]**.  
   
 10. Nella pagina **script** verificare che la `LocaleID` proprietà sia impostata su **inglese (Stati Uniti.**  
   

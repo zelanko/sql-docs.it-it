@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1883e88b03b205a2fb272a7cb890c79c607b29fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 995c3a621e6de5d1b878f28c7c0fffaae3311bd2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232298"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953876"
 ---
 # <a name="creating-an-assembly"></a>Creazione di un assembly
-  Gli oggetti di database gestiti, ad esempio le stored procedure o i trigger, vengono compilati e quindi distribuiti in unità denominate assembly. Gli assembly DLL gestiti devono essere registrati [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] in prima di poter utilizzare la funzionalità fornita dall'assembly. Per registrare l'assembly in un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], utilizzare l'istruzione CREATE ASSEMBLY. In questo argomento viene descritto come registrare un assembly in un database tramite l'istruzione CREATE ASSEMBLY e specificare le impostazioni di sicurezza per l'assembly.  
+  Gli oggetti di database gestiti, ad esempio le stored procedure o i trigger, vengono compilati e quindi distribuiti in unità denominate assembly. Gli assembly DLL gestiti devono essere registrati in [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] prima di poter utilizzare la funzionalità fornita dall'assembly. Per registrare l'assembly in un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], utilizzare l'istruzione CREATE ASSEMBLY. In questo argomento viene descritto come registrare un assembly in un database tramite l'istruzione CREATE ASSEMBLY e specificare le impostazioni di sicurezza per l'assembly.  
   
 ## <a name="the-create-assembly-statement"></a>Istruzione CREATE ASSEMBLY  
  L'istruzione CREATE ASSEMBLY viene utilizzata per creare un assembly in un database. Esempio:  
@@ -78,13 +77,13 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
 1.  L'assembly è firmato con nome sicuro o dispone di firma Authenticode con un certificato. Questo nome sicuro (o certificato) viene creato in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] come chiave asimmetrica (o certificato) e dispone di un account di accesso corrispondente con autorizzazione `EXTERNAL ACCESS ASSEMBLY` (per assembly di accesso esterni) o `UNSAFE ASSEMBLY` (per assembly non protetti).  
   
-2.  Il proprietario del database (DBO) `EXTERNAL ACCESS ASSEMBLY` dispone dell' `EXTERNAL ACCESS` autorizzazione (per `UNSAFE ASSEMBLY` gli assembly `UNSAFE` ) o (per gli assembly) e il database dispone della proprietà di `ON` [database TRUSTWORTHY](../../security/trustworthy-database-property.md) impostata su.  
+2.  Il proprietario del database (DBO) dispone dell' `EXTERNAL ACCESS ASSEMBLY` autorizzazione (per `EXTERNAL ACCESS` gli assembly) o `UNSAFE ASSEMBLY` (per `UNSAFE` gli assembly) e il database dispone della [proprietà di database TRUSTWORTHY](../../security/trustworthy-database-property.md) impostata su `ON` .  
   
  Le due condizioni elencate in precedenza vengono verificate in fase di caricamento dell'assembly (fase che include l'esecuzione). Per caricare l'assembly, è necessario che si verifichi almeno una delle due condizioni.  
   
- Si consiglia di non impostare la [Proprietà Trustworthy del database](../../security/trustworthy-database-property.md) in un database `ON` solo per l'esecuzione del codice Common Language Runtime (CLR) nel processo server. È invece consigliabile creare una chiave asimmetrica dal file di assembly nel database master. È quindi necessario creare un account di accesso con mapping alla chiave asimmetrica e concedere a tale account di accesso l'autorizzazione `EXTERNAL ACCESS ASSEMBLY` o `UNSAFE ASSEMBLY`.  
+ Si consiglia di non impostare la [Proprietà Trustworthy del database](../../security/trustworthy-database-property.md) in un database solo per l' `ON` esecuzione del codice Common Language Runtime (CLR) nel processo server. È invece consigliabile creare una chiave asimmetrica dal file di assembly nel database master. È quindi necessario creare un account di accesso con mapping alla chiave asimmetrica e concedere a tale account di accesso l'autorizzazione `EXTERNAL ACCESS ASSEMBLY` o `UNSAFE ASSEMBLY`.  
   
- Le istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] seguenti prima di eseguire l'istruzione CREATE assembly.  
+ Le [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzioni seguenti prima di eseguire l'istruzione CREATE assembly.  
   
 ```  
 USE master;   
@@ -107,7 +106,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll'
 WITH PERMISSION_SET = EXTERNAL_ACCESS;  
 ```  
   
- Le istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] seguenti prima di eseguire l'istruzione CREATE assembly.  
+ Le [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzioni seguenti prima di eseguire l'istruzione CREATE assembly.  
   
 ```  
 USE master;   

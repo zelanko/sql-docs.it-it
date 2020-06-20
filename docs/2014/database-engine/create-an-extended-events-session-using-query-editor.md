@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cba0e02b-b201-4863-bf1b-9164e68e5fa8
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4a541c86029be9a438492a851c0eb16d18120f75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 648370ecdd2938b6fb425955dc02da8960f884c2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065025"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934532"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>Creare una sessione Eventi estesi tramite l'editor di query
   È possibile creare una sessione Eventi estesi tramite l'editor di query o è possibile creare una sessione in Esplora oggetti. In Esplora oggetti, gli eventi estesi forniscono due interfacce utente che è possibile usare per creare, modificare e visualizzare i dati della sessione eventi, una procedura guidata che guida l'utente durante il processo di creazione della sessione eventi e una nuova interfaccia utente della sessione che fornisce opzioni di configurazione più avanzate. È possibile creare sessioni di eventi estesi per la diagnosi della traccia di SQL Server, che consente di risolvere problemi come i seguenti:  
@@ -218,7 +217,7 @@ ADD TARGET package0.asynchronous_file_target
    (SET filename = 'c:\temp\xelog.xel', metadatafile = 'c:\temp\xelog.xem')  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [CREARE una sessione eventi &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
  [SQL Server destinazioni degli eventi estesi](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [Pacchetti degli eventi estesi di SQL Server](../relational-databases/extended-events/sql-server-extended-events-packages.md)  

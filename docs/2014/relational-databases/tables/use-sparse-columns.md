@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3068ac7a3094605bb809ac84c63766b64fda486
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196665"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002901"
 ---
 # <a name="use-sparse-columns"></a>Utilizzo di colonne di tipo sparse
   Le colonne di tipo sparse sono colonne comuni che dispongono di archiviazione ottimizzata per i valori Null. Tali colonne consentono di ridurre i requisiti di spazio per i valori Null aumentando tuttavia l'overhead per il recupero dei valori non Null. È consigliabile utilizzare colonne di tipo sparse quando la quantità di spazio risparmiata è compresa almeno tra il 20% e il 40%. Le colonne di tipo sparse e i set di colonne vengono definiti utilizzando l'istruzione [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) o [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) .  
@@ -166,7 +165,7 @@ ms.locfileid: "68196665"
   
      La replica di tipo merge non supporta le colonne di tipo sparse né i set di colonne.  
   
--   Rilevamento modifiche  
+-   Change tracking  
   
      Il rilevamento delle modifiche supporta le colonne di tipo sparse e i set di colonne. Quando un set di colonne viene aggiornato in una tabella, il rilevamento delle modifiche considera questa operazione un aggiornamento all'intera riga. Non è disponibile alcun rilevamento delle modifiche dettagliato per ottenere il set esatto di colonne di tipo sparse aggiornate mediante l'aggiornamento del set di colonne. Se le colonne di tipo sparse vengono aggiornate in modo esplicito mediante un'istruzione DML, il rilevamento delle modifiche su tali colonne funzionerà nel modo usuale e verrà identificato il set esatto delle colonne modificate.  
   
@@ -231,7 +230,7 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `1      Tire Spec 1  AXZZ217                  27`  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Usare set di colonne](../tables/use-column-sets.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
  [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   

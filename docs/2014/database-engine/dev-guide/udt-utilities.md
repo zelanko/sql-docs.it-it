@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f13445faaef35ad0005666ac1b2fc2b8f95df425
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8217f3571c7ec285d10e04d1c289f1a4963ee384
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637725"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933242"
 ---
 # <a name="udt-utilities"></a>UDT Utilities
   L'esempio UDT Utilities include una serie di funzioni di utilità, quali funzioni per l'esposizione dei metadati dell'assembly a Transact-SQL, funzioni di flusso di esempio con valori di tabella per la restituzione dei tipi di un assembly sotto forma di tabella e funzioni per la restituzione di campi, metodi e proprietà di un tipo di dati definito dall'utente. Le tecnologie illustrate comprendono funzioni di flusso con valori di tabella, API di reflection .NET Framework e il richiamo di funzioni con valori di tabella da Transact-SQL.  

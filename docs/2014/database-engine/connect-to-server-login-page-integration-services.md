@@ -12,16 +12,15 @@ f1_keywords:
 ms.assetid: 402c2de4-f4ea-40b0-909f-3ddf3bd59950
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 53a9793fc2a8770c8d926c945ba31a335bdfed3f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f6ead7090e0ffc3efaa3fbf979d4012d2a43388
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808732"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934623"
 ---
 # <a name="connect-to-server-login-page-integration-services"></a>Connetti al server (pagina Nome account di accesso) - Integration Services
-  Utilizzare questa scheda per visualizzare o specificare le opzioni seguenti per la connessione [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]a.  
+  Utilizzare questa scheda per visualizzare o specificare le opzioni seguenti per la connessione a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
 ## <a name="options"></a>Opzioni  
  **Tipo di server**  
@@ -31,7 +30,7 @@ ms.locfileid: "62808732"
  Consente di selezionare il server a cui connettersi. Per impostazione predefinita verrà visualizzata l'ultima istanza del server a cui è stata effettuata la connessione.  
   
 > [!NOTE]  
->  Non usare * \<ServerName>* \\ * \<NomeIstanza>*, perché [!INCLUDE[ssIS](../includes/ssis-md.md)] non supporta più istanze in un computer.  
+>  Non usare *\<servername>* \\ *\<instancename>* , perché non [!INCLUDE[ssIS](../includes/ssis-md.md)] supporta più istanze in un computer.  
   
  **autenticazione**  
  Solo l'autenticazione di [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows è disponibile per [!INCLUDE[ssIS](../includes/ssis-md.md)]. Tale modalità consente di connettersi tramite un account utente di Windows.  

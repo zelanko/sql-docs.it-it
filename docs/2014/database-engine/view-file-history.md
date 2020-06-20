@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9d80d4ea-a0f6-4a79-885d-79143ca09c00
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1060520a9c1fc6b5db20d1cca5e8c2d19cbd429a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e766b8fbea0aa1e7e1e804474cd8dfa9be92832
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62773297"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927552"
 ---
 # <a name="view-file-history"></a>Visualizzazione della cronologia dei file
   È possibile utilizzare il comando **cronologia** per visualizzare la cronologia delle versioni dei file inclusi nel controllo del codice sorgente. In questa cronologia sono incluse la data e l'ora di aggiunta o archiviazione del file nel controllo del codice sorgente.  
@@ -45,7 +44,7 @@ ms.locfileid: "62773297"
   
  Per informazioni su come eseguire queste attività, fare clic sul **pulsante?** nella finestra **di dialogo Cronologia file** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Impostare e recuperare le informazioni sulla versione](../../2014/database-engine/set-and-retrieve-version-information.md)   
  [Visualizza cronologia progetto](../../2014/database-engine/view-project-history.md)   
  [Visualizza stato file](../../2014/database-engine/view-file-status.md)   

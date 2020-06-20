@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 34130ac1-0106-4766-b324-acb0b7bb6f6e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b679eac51bf6fd51d10a88816017f2b767a69041
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1bf8964099bf9b1f60560d2330f35a829d8eec62
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204636"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057941"
 ---
 # <a name="summarize-or-aggregate-values-using-custom-expressions-visual-database-tools"></a>Riepilogo o aggregazione di valori mediante l'utilizzo di espressioni personalizzate (Visual Database Tools)
   Oltre a utilizzare le funzioni di aggregazione per raggruppare i dati, è possibile creare espressioni personalizzate che producono valori aggregati. È possibile utilizzare espressioni personalizzate al posto di funzioni di aggregazione in qualsiasi punto di una query di aggregazione.  

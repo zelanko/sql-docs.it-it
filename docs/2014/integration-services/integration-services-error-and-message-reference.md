@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a809aa628b90d73bed6eecd2d23cdec4dff6aea
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892659"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968281"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Guida di riferimento ai messaggi e agli errori di Integration Services
   Nelle tabelle seguenti vengono riportati gli errori, gli avvisi e i messaggi informativi predefiniti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , elencati in ordine numerico crescente all'interno di ciascuna categoria. Vengono inoltre indicati i codici numerici e nomi simbolici corrispondenti. Ognuno degli errori è definito come campo nella classe <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> nello spazio dei nomi <xref:Microsoft.SqlServer.Dts.Runtime> .  
@@ -1992,7 +1991,7 @@ ms.locfileid: "62892659"
 |0xC02092B6|-1071607114|DTS_E_USEBINARYFORMATREQUIRESANSIFILE|La proprietà personalizzata "%1" di %2 può essere utilizzata solo con file ANSI.|  
 |0xC02092B7|-1071607113|DTS_E_USEBINARYFORMATREQUIRESBYTES|La proprietà personalizzata "%1" di %2 può essere utilizzata solo con DT_BYTES.|  
 |0xC0209302|-1071607038|DTS_E_OLEDB_NOPROVIDER_ERROR|Codice di errore SSIS DTS_E_OLEDB_NOPROVIDER_ERROR.  Il provider OLE DB %2 necessario non è registrato. Codice errore: 0x%1!8.8X!.|  
-|0xC0209303|-1071607037|DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR|Codice di errore SSIS DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR.  Il provider OLE DB %2 necessario non è registrato. È possibile che non siano disponibili provider a 64 bit.  Codice di errore: 0x%1!8.8X!.|  
+|0xC0209303|-1071607037|DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR|Codice di errore SSIS DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR.  Il provider OLE DB %2 necessario non è registrato. È possibile che non siano disponibili provider a 64 bit.  Codice errore: 0x%1!8.8X!.|  
 |0xC0209306|-1071607034|DTS_E_MULTICACHECOLMAPPINGS|È stato eseguito il mapping della colonna della cache "%1" a più colonne. Rimuovere i mapping duplicati della colonna.|  
 |0xC0209307|-1071607033|DTS_E_COLNOTMAPPEDTOCACHECOL|Non è stato eseguito il mapping di %1 a una colonna della cache valida.|  
 |0xC0209308|-1071607032|DTS_E_CACHECOLDATATYPEINCOMPAT|Impossibile eseguire il mapping della colonna di input "%1" e della colonna della cache "%2" perché i tipi di dati non corrispondono.|  

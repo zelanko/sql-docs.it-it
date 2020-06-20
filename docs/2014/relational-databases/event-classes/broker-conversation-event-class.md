@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2d6f29eba93e7841d2d64db57266d8f2ad859377
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f488f28f210826613b9fa3e8029121ab1f858e1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62664367"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030635"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation - classe di evento
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento **Broker:Conversation** per indicare lo stato di una conversazione di Service Broker.  
@@ -58,7 +57,7 @@ ms.locfileid: "62664367"
 |1|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]genera un evento **Send Message** quando [!INCLUDE[ssDE](../../includes/ssde-md.md)] esegue un'istruzione SEND.|  
 |2|END CONVERSATION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]genera un evento **end Conversation** quando [!INCLUDE[ssDE](../../includes/ssde-md.md)] esegue un'istruzione END CONVERSATION che non include la clausola with Error.|  
 |3|END CONVERSATION WITH ERROR|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]genera un evento **end Conversation with Error** quando [!INCLUDE[ssDE](../../includes/ssde-md.md)] esegue un'istruzione END CONVERSATION che include la clausola with Error.|  
-|4|Broker Initiated Error|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]genera un evento di **errore avviato** dal broker [!INCLUDE[ssSB](../../includes/sssb-md.md)] ogni volta che crea un messaggio di errore. Ad esempio, quando [!INCLUDE[ssSB](../../includes/sssb-md.md)] non può eseguire correttamente il routing di un messaggio per un dialogo, il broker crea un messaggio di errore per il dialogo e genera questo evento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non genera l'evento quando un'applicazione termina una conversazione con un errore.|  
+|4|Broker Initiated Error|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]genera un evento di **errore avviato dal broker** ogni volta che [!INCLUDE[ssSB](../../includes/sssb-md.md)] Crea un messaggio di errore. Ad esempio, quando [!INCLUDE[ssSB](../../includes/sssb-md.md)] non può eseguire correttamente il routing di un messaggio per un dialogo, il broker crea un messaggio di errore per il dialogo e genera questo evento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non genera l'evento quando un'applicazione termina una conversazione con un errore.|  
 |5|Terminate Dialog|[!INCLUDE[ssSB](../../includes/sssb-md.md)] ha terminato il dialogo. [!INCLUDE[ssSB](../../includes/sssb-md.md)] termina i dialoghi quando si verificano condizioni che ne impediscono la continuazione diverse da errori o dalla normale fine di una conversazione. Ad esempio, l'eliminazione di un servizio causa la terminazione di tutti i dialoghi di tale servizio da parte di [!INCLUDE[ssSB](../../includes/sssb-md.md)] .|  
 |6|Received Sequenced Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]genera una classe di evento **Received Sequenced Message** quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] riceve un messaggio contenente un numero di sequenza del messaggio. Tutti i tipi di messaggio definiti dall'utente sono messaggi in sequenza. [!INCLUDE[ssSB](../../includes/sssb-md.md)] genera un messaggio non in sequenza in due casi:<br /><br /> I messaggi di errore generati da [!INCLUDE[ssSB](../../includes/sssb-md.md)] non sono in sequenza.<br /><br /> È possibile che gli acknowledgement dei messaggi siano non in sequenza. Per motivi di efficienza, [!INCLUDE[ssSB](../../includes/sssb-md.md)] include qualsiasi acknowledgement disponibile come parte di un messaggio in sequenza. Se un'applicazione non invia un messaggio in sequenza all'endpoint remoto entro un determinato periodo di tempo, tuttavia, [!INCLUDE[ssSB](../../includes/sssb-md.md)] crea un messaggio non in sequenza per l'acknowledgement del messaggio.|  
 |7|Received END CONVERSATION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento Received END CONVERSATION quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] riceve un messaggio di fine dialogo dall'altro lato della conversazione.|  
@@ -66,10 +65,10 @@ ms.locfileid: "62664367"
 |9|Received Broker Error Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]genera un evento **Received Broker Error Message** quando [!INCLUDE[ssSB](../../includes/sssb-md.md)] riceve un messaggio di errore definito dal broker dall'altro lato della conversazione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non genera questo evento quando [!INCLUDE[ssSB](../../includes/sssb-md.md)] riceve un messaggio di errore generato da un'applicazione.<br /><br /> Se il database corrente contiene una route predefinita per un database di inoltro, ad esempio, [!INCLUDE[ssSB](../../includes/sssb-md.md)] esegue il routing di un messaggio con un nome di servizio sconosciuto al database di inoltro. Se il database di inoltro non è in grado di eseguire il routing del messaggio, l'istanza di Service Broker di quel database crea un messaggio di errore e lo restituisce al database corrente. Quando il database corrente riceve il messaggio generato dal broker dal database di inoltro, genera un evento **Received Broker Error Message** .|  
 |10|Received END CONVERSATION Ack|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]genera una classe di evento **Received END CONVERSATION Ack** quando l'altro lato di una conversazione riconosce una finestra di dialogo di fine o un messaggio di errore inviato da questo lato della conversazione.|  
 |11|BEGIN DIALOG|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]genera un evento **BEGIN DIALOG** quando il motore di database esegue un comando BEGIN DIALOG.|  
-|12|Dialog Created|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]genera un evento **Dialog created** quando [!INCLUDE[ssSB](../../includes/sssb-md.md)] crea un endpoint per una finestra di dialogo. [!INCLUDE[ssSB](../../includes/sssb-md.md)] crea un endpoint ogni volta che viene stabilito un nuovo dialogo, indipendentemente dal fatto che il database corrente sia l'iniziatore o la destinazione del dialogo.|  
+|12|Dialog Created|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]genera un evento **Dialog created** quando [!INCLUDE[ssSB](../../includes/sssb-md.md)] Crea un endpoint per una finestra di dialogo. [!INCLUDE[ssSB](../../includes/sssb-md.md)] crea un endpoint ogni volta che viene stabilito un nuovo dialogo, indipendentemente dal fatto che il database corrente sia l'iniziatore o la destinazione del dialogo.|  
 |13|END CONVERSATION WITH CLEANUP|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento END CONVERSATION WITH CLEANUP quando il [!INCLUDE[ssDE](../../includes/ssde-md.md)] esegue un'istruzione END CONVERSATION che include la clausola WITH CLEANUP.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

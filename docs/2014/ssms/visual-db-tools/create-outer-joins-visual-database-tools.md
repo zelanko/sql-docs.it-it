@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 18de47b1-f936-427d-b852-fe6d20334f71
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cd5c9a9cb2e40c7b0a235ff848c1f9a0025773a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2bf9d2d4332721f8c0e61e9838f11a40cbfe2850
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184316"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058142"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>Creazione di join esterni (Visual Database Tools)
   Per impostazione predefinita, in [Progettazione query e Progettazione viste](visual-database-tools.md) viene creato un inner join tra le tabelle. Le righe prive di corrispondenza nell'altra tabella vengono eliminate. Gli outer join restituiscono invece tutte le righe di almeno una delle tabelle o viste specificate nella clausola FROM, a condizione che tali righe soddisfino una delle condizioni di ricerca della clausola WHERE o HAVING. Se si desidera includere nel set di risultati le righe di dati che non hanno una corrispondenza nella tabella in join, sarà possibile creare un outer join.  
@@ -29,7 +28,7 @@ ms.locfileid: "63184316"
   
 1.  Creare un join, automaticamente o manualmente. Per informazioni dettagliate, vedere [Unione di tabelle in modo automatico &#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md) o [Unione di tabelle in modo manuale &#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md).  
   
-2.  Selezionare la linea di join nel riquadro diagramma, quindi scegliere **Seleziona tutte le righe da \<TableName>** dal menu **Progettazione query** , selezionando il comando che include la tabella di cui si desidera includere le righe aggiuntive.  
+2.  Selezionare la linea di join nel riquadro Diagramma e scegliere **Seleziona tutte le righe da**  dal menu **Progettazione query\<tablename>** . Il comando da scegliere è quello relativo alla tabella contenente le righe supplementari da inserire.  
   
     -   Scegliere la prima tabella per creare un left outer join.  
   
