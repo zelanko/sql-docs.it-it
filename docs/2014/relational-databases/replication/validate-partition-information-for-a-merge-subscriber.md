@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c059553e-df2c-4333-ba79-e8d6e2890c34
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3bada5fc49dc344510164260330699b60a3288cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3032ff13af69a0690e1f81f08f7b3fb17aae0ee1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255304"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047546"
 ---
 # <a name="validate-partition-information-for-a-merge-subscriber"></a>Convalida delle informazioni sulle partizioni per un Sottoscrittore di tipo merge
   Quando si definisce un filtro di riga con parametri per una pubblicazione di tipo merge, si utilizza una funzione che fa riferimento a informazioni sul Sottoscrittore, ad esempio il nome di accesso del Sottoscrittore. Per impostazione predefinita, le informazioni sul Sottoscrittore vengono convalidate dalla replica in base a tale funzione prima di ogni sincronizzazione e ogni volta che uno snapshot viene applicato al Sottoscrittore. Il processo di convalida garantisce il partizionamento corretto dei dati per ogni Sottoscrittore. Il comportamento di convalida è controllato dalla proprietà di pubblicazione **validate_subscriber_info**, che può essere modificata mediante [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) oppure nella pagina **Opzioni sottoscrizione** della finestra di dialogo **Proprietà pubblicazione**. Per ulteriori informazioni sulla modifica delle proprietà di pubblicazione, vedere [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
@@ -33,7 +32,7 @@ ms.locfileid: "63255304"
   
  Quando l'agente di merge convalida una partizione, oltre a convalidare la partizione rispetto ai valori restituiti dalle funzioni utilizzate nelle espressioni di filtro, controlla se lo snapshot è stato generato prima di modifiche che ne compromettono la validità, come operazioni di pulizia dei metadati o modifiche dello schema. Se uno snapshot partizionato è obsoleto, l'agente di merge restituirà un errore e sarà necessario rigenerare uno snapshot partizionato per il Sottoscrittore in base a uno snapshot regolare corrente.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Domande frequenti sull'amministrazione della replica](administration/frequently-asked-questions-for-replication-administrators.md)   
  [Procedure consigliate per l'amministrazione della replica](administration/best-practices-for-replication-administration.md)   
  [Reinizializza sottoscrizioni](reinitialize-subscriptions.md)   

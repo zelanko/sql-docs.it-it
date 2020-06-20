@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eaafa011f1b99ea90afce2902c877d0a25b9e6e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 018d5add95e5d0936f6055e1c6710b6a8ddabdab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63269887"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061469"
 ---
 # <a name="work-with-change-data-sql-server"></a>Utilizzare i dati delle modifiche (SQL Server)
   I dati delle modifiche vengono resi disponibili ai consumer della funzionalità Change Data Capture tramite funzioni con valori di tabella. Per tutte le query di queste funzioni sono necessari due parametri che definiscono l'intervallo di numeri di sequenza del file di log (LSN) idonei durante lo sviluppo del set di risultati restituito. Entrambi i valori LSN che rappresentano il limite inferiore e quello superiore dell'intervallo sono inclusi nell'intervallo stesso.  

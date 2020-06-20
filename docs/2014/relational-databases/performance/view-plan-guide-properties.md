@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b49b24db5dfa3c9b522247024e0cbb8dbd1a81d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: af29c66690a43f89106c1f77aca8c3a02eff2ba9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151267"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85069051"
 ---
 # <a name="view-plan-guide-properties"></a>Visualizzare le proprietà delle guide di piano
   È possibile visualizzare le proprietà delle guide di piano in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]  

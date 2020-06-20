@@ -25,22 +25,21 @@ helpviewer_keywords:
 ms.assetid: 9a18e92a-6cfb-4a14-993a-663a95aabb63
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ef143c3a23458e017067ebf0a2ad489bed149f75
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 96df35ea1b8d87aa8718a29b51c07ab5a427efc7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703598"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055156"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Mapping predefinito di elementi e attributi XSD a tabelle e colonne (SQLXML 4.0)
   Per impostazione predefinita, viene eseguito il mapping di un elemento di tipo complesso in uno schema XSD con annotazioni alla tabella (vista) con lo stesso nome nel database specificato e di un elemento o un attributo di tipo semplice alla colonna con lo stesso nome nella tabella.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per l'esecuzione di esempi SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-default-mapping"></a>R. Definizione del mapping predefinito  
- In questo esempio non viene specificata alcuna annotazione nello schema XSD. L'elemento ** \< Person. Contact>** è di tipo complesso e, pertanto, esegue il mapping per impostazione predefinita alla tabella Person. Contact del database AdventureWorks. Tutti gli attributi (ContactID, FirstName, LastName) dell'elemento ** \< Person. Contact>** sono di tipo semplice ed eseguono il mapping per impostazione predefinita alle colonne con gli stessi nomi nella tabella Person. Contact.  
+ In questo esempio non viene specificata alcuna annotazione nello schema XSD. L' **\<Person.Contact>** elemento è di tipo complesso e, pertanto, esegue il mapping per impostazione predefinita alla tabella Person. Contact del database AdventureWorks. Tutti gli attributi (ContactID, FirstName, LastName) dell' **\<Person.Contact>** elemento sono di tipo semplice ed eseguono il mapping per impostazione predefinita alle colonne con gli stessi nomi nella tabella Person. Contact.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -91,7 +90,7 @@ ms.locfileid: "82703598"
 ```  
   
 ### <a name="b-mapping-an-xml-element-to-a-database-column"></a>B. Mapping di un elemento XML a una colonna del database  
- Anche in questo esempio viene eseguito un mapping predefinito, in quanto non viene utilizzata alcuna annotazione. L'elemento ** \< Person. Contact>** è di tipo complesso e viene mappato alla tabella con lo stesso nome nel database. Gli elementi ** \< FirstName>** e ** \< LastName>** e l'attributo **EmployeeID** sono di tipo semplice e, pertanto, eseguono il mapping alle colonne con gli stessi nomi. L'unica differenza tra questo e l'esempio precedente consiste nel fatto che gli elementi vengono utilizzati per eseguire il mapping dei campi FirstName e LastName.  
+ Anche in questo esempio viene eseguito un mapping predefinito, in quanto non viene utilizzata alcuna annotazione. L' **\<Person.Contact>** elemento è di tipo complesso e viene mappato alla tabella con lo stesso nome nel database. Gli elementi **\<FirstName>** e e **\<LastName>** l'attributo **EmployeeID** sono di tipo semplice e, pertanto, eseguono il mapping alle colonne con gli stessi nomi. L'unica differenza tra questo e l'esempio precedente consiste nel fatto che gli elementi vengono utilizzati per eseguire il mapping dei campi FirstName e LastName.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -145,7 +144,7 @@ ms.locfileid: "82703598"
 ```  
   
 ### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>C. Mapping di un elemento XML a una colonna con tipo di dati XML  
- Anche in questo esempio viene eseguito un mapping predefinito, in quanto non viene utilizzata alcuna annotazione. L'elemento ** \<>di Production. ProductModel** è di tipo complesso e viene mappato alla tabella con lo stesso nome nel database. L'attributo **ProductModelID** è di tipo semplice e, pertanto, viene mappato alle colonne con gli stessi nomi. L'unica differenza tra questo e gli esempi precedenti consiste nel fatto che l'elemento ** \< instructions>** viene mappato a una colonna che utilizza il `xml` tipo di dati tramite il `xsd:anyType` tipo.  
+ Anche in questo esempio viene eseguito un mapping predefinito, in quanto non viene utilizzata alcuna annotazione. L' **\<Production.ProductModel>** elemento è di tipo complesso e viene mappato alla tabella con lo stesso nome nel database. L'attributo **ProductModelID** è di tipo semplice e, pertanto, viene mappato alle colonne con gli stessi nomi. L'unica differenza tra questo e gli esempi precedenti è che l' **\<Instructions>** elemento sta eseguendo il mapping a una colonna che utilizza il `xml` tipo di dati utilizzando il `xsd:anyType` tipo.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   

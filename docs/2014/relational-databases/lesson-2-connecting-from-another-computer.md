@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3fb5e3fa319259df5ba0da1d6234fedee9cb604
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144794"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025190"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lezione 2: Connessione da un altro computer
   Per una maggiore sicurezza non è possibile accedere al [!INCLUDE[ssDE](../includes/ssde-md.md)] di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer Edition, Express Edition ed Evaluation Edition da un altro computer al momento dell'installazione iniziale. In questa lezione vengono descritte le procedure per abilitare i protocolli, configurare le porte e configurare Windows Firewall per la connessione da altri computer.  
@@ -44,7 +43,7 @@ ms.locfileid: "63144794"
     > [!NOTE]  
     >  Possono essere disponibili entrambe le opzioni a 32 e 64 bit.  
   
-2.  In **Gestione configurazione SQL Server**espandere **SQL Server configurazione di rete**, quindi fare clic su **protocolli per** _ \<NomeIstanza>_.  
+2.  In **Gestione configurazione SQL Server** espandere **Configurazione di rete SQL Server**, quindi fare clic su **Protocolli per** _\<InstanceName>_.  
   
      L'istanza predefinita (un'istanza senza nome) è indicata come **MSSQLSERVER**. Se è stata installata un'istanza denominata, il nome fornito è elencato. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] viene installato come **SQLEXPRESS**, a meno che non sia stato specificato un nome diverso durante l'installazione.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "63144794"
  Per una maggiore sicurezza, in Windows Server 2008, [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] e Windows 7 è abilitato Windows Firewall. Se si desidera connettersi a questa istanza da un altro computer, è necessario aprire una porta di comunicazione nel firewall. L'istanza predefinita di [!INCLUDE[ssDE](../includes/ssde-md.md)] resta in attesa sulla porta 1433 e non è pertanto necessario configurare una porta fissa. Le istanze denominate, inclusa [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , restano tuttavia in attesa su porte dinamiche. Per aprire una porta nel firewall, è innanzitutto necessario configurare il [!INCLUDE[ssDE](../includes/ssde-md.md)] per l'attesa su una porta specifica nota come porta fissa o statica. In caso contrario, è possibile che il [!INCLUDE[ssDE](../includes/ssde-md.md)] resti in attesa su una porta diversa a ogni avvio. Per altre informazioni sui firewall e sulle impostazioni predefinite di Windows Firewall e per una descrizione delle porte TCP che interessano il motore di database, Analysis Services, Reporting Services e Integration Services, vedere [Configurare Windows Firewall per consentire l'accesso a SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 > [!NOTE]  
->  Le assegnazioni dei numeri di porta sono gestite da Internet Assigned Numbers [http://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844)Authority e sono elencate in. I numeri di porta devono essere assegnati da numeri da 49152 a 65535.  
+>  Le assegnazioni dei numeri di porta sono gestite da Internet Assigned Numbers Authority e sono elencate in [http://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844) . I numeri di porta devono essere assegnati da numeri da 49152 a 65535.  
   
 #### <a name="configure-sql-server-to-listen-on-a-specific-port"></a>Configurare SQL Server per l'attesa su una porta specifica  
   
@@ -67,13 +66,13 @@ ms.locfileid: "63144794"
   
 3.  Nella finestra di dialogo **Proprietà TCP/IP** fare clic sulla scheda **Indirizzi IP** .  
   
-4.  Nella casella **Porta TCP** della sezione **IPAll** digitare un numero di porta disponibile. Per questa esercitazione verrà usato `49172`.  
+4.  Nella casella **Porta TCP** della sezione **IPAll** digitare un numero di porta disponibile. Per questa esercitazione verrà usato `49172` .  
   
 5.  Scegliere **OK** per chiudere la finestra di dialogo e scegliere di nuovo **OK** nel messaggio di avviso che indica che è necessario riavviare il servizio.  
   
 6.  Nel riquadro di sinistra fare clic su **Servizi di SQL Server**.  
   
-7.  Nel riquadro di destra fare clic con il pulsante destro del mouse sull'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], quindi scegliere **Riavvia**. Quando il [!INCLUDE[ssDE](../includes/ssde-md.md)] viene riavviato, resterà in ascolto `49172`sulla porta.  
+7.  Nel riquadro di destra fare clic con il pulsante destro del mouse sull'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], quindi scegliere **Riavvia**. Quando il viene [!INCLUDE[ssDE](../includes/ssde-md.md)] riavviato, resterà in ascolto sulla porta `49172` .  
   
 ##  <a name="opening-ports-in-the-firewall"></a><a name="firewall"></a>Apertura di porte nel firewall  
  I sistemi firewall contribuiscono a impedire l'accesso non autorizzato alle risorse del computer. Per connettersi a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] da un altro computer quando un firewall è attivato, è necessario aprire una porta nel firewall.  

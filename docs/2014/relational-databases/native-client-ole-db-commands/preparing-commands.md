@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 09ec0c6c-0a44-4766-b9b7-5092f676ee54
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dd3be1705411dd84a4bc3e0ad9e55f6e6c8d97b2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fa927574dad6b6f811a6fbc8ad5496b0ff098b68
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707455"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056392"
 ---
 # <a name="preparing-commands"></a>Preparazione dei comandi
   Il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client supporta la funzione di preparazione dei comandi per l'esecuzione multipla ottimizzata di un solo comando. La preparazione dei comandi genera tuttavia overhead e per un consumer non esiste la necessità di preparare un comando per eseguirlo più volte. In genere, un comando deve essere preparato se verrà eseguito più di tre volte.  
@@ -52,6 +51,6 @@ ms.locfileid: "82707455"
  Un oggetto comando include al massimo una stored procedure temporanea in **tempdb**. Le stored procedure temporanee esistenti rappresentano il testo del comando corrente di un oggetto comando specifico.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Comandi:](commands.md)  
+ [Comandi](commands.md)  
   
   

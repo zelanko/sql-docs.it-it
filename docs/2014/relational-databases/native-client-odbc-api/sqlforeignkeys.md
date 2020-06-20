@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6c01ce0d-30d7-4c86-8705-3ab254d8a845
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 865bd792c073688491ef53ed6730667c6fcdb472
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a61e80867abb8ecb4d2628b74dc9956051c8e4ce
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706102"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022393"
 ---
 # <a name="sqlforeignkeys"></a>SQLForeignKeys
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta aggiornamento a catena ed esegue l'eliminazione tramite il meccanismo dei vincoli della chiave esterna. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce SQL_CASCADE per le colonne UPDATE_RULE e/o DELETE_RULE se l'opzione CASCADE viene specificata sulla clausola ON UPDATE e/o ON DELETE dei vincoli FOREIGN KEY. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce SQL_NO_ACTION per le colonne UPDATE_RULE e/o DELETE_RULE se l'opzione NO ACTION viene specificata sulla clausola ON UPDATE e/o ON DELETE dei vincoli FOREIGN KEY.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1cd3b72418d0791d70d28d2dca0a434190a2d4a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 144bcef57b3d6e191b03b1539e9e7382a9085c93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68198925"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068510"
 ---
 # <a name="create-a-workload-group"></a>Creare un gruppo di carico di lavoro
   È possibile creare un gruppo di carico di lavoro utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  

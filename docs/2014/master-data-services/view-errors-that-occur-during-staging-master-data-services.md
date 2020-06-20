@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6d2bff84-624b-47fc-a4a5-d9ea01d13412
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 75b7fb5a1b98f599a07e47101f93268779ca39b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10ec88695b4df1e2d4ee5ec7f446574961adc76b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478573"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970921"
 ---
 # <a name="view-errors-that-occur-during-the-staging-process-master-data-services"></a>Visualizzare errori che si verificano durante il processo di gestione temporanea (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], è possibile visualizzare errori che si verificano durante il processo di gestione temporanea. Nel database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , sono disponibili due viste che mostrano errori:  
@@ -48,7 +47,7 @@ ms.locfileid: "65478573"
 ## <a name="next-steps"></a>Passaggi successivi  
  Per informazioni dettagliate sui messaggi di errore, vedere [Errori del processo di gestione temporanea &#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Importazione dati &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
  [Risoluzione dei problemi relativi al processo di gestione temporanea (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
   

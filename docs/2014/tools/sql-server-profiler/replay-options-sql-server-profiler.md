@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e91a501a899a6ba2b18790ac2da6e7c45b270b07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 068a6aaeba1af8c456c77fd45ecdc2a52719b0f2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63025737"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063993"
 ---
 # <a name="replay-options-sql-server-profiler"></a>Opzioni di riproduzione (SQL Server Profiler)
   Prima di riprodurre una traccia acquisita con [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], è necessario specificare le opzioni di riproduzione nella finestra di dialogo **Configurazione riproduzione** . Per visualizzare questa finestra di dialogo, aprire il file o la tabella di traccia per la riproduzione in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]e scegliere **Avvia** dal menu **Riproduci**. Per informazioni sulle autorizzazioni necessarie per riprodurre una traccia, vedere [Autorizzazioni necessarie per l'esecuzione di SQL Server Profiler](sql-server-profiler.md).  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d018fb391c7633877f985b4e5e0798bfd803a5fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c393143fbd9f1cc32c9e9ae7c5c1c22fdd0b9447
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62680372"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046108"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>Eseguire l'aggiornamento di un'istanza del cluster di failover di SQL Server (installazione)
   Per aggiornare un cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a un cluster di failover di [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], è possibile utilizzare l'Installazione guidata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o il prompt dei comandi.  
@@ -66,7 +65,7 @@ ms.locfileid: "62680372"
   
  Per controllare il comportamento del failover dei nodi del cluster durante il processo di aggiornamento, eseguire l'operazione di aggiornamento nel prompt dei comandi e utilizzare il parametro /FAILOVERCLUSTERROLLOWNERSHIP. Per altre informazioni, vedere [Installare SQL Server 2014 dal prompt dei comandi](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
- **Nota** Se è presente un cluster di failover a nodo singolo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , il gruppo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di risorse viene portato offline dal programma di installazione.  
+ **Nota** Se è presente un cluster di failover a nodo singolo, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] il gruppo di risorse viene portato offline dal programma di installazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="considerations-when-upgrading-from-ssversion2005"></a>Considerazioni per l'esecuzione dell'aggiornamento da [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]  
  Se sono stati specificati gruppi di domini per i criteri di sicurezza cluster, non è possibile specificare il SID del servizio in [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]. Se si desidera utilizzare il SID del servizio, è necessario un aggiornamento side-by-side.  
@@ -82,7 +81,7 @@ ms.locfileid: "62680372"
   
 2.  Cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] attualmente configurato su più subnet utilizzando la tecnologia V-LAN estesa. È necessario innanzitutto aggiornare il cluster esistente a [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. Dal momento che la tecnologia V-LAN estesa consente di configurare una singola subnet, la configurazione della rete deve essere impostata su più subnet. Inoltre, è necessario modificare la dipendenza delle risorse indirizzo IP utilizzando lo strumento di amministrazione del cluster di failover Windows e impostare la dipendenza IP su OR.  
   
-###  <a name="best-practices-before-upgrading-a-ssnoversion-failover-cluster"></a><a name="BestPractices"></a>Procedure consigliate prima dell' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aggiornamento di un cluster di failover  
+###  <a name="best-practices-before-upgrading-a-ssnoversion-failover-cluster"></a><a name="BestPractices"></a>Procedure consigliate prima dell'aggiornamento di un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster di failover  
  Per eliminare il tempo di inattività imprevisto provocato da un riavvio, preinstallare il pacchetto che non richiede il riavvio di .NET Framework 4.0 in tutti i nodi del cluster di failover prima di eseguire l'aggiornamento nei nodi del cluster. Per preinstallare i prerequisiti, è consigliabile effettuare le operazioni seguenti:  
   
 -   Installare il pacchetto che non richiede il riavvio di .NET Framework 4.0 e aggiornare solo i componenti condivisi, a partire dai nodi passivi. In questo modo verranno installati [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 4.0, Windows Installer 4.5 e i file di supporto di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -108,19 +107,19 @@ ms.locfileid: "62680372"
 2.  > [!IMPORTANT]  
     >  Per ulteriori informazioni sui passaggi 3 e 4, vedere la sezione [procedure consigliate prima dell'aggiornamento del cluster di failover](#BestPractices) .  
   
-3.  Una volta installati i prerequisiti, l'Installazione guidata avvia Centro installazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per aggiornare un'istanza esistente di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], fare clic su **Aggiorna [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]da [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)],, [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]o.**  
+3.  Una volta installati i prerequisiti, l'Installazione guidata avvia Centro installazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per aggiornare un'istanza esistente di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , fare clic su **Aggiorna da [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] , [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] .**  
   
 4.  Se sono necessari, i file di supporto per l'installazione verranno installati dal programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Se viene richiesto, riavviare il computer prima di continuare.  
   
 5.  Controllo configurazione sistema consente di eseguire un'operazione di individuazione nel computer. Per continuare, [!INCLUDE[clickOK](../../../includes/clickok-md.md)].  
   
-6.  Nella pagina relativa al codice Product Key immettere la chiave PID relativa all'edizione della nuova versione corrispondente all'edizione della versione precedente del prodotto. Per aggiornare un cluster di failover dell'edizione Enterprise, ad esempio, è necessario specificare una chiave PID per [!INCLUDE[ssEnterprise](../../../includes/ssenterprise-md.md)]. Scegliere **Avanti** per continuare. Si noti che la chiave PID utilizzata per l'aggiornamento del cluster di failover deve essere coerente in tutti i nodi del cluster della stessa istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ulteriori informazioni, vedere [edizioni e componenti di SQL Server 2014](../../editions-and-components-of-sql-server-2016.md) e [aggiornamenti di versione ed edizione supportati](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
+6.  Nella pagina relativa al codice Product Key immettere la chiave PID relativa all'edizione della nuova versione corrispondente all'edizione della versione precedente del prodotto. Per aggiornare un cluster di failover dell'edizione Enterprise, ad esempio, è necessario specificare una chiave PID per [!INCLUDE[ssEnterprise](../../../includes/ssenterprise-md.md)]. Fare clic su **Avanti** per continuare. Si noti che la chiave PID utilizzata per l'aggiornamento del cluster di failover deve essere coerente in tutti i nodi del cluster della stessa istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ulteriori informazioni, vedere [edizioni e componenti di SQL Server 2014](../../editions-and-components-of-sql-server-2016.md) e [aggiornamenti di versione ed edizione supportati](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
-7.  Nella pagina Condizioni di licenza leggere il contratto di licenza, quindi selezionare la casella di controllo per accettarne le condizioni. Per migliorare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è inoltre possibile abilitare l'opzione relativa all'utilizzo delle funzionalità e inviare report a [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Fare clic su**Avanti**per continuare. Per terminare l'installazione, fare clic su **Annulla**.  
+7.  Nella pagina Condizioni di licenza leggere il contratto di licenza, quindi selezionare la casella di controllo per accettarne le condizioni. Per migliorare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è inoltre possibile abilitare l'opzione relativa all'utilizzo delle funzionalità e inviare report a [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. **Fare clic su Avanti per continuare**. Per terminare l'installazione, fare clic su **Annulla**.  
   
-8.  Nella pagina Seleziona istanza specificare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da aggiornare a [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. Fare clic su**Avanti**per continuare.  
+8.  Nella pagina Seleziona istanza specificare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da aggiornare a [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. **Fare clic su Avanti per continuare**.  
   
-9. Nella pagina Selezione funzionalità le funzionalità da aggiornare saranno preselezionate. Dopo aver selezionato il nome della funzionalità desiderata, nel riquadro a destra verrà visualizzata una descrizione per ogni gruppo di componenti. Non è possibile modificare le funzionalità da aggiornare, né aggiungere funzionalità durante l'operazione di aggiornamento. Per aggiungere funzionalità a un'istanza aggiornata di [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] al termine dell'operazione di aggiornamento, vedere [aggiungere funzionalità a un'istanza di SQL Server 2014 &#40;&#41;di installazione ](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md).  
+9. Nella pagina Selezione funzionalità le funzionalità da aggiornare saranno preselezionate. Dopo aver selezionato il nome della funzionalità desiderata, nel riquadro a destra verrà visualizzata una descrizione per ogni gruppo di componenti. Non è possibile modificare le funzionalità da aggiornare, né aggiungere funzionalità durante l'operazione di aggiornamento. Per aggiungere funzionalità a un'istanza aggiornata di al [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] termine dell'operazione di aggiornamento, vedere [aggiungere funzionalità a un'istanza di SQL Server 2014 &#40;&#41;di installazione ](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md).  
   
      I prerequisiti per le funzionalità selezionate vengono visualizzati nel riquadro di destra. Il programma di installazione di SQL Server consentirà di installare i prerequisiti che non sono già stati installati durante la procedura di installazione descritta più avanti in questo argomento.  
   
@@ -128,13 +127,13 @@ ms.locfileid: "62680372"
   
      **ID istanza** : per impostazione predefinita, il nome dell'istanza viene usato come ID istanza. Tale nome viene utilizzato per identificare le directory di installazione e le chiavi del Registro di sistema per l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si tratta del caso delle istanze predefinite e delle istanze denominate. Per un'istanza predefinita, il nome di istanza e l'ID istanza sono MSSQLSERVER. Per utilizzare un ID istanza non predefinito, selezionare la casella di controllo **ID istanza** e specificare un valore. Se si sostituisce il valore predefinito, è necessario specificare lo stesso ID istanza per l'istanza da aggiornare in tutti i nodi del cluster di failover. L'ID istanza per l'istanza aggiornata deve corrispondere in tutti i nodi.  
   
-     **Istanze e funzionalità rilevate** : nella griglia vengono [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] visualizzate le istanze di presenti nel computer in cui è in esecuzione il programma di installazione. Fare clic su**Avanti**per continuare.  
+     **Istanze e funzionalità rilevate** : nella griglia vengono visualizzate le istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] presenti nel computer in cui è in esecuzione il programma di installazione. **Fare clic su Avanti per continuare**.  
   
 11. Nella pagina Requisiti di spazio su disco viene calcolato lo spazio su disco necessario per le funzionalità specificate e vengono confrontati i requisiti con lo spazio su disco disponibile nel computer in cui è in esecuzione il programma di installazione.  
   
 12. Nella pagina per l'aggiornamento della ricerca full-text specificare le opzioni per i database da aggiornare. Per altre informazioni, vedere [Opzioni di aggiornamento della ricerca full-text](../../install/full-text-search-upgrade-options.md).  
   
-13. Nella pagina **segnalazione errori** specificare le informazioni che si desidera inviare a per contribuire a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] migliorare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per impostazione predefinita, l'opzione per la segnalazione di errori è abilitata.  
+13. Nella pagina **segnalazione errori** specificare le informazioni che si desidera inviare a per contribuire a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] migliorare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per impostazione predefinita, l'opzione per la segnalazione di errori è abilitata.  
   
 14. Controllo configurazione sistema eseguirà uno o più set di regole per convalidare la configurazione del computer con le funzionalità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] specificate prima dell'inizio dell'operazione di aggiornamento.  
   
@@ -156,13 +155,13 @@ ms.locfileid: "62680372"
   
 #### <a name="to-upgrade-to-a-ssnoversion-multi-subnet-failover-cluster-existing-ssnoversion-cluster-is-a-non-multi-subnet-cluster"></a>Per effettuare l'aggiornamento a un cluster di failover su più subnet di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (il cluster di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esistente non è un cluster su più subnet)  
   
-1.  Seguire i passaggi da 1 a 24 descritti nella sezione [per aggiornare un cluster di failover di SQL Server](#UpgradeSteps) precedente per aggiornare il [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]cluster a.  
+1.  Seguire i passaggi da 1 a 24 descritti nella sezione [per aggiornare un cluster di failover di SQL Server](#UpgradeSteps) precedente per aggiornare il cluster a [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] .  
   
 2.  Aggiungere un nodo su una subnet diversa utilizzando l'azione del programma di installazione AddNode e confermare la dipendenza delle risorse indirizzo IP su OR nella pagina **Configurazione rete cluster** . Per altre informazioni, vedere [Aggiungere o rimuovere nodi in un cluster di failover di SQL Server &#40;programma di installazione&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
 #### <a name="to-upgrade-a-multi-subnet-cluster-currently-using-stretch-v-lan"></a>Per aggiornare un cluster su più subnet utilizzando momentaneamente la tecnologia V-Lan estesa.  
   
-1.  Seguire i passaggi da 1 a 24 descritti nella sezione [per aggiornare un cluster di failover di SQL Server](#UpgradeSteps) precedente per aggiornare il [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]cluster a.  
+1.  Seguire i passaggi da 1 a 24 descritti nella sezione [per aggiornare un cluster di failover di SQL Server](#UpgradeSteps) precedente per aggiornare il cluster a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .  
   
 2.  Modificare le impostazioni di rete per spostare il nodo remoto in una subnet diversa.  
   
@@ -183,7 +182,7 @@ ms.locfileid: "62680372"
   
      Per ridurre la superficie di attacco di un sistema, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono installati e abilitati in modo selettivo i servizi e le funzionalità principali. Per ulteriori informazioni sulla configurazione della superficie di attacco, vedere il file Leggimi per questa versione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Installare SQL Server 2014 dal prompt dei comandi](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9c4d9b65fed30d09bf739271131d3b83afcd0902
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 971f45fd69f381a8997bb2f8f08444f4d9c107c4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010136"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955439"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
   FILESTREAM consente l'archiviazione nel file system di dati non strutturati, ad esempio documenti e immagini, da parte delle applicazioni basate su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le applicazioni possono sfruttare le numerose API di flusso e le prestazioni del file system e contemporaneamente mantenere la coerenza transazionale tra i dati non strutturati e i corrispondenti dati strutturati.  
@@ -158,7 +157,7 @@ ms.locfileid: "66010136"
   [Creazione di applicazioni client per dati FILESTREAM](create-client-applications-for-filestream-data.md)  
   [Accesso ai dati FILESTREAM con OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md)  
   [Esecuzione di aggiornamenti parziali di dati FILESTREAM](make-partial-updates-to-filestream-data.md)  
-  [Evitare conflitti con le operazioni del database nelle applicazioni di FILESTREAM](avoid-conflicts-with-database-operations-in-filestream-applications.md)  
+  [Evitare conflitti con le operazioni del database nelle applicazioni FILESTREAM](avoid-conflicts-with-database-operations-in-filestream-applications.md)  
   [Spostamento di un database abilitato per FILESTREAM](move-a-filestream-enabled-database.md)  
   [Configurazione di FILESTREAM in un cluster di failover](set-up-filestream-on-a-failover-cluster.md)  
   [Configurare un firewall per l'accesso FILESTREAM](configure-a-firewall-for-filestream-access.md)  

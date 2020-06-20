@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 86ed91a1-a07c-46f2-a913-67317ef2255e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fddf6045921fa14e09aaff918f84125eb907e9ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23f5b515fcb1e80416d860e2ff3a2e6be5431819
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721743"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010931"
 ---
 # <a name="connect-to-server-oracle-login"></a>Connetti al server (Oracle), Account di accesso
   Usare la scheda **Account di accesso** della finestra di dialogo **Connetti al server** per specificare l'account con cui vengono stabilite le connessioni dal server di distribuzione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al server di pubblicazione Oracle. È necessario utilizzare lo stesso account specificato per lo schema utente di amministrazione della replica durante la configurazione del server di pubblicazione. Per altre informazioni, vedere [Configurare un server di pubblicazione Oracle](non-sql/configure-an-oracle-publisher.md).  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: d3462266279ed80e94871db4831918ad70b444be
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 19e9ba9013d592d752189adadfb761f1741fd91a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922139"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055454"
 ---
 # <a name="sql-server-audit-records"></a>Record di SQL Server Audit
   La caratteristica [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit consente di controllare gruppi di eventi ed eventi a livello di server e di database. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](sql-server-audit-database-engine.md). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -29,13 +28,13 @@ ms.locfileid: "82922139"
 |**event_time**|Data e ora di generazione dell'azione controllabile.|`datetime2`|Sì|  
 |**sequence_no**|Viene tenuta traccia della sequenza dei record all'interno di un singolo record di controllo con dimensioni troppo elevate per il buffer di scrittura dei controlli.|`int`|Sì|  
 |**action_id**|ID dell'azione.<br /><br /> Suggerimento: per usare **action_id** come predicato, è necessario convertirlo da stringa di caratteri in valore numerico. Per altre informazioni, vedere [Filter SQL Server Audit on action_id / class_type predicate](https://docs.microsoft.com/archive/blogs/sqlsecurity/filter-sql-server-audit-on-action_id-class_type-predicate)(Filtro di SQL Server Audit con il predicato action_id / class_type).|`varchar(4)`|Sì|  
-|**riuscito**|Indica se l'azione che ha generato l'evento ha avuto esito positivo|`bit`-1 = esito positivo, 0 = esito negativo|Sì|  
+|**completata**|Indica se l'azione che ha generato l'evento ha avuto esito positivo|`bit`-1 = esito positivo, 0 = esito negativo|Sì|  
 |**permission_bitmask**|Se applicabile, visualizza le autorizzazioni concesse, negate o revocate.|`bigint`|No|  
 |**is_column_permission**|Flag indicante un'autorizzazione a livello di colonna.|`bit`-1 = true, 0 = false|No|  
 |**session_id**|ID della sessione in cui si è verificato l'evento.|`int`|Sì|  
 |**server_principal_id**|ID del contesto dell'account di accesso utilizzato per eseguire l'azione.|`int`|Sì|  
 |**database_principal_id**|ID del contesto dell'utente del database in cui viene eseguita l'azione.|`int`|No|  
-|**ID object_**|ID primario dell'entità in cui si è verificato il controllo. È possibile creare, ad esempio:<br /><br /> oggetti server<br /><br /> database<br /><br /> oggetti di database<br /><br /> oggetti dello schema|`int`|No|  
+|**ID object_**|ID primario dell'entità in cui si è verificato il controllo. ad esempio:<br /><br /> oggetti server<br /><br /> database<br /><br /> oggetti di database<br /><br /> oggetti dello schema|`int`|No|  
 |**target_server_principal_id**|Entità server cui si applica l'azione controllabile.|`int`|Sì|  
 |**target_database_principal_id**|Entità di database cui si applica l'azione controllabile.|`int`|No|  
 |**class_type**|Tipo di entità controllabile in cui si verifica il controllo.|`varchar(2)`|Sì|  
@@ -49,7 +48,7 @@ ms.locfileid: "82922139"
 |**server_instance_name**|Nome dell'istanza del server in cui si è verificato il controllo. Viene utilizzato il formato standard computer\istanza.|`nvarchar(120)`|Sì|  
 |**database_name**|Contesto del database in cui si è verificata l'azione.|`sysname`|No|  
 |**schema_name**|Contesto dello schema in cui si è verificata l'azione.|`sysname`|No|  
-|**object_name**|Nome dell'entità in cui si è verificato il controllo. È possibile creare, ad esempio:<br /><br /> oggetti server<br /><br /> database<br /><br /> oggetti di database<br /><br /> oggetti dello schema<br /><br /> istruzione TSQL (se presente)|`sysname`|No|  
+|**object_name**|Nome dell'entità in cui si è verificato il controllo. ad esempio:<br /><br /> oggetti server<br /><br /> database<br /><br /> oggetti di database<br /><br /> oggetti dello schema<br /><br /> istruzione TSQL (se presente)|`sysname`|No|  
 |**istruzione**|istruzione TSQL (se presente)|`nvarchar(4000)`|No|  
 |**additional_information**|Qualsiasi informazione aggiuntiva sull'evento, archiviata in formato XML.|`nvarchar(4000)`|No|  
   

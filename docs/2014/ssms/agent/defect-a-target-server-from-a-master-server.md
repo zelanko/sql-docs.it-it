@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6da262b-7b38-4ce4-bfd6-6a557c6e8a84
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3f51e8f62a6be442c123c5a1309293e204caf08f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b17703fa87f5c0d3e7146a1660ac1ca7c7c1d81
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783214"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008933"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>Escludere un server di destinazione da un server master
   In questo argomento viene descritto come escludere un server di destinazione da un server master in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] o SQL Server Management Objects (SMO). Eseguire questa procedura dal server di destinazione.  

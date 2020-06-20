@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b7d35ee9-d1c9-41d9-bbc5-0ca7db93e54d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4499a0a099c92a9b1802cc905da3d0a473808eeb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a6f4e870dca91e952fbeea95ef8f1198c64d8d6b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177229"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054280"
 ---
 # <a name="task-6-setting-synonyms"></a>Attività 6: Impostazione di sinonimi
   In questa attività vengono impostati due valori di dominio, **Stati Uniti** e **Stati Uniti**, del dominio **Country** come sinonimi con **Stati Uniti** come valore principale. Poiché l'opzione **Usa valori iniziali** è stata selezionata durante la creazione del dominio **Country** , tutti i valori **USA** per il dominio **Country** verranno restituiti come **Stati Uniti** (Stati Uniti è il valore principale). Per altri dettagli, vedere [modificare i valori di dominio](https://msdn.microsoft.com/library/hh510408.aspx) .

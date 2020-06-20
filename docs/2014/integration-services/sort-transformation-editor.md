@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ae23970-49a9-4d6d-9f15-c7074783347c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: becd97e843909a5d7bc181dfdf1060988836ee3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a565915f4b48cabe5e657175fc1065302b7c7a79
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055489"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962891"
 ---
 # <a name="sort-transformation-editor"></a>Editor trasformazione Ordinamento
   Utilizzare la finestra di dialogo **Editor trasformazione Ordinamento** per selezionare le colonne da ordinare, impostare il tipo di ordinamento e specificare se rimuovere i duplicati.  
@@ -54,7 +53,7 @@ ms.locfileid: "66055489"
  **Rimuovi righe con valori di ordinamento duplicati**  
  Indica se la trasformazione copia le righe duplicate nell'output della trasformazione o se invece crea un'unica voce per tutti i duplicati in base alla stringa specificata nelle opzioni di confronto.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d1dcdcfd-166c-4147-85ab-43cadc63819b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 74470d40bace6e1443ef9eb94f9698e225ff2946
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 573be4884c385f8e2c391334bf0f862a66e19efa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63232841"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044369"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>Modifica di operatori di join (Visual Database Tools)
   Per impostazione predefinita, in [Progettazione query e Progettazione viste](visual-database-tools.md) le tabelle vengono unite in join tramite un segno di uguale (equijoin) che collega i valori delle due colonne join. Se si desidera, sarà possibile modificare l'operatore utilizzato per confrontare i valori nelle colonne join.  

@@ -16,19 +16,18 @@ helpviewer_keywords:
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cf5c0b6c7004f458e424e58d738cce22e97afa2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cd2a71e6acd52ba92f44c26f184bbd3141de6f4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919594"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954701"
 ---
 # <a name="clr-scalar-valued-functions"></a>Funzioni a valori scalari CLR
-  Una funzione a valori scalari restituisce un valore singolo, come una stringa un Integer o un valore di bit. È possibile creare funzioni a valori scalari definite dall'utente nel codice gestito utilizzando qualsiasi linguaggio di programmazione di .NET Framework. Queste funzioni sono accessibili a [!INCLUDE[tsql](../../includes/tsql-md.md)] o ad altro codice gestito. Per informazioni sui vantaggi dell'integrazione con CLR e sulla scelta tra codice gestito [!INCLUDE[tsql](../../includes/tsql-md.md)]e, vedere [Cenni preliminari sull'integrazione con CLR](../clr-integration/clr-integration-overview.md).  
+  Una funzione a valori scalari restituisce un valore singolo, come una stringa un Integer o un valore di bit. È possibile creare funzioni a valori scalari definite dall'utente nel codice gestito utilizzando qualsiasi linguaggio di programmazione di .NET Framework. Queste funzioni sono accessibili a [!INCLUDE[tsql](../../includes/tsql-md.md)] o ad altro codice gestito. Per informazioni sui vantaggi dell'integrazione con CLR e sulla scelta tra codice gestito e [!INCLUDE[tsql](../../includes/tsql-md.md)] , vedere [Cenni preliminari sull'integrazione con CLR](../clr-integration/clr-integration-overview.md).  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>Requisiti per le funzioni a valori scalari CLR  
- Le funzioni a valori scalari di .NET Framework vengono implementate come metodi in una classe di un assembly .NET Framework. I parametri di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]input e il tipo restituiti da un SVF possono essere uno qualsiasi dei tipi di dati scalari supportati `varchar`da `char`, `rowversion`ad `text`eccezione `ntext`di `image`, `timestamp`, `table`,, `cursor`,,, o. Le funzioni a valori scalari devono assicurare una corrispondenza tra il tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il tipo dati restituito del metodo di implementazione. Per ulteriori informazioni sulle conversioni di tipi, vedere [mapping dei dati dei parametri CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
+ Le funzioni a valori scalari di .NET Framework vengono implementate come metodi in una classe di un assembly .NET Framework. I parametri di input e il tipo restituiti da un SVF possono essere uno qualsiasi dei tipi di dati scalari supportati da, ad eccezione di,,,,, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `varchar` `char` `rowversion` `text` `ntext` `image` , `timestamp` , `table` o `cursor` . Le funzioni a valori scalari devono assicurare una corrispondenza tra il tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il tipo dati restituito del metodo di implementazione. Per ulteriori informazioni sulle conversioni di tipi, vedere [mapping dei dati dei parametri CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
   
  In caso di implementazione di una funzione a valore scalare di .NET Framework in un linguaggio di .NET Framework, è possibile specificare l'attributo personalizzato `SqlFunction` per includere informazioni aggiuntive sulla funzione. L'attributo `SqlFunction` indica se la funzione accede ai dati o li modifica, se è deterministica e se comporta operazioni a virgola mobile.  
   
@@ -150,7 +149,7 @@ GO
   
  Si noti che il nome della funzione esposto in [!INCLUDE[tsql](../../includes/tsql-md.md)] non dovere corrispondere al nome del metodo statico pubblico di destinazione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Mapping dei dati dei parametri CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   
  [Panoramica degli attributi personalizzati dell'integrazione con CLR](../../database-engine/dev-guide/overview-of-clr-integration-custom-attributes.md)   
  [Funzioni definite dall'utente](../user-defined-functions/user-defined-functions.md)   

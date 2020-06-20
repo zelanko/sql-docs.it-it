@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 782663cf-f3d7-4cc6-b621-21e4550f0322
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6af4597a4ddf802c80bc98cb38363d59348fa0bb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f93f5abc749f589ab4208b3a4c9434ca63b8769
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62810051"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935038"
 ---
 # <a name="prevent-automatic-startup-of-an-instance-of-sql-server-sql-server-configuration-manager"></a>Impedire l'avvio automatico di un'istanza di SQL Server (Gestione configurazione SQL Server)
   In questo argomento viene illustrato come impedire che un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] venga avviata automaticamente in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando Gestione configurazione SQL Server. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è normalmente configurato per l'avvio automatico. È possibile modificare questa configurazione impostando su manuale la modalità di avvio per l'istanza.  
@@ -37,11 +36,11 @@ ms.locfileid: "62810051"
   
 3.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **MSSQLServer**quindi scegliere **Proprietà**.  
   
-4.  Nella finestra di dialogo **SQL Server \<**_nomeistanza_**> Proprietà** in **Proprietà** impostare il valore di **Modalità di avvio** su **Manuale**.  
+4.  Nella finestra di dialogo ** \<**_instancename_**> Proprietà SQL Server** , nella casella **Proprietà** impostare il valore di modalità di **avvio** su **manuale**.  
   
-5.  Fare clic su **OK** per chiudere la finestra di dialogo**SQL Server \<**_nomeistanza_**> Proprietà** e quindi chiudere Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+5.  Fare clic su **OK** per chiudere la finestra di dialogo ** \<**_instancename_**> Proprietà SQL Server** , quindi chiudere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Avviare, arrestare, sospendere, riprendere, riavviare il motore di database, SQL Server Agent o SQL Server Browser](start-stop-pause-resume-restart-sql-server-services.md)  
   
   

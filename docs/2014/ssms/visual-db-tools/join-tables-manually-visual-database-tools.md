@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9c785356-646b-4c87-82d4-25efd6051d9d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0299be9a1cb480a567e0b166c990d25588598aba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe3dcd7f2affdbeb2e2fa5769f1aa6d02d27d5ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62711058"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064946"
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>Unione di tabelle in modo manuale (Visual Database Tools)
   Quando si aggiungono due o più tabelle a una query, in [Progettazione query e Progettazione viste](visual-database-tools.md) viene effettuato un tentativo per unirle in join sulla base dei dati comuni o delle informazioni archiviate nel database relative alla correlazione delle tabelle. Per informazioni dettagliate, vedere [Unione di tabelle in modo automatico &#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md). Se tuttavia le tabelle non vengono unite in join automaticamente o se si desidera creare ulteriori condizioni di join tra le tabelle, sarà possibile il join manuale.  

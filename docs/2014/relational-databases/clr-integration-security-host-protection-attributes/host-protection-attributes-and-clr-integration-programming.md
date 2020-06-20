@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 268078df-63ca-4c03-a8e7-7108bcea9697
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 68f1f114002ab0ef38c7565a523723a06958048d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 94b46ac1c923695abf4a8bbbb4f074f14593ddcd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874346"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954171"
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>Attributi di protezione host e programmazione dell'integrazione con CLR
   Common Language Runtime (CLR) fornisce un meccanismo di annotazione delle API gestite che fanno parte di .NET Framework con determinati attributi che possono interessare un host di CLR, ad esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Di seguito sono riportati alcuni esempi di attributi di protezione host:  
@@ -46,7 +45,7 @@ ms.locfileid: "62874346"
   
 -   Possono determinare la destabilizzazione del processo del server stesso.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]non consente l'utilizzo di un tipo o di un membro che dispone `HostProtectionAttribute` di un oggetto `System.Security.Permissions.HostProtectionResource` che specifica un'enumerazione con `ExternalProcessMgmt`un `ExternalThreading`valore `MayLeakOnAbort`di `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, `SharedState`, `Synchronization`,, `UI`, o. In questo modo si impedisce agli assembly di chiamare membri che attivano la condivisione dello stato, eseguono la sincronizzazione, possono determinare una perdita di risorse al termine del processo o compromettere l'integrità del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]non consente l'utilizzo di un tipo o di un membro che dispone di un oggetto `HostProtectionAttribute` che specifica un' `System.Security.Permissions.HostProtectionResource` enumerazione con un valore di `ExternalProcessMgmt` , `ExternalThreading` , `MayLeakOnAbort` , `SecurityInfrastructure` , `SelfAffectingProcessMgmnt` , `SelfAffectingThreading` , `SharedState` , `Synchronization` o `UI` . In questo modo si impedisce agli assembly di chiamare membri che attivano la condivisione dello stato, eseguono la sincronizzazione, possono determinare una perdita di risorse al termine del processo o compromettere l'integrità del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="disallowed-types-and-members"></a>Tipi e membri non consentiti  
  Negli argomenti riportati di seguito vengono identificati tipi e membri i cui valori di `HostProtectionResource` non sono consentiti da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -70,7 +69,7 @@ ms.locfileid: "62874346"
  [Tipi e membri non consentiti in System.Core.dll](disallowed-types-and-members-in-system-core-dll.md)  
  Elenca i tipi e i membri in System.Core.dll, i cui valori degli attributi di protezione host non sono consentiti.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Sicurezza dall'accesso di codice per l'integrazione con CLR](../clr-integration/security/clr-integration-code-access-security.md)   
  [Restrizioni del modello di programmazione dell'integrazione con CLR](../clr-integration/database-objects/clr-integration-programming-model-restrictions.md)   
  [Creazione di un assembly](../clr-integration/assemblies/creating-an-assembly.md)  

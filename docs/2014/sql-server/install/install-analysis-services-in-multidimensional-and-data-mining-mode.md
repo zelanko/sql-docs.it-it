@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60
 author: heidisteen
 ms.author: heidist
-manager: craigg
-ms.openlocfilehash: 002a4ce66108622ce5efcf33231edaed9cd1c99b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: afb5c9d4d6272608249e095c694e0a9c48b37feb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78280858"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054774"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>Installazione di Analysis Services in modalità Multidimensionale e Data Mining
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] offre funzionalità di elaborazione analitica in linea (OLAP) e di data mining per applicazioni di Business Intelligence. In questa versione, il supporto per i database OLAP e i modelli di data mining è [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] disponibile quando si installa in *modalità multidimensionale*. La modalità multidimensionale è una delle tre modalità del server in cui viene eseguito [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Si tratta della modalità predefinita. Se si installa [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizzando i valori predefiniti, si ottiene un'istanza che esegue database multidimensionali e modelli di data mining.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] offre funzionalità di elaborazione analitica in linea (OLAP) e di data mining per applicazioni di Business Intelligence. In questa versione, il supporto per i database OLAP e i modelli di data mining è disponibile quando si installa [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in *modalità multidimensionale*. La modalità multidimensionale è una delle tre modalità del server in cui viene eseguito [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Si tratta della modalità predefinita. Se si installa [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizzando i valori predefiniti, si ottiene un'istanza che esegue database multidimensionali e modelli di data mining.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è una funzionalità per istanze multiple, ovvero è possibile installare più di un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un unico computer oppure eseguire una nuova istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] side-by-side con una versione precedente. La modalità del server è specifica di un'istanza. L'utilizzo di altre modalità richiede l'installazione di altre istanze del server.  
   
- È possibile installare [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] da solo o con altri componenti. Se si installa solo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le seguenti funzionalità vengono installate quando si seleziona **Analysis Services** nella pagina Selezione funzionalità dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installazione guidata di:  
+ È possibile installare [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] da solo o con altri componenti. Se si installa solo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , le seguenti funzionalità vengono installate quando si seleziona **Analysis Services** nella pagina Selezione funzionalità dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installazione guidata di:  
   
 -   Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per l'esecuzione dei modelli di data mining e dei database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
   

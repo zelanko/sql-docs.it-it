@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3f1eb85cb05c8284990d46241ed752515ef5504b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ba09ba6110f5da2082f13d8277a00bfb9d590d2e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479440"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961921"
 ---
 # <a name="discontinued-master-data-services-features-in-sql-server-2014"></a>Funzionalità di Master Data Services non più supportate in SQL Server 2014
   In questo argomento vengono descritte le funzionalità di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] non più disponibili in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -58,9 +57,9 @@ ms.locfileid: "65479440"
  Se si dispone di un pacchetto di distribuzione per modelli [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] che contiene una regola di questo tipo, quando si aggiorna il database a [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], la regola business è esclusa.  
   
 ### <a name="bulk-updates-and-exporting"></a>Aggiornamento ed esportazione bulk  
- Nell'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] non è più possibile aggiornare i valori di attributo per più membri in bulk. Per eseguire gli aggiornamenti in blocco, utilizzare il processo di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]gestione temporanea o.  
+ Nell'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] non è più possibile aggiornare i valori di attributo per più membri in bulk. Per eseguire gli aggiornamenti in blocco, utilizzare il processo di gestione temporanea o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] .  
   
- Nell'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] non è più possibile esportare membri in Excel. Per lavorare con i membri in Excel, usare [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)].  
+ Nell'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] non è più possibile esportare membri in Excel. Per lavorare con i membri in Excel, usare [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] .  
   
 ### <a name="transactions"></a>Transazioni  
  Nell'area funzionale **Esplora** , gli utenti non possono più ripristinare le proprie transazioni. In precedenza, gli utenti potevano ripristinare le modifiche apportate ai dati in **Esplora**. Gli amministratori possono comunque ripristinare le transazioni per tutti gli utenti nell'area funzionale **Gestione versioni** .  
@@ -73,7 +72,7 @@ ms.locfileid: "65479440"
 ### <a name="powershell-cmdlets"></a>Cmdlet di PowerShell  
  In MDS non sono più inclusi i cmdlet di PowerShell.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzionalità deprecate di Master Data Services in SQL Server 2014](deprecated-master-data-services-features.md)  
   
   

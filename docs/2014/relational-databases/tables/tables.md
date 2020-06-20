@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7a456d68283d81cf7eb4f879d76f086484c5e052
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22e417a535454f88d6475a97d2d17ad794404175
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211784"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055053"
 ---
 # <a name="tables"></a>Tabelle
   Le tabelle sono oggetti di database che contengono tutti i dati presenti in un database. Nelle tabelle, i dati sono organizzati in modo logico in righe e colonne in un formato simile a quello di un foglio di calcolo. Ogni riga rappresenta un record univoco e ogni colonna rappresenta un campo all'interno del record. Ad esempio, una tabella che include i dati dei dipendenti di un'azienda può contenere una riga per ogni dipendente e colonne che rappresentano i dettagli dei dipendenti quali l'ID, il nome, l'indirizzo, la posizione e il numero di telefono dell'abitazione.  
@@ -83,8 +82,8 @@ ms.locfileid: "68211784"
 |Viene illustrato come creare una colonna calcolata in una tabella.|[Specificare le colonne calcolate in una tabella](specify-computed-columns-in-a-table.md)|  
 |Viene illustrato come specificare un valore predefinito per una colonna. Questo valore viene utilizzato nel caso non venga fornito alcun altro valore.|[Specificare i valori predefiniti per le colonne](specify-default-values-for-columns.md)|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Vincoli di chiave primaria ed esterna](primary-and-foreign-key-constraints.md)   
- [Vincoli UNIQUE e CHECK](unique-constraints-and-check-constraints.md)  
+ [Vincoli UNIQUE e check](unique-constraints-and-check-constraints.md)  
   
   

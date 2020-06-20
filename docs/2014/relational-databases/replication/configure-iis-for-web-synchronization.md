@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 07e01e8069cce53d1c37d01cea7513fcbcdd1cb9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 523c4fc30151acd3ee4df21f2fdaa2187e702870
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80380752"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011034"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurazione di IIS per la sincronizzazione Web
   Le procedure descritte in questo argomento rappresentano il secondo passaggio nella configurazione della sincronizzazione Web per la replica di tipo merge. Questo passaggio è successivo all'abilitazione di una pubblicazione per la sincronizzazione Web. Per una panoramica del processo di configurazione, vedere [Configura sincronizzazione Web](configure-web-synchronization.md). Al termine delle procedure indicate in questo argomento, procedere al terzo passaggio, che consiste nella configurazione di una sottoscrizione per l'utilizzo della sincronizzazione Web. Questo terzo passaggio è descritto negli argomenti seguenti:  
@@ -68,7 +67,7 @@ ms.locfileid: "80380752"
   
     1.  Fare clic sul pulsante **Start**e quindi scegliere **Esegui**.  
   
-    2.  Nella casella **Apri** Digitare `inetmgr`, quindi fare clic su **OK**.  
+    2.  Nella casella **Apri** Digitare `inetmgr` , quindi fare clic su **OK**.  
   
 3.  Eseguire la Gestione guidata certificati IIS:  
   
@@ -91,7 +90,7 @@ ms.locfileid: "80380752"
   
 1.  Accedere come amministratore al computer che esegue IIS.  
   
-2.  Scaricare e installare SelfSSL. Per impostazione predefinita, l'applicazione viene installata in \<*unità*>:\Programmi\IIS Resources\SelfSSL. I collegamenti all'applicazione e alla documentazione vengono copiati in \<*unità*>:\Documents and Settings\All Users\Menu Start\Programmi\IIS Resources\SelfSSL.  
+2.  Scaricare e installare SelfSSL. Per impostazione predefinita, l'applicazione viene installata in \<*drive*> : \Program \Programmi\iis Resources\SelfSSL. I collegamenti all'applicazione e alla documentazione vengono copiati in \<*drive*> : \Documents and Settings\All Users\Menu Start\programmi\iis Resources\SelfSSL.  
   
 3.  Eseguire SelfSSL:  
   
@@ -100,7 +99,7 @@ ms.locfileid: "80380752"
         > [!NOTE]  
         >  Per impostazione predefinita, il certificato installato da SelfSSL ha una validità di sette giorni.  
   
-    -   Per specificare valori per uno o più parametri, fare clic sul menu **Start**e quindi scegliere **Esegui**. Nella casella **Apri** immettere `cmd`, quindi fare clic su **OK**. Individuare la directory di installazione di SelfSSL, digitare `SelfSSL`e quindi specificare i valori per uno o più parametri. Per un elenco di parametri, digitare `SelfSSL -?`.  
+    -   Per specificare valori per uno o più parametri, fare clic sul menu **Start**e quindi scegliere **Esegui**. Nella casella **Apri** immettere `cmd` , quindi fare clic su **OK**. Individuare la directory di installazione di SelfSSL, digitare `SelfSSL`e quindi specificare i valori per uno o più parametri. Per un elenco di parametri, digitare `SelfSSL -?`.  
   
 ## <a name="installing-connectivity-components-and-sql-server-management-studio"></a>Installazione di componenti di connettività e SQL Server Management Studio  
   
@@ -155,7 +154,7 @@ ms.locfileid: "80380752"
   
     1.  Nella casella **Alias** immettere un alias per la directory virtuale.  
   
-    2.  Nella casella **Percorso** immettere un percorso per la directory virtuale. Ad esempio, se è stato `websync1` immesso nella casella **alias** , `C:\Inetpub\wwwroot\websync1` immettere nella casella **percorso** . Fare clic su **Avanti**.  
+    2.  Nella casella **Percorso** immettere un percorso per la directory virtuale. Ad esempio, se è stato immesso `websync1` nella casella **alias** , immettere `C:\Inetpub\wwwroot\websync1` nella casella **percorso** . Fare clic su **Avanti**.  
   
     3.  In entrambe le finestre di dialogo fare clic su **Sì**. In questo modo viene specificato che si intende creare una nuova cartella e copiare la DLL ISAPI (Internet Server API) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . .  
   
@@ -179,11 +178,11 @@ ms.locfileid: "80380752"
   
 11. Se nel computer con IIS è in esecuzione una versione a 64 bit di Windows, è necessario copiare replisapi.dll nella directory appropriata:  
   
-    1.  Fare clic sul pulsante **Start**e quindi scegliere **Esegui**. Nella casella **Apri** immettere `iisreset`, quindi fare clic su **OK**.  
+    1.  Fare clic sul pulsante **Start**e quindi scegliere **Esegui**. Nella casella **Apri** immettere `iisreset` , quindi fare clic su **OK**.  
   
     2.  Dopo l'arresto e il riavvio di IIS, copiare il file replisapi.dll da [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\replisapi nella directory specificata nel passaggio 6b.  
   
-    3.  Fare clic sul pulsante **Start**e quindi scegliere **Esegui**. Nella casella **Apri** immettere `cmd`, quindi fare clic su **OK**.  
+    3.  Fare clic sul pulsante **Start**e quindi scegliere **Esegui**. Nella casella **Apri** immettere `cmd` , quindi fare clic su **OK**.  
   
     4.  Nella directory specificata al passaggio 6b eseguire il comando seguente:  
   
@@ -194,7 +193,7 @@ ms.locfileid: "80380752"
   
 #### <a name="to-install-and-configure-the-sql-server-replication-listener"></a>Per installare e configurare Listener per la replica di SQL Server  
   
-1.  Creare una directory di file nel computer che esegue IIS per contenere replisapi.dll. Sebbene sia possibile creare la directory in un percorso qualsiasi, è consigliabile crearla nella directory \<*unità*>:\Inetpub. Ad esempio, creare la directory \<*unità*>:\Inetpub\SQLReplication\\.  
+1.  Creare una directory di file nel computer che esegue IIS per contenere replisapi.dll. È possibile creare la directory nel punto desiderato, ma è consigliabile creare la directory nella \<*drive*> Directory: \Inetpub Ad esempio, creare la directory \<*drive*> : \Inetpub\SQLReplication \\ .  
   
     > [!IMPORTANT]  
     >  È consigliabile creare questa directory in una partizione del file system NTFS anziché in un file system FAT. Quando si utilizza il file system NTFS, è possibile utilizzare le autorizzazioni di tale file system per controllare esattamente gli utenti che possono accedere alla replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -203,7 +202,7 @@ ms.locfileid: "80380752"
   
 3.  Registrare replisapi.dll:  
   
-    1.  Fare clic sul pulsante **Start**e quindi scegliere **Esegui**. Nella casella **Apri** immettere `cmd`, quindi fare clic su **OK**.  
+    1.  Fare clic sul pulsante **Start**e quindi scegliere **Esegui**. Nella casella **Apri** immettere `cmd` , quindi fare clic su **OK**.  
   
     2.  Nella directory creata al passaggio 1 eseguire il comando seguente:  
   
@@ -224,7 +223,7 @@ ms.locfileid: "80380752"
 ## <a name="setting-permissions-for-the-sql-server-replication-listener"></a>Impostazione delle autorizzazioni per Listener per la replica di SQL Server  
  Quando un Sottoscrittore si connette al computer che esegue IIS, viene autenticato mediante il tipo di autenticazione specificato durante la configurazione di IIS. Dopo l'autenticazione del Sottoscrittore, IIS controlla se il Sottoscrittore è autorizzato a richiamare la replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per controllare gli utenti autorizzati a richiamare le replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario impostare le autorizzazioni per replisapi.dll. La corretta configurazione delle autorizzazioni è fondamentale per impedire l'accesso non autorizzato alla replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Per configurare le autorizzazioni minime per l'account utilizzato per l'esecuzione di Listener per la replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , completare la procedura seguente. I passaggi della procedura si applicano [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] all'esecuzione di IIS 6,0.  
+ Per configurare le autorizzazioni minime per l'account utilizzato per l'esecuzione di Listener per la replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , completare la procedura seguente. I passaggi della procedura si applicano all' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] esecuzione di IIS 6,0.  
   
  Oltre a eseguire la procedura seguente, assicurarsi che gli account di accesso necessari siano inclusi nell'elenco di accesso alla pubblicazione. Per altre informazioni sull'elenco di acceso alla pubblicazione, vedere [Proteggere il server di pubblicazione](security/secure-the-publisher.md).  
   
@@ -276,7 +275,7 @@ ms.locfileid: "80380752"
   
     1.  Fare clic sul pulsante **Start**e quindi scegliere **Esegui**.  
   
-    2.  Nella casella **Apri** Digitare `inetmgr`, quindi fare clic su **OK**.  
+    2.  Nella casella **Apri** Digitare `inetmgr` , quindi fare clic su **OK**.  
   
     3.  In **Gestione Internet Information Services (IIS)** espandere il nodo **computer locale** .  
   
@@ -290,7 +289,7 @@ ms.locfileid: "80380752"
   
     2.  Fare clic con il pulsante destro del mouse sul pool di applicazioni creato e quindi scegliere **Proprietà**.  
   
-    3.  Nella scheda **identità** della finestra di dialogo ** \<ApplicationPoolName> proprietà** fare clic su **configurabile**.  
+    3.  Nella scheda **identità** della finestra di dialogo ** \<ApplicationPoolName> Proprietà** fare clic su **configurabile**.  
   
     4.  Nei campi **Nome utente** e **Password** immettere l'account e la password creati nel passaggio 1.  
   
@@ -302,7 +301,7 @@ ms.locfileid: "80380752"
   
     2.  Espandere il sito Web utilizzato per la sincronizzazione Web, fare clic con il pulsante destro del mouse sulla directory virtuale creata per tale sincronizzazione e quindi scegliere **Proprietà**.  
   
-    3.  Nella scheda **Directory virtuale** della finestra di dialogo **Proprietà - \<NomeDirectoryVirtuale>** selezionare il pool di applicazioni creato nel passaggio 5 nell'elenco a discesa **Pool di applicazioni**.  
+    3.  Nella scheda **directory virtuale** della finestra di dialogo ** \<VirtualDirectoryName> proprietà** , dall'elenco a discesa **pool di applicazioni** , selezionare il pool di applicazioni creato nel passaggio 5.  
   
     4.  Fare clic su **OK**.  
   
@@ -347,7 +346,7 @@ ms.locfileid: "80380752"
     > [!NOTE]  
     >  I certificati vengono installati per gli utenti. Questo processo deve pertanto essere eseguito per ogni utente che eseguirà la sincronizzazione con IIS.  
   
-4.  Nella finestra di dialogo **Connetti a \<NomeServer>** specificare l'account di accesso e la password che verranno usati dall'agente di merge per la connessione a IIS. Queste credenziali verranno inoltre specificate nella Creazione guidata nuova sottoscrizione.  
+4.  Nella finestra di dialogo **Connetti a \<ServerName> ** specificare l'account di accesso e la password che il agente di merge utilizzerà per la connessione a IIS. Queste credenziali verranno inoltre specificate nella Creazione guidata nuova sottoscrizione.  
   
 5.  Nella finestra di Internet Explorer denominata **Informazioni diagnostica SQL Websync**, verificare che il valore contenuto in ogni colonna **Stato** della pagina sia **SUCCESS**.  
   

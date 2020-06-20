@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 870243a5ee69f6058fdc34597ccd4a78b93859e4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c099bf9ea271b5ea93fdebfe8f35c98864bca09
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63252860"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062550"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Gestione di account di accesso e di processi dopo un cambio di ruolo (SQL Server)
    Quando si distribuisce una soluzione di disponibilità elevata e ripristino di emergenza per un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è importante riprodurre le informazioni più significative archiviate per il database nei database **master** o **msdb**. In genere, tra queste informazioni sono inclusi i processi del database primario/principale e gli account di accesso di utenti o processi necessari per la connessione al database. È consigliabile duplicare queste informazioni in qualsiasi istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui viene ospitato un database secondario/mirror. Se possibile, dopo il cambio di ruolo, è opportuno riprodurre le informazioni a livello di programmazione nel nuovo database primario/principale.  
@@ -45,7 +44,7 @@ ms.locfileid: "63252860"
 > [!NOTE]  
 >  È possibile che istanze differenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siano configurate in modo diverso, ad esempio con lettere di unità differenti. I processi di ogni partner devono supportare eventuali differenze di questo tipo.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestire i metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [Risolvere i problemi relativi agli utenti isolati &#40;SQL Server&#41;](troubleshoot-orphaned-users-sql-server.md)  
   

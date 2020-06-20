@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 407dffb1-3ecf-461e-835d-124781f26ee7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f34631e979ded7a329939c23a758ccc0c9aea959
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d598ec6f828fc7d8d59b3f998b775a752b94c4a6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773477"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928870"
 ---
 # <a name="specify-a-version-as-the-latest-version"></a>Specifica di una versione come ultima versione
   Quando un file viene archiviato nel controllo del codice sorgente, l'ultima versione diventa quella archiviata. Gli utenti che la estraggono o la recuperano ricevono copie locali dell'elemento archiviato più di recente.  
@@ -40,7 +39,7 @@ ms.locfileid: "62773477"
   
 3.  Scegliere **controllo del codice sorgente** dal menu **file** e fare clic su **ViewHistory**.  
   
-4.  Nella finestra **di** \<dialogo Cronologia file> selezionare la versione che si desidera specificare come ultima e quindi fare clic su **Aggiungi**.  
+4.  Nella finestra **di dialogo cronologia di** \<file> selezionare la versione che si desidera specificare come ultima e quindi fare clic su **Aggiungi**.  
   
      Accanto alla versione selezionata viene visualizzato un simbolo di blocco per indicare che si tratta della versione corrente del file. Se in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] è caricata una versione diversa, viene chiesto di ricaricare il file.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "62773477"
   
 6.  Fare clic su **Sì** per eseguire il rollback alla versione selezionata.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestisci archiviazioni](../../2014/database-engine/manage-checkins.md)   
  [Archiviazione di file](../../2014/database-engine/check-in-files.md)  
   

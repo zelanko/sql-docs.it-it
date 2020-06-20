@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 86230cd0de145f7f1ccb9f9b2709a5fd29ae78fa
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 24a4f5750af22e8fd588c9c70c1c0399de948907
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707165"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039012"
 ---
 # <a name="using-xml-data-types"></a>Utilizzo di tipi di dati XML
   In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] è stato introdotto il tipo di dati **xml** che consente di archiviare documenti e frammenti XML in un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il tipo di dati **xml**,un tipo di dati predefinito di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è simile per alcuni aspetti ad altri tipi predefiniti, quali **int** e **varchar**. Come per gli altri tipi predefiniti, è possibile usare il tipo di dati **xml** come tipo di colonna quando si crea una tabella, come tipo di variabile, tipo di parametro o tipo restituito dalla funzione oppure in funzioni CAST e CONVERT.  
@@ -135,7 +134,7 @@ ms.locfileid: "82707165"
 #### <a name="the-columns-and-procedure_parameters-schema-rowsets"></a>Set di righe dello schema COLUMNS e PROCEDURE_PARAMETERS  
  Tra le aggiunte ai set di righe dello schema COLUMNS e PROCEDURE_PARAMETERS sono incluse le colonne seguenti.  
   
-|Nome colonna|Tipo|Descrizione|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Nome di un catalogo in cui viene definita una raccolta di XML Schema. NULL per una colonna non XML o una colonna XML non tipizzata.|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Nome di uno schema in cui viene definita una raccolta di XML Schema. NULL per una colonna non XML o una colonna XML non tipizzata.|  
@@ -147,7 +146,7 @@ ms.locfileid: "82707165"
 #### <a name="the-ss_xmlschema-schema-rowset"></a>Set di righe dello schema SS_XMLSCHEMA  
  È stato introdotto un nuovo set di righe dello schema per i client, denominato SS_XMLSCHEMA, che consente il recupero di informazioni su XML Schema. Il set di righe SS_XMLSCHEMA contiene le colonne seguenti.  
   
-|Nome colonna|Tipo|Descrizione|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Catalogo cui appartiene una raccolta XML.|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Schema cui appartiene una raccolta XML.|  
@@ -196,7 +195,7 @@ ms.locfileid: "82707165"
 #### <a name="the-icolumnsrowset-interface"></a>Interfaccia IColumnsRowset  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native client aggiunge le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] colonne specifiche seguenti al set di righe restituito dal metodo **interfaccia IColumnRowset:: GetColumnsRowset** . Tali colonne contengono il nome in tre parti di una raccolta di XML Schema. Per le colonne non XML o per le colonne XML non tipizzate, le tre colonne assumono tutte il valore predefinito NULL.  
   
-|Nome colonna|Tipo|Descrizione|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Catalogo cui appartiene una raccolta di XML Schema.<br /><br /> In caso contrario, NULL.|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Schema cui appartiene una raccolta di XML Schema. In caso contrario, NULL.|  

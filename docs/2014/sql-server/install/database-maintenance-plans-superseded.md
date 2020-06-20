@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: efac127c-6c81-4c7a-a6c4-9aae5d15545d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7d41763582632a92b3a38bdbd67ee55b65f95b6d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3aea75cc4ecc94ccbaeb1f35cecd0b18ff3a65ff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095755"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054933"
 ---
 # <a name="database-maintenance-plans-superseded"></a>Piani di manutenzione del database sostituiti
     
 ## <a name="component"></a>Componente  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agente di  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agente di  
   
 ## <a name="description"></a>Descrizione  
  I piani di manutenzione del database esistenti sono stati aggiornati e continuano a funzionare. Tuttavia, non sarà possibile creare nuovi piani di manutenzione del database utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per visualizzare i piani di manutenzione in Esplora oggetti, espandere Gestione, quindi espandere Legacy. È possibile eseguire la migrazione dei piani di manutenzione del database esistenti al nuovo formato selezionando **migrate** dal menu di scelta rapida per qualsiasi piano di manutenzione del database. Poiché la nuova caratteristica del piano di manutenzione del database non è una sostituzione diretta dei piani di manutenzione del database, dopo la migrazione è possibile che alcune funzionalità vadano perse. Poiché il piano precedente non viene eliminato con la migrazione di un piano di manutenzione del database, è possibile testarne la funzionalità prima di rimuoverlo.  

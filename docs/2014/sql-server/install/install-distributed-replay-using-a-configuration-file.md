@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3259232c-6963-4c9c-9d10-ae42aa262eef
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c9db8127a9a43478d891d5955190bd594fb6647b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e05dbb32bb5680e8d123842a4b0b4d1e4cf1a191
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094580"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054726"
 ---
 # <a name="install-distributed-replay-using-a-configuration-file"></a>Installare i componenti Riesecuzione distribuita tramite un file di configurazione
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il programma di installazione consente di generare un file di configurazione in base alle impostazioni predefinite del sistema e ai dati di input dell'utente. Se si specifica che si desidera installare gli strumenti di gestione, è possibile utilizzare il file di configurazione per distribuire i tre componenti Riesecuzione distribuita, ovvero lo strumento di amministrazione, il controller di Riesecuzione distribuita e il client Riesecuzione distribuita. Sono supportate le operazioni di installazione, ripristino e disinstallazione dei componenti Riesecuzione distribuita.  

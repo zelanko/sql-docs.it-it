@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: 0b03585b-a510-484d-8a63-9b32459def9c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 98478b8ed61a49e74a70d576ccd3600319fce645
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c55200e2121cf642df4ff3d974ec98c65a8760a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62695679"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062265"
 ---
 # <a name="job-properties-new-job-schedules-page"></a>Proprietà processo: Nuovo processo (pagina Pianificazioni)
-  Utilizzare questa pagina per visualizzare e organizzare le pianificazioni per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un processo di Agent.  
+  Utilizzare questa pagina per visualizzare e organizzare le pianificazioni per un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processo di Agent.  
   
 ## <a name="options"></a>Opzioni  
  **Elenco pianificazioni**  
  Elenca le pianificazioni relative al processo corrente.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova pianificazione. Dopo la creazione, la pianificazione verrà aggiunta al processo.  
   
  **Seleziona**  
@@ -38,7 +37,7 @@ ms.locfileid: "62695679"
  **Rimuovi**  
  Consente di rimuovere dal processo la pianificazione selezionata. Se la pianificazione non è utilizzata da altri processi, viene eliminata dal database.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Implementazione di processi](implement-jobs.md)  
   
   

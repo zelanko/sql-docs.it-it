@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cb523d8e9b1dbbb136475d0aa739491935f755ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea6ec9f196acd0a64a0b785024bd6426cd6a5381
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922158"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959071"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>Ripristini di database completi (modello di recupero con registrazione completa)
   L'obiettivo di un ripristino completo del database è il ripristino dell'intero database. L'intero database è offline per la tutta la durata del ripristino. Prima che sia possibile portare online una o più parti del database, tutti i dati vengono recuperati fino a un punto coerente in cui tutte le parti del database sono aggiornate allo stesso punto nel tempo e non sono presenti transazioni di cui non è stato eseguito il commit.  
@@ -73,7 +72,7 @@ ms.locfileid: "62922158"
 >  Se si ripristina un backup del database in un'istanza del server diversa, vedere [Copiare database tramite backup e ripristino](../databases/copy-databases-with-backup-and-restore.md).  
   
 ###  <a name="basic-transact-sql-restore-syntax"></a><a name="TsqlSyntax"></a> Sintassi Transact-SQL di base per RESTORE  
- La sintassi di base [Restore](/sql/t-sql/statements/restore-statements-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)] per la sequenza di ripristino nell'illustrazione precedente è la seguente:  
+ La sintassi di base [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] per la sequenza di ripristino nell'illustrazione precedente è la seguente:  
   
 1.  RESTORE DATABASE *database* FROM *full database backup* WITH NORECOVERY;  
   
@@ -121,7 +120,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
 GO  
 ```  
   
-##  <a name="restoring-a-database-to-a-point-within-a-log-backup"></a><a name="PointWithinBackup"></a>Ripristino di un database fino a un punto all'interno di un backup del log  
+##  <a name="restoring-a-database-to-a-point-within-a-log-backup"></a><a name="PointWithinBackup"></a> Ripristino di un database fino a un punto all'interno di un backup del log  
  Nel modello di recupero con registrazione completa, un ripristino del database completo può essere generalmente recuperato in un punto nel tempo, in una transazione contrassegnata o in un LSN all'interno di un backup del log. Quando si utilizza il modello di recupero con registrazione minima delle operazioni bulk, se il backup del log contiene modifiche con registrazione minima delle operazioni bulk, il recupero temporizzato non è tuttavia possibile.  
   
 ### <a name="sample-point-in-time-restore-scenarios"></a>Scenari di ripristino temporizzato di esempio  
@@ -175,12 +174,12 @@ GO
   
 -   [Recupero fino a un numero di sequenza del file di log &#40;SQL Server&#41;](recover-to-a-log-sequence-number-sql-server.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [Applicare i backup del log delle transazioni &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
- [sp_addumpdevice &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
- [Backup completi del database &#40;SQL Server&#41;](full-database-backups-sql-server.md)   
+ [Applicare backup del log delle transazioni &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+ [sp_addumpdevice &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
+ [Backup completo del database &#40;SQL Server&#41;](full-database-backups-sql-server.md)   
  [Backup differenziali &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Panoramica del backup &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [Panoramica del ripristino e del recupero &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  

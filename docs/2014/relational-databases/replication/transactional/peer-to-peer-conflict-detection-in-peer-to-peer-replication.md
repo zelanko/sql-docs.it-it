@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9db326ac27a7137f03f34e242c3c5c3931637f36
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 301a751bf5b5959ab1fc434ac2a583a6b0378fdd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68198988"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055575"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>Rilevamento dei conflitti nella replica peer-to-peer
   La replica transazionale peer-to-peer consente di inserire, aggiornare o eliminare dati in qualsiasi nodo di una topologia e di propagare le modifiche agli altri nodi. Poiché è possibile modificare i dati in qualsiasi nodo, si potrebbe verificare un conflitto tra le modifiche apportate ai dati in nodi diversi. Se una riga viene modificata in più nodi, può causare un conflitto o persino la perdita di un aggiornamento quando viene propagata in altri nodi.  
@@ -99,7 +98,7 @@ ms.locfileid: "68198988"
   
     5.  Execute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): specificare ' p2p_continue_onconflict ' per il @property parametro e `false` per il @value parametro.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Replica transazionale peer-to-peer](peer-to-peer-transactional-replication.md)  
   
   

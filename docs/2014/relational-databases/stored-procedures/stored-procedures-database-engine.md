@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fdbca3ed012e082c899a5015faabc5c0019fcd75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b1d8d7d0684d528276cc18adfdd3df837a79d551
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68197113"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047464"
 ---
 # <a name="stored-procedures-database-engine"></a>Stored procedure (Motore di database)
   Una stored procedure in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un gruppo di una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] oppure un riferimento a un metodo CLR (Common Runtime Language) di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Le stored procedure assomigliano ai costrutti di altri linguaggi di programmazione perché possono essere utilizzate per:  

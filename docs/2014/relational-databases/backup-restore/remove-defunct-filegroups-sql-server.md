@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 055f9c6a-5c18-4942-98e7-ec918f0ff975
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2a59277110d91ffd40a2db7d62fd3a01aa109dfc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2bcba095d668c5c1ab317269a18af4dc996f63b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921553"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957511"
 ---
 # <a name="remove-defunct-filegroups-sql-server"></a>Rimozione di filegroup inattivi (SQL Server)
   In questo argomento viene descritto come rimuovere filegroup inattivi in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -51,7 +50,7 @@ ms.locfileid: "62921553"
   
 -   Lo stato di tutti i file di un filegroup è defunct quando si rimuove un filegroup offline.  
   
-###  <a name="recommendations"></a><a name="Recommendations"></a> Raccomandazioni  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni  
   
 -   Se non sarà mai necessario ripristinare un filegroup non ripristinato, è possibile rendere il filegroup *inattivo* rimuovendolo dal database. Il filegroup inattivo non potrà mai essere ripristinato in questo database, ma i relativi metadati verranno mantenuti. Dopo che il filegroup è reso inattivo, è possibile riavviare il database. Il recupero renderà il database consistente rispetto ai filegroup ripristinati.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "62921553"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per il database.  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-remove-defunct-filegroups"></a>Per rimuovere filegroup inattivi  
   
@@ -78,7 +77,7 @@ ms.locfileid: "62921553"
   
 6.  Nella griglia **Righe** selezionare il filegroup da eliminare, fare clic su **Rimuovi**e quindi su **OK**.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-remove-defunct-filegroups"></a>Per rimuovere filegroup inattivi  
   
@@ -86,7 +85,7 @@ ms.locfileid: "62921553"
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. **Nota:** in questo esempio si presuppone che i file e il filegroup siano già presenti. Per creare questi oggetti, vedere l'esempio B nell'argomento [Opzioni per file e filegroup ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options) . Nel primo esempio vengono rimossi i file `test1dat3` e `test1dat4` dal filegroup inattivo tramite l'istruzione `ALTER DATABASE` con la clausola `REMOVE FILE` . Nel secondo esempio viene rimosso il filegroup `Test1FG1`inattivo tramite la clausola `REMOVE FILEGROUP` .  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. **Nota:** in questo esempio si presuppone che i file e il filegroup siano già presenti. Per creare questi oggetti, vedere l'esempio B nell'argomento [Opzioni per file e filegroup ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options). Nel primo esempio vengono rimossi i file `test1dat3` e `test1dat4` dal filegroup inattivo tramite l'istruzione `ALTER DATABASE` con la clausola `REMOVE FILE`. Nel secondo esempio viene rimosso il filegroup `Test1FG1`inattivo tramite la clausola `REMOVE FILEGROUP` .  
   
 ```sql  
 USE master;  

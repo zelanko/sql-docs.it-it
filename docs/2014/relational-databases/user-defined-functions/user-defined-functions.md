@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1ce64f821edd68dceaa1809a62a6b894ded6a868
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c7e4b1a77f2fe5a13e21d8b3fe59e37931669b30
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211693"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054992"
 ---
 # <a name="user-defined-functions"></a>Funzioni definite dall'utente
   In modo analogo alle funzioni dei linguaggi di programmazione, le funzioni definite dall'utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono routine che accettano parametri, eseguono un'azione (ad esempio un calcolo complesso) e restituiscono il risultato dell'azione sotto forma di valore. Il valore restituito può essere un valore scalare singolo o un set di risultati.  
@@ -29,7 +28,7 @@ ms.locfileid: "68211693"
   
  [Tipi di funzioni](#FunctionTypes)  
   
- [Indicazioni](#Guidelines)  
+ [Linee guida ](#Guidelines)  
   
  [Istruzioni valide in una funzione](#ValidStatements)  
   
@@ -69,7 +68,7 @@ ms.locfileid: "68211693"
  Funzioni di sistema  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili molte funzioni di sistema che è possibile utilizzare per eseguire diverse operazioni. Tali funzioni non possono essere modificate. Per altre informazioni, vedere [Funzioni predefinite &#40;Transact-SQL&#41;](/sql/t-sql/functions/functions), [Funzioni archiviate di sistema &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/system-functions-for-transact-sql), and [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views).  
   
-##  <a name="guidelines"></a><a name="Guidelines"></a>Linee guida  
+##  <a name="guidelines"></a><a name="Guidelines"></a> Linee guida  
  Gli errori [!INCLUDE[tsql](../../includes/tsql-md.md)] che causano l'annullamento di un'istruzione e l'esecuzione dell'istruzione successiva nel modulo (ad esempio trigger o stored procedure) vengono trattati in modo diverso all'interno di una funzione. Nelle funzioni tali errori arrestano l'esecuzione della funzione, che a sua volta comporta l'interruzione dell'istruzione che ha richiamato la funzione.  
   
  Le istruzioni in un blocco BEGIN...END non possono avere effetti collaterali. Gli effetti collaterali di una funzione sono le modifiche permanenti allo stato di una risorsa il cui ambito è al di fuori della funzione, ad esempio la modifica di una tabella di database. Le uniche modifiche che possono essere apportate dalle istruzioni nella funzione sono le modifiche agli oggetti locali rispetto alla funzione, ad esempio variabili o cursori locali. Modifiche a tabelle di database, operazioni su cursori che non sono locali rispetto alla funzione, invio di messaggi di posta elettronica, tentativi di modifica del catalogo e generazione di un set di risultati da restituire all'utente sono esempi di azioni che non possono essere eseguite in una funzione.  

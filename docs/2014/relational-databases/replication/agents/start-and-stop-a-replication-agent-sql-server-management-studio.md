@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 97977c4a-8c7c-4a22-9480-69aa812bd1e5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 66be53c7b4c145f361c49c0e1611fa2942005ae5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b9074ab3ac56f3457f4ab5ffb877e63a66a1c783
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192460"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068705"
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>Avviare e arrestare un agente di replica (SQL Server Management Studio)
   Avviare e arrestare gli agenti dalla cartella **Processi** e dalla cartella **Replica** in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e da Monitoraggio replica. Avviare e arrestare gli agenti e i processi seguenti:  
@@ -55,7 +54,7 @@ ms.locfileid: "63192460"
   
 2.  Espandere la cartella **SQL Server Agent** e quindi la cartella **Processi** .  
   
-3.  Fare clic con il pulsante destro del mouse sul processo dell'agente e quindi scegliere **Avvia processo** o **Arresta processo**. Il nome del processo per il agente di lettura coda è nel formato **[\<Distributor>].\<>Integer **.  
+3.  Fare clic con il pulsante destro del mouse sul processo dell'agente e quindi scegliere **Avvia processo** o **Arresta processo**. Il nome del processo per il agente di lettura coda è nel formato **[ \<Distributor> ]. \<integer> **  
   
 ### <a name="to-start-and-stop-a-snapshot-agent-log-reader-agent-or-queue-reader-agent-from-replication-monitor"></a>Per avviare e arrestare un agente snapshot, un agente di lettura log o un agente di lettura coda da Monitoraggio replica  
   
@@ -65,7 +64,7 @@ ms.locfileid: "63192460"
   
 3.  Fare clic con il pulsante destro del mouse su un agente e quindi scegliere **Avvia agente** o **Arresta agente**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Monitoraggio della replica](../monitoring-replication.md)   
  [Concetti relativi ai file eseguibili dell'agente di replica](../concepts/replication-agent-executables-concepts.md)   
  [Panoramica degli agenti di replica](replication-agents-overview.md)  

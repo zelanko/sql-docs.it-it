@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 85f666f6-14ee-4f19-b385-e5cc508aabe4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 38bc4d44b988192be76ed613f52793dc2e8daefc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d2b8e15a153ac1ad379e2f167ce585ef8ea1e36
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62629706"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063756"
 ---
 # <a name="subscription-synchronization-history-merge-subscription-sql-server-2005-and-later"></a>Sottoscrizione, Cronologia sincronizzazione (Sottoscrizione di tipo merge, SQL Server 2005 e versioni successive)
   La scheda **Cronologia sincronizzazione** visualizza informazioni dettagliate sull'agente di merge, tra cui lo stato, le statistiche degli articoli, la cronologia, i messaggi informativi e gli eventuali messaggi di errore.  

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 720aa982-09ae-41a3-b603-a91004cfbe3e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cd5575c94c9a74623efaa80c9470c54982a41d0d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: efd59bc8c0d6bb748b9ae6c314b0a75cc6d98c5f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783104"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927892"
 ---
 # <a name="use-the-database-engine-cmdlets"></a>Utilizzo di cmdlet del motore di database
   I cmdlet di Windows PowerShell sono comandi a una sola funzione che in genere presentano una convenzione di denominazione verbo-nome, ad esempio **Get-Help** o **Set-MachineName**. Il provider [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per Windows PowerShell fornisce cmdlet specifici di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

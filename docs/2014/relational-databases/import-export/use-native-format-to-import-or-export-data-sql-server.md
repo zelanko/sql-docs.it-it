@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a2e91899172dfc6d640df0c33c77e32de3c1c21c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab42ba3eb6468aac3da2fa780d371818c8776690
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011654"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026304"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Utilizzo del formato nativo per importare o esportare dati (SQL Server)
   L'utilizzo del formato nativo è consigliabile per il trasferimento bulk dei dati tra più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante un file di dati in cui non sono inclusi caratteri estesi o DBCS (Double Byte Character Set).  
@@ -60,7 +59,7 @@ ms.locfileid: "66011654"
      All'inizio di ogni `char` campo o `varchar` , **bcp** aggiunge la lunghezza del prefisso.  
   
     > [!IMPORTANT]  
-    >  Quando viene utilizzata la modalità nativa, per impostazione predefinita l'utilità **bcp** converte i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caratteri da a caratteri OEM prima di copiarli in un file di dati. L'utilità **bcp** converte i caratteri di un file di dati in caratteri ANSI prima di eseguirne l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importazione bulk in una tabella. Durante queste conversioni può verificarsi la perdita dei dati con caratteri estesi. Per i caratteri estesi, è necessario utilizzare il formato nativo Unicode o specificare una tabella codici.  
+    >  Quando viene utilizzata la modalità nativa, per impostazione predefinita l'utilità **bcp** converte i caratteri da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a caratteri OEM prima di copiarli in un file di dati. L'utilità **bcp** converte i caratteri di un file di dati in caratteri ANSI prima di eseguirne l'importazione bulk in una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella. Durante queste conversioni può verificarsi la perdita dei dati con caratteri estesi. Per i caratteri estesi, è necessario utilizzare il formato nativo Unicode o specificare una tabella codici.  
   
 -   Dati `sql_variant`  
   
@@ -75,12 +74,12 @@ ms.locfileid: "66011654"
   
  Il formato nativo viene supportato dalle opzioni della riga di comando seguenti:  
   
-|Comando|Opzione|Descrizione|  
+|Comando|Opzione|Description|  
 |-------------|------------|-----------------|  
 |**bcp**|**-n**|Consente all'utilità **bcp** di utilizzare i tipi di dati nativi dei dati. <sup>1</sup>|  
 |BULK INSERT|FileType **='** Native **'**|Utilizza i tipi di dati nativi o nativi estesi. Si noti che DATAFILETYPE non è necessario se i tipi di dati vengono specificati in un file di formato.|  
   
- <sup>1</sup> per caricare i dati nativi (**-n**) in un formato compatibile con le versioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti dei client, usare l'opzione **-V** . Per altre informazioni, vedere [Importare dati in formato nativo e carattere da versioni precedenti di SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
+ <sup>1</sup> per caricare i dati nativi (**-n**) in un formato compatibile con le versioni precedenti dei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client, usare l'opzione **-V** . Per altre informazioni, vedere [Importare dati in formato nativo e carattere da versioni precedenti di SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
   
  Per altre informazioni, vedere [Utilità bcp](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) o [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   

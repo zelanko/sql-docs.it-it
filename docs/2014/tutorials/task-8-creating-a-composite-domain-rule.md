@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cff3b662-7876-4445-9bdd-96be35b3ca0c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7e40ec982a9b2c43c3d55ec60179ac9a0b80e8a1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4766a1206eb09e98bb20d3712a63762126b682b7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489621"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006237"
 ---
 # <a name="task-8-creating-a-composite-domain-rule"></a>Attività 8: Creazione di una regola per un dominio composito
   In questa attività viene creata una regola per il dominio composito **Address Validation** . Si definisce una regola tra domini: se **City** è **Los Angeles**, **state** deve essere **CA** , dove **City** e **state** sono due domini.  

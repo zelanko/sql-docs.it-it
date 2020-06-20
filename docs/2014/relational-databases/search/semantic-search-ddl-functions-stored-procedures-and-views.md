@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 182f395f-3168-48a4-b723-ef4403544f9f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ee5cf7136739b012615121e00d8b8d3ed7c7c6ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce6c23f9a8ff1d0dac8986bf6b44c7725d4badc4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011043"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004005"
 ---
 # <a name="semantic-search-ddl-functions-stored-procedures-and-views"></a>DDL di ricerca semantica, funzioni, stored procedure e viste
   Sono elencate le istruzioni Transact-SQL e gli oggetti di database che supportano la ricerca semantica statistica in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -57,7 +56,7 @@ ms.locfileid: "66011043"
 |[sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql)|[Installare e configurare la ricerca semantica](install-and-configure-semantic-search.md)|  
 |[sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql)|[Installare e configurare la ricerca semantica](install-and-configure-semantic-search.md)|  
   
-##  <a name="system-views---catalog-views"></a><a name="cv"></a>Viste di sistema-viste del catalogo  
+##  <a name="system-views---catalog-views"></a><a name="cv"></a> Viste di sistema: viste del catalogo  
   
 |Oggetto|Altre informazioni|  
 |------------|----------------------|  
