@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9109f10d-326b-4a6d-8c97-831f60da8c4c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a8b21784d186be2c989adaacdc691da9a495ca09
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 08e7f37818ab8a1695e21bae527afc633a2b69c5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705525"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020387"
 ---
 # <a name="scrolling-and-fetching-rows"></a>Scorrimento e recupero di righe
   Per utilizzare un cursore scorrevole, un'applicazione ODBC deve effettuare le operazioni seguenti:  

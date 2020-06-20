@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c11ab816-11b8-4131-8b77-c03fe500fa10
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 00731efa85b4396fa2086596c992ad50c9ab41b7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b5099505fa724707f4801418c35927400cb624d0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717707"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002844"
 ---
 # <a name="specifying-xpath-variables-in-xpath-queries-sqlxml-40"></a>Definizione di variabili XPath in query XPath (SQLXML 4.0)
   Negli esempi seguenti viene illustrato il modo in cui passare variabili XPath in query XPath. Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [schema XSD con annotazioni di esempio per gli esempi XPath &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -26,7 +25,7 @@ ms.locfileid: "82717707"
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-use-the-xpath-variables"></a>R. Utilizzare le variabili XPath  
- Un modello di esempio è costituito da due query XPath. Ognuna delle query XPath accetta un parametro. Il modello specifica inoltre valori predefiniti per tali parametri. Se i valori dei parametri non sono specificati, vengono utilizzati i valori predefiniti. In ** \< SQL: header>** vengono specificati due parametri con valori predefiniti.  
+ Un modello di esempio è costituito da due query XPath. Ognuna delle query XPath accetta un parametro. Il modello specifica inoltre valori predefiniti per tali parametri. Se i valori dei parametri non sono specificati, vengono utilizzati i valori predefiniti. In sono specificati due parametri con valori predefiniti **\<sql:header>** .  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

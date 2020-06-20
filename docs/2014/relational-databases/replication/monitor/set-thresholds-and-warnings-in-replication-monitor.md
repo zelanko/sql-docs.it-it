@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 13511f66d2636634daa11b8e6555bb1f5ccd335f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ff3e97a3a784bc61a20de9c65a4381c81078480
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667184"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060805"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Impostazione di valore soglia e avvisi in Monitoraggio replica
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] In Monitoraggio replica vengono visualizzate informazioni sullo stato delle pubblicazioni e delle sottoscrizioni. Per impostazione predefinita, in Monitoraggio replica vengono visualizzati avvisi solo per le sottoscrizioni non inizializzate, ma è possibile abilitarli anche per altre condizioni. È consigliabile abilitare gli avvisi per la topologia, in modo da poter essere informati tempestivamente sullo stato e sulle prestazioni.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]In Monitoraggio replica vengono visualizzate informazioni sullo stato delle pubblicazioni e delle sottoscrizioni. Per impostazione predefinita, in Monitoraggio replica vengono visualizzati avvisi solo per le sottoscrizioni non inizializzate, ma è possibile abilitarli anche per altre condizioni. È consigliabile abilitare gli avvisi per la topologia, in modo da poter essere informati tempestivamente sullo stato e sulle prestazioni.  
   
  Quando si attiva un avviso, si specifica una soglia. Quando tale soglia viene soddisfatta o superata, viene visualizzato un avviso, a meno che non sia necessario visualizzare un problema con una priorità più elevata. Oltre a visualizzare un avviso in Monitoraggio replica, il raggiungimento di un valore soglia può inoltre attivare un messaggio di avviso. È possibile abilitare avvisi per le seguenti condizioni:  
   
@@ -75,7 +74,7 @@ ms.locfileid: "62667184"
   
      In questa finestra di dialogo vengono visualizzati gli avvisi per tutti i tipi di pubblicazione, inclusi quelli che non sono relativi al monitoraggio delle soglie. Per altre informazioni, vedere [Usare gli avvisi per gli eventi degli agenti di replica](../agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Impostare le ** \<** opzioni nella finestra di dialogo Proprietà avviso> alertName:  
+3.  Impostare le opzioni nella finestra di dialogo ** \<AlertName> Proprietà avviso** :  
   
     -   Nella pagina **Generale** fare clic su **Abilita**e specificare il database a cui si desidera applicare l'avviso.  
   
@@ -85,7 +84,7 @@ ms.locfileid: "62667184"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Fare clic su **Chiudi**.  
+5.  Fare clic su **Close**.  
   
 ##  <a name="set-thresholds-and-warnings-for-a-merge-publication"></a><a name="Merge"></a>Impostare soglie e avvisi per una pubblicazione di tipo merge  
   
@@ -117,7 +116,7 @@ ms.locfileid: "62667184"
   
      In questa finestra di dialogo vengono visualizzati gli avvisi per tutti i tipi di pubblicazione, inclusi quelli che non sono relativi al monitoraggio delle soglie.  
   
-3.  Impostare le ** \<** opzioni nella finestra di dialogo Proprietà avviso> alertName:  
+3.  Impostare le opzioni nella finestra di dialogo ** \<AlertName> Proprietà avviso** :  
   
     -   Nella pagina **Generale** fare clic su **Abilita**e specificare il database a cui si desidera applicare l'avviso.  
   
@@ -127,7 +126,7 @@ ms.locfileid: "62667184"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Fare clic su **Chiudi**.  
+5.  Fare clic su **Close**.  
   
 ##  <a name="set-thresholds-and-warnings-for-a-snapshot-publication"></a><a name="Snapshot"></a> Impostare valore soglia e avvisi per una pubblicazione di snapshot  
   
@@ -149,7 +148,7 @@ ms.locfileid: "62667184"
   
      In questa finestra di dialogo vengono visualizzati gli avvisi per tutti i tipi di pubblicazione, inclusi quelli che non sono relativi al monitoraggio delle soglie. Per altre informazioni, vedere [Usare gli avvisi per gli eventi degli agenti di replica](../agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Impostare le ** \<** opzioni nella finestra di dialogo Proprietà avviso> alertName:  
+3.  Impostare le opzioni nella finestra di dialogo ** \<AlertName> Proprietà avviso** :  
   
     -   Nella pagina **Generale** fare clic su **Abilita**e specificare il database a cui si desidera applicare l'avviso.  
   
@@ -159,9 +158,9 @@ ms.locfileid: "62667184"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Fare clic su **Chiudi**.  
+5.  Fare clic su **Close**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Monitoraggio della replica](../monitoring-replication.md)  
   
   

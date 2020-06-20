@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fcfab735-05ca-423a-89f1-fdee7e2ed8c0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 98bfedce41d05a613fe47941b86cfa3fa176ee5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2bda15bcb4d96cc126aa87a986fa667a56730637
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62869178"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054225"
 ---
 # <a name="mssqlserver_21879"></a>MSSQLSERVER_21879
     
@@ -56,6 +55,6 @@ ms.locfileid: "62869178"
   
 -   Utilizzare `sp_changedistpublisher` per modificare la modalità di sicurezza associata al server di pubblicazione originale in MSdistpublishers, nonché per specificare un account di accesso e una password da utilizzare per la connessione.  
   
--   Specificare il parametro della riga di comando *BypassPublisherValidation* nella riga di comando dell'agente di merge `sp_get_redirected_publisher` per ignorare la convalida quando viene chiamato nel server di distribuzione.  
+-   Specificare il parametro della riga di comando *BypassPublisherValidation* nella riga di comando dell'agente di merge per ignorare la convalida quando `sp_get_redirected_publisher` viene chiamato nel server di distribuzione.  
   
   

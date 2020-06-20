@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e05b1ab4-c10b-402a-9591-f6ec1e3db8c0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e9ee204d55114b7e31a9a9550d86cae3baa4dffc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b11323702d7468d07783b4d1c763dba691479d9c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63130361"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043056"
 ---
 # <a name="capture-logon-trigger-event-data"></a>Acquisizione dei dati degli eventi per i trigger di accesso
   Per acquisire dati XML per gli eventi LOGON da utilizzare in trigger LOGON, è possibile utilizzare la funzione [EVENTDATA](/sql/t-sql/functions/eventdata-transact-sql) . L'evento LOGON restituisce lo schema di dati di evento seguente:  

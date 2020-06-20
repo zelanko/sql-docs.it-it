@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 40cbece7c2ee5aad3b65a0b4066b409d9f0b6b6e
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 90fb604545b8f349368c8edb3dfcebe58dd00762
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925055"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007703"
 ---
 # <a name="configure-distributed-replay"></a>Configurare Distributed Replay
   I dettagli relativi alla configurazione della Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono specificati in file XML nel controller della Riesecuzione distribuita, nei client e nella posizione in cui è installato lo strumento di amministrazione, ovvero i file seguenti:  
@@ -31,7 +30,7 @@ ms.locfileid: "82925055"
 ##  <a name="controller-configuration-file-dreplaycontrollerconfig"></a><a name="DReplayController"></a> File di configurazione del controller: DReplayController.config  
  All'avvio del servizio Distributed Replay Controller di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , viene caricato il livello di registrazione dal file di configurazione del controller, ovvero `DReplayController.config`. Questo file si trova nella cartella in cui è stato installato il servizio Distributed Replay Controller:  
   
- **\<percorso installazione controller>\DReplayController.config**  
+ **\<controller installation path>\DReplayController.config**  
   
  Nel livello di registrazione specificato nel file di configurazione del controller è inclusa la seguente impostazione:  
   
@@ -52,7 +51,7 @@ ms.locfileid: "82925055"
 ##  <a name="client-configuration-file-dreplayclientconfig"></a><a name="DReplayClient"></a> File di configurazione del client: DReplayClient.config  
  All'avvio del servizio client Distributed Replay di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vengono caricate le impostazioni di configurazione dal file di configurazione del client, ovvero `DReplayClient.config`. Questo file si trova in ogni client, nella cartella in cui è stato installato il servizio client Distributed Replay:  
   
- **\<percorso installazione client>\DReplayClient.config**  
+ **\<client installation path>\DReplayClient.config**  
   
  Di seguito vengono indicate le impostazioni specificate nel file di configurazione del client:  
   
@@ -83,7 +82,7 @@ ms.locfileid: "82925055"
   
  Il file di configurazione della pre-elaborazione predefinito si trova nella cartella in cui è stato installato lo strumento di amministrazione:  
   
- **\<percorso installazione strumento di amministrazione>\DReplayAdmin\DReplay.exe.preprocess.config**  
+ **\<administration tool installation path>\DReplayAdmin\DReplay.exe.preprocess.config**  
   
  Le impostazioni di configurazione della pre-elaborazione vengono specificate in elementi XML figli dell'elemento `<PreprocessModifiers>` nel file di configurazione della pre-elaborazione. Tali impostazioni includono quanto segue:  
   
@@ -112,11 +111,11 @@ ms.locfileid: "82925055"
   
  Il file di configurazione della riproduzione predefinito si trova nella cartella in cui è stato installato lo strumento di amministrazione:  
   
- **\<percorso installazione strumento di amministrazione>\DReplayAdmin\DReplay.exe.replay.config**  
+ **\<administration tool installation path>\DReplayAdmin\DReplay.exe.replay.config**  
   
  Le impostazioni di configurazione della riproduzione vengono specificate in elementi XML figli degli elementi `<ReplayOptions>` e `<OutputOptions>` del file di configurazione della riproduzione.  
   
-### <a name="replayoptions-element"></a>Elemento \<ReplayOptions>  
+### <a name="replayoptions-element"></a>\<ReplayOptions> Elemento  
  Di seguito vengono indicate le impostazioni specificate dal file di configurazione della riproduzione nell'elemento `<ReplayOptions>` :  
   
 |Impostazione|Elemento XML|Descrizione|Valori consentiti|Obbligatoria|  
@@ -131,7 +130,7 @@ ms.locfileid: "82925055"
 |Timeout query|`<QueryTimeout>`|Specifica il valore di timeout query in secondi. Questo valore è valido solo fino a quando non viene restituita la prima riga.|Numero intero >= 1<br /><br /> (`-1` per disabilitare l'impostazione)|No. Per impostazione predefinita, il valore è `3600`.|  
 |Thread per client|`<ThreadsPerClient>`|Specifica il numero di thread di riproduzione da utilizzare per ogni client di riproduzione.|Numero intero compreso tra `1` e `512`.|No. Se non è specificata, in Distributed Replay verrà utilizzato il valore `255`.|  
   
-### <a name="outputoptions-element"></a>Elemento \<OutputOptions>  
+### <a name="outputoptions-element"></a>\<OutputOptions> Elemento  
  Di seguito vengono indicate le impostazioni specificate dal file di configurazione della riproduzione nell'elemento `<OutputOptions>` :  
   
 |Impostazione|Elemento XML|Descrizione|Valori consentiti|Obbligatoria|  

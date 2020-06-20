@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fec0deef-a729-4ff1-b709-72d2b3f407ac
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f6b90a36238cd4a02e86d49125ee662f07d32882
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb3e7a85254cac96b8b8541de57b494e96b8928f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489090"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061066"
 ---
 # <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>Attività 6: Importazione di valori dal progetto Cleanse Supplier List
   In questa attività vengono importate le informazioni sulla qualità dei dati raccolte durante il processo di pulizia. Per altri dettagli, vedere [importazione dei valori di un progetto di pulizia in un dominio](https://msdn.microsoft.com/library/hh479581.aspx) . È inoltre possibile esportare la Knowledge base in un file DQS prima di pubblicare la Knowledge base **Suppliers** aggiornata.  

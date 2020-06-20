@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f45fe94756ffa30a458aabbb078f6b01c9821918
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fb008314b9cb156f1cc575bda71b6364eca6e3a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921020"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956761"
 ---
 # <a name="restore-pages-sql-server"></a>Ripristino di pagine (SQL Server)
   In questo argomento viene descritto come ripristinare le pagine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'obiettivo di un ripristino della pagina è ripristinare una o più pagine danneggiate senza ripristinare l'intero database. In genere, le pagine candidate al ripristino sono state contrassegnate come "sospette" a causa di un errore verificatosi all'accesso alla pagina. Le pagine sospette vengono identificate nella tabella [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) del database **msdb** .  
@@ -62,7 +61,7 @@ ms.locfileid: "62921020"
   
     -   Log delle transazioni  
   
-    -   Pagine di allocazione: pagine mappa di allocazione globale (GAM, Global Allocation Map), pagine mappa di allocazione globale condivisa (SGAM, Shared Global Allocation Map) e pagine spazio libero nella pagina (PFS, Page Free Space).  
+    -   Pagine di allocazione: pagine GAM (Global Allocation Map), pagine SGAM ( Shared Global Allocation Map) e pagine PFS (Page Free Space).  
   
     -   Pagina 0 di tutti i file di dati (pagina di avvio del file)  
   
@@ -80,7 +79,7 @@ ms.locfileid: "62921020"
   
          Una procedura consigliata per l'esecuzione del ripristino della pagina consiste nell'impostare il database sul modello di recupero con registrazione completa e tentare un backup del log. Se il backup del log funziona, è possibile procedere con il ripristino della pagina. Se l'esecuzione del backup del log ha invece esito negativo, le modifiche eseguite dopo il backup del log precedente verranno perse oppure sarà necessario tentare di eseguire DBCC con l'opzione REPAIR_ALLOW_DATA_LOSS.  
   
-###  <a name="recommendations"></a><a name="Recommendations"></a> Raccomandazioni  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni  
   
 -   Scenari di ripristino della pagina:  
   
@@ -104,7 +103,7 @@ ms.locfileid: "62921020"
   
  Le autorizzazioni per l'istruzione RESTORE vengono assegnate ai ruoli in cui le informazioni sull'appartenenza sono sempre disponibili per il server. Poiché è possibile controllare l'appartenenza ai ruoli predefiniti del database solo quando il database è accessibile e non è danneggiato, condizioni che non risultano sempre vere quando si esegue un'operazione RESTORE, i membri del ruolo predefinito del database **db_owner** non dispongono delle autorizzazioni per l'istruzione RESTORE.  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  A partire da [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] supporta il ripristino della pagina.  
   
 #### <a name="to-restore-pages"></a>Per ripristinare le pagine  
@@ -133,8 +132,8 @@ ms.locfileid: "62921020"
     |Intestazione|Valori|  
     |------------|------------|  
     |**Nome**|Nome del set di backup.|  
-    |**Componente**|Componente incluso nel backup, ovvero **Database**, **File** o **\<vuoto>** (nel caso dei log delle transazioni).|  
-    |**Tipo**|Tipo di backup eseguito: **Completo**, **Differenziale**o **Log delle transazioni**.|  
+    |**Componente**|Componente di cui è stato eseguito il backup: **database**, **file**o **\<blank>** (per i log delle transazioni).|  
+    |**Tipo**|Tipo di operazione di backup eseguita: **Completo**, **Differenziale** o **Log delle transazioni**.|  
     |**Server**|Nome dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che ha eseguito l'operazione di backup.|  
     |**Database**|Nome del database interessato dall'operazione di backup.|  
     |**Posizione**|Posizione del set di backup nel volume.|  
@@ -163,7 +162,7 @@ ms.locfileid: "62921020"
   
 7.  Per ripristinare le pagine elencate nella griglia, fare clic su **OK**.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
  Per specificare una pagina in un'istruzione RESTORE DATABASE, sono necessari l'ID del file contenente la pagina e l'ID della pagina. La sintassi necessaria è la seguente:  
   
  `RESTORE DATABASE <database_name>`  

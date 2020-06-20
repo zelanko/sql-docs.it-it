@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9a81e2ce-aee6-4c4c-8495-6501d715aca2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0578dcb98e34f06db155fd5c3f1438209d8b2687
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 180d54647f2913e3cf4db1ddfed314215820b648
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057289"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965071"
 ---
 # <a name="odata-source-editor-error-output-page"></a>Editor origine OData (pagina Output degli errori)
   Usare la pagina **Output degli errori** della finestra di dialogo **Editor origine OData** per selezionare le opzioni di gestione degli errori e impostare le proprietà delle colonne di output degli errori.  
@@ -46,7 +45,7 @@ ms.locfileid: "66057289"
  **Applica**  
  Consente di applicare l'opzione di gestione degli errori alle celle selezionate.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Editor origine OData &#40;pagina connessione&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
  [Editor origine OData &#40;pagina colonne&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
  [Origine OData](data-flow/odata-source.md)   

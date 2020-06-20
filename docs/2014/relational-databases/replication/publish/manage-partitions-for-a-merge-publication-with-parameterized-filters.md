@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a71ac4d6bcc887257ea5bfbc1523e327fc03b16
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 983b02865c0564919259f896bf09d8bdb0cd969f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74479315"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060508"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>Gestione delle partizioni di una pubblicazione di tipo merge con filtri con parametri
   In questo argomento viene descritto come gestire le partizioni per una pubblicazione di tipo merge con i filtri con parametri in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO). È possibile utilizzare i filtri di riga con parametri per generare partizioni non sovrapposte. È possibile limitare tali partizioni in modo che solo una sottoscrizione riceva una determinata partizione. In questi casi, la presenza di un numero elevato di Sottoscrittori comporta un numero elevato di partizioni, che richiedono anche un numero uguale di snapshot partizionati. Per altre informazioni sui filtri di riga con parametri, vedere [Filtri di riga con parametri](../merge/parameterized-filters-parameterized-row-filters.md).  
@@ -47,11 +46,11 @@ ms.locfileid: "74479315"
 -   Se una pubblicazione contiene filtri con parametri che producono sottoscrizioni con partizioni non sovrapposte ed è necessario ricreare un'eventuale sottoscrizione persa, rimuovere la partizione sottoscritta, ricreare la sottoscrizione, quindi ricreare la partizione. Per altre informazioni sui filtri di riga con parametri, vedere [Filtri di riga con parametri](../merge/parameterized-filters-parameterized-row-filters.md). La replica genera script di creazione per le partizioni del Sottoscrittore esistenti al momento della generazione di uno script per la creazione della pubblicazione. Per altre informazioni, vedere [Scripting Replication](../scripting-replication.md).  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
- Gestire le partizioni nella pagina **Partizioni dati** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](view-and-modify-publication-properties.md). In questa pagina è possibile creare ed eliminare partizioni, consentire ai Sottoscrittori di avviare la generazione e il recapito di snapshot, generare snapshot per una o più partizioni ed eliminare snapshot.  
+ Gestire le partizioni nella pagina **partizioni dati** della finestra di dialogo **proprietà \<Publication> pubblicazione-** . Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](view-and-modify-publication-properties.md). In questa pagina è possibile creare ed eliminare partizioni, consentire ai Sottoscrittori di avviare la generazione e il recapito di snapshot, generare snapshot per una o più partizioni ed eliminare snapshot.  
   
 #### <a name="to-create-a-partition"></a>Per creare una partizione  
   
-1.  Nella pagina **Partizioni dati** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** fare clic su **Aggiungi**.  
+1.  Nella pagina **partizioni dati** della finestra di dialogo **Proprietà pubblicazione \<Publication> -** fare clic su **Aggiungi**.  
   
 2.  Nella finestra di dialogo **Aggiungi partizione dati** immettere un valore per **HOST_NAME()** e/o un valore **SUSER_SNAME()** associato alla partizione che si desidera creare.  
   
@@ -100,25 +99,25 @@ ms.locfileid: "74479315"
   
 #### <a name="to-view-information-on-existing-partitions"></a>Per visualizzare informazioni sulle partizioni esistenti  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helpmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql). Consente di specificare il nome della pubblicazione ** \@** per la pubblicazione. Opzionale Specificare ** \@SUSER_SNAME** o ** \@HOST_NAME** per restituire solo le informazioni basate su un solo criterio di filtro.  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helpmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql). Consente di specificare il nome della pubblicazione per la ** \@ pubblicazione**. Opzionale Specificare ** \@ suser_sname** o ** \@ HOST_NAME** per restituire solo le informazioni basate su un solo criterio di filtro.  
   
 #### <a name="to-define-a-new-partition-and-generate-a-new-partitioned-snapshot"></a>Per definire una nuova partizione e generare un nuovo snapshot partizionato  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql). Specificare il nome della pubblicazione per ** \@la pubblicazione**e il valore con parametri che definisce la partizione per uno degli elementi seguenti:  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql). Specificare il nome della pubblicazione per la ** \@ pubblicazione**e il valore con parametri che definisce la partizione per uno degli elementi seguenti:  
   
-    -   SUSER_SNAME-quando il filtro con parametri è definito dal valore restituito da [SUSER_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql). ** \@**  
+    -   ** \@ SUSER_SNAME** -quando il filtro con parametri è definito dal valore restituito da [SUSER_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql).  
   
-    -   HOST_NAME-quando il filtro con parametri è definito dal valore restituito da [HOST_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql). ** \@**  
+    -   ** \@ HOST_NAME** -quando il filtro con parametri è definito dal valore restituito da [HOST_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql).  
   
 2.  Creare e inizializzare lo snapshot con parametri per la nuova partizione. Per altre informazioni, vedere [Creazione di uno snapshot per una pubblicazione di tipo merge con filtri con parametri](../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 #### <a name="to-delete-a-partition"></a>Per eliminare una partizione  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_dropmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql). Specificare il nome della pubblicazione per ** \@la pubblicazione** e il valore con parametri che definisce la partizione per uno degli elementi seguenti:  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_dropmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql). Specificare il nome della pubblicazione per la ** \@ pubblicazione** e il valore con parametri che definisce la partizione per uno degli elementi seguenti:  
   
-    -   SUSER_SNAME-quando il filtro con parametri è definito dal valore restituito da [SUSER_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql). ** \@**  
+    -   ** \@ SUSER_SNAME** -quando il filtro con parametri è definito dal valore restituito da [SUSER_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql).  
   
-    -   HOST_NAME-quando il filtro con parametri è definito dal valore restituito da [HOST_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql). ** \@**  
+    -   ** \@ HOST_NAME** -quando il filtro con parametri è definito dal valore restituito da [HOST_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql).  
   
      Viene inoltre effettuata la rimozione del processo di snapshot e degli eventuali file di snapshot per la partizione.  
   

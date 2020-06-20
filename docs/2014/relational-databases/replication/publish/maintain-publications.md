@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: d5bf7340-2b0b-4593-965c-de04ae628344
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 848081c8a4eac92299a916618aa4cd6289183d0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf1666aeacd7df2589c810faa47edf9f435b73bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63238806"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060516"
 ---
 # <a name="maintain-publications"></a>Gestione delle pubblicazioni
   Dopo la creazione di una pubblicazione, potrebbe essere necessario aggiungere o eliminare articoli oppure modificare le proprietà della pubblicazione e degli articoli. Dopo la creazione di una pubblicazione è consentita la maggiore parte delle modifiche. In alcuni casi, tuttavia, è necessario generare un nuovo snapshot per una pubblicazione e/o reinizializzare le relative sottoscrizioni. Per altre informazioni, vedere [Modificare le proprietà di pubblicazioni e articoli](change-publication-and-article-properties.md) e [Aggiungere ed eliminare articoli in pubblicazioni esistenti](add-articles-to-and-drop-articles-from-existing-publications.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Domande frequenti sull'amministrazione della replica](../administration/frequently-asked-questions-for-replication-administrators.md)   
  [Procedure consigliate per l'amministrazione della replica](../administration/best-practices-for-replication-administration.md)   
  [Pubblicare dati e oggetti di database](publish-data-and-database-objects.md)   

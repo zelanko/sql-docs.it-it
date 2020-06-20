@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0fe0862438943fec36728a3c4e6c796061c86593
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9cab0c8a25f4dd95c205c63db1ae056468ebe61c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891579"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965246"
 ---
 # <a name="step-2-running-the-package-installation-wizard"></a>Passaggio 2: Esecuzione dell'Installazione guidata pacchetti
   In questa attività verrà eseguita l'Installazione guidata pacchetti per distribuire i pacchetti del progetto Deployment Tutorial in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Nella tabella sysssispackages del database msdb di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] possono essere installati solo i pacchetti. I file di supporto inclusi nel pacchetto di distribuzione verranno installati nel file system.  
@@ -103,7 +102,7 @@ ms.locfileid: "62891579"
   
 ![Integration Services icona (piccola)](media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina relativa a Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Servizio Integration Services &#40;servizio SSIS&#41;](service/integration-services-service-ssis-service.md)   
  [Gestione del servizio Integration Services](../../2014/integration-services/manage-the-integration-services-service.md)  
   

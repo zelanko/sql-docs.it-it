@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3a916cc7-f352-42cb-8b83-f78e06cef991
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a5b073ee58c0e29b1d7e6d02d079141838cef237
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6937dbb9ce42cd5631201e0c97be42b211742ada
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705672"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020961"
 ---
 # <a name="cursor-types"></a>Tipi di cursore
   ODBC definisce quattro tipi di cursore supportati da Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client. Questi cursori variano in base alla capacità di rilevare le modifiche apportate al set di risultati e alle risorse utilizzate, ad esempio la memoria e lo spazio in **tempdb**. Tramite un cursore è possibile rilevare le modifiche apportate alle righe solo quando viene eseguito un secondo tentativo di recupero di tali righe. L'origine dei dati non è in grado di notificare al cursore le eventuali modifiche apportate alle righe in fase di recupero. La capacità di rilevamento delle modifiche non effettuate di un cursore inoltre varia in base al livello di isolamento delle transazioni.  

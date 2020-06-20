@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3f70ddfc241a902a59dff989323a75b17f7af55e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bbd9c6fa86e3ef26f0779795ddeacda67976ec21
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807559"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934222"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-inbound-connections-transact-sql"></a>Impostazione dell'endpoint del mirroring del database per l'utilizzo di certificati per le connessioni in entrata (Transact-SQL)
   In questo argomento viene illustrata la procedura per configurare le istanze del server in modo da utilizzare i certificati per l'autenticazione delle connessioni in ingresso per il mirroring del database. Prima di impostare le connessioni in entrata, è necessario configurare le connessioni in uscita in ogni istanza del server. Per altre informazioni, vedere [Impostare l'endpoint del mirroring del database per l'uso di certificati per le connessioni in uscita &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md).  
@@ -162,7 +161,7 @@ GO
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  Quando si copia un certificato in un altro sistema, utilizzare un metodo di copia sicuro. È estremamente importante garantire la protezione di tutti i certificati.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Sicurezza del trasporto per il mirroring del database e Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [CONCEDERE le autorizzazioni per l'endpoint &#40;&#41;Transact-SQL](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   
  [Configurare un database mirror crittografato](set-up-an-encrypted-mirror-database.md)   

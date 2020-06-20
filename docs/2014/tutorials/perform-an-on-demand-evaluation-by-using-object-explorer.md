@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ee6d3b79-18bc-49d3-8a1d-0c0905b990f0
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8d2aadd055334c7ee64871c2fdfe5239c9849e90
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da56673e05c092c965554b76572ac3b0486d2110
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210941"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044160"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-object-explorer"></a>Esecuzione di una valutazione su richiesta utilizzando Esplora oggetti
   In questa attività verrà utilizzato Esplora oggetti per eseguire una valutazione su richiesta di criteri per procedure consigliate per il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] in una singola istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -27,7 +26,7 @@ ms.locfileid: "68210941"
  Questa lezione è basata sulla versione di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
->  Per eseguire una valutazione su richiesta dei criteri per procedure consigliate per le istanze in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]cui è in esecuzione, è necessario utilizzare la procedura descritta nell'argomento [eseguire una valutazione su richiesta tramite Server registrati](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md).  
+>  Per eseguire una valutazione su richiesta dei criteri per procedure consigliate per le istanze in cui è in esecuzione [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] , è necessario utilizzare la procedura descritta nell'argomento [eseguire una valutazione su richiesta tramite Server registrati](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md).  
   
 ### <a name="to-perform-an-on-demand-evaluation-by-using-object-explorer"></a>Per eseguire una valutazione su richiesta utilizzando Esplora oggetti  
   
@@ -40,7 +39,7 @@ ms.locfileid: "68210941"
   
 3.  Nella finestra di dialogo **Valuta criteri** , accanto alla casella **origine** , fare clic sul pulsante con i puntini di sospensione (**...**).  
   
-4.  Nella finestra di dialogo **Seleziona origine** è possibile selezionare i **file** o il **server** come origine dei file di criteri da valutare. Se si fa clic su **Server**, è possibile eseguire una valutazione su richiesta dei criteri per procedure consigliate importati in precedenza nella gestione basata su criteri in un server locale o remoto. In questa esercitazione si fa clic su **file**, quindi si selezionano i singoli file dei criteri che si desidera valutare. A tale scopo, effettuare le operazioni seguenti:  
+4.  Nella finestra di dialogo **Seleziona origine** è possibile selezionare i **file** o il **server** come origine dei file di criteri da valutare. Se si fa clic su **Server**, è possibile eseguire una valutazione su richiesta dei criteri per procedure consigliate importati in precedenza nella gestione basata su criteri in un server locale o remoto. In questa esercitazione si fa clic su **file**, quindi si selezionano i singoli file dei criteri che si desidera valutare. A questo scopo, seguire questa procedura:  
   
     1.  Fare clic su **file**.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "68210941"
 6.  Per alcuni errori relativi ai criteri, la gestione basata su criteri consente di applicare immediatamente la conformità di criteri nella destinazione. Per questo tipo di errori verrà visualizzata una casella di controllo accanto ai criteri che presentano errori. Se si seleziona la casella di controllo, il pulsante **applica** diventa disponibile. Quando si fa clic su **applica**, l'impostazione non conforme verrà automaticamente aggiornata nell'istanza di di destinazione.  
   
     > [!CAUTION]  
-    >  Assicurarsi di aver compreso a pieno tutte le impostazioni dei criteri prima di aggiornare automaticamente un'istanza di destinazione. Dopo aver selezionato una o più caselle di controllo, è consigliabile fare clic su **script**e scegliere un percorso di output in modo che sia possibile esaminare [!INCLUDE[tsql](../includes/tsql-md.md)] il codice sottostante prima di applicare le modifiche.  
+    >  Assicurarsi di aver compreso a pieno tutte le impostazioni dei criteri prima di aggiornare automaticamente un'istanza di destinazione. Dopo aver selezionato una o più caselle di controllo, è consigliabile fare clic su **script**e scegliere un percorso di output in modo che sia possibile esaminare il [!INCLUDE[tsql](../includes/tsql-md.md)] codice sottostante prima di applicare le modifiche.  
   
 7.  Per visualizzare i risultati dettagliati per un criterio, fare clic sul criterio nella tabella **dei risultati** .  
   

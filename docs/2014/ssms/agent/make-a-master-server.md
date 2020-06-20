@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 05739a73-1fdf-4d9d-92a6-70f328380322
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ca0e79c617db6cc2906ac9225efd92e156699951
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce8e7428aaf8ba459bcf6831988c61da3f192bac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68189137"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008758"
 ---
 # <a name="make-a-master-server"></a>Make a Master Server
   In questo argomento viene descritto come configurare un server master [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -48,7 +47,7 @@ ms.locfileid: "68189137"
 ###  <a name="security"></a><a name="Security"></a> Sicurezza  
  I processi distribuiti con passaggi associati a un proxy vengono eseguiti nel contesto dell'account proxy nel server di destinazione. Verificare che siano soddisfatte le condizioni seguenti, per assicurare che i passaggi di processo associati a un proxy vengano scaricati dal server master a quello di destinazione:  
   
--   La sottochiave del registro di sistema del server master **\ HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Microsoft SQL Server\\<*instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) è impostata su 1 (true). Per impostazione predefinita, questa sottochiave è impostata su 0 (False).  
+-   La sottochiave del registro di sistema del server master **\ HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Microsoft SQL Server \\ < *instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) è impostata su 1 (true). Per impostazione predefinita, questa sottochiave è impostata su 0 (False).  
   
 -   Nel server di destinazione deve esistere un account proxy con lo stesso nome dell'account proxy del server master utilizzato per l'esecuzione del passaggio del processo.  
   
@@ -107,7 +106,7 @@ ms.locfileid: "68189137"
      **Aggiungi connessione**  
      Consente di aggiungere un server all'elenco dei server di destinazione senza registrarlo.  
   
-     **Connessione**  
+     **Connection**  
      Modificare le proprietà di connessione per il server selezionato.  
   
 5.  Nella pagina **Credenziali account di accesso al server master** specificare se si desidera creare un nuovo account di accesso per il server di destinazione, se necessario, e assegnare a tale account di accesso i diritti per il server di destinazione.  
@@ -136,7 +135,7 @@ GO;
   
  Per ulteriori informazioni, vedere [sp_msx_enlist &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di un ambiente multiserver](create-a-multiserver-environment.md)   
  [Amministrazione automatizzata in un'organizzazione](automated-administration-across-an-enterprise.md)  
   

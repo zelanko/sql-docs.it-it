@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f2528e74-2b1c-48cb-861b-c4e57b51ac35
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 02b55465cc4aed912e6e955883ca8fdbfa4be870
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 52c3a38488117c55de497442dd138a55cc8b32e4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228207"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932852"
 ---
 # <a name="implementing-the-or-operator-in-natively-compiled-stored-procedures"></a>Implementazione dell'operatore OR in stored procedure compilate in modalità nativa
   Gli operatori OR non sono supportati nei predicati di query in stored procedure compilate in modo nativo. Dal momento che anche gli operatori NOT non sono supportati nei predicati di query in stored procedure compilate in modo nativo, gli effetti degli operatori OR non possono essere simulati da soli tramite l'utilizzo degli operatori logici equivalenti. Tuttavia, gli effetti di un operatore OR possono essere simulati con variabili di tabella ottimizzata per la memoria.  
@@ -46,7 +45,7 @@ ms.locfileid: "75228207"
   
 5.  Utilizzare il contenuto della variabile di tabella ottimizzata per la memoria come risultato della query.  
   
- Nell'esempio seguente vengono utilizzate tabelle del database AdventureWorks2012 aggiornate per [!INCLUDE[hek_2](../includes/hek-2-md.md)]. Per scaricare i file per questo esempio, vai ai [database AdventureWorks-2012, 2008R2 e 2008](https://msftdbprodsamples.codeplex.com/releases/view/93587). Per applicare [!INCLUDE[hek_2](../includes/hek-2-md.md)] l'esempio di codice a AdventureWorks2012, passare all' [esempio di OLTP In memoria SQL Server 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
+ Nell'esempio seguente vengono utilizzate tabelle del database AdventureWorks2012 aggiornate per [!INCLUDE[hek_2](../includes/hek-2-md.md)]. Per scaricare i file per questo esempio, vai ai [database AdventureWorks-2012, 2008R2 e 2008](https://msftdbprodsamples.codeplex.com/releases/view/93587). Per applicare l' [!INCLUDE[hek_2](../includes/hek-2-md.md)] esempio di codice a AdventureWorks2012, passare all' [esempio di OLTP In memoria SQL Server 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
   
  Aggiungere la seguente stored procedure al database. Questa stored procedure verrà convertita per utilizzare la compilazione nativa.  
   
@@ -161,7 +160,7 @@ GO
   
 5.  Utilizzare il contenuto della variabile di tabella ottimizzata per la memoria come risultato della query.  
   
- Nell'esempio seguente vengono utilizzate tabelle del database AdventureWorks2012 aggiornate per [!INCLUDE[hek_2](../includes/hek-2-md.md)]. Per scaricare i file per questo esempio, vai ai [database AdventureWorks-2012, 2008R2 e 2008](https://msftdbprodsamples.codeplex.com/releases/view/93587). Per applicare [!INCLUDE[hek_2](../includes/hek-2-md.md)] l'esempio di codice a AdventureWorks2012, passare all' [esempio di OLTP In memoria SQL Server 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
+ Nell'esempio seguente vengono utilizzate tabelle del database AdventureWorks2012 aggiornate per [!INCLUDE[hek_2](../includes/hek-2-md.md)]. Per scaricare i file per questo esempio, vai ai [database AdventureWorks-2012, 2008R2 e 2008](https://msftdbprodsamples.codeplex.com/releases/view/93587). Per applicare l' [!INCLUDE[hek_2](../includes/hek-2-md.md)] esempio di codice a AdventureWorks2012, passare all' [esempio di OLTP In memoria SQL Server 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
   
  Aggiungere la seguente stored procedure al database. Questa stored procedure verrà convertita per utilizzare la compilazione nativa. In questo esempio vengono utilizzate le condizioni INNER JOIN.  
   

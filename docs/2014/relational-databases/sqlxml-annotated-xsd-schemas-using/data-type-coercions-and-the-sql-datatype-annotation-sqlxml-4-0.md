@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: db192105-e8aa-4392-b812-9d727918c005
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: aa2b5830ab0579fe0429357fea3275d4e14d1c47
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 61da7fafe60ef31246a436e21a5110c121d094e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703636"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996412"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>Coercizioni dei tipi di dati e annotazione sql:datatype (SQLXML 4.0)
   In uno schema XDR l'attributo `xsd:type` specifica il tipo di dati XSD di un elemento o di un attributo. Quando viene utilizzato uno schema XSD per estrarre dati dal database, il tipo di dati specificato viene utilizzato per formattare i dati.  
@@ -94,7 +93,7 @@ ms.locfileid: "82703636"
   
  È in genere consigliabile specificare `sql:datatype` nello schema.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per l'esecuzione di esempi SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-xsdtype"></a>R. Definizione dell'attributo xsd:type  

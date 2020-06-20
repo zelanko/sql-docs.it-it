@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7349fb87-b973-4160-a2be-cab73abf5b31
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 66e150656b3d1d71579e04417adbefb3a3fa0025
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81d686f22eaafceca708b1f0423c050549d95ac2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62720948"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061363"
 ---
 # <a name="setcurrentcertificate-method-sinstance-class"></a>Metodo SetCurrentCertificate (classe SInstance)
   Imposta il certificato di sicurezza corrente.  
@@ -40,7 +39,7 @@ SHA
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  Oggetto della [classe SInstance](sinstance-class.md) che rappresenta l'impostazione del server in un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 #### <a name="parameters"></a>Parametri  
@@ -54,7 +53,7 @@ SHA
   
 ## <a name="remarks"></a>Osservazioni  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurazione di protocolli di rete server e di librerie di rete](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

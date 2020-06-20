@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9cd3f00b89de1d2bad683e7ce7005605d3c61f18
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa7013fddc6b2ce12ad9ad0f9fcb511d93915e05
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211767"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002860"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>Utilizzare parametri con valori di tabella (Motore di database)
   I parametri con valori di tabella vengono dichiarati utilizzando tipi di tabella definiti dall'utente. I parametri con valori di tabella consentono di inviare più righe di dati a un'istruzione o a una routine [!INCLUDE[tsql](../../includes/tsql-md.md)] , ad esempio una stored procedure o una funzione, senza creare una tabella temporanea o molti parametri.  
@@ -119,7 +118,7 @@ EXEC usp_InsertProductionLocation @LocationTVP;
 GO  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Crea tipo &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-type-transact-sql)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
  [sys. Types &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-types-transact-sql)   

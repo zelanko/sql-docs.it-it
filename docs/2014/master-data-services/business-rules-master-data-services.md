@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d6ad90fe277e76f98298f4e66fe8c652e64fd38d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84871fb62e07cd49d0e63335c6a6b78b9e3ba0ae
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483652"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972121"
 ---
 # <a name="business-rules-master-data-services"></a>Regole business (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]una regola business è una regola utilizzata per garantire la qualità e l'accuratezza dei dati master. È possibile utilizzare una regola business per aggiornare automaticamente i dati, inviare posta elettronica o per avviare un processo aziendale o un flusso di lavoro.  
@@ -43,7 +42,7 @@ ms.locfileid: "65483652"
   
 2.  **Modifica valore**  
   
-3.  **Validation**  
+3.  **Convalida**  
   
 4.  **Azione esterna**  
   

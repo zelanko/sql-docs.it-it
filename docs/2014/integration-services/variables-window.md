@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 62dd9af9ea66678c2cc69a016b83e907025a4294
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 258fdee44c2ab67babfa366f627b7b297c5f1535
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62877876"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972561"
 ---
 # <a name="variables-window"></a>Finestra Variabili
   Usare la finestra **Variabili** per creare e modificare variabili definite dall'utente e visualizzare quelle di sistema.  
@@ -64,7 +63,7 @@ ms.locfileid: "62877876"
  Consente di visualizzare il valore della variabile. È possibile aggiornare il valore per le variabili definite dall'utente. Questo valore può essere letterale, un'espressione e una stringa su più righe. Per assegnare un'espressione alla variabile, fare clic sul pulsante con i puntini di sospensione accanto alla colonna **Espressione** nella finestra **Variabili** .  
   
  `Namespace`  
- Consente di visualizzare il nome dello spazio dei nomi. Le variabili definite dall'utente vengono inizialmente create nello spazio dei nomi **User** , ma è possibile modificare il nome dello `Namespace` spazio dei nomi nel campo. Per visualizzare questa colonna, fare clic su **Opzioni griglia**.  
+ Consente di visualizzare il nome dello spazio dei nomi. Le variabili definite dall'utente vengono inizialmente create nello spazio dei nomi **User** , ma è possibile modificare il nome dello spazio dei nomi nel `Namespace` campo. Per visualizzare questa colonna, fare clic su **Opzioni griglia**.  
   
  **Raise Change Event**  
  Consente di indicare se generare l'evento `OnVariableValueChanged` alla modifica di un valore. È possibile aggiornare il valore per le variabili definite dall'utente e le variabili di sistema. Per impostazione predefinita, questa colonna non viene visualizzata nella finestra **Variabili** . Per visualizzare questa colonna, fare clic su **Opzioni griglia**.  
@@ -77,7 +76,7 @@ ms.locfileid: "62877876"
   
  Se si assegna un'espressione a una variabile, accanto a quest'ultima viene visualizzato un marcatore icona speciale. Tale marcatore icona speciale viene visualizzato anche accanto alle gestioni connessioni e alle attività in cui sono impostate espressioni.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services &#40;variabili&#41; SSIS](integration-services-ssis-variables.md)   
  [Usare variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)   
  [Integration Services &#40;espressioni di&#41; SSIS](expressions/integration-services-ssis-expressions.md)   

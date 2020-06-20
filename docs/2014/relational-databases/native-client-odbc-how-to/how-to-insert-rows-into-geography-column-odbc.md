@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 77d4bea058b9fc4cf63436ec055c597393d5496f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2cf936e5e57e64c13b93ba27cd0f78aa1234eca0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82700832"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044034"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>Procedura: Inserire righe in colonne geografiche (ODBC)
   In questo esempio vengono inserite due righe in una tabella con colonna geografica da un input WKB (Well-Known Binary) utilizzando 2 associazioni diverse, SQLCCHAR e SQLCBINARY. Viene quindi selezionata una riga dalla tabella e viene utilizzato ::STAsText() per visualizzarla. Il valore di WKB è 0x01010000000700ECFAD03A4C4001008000B5DF07C0 e tramite l'applicazione viene visualizzato nella console l'output: POINT(56.4595 -2.9842).  

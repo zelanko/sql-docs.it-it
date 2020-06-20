@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf244c24-bd45-4ece-b66b-78b488f35c5b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ae8ebf56e4ae7c4fce3566cb7688d203b8ceb318
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67c81901e454c4e7a47e5d448f2aa17d6a8820fa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054928"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972811"
 ---
 # <a name="transfer-logins-task-editor-logins-page"></a>Editor attività Trasferisci account di accesso (pagina Account di accesso)
   Usare la pagina **Account di accesso** della finestra di dialogo **Editor attività Trasferisci account di accesso** per impostare le proprietà per la copia di uno o più account di accesso di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] da un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a un altra. Per altre informazioni su questa attività, vedere [Attività Trasferisci account di accesso](control-flow/transfer-logins-task.md).  
@@ -29,15 +28,15 @@ ms.locfileid: "66054928"
   
 ## <a name="options"></a>Opzioni  
  **SourceConnection**  
- Selezionare una gestione connessione SMO nell'elenco oppure fare clic su ** \<nuova connessione... >** per creare una nuova connessione al server di origine.  
+ Selezionare una gestione connessione SMO nell'elenco oppure fare clic su **\<New connection...>** per creare una nuova connessione al server di origine.  
   
  **DestinationConnection**  
- Selezionare una gestione connessione SMO nell'elenco oppure fare clic su ** \<nuova connessione... >** per creare una nuova connessione al server di destinazione.  
+ Selezionare una gestione connessione SMO nell'elenco oppure fare clic su **\<New connection...>** per creare una nuova connessione al server di destinazione.  
   
  **LoginsToTransfer**  
  Consente di selezionare gli account di accesso di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] da copiare dal server di origine a quello di destinazione. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**AllLogins**|Tutti gli account di accesso di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nel server di origine verranno copiati in quello di destinazione.|  
 |**SelectedLogins**|Solo gli account di accesso specificati in **LoginsList** verranno copiati nel server di destinazione.|  
@@ -54,16 +53,16 @@ ms.locfileid: "66054928"
   
  Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**FailTask**|L'attività ha esito negativo se esistono già account di accesso con lo stesso nome nel server di destinazione.|  
 |**Sovrascrivere**|L'attività sovrascrive gli account di accesso con lo stesso nome nel server di destinazione.|  
-|**Ignorare**|L'attività ignora gli account di accesso con lo stesso nome nel server di destinazione.|  
+|**Ignora**|L'attività ignora gli account di accesso con lo stesso nome nel server di destinazione.|  
   
  **CopySids**  
  Consente di indicare se gli identificatori di sicurezza associati agli account di accesso devono essere copiati sul server di destinazione. L'opzione**CopySids** deve essere impostata su **True** se l'attività Trasferisci account di accesso viene usata contestualmente all'attività Trasferisci database. In caso contrario, gli account di accesso copiati non verranno riconosciuti dal database trasferito.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Attività Integration Services](control-flow/integration-services-tasks.md)   
  [Editor attività Trasferisci account di accesso &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   

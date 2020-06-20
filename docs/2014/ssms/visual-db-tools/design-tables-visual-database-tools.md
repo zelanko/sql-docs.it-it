@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: becfebbfe57e00b9abcc3cec29364f6b65fb1dfc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08b322b5eb6658dfa44dfd1734a5e5d721674630
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316144"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044416"
 ---
 # <a name="design-tables-visual-database-tools"></a>Progettazione di tabelle (Visual Database Tools)
   In Progettazione tabelle è disponibile un'intera finestra per la progettazione di una singola tabella. Negli argomenti elencati in questa sezione viene descritto come utilizzare Progettazione tabelle per creare e modificare le tabelle di database.  

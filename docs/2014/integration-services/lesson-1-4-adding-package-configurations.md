@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c1d98187fbe76e726dadfe163d75a27c51fd60e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 719b0b357767fcc4412663449a6a7bd929b34cd3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767643"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965291"
 ---
 # <a name="step-4-adding-package-configurations"></a>Passaggio 4: Aggiunta di configurazioni pacchetto
   In questa attività si procederà all'aggiunta di una configurazione a ogni pacchetto. Le configurazioni consentono di aggiornare i valori delle proprietà dei pacchetti e gli oggetti dei pacchetti in fase di esecuzione.  
@@ -133,7 +132,7 @@ ms.locfileid: "62767643"
   
 ![Integration Services icona (piccola)](media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina relativa a Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurazioni di pacchetti](../../2014/integration-services/package-configurations.md)   
  [Creazione di configurazioni di pacchetto](../../2014/integration-services/create-package-configurations.md)   
  [Accesso ai file utilizzati dai pacchetti](../../2014/integration-services/access-to-files-used-by-packages.md)  

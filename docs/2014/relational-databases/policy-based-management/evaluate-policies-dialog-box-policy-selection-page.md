@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6266dd29c3486b6ae4163b15cffbc455eee31c5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b163f9e984a3fa9933cdc57150357596f4face8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62705130"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061752"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>Finestra di dialogo Valuta criteri, pagina Selezione criteri
   Utilizzare questa finestra di dialogo per valutare criteri della gestione basata su criteri. Selezionando la pagina **Risultati valutazione** , è possibile applicare criteri agli elementi non conformi ai criteri inclusi in un set di destinazioni.  
   
 ## <a name="options"></a>Opzioni  
- **origine**  
+ **Origine**  
  Specifica l'origine dei criteri. Per modificare l'origine, fare clic sul pulsante Sfoglia (**...**) per aprire la finestra di dialogo **Seleziona origine** .  
   
  **File**  
@@ -60,7 +59,7 @@ ms.locfileid: "62705130"
   
     -   Il tipo di server di destinazione è diverso dal tipo di server in cui vengono valutati i criteri. Se, ad esempio, nel [!INCLUDE[ssDE](../../includes/ssde-md.md)]si tenta di valutare i criteri creati per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], si riceverà un set di destinazioni vuoto.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Amministrare i server tramite la gestione basata su criteri](administer-servers-by-using-policy-based-management.md)   
  [Finestra di dialogo Valuta criteri, pagina Risultati valutazione](evaluate-policies-dialog-box-evaluation-results-page.md)  
   

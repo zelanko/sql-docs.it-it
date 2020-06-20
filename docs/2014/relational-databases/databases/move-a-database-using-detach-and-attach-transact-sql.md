@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16fa57c35c2c40d307b73809c21ccfbedc54f705
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 768a70dfe94af6f8d65f7c76fa08d3dff650fe7d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917094"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965891"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Spostamento di un database tramite la funzionalità di scollegamento e collegamento (Transact-SQL)
   In questo argomento si illustra come spostare un database scollegato in un'altra posizione e come ricollegarlo alla stessa istanza oppure a un'altra istanza del server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Tuttavia, è consigliabile spostare i database utilizzando la procedura di rilocazione pianificata ALTER DATABASE anziché la funzionalità di scollegamento e collegamento. Per altre informazioni, vedere [Spostare database utente](move-user-databases.md).  

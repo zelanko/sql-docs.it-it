@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: adca6938-6d5a-40ec-950e-dceb79d044fe
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 72909e812418d26d9f9f2905b41e686c36f6b670
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8179e5caddbd104fdf35598b7ea25e0f32fd9e84
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056940"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964915"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>Riferimento all'interfaccia utente della Configurazione guidata pacchetti
   Usare la **Configurazione guidata pacchetto** per creare configurazioni tramite cui è possibile aggiornare le proprietà di un pacchetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e i relativi oggetti in fase di esecuzione. Questa procedura guidata viene eseguita quando si aggiunge una nuova configurazione o se ne modifica una esistente nella finestra di dialogo **Libreria configurazioni pacchetto** . Per aprire la finestra di dialogo **Libreria configurazioni pacchetto** , selezionare **Configurazioni pacchetto** nel menu **SSIS** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Per altre informazioni, vedere [Creazione di configurazioni dei pacchetti](../../2014/integration-services/create-package-configurations.md).  
@@ -49,7 +48,7 @@ ms.locfileid: "66056940"
  **Tipo configurazione**  
  Selezionare una delle opzioni seguenti per impostare il tipo di origine in cui archiviare la configurazione:  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**File di configurazione XML**|Consente di archiviare la configurazione come file in formato XML. Tramite la selezione di questo valore le opzioni dinamiche vengono visualizzate nella sezione **Tipo configurazione**.|  
 |**Variabile di ambiente**|Consente di archiviare la configurazione in una delle variabili di ambiente. Tramite la selezione di questo valore le opzioni dinamiche vengono visualizzate nella sezione **Tipo configurazione**.|  
@@ -66,7 +65,7 @@ ms.locfileid: "66056940"
  **Usa le impostazioni di configurazione specificate di seguito**  
  Consente di specificare le impostazioni da utilizzare.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Nome file di configurazione**|Consente di digitare il percorso del file di configurazione generato dalla procedura guidata.|  
 |**Sfoglia**|Usare la finestra di dialogo **Selezionare il percorso del file di configurazione** per impostare il percorso del file di configurazione generato dalla procedura guidata. Se il file non esiste, verrà creato durante la procedura guidata.|  
@@ -74,7 +73,7 @@ ms.locfileid: "66056940"
  **Percorso della configurazione memorizzato in una variabile di ambiente**  
  Consente di specificare la variabile di ambiente in cui memorizzare la configurazione.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Variabile di ambiente**|Consente di selezionare una variabile di ambiente nell'elenco.|  
   
@@ -86,14 +85,14 @@ ms.locfileid: "66056940"
  **Usa le impostazioni di configurazione specificate di seguito**  
  Consente di specificare le impostazioni da utilizzare.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
-|**Voce del registro di sistema**|Digitare la chiave del Registro di sistema contenente le informazioni di configurazione Il formato è \<chiave del Registro di sistema>.<br /><br /> È necessario che la chiave del Registro di sistema esista già in HKEY_CURRENT_USER e che il suo valore sia denominato Value. Il valore può essere un DWORD o una stringa.<br /><br /> Se si vuole usare una chiave del Registro di sistema che non si trova nella radice HKEY_CURRENT_USER, per identificare la chiave usare il formato \<chiave Registro di sistema\chiave Registro di sistema\\...>.|  
+|**Voce del registro di sistema**|Digitare la chiave del Registro di sistema contenente le informazioni di configurazione Il formato è \<registry key>.<br /><br /> È necessario che la chiave del Registro di sistema esista già in HKEY_CURRENT_USER e che il suo valore sia denominato Value. Il valore può essere un DWORD o una stringa.<br /><br /> Se si desidera utilizzare una chiave del registro di sistema non è alla radice di HKEY_CURRENT_USER, utilizzare il formato \<Registry key\registry key\\...> per identificare la chiave.|  
   
  **Percorso della configurazione memorizzato in una variabile di ambiente**  
  Consente di specificare la variabile di ambiente in cui memorizzare la configurazione.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Variabile di ambiente**|Consente di selezionare una variabile di ambiente nell'elenco.|  
   
@@ -101,14 +100,14 @@ ms.locfileid: "66056940"
  **Usa le impostazioni di configurazione specificate di seguito**  
  Consente di specificare le impostazioni da utilizzare.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Variabile padre**|Consente di specificare la variabile inclusa nel pacchetto padre contenente le informazioni di configurazione.|  
   
  **Percorso della configurazione memorizzato in una variabile di ambiente**  
  Consente di specificare la variabile di ambiente in cui viene memorizzata la configurazione.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Variabile di ambiente**|Consente di selezionare una variabile di ambiente nell'elenco.|  
   
@@ -116,16 +115,16 @@ ms.locfileid: "66056940"
  **Usa le impostazioni di configurazione specificate di seguito**  
  Consente di specificare le impostazioni da utilizzare.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
-|**Connessione**|Consente di selezionare una connessione nell'elenco o di creare una nuova connessione facendo clic su **Nuova** .|  
+|**Connection**|Consente di selezionare una connessione nell'elenco o di creare una nuova connessione facendo clic su **Nuova** .|  
 |**Tabella configurazione**|Consente di selezionare una tabella esistente o di creare una nuova tabella facendo clic su **Nuova** per scrivere un'apposita istruzione SQL.|  
 |**Filtro configurazione**|Consente di selezionare un nome esistente o di digitarne uno nuovo per la configurazione.<br /><br /> È possibile memorizzare nella stessa tabella molteplici configurazioni di SQL Server, ciascuna delle quali può includere più elementi di configurazione.<br /><br /> Questo valore definito dall'utente è memorizzato nella tabella per identificare gli elementi della configurazione appartenenti a una configurazione specifica.|  
   
  **Percorso della configurazione memorizzato in una variabile di ambiente**  
  Consente di specificare la variabile di ambiente in cui è memorizzata la configurazione.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Variabile di ambiente**|Consente di selezionare una variabile di ambiente nell'elenco.|  
   
@@ -155,7 +154,7 @@ ms.locfileid: "66056940"
  **Fine**  
  Consente di creare la configurazione e uscire dalla **Configurazione guidata pacchetto**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di configurazioni dei pacchetti](../../2014/integration-services/create-package-configurations.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 22b1c18cba793d5845e2adf92b1dca300911a72f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23d45b761909896009e614a8501e728d86b424b7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62823799"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061175"
 ---
 # <a name="manage-files-with-encoding"></a>Gestione di file con codifica
   Per facilitare la visualizzazione del codice in una lingua e in una piattaforma particolari, è possibile associare a un file una particolare codifica dei caratteri.  
@@ -42,7 +41,7 @@ ms.locfileid: "62823799"
   
 #### <a name="to-save-a-file-with-a-different-encoding-or-line-ending-type"></a>Per salvare un file con una codifica o un tipo di terminazione riga diversi  
   
-1.  Nel menu **file** fare clic su **Salva \<nomefile> come**.  
+1.  Scegliere **Apri** dal menu **Salva \<filename> File**.  
   
 2.  Nella finestra di dialogo **Salva file con nome** espandere il pulsante **Salva** e quindi fare clic su **Salva con codifica**.  
   

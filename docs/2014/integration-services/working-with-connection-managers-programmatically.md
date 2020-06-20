@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 973cb7dcfe7eb95e003428adf0c8a0beb7e68e87
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6053418c624c2ab107a35a02c382576dcb41a534
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62877702"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972441"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>Utilizzo di gestioni connessioni a livello di programmazione
   In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] il metodo AcquireConnection della classe della gestione connessione associata è quello che viene chiamato più spesso quando si usano gestioni connessioni in codice gestito. Quando si scrive codice gestito, è necessario chiamare il metodo AcquireConnection per usare la funzionalità di una gestione connessione. È necessario chiamare questo metodo sia che il codice gestito venga scritto in un'attività Script, in un componente script, in un oggetto personalizzato o in un'applicazione personalizzata.  
@@ -61,13 +60,13 @@ ms.locfileid: "62877702"
 |MULTIFILE|gestione connessione per più file|`System.String`|Percorso di uno dei file.|  
 |MULTIFLATFILE|gestione connessione per più file flat|`System.String`|Percorso di uno dei file.|  
 |SMOServer|gestione connessione SMO|`Microsoft.SqlServer.Management.Smo.Server`||  
-|SMTP|Gestione connessione SMTP|`System.String`|Ad esempio: `SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
+|SMTP|Gestione connessione SMTP|`System.String`|ad esempio `SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
 |WMI|Gestione connessione WMI|`System.Management.ManagementScope`||  
 |SQLMOBILE|Gestione connessione SQL Server Compact|`System.Data.SqlServerCe.SqlCeConnection`||  
   
 ![Integration Services icona (piccola)](media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina relativa a Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Connessione alle origini dati nell'attività script](extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)   
  [Connessione a origini dati nel componente script](extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)   
  [Connessione alle origini dati in un'attività personalizzata](extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md)  

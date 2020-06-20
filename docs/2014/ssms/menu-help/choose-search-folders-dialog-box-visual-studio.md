@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6c76fc0d5247d2a9f07fcf97677ac1f24b9635e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf3647decf31b37a12d6f9a338907c9fc93182d8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62678933"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067417"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Finestra di dialogo Seleziona cartelle di ricerca (Visual Studio)
   Consente di assemblare, salvare e rivedere i propri set denominati di cartelle di ricerca e di specificare l'ordine di ricerca. Per visualizzare questa finestra di dialogo, fare clic sul pulsante **Sfoglia (...)** accanto all'elenco a discesa **Cerca in** nella scheda Cerca nei file o Sostituisci nei file della finestra di dialogo Trova e sostituisci.  

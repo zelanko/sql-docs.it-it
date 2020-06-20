@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c6f993f1f2386782bf8225f22b285b9385e2f8e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 254680ce380b88aca01184bb744a7dde1b8e5611
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054536"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972479"
 ---
 # <a name="web-service-task-editor-general-page"></a>Editor attività Servizio Web (pagina Generale)
   Usare la pagina **Generale** della finestra di dialogo **Editor attività Servizio Web** per specificare una gestione connessione HTTP e il percorso del file WSDL (Web Services Description Language) usato dall'attività Servizio Web, descrivere l'attività Servizio Web e scaricare il file WSDL.  
@@ -28,7 +27,7 @@ ms.locfileid: "66054536"
   
 ## <a name="options"></a>Opzioni  
  **HTTPConnection**  
- Selezionare una gestione connessione nell'elenco oppure fare clic su \< **nuova connessione...**> per creare una nuova gestione connessione.  
+ Selezionare una gestione connessione nell'elenco oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
 > [!IMPORTANT]  
 >  La gestione connessione HTTP supporta solo l'autenticazione anonima e l'autenticazione di base. Non supporta l'autenticazione di Windows.  
@@ -54,7 +53,7 @@ ms.locfileid: "66054536"
  **OverwriteWSDLFile**  
  Consente di specificare se il file WSDL per l'attività Servizio Web può essere sovrascritto.  
   
- Se si intende scaricare il file WSDL tramite il pulsante **Scarica WSDL** , impostare questo valore su `True`.  
+ Se si intende scaricare il file WSDL tramite il pulsante **Scarica WSDL** , impostare questo valore su `True` .  
   
  **Nome**  
  Consente di specificare un nome univoco per l'attività Servizio Web. Tale nome viene utilizzato come etichetta nell'icona dell'attività.  
@@ -70,7 +69,7 @@ ms.locfileid: "66054536"
   
  Questo pulsante non è attivato fino a quando non si fornisce il nome di un file locale esistente nella casella **WSDLFile** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività servizio Web &#40;pagina di input&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
  [Editor attività servizio Web &#40;pagina output&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   

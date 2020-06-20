@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 56df884317c13b860ba19d66d9680c79356c9080
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: e95604c907e16d5173d1f523cf31693416f0e119
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859243"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067383"
 ---
 # <a name="customize-commands-page"></a>Personalizza (pagina Comandi)
   Questa finestra di dialogo consente di aggiungere e rimuovere i comandi sulle barre degli strumenti e nei menu, nonché di modificare le immagini utilizzate per i pulsanti della barra degli strumenti o per i comandi di menu. Per accedere alla pagina **Comandi** , scegliere **Personalizza** dal menu **Strumenti** e quindi fare clic su **Comandi**.  

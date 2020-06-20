@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 97b155852a0d6941cff4da0bdd4565e08dc63e79
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b71e4254312c0dc07d6d8869a2e8b28eb02c36fe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767560"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966131"
 ---
 # <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>Passaggio 7: Aggiunta e configurazione della destinazione OLE DB
   Il pacchetto ora consente di estrarre i dati dall'origine file flat e trasformarli in un formato compatibile con la destinazione. L'attività successiva consiste nel caricare i dati trasformati nella destinazione. Per caricare i dati è necessario aggiungere una destinazione OLE DB al flusso di dati. La destinazione OLE DB può utilizzare una tabella di database, una vista o un comando SQL per caricare i dati in diversi database compatibili con OLE DB.  
@@ -50,12 +49,12 @@ ms.locfileid: "62767560"
   
 13. Fare clic con il pulsante destro del mouse sulla destinazione **Sample OLE DB Destination** e scegliere **Proprietà**.  
   
-14. `LocaleID` Nella finestra Proprietà verificare che la proprietà sia impostata su **inglese (Stati Uniti)** e che la`DefaultCodePage` proprietà sia impostata su **1252**.  
+14. Nella Finestra Proprietà verificare che la `LocaleID` proprietà sia impostata su **inglese (Stati Uniti)** e che la `DefaultCodePage` proprietà sia impostata su **1252**.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Passaggio 8: Semplificazione del pacchetto della lezione 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Destinazione OLE DB](data-flow/ole-db-destination.md)  
   
   

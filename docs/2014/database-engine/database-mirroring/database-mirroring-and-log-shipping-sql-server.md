@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ca584a81b8ba70073ee833d8033cd5f664747741
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ddc0a4147623753e04b14e60359c397b00a8d9b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807471"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934372"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>Mirroring del database e log shipping (SQL Server)
   Per un database specifico è possibile eseguire il mirroring o il log shipping oppure eseguire le due operazioni simultaneamente. Per scegliere l'approccio da utilizzare, considerare gli aspetti seguenti:  

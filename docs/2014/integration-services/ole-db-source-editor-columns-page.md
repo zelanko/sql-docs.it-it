@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bfbb0ae1-7759-4d45-8865-31df36ae5b34
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 453bed2f366c4b2bd51fd706d5d56ea6ccf01f01
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0fb65c49a1a7c24f579c49fd5340c6137e09190b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057025"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964951"
 ---
 # <a name="ole-db-source-editor-columns-page"></a>Editor origine OLE DB (pagina Colonne)
   Usare la pagina **Colonne** della finestra di dialogo **Editor origine OLE DB** per eseguire il mapping tra una colonna di output e ogni colonna esterna (di origine).  
@@ -36,7 +35,7 @@ ms.locfileid: "66057025"
  **Colonna di output**  
  Consente di specificare un nome univoco per ogni colonna di output. Per impostazione predefinita viene suggerito il nome della colonna esterna (di origine) selezionata. È comunque possibile scegliere qualsiasi nome descrittivo univoco. Il nome specificato verrà visualizzato in Progettazione SSIS.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor origine OLE DB &#40;pagina Gestione connessione&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
  [Editor origine OLE DB &#40;pagina output degli errori&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   

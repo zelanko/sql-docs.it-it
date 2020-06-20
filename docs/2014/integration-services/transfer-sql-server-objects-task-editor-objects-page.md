@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8cc09118-70ac-4013-8308-d87f8411ca0c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3ae231e933e30613d45fe00eaa99d6a2d5c9c772
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9115b2a41111d65c4855cffcdc44e7fcd755285b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054871"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972750"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>Editor attività Trasferisci oggetti di SQL Server (pagina Oggetti)
   Utilizzare la pagina **Oggetti** della finestra di dialogo **Editor attività Trasferisci oggetti di SQL Server** per impostare le proprietà relative alla copia di uno o più oggetti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] da un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a un'altra. Tabelle, viste, stored procedure e funzioni definite dall'utente rappresentano solo alcuni esempi di oggetti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che è possibile copiare. Per ulteriori informazioni su questa attività, vedere [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md).  
@@ -29,13 +28,13 @@ ms.locfileid: "66054871"
   
 ## <a name="static-options"></a>Opzioni statiche  
  **SourceConnection**  
- Selezionare una gestione connessione SMO nell'elenco oppure fare clic su ** \<nuova connessione... >** per creare una nuova connessione al server di origine.  
+ Selezionare una gestione connessione SMO nell'elenco oppure fare clic su **\<New connection...>** per creare una nuova connessione al server di origine.  
   
  **SourceDatabase**  
  Consente di selezionare un database nel server di origine dal quale verranno copiati gli oggetti.  
   
  **DestinationConnection**  
- Selezionare una gestione connessione SMO nell'elenco oppure fare clic su ** \<nuova connessione... >** per creare una nuova connessione al server di destinazione.  
+ Selezionare una gestione connessione SMO nell'elenco oppure fare clic su **\<New connection...>** per creare una nuova connessione al server di destinazione.  
   
  **DestinationDatabase**  
  Consente di selezionare un database nel server di destinazione nel quale verranno copiati gli oggetti.  
@@ -52,10 +51,10 @@ ms.locfileid: "66054871"
  **ExistingData**  
  Consente di specificare la modalità di copia dei dati nel server di destinazione. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Sostituire**|I dati nel server di destinazione verranno sovrascritti.|  
-|**Aggiungere**|I dati copiati dal server di origine verranno accodati a quelli esistenti nel server di destinazione.|  
+|**Append**|I dati copiati dal server di origine verranno accodati a quelli esistenti nel server di destinazione.|  
   
 > [!NOTE]  
 >   L'opzione **ExistingData** è disponibile solo se **CopyData** è impostata su **True**.  
@@ -208,7 +207,7 @@ ms.locfileid: "66054871"
  **XmlSchemaCollectionsList**  
  Fare clic per aprire la finestra di dialogo **Selezionare le raccolte XML Schema** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Attività Integration Services](control-flow/integration-services-tasks.md)   
  [Editor attività Trasferisci oggetti SQL Server &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   

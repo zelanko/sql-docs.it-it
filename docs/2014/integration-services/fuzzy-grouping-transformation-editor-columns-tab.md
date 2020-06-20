@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 24f4539f-2a9f-4acd-acc7-06228a07f7df
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a97225797380294968f1af595f1299e478d548d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 26ba2fc6a8cfdfb6855d7d5b29cc3be31f1d53da
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058361"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966321"
 ---
 # <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>Editor trasformazione Raggruppamento fuzzy (scheda Colonne)
   Utilizzare la scheda **Colonne** della finestra di dialogo **Editor trasformazione Raggruppamento fuzzy** per specificare le colonne utilizzate per raggruppare le righe contenenti valori duplicati  
@@ -57,7 +56,7 @@ ms.locfileid: "66058361"
  **Numerali**  
  Consente di specificare l'importanza dei numerali iniziali e finali nel confronto dei dati della colonna. Ad esempio, se i numerali iniziali sono significativi, "2005 Vendite" non verrà raggruppato con "2004 Vendite".  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Nessuno**|I numerali iniziali e finali non sono significativi.|  
 |**Leader**|Sono significativi solo i numerali iniziali.|  
@@ -67,7 +66,7 @@ ms.locfileid: "66058361"
  **Flag di confronto**  
  Per altre informazioni sulle opzioni per il confronto di stringhe, vedere [Confronto di dati stringa](data-flow/comparing-string-data.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Identificazione di righe di dati simili tramite la trasformazione Raggruppamento fuzzy](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   

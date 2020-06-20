@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: f2aa6c25f8e8741308ff8f8b5df93cb2af67ad91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6fc68e6f3280a8e23d6a1bf4f364aadfffd69f85
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957096"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060224"
 ---
 # <a name="sql-server-encryption"></a>Crittografia di SQL Server
   La crittografia è il processo che consiste nell'offuscare i dati tramite l'utilizzo di una chiave o di una password. È in grado di rendere i dati inutilizzabili se non si dispone della chiave di decrittografia o password corrispondente. La crittografia non risolve i problemi relativi al controllo di accesso, ma migliora la sicurezza limitando la perdita di dati anche se il controllo di accesso viene eluso. Se, ad esempio, il computer host del database è configurato scorrettamente e un pirata informatico ottiene dati riservati, le informazioni sottratte potrebbero essere inutilizzabili se crittografate.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d61cc55b-9ee8-4ecf-a32f-6459ae43910b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cdf37ab5b61e74ab04b9b58162325b580675c493
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b5cb3170ed8447627d8eb14675b8527442045aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63070781"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000967"
 ---
 # <a name="sort-in-ascending-or-descending-order-visual-database-tools"></a>Ordinamento in modo crescente o decrescente (Visual Database Tools)
   È possibile ordinare i risultati di una query in modo crescente o decrescente in base a una o più colonne del set di risultati utilizzando la parola chiave `ASC` o `DESC` con la clausola `ORDER BY`.  

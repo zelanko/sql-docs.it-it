@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2039ee0f-069d-479d-90b2-2a12481b1162
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: de7c84a463d15e3260cc64c53ba1f82c6808dd93
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2fd341302c20d0ac79dad4169c13d1e1bca45d6c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056782"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964733"
 ---
 # <a name="partition-processing-destination-editor-advanced-page"></a>Editor destinazione elaborazione partizione (pagina Avanzate)
   Utilizzare la pagina **Avanzate** della finestra di dialogo **Editor destinazione elaborazione partizione** per configurare la gestione degli errori.  
@@ -36,7 +35,7 @@ ms.locfileid: "66056782"
  **Azione per errore chiave**  
  Consente di specificare la modalità di gestione dei record che hanno valori di chiave non validi.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|Consente di convertire il valore di chiave non valido nel valore Sconosciuto.|  
 |**DiscardRecord**|Consente di scartare il record.|  
@@ -53,7 +52,7 @@ ms.locfileid: "66056782"
  **Azione in caso di errore**  
  Consente di specificare l'azione che deve essere intrapresa al raggiungimento della soglia di errore quando è stata selezionata l'opzione **Arresta in caso di errore**.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**StopProcessing**|Consente di arrestare l'elaborazione.|  
 |**StopLogging**|Consente di arrestare la registrazione degli errori.|  
@@ -61,7 +60,7 @@ ms.locfileid: "66056782"
  **Chiave non trovata**  
  Consente di specificare l'azione che deve essere intrapresa per un errore di chiave non trovata. Il valore predefinito è **ReportAndContinue**.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Consente di ignorare l'errore e continuare l'elaborazione.|  
 |**ReportAndContinue**|Consente di segnalare l'errore e continuare l'elaborazione.|  
@@ -70,7 +69,7 @@ ms.locfileid: "66056782"
  **Chiave duplicata**  
  Consente di specificare l'azione che deve essere intrapresa per un errore di chiave duplicata. Il valore predefinito è **IgnoreError**.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Consente di ignorare l'errore e continuare l'elaborazione.|  
 |**ReportAndContinue**|Consente di segnalare l'errore e continuare l'elaborazione.|  
@@ -79,7 +78,7 @@ ms.locfileid: "66056782"
  **Chiave Null convertita in sconosciuta**  
  Consente di specificare l'azione che deve essere intrapresa quando una chiave Null è stata convertita nel valore Sconosciuto. Il valore predefinito è **IgnoreError**.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Consente di ignorare l'errore e continuare l'elaborazione.|  
 |**ReportAndContinue**|Consente di segnalare l'errore e continuare l'elaborazione.|  
@@ -88,7 +87,7 @@ ms.locfileid: "66056782"
  **Chiave Null non consentita**  
  Consente di specificare l'azione che deve essere intrapresa quando viene incontrata una chiave Null e le chiavi Null non sono consentite. Il valore predefinito è **ReportAndContinue**.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Consente di ignorare l'errore e continuare l'elaborazione.|  
 |**ReportAndContinue**|Consente di segnalare l'errore e continuare l'elaborazione.|  
@@ -100,7 +99,7 @@ ms.locfileid: "66056782"
  **Sfoglia (...)**  
  Consente di selezionare il percorso del log degli errori.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor destinazione elaborazione partizione &#40;pagina Mapping&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 21f58cd6991b760edeefb81c37e02c617f8e09cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 246036bfea6dc8431f878165330f7f0571949897
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917008"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965741"
 ---
 # <a name="shrink-a-database"></a>Compattare un database
   In questo argomento si illustra come compattare un database mediante Esplora oggetti in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -65,7 +64,7 @@ ms.locfileid: "62917008"
   
 #### <a name="to-shrink-a-database"></a>Per compattare un database  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del, quindi [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]espandere l'istanza.  
+1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , quindi espandere l'istanza.  
   
 2.  Espandere **database**, quindi fare clic con il pulsante destro del mouse sul database che si desidera compattare.  
   
@@ -103,7 +102,7 @@ ms.locfileid: "62917008"
 ##  <a name="follow-up-after-you-shrink-a-database"></a><a name="FollowUp"></a>Completamento: dopo la compattazione di un database  
  I dati spostati per ridurre un file possono essere dispersi in qualsiasi percorso disponibile nel file, provocando la frammentazione dell'indice e rallentando le prestazioni di query che eseguono ricerche in un intervallo dell'indice Per eliminare la frammentazione, valutare la possibilità di ricompilare gli indici sul file dopo la compattazione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Compattare un file](shrink-a-file.md)   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
  [sys. database_files &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   

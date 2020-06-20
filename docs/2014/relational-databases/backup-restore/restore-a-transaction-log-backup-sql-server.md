@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a0cfc68f78ae9ca4022abfb59a33d756e82a6f2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68fe4bbc199d6555bd490d25f92491100b8bbfcf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875669"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957161"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Ripristinare un backup del log delle transazioni (SQL Server)
   In questo argomento viene descritto il ripristino di un backup del log delle transazioni in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -100,7 +99,7 @@ ms.locfileid: "62875669"
     |------------|-----------|  
     |**Restore**|Le caselle di controllo selezionate indicano i set di backup da ripristinare.|  
     |**Nome**|Nome del set di backup.|  
-    |**Componente**|Componente di cui è stato eseguito il backup: **Database**, **File** o \<vuoto> (per i log delle transazioni).|  
+    |**Componente**|Componente di cui è stato eseguito il backup: **database**, **file**o \<blank> (per i log delle transazioni).|  
     |**Database**|Nome del database su cui viene eseguita l'operazione di backup.|  
     |**Data inizio**|Data e ora di inizio dell'operazione di backup, visualizzate in base alle impostazioni internazionali del client.|  
     |**Data fine**|Data e ora di fine dell'operazione di backup, visualizzate in base alle impostazioni internazionali del client.|  
@@ -130,7 +129,7 @@ ms.locfileid: "62875669"
   
         |Intestazione|valore|  
         |------------|-----------|  
-        |\<vuoto>|Consente di visualizzare una casella di controllo per selezionare il contrassegno.|  
+        |\<blank>|Consente di visualizzare una casella di controllo per selezionare il contrassegno.|  
         |**Contrassegno transazione**|Nome della transazione contrassegnata specificato dall'utente durante l'esecuzione del commit della transazione.|  
         |**Data**|Data e ora assegnate alla transazione quando ne è stato eseguito il commit. Vengono visualizzate la data e l'ora della transazione registrate nella tabella **msdbgmarkhistory** , non nella data e ora del computer client.|  
         |**Descrizione**|Eventuale descrizione della transazione contrassegnata specificata dall'utente quando è stato eseguito il commit della transazione.|  
@@ -146,9 +145,9 @@ ms.locfileid: "62875669"
   
          Consente di mantenere le impostazioni di replica durante il ripristino di un database pubblicato in un server diverso da quello in cui è stato creato il database.  
   
-         Questa opzione è disponibile solo con l'opzione **lascia il database pronto per l'utilizzo eseguendo il rollback delle transazioni di cui non è stato eseguito il commit...** (descritta più avanti), equivalente `RECOVERY` al ripristino di un backup con l'opzione.  
+         Questa opzione è disponibile solo con l'opzione **lascia il database pronto per l'utilizzo eseguendo il rollback delle transazioni di cui non è stato eseguito il commit...** (descritta più avanti), equivalente al ripristino di un backup con l' `RECOVERY` opzione.  
   
-         La selezione di questa opzione equivale all'utilizzo `KEEP_REPLICATION` dell'opzione in [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` un'istruzione.  
+         La selezione di questa opzione equivale all'utilizzo dell' `KEEP_REPLICATION` opzione in un' [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` istruzione.  
   
     -   **Chiedi conferma prima del ripristino di ogni backup**  
   
@@ -162,7 +161,7 @@ ms.locfileid: "62875669"
   
          Consente di rendere disponibile il database ripristinato solo per i membri di **db_owner**, **dbcreator**o **sysadmin**.  
   
-         La selezione di questa opzione è sinonimo `RESTRICTED_USER` dell'utilizzo dell' [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` opzione in un'istruzione.  
+         La selezione di questa opzione è sinonimo dell'utilizzo dell' `RESTRICTED_USER` opzione in un' [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` istruzione.  
   
 10. Nel gruppo di opzioni **Stato di recupero** specificare lo stato desiderato per il database dopo l'operazione di ripristino.  
   

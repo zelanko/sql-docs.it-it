@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 859c5952-f600-4940-8064-1afd13f7f6dc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1a0cb087f5a0cd429d9bc6f30ea08aaef3d07b3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: abb667d98ec3777a194226063ca4b203c8d83d02
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483099"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950295"
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>Eliminare le autorizzazioni per oggetti modello (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]eliminare le autorizzazioni dell'oggetto modello per rimuovere qualsiasi assegnazione attribuita.  
@@ -50,7 +49,7 @@ ms.locfileid: "65483099"
     > [!NOTE]  
     >  Se l'autorizzazione viene ereditata da un gruppo, non sarà possibile rimuoverla da un utente. È necessario invece rimuovere l'autorizzazione dal gruppo.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Autorizzazioni per oggetti modello &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [Assegnare autorizzazioni per oggetti modello &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
   

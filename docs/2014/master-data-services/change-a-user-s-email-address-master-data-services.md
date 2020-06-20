@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 721277fd-84f0-41aa-8f2d-bc13a7221044
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1d540c414b1190a045fdb18b4b971e73f348459f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6438291ca0d84bfd88c80f490022ebd4dd96ede9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483586"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972081"
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>Modificare l'indirizzo di posta elettronica di un utente (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è possibile modificare l'indirizzo di posta elettronica al quale vengono inviate le notifiche e il formato predefinito di posta elettronica della notifica.  
@@ -39,13 +38,13 @@ ms.locfileid: "65483586"
   
 5.  Aggiornare l'indirizzo di posta elettronica o il relativo formato.  
   
-6.  Fare clic su **Save**.  
+6.  Fare clic su **Salva**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
   
 -   [Assegnare autorizzazioni per aree funzionali &#40;Master Data Services&#41;](assign-functional-area-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Sicurezza &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
   
   

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: a0590ba6-3856-4731-bb29-87b0a1c1b795
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f562a49ceb0bcc455c99aad1053af93209717f00
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c837eee28bfd20cc9f7b0a50ded2014ff75461f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637633"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933409"
 ---
 # <a name="result-set-sample"></a>Esempio Result Set
   A volte può rivelarsi utile poter eseguire comandi mentre si stanno leggendo i risultati di una query senza dover aprire una nuova connessione e senza dover leggere tutti i risultati in memoria. La caratteristica Multiple Active Result Set (MARS) di ADO.NET 2.0 è una tecnologia che consente di raggiungere tale obiettivo. Attualmente questa funzionalità non è implementata per il provider in-process utilizzato nella programmazione sul lato server. Per ovviare a questa limitazione è possibile utilizzare cursori sul lato server. Questo esempio illustra come utilizzare i cursori sul lato server per ovviare alla mancanza del supporto MARS nella programmazione sul lato server.  

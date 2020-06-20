@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 80ba5505204f592ef04c939b3e84b6f3ca3c7c89
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 814175fa78176d14167355bfe188179552c545c6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916745"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965981"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Stima delle dimensioni di un heap
   I seguenti passaggi sono utilizzabili per valutare la quantità di spazio necessaria per l'archiviazione dei dati in un heap:  
@@ -57,13 +56,13 @@ ms.locfileid: "62916745"
      I byte aggiunti a ***Max_Var_Size*** servono a tenere traccia di ogni colonna a lunghezza variabile. Questa formula si basa sul presupposto che tutte le colonne a lunghezza variabile siano piene al 100%. Se si prevede una percentuale inferiore di utilizzo dello spazio di archiviazione delle colonne a lunghezza variabile, è possibile modificare il valore di ***Max_Var_Size*** in base a tale percentuale per ottenere una stima più accurata delle dimensioni complessive della tabella.  
   
     > [!NOTE]  
-    >  È possibile combinare colonne `varchar`, `nvarchar`, `varbinary` o `sql_variant` che fanno eccedere gli 8.060 byte per la larghezza totale definita della tabella. La lunghezza di ogni colonna deve comunque rientrare nel limite di 8.000 byte per una `varchar`colonna, `nvarchar,``varbinary`o. `sql_variant` Le larghezze combinate di tali colonne possono tuttavia superare il limite di 8.060 byte in una tabella.  
+    >  È possibile combinare colonne `varchar`, `nvarchar`, `varbinary` o `sql_variant` che fanno eccedere gli 8.060 byte per la larghezza totale definita della tabella. La lunghezza di ogni colonna deve comunque rientrare nel limite di 8.000 byte per una `varchar` `nvarchar,``varbinary` colonna, o `sql_variant` . Le larghezze combinate di tali colonne possono tuttavia superare il limite di 8.060 byte in una tabella.  
   
      Se non sono disponibili colonne di lunghezza variabile, impostare ***Variable_Data_Size*** su 0.  
   
 5.  Calcolare le dimensioni totali della riga:  
   
-     ***Row_Size***  = ***Fixed_Data_Size***Fixed_Data_Size + ***Variable_Data_Size***Variable_Data_Size + ***Null_Bitmap*** + 4  
+     ***Row_Size***   =  ***Fixed_Data_Size***  +  ***Variable_Data_Size***  +  ***Null_Bitmap*** + 4  
   
      Il valore 4 nel formula è l'overhead dell'intestazione di riga della riga di dati.  
   
@@ -95,7 +94,7 @@ ms.locfileid: "62916745"
   
 -   Valori LOB  
   
-     L'algoritmo per `varchar(max)`determinare esattamente la quantità di spazio utilizzata per archiviare i tipi di dati LOB, `varbinary(max)` `nvarchar(max)`,, `text`, **ntextxml**e `image` i valori è complesso. È sufficiente aggiungere soltanto le dimensioni medie dei valori LOB previsti e aggiungerle alle dimensioni totali dell'heap.  
+     L'algoritmo per determinare esattamente la quantità di spazio utilizzata per archiviare i tipi di dati LOB `varchar(max)` ,,, `varbinary(max)` `nvarchar(max)` `text` , **ntextxml**e `image` i valori è complesso. È sufficiente aggiungere soltanto le dimensioni medie dei valori LOB previsti e aggiungerle alle dimensioni totali dell'heap.  
   
 -   Compressione  
   

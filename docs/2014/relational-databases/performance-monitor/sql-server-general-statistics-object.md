@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a8b2131e4c3c2070bb03018c48294543b9baef02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9eb59f03b1526153bec88039a0d619bac8ad6368
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250637"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066980"
 ---
 # <a name="sql-server-general-statistics-object"></a>Oggetto Statistiche generali di SQL Server
   L'oggetto **SQLServer:General Statistics** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include contatori che consentono di monitorare l'attività generale del server, ad esempio il numero di connessioni correnti e il numero di utenti al secondo che si connettono e disconnettono dai computer che eseguono un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo tipo di monitoraggio è particolarmente utile nei sistemi di elaborazione delle transazioni online (OLTP) di grandi dimensioni in cui numerosi client si connettono e disconnettono da computer che eseguono un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -49,7 +48,7 @@ ms.locfileid: "63250637"
 |**Transazioni**|Numero di transazioni integrate (tutte in combinazione: locali, DTC, associate).|  
 |**Connessioni utente**|Numero di utenti attualmente connessi a SQL Server.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Monitorare l'utilizzo delle risorse &#40;Monitor di sistema&#41;](monitor-resource-usage-system-monitor.md)  
   
   

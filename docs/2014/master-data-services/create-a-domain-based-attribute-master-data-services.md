@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f0760ef2d2a29540b126235d6328af1fbfad39ce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d750aafaee2f9964fd1534ed04cd36268bc4b5a2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483423"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971861"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>Creare un attributo basato su dominio (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare un attributo basato su dominio per popolare i valori di un attributo con i membri di un'entità.  
@@ -63,13 +62,13 @@ ms.locfileid: "65483423"
   
 10. Dall'elenco **entità** scegliere l'entità da usare per popolare i valori dell'attributo.  
   
-11. Facoltativo. Selezionare **Enable change tracking** per tenere traccia delle modifiche a gruppi di attributi. Per altre informazioni, vedere [Aggiungere attributi ad un gruppo rilevamento modifiche &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).  
+11. Facoltativa. Selezionare **Enable change tracking** per tenere traccia delle modifiche a gruppi di attributi. Per altre informazioni, vedere [Aggiungere attributi ad un gruppo rilevamento modifiche &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).  
   
 12. Fare clic su **Salva attributo**.  
   
 13. Nella pagina **Gestione entità** , fare clic su **Salva entità**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Attributi basati su dominio &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)   
  [Creare una gerarchia derivata &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)   
  [Modificare il nome di un attributo &#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5d8096ee89a9c0b63c89849a02317dc23b2b130e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 969f7d7fb40f4fc40c3735f73699effe9803bbf5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831621"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918841"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporamento di un'attività Profiling dati nel flusso di lavoro del pacchetto
   Il profiling dati e la pulizia non sono attività potenziali per un processo automatizzato nelle fasi iniziali. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] l'output dell'attività Profiling dati richiede in genere un'analisi visiva e una valutazione umana per determinare se le violazioni segnalate sono significative o eccessive. Anche dopo il riconoscimento di problemi di qualità dei dati, è comunque necessario definire con attenzione un piano ben studiato per tentare di individuare l'approccio migliore per la pulizia.  
@@ -85,7 +84,7 @@ ms.locfileid: "62831621"
   
 2.  Aggiungere una gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] al pacchetto. Configurare questa gestione connessione per l'uso del provider di dati .NET per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) e per la connessione a un'istanza disponibile del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-     Per impostazione predefinita, il nome della gestione connessione è \<nome server>.AdventureWorks1.  
+     Per impostazione predefinita, il nome della gestione connessione è il seguente: \<server name> . AdventureWorks1.  
   
 3.  Aggiungere una gestione connessione file al pacchetto. Configurare questa gestione connessione per la creazione del file di output per l'attività Profiling dati.  
   
@@ -102,9 +101,9 @@ ms.locfileid: "62831621"
   
 -   Nella finestra **Variabili** aggiungere e configurare le due variabili del pacchetto seguenti:  
   
-    -   Immettere il nome, `ProfileConnectionName`, per una delle variabili e impostare il tipo di questa variabile su **String**.  
+    -   Immettere il nome, `ProfileConnectionName` , per una delle variabili e impostare il tipo di questa variabile su **String**.  
   
-    -   Immettere il nome, `AddressLine2NullRatio`, per l'altra variabile e impostare il tipo di questa variabile su **Double**.  
+    -   Immettere il nome, `AddressLine2NullRatio` , per l'altra variabile e impostare il tipo di questa variabile su **Double**.  
   
 ### <a name="configure-the-data-profiling-task"></a>Configurare l'attività Profiling dati  
  L'attività Profiling dati deve essere configurata nel modo seguente:  
@@ -142,9 +141,9 @@ ms.locfileid: "62831621"
   
 4.  Nella pagina **Script** selezionare il linguaggio di programmazione preferito. Quindi, rendere disponibili le due variabili del pacchetto per lo script:  
   
-    1.  Per `ReadOnlyVariables`, selezionare `ProfileConnectionName`.  
+    1.  Per `ReadOnlyVariables` , selezionare `ProfileConnectionName` .  
   
-    2.  Per **ReadWriteVariables**selezionare `AddressLine2NullRatio`.  
+    2.  Per **ReadWriteVariables**selezionare `AddressLine2NullRatio` .  
   
 5.  Selezionare **Modifica script** per aprire l'ambiente di sviluppo dello script.  
   

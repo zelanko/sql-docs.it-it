@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 479cc0e650c598e0a253caca796b854dc4eb69cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aee638291a4aee2c4ea5d60a69fc206af613e15d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892669"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965551"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Selezione tabelle e viste di origine (Importazione/Esportazione guidata SQL Server)
   Utilizzare la pagina **Selezione tabelle e viste di origine** per specificare le tabelle e le viste da copiare dall'origine dati alla destinazione.  
   
 > [!NOTE]  
->  Non è necessario copiare tutte le colonne in una tabella quando si seleziona l'opzione Copia tabella. Dopo aver selezionato una tabella di destinazione, fare clic su Modifica mapping per visualizzare la finestra di dialogo **Mapping colonne** . Selezionare ** \<ignora>** nella colonna **destinazione** della finestra di dialogo **Mapping colonne** per le colonne che si desidera ignorare.  
+>  Non è necessario copiare tutte le colonne in una tabella quando si seleziona l'opzione Copia tabella. Dopo aver selezionato una tabella di destinazione, fare clic su Modifica mapping per visualizzare la finestra di dialogo **Mapping colonne** . Selezionare **\<ignore>** nella colonna **destinazione** della finestra di dialogo **Mapping colonne** per le colonne che si desidera ignorare.  
   
  Per ulteriori informazioni su questa procedura guidata, vedere [SQL Server importazione/esportazione guidata](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Per informazioni sulle opzioni per avviare la procedura guidata e sulle autorizzazioni necessarie per eseguire la procedura guidata, vedere [eseguire l'importazione/esportazione guidata SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
@@ -35,7 +34,7 @@ ms.locfileid: "62892669"
  **origine**  
  Mediante le caselle di controllo, selezionare dall'elenco di tabelle e viste disponibili quelle da copiare nella destinazione. Se si seleziona una tabella o una vista di origine e non si eseguono altre azioni, lo schema e i dati dell'origine verranno copiati senza essere modificati.  
   
- **Destination**  
+ **Destinazione**  
  Consente di selezionare una tabella di destinazione dall'elenco per ogni tabella di origine.  
   
 > [!NOTE]  
@@ -43,7 +42,7 @@ ms.locfileid: "62892669"
   
 ### <a name="other-options"></a>Altre opzioni  
  **Modifica mapping**  
- Utilizzare la finestra di dialogo **Mapping colonne** per specificare le colonne di destinazione per la ricezione dei dati di origine. È possibile copiare solo un subset di colonne selezionando \<ignora> nella colonna **destinazione** della finestra di dialogo **Mapping colonne** per le colonne che si desidera ignorare.  
+ Utilizzare la finestra di dialogo **Mapping colonne** per specificare le colonne di destinazione per la ricezione dei dati di origine. È possibile copiare solo un subset di colonne selezionando \<ignore> la colonna **destinazione** della finestra di dialogo **Mapping colonne** per le colonne che si desidera ignorare.  
   
  **Anteprima**  
  Visualizzare l'anteprima dei dati di origine nella finestra di dialogo **Anteprima dati** per verificarlo prima di eseguire l'importazione o l'esportazione. La finestra di dialogo **Anteprima dati** Visualizza fino a 200 righe di dati.  

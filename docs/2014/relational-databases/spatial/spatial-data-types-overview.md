@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 340e250fde61f8c246099eadafc148278288dee0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c0548d974e83bfe2b1e103d4458b17078fba8014
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176651"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996472"
 ---
 # <a name="spatial-data-types-overview"></a>Panoramica dei tipi di dati spaziali
   Esistono due tipi di dati spaziali. Il tipo di dati `geometry` supporta dati planari o euclidei (terra piatta). Il tipo di dati `geometry` è conforme a Open Geospatial Consortium (OGC) Simple Features for SQL Specification versione 1.1.0 e a SQL MM (standard ISO).
@@ -29,14 +28,14 @@ ms.locfileid: "78176651"
 > [!IMPORTANT]
 >  Per una descrizione dettagliata e alcuni esempi delle funzionalità spaziali introdotte in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], tra cui i miglioramenti apportati ai tipi di dati spaziali, scaricare il white paper [Nuove funzionalità spaziali di SQL Server, nome in codice "Denali"](https://go.microsoft.com/fwlink/?LinkId=226407).
 
-##  <a name="spatial-data-objects"></a><a name="objects"></a>Oggetti dati spaziali
- I tipi di dati `geometry` e `geography` supportano sedici oggetti dati spaziali o tipi di istanza. Solo per undici di questi tipi di istanza, tuttavia, è possibile *creare istanze*. È possibile creare e usare queste istanze (o crearne un'istanza) in un database. Queste istanze derivano determinate proprietà dai relativi tipi di dati padre che li `Points`distinguono come, **LineStrings, istanze CircularString** `CompoundCurves`,, `Polygons` `CurvePolygons` o `geometry` come `geography` più istanze o `GeometryCollection`in un oggetto. Il tipo `Geography` dispone di un tipo di istanza aggiuntivo, `FullGlobe`.
+##  <a name="spatial-data-objects"></a><a name="objects"></a> Oggetti dati spaziali
+ I tipi di dati `geometry` e `geography` supportano sedici oggetti dati spaziali o tipi di istanza. Solo per undici di questi tipi di istanza, tuttavia, è possibile *creare istanze*. È possibile creare e usare queste istanze (o crearne un'istanza) in un database. Queste istanze derivano determinate proprietà dai relativi tipi di dati padre che li distinguono come `Points` , **LineStrings, istanze CircularString**, `CompoundCurves` , `Polygons` `CurvePolygons` o come più `geometry` `geography` istanze o in un oggetto `GeometryCollection` . Il tipo `Geography` dispone di un tipo di istanza aggiuntivo, `FullGlobe`.
 
  Nella figura seguente viene illustrata la gerarchia `geometry` sulla quale si basano i tipi di dati `geometry` e `geography`. I tipi istanziabile di `geometry` e `geography` sono indicati in blu.
 
  ![Gerarchia del tipo di geometria](../../database-engine/media/geom-hierarchy.gif "Gerarchia del tipo di geometria")
 
- Come indicato nella figura, i dieci tipi istanziabile dei tipi `geometry` di `geography` dati e sono `Point`, `MultiPoint`, `LineString`, `CircularString`, `MultiLineString`, `CompoundCurve`, `Polygon`, `CurvePolygon`, `MultiPolygon`e `GeometryCollection`. Vi è un tipo aggiuntivo di cui è possibile creare istanze per il tipo di dati geography, ovvero `FullGlobe`. I `geometry` tipi `geography` e possono riconoscere un'istanza specifica purché si tratta di un'istanza ben formata, anche se l'istanza non è definita in modo esplicito. Ad esempio, se si definisce un' `Point` istanza in modo esplicito utilizzando il metodo STPointFromText ( `geometry` ) `geography` e si riconosce l'istanza `Point`come, purché l'input del metodo sia ben formato. Se si definisce la stessa istanza utilizzando il metodo `STGeomFromText()`, entrambi i tipi di dati `geometry` e `geography` riconoscono l'istanza come `Point`.
+ Come indicato nella figura, i dieci tipi istanziabile dei `geometry` tipi di `geography` dati e sono `Point` , `MultiPoint` , `LineString` , `CircularString` , `MultiLineString` , `CompoundCurve` , `Polygon` , `CurvePolygon` , `MultiPolygon` e `GeometryCollection` . Vi è un tipo aggiuntivo di cui è possibile creare istanze per il tipo di dati geography, ovvero `FullGlobe`. I `geometry` `geography` tipi e possono riconoscere un'istanza specifica purché si tratta di un'istanza ben formata, anche se l'istanza non è definita in modo esplicito. Ad esempio, se si definisce un' `Point` istanza in modo esplicito utilizzando il metodo STPointFromText () `geometry` e si `geography` riconosce l'istanza come `Point` , purché l'input del metodo sia ben formato. Se si definisce la stessa istanza utilizzando il metodo `STGeomFromText()`, entrambi i tipi di dati `geometry` e `geography` riconoscono l'istanza come `Point`.
 
  I sottotipi per i tipi geometry e geography sono divisi in tipi semplici e di raccolta.  Alcuni metodi come `STNumCurves()` possono essere utilizzati solo con tipi semplici.
 
@@ -84,24 +83,24 @@ ms.locfileid: "78176651"
 
  In un sistema ellissoidale, un poligono non ha significato, o è ambiguo, senza un orientamento. Ad esempio, un anello intorno all'equatore descrive l'emisfero nord o sud? Se si utilizza il tipo di dati `geography` per archiviare l'istanza spaziale, è necessario specificare l'orientamento dell'anello e descrivere accuratamente la posizione dell'istanza. L'interno del poligono in un sistema ellissoidale è definito dal lato sinistro della regola.
 
- Quando il livello di compatibilità è 100 o inferiore [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] in, `geography` il tipo di dati presenta le restrizioni seguenti:
+ Quando il livello di compatibilità è 100 o inferiore in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] `geography` , il tipo di dati presenta le restrizioni seguenti:
 
 -   Ogni istanza `geography` deve adattarsi all'interno di un singolo emisfero. Non è possibile archiviare oggetti spaziali con dimensioni maggiori di un emisfero.
 
 -   Qualsiasi istanza `geography` di una rappresentazione Well-Known Text (WKT) o Well-Known Binary (WKB) OCG che produca un oggetto più grande di un emisfero genera una `ArgumentException`.
 
--   I `geography` metodi con tipo di dati che richiedono l'input `geography` di due istanze, ad esempio STIntersection (), STUnion (), STDifference () e STSymDifference (), restituiranno null se i risultati dei metodi non si adattano a un singolo emisfero. Anche STBuffer() restituirà Null se l'output supera un singolo emisfero.
+-   I `geography` metodi con tipo di dati che richiedono l'input di due `geography` istanze, ad esempio STIntersection (), STUnion (), STDifference () e STSymDifference (), restituiranno null se i risultati dei metodi non si adattano a un singolo emisfero. Anche STBuffer() restituirà Null se l'output supera un singolo emisfero.
 
  In [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]`FullGlobe` è un tipo speciale di Polygon che copre l'intero globo. `FullGlobe` dispone di un'area, ma non ha bordi o vertici.
 
 ### <a name="outer-and-inner-rings-not-important-in-geography-data-type"></a>Anelli interni ed esterni non rilevanti nel tipo di dati geography
- In OGC Simple Features for SQL Specification vengono trattati anelli esterni e interni, ma questa distinzione non è molto utile [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `geography` per il tipo di dati. qualsiasi anello di un poligono può essere considerato come l'anello esterno.
+ In OGC Simple Features for SQL Specification vengono trattati anelli esterni e interni, ma questa distinzione non è molto utile per il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `geography` tipo di dati; qualsiasi anello di un poligono può essere considerato come l'anello esterno.
 
  Per ulteriori informazioni sulle specifiche OGC, vedere quanto riportato di seguito:
 
--   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627) (Specifiche OGC, accesso semplificato alle caratteristiche Parte 1- Architettura comune)
+-   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)
 
--   [Specifiche OGC, accesso semplificato alle funzionalità-parte 2-opzioni SQL](https://go.microsoft.com/fwlink/?LinkId=93628)
+-   [OGC Specifications, Simple Feature Access Part 2 - SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628) (Specifiche OGC, accesso semplificato alle caratteristiche Parte 2 - Opzioni SQL)
 
 
 ##  <a name="circular-arc-segments"></a><a name="circular"></a> Segmenti di arco circolare
@@ -111,7 +110,7 @@ ms.locfileid: "78176651"
 
  Nelle figure C e D viene illustrato come un segmento di linea possa essere definito segmento di arco circolare.  Si noti che sono ancora necessari tre punti per definire il segmento di arco circolare, diversamente da un segmento di linea regolare, che può essere definito solo da due punti.
 
- I metodi che operano sui tipi di segmento di arco circolare utilizzano segmenti di linea retta per approssimare l'arco circolare. Il numero di segmenti di linea utilizzati per approssimare l'arco dipende dalla lunghezza e dalla curvatura dell'arco. È possibile archiviare i valori Z per ognuno dei tipi di segmento di arco circolare; Tuttavia, i metodi non utilizzeranno i valori Z nei calcoli.
+ I metodi che operano sui tipi di segmento di arco circolare utilizzano segmenti di linea retta per simulare l'arco circolare. Il numero di segmenti di linea utilizzati per simulare l'arco dipenderanno dalla lunghezza e dalla curvatura dell'arco. Benché sia possibile archiviare i valori Z per ognuno dei tipi di segmento di arco circolare, i metodi non utilizzeranno i valori Z nei calcoli.
 
 > [!NOTE]
 >  Se si specificano valori Z per segmenti di arco circolare, tali valori devono essere gli stessi per tutti i punti nel segmento di arco circolare perché questo venga accettato per l'input. Ad esempio, `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` è ammesso, mentre `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` non lo è.
@@ -152,7 +151,7 @@ LS LengthCS Length
 5.65685...6.28318...
 ```
 
- Nella figura seguente viene illustrato il modo in cui viene archiviato ogni tipo `LineString``@g1`(la linea rossa `CircularString``@g2`Mostra la linea blu):
+ Nella figura seguente viene illustrato il modo in cui viene archiviato ogni tipo (la linea rossa mostra la `LineString``@g1` linea blu `CircularString``@g2` ):
 
  ![](../../database-engine/media/e52157b5-5160-4a4b-8560-50cdcf905b76.png "e52157b5-5160-4a4b-8560-50cdcf905b76")
 

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d3d4a480-782b-4b1d-b839-565c8cf6cb24
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 68ddc4f6b42dcc53445b8afaae0bc15e666a5711
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea6a94f79f6ae201b242fe43b32b711d5d1f561a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667283"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060776"
 ---
 # <a name="microsoft-replication-interactive-conflict-resolver"></a>Sistema di risoluzione dei conflitti di replica interattivo Microsoft
   Il sistema di risoluzione dei conflitti interattivo può essere utilizzato per le sottoscrizioni di tipo merge sincronizzate tramite Gestione sincronizzazione Microsoft Windows e consente di visualizzare, confrontare, modificare e selezionare i risultati dei conflitti di dati. È inoltre disponibile il Visualizzatore conflitti, che consente di visualizzare e modificare i risultati dei conflitti dopo il commit. Con il sistema di risoluzione dei conflitti interattivo è possibile selezionare il risultato durante la sincronizzazione.  

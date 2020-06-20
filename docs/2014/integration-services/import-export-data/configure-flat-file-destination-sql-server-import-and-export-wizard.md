@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6504e4f5eee83d670b4843fb8d956b23a84d4aad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2584cb4a6867d4af3b3f6bc1feff167c900a166d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62893032"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965614"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Configurazione destinazione file flat (Importazione/Esportazione guidata SQL Server)
   Utilizzare la pagina **Configura destinazione file flat** per specificare le opzioni di formattazione per il file flat di destinazione e per visualizzare l'anteprima dei risultati prima di continuare.  
@@ -33,10 +32,10 @@ ms.locfileid: "62893032"
  **Delimitatore di riga**  
  Consente di selezionare un delimitatore di riga nell'elenco.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|La riga è delimitata dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
-|**{CR}**|La riga è delimitata da un ritorno a capo.|  
+|**CR**|La riga è delimitata da un ritorno a capo.|  
 |**{LF}**|La riga è delimitata da un avanzamento riga.|  
 |**Punto e virgola {;}**|La riga è delimitata da un punto e virgola.|  
 |**Due punti {:}**|La riga è delimitata da due punti.|  
@@ -47,10 +46,10 @@ ms.locfileid: "62893032"
  **Delimitatore di colonna**  
  Consente di selezionare un delimitatore di colonna nell'elenco.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Le colonne sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
-|**{CR}**|Le colonne sono delimitate da un ritorno a capo.|  
+|**CR**|Le colonne sono delimitate da un ritorno a capo.|  
 |**{LF}**|Le colonne sono delimitate da un avanzamento riga.|  
 |**Punto e virgola {;}**|Le colonne sono delimitate da un punto e virgola.|  
 |**Due punti {:}**|Le colonne sono delimitate da due punti.|  

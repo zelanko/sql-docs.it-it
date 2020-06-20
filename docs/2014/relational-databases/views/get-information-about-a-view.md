@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f439a52c1f2d13ed3d3d7fc96030df9c6e020b2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4277aad4c1de0140606575c7ba437408518b3c8a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211648"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061494"
 ---
 # <a name="get-information-about-a-view"></a>Ottenere informazioni su una vista
-  Tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è possibile acquisire informazioni sulla definizione o sulle proprietà di una vista in [!INCLUDE[tsql](../../includes/tsql-md.md)]. Potrebbe essere necessario visualizzare la definizione della vista per determinare come vengono derivati i dati dalle tabelle di origine o per visualizzare i dati definiti dalla vista.  
+  Tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] è possibile acquisire informazioni sulla definizione o sulle proprietà di una vista in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Potrebbe essere necessario visualizzare la definizione della vista per determinare come vengono derivati i dati dalle tabelle di origine o per visualizzare i dati definiti dalla vista.  
   
 > [!IMPORTANT]  
 >  Se si cambia il nome di un oggetto a cui viene fatto riferimento da una vista, è necessario modificare la vista in modo che per il relativo testo venga fatto riferimento al nuovo nome. Prima di rinominare un oggetto, visualizzare innanzitutto le relative dipendenze per determinare se la modifica proposta interessa le viste.  

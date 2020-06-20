@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b166930b5d077e7294fcdbc13449d40cab309425
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3eee1449ec42285d5a95ac33d91f439dcd131ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176121"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002487"
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione BLOB di Azure
   Introduzione all'Introduzione con SQL Server backup e ripristino con il servizio di archiviazione BLOB di Azure. Questa esercitazione contiene nozioni utili sulla scrittura di backup nel servizio di archiviazione Blob di Azure e sul ripristino dallo stesso.  
@@ -23,7 +22,7 @@ ms.locfileid: "70176121"
 ## <a name="what-you-will-learn"></a>Lezioni dell'esercitazione  
  In questa esercitazione viene illustrato come creare un account di archiviazione di Windows, un contenitore BLOB, la creazione di credenziali per l'accesso all'account di archiviazione, la scrittura di un backup nel servizio BLOB e l'esecuzione di un ripristino semplice. Questa esercitazione è suddivisa in quattro lezioni:  
   
- [Lezione 1: Creare oggetti di Archiviazione di Azure](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
+ [Lezione 1: creare oggetti di archiviazione di Azure](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
  In questa lezione verranno creati un account di archiviazione e un contenitore BLOB di Azure.  
   
  [Lezione 2: Creare le credenziali di SQL Server](../tutorials/lesson-2-create-a-sql-server-credential.md)  

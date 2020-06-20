@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 4380040a-1368-4a47-8930-47c65a192e59
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ed0cd8bad3a99c7f1f59b5121aafb06ccdee63b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 20d32f3a050e79aef90eb8df302bd7a590cead3e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952237"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045151"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>Elenco di controllo per la distribuzione: installazione multiserver di PowerPivot per SharePoint 2010
-  In questo elenco di controllo vengono illustrati i [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] passaggi per l'aggiunta di per SharePoint a una farm di SharePoint 2010 a tre livelli che si compila da zero. In una farm a tre livelli sono inclusi i livelli database, applicazione e Web. Per [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] aggiungere a questa topologia, è necessario eseguire SQL Server il [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] programma di installazione di per installare nel livello applicazione. I file di programma PowerPivot vengono aggiunti al livello Web, ma solo come attività post-installazione durante la distribuzione della soluzione applicazione Web. Anche se sono disponibili passaggi relativi alla distribuzione, non è necessario eseguire alcun passaggio di installazione separato nel livello Web o nel livello dati. L'unico passaggio di installazione che è necessario eseguire è l' [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installazione di nei server applicazioni.  
+  In questo elenco di controllo vengono illustrati i passaggi per l'aggiunta di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint a una farm di sharepoint 2010 a tre livelli che si compila da zero. In una farm a tre livelli sono inclusi i livelli database, applicazione e Web. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]Per aggiungere a questa topologia, è necessario eseguire SQL Server il programma di installazione di per installare [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] nel livello applicazione. I file di programma PowerPivot vengono aggiunti al livello Web, ma solo come attività post-installazione durante la distribuzione della soluzione applicazione Web. Anche se sono disponibili passaggi relativi alla distribuzione, non è necessario eseguire alcun passaggio di installazione separato nel livello Web o nel livello dati. L'unico passaggio di installazione che è necessario eseguire è l'installazione [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] di nei server applicazioni.  
   
 ||  
 |-|  
@@ -189,7 +188,7 @@ ms.locfileid: "71952237"
   
  Per verificare l'integrazione di PowerPivot con un sito di SharePoint, effettuare le operazioni seguenti:  
   
-1.  In un browser aprire l'applicazione Web creata. Se sono stati usati i valori predefiniti, è possibile\<specificare http://il nome del computer> nell'indirizzo URL.  
+1.  In un browser aprire l'applicazione Web creata. Se sono stati usati i valori predefiniti, è possibile specificare http:// \<your computer name> nell'indirizzo URL.  
   
 2.  Verificare che le funzionalità di elaborazione e di accesso ai dati PowerPivot siano disponibili nell'applicazione. È possibile effettuare questa operazione verificando la presenza di modelli di libreria forniti da PowerPivot:  
   
@@ -209,9 +208,9 @@ ms.locfileid: "71952237"
   
 5.  Avviare SQL Server Management Studio dal gruppo di programmi Microsoft SQL Server 2008 R2 nel menu Start. Se questo strumento non è installato nel server, è possibile ignorare l'ultimo passaggio per confermare la presenza di file memorizzati nella cache.  
   
-6.  In Tipo di server selezionare **Analysis Services**.  
+6.  In tipo server selezionare **Analysis Services**.  
   
-7.  In nome server immettere ** \<nome-server> \powerpivot**, dove ** \<Server-Name>** è il nome del computer in cui è installato PowerPivot per SharePoint.  
+7.  In nome server immettere ** \<server-name> \PowerPivot**, dove **\<server-name>** è il nome del computer in cui è presente l'installazione di PowerPivot per SharePoint.  
   
 8.  Fare clic su **Connetti**.  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b473f258-d53c-41c0-9ad9-528a2ff141f4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1b729c5652258deb0780ec129592e1a0f14217c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0459679a9be1d124a7c9dfacaebe7f1a2e02d34
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63195046"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001196"
 ---
 # <a name="open-the-query-and-view-designer-visual-database-tools"></a>Aprire Progettazione query e Progettazione viste (Visual Database Tools)
   Progettazione query e Progettazione viste viene aperto quando si apre la definizione di una vista, si visualizzano i risultati di una query o di una vista oppure si crea o si apre una query. È costituito da quattro riquadri separati:  

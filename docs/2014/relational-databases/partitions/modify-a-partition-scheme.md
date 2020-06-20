@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 56148cca72ca9561219a9ea14025b0bd0f2204b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d57984228e23143d2061df6bf447f978f9bd3c46
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206574"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060912"
 ---
 # <a name="modify-a-partition-scheme"></a>Modificare uno schema di partizione
   È possibile modificare uno schema di partizione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] designando un filegroup in cui sia inclusa la partizione successiva aggiunta a una tabella partizionata utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A tale scopo, è necessario assegnare la proprietà NEXT USED a un filegroup. È possibile assegnare la proprietà NEXT USED a un filegroup vuoto o a uno che contiene già una partizione. In altri termini, in un filegroup possono essere incluse più partizioni.  

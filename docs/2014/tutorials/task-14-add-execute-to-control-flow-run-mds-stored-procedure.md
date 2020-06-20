@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9a5d1b52-d505-4e6f-8a89-569329c094e2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8c926f2ea3d9ef9973f75764e254c5e0884836e3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 151db2640e9038ad574775fa5374bddb9ed4aad0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177291"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061122"
 ---
 # <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>Attività 14: Attività dell'attività Esegui SQL al flusso di controllo per eseguire la stored procedure per MDS
   Dopo il caricamento dei dati nelle tabelle di staging MDS, eseguire una stored procedure associata alla tabella in questione per caricare i dati di staging nelle tabelle appropriate del database MDS. In questa stored procedure sono inclusi due parametri obbligatori che è necessario passare: LogFlag e VersionName. Il parametro LogFlag specifica se le transazioni vengono registrate durante il processo di gestione temporanea, mentre il parametro VersionName rappresenta la versione del modello. Per ulteriori informazioni, vedere l'argomento [stored procedure](https://msdn.microsoft.com/library/hh231028.aspx) di gestione temporanea.

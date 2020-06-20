@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 590f5396-98d5-485e-9b41-728c6ed7cb9d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a6273032f88807291bfc7024f1abcdbd1440073
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 147c75384fa65a103c3d17c731add99ecec79b63
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780681"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933372"
 ---
 # <a name="sql-dmo-mapping-to-smo"></a>Mapping di SQL-DMO agli oggetti SMO
   SQL Distributed Management Objects (SQL-DMO) non è più incluso in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. È necessario convertire le applicazioni SQL-DMO per utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO). Il modello a oggetti SMO è analogo a SQL-DMO e pertanto la maggior parte degli oggetti SQL-DMO esegue il mapping a un oggetto con lo stesso nome in SMO. Nel passaggio a SMO alcuni oggetti SQL-DMO sono stati tuttavia modificati o eliminati. In questa tabella vengono elencate le operazioni consigliate da eseguire per gli oggetti SQL-DMO non convertiti direttamente in SMO.  
@@ -105,7 +104,7 @@ ms.locfileid: "62780681"
 |Oggetto UserDefinedFunction|Oggetti <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> e <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunctionParameter>.|  
 |Oggetto View e oggetto View2|Oggetto <xref:Microsoft.SqlServer.Management.Smo.View>.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida alla programmazione di SQL Server Management Objects &#40;SMO&#41;](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
   

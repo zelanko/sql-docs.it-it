@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2036dd0624e8c2c6479c8ba039aa5646f374902d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef8f72c282c540d695b799f0c4a884734db2c491
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211316"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062117"
 ---
 # <a name="use-tokens-in-job-steps"></a>Utilizzo dei token nei passaggi dei processi
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent consente di usare token negli script per passaggi di processi [!INCLUDE[tsql](../../includes/tsql-md.md)] . L'utilizzo di token quando si scrivono passaggi di processo offre la stessa flessibilità assicurata dalle variabili quando si scrivono programmi software. Dopo aver inserito un token nello script di un passaggio di processo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sostituisce il token in fase di esecuzione, prima che il passaggio di processo venga eseguito dal sottosistema [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -34,7 +33,7 @@ ms.locfileid: "68211316"
 ## <a name="understanding-using-tokens"></a>Informazioni sull'utilizzo dei token  
   
 > [!IMPORTANT]  
->  Qualsiasi utente di Windows con autorizzazioni di scrittura per il registro eventi di Windows è in grado di accedere ai passaggi di processo attivati dagli avvisi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent o di WMI. Per evitare rischi per la sicurezza, i token di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che possono essere utilizzati in processi attivati dagli avvisi sono disabilitati per impostazione predefinita. Questi token sono: **a-DBN**, **a-SVR**, **a-Err**, **a-SEV**, **a-MSG**. e **WMI (*`property`*)**. Si noti che in questa versione l'utilizzo dei token è esteso a tutti gli avvisi.  
+>  Qualsiasi utente di Windows con autorizzazioni di scrittura per il registro eventi di Windows è in grado di accedere ai passaggi di processo attivati dagli avvisi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent o di WMI. Per evitare rischi per la sicurezza, i token di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che possono essere utilizzati in processi attivati dagli avvisi sono disabilitati per impostazione predefinita. Questi token sono: **a-DBN**, **a-SVR**, **a-Err**, **a-SEV**, **a-MSG**. e **WMI ( *`property`* )**. Si noti che in questa versione l'utilizzo dei token è esteso a tutti gli avvisi.  
 >   
 >  Se si desidera utilizzare questi token, verificare innanzitutto che solo i membri di gruppi di sicurezza di Windows trusted, ad esempio il gruppo Administrators, dispongano delle autorizzazioni di scrittura per il registro eventi del computer in cui è installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A questo punto, fare clic con il pulsante destro del mouse su **SQL Server Agent** in Esplora oggetti, scegliere **Proprietà**e nella pagina **Sistema avvisi** selezionare **Sostituisci token per tutte le risposte del processo ad avvisi** per abilitare questi token.  
   
@@ -100,12 +99,12 @@ ms.locfileid: "68211316"
   
 |Sintassi dei token|Sostituzione dei token relativi agli avvisi attivata|Sostituzione dei token relativi agli avvisi disattivata|  
 |------------------|--------------------------------|---------------------------------|  
-|La macro ESCAPE è stata utilizzata|Tutti i token presenti nei processi sono stati sostituiti correttamente.|I token attivati da avvisi non vengono sostituiti. Questi token sono **a-DBN**, **a-SVR**, **a-Err**, **a-SEV**, **a-MSG**e **WMI (*`property`*)**. Altri token statici sono stati sostituiti correttamente.|  
+|La macro ESCAPE è stata utilizzata|Tutti i token presenti nei processi sono stati sostituiti correttamente.|I token attivati da avvisi non vengono sostituiti. Questi token sono **a-DBN**, **a-SVR**, **a-Err**, **a-SEV**, **a-MSG**e **WMI ( *`property`* )**. Altri token statici sono stati sostituiti correttamente.|  
 |La macro ESCAPE non è stata utilizzata|Tutti i processi contenenti token hanno esito negativo.|Tutti i processi contenenti token hanno esito negativo.|  
   
 ## <a name="token-syntax-update-examples"></a>Esempi di aggiornamento della sintassi dei token  
   
-### <a name="a-using-tokens-in-non-nested-strings"></a>A. Utilizzo di token in stringhe non nidificate  
+### <a name="a-using-tokens-in-non-nested-strings"></a>R. Utilizzo di token in stringhe non nidificate  
  Nell'esempio seguente viene illustrato come aggiornare uno script semplice non nidificato con la macro di escape appropriata. Prima di eseguire lo script di aggiornamento, lo script del passaggio di processo seguente utilizza un token per inserire il nome del database appropriato:  
   
  `PRINT N'Current database name is $(A-DBN)' ;`  
@@ -140,7 +139,7 @@ ms.locfileid: "68211316"
   
  `WHERE @JobID = CONVERT(uniqueidentifier, $(ESCAPE_NONE(JOBID))) ;`  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Implementare processi](implement-jobs.md)   
  [Gestire passaggi di processo](manage-job-steps.md)  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 60a56b6d64957198292146d392ea22a572fb8a4e
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 9e2411daea2d4b1c4028e9ed0b3143762f2db592
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000961"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933022"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Proprietà catalogo full-text (pagina Generale)
   In questa sezione vengono illustrate le opzioni e le funzioni disponibili nella pagina **generale** della finestra di dialogo **Proprietà catalogo full-text** .  
@@ -34,11 +33,11 @@ ms.locfileid: "83000961"
  **Stato popolamento**  
  Indica lo stato del catalogo. I valori possibili sono:  
   
--   **Inattivo**  
+-   **Idle**  
   
 -   **Ricerca per indicizzazione in corso**  
   
--   **In pausa**  
+-   **Sospeso**  
   
 -   **Sospensione causata dal servizio Microsoft FullText**  
   
@@ -52,7 +51,7 @@ ms.locfileid: "83000961"
   
 -   **Il disco è completamente sospeso**  
   
--   **Rilevamento modifiche**  
+-   **Change tracking**  
   
  **Item Count**  
  Consente di visualizzare il numero di elementi full-text presenti nel catalogo.  
