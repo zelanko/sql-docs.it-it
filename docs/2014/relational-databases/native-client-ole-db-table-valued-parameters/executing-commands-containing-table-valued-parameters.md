@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7ecba6f6-fe7a-462a-9aa3-d5115b6d4529
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b5c6bbdf0d26002af350293a6526ed46bb71fd3e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4f22a024b0edddbcc6cad17cecb62aa026b8a6b1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704656"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038933"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>Esecuzione di comandi contenenti parametri con valori di tabella
   L'esecuzione di un comando contenente parametri con valori di tabella avviene in due fasi.  

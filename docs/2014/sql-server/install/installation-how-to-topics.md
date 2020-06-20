@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 59de41e7-557f-462a-8914-53ec35496baa
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 20c42e7d57415875acd1aebeaa3a674285468dc0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ab6f5e1d93def3f28fafb5423721afa16aad236
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094357"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042292"
 ---
 # <a name="installation-how-to-topics"></a>Procedure per l'installazione
   Utilizzare gli argomenti seguenti per installare [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -38,7 +37,7 @@ ms.locfileid: "66094357"
 |[Disinstallare un'istanza esistente di SQL Server &#40;Setup&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)|Argomento contenente le procedure per la disinstallazione manuale di un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Procedure per l'aggiornamento](../../../2014/sql-server/install/upgrade-how-to-topics.md)|Argomento contenente le procedure per l'aggiornamento di un'istanza autonoma o cluster di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Pianificazione di un'installazione di SQL Server](../../../2014/sql-server/install/planning-a-sql-server-installation.md)   
  [Eseguire l'aggiornamento a SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)   
  [Installazione di SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2175ae19218592a2742aa1404ffa6620da333846
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 2b8f032dce4f2eb09ef80cfa8c6333de2d563a81
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925085"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957131"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Panoramica del ripristino e del recupero (SQL Server)
   Per recuperare un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in seguito a un errore, il relativo amministratore deve ripristinare un set di backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in una sequenza di ripristino significativa e logicamente corretta. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportano il ripristino di dati da backup di un intero database, di un file di dati o di una pagina di dati nelle modalità descritte di seguito:  

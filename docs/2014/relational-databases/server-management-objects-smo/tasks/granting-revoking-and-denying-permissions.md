@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6c64c70965d00967e0cac254cf4d26f6ce25ec5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cdc0c2873071d2bed6b1ff5893c88fe5baf16cc2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72796787"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037506"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>Concessione, revoca e negazione delle autorizzazioni
   L'oggetto <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> viene utilizzato per assegnare un set di autorizzazioni o una singola autorizzazione del server all'oggetto <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet>. Per le autorizzazioni al livello del server, l'utente autorizzato fa riferimento a un account di accesso. Gli account di accesso autenticati da Windows sono elencati come nomi utente di Windows. Quando viene eseguito questo esempio di codice, l'autorizzazione viene revocata all'utente autorizzato e ne viene verificata la rimozione con il metodo <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A>.  

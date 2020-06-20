@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: af68d59a-a04d-4f23-9967-ad4ee2e63381
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3831943533939f7b9f8e31f09b80c71cc61b8d3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef3d6fe660b563ceb8f86b2d3cce123447de5366
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094424"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042538"
 ---
 # <a name="install-sql-server-management-tools"></a>Installare gli strumenti di gestione di SQL Server
   Gli strumenti di gestione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includono i componenti seguenti:  
@@ -36,9 +35,9 @@ ms.locfileid: "66094424"
   
  Indipendentemente dal numero di istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installate in un computer, verrà installata un'unica copia di Strumenti di gestione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Gli strumenti di gestione possono essere eseguiti side-by-side nello stesso computer con le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versioni precedenti degli strumenti di gestione.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Gli strumenti di gestione possono essere eseguiti side-by-side nello stesso computer con le versioni precedenti degli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] strumenti di gestione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzionalità supportate dalle edizioni di SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Edizioni e componenti di SQL Server 2014](../editions-and-components-of-sql-server-2016.md)   
  [Installare SQL Server 2014 dall'installazione guidata &#40;&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   

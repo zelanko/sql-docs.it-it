@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1b7c6dbb-b40e-4822-9caa-608e1056af8e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f273823825cf94da6269a58389f04207ad1c2707
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 870913346a7754e54cfd007f7c2b988b9b216cc4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68190681"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036658"
 ---
 # <a name="remove-data-quality-server-objects"></a>Rimuovere oggetti server Data Quality Services
   La disinstallazione di [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o la rimozione completa di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui è disponibile [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] non comporta l'eliminazione di alcun oggetto [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , inclusi i database DQS. Questo implica che non si perdono i dati DQS se si disinstalla [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] utilizzando il programma di installazione di SQL Server. È pertanto necessario eliminare manualmente questi oggetti [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] una volta completato il processo di disinstallazione.  

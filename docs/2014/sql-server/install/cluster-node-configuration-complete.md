@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 64174d54-edee-49b8-9b43-039574bf2ca1
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 223940bda5cf30098d431cfcc3ded53a867a92b3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc1f8ce4574580746e20c478b23e40485c3e6ecc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096449"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037099"
 ---
 # <a name="cluster-node-configuration-complete"></a>Configurazione nodi cluster (completa)
   Utilizzare la pagina Configurazione nodi cluster (completa) per specificare un'istanza esistente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che è stato preparato per clustering. Per installare o aggiornare un cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario eseguire il programma di installazione su ogni nodo del cluster di failover. Per aggiungere un nodo a un cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esistente, è necessario eseguire il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel nodo che deve essere aggiunto all'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -23,7 +22,7 @@ ms.locfileid: "66096449"
 ## <a name="options"></a>Opzioni  
  Dalle caselle a discesa:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Nome istanza: selezionare il nome dell'istanza per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il cluster di failover.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Nome istanza: selezionare il nome dell'istanza per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cluster di failover.  
   
 -   Nome del nodo: questo campo è già popolato con il nome del computer in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione il programma di installazione.  
   

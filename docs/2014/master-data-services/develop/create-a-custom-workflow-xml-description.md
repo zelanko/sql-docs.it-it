@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a71ee85fc4dce4abd7d8ef91a8f22529ce8d5a0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7cceedac33c3f368f99fd87ab3aa2453f1cf9ba9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483010"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971511"
 ---
 # <a name="custom-workflow-xml-description-master-data-services"></a>Descrizione XML del flusso di lavoro personalizzato (Master Data Services)
   In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] il metodo <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> viene chiamato da SQL Server MDS Workflow Integration Service all'avvio di un flusso di lavoro. Questo metodo riceve i metadati e i dati sull'elemento che ha attivato la regola business del flusso di lavoro come blocco di XML. Per un esempio di codice che implementa un gestore del flusso di lavoro, vedere [Creare un flusso di lavoro personalizzato - Esempio &#40;Master Data Services&#41;](create-a-custom-workflow-example.md).  
@@ -62,19 +61,19 @@ ms.locfileid: "65483010"
   
  Nella tabella seguente vengono descritti alcuni dei tag contenuti nel codice XML:  
   
-|Tag|Descrizione|  
+|Tag|Description|  
 |---------|-----------------|  
 |\<Type>|Testo immesso nella casella di testo **Tipo di flusso di lavoro** in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] per identificare l'assembly del flusso di lavoro personalizzato da caricare.|  
-|\<SendData >|Valore booleano gestito dalla casella di controllo **Includi dati membro nel messaggio** in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. Il valore 1 indica che la sezione \<MemberData> viene inviata; se il valore non è 1 la sezione \<MemberData> non viene inviata.|  
+|\<SendData>|Valore booleano gestito dalla casella di controllo **Includi dati membro nel messaggio** in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. Il valore 1 indica che la \<MemberData> sezione viene inviata; in caso contrario, la \<MemberData> sezione non viene inviata.|  
 |<Server_URL>|Testo immesso nella casella di testo **Sito flusso di lavoro** in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|  
 |<Action_ID>|Testo immesso nella casella di testo **Nome flusso di lavoro** in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|  
-|\<MemberData>|Contiene i dati del membro che ha attivato l'azione del flusso di lavoro. È incluso solo se il valore di \<SendData> è 1.|  
-|\<Immettere*xxx*>|Questo set di tag contiene i metadati sulla creazione del membro, ad esempio il momento e l'autore della creazione.|  
+|\<MemberData>|Contiene i dati del membro che ha attivato l'azione del flusso di lavoro. Questa operazione viene inclusa solo se il valore di \<SendData> è 1.|  
+|\<Enter*xxx*>|Questo set di tag contiene i metadati sulla creazione del membro, ad esempio il momento e l'autore della creazione.|  
 |\<LastChg*xxx*>|Questo set di tag contiene i metadati sull'ultima modifica apportata al membro, ad esempio il momento e l'autore dell'esecuzione della modifica.|  
 |\<Name>|Primo attributo del membro modificato. Questo membro di esempio contiene solo gli attributi Name e Code.|  
 |\<Code>|Attributo successivo del membro modificato. Se il membro di esempio contiene più attributi, essi vengono specificati dopo questo.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creare un &#40;del flusso di lavoro personalizzato Master Data Services&#41;](create-a-custom-workflow-master-data-services.md)   
  [Esempio di flusso di lavoro personalizzato &#40;Master Data Services&#41;](create-a-custom-workflow-example.md)  
   

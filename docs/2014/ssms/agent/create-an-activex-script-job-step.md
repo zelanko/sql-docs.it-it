@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: e6c46c6b-2d61-4571-bc8e-a831cd6e6302
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6f065793a86eb5c4c6ebb55883e2e206ccff9b9c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6604ba75af7acdd5bd2521433e8310c74150ce8f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798271"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041270"
 ---
 # <a name="create-an-activex-script-job-step"></a>Create an ActiveX Script Job Step
-  In questo argomento viene descritto come creare e definire [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un passaggio di processo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] di Agent in che esegue uno script ActiveX [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)], o SQL Server Management Objects.  
+  In questo argomento viene descritto come creare e definire un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] passaggio di processo di Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] che esegue uno script ActiveX utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , [!INCLUDE[tsql](../../includes/tsql-md.md)] o SQL Server Management Objects.  
   
 -   **Prima di iniziare:**  
   
