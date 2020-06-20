@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c8642a96-3a09-4ec7-a9c3-c539147e6330
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c48c3aac77d845fba9df72819bc0503eca337ce9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d34085e320cd8ca0b82d382d6d49eaa303086114
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68190071"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065064"
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>Novità relative all'installazione di SQL Server
   Windows Vista non è un sistema operativo supportato per [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Service Pack 1 è il requisito minimo per i sistemi operativi [!INCLUDE[win7](../../includes/win7-md.md)] e [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]. Per ulteriori informazioni sui requisiti del sistema operativo, vedere [requisiti hardware e software per l'installazione di SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  
@@ -30,9 +29,9 @@ ms.locfileid: "68190071"
   
  L'aggiornamento da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] è supportato, ma non è supportata l'installazione side-by-side. Per altre informazioni sul supporto di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], vedere [Aggiornamenti di versione ed edizione supportati](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
- A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], la capacità del motore di database nell'edizione Standard è di 128 GB. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]il motore di database nell'edizione standard ha una capacità di memoria di 64 GB.  
+ A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], la capacità del motore di database nell'edizione Standard è di 128 GB. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] il motore di database nell'edizione standard ha una capacità di memoria di 64 GB.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Novità di SQL Server 2014](../what-s-new-in-sql-server-2016.md)   
  [Specifiche del prodotto per SQL Server 2014](../../../2014/getting-started/sql-server-2014-product-specifications.md)   
  [Pianificazione di un'installazione di SQL Server](../../../2014/sql-server/install/planning-a-sql-server-installation.md)   

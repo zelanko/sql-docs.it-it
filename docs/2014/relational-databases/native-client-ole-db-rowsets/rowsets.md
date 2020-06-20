@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5e7b3cbe-3670-4e18-8172-2226e0b6b142
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b32491262bf843cd1ab7fb4d6fd3a0c9c39e4da8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c81f2f4e0cfda66ad67d05b8fe5ce62052c85f23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82694302"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011216"
 ---
 # <a name="rowsets"></a>Set di righe
   Le righe di un set di righe contengono colonne di dati. I set di righe sono oggetti centrali che consentono a tutti i provider di dati OLE DB di esporre dati di set di risultati in formato tabulare.  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cf786e48e6e76ca6a16a0a50a954a2a07d3f7a66
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c96c4e17a8ce0863452db171302d650f6114919
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162359"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049928"
 ---
 # <a name="create-unique-indexes"></a>Creare indici univoci
   In questo argomento si illustra come creare un indice univoco per una tabella in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un indice univoco consente di garantire che nella chiave dell'indice non siano contenuti valori duplicati e che pertanto ogni riga della tabella sia univoca. Non vi sono differenze significative tra la creazione di un vincolo UNIQUE e la creazione di un indice univoco indipendente da un vincolo. La convalida dei dati viene eseguita nello stesso modo e da Query Optimizer non viene applicata alcuna distinzione tra un indice univoco creato tramite un vincolo o manualmente. Tuttavia, se si crea un vincolo UNIQUE nella colonna, l'obiettivo dell'indice è chiaro. Per ulteriori informazioni sui vincoli UNIQUE, vedere [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  

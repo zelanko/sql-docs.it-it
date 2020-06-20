@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 418cdbb85781cd99d3febc2371ed69751d29f588
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 22faed7d9505c1ad487b5300a46a565379512091
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922103"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050158"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>OLTP in memoria (ottimizzazione per la memoria)
 
@@ -66,7 +65,7 @@ ms.locfileid: "82922103"
 ## <a name="in-this-section"></a>Contenuto della sezione
  In questa sezione vengono fornite informazioni sui seguenti concetti:
 
-|Argomento|Description|
+|Argomento|Descrizione|
 |-----------|-----------------|
 |[Requisiti per l'utilizzo di tabelle con ottimizzazione per la memoria](memory-optimized-tables.md)|Vengono descritti i requisiti hardware e software e le linee guida per l'utilizzo di tabelle ottimizzate per la memoria.|
 |[Uso di OLTP in memoria in un ambiente di VM](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)|Illustra l'uso di [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] in un ambiente virtualizzato.|
