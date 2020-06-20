@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8f068207-d777-4e64-8c4c-d821f0ddb450
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 89eebf359167559357ef9c3aadf7599b77c8d376
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 598a6cd3f891dc838bc5a797ad99e545a67bcf65
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63010763"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048567"
 ---
 # <a name="query-with-joins-visual-database-tools"></a>Esecuzione di query con join (Visual Database Tools)
   Il risultato di una query può includere dati tratti da più tabelle o oggetti con valori di tabella. Per combinare i dati di più oggetti con valori di tabella, è possibile utilizzare l'operazione JOIN di SQL.  

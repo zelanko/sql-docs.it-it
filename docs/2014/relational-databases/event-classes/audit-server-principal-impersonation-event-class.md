@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6fee1a15-325a-4f09-a95d-deecf8af1b9f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: decf18a42bc2f3f80d5c6099adc58a42869eec64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19d7e332605f2b2f0f746d5d149451dd2646627d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012767"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030935"
 ---
 # <a name="audit-server-principal-impersonation-event-class"></a>Audit Server Principal Impersonation - classe di evento
-  La classe di evento **Audit Server Principal Impersonation** viene generata in presenza di una rappresentazione nell'ambito del server, come EXECUTE AS EXECUTE AS \<*Accesso*>.  
+  La classe di evento **Audit Server Principal Impersonation** viene generata in presenza di una rappresentazione nell'ambito del server, ad esempio Execute As \<*login*> .  
   
 ## <a name="audit-server-principal-impersonation-event-class-data-columns"></a>Colonne di dati della classe di evento Audit Server Principal Impersonation  
   

@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: 855860ae-528f-48ab-80e3-f53e7cb8c33f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 21e9b4b0f05b2728ac42bbba96a6227872ceaeec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c9b0a978d3ab5612fc92bc2e87f1477249a9875
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63015793"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048624"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>Finestra di dialogo Colonne indice (Visual Database Tools)
   Utilizzare questa finestra di dialogo per selezionare le colonne di un indice e per impostarne gli ordinamenti. Un indice può utilizzare una o più colonne, ognuna delle quali può essere ordinata con un ordinamento crescente o decrescente. Per accedere a questa finestra di dialogo, nella finestra di dialogo **Indici/chiavi** fare clic sul pulsante con i puntini nella riga **Colonne** della sezione **Generale** .  
   
 ## <a name="options"></a>Opzioni  
  **Nome colonna**  
- Consente di scegliere le colonne da includere nell'indice. Selezionare ** \<None>** per rimuovere la colonna dall'indice.  
+ Consente di scegliere le colonne da includere nell'indice. Selezionare **\<None>** per rimuovere la colonna dall'indice.  
   
  **Ordinamento**  
  Consente di selezionare l'ordinamento della colonna specificata. Le opzioni disponibili sono **Crescente** o **Decrescente**.  

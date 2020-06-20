@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8fb81ab3-15f1-4a71-be72-2072c6bcc670
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8166e1cdc6c6a5587e3c5ff3bd1e5e6fe22a0f8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1578063803f86fca1d530e984b803b4ab3a20e34
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035906"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048898"
 ---
 # <a name="protocolname-property-sqlserveralias-class"></a>Proprietà ProtocolName (classe SqlServerAlias)
   Ottiene il nome del protocollo utilizzato dall'alias di connessione al server.  
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  Oggetto della [classe SqlServerAlias](sqlserveralias-class.md) che rappresenta un alias di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  

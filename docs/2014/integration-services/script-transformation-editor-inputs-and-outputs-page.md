@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9659d2d2-5d73-4470-9768-e07b77142fc9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 33ad9ddda5b40abaafddbd6e31272ece1f8edaee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45eff63fe3f5cf3bf4e764cb741b19656cf7f254
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056072"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963951"
 ---
 # <a name="script-transformation-editor-inputs-and-outputs-page"></a>Editor trasformazione Script (pagina Input e output)
   Utilizzare la pagina **Input e output** della finestra di dialogo **Editor trasformazione Script** per aggiungere, rimuovere e configurare input e output per la trasformazione script.  
@@ -49,7 +48,7 @@ ms.locfileid: "66056072"
  **Rimuovi colonna**  
  Selezionare una colonna e quindi rimuoverla facendo clic su **Rimuovi colonna**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Seleziona tipo componente script](../../2014/integration-services/select-script-component-type.md)   
  [Editor trasformazione script &#40;pagina colonne di input&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   

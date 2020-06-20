@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e26f6cf1a61e4df9db79bc5fd90429f86d70a99f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210776"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055735"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Strategie per il backup e il ripristino della replica snapshot e della replica transazionale
   Quando si progetta una strategia di backup e ripristino per la replica snapshot e la replica transazionale, è necessario considerare le tre aree di fattori seguenti:  
@@ -207,17 +206,17 @@ ms.locfileid: "68210776"
   
     2.  Ricreare la sottoscrizione nel database **B** della pubblicazione nel database **a**, specificando che la sottoscrizione deve essere inizializzata con un backup (il valore **Initialize with backup** per il **@sync_type** parametro di [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Andare al passaggio c.  
   
-    3.  Ricreare la sottoscrizione **nel database a** della pubblicazione nel database **B**, specificando che nel Sottoscrittore sono già presenti i dati (il valore **Replication support only** per **@sync_type** il parametro di [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Andare al passaggio 8.  
+    3.  Ricreare la sottoscrizione **nel database a** della pubblicazione nel database **B**, specificando che nel Sottoscrittore sono già presenti i dati (il valore **Replication support only** per il **@sync_type** parametro di [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Andare al passaggio 8.  
   
 8.  Eseguire gli agenti di distribuzione per sincronizzare le sottoscrizioni nei database **A** e **B**. In presenza di eventuali colonne Identity nelle tabelle pubblicate, andare al passaggio 9. In caso contrario, andare al passaggio 10.  
   
 9. In seguito al ripristino, l'intervallo di valori Identity assegnato a ogni tabella nel database **A** verrà usato anche nel database **B**. Assicurarsi che il database **B** ripristinato abbia ricevuto tutte le modifiche del database **B** bloccato propagate nel database **A** e nel database **C** e quindi reinizializzare l'intervallo di valori Identity per ogni tabella.  
   
-    1.  Eseguire [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) nel database **B** e recuperare il parametro **@request_id**di output. Andare al passaggio b.  
+    1.  Eseguire [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) nel database **B** e recuperare il parametro di output **@request_id** . Andare al passaggio b.  
   
     2.  Per impostazione predefinita, l'agente di distribuzione è impostato per l'esecuzione continua. I token dovrebbero pertanto essere inviati automaticamente a tutti i nodi. Se l'agente di distribuzione non viene eseguito in modalità continua, eseguire l'agente. Per altre informazioni, vedere [Concetti di base relativi ai file eseguibili dell’agente di replica](../concepts/replication-agent-executables-concepts.md) o [Avviare e arrestare un agente di replica &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md). Andare al passaggio c.  
   
-    3.  Eseguire [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql), specificando **@request_id** il valore recuperato nel passaggio b. Attendere finché tutti i nodi indicano di avere ricevuto la richiesta peer. Andare al passaggio d.  
+    3.  Eseguire [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql), specificando il **@request_id** valore recuperato nel passaggio b. Attendere finché tutti i nodi indicano di avere ricevuto la richiesta peer. Andare al passaggio d.  
   
     4.  Utilizzare [DBCC CHECKIDENT](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql) per reinizializzare ciascuna tabella nel database **B** , in modo da garantire l'utilizzo di un intervallo appropriato. Andare al passaggio 10.  
   
@@ -229,11 +228,11 @@ ms.locfileid: "68210776"
   
     1.  Arrestare qualsiasi attività sulle tabelle pubblicate nella topologia peer-to-peer. Andare al passaggio b.  
   
-    2.  Eseguire [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) nel database **B** e recuperare il parametro **@request_id**di output. Andare al passaggio c.  
+    2.  Eseguire [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) nel database **B** e recuperare il parametro di output **@request_id** . Andare al passaggio c.  
   
     3.  Per impostazione predefinita, l'agente di distribuzione è impostato per l'esecuzione continua. I token dovrebbero pertanto essere inviati automaticamente a tutti i nodi. Se l'agente di distribuzione non viene eseguito in modalità continua, eseguire l'agente. Andare al passaggio d.  
   
-    4.  Eseguire [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql), specificando **@request_id** il valore recuperato nel passaggio b. Attendere finché tutti i nodi indicano di avere ricevuto la richiesta peer. Andare al passaggio e.  
+    4.  Eseguire [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql), specificando il **@request_id** valore recuperato nel passaggio b. Attendere finché tutti i nodi indicano di avere ricevuto la richiesta peer. Andare al passaggio e.  
   
     5.  Ricreare la sottoscrizione nel database **B** della pubblicazione nel database **C**, specificando che nel Sottoscrittore i dati sono già disponibili. Andare al passaggio b.  
   

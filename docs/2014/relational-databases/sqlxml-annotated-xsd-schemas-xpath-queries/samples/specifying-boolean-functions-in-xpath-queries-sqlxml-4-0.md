@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c72cd333-9294-4d41-84f2-1748bf20e3eb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d43cf4449bfb4acbad32d297bc81be48f38244ca
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2318694767ceedfc3deffa925c90d235d115f1ca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717803"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062843"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>Definizione di funzioni booleane in query XPath (SQLXML 4.0)
   Negli esempi seguenti viene illustrato come specificare funzioni booleane in query XPath. Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [schema XSD con annotazioni di esempio per gli esempi XPath &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -29,7 +28,7 @@ ms.locfileid: "82717803"
 ## <a name="examples"></a>Esempi  
   
 ## <a name="a-specify-the-not-boolean-function"></a>R. Definizione della funzione booleana not()  
- Questa query restituisce tutti gli elementi figlio ** \< Customer>** del nodo di contesto che non dispongono di ** \< Order>** elementi figlio:  
+ Questa query restituisce tutti gli **\<Customer>** elementi figlio del nodo di contesto che non dispongono di **\<Order>** elementi figlio:  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -77,7 +76,7 @@ ms.locfileid: "82717803"
 ```  
   
 ## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. Definizione delle funzioni booleane true() e false()  
- Questa query restituisce tutti gli elementi figlio del ** \<>Customer** del nodo di contesto che non dispongono di ** \< Order>** elementi figlio. In termini relazionali, questa query restituisce tutti i clienti che non hanno effettuato ordini.  
+ Questa query restituisce tutti gli elementi **\<Customer>** figlio del nodo di contesto che non dispongono di **\<Order>** elementi figlio. In termini relazionali, questa query restituisce tutti i clienti che non hanno effettuato ordini.  
   
 ```  
 /child::Customer[child::Order=false()]  

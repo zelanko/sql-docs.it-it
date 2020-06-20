@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f5c11610-62e3-44df-9800-a5dc35be4a09
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ca5b07a0cd6e6282e4d61075d86ca6af6a2abd70
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29bdc55bde4d5dfb11d669d9e7b4aad06482ce7e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63062149"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056619"
 ---
 # <a name="alert-properties-new-alert-general-page"></a>Proprietà avviso-nuovo avviso (pagina generale)
   Utilizzare questa pagina per visualizzare e modificare le proprietà generali degli [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avvisi di Agent.  
@@ -26,10 +25,10 @@ ms.locfileid: "63062149"
  **Nome**  
  Consente di modificare il nome dell'avviso.  
   
- **Abilitare**  
+ **Abilitazione**  
  Consente di abilitare l'avviso. Se l'avviso non è abilitato, le azioni specificate nell'avviso non verranno eseguite.  
   
- **Type**  
+ **Tipo**  
  Consente di selezionare il tipo di avviso:  
   
 -   **Avviso per evento di SQL Server** risponde ai messaggi nel registro degli eventi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
@@ -55,7 +54,7 @@ ms.locfileid: "63062149"
  Consente di specificare la stringa da utilizzare come filtro per gli eventi.  
   
 ## <a name="sql-server-performance-condition-alerts"></a>Opzioni di Avviso relativo alle prestazioni di SQL Server  
- **Oggetto**  
+ **Object**  
  Consente di specificare l'oggetto prestazioni da monitorare.  
   
  **Contatore**  
@@ -77,7 +76,7 @@ ms.locfileid: "63062149"
  **Query**  
  Consente di specificare l'istruzione WQL che identifica l'evento al quale risponde l'avviso.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Avvisi](alerts.md)   
  [Utilizzo di WQL con il provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)   
  [Creare un avviso usando un numero di errore](create-an-alert-using-an-error-number.md)   

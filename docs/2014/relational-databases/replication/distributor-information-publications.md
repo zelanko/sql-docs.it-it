@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2d738066e4832c029743d53f7ec99dbb1b6fe5cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8ca0717a63c9660c225ec238e1e4d2423f7d01ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721363"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010794"
 ---
 # <a name="distributor-information-dialog-box"></a>Finestra di dialogo informazioni server di distribuzione 
 In questo argomento vengono fornite informazioni sulla finestra di dialogo **server di distribuzione** 
@@ -55,7 +54,7 @@ In questo argomento vengono fornite informazioni sulla finestra di dialogo **ser
  Nelle sezioni seguenti sono descritti i dati visualizzati in questa scheda per l'agente del server di distribuzione e per quello di merge.  
   
 ### <a name="distributor-agent"></a>Agente del server di distribuzione  
- **Stato**  
+ **Status**  
  Stato dell'agente. Nell'elenco seguente vengono indicati i valori di stato possibili:  
   
 -   Errore    
@@ -64,22 +63,22 @@ In questo argomento vengono fornite informazioni sulla finestra di dialogo **ser
 -   Non in esecuzione    
 -   Mai avviato  
   
- **Editore**  
+ **Autore**  
  Istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del server di pubblicazione.  
   
  **Pubblicazione**  
  Nome della pubblicazione a cui è associato l'agente.  
   
- **Abbonamento**  
+ **Sottoscrizione**  
  Nome della sottoscrizione nel formato [*SubscriberName*].[*Database*].  
   
- **Type**  
+ **Tipo**  
  Tipo di replica: push, pull o anonima.  
   
  **Ultima ora di inizio**  
  Ultima ora di avvio dell'agente.  
   
- **Durata**  
+ **Duration**  
  Durata dell'esecuzione dell'agente. Il valore di durata rappresenta il tempo trascorso se l'agente è ancora in esecuzione e il tempo totale se l'agente è stato eseguito in precedenza.  
   
  **Ultima azione**  
@@ -88,7 +87,7 @@ In questo argomento vengono fornite informazioni sulla finestra di dialogo **ser
  **Frequenza recapito**  
  Frequenza, in comandi al secondo, con cui viene eseguito il commit dei comandi di inizializzazione nel database di distribuzione durante la più recente esecuzione dell'agente.  
   
- **Latenza**  
+ **Latency**  
  Tempo, espresso in secondi, trascorso tra il commit della modifica più recente nel database di pubblicazione e il commit del comando corrispondente nel database di distribuzione.  
   
  **N. transazioni**  
@@ -101,7 +100,7 @@ In questo argomento vengono fornite informazioni sulla finestra di dialogo **ser
  Numero medio di comandi per transazione durante la più recente esecuzione dell'agente.  
   
 ### <a name="merge-agent"></a>Agente di merge  
- **Stato**  
+ **Status**  
  Stato dell'agente. Nell'elenco seguente vengono indicati i valori di stato possibili:  
   
 -   Errore    
@@ -110,22 +109,22 @@ In questo argomento vengono fornite informazioni sulla finestra di dialogo **ser
 -   Non in esecuzione    
 -   Mai avviato  
   
- **Editore**  
+ **Autore**  
  Istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del server di pubblicazione.  
   
  **Pubblicazione**  
  Nome della pubblicazione a cui è associato l'agente.  
   
- **Abbonamento**  
+ **Sottoscrizione**  
  Nome della sottoscrizione nel formato [*SubscriberName*].[*Database*].  
   
- **Type**  
+ **Tipo**  
  Tipo di replica: push, pull o anonima.  
   
  **Ultima ora di inizio**  
  Ultima ora di avvio dell'agente.  
   
- **Durata**  
+ **Duration**  
  Durata dell'esecuzione dell'agente. Il valore di durata rappresenta il tempo trascorso se l'agente è ancora in esecuzione e il tempo totale se l'agente è stato eseguito in precedenza.  
   
  **Ultima azione**  
@@ -159,7 +158,7 @@ In questo argomento vengono fornite informazioni sulla finestra di dialogo **ser
  Numero di conflitti che si verificano nel Sottoscrittore durante il processo di merge.  
   
  
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Avviare Monitoraggio replica](monitor/start-the-replication-monitor.md)   
  [Monitoraggio della replica](monitoring-replication.md)  
   

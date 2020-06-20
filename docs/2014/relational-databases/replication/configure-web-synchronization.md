@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 406175533b92d13dce8c14b91b654fbb6099dc22
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721653"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010991"
 ---
 # <a name="configure-web-synchronization"></a>Configurazione della sincronizzazione Web
   L'opzione di sincronizzazione Web per la replica di tipo merge di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente la replica dei dati tramite il protocollo HTTPS su Internet. Per utilizzare la sincronizzazione Web, è innanzitutto necessario eseguire le azioni di configurazione riportate di seguito:  
@@ -124,7 +123,7 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
 -   Se si replicano volumi elevati di dati, può essere necessario regolare la dimensione dei batch dell'agente di merge.  
   
- La dimensione dei batch per la replica di tipo merge è misurata in *generazioni*, ovvero raccolte di modifiche per ogni articolo. Il numero di generazioni in un batch viene specificato usando i parametri-`DownloadGenerationsPerBatch` e-`UploadGenerationsPerBatch` del agente di merge. Per altre informazioni, vedere [Replication Merge Agent](agents/replication-merge-agent.md).  
+ La dimensione dei batch per la replica di tipo merge è misurata in *generazioni*, ovvero raccolte di modifiche per ogni articolo. Il numero di generazioni in un batch viene specificato usando i parametri- `DownloadGenerationsPerBatch` e- `UploadGenerationsPerBatch` del agente di merge. Per altre informazioni, vedere [Replication Merge Agent](agents/replication-merge-agent.md).  
   
  Per volumi elevati di dati, specificare un numero basso per ognuno dei parametri di batch. Si consiglia di iniziare con il valore 10, quindi regolarlo in base alle esigenze e alle prestazioni dell'applicazione. In genere, questi parametri sono specificati in un profilo dell'agente. Per ulteriori informazioni sui profili, vedere [Replication Agent Profiles](agents/replication-agent-profiles.md).  
   
@@ -144,7 +143,7 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
      Per ulteriori informazioni sulle autorizzazioni richieste dagli agenti, vedere [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
--   Specificare lo stesso account di dominio utilizzato dal agente di merge quando si specifica un account e una password nella pagina **informazioni server Web** della creazione guidata nuova sottoscrizione o quando si specificano i valori per i **@internet_url** parametri **@internet_login** e di [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Questo account deve disporre delle autorizzazioni di lettura per la condivisione snapshot.  
+-   Specificare lo stesso account di dominio utilizzato dal agente di merge quando si specifica un account e una password nella pagina **informazioni server Web** della creazione guidata nuova sottoscrizione o quando si specificano i valori per i **@internet_url** **@internet_login** parametri e di [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Questo account deve disporre delle autorizzazioni di lettura per la condivisione snapshot.  
   
 -   Ogni pubblicazione deve utilizzare una directory virtuale separata per IIS.  
   

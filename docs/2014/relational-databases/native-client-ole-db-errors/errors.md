@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bd0612f4-96ef-4919-b0f9-b5447210fe93
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e3979390a58235dbb8ec7c76e7b16478e7d9deb9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: dac2fff4492af56253a8c95074afa1b1f48d5a1d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704999"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056292"
 ---
 # <a name="errors"></a>Errors
   Gli oggetti OLE/COM segnalano gli errori tramite il codice restituito HRESULT delle funzioni membro oggetto. Un HRESULT OLE/COM è una struttura costituita da pacchetti di byte. OLE fornisce macro che risolvono i riferimenti dei membri di struttura.  
