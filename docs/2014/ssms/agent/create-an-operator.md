@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1359d790-5905-4927-a208-e7155e7768a2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3a5414e845d8e625c852d628bf0d965432bc72a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dfe07042f9a4b8ac595ada8b86e7bad131032700
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63136423"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067785"
 ---
 # <a name="create-an-operator"></a>Create an Operator
-  In questo argomento viene descritto come configurare un utente per la ricezione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di notifiche relative [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ai processi [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] di [!INCLUDE[tsql](../../includes/tsql-md.md)]Agent in tramite o.  
+  In questo argomento viene descritto come configurare un utente per la ricezione di notifiche relative ai [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processi di Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  **Contenuto dell'articolo**  
   
@@ -45,7 +44,7 @@ ms.locfileid: "63136423"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
--   Le opzioni Cercapersone e **net send** verranno rimosse da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare pertanto di utilizzarle in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui sono state implementate.  
+-   Le opzioni Cercapersone e **net send** verranno rimosse da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Evitare pertanto di utilizzarle in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui sono state implementate.  
   
 -   Si noti che per inviare notifiche tramite posta elettronica e cercapersone agli operatori, è necessario configurare SQL Server Agent per l'utilizzo di Posta elettronica database. Per ulteriori informazioni, vedere [Procedura: Assegnazione di avvisi a un operatore (SQL Server Management Studio)](assign-alerts-to-an-operator.md).  
   
@@ -71,7 +70,7 @@ ms.locfileid: "63136423"
      **Nome**  
      Consente di modificare il nome dell'operatore.  
   
-     **Attivata**  
+     **Enabled**  
      Consente di abilitare l'operatore. Se non è abilitato, all'operatore non verranno inviate notifiche.  
   
      **Indirizzo posta elettronica**  

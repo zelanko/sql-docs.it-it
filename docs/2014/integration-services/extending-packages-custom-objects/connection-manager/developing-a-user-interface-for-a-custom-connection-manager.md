@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 54ec4cc92383d0b8e423aabd19c0aeee9226d71f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7ddcad6f0968dc8b9321257e0ea2a95d8c65cf2e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896042"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966501"
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>Sviluppo di un'interfaccia utente per una gestione connessione personalizzata
   Dopo aver eseguito l'override dell'implementazione delle proprietà e dei metodi della classe di base per fornire la funzionalità personalizzata, è possibile creare un'interfaccia utente personalizzata per la gestione connessione. Se non si crea un'interfaccia utente personalizzata, gli utenti possono configurare la gestione connessione solo utilizzando la finestra delle proprietà.  
@@ -286,7 +285,7 @@ private void ConfigureControlsFromConnectionManager()
   
 ![Integration Services icona (piccola)](../../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina relativa a Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di una gestione connessione personalizzata](creating-a-custom-connection-manager.md)   
  [Scrittura del codice di una gestione connessione personalizzata](coding-a-custom-connection-manager.md)  
   

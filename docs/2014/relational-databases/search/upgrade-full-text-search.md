@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43ef487dc2049d3ca95f4cddff72a005c98a5d19
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2bdf0bdee452101bbafb8108426faf6604e7626
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010956"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016513"
 ---
 # <a name="upgrade-full-text-search"></a>Aggiornamento della ricerca full-text
   L'aggiornamento della ricerca full-text a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] viene effettuato in fase di installazione e durante il collegamento, il ripristino o la copia dei file di database e dei cataloghi full-text di una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la Copia guidata database.  
@@ -55,7 +54,7 @@ ms.locfileid: "66010956"
  In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ogni indice full-text risiede in un catalogo full-text che appartiene a un filegroup, dispone di un percorso fisico e viene considerato un file di database. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive un catalogo full-text è un oggetto logico o virtuale che contiene un gruppo di indici full-text. Pertanto, un nuovo catalogo full-text non viene considerato un file di database con un percorso fisico. Tuttavia, durante l'aggiornamento di un catalogo full-text contenente file di dati viene creato un nuovo filegroup nello stesso disco mantenendo in questo modo il vecchio comportamento I/O su disco dopo l'aggiornamento. Tutti gli indici full-text di quel catalogo vengono posizionati nel nuovo filegroup se esiste il percorso radice. Se il percorso precedente del catalogo full-text non è valido, l'indice full-text rimane nello stesso filegroup della tabella di base o nel filegroup primario nel caso di una tabella partizionata.  
   
 > [!NOTE]  
->  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] Le istruzioni DDL che specificano cataloghi full-text continuano a funzionare correttamente.  
+>  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]Le [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni DDL che specificano cataloghi full-text continuano a funzionare correttamente.  
   
 ##  <a name="full-text-upgrade-options"></a><a name="FT_Upgrade_Options"></a>Opzioni di aggiornamento full-text  
  Quando si aggiorna un'istanza del server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], l'interfaccia utente consente di scegliere una delle opzioni di aggiornamento full-text seguenti.  
@@ -70,7 +69,7 @@ ms.locfileid: "66010956"
   
  Per informazioni sull'impatto dell'importazione di un indice full-text, vedere "Considerazioni per la scelta di un'opzione di aggiornamento full-text" più avanti in questo argomento.  
   
- Ricompila  
+ Ricompilazione  
  I cataloghi full-text vengono ricompilati utilizzando i nuovi word breaker ottimizzati. La ricompilazione degli indici può richiedere tempo. Dopo l'aggiornamento, inoltre, potrebbe essere necessaria una quantità significativa di CPU e di memoria.  
   
  Reset  
@@ -135,7 +134,7 @@ ms.locfileid: "66010956"
   
  **Per modificare il comportamento dell'aggiornamento full-text in un'istanza del server**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Usare l' **azione\_opzione di aggiornamento** di [\_SP\_FULLTEXT Service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Usare l' **azione \_ opzione di aggiornamento** di [SP \_ FULLTEXT \_ Service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** Usare l'opzione di **aggiornamento full-text** della finestra di dialogo **Proprietà server** . Per altre informazioni, vedere [Gestione e monitoraggio della ricerca full-text per un'istanza del server](manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
@@ -150,7 +149,7 @@ ms.locfileid: "66010956"
   
  Per altre informazioni sul backup e il ripristino dei cataloghi full-text di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , vedere [Backup e ripristino di cataloghi full-text](https://go.microsoft.com/fwlink/?LinkId=121052) e [Backup e ripristino di file e cataloghi full-text](https://go.microsoft.com/fwlink/?LinkId=121053)nella documentazione online di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
- Quando viene ripristinato il database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], viene creato un nuovo file di database per il catalogo full-text. Il nome predefinito di questo file è ftrow_*nome-catalogo*.ndf. Se ad esempio *nome-catalogo* è `cat1`, il nome predefinito del database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sarà `ftrow_cat1.ndf`. Tuttavia, se il nome predefinito è già in uso nella directory di destinazione, il nuovo file di database sarà `ftrow_`denominato nome *-Catalogo-*`{`*GUID*`}.ndf`, dove *GUID* è l'identificatore univoco globale del nuovo file.  
+ Quando viene ripristinato il database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], viene creato un nuovo file di database per il catalogo full-text. Il nome predefinito di questo file è ftrow_*nome-catalogo*.ndf. Se ad esempio *nome-catalogo* è `cat1`, il nome predefinito del database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sarà `ftrow_cat1.ndf`. Tuttavia, se il nome predefinito è già in uso nella directory di destinazione, il nuovo file di database sarà denominato nome `ftrow_` *-Catalogo-* `{` *GUID* `}.ndf` , dove *GUID* è l'identificatore univoco globale del nuovo file.  
   
  Dopo l'importazione dei cataloghi, **sys.database_files** e **sys.master_files**vengono aggiornati in modo da rimuovere le voci di catalogo e la colonna **path** in **sys.fulltext_catalogs** viene impostata su NULL.  
   
@@ -171,7 +170,7 @@ ms.locfileid: "66010956"
   
 -   Il file di database, `ftdb1.mdf`, viene spostato in `C:\Program Files\Microsoft SQL Server\MSSQL.1MSSQL12.MSSQLSERVER\MSSQL\DATA\ftdb1.mdf`.  
   
--   Il file di log `ftdb1_log.ldf`,, viene spostato in una directory di log nell'unità disco di log, *log_drive*`:\`*log_directory*`\ftdb1_log.ldf`.  
+-   Il file di log, `ftdb1_log.ldf` , viene spostato in una directory di log nell'unità disco di log, *log_drive* `:\` *log_directory* `\ftdb1_log.ldf` .  
   
 -   I file di catalogo che corrispondono al catalogo `sysft_cat90` vengono spostati in `C:\temp`. Dopo essere stati importati, gli indici full-text vengono automaticamente posizionati in un file di database, C:\ftrow_sysft_cat90.ndf, e C:\temp verrà eliminato.  
   

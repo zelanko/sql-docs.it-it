@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: d1c846f7ed60bbecac64021e9a881312e1f1f64c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58e8c071672c8c3afba8d6c424488899dcf76be7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011349"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016378"
 ---
 # <a name="join-a-role"></a>aggiungere un ruolo
   In questo argomento si descrive come assegnare ruoli agli account di accesso e agli utenti di database in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Utilizzare i ruoli disponibili in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per gestire in modo efficace le autorizzazioni. Assegnare autorizzazioni ai ruoli, quindi aggiungere e rimuovere utenti e account di accesso ai ruoli. Utilizzando i ruoli, non è necessario gestire singolarmente le autorizzazioni per ciascun utente.  
@@ -62,7 +61,7 @@ ms.locfileid: "63011349"
 ###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
- È `ALTER ANY ROLE` richiesta l'autorizzazione per il `ALTER` database, l'autorizzazione per il ruolo o l'appartenenza a **db_securityadmin**.  
+ È richiesta `ALTER ANY ROLE` l'autorizzazione per il database, l' `ALTER` autorizzazione per il ruolo o l'appartenenza a **db_securityadmin**.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   

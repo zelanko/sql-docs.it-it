@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: dbff2968-3011-41d6-a141-52d814af0213
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d3fd5a90ba479ef8075e45dcaab16475c0284f19
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6ddd5bcdc23426bc00108cb30f4cfc97185f9564
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62912155"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013803"
 ---
 # <a name="sqlservicetype-property-sqlservice-class"></a>Proprietà SqlServiceType (classe SqlService)
   Ottiene il tipo del servizio gestito.  
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  Oggetto della [classe SqlService](sqlservice-class.md) che rappresenta il servizio.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
@@ -56,7 +55,7 @@ object
 |*6*|ReportServer è il servizio [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|  
 |*7*|SQLBrowser è il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Browser.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Avvio e arresto di servizi](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

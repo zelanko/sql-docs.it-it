@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9d2b72df-cb21-414a-abef-917f13d4de62
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 31477a012135aba643e1d89b0890df242f568e16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fbd340710b563180ad88c935eeb6425e2b5c57ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63136534"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037345"
 ---
 # <a name="getcurrentcertificate-method-sinstance-class"></a>Metodo GetCurrentCertificate (classe SInstance)
   Ottiene il certificato di sicurezza corrente.  
@@ -40,7 +39,7 @@ SHA
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  Oggetto della [classe SInstance](sinstance-class.md) che rappresenta le impostazioni del server in un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 #### <a name="parameters"></a>Parametri  
@@ -54,7 +53,7 @@ SHA
   
 ## <a name="remarks"></a>Osservazioni  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurazione di protocolli di rete server e di librerie di rete](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

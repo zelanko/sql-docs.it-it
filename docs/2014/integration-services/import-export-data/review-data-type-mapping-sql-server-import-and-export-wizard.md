@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6472ff165894937d31366e47651ada64af38ae1b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 108256e1d8a3638da5cd676a0ee57894b3ee874c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62767943"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966210"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Verifica mapping tra i tipi di dati (Importazione/Esportazione guidata SQL Server)
   Utilizzare la pagina **Verifica mapping** tra i tipi di dati per esaminare le informazioni dettagliate sulle conversioni dei tipi di dati che devono essere eseguite dalla procedura guidata per rendere i dati di origine compatibili con la destinazione. Queste informazioni includono segnali visivi per distinguere le conversioni per cui si prevede un esito positivo da quelle che potrebbero provocare errori o troncamenti. Per ogni conversione, è possibile decidere se accettare la conversione suggerita dalla procedura guidata e specificare come gestire gli eventuali errori restituiti.  
@@ -37,7 +36,7 @@ ms.locfileid: "62767943"
 |Icona di origine dati|Indica la probabilità di esito positivo per le conversioni dei tipi di dati:<br /><br /> Un'icona raffigurante un segno di spunta verde indica che la procedura guidata prevede l'esito positivo per tutte le conversioni dei tipi di dati per la tabella.<br /><br /> Un'icona di avviso gialla indica che è consigliabile verificare le singole conversioni eseguite dalla procedura guidata. Per verificare tali conversioni, selezionare la tabella, quindi controllare le conversioni per singole colonne nell'elenco **Mapping dei tipi di dati** .<br /><br /> Un'icona di errore rossa indica che la procedura guidata non è in grado di eseguire in modo affidabile alcune delle conversioni per la tabella.|  
 |**origine**|Visualizza il nome della tabella di origine.|  
 |Icona di destinazione|Indica se la destinazione è già presente o se verrà creata dalla procedura guidata:<br /><br /> Un'icona di tabella indica che la destinazione è costituita da una tabella esistente.<br /><br /> Un'icona di tabella con un riflesso di luce indica che la destinazione è costituita da una nuova tabella che verrà creata dalla procedura guidata.|  
-|**Destination**|Visualizza il nome della tabella di destinazione.|  
+|**Destinazione**|Visualizza il nome della tabella di destinazione.|  
   
  Per visualizzare le informazioni di conversione relative a una singola tabella, selezionare una tabella in questa griglia della **tabella** . Le informazioni sulla conversione per la tabella selezionata verranno visualizzate nelle colonne della griglia **Mapping dei tipi di dati** nella parte inferiore della pagina.  
   

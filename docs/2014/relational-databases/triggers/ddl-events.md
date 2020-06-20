@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 62ef24b4-3553-4aed-b62a-670980bae501
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c9c90dbb072ace600258edfb4ff13f99ecadf188
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f670ed5ea57bc61f0509afd58432888c1fdae13
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196514"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014674"
 ---
 # <a name="ddl-events"></a>Eventi DDL
   Nelle tabelle seguenti sono elencati gli eventi DDL che possono essere utilizzati per attivare un trigger DDL o generare una notifica degli eventi. Si noti che ogni evento corrisponde a una stored procedure o un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] , con la sintassi modificata per includere un carattere di sottolineatura (_) fra le parole chiave.  

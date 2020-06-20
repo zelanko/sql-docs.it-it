@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0e5fb127-c7ff-4dfa-b90e-d9bcf0ce763b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3e36fae15f6f4220565bcc3d14c0e125ca6818f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da790644cbd29bc38a89899e02d50aac58228a0e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058075"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965536"
 ---
 # <a name="import-package-dialog-box-ui-reference"></a>Riferimento all'interfaccia utente della finestra di dialogo Importa pacchetto
   Usare la finestra di dialogo **Importa pacchetto** disponibile in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]per importare un pacchetto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e impostare o modificare il livello di protezione del pacchetto.  
@@ -30,7 +29,7 @@ ms.locfileid: "66058075"
   
  **SQL Server**  
   
- **File System**  
+ **File system**  
   
  **Archivio pacchetti SSIS**  
   
@@ -55,13 +54,13 @@ ms.locfileid: "66058075"
  **Percorso pacchetto**  
  Digitare il percorso del pacchetto oppure fare clic sul pulsante Sfoglia **(...)** per individuare il pacchetto.  
   
- **Nome pacchetto**  
+ **Nome del pacchetto**  
  Se lo si desidera, rinominare il pacchetto. Il nome predefinito è il nome del pacchetto da importare.  
   
  **Livello di protezione**  
  Fare clic sul pulsante Sfoglia **(...)** e aggiornare il livello di protezione nella finestra di dialogo **Livello di protezione pacchetto**. Per altre informazioni, vedere [Finestra di dialogo Livello di protezione pacchetto e Livello di protezione del progetto](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Salva copia del pacchetto](../../2014/integration-services/save-copy-of-package.md)   
  [Riferimento all'interfaccia utente della finestra di dialogo Esporta pacchetto](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [Salva pacchetti](save-packages.md)   

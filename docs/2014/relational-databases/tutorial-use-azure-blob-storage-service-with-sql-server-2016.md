@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a15f6735ef0ef79b7eb953445c926f60f6bfb12e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b80b6af9b198db61f8cd34360ddbb3e00bc13d7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176089"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037204"
 ---
 # <a name="tutorial-sql-server-data-files-in-azure-storage-service"></a>Esercitazione: File di dati di SQL Server nel servizio Archiviazione di Azure
   Introduzione all'esercitazione relativa ai file di dati di SQL Server nel servizio di archiviazione di Azure. Questa esercitazione contiene informazioni utili sull'archiviazione dei file di dati di SQL Server direttamente nel servizio di archiviazione BLOB di Azure.  
@@ -55,6 +54,6 @@ ms.locfileid: "70176089"
  In questa lezione viene ripristinato un database da archiviazione di Azure utilizzando l'opzione RESTOre database MOVE.  
   
 ## <a name="see-also"></a>Vedere anche  
- [File di dati di SQL Server in Azure](databases/sql-server-data-files-in-microsoft-azure.md)  
+ [SQL Server file di dati in Azure](databases/sql-server-data-files-in-microsoft-azure.md)  
   
   

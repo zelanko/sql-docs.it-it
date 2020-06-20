@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6c5cb6c1-2921-4ba1-8100-0bf8074f9103
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a831468c51243aa8cb5f8676823712e9e4b6e621
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 54e556ae83db6b59410ae56a5d65e06e0bbac807
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717345"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059571"
 ---
 # <a name="auto-mode-heuristics-in-shaping-returned-xml"></a>Approccio euristico della modalità AUTO per la determinazione della struttura dei valori XML restituiti
   La modalità AUTO determina la struttura del valore XML restituito in base alla query. Per determinare come devono essere nidificati gli elementi, la modalità AUTO, che utilizza un approccio euristico, confronta i valori delle colonne nelle righe adiacenti. Vengono confrontate colonne di tutti i tipi, ad eccezione di **ntext**, **text**, **image**e **xml**. Vengono confrontate le colonne di tipo **(n)varchar(max)** e **varbinary(max)** .  
@@ -42,7 +41,7 @@ T1.Id  T1.Name  T2.Id
 1       Nancy     4  
 ```  
   
- Utilizzando un approccio euristico, la modalità AUTO confronta tutti i valori della tabella T1, ovvero le colonne Id e Name. Le prime due righe contengono gli stessi valori nelle colonne Id e Name, quindi al risultato viene aggiunto un elemento \<T1> con due elementi figlio \<T2>.  
+ Utilizzando un approccio euristico, la modalità AUTO confronta tutti i valori della tabella T1, ovvero le colonne Id e Name. Poiché le prime due righe hanno gli stessi valori per le colonne ID e Name, \<T1> \<T2> nel risultato viene aggiunto un elemento con due elementi figlio.  
   
  Il valore XML restituito è il seguente:  
   

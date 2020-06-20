@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e6d2e716-5263-477c-ad0e-7bcbfef4c1f3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a9f7332460d3dc25c756e6bd031b1a4b3a1f6743
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f18509d9a18ba8be1f4e40c93bff5abfcae3d69c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62868766"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053986"
 ---
 # <a name="mssqlserver_3181"></a>MSSQLSERVER_3181
     
@@ -42,7 +41,7 @@ ms.locfileid: "62868766"
  Ripristinare il backup in una posizione con spazio su disco sufficiente oppure aumentare lo spazio sul disco.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ripristinare un database in un nuovo percorso &#40;SQL Server&#41;](../backup-restore/restore-a-database-to-a-new-location-sql-server.md)   
+ [Ripristinare un database in una nuova posizione &#40;SQL Server&#41;](../backup-restore/restore-a-database-to-a-new-location-sql-server.md)   
  [Ripristinare i file in un nuovo percorso &#40;SQL Server&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql)  

@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: e6472fae-870d-4fb3-84d0-0c8f6599d1d2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 9ecc010dde59028b95896d6c00fa4f55cdc82c40
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b073da4db45708e609aa317507a14f22c9e9f7fb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63136469"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037372"
 ---
 # <a name="instancename-property-sinstance-class"></a>Proprietà InstanceName (classe SInstance)
-  Ottiene il nome dell'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Ottiene il nome dell'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  Oggetto della [classe SInstance](sinstance-class.md) che rappresenta un'istanza del server.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
@@ -45,7 +44,7 @@ object
   
 ## <a name="remarks"></a>Osservazioni  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurazione di protocolli di rete server e di librerie di rete](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

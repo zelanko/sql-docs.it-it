@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ef7f15fc1b54d18c71d7fccfd379454911cb8961
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: edffd9454b51ea80a18311f735d29407f97f6eb6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875002"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957021"
 ---
 # <a name="restore-database-files-page"></a>Ripristina database (pagina File)
   Utilizzare la pagina **File** della finestra di dialogo **Ripristina database** per gestire i file specifici che si è scelto di ripristinare all'interno del database.  

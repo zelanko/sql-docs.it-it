@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0a2919be-2ea7-4c06-82b8-0ffad5f0dd83
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 26a7efa42215f1bc456cf4a4c47b3a71c62b94e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 24c35eb9b1df9f250d21e95b591ec2cc40026038
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058350"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966301"
 ---
 # <a name="fuzzy-lookup-transformation-editor-advanced-tab"></a>Editor trasformazione Ricerca fuzzy (scheda Avanzate)
   Usare la scheda **Avanzate** della finestra di dialogo **Editor trasformazione Ricerca fuzzy** per impostare i parametri relativi alla ricerca fuzzy.  
@@ -36,7 +35,7 @@ ms.locfileid: "66058350"
  **Delimitatori token**  
  Consente di specificare i delimitatori utilizzati dalla trasformazione per suddividere in token i valori delle colonne.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor trasformazione Ricerca fuzzy &#40;scheda tabella di riferimento&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-reference-table-tab.md)   
  [Editor trasformazione Ricerca fuzzy &#40;scheda Colonne&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-columns-tab.md)  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 059170b6-d62e-4b28-9451-99a0cc7e1f5f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c59a2fce106b08f53722ce44ae69225b680d7925
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdf3b71d985a60fed5080ec97462a43e79c4ca22
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484650"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054305"
 ---
 # <a name="lesson-3-matching-data-to-remove-duplicates-from-supplier-list"></a>Lezione 3: Corrispondenza dei dati per rimuovere i duplicati dall'elenco fornitori
   Preparare la Knowledge Base per eseguire l'attività di corrispondenza creando criteri di corrispondenza nella Knowledge Base. In una Knowledge Base può essere presente solo un set di criteri di corrispondenza costituito da una o più regole di corrispondenza. Tramite una regola vengono identificati i domini coinvolti nel processo di corrispondenza e viene specificato il peso di ogni valore di dominio nella valutazione della corrispondenza. Nella regola specificare se i valori di dominio devono essere una corrispondenza esatta o se possono essere simili e indicare il livello di similitudine. Specificare inoltre se una corrispondenza di dominio è un prerequisito per il processo di corrispondenza. È possibile testare separatamente ogni regola, nonché tutti i criteri rispetto ai dati di esempio. Il processo di testing Visualizza i record i cui punteggi di corrispondenza sono maggiori della soglia del **punteggio record min** specificata nella configurazione DQS in un cluster (gruppo). È possibile continuare a modificare le regole nei criteri finché non si è soddisfatti.  

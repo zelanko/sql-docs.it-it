@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0c6cd41be722d80baf442db907d6fdab9f334859
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79967f4244749f5e0e14d823b4e04832e8ccb3e0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891792"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965331"
 ---
 # <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Passaggio 2: Aggiunta e configurazione di una gestione connessione file flat
   In questa attività si aggiungerà una gestione connessione file flat al pacchetto appena creato. Una gestione connessione file flat abilita un pacchetto all'estrazione di dati da un file flat. Utilizzando tale gestione connessione è possibile specificare il nome file e la posizione, le impostazioni locali e la tabella codici e il formato del file, inclusi i delimitatori di colonna, da applicare quando il pacchetto estrae i dati dal file flat. È anche possibile specificare manualmente il tipo di dati per le singole colonne o usare la finestra di dialogo **Suggerisci tipo di colonne** per eseguire automaticamente il mapping delle colonne di dati estratti ai tipi di dati di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -62,13 +61,13 @@ ms.locfileid: "62891792"
   
 2.  Nel riquadro delle proprietà apportare le seguenti modifiche:  
   
-    -   Modificare la proprietà nome **colonna 0** in `AverageRate`.  
+    -   Modificare la proprietà nome **colonna 0** in `AverageRate` .  
   
-    -   Modificare la proprietà nome **colonna 1** in `CurrencyID`.  
+    -   Modificare la proprietà nome **colonna 1** in `CurrencyID` .  
   
-    -   Modificare la proprietà nome **colonna 2** in `CurrencyDate`.  
+    -   Modificare la proprietà nome **colonna 2** in `CurrencyDate` .  
   
-    -   Modificare la proprietà nome **colonna 3** in `EndOfDayRate`.  
+    -   Modificare la proprietà nome **colonna 3** in `EndOfDayRate` .  
   
     > [!NOTE]  
     >  Per impostazione predefinita, le quattro colonne sono inizialmente impostate su un tipo di dati stringa [DT_STR] con un valore `OutputColumnWidth` di 50.  
@@ -90,9 +89,9 @@ ms.locfileid: "62891792"
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|Data|  
     |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|float|  
   
-     Il tipo di dati suggerito per `CurrencyID` la colonna non è compatibile con il tipo di dati del campo nella tabella di destinazione. Poiché il tipo di dati `DimCurrency.CurrencyAlternateKey` di è nchar (3) `CurrencyID` , deve essere modificato da String [DT_STR] a String [DT_WSTR]. Inoltre, il campo `DimDate.FullDateAlternateKey` viene definito come tipo di dati Data; Pertanto, `CurrencyDate` deve essere modificato da date [DT_DATE] a data del database [DT_DBDATE].  
+     Il tipo di dati suggerito per la `CurrencyID` colonna non è compatibile con il tipo di dati del campo nella tabella di destinazione. Poiché il tipo di dati di `DimCurrency.CurrencyAlternateKey` è nchar (3), `CurrencyID` deve essere modificato da string [DT_STR] a string [DT_WSTR]. Inoltre, il campo `DimDate.FullDateAlternateKey` viene definito come tipo di dati date; pertanto, `CurrencyDate` deve essere modificato da date [DT_DATE] a database date [DT_DBDATE].  
   
-2.  Nell'elenco selezionare la colonna CurrencyID e nel riquadro delle proprietà modificare il tipo di dati della colonna `CurrencyID` da string [DT_STR] alla stringa Unicode [DT_WSTR].  
+2.  Nell'elenco selezionare la colonna CurrencyID e nel riquadro delle proprietà modificare il tipo di dati della colonna `CurrencyID` da String [DT_STR] alla stringa Unicode [DT_WSTR].  
   
 3.  Nel riquadro delle proprietà modificare il tipo di dati della colonna `CurrencyDate` da date [DT_DATE] a database date [DT_DBDATE].  
   
@@ -101,7 +100,7 @@ ms.locfileid: "62891792"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Passaggio 3: Aggiunta e configurazione di una gestione connessione OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestione connessione file flat](connection-manager/file-connection-manager.md)   
  [Tipi di dati di Integration Services](data-flow/integration-services-data-types.md)  
   

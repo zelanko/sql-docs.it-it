@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: a90374bf-406f-4384-ba81-59478017db68
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3cd2e8af1630fed8dd996a951e904bef0266b300
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 07fe58cee4046b78bdca0a748ea4d0c6a82dfebf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702978"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014923"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Tipi di dati XPath (SQLXML 4.0)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath e XML Schema (XSD) hanno tipi di dati molto diversi. XPath, ad esempio, non include tipi di dati integer o di data, mentre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e XSD ne includono diversi. XSD utilizza una precisione in nanosecondi per i valori di ora, mentre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza al massimo una precisione di 1/300 secondi. Di conseguenza, il mapping di un tipo di dati a un altro non è sempre possibile. Per ulteriori informazioni sul mapping [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dei tipi di dati ai tipi di dati XSD, vedere [coercizione del tipo di dati e l'annotazione sql: DataType &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
@@ -46,7 +45,7 @@ ms.locfileid: "82702978"
   
 -   Operatori booleani (and, or)  
   
--   Operatori relazionali ( \< , >, \< =, >=)  
+-   Operatori relazionali ( \<, > , \<=, > =)  
   
 -   Operatori di uguaglianza (=, !=)  
   
@@ -89,10 +88,10 @@ ms.locfileid: "82702978"
 |-------------------|------------------------------------|--------------------------------|  
 |Nonebin.base64bin.hex|N/D|NoneEmployeeID|  
 |boolean|boolean|CONVERT(bit, EmployeeID)|  
-|number, int, float, i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|Numero|CONVERT(float(53), EmployeeID)|  
+|number, int, float, i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|d'acquisto|CONVERT(float(53), EmployeeID)|  
 |id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|string|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|N/D (in XPath non è disponibile alcun tipo di dati equivalente al tipo di dati XDR fixed14.4).|CONVERT(money, EmployeeID)|  
-|data|string|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
+|Data|string|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
 |time<br /><br /> time.tz|string|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
  Le conversioni di data e ora sono progettate per funzionare se il valore viene archiviato nel database utilizzando il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` tipo di dati o `string` . Si noti che il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` tipo di dati non utilizza `timezone` e ha una precisione minore rispetto al `time` tipo di dati XML. Per includere il tipo di dati `timezone` o aggiungere ulteriore precisione, archiviare i dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando un tipo `string`.  
@@ -150,7 +149,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 ### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>B. Eseguire diverse conversioni dei tipi di dati in una query XPath  
  Considerare la seguente query XPath specificata su uno schema XSD con annotazioni: `OrderDetail[@UnitPrice * @OrderQty > 98]`  
   
- Questa query XPath restituisce tutti gli elementi ** \<>OrderDetail** che soddisfano il predicato `@UnitPrice * @OrderQty > 98` . Se **PrezzoUnitario** viene annotato con un `fixed14.4` tipo di dati nello schema con annotazioni, questo predicato è equivalente all'espressione SQL:  
+ Questa query XPath restituisce tutti gli **\<OrderDetail>** elementi che soddisfano il predicato `@UnitPrice * @OrderQty > 98` . Se **PrezzoUnitario** viene annotato con un `fixed14.4` tipo di dati nello schema con annotazioni, questo predicato è equivalente all'espressione SQL:  
   
  `CONVERT(float(53), CONVERT(money, OrderDetail.UnitPrice)) * CONVERT(float(53), OrderDetail.OrderQty) > CONVERT(float(53), 98)`  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d473cdf45eebeb0a5bd6268ed79c071741e74e8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0fd4a8bfbde0a728370cb7980bb5a0add809be0f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891674"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966062"
 ---
 # <a name="step-1-copying-the-lesson-1-package"></a>Passaggio 1: Copia del pacchetto della lezione 1
   In questa attività si procederà alla creazione di una copia del pacchetto della lezione 1, denominato Lesson 1.dtsx. Se non è stata completata la lezione 1, è possibile aggiungere al progetto il pacchetto completo della lezione 1 incluso nell'esercitazione e quindi copiarlo. Questa nuova copia verrà usata per tutto il seguito della lezione 2.  
@@ -36,9 +35,9 @@ ms.locfileid: "62891674"
   
 6.  Fare clic con il pulsante destro del mouse in un punto qualsiasi dell'area di progettazione **Flusso di controllo** e scegliere **Proprietà**.  
   
-7.  Nella Finestra Proprietà aggiornare la `Name` proprietà a. `Lesson 2`  
+7.  Nella Finestra Proprietà aggiornare la `Name` proprietà a `Lesson 2` .  
   
-8.  Fare clic sulla casella relativa alla proprietà **ID** , fare clic sulla freccia a discesa e quindi fare clic su ** \<genera nuovo ID>**.  
+8.  Fare clic sulla casella relativa alla proprietà **ID** , fare clic sulla freccia a discesa, quindi scegliere **\<Generate New ID>**.  
   
 ### <a name="to-add-the-completed-lesson-1-package"></a>Per aggiungere il pacchetto della lezione 1 completato  
   

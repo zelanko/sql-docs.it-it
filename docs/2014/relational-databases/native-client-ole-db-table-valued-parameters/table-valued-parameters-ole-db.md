@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4298b73d-615b-4d28-9843-03b4d5fc489e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a759ed6729ce066cbbd5b8c38043402195b62b98
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b0eaa7ce325115c073420d014b1ec6254da266db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704586"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018016"
 ---
 # <a name="table-valued-parameters-ole-db"></a>Parametri con valori di tabella (OLE DB)
   In questa sezione viene illustrato il supporto per i parametri con valori di tabella nel provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Per ulteriori informazioni sulla panoramica, vedere [parametri con valori di tabella &#40;SQL Server Native Client&#41;](../native-client/features/table-valued-parameters-sql-server-native-client.md). Per un esempio, vedere [Usare parametri con valori di tabella &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md).  

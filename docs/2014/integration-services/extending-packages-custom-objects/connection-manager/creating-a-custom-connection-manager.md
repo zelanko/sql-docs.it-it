@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e83f8e02-ace4-42e0-b979-2f6be1460985
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2fced98b5844105aa0f333a691cb747656112c10
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7354c9152d075c2ebc3611a342bbf8d7594cde79
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768927"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966531"
 ---
 # <a name="creating-a-custom-connection-manager"></a>Creazione di una gestione connessione personalizzata
   I passaggi che è necessario effettuare per creare una gestione connessione personalizzata sono simili ai passaggi necessari per la creazione di qualsiasi altro oggetto personalizzato per [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]:  
@@ -43,7 +42,7 @@ ms.locfileid: "62768927"
  Configurare entrambi i progetti per firmare gli assembly che verranno generati durante la compilazione utilizzando un file di chiave con nome sicuro.  
   
 ### <a name="applying-the-dtsconnection-attribute"></a>Applicazione dell'attributo DtsConnection  
- Applicare l'attributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> alla classe creata per identificarla come gestione connessione. Questo attributo fornisce informazioni in fase di progettazione, ad esempio il nome, la descrizione e il tipo di connessione della gestione connessione. Le <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A> proprietà `Description` e corrispondono al **tipo** e `Description` alle colonne visualizzate nella finestra di dialogo **Aggiungi gestione connessione SSIS** , visualizzata quando si configurano le connessioni per un [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]pacchetto in.  
+ Applicare l'attributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> alla classe creata per identificarla come gestione connessione. Questo attributo fornisce informazioni in fase di progettazione, ad esempio il nome, la descrizione e il tipo di connessione della gestione connessione. Le <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A> `Description` proprietà e corrispondono al **tipo** e alle `Description` colonne visualizzate nella finestra di dialogo **Aggiungi gestione connessione SSIS** , visualizzata quando si configurano le connessioni per un pacchetto in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] .  
   
  Utilizzare la proprietà <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> per collegare la gestione connessione alla relativa interfaccia utente personalizzata. Per ottenere il token di chiave pubblica richiesto per questa proprietà, è possibile usare **sn.exe -t** per visualizzare il token di chiave pubblica dal file della coppia di chiavi (con estensione snk) che si intende usare per firmare l'assembly dell'interfaccia utente.  
   
@@ -75,7 +74,7 @@ ConnectionManagerBase
   
 ![Integration Services icona (piccola)](../../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina relativa a Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Codifica di una gestione connessione personalizzata](coding-a-custom-connection-manager.md)   
  [Sviluppo di un'interfaccia utente per una gestione connessione personalizzata](developing-a-user-interface-for-a-custom-connection-manager.md)  
   

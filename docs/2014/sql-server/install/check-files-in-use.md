@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ccd65867-d4c0-43b2-8361-7fd41c6f79ac
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e3610ad08d34942dd7dbc1af1371a6c5d86e7890
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 17c77a69804cd290ab1b7f5e21372b6c4a79975a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856608"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037183"
 ---
 # <a name="check-files-in-use"></a>Controllo file in uso
   Per evitare il riavvio di Windows dopo l'installazione degli aggiornamenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , utilizzare la pagina Controllo file in uso per identificare i processi che bloccano i file necessari per il programma di installazione degli aggiornamenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -47,7 +46,7 @@ ms.locfileid: "83856608"
 |Nome|Descrizione|  
 |----------|-----------------|  
 |Processo|Indica il nome completo del processo che utilizza i file da aggiornare.|  
-|Tipo|Indica il tipo di processo.|  
+|Type|Indica il tipo di processo.|  
 |Account|Indica l'account con il quale viene eseguito il processo.|  
 |ID di processo|Indica l'ID del processo.|  
   

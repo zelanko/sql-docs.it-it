@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47b1446d-5331-473c-9cb5-a98b1f55bf5f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7cfee2c2a79410d73eb6ca4da47f0fd361a24fb2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b06f9202bc158d1f64a11c9814792c7fe63ee9d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058337"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966331"
 ---
 # <a name="fuzzy-grouping-transformation-editor-connection-manager-tab"></a>Editor trasformazione Raggruppamento fuzzy (scheda Gestione connessione)
   Utilizzare la scheda **Gestione connessione** della finestra di dialogo **Editor trasformazione Raggruppamento fuzzy** per selezionare una connessione esistente o crearne una nuova.  
@@ -33,10 +32,10 @@ ms.locfileid: "66058337"
  **Gestione connessione OLE DB**  
  Consente di selezionare una gestione connessione OLE DB esistente usando la casella di riepilogo o di creare una nuova connessione tramite il pulsante **Nuova** .  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova connessione usando la finestra di dialogo **Configura gestione connessione OLE DB** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Identificazione di righe di dati simili tramite la trasformazione Raggruppamento fuzzy](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   

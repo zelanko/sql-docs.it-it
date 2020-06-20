@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: 5435b9056d98a5b2dc0835bfcd0e60865c1686b4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9a66d28fea8289719d3efb2351409e0f14379ec9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957265"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037819"
 ---
 # <a name="back-up-a-database-master-key"></a>Backup della chiave master di un database
   In questo argomento viene descritto come eseguire il backup di una chiave master del database in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La chiave master viene usata per crittografare altre chiavi e certificati all'interno di un database. Se questa chiave viene eliminata oppure danneggiata, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] potrebbe non essere in grado di decrittografare tali chiavi e i dati crittografati con tali chiavi verranno di fatto persi. Per tale motivo, è consigliabile eseguire il backup della chiave master di un database e archiviare la copia di backup in un altro luogo adeguatamente protetto.  
