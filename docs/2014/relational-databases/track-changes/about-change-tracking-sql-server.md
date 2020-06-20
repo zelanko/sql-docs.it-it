@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5e0ef05a-8317-4c98-be20-b19d4cd78f12
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e2013a604c517ae93ee17640013e2260f50cf28e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e8a817421aeca7906d31e4a70c25a12b6af7c0d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62670925"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064515"
 ---
 # <a name="about-change-tracking-sql-server"></a>Informazioni sul rilevamento delle modifiche (SQL Server)
-  Il rilevamento delle modifiche è una soluzione semplice che consente di rilevare in modo efficiente le modifiche per le applicazioni. Per consentire alle applicazioni di eseguire una query per le modifiche apportate ai dati in un database e di accedere alle informazioni correlate, gli sviluppatori di applicazioni dovevano in genere implementare meccanismi di rilevamento delle modifiche personalizzati. La creazione di questi meccanismi comporta in genere una grande quantità di lavoro e spesso implica l'utilizzo `timestamp` di una combinazione di trigger, colonne, nuove tabelle per archiviare le informazioni di rilevamento e processi di pulizia personalizzati.  
+  Il rilevamento delle modifiche è una soluzione semplice che consente di rilevare in modo efficiente le modifiche per le applicazioni. Per consentire alle applicazioni di eseguire una query per le modifiche apportate ai dati in un database e di accedere alle informazioni correlate, gli sviluppatori di applicazioni dovevano in genere implementare meccanismi di rilevamento delle modifiche personalizzati. La creazione di questi meccanismi comporta in genere una grande quantità di lavoro e spesso implica l'utilizzo di una combinazione di trigger, `timestamp` colonne, nuove tabelle per archiviare le informazioni di rilevamento e processi di pulizia personalizzati.  
   
  A tipi diversi di applicazioni sono associati requisiti diversi correlati alla quantità di informazioni necessarie relative alle modifiche. Il rilevamento delle modifiche può essere utilizzato nelle applicazioni per fornire risposte alle domande seguenti relative alle modifiche apportate a una tabella utente:  
   
@@ -67,7 +66,7 @@ ms.locfileid: "62670925"
   
  È inoltre possibile utilizzare il rilevamento delle modifiche per ottenere informazioni sulla modifica apportata a ogni riga, ad esempio il tipo di operazione DML che ha provocato la modifica (inserimento, aggiornamento o eliminazione) o le colonne modificate come parte di un'operazione di aggiornamento.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Abilitare e disabilitare Rilevamento modifiche &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
  [Usare Rilevamento modifiche &#40;SQL Server&#41;](../track-changes/work-with-change-tracking-sql-server.md)   
  [Gestire Rilevamento modifiche &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   

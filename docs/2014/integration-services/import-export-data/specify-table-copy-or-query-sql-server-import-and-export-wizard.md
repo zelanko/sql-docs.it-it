@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 524e878933652699bef6e31da42d3a784b54df7c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51f195a9f5fbe97eadfc281ad50bd0de55d6151e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892643"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965531"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>Impostazione copia tabella o query (Importazione/Esportazione guidata SQL Server)
   Utilizzare la pagina **impostazione Copia tabella o query** per specificare la modalità di copia dei dati. È possibile selezionare gli oggetti di database esistenti che si desidera copiare mediante l'interfaccia grafica oppure utilizzare Transact-SQL per creare una query più complessa.  
@@ -40,7 +39,7 @@ ms.locfileid: "62892643"
   
 -   System.Data.Odbc  
   
- Per rendere disponibili la **copia dei dati da una o più tabelle o viste** per provider aggiuntivi, terze parti possono aggiungere le proprie sezioni ProviderDescriptor al file file ProviderDescriptors. XML. Per impostazione predefinita, questo file si \<trova in *unità*>: \Programmi\Microsoft SQL Server\100\DTS\ProviderDescriptors. Per controllare i requisiti per la sezione ProviderDescriptor, vedere il file di schema ProviderDescriptors.xsd disponibile, per impostazione predefinita, nella stessa cartella del file ProviderDescriptors.xml.  
+ Per rendere disponibili la **copia dei dati da una o più tabelle o viste** per provider aggiuntivi, terze parti possono aggiungere le proprie sezioni ProviderDescriptor al file ProviderDescriptors.xml. Per impostazione predefinita, il file si trova in \<*drive*> : \Programmi\Microsoft SQL Server\100\DTS\ProviderDescriptors. Per controllare i requisiti per la sezione ProviderDescriptor, vedere il file di schema ProviderDescriptors.xsd disponibile, per impostazione predefinita, nella stessa cartella del file ProviderDescriptors.xml.  
   
  **Scrivi una query per specificare i dati da trasferire**  
  Compilare istruzioni SQL per recuperare le righe utilizzando la finestra di dialogo **specificare una query di origine** . Utilizzare questa opzione se si desidera modificare o limitare i dati di origine durante l'operazione di copia. È possibile copiare solo le righe che corrispondono ai criteri di selezione.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c7314598bffe53b6db1c24ecaaec2cf32ee06cb7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63273739"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008596"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Scenario: Aggiunta e modifica di un diagramma di database
   In questo scenario viene illustrato come creare e modificare un diagramma di database e apportare modifiche al database tramite il componente per i diagrammi di database. Verrà descritto come aggiungere tabelle ai diagrammi, creare relazioni tra le tabelle, creare vincoli e indici su colonne e modificare il livello delle informazioni visualizzate per ogni tabella.  
@@ -70,11 +69,11 @@ ms.locfileid: "63273739"
   
 1.  Fare clic con il pulsante destro del mouse su Progettazione diagrammi all'esterno delle tabelle esistenti e scegliere **Nuova tabella**.  
   
-2.  Nella finestra di dialogo **Scegli nome** fare clic su **OK** per accettare il nome `Table1`predefinito.  
+2.  Nella finestra di dialogo **Scegli nome** fare clic su **OK** per accettare il nome predefinito `Table1` .  
   
      Verrà visualizzata una nuova griglia della tabella con tre colonne: **Nome colonna**, **Tipo di dati**e **Consenti valori Null**.  
   
-3.  Aggiungere le informazioni seguenti a `Table1`:  
+3.  Aggiungere le informazioni seguenti a `Table1` :  
   
     |**Nome colonna**|**Tipo di dati**|**Consenti valori NULL**|  
     |---------------------|-------------------|---------------------|  
@@ -88,7 +87,7 @@ ms.locfileid: "63273739"
   
 5.  Scegliere **Salva Diagram1** dal menu **File**.  
   
-6.  Nella finestra di dialogo **Scegli nome** fare clic su **OK** per accettare il nome `Diagram1`predefinito.  
+6.  Nella finestra di dialogo **Scegli nome** fare clic su **OK** per accettare il nome predefinito `Diagram1` .  
   
 7.  Verrà visualizzata la finestra di dialogo **Salva** con un messaggio che indica che `Table1` verrà salvata nel database. Fare clic su **Sì**.  
   
@@ -101,7 +100,7 @@ ms.locfileid: "63273739"
   
      Verrà visualizzata la finestra di dialogo **Vincoli CHECK** .  
   
-2.  Fare clic su **Aggiungi**.  
+2.  Scegliere **Aggiungi**.  
   
      Verrà visualizzato un nuovo vincolo nell'elenco **Selected Check Constraint** (Vincolo CHECK selezionato), con il nome predefinito `CK_Table1`.  
   
@@ -113,7 +112,7 @@ ms.locfileid: "63273739"
   
      `Table1` include ora un vincolo in base al quale tutti i valori immessi in `T1col3` devono essere maggiori di 5.  
   
-5.  Fare clic su **Chiudi**.  
+5.  Fare clic su **Close**.  
   
 #### <a name="to-create-relationships-between-tables"></a>Per creare relazioni tra le tabelle  
   
@@ -145,7 +144,7 @@ ms.locfileid: "63273739"
   
      Verrà visualizzata la finestra di dialogo **Indici/chiavi** .  
   
-2.  Fare clic su **Aggiungi**.  
+2.  Scegliere **Aggiungi**.  
   
      Verrà visualizzato un nuovo indice nell'elenco **Chiave o indice primario/univoco selezionato** , con un nome predefinito simile a `IX_Table1`.  
   
@@ -173,11 +172,11 @@ ms.locfileid: "63273739"
   
      Verrà visualizzata la finestra di dialogo **Indici XML** .  
   
-3.  Fare clic su **Aggiungi**.  
+3.  Scegliere **Aggiungi**.  
   
      Un indice XML con valori predefiniti verrà aggiunto all'elenco **Selected XML Index** (Indice XML selezionato).  
   
-4.  Fare clic su **Chiudi**.  
+4.  Fare clic su **Close**.  
   
     > [!NOTE]  
     >  Gli indici XML vengono creati per colonna. Il primo indice XML è primario, eventuali indici aggiuntivi sono secondari.  
@@ -206,7 +205,7 @@ ms.locfileid: "63273739"
   
 -   Copia del diagramma in una bitmap  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Personalizzare la quantità di informazioni visualizzate nei diagrammi &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Configurare Progettazione diagrammi di database &#40;Visual Database Tools&#41;](set-up-database-diagram-designer-visual-database-tools.md)   
  [Aggiunta di tabelle a diagrammi &#40;Visual Database Tools&#41;](add-tables-to-diagrams-visual-database-tools.md)   

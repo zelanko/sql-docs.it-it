@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6df812ad-4d80-4503-8a23-47719ce85624
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80e858e75cec96b7e56e16fa7465a22048563726
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808399"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934612"
 ---
 # <a name="connection-properties-dialog-box"></a>Proprietà connessione - finestra di dialogo
   Utilizzare questa finestra di dialogo per visualizzare le proprietà della connessione corrente. Questa finestra di dialogo è disponibile se si fa clic su **Visualizza proprietà connessione** in varie finestre di dialogo di Esplora oggetti. Le proprietà visualizzate in questa pagina sono di sola lettura.  
@@ -29,7 +28,7 @@ ms.locfileid: "62808399"
  Il periodo di timeout della query per SQL Azure è di 30 minuti.  
   
 ## <a name="authentication"></a>Authentication  
- Consente di visualizzare le proprietà di autenticazione per la connessione corrente. Le proprietà di autenticazione sono costituite dall'account di accesso e dal metodo di autenticazione utilizzati al momento della connessione. Per modificare le proprietà di autenticazione, disconnettersi da [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]e quindi riconnettersi Esplora oggetti al server utilizzando le opzioni di connessione desiderate.  
+ Consente di visualizzare le proprietà di autenticazione per la connessione corrente. Le proprietà di autenticazione sono costituite dall'account di accesso e dal metodo di autenticazione utilizzati al momento della connessione. Per modificare le proprietà di autenticazione, disconnettersi da [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e quindi riconnettersi Esplora oggetti al server utilizzando le opzioni di connessione desiderate.  
   
  **Metodo di autenticazione**  
  Metodo di autenticazione utilizzato per la connessione corrente.  
@@ -100,7 +99,7 @@ ms.locfileid: "62808399"
  **Memoria sistema operativo**  
  Quantità totale di memoria fisica disponibile nel server espressa in megabyte (MB).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Pagine delle proprietà in SQL Server Management Studio](../ssms/property-pages-in-sql-server-management-studio.md)   
  [Connetti al server &#40;Pagina di accesso&#41; Motore di database](../ssms/f1-help/connect-to-server-login-page-database-engine.md)  
   

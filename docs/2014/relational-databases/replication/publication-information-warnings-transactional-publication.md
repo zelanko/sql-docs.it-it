@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4d4baf1d-d0a1-4d09-bec7-137811f43f09
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e2ab1c4be29b87e1051daa702ce40905a95e34ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50ade30369ecdc7f5350503cc0e676a8158bb466
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022005"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061531"
 ---
 # <a name="publication-information-warnings-transactional-publication-sql-server-2005-and-later"></a>Informazioni sulla pubblicazione, Avvisi (pubblicazione transazionale, SQL Server 2005 e versioni successive)
    La scheda **Avvisi** è disponibile per i server di distribuzione che eseguono [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. La scheda **Avvisi** consente di eseguire le attività seguenti per la pubblicazione selezionata:  
@@ -39,13 +38,13 @@ ms.locfileid: "63022005"
   
      Corrisponde all'opzione **Avvisa se la latenza supera il valore soglia**. Se il valore soglia specificato viene raggiunto o superato, lo stato della sottoscrizione viene visualizzato come **Prestazioni critiche** , a meno che non sia necessario visualizzare un problema con una priorità più alta. Il valore soglia viene inoltre utilizzato per determinare una valutazione delle prestazioni, visualizzata nella colonna **Prestazioni** delle pagine che contengono informazioni sulle sottoscrizioni. La valutazione delle prestazioni può corrispondere a uno dei valori seguenti:  
   
-    -   Eccellenti  
+    -   Eccellente  
   
-    -   Buone  
+    -   Buono  
   
-    -   Discrete  
+    -   Sufficiente  
   
-    -   Scarse  
+    -   Scarso  
   
     -   Critico  
   
@@ -54,7 +53,7 @@ ms.locfileid: "63022005"
  Oltre a visualizzare un avviso in Monitoraggio replica, il raggiungimento di un valore soglia può inoltre attivare un messaggio di avviso. Gli avvisi vengono definiti facendo clic su **Configura avvisi** e specificando le informazioni appropriate nella finestra di dialogo **Configura avvisi di replica** .  
   
 ## <a name="options"></a>Opzioni  
- **Attivata**  
+ **Enabled**  
  Selezionare questa opzione per abilitare un avviso e specificare un valore soglia.  
   
  **Avviso**  
@@ -75,7 +74,7 @@ ms.locfileid: "63022005"
  **Salva modifiche**  
  Fare clic su questo pulsante per salvare le eventuali modifiche apportate agli avvisi e alle soglie.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Avviare Monitoraggio replica](monitor/start-the-replication-monitor.md)   
  [Visualizzazione delle informazioni ed esecuzione di attività tramite Monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Monitorare le prestazioni con monitoraggio replica](monitor/monitor-performance-with-replication-monitor.md)   

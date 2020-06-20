@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: d10dacbc-1b0f-4a4b-b53b-83eae2a6d809
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7b622de076f9040fdedaa487baa8f1ec0f759c88
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b9d60675ef4c0bdaef1d45c6e8fe230ac70393c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637738"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933382"
 ---
 # <a name="send-dataset-sample"></a>Esempio Send DataSet
   Nell'esempio Send `DataSet` viene illustrato come restituire un oggetto `DataSet` basato su ADO.NET all'interno di una stored procedure sul lato server basata su Common Language Runtime (CLR) come set di risultati al client. Questa operazione è utile, ad esempio, quando tramite una stored procedure di questo tipo vengono inseriti dati in un oggetto `DataSet` utilizzando i risultati di una query e vengono modificati i dati contenuti in tale oggetto `DataSet`. In alternativa, è utile se tramite la stored procedure viene creato e popolato un oggetto `DataSet` da zero. L'esempio è composto da due classi, `DataSetUtilities` e `TestSendDataSet`. Il metodo `SendDataSet` sulla classe `DataSetUtilities` implementa un modo generico per trasmettere il contenuto di un'istanza di un oggetto `DataSet` al client. Il metodo `DoTest` definito sulla classe `TestSendDataSet` consente di verificare che il metodo `SendDataSet` funzioni, creando un oggetto `DataSet` e inserendovi dati dalla stored procedure Transact-SQL `uspGetTwoBOMTestData`. La stored procedure `uspGetTwoBOMTestData` consente di eseguire la stored procedure `uspGetBillOfMaterials` Transact-SQL due volte per eseguire in modo ricorsivo la query per la distinta base di due prodotti specificati come parametri della stored procedure `usp_GetTwoBOMTestData`. Generalmente, dopo essere stati inseriti nel set di dati, i dati vengono modificati prima di richiamare `SendDataSet` per recapitare i dati del set di dati come set di risultati al client. Per motivi di semplicità, nell'esempio vengono restituiti i dati senza apportare modifiche.  

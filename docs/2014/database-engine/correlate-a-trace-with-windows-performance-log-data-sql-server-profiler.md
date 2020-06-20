@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: e1b3072c-8daf-49a7-9895-c8cccd2adb95
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3294c9fd70ebae8eab4e76e17b2e0a21771ec26f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d1b66cbbed716a4ce7b2d5cf9611e161141f162
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065045"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934582"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data-sql-server-profiler"></a>Correlare una traccia e i dati dei registri di prestazioni di Windows (SQL Server Profiler)
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]consente di correlare i contatori di monitoraggio di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sistema [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] di Microsoft Windows con gli eventi o. Con monitoraggio di sistema di Windows viene registrata l'attività del sistema per i contatori specificati nei registri di prestazioni.  
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]consente di correlare i contatori di monitoraggio di sistema di Microsoft Windows con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] gli eventi o. Con monitoraggio di sistema di Windows viene registrata l'attività del sistema per i contatori specificati nei registri di prestazioni.  
   
 > [!NOTE]  
 >  Per informazioni sulla condivisione di log tra versioni di Windows diverse, vedere la procedura descritta alla fine di questo argomento.  
@@ -63,7 +62,7 @@ ms.locfileid: "66065045"
   
 11. Fare clic su **OK** . Verrà creato il registro di prestazioni.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Modelli e autorizzazioni di SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Avviare SQL Server Profiler](../tools/sql-server-profiler/start-sql-server-profiler.md)  
   

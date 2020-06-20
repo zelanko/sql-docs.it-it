@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: fac02b6d-d247-447a-8940-e8700c7ac350
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4e63db637566cd9e2e481731c4d742f02c261ddd
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 02128dcaad829054fe513d8e5353223502cb1802
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856473"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964761"
 ---
 # <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
   La finestra di dialogo **Imposta parametri** consente di associare un parametro nuovo o esistente a una proprietà di un'attività. È possibile aprire la finestra di dialogo facendo clic con il pulsante destro del mouse su un'attività o sulla scheda Flusso di controllo in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)], quindi selezionando **Imposta parametri**. Nell'elenco seguente vengono descritti gli elementi dell'interfaccia utente della finestra di dialogo. Per altre informazioni sui parametri, vedere [Parametri di Integration Services &#40;SSIS&#41;](integration-services-ssis-package-and-project-parameters.md).  
@@ -50,7 +49,7 @@ ms.locfileid: "83856473"
  **Distinzione**  
  Specificare se il parametro è sensibile selezionando o deselezionando la casella di controllo. I valori di parametri sensibili sono crittografati nel catalogo e risultano NULL quando vengono visualizzati con Transact-SQL o con SQL Server Management Studio.  
   
- **Richiesto**  
+ **Obbligatorio**  
  Specificare se il parametro richiede che un valore diverso dal valore predefinito per la progettazione venga specificato prima dell'esecuzione del pacchetto.  
   
 ## <a name="ui-element-list"></a>Elenco elementi dell'interfaccia utente  

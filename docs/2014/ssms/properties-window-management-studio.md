@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 98b337c235363035d5cc5324257f51862f3f9a64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33a48ef65a29823abb2e9757575ed006c309969b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62823788"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058471"
 ---
 # <a name="properties-window-management-studio"></a>Finestra Proprietà (Management Studio)
   Utilizzare questa finestra per visualizzare le proprietà degli elementi selezionati. È inoltre possibile utilizzare la finestra Proprietà per visualizzare le proprietà di file, progetti e soluzioni. La finestra Proprietà è disponibile facendo clic su **Finestra proprietà** del menu **Visualizza** .  

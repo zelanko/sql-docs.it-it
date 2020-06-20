@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5a3ecbe615d60a703b66dff78cd77ddfde0a20d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fae1082d765bb8ab0c99edea252c89649558a9da
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767083"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964791"
 ---
 # <a name="execution-of-projects-and-packages"></a>Esecuzione di progetti e pacchetti
   Per eseguire un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , è possibile usare vari strumenti, a seconda della posizione in cui sono archiviati tali pacchetti. Gli strumenti sono descritti nella tabella seguente.  
@@ -57,7 +56,7 @@ ms.locfileid: "62767083"
   
 -   [Eseguire un pacchetto sul server SSIS mediante SQL Server Management Studio](../run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilità dtexec](dtexec-utility.md)   
  [Importazione/Esportazione guidata SQL Server](../import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  
   

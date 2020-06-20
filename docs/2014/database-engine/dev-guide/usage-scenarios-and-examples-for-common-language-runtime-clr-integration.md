@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: 33aac25f-abb4-4f29-af88-4a0dacd80ae7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3718a084211e7c3b2b7a14973e195a4b1c3b6b1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30a54064d398ec6db09a9ccd54eed9411a7f905a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780724"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933215"
 ---
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>Scenari di utilizzo ed esempi per l'integrazione con CLR (Common Language Runtime)
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono inclusi applicazioni e pacchetti di esempio nonché diversi esempi di codice che consentono di acquisire familiarità con le funzionalità di programmabilità dell'integrazione con Common Language Runtime (CLR).  
   
  Per i progetti di Visual Studio completi che implementano questi esempi e materiali aggiuntivi, visitare [Microsoft SQL Server progetti della Community & esempi su CodePlex](https://go.microsoft.com/fwlink/?LinkID=193935).  
   
-|Nome|Descrizione|  
+|Nome|Description|  
 |----------|-----------------|  
 |[Accesso al codice nativo da un funzione CLR definita dall'utente](../../../2014/database-engine/dev-guide/accessing-native-code-from-a-clr-udf.md)|Viene illustrato come richiamare una funzione in codice C++ nativo (non gestito) da una funzione definita dall'utente in un assembly, nel database.|  
 |[Esempio Array Parameter](../../../2014/database-engine/dev-guide/array-parameter-sample.md)|Viene illustrato come creare, aggiornare o eliminare un set di righe in un database passando una matrice di informazioni da un client a una stored procedure per l'integrazione con CLR nel server. A tal scopo, viene utilizzato un tipo definito dall'utente (UDT).|  
@@ -39,7 +38,7 @@ ms.locfileid: "62780724"
 |[Tipo Currency e funzione di conversione](../../../2014/database-engine/dev-guide/currency-type-and-conversion-function.md)|Viene definito un tipo di dati Currency definito dall'utente mediante C#.|  
 |[Gestione di oggetti di grandi dimensioni tramite CLR](../../../2014/database-engine/dev-guide/handling-large-objects-using-clr.md)|Viene illustrato il trasferimento di oggetti LOB tra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e un file system a cui può accedere il server mediante stored procedure CLR.|  
 |[Esempio Hello World Ready](../../../2014/database-engine/dev-guide/hello-world-ready-sample.md)|Vengono illustrate le operazioni di base per la creazione, la distribuzione e il test di una stored procedure semplice internazionalizzata basata sull'integrazione con CLR.|  
-|[Esempio Hello World](../../../2014/database-engine/dev-guide/hello-world-sample.md)|Vengono illustrate le operazioni di base per la creazione, la distribuzione e il test di una stored procedure semplice basata sull'integrazione con CLR.|  
+|[Esempio di Hello World](../../../2014/database-engine/dev-guide/hello-world-sample.md)|Vengono illustrate le operazioni di base per la creazione, la distribuzione e il test di una stored procedure semplice basata sull'integrazione con CLR.|  
 |[Esempio In-Process Data Access](../../../2014/database-engine/dev-guide/in-process-data-access-sample.md)|Sono incluse diverse funzioni semplici che illustrano le varie funzionalità del provider di accesso ai dati in-process CLR.|  
 |[Esempio Result Set](../../../2014/database-engine/dev-guide/result-set-sample.md)|Viene illustrato come eseguire comandi mentre si stanno leggendo i risultati di una query senza dover aprire una nuova connessione e senza dover leggere tutti i risultati in memoria.|  
 |[Esempio Send DataSet](../../../2014/database-engine/dev-guide/send-dataset-sample.md)|Viene illustrato come restituire un oggetto DataSet basato su ADO.NET all'interno di una stored procedure basata su CLR sul lato server come set di risultati al client.|  

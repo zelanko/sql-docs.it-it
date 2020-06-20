@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fc489682-690a-4bb0-b5ac-237d376dc110
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ee86e6d70949da906767f18890df235fd229dbf9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0cd8360049d83619578d3f49d62c8dd80c2c9121
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780293"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933287"
 ---
 # <a name="sqlxmloledb-provider-sqlxml-40"></a>Provider SQLXMLOLEDB (SQLXML 4.0)
   Il provider SQLXMLOLEDB è un provider OLE DB che espone la funzionalità [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML tramite ADO.  
@@ -33,7 +32,7 @@ ms.locfileid: "62780293"
  [Uso del provider SQLXMLOLEDB &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/using-the-sqlxmloledb-provider-sqlxml-4-0.md)  
  Vengono forniti esempi di varie attività con il provider SQLXMLOLEDB.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Classi gestite SQLXML](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)   
  [Programmazione in SQL Server Native Client](../../relational-databases/native-client/sql-server-native-client-programming.md)  
   

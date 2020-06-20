@@ -14,34 +14,33 @@ helpviewer_keywords:
 ms.assetid: b6ecb6eb-9514-4ac1-b67c-31e3d39db4d9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: efba2e73c3043ddbf25fef06b57ef039f6eacea5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03848f6f9cee7339f2148622a4b3b8bbd58a6351
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63183466"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064445"
 ---
 # <a name="jobs-that-reference-a-schedule"></a>Processi che fanno riferimento a una pianificazione
   Questa finestra di dialogo consente di visualizzare informazioni sui processi che fanno riferimento a una determinata pianificazione.  
   
 ## <a name="options"></a>Opzioni  
- **Pianificazione**  
+ **Pianificare**  
  Visualizza il nome della pianificazione che si sta visualizzando.  
   
- **Selezionato**  
+ **Selected**  
  Di sola lettura.  
   
  **Nome**  
  Nome di un processo che utilizza la pianificazione.  
   
- **Attivata**  
+ **Enabled**  
  Di sola lettura. Indica se il processo è attualmente abilitato.  
   
  **Categoria**  
  Categoria del processo.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione e collegamento di pianificazioni ai processi](create-and-attach-schedules-to-jobs.md)  
   
   

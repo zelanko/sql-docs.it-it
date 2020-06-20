@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 14129cc4-be80-4772-9e3f-0e5da4d0696b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: db70d1757073a48ab09f31cfb3570570e54a48cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 070e024eb752ebffc7aa113d0f4a6fc4a95f4175
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62762078"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85031809"
 ---
 # <a name="mssqlserver_833"></a>MSSQLSERVER_833
     
@@ -30,7 +29,7 @@ ms.locfileid: "62762078"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|BUF_LONG_IO|  
-|Testo del messaggio|In SQL Server sono state rilevate% d occorrenze di richieste di I/O che impiegano più di% d secondi per essere completate nel`[%ls] (%d)`file [% ls] nel database.  L'handle di file del sistema operativo è 0x%p.  Offset dell'ultimo I/O lungo: %#016I64x.|  
+|Testo del messaggio|In SQL Server sono state rilevate% d occorrenze di richieste di I/O che impiegano più di% d secondi per essere completate nel file [% ls] nel database `[%ls] (%d)` .  L'handle di file del sistema operativo è 0x%p.  Offset dell'ultimo I/O lungo: %#016I64x.|  
   
 ## <a name="explanation"></a>Spiegazione  
  Questo messaggio indica che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha eseguito una richiesta di lettura o scrittura dal disco e che la durata dell'operazione è stata superiore a 15 secondi. Questo errore viene segnalato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e indica un problema relativo al sottosistema di IO.  

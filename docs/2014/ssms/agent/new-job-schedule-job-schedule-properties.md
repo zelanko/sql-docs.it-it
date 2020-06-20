@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 5c0b1bc9-dd87-49cc-b0dd-75d0d922b177
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 65adf53cc7401053b66b8c77839b267e7d20406a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9af1d89e4bb53af3d3f640e7efb010e5ac8de35
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704618"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064412"
 ---
 # <a name="new-job-schedule-job-schedule-properties"></a>Nuova pianificazione processo: Proprietà pianificazione processo
   Utilizzare questa pagina per visualizzare e modificare le proprietà della pianificazione.  
@@ -33,7 +32,7 @@ ms.locfileid: "62704618"
  **Tipo pianificazione**  
  Consente di selezionare il tipo di pianificazione.  
   
- **Attivata**  
+ **Enabled**  
  Consente di abilitare o disabilitare la pianificazione.  
   
 ## <a name="recurring-schedule-types-options"></a>Opzioni relative ai tipi di pianificazione periodica  
@@ -43,13 +42,13 @@ ms.locfileid: "62704618"
  **Ogni**  
  Consente di selezionare il numero di giorni o di settimane quale intervallo di esecuzione delle pianificazioni. Questa opzione non è disponibile per le pianificazioni periodiche con frequenza mensile.  
   
- **Monday**  
+ **Lunedì**  
  Consente di impostare l'esecuzione del processo ogni lunedì. Questa opzione è disponibile solo per le pianificazioni periodiche con frequenza settimanale.  
   
  **Martedì**  
  Consente di impostare l'esecuzione del processo ogni martedì. Questa opzione è disponibile solo per le pianificazioni periodiche con frequenza settimanale.  
   
- **Wednesday**  
+ **Mercoledì**  
  Consente di impostare l'esecuzione del processo ogni mercoledì. Questa opzione è disponibile solo per le pianificazioni periodiche con frequenza settimanale.  
   
  **Giovedì**  
@@ -61,16 +60,16 @@ ms.locfileid: "62704618"
  **Sabato**  
  Consente di impostare l'esecuzione del processo ogni sabato. Questa opzione è disponibile solo per le pianificazioni periodiche con frequenza settimanale.  
   
- **Sunday**  
+ **Domenica**  
  Consente di impostare l'esecuzione del processo ogni domenica. Questa opzione è disponibile solo per le pianificazioni periodiche con frequenza settimanale.  
   
- **Giorno**  
+ **Day**  
  Consente di selezionare il giorno del mese in cui eseguire la pianificazione. Questa opzione è disponibile solo per le pianificazioni periodiche con frequenza mensile.  
   
  **ogni**  
  Consente di selezionare il numero di mesi tra una pianificazione e l'altra. Questa opzione è disponibile solo per le pianificazioni periodiche con frequenza mensile.  
   
- **Il valore di**  
+ **Ogni**  
  Consente di specificare una pianificazione per un giorno specifico di una determinata settimana del mese. Questa opzione è disponibile solo per le pianificazioni periodiche con frequenza mensile.  
   
  **Una sola volta alle**  
@@ -92,10 +91,10 @@ ms.locfileid: "62704618"
  **Data**  
  Selezionare la data di esecuzione del processo.  
   
- **Tempo**  
+ **Time**  
  Selezionare l'ora di esecuzione del processo.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione e alconnessione di pianificazioni ai processi](create-and-attach-schedules-to-jobs.md)   
  [Pianificare un processo](schedule-a-job.md)  
   

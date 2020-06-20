@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c22c9ca183a5975b762fd166ee434f305422e6ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3aa628e0113adbbee48c0fa00d43b56e8773ad7c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891720"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965301"
 ---
 # <a name="step-3-adding-and-configuring-an-ole-db-connection-manager"></a>Passaggio 3: Aggiunta e configurazione di una gestione connessione OLE DB
   Dopo aver aggiunto una gestione connessione file flat per connettersi all'origine dati, l'operazione successiva consiste nell'aggiunta di una gestione connessione OLE DB per connettersi alla destinazione. Una gestione connessione OLE DB abilita un pacchetto all'estrazione di dati o al caricamento di dati in un'origine dati compatibile con OLE DB. Gestione connessione OLE DB consente di specificare il server, il metodo di autenticazione e il database predefinito per la connessione.  
@@ -34,7 +33,7 @@ ms.locfileid: "62891720"
   
 4.  Verificare che l'opzione **Usa autenticazione di Windows** sia selezionata nel gruppo **Accesso al server** .  
   
-5.  Nella casella **selezionare o immettere un nome di database** nel gruppo `AdventureWorksDW2012` **Connetti a un database** Digitare o selezionare.  
+5.  Nella casella **selezionare o immettere un nome di database** nel gruppo **Connetti a un database** Digitare o selezionare `AdventureWorksDW2012` .  
   
 6.  Fare clic su **Test connessione** per verificare che le impostazioni di connessione specificate siano valida.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "62891720"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Passaggio 4: Aggiunta di un'attività Flusso di dati al pacchetto](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [gestione connessione OLE DB](connection-manager/ole-db-connection-manager.md)  
   
   

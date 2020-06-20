@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8b5789a277eac84d9753a180b418c05c5fd71d09
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ee0de3311eb6abffcdb71ab725d0650fe96b04c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62761618"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009187"
 ---
 # <a name="create-foreign-key-relationships"></a>Creare relazioni di chiave esterna
   In questo argomento si illustra come creare relazioni di chiave esterna in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Una relazione tra due tabelle consente di stabilire un'associazione tra le righe di una tabella e le righe di un'altra tabella.  
@@ -79,7 +78,7 @@ ms.locfileid: "62761618"
   
 3.  Nella finestra di dialogo **Relazioni chiavi esterne** fare clic su **Aggiungi**.  
   
-     La relazione verrà visualizzata nell'elenco **Relazione selezionata** con un nome specificato dal sistema nel formato FK_\<*nometabella*>_\<*nometabella*>, dove *nometabella* è il nome della tabella di chiave esterna.  
+     La relazione verrà visualizzata nell'elenco **relazione selezionata** con un nome fornito dal sistema nel formato FK_ \<*tablename*> _ \<*tablename*> , dove *TableName* è il nome della tabella della chiave esterna.  
   
 4.  Fare clic sulla relazione nell'elenco **Relazione selezionata** .  
   

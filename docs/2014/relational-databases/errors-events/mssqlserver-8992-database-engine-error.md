@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8ad75e136c4bef59f24b451b84f03e06d71a32ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 933a330e2ce1a825f8b486b60aebe1de558155ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62912545"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85031540"
 ---
 # <a name="mssqlserver_8992"></a>MSSQLSERVER_8992
     
@@ -74,7 +73,7 @@ ms.locfileid: "62912545"
 ### <a name="do-not-manually-update-system-tables"></a>Non aggiornare manualmente le tabelle di sistema  
  Non effettuare aggiornamenti manuali alle tabelle di sistema. SQL Server non supporta alcuna modifica manuale ai database di sistema. Se si aggiorna una tabella di sistema in un database di SQL Server, vengono registrati due eventi, evento ID 17659 ed evento ID 3859. Per ulteriori informazioni, vedere l'articolo della Knowledge Base 2688307 relativo agli eventi ID 17659 e ID 3859 registrati durante l'aggiornamento di tabelle di sistema in un database di SQL Server.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Gli eventi con ID 17659 e ID 3859 vengono registrati durante l'aggiornamento delle tabelle di sistema in un database di SQL Server](https://support.microsoft.com/kb/2688307/EN-US)  
   
   

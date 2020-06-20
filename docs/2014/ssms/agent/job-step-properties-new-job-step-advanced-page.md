@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bdecfd4f-bcd8-4ba2-8ada-fbb636314f40
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f0bc24411ebceb0601f00ca659452b55596d869c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22b5877fb70a66fd9864e52223b30eca4b01b6db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62937197"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064482"
 ---
 # <a name="job-step-properties-new-job-step-advanced-page"></a>Proprietà passaggio processo: Nuovo passaggio di processo (pagina Avanzate)
   Utilizzare questa pagina per visualizzare e modificare le proprietà di un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] passaggio di processo di Agent.  
@@ -43,7 +42,7 @@ ms.locfileid: "62937197"
  Selezionare il file da utilizzare per l'output del passaggio di processo.  
   
  **Visualizza**  
- In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], questo pulsante è disabilitato per la visualizzazione dei file di output. In alternativa, utilizzare Notepad per visualizzare i file di output del passaggio di processo.  
+ In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , questo pulsante è disabilitato per la visualizzazione dei file di output. In alternativa, utilizzare Notepad per visualizzare i file di output del passaggio di processo.  
   
  **Accoda output a file esistente**  
  Consente di accodare l'output al contenuto già esistente nel file. Diversamente, il precedente contenuto del file viene sovrascritto ogni volta che il passaggio di processo viene eseguito.  
@@ -71,7 +70,7 @@ ms.locfileid: "62937197"
  Selezionare il file da utilizzare per l'output del passaggio di processo.  
   
  **Visualizza**  
- In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], questo pulsante è disabilitato per la visualizzazione dei file di output. In alternativa, utilizzare Notepad per visualizzare i file di output del passaggio di processo.  
+ In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , questo pulsante è disabilitato per la visualizzazione dei file di output. In alternativa, utilizzare Notepad per visualizzare i file di output del passaggio di processo.  
   
  **Accoda output a file esistente**  
  Consente di accordare l'output del passaggio di processo al precedente contenuto del file ogni volta che il passaggio di processo viene eseguito.  
@@ -96,7 +95,7 @@ ms.locfileid: "62937197"
  Selezionare il file da utilizzare per l'output del passaggio di processo.  
   
  **Visualizza**  
- In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], questo pulsante è disabilitato per la visualizzazione dei file di output. In alternativa, utilizzare Notepad per visualizzare i file di output del passaggio di processo.  
+ In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , questo pulsante è disabilitato per la visualizzazione dei file di output. In alternativa, utilizzare Notepad per visualizzare i file di output del passaggio di processo.  
   
  **Accoda output a file esistente**  
  Consente di accordare l'output del passaggio di processo al precedente contenuto del file ogni volta che il passaggio di processo viene eseguito.  
@@ -145,7 +144,7 @@ ms.locfileid: "62937197"
  **Includi output passaggio nella cronologia**  
  Selezionare questa opzione per includere l'output del passaggio di processo nella cronologia processo.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestire passaggi di processo](manage-job-steps.md)  
   
   

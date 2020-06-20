@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f17abdd4-5f34-403a-ade4-7857d3056b83
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d67d036987fe92275b4cf524c15c1ebe083001b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a70c72647ad1b348a8f9c1fb6980626b5f1b178
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704955"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063816"
 ---
 # <a name="input-and-output-error-during-hard-page-fault"></a>Errore di I/O durante un errore di pagina hardware
   Questa regola consente di controllare l'evento con ID 51 nel registro eventi di sistema. Questo problema è dovuto a un errore di pagina hardware.  
