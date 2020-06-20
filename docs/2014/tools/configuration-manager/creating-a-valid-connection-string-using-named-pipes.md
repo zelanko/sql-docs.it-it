@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 90930ff2-143b-4651-8ae3-297103600e4f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 65fcebc3bbe12061e699106fb23eed15a5498414
-ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
+ms.openlocfilehash: 784ef2ec305629756e0c43e1726b70c04c6194b1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84716708"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011646"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>Creazione di una stringa di connessione valida tramite named pipe
   A meno che non venga modificato dall'utente, quando l'istanza predefinita di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in attesa sul protocollo Named Pipes, utilizza `\\.\pipe\sql\query` come nome della pipe. Il periodo indica che il computer è il computer locale, `pipe` indica che la connessione è una named pipe e `sql\query` è il nome della pipe. Per connettersi alla pipe predefinita, è necessario che il nome della pipe dell'alias sia `\\<computer_name>\pipe\sql\query`. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è stato configurato per essere in attesa su una pipe diversa, è necessario che il nome della pipe utilizzi tale pipe. Se ad esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza `\\.\pipe\unit\app` come pipe, è necessario che l'alias utilizzi `\\<computer_name>\pipe\unit\app` come nome della pipe.  

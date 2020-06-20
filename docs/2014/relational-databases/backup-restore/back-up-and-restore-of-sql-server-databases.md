@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a94ec756e86cb814d0e3b3f624b4a9b3eb180533
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ec2104219d98ed3cb97bfbb8993a3c28d45841c6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176028"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959771"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Backup e ripristino di database SQL Server
   In questo argomento vengono descritti i vantaggi dell'esecuzione del backup dei database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e illustrati i termini di base del backup e del ripristino. Vengono inoltre presentate alcune strategie di backup e ripristino per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e alcune considerazioni relative alla sicurezza per il backup e il ripristino di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -38,7 +37,7 @@ ms.locfileid: "70176028"
   
 
   
-##  <a name="benefits"></a><a name="Benefits"></a>Vantaggi  
+##  <a name="benefits"></a><a name="Benefits"></a> Vantaggi  
   
 -   L'esecuzione di backup dei database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l'esecuzione di procedure di ripristino di test sui backup e l'archiviazione delle copie di backup in una posizione esterna sicura costituiscono modi validi per evitare una perdita di dati potenzialmente irreversibile.  
   
@@ -201,7 +200,7 @@ ms.locfileid: "70176028"
 > [!NOTE]  
 >  Per eseguire backup parziali o di sola copia è necessario usare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) rispettivamente con l'opzione PARTIAL o COPY_ONLY.  
   
- **Utilizzo di SQL Server Management Studio**  
+ **Utilizzare SQL Server Management Studio**  
   
 -   [Creazione di un backup completo del database &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
@@ -224,7 +223,7 @@ ms.locfileid: "70176028"
 
   
 ### <a name="restoring-data-backups"></a>Ripristino di backup dei dati  
- **Utilizzo di SQL Server Management Studio**  
+ **Utilizzare SQL Server Management Studio**  
   
 -   [Ripristinare un backup del database &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
@@ -249,7 +248,7 @@ ms.locfileid: "70176028"
 
   
 ### <a name="restoring-transaction-logs-full-recovery-model"></a>Ripristino di log delle transazioni (modello di recupero con registrazione completa)  
- **Utilizzo di SQL Server Management Studio**  
+ **Utilizzare SQL Server Management Studio**  
   
 -   [Ripristinare un database fino a una transazione contrassegnata &#40;SQL Server Management Studio&#41;](restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   

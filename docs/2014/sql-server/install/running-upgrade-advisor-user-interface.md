@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7f47c9b3-88d3-43d6-837e-f157b49a55ac
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5aecaea9bef359ad24aebbd20dd5e9547497043b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 653e3d0565d0b32c67ccf77772a9b89f611dd082
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092450"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058944"
 ---
 # <a name="running-upgrade-advisor-user-interface"></a>Esecuzione di Preparazione aggiornamento (interfaccia utente)
   È possibile eseguire Preparazione aggiornamento per analizzare componenti locali o remoti durante la pianificazione dell'aggiornamento. Per ogni istanza e componente analizzato, viene prodotto un report.  
@@ -30,7 +29,7 @@ ms.locfileid: "66092450"
 > [!IMPORTANT]  
 >  Le istanze remote di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non vengono analizzate. Per analizzare un'istanza di [!INCLUDE[ssRS](../../includes/ssrs.md)], è necessario installare Preparazione aggiornamento nel computer in cui è installato [!INCLUDE[ssRS](../../includes/ssrs.md)].  
 >   
->  Per analizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services, è necessario [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] che sia installato e [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installato nello stesso computer.  
+>  Per analizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services, è necessario che sia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] installato e [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installato nello stesso computer.  
   
 ## <a name="running-the-upgrade-advisor-analysis-wizard"></a>Esecuzione dell'Analisi guidata di Preparazione aggiornamento  
  L'esecuzione dell'Analisi guidata di Preparazione aggiornamento prevede sei passaggi:  
@@ -74,7 +73,7 @@ ms.locfileid: "66092450"
   
 -   [Procedura: Esportare i report](../../../2014/sql-server/install/how-to-export-reports.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Procedura: esecuzione dell'analisi guidata di preparazione aggiornamento](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Guida di riferimento all'interfaccia utente di preparazione aggiornamento](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
  [Risoluzione dei problemi di aggiornamento](../../../2014/sql-server/install/resolving-upgrade-issues.md)   

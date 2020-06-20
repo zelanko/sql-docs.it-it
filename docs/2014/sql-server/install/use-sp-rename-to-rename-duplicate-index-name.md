@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee66c7a5-eb6d-4fcf-970c-ab099d78c8d9
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3ca4efb2a16f615af57e89fa56a4dcb8bdb3bf5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b8ffe3b9befd0c7239d32094e5738e0fb2947c5a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091363"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058815"
 ---
 # <a name="use-sp_rename-to-rename-duplicate-index-name"></a>Utilizzare sp_rename per rinominare gli indici duplicati
   Sono stati rilevati nomi di indici di tabella o di vista duplicati. Rinominare gli indici prima di eseguire l'aggiornamento.  
@@ -60,7 +59,7 @@ ms.locfileid: "66091363"
   
 4.  Se necessario, utilizzare di nuovo **sp_rename** per correggere i nomi degli indici.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Problemi di aggiornamento motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [SQL Server 2014 preparazione aggiornamento &#91;nuova&#93;](sql-server-2014-upgrade-advisor.md)  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 49008384-2c55-4080-a890-9bceb40e4d6d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 63d8f82d207a985bac34b5c9a9be3273bb84ef7d
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 393462c56169e7070601a98cc9144e1996a19847
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000393"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065892"
 ---
 # <a name="lesson-3-synchronizing-the-subscription-to-the-merge-publication"></a>Lezione 3: Sincronizzazione della sottoscrizione con la pubblicazione di tipo merge
   In questa lezione verrà avviato l'agente di merge per inizializzare la sottoscrizione con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È inoltre necessario eseguire questa procedura per la sincronizzazione con il server di pubblicazione. Per eseguire questa lezione è necessario aver completato la lezione precedente [Lezione 2: Creazione di una sottoscrizione per una pubblicazione di tipo merge](lesson-2-creating-a-subscription-to-the-merge-publication.md).  

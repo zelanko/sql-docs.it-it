@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 58c2199c-4fdf-4d43-ac1c-842703344b75
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dddd5da66f09226579a6366baa1a16a6ab00d6bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bacfd3d097d7cccb0a5780328c4db95dc5afc733
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094187"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059245"
 ---
 # <a name="invalid-named-pipe-name-can-block-upgrade"></a>Un nome di named pipe non valido può bloccare l'aggiornamento
   L'aggiornamento non riesce se il protocollo Named Pipes non è configurato correttamente.  
@@ -27,12 +26,12 @@ ms.locfileid: "66094187"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Descrizione  
- Durante l'aggiornamento, il programma di installazione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] avvia l'istanza di con supporto Shared Memory, un named pipe che accetta solo connessioni locali. Se il nome della pipe specificato nel server non è vuoto, deve iniziare con la stringa "\\\\.\pipe\\" per essere valido. Se il nome non è valido, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] non verrà avviato e l'installazione non verrà completata.  
+ Durante l'aggiornamento, il programma di installazione avvia l' [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] istanza di con supporto Shared Memory, un named pipe che accetta solo connessioni locali. Se il nome della pipe specificato nel server non è vuoto, deve iniziare con la stringa " \\ \\ .\pipe \\ " per essere valido. Se il nome non è valido, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] non verrà avviato e l'installazione non verrà completata.  
   
 ## <a name="corrective-action"></a>Azione correttiva  
  Utilizzare l' ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilità di rete** per specificare un nome di pipe valido, quindi eseguire il programma di installazione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Problemi di aggiornamento motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [SQL Server 2014 preparazione aggiornamento &#91;nuova&#93;](sql-server-2014-upgrade-advisor.md)  
   

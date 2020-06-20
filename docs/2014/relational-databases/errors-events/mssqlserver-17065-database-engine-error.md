@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 63c2ba5a-be34-461e-bee1-03c25b396cd2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 33dfe774838aa88dc0c68829ae0abe34f3f1dda9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 47aebfa29b60a1c2ae50c6699946312996d26e6f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62869755"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967921"
 ---
 # <a name="mssqlserver_17065"></a>MSSQLSERVER_17065
     
@@ -30,7 +29,7 @@ ms.locfileid: "62869755"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|SQLASSERT_BOTH|  
-|Testo del messaggio|Asserzione SQL Server: file: \<%s>, riga = %d Asserzione non riuscita = '%s' %s. L'errore può essere correlato agli intervalli di tempo. Se dopo aver rieseguito l'istruzione l'errore persiste, utilizzare DBCC CHECKDB per verificare l'integrità strutturale del database oppure riavviare il server per verificare che le strutture di dati in memoria non siano danneggiate.|  
+|Testo del messaggio|Asserzione SQL Server: file: \<%s> , riga =% d asserzione non riuscita = '% s'% s. L'errore può essere correlato agli intervalli di tempo. Se dopo aver rieseguito l'istruzione l'errore persiste, utilizzare DBCC CHECKDB per verificare l'integrità strutturale del database oppure riavviare il server per verificare che le strutture di dati in memoria non siano danneggiate.|  
   
 ## <a name="explanation"></a>Spiegazione  
  Questo errore può essere causato da errori temporanei, correlati agli intervalli di tempo o da un danno dei dati in memoria o su disco.  

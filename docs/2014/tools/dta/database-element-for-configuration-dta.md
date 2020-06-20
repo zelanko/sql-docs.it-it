@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e91ba243-6cc9-457a-8f5a-134f3c71ae69
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fbca62a5d32ed6b7ec30eb5d6dba6a82a2b80c64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 045671cc386f91bb9f24caaa95cd6934fc50f5b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63298346"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011552"
 ---
 # <a name="database-element-for-configuration-dta"></a>Elemento Database per Configuration (DTA)
   Specifica il database sul quale l'Ottimizzazione guidata motore di database eseguirà la valutazione della configurazione ipotetica indicata dall'elemento `Configuration`.  
@@ -52,7 +51,7 @@ ms.locfileid: "63298346"
  Questo elemento appartiene al nome **DatabaseTypecomplexType** nell'XML Schema di Ottimizzazione guidata motore di database. Questo elemento `Database` non deve essere confuso con l'elemento il cui padre di livello radice è l'elemento `Server` presente all'inizio del file di input XML. Per altre informazioni, vedere [Elemento Database per Server &#40;DTA&#41;](database-element-for-server-dta.md).  
   
 ## <a name="example"></a>Esempio  
- Per un esempio di utilizzo di `Database` questo elemento, vedere [esempio di file di input XML con configurazione specificata dall'utente &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  
+ Per un esempio di utilizzo di questo `Database` elemento, vedere [esempio di file di input XML con configurazione specificata dall'utente &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai file di input XML&#40; (Ottimizzazione guidata motore di database)&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  

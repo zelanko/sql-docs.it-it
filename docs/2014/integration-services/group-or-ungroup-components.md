@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f9ba8c8ce532621a44ac8a7ab58cb712a97934e4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0beeed1beea03f3acdb869fcd10cef163eaedb9d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768123"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968358"
 ---
 # <a name="group-or-ungroup-components"></a>Raggruppare o separare componenti
   Le schede **Flusso di controllo**, **Flusso di dati**e **Gestori eventi** in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] supportano il raggruppamento comprimibile. Se un pacchetto include molti contenitori, è possibile che le schede contengano un numero di elementi talmente elevato da impedire di visualizzare contemporaneamente tutti gli elementi del flusso di controllo del pacchetto e di individuare l'elemento che si desidera utilizzare. La funzionalità raggruppamento comprimibile consente di risparmiare spazio nell'area di lavoro e semplificare la gestione di pacchetti di grandi dimensioni.  

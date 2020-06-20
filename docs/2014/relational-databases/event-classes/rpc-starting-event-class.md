@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1d5c3e53-0104-41f7-ab8b-732462d859f8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8a5f427d9430c38b129b7cef6fb2e1cf7ab19e9d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd34045652022c6056da02bb24607b59ed507ed2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044256"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052668"
 ---
 # <a name="rpcstarting-event-class"></a>RPC:Starting - classe di evento
   La classe di evento RPC:Starting  indica l'avvio di una chiamata di procedura remota.  
@@ -52,7 +51,7 @@ ms.locfileid: "63044256"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|`bigint`|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

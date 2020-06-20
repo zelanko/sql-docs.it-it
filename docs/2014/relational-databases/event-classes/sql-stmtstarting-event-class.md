@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ae97386c-9dbf-456d-bcbc-391931775fa3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 95a2e4a2bc7caeaae04ac8aab245ccf7edbb6af7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce4f4f60801ccbf2e2718efabef5e19e47a944d3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061300"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051699"
 ---
 # <a name="sqlstmtstarting-event-class"></a>SQL:StmtStarting - classe di evento
   La classe di evento SQL:StmtStarting indica l'avvio di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -55,7 +54,7 @@ ms.locfileid: "63061300"
 |TransactionID|`bigint`|ID della transazione se l'istruzione è stata eseguita all'interno di una transazione.|4|Sì|  
 |XactSequence|`bigint`|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

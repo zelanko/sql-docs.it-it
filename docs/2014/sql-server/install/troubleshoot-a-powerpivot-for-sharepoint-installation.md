@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 97bc2ce7-af04-4372-ad79-c96b8c3417ab
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: f70af740fb3fe8310a5306368c1bf48c6f357419
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e078becc9267c84fe139a151a15f9f67050161a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71951997"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035852"
 ---
 # <a name="troubleshoot-a-powerpivot-for-sharepoint-installation"></a>Risoluzione dei problemi di un'installazione di PowerPivot per SharePoint
   Se vengono generati errori anziché le pagine e le caratteristiche previste, effettuare le operazioni riportate di seguito.  
@@ -39,6 +38,6 @@ ms.locfileid: "71951997"
   
 4.  Verificare che **Integrazione delle funzionalità di PowerPivot per le raccolte siti** sia **Attiva**.  
   
- Per ulteriori cause di questo problema, vedere la pagina [relativa alle icone rosse per le icone della raccolta PowerPivot](https://support.microsoft.com/kb/2361559) https://support.microsoft.com/kb/2361559).  
+ Per ulteriori cause di questo problema, vedere la pagina [relativa alle icone rosse per le icone della raccolta PowerPivot](https://support.microsoft.com/kb/2361559) https://support.microsoft.com/kb/2361559) .  
   
   

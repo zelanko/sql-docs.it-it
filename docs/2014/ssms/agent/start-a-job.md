@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: cec9f7f7-d0a7-4239-9dc5-a69c011ebaa0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e94adcf8242c6acaca7c28ff9a854e0aa87cb3ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4d5af895df518a915dacd953331b9139471933aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798184"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058670"
 ---
 # <a name="start-a-job"></a>Avviare un processo
-  In questo argomento viene descritto come avviare l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esecuzione di un [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] processo di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Agent [!INCLUDE[tsql](../../includes/tsql-md.md)] in utilizzando o SQL Server Management Objects.  
+  In questo argomento viene descritto come avviare l'esecuzione di un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processo di Agent in utilizzando [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] o SQL Server Management Objects.  
   
  Un processo è una serie specificata di azioni eseguite da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent possono essere eseguiti in un server locale o in più server remoti.  
   

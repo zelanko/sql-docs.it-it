@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5b615023-3c76-4b95-bbd0-9c39f3353f4b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b7afeb1685951e0947af02e5309a25dd0a395a61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 696cf25deea19a25939b8180c31806791de318d6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211141"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011576"
 ---
 # <a name="sql-server-browser-sql-server-configuration-manager"></a>SQL Server Browser (Gestione configurazione SQL Server)
   Si tratta del servizio che supporta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser. Per visualizzare le proprietà del servizio, fare clic con il pulsante destro del mouse sul servizio nel riquadro dei dettagli, quindi scegliere **Proprietà**.  

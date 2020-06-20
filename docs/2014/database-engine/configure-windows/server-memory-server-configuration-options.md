@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4f7302da7be80038478c887a01bb32037503fc0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 38129f2f502f3a3f2ec1be02d718a642e2a52c23
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69028696"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934992"
 ---
 # <a name="server-memory-configuration-options"></a>Opzioni di configurazione server memory
   Usare le due opzioni per la memoria del server **min server memory** e **max server memory**per riconfigurare la quantità di memoria, in megabyte, gestita con Gestione memoria di SQL Server per un processo di SQL Server usato da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -34,7 +33,7 @@ ms.locfileid: "69028696"
  L'impostazione predefinita per **min server memory** è 0, mentre quella per **max server memory** è 2147483647 MB. Per impostazione predefinita, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i requisiti di memoria possono variare dinamicamente in base alle risorse di sistema disponibili.  
   
 > [!NOTE]  
-> L'impostazione di **max server memory** sul valore minimo provoca un grave peggioramento delle prestazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , fino a impedirne l'avvio. Se non è possibile [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avviare dopo la modifica di questa opzione, avviarla con l'opzione di avvio **-f** e reimpostare **max server memory** sul valore precedente. Per altre informazioni, vedere [Opzioni di avvio del servizio del motore di database](database-engine-service-startup-options.md).  
+> L'impostazione di **max server memory** sul valore minimo provoca un grave peggioramento delle prestazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , fino a impedirne l'avvio. Se non è possibile avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dopo la modifica di questa opzione, avviarla con l'opzione di avvio **-f** e reimpostare **max server memory** sul valore precedente. Per altre informazioni, vedere [Opzioni di avvio del servizio del motore di database](database-engine-service-startup-options.md).  
   
  Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza la memoria in modo dinamico, esegue query periodiche sul sistema per determinare la quantità di memoria libera disponibile. Il mantenimento di tale memoria libera impedisce il paging del sistema operativo. Se è disponibile una quantità minore di memoria libera, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rilascia memoria al sistema operativo. Se è disponibile una quantità maggiore di memoria libera, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere allocata più memoria. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aggiunge memoria solo se richiesto dal relativo carico di lavoro. In un server non operativo non vengono aumentate le dimensioni del proprio spazio degli indirizzi virtuali.  
   
@@ -96,14 +95,14 @@ Le opzioni per la memoria **min server memory** e **max server memory** possono 
 3.  Se l'opzione **Massimizza la velocità di trasmissione dati per le applicazioni di rete** è selezionata, scegliere un'altra opzione, fare clic su **OK**, quindi chiudere tutte le finestre di dialogo rimanenti.  
   
 ## <a name="lock-pages-in-memory"></a>Blocco di pagine in memoria  
- Questi criteri di Windows determinano gli account autorizzati a usare un processo per mantenere i dati nella memoria fisica, impedendo al sistema di eseguire il paging dei dati nella memoria virtuale su disco. Il blocco delle pagine in memoria può garantire il corretto funzionamento del server quando si verifica il paging della memoria su disco. L'opzione SQL Server **blocco di pagine in memoria** è impostata su on nelle istanze a 32 bit e a 64 bit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] di Standard Edition e versioni successive quando all'account con privilegi per l'esecuzione di sqlservr. exe è stato concesso il diritto utente "blocco di pagine in memoria" di Windows (LPIM). In versioni precedenti di SQL Server, l'impostazione dell'opzione Blocco pagine per un'istanza a 32 bit di SQL Server richiede che l'account con i privilegi per eseguire sqlservr.exe disponga del diritto utente LPIM e che l'opzione "awe_enabled"sia impostata su ON.  
+ Questi criteri di Windows determinano gli account autorizzati a usare un processo per mantenere i dati nella memoria fisica, impedendo al sistema di eseguire il paging dei dati nella memoria virtuale su disco. Il blocco delle pagine in memoria può garantire il corretto funzionamento del server quando si verifica il paging della memoria su disco. L'opzione SQL Server **blocco di pagine in memoria** è impostata su on nelle istanze a 32 bit e a 64 bit di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard Edition e versioni successive quando all'account con privilegi per l'esecuzione sqlservr.exe è stato concesso il diritto utente "blocco di pagine in memoria" di Windows (LPIM). In versioni precedenti di SQL Server, l'impostazione dell'opzione Blocco pagine per un'istanza a 32 bit di SQL Server richiede che l'account con i privilegi per eseguire sqlservr.exe disponga del diritto utente LPIM e che l'opzione "awe_enabled"sia impostata su ON.  
   
- Per disabilitare l'opzione **blocco di pagine in memoria** per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], rimuovere il diritto utente "blocco di pagine in memoria" per l'account di avvio SQL Server.  
+ Per disabilitare l'opzione **blocco di pagine in memoria** per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , rimuovere il diritto utente "blocco di pagine in memoria" per l'account di avvio SQL Server.  
   
 ### <a name="to-disable-lock-pages-in-memory"></a>Per disabilitare l'opzione Blocco di pagine in memoria  
  **Per disabilitare l'opzione blocco di pagine in memoria:**  
   
-1.  Fare clic sul pulsante **Start**, quindi scegliere **Esegui**. Nella casella **Apri** Digitare `gpedit.msc`.  
+1.  Fare clic sul pulsante **Start**, quindi scegliere **Esegui**. Nella casella **Apri** Digitare `gpedit.msc` .  
   
      Si aprirà la finestra di dialogo **Criteri di gruppo**.  
   
@@ -149,7 +148,7 @@ Le opzioni per la memoria **min server memory** e **max server memory** possono 
   
  ***/3GB** è un parametro di avvio del sistema operativo. Per altre informazioni, consultare [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
- * * WOW64 (Windows in Windows 64) è una modalità in cui 32 bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito in un sistema operativo a 64 bit. Per altre informazioni, consultare [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
+ * * WOW64 (Windows in Windows 64) è una modalità in cui 32 bit viene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eseguito in un sistema operativo a 64 bit. Per altre informazioni, consultare [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
 ## <a name="examples"></a>Esempi  
   

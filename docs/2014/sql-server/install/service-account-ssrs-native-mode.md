@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: face8120-4d32-4c6c-a1e8-99f27d1ff15d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: db98f9806f48699af996a33675138150803e8812
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cf46eaa4790bfc09e6f10ef1c43aa06aad12f436
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952387"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036387"
 ---
 # <a name="service-account-ssrs-native-mode"></a>Account del servizio (modalità nativa SSRS)
   Nella pagina Account servizio è possibile specificare l'account con cui viene eseguito il servizio del server di report. Questo account viene configurato inizialmente durante l'installazione, ma può essere modificato se si desidera utilizzare un account o una password diversa. Il servizio Web ReportServer, Gestione report e l'applicazione di elaborazione in background verranno tutti eseguiti con l'identità del servizio specificata in questa pagina.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità nativa.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modalità nativa.  
   
- L'account specificato per il servizio del server di report deve disporre dell'autorizzazione necessaria per accedere al Registro di sistema, ai file di programma del server di report e al database del server di report. Tutte le autorizzazioni vengono configurate automaticamente per l'account quando si utilizza Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per impostare l'account. Se si utilizza l'account del servizio per connettersi al database del server di report, la Configuration Manager crea un account di accesso al database per l'account e configura le autorizzazioni per il database assegnando l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account a RSExecRole nell'istanza che ospita il database del server di report. Il database del server di report è l'unico archivio dati in cui scrive un server di report. Per l'account del servizio non sono necessarie autorizzazioni per altri archivi dati.  
+ L'account specificato per il servizio del server di report deve disporre dell'autorizzazione necessaria per accedere al Registro di sistema, ai file di programma del server di report e al database del server di report. Tutte le autorizzazioni vengono configurate automaticamente per l'account quando si utilizza Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per impostare l'account. Se si utilizza l'account del servizio per connettersi al database del server di report, la Configuration Manager crea un account di accesso al database per l'account e configura le autorizzazioni per il database assegnando l'account a RSExecRole nell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza che ospita il database del server di report. Il database del server di report è l'unico archivio dati in cui scrive un server di report. Per l'account del servizio non sono necessarie autorizzazioni per altri archivi dati.  
   
  Per aprire questa pagina, avviare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e selezionare il collegamento nel riquadro di navigazione. Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
@@ -36,7 +35,7 @@ ms.locfileid: "71952387"
  Selezionare **Servizio di rete**, **Sistema locale**o **Servizio locale** dall'elenco. L'unica opzione consigliata è **Servizio di rete** . È tuttavia possibile configurare l'utilizzo di qualsiasi account disponibile.  
   
  **Utilizza un altro account**  
- Selezionare questa opzione per specificare un account utente di Windows. È possibile immettere un account utente locale di Windows o un account utente di dominio. Specificare un account di dominio nel formato: * \<dominio>\\<utente\>*. Specificare un account utente locale di Windows nel formato seguente: * \<nome computer \\><\>utente*. È possibile solo selezionare un account esistente: in Configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è possibile creare nuovi account.  
+ Selezionare questa opzione per specificare un account utente di Windows. È possibile immettere un account utente locale di Windows o un account utente di dominio. Specificare un account di dominio nel formato: * \<domain> \\<utente \> *. Specificare un account utente locale di Windows nel formato: * \<computer name> \\<utente \> *. È possibile solo selezionare un account esistente: in Configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è possibile creare nuovi account.  
   
  Il limite massimo di caratteri per l'account è 20.  
   

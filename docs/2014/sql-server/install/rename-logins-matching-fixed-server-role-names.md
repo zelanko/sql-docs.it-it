@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 10a1d77c-3153-474f-a6a0-969556794467
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: df9d9e51846e286c67a4773823207524755d15dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 296ae4d4051e79e3c5d3bc158ef3e87c9164ecd3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278210"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059088"
 ---
 # <a name="rename-logins-matching-fixed-server-role-names"></a>Rinominare gli account di accesso con nomi uguali a quelli dei ruoli predefiniti del server
   Uno o più nomi di account di accesso definiti dall'utente sono uguali a nomi di ruoli predefiniti del server. I nomi dei ruoli predefiniti del server sono riservati. Prima di eseguire l'aggiornamento, rinominare gli account di accesso.  
@@ -60,7 +59,7 @@ ms.locfileid: "72278210"
   
 2.  Eliminare gli account di accesso.  
   
-3.  Utilizzare la procedura di sistema **sp_addlogin** per creare nuovi account di accesso. Specificare il SID restituito nel passaggio 1 nel parametro ** \@SID** per ogni account di accesso corrispondente.  
+3.  Utilizzare la procedura di sistema **sp_addlogin** per creare nuovi account di accesso. Specificare il SID restituito nel passaggio 1 nel parametro ** \@ SID** per ogni account di accesso corrispondente.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Problemi di aggiornamento motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

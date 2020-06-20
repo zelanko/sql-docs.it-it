@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9a154455-c68f-4403-a3a7-b90f4d35eecb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 487ced9f103fd10a581841595111f01a5710bd15
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2028e59e91d42bfdced2d18fa6ce129dfb108302
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952077"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059239"
 ---
 # <a name="ip-address-restriction-detected-upgrade-advisor"></a>Rilevata restrizione degli indirizzi IP (Upgrade Advisor)
   Sono state rilevate una o più restrizioni degli indirizzi IP sul sito Web di IIS che ospita le directory virtuali del server di report o di Gestione report. In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è disponibile il supporto nativo per le restrizioni degli indirizzi IP.  

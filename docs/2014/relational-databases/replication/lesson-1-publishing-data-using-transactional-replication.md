@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9c55aa3c-4664-41fc-943f-e817c31aad5e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 18236ec3ca5a62cd45a2cf7cdd3d56b5cea79063
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: ff715b51a7fa84a462d1439e78627d648e20472d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000457"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065961"
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>Lezione 1: Pubblicazione dei dati tramite la replica transazionale
   In questa lezione verrà creata una pubblicazione transazionale con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per pubblicare un subset filtrato della tabella **Product** nel database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Verrà inoltre aggiunto l'account di accesso di SQL Server utilizzato dall'agente di distribuzione all'elenco di accesso alla pubblicazione. Per eseguire questa esercitazione è necessario avere completato l'esercitazione precedente [Preparazione del server per la replica](tutorial-preparing-the-server-for-replication.md).  
@@ -50,7 +49,7 @@ ms.locfileid: "83000457"
   
 10. Nella pagina Sicurezza agente deselezionare la casella di controllo **Usa le impostazioni di sicurezza dell'agente snapshot** .  
   
-11. Fare clic su **Impostazioni di sicurezza** accanto ad Agente snapshot, immettere \<_Nome_computer>_**\repl_snapshot** nella casella **Account processo**, specificare la password per l'account e quindi fare clic su **OK**.  
+11. Fare clic su **impostazioni di sicurezza** per il agente di snapshot, immettere \<_Machine_Name> _**\ Repl_snapshot** nella casella **account processo** , specificare la password per l'account, quindi fare clic su **OK**.  
   
 12. Ripetere il passaggio precedente per impostare repl_logreader come account di processo per l'agente di lettura log e quindi fare clic su **Fine**.  
   

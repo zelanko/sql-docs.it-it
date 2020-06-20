@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2e19205a-25ca-4d4a-916b-d591cf2c892b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fd84bacfd389651abaf00486cd9940d95a26b0b3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87592be4ea5698f9a7a6cb5c45bdb8cfe4fbd484
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745572"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050510"
 ---
 # <a name="srv_setcoldata-extended-stored-procedure-api"></a>srv_setcoldata (API Stored procedure estesa)
     
@@ -55,13 +54,13 @@ data
  *srvproc*  
  Puntatore alla struttura SRV_PROC che rappresenta l'handle di una determinata connessione client. La struttura contiene informazioni utilizzate dalla libreria dell'API Stored procedure estesa per gestire le comunicazioni e i dati tra l'applicazione e il client.  
   
- *colonna*  
+ *column*  
  Indica il numero della colonna per il quale viene specificato l'indirizzo. Le colonne sono numerate a partire da 1.  
   
  *data*  
  Indicatore di misura per i dati di una colonna. La memoria allocata per *data* non deve essere liberata fino a quando i dati della colonna non vengono sostituiti da un'altra chiamata a **srv_setcoldata** o fino alla chiamata a **srv_senddone**.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SUCCEED o FAIL.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -72,7 +71,7 @@ data
 > [!IMPORTANT]  
 >  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [srv_describe &#40;API Stored procedure estesa&#41;](srv-describe-extended-stored-procedure-api.md)  
   
   

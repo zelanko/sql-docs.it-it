@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e7fa106a-2221-403a-bb74-efc9f12bb450
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 907caaa37c429dd2f788d0123f7f8ee0bbf8a27a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ef85c2744475a2f55af2abc3514aa3167473ff7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059663"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951851"
 ---
 # <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a>Debug di un pacchetto impostando punti di interruzione in un'attività o in un contenitore
   In questa procedura viene descritto come impostare punti di interruzione in un pacchetto, in un'attività o in un contenitore Ciclo For, Ciclo Foreach o Sequenza.  
@@ -38,13 +37,13 @@ ms.locfileid: "66059663"
   
     -   Per impostare punti di interruzione in un gestore evento, nella scheda **Gestore evento** fare clic con il pulsante destro del mouse su un'attività o su un contenitore Ciclo For, Ciclo Foreach o Sequenza e quindi scegliere **Modifica punti di interruzione**.  
   
-4.  Nella finestra di dialogo **imposta \<nome contenitore punti di interruzione>** Selezionare i punti di interruzione da abilitare.  
+4.  Nella finestra di dialogo **imposta \<container name> ** punti di interruzione selezionare i punti di interruzione da abilitare.  
   
 5.  Facoltativamente, modificare il tipo di passaggi e il numero di passaggi per ogni punto di interruzione.  
   
 6.  Per salvare il pacchetto, scegliere **Salva elementi selezionati** dal menu **File** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Strumenti per la risoluzione dei problemi per lo sviluppo di pacchetti](troubleshooting/troubleshooting-tools-for-package-development.md)   
  [Eseguire il debug di uno script impostando punti di interruzione in un'attività script e in un componente script](data-flow/transformations/script-component.md)   
  [Codifica e debug dell'attività script](control-flow/script-task.md)   

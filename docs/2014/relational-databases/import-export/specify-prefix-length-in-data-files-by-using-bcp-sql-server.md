@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e5d91c82d892888d2e6edde5615ba05a2a9ebf3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff16491ed9c021424d3d6371ccb7ba2941c61129
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011762"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050410"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>Specificare la lunghezza del prefisso nei file di dati tramite bcp (SQL Server)
   Per fornire il tipo di archiviazione file con la massima compressione durante l'esportazione in blocco dei dati in formato nativo in un file di dati, il comando **bcp** inserisce davanti a ogni campo uno o più caratteri che ne indicano la lunghezza. Tali caratteri sono denominati *caratteri per il prefisso di lunghezza*.  
@@ -56,11 +55,11 @@ ms.locfileid: "66011762"
 |`varchar`|2|2|2|2|  
 |`nchar`|2|2|2|2|  
 |`nvarchar`|2|2|2|2|  
-|`text`<sup>1</sup>|4|4|4|4|  
-|`ntext`<sup>1</sup>|4|4|4|4|  
+|`text` <sup>1</sup>|4|4|4|4|  
+|`ntext` <sup>1</sup>|4|4|4|4|  
 |`binary`|2|2|2|2|  
 |`varbinary`|2|2|2|2|  
-|`image`<sup>1</sup>|4|4|4|4|  
+|`image` <sup>1</sup>|4|4|4|4|  
 |`datetime`|0|1|0|1|  
 |`smalldatetime`|0|1|0|1|  
 |`decimal`|1|1|1|1|  
@@ -81,7 +80,7 @@ ms.locfileid: "66011762"
 |UDT (tipo di dati definito dall'utente)|8|8|8|8|  
 |XML|8|8|8|8|  
   
- <sup>1</sup> i `ntext`tipi `text`di dati `image` , e verranno rimossi in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare questi tipi di dati in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni che attualmente li utilizzano. In alternativa, usare `nvarchar(max)`, `varchar(max)` e `varbinary(max)`.  
+ <sup>1</sup> i `ntext` `text` `image` tipi di dati, e verranno rimossi in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Evitare di utilizzare questi tipi di dati in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni che attualmente li utilizzano. In alternativa, usare `nvarchar(max)`, `varchar(max)` e `varbinary(max)`.  
   
 ##  <a name="prefix-lengths-for-bulk-import"></a><a name="PrefixLengthsImport"></a> Lunghezze del prefisso per il caricamento bulk  
  Quando si esegue l'importazione bulk di dati, la lunghezza del prefisso corrisponde al valore specificato al momento della creazione del file di dati. Se il file di dati non è stato creato da un comando **bcp** , i caratteri di prefisso di lunghezza probabilmente non esistono. In tal caso, specificare il valore 0 come lunghezza del prefisso.  

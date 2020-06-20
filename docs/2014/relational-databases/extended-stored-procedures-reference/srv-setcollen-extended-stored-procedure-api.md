@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3c60f1c3-4562-463a-a259-12df172788bd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d4b3ab8f1e956ee68585ecdc3e12ae605d52ab38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9625d2865a21b66663ebe2c2ad066e9ce8c7bf25
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745672"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050518"
 ---
 # <a name="srv_setcollen-extended-stored-procedure-api"></a>srv_setcollen (API Stored procedure estesa)
     
@@ -55,13 +54,13 @@ len
  *srvproc*  
  Puntatore alla struttura SRV_PROC che rappresenta l'handle di una determinata connessione client. La struttura contiene informazioni utilizzate dalla libreria dell'API Stored procedure estesa per gestire le comunicazioni e i dati tra l'applicazione e il client.  
   
- *colonna*  
+ *column*  
  Indica il numero della colonna per la quale viene specificata la lunghezza dei dati. Le colonne sono numerate a partire da 1.  
   
  *Len*  
  Indica la lunghezza in byte dei dati della colonna. Alla lunghezza 0 corrisponde un valore Null per i dati della colonna.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SUCCEED o FAIL.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -72,7 +71,7 @@ len
 > [!IMPORTANT]  
 >  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [srv_describe &#40;API Stored procedure estesa&#41;](srv-describe-extended-stored-procedure-api.md)  
   
   

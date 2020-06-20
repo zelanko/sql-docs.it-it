@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4a04e581758748d55b9defcab3beaa6a86f0eecf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cd9919b17e0422a9308e36cd1befb6865a67ff67
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797803"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960401"
 ---
 # <a name="manage-authentication-in-database-engine-powershell"></a>Gestire l'autenticazione in motore di database PowerShell
   Per impostazione predefinita, i componenti PowerShell di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizzano l'autenticazione di Windows in caso di connessione a un'istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)]. È possibile utilizzare l'autenticazione di SQL Server definendo un'unità virtuale PowerShell o specificando i parametri `-Username` e `-Password` per `Invoke-Sqlcmd`.  
@@ -27,7 +26,7 @@ ms.locfileid: "72797803"
 ##  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Tutte le azioni eseguibili in un'istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)] vengono controllate dalle autorizzazioni concesse alle credenziali di autenticazione utilizzate per connettersi all'istanza. Per impostazione predefinita, il provider e i cmdlet di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizzano l'account di Windows in esecuzione per eseguire una connessione con autenticazione di Windows al [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
- Per effettuare una connessione con autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è necessario fornire un ID di accesso per l'autenticazione di SQL Server e una password. Quando si utilizza [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] il provider, è necessario associare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] le credenziali di accesso a un'unità virtuale e quindi utilizzare il comando di modifica`cd`della directory () per connettersi a tale unità. In Windows PowerShell le credenziali di sicurezza possono essere associate solo a unità virtuali.  
+ Per effettuare una connessione con autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è necessario fornire un ID di accesso per l'autenticazione di SQL Server e una password. Quando si utilizza il [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider, è necessario associare le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] credenziali di accesso a un'unità virtuale e quindi utilizzare il comando di modifica della directory ( `cd` ) per connettersi a tale unità. In Windows PowerShell le credenziali di sicurezza possono essere associate solo a unità virtuali.  
   
 ##  <a name="sql-server-authentication-using-a-virtual-drive"></a><a name="SQLAuthVirtDrv"></a>Autenticazione SQL Server tramite un'unità virtuale  
  **Per creare un'unità virtuale associata a un accesso di autenticazione di SQL Server**  
@@ -47,7 +46,7 @@ ms.locfileid: "72797803"
 ### <a name="example-virtual-drive"></a>Esempio (unità virtuale)  
  In questo esempio viene creata una funzione denominata **sqldrive** che può essere utilizzata per creare un'unità virtuale associata all'account di accesso con autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e all'istanza specificati.  
   
- La funzione **sqldrive** richiede di immettere la password per effettuare l'accesso, mascherandola durante la digitazione. Quindi, ogni volta che si utilizza il comando di`cd`modifica della directory () per connettersi a un percorso utilizzando il nome dell'unità virtuale, tutte le operazioni [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono eseguite utilizzando le credenziali di accesso per l'autenticazione fornite al momento della creazione dell'unità.  
+ La funzione **sqldrive** richiede di immettere la password per effettuare l'accesso, mascherandola durante la digitazione. Quindi, ogni volta che si utilizza il comando di modifica della directory ( `cd` ) per connettersi a un percorso utilizzando il nome dell'unità virtuale, tutte le operazioni vengono eseguite utilizzando le credenziali di accesso per l' [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autenticazione fornite al momento della creazione dell'unità.  
   
 ```powershell
 ## Create a function that specifies the login and prompts for the password.  

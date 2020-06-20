@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 358a595ef326f86db9ab81294bc3a9c88fc8ef0d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8e517cff394bc0c813e34763469f75147a0a16c5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706533"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050244"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria
   L'agente di raccolta delle prestazioni delle transazioni in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] consente di valutare se OLTP in memoria può migliorare le prestazioni dell'applicazione di database. Nel report dell'analisi delle prestazioni delle transazioni viene inoltre indicata la quantità di operazioni che è necessario eseguire per abilitare OLTP in memoria nell'applicazione. Una volta identificata la tabella basata su disco da trasferire in OLTP in memoria, è possibile usare [Ottimizzazione guidata per la memoria](memory-optimization-advisor.md)per semplificarne la migrazione. Analogamente, l' [Native Compilation Advisor](native-compilation-advisor.md) semplifica il trasferimento di una stored procedure a una stored procedure compilata in modo nativo.  
@@ -93,7 +92,7 @@ ms.locfileid: "82706533"
   
 4.  Fare clic su **nuovo** per creare un nuovo database in cui conservare i dati del profilo. Al termine della creazione del database, fare clic su **Avanti** nella procedura guidata.  
   
-5.  Il passaggio successivo consente di aggiungere utenti e account di accesso. È possibile eseguire il mapping degli account di accesso alle appartenenze ai ruoli dell'istanza del data warehouse di gestione. Questa operazione non è necessaria per raccogliere i dati dell'istanza locale. Se non si raccolgono dati dell'istanza locale, è possibile concedere l'appartenenza al ruolo del database `mdw_admin` all'account che eseguirà le transazioni sottoposte a profilatura. Al termine, fare clic su **Avanti**.  
+5.  Il passaggio successivo consente di aggiungere utenti e account di accesso. È possibile eseguire il mapping degli account di accesso alle appartenenze ai ruoli dell'istanza del data warehouse di gestione. Questa operazione non è necessaria per raccogliere i dati dell'istanza locale. Se non si raccolgono dati dell'istanza locale, è possibile concedere l'appartenenza al ruolo del database `mdw_admin` all'account che eseguirà le transazioni sottoposte a profilatura. Al termine fare clic su **Avanti**.  
   
 6.  Accertarsi che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent sia in esecuzione.  
   

@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2b780dfd75d998a9e3f6e382890b8318b958688d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d76345044192ad6d3e3754ca990b29fffa17c707
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72781814"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996693"
 ---
 # <a name="using-user-defined-tables"></a>Utilizzo di tabelle definite dall'utente
   Le tabelle definite dall'utente rappresentano informazioni tabulari. Vengono utilizzate come parametri quando si passano dati tabulari in stored procedure o funzioni definite dall'utente. Non è possibile utilizzare le tabelle definite dall'utente per rappresentare le colonne di una tabella di database.  
   
- L'oggetto <xref:Microsoft.SqlServer.Management.Smo.Database> dispone di una proprietà <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> che fa riferimento a un oggetto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>. Ogni <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> oggetto nella raccolta dispone di una proprietà **Columns** che fa riferimento a una raccolta <xref:Microsoft.SqlServer.Management.Smo.Column> di oggetti in cui sono elencate le colonne della tabella definita dall'utente. Utilizzare il metodo Add per aggiungere colonne alla tabella definita dall'utente.  
+ L'oggetto <xref:Microsoft.SqlServer.Management.Smo.Database> dispone di una proprietà <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> che fa riferimento a un oggetto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>. Ogni <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> oggetto nella raccolta dispone di una proprietà **Columns** che fa riferimento a una raccolta di <xref:Microsoft.SqlServer.Management.Smo.Column> oggetti in cui sono elencate le colonne della tabella definita dall'utente. Utilizzare il metodo Add per aggiungere colonne alla tabella definita dall'utente.  
   
  Quando si definisce una nuova tabella definita dall'utente tramite l'oggetto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>, è necessario fornire colonne e una chiave primaria basata su una delle colonne.  
   

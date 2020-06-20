@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca35b67a-104a-41fb-ac58-a61be06fe114
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bce3bd6862e612a8cefa35d1c981d608bf2c341c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d28202148d6f85e0aafde6ee324b11fd8cd10b23
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62842986"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928934"
 ---
 # <a name="source-control-basics"></a>Nozioni fondamentali sul controllo del codice sorgente
   Il controllo del codice sorgente è un sistema nel quale un componente centrale di un prodotto server archivia e tiene traccia delle versioni dei file, controllando inoltre l'accesso ai file. Un tipico sistema di controllo del codice sorgente include un provider di controllo del codice sorgente e due o più client di controllo del codice sorgente.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6950199a5da1f4aa773eaa12fee80edb98aba04f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ee690ddfc4cc02769db6d07d226cb154f3c4eae
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809418"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934922"
 ---
 # <a name="server-properties-memory-page"></a>Proprietà server (pagina Memoria)
   Utilizzare questa pagina per visualizzare o modificare le opzioni di memoria per il server. Quando l'opzione **Memoria minima per il server** è impostata su 0 e l'opzione **Memoria massima per il server** è impostata su 2147483647 MB, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può usare in ogni momento la quantità ottimale di memoria, tenendo tuttavia conto della quantità di memoria attualmente usta dal sistema operativo e da altre applicazioni. Mano a mano che il carico di lavoro del computer e di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cambia, anche la quantità di memoria allocata varia di conseguenza. È possibile limitare ulteriormente questa allocazione dinamica della memoria in base ai valori minimi e massimi specificati di seguito.  

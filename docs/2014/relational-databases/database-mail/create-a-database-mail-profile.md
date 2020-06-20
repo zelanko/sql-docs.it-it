@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 55eab0bbfacdde17ff69dd36a0641561695bc14d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0453d495c90c1e599bfc7777b4899f30e6659c52
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872207"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952619"
 ---
 # <a name="create-a-database-mail-profile"></a>Creare un profilo di Posta elettronica database
   Per creare profili pubblici e privati di Posta elettronica database, è possibile utilizzare **Configurazione guidata posta elettronica database** o [!INCLUDE[tsql](../../includes/tsql-md.md)] .  

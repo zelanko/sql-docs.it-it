@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f27ec0c9fe8078bb11a48114a3d456793271853d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14a38f66dbad9b30e1b9300e16682546b7b865de
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768287"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968416"
 ---
 # <a name="general-page"></a>Pagina Generale
   Usare la pagina **Generale** della pagina **Finestre di progettazione Integration Services** della finestra di dialogo **Opzioni** per specificare le opzioni per il caricamento, la visualizzazione e l'aggiornamento dei pacchetti.  

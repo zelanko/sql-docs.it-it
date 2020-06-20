@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 60fdfbecf617f0a4aa92b40b72b1b5e969f69388
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7c3ee58ebc7cd579b04d317b44e823779ae987e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745881"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004546"
 ---
 # <a name="synchronize-a-push-subscription"></a>Sincronizzazione di una sottoscrizione push
   In questo argomento viene descritto come sincronizzare una sottoscrizione push in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [agenti di replica](agents/replication-agents-overview.md)o RMO (Replication Management Objects).  
@@ -40,7 +39,7 @@ ms.locfileid: "62745881"
   
 4.  Fare clic con il pulsante destro del mouse sulla sottoscrizione che si desidera sincronizzare e quindi scegliere **Visualizza stato sincronizzazione**.  
   
-5.  Nella finestra di dialogo **Visualizza stato sincronizzazione - \<Sottoscrittore>:\<DatabaseSottoscrizione>** fare clic su **Avvia**. Al termine della sincronizzazione verrà visualizzato il messaggio **Sincronizzazione completata** .  
+5.  Nella finestra di dialogo **Visualizza stato sincronizzazione- \<Subscriber> : \<SubscriptionDatabase> ** fare clic su **Avvia**. Al termine della sincronizzazione verrà visualizzato il messaggio **Sincronizzazione completata** .  
   
 6.  Fare clic su **Close**.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "62745881"
   
 4.  Viene visualizzato un messaggio in cui si chiede di stabilire una connessione al server di distribuzione. Fare clic su **OK**.  
   
-5.  Nella finestra di dialogo **Visualizza stato sincronizzazione - \<Sottoscrittore>:\<DatabaseSottoscrizione>** fare clic su **Avvia**. Al termine della sincronizzazione verrà visualizzato il messaggio **Sincronizzazione completata** .  
+5.  Nella finestra di dialogo **Visualizza stato sincronizzazione- \<Subscriber> : \<SubscriptionDatabase> ** fare clic su **Avvia**. Al termine della sincronizzazione verrà visualizzato il messaggio **Sincronizzazione completata** .  
   
 6.  Fare clic su **Close**.  
   

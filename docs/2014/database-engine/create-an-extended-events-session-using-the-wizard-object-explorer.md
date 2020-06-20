@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: 80c0456f-17c0-41d8-b2aa-502a2f3bb6de
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cdc50e81bcc58722a3c04fc8516b9158072533cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1102657a4921fd5ab48bfe10c0a05ed67126df47
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065054"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934506"
 ---
 # <a name="create-an-extended-events-session-using-the-wizard-object-explorer"></a>Creare una sessione Eventi estesi utilizzando la procedura guidata (Esplora oggetti)
   Per consentire di selezionare e acquisire gli eventi nel server, gli eventi estesi includono una Creazione guidata nuova sessione, che consente di eseguire in modo semplificato i passaggi per la creazione di una sessione Eventi estesi. Creazione guidata nuova sessione espone la maggior parte della funzionalità di Eventi estesi. La [finestra di dialogo Nuova sessione](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md) consente inoltre di definire una sessione di Eventi estesi che acquisisce, visualizza e analizza i dati. La finestra di dialogo Nuova sessione espone tutta la funzionalità di Eventi estesi.  
@@ -169,7 +168,7 @@ ms.locfileid: "66065054"
   
 2.  Fare clic su **Controllare i dati dinamici sullo schermo al momento dell'acquisizione** per visualizzare i dati dinamici per la sessione eventi. La traccia dei dati dinamici inizierà a essere visualizzata subito dopo la creazione della sessione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creare una sessione Eventi estesi utilizzando la finestra di dialogo Nuova sessione](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)  
   
   

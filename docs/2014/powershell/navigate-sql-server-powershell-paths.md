@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ce1e3a2088214c222cd2c2e84fc333f4993b7a6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4e5b716847c33623968077aca33932ad005953af
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797807"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960291"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Spostarsi all'interno dei percorsi di SQL Server PowerShell
   Il provider [!INCLUDE[ssDE](../includes/ssde-md.md)] PowerShell espone il set di oggetti in un'istanza di SQL Server in una struttura analoga a un percorso di file. È possibile utilizzare cmdlet di Windows PowerShell per spostarsi all'interno del percorso del provider e creare unità personalizzate per rendere più breve il percorso da digitare.  
@@ -25,13 +24,13 @@ ms.locfileid: "72797807"
   
  Il provider [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] implementa un subset di cmdlet del provider, illustrato nella tabella seguente.  
   
-|Cmdlet|Alias canonico|Alias cmd|Alias di shell di UNIX|Descrizione|  
+|Cmdlet|Alias canonico|Alias cmd|Alias di shell di UNIX|Description|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|Consente di ottenere il nodo corrente.|  
 |`Set-Location`|**sl**|**cd, chdir**|**cd, chdir**|Consente di modificare il nodo corrente.|  
 |**Get-ChildItem**|**gci**|**dir**|**LS**|Consente di visualizzare un elenco degli oggetti archiviati nel nodo corrente.|  
 |**Get-Item**|**gi**|||Restituisce le proprietà dell'elemento corrente.|  
-|**Rinomina-elemento**|**rni**|**RN**|**ren**|Consente di rinominare un oggetto.|  
+|**Rename-Item**|**rni**|**RN**|**ren**|Consente di rinominare un oggetto.|  
 |**Remove-Item**|**ri**|**del, rd**|**rm, rmdir**|Consente di rimuovere un oggetto.|  
   
 > [!IMPORTANT]  
@@ -43,8 +42,8 @@ ms.locfileid: "72797807"
 |Posizione nel percorso|Risultati di Get-ChildItem|  
 |-------------------|----------------------------|  
 |SQLSERVER:\SQL|Restituisce il nome del computer locale. Se è stato utilizzato SMO o WMI per connettersi a istanze del [!INCLUDE[ssDE](../includes/ssde-md.md)] in altri computer, vengono elencati anche tali computer.|  
-|SqlServer: \ SQL\\*nomecomputer*|Elenco delle istanze di [!INCLUDE[ssDE](../includes/ssde-md.md)] nel computer.|  
-|SqlServer: \ SQL\\*nomecomputer*\\*NomeIstanza*|Elenco dei tipi di oggetto di primo livello nell'istanza, ad esempio Endpoint, Certificati e Database.|  
+|SQLSERVER: \ SQL \\ *nomecomputer*|Elenco delle istanze di [!INCLUDE[ssDE](../includes/ssde-md.md)] nel computer.|  
+|SqlServer: \ SQL \\ *nomecomputer* \\ *NomeIstanza*|Elenco dei tipi di oggetto di primo livello nell'istanza, ad esempio Endpoint, Certificati e Database.|  
 |Nodo della classe di oggetto, ad esempio Database|Elenco di oggetti del tipo, ad esempio l'elenco di database: master, model, AdventureWorks2008R2.|  
 |Nodo del nome dell'oggetto, ad esempio AdventureWorks2012|Elenco dei tipi di oggetto contenuti all'interno dell'oggetto. Per un database, ad esempio, vengono elencati tipi di oggetto come tabelle e viste.|  
   

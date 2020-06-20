@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0b0596e9ba13e617b6f4eef961966bcc07107314
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c20d069a419a4d9f95a31489449a4726e25c304
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833109"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920457"
 ---
 # <a name="odata-connection-manager"></a>Gestione connessione OData
   Con la gestione connessione OData è possibile connettere un pacchetto a un'origine OData. Tramite un componente di origine OData viene eseguita la connessione a un'origine OData mediante una gestione connessione OData e vengono utilizzati i dati del servizio. Vedere la sezione [origine OData](../data-flow/odata-source.md)per informazioni dettagliate, incluse le istruzioni di installazione per questi componenti.  
@@ -54,7 +53,7 @@ ms.locfileid: "62833109"
 |Password|Password da utilizzare per l'autenticazione di base.|  
 |ConnectionString|Riflette altre proprietà della gestione connessione.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Editor gestione connessione OData](../odata-connection-manager-editor.md)  
   
   

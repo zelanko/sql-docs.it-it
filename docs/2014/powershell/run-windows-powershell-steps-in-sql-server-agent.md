@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 460d66b7e2d4f314db65213819fca1800af2da4f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81b33843ccf0096453fe1cabbde4a1741f89aff2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922900"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960161"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>Esecuzione di passaggi di Windows PowerShell in SQL Server Agent
   Utilizzare SQL Server Agent per eseguire script di SQL Server PowerShell a orari pianificati.  
@@ -72,7 +71,7 @@ ms.locfileid: "62922900"
   
 8.  Fare clic sulla pagina **Avanzate** per impostare le opzioni relative ai passaggi di processo, ad esempio l'operazione da eseguire se il passaggio di processo ha esito positivo o negativo, il numero di tentativi che devono essere eseguiti da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent per l'esecuzione del passaggio di processo e il file in cui [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent può scrivere l'output del passaggio di processo. L'output del passaggio di processo può essere scritto in un file di sistema unicamente dai membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server PowerShell](sql-server-powershell.md)  
   
   

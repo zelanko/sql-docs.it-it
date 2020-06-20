@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 69bd388e-a86c-4de4-b5d5-d093424d9c57
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6c5ddad15af74e45313d3e71b059fae36d166560
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49de4a381de3e998073a73c284e3e3e5960f4921
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808692"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934730"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>Opzione di configurazione del server transform noise words Server
   Utilizzare l' `transform noise words` opzione di configurazione del server per non visualizzare un messaggio di errore se le parole non significative, ovvero [parole non significative](../../relational-databases/search/full-text-search.md), determinano la restituzione di zero righe da parte di un'operazione booleana su una query full-text. Questa opzione è utile per le query full-text in cui viene utilizzato il predicato CONTAINS e con operazioni booleane o operazioni NEAR che includono parole non significative. I valori possibili sono illustrati nella tabella seguente.  

@@ -1,5 +1,5 @@
 ---
-title: 'Strumento di gestione della riga di comando: SqlLocalDB. exe | Microsoft Docs'
+title: 'Strumento di gestione della riga di comando: SqlLocalDB.exe | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ api_location:
 ms.assetid: dd0882b1-a8a9-447a-8bdf-0f9d7f36d336
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 58ea983555fdcb4bb177813db88d40f4bcc59c0e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 147afb38ae7d4ca81d07784aff4efeb28a0859a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128788"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050997"
 ---
 # <a name="command-line-management-tool-sqllocaldbexe"></a>Strumento di gestione della riga di comando: SqlLocalDB.exe
   SqlLocalDB.exe è uno strumento semplice che consente all'utente di gestire facilmente le istanze del database locale dalla riga di comando. Viene implementato come un semplice wrapper dell'API dell'istanza del database locale. Come in molti strumenti SQL Server simili, ad esempio SQLCMD, i parametri vengono passati a SqlLocalDB come argomenti della riga di comando e l'output viene inviato alla console.  

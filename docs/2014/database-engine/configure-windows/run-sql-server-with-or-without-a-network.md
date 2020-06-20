@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 54eac961-5c7a-4481-982d-f93a64b5c2f4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 050986f4c78fc285e936b206c82faef90b89d75e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a80e7e4d42f322bc42d0c67c57e3a1f9bddb87a0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62810361"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935095"
 ---
 # <a name="run-sql-server-with-or-without-a-network"></a>Esecuzione di SQL Server in rete o non in rete
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere eseguito in rete o può funzionare anche senza una rete.  
@@ -51,6 +50,6 @@ ms.locfileid: "62810361"
   
  Quando si esegue la connessione a un'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza specificare il nome di un server, si utilizza una pipe locale. Quando si esegue la connessione a un'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e si specifica un nome di server, si utilizza una pipe di rete o un altro meccanismo IPC (InterProcess Communication) di rete, ad esempio IPX/SPX (Internetwork Packet Exchange/Sequenced Packet Exchange), a condizione che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia stato configurato per l'utilizzo di più reti. Poiché un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta le pipe di rete, è necessario omettere l'argomento non necessario **/** _<nome_server>_ quando ci si connette all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un client. Ad esempio, per connettersi a un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da **osql**, digitare:  
   
- **osql /Usa /P** _\<saPassword>_  
+ **osql/Usa/p**_\<saPassword>_  
   
   

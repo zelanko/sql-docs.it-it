@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0fe85fbf-8e8d-4983-96fd-d04b3c7d6d65
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ecf171c8c50e1f7ce1e7cdc9e86cd27ac6fe558b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: caae904bc1e25288e81d3baba21719be28c05d31
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161997"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050234"
 ---
 # <a name="defining-durability-for-memory-optimized-objects"></a>Definizione di durabilità per gli oggetti con ottimizzazione per la memoria
   Con OLTP in memoria viene garantita la disponibilità completa di tutte le proprietà di atomicità, coerenza, isolamento e durabilità (ACID, Atomicity, Consistency, Isolation, Durability). La durabilità, nel contesto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e delle tabelle ottimizzate per la memoria, offre le seguenti garanzie:  
@@ -57,7 +56,7 @@ ms.locfileid: "63161997"
   
 -   Quantità di record di log nella parte attiva del log che devono essere ripetuti.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione e gestione dell'archiviazione per gli oggetti con ottimizzazione per la memoria](creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

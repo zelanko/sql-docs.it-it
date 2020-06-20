@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e28a5077057c9a02a3b45de6a88180eab5c87b2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8da8743840c604e08cd8c17666e03f2de76c11cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62938583"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065847"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Visualizzatore conflitti di replica Microsoft (Merge repliche)
   Il Visualizzatore conflitti di replica consente di visualizzare tutti i conflitti verificatisi durante la sincronizzazione di repliche. Si verifica una situazione di conflitto quando gli stessi dati vengono modificati in due server distinti, ad esempio in un server di pubblicazione e in un Sottoscrittore oppure in due Sottoscrittori distinti. La replica risolve i conflitti automaticamente tramite il sistema di risoluzione dei conflitti selezionato al momento della creazione dell'articolo. Il Visualizzatore conflitti di replica consente tuttavia di scegliere una risoluzione dei conflitti diversa, se necessario. È possibile che si verifichino i conflitti seguenti:  
@@ -46,7 +45,7 @@ ms.locfileid: "62938583"
  **Pubblicazione**  
  Consente di scegliere una pubblicazione contenente tabelle con conflitti.  
   
- **tavolo**  
+ **Tabella**  
  Consente di scegliere una tabella contenente conflitti.  
   
  **Definisci filtro**  
@@ -58,7 +57,7 @@ ms.locfileid: "62938583"
  **Seleziona tutto**  
  Fare clic su questo pulsante per selezionare tutti i conflitti elencati nella griglia.  
   
- **Deseleziona tutto**  
+ **Selezionare nessuno**  
  Fare clic su questo pulsante per deselezionare tutti i conflitti elencati nella griglia.  
   
  **Rimuovi**  
@@ -82,7 +81,7 @@ ms.locfileid: "62938583"
  **Registra informazioni dettagliate sul conflitto**  
  Selezionare questa casella per registrare le informazioni dettagliate sul conflitto in un file. Per specificare il percorso del file, scegliere **Opzioni** dal menu **Visualizza**. Immettere un valore oppure fare clic sul pulsante **...** e spostarsi sul file appropriato. Fare clic su **OK** per chiudere la finestra di dialogo **Opzioni** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Visualizzare e risolvere i conflitti di dati per le pubblicazioni di tipo merge &#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)   
  [Rilevamento e risoluzione dei conflitti di replica di tipo merge avanzati](merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   

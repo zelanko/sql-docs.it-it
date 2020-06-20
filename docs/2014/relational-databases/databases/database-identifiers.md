@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a492aee19d6b09cb7d227b34648f1ea35d1d95d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 347b20c12a0ac5edd82172741377617aa0fe12c6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62762080"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970219"
 ---
 # <a name="database-identifiers"></a>Identificatori del database
   Il nome di un oggetto di database rappresenta l'identificatore dell'oggetto stesso. È possibile associare un identificatore a qualunque elemento di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio server, database e oggetti di database quali tabelle, viste, colonne, indici, trigger, procedure, vincoli, regole e così via. Gli identificatori sono richiesti con la maggior parte degli oggetti. Per alcuni oggetti, quali i vincoli, sono facoltativi.  

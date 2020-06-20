@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb93c620-4be9-4362-8bf0-af3f2048bdaf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cc2b6d2ba25ee487053a7f9f711c499356a5ec59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c26b06e61a6f9fcad52dab0d042b299f993342e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662345"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052951"
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning - classe di evento
   È possibile utilizzare la classe di evento Hash Warning per monitorare il momento in cui si verifica una ricorsione di hash o l'interruzione dell'hashing (hash bailout) durante un'operazione di hashing.  
@@ -61,7 +60,7 @@ ms.locfileid: "62662345"
 |HostName|`nvarchar`|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
 |IntegerData|`int`|Livello di ricorsione (solo ricorsione di hash).|25|Sì|  
 |IsSystem|`int`|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|Sì|  
-|LoginName|`nvarchar`|Nome dell'account di accesso dell'utente (account [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di accesso di sicurezza di o credenziali di accesso di Windows nel formato * \<dominio \\>\><nome utente*).|11|Sì|  
+|LoginName|`nvarchar`|Nome dell'account di accesso dell'utente (account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sicurezza di o credenziali di accesso di Windows nel formato * \<DOMAIN> \\<nome utente \> *).|11|Sì|  
 |LoginSid|`image`|ID di sicurezza (SID) dell'utente connesso. Queste informazioni sono disponibili nella vista del catalogo sys.server_principals. Il SID è univoco per ogni account di accesso nel server.|41|Sì|  
 |NTDomainName|`nvarchar`|Dominio Windows di appartenenza dell'utente.|7|Sì|  
 |NTUserName|`nvarchar`|Nome utente di Windows.|6|Sì|  
@@ -74,7 +73,7 @@ ms.locfileid: "62662345"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|`bigint`|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 5bb0fcd6-0ce9-488a-85b8-25dddaa03cda
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f930a2e6f3ce84c330a4b7292ebaaba3b2ab871e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c6cd168a852eca294e85de696a611b460423c5a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062214"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926552"
 ---
 # <a name="active-operations-dialog-box"></a>Finestra di dialogo Operazioni attive
   Utilizzare la finestra di dialogo **Operazioni attive** per visualizzare lo stato delle operazioni di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] attualmente in esecuzione nel server di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , ad esempio distribuzione, convalida ed esecuzione dei pacchetti. Questi dati vengono archiviati nel catalogo SSISDB.  
@@ -42,7 +41,7 @@ ms.locfileid: "66062214"
 ##  <a name="configure-the-options"></a><a name="options"></a>Configurare le opzioni  
   
 ### <a name="options"></a>Opzioni  
- **Type**  
+ **Tipo**  
  Consente di specificare il tipo di operazione. Di seguito sono riportati i valori possibili per il campo **tipo** e i valori corrispondenti nella colonna operations_type della vista Transact-SQL `catalog.operations` .  
   
 |||  
@@ -58,7 +57,7 @@ ms.locfileid: "66062214"
 |Convalida del pacchetto|301|  
 |Configurazione del catalogo|1000|  
   
- **Arresta**  
+ **Stop**  
  Fare clic per arrestare un'operazione in esecuzione.  
   
   

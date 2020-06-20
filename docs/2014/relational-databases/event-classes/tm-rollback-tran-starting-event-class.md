@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3b4d0d56-c51f-4f07-a116-5d4bd6ec1a3c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a761d04ebb9bef40deacb19081d7dfdf6a329ea4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0492c7df719b9c6177c947d9848c95fc151ac093
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061259"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051350"
 ---
 # <a name="tm-rollback-tran-starting-event-class"></a>TM: Rollback Tran Starting - classe di evento
   La classe di evento TM: Rollback Tran Starting indica l'avvio di una richiesta ROLLBACK TRANSACTION. La richiesta viene inviata dal client tramite l'interfaccia di gestione delle transazioni. La colonna EventSubClass indica se una nuova transazione verrà avviata dopo il rollback della transazione corrente.  
@@ -51,7 +50,7 @@ ms.locfileid: "63061259"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|`bigint`|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/rollback-transaction-transact-sql)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

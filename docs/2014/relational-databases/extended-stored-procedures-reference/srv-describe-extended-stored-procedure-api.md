@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2115600e-5ce7-4be0-9cd3-a1dd1fab0729
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 64910ce8bab155639a16cb065768c43fd86ac737
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 264781f21e328c4740ee31b53fe3812bbe392305
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127336"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050776"
 ---
 # <a name="srv_describe-extended-stored-procedure-api"></a>srv_describe (API Stored procedure estesa)
     
@@ -99,7 +98,7 @@ srcdata
   
  Se *desttype* è SRVDECIMAL o SRVNUMERIC, il parametro *srcdata* deve essere un puntatore a una struttura DBNUMERIC o DBDECIMAL con i campi della precisione e della scala della struttura già impostati sui valori desiderati. È possibile utilizzare DEFAULTPRECISION per specificare una precisione predefinita e DEFAULTSCALE per specificare una scala predefinita.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  Il numero della colonna descritta. La prima colonna è la colonna 1. Se si verifica un errore, viene restituito 0.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -114,7 +113,7 @@ srcdata
 > [!IMPORTANT]  
 >  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [srv_sendrow &#40;API stored procedure estesa&#41;](srv-sendrow-extended-stored-procedure-api.md)   
  [srv_setutype &#40;API stored procedure estesa&#41;](srv-setutype-extended-stored-procedure-api.md)   
  [srv_setcoldata &#40;API Stored procedure estesa&#41;](srv-setcoldata-extended-stored-procedure-api.md)  

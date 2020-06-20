@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba4b4e15-b923-4fab-987e-6bede2e73f53
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 88e254954c126684eca606f318170c82d3699fab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 74a6db063168cf0eb444a2ee442ff44e3b09958b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662544"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053005"
 ---
 # <a name="eventlog-event-class"></a>EventLog - classe di evento
   La classe di evento EventLog indica che gli eventi sono stati registrati nel registro eventi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
@@ -28,7 +27,7 @@ ms.locfileid: "62662544"
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|Nome dell'applicazione client che ha creato la connessione a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione e non con il nome visualizzato del programma.|10|Sì|  
+|ApplicationName|`nvarchar`|Nome dell'applicazione client che ha creato la connessione a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questa colonna viene popolata con i valori passati dall'applicazione e non con il nome visualizzato del programma.|10|Sì|  
 |BinaryData|`image`|Valore binario che dipende dalla classe di evento acquisita nella traccia.|2|Sì|  
 |ClientProcessID|`int`|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se tramite il client viene indicato l'ID del processo client.|9|Sì|  
 |DatabaseID|`int`|ID del database specificato nell'istruzione USE *database* oppure il database predefinito se non è stata eseguita alcuna istruzione USE *database* per una determinata istanza. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
@@ -51,7 +50,7 @@ ms.locfileid: "62662544"
 |TextData|`ntext`|Testo del messaggio di errore, se disponibile.|1|Sì|  
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

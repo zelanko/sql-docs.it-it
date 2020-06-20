@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d1995ca52507a3027438cac21677517059d3d219
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cd09eb091a7f488f891bc2e69d19ad039b65e065
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154833"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959618"
 ---
 # <a name="back-up-database-media-options-page"></a>Backup database (pagina Opzioni multimediali)
   Usare la pagina  **Opzioni multimediali** della finestra di dialogo **Backup database** per visualizzare o modificare le opzioni multimediali del database.  
@@ -113,8 +112,8 @@ ms.locfileid: "70154833"
   
 ## <a name="see-also"></a>Vedere anche  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [Eseguire il backup di un log delle transazioni &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
- [Eseguire il backup di file e filegroup &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
+ [Backup di un log delle transazioni &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
+ [Backup di file e filegroup &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
  [Esecuzione del backup del log delle transazioni quando il database è danneggiato &#40;SQL Server&#41;](back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
   
   

@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: ecc62702-c0d5-4180-b3c2-16ec5030caa7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 52365cbe64a50b9622ded5587f0baf2ed46cce98
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d90911932b5f9bfc91368e70e66d2b227a3964f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753158"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997126"
 ---
 # <a name="getting-started-in-smo"></a>Introduzione a SMO
-  In questo argomento sono contenute informazioni introduttive [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sull'utilizzo di Management Objects (Smo). La sezione SMO è rivolta agli sviluppatori. L'elenco seguente consente di individuare le informazioni sulla gerarchia di oggetti SMO, sulla preparazione della scrittura di programmi in SMO, sulla scrittura di un programma SMO in diversi linguaggi di programmazione e sulle attività di programmazione generali e specifiche.  
+  In questo argomento sono contenute informazioni introduttive sull'utilizzo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (Smo). La sezione SMO è rivolta agli sviluppatori. L'elenco seguente consente di individuare le informazioni sulla gerarchia di oggetti SMO, sulla preparazione della scrittura di programmi in SMO, sulla scrittura di un programma SMO in diversi linguaggi di programmazione e sulle attività di programmazione generali e specifiche.  
   
 |||  
 |-|-|  

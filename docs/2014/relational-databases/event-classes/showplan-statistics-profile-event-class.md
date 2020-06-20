@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fa9e1330-a217-491c-ad7c-2c1c4015d1bb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f0dc08151d47bee9190f199e187db25a3b5dd6de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 393f30252d2689deb63d1bd540d6db3673f84f73
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662063"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052420"
 ---
 # <a name="showplan-statistics-profile-event-class"></a>Showplan Statistics Profile - classe di evento
   La classe di evento Showplan Statistics Profile viene generata quando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue un'istruzione SQL. Le informazioni incluse sono tuttavia un sottoinsieme delle informazioni disponibili nelle classi di evento Showplan XML Statistics.  
@@ -59,7 +58,7 @@ ms.locfileid: "62662063"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|`bigint`|Token usato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Guida di riferimento a operatori Showplan logici e fisici](../showplan-logical-and-physical-operators-reference.md)   

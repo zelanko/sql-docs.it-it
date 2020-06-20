@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8a73e945-daa6-4e5d-93da-10f000f1f3a2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 17196f4e9a6deaadca09e77e94e2cf393f4af237
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2b7d37e20aae20b548da83fbd32858e8192d3ae
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922896"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960441"
 ---
 # <a name="escape-sql-server-identifiers"></a>Identificatori di escape di SQL Server
   Spesso è possibile utilizzare l'apice inverso di Windows PowerShell (`) come carattere di escape per i caratteri consentiti negli identificatori delimitati di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ma non per i nomi dei percorsi di Windows PowerShell. Tuttavia, alcuni caratteri non supportano l'utilizzo dei caratteri di escape. Ad esempio, non è possibile utilizzare i caratteri di escape per i due punti (:) in Windows PowerShell. Gli identificatori che contengono tale carattere devono essere codificati. La codifica è più affidabile dell'utilizzo dei caratteri di escape in quanto è supportata da tutti i caratteri.  
@@ -36,7 +35,7 @@ cd SQLSERVER:\SQL\MyComputer\MyInstance\MyDatabase\MySchema\`#MyTempTable
 Set-Location SQLSERVER:\SQL\`(local`)\DEFAULT  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Identificatori di SQL Server in PowerShell](sql-server-identifiers-in-powershell.md)   
  [Provider di SQL Server PowerShell](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

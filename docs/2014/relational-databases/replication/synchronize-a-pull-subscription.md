@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c8a7a607221599d599438352eab5add1cc94e5d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 826622cd17862c0535e60c01baab756af2b2996b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63186237"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004713"
 ---
 # <a name="synchronize-a-pull-subscription"></a>Sincronizzazione di una sottoscrizione pull
   In questo argomento viene descritto come sincronizzare una sottoscrizione pull in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [agenti di replica](agents/replication-agents-overview.md)o RMO (Replication Management Objects).  
@@ -38,9 +37,9 @@ ms.locfileid: "63186237"
   
 3.  Fare clic con il pulsante destro del mouse sulla sottoscrizione che si desidera sincronizzare e quindi scegliere **Visualizza stato sincronizzazione**.  
   
-4.  Nella finestra di dialogo **Visualizza stato sincronizzazione - \<Sottoscrittore>:\<DatabaseSottoscrizione>** fare clic su **Avvia**. Al termine della sincronizzazione verrà visualizzato il messaggio **Sincronizzazione completata** .  
+4.  Nella finestra di dialogo **Visualizza stato sincronizzazione- \<Subscriber> : \<SubscriptionDatabase> ** fare clic su **Avvia**. Al termine della sincronizzazione verrà visualizzato il messaggio **Sincronizzazione completata** .  
   
-5.  Fare clic su **Chiudi**.  
+5.  Fare clic su **Close**.  
   
 ##  <a name="replication-agents"></a><a name="ReplProg"></a>Agenti di replica  
  Le sottoscrizioni pull possono essere sincronizzate a livello di programmazione e su richiesta richiamando il file eseguibile dell'agente di replica appropriato dal prompt dei comandi. Il file eseguibile dell'agente di replica richiamato dipenderà dal tipo di pubblicazione a cui appartiene la sottoscrizione pull. Per altre informazioni, vedere [Replication Agents](agents/replication-agents-overview.md).  
@@ -58,15 +57,15 @@ ms.locfileid: "63186237"
   
     -   **-Database di distribuzione**  
   
-    -   **-DistributorSecurityMode** = **1**  
+    -   **-DistributorSecurityMode**  =  **1**  
   
     -   **-Sottoscrittore**  
   
     -   **-SubscriberDB**  
   
-    -   **-SubscriberSecurityMode** = **1**  
+    -   **-SubscriberSecurityMode**  =  **1**  
   
-    -   **-SubscriptionType** = **1**  
+    -   **-SubscriptionType**  =  **1**  
   
      Se si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è inoltre necessario specificare gli argomenti seguenti:  
   
@@ -74,19 +73,19 @@ ms.locfileid: "63186237"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** = **0**  
+    -   **-DistributorSecurityMode**  =  **0**  
   
     -   **-PublisherLogin**  
   
     -   **-PublisherPassword**  
   
-    -   **-PublisherSecurityMode** = **0**  
+    -   **-PublisherSecurityMode**  =  **0**  
   
     -   **-SubscriberLogin**  
   
     -   **-SubscriberPassword**  
   
-    -   **-SubscriberSecurityMode** = **0**  
+    -   **-SubscriberSecurityMode**  =  **0**  
   
 #### <a name="to-start-the-merge-agent-from-the-command-prompt-or-from-a-batch-file"></a>Per avviare l'agente di merge dal prompt dei comandi o da un file batch  
   
@@ -96,21 +95,21 @@ ms.locfileid: "63186237"
   
     -   **-PublisherDB**  
   
-    -   **-PublisherSecurityMode** = **1**  
+    -   **-PublisherSecurityMode**  =  **1**  
   
     -   **-Pubblicazione**  
   
     -   **-Database di distribuzione**  
   
-    -   **-DistributorSecurityMode** = **1**  
+    -   **-DistributorSecurityMode**  =  **1**  
   
     -   **-Sottoscrittore**  
   
-    -   **-SubscriberSecurityMode** = **1**  
+    -   **-SubscriberSecurityMode**  =  **1**  
   
     -   **-SubscriberDB**  
   
-    -   **-SubscriptionType** = **1**  
+    -   **-SubscriptionType**  =  **1**  
   
      Se si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è inoltre necessario specificare gli argomenti seguenti:  
   
@@ -118,19 +117,19 @@ ms.locfileid: "63186237"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** = **0**  
+    -   **-DistributorSecurityMode**  =  **0**  
   
     -   **-PublisherLogin**  
   
     -   **-PublisherPassword**  
   
-    -   **-PublisherSecurityMode** = **0**  
+    -   **-PublisherSecurityMode**  =  **0**  
   
     -   **-SubscriberLogin**  
   
     -   **-SubscriberPassword**  
   
-    -   **-SubscriberSecurityMode** = **0**  
+    -   **-SubscriberSecurityMode**  =  **0**  
   
 ###  <a name="examples-replication-agents"></a><a name="TsqlExample"></a> Esempi (agenti di replica)  
  Nell'esempio seguente viene avviato l'agente di distribuzione per sincronizzare una sottoscrizione pull. Tutte le connessioni vengono eseguite con l'autenticazione di Windows.  
@@ -172,7 +171,7 @@ ms.locfileid: "63186237"
     -   Recuperare un'istanza della classe <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> dalla proprietà <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> e chiamare il metodo <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Synchronize%2A> . Questo metodo avvia l'agente in modo sincrono e il controllo rimane al processo dell'agente in esecuzione. Nella modalità sincrona è possibile gestire l'evento <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Status> durante l'esecuzione dell'agente.  
   
         > [!NOTE]  
-        >  Se al momento della creazione della `false` sottoscrizione <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> pull è stato specificato il valore per (impostazione predefinita), è inoltre necessario specificare <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Distributor%2A>, <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorSecurityMode%2A>e facoltativamente <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorLogin%2A> e <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorPassword%2A> perché i metadati correlati al processo dell'agente per la sottoscrizione non sono disponibili in [MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql).  
+        >  Se al `false` <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> momento della creazione della sottoscrizione pull è stato specificato il valore per (impostazione predefinita), è inoltre necessario specificare <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Distributor%2A> , <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorSecurityMode%2A> e facoltativamente <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorLogin%2A> e <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorPassword%2A> perché i metadati correlati al processo dell'agente per la sottoscrizione non sono disponibili in [MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql).  
   
 #### <a name="to-synchronize-a-pull-subscription-to-a-merge-publication"></a>Per sincronizzare una sottoscrizione pull di una pubblicazione di tipo merge  
   
@@ -199,7 +198,7 @@ ms.locfileid: "63186237"
     -   Recuperare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> dalla proprietà <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A> e chiamare il metodo <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize%2A> . Questo metodo avvia l'agente di merge in modo sincrono e il controllo rimane al processo dell'agente in esecuzione. Nella modalità sincrona è possibile gestire l'evento <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status> durante l'esecuzione dell'agente.  
   
         > [!NOTE]  
-        >  Se al momento della creazione della `false` sottoscrizione <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Distributor%2A>pull è stato specificato il valore per (impostazione predefinita), è necessario specificare anche, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.HostName%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriptionType%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ExchangeType%2A>e facoltativamente <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A>, e <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A> perché i metadati correlati al processo dell'agente per la sottoscrizione non sono disponibili in [MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql).  
+        >  Se al `false` <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> momento della creazione della sottoscrizione pull è stato specificato il valore per (impostazione predefinita), è necessario specificare anche <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Distributor%2A> , <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A> , <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A> , <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.HostName%2A> , <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriptionType%2A> , <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ExchangeType%2A> e facoltativamente <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A> ,, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A> e <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A> perché i metadati correlati al processo dell'agente per la sottoscrizione non sono disponibili in [MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql).  
   
 ###  <a name="examples-rmo"></a><a name="PShellExample"></a> Esempi (RMO)  
  In questo esempio viene illustrata la sincronizzazione di una sottoscrizione pull di una pubblicazione transazionale, con avvio asincrono dell'agente utilizzando il processo dell'agente.  
@@ -232,7 +231,7 @@ ms.locfileid: "63186237"
   
  [!code-vb[HowTo#rmo_vb_SyncMergePullSub_NoJobWebSync](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_syncmergepullsub_nojobwebsync)]  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Sincronizzare i dati](synchronize-data.md)   
  [Create a Pull Subscription](create-a-pull-subscription.md)   
  [Procedure consigliate per la sicurezza della replica](security/replication-security-best-practices.md)  

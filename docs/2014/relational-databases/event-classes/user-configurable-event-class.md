@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 06fe5f07-a0dd-4968-b123-56b124a86020
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 975da6bc447ed3a29f39dd9a8e877a5b556098c6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a166889694e6d4348587ca65f238f9a817f36f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62724830"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051393"
 ---
 # <a name="user-configurable-event-class"></a>User-Configurable - classe di evento
   Utilizzare la categoria di eventi User-Configurable per eseguire il monitoraggio di eventi definiti dall'utente. È possibile creare classi di eventi definite dall'utente per monitorare gli eventi che non possono essere monitorati dalle classi di eventi di sistema di altre categorie. Ad esempio, è possibile creare un evento definito dall'utente per monitorare l'avanzamento dell'esecuzione dell'applicazione in fase di verifica. Durante l'esecuzione dell'applicazione vengono generati eventi in determinati punti che consentono di determinare lo stato di avanzamento dell'esecuzione.  
@@ -49,7 +48,7 @@ ms.locfileid: "62724830"
 |TextData|`ntext`|Valore di testo che dipende dalla classe di evento acquisita nella traccia.|1|Sì|  
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [sp_trace_setevent &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [sp_trace_generateevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql)  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6f19fe7c-a452-4323-b957-7e17d13bf8fd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2b33f4a2d85f2613b238c9bd9b2e59415784b2a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc2bf8c781df287bf499f4a6d10bdd572c4129ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061347"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051342"
 ---
 # <a name="tm-save-tran-starting-event-class"></a>TM: Save Tran Starting - classe di evento
   La classe di evento TM: Save Tran Starting indica che è stata avviata una richiesta SAVE TRANSACTION. La richiesta è stata inviata dal client tramite l'interfaccia di gestione delle transazioni.  
@@ -50,7 +49,7 @@ ms.locfileid: "63061347"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|`bigint`|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../extended-events/extended-events.md)   
  [Salva transazione &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/save-transaction-transact-sql)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
