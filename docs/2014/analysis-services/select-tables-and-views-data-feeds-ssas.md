@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 6c4fafe0-e02e-47d1-b8bc-e70e872690af
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0ee72d4347e85851388b4a4ab1f4d29b33a89134
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: d57966a414ec3b332334a4357c15425e8215df14
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858126"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940832"
 ---
 # <a name="select-tables-and-views-data-feeds-ssas"></a>Selezione tabelle e viste (Feed di dati) (SSAS)
   Questa pagina dell' **Importazione guidata tabella** consente di selezionare le tabelle e le viste da cui importare dati. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  

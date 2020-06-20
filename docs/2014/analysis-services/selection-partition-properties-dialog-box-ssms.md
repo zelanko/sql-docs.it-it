@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 29a7b556-2484-4f66-b74c-1c061b3ce25c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7cfc9890bda35f1574c83b339495b996782b79b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9884f29124984e605f5a72b9b712b0f076eda7d3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069218"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940772"
 ---
 # <a name="selection-partition-properties-dialog-box-ssms"></a>Selezione (finestra di dialogo Proprietà partizione) (SSMS)
   Utilizzare la pagina **Selezione** della finestra di dialogo **Proprietà partizione** in SQL Server Management Studio per selezionare una partizione in un gruppo di misure di cui visualizzare o modificare le proprietà nel riquadro **Generale**, **Memorizzazione attiva nella cache**o **Configurazione errori** .  
@@ -36,7 +35,7 @@ ms.locfileid: "66069218"
 |**origine**|Consente di visualizzare la tabella o la query utilizzata per reperire i dati di origine per la partizione.|  
 |**Aggregazioni**|Consente di visualizzare una stringa che descrive la progettazione delle aggregazioni utilizzata dalla partizione.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Finestra di dialogo Proprietà partizione &#40;SSMS&#41;](partition-properties-dialog-box-ssms.md)   
  [Finestra di dialogo Proprietà generali &#40;partizione&#41; &#40;SSMS&#41;](general-partition-properties-dialog-box-ssms.md)   
  [Caching attivo &#40;finestra di dialogo Proprietà partizione&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md)   

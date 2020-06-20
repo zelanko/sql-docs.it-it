@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 40aef457-d69f-4905-a2d3-924c37bd3d97
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8a236805ac047b351aa49c2486b8acac84818017
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 31fa9942ccfe25c5c56cc0edbce98f6946afad98
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069074"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940688"
 ---
 # <a name="sequence-clustering-cluster-transition-tab-mining-model-viewer"></a>Scheda Transizioni di stato in Sequence Clustering (Visualizzatore modello di data mining)
   La scheda **Transizioni di stato** in **Visualizzatore Microsoft Sequence Clustering** consente di esaminare le transizioni tra le coppie attributo-valore o gli stati nel cluster selezionato.  
@@ -59,7 +58,7 @@ ms.locfileid: "66069074"
  **Collegamenti**  
  Utilizzare il dispositivo di scorrimento per controllare il numero di stati e transizioni visualizzati nel grafico. Abbassando il dispositivo di scorrimento vengono mostrati solo gli stati e le transizioni con la probabilità più elevata.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  

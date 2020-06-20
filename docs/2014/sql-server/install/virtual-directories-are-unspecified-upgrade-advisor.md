@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7d32b560-49d6-4558-b5d6-9127067f82d6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c9ee7f745fc683a9ed93f2ca09ac94e1bf580f71
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 79ab9c0d18f20bcfd6f549918cc1501a1d8e1e49
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952383"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065106"
 ---
 # <a name="virtual-directories-are-unspecified-upgrade-advisor"></a>Non sono state specificate directory virtuali (Upgrade Advisor)
   Non sono state rilevate impostazioni di directory virtuali per il servizio Web ReportServer o Gestione report. Dopo che l'aggiornamento è stato completato, è necessario configurare le prenotazioni URL per il server di report tramite Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

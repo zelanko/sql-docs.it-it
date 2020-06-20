@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9ba2f9688adb5579616693470be151d757818117
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 167cec89a772084cbd171be14001dded42e059d7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72796634"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996814"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>Gestione di servizi e di impostazioni di rete tramite il provider WMI
   Il provider WMI è un'interfaccia pubblicata utilizzata da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Management Console (MMC) per gestire i servizi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e i protocolli di rete. In SMO l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> rappresenta il provider WMI.  
@@ -30,7 +29,7 @@ ms.locfileid: "72796634"
 ## <a name="example"></a>Esempio  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
   
- Per i programmi che utilizzano [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] il provider WMI, è necessario includere `Imports` l'istruzione per qualificare lo spazio dei nomi WMI. Inserire l'istruzione dopo le altre istruzioni `Imports`, ma prima di qualsiasi dichiarazione nell'applicazione, ad esempio:  
+ Per i programmi che utilizzano il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider WMI, è necessario includere l' `Imports` istruzione per qualificare lo spazio dei nomi WMI. Inserire l'istruzione dopo le altre istruzioni `Imports`, ma prima di qualsiasi dichiarazione nell'applicazione, ad esempio:  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   

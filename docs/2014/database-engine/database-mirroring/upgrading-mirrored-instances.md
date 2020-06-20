@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 857e18b1b956d3d8c9d2fc4c5692dbf022bf85fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a343e6b9e93aa1910c82f436f3a50daf00d57bc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754280"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933881"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>Riduzione al minimo del tempo di inattività per i database con mirroring quando si aggiornano le istanze del server
-  Quando si aggiornano istanze [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]del server a, è possibile ridurre i tempi di inattività per ogni database con mirroring a un singolo failover manuale eseguendo un aggiornamento sequenziale, noto come *aggiornamento in sequenza*. L'aggiornamento in sequenza è un processo in più fasi che, nella forma più semplice, implica l'aggiornamento dell'istanza del server che attualmente funge da server mirror in una sessione di mirroring, seguito dal failover manuale del database con mirroring, dall'aggiornamento del primo server principale e dalla ripresa del mirroring. Nella pratica, il processo esatto dipende dalla modalità operativa e dal numero/layout della sessione di mirroring in esecuzione nelle istanze del server da aggiornare.  
+  Quando si aggiornano istanze [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] del server a, è possibile ridurre i tempi di inattività per ogni database con mirroring a un singolo failover manuale eseguendo un aggiornamento sequenziale, noto come *aggiornamento in sequenza*. L'aggiornamento in sequenza è un processo in più fasi che, nella forma più semplice, implica l'aggiornamento dell'istanza del server che attualmente funge da server mirror in una sessione di mirroring, seguito dal failover manuale del database con mirroring, dall'aggiornamento del primo server principale e dalla ripresa del mirroring. Nella pratica, il processo esatto dipende dalla modalità operativa e dal numero/layout della sessione di mirroring in esecuzione nelle istanze del server da aggiornare.  
   
 > [!NOTE]  
 >  Per informazioni sull'esecuzione di un aggiornamento in sequenza per installare un Service Pack o un hotfix, vedere [installare un Service Pack in un sistema con tempi di inattività minimi per i database con mirroring](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md).  
@@ -140,7 +139,7 @@ ms.locfileid: "62754280"
   
     -   [Aggiungere un server di controllo del mirroring del database tramite l'autenticazione di Windows &#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Mirroring del database ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Visualizzazione dello stato di un database con mirroring &#40;SQL Server Management Studio&#41;](view-the-state-of-a-mirrored-database-sql-server-management-studio.md)   

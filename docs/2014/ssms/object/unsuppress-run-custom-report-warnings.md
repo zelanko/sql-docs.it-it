@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0deed900-c910-4d12-aac0-6ab9e39eb068
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ed653b16fe524f364ba89f13e00715b725080033
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae7f4d08ac613113d715728a5cb78ae37bd6f99b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62824395"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058532"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>Visualizzazione di avvisi relativi all'esecuzione di report personalizzati
   Per i report personalizzati sono disponibili due finestre di dialogo di avviso. In questo argomento vengono descritte le modalità per consentire la visualizzazione delle caselle in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -28,21 +27,21 @@ ms.locfileid: "62824395"
   
 #### <a name="to-unsuppress-the-main-custom-report-warning-dialog-box"></a>Per consentire la visualizzazione della finestra di dialogo di avviso relativa al report personalizzato principale  
   
-1.  Connetti all' \< *Server*>\\<*unità* \\ \>di*condivisione*>|server\<> \Documents and Settings<UserProfile \Dati Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.XML.  
+1.  Connettersi a \<*Server*> \\ < *Condividi* >| \<*Drive*> \Documents and Settings \\<UserProfile \> \Dati Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml.  
   
-2.  Fare clic con `reports.xml`il pulsante destro del mouse e quindi scegliere **modifica**.  
+2.  Fare clic con il pulsante destro del mouse `reports.xml` e quindi scegliere **modifica**.  
   
-3.  Modificare**\<SuppressWarning>true\</SuppressWarning> \<SuppressWarning>false\</SuppressWarning>**.  
+3.  Modificare** \<SuppressWarning> true \</SuppressWarning> in \<SuppressWarning> false \</SuppressWarning> **.  
   
 4.  Riavviare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 #### <a name="to-unsuppress-the-drill-through-custom-report-warning-dialog-box"></a>Per consentire la visualizzazione della finestra di dialogo di avviso relativa al report personalizzato drill-through  
   
-1.  Connetti all' \< *Server*>\\<*unità* \\ \>di*condivisione*>|server\<> \Documents and Settings<UserProfile \Dati Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.XML.  
+1.  Connettersi a \<*Server*> \\ < *Condividi* >| \<*Drive*> \Documents and Settings \\<UserProfile \> \Dati Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml.  
   
-2.  Fare clic con `reports.xml`il pulsante destro del mouse e scegliere **modifica**.  
+2.  Fare clic con il pulsante destro del mouse `reports.xml` e scegliere **modifica**.  
   
-3.  Modificare ** \<SuppressDrillthroughWarning>true\</SuppressDrillthroughWarning>\<SuppressDrillthroughWarning>false\</SuppressDrillthroughWarning>**.  
+3.  Modificare ** \<SuppressDrillthroughWarning> true \</SuppressDrillthroughWarning> in \<SuppressDrillthroughWarning> false \</SuppressDrillthroughWarning> **.  
   
 4.  Riavviare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

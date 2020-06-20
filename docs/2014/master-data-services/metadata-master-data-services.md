@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: ac1aabe3-d8d4-4d7a-8954-50ee3c185d81
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2bbb98653dbbaad577f9a48d7a778b41d19fbf37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f43034d81af8092a44c25db466fa8fa51b9eaa8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054040"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961541"
 ---
 # <a name="metadata-master-data-services"></a>Metadati (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] i metadati definiti dall'utente sono informazioni utilizzate per descrivere gli oggetti modello. È ad esempio possibile tenere traccia dei proprietari di un particolare modello o entità oppure dei sistemi di origine tramite cui vengono forniti dati a un'entità.  
   
- I metadati definiti dall'utente sono gestiti da un modello denominato **metadati**. Questo modello viene incluso automaticamente durante [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] l'installazione di ed è simile a tutti gli altri modelli MDS, ad eccezione del fatto che non è possibile crearne versioni.  
+ I metadati definiti dall'utente sono gestiti da un modello denominato **metadati**. Questo modello viene incluso automaticamente durante l' [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] installazione di ed è simile a tutti gli altri modelli MDS, ad eccezione del fatto che non è possibile crearne versioni.  
   
  Dopo aver popolato il modello Metadati con metadati definiti dall'utente, è possibile includerlo nelle viste sottoscrizioni, in modo che possa essere utilizzato dai sistemi di sottoscrizione.  
   

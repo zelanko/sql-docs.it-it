@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1c57974bc671802d3ade3263d8650883683c846e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5aea80fec8c166f963ed60962cd49987bc5b460c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827906"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916241"
 ---
 # <a name="create-new-infoobject"></a>Crea nuovo InfoObject
   Usare la finestra di dialogo **Crea nuovo InfoObject** per creare un nuovo InfoObject nel sistema SAP Netweaver BW.  

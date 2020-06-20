@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9700f663-53f2-49b6-b1ef-92c7b752d6a1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b63e508f87b9766507c541a7ed81e42466bbd1e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9713bbf35f3271dd0ae7168dac838d37621ec5c8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827371"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915971"
 ---
 # <a name="dimension-processing-destination-custom-properies"></a>Proprietà personalizzate della destinazione elaborazione dimensione
   La destinazione elaborazione dimensione include sia proprietà personalizzate che le proprietà comuni a tutti i componenti del flusso di dati.  
@@ -25,14 +24,14 @@ ms.locfileid: "62827371"
 |Proprietà|Tipo di dati|Descrizione|  
 |--------------|---------------|-----------------|  
 |ASConnectionString|string|Stringa di connessione a un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o a un progetto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
-|KeyDuplicate|Integer (enumerazione)|Quando UseDefaultConfiguration è `False`, valore che indica come gestire gli errori di chiave duplicata. I valori possibili sono `IgnoreError` (0), `ReportAndContinue` (1) e `ReportAndStop` (2). Il valore predefinito di questa proprietà è `IgnoreError` (0).|  
-|KeyErrorAction|Integer (enumerazione)|Quando UseDefaultConfiguration è `False`, valore che indica come gestire l'errore di chiave. I valori possibili sono `ConvertToUnknown` (0) e `DiscardRecord` (1). Il valore predefinito di questa proprietà è `ConvertToUnknown` (0).|  
-|KeyErrorLimit|Integer|Quando UseDefaultConfiguration è `False`, il limite superiore degli errori di chiave abilitati.|  
-|KeyErrorLimitAction|Integer (enumerazione)|Quando UseDefaultConfiguration è `False`, valore che indica l'azione da eseguire quando `KeyErrorLimit` viene raggiunto. I valori possibili sono `StopLogging` (1) e `StopProcessing` (0). Il valore predefinito di questa proprietà è `StopProcessing` (0).|  
-|KeyErrorLogFile|string|Quando UseDefaultConfiguration è `False`, il percorso e il nome del file di log degli errori.|  
-|KeyNotFound|Integer (enumerazione)|Quando UseDefaultConfiguration è `False`, valore che indica come gestire gli errori di chiave mancanti. I valori possibili sono `IgnoreError` (0), `ReportAndContinue` (1) e `ReportAndStop` (2). Il valore predefinito di questa proprietà è `IgnoreError` (0).|  
-|NullKeyConvertedToUnknown|Integer (enumerazione)|Quando UseDefaultConfiguration è `False`, valore che indica come gestire le chiavi null convertite nel valore sconosciuto. I valori possibili sono `IgnoreError` (0), `ReportAndContinue` (1) e `ReportAndStop` (2). Il valore predefinito di questa proprietà è `IgnoreError` (0).|  
-|NullKeyNotAllowed|Integer (enumerazione)|Quando UseDefaultConfiguration è `False`, valore che indica come gestire i valori null non consentiti. I valori possibili sono `IgnoreError` (0), `ReportAndContinue` (1) e `ReportAndStop` (2). Il valore predefinito di questa proprietà è `IgnoreError` (0).|  
+|KeyDuplicate|Integer (enumerazione)|Quando UseDefaultConfiguration è `False` , valore che indica come gestire gli errori di chiave duplicata. I valori possibili sono `IgnoreError` (0), `ReportAndContinue` (1) e `ReportAndStop` (2). Il valore predefinito di questa proprietà è `IgnoreError` (0).|  
+|KeyErrorAction|Integer (enumerazione)|Quando UseDefaultConfiguration è `False` , valore che indica come gestire l'errore di chiave. I valori possibili sono `ConvertToUnknown` (0) e `DiscardRecord` (1). Il valore predefinito di questa proprietà è `ConvertToUnknown` (0).|  
+|KeyErrorLimit|Integer|Quando UseDefaultConfiguration è `False` , il limite superiore degli errori di chiave abilitati.|  
+|KeyErrorLimitAction|Integer (enumerazione)|Quando UseDefaultConfiguration è `False` , valore che indica l'azione da eseguire quando `KeyErrorLimit` viene raggiunto. I valori possibili sono `StopLogging` (1) e `StopProcessing` (0). Il valore predefinito di questa proprietà è `StopProcessing` (0).|  
+|KeyErrorLogFile|string|Quando UseDefaultConfiguration è `False` , il percorso e il nome del file di log degli errori.|  
+|KeyNotFound|Integer (enumerazione)|Quando UseDefaultConfiguration è `False` , valore che indica come gestire gli errori di chiave mancanti. I valori possibili sono `IgnoreError` (0), `ReportAndContinue` (1) e `ReportAndStop` (2). Il valore predefinito di questa proprietà è `IgnoreError` (0).|  
+|NullKeyConvertedToUnknown|Integer (enumerazione)|Quando UseDefaultConfiguration è `False` , valore che indica come gestire le chiavi null convertite nel valore sconosciuto. I valori possibili sono `IgnoreError` (0), `ReportAndContinue` (1) e `ReportAndStop` (2). Il valore predefinito di questa proprietà è `IgnoreError` (0).|  
+|NullKeyNotAllowed|Integer (enumerazione)|Quando UseDefaultConfiguration è `False` , valore che indica come gestire i valori null non consentiti. I valori possibili sono `IgnoreError` (0), `ReportAndContinue` (1) e `ReportAndStop` (2). Il valore predefinito di questa proprietà è `IgnoreError` (0).|  
 |ProcessType|Integer (enumerazione)|Tipo di elaborazione della dimensione utilizzata dalla trasformazione. I valori possibili sono `ProcessAdd` (1) (incrementale), `ProcessFull` (0) e `ProcessUpdate` (2).|  
 |UseDefaultConfiguration|Boolean|Valore che specifica se la trasformazione utilizza la configurazione degli errori predefinita. Se questa proprietà è `False`, la trasformazione include informazioni sull'elaborazione degli errori.|  
   

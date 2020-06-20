@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c0a704a3-3a31-4c2c-b967-addacda62ef8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a3fe549e5a49dcc7c0c0417199206a6fd34079ac
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 793890018d0d7e57e4102d03a9120feb9803b816
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706501"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050133"
 ---
 # <a name="implementing-identity-in-a-memory-optimized-table"></a>Implementazione di IDENTITY in una tabella con ottimizzazione per la memoria
   IDENTITY(1, 1) è supportato in una tabella ottimizzata per la memoria. Tuttavia, le colonne Identity con la definizione di IDENTITY(x, y) dove x != 1 o y != 1 non sono supportate nelle tabelle ottimizzate per la memoria. La soluzione alternativa per i valori IDENTITY usa l'oggetto sequenza ([numeri di sequenza](../sequence-numbers/sequence-numbers.md)).  

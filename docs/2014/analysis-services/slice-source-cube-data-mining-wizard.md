@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 16485608-d3b9-49ee-8baa-948038cdd7ec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bcb156d5c0a3c1332e748878ddebda1772b80696
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 762248d4c2a268ac36b0dfa3ffeba20123017017
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068602"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940502"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>Sezionamento cubo di origine (Creazione guidata modello di data mining)
   È possibile utilizzare la finestra di dialogo **Sezionamento cubo di origine** per limitare i dati utilizzati per il training del modello. In genere un cubo contiene i dati correlati a molti attributi e dimensioni diversi, ad esempio tutti i negozi, tutte le aree e tutti i prodotti. Poiché non è pratico eseguire il training di un modello su un numero illimitato di combinazioni di attributi, utilizzare questa finestra di dialogo per scegliere un set specifico da utilizzare per il training di un modello.  
@@ -40,7 +39,7 @@ ms.locfileid: "66068602"
  **Per altre informazioni:** [Creazione guidata modello di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md) e [Creare una struttura di data mining relazionale](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opzioni  
- **Dimension**  
+ **Dimensione**  
  Consente di selezionare la dimensione che si desidera sezionare.  
   
  **Gerarchia**  
@@ -56,10 +55,10 @@ ms.locfileid: "66068602"
  **Espressione filtro**  
  Digitare un'espressione da utilizzare come criterio per filtrare il cubo in base alla dimensione selezionata.  
   
- **Parametri**  
+ **Parameters**  
  Questa opzione non è utilizzata per i modelli di data mining.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Completamento della procedura guidata &#40;creazione guidata modello di data mining&#41;](completing-the-wizard-data-mining-wizard.md)   
  [Guida sensibile al contesto della creazione guidata modello di data mining &#40;Analysis Services-&#41;di data mining](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Impostazione utilizzo colonne modello di data mining &#40;creazione guidata modello di data mining&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  

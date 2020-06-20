@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 44b583c062280cb080228d7db3bd24a312a350fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce4e1a0483d02a3d263f8359369ccb448f4bf65f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768537"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968691"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>Aggiunta di supporto per il debug in un'attività personalizzata
   Il motore di runtime di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] consente la sospensione di pacchetti, attività e altri tipi di contenitori durante l'esecuzione tramite l'utilizzo di punti di interruzione. L'utilizzo di punti di interruzione consente di rivedere e correggere gli errori che impediscono la corretta esecuzione dell'applicazione o delle attività. L'architettura dei punti di interruzione consente al client di valutare il valore di runtime degli oggetti nel pacchetto in determinati punti dell'esecuzione mentre l'elaborazione dell'attività è sospesa.  
@@ -342,7 +341,7 @@ End Sub
   
 ![Integration Services icona (piccola)](../../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina relativa a Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Debug del flusso di controllo](../../troubleshooting/debugging-control-flow.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4580b41b9854b749f4ed6f66d2c7bea77647cef1
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: f6c4a3e51745ab0f2c67dcba88f71b79f031d7ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859213"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058588"
 ---
 # <a name="name-not-found-dialog-box"></a>Nome non trovato - finestra di dialogo
   Non è possibile trovare uno o più oggetti specificati nella finestra di dialogo. Selezionare un'opzione per continuare.  
@@ -37,7 +36,7 @@ ms.locfileid: "83859213"
  **Immettere il nome dell'oggetto**  
  Contiene il nome dell'oggetto non trovato. Correggere il nome dell'oggetto o digitare un nuovo nome di oggetto.  
   
- **Rimuovi*** \< nome oggetto>* **dalla selezione**      
+ **Rimuovi** *\<object name>* **da selezione**      
  Selezionare questa opzione per chiudere la finestra di dialogo **Nome non trovato** e rimuovere l'elemento dalla finestra di dialogo **Seleziona oggetti** .  
   
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9ce9ad9c-f671-4760-90b5-e0c8ca051473
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6ddc3521031f34f179cdfef08abf178f21f5f47e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d3b686644995d7604528adf1dc279dfce664b001
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72796719"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996852"
 ---
 # <a name="implementing-full-text-search"></a>Implementazione della ricerca full-text
   La ricerca full-text è disponibile per istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ed è rappresentata in SMO dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A>. L'oggetto <xref:Microsoft.SqlServer.Management.Smo.FullTextService> si trova sotto l'oggetto `Server`. Viene utilizzato per gestire le opzioni di configurazione per il servizio di ricerca full-text di [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. L'oggetto <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection> appartiene all'oggetto <xref:Microsoft.SqlServer.Management.Smo.Database> e si tratta di una raccolta di oggetti <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> che rappresentano cataloghi full-text definiti per il database. È possibile disporre di un solo indice full-text definito per ogni tabella, a differenza degli indici normali. Questo indice è rappresentato da un oggetto <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> nell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Table>.  

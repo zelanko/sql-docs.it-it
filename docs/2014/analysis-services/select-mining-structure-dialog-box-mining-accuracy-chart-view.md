@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce5af79f-a1f8-47f3-acb9-769022285a69
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 833410b6daa15924f0875cee77ad432aa9fac369
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a3420eb19321ff4ccc39c2b4bb615e636315996
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069484"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940942"
 ---
 # <a name="select-mining-structure-dialog-box-mining-accuracy-chart-view"></a>Finestra di dialogo Seleziona struttura di data mining (visualizzazione Grafico accuratezza modello di data mining)
   Utilizzare la finestra di dialogo **Seleziona struttura di data mining** per specificare una struttura di data mining contenente i modelli di data mining di cui si desidera eseguire un confronto o un test di accuratezza.  
@@ -29,7 +28,7 @@ ms.locfileid: "66069484"
   
  Nella finestra di dialogo è contenuto un elenco di visualizzazioni albero per ogni struttura di data mining presente nel database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . È possibile espandere ogni struttura di data mining per esaminare i modelli di data mining che contiene, ma la finestra di dialogo può essere utilizzata solo per selezionare una struttura di data mining.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Progettazione Grafico accuratezza modello di data mining &#40;&#41;di data mining](mining-accuracy-chart-designer-data-mining.md)   
  [Attività e procedure di test e convalida &#40;di data mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [Test e convalida &#40;Data mining&#41;](data-mining/testing-and-validation-data-mining.md)  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 280f4bc3c20fb65be24ace423f69982ad96bfbff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d78707925303d5e19d93b170f257d76fb7d1747d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011106"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004046"
 ---
 # <a name="query-with-full-text-search"></a>Esecuzione della query con ricerca Full-Text
   Per definire ricerche full-text, le query full-text in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzano i predicati full-text (CONTAINS e FREETEXT) e le funzioni full-text (CONTAINSTABLE e FREETEXTTABLE). Tali predicati e funzioni supportano la sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] avanzata che a sua volta supporta vari formati di termini di query. Per scrivere query full-text, è necessario sapere come e quando utilizzare questi predicati e queste funzioni.  
@@ -130,7 +129,7 @@ GO
 ```  
   
 #### <a name="b-using-freetexttable"></a>B. Utilizzo di FREETEXTTABLE  
- Nell'esempio seguente viene estesa una query FREETEXTTABLE in modo che vengano restituite per prime le righe con valore di pertinenza maggiore e che la classificazione di ogni riga venga aggiunta all'elenco di selezione. Per specificare la query, è necessario tenere presente che **ProductDescriptionID** è la colonna chiave univoca `ProductDescription` per la tabella.  
+ Nell'esempio seguente viene estesa una query FREETEXTTABLE in modo che vengano restituite per prime le righe con valore di pertinenza maggiore e che la classificazione di ogni riga venga aggiunta all'elenco di selezione. Per specificare la query, è necessario tenere presente che **ProductDescriptionID** è la colonna chiave univoca per la `ProductDescription` tabella.  
   
 ```  
 USE AdventureWorks2012  
@@ -232,7 +231,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
 ### <a name="xml-data"></a>dati xml  
  Una colonna del tipo di dati `xml` archivia esclusivamente documenti e frammenti XML, inoltre per i documenti viene utilizzato soltanto il filtro XML. Una colonna del tipo non è pertanto necessaria. Nelle colonne `xml` l'indice full-text indicizza il contenuto degli elementi XML, ma ignora il markup XML. Ai valori di attributo viene applicata l'indicizzazione full-text a meno che non siano valori numerici. I tag degli elementi vengono utilizzati come limiti dei token. Sono supportati documenti e frammenti XML o HTML ben formati e contenenti più lingue.  
   
- Per ulteriori informazioni sull'esecuzione di query su `xml` una colonna, vedere [utilizzare la ricerca full-text con colonne XML](../xml/use-full-text-search-with-xml-columns.md).  
+ Per ulteriori informazioni sull'esecuzione di query su una `xml` colonna, vedere [utilizzare la ricerca full-text con colonne XML](../xml/use-full-text-search-with-xml-columns.md).  
   
  
   
@@ -338,7 +337,7 @@ GO
   
  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [CONTIENE &#40;&#41;Transact-SQL](/sql/t-sql/queries/contains-transact-sql)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/containstable-transact-sql)   
  [FREETEXT &#40;Transact-SQL&#41;](/sql/t-sql/queries/freetext-transact-sql)   

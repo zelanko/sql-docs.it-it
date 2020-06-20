@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c94754d-6d62-4357-8ce7-f107ebf90c71
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 750911c19224ff088fee5c27272bf13c14875975
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f2537dcae126252f75cb90aa41a85ea55674d4e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62657265"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011485"
 ---
 # <a name="name-element-for-server-dta"></a>Elemento Name per Server (DTA)
   Contiene il nome del server in cui si trovano i database che si desidera ottimizzare.  

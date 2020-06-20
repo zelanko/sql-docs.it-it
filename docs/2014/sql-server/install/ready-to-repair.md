@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 65cc22ce-53e9-49dc-8f40-cbf0159c9e54
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d1dcc44c8d9892bb6dee31b5cebd4be73037cf0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d6b8d340535ad50c05cdc7753e3d5e1b26751f3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093294"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065231"
 ---
 # <a name="ready-to-repair"></a>Inizio ripristino
   La pagina Inizio ripristino fornisce un riepilogo del processo di ripristino dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -29,7 +28,7 @@ ms.locfileid: "66093294"
   
 -   Per uscire dal programma di installazione, fare clic su **Annulla** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

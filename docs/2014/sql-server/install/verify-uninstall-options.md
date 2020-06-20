@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a5f353fa-1bb4-495c-bf86-77cfa5bc6c78
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1b4140f782e162e317d934c23f7c4601fd90c40a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6e89d4fefd66d6f3565b17b5dcb44b14ad13400
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091144"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065096"
 ---
 # <a name="verify-uninstall-options"></a>Verifica delle opzioni di disinstallazione
   Verificare la selezione, quindi scegliere **Avanti** per continuare.  

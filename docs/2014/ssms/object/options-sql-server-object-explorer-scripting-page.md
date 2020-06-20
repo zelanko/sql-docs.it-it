@@ -12,27 +12,26 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 81e4bafbd596894a8cecbeb707a5d8be698c1f3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9966db2e5b08cd16976e2c16434cec0adca8445f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63031935"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058558"
 ---
 # <a name="options-sql-server-object-explorer-scripting-page"></a>Opzioni (Esplora oggetti di SQL Server-pagina di scripting)
   Usare questa pagina per impostare le opzioni di scripting valide per i comandi seguenti dei menu di scelta rapida degli oggetti in **Esplora oggetti**:  
   
 -   Comandi**Modifica** per tabelle e viste utente.  
   
--   **Script \<oggetto> come** comandi per gli oggetti creati dall'utente.  
+-   Comandi **Crea script\<object> per** per oggetti creati dall'utente.  
   
 -   Comandi**Modifica** per oggetti creati dall'utente.  
   
 -   Questa pagina consente inoltre di impostare i valori predefiniti per le opzioni di creazione di script per **Generazione guidata script di SQL Server**.  
   
 ## <a name="remarks"></a>Osservazioni  
- I comandi **modifica** e **modifica** possono produrre risultati diversi dall' **oggetto \<script> come** comando per la stessa impostazione dell'opzione. I comandi **Modifica** e **Cambia** sono infatti stati creati per modificare oggetti nel database corrente durante una sessione dell'editor di query. L' **oggetto \<script> come** comando è progettato per generare uno script in modo che possa essere usato successivamente per creare oggetti.  
+ I comandi **Modifica** e **Cambia** potrebbero produrre risultati diversi rispetto al comando **Crea script \<object> per** con la stessa impostazione dell'opzione. I comandi **Modifica** e **Cambia** sono infatti stati creati per modificare oggetti nel database corrente durante una sessione dell'editor di query. Il comando **Crea script\<object> per** è invece stato creato per generare uno script affinché possa essere usato in seguito per la creazione di oggetti.  
   
 ## <a name="options"></a>Opzioni  
  Specificare le opzioni di scripting selezionando le impostazioni desiderate tra quelle disponibili nell'elenco visualizzato a destra di ciascuna opzione.  
@@ -56,7 +55,7 @@ ms.locfileid: "63031935"
  **Script per cataloghi full-text**  
  Consente di includere uno script per cataloghi full-text. Il valore predefinito è False. Per altre informazioni, vedere [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql).  
   
- **Script per \<USE database>**  
+ **UTILIZZO script\<database>**  
  Aggiunge l'istruzione USE DATABASE allo script per creare oggetti di database nel contesto del database di **Esplora oggetti** corrente. Se si prevede di utilizzare lo script in un database diverso, selezionare False per omettere tale istruzione. Il valore predefinito è true. Per altre informazioni, vedere [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
   
 ### <a name="object-scripting-options"></a>Opzioni di scripting per gli oggetti  
@@ -138,7 +137,7 @@ ms.locfileid: "63031935"
  **ScriptDriIncludeSystemNames**  
  Consente di includere nomi di vincoli generati dal sistema per applicare l'integrità referenziale dichiarativa. Il valore predefinito è False. Per ulteriori informazioni, vedere [REFERENTIAL_CONSTRAINTS &#40;&#41;Transact-SQL ](/sql/relational-databases/system-information-schema-views/referential-constraints-transact-sql).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Generazione di script &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/generate-scripts-sql-server-management-studio.md)  
   
   

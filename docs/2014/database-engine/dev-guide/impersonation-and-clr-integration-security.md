@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1495a7af-2248-4cee-afdb-9269fb3a7774
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2c32691a065c2bfc43868d6b4105fbf1395a63ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2313733c5a24f28c44571dd230ddc58fc9a1264
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781129"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933552"
 ---
 # <a name="impersonation-and-clr-integration-security"></a>Rappresentazione e sicurezza per l'integrazione con CLR
   Quando il codice gestito accede alle risorse esterne, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non rappresenta automaticamente il contesto di esecuzione corrente nel quale viene eseguita la routine. Il contesto di esecuzione corrente può essere rappresentato in modo esplicito dal codice degli assembly `EXTERNAL_ACCESS` e `UNSAFE`.  
@@ -41,7 +40,7 @@ ms.locfileid: "62781129"
   
  Gli assembly `EXTERNAL_ACCESS` e `UNSAFE` accedono alle risorse del sistema operativo con l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a meno che non rappresentino volontariamente il contesto di sicurezza corrente come descritto in precedenza. Per questo motivo, gli autori degli assembly `EXTERNAL_ACCESS` richiedono un livello di attendibilità superiore rispetto a quello degli assembly `SAFE`, specificato dall'autorizzazione a livello di accesso `EXTERNAL ACCESS`. L'autorizzazione `EXTERNAL ACCESS` dovrebbe, pertanto, essere concessa solo agli accessi attendibili per l'esecuzione del codice nell'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Sicurezza dell'integrazione con CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)   
  [Rappresentazione e credenziali per le connessioni](../../relational-databases/clr-integration/data-access/impersonation-and-credentials-for-connections.md)  
   
