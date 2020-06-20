@@ -9,24 +9,23 @@ ms.topic: conceptual
 ms.assetid: 500ee6b3-2154-45d2-a3cf-8760166d9413
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 524400e9c9420fb54447220215d4660874ec6d69
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66898aa056800c0a7573b5afa73762785706ff7a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091085"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044623"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>Avviso relativo all'utilizzo sul lato client di GEOMETRY, GEOGRAPHY e HIERARCHYID
-  L'assembly **Microsoft. SqlServer. Types. dll**, che contiene i tipi di dati spaziali, è stato aggiornato dalla versione 10,0 alla versione 11,0. È possibile che le applicazioni personalizzate che fanno riferimento a questo assembly abbiano esito negativo quando sussistono determinate condizioni.  
+  L'assembly **Microsoft.SqlServer.Types.dll**, che contiene i tipi di dati spaziali, è stato aggiornato dalla versione 10,0 alla versione 11,0. È possibile che le applicazioni personalizzate che fanno riferimento a questo assembly abbiano esito negativo quando sussistono determinate condizioni.  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Descrizione  
- L'assembly **Microsoft. SqlServer. Types. dll**, che contiene i tipi di dati spaziali, è stato aggiornato dalla versione 10,0 alla versione 11,0. È possibile che le applicazioni personalizzate che fanno riferimento a questo assembly abbiano esito negativo quando sussistono le condizioni seguenti.  
+ L'assembly **Microsoft.SqlServer.Types.dll**, che contiene i tipi di dati spaziali, è stato aggiornato dalla versione 10,0 alla versione 11,0. È possibile che le applicazioni personalizzate che fanno riferimento a questo assembly abbiano esito negativo quando sussistono le condizioni seguenti.  
   
--   Quando si sposta un'applicazione personalizzata da un computer in cui [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] è stato installato in un computer in cui [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] è installato solo, l'applicazione avrà esito negativo perché la versione 10,0 dell'assembly **SqlTypes** a cui viene fatto riferimento non è presente. È possibile che venga visualizzato questo messaggio di errore: `"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
+-   Quando si sposta un'applicazione personalizzata da un computer in cui è [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] stato installato in un computer in cui [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] è installato solo, l'applicazione avrà esito negativo perché la versione 10,0 dell'assembly **SqlTypes** a cui viene fatto riferimento non è presente. È possibile che venga visualizzato questo messaggio di errore: `"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
   
 -   Quando si fa riferimento all'assembly **SqlTypes** versione 11,0 e viene installata anche la versione 10,0, è possibile che venga visualizzato questo messaggio di errore:`"System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'."`  
   
@@ -82,7 +81,7 @@ ms.locfileid: "66091085"
   
 -   È possibile risolvere questo problema nella stringa di connessione specificando il valore "SQL Server 2012" per l'attributo "Type System Version" per forzare il caricamento della versione 11.0 dell'assembly da parte di SqlClient. Questo attributo della stringa di connessione è disponibile unicamente in .NET 4.5 e versioni successive.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Problemi di aggiornamento motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [SQL Server 2014 preparazione aggiornamento &#91;nuova&#93;](sql-server-2014-upgrade-advisor.md
 )  

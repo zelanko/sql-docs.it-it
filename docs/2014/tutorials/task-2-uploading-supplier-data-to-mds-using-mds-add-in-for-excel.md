@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 598deb57-e0cc-4e0a-aeb1-94432c094c67
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4e3cd4cecd88bcad83c6e9f2a59ecd5f225fb02a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5e825829eb70b695a619df8caaa59788d0ad413f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487695"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064771"
 ---
 # <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>Attività 2: Caricamento dei dati fornitore in MDS tramite il componente aggiuntivo MDS per Excel
   In questa attività verranno pubblicati i dati puliti e fornitore in **MDS** utilizzando il **componente aggiuntivo MDS per Excel**. Si crea un'entità denominata **Supplier** nel modello **Suppliers** creato nella lezione precedente. All'entità sarà associato un attributo per ogni colonna nel file di Excel. Gli attributi di codice e nome dell'entità Supplier corrispondono alle colonne **SupplierID** e **Supplier Name** in Excel.  
   
-1.  Aprire **cleand and Matched Suppliers. xls** in **Excel**.  
+1.  Aprire **Suppliers.xlspuliti e corrispondenti** in **Excel**.  
   
 2.  Premere **CTRL + a** per selezionare tutti i dati. È **importante** selezionare tutti i dati nel foglio di calcolo.  
   
@@ -34,9 +33,9 @@ ms.locfileid: "81487695"
   
     1.  Selezionare **Crea una nuova connessione**e fare clic sul pulsante **nuovo** .  
   
-    2.  Nella finestra di dialogo **Aggiungi nuova connessione** digitare **Server MDS locale** per **Descrizione** e **http:\//localhost/MDS** per **Indirizzo server MDS**, quindi fare clic su **OK** per chiudere la finestra di dialogo.  
+    2.  Nella finestra di dialogo **Aggiungi nuova connessione** digitare **Server MDS locale** per **Descrizione** e **http: \/ /localhost/MDS** per **Indirizzo server MDS**, quindi fare clic su **OK** per chiudere la finestra di dialogo.  
   
-6.  Nella finestra di dialogo **Gestisci connessioni** selezionare **Server MDS locale** (`http://localhost/MDS`), fare clic su **test** per testare la connessione. Fare clic su **OK** nella finestra di messaggio.  
+6.  Nella finestra di dialogo **Gestisci connessioni** selezionare **Server MDS locale** ( `http://localhost/MDS` ), fare clic su **test** per testare la connessione. Fare clic su **OK** nella finestra di messaggio.  
   
 7.  Fare clic su **Connetti** per connettersi al server MDS.  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: affb6da7-c9ba-401c-ab7f-0d2f4ab93e2d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2ea195f2316e888882fdfad693a39b1b29bb031d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95c5c33536ce33824cc80bb452dafcf17719fbac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095575"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012628"
 ---
 # <a name="deprecated-dbcc-commands-have-now-been-removed"></a>I comandi DBCC deprecati sono stati rimossi
   Nella tabella seguente sono elencati i comandi DBCC annunciati come deprecati in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Questi comandi sono rimossi da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. È necessario aggiornare le applicazioni e gli script per rimuovere i riferimenti a questi comandi deprecati.  
@@ -29,7 +28,7 @@ ms.locfileid: "66095575"
 |DBCC TEXTALLOC|  
 |DBCC TEXTALL|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Problemi di aggiornamento motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [SQL Server 2014 preparazione aggiornamento &#91;nuova&#93;](sql-server-2014-upgrade-advisor.md)  
   

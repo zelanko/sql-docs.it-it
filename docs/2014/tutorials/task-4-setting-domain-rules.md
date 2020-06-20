@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 3a7162ba-cf2f-481f-830d-bb6a02823827
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: dd59bf315e90bd52ba1388d27c533ab4a3136d3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0104fe6b64ff2ecc1a37bb1da9691e34d7913f21
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72381736"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061085"
 ---
 # <a name="task-4-setting-domain-rules"></a>Attività 4: Impostazione delle regole di dominio
-  In questa attività viene creata una regola per il dominio di **posta elettronica di contatto** per verificare se l'indirizzo di posta elettronica termina con ** \@Adventure-Works.com**. Per ulteriori informazioni sulla pagina, vedere l'argomento [creazione di una regola di dominio](https://msdn.microsoft.com/library/hh510397.aspx) .  
+  In questa attività viene creata una regola per il dominio di **posta elettronica di contatto** per verificare se l'indirizzo di posta elettronica termina con ** \@ Adventure-Works.com**. Per ulteriori informazioni sulla pagina, vedere l'argomento [creazione di una regola di dominio](https://msdn.microsoft.com/library/hh510397.aspx) .  
   
 1.  Fare clic su **Contact email** nell' **elenco di domini**.  
   
@@ -32,7 +31,7 @@ ms.locfileid: "72381736"
   
 5.  Nel riquadro **Compila una regola** fare clic sulla **freccia in giù**e selezionare il **valore termina con**.  
   
-6.  Digitare ** \@Adventure-Works.com** nella casella di testo e premere **Tab**. È possibile aggiungere altre condizioni facendo clic sul pulsante **Aggiungi una nuova condizione al pulsante della** barra degli strumenti della clausola selezionata nel riquadro **Compila una regola** .  
+6.  Digitare ** \@ Adventure-Works.com** nella casella di testo e premere **Tab**. È possibile aggiungere altre condizioni facendo clic sul pulsante **Aggiungi una nuova condizione al pulsante della** barra degli strumenti della clausola selezionata nel riquadro **Compila una regola** .  
   
      ![Regola di convalida posta elettronica](../../2014/tutorials/media/et-settingdomainrules-02.jpg "Regola di convalida posta elettronica")  
   
@@ -44,9 +43,9 @@ ms.locfileid: "72381736"
   
      ![Finestra di dialogo Esegui la regola di dominio](../../2014/tutorials/media/et-settingdomainrules-04.jpg "Finestra di dialogo Esegui la regola di dominio")  
   
-9. Digitare **frank7\@Adventure-Works.com** (un valore valido) nella colonna **Contact email** .  
+9. Digitare **frank7 \@ Adventure-Works.com** (un valore valido) nella colonna **Contact email** .  
   
-10. Ripetere i due passaggi precedenti per **aggiungere\@joe2 adventure-work.com** (un valore non valido senza ' s').  
+10. Ripetere i due passaggi precedenti per aggiungere **joe2 \@ Adventure-Work.com** (un valore non valido senza ' s').  
   
 11. Fare clic sull'ultimo pulsante (**testa la regola di dominio su tutti i termini**) sulla barra degli strumenti per testare i dati di input rispetto alla regola.  
   

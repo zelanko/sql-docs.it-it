@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1ee4fd97-defc-4a63-adfe-5f2df548e62a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d25a77fd9a3fce701f65eca580647b193a6c0276
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48227317d06df138010b6d265b299dc803004547
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054411"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972421"
 ---
 # <a name="wmi-data-reader-task-editor-general-page"></a>Editor attività Lettore di dati WMI (pagina Generale)
   Utilizzare la pagina **Generale** della finestra di dialogo **Editor attività Lettore di dati WMI** per assegnare un nome e una descrizione all'attività Lettore di dati WMI.  
@@ -36,7 +35,7 @@ ms.locfileid: "66054411"
  **Descrizione**  
  Consente di digitare una descrizione dell'attività Lettore di dati WMI.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività lettore di dati WMI &#40;pagina Opzioni WMI&#41;](../../2014/integration-services/wmi-data-reader-task-editor-wmi-options-page.md)   
  [Pagina espressioni](expressions/expressions-page.md)   

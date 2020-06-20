@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f4d18ef352c3e5ab6342e573d16bc3deaed5db72
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5abd2e60f4f9bb5290b47f95349782f8b26ad8bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211998"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043199"
 ---
 # <a name="create-a-resource-pool"></a>Creare un pool di risorse
   È possibile creare un pool di risorse utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -70,16 +69,16 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Resource Governor](resource-governor.md)   
- [Abilita Resource Governor](enable-resource-governor.md)   
- [Pool di risorse Resource Governor](resource-governor-resource-pool.md)   
+ [Abilitare Resource Governor](enable-resource-governor.md)   
+ [Pool di risorse di Resource Governor](resource-governor-resource-pool.md)   
  [Modificare le impostazioni del pool di risorse](change-resource-pool-settings.md)   
  [Eliminare un pool di risorse](delete-a-resource-pool.md)   
- [Configurare Resource Governor usando un modello](configure-resource-governor-using-a-template.md)   
- [Gruppo del carico di lavoro Resource Governor](resource-governor-workload-group.md)   
+ [Configurare Resource Governor utilizzando un modello](configure-resource-governor-using-a-template.md)   
+ [Gruppo di carico di lavoro di Resource Governor](resource-governor-workload-group.md)   
  [Funzione di classificazione Resource Governor](resource-governor-classifier-function.md)   
- [CREARE un POOL di risorse &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-resource-pool-transact-sql)   
+ [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   
   

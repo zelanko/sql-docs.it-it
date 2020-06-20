@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: b628548b-982b-4e45-abf4-c8e83e3ab1c2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3bbd3ac1bf97530d64760d1434b9e7e8f6a81d34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40c16c0afd90bd7042f387fd40f48dbb0237027e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482807"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961011"
 ---
 # <a name="loading-data-mds-add-in-for-excel"></a>Caricamento dei dati (componente aggiuntivo MDS per Excel)
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]In è necessario caricare i dati dal repository MDS in un foglio di lavoro di Excel attivo prima di poterlo [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]utilizzare. Una volta completato l'utilizzo dei dati, pubblicarlo sul repository MDS in modo che altri utenti possano condividerlo.  
+  In è [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] necessario caricare i dati dal repository MDS in un foglio di lavoro di Excel attivo prima di poterlo utilizzare. Una volta completato l'utilizzo dei dati, pubblicarlo sul repository MDS in modo che altri utenti possano condividerlo.  
   
  I dati che è possibile caricare sono limitati ai dati per i quali si dispone dell'autorizzazione di accesso. L'autorizzazione di accesso ai dati viene impostata nell'applicazione Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] o impostata a livello di programmazione.  
   

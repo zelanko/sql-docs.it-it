@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 939f0d85233f5efe7ddc010169fd0922000083f7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3ee4757f1353278447ee55e97c8d4ba23aa2d649
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702266"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046500"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Raccolte di XML Schema (SQL Server)
   Come descritto nell'argomento [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), SQL Server fornisce l'archiviazione nativa dei dati XML tramite il `xml` tipo di dati. Facoltativamente, è possibile associare schemi XSD a una variabile o a una colonna di `xml` tipo tramite una raccolta di XML Schema. Una raccolta di XML Schema archivia gli elementi XML Schema importati e può essere quindi utilizzata per eseguire le operazioni seguenti:  
@@ -119,7 +118,7 @@ ms.locfileid: "82702266"
   
 -   **Customer** è un componente ELEMENT.  
   
- Quando si importa uno schema nel database, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non archivia direttamente lo schema, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivia invece i singoli componenti. Ciò significa che il tag \<Schema> non viene archiviato, ma vengono mantenuti i componenti definiti al suo interno. Non vengono mantenuti tutti gli elementi dello schema. Se il tag \<Schema> contiene attributi che specificano il comportamento predefinito dei relativi componenti, tali attributi vengono spostati nei componenti dello schema durante il processo di importazione, come illustrato nella tabella seguente.  
+ Quando si importa uno schema nel database, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non archivia direttamente lo schema, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivia invece i singoli componenti. Ovvero, il \<Schema> tag non viene archiviato, vengono conservati solo i componenti definiti al suo interno. Non vengono mantenuti tutti gli elementi dello schema. Se il \<Schema> tag contiene attributi che specificano il comportamento predefinito dei relativi componenti, tali attributi vengono spostati nei componenti dello schema durante il processo di importazione, come illustrato nella tabella seguente.  
   
 |Nome attributo|Comportamento|  
 |--------------------|--------------|  

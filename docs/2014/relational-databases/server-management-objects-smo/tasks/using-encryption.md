@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 233f5bc9decf5e8246f2aba6836ec5ecb650283b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea79d34a5c0e8f8d51ce38db799f88c8aa981dd0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72781852"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003583"
 ---
 # <a name="using-encryption"></a>Uso della crittografia
   In SMO la chiave master del servizio è rappresentata dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey>. A questo oggetto fa riferimento la proprietà <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Server>. La chiave può essere rigenerata tramite il metodo <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A>.  

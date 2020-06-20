@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: da60ceee93802b14b7d09392740a1f6b471e4ab1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f595b9f0e0a6d7bceffc5cb283c60b6f40e025b3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150600"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047815"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>Definizione delle funzionalità di parametrizzazione delle query tramite guide di piano
   Quando l'opzione di database PARAMETERIZATION è impostata su SIMPLE, Query Optimizer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può scegliere di parametrizzare le query, ovvero di sostituire con parametri i valori letterali contenuti in una query. Tale processo viene chiamato parametrizzazione semplice. Quando è attiva una parametrizzazione di tipo SIMPLE, non è possibile distinguere le query con parametri da quelle senza parametri. È tuttavia possibile specificare che devono essere parametrizzate tutte le query di un database impostando l'opzione di database PARAMETERIZATION su FORCED. Tale processo viene chiamato parametrizzazione forzata.  
@@ -53,7 +52,7 @@ GROUP BY pi.ProductID, pi.Quantity HAVING SUM(pi.Quantity) > 50;
 2.  Creare la guida di piano nel formato con parametri della query, specificando l'hint per la query PARAMETERIZATION FORCED.  
   
     > [!IMPORTANT]  
-    >  Nell'ambito della parametrizzazione di una query, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegna un tipo di dati ai parametri che sostituiscono i valori letterali, in base al valore e alle dimensioni del valore letterale specifico. Lo stesso processo si verifica nel valore dei valori letterali costanti passati al parametro **@stmt** di output di **sp_get_query_template**. Poiché il tipo di dati specificato nell' **@params** argomento di **sp_create_plan_guide** deve corrispondere a quello della query in quanto è parametrizzato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]da, potrebbe essere necessario creare più guide di piano per coprire l'intervallo completo di possibili valori di parametro per la query.  
+    >  Nell'ambito della parametrizzazione di una query, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegna un tipo di dati ai parametri che sostituiscono i valori letterali, in base al valore e alle dimensioni del valore letterale specifico. Lo stesso processo si verifica nel valore dei valori letterali costanti passati al **@stmt** parametro di output di **sp_get_query_template**. Poiché il tipo di dati specificato nell' **@params** argomento di **sp_create_plan_guide** deve corrispondere a quello della query in quanto è parametrizzato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , potrebbe essere necessario creare più guide di piano per coprire l'intervallo completo di possibili valori di parametro per la query.  
   
  Lo script seguente può essere utilizzato sia per ottenere la query con parametri che per creare in seguito una guida di piano basata su tale query.  
   

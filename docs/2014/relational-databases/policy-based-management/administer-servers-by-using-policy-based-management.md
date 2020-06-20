@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cb9d48156ecd1ca98dc36c10c2680883160582c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0f415ffbc10b93cee2037da78daef3b7ee5aba9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157095"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85069032"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Amministrazione di server tramite la gestione basata su criteri
   La gestione basata su criteri è un sistema per la gestione di una o più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando gli amministratori dei criteri di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzano la gestione basata su criteri, utilizzano [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per creare criteri per la gestione di entità nel server, quali l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], database o altri oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -131,7 +130,7 @@ ms.locfileid: "63157095"
 |È disponibile un set di file di criteri che è possibile importare per le procedure consigliate e viene descritto come valutare i criteri rispetto a un set di destinazione con istanze, oggetti di istanza, database e oggetti di database.|[Monitorare e applicare le procedure consigliate tramite la gestione basata su criteri](monitor-and-enforce-best-practices-by-using-policy-based-management.md)|  
 |Sono inclusi gli argomenti della Guida F1 relativi al nodo **Gestione criteri** di Esplora oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Nodo Gestione criteri &#40;Esplora oggetti&#41;](../../ssms/object/object-explorer.md)|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Viste di Gestione basata su criteri &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/policy-based-management-views-transact-sql)  
   
   

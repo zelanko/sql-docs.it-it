@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: de28a4353c5d690e30cd2cefc20f50e4911c6ff1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb07987bfdca341a01a523c13db3e346ab5085f2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62655676"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016565"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>Impostazione della modalità di propagazione delle modifiche per gli articoli transazionali
   La replica transazionale consente di specificare la modalità di propagazione delle modifiche dei dati dal server di pubblicazione ai Sottoscrittori. Per ogni tabella pubblicata è possibile specificare una delle quattro modalità con cui ogni operazione (INSERT, UPDATE o DELETE) dovrebbe propagarsi al Sottoscrittore:  
@@ -37,13 +36,13 @@ ms.locfileid: "62655676"
 ## <a name="default-and-custom-stored-procedures"></a>Stored procedure predefinite e personalizzate  
  Le tre procedure che la replica crea per impostazione predefinita per ogni articolo di tabella sono:  
   
--   **sp_MSins_\<** *tablename* **>**, per la gestione degli inserimenti.  
+-   **sp_MSins_ \<** *tablename* **> **, che gestisce gli inserimenti.  
   
--   **sp_MSupd_\<** *tablename* **>**, per la gestione degli aggiornamenti.  
+-   **sp_MSupd_ \<** *tablename* **> **, che gestisce gli aggiornamenti.  
   
--   **sp_MSdel_\<** *tablename* **>**, per la gestione delle eliminazioni.  
+-   **sp_MSdel_ \<** *tablename* **> **, che gestisce le eliminazioni.  
   
- Il ** \< ***tablename*** > ** nome di tabella utilizzato nella procedura dipende dalla modalità di aggiunta dell'articolo alla pubblicazione e dal fatto che il database di sottoscrizione contenga una tabella con lo stesso nome con un proprietario diverso.  
+ Il **\<***tablename***>** utilizzato nella procedura dipende dalla modalità di aggiunta dell'articolo alla pubblicazione e dal fatto che il database di sottoscrizione contenga una tabella con lo stesso nome con un proprietario diverso.  
   
  Ognuna di queste procedure può essere sostituita da una procedura personalizzata che viene specificata durante l'aggiunta di un articolo a una pubblicazione. Le procedure personalizzate vengono utilizzate se un'applicazione richiede una logica personalizzata, ad esempio l'inserimento di dati in una tabella di controllo quando una riga viene aggiornata in un Sottoscrittore. Per ulteriori informazioni sulla definizione di stored procedure personalizzate, vedere l'elenco delle procedure riportato sopra.  
   
@@ -213,7 +212,7 @@ end
 go  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Article Options for Transactional Replication](article-options-for-transactional-replication.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 32fbc1c1-da83-4684-9479-31fc3e2df98c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b62fb5e33311f1011911c40fc858723b218bac55
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6414b887ee88ddc0281ee86fd3236f026b8a3f28
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054824"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972641"
 ---
 # <a name="union-all-transformation-editor"></a>Editor trasformazione Unione input multipli
   Utilizzare la finestra di dialogo **Editor trasformazione Unione input multipli** per unire diversi set di righe di input in un unico set di righe di output. Includendo la trasformazione Unione input multipli in un flusso di dati è possibile unire dati tratti da più flussi di dati, creare set di dati complessi nidificando più trasformazioni Unione input multipli e unire nuovamente le righe dopo la correzione degli errori nei dati.  
@@ -36,10 +35,10 @@ ms.locfileid: "66054824"
  **Input unione input multipli n**  
  Consente di selezionare nell'elenco di colonne di input disponibili nel secondo input e negli input aggiuntivi. I metadati delle colonne mappate devono corrispondere.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Unione di dati tramite la trasformazione Unione input multipli](data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)   
  [Trasformazione Unione](data-flow/transformations/merge-transformation.md)   
- [Merge join - trasformazione](data-flow/transformations/merge-join-transformation.md)  
+ [Trasformazione Merge join](data-flow/transformations/merge-join-transformation.md)  
   
   

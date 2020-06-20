@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3e4777cf05e7f3eab62c389ace8b8d8a96cae304
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bcc2ddcb8c8fbf33c51fb82d1b1c2fd8308bd28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481309"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064836"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>Attività 1: Definizione di criteri di corrispondenza
   In questa attività vengono creati criteri di corrispondenza in cui è contenuta una regola. La regola avrà un prerequisito: **Supplier ID**, che indica che gli ID fornitore devono corrispondere prima di utilizzare gli altri domini nella regola. La regola utilizza altri due domini: **Supplier Name** con il valore di **somiglianza** impostato su **70%** e **Contact email** con il valore di **somiglianza** impostato su **30%**.  
@@ -26,7 +25,7 @@ ms.locfileid: "65481309"
   
 2.  Nella pagina **mappa** selezionare file di **Excel** per **origine dati**.  
   
-3.  Fare clic su **Sfoglia**, verificare che il filtro sia impostato su **cartella di lavoro di Excel**e selezionare il file **cleaned Supplier List. xls** che è stato esportato dopo l'esecuzione dell'attività di pulizia.  
+3.  Fare clic su **Sfoglia**, verificare che filtro sia impostato su **cartella di lavoro di Excel**e selezionare **Fornitore pulito List.xls** file esportato dopo l'esecuzione dell'attività di pulizia.  
   
     > [!NOTE]  
     >  Al termine di questa attività, non è possibile esportare i risultati poiché questa attività è mirata principalmente alla definizione di criteri di corrispondenza. Verrà creato un progetto Data Quality per l'attività di corrispondenza che verrà eseguito per rimuovere i duplicati dall'elenco di fornitori utilizzando questi criteri di corrispondenza illustrati nella lezione successiva.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2ddb97c2-1e43-478f-8872-b6efd41b931e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 19ebeac45f7596de42add894922838864f62546e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ef142bf30473222bb39babce35b6bac59a6b848
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054307"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972361"
 ---
 # <a name="xml-source-editor-error-output-page"></a>Editor origine XML (pagina Output degli errori)
   Usare la pagina **Output degli errori** della finestra di dialogo **Editor origine XML** per selezionare le opzioni di gestione degli errori e impostare le proprietà delle colonne di output degli errori.  
@@ -50,7 +49,7 @@ ms.locfileid: "66054307"
  **Applica**  
  Consente di applicare l'opzione di gestione degli errori alle celle selezionate.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor origine XML &#40;pagina Gestione connessione&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
  [Editor origine XML &#40;pagina colonne&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   

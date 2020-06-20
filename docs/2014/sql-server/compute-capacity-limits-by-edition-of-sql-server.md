@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f457c901c4226b9a0ead23de57c2455c619f406e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a32b00ec6ad34095a17816406eb5516207fafa1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62714764"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013019"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Limiti della capacità di calcolo per edizione di SQL Server
   In questo argomento si illustrano i limiti della capacità di calcolo per differenti edizioni di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e le differenze in ambienti fisici e virtualizzati con i processori con l'Hyper-Threading.  
@@ -83,7 +82,7 @@ ms.locfileid: "62714764"
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Edition|Capacità di calcolo massima utilizzata da una sola istanza ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacità di calcolo massima utilizzata da una sola istanza (AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
 |Enterprise Edition: licenze basate su Core<sup>1</sup>|Valore massimo del sistema operativo|Valore massimo del sistema operativo|  
-|Sviluppo|Valore massimo del sistema operativo|Valore massimo del sistema operativo|  
+|Developer|Valore massimo del sistema operativo|Valore massimo del sistema operativo|  
 |Valutazione|Valore massimo del sistema operativo|Valore massimo del sistema operativo|  
 |Business Intelligence|Limitato a meno di 4 socket o 16 core|Valore massimo del sistema operativo|  
 |Standard|Limitato a meno di 4 socket o 16 core|Limitato a meno di 4 socket o 16 core|  
@@ -92,13 +91,13 @@ ms.locfileid: "62714764"
 |Express with Tools|Limitato a meno di 1 socket o 4 core|Limitato a meno di 1 socket o 4 core|  
 |Express with Advanced Services|Limitato a meno di 1 socket o 4 core|Limitato a meno di 1 socket o 4 core|  
   
- <sup>1</sup> la licenza basata su Enterprise Edition con server + licenza CAL (Client Access License) (non disponibile per nuovi contratti) è limitata a un massimo di 20 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] core per istanza. Non sono previsti limiti nel modello di licenza server basato su core.  
+ <sup>1</sup> la licenza basata su Enterprise Edition con server + licenza CAL (Client Access License) (non disponibile per nuovi contratti) è limitata a un massimo di 20 Core per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] istanza. Non sono previsti limiti nel modello di licenza server basato su core.  
   
  In un ambiente virtualizzato, il limite della capacità di calcolo è basato sul numero di processori logici non core, perché l'architettura del processore non è visibile alle applicazioni guest.  Ad esempio, un server con quattro socket popolati con processori quad-core e la capacità di abilitare due Hyper-Thread per core contiene 32 processori logici con l'Hyper-Threading abilitato ma solo 16 processori logici con l'Hyper-Threading disabilitato. È possibile eseguire il mapping di questi processori logici alle macchine virtuali sul server con il carico di calcolo delle macchine virtuali su quel processore logico di cui è stato eseguito il mapping in un thread di esecuzione nel processore fisico nel server host.  
   
  È necessario disabilitare l'Hyper-Threading quando le prestazioni per processore virtuale sono importanti. È possibile abilitare o disabilitare l'Hyper-Threading utilizzando una impostazione BIOS per il processore durante l'impostazione del BIOS, ma è in genere un'operazione con ambito server che avrà un impatto su tutti i carichi di lavoro in esecuzione sul server. In tale situazione potrebbe essere consigliabile dividere i carichi di lavoro che saranno in esecuzione negli ambienti virtualizzati da quelli che beneficeranno del miglioramento delle prestazioni dell'Hyper-Threading in un ambiente fisico del sistema operativo.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Edizioni e componenti di SQL Server 2014](../sql-server/editions-and-components-of-sql-server-2016.md)   
  [Funzionalità supportate dalle edizioni di SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Specifiche di capacità massima per SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md)   

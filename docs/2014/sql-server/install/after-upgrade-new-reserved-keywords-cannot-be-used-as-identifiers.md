@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb242081-54f8-4273-a8ef-52f3751c25ef
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d187fbe95a75091b0cbcf4bf09225c5f60a9af01
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36f7f8cadcba5e114feee4a3c42de6f40070ce72
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096885"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045681"
 ---
 # <a name="after-upgrade-new-reserved-keywords-cannot-be-used-as-identifiers"></a>Dopo l'aggiornamento, le parole chiave riservate non possono essere utilizzate come identificatori.
   È stato rilevato l'utilizzo di parole che sono parole chiave riservate. Una parola chiave riservata non può essere utilizzata come identificatore o nome di oggetto a meno che il nome non sia delimitato.  
@@ -49,7 +48,7 @@ ms.locfileid: "66096885"
   
 -   Mantenere il livello di compatibilità del database 90 o inferiore.  
   
--   Fare riferimento all'oggetto utilizzando identificatori delimitati. L'istruzione `CREATE TABLE [MERGE] ([MERGE] int);` , ad esempio, utilizza le parentesi quadre per delimitare il nome dell'oggetto merge.  
+-   Fare riferimento all'oggetto utilizzando identificatori delimitati. L'istruzione, ad esempio, `CREATE TABLE [MERGE] ([MERGE] int);` utilizza le parentesi quadre per delimitare il nome dell'oggetto merge.  
   
 ## <a name="external-resources"></a>Risorse esterne  
  [Parole chiave riservate &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql)  
