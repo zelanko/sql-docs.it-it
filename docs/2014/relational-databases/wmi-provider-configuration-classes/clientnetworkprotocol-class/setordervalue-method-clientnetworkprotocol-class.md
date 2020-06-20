@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 15f693fd-37f6-41d9-9dab-d2c93db19895
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b06773049204b126a37e21ce8c070f11666f19df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6a1003ab57fd3a75d351ed6f752f15dc51a1f8d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62826649"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061421"
 ---
 # <a name="setordervalue-method-clientnetworkprotocol-class"></a>Metodo SetOrderValue (classe ClientNetworkProtocol)
   Seleziona il protocollo con il valore dell'ordine specificato dall'elenco di protocolli del client.  
@@ -40,7 +39,7 @@ OrderValue
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  Oggetto della [classe ClientNetworkProtocol](clientnetworkprotocol-class.md) che rappresenta il protocollo di rete utilizzato dal client di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>Parametri  
@@ -54,7 +53,7 @@ OrderValue
   
 ## <a name="remarks"></a>Osservazioni  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Proprietà - Protocolli client (scheda Ordine)](https://technet.microsoft.com/library/ms187884.aspx)  
   
   

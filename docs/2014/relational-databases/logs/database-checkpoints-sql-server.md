@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 33f85b2f1cd8b259e46851aab818b258a6d78291
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5776d4a23223637c50ac40098fa44342d5cd94a9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289399"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024831"
 ---
 # <a name="database-checkpoints-sql-server"></a>Checkpoint di database (SQL Server)
   In questo argomento viene fornita una panoramica dei checkpoint del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un *checkpoint* crea un punto valido noto da cui [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] può iniziare ad applicare le modifiche contenute nel log durante il recupero successivo a un arresto anomalo del sistema.  
@@ -44,10 +43,10 @@ ms.locfileid: "79289399"
   
 |Nome|[!INCLUDE[tsql](../../includes/tsql-md.md)] Interfaccia|Descrizione|  
 |----------|----------------------------------|-----------------|  
-|Automatico|EXEC sp_configure **'`recovery interval`','*`seconds`*'**|Emesso automaticamente in background per rispettare il limite di tempo superiore suggerito dall'opzione `recovery interval` di configurazione del server. I checkpoint automatici vengono eseguiti fino al completamento.  I checkpoint automatici sono limitati in base al numero di scritture in sospeso e al fatto che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] rilevi o meno un aumento della latenza di scrittura superiore ai 20 millisecondi.<br /><br /> Per altre informazioni, vedere [Configurare l'opzione di configurazione del server recovery interval](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
-|Indiretto|ALTER DATABASE... Imposta TARGET_RECOVERY_TIME **=** _TARGET_RECOVERY_TIME_ {secondi &#124; minuti}|Emesso in background per rispettare un tempo di recupero di destinazione specificato dall'utente per un determinato database. Il tempo di recupero di destinazione predefinito è 0 che comporta l'utilizzo di un approccio euristico dei checkpoint automatici nel database. Se si utilizza ALTER DATABASE per impostare TARGET_RECOVERY_TIME su >0, viene utilizzato questo valore e non l'intervallo di recupero specificato per l'istanza del server.<br /><br /> Per altre informazioni, vedere [Modificare il tempo di recupero di riferimento di un database &#40;SQL Server&#41;](change-the-target-recovery-time-of-a-database-sql-server.md).|  
+|Automatico|EXEC sp_configure **' `recovery interval` ',' *`seconds`* '**|Emesso automaticamente in background per rispettare il limite di tempo superiore suggerito dall' `recovery interval` opzione di configurazione del server. I checkpoint automatici vengono eseguiti fino al completamento.  I checkpoint automatici sono limitati in base al numero di scritture in sospeso e al fatto che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] rilevi o meno un aumento della latenza di scrittura superiore ai 20 millisecondi.<br /><br /> Per altre informazioni, vedere [Configurare l'opzione di configurazione del server recovery interval](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
+|Indiretto|ALTER DATABASE... IMPOSTA TARGET_RECOVERY_TIME **=** _TARGET_RECOVERY_TIME_ {secondi &#124; minuti}|Emesso in background per rispettare un tempo di recupero di destinazione specificato dall'utente per un determinato database. Il tempo di recupero di destinazione predefinito è 0 che comporta l'utilizzo di un approccio euristico dei checkpoint automatici nel database. Se si utilizza ALTER DATABASE per impostare TARGET_RECOVERY_TIME su >0, viene utilizzato questo valore e non l'intervallo di recupero specificato per l'istanza del server.<br /><br /> Per altre informazioni, vedere [Modificare il tempo di recupero di riferimento di un database &#40;SQL Server&#41;](change-the-target-recovery-time-of-a-database-sql-server.md).|  
 |Manuale|CHECKPOINT [ *checkpoint_duration* ]|Emesso quando si esegue un comando CHECKPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] . Il checkpoint manuale si verifica nel database corrente per la connessione. Per impostazione predefinita, i checkpoint manuali vengono eseguiti fino al completamento. La limitazione funziona come per i checkpoint automatici.  Facoltativamente, il parametro *checkpoint_duration* specifica una quantità di tempo richiesta, in secondi, per il completamento del checkpoint.<br /><br /> Per altre informazioni, vedere [CHECKPOINT &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/checkpoint-transact-sql).|  
-|Interno|Nessuno.|Emesso da varie operazioni del server quali backup e creazione dello snapshot del database per garantire che le immagini del disco corrispondano allo stato corrente del log.|  
+|Interno|No.|Emesso da varie operazioni del server quali backup e creazione dello snapshot del database per garantire che le immagini del disco corrispondano allo stato corrente del log.|  
   
 > [!NOTE]  
 >  L'opzione di impostazione avanzata `-k` di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente a un amministratore del database di limitare il comportamento di I/O del checkpoint in base alla velocità effettiva del sottosistema di I/O per alcuni tipi di checkpoint. L' `-k` opzione di installazione si applica ai checkpoint automatici ed eventuali checkpoint manuali e interni altrimenti non limitati.  
@@ -60,7 +59,7 @@ ms.locfileid: "79289399"
   
   
 ###  <a name="interaction-of-the-target_recovery_time-and-recovery-interval-options"></a><a name="InteractionBwnSettings"></a> Interazione delle opzioni TARGET_RECOVERY_TIME e 'intervallo di recupero'  
- Nella tabella seguente viene riepilogata l'interazione tra l'impostazione del **sp_configure "`recovery interval`"** a livello di server e il database ALTER database... Impostazione TARGET_RECOVERY_TIME.  
+ Nella tabella seguente viene riepilogata l'interazione tra l'impostazione del **sp_configure " `recovery interval` "** a livello di server e il database ALTER database... Impostazione TARGET_RECOVERY_TIME.  
   
 |target_recovery_time|'intervallo di recupero'|Tipo di checkpoint utilizzato|  
 |----------------------------|-------------------------|-----------------------------|  
@@ -69,7 +68,7 @@ ms.locfileid: "79289399"
 |>0|Non applicabile.|Checkpoint indiretti il cui tempo di recupero di destinazione è determinato dall'impostazione TARGET_RECOVERY_TIME, espresso in secondi.|  
   
 ###  <a name="automatic-checkpoints"></a><a name="AutomaticChkpt"></a>Checkpoint automatici  
- Viene eseguito un checkpoint automatico ogni volta che il numero di record di log raggiunge il [!INCLUDE[ssDE](../../includes/ssde-md.md)] numero di stime che può elaborare durante il periodo di tempo `recovery interval` specificato nell'opzione di configurazione del server. In ogni database senza un tempo di recupero di destinazione definito dall'utente, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera checkpoint automatici. La frequenza di checkpoint automatici dipende dall'opzione di configurazione `recovery interval` avanzata del server, che specifica il tempo massimo che una determinata istanza del server deve utilizzare per recuperare un database durante un riavvio del sistema. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] valuta il numero massimo di record di log che può elaborare nell'intervallo di recupero. Quando un database che utilizza i checkpoint automatici raggiunge il numero massimo specificato di record di log, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] pubblica un checkpoint sul database. L'intervallo di tempo tra checkpoint automatici può essere estremamente variabile. In un database con un considerevole carico di lavoro di transazioni si verificheranno checkpoint più frequenti rispetto a un database utilizzato principalmente per le operazioni in sola lettura.  
+ Viene eseguito un checkpoint automatico ogni volta che il numero di record di log raggiunge il numero di [!INCLUDE[ssDE](../../includes/ssde-md.md)] stime che può elaborare durante il periodo di tempo specificato nell' `recovery interval` opzione di configurazione del server. In ogni database senza un tempo di recupero di destinazione definito dall'utente, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera checkpoint automatici. La frequenza di checkpoint automatici dipende dall' `recovery interval` opzione di configurazione avanzata del server, che specifica il tempo massimo che una determinata istanza del server deve utilizzare per recuperare un database durante un riavvio del sistema. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] valuta il numero massimo di record di log che può elaborare nell'intervallo di recupero. Quando un database che utilizza i checkpoint automatici raggiunge il numero massimo specificato di record di log, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] pubblica un checkpoint sul database. L'intervallo di tempo tra checkpoint automatici può essere estremamente variabile. In un database con un considerevole carico di lavoro di transazioni si verificheranno checkpoint più frequenti rispetto a un database utilizzato principalmente per le operazioni in sola lettura.  
   
  Inoltre, in base al modello di recupero con registrazione minima, viene messo in coda un checkpoint automatico se il log è pieno al 70 percento.  
   
@@ -79,7 +78,7 @@ ms.locfileid: "79289399"
   
   
 ####  <a name="impact-of-recovery-interval-on-recovery-performance"></a><a name="PerformanceImpact"></a>Conseguenze dell'intervallo di recupero sulle prestazioni di ripristino  
- Per un sistema di elaborazione delle transazioni online (OLTP) che utilizza `recovery interval` transazioni brevi, rappresenta il fattore principale che determina il tempo di recupero. Tuttavia, l' `recovery interval` opzione non influisce sul tempo necessario per annullare una transazione con esecuzione prolungata. Il ripristino di un database con una transazione con esecuzione prolungata può richiedere molto più tempo rispetto `recovery interval` a quello specificato nell'opzione. Se, ad esempio, una transazione con esecuzione prolungata impiega due ore per eseguire gli aggiornamenti prima che l'istanza del server venga disabilitata, il `recovery interval` recupero effettivo richiede molto più tempo del valore per recuperare la transazione lunga. Per informazioni sull'impatto di una transazione con esecuzione prolungata sul tempo di recupero, vedere [Log delle transazioni &#40;SQL Server&#41;](the-transaction-log-sql-server.md).  
+ Per un sistema di elaborazione delle transazioni online (OLTP) che utilizza transazioni brevi, `recovery interval` rappresenta il fattore principale che determina il tempo di recupero. Tuttavia, l' `recovery interval` opzione non influisce sul tempo necessario per annullare una transazione con esecuzione prolungata. Il ripristino di un database con una transazione con esecuzione prolungata può richiedere molto più tempo rispetto a quello specificato nell' `recovery interval` opzione. Se, ad esempio, una transazione con esecuzione prolungata impiega due ore per eseguire gli aggiornamenti prima che l'istanza del server venga disabilitata, il recupero effettivo richiede molto più tempo del `recovery interval` valore per recuperare la transazione lunga. Per informazioni sull'impatto di una transazione con esecuzione prolungata sul tempo di recupero, vedere [Log delle transazioni &#40;SQL Server&#41;](the-transaction-log-sql-server.md).  
   
  In genere, i valori predefiniti forniscono prestazioni di recupero ottimali. Tuttavia, la modifica dell'intervallo di recupero potrebbe migliorare le prestazioni nelle circostanze seguenti:  
   
@@ -87,7 +86,7 @@ ms.locfileid: "79289399"
   
 -   Se si nota che checkpoint frequenti riducono le prestazioni su un database.  
   
- Se si decide di aumentare l'impostazione `recovery interval`, è consigliabile aumentarla gradualmente di piccoli incrementi e valutare l'effetto di ogni aumento incrementale sulle prestazioni del recupero. Questo approccio è importante perché man mano `recovery interval` che l'impostazione aumenta, il recupero del database richiede molto più tempo per il completamento. Se, ad esempio, si `recovery interval` modifica 10, il recupero richiede circa 10 volte più tempo del `recovery interval` completamento rispetto a quando è impostato su zero.  
+ Se si decide di aumentare l'impostazione `recovery interval`, è consigliabile aumentarla gradualmente di piccoli incrementi e valutare l'effetto di ogni aumento incrementale sulle prestazioni del recupero. Questo approccio è importante perché man mano `recovery interval` che l'impostazione aumenta, il recupero del database richiede molto più tempo per il completamento. Se, ad esempio, si modifica `recovery interval` 10, il recupero richiede circa 10 volte più tempo del completamento rispetto a quando `recovery interval` è impostato su zero.  
   
   
 ###  <a name="indirect-checkpoints"></a><a name="IndirectChkpt"></a>Checkpoint indiretti  

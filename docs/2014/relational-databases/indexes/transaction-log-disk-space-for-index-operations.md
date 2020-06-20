@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f8a4922-4507-4072-be67-c690528d5c3b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 986f464752f631d55b994469b733a3374a1926a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c34c9ff7a9494496d6c60d5920184c0ce86131d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161828"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025069"
 ---
 # <a name="transaction-log-disk-space-for-index-operations"></a>Spazio su disco per il log delle transazioni per operazioni sugli indici
   Le operazioni sugli indici su larga scala possono generare carichi di dati di grandi dimensioni che possono causare un rapido riempimento del log delle transazioni. Per garantire la possibilità di esecuzione del rollback dell'operazione sull'indice, non è possibile troncare il log delle transazioni fino al completamento dell'operazione sull'indice. Durante tale operazione è tuttavia possibile eseguire il backup del log. Nel log delle transazioni deve pertanto esserci spazio sufficiente per archiviare sia le transazioni dell'operazione sull'indice che eventuali transazioni utente simultanee per la durata dell'operazione sull'indice. Questo è valido sia per le operazioni sugli indici online che non offline. Poiché durante un'operazione sull'indice offline non è possibile accedere alle tabelle sottostanti, il numero di transazioni utente potrebbe essere basso e il log potrebbe non aumentare in modo eccessivamente rapido. Le operazioni sugli indici online non impediscono attività utente simultanee e pertanto le operazioni sugli indici su larga scala in combinazione con transazioni utente simultanee significative possono causare un aumento continuo del log delle transazioni senza che sia possibile troncarlo.  
