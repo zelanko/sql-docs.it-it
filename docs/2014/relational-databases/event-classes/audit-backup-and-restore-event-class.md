@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 08b0b5fe-298a-483f-b50a-73919a2513ce
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fa4a76f8452034175bd4033d8213372f2793e162
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8cf54a5391b2aa404808963097f7b331584a9ed
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62913253"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053416"
 ---
 # <a name="audit-backup-and-restore-event-class"></a>Classe di evento Audit Backup/Restore
   La classe di evento **Audit Backup/Restore** viene generata quando viene eseguito un comando di backup o di ripristino.  

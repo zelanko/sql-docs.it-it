@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1a9509f0-c663-4b31-b396-7f5dc4371651
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 51ad78c95881daacebcb3f2b7999a299cd4ebd7d
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 2e91eb8e0704b7c07fac285986a0827e4d79b160
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000591"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929594"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>Opzioni (Editor di testo - XML - pagina Varie)
 
@@ -44,4 +43,4 @@ La finestra di dialogo **Opzioni** consente di modificare le impostazioni del co
   
 ## <a name="caching"></a>Memorizzazione nella cache  
  **Schemi**  
- Specifica il percorso della cache degli schemi. Se si fa clic sul pulsante Sfoglia viene aperto il percorso della cache degli schemi corrente in una nuova finestra. Il percorso predefinito è * \< Management Studio directory di installazione>* \Xml\Schemas.  
+ Specifica il percorso della cache degli schemi. Se si fa clic sul pulsante Sfoglia viene aperto il percorso della cache degli schemi corrente in una nuova finestra. Il percorso predefinito è *\<Management Studio install directory>* \Xml\Schemas.  

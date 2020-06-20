@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 452d3ac4dae2164fa0fa172528ae398ea91fed31
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c938624a3ed39fe2d41f21a21af5231aa76a8c17
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797747"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936982"
 ---
 # <a name="configure-the-flexible-failover-policy-to-control-conditions-for-automatic-failover-always-on-availability-groups"></a>Configurare i criteri di failover flessibili per controllare le condizioni per il failover automatico (Gruppi di disponibilità AlwaysOn)
   In questo argomento verrà descritto come configurare i criteri di failover flessibili per un gruppo di disponibilità AlwaysOn tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Con i criteri di failover flessibili viene garantito un controllo granulare delle condizioni che causano un failover automatico per un gruppo di disponibilità. Modificando le condizioni di errore che attivano un failover automatico e la frequenza di controlli di integrità, è possibile aumentare o diminuire la probabilità di un failover automatico per supportare il Contratto di servizio per la disponibilità elevata.  
@@ -93,7 +92,7 @@ ms.locfileid: "72797747"
   
 2.  Quando si aggiunge una replica di disponibilità a un gruppo di disponibilità, utilizzare il cmdlet `New-SqlAvailabilityGroup`. Quando si modifica una replica di disponibilità esistente, utilizzare il cmdlet `Set-SqlAvailabilityGroup`.  
   
-    -   Per impostare il livello di condizione del failover, `FailureConditionLevel`usare il parametro *Level* , dove *Level* è uno dei valori seguenti:  
+    -   Per impostare il livello di condizione del failover, usare il `FailureConditionLevel` parametro *Level* , dove *Level* è uno dei valori seguenti:  
   
         |valore|Level|Il failover automatico viene avviato...|  
         |-----------|-----------|-------------------------------------------|  
@@ -113,7 +112,7 @@ ms.locfileid: "72797747"
          -FailureConditionLevel OnServerDown  
         ```  
   
-    -   Per impostare la soglia di timeout controllo integrità, usare `HealthCheckTimeout`il parametro *n* , dove *n* è un numero intero compreso tra 15000 millisecondi (15 secondi) e 4294967295 millisecondi. Il valore predefinito è 30000 millisecondi (30 secondi).  
+    -   Per impostare la soglia di timeout controllo integrità, usare il `HealthCheckTimeout` parametro *n* , dove *n* è un numero intero compreso tra 15000 millisecondi (15 secondi) e 4294967295 millisecondi. Il valore predefinito è 30000 millisecondi (30 secondi).  
   
          Ad esempio, il comando seguente modifica la soglia di Timeout controllo integrità di un gruppo di disponibilità esistente, `AG1`, in 120.000 millisecondi (due minuti).  
   

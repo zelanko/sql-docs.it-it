@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ec4261d1-2799-4af8-9706-06b8c62d2fdf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 774cba19a7762a41d60fe7cf90d63de275e59b71
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ebdb6750c61373041653d7c65df01fa866b9b68
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060659"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921688"
 ---
 # <a name="configure-data-viewer-grid-tab"></a>Configura visualizzatore dati (scheda Griglia)
   Utilizzare la scheda **Griglia** della finestra di dialogo **Configura visualizzatore dati** per indicare le colonne da visualizzare. In un grafico griglia vengono visualizzati record di dati sotto forma di righe in una griglia. Il grafico riflette il contenuto di un solo buffer.  
@@ -31,7 +30,7 @@ ms.locfileid: "66060659"
  **Colonne visualizzate**  
  Selezionare il nome di una colonna e quindi fare clic sulla freccia singola per spostare la colonna nell'elenco **Colonne inutilizzate** . Per spostare tutti i nomi delle colonne nell'elenco **Colonne inutilizzate** , fare clic sulla freccia doppia.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurare il Visualizzatore dati &#40;scheda generale&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
  [Configurare Visualizzatore dati &#40;scheda Istogramma&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
  [Configurare il Visualizzatore dati &#40;scheda Istogramma&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   

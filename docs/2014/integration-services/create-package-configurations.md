@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 287ac1a5631cf2e3925e5895db7f04bb7b89bf5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5552d40cf2f899ca6b95658ac2aa50d5cc25f62f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060172"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917344"
 ---
 # <a name="create-package-configurations"></a>Creazione di configurazioni dei pacchetti
   Le configurazioni di pacchetto vengono create nella finestra di dialogo **Libreria configurazioni pacchetto** e tramite la Configurazione guidata pacchetto. Per accedere a questi strumenti, fare clic su **Configurazioni pacchetto** nel menu **SSIS** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -106,7 +105,7 @@ ms.locfileid: "66060172"
   
 10. La configurazione sarà visibile nella finestra di dialogo **Libreria configurazioni pacchetto** .  
   
-11. Fare clic su **Chiudi**.  
+11. Fare clic su **Close**.  
   
 ## <a name="external-resources"></a>Risorse esterne  
   
@@ -116,7 +115,7 @@ ms.locfileid: "66060172"
   
 -   Intervento nel Blog relativo [all'esempio di API: aggiungere a livello di codice un file di configurazione a un pacchetto](https://go.microsoft.com/fwlink/?LinkId=217664), in Blogs.msdn.com.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurazioni di pacchetti](../../2014/integration-services/package-configurations.md)   
  [Distribuzione di pacchetti &#40;&#41;SSIS](packages/legacy-package-deployment-ssis.md)   
  [Utilizzo delle variabili a livello di programmazione](building-packages-programmatically/working-with-variables-programmatically.md)  

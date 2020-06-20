@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bddf15e6469e2fd347c716e98e750c077bcc29e7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2c74e92286eab4bc1be8f3f538d83d86f056cf01
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797694"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936922"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Creare o configurare un listener del gruppo di disponibilità (SQL Server)
-  In questo argomento viene descritto come creare o configurare un *singolo listener del gruppo di disponibilità* per un gruppo di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]disponibilità [!INCLUDE[tsql](../../../includes/tsql-md.md)]AlwaysOn tramite, o [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]PowerShell in.  
+  In questo argomento viene descritto come creare o configurare un singolo *listener del gruppo di disponibilità* per un gruppo di disponibilità AlwaysOn tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .  
   
 > [!IMPORTANT]  
 >  Per creare il primo listener di un gruppo di disponibilità, è consigliabile utilizzare [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Evitare di creare un listener direttamente nel cluster WSFC se non necessario, ad esempio per creare un listener aggiuntivo.  
@@ -191,7 +190,7 @@ ms.locfileid: "72797694"
     ```  
   
     > [!NOTE]  
-    >  Per visualizzare la sintassi di un cmdlet, usare il cmdlet **Get-Help** nell'ambiente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Per altre informazioni, vedere [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Per visualizzare la sintassi di un cmdlet, usare il cmdlet **Get-Help** nell' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ambiente PowerShell. Per altre informazioni, vedere [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 Per configurare e usare il provider di SQL Server PowerShell, vedere [provider di SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md).
   
@@ -200,9 +199,9 @@ Per configurare e usare il provider di SQL Server PowerShell, vedere [provider d
 ###  <a name="failure-to-create-an-availability-group-listener-because-of-active-directory-quotas"></a><a name="ADQuotas"></a>Errore durante la creazione di un listener del gruppo di disponibilità a causa di quote di Active Directory  
  La creazione di un nuovo listener del gruppo di disponibilità può avere esito negativo perché è stata raggiunta una quota di Active Directory per l'account del computer del nodo del cluster interessato.  Per altre informazioni, vedere gli articoli seguenti:  
   
--   [HYPERLINK "https://support.microsoft.com/kb/307532" come risolvere i problemi dell'account del servizio cluster quando vengono modificati gli oggetti computer](https://support.microsoft.com/kb/307532)  
+-   [HYPERLINK " https://support.microsoft.com/kb/307532 " come risolvere i problemi dell'account del servizio cluster quando vengono modificati gli oggetti computer](https://support.microsoft.com/kb/307532)  
   
--   [HYPERLINK "https://technet.microsoft.com/library/cc904295(WS.10).aspx" Active Directory quote](https://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
+-   [HYPERLINK " https://technet.microsoft.com/library/cc904295(WS.10).aspx " Active Directory quote](https://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
   
 ##  <a name="follow-up-after-creating-an-availability-group-listener"></a><a name="FollowUp"></a>Completamento: fasi successive alla creazione di un listener del gruppo di disponibilità  
   
@@ -221,9 +220,9 @@ Per configurare e usare il provider di SQL Server PowerShell, vedere [provider d
   
  **MultiSubnetFailover=True non supportato da .NET Framework 3.5 o OLEDB**  
   
- **Problema:** se nel gruppo di disponibilità o nell'istanza del cluster di failover è disponibile un nome di listener (noto come nome di rete o punto di accesso client in Gestione cluster WSFC) dipendente da più indirizzi IP di subnet diverse e si sta utilizzando ADO.NET con .NET Framework 3.5SP1 o SQL Native Client 11.0 OLEDB, potenzialmente il 50% delle richieste di connessione client al listener del gruppo di disponibilità riscontrerà un timeout di connessione.  
+ **Problema:** Se il gruppo di disponibilità o l'istanza del cluster di failover dispone di un nome di listener (noto come nome di rete o punto di accesso client in Gestione cluster WSFC) in base a più indirizzi IP di subnet diverse e si utilizza ADO.NET con .NET Framework 3.5 SP1 o SQL Native Client OLEDB 11,0, potenzialmente 50% delle richieste di connessione client al listener del gruppo di disponibilità verrà raggiunto un timeout di connessione.  
   
- **Soluzioni alternative:** è consigliabile effettuare una delle seguenti attività.  
+ **Soluzioni alternative:** è consigliabile eseguire una delle attività seguenti.  
   
 -   Se non si dispone dell'autorizzazione per usare le risorse cluster, modificare il timeout di connessione in 30 secondi (questo valore corrisponde a un periodo di timeout TCP di 20 secondi più un buffer di 10).  
   
@@ -235,7 +234,7 @@ Per configurare e usare il provider di SQL Server PowerShell, vedere [provider d
   
      **Vantaggi:** non è necessario aumentare il valore di timeout della connessione client.  
   
-     **Svantaggi:** Se si verifica un failover tra subnet, il tempo di recupero del client potrebbe essere di 15 minuti o più, a `HostRecordTTL` seconda dell'impostazione e dell'impostazione della pianificazione della replica DNS/ad tra siti.  
+     **Svantaggi:** Se si verifica un failover tra subnet, il tempo di recupero del client potrebbe essere di 15 minuti o più, a seconda dell' `HostRecordTTL` impostazione e dell'impostazione della pianificazione della replica DNS/ad tra siti.  
   
 ###  <a name="registerallprovidersip-setting"></a><a name="RegisterAllProvidersIP"></a>Impostazione RegisterAllProvidersIP  
  Se si utilizza [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell per creare un listener del gruppo di disponibilità, il punto di accesso client viene creato in WSFC con la proprietà `RegisterAllProvidersIP` impostata su 1 (true). L'effetto del valore di questa proprietà dipende dalla stringa di connessione client, come indicato di seguito:  
@@ -255,7 +254,7 @@ Per configurare e usare il provider di SQL Server PowerShell, vedere [provider d
   
 -   Stringhe di connessione che non impostano `MultiSubnetFailover` su true  
   
-     Se `RegisterAllProvidersIP = 1`, in tutti i client le cui stringhe di connessione non utilizzano `MultiSubnetFailover = True`si verificheranno connessioni ad alta latenza. Questa situazione si verifica in quanto questi client tentano di effettuare connessioni a tutti gli indirizzi IP in sequenza. Al contrario, se `RegisterAllProvidersIP` viene impostato su 0, l'indirizzo IP attivo viene registrato nel punto di accesso client del cluster WSFC, riducendo la latenza per i client legacy. Se pertanto si dispone di client legacy che devono connettersi a un listener del gruppo di disponibilità e non è `MultiSubnetFailover` possibile utilizzare la proprietà, è consigliabile `RegisterAllProvidersIP` passare a 0.  
+     Se `RegisterAllProvidersIP = 1`, in tutti i client le cui stringhe di connessione non utilizzano `MultiSubnetFailover = True`si verificheranno connessioni ad alta latenza. Questa situazione si verifica in quanto questi client tentano di effettuare connessioni a tutti gli indirizzi IP in sequenza. Al contrario, se `RegisterAllProvidersIP` viene impostato su 0, l'indirizzo IP attivo viene registrato nel punto di accesso client del cluster WSFC, riducendo la latenza per i client legacy. Se pertanto si dispone di client legacy che devono connettersi a un listener del gruppo di disponibilità e non è possibile utilizzare la `MultiSubnetFailover` proprietà, è consigliabile passare `RegisterAllProvidersIP` a 0.  
   
     > [!IMPORTANT]  
     >  In fase di creazione di un listener del gruppo di disponibilità mediante il cluster WSFC (interfaccia utente grafica di Gestione cluster di failover), `RegisterAllProvidersIP` sarà 0 (false) per impostazione predefinita.  

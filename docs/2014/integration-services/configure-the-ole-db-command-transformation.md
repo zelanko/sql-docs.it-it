@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c800f167-3d2e-4c10-8ba3-a02f1872ccea
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8c9536e14f20e62b944df44ff943b05edb92e5fb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f6f14d93e840b9a206e0b5261eb9efade0f0e28
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060560"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921508"
 ---
 # <a name="configure-the-ole-db-command-transformation"></a>Configurazione della trasformazione Comando OLE DB
   È possibile aggiungere e configurare una trasformazione Comando OLE DB solo se il pacchetto include almeno un'attività Flusso di dati e un'origine, quale un'origine file flat o un'origine OLE DB. Questa trasformazione viene in genere utilizzata per l'esecuzione di query con parametri.  
@@ -71,7 +70,7 @@ ms.locfileid: "66060560"
   
 15. Per salvare il pacchetto aggiornato, scegliere **Salva** dal menu **File** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Trasformazione comando OLE DB](data-flow/transformations/ole-db-command-transformation.md)   
  [Trasformazioni Integration Services](data-flow/transformations/integration-services-transformations.md)   
  [Percorsi di Integration Services](data-flow/integration-services-paths.md)   

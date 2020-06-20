@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 52ab4d4b3cbb0e4418886517c9ffd9c70315851a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0341d9ba11cd66fdbfb72a05521028098c56c400
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701946"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019442"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
   Restituisce il nome del tipo SQL per il nome di un tipo di token specificato.  
@@ -83,7 +82,7 @@ fIsMaxType
 |`SQLDATETIMN`|Prima o dopo|**datetime-null**|  
 |`SQLMONEYN`|Prima o dopo|**money-null**|  
 |`SQLFLTN`|Prima o dopo|**float-null**|  
-|`SQLAOPSUM`|Prima o dopo|**Somma**|  
+|`SQLAOPSUM`|Prima o dopo|**SUM**|  
 |`SQLAOPAVG`|Prima o dopo|**AVG**|  
 |`SQLAOPCNT`|Prima o dopo|**Numero**|  
 |`SQLAOPMIN`|Prima o dopo|**Min**|  

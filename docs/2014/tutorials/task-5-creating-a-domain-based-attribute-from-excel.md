@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 07cbc624-2c6b-4568-96e4-f18663a05d80
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f7e88065ff66ea953d0a91ed080fc3d7159ab794
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f7287091ddd64ef9df1c63706a2f562feed4a5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489100"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999665"
 ---
 # <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>Attività 5: Creazione di un attributo basato su dominio di Excel
   In questa attività viene convertito l'attributo **state** dell'entità **Supplier** come **attributo basato su dominio**. Dopo aver configurato l'attributo State in modo che sia basato su dominio e pubblicato in MDS, viene creata una nuova entità denominata **state** nel server MDS con tutti i valori nella colonna e l'attributo **state** dell'entità **Supplier** verrà popolato con i valori dell'entità **state** . A questo punto, il modello **Suppliers** deve avere due entità: **Supplier** e **state** , dove l'attributo **state** dell'entità **Supplier** è un attributo basato su dominio che dipende dall'entità **state** .  
   
-1.  Passa alla finestra di **Excel** con i **fornitori puliti e corrispondenti. xlsx** aperto.  
+1.  Passa alla finestra di **Excel** con **Suppliers.xlsxpuliti e corrispondenti** aperti.  
   
 2.  Fare clic sul pulsante **Aggiorna** sulla barra multifunzione per ottenere gli aggiornamenti più recenti da MDS. Verranno visualizzati i due record più se è stata eseguita l'attività facoltativa **4**.  
   

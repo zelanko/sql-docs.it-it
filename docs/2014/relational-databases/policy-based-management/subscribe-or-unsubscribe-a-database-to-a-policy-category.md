@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d0139376adc28b07877389a023b19310b06417ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b4ca6f804352b57b30b42012da93e0d031be8d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68212136"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066642"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>Sottoscrivere una categoria di criteri o annullarne la sottoscrizione per un database
   In questo argomento verrà descritto come sottoscrivere una categoria di criteri o annullarne la sottoscrizione per un database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -62,10 +61,10 @@ ms.locfileid: "68212136"
      **Sottoscritto**  
      Indica se la destinazione ha sottoscritto la categoria di criteri. Se questa casella di controllo è disabilitata, la categoria di criteri è impostata su **Imponi sottoscrizioni di database**, ovvero la categoria di criteri si applica a tutti i database nel server.  
   
-     **Criterio**  
+     **Criteri**  
      Quando i gruppi di criteri sono espansi, vengono visualizzati i criteri inclusi nella categoria di criteri.  
   
-     **Attivata**  
+     **Enabled**  
      Indica se i criteri sono abilitati o disabilitati.  
   
      **Modalità di esecuzione**  

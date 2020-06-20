@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fcdbfe9f9289ab9cc529d4d37eb27d877dfff3ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 543905343d74c9fbabe5f671d9021657ea5f76b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150486"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066762"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Usare SQL Server Profiler per creare e testare guide di piano
    Quando si crea una guida di piano è possibile usare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per acquisire il testo esatto della query da usare nell'argomento *statement_text* della stored procedure **sp_create_plan_guide**. Questo garantisce che in fase di compilazione la guida di piano corrisponderà alla query. Dopo la creazione della guida di piano è possibile utilizzare ancora [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per verificare che la guida di piano corrisponda effettivamente alla query. È in genere consigliabile testare le guide di piano tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per verificarne la corrispondenza con la query.  
@@ -94,9 +93,9 @@ EXEC sp_create_plan_guide
     > [!NOTE]  
     >  L'evento **Showplan XML for Query Compile** non può essere usato. **PlanGuideDB** non esiste nell'evento in questione.  
   
-5.  Se la guida di piano è di tipo OBJECT o SQL, verificare che nell'evento **Showplan XML** siano contenuti gli attributi **PlanGuideDB** e **PlanGuideName** per la guida di piano che si prevedeva corrispondesse alla query. In alternativa, se la guida di piano è di tipo TEMPLATE, verificare che l'evento **Showplan XML** contenga gli attributi **TemplatePlanGuideDB** e **TemplatePlanGuideName** per la guida di piano prevista. Se tali attributi sono presenti, la guida di piano funziona regolarmente. Questi attributi sono contenuti nell'elemento ** \<>StmtSimple** del piano.  
+5.  Se la guida di piano è di tipo OBJECT o SQL, verificare che nell'evento **Showplan XML** siano contenuti gli attributi **PlanGuideDB** e **PlanGuideName** per la guida di piano che si prevedeva corrispondesse alla query. In alternativa, se la guida di piano è di tipo TEMPLATE, verificare che l'evento **Showplan XML** contenga gli attributi **TemplatePlanGuideDB** e **TemplatePlanGuideName** per la guida di piano prevista. Se tali attributi sono presenti, la guida di piano funziona regolarmente. Questi attributi sono contenuti nell' **\<StmtSimple>** elemento del piano.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)  
   
   

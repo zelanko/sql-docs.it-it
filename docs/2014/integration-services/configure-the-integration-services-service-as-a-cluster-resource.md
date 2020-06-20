@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a9597686f4c9ca5a90a8344b425b6808cd96477a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a7d54586a8a2d0b60a65288b4a90947862692d5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060565"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921682"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>Configurazione del servizio Integration Services come risorsa cluster
   In questa sezione vengono fornite le istruzioni necessarie per la configurazione per i clienti che ritengono che i vantaggi della configurazione del servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] come risorsa cluster siano prevalenti rispetto agli svantaggi. [!INCLUDE[msCoName](../includes/msconame-md.md)] non consiglia tuttavia la configurazione del servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] come risorsa cluster.  

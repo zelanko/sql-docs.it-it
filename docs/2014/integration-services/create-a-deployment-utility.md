@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 354322a4-ae8c-4d92-8e71-42d29dbd0614
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e5f7959496cfa2b473fbf5c500f424647df0a1c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25effc199b1f8e525ceec78216e935e13afe2be2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060227"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917361"
 ---
 # <a name="create-a-deployment-utility"></a>Creazione di un'utilità di distribuzione
   Il primo passaggio della distribuzione di pacchetti consiste nel creare un'utilità di distribuzione per un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . L'utilità di distribuzione è una cartella contenente i file necessari per la distribuzione dei pacchetti di un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in un altro server. L'utilità di distribuzione viene creata nel computer in cui è archiviato il progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -35,7 +34,7 @@ ms.locfileid: "66060227"
 |CreateDeploymentUtility|Valore che specifica se in fase di compilazione del progetto viene creata un'utilità di distribuzione di pacchetti. Per consentire la creazione di un'utilità di distribuzione, la proprietà deve essere impostata su `True`.|  
 |DeploymentOutputPath|Posizione relativa al progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dell'utilità di distribuzione.|  
   
- Quando si compila un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], viene creato un file manifesto, \<nome progetto>.SSISDeploymentManifest.xml, il quale viene aggiunto insieme a copie dei pacchetti di progetto e delle dipendenze di pacchetto nella cartella bin\Deployment del progetto o nel percorso specificato nella proprietà DeploymentOutputPath. Nel file manifesto sono elencati i pacchetti, le configurazioni di pacchetto ed eventuali altri file del progetto.  
+ Quando si compila un [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] progetto, \<project name> viene creato e aggiunto un file manifesto,.SSISDeploymentManifest.xml, insieme a copie dei pacchetti del progetto e delle dipendenze del pacchetto, alla cartella bin\Deployment del progetto o al percorso specificato nella proprietà DeploymentOutputPath. Nel file manifesto sono elencati i pacchetti, le configurazioni di pacchetto ed eventuali altri file del progetto.  
   
  Il contenuto della cartella di distribuzione viene aggiornato ogni volta che si compila il progetto. Tutti i file eventualmente salvati in tale cartella e che non vengono nuovamente copiati nella cartella dal processo di compilazione verranno pertanto eliminati. Ad esempio, i file di configurazione del pacchetto salvati nelle cartelle di distribuzione verranno eliminati.  
   
@@ -45,9 +44,9 @@ ms.locfileid: "66060227"
   
 2.  Fare clic con il pulsante destro del mouse sul progetto e quindi scegliere **Proprietà**.  
   
-3.  Nella finestra di dialogo ** \<nome progetto> pagine delle proprietà** fare clic su **utilità di distribuzione**.  
+3.  Nella finestra di dialogo ** \<project name> pagine delle proprietà** fare clic su **utilità di distribuzione**.  
   
-4.  Per aggiornare le configurazioni dei pacchetti durante la distribuzione dei **AllowConfigurationChanges** pacchetti, `True`impostare AllowConfigurationChanges su.  
+4.  Per aggiornare le configurazioni dei pacchetti durante la distribuzione dei pacchetti, impostare **AllowConfigurationChanges** su `True` .  
   
 5.  Impostare `CreateDeploymentUtility` su `True`.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66060227"
   
 9. Nella finestra **Output** vengono visualizzati lo stato del processo di compilazione e gli eventuali errori di compilazione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurazioni di pacchetti](../../2014/integration-services/package-configurations.md)   
  [Creazione di configurazioni di pacchetto](../../2014/integration-services/create-package-configurations.md)   
  [Distribuire pacchetti con l'utilità di distribuzione](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)   

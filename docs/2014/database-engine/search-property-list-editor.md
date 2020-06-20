@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0f3ced6e-0dfd-49fc-b175-82378c3d668e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 97061590525a7e644319d7c8ff407d4905e59418
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 6c68ec986e2c6f4f53dfec7f188ba2a120532ae4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000551"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929302"
 ---
 # <a name="search-property-list-editor"></a>Editor dell'elenco delle proprietà di ricerca
   Utilizzare questa finestra di dialogo per aggiungere o eliminare proprietà di ricerca in un elenco di proprietà di ricerca.  
@@ -43,7 +42,7 @@ ms.locfileid: "83000551"
  **Descrizione proprietà**  
  Se lo si desidera, è possibile specificare una descrizione per la proprietà. Si tratta di una stringa composta da un massimo di 512 caratteri. Una descrizione può ad esempio contenere informazioni sul set di proprietà della proprietà stessa oppure informazioni su una proprietà che non è possibile dedurre dal nome.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Per aggiungere una proprietà di ricerca a un elenco di proprietà di ricerca, è necessario specificare l'identificatore univoco globale (GUID) del set di proprietà a cui appartiene la proprietà e l'identificatore di tipo integer della proprietà. Una combinazione specifica di questi elementi deve essere univoca in un determinato elenco di proprietà di ricerca. Se si tenta di aggiungere una combinazione esistente, l'operazione ha esito negativo e viene restituito un errore. Ciò significa che è possibile configurare un solo nome per una proprietà specifica.  
   
  La descrizione della proprietà è facoltativa.  

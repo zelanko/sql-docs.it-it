@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 37b74426-e262-43b2-a81f-79b1fd1a36ec
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 548fac7dbc7d1f2750a130da9847be406361d8bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4176ee1dff35a0f9eaeaddf1b35155f76de526ef
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62843667"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929472"
 ---
 # <a name="retrieve-files"></a>Recupero di file
   Dopo aver aperto un progetto incluso nel controllo del codice sorgente, è possibile utilizzare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per recuperare le copie locali dei file di progetto dall'archivio del controllo del codice sorgente e salvarle nella directory locale in cui si trova il progetto.  
@@ -50,7 +49,7 @@ ms.locfileid: "62843667"
   
 3.  Nella finestra di dialogo **Ottieni** fare clic su **OK**. In alternativa, se in Esplora soluzioni è stato selezionato un progetto o una soluzione, deselezionare le caselle di controllo accanto agli elementi che non si desidera recuperare.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Finestra di dialogo Get &#40;controllo del codice sorgente&#41;](../../2014/database-engine/get-dialog-box-source-control.md)   
  [Impostare e recuperare le informazioni sulla versione](../../2014/database-engine/set-and-retrieve-version-information.md)   
  [Visualizza cronologia progetto](../../2014/database-engine/view-project-history.md)   

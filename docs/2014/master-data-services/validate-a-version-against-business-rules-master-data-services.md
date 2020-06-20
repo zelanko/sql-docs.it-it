@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e33526df02cff22adbd56bfbfc2f25cef1c1c052
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6947a01553ebc9bc99e1fef86cf1a6e46c13289
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482315"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970965"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>Convalidare una versione rispetto a regole business (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]convalidare una versione per applicare regole di business a tutti i membri nella versione del modello.  
@@ -60,7 +59,7 @@ ms.locfileid: "65482315"
   
 -   [Bloccare una versione &#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Stati di convalida &#40;Master Data Services&#41;](../../2014/master-data-services/validation-statuses-master-data-services.md)   
  [&#40;della stored procedure di convalida Master Data Services&#41;](validation-stored-procedure-master-data-services.md)   
  [Versioni &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   

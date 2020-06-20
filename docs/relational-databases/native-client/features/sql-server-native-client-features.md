@@ -1,5 +1,6 @@
 ---
 title: Funzionalità
+description: Oltre a esporre le funzionalità dei componenti di accesso ai dati di Windows, SQL Server Native Client implementa altre funzionalità per esporre SQL Server funzionalità di.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e10bc2259c8e283a97db89a85940377e50aef3da
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c5e598cedaf4a1cd846caf143094840e9ed8427
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388441"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84949335"
 ---
 # <a name="sql-server-native-client-features"></a>Funzionalità di SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "81388441"
  Viene descritta una modifica del comportamento a partire da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client.  
   
  [Utilizzo del mirroring del database](../../../relational-databases/native-client/features/using-database-mirroring.md)  
- Viene illustrato [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] il modo in cui Native Client supporta l'utilizzo di database con mirroring, ovvero la possibilità di gestire una copia, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mirror, di un database in un server di standby.  
+ Viene illustrato il modo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui Native Client supporta l'utilizzo di database con mirroring, ovvero la possibilità di gestire una copia, o mirror, di un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database in un server di standby.  
   
  [Esecuzione di operazioni asincrone](../../../relational-databases/native-client/features/performing-asynchronous-operations.md)  
  Si illustra in che modo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta le operazioni asincrone, ovvero la capacità di restituzione immediata senza blocchi sul thread chiamante.  
@@ -44,7 +45,7 @@ ms.locfileid: "81388441"
  Si illustra in che modo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta i dati XML, ovvero un tipo di dati basato su XML che è possibile utilizzare come tipo di colonna, tipo di variabile, tipo di parametro o tipo restituito dalla funzione.  
   
  [Utilizzo dei tipi definiti dall'utente (UDT)](../../../relational-databases/native-client/features/using-user-defined-types.md)  
- Viene descritto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in che modo Native Client supporta i tipi definiti dall'utente (UDT), che estende il sistema di tipi SQL consentendo di archiviare oggetti e strutture [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di dati personalizzate in un database di.  
+ Viene descritto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in che modo Native Client supporta i tipi definiti dall'utente (UDT), che estende il sistema di tipi SQL consentendo di archiviare oggetti e strutture di dati personalizzate in un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database di.  
   
  [Utilizzo di tipi di dati per valori di grandi dimensioni](../../../relational-databases/native-client/features/using-large-value-types.md)  
  Si illustra in che modo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta i tipi di dati per valori di grandi dimensioni, ovvero i tipi di dati LOB (Large Object).  
@@ -59,7 +60,7 @@ ms.locfileid: "81388441"
  Si illustra in che modo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta la notifica di tipo consumer per la modifica dei set di righe.  
   
  [Esecuzione di operazioni di copia bulk](../../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
- Viene descritto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in che modo Native Client supporta operazioni di copia bulk che consentono il trasferimento di grandi quantità di dati all' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] interno o all'esterno di una tabella o vista.  
+ Viene descritto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in che modo Native Client supporta operazioni di copia bulk che consentono il trasferimento di grandi quantità di dati all'interno o all'esterno di una [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabella o vista.  
   
  [Uso della crittografia senza convalida](../../../relational-databases/native-client/features/using-encryption-without-validation.md)  
  Si illustra l'utilizzo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client per crittografare i dati inviati al server senza convalidare il certificato.  
@@ -71,7 +72,7 @@ ms.locfileid: "81388441"
  Si illustra il supporto dei tipi CRL definiti dall'utente di grandi dimensioni.  
   
  [Supporto FILESTREAM](../../../relational-databases/native-client/features/filestream-support.md)  
- Viene [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] illustrato il supporto di Native Client per la funzionalità FILESTREAM avanzata.  
+ Viene illustrato [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] il supporto di Native Client per la funzionalità FILESTREAM avanzata.  
   
  [Supporto per nomi SPN nelle connessioni client](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
  Si illustra in che modo il supporto per i nomi SPN (nome dell'entità servizio) è stato esteso per consentire l'autenticazione reciproca in tutti i protocolli.  
@@ -86,12 +87,12 @@ ms.locfileid: "81388441"
  Si illustrano i miglioramenti apportati all'individuazione dei metadati in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
  [Supporto per UTF-16 in SQL Server Native Client 11.0](../../../relational-databases/native-client/features/utf-16-support-in-sql-server-native-client-11-0.md)  
- Si illustra una modifica nel comportamento introdotta in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Se si fornisce un buffer a lunghezza fissa quando si associa un risultato della colonna o un parametro di output e se il carattere **WCHAR** scritto nel buffer prima del carattere di terminazione è un punto di codice surrogato alto di una coppia di surrogati e il carattere **WCHAR** successivo è [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] un punto di codice surrogato basso, Native client non aggiungerà il punto di codice surrogato alto al buffer.  
+ Si illustra una modifica nel comportamento introdotta in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Se si fornisce un buffer a lunghezza fissa quando si associa un risultato della colonna o un parametro di output e se il carattere **WCHAR** scritto nel buffer prima del carattere di terminazione è un punto di codice surrogato alto di una coppia di surrogati e il carattere **WCHAR** successivo è un punto di codice surrogato basso, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client non aggiungerà il punto di codice surrogato alto al buffer.  
   
  [Supporto di SQL Server Native Client per il ripristino di emergenza a disponibilità elevata](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
  Illustra come configurare l'applicazione per sfruttare le funzionalità di ripristino di emergenza a disponibilità elevata aggiunte in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
- [Accesso alle informazioni di diagnostica nel registro eventi estesi](../../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
+ [Accesso alle informazioni di diagnostica nel log degli eventi estesi](../../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
  Si illustrano i miglioramenti apportati a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e alla traccia dei dati che consente l'accesso alle informazioni di diagnostica nel buffer circolare e nel registro XEvents.  
   
  [Supporto SQL Server Native Client per il database locale](../../../relational-databases/native-client/features/sql-server-native-client-support-for-localdb.md)  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 644454c4-3c5a-469a-90ec-e51dc7fb99fc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4ed1d29af328a162eafadb1ce7a160c262bdcba3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fd85a523804232deff14f2e1da5485229f943dd2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177249"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999663"
 ---
 # <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>Attività 4: Esportazione dei risultati dell'attività di corrispondenza in un file di Excel
   In questa attività vengono esportati i risultati dell'attività di corrispondenza in un file di Excel.
@@ -26,7 +25,7 @@ ms.locfileid: "78177249"
 
 3.  Fare clic su **Sfoglia** e passare alla cartella in cui si desidera archiviare il file di output.
 
-4.  Digitare **Cleansed and Matched Suppliers. xls** come nome e fare clic su **Apri**.
+4.  Digitare **Cleansed and matched Suppliers.xls** per il nome e fare clic su **Apri**.
 
 5.  Verificare che il **record pivot** sia selezionato per la **regola di sopravvivenza**. Quando si seleziona questa opzione, come output da un cluster viene selezionato il record pivot per ogni cluster. Di seguito sono riportate le altre opzioni per la regola di sopravvivenza:
 
@@ -44,7 +43,7 @@ ms.locfileid: "78177249"
 
 8.  Fare clic su **fine** per completare l'attività di corrispondenza.
 
-9. Aprire il file **Cleansed and Matched Suppliers. xlsx** e verificare che non vengano visualizzati duplicati (SupplierID).
+9. Aprire il file di **Suppliers.xlsxpulito e corrispondente** e verificare che non vengano visualizzati duplicati (SupplierID).
 
  A questo punto, si dispone di dati fornitore puliti e di cui è stata effettuata la corrispondenza per rimuovere i duplicati.
 

@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 97a0690775b7b6d95a257bc5f5ed0a6483e1c24a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 850c8f0f54339594b19debd48ebf4ac7021873d3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833863"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921242"
 ---
 # <a name="adonet-connection-manager"></a>Gestione connessione ADO.NET
-  Una gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] consente l'accesso di un pacchetto alle origini dati tramite un provider .NET. Questa gestione connessione viene in genere utilizzata per accedere a origini dati [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]quali, nonché a origini dati esposte tramite OLE DB e XML in attività personalizzate scritte in codice gestito utilizzando un linguaggio come C#.  
+  Una gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] consente l'accesso di un pacchetto alle origini dati tramite un provider .NET. Questa gestione connessione viene in genere utilizzata per accedere a origini dati quali, nonché a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origini dati esposte tramite OLE DB e XML in attività personalizzate scritte in codice gestito utilizzando un linguaggio come C#.  
   
- Quando si aggiunge una [!INCLUDE[vstecado](../../includes/vstecado-md.md)] gestione connessione a un pacchetto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una gestione connessione che in fase di esecuzione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] viene risolta in una connessione, imposta le proprietà della gestione connessione e la aggiunge alla `Connections` raccolta del pacchetto.  
+ Quando si aggiunge una [!INCLUDE[vstecado](../../includes/vstecado-md.md)] gestione connessione a un pacchetto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Crea una gestione connessione che in fase di esecuzione viene risolta in una [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connessione, imposta le proprietà della gestione connessione e la aggiunge alla `Connections` raccolta del pacchetto.  
   
  La proprietà `ConnectionManagerType` della gestione connessione viene impostata su `ADO.NET`. Il valore di `ConnectionManagerType` è qualificato con il nome del provider .NET utilizzato dalla gestione connessione.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "62833863"
   
  Per informazioni sulla configurazione di una gestione connessione a livello di programmazione, vedere l'articolo relativo a <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Aggiunta di connessioni a livello di programmazione](../building-packages-programmatically/adding-connections-programmatically.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Connessioni in Integration Services &#40;SSIS&#41;](integration-services-ssis-connections.md)  
   
   

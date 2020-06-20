@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a411290435a10e351c05e9dd1350bde597dbe449
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c8c2ac713aaf490575447d9816cfc238b0399555
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289249"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971041"
 ---
 # <a name="system-settings-master-data-services"></a>Impostazioni di sistema (Master Data Services)
   Per tutte le applicazioni Web e tutti i servizi Web associati a un database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] è possibile configurare impostazioni di sistema.  
@@ -47,7 +46,7 @@ ms.locfileid: "79289249"
   
 ##  <a name="general-settings"></a><a name="General"></a>Impostazioni generali  
   
-|Impostazione di Gestione configurazione|Impostazione di sistema|Descrizione|  
+|Impostazione di Gestione configurazione|Impostazione di sistema|Description|  
 |-----------------------------------|--------------------|-----------------|  
 |**Timeout della connessione di database**|**DatabaseConnectionTimeOut**|Numero di secondi consentiti dal database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] per l'esecuzione di una connessione. Se la connessione non viene eseguita entro tale intervallo di tempo, verrà annullata e verrà visualizzato un errore. Il valore predefinito è **60** secondi (1 minuto).|  
 |**Timeout del comando di database**|**DatabaseCommandTimeOut**|Numero di secondi consentiti dal database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] per l'esecuzione di un comando. Se il comando non viene eseguito entro tale intervallo di tempo, verrà annullato e verrà visualizzato un errore. Il valore predefinito è **3600** secondi (60 minuti).|  
@@ -59,7 +58,7 @@ ms.locfileid: "79289249"
   
 ##  <a name="version-management-settings"></a><a name="Versions"></a>Impostazioni di gestione delle versioni  
   
-|Impostazione di Gestione configurazione|Impostazione di sistema|Descrizione|  
+|Impostazione di Gestione configurazione|Impostazione di sistema|Description|  
 |-----------------------------------|--------------------|-----------------|  
 |**Copia solo versioni con commit**|**CopyOnlyCommittedVersion**|In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]determina se gli utenti possono copiare le versioni dei modelli con stato **Commit eseguito**oppure le versioni con qualsiasi stato. Il valore predefinito è **Sì** o **1**per indicare che gli utenti possono copiare solo le versioni con stato **Commit eseguito** . Sostituire con **No** o **2** per consentire agli utenti di copiare tutte le versioni.|  
   
@@ -67,7 +66,7 @@ ms.locfileid: "79289249"
   
 ##  <a name="staging-settings"></a><a name="Staging"></a> Impostazioni di gestione temporanea  
   
-|Impostazione di Gestione configurazione|Impostazione di sistema|Descrizione|  
+|Impostazione di Gestione configurazione|Impostazione di sistema|Description|  
 |-----------------------------------|--------------------|-----------------|  
 |**Registra tutte le transazioni di gestione temporanea**|**StagingTransactionLogging**|Questa impostazione è valida solo per Microsoft SQL Server 2008 R2. Determina se registrare o meno le transazioni quando i record di gestione temporanea vengono caricati nel database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Il valore predefinito è **Disattivato** o **2**. Sostituire con **Attivato** o **1** per abilitare la registrazione.|  
 |**Intervallo batch di gestione temporanea**|**StagingBatchInterval**|Nell'area funzionale [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Integration Management** functional area, the number of seconds after you select **Start Batches** that your batch is processed. Il valore predefinito è **60** secondi (1 minuto).|  
@@ -76,7 +75,7 @@ ms.locfileid: "79289249"
   
 ##  <a name="explorer-settings"></a><a name="Explorer"></a> Impostazioni di Esplora  
   
-|Impostazione di Gestione configurazione|Impostazione di sistema|Descrizione|  
+|Impostazione di Gestione configurazione|Impostazione di sistema|Description|  
 |-----------------------------------|--------------------|-----------------|  
 |**Numero di membri predefinito nella gerarchia**|**HierarchyChildNodeLimit**|Nell'area funzionale  **Esplora** di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] indica il numero massimo di membri visualizzati in ogni nodo della gerarchia prima che venga visualizzato **...ulteriori nodi...**. Fare clic su **...ulteriori nodi...** per visualizzare il gruppo di membri successivo. Il valore predefinito è **50**.|  
 |**Mostra nomi in gerarchia per impostazione predefinita**|**ShowNamesInHierarchy**|Nell'area funzionale  **Esplora** di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] determina l'impostazione predefinita selezionata quando vengono visualizzate le gerarchie.<br /><br /> Il valore predefinito è **Sì** o **1**, che indica la visualizzazione del nome e del codice di ogni membro. Sostituire con **No** o **2** per visualizzare solo il codice.|  
@@ -85,14 +84,14 @@ ms.locfileid: "79289249"
   
 ##  <a name="add-in-for-excel-settings"></a><a name="xls"></a> Impostazioni del componente aggiuntivo per Excel  
   
-|Impostazione di Gestione configurazione|Impostazione di sistema|Descrizione|  
+|Impostazione di Gestione configurazione|Impostazione di sistema|Description|  
 |-----------------------------------|--------------------|-----------------|  
 |Mostrare il testo del componente aggiuntivo per Excel sulla home page del sito Web|ShowAddInText|Sulla home page di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , mostrare un collegamento con cui gli utenti possono scaricare [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)].|  
 |Percorso di installazione del componente aggiuntivo per Excel sulla home page del sito Web|AddInURL|Sulla home page di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , se viene visualizzato il collegamento a [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] , percorso a cui vengono indirizzati gli utenti quando fanno clic sul collegamento.|  
   
 ##  <a name="business-rule-settings"></a><a name="BusinessRules"></a> Impostazioni delle regole business  
   
-|Impostazione di Gestione configurazione|Impostazione di sistema|Descrizione|  
+|Impostazione di Gestione configurazione|Impostazione di sistema|Description|  
 |-----------------------------------|--------------------|-----------------|  
 |**Numero di cui incrementare nuove regole business**|**BusinessRuleDefaultPriorityIncrement**|Nell'area funzionale  **Amministrazione sistema** di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], numero in base a cui viene incrementata la priorità di ogni nuova regola business. Il valore predefinito è **10**.|  
 |**Numero di membri a cui applicare regole business**|**BusinessRuleRealtimeMemberCount**|Nell'area funzionale  **Esplora** di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], il numero massimo di membri nella griglia a cui applicare regole business. Nel [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], numero massimo di membri nel foglio di lavoro attivo a cui applicare le regole di business. Il valore predefinito è **10000**.|  
@@ -101,13 +100,13 @@ ms.locfileid: "79289249"
   
 ##  <a name="notification-settings"></a><a name="Notifications"></a>Impostazioni di notifica  
   
-|Impostazione di Gestione configurazione|Impostazione di sistema|Descrizione|  
+|Impostazione di Gestione configurazione|Impostazione di sistema|Description|  
 |-----------------------------------|--------------------|-----------------|  
 |**URL di Gestione dati master per le notifiche**|**MDMRootURL**|URL per l'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], usato nel collegamento presente nelle notifiche tramite posta elettronica, ad esempio http://constoso/mds.|  
 |**Intervallo posta elettronica di notifica**|**NotificationInterval**|Frequenza, in secondi, con cui vengono inviate le notifiche tramite posta elettronica. Il valore predefinito è **120** secondi (2 minuti).|  
 |**Numero di notifiche in un singolo messaggio di posta elettronica**|**NotificationsPerEmail**|Numero massimo di problemi di convalida che saranno elencati in un singolo messaggio di posta elettronica di notifica. Eventuali ulteriori problemi non vengono inclusi nel messaggio di posta elettronica, ma sono disponibili in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].|  
 |**Formato predefinito per la posta elettronica**|**EmailFormat**|Formato per tutte le notifiche tramite posta elettronica. Il valore predefinito è **HTML** o **1**. L'impostazione del database **2** indica **Testo**.<br /><br /> Nota: è possibile eseguire l'override di questa impostazione per un singolo utente in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], modificando e salvando il valore di **Formato posta elettronica** nella scheda **Generale** dell'utente.|  
-|**Espressione regolare per indirizzo di posta elettronica**|**EmailRegExPattern**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Nell'area funzionale **autorizzazioni utenti e gruppi** , l'espressione regolare usata per convalidare l'indirizzo di posta elettronica immesso nella scheda **generale** di un utente. Per ulteriori informazioni sulle espressioni regolari, vedere [elementi del linguaggio di espressioni regolari](https://go.microsoft.com/fwlink/?LinkId=164401) in MSDN Library.|  
+|**Espressione regolare per indirizzo di posta elettronica**|**EmailRegExPattern**|Nell' [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] area funzionale **autorizzazioni utenti e gruppi** , l'espressione regolare usata per convalidare l'indirizzo di posta elettronica immesso nella scheda **generale** di un utente. Per ulteriori informazioni sulle espressioni regolari, vedere [elementi del linguaggio di espressioni regolari](https://go.microsoft.com/fwlink/?LinkId=164401) in MSDN Library.|  
 |**Account Posta elettronica database**|**EmailProfilePrincipalAccount**|Visualizza l'account di posta del database da utilizzare per l'invio delle notifiche tramite posta elettronica. Il profilo predefinito è **mds_email_user**.|  
 |**Profilo Posta elettronica database**|**DatabaseMailProfile**|Profilo di posta del database da utilizzare per l'invio delle notifiche tramite posta elettronica. Il valore predefinito è vuoto.|  
 ||**ValidationIssueHTML**|In formato HTML, testo ricevuto dagli utenti di messaggi di posta elettronica quando la convalida di una regola business ha esito negativo.|  
@@ -119,7 +118,7 @@ ms.locfileid: "79289249"
   
 ##  <a name="security-settings"></a><a name="Security"></a>Impostazioni di sicurezza  
   
-|Impostazione di Gestione configurazione|Impostazione di sistema|Descrizione|  
+|Impostazione di Gestione configurazione|Impostazione di sistema|Description|  
 |-----------------------------------|--------------------|-----------------|  
 ||**SecurityMemberProcessInterval**|Nell'area funzionale  **Autorizzazioni utenti e gruppi** di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], frequenza in secondi con cui vengono applicate le autorizzazioni di utenti e gruppi impostate in **Membri gerarchia**. Il valore predefinito è **3600** secondi (60 minuti).|  
   
