@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d04ba8b85c124b66e250d17ad204ef76a8de6dc7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fe802796b129ff9bdb50e5dea13e1fe98beee269
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882352"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061577"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Miglioramento delle prestazioni della replica transazionale
   Dopo aver considerato i suggerimenti sulle prestazioni generali descritti nella sezione [Miglioramento delle prestazioni generali della replica](enhance-general-replication-performance.md), tenere presente le aree aggiuntive specifiche della replica transazionale riportate di seguito.  
@@ -80,7 +79,7 @@ ms.locfileid: "73882352"
   
      Il parametro **-SubscriptionStreams** può migliorare significativamente la velocità effettiva della replica aggregata. e consente a più connessioni a un Sottoscrittore l'applicazione di batch di modifiche in parallelo, conservando molte delle caratteristiche transazionali disponibili quando si utilizza un singolo thread. Se si verifica un errore di esecuzione o di commit di una delle connessioni, tutte le connessioni interromperanno il batch corrente e l'agente utilizzerà un singolo flusso per ripetere i batch non riusciti. Prima del completamento di questa fase di tentativi, possono verificarsi inconsistenze temporanee delle transazioni nel Sottoscrittore. Al termine del commit dei batch non riusciti, viene ripristinata la consistenza delle transazioni nel Sottoscrittore.  
   
-     È possibile specificare un valore per questo parametro di agente utilizzando il ** \@SubscriptionStreams** di [sp_addsubscription &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql).  
+     È possibile specificare un valore per questo parametro di agente utilizzando il ** \@ subscriptionstreams** di [sp_addsubscription &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql).  
   
 -   Aumentare il valore del parametro **-ReadBatchSize** per l'agente di lettura log.  
   

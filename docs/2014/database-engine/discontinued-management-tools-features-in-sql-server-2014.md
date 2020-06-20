@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6e58acd0-73c5-4161-9fbc-8ea531bc681c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7c966c3e4388588810438d7e91a9ae0356ef60c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 724f6e91b911f9edc89188a265364956176d6974
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780350"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933132"
 ---
 # <a name="discontinued-management-tools-features-in-sql-server-2014"></a>Funzionalità degli strumenti di gestione non più supportate in SQL Server 2014
   In questo argomento vengono descritte le funzionalità degli strumenti di gestione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non più disponibili in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -44,7 +43,7 @@ ms.locfileid: "62780350"
   
  L'API di DACfx 3.0 e gli strumenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supportano la lettura dei file DACPAC e BACPAC creati utilizzando gli strumenti e le versioni DACfx di versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , pertanto è possibile estrarre database nei file DACPAC da queste versioni e distribuirli nelle versioni supportate di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Compatibilità con le versioni precedenti](../../2014/getting-started/backward-compatibility.md)  
   
   

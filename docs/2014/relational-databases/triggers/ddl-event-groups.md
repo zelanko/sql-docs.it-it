@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d23a16fab200c3c6ef55a1cac8f1838a2f51468d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 245b383146e30c1fb42a6c6e23874a5c18d0b187
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211721"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014656"
 ---
 # <a name="ddl-event-groups"></a>gruppi di eventi DDL
   Nelle tabelle seguenti vengono elencati i gruppi di eventi DLL che è possibile utilizzare per eseguire un trigger DDL o una notifica degli eventi e vengono indicate le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] incluse. Si noti la natura inclusiva dei gruppi di eventi. Ad esempio, un trigger DDL o una notifica degli eventi che specifica FOR DDL_TABLE_EVENTS (10018) include le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE, ALTER TABLE e DROP TABLE. In un trigger DDL o una notifica degli eventi che consente di specificare FOR DDL_TABLE_VIEW_EVENTS (type 10017) sono incluse tutte le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] nei tipi DDL_TABLE_EVENTS, DDL_VIEW_EVENTS, DDL_INDEX_EVENTS e DDL_STATISTICS_EVENTS.  

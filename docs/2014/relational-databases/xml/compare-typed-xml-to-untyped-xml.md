@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b00b44ebe66a372b2037e62dc589afa35003495e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fae9ca930bd8741a1332b61c8272f2133590483e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717200"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013541"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Confronto dati XML tipizzati con dati XML non tipizzati
   È possibile creare variabili, parametri e colonne di tipo `xml`. Se si desidera, è inoltre possibile associare una raccolta XML Schema a una variabile, un parametro o una colonna di tipo `xml`. In questo caso, l' `xml` istanza del tipo di dati viene chiamata *tipizzata*. In caso contrario, l'istanza XML è definita *non tipizzata*.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ffb9c242b30c3b0ddfc1cadae20ea261c616475b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 948588ef8cfec8e3b3a5d689068bdff5d4396cc6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62767903"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965569"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>Esecuzione delle operazioni (Importazione/Esportazione guidata SQL Server)
   Utilizzare la finestra di dialogo **Esecuzione delle operazioni** per visualizzare lo stato e i risultati dell'operazione di importazione/esportazione ed eventualmente interrompere l'operazione.  
@@ -30,16 +29,16 @@ ms.locfileid: "62767903"
  **Azione**  
  Consente di visualizzare ogni azione che fa parte dell'operazione.  
   
- **Stato**  
+ **Status**  
  Consente di visualizzare l'esito positivo o negativo di ogni azione.  
   
- **Messaggio**  
+ **Message**  
  Consente di visualizzare i messaggi informativi e di errore eventualmente generati dall'azione.  
   
  **Filter**  
  Consente di scegliere se si desidera visualizzare solo gli errori, gli avvisi o le azioni riuscite. Per ripristinare la visualizzazione predefinita scegliere **Mostra tutte le azioni**.  
   
- **Arresta**  
+ **Stop**  
  Consente di interrompere l'operazione, se necessario, utilizzando il pulsante **Arresta** .  
   
  **Report**  

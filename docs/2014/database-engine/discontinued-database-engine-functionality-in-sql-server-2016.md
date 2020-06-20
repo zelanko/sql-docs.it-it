@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2ebb9b4e3db7cf8f7a19fd582dceb0b19f5c47d0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14924dedee04345c593683752baff4161c8d270d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67463459"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933152"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>Funzionalità del Motore di database non più utilizzate in SQL Server 2014
   In questo argomento vengono descritte le funzionalità di [!INCLUDE[ssDE](../includes/ssde-md.md)] che non sono più disponibili in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -62,20 +61,20 @@ ms.locfileid: "67463459"
 |Protocolli di connessione|Il supporto per il protocollo VIA è obsoleto.|In alternativa, utilizzare TCP.|  
 |Oggetti di database|Clausola `WITH APPEND` sui trigger|Ricreare l'intero trigger.|  
 |Opzioni di database|`sp_dboption`|`ALTER DATABASE`|  
-|Posta elettronica|SQL Mail|Usare la posta elettronica database. Per ulteriori informazioni, vedere [posta elettronica database](../relational-databases/database-mail/database-mail.md) e [utilizzare posta elettronica database anziché SQL Mail](../relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md).|  
+|Posta|SQL Mail|Usare la posta elettronica database. Per ulteriori informazioni, vedere [posta elettronica database](../relational-databases/database-mail/database-mail.md) e [utilizzare posta elettronica database anziché SQL Mail](../relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md).|  
 |Gestione della memoria|Estensioni AWE (Address Windowing Extensions) a 32 bit e supporto per l'aggiunta della memoria a caldo a 32 bit.|Utilizzare un sistema operativo a 64 bit.|  
 |Metadati|`DATABASEPROPERTY`|`DATABASEPROPERTYEX`|  
-|Programmabilità|SQL Server DMO (SQL-Distributed Management Objects)|Oggetti SMO (SQL Server Management Objects)|  
-|Hint per la query|Hint `FASTFIRSTROW`|`OPTION (FAST`*n* `)`.|  
+|Programmazione|SQL Server DMO (SQL-Distributed Management Objects)|Oggetti SMO (SQL Server Management Objects)|  
+|Hint per la query|Hint `FASTFIRSTROW`|`OPTION (FAST`*n* `)` .|  
 |Server remoti|La possibilità per gli utenti di creare nuovi server remoti tramite `sp_addserver` non è più utilizzata. Rimane disponibile `sp_addserver` con l'opzione 'locale'. È possibile utilizzare i server remoti mantenuti durante l'aggiornamento o creati dalla replica.|Sostituire i server remoti utilizzando server collegati.|  
 |Sicurezza|`sp_dropalias`|Sostituire gli alias con una combinazione di account utente e ruoli del database. Usare `sp_dropalias` per rimuovere gli alias in database aggiornati.|  
-|Sicurezza|Il parametro della versione di **PWDCOMPARE** che rappresenta un valore di un account [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di accesso precedente a 2000 non è più disponibile.|nessuno|  
+|Sicurezza|Il parametro della versione di **PWDCOMPARE** che rappresenta un valore di un account di accesso precedente a 2000 non è più disponibile [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|nessuno|  
 |Programmazione con Service Broker in SMO|La classe **Microsoft. SqlServer. Management. Smo. Broker. BrokerPriority** non implementa più l'interfaccia **Microsoft. SqlServer. Management. Smo. IObjectPermission** .||  
-|Opzioni SET|`SET DISABLE_DEF_CNST_CHK`|Nessuno.|  
+|Opzioni SET|`SET DISABLE_DEF_CNST_CHK`|No.|  
 |Tabelle di sistema|sys.database_principal_aliases|Usare ruoli anziché alias.|  
 |Transact-SQL|Il parametro `RAISERROR` nel formato `RAISERROR integer 'string'` non è più utilizzato.|Riscrivere l'istruzione utilizzando la sintassi **RAISERROR (...)** corrente.|  
 |Sintassi Transact-SQL|`COMPUTE / COMPUTE BY`|Utilizzare `ROLLUP`.|  
-|Sintassi Transact-SQL|Utilizzo di ** \* ** e **=&#42;**|Utilizzare la sintassi di join ANSI. Per ulteriori informazioni, vedere [from (Transact-SQL).](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
+|Sintassi Transact-SQL|Utilizzo di **\*=** e **=&#42;**|Utilizzare la sintassi di join ANSI. Per ulteriori informazioni, vedere [from (Transact-SQL).](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
 |XEvents|databases_data_file_size_changed, databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|Sostituito da database_file_size_change event, database_file_size_change<br /><br /> database_file_size_change event<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
   
  **Modifiche XEvent aggiuntive**  
@@ -92,7 +91,7 @@ ms.locfileid: "67463459"
   
 -   Campi aggiunti: target_kb, pages_kb  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzionalità del Motore di database deprecate in SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)  
   
   

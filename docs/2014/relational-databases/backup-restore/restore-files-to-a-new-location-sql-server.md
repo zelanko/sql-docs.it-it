@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4f4791d-646e-4632-9980-baae9cb1aade
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b30322bb48cfff6e0bca092d72aa9d5ad0990948
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a8336e5d186fb72df4e0a17fdd9affccab4ee57
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875066"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956827"
 ---
 # <a name="restore-files-to-a-new-location-sql-server"></a>Ripristino dei file in una nuova posizione (SQL Server)
   In questo argomento viene descritto come ripristinare i file in un nuovo percorso in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -60,7 +59,7 @@ ms.locfileid: "62875066"
   
  Le autorizzazioni per l'istruzione RESTORE vengono assegnate ai ruoli in cui le informazioni sull'appartenenza sono sempre disponibili per il server. Poiché è possibile controllare l'appartenenza ai ruoli predefiniti del database solo quando il database è accessibile e non è danneggiato, condizioni che non risultano sempre vere quando si esegue un'operazione RESTORE, i membri del ruolo predefinito del database **db_owner** non dispongono delle autorizzazioni per l'istruzione RESTORE.  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-restore-files-to-a-new-location"></a>Per ripristinare i file in una nuova posizione  
   
@@ -88,8 +87,8 @@ ms.locfileid: "62875066"
     |-----------------|------------|  
     |**Restore**|Le caselle di controllo selezionate indicano i set di backup da ripristinare.|  
     |**Nome**|Nome del set di backup.|  
-    |**Tipo di file**|Specifica il tipo di dati nel backup: **Dati**, **Log**o **Dati FILESTREAM**. I dati contenuti nelle tabelle sono nei file **Dati** . I dati del log delle transazioni sono nei file **Log** . I dati BLOB (Binary Large Object, oggetto binario di grandi dimensioni) archiviati nel file system si trovano nei file **Dati FILESTREAM** .|  
-    |**Tipo**|Tipo di backup eseguito: **Completo**, **Differenziale**o **Log delle transazioni**.|  
+    |**Tipo di file**|Specifica il tipo di dati nel backup: **dati**, **registro** o **dati FILESTREAM**. I dati contenuti nelle tabelle sono nei file **Dati** . I dati del log delle transazioni sono nei file **Log** . I dati BLOB (Binary Large Object, oggetto binario di grandi dimensioni) archiviati nel file system si trovano nei file **Dati FILESTREAM** .|  
+    |**Tipo**|Tipo di operazione di backup eseguita: **Completo**, **Differenziale** o **Log delle transazioni**.|  
     |**Server**|Nome dell'istanza del Motore di database che ha eseguito l'operazione di backup.|  
     |**Nome file logico**|Nome logico del file.|  
     |**Database**|Nome del database interessato dall'operazione di backup.|  
@@ -105,12 +104,12 @@ ms.locfileid: "62875066"
     |Intestazione della colonna|Valori|  
     |-----------------|------------|  
     |**Nome file originale**|Percorso completo di un file di backup di origine.|  
-    |**Tipo di file**|Specifica il tipo di dati nel backup: **Dati**, **Log**o **Dati FILESTREAM**. I dati contenuti nelle tabelle sono nei file **Dati** . I dati del log delle transazioni sono nei file **Log** . I dati BLOB (Binary Large Object, oggetto binario di grandi dimensioni) archiviati nel file system si trovano nei file **Dati FILESTREAM** .|  
+    |**Tipo di file**|Specifica il tipo di dati nel backup: **dati**, **registro** o **dati FILESTREAM**. I dati contenuti nelle tabelle sono nei file **Dati** . I dati del log delle transazioni sono nei file **Log** . I dati BLOB (Binary Large Object, oggetto binario di grandi dimensioni) archiviati nel file system si trovano nei file **Dati FILESTREAM** .|  
     |**Ripristina come**|Percorso completo del file di database da ripristinare. Per specificare un nuovo file di ripristino, fare clic nella casella di testo e modificare il percorso e il nome del file suggeriti. La modifica del percorso o del nome file nella colonna **Ripristina come** equivale all'utilizzo dell'opzione MOVE in un'istruzione RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-restore-files-to-a-new-location"></a>Per ripristinare i file in una nuova posizione  
   

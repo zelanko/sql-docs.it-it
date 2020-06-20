@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ed9c8ff90798205f9db02ae4b4b47eb4310d4b06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc473447934b6274e0d202f6240634fb00d90491
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250755"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998181"
 ---
 # <a name="sql-server-buffer-manager-object"></a>Oggetto di Gestione buffer di SQL Server
   L'oggetto di **Gestione buffer** fornisce contatori che consentono di monitorare l'utilizzo degli elementi seguenti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
@@ -57,11 +56,11 @@ ms.locfileid: "63250755"
 |**Scritture Lazywriter/sec**|Indica il numero di buffer scritti al secondo da Lazywriter di Gestione buffer. *Lazywriter* è un processo di sistema che scarica batch di buffer dirty e obsoleti (buffer contenenti modifiche che devono essere riscritte su disco prima che il buffer possa essere riutilizzato per un'altra pagina) e li rende disponibili per i processi utente. Lazywriter elimina la necessità di eseguire checkpoint frequenti per la creazione di buffer disponibili.|  
 |**Permanenza presunta delle pagine**|Indica il numero di secondi durante il quale una pagina viene mantenuta nel pool di buffer senza riferimenti.|  
 |**Ricerche di pagina/sec**|Indica il numero di richieste al secondo per la ricerca di una pagina nel pool di buffer.|  
-|**Letture di pagina/sec**|Indica il numero di letture fisiche di pagine del database eseguite al secondo. Il valore indica il totale di letture fisiche di pagine eseguite in tutti i database. Poiché l'I/O fisico richiede una notevole quantità di risorse, potrebbe essere possibile ridurre i costi utilizzando una cache dei dati di dimensioni maggiori, indici intelligenti e query più efficienti oppure modificando la progettazione del database.|  
+|**Letture pagina/sec**|Indica il numero di letture fisiche di pagine del database eseguite al secondo. Il valore indica il totale di letture fisiche di pagine eseguite in tutti i database. Poiché l'I/O fisico richiede una notevole quantità di risorse, potrebbe essere possibile ridurre i costi utilizzando una cache dei dati di dimensioni maggiori, indici intelligenti e query più efficienti oppure modificando la progettazione del database.|  
 |**Scritture di pagina/sec**|Indica il numero di scritture fisiche di pagine del database eseguite al secondo.|  
 |**Pagine read-ahead/sec**|Indica il numero di pagine lette al secondo prima di essere utilizzate.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server: nodo buffer](sql-server-buffer-node.md)   
  [Opzioni di configurazione del server di memoria server](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [SQL Server, oggetto Plan Cache](sql-server-plan-cache-object.md)   

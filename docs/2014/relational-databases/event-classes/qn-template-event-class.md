@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9f752040-5901-42e1-8fdc-105528d9960a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3ca0ef50d40b1c4d4f481bef4de89b43ff4a275c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d50fb125fb9e1399691938eb423d412f9556a563
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62650414"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052624"
 ---
 # <a name="qntemplate-event-class"></a>Classe di evento QN:Template
   L'evento QN:Template fornisce informazioni sull'utilizzo interno dei modelli di query che rappresentano il meccanismo tramite il quale [!INCLUDE[ssDE](../../includes/ssde-md.md)] consente di condividere le definizioni di una query per la notifica. Questi modelli vengono creati insieme alle tabelle di parametri. [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un evento di questo tipo quando viene creato, utilizzato o eliminato un modello di query.  
@@ -38,7 +37,7 @@ ms.locfileid: "62650414"
 |GroupID|`int`|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Sì|  
 |HostName|`nvarchar`|Nome del computer in cui è in esecuzione il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
 |IsSystem|`int`|Indica se l'evento è stato generato per un processo di sistema o un processo utente.<br /><br /> 0 = utente<br /><br /> 1 = sistema|60|No|  
-|LoginName|`nvarchar`|Nome dell'account di accesso dell'utente (account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accesso di sicurezza di o credenziali di accesso di Windows nel formato *DOMINIO\nomeutente*).|11|No|  
+|LoginName|`nvarchar`|Nome dell'account di accesso dell'utente (account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sicurezza di o credenziali di accesso di Windows nel formato *DOMINIO\nomeutente*).|11|No|  
 |LoginSID|`image`|ID di sicurezza (SID) dell'utente connesso. Queste informazioni sono disponibili nella vista del catalogo sys.server_principals. Il SID è univoco per ogni account di accesso nel server.|41|Sì|  
 |NTDomainName|`nvarchar`|Dominio di Windows a cui appartiene l'utente.|7|Sì|  
 |NTUserName|`nvarchar`|Nome dell'utente proprietario della connessione che ha generato questo evento.|6|Sì|  

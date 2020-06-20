@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 32b95a5d156ae52394b7128b024c86b9a7e308b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 795285a6aaceb3e74e80f5cad71d54c72c756ae2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891539"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966151"
 ---
 # <a name="step-5-adding-and-configuring-the-flat-file-source"></a>Passaggio 5: Aggiunta e configurazione dell'origine file flat
   In questa attività verrà aggiunta e configurata l'origine file flat al pacchetto. Un'origine file flat è un componente del flusso di dati che utilizza i metadati definiti dalla gestione connessione file flat per specificare il formato e la struttura dei dati da estrarre dal file flat tramite un processo di trasformazione. È possibile configurare l'origine file flat per estrarre dati da un singolo file flat utilizzando la definizione del formato del file specificata dalla gestione connessione file flat.  
   
- Per questa esercitazione verrà configurata l'origine file flat per l'utilizzo `Sample Flat File Source Data` della gestione connessione creata in precedenza.  
+ Per questa esercitazione verrà configurata l'origine file flat per l'utilizzo della `Sample Flat File Source Data` gestione connessione creata in precedenza.  
   
 ### <a name="to-add-a-flat-file-source-component"></a>Per aggiungere un componente origine file flat  
   
@@ -28,11 +27,11 @@ ms.locfileid: "62891539"
   
 2.  Nella **Casella degli strumenti SSIS**espandere **OtherSources**, quindi trascinare un' **Origine file flat** sull'area di progettazione della scheda **Flusso di dati** .  
   
-3.  Nell'area di progettazione **flusso di dati** fare clic con il pulsante destro del mouse sull' **origine file flat**appena aggiunta, scegliere **Rinomina**e `Extract Sample Currency Data`modificare il nome in.  
+3.  Nell'area di progettazione **flusso di dati** fare clic con il pulsante destro del mouse sull' **origine file flat**appena aggiunta, scegliere **Rinomina**e modificare il nome in `Extract Sample Currency Data` .  
   
 4.  Fare doppio clic sull'origine file flat per aprire la finestra di dialogo Editor origine file flat.  
   
-5.  Nella casella **gestione connessione file flat** selezionare `Sample Flat File Source Data`.  
+5.  Nella casella **gestione connessione file flat** selezionare `Sample Flat File Source Data` .  
   
 6.  Fare clic su **Colonne** e verificare che i nomi delle colonne siano corretti.  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62891539"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Passaggio 6: Aggiunta e configurazione delle trasformazioni Ricerca](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Origine file flat](data-flow/flat-file-source.md)   
  [Editor gestione connessione file flat &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)  
   

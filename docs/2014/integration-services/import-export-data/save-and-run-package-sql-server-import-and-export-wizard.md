@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 517ba30e4565ec05e5fa15a650bb39909d24dd02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c3b1be3f11e3a53ad291ff774cc72468af0d66ca
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62894765"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966216"
 ---
 # <a name="save-and-execute-package-sql-server-import-and-export-wizard"></a>Salvataggio ed esecuzione pacchetto (Importazione/Esportazione guidata SQL Server)
   Utilizzare la finestra di dialogo **Salva ed Esegui pacchetto** per eseguire il pacchetto immediatamente, salvarlo in modo che venga eseguito in un secondo momento o in entrambi.  
@@ -40,7 +39,7 @@ ms.locfileid: "62894765"
 >  In [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] l'opzione per salvare il pacchetto creato con la procedura guidata non è disponibile.  
   
  **SQL Server**  
- Selezionare questa opzione per salvare il pacchetto [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` nel database.  
+ Selezionare questa opzione per salvare il pacchetto nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` database.  
   
 > [!NOTE]  
 >  Questa opzione è disponibile solo se è stata selezionata l'opzione **Salva pacchetto SSIS** .  
@@ -71,7 +70,7 @@ ms.locfileid: "62894765"
 > [!NOTE]  
 >  Questa opzione è disponibile solo se è stata impostata l'opzione **livello di protezione pacchetto** per **crittografare i dati sensibili con una password** o **crittografare tutti i dati con una password**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Esecuzione di progetti e pacchetti](../packages/run-integration-services-ssis-packages.md)   
  [Salvataggio di pacchetti](../save-packages.md)  
   

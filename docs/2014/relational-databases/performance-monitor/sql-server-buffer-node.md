@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fd3f9f0f-7c38-4cfd-a0c5-ee93dd52d9a5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7e99c6e4f28ecef032ff3b793393e5465740156d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14659e4c1191e2260bccdbcd612f510770913629
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250736"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998165"
 ---
 # <a name="sql-serverbuffer-node"></a>Nodo SQLServer:Buffer
   L'oggetto **Buffer Node** fornisce contatori che integrano quelli inclusi nell'oggetto **Buffer Manager** . Tale oggetto consente di monitorare la distribuzione della pagina del pool di buffer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per ogni nodo NUMA (Non-Uniform Memory Access). È disponibile un'istanza dell'oggetto **Buffer Node** per ogni nodo NUMA utilizzato. In un'architettura non NUMA è disponibile una singola istanza dell'oggetto **Buffer Node** .  

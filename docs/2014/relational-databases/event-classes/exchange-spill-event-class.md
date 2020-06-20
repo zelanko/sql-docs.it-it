@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0220e81325345e84524ec0218dbaff7d6143bdd8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a59679fc2c48e2c5eabc4be73b186d5267897e3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62663679"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052977"
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill - classe di evento
   La classe di evento **Exchange Spill** indica che i buffer di comunicazione in un piano di query parallele sono stati inseriti temporaneamente nel database **tempdb** . Questa classe viene generata raramente e solo quando un piano di query include più analisi di intervalli.  
   
- In genere, la query [!INCLUDE[tsql](../../includes/tsql-md.md)] che genera tali analisi di intervalli include molti operatori BETWEEN, ognuno dei quali seleziona un intervallo di righe di una tabella o di un indice. In alternativa, è possibile ottenere più intervalli utilizzando espressioni, ad esempio (T. a > 10 e T. \< a 20) o (t. a > 100 e t. \< a 120). I piani di query richiedono inoltre che l'analisi di tali intervalli venga eseguita in ordine perché esiste una clausola ORDER BY relativa a T.a oppure perché un iteratore all'interno del piano richiede che le tuple vengano utilizzate in base all'ordinamento stabilito.  
+ In genere, la query [!INCLUDE[tsql](../../includes/tsql-md.md)] che genera tali analisi di intervalli include molti operatori BETWEEN, ognuno dei quali seleziona un intervallo di righe di una tabella o di un indice. In alternativa, è possibile ottenere più intervalli utilizzando espressioni, ad esempio (T. a > 10 e T. a \< 20) OR (T.a > 100 e t. a \< 120). I piani di query richiedono inoltre che l'analisi di tali intervalli venga eseguita in ordine perché esiste una clausola ORDER BY relativa a T.a oppure perché un iteratore all'interno del piano richiede che le tuple vengano utilizzate in base all'ordinamento stabilito.  
   
  Quando un piano relativo a tale query include più operatori **Parallelism** , i buffer di comunicazione della memoria utilizzati dagli operatori **Parallelism** si riempiono, con conseguente arresto dell'esecuzione della query. In questo caso, uno degli operatori **Parallelism** inserisce il buffer di output in **tempdb** mediante un'operazione denominata *spill di scambio*, in modo da consentire l'uso delle righe di alcuni buffer di input. Infine, le righe di cui è stato eseguito lo spill vengono restituite al consumer quando questo è pronto per utilizzarle.  
   
@@ -61,7 +60,7 @@ ms.locfileid: "62663679"
 |**GroupID**|**int**|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Sì|  
 |**HostName**|**nvarchar**|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
 |**IsSystem**|**int**|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|Sì|  
-|**LoginName**|**nvarchar**|Nome dell'account di accesso dell'utente (account di sicurezza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenziali di accesso di Windows nel formato *\<DOMINIO>\\<nomeutente\>* ).|11|Sì|  
+|**LoginName**|**nvarchar**|Nome dell'account di accesso dell'utente (account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sicurezza di o credenziali di accesso di Windows nel formato * \<DOMAIN> \\<nome utente \> *).|11|Sì|  
 |**LoginSid**|**image**|ID di sicurezza (SID) dell'utente connesso. Tali informazioni sono disponibili nella tabella **syslogins** del database **master** . Il SID è univoco per ogni account di accesso nel server.|41|Sì|  
 |**NTDomainName**|**nvarchar**|Dominio Windows di appartenenza dell'utente.|7|Sì|  
 |**NTUserName**|**nvarchar**|Nome utente di Windows.|6|Sì|  

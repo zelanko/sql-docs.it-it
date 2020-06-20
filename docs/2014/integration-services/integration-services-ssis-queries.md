@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0b4323715155ddb433012624f9d7a5df9bb0a29c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c96e823881345ae648b5fa4b5f7cdfddd94d1fa3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767663"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965378"
 ---
 # <a name="integration-services-ssis-queries"></a>Query di Integration Services (SSIS)
   L'attività Esegui SQL, l'origine OLE DB, la destinazione OLE DB e la trasformazione Ricerca possono utilizzare query SQL. Nell'attività Esegui SQL, tramite le istruzioni SQL vengono creati, aggiornati ed eliminati dati e oggetti di database e vengono eseguite stored procedure e istruzioni SELECT. Nell'origine OLE DB e nella trasformazione Ricerca, le istruzioni SQL sono solitamente istruzioni SELECT o EXEC. Queste ultime eseguono in genere stored procedure che restituiscono set di risultati.  

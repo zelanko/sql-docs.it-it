@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d7845962-ac68-4435-9c59-70ec450fec88
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 08a46d5f73c485306be2f6d0b5086f715ebb00d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b4fa442a237001d7b78e95fd443ec36336c1e769
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245113"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061402"
 ---
 # <a name="propertyidx-property-clientnetworkprotocolproperty-class"></a>Proprietà PropertyIdx (classe ClientNetworkProtocolProperty)
   Ottiene o imposta il valore di indice della proprietà nella matrice di proprietà a cui fa riferimento la [proprietà Properties (classe ClientNetworkProtocol)](../clientnetworkprotocol-class/clientnetworkprotocol-class.md) dell'oggetto della [classe ClientNetworkProtocol](../clientnetworkprotocol-class/clientnetworkprotocol-class.md) .  
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  A [classe ClientNetworkProtocolProperty](clientnetworkprotocolproperty-class.md) che rappresenta un attributo del protocollo di rete utilizzato dal client di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
@@ -45,7 +44,7 @@ object
   
 ## <a name="remarks"></a>Osservazioni  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [configurazione di protocolli client](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

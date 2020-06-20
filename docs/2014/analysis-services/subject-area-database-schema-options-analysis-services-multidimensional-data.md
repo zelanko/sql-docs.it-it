@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4c109bb8-e19d-412b-908f-bfdd7f872439
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2173255654b9ef02c269ec34bd21f93f8bf629a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7edc1fc89e9463c7482b47866aa3d12e1bc231a7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067982"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940242"
 ---
 # <a name="subject-area-database-schema-options-schema-generation-wizard-analysis-services---multidimensional-data"></a>Opzioni schema database area di interesse (Generazione guidata schema) (Analysis Services - Dati multidimensionali)
   Utilizzare la pagina **Opzioni schema database area di interesse** per controllare la generazione dello schema e definire la modalità di mantenimento dei dati.  
@@ -47,13 +46,13 @@ ms.locfileid: "66067982"
 > [!NOTE]  
 >  Questa opzione è disponibile solo se la Generazione guidata schema viene avviata da un progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usando [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] in modalità progetto.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |Popola|Le tabelle dei tempi dell'area di interesse vengono popolate.|  
 |Non popolare|Le tabelle dei tempi dell'area di interesse non vengono popolate.|  
 |Popola solo se vuota|Le tabelle dei tempi dell'area di interesse vengono popolate solo se sono vuote.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto della generazione guidata schema &#40;Analysis Services-Dati multidimensionali&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8f0ea144-1819-4832-905f-e5d0f49b066b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 919c10372e397f0c2d66d7648363aef7916ec598
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6cc4515806fc43aa06cb53b340c38081479ada3e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875605"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957154"
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>Ripristino di un database fino a una transazione contrassegnata (SQL Server Management Studio)
   Quando un database è in stato di ripristino, è possibile usare la finestra di dialogo **Ripristina log delle transazioni** per ripristinare il database a una transazione contrassegnata nei backup del log disponibili.  
@@ -47,7 +46,7 @@ ms.locfileid: "62875605"
   
     |Intestazione|valore|  
     |------------|-----------|  
-    |\<vuoto>|Consente di visualizzare una casella di controllo per selezionare il contrassegno.|  
+    |\<blank>|Consente di visualizzare una casella di controllo per selezionare il contrassegno.|  
     |**Contrassegno transazione**|Nome della transazione contrassegnata specificato dall'utente durante l'esecuzione del commit della transazione.|  
     |**Data**|Data e ora assegnate alla transazione quando ne è stato eseguito il commit. Vengono visualizzate la data e l'ora della transazione registrate nella tabella **msdbgmarkhistory** , non nella data e ora del computer client.|  
     |**Descrizione**|Eventuale descrizione della transazione contrassegnata specificata dall'utente quando è stato eseguito il commit della transazione.|  

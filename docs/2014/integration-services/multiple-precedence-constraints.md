@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 71c53ead-3d19-4bc1-aafd-e5b32595b420
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c0b75b96f30d2fe7f104e8f59aa03d7de6202e6a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61939b09b4a4365c09089df2b52026e96f9427ee
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057408"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965151"
 ---
 # <a name="multiple-precedence-constraints"></a>Più vincoli di precedenza
   Un vincolo di precedenza consente di connettere due eseguibili, ad esempio due attività, due contenitori o un'attività e un contenitore. Gli elementi connessi sono noti come eseguibile con precedenza ed eseguibile soggetto al vincolo. A un eseguibile soggetto a vincolo possono essere applicati più vincoli di precedenza. Per altre informazioni, vedere [Vincoli di precedenza](control-flow/precedence-constraints.md).  
@@ -32,7 +31,7 @@ ms.locfileid: "66057408"
 ## <a name="logicaland-property"></a>Proprietà LogicalAnd  
  Se a un'attività o contenitore sono applicati più vincoli, la proprietà `LogicalAnd` specificherà se il corrispondente vincolo di precedenza viene valutato singolarmente o insieme ad altri vincoli.  
   
- È possibile impostare la `LogicalAnd` proprietà utilizzando **Editor vincoli di precedenza** in [!INCLUDE[ssIS](../includes/ssis-md.md)] progettazione o nella finestra proprietà fornita da [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .  
+ È possibile impostare la `LogicalAnd` proprietà utilizzando **Editor vincoli di precedenza** in [!INCLUDE[ssIS](../includes/ssis-md.md)] progettazione o nella finestra proprietà [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] fornita da.  
   
 ## <a name="related-tasks"></a>Attività correlate  
  [Impostazione delle proprietà di un vincolo di precedenza](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)  

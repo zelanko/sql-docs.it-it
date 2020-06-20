@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 06b7edee-8636-49d9-9b5c-2c710bf4fa2d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 27c46e8e186f0e8424e679e9c023854e7887e232
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f32ed32803b9f1b8a6d5396d8748a0de8cbbfa4b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780550"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933326"
 ---
 # <a name="sql-server-native-client-odbc-reference"></a>Guida di riferimento a SQL Server Native Client (ODBC)
   ODBC (Open Database Connectivity) è un'API Microsoft Win32 utilizzata dalle applicazioni per l'accesso ai dati delle origini dati ODBC.  
@@ -35,7 +34,7 @@ ms.locfileid: "62780550"
   
 -   [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

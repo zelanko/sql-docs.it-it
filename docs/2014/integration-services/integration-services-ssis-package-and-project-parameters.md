@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cfd6a65e1561f252574ff919c8b63b0bbd57876f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e26f68375161f0e7ea0078540c4b8950adb61542
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892246"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965391"
 ---
 # <a name="integration-services-ssis-parameters"></a>Parametri di Integration Services (SSIS)
   I parametri (SSIS) di[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consentono di assegnare valori alle proprietà incluse nei pacchetti durante la fase di esecuzione. È possibile creare *parametri di progetto* al livello del progetto e *parametri di pacchetto* al livello del pacchetto. I parametri del progetto vengono utilizzati per fornire input esterno ricevuto dal progetto a uno o più pacchetti nel progetto. I parametri del pacchetto consentono di modificare l'esecuzione del pacchetto senza doverlo modificare e ridistribuire.  
@@ -97,7 +96,7 @@ ms.locfileid: "62892246"
  Durante la preparazione di un'istanza specifica di esecuzione del pacchetto, il valore 5 viene assegnato al parametro **pkgOptions** . A questo valore viene fatto riferimento come valore di esecuzione perché si applica al parametro solo per quell'istanza specifica dell'esecuzione. All'avvio dell'esecuzione, alla proprietà del pacchetto corrispondente al parametro **pkgOptions** viene assegnato il valore 5.  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Create Parameters](create-parameters.md)  
+ [Crea parametri](create-parameters.md)  
   
  [Impostazione dei valori di parametri dopo la distribuzione del progetto](../../2014/integration-services/set-parameter-values-after-the-project-is-deployed.md)  
   

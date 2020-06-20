@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 266687488dbd12b504b079314cc9d07b801b4f28
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 4ff27a1258d5164e3e93d34b6ff757993d6f6363
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000861"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932942"
 ---
 # <a name="full-text-stoplist-properties"></a>Proprietà elenco di parole non significative full-text
   Utilizzare questa finestra di dialogo per aggiungere o eliminare singole parole non significative, eliminare tutte le parole non significative per una lingua specifica oppure cancellare l'elenco di parole non significative corrente. Una parola non significativa è una parola di uso comune inclusa in un elenco di parole non significative. Le parole contenute in un elenco di questo tipo vengono omesse dall'indicizzazione full-text nelle tabelle che utilizzano l'elenco stesso. Per altre informazioni, vedere [Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text](../relational-databases/search/full-text-search.md).  

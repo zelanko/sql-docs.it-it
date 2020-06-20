@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1df24fe2-0873-4cd1-9151-2306d08418bc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8ca6b4b0c4449880a407e27df9becf340c84a2eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e57f77430152ec5c549436d0deade821a48e93db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62643067"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059801"
 ---
 # <a name="ipaddressname-property-servernetworkprotocolipaddress-class"></a>Proprietà IpAddressName (classe ServerNetworkProtocolIPAddress)
   Ottiene il nome dell'indirizzo IP.  
@@ -37,13 +36,13 @@ object
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  A [classe ServerNetworkProtocolIPAdress](servernetworkprotocolipaddress-class.md) che rappresenta un indirizzo IP del protocollo di rete nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore string che specifica il nome dell'indirizzo IP.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurazione di protocolli di rete server e di librerie di rete](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

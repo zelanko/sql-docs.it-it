@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2e013259-0022-4897-a08d-5f8deb880fa8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 558ee09eeb4419bc354ff3ade9d6586877246b33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b59b12dfcba1472cb6f9d6ecfc51a7df8104fb0b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022252"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068565"
 ---
 # <a name="oracle-publishing-overview"></a>Panoramica della pubblicazione Oracle
   Con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] è possibile includere server di pubblicazione Oracle nella topologia di replica, a partire da Oracle versione 9i. I server di pubblicazione possono essere distribuiti su qualsiasi hardware e sistema operativo supportato da Oracle. La funzionalità è compilata sulla base del consolidato meccanismo della replica snapshot e della replica transazionale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ed è in grado di offrire prestazioni e facilità d'uso analoghe.  
@@ -39,7 +38,7 @@ ms.locfileid: "63022252"
   
  Quando viene creata una pubblicazione Oracle, vengono creati trigger e tabelle di rilevamento per ogni tabella pubblicata nel database Oracle. Se vengono apportate modifiche ai dati nelle tabelle pubblicate, i trigger del database associati alle tabelle vengono attivati e inseriscono informazioni nelle tabelle di rilevamento della replica per ogni riga modificata. L'agente di lettura log sul server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sposta le informazioni relative alla modifica dei dati dalle tabelle di rilevamento al database di distribuzione sul server di distribuzione. Infine, l'agente di distribuzione sposta le modifiche dal server di distribuzione ai Sottoscrittori, in modo analogo alla replica transazionale standard.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurare un server di pubblicazione Oracle](configure-an-oracle-publisher.md)   
  [Glossario dei termini per la pubblicazione Oracle](glossary-of-terms-for-oracle-publishing.md)   
  [Replica di database eterogenei](heterogeneous-database-replication.md)  

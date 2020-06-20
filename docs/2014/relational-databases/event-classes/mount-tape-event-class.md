@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c595e0a-d968-47d3-a84f-9b6857342671
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 513792c12833a14b8d1d3fc78f4b3bb6be173627
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8298df4bfd0eaa91cf788fedbffe4e9b2a1389de
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023452"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052882"
 ---
 # <a name="mount-tape-event-class"></a>Mount Tape - classe di evento
   La classe di evento Mount Tape viene generata quando viene ricevuta una richiesta di montaggio nastro. Utilizzare questa classe di evento per monitorare le richieste di montaggio nastro e il relativo esito positivo o negativo.  
@@ -32,7 +31,7 @@ ms.locfileid: "63023452"
 |ClientProcessID|`int`|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se tramite il client viene indicato l'ID del processo client.|9|Sì|  
 |DatabaseID|`int`|ID del database specificato nell'istruzione USE *database* oppure ID del database predefinito, se per un'istanza specificata non viene eseguita un'istruzione USE *database* . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |DatabaseName|`nvarchar`|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Sì|  
-|Durata|`bigint`|Durata dell'evento in microsecondi.|13|Sì|  
+|Duration|`bigint`|Durata dell'evento in microsecondi.|13|Sì|  
 |EndTime|`datetime`|Per gli eventi Mount Request, eventuale timeout di montaggio; altrimenti, durata dell'evento stesso. In questo caso, StartTime indica la durata della richiesta di montaggio corrispondente.|15|Sì|  
 |EventClass|`int`|Tipo di evento = 195.|27|No|  
 |EventSequence|`int`|Sequenza di un evento specificato nella richiesta.|51|No|  
@@ -40,7 +39,7 @@ ms.locfileid: "63023452"
 |GroupID|`int`|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Sì|  
 |HostName|`nvarchar`|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
 |IsSystem|`int`|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|Sì|  
-|LoginName|`nvarchar`|Nome dell'account di accesso dell'utente (account [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di accesso di sicurezza [!INCLUDE[msCoName](../../includes/msconame-md.md)] di o credenziali di accesso di Windows nel\\formato dominio*nomeutente*).|11|Sì|  
+|LoginName|`nvarchar`|Nome dell'account di accesso dell'utente (account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sicurezza di o [!INCLUDE[msCoName](../../includes/msconame-md.md)] credenziali di accesso di Windows nel formato dominio \\ *nomeutente*).|11|Sì|  
 |NTDomainName|`nvarchar`|Dominio Windows di appartenenza dell'utente.|7|Sì|  
 |NTUserName|`nvarchar`|Nome utente di Windows.|6|Sì|  
 |ServerName|`nvarchar`|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
@@ -49,7 +48,7 @@ ms.locfileid: "63023452"
 |StartTime|`datetime`|Ora di inizio dell'evento, se disponibile.|14|Sì|  
 |TextData|`ntext`|*nome del dispositivo fisico* [( *nome del dispositivo logico* )]. Il nome del dispositivo logico viene visualizzato solo se è definito nella vista del catalogo sys.backup_devices.|1|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Backup e ripristino di database SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   

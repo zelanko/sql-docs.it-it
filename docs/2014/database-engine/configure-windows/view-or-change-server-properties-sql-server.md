@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5c5ff985b62e39287b696e96f10142daf90ae0a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 415d4e2d1aaa3166ae4df2dea53b34e064544e06
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783130"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934748"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>Visualizzare o modificare le proprietà del server (SQL Server)
   In questo argomento viene illustrato come visualizzare o modificare le proprietà di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Gestione configurazione SQL Server.  
@@ -59,7 +58,7 @@ ms.locfileid: "72783130"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per altre informazioni, vedere [Ruoli a livello di server](../../relational-databases/security/authentication-access/server-level-roles.md).  
   
- Per impostazione predefinita `sp_configure` , le autorizzazioni Execute su senza parametri o solo con il primo parametro vengono concesse a tutti gli utenti. Per eseguire `sp_configure` con entrambi i parametri per modificare un'opzione di configurazione o per eseguire l'istruzione RECONFIGURE, a un utente deve essere concessa l'autorizzazione a livello di server ALTER Settings. L'autorizzazione ALTER SETTINGS è assegnata implicitamente ai ruoli predefiniti del server **sysadmin** e **serveradmin** .  
+ Per impostazione predefinita, le autorizzazioni Execute su senza `sp_configure` parametri o solo con il primo parametro vengono concesse a tutti gli utenti. Per eseguire `sp_configure` con entrambi i parametri per modificare un'opzione di configurazione o per eseguire l'istruzione RECONFIGURE, a un utente deve essere concessa l'autorizzazione a livello di server ALTER Settings. L'autorizzazione ALTER SETTINGS è assegnata implicitamente ai ruoli predefiniti del server **sysadmin** e **serveradmin** .  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
@@ -148,9 +147,9 @@ GO
   
 2.  In **Gestione configurazione SQL Server**fare clic su **Servizi di SQL Server**.  
   
-3.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server (\<***NomeIstanza***>)**, quindi scegliere **Proprietà**.  
+3.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server ( \<***instancename***> )** e quindi scegliere **proprietà**.  
   
-4.  Nella finestra di dialogo **Proprietà SQL Server (\<***NomeIstanza***>)** modificare le proprietà del server nella scheda **servizio** o **Avanzate** e quindi fare clic su **OK**.  
+4.  Nella finestra di dialogo **proprietà SQL Server ( \<***instancename***> )** modificare le proprietà del server nella scheda **servizio** o **Avanzate** e quindi fare clic su **OK**.  
   
 ##  <a name="follow-up-after-you-change-server-properties"></a><a name="FollowUp"></a> Completamento: Dopo la modifica delle proprietà del server  
  Per alcune proprietà, potrebbe essere necessario riavviare il server per rendere effettiva la modifica.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a928fa36-e285-476f-9a7b-6840a8bb7283
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e2fd00fd96fe9b0bf7e1b605d935908970d0c1fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e264dd380c3dff40dacc4eb576d34af5195dec01
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875623"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957185"
 ---
 # <a name="restore-a-database-backup-under-the-simple-recovery-model-transact-sql"></a>Ripristinare un backup del database nel modello di recupero con registrazione minima (Transact-SQL)
   In questo argomento viene descritto come ripristinare un backup completo del database.  

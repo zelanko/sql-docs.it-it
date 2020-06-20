@@ -20,29 +20,29 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16939894f9e43e4538a8d56e76632af891d9714a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8e1cf6bdf4270759a94761e67b94009576ef6ad
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77429022"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84941082"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce informazioni su ogni richiesta in esecuzione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni sulle richieste, vedere la [Guida all'architettura dei thread e delle attività](../../relational-databases/thread-and-task-architecture-guide.md).
+Restituisce informazioni su ogni richiesta in esecuzione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per ulteriori informazioni sulle richieste, vedere la [Guida all'architettura dei thread e delle attività](../../relational-databases/thread-and-task-architecture-guide.md).
    
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|ID della sessione a cui la richiesta è correlata. Non ammette i valori Null.|  
 |request_id|**int**|ID della richiesta. Valore univoco nel contesto della sessione. Non ammette i valori Null.|  
 |start_time|**datetime**|Timestamp relativo all'arrivo della richiesta. Non ammette i valori Null.|  
-|status|**nvarchar(30)**|Stato della richiesta. I possibili valori sono i seguenti:<br /><br /> Informazioni<br />In esecuzione<br />Eseguibile<br />Sospeso<br />Suspended<br /><br /> Non ammette i valori Null.|  
-|command|**nvarchar(32)**|Identifica il tipo di comando corrente in corso di elaborazione. I tipi di comandi più comuni sono i seguenti:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> Per recuperare il testo della richiesta, utilizzare sys.dm_exec_sql_text con il valore sql_handle corrispondente per la richiesta. I processi interni di sistema impostano il comando in base al tipo di attività effettuata. Di seguito sono riportate le attività:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Non ammette i valori Null.|  
+|status|**nvarchar(30)**|Stato della richiesta. I possibili valori sono i seguenti:<br /><br /> Background<br />In esecuzione<br />Eseguibile<br />Sospeso<br />Suspended<br /><br /> Non ammette i valori Null.|  
+|.|**nvarchar(32)**|Identifica il tipo di comando corrente in corso di elaborazione. I tipi di comandi più comuni sono i seguenti:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> Per recuperare il testo della richiesta, utilizzare sys.dm_exec_sql_text con il valore sql_handle corrispondente per la richiesta. I processi interni di sistema impostano il comando in base al tipo di attività effettuata. Di seguito sono riportate le attività:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Non ammette i valori Null.|  
 |sql_handle|**varbinary(64)**|Token che identifica in modo univoco il batch o stored procedure di cui fa parte la query. Ammette i valori Null.| 
-|statement_start_offset|**int**|Indica, in byte, a partire da 0, la posizione iniziale dell'istruzione attualmente in esecuzione per il batch o l'oggetto permanente attualmente in esecuzione. Può essere usato insieme a `sql_handle`, `statement_end_offset`e alla `sys.dm_exec_sql_text` funzione a gestione dinamica per recuperare l'istruzione attualmente in esecuzione per la richiesta. Ammette i valori Null.|  
-|statement_end_offset|**int**|Indica, in byte, a partire da 0, la posizione finale dell'istruzione attualmente in esecuzione per il batch o l'oggetto permanente attualmente in esecuzione. Può essere usato insieme a `sql_handle`, `statement_start_offset`e alla `sys.dm_exec_sql_text` funzione a gestione dinamica per recuperare l'istruzione attualmente in esecuzione per la richiesta. Ammette i valori Null.|  
+|statement_start_offset|**int**|Indica, in byte, a partire da 0, la posizione iniziale dell'istruzione attualmente in esecuzione per il batch o l'oggetto permanente attualmente in esecuzione. Può essere usato insieme a `sql_handle` , `statement_end_offset` e alla `sys.dm_exec_sql_text` funzione a gestione dinamica per recuperare l'istruzione attualmente in esecuzione per la richiesta. Ammette i valori Null.|  
+|statement_end_offset|**int**|Indica, in byte, a partire da 0, la posizione finale dell'istruzione attualmente in esecuzione per il batch o l'oggetto permanente attualmente in esecuzione. Può essere usato insieme a `sql_handle` , `statement_start_offset` e alla `sys.dm_exec_sql_text` funzione a gestione dinamica per recuperare l'istruzione attualmente in esecuzione per la richiesta. Ammette i valori Null.|  
 |plan_handle|**varbinary(64)**|Token che identifica in modo univoco un piano di esecuzione della query per un batch attualmente in esecuzione. Ammette i valori Null.|  
 |database_id|**smallint**|ID del database utilizzato per eseguire la richiesta. Non ammette i valori Null.|  
 |user_id|**int**|ID dell'utente che ha inviato la richiesta. Non ammette i valori Null.|  
@@ -98,13 +98,16 @@ Restituisce informazioni su ogni richiesta in esecuzione in [!INCLUDE[ssNoVersio
 |page_server_reads|**bigint**|**Si applica a**: iperscalabilità del database SQL di Azure<br /><br /> Numero di letture di pagine del server eseguite dalla richiesta. Non ammette i valori Null.|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>Osservazioni 
+## <a name="remarks"></a>Commenti 
 Per eseguire codice esterno a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio stored procedure estese e query distribuite, è necessario che un thread venga eseguito esternamente al controllo dell'utilità di pianificazione in modalità non preemptive. A tale scopo, un thread di lavoro passa alla modalità preemptive. I valori temporali restituiti da questa DMW non includono il tempo trascorso in modalità preemptive.
 
 Quando si eseguono richieste parallele in [modalità riga](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegna un thread di lavoro per coordinare i thread di lavoro responsabili del completamento delle attività ad essi assegnati. In questa DMV solo il thread coordinatore è visibile per la richiesta. Le colonne **Read**, **writes**, **logical_reads**e **ROW_COUNT** **non vengono aggiornate** per il thread coordinatore. Le colonne **wait_type**, **wait_time**, **last_wait_type**, **wait_resource**e **granted_query_memory** vengono **aggiornate solo** per il thread coordinatore. Per altre informazioni, vedere [Guida sull'architettura dei thread e delle attività](../../relational-databases/thread-and-task-architecture-guide.md).
 
 ## <a name="permissions"></a>Autorizzazioni
-Se l'utente dispone `VIEW SERVER STATE` dell'autorizzazione per il server, l'utente visualizzerà tutte le sessioni in esecuzione nell'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di. in caso contrario, l'utente visualizzerà solo la sessione corrente. `VIEW SERVER STATE`non può essere concesso nel database SQL di `sys.dm_exec_requests` Azure, pertanto è sempre limitato alla connessione corrente.
+Se l'utente dispone dell' `VIEW SERVER STATE` autorizzazione per il server, l'utente visualizzerà tutte le sessioni in esecuzione nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . in caso contrario, l'utente visualizzerà solo la sessione corrente. `VIEW SERVER STATE`non può essere concesso nel database SQL di Azure `sys.dm_exec_requests` , pertanto è sempre limitato alla connessione corrente.
+
+Negli scenari always-on, se la replica secondaria è impostata **solo per finalità di lettura**, la connessione al database secondario deve specificare la finalità dell'applicazione nei parametri della stringa di connessione aggiungendo `applicationintent=readonly` . In caso contrario, il controllo di accesso per `sys.dm_exec_requests` non passerà per i database nel gruppo di disponibilità, anche se `VIEW SERVER STATE` è presente l'autorizzazione.
+
   
 ## <a name="examples"></a>Esempi  
   
@@ -126,14 +129,14 @@ GO
 
 ### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>B. Ricerca di tutti i blocchi contenuti in un batch in esecuzione
 
-Nell'esempio seguente viene eseguita una query su **sys. dm_exec_requests** per individuare il batch `transaction_id` interessante e copiarne l'oggetto dall'output.
+Nell'esempio seguente viene eseguita una query su **sys. dm_exec_requests** per individuare il batch interessante e copiarne l'oggetto `transaction_id` dall'output.
 
 ```sql
 SELECT * FROM sys.dm_exec_requests;  
 GO
 ```
 
-Quindi, per trovare informazioni sul blocco, usare l' `transaction_id` oggetto copiato con la funzione di sistema **sys. dm_tran_locks**.  
+Quindi, per trovare informazioni sul blocco, usare l'oggetto copiato `transaction_id` con la funzione di sistema **sys. dm_tran_locks**.  
 
 ```sql
 SELECT * FROM sys.dm_tran_locks
@@ -193,4 +196,4 @@ GO
 [sys. dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)      
 [SQL Server, oggetto Statistiche SQL](../../relational-databases/performance-monitor/sql-server-sql-statistics-object.md)     
 [Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md#DOP)       
-[Guida all'architettura di thread e attività](../../relational-databases/thread-and-task-architecture-guide.md)    
+[Guida sull'architettura dei thread e delle attività](../../relational-databases/thread-and-task-architecture-guide.md)    

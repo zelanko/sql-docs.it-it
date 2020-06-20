@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 917abf00789cfca75ee6edb52ffef07832bfe981
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e6261e223513c4a33362ef41d6977c04bcfb430a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783034"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935322"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>Abilitare o disabilitare un protocollo di rete del server
   Tutti i protocolli di rete vengono installati dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ma è possibile abilitarli o meno. In questo argomento viene descritto come abilitare o disabilitare un protocollo di rete del server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o PowerShell. Per rendere effettive le modifiche, è necessario arrestare e riavviare il [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
@@ -50,13 +49,13 @@ ms.locfileid: "72783034"
   
 1.  Nel riquadro della console di Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] espandere **Configurazione di rete SQL Server**.  
   
-2.  Nel riquadro della console fare clic su **protocolli per** * \<nome istanza>*.  
+2.  Nel riquadro della console fare clic su **protocolli per** *\<instance name>* .  
   
 3.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse sul protocollo da modificare e quindi scegliere **Abilita** o **Disabilita**.  
   
 4.  Nel riquadro della console fare clic su **Servizi di SQL Server**.  
   
-5.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server (***\<nome istanza>***)**, quindi scegliere **Riavvia** per arrestare e riavviare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+5.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server ( ***\<instance name>*** )**, quindi scegliere **Riavvia**per arrestare e riavviare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servizio.  
   
 ##  <a name="using-sql-server-powershell"></a><a name="PowerShellProcedure"></a> Utilizzo di SQL Server PowerShell  
   

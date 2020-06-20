@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b6e399cf6c145f36febd9b32ae7a84c54741bb43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4298cfec7478560c2cef01e7d3c6df577a2a8f16
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62893596"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966266"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Scelta origine dati (Importazione/Esportazione guidata SQL Server)
   Utilizzare la pagina **scegliere un'origine dati** per specificare l'origine dei dati che si desidera copiare.  
@@ -28,7 +27,7 @@ ms.locfileid: "62893596"
   
 ## <a name="options"></a>Opzioni  
  **Origine dati**  
- Selezionare il provider di dati corrispondente al formato di archiviazione dell'origine. Potrebbero essere disponibili più provider per l'origine dati. Ad esempio, con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, il .NET Framework provider di dati per SQL Server o il Provider Microsoft OLE DB per SQL Server.  
+ Selezionare il provider di dati corrispondente al formato di archiviazione dell'origine. Potrebbero essere disponibili più provider per l'origine dati. Ad esempio, con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client, il .NET Framework provider di dati per SQL Server o il Provider Microsoft OLE DB per SQL Server.  
   
  La proprietà **origine dati** presenta un numero variabile di opzioni che dipendono dai provider installati nel computer. Nelle tabelle seguenti vengono elencate le opzioni disponibili per alcune destinazioni utilizzate frequentemente. Per altri provider, consultare la documentazione specifica.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "62893596"
  **Database**  
  Consente di selezionare uno dei database nell'elenco nell'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **Aggiorna**  
+ **Refresh** (Aggiornamento)  
  Consente di ripristinare l'elenco dei database disponibili facendo clic su **Aggiorna**.  
   
 ### <a name="data-source--net-framework-data-provider-for-sql-server"></a>Origine dati = Provider di dati .NET Framework per SQL Server  
@@ -80,10 +79,10 @@ ms.locfileid: "62893596"
 ### <a name="data-source--microsoft-excel"></a>Origine dati = Microsoft Excel  
   
 > [!NOTE]  
->  Selezionare **Microsoft Excel** solo se si desidera connettersi a un'origine dati che utilizza Excel 2003 o versioni precedenti. Per connettersi a un'origine dati che utilizza Excel 2007, selezionare **Microsoft Office 12,0 accesso motore di database Provider OLE DB**, fare clic su **Proprietà**e quindi nella **scheda tutte** della finestra di dialogo **proprietà di data link** immettere `Excel 12.0` come valore per **proprietà estese**.  
+>  Selezionare **Microsoft Excel** solo se si desidera connettersi a un'origine dati che utilizza Excel 2003 o versioni precedenti. Per connettersi a un'origine dati che utilizza Excel 2007, selezionare **Microsoft Office 12,0 accesso motore di database Provider OLE DB**, fare clic su **Proprietà**e quindi nella scheda **tutte** della finestra di dialogo **proprietà di data link** immettere `Excel 12.0` come valore per **proprietà estese**.  
   
  **Percorso file di Excel**  
- Consente di specificare il percorso e il nome file del foglio di calcolo dal quale si importano i dati. Ad esempio, **C:\MyData.xls, \\\Sales\Database\Northwind.xls**. In alternativa, fare clic su **Sfoglia**.  
+ Consente di specificare il percorso e il nome file del foglio di calcolo dal quale si importano i dati. Ad esempio, **C:\MyData.xls \\\Sales\Database\Northwind.xls**. In alternativa, fare clic su **Sfoglia**.  
   
  **Sfoglia**  
  Consente di individuare il foglio di calcolo tramite la finestra di dialogo **Apri**.  

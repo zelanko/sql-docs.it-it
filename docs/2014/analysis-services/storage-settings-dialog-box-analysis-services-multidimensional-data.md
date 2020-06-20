@@ -12,18 +12,17 @@ f1_keywords:
 ms.assetid: 80c41c71-226c-45fe-b9cf-af824b592fe1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ecd796d2fb2bc37c4c2ad6d9fac00ef4258ec038
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dc3e6d627bf7e3072d8b6ff40a644773474ba4cb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068033"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940228"
 ---
 # <a name="storage-settings-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Impostazioni di archiviazione (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Impostazioni di archiviazione** di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per impostare la memorizzazione nella cache attiva, la modalità di archiviazione e le impostazioni di notifica per una dimensione, un cubo, un gruppo di misure o una partizione. Per visualizzare la finestra di dialogo **Impostazioni di archiviazione** di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] è possibile:  
   
--   Fare clic sul pulsante con i puntini di sospensione ( `ProactiveCaching` **...**) per il valore della proprietà di una dimensione, un cubo, un gruppo [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]di misure o una partizione nella finestra **proprietà** di.  
+-   Fare clic sul pulsante con i puntini di sospensione (**...**) per il `ProactiveCaching` valore della proprietà di una dimensione, un cubo, un gruppo di misure o una partizione nella finestra **proprietà** di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .  
   
 -   Espandere un gruppo di misure nella scheda **Partizioni** di **Progettazione cubi** e fare clic su **Impostazioni di archiviazione**.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "66068033"
 |**Impostazione personalizzata**|Selezionare questa opzione per impostare in modo esplicito la modalità di archiviazione, la memorizzazione nella cache attiva e le opzioni di notifica.||  
 |**Opzioni**|Fare clic su questo pulsante per visualizzare la finestra di dialogo **Opzioni di archiviazione** e impostare in modo esplicito la modalità di archiviazione, la memorizzazione nella cache attiva e le opzioni di notifica. Per altre informazioni sulla finestra di dialogo **Opzioni di archiviazione**, vedere [Finestra di dialogo Opzioni di archiviazione &#40;Analysis Services - Dati multidimensionali&#41;](storage-options-dialog-box-analysis-services-multidimensional-data.md).||  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Caching attivo &#40;partizioni&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
  [Archiviazione di cubi &#40;Analysis Services-Dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md)  

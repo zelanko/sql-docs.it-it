@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7814d099-81ec-4fb8-894a-729cdbb5015a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3700c706aff2a84eaedb89022c1384ce19f9ea68
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 80d82513b22d2a50aedb37955a210dd33746db86
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702975"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014894"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>Utilizzo di query XPath in SQLXML 4.0
   Il supporto in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] degli schemi XSD con annotazioni consente di creare viste XML dei dati relazionali archiviati nel database. È possibile utilizzare un subset del linguaggio XPath per eseguire una query sulle viste XML create da uno schema XSD con annotazioni.  

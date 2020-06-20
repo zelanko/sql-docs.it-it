@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e46610823432efde0cc757e3dff317227b7548ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f08d49348fd25593f27a87f2b0123f7ce43e35b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032103"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998341"
 ---
 # <a name="monitor-cpu-usage"></a>Monitorare l'utilizzo della CPU
   È opportuno monitorare periodicamente un'istanza di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per verificare che i valori di utilizzo della CPU rientrino nei normali intervalli. Se la frequenza di utilizzo della CPU è costantemente elevata può essere necessario eseguire un aggiornamento della CPU o aggiungere più processori. Una valore costantemente elevato di utilizzo della CPU può inoltre indicare la presenza di un'applicazione non progettata o ottimizzata correttamente. L'ottimizzazione dell'applicazione potrebbe ridurre l'utilizzo della CPU.  

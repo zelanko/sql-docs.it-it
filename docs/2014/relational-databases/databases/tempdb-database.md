@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7150ca05e536214d43d4992ed1e7f79138ac2be9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916883"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965691"
 ---
 # <a name="tempdb-database"></a>Database tempdb
   Il database di sistema **tempdb** è una risorsa globale disponibile a tutti gli utenti connessi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene usata per contenere gli elementi seguenti:  
@@ -43,7 +42,7 @@ ms.locfileid: "62916883"
 |Dati primari|tempdev|tempdb.mdf|Crescita automatica del 10% fino a quando il disco risulta pieno|  
 |File di log|templog|templog.ldf|Aumento automatico delle dimensioni del 10% fino a un massimo di 2 TB|  
   
- Le dimensioni di **tempdb** possono influire sulle prestazioni di un sistema. Se, ad esempio, le dimensioni di **tempdb** sono troppo ridotte, è possibile che l'elaborazione del sistema sia troppo occupata con l'aumento automatico del database per supportare i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]requisiti del carico di lavoro ogni volta che si avvia. Per evitare questo overhead, è possibile aumentare le dimensioni di **tempdb**.  
+ Le dimensioni di **tempdb** possono influire sulle prestazioni di un sistema. Se, ad esempio, le dimensioni di **tempdb** sono troppo ridotte, è possibile che l'elaborazione del sistema sia troppo occupata con l'aumento automatico del database per supportare i requisiti del carico di lavoro ogni volta che si avvia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per evitare questo overhead, è possibile aumentare le dimensioni di **tempdb**.  
   
 ## <a name="performance-improvements-in-tempdb"></a>Miglioramenti delle prestazioni in tempdb  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]le prestazioni di **tempdb** sono state migliorate come segue:  
@@ -142,7 +141,7 @@ ms.locfileid: "62916883"
   
  [Spostare file del database](move-database-files.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzo di tempdb in SQL Server 2005](https://chresandro.wordpress.com/2014/09/29/working-with-tempdb-in-sql-server-2005/)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 88c31b02-f44c-4a14-be8b-437f2097de12
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 59e6a79d868e4bfa0ec0af7190d54a8bc13bf395
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7795dfdadb8fb3bbaa1b55dcd5c962d24a7ba29
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63136464"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068310"
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>Limitare le dimensioni di file di traccia e tabelle
   Le dimensioni dei risultati di Traccia SQL variano a seconda delle classi di evento incluse nella traccia e della modalità di utilizzo di [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Se si tracciano classi di evento che si verificano di frequente, è possibile ridurre al minimo la quantità di dati raccolti dalla traccia impostando le dimensioni massime del file o il numero massimo di righe. La specifica delle dimensioni massime del file o del numero massimo di righe consente di garantire che il file o la tabella di traccia non raggiungano dimensioni superiori al limite specificato.  

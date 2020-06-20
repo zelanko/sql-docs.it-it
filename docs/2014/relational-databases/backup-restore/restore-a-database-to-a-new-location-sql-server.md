@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7a50004cfb39b93ecd0c144fb0d92d37545c83ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 89b42f439b5622074327506b9f2ca2b2358cd12f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921187"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957252"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Ripristino di un database in una nuova posizione (SQL Server)
   In questo argomento viene descritto come ripristinare un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un nuovo percorso e facoltativamente rinominare il database, in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. È possibile spostare un database in un nuovo percorso di directory o crearne una copia nella stessa istanza server o in una diversa.  
@@ -94,7 +93,7 @@ ms.locfileid: "62921187"
   
     1.  **Dispositivo**  
   
-         Fare clic sul pulsante Sfoglia (**..**.) per aprire la finestra di dialogo **Seleziona dispositivi di backup** . Nella casella **Tipi di supporti di backup** selezionare uno dei tipi di dispositivi elencati. Per selezionare uno o più dispositivi per la casella **Supporti di backup** , fare clic su **Aggiungi**.  
+         Fare clic sul pulsante Sfoglia ( **...** ) per aprire la finestra di dialogo **Seleziona dispositivi di backup** . Nella casella **Tipi di supporti di backup** selezionare uno dei tipi di dispositivi elencati. Per selezionare uno o più dispositivi per la casella **Supporti di backup** , fare clic su **Aggiungi**.  
   
          Dopo avere aggiunto i dispositivi desiderati nella casella di riepilogo **Dispositivi di backup** , fare clic su **OK** per tornare alla pagina **Generale** .  
   
@@ -122,7 +121,7 @@ ms.locfileid: "62921187"
   
      RESTORE FILELISTONLY FROM *<dispositivo_backup>* WITH FILE = *backup_set_file_number*  
   
-     Dove *backup_set_file_number* indica la posizione del backup nel set di supporti. È possibile ottenere la posizione di un set di backup utilizzando l'istruzione [RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql) . Per ulteriori informazioni, vedere "specifica di un set di backup" in [argomenti di ripristino &#40;&#41;Transact-SQL ](/sql/t-sql/statements/restore-statements-arguments-transact-sql).  
+     Dove *backup_set_file_number* indica la posizione del backup nel set di supporti. È possibile ottenere la posizione di un set di backup utilizzando l'istruzione [RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql) . Per altre informazioni, vedere "Specifica di un set di backup" in [Argomenti RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql).  
   
      Questa istruzione supporta inoltre alcune opzioni WITH. Per altre informazioni, vedere [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql).  
   
@@ -159,10 +158,10 @@ ms.locfileid: "62921187"
     > [!NOTE]  
     >  Se il database viene ripristinato in una diversa istanza del server, è possibile utilizzare il nome di database originale anziché uno nuovo.  
   
-     *backup_device* [ `,`... *n* ]  
+     *backup_device* [ `,` ...*n* ]  
      Specifica un elenco di dispositivi di backup, da 1 a 64, delimitati da virgole da cui deve essere ripristinato il backup del database. È possibile specificare un dispositivo di backup fisico oppure un dispositivo di backup logico corrispondente, se già definito. Per specificare un dispositivo di backup fisico, utilizzare l'opzione DISK o TAPE:  
   
-     { DISK | TAPE } `=`*physical_backup_device_name*  
+     { DISK | TAPE } `=` *physical_backup_device_name*  
   
      Per altre informazioni, vedere [Dispositivi di backup &#40;SQL Server&#41;](backup-devices-sql-server.md).  
   
@@ -178,12 +177,12 @@ ms.locfileid: "62921187"
   
      Per altre informazioni, vedere "Specifica di un set di backup" in [Argomenti RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql).  
   
-     Sposta **'*`logical_file_name_in_backup`*'** in **'*`operating_system_file_name`*'** [ `,`... *n* ]  
+     Sposta **' *`logical_file_name_in_backup`* '** in **' *`operating_system_file_name`* '** [ `,` ... *n* ]  
      Specifica che il file di dati o di log specificato da *logical_file_name_in_backup* deve essere ripristinato nel percorso specificato da *operating_system_file_name*. Specificare un'istruzione MOVE per ogni file logico che si desidera ripristinare dal set di backup in un nuovo percorso.  
   
     |Opzione|Descrizione|  
     |------------|-----------------|  
-    |*logical_file_name_in_backup*|Specifica il nome logico di un file di dati o di log da includere nel set di backup. Il nome di file logico di un file di dati o di log in un set di backup corrisponde al relativo nome logico nel database al momento della creazione del set di backup.<br /><br /> Nota: per ottenere un elenco dei file logici dal set di backup, usare [RESTORE FILELISTONLY](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql).|  
+    |*logical_file_name_in_backup*|Specifica il nome logico di un file di dati o di log da includere nel set di backup. Il nome di file logico di un file di dati o di log in un set di backup corrisponde al relativo nome logico nel database al momento della creazione del set di backup.<br /><br /> Nota: per ottenere un elenco dei file logici del set di backup, usare [RESTORE FILELISTONLY](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql).|  
     |*operating_system_file_name*|Specifica un nuovo percorso per il file indicato da *logical_file_name_in_backup*. Il file verrà ripristinato a questo percorso.<br /><br /> Facoltativamente, *operating_system_file_name* specifica un nuovo nome per il file ripristinato. Questo passaggio è necessario se si crea una copia di un database esistente nella stessa istanza del server.|  
     |*n*|Segnaposto tramite cui viene indicata la possibilità di specificare istruzioni MOVE aggiuntive.|  
   
@@ -191,7 +190,7 @@ ms.locfileid: "62921187"
  In questo esempio viene creato un nuovo database denominato `MyAdvWorks` ripristinando un backup del database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] in cui sono inclusi due file: [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Data e [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Log. In questo database viene utilizzato il modello di recupero con registrazione minima. Il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] è già presente nell'istanza del server, pertanto i file del backup devono essere ripristinati in un nuovo percorso. L'istruzione RESTORE FILELISTONLY viene utilizzata per stabilire il numero e i nomi dei file del database da ripristinare. Il backup del database corrisponde al primo set disponibile sul dispositivo.  
   
 > [!NOTE]  
->  Gli esempi di backup e di ripristino del log delle transazioni, inclusi i ripristini temporizzati, utilizzano il database `MyAdvWorks_FullRM` creato da [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] esattamente come nell'esempio seguente basato su `MyAdvWorks` . Tuttavia, è necessario modificare il database `MyAdvWorks_FullRM` risultante per utilizzare il modello di recupero con registrazione completa tramite la seguente istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]: ALTER DATABASE <nome_database> SET RECOVERY FULL.  
+>  Gli esempi di backup e di ripristino del log delle transazioni, inclusi i ripristini temporizzati, utilizzano il database `MyAdvWorks_FullRM` creato da [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] esattamente come nell'esempio seguente basato su `MyAdvWorks` . Per usare il modello di recupero con registrazione completa è tuttavia necessario modificare il database `MyAdvWorks_FullRM` risultante usando l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente: ALTER DATABASE <nome_database> SET RECOVERY FULL.  
   
 ```sql  
 USE master;  
@@ -222,7 +221,7 @@ GO
   
 -   [Ripristinare un backup del log delle transazioni &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestire i metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Copiare database tramite backup e ripristino](../databases/copy-databases-with-backup-and-restore.md)  

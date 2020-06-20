@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 583e0f92f96c153fdeb0ade57fcdfa1d27578350
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eadb27485ac92aa10b22ad3f59cf9ac6029a851e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061993"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926142"
 ---
 # <a name="add-delete-change-scope-of-user-defined-variable-in-a-package"></a>Aggiungere, eliminare o modificare l'ambito di una variabile definita dall'utente in un pacchetto
   In queste procedure viene descritto come aggiungere, eliminare e modificare l'ambito di una variabile definita dall'utente in un pacchetto tramite la finestra **Variabili** .  
@@ -82,7 +81,7 @@ ms.locfileid: "66061993"
   
 6.  Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services &#40;variabili&#41; SSIS](integration-services-ssis-variables.md)   
  [Usare variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)   
  [Impostare le proprietà di una variabile definita dall'utente](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)   

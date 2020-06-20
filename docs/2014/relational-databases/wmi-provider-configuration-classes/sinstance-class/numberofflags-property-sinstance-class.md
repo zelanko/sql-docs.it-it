@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: b62005f8-9af3-4fc8-9344-a1ccdb713053
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6fe7d2bf1ef6b8932704242e94c377a2b11c0619
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c4529d7a7d52687c5ea648a5e401cc309ea1f0c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63137239"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061390"
 ---
 # <a name="numberofflags-property-sinstance-class"></a>Proprietà NumberOfFlags (classe SInstance)
-  Ottiene il numero di flag per l'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Ottiene il numero di flag per l'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  Oggetto della [classe SInstance](sinstance-class.md) che rappresenta un'istanza del server.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
@@ -45,7 +44,7 @@ object
   
 ## <a name="remarks"></a>Osservazioni  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurazione di protocolli di rete server e di librerie di rete](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5dcbf0aae9c96e788fdbf9544114d226fa8f0bfd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1a0bc32040fc90e5f73faa708f314722bc8f3b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637850"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036996"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
   I sistemi firewall contribuiscono a impedire l'accesso non autorizzato alle risorse del computer. Se un firewall viene abilitato ma non configurato correttamente, i tentativi di connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbero essere bloccati.  
@@ -159,7 +158,7 @@ ms.locfileid: "73637850"
   
 1.  Nella scheda **Eccezioni** dell'elemento **Windows Firewall** nel Pannello di controllo fare clic su **Aggiungi programma**.  
   
-2.  Individuare il percorso dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza di che si desidera consentire attraverso il firewall, ad esempio C:\Programmi\Microsoft **SQL Server\MSSQL12. <instance_name> \MSSQL\Binn**, selezionare **sqlservr. exe**, quindi fare clic su **Apri**.  
+2.  Individuare il percorso dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che si desidera consentire attraverso il firewall, ad esempio C:\Programmi\Microsoft **SQL Server\MSSQL12. <instance_name> \MSSQL\Binn**, selezionare **sqlservr.exe**e quindi fare clic su **Apri**.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

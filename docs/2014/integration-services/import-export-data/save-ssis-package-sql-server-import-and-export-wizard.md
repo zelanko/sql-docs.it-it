@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6af26cafd4f8dd9bf874ae7860c4f796bef48ae1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f74d9089bf6c2a87edaeaee80c95757982f6c2a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892765"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966211"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Salva pacchetto SSIS (Importazione/Esportazione guidata SQL Server)
-  Utilizzare la **pagina Salva pacchetto SSIS** per assegnare un nome, una descrizione e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un salvataggio[!INCLUDE[ssIS](../../includes/ssis-md.md)]di un pacchetto Integration Services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` () nel database o in un file con estensione dtsx.  
+  Utilizzare la pagina **Salva pacchetto SSIS** per assegnare un nome, una descrizione e un salvataggio di un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pacchetto Integration Services ( [!INCLUDE[ssIS](../../includes/ssis-md.md)] ) nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` database o in un file con estensione dtsx.  
   
 > [!NOTE]  
 >  In [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] l'opzione per salvare il pacchetto creato con la procedura guidata non è disponibile.  
@@ -64,7 +63,7 @@ ms.locfileid: "62892765"
  **Sfoglia**  
  Quando è stata selezionata una destinazione file, passare al file di destinazione utilizzando la finestra di dialogo **Salva pacchetto** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Salvataggio di pacchetti](../save-packages.md)  
   
   

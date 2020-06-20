@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 645aee1374f7dbf3c290500bb35ca47115983670
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fde3029cb170a45852e08b8073f9a66bb6179658
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809569"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935003"
 ---
 # <a name="server-configuration-options-sql-server"></a>Opzioni di configurazione del server (SQL Server)
   È possibile gestire e ottimizzare le risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite le opzioni di configurazione, utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oppure la stored procedure di sistema sp_configure. Le opzioni di configurazione del server utilizzate più di frequente sono disponibili in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Tramite la stored procedure sp_configure è possibile accedere a tutte le opzioni di configurazione. Prima di impostare tali opzioni è importante valutare con attenzione i possibili effetti sul sistema. Per altre informazioni, vedere [Visualizzare o modificare le proprietà del server &#40;SQL Server&#41;](view-or-change-server-properties-sql-server.md).  
@@ -64,7 +63,7 @@ ms.locfileid: "62809569"
   
 -   SC = opzioni a configurazione automatica.  
   
-    |Opzione di configurazione|Valore minimo|Valore massimo|Impostazione predefinita|  
+    |Opzione di configurazione|Valore minimo|Valore massimo|Predefinito|  
     |--------------------------|-------------------|-------------------|-------------|  
     |[access check cache bucket count](access-check-cache-server-configuration-options.md) (A)|0|16384|0|  
     |[access check cache quota](access-check-cache-server-configuration-options.md) (A)|0|2147483647|0|  
@@ -105,7 +104,7 @@ ms.locfileid: "62809569"
     |[max full-text crawl range](max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[max server memory](server-memory-server-configuration-options.md) (A, SC)|16|2147483647|2147483647|  
     |[max text repl size](configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[max worker threads](configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> (1024 è il valore massimo consigliato per i sistemi operativi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a 32 bit, 2048 per le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a 64 bit).|0<br /><br /> Zero configura automaticamente il numero massimo di thread di lavoro in base al numero di processori, usando la formula (256 + (*\<processori>* -4) * 8) per 32 bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e due volte per 64 bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+    |[max worker threads](configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> (1024 è il valore massimo consigliato per i sistemi operativi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a 32 bit, 2048 per le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a 64 bit).|0<br /><br /> Zero consente di configurare automaticamente il numero massimo di thread di lavoro in base al numero di processori, usando la formula (256 + ( *\<processors>* -4) * 8) per 32 bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e due volte per i 64 bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
     |[media retention](configure-the-media-retention-server-configuration-option.md) (A, RR)|0|365|0|  
     |[min memory per query](configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](server-memory-server-configuration-options.md) (A, SC)|0|2147483647|0|  
@@ -137,7 +136,7 @@ ms.locfileid: "62809569"
     |[user options](configure-the-user-options-server-configuration-option.md)|0|32767|0|  
     |[xp_cmdshell](xp-cmdshell-server-configuration-option.md) (A)|0|1|0|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)  
   

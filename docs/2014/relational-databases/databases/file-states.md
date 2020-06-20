@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: b426474d-8954-4df0-b78b-887becfbe8d6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cc37fbade038b39d6d05cb5b51ecc3e8ba405e2a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7cad94527d9191609a6920b5dfa200a98cd8bbd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871574"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966001"
 ---
 # <a name="file-states"></a>Stati dei file
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]lo stato di un file di database viene gestito in modo indipendente dallo stato del database. Lo stato di un file è sempre specifico, ad esempio ONLINE o OFFLINE. Per visualizzare lo stato corrente di un file, usare la vista del catalogo [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql) o [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) . Se il database è offline, lo stato dei file è indicato nella vista del catalogo [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql) .  
@@ -46,9 +45,9 @@ ms.locfileid: "62871574"
 |State|Definizione|  
 |-----------|----------------|  
 |ONLINE|Il file è disponibile per tutte le operazioni. I file del filegroup primario sono sempre online se il database stesso è online. Se un file del filegroup primario non è online, il database non sarà online e gli stati dei file secondari risulteranno indefiniti.|  
-|OFFLINE|Il file non è accessibile e potrebbe non essere presente sul disco. I file vengono portati offline a seguito di un'azione esplicita da parte dell'utente e rimangono tali finché l'utente non interviene.<br /><br /> ** \* Attenzione \* \* ** Un file deve essere impostato offline solo quando il file è danneggiato, ma può essere ripristinato. Per riportare online un file impostato su offline, è necessario ripristinare il file dal backup. Per altre informazioni sul ripristino di un singolo file, vedere [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).|  
+|OFFLINE|Il file non è accessibile e potrebbe non essere presente sul disco. I file vengono portati offline a seguito di un'azione esplicita da parte dell'utente e rimangono tali finché l'utente non interviene.<br /><br /> Attenzione un file deve essere impostato come offline solo quando il file è danneggiato, ma può essere ripristinato. ** \* \* \* \* ** Per riportare online un file impostato su offline, è necessario ripristinare il file dal backup. Per altre informazioni sul ripristino di un singolo file, vedere [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).|  
 |RESTORING|Il file è in fase di ripristino. Questo stato indica che è stato eseguito un comando di ripristino che interessa l'intero file e non solo una pagina e rimarrà attivo fino al completamento dell'operazione di ripristino e di recupero del file.|  
-|RECOVERY PENDING|Il recupero del file è stato posticipato. Questo stato viene attivato automaticamente durante un processo di ripristino a fasi in cui il file non viene ripristinato e recuperato. Per risolvere l'errore e consentire il completamento del processo di recupero, è necessario un ulteriore intervento da parte dell'utente. Per ulteriori informazioni, vedere [ripristini a fasi &#40;SQL Server&#41;](../backup-restore/piecemeal-restores-sql-server.md).|  
+|RECOVERY PENDING|Il recupero del file è stato posticipato. Questo stato viene attivato automaticamente durante un processo di ripristino a fasi in cui il file non viene ripristinato e recuperato. Per risolvere l'errore e consentire il completamento del processo di recupero, è necessario un ulteriore intervento da parte dell'utente. Per altre informazioni, vedere [Ripristini a fasi &#40;SQL Server&#41;](../backup-restore/piecemeal-restores-sql-server.md).|  
 |SUSPECT|Non è stato possibile recuperare il file durante un processo di ripristino online. Se il file è incluso nel filegroup primario, anche il database viene contrassegnato come suspect, ovvero sospetto. In caso contrario, solo il file sarà sospetto mentre il database risulterà ancora online.<br /><br /> Lo stato suspect rimarrà attivo finché il file non viene reso disponibile mediante uno dei metodi seguenti:<br /><br /> Ripristino e recupero<br /><br /> DBCC CHECKDB con REPAIR_ALLOW_DATA_LOSS|  
 |DEFUNCT|Il file è stato eliminato quando non era online. Lo stato di tutti i file di un filegroup è defunct quando si rimuove un filegroup offline.|  
   

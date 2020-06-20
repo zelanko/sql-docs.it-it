@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2b4d88d0-62be-45c0-bea8-c5900d553d31
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f2833f1f342aa212b73611d257b8e29606a14cce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 09910ec1da0b6d157a3a0a53953f2650a924c314
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662982"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053020"
 ---
 # <a name="deprecation-final-support-event-class"></a>Deprecation Final Support - classe di evento
   La classe di evento **Deprecation Final Support** viene generata quando si utilizza una caratteristica che verrà rimossa dalla successiva versione principale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per garantire la massima durata delle applicazioni, non utilizzare caratteristiche da cui viene generata la classe di evento **Deprecation Announcement** o **Deprecation Final Support** . Modificare le applicazioni che utilizzano le caratteristiche deprecate finali il prima possibile.  
@@ -55,7 +54,7 @@ ms.locfileid: "62662982"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|`bigint`|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Classe di evento Deprecation annuncio](deprecation-announcement-event-class.md)   
  [Funzionalità del Motore di database deprecate in SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  

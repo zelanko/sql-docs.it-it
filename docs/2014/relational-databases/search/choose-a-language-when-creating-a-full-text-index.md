@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5f045933735d2a26b1e9007868f96680bef4fc47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b514820ad64cbf17df209cbda552e4c5182b75fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012727"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997778"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Scelta di una lingua durante la creazione di un indice full-text
   Quando si crea un indice full-text, è necessario specificare una lingua a livello di colonna per la colonna indicizzata. Il [word breaker e gli stemmer](configure-and-manage-word-breakers-and-stemmers-for-search.md) della lingua specificata verranno usati dalle query full-text sulla colonna. Quando si crea un indice full-text, è necessario considerare alcuni aspetti relativi alla scelta della lingua delle colonne. Tali considerazioni riguardano il modo in cui il testo viene suddiviso in token e quindi indicizzato dal motore di ricerca full-text.  
@@ -49,7 +48,7 @@ ms.locfileid: "66012727"
   
 -   Security  
   
-     I nuovi word breaker sono abilitati per impostazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] predefinita in grazie ai miglioramenti della sicurezza nei componenti linguistici. È vivamente consigliabile che i componenti esterni quali word breaker e filtri vengano firmati per migliorare la sicurezza e l'affidabilità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. È possibile configurare la funzionalità full-text per verificare che questi componenti siano firmati come descritto di seguito:  
+     I nuovi word breaker sono abilitati per impostazione predefinita in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] grazie ai miglioramenti della sicurezza nei componenti linguistici. È vivamente consigliabile che i componenti esterni quali word breaker e filtri vengano firmati per migliorare la sicurezza e l'affidabilità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. È possibile configurare la funzionalità full-text per verificare che questi componenti siano firmati come descritto di seguito:  
   
     ```  
     EXEC sp_fulltext_service 'verify_signature';  
@@ -61,7 +60,7 @@ ms.locfileid: "66012727"
   
 -   I word breaker, disponibili per numerose lingue, sono inclusi direttamente in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e abilitati per impostazione predefinita.  
   
- Per un elenco delle lingue per le quali [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sono inclusi un Word breaker e stemmer, vedere [sys. Fulltext_languages &#40;&#41;Transact-SQL ](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  
+ Per un elenco delle lingue per le quali sono [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclusi un Word breaker e stemmer, vedere [sys. fulltext_languages &#40;&#41;Transact-SQL ](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  
   
 
   
@@ -108,7 +107,7 @@ ms.locfileid: "66012727"
 ##  <a name="effect-of-column-type-on-full-text-search"></a><a name="type"></a> Effetto del tipo di colonna sulla ricerca full-text  
  Un'altra considerazione relativa alla scelta della lingua riguarda la modalità di rappresentazione dei dati. Ai dati non archiviati nella colonna `varbinary(max)` non vengono applicati filtri speciali. Il testo, al contrario, viene normalmente passato tramite il componente per l'esecuzione del word breaking così com'è.  
   
- I word breaker, inoltre, vengono progettati soprattutto per elaborare il testo scritto. Ne consegue che, se il testo include un tipo qualsiasi di markup (ad esempio HTML) le operazioni di indicizzazione e ricerca potrebbero non essere sufficientemente accurate dal punto di vista linguistico. In tal caso, sono disponibili due opzioni: il metodo preferito consiste semplicemente nell'archiviare i dati di testo `varbinary(max)` nella colonna e indicare il tipo di documento in modo che possa essere filtrato. Se questa operazione non è possibile, valutare la possibilità di utilizzare il word breaker neutro ed eventualmente di aggiungere dati di markup, ad esempio "br" nel codice HTML, agli elenchi delle parole non significative.  
+ I word breaker, inoltre, vengono progettati soprattutto per elaborare il testo scritto. Ne consegue che, se il testo include un tipo qualsiasi di markup (ad esempio HTML) le operazioni di indicizzazione e ricerca potrebbero non essere sufficientemente accurate dal punto di vista linguistico. In tal caso, sono disponibili due opzioni: il metodo preferito consiste semplicemente nell'archiviare i dati di testo nella `varbinary(max)` colonna e indicare il tipo di documento in modo che possa essere filtrato. Se questa operazione non è possibile, valutare la possibilità di utilizzare il word breaker neutro ed eventualmente di aggiungere dati di markup, ad esempio "br" nel codice HTML, agli elenchi delle parole non significative.  
   
 > [!NOTE]  
 >  Lo stemming basato sulla lingua non viene eseguito se si specifica la lingua neutra.  

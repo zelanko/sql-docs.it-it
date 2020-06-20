@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 24624a5071bad5403afc15259d97754a7feffdcf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b0f6a4cbb18ad1c746b98c3aae9643127a9c098e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63288480"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013605"
 ---
 # <a name="wmi-provider-for-server-events-classes-and-properties"></a>Classi e proprietà del provider WMI per eventi del server
   Gli eventi del server seguenti costituiscono il modello di programmazione per il provider WMI per eventi del server. Esistono due principali categorie di eventi che è possibile sottoporre a query eseguendo le query WQL sul provider: eventi DDL (Data Definition Language) ed eventi di traccia. Anche gli eventi di Service Broker QUEUE_ACTIVATION e BROKER_QUEUE_DISABLED possono essere sottoposti a query. Si noti la natura inclusiva dei diagrammi ad albero seguenti. L'evento DDL_ASSEMBLY_EVENTS, ad esempio, include un evento ALTER_ASSEMBLY, CREATE_ASSEMBLY e DROP_ASSEMBLY. Allo stesso modo, l'evento TRC_FULL_TEXT include un evento FT_CRAWL_ABORTED, FT_CRAWL_STARTED e FT_CRAWL_STOPPED. ALL_EVENTS include tutti gli eventi DDL, gli eventi di traccia, QUEUE_ACTIVATION e BROKER_QUEUE_DISABLED.  
   
  Per informazioni sulle proprietà che possono essere sottoposte a query da un evento o un gruppo di eventi, fare riferimento allo schema dell'evento. Per impostazione predefinita, lo schema dell'evento viene installato nella directory seguente: [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd.  
   
- In alternativa, è possibile fare riferimento allo schema dell'evento pubblicato [https://schemas.microsoft.com/sqlserver](https://go.microsoft.com/fwlink/?linkid=43100)in.  
+ In alternativa, è possibile fare riferimento allo schema dell'evento pubblicato in [https://schemas.microsoft.com/sqlserver](https://go.microsoft.com/fwlink/?linkid=43100) .  
   
  Ad esempio, dall'evento ALTER_DATABASE si evince che l'evento padre è DDL_SERVER_LEVEL_EVENTS e che le proprietà sono `TSQLCommand` e `DatabaseName`. L'evento eredita inoltre le proprietà `SQLInstance`, `PostTime`, `ComputerName`, `SPID` e `LoginName`. L'evento non dispone di eventi figli.  
   
@@ -41,7 +40,7 @@ ms.locfileid: "63288480"
   
  ![Eventi di traccia e gruppi di eventi](../../../2014/database-engine/dev-guide/media/sql-wmi-trc-all-events.gif "Eventi di traccia e gruppi di eventi")  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Concetti relativi al provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)   
  [Utilizzo di WQL con il provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)  
   

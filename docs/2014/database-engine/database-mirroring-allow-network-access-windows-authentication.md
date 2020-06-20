@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 28c8fec5-5feb-4c84-8d72-f2bd1ae3b40d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e40a1eead54fe9d00eaf099410260023229796d0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d1d8786d128ef2cc99fe571e33f89c4c4e7699c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228574"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934462"
 ---
 # <a name="allow-network-access-to-a-database-mirroring-endpoint-using-windows-authentication-sql-server"></a>Concessione dell'accesso alla rete a un endpoint per il mirroring del database utilizzando l'autenticazione di Windows (SQL Server)
   L'utilizzo dell'autenticazione di Windows per la connessione degli endpoint del mirroring di database di due istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] richiede la configurazione manuale degli account di accesso nelle seguenti condizioni:  
