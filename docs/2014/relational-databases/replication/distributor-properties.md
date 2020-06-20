@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: f643c7c3-f238-4835-b81e-2c2b3b53b23f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ae7c7197fffcad7f64a82cf7c060e2e35e9bf460
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 501c7931d651498fea49749be38af374c02424ab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721401"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010782"
 ---
 # <a name="sql-server-replication-distributor-properties"></a>Proprietà del server di distribuzione replica di SQL Server
 In questo argomento vengono illustrate le proprietà disponibili nelle pagine **generale**, server di **pubblicazione**e **database di distribuzione** all'interno della finestra **Proprietà** database di distribuzione. 
@@ -50,7 +49,7 @@ In questo argomento vengono illustrate le proprietà disponibili nelle pagine **
   La pagina **Server di pubblicazione** della finestra di dialogo **Proprietà server di distribuzione** consente di abilitare l'utilizzo del server di distribuzione corrente da parte dei server di pubblicazione. È inoltre possibile impostare le proprietà associate a tali server di pubblicazione. Tenere presente che, se si abilita un server di pubblicazione per l'utilizzo di questo server come server di distribuzione remoto, il server non diventerà un server di pubblicazione. È infatti necessario connettersi al server di pubblicazione, configurarlo per la pubblicazione e selezionare questo server come server di distribuzione. Utilizzando la Creazione guidata nuova pubblicazione è possibile configurare il server di pubblicazione e selezionare un server di distribuzione.  
   
 ### <a name="options"></a>Opzioni  
- **Autori**  
+ **Pubblicazione**  
  Consente di selezionare i server autorizzati all'utilizzo del server di distribuzione corrente. Per visualizzare e impostare proprietà aggiuntive fare clic sul pulsante delle proprietà ( **...** ) accanto a un server di pubblicazione.  
   
  **Aggiungere**  
@@ -93,7 +92,7 @@ In questo argomento vengono illustrate le proprietà disponibili nelle pagine **
  Per ulteriori informazioni, vedere \\ [Replication Agent Security Model](security/replication-agent-security-model.md). 
 
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurare la distribuzione](configure-distribution.md)   
  [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](view-and-modify-distributor-and-publisher-properties.md)   
 

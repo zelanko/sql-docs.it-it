@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 5dde7575a3f657b89d29fefa0da52002bcd6af28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d744457cc517a6172cca96b27eae1f456deca24e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014301"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016074"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Creare, Costruire e Istanze geografiche di Query
   Il tipo di dati spaziali geografici, `geography`, rappresenta i dati in un sistema di coordinate terrestri. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]è implementato come tipo di dati CLR (Common Language Runtime) .NET. Il tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography` consente di archiviare dati ellissoidali (terra rotonda), ad esempio coordinate di latitudine e longitudine GPS.  
@@ -103,7 +102,7 @@ ms.locfileid: "66014301"
  [STGeomCollFromWKB &#40;tipo di dati geography&#41;](/sql/t-sql/spatial-geography/stgeomcollfromwkb-geography-data-type)STGeomCollFromWKB (tipo di dati geography)  
   
 ###  <a name="constructing-a-geography-instance-from-gml-text-input"></a><a name="gml"></a> Costruzione di un'istanza geografica dall'input di testo GML  
- Il `geography` tipo di dati fornisce un metodo che genera `geography` un'istanza da GML, una rappresentazione XML di `geography` un'istanza. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta un subset di GML.  
+ Il `geography` tipo di dati fornisce un metodo che genera un' `geography` istanza da GML, una rappresentazione XML di un' `geography` istanza. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta un subset di GML.  
   
  Per altre informazioni su Geography Markup Language (GML), vedere la specifica OGC [OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)(Specifiche OGC, Geography Markup Language).  
   
@@ -128,7 +127,7 @@ ms.locfileid: "66014301"
  [AsGml &#40;tipo di dati geography&#41;](/sql/t-sql/spatial-geography/asgml-geography-data-type)  
   
 ##  <a name="querying-the-properties-and-behaviors-of-geography-instances"></a><a name="query"></a> Esecuzione di query sulle proprietà e i comportamenti delle istanze geografiche  
- Tutte `geography` le istanze hanno un certo numero di proprietà che possono essere recuperate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite metodi disponibili in. Negli argomenti seguenti vengono definite le proprietà e i comportamenti dei tipi di geografia, nonché i metodi per l'esecuzione di query per ognuno di essi.  
+ Tutte le `geography` istanze hanno un certo numero di proprietà che possono essere recuperate tramite metodi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibili in. Negli argomenti seguenti vengono definite le proprietà e i comportamenti dei tipi di geografia, nonché i metodi per l'esecuzione di query per ognuno di essi.  
   
 ###  <a name="validity-instance-type-and-geometrycollection-information"></a><a name="valid"></a> Informazioni sulla validità, sul tipo di istanza e su GeometryCollection  
  Dopo aver costruito un'istanza `geography`, è possibile utilizzare i seguenti metodi per restituire il tipo di istanza oppure, se si tratta di un'istanza `GeometryCollection`, restituire un'istanza `geography` specifica.  
@@ -146,7 +145,7 @@ ms.locfileid: "66014301"
  [STGeometryN &#40;tipo di dati geography&#41;](/sql/t-sql/spatial-geography/stgeometryn-geography-data-type)STGeometryN (tipo di dati geography)  
   
 ###  <a name="number-of-points"></a><a name="number"></a> Numero di punti  
- Tutte le istanze `geography` non vuote sono costituite da *punti*. che rappresentano le coordinate di latitudine e longitudine terrestri sulle quali vengono tracciate le istanze `geography`. Il tipo di dati `geography` fornisce numerosi metodi predefiniti per l'esecuzione di query sui punti di un'istanza.  
+ Tutte le istanze non vuote `geography` sono costituite da *punti*. che rappresentano le coordinate di latitudine e longitudine terrestri sulle quali vengono tracciate le istanze `geography`. Il tipo di dati `geography` fornisce numerosi metodi predefiniti per l'esecuzione di query sui punti di un'istanza.  
   
  **Per restituire il numero di punti che comprendono un'istanza**  
  [STNumPoints &#40;tipo di dati geography&#41;](/sql/t-sql/spatial-geography/stnumpoints-geography-data-type)  
@@ -161,7 +160,7 @@ ms.locfileid: "66014301"
  [STEndpoint &#40;tipo di dati geography&#41;](/sql/t-sql/spatial-geography/stendpoint-geography-data-type)  
   
 ###  <a name="dimension"></a><a name="dimension"></a> Dimensione  
- Un'istanza `geography` non vuota può essere a 0, 1 o 2 dimensioni. Le istanze con `geography` dimensione zero, ad esempio `MultiPoint`e, non hanno lunghezza o area. `Point` Gli oggetti unidimensionali, ad esempio `LineString, CircularString`, `CompoundCurve` e `MultiLineString`, dispongono della lunghezza. Le istanze bidimensionali, ad esempio `Polygon, CurvePolygon` e `MultiPolygon`, dispongono di area e lunghezza. Le istanze vuote indicano una dimensione di -1 e `GeometryCollection` indica le dimensioni massime del contenuto.  
+ Un'istanza `geography` non vuota può essere a 0, 1 o 2 dimensioni. Le istanze con dimensione zero `geography` , ad esempio `Point` e `MultiPoint` , non hanno lunghezza o area. Gli oggetti unidimensionali, ad esempio `LineString, CircularString`, `CompoundCurve` e `MultiLineString`, dispongono della lunghezza. Le istanze bidimensionali, ad esempio `Polygon, CurvePolygon` e `MultiPolygon`, dispongono di area e lunghezza. Le istanze vuote indicano una dimensione di -1 e `GeometryCollection` indica le dimensioni massime del contenuto.  
   
  **Per restituire la dimensione di un'istanza**  
  [STDimension &#40;tipo di dati geography&#41;](/sql/t-sql/spatial-geography/stdimension-geography-data-type)  
@@ -173,7 +172,7 @@ ms.locfileid: "66014301"
  [STArea &#40;tipo di dati geography&#41;](/sql/t-sql/spatial-geography/starea-geography-data-type)  
   
 ###  <a name="empty"></a><a name="empty"></a> Vuoto  
- Un'istanza *vuota* `geography` non contiene punti. La lunghezza delle istanze vuote `LineString, CircularString`, `CompoundCurve` e `MultiLineString` è 0. L'area delle istanze vuote `Polygon, CurvePolygon` and `MultiPolygon` è 0.  
+ Un'istanza *vuota* non `geography` contiene punti. La lunghezza delle istanze vuote `LineString, CircularString`, `CompoundCurve` e `MultiLineString` è 0. L'area delle istanze vuote `Polygon, CurvePolygon` and `MultiPolygon` è 0.  
   
  **Per determinare se un'istanza è vuota**  
  [STIsEmpty &#40;tipo di dati geography&#41;](/sql/t-sql/spatial-geography/stisempty-geography-data-type)  
@@ -266,7 +265,7 @@ ms.locfileid: "66014301"
     SELECT @result.STAsText();  
     ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Dati spaziali &#40;SQL Server&#41;](spatial-data-sql-server.md)  
   
   

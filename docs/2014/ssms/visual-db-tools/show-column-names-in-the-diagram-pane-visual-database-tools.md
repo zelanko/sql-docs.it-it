@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b866d107-6312-44f9-9195-d74bd43b7142
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 15dfb65dc7cb51311e60112145623eeda50339e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d36397bbee88bdea60be57d80e68e762a636962f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067487"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058070"
 ---
 # <a name="show-column-names-in-the-diagram-pane-visual-database-tools"></a>Visualizzare i nomi delle colonne nel riquadro Diagramma (Visual Database Tools)
   È possibile scegliere se nascondere o visualizzare i nomi delle colonne delle tabelle nel **riquadro Diagramma** di Progettazione query e Progettazione viste.  

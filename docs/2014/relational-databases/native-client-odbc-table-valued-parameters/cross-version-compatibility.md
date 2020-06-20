@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5f14850b-b85c-41e2-8116-6f5b3f5e0856
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 37356c3a73a120a44adc67aad9439d313d562f61
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: af434713946f5c568ee71644a7403f9496a8c16f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82709581"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049707"
 ---
 # <a name="cross-version-compatibility"></a>Compatibilità tra versioni
   Possono verificarsi conflitti tra versioni quando è previsto che istanze client o server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] elaborino parametri con valori di tabella.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0aad4563-8caf-4971-92af-55992bc5ff2c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bd9f8c6ca62fdd9f9a856a19f3d27c2144073b52
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b8e4f57faccd3d0306ed65de987df123a33b73c9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62650374"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052375"
 ---
 # <a name="showplan-text-unencoded-event-class"></a>Showplan Text (Unencoded) - classe di evento
   La classe di evento Showplan Text (Unencoded) viene generata quando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue un'istruzione SQL. Questa classe di evento è analoga alla classe di evento Showplan Text, ma le informazioni sull'evento vengono formattate come stringa anziché come dati binari.  
@@ -61,7 +60,7 @@ ms.locfileid: "62650374"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|`bigint`|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Guida di riferimento a operatori Showplan logici e fisici](../showplan-logical-and-physical-operators-reference.md)   
  [Showplan All-classe di evento](showplan-all-event-class.md)   

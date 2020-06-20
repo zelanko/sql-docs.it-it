@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 484ef7dead58a6e8ae35639cdc6218d5c8223bd9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35970f3a78cad4a17fcfdcfb2d7b9aa91c9dd6e7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62990194"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062425"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Disinstallare un'istanza esistente di SQL Server (Programma di installazione)
   In questo articolo viene descritto come disinstallare un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I passaggi inclusi in questo argomento consentono inoltre di preparare il sistema per poter reinstallare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -80,11 +79,11 @@ ms.locfileid: "62990194"
   
 1.  Per avviare il processo di disinstallazione, nel **Pannello di controllo** scegliere **Programmi e funzionalità**.  
   
-2.  Fare clic ** [!INCLUDE[msCoName](../../includes/msconame-md.md)] ** con il pulsante destro del mouse e scegliere **Disinstalla**. Fare clic su **Rimuovi**. Verrà avviata l'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+2.  Fare clic con il pulsante destro del mouse **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** e scegliere **Disinstalla**. Fare clic su **Rimuovi**. Verrà avviata l'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     Verranno eseguite le regole di supporto dell'installazione per verificare la configurazione del computer. Per continuare, fare clic su **Avanti**.  
+     Verranno eseguite le regole di supporto dell'installazione per verificare la configurazione del computer. Scegliere **Avanti**per continuare.  
   
-3.  Nella pagina Seleziona istanza utilizzare la casella di riepilogo a discesa per specificare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da rimuovere o indicare l'opzione per rimuovere solo gli strumenti di gestione e le funzionalità condivise di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per continuare, fare clic su **Avanti**.  
+3.  Nella pagina Seleziona istanza utilizzare la casella di riepilogo a discesa per specificare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da rimuovere o indicare l'opzione per rimuovere solo gli strumenti di gestione e le funzionalità condivise di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Scegliere **Avanti**per continuare.  
   
 4.  Nella pagina Seleziona funzionalità specificare le funzionalità da rimuovere dall'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -104,7 +103,7 @@ ms.locfileid: "62990194"
   
 2.  Se non è possibile eliminare la causa del problema di disinstallazione, contattare il Supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] . In alcuni casi, ad esempio quando si eliminano inavvertitamente file importanti, la reinstallazione del sistema operativo può essere necessaria per reinstallare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

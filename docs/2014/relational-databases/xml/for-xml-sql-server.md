@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 669bf07101a05f2646a0928405b1807dadf0b2ea
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c13c1d4cdf7b1bbc72c956652bb89c2014103d76
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716648"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059455"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
   Una query SELECT restituisce i risultati sotto forma di set di righe. È possibile recuperare facoltativamente i risultati di una query SQL come codice XML specificando la clausola FOR XML nella query. È possibile utilizzare la clausola FOR XML nelle query di livello principale e nelle sottoquery. La clausola FOR XML di livello principale può essere utilizzata solo nell'istruzione SELECT. Nelle sottoquery, è possibile utilizzare FOR XML nelle istruzioni INSERT, UPDATE e DELETE. La clausola può inoltre essere utilizzata nelle istruzioni di assegnazione.  
@@ -39,7 +38,7 @@ ms.locfileid: "82716648"
   
 -   PATH  
   
- Nella modalità RAW viene generato un singolo elemento \<row> per ogni riga del set di righe restituito dall'istruzione SELECT. È possibile generare la gerarchia XML tramite la formulazione di query FOR XML nidificate.  
+ La modalità RAW genera un singolo \<row> elemento per riga nel set di righe restituito dall'istruzione SELECT. È possibile generare la gerarchia XML tramite la formulazione di query FOR XML nidificate.  
   
  Nella modalità AUTO, il codice XML risultante è nidificato tramite l'approccio euristico determinato dalla modalità con cui viene specificata l'istruzione SELECT. Il controllo sulla forma del codice XML generato è minimo. È possibile formulare query FOR XML nidificate che generano una gerarchia XML che esula dalla forma XML generata dall'approccio euristico della modalità AUTO.  
   

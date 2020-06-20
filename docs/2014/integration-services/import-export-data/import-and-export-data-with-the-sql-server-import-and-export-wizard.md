@@ -22,16 +22,15 @@ helpviewer_keywords:
 ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2f3ce90e2670357d0842b0a6ac7838f396465bab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55c621f9f345f0863e6656b66a77a8ccc439b0bc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768165"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965621"
 ---
 # <a name="sql-server-import-and-export-wizard"></a>Importazione/Esportazione guidata SQL Server
-  L' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importazione/esportazione guidata di offre il metodo più semplice per creare [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] un pacchetto che copia i dati da un'origine a una destinazione.  
+  L' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importazione/esportazione guidata di offre il metodo più semplice per creare un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacchetto che copia i dati da un'origine a una destinazione.  
   
 > [!NOTE]  
 >  In un computer a 64 bit con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene installata la versione a 64 bit dell'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (DTSWizard.exe). Tuttavia, alcune origini dati, ad esempio Access o Excel, dispongono solo di un provider a 32 bit. Per utilizzare queste origini dati, potrebbe essere necessario installare ed eseguire la versione a 32 bit della procedura guidata. Per installare la versione a 32 bit della procedura guidata, selezionare gli strumenti client o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] durante l'installazione.  
@@ -50,7 +49,7 @@ ms.locfileid: "62768165"
   
  Alcune caratteristiche della procedura guidata funzionano in modo diverso a seconda dell'ambiente da cui la procedura viene avviata.  
   
--   Se si avvia l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importazione/esportazione guidata in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], il pacchetto viene eseguito immediatamente selezionando la casella di controllo **Esegui immediatamente** . Per impostazione predefinita, questa casella di controllo è selezionata e il pacchetto viene immediatamente eseguito.  
+-   Se si avvia l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importazione/esportazione guidata in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , il pacchetto viene eseguito immediatamente selezionando la casella di controllo **Esegui immediatamente** . Per impostazione predefinita, questa casella di controllo è selezionata e il pacchetto viene immediatamente eseguito.  
   
      È inoltre possibile decidere se salvare il pacchetto in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o nel file system. Se si decide di salvare il pacchetto, è inoltre necessario specificare un livello di protezione. Per ulteriori informazioni sui livelli di protezione dei pacchetti, vedere [Access Control for sensitive data in Packages](../security/access-control-for-sensitive-data-in-packages.md).  
   
@@ -74,12 +73,12 @@ ms.locfileid: "62768165"
   
 -   Se si desidera creare un nuovo file, tabella o database di destinazione, autorizzazioni sufficienti per creare il nuovo file, tabella o database. A tale scopo, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono necessarie le autorizzazioni CREATE DATABASE o CREATE TABLE.  
   
--   Se si desidera salvare il pacchetto creato tramite la procedura guidata, autorizzazioni sufficienti per scrivere nel database msdb o nel file system. In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]è necessario disporre delle autorizzazioni INSERT nel database msdb.  
+-   Se si desidera salvare il pacchetto creato tramite la procedura guidata, autorizzazioni sufficienti per scrivere nel database msdb o nel file system. In è [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] necessario disporre delle autorizzazioni INSERT nel database msdb.  
   
 ## <a name="mapping-data-types-in-the-import-and-export-wizard"></a>Esecuzione del mapping di tipi di dati nell'Importazione/Esportazione guidata  
  Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre solo le funzionalità di trasformazione di base. Ad eccezione dell'impostazione del nome, del tipo di dati e delle proprietà del tipo di dati delle colonne incluse nei nuovi file e tabelle di destinazione, l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta trasformazioni a livello di colonna.  
   
- Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza i file di mapping disponibili in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per eseguire il mapping dei tipi di dati da una versione o un sistema di database a un'altro. È ad esempio possibile eseguire il mapping da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a Oracle. I file di mapping in formato XML vengono installati per impostazione predefinita in C:\Programmi\Microsoft SQL Server\100\DTS\MappingFiles. Se sono necessari tipi di mapping diversi tra i tipi di dati, sarà possibile aggiornare i file di mapping per modificare come desiderato i mapping eseguiti dalla procedura guidata. Se ad esempio si desidera eseguire il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mapping del tipo di dati **nchar** al tipo di dati DB2 **Graphic** anziché al tipo di dati DB2 **VARGRAPHIC** durante il trasferimento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di dati da a DB2, è possibile modificare il mapping **nchar** nel file di mapping SqlClientToIBMDB2. XML in modo da usare **Graphic** anziché **VARGRAPHIC.**  
+ Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza i file di mapping disponibili in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per eseguire il mapping dei tipi di dati da una versione o un sistema di database a un'altro. È ad esempio possibile eseguire il mapping da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a Oracle. I file di mapping in formato XML vengono installati per impostazione predefinita in C:\Programmi\Microsoft SQL Server\100\DTS\MappingFiles. Se sono necessari tipi di mapping diversi tra i tipi di dati, sarà possibile aggiornare i file di mapping per modificare come desiderato i mapping eseguiti dalla procedura guidata. Se, ad esempio, si desidera eseguire il mapping del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati **nchar** al tipo di dati DB2 **Graphic** anziché al tipo di dati DB2 **VARGRAPHIC** durante il trasferimento di dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a DB2, è possibile modificare il mapping **nchar** nel file di mapping SqlClientToIBMDB2.xml per utilizzare l' **elemento grafico** anziché **VARGRAPHIC.**  
   
  In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono inclusi mapping tra le combinazioni di origini e destinazioni maggiormente utilizzate ed è possibile aggiungere nuovi file di mapping alla directory MappingFiles per supportare ulteriori origini e destinazioni. I nuovi file di mapping devono essere conformi allo schema XSD pubblicato ed eseguire il mapping tra una combinazione univoca di origine e destinazione.  
   

@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 38a33b34b64cf285e94f66c547b2309b8daf1ae8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5df714d818949b921ff2236e50d58913eab0e0db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035668"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062554"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>Risolvere i problemi relativi agli utenti isolati (SQL Server)
-  Per accedere a un'istanza di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario che un'entità disponga di un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido. Tale account di accesso viene utilizzato nel processo di autenticazione che verifica se l'entità è autorizzata a connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso in un'istanza del server sono visibili nella vista del catalogo **sys. server_principals** e nella vista di compatibilità **sys. syslogins** .  
+  Per accedere a un'istanza di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario che un'entità disponga di un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido. Tale account di accesso viene utilizzato nel processo di autenticazione che verifica se l'entità è autorizzata a connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso in un'istanza del server sono visibili nella vista del catalogo **sys. server_principals** e nella vista di compatibilità **sys.sysaccessi** .  
   
  Gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consentono di accedere a database singoli mediante un utente del database di cui viene eseguito il mapping all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sono previste due eccezioni a questa regola:  
   
@@ -58,7 +57,7 @@ GO;
  Nell'output sono elencati gli utenti e gli identificatori di sicurezza (SID) corrispondenti disponibili nel database corrente e non collegati ad alcun account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [sp_change_users_login &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql).  
   
 > [!NOTE]  
->  **sp_change_users_login** non è possibile utilizzare sp_change_users_login [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con gli account di accesso creati da Windows.  
+>  non è possibile utilizzare **sp_change_users_login** con gli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso creati da Windows.  
   
 ## <a name="to-resolve-an-orphaned-user"></a>Per risolvere un utente isolato (orfano)  
  Per risolvere un utente isolato (orfano), eseguire la procedura seguente:  
@@ -92,14 +91,14 @@ GO;
   
      Per ulteriori informazioni, vedere [sp_password &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-password-transact-sql).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [CREAZIONE di un utente &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql)   
  [Crea account di accesso &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-login-transact-sql)   
  [sp_change_users_login &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql)   
  [sp_addlogin &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addlogin-transact-sql)   
  [sp_grantlogin &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-grantlogin-transact-sql)   
  [sp_password &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-password-transact-sql)   
- [sys. sysusers &#40;&#41;Transact-SQL](/sql/relational-databases/system-compatibility-views/sys-sysusers-transact-sql)   
- [sys. syslogins &#40;&#41;Transact-SQL](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)  
+ [sys.sysutenti &#40;&#41;Transact-SQL](/sql/relational-databases/system-compatibility-views/sys-sysusers-transact-sql)   
+ [sys.sysaccount di accesso &#40;&#41;Transact-SQL](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)  
   
   

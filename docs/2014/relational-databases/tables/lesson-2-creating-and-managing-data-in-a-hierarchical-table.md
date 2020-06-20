@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4553d98faf18c00fff6ad90a09d0ee9071a71d32
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22ec72bdbfe74d05277e4b6ff73f92c08d88039d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62659933"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068003"
 ---
 # <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>Lezione 2: Creazione e gestione di dati in una tabella gerarchica
   Nella Lezione 1, è stata modificata una tabella esistente per utilizzare il tipo di dati `hierarchyid` ed è stata popolata la colonna `hierarchyid` con la rappresentazione dei dati esistenti. In questa lezione, verrà generata una nuova tabella e verranno inseriti i dati utilizzando i metodi gerarchici. Pertanto, verrà eseguita una query e verranno modificati i dati utilizzando i metodi gerarchici.  
@@ -37,7 +36,7 @@ ms.locfileid: "62659933"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Creazione di una tabella utilizzando il tipo di dati hierarchyid](lesson-2-1-creating-a-table-using-the-hierarchyid-data-type.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Lezione 1: Conversione di una tabella in una struttura gerarchica](lesson-1-converting-a-table-to-a-hierarchical-structure.md)  
   
   

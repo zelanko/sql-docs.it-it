@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8d14019e-cb60-4bc1-b71e-7f2326de8317
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 38181aca8a2946a9268f77560bdadcbc96e617bb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f1f5983048c1301e210c2ac64e0a092898f31e0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059224"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966811"
 ---
 # <a name="excel-source-editor-error-output-page"></a>Editor origine Excel (pagina Output degli errori)
   Usare la pagina **Output degli errori** della finestra di dialogo **Editor origine Excel** per selezionare le opzioni di gestione degli errori e impostare le proprietà delle colonne di output degli errori.  
@@ -50,7 +49,7 @@ ms.locfileid: "66059224"
  **Applica**  
  Consente di applicare l'opzione di gestione degli errori alle celle selezionate.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor origine Excel &#40;pagina Gestione connessione&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
  [Editor origine Excel &#40;pagina colonne&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   

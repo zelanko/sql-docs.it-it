@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 00863b10-e77c-44c5-8ac2-bb4ac454eec6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 58d4d71189598a6fd101e6db0a40b8c8b0a3b903
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be474ea547222c30321d893ee8a1ce6f0af0be39
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161866"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049881"
 ---
 # <a name="indexes"></a>Indici
   Nella tabella seguente sono inclusi i tipi di indici disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e i collegamenti a ulteriori informazioni.  
   
-|Tipo di indice|Descrizione|Altre informazioni|  
+|Tipo di indice|Descrizione|Informazioni aggiuntive|  
 |----------------|-----------------|----------------------------|  
 |Hash|Con un indice hash l'accesso ai dati viene eseguito tramite una tabella hash in memoria. Gli indici hash utilizzano una quantità di memoria fissa (una funzione del numero di bucket).|[Linee guida per l'utilizzo di indici nelle tabelle con ottimizzazione per la memoria](../in-memory-oltp/memory-optimized-tables.md)|  
 |Indici non cluster ottimizzati per la memoria|Per gli indici non cluster ottimizzati per la memoria, l'utilizzo della memoria è una funzione del conteggio delle righe e della dimensione delle colonne chiave di indice|[Linee guida per l'utilizzo di indici nelle tabelle con ottimizzazione per la memoria](../in-memory-oltp/memory-optimized-tables.md)|  
@@ -56,7 +55,7 @@ ms.locfileid: "63161866"
   
  [Specificare un fattore di riempimento per un indice](specify-fill-factor-for-an-index.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Descrizione di indici cluster e non cluster.](clustered-and-nonclustered-indexes-described.md)  
   
   

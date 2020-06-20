@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a85363b4971055b020314492db429b72447b6490
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 36b0f97ab4c6f36f5fc3f95e3eed3418ee0d88b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718610"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049006"
 ---
 # <a name="specify-a-breakpoint-action"></a>Impostazione di un'azione del punto di interruzione
   Un'azione **Quando raggiunto** per un punto di interruzione specifica un'attività personalizzata eseguita dal debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] per un punto di interruzione. Se viene raggiunto il numero di passaggi specificato e viene soddisfatta qualsiasi condizione per il punto di interruzione, il debugger esegue l'azione specificata per il punto di interruzione.  
@@ -34,7 +33,7 @@ ms.locfileid: "82718610"
   
     1.  $ADDRESS restituisce il nome della stored procedure o della funzione definita dall'utente in cui è impostato il punto di interruzione. Se il punto di interruzione è impostato nella finestra dell'editor, $ADDRESS restituisce il nome del file di script modificato. $ADDRESS e $FUNCTION restituiscono le stesse informazioni nel debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-    2.  $CALLER restituisce il nome dell'unità di codice [!INCLUDE[tsql](../../includes/tsql-md.md)] che ha chiamato una stored procedure o una funzione. Se il punto di interruzione è nella finestra dell'editor, $CALLER restituisce \<No caller available>. Se il punto di interruzione è in una stored procedure o in una funzione definita dell'utente chiamata dal codice nella finestra dell'editor, $CALLER restituisce il nome del file modificato. Se il punto di interruzione è in una stored procedure o in una funzione definita dell'utente chiamata da un'altra stored procedure o funzione, $CALLER restituisce il nome della procedura o della funzione chiamante.  
+    2.  $CALLER restituisce il nome dell'unità di codice [!INCLUDE[tsql](../../includes/tsql-md.md)] che ha chiamato una stored procedure o una funzione. Se il punto di interruzione è nella finestra dell'editor, $CALLER restituisce \<No caller available> . Se il punto di interruzione è in una stored procedure o in una funzione definita dell'utente chiamata dal codice nella finestra dell'editor, $CALLER restituisce il nome del file modificato. Se il punto di interruzione è in una stored procedure o in una funzione definita dell'utente chiamata da un'altra stored procedure o funzione, $CALLER restituisce il nome della procedura o della funzione chiamante.  
   
     3.  $CALLSTACK restituisce lo stack di chiamate delle funzioni nella catena che hanno chiamato la stored procedure o la funzione definita dall'utente corrente. Se il punto di interruzione è nella finestra dell'editor, $CALLSTACK restituisce il nome del file di script modificato.  
   

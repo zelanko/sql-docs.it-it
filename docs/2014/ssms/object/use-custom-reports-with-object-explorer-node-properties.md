@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5941b15c0aea7319d132e05b902133d3d8b986fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65d4892b135ac78f0e35620a9013168228c84498
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62823698"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058513"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Utilizzo di report personalizzati con proprietà dei nodi di Esplora oggetti
   I report personalizzati possono essere eseguiti nel contesto di un nodo Esplora oggetti selezionato, a condizione che facciano riferimento ai parametri di report di tale nodo. Un report personalizzato può pertanto utilizzare il contesto corrente, ad esempio il database corrente, oppure un oggetto server o database.  
@@ -43,7 +42,7 @@ ms.locfileid: "62823698"
   
 2.  Copiare il file di report in una cartella creata nel server di database per i report personalizzati.  
   
-3.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]fare clic con il pulsante destro del mouse su un nodo in Esplora oggetti, scegliere **report**, quindi fare clic su report personalizzati. Nella finestra di dialogo **Apri file** individuare la cartella dei report personalizzati, selezionare il file di report e quindi fare clic su **Apri**.  
+3.  In fare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] clic con il pulsante destro del mouse su un nodo in Esplora oggetti, scegliere **report**, quindi fare clic su report personalizzati. Nella finestra di dialogo **Apri file** individuare la cartella dei report personalizzati, selezionare il file di report e quindi fare clic su **Apri**.  
   
      Alla prima apertura di un nuovo report personalizzato da un nodo Esplora oggetti, tale report verrà aggiunto all'elenco degli ultimi elementi usati in **Report personalizzati** nel menu di scelta rapida del nodo. Analogamente, alla prima apertura, anche un report standard verrà aggiunto all'elenco degli ultimi elementi usati in **Report personalizzati**. Se viene eliminato un file di un report personalizzato, alla successiva selezione dell'elemento verrà visualizzato un messaggio che chiederà di eliminare la relativa voce dall'elenco degli ultimi elementi utilizzati.  
   
@@ -998,7 +997,7 @@ ms.locfileid: "62823698"
   
  `</Report>`  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Report personalizzati in Management Studio](custom-reports-in-management-studio.md)   
  [Aggiungere un report personalizzato a Management Studio](add-a-custom-report-to-management-studio.md)   
  [Visualizzazione di avvisi relativi all'esecuzione di report personalizzati](unsuppress-run-custom-report-warnings.md)  

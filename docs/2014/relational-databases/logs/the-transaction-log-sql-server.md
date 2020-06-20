@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 025ef22e6dee1fcfaa1225a4709fa01b6c326b12
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289409"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049752"
 ---
 # <a name="the-transaction-log-sql-server"></a>Log delle transazioni (SQL Server)
   Ogni database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include un log delle transazioni in cui vengono registrate tutte le transazioni e le modifiche apportate dalle transazioni stesse al database. Per evitarne il riempimento, il log delle transazioni deve essere troncato regolarmente. Tuttavia, alcuni fattori possono posticipare il troncamento del log, pertanto è importante monitorare le dimensioni del log. Ad alcune operazioni può essere applicata la registrazione minima per ridurre l'impatto sulle dimensioni del log delle transazioni.  
@@ -118,7 +117,7 @@ ms.locfileid: "79289409"
   
 -   Aggiornamenti parziali a tipi di dati di valori di grandi dimensioni eseguiti mediante la clausola .WRITE nell'istruzione [UPDATE](/sql/t-sql/queries/update-transact-sql) quando si inseriscono o si aggiungono nuovi dati. Si noti che la registrazione minima non viene utilizzata per l'aggiornamento di valori esistenti. Per altre informazioni sui tipi di dati per valori di grandi dimensioni, vedere [Tipi di dati &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql).  
   
--   [Istruzioni WRITETEXT](/sql/t-sql/queries/writetext-transact-sql) e [UPDATETEXT](/sql/t-sql/queries/updatetext-transact-sql) quando si inseriscono o accodano nuovi dati `text`nelle `ntext`colonne del `image` tipo di dati, e. Si noti che la registrazione minima non viene utilizzata per l'aggiornamento di valori esistenti.  
+-   Istruzioni [WRITETEXT](/sql/t-sql/queries/writetext-transact-sql) e [UPDATETEXT](/sql/t-sql/queries/updatetext-transact-sql) quando si inseriscono o accodano nuovi dati nelle colonne del `text` tipo di dati, `ntext` e `image` . Si noti che la registrazione minima non viene utilizzata per l'aggiornamento di valori esistenti.  
   
     > [!NOTE]  
     >  Poiché le istruzioni WRITETEXT e UPDATETEXT sono deprecate, è consigliabile evitare di utilizzarle nelle nuove applicazioni.  
@@ -155,7 +154,7 @@ ms.locfileid: "79289409"
 ## <a name="see-also"></a>Vedere anche  
  [Controllare la durabilità delle transazioni](control-transaction-durability.md)   
  [Prerequisiti per la registrazione minima nell'importazione bulk](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
- [Backup e ripristino di database di SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [Backup e ripristino di database SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Checkpoint di database &#40;SQL Server&#41;](database-checkpoints-sql-server.md)   
  [Visualizzare o modificare le proprietà di un database](../databases/view-or-change-the-properties-of-a-database.md)   
  [Modelli di recupero &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)  

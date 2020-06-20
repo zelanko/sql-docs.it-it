@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 746aed7f49b0db51f46a32fdf040eb5b9e968dd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50c9419911f83c98fba5baf0f995ffbeafb916ad
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768026"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965651"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>Scelta destinazione (Importazione/Esportazione guidata SQL Server)
   Utilizzare la pagina **scegliere una destinazione** per specificare la destinazione dei dati che si desidera copiare.  
@@ -28,7 +27,7 @@ ms.locfileid: "62768026"
   
 ## <a name="static-options"></a>Opzioni statiche  
  **Destinazione**  
- Consente di scegliere il provider di dati corrispondente al formato di archiviazione dei dati della destinazione. Potrebbero essere disponibili più provider per l'origine dati. Ad esempio, con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, il .NET Framework provider di dati per SQL Server o il Provider Microsoft OLE DB per SQL Server.  
+ Consente di scegliere il provider di dati corrispondente al formato di archiviazione dei dati della destinazione. Potrebbero essere disponibili più provider per l'origine dati. Ad esempio, con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client, il .NET Framework provider di dati per SQL Server o il Provider Microsoft OLE DB per SQL Server.  
   
 > [!NOTE]  
 >  Per salvare i dati in una destinazione ODBC, selezionare Provider di dati .NET Framework per ODBC.  
@@ -55,12 +54,12 @@ ms.locfileid: "62768026"
  Consente di specificare una password per la connessione al database quando si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Database**  
- Consente di selezionare dall'elenco di database nell'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]oppure di creare un nuovo database facendo clic su **nuovo**.  
+ Consente di selezionare dall'elenco di database nell'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure di creare un nuovo database facendo clic su **nuovo**.  
   
- **Aggiorna**  
+ **Refresh** (Aggiornamento)  
  Consente di ripristinare l'elenco dei database disponibili facendo clic su **Aggiorna**.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare un nuovo database di destinazione utilizzando la finestra di dialogo **Crea database** .  
   
 ### <a name="destination--flat-file-destination"></a>Destinazione = Destinazione file flat  
@@ -82,7 +81,7 @@ ms.locfileid: "62768026"
  **Formato**  
  Consente di indicare se utilizzare la formattazione non allineata a destra, a larghezza fissa o delimitata.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |Delimitato|Le colonne sono separate da un delimitatore specificato nella pagina **Colonne** .|  
 |File a larghezza fissa|Le colonne hanno una larghezza fissa.|  
@@ -97,10 +96,10 @@ ms.locfileid: "62768026"
 ### <a name="destination--microsoft-excel"></a>Destinazione = Microsoft Excel  
   
 > [!NOTE]  
->  Selezionare **Microsoft Excel** solo se si desidera connettersi a un'origine dati che utilizza Excel 2003 o versioni precedenti. Per connettersi a un'origine dati che utilizza Excel 2007, selezionare **Microsoft Office 12,0 accesso motore di database Provider OLE DB**, fare clic su **Proprietà**e quindi nella **scheda tutte** della finestra di dialogo **proprietà di data link** , per **proprietà estese**, immettere `Excel 12.0`.  
+>  Selezionare **Microsoft Excel** solo se si desidera connettersi a un'origine dati che utilizza Excel 2003 o versioni precedenti. Per connettersi a un'origine dati che utilizza Excel 2007, selezionare **Microsoft Office 12,0 accesso motore di database Provider OLE DB**, fare clic su **Proprietà**e quindi nella scheda **tutte** della finestra di dialogo **proprietà di data link** , per **proprietà estese**, immettere `Excel 12.0` .  
   
  **Percorso file di Excel**  
- Specificare il percorso e il nome file per la cartella di lavoro in cui archiviare i dati, ad esempio C:\MyData.xls \\, \Sales\Database\Northwind.xls. In alternativa, è possibile fare clic su **Sfoglia** per individuare una cartella di lavoro.  
+ Specificare il percorso e il nome file per la cartella di lavoro in cui archiviare i dati, ad esempio C:\MyData.xls \\\Sales\Database\Northwind.xls. In alternativa, è possibile fare clic su **Sfoglia** per individuare una cartella di lavoro.  
   
  **Sfoglia**  
  Individuare una cartella di lavoro di Excel utilizzando la finestra di dialogo **Apri** .  
@@ -117,7 +116,7 @@ ms.locfileid: "62768026"
 >  Selezionare **Microsoft Access** solo se si desidera connettersi a un database che utilizza Access 2003 o versione precedente. Per connettersi a un database che usa Access 2007, selezionare **Microsoft Office 12,0 access motore di database OLE DB provider**.  
   
  **Nome file**  
- Specificare il percorso e il nome del file di database in cui archiviare i dati, ad esempio C:\MyData.mdb, \\\Sales\Database\Northwind.mdb. In alternativa, è possibile fare clic su **Sfoglia** per individuare un file di database.  
+ Specificare il percorso e il nome del file di database in cui archiviare i dati, ad esempio C:\MyData.mdb, \\ \Sales\Database\Northwind.mdb. In alternativa, è possibile fare clic su **Sfoglia** per individuare un file di database.  
   
  **Sfoglia**  
  Individuare il file di database utilizzando la finestra di dialogo **Apri** .  

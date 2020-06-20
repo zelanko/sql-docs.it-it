@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d9203e58-40ba-4712-a918-2c34a5d396d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 909db99964faaf2fc3aec8196db929bf61fc7c09
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96a6f55c5006eb050eed1c7cf296e3a96747348b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023491"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052924"
 ---
 # <a name="lockcancel-event-class"></a>Classe di evento Lock:Cancel
   La classe di evento **Lock:Cancel** indica che l'acquisizione di un blocco su una risorsa è stata annullata, ad esempio a causa dell'annullamento di una query.  
@@ -33,7 +32,7 @@ ms.locfileid: "63023491"
 |**ClientProcessID**|`int`|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se tramite il client viene indicato l'ID del processo client.|9|Sì|  
 |**DatabaseID**|`int`|ID del database in cui è stato acquisito il blocco. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |**DatabaseName**|`nvarchar`|Nome del database in cui è stata tentata l'acquisizione del blocco.|35|Sì|  
-|**Durata**|`bigint`|Quantità di tempo (in microsecondi) dalla richiesta all'annullamento del blocco.|13|Sì|  
+|**Duration**|`bigint`|Quantità di tempo (in microsecondi) dalla richiesta all'annullamento del blocco.|13|Sì|  
 |**EndTime**|`datetime`|Ora di fine dell'evento.|15|Sì|  
 |**EventClass**|`int`|Tipo di evento = 26.|27|No|  
 |**EventSequence**|`int`|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
@@ -56,9 +55,9 @@ ms.locfileid: "63023491"
 |**StartTime**|`datetime`|Ora di inizio dell'evento, se disponibile.|14|Sì|  
 |**TextData**|`ntext`|Valore di testo che dipende dal tipo di blocco acquisito. Corrisponde al valore della colonna **resource_description** in **sys.dm_tran_locks**.|1|Sì|  
 |**TransactionID**|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
-|**Type**|`int`|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|Sì|  
+|**Tipo**|`int`|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [sys.dm_tran_locks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql)  
   

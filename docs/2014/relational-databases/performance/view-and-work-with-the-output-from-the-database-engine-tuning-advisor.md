@@ -25,16 +25,15 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4e767348fb5bc01bcdb2aaaa3fad1dd4f461eb6c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dd2e8af6e1768ef1872f2888d2a74850edbde23c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811025"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85069061"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Visualizzare e utilizzare l'output di Ottimizzazione guidata motore di database
-  Durante l'ottimizzazione di database tramite Ottimizzazione guidata motore di database, vengono creati automaticamente riepiloghi, indicazioni, report e log di ottimizzazione. È possibile utilizzare l'output del log di ottimizzazione per risolvere gli eventuali problemi verificatisi durante le sessioni di ottimizzazione di Ottimizzazione guidata motore di database. È possibile utilizzare i riepiloghi, le indicazioni e i report per determinare se si desidera implementare le indicazioni di ottimizzazione o continuare l'ottimizzazione fino a quando non si ottengono i miglioramenti [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] delle prestazioni delle query necessarie per l'installazione. Per informazioni sull'utilizzo di Ottimizzazione guidata motore di database per creare carichi di lavoro e ottimizzare un database, vedere [Avvio e utilizzo di Ottimizzazione guidata motore di database](database-engine-tuning-advisor.md).  
+  Durante l'ottimizzazione di database tramite Ottimizzazione guidata motore di database, vengono creati automaticamente riepiloghi, indicazioni, report e log di ottimizzazione. È possibile utilizzare l'output del log di ottimizzazione per risolvere gli eventuali problemi verificatisi durante le sessioni di ottimizzazione di Ottimizzazione guidata motore di database. È possibile utilizzare i riepiloghi, le indicazioni e i report per determinare se si desidera implementare le indicazioni di ottimizzazione o continuare l'ottimizzazione fino a quando non si ottengono i miglioramenti delle prestazioni delle query necessarie per l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installazione. Per informazioni sull'utilizzo di Ottimizzazione guidata motore di database per creare carichi di lavoro e ottimizzare un database, vedere [Avvio e utilizzo di Ottimizzazione guidata motore di database](database-engine-tuning-advisor.md).  
   
 ##  <a name="view-tuning-output"></a><a name="View"></a> Visualizzazione output di ottimizzazione  
  Nelle procedure indicate di seguito viene illustrata la visualizzazione di indicazioni, riepiloghi, report e log di ottimizzazione tramite l'interfaccia utente grafica (GUI) di Ottimizzazione guidata motore di database. Per ulteriori informazioni sulle opzioni dell'interfaccia utente, vedere [Descrizioni dell'interfaccia utente](#UI) più avanti in questo argomento.  
@@ -163,17 +162,17 @@ ms.locfileid: "68811025"
   
 2.  Copiare e incollare l'[Esempio di file di input XML con configurazione specificata dall'utente &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md) in un editor XML o un editor di testo. Utilizzare questo codice di esempio per la creazione di un file di input XML per la sessione di ottimizzazione in corso. Per informazioni sull'esecuzione di questa attività, vedere la sezione "Creare un file di input XML" in [Avvio e utilizzo di Ottimizzazione guidata motore di database](database-engine-tuning-advisor.md).  
   
-3.  Modificare gli elementi `TuningOptions` e `Configuration` del file di input XML di esempio. Nell'elemento `TuningOptions` specificare le strutture di progettazione fisica che devono essere prese in considerazione da Ottimizzazione guidata motore di database durante la sessione di ottimizzazione. Nell'elemento `Configuration` specificare le strutture di progettazione fisica corrispondenti alla configurazione ipotetica delle strutture di progettazione fisica del database che si desidera siano analizzate da Ottimizzazione guidata motore di database. Per informazioni sugli attributi e sugli elementi figlio che è possibile usare con `TuningOptions` gli elementi `Configuration` padre e, vedere [riferimento ai File di input XML &#40;Ottimizzazione guidata motore di database&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
+3.  Modificare gli elementi `TuningOptions` e `Configuration` del file di input XML di esempio. Nell'elemento `TuningOptions` specificare le strutture di progettazione fisica che devono essere prese in considerazione da Ottimizzazione guidata motore di database durante la sessione di ottimizzazione. Nell'elemento `Configuration` specificare le strutture di progettazione fisica corrispondenti alla configurazione ipotetica delle strutture di progettazione fisica del database che si desidera siano analizzate da Ottimizzazione guidata motore di database. Per informazioni sugli attributi e sugli elementi figlio che è possibile usare con gli `TuningOptions` `Configuration` elementi padre e, vedere [riferimento ai file di Input XML &#40;Ottimizzazione guidata motore di database&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
 4.  Salvare il file di input con l'estensione **xml** .  
   
-5.  Convalidare il file di input XML salvato nel passaggio 4 in base all'XML Schema di Ottimizzazione guidata motore di database. Questo schema viene installato nel percorso seguente quando si installa [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+5.  Convalidare il file di input XML salvato nel passaggio 4 in base all'XML Schema di Ottimizzazione guidata motore di database. Questo schema viene installato nel percorso seguente quando si installa [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
     ```  
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
     ```  
   
-     Il XML Schema Ottimizzazione guidata motore di database è anche disponibile online all' [https://schemas.microsoft.com/sqlserver/2004/07/dta](https://schemas.microsoft.com/sqlserver/2004/07/dta)indirizzo.  
+     Il XML Schema Ottimizzazione guidata motore di database è anche disponibile online all'indirizzo [https://schemas.microsoft.com/sqlserver/2004/07/dta](https://schemas.microsoft.com/sqlserver/2004/07/dta) .  
   
 6.  Dopo aver creato un carico di lavoro e un file di input XML, è possibile specificare il file di input nell'utilità della riga di comando **dta** per eseguirne l'analisi. Assicurarsi di specificare un nome di file di output XML nell'argomento **-ox** . In tal modo viene creato un file di output XML con la configurazione indicata specificata nell'elemento `Configuration`. Se si desidera eseguire nuovamente Ottimizzazione guidata motore di database per verificare un'altra configurazione ipotetica basata sull'output, copiare il contenuto dell'elemento `Configuration` del file di output e incollarlo nel file di input XML originale o in un nuovo file XML. Per informazioni sull'uso di un file di input XML con l'utilità **dta** , vedere la sezione "Ottimizzazione di un database tramite l'utilità dta" in [Avvio e utilizzo di Ottimizzazione guidata motore di database](database-engine-tuning-advisor.md).  
   
@@ -311,7 +310,7 @@ ms.locfileid: "68811025"
  **Data**  
  Consente di specificare la data in cui si desidera eseguire il processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per l'applicazione delle indicazioni.  
   
- **Tempo**  
+ **Time**  
  Consente di specificare l'ora in cui si desidera eseguire il processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per l'applicazione delle indicazioni.  
   
 ### <a name="reports-tab-options"></a>Opzioni della scheda Report  
@@ -323,7 +322,7 @@ ms.locfileid: "68811025"
  **Data**  
  Data di creazione del report da parte dell'Ottimizzazione guidata motore di database.  
   
- **Tempo**  
+ **Time**  
  Ora di creazione del report da parte dell'Ottimizzazione guidata motore di database.  
   
  **Server**  
@@ -387,7 +386,7 @@ ms.locfileid: "68811025"
  Consente di visualizzare i dettagli del report selezionato. Le colonne della griglia cambiano a seconda del report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Avviare e usare il Ottimizzazione guidata motore di database](database-engine-tuning-advisor.md)   
- [dta - utilità](../../tools/dta/dta-utility.md)  
+ [Avvio e utilizzo di Ottimizzazione guidata motore di database](database-engine-tuning-advisor.md)   
+ [Utilità dta](../../tools/dta/dta-utility.md)  
   
   

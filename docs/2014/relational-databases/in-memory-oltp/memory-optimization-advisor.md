@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f4dcc5a7658ee3549d774989ae95a027a5787fc2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 581ce3a1b13d94814904876f61637dcad3dd76de
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719072"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050082"
 ---
 # <a name="memory-optimization-advisor"></a>Ottimizzazione guidata per la memoria
   Lo strumento di report sulle prestazioni delle transazioni (vedere [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) indica quali tabelle del database trarranno vantaggio se trasferite per utilizzare OLTP in memoria. Una volta identificata la tabella da trasferire per l'utilizzo di OLTP in memoria, è possibile utilizzare Ottimizzazione guidata per la memoria per eseguire facilmente la migrazione della tabella di database basata su disco in OLTP in memoria.  

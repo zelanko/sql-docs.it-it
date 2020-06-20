@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a0187811-dc71-4792-a282-3bfe1ca90c21
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e29280e6771c06ad11a0ec833445ba94c93c279f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb4b46873aa7e712145e66f4e6482dbb894e8ac2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012197"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053164"
 ---
 # <a name="audit-schema-object-gdr-event-class"></a>Audit Schema Object GDR - classe di evento
   La classe di evento **Audit Schema Object GDR** si verifica ogni volta che viene generata un'istruzione GRANT, REVOKE o DENY relativa all'autorizzazione per un oggetto dello schema da uno degli utenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

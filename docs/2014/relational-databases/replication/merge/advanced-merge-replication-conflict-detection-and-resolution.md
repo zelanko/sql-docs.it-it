@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5aaf7031afb1b3c148bbef2bcafd5d40f4947f8d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7330e1e9f588ba2eb06e419289278a7636fb7184
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63000338"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049466"
 ---
 # <a name="advanced-merge-replication-conflict-detection-and-resolution"></a>Rilevamento e risoluzione avanzati dei conflitti nella replica di tipo merge
   Se un server di pubblicazione e un Sottoscrittore sono connessi e viene eseguita la sincronizzazione, l'agente di merge rileva l'eventuale presenza di conflitti. Se vengono rilevati dei conflitti, l'agente utilizza un sistema di risoluzione dei conflitti, specificato al momento dell'aggiunta di un articolo a una pubblicazione, per determinare quali dati vengono accettati e propagati agli altri siti.  
@@ -59,7 +58,7 @@ ms.locfileid: "63000338"
   
  Per specificare il livello di rilevamento e risoluzione dei conflitti di un articolo, vedere [Specifica del livello di rilevamento e risoluzione dei conflitti per gli articoli di merge](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution).  
   
-## <a name="conflict-resolution"></a>Risoluzione dei conflitti  
+## <a name="conflict-resolution"></a>Risoluzione conflitti  
  Dopo il rilevamento di un conflitto, l'agente di merge avvia il sistema di risoluzione dei conflitti selezionato e lo utilizza per determinare il valore in conflitto che prevale. La riga che prevale viene applicata al server di pubblicazione e al Sottoscrittore, mentre i dati della riga non confermata vengono inseriti in una tabella dei conflitti. I conflitti vengono risolti immediatamente dopo l'esecuzione del sistema di risoluzione, a meno che non si scelga di risolvere i conflitti in modo interattivo.  
   
 ### <a name="resolver-types"></a>Tipi di sistemi di risoluzione  
@@ -81,11 +80,11 @@ ms.locfileid: "63000338"
   
 -   Un sistema di risoluzione personalizzato basato sul modello COM  
   
-     La replica di tipo merge fornisce un'API per la scrittura di resolver come oggetti com in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] linguaggi [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]quali o. Per altre informazioni, vedere [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
+     La replica di tipo merge fornisce un'API per la scrittura di resolver come oggetti COM in linguaggi quali [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] . Per altre informazioni, vedere [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
   
 -   Un sistema di risoluzione basato sul modello COM implementato da [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
   
-     [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] include un numero di resolver basati su com. Per altre informazioni, vedere [Sistemi di risoluzione dei conflitti basati su Microsoft COM](advanced-merge-replication-conflict-com-based-resolvers.md).  
+     [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]include un numero di resolver basati su com. Per altre informazioni, vedere [Sistemi di risoluzione dei conflitti basati su Microsoft COM](advanced-merge-replication-conflict-com-based-resolvers.md).  
   
  Per informazioni sulla scelta del tipo di sistema di risoluzione appropriato, vedere [Scegliere un sistema di risoluzione](advanced-merge-replication-conflict-choose-a-resolver.md).  
   
@@ -109,7 +108,7 @@ ms.locfileid: "63000338"
   
  Nel Visualizzatore conflitti sono visualizzate informazioni delle tre tabelle di sistema:  
   
--   La replica crea una tabella dei conflitti per ogni tabella dell'articolo di merge, denominata **MSmerge_conflict_\<NomePubblicazione>_\<NomeArticolo>**.  
+-   La replica crea una tabella dei conflitti per ogni tabella in un articolo di merge, con un nome nel formato **MSmerge_conflict_ \<PublicationName> _ \<ArticleName> **.  
   
      La struttura delle tabelle dei conflitti corrisponde a quella delle tabelle su cui sono basate. Una riga in una di queste tabelle rappresenta la versione non confermata di una riga in conflitto. La versione confermata della riga è inclusa nella tabella utente effettiva.  
   
@@ -131,7 +130,7 @@ ms.locfileid: "63000338"
   
 -   Programmazione [!INCLUDE[tsql](../../../includes/tsql-md.md)] della replica: [Visualizzare le informazioni sui conflitti per le pubblicazioni di tipo merge &#40;programmazione Transact-SQL della replica&#41;](../view-conflict-information-for-merge-publications.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Sincronizzare i dati](../synchronize-data.md)  
   
   

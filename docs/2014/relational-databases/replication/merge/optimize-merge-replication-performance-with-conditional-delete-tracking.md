@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58f120a3-ea3a-4e97-93f0-0eb4e580ecf2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a93eed388f494b7d0aeaac127b95bc0d87c76963
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a564dc4bcabc46689fbf1a521a9ecb1209654594
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "68210697"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010503"
 ---
 # <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>Ottimizzazione delle prestazioni della replica di tipo merge con il rilevamento condizionale delle eliminazioni
     
@@ -48,7 +47,7 @@ ms.locfileid: "68210697"
   
 -   Programmazione [!INCLUDE[tsql](../../../includes/tsql-md.md)] della replica: [Disattivare del rilevamento delle eliminazioni per gli articoli di merge &#40;programmazione Transact-SQL della replica&#41;](..//publish/specify-merge-replication-properties.md#tracking-deletes)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni degli articoli per la replica di tipo merge](article-options-for-merge-replication.md)   
  [Ottimizzare le prestazioni della replica di tipo merge con gli articoli di solo download](optimize-merge-replication-performance-with-download-only-articles.md)  
   

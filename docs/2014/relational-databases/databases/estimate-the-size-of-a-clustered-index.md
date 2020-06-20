@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fe7b988590de54a3cb02aa540b244e1f56f3ba24
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 275a38b70a8215d3ffb9d35530cd0bd5df4ffb70
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054129"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966011"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>Stima delle dimensioni di un indice cluster
   Per stimare la quantità di spazio necessaria per l'archiviazione dati in un indice cluster, è possibile utilizzare la procedura seguente:  
@@ -174,7 +173,7 @@ ms.locfileid: "66054129"
   
 7.  Calcolare il numero di livelli nell'indice:  
   
-     ***Non-leaf_Levels*** = 1 + Index_Rows_Per_Page di log (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
+     ***Non-leaf_Levels*** = 1 + Index_Rows_Per_Page di log (***Num_Leaf_Pages***  /  ***Index_Rows_Per_Page***)  
   
      Arrotondare questo valore per eccesso al numero intero più vicino. Nel valore non è incluso il livello foglia dell'indice cluster.  
   

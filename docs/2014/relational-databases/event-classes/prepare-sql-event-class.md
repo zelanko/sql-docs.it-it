@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ff3aa04-0f1a-49e2-a43d-7251bab4a458
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47f01af90a2857017a9644f3bc5685c966be8797
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aaeaa6aee7fa61527180290ac22a584ed22f5178
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827439"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052795"
 ---
 # <a name="prepare-sql-event-class"></a>Prepare SQL - classe di evento
   La classe di evento Prepare SQL indica che una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] sono state preparate da SqlClient, ODBC, OLE DB o DB-Library.  
@@ -50,7 +49,7 @@ ms.locfileid: "62827439"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|`bigint`|Token usato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

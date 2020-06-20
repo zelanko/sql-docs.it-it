@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a5e1056b-0b75-4ad6-99c1-89246010d815
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f44d3426d7a3f11157167763e047dcb7423a904f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 64ffacdb14d0a0ba636a34aa27fec6fa10dc1e3a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62635080"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059646"
 ---
 # <a name="setnumvalue-method-sqlserviceadvancedproperty-class"></a>Metodo SetNumValue (classe SqlServiceAdvancedProperty)
   Imposta il valore numerico di una proprietà.  
@@ -40,7 +39,7 @@ NumValue
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  Oggetto della [classe SqlServiceAdvancedProperty](sqlserviceadvancedproperty-class.md) che rappresenta una proprietà avanzata.  
   
 #### <a name="parameters"></a>Parametri  
@@ -55,7 +54,7 @@ NumValue
 ## <a name="remarks"></a>Osservazioni  
  Il tipo di valore della proprietà deve essere numerico per potere impostare la proprietà su un valore numerico.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Avvio e arresto di servizi](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

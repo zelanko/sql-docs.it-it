@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 43ae01b9173693370d5e422d4f26b6175101ff12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a9bc0e1d4baecb7f4c66b83b57081ed3131123d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721042"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062781"
 ---
 # <a name="recompile-a-stored-procedure"></a>Ricompilare una stored procedure
-  In questo argomento viene descritto come ricompilare una stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)]. Questa operazione può essere eseguita in tre modi `WITH RECOMPILE` : l'opzione nella definizione della stored procedure o quando viene chiamata la `RECOMPILE` stored procedure, l'hint per la query su singole `sp_recompile` istruzioni o l'utilizzo del stored procedure di sistema. Questo argomento illustra l'uso dell'opzione WITH RECOMPILE quando si crea una definizione di stored procedure e si esegue una stored procedure esistente. Descrive anche l'uso della stored procedure di sistema sp_recompile per ricompilare una stored procedure esistente.  
+  In questo argomento viene descritto come ricompilare una stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)]. Questa operazione può essere eseguita in tre modi: l' `WITH RECOMPILE` opzione nella definizione della stored procedure o quando viene chiamata la stored procedure, l'hint per la `RECOMPILE` query su singole istruzioni o l'utilizzo del `sp_recompile` stored procedure di sistema. Questo argomento illustra l'uso dell'opzione WITH RECOMPILE quando si crea una definizione di stored procedure e si esegue una stored procedure esistente. Descrive anche l'uso della stored procedure di sistema sp_recompile per ricompilare una stored procedure esistente.  
   
  **Contenuto dell'articolo**  
   
@@ -131,7 +130,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di una stored procedure](../stored-procedures/create-a-stored-procedure.md)   
  [Modificare una stored procedure](../stored-procedures/modify-a-stored-procedure.md)   
  [Rinominare una stored procedure](rename-a-stored-procedure.md)   

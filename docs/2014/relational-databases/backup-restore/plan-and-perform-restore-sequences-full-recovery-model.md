@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9cbefaf8-d2b6-41c9-83fc-b3807a841fe2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 08898d4c7a324a97fc0e44ef45b15dba90d42a1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85558c0a6361837b5645b9fc38ad040254265d72
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921848"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957741"
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>Pianificare ed eseguire sequenze di ripristino (Modello di recupero con registrazione completa)
   In questo argomento si spiega come pianificare ed eseguire una sequenza di ripristino per un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui viene utilizzato in genere il modello di recupero con registrazione completa. Una *sequenza di ripristino* è una sequenza contenente una o più istruzioni [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) . In genere, consente di inizializzare il contenuto del database, dei file e/o delle pagine in fase di ripristino (fase di copia dei dati), di eseguire il roll forward delle transazioni registrate (fase di rollforward) e quindi di eseguire il rollback delle transazioni di cui non è stato eseguito il commit (fase di rollback).  

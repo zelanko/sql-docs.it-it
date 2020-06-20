@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ebe020a-7921-46b2-8823-398748f379b2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7508324be0bef23ba0590bb181135512d75701e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93881c4e9b91e7ace4c250fbf90b8913484f2ce2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059035"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966761"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>Editor attività Esegui SQL (pagina Mapping parametri)
   Usare la pagina **Mapping parametri** della finestra di dialogo **Editor attività Esegui SQL** per eseguire il mapping tra variabili e parametri nell'istruzione SQL.  
@@ -28,11 +27,11 @@ ms.locfileid: "66059035"
   
 ## <a name="options"></a>Opzioni  
  **Nome variabile**  
- Dopo aver aggiunto un mapping dei parametri facendo clic su **Aggiungi**, selezionare una variabile di sistema o una variabile definita dall'utente nell'elenco oppure fare clic su \<**Nuova variabile**> per aggiungere una nuova variabile usando la finestra di dialogo **Aggiungi variabile**.  
+ Dopo avere aggiunto un mapping dei parametri facendo clic su **Aggiungi**, selezionare una variabile di sistema o definita dall'utente nell'elenco oppure fare clic su \<**New variable...**> per aggiungere una nuova variabile utilizzando la finestra di dialogo **Aggiungi variabile** .  
   
  **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)  
   
- **Direction**  
+ **Direzione**  
  Consente di selezionare la direzione del parametro. Eseguire il mapping di ogni variabile a un parametro di input, a un parametro di output o a un codice restituito.  
   
  **Tipo di dati**  
@@ -56,7 +55,7 @@ ms.locfileid: "66059035"
  **Rimuovi**  
  Selezionare un mapping dei parametri nell'elenco e quindi fare clic su **Rimuovi**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività Esegui SQL &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor attività Esegui SQL &#40;pagina del set di risultati&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)   

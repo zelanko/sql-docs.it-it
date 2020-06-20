@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6c0975dee640230880dfe05a7d86359172cfa157
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4d09750c0cb81d64f5921ae2064b2e75edb6ca96
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882233"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047578"
 ---
 # <a name="validate-replicated-data"></a>Convalida dei dati replicati
   In questo argomento viene descritto come convalidare i dati nel Sottoscrittore in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o RMO (Replication Management Objects).  
@@ -65,7 +64,7 @@ Durante la convalida dei dati è opportuno considerare gli aspetti seguenti:
 -   Poiché la convalida di set di dati estesi mediante checksum e checksum binari può richiedere quantità elevate di risorse di elaborazione, è opportuno pianificare la convalida in modo che venga eseguita nei periodi di attività minore nei server utilizzati per la replica.    
 -   La replica convalida soltanto le tabelle e non verifica che gli articoli solo schema, ad esempio le stored procedure, presenti nel server di pubblicazione e nel Sottoscrittore corrispondano.    
 -   Il checksum binario può essere utilizzato per qualsiasi tabella pubblicata. Non è possibile convalidare mediante il calcolo del checksum tabelle con filtri colonne o strutture di tabelle logiche con offset di colonna diversi, a causa di istruzioni di tipo ALTER TABLE tramite cui vengono eliminate o aggiunte colonne.    
--   Per la convalida della `checksum` replica vengono utilizzate le funzioni e **BINARY_CHECKSUM** . Per informazioni sul comportamento, vedere [CHECKSUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/checksum-transact-sql) e [BINARY_CHECKSUM  &#40;Transact-SQL&#41;](/sql/t-sql/functions/binary-checksum-transact-sql).  
+-   Per la convalida della replica vengono utilizzate le `checksum` funzioni e **BINARY_CHECKSUM** . Per informazioni sul comportamento, vedere [CHECKSUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/checksum-transact-sql) e [BINARY_CHECKSUM  &#40;Transact-SQL&#41;](/sql/t-sql/functions/binary-checksum-transact-sql).  
   
 -   La convalida eseguita mediante checksum o checksum binario può segnalare erroneamente un problema se nel Sottoscrittore vi sono tipi di dati diversi rispetto al server di pubblicazione. Ciò può verificarsi se si effettua una delle operazioni indicate di seguito.    
     -   Impostazione esplicita delle opzioni per lo schema per l'esecuzione del mapping dei tipi di dati per versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
@@ -112,7 +111,7 @@ Durante la convalida dei dati è opportuno considerare gli aspetti seguenti:
 
 #### <a name="all-articles"></a>Tutti gli articoli
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql). Specificare ** \@publication** e uno dei valori seguenti per ** \@rowcount_only**:    
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql). Specificare ** \@ Publication** e uno dei valori seguenti per ** \@ rowcount_only**:    
     -   **1** : convalida solo mediante conteggio delle righe (impostazione predefinita).    
     -   **2** : convalida mediante conteggio delle righe e checksum binario.  
   
@@ -124,7 +123,7 @@ Durante la convalida dei dati è opportuno considerare gli aspetti seguenti:
   
 #### <a name="single-article"></a>Singolo articolo 
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Specificare ** \@publication**, il nome dell'articolo per ** \@article**e uno dei valori seguenti per ** \@rowcount_only**:    
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Specificare ** \@ Publication**, il nome dell'articolo per ** \@ article**e uno dei valori seguenti per ** \@ rowcount_only**:    
     -   **1** : convalida solo mediante conteggio delle righe (impostazione predefinita).    
     -   **2** -conteggio delle righe e checksum binario.  
   
@@ -137,9 +136,9 @@ Durante la convalida dei dati è opportuno considerare gli aspetti seguenti:
 #### <a name="single-subscriber"></a>Singolo sottoscrittore
   
 1.  Nel database di pubblicazione del server di pubblicazione aprire una transazione esplicita usando [BEGIN TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-transaction-transact-sql).    
-2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql). Specificare la pubblicazione per ** \@la pubblicazione**, il nome del Sottoscrittore per ** \@il Sottoscrittore**e il nome del database di sottoscrizione per ** \@destination_db**.    
+2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql). Specificare la pubblicazione per la ** \@ pubblicazione**, il nome del Sottoscrittore per il ** \@ Sottoscrittore**e il nome del database di sottoscrizione per ** \@ destination_db**.    
 3.  (Facoltativo) Ripetere il passaggio 2 per ciascuna sottoscrizione da convalidare.    
-4.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Specificare ** \@publication**, il nome dell'articolo per ** \@article**e uno dei valori seguenti per ** \@rowcount_only**:    
+4.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Specificare ** \@ Publication**, il nome dell'articolo per ** \@ article**e uno dei valori seguenti per ** \@ rowcount_only**:    
     -   **1** : convalida solo mediante conteggio delle righe (impostazione predefinita).    
     -   **2** -conteggio delle righe e checksum binario.  
   
@@ -187,7 +186,7 @@ Durante la convalida dei dati è opportuno considerare gli aspetti seguenti:
 
 ### <a name="using-transact-sql-t-sql"></a>Uso di Transact-SQL (T-SQL)
 
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_validatemergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql). Specificare ** \@la pubblicazione**, il nome del Sottoscrittore per ** \@il Sottoscrittore**, il nome del database di sottoscrizione per ** \@subscriber_db**e uno dei valori seguenti per ** \@Level**:   
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_validatemergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql). Specificare la ** \@ pubblicazione**, il nome del Sottoscrittore per il ** \@ Sottoscrittore**, il nome del database di sottoscrizione per ** \@ subscriber_db**e uno dei valori seguenti per ** \@ Level**:   
     -   **1** : convalida solo mediante conteggio delle righe.    
     -   **3** : convalida mediante conteggio delle righe e checksum binario.  
   
@@ -218,7 +217,7 @@ Durante la convalida dei dati è opportuno considerare gli aspetti seguenti:
 
 ### <a name="using-transact-sql-t-sql"></a>Uso di Transact-SQL (T-SQL)
 
-1.  (Facoltativo) Nel database di pubblicazione del server di pubblicazione eseguire [sp_validatemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql). Specificare ** \@publication** e uno dei valori seguenti per ** \@Level**:    
+1.  (Facoltativo) Nel database di pubblicazione del server di pubblicazione eseguire [sp_validatemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql). Specificare ** \@ Publication** e uno dei valori seguenti per ** \@ Level**:    
     -   **1** : convalida solo mediante conteggio delle righe.    
     -   **3** : convalida mediante conteggio delle righe e checksum binario.  
   
