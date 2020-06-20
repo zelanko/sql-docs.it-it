@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 92e5fd32-4944-4f7c-a448-b458df93d0d5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3da112ff268e824792bdd29160ec97331e5b0f7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e6d72b7f8cbb4aead7dfb87eb44fb5d943672433
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056151"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964131"
 ---
 # <a name="schema-restrictions-dialog-box"></a>Finestra di dialogo Restrizioni schema
   Usare la finestra di dialogo **Restrizioni schema** per impostare le restrizioni dello schema da applicare all'enumeratore Foreach ADO.NET set di righe dello schema.  
@@ -33,10 +32,10 @@ ms.locfileid: "66056151"
   
  **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Aggiungi variabile](../../2014/integration-services/add-variable.md)  
   
- **Text**  
+ **Testo**  
  Consente di digitare il testo per definire le restrizioni.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Editor ciclo foreach &#40;pagina raccolta&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
  [Contenitore Ciclo Foreach](control-flow/foreach-loop-container.md)  
   

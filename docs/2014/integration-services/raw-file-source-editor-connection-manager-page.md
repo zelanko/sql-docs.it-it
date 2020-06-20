@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ea79c73d-37fc-44fd-bc6e-bcefc23235c9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 009a8ad4466c40d9f6199aff57fcbea74f6606e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1700804c9fc3b9106d444b9183f16092d2675451
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056485"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964601"
 ---
 # <a name="raw-file-source-editor-connection-manager-page"></a>Editor origine file non elaborato (pagina Gestione connessione)
   L'origine file non elaborato legge i dati non elaborati da un file. Poiché la rappresentazione dei dati è nativa per l'origine, non è necessaria alcuna conversione e quasi nessuna analisi dei dati. Per ulteriori informazioni, vedere [Raw File Source](data-flow/raw-file-source.md).  

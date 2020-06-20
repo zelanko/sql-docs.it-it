@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6637bf3f-03c8-4552-ae63-d4896307cf4c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7588f75c1b2f3f282026821d5bf9a77bd8e09886
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: d60582929f71b89f7a3de17af62419367ebc7d93
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000711"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929853"
 ---
 # <a name="options-text-editor---file-extension-page"></a>Opzioni (Editor di testo - pagina Estensione file)
   Usare la finestra di dialogo **Opzioni** per specificare la modalità in cui i file con determinate estensioni vengono gestiti da [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Per ogni estensione immessa è possibile selezionare un editor. È pertanto possibile scegliere l'editor di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] in cui sarà possibile aprire determinati tipi di documento. Per aprire le opzioni relative all'estensione di file scegliere **Opzioni** dal menu **Strumenti**, espandere **Editor di testo** e quindi fare clic su **Estensione file**.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1c13b66a5ffe594589c325bc7d8001451161f054
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ed55a83d0458687a887f70dd5eb4c3acb915c910
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175500"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936704"
 ---
 # <a name="overview-of-alwayson-availability-groups-sql-server"></a>Panoramica di Gruppi di disponibilità AlwaysOn (SQL Server)
   In questo argomento sono introdotti i concetti di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fondamentali per la configurazione e la gestione di uno o più gruppi di disponibilità in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Per un riepilogo dei vantaggi offerti dai gruppi di disponibilità e per una panoramica della terminologia relativa a [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere [Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](always-on-availability-groups-sql-server.md).
@@ -68,9 +67,9 @@ ms.locfileid: "78175500"
 >  Quando il ruolo di una replica di disponibilità è indeterminato, ad esempio durante un failover, i relativi database si trovano temporaneamente nello stato NOT SYNCHRONIZING. Il loro ruolo rimane impostato su RESOLVING finché il ruolo della replica di disponibilità non viene risolto. Se una replica di disponibilità viene risolta nel ruolo primario, i relativi database diventano i database primari. Se una replica di disponibilità viene risolta nel ruolo secondario, i relativi database diventano i database secondari.
 
 ##  <a name="availability-modes"></a><a name="AvailabilityModes"></a>Modalità di disponibilità
- La modalità di disponibilità è una proprietà di ogni replica di disponibilità. La modalità di disponibilità determina se la replica primaria eseguirà il commit delle transazioni su un database solo dopo che una determinata replica secondaria avrà scritto su disco i record del log delle transazioni (consolidamento del log). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]supporta due modalità di disponibilità:*modalità con commit asincrono* e *modalità con commit sincrono*.
+ La modalità di disponibilità è una proprietà di ogni replica di disponibilità. La modalità di disponibilità determina se la replica primaria eseguirà il commit delle transazioni su un database solo dopo che una determinata replica secondaria avrà scritto su disco i record del log delle transazioni (consolidamento del log). I [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supportano due modalità di disponibilità: *modalità commit asincrono* e *modalità commit sincrono*.
 
--   **Modalità commit asincrono**
+-   **Asynchronous-commit mode**
 
      Una replica di disponibilità che usa questa modalità di disponibilità è nota come*replica con commit asincrono*. Nella modalità commit asincrono, la replica primaria esegue il commit delle transazioni senza attendere l'acknowledgement della finalizzazione del log da parte di una replica con commit asincrono. La modalità commit asincrono riduce la latenza delle transazioni sui database secondari, ma consente un certo ritardo rispetto ai database primari, rendendo possibile la perdita di dati.
 
@@ -105,7 +104,7 @@ ms.locfileid: "78175500"
 
  Per altre informazioni, vedere [Failover e modalità di failover&#40;gruppi di disponibilità AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md).
 
-##  <a name="client-connections"></a><a name="ClientConnections"></a>Connessioni client
+##  <a name="client-connections"></a><a name="ClientConnections"></a> Connessioni client
  È possibile fornire la connettività client alla replica primaria di un determinato gruppo di disponibilità creando un listener del gruppo di disponibilità. Un *listener del gruppo di disponibilità* fornisce un set di risorse collegate a un determinato gruppo di disponibilità per l'indirizzamento delle connessioni client alla replica di disponibilità appropriata.
 
  Un listener del gruppo di disponibilità è associato a un nome DNS univoco che funge da nome di rete virtuale (VNN), a uno o più indirizzi IP virtuali (VIP) e a un numero di porta TCP. Per altre informazioni, vedere [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).
@@ -129,7 +128,7 @@ ms.locfileid: "78175500"
 ##  <a name="session-timeout-period"></a><a name="SessionTimeoutPerios"></a>Periodo di timeout della sessione
  Il periodo di timeout della sessione è una proprietà della replica di disponibilità che determina quanto tempo la connessione con un'altra replica di disponibilità può rimanere inattiva prima che la connessione venga chiusa. Le repliche primarie e secondarie effettuano vicendevolmente il ping per segnalare che ancora sono attive. La ricezione di un ping dall'altra replica durante il periodo di timeout indica che la connessione è ancora aperta e che le istanze del server sono in comunicazione. Alla ricezione di un ping, la replica di disponibilità reimposta il contatore del timeout della sessione per quella connessione.
 
- Il periodo di timeout della sessione impedisce alla replica di attendere indefinitamente la ricezione di un ping dall'altra replica. Se non viene ricevuto alcun ping dall'altra replica entro il periodo di timeout della sessione, si verifica il timeout della replica. La connessione viene chiusa e la replica scaduta entra nello stato disconnesso. Anche se la replica disconnessa è configurata per la modalità con commit sincrono, le transazioni non attenderanno che quella replica venga riconnessa e risincronizzata.
+ Il periodo di timeout della sessione impedisce alla replica di attendere indefinitamente la ricezione di un ping dall'altra replica. Se non viene ricevuto alcun ping dall'altra replica entro il periodo di timeout della sessione, si verifica il timeout della replica. La connessione viene chiusa e per la replica scaduta viene impostato lo stato DISCONNECTED. Anche se la replica disconnessa è configurata per la modalità con commit sincrono, le transazioni non attenderanno che quella replica venga riconnessa e risincronizzata.
 
  Il periodo di timeout della sessione predefinito per ogni replica di disponibilità è di 10 secondi. Questo valore è configurabile dall'utente (minimo 5 secondi). È consigliabile usare generalmente un periodo di timeout di almeno 10 secondi. Con un valore inferiore a 10 secondi, può verificarsi un sovraccarico del sistema, con generazione di falsi errori.
 
@@ -155,7 +154,7 @@ ms.locfileid: "78175500"
 
      [Pagina relativa ai blog del Servizio Supporto Tecnico Clienti per gli ingegneri di SQL Server](https://blogs.msdn.com/b/psssql/)
 
--   **Video**
+-   **Video:**
 
      [Pagina relativa alla prima parte riguardante l'introduzione della soluzione a disponibilità elevata di prossima generazione della serie AlwaysOn di Microsoft SQL Server nome in codice "Denali"](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)
 

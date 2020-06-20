@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2289aab5-e048-4288-bcae-aaf768ca014a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 26c5b80fe5932906324d7131e967760a6a918aaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 804c1c74356e52822cc369e9b4a179433d6c6f92
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62698924"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053355"
 ---
 # <a name="audit-database-object-gdr-event-class"></a>Audit Database Object GDR - classe di evento
   La classe di evento **Audit Database Object GDR** viene generata in presenza di un evento GRANT, REVOKE o DENY per oggetti di database, ad esempio assembly e schemi.  

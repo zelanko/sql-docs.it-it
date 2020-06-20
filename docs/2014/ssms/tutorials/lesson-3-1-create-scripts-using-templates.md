@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ed48014c-3fc9-48ff-8c0f-8d1822195f14
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8387cdaf85d6fd7750229fda86c8cb3122b61d90
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7521f6c727d852d1b585d9c2f6ab0b78d8c5d061
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62913555"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040902"
 ---
 # <a name="create-scripts-using-templates"></a>Creare script utilizzando i modelli
   Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] include numerosi modelli di script contenenti istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] per eseguire le attività più comuni. Tali modelli contengono parametri per i valori specificati dall'utente, ad esempio un nome di tabella. L'utilizzo dei parametri consente di digitare il nome una sola volta e quindi copiarlo automaticamente in tutte le posizioni richieste all'interno dello script. È possibile creare modelli personalizzati per supportare gli script che vengono scritti più di frequente. È inoltre possibile riorganizzare l'albero dei modelli spostandoli o creando nuove cartelle dove contenerli. In questa esercitazione verrà utilizzato un modello per creare un database e verranno specificati i parametri del modello.  

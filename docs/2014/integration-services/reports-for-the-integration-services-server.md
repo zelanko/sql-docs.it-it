@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: aa53c012649f983953b61a21901763b9bdd02c8b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 648aa642f380d042091005cf9dbd8e6d8d61add9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056437"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964591"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Report per il server Integration Services
   Nella versione corrente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]sono disponibili report standard in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per monitorare i progetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] distribuiti nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . I report consentono di visualizzare lo stato e la cronologia dei pacchetti e, se necessario, identificare la causa di eventuali errori.  
@@ -47,7 +46,7 @@ ms.locfileid: "66056437"
   
 |Sezione|Descrizione|  
 |-------------|-----------------|  
-|Filtro|Mostra il filtro corrente applicato al report, ad esempio l'intervallo Ora inizio.|  
+|Filtra|Mostra il filtro corrente applicato al report, ad esempio l'intervallo Ora inizio.|  
 |Informazioni sulle esecuzioni|Indica l'ora di inizio, l'ora di fine e la durata di ogni esecuzione del pacchetto. È possibile visualizzare un elenco di valori dei parametri utilizzati con l'esecuzione di un pacchetto, ad esempio i valori passati a un pacchetto figlio utilizzando l'attività Esegui pacchetto. Per visualizzare l'elenco dei parametri, fare clic su Panoramica.|  
   
  Per altre informazioni sull'utilizzo dell'attività Esegui pacchetto per rendere disponibili valori a un pacchetto figlio, vedere [Attività Esegui pacchetto](control-flow/execute-package-task.md).  
@@ -61,7 +60,7 @@ ms.locfileid: "66056437"
   
 |Sezione|Descrizione|  
 |-------------|-----------------|  
-|Filtro|Mostra il filtro corrente applicato al report, ad esempio le connessioni con una stringa specificata e il valore di **Intervallo di ore ultimo errore** .<br /><br /> Impostare un valore per **Intervallo di ore ultimo errore** per visualizzare solo gli errori di connessione che si sono verificati durante un intervallo di date. L'intervallo può estendersi per più giorni, mesi o anni.|  
+|Filtra|Mostra il filtro corrente applicato al report, ad esempio le connessioni con una stringa specificata e il valore di **Intervallo di ore ultimo errore** .<br /><br /> Impostare un valore per **Intervallo di ore ultimo errore** per visualizzare solo gli errori di connessione che si sono verificati durante un intervallo di date. L'intervallo può estendersi per più giorni, mesi o anni.|  
 |Dettagli|Mostra la stringa di connessione, il numero di esecuzioni durante le quali una connessione non è riuscita e la data in cui l'ultima connessione non è riuscita.|  
   
 ## <a name="all-operations-report"></a>Report Tutte le operazioni  
@@ -71,7 +70,7 @@ ms.locfileid: "66056437"
  Nel report **Tutte le convalide** viene visualizzato un riepilogo di tutte le convalide di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] effettuate nel server. Nel riepilogo vengono visualizzate informazioni per ogni convalida, ad esempio, stato, ora di inizio e ora di fine. In ogni voce del riepilogo è incluso un collegamento ai messaggi generati durante la convalida. Come per il Dashboard Integration Services, è possibile applicare un filtro alla tabella per limitare le informazioni visualizzate.  
   
 ## <a name="custom-reports"></a>Report personalizzati  
- È possibile aggiungere un report personalizzato (file con estensione rdl) al nodo del catalogo **SSISDB** nel nodo **Cataloghi di Integration Services** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Prima di aggiungere il report, verificare che sia in uso una convenzione di denominazione di terze parti per assegnare nomi completi agli oggetti a cui si fa riferimento, ad esempio una tabella di origine. In caso contrario, in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] verrà visualizzato un errore. La convenzione di denominazione è \<database>.\<proprietario>.\<oggetto>. ad esempio SSISDB.internal.executions.  
+ È possibile aggiungere un report personalizzato (file con estensione rdl) al nodo del catalogo **SSISDB** nel nodo **Cataloghi di Integration Services** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Prima di aggiungere il report, verificare che sia in uso una convenzione di denominazione di terze parti per assegnare nomi completi agli oggetti a cui si fa riferimento, ad esempio una tabella di origine. In caso contrario, in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] verrà visualizzato un errore. La convenzione di denominazione è \<database> . \<owner> . \<object> . Un esempio potrebbe essere SSISDB.internal.executions.  
   
 > [!NOTE]  
 >  Quando si aggiungono report personalizzati al nodo **SSISDB** nel nodo **Database** , il prefisso SSISDB non è necessario.  

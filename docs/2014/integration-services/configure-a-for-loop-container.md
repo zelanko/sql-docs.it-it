@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b9cd7ea7-b198-4a35-8b16-6acf09611ca5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 766a82c975b607687f79a696ce587422b93322bf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24e2fe71b958395a5be35afad32804d2a748348d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486999"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921982"
 ---
 # <a name="configure-a-for-loop-container"></a>Configurazione di un contenitore Ciclo For
   Questa procedura descrive come configurare un contenitore Ciclo For tramite la finestra di dialogo **Editor ciclo For** .  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f88a0f5c-e800-473b-ae23-c3943de5ed63
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9bde39c64fdf2fbabaec85772d4bfa44d86fd1da
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 5678c146dfffc4cf907e0050b2017208a0c7f141
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856653"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930052"
 ---
 # <a name="options-query-results-sql-server-results-to-grid-page"></a>Opzioni (risultati delle query-SQL Server-risultati nella pagina della griglia)
   Utilizzare questa pagina per specificare le opzioni di visualizzazione di un set di risultati di query in formato griglia. Le modifiche apportate a queste opzioni vengono applicate solo alle nuove query di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per modificare le opzioni per le query correnti, scegliere **Opzioni query** dal menu **query** oppure fare clic con il pulsante destro del mouse nella [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] finestra query e scegliere **Opzioni query**. Nel riquadro sinistro della finestra di dialogo **Opzioni query** fare clic su **Griglia** in **Risultati**.  

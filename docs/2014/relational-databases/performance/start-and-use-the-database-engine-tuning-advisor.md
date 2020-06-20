@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5ec9ec3dacc91fd36b64ec8b68ea66c42bdc3371
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2421ceaff8b2f54c1371f44e80b4a1774b64f829
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150632"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066794"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Avvio e utilizzo di Ottimizzazione guidata motore di database
   In questo argomento viene descritto come avviare e utilizzare Ottimizzazione guidata motore di database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per informazioni su come visualizzare e usare i risultati dopo l'ottimizzazione di un database, vedere [Visualizzare e utilizzare l'output di Ottimizzazione guidata motore di database](database-engine-tuning-advisor.md).  
@@ -175,7 +174,7 @@ ms.locfileid: "63150632"
   
 2.  Creare un carico di lavoro. Per ulteriori informazioni, vedere [Creare un carico di lavoro](#Create) più indietro in questo argomento.  
   
-3.  Avviare Ottimizzazione guidata motore di database e accedere a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [Avviare Ottimizzazione guidata motore di database](#Start) più indietro in questo argomento.  
+3.  Avviare Ottimizzazione guidata motore di database e accedere a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per ulteriori informazioni, vedere [Avviare Ottimizzazione guidata motore di database](#Start) più indietro in questo argomento.  
   
 4.  Nella scheda **Generale** digitare un nome in **Nome sessione** per creare una nuova sessione di ottimizzazione.  
   
@@ -353,7 +352,7 @@ ms.locfileid: "63150632"
  **File**  
  Consente di specificare uno script sql o un file di traccia per un carico di lavoro. Digitare il percorso e il nome del file nell'apposita casella di testo. In Ottimizzazione guidata motore di database viene presunto che il file di traccia del carico di lavoro sia un file di rollover. Per ulteriori informazioni sui file di rollover, vedere [Limit Trace File and Table Sizes](../sql-trace/limit-trace-file-and-table-sizes.md).  
   
- **tavolo**  
+ **Tabella**  
  Consente di specificare una tabella di traccia per un carico di lavoro. Specificare il nome completo della tabella di traccia nell'apposita casella, come illustrato nell'esempio seguente:  
   
 ```  
@@ -454,7 +453,7 @@ database_name.owner_name.table_name
  **Valuta l'utilizzo delle sole strutture di progettazione fisica esistenti**  
  Consente di valutare l'efficacia degli indici correnti senza che vengano generate indicazioni per le viste indicizzate o gli indici aggiuntivi.  
   
- **Nessun partizionamento.**  
+ **Nessun partizionamento**  
  Non vengono generate indicazioni per il partizionamento.  
   
  **Partizionamento completo**  
@@ -496,17 +495,17 @@ database_name.owner_name.table_name
  **Azione**  
  Visualizza i passaggi in esecuzione.  
   
- **Stato**  
+ **Status**  
  Visualizza lo stato del passaggio dell'azione.  
   
- **Messaggio**  
+ **Message**  
  Include gli eventuali messaggi restituiti dai passaggi dell'azione.  
   
  **Log di ottimizzazione**  
  Include informazioni sulla sessione di ottimizzazione corrente. Per stampare il log fare clic con il pulsante destro del mouse sul log e quindi scegliere **Stampa**.  
   
-## <a name="see-also"></a>Vedi anche  
- [Visualizzare e utilizzare l'output del Ottimizzazione guidata motore di database](database-engine-tuning-advisor.md)   
- [dta - utilità](../../tools/dta/dta-utility.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Visualizzare e utilizzare l'output di Ottimizzazione guidata motore di database](database-engine-tuning-advisor.md)   
+ [Utilità dta](../../tools/dta/dta-utility.md)  
   
   

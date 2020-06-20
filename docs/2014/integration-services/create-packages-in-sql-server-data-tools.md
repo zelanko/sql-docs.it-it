@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7053c5cd9780e578697c1bc08e6bb1b0c32ca1f9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2bbf6720e5532c2e3691289bf2b801fc86e6452b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62828879"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917347"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>Creare pacchetti in SQL Server Data Tools
   I pacchetti creati in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] tramite Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] vengono salvati nel file system. Per salvare un pacchetto in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o nell'archivio pacchetti, è necessario salvare una copia del pacchetto. Per altre informazioni, vedere [Salvataggio di una copia di un pacchetto](../../2014/integration-services/save-a-copy-of-a-package.md).  

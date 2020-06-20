@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 50afcf84-fae0-4eb5-9b0f-f2cf144c1433
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6375229899c1bfe8f175771e55fdd821fc232166
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4232cdfa584fdcc2e13786ecc9bd00f0c6fe7066
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798295"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041395"
 ---
 # <a name="create-a-powershell-script-job-step"></a>Create a PowerShell Script Job Step
   In questo argomento vengono descritte le procedure per la creazione e la definizione di un passaggio di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent mediante il quale viene eseguito uno script di PowerShell in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  

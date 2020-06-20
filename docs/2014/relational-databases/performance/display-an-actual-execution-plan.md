@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9403e6e2cf1c341780a06bbdff1c5f38685dd34a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f384e2d2752b7601fbb46b8ee7f7b56a2615651c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150974"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066876"
 ---
 # <a name="display-an-actual-execution-plan"></a>Visualizzazione di un piano di esecuzione effettivo
   In questo argomento viene descritto come generare piani di esecuzione grafici effettivi utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Alla generazione di piani di esecuzione effettivi vengono eseguite le query o i batch di comandi [!INCLUDE[tsql](../../includes/tsql-md.md)] . Il piano di esecuzione generato visualizza il piano di esecuzione query effettivo utilizzato da [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] per eseguire le query.  

@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: dd7f6c31-7d7f-4972-854a-1419a2826dca
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b9200880a9581b3903985c16fc2af129d19aceec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d19228fdf17788e9118367a6f0f0eb3be90cb72a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481198"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930132"
 ---
 # <a name="options-query-results-and-dependency-services-page"></a>Opzioni (Risultati delle query e pagina Servizi di dipendenza)
-  Utilizzare questa pagina per specificare il server a cui connettersi per utilizzare Servizi di dipendenza. Servizi di dipendenza consente di estrarre informazioni sulle dipendenze tra oggetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] archiviati in server diversi. Per visualizzare le dipendenze degli oggetti, utilizzare la finestra di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]dialogo **Dipendenze oggetti** in.  
+  Utilizzare questa pagina per specificare il server a cui connettersi per utilizzare Servizi di dipendenza. Servizi di dipendenza consente di estrarre informazioni sulle dipendenze tra oggetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] archiviati in server diversi. Per visualizzare le dipendenze degli oggetti, utilizzare la finestra di dialogo **Dipendenze oggetti** in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] .  
   
  **Per saperne di più**  
   
@@ -30,7 +29,7 @@ ms.locfileid: "65481198"
   
 ##  <a name="open-the-options-query-resultsdependency-services-page-dialog-box"></a><a name="open_dialog"></a>Aprire la finestra di dialogo Opzioni (pagina risultati query/servizi di dipendenza)  
   
-1.  In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]fare clic su **Opzioni** nel menu **strumenti** .  
+1.  In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] fare clic su **Opzioni** nel menu **strumenti** .  
   
 2.  Espandere **Risultati query** e fare clic su **Servizi di dipendenza**.  
   

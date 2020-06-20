@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e3aec7e136b656b7f33646d50b746e410263059a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 12e61f909d7961851983212cd61b709f8a781c25
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284994"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971295"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>Area funzionale Gestione integrazione (Gestione dati master)
   Nell'area funzionale Gestione Integrazione, gli amministratori possono importare dati dalle tabelle di staging e possono creare viste delle sottoscrizioni da utilizzare per i sistemi di sottoscrizione. Per altre informazioni sugli amministratori, vedere [Amministratori &#40;Master Data Services&#41;](administrators-master-data-services.md).  
@@ -38,7 +37,7 @@ ms.locfileid: "67284994"
   
  [Eliminare una vista sottoscrizioni &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-subscription-view-master-data-services.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Applicazione Web Gestione dati master](../../2014/master-data-services/master-data-manager-web-application.md)  
   
   

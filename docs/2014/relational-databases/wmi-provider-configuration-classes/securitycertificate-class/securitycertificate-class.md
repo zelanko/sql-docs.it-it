@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f5d0ddc957cfca8e122920321acc7ccebb70ef72
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66168258fb795f8d35b7aa7ac4dcadcf33fed46c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270765"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060029"
 ---
 # <a name="securitycertificate-class"></a>Classe SecurityCertificate
-  La [classe SecurityCertificate] SecurityCertificate-class.md) rappresenta un certificato di sicurezza. Un certificato è un'istruzione con firma digitale che associa il valore di una chiave pubblica all'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], che include la chiave privata corrispondente. Il certificato viene emesso da un'autorità di certificazione.  
+  La [classe SecurityCertificate] SecurityCertificate-class.md) rappresenta un certificato di sicurezza. Un certificato è un'istruzione con firma digitale che associa il valore di una chiave pubblica all'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , che include la chiave privata corrispondente. Il certificato viene emesso da un'autorità di certificazione.  
   
  Con [SecurityCertificate Class] SecurityCertificate-class.md) è possibile eseguire le attività seguenti:  
   
@@ -36,7 +35,7 @@ ms.locfileid: "63270765"
   
 -   Verificare l'identificazione digitale SHA per l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]specificata.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Gerarchia di crittografia](../../security/encryption/encryption-hierarchy.md)  
   
   

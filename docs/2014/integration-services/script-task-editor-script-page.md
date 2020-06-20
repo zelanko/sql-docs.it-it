@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 93da0e0d-83f5-406d-b144-4cce216571cb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 037b176dfacd9420fba64a405d8c851c558e93e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e9e9aef856276508ef557d465c20210e16f3073
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056193"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964191"
 ---
 # <a name="script-task-editor-script-page"></a>Editor attività Script (pagina Script)
   Utilizzare la pagina **Script** della finestra di dialogo **Editor attività Script** per impostare le proprietà dello script e specificare le variabili accessibili per lo script.  
@@ -57,7 +56,7 @@ ms.locfileid: "66056193"
  **Modifica script**  
  Apre VSTA IDE, dove è possibile creare o modificare lo script.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Pagina generale](general-page-of-integration-services-designers-options.md)   
  [Editor attività script &#40;pagina generale&#41;](../../2014/integration-services/script-task-editor-general-page.md)   

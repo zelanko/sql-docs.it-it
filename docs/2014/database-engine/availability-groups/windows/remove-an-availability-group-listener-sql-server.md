@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fd9bba9a-d29f-4c23-8ecd-aaa049ed5f1b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 049296ff601296edbd990fe9ea70aef3efa8c44b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 057b9c137cb4d8bbbdd03be61df600f7e59b264c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782862"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936572"
 ---
 # <a name="remove-an-availability-group-listener-sql-server"></a>Rimuovere un listener del gruppo di disponibilità (SQL Server)
   In questo argomento viene illustrato come rimuovere un listener da un gruppo di disponibilità AlwaysOn utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -81,7 +80,7 @@ ms.locfileid: "72782862"
   
 2.  Utilizzare l'istruzione [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) , come indicato di seguito:  
   
-     ALTER AVAILABILITY GROUP *group_name* rimuovere il **listener*`dns_name`*''**  
+     ALTER AVAILABILITY GROUP *group_name* rimuovere il listener **' *`dns_name`* '**  
   
      dove *group_name* è il nome del gruppo di disponibilità e *dns_name* è il nome DNS del listener del gruppo di disponibilità.  
   

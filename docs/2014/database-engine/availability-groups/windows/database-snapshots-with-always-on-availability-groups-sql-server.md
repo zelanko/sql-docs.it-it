@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7432da1c-ce2f-4cd9-af41-54c97744166b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cba02aa87e800391ffba3c791c1ee4341462c3f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1e4307653b5b8150d71019a373ee073d15123f9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814657"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936820"
 ---
 # <a name="database-snapshots-with-alwayson-availability-groups-sql-server"></a>Snapshot del database con gruppi di disponibilità AlwaysOn (SQL Server)
   È possibile creare uno snapshot del database in un qualsiasi database primario o secondario in un gruppo di disponibilità. Il ruolo di replica deve essere PRIMARY o SECONDARY, non nello stato di RESOLVING.  
@@ -35,7 +34,7 @@ ms.locfileid: "62814657"
   
  Se si verifica il failover della replica di disponibilità che ospita gli snapshot del database, gli snapshot del database rimangono sull'istanza del server dove sono stati creati. Gli utenti possono continuare a utilizzare gli snapshot dopo il failover. Se le prestazioni sono una preoccupazione, è consigliabile creare snapshot del database solo sui database secondari ospitati da una replica secondaria configurata per la modalità failover manuale.  Se si esegue il failover manuale del gruppo di disponibilità in questa replica secondaria, è possibile creare un nuovo set di snapshot del database su un'altra replica secondaria, reindirizzare i client ai nuovi snapshot del database ed eliminare tutti gli snapshot del database dai nuovi database primari.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Snapshot del database &#40;SQL Server&#41;](../../../relational-databases/databases/database-snapshots-sql-server.md)  
   

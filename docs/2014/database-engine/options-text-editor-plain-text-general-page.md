@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4253bf2395fc33ecf315a1f092e0203513de90e5
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 8a3a172a29949db0ab83bce0d771c98afa6ef64c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000692"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929832"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>Opzioni (Editor di testo - Testo normale - pagina Generale)
   Utilizzare questa finestra di dialogo per cambiare il comportamento di modifica generale dell'editor di testo utilizzato per modificare un documento non associato a un dato linguaggio di sviluppo. Per visualizzare queste impostazioni scegliere **Opzioni** dal menu **Strumenti** , espandere **Editor di testo**, espandere **Testo normale** e quindi fare clic su **Generale**.  

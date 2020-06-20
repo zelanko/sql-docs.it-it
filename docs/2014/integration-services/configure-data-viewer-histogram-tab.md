@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 43bda909-e48f-4243-9614-49f4eea84872
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3df1a27d94c3da63e1760e890654dba4045b2f94
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88bc9c648fde5e302347b243a9ea11f049798876
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060707"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921669"
 ---
 # <a name="configure-data-viewer-histogram-tab"></a>Configura visualizzatore dati (scheda Istogramma)
   Utilizzare la scheda **Istogramma** della finestra di dialogo **Configura visualizzatore dati** per indicare le colonne da visualizzare. In un istogramma i valori dei dati di una colonna numerica vengono visualizzati come distribuzione dei valori. Il grafico riflette il contenuto di un solo buffer.  
@@ -28,7 +27,7 @@ ms.locfileid: "66060707"
  **Colonna visualizzata**  
  Consente di selezionare una colonna da visualizzare come istogramma.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurare il Visualizzatore dati &#40;scheda generale&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
  [Configurare Visualizzatore dati &#40;scheda Istogramma&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
  [Configurare la scheda griglia &#40;visualizzatore dati&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5e4402ce-31db-4774-a2a1-552335f87693
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: deaa7ca2225d6de503ceb3d5d901a5a51d11aa68
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4dffc314c99345c9e8db632fbcebc1f2e3653d2f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479361"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971361"
 ---
 # <a name="initiate-actions-based-on-attribute-value-changes-master-data-services"></a>Inizializzare azioni basate su modifiche dei valori di attributo (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare una regola di business per inizializzare azioni in base alle modifiche dei valori di attributo. Ad esempio, quando un valore di attributo specifico viene modificato, è necessario modificare un valore, inviare una notifica o avviare un flusso di lavoro esterno.  
@@ -89,7 +88,7 @@ ms.locfileid: "65479361"
   
     -   [Convalidare una versione usando le regole di business &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Aggiungere attributi a un gruppo di Rilevamento modifiche &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)   
  [Regole di business &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   

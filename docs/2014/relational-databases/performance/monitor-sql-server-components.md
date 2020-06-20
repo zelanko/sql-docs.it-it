@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9c0534bf3a12aa81a9fc84d0e2c4f82a189748a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67dad84ff115607894e29776deec9c23add83969
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150755"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066788"
 ---
 # <a name="monitor-sql-server-components"></a>Monitorare i componenti di SQL Server
   Il monitoraggio è importante perché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce un servizio in un ambiente dinamico. i dati nell'applicazione cambiano, il tipo di accesso richiesto dagli utenti cambia, la modalità di connessione degli utenti cambia. Possono cambiare anche i tipi delle applicazioni che accedono a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in grado di gestire automaticamente le risorse a livello di sistema, quali la memoria e lo spazio su disco, per ridurre al minimo la necessità di ingenti interventi di ottimizzazione manuale a livello di sistema. Il monitoraggio consente agli amministratori di identificare le tendenze delle prestazioni per determinare i casi in cui è necessario apportare modifiche.  
@@ -90,7 +89,7 @@ ms.locfileid: "63150755"
   
 -   Comandi DBCC (Database Console Commands)  
   
--   Funzioni predefinite  
+-   Funzioni integrate  
   
 -   Flag di traccia  
   

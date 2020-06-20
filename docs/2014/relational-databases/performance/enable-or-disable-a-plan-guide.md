@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7c64bf641a6519c42ad0d3a8cdfd578458f84439
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2611697e479d318245d8306b28c826e744ae85ad
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150936"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066847"
 ---
 # <a name="enable-or-disable-a-plan-guide"></a>Abilitare o disabilitare una guida di piano
   È possibile disabilitare e abilitare guide di piano in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. È possibile abilitare o disabilitare una sola guida di piano o tutte le guide di piano in un database.  

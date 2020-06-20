@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8a4c2cb8-fd2f-4c45-824f-b93473a8981e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d3bf33d52b380e1ac05864c6e7402567b42df54a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54d61b7696f00aeacdd92a3803630838f6f3ad1a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061036"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923982"
 ---
 # <a name="cdc-source-editor-error-output-page"></a>Editor origine CDC (pagina Output degli errori)
   Usare la pagina **Output degli errori** della finestra di dialogo **Editor origine CDC** per selezionare le opzioni di gestione degli errori.  
@@ -67,7 +66,7 @@ ms.locfileid: "66061036"
  **Reindirizza flusso**  
  La riga di dati contenente l'errore o il troncamento viene indirizzata all'output degli errori dell'origine CDC. In questo caso, viene utilizzata la gestione degli errori dell'origine CDC. Per altre informazioni, vedere [Origine CDC](data-flow/cdc-source.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Editor origine CDC &#40;pagina Gestione connessione&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
  [Editor origine CDC &#40;pagina Colonne&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5cac924e926d03dffb9116e5ce7194bb784d45fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 26082eaf429aae38012c7da31cfebff7434edd57
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68186148"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999802"
 ---
 # <a name="sql-server-profiler-templates"></a>Modelli di SQL Server Profiler
   È possibile utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per creare modelli per la definizione delle classi di evento e delle colonne di dati da includere nelle tracce. Dopo aver definito e salvato il modello, è possibile eseguire una traccia per la registrazione dei dati relativi a ogni classe di evento selezionata. È possibile utilizzare un modello per più tracce. Il modello non viene eseguito direttamente.  

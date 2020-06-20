@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 490418bc-5ef1-41b8-a9c8-de38aa96e0f6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7fda014196d933ef9d5391ab4db798d821e43610
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85c76037c44f6260bbfc436823d844abdf74355d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833809"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921250"
 ---
 # <a name="ado-connection-manager"></a>Gestione connessione ADO
   Una gestione connessione ADO consente la connessione di un pacchetto a oggetti ADO (ActiveX Data Objects), ad esempio un recordset. Questa gestione connessione viene in genere usata nelle attività personalizzate create con versioni precedenti di un linguaggio, ad esempio Microsoft Visual Basic 6.0, o in attività personalizzate che fanno parte di un'applicazione esistente che usa ADO per connettersi a un'origine dei dati.  
   
- Quando si aggiunge una gestione connessione ADO a un pacchetto, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una gestione connessione che in fase di esecuzione verrà risolta in una connessione ADO, imposta le proprietà della gestione connessione e la aggiunge alla `Connections` raccolta del pacchetto. La proprietà `ConnectionManagerType` della gestione connessione viene impostata su `ADO`.  
+ Quando si aggiunge una gestione connessione ADO a un pacchetto, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Crea una gestione connessione che in fase di esecuzione verrà risolta in una connessione ADO, imposta le proprietà della gestione connessione e la aggiunge alla `Connections` raccolta del pacchetto. La proprietà `ConnectionManagerType` della gestione connessione viene impostata su `ADO`.  
   
 ## <a name="troubleshooting-the-ado-connection-manager"></a>Risoluzione dei problemi relativi alla gestione connessione ADO  
  Durante la lettura da parte di una gestione connessione ADO, alcuni tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relativi alle date genereranno i risultati mostrati nella tabella seguente.  
@@ -56,7 +55,7 @@ ms.locfileid: "62833809"
   
  Per informazioni sulla configurazione di una gestione connessione a livello di programmazione, vedere l'articolo relativo a <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Aggiunta di connessioni a livello di programmazione](../building-packages-programmatically/adding-connections-programmatically.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Connessioni in Integration Services &#40;SSIS&#41;](integration-services-ssis-connections.md)  
   
   

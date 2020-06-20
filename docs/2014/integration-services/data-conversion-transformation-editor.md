@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7b4e4873-e8fe-4549-a965-65bebdb270bc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5346c808c7d724ae630bb3dd25016a9977af363e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b452acb2e9d168910fec06d959ce3a1c1704b814
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060047"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917081"
 ---
 # <a name="data-conversion-transformation-editor"></a>Editor trasformazione Conversione dati
   Usare la finestra di dialogo **Editor trasformazione Conversione dati** per selezionare le colonne da convertire e i tipi di dati in cui convertire la colonna e impostare gli attributi di conversione.  
@@ -48,7 +47,7 @@ ms.locfileid: "66060047"
  **Precisione**  
  Consente di impostare la precisione per dati numerici.  
   
- **Ridimensionare**  
+ **Ridimensionamento**  
  Consente di impostare la scala per dati numerici.  
   
  **Tabella codici**  
@@ -57,7 +56,7 @@ ms.locfileid: "66060047"
  **Configurare l'output degli errori**  
  Consente di indicare come gestire gli errori tramite la finestra di dialogo [Configura output errori](../../2014/integration-services/configure-error-output.md) .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Conversione di dati in un tipo di dati diverso utilizzando la trasformazione Conversione dati](data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)  
   

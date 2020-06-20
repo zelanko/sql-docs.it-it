@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 34f6b9b4-ca3a-4a4f-9594-36e513f1c547
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e68809c7551e3c6711fadd9973c472dcb4e90307
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 121d80cf0230be01cf81c09249d2797bb7ce5ae6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270615"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040798"
 ---
 # <a name="create-subqueries-visual-database-tools"></a>Creazione di sottoquery (Visual Database Tools)
   È possibile utilizzare i risultati di una query come input per un'altra. I risultati di una sottoquery possono essere usati come istruzione che usa la funzione IN( ), l'operatore EXISTS o la clausola FROM.  

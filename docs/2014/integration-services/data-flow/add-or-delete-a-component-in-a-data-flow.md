@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d99124f9-0994-4f40-a48e-fdca6a4383e7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5677fe0742c44924483b4e49b50e9746b6ed7449
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d66397729b4263cfed4a2911417b932d049fd30
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832214"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916853"
 ---
 # <a name="add-or-delete-a-component-in-a-data-flow"></a>Aggiunta o eliminazione di un componente in un flusso di dati
   I componenti dei flussi di dati sono le origini, le destinazioni e le trasformazioni incluse in un flusso di dati. È possibile aggiungere componenti a un flusso di dati solo se il flusso di controllo del pacchetto include un'attività Flusso di dati.  

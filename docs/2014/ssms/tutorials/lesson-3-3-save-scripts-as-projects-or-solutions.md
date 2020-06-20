@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 72dfd37f-dbe7-4d1d-bda6-7eb54c7922d3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6d17dd44f597d7b3ddfce574670e9e6bfd55f908
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 24e204c7282cb9228fb81d1c63cc4bf51f6286ee
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753043"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040971"
 ---
 # <a name="save-scripts-as-projects-or-solutions"></a>Salvare gli script come progetti o soluzioni
   Gli sviluppatori che hanno familiarità con [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio apprezzeranno molto l'inclusione di Esplora soluzioni in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Gli script che supportano le operazioni aziendali possono essere raggruppati in progetti script gestibili come una soluzione. Quando gli script sono inseriti in soluzioni e progetti script è possibile aprirli come gruppo o salvarli contemporaneamente in un prodotto per il controllo del codice sorgente, ad esempio Visual SourceSafe. I progetti script contengono le informazioni di connessione per assicurare un'esecuzione corretta degli script e possono includere altri tipi di file, ad esempio un file di testo di supporto.  

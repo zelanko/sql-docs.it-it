@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e2763613-79ef-414a-8dbf-837a0331ebf8
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0cf56e718b2d17b2b2a1f44088b05226ef86388d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4461d22e62ebebd71b02fb7132b8ffed081d6d82
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479411"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971481"
 ---
 # <a name="explorer-functional-area-master-data-manager"></a>Area funzionale Esplora risorse (Gestione dati master)
   Nell'area funzionale Esplora risorse, è possibile aggiornare dati e utilizzare gerarchie e raccolte.  
@@ -58,7 +57,7 @@ ms.locfileid: "65479411"
   
  [Riattivare un membro o una raccolta &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Applicazione Web Gestione dati master](../../2014/master-data-services/master-data-manager-web-application.md)  
   
   

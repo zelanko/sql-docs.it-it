@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ba45350-dae8-437a-8984-64e6d8d180c1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 07077fabaca18170496a1b4e972da7b7e34cd4fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0ee3775732fcce9fb0de2af2cedde0827bfa9e8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056260"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964247"
 ---
 # <a name="save-a-package-to-the-file-system"></a>Salvataggio di un pacchetto nel file system
   Questa procedura descrive il salvataggio di un pacchetto esistente nel file system come file con estensione dtsx.  
@@ -37,7 +36,7 @@ ms.locfileid: "66056260"
     > [!NOTE]  
     >  È possibile verificare il percorso e il nome del file in cui è stato salvato il pacchetto nella finestra Proprietà.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services &#40;pacchetti&#41; SSIS](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Salvataggio di una copia di un pacchetto](../../2014/integration-services/save-a-copy-of-a-package.md)  
   

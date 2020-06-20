@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 81d0e7e2-d8f0-4bd9-9565-218ce996f28e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bebeec974bff46333662708952d0a8b6fa841a87
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 474212ceeeae896612064ac359c36c2296b3ef5a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835221"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922432"
 ---
 # <a name="sql-server-connection-for-instance-creation"></a>Connessione di SQL Server per la creazione dell'istanza
   Uno dei primi passaggi della creazione di un'istanza di Oracle CDC consiste nella creazione di un database CDC nell'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di destinazione. Questo database CDC viene abilitato per SQL Server CDC. Questa operazione richiede un account di accesso che sia un membro del ruolo predefinito del server `sysadmin` .  

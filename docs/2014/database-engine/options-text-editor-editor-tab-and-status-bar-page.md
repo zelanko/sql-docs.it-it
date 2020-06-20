@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f7a64d8fe198b5660715488b6e1b15d5e4831a99
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: b1b79ada7ce4b2f2b256cfc7e7d20b0e7d5f9bc5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000721"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929882"
 ---
 # <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Opzioni (pagina Editor di testo: Scheda editor e barra di stato)
   Nella **pagina Scheda editor e barra di stato** è possibile personalizzare le informazioni visualizzate dagli editor di query di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . È possibile specificare il livello di informazioni da visualizzare nella scheda e sulla barra di stato della finestra dell'editor di query, nonché specificare se la barra di stato viene visualizzata nella parte superiore o inferiore della finestra dell'editor.  
@@ -67,7 +66,7 @@ ms.locfileid: "83000721"
  **Posizione della barra di stato**  
  Consente di specificare la posizione della barra di stato. Sono disponibili le impostazioni seguenti:  
   
- **In alto**  
+ **Inizio**  
  La barra di stato viene visualizzata nella parte superiore della finestra dell'editor di query.  
   
  **Ultimo**  

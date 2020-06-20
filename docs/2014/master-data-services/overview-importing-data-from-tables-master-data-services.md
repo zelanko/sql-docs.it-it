@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3d1ad35a40e4218bfef44daeec01ee03fc0c7c78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3122ddb64d9f86bd70e5b444bd7bd7fce44956de
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175990"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971171"
 ---
 # <a name="data-import-master-data-services"></a>Importazione dati (Master Data Services)
   Dopo aver creato un modello per i dati in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], è possibile iniziare ad aggiungere dati e ad apportare modifiche ai dati nel database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .   È possibile usare stored procedure, tabelle di staging e Gestione dati master di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].
 
- È anche [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]possibile usare per aggiungere dati al repository MDS ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database). Per ulteriori informazioni, vedere la pagina relativa alla [pubblicazione di dati &#40;Componente aggiuntivo MDS per Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).
+ È anche possibile usare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] per aggiungere dati al repository MDS ( [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database). Per ulteriori informazioni, vedere la pagina relativa alla [pubblicazione di dati &#40;Componente aggiuntivo MDS per Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).
 
  Quando si aggiungono e si aggiornano dati, è possibile eseguire le operazioni seguenti.
 
@@ -83,11 +82,11 @@ ms.locfileid: "78175990"
 
  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] sono inclusi i tipi di stored procedure di gestione temporanea seguenti.
 
--   stg.udp_\<name>_Leaf
+-   STG. udp_ \<name> _Leaf
 
--   stg.udp_\<name>_Consolidated
+-   STG. udp_ \<name> _Consolidated
 
--   stg.udp_\<name>_Relationship
+-   STG. udp_ \<name> _Relationship
 
  Per ogni entità nel modello esistono tre stored procedure corrispondenti alle tabelle di staging di membri foglia, membri consolidati e relazioni.  La figura seguente mostra le stored procedure di gestione temporanea per le entità currency, customer e product.
 

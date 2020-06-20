@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 79c9e433a6b5bcf9babee0060fdf028775e0e8a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42a6051305f1c8999e7cba5e4cb51a7945f1f5c7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889836"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964681"
 ---
 # <a name="performance-counters"></a>Contatori delle prestazioni
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installa un set di contatori delle prestazioni che è possibile usare per monitorare le prestazioni del motore flusso di dati. Ad esempio controllando il contatore "Buffer con spooling" è possibile stabilire se i buffer dei dati vengano scritti temporaneamente sul disco mentre il pacchetto è in esecuzione. Lo swapping riduce le prestazioni e indica che la memoria del computer è insufficiente.  
@@ -77,7 +76,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 -   Articolo di supporto [The SSIS performance counter is no longer available in the Performance Monitor after you upgrade to Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=235319)(Mancata disponibilità del contatore delle prestazioni di SSIS in Performance Monitor dopo l'aggiornamento a Windows Server 2008) nel sito support.microsoft.com.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Esecuzione di progetti e pacchetti](../packages/run-integration-services-ssis-packages.md)  
   
   

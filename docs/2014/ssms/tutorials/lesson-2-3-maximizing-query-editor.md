@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 635c2845-93c5-4c7f-8f33-ea848ca48b7c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54a598ab383773a3ada43f0cc44892f42ac3ba2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45719efb24e2af38230badf96961621e1e99ee55
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63222523"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040985"
 ---
 # <a name="maximizing-query-editor"></a>Ingrandimento dell'editor di query
   I programmatori spesso si chiedono in che modo sia possibile ottenere maggiore spazio per scrivere il proprio codice. Esistono due modi, entrambi semplici, ovvero ingrandire la finestra dell'editor di query e nascondere le finestre degli strumenti inutilizzati.  

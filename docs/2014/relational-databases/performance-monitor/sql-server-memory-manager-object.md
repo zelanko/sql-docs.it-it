@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 822cb494b7dce35ea965a2a53cab36785a38bc75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 06b58b9b6bb8a5c13e0b220ba9eeea5818682abf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250632"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066954"
 ---
 # <a name="sql-server-memory-manager-object"></a>Oggetto Memory Manager di SQL Server
   L'oggetto **Memory Manager** di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include contatori per il monitoraggio dell'utilizzo complessivo della memoria del server. Tale monitoraggio che consente di misurare l'attività degli utenti e l'utilizzo delle risorse può risultare utile per identificare eventuali colli di bottiglia. Con il monitoraggio dell'utilizzo della memoria da parte di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile rilevare le situazioni seguenti:  
@@ -51,7 +50,7 @@ ms.locfileid: "63250632"
 |**Memoria prevista server (KB)**|Indica la quantità totale di memoria dinamica disponibile per il server.|  
 |**Memoria totale server (KB)**|Specifica la quantità totale di memoria riservata dal server tramite Gestione memoria.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Monitorare l'utilizzo delle risorse &#40;monitoraggio di sistema&#41;](monitor-resource-usage-system-monitor.md)   
  [SQL Server, oggetto Gestione buffer](sql-server-buffer-manager-object.md)   
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 673b69ea632108b889cc2f99b63c9c602ef05237
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3d26ebc097267b736b78e83adc37eb484c41162
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62829543"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917581"
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>Copiare un pacchetto in SQL Server Data Tools
   In questo argomento viene descritto come creare un nuovo pacchetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tramite la copia di un pacchetto esistente e come aggiornare le proprietà `Name` e `GUID` del nuovo pacchetto.  
@@ -33,7 +32,7 @@ ms.locfileid: "62829543"
   
 3.  Verificare che il pacchetto da copiare sia selezionato in Esplora soluzioni o che la scheda attiva in Progettazione SSIS sia quella che contiene il pacchetto.  
   
-4.  Nel menu **File** scegliere **Salva \<nome pacchetto> con nome**.  
+4.  Scegliere **Apri** dal menu **Salva \<package name> File**.  
   
     > [!NOTE]  
     >  Il comando **Salva con nome** è disponibile nel menu **File** solo se il pacchetto è aperto in Progettazione SSIS.  
@@ -44,11 +43,11 @@ ms.locfileid: "62829543"
   
 7.  Fare clic su **Salva**.  
   
-8.  Quando richiesto specificare se aggiornare il nome dell'oggetto di pacchetto in modo che corrisponda al nome del file. Se si fa **Yes**clic su Sì `Name` , la proprietà del pacchetto verrà aggiornata. Il nuovo pacchetto viene aggiunto al progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e aperto in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
+8.  Quando richiesto specificare se aggiornare il nome dell'oggetto di pacchetto in modo che corrisponda al nome del file. Se si fa clic su **Sì**, la `Name` proprietà del pacchetto verrà aggiornata. Il nuovo pacchetto viene aggiunto al progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e aperto in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
 9. Facoltativamente, fare clic sullo sfondo della scheda **Flusso di controllo** e quindi su **Proprietà**.  
   
-10. Nella finestra Proprietà fare clic sul valore della proprietà ID e quindi selezionare **\<Genera nuovo ID>** nell'elenco a discesa.  
+10. Nella Finestra Proprietà fare clic sul valore della proprietà ID e quindi nell'elenco a discesa fare clic su **\<Generate New ID>** .  
   
 11. Scegliere **Salva elementi selezionati** dal menu **File** per salvare il nuovo pacchetto.  
   

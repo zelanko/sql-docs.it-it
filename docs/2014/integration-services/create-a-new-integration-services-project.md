@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1e23f259-0401-4333-ab4f-89809aae63b1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d3a1d8542ba5cc689cef60fc81641c37c96ea790
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e677162d88fd1f724b53e0d1838eefd16d1a87af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060219"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917391"
 ---
 # <a name="create-a-new-integration-services-project"></a>Creazione di un nuovo progetto di Integration Services
   Questa procedura consente di creare un nuovo progetto e una nuova soluzione di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
@@ -50,7 +49,7 @@ ms.locfileid: "66060219"
   
 8.  Fare clic su **OK** per aggiungere la soluzione alla **soluzione Esplora**r e aggiungere il progetto alla soluzione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services &#40;progetti SSIS&#41;](integration-services-ssis-projects-and-solutions.md)   
  [Aggiunta o rimozione di un progetto di Integration Services da una soluzione](../../2014/integration-services/add-or-remove-an-integration-services-project-in-a-solution.md)  
   
