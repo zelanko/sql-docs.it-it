@@ -12,25 +12,24 @@ helpviewer_keywords:
 ms.assetid: 7ef419f4-c17f-42a5-9068-174a3ec08941
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 66c32615b3fd9f417eab27f156b2645c2c89593b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d502e7c7fdd6716f42a18f745ab71aa27954e99
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63020979"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037980"
 ---
 # <a name="automatically-generate-a-set-of-join-filters-between-merge-articles-sql-server-management-studio"></a>Generazione automatica di un set di filtri di join tra gli articoli di merge (SQL Server Management Studio)
-  Generare automaticamente un set di filtri di join nella pagina **Filtro righe tabella** della Creazione guidata nuova pubblicazione o nella pagina **Filtra righe** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](view-and-modify-publication-properties.md).  
+  Generare automaticamente un set di filtri di join nella pagina **Filtro righe tabella** della creazione guidata nuova pubblicazione o nella pagina **Filtra righe** della finestra di dialogo **proprietà \<Publication> pubblicazione-** . Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](view-and-modify-publication-properties.md).  
   
 > [!NOTE]  
->  Se si genera automaticamente un set di filtri di join nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** in seguito all'inizializzazione delle sottoscrizioni della pubblicazione, sarà necessario generare un nuovo snapshot e reinizializzare tutte le sottoscrizioni dopo aver apportato le modifiche. Per altre informazioni sui requisiti per la modifica delle proprietà, vedere [Modificare le proprietà di pubblicazioni e articoli](change-publication-and-article-properties.md).  
+>  Se si genera automaticamente un set di filtri di join nella finestra di dialogo **Proprietà pubblicazione- \<Publication> ** dopo l'inizializzazione delle sottoscrizioni della pubblicazione, sarà necessario generare un nuovo snapshot e reinizializzare tutte le sottoscrizioni dopo aver apportato la modifica. Per altre informazioni sui requisiti per la modifica delle proprietà, vedere [Modificare le proprietà di pubblicazioni e articoli](change-publication-and-article-properties.md).  
   
  È possibile creare manualmente i filtri join per un set di tabelle o generarli automaticamente durante la replica in base alle relazioni definite nelle tabelle tra la chiave esterna e la chiave primaria. Per altre informazioni sulla creazione manuale di filtri di join, vedere [Definire e modificare un filtro di join tra articoli di merge](define-and-modify-a-join-filter-between-merge-articles.md).  
   
 ### <a name="to-automatically-generate-a-set-of-join-filters-between-merge-articles"></a>Per generare automaticamente un set di filtri join tra articoli di merge  
   
-1.  Nella pagina **Filtro righe tabella** della Creazione guidata nuova pubblicazione o nella pagina **Filtra righe** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** fare clic su **Aggiungi**, quindi su **Genera filtri automaticamente**.  
+1.  Nella pagina **Filtro righe tabella** della creazione guidata nuova pubblicazione o nella pagina **Filtra righe** delle **proprietà \<Publication> della pubblicazione **, fare clic su **Aggiungi**, quindi su **genera filtri automaticamente**.  
   
     > [!NOTE]  
     >  La generazione automatica dei filtri comporta l'eliminazione dei filtri di riga o dei filtri join esistenti nella pubblicazione. È possibile aggiungere filtri dopo averne generato automaticamente un set.  
@@ -65,11 +64,11 @@ ms.locfileid: "63020979"
   
      Al termine dell'analisi dell'istruzione, i filtri join necessari vengono creati e visualizzati dalla replica nel riquadro **Tabelle filtrate** della pagina **Filtro righe tabella** o **Filtra righe** . Se i filtri vengono generati mediante la Creazione guidata nuova pubblicazione e non è stato ancora configurato il server di distribuzione per il server di pubblicazione sul quale viene eseguita questa procedura guidata, verrà richiesto di procedere a tale configurazione.  
   
-4.  Se è visualizzata la finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** fare clic su **OK** per salvare e chiudere la finestra di dialogo.  
+4.  Se si è nella finestra di dialogo **proprietà \<Publication> pubblicazione-** fare clic su **OK** per salvare e chiudere la finestra di dialogo.  
   
 ### <a name="to-modify-a-filter-that-was-automatically-generated"></a>Per modificare un filtro generato automaticamente  
   
-1.  Nella pagina **Filtro righe tabella** della Creazione guidata nuova pubblicazione o nella pagina **Filtro righe** di **Proprietà pubblicazione - \<Pubblicazione>** selezionare un filtro nel riquadro **Tabelle filtrate** e quindi fare clic su **Modifica**.  
+1.  Nella pagina **Filtro righe tabella** della creazione guidata nuova pubblicazione o nella pagina **Filtra righe** delle proprietà della **pubblicazione- \<Publication> **selezionare un filtro nel riquadro **tabelle filtrate** e quindi fare clic su **Modifica**.  
   
 2.  Nella finestra di dialogo **Modifica filtro** o **Modifica join** modificare il filtro.  
   
@@ -77,9 +76,9 @@ ms.locfileid: "63020979"
   
 ### <a name="to-delete-a-filter-that-was-automatically-generated"></a>Per eliminare un filtro generato automaticamente  
   
-1.  Nella pagina **Filtro righe tabella** della Creazione guidata nuova pubblicazione o nella pagina **Filtro righe** di **Proprietà pubblicazione - \<Pubblicazione>** selezionare un filtro nel riquadro **Tabelle filtrate** e quindi fare clic su **Elimina**.  
+1.  Nella pagina **Filtro righe tabella** della creazione guidata nuova pubblicazione o nella pagina **Filtra righe** delle proprietà della **pubblicazione- \<Publication> **selezionare un filtro nel riquadro **tabelle filtrate** e quindi fare clic su **Elimina**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Filtri join](../merge/join-filters.md)   
  [Filtri di riga con parametri](../merge/parameterized-filters-parameterized-row-filters.md)  
   

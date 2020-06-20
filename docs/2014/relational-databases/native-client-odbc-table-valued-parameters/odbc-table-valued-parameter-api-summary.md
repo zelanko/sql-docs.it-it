@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b035fb9d-b5c1-4ce3-beac-f2f8ff736c7c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8a1e23399f91eace993f77dfc9a1ce7032bad222
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6920431686dc4e12fc5d2342744c17fc7b193ad8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82698623"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039438"
 ---
 # <a name="odbc-table-valued-parameter-api-summary"></a>Riepilogo delle API dei parametri con valori di tabella ODBC
   In questo argomento sono incluse le funzioni che sono state migliorate per supportare i parametri con valori di tabella.  

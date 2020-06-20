@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 80fd692b-1cea-4139-8e80-454d3e81c76d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 68ef6a0d9f58c362f64721eea43c89c4a1ee27cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b1dd7c7ff564fc069e3a1ddecf1ff1ec9355d4f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091897"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036088"
 ---
 # <a name="sql-server-native-soap-support-is-discontinued-in-this-version-of-sql-server"></a>Il supporto SOAP nativo di SQL Server non è più disponibile in questa versione di SQL Server.
   Preparazione aggiornamento: è stato rilevato l'utilizzo dei servizi Web XML nativi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

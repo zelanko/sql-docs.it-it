@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a7dd2b26662fea95837eabaf61f61e3da04fac69
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef15fccda450ccb94264f73289b77fce74789acc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873614"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970481"
 ---
 # <a name="data-collector-security"></a>Sicurezza agente di raccolta dati
   L'agente di raccolta dati usano il modello di sicurezza basato sui ruoli implementato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Questo modello consente all'amministratore del database di eseguire le varie attività dell'agente di raccolta dati in un contesto di sicurezza che ha solo le autorizzazioni necessarie per eseguire quell'attività. Questo approccio è usato anche per operazioni con tabelle interne, a cui è possibile accedere solo mediante una stored procedure o una vista. Per le tabelle interne non vengono concesse autorizzazioni. Le autorizzazioni vengono invece controllate sull'utente della stored procedure o della vista usata per accedere a una tabella.  
@@ -48,7 +47,7 @@ ms.locfileid: "62873614"
   
  Questi ruoli sono archiviati nel database msdb. Per impostazione predefinita, nessun utente è membro di questi ruoli di database. L'appartenenza dell'utente a questi ruoli deve essere concessa esplicitamente.  
   
- Gli utenti membri del ruolo `sysadmin` predefinito del server hanno accesso completo agli oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e alle viste dell'agente di raccolta dati. Tuttavia è necessario che vengano aggiunti esplicitamente ai ruoli dell'agente di raccolta dati.  
+ Gli utenti membri del `sysadmin` ruolo predefinito del server hanno accesso completo agli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti e alle viste dell'agente di raccolta dati. Tuttavia è necessario che vengano aggiunti esplicitamente ai ruoli dell'agente di raccolta dati.  
   
 > [!IMPORTANT]  
 >  I membri dei ruoli db_ssisadmin e dc_admin potrebbero essere in grado di elevare i loro privilegi a sysadmin. Questa elevazione dei privilegi può verificarsi perché tali ruoli possono modificare i pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e i pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] possono essere eseguiti da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando il contesto di sicurezza sysadmin di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Per impedire questa elevazione dei privilegi durante l'esecuzione dei piani di manutenzione, set di raccolta dati e altri pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configurare i processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che eseguono pacchetti in modo da utilizzare un account proxy con privilegi limitati o aggiungere solo i membri sysadmin ai ruoli db_ssisadmin e dc_admin.  
@@ -69,9 +68,9 @@ ms.locfileid: "62873614"
 -   **SQLAgentUserRole**. Questo ruolo è necessario per creare pianificazioni ed eseguire processi.  
   
     > [!NOTE]  
-    >  I proxy creati per l'agente di raccolta dati devono concedere `dc_admin` l'accesso a per crearli e usarli nei passaggi di processo che richiedono un proxy.  
+    >  I proxy creati per l'agente di raccolta dati devono concedere l'accesso a `dc_admin` per crearli e usarli nei passaggi di processo che richiedono un proxy.  
   
--   **dc_operator**. I membri `dc_admin` di ereditano le autorizzazioni concesse a **dc_operator**.  
+-   **dc_operator**. I membri di `dc_admin` ereditano le autorizzazioni concesse a **dc_operator**.  
   
 ### <a name="dc_operator-role"></a>Ruolo dc_operator  
  I membri del ruolo **dc_operator** hanno accesso in lettura e aggiornamento. Tale ruolo supporta le attività di operazioni relative all'esecuzione e alla configurazione dei set di raccolta. I membri di questo ruolo possono eseguire le seguenti operazioni:  
@@ -124,7 +123,7 @@ ms.locfileid: "62873614"
   
  Questi ruoli sono archiviati nel database msdb. Per impostazione predefinita, nessun utente è membro di questi ruoli di database. L'appartenenza dell'utente a questi ruoli deve essere concessa esplicitamente.  
   
- Gli utenti membri del ruolo `sysadmin` predefinito del server dispongono di accesso completo alle viste dell'agente di raccolta dati. Tuttavia è necessario che vengano aggiunti esplicitamente ai ruoli del database per eseguire altre operazioni.  
+ Gli utenti membri del `sysadmin` ruolo predefinito del server dispongono di accesso completo alle viste dell'agente di raccolta dati. Tuttavia è necessario che vengano aggiunti esplicitamente ai ruoli del database per eseguire altre operazioni.  
   
 ### <a name="mdw_admin-role"></a>Ruolo mdw_admin  
  I membri del ruolo **mdw_admin** hanno accesso in lettura, scrittura, aggiornamento ed eliminazione al data warehouse di gestione.  
@@ -144,7 +143,7 @@ ms.locfileid: "62873614"
 ### <a name="mdw_reader-role"></a>Ruolo mdw_reader  
  I membri del ruolo **mdw_reader** hanno accesso in lettura al data warehouse di gestione. Poiché lo scopo di questo ruolo è supportare la risoluzione dei problemi fornendo accesso ai dati della cronologia, i membri di questo ruolo non possono visualizzare gli altri elementi dello schema del data warehouse di gestione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Implementazione della sicurezza di SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md)  
   
   

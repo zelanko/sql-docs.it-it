@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a9c1510030f61896f686b49f4bc134a7dfcb42b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ceb58c211b52c1fbd184aafe316e5ea77d364529
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284868"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938932"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>Modalità DirectQuery (SSAS tabulare)
   Analysis Services consente di recuperare i dati e di creare report da un modello tabulare recuperando dati e aggregazioni direttamente da un sistema di database relazionale, utilizzando la *modalità DirectQuery*. In questo argomento vengono illustrate le differenze tra i modelli tabulari standard residenti unicamente in memoria e i modelli tabulari in grado di eseguire query su un'origine dati relazionale. Viene inoltre descritto come creare e distribuire un modello destinato a essere utilizzato nella modalità DirectQuery.  
@@ -144,7 +143,7 @@ ms.locfileid: "67284868"
   
  La proprietà delle impostazioni di rappresentazione consente di specificare le credenziali utilizzate per la connessione a un modello utilizzando DirectQuery, per un modello solo DirectQuery o per un modello ibrido che risponde alle query tramite DirectQuery. La proprietà presenta i valori seguenti:  
   
- **Predefinita**  
+ **Default**  
  Vengono utilizzate le credenziali specificate nell'importazione guidata per connettersi all'origine dati. Può trattarsi di un utente di Windows specifico o dell'account di servizio.  
   
  `ImpersonateCurrentUser`  
@@ -166,7 +165,7 @@ ms.locfileid: "67284868"
   
 ##  <a name="related-topics-and-tasks"></a><a name="bkmk_related_tasks"></a>Argomenti correlati e attività  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |-----------|-----------------|  
 |[Partizioni e modalità DirectQuery &#40;SSAS tabulare&#41;](define-partitions-in-directquery-models-ssas-tabular.md)|Viene illustrato l'utilizzo delle partizioni nei modelli configurati per la modalità DirectQuery.|  
 |[Compatibilità delle formule DAX in modalità DirectQuery](../dax-formula-compatibility-in-directquery-mode-ssas-2014.md)|Vengono illustrati i requisiti di compatibilità e le restrizioni riguardanti le formule che è possibile utilizzare nei modelli configurati per la modalità DirectQuery.|  
@@ -177,7 +176,7 @@ ms.locfileid: "67284868"
 |[Configurare l'accesso in memoria o DirectQuery per un database di modello tabulare](enable-directquery-mode-in-ssms.md)|Esaminare le configurazioni di DirectQuery|  
 |[Cancellare le cache di Analysis Services](../instances/clear-the-analysis-services-caches.md)|Cancellare la cache del modello tabulare|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Partizioni &#40;SSAS tabulare&#41;](partitions-ssas-tabular.md)   
  [Progetti di modello tabulare &#40;SSAS tabulare&#41;](tabular-model-projects-ssas-tabular.md)   
  [Analizzare in Excel &#40;SSAS tabulare&#41;](analyze-in-excel-ssas-tabular.md)  

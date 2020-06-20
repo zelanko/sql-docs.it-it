@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4e06dfced9b9800c0e5c0b7d0dca208bac67c900
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19e2d10ab64bfeed5cbc0e42242ae123a56b51aa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920828"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953593"
 ---
 # <a name="deploying-clr-database-objects"></a>Distribuzione di oggetti di database CLR
   La distribuzione rappresenta il processo tramite il quale si mette a disposizione un'applicazione o un modulo pronto per l'utilizzo perché venga installato ed eseguito in altri computer. L'uso di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio consente di sviluppare oggetti di database CLR (Common Language Runtime) e di distribuirli a un server di prova. In alternativa, è possibile compilare gli oggetti di database gestiti con i file di ridistribuzione di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Una volta compilati, gli assembly contenenti gli oggetti di database CLR possono essere distribuiti a un server di prova utilizzando Visual Studio o le istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Notare che Visual Studio .NET 2003 non può essere utilizzato per la programmazione o la distribuzione dell'integrazione CLR. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene fornito con .NET Framework preinstallato e non è possibile utilizzare assembly di .NET Framework 2.0 in Visual Studio .NET 2003.  
@@ -39,7 +38,7 @@ ms.locfileid: "62920828"
   
 #### <a name="to-deploy-the-assembly-using-visual-studio"></a>Per distribuire l'assembly utilizzando Visual Studio  
   
-1.  Compilare il progetto selezionando **Compila** \<nome progetto> dal menu **Compila** .  
+1.  Compilare il progetto scegliendo **Compila** \<project name> dal menu **Compila** .  
   
 2.  Risolvere tutti gli avvisi e gli errori di compilazione prima di distribuire l'assembly al server di prova.  
   
@@ -75,7 +74,7 @@ ms.locfileid: "62920828"
   
  `EXTERNAL NAME HelloWorld.Procedures.HelloWorld`  
   
- Per ulteriori informazioni sulla creazione di diversi tipi di oggetti di database gestiti [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]in, [vedere funzioni CLR definite](../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)dall'utente, [aggregazioni CLR definite](../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)dall'utente, [tipi CLR definiti dall'](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)utente, [stored procedure CLR](../../database-engine/dev-guide/clr-stored-procedures.md)e [trigger CLR](../../database-engine/dev-guide/clr-triggers.md).  
+ Per ulteriori informazioni sulla creazione di diversi tipi di oggetti di database gestiti [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in, vedere [funzioni CLR definite](../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)dall'utente, [aggregazioni CLR definite](../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)dall'utente, [tipi CLR definiti dall'](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)utente, [stored procedure CLR](../../database-engine/dev-guide/clr-stored-procedures.md)e [trigger CLR](../../database-engine/dev-guide/clr-triggers.md).  
   
 ## <a name="deploying-the-assembly-to-production-servers"></a>Distribuzione dell'assembly a server di produzione  
  Dopo aver testato e verificato gli oggetti di database CLR sul server di prova, sarà possibile distribuirli a server di produzione. Per ulteriori informazioni sul debug di oggetti di database gestiti, vedere [debug di oggetti di database CLR](debugging-clr-database-objects.md).  
@@ -86,7 +85,7 @@ ms.locfileid: "62920828"
   
 1.  Aprire [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] e connettersi all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui è stato registrato l'oggetto di database o l'assembly gestito da distribuire.  
   
-2.  Nella **Esplora oggetti**espandere il nome del ** \<server>** e gli alberi dei **database** . Fare clic con il pulsante destro del mouse sul database in cui è registrato l'oggetto di database gestito, selezionare **attività**, quindi selezionare **Genera script**. Verrà avviata la Generazione guidata script.  
+2.  Nella **Esplora oggetti**espandere gli **\<server name>** alberi **database** e. Fare clic con il pulsante destro del mouse sul database in cui è registrato l'oggetto di database gestito, selezionare **attività**, quindi selezionare **Genera script**. Verrà avviata la Generazione guidata script.  
   
 3.  Selezionare il database nella casella di riepilogo e fare clic su **Avanti**.  
   
@@ -94,7 +93,7 @@ ms.locfileid: "62920828"
   
 5.  Nel riquadro **Selezione tipi di oggetti** scegliere il tipo di oggetto di database da distribuire. Fare clic su **Avanti**.  
   
-6.  Per ogni tipo di oggetto selezionato nel riquadro **Selezione tipi di oggetti** , viene visualizzato un riquadro ** \<Scegli tipo>** . In questo riquadro è possibile scegliere tra tutte le istanze del tipo di oggetto di database registrato nel database specificato. Selezionare uno o più oggetti, quindi fare clic su **Avanti**.  
+6.  Per ogni tipo di oggetto selezionato nel riquadro **Selezione tipi di oggetti** , viene visualizzato un riquadro **Scegli \<type> ** . In questo riquadro è possibile scegliere tra tutte le istanze del tipo di oggetto di database registrato nel database specificato. Selezionare uno o più oggetti, quindi fare clic su **Avanti**.  
   
 7.  Il riquadro **Opzioni di output** viene visualizzato quando tutti i tipi di oggetto di database desiderati sono stati selezionati. Selezionare **script nel file** e specificare un percorso di file per lo script. Selezionare **Avanti**. Verificare le selezioni e fare clic su **fine**. Lo script di distribuzione verrà salvato nel percorso di file specificato.  
   
@@ -105,7 +104,7 @@ ms.locfileid: "62920828"
   
  Fare clic su Distribuisci. In questo modo lo script verrà eseguito in Visual Studio dopo la distribuzione del progetto.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Concetti relativi alla programmazione dell'integrazione con CLR &#40;Common Language Runtime&#41;](common-language-runtime-clr-integration-programming-concepts.md)  
   
   

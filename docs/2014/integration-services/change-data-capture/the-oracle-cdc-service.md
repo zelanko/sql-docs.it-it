@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f3f3967b31331471d1ad0a886cc9eda853a25931
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50ee8e81623fb4358cc9768d79a1f8b559a24685
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771077"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922262"
 ---
 # <a name="the-oracle-cdc-service"></a>Servizio Oracle CDC
   Il servizio Oracle CDC è un servizio di Windows in cui viene eseguito il programma xdbcdcsvc.exe. È possibile configurare il servizio Oracle CDC per eseguire più servizi di Windows nello stesso computer, ciascuno con un nome del servizio Windows diverso. La creazione di più servizi Windows Oracle CDC in un solo computer viene spesso effettuata per migliorare la separazione tra gli stessi o quando ciascun servizio richiede l'utilizzo di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diversa.  
   
- Un servizio Oracle CDC viene creato utilizzando Oracle CDC Service Configuration Console o definito tramite l'interfaccia della riga di comando incorporata nel programma xdbcdcsvc.exe. In entrambi i casi, ogni servizio Oracle CDC creato è associato a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] singola istanza, che può essere in cluster o con mirroring con configurazione **AlwaysOn** , e le informazioni di connessione (stringa di connessione e credenziali di accesso) fanno parte della configurazione del servizio.  
+ Un servizio Oracle CDC viene creato utilizzando Oracle CDC Service Configuration Console o definito tramite l'interfaccia della riga di comando incorporata nel programma xdbcdcsvc.exe. In entrambi i casi, ogni servizio Oracle CDC creato è associato a una singola [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza, che può essere in cluster o con mirroring con configurazione **AlwaysOn** , e le informazioni di connessione (stringa di connessione e credenziali di accesso) fanno parte della configurazione del servizio.  
   
  Quando viene avviato, un servizio Oracle CDC tenta di connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con cui è associato, ottiene l'elenco di istanze di Oracle CDC da gestire ed esegue una convalida dell'ambiente iniziale. Gli errori durante l'avvio del servizio ed eventuali informazioni di avvio/arresto vengono sempre scritti nel registro eventi applicazioni di Windows. Quando si stabilisce una connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tutti gli errori e i messaggi informativi vengono scritti nella tabella **dbo.xdbcdc_trace** nel database MSXDBCDC dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Uno dei controlli effettuati durante l'avvio consiste nel verificare che nessun altro servizio Oracle CDC con lo stesso nome sia attualmente in esecuzione. Se un servizio con lo stesso nome è attualmente connesso da un altro computer, il servizio Oracle CDC entra in un ciclo di attesa, aspettando la disconnessione dell'altro servizio prima di procedere con la gestione dell'attività Oracle CDC.  
   

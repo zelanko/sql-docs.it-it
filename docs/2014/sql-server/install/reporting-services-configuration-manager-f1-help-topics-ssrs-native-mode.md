@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 7b6fb18e-ec39-4661-88e3-977ed64e2c82
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d2205465f1fd6f03c67e1fc09ec76a2dfbb2e083
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c59a2acf78ed8df34ff78de209b5a20df8ef07e5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952040"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059043"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Argomenti della Guida F1 di Gestione configurazione Reporting Services (modalità nativa SSRS)
   In questa sezione sono inclusi gli argomenti della Guida sensibile al contesto relativi a Gestione configurazione Reporting Services.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità nativa.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modalità nativa.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   

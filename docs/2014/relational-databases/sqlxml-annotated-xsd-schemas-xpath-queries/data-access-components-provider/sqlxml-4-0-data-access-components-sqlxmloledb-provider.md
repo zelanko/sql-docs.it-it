@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5001e9fd-555c-4332-a57d-4d29a537454a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4a45742bb7a827f9f63676b51e83f795058f48f6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7b745c1cbb085870a9282d30078ac82882a16032
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703215"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015571"
 ---
 # <a name="sqlxml-40-data-access-components"></a>Componenti per l'accesso ai dati SQLXML 4.0
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 include tre provider di dati in grado di inserire dati XML in e recuperare dati XML da un database in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  

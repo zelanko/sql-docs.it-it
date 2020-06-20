@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f7c3f609bd2b25fcb3e3553497ead2baad476f2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa56127f649d71bfcc8825322f8bf729175d41df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151038"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066038"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Stima della cardinalità (SQL Server)
   La logica di stima della cardinalità, denominata strumento di stima della cardinalità, è stata riprogettata in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] per migliorare la qualità dei piani di query e, di conseguenza, per ottimizzare le prestazioni delle query. Nel nuovo strumento di stima della cardinalità sono incorporati presupposti e algoritmi maggiormente adatti ai i carichi di lavoro di data warehouse e alle soluzioni OLTP più recenti. Lo strumento è basato sulla ricerca approfondita della stima della cardinalità sui carichi di lavoro più recenti e sulle conoscenze relative al miglioramento della stima della cardinalità di SQL Server acquisite nel corso degli ultimi 15 anni. I commenti e i suggerimenti dei clienti indicano che sebbene la maggior parte delle query registrerà un miglioramento o rimarrà invariata a seguito della modifica, una percentuale minima potrebbe registrare una regressione rispetto allo strumento di stima della cardinalità precedente.  
@@ -75,7 +74,7 @@ SELECT year, purchase_price FROM dbo.Cars WHERE Make = 'Honda' AND Model = 'Civi
   
  Questo comportamento è stato modificato. Ora, le nuove stime della cardinalità presuppongono che le colonne Make e Model presentino una *certa* correlazione. Query Optimizer stima una cardinalità più elevata mediante l'aggiunta di un componente esponenziale all'equazione di stima. Il Query Optimizer ora stima che 22,36 righe (0,05 * SQRT (. 20) \* 1000 righe = 22,36 righe) corrispondano al predicato. Per questo scenario e per la distribuzione di dati specifica, 22,36 righe è un risultato più vicino alle 50 righe che saranno restituite dalla query.  
   
- Si noti che la nuova logica di stima della cardinalità ordina le selettività del predicato e aumenta l'esponente. Se, ad esempio, il predicato selettività era 0,05, 0,20 e 0,25, la stima della cardinalità sarebbe (. 05 * SQRT (20 \* ) SQRT (sqrt (. 25))).  
+ Si noti che la nuova logica di stima della cardinalità ordina le selettività del predicato e aumenta l'esponente. Se, ad esempio, il predicato selettività era 0,05, 0,20 e 0,25, la stima della cardinalità sarebbe (. 05 * SQRT (20) \* sqrt (sqrt (. 25))).  
   
 ### <a name="example-c-new-cardinality-estimates-assume-filtered-predicates-on-different-tables-are-independent"></a>Esempio C. Le nuove stime della cardinalità presuppongono che i predicati filtrati in tabelle diverse siano indipendenti.  
  Per questo esempio, lo strumento di stima della cardinalità precedente presuppone che i filtri s.type e r.date del predicato siano correlati. Tuttavia, i risultati di prova sui carichi di lavoro più recenti mostrano che i filtri del predicato sulle colonne in tabelle diverse non sono in genere correlati tra loro.  
@@ -87,7 +86,7 @@ WHERE s.ticket = r.ticket AND s.type = 'toy' AND r.date = '2013-12-19';
   
  Questo comportamento è stato modificato. Ora, la nuova logica di stima della cardinalità presuppone che s.type non sia correlato a r.date. In pratica, si presuppone che i giocattoli siano restituiti ogni giorno e non solo in un giorno specifico. In questo caso, le nuove stime della cardinalità restituiranno un numero inferiore rispetto alle stime della cardinalità precedenti.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Monitoraggio e ottimizzazione delle prestazioni](monitor-and-tune-for-performance.md)  
   
   

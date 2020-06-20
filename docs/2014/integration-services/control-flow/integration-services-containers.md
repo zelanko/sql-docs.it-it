@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 172aa2a77293dd7e9a9ee50bfe0002a71c59cbb9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0afb0e4307b4bc2205e92700f6fc0ca580caa801
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831295"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918721"
 ---
 # <a name="integration-services-containers"></a>Contenitori in Integration Services
   I contenitori sono oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che forniscono la struttura ai pacchetti e i servizi alle attività. Supportano la ripetizione dei flussi di controllo nei pacchetti e consentono di raggruppare attività e contenitori in unità di lavoro significative. Oltre alle attività, i contenitori possono includere anche altri contenitori.  
@@ -91,13 +90,13 @@ ms.locfileid: "62831295"
 ### <a name="event-handlers"></a>Gestori di eventi  
  I gestori di eventi a livello di contenitore rispondono agli eventi generati dal contenitore o dagli altri oggetti inclusi al suo interno. Per altre informazioni, vedere [Gestori eventi di Integration Services &#40;SSIS&#41;](../integration-services-ssis-event-handlers.md).  
   
-### <a name="variables"></a>variables  
+### <a name="variables"></a>Variabili  
  Nelle variabili usate nei contenitori sono incluse le variabili di sistema a livello di contenitore disponibili in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e le variabili definite dall'utente usate dal contenitore. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md).  
   
 ## <a name="break-points"></a>Punti di interruzione  
  Quando si imposta un punto di interruzione in un contenitore e la condizione di interruzione è **Interrompi quando il contenitore riceve l'evento OnVariableValueChanged**, definire la variabile nell'ambito del contenitore.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Flusso di controllo](control-flow.md)  
   
   

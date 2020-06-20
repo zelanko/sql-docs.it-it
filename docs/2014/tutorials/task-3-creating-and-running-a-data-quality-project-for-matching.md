@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6260e911-ea8b-4c69-a39d-d1bccd565a32
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c6953214bd5e5353643cb16b75ed51ac18783256
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8de716da5a7f845f68bd50fa09b04594bf883ad6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78171770"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035406"
 ---
 # <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>Attività 3: Creazione ed esecuzione di un progetto Data Quality per la corrispondenza
   In questa attività viene creato un progetto Data Quality per l'attività di corrispondenza e viene eseguito il processo di corrispondenza nei dati puliti del fornitore per rimuovere tutti i duplicati nei dati.
@@ -34,7 +33,7 @@ ms.locfileid: "78171770"
 
 6.  Nella pagina **Mappa** selezionare **File di Excel** per **Origine dati**.
 
-7.  Fare clic su **Sfoglia** e selezionare **cleaned Supplier List. xls**, ovvero il file di output dell'attività di pulizia.
+7.  Fare clic su **Sfoglia** e selezionare **cleaned Supplier List.xls**, ovvero il file di output dell'attività di pulizia.
 
 8.  Eseguire il mapping della colonna di origine **SupplierID** al dominio **Supplier ID** , della colonna **Supplier** Name al dominio **Supplier Name** e della colonna **ContactEmailAddress** al dominio **Contact email** .
 

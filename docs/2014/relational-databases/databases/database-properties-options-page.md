@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a4420aaf7b11eccecf0b04bb67a55386215f1fc9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e856e820719054ad1f01fe0e0306aa278d62ec2c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917087"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970141"
 ---
 # <a name="database-properties-options-page"></a>Proprietà database (pagina Opzioni)
   Utilizzare questa pagina per visualizzare o modificare le opzioni per il database selezionato. Per ulteriori informazioni sulle opzioni disponibili in questa pagina, vedere [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
@@ -55,11 +54,11 @@ ms.locfileid: "62917087"
  Indica se il database aggiorna automaticamente le statistiche di ottimizzazione non aggiornate. I valori possibili sono `True` e `False`. Se `True`, tutte le statistiche non aggiornate necessarie per l'ottimizzazione di una query vengono compilate automaticamente durante la fase di ottimizzazione. Per altre informazioni, vedere [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
  **Aggiornamento automatico asincrono statistiche**  
- Se `True`, le query che avviano un aggiornamento automatico delle statistiche non aggiornate non attenderanno l'aggiornamento delle statistiche prima della compilazione. Le query successive utilizzeranno le statistiche aggiornate, non appena disponibili.  
+ Se `True` , le query che avviano un aggiornamento automatico delle statistiche non aggiornate non attenderanno l'aggiornamento delle statistiche prima della compilazione. Le query successive utilizzeranno le statistiche aggiornate, non appena disponibili.  
   
- Se `False`, le query che avviano un aggiornamento automatico delle statistiche non aggiornate, restano in attesa fino a quando non è possibile utilizzare le statistiche aggiornate nel piano di ottimizzazione delle query.  
+ Se `False` , le query che avviano un aggiornamento automatico delle statistiche non aggiornate, restano in attesa fino a quando non è possibile utilizzare le statistiche aggiornate nel piano di ottimizzazione delle query.  
   
- L'impostazione di questa `True` opzione su non ha alcun effetto a meno che anche l'opzione `True` **aggiornamento automatico statistiche** non sia impostata su.  
+ L'impostazione di questa opzione su `True` non ha alcun effetto a meno che anche l'opzione **aggiornamento automatico statistiche** non sia impostata su `True` .  
   
 ## <a name="containment"></a>Containment  
  Nei database indipendenti alcune impostazioni che in genere sono configurate a livello di server possono essere configurate a livello di database.  
@@ -86,7 +85,7 @@ ms.locfileid: "62917087"
  Specifica se i cursori vengono chiusi dopo l'esecuzione del commit della transazione di apertura del cursore. I valori possibili sono `True` e `False`. Se `True`, tutti i cursori che risultano aperti quando viene eseguito il commit o il rollback di un transazione vengono chiusi. Se `False`, quando viene eseguito il commit della transazione tali cursori rimangono aperti. Se `False`, il rollback di una transazione comporta la chiusura di tutti i cursori, a eccezione di quelli definiti come INSENSITIVE o STATIC. Per altre informazioni, vedere [SET CURSOR_CLOSE_ON_COMMIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-cursor-close-on-commit-transact-sql).  
   
  **Cursore predefinito**  
- Indica il comportamento del cursore predefinito. Se `True`, le dichiarazioni dei cursori sono LOCAL per impostazione predefinita. Se `False`, [!INCLUDE[tsql](../../includes/tsql-md.md)] per impostazione predefinita i cursori sono globali.  
+ Indica il comportamento del cursore predefinito. Se `True`, le dichiarazioni dei cursori sono LOCAL per impostazione predefinita. Se `False` , [!INCLUDE[tsql](../../includes/tsql-md.md)] per impostazione predefinita i cursori sono globali.  
   
 ## <a name="filestream"></a>FILESTREAM  
  **Nome di directory FILESTREAM**  
@@ -100,30 +99,30 @@ ms.locfileid: "62917087"
  Consente l'uso di valori Null per ogni colonna o tipo di dati definito dall'utente non indicato in modo esplicito come `NOT NULL`, lo stato predefinito, durante un'istruzione `CREATE TABLE` o `ALTER TABLE`. Per altre informazioni, vedere [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-on-transact-sql) e [SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-off-transact-sql).  
   
  **NULL ANSI abilitati**  
- Indica il comportamento degli operatori di confronto Uguale a (`=`) e Diverso da (`<>`) quando vengono utilizzati con valori Null. I valori possibili `True` sono (on) `False` e (off). Se `True`, tutti i confronti con un valore Null restituiscono UNKNOWN. Se `False`, i confronti di valori non Unicode con un valore null restituiscono `True` se entrambi i valori sono null. Per altre informazioni, vedere [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql).  
+ Indica il comportamento degli operatori di confronto Uguale a (`=`) e Diverso da (`<>`) quando vengono utilizzati con valori Null. I valori possibili sono `True` (on) e `False` (off). Se `True`, tutti i confronti con un valore Null restituiscono UNKNOWN. Se `False` , i confronti di valori non Unicode con un valore null restituiscono `True` se entrambi i valori sono null. Per altre informazioni, vedere [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql).  
   
  **Riempimento ANSI abilitato**  
- Indica se il riempimento ANSI è attivato o disattivato. I valori consentiti sono `True` ( `False` on) e (off). Per altre informazioni, vedere [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql).  
+ Indica se il riempimento ANSI è attivato o disattivato. I valori consentiti sono `True` (on) e `False` (off). Per altre informazioni, vedere [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql).  
   
  **Avvisi ANSI abilitati**  
- Indica il comportamento dello standard ISO per diverse condizioni di errore. Quando `True`viene generato un messaggio di avviso se sono presenti valori null nelle funzioni di aggregazione, ad esempio Sum, AVG, Max, min, STDEV, STDEVP, var, VARP o count. Se `False`, non viene emesso alcun avviso. Per altre informazioni, vedere [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql).  
+ Indica il comportamento dello standard ISO per diverse condizioni di errore. Quando `True` viene generato un messaggio di avviso se sono presenti valori null nelle funzioni di aggregazione, ad esempio Sum, AVG, Max, min, STDEV, STDEVP, var, VARP o count. Se `False` , non viene emesso alcun avviso. Per altre informazioni, vedere [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql).  
   
  **Interruzione per errori aritmetici abilitata**  
  Indica se l'opzione del database relativa all'interruzione aritmetica è abilitata o disabilitata. I valori possibili sono `True` e `False`. Se `True`, un errore di overflow o di divisione per zero comporta l'interruzione della query o del batch. Se l'errore si verifica in una transazione, viene eseguito il rollback della transazione. Se `False`, viene visualizzato un avviso, ma l'esecuzione della query, del batch o della transazione prosegue come se non si fosse verificato alcun errore. Per altre informazioni, vedere [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql).  
   
  **Risultato Null per concatenazione di valori Null**  
- Indica il comportamento in caso di valori Null concatenati. Quando il valore della proprietà `True`è `string` , + null restituisce null. Se `False`, il risultato è `string`. Per altre informazioni, vedere [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql).  
+ Indica il comportamento in caso di valori Null concatenati. Quando il valore della proprietà è `True` , `string` + NULL restituisce null. Se `False` , il risultato è `string` . Per altre informazioni, vedere [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql).  
   
  **Concatenamento della proprietà tra database abilitato**  
- Questo valore di sola lettura indica se è abilitato il concatenamento della proprietà tra database. Se `True`, il database può essere l'origine o la destinazione di una catena di proprietà tra database. Utilizzare l'istruzione ALTER DATABASE per impostare questa proprietà.  
+ Questo valore di sola lettura indica se è abilitato il concatenamento della proprietà tra database. Se `True` , il database può essere l'origine o la destinazione di una catena di proprietà tra database. Utilizzare l'istruzione ALTER DATABASE per impostare questa proprietà.  
   
  **Ottimizzazione di correlazione data abilitata**  
- Quando `True`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene le statistiche di correlazione tra due tabelle qualsiasi del database collegate da un vincolo FOREIGN KEY e con `datetime` colonne.  
+ Quando `True` , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene le statistiche di correlazione tra due tabelle qualsiasi del database collegate da un vincolo FOREIGN KEY e con `datetime` colonne.  
   
- Se `False`, le statistiche sulla correlazione non vengono mantenute.  
+ Se `False` , le statistiche sulla correlazione non vengono mantenute.  
   
  **Interruzione per perdita di precisione numerica**  
- Indica la modalità di gestione degli errori di arrotondamento utilizzata dal database. I valori possibili sono `True` e `False`. Se `True`, viene generato un errore se si verifica una perdita di precisione in un'espressione. Se `False`, le perdite di precisione non generano messaggi di errore e il risultato viene arrotondato alla precisione della colonna o della variabile che archivia il risultato. Per altre informazioni, vedere [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql).  
+ Indica la modalità di gestione degli errori di arrotondamento utilizzata dal database. I valori possibili sono `True` e `False`. Se `True`, viene generato un errore se si verifica una perdita di precisione in un'espressione. Se `False` , le perdite di precisione non generano messaggi di errore e il risultato viene arrotondato alla precisione della colonna o della variabile che archivia il risultato. Per altre informazioni, vedere [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql).  
   
  **Parametrizzazione**  
  Se **SIMPLE**, le query vengono parametrizzate in base al comportamento predefinito del database. Quando è **Forced**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parametrizza tutte le query nel database.  
@@ -132,16 +131,16 @@ ms.locfileid: "62917087"
  Indica se le parole chiave di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono essere utilizzate come identificatori (nome di variabile o oggetto) se racchiusi tra virgolette. I valori possibili sono `True` e `False`. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql).  
   
  **Trigger ricorsivi abilitati**  
- Indica se i trigger possono essere attivati da altri trigger. I valori possibili sono `True` e `False`. Quando è impostato `True`su, Abilita l'attivazione ricorsiva dei trigger. Quando è impostato `False`su, viene impedita solo la ricorsione diretta. Per disabilitare la ricorsione indiretta, impostare l'opzione del server nested triggers su 0 utilizzando sp_configure. Per altre informazioni, vedere [Creazione di trigger annidati](../triggers/create-nested-triggers.md).  
+ Indica se i trigger possono essere attivati da altri trigger. I valori possibili sono `True` e `False`. Quando è impostato su `True` , Abilita l'attivazione ricorsiva dei trigger. Quando è impostato su `False` , viene impedita solo la ricorsione diretta. Per disabilitare la ricorsione indiretta, impostare l'opzione del server nested triggers su 0 utilizzando sp_configure. Per altre informazioni, vedere [Creazione di trigger annidati](../triggers/create-nested-triggers.md).  
   
  `Trustworthy`  
- Quando viene `True`visualizzata, questa opzione di sola lettura indica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che consente l'accesso alle risorse esterne al database in un contesto di rappresentazione definito all'interno del database. I contesti di rappresentazione possono essere definiti all'interno del database mediante l'istruzione utente EXECUTE AS o la clausola EXECUTE AS sui moduli di database.  
+ Quando viene visualizzata `True` , questa opzione di sola lettura indica che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente l'accesso alle risorse esterne al database in un contesto di rappresentazione definito all'interno del database. I contesti di rappresentazione possono essere definiti all'interno del database mediante l'istruzione utente EXECUTE AS o la clausola EXECUTE AS sui moduli di database.  
   
  Per ottenere l'accesso, il proprietario del database deve anche disporre dell'autorizzazione AUTHENTICATE SERVER a livello del server.  
   
  Questa proprietà consente inoltre la creazione e l'esecuzione di assembly di accesso esterni e non sicuri all'interno del database. Oltre a impostare questa proprietà su `True`, il proprietario del database deve disporre dell'autorizzazione EXTERNAL ACCESS ASSEMBLY o UNSAFE ASSEMBLY a livello di server.  
   
- Per impostazione predefinita, questa proprietà è impostata su `False`tutti i database utente e tutti i database di sistema, ad eccezione di **msdb**. Il valore non può essere modificato per i database **Model** e **tempdb** .  
+ Per impostazione predefinita, questa proprietà è impostata su tutti i database utente e tutti i database di sistema, ad eccezione di **msdb** `False` . Il valore non può essere modificato per i database **Model** e **tempdb** .  
   
  TRUSTWORTHY è impostata su `False` ogniqualvolta un database è collegato al server.  
   
@@ -150,7 +149,7 @@ ms.locfileid: "62917087"
  Per impostare questa proprietà, utilizzare l'istruzione ALTER DATABASE.  
   
  **Formato di archiviazione vardecimal abilitato**  
- Questa opzione è di sola lettura a partire [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] da e versioni successive, tutti i database sono abilitati per il formato di archiviazione vardecimal. Questa opzione usa [sp_db_vardecimal_storage_format](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql).  
+ Questa opzione è di sola lettura a partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, tutti i database sono abilitati per il formato di archiviazione vardecimal. Questa opzione usa [sp_db_vardecimal_storage_format](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql).  
   
 ## <a name="recovery"></a>Ripristino  
  **Verifica pagina**  
@@ -169,7 +168,7 @@ ms.locfileid: "62917087"
  **Limitazione dell'accesso**  
  Indica gli utenti autorizzati ad accedere al database. I valori possibili sono:  
   
--   **Più di uno**  
+-   **Multipli**  
   
      Rappresenta lo stato normale per un database di produzione e consente l'accesso simultaneo di più utenti al database.  
   
@@ -182,9 +181,9 @@ ms.locfileid: "62917087"
      Solo i membri del ruolo db_owner, dbcreator o sysadmin possono utilizzare il database.  
   
  **Crittografia abilitata**  
- Se `True`, il database è abilitato per la crittografia del database. Per la crittografia è necessaria una chiave di crittografia del database. Per altre informazioni sulla crittografia trasparente del database, vedere [Transparent Data Encryption &#40;TDE&#41;](../security/encryption/transparent-data-encryption.md).  
+ Se `True` , il database è abilitato per la crittografia del database. Per la crittografia è necessaria una chiave di crittografia del database. Per altre informazioni sulla crittografia trasparente del database, vedere [Transparent Data Encryption &#40;TDE&#41;](../security/encryption/transparent-data-encryption.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   

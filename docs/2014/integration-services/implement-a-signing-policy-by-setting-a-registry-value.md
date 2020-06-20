@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 21bda8729c30df9493c4f969c5af05b6dd80386f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 776a8319750721f3b489df1a3a4466c7dc36f15e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058223"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968321"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>Implementazione di criteri per le firme impostando un valore del Registro di sistema
   È possibile utilizzare un valore facoltativo del Registro di sistema per gestire i criteri dell'organizzazione per il caricamento dei pacchetti firmati o non firmati. Se si utilizza questo valore del Registro di sistema, è necessario crearlo in ogni computer in cui verranno eseguiti i pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e in cui si desidera applicare i criteri. Dopo l'impostazione del valore del Registro di sistema, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] controllerà o verificherà le firme prima di caricare i pacchetti.  
@@ -48,7 +47,7 @@ ms.locfileid: "66058223"
   
 1.  Fare clic sul pulsante **Start**, quindi scegliere **Esegui**.  
   
-2.  Nella finestra di dialogo Esegui digitare `Regedit`e quindi fare clic su **OK**.  
+2.  Nella finestra di dialogo Esegui digitare `Regedit` e quindi fare clic su **OK**.  
   
 3.  Individuare la chiave del Registro di sistema: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS  
   
@@ -56,7 +55,7 @@ ms.locfileid: "66058223"
   
 5.  Aggiornare il nome del nuovo valore impostandolo su `BlockedSignatureStates`.  
   
-6.  Fare clic con `BlockedSignatureStates` il pulsante destro del mouse e scegliere **modifica**.  
+6.  Fare clic con il pulsante destro del mouse `BlockedSignatureStates` e scegliere **modifica**.  
   
 7.  Nella finestra di dialogo **Modifica valore DWORD** digitare il valore 0, 1, 2 o 3.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "66058223"
   
 9. Scegliere **Esci** dal menu **File**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Panoramica della sicurezza &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
  [Identificazione dell'origine dei pacchetti con firme digitali](security/identify-the-source-of-packages-with-digital-signatures.md)  
   

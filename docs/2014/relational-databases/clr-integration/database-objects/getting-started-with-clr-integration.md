@@ -24,19 +24,18 @@ helpviewer_keywords:
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: db3a72facf1676360e7c338663facac66840a113
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2d48e3c9a2c25dda9dae893cc8e61ff30be4314
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874124"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970614"
 ---
 # <a name="getting-started-with-clr-integration"></a>Introduzione all'integrazione con CLR
-  In questo argomento viene fornita una panoramica delle librerie e degli spazi dei nomi necessari per compilare gli [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] oggetti di database utilizzando l'integrazione con il .NET Framework Common Language Runtime (CLR). In questo argomento viene inoltre illustrato come scrivere, compilare ed eseguire una stored procedure CLR semplice scritta in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
+  In questo argomento viene fornita una panoramica delle librerie e degli spazi dei nomi necessari per compilare gli oggetti di database utilizzando l' [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] integrazione con il .NET Framework Common Language Runtime (CLR). In questo argomento viene inoltre illustrato come scrivere, compilare ed eseguire una stored procedure CLR semplice scritta in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
   
 ## <a name="required-namespaces"></a>Spazi dei nomi necessari  
- A partire [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)]da. La funzionalità di integrazione CLR viene esposta in un assembly denominato system.data.dll, che fa parte di .NET Framework. Questo assembly è disponibile in Global Assembly Cache (GAC) e nella directory di .NET Framework. Poiché un riferimento a questo assembly viene in genere aggiunto tramite gli strumenti della riga di comando e [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio, non è necessario aggiungerlo manualmente.  
+ A partire da [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] . La funzionalità di integrazione CLR viene esposta in un assembly denominato system.data.dll, che fa parte di .NET Framework. Questo assembly è disponibile in Global Assembly Cache (GAC) e nella directory di .NET Framework. Poiché un riferimento a questo assembly viene in genere aggiunto tramite gli strumenti della riga di comando e [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio, non è necessario aggiungerlo manualmente.  
   
  L'assembly system.data.dll contiene gli spazi dei nomi seguenti, necessari per la compilazione di oggetti di database CLR:  
   
@@ -174,7 +173,7 @@ IF EXISTS (SELECT name FROM sys.assemblies WHERE name = 'helloworld')
    drop assembly helloworld  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Stored procedure CLR](../../../database-engine/dev-guide/clr-stored-procedures.md)   
  [SQL Server estensioni specifiche in-process per ADO.NET](../../clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)   
  [Debug di oggetti di database CLR](../debugging-clr-database-objects.md)   

@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8ed991d65858d40b96013659caa2d83c479ca1d3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e647ed8d563bb922ee083d7a10a57429148e954a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782714"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953089"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrare un database come applicazione livello dati
-  Utilizzare la **procedura guidata Registra applicazione livello dati** o uno script di Windows PowerShell per compilare una definizione di applicazione livello dati (DAC) che descrive gli oggetti in un database esistente e registrare la definizione DAC nel database di `msdb` sistema (**Master** in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
+  Utilizzare la **procedura guidata Registra applicazione livello dati** o uno script di Windows PowerShell per compilare una definizione di applicazione livello dati (DAC) che descrive gli oggetti in un database esistente e registrare la definizione DAC nel database di `msdb` sistema (**Master** in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ).  
   
 -   **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions), [Autorizzazioni](#Permissions)  
   
@@ -78,11 +77,11 @@ ms.locfileid: "72782714"
   
  **Nome dell'applicazione.** - Stringa che specifica il nome usato per identificare la definizione dell'applicazione livello dati; il campo viene popolato con il nome del database.  
   
- **Versione.** - Valore numerico che identifica la versione dell'applicazione livello dati. La versione DAC viene utilizzata in Visual Studio per identificare la versione della DAC alla quale stanno lavorando gli sviluppatori. Quando si distribuisce un'applicazione livello dati, la versione `msdb` viene archiviata nel database e può essere visualizzata successivamente nel nodo **applicazioni livello dati** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ **Versione.** - Valore numerico che identifica la versione dell'applicazione livello dati. La versione DAC viene utilizzata in Visual Studio per identificare la versione della DAC alla quale stanno lavorando gli sviluppatori. Quando si distribuisce un'applicazione livello dati, la versione viene archiviata nel `msdb` database e può essere visualizzata successivamente nel nodo **applicazioni livello dati** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
- **Descrizione.** - (Facoltativa). Testo che illustra lo scopo dell'applicazione livello dati. Quando si distribuisce un'applicazione livello dati, la descrizione `msdb` viene archiviata nel database e può essere visualizzata successivamente nel nodo **applicazioni livello dati** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+ **Descrizione.** - (Facoltativa). Testo che illustra lo scopo dell'applicazione livello dati. Quando si distribuisce un'applicazione livello dati, la descrizione viene archiviata nel `msdb` database e può essere visualizzata successivamente nel nodo **applicazioni livello dati** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] .  
   
- Indietro: consente di tornare alla pagina **Introduzione** . ** \< **  
+ ** \< Indietro** : consente di tornare alla pagina **Introduzione** .  
   
  **Avanti >**: consente di verificare che sia possibile compilare un'applicazione livello dati dagli oggetti nel database e di visualizzare i risultati nella pagina **Convalida e riepilogo**.  
   
@@ -94,7 +93,7 @@ ms.locfileid: "72782714"
 ### <a name="retrieving-objects"></a>Recupero degli oggetti  
  **Recupero di oggetti database e server.** - Consente di visualizzare un indicatore di stato durante il recupero di tutti gli oggetti richiesti dal database e dall'istanza del Motore di database.  
   
- Indietro: consente di tornare alla pagina **Imposta proprietà** per modificare le voci. ** \< **  
+ ** \< Indietro** : consente di tornare alla pagina **Imposta proprietà** per modificare le voci.  
   
  **Avanti>**: consente di registrare l'applicazione livello dati e visualizzare i risultati nella pagina **Registra applicazione livello dati**.  
   
@@ -103,7 +102,7 @@ ms.locfileid: "72782714"
 ### <a name="validating-objects"></a>Convalida degli oggetti  
  **Verifica**  _NomeSchema_ **.** _ObjectName_ **.** - Consente di visualizzare un indicatore di stato durante la verifica delle dipendenze degli oggetti recuperati e della loro validità per l'applicazione livello dati. _SchemaName_**.** _ObjectName_ che identifica l'oggetto attualmente in fase di verifica.  
   
- Indietro: consente di tornare alla pagina **Imposta proprietà** per modificare le voci. ** \< **  
+ ** \< Indietro** : consente di tornare alla pagina **Imposta proprietà** per modificare le voci.  
   
  **Avanti>**: consente di registrare l'applicazione livello dati e visualizzare i risultati nella pagina **Registra applicazione livello dati**.  
   
@@ -114,7 +113,7 @@ ms.locfileid: "72782714"
   
  **Salva report** consente di salvare una copia del report di convalida come file HTML. La cartella predefinita è una cartella **SQL Server Management Studio\dac Packages contenuta Packages** nella cartella Documents dell'account di Windows.  
   
- Indietro: consente di tornare alla pagina **Imposta proprietà** per modificare le voci. ** \< **  
+ ** \< Indietro** : consente di tornare alla pagina **Imposta proprietà** per modificare le voci.  
   
  **Avanti>**: consente di registrare l'applicazione livello dati e visualizzare i risultati nella pagina **Registra applicazione livello dati**.  
   
@@ -125,7 +124,7 @@ ms.locfileid: "72782714"
   
  **Registrazione dell'applicazione livello dati** : consente di visualizzare l'esito positivo o negativo di ogni azione eseguita per la registrazione dell'applicazione livello dati. Verificare le informazioni che determinano l'esito positivo o negativo di ciascuna azione. Ogni azione che ha rilevato un errore avrà un collegamento nella colonna **Risultato** . Selezionare il collegamento per visualizzare un report dell'errore per l'azione.  
   
- **Salva report** consente di salvare il report della registrazione come file HTML. Nel file viene riportato lo stato di ogni azione, inclusi tutti gli errori generati da qualsiasi azione. La cartella predefinita è una cartella **SQL Server Management Studio\dac Packages contenuta Packages** nella cartella Documents dell'account di Windows. Il nome del file è nel formato \<nomepacchettodac>_RegisterDACReport_yyyymmdd. html, dove \< *nomepacchettodac*> è il nome del pacchetto da distribuire, *aaaa* = l'anno corrente, *mm* = il mese corrente e *GG* = il giorno corrente.  
+ **Salva report** consente di salvare il report della registrazione come file HTML. Nel file viene riportato lo stato di ogni azione, inclusi tutti gli errori generati da qualsiasi azione. La cartella predefinita è una cartella **SQL Server Management Studio\dac Packages contenuta Packages** nella cartella Documents dell'account di Windows. Il nome del file è nel formato \<DACPackageName>_RegisterDACReport_yyyymmdd.html, dove \<*DACPackageName*> è il nome del pacchetto da distribuire, *aaaa* = l'anno corrente, *mm* = il mese corrente e *GG* = il giorno corrente.  
   
  **Fine** : consente di terminare la procedura guidata.  
   

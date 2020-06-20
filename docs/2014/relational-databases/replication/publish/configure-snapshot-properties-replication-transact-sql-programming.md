@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 978d150f-8971-458a-ab2b-3beba5937b46
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b03dd7f886cee5816d591034d1be63ece45d8d1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4c7dd645fed073f73132c6993f12925a885a8e0e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021333"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038037"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>Configurazione delle proprietà dello snapshot (programmazione Transact-SQL della replica)
   Le proprietà dello snapshot possono essere definite e modificate a livello di programmazione tramite le stored procedure di replica. Le stored procedure utilizzate dipendono dal tipo di pubblicazione.  
   
 ### <a name="to-configure-snapshot-properties-when-creating-a-snapshot-or-transactional-publication"></a>Per configurare le proprietà dello snapshot durante la creazione di una pubblicazione snapshot o transazionale  
   
-1.  Nel server di pubblicazione eseguire [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Specificare il nome di una **@publication**pubblicazione per, il valore **snapshot** o **Continuous** per **@repl_freq**e uno o più dei seguenti parametri correlati allo snapshot:  
+1.  Nel server di pubblicazione eseguire [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Specificare il nome di una pubblicazione per **@publication** , il valore **snapshot** o **Continuous** per **@repl_freq** e uno o più dei seguenti parametri correlati allo snapshot:  
   
     -   **@alt_snapshot_folder**: specificare un percorso se è possibile accedere allo snapshot per questa pubblicazione da tale percorso anziché o in aggiunta alla cartella snapshot predefinita.  
   
@@ -42,7 +41,7 @@ ms.locfileid: "63021333"
   
 ### <a name="to-configure-snapshot-properties-when-creating-a-merge-publication"></a>Per configurare le proprietà dello snapshot durante la creazione di una pubblicazione di tipo merge  
   
-1.  Nel server di pubblicazione eseguire [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Specificare il nome di una **@publication**pubblicazione per, il valore **snapshot** o **Continuous** per **@repl_freq**e uno o più dei seguenti parametri correlati allo snapshot:  
+1.  Nel server di pubblicazione eseguire [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Specificare il nome di una pubblicazione per **@publication** , il valore **snapshot** o **Continuous** per **@repl_freq** e uno o più dei seguenti parametri correlati allo snapshot:  
   
     -   **@alt_snapshot_folder**: specificare un percorso se è possibile accedere allo snapshot per questa pubblicazione da tale percorso anziché o in aggiunta alla cartella snapshot predefinita.  
   
@@ -58,15 +57,15 @@ ms.locfileid: "63021333"
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-snapshot-or-transactional-publication"></a>Per modificare le proprietà dello snapshot di una pubblicazione snapshot o transazionale esistente  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql). Specificare il valore **1** per **@force_invalidate_snapshot** e uno dei valori seguenti per **@property**:  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql). Specificare il valore **1** per **@force_invalidate_snapshot** e uno dei valori seguenti per **@property** :  
   
-    -   **alt_snapshot_folder** : specificare anche un nuovo percorso per la cartella snapshot alternativa **@value**.  
+    -   **alt_snapshot_folder** : specificare anche un nuovo percorso per la cartella snapshot alternativa **@value** .  
   
     -   **compress_snapshot** : specificare anche il valore **true** o **false** per **@value** per indicare se i file di snapshot nella cartella snapshot alternativa sono compressi nel formato di file CAB.  
   
-    -   **pre_snapshot_script** : **@value** specificare anche il nome del file e il percorso completo di un file con **estensione SQL** che verrà eseguito nel Sottoscrittore durante l'inizializzazione prima dell'applicazione dello snapshot iniziale.  
+    -   **pre_snapshot_script** : specificare anche **@value** il nome del file e il percorso completo di un file con **estensione SQL** che verrà eseguito nel Sottoscrittore durante l'inizializzazione prima dell'applicazione dello snapshot iniziale.  
   
-    -   **post_snapshot_script** : **@value** specificare anche il nome del file e il percorso completo di un file con **estensione SQL** che verrà eseguito nel Sottoscrittore durante l'inizializzazione dopo l'applicazione dello snapshot iniziale.  
+    -   **post_snapshot_script** : specificare anche **@value** il nome del file e il percorso completo di un file con **estensione SQL** che verrà eseguito nel Sottoscrittore durante l'inizializzazione dopo l'applicazione dello snapshot iniziale.  
   
     -   **snapshot_in_defaultfolder** : specificare anche il valore **true** o **false** per indicare se lo snapshot è disponibile solo in un percorso non predefinito.  
   
@@ -79,15 +78,15 @@ ms.locfileid: "63021333"
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-merge-publication"></a>Per modificare le proprietà dello snapshot di una pubblicazione di tipo merge esistente  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Specificare il valore **1** per **@force_invalidate_snapshot** e uno dei valori seguenti per **@property**:  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Specificare il valore **1** per **@force_invalidate_snapshot** e uno dei valori seguenti per **@property** :  
   
-    -   **alt_snapshot_folder** : specificare anche un nuovo percorso per la cartella snapshot alternativa **@value**.  
+    -   **alt_snapshot_folder** : specificare anche un nuovo percorso per la cartella snapshot alternativa **@value** .  
   
     -   **compress_snapshot** : specificare anche il valore **true** o **false** per **@value** per indicare se i file di snapshot nella cartella snapshot alternativa sono compressi nel formato di file CAB.  
   
-    -   **pre_snapshot_script** : **@value** specificare anche il nome del file e il percorso completo di un file con **estensione SQL** che verrà eseguito nel Sottoscrittore durante l'inizializzazione prima dell'applicazione dello snapshot iniziale.  
+    -   **pre_snapshot_script** : specificare anche **@value** il nome del file e il percorso completo di un file con **estensione SQL** che verrà eseguito nel Sottoscrittore durante l'inizializzazione prima dell'applicazione dello snapshot iniziale.  
   
-    -   **post_snapshot_script** : **@value** specificare anche il nome del file e il percorso completo di un file con **estensione SQL** che verrà eseguito nel Sottoscrittore durante l'inizializzazione dopo l'applicazione dello snapshot iniziale.  
+    -   **post_snapshot_script** : specificare anche **@value** il nome del file e il percorso completo di un file con **estensione SQL** che verrà eseguito nel Sottoscrittore durante l'inizializzazione dopo l'applicazione dello snapshot iniziale.  
   
     -   **snapshot_in_defaultfolder** : specificare anche il valore **true** o **false** per indicare se lo snapshot è disponibile solo in un percorso non predefinito.  
   
@@ -98,7 +97,7 @@ ms.locfileid: "63021333"
   
  [!code-sql[HowTo#sp_mergealtsnapshot](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepubaltsnapshot.sql#sp_mergealtsnapshot)]  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Percorsi alternativi cartella snapshot](../alternate-snapshot-folder-locations.md)   
  [Snapshot compressi](../compressed-snapshots.md)   
  [Eseguire gli script prima e dopo l'applicazione dello snapshot](../snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)   

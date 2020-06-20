@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d33985f7-1048-4023-83e4-274090acda78
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 278a85ddce309f276f61603961169529ffcdfe67
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96f89838368789a6656e047982e107be1aaebc03
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896343"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968941"
 ---
 # <a name="upper-ssis-expression"></a>UPPER (espressione SSIS)
   Restituisce un'espressione di caratteri dopo aver convertito i caratteri minuscoli in caratteri maiuscoli.  

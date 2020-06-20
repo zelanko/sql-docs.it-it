@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: 4bd73187-0aac-4f03-ac54-2b78e41917e5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6f28abbf9871d5f4e512e9c9ee0cfb5c7ad9db59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d4c19943bc79567a5e3abee0c19597247eb31bf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63135268"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050977"
 ---
 # <a name="localdbstopinstance-function"></a>Funzione LocalDBStopInstance
   Viene arrestata l'esecuzione dell'istanza del database locale di SQL Server Express specificata.  
@@ -58,7 +57,7 @@ HRESULT LocalDBStopInstance(
  *ulTimeout*  
  [Input] Ora in secondi di attesa per il completamento di questa operazione. Se questo valore è 0, verrà restituito immediatamente un valore senza attendere l'arresto dell'istanza del database locale.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  S_OK  
  Funzione completata.  
   
@@ -104,7 +103,7 @@ HRESULT LocalDBStopInstance(
 ## <a name="remarks"></a>Osservazioni  
  Per un esempio di codice in cui viene utilizzata l'API del database locale, vedere [SQL Server Express riferimento al database locale](../sql-server-express-localdb-reference.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Informazioni sulla versione e intestazione di SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
   
   
