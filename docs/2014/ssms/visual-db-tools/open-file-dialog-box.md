@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 57e89016641469cbb3215429ff0f2b9053f758c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1baf7d4b4d8c232bfd350cc942d90a4b8631d6f9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63138895"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001286"
 ---
 # <a name="open-file-dialog-box"></a>Finestra di dialogo Apri file
   Usare la finestra di dialogo **Apri file** per aprire un file esistente sul disco. o per aprire un file già aperto utilizzando opzioni di codifica della lingua diverse.  

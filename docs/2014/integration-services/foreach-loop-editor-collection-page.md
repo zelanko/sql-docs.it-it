@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5b9396ab5a25bba979859ac685c4759b8b01c24d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77604faa4cb32fc7babf273717422621b39648aa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66428805"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966421"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Editor ciclo Foreach (pagina Raccolta)
   Usare la pagina **Raccolta** della finestra di dialogo **Editor ciclo Foreach** per specificare il tipo di enumeratore e configurarlo.  
@@ -28,7 +27,7 @@ ms.locfileid: "66428805"
  **Enumeratore**  
  Consente di selezionare il tipo di enumeratore nell'elenco. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Foreach File Enumerator**|Consente di enumerare i file. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Foreach File Enumerator**.|  
 |**Foreach Item Enumerator**|Consente di enumerare i valori in un elemento. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Foreach File Enumerator**.|  
@@ -115,7 +114,7 @@ ms.locfileid: "66428805"
  Foreach ADO Enumerator consente di enumerare le righe o le tabelle in un oggetto ADO o ADO.NET archiviato in una variabile. Se il Ciclo Foreach include ad esempio un'attività Script che scrive un set di dati in una variabile, è possibile utilizzare Foreach ADO Enumerator per enumerare le righe nel set di dati. Se la variabile contiene un set di dati ADO.NET, è possibile configurare l'enumeratore in modo da enumerare le righe in più tabelle o in modo da enumerare le tabelle.  
   
  **Variabile di origine oggetto ADO**  
- Selezionare una variabile definita dall'utente nell'elenco oppure fare clic su \< **nuova variabile...**> per creare una nuova variabile.  
+ Selezionare una variabile definita dall'utente nell'elenco oppure fare clic su \<**New variable...**> per creare una nuova variabile.  
   
 > [!NOTE]  
 >  Il tipo di dati della variabile deve essere Oggetto. In caso contrario si verificherà un errore.  
@@ -134,8 +133,8 @@ ms.locfileid: "66428805"
 ### <a name="enumerator--foreach-adonet-schema-rowset-enumerator"></a>Enumeratore = Foreach ADO.NET Schema Rowset Enumerator  
  Foreach ADO.NET Schema Rowset Enumerator consente di enumerare uno schema per un'origine dei dati specificata. Se il Ciclo Foreach include ad esempio un'attività Esegui SQL, è possibile utilizzare Foreach ADO.NET Schema Rowset Enumerator per enumerare gli schemi, ad esempio le colonne nel database **AdventureWorks** , e utilizzare l'attività Esegui SQL per ottenere le autorizzazioni dello schema.  
   
- **Connessione**  
- Selezionare una gestione connessione ADO.NET nell'elenco oppure fare clic su \< **nuova connessione...**> per creare una nuova gestione connessione ADO.NET.  
+ **Connection**  
+ Selezionare una gestione connessione ADO.NET nell'elenco oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione ADO.NET.  
   
 > [!IMPORTANT]  
 >  La gestione connessione ADO.NET deve utilizzare necessariamente un provider .NET per OLE DB. In caso di connessione a SQL Server, il provider consigliato è [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client, incluso nell'elenco della sezione **Provider .Net per OleDb** nella finestra di dialogo **Gestione connessione** .  
@@ -154,21 +153,21 @@ ms.locfileid: "66428805"
  Foreach From Variable Enumerator consente di enumerare gli oggetti enumerabili nella variabile specificata. Se il Ciclo Foreach include ad esempio un'attività Esegui SQL che esegue una query e archivia il risultato in una variabile, è possibile utilizzare Foreach From Variable Enumerator per enumerare i risultati della query.  
   
  **Variabile**  
- Selezionare una variabile nell'elenco oppure fare clic su \< **nuova variabile...**> per creare una nuova variabile.  
+ Selezionare una variabile nell'elenco oppure fare clic su \<**New variable...**> per creare una nuova variabile.  
   
  **Argomenti correlati:** [Integration Services &#40;variabili di&#41; SSIS](integration-services-ssis-variables.md), [Aggiungi variabile](../../2014/integration-services/add-variable.md)  
   
 ### <a name="enumerator--foreach-nodelist-enumerator"></a>Enumeratore = Foreach NodeList Enumerator  
  Foreach Nodelist Enumerator consente di enumerare il set di nodi XML ottenuto dall'applicazione di un'espressione XPath a un file XML. Se il Ciclo Foreach include ad esempio un'attività Script, è possibile utilizzare Foreach NodeList Enumerator per passare un valore che risponda ai criteri dell'espressione XPath dal file XML all'attività Script.  
   
- L'espressione XPath che viene applicata al file XML è l'operazione XPath esterna, archiviata nella proprietà OuterXPathString. Se il tipo di enumerazione XPath è impostato `ElementCollection`su, l'enumeratore Foreach NodeList può applicare un'espressione XPath interna, archiviata nella proprietà InnerXPathString, a una raccolta di elementi.  
+ L'espressione XPath che viene applicata al file XML è l'operazione XPath esterna, archiviata nella proprietà OuterXPathString. Se il tipo di enumerazione XPath è impostato su `ElementCollection` , l'enumeratore Foreach NodeList può applicare un'espressione XPath interna, archiviata nella proprietà InnerXPathString, a una raccolta di elementi.  
   
  Per ulteriori informazioni sull'utilizzo di documenti e dati XML, vedere "[Employing XML in the .NET Framework (utilizzo di XML in .NET Framework)](https://go.microsoft.com/fwlink/?LinkId=56214)" in MSDN Library.  
   
  **DocumentSourceType**  
  Consente di selezionare il tipo di origine del documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Input diretto**|Consente di impostare l'origine su un documento XML.|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
@@ -177,18 +176,18 @@ ms.locfileid: "66428805"
  **DocumentSource**  
  Se **proprietà DocumentSourceType** è impostato su **input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione (...) per specificare il codice XML tramite la finestra di dialogo **Editor origine documento**.  
   
- Se **proprietà DocumentSourceType** è impostato su **connessione file**, selezionare una gestione connessione file oppure fare clic \<su **nuova connessione...**> per creare una nuova gestione connessione.  
+ Se **proprietà DocumentSourceType** è impostato su **connessione file**, selezionare una gestione connessione file oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Se **proprietà DocumentSourceType** è impostato su **variabile**, selezionare una variabile esistente oppure fare clic \<su **nuova variabile...**> per creare una nuova variabile.  
+ Se **proprietà DocumentSourceType** è impostato su **variabile**, selezionare una variabile esistente oppure fare clic su \<**New variable...**> per creare una nuova variabile.  
   
  **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Aggiungi variabile](../../2014/integration-services/add-variable.md).  
   
  **EnumerationType**  
  Consente di selezionare un tipo di enumeratore nell'elenco. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Strumento di spostamento**|Consente di eseguire l'enumerazione utilizzando uno strumento di spostamento XPathNavigator.|  
 |**Nodo**|Consente di enumerare i nodi restituiti da un'operazione XPath.|  
@@ -198,7 +197,7 @@ ms.locfileid: "66428805"
  **OuterXPathStringSourceType**  
  Consente di selezionare il tipo di origine della stringa XPath. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Input diretto**|Consente di impostare l'origine su un documento XML.|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
@@ -207,21 +206,21 @@ ms.locfileid: "66428805"
  `OuterXPathString`  
  Se la proprietà **OuterXPathStringSourceType** è impostata su **Input diretto**, indicare la stringa XPath.  
   
- Se **Proprietà OuterXPathStringSourceType** è impostato su **connessione file**, selezionare una gestione connessione file oppure fare clic \<su **nuova connessione...**> per creare una nuova gestione connessione.  
+ Se **Proprietà OuterXPathStringSourceType** è impostato su **connessione file**, selezionare una gestione connessione file oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Se **Proprietà OuterXPathStringSourceType** è impostato su **variabile**, selezionare una variabile esistente oppure fare clic \<su **nuova variabile...**> per creare una nuova variabile.  
+ Se **Proprietà OuterXPathStringSourceType** è impostato su **variabile**, selezionare una variabile esistente oppure fare clic su \<**New variable...**> per creare una nuova variabile.  
   
  **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Aggiungi variabile](../../2014/integration-services/add-variable.md).  
   
  **InnerElementType**  
- Se **EnumerationType** è impostato su `ElementCollection`, selezionare il tipo di elemento interno nell'elenco.  
+ Se **EnumerationType** è impostato su `ElementCollection` , selezionare il tipo di elemento interno nell'elenco.  
   
  **InnerXPathStringSourceType**  
  Consente di selezionare il tipo di origine della stringa XPath interna. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Input diretto**|Consente di impostare l'origine su un documento XML.|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
@@ -230,19 +229,19 @@ ms.locfileid: "66428805"
  `InnerXPathString`  
  Se la proprietà **InnerXPathStringSourceType** è impostata su **Input diretto**, indicare la stringa XPath.  
   
- Se **Proprietà InnerXPathStringSourceType** è impostato su **connessione file**, selezionare una gestione connessione file oppure fare clic \<su **nuova connessione...**> per creare una nuova gestione connessione.  
+ Se **Proprietà InnerXPathStringSourceType** è impostato su **connessione file**, selezionare una gestione connessione file oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Se **Proprietà InnerXPathStringSourceType** è impostato su **variabile**, selezionare una variabile esistente oppure fare clic \<su **nuova variabile...**> per creare una nuova variabile.  
+ Se **Proprietà InnerXPathStringSourceType** è impostato su **variabile**, selezionare una variabile esistente oppure fare clic su \<**New variable...**> per creare una nuova variabile.  
   
  **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Aggiungi variabile](../../2014/integration-services/add-variable.md).  
   
 ### <a name="enumerator--foreach-smo-enumerator"></a>Enumeratore = Foreach SMO Enumerator  
  Foreach SMO Enumerator consente di enumerare gli oggetti SQL Server Management Objects (SMO). Se il Ciclo Foreach include ad esempio un'attività Esegui SQL, è possibile utilizzare Foreach SMO Enumerator per enumerare le tabelle nel database **AdventureWorks** ed eseguire query che contino il numero di righe in ogni tabella.  
   
- **Connessione**  
- Selezionare una gestione connessione ADO.NET esistente oppure fare clic \<su **nuova connessione...**> per creare una nuova gestione connessione.  
+ **Connection**  
+ Selezionare una gestione connessione ADO.NET esistente oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  Argomenti correlati: [ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md), [Configure ADO.NET Connection Manager](configure-ado-net-connection-manager.md)  
   
@@ -274,7 +273,7 @@ ms.locfileid: "66428805"
  **Filtro Intervallo di tempo BLOB da/a**  
  Specificare un filtro di intervallo di tempo. I file modificati dopo **TimeRangeFrom** e prima di **TimeRangeTo** saranno enumerati.  
 ### <a name="enumerator--foreach-adls-file-enumerator"></a> Enumeratore = Enumeratore Foreach file di ADLS  
-L' **enumeratore di file ADLS** consente a un pacchetto SSIS di enumerare i file in ADLS con i filtri. Il percorso completo`/`con prefisso barra () per i file enumerati può essere archiviato in una variabile e usato nelle attività all'interno del contenitore ciclo foreach.
+L' **enumeratore di file ADLS** consente a un pacchetto SSIS di enumerare i file in ADLS con i filtri. Il `/` percorso completo con prefisso barra () per i file enumerati può essere archiviato in una variabile e usato nelle attività all'interno del contenitore ciclo foreach.
   
 **AzureDataLakeConnection**  
 Specifica una gestione connessione di Azure Data Lake o crea una nuova istanza che fa riferimento a un account ADLS.   
@@ -294,7 +293,7 @@ Specifica se eseguire la ricerca in modo ricorsivo all'interno della directory s
   
 -   Intervento nel Blog relativo al [filtro file con set dinamico SSIS: filespec](https://rajsudeep.blogspot.com/2010/09/ssisdynamically-set-file-mask-filespec.html).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor ciclo foreach &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor ciclo foreach &#40;pagina Mapping variabili&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   

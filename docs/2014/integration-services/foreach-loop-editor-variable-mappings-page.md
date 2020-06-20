@@ -11,24 +11,23 @@ f1_keywords:
 ms.assetid: aa847b87-f391-48a5-9849-eeda2d6b00b9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 03488e4cfd3a0cc905a58166f381f68eb3292c49
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 396c43f0b7adaf9d2a9dcd6124194aa82a9f8cc0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058528"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966401"
 ---
 # <a name="foreach-loop-editor-variable-mappings-page"></a>Editor ciclo Foreach (pagina Mapping variabili)
   Utilizzare la pagina **Mapping variabili** della finestra di dialogo **Editor ciclo Foreach** per eseguire il mapping delle variabili al valore della raccolta. Il valore della variabile viene aggiornato con i valori della raccolta in ogni iterazione del ciclo.  
   
  Per informazioni sull'utilizzo del contenitore Ciclo Foreach in un pacchetto di Integration Services, vedere [Foreach Loop Container](control-flow/foreach-loop-container.md) . Per informazioni su come configurarlo, vedere [Configurazione di un contenitore Ciclo Foreach](../../2014/integration-services/configure-a-foreach-loop-container.md).  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Nell' [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] esercitazione relativa alla creazione di un pacchetto ETL semplice è inclusa una lezione in cui viene illustrato come aggiungere e configurare un ciclo foreach.  
+ Nell'esercitazione relativa alla [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] creazione di un pacchetto ETL semplice è inclusa una lezione in cui viene illustrato come aggiungere e configurare un ciclo foreach.  
   
 ## <a name="options"></a>Opzioni  
  **Variabile**  
- Selezionare una variabile esistente oppure fare clic \<su **nuova variabile...**> per creare una nuova variabile.  
+ Selezionare una variabile esistente oppure fare clic su \<**New variable...**> per creare una nuova variabile.  
   
 > [!NOTE]  
 >   Dopo il mapping di una variabile, viene aggiunta automaticamente una nuova riga all'elenco **Variabile** .  
@@ -46,7 +45,7 @@ ms.locfileid: "66058528"
  **Elimina**  
  Selezionare una variabile e quindi fare clic su **Elimina**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor ciclo foreach &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor ciclo foreach &#40;pagina raccolta&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   

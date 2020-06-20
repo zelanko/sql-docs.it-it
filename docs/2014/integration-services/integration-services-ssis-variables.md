@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b824129d1687dce8471800f79d106328b9ee36f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42dd04f4edf2d1e9b9b31b11ab96fcd97f9d21d6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892279"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966181"
 ---
 # <a name="integration-services-ssis-variables"></a>Variabili di Integration Services (SSIS)
   Nelle variabili vengono archiviati valori che possono essere usati in fase di esecuzione da un pacchetto di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e dai relativi contenitori, attività e gestori eventi. Anche gli script nell'attività Script e nel componente script possono utilizzare le variabili. I vincoli di precedenza che definiscono la sequenza delle attività e dei contenitori in un flusso di lavoro possono utilizzare variabili quando le definizioni di vincolo includono espressioni.  
@@ -82,11 +81,11 @@ ms.locfileid: "62892279"
 > [!NOTE]  
 >  L'unica opzione configurabile delle variabili di sistema è quella che determina se debba essere generato o meno un evento quando il valore viene modificato.  
   
- Descrizione  
+ Description  
  Specifica la descrizione della variabile.  
   
  EvaluateAsExpression  
- Quando la proprietà è impostata su `True`, l'espressione fornita viene utilizzata per impostare il valore della variabile.  
+ Quando la proprietà è impostata su `True` , l'espressione fornita viene utilizzata per impostare il valore della variabile.  
   
  Expression  
  Specifica l'espressione assegnata alla variabile.  
@@ -114,17 +113,17 @@ ms.locfileid: "62892279"
  IncludeInDebugDump  
  Indica se il valore della variabile viene incluso nei file di dump del debug.  
   
- Per le variabili definite dall'utente e le variabili di sistema, il valore **InclueInDebugDump** predefinito per l' `true`opzione InclueInDebugDump è.  
+ Per le variabili definite dall'utente e le variabili di sistema, il valore predefinito per l'opzione **InclueInDebugDump** è `true` .  
   
  Per le variabili definite dall'utente, tuttavia, il sistema Reimposta l'opzione **IncludeInDebugDump** su `false` quando vengono soddisfatte le condizioni seguenti:  
   
--   Se la proprietà della variabile **EvaluateAsExpression** è impostata `true`su, il sistema Reimposta l'opzione **IncludeInDebugDump** su `false`.  
+-   Se la proprietà della variabile **EvaluateAsExpression** è impostata su `true` , il sistema Reimposta l'opzione **IncludeInDebugDump** su `false` .  
   
-     Per includere il testo dell'espressione come valore della variabile nei file di dump del debug, impostare l'opzione **IncludeInDebugDump** su `true`.  
+     Per includere il testo dell'espressione come valore della variabile nei file di dump del debug, impostare l'opzione **IncludeInDebugDump** su `true` .  
   
--   Se il tipo di dati della variabile viene modificato in una stringa, il sistema Reimposta **IncludeInDebugDump** l'opzione IncludeInDebugDump `false`su.  
+-   Se il tipo di dati della variabile viene modificato in una stringa, il sistema Reimposta l'opzione **IncludeInDebugDump** su `false` .  
   
- Quando il sistema Reimposta l'opzione **IncludeInDebugDump** su, `false`è possibile che venga eseguito l'override del valore selezionato dall'utente.  
+ Quando il sistema Reimposta l'opzione **IncludeInDebugDump** su `false` , è possibile che venga eseguito l'override del valore selezionato dall'utente.  
   
  valore  
  Il valore di una variabile definita dall'utente può essere un valore letterale o un'espressione. Le variabili includono opzioni per l'impostazione del valore e del relativo tipo di dati. Queste due proprietà devono essere compatibili. Non è ad esempio possibile utilizzare un valore stringa insieme a un tipo di dati Integer.  

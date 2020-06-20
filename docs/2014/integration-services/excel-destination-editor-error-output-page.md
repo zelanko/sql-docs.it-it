@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 72ae01cc-1774-4a36-9674-a0f2b2bf8c42
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7eb1fa72d3ee607405a3ddc1dadafdac5d3e0088
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6076b28e932ac03d211ab6ba1a84fe6c832f72ee
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059202"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966851"
 ---
 # <a name="excel-destination-editor-error-output-page"></a>Editor destinazione Excel (pagina Output degli errori)
   Usare la pagina **Avanzate** della finestra di dialogo **Editor destinazione Excel** per specificare le opzioni per la gestione degli errori.  
@@ -50,7 +49,7 @@ ms.locfileid: "66059202"
  **Applica**  
  Consente di applicare l'opzione di gestione degli errori alle celle selezionate.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor destinazione Excel &#40;pagina Gestione connessione&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
  [Editor destinazione Excel &#40;pagina mapping&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   

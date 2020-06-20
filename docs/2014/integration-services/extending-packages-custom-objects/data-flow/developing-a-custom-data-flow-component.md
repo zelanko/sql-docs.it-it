@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 061daaa3b44c151a1f77b075bef66ef90570af98
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e1a6af8407813a2a712b0c43c0b06097477f00f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176349"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966516"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>Sviluppo di un componente del flusso di dati personalizzato
   L'attività Flusso di dati è costituita da componenti che si connettono a una varietà di origini dati, quindi trasformano e indirizzano i dati ad alta velocità. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre un modello a oggetti estendibile che consente agli sviluppatori di creare origini, trasformazioni e destinazioni personalizzate da usare in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] e nei pacchetti distribuiti. In questa sezione sono inclusi argomenti che in cui viene illustrato lo sviluppo di componenti del flusso di dati personalizzati.
@@ -37,7 +36,7 @@ ms.locfileid: "78176349"
 
  [Piano di esecuzione e allocazione di buffer](execution-plan-and-buffer-allocation.md) Descrive il piano di esecuzione del flusso di dati e l'allocazione dei buffer di dati.
 
- [Utilizzo di tipi di dati nel flusso di dati](working-with-data-types-in-the-data-flow.md) Viene illustrato come il flusso di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] dati esegue il mapping dei tipi di dati a .NET Framework tipi di dati gestiti.
+ [Utilizzo di tipi di dati nel flusso di dati](working-with-data-types-in-the-data-flow.md) Viene illustrato come il flusso di dati esegue il mapping dei [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] tipi di dati a .NET Framework tipi di dati gestiti.
 
  [Convalida di un componente flusso di dati](validating-a-data-flow-component.md) Vengono illustrati i metodi utilizzati per convalidare la configurazione del componente e per riconfigurare i metadati del componente.
 
@@ -62,14 +61,14 @@ ms.locfileid: "78176349"
 
  <xref:Microsoft.SqlServer.Dts.Pipeline.Design>Contiene le classi e le interfacce utilizzate per creare l'interfaccia utente per i componenti del flusso di dati.
 
- [Integration Services riferimento a errori e messaggi](../../integration-services-error-and-message-reference.md) Elenca i codici di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] errore predefiniti con i relativi nomi simbolici e le descrizioni.
+ [Integration Services riferimento a errori e messaggi](../../integration-services-error-and-message-reference.md) Elenca i [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] codici di errore predefiniti con i relativi nomi simbolici e le descrizioni.
 
 ## <a name="related-sections"></a>Sezioni correlate
 
 ### <a name="information-common-to-all-custom-objects"></a>Informazioni comuni per tutti gli oggetti personalizzati
  Per informazioni comuni a tutti i tipi di oggetti personalizzati che è possibile creare in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], vedere gli argomenti seguenti:
 
- [Sviluppo di oggetti personalizzati per Integration Services](../../extending-packages-custom-objects/developing-custom-objects-for-integration-services.md) Vengono descritti i passaggi di base per l'implementazione di tutti i [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]tipi di oggetti personalizzati per.
+ [Sviluppo di oggetti personalizzati per Integration Services](../../extending-packages-custom-objects/developing-custom-objects-for-integration-services.md) Vengono descritti i passaggi di base per l'implementazione di tutti i tipi di oggetti personalizzati per [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .
 
  [Salvataggio permanente di oggetti personalizzati](../../extending-packages-custom-objects/persisting-custom-objects.md) Viene descritta la persistenza personalizzata e viene spiegato quando è necessario.
 

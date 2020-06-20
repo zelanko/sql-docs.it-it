@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 683e52e5-1c7e-49ab-9ffe-6a450a1c5776
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 979c2b792d7c56dcdb9fadde112c7e6bff789c15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 503266d2b29a1482f89fc6647ed5519fdb9dfc7f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767625"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966161"
 ---
 # <a name="step-5-testing-the-updated-packages"></a>Passaggio 5: Test dei pacchetti aggiornati
   Prima di passare alla lezione successiva, nella quale si procederà alla creazione del pacchetto di distribuzione da utilizzare per installare i pacchetti dell'esercitazione nel computer di destinazione, è consigliabile testare i pacchetti. In questa attività verranno eseguiti i pacchetti DataTransfer.dtsx e LoadXMLData, precedentemente aggiunti al progetto Deployment Tutorial e opportunamente estesi mediante le configurazioni.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1322d668-44f4-469e-8fd6-e0d02a81c8f2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d5e85a3685804fa834c9a92887a46c72b7cb69a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8d40305de7375f2ae10d563871fd40b7acfa463f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811315"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935385"
 ---
 # <a name="default-trace-enabled-server-configuration-option"></a>Opzione di configurazione server default trace enabled
   L'opzione **Default Trace Enabled** consente di abilitare o disabilitare i file di log della traccia predefinita. Tramite la funzionalità di traccia predefinita è possibile ottenere un log completo e persistente delle attività e delle modifiche correlate principalmente alle opzioni di configurazione.  

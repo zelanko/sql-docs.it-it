@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f70cde85aca7b08003d27ee3bd2fc61cbc0a45f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc920b51652ef8c917d3e0bb52bd5b86d686c8c4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769127"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966631"
 ---
 # <a name="functions-ssis-expression"></a>Funzioni (espressione SSIS)
   Nel linguaggio delle espressioni è incluso un set di funzioni che è possibile utilizzare nelle espressioni. Un'espressione può contenere anche una sola funzione, ma in genere in un'espressione vengono utilizzate più funzioni, in combinazione con vari operatori.  

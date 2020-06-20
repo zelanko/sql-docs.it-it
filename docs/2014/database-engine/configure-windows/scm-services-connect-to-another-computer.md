@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4305438285ae5f3b51ab8ac51ec2b1d0699aee64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95de509e0c78c807c3c9de25b317eb2b540db93a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62810349"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935037"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>Connessione a un altro computer (Gestione configurazione SQL Server)
   In questo argomento viene illustrato come connettersi a un altro computer in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Attenersi alla prima procedura per aprire Gestione computer di Windows, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC), connettersi al computer ed espandere l'albero Servizi e applicazioni. Seguire la seconda procedura per creare un file con un collegamento a Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer remoto.  
@@ -37,7 +36,7 @@ ms.locfileid: "62810349"
   
 3.  Nella finestra di dialogo **Seleziona computer** digitare il nome del computer che si vuole gestire nella casella di testo **Altro computer** quindi fare clic su **OK**.  
   
-     Gestione computer visualizza i servizi in esecuzione nel computer remoto. Il nodo di primo livello diventa **Gestione computer** \<*computerremoto*>.  
+     Gestione computer visualizza i servizi in esecuzione nel computer remoto. Il nodo di primo livello diventa **Gestione computer** \<*remotecomputer*> .  
   
 4.  Nell'albero della console espandere **Servizi e applicazioni**e quindi espandere **Gestione configurazione SQL Server** per gestire i servizi del computer remoto.  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62810349"
   
 1.  Fare clic sul menu **Start** e scegliere **Esegui**.  
   
-2.  Nella casella **Apri** Digitare `mmc -a` per aprire la [!INCLUDE[msCoName](../../includes/msconame-md.md)] console di gestione in modalità autore.  
+2.  Nella casella **Apri** Digitare `mmc -a` per aprire la console di [!INCLUDE[msCoName](../../includes/msconame-md.md)] gestione in modalità autore.  
   
 3.  Scegliere **Aggiungi/Rimuovi snap-in** dal menu **File**.  
   
@@ -59,20 +58,20 @@ ms.locfileid: "62810349"
   
 8.  Nella finestra **Aggiungi/Rimuovi snap-in** fare clic su **OK**.  
   
-9. Espandere **Gestione computer (***\<nome computer>***)** e **Servizi e applicazioni**.  
+9. Espandere **Gestione computer ( ***\<computer name>*** )** e **Servizi e applicazioni**.  
   
 10. Fare clic con il pulsante destro del mouse su **Gestione configurazione SQL Server**e quindi scegliere **Nuova finestra da qui**.  
   
 11. Scegliere **Radice console** dal menu **Finestra** per tornare alla prima finestra ed eliminare la finestra aperta.  
   
-12. Scegliere **Salva**con nome dal menu `.msc` **file** e salvare il file nella cartella desiderata con un nome appropriato con l'estensione del file. Chiudere [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.  
+12. Scegliere **Salva**con nome dal menu **file** e salvare il file nella cartella desiderata con un nome appropriato con l' `.msc` estensione del file. Chiudere [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.  
   
 13. Per aprire Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer di destinazione, fare doppio clic sul file. È possibile salvare un collegamento al file sul desktop o nel menu **Start** .  
   
 > [!CAUTION]  
 >  Quando si utilizza Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer remoto, il nome del computer non è facilmente individuabile ed è possibile che venga arrestato o configurato il computer errato. Nella scheda **Servizio** selezionare la casella **Nome host** per verificare il nome del computer prima di modificare un servizio.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurazione di WMI per mostrare lo stato del server in Strumenti SQL Server](../../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)  
   
   

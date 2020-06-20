@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f652519efc4b77bd785cdded468fe114f6499200
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53e12d2be6cc4829fd9fc983ca5a24e2057da4e8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891549"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966141"
 ---
 # <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>Passaggio 6: Aggiunta e configurazione delle trasformazioni Ricerca
   Dopo aver configurato l'origine file flat per l'estrazione di dati dal file di origine si definiranno le trasformazioni Ricerca necessarie per ottenere i valori di **CurrencyKey** e **DateKey**. Una trasformazione Ricerca esegue una ricerca tramite l'unione in join dei dati della colonna di input specificata con una colonna di un set di dati di riferimento. Il set di dati di riferimento può essere una vista o tabella esistente, una nuova tabella o il risultato di un'istruzione SQL. In questa esercitazione, la trasformazione Ricerca utilizza una gestione connessione OLE DB per connettersi al database che contiene i dati che costituiscono l'origine del set di dati di riferimento.  
@@ -94,7 +93,7 @@ ms.locfileid: "62891549"
   
 9. Fare clic con il pulsante destro del mouse sulla trasformazione Lookup Currency Key e scegliere **Proprietà**.  
   
-10. `LocaleID` Nella finestra Proprietà verificare che la proprietà sia impostata su **inglese (Stati Uniti)** e che la proprietà **DefaultCodePage** sia impostata su **1252**.  
+10. Nella Finestra Proprietà verificare che la `LocaleID` proprietà sia impostata su **inglese (Stati Uniti)** e che la proprietà **DefaultCodePage** sia impostata su **1252**.  
   
 ### <a name="to-add-and-configure-the--lookup-datekey-transformation"></a>Per aggiungere e configurare la trasformazione Lookup DateKey  
   
@@ -128,12 +127,12 @@ ms.locfileid: "62891549"
   
 11. Fare clic con il pulsante destro del mouse sulla trasformazione Lookup Date Key e scegliere **Proprietà.**  
   
-12. `LocaleID` Nella finestra Proprietà verificare che la proprietà sia impostata su **inglese (Stati Uniti)** e che la proprietà **DefaultCodePage** sia impostata su **1252**.  
+12. Nella Finestra Proprietà verificare che la `LocaleID` proprietà sia impostata su **inglese (Stati Uniti)** e che la proprietà **DefaultCodePage** sia impostata su **1252**.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Passaggio 7: Aggiunta e configurazione della destinazione OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Trasformazione Ricerca](data-flow/transformations/lookup-transformation.md)  
   
   

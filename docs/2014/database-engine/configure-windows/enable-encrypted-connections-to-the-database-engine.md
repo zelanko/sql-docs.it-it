@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a872057f354b289d65a6a3a730e3a63afd7af0d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e6e45b1f49c348e6cce329fb918479e92edbe9ae
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62782315"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935339"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine-sql-server-configuration-manager"></a>Abilitazione di connessioni crittografate al Motore di database (Gestione configurazione SQL Server)
   In questo argomento viene descritto come abilitare connessioni crittografate per un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] specificando un certificato per il [!INCLUDE[ssDE](../../includes/ssde-md.md)] tramite Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È necessario che sia disponibile un certificato per il computer server e che il computer client sia impostato per considerare attendibile l'autorità radice del certificato. Il processo di provisioning consiste nell'installazione di un certificato tramite l'importazione in Windows.  
@@ -37,7 +36,7 @@ ms.locfileid: "62782315"
  Il client deve essere in grado di verificare la proprietà del certificato utilizzato dal server. Se il client dispone del certificato chiave pubblica dell'autorità di certificazione che ha firmato il certificato del server, non sono necessarie ulteriori operazioni di configurazione. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sono inclusi i certificati chiave pubblica di numerose autorità di certificazione. Se il certificato del server è stato firmato da un'autorità di certificazione pubblica o privata per la quale il client non dispone del certificato chiave pubblica, è necessario installare il certificato chiave pubblica dell'autorità di certificazione che ha firmato il certificato del server.  
   
 > [!NOTE]  
->  Per utilizzare la crittografia in un cluster di failover, è necessario installare il certificato server con il nome DNS completo del server virtuale in tutti i nodi del cluster di failover. Ad esempio, se si dispone di un cluster a due nodi, con nodi denominati test1. la società>. com e test2. * \< * l'azienda>. com e si dispone di un server virtuale denominato Virtsql, è necessario installare un certificato per virtsql. * \< * l'azienda>. com in entrambi i nodi. * \< * È possibile impostare il valore dell'opzione **ForceEncryption**su **Sì**.  
+>  Per utilizzare la crittografia in un cluster di failover, è necessario installare il certificato server con il nome DNS completo del server virtuale in tutti i nodi del cluster di failover. Ad esempio, se si dispone di un cluster a due nodi, con nodi denominati test1. *\<your company>* . com e test2. *\<your company>* . com e si dispone di un server virtuale denominato Virtsql, è necessario installare un certificato per *\<your company>* virtsql. com in entrambi i nodi. È possibile impostare il valore dell'opzione **ForceEncryption**su **Sì**.  
   
  **Contenuto dell'articolo**  
   
@@ -83,9 +82,9 @@ ms.locfileid: "62782315"
   
 ###  <a name="to-configure-the-server-to-accept-encrypted-connections"></a><a name="ConfigureServerConnections"></a> Per configurare il server in modo che accetti connessioni crittografate  
   
-1.  In **Gestione configurazione SQL Server** espandere **Configurazione di rete SQL Server**, fare clic con il pulsante destro del mouse su **Protocolli per** _\<istanza server>_ e quindi scegliere **Proprietà**.  
+1.  In **Gestione configurazione SQL Server**espandere **SQL Server configurazione di rete**, fare clic con il pulsante destro del mouse su **protocolli per** _\<server instance>_ e quindi scegliere**Proprietà**.  
   
-2.  Nella finestra di dialogo **protocolli per**_\<nome istanza>_ **Proprietà** , nella scheda **certificato** , selezionare il certificato desiderato dall'elenco a discesa per la casella **certificato** , quindi fare clic su **OK**.  
+2.  Nella finestra di dialogo **protocolli per** _\<instance name>_ **proprietà** , nella scheda **certificato** , selezionare il certificato desiderato dall'elenco a discesa per la casella **certificato** , quindi fare clic su **OK**.  
   
 3.  Nella casella **ForceEncryption** della scheda **Flag** selezionare **Sì**e quindi fare clic su **OK** per chiudere la finestra di dialogo.  
   

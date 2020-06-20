@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: daf80492cd6a0d8040d1497e71600c798e7ef96c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fe387c43431436ba5fba5bcab879584ecdad533
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62524094"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002507"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Esercitazione: Firma di stored procedure tramite un certificato
   In questa esercitazione viene illustrata la firma di stored procedure tramite un certificato generato da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -288,7 +287,7 @@ DROP CERTIFICATE TestCreditRatingCer;
 GO  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Centro sicurezza per il motore di Database di SQL Server e il Database SQL di Azure](security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

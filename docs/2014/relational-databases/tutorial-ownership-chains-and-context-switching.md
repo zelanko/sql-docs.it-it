@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 37b267c22458442e3c1c1572c2740b6595918fca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1e9072a68dd3179e5900fda06d4fea58b484a37e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487730"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002601"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
   In questa esercitazione viene utilizzato uno scenario per illustrare i concetti sulla sicurezza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] relativi a catene di proprietà e cambio di contesto utente.  
@@ -95,7 +94,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
- Per altre informazioni sull'istruzione GRANT, vedere [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql). Per altre informazioni sulle stored procedure, vedere [Stored procedure &#40;Motore di database&#41;](stored-procedures/stored-procedures-database-engine.md). Per un poster di tutte [!INCLUDE[ssDE](../includes/ssde-md.md)] le autorizzazioni, [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)vedere.  
+ Per altre informazioni sull'istruzione GRANT, vedere [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql). Per altre informazioni sulle stored procedure, vedere [Stored procedure &#40;Motore di database&#41;](stored-procedures/stored-procedures-database-engine.md). Per un poster di tutte le [!INCLUDE[ssDE](../includes/ssde-md.md)] autorizzazioni, vedere [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf) .  
   
 ## <a name="2-create-a-stored-procedure-to-access-data"></a>2. Creazione di una stored procedure per l'accesso ai dati  
  Per cambiare contesto all'interno di un database, utilizzare l'istruzione EXECUTE AS. EXECUTE AS richiede autorizzazioni IMPERSONATE.  

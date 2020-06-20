@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6596b20-3aa5-4dc4-a4c5-3649f1f5a20e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2057c78f953645c9b1a5915b9912ab99263cb005
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00662ef396ff114e4b77d70aa2f60863e8f94bd3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773397"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927844"
 ---
 # <a name="undo-checkouts"></a>Annullare estrazioni
   È possibile utilizzare il comando **Annulla estrazione** per annullare un'estrazione esistente. che risulta particolarmente utile quando è necessario eseguire il rollback delle modifiche dopo avere modificato e salvato un file.  
@@ -57,7 +56,7 @@ ms.locfileid: "62773397"
      **Annulla estrazione**  
      Consente di annullare l'estrazione, eliminando le eventuali modifiche apportate al file estratto.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Estrai file](../../2014/database-engine/check-out-files.md)   
  [Gestione delle estrazioni](../../2014/database-engine/manage-checkouts.md)  
   

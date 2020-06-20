@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d27000c8-8d91-4e1c-b45e-bca9a3c12f6d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d84f7fe551d83f609b2ffc3da92b51eb36b9a595
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43921efab592e6642fcc5adaef8caa869a1b524f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058972"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966751"
 ---
 # <a name="execute-sql-task-editor-result-set-page"></a>Editor attività Esegui SQL (pagina Set dei risultati)
   La pagina **Set dei risultati** della finestra di dialogo **Editor attività Esegui SQL** consente di eseguire il mapping dei risultati dell'istruzione SQL a variabili nuove o esistenti. Le opzioni disponibili in questa finestra di dialogo sono disabilitate se **ResultSet** è impostato su **None**nella pagina Generale.  
@@ -37,7 +36,7 @@ ms.locfileid: "66058972"
  **Argomenti correlati**: [Set di risultati nell'attività Esegui SQL](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)  
   
  **Nome variabile**  
- Eseguire il mapping del set di risultati a una variabile selezionando una variabile o facendo clic su \<**Nuova variabile**> per aggiungere una nuova variabile usando la finestra di dialogo **Aggiungi variabile**.  
+ Eseguire il mapping del set di risultati a una variabile selezionando una variabile o facendo clic \<**New variable...**> per aggiungere una nuova variabile tramite la finestra di dialogo **Aggiungi variabile** .  
   
  **Aggiungere**  
  Fare clic su questo pulsante per aggiungere un mapping del set di risultati.  
@@ -45,7 +44,7 @@ ms.locfileid: "66058972"
  **Rimuovi**  
  Selezionare un mapping del set di risultati e quindi fare clic su **Rimuovi**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività Esegui SQL &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor attività Esegui SQL &#40;pagina Mapping parametri&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b659a5c2-5509-4b5b-9c82-136c971d5c7f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0d5e37211471285e971ba29bc3419e759b0c7af7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2460e3a86c83dbd6b206bf173ac2c2691ecee685
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059006"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966731"
 ---
 # <a name="export-column-transformation-editor-columns-page"></a>Editor trasformazione Esportazione colonna (pagina Colonne)
   Utilizzare la pagina **Colonne** della finestra di dialogo **Editor trasformazione Esportazione colonna** per specificare le colonne nel flusso di dati da estrarre in file. È possibile indicare se la trasformazione Esporta colonna deve accodare i dati a un file oppure sovrascrivere un file esistente.  
@@ -42,7 +41,7 @@ ms.locfileid: "66059006"
  **Scrivi indicatore ordine byte**  
  Consente di specificare se scrivere un indicatore ordine byte (BOM) nel file. L'indicatore dell'ordine byte viene scritto solo se i dati hanno tipo di dati `DT_NTEXT` o DT_WSTR e non sono accodati a un file di dati esistente.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor trasformazione Esportazione colonna &#40;pagina Output degli errori&#41;](../../2014/integration-services/export-column-transformation-editor-error-output-page.md)  
   

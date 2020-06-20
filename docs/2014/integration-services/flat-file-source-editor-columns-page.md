@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b5af5f65-c087-44fd-b5ae-d0441245fef2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f8fda95b51f568098b0ac9fc13b8a204adb71c51
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f882aae9062d97914c86644a7be0ea126ed9dd8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058604"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966441"
 ---
 # <a name="flat-file-source-editor-columns-page"></a>Editor origine file flat (pagina Colonne)
   Usare il nodo **Colonne** della finestra di dialogo **Editor origine file flat** per eseguire il mapping tra una colonna di output e ogni colonna esterna (di origine).  
@@ -39,10 +38,10 @@ ms.locfileid: "66058604"
  **Colonna di output**  
  Consente di specificare un nome univoco per ogni colonna di output. Per impostazione predefinita viene suggerito il nome della colonna esterna (di origine) selezionata. È comunque possibile scegliere qualsiasi nome descrittivo univoco. Il nome specificato verrà visualizzato in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor origine file flat &#40;pagina Gestione connessione&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
  [Editor origine file flat &#40;pagina output degli errori&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
- [Flat File Connection Manager](connection-manager/file-connection-manager.md)  
+ [Gestione connessione file flat](connection-manager/file-connection-manager.md)  
   
   

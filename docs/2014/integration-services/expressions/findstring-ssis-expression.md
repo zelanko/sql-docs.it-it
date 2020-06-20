@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7efc711e97abde1d33a7dd4194bd2953b959ef6a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f1eec7ede1b4f48b53619280b4b618ff9b623df
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769177"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966651"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING (espressione SSIS)
   Viene restituita la posizione dell'occorrenza specificata di una determinata stringa in un'espressione di caratteri. Il risultato restituito è l'indice in base 1 dell'occorrenza. Il parametro stringa deve restituire un'espressione di caratteri, mentre il parametro che indica l'occorrenza deve restituire un valore integer. Se la stringa non viene trovata, verrà restituito il valore 0. Se il numero delle occorrenze della stringa è inferiore a quello specificato dall'argomento occurrence, verrà restituito il valore 0.  

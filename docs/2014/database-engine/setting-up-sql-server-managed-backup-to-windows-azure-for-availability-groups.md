@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cc7b94b52a51fdae8d205dd177bc3d4bac6f721d
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: cb46be347590d3fb61d05476616e6c0a52e1ed41
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849530"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929092"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>Configurazione del backup gestito di SQL Server in Azure per i gruppi di disponibilità
   In questo argomento viene fornita un'esercitazione sulla configurazione del [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per i database che partecipano ai gruppi di disponibilità AlwaysOn.  
@@ -29,7 +28,7 @@ ms.locfileid: "82849530"
 -   Larghezza di banda di rete: si applica alle implementazioni in cui le repliche si trovano in posizioni fisiche diverse, ad esempio in un cloud ibrido o in aree diverse di Azure in una configurazione solo cloud. La larghezza di banda di rete può influire sulla latenza delle repliche secondarie e l'eventuale impostazione di queste ultime sulla replica sincrona può determinare un aumento delle dimensioni del log nella replica primaria. Se le repliche secondarie sono impostate sulla replica sincrona, potrebbero non rimanere sincronizzate a causa della latenza di rete che può comportare la perdita di dati in caso di failover sulla replica secondaria.  
   
 ### <a name="configuring-ss_smartbackup-for-availability-databases"></a>Configurazione del [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per i database di disponibilità  
- **Autorizzazioni**  
+ **Autorizzazioni:**  
   
 -   È richiesta l'appartenenza al ruolo **db_backupoperator** database, con autorizzazioni **ALTER ANY CREDENTIAL** e `EXECUTE` autorizzazioni per **sp_delete_backuphistory**stored procedure.  
   

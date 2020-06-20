@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 223a8a300a4f3000512f8d75dfb7595cb52abc08
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb2a248ea8fa0205f1db11df0589ab2b3da0ab9b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067831"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940182"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>Progettazione di modelli tabulari (SSAS tabulare)
-  Progettazione modelli tabulari fa parte di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], integrato con Microsoft [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 o versioni successive, con modelli di tipi di progetto aggiuntivi specifici per lo sviluppo di soluzioni di modelli tabulari professionali.  
+  Progettazione modelli tabulari fa parte di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , integrato con Microsoft [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 o versioni successive, con modelli di tipi di progetto aggiuntivi specifici per lo sviluppo di soluzioni di modelli tabulari professionali.  
   
  Sezioni dell'argomento:  
   
@@ -30,9 +29,9 @@ ms.locfileid: "66067831"
   
 -   [Finestre e menu](#bkmk_wind_men)  
   
--   [Visual Studio Integration](#bkmk_vsint)  
+-   [Integrazione di Visual Studio](#bkmk_vsint)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>Vantaggi  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> Vantaggi  
  Quando si installa [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], i nuovi modelli di progetto per la creazione di modelli tabulari vengono aggiunti ai tipi di progetto disponibili. Dopo aver creato un nuovo progetto di modello tabulare utilizzando uno dei modelli, è possibile iniziare la creazione di modelli utilizzando gli appositi strumenti e procedure guidate.  
   
  Oltre ai nuovi modelli e strumenti per la creazione di soluzioni di modelli multidimensionali e tabulari professionali, nell'ambiente di [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sono disponibili funzionalità di debug e ciclo di vita di progetti che assicurano la creazione delle soluzioni BI più efficienti per l'organizzazione. Per ulteriori informazioni su [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], vedere la pagina relativa all' [introduzione a Visual Studio](https://go.microsoft.com/fwlink/?LinkId=206389).  
@@ -58,10 +57,10 @@ ms.locfileid: "66067831"
 ### <a name="designer-window"></a>Finestra di progettazione  
  La finestra di progettazione viene utilizzata per creare modelli tabulari fornendo una rappresentazione visiva del modello. Quando si apre il file Model.bim, il modello viene visualizzato nella finestra di progettazione. È possibile creare un modello nella finestra di progettazione utilizzando due modalità di visualizzazione diverse:  
   
- **Visualizzazione dati**  
+ **Vista dati**  
  Nella Vista dati sono visualizzate le tabelle in formato griglia tabulare. Le misure possono essere definite anche utilizzando la relativa griglia che può essere visualizzata per ogni tabella solo nella Vista dati.  
   
- **Vista diagramma**  
+ **Vista Diagramma**  
  Nella Vista diagramma sono visualizzate le tabelle, con le relative relazioni, in formato grafico. È possibile filtrare colonne, misure, gerarchie e indicatori KPI, nonché scegliere di visualizzare il modello utilizzando una prospettiva definita.  
   
  La maggior parte delle attività di creazione dei modelli può essere effettuata con entrambe le viste.  
@@ -118,13 +117,13 @@ ms.locfileid: "66067831"
  **Controllo del codice sorgente**  
  I progetti di Analysis Services sono integrati con il plug-in del controllo del codice sorgente selezionato. Se Visual Studio è stato configurato in modo che venga utilizzato il controllo del codice sorgente, è possibile utilizzare l'archiviazione in Esplora Soluzioni o l'estrazione. Per configurare l'utilizzo di Team Foundation Server, vedere [Configurare Visual Studio con Team Foundation Version Control](https://msdn.microsoft.com/library/ms253064.aspx). Sono supportati anche molti plug-in del controllo del codice sorgente di terze parti.  
   
- **Tipi di carattere**  
+ **Fonts**  
  Nei modelli tabulari viene usato il tipo di carattere ambiente di [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] per controllare i tipi di carattere nella visualizzazione. Può essere necessario modificare questo tipo di carattere se quello predefinito di [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] non dispone di tutti i caratteri Unicode necessari per la lingua in uso. Per modificare i tipi di carattere, fare clic sul menu **Strumenti** , quindi su **Opzioni**e infine su **Tipi di carattere e colori**.  
   
  **Tasti di scelta rapida**  
  I tasti di scelta rapida di Analysis Services possono essere configurati o mappati di nuovo tramite Strumenti->Opzioni ->finestra di dialogo Tastiera. Alcuni tasti di scelta rapida [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] globali, ad esempio quelli di compilazione, salvataggio, debug, nuovo progetto e così via, sono supportati nel contesto di progettazione di modelli tabulari. Altri collegamenti specifici della progettazione di modelli tabulari sono disponibili nel contesto di Analysis Services.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Progetti di modello tabulare &#40;SSAS tabulare&#41;](tabular-models/tabular-model-projects-ssas-tabular.md)   
  [Proprietà &#40;SSAS tabulare&#41;](tabular-models/properties-ssas-tabular.md)  
   

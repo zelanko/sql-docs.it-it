@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: b2c6ca00-46f0-4f86-b067-07bae779c147
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ab6d134177c7861c3a8f92cf767c71c0b56e233
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62843735"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929142"
 ---
 # <a name="set-source-control-options"></a>Impostare le opzioni di controllo del codice sorgente
   Per utilizzare le caratteristiche di controllo del codice sorgente incorporate in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], è necessario configurare le relative opzioni per i diversi ambienti di lavoro.  
   
  Per configurare le opzioni di controllo del codice sorgente, utilizzare la finestra di dialogo **Opzioni** per configurare uno o più ruoli del controllo del codice sorgente. Un ruolo è una descrizione generale dell'impostazione utilizzata per [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e delle opzioni di controllo del codice sorgente associate a questa impostazione.  
   
- Ad esempio, uno sviluppatore di database indipendente generalmente non crea conflitti con altri utenti mantenendo file estratti dopo averli archiviati. Di conseguenza, in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] viene definito un ruolo Sviluppatore Indipendente. Per questo ruolo, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] seleziona automaticamente l'opzione **Mantieni gli elementi estratti durante l'archiviazione** .  
+ Ad esempio, uno sviluppatore di database indipendente generalmente non crea conflitti con altri utenti mantenendo file estratti dopo averli archiviati. Di conseguenza, in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] viene definito un ruolo Sviluppatore Indipendente. Per questo ruolo, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Seleziona automaticamente l'opzione **Mantieni gli elementi estratti durante l'archiviazione** .  
   
  Poiché i ruoli possono essere definiti e personalizzati, è possibile lavorare con impostazioni di sviluppo diverse senza riconfigurare completamente il controllo del codice sorgente ogni volta che si passa da un'impostazione all'altra.  
   
@@ -86,7 +85,7 @@ ms.locfileid: "62843735"
      Consente di specificare che si desidera lasciare estratti gli elementi durante l'archiviazione per aggiornare l'archivio del controllo del codice sorgente. Se si desidera modificare questa opzione per un'archiviazione specifica, fare clic sulla freccia **Opzioni** nella finestra di dialogo **Archivia** , quindi deselezionare la casella di controllo **Mantieni estratto** .  
   
      **Comportamento degli elementi archiviati**  
-     Visualizza un elenco di opzioni che specificano [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] come si comporterà quando si tenta di modificare un elemento non estratto. Le tabelle seguenti descrivono le opzioni disponibili.  
+     Visualizza un elenco di opzioni che specificano come [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] si comporterà quando si tenta di modificare un elemento non estratto. Le tabelle seguenti descrivono le opzioni disponibili.  
   
      **Risparmio**  
   
@@ -96,7 +95,7 @@ ms.locfileid: "62843735"
     |**Estrai automaticamente**|Estrae l'elemento senza visualizzare la finestra di dialogo **Estrai** . Questa è l'opzione predefinita.|  
     |**Salva con nome**|Salva come nuovo file.|  
   
-     **Modifica**  
+     **In fase di modifica**  
   
     |Azione|Descrizione|  
     |------------|-----------------|  
@@ -111,7 +110,7 @@ ms.locfileid: "62843735"
      **Reimposta**  
      Reimposta le impostazioni predefinite delle finestre di dialogo di conferma del controllo del codice sorgente. Ad esempio, se è stata selezionata la casella di controllo **non visualizzare più questa finestra** di dialogo in una finestra di dialogo del controllo del codice sorgente, se si seleziona l'opzione **Reimposta** l'azione verrà annullata.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Nozioni fondamentali sul controllo del codice sorgente](../../2014/database-engine/source-control-basics.md)   
  [Modificare le connessioni del controllo del codice sorgente](../../2014/database-engine/change-source-control-connections.md)   
  [Esclusione di file dal controllo del codice sorgente](../../2014/database-engine/exclude-files-from-source-control.md)  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 112fca2a-37e5-4162-b2e7-b56eb8ab0c6f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9f5b5c233a482672a0cc225364dbf1e4f3b4b645
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48f9202483bcb2cf8e06b6e0d14834753cc666b8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63185401"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000392"
 ---
 # <a name="database-element-for-workload-dta"></a>Elemento Database per Workload (DTA)
   Specifica il database in cui è contenuta la tabella di traccia del carico di lavoro.  
@@ -53,7 +52,7 @@ ms.locfileid: "63185401"
  Questo elemento appartiene al nome **DatabaseDetailsTypecomplexType** nell'XML Schema di Ottimizzazione guidata motore di database. Questo elemento `Database` non deve essere confuso con quello il cui padre radice è l'elemento `Configuration`. Vedere [Elemento Database per Configuration &#40;DTA&#41;](database-element-for-configuration-dta.md).  
   
 ## <a name="example"></a>Esempio  
- Per un esempio di utilizzo di `Database` questo elemento, vedere l'esempio di codice in [elemento Workload &#40;DTA&#41;](workload-element-dta.md).  
+ Per un esempio di utilizzo di questo `Database` elemento, vedere l'esempio di codice in [elemento workload &#40;DTA&#41;](workload-element-dta.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai file di input XML&#40; (Ottimizzazione guidata motore di database)&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  

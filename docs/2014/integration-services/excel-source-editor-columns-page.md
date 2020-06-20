@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 50024686-a18d-4824-b20e-c84123f89d0b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dba56ee39e710adc3973a00a0d84b1823ee74f1b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3534ab746fd11786d02651f795d854b1a1466333
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059206"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966861"
 ---
 # <a name="excel-source-editor-columns-page"></a>Editor origine Excel (pagina Colonne)
   Usare la pagina **Colonne** della finestra di dialogo **Editor origine Excel** per eseguire il mapping tra una colonna di output e ogni colonna (di origine) esterna.  
@@ -36,7 +35,7 @@ ms.locfileid: "66059206"
  **Colonna di output**  
  Consente di specificare un nome univoco per ogni colonna di output. Per impostazione predefinita viene suggerito il nome della colonna esterna (di origine) selezionata. È comunque possibile scegliere qualsiasi nome descrittivo univoco. Il nome specificato verrà visualizzato in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor origine Excel &#40;pagina Gestione connessione&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
  [Editor origine Excel &#40;pagina output degli errori&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
