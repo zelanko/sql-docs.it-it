@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69ed33b3967b3c807b21df0ab8a3a4a1cd07bebc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900242"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939492"
 ---
 # <a name="lookup-transformation"></a>Trasformazione Ricerca
   La trasformazione Ricerca consente di eseguire ricerche unendo in join i dati contenuti nelle colonne di input con le colonne in un set di dati di riferimento. È possibile utilizzare la ricerca per accedere a informazioni aggiuntive in una tabella correlata basata sui valori presenti nelle colonne comuni.  
@@ -74,7 +73,7 @@ ms.locfileid: "62900242"
 -   Output nessuna corrispondenza. L'output senza corrispondenza gestisce le righe nell'input che non corrispondono ad almeno una voce nel set di dati di riferimento. Se si configura la trasformazione Ricerca in modo da gestire le righe senza corrispondenza come errori, le righe vengono reindirizzate all'output degli errori. In caso contrario, la trasformazione reindirizza tali righe all'output senza corrispondenza.  
   
     > [!NOTE]  
-    >  In [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)], la trasformazione Ricerca disponeva solo di un output. Per ulteriori informazioni su come eseguire una trasformazione Ricerca creata in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], vedere [upgrade Lookup Transformations](../../../sql-server/install/upgrade-lookup-transformations.md).  
+    >  In [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)], la trasformazione Ricerca disponeva solo di un output. Per ulteriori informazioni su come eseguire una trasformazione Ricerca creata in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , vedere [upgrade Lookup Transformations](../../../sql-server/install/upgrade-lookup-transformations.md).  
   
 -   Output degli errori.  
   
@@ -139,7 +138,7 @@ ms.locfileid: "62900242"
   
      Per informazioni sull'installazione di esempi del prodotto e database di esempio di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , vedere [Esempi del prodotto SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=267527).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Trasformazione Ricerca fuzzy](fuzzy-lookup-transformation.md)   
  [Trasformazione Ricerca termini](term-lookup-transformation.md)   
  [Flusso di dati](../data-flow.md)   

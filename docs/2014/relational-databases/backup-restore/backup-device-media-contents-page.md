@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5fc7bd22-b6d8-4af1-8a58-2e7d0b994d08
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 524e6d8e5ec987a20d693cb1f7e06b30bc27c0b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58665371fc8315452d674cf72bb9609cf1612c36
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876693"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959338"
 ---
 # <a name="backup-device-media-contents-page"></a>Dispositivo di backup (pagina Contenuto supporti)
   Utilizzare la finestra di dialogo **Dispositivo di backup** per visualizzare le informazioni di backup. Vengono riportate informazioni sul dispositivo, sui supporti, sul set di supporti e sul set o i set di backup.  
@@ -58,8 +57,8 @@ ms.locfileid: "62876693"
 |Intestazione|Valori|  
 |------------|------------|  
 |**Nome**|Nome del set di backup.|  
-|**Tipo**|Oggetto di cui viene eseguito il backup: database, file o *\<vuoto>* , nel caso dei log delle transazioni.|  
-|**Componente**|Tipo di backup eseguito, ovvero Completo, Differenziale o Log delle transazioni.|  
+|**Tipo**|Oggetto di cui è stato eseguito il backup: database, file o *\<blank>* (per i log delle transazioni).|  
+|**Componente**|Tipo di operazione di backup eseguita: Completo, Differenziale o Log delle transazioni.|  
 |**Server**|Nome dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che ha eseguito l'operazione di backup.|  
 |**Database**|Nome del database di cui è stato eseguito il backup.|  
 |**Posizione**|Posizione del set di backup nel volume.|  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 842d075f-8b7a-457c-a1a1-a7acbe10e9b7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b722be21d3b2e2eb10fbd3cc351553df927dbef9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c2da86e24a7582c67daf746180cec2c715ba5be
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061749"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925880"
 ---
 # <a name="ado-net-destination-editor-mappings-page"></a>Editor destinazione ADO NET (pagina Mapping)
   Utilizzare la pagina **Mapping** della finestra di dialogo **Editor destinazione ADO NET** per eseguire il mapping tra colonne di input e colonne di destinazione.  
@@ -40,12 +39,12 @@ ms.locfileid: "66061749"
  Consente di visualizzare l'elenco delle colonne di destinazione disponibili. Eseguire un'operazione di trascinamento della selezione per impostare il mapping tra le colonne di destinazione disponibili nella tabella e le colonne di input.  
   
  **Colonna di input**  
- Consente di visualizzare le colonne di input selezionate dall'utente. È possibile rimuovere i mapping selezionando ** \<ignora>** per escludere le colonne dall'output.  
+ Consente di visualizzare le colonne di input selezionate dall'utente. È possibile rimuovere i mapping selezionando **\<ignore>** per escludere le colonne dall'output.  
   
  **Colonna di destinazione**  
  Consente di visualizzare ogni colonna di destinazione disponibile, indipendentemente dal fatto che sia mappata o meno.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Editor destinazione ADO NET &#40;pagina Gestione connessione&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
  [Editor destinazione ADO NET &#40;pagina Output degli errori&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)  
   

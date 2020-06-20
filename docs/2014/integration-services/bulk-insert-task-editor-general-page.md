@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b6eb576f-7a56-4fa0-a97c-5f7ab9d0f44d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b67b5eaf0d6927a0ed009498fd1b81c3aabd3354
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4349e520e248c581ba588bf58781bf037a97781
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061136"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924602"
 ---
 # <a name="bulk-insert-task-editor-general-page"></a>Editor attività Inserimento bulk (pagina Generale)
   Utilizzare la pagina **Generale** della finestra di dialogo **Editor attività Inserimento bulk** per assegnare un nome e una descrizione all'attività Inserimento bulk.  
@@ -36,7 +35,7 @@ ms.locfileid: "66061136"
  **Descrizione**  
  Consente di digitare una descrizione dell'attività Inserimento bulk.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività Inserimento bulk &#40;pagina connessione&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
  [Editor attività Inserimento bulk &#40;pagina Opzioni&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 318f4404467814c95e778d19aa793107a3ad0945
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24e264ad0f30a8cf3ec454405f5d40a301ce2f49
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176173"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967231"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Scrittura di codice e debug dell'attività Script
   Dopo avere configurato l'attività Script in **Editor attività Script**, scrivere il codice personalizzato nell'ambiente di sviluppo corrispondente.
@@ -49,7 +48,7 @@ ms.locfileid: "78176173"
 ### <a name="project-items-and-classes-in-the-script-task-project"></a>Elementi e classi del progetto dell'attività Script
  Per impostazione predefinita, il progetto dell'attività Script visualizzato nella finestra Esplora progetti in VSTA contiene un singolo elemento, `ScriptMain`. L'elemento `ScriptMain` contiene a sua volta una singola classe, anch'essa denominata `ScriptMain`. Gli elementi di codice nella classe variano a seconda del linguaggio di programmazione selezionato per l'attività Script:
 
--   Quando l'attività script è configurata [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] per il linguaggio di `ScriptMain` programmazione, la classe include una subroutine `Main`Public,. La subroutine `ScriptMain.Main` è il metodo chiamato dal runtime quando si esegue l'attività Script.
+-   Quando l'attività script è configurata per il [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] linguaggio di programmazione, la `ScriptMain` classe include una subroutine Public, `Main` . La subroutine `ScriptMain.Main` è il metodo chiamato dal runtime quando si esegue l'attività Script.
 
      Per impostazione predefinita, nella subroutine `Main` di un nuovo script è presente solo il codice costituito dalla riga `Dts.TaskResult = ScriptResults.Success`. Questa riga indica al runtime che l'operazione dell'attività è riuscita. La `Dts.TaskResult` proprietà viene descritta in [restituzione di risultati dall'attività script](../../extending-packages-scripting/task/returning-results-from-the-script-task.md).
 

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 72daf008-f9ea-4077-b217-5048e7759d3e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 135207a16ef49fca4820e0d7872d9c3542628d8b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18c4c93464d7144c8edce9c38464c2f750d7068e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63062159"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056586"
 ---
 # <a name="alert-properties-new-alert-response-page"></a>Proprietà avviso-nuovo avviso (pagina risposta)
   Utilizzare questa pagina per specificare un processo che si desidera eseguire e per ottenere un elenco di operatori da notificare in risposta a un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avviso di Agent.  
@@ -53,7 +52,7 @@ ms.locfileid: "63062159"
  **Visualizza operatore**  
  Visualizza la finestra di dialogo **Proprietà** per l'operatore attualmente selezionato. È possibile visualizzare e modificare le proprietà dell'operatore nella finestra di dialogo **Proprietà operatore**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Avvisi](alerts.md)   
  [Creare un avviso utilizzando il livello di gravità](create-an-alert-using-severity-level.md)   
  [Avvisi](alerts.md)   

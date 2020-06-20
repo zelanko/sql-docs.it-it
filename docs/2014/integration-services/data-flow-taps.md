@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d847adf-4b3d-4949-a195-ef43de275077
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a1938f2389f64d7a869ae924690b8b22fa209f82
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 212688d5dddaa84b1b7c6aee3fe4ebbb6415e8a9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059910"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916865"
 ---
 # <a name="data-flow-taps"></a>Scelte del flusso di dati
   In [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] è stata introdotta una nuova funzionalità con cui è possibile aggiungere una scelta dei dati in un percorso del flusso di dati di un pacchetto in fase di esecuzione e indirizzare l'output della scelta dei dati a un file esterno. Per utilizzare questa funzionalità, è necessario distribuire il progetto SSIS utilizzando il modello di distribuzione del progetto in un server SSIS. Al termine della distribuzione del pacchetto nel server, è necessario eseguire script T-SQL nel database SSISDB per aggiungere le scelte dei dati prima dell'esecuzione del pacchetto. Di seguito è riportato uno scenario di esempio:  
@@ -51,7 +50,7 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
   
  Il parametro dataflow_path_id_string della stored procedure add_data_tap corrisponde alla proprietà IdentificationString del percorso del flusso di dati a cui si desidera aggiungere una scelta dei dati. Per ottenere dataflow_path_id_string, fare clic sul percorso del flusso di dati (la freccia tra le attività nel flusso di dati) e prendere nota del valore della proprietà **IdentificationString** nella finestra Proprietà.  
   
- Quando si esegue lo script, il file di output viene archiviato in \<Programmi>\Microsoft SQL Server\110\DTS\DataDumps. Se esiste già un file con il nome, viene creato un nuovo file con un suffisso, ad esempio output[1].txt.  
+ Quando si esegue lo script, il file di output viene archiviato in \<Program Files> \Microsoft SQL Server\110\DTS\DataDumps. Se esiste già un file con il nome, viene creato un nuovo file con un suffisso, ad esempio output[1].txt.  
   
  Come accennato in precedenza, è inoltre possibile usare la stored procedure [catalog.add_data_tap_by_guid](/sql/integration-services/system-stored-procedures/catalog-add-data-tap-by-guid)anziché la stored procedure add_data_tap. Questa stored procedure accetta l'ID dell'attività Flusso di dati come parametro anziché task_package_path. È possibile ottenere l'ID dell'attività Flusso di dati dalla finestra delle proprietà di Visual Studio.  
   

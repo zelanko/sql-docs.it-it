@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 43e97ce0-97bc-4a27-9485-5bbeb7190b85
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: de7918c382187fe4af361146bd182eecd7e30b80
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36139b916442b2c0f616d52d2b06efdbda2cfe03
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110195"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048343"
 ---
 # <a name="setting-tool-options-and-layout"></a>Impostazione del layout e delle opzioni dello strumento
   All'avvio è possibile impostare nella maniera più appropriata alla modalità di utilizzo le opzioni che configurano l'interfaccia utente grafica (GUI) dello strumento Ottimizzazione guidata motore di database, il carattere utilizzato e altre funzionalità. Le procedure contenute in questa pagina illustrano le opzioni che è possibile impostare e in che modo impostarle.  

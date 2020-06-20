@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4abc0e10-96fd-4e46-93d6-d7ee03eec844
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bb3d7af1e6e9b54caddafc6c7327a4db2f730e32
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 78e7ca9058f33e05be0f4b5e32dd9ad9cda06c0b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110208"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048365"
 ---
 # <a name="launching-database-engine-tuning-advisor"></a>Avvio dello strumento Ottimizzazione guidata motore di database
   Accedere in primo luogo all'interfaccia utente grafica (GUI) dello strumento Ottimizzazione guidata motore di database. Al primo uso, per inizializzare l'applicazione è necessario che lo strumento Ottimizzazione guidata motore di database sia avviato da un membro del ruolo predefinito del server **sysadmin** . Dopo l'inizializzazione i membri del ruolo predefinito del database **db_owner** possono usare lo strumento Ottimizzazione guidata motore di database per ottimizzare i database di cui sono proprietari. Per altre informazioni sull'inizializzazione di Ottimizzazione guidata motore di database, vedere [Avvio e utilizzo di Ottimizzazione guidata motore di database](../../relational-databases/performance/database-engine-tuning-advisor.md).  

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 820a1e7a-7182-4c7b-ab56-5b4097a7e042
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7e20e18f2e4395720c4e895d53c9a78a75d38dee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a64cfd2385cb510163ca5c2f66db64a86dd00bc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62828277"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916691"
 ---
 # <a name="azure-blob-destination"></a>Destinazione BLOB di Azure
   Il componente **Destinazione BLOB di Azure** consente a un pacchetto SSIS di scrivere dati in un BLOB di Azure. I formati di file supportati sono CSV e AVRO. Trascinare: eliminare la **destinazione BLOB di Azure** nella finestra di progettazione del flusso di dati e fare doppio clic su di essa per visualizzare l'editor.  

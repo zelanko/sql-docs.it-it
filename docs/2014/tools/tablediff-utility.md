@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cb8b8bec38b428ca7b2eea5166867141b34a2405
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b48bf3c0f0984c3f13acde23515c931aed5f467
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68185966"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057625"
 ---
 # <a name="tablediff-utility"></a>utilità tablediff
   L'utilità **tablediff** viene usata per confrontare i dati in due tabelle per rilevarne l'eventuale non convergenza e risulta particolarmente utile per la risoluzione dei problemi relativi alla non convergenza in una topologia di replica. Questa utilità può essere utilizzata dal prompt dei comandi oppure in un file batch per eseguire le attività seguenti:  
@@ -76,8 +75,8 @@ ms.locfileid: "68185966"
  [ **-?** ]  
  Restituisce l'elenco dei parametri supportati.  
   
- **-sourceServer** *source_server_name*[**\\**_instance_name_]  
- Nome del server di origine. Specificare _il\_nome\_del server di origine_ per l' [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]istanza predefinita di. Specificare il nome dell'**\\**_istanza\__ del _nome del server\_\_di origine_per un'istanza denominata di. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+ **-sourceServer** *source_server_name*[ **\\** _instance_name_]  
+ Nome del server di origine. Specificare _il \_ \_ nome del server di origine_ per l'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Specificare il nome dell'istanza del _ \_ \_ nome del server di origine_ **\\** per un'istanza denominata di_ \_ _ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **-sourcedatabase** *source_database*  
  Nome del database di origine.  
@@ -100,8 +99,8 @@ ms.locfileid: "68185966"
  **-sourcelocked**  
  La tabella di origine viene bloccata durante il confronto mediante gli hint di tabella TABLOCK e HOLDLOCK.  
   
- **-DestinationServer** *destination_server_name*[**\\**_nome\_istanza_]  
- Nome del server di destinazione. Specificare *destination_server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specificare il nome dell'**\\**_istanza\__ del _nome del server\_\_di destinazione_per un'istanza denominata di. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+ **-DestinationServer** *destination_server_name*[ **\\** _ \_ nome istanza_]  
+ Nome del server di destinazione. Specificare *destination_server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specificare il nome dell'istanza del _ \_ \_ nome del server di destinazione_ **\\** per un'istanza denominata di_ \_ _ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **-destinationdatabase** *subscription_database*  
  Nome del database di destinazione.  
@@ -169,7 +168,7 @@ ms.locfileid: "68185966"
 |**2**|Differenze tra tabelle|  
   
 ## <a name="remarks"></a>Osservazioni  
- L'utilità **tablediff** non può essere usata con server non[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+ L'utilità **tablediff** non può essere usata con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Server non.  
   
  Le tabelle contenenti colonne con il tipo di dati `sql_variant` non sono supportate.  
   
@@ -219,7 +218,7 @@ ms.locfileid: "68185966"
   
  Per usare l'opzione **-o** oppure **-f** , è necessario avere autorizzazioni di scrittura per il percorso della directory di file specificato.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Confronto di tabelle replicate al fine di individuare le differenze &#40;programmazione della replica&#41;](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
   
   

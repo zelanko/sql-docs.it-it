@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 23ac7e00-fab6-429b-9f85-2736a322aa65
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2f5fc8fdc9b522ad79e67a7769ba2571b7a80af9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c10b9071fb821acc284c5d52621ed582c526ed62
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023908"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057131"
 ---
 # <a name="mssql_eng024070"></a>MSSQL_ENG024070
     
@@ -35,7 +34,7 @@ ms.locfileid: "63023908"
 ## <a name="explanation"></a>Spiegazione  
  Questo errore generale può essere generato indipendentemente dal fatto che la replica venga utilizzata o meno. Per un server di una topologia di replica, l'errore viene normalmente generato in seguito alla modifica dell'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent tramite Gestione controllo servizi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, anziché tramite Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando si tenta di eseguire un processo di agente dopo aver modificato l'account di servizio, il processo potrebbe avere esito negativo e restituire un messaggio di errore simile al seguente:  
   
- "Executed as user \<: AccountUtente>. Replica-sottosistema snapshot repliche: \<Agent agentname> non riuscito. Eseguita come utente: \<AccountUtente>. Il client non dispone di un privilegio necessario. Passaggio non riuscito. `[SQLSTATE 42000] (Error 14151)`. Passaggio non riuscito."  
+ "Eseguito come utente: \<UserAccount> . Replica-sottosistema snapshot replica: errore dell'agente \<AgentName> . Eseguito come utente: \<UserAccount> . Il client non dispone di un privilegio necessario. Passaggio non riuscito. `[SQLSTATE 42000] (Error 14151)`. Passaggio non riuscito."  
   
  Questo problema si verifica perché Gestione controllo servizi di Windows non concede le autorizzazioni necessarie al nuovo account di servizio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
@@ -48,7 +47,7 @@ ms.locfileid: "63023908"
   
  L'appartenenza a questo gruppo di sicurezza consente al nuovo account di ottenere le autorizzazioni necessarie per eseguire il processo dell'agente di replica.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento a errori ed eventi &#40;&#41;di replica](errors-and-events-reference-replication.md)   
  [Gestire gli account di accesso e le password nella replica](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Gestione configurazione SQL Server](../sql-server-configuration-manager.md)  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0cde9ff4e640948c953bc0488517749fd776e438
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c412258e04c1945638e0302a2c0c7bf2fb657a0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62670694"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057778"
 ---
 # <a name="dta-utility"></a>dta - utilità
   L'utilità **dta** è la versione per il prompt dei comandi dello strumento Ottimizzazione guidata motore di database. L'utilità **dta** è stata sviluppata per consentire l'utilizzo della funzionalità Ottimizzazione guidata motore di database in applicazioni e script.  
@@ -161,7 +160,7 @@ dta -d AdventureWorks2012 ...
  Consente a **dta** di sovrascrivere un file di output esistente. Se esiste già un file di output con lo stesso nome e si omette **-F** , **dta**restituisce un errore. È possibile usare **-F** con **-of**, **-or**oppure **-ox**.  
   
  **-fa** _physical_design_structures_to_add_  
- Specifica i tipi di strutture di progettazione fisica che **dta** deve includere nell'indicazione. Nella tabella seguente sono riportati e descritti i valori che è possibile specificare per questo argomento. Quando non viene specificato alcun valore, **DTA** utilizza la **fa**`IDX`predefinita.  
+ Specifica i tipi di strutture di progettazione fisica che **dta** deve includere nell'indicazione. Nella tabella seguente sono riportati e descritti i valori che è possibile specificare per questo argomento. Quando non viene specificato alcun valore, **DTA** utilizza la **fa**predefinita `IDX` .  
   
 |valore|Descrizione|  
 |-----------|-----------------|  
@@ -193,7 +192,7 @@ dta -d AdventureWorks2012 ...
 |FULL|Partizionamento completo (scegliere questo valore per ottimizzare le prestazioni).|  
 |ALIGNED|Solo partizionamento allineato (scegliere questo valore per ottimizzare la gestione).|  
   
- Se si specifica ALIGNED, nell'indicazione generata da **dta** ogni indice proposto viene partizionato esattamente nello stesso modo della tabella sottostante per la quale è stato definito l'indice. Gli indici non cluster in una vista indicizzata sono allineati in base alla vista indicizzata. Per questo argomento è possibile specificare solo un valore. Il valore predefinito è **-FP**`NONE`.  
+ Se si specifica ALIGNED, nell'indicazione generata da **dta** ogni indice proposto viene partizionato esattamente nello stesso modo della tabella sottostante per la quale è stato definito l'indice. Gli indici non cluster in una vista indicizzata sono allineati in base alla vista indicizzata. Per questo argomento è possibile specificare solo un valore. Il valore predefinito è **-FP** `NONE` .  
   
  **-fx** _drop_only_mode_  
  Specifica che **dta** prende in considerazione esclusivamente l'eliminazione delle strutture di progettazione fisica esistenti. Non verranno considerate le nuove strutture di progettazione fisica. Se si specifica questa opzione, **dta** valuta l'utilità delle strutture di progettazione fisica esistenti e propone di eliminare le strutture utilizzate meno di frequente. Questo argomento non utilizza alcun valore e non può essere usato in combinazione con gli argomenti **-fa**, **-fp**o **-fk ALL**  
@@ -202,24 +201,24 @@ dta -d AdventureWorks2012 ...
  Specifica l'identificatore numerico per la sessione di ottimizzazione. Se omesso, **dta** genera un numero di identificazione. È possibile utilizzare questo identificatore per visualizzare le informazioni relative alle sessioni di ottimizzazione correnti. Se per **-ID**non si specifica alcun valore, è necessario specificare un nome di sessione usando **-s**.  
   
  **-ip**  
- Specifica che la cache dei piani deve essere utilizzata come carico di lavoro. Vengono analizzati i primi 1.000 eventi della cache dei piani per i database selezionati in modo esplicito. Questo valore può essere modificato usando l'opzione **-n** .  
+ Specifica che la cache dei piani deve essere utilizzata come carico di lavoro. Vengono analizzati i primi 1.000 eventi della cache dei piani per i database selezionati in modo esplicito. Questo valore può essere modificato tramite l'opzione **-n**.  
   
  **-ipf**  
- Specifica che la cache dei piani deve essere utilizzata come carico di lavoro. Vengono analizzati i primi 1.000 eventi della cache dei piani per tutti i database. Questo valore può essere modificato usando l'opzione **-n** .  
+ Specifica che la cache dei piani deve essere utilizzata come carico di lavoro. Vengono analizzati i primi 1.000 eventi della cache dei piani per tutti i database. Questo valore può essere modificato tramite l'opzione **-n**.  
   
  **-if** _workload_file_  
  Specifica il percorso e il nome del file del carico di lavoro da utilizzare come input per l'ottimizzazione. Il file deve essere in formato trc (file di traccia di SQL Server Profiler), sql (file SQL) oppure log (file di traccia di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). È inoltre necessario specificare un file o una tabella del carico di lavoro.  
   
  **-it** _workload_trace_table_name_  
- Specifica il nome della tabella contenente la traccia del carico di lavoro per l'ottimizzazione. Il nome viene specificato in formato [*database_name*]**.**[*owner_name*]**.**_table_name_.  
+ Specifica il nome della tabella contenente la traccia del carico di lavoro per l'ottimizzazione. Il nome viene specificato in formato [*database_name*] **.** [*owner_name*] **.** _table_name_.  
   
  Nella tabella seguente sono riportati i valori predefiniti per ogni parametro.  
   
 |Parametro|Valore predefinito|  
 |---------------|-------------------|  
-|*database_name*|*database_name* specificato con l'opzione **-D** .|  
-|*owner_name*|**dbo**.|  
-|*table_name*|Nessuno.|  
+|*database_name*|*database_name* specificato con l'opzione **-D**.|  
+|*owner_name*|**dbo**|  
+|*table_name*|No.|  
   
 > [!NOTE]  
 >  *owner_name* deve essere **dbo**. Se viene specificato un altro valore, l'esecuzione di **dta** ha esito negativo e viene restituito un errore. È inoltre necessario specificare una tabella o un file del carico di lavoro.  
@@ -316,16 +315,16 @@ dta -n number_of_events -A 0
   
  *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
   
- Questo argomento rappresenta un'alternativa all'immissione di un elenco di tabelle al prompt dei comandi (**-Tl**). Non usare un file contenente un elenco di tabelle (**-Tf**) se si specifica **-Tl**. Se vengono utilizzati entrambi gli argomenti, l'esecuzione di **dta** ha esito negativo e viene restituito un errore.  
+ Questo argomento rappresenta un'alternativa all'immissione di un elenco di tabelle al prompt dei comandi ( **-Tl**). Non usare un file contenente un elenco di tabelle ( **-Tf**) se si specifica **-Tl**. Se vengono utilizzati entrambi gli argomenti, l'esecuzione di **dta** ha esito negativo e viene restituito un errore.  
   
  Se si omettono gli argomenti **-Tf** e **-Tl** , tutte le tabelle utente nei database specificati verranno considerate per l'ottimizzazione.  
   
  **-Tl** _table_list_  
  Specifica al prompt dei comandi un elenco di tabelle da ottimizzare. Per separare i nomi di tabella, utilizzare la virgola. Se con l'argomento **-D** viene specificato solo un database, non è necessario che i nomi delle tabelle vengano qualificati con un nome di database. In caso contrario, per ogni tabella sarà necessario specificare il nome completo nel formato: *database_name.schema_name.table_name* .  
   
- Questo argomento rappresenta un'alternativa all'utilizzo di un file contenente un elenco di tabelle (**-Tf**). Se vengono usati entrambi gli argomenti **-Tl** e **-Tf** , l'esecuzione di **dta** non riesce e viene restituito un errore.  
+ Questo argomento rappresenta un'alternativa all'utilizzo di un file contenente un elenco di tabelle ( **-Tf**). Se vengono usati entrambi gli argomenti **-Tl** e **-Tf** , l'esecuzione di **dta** non riesce e viene restituito un errore.  
   
- **-U** _login_ID_  
+ **-U** _login_id_  
  Specifica l'ID di accesso utilizzato per connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **-u**  
@@ -388,8 +387,8 @@ AdventureWorks2012.Production.Product  2000000
 dta -D pubs -if pubs_wkld.sql -ox XMLTune.xml -A 120 -Tf table_list.txt  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Riferimento all'utilità del prompt dei comandi &#40;motore di database&#41;](../command-prompt-utility-reference-database-engine.md)   
- [Ottimizzazione guidata motore di database](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

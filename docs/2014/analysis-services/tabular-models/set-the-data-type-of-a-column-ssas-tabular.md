@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9240218b05af2c642ff374cb7e14d2a6c5dd616
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a5fc58d837a6dd0ca508dbaba8da18578fac6b6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066604"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938662"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>Impostare il tipo di dati di una colonna (SSAS tabulare)
   Quando si importano o incollano dati in un modello, Progettazione modelli consentirà di rilevare e applicare automaticamente i tipi di dati. Dopo aver aggiunto i dati al modello, è possibile modificare manualmente il tipo di dati di una colonna per cambiarne la modalità di archiviazione oppure limitarsi a modificare il formato della modalità di visualizzazione dei dati.  
@@ -50,7 +49,7 @@ ms.locfileid: "66066604"
   
 |Tipi di dati dei modelli|  
 |----------------------|  
-|Testo<br /><br /> Numero decimale<br /><br /> Numero intero<br /><br /> Valuta<br /><br /> VERO/FALSO<br /><br /> Date|  
+|Text<br /><br /> Numero decimale<br /><br /> Numero intero<br /><br /> Valuta<br /><br /> VERO/FALSO<br /><br /> Data|  
   
  Se il tipo di dati è errato o è diverso da quello desiderato, è possibile eseguire diverse operazioni:  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66066604"
   
  Per informazioni dettagliate sui tipi di dati usati nei modelli BI Semantic Model, sulla relativa modalità di conversione implicita e sull'impiego di tipi di dati diversi nelle formule, vedere [Tipi di dati supportati &#40;SSAS tabulare&#41;](data-types-supported-ssas-tabular.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Tipi di dati supportati &#40;SSAS tabulare&#41;](data-types-supported-ssas-tabular.md)  
   
   

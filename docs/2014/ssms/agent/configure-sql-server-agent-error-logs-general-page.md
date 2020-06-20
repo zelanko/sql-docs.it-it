@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e08de622-6f87-470c-aee0-b2d6cb6cca88
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 96d0105faad9fb4c2c3213eaa90da464ccd90bd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7abcd0cf2c159977c7977e1e49820a4562b25372
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63253878"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995413"
 ---
 # <a name="configure-sql-server-agent-error-logs-general-page"></a>Configura log degli errori di SQL Server Agent (pagina Generale)
   Utilizzare questa schermata per visualizzare e aggiornare le impostazioni relative alla registrazione degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
@@ -32,7 +31,7 @@ ms.locfileid: "63253878"
  **Scrivi log degli errori OEM**  
  Consente di scrivere il file di log degli errori come file non Unicode. In questo modo, è possibile ridurre la quantità di spazio su disco utilizzata dal file di log. Quando questa opzione è selezionata, è tuttavia possibile che i messaggi contenenti dati Unicode siano più difficili da leggere.  
   
- **Errors**  
+ **Errori**  
  Nel file di log vengono scritti soltanto gli errori e i messaggi informativi.  
   
  **Avvisi**  
@@ -41,7 +40,7 @@ ms.locfileid: "63253878"
  **Informazioni**  
  Nel file di log vengono scritti soltanto i messaggi informativi.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Log degli errori di SQL Server Agent](sql-server-agent-error-log.md)  
   
   

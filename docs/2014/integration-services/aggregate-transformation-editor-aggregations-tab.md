@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 698e3757a32d9a2a9db95df495e33903dbdfed1f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4799df229e96ce8488614d8ec7b0755332360fbc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061575"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925592"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>Editor trasformazione Aggregazione (scheda Aggregazioni)
   Usare la scheda **Aggregazioni** della finestra di dialogo **Editor trasformazione Aggregazione** per specificare le colonne per l'aggregazione e le proprietà di aggregazione. È possibile applicare più aggregazioni. Questa trasformazione non genera output degli errori.  
@@ -44,11 +43,11 @@ ms.locfileid: "66061575"
  **Scala chiavi**  
  Nella sezione delle opzioni avanzate è inoltre possibile specificare il numero approssimativo di chiavi che possono essere scritte dall'aggregazione. Per impostazione predefinita, il valore di questa opzione è **Non specificata**. Se le proprietà **Scala chiavi** e **Chiavi** sono entrambe impostate, il valore della proprietà **Chiavi** ha la precedenza.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |Non specificata|La proprietà Scala chiavi non viene utilizzata.|  
-|Bassa|L'aggregazione può scrivere circa 500.000 chiavi.|  
-|Medio|L'aggregazione può scrivere circa 5.000.000 di chiavi.|  
+|Basso|L'aggregazione può scrivere circa 500.000 chiavi.|  
+|Media|L'aggregazione può scrivere circa 5.000.000 di chiavi.|  
 |Alto|L'aggregazione può scrivere oltre 25.000.000 di chiavi.|  
   
  **Chiavi**  
@@ -73,26 +72,26 @@ ms.locfileid: "66061575"
 |**Media**|Consente di restituire la media dei valori di una colonna. È possibile calcolare la media soltanto delle colonne con tipi di dati numerici. Per ulteriori informazioni, vedere AVG.|  
 |**Numero**|Consente di restituire il numero di elementi di un gruppo. Per ulteriori informazioni, vedere COUNT.|  
 |**CountDistinct**|Consente di restituire il numero di valori non Null univoci di un gruppo. Per ulteriori informazioni, vedere COUNT e Distinct.|  
-|**Minimo**|Restituisce il valore minimo in un gruppo. Limitata soltanto ai tipi di dati numerici.|  
+|**Minima**|Restituisce il valore minimo in un gruppo. Limitata soltanto ai tipi di dati numerici.|  
 |**Massimo**|Restituisce il valore massimo in un gruppo. Limitata soltanto ai tipi di dati numerici.|  
   
  **Flag di confronto**  
  Se si scegliere **Group By**, usare le caselle di controllo per controllare la modalità con cui la trasformazione esegue il confronto. Per altre informazioni sulle opzioni per il confronto di stringhe, vedere [Confronto di dati stringa](data-flow/comparing-string-data.md).  
   
  **Scala conteggio valori distinct**  
- È possibile specificare il numero approssimativo di valori distinct che l'aggregazione può scrivere. Per impostazione predefinita, il valore di questa opzione è **Non specificata**. Se vengono `CountDistinctScale` specificati sia che **CountDistinctKeys** , **CountDistinctKeys** avrà la precedenza.  
+ È possibile specificare il numero approssimativo di valori distinct che l'aggregazione può scrivere. Per impostazione predefinita, il valore di questa opzione è **Non specificata**. Se `CountDistinctScale` vengono specificati sia che **CountDistinctKeys** , **CountDistinctKeys** avrà la precedenza.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |Non specificata|La proprietà `CountDistinctScale` non viene utilizzata.|  
-|Bassa|L'aggregazione può scrivere circa 500.000 valori distinct.|  
-|Medio|L'aggregazione può scrivere circa 5.000.000 di valori distinct.|  
+|Basso|L'aggregazione può scrivere circa 500.000 valori distinct.|  
+|Media|L'aggregazione può scrivere circa 5.000.000 di valori distinct.|  
 |Alto|L'aggregazione può scrivere oltre 25.000.000 di valori distinct.|  
   
  **Chiavi conteggio valori distinct**  
- È possibile specificare il numero esatto di valori distinct che l'aggregazione può scrivere. Se vengono `CountDistinctScale` specificati sia che **CountDistinctKeys** , **CountDistinctKeys** avrà la precedenza.  
+ È possibile specificare il numero esatto di valori distinct che l'aggregazione può scrivere. Se `CountDistinctScale` vengono specificati sia che **CountDistinctKeys** , **CountDistinctKeys** avrà la precedenza.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor trasformazione aggregazione &#40;scheda Avanzate&#41;](../../2014/integration-services/aggregate-transformation-editor-advanced-tab.md)   
  [Aggregazione di valori in un set di dati utilizzando la trasformazione Aggregazione](data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  

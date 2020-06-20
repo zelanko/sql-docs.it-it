@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e3e50e89-f85d-485b-a271-1e0550520212
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8ed315372dce4b6de69da389e88bbcb95166e6e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 823d35b71fca52b2f1892d6e7dbfc940688f0ae6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067075"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938872"
 ---
 # <a name="hierarchies-ssas-tabular"></a>Gerarchie (SSAS tabulare)
   Nei modelli tabulari le gerarchie sono metadati che consentono di definire le relazioni tra due o più colonne di una tabella. Le gerarchie possono essere visualizzate separatamente dalle altre colonne in un elenco di campi client per la creazione di report, semplificando l'esplorazione e l'inserimento di tali gerarchie in un report.  
@@ -28,7 +27,7 @@ ms.locfileid: "66067075"
   
 -   [Attività correlate](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>Vantaggi  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> Vantaggi  
  Nelle tabelle sono incluse decine, se non addirittura centinaia, di colonne con nomi insoliti senza nessun ordine apparente. Questa situazione può comportare una visualizzazione non ordinata negli elenchi di campi del client di creazione report, rendendo difficile per gli utenti il rilevamento e l'inclusione dei dati in un report. Le gerarchie possono consentire una visualizzazione semplice e intuitiva di una struttura dei dati altrimenti complessa.  
   
  In una tabella Date è ad esempio possibile creare una gerarchia Calendar. Anno di calendario verrà utilizzato come livello padre superiore, con Mese, Settimana e Anno inclusi come livelli figlio (Anno di calendario->Mese->Settimana->Giorno). In questa gerarchia viene illustrata una relazione logica da Calendar Year a Day. Un utente client può quindi selezionare l'anno di calendario in un elenco dei campi per includere tutti i livelli in una tabella pivot oppure espandere la gerarchia e selezionare solo livelli particolari da includere nella tabella pivot.  
@@ -56,7 +55,7 @@ ms.locfileid: "66067075"
 |----------|-----------------|  
 |[Creare e gestire gerarchie &#40;SSAS tabulare&#41;](hierarchies-ssas-tabular.md)|Viene descritto come creare e gestire gerarchie utilizzando Progettazione modelli in Vista diagramma.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Progettazione di modelli tabulari &#40;SSAS tabulare&#41;](../tabular-model-designer-ssas-tabular.md)   
  [Prospettive &#40;SSAS tabulare&#41;](perspectives-ssas-tabular.md)   
  [Ruoli &#40;SSAS tabulare&#41;](roles-ssas-tabular.md)  

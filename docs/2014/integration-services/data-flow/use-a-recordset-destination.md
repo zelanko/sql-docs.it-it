@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b87d71f8299c55e033adc21e25e29e8fb3d5e9d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e61e8c122b284dfe448f415cd05b20feab699ef
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62899999"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939212"
 ---
 # <a name="use-a-recordset-destination"></a>Utilizzo di una destinazione recordset
   La destinazione recordset non salva i dati in un'origine dati esterna, ma in un recordset in memoria archiviato in una variabile del pacchetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] del tipo di dati `Object`. Dopo che la destinazione recordset ha salvato i dati, in genere si utilizza un contenitore Ciclo Foreach con l'enumeratore Foreach ADO per elaborare una riga del recordset alla volta. L'enumeratore Foreach ADO salva il valore di ogni colonna della riga corrente in una variabile del pacchetto distinta. Quindi, le attività configurate nel contenitore Ciclo Foreach leggono tali valori dalle variabili ed eseguono alcune azioni.  
@@ -121,7 +120,7 @@ ms.locfileid: "62899999"
   
 5.  Aprire l' **editor destinazione recordset**e configurare la destinazione con le impostazioni seguenti:  
   
-    1.  Nella scheda **Proprietà componente** , per `VariableName` proprietà selezionare `User::BonusRecordset`.  
+    1.  Nella scheda **Proprietà componente** , per `VariableName` Proprietà selezionare `User::BonusRecordset` .  
   
     2.  Nella scheda **Colonne di input** selezionare tutte e tre le colonne disponibili.  
   
@@ -131,7 +130,7 @@ ms.locfileid: "62899999"
   
 2.  Aprire **Editor ciclo Foreach**e configurare il contenitore con le impostazioni seguenti:  
   
-    1.  Nella pagina **raccolta** , per **enumeratore**, selezionare **enumeratore Foreach ADO**e, per **variabile di origine oggetto ADO**, selezionare `User::BonusRecordset`.  
+    1.  Nella pagina **raccolta** , per **enumeratore**, selezionare **enumeratore Foreach ADO**e, per **variabile di origine oggetto ADO**, selezionare `User::BonusRecordset` .  
   
     2.  Nella pagina **Mapping variabili** eseguire il mapping `User::EmailAddress` all'indice 0, `User::FirstName` all'indice 1 e `User::Bonus` all'indice 2.  
   

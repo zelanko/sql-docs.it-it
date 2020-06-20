@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a62f6c2e1ef86a6fcd5e532b2ef413d8142698e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83313389b3b872004fb23b0babdad19cfb5b8e7d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63253557"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995485"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>Configure a User to Create and Manage SQL Server Agent Jobs
-  In questo argomento viene descritto come configurare un utente per la creazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o l'esecuzione di processi di Agent.  
+  In questo argomento viene descritto come configurare un utente per la creazione o l'esecuzione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processi di Agent.  
   
 -   **Prima di iniziare**  [Sicurezza](#Security)  
   
@@ -32,7 +31,7 @@ ms.locfileid: "63253557"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
 ###  <a name="security"></a><a name="Security"></a> Sicurezza  
- Per configurare un utente per la creazione o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'esecuzione di processi di Agent, è innanzitutto necessario aggiungere un account di accesso SQL Server esistente o un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ruolo msdb a uno dei ruoli predefiniti del database di Agent seguenti nel database msdb: SQLAgentUserRole, SQLAgentReaderRole o SQLAgentOperatorRole.  
+ Per configurare un utente per la creazione o l'esecuzione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processi di Agent, è innanzitutto necessario aggiungere un account di accesso SQL Server esistente o un ruolo msdb a uno dei ruoli predefiniti del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database di Agent seguenti nel database msdb: SQLAgentUserRole, SQLAgentReaderRole o SQLAgentOperatorRole.  
   
  Per impostazione predefinita, i membri di questi ruoli del database possono creare passaggi di processo personalizzati ed eseguirli con il proprio account. Per eseguire processi che includono altri tipi di passaggi, ad esempio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] , questi utenti non amministrativi dovranno avere accesso a un account proxy. Tutti i membri del ruolo predefinito del server sysadmin dispongono dell'autorizzazione per la creazione, la modifica e l'eliminazione degli account proxy. Per altre informazioni sulle autorizzazioni associate con questi ruoli di database predefiniti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, vedere [Ruoli di database predefiniti di SQL Server Agent](sql-server-agent-fixed-database-roles.md).  
   
@@ -48,7 +47,7 @@ ms.locfileid: "63253557"
   
 3.  Fare clic con il pulsante destro del mouse sull'account di accesso che si vuole aggiungere al ruolo predefinito del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e scegliere **Proprietà**.  
   
-4.  Nella pagina **mapping utenti** della finestra di dialogo **Proprietà account di accesso** Selezionare la riga contenente `msdb`.  
+4.  Nella pagina **mapping utenti** della finestra di dialogo **Proprietà account di accesso** Selezionare la riga contenente `msdb` .  
   
 5.  Nell'area **Appartenenza a ruoli del database per: msdb**selezionare il ruolo predefinito del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
@@ -66,7 +65,7 @@ ms.locfileid: "63253557"
   
 6.  Nella pagina **Entità** aggiungere o rimuovere account di accesso oppure ruoli per concedere o negare l'accesso all'account proxy.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 89e2e5d774abf2a6bee712ec7a1479107d3d1c36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80d61a4b4742163d999aa2f5d70e70336e680e27
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176200"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967247"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Informazioni sul modello a oggetti del componente script
   Come descritto in [codifica e debug del componente script] (.. /Extending-Packages-scripting/Data-Flow-Script-Component/Coding-and-Debugging-the-script-component.MD, il progetto del componente script contiene tre elementi del progetto:
@@ -115,27 +114,27 @@ public override void PreExecute()
 
 -   Proprietà delle funzioni di accesso denominate e tipizzate per ogni colonna di input selezionata. Queste proprietà sono di sola lettura o di lettura/scrittura a seconda del **Tipo di utilizzo** specificato per la colonna nella pagina **Colonne di input** di **Editor trasformazione Script**.
 
--   Una proprietà **\<column>_IsNull** per ogni colonna di input selezionata. Anche questa proprietà è di sola lettura o di lettura/scrittura a seconda del **Tipo di utilizzo** specificato per la colonna.
+-   Proprietà ** \<column> _IsNull** per ogni colonna di input selezionata. Anche questa proprietà è di sola lettura o di lettura/scrittura a seconda del **Tipo di utilizzo** specificato per la colonna.
 
--   Un metodo **DirectRowTo\<outputbuffer>** per ogni output configurato. Questi metodi verranno utilizzati per il filtro delle righe in uno degli output dello stesso oggetto `ExclusionGroup`.
+-   Metodo **Metodo DirectRowTo \<outputbuffer> ** per ogni output configurato. Questi metodi verranno utilizzati per il filtro delle righe in uno degli output dello stesso oggetto `ExclusionGroup`.
 
 -   Funzione `NextRow` per ottenere la riga di input successiva e funzione `EndOfRowset` per determinare se è stato elaborato l'ultimo buffer di dati. Queste funzioni non sono in genere necessarie quando si utilizzano i metodi di elaborazione dell'input implementati nella classe di base `UserComponent`. Nella sezione seguente vengono fornite ulteriori informazioni sulla classe di base `UserComponent`.
 
 #### <a name="what-the-componentwrapper-project-item-provides"></a>Contenuto dell'elemento di progetto ComponentWrapper
  L'elemento di progetto ComponentWrapper contiene una classe denominata `UserComponent` che deriva da <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. La classe `ScriptMain` in cui si scrive il codice personalizzato deriva a sua volta da `UserComponent`. La classe `UserComponent` contiene i metodi seguenti:
 
--   Un'implementazione sottoposta a override del metodo `ProcessInput`. Si tratta del metodo chiamato dal motore flusso di dati in fase di esecuzione dopo il metodo `PreExecute` e può essere chiamato più volte. `ProcessInput`passa l' ** \<** elaborazione al metodo di>_ProcessInput INPUTBUFFER. Quindi, il metodo `ProcessInput` verifica se è stata raggiunta la fine del buffer di input e, in caso affermativo, chiama il metodo `FinishOutputs` sottoponibile a override e il metodo privato `MarkOutputsAsFinished`. Il metodo `MarkOutputsAsFinished` chiama infine `SetEndOfRowset` sull'ultimo buffer di output.
+-   Un'implementazione sottoposta a override del metodo `ProcessInput`. Si tratta del metodo chiamato dal motore flusso di dati in fase di esecuzione dopo il metodo `PreExecute` e può essere chiamato più volte. `ProcessInput`passa l'elaborazione al metodo ** \<inputbuffer> _ProcessInput** . Quindi, il metodo `ProcessInput` verifica se è stata raggiunta la fine del buffer di input e, in caso affermativo, chiama il metodo `FinishOutputs` sottoponibile a override e il metodo privato `MarkOutputsAsFinished`. Il metodo `MarkOutputsAsFinished` chiama infine `SetEndOfRowset` sull'ultimo buffer di output.
 
--   Un'implementazione sottoponibile a override del metodo **\<inputbuffer>_ProcessInput**. Questa implementazione predefinita esegue il ciclo di ogni riga di input e chiama **\<inputbuffer>_ProcessInputRow**.
+-   Implementazione sottoponibile a override del metodo ** \<inputbuffer> _ProcessInput** . Questa implementazione predefinita esegue semplicemente il ciclo di ogni riga di input e chiama ** \<inputbuffer> _ProcessInputRow**.
 
--   Un'implementazione sottoponibile a override del metodo **\<inputbuffer>_ProcessInputRow**. L'implementazione predefinita è vuota. Si tratta del metodo di cui in genere si esegue l'override per scrivere il codice personalizzato di elaborazione dati.
+-   Implementazione sottoponibile a override del metodo ** \<inputbuffer> _ProcessInputRow** . L'implementazione predefinita è vuota. Si tratta del metodo di cui in genere si esegue l'override per scrivere il codice personalizzato di elaborazione dati.
 
 #### <a name="what-your-custom-code-should-do"></a>Funzione del codice personalizzato
  È possibile utilizzare i metodi seguenti per elaborare l'input nella classe `ScriptMain`:
 
--   Eseguire l'override di **\<inputbuffer>_ProcessInputRow** per elaborare i dati in ogni riga di input non appena vengono passati.
+-   Eseguire l'override ** \<inputbuffer> _ProcessInputRow** per elaborare i dati in ogni riga di input durante il passaggio.
 
--   Eseguire l'override di **\<inputbuffer>_ProcessInput** solo se è necessario eseguire operazioni aggiuntive mentre si esegue il ciclo delle righe di input, È ad esempio necessario testare per `EndOfRowset` eseguire altre operazioni dopo l'elaborazione di tutte le righe. Chiamare ** \<inputBuffer>_ProcessInputRow** per eseguire l'elaborazione delle righe.
+-   Eseguire l'override di ** \<inputbuffer> _ProcessInput** solo se è necessario eseguire un'operazione aggiuntiva durante il ciclo delle righe di input. È ad esempio necessario testare per `EndOfRowset` eseguire altre operazioni dopo l'elaborazione di tutte le righe. Chiamare ** \<inputbuffer> _ProcessInputRow** per eseguire l'elaborazione delle righe.
 
 -   Eseguire l'override di `FinishOutputs` se è necessario eseguire operazioni sugli output prima che vengano chiusi.
 
@@ -149,7 +148,7 @@ public override void PreExecute()
 
 -   Proprietà delle funzioni di accesso di sola scrittura, denominate e tipizzate per ogni colonna di output.
 
--   Una colonna di sola ** \<scrittura>_IsNull** proprietà per ogni colonna di output selezionata che è possibile utilizzare per impostare il valore della `null`colonna su.
+-   Proprietà di ** \<column> _IsNull** di sola scrittura per ogni colonna di output selezionata che è possibile utilizzare per impostare il valore della colonna su `null` .
 
 -   Un metodo `AddRow` per aggiungere una nuova riga vuota nel buffer di output.
 

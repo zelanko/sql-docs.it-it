@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 089213b0-d368-4332-b2e5-b2bd8770c64f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b9edfe0286492602025a2b63b116e35084626fab
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b2effcc9a70057be72ab576b929c3bb3c311aeba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82698106"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056446"
 ---
 # <a name="statement-attributes-that-affect-table-valued-parameters"></a>Attributi dell'istruzione che influiscono sui parametri con valori di tabella
   Nella tabella seguente vengono illustrati gli attributi di un campo di descrizione.  
   
-|Nome attributo|Tipo|Description|  
+|Nome attributo|Type|Descrizione|  
 |--------------------|----------|-----------------|  
 |SQL_SOPT_SS_PARAM_FOCUS|SQLUINTEGER|Per ulteriori informazioni su SQL_SS_PARAM_FOCUS, vedere [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md).|  
 |SQL_SOPT_SS_NAME_SCOPE|SQLUINTEGER|Per ulteriori informazioni su SQL_SS_NAME_SCOPE, vedere [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md).|  

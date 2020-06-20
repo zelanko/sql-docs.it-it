@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5a5710ab5a74adc34601790c134a4553b8b01604
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 28e5515f5132f5e8b7859da1a11b5466b90c5579
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704041"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056914"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Configurazione del debugger Transact-SQL
   È necessario configurare regole di Windows Firewall per abilitare il debug di [!INCLUDE[tsql](../../includes/tsql-md.md)] durante la connessione a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] eseguita in un computer diverso da Editor di query [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
@@ -56,7 +55,7 @@ ms.locfileid: "82704041"
   
     2.  Nella finestra di dialogo **Tipo di regola** selezionare **Programma**, quindi fare clic su **Avanti**.  
   
-    3.  Nella finestra di dialogo **Programma** selezionare **Percorso programma** e immettere il percorso completo di sqlservr.exe per questa istanza. Per impostazione predefinita, sqlservr. exe è installato in C:\Programmi\Microsoft SQL Server\MSSQL12. *NomeIstanza*\MSSQL\Binn, dove *NomeIstanza* è MSSQLSERVER per l'istanza predefinita e il nome dell'istanza per qualsiasi istanza denominata.  
+    3.  Nella finestra di dialogo **Programma** selezionare **Percorso programma** e immettere il percorso completo di sqlservr.exe per questa istanza. Per impostazione predefinita, sqlservr.exe viene installato in C:\Programmi\Microsoft SQL Server\MSSQL12. *NomeIstanza*\MSSQL\Binn, dove *NomeIstanza* è MSSQLSERVER per l'istanza predefinita e il nome dell'istanza per qualsiasi istanza denominata.  
   
     4.  Nella finestra di dialogo **Azione** selezionare **Consenti la connessione**, quindi fare clic su **Avanti**.  
   

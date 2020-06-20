@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b30bb9d7-ebc0-4b1a-8d0f-ee006b32e841
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d0a1897ded7e3d266d701bd4a587c03c252105bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9441d9cc13ce509183d25359323df16152998581
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059984"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917001"
 ---
 # <a name="data-flow-path-editor-metadata-page"></a>Editor percorso flusso di dati (pagina Metadati)
   Utilizzare la pagina **Metadati** della finestra di dialogo **Editor percorso flusso di dati** per visualizzare i metadati delle colonne percorso.  
@@ -37,7 +36,7 @@ ms.locfileid: "66059984"
  **Precisione**  
  Indica il numero di cifre in un valore numerico.  
   
- **Ridimensionare**  
+ **Ridimensionamento**  
  Indica il numero di cifre a destra del separatore decimale in un valore numerico.  
   
  **Lunghezza**  
@@ -61,7 +60,7 @@ ms.locfileid: "66059984"
  **Copia negli Appunti**  
  Consente di copiare i metadati della colonna negli Appunti. Per impostazione predefinita, tutte le righe di metadati vengono copiate nell'ordine in cui sono attualmente visualizzate.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Editor percorso flusso di dati &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor percorso flusso di dati &#40;pagina visualizzatori dati&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
  [Flusso di dati](data-flow/data-flow.md)   

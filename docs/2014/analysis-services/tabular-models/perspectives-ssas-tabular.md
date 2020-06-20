@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1f78c3a1-ce2c-4e7f-a277-71a657692bea
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fcd6e438327d88b79a88b5026f28e24e19fffb5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9aa139c33a3d72b5a628ba6354488b8cef81c0a0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066874"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938792"
 ---
 # <a name="perspectives-ssas-tabular"></a>Prospettive (SSAS tabulare)
   Nei modelli tabulari, le prospettive consentono di definire subset visualizzabili di un modello in grado di offrire punti di vista mirati, specifici di un'attività aziendale o di un'applicazione del modello.  
@@ -28,7 +27,7 @@ ms.locfileid: "66066874"
   
 -   [Attività correlate](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_understanding"></a>Vantaggi  
+##  <a name="benefits"></a><a name="bkmk_understanding"></a> Vantaggi  
  L'esplorazione dei modelli tabulari può risultare molto complessa per gli utenti. Un singolo modello può rappresentare il contenuto di un data warehouse completo con molte tabelle, misure e dimensioni. Tale complessità può costituire un ostacolo per gli utenti che necessitano solo di interagire con una piccola parte del modello per soddisfare determinati requisiti di Business Intelligence e creazione di report.  
   
  In una prospettiva, tabelle, colonne e misure (indicatori KPI inclusi) vengono definiti come oggetti campo. È possibile selezionare i campi visualizzabili per ogni prospettiva. In un modello possono ad esempio essere contenuti dati del prodotto, delle vendite, finanziari, geografici e dei dipendenti. Mentre un reparto vendite necessita di dati del prodotto, delle vendite, delle promozioni e geografici, non avrà probabilmente bisogno dei dati dei dipendenti e finanziari. In modo analogo, per un reparto risorse umane non sono necessari dati geografici e sulle promozioni di vendita.  
@@ -42,11 +41,11 @@ ms.locfileid: "66066874"
   
 ##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> Attività correlate  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |-----------|-----------------|  
 |[Creare e gestire prospettive &#40;SSAS tabulare&#41;](perspectives-ssas-tabular.md)|Viene descritto come creare e gestire prospettive utilizzando la finestra di dialogo Prospettive in Progettazione modelli.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Ruoli &#40;SSAS tabulare&#41;](roles-ssas-tabular.md)   
  [Gerarchie &#40;SSAS tabulare&#41;](hierarchies-ssas-tabular.md)  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bbcf09c6-3128-4775-b3de-e986a70411e0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d6b6fa07c2cb2f4880420885fefc30d0fd419c38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fa3f29b6174342f0ec298df5bc49b30f7c0cbf1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011991"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027955"
 ---
 # <a name="transactionlog-event-class"></a>TransactionLog - classe di evento
   La classe di evento TransactionLog consente di eseguire il monitoraggio dell'attività nei log delle transazioni in un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
@@ -53,7 +52,7 @@ ms.locfileid: "63011991"
 |StartTime|`datetime`|Ora di inizio dell'evento, se disponibile.|14|Sì|  
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Log delle transazioni &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)  
   

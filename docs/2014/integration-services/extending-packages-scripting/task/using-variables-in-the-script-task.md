@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a15edc663d5f855a5aa217400e1c38376e292f4c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55122ec1323c0e95816af4e6129f324041ab2eda
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62894592"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967161"
 ---
 # <a name="using-variables-in-the-script-task"></a>Utilizzo di variabili nell'attività Script
   Le variabili rendono possibile lo scambio di dati tra l'attività Script e altri oggetti del pacchetto. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services-ssis-variables.md).  
@@ -46,10 +45,10 @@ ms.locfileid: "62894592"
   
  Le variabili rendono possibile questa comunicazione tra il contenitore Ciclo Foreach e l'attività Script. Nella pagina **Mapping variabili** di **Editor ciclo Foreach** assegnare variabili a ogni elemento di dati restituito da un singolo elemento enumerato. Ad esempio, un enumeratore Foreach File restituisce solo un nome di file in corrispondenza dell'indice 0 e pertanto richiede solo un mapping di variabili, mentre un enumeratore che restituisce diverse colonne di dati in ogni riga richiede che venga eseguito il mapping di una variabile diversa a ogni colonna che si desidera utilizzare nell'attività Script.  
   
- Dopo aver eseguito il mapping degli elementi enumerati alle variabili, è necessario aggiungere le variabili mappate `ReadOnlyVariables` alla proprietà nella pagina **script** dell' **Editor attività script** per renderle disponibili per lo script. Per un esempio di un'attività Script all'interno di un contenitore Ciclo Foreach che elabora i file di immagine in una cartella, vedere [Uso di immagini con l'attività Script](../../extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md).  
+ Dopo aver eseguito il mapping degli elementi enumerati alle variabili, è necessario aggiungere le variabili mappate alla `ReadOnlyVariables` proprietà nella pagina **script** dell' **Editor attività script** per renderle disponibili per lo script. Per un esempio di un'attività Script all'interno di un contenitore Ciclo Foreach che elabora i file di immagine in una cartella, vedere [Uso di immagini con l'attività Script](../../extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md).  
   
 ## <a name="variables-example"></a>Esempio di variabili  
- Nell'esempio seguente viene illustrato come accedere e utilizzare le variabili in un'attività Script per determinare il percorso del flusso di lavoro del pacchetto. Nell'esempio si presuppone che siano state create variabili integer `CustomerCount` `MaxRecordCount` denominate e che siano `ReadOnlyVariables` state aggiunte alla raccolta in **Editor attività script**. La variabile `CustomerCount` contiene il numero di record di clienti da importare. Se il valore è maggiore del valore `MaxRecordCount`, l'attività Script riporta un errore. Quando si verifica un errore perché la soglia `MaxRecordCount` è stata superata, il percorso di errore del flusso di lavoro può implementare l'eventuale pulizia richiesta.  
+ Nell'esempio seguente viene illustrato come accedere e utilizzare le variabili in un'attività Script per determinare il percorso del flusso di lavoro del pacchetto. Nell'esempio si presuppone che siano state create variabili integer denominate e che siano state `CustomerCount` `MaxRecordCount` aggiunte alla `ReadOnlyVariables` raccolta in **Editor attività script**. La variabile `CustomerCount` contiene il numero di record di clienti da importare. Se il valore è maggiore del valore `MaxRecordCount`, l'attività Script riporta un errore. Quando si verifica un errore perché la soglia `MaxRecordCount` è stata superata, il percorso di errore del flusso di lavoro può implementare l'eventuale pulizia richiesta.  
   
  Per compilare correttamente l'esempio, è necessario aggiungere un riferimento all'assembly Microsoft.SqlServer.ScriptTask.  
   
@@ -116,7 +115,7 @@ public class ScriptMain
   
 ![Integration Services icona (piccola)](../../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visitare la pagina relativa a Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services &#40;variabili&#41; SSIS](../../integration-services-ssis-variables.md)   
  [Utilizzo di variabili nei pacchetti](../../use-variables-in-packages.md)  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a2b1e6b5b366a6c4132be78ff089dbe0001efd41
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 93711e90fcc924d53747e5ec47e33fc0f6eb4946
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82698612"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056468"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Invio di dati come parametro con valori di tabella utilizzando data-at-execution (ODBC)
   Questa procedura è simile alla procedura [All in Memory](sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) , ma utilizza data-at-execution per il parametro con valori di tabella.  
@@ -184,7 +183,7 @@ from @Items
 ## <a name="example"></a>Esempio  
   
 ### <a name="description"></a>Descrizione  
- In questo esempio viene illustrato come utilizzare il flusso di righe, una riga per ogni chiamata a SQLPutData, con ODBC TVP, in modo analogo a come si potrebbe utilizzare BCP. exe per caricare i dati in un database.  
+ In questo esempio viene illustrato come utilizzare il flusso di righe, una riga per ogni chiamata a SQLPutData, con ODBC TVP, in modo analogo a come utilizzare BCP.exe per caricare i dati in un database.  
   
  Prima di compilare l'esempio, modificare il nome del server nella stringa di connessione.  
   
@@ -372,7 +371,7 @@ EXIT:
 ## <a name="example"></a>Esempio  
   
 ### <a name="description"></a>Descrizione  
- In questo esempio viene illustrato come utilizzare il flusso di righe, più righe per chiamata a SQLPutData, con ODBC TVP, in modo analogo a come si potrebbe utilizzare BCP. exe per caricare i dati in un database.  
+ In questo esempio viene illustrato come utilizzare il flusso di righe, più righe per chiamata a SQLPutData con ODBC TVP, in modo analogo a come utilizzare BCP.exe per caricare dati in un database.  
   
  Prima di compilare l'esempio, modificare il nome del server nella stringa di connessione.  
   

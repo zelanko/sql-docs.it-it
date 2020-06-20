@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0891254c-74c2-4482-b41a-fd69b1677b23
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9c081064f3a0bcb2733f58df7e1b5550bf135c2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9495343fca6da023dbf54bcf69dff6b9bb3e2b9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059885"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939152"
 ---
 # <a name="data-mining-model-training-editor-columns-tab"></a>Editor training modelli di data mining (scheda Colonne)
   Utilizzare la pagina **Colonne** della finestra di dialogo **Editor training modelli di data mining** per eseguire il mapping tra le colonne di input e le colonne della struttura di data mining.  
@@ -39,7 +38,7 @@ ms.locfileid: "66059885"
  **Colonne della struttura di data mining**  
  Consente di visualizzare tutte le colonne di destinazione disponibili, indipendentemente dal fatto che ne venga eseguito il mapping.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor training modelli di data mining &#40;scheda Connessione&#41;](../../2014/integration-services/data-mining-model-training-editor-connection-tab.md)  
   
