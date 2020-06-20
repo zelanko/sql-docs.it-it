@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: df6f33ff-97f6-466c-af74-9780b2247473
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: db0e312fabc039de2554f00b7e9f33a7a76ec584
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c6ab1c55da39c5cb6647aeac9e32d72cafb5af3d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176060"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961861"
 ---
 # <a name="domain-based-attributes-master-data-services"></a>Attributi basati su dominio [Master Data Services]
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]un attributo basato su dominio è un attributo i cui valori sono popolati da membri di un'entità. È possibile pensare a un attributo basato su dominio come a un elenco vincolato, gli attributi basati su dominio non consentono l'immissione dei valori di attributo non validi da parte degli utenti. Per selezionare un valore di attributo, l'utente deve scegliere da un elenco.

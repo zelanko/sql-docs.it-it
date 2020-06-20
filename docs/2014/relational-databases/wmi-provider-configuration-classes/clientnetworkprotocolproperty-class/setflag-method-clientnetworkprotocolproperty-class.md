@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0407520f-2f84-4f68-b2b7-429697286c1b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6c33eca0bf3281243aeee42ed89001cf9108d5d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7a98d3fe9e14030ff02d82a3aa55991c7bc530e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245084"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013910"
 ---
 # <a name="setflag-method-clientnetworkprotocolproperty-class"></a>Metodo SetFlag (classe ClientNetworkProtocolProperty)
   Imposta il flag della proprietà corrente a cui fa riferimento il valore della [proprietà PropertyIdx (classe ClientNetworkProtocolProperty)](clientnetworkprotocolproperty-class.md) .  
@@ -39,7 +38,7 @@ BoolValue
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  A [classe ClientNetworkProtocolProperty](clientnetworkprotocolproperty-class.md) che rappresenta un attributo del protocollo di rete utilizzato dal client di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>Parametri  
@@ -53,7 +52,7 @@ BoolValue
   
 ## <a name="remarks"></a>Osservazioni  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [configurazione di protocolli client](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a59ffcd6-4b69-4c5c-9740-699ccb2183fb
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ffa52839c20a34574423e3b123da79f734fb69ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ba5e4e5dd6d9a6541a98e0cb30229d7335bac24
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786690"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936082"
 ---
 # <a name="browse-for-servers-network-servers"></a>Cerca server (Server di rete)
   Se si esegue la connessione a un componente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] senza conoscere il nome esatto dell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], nella casella **Nome server** fare clic su **Cerca** per aprire la finestra di dialogo **Cerca server**.  
@@ -34,6 +33,6 @@ ms.locfileid: "62786690"
   
 ## <a name="options"></a>Opzioni  
  **Selezionare l'istanza di SQL Server in rete con cui stabilire la connessione**  
- Indicare il server a cui si desidera connettersi facendo clic sull'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] visualizzata nell'albero. È possibile mostrare o nascondere parti della visualizzazione albero facendo clic sui nodi contrassegnati con un **+** simbolo o. **-**  
+ Indicare il server a cui si desidera connettersi facendo clic sull'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] visualizzata nell'albero. È possibile mostrare o nascondere parti della visualizzazione albero facendo clic sui nodi contrassegnati con un **+** **-** simbolo o.  
   
   

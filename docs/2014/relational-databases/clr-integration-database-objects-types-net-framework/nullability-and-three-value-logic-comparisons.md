@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 13da4c7f-1010-4b2d-a63c-c69b6bfd96f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4f1b4823db4ae961024ac2a786c948d8349f31be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b8000c1c28d5a1d3d129b6e8d01c4ab2fbbbc7d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919628"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954709"
 ---
 # <a name="nullability-and-three-value-logic-comparisons"></a>Supporto dei valori Null e confronti di logica a tre valori
   Se si ha familiarità con i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile notare la somiglianza nella semantica e nella precisione dello spazio dei nomi `System.Data.SqlTypes` in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Esistono tuttavia alcune differenze, le più importanti delle quali sono illustrate nel presente argomento.  
@@ -36,7 +35,7 @@ ms.locfileid: "62919628"
  Lo spazio dei nomi `System.Data.SqlTypes` introduce un tipo `SqlBoolean` per rappresentare questa logica a 3 valori. I confronti tra gli spazi dei nomi `SqlTypes` restituiscono un tipo di valore `SqlBoolean`. Il valore UNKNOWN viene rappresentato dal valore Null del tipo `SqlBoolean`. Vengono fornite le proprietà `IsTrue`, `IsFalse` e `IsNull` per controllare il valore di un tipo `SqlBoolean`.  
   
 ## <a name="operations-functions-and-null-values"></a>Operazioni, funzioni e valori NULL  
- Tutti gli operatori aritmetici (+, \*-,,/,%), gli operatori bit per bit (~, & e |) e la maggior parte delle funzioni restituiscono null se uno `SqlTypes` degli operandi o degli argomenti di è null. La proprietà `IsNull` restituisce sempre un valore True o False.  
+ Tutti gli operatori aritmetici (+,-, \* ,/,%), gli operatori bit per bit (~, & e |) e la maggior parte delle funzioni restituiscono null se uno degli operandi o degli argomenti di `SqlTypes` è null. La proprietà `IsNull` restituisce sempre un valore True o False.  
   
 ## <a name="precision"></a>Precision  
  I valori massimi dei tipi di dati decimali CLR di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] sono diversi da quelli dei tipi di dati numerici e decimali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per i tipi di dati CLR decimali di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], inoltre, si presuppone la massima precisione. Nei tipi di dati CLR per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tuttavia, `SqlDecimal` fornisce la stessa scala e precisione massima e la stessa semantica del tipo di dati decimali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -44,7 +43,7 @@ ms.locfileid: "62919628"
 ## <a name="overflow-detection"></a>Rilevamento dell'overflow  
  Nei tipi di dati CLR di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] è possibile che l'aggiunta di due numeri molto grandi non generi un'eccezione. Se invece non è stato utilizzato alcun operatore di controllo, il risultato restituito potrebbe essere un numero intero negativo. In `System.Data.SqlTypes` vengono generate eccezioni per tutti gli errori di overflow e underflow e per gli errori dovuti alla divisione per zero.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Tipi di dati di SQL Server in .NET Framework](sql-server-data-types-in-the-net-framework.md)  
   
   

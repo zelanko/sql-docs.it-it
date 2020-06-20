@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7594261-ccd9-487c-9678-11875ba57fb7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: afd556972ea3f5b47850e8cc20a8a5624ed45da5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d23a8ee66cafc4bef1f258e40dbe51274a308eb8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63064568"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051372"
 ---
 # <a name="user-error-message-event-class"></a>User Error Message - classe di evento
   La classe di evento User Error Message visualizza il messaggio di errore nella stessa forma visualizzata all'utente in caso di errore o eccezione. Il testo del messaggio di errore viene visualizzato nel campo TextData.  
@@ -53,7 +52,7 @@ ms.locfileid: "63064568"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|`bigint`|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

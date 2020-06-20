@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 292da1ed-4c7e-4bd2-9b84-b9ee09917724
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 395df605926f0ff4ddc30970cdcebce0f1d0c8fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fad4d1cbeaa84b5c6be683d7a87997d1a3f89bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044446"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052638"
 ---
 # <a name="qnparameter-table-event-class"></a>Classe di evento QN:Parameter Table
   L'evento QN:Parameter table fornisce informazioni sulle operazioni necessarie per creare ed eliminare le tabelle interne in cui sono archiviate le informazioni sui parametri, nonché per mantenere i conteggi dei riferimenti corrispondenti. Questo evento indica inoltre l'attività interna per reimpostare il conteggio di utilizzi relativo a una tabella di parametri.  
@@ -38,7 +37,7 @@ ms.locfileid: "63044446"
 |GroupID|`int`|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Sì|  
 |HostName|`nvarchar`|Nome del computer in cui è in esecuzione il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
 |IsSystem|`int`|Indica se l'evento è stato generato per un processo di sistema o un processo utente.<br /><br /> 0 = utente<br /><br /> 1 = sistema|60|No|  
-|LoginName|`nvarchar`|Nome dell'account di accesso dell'utente (account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accesso di sicurezza di o credenziali di accesso di Windows nel formato *dominio*\\*nomeutente*).|11|No|  
+|LoginName|`nvarchar`|Nome dell'account di accesso dell'utente (account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sicurezza di o credenziali di accesso di Windows nel formato *dominio* \\ *nomeutente*).|11|No|  
 |LoginSID|`image`|ID di sicurezza (SID) dell'utente connesso. Queste informazioni sono disponibili nella vista del catalogo sys.server_principals. Il SID è univoco per ogni account di accesso nel server.|41|Sì|  
 |NTDomainName|`nvarchar`|Dominio di Windows a cui appartiene l'utente.|7|Sì|  
 |NTUserName|`nvarchar`|Nome dell'utente proprietario della connessione che ha generato questo evento.|6|Sì|  

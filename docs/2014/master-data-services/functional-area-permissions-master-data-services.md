@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a80b87b3-b904-4cda-8582-0761c2617c57
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ffa8314e764a814956a7910f93d944294ab7acf7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e678d46c61bc2b68481774a96c6f39ba0bad89d7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479417"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971451"
 ---
 # <a name="functional-area-permissions-master-data-services"></a>Autorizzazioni per aree funzionali (Master Data Services)
   È possibile assegnare autorizzazioni a ogni area funzionale dell'interfaccia utente di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Sono presenti cinque aree funzionali, ovvero:  
@@ -40,7 +39,7 @@ ms.locfileid: "65479417"
   
  Per accedere a **, è necessario che un utente o un gruppo disponga almeno delle autorizzazioni per un'area funzionale e un modello nella scheda** Modelli [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Assegnare autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../../2014/master-data-services/assign-functional-area-permissions-master-data-services.md)   
  [Autorizzazioni per oggetti modello &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [Autorizzazioni membri gerarchia &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)   

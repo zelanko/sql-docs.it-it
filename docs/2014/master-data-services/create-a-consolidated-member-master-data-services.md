@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 588295d0705ec9c556c85eb5bef1d96d8128b580
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c41673f6f3bf1f4de2a831ecd659321b273b6af9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176070"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971891"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>Create a Consolidated Member (Master Data Services)
   In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]creare un membro consolidato quando si desidera un nodo padre per una gerarchia esplicita. I membri consolidati possono avere attributi specifici, che vengono usati per il raggruppamento. Come illustrato nell'esempio seguente, i membri consolidati possono essere usati per i gruppi di account che includono account sottostanti.
@@ -45,7 +44,7 @@ ms.locfileid: "78176070"
 
 5.  Sopra la griglia, selezionare l'opzione **Membri consolidati** o **Tutti i membri consolidati nella gerarchia** .
 
-6.  Fare clic su **Aggiungi**.
+6.  Scegliere **Aggiungi**.
 
 7.  Nel riquadro sulla destra, completare i campi.
 

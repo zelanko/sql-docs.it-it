@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 840af91236f95d2065a926db93100e0a2bdc312f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 310e32b2804664c4189e8e677227018d853f934a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62989071"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060547"
 ---
 # <a name="filter-published-data"></a>Filtro dei dati pubblicati
   L'applicazione di filtri agli articoli di una tabella consente di creare partizioni di dati da pubblicare. Tramite l'applicazione di filtri ai dati pubblicati è possibile:  
@@ -100,7 +99,7 @@ ms.locfileid: "62989071"
 |Tutte le colonne di una pubblicazione di tipo merge SQL Server 7.0|Nelle pubblicazioni di tipo merge SQL Server 7.0 non è possibile filtrare le colonne.|  
 |Timestamp|Pubblicazioni snapshot o transazionali SQL Server 7.0 che consentono sottoscrizioni aggiornabili|  
   
- <sup>1</sup> se si pubblica una tabella in una pubblicazione di tipo merge e tale tabella contiene già una colonna di tipo `uniqueidentifier` di dati `ROWGUIDCOL` con la proprietà impostata, la replica può usare questa colonna invece di creare una colonna aggiuntiva denominata **rowguid**. In questo caso è necessario pubblicare la colonna esistente.  
+ <sup>1</sup> se si pubblica una tabella in una pubblicazione di tipo merge e tale tabella contiene già una colonna di tipo di dati `uniqueidentifier` con la `ROWGUIDCOL` proprietà impostata, la replica può usare questa colonna invece di creare una colonna aggiuntiva denominata **rowguid**. In questo caso è necessario pubblicare la colonna esistente.  
   
  Per definire o modificare un filtro colonne, vedere [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
@@ -129,9 +128,9 @@ ms.locfileid: "62989071"
   
 -   La replica transazionale consente di replicare una vista indicizzata come vista o come tabella. Se la vista viene replicata come tabella, non sarà possibile filtrare le colonne dalla tabella.  
   
- I filtri di riga non sono progettati per funzionare nei database. In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene limitata intenzionalmente l'esecuzione di `sp_replcmds` (in cui vengono eseguiti i filtri) al proprietario del database (`dbo`). Al `dbo` non sono associati privilegi tra database. Grazie all'aggiunta di CDC (Change Data Capture) in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], tramite la logica `sp_replcmds` le tabelle di rilevamento delle modifiche vengono popolate con le informazioni che possono essere restituite all'utente e su cui quest'ultimo può eseguire una query. Per motivi di sicurezza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , limita l'esecuzione di questa logica in modo che un malintenzionato `dbo` non possa rubare questo percorso di esecuzione. Ad esempio, un `dbo` malintenzionato potrebbe aggiungere trigger nelle tabelle CDC che quindi verrebbero eseguite nel contesto della chiamata a `sp_replcmds` da parte dell'utente, in questo caso l'agente di lettura log.  Se all'account con cui l'agente è in esecuzione sono associati privilegi superiori, il `dbo` malintenzionato potrebbe tentare l'escalation dei suoi privilegi.  
+ I filtri di riga non sono progettati per funzionare nei database. In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene limitata intenzionalmente l'esecuzione di `sp_replcmds` (in cui vengono eseguiti i filtri) al proprietario del database (`dbo`). Al `dbo` non sono associati privilegi tra database. Grazie all'aggiunta di CDC (Change Data Capture) in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], tramite la logica `sp_replcmds` le tabelle di rilevamento delle modifiche vengono popolate con le informazioni che possono essere restituite all'utente e su cui quest'ultimo può eseguire una query. Per motivi di sicurezza, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] limita l'esecuzione di questa logica in modo che un malintenzionato `dbo` non possa rubare questo percorso di esecuzione. Ad esempio, un `dbo` malintenzionato potrebbe aggiungere trigger nelle tabelle CDC che quindi verrebbero eseguite nel contesto della chiamata a `sp_replcmds` da parte dell'utente, in questo caso l'agente di lettura log.  Se all'account con cui l'agente è in esecuzione sono associati privilegi superiori, il `dbo` malintenzionato potrebbe tentare l'escalation dei suoi privilegi.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Pubblicare dati e oggetti di database](publish-data-and-database-objects.md)  
   
   

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: e71831fa-3d39-4e4a-9706-4d3a497082cc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 325bedac3968cb59c70863d54c7e0ef429cedd75
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8194b5cc2d4c4a2f1f116ca5a99ea16e18156f13
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68941072"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005261"
 ---
 # <a name="view-and-modify-article-properties"></a>Visualizzazione e modifica delle proprietà degli articoli
   In questo argomento viene descritto come modificare le proprietà degli articoli in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o RMO (Replication Management Objects).  
@@ -58,7 +57,7 @@ ms.locfileid: "68941072"
 -   Dopo la creazione di una pubblicazione, per alcune modifiche delle proprietà è necessario un nuovo snapshot. Se la pubblicazione dispone di sottoscrizioni, per alcune modifiche è inoltre necessario reinizializzare tutte le sottoscrizioni. Per altre informazioni, vedere [Modificare le proprietà di pubblicazioni e articoli](change-publication-and-article-properties.md) e [Aggiungere ed eliminare articoli in pubblicazioni esistenti](add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
- Le proprietà degli articoli possono essere visualizzate e modificate nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** disponibile in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e in Monitoraggio replica. Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](../monitor/start-the-replication-monitor.md).  
+ Consente di visualizzare e modificare le proprietà degli articoli nella finestra di dialogo **Proprietà pubblicazione- \<Publication> ** disponibile in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e in Monitoraggio replica. Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](../monitor/start-the-replication-monitor.md).  
   
 -   Nella pagina **Generale** sono presenti il nome e la descrizione della pubblicazione, il nome del database, il tipo di pubblicazione e le impostazioni di scadenza della sottoscrizione.  
   
@@ -82,27 +81,27 @@ ms.locfileid: "68941072"
   
 #### <a name="to-view-and-modify-article-properties"></a>Per visualizzare e modificare le proprietà degli articoli  
   
-1.  Nella pagina **Articoli** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** selezionare un articolo e quindi fare clic su **Proprietà articolo**.  
+1.  Nella pagina **articoli** della finestra di dialogo **Proprietà pubblicazione \<Publication> -** selezionare un articolo, quindi fare clic su **Proprietà articolo**.  
   
 2.  Selezionare gli articoli a cui si applicano le modifiche delle proprietà:  
   
-    -   Fare clic su **Imposta proprietà dell'articolo di \<TipoOggetto> evidenziato** per aprire la finestra di dialogo **Proprietà articolo - \<NomeOggetto>** . Le modifiche apportate alle proprietà in questa finestra di dialogo vengono applicate solo all'oggetto evidenziato nel riquadro degli oggetti nella pagina **Articoli**.  
+    -   Fare clic su **Imposta proprietà dell' \<ObjectType> articolo evidenziato** per avviare la finestra di dialogo **Proprietà articolo- \<ObjectName> ** ; le modifiche apportate alle proprietà in questa finestra di dialogo vengono applicate solo all'oggetto evidenziato nel riquadro oggetti della pagina **articoli** .  
   
-    -   Fare clic su **Imposta proprietà di tutti gli articoli di \<TipoOggetto>** per aprire la finestra di dialogo **Proprietà di tutti gli articoli \<TipoOggetto>** . Le modifiche apportate alle proprietà in questa finestra di dialogo vengono applicate a tutti gli oggetti del tipo indicato nel riquadro degli oggetti all'interno della pagina **Articoli**, inclusi quelli non ancora selezionati per la pubblicazione.  
+    -   Fare clic su **Imposta proprietà di tutti \<ObjectType> gli articoli**per avviare la finestra di dialogo **proprietà di tutti \<ObjectType> gli articoli** . le modifiche apportate alle proprietà in questa finestra di dialogo vengono applicate a tutti gli oggetti di quel tipo nel riquadro oggetti della pagina **articoli** , inclusi quelli non ancora selezionati per la pubblicazione.  
   
         > [!NOTE]  
-        >  Le modifiche apportate alle proprietà nella finestra di dialogo **Proprietà di tutti gli articoli \<TipoOggetto>** sostituiscono tutte le modifiche eseguite precedentemente nella finestra di dialogo **Proprietà articolo - \<NomeOggetto>** . Se ad esempio si desidera impostare alcuni valori predefiniti per tutti gli articoli di un tipo di oggetto e, al contempo, alcune proprietà per singoli oggetti, è necessario impostare innanzitutto i valori predefiniti per tutti gli articoli, quindi le proprietà relative ai singoli oggetti.  
+        >  Le modifiche alle proprietà apportate nella finestra di dialogo **proprietà di tutti \<ObjectType> gli articoli** eseguono l'override di qualsiasi fatto precedentemente nella finestra di dialogo **Proprietà articolo- \<ObjectName> ** . Se ad esempio si desidera impostare alcuni valori predefiniti per tutti gli articoli di un tipo di oggetto e, al contempo, alcune proprietà per singoli oggetti, è necessario impostare innanzitutto i valori predefiniti per tutti gli articoli, quindi le proprietà relative ai singoli oggetti.  
   
 3.  Se necessario, modificare le proprietà e quindi fare clic su **OK**.  
   
-4.  Fare clic su **OK** nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** .  
+4.  Fare clic su **OK** nella finestra di dialogo **Proprietà pubblicazione- \<Publication> ** .  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
  È possibile modificare gli articoli e restituire a livello di programmazione le relative proprietà tramite le stored procedure di replica. Le stored procedure utilizzate dipenderanno dal tipo di pubblicazione a cui appartiene l'articolo.  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>Per visualizzare le proprietà di un articolo appartenente a una pubblicazione snapshot o transazionale  
   
-1.  Eseguire [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql), specificando il nome della pubblicazione per il parametro **\@publication** e il nome dell'articolo per il parametro **\@article**. Se non si specifica ** \@article**, verranno restituite informazioni per tutti gli articoli della pubblicazione.  
+1.  Eseguire [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql), specificando il nome della pubblicazione per il parametro **\@publication** e il nome dell'articolo per il parametro **\@article**. Se non si specifica ** \@ article**, verranno restituite informazioni per tutti gli articoli della pubblicazione.  
   
 2.  Eseguire [sp_helparticlecolumns](/sql/relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql) per gli articoli di tabella per elencare tutte le colonne disponibili nella tabella di base.  
   

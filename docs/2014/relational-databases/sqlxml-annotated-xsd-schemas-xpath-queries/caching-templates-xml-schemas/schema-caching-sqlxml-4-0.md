@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7e5fda21-b435-41fd-b637-8b616560a93f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c6c481dbba3f8e077854b12e755544d97af5f692
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 63ce2cf7b46545c1c4c92e774054ff00f6e715d3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703314"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015877"
 ---
 # <a name="schema-caching-sqlxml-40"></a>Memorizzazione nella cache degli schemi (SQLXML 4.0)
   Con un'installazione side-by-side di XML per Microsoft SQL Server 2000 Web Release 1, Microsoft SQLXML 2.0 e SQLXML 3.0, è possibile controllare in modo esplicito la memorizzazione degli schemi nella cache in tutte le versioni attraverso le chiavi del Registro di sistema seguenti:  

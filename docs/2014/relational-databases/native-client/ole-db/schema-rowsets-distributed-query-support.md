@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11354bb6-be42-4d8d-854c-42dd3dc38656
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a47dd9575132210bbd5d664fbb3c73b57289693f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 48b57bbf40590f8ad5c049268f25fe66d2f94357
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704235"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998491"
 ---
 # <a name="distributed-query-support-in-schema-rowsets"></a>Supporto di query distribuite nei set di righe dello schema
   Per supportare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le query distribuite, l' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] interfaccia **IDBSchemaRowset** del provider di OLE DB di Native Client restituisce i metadati nei server collegati.  

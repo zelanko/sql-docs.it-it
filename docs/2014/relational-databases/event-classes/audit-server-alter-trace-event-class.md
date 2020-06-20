@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 967586bf-d5f1-466c-82ab-8c461bfb6222
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 10c3556edb5c58e281db2dcaf5c05e9a202a3091
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a75a4aca9ca78fbfd3bd5b4aaa43e49ff2a3bcca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012517"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053136"
 ---
 # <a name="audit-server-alter-trace-event-class"></a>Audit Server Alter Trace - classe di evento
   La classe di evento **Audit Server Alter Trace** si verifica per tutte le istruzioni che controllano l'autorizzazione ALTER TRACE. Le istruzioni che controllano l'autorizzazione ALTER TRACE includono quelle utilizzate per creare o configurare una traccia oppure per impostare un filtro su una traccia.  

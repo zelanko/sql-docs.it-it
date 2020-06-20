@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: db47ac73-948b-4d77-b272-bb3565135ea5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7aecff691139b1041a928c42c3df2987c992cd91
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 04ad80b0c99e7282ff2acfa459a08665efbdee1c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68199315"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060441"
 ---
 # <a name="set-the-compatibility-level-for-merge-publications"></a>Impostazione del livello di compatibilità per le pubblicazioni di tipo merge
   In questo argomento si illustra come impostare il livello di compatibilità per le pubblicazioni di tipo merge in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Il livello di compatibilità delle pubblicazioni viene utilizzato nella replica di tipo merge per determinare le funzionalità che possono essere utilizzate dalle pubblicazioni in un determinato database.  
@@ -33,7 +32,7 @@ ms.locfileid: "68199315"
      [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
- Impostare il livello di compatibilità nella pagina **Tipi di Sottoscrittore** della Creazione guidata nuova pubblicazione. Per ulteriori informazioni sull'accesso a questa procedura guidata, vedere [Create a Publication](create-a-publication.md). Dopo la creazione di uno snapshot della pubblicazione, il livello di compatibilità può essere incrementato, ma non ridotto. Incrementare il livello di compatibilità nella pagina **Generale** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](view-and-modify-publication-properties.md). Incrementando il livello di compatibilità della pubblicazione, qualsiasi sottoscrizione esistente in server che eseguono versioni che risultano precedenti a tale livello di compatibilità non saranno più in grado di eseguire la sincronizzazione.  
+ Impostare il livello di compatibilità nella pagina **Tipi di Sottoscrittore** della Creazione guidata nuova pubblicazione. Per ulteriori informazioni sull'accesso a questa procedura guidata, vedere [Create a Publication](create-a-publication.md). Dopo la creazione di uno snapshot della pubblicazione, il livello di compatibilità può essere incrementato, ma non ridotto. Aumentare il livello di compatibilità nella pagina **generale** della finestra di dialogo **proprietà \<Publication> pubblicazione-** . Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](view-and-modify-publication-properties.md). Incrementando il livello di compatibilità della pubblicazione, qualsiasi sottoscrizione esistente in server che eseguono versioni che risultano precedenti a tale livello di compatibilità non saranno più in grado di eseguire la sincronizzazione.  
   
 > [!NOTE]  
 >  Poiché il livello di compatibilità influisce su altre proprietà della pubblicazione e sugli articoli per cui tali proprietà sono valide, non modificare il livello di compatibilità e le altre proprietà in un'unica operazione all'interno della finestra di dialogo. Dopo la modifica della proprietà, lo snapshot per la pubblicazione dovrà essere rigenerato.  
@@ -44,14 +43,14 @@ ms.locfileid: "68199315"
   
 #### <a name="to-increase-the-publication-compatibility-level"></a>Per incrementare il livello di compatibilità della pubblicazione  
   
--   Nella pagina **Generale** della finestra di dialogo **Proprietà di pubblicazione - \<Pubblicazione>** selezionare il **Livello di compatibilità** desiderato.  
+-   Nella pagina **generale** della finestra di dialogo **Proprietà pubblicazione \<Publication> -** selezionare per livello di **compatibilità**.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
  È possibile impostare il livello di compatibilità per una pubblicazione di tipo merge a livello di programmazione codice quando una pubblicazione viene creata o modificata a livello di programmazione in un secondo momento. Per impostare o modificare questa proprietà di pubblicazione, è possibile utilizzare le stored procedure di replica.  
   
 #### <a name="to-set-the-publication-compatibility-level-for-a-merge-publication"></a>Per impostare il livello di compatibilità per una pubblicazione di tipo merge  
   
-1.  Nel server di pubblicazione eseguire [sp_addmergepublication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql), specificando un valore **@publication_compatibility_level** per per rendere la pubblicazione compatibile con le versioni [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]precedenti di. Per ulteriori informazioni, vedere la pagina relativa alla [creazione di una pubblicazione](create-a-publication.md).  
+1.  Nel server di pubblicazione eseguire [sp_addmergepublication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql), specificando un valore per per **@publication_compatibility_level** rendere la pubblicazione compatibile con le versioni precedenti di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ulteriori informazioni, vedere la pagina relativa alla [creazione di una pubblicazione](create-a-publication.md).  
   
 #### <a name="to-change-the-publication-compatibility-level-of-a-merge-publication"></a>Per modificare il livello di compatibilità di una pubblicazione di tipo merge  
   
@@ -128,7 +127,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Vedi anche  
- [Create a Publication](create-a-publication.md)  
+## <a name="see-also"></a>Vedere anche  
+ [Creare una pubblicazione](create-a-publication.md)  
   
   

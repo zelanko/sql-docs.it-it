@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 19063222-dc9c-48ae-a55f-778103674a9e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c0c6b15235f74ba2765a34f028aba39379fd6beb
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: eaf7017d2cf3d831f300180f002c004487a317e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703242"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015678"
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>Esecuzione di query XPath (provider SQLXMLOLEDB)
   In questo esempio viene illustrato l'utilizzo delle proprietà specifiche del provider SQLXMLOLEDB seguenti:  
@@ -32,7 +31,7 @@ ms.locfileid: "82703242"
   
 -   `Mapping Schema`  
   
- In questa applicazione ADO di esempio viene specificata una query XPath (radice) su uno schema di mapping XSD (MySchema.xml). Lo schema include un elemento ** \< contacts>** con gli attributi **ContactID**, **FirstName**e **LastName** . Nello schema viene eseguito il mapping predefinito, ovvero un nome di elemento viene mappato alla tabella con lo stesso nome e gli attributi di tipo semplice vengono mappati alle colonne con gli stessi nomi.  
+ In questa applicazione ADO di esempio viene specificata una query XPath (radice) su uno schema di mapping XSD (MySchema.xml). Nello schema è presente un **\<Contacts>** elemento con gli attributi **ContactID**, **FirstName**e **LastName** . Nello schema viene eseguito il mapping predefinito, ovvero un nome di elemento viene mappato alla tabella con lo stesso nome e gli attributi di tipo semplice vengono mappati alle colonne con gli stessi nomi.  
   
 ```  
 <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  

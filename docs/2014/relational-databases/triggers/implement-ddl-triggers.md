@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f44e5340-1d18-40e9-828e-0ffcca091ae3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a32b4b17974dfbd761ee56a16ec7f8f74e7d4b76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 110e69aca31df75d4b4d7a732de5c58556bd3e24
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62698496"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014480"
 ---
 # <a name="implement-ddl-triggers"></a>Implementazione di trigger DDL
   In questo argomento vengono fornite informazioni sulla creazione, la modifica, la disabilitazione o l'eliminazione di trigger DDL.  

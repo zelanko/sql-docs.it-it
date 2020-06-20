@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: aaa3c5c4-2d3a-4832-a473-ce9bd4fb1c17
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0ec9f519b6326b0c2188663b558ff099cac75c78
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d0d1a88c7a40bfd10b206e971d22c57ac6cd035
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63058087"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051754"
 ---
 # <a name="spcacheremove-event-class"></a>SP:CacheRemove - classe di evento
   La classe di evento SP:CacheRemove indica che la stored procedure è stata rimossa dalla cache dei piani.  
@@ -53,7 +52,7 @@ ms.locfileid: "63058087"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|`bigint`|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

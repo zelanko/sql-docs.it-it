@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 86ccec6d-615b-4f84-9226-ff80d8012f17
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e28dda733e4c93c482e26eeb207189014a1940da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c00aa838b5bf420862cfe2793c404989ad911c9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055144"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962086"
 ---
 # <a name="term-lookup-transformation-editor-reference-table-tab"></a>Editor trasformazione Ricerca termini (scheda Tabella di riferimento)
   Usare la scheda **Tabella di riferimento** della finestra di dialogo **Editor trasformazione Ricerca termini** per specificare la connessione alla tabella di riferimento o tabella di ricerca.  
@@ -30,7 +29,7 @@ ms.locfileid: "66055144"
  **Gestione connessione OLE DB**  
  Selezionare una gestione connessione esistente nell'elenco o crearne una nuova facendo clic su **Nuova**.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova connessione usando la finestra di dialogo **Configura gestione connessione OLE DB** .  
   
  **Nome tabella di riferimento**  
@@ -39,7 +38,7 @@ ms.locfileid: "66055144"
  **Configura output errori**  
  Usare la finestra di dialogo [Configura output errori](../../2014/integration-services/configure-error-output.md) per specificare le opzioni di gestione degli errori per le righe che causano errori.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor trasformazione Ricerca termini &#40;scheda ricerca termini&#41;](../../2014/integration-services/term-lookup-transformation-editor-term-lookup-tab.md)   
  [Editor trasformazione Ricerca termini &#40;scheda Avanzate&#41;](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   

@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f7bab4ee8f03eb666e1a8396fbf8957b1e42f2c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fea70d6b1230b67b2eedcdf1c7d2e82d2324a0b3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010903"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016317"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Utilizzare l'Indicizzazione guidata full-text
   L'Indicizzazione guidata full-text ha lo scopo di semplificare la procedura di creazione di un indice full-text.  
@@ -49,7 +48,7 @@ ms.locfileid: "66010903"
      **Digitare una colonna**  
      Consente di selezionare il nome della colonna che contiene il tipo di documento della colonna sottoposta all'indicizzazione full-text.  
   
-     La **colonna tipo** è abilitata solo se la colonna specificata nella colonna **colonne disponibili** è di tipo `varbinary(max)` o `image`.  
+     La **colonna tipo** è abilitata solo se la colonna specificata nella colonna **colonne disponibili** è di tipo `varbinary(max)` o `image` .  
   
      **Semantica statistica**  
      Consente di selezionare se abilitare l'indicizzazione semantica per la colonna selezionata. Per altre informazioni, vedere [Ricerca semantica &#40;SQL Server&#41;](semantic-search-sql-server.md).  
@@ -95,8 +94,8 @@ ms.locfileid: "66010903"
   
     |valore|Descrizione|  
     |-----------|-----------------|  
-    |**\<>predefinito**|Se la tabella o la vista non è partizionata, selezionare questa opzione per utilizzare lo stesso filegroup della tabella o della vista sottostante. Se la tabella o vista è partizionata, viene utilizzato il filegroup primario.|  
-    |**PRIMARY**|Selezionare questa opzione per utilizzare il filegroup primario per il nuovo indice full-text.|  
+    |**\<default>**|Se la tabella o la vista non è partizionata, selezionare questa opzione per utilizzare lo stesso filegroup della tabella o della vista sottostante. Se la tabella o vista è partizionata, viene utilizzato il filegroup primario.|  
+    |**PRIMARIO**|Selezionare questa opzione per utilizzare il filegroup primario per il nuovo indice full-text.|  
     |*user-specified default filegroup*|Se è presente un elenco di parole non significative predefinito definito dall'utente, selezionarne il nome nell'elenco per utilizzare tale filegroup per il nuovo indice full-text.|  
   
      **Selezione elenco di parole non significative full-text**  
@@ -108,8 +107,8 @@ ms.locfileid: "66010903"
   
     |valore|Descrizione|  
     |-----------|-----------------|  
-    |**\<>di sistema**|Selezionare questa opzione per utilizzare l'elenco di parole non significative di sistema nel nuovo indice full-text. Si tratta dell'impostazione predefinita.|  
-    |**\<>off**|Selezionare questa opzione per disabilitare gli elenchi di parole non significative per il nuovo indice full-text.|  
+    |**\<system>**|Selezionare questa opzione per utilizzare l'elenco di parole non significative di sistema nel nuovo indice full-text. Si tratta dell'impostazione predefinita.|  
+    |**\<off>**|Selezionare questa opzione per disabilitare gli elenchi di parole non significative per il nuovo indice full-text.|  
     |*user-defined-stoplist-name*|Nell'elenco viene visualizzato il nome di ogni elenco di parole non significative definito dall'utente, se presente, creato nel database. Selezionare qualsiasi elenco di parole non significative definito dall'utente da utilizzare per il nuovo indice full-text.|  
   
 4.  Facoltativamente, definire la pianificazione di popolamento. Le operazioni di indicizzazione avranno inizio immediatamente, a meno che non siano state pianificate per un'esecuzione futura. Le pianificazioni verranno create immediatamente, anche se l'esecuzione avverrà solo all'ora pianificata.  
@@ -128,7 +127,7 @@ ms.locfileid: "66010903"
   
 5.  Visualizzare o controllare lo stato dell'Indicizzazione guidata full-text.  
   
-     **Arresta**  
+     **Stop**  
      Consente di interrompere l'operazione corrente e impedire l'esecuzione di operazioni full-text successive da parte della procedura guidata nel corso della sessione.  
   
      **Report**  

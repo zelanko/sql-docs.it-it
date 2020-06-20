@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9ccc2399f159e3f51753424aa0273d81f428b876
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: facc534177113bd93e56e50fca3ae14c3e6b2cfc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62524377"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014392"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Utilizzo delle tabelle inserite ed eliminate
   Nelle istruzioni dei trigger DML vengono usate due tabelle speciali, ovvero la tabella inserted e la tabella deleted. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea e gestisce queste tabelle automaticamente. È possibile utilizzare queste tabelle temporanee residenti in memoria per verificare gli effetti di determinate modifiche apportate ai dati e impostare le condizioni per le azioni dei trigger DML. Non è possibile modificare i dati o eseguire operazioni DDL (Data Definition Language), quale CREATE INDEX, direttamente nelle tabelle.  

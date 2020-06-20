@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a8698217-4793-40fd-85a0-ef4dad1c139f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ec51fbd40031f330a85e8b1c0613c05ce90ae0e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95cec374e980cba7d108eb57e84f9fa9c233eb08
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055323"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962389"
 ---
 # <a name="ssis-upgrade-wizard-ssis-package-upgrade-wizard"></a>Aggiornamento guidato SSIS (Aggiornamento guidato pacchetti SSIS)
   Utilizzare l'Aggiornamento guidato pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] per eseguire la migrazione di pacchetti sviluppati in [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] e [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] nel formato utilizzato dalla versione corrente di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -30,7 +29,7 @@ ms.locfileid: "66055323"
  **Non visualizzare più questa pagina**  
  Consente di evitare la visualizzazione della pagina introduttiva alla successiva apertura della procedura guidata.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Aggiornare pacchetti di Integration Services](install-windows/upgrade-integration-services-packages.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a55f005d-e020-423c-8940-c24ea1b20104
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 62dc29f8143f92fc9674ed10c092dc6ad08570fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85bd8f79f7be5a46e8f714f69a0b61de560a0aed
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63060368"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051693"
 ---
 # <a name="sqlstmtcompleted-event-class"></a>SQL:StmtCompleted - classe di evento
   La classe di evento SQL:StmtCompleted indica il completamento di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -33,7 +32,7 @@ ms.locfileid: "63060368"
 |CPU|`int`|Tempo della CPU in millisecondi utilizzato dall'evento.|18|Sì|  
 |DatabaseID|`int`|ID del database specificato nell'istruzione USE *database* oppure il database predefinito se non è stata eseguita alcuna istruzione USE *database* per una determinata istanza. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |DatabaseName|`nvarchar`|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Sì|  
-|Durata|`bigint`|Durata dell'evento in microsecondi.|13|Sì|  
+|Duration|`bigint`|Durata dell'evento in microsecondi.|13|Sì|  
 |EndTime|`datetime`|Ora di fine dell'evento.|15|Sì|  
 |EventClass|`int`|Tipo di evento = 41.|27|No|  
 |EventSequence|`int`|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
@@ -61,7 +60,7 @@ ms.locfileid: "63060368"
 |Scritture|`bigint`|Numero di scritture di pagina eseguite dall'istruzione SQL.|17|Sì|  
 |XactSequence|`bigint`|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

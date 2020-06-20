@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 11144714addb50dc4c481512399228802390f2f3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 267f9044505126cbe7f865e6577da3cbe2f26bcf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703614"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055146"
 ---
 # <a name="explicit-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Mapping esplicito di attributi ed elementi XSD a tabelle e colonne (SQLXML 4.0)
   Quando si utilizza uno schema XSD per fornire una vista XML del database relazionale, è necessario eseguire il mapping degli elementi e degli attributi dello schema a tabelle e colonne del database. Le righe della tabella/vista di database vengono mappate agli elementi del documento XML. I valori di colonna del database vengono mappati agli attributi o agli elementi.  
@@ -54,13 +53,13 @@ ms.locfileid: "82703614"
 ## <a name="sql-field"></a>sql-field  
  L'annotazione `sql-field` esegue il mapping di un elemento o attributo a una colonna di database. L'annotazione `sql:field` viene aggiunta per eseguire il mapping di un nodo XML nello schema a una colonna di database. Non è possibile specificare `sql:field` su un elemento di contenuto vuoto.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per l'esecuzione di esempi SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>R. Specifica delle annotazioni sql:relation e sql:field  
- In questo esempio lo schema XSD è costituito da un elemento ** \< Contact>** di tipo complesso con ** \< fname>** e ** \< lname>** elementi figlio e l'attributo **ContactID** .  
+ In questo esempio lo schema XSD è costituito da un **\<Contact>** elemento di tipo complesso **\<FName>** con **\<LName>** gli elementi figlio e e l'attributo **ContactID** .  
   
- L' `sql:relation` annotazione esegue il mapping dell'elemento ** \< Contact>** alla tabella Person. Contact del database AdventureWorks. L' `sql:field` annotazione esegue il mapping dell'elemento ** \< fname>** alla colonna FirstName e dell'elemento ** \<>lname** alla colonna LastName.  
+ L' `sql:relation` annotazione esegue il mapping dell' **\<Contact>** elemento alla tabella Person. Contact del database AdventureWorks. L' `sql:field` annotazione esegue il mapping dell' **\<FName>** elemento alla colonna FirstName e dell' **\<LName>** elemento alla colonna LastName.  
   
  Non è stata specificata alcuna annotazione per l'attributo **ContactID** . Il risultato ottenuto è un mapping predefinito dell'attributo alla colonna con lo stesso nome.  
   

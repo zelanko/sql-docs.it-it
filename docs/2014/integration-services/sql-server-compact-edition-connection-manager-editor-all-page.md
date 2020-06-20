@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f9fbff4b-c502-44b3-8e7b-398d66e82206
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8a26587f9dd426cdf53a3a53a36d0e81e95ebf77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e6b326e86e1a9e21a740c3bf1bd1fedb6919e98
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055472"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962734"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-all-page"></a>Editor gestione connessione SQL Server Compact Edition (pagina Tutte)
   Utilizzare la finestra di dialogo **Editor gestione connessione SQL Server Compact Edition** per specificare le proprietà di connessione a un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact.  
@@ -45,7 +44,7 @@ ms.locfileid: "66055472"
  **Max Buffer Size**  
  Consente di specificare la quantità massima di memoria in KB usata da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact al raggiungimento della quale viene eseguito lo scaricamento dei dati su disco.  
   
- **Max Database Size**  
+ **Dimensioni massime del database**  
  Consente di specificare le dimensioni massime in MB del database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact.  
   
  **Modalità**  
@@ -53,10 +52,10 @@ ms.locfileid: "66055472"
   
  Nella tabella seguente sono descritti i quattro valori disponibili per la proprietà Mode.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Sola lettura**|Imposta l'accesso di sola lettura al database.|  
-|**Read Write**|Imposta l'autorizzazione di lettura/scrittura per il database.|  
+|**Lettura/scrittura**|Imposta l'autorizzazione di lettura/scrittura per il database.|  
 |**Exclusive**|Imposta l'accesso esclusivo al database.|  
 |**Shared Read**|Specifica che altri utenti possono accedere contemporaneamente in lettura al database.|  
   
@@ -72,7 +71,7 @@ ms.locfileid: "66055472"
  **Password**  
  Consente di immettere la password per il database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor gestione connessione SQL Server Compact Edition &#40;pagina Connessione&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-connection-page.md)  
   

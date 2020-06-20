@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9c630646aa81ebaeccf49f729299394419b7099a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb72255fa14695a16f4bc382fe0d617441dfaeb6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021728"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038429"
 ---
 # <a name="publication-properties-subscription-options"></a>Proprietà pubblicazione, Opzioni sottoscrizione
   La pagina **Opzioni sottoscrizione** della finestra di dialogo **Proprietà pubblicazione** consente di visualizzare e impostare le proprietà a livello di pubblicazione associate alle sottoscrizioni. Le proprietà sono raggruppate nelle categorie seguenti:  
@@ -63,7 +62,7 @@ ms.locfileid: "63021728"
  Solo[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Determina se consentire l'utilizzo dei file di backup per inizializzare le sottoscrizioni. Per altre informazioni, vedere [Inizializzazione di una sottoscrizione transazionale senza uno snapshot](initialize-a-transactional-subscription-without-a-snapshot.md).  
   
  **Consenti Sottoscrittori non SQL Server**  
- Solo[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Determina se la pubblicazione supporta Sottoscrittori non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'impostazione di questa opzione su **true** consente di impostare altre proprietà della[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione per supportare Sottoscrittori non. Se esistono sottoscrizioni questa opzione è di sola lettura. L'opzione non può essere impostata su **True** se **Consenti sottoscrizioni ad aggiornamento immediato**, **Consenti sottoscrizioni ad aggiornamento in coda**o **Consenti sottoscrizioni peer-to-peer** è impostata su **True**. Per altre informazioni, vedere [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
+ Solo[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Determina se la pubblicazione supporta Sottoscrittori non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'impostazione di questa opzione su **true** consente di impostare altre proprietà della pubblicazione per supportare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sottoscrittori non. Se esistono sottoscrizioni questa opzione è di sola lettura. L'opzione non può essere impostata su **True** se **Consenti sottoscrizioni ad aggiornamento immediato**, **Consenti sottoscrizioni ad aggiornamento in coda**o **Consenti sottoscrizioni peer-to-peer** è impostata su **True**. Per altre informazioni, vedere [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
   
 ### <a name="data-transformation"></a>Trasformazioni dei dati  
  **Consenti trasformazioni dei dati**  

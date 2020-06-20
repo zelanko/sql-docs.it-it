@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b810a3785c41356042639c4fdb79b4f6cf28d871
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3a10e6333f6dd38a850a832b82a7cb7a0e0bf698
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76934803"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955581"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Creare, modificare e rilasciare FileTables
   Viene descritto come creare una nuova tabella FileTable o modificarne o eliminarne una esistente.  
@@ -35,7 +34,7 @@ ms.locfileid: "76934803"
   
 -   Nomi da utilizzare per i 3 vincoli di chiave primaria e univoci creati automaticamente.  
   
-###  <a name="how-to-create-a-filetable"></a><a name="HowToCreate"></a> Procedura: Creazione di una tabella FileTable  
+###  <a name="how-to-create-a-filetable"></a><a name="HowToCreate"></a> Procedura: Creare una tabella FileTable  
  **Creare una tabella FileTable tramite Transact-SQL**  
  Creare una tabella FileTable chiamando l'istruzione [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) con l'opzione **AS FileTable**. Poiché una tabella FileTable ha uno schema fisso, non è necessario specificare un elenco di colonne. È invece possibile specificare le impostazioni seguenti per la nuova tabella FileTable:  
   
@@ -107,7 +106,7 @@ GO
   
  Per informazioni sull'uso dell'istruzione ALTER TABLE per abilitare o disabilitare lo spazio dei nomi FileTable, inclusi i vincoli definiti dal sistema, vedere [Gestione di tabelle FileTable](manage-filetables.md).  
   
-###  <a name="how-to-change-the-directory-for-a-filetable"></a><a name="HowToChange"></a> Procedura: Modifica della directory per una tabella FileTable  
+###  <a name="how-to-change-the-directory-for-a-filetable"></a><a name="HowToChange"></a> Procedura: Modificare la directory per una tabella FileTable  
  **Modificare la directory per una tabella FileTable tramite Transact-SQL**  
  Chiamare l'istruzione ALTER TABLE e specificare un nuovo valore valido per l'opzione SET di **FILETABLE_DIRECTORY** .  
   
@@ -175,11 +174,11 @@ GO
 |Vincoli CHECK|I vincoli CHECK definiti dal sistema applicano i requisiti seguenti:<br /><br /> Nomi file validi.<br /><br /> Attributi di file validi.<br /><br /> L'oggetto padre deve essere una directory.<br /><br /> La gerarchia dello spazio dei nomi è bloccata durante la modifica dei file.|  
   
  **Convenzione di denominazione per i vincoli definiti dal sistema**  
- I vincoli definiti dal sistema descritti in precedenza vengono denominati usando il formato **\<tipovincolo>_\<nometabella>[\_\<nomecolonna>]\_\<identificatoreunivoco>** , dove:  
+ I vincoli definiti dal sistema descritti in precedenza vengono denominati nel formato ** \<constraintType> _ \<tablename> [ \_ \<columnname> ] \_ \<uniquifier> ** , dove:  
   
 -   *<tipovincolo>* è CK (vincolo CHECK), DF (vincolo DEFAULT), FK (chiave esterna), PK (chiave primaria) o UQ (vincolo UNIQUE).  
   
--   *\<identificatoreunivoco* è una stringa generata dal sistema per specificare un nome univoco. È possibile che questa stringa contenga il nome della tabella FileTable e un identificatore univoco.  
+-   *\<uniquifier>* è una stringa generata dal sistema per rendere univoco il nome. È possibile che questa stringa contenga il nome della tabella FileTable e un identificatore univoco.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestire tabelle FileTable](manage-filetables.md)  

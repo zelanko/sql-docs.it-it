@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: a1fd71bf-5bf9-4ce2-9a1d-032576a4a6e9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8e94b24634eedf68afcb25c8c1ef957ce063cdc4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6ee353129d60fe7fc8bed0eff279920d8d4ba640
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63136737"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041322"
 ---
 # <a name="create-an-alert-using-severity-level"></a>Creazione di un avviso utilizzando i livelli di gravità
-  In questo argomento viene descritto come creare [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un avviso di Agent generato quando si verifica un evento di un determinato livello di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] gravità in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tramite [!INCLUDE[tsql](../../includes/tsql-md.md)]o.  
+  In questo argomento viene descritto come creare un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avviso di Agent generato quando si verifica un evento di un determinato livello di gravità in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  **Contenuto dell'articolo**  
   

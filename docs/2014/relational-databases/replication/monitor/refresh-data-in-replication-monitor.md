@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e9582244-7d00-45f4-be16-020a65c76a5e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 03dae95f44b4166947da4ef7bd88b532db00dd03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d632da029905c4ce914c843a2ea1319e780ac735
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667237"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060764"
 ---
 # <a name="refresh-data-in-replication-monitor"></a>Aggiornamento dei dati in Monitoraggio replica
   In Monitoraggio replica è possibile aggiornare automaticamente o manualmente la finestra principale e le finestre dei dettagli, ovvero le finestre avviate dalla finestra principale. Per aggiornare manualmente una finestra, premere F5. Per impostazione predefinita, la finestra principale viene aggiornata automaticamente ogni cinque secondi. È possibile personalizzare la frequenza di ogni server di pubblicazione.  
@@ -42,7 +41,7 @@ ms.locfileid: "62667237"
   
     3.  Fare clic con il pulsante destro del mouse su una sottoscrizione e quindi scegliere **Visualizza dettagli**.  
   
-2.  Nella finestra dei dettagli **Sottoscrizione \<NomeSottoscrizione>** fare clic su **Azione** e quindi scegliere **Aggiornamento automatico**. La frequenza di aggiornamento viene determinata dall'impostazione **Frequenza di aggiornamento** nella finestra di dialogo **Impostazioni server di pubblicazione** .  
+2.  Nella finestra **Dettagli \<SubscriptionName> sottoscrizione** fare clic su **azione**e quindi su **aggiornamento automatico**. La frequenza di aggiornamento viene determinata dall'impostazione **Frequenza di aggiornamento** nella finestra di dialogo **Impostazioni server di pubblicazione** .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Monitoraggio della replica](../monitoring-replication.md)  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a34a3e69e157894b29db48da19f44d1e35dad746
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 57fb59a3954fb00ab943944c58cccd352c7270d2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62524264"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014349"
 ---
 # <a name="use-the-eventdata-function"></a>Utilizzo della funzione EVENTDATA
   La funzione EVENTDATA consente di acquisire le informazioni relative a un evento che attiva un trigger DDL. La funzione restituisce un valore `xml`. XML Schema include le informazioni relative a:  
@@ -49,7 +48,7 @@ AS
   
  `CREATE TABLE NewTable (Column1 int);`  
   
- L'istruzione `EVENTDATA()` nel trigger DDL acquisisce il testo dell'istruzione `CREATE TABLE` , che non è consentita. Per ottenere questo risultato, è possibile utilizzare un'istruzione `xml` XQuery sui dati generati da EVENTDATA e recuperare l' \<elemento CommandText>. Per altre informazioni, vedere [Riferimento al linguaggio XQuery &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
+ L'istruzione `EVENTDATA()` nel trigger DDL acquisisce il testo dell'istruzione `CREATE TABLE` , che non è consentita. Per ottenere questo risultato, è possibile utilizzare un'istruzione XQuery sui `xml` dati generati da EVENTDATA e recuperare l' \<CommandText> elemento. Per altre informazioni, vedere [Riferimento al linguaggio XQuery &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
   
 > [!CAUTION]  
 >  EVENTDATA acquisisce i dati degli eventi CREATE_SCHEMA e, se presente, il contenuto di <schema_element> della definizione CREATE SCHEMA corrispondente. Riconosce inoltre la definizione <schema_element> come evento separato. Un trigger DDL creato in un evento CREATE_SCHEMA e un evento rappresentato dal contenuto di <schema_element> della definizione CREATE SCHEMA possono pertanto restituire due volte gli stessi dati di evento, ad esempio i dati `TSQLCommand`. Si consideri ad esempio la creazione di un trigger DDL su entrambi gli eventi CREATE_SCHEMA e CREATE_TABLE e la successiva esecuzione del batch seguente:  

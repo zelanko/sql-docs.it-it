@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 944d18abf073ffc5cb958e7139616e745504ce23
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c781435bdf8458b7f2714141d659750b0f31055
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67793922"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998046"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>Replica transazionale peer-to-peer
   La replica peer-to-peer rappresenta una soluzione per la scalabilità orizzontale ad elevata disponibilità in quanto consente di gestire copie dei dati in più istanze del server, definite *nodi*. Compilata sulle basi della replica transazionale, la replica peer-to-peer propaga quasi in tempo reale modifiche coerenti dal punto di vista transazionale. In tal modo le applicazioni che richiedono la scalabilità orizzontale delle operazioni di lettura possono distribuire le operazioni di lettura dei client in più nodi. Perché i dati vengono gestiti nei nodi quasi in tempo reale, la replica peer-to-peer offre quella funzionalità di ridondanza dei dati che consente di aumentare la disponibilità dei dati.  
@@ -137,24 +136,24 @@ ms.locfileid: "67793922"
   
 -   Il parametro **-SubscriptionStreams** dell'agente di distribuzione e il parametro **-MaxCmdsInTran**dell'agente di lettura log.  
   
--   Le proprietà ** \@** degli articoli destination_owner e ** \@destination_table**.  
+-   Le proprietà degli articoli ** \@ destination_owner** e ** \@ destination_table**.  
 
 -   La replica transazionale peer-to-peer non supporta la creazione di una sottoscrizione transazionale unidirezionale di una pubblicazione peer-to-peer.
   
  Per le proprietà indicate di seguito sono presenti considerazioni speciali:  
   
--   La proprietà ** \@** di pubblicazione allow_initialize_from_backup richiede un valore `true`di.  
+-   La proprietà di pubblicazione ** \@ allow_initialize_from_backup** richiede un valore di `true` .  
   
--   La proprietà ** \@** di articolo replicate_ddl richiede un valore `true`di. identityrangemanagementoption richiede un valore di `manual`. ** \@** lo stato richiede che l'opzione **24** sia impostata. ** \@**  
+-   La proprietà di articolo ** \@ replicate_ddl** richiede un valore di `true` . ** \@ identityrangemanagementoption** richiede un valore di `manual` . ** \@ lo stato** richiede che l'opzione **24** sia impostata.  
   
--   Il valore per le proprietà ** \@** degli articoli ins_cmd, ** \@del_cmd**e ** \@upd_cmd** non può essere `SQL`impostato su.  
+-   Il valore per le proprietà degli articoli ** \@ ins_cmd**, ** \@ del_cmd**e ** \@ upd_cmd** non può essere impostato su `SQL` .  
   
--   La proprietà `none` `automatic` ** \@** della sottoscrizione sync_type richiede un valore di o.  
+-   La proprietà della sottoscrizione ** \@ sync_type** richiede un valore di `none` o `automatic` .  
   
 ### <a name="maintenance-considerations"></a>Considerazioni relative alla manutenzione  
  Per le operazioni seguenti è necessario mettere il sistema in stato di inattività, ovvero arrestare le attività sulle tabelle pubblicate in tutti i nodi e verificare che ogni nodo abbia ricevuto tutte le modifiche dagli altri nodi:  
   
--   Aggiunta di [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] un nodo a una topologia esistente  
+-   Aggiunta [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] di un nodo a una topologia esistente  
   
 -   Aggiunta di un articolo a una pubblicazione esistente  
   
@@ -168,7 +167,7 @@ ms.locfileid: "67793922"
   
 -   Non è possibile reinizializzare le sottoscrizioni in una topologia peer-to-peer. Per garantire che un nodo disponga di una nuova copia dei dati, ripristinare un backup nel nodo stesso.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Amministrare una topologia peer-to-peer &#40;la programmazione Transact-SQL della replica&#41;](../administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Strategie per il backup e il ripristino della replica snapshot e della replica transazionale](../administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
  [Tipi di pubblicazioni per la replica transazionale](transactional-replication.md)  

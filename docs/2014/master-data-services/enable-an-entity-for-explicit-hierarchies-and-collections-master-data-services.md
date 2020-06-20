@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 380e77e5-ad60-43d4-9605-34a84525f5dd
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 113f73bd363ca866f45e439eb5d599b177a910ce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66b4ffa868c6e488c4a4c008609a2c36cdb47104
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054153"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961761"
 ---
 # <a name="enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services"></a>Abilitare un'entità per gerarchie esplicite e raccolte (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] abilitare un'entità per le gerarchie esplicite e le raccolte in modo che sia possibile creare gerarchie e raccolte per la stessa entità.  
@@ -58,7 +57,7 @@ ms.locfileid: "66054153"
   
 -   [Creare una raccolta &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Entità &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   
  [Gerarchie esplicite &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
  [Raccolte &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  

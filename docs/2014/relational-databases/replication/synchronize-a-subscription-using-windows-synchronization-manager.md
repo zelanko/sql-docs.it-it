@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 04b1c5322408f66ab2a4023e3d215cc7e669eab6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49f1b0832fb82425874b656715091f793b79dfd5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745760"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004494"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>Sincronizzazione di una sottoscrizione mediante Gestione sincronizzazione Microsoft Windows (Gestione sincronizzazione Microsoft Windows)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Synchronization Manager può essere utilizzato solo per sincronizzare le sottoscrizioni con le pubblicazioni Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito nello stesso computer in cui è installato il componente Gestione sincronizzazione, nonché per sincronizzare pagine Web e file offline. Per utilizzare Gestione sincronizzazione:  
   
-1.  Abilitare la sincronizzazione delle sottoscrizioni pull con Gestione sincronizzazione Microsoft Windows nella finestra di dialogo **Proprietà sottoscrizione - \<Sottoscrittore>: \<DatabaseSottoscrizione>**. Per altre informazioni sull'accesso a questa finestra di dialogo, vedere [Visualizzare e modificare le proprietà delle sottoscrizioni pull](view-and-modify-pull-subscription-properties.md).  
+1.  Abilitare la sincronizzazione delle sottoscrizioni pull con Gestione sincronizzazione Microsoft Windows nella finestra di dialogo **Proprietà sottoscrizione- \<Subscriber> : \<SubscriptionDatabase> ** . Per altre informazioni sull'accesso a questa finestra di dialogo, vedere [Visualizzare e modificare le proprietà delle sottoscrizioni pull](view-and-modify-pull-subscription-properties.md).  
   
 2.  Accedere a Gestione sincronizzazione mediante il menu **Start** di Windows.  
   
@@ -34,7 +33,7 @@ ms.locfileid: "62745760"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>Per abilitare la sincronizzazione delle sottoscrizioni pull con Gestione sincronizzazione Microsoft Windows  
   
-1.  Nella pagina **Generale** della finestra di dialogo **Proprietà sottoscrizione - \<Sottoscrittore>: \<DatabaseSottoscrizione>** selezionare il valore **Attiva** per l'opzione **Usa Gestione sincronizzazione Microsoft Windows**.  
+1.  Nella pagina **generale** della finestra di dialogo **Proprietà sottoscrizione \<Subscriber> - \<SubscriptionDatabase> :** selezionare il valore **attiva** per l'opzione **Usa Gestione sincronizzazione Microsoft Windows** .  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -79,7 +78,7 @@ ms.locfileid: "62745760"
   
     -   **Informazioni server Web** (per le sottoscrizioni di tipo merge nei Sottoscrittori in cui è in esecuzione SQL Server 2005 o versione successiva)  
   
-    -   **Altro**  
+    -   **Altri**  
   
      È consigliabile utilizzare l'autenticazione di Windows per tutte le connessioni. Per informazioni sulle autorizzazioni necessarie con l'agente di distribuzione e l'agente di merge, vedere [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
@@ -116,6 +115,6 @@ ms.locfileid: "62745760"
 > [!NOTE]  
 >  Le modifiche vengono applicate solo se fanno parte della riga scelta per la risoluzione. Se, ad esempio, si apportano modifiche nel **Server di pubblicazione**e quindi si fa clic su **Accetta Sottoscrittore**, le modifiche verranno ignorate.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md)  
   

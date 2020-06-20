@@ -40,13 +40,12 @@ helpviewer_keywords:
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 70e31ec60f8f47dfbc0a4761357c99a42623c6eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e6d7fdce36d42591b0f2dda8ae6a08b6dbef4953
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74479319"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060492"
 ---
 # <a name="publish-data-and-database-objects"></a>Pubblicazione di dati e oggetti di database
   Quando si crea una pubblicazione, è possibile scegliere le tabelle e gli altri oggetti di database che si desidera pubblicare. Tramite la replica è possibile pubblicare gli oggetti di database elencati di seguito.  
@@ -170,7 +169,7 @@ ms.locfileid: "74479319"
     > [!NOTE]  
     >  Se in una pubblicazione di tipo merge si aggiunge un nuovo articolo dal quale dipende un articolo esistente, è necessario specificare l'ordine di elaborazione per entrambi gli articoli tramite il parametro **\@processing_order** di [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) e [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Si consideri lo scenario seguente: viene pubblicata una tabella, ma non viene pubblicata una funzione a cui fa riferimento la tabella. Se non si pubblica la funzione, la tabella non può essere creata nel Sottoscrittore. Quando si aggiunge la funzione alla pubblicazione, specificare il valore **1** per il parametro **\@processing_order** di **sp_addmergearticle** e il valore **2** per il parametro **\@processing_order** di **sp_changemergearticle**, indicando il nome della tabella per il parametro **\@article**. Questo ordine di elaborazione consente di creare la funzione nel Sottoscrittore prima della tabella dipendente. È possibile utilizzare numeri diversi per ogni articolo, a condizione che il numero della funzione sia inferiore al numero della tabella.  
   
--   I nomi delle pubblicazioni non possono includere i caratteri seguenti: % * [ ] | : " ? \/ \< >.  
+-   I nomi delle pubblicazioni non possono includere i caratteri seguenti: % * [ ] | : " ? \ / \< >.  
   
 ### <a name="limitations-on-publishing-objects"></a>Limitazioni relative alla pubblicazione di oggetti  
   
@@ -184,7 +183,7 @@ ms.locfileid: "74479319"
   
 -   I valori predefiniti associati creati con [sp_bindefault &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-bindefault-transact-sql) non vengono replicati. I valori predefiniti associati sono deprecati e sono stati sostituiti dai valori predefiniti creati con la parola chiave DEFAULT di ALTER TABLE o CREATE TABLE.  
   
--   Le funzioni contenenti l'hint `NOEXPAND` su viste indicizzate non possono essere pubblicate nella stessa pubblicazione delle tabelle con riferimenti e viste indicizzate a causa dell'ordine in cui sono consegnate dall'agente di distribuzione. Per risolvere questo problema, collocare la creazione di tabella e vista indicizzata in una prima pubblicazione, e aggiungere funzioni contenenti l'hint `NOEXPAND` sulle viste indicizzate di una seconda pubblicazione, che sarà pubblicata dopo il completamento della prima. In alternativa, creare script per queste funzioni e recapitare lo script * \@* utilizzando il parametro `sp_addpublication`post_snapshot_script di.  
+-   Le funzioni contenenti l'hint `NOEXPAND` su viste indicizzate non possono essere pubblicate nella stessa pubblicazione delle tabelle con riferimenti e viste indicizzate a causa dell'ordine in cui sono consegnate dall'agente di distribuzione. Per risolvere questo problema, collocare la creazione di tabella e vista indicizzata in una prima pubblicazione, e aggiungere funzioni contenenti l'hint `NOEXPAND` sulle viste indicizzate di una seconda pubblicazione, che sarà pubblicata dopo il completamento della prima. In alternativa, creare script per queste funzioni e recapitare lo script utilizzando il parametro * \@ post_snapshot_script* di `sp_addpublication` .  
   
 ### <a name="schemas-and-object-ownership"></a>Schemi e proprietà degli oggetti  
  In relazione agli schemi e alla proprietà degli oggetti, la replica ha il seguente comportamento predefinito nella Creazione guidata nuova pubblicazione:  
@@ -197,7 +196,7 @@ ms.locfileid: "74479319"
   
 -   Per articoli di pubblicazioni che usano snapshot in modalità carattere (usati per Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e Sottoscrittori [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ): per impostazione predefinita, il proprietario rimane vuoto. Il proprietario viene impostato sul proprietario associato all'account utilizzato dall'agente di distribuzione o dall'agente di merge per la connessione al Sottoscrittore.  
   
- Il proprietario dell'oggetto può essere modificato tramite la finestra di dialogo **Proprietà articolo - \<***Articolo***>** e tramite le stored procedure **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** e **sp_changemergearticle**. Per altre informazioni, vedere [Visualizzare e modificare le proprietà della pubblicazione](view-and-modify-publication-properties.md), [Definire un articolo](define-an-article.md) e [Visualizzare e modificare le proprietà degli articoli](view-and-modify-article-properties.md).  
+ Il proprietario dell'oggetto può essere modificato tramite la finestra di dialogo **Proprietà articolo- \<***Article***> ** e tramite le stored procedure seguenti: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle**e **sp_changemergearticle**. Per altre informazioni, vedere [Visualizzare e modificare le proprietà della pubblicazione](view-and-modify-publication-properties.md), [Definire un articolo](define-an-article.md) e [Visualizzare e modificare le proprietà degli articoli](view-and-modify-article-properties.md).  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>Pubblicazione di dati per Sottoscrittori che eseguono versioni precedenti di SQL Server  
   

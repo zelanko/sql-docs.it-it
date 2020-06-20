@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 811db11aecb5e6c0f4c68d272040aea3f8e38ca4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef64fbbeb2b8953ff3816db63572b499d42f012e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184533"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037833"
 ---
 # <a name="surface-area-configuration"></a>Configurazione superficie di attacco
   Nella configurazione predefinita delle nuove installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]molte funzionalità non sono abilitate. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installa in modo selettivo e avvia solo le funzionalità e i servizi chiave in modo da ridurre al minimo il numero di funzionalità che potrebbero essere attaccate da un utente malintenzionato. L'amministratore di sistema può modificare i valori predefiniti al momento dell'installazione e abilitare o disabilitare in modo selettivo le caratteristiche di un'istanza in esecuzione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Alcuni componenti, inoltre, potrebbero non essere disponibili durante la connessione da altri computer fino a quando non si configurano i protocolli.  

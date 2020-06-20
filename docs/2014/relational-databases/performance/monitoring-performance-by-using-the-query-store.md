@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 192c38bc189928cf980ab0141e53ab12f37d805c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e5d74b9c4def9c0314569a8d0bd87939cdcb11b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175870"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038705"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoraggio delle prestazioni con Archivio query
   La funzionalità dell'archivio query mette a disposizione degli amministratori di database informazioni dettagliate sulle prestazioni e sulla scelta del piano di query. Semplifica la risoluzione dei problemi in quanto consente di individuare rapidamente le variazioni delle prestazioni causate da modifiche nei piani di query. La funzionalità acquisisce automaticamente una cronologia delle query, dei piani e delle statistiche di runtime e li conserva in modo che sia possibile esaminarli successivamente. I dati vengono separati dagli intervalli di tempo, consentendo di visualizzare i modelli di utilizzo del database e capire quando sono state apportate modifiche al piano di query nel server. Per configurare l'archivio query, è possibile usare l'opzione [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) .
@@ -506,7 +505,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 
  Se si usa `sp_query_store_force_plan`, è possibile forzare solo piani che sono stati registrati da Archivio query come piani per tale query. In altre parole, gli unici piani disponibili per una query sono quelli già usati per eseguire Q1 mentre Archivio query era attivo.
 
- **Rimuovere l'utilizzo forzato del piano per una query.** Per basarsi nuovamente sul [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Query Optimizer per calcolare il piano di query ottimale, `sp_query_store_unforce_plan` utilizzare per disforzare il piano selezionato per la query.
+ **Rimuovere l'utilizzo forzato del piano per una query.** Per basarsi nuovamente sul [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Query Optimizer per calcolare il piano di query ottimale, utilizzare `sp_query_store_unforce_plan` per disforzare il piano selezionato per la query.
 
 ```
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;

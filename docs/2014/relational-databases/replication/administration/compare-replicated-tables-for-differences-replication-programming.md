@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd253a17-0c85-42b4-912c-690169ebe799
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 94d3faab4c831fe64e54a582a5f70b2ae6b664e4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a7d6315a8d8237effe5ae888d303e3aab0dcef1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210781"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038413"
 ---
 # <a name="compare-replicated-tables-for-differences-replication-programming"></a>Confronto di tabelle replicate al fine di individuare le differenze (programmazione della replica)
   La convalida degli articoli consente di determinare se i dati pubblicati per gli articoli di tabella nel server di pubblicazione e nel Sottoscrittore non sono identici, fattore che può indicare la mancanza di convergenza. Per altre informazioni, vedere [Convalidare i dati replicati](../validate-data-at-the-subscriber.md). La convalida restituisce tuttavia solo un risultato positivo o negativo e non fornisce informazioni sulle differenze specifiche tra le tabelle di origine e di destinazione. L'utilità del prompt dei comandi **tablediff** restituisce informazioni dettagliate sulle differenze tra due tabelle e può anche generare uno script [!INCLUDE[tsql](../../../includes/tsql-md.md)] per ripristinare la convergenza tra una sottoscrizione e i dati nel server di pubblicazione.  
@@ -72,7 +71,7 @@ ms.locfileid: "68210781"
   
     -   (Facoltativo) Utilizzare **-strict** per imporre il confronto dello schema di tipo strict tra le tabelle di origine e di destinazione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Convalida dei dati nel Sottoscrittore](../validate-data-at-the-subscriber.md)  
   
   

@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4fb116d7-7652-474a-a567-cb475a20765c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c01abd0eb56be4b8037aa9e03465c00a169c9967
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0f83676f981742158ffad7f2d9ac5b50949172fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717520"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060082"
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>Eliminazione di dati mediante updategram XML (SQLXML 4.0)
-  Un updategram indica un'operazione di eliminazione quando un'istanza di record viene visualizzata nel blocco ** \< before>** senza record corrispondenti nel blocco ** \< after>** . In questo caso, l'updategram elimina il record nel ** \<>prima** del blocco dal database.  
+  Un updategram indica un'operazione di eliminazione quando un'istanza di record viene visualizzata nel **\<before>** blocco senza record corrispondenti nel **\<after>** blocco. In questo caso, l'updategram elimina il record nel **\<before>** blocco dal database.  
   
  Di seguito viene illustrato il formato dell'updategram per un'operazione di eliminazione:  
   
@@ -41,11 +40,11 @@ ms.locfileid: "82717520"
 </ROOT>  
 ```  
   
- È possibile omettere il tag ** \< after>** se l'updategram sta eseguendo solo un'operazione di eliminazione. Se non si specifica l'attributo facoltativo `mapping-schema` , l' ** \< elemento ElementName>** specificato nell'updategram esegue il mapping a una tabella di database e gli attributi o gli elementi figlio eseguono il mapping alle colonne della tabella.  
+ È possibile omettere il **\<after>** tag se l'updategram sta eseguendo solo un'operazione di eliminazione. Se non si specifica l'attributo facoltativo `mapping-schema` , l' **\<ElementName>** oggetto specificato nell'updategram esegue il mapping a una tabella di database e gli attributi o gli elementi figlio eseguono il mapping alle colonne nella tabella.  
   
- Se un elemento specificato nell'updategram corrisponde a più di una riga nella tabella o non corrisponde ad alcuna riga, l'updategram restituisce un errore e Annulla l'intero blocco>di ** \< sincronizzazione** . Un elemento dell'updategram può eliminare un solo record per volta.  
+ Se un elemento specificato nell'updategram corrisponde a più di una riga nella tabella o non corrisponde ad alcuna riga, l'updategram restituisce un errore e Annulla l'intero **\<sync>** blocco. Un elemento dell'updategram può eliminare un solo record per volta.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Negli esempi presentati in questa sezione viene utilizzato il mapping predefinito, ovvero non viene specificato alcuno schema di mapping nell'updategram. Per ulteriori esempi di updategram che utilizzano schemi di mapping, vedere [specifica di uno schema di mapping con annotazioni in un Updategram &#40;SQLXML 4,0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
  Per creare esempi funzionanti utilizzando gli esempi seguenti, è necessario soddisfare i requisiti specificati nei [requisiti per l'esecuzione di esempi SQLXML](../../sqlxml/requirements-for-running-sqlxml-examples.md).  
@@ -55,7 +54,7 @@ ms.locfileid: "82717520"
   
  In questi esempi l'updategram non specifica uno schema di mapping, pertanto utilizza il mapping predefinito nel quale il nome dell'elemento esegue il mapping a un nome di tabella e gli attributi o i sottoelementi eseguono il mapping alle colonne.  
   
- Il primo updategram è incentrato sugli attributi e identifica due turni (giorno-sera e sera-notte) nel blocco ** \< before>** . Poiché non esiste un record corrispondente nel blocco ** \< after>** , si tratta di un'operazione di eliminazione.  
+ Il primo updategram è incentrato sugli attributi e identifica due turni (giorno-sera e sera-notte) nel **\<before>** blocco. Poiché nel blocco non è presente alcun record corrispondente **\<after>** , si tratta di un'operazione di eliminazione.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -82,7 +81,7 @@ ms.locfileid: "82717520"
   
 1.  Completare l'esempio B ("inserimento di più record utilizzando un updategram") nell' [inserimento di dati tramite UPDATEGRAM XML &#40;SQLXML 4,0&#41;](inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
   
-2.  Copiare l'updategram precedente nel blocco note e salvarlo come Updategram-RemoveShifts. XML nella stessa cartella utilizzata per completare ("inserimento di più record utilizzando un updategram") nell' [inserimento di dati mediante UPDATEGRAM xml &#40;SQLXML 4,0&#41;](inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
+2.  Copiare l'updategram precedente nel blocco note e salvarlo come Updategram-RemoveShifts.xml nella stessa cartella utilizzata per completare ("inserimento di più record utilizzando un updategram") nell' [inserimento di dati mediante UPDATEGRAM XML &#40;SQLXML 4,0&#41;](inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire l'updategram.  
   

@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: b8b3b892-cb73-41d0-b945-bce148d81d9b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cb266c198b7c828f1f8842cf4ffa3dc9c1de10e9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4844ae1b242db1cc8aace7eecc78d58351bf839b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702987"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014964"
 ---
 # <a name="using-updategrams-to-modify-data-in-sqlxml-40"></a>Utilizzo di updategram per modificare dati in SQLXML 4.0
   È possibile modificare (inserire, aggiornare o eliminare) un database in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da un documento XML esistente utilizzando un updategram o la [!INCLUDE[tsql](../../../includes/tsql-md.md)] funzione OPENXML.  
