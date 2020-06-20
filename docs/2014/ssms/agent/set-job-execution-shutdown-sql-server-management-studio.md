@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: ac23e88f-53fc-41de-bb16-0c27c002d5a5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ca9343fe8a6f9e89ba9f26dbbbb12dd7362aff91
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b1200a7cbd0f6b59e43af81f5414f9946801e093
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033603"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067556"
 ---
 # <a name="set-job-execution-shutdown-sql-server-management-studio"></a>Set Job Execution Shutdown (SQL Server Management Studio)
-  In questo argomento viene descritto come impostare il periodo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di attesa di Agent prima che l'esecuzione dei processi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] venga completata prima che [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] l'agente [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]venga terminato in tramite.  
+  In questo argomento viene descritto come impostare il periodo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attesa di Agent prima che l'esecuzione dei processi venga completata prima che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'agente venga terminato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
  **Contenuto dell'articolo**  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 58254a5c9f9031e4657f7a3a2eb5cb73be4fbdea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d13feb3a13cb96ec3cf0a3006b807740944434b8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62927230"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962371"
 ---
 # <a name="system-variables"></a>Variabili di sistema
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include un set di variabili di sistema in cui vengono archiviate informazioni sui pacchetti in esecuzione e sui relativi oggetti. Tali variabili possono essere utilizzate nelle espressioni e nelle espressioni di proprietà per personalizzare pacchetti, contenitori, attività e gestori di eventi.  
@@ -41,7 +40,7 @@ ms.locfileid: "62927230"
 |`ExecutionInstanceGUID`|string|Identificatore univoco dell'istanza di esecuzione di un pacchetto.|  
 |`FailedConfigurations`|string|Nomi di configurazioni di pacchetti non riuscite.|  
 |`IgnoreConfigurationsOnLoad`|Boolean|Indica se le configurazioni di pacchetti vengono ignorate in fase di caricamento del pacchetto.|  
-|**InteractiveMode**|Boolean|Indica se il pacchetto viene eseguito in modalità interattiva. Se un pacchetto viene eseguito in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)], questa proprietà viene impostata su `True`. Se un pacchetto viene eseguito tramite l'utilità del prompt dei comandi **dtexec** , la proprietà viene `False`impostata su.|  
+|**InteractiveMode**|Boolean|Indica se il pacchetto viene eseguito in modalità interattiva. Se un pacchetto viene eseguito in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)], questa proprietà viene impostata su `True`. Se un pacchetto viene eseguito tramite l'utilità del prompt dei comandi **dtexec** , la proprietà viene impostata su `False` .|  
 |`LocaleId`|Int32|Impostazioni locali utilizzate dal pacchetto.|  
 |**MachineName**|string|Nome del computer in cui viene eseguito il pacchetto.|  
 |**OfflineMode**|Boolean|Indica se il pacchetto è in modalità offline. La modalità offline non acquisisce connessioni a origini dei dati.|  

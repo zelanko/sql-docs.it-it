@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7ab77d42-8e84-4396-aa7f-47e2b84d59b2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 037e3c9c61b2c6648ec1194a766256d5e6cae5cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d291ec9a406ee954d04b57ff73475dfe83777fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149337"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054413"
 ---
 # <a name="install-distributed-replay"></a>Installare Riesecuzione distribuita
   Utilizzare gli argomenti seguenti per installare la funzionalità di Riesecuzione distribuita.  

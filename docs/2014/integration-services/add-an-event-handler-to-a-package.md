@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5e56885d-8658-480a-bed9-3f2f8003fd78
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 589d90b52647241b22929473efc9c6e54eb3b75f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b20ebca153e9aa1eead2e288831a26c40e2dbd5d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062033"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926282"
 ---
 # <a name="add-an-event-handler-to-a-package"></a>Aggiunta di un gestore eventi a un pacchetto
   In fase di esecuzione contenitori e attività generano eventi. È possibile creare gestori di eventi personalizzati che rispondono a tali eventi eseguendo un flusso di lavoro alla generazione dell'evento. Ad esempio, è possibile creare un gestore di evento che invia un messaggio di posta elettronica quando un'attività non viene completata correttamente.  
@@ -54,7 +53,7 @@ ms.locfileid: "66062033"
   
 9. Scegliere **Salva elementi selezionati** dal menu **File** per salvare il pacchetto.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server Integration Services](../../2014/integration-services/sql-server-integration-services.md)   
  [Registrazione di Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
   

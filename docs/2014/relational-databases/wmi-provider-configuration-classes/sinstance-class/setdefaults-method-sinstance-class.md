@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: dc3c6a85-0711-4688-bf4f-91168c57af28
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ad13821341291a91a989297f29e1459a40de5afe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e1d3b9a65af98f5843cc765a406cfa5ada203a0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62720943"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061335"
 ---
 # <a name="setdefaults-method-sinstance-class"></a>Metodo SetDefaults (classe SInstance)
   Imposta tutti i valori predefiniti per l'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con l'opzione per sovrascrivere i dati esistenti.  
@@ -40,7 +39,7 @@ OverwriteAll
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  Oggetto della [classe SInstance](sinstance-class.md) che rappresenta un'istanza del server.  
   
 #### <a name="parameters"></a>Parametri  
@@ -54,7 +53,7 @@ OverwriteAll
   
 ## <a name="remarks"></a>Osservazioni  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurazione di protocolli di rete server e di librerie di rete](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

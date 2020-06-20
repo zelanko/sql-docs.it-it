@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c95fa60-5b8e-4a05-ac09-cffe2b05900a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0ec81ae3a078846ad9288fe75eab9fe30d547a4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef99d711a772a075f568a83f5d56fcecaaa598f0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110054"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068048"
 ---
 # <a name="populating-a-hierarchical-table-using-hierarchical-methods"></a>Popolamento di una tabella gerarchica utilizzando metodi gerarchici
   [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ha 8 dipendenti che lavorano nel reparto Marketing. La gerarchia dei dipendenti è simile alla seguente:  
@@ -64,7 +63,7 @@ ms.locfileid: "66110054"
   
 ### <a name="to-insert-a-subordinate-employee"></a>Per inserire un dipendente subordinato  
   
-1.  **Sariya** fa riferimento a **David**. Per inserire **il** nodo di Sariya, è necessario creare un valore **OrgNode** appropriato del tipo `hierarchyid`di dati. Il codice seguente crea una variabile di tipo dato `hierarchyid` e la popola con il valore OrgNode radice della tabella. A questo punto usa la variabile con il metodo [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) per inserire la riga che è un nodo subordinato. `GetDescendant` accetta due argomenti. Rivedere le opzioni seguenti per i valori dell'argomento:  
+1.  **Sariya** fa riferimento a **David**. Per inserire **il** nodo di Sariya, è necessario creare un valore **OrgNode** appropriato del tipo di dati `hierarchyid` . Il codice seguente crea una variabile di tipo dato `hierarchyid` e la popola con il valore OrgNode radice della tabella. A questo punto usa la variabile con il metodo [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) per inserire la riga che è un nodo subordinato. `GetDescendant` accetta due argomenti. Rivedere le opzioni seguenti per i valori dell'argomento:  
   
     -   Se il padre è NULL, `GetDescendant` restituisce NULL.  
   

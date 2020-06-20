@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 25cf8bdd-8691-4caa-96b6-3081b2f37dea
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d01cf5aa2a57ace05cdf7d6da02f1f082d77b0bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 16a86fa9098efcd6f4d8d46917df175667414dd9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054492"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972491"
 ---
 # <a name="view-path-metadata-in-the-data-flow-path-editor"></a>Visualizzazione dei metadati dei percorsi nell'Editor percorso flusso di dati
   I percorsi connettono due componenti flusso di dati. Affinché sia possibile visualizzare i metadati di un percorso, il flusso di dati deve contenere almeno due componenti connessi. Per altre informazioni, vedere [Aggiunta o eliminazione di un componente in un flusso di dati](data-flow/add-or-delete-a-component-in-a-data-flow.md) e [Connessione di componenti in un flusso di dati](data-flow/connect-components-in-a-data-flow.md).  
@@ -39,7 +38,7 @@ ms.locfileid: "66054492"
   
 7.  Fare clic su **OK**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Percorsi di Integration Services](data-flow/integration-services-paths.md)   
  [Flusso di dati](data-flow/data-flow.md)  
   

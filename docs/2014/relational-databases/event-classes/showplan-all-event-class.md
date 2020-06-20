@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ee341319-c34a-43e3-ad33-6bfb1f85e314
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 487aaee17be13727f2c23de42b95afcc27b0b939
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07777c543534af1794b13a09090a47aee76e79a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662195"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052569"
 ---
 # <a name="showplan-all-event-class"></a>Showplan All - classe di evento
   La classe di evento Showplan All viene generata quando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue un'istruzione SQL. Le informazioni incluse sono tuttavia un subset delle informazioni disponibili nelle classi di evento Showplan XML Statistics o Showplan XML.  
@@ -59,7 +58,7 @@ ms.locfileid: "62662195"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|`bigint`|Token usato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [sp_trace_setevent &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Guida di riferimento a operatori Showplan logici e fisici](../showplan-logical-and-physical-operators-reference.md)   

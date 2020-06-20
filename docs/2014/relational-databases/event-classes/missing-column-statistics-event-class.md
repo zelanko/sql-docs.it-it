@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b9321143-3f29-4a19-8471-7085669282ef
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 43a83d0b20bbcdb0b95dd727a51d59353f7675bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d69196824600d3281663b461465419f16001b8ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023425"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052893"
 ---
 # <a name="missing-column-statistics-event-class"></a>Missing Column Statistics - classe di evento
   La classe di evento Missing Column Statistics indica che le statistiche di colonna, utilizzabili da Query Optimizer, non sono disponibili.  
@@ -52,7 +51,7 @@ ms.locfileid: "63023425"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|`bigint`|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [CREAZIONE di statistiche &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-statistics-transact-sql)   
  [Monitoraggio e risposta agli eventi](../../ssms/agent/monitor-and-respond-to-events.md)  

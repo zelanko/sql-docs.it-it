@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d5782892-e9d8-4d48-92af-b3afe9610f84
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 65f9c926a75ae4d64e54d6f600aba2a70f0482cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d2b4d5c42401a46f9840871d071c27dccf07b04
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63218101"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059714"
 ---
 # <a name="setserviceaccount-method-sqlservice-class"></a>Metodo SetServiceAccount (classe SqlService)
   Tenta di modificare il nome utente e la password con cui è in esecuzione l'istanza del servizio.  
@@ -40,7 +39,7 @@ ServiceStartName , ServiceStartPassword
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  Oggetto della [classe SqlService](sqlservice-class.md) che rappresenta il servizio.  
   
 #### <a name="parameters"></a>Parametri  
@@ -61,7 +60,7 @@ ServiceStartName , ServiceStartPassword
   
 ## <a name="remarks"></a>Osservazioni  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Avvio e arresto di servizi](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

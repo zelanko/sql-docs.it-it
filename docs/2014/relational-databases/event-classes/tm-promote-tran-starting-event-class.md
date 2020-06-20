@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 32da85bb-d980-4044-8572-31372867649b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 43deb215fded67055c069dd629dcb5553b663f71
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b8975b99640d539827b480d6e7650acb4fd089fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061362"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051363"
 ---
 # <a name="tm-promote-tran-starting-event-class"></a>TM: Promote Tran Starting - classe di evento
   La classe di evento TM: Promote Tran Starting indica l'avvio di una richiesta PROMOTE TRANSACTION. inviata dal client tramite l'interfaccia di gestione delle transazioni.  
@@ -49,7 +48,7 @@ ms.locfileid: "63061362"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|`bigint`|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

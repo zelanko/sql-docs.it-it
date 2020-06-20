@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0187f413-cdf0-48a2-b2e6-9b3578cd5811
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 846e7960e9aca4bfb5deea8f50eae3c8a2f58c70
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fc969dc09663da8150461529ad1e1f1fb094539
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184424"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055333"
 ---
 # <a name="sequence-properties-general-page"></a>Proprietà sequenza (pagina Generale)
   Crea un oggetto sequenza e ne specifica le proprietà. Una sequenza è un oggetto associato a schema definito dall'utente che genera una sequenza di valori numerici in base alla specifica con la quale è stata creata la sequenza. La sequenza di valori numerici viene generata in ordine crescente o decrescente a un intervallo definito e può essere configurata per riprendere dall'inizio (ciclo) quando è esaurita. Le sequenze, a differenza delle colonne Identity, non sono associate a tabelle specifiche. Le applicazioni fanno riferimento a un oggetto sequenza per recuperare il relativo valore successivo. La relazione tra sequenze e tabelle è controllata dall'applicazione. Le applicazioni utente possono fare riferimento a un oggetto sequenza e coordinare i valori di più righe e tabelle.  
@@ -86,7 +85,7 @@ ms.locfileid: "63184424"
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede l'autorizzazione **CREATE SEQUENCE**, **ALTER**o **CONTROL** per l'oggetto SCHEMA.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sys.sequences &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sequences-transact-sql)  
   
   

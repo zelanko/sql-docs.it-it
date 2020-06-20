@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 464e82ea23aa724d84af25c69a7168f95d09afe1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d4a9e07006444cf85a6d453e6dc8e2956d55e78
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78964366"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971821"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>Creare un amministratore di modelli (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare un amministratore di modelli quando si desidera che un gruppo o un utente disponga dell'autorizzazione **aggiornamento** per tutti gli oggetti in uno o più modelli.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] creare un amministratore di modelli quando si desidera che un gruppo o un utente disponga dell'autorizzazione **aggiornamento** per tutti gli oggetti in uno o più modelli.  
   
 > [!TIP]  
 >  Per semplificare l'amministrazione, creare un gruppo locale o di Windows e configurarlo come amministratore del modello. È quindi possibile aggiungere e rimuovere utenti nel gruppo senza accedere a [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
@@ -44,7 +43,7 @@ ms.locfileid: "78964366"
   
 5.  Facoltativamente selezionare un modello nell'elenco **Modello** .  
   
-6.  Fare clic su **Edit**.  
+6.  Fare clic su **Modifica**.  
   
 7.  Fare clic sul modello al quale si desidera concedere l'autorizzazione.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "78964366"
   
 10. Fare clic su **Salva**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Non assegnare altre autorizzazioni a oggetti modello o membri della gerarchia. In tal caso, l'utente non sarà più un amministratore e non potrà visualizzare il modello in un'area funzionale diversa da **Esplora risorse**.  
   
  Si verifica un'eccezione: se l'utente dispone dell'autorizzazione **aggiornamento** assegnata a una **radice** della gerarchia nella scheda **membri gerarchia** , l'utente è ancora considerato un amministratore di modelli.  

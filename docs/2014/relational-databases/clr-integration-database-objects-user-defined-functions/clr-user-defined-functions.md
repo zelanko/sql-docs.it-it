@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6f7491f1-9a46-4146-ae09-056248634de2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f48a62e1dff2fbc1d226077c2271e8a8a71efb2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ba7a4a983ec0cb36ef0fd79df44491f7f23f7648
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874485"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970771"
 ---
 # <a name="clr-user-defined-functions"></a>Funzioni CLR definite dall'utente
   Le funzioni definite dall'utente sono routine che possono accettare parametri, eseguire calcoli o altre azioni e restituire un risultato. A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], è possibile scrivere le funzioni definite dall'utente in qualsiasi linguaggio di programmazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, ad esempio [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.  
@@ -39,7 +38,7 @@ ms.locfileid: "62874485"
  [Aggregazioni CLR definite dall'utente](clr-user-defined-aggregates.md)  
  Viene descritto come implementare e utilizzare le aggregazioni definite dall'utente.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzioni definite dall'utente](../user-defined-functions/user-defined-functions.md)  
   
   

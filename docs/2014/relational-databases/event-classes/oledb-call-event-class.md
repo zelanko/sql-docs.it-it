@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e1be1e90-98cc-47a3-addd-59d4aeca6547
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2250847ee35210c63a4ac9ed5e1e41bab33a08ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a26781a34b75893dfb8aad54cea8e7f6d2c2e4b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62956340"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052866"
 ---
 # <a name="oledb-call-event-class"></a>OLEDB Call - classe di evento
   La classe di evento **OLEDB Call** viene generata quando in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguita la chiamata di un provider OLE DB per la richiesta di query distribuite e stored procedure remote.  
@@ -34,7 +33,7 @@ ms.locfileid: "62956340"
 |ClientProcessID|`Int`|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se tramite il client viene indicato l'ID del processo client.|9|Sì|  
 |DatabaseID|`Int`|ID del database specificato nell'istruzione USE *database* oppure il database predefinito se non è stata eseguita alcuna istruzione USE *database* per una determinata istanza. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |DatabaseName|`nvarchar`|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Sì|  
-|Durata|`Bigint`|Periodo di tempo necessario per completare l'evento OLE DB Call.|13|No|  
+|Duration|`Bigint`|Periodo di tempo necessario per completare l'evento OLE DB Call.|13|No|  
 |EndTime|`Datetime`|Ora di fine dell'evento.|15|Sì|  
 |Errore|`int`|Numero di errore di un evento specifico. Corrisponde spesso al numero di errore archiviato nella vista del catalogo sys.messages.|31|Sì|  
 |EventClass|`Int`|Tipo di evento = 119.|27|No|  
@@ -57,7 +56,7 @@ ms.locfileid: "62956340"
 |TextData|`nvarchar`|Parametri inviati e ricevuti nella chiamata OLE DB.|1|No|  
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Oggetti di automazione OLE in Transact-SQL](../stored-procedures/ole-automation-objects-in-transact-sql.md)  

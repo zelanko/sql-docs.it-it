@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9e8147a4-aeeb-49a6-80f8-df753d0f34cc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 056f9adb309f4f65ed1553efa80db597e7598e02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d1b0daf439816b2a5ee9ba852b95f0628d2c863
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050957"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051611"
 ---
 # <a name="spstmtcompleted-event-class"></a>SP:StmtCompleted - classe di evento
   La classe di evento SP:StmtCompleted indica che è stata completata un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] all'interno di una stored procedure.  
@@ -28,12 +27,12 @@ ms.locfileid: "63050957"
   
 |Nome colonna di dati|`Data type`|Descrizione|ID colonna|Filtrabile|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|Nome dell'applicazione client che ha creato la connessione a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione e non con il nome visualizzato del programma.|10|Sì|  
+|ApplicationName|`nvarchar`|Nome dell'applicazione client che ha creato la connessione a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questa colonna viene popolata con i valori passati dall'applicazione e non con il nome visualizzato del programma.|10|Sì|  
 |ClientProcessID|`int`|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se tramite il client viene indicato l'ID del processo client.|9|Sì|  
 |CPU|`int`|Tempo della CPU in millisecondi utilizzato dall'evento.|18|Sì|  
 |DatabaseID|`int`|ID del database nel quale viene eseguita la stored procedure. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |DatabaseName|`nvarchar`|Nome del database nel quale viene eseguita la stored procedure.|35|Sì|  
-|Durata|`bigint`|Durata dell'evento in microsecondi.|13|Sì|  
+|Duration|`bigint`|Durata dell'evento in microsecondi.|13|Sì|  
 |EndTime|`datetime`|Ora di fine dell'evento. Questa colonna non viene popolata per le classi degli eventi di avvio, ad esempio SQL:BatchStarting o SP:Starting.|15|Sì|  
 |EventClass|`int`|Tipo di evento = 45.|27|No|  
 |EventSequence|`int`|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
@@ -65,7 +64,7 @@ ms.locfileid: "63050957"
 |Scritture|`bigint`|Numero di scritture fisiche su disco eseguite dal server per conto dell'evento.|17|Sì|  
 |XactSequence|`bigint`|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

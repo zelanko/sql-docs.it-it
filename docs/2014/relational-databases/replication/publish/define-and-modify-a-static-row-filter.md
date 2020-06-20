@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a6ebb026-026f-4c39-b6a9-b9998c3babab
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7bb7aebed25c571108e4b0d7e7366fc52c45e3c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d13fd93b6afdcce6b55e9b181f52087fd620913c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882301"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060607"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>Definizione e modifica di un filtro di riga statico
   In questo argomento viene descritto come definire e modificare un filtro di riga statico in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -51,11 +50,11 @@ ms.locfileid: "73882301"
 -   Poiché questi filtri sono statici, tutti i sottoscrittori riceveranno lo stesso subset di dati. Se è necessario filtrare dinamicamente le righe in un articolo di tabella appartenente a una tabella di tipo merge, in modo che ogni sottoscrittore riceva una partizione diversa dei dati, vedere [Definizione e modifica di un filtro di riga con parametri per un articolo di merge](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md). La replica di tipo merge consente inoltre di filtrare righe correlate in base a un filtro di riga esistente. Per altre informazioni, vedere [Definizione e modifica di un filtro di join tra articoli di merge](define-and-modify-a-join-filter-between-merge-articles.md).  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
- Per definire, modificare ed eliminare filtri di riga statici, usare la pagina **Filtro righe tabella** della Creazione guidata nuova pubblicazione o la pagina **Filtra righe** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** . Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](view-and-modify-publication-properties.md).  
+ Definire, modificare ed eliminare filtri di riga statici nella pagina **Filtro righe tabella** della creazione guidata nuova pubblicazione o nella pagina **Filtro righe** della finestra di dialogo **Proprietà pubblicazione \<Publication> -** . Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](view-and-modify-publication-properties.md).  
   
 #### <a name="to-define-a-static-row-filter"></a>Per definire un filtro di riga statico  
   
-1.  L'operazione eseguita nella pagina **Filtro righe tabella** della Creazione guidata nuova pubblicazione o nella pagina **Filtra righe** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** dipende dal tipo di pubblicazione:  
+1.  Nella pagina **Filtro righe tabella** della creazione guidata nuova pubblicazione o nella pagina **Filtra righe** della finestra di dialogo **Proprietà pubblicazione \<Publication> -** , l'azione eseguita dipende dal tipo di pubblicazione:  
   
     -   Per una pubblicazione snapshot o transazionale, fare clic su **Aggiungi**.  
   
@@ -88,11 +87,11 @@ ms.locfileid: "73882301"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Se è visualizzata la finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** fare clic su **OK** per salvare e chiudere la finestra di dialogo.  
+5.  Se si è nella finestra di dialogo **proprietà \<Publication> pubblicazione-** fare clic su **OK** per salvare e chiudere la finestra di dialogo.  
   
 #### <a name="to-modify-a-static-row-filter"></a>Per modificare un filtro di riga statico  
   
-1.  Nella pagina **Filtro righe tabelle** della Creazione guidata nuova pubblicazione o nella pagina **Filtra righe** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** selezionare un filtro nel riquadro **Tabelle filtrate** e quindi fare clic su **Modifica**.  
+1.  Nella pagina **Filtro righe tabella** della creazione guidata nuova pubblicazione o nella pagina **Filtro righe** della finestra di dialogo **Proprietà pubblicazione \<Publication> -** selezionare un filtro nel riquadro **tabelle filtrate** e quindi fare clic su **Modifica**.  
   
 2.  Nella finestra di dialogo **Modifica filtro** modificare il filtro.  
   
@@ -100,7 +99,7 @@ ms.locfileid: "73882301"
   
 #### <a name="to-delete-a-static-row-filter"></a>Per eliminare un filtro di riga statico  
   
-1.  Nella pagina **Filtro righe tabelle** della Creazione guidata nuova pubblicazione o nella pagina **Filtra righe** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** selezionare un filtro nel riquadro **Tabelle filtrate** e quindi fare clic su **Elimina**.  
+1.  Nella pagina **Filtro righe tabella** della creazione guidata nuova pubblicazione o nella pagina **Filtro righe** della finestra di dialogo **Proprietà pubblicazione \<Publication> -** selezionare un filtro nel riquadro **tabelle filtrate** e quindi fare clic su **Elimina**.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
  Quando si creano articoli di tabella, è possibile definire una clausola WHERE per escludere le righe di un articolo. È inoltre possibile modificare un filtro di riga dopo che è stato definito. È possibile creare e modificare a livello di programmazione i filtri di riga statici tramite le stored procedure di replica.  

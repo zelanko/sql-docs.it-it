@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 13a13f03-b307-4555-8e33-6d98c459d994
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2d27a5bcd87ffd84b33de229d955dc9494846a72
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2f67c88be66be069a48d008ba6889a81dfda8ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489277"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061104"
 ---
 # <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Attività 4 (facoltativa): Combinazione, corrispondenza e pubblicazione di un nuovo set di dati
   Con il tempo, sarà necessario aggiungere ulteriori dati al repository MDS. Prima di aggiungere i dati, può essere utile confrontare i nuovi dati con quelli già gestiti in MDS, per assicurarsi che non si stiano aggiungendo dati duplicati o non accurati. Nel componente aggiuntivo Master Data Services per Excel è possibile combinare i dati di due fogli di lavoro e confrontarli per identificare e rimuovere i duplicati prima di pubblicare i dati in MDS. Per identificare le corrispondenze nei dati viene utilizzata la funzionalità di corrispondenza di DQS dalla relativa caratteristica del componente aggiuntivo MDS per Excel. In questa attività verranno combinati i dati di due fogli di lavoro in uno e, successivamente, verrà eseguita l'attività di individuazione delle corrispondenze per identificare e rimuovere i duplicati prima della pubblicazione in MDS. Per ulteriori informazioni, vedere la pagina relativa alla [corrispondenza Data Quality nell'componente aggiuntivo MDS per Excel](https://msdn.microsoft.com/library/hh548681.aspx) e [combinare i dati](https://msdn.microsoft.com/library/hh548680.aspx) .  
@@ -38,7 +37,7 @@ ms.locfileid: "65489277"
   
 7.  Fare clic su **Sheet2** nella parte inferiore per passare alla scheda **Sheet2** . Se **Sheet2**non è visualizzato, aggiungere un nuovo foglio di foglio.  
   
-8.  Aprire il file **Suppliers. xls** (il file di input originale incluso nei file dell'esercitazione) e copiare tutte le righe (tre) dal foglio di **CombineAndCleanse** in **Sheet2**.  
+8.  Aprire **Suppliers.xls** file (il file di input originale incluso nei file dell'esercitazione) e copiare tutte le righe (tre) dal foglio di **CombineAndCleanse** a **Sheet2**.  
   
 9. Tornare alla scheda **Supplier** nel **libro 1-Microsoft Excel** (non l'elenco dei **fornitori puliti e corrispondenti** Excel) connesso a **MDS**.  
   

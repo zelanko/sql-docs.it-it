@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6373adb8-3d81-4945-a9fc-1d0d5799d29a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 788ce615f914dcc8a2a49fba7575061fff0df870
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44843764b7eed26bfd424ee61f2534aae42b9a73
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62843113"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928982"
 ---
 # <a name="solution-explorer-source-control"></a>Controllo del codice sorgente di Esplora soluzioni
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Esplora soluzioni possono essere integrati in un sistema di controllo del codice sorgente distinto. Dopo aver integrato una soluzione o un progetto in un sistema di controllo del codice sorgente, è possibile controllare l'accesso ai file e il controllo delle versioni per gli script e le query dei progetti.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]Esplora soluzioni possono essere integrati in un sistema di controllo del codice sorgente distinto. Dopo aver integrato una soluzione o un progetto in un sistema di controllo del codice sorgente, è possibile controllare l'accesso ai file e il controllo delle versioni per gli script e le query dei progetti.  
   
 ## <a name="solution-and-project-source-control"></a>Controllo del codice sorgente di soluzioni e progetti  
   
@@ -57,7 +56,7 @@ ms.locfileid: "62843113"
 |[Impostazione e recupero delle informazioni sulla versione](../../2014/database-engine/set-and-retrieve-version-information.md)|Viene spiegato come recuperare la cronologia di un progetto o di un elemento, una copia locale di un elemento o come confrontare due versioni di un elemento.|  
 |||  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Esplora soluzioni](../ssms/solution/solution-explorer.md)   
  [Soluzioni &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)   
  [Progetti &#40;SQL Server Management Studio&#41;](../ssms/solution/projects-sql-server-management-studio.md)   

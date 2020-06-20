@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 91994142-32f0-4d8d-a8cf-eb0d8b1f1999
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 669600644ec7983b08a278784aa3644ce3948489
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e41f247c34c1b40bedfdf6924a45afe5f63735b4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703289"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015783"
 ---
 # <a name="xsl-caching-sqlxml-40"></a>Memorizzazione nella cache file XSL (SQLXML 4.0)
   La memorizzazione nella cache di fogli di stile XSL migliora le prestazioni. Fino alla prima esecuzione, il foglio di stile XSL resta in memoria se la memorizzazione nella cache XSL è impostata su ON. Questa impostazione offre prestazioni migliori per l'elaborazione successiva. L'impostazione predefinita è ON.  

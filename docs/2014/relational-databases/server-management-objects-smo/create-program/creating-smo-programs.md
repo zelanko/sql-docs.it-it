@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d2f0bcf-f1ae-45b8-bc3f-7aea4fae7e45
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ccf26cf30c53e3a336e842cbbffc1ff517075fef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da7f9159a1dbe888dde3ecfe59ae25c56fdd5bf8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68197999"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055293"
 ---
 # <a name="creating-smo-programs"></a>Creazione di programmi SMO
   La programmazione generale degli oggetti [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO) include le aree comuni condivise da tutti gli oggetti, ad esempio l'esecuzione di metodi, l'impostazione di proprietà e la manipolazione di raccolte.  

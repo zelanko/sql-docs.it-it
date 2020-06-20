@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 2f986436-aaf2-4eaf-9809-df849d97d4fb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9432d9ae69ff9802d41e376c06d86ebbd2d594b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe4a3e1c9a49737f06425c6e8bd651e5e973e77b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184466"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055302"
 ---
 # <a name="backward-compatibility-in-smo"></a>Compatibilità con le versioni precedenti in SMO
   Le applicazioni SMO create utilizzando le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono essere comunque ricompilate in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]tramite SMO.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 65a3c9c87a0551050ba95bdc247afdcfaa421da8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e25a33c3d0bb5511f3dcae72442f2f3a9ed4eb93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82697049"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998689"
 ---
 # <a name="execute-a-stored-procedure-using-odbc-call-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>Eseguire una stored procedure mediante la sintassi dell'istruzione ODBC RPC ed elaborare i codici restituiti e i parametri di output (OLE DB)
   Le stored procedure di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possono includere parametri di output e codici restituiti di tipo integer. I codici restituiti e i parametri di output vengono inviati nell'ultimo pacchetto dal server e non sono pertanto disponibili all'applicazione fino al completo rilascio del set di righe. Se il comando restituisce più risultati, i dati dei parametri di output sono disponibili quando `IMultipleResults::GetResult` restituisce DB_S_NORESULT o l'interfaccia `IMultipleResults` viene completamente rilasciata, a seconda dell'evento che si verifica per primo.  
