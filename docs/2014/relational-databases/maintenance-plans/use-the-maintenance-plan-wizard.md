@@ -33,13 +33,12 @@ helpviewer_keywords:
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 105e8022775642d915cbcedf180ed9e07f8bc958
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac134bbd4c65da4700990b69b09134230e98903f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289169"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023829"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Utilizzare la Creazione guidata piano di manutenzione
   In questo argomento viene descritto come creare un piano di manutenzione a uno o più server utilizzando la Creazione guidata piano di manutenzione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Tramite la Creazione guidata piano di manutenzione è possibile creare un piano di manutenzione che potrà essere regolarmente eseguito in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. In questo modo è possibile eseguire a intervalli specificati varie attività di amministrazione di database, tra cui backup, controlli di integrità del database o aggiornamenti delle statistiche del database.  
@@ -104,7 +103,7 @@ ms.locfileid: "79289169"
   
             -   **Periodica**. Si tratta della selezione predefinita.  
   
-            -   **Singola occorrenza**  
+            -   **Una volta**  
   
         3.  Selezionare o deselezionare la casella di controllo **Abilitata** per abilitare o disabilitare la pianificazione.  
   
@@ -283,7 +282,7 @@ ms.locfileid: "79289169"
      **Solo statistiche indici**  
      Consente di aggiornare soltanto le statistiche relative agli indici. Utilizza l'opzione `WITH INDEX` .  
   
-     **Tipo analisi**  
+     **Tipo di analisi**  
      Tipo di analisi utilizzata per raccogliere statistiche aggiornate.  
   
      **Analisi completa**  
@@ -373,7 +372,7 @@ ms.locfileid: "79289169"
      Specificare il nome del contenitore di Archiviazione di Azure  
   
      **Prefisso URL**  
-     Viene generato automaticamente in base alle informazioni sull'account di archiviazione archiviate nelle credenziali SQL e al nome del contenitore di archiviazione di Azure specificato. Si consiglia di non modificare le informazioni in questo campo a meno che non si usi un dominio con un formato diverso dall'account di ** \<archiviazione>. blob.Core.Windows.NET**.  
+     Viene generato automaticamente in base alle informazioni sull'account di archiviazione archiviate nelle credenziali SQL e al nome del contenitore di archiviazione di Azure specificato. Si consiglia di non modificare le informazioni in questo campo a meno che non si usi un dominio con un formato diverso da ** \<storage account> . blob.Core.Windows.NET**.  
   
      Casella**Estensione file di backup**  
      Specificare l'estensione da utilizzare per i file di backup. L'estensione predefinita è bak.  
@@ -404,7 +403,7 @@ ms.locfileid: "79289169"
     |||  
     |-|-|  
     |**Utilizza l'impostazione predefinita del server**|Fare clic su questa opzione per utilizzare l'impostazione predefinita a livello di server. Questa impostazione predefinita è specificata dall'opzione di configurazione del server **Valore predefinito di compressione backup** . Per informazioni su come visualizzare l'impostazione corrente di questa opzione, vedere [Visualizzare o configurare l'opzione di configurazione del server backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).|  
-    |**Comprimi backup**|Fare clic su questa opzione per comprimere il backup, indipendentemente dall'impostazione predefinita a livello di server.<br /><br /> ** \* Importante \* \* ** Per impostazione predefinita, la compressione aumenta significativamente l'utilizzo della CPU e la CPU aggiuntiva utilizzata dal processo di compressione potrebbe influire negativamente sulle operazioni simultanee. Potrebbe pertanto essere necessario creare backup compressi con priorità bassa in una sessione in cui l'utilizzo della CPU è limitato da Resource Governor. Per ulteriori informazioni, vedere [Utilizzo di Resource Governor per limitare l'utilizzo della CPU da parte della compressione dei backup &#40;Transact-SQL&#41;](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
+    |**Comprimi backup**|Fare clic su questa opzione per comprimere il backup, indipendentemente dall'impostazione predefinita a livello di server.<br /><br /> Importante per impostazione predefinita, la compressione aumenta significativamente l'utilizzo della CPU e la CPU aggiuntiva utilizzata dal processo di compressione potrebbe influire negativamente sulle operazioni simultanee. ** \* \* \* \* ** Potrebbe pertanto essere necessario creare backup compressi con priorità bassa in una sessione in cui l'utilizzo della CPU è limitato da Resource Governor. Per ulteriori informazioni, vedere [Utilizzo di Resource Governor per limitare l'utilizzo della CPU da parte della compressione dei backup &#40;Transact-SQL&#41;](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
     |**Non comprimere il backup**|Fare clic su questa opzione per creare un backup non compresso, indipendentemente dall'impostazione predefinita a livello di server.|  
   
 2.  Nella pagina **Definizione attività Backup database (differenziale)** selezionare il database o i database su cui eseguire un backup parziale. Per ulteriori informazioni sulle opzioni disponibili in questa pagina, vedere l'elenco delle definizioni nel passaggio 16. In questa attività viene utilizzata l'istruzione `BACKUP DATABASE ... WITH DIFFERENTIAL`. Per altre informazioni, vedere [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  Al termine, fare clic su **Avanti**.  
@@ -429,7 +428,7 @@ ms.locfileid: "79289169"
      **Report in formato testo piano di manutenzione**  
      Elimina i report in formato testo relativi a piani di manutenzione eseguiti in precedenza.  
   
-     **Percorso file**  
+     **Percorso del file**  
      Specifica il percorso dei file da eliminare.  
   
      **Elimina file specifico**  
@@ -488,7 +487,7 @@ ms.locfileid: "79289169"
      **Azione**  
      Specifica il tipo e il nome di ciascuna azione.  
   
-     **Stato**  
+     **Status**  
      Indica se l'intera azione della procedura guidata ha restituito il valore **Esito positivo** o **Esito negativo**.  
   
      **Messaggio**  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: b5a121a1-b87c-441b-a42c-2cec628dc81c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d9a2f9cf4d404f4ef577e446d0c4284ef7024742
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: db0946374c6e0e3960ab19bfdd109c2fdc1eb6ff
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176398"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966517"
 ---
 # <a name="design-time-methods-of-a-data-flow-component"></a>Metodi della fase di progettazione di un componente del flusso di dati
   Prima dell'esecuzione, l'attività Flusso di dati si trova nel cosiddetto stato della fase di progettazione, quando viene sottoposta a modifiche incrementali. Tali modifiche possono includere l'aggiunta o la rimozione di componenti, l'aggiunta o la rimozione degli oggetti percorso che connettono i componenti e modifiche ai metadati dei componenti. Quando si verificano modifiche ai metadati, il componente può monitorarle e rispondere. Ad esempio, un componente può impedire determinate modifiche o aggiungerne altre in risposta a una modifica. In fase di progettazione la finestra di progettazione interagisce con un componente tramite l'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSDesigntimeComponent100> della fase di progettazione.
@@ -80,7 +79,7 @@ Dim myCustomProperty As IDTSCustomProperty100
 myCustomProperty.ExpressionType = DTSCustomPropertyExpressionType.CPET_NOTIFY
 ```
 
- È possibile limitare gli utenti alla selezione di un valore di proprietà personalizzato da un'enumerazione <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A> usando la proprietà, come illustrato nell'esempio seguente, in cui si presuppone che sia stata definita un' `MyValidValues`enumerazione pubblica denominata.
+ È possibile limitare gli utenti alla selezione di un valore di proprietà personalizzato da un'enumerazione usando la <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A> proprietà, come illustrato nell'esempio seguente, in cui si presuppone che sia stata definita un'enumerazione pubblica denominata `MyValidValues` .
 
 ```csharp
 IDTSCustomProperty100 customProperty = outputColumn.CustomPropertyCollection.New();

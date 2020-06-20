@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 231fe13e-c2dc-4149-a73e-1497e62c49e8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c9b7941f7d85404f56d24252534c518037d30a17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65003667a08d198934719ef3a307f1b89b96c6c9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62695655"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062242"
 ---
 # <a name="job-propertiesnew-job-steps-page"></a>Proprietà processo - Nuovo processo (pagina Passaggi)
-  Utilizzare questa pagina per visualizzare e organizzare i passaggi del processo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per un processo di Agent.  
+  Utilizzare questa pagina per visualizzare e organizzare i passaggi del processo per un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processo di Agent.  
   
 ## <a name="options"></a>Opzioni  
  **Elenco dei passaggi del processo**  
@@ -32,10 +31,10 @@ ms.locfileid: "62695655"
  **Passaggio di avvio**  
  Consente di selezionare il passaggio avviato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent all'inizio del processo.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare un nuovo passaggio del processo sotto al passaggio selezionato.  
   
- **Inserire**  
+ **Insert**  
  Consente di creare un nuovo passaggio del processo sopra il passaggio selezionato.  
   
  **Modifica**  
@@ -44,7 +43,7 @@ ms.locfileid: "62695655"
  **Elimina**  
  Consente di eliminare il passaggio del processo selezionato. Il log di output dei passaggi di processo eliminati viene eliminato automaticamente.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Implementazione di processi](implement-jobs.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7add6f82-eed1-47fc-a5d7-7b91f3f24d34
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 44e116ece7460787f272f0b8cc6e99a4300fc728
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb2efbff93fb7cc831038a7e26fe4ada44d81325
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056709"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964751"
 ---
 # <a name="partition-processing-destination-editor-connection-manager-page"></a>Editor destinazione elaborazione partizione (pagina Gestione connessione)
   Usare la pagina **Gestione connessione** della finestra di dialogo **Editor destinazione elaborazione partizione** per specificare una connessione a un progetto di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -33,7 +32,7 @@ ms.locfileid: "66056709"
  **Gestione connessione**  
  Selezionare una gestione connessione esistente nell'elenco o crearne una nuova facendo clic su **Nuova**.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una connessione usando la finestra di dialogo **Aggiungi gestione connessione Analysis Services** .  
   
  **Elenco delle partizioni disponibili**  
@@ -42,13 +41,13 @@ ms.locfileid: "66056709"
  **Metodo di elaborazione**  
  Consente di selezionare il metodo di elaborazione. Il valore predefinito di questa opzione è **Completo**.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |Aggiunta (incrementale)|Consente di eseguire un'elaborazione incrementale della partizione.|  
 |Full|Consente di eseguire l'elaborazione completa della partizione.|  
 |Solo dati|Consente di eseguire un'elaborazione di aggiornamento della partizione.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor destinazione elaborazione partizione &#40;pagina mapping&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)   
  [Editor destinazione elaborazione partizione &#40;pagina Avanzate&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  

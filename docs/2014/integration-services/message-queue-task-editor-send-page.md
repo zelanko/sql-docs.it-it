@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 565aa079-ac44-4407-8efc-cddab839de30
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 66323ccdb91076496f9796245c368697d9ebc8c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ed0d210668b64ff6f6fcc8c94a713743e2f9bfa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057594"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951061"
 ---
 # <a name="message-queue-task-editor-send-page"></a>Editor attività Message Queue (pagina Invio)
   Usare la pagina **Invio** della finestra di dialogo **Editor attività Message Queue** per configurare un'attività Message Queue per l'invio di messaggi da un pacchetto di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
@@ -42,7 +41,7 @@ ms.locfileid: "66057594"
  **MessageType**  
  Consente di selezionare il tipo di messaggio. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Messaggio file di dati**|Il messaggio viene archiviato in un file. La selezione del valore determina la visualizzazione dell'opzione dinamica **DataFileMessage**.|  
 |**Messaggio variabili**|Il messaggio viene archiviato in una variabile. La selezione del valore determina la visualizzazione dell'opzione dinamica **VariableMessage**.|  
@@ -64,7 +63,7 @@ ms.locfileid: "66057594"
  **StringMessage**  
  Digitare il messaggio stringa oppure fare clic sui puntini di sospensione **(...)** e quindi digitare il messaggio nella finestra di dialogo **Immetti messaggio stringa** .  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Integration Services riferimento a errori e messaggi](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività Message Queue &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor attività Message Queue &#40;pagina ricezione&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   

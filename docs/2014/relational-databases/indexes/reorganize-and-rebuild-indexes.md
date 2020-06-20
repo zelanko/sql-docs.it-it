@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8c1c78e1d126420b17a1b8de0499c432059b25ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7c00f2128bb4c54064511ffff9e8929c9faf4d59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811028"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049836"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Riorganizzare e ricompilare gli indici
   In questo argomento viene descritto come riorganizzare o ricompilare un indice frammentato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Tramite il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] la manutenzione degli indici viene automaticamente eseguita dopo ogni operazione di modifica, inserimento o eliminazione dei dati sottostanti. Nel tempo, queste modifiche possono provocare la frammentazione dell'indice nel database. La frammentazione si verifica quando negli indici sono presenti pagine in cui l'ordinamento logico, basato sul valore chiave, non corrisponde all'ordinamento fisico all'interno del file di dati. Gli indici con un alto grado di frammentazione possono essere causa del calo delle prestazioni delle query e rallentare l'applicazione.  
@@ -175,7 +174,7 @@ Non è possibile riorganizzare o ricompilare indici contenuti in un filegroup of
      **Pagine**  
      Numero totale di pagine di dati.  
   
-     **Partition ID**  
+     **ID partizione**  
      ID partizione dell'albero B contenente l'indice.  
   
      **Righe fantasma versione**  
@@ -237,7 +236,7 @@ Non è possibile riorganizzare o ricompilare indici contenuti in un filegroup of
   
 7.  Selezionare la casella di controllo **Compatta dati di colonne LOB** per specificare che tutte le pagine che contengono dati LOB vengano compattate.  
   
-8.  Fare clic su **OK**.  
+8.  Scegliere **OK.**  
   
 #### <a name="to-reorganize-all-indexes-in-a-table"></a>Per riorganizzare tutti gli indici in una tabella  
   
@@ -253,7 +252,7 @@ Non è possibile riorganizzare o ricompilare indici contenuti in un filegroup of
   
 6.  Selezionare la casella di controllo **Compatta dati di colonne LOB** per specificare che tutte le pagine che contengono dati LOB vengano compattate.  
   
-7.  Fare clic su **OK**.  
+7.  Scegliere **OK.**  
   
 #### <a name="to-rebuild-an-index"></a>Per ricompilare un indice  
   
@@ -271,7 +270,7 @@ Non è possibile riorganizzare o ricompilare indici contenuti in un filegroup of
   
 7.  Selezionare la casella di controllo **Compatta dati di colonne LOB** per specificare che tutte le pagine che contengono dati LOB vengano compattate.  
   
-8.  Fare clic su **OK**.  
+8.  Scegliere **OK.**  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedureReorg"></a> Uso di Transact-SQL  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96bd1cc82f73fd78bd16d0d3fe2f2015fabe4995
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63126013"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062600"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Ridenominare un'istanza del cluster di failover di SQL Server
   Se un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fa parte di un cluster di failover, il processo di ridenominazione del server virtuale è diverso da quello previsto per un'istanza autonoma. Per altre informazioni, vedere [Rinominare un computer che ospita un'istanza autonoma di SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md).  
@@ -63,9 +62,9 @@ ms.locfileid: "63126013"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>Ulteriori considerazioni dopo la ridenominazione dell'operazione  
  Dopo la ridenominazione del nome di rete del cluster di failover, è necessario verificare e applicare le istruzioni riportate di seguito per abilitare tutti gli scenari in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent e [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Dopo aver modificato il nome di rete di [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] un'istanza del cluster di failover utilizzando lo strumento Amministrazione cluster di Windows, l'operazione di aggiornamento o disinstallazione futura potrebbe non riuscire. Per risolvere questo problema, aggiornare la voce del registro di sistema **clustername** seguendo le istruzioni nella [this](https://go.microsoft.com/fwlink/?LinkId=244002) sezione relativahttps://go.microsoft.com/fwlink/?LinkId=244002)alla risoluzione di questo (.  
+ ** [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] :** Dopo aver modificato il nome di rete di un' [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] istanza del cluster di failover utilizzando lo strumento Amministrazione cluster di Windows, l'operazione di aggiornamento o disinstallazione futura potrebbe non riuscire. Per risolvere questo problema, aggiornare la voce del registro di sistema **clustername** seguendo le istruzioni nella sezione relativa alla risoluzione di [questo](https://go.microsoft.com/fwlink/?LinkId=244002) ( https://go.microsoft.com/fwlink/?LinkId=244002) .  
   
- ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Servizio Agent:** Verificare ed eseguire le azioni aggiuntive seguenti per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] il servizio Agent:  
+ ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Servizio Agent:** verificare ed eseguire le azioni aggiuntive seguenti per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Servizio Agent:  
   
 -   Correggere le impostazioni del Registro di sistema se SQL Agent è configurato per l'inoltro eventi. Per altre informazioni, vedere [Designazione di un server di inoltro eventi &#40;SQL Server Management Studio&#41;](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md).  
   
@@ -83,7 +82,7 @@ ms.locfileid: "63126013"
   
 -   Aggiornare i passaggi del processo che dipendono dal nome del server. Per altre informazioni, vedere [Gestire passaggi di processo](../../../ssms/agent/manage-job-steps.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Rinominare un computer che ospita un'istanza autonoma di SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
   
   

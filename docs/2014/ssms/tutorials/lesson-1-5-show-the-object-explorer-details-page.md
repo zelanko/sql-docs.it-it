@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8e0965ef-cc3a-43d5-82ad-01f525654b2f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a2771cd508c2bc2f3be0de1c9d0502e8ab5ce062
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff847756d8717184654d8d08c84222dc9e99b9ca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63282024"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058300"
 ---
 # <a name="show-the-object-explorer-details-page"></a>Visualizzare la pagina Dettagli Esplora oggetti
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è possibile visualizzare un report per ogni oggetto selezionato in Esplora soluzioni. Questo report, denominato pagina Dettagli Esplora oggetti, viene creato da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e visualizzato nella finestra del documento.  

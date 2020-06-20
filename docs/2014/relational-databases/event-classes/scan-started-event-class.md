@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9a0cc475-e6ee-430c-975c-73716d81d563
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bd6afc441b66225bdf1696020916f701b6041db6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d1861531dd32660dfb36fd9adcdd36601acef7c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044166"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028835"
 ---
 # <a name="scanstarted-event-class"></a>Scan:Started - classe di evento
   La classe di evento Scan:Started si verifica all'avvio dell'analisi di una tabella o di un indice.  
@@ -51,7 +50,7 @@ ms.locfileid: "63044166"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|`bigint`|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

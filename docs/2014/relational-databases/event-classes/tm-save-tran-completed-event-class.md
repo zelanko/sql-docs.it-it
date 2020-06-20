@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e6b37780-5ad8-4d50-89a3-d8a22496faac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b50f4026daa390000a1a46377446abc3cee709e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ed85038d9cfc6281d1f9dbd84d4c0b0afeb43b3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061280"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027993"
 ---
 # <a name="tm-save-tran-completed-event-class"></a>TM: Save Tran Completed - classe di evento
   La classe di evento TM: Save Tran Completed indica il completamento di una richiesta SAVE TRANSACTION. La richiesta è stata inviata dal client tramite l'interfaccia di gestione delle transazioni.  
@@ -52,7 +51,7 @@ ms.locfileid: "63061280"
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|`bigint`|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [SAVE TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/save-transaction-transact-sql)  

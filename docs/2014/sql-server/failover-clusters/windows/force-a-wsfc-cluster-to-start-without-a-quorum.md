@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9c63930883642cf7f5e675cb57d5f83648a5787a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 877d8593e04ee13abae6b96e624476b00660cb92
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797470"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062474"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Forzare l'avvio di un cluster WSFC senza un quorum
   In questo argomento viene illustrato come forzare l'avvio senza un quorum di un nodo del cluster Windows Server Failover Clustering (WSFC).  Questa operazione potrebbe rivelarsi necessaria negli scenari multi-subnet e in caso di ripristino di emergenza per recuperare i dati e ristabilire completamente la disponibilità elevata per le istanze del cluster di failover di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -81,7 +80,7 @@ $nodes = Get-ClusterNode -Cluster $node
 $nodes | Format-Table -property NodeName, State, NodeWeight
 ```  
   
-##  <a name="using-netexe"></a><a name="CommandPromptProcedure"></a>Utilizzo di NET. exe  
+##  <a name="using-netexe"></a><a name="CommandPromptProcedure"></a>Utilizzo di Net.exe  
   
 ### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>Per forzare l'avvio di un cluster senza un quorum  
   

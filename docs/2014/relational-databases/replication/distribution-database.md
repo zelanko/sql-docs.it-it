@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5b42a083-7a11-41d8-9e3f-320c7c907237
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 283fd67d14d57c3d1d5d60dd9d8de2a159ca6d5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d98a80be52ae77cbdaf1581a5b3397f9d11af4fb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721367"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010832"
 ---
 # <a name="distribution-database"></a>Database di distribuzione
   Nel database di distribuzione vengono archiviati i metadati e i dati di cronologia relativi a tutti i tipi di replica, nonché le transazioni per la replica transazionale.  

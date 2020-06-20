@@ -13,22 +13,21 @@ helpviewer_keywords:
 ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8810377a7e676d4376fca3cc52e73d6c507dbd21
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77aa9ece0073149c017f6eca35a756b22751a74b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255432"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063664"
 ---
 # <a name="view-and-resolve-data-conflicts-for-merge-publications-sql-server-management-studio"></a>Visualizzazione e risoluzione di conflitti di dati per le pubblicazioni di tipo merge (SQL Server Management Studio)
   I conflitti nella replica di tipo merge vengono risolti in base al sistema di risoluzione specificato per ogni articolo. Per impostazione predefinita, i conflitti vengono risolti senza che sia necessario l'intervento dell'utente. È tuttavia possibile visualizzare i conflitti e modificare il risultato della risoluzione nel Visualizzatore conflitti di replica [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  I dati dei conflitti sono disponibili nel Visualizzatore conflitti di replica per l'intervallo di tempo specificato per il periodo di memorizzazione dei conflitti, che per impostazione predefinita è di 14 giorni. Per impostare il periodo di memorizzazione dei conflitti, eseguire una delle operazioni seguenti:  
   
--   Specificare un valore di memorizzazione per **@conflict_retention** il parametro di [Sp_addmergepublication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql).  
+-   Specificare un valore di memorizzazione per il **@conflict_retention** parametro di [sp_addmergepublication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql).  
   
--   Specificare il valore **conflict_retention** per il **@property** parametro e un valore di conservazione per il **@value** parametro di [sp_changemergepublication &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql).  
+-   Specificare il valore **conflict_retention** per il **@property** parametro e un valore di conservazione per il **@value** parametro di [SP_CHANGEMERGEPUBLICATION &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql).  
   
  Per impostazione predefinita, le informazioni sui conflitti vengono archiviate:  
   
@@ -44,7 +43,7 @@ ms.locfileid: "63255432"
   
 ### <a name="to-view-and-resolve-conflicts-for-merge-publications"></a>Per visualizzare e risolvere i conflitti relativi alle pubblicazioni di tipo merge  
   
-1.  Connettersi al server di pubblicazione, o al Sottoscrittore [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], se appropriato, in e quindi espandere il nodo del server.  
+1.  Connettersi al server di pubblicazione, o al Sottoscrittore, se appropriato [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , in e quindi espandere il nodo del server.  
   
 2.  Espandere la cartella **Replica** e quindi la cartella **Pubblicazioni locali** .  
   
@@ -75,7 +74,7 @@ ms.locfileid: "63255432"
   
 6.  Chiudere il Visualizzatore conflitti di replica.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Rilevamento e risoluzione dei conflitti di replica di tipo merge avanzati](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Specificare un sistema di risoluzione dei conflitti dell'articolo di merge](publish/specify-a-merge-article-resolver.md)  
   

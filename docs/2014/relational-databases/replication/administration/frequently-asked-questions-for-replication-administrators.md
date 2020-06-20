@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ce7e9249ec7ba97fdd159a743be30036847882b3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02f12008b9ab8e9cd4c7d08ed81a902629b90827
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63207052"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063843"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Domande frequenti per gli amministratori di replica
   Le domande e risposte seguenti offrono indicazioni su una vasta gamma di attività svolte dagli amministratori dei database replicati.  
@@ -103,7 +102,7 @@ ms.locfileid: "63207052"
   
 -   L'opzione di sincronizzazione Web per la replica di tipo merge. Per altre informazioni, vedere [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md).  
   
- Tutti i tipi [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di replica possono replicare i dati su una VPN, ma è consigliabile considerare la sincronizzazione Web se si utilizza la replica di tipo merge.  
+ Tutti i tipi di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replica possono replicare i dati su una VPN, ma è consigliabile considerare la sincronizzazione Web se si utilizza la replica di tipo merge.  
   
 ### <a name="does-replication-resume-if-a-connection-is-dropped"></a>La replica viene ripresa in caso di interruzione della connessione?  
  Sì. L'elaborazione della replica viene ripresa dal punto in cui si era arrestata per interruzione della connessione. Se si utilizza la replica di tipo merge in una rete inaffidabile, è consigliabile considerare l'utilizzo dei record logici, che garantisce che le modifiche correlate vengano elaborate come una unità. Per altre informazioni, vedere [Raggruppare modifiche alle righe correlate con record logici](../merge/group-changes-to-related-rows-with-logical-records.md).  
@@ -121,7 +120,7 @@ ms.locfileid: "63207052"
   
 -   La definizione di un oggetto, come un'istruzione CREATE TABLE. Per impostazione predefinita, la replica copia le definizioni di tutti gli oggetti replicati nel Sottoscrittore.  
   
--   Lo spazio dei nomi in cui viene creato un oggetto: \<Database>.\<Schema>.\<Oggetto>. Gli schemi vengono definiti utilizzando l'istruzione CREATE SCHEMA.  
+-   Spazio dei nomi in cui viene creato un oggetto: \<Database> . \<Schema> . \<Object> . Gli schemi vengono definiti utilizzando l'istruzione CREATE SCHEMA.  
   
 -   In relazione agli schemi e alla proprietà degli oggetti, la replica ha il seguente comportamento predefinito nella Creazione guidata nuova pubblicazione:  
   
@@ -133,7 +132,7 @@ ms.locfileid: "63207052"
   
 -   Per articoli di pubblicazioni che usano snapshot in modalità carattere (usati per Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e Sottoscrittori [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ): per impostazione predefinita, il proprietario rimane vuoto. Il proprietario viene impostato sul proprietario associato all'account utilizzato dall'agente di distribuzione o dall'agente di merge per la connessione al Sottoscrittore.  
   
- Il proprietario dell'oggetto può essere modificato tramite la finestra di dialogo **Proprietà articolo - \<***Articolo***>** e tramite le stored procedure **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** e **sp_changemergearticle**. Per altre informazioni, vedere [Visualizzare e modificare le proprietà della pubblicazione](../publish/view-and-modify-publication-properties.md), [Definire un articolo](../publish/define-an-article.md) e [Visualizzare e modificare le proprietà degli articoli](../publish/view-and-modify-article-properties.md).  
+ Il proprietario dell'oggetto può essere modificato tramite la finestra di dialogo **Proprietà articolo- \<***Article***> ** e tramite le stored procedure seguenti: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle**e **sp_changemergearticle**. Per altre informazioni, vedere [Visualizzare e modificare le proprietà della pubblicazione](../publish/view-and-modify-publication-properties.md), [Definire un articolo](../publish/define-an-article.md) e [Visualizzare e modificare le proprietà degli articoli](../publish/view-and-modify-article-properties.md).  
   
 ### <a name="how-can-grants-on-the-subscription-database-be-configured-to-match-grants-on-the-publication-database"></a>In che modo è possibile configurare le concessioni del database di sottoscrizione per ottenere la corrispondenza con quelle del database di pubblicazione?  
  Per impostazione predefinita, la replica non esegue istruzioni GRANT nel database di sottoscrizione. Se si desidera che le autorizzazioni del database di sottoscrizione corrispondano a quelle del database di pubblicazione, utilizzare uno dei seguenti metodi.  
@@ -151,9 +150,9 @@ ms.locfileid: "63207052"
   
 -   Specificare che gli oggetti non devono essere eliminati alla reinizializzazione della sottoscrizione. Prima della reinizializzazione, eseguire una delle seguenti operazioni:  
   
-    -   Eseguire [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) o [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Specificare il valore ' pre_creation_cmd ' (**sp_changearticle**) o ' pre_creation_command ' (**sp_changemergearticle**) per il parametro **@property** e il valore ' none ',' Delete ' o ' truncate ' per il parametro. **@value**  
+    -   Eseguire [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) o [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Specificare il valore ' pre_creation_cmd ' (**sp_changearticle**) o ' pre_creation_command ' (**sp_changemergearticle**) per il parametro **@property** e il valore ' none ',' Delete ' o ' truncate ' per il parametro **@value** .  
   
-    -   Nella sezione **oggetto di destinazione** della finestra di dialogo **proprietà articolo \<->articolo** Selezionare il valore **Mantieni oggetto esistente invariato**, **Elimina dati. Se l'articolo contiene un filtro di riga, eliminare solo i dati corrispondenti al filtro.** oppure **Tronca tutti i dati nell'oggetto esistente** per l'opzione **Azione se il nome è in uso**. Per altre informazioni sull'accesso a questa finestra di dialogo, vedere [Visualizzare e modificare le proprietà della pubblicazione](../publish/view-and-modify-publication-properties.md).  
+    -   Nella sezione **oggetto di destinazione** della finestra di dialogo **Proprietà articolo- \<Article> ** Selezionare il valore **Mantieni oggetto esistente invariato**, **Elimina dati. Se l'articolo contiene un filtro di riga, eliminare solo i dati corrispondenti al filtro.** oppure **Tronca tutti i dati nell'oggetto esistente** per l'opzione **Azione se il nome è in uso**. Per altre informazioni sull'accesso a questa finestra di dialogo, vedere [Visualizzare e modificare le proprietà della pubblicazione](../publish/view-and-modify-publication-properties.md).  
   
 ## <a name="database-maintenance"></a>Manutenzione database  
   
@@ -181,7 +180,7 @@ ms.locfileid: "63207052"
  Nelle versioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]lo spostamento o la ridenominazione dei file di database richiede lo scollegamento e il ricollegamento del database. Poiché un database replicato non può essere scollegato, innanzitutto era necessario rimuovere la replica da questi database. A partire da [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], è possibile spostare o rinominare i file senza scollegare e ricollegare il database, senza alcun effetto sulla replica. Per altre informazioni sullo spostamento e la ridenominazione dei file, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
 ### <a name="how-do-i-drop-a-table-that-is-being-replicated"></a>Come si elimina una tabella in corso di replica?  
- Eliminare in primo luogo l'articolo dalla pubblicazione usando [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql), [sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) o la finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**, quindi eliminarlo dal database usando `DROP <Object>`. Dopo l'aggiunta di sottoscrizioni non è possibile eliminare articoli dalle pubblicazioni snapshot o transazionali: è necessario eliminare prima le sottoscrizioni. Per altre informazioni, vedere [Aggiungere ed eliminare articoli in pubblicazioni esistenti](../publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
+ Eliminare innanzitutto l'articolo dalla pubblicazione utilizzando [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql), [sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql)o la finestra di dialogo **Proprietà pubblicazione \<Publication> -** , quindi eliminarlo dal database utilizzando `DROP <Object>` . Dopo l'aggiunta di sottoscrizioni non è possibile eliminare articoli dalle pubblicazioni snapshot o transazionali: è necessario eliminare prima le sottoscrizioni. Per altre informazioni, vedere [Aggiungere ed eliminare articoli in pubblicazioni esistenti](../publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>Come si aggiungono o si eliminano colonne in una tabella pubblicata?  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta una vasta gamma di modifiche dello schema sugli oggetti pubblicati, inclusa l'aggiunta e l'eliminazione di colonne. Ad esempio, eseguire ALTER TABLE... RILASCIARE la colonna nel server di pubblicazione e l'istruzione viene replicata nei Sottoscrittori e quindi eseguita per eliminare la colonna. I Sottoscrittori che eseguono versioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] supportano l'aggiunta e l'eliminazione di colonne tramite le stored procedure [sp_repladdcolumn](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) e [sp_repldropcolumn](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql). Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](../publish/make-schema-changes-on-publication-databases.md).  
@@ -192,10 +191,10 @@ ms.locfileid: "63207052"
  Utilizzando la convalida. La convalida segnala se uno specifico Sottoscrittore è sincronizzato con il server di pubblicazione. Per altre informazioni, vedere [Convalidare i dati replicati](../validate-data-at-the-subscriber.md). A differenza dell' [utilità tablediff](../../../tools/tablediff-utility.md) , la convalida non offre informazioni sulle eventuali righe che non sono sincronizzate correttamente.  
   
 ### <a name="how-do-i-add-a-table-to-an-existing-publication"></a>Come si aggiunge una tabella a una pubblicazione esistente?  
- Per aggiungere una tabella o un altro oggetto, non è necessario arrestare l'attività sui database di pubblicazione o di sottoscrizione. Aggiungere una tabella a una pubblicazione usando la finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** o le stored procedure [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) e [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Per altre informazioni, vedere [Aggiungere ed eliminare articoli in pubblicazioni esistenti](../publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
+ Per aggiungere una tabella o un altro oggetto, non è necessario arrestare l'attività sui database di pubblicazione o di sottoscrizione. Aggiungere una tabella a una pubblicazione tramite la finestra di dialogo **Proprietà pubblicazione- \<Publication> ** o le stored procedure [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) e [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Per altre informazioni, vedere [Aggiungere ed eliminare articoli in pubblicazioni esistenti](../publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### <a name="how-do-i-remove-a-table-from-a-publication"></a>Come si rimuove una tabella da una pubblicazione?  
- Rimuovere una tabella dalla pubblicazione usando [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql), [sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) o la finestra di dialogo **Proprietà pubblicazione - \<Publication>**. Dopo l'aggiunta di sottoscrizioni non è possibile eliminare articoli dalle pubblicazioni snapshot o transazionali: è necessario eliminare prima le sottoscrizioni. Per altre informazioni, vedere [Aggiungere ed eliminare articoli in pubblicazioni esistenti](../publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
+ Rimuovere una tabella dalla pubblicazione utilizzando [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql), [sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql)o la finestra di dialogo **Proprietà pubblicazione \<Publication> -** . Dopo l'aggiunta di sottoscrizioni non è possibile eliminare articoli dalle pubblicazioni snapshot o transazionali: è necessario eliminare prima le sottoscrizioni. Per altre informazioni, vedere [Aggiungere ed eliminare articoli in pubblicazioni esistenti](../publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### <a name="what-actions-require-subscriptions-to-be-reinitialized"></a>Quali azioni richiedono la reinizializzazione delle sottoscrizioni?  
  La reinizializzazione delle sottoscrizioni è necessaria per diverse modifiche degli articoli e delle pubblicazioni. Per altre informazioni, vedere [Modificare le proprietà di pubblicazioni e articoli](../publish/change-publication-and-article-properties.md).  
@@ -228,7 +227,7 @@ ms.locfileid: "63207052"
 ### <a name="does-replication-work-in-conjunction-with-clustering"></a>La replica funziona insieme al clustering?  
  Sì. Non vi sono considerazioni speciali, poiché tutti i dati vengono archiviati su un solo set di dischi nel cluster.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Domande frequenti sull'amministrazione della replica](frequently-asked-questions-for-replication-administrators.md)   
  [Procedure consigliate per l'amministrazione della replica](best-practices-for-replication-administration.md)  
   

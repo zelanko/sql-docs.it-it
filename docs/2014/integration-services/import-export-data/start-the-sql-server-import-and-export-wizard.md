@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 824642cf50923aa7ec879bfedbbb8f4ceaa6d9f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93ecd0b99ad355e38194afc338201790fba97684
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768033"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965581"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>Esecuzione dell'Importazione/Esportazione guidata SQL Server
   Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] costituisce il metodo più semplice per la copia di dati tra origini dati e per la costruzione di pacchetti di base. Per ulteriori informazioni sulla procedura guidata, vedere [SQL Server importazione/esportazione guidata](import-and-export-data-with-the-sql-server-import-and-export-wizard.md).  
@@ -33,15 +32,15 @@ ms.locfileid: "62768033"
   
      -oppure-  
   
-     In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]fare clic con il pulsante destro del mouse sulla cartella **pacchetti SSIS** , quindi scegliere **SSISImport ed esportazione guidata**.  
+     In fare [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] clic con il pulsante destro del mouse sulla cartella **pacchetti SSIS** , quindi scegliere **SSISImport ed esportazione guidata**.  
   
      -oppure-  
   
-     In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]scegliere **SSISImport ed Export Wizard**dal menu **progetto** .  
+     In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] scegliere **SSISImport ed Export Wizard**dal menu **progetto** .  
   
      -oppure-  
   
-     In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]connettersi al tipo di [!INCLUDE[ssDE](../../includes/ssde-md.md)] server, espandere database, fare clic con il pulsante destro del mouse su un database, scegliere **attività**, quindi fare clic su **Importa dati** o **Esporta dati**.  
+     In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] connettersi al tipo di [!INCLUDE[ssDE](../../includes/ssde-md.md)] Server, espandere database, fare clic con il pulsante destro del mouse su un database, scegliere **attività**, quindi fare clic su **Importa dati** o **Esporta dati**.  
   
      -oppure-  
   
@@ -117,7 +116,7 @@ ms.locfileid: "62768033"
   
 6.  Salvare ed eseguire un pacchetto.  
   
-     Se la procedura guidata viene avviata da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o dal prompt dei comandi, il pacchetto potrà essere eseguito immediatamente. Facoltativamente, è possibile salvare il pacchetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel database **msdb** o nel file System. Per ulteriori informazioni sul database **msdb** , vedere [Gestione pacchetti &#40;&#41;del servizio SSIS ](../service/package-management-ssis-service.md).  
+     Se la procedura guidata viene avviata da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o dal prompt dei comandi, il pacchetto potrà essere eseguito immediatamente. Facoltativamente, è possibile salvare il pacchetto nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database **msdb** o nel file System. Per ulteriori informazioni sul database **msdb** , vedere [Gestione pacchetti &#40;&#41;del servizio SSIS ](../service/package-management-ssis-service.md).  
   
      Quando si salva il pacchetto, è possibile impostarne il livello di protezione e, se per quest'ultimo si utilizza una password, specificarla. Per ulteriori informazioni sui livelli di protezione dei pacchetti, vedere [Access Control for sensitive data in Packages](../security/access-control-for-sensitive-data-in-packages.md).  
   
@@ -126,7 +125,7 @@ ms.locfileid: "62768033"
     > [!NOTE]  
     >  In [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] l'opzione per salvare il pacchetto creato con la procedura guidata non è disponibile.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Importazione/esportazione guidata SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
  [Creare pacchetti in SQL Server Data Tools](../create-packages-in-sql-server-data-tools.md)  
   

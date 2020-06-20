@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3f148cc75ba7ae1987d0114186b76273f35e8d03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f751928c05caa5c4acdcc6c667dc59bb7824021b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68199226"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056992"
 ---
 # <a name="reinitialize-a-subscription"></a>Reinizializzare una sottoscrizione
   In questo argomento viene descritto come reinizializzare una sottoscrizione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o RMO (Replication Management Objects). È possibile contrassegnare singole sottoscrizioni per la reinizializzazione in modo che nel corso della successiva sincronizzazione venga applicato un nuovo snapshot.  
@@ -107,19 +106,19 @@ ms.locfileid: "68199226"
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>Per reinizializzare una sottoscrizione pull in una pubblicazione transazionale  
   
-1.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_reinitpullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql). Specificare **@publisher**, **@publisher_db**e **@publication**. La sottoscrizione verrà contrassegnata per la reinizializzazione alla successiva esecuzione dell'agente di distribuzione.  
+1.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_reinitpullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql). Specificare **@publisher** , **@publisher_db** e **@publication** . La sottoscrizione verrà contrassegnata per la reinizializzazione alla successiva esecuzione dell'agente di distribuzione.  
   
 2.  (Facoltativo) Avviare l'agente di distribuzione nel Sottoscrittore per sincronizzare la sottoscrizione. Per altre informazioni, vedere [Sincronizzazione di una sottoscrizione pull](synchronize-a-pull-subscription.md).  
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-transactional-publication"></a>Per reinizializzare una sottoscrizione push in una pubblicazione transazionale  
   
-1.  Nel server di pubblicazione eseguire [sp_reinitsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql). Specificare **@publication**, **@subscriber**e **@destination_db**. La sottoscrizione verrà contrassegnata per la reinizializzazione alla successiva esecuzione dell'agente di distribuzione.  
+1.  Nel server di pubblicazione eseguire [sp_reinitsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql). Specificare **@publication** , **@subscriber** e **@destination_db** . La sottoscrizione verrà contrassegnata per la reinizializzazione alla successiva esecuzione dell'agente di distribuzione.  
   
 2.  (Facoltativo) Avviare l'agente di distribuzione nel server di distribuzione per sincronizzare la sottoscrizione. Per altre informazioni, vedere [Sincronizzazione di una sottoscrizione push](synchronize-a-push-subscription.md).  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>Per reinizializzare una sottoscrizione pull in una pubblicazione di tipo merge  
   
-1.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql). Specificare **@publisher**, **@publisher_db**e **@publication**. Per caricare le modifiche dal Sottoscrittore prima che venga eseguita la reinizializzazione `true` , **@upload_first**specificare il valore per. La sottoscrizione verrà contrassegnata per la reinizializzazione alla successiva esecuzione dell'agente di merge.  
+1.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql). Specificare **@publisher** , **@publisher_db** e **@publication** . Per caricare le modifiche dal Sottoscrittore prima che venga eseguita la reinizializzazione, specificare il valore `true` per **@upload_first** . La sottoscrizione verrà contrassegnata per la reinizializzazione alla successiva esecuzione dell'agente di merge.  
   
     > [!IMPORTANT]  
     >  Se si aggiunge, elimina o modifica un filtro con parametri, le modifiche in sospeso nel Sottoscrittore non possono essere caricate nel server di pubblicazione durante la reinizializzazione. Per caricare le modifiche in sospeso, sincronizzare tutte le sottoscrizioni prima di modificare il filtro.  
@@ -128,7 +127,7 @@ ms.locfileid: "68199226"
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-merge-publication"></a>Per reinizializzare una sottoscrizione push in una pubblicazione di tipo merge  
   
-1.  Nel server di pubblicazione eseguire [sp_reinitmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql). Specificare **@publication**, **@subscriber**e **@subscriber_db**. Per caricare le modifiche dal Sottoscrittore prima che venga eseguita la reinizializzazione `true` , **@upload_first**specificare il valore per. La sottoscrizione verrà contrassegnata per la reinizializzazione alla successiva esecuzione dell'agente di distribuzione.  
+1.  Nel server di pubblicazione eseguire [sp_reinitmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql). Specificare **@publication** , **@subscriber** e **@subscriber_db** . Per caricare le modifiche dal Sottoscrittore prima che venga eseguita la reinizializzazione, specificare il valore `true` per **@upload_first** . La sottoscrizione verrà contrassegnata per la reinizializzazione alla successiva esecuzione dell'agente di distribuzione.  
   
     > [!IMPORTANT]  
     >  Se si aggiunge, elimina o modifica un filtro con parametri, le modifiche in sospeso nel Sottoscrittore non possono essere caricate nel server di pubblicazione durante la reinizializzazione. Per caricare le modifiche in sospeso, sincronizzare tutte le sottoscrizioni prima di modificare il filtro.  
@@ -243,7 +242,7 @@ ms.locfileid: "68199226"
   
  [!code-vb[HowTo#rmo_vb_ReinitMergePullSub_WithUpload](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_reinitmergepullsub_withupload)]  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Reinizializza sottoscrizioni](reinitialize-subscriptions.md)   
  [Concetti di Replication Management Objects](concepts/replication-management-objects-concepts.md)   
  [Procedure consigliate per la sicurezza della replica](security/replication-security-best-practices.md)  

@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 2cab5279-86fd-482d-a690-de24bbc25299
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 09cccd43b4d20b5be2306c0922ff3bf40ff1b033
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a716a54ed882be1f3c8d51bd66036dbdbe53d70
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151513"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056573"
 ---
 # <a name="lesson-1-basic-navigation-in-sql-server-management-studio"></a>Lezione 1: Navigazione di base in SQL Server Management Studio
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è uno strumento potente e flessibile. Tuttavia, gli utenti che non hanno familiarità con Microsoft Visual Studio talvolta incontrano difficoltà nell'individuare il modo più rapido per accedere alle caratteristiche desiderate. Questa lezione illustra in che modo le finestre interagiscono per offrire una superficie di progettazione di semplice utilizzo. Al termine di questa lezione si sarà in grado di eliminare finestre indesiderate, visualizzare finestre contenenti le informazioni necessarie e configurare la superficie predefinita per supportare le operazioni che vengono eseguite più spesso.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]è uno strumento potente e flessibile. Tuttavia, gli utenti che non hanno familiarità con Microsoft Visual Studio talvolta incontrano difficoltà nell'individuare il modo più rapido per accedere alle caratteristiche desiderate. Questa lezione illustra in che modo le finestre interagiscono per offrire una superficie di progettazione di semplice utilizzo. Al termine di questa lezione si sarà in grado di eliminare finestre indesiderate, visualizzare finestre contenenti le informazioni necessarie e configurare la superficie predefinita per supportare le operazioni che vengono eseguite più spesso.  
   
  In questa lezione sono inclusi gli argomenti seguenti:  
   
@@ -38,9 +37,9 @@ ms.locfileid: "63151513"
   
 -   Ripristino della configurazione predefinita di SQL Server Management Studio  
   
--   Riepilogo  
+-   Summary  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Avviare SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
+ [Avvia SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
   
   

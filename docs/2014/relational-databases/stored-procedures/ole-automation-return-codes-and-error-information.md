@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 34744bedb701155d2695f6efc5aab3c493e6cf48
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aecdbaedca42b7456dbdbda0407760959e546f97
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011267"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062785"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>Codici restituiti e informazioni sugli errori di automazione OLE
-  Le stored procedure del sistema di automazione OLE restituiscono un codice `int` che corrisponde al valore HRESULT restituito dall'operazione di automazione OLE sottostante. Se HRESULT è 0, l'operazione è riuscita. Un `int` valore HRESULT diverso da zero è un codice di errore OLE nel formato esadecimale 0x800*nnnnn*, ma quando viene restituito come valore in un stored procedure codice restituito, HRESULT presenta il formato 214*nnnnnnn*.  
+  Le stored procedure del sistema di automazione OLE restituiscono un codice `int` che corrisponde al valore HRESULT restituito dall'operazione di automazione OLE sottostante. Se HRESULT è 0, l'operazione è riuscita. Un valore HRESULT diverso da zero è un codice di errore OLE nel formato esadecimale 0x800*nnnnn*, ma quando viene restituito come `int` valore in un stored procedure codice restituito, HRESULT presenta il formato 214*nnnnnnn*.  
   
- Ad esempio, passando un nome di oggetto non valido (SQLDMO. Xyzzy) per sp_OACreate fa in modo che la routine `int` restituisca un valore HRESULT 2147221005, ovvero 0x800401F3 in formato esadecimale.  
+ Ad esempio, passando un nome di oggetto non valido (SQLDMO. Xyzzy) per sp_OACreate fa in modo che la routine restituisca un valore `int` HRESULT 2147221005, ovvero 0x800401F3 in formato esadecimale.  
   
- È possibile utilizzare `CONVERT(binary(4), @hresult)` per convertire un valore HRESULT di tipo `int` in un valore `binary`. Se tuttavia si utilizza `CONVERT(char(10), CONVERT(binary(4), @hresult))` viene generata una stringa illeggibile, in quanto ogni byte di HRESULT viene convertito in un singolo carattere ASCII. È possibile usare il HexToChar di esempio seguente stored procedure per convertire `int` un valore HRESULT `char` in un valore che contiene una stringa esadecimale leggibile.  
+ È possibile utilizzare `CONVERT(binary(4), @hresult)` per convertire un valore HRESULT di tipo `int` in un valore `binary`. Se tuttavia si utilizza `CONVERT(char(10), CONVERT(binary(4), @hresult))` viene generata una stringa illeggibile, in quanto ogni byte di HRESULT viene convertito in un singolo carattere ASCII. È possibile usare il HexToChar di esempio seguente stored procedure per convertire un `int` valore HRESULT in un `char` valore che contiene una stringa esadecimale leggibile.  
   
 ```  
 USE AdventureWorks2012;  
@@ -76,7 +75,7 @@ SELECT @BinVariable AS BinaryValue,
 GO  
 ```  
   
- La stored procedure **sp_displayoaerrorinfo** dell'esempio seguente consente di visualizzare le informazioni sugli errori di automazione OLE quando una delle procedure di automazione OLE restituisce un codice di restituzione HRESULT diverso da zero. Questo esempio stored procedure USA `HexToChar`.  
+ La stored procedure **sp_displayoaerrorinfo** dell'esempio seguente consente di visualizzare le informazioni sugli errori di automazione OLE quando una delle procedure di automazione OLE restituisce un codice di restituzione HRESULT diverso da zero. Questo esempio stored procedure USA `HexToChar` .  
   
 ```  
 CREATE PROCEDURE dbo.sp_DisplayOAErrorInfo  

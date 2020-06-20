@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f5359f5c-93a3-4a4a-8286-e9fe6f0196c7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bdda14df5463fc9bd2a90d990d7c2be35f910d4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d1dbd64c7ffc8f80dacd79f96db5a0025a5805e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68189826"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056626"
 ---
 # <a name="alert-properties-history-page"></a>Proprietà avviso (pagina Cronologia)
   Utilizzare questa pagina per visualizzare e modificare la cronologia degli [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avvisi di Agent.  
@@ -35,7 +34,7 @@ ms.locfileid: "68189826"
  **Reimposta contatore**  
  Consente di reimpostare le informazioni contenute in questa pagina.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Avvisi](alerts.md)  
   
   

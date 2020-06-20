@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: 37cb2a7e-672a-4223-b6f3-a94d7b8d58cd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: bc521d814065a5585ca90dd0006b6299b3aa4722
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e5dac7da8b7e67bc3163e909661b839f01cb2a1c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128738"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027851"
 ---
 # <a name="localdbdeleteinstance-function"></a>Funzione LocalDBDeleteInstance
   Rimuove l'istanza specificata del database locale di SQL Server Express.  
@@ -44,7 +43,7 @@ HRESULT LocalDBDeleteInstance(
  *dwFlags*  
  [Input] Riservato per utilizzi futuri. Deve essere impostato attualmente su 0.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  S_OK  
  Funzione completata.  
   
@@ -93,7 +92,7 @@ HRESULT LocalDBDeleteInstance(
 ## <a name="remarks"></a>Osservazioni  
  Per un esempio di codice in cui viene utilizzata l'API del database locale, vedere [SQL Server Express riferimento al database locale](../sql-server-express-localdb-reference.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Informazioni sulla versione e intestazione di SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
   
   

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cbb5ca8c048b42313b4776b4a2e4b99e44eec406
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eaff1c5ac8ae5a804f546fc5e551dcb62e2fda7a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059422"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966907"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>Finestra di dialogo Editor trasformazione DQS Cleansing
   Usare la finestra di dialogo **Editor trasformazione DQS Cleansing** per correggere dati usando Data Quality Services (DQS). Per altre informazioni, vedere [Concetti di Data Quality Services](../../2014/data-quality-services/data-quality-services-concepts.md).  
@@ -47,14 +46,14 @@ ms.locfileid: "66059422"
  **Gestione connessione Data Quality**  
  Consente di selezionare una gestione connessione DQS esistente nell'elenco oppure di crearne una facendo clic sul pulsante **Nuova**.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova gestione connessione usando la finestra di dialogo **Gestione connessione DQS Cleansing** . Per altre informazioni, vedere [Impostare le opzioni nella finestra di dialogo Gestione connessione DQS Cleansing](#manager).  
   
  **Data Quality Knowledge Base**  
  Selezionare una Knowledge Base DQS esistente per l'origine dati connessa. Per altre informazioni sulla Knowledge Base DQS, vedere [Knowledge Base e domini DQS](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
  **Crittografa connessione**  
- consente di specificare se crittografare la connessione, per crittografare il trasferimento dei dati tra il server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]DQS e.  
+ consente di specificare se crittografare la connessione, per crittografare il trasferimento dei dati tra il server DQS e [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
  **Domini disponibili**  
  Consente di elencare i domini disponibili per la Knowledge Base selezionata. Esistono due tipi di domini, cioè singoli e composti. In questi ultimi sono contenuti due o più domini singoli.  
@@ -68,7 +67,7 @@ ms.locfileid: "66059422"
   
  Di seguito sono riportati i valori validi:  
   
--   **Interrompi componente**: indica che la trasformazione ha esito negativo e che i dati di input non vengono inseriti nel database Data Quality Services. Questo è il valore predefinito.  
+-   **Interrompi componente**: indica che la trasformazione ha esito negativo e che i dati di input non vengono inseriti nel database Data Quality Services. Si tratta del valore predefinito.  
   
 -   **Reindirizza riga**: indica che i dati di input non vengono inseriti nel database di Data Quality Services e che vengono reindirizzati all'output degli errori.  
   
@@ -126,9 +125,9 @@ ms.locfileid: "66059422"
   
 2.  Fare clic con il pulsante destro sull'area relativa alle connessioni, scegliere **Nuova connessione**e quindi fare clic su **DQS**.  
   
-3.  Fare clic su **Aggiungi**.  
+3.  Scegliere **Aggiungi**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Applicazione delle regole relative alla qualità dei dati all'origine dati](data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
   
   

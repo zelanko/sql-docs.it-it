@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cc7e6f84-80e1-4b5e-9409-d0e074edd147
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 540cf25a150349c7b6399975d20d10bc202ed935
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 05b11804630de6bd57681a569225971864c15814
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952175"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036897"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>Chiavi di crittografia (modalità nativa SSRS)
   Utilizzare la pagina Chiave di crittografia per gestire la chiave simmetrica utilizzata per crittografare e decrittografare i dati in un server di report. La gestione delle chiavi di crittografia rappresenta una parte fondamentale della configurazione del server di report. La chiave simmetrica viene creata e applicata automaticamente quando si crea il database del server di report. Creare una copia di backup della chiave simmetrica in modo da poter eseguire le operazioni di manutenzione periodiche. Per le attività di manutenzione indicate di seguito, è necessario disporre di una copia valida della chiave simmetrica:  
@@ -28,7 +27,7 @@ ms.locfileid: "71952175"
   
 -   Configurazione di una nuova istanza del server di report da condividere o utilizzo di un database del server di report esistente.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità nativa.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modalità nativa.  
   
 > [!IMPORTANT]  
 >  La modifica periodica della chiave di crittografia di Reporting Services è una procedura consigliata ai fini della sicurezza. È consigliabile modificare la chiave immediatamente dopo un aggiornamento della versione principale di Reporting Services. Modificando la chiave di crittografia di Reporting Services dopo un aggiornamento si riduce il rischio di ulteriori interruzioni del servizio rispetto invece all'eseguire questa operazione all'esterno del ciclo di aggiornamento.  
@@ -48,12 +47,12 @@ ms.locfileid: "71952175"
  **Backup**  
  Consente di copiare la chiave simmetrica in un file specificato. La chiave simmetrica non viene mai archiviata in testo non crittografato. Per la protezione del file, è necessario digitare una password.  
   
- **Ripristina**  
+ **Restore**  
  Consente di applicare una copia della chiave simmetrica salvata in precedenza al database del server di report. Per sbloccare il file, è necessario specificare la password.  
   
  La copia della chiave simmetrica eseguita in precedenza per l'istanza del server di report a cui si è attualmente connessi viene sovrascritta dalla versione ripristinata. Dopo avere ripristinato la chiave simmetrica, è necessario inizializzare tutti i server di report che utilizzano il database del server di report. Per ulteriori informazioni sull'inizializzazione di server di report, vedere [inizializzare un server di report &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
- **Modificare**  
+ **Modifica**  
  Consente di ricreare la chiave simmetrica e di crittografare di nuovo tutti i valori crittografati nel database del server di report. Accertarsi di arrestare il servizio del server di report prima di ricreare la chiave simmetrica.  
   
  In una distribuzione con scalabilità orizzontale ogni copia della chiave simmetrica viene sostituita con versioni più recenti. Prima di modificare la chiave simmetrica, accertarsi di controllare l'elenco dei server uniti alla distribuzione con scalabilità orizzontale per verificare che l'accesso alla nuova chiave venga concesso solo alle istanze del server di report valide. L'elenco dei server che fanno parte di una distribuzione con scalabilità orizzontale è disponibile nella pagina **Distribuzione con scalabilità orizzontale** . Prima di ricreare la chiave, arrestare il servizio in tutti i server di report inclusi nella distribuzione.  

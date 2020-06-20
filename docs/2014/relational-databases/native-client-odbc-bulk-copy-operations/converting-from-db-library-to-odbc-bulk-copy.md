@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 75ac184717fbee6cf26c99924fdccb164592fdfa
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 29a8ee59db4cade8cc3ddf649b54d4c2c47e87ee
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702088"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021323"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Conversione della copia bulk da DB-Library a ODBC
   La conversione di un programma di copia bulk DB-Library in ODBC è semplice perché le funzioni di copia bulk supportate dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client sono simili alle funzioni di copia bulk DB-Library, con le eccezioni seguenti:  
@@ -43,7 +42,7 @@ ms.locfileid: "82702088"
     |-------------------------|--------------------------------|-------------------------|  
     |Valori Null forniti|0|-1 (SQL_NULL_DATA)|  
     |Dati variabili forniti|-1|-10 (SQL_VARLEN_DATA)|  
-    |Carattere di lunghezza zero o stringa binaria|N/D|0|  
+    |Carattere di lunghezza zero o stringa binaria|ND|0|  
   
      In DB-Library, un valore *varlen* pari a-1 indica che vengono forniti dati a lunghezza variabile, che in ODBC *cbData* viene interpretato per indicare che vengono forniti solo valori null. Modificare le specifiche *VARLEN* DB-Library di-1 in SQL_VARLEN_DATA e tutte le specifiche *varlen* da 0 a SQL_NULL_DATA.  
   

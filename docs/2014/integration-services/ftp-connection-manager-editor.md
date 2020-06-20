@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 874b6585-255b-4a43-8396-bb08c3e8ac2b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 090b4d990a516b412ae5f7cc4e4d6e766e8d02e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20d50565b9687f18af95e820be90d16ab643de28
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058493"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966361"
 ---
 # <a name="ftp-connection-manager-editor"></a>Editor gestione connessione FTP
   Usare la finestra di dialogo **Editor gestione connessione FTP** per specificare le proprietà per la connessione a un server FTP.  
@@ -57,7 +56,7 @@ ms.locfileid: "66058493"
  **Test connessione**  
  Dopo aver configurato la gestione connessione FTP, fare clic su **Test connessione**per assicurarsi che la connessione sia funzionante.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

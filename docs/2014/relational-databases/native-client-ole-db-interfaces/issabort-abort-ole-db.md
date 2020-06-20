@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a5bca169-694b-4895-84ac-e8fba491e479
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8e36bb4cff26213467f30dd58b4d172be7d8a38d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a2055514d3ce5e2fdc9d6220a79f489fc64e9c55
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707328"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056145"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort (OLE DB)
   Annulla il set di righe corrente oltre a qualsiasi comando eseguito in batch associato al comando corrente.  
@@ -41,7 +40,7 @@ HRESULT Abort(void);
 > [!NOTE]  
 >  A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], se lo stato XACT_ABORT del server è ON, l'esecuzione di **ISSAbort::Abort** terminerà qualsiasi transazione implicita o esplicita e ne eseguirà il rollback durante la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la transazione corrente non viene interrotta.  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argomenti  
  No.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  

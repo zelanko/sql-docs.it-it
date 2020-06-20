@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2a8dfd7da9bb1ccc60d18e68ccbe4930a6edb00d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 205e4ae3d6f89f10a933bf357d1eeda458852584
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196679"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055031"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>Vincoli UNIQUE e CHECK
   I vincoli UNIQUE e CHECK sono due tipi di vincoli che possono essere utilizzati per applicare l'integrità dei dati nelle tabelle di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si tratta di importanti oggetti di database.  
@@ -51,7 +50,7 @@ ms.locfileid: "68196679"
 >  I vincoli che prevedono la conversione implicita o esplicita di tipi di dati possono impedire l'esecuzione di operazioni specifiche. Ad esempio, i vincoli definiti nelle tabelle di origine per il cambio di partizione possono impedire l'esecuzione di un'operazione ALTER TABLE...SWITCH. Evitare la conversione di tipi di dati nelle definizioni dei vincoli.  
   
 ### <a name="limitations-of-check-constraints"></a>Limitazioni per i vincoli CHECK  
- I vincoli CHECK non accettano i valori che restituiscono FALSE. I valori Null restituiscono UNKNOWN e pertanto se vengono inseriti in un'espressione è possibile che un vincolo venga ignorato. Si supponga, ad esempio, di inserire un vincolo `int` su una **colonna column che specifica che** la **colonna** può contenere solo il valore 10 (**colonna = 10**). Se si inserisce il valore NULL in **MyColumn**, [!INCLUDE[ssDE](../../includes/ssde-md.md)] inserisce NULL e non restituisce un errore.  
+ I vincoli CHECK non accettano i valori che restituiscono FALSE. I valori Null restituiscono UNKNOWN e pertanto se vengono inseriti in un'espressione è possibile che un vincolo venga ignorato. Si supponga, ad esempio, di inserire un vincolo su una `int` colonna column che specifica che la **colonna** può contenere solo il valore 10 (**colonna = 10**). **MyColumn** Se si inserisce il valore NULL in **MyColumn**, [!INCLUDE[ssDE](../../includes/ssde-md.md)] inserisce NULL e non restituisce un errore.  
   
  Un vincolo CHECK restituisce TRUE se la verifica della condizione controllata non restituisce FALSE per nessuna riga della tabella. Un vincolo CHECK viene utilizzato a livello di riga. Se una tabella appena creata non contiene righe, tutti i vincoli CHECK sulla tabella sono considerati validi. Questa situazione può generare risultati imprevisti, come è illustrato nell'esempio seguente.  
   

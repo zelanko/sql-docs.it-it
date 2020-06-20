@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c39f3ec3-fc2c-4c12-940f-60d8d3d17660
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e16882247a123b32ba07fbbae0d1f3573fd2d678
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 32188b1c47168aefbca914fa15f71850df716153
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092072"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036254"
 ---
 # <a name="sql-server-agent-service-cannot-use-sql-server-authentication"></a>Il servizio SQL Server Agent non può utilizzare l'autenticazione di SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent supporta solo l'autenticazione di Windows quando il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent si connette a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -31,7 +30,7 @@ ms.locfileid: "66092072"
   
  Per ulteriori informazioni, vedere gli argomenti relativi alla sicurezza per l'amministrazione automatica e all'implementazione della sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Problemi di aggiornamento di SQL Server Agent](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  
   
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 689c3a734a5b4eb424511da52032dc348b5757ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7686f6ee0a5cbce01fb69d36d645ff9787276ef8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75231801"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024931"
 ---
 # <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>Lezione 6: Eseguire la migrazione di un database da un computer di origine locale a un computer di destinazione in Azure
   In questa lezione si presuppone che si disponga già di un altro SQL Server, che potrebbe trovarsi in un altro computer locale o in una macchina virtuale in Azure. Per informazioni su come creare una macchina virtuale SQL Server in Azure, vedere [provisioning di una macchina virtuale SQL Server in Azure](https://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). Dopo il provisioning di una macchina virtuale SQL Server in Azure, verificare che sia possibile connettersi a un'istanza di SQL Server in questa macchina virtuale tramite SQL Server Management Studio in un altro computer.  
@@ -136,9 +135,9 @@ ms.locfileid: "75231801"
   
 5.  Nella finestra di dialogo **Collega database** scegliere **Aggiungi**per specificare il database da collegare. Nella finestra di dialogo **Individua file di database** :  
   
-     Per il percorso del file di dati del `https://teststorageaccnt.blob.core.windows.net/testcontainer/`database, digitare:.  
+     Per il percorso del file di dati del database, digitare: `https://teststorageaccnt.blob.core.windows.net/testcontainer/` .  
   
-     Per nome file, digitare: `TestDB1Data.mdf`.  
+     Per nome file, digitare: `TestDB1Data.mdf` .  
   
 6.  Fare clic su **OK**.  
   

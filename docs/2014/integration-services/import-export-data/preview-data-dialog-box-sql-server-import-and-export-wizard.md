@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 423ac26a-ba02-4fdf-88b4-07995fe4a97e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 55102e5b91b9b544a38338dbbbbcd882bc66f84a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49566ab97aa832c7e61d4056749fcfa90af1b167
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62767983"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965561"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>Finestra di dialogo Anteprima dati (Importazione/Esportazione guidata SQL Server)
   Utilizzare la finestra di dialogo **Anteprima dati** per visualizzare la query che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà inviata all'origine dati dall'importazione/esportazione guidata. È anche possibile utilizzare questa finestra di dialogo per visualizzare in anteprima fino a 200 righe di dati di esempio.  

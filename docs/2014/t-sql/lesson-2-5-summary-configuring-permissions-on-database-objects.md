@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d0ecf297-27af-43a4-918c-31c354b3a96e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ca78065f168c96ce5a092050e49e1d4e9f8f3f41
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb6265513d467f352b0ae890dd3f119a7f5fffb9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62642709"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054613"
 ---
 # <a name="summary-configuring-permissions-on-database-objects"></a>Riepilogo: Configurazione delle autorizzazioni per gli oggetti di database
   Gli account di accesso concedono agli utenti le autorizzazioni necessarie per connettersi a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Gli utenti sono rappresentati da account autorizzati ad accedere a un database specifico. Utilizzare l'istruzione GRANT per concedere agli utenti le autorizzazioni necessarie per accedere ai dati, leggerli e modificarli.  

@@ -18,21 +18,20 @@ helpviewer_keywords:
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 9d9f3ab9f80c6f2c77153439cf554f0ae8598586
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b4a4c956f1bf60f6d874ee2bda3b261dd954836d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68195768"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048856"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>Utilizzo del provider WMI per Gestione configurazione
   Prima di eseguire la programmazione con il provider WMI per Gestione computer, è necessario tenere presente quanto riportato di seguito:  
   
-## <a name="binding"></a>Associazione  
+## <a name="binding"></a>Binding  
  Il provider WMI per Gestione configurazione è un modello a oggetti COM che supporta l'associazione anticipata e tardiva. Con l'associazione tardiva è possibile utilizzare linguaggi di scripting, come VBScript, per modificare a livello di codice gli alias, le impostazioni di rete e i servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Per ulteriori informazioni sulla programmazione di implementazioni del provider WMI utilizzando linguaggi di scripting [!INCLUDE[msCoName](../../includes/msconame-md.md)] , visitare il [sito Web](https://go.microsoft.com/fwlink/?linkid=15426)MSDN.  
+ Per ulteriori informazioni sulla programmazione di implementazioni del provider WMI utilizzando linguaggi di scripting, visitare il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [sito Web](https://go.microsoft.com/fwlink/?linkid=15426)MSDN.  
   
 ## <a name="specifying-a-connection-string"></a>Definizione di una stringa di connessione  
  Le applicazioni indirizzano il provider WMI per Gestione configurazione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connettendosi a uno spazio dei nomi WMI definito dal provider. Il servizio Windows WMI esegue il mapping di questo spazio dei nomi alla DLL del provider e lo carica in memoria. Tutte le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono rappresentate con un solo spazio dei nomi WMI. Lo spazio dei nomi predefinito è  
@@ -54,7 +53,7 @@ ms.locfileid: "68195768"
   
  I certificati di sicurezza sono supportati dal provider WMI per Gestione configurazione. Per ulteriori informazioni sui certificati, vedere [gerarchia di crittografia](../security/encryption/encryption-hierarchy.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestione configurazione SQL Server](../sql-server-configuration-manager.md)  
   
   

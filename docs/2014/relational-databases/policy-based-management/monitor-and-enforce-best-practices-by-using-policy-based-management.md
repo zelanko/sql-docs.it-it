@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: bfc7cc16c9751ebdf64a8e9cd110547255c944ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68e02c4933f559bff62b8e352016a911990049a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62626048"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049566"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Monitorare e applicare le procedure consigliate tramite la gestione basata su criteri
-  La gestione basata su criteri consente di monitorare le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]procedure consigliate per. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fornisce un set di file di criteri che è possibile importare come criteri per procedure consigliate e quindi valutare i criteri rispetto a un set di destinazioni che include istanze, oggetti di istanza, database o oggetti di database. È possibile valutare manualmente i criteri, impostare i criteri per la valutazione di un set di destinazioni in base a una pianificazione oppure per la valutazione di un set di destinazioni in base a un evento. Per altre informazioni sulla gestione basata su criteri, vedere [Amministrazione di server tramite la gestione basata su criteri](administer-servers-by-using-policy-based-management.md).  
+  La gestione basata su criteri consente di monitorare le procedure consigliate per [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fornisce un set di file di criteri che è possibile importare come criteri per procedure consigliate e quindi valutare i criteri rispetto a un set di destinazioni che include istanze, oggetti di istanza, database o oggetti di database. È possibile valutare manualmente i criteri, impostare i criteri per la valutazione di un set di destinazioni in base a una pianificazione oppure per la valutazione di un set di destinazioni in base a un evento. Per altre informazioni sulla gestione basata su criteri, vedere [Amministrazione di server tramite la gestione basata su criteri](administer-servers-by-using-policy-based-management.md).  
   
 ## <a name="policy-and-rules-for-database-engine"></a>Criteri e regole per il Motore di database  
- Nella tabella seguente sono elencati i criteri inclusi nell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e vengono fornite informazioni sulle regole per le procedure consigliate valutate da ciascun criterio. I criteri vengono archiviati come file XML e devono essere importati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni sull'importazione di criteri, vedere [Importare i criteri della gestione basata su criteri](import-a-policy-based-management-policy.md).  
+ Nella tabella seguente sono elencati i criteri inclusi nell'installazione di e vengono fornite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informazioni sulle regole per le procedure consigliate valutate da ciascun criterio. I criteri vengono archiviati come file XML e devono essere importati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni sull'importazione di criteri, vedere [Importare i criteri della gestione basata su criteri](import-a-policy-based-management-policy.md).  
   
 |Nome criteri|Regola per le procedure consigliate|  
 |-----------------|------------------------|  
@@ -67,7 +66,7 @@ ms.locfileid: "62626048"
 |Errore registro eventi di Windows - Timeout I/O sistema di archiviazione|[Timeout di input o output del sistema di archiviazione](storage-system-input-output-time-out.md)|  
 |Errore di sistema in registro eventi di Windows|[Errori di sistema imprevisti](unexpected-system-failures.md)|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzo della copia di facet della gestione basata su criteri](working-with-policy-based-management-facets.md)  
   
   

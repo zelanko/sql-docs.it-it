@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7aba19ff-72b3-45f6-8e54-23f4988d63a8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 379877d3a08c60a293b96c5c57d55a2894ba0a79
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fef0fb69b5bfd028977276d8efabc333a21e0feb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63074055"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044563"
 ---
 # <a name="handle-multiple-job-steps"></a>Gestione di più passaggi di processo
   Se il processo è costituito da più passaggi, è necessario specificare l'ordine di esecuzione dei passaggi. Questa operazione è denominata *controllo di Flow * *.* È possibile aggiungere nuovi passaggi di processo e modificare il flusso dei passaggi esistenti in qualsiasi momento. Le modifiche verranno applicate alla successiva esecuzione del processo. Nella figura riportata di seguito è illustrato il controllo di flusso relativo a un processo di backup del database.  
@@ -42,11 +41,11 @@ ms.locfileid: "63074055"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent registra i dati relativi al processo e ai passaggi di processo nella cronologia del processo.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_add_job &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)   
- [dbo. sysjobhistory &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)   
- [dbo. sysjobs &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-sysjobs-transact-sql)   
- [dbo. sysjobsteps &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-sysjobsteps-transact-sql)   
+ [dbo.sysjobhistory &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)   
+ [Processi didbo.sys&#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-sysjobs-transact-sql)   
+ [dbo.sysJobSteps &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-sysjobsteps-transact-sql)   
  [Implementare processi](implement-jobs.md)   
  [Gestire passaggi di processo](manage-job-steps.md)  
   

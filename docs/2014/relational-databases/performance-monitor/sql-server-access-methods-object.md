@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 96229c151957cd0b0bf91c248b4d96a294864181
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23f7df8267e4eba6adfde28f833f13d5e84a1efb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63251104"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017239"
 ---
 # <a name="sql-server-access-methods-object"></a>Oggetto Metodi di accesso di SQL Server
   L'oggetto **Metodi di accesso** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include contatori che consentono di monitorare l'accesso ai dati logici all'interno del database. L'accesso fisico alle pagine del database su disco viene monitorato tramite i contatori di **Gestione buffer** . Il monitoraggio dei metodi utilizzati per accedere ai dati archiviati nel database consente di determinare se è possibile migliorare le prestazioni delle query aggiungendo o modificando gli indici, aggiungendo o spostando partizioni, aggiungendo file o gruppi di file, deframmentando gli indici o riscrivendo le query. I contatori dell'oggetto **Metodi di accesso** possono essere utilizzati anche per monitorare la quantità di dati, gli indici e lo spazio libero all'interno del database e determinare in tal modo il volume e la frammentazione dei dati per ogni istanza del server. Un'eccessiva frammentazione dell'indice può ridurre le prestazioni.  
@@ -88,7 +87,7 @@ ms.locfileid: "63251104"
 |**Tabelle di lavoro create/sec**|Numero di tabelle di lavoro create al secondo. Ad esempio, è possibile utilizzare le tabelle di lavoro per l'archiviazione dei risultati temporanei di spool di query, variabili LOB, variabili XML e cursori.|  
 |**Percentuale tabelle di lavoro dalla cache**|Percentuale di tabelle di lavoro create in cui le due pagine iniziali della tabella di lavoro non sono state allocate ma sono risultate immediatamente disponibili dalla cache della tabella di lavoro. Quando si rimuove una tabella di lavoro, è possibile che due pagine rimangano allocate e vengano restituite alla cache della tabella di lavoro, incrementando le prestazioni.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Monitorare l'utilizzo delle risorse &#40;Monitor di sistema&#41;](monitor-resource-usage-system-monitor.md)  
   
   

@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8a3a6ffe-4001-46be-8548-94532550f6a5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 638f96285f4dab2bb109353d7d648b9de8b6bb67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d899d0585eda7c9cd2b12147732b23c01872128b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952298"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042823"
 ---
 # <a name="create-a-report-server-database--ssrs-configuration-manager"></a>Creare un database del server di report (Gestione configurazione SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]In **modalità nativa** vengono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzati due database relazionali per archiviare i metadati e gli oggetti del server di report. Un database è utilizzato per l'archiviazione primaria e l'altro per l'archiviazione dei dati temporanei. I database vengono creati assieme e associati in base al nome. Con un'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i database sono denominati `reportserver` e `reportservertempdb`. I due database vengono detti collettivamente "database del server di report" o "catalogo del server di report".  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]In **modalità nativa** vengono utilizzati due [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database relazionali per archiviare i metadati e gli oggetti del server di report. Un database è utilizzato per l'archiviazione primaria e l'altro per l'archiviazione dei dati temporanei. I database vengono creati assieme e associati in base al nome. Con un'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i database sono denominati `reportserver` e `reportservertempdb`. I due database vengono detti collettivamente "database del server di report" o "catalogo del server di report".  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **modalità SharePoint** include un terzo database usato per i metadati di avviso dei dati. I tre database vengono creati per ogni applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e nei nomi dei database è incluso, per impostazione predefinita, un GUID che rappresenta l'applicazione di servizio. Di seguito sono riportati nomi di esempio dei tre database della modalità SharePoint:  
   

@@ -15,18 +15,17 @@ topic_type:
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 889e5eee49363c71a18808e7c71434110241bc84
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1bac043c4a194c904154e2c97cd0544c8c941078
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63130522"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027774"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>Funzione LocalDBGetInstanceInfo
   Vengono restituite le informazioni per l'istanza del database locale di SQL Server Express specificata, se esistente, la versione del database locale utilizzata dall'istanza, se quest'ultima è in esecuzione e così via.  
   
- Le informazioni vengono restituite in `struct` un oggetto denominato **dello structLocalDBInstanceInfo**, che presenta la definizione seguente.  
+ Le informazioni vengono restituite in un oggetto `struct` denominato **dello structLocalDBInstanceInfo**, che presenta la definizione seguente.  
   
 ```  
 typedef struct _LocalDBInstanceInfo  
@@ -95,7 +94,7 @@ HRESULT LocalDBGetInstanceInfo(
  *dwInstanceInfoSize*  
  Input Include le dimensioni del buffer *InstanceInfo* .  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  S_OK  
  Funzione completata.  
   
@@ -127,7 +126,7 @@ HRESULT LocalDBGetInstanceInfo(
  Si è verificato un errore imprevisto. Per informazioni, vedere il registro eventi.  
   
 ## <a name="details"></a>Dettagli  
- La logica alla base dell'introduzione dell'argomento `struct` size (*lpInstanceInfoSize*) consiste nell'abilitare l'API per la restituzione di versioni diverse di **dello structLocalDBInstanceInfo**, abilitando in modo efficace la compatibilità con le versioni precedenti e precedenti.  
+ La logica alla base dell'introduzione dell' `struct` argomento size (*lpInstanceInfoSize*) consiste nell'abilitare l'API per la restituzione di versioni diverse di **dello structLocalDBInstanceInfo**, abilitando in modo efficace la compatibilità con le versioni precedenti e precedenti.  
   
  Se l' `struct` argomento size (*lpInstanceInfoSize*) corrisponde alle dimensioni di una versione nota di **dello structLocalDBInstanceInfo**, `struct` viene restituita tale versione di. In caso contrario, viene restituito LOCALDB_ERROR_INVALID_PARAMETER.  
   
@@ -141,7 +140,7 @@ LocalDBInstanceInfo(L"Test", &ii, sizeof(LocalDBInstanceInfo));
   
  Per un esempio di codice in cui viene utilizzata l'API del database locale, vedere [SQL Server Express riferimento al database locale](../sql-server-express-localdb-reference.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Informazioni sulla versione e intestazione di SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
   
   

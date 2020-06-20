@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac0f613a023261c79b3a5ee11458ecdbda86998d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144597"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024742"
 ---
 # <a name="view-offline-log-files"></a>Visualizzare file di log offline
   A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], è possibile visualizzare file di log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un'istanza locale o remota di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando l'istanza di destinazione è offline o non può essere avviata.  
@@ -50,9 +49,9 @@ ms.locfileid: "63144597"
   
 -   Accesso in lettura allo spazio dei nomi WMI **Root\Microsoft\SqlServer\ComputerManagement12** . Per impostazione predefinita, chiunque dispone di accesso in lettura tramite l'autorizzazione Abilita account. Per ulteriori informazioni, vedere la procedura "Per verificare le autorizzazioni WMI" più avanti in questa sezione.  
   
--   Autorizzazione di lettura per la cartella che contiene i file di log degli errori. Per impostazione predefinita, i file di log degli errori si trovano nel percorso seguente, dove \<*Unità>* rappresenta l'unità in cui è stato installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e \<*NomeIstanza*> è il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+-   Autorizzazione di lettura per la cartella che contiene i file di log degli errori. Per impostazione predefinita, i file di log degli errori si trovano nel percorso seguente \<*Drive> , dove * rappresenta l'unità in cui è stato installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e \<*InstanceName*> è il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
-     **\<Unità>: \Programmi\microsoft SQL Server\MSSQL12. \<NomeIstanza> \Mssql\Log**  
+     **\<Drive>: \Programmi\Microsoft SQL Server\MSSQL12. \<InstanceName> \MSSQL\Log**  
   
  Per verificare le impostazioni di sicurezza dello spazio dei nomi WMI, è possibile utilizzare lo snap-in Controllo WMI.  
   
@@ -60,9 +59,9 @@ ms.locfileid: "63144597"
   
 1.  Aprire lo snap-in Controllo WMI. A tale scopo, effettuare una delle operazioni seguenti a seconda del sistema operativo in uso:  
   
-    -   Fare **Start**clic su Start `wmimgmt.msc` , digitare nella casella **Inizia ricerca** , quindi premere INVIO.  
+    -   Fare clic su **Start**, digitare `wmimgmt.msc` nella casella **Inizia ricerca** , quindi premere INVIO.  
   
-    -   Fare clic sul pulsante **Start**, scegliere `wmimgmt.msc` **Esegui**, digitare e quindi premere INVIO.  
+    -   Fare clic sul pulsante **Start**, scegliere **Esegui**, digitare `wmimgmt.msc` e quindi premere INVIO.  
   
 2.  Per impostazione predefinita, lo snap-in Controllo WMI gestisce il computer locale.  
   

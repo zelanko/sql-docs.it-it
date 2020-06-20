@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 9b8d6f35f8dedeb4539dc8299ca32f6566beb03f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d14d27cdc20c0f090c7a030efe05cfce4842f437
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161959"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026078"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Monitoraggio delle prestazioni di stored procedure compilate in modo nativo
   In questo argomento viene illustrato come è possibile monitorare le prestazioni di stored procedure compilate in modo nativo  
@@ -29,7 +28,7 @@ ms.locfileid: "63161959"
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
- Per ulteriori informazioni sull'evento `sp_statement_completed` esteso, vedere [come recuperare l'istruzione che ha causato un evento](https://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx).  
+ Per ulteriori informazioni sull' `sp_statement_completed` evento esteso, vedere [come recuperare l'istruzione che ha causato un evento](https://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx).  
   
 ## <a name="using-data-management-views"></a>Utilizzo delle viste di gestione dati  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta la raccolta delle statistiche di esecuzione per le stored procedure compilate in modo nativo, sia a livello di routine sia a livello di query. La raccolta delle statistiche di esecuzione non è abilitata per impostazione predefinita a causa dell'impatto sulle prestazioni.  
@@ -113,7 +112,7 @@ GO
   
  Nel piano di esecuzione stimato per le stored procedure compilate in modo nativo vengono illustrati gli operatori e le espressioni delle query per le query nella routine. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] non supporta tutti gli attributi di SHOWPLAN_XML per le stored procedure compilate in modo nativo. Ad esempio, gli attributi correlati ai costi di Query Optimizer non fanno parte di SHOWPLAN_XML per la routine.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [stored procedure compilate in modo nativo](natively-compiled-stored-procedures.md)  
   
   

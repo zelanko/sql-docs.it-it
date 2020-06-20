@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 89e925d72b4ca4815c05e9f4ab67211a1a7ea980
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1ca2e8dd516b995dcf3d2e48b1ed14209677d41f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766628"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963496"
 ---
 # <a name="package-management-ssis-service"></a>Gestione dei pacchetti (servizio SSIS)
   La gestione dei pacchetti implica attività come le seguenti:  
@@ -44,7 +43,7 @@ ms.locfileid: "62766628"
 >  In questo argomento viene illustrato il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un servizio Windows per la gestione dei pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] supporta il servizio per la compatibilità con le versioni precedenti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], è possibile gestire oggetti come i pacchetti del server Integration Services.  
   
 ## <a name="package-store"></a>Archivio pacchetti  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]fornisce due cartelle di primo livello per l'accesso [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ai pacchetti: **esecuzione di pacchetti** e **pacchetti archiviati**. La cartella **Pacchetti in esecuzione** include i pacchetti in esecuzione nel server. La cartella **Pacchetti archiviati** include i pacchetti che vengono salvati nell'archivio pacchetti. Questi sono gli unici pacchetti gestiti dal servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L'archivio pacchetti può includere sia il database msdb sia le cartelle del file system elencate nel file di configurazione per il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Il file di configurazione specifica le cartelle msdb e del file system da gestire. Possono inoltre essere presenti pacchetti archiviati in un'altra posizione nel file system non gestiti dal servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]fornisce due cartelle di primo livello per l'accesso ai [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacchetti: **esecuzione di pacchetti** e **pacchetti archiviati**. La cartella **Pacchetti in esecuzione** include i pacchetti in esecuzione nel server. La cartella **Pacchetti archiviati** include i pacchetti che vengono salvati nell'archivio pacchetti. Questi sono gli unici pacchetti gestiti dal servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L'archivio pacchetti può includere sia il database msdb sia le cartelle del file system elencate nel file di configurazione per il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Il file di configurazione specifica le cartelle msdb e del file system da gestire. Possono inoltre essere presenti pacchetti archiviati in un'altra posizione nel file system non gestiti dal servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  I pacchetti salvati in msdb sono archiviati in una tabella denominata sysssispackages. Quando si salvano i pacchetti in msdb, è inoltre possibile raggrupparli in cartelle logiche. L'uso di cartelle logiche può essere utile per organizzare i pacchetti in base allo scopo o per filtrarli nella tabella sysssispackages. È possibile creare nuove cartelle logiche usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per impostazione predefinita, le cartelle logiche aggiunte a msdb vengono incluse automaticamente nell'archivio pacchetti.  
   
@@ -83,7 +82,7 @@ ms.locfileid: "62766628"
   
 -   [Visualizzare pacchetti di Integration Services in SQL Server Management Studio &#40;servizio SSIS&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Servizio Integration Services &#40;servizio SSIS&#41;](integration-services-service-ssis-service.md)  
   
   

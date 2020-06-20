@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8a9f0892-d812-4173-a498-abc36b230147
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 442c8ffca93052235db69394ed71ad2ff3157dfe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea83e4c25babf437158706df2c4cfeb1780777a6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316204"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064064"
 ---
 # <a name="clear-a-trace-window-sql-server-profiler"></a>Cancellare il contenuto di una finestra di traccia (SQL Server Profiler)
   In questo argomento viene descritto come cancellare il contenuto della finestra di traccia per una traccia in esecuzione utilizzando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

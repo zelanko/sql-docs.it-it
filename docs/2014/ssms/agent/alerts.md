@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b385e6b02807ed79e2becb127a16e76d04329764
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 946bfd0c05e7739af4bfebf799980a0dc27de245
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62473132"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065015"
 ---
 # <a name="alerts"></a>Avvisi
   Gli eventi vengono generati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e immessi nel registro applicazioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent legge il registro applicazioni ed esegue un confronto tra gli eventi e gli avvisi definiti. Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent rileva una corrispondenza, viene attivato un avviso, che rappresenta una risposta automatica a un evento. Oltre al controllo degli eventi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent può inoltre eseguire il monitoraggio delle condizioni delle prestazioni e degli eventi WMI (Windows Management Instrumentation).  
@@ -76,7 +75,7 @@ ms.locfileid: "62473132"
 ## <a name="selecting-a-performance-condition"></a>Selezione di una condizione delle prestazioni  
  È possibile determinare la generazione di un avviso in risposta a una condizione delle prestazioni specifica. In questo caso, è necessario specificare il contatore delle prestazioni da monitorare, una soglia per l'avviso e il comportamento indicato dal contatore se viene generato l'avviso. Per impostare una condizione delle prestazioni, è necessario definire gli elementi indicati di seguito nella pagina [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Generale **della finestra di dialogo** Nuovo avviso **o** Proprietà avviso **di** Agent:  
   
--   **Oggetto**  
+-   **Object**  
   
      L'oggetto rappresenta l'area delle prestazioni da monitorare.  
   
@@ -152,7 +151,7 @@ ms.locfileid: "62473132"
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-update-alert-transact-sql)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzare oggetti di SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
   
   

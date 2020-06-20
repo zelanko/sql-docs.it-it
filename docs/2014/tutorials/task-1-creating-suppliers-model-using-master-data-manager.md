@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6bbbcbff-1ecd-456c-947f-c445c8da673c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 183bf1031740a8e8af283048013f1f548a29072e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: afa2f8009a3cb6cb0b60a671e94fc80892f640aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81484734"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064846"
 ---
 # <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>Attività 1: Creazione del modello Supplier tramite Gestione dati master
   In questa attività viene creato un modello denominato **Suppliers** in MDS utilizzando **Gestione dati master**.  
