@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2ab1a21d-3a0f-4ba4-92d8-7150b68e585e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 20f4376d6cd2eee3702596f5db60ae501d0ecc33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fca9d196526745f1e700e8ada42230ef9bff0da7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064895"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933102"
 ---
 # <a name="edit-trace-template-properties-general-tab"></a>Modifica modello di traccia (scheda Generale)
   Utilizzare la scheda **Generale** della finestra di dialogo **Proprietà modello di traccia** per visualizzare o modificare i modelli di traccia esistenti utilizzando le opzioni seguenti. Per accedere a questa finestra di dialogo, scegliere **Modelli** dal menu  **File** di [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] e quindi fare clic su **Modifica modello**.  
@@ -34,8 +33,8 @@ ms.locfileid: "66064895"
  **Usa come modello predefinito per il tipo di server selezionato**  
  Consente di utilizzare il modello corrente per impostazione predefinita per le tracce create per questo tipo di server.  
   
-## <a name="see-also"></a>Vedi anche  
- [Modificare un modello di traccia &#40;SQL Server Profiler&#41;](modify-a-trace-template-sql-server-profiler.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Modificare modello di traccia &#40;SQL Server Profiler&#41;](modify-a-trace-template-sql-server-profiler.md)   
  [Modelli e autorizzazioni di SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   

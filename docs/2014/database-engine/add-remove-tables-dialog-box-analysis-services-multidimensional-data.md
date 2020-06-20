@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b2760517-b0cb-4268-905d-bb1e1f9d902a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c0c0ad4d5c375b537f4bc0fd4efb820395a8d6e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 04192a5990126d06c4b3f7b6a77cc218f3a631de
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889221"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937336"
 ---
 # <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Aggiungi-Rimuovi tabelle (Analysis Services-Dati multidimensionali)
   Per aggiungere o rimuovere tabelle di un'origine dati in una vista origine dati usare la finestra di dialogo **Aggiungi/Rimuovi tabelle** di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Per visualizzare la finestra di dialogo **Aggiungi/Rimuovi tabelle** è possibile:  
@@ -35,7 +34,7 @@ ms.locfileid: "68889221"
  **Available objects**  
  Consente di visualizzare gli oggetti e i relativi tipi nell'origine dei dati non ancora inclusi nella vista origine dati.  
   
- Fare **>>** clic su questo pulsante per trasferire tutti gli oggetti elencati in **oggetti disponibili** in **oggetti inclusi**oppure selezionare uno o **>** più oggetti e quindi fare clic su per trasferire gli oggetti selezionati in **oggetti inclusi**.  
+ Fare clic su questo pulsante **>>** per trasferire tutti gli oggetti elencati in **oggetti disponibili** in **oggetti inclusi**oppure selezionare uno o più oggetti e quindi fare clic su **>** per trasferire gli oggetti selezionati in **oggetti inclusi**.  
   
  **Filter**  
  Digitare il filtro utilizzato per limitare gli oggetti inclusi nell'elenco **Oggetti disponibili** e quindi fare clic sul pulsante per applicare il filtro agli oggetti elencati.  
@@ -46,7 +45,7 @@ ms.locfileid: "68889221"
  **Included objects**  
  Consente di visualizzare gli oggetti e i relativi tipi già aggiunti alla vista origine dati.  
   
- Fare **<<** clic su questo pulsante per trasferire tutti gli oggetti elencati in **oggetti inclusi** in **oggetti disponibili**oppure selezionare uno o **<** più oggetti e quindi fare clic su per trasferire gli oggetti selezionati in **oggetti disponibili**.  
+ Fare clic su questo pulsante **<<** per trasferire tutti gli oggetti elencati in **oggetti inclusi** in **oggetti disponibili**oppure selezionare uno o più oggetti e quindi fare clic su **<** per trasferire gli oggetti selezionati in **oggetti disponibili**.  
   
  **Add related tables**  
  Fare clic su questo pulsante per aggiungere tutte le tabelle correlate a quelle selezionate in **Oggetti inclusi**.  

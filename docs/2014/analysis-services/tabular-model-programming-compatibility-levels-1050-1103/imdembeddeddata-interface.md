@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 331f8c33f7748e6591acd6d6ecda7a03ef7d8137
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62757782"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940112"
 ---
 # <a name="imdembedded-interface"></a>Interfaccia IMDEmbedded
   L'interfaccia IMDEmbedded è un'interfaccia pubblica utilizzata per gestire un database PowerPivot incorporato o un database modello tabulare. L'interfaccia eredita dall'interfaccia `IPersistStream` e consente di effettuare le operazioni seguenti:  
@@ -38,7 +37,7 @@ ms.locfileid: "62757782"
   
 -   Salvare il database locale o in-process nel flusso incorporato del documento contenitore. Ereditato da `IPersistStream`.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Informazioni di riferimento  
  Il riferimento seguente documenta l' `IMDEmbedded` interfaccia come presentata nel file di intestazione **Msmd. h** .  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>File di origine: PXOEmbeddedData.idl  
@@ -81,7 +80,7 @@ HRESULT GetStreamIdentifier (
     )  
 ```  
   
-#### <a name="description"></a>Descrizione  
+#### <a name="description"></a>Description  
  Ottiene l'identificatore utilizzato dall'applicazione host per il flusso incorporato nel documento contenitore.  
   
 #### <a name="parameters"></a>Parametri  
@@ -98,7 +97,7 @@ HRESULT GetStreamIdentifier (
  `E_FAIL`  
  Si è verificato un errore durante l'accesso all'identificatore di flusso.  
   
-#### <a name="remarks"></a>Osservazioni  
+#### <a name="remarks"></a>Commenti  
  Per verificare se la connessione corrente contiene un database incorporato, l'utente deve controllare il valore della proprietà DBPROP_MSMD_EMBEDDED_DATA dalle proprietà di connessione di OLE DB.  
   
  I valori possibili per DBPROP_MSMD_EMBEDDED_DATA sono:  
@@ -125,7 +124,7 @@ HRESULT SetContainerURL (
     )  
 ```  
   
-#### <a name="description"></a>Descrizione  
+#### <a name="description"></a>Description  
  Viene impostato l'URL per il file in cui è contenuto il flusso incorporato.  
   
 #### <a name="parameters"></a>Parametri  
@@ -155,7 +154,7 @@ HRESULT SetHosted (
     )  
 ```  
   
-#### <a name="description"></a>Descrizione  
+#### <a name="description"></a>Description  
  Impostare un flag per specificare se l'applicazione in cui viene eseguito l'incorporamento è in ambiente host.  
   
 #### <a name="parameters"></a>Parametri  
@@ -185,7 +184,7 @@ HRESULT SetTempDirPath (
     )  
 ```  
   
-#### <a name="description"></a>Descrizione  
+#### <a name="description"></a>Description  
  Impostare il percorso dei file temporanei utilizzati dall'applicazione in cui viene eseguito l'incorporamento.  
   
 #### <a name="parameters"></a>Parametri  
@@ -213,11 +212,11 @@ HRESULT SetTempDirPath (
 HRESULT Cancel ( void )  
 ```  
   
-#### <a name="description"></a>Descrizione  
+#### <a name="description"></a>Description  
  Annulla l'operazione del database incorporato corrente.  
   
 #### <a name="parameters"></a>Parametri  
- Nessuno.  
+ No.  
   
 #### <a name="return-value"></a>Valore restituito  
  `S_OK`  
@@ -244,7 +243,7 @@ HRESULT GetSizeMax (
     )  
 ```  
   
-#### <a name="description"></a>Descrizione  
+#### <a name="description"></a>Description  
  Ottiene la dimensione stimata (in byte) del flusso per il salvataggio dell'oggetto incorporato. Ereditato da `IPersistStream`.  
   
 #### <a name="parameters"></a>Parametri  
@@ -264,11 +263,11 @@ HRESULT GetSizeMax (
 HRESULT IsDirty ( void )  
 ```  
   
-#### <a name="description"></a>Descrizione  
+#### <a name="description"></a>Description  
  Verifica se il database incorporato è stato modificato rispetto all'ultimo salvataggio. Ereditato da `IPersistStream`.  
   
 #### <a name="parameters"></a>Parametri  
- none  
+ Nessuno  
   
 #### <a name="return-values"></a>Valori restituiti  
  `S_OK`  
@@ -288,7 +287,7 @@ HRESULT Load (
     )  
 ```  
   
-#### <a name="description"></a>Descrizione  
+#### <a name="description"></a>Description  
  Carica il database incorporato sul motore locale o in-process. Ereditato da `IPersistStream`.  
   
 #### <a name="parameters"></a>Parametri  
@@ -314,7 +313,7 @@ HRESULT Save (
     )  
 ```  
   
-#### <a name="description"></a>Descrizione  
+#### <a name="description"></a>Description  
  Salva il database locale o in-process nel flusso incorporato del documento contenitore. Ereditato da `IPersistStream`.  
   
 #### <a name="parameters"></a>Parametri  

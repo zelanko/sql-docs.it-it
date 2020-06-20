@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5694d3fe-52e8-4fb7-a1f1-22629151b618
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 242c6451cc6dc018e4972be7a16305b676845687
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87e6c59cb71abdc5bda32538ead84ec56a4f6c9d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069271"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940852"
 ---
 # <a name="select-table-dialog-box-mining-accuracy-chart-view"></a>Finestra di dialogo Seleziona tabella (vista Grafico accuratezza modello di data mining)
   Utilizzare la finestra di dialogo **Seleziona tabella** per specificare una tabella da utilizzare per il test dei modelli di data mining contenuti nella struttura di data mining selezionata.  
@@ -31,7 +30,7 @@ ms.locfileid: "66069271"
  **Nome tabella/vista**  
  Consente di specificare una tabella o vista disponibile nell'origine dei dati attualmente selezionata.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Progettazione Grafico accuratezza modello di data mining &#40;&#41;di data mining](mining-accuracy-chart-designer-data-mining.md)   
  [Attività e procedure di test e convalida &#40;di data mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [Test e convalida &#40;Data mining&#41;](data-mining/testing-and-validation-data-mining.md)  

@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 64744048-205f-4d4d-add8-ff0ca13943f3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8498f30b11a9b379d9cad0e98d7a5269fc60752a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ceb761072bee7d21262359c5298105327446514a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065984"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938372"
 ---
 # <a name="toolbar-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra degli strumenti (scheda Prospettive, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Usare il riquadro **Barra degli strumenti** per eseguire le operazioni più frequenti nella scheda **Prospettive** in Progettazione cubi.  
   
 ## <a name="options"></a>Opzioni  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |**Aggiungi funzionalità di Business Intelligence**|Fare clic su questa opzione per visualizzare la **Configurazione guidata funzionalità di Business Intelligence** e aggiungere funzionalità di Business Intelligence al cubo.|  
 |**Processo**|Fare clic per visualizzare la finestra di dialogo **Elabora** ed elaborare il cubo selezionato.|  

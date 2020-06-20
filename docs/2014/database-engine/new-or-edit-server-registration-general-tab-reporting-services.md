@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5f899a8e-52ef-46b5-b7a9-f200ccd9f724
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e0e6d6d3ad57726c42556c9ecc2662edce102e57
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a9892a6fb3033be549d95b708a012e55d40bcb80
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62844274"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930507"
 ---
 # <a name="new-or-edit-server-registration-general-tab-reporting-services"></a>Creazione o modifica della registrazione del server (scheda Generale) (Reporting Services)
   Utilizzare questa scheda per specificare le opzioni per la registrazione di un'istanza di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -37,7 +36,7 @@ ms.locfileid: "62844274"
  **Modalità di autenticazione di Windows (Autenticazione di Windows)**  
  Consente di connettersi a un'istanza del server di report tramite le credenziali di [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows.  
   
- **Autenticazione di base**  
+ **Autenticazione base**  
  Consente di connettersi mediante la modalità di **Autenticazione di base** se l'installazione di Reporting Services è configurata per usarla.  
   
  **Autenticazione basata su form**  

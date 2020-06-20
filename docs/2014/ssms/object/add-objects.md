@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 17ac0e99-8490-46b0-8515-e5012bc9e0cf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 15011717f0f2d5ece6666c30aef72eade0faabb3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ff53da64d7a3d7dcaa04f4f06ff0da8ced201d5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63276956"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001346"
 ---
 # <a name="add-objects"></a>Aggiungi oggetti
   Consente di limitare la selezione degli oggetti nelle finestre di dialogo ai tipi di oggetti che si desidera visualizzare.  
@@ -29,7 +28,7 @@ ms.locfileid: "63276956"
  **Tutti gli oggetti di tipo**  
  Consente di visualizzare la finestra di dialogo **Seleziona tipi di oggetti** per specificare il tipo di oggetti da includere nell'elenco sottostante.  
   
- **The server**_Server\<nomeserver>_    
+ **Server**  _\<servername>_  
  Consente di aggiungere tutti gli oggetti appropriati nel server specificato. Questa opzione viene visualizzata solo quando viene aperta da finestre di dialogo con ambito server, ad esempio la finestra di dialogo **Account di accesso - Nuovo** .  
   
  **Tutti gli oggetti appartenenti allo schema**  

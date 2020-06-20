@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e347d942bf6541de9c16f34075e2d66817c3e347
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ff0439ff6b418006f3da5f0356169574509ebb7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62778922"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932832"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>Implementazione di colonne LOB in una tabella con ottimizzazione per la memoria
   Le tabelle con ottimizzazione per la memoria non dispongono di archiviazione all'esterno di righe o LOB (Large Object) (questa limitazione è stata rimossa in SQL Server 2016 e versioni successive. vedere [tipi di dati supportati per OLTP in memoria](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)) e il limite delle dimensioni delle righe è 8060 byte. L'archiviazione dei valori elevati di stringa di caratteri o binaria può essere eseguita in due modi:  
@@ -100,7 +99,7 @@ COMMIT
 END  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Migrazione a OLTP in memoria](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

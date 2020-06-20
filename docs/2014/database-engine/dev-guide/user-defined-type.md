@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: a9b75f36-d7f5-47f7-94d6-b4448c6a2191
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d2baa2a28fb0805f92c27b7f8a237996ce4583db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 65711003f7a546660ac9faa3800be42a1dc0ff99
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74054834"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933202"
 ---
 # <a name="user-defined-type"></a>Tipo definito dall'utente
   Nell'esempio relativo al tipo di dati definito dall'utente viene illustrato come creare e utilizzare un tipo di dati semplice definito dall'utente sia da Transact-SQL che da un'applicazione client tramite `System.Data.SqlClient`.  

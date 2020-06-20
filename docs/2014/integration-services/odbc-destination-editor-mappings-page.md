@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8fa05dd4-316c-44ed-8383-e6e9ea1d3994
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6f5deb525654007248fbc5c97c07e3c368654ad5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ca1ac00668e6a4383b022ae5e1ed108da6ef603d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057232"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965021"
 ---
 # <a name="odbc-destination-editor-mappings-page"></a>ODBC Destination Editor (pagina Mapping)
   Utilizzare la pagina **Mapping** della finestra di dialogo **ODBC Destination Editor** per eseguire il mapping tra colonne di input e colonne di destinazione.  
@@ -33,12 +32,12 @@ ms.locfileid: "66057232"
  Elenco delle colonne di destinazione disponibili. Trascinare un colonna di destinazione in una colonna di input disponibile per eseguire il mapping tra le colonne.  
   
 ### <a name="input-column"></a>Colonna di input  
- Consente di visualizzare le colonne di input selezionate dall'utente. È possibile rimuovere i mapping selezionando ** \<ignora>** per escludere le colonne dall'output.  
+ Consente di visualizzare le colonne di input selezionate dall'utente. È possibile rimuovere i mapping selezionando **\<ignore>** per escludere le colonne dall'output.  
   
 ### <a name="destination-column"></a>Colonna di destinazione  
  Consente di visualizzare tutte le colonne di destinazione disponibili, con o senza mapping eseguito.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Editor destinazione ODBC &#40;pagina Gestione connessione&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
  [Editor destinazione ODBC &#40;pagina Output degli errori&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
   

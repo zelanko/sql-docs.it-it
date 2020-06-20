@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1d2378426a3cd55b6df183cac7782d63578e2ed0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54422b13b39de1e39f86ad653ecea95cdca02784
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62830221"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918341"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>Impostazione dell'attività Profiling dati
   Prima di poter esaminare un profilo dei dati di origine, configurare ed eseguire l'attività Profiling dati. È necessario creare questa attività all'interno di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per configurare l'attività Profiling dati, utilizzare lo strumento Editor attività Profiling dati. Questo editor consente di selezionare la destinazione dell'output dei profili e i profili da calcolare. Dopo avere configurato l'attività, è necessario eseguire il pacchetto per calcolare i profili dati.  
@@ -54,7 +53,7 @@ ms.locfileid: "62830221"
 |Elementi da calcolare|Valori identificati|Profilo da utilizzare|  
 |----------------|-------------------------|----------------------|  
 |Tutte le singole lunghezze dei valori stringa nella colonna selezionata e la percentuale di righe della tabella rappresentata da ogni lunghezza.|**Valori stringa non validi**: si analizza, ad esempio, una colonna che dovrebbe usare due caratteri per i codici di stato negli Stati Uniti, ma in cui si individua la presenza di valori più lunghi di due caratteri.|**Distribuzione della lunghezza di colonna-** Valido per una colonna con uno dei tipi di dati seguenti:<br /><br /> Tipi di dati carattere: `char`, `nchar`, `varchar` e `nvarchar`|  
-|Set di espressioni regolari relative alla percentuale specificata di valori in una colonna stringa.<br /><br /> Inoltre, espressioni regolari da utilizzare in futuro per convalidare nuovi valori.|**Valori stringa non validi o non nel formato corretto-** Ad esempio, un profilo di criteri di ricerca di una colonna CAP/CAP può produrre le espressioni regolari:{5}\d-{4}\d,{5}\d e \d{9}. Se l'output contiene altre espressioni regolari, i dati contengono valori non validi o in formato non corretto.|**Profilo criteri di ricerca colonna-** Valido per una colonna con uno dei tipi di dati seguenti:<br /><br /> Tipi di dati carattere: `char`, `nchar`, `varchar` e `nvarchar`|  
+|Set di espressioni regolari relative alla percentuale specificata di valori in una colonna stringa.<br /><br /> Inoltre, espressioni regolari da utilizzare in futuro per convalidare nuovi valori.|**Valori stringa non validi o non nel formato corretto-** Ad esempio, un profilo di criteri di ricerca di una colonna CAP/CAP può produrre le espressioni regolari: \d {5} -\d {4} , \d {5} e \d {9} . Se l'output contiene altre espressioni regolari, i dati contengono valori non validi o in formato non corretto.|**Profilo criteri di ricerca colonna-** Valido per una colonna con uno dei tipi di dati seguenti:<br /><br /> Tipi di dati carattere: `char`, `nchar`, `varchar` e `nvarchar`|  
 |Percentuale di valori Null nella colonna selezionata.|**Rapporto inaspettatamente elevato di valori Null in una colonna**: si analizza, ad esempio, una colonna che dovrebbe contenere i codici postali ZIP (Stati Uniti) ma si individua una percentuale troppo elevata di codici postali mancanti.|**Rapporto di valori null nella colonna-** Valido per una colonna con questi tipi di dati:<br /><br /> Qualsiasi tipo di dati, inclusi i tipi `image`, `text`, `xml`, variant e i tipi definiti dall'utente.|  
 |Statistiche, ad esempio sulla deviazione minima, massima, media e standard per le colonne numeriche e sulla deviazione minima e massima per le colonne di tipo `datetime`.|**Valori numerici e date non validi**: si analizza, ad esempio, una colonna di date storiche, ma si individua una data massima successiva a quella corrente.|**Profilo Statistiche di colonna-** Valido per una colonna con uno dei tipi di dati seguenti:<br /><br /> Tipi di dati numerici: tipi integer, ad eccezione di `bit`, `money`, `smallmoney`, `decimal`, `float`, `real` e `numeric`<br /><br /> Tipi di dati di data e ora: `datetime`, `smalldatetime`, `timestamp`, `date`, `time`, `datetime2` e `datetimeoffset`.<br />Nota: per una colonna con un tipo di dati di data e ora, il profilo calcola esclusivamente il minimo e il massimo.|  
 |Tutti i valori distinct nella colonna selezionata e percentuale di righe della tabella rappresentata da ciascun valore. In alternativa, valori che rappresentano più di una percentuale specificata nella tabella.|**Numero non corretto di valori distinct in un colonna**: si analizza, ad esempio, una colonna contenente gli stati degli Stati Uniti ma si individuano più di 50 valori distinct.|**Distribuzione valori di colonna-** Valido per una colonna con uno dei tipi di dati seguenti:<br /><br /> Tipi di dati numerici: tipi integer, ad eccezione di `bit`, `money`, `smallmoney`, `decimal`, `float`, `real` e `numeric`<br /><br /> Tipi di dati carattere: `char`, `nchar`, `varchar` e `nvarchar`<br /><br /> Tipi di dati di data e ora: `datetime`, `smalldatetime`, `timestamp`, `date`, `time`, `datetime2` e `datetimeoffset`.|  
@@ -66,7 +65,7 @@ ms.locfileid: "62830221"
   
  Nella pagina **Richieste profilo** è inoltre possibile specificare l'origine dati e configurare i profili dati. Quando si configura l'attività, tenere presenti le informazioni seguenti:  
   
--   Per semplificare la configurazione e rendere più semplice l'individuazione delle caratteristiche dei dati non noti, è possibile usare il carattere jolly **(\*)** al posto di un singolo nome di colonna. Se si utilizza questo carattere jolly, l'attività eseguirà il profiling di tutte le colonne con un tipo di dati appropriato, il che rallenterà ulteriormente l'elaborazione.  
+-   Per semplificare la configurazione e rendere più semplice l'individuazione delle caratteristiche dei dati non noti, è possibile usare il carattere jolly **( \* )** al posto di un singolo nome di colonna. Se si utilizza questo carattere jolly, l'attività eseguirà il profiling di tutte le colonne con un tipo di dati appropriato, il che rallenterà ulteriormente l'elaborazione.  
   
 -   Quando la tabella o la vista selezionata è vuota, l'attività Profiling dati non calcola i profili.  
   
@@ -91,13 +90,13 @@ ms.locfileid: "62830221"
 -   [Opzioni di Richiesta profilo Inclusione valore &#40;Attività Profiling dati&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
 ## <a name="execution-of-the-package-that-contains-the-data-profiling-task"></a>Esecuzione del pacchetto contenente l'attività Profiling dati  
- Dopo avere configurato l'attività Profiling dati, è possibile eseguirla. L'attività calcola quindi i profili dati e restituisce queste informazioni in formato XML in un file o una variabile del pacchetto. La struttura di tale formato XML segue lo schema DataProfile.xsd. È possibile aprire lo schema in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] o in un altro editor di schemi, in un editor XML o in un editor di testo, ad esempio Blocco note. Questo schema per le informazioni sulla qualità dei dati può essere utile nelle situazioni seguenti:  
+ Dopo avere configurato l'attività Profiling dati, è possibile eseguirla. L'attività calcola quindi i profili dati e restituisce queste informazioni in formato XML in un file o una variabile del pacchetto. La struttura di tale formato XML segue lo schema DataProfile.xsd. È possibile aprire lo schema in o in un altro editor di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] schemi, in un editor XML o in un editor di testo, ad esempio Blocco note. Questo schema per le informazioni sulla qualità dei dati può essere utile nelle situazioni seguenti:  
   
 -   Scambio di informazioni sulla qualità dei dati all'interno di un'organizzazione e tra organizzazioni diverse.  
   
 -   Compilazione di strumenti personalizzati da utilizzare con le informazioni sulla qualità dei dati.  
   
- Lo spazio dei nomi di destinazione è identificato nello [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)schema come.  
+ Lo spazio dei nomi di destinazione è identificato nello schema come [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/) .  
   
 ## <a name="next-step"></a>passaggio successivo  
  [Visualizzatore profilo dati](data-profile-viewer.md).  

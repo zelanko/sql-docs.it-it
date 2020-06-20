@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 949c8585b3886d0d3f422e76d031b390d248e9a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e11f73bf9538fb5ba84f4575631489ef852802c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667247"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060786"
 ---
 # <a name="programmatically-monitor-replication"></a>Monitoraggio della replica a livello di programmazione
   Monitoraggio replica è uno strumento grafico che consente di monitorare una topologia di replica. È possibile accedere agli stessi dati di monitoraggio a livello di programmazione utilizzando le stored procedure di replica [!INCLUDE[tsql](../../../includes/tsql-md.md)] o gli oggetti RMO (Replication Management Objects). Tali oggetti consentono di programmare le attività seguenti:  
@@ -58,21 +57,21 @@ ms.locfileid: "62667247"
   
 #### <a name="to-monitor-publishers-publications-and-subscriptions-from-the-distributor"></a>Per monitorare i server di pubblicazione, le pubblicazioni e le sottoscrizioni dal database di distribuzione  
   
-1.  Nel database di distribuzione del server di distribuzione eseguire [sp_replmonitorhelppublisher](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql). Vengono restituite le informazioni di monitoraggio per tutti i server di pubblicazione che utilizzano il server di distribuzione. Per limitare il set di risultati a un solo server di **@publisher**pubblicazione, specificare.  
+1.  Nel database di distribuzione del server di distribuzione eseguire [sp_replmonitorhelppublisher](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql). Vengono restituite le informazioni di monitoraggio per tutti i server di pubblicazione che utilizzano il server di distribuzione. Per limitare il set di risultati a un solo server di pubblicazione, specificare **@publisher** .  
   
-2.  Nel database di distribuzione del server di distribuzione eseguire [sp_replmonitorhelppublication](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql). Vengono restituite le informazioni di monitoraggio per tutte le pubblicazioni che utilizzano il server di distribuzione. Per limitare il set di risultati a un solo server di pubblicazione, a una sola pubblicazione **@publisher**o **@publication**a un **@publisher_db**solo database pubblicato, specificare rispettivamente, o.  
+2.  Nel database di distribuzione del server di distribuzione eseguire [sp_replmonitorhelppublication](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql). Vengono restituite le informazioni di monitoraggio per tutte le pubblicazioni che utilizzano il server di distribuzione. Per limitare il set di risultati a un solo server di pubblicazione, a una sola pubblicazione o a un solo database pubblicato, specificare **@publisher** **@publication** rispettivamente, o **@publisher_db** .  
   
-3.  Nel database di distribuzione del server di distribuzione eseguire [sp_replmonitorhelpsubscription](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql). Vengono restituite le informazioni di monitoraggio per tutte le sottoscrizioni che utilizzano il server di distribuzione. Per limitare il set di risultati alle sottoscrizioni appartenenti a un solo server di pubblicazione, a una **@publisher**sola **@publication**pubblicazione o **@publisher_db**a un solo database pubblicato, specificare rispettivamente, o.  
+3.  Nel database di distribuzione del server di distribuzione eseguire [sp_replmonitorhelpsubscription](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql). Vengono restituite le informazioni di monitoraggio per tutte le sottoscrizioni che utilizzano il server di distribuzione. Per limitare il set di risultati alle sottoscrizioni appartenenti a un solo server di pubblicazione, a una sola pubblicazione o a un solo database pubblicato, specificare **@publisher** **@publication** rispettivamente, o **@publisher_db** .  
   
 #### <a name="to-monitor-transactional-commands-waiting-to-be-applied-at-the-subscriber"></a>Per monitorare i comandi transazionali in attesa di essere applicati al Sottoscrittore  
   
-1.  Nel database di distribuzione del server di distribuzione eseguire [sp_replmonitorsubscriptionpendingcmds](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql). Vengono restituite le informazioni di monitoraggio per tutti i comandi in sospeso per tutte le sottoscrizioni che utilizzano il server di distribuzione. Per limitare il set di risultati ai comandi in sospeso per le sottoscrizioni appartenenti a un solo server di pubblicazione, a un Sottoscrittore **@publication**, a **@publisher_db**una pubblicazione o a un database pubblicato, specificare **@publisher**rispettivamente, **@subscriber**, o.  
+1.  Nel database di distribuzione del server di distribuzione eseguire [sp_replmonitorsubscriptionpendingcmds](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql). Vengono restituite le informazioni di monitoraggio per tutti i comandi in sospeso per tutte le sottoscrizioni che utilizzano il server di distribuzione. Per limitare il set di risultati ai comandi in sospeso per le sottoscrizioni appartenenti a un solo server di pubblicazione, a un Sottoscrittore, a una pubblicazione o a un database pubblicato, specificare **@publisher** **@subscriber** rispettivamente,, **@publication** o **@publisher_db** .  
   
 #### <a name="to-monitor-merge-changes-waiting-to-be-uploaded-or-downloaded"></a>Per monitorare le modifiche di tipo merge in attesa di essere caricate o scaricate  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql). Viene restituito un set di risultati in cui sono indicate le informazioni sulle modifiche in attesa di essere replicate nei Sottoscrittori. Per limitare il set di risultati alle modifiche che appartengono a una sola pubblicazione o a un **@publication** solo **@article**articolo, specificare rispettivamente o.  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql). Viene restituito un set di risultati in cui sono indicate le informazioni sulle modifiche in attesa di essere replicate nei Sottoscrittori. Per limitare il set di risultati alle modifiche che appartengono a una sola pubblicazione o a un solo articolo, specificare **@publication** **@article** rispettivamente o.  
   
-2.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql). Viene restituito un set di risultati in cui sono indicate le informazioni sulle modifiche in attesa di essere replicate nel server di pubblicazione. Per limitare il set di risultati alle modifiche che appartengono a una sola pubblicazione o a un **@publication** solo **@article**articolo, specificare rispettivamente o.  
+2.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql). Viene restituito un set di risultati in cui sono indicate le informazioni sulle modifiche in attesa di essere replicate nel server di pubblicazione. Per limitare il set di risultati alle modifiche che appartengono a una sola pubblicazione o a un solo articolo, specificare **@publication** **@article** rispettivamente o.  
   
 #### <a name="to-monitor-merge-agent-sessions"></a>Per monitorare sessioni dell'agente di merge  
   
@@ -84,7 +83,7 @@ ms.locfileid: "62667247"
   
 #### <a name="to-monitor-merge-agent-sessions-for-pull-subscriptions-from-the-subscriber"></a>Per monitorare le sessioni dell'agente di merge per le sottoscrizioni pull dal Sottoscrittore  
   
-1.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_replmonitorhelpmergesession](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql). Per una determinata sottoscrizione, specificare **@publisher**, **@publication**e il nome del database di pubblicazione per **@publisher_db**. Vengono restituite le informazioni di monitoraggio per le ultime cinque sessioni dell'agente di merge della sottoscrizione. Tenere presente il valore di **Session_id** per le sessioni desiderate nel set di risultati.  
+1.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_replmonitorhelpmergesession](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql). Per una determinata sottoscrizione, specificare **@publisher** , **@publication** e il nome del database di pubblicazione per **@publisher_db** . Vengono restituite le informazioni di monitoraggio per le ultime cinque sessioni dell'agente di merge della sottoscrizione. Tenere presente il valore di **Session_id** per le sessioni desiderate nel set di risultati.  
   
 2.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_replmonitorhelpmergesession](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql). Specificare il valore **Session_id** indicato al passaggio 1 per **@session_id**. Vengono visualizzate informazioni di monitoraggio dettagliate sulla sessione.  
   
@@ -92,13 +91,13 @@ ms.locfileid: "62667247"
   
 #### <a name="to-view-and-modify-the-monitor-threshold-metrics-for-a-publication"></a>Per visualizzare e modificare le misurazioni del valore soglia di monitoraggio per una pubblicazione  
   
-1.  Nel database di distribuzione del server di distribuzione eseguire [sp_replmonitorhelppublicationthresholds](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql). Vengono restituiti i valore soglia di monitoraggio impostati per tutte le pubblicazioni che utilizzano il server di distribuzione. Per limitare il set di risultati al monitoraggio delle soglie per le pubblicazioni appartenenti a un singolo server di pubblicazione o a un solo **@publisher**database **@publisher_db**pubblicato o **@publication**a una sola pubblicazione, specificare rispettivamente, o. Tenere presente il valore di **Metric_id** per i valore soglia da modificare. Per altre informazioni, vedere [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).  
+1.  Nel database di distribuzione del server di distribuzione eseguire [sp_replmonitorhelppublicationthresholds](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql). Vengono restituiti i valore soglia di monitoraggio impostati per tutte le pubblicazioni che utilizzano il server di distribuzione. Per limitare il set di risultati al monitoraggio delle soglie per le pubblicazioni appartenenti a un singolo server di pubblicazione o a un solo database pubblicato o a una sola pubblicazione, specificare **@publisher** **@publisher_db** rispettivamente, o **@publication** . Tenere presente il valore di **Metric_id** per i valore soglia da modificare. Per altre informazioni, vedere [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).  
   
 2.  Nel database di distribuzione del server di distribuzione eseguire [sp_replmonitorchangepublicationthreshold](/sql/relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql). Specificare i parametri seguenti, in base alle esigenze:  
   
     -   Il valore **Metric_id** ottenuto nel passaggio 1 per **@metric_id**.  
   
-    -   Nuovo valore per la metrica di soglia di monitoraggio **@value**per.  
+    -   Nuovo valore per la metrica di soglia di monitoraggio per **@value** .  
   
     -   Un valore pari a **1** per **@shouldalert** se è necessaria la registrazione di un avviso al raggiungimento del valore soglia specificato o un valore pari a **0** se la registrazione dell'avviso non è necessaria.  
   

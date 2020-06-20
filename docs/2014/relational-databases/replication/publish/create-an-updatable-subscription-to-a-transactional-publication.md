@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f9c04c03c08f118314dc96c8b491e61be317f40c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e784216116bdb9ab308dff5fa998740b0fa459b0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62691591"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060583"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication-management-studio"></a>Creare una sottoscrizione aggiornabile di una pubblicazione transazionale (Management Studio)
 
@@ -116,7 +115,7 @@ Configurare le sottoscrizioni aggiornabili nella pagina **Sottoscrizioni aggiorn
     * `1` - Usare il contesto di sicurezza dell'utente che esegue le modifiche nel Sottoscrittore quando ci si connette al server di pubblicazione. Per informazioni sulle restrizioni correlate a questa modalità di sicurezza, vedere [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) .
     * `2` - Usare un account di accesso esistente e definito dall'utente per il server collegato, creato con [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).
 
-6. Nel server di pubblicazione eseguire [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) `@publication`specificando `@subscriber`, `@destination_db`,, il valore pull per `@subscription_type`e lo stesso valore specificato nel passaggio 3 per `@update_mode`.
+6. Nel server di pubblicazione eseguire [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) specificando `@publication` ,, `@subscriber` , il `@destination_db` valore pull per `@subscription_type` e lo stesso valore specificato nel passaggio 3 per `@update_mode` .
 
 La sottoscrizione pull verrà registrata nel server di pubblicazione. 
 
@@ -190,7 +189,7 @@ La sottoscrizione pull verrà registrata nel server di pubblicazione.
     * (Facoltativo) Il valore `0` per `@distributor_security_mode` e le informazioni sull'account di accesso di SQL Server per `@distributor_login` e `@distributor_password`, se è necessario usare l'autenticazione di SQL Server per la connessione al server di distribuzione. 
     * Specificare una pianificazione per il processo dell'agente di distribuzione da eseguire per la sottoscrizione.
 
-5. Nel server di pubblicazione eseguire [sp_addsubscriber](/sql/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql) per registrare il Sottoscrittore nel server di `@publication`pubblicazione `@subscriber`, `@destination_db`specificando,,, il `@subscription_type`valore pull per e lo stesso valore specificato nel passaggio `@update_mode`3 per.
+5. Nel server di pubblicazione eseguire [sp_addsubscriber](/sql/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql) per registrare il Sottoscrittore nel server di pubblicazione, specificando `@publication` ,,, il `@subscriber` `@destination_db` valore pull per `@subscription_type` e lo stesso valore specificato nel passaggio 3 per `@update_mode` .
 
 La sottoscrizione pull verrà registrata nel server di pubblicazione. 
 
@@ -299,11 +298,11 @@ GO
 ```
 
 ## <a name="set-queued-updating-conflict-resolution-options-sql-server-management-studio"></a>Impostazione delle opzioni di risoluzione dei conflitti per l'aggiornamento in coda (SQL Server Management Studio)
-  Per impostare le opzioni di risoluzione dei conflitti per le pubblicazioni che supportano sottoscrizioni ad aggiornamento in coda, usare la pagina **Opzioni sottoscrizione** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
+  Impostare le opzioni di risoluzione dei conflitti per le pubblicazioni che supportano le sottoscrizioni ad aggiornamento in coda nella pagina **Opzioni sottoscrizione** della finestra di dialogo **Proprietà pubblicazione- \<Publication> ** . Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 ### <a name="to-set-queued-updating-conflict-resolution-options"></a>Per impostare le opzioni di risoluzione dei conflitti per l'aggiornamento in coda  
   
-1.  Nella pagina **Opzioni sottoscrizione** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** selezionare uno dei valori seguenti per l'opzione **Criteri di risoluzione dei conflitti**:    
+1.  Nella pagina **Opzioni sottoscrizione** della finestra di dialogo **Proprietà pubblicazione \<Publication> -** selezionare uno dei valori seguenti per l'opzione Criteri di **risoluzione dei conflitti** :    
     -   **Mantieni la modifica del server di pubblicazione**    
     -   **Mantieni la modifica del Sottoscrittore**    
     -   **Reinizializza la sottoscrizione**    
