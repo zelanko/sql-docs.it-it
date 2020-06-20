@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9865425573ae3d9c8f2e16af0da283c5ea684150
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6aeb4d01cae7c09c27cafa8284638bf0a7de9691
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62990197"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058221"
 ---
 # <a name="column-properties-visual-database-tools"></a>Proprietà colonne (Visual Database Tools)
   Per le colonne sono disponibili due set di proprietà: il set completo, visualizzabile nella scheda **Proprietà colonna** in Progettazione tabelle (disponibile solo per i database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) e un subset, visualizzabile nella finestra Proprietà in Esplora server.  
@@ -179,7 +178,7 @@ ms.locfileid: "62990197"
  Indica se questa colonna è replicata in un'altra posizione.  
   
  **RowGuid**  
- Indica se la colonna viene utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come ROWGUID. È possibile impostare questo valore su **Sì** solo per una colonna con tipo di `uniqueidentifier`dati. Per modificare questa proprietà, fare clic sul valore, espandere l'elenco a discesa e selezionare un nuovo valore.  
+ Indica se la colonna viene utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come ROWGUID. È possibile impostare questo valore su **Sì** solo per una colonna con tipo di dati `uniqueidentifier` . Per modificare questa proprietà, fare clic sul valore, espandere l'elenco a discesa e selezionare un nuovo valore.  
   
  **Dimensione**  
  Indica la dimensione in byte consentita dal tipo di dati della colonna. Un tipo di dati `nchar`, ad esempio, può avere come lunghezza 10 (numero di caratteri), ma come dimensione 20, in modo da supportare i set di caratteri Unicode.  

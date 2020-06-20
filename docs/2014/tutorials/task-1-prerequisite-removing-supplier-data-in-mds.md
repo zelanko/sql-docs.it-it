@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6f0a4287-7fd4-4f18-b7e4-a5191a9d4a3c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0290f033be47bec61e9ccce8465892d8cc98608c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ec3d7aa164cc75485ba7d7d7b5a6533e7d4f30cf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81484631"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064824"
 ---
 # <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>Attività 1 (prerequisito): Rimozione dei dati fornitore in MDS
   In questa attività vengono rimossi i dati fornitore archiviati in MDS. I dati sono stati caricati manualmente usando il **componente aggiuntivo di Excel di MDS** nella lezione precedente. Tramite il pacchetto SSIS creato durante questa lezione i dati vengono caricati automaticamente in MDS. Pertanto, prima di testare il pacchetto SSIS, è necessario rimuovere i dati fornitore da MDS, la gerarchia derivata, le entità Supplier e State e creare l'entità Supplier senza alcun dato.  
@@ -38,7 +37,7 @@ ms.locfileid: "81484631"
   
 9. Non chiudere **Gestione dati master**.  
   
-10. Passare alla finestra di Excel in cui è stato aperto il file **cleaned and Matched Suppliers. xls** . Passare alla scheda **Sheet1** in basso.  
+10. Consente di passare alla finestra di Excel in cui è stato **pulito e associato Suppliers.xls** file aperto. Passare alla scheda **Sheet1** in basso.  
   
 11. Selezionare solo la **prima riga con le intestazioni**. Non selezionare nessun'altra riga. Si desidera creare le entità in base alle colonne di Excel, ma non si desidera caricare i dati. Pertanto, selezionare solo la prima riga con le intestazioni.  
   
@@ -50,9 +49,9 @@ ms.locfileid: "81484631"
   
     1.  Selezionare **Crea una nuova connessione**e fare clic sul pulsante **nuovo** .  
   
-    2.  Nella finestra di dialogo Aggiungi nuova connessione digitare **Server MDS locale** per **Descrizione** e **http:\//localhost/MDS** per **Indirizzo server MDS**, quindi fare clic su **OK** per chiudere la finestra di dialogo.  
+    2.  Nella finestra di dialogo Aggiungi nuova connessione digitare **Server MDS locale** per **Descrizione** e **http: \/ /localhost/MDS** per **Indirizzo server MDS**, quindi fare clic su **OK** per chiudere la finestra di dialogo.  
   
-15. Nella finestra di dialogo **Gestisci connessioni** selezionare **Server MDS locale** (`http://localhost/MDS`), fare clic su **test** per testare la connessione. Fare clic su **OK** nella finestra di messaggio.  
+15. Nella finestra di dialogo **Gestisci connessioni** selezionare **Server MDS locale** ( `http://localhost/MDS` ), fare clic su **test** per testare la connessione. Fare clic su **OK** nella finestra di messaggio.  
   
 16. Fare clic su **Connetti** per stabilire una connessione al server MDS.  
   

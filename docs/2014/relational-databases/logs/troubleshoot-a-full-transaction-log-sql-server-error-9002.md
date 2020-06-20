@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2c0dc1566693ad8d8c86d7efe47403248788b076
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d03e259bd0aff8fce02558dbe08efb56748493c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144713"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024673"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Risolvere i problemi relativi a un log delle transazioni completo (Errore di SQL Server 9002)
   In questo argomento vengono illustrate le risposte possibili a un log delle transazioni pieno e viene spiegato come evitare tale situazione in futuro. Quando il log delle transazioni è pieno, in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] viene generato un errore 9002. Il log può riempirsi quando il database è online o in stato di recupero. Se il log si riempie quando il database è online, il database rimane online, ma può solo essere letto, non aggiornato. Se il log si riempie durante il recupero, in [!INCLUDE[ssDE](../../includes/ssde-md.md)] il database viene contrassegnato come RESOURCE PENDING. In entrambi i casi, è richiesto che l'utente intervenga per liberare spazio nel log.  
@@ -96,10 +95,10 @@ ms.locfileid: "63144713"
   
 -   [Aggiungere file di dati o file di log a un database](../databases/add-data-or-log-files-to-a-database.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Gestione delle dimensioni del file di log delle transazioni](manage-the-size-of-the-transaction-log-file.md)   
- [Backup del log delle transazioni &#40;SQL Server&#41;](../backup-restore/transaction-log-backups-sql-server.md)   
+ [Backup di log delle transazioni &#40;SQL Server&#41;](../backup-restore/transaction-log-backups-sql-server.md)   
  [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql)  
   
   

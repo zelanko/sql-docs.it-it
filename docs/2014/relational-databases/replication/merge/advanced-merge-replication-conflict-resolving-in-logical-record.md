@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d4190f096efaf80989d397f26a314454fe2171b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d617095f190c89131ec81326279c16ec1a927125
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175859"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049452"
 ---
 # <a name="detecting-and-resolving-conflicts-in-logical-records"></a>Rilevamento e risoluzione dei conflitti nei record logici
   In questo argomento vengono illustrate le varie combinazioni di metodi possibili per il rilevamento e la risoluzione dei conflitti nell'utilizzo di record logici. Nella replica di merge si verificano conflitti quando più di un nodo modifica gli stessi dati oppure quando, durante la replica di modifiche, si riscontrano determinati tipi di errori, ad esempio la violazione di un vincolo. Per ulteriori informazioni sul rilevamento e sulla risoluzione dei conflitti, vedere [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md).
@@ -34,7 +33,7 @@ ms.locfileid: "78175859"
 
  Viene rilevato un conflitto se due utenti modificano uno qualsiasi dei valori del record logico Customer2 nelle tabelle **Customers**, **Orders**o **OrderItems** . In questo esempio vengono considerate modifiche apportate mediante un'istruzione UPDATE, tuttavia è possibile rilevare anche conflitti causati da modifiche apportate con istruzioni INSERT o DELETE.
 
-## <a name="conflict-resolution"></a>Risoluzione dei conflitti
+## <a name="conflict-resolution"></a>Risoluzione conflitti
  Per impostazione predefinita nella replica di tipo merge per risolvere i conflitti si utilizza logica basata su priorità. Se in due database di sottoscrizione viene apportata una modifica in conflitto, ha la priorità la modifica del Sottoscrittore con la priorità di sottoscrizione più elevata. Nel caso in cui la priorità sia uguale, viene applicata per prima la modifica che raggiunge il server di pubblicazione. Nel rilevamento a livello di riga e di colonna, la riga confermata sovrascrive interamente la riga non confermata.
 
  La proprietà articolo **logical_record_level_conflict_resolution** può essere impostata su TRUE o FALSE. Il valore deve essere impostato solo per l'articolo padre di livello principale e verrà ignorato per gli articoli figlio. Se il valore è impostato su TRUE, il record logico confermato sovrascrive interamente il record logico non confermato. Se il valore è impostato su FALSE, le singole righe confermate possono provenire da diversi Sottoscrittori o server di pubblicazione. Ad esempio, il Sottoscrittore A può prevalere in un conflitto in una riga della tabella **Orders** , mentre il Sottoscrittore B può prevalere in una riga correlata nella tabella **OrderItems** . Il risultato è un record logico contenente la riga **Orders** del Sottoscrittore A e la riga **OrderItems** del Sottoscrittore B.

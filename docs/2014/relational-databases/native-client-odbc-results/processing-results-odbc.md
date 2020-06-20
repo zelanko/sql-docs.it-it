@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 61a8db19-6571-47dd-84e8-fcc97cb60b45
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 761f74a56fd846361ca98dd8f2746a01b53106ec
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0888832e22e98d2478b5a9c9995b77db47e51647
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82699321"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039523"
 ---
 # <a name="processing-results-odbc"></a>Risultati dell'elaborazione (ODBC)
   Dopo l'invio di un'istruzione SQL da parte di un'applicazione, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce eventuali dati risultanti come uno o più set di risultati. Un set di risultati è un set di righe e colonne che corrispondono ai criteri della query. Le istruzioni SELECT, le funzioni di catalogo e alcune stored procedure producono un set di risultati reso disponibile a un'applicazione in formato tabulare. Se l'istruzione SQL eseguita è una stored procedure, un batch contenente più comandi o un'istruzione SELECT contenente parole chiave, il numero di set di risultati da elaborare sarà maggiore.  

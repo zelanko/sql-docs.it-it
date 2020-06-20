@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 647c924a-9b91-4294-8d96-e81416e4e90e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b13e3d30ac0afce5293cc0e104aa2b291112647f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 13201a8b904a5fc5232b9fa860710e4e39cce67a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177281"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064757"
 ---
 # <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>Attività 3: Pulizia dei dati fornitore rispetto alla Knowledge Base Suppliers
   In questa attività viene eseguito il processo di pulizia computerizzato. In DQS vengono utilizzati algoritmi e livelli di probabilità avanzati basati sui valori soglia specificati per analizzare i dati rispetto alla Knowledge Base selezionata e procedere quindi alla relativa pulizia. Per ulteriori informazioni, vedere [pulizia dei dati tramite la Knowledge Base DQS (interna)](https://msdn.microsoft.com/library/hh213061.aspx) .

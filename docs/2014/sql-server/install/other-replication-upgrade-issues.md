@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a5e74be-4992-4f17-b20c-c3dce8f49329
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dd8ae8bb1080d92bb6a4ad1ba982f1dffc6d51f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef4bc1d64ac74fa8a1c51e706e5ce6c16abb8156
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093639"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012203"
 ---
 # <a name="other-replication-upgrade-issues"></a>Altri problemi di aggiornamento della replica
   In questo argomento vengono analizzati alcuni problemi relativi all'aggiornamento che non sono segnalati da Preparazione aggiornamento.  
@@ -53,7 +52,7 @@ ms.locfileid: "66093639"
   
 -   I controlli ActiveX distribuzione e ActiveX merge sono stati deprecati. Una funzionalità analoga viene fornita per applicazioni del codice gestito da oggetti RMO (Replication Management Objects). Per ulteriori informazioni, vedere l'argomento relativo alla sincronizzazione delle sottoscrizioni (programmazione RMO) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Problemi di aggiornamento della replica](../../../2014/sql-server/install/replication-upgrade-issues.md)  
   
   

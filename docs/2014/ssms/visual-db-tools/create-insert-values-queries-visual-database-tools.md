@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2d4b2f6d-cc09-434b-8a0e-ccce40628064
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 019c2fe96be00c6e86e0c94286770d30e7a54a9c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b16937a6502d227b077a1db67179b778be9cbfa6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62676333"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058157"
 ---
 # <a name="create-insert-values-queries-visual-database-tools"></a>Creazione di query di accodamento valori (Visual Database Tools)
   Per creare una nuova riga nella tabella corrente, è possibile utilizzare una query di accodamento valori. Durante la creazione di una query di accodamento valori è necessario specificare:  

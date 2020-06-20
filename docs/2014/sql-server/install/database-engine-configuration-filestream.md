@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 641a10a1-ae52-4d26-8f1c-a032a4aeff02
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 53eb4eb049bfe700a83d58e05a3af1ee4f6f41a6
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: ab12b507246a3e13ac59be213813604d531d9a28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859701"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012729"
 ---
 # <a name="database-engine-configuration---filestream"></a>Configurazione del Motore di database - Filestream
   Utilizzare questa pagina per abilitare FILESTREAM per l'installazione corrente di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. FILESTREAM integra [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] con un file system NTFS archiviando `varbinary(max)` dati BLOB (Binary Large Object) come file nel file System. [!INCLUDE[tsql](../../includes/tsql-md.md)] offre istruzioni che consentono di inserire, aggiornare ed eseguire query, ricerche e back up dei dati FILESTREAM. Le interfacce del file system Win32 forniscono accesso ai dati tramite flusso.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e31789b1f2cf5b2206af400c7c7798f7761f1e6c
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 5ae5b92ace65f255aacff5b49fe789a31d3a69e0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922076"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049813"
 ---
 # <a name="lesson-7-move-your-data-files-to-azure-storage"></a>Lezione 7: Spostare i file di dati in Archiviazione di Azure
   In questa lezione verrà illustrato come spostare i file di dati in archiviazione di Azure (ma non nell'istanza di SQL Server). È possibile seguire questa lezione anche senza aver completato le lezioni 4, 5 e 6.  

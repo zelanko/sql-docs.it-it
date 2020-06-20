@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7c3186a-9a8c-45d8-ab34-05beec4c26dd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7e00ceeae68ccc791c3680e029e13844fa6ec683
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3a655976f925f83d8c9446cab99016f32ab14887
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68731065"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047686"
 ---
 # <a name="define-and-modify-a-column-filter"></a>Definizione e modifica di un filtro colonne
   In questo argomento viene descritto come definire e modificare un filtro colonne in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -46,7 +45,7 @@ ms.locfileid: "68731065"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  Definire i filtri colonne nella pagina **Articoli** della Creazione guidata nuova pubblicazione. Per altre informazioni sull'uso della Creazione guidata nuova pubblicazione, vedere [Creare una pubblicazione](create-a-publication.md).  
   
- Definire e modificare i filtri di colonna nella pagina **Articoli** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** . Per altre informazioni sulla modifica delle proprietà di pubblicazione, vedere [Visualizzare e modificare le proprietà della pubblicazione](view-and-modify-publication-properties.md).  
+ Definire e modificare i filtri di colonna nella pagina **articoli** della finestra di dialogo **Proprietà pubblicazione- \<Publication> ** . Per altre informazioni sulla modifica delle proprietà di pubblicazione, vedere [Visualizzare e modificare le proprietà della pubblicazione](view-and-modify-publication-properties.md).  
   
 #### <a name="to-define-a-column-filter"></a>Per definire un filtro colonne  
   
@@ -56,7 +55,7 @@ ms.locfileid: "68731065"
   
 #### <a name="to-modify-column-filtering"></a>Per modificare l'applicazione di filtri di colonna  
   
-1.  Nella pagina **Articoli** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** espandere la tabella da filtrare nel riquadro **Oggetti da pubblicare**.  
+1.  Nella pagina **articoli** della finestra di dialogo **Proprietà pubblicazione \<Publication> -** espandere la tabella da filtrare nel riquadro **oggetti da pubblicare** .  
   
 2.  Deselezionare la casella di controllo accanto a ogni colonna che si desidera filtrare e verificare che la casella di controllo sia selezionata per ogni colonna da includere nell'articolo.  
   

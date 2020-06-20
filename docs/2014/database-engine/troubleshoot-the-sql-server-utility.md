@@ -9,23 +9,22 @@ ms.topic: conceptual
 ms.assetid: f5f47c2a-38ea-40f8-9767-9bc138d14453
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d5203a0a613bcd8af4b247058f3cb594be5d4c3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f4837ae389dc1b02921ae12ca081b096e63336ab
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797782"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928052"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>Risoluzione dei problemi relativi a Utilità SQL Server
-  La risoluzione dei problemi relativi a Utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] potrebbe includere la risoluzione di un'operazione non riuscita di registrazione di un'istanza di SQL Server con un punto di controllo dell'utilità, la risoluzione dei problemi relativi a raccolte dati con errori che generano icone grigie nella visualizzazione elenco dell'istanza gestita in un punto di controllo dell'utilità, la riduzione dei colli di bottiglia delle prestazioni o la risoluzione dei problemi di integrità delle risorse. Per ulteriori informazioni sulla riduzione dei problemi di integrità delle risorse identificati da un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] punto di controllo dell'utilità, vedere [Troubleshoot SQL Server Integrità risorse &#40;utilità SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
+  La risoluzione dei problemi relativi a Utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] potrebbe includere la risoluzione di un'operazione non riuscita di registrazione di un'istanza di SQL Server con un punto di controllo dell'utilità, la risoluzione dei problemi relativi a raccolte dati con errori che generano icone grigie nella visualizzazione elenco dell'istanza gestita in un punto di controllo dell'utilità, la riduzione dei colli di bottiglia delle prestazioni o la risoluzione dei problemi di integrità delle risorse. Per ulteriori informazioni sulla riduzione dei problemi di integrità delle risorse identificati da un punto di controllo dell' [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utilità, vedere [Troubleshoot SQL Server Integrità risorse &#40;utilità SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
   
 ## <a name="failed-operation-to-enroll-an-instance-of-sql-server-into-a-sql-server-utility"></a>Operazione di registrazione di un'istanza di SQL Server in Utilità SQL Server non riuscita  
  Se ci si connette all'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per eseguire la registrazione utilizzando l'Autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e si specifica un account proxy che appartiene a un dominio Active Directory diverso dal dominio in cui si trova il punto di controllo dell'utilità, la convalida dell'istanza riesce, ma l'operazione di registrazione non riesce con il messaggio di errore seguente:  
   
  Eccezione durante l'esecuzione di un'istruzione o un batch Transact-SQL. (Microsoft.SqlServer.ConnectionInfo)  
   
- Ulteriori informazioni: Non è stato possibile ottenere informazioni relative al gruppo/utente di Windows NT '\<NomeDominio\NomeAccount>', codice di errore 0x5. (Microsoft SQL Server, Errore: 15404)  
+ Ulteriori informazioni: Impossibile ottenere informazioni relative al gruppo/utente di Windows NT ' \<DomainName\AccountName> ', codice di errore 0x5. (Microsoft SQL Server, Errore: 15404)  
   
  Questo problema si verifica nello scenario di esempio seguente:  
   
@@ -39,7 +38,7 @@ ms.locfileid: "72797782"
   
 5.  La convalida riesce, ma la registrazione no.  
   
- La soluzione alternativa per questo problema, utilizzando l'esempio precedente, consiste nel connettersi all'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per eseguire la registrazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] all'utilità utilizzando "sa" e fornire un account proxy da "Domain_1".  
+ La soluzione alternativa per questo problema, utilizzando l'esempio precedente, consiste nel connettersi all'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per eseguire la registrazione all' [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilità utilizzando "sa" e fornire un account proxy da "Domain_1".  
   
 ## <a name="failed-wmi-validation"></a>Convalida WMI non riuscita  
  Se WMI non è configurato correttamente in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], le operazioni di creazione del punto di controllo dell'utilità e di registrazione dell'istanza gestita visualizzano un avviso, ma l'operazione non viene bloccata. Inoltre, se si modifica la configurazione dell'account di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent in modo che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent non disponga delle autorizzazioni per le classi WMI obbligatorie, la raccolta dati nell'istanza gestita interessata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non viene caricata nel punto di controllo dell'utilità. Ciò comporta la visualizzazione di icone grigie nel punto di controllo dell'utilità.  
@@ -50,7 +49,7 @@ ms.locfileid: "72797782"
   
  L'esecuzione del comando è stata arrestata perché la variabile della shell "ErrorActionPreference" è impostata sull'arresto: accesso negato.  
   
- ERRORE: \<data-ora (mm/gg/aaaa hh: mm: SS) >: è stata rilevata un'eccezione durante la raccolta delle proprietà della CPU.  È probabile che una query WMI non sia riuscita.  AVVISO.  
+ ERRORE: \<Date-time (MM/DD/YYYY HH:MM:SS)> : è stata rilevata un'eccezione durante la raccolta delle proprietà CPU.  È probabile che una query WMI non sia riuscita.  AVVISO.  
   
  Per risolvere questo problema, verificare le impostazioni di configurazione seguenti:  
   
@@ -114,9 +113,9 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     1.  In **Esplora oggetti**di SSMS espandere il nodo **Sicurezza** , quindi espandere il nodo **Credenziali** .  
   
-    2.  Fare clic con il pulsante destro del mouse su **UtilityAgentProxyCredential_\<GUID>** e selezionare **proprietà**.  
+    2.  Fare clic con il pulsante destro del mouse su **UtilityAgentProxyCredential_ \<GUID> ** e scegliere **proprietà**.  
   
-    3.  Nella finestra di dialogo Proprietà credenziali aggiornare le credenziali necessarie per il **GUID\<UtilityAgentProxyCredential_>** Credential.  
+    3.  Nella finestra di dialogo Proprietà credenziali aggiornare le credenziali necessarie per le **credenziali \<GUID> UtilityAgentProxyCredential_** .  
   
     4.  Fare clic su **OK** per confermare la modifica.  
   
@@ -124,7 +123,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   È necessario avviare e configurare per l'avvio automatico il servizio SQL Server Browser nel punto di controllo dell'utilità. Se l'organizzazione non consente l'utilizzo del servizio SQL Server Browser, utilizzare i passaggi seguenti per consentire a un'istanza gestita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di connettersi al punto di controllo dell'utilità:  
   
-    1.  Sulla barra delle applicazioni di Windows nell'istanza gestita [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]di, fare clic su **Start**, quindi su **Esegui...**.  
+    1.  Sulla barra delle applicazioni di Windows nell'istanza gestita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , fare clic su **Start**, quindi su **Esegui...**.  
   
     2.  Digitare "cliconfg.exe" nella casella, quindi fare clic su **OK**.  
   
@@ -158,7 +157,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     2.  Fare clic con il pulsante destro del mouse su **Performance Monitor Users** e scegliere **Aggiungi a gruppo**.  
   
-    3.  Fare clic su **Aggiungi**.  
+    3.  Scegliere **Aggiungi**.  
   
     4.  Immettere l'account che il servizio SQL Server Agent sta utilizzando, quindi fare clic su **OK**.  
   

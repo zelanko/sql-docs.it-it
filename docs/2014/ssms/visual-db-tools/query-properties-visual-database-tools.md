@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6e9232f5de2172c7dfbe503a26188fdf4d05550c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a1f0074aa7937e10589327bae51c24a0a903a38
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011481"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064957"
 ---
 # <a name="query-properties-visual-database-tools"></a>Proprietà delle query (Visual Database Tools)
   Queste proprietà vengono visualizzate nella finestra Proprietà quando in Progettazione query e Progettazione viste è aperta una query. Se non specificato diversamente, tali proprietà possono essere modificate nella finestra Proprietà.  

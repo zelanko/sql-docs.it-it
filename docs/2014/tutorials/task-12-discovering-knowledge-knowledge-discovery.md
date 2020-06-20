@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dd80a8e6-1e41-4c49-9898-02b1d2505a10
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6dd54475ee63b2f6ef5e1b56b94c11aafd5996ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0bad2760a5dc9b16b24d75bb35617759543205f3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484678"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064778"
 ---
 # <a name="task-12-discovering-knowledge-knowledge-discovery"></a>Attività 12: Individuazione delle informazioni (Individuazione informazioni)
   In questa attività viene eseguita l'attività di **individuazione delle informazioni** sui domini **Supplier ID** e **Supplier Name** . In questo scenario, tramite il processo di individuazione delle informazioni vengono importati principalmente i valori per questi due domini.  
@@ -28,7 +27,7 @@ ms.locfileid: "65484678"
   
 2.  Selezionare il **file di Excel** per **origine dati**.  
   
-3.  Fare clic su **Sfoglia**, spostarsi e selezionare **Suppliers. xls**, quindi fare clic su **Apri**.  
+3.  Fare clic su **Sfoglia**, spostarsi e selezionare **Suppliers.xls**, quindi fare clic su **Apri**.  
   
 4.  Selezionare **Suppliers for Discovery** for **Worksheet**.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "65484678"
   
 6.  Fare clic su **Avanti** per passare alla pagina **individua** .  
   
-7.  Nella pagina **individua** fare clic su **Avvia** per avviare il processo di individuazione. L'individuazione viene eseguita sulle colonne **SupplierID** e **Supplier Name** nel file **Suppliers. xls** . I domini **Supplier ID** e **Supplier Name** devono essere popolati con le informazioni ricavate dall'individuazione.  
+7.  Nella pagina **individua** fare clic su **Avvia** per avviare il processo di individuazione. L'individuazione viene eseguita sulle colonne **SupplierID** e **Supplier Name** nel file **Suppliers.xls** . I domini **Supplier ID** e **Supplier Name** devono essere popolati con le informazioni ricavate dall'individuazione.  
   
      ![Pagina Individua del processo di individuazione](../../2014/tutorials/media/et-discoveringknowledge-03.jpg "Pagina Individua del processo di individuazione")  
   

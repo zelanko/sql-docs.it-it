@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 50cda5c1-7293-4080-93b3-872e3b8d484e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 503cc731ede59b4cc3cf70e9cf2daafec436243c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cadbc9e06530706f0b1e1406af7b38b72246303f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716741"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067826"
 ---
 # <a name="example-specifying-the-element-directive-and-entity-encoding"></a>Esempio: specifica della direttiva ELEMENT e della codifica di entità
-  In questo esempio viene illustrata la differenza fra le direttive **ELEMENT** e **XML** . La direttiva **ELEMENT** sostituisce i dati con entità, mentre la direttiva **XML** non esegue questa operazione. Nella query, all'elemento \<Summary> viene assegnato codice XML, `<Summary>This is summary description</Summary>`.  
+  In questo esempio viene illustrata la differenza fra le direttive **ELEMENT** e **XML** . La direttiva **ELEMENT** sostituisce i dati con entità, mentre la direttiva **XML** non esegue questa operazione. All' \<Summary> elemento viene assegnato XML, `<Summary>This is summary description</Summary>` , nella query.  
   
  Considerare la query seguente:  
   

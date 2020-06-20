@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 914f7491-e2be-4b0d-b3aa-fe5409cdbafa
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 68b082d125650d150676d545cfdf6ab27bd25da2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d610ec814097be44e189a663db5afaa1345d29c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813524"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935792"
 ---
 # <a name="configure-a-server-to-listen-on-an-alternate-pipe-sql-server-configuration-manager"></a>Configurazione di un server per l'attesa su una pipe alternativa (Gestione configurazione SQL Server)
   In questo argomento viene illustrato come configurare un server per l'ascolto su una pipe alternativa in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando Gestione configurazione SQL Server. Per impostazione predefinita, l'istanza predefinita di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] è in attesa sulla named pipe \\\\.\pipe\sql\query. Le istanze denominate del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e [!INCLUDE[ssEW](../../includes/ssew-md.md)] sono in attesa su altre pipe.  
@@ -37,7 +36,7 @@ ms.locfileid: "62813524"
   
 #### <a name="to-configure-the-named-pipe-used-by-the-sql-server-database-engine"></a>Per configurare l'utilizzo della named pipe mediante il Motore di database di SQL Server  
   
-1.  Nel riquadro della console di Gestione configurazione SQL Server espandere **Configurazione di rete SQL Server** e quindi fare clic per espandere **Protocolli per** *\<nome istanza>* .  
+1.  In Gestione configurazione SQL Server, nel riquadro della console espandere **SQL Server configurazione di rete**, quindi fare clic su Espandi **protocolli per** *\<instance name>* .  
   
 2.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **Named pipe**, quindi scegliere **Proprietà**.  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62813524"
   
 4.  Nel riquadro della console fare clic su **Servizi di SQL Server**.  
   
-5.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server (** \<<nome istanza> **)** e scegliere **Riavvia**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà arrestato e riavviato.  
+5.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server (** \<instance name> **)** , quindi scegliere **Riavvia**per arrestare e riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in attesa su una pipe alternativa, è possibile connettersi a una named pipe specifica mediante un'applicazione client in tre modi differenti:  
   

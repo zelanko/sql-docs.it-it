@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: edee56c6d162f92234e235f9369a0ab91457639e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8ced6d387dd6ba14ab997aefbe7f2b43426c868e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707324"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049586"
 ---
 # <a name="changing-passwords-programmatically"></a>Modifica delle password a livello di programmazione
   Nelle versioni precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] una password di un utente scaduta può essere reimpostata solo da un amministratore. A partire da [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta la gestione della scadenza delle password a livello di programmazione tramite il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native client e il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC di Native client e le modifiche apportate alle finestre di dialogo **SQL Server account di accesso** .  

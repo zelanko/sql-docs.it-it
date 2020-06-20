@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31eacc9a-f814-4845-b252-b3b998271200
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 328d795f692597689628f6fa189d597f73fbb76a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80a1884206e4f8fb49bf6aadb57ab7dde8ffa829
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244616"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058397"
 ---
 # <a name="disconnect-from-a-registered-server-sql-server-management-studio"></a>Disconnessione da un server registrato (SQL Server Management Studio)
   In questo argomento viene descritto come disconnettere Esplora oggetti da un server in qualsiasi momento in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. La disconnessione di Esplora oggetti non comporta quella di altri componenti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , ad esempio Editor SQL.  

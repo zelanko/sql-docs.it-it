@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 78fb78ed-653f-45fe-a02a-a66519bfee1b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dcfa6636e5fc4391b42d2077bd55e0811dc0ca39
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: 2e2839fc4755fe47504e42e5058a5da117888900
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849829"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928812"
 ---
 # <a name="sql-server-managed-backup-to-azure-interoperability-and-coexistence"></a>Backup gestito di SQL Server in Azure: Interoperabilità e coesistenza
   In questo argomento vengono descritte l'interoperabilità e la coesistenza di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] con alcune funzionalità di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], tra cui gruppi di disponibilità AlwaysOn, mirroring del database, piani di manutenzione di backup, log shipping, backup ad hoc, scollegamento del database ed eliminazione del database.  

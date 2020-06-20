@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e3c2a450-8fd4-44cb-93d8-affe1b65c68e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3f0ea289b75085cd4b7e90531eeaf592979707c2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8c7ca5946228ea05708984fb89ebc603061d983d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704638"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049634"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-methods"></a>Supporto dei tipi di parametro con valori di tabella OLE DB (metodi)
   I parametri con valori di tabella sono supportati dai seguenti metodi OLE DB standard:  

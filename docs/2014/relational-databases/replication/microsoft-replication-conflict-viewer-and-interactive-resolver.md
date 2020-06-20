@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 641bd224-fcde-4ad4-9518-369cbeb398e4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e0cce16636e8f3be542b926170c905353602d95e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10ebbcdfb136126911b95c0148a2c8671584170b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63250335"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010340"
 ---
 # <a name="microsoft-replication-conflict-viewer-and-interactive-resolver"></a>Visualizzatore conflitti di replica Microsoft e sistema di risoluzione dei conflitti interattivo
   In questa sezione vengono fornite informazioni sul Visualizzatore conflitti di replica per la replica di tipo merge e la replica transazionale sul sistema di risoluzione interattivo per la replica di tipo merge:  
@@ -31,7 +30,7 @@ ms.locfileid: "63250335"
   
 -   [Definisci filtri](define-filters.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Visualizzare e risolvere i conflitti di dati per le pubblicazioni di tipo merge &#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)   
  [Visualizzare i conflitti di dati per le pubblicazioni transazionali &#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)   
  [Rilevamento e risoluzione dei conflitti di replica di tipo merge avanzati](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   

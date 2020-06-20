@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b0359ca10e7279f4a80bec082a8e049f4641c9b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf9e435156d452a83b50adcf34771c7dd45b7bfd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767633"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965355"
 ---
 # <a name="integration-services-transactions"></a>Transazioni di Integration Services
   Nei pacchetti vengono utilizzate transazioni per l'associazione di azioni del database eseguite dalle attività in unità atomiche in modo da mantenere l'integrità dei dati. Tutti i tipi di contenitori di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], ovvero pacchetti, ciclo For, ciclo Foreach, contenitori Sequenza, nonché gli host di attività in cui è incapsulata ogni attività, possono essere configurati per l'uso delle transazioni. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sono disponibili tre opzioni per la configurazione delle transazioni: **NotSupported**, **Supported**e **Required**.  
@@ -34,7 +33,7 @@ ms.locfileid: "62767633"
  Per configurare le transazioni, è necessario impostare la proprietà TransactionOption del contenitore. È possibile eseguire questa operazione nella finestra **Proprietà** di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]o a livello di codice.  
   
 > [!NOTE]  
->  La proprietà `TransactionOption` può determinare se il valore della proprietà `IsolationLevel` richiesta da un contenitore viene applicato o meno. Per ulteriori informazioni, vedere la descrizione della `IsolationLevel` proprietà nell'argomento impostazione delle proprietà di un [pacchetto](set-package-properties.md).  
+>  La proprietà `TransactionOption` può determinare se il valore della proprietà `IsolationLevel` richiesta da un contenitore viene applicato o meno. Per ulteriori informazioni, vedere la descrizione della `IsolationLevel` proprietà nell'argomento [impostazione delle proprietà](set-package-properties.md)di un pacchetto.  
   
 ### <a name="to-configure-a-package-to-use-transactions"></a>Per configurare un pacchetto per l'utilizzo di transazioni  
   
@@ -44,7 +43,7 @@ ms.locfileid: "62767633"
   
 -   Intervento nel blog [How to Use Transactions in SQL Server Integration Services SSIS](https://go.microsoft.com/fwlink/?LinkId=157783)sul sito Web all'indirizzo www.mssqltips.com  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Transazioni ereditate](../../2014/integration-services/inherited-transactions.md)   
  [Più transazioni](../../2014/integration-services/multiple-transactions.md)  
   

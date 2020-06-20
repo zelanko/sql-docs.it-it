@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 60b20a1ee5a90b2b51abbe71a189add066e1b7e4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 227c8a5b3222bdddab9632ec2e80f0bb4dd54250
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703255"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015602"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>Esecuzione di modelli che contengono query XPath (provider SQLXMLOLEDB)
   In questo esempio viene illustrato come utilizzare le proprietà specifiche del provider SQLXMLOLEDB seguenti:  
@@ -34,7 +33,7 @@ ms.locfileid: "82703255"
   
 -   Schema di mapping  
   
- In questa applicazione ADO di esempio, un modello XML costituito da una query XPath (radice) viene specificato sullo schema di mapping XSD (schema. Xml) descritto in esecuzione di [query XPath &#40;provider SQLXMLOLEDB&#41;](executing-xpath-queries-sqlxmloledb-provider.md).  
+ In questa applicazione ADO di esempio, un modello XML costituito da una query XPath (radice) viene specificato sullo schema di mapping XSD (MySchema.xml) descritto in [esecuzione di query xpath &#40;provider SQLXMLOLEDB&#41;](executing-xpath-queries-sqlxmloledb-provider.md).  
   
  La proprietà Schema di mapping fornisce lo schema di mapping XSD sul quale viene eseguita la query XPath. La proprietà percorso di base fornisce il percorso del file allo schema di mapping.  
   

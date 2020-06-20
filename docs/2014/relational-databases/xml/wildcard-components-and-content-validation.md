@@ -12,22 +12,21 @@ helpviewer_keywords:
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fa9d36a446645b289f2c182e90782d6932cf20ef
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 07cff70d32d7d39619ecf3ee4ce36e37f2dee924
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702251"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012880"
 ---
 # <a name="wildcard-components-and-content-validation"></a>Componenti jolly e convalida del contenuto
   I componenti jolly vengono utilizzati per consentire una maggiore flessibilità riguardo agli elementi che è possibile includere in un modello di contenuto. Tali componenti vengono supportati nel linguaggio XSD nei modi seguenti:  
   
--   Elemento componenti jolly. Sono rappresentati dall'elemento **\<xsd:any>** .  
+-   Elemento componenti jolly. Sono rappresentati dall' **\<xsd:any>** elemento.  
   
--   Attributo componenti jolly. Sono rappresentati dall'elemento **\<xsd:anyAttribute>** .  
+-   Attributo componenti jolly. Sono rappresentati dall' **\<xsd:anyAttribute>** elemento.  
   
- Entrambi gli elementi dei caratteri jolly, **\<xsd:any>** e **\<xsd:anyAttribute>** , supportano l'uso di un attributo **processContents**. Questo attributo consente di specificare un valore che indica il modo in cui le applicazioni XML gestiscono la convalida del contenuto di documenti associato a tali elementi dei caratteri jolly. Valori diversi e relativo effetto:  
+ Entrambi gli elementi carattere jolly **\<xsd:any>** e **\<xsd:anyAttribute>** supportano l'utilizzo di un attributo **processContents** . Questo attributo consente di specificare un valore che indica il modo in cui le applicazioni XML gestiscono la convalida del contenuto di documenti associato a tali elementi dei caratteri jolly. Valori diversi e relativo effetto:  
   
 -   Il valore **strict** specifica che viene eseguita la convalida completa del contenuto.  
   

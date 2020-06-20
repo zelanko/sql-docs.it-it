@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b4eb34f7-3af6-4a44-ba7e-2b8430ec3cd7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0bf91032c1514037c754fd489ac266cf68063fa4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 78ca3fc2d11b22d70c8a4e99d0961f793870bd53
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089726"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928517"
 ---
 # <a name="sql-server-profiler---replay-configuration-advanced-replay-options"></a>SQL Server Profiler - Configurazione riproduzione (Opzioni avanzate di riproduzione)
   La scheda **Opzioni avanzate di riproduzione** della finestra di dialogo **Configurazione riproduzione** consente di specificare la modalità di riproduzione di un file di traccia.  
@@ -57,7 +56,7 @@ ms.locfileid: "66089726"
  **Intervallo di attesa monitoraggio processi bloccati (sec)**  
  Consente di configurare la frequenza con cui i processi bloccati o di blocco vengono cercati tramite il monitoraggio dei processi bloccati.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Riprodurre una tabella di traccia &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [Riprodurre un file di traccia &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [Riprodurre le tracce](../tools/sql-server-profiler/replay-traces.md)  

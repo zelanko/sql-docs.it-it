@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c278b746-6323-4b32-b460-239915acc067
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 23d5180928f4f3335aa17dff61b50e6fdd19549f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c91179cb194bbfb79e8e7a8476e9725877b88afa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196476"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067974"
 ---
 # <a name="create-user-defined-aggregates"></a>Creazione di funzioni di aggregazione definite dall'utente
   È possibile creare un oggetto di database all'interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] programmato in un assembly CLR. Gli oggetti di database che possono sfruttare il complesso modello di programmazione fornito da CLR includono trigger, stored procedure, funzioni, funzioni di aggregazione e tipi.  
