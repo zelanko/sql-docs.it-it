@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: f2640e9018f29385851839932572aeaa3ee91ad9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 674f40b16437547956178293c5b491b11c8b2f89
+ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77600125"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215488"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>Esegui Database Experimentation Assistant al prompt dei comandi
 
@@ -34,15 +34,15 @@ Questo articolo descrive come acquisire una traccia in Database Experimentation 
 
 Per avviare una nuova acquisizione del carico di lavoro, al prompt dei comandi eseguire il comando seguente:
 
-`Deacmd.exe -o StartCapture -h <SQLServerInstance> -e <encryptconnection> -u <trustservercertificate> -d <database name> -p <trace file path> -f <trace file name> -t <Max duration>`
+`Deacmd.exe -o StartCapture -n <Trace FileName> -x <Trace Format> -h <SQLServerInstance> -f <database name> -e <Encrypt Connection> -m <Authetication Mode> -u <user name> -p <password> -l <Location of Output Folder> -d <duration>`
 
 **Esempio**
 
-`Deacmd.exe -o StartCapture -h localhost -e -d adventureworks -p c:\test -f sql2008capture -t 60`
+`Deacmd.exe -o StartCapture -n sql2008capture -x 0 -h localhost -f adventureworks -e --trust -m 0 -l c:\test  -d 60`
 
 **Opzioni aggiuntive**
 
-Quando si avvia una nuova acquisizione del carico `Deacmd.exe` di lavoro con il comando, è possibile usare le opzioni aggiuntive seguenti:
+Quando si avvia una nuova acquisizione del carico di lavoro con il `Deacmd.exe` comando, è possibile usare le opzioni aggiuntive seguenti:
 
 | Opzione| Descrizione |  
 | --- | --- |
@@ -72,11 +72,11 @@ Se si usa Riesecuzione distribuita, seguire questa procedura.
 
 3. Avviare un'acquisizione di traccia nel computer di destinazione che esegue SQL Server utilizzando StartReplayCaptureTrace. SQL.
 
-    a.  In SQL Server Management Studio (SSMS) aprire <Dea_InstallPath\>\Scripts\StartReplayCaptureTrace.SQL.
+    a.  In SQL Server Management Studio (SSMS) aprire <Dea_InstallPath \> \Scripts\StartReplayCaptureTrace.SQL.
 
-    b.  Eseguire `Set @durationInMins=0` in modo che l'acquisizione della traccia non venga arrestata automaticamente dopo un periodo di tempo specificato.
+    b.  Eseguire in `Set @durationInMins=0` modo che l'acquisizione della traccia non venga arrestata automaticamente dopo un periodo di tempo specificato.
 
-    c.  Per impostare le dimensioni massime del file per ogni file `Set @maxfilesize`di traccia, eseguire. La dimensione consigliata è 200 (in MB).
+    c.  Per impostare le dimensioni massime del file per ogni file di traccia, eseguire `Set @maxfilesize` . La dimensione consigliata è 200 (in MB).
 
     d.  Modificare `@Tracefile` per impostare un nome univoco per il file di traccia.
 
@@ -86,12 +86,12 @@ Se si usa Riesecuzione distribuita, seguire questa procedura.
 
     `DReplay replay -m "dreplaycontroller" -d "<Folder Path on Dreplay Controller>\IrfFolder" -o -s "SQL2016Target" -w "dreplaychild1,dreplaychild2,dreplaycild3,dreplaychild4"`
 
-    a.  Per monitorare lo stato, al prompt dei comandi eseguire `DReplay status -f 1`.
+    a.  Per monitorare lo stato, al prompt dei comandi eseguire `DReplay status -f 1` .
 
-    b.  Per arrestare la riproduzione, ad esempio se si nota che il passaggio% è inferiore al previsto, al prompt dei comandi eseguire `DReplay cancel`.
+    b.  Per arrestare la riproduzione, ad esempio se si nota che il passaggio% è inferiore al previsto, al prompt dei comandi eseguire `DReplay cancel` .
 
 5. Arrestare l'acquisizione di traccia nell'istanza di SQL Server di destinazione.
-6. In SSMS aprire `<Dea_InstallPath>\Scripts\StopCaptureTrace.sql`.
+6. In SSMS aprire `<Dea_InstallPath>\Scripts\StopCaptureTrace.sql` .
 7. Modificare `@Tracefile` in modo che corrisponda al percorso del file di traccia nel computer di destinazione che esegue SQL Server.
 8. Eseguire lo script nel computer di destinazione che esegue SQL Server.
 
@@ -103,11 +103,11 @@ Se si utilizza la riproduzione incorporata, non sarà necessario configurare Rie
 
 Per avviare una nuova analisi della traccia, al prompt dei comandi eseguire il comando seguente:
 
-`Deacmd.exe -o analysis -a <Target1 trace filepath> -b <Target2 trace filepath> -r reportname -h <SQLserverInstance> -e <encryptconnection> -u <trustservercertificate>`
+`Deacmd.exe -o analysis -a <Target1 trace filepath> -b <Target2 trace filepath> -r reportname -h <SQLserverInstance> -e <encryptconnection> -u <username>`
 
 **Esempio**
 
-`Deacmd.exe -o analysis -a C:\Trace\SQL2008Source\Trace.trc -b C:\ Trace\SQL2014Trace\Trace.trc -r upgrade20082014 -s localhost -e`
+`Deacmd.exe -o analysis -a C:\Trace\SQL2008Source\Trace.trc -b C:\ Trace\SQL2014Trace\Trace.trc -r upgrade20082014 -h localhost -e`
 
 Per visualizzare i report di analisi di questi file di traccia, è necessario usare l'interfaccia utente grafica per visualizzare i grafici e le metriche organizzate.  Tuttavia, il database di analisi viene scritto nell'istanza SQL Server specificata, pertanto è possibile eseguire una query direttamente sulle tabelle di analisi generate.
 
