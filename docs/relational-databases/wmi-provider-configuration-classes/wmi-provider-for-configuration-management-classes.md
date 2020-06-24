@@ -1,5 +1,6 @@
 ---
 title: Classi del provider WMI per la gestione della configurazione
+description: Individuare e implementare le funzionalità fornite da Strumentazione gestione Windows. Per Configuration Manager, scegliere una di queste classi.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb3311bd-394e-4a5e-a693-7b326f9ac777
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 60430a5bbc2d0309748a2099e9e9bd4f322f8264
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c5cc832920b67a8d427b930049349d1203dd4478
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73658931"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295464"
 ---
 # <a name="wmi-provider-for-configuration-management-classes"></a>Classi del provider WMI per la gestione della configurazione
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,6 @@
 ---
 title: Usare il provider WMI per la gestione della configurazione
+description: Informazioni sul provider WMI per la gestione della configurazione, tra cui Binding, specifica di una stringa di connessione e autorizzazioni/autenticazione server.
 ms.custom: seo-lt-2019
 ms.date: 04/12/2019
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d76cc006e2f8638de9b6d3c21660806239022ec0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c064c2927919ab4760903a9a3457f9c0be816647
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73657371"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295394"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>Utilizzo del provider WMI per Gestione configurazione
 
@@ -32,14 +33,14 @@ ms.locfileid: "73657371"
 
 Questo articolo fornisce indicazioni su come programmare con il provider WMI per la gestione dei computer.
 
-## <a name="binding"></a>Associazione  
+## <a name="binding"></a>Binding  
  Il provider WMI per Gestione configurazione è un modello a oggetti COM che supporta l'associazione anticipata e tardiva. Con l'associazione tardiva è possibile utilizzare linguaggi di scripting, come VBScript, per modificare a livello di codice gli alias, le impostazioni di rete e i servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="specifying-a-connection-string"></a>Definizione di una stringa di connessione
 
 Le applicazioni indirizzano il provider WMI per Gestione configurazione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connettendosi a uno spazio dei nomi WMI definito dal provider. Il servizio Windows WMI esegue il mapping di questo spazio dei nomi alla DLL del provider e carica la DLL in memoria. Tutte le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono rappresentate con un solo spazio dei nomi WMI.
 
-Per impostazione predefinita, il formato dello spazio dei nomi è il seguente. Nel formato `VV` è il numero di versione principale di SQL Server. Il numero è individuabile eseguendo `SELECT @@VERSION;`.
+Per impostazione predefinita, il formato dello spazio dei nomi è il seguente. Nel formato `VV` è il numero di versione principale di SQL Server. Il numero è individuabile eseguendo `SELECT @@VERSION;` .
 
 ```console
 \\.\root\Microsoft\SqlServer\ComputerManagementVV
