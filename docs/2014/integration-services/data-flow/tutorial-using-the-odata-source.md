@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 61a49ccb89343984b29018f293656fd2a9137b37
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6affa33374df4bd8e05e6158a23a46016ef1c644
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939192"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429888"
 ---
 # <a name="tutorial-using-the-odata-source-ssis"></a>Esercitazione: utilizzo dell'origine OData [SSIS]
   In questa esercitazione viene eseguito il processo per estrarre la raccolta **Dipendenti** del servizio **Northwind** OData di esempio (http://services.odata.org/V3/Northwind/Northwind.svc/) e caricarla in un file flat.  

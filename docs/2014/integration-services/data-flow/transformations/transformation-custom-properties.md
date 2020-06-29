@@ -38,14 +38,14 @@ helpviewer_keywords:
 - Copy Column transformation custom properties [Integration Services]
 - Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 60798bb7bd856dd131592e3c67eb155cf64a6ae7
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bcf5706f3c208dad54577c8dd3be4bfb6b4ea643
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939252"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430018"
 ---
 # <a name="transformation-custom-properties"></a>proprietà personalizzate della trasformazione
   Oltre alle proprietà comuni alla maggior parte degli oggetti del flusso di dati nel modello a oggetti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], molti oggetti del flusso di dati hanno proprietà personalizzate specifiche dell'oggetto. Tali proprietà personalizzate sono disponibili solo in fase di esecuzione e non sono trattate nella documentazione di riferimento relativa alla programmazione gestita in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
@@ -560,7 +560,7 @@ ms.locfileid: "84939252"
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della trasformazione Estrazione termini. Tutte le proprietà sono di lettura/scrittura.  
   
-|Proprietà|Tipo di dati|Description|  
+|Proprietà|Tipo di dati|Descrizione|  
 |--------------|--------------|-----------------|  
 |FrequencyThreshold|Integer|Valore numerico che indica il numero necessario di occorrenze di un termine prima che questo venga estratto. Il valore predefinito di questa proprietà è **2**.|  
 |IsCaseSensitive|Boolean|Valore che specifica se utilizzare la distinzione tra maiuscole e minuscole per l'estrazione di sostantivi e sintagmi nominali. Il valore predefinito di questa proprietà è `False`.|  

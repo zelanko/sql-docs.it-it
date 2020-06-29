@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4e61e8c122b284dfe448f415cd05b20feab699ef
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 80513addcc1683b6238734bd72c0ddee3608c61d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939212"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429968"
 ---
 # <a name="use-a-recordset-destination"></a>Utilizzo di una destinazione recordset
   La destinazione recordset non salva i dati in un'origine dati esterna, ma in un recordset in memoria archiviato in una variabile del pacchetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] del tipo di dati `Object`. Dopo che la destinazione recordset ha salvato i dati, in genere si utilizza un contenitore Ciclo Foreach con l'enumeratore Foreach ADO per elaborare una riga del recordset alla volta. L'enumeratore Foreach ADO salva il valore di ogni colonna della riga corrente in una variabile del pacchetto distinta. Quindi, le attività configurate nel contenitore Ciclo Foreach leggono tali valori dalle variabili ed eseguono alcune azioni.  
