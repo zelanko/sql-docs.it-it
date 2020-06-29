@@ -11,14 +11,14 @@ helpviewer_keywords:
 - debugging [Integration Services], scripts
 - scripts [Integration Services], debugging
 ms.assetid: fddf57d8-8607-4f88-85a0-1b683087b491
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: efc89f76bb3a1ccfd04b63a359befb646b446aa4
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a7926f806f20f76c7aaac0c22b970addc5e93a78
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972731"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420618"
 ---
 # <a name="debugging-script"></a>Debug degli script
   Gli script usati nell'attività Script e nel componente script vengono scritti in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA).  

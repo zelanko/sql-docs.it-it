@@ -1,7 +1,7 @@
 ---
 title: sys. external_libraries (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2019
+ms.date: 06/25/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
@@ -18,21 +18,21 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b1bfc00b403fa76f692db78593ed4c0e6b53ce8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 7303649ec6d7a849979871de3f4f91b978adc23a
+ms.sourcegitcommit: a0ebbcb717f09d3614de5ce9eb9f3c00f0a45f81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80664428"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85409370"
 ---
 # <a name="sysexternal_libraries-transact-sql"></a>sys.external_libraries (Transact-SQL)  
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 Supporta la gestione di librerie di pacchetti correlate a runtime esterni, ad esempio R, Python e Java.
 
 > [!NOTE]
-> In SQL Server 2017 sono supportati il linguaggio R e la piattaforma Windows. R, Python e Java nelle piattaforme Windows e Linux sono supportati in SQL Server 2019 e versioni successive.
+> In SQL Server 2017 sono supportati il linguaggio R e la piattaforma Windows. R, Python e Java nelle piattaforme Windows e Linux sono supportati in SQL Server 2019 e versioni successive. In Istanza gestita SQL di Azure sono supportati R e Python.
 
 ## <a name="sysexternal_libraries"></a>sys.external_libraries
 
@@ -47,9 +47,9 @@ La vista del catalogo sys. external_libraries elenca una riga per ogni libreria 
 |ambito |INT |0 per ambito pubblico; 1 per ambito privato |  
 |scope_desc |varchar (7) |Indica se il pacchetto è pubblico o privato.|
 
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 
 + [sys.external_library_files](sys-external-library-files-transact-sql.md)  
 + [CREA LIBRERIA ESTERNA](../../t-sql/statements/create-external-library-transact-sql.md)  
-+ [Installare nuovi pacchetti R in SQL Server](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md)  
-+ [Installare nuovi pacchetti Python in SQL Server](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md)  
++ [Installare nuovi pacchetti R](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md)  
++ [Installare nuovi pacchetti Python](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md)  

@@ -9,14 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - connection managers [Integration Services], programming
 ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6053418c624c2ab107a35a02c382576dcb41a534
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e6e9725f7ecdbc1625c74f4c650f6f3215dc64ee
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972441"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419908"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>Utilizzo di gestioni connessioni a livello di programmazione
   In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] il metodo AcquireConnection della classe della gestione connessione associata è quello che viene chiamato più spesso quando si usano gestioni connessioni in codice gestito. Quando si scrive codice gestito, è necessario chiamare il metodo AcquireConnection per usare la funzionalità di una gestione connessione. È necessario chiamare questo metodo sia che il codice gestito venga scritto in un'attività Script, in un componente script, in un oggetto personalizzato o in un'applicazione personalizzata.  
@@ -60,7 +60,7 @@ ms.locfileid: "84972441"
 |MULTIFILE|gestione connessione per più file|`System.String`|Percorso di uno dei file.|  
 |MULTIFLATFILE|gestione connessione per più file flat|`System.String`|Percorso di uno dei file.|  
 |SMOServer|gestione connessione SMO|`Microsoft.SqlServer.Management.Smo.Server`||  
-|SMTP|Gestione connessione SMTP|`System.String`|ad esempio `SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
+|SMTP|Gestione connessione SMTP|`System.String`|Ad esempio: `SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
 |WMI|Gestione connessione WMI|`System.Management.ManagementScope`||  
 |SQLMOBILE|Gestione connessione SQL Server Compact|`System.Data.SqlServerCe.SqlCeConnection`||  
   

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Error Messages Task Editor
 ms.assetid: 67b21f48-4795-4128-81dc-743f7a95ef74
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3a89818eac194ff6d980fcfc801014584ee1f724
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c656b2399586025a316bb32c97496efad0648e93
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972851"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420768"
 ---
 # <a name="transfer-error-messages-task-editor-general-page"></a>Editor attività Trasferisci messaggi di errore (pagina Generale)
   Utilizzare la pagina **Generale** della finestra di dialogo **Editor attività Trasferisci messaggi di errore** per assegnare un nome e una descrizione all'attività Trasferisci messaggi di errore. L'attività Trasferisci messaggi di errore trasferisce uno o più messaggi di errore definiti dall'utente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tra istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per ulteriori informazioni su questa attività, vedere [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md).  

@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - package requirements
 ms.assetid: b0c86c35-e3d3-4724-9a96-4087e9d74bf3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 608fae64df45e8cf84c1b72e37eb501df7758613
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2c4e3f6637c4e9fd65b0218b8489372355b3608f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962541"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421049"
 ---
 # <a name="ssis-package-essentials"></a>Concetti di base sui pacchetti SSIS
   Un pacchetto è l'oggetto che consente di implementare la funzionalità [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] per estrarre, trasformare e caricare i dati. Un pacchetto viene creato utilizzando la finestra di progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] oppure eseguendo Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o Creazione guidata progetto connessioni in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Per ulteriori informazioni, [creare pacchetti in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md) in Progettazione SSIS e [importazione guidata progetto](../../2014/integration-services/import-project-wizard.md).  

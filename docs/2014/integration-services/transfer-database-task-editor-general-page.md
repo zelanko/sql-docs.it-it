@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Database Task Editor
 ms.assetid: 0f65927a-5835-45ee-9c19-e33f00d0755c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 36f27bc789a5af9077225e3c507fadf54fb9ddfa
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bb5bb1b71374fe1fa693447202ca698ebf415c82
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972861"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420808"
 ---
 # <a name="transfer-database-task-editor-general-page"></a>Editor attività Trasferisci database (pagina Generale)
   Utilizzare la pagina **Generale** dell' **Editor attività Trasferisci database** per assegnare un nome all'attività Trasferisci database e descriverla. Questa attività consente di copiare o spostare un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tra due istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Tramite questa attività è inoltre possibile copiare un database all'interno dello stesso server. Per altre informazioni su questa attività, vedere [Attività Trasferisci database](control-flow/transfer-database-task.md).  

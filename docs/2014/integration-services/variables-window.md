@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Variables Window dialog box
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 258fdee44c2ab67babfa366f627b7b297c5f1535
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 62daceac93eda76f2d81ea0fdce00a3c5fa7e97f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972561"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420148"
 ---
 # <a name="variables-window"></a>Finestra Variabili
   Usare la finestra **Variabili** per creare e modificare variabili definite dall'utente e visualizzare quelle di sistema.  
@@ -71,7 +71,7 @@ ms.locfileid: "84972561"
  **Descrizione**  
  Consente di visualizzare la descrizione della variabile. È possibile modificare la descrizione per le variabili definite dall'utente. Per impostazione predefinita, questa colonna non viene visualizzata nella finestra **Variabili** . Per visualizzare questa colonna, fare clic su **Opzioni griglia**.  
   
- **Espressione**  
+ **Expression**  
  Consente di visualizzare l'espressione assegnata alla variabile. Per assegnare un'espressione, fare clic sul pulsante con i puntini di sospensione.  
   
  Se si assegna un'espressione a una variabile, accanto a quest'ultima viene visualizzato un marcatore icona speciale. Tale marcatore icona speciale viene visualizzato anche accanto alle gestioni connessioni e alle attività in cui sono impostate espressioni.  

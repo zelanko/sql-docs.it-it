@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Error Messages Task Editor
 ms.assetid: cb2226a0-3037-4fdf-966f-81eabc0da9cf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2b21476bb6b696b51cc1932c171bdd8dfa1d0e6d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7b551d60d36948cb4c950dfcd9a17e2c16229420
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972837"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420698"
 ---
 # <a name="transfer-error-messages-task-editor-messages-page"></a>Editor attività Trasferisci messaggi di errore (pagina Messaggi)
   Usare la pagina **Messaggi** della finestra di dialogo **Editor attività Trasferisci messaggi di errore** per specificare le proprietà relative alla copia di uno o più messaggi di errore definiti dall'utente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tra due istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per ulteriori informazioni su questa attività, vedere [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md).  
@@ -38,7 +38,7 @@ ms.locfileid: "84972837"
   
  Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**True**|Copia tutti i messaggi definiti dall'utente.|  
 |**False**|Copia solo i messaggi definiti dall'utente specificati.|  

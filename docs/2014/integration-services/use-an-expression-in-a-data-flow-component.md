@@ -10,14 +10,14 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - expressions [Integration Services], data flow components
 ms.assetid: 9181b998-d24a-41fb-bb3c-14eee34f910d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d08d256946fbeb2f5b70057fc0d6992758b3a211
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0c996889b6127bb8ea16bab077bfd9d757921b11
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972631"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420348"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>Utilizzo di un'espressione in un componente flusso di dati
   In questo argomento viene descritta la procedura per l'aggiunta di un'espressione nella trasformazione Suddivisione condizionale o Colonna derivata. La trasformazione Suddivisione condizionale utilizza espressioni per definire le condizioni che dirigono le righe di dati all'output della trasformazione, mentre la trasformazione Colonna derivata utilizza espressioni per definire i valori assegnati alle colonne.  

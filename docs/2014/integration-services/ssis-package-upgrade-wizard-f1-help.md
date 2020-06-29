@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5f141b220284e758a8c7b3038ccc6cc064bd527f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 61bce69d3a51d5ea238d3ed6e29f38660277ad64
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962521"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420988"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>Guida sensibile al contesto dell'Aggiornamento guidato pacchetti SSIS
   Utilizzare l'aggiornamento guidato pacchetti SSIS per aggiornare i [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] pacchetti e [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] i pacchetti al formato del pacchetto per la versione corrente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

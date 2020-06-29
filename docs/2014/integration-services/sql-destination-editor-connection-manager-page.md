@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQL Server Destination Editor
 ms.assetid: 423e1654-54af-47c6-ab6f-98670534557d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 44b7a2b45ca77af87457ae0f4e908ec0a667ff79
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9d11bf1042b19831e09739bc3b08d6a242404b70
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962811"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421288"
 ---
 # <a name="sql-destination-editor-connection-manager-page"></a>Editor destinazione SQL Server (pagina Gestione connessione)
   Usare la pagina **Gestione connessione** della finestra di dialogo **Editor destinazione SQL** per specificare le informazioni sull'origine dei dati e visualizzare un'anteprima dei risultati. La [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] destinazione carica i dati in tabelle o viste di un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database.  

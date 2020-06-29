@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Database Task Editor
 ms.assetid: ccdb74d0-4bea-420c-a726-2e0eb8957e0a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 398e3f3d8496d26c2672ad6d11557c0058a594ee
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fddfbf70b298614767429a8a006d264ad4853aa0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962091"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420848"
 ---
 # <a name="transfer-database-task-editor-databases-page"></a>Editor attività Trasferisci database (pagina Database)
   Utilizzare la pagina **Database** della finestra di dialogo **Editor attività Trasferisci database** per specificare le proprietà relative ai database di origine e destinazione interessati dall'attività Trasferisci database. Questa attività consente di copiare o spostare un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tra due istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Tramite questa attività è inoltre possibile copiare un database all'interno dello stesso server. Per altre informazioni su questa attività, vedere [Attività Trasferisci database](control-flow/transfer-database-task.md).  
@@ -52,7 +52,7 @@ ms.locfileid: "84962091"
   
  Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**True**|Sovrascrive il database del server di destinazione.|  
 |**False**|Non sovrascrive il database del server di destinazione.|  
@@ -81,7 +81,7 @@ ms.locfileid: "84962091"
   
  Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**True**|Ricollega il database di origine.|  
 |**False**|Non ricollega il database di origine.|  

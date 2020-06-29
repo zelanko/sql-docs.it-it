@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.upgradingpackage.f1
 ms.assetid: cdb842e3-2e59-4ede-b127-be4fde46875c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 95c4a27a6ef20ac52521c707ae4a83329a81716d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 238a4c936f1e0de5c993e2535a16106c502aece9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972661"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420378"
 ---
 # <a name="upgrading-the-packages-ssis-package-upgrade-wizard"></a>Aggiornamento pacchetti (Aggiornamento guidato pacchetti SSIS)
   Utilizzare la pagina **Aggiornamento pacchetti** per visualizzare lo stato dell'aggiornamento dei pacchetti e per interrompere l'aggiornamento. L'Aggiornamento guidato pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] consente di aggiornare uno per uno i pacchetti selezionati.  

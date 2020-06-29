@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Stored Procedures Task Editor
 ms.assetid: fa1abd4c-e2be-427f-be53-860e49c97227
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c0b667b72bbb24a2c44a8eb89b84302c64c06745
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8a25a5c9c6ed3802e21ac522e94163ce5fb9e8c0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972791"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420508"
 ---
 # <a name="transfer-master-stored-procedures-task-editor-general-page"></a>Editor attività Trasferisci stored procedure master (pagina Generale)
   Usare la pagina **Generale** della finestra di dialogo **Editor attività Trasferisci stored procedure master** per assegnare un nome e una descrizione all'attività Trasferisci stored procedure master. Per altre informazioni su questa attività, vedere [Attività Trasferisci stored procedure master](control-flow/transfer-master-stored-procedures-task.md).  

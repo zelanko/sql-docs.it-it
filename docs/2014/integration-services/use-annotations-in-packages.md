@@ -11,14 +11,14 @@ helpviewer_keywords:
 - adding annotations
 - annotations [Integration Services]
 ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a5a454e34a9a81e90a0f02de7a640631ab8ce027
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 27c7df6afd894ea9730027da1d54786ed8397fad
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972601"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420229"
 ---
 # <a name="use-annotations-in-packages"></a>Utilizzo di annotazioni nei pacchetti
   In Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] sono disponibili annotazioni che è possibile utilizzare per ottenere pacchetti autodocumentati, più semplici da capire e gestire. È possibile aggiungere annotazioni alle aree di progettazione dei flussi di controllo, dei flussi di dati e dei gestori di eventi di Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] . Nelle annotazioni può essere contenuto qualsiasi tipo di testo e possono essere utilizzate per aggiungere etichette, commenti e altre informazioni descrittive a un pacchetto. Le annotazioni sono disponibili solo in modalità progettazione. Non possono essere ad esempio scritte nei log.  

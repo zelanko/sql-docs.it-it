@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - WMI Event Watcher Task Editor
 ms.assetid: 525f3de7-a021-4e52-9939-3a83c88f131a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b330e63d802d0801f4473bb1a1422c5bf79c35e2
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a64ac51999d15ad226894540d3eb2819164e90e2
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972411"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419848"
 ---
 # <a name="wmi-event-watcher-task-editor-wmi-options-page"></a>Editor attività Monitoraggio eventi WMI (pagina Opzioni WMI)
   Usare la pagina **Opzioni WMI** della finestra di dialogo **Editor attività Monitoraggio eventi WM** per specificare l'origine della query WQL e la modalità di risposta dell'attività Monitoraggio eventi WMI agli eventi del servizio Strumentazione Gestione Windows (WMI).  
@@ -34,7 +34,7 @@ ms.locfileid: "84972411"
  **WQLQuerySourceType**  
  Consente di selezionare il tipo di origine della query WQL eseguita dall'attività. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Input diretto**|Consente di impostare l'origine su una query WQL. Selezionando questo valore viene visualizzata l'opzione dinamica **WQLQuerySource**.|  
 |**Connessione file**|Consente di selezionare un file contenente la query WQL. Selezionando questo valore viene visualizzata l'opzione dinamica **WQLQuerySource**.|  

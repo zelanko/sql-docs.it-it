@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - XML Task Editor
 ms.assetid: b9622c48-3243-4408-a1de-9ba20e32ff70
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 26055dde636d299a2a58fdfe0bdbd3fdfbdab012
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 804c871527e6d7841cfb23f389345edee5af8789
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972351"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419468"
 ---
 # <a name="xml-task-editor-general-page"></a>XML Task Editor (General Page)
   Utilizzare il nodo **Generale** della finestra di dialogo **Editor attività XML** per specificare il tipo di operazione e configurarla.  
@@ -29,7 +29,7 @@ ms.locfileid: "84972351"
  **Tipo operazione**  
  Selezionare il tipo di operazione dall'elenco. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Convalidare**|Consente di convalidare il documento XML in base a una schema di definizione DTD (Document Type Definition) o XSD (XML Schema Definition). Selezionando questa opzione, verranno visualizzate le opzioni dinamiche nella sezione **Convalida**.|  
 |**XSLT**|Consente di eseguire trasformazioni XSL in documenti XML. Selezionando questa opzione, verranno visualizzate le opzioni dinamiche nella sezione **XSLT**.|  
@@ -41,13 +41,13 @@ ms.locfileid: "84972351"
  **SourceType**  
  Consente di selezionare il tipo di origine del documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Input diretto**|Consente di impostare l'origine su un documento XML.|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
 |**Variabile**|Consente di impostare l'origine su una variabile contenente il documento XML.|  
   
- **origine**  
+ **Origine**  
  Se l'opzione **Origine** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(...)** e quindi indicare il codice XML usando la finestra di dialogo **Editor origine documento**.  
   
  Se l' **origine** è impostata su **connessione file**, selezionare una gestione connessione file oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
@@ -69,7 +69,7 @@ ms.locfileid: "84972351"
  **OverwriteDestination**  
  Consente di indicare se sovrascrivere il file o la variabile di destinazione.  
   
- **Destinazione**  
+ **Destination**  
  Selezionare una gestione connessione file esistente o fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
@@ -77,7 +77,7 @@ ms.locfileid: "84972351"
  **DestinationType**  
  Consente di selezionare il tipo di destinazione del documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
 |**Variabile**|Consente di impostare l'origine su una variabile contenente il documento XML.|  
@@ -85,7 +85,7 @@ ms.locfileid: "84972351"
  **ValidationType**  
  Consente di selezionare il tipo di convalida. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**DTD**|Consente di utilizzare una definizione DTD.|  
 |**XSD**|Consente di utilizzare una definizione XSD. Selezionando questa opzione, verranno visualizzate le opzioni dinamiche nella sezione **ValidationType**.|  
@@ -102,7 +102,7 @@ ms.locfileid: "84972351"
  **SecondOperandType**  
  Consente di selezionare il tipo di origine del secondo documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Input diretto**|Consente di impostare l'origine su un documento XML.|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
@@ -128,7 +128,7 @@ ms.locfileid: "84972351"
  **OverwriteDestination**  
  Consente di indicare se sovrascrivere il file o la variabile di destinazione.  
   
- **Destinazione**  
+ **Destination**  
  Se **destinationType** è impostato su **connessione file**, selezionare una gestione connessione file oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
@@ -140,7 +140,7 @@ ms.locfileid: "84972351"
  **DestinationType**  
  Consente di selezionare il tipo di destinazione del documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
 |**Variabile**|Consente di impostare l'origine su una variabile contenente il documento XML.|  
@@ -148,7 +148,7 @@ ms.locfileid: "84972351"
  **SecondOperandType**  
  Consente di selezionare il tipo di origine del secondo documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Input diretto**|Consente di impostare l'origine su un documento XML.|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
@@ -174,7 +174,7 @@ ms.locfileid: "84972351"
  **OverwriteDestination**  
  Consente di indicare se sovrascrivere il file o la variabile di destinazione.  
   
- **Destinazione**  
+ **Destination**  
  Se **destinationType** è impostato su **connessione file**, selezionare una gestione connessione file oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
@@ -186,7 +186,7 @@ ms.locfileid: "84972351"
  **DestinationType**  
  Consente di selezionare il tipo di destinazione del documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
 |**Variabile**|Consente di impostare l'origine su una variabile contenente il documento XML.|  
@@ -194,7 +194,7 @@ ms.locfileid: "84972351"
  **SecondOperandType**  
  Consente di selezionare il tipo di origine del secondo documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Input diretto**|Consente di impostare l'origine su un documento XML.|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
@@ -217,7 +217,7 @@ ms.locfileid: "84972351"
  **XPathOperation**  
  Consente di selezionare il tipo di risultato XPath. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Valutazione**|Restituisce i risultati di una funzione XPath.|  
 |**Elenco dei nodi**|Restituisce i nodi selezionati come frammento XML.|  
@@ -229,7 +229,7 @@ ms.locfileid: "84972351"
  **XPathStringSourceType**  
  Consente di selezionare il tipo di origine del documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Input diretto**|Consente di impostare l'origine su un documento XML.|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
@@ -254,7 +254,7 @@ ms.locfileid: "84972351"
  **OverwriteDestination**  
  Consente di indicare se sovrascrivere il file o la variabile di destinazione.  
   
- **Destinazione**  
+ **Destination**  
  Se **destinationType** è impostato su **connessione file**, selezionare una gestione connessione file oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
@@ -266,7 +266,7 @@ ms.locfileid: "84972351"
  **DestinationType**  
  Consente di selezionare il tipo di destinazione del documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
 |**Variabile**|Consente di impostare l'origine su una variabile contenente il documento XML.|  
@@ -274,7 +274,7 @@ ms.locfileid: "84972351"
  **SecondOperandType**  
  Consente di selezionare il tipo di destinazione del secondo documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Input diretto**|Consente di impostare l'origine su un documento XML.|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
@@ -297,7 +297,7 @@ ms.locfileid: "84972351"
  **DiffAlgorithm**  
  Consente di selezionare l'algoritmo Diff da utilizzare per il confronto dei documenti. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Auto**|Fa sì che l'attività XML determini automaticamente se utilizzare l'algoritmo veloce o esatto.|  
 |**Veloce**|Consente di utilizzare un algoritmo Diff veloce, ma meno preciso.|  
@@ -306,7 +306,7 @@ ms.locfileid: "84972351"
  **Opzioni Diff**  
  Consente di impostare le opzioni Diff da applicare all'operazione Diff. Nella tabella seguente vengono elencate le opzioni.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**IgnoreXMLDeclaration**|Consente di indicare se confrontare la dichiarazione XML.|  
 |**IgnoreDTD**|Consente di indicare se ignorare la definizione DTD.|  
@@ -329,7 +329,7 @@ ms.locfileid: "84972351"
  **OverwriteDestination**  
  Consente di indicare se sovrascrivere il file o la variabile di destinazione.  
   
- **Destinazione**  
+ **Destination**  
  Se **destinationType** è impostato su **connessione file**, selezionare una gestione connessione file oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
@@ -341,7 +341,7 @@ ms.locfileid: "84972351"
  **DestinationType**  
  Consente di selezionare il tipo di destinazione del documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
 |**Variabile**|Consente di impostare l'origine su una variabile contenente il documento XML.|  
@@ -349,7 +349,7 @@ ms.locfileid: "84972351"
  **SecondOperandType**  
  Consente di selezionare il tipo di destinazione del documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Input diretto**|Consente di impostare l'origine su un documento XML.|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
@@ -375,7 +375,7 @@ ms.locfileid: "84972351"
  **OverwriteDestination**  
  Consente di indicare se sovrascrivere il file o la variabile di destinazione.  
   
- **Destinazione**  
+ **Destination**  
  Se **destinationType** è impostato su **connessione file**, selezionare una gestione connessione file oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
@@ -387,7 +387,7 @@ ms.locfileid: "84972351"
  **DestinationType**  
  Consente di selezionare il tipo di destinazione del documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
 |**Variabile**|Consente di impostare l'origine su una variabile contenente il documento XML.|  
@@ -395,7 +395,7 @@ ms.locfileid: "84972351"
  **SecondOperandType**  
  Consente di selezionare il tipo di destinazione del documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Input diretto**|Consente di impostare l'origine su un documento XML.|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
