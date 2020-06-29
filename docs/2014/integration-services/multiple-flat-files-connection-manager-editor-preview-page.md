@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: 52ed1a97-2dbb-4ad8-89b5-4748103e89fa
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f16df0120e58b987009f0e8e674901e27bbfbe43
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 192620afe223b6c11e8ce646a15da3ddcc3258e3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965131"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440108"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>Editor gestione connessione per più file flat (pagina Anteprima)
   Usare la pagina **Anteprima** della finestra di dialogo **Editor gestione connessione per più file flat** per visualizzare il contenuto del primo file di origine selezionato suddiviso in colonne in base alle impostazioni definite in precedenza.  

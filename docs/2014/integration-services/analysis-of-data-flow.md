@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5654cb30-cad2-470c-97b3-59cb331033e5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5723ba6fcbcd8e5b2280fc977aa5f405d461b805
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4faa8626fd0237477fb521e5eaacf6afc823fd0e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925562"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439498"
 ---
 # <a name="analysis-of-data-flow"></a>Analisi del flusso di dati
   È possibile utilizzare la vista [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` database per analizzare il flusso di dati dei pacchetti. In questa vista viene visualizzata una riga ogni volta che un componente del flusso di dati invia dati a un componente a valle. Le informazioni possono essere utilizzate per acquisire una comprensione più approfondita delle righe inviate a ciascun componente.  

@@ -10,14 +10,14 @@ helpviewer_keywords:
 - technical reference [Integration Services]
 - Integration Services, technical reference
 ms.assetid: 69fe35ef-58df-4138-b0a5-9b1fb8c862d7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b1cd70c38c03e0a60cfe5060f15e2ecc6655e72a
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7a786eabe7fcedf4312ddee6576d144c7b789c01
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962361"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440088"
 ---
 # <a name="technical-reference-integration-services"></a>Riferimento tecnico (Integration Services)
   Trovare gli strumenti, le lingue e la documentazione di riferimento per la programmazione per [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  

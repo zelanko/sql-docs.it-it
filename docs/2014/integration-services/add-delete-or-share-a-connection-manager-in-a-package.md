@@ -10,14 +10,14 @@ helpviewer_keywords:
 - connection managers [Integration Services], adding
 - adding connection managers
 ms.assetid: 6f2ba4ea-10be-4c40-9e80-7efcf6ee9655
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4c132bc1715292a1dbd88d84813cefb3ca8616a4
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5a44a97ce85fc78a115d89a488aea8d170ef3b36
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926222"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439718"
 ---
 # <a name="add-delete-or-share-a-connection-manager-in-a-package"></a>Aggiunta, eliminazione o condivisione di una gestione connessione in un pacchetto
   In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sono disponibili diverse gestioni connessioni per la connessione a origini dati diverse, ad esempio database relazionali, database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e file in formato CSV e XML. Una gestione connessione può essere creata al livello del pacchetto o al livello del progetto. La gestione connessione creata al livello del progetto è disponibile per tutti i pacchetti nel progetto. La gestione connessione creata al livello del pacchetto è invece disponibile per quel pacchetto specifico.  
