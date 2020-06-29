@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Script task [Integration Services], comparing to Script component
 - Script component [Integration Services], comparing to Script task
 ms.assetid: 4b73753a-4239-491b-b7a6-abc63ba83d2d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e5061308e416396c268e2fdcbea3e35572496719
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 134cce74fc88cc9a7358c8aa4ba8de3fb7e58c5e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968428"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426408"
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>Confronto tra l'attività Script e il componente script
   L'attività Script, disponibile nella finestra Flusso di controllo di Progettazione [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], e il componente Script, disponibile nella finestra Flusso di dati, hanno scopi molto diversi in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. L'attività è uno strumento generico del flusso di controllo, mentre il componente funge da origine, trasformazione o destinazione nel flusso di dati. Nonostante gli scopi diversi, tuttavia, l'attività Script e il componente script presentano analogie negli strumenti di creazione di codice che utilizzano e negli oggetti del pacchetto che rendono disponibili per lo sviluppatore. Identificando le analogie e le differenze, sarà possibile utilizzare l'attività e il componente in modo più efficace.  

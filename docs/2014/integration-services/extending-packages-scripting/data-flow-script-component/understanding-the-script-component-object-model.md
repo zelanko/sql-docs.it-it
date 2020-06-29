@@ -11,14 +11,14 @@ dev_langs:
 helpviewer_keywords:
 - Script component [Integration Services], object model
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 80d61a4b4742163d999aa2f5d70e70336e680e27
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 950754193be1aaad13423b371af0175a0370f473
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967247"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426098"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Informazioni sul modello a oggetti del componente script
   Come descritto in [codifica e debug del componente script] (.. /Extending-Packages-scripting/Data-Flow-Script-Component/Coding-and-Debugging-the-script-component.MD, il progetto del componente script contiene tre elementi del progetto:
