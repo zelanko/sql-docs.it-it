@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Transformation Editor
 ms.assetid: f6d8958c-0a70-41ab-b6d9-b42cf3194d37
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 77dca7daad7a26700b68a786f844062c761a8149
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4222f3017b4a62fc080100bf028475eddc5a58fa
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939105"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429728"
 ---
 # <a name="data-mining-query-transformation-editor-query-tab"></a>Editor trasformazione Query di data mining (scheda Query)
   La scheda **Query** della finestra di dialogo **Editor trasformazione Query di data mining** consente di creare una query di stima.  

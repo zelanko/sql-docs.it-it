@@ -20,14 +20,14 @@ helpviewer_keywords:
 - error outputs [Integration Services]
 - asynchronous error outputs [Integration Services]
 ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 207cf66edc65495fea9d6c46693fc3a9c9d5edda
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1b2f1c721acd8449041fe8a623c422a1118b253e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968811"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427728"
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>Utilizzo degli output degli errori in un componente del flusso di dati
   Ai componenti è possibile aggiungere oggetti <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> speciali, denominati output degli errori, in modo che il componente possa reindirizzare le righe che non è in grado di elaborare durante l'esecuzione. I problemi che si possono verificare con un componente sono in genere classificati come errori o troncamenti e sono specifici per ogni componente. I componenti che forniscono output degli errori offrono agli utenti la flessibilità di gestire le condizioni di errore filtrando le righe di errore dal set di risultati, interrompendo il componente quando si verifica un problema oppure ignorando gli errori e continuando.  

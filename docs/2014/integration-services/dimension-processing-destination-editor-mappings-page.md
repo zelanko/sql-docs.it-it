@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Dimension Processing Destination Editor
 ms.assetid: bf98aa4b-10ba-4978-9fae-a5873ff88613
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 86ce196fa2f7fc90d1ed3f5786881cd30ab316ad
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c71fbba23f1e3c7e4f7f628733f2efadb963ee78
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966923"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429398"
 ---
 # <a name="dimension-processing-destination-editor-mappings-page"></a>Editor destinazione elaborazione dimensione (pagina Mapping)
   Utilizzare la pagina **Mapping** della finestra di dialogo **Editor destinazione elaborazione dimensione** per eseguire il mapping tra le colonne di input e le colonne delle dimensioni.  

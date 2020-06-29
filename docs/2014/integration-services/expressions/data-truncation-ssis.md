@@ -12,14 +12,14 @@ helpviewer_keywords:
 - expressions [Integration Services], data truncation
 - truncate options [Integration Services]
 ms.assetid: 02461e15-49ca-445b-abb3-5c369c283ec2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 10418783152546cf3ebfbb0550128506cced5ab7
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e0c4280c9eacd22ebf84bf1570d485de51cab09b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967411"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428968"
 ---
 # <a name="data-truncation-ssis"></a>Troncamento dei dati (SSIS)
   Un'espressione può causare il troncamento accidentale dei dati. Il troncamento può verificarsi nelle circostanze seguenti:  

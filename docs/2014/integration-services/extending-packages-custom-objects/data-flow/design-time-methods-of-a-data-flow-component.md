@@ -16,14 +16,14 @@ helpviewer_keywords:
 - PrimeOutput method
 - data flow components [Integration Services], method execution sequence
 ms.assetid: b5a121a1-b87c-441b-a42c-2cec628dc81c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: db0946374c6e0e3960ab19bfdd109c2fdc1eb6ff
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f7678149c77227880d3cbaa9774835f773522f70
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966517"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427848"
 ---
 # <a name="design-time-methods-of-a-data-flow-component"></a>Metodi della fase di progettazione di un componente del flusso di dati
   Prima dell'esecuzione, l'attività Flusso di dati si trova nel cosiddetto stato della fase di progettazione, quando viene sottoposta a modifiche incrementali. Tali modifiche possono includere l'aggiunta o la rimozione di componenti, l'aggiunta o la rimozione degli oggetti percorso che connettono i componenti e modifiche ai metadati dei componenti. Quando si verificano modifiche ai metadati, il componente può monitorarle e rispondere. Ad esempio, un componente può impedire determinate modifiche o aggiungerne altre in risposta a una modifica. In fase di progettazione la finestra di progettazione interagisce con un componente tramite l'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSDesigntimeComponent100> della fase di progettazione.

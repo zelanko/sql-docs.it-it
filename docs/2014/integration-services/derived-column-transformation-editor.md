@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Derived Column Transformation Editor
 ms.assetid: ff73923e-d245-43d8-bf24-af3bdc942e51
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3983e75bdde3379fac48a74a595959af2568a3ab
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0d866559ebb185321b0e30b4f4df1454da4c0a03
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951651"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429558"
 ---
 # <a name="derived-column-transformation-editor"></a>Editor trasformazione Colonna derivata
   Usare la finestra di dialogo **Editor trasformazione Colonna derivata** per creare espressioni che popolino le colonne nuove o di sostituzione.  
@@ -38,7 +38,7 @@ ms.locfileid: "84951651"
  **Colonna derivata**  
  Consente di selezionare una colonna derivata dall'elenco. Scegliere se aggiungere la colonna derivata come nuova colonna di output o sostituire i dati in una colonna esistente.  
   
- **Espressione**  
+ **Expression**  
  Consente di digitare un'espressione o compilarne una mediante il trascinamento dal precedente elenco di colonne, variabili, funzioni e operatori disponibili.  
   
  È possibile specificare il valore di questa proprietà tramite un'espressione di proprietà.  

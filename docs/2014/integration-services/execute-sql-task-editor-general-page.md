@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: beb39086-28ce-46af-b6d8-f7b4fb8d9069
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 294836625075a70b8e101afef2bb9221a177ca47
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 32bec035646c976442eb66ff1270b961835b243b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966778"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429198"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>Editor attività Esegui XML (pagina Generale)
   Usare la pagina **Generale** della finestra di dialogo **Editor attività Esegui SQL** per configurare l'attività Esegui SQL e specificare l'istruzione SQL eseguita dall'attività.  
@@ -67,7 +67,7 @@ ms.locfileid: "84966778"
   
  Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Input diretto**|Consente di impostare l'origine su un'istruzione Transact-SQL. Selezionando questo valore, verrà visualizzata l'opzione dinamica **SQLStatement**.|  
 |**Connessione file**|Consente di selezionare un file contenente un'istruzione Transact-SQL. Impostando questa opzione, verrà visualizzata l'opzione dinamica **FileConnection**.|  

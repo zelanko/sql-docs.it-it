@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.destdbfiles.f1
 ms.assetid: f6f90417-86fb-4b8c-a790-0b215c344ef6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fe81b8a54f92d32c71d84987f5841679580b4f77
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 10adc503f5b6c7212d582bfe7d625db51486092a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967511"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429538"
 ---
 # <a name="destination-database-files"></a>File di database di destinazione
   Utilizzare la finestra di dialogo **File di database di destinazione** per visualizzare o modificare i percorsi e i nomi dei file di database nel server di destinazione oppure per specificare un percorso di file di rete per l'attività Trasferisci database. Per altre informazioni su questa attività, vedere [Attività Trasferisci database](control-flow/transfer-database-task.md).  

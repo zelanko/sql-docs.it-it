@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Execute Process Task Editor
 ms.assetid: 0fc22406-e79b-47a4-a7e4-108d4ce6202f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c6f072f8d748b24489ab68f971abd4872edffdf6
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 51b06136ce1380f04f64bc079f5db41f3d851c8a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966791"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429178"
 ---
 # <a name="execute-process-task-editor-process-page"></a>Execute Process Task Editor (Process Page)
   Utilizzare la pagina **Processo** della finestra di dialogo **Editor attività Esegui processo** per configurare le opzioni di esecuzione del processo. Tali opzioni includono il file eseguibile da avviare, il relativo percorso, gli argomenti del prompt dei comandi, nonché le variabili per la generazione dell'input e l'acquisizione dell'output.  

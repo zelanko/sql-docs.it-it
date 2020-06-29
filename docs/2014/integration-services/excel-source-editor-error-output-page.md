@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 8d14019e-cb60-4bc1-b71e-7f2326de8317
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6f1f5983048c1301e210c2ac64e0a092898f31e0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 74e252782a40039e4d5709fabc4ae6ecd7a37932
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966811"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429268"
 ---
 # <a name="excel-source-editor-error-output-page"></a>Editor origine Excel (pagina Output degli errori)
   Usare la pagina **Output degli errori** della finestra di dialogo **Editor origine Excel** per selezionare le opzioni di gestione degli errori e impostare le proprietà delle colonne di output degli errori.  
@@ -32,7 +32,7 @@ ms.locfileid: "84966811"
  **Colonna**  
  Consente di visualizzare le colonne esterne (di origine) selezionate nella pagina **Gestione connessione** della finestra di dialogo **Editor origine Excel**.  
   
- **Error (Errore) (Error (Errore)e)**  
+ **Errore**  
  Consente di specificare l'azione da eseguire in caso di errori, ovvero ignorare l'errore, reindirizzare la riga o interrompere il componente.  
   
  **Argomenti correlati:** [Gestione degli errori nei dati](data-flow/error-handling-in-data.md)  

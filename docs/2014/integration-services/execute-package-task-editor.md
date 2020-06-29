@@ -11,14 +11,14 @@ f1_keywords:
 - sql12.dts.designer.executepackagetask.package.f1
 - sql12.dts.designer.executepackagetask.general.f1
 ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b9e114802c6e69467ba9438ee4c525ef85e73024
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 337b261c8c6b51125510ae463a673c746d7d6604
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966841"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429288"
 ---
 # <a name="execute-package-task-editor"></a>Editor attività Esegui pacchetto
   Utilizzare l'editor attività Esegui pacchetto per configurare la relativa attività. L'attività Esegui pacchetto permette di estendere le funzionalità aziendali di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consentendo ai pacchetti di eseguire altri pacchetti nell'ambito di un flusso di lavoro.  
@@ -68,7 +68,7 @@ ms.locfileid: "84966841"
  **Posizione**  
  Selezionare il percorso del pacchetto figlio. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**SQL Server**|Impostare il percorso su un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
 |**File system**|Impostare il percorso sul file system.|  

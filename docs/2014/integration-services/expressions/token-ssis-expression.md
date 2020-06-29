@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 43381593b6a43f9e912088a67d5e10401ef3fc6c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ab8e9767dc0f71ae6eae4da5658243c23d8f71e9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969001"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427968"
 ---
 # <a name="token--ssis-expression"></a>TOKEN (espressione SSIS)
   Restituisce un token (sottostringa) da una stringa in base ai delimitatori specificati che separano i token nella stringa e al numero del token che indica quale token deve essere restituito.  

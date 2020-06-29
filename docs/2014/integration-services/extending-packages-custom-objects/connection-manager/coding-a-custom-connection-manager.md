@@ -9,14 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - custom connection managers [Integration Services], coding
 ms.assetid: b12b6778-1f01-4a7d-984d-73f2f7630aa5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 32472a6c21ddabbf0864854b6812a2ac7247a62b
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: db0a0007df6410229e354feef86314f13139fec1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966542"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427778"
 ---
 # <a name="coding-a-custom-connection-manager"></a>Scrittura del codice di una gestione connessione personalizzata
   Dopo avere creato una classe che eredita dalla classe di base <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase> e avere applicato l'attributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> alla classe, è necessario eseguire l'override dell'implementazione delle proprietà e dei metodi della classe di base per fornire la funzionalità personalizzata.  

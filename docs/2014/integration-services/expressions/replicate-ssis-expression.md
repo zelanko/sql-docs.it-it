@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - REPLICATE function
 ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cfe793403fe480c5d3afe7833798e25c519c58cd
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 94869b1144631c76b242e61617fbe64c23e09904
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969091"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428268"
 ---
 # <a name="replicate-ssis-expression"></a>REPLICATE (espressione SSIS)
   Viene restituita un'espressione di caratteri ripetuta per il numero di volte specificato. L'argomento *numero di volte* deve restituire un Integer.  

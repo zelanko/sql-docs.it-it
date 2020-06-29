@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Digital Signing dialog box
 ms.assetid: d6137275-65d3-4fc9-bf31-d61dcd1228d4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7f89d495aa8826250c04f3e0cfe5979d5f202ac8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2a0eb1847082434edf5eae84e3fe788bf57814a8
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966991"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429528"
 ---
 # <a name="digital-signing-dialog-box-ui-reference"></a>Riferimento all'interfaccia utente della finestra di dialogo Firma digitale
   Utilizzare la finestra di dialogo **Firma digitale** per apporre una firma digitale a un pacchetto o rimuovere quella esistente. Per accedere alla finestra di dialogo **Firma digitale** , scegliere l'opzione **Firma digitale** dal menu **SSIS** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

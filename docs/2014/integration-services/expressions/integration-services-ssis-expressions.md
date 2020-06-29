@@ -13,14 +13,14 @@ helpviewer_keywords:
 - expressions [Integration Services], packages
 - SSIS packages, expressions
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: abe734d5a67ea7c450536c2e48d8096c694117df
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 489fad24cb8b62a11aca1914d0c5b24f180d5234
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969357"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428508"
 ---
 # <a name="integration-services-ssis-expressions"></a>Espressioni di Integration Services (SSIS)
   Un'espressione è una combinazione di simboli, ovvero identificatori, valori letterali, funzioni e operatori, che restituiscono un singolo valore di dati. È possibile creare espressioni semplici, costituite da un'unica costante, variabile o funzione, In genere le espressioni sono complesse in quanto includono più operatori e funzioni e fanno riferimento a più colonne e variabili. In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]è possibile usare le espressioni per definire condizioni per istruzioni CASE, creare e aggiornare valori in colonne di dati, assegnare valori a variabili, aggiornare o popolare proprietà in fase di esecuzione, definire vincoli in vincoli di precedenza e definire espressioni usate dal contenitore Ciclo For.  

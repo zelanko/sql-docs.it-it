@@ -18,14 +18,14 @@ helpviewer_keywords:
 - output columns [Integration Services]
 - data flow components [Integration Services], transformation components
 ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7a52068b0539ca77eed88d88ecce55a1615b89a1
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a09f82fe266e0f87703efd983d20ab435cc1835a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968911"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428038"
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>Sviluppo di un componente di trasformazione personalizzato con output sincroni
   I componenti di trasformazione con output sincroni ricevono righe dai componenti a monte, quindi leggono o modificano i valori nelle colonne di queste righe mentre le passano ai componenti a valle. Possono anche definire colonne di output aggiuntive derivate dalle colonne fornite dai componenti a monte, ma non aggiungono righe al flusso di dati. Per altre informazioni sulla differenza tra componenti sincroni e asincroni, vedere [Informazioni sulle trasformazioni sincrone e asincrone](../understanding-synchronous-and-asynchronous-transformations.md).  
