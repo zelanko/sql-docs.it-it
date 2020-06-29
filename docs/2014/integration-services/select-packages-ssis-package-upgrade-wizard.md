@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectpackages.f1
 ms.assetid: 224100f1-51f6-4f1f-91a2-054819c76ae8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f67103eedf14bb405ad1655d21803ec84e6ff0ca
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2db10085a886342511e6f2fd65ec1bcd38323803
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963741"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421918"
 ---
 # <a name="select-packages-ssis-package-upgrade-wizard"></a>Seleziona pacchetti (Aggiornamento guidato pacchetti SSIS)
   Utilizzare la pagina **Seleziona pacchetti** per selezionare i pacchetti da aggiornare. In questa pagina vengono elencati i pacchetti archiviati nel percorso specificato nella pagina **Seleziona posizione di origine** della procedura guidata.  

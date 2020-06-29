@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: 4c6d1901-ef21-4aa7-9d0a-6bbeb7fadf1c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f172aa778cbaa959671da870521641147186f571
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 31dc7fca17ea5e00a242e8c32fb2a3514c5e7732
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964041"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422208"
 ---
 # <a name="script-transformation-editor-script-page"></a>Editor trasformazione Script (pagina Script)
   Usare la scheda **Script** della finestra di dialogo **Editor trasformazione Script** per specificare uno script e le proprietà correlate.  
@@ -29,7 +29,7 @@ ms.locfileid: "84964041"
  **Proprietà**  
  Consente di visualizzare e modificare le proprietà della trasformazione Script. Molte delle proprietà visualizzate sono di sola lettura. È possibile modificare le proprietà seguenti:  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Descrizione**|Consente di descrivere gli scopi della trasformazione Script.|  
 |**LocaleID**|Consente di stabilire le impostazioni locali per specificare informazioni sul paese/area geografica relative all'ordinamento e alla conversione di data e ora.|  

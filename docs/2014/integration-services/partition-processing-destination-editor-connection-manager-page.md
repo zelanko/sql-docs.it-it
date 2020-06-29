@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Partition Processing Destination Editor
 ms.assetid: 7add6f82-eed1-47fc-a5d7-7b91f3f24d34
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bb2efbff93fb7cc831038a7e26fe4ada44d81325
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: faf99a55fe52ba46e6bf69a59d23c2054e3c9144
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964751"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423498"
 ---
 # <a name="partition-processing-destination-editor-connection-manager-page"></a>Editor destinazione elaborazione partizione (pagina Gestione connessione)
   Usare la pagina **Gestione connessione** della finestra di dialogo **Editor destinazione elaborazione partizione** per specificare una connessione a un progetto di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -41,7 +41,7 @@ ms.locfileid: "84964751"
  **Metodo di elaborazione**  
  Consente di selezionare il metodo di elaborazione. Il valore predefinito di questa opzione è **Completo**.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |Aggiunta (incrementale)|Consente di eseguire un'elaborazione incrementale della partizione.|  
 |Full|Consente di eseguire l'elaborazione completa della partizione.|  

@@ -15,14 +15,14 @@ helpviewer_keywords:
 - roles [Integration Services]
 - db_ssisltduser role
 ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 84f2a00b7376ae8869cafa36f8a4ab30d74fda19
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5bc65a7a3ff30deb429ceeb8458ac477432a758c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963919"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422088"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Ruoli Integration Services (servizio SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]include i tre ruoli predefiniti a livello di database, `db_ssisadmin` , **db_ssisltduser**e **db_ssisoperator**, per il controllo dell'accesso ai pacchetti. I ruoli possono essere implementati solo nei pacchetti salvati `msdb` nel database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I ruoli vengono assegnati a un pacchetto in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Le assegnazioni di ruolo vengono salvate nel `msdb` database.  

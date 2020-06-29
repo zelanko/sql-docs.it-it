@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectdestinationlocation.f1
 ms.assetid: 89274a71-0ffe-4889-84df-f5a7d78459ef
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c397e1e174703b40a7bada8ed6fe42675a0c9c24
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: abe5be4a11e0f7db4f6e8078395aef0fbdf8d10a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963847"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422038"
 ---
 # <a name="select-destination-location-ssis-package-upgrade-wizard"></a>Seleziona posizione di destinazione (Aggiornamento guidato pacchetti SSIS)
   Usare la pagina **Seleziona posizione di destinazione** per specificare la destinazione in cui salvare i pacchetti aggiornati.  
@@ -40,7 +40,7 @@ ms.locfileid: "84963847"
  **Origine pacchetto**  
  Consente di specificare la posizione di archiviazione dei pacchetti di aggiornamento. Per questa opzione sono disponibili i valori elencati nella tabella seguente.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**File system**|Indica che i pacchetti aggiornati devono essere salvati in una cartella nel computer locale.|  
 |**Archivio pacchetti SSIS**|Indica che i pacchetti aggiornati devono essere salvati nell'archivio pacchetti Integration Services. L'archivio pacchetti è costituito dal set di cartelle del file system gestito dal servizio Integration Services. Per altre informazioni, vedere [Gestione dei pacchetti &#40;servizio SSIS&#41;](service/package-management-ssis-service.md).<br /><br /> La selezione di questo valore determina la visualizzazione delle opzioni dinamiche di **Origine pacchetto** corrispondenti.|  

@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - paths [Integration Services], properties
 ms.assetid: 512249a4-83a6-4087-980d-a4344da48371
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 07af1256f4935467d1230bf2987fde4cd02c5de7
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4bf0b609574bc9ac12d5bc17210f89e7441bd2a3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963143"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421578"
 ---
 # <a name="set-the-properties-of-a-path-by-using-the-data-flow-path-editor"></a>Impostazione delle proprietà di un percorso tramite l'Editor percorso flusso di dati
   I percorsi connettono due componenti flusso di dati. Affinché sia possibile impostare le proprietà di un percorso, il flusso di dati deve contenere almeno due componenti connessi. Per altre informazioni, vedere [Aggiunta o eliminazione di un componente in un flusso di dati](data-flow/add-or-delete-a-component-in-a-data-flow.md) e [Connessione di componenti in un flusso di dati](data-flow/connect-components-in-a-data-flow.md).  
