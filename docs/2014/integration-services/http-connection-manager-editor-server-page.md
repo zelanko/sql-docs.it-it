@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - HTTP Connection Manager Editor
 ms.assetid: 774778a0-ece6-4971-b93f-b121d8fc1fc1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3694eeb93e9edbc053a8534841a1edf438489ca9
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ab0e8bfe2d0cda5ded11566023406b73ed7058c4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968331"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436888"
 ---
 # <a name="http-connection-manager-editor-server-page"></a>Editor gestione connessione HTTP (pagina Server)
   La scheda **Server** della finestra di dialogo **Editor gestione connessione HTTP** consente di configurare la gestione connessione HTTP specificando proprietà quali l'URL e le credenziali di sicurezza. Una connessione HTTP consente a un pacchetto di accedere al server Web utilizzando il protocollo HTTP per l'invio o la ricezione di file. Dopo aver configurato la gestione connessione HTTP sarà inoltre possibile verificare la connessione.  
@@ -29,7 +29,7 @@ ms.locfileid: "84968331"
  Per ulteriori informazioni sulla gestione connessione HTTP, vedere [HTTP Connection Manager](connection-manager/http-connection-manager.md). Per ulteriori informazioni su uno scenario di utilizzo comune della gestione connessione HTTP, vedere [Web Service Task](control-flow/web-service-task.md).  
   
 ## <a name="options"></a>Opzioni  
- **URL server**  
+ **URL del server**  
  Digitare l'URL per il server.  
   
  Se si intende utilizzare il pulsante **Scarica WSDL** nella pagina **Generale** di **Editor attività Servizio Web** per scaricare un file WSDL, digitare l'URL del file WSDL. L'URL termina con "?wsdl".  

@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - selOraTabDia
 ms.assetid: 2e295dc8-999d-4c4d-96cc-1519674b47a4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 42bc0e1533e53b6a8f52b6ba71f0a128575e7448
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 55000295138ac2ee97a580a52ecef97dda3ce404
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922462"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435378"
 ---
 # <a name="select-oracle-tables-for-capturing-changes"></a>Selezionare le tabelle Oracle per l'acquisizione delle modifiche
   Utilizzare questa finestra di dialogo per selezionare le tabelle incluse nell'istanza di CDC. Le tabelle selezionate vengono aggiunte all'elenco nella pagina **Select Tables and Columns** della New Instance Wizard. In questa finestra di dialogo è possibile effettuare le operazioni seguenti:  

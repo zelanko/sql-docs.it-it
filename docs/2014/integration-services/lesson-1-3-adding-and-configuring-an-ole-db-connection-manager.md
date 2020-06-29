@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3aa628e0113adbbee48c0fa00d43b56e8773ad7c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e7ba771b404ac7d0fad5721fa6056333634e7246
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965301"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436078"
 ---
 # <a name="step-3-adding-and-configuring-an-ole-db-connection-manager"></a>Passaggio 3: Aggiunta e configurazione di una gestione connessione OLE DB
   Dopo aver aggiunto una gestione connessione file flat per connettersi all'origine dati, l'operazione successiva consiste nell'aggiunta di una gestione connessione OLE DB per connettersi alla destinazione. Una gestione connessione OLE DB abilita un pacchetto all'estrazione di dati o al caricamento di dati in un'origine dati compatibile con OLE DB. Gestione connessione OLE DB consente di specificare il server, il metodo di autenticazione e il database predefinito per la connessione.  

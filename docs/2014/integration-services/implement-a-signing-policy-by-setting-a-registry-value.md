@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - signing policies [Integration Services]
 ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 776a8319750721f3b489df1a3a4466c7dc36f15e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 95a812cf5c5faa7e367d4e39a8edac8d7bab89de
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968321"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436898"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>Implementazione di criteri per le firme impostando un valore del Registro di sistema
   È possibile utilizzare un valore facoltativo del Registro di sistema per gestire i criteri dell'organizzazione per il caricamento dei pacchetti firmati o non firmati. Se si utilizza questo valore del Registro di sistema, è necessario crearlo in ogni computer in cui verranno eseguiti i pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e in cui si desidera applicare i criteri. Dopo l'impostazione del valore del Registro di sistema, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] controllerà o verificherà le firme prima di caricare i pacchetti.  

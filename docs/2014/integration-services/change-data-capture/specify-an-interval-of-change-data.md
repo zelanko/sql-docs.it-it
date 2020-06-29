@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],specifying interval
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 80126a2f1955356ae451e2f1092869e962674689
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 70b9c14d609f2db69ee5751eca18acb5262a07a1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922488"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435428"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Definizione di un intervallo dei dati delle modifiche
   Nel flusso di controllo di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che esegue un carico incrementale dei dati delle modifiche, la prima attività consiste nel calcolare gli endpoint dell'intervallo di modifiche. Tali endpoint sono valori `datetime` e verranno archiviati in variabili del pacchetto per l'utilizzo successivo nel pacchetto.  

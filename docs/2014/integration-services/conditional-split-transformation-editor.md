@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Conditional Split Transformation Editor
 ms.assetid: c30e1633-537a-4837-9991-6203c6f2a21e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fa63a9f16507df8f0966d19323b2e110b7c84fcc
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 405d20ce5711f3e3378b0037b6d4c1f753a8f09c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921992"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434918"
 ---
 # <a name="conditional-split-transformation-editor"></a>Editor trasformazione Suddivisione condizionale
   Utilizzare la finestra di dialogo **Editor trasformazione Suddivisione condizionale** per creare espressioni e impostare l'ordine in cui vengono valutate, nonché per assegnare un nome agli output di una suddivisione condizionale. In questa finestra di dialogo sono inclusi funzioni e operatori matematici, di data/ora e per i valori stringa che possono essere utilizzati per la compilazione di espressioni. La prima condizione che restituisce true determina l'output a cui è indirizzata una riga.  

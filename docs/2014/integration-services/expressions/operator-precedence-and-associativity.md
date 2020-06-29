@@ -10,14 +10,14 @@ helpviewer_keywords:
 - associativity [Integration Services]
 - precedence [Integration Services]
 ms.assetid: 5094164f-dabc-45b5-b611-384feb2b3fe3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3ffa854661bc24e8b25f0c4810a1449c69ebef56
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 47033560e074169524c20d0c6f697de51652c6ce
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969161"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437168"
 ---
 # <a name="operator-precedence-and-associativity"></a>Precedenza e associatività degli operatori
   Ogni operatore nel set di operatori supportato dall'analizzatore di espressioni ha una precedenza specifica nella gerarchia delle precedenze e prevede una direzione di valutazione. La direzione di valutazione di un operatore è l'associatività dell'operatore. Gli operatori con precedenza superiore vengono valutati prima di quelli con precedenza inferiore. Se un'espressione complessa include più operatori, l'ordine di esecuzione è determinato dalla precedenza degli operatori. L'ordine di esecuzione può modificare in modo significativo il valore restituito. Alcuni operatori hanno la stessa precedenza. Se un'espressione contiene più operatori con la stessa precedenza, gli operatori verranno valutati nell'ordine in cui compaiono, procedendo da sinistra a destra o da destra a sinistra.  

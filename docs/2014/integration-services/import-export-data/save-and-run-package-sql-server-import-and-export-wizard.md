@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.saveschedule.f1
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c3b1be3f11e3a53ad291ff774cc72468af0d66ca
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2bb7f32cc36b14682de4629b238883acde4a015a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966216"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436818"
 ---
 # <a name="save-and-execute-package-sql-server-import-and-export-wizard"></a>Salvataggio ed esecuzione pacchetto (Importazione/Esportazione guidata SQL Server)
   Utilizzare la finestra di dialogo **Salva ed Esegui pacchetto** per eseguire il pacchetto immediatamente, salvarlo in modo che venga eseguito in un secondo momento o in entrambi.  

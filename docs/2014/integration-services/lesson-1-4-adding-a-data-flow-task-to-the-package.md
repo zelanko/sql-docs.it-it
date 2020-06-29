@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 37275d31837a700f5e69c433630839529c2ac0ae
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9e15e5c621aed464c31057752d406deced4f8c57
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965281"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435948"
 ---
 # <a name="step-4-adding-a-data-flow-task-to-the-package"></a>Passaggio 4: Aggiunta di un'attività Flusso di dati al pacchetto
   Dopo aver creato le gestioni connessioni per i dati di origine e di destinazione, l'operazione successiva consiste nell'aggiunta di un'attività Flusso di dati al pacchetto. L'attività Flusso di dati incapsula il motore del flusso di dati che gestisce lo spostamento dei dati tra origini e destinazioni, offrendo funzionalità di trasformazione, pulitura e modifica dei dati durante lo spostamento. Nell'attività Flusso di dati avviene gran parte del lavoro di un processo ETL (Extract, Transform and Load).  

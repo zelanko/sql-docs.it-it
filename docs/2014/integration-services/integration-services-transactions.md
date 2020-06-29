@@ -12,14 +12,14 @@ helpviewer_keywords:
 - tasks [Integration Services], transactions
 - transactions [Integration Services]
 ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bf9e435156d452a83b50adcf34771c7dd45b7bfd
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c963113a5c55f07c7f80dfa06f9c2fe7bf245e82
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965355"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436258"
 ---
 # <a name="integration-services-transactions"></a>Transazioni di Integration Services
   Nei pacchetti vengono utilizzate transazioni per l'associazione di azioni del database eseguite dalle attività in unità atomiche in modo da mantenere l'integrità dei dati. Tutti i tipi di contenitori di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], ovvero pacchetti, ciclo For, ciclo Foreach, contenitori Sequenza, nonché gli host di attività in cui è incapsulata ogni attività, possono essere configurati per l'uso delle transazioni. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sono disponibili tre opzioni per la configurazione delle transazioni: **NotSupported**, **Supported**e **Required**.  

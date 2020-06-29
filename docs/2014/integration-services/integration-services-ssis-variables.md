@@ -15,14 +15,14 @@ helpviewer_keywords:
 - variables [Integration Services], about variables
 - values [Integration Services]
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 42dd04f4edf2d1e9b9b31b11ab96fcd97f9d21d6
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a3565f98786b02eaeacb1140e34f862102ca2463
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966181"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436268"
 ---
 # <a name="integration-services-ssis-variables"></a>Variabili di Integration Services (SSIS)
   Nelle variabili vengono archiviati valori che possono essere usati in fase di esecuzione da un pacchetto di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e dai relativi contenitori, attività e gestori eventi. Anche gli script nell'attività Script e nel componente script possono utilizzare le variabili. I vincoli di precedenza che definiscono la sequenza delle attività e dei contenitori in un flusso di lavoro possono utilizzare variabili quando le definizioni di vincolo includono espressioni.  
@@ -81,7 +81,7 @@ ms.locfileid: "84966181"
 > [!NOTE]  
 >  L'unica opzione configurabile delle variabili di sistema è quella che determina se debba essere generato o meno un evento quando il valore viene modificato.  
   
- Description  
+ Descrizione  
  Specifica la descrizione della variabile.  
   
  EvaluateAsExpression  

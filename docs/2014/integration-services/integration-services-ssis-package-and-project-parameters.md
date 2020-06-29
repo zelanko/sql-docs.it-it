@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e26f68375161f0e7ea0078540c4b8950adb61542
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 980f25c181556ee50a51bc57dce39b60cae322fc
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965391"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436388"
 ---
 # <a name="integration-services-ssis-parameters"></a>Parametri di Integration Services (SSIS)
   I parametri (SSIS) di[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consentono di assegnare valori alle proprietà incluse nei pacchetti durante la fase di esecuzione. È possibile creare *parametri di progetto* al livello del progetto e *parametri di pacchetto* al livello del pacchetto. I parametri del progetto vengono utilizzati per fornire input esterno ricevuto dal progetto a uno o più pacchetti nel progetto. I parametri del pacchetto consentono di modificare l'esecuzione del pacchetto senza doverlo modificare e ridistribuire.  

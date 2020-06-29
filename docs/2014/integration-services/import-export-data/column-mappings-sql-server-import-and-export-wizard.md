@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.columnmapandtransform.f1
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1f3266bbbc100af3eac03bc18805c82b753d7aa7
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c1d381ec773499fdcf018375c7a51740880d3d9b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965634"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436788"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Mapping colonne (Importazione/Esportazione guidata SQL Server)
   Utilizzare la finestra di dialogo **Mapping colonne** per modificare i parametri di trasformazione.  
@@ -29,10 +29,10 @@ ms.locfileid: "84965634"
  Lo scopo di Importazione/Esportazione guidata SQL Server è la copia di dati da un'origine a una destinazione. La procedura guidata può inoltre creare automaticamente un database di destinazione e le tabelle di destinazione. Se tuttavia è necessario copiare più database o tabelle, o altri tipi di oggetti di database, è preferibile utilizzare Copia guidata database. Per altre informazioni, vedere [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="options"></a>Opzioni  
- **origine**  
+ **Origine**  
  Identifica la tabella, la visualizzazione o la query di origine selezionata.  
   
- **Destinazione**  
+ **Destination**  
  Identifica la tabella, la visualizzazione o la query di destinazione selezionata.  
   
  **Crea tabella di destinazione/file**  
@@ -58,10 +58,10 @@ ms.locfileid: "84965634"
   
  L'elenco contiene le colonne seguenti:  
   
- **origine**  
+ **Origine**  
  Consente di visualizzare ogni colonna di origine da cui è possibile impostare parametri di trasformazione.  
   
- **Destinazione**  
+ **Destination**  
  Consente di specificare se ignorare una colonna durante l'operazione di copia. È possibile copiare solo un subset di colonne selezionando **\<ignore>** in questa colonna le colonne che si desidera ignorare. Prima di eseguire il mapping delle colonne, è necessario ignorare tutte le colonne di cui non verrà eseguito il mapping.  
   
  **Tipo**  

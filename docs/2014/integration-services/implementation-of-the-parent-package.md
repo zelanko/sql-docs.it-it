@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - parent packages [Integration Services]
 ms.assetid: d8f94830-fa27-4151-88df-cbdc6bf0fc80
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 47d030435515cc621fe223f461e3da645e9dbebf
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 04b99a2607e73bbcd612b43be1bdb30324a37e9f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965677"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436868"
 ---
 # <a name="implementation-of-the-parent-package"></a>Implementazione del pacchetto padre
   Quando si esegue il bilanciamento del carico dei pacchetti di SSIS tra più server, dopo la creazione e la distribuzione dei pacchetti figlio e dopo la creazione dei processi remoti di SQL Server Agent per eseguirli, è necessario creare il pacchetto padre. Il pacchetto padre deve contenere più attività Esegui processo di SQL Server Agent, ognuna della quali è responsabile di chiamare un diverso processo di SQL Server Agent che esegue uno dei pacchetti figlio. Le attività Esegui processo di SQL Server Agent nel pacchetto padre eseguono a loro volta i vari processi di SQL Server Agent. Ogni attività nel pacchetto padre contiene informazioni riguardanti ad esempio la modalità di connessione al server remoto e il processo da eseguire su tale server. Per altre informazioni, vedere [Execute SQL Server Agent Job Task](control-flow/execute-sql-server-agent-job-task.md).  
