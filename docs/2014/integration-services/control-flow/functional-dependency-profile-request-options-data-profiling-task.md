@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ec0fe7952fbcca3be13d93c24247cc0434232096
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2683b86699da075be54f6d5ad6720beccbee1add
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918788"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432958"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Dipendenza funzionale (Attività Profiling dati)
   Usare il riquadro **Proprietà richiesta** della pagina **Richieste profilo** per impostare le opzioni di **Richiesta profilo Dipendenza funzionale** selezionata nel riquadro delle richieste. Un profilo Dipendenza funzionale segnala il livello di dipendenza dei valori inclusi in una colonna (colonna dipendente) dai valori presenti in un'altra colonna o set di colonne (colonna determinante). Questo profilo consente inoltre di identificare eventuali problemi nei dati, ad esempio valori non validi. Si analizza, ad esempio, la dipendenza tra una colonna che contiene i codici postali ZIP (Stati Uniti) e una colonna che contiene gli stati degli Stati Uniti. Benché nel profilo uno stesso codice postale debba essere sempre associato allo stesso stato, vengono individuate violazioni di tale dipendenza.  

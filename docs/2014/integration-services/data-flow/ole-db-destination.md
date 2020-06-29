@@ -17,14 +17,14 @@ helpviewer_keywords:
 - fast load data access mode [Integration Services]
 - inserting data
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9f414053bcc3f51ffc737a84a3b693fb0e924a7b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a5227175e80db3a8f31a8b8db8c3d6bee3061bae
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915061"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431918"
 ---
 # <a name="ole-db-destination"></a>Destinazione OLE DB
   La destinazione OLE DB consente di caricare dati in un'ampia gamma di database conformi con OLE DB, tramite una tabella o vista di database oppure un comando SQL. L'origine OLE DB, ad esempio, può caricare dati nelle tabelle dei database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -82,7 +82,7 @@ ms.locfileid: "84915061"
   
  Oltre alle opzioni di caricamento rapido elencate nella finestra di dialogo **Editor destinazione OLE DB** , è possibile configurare la destinazione OLE DB in modo da usare le opzioni per il caricamento bulk seguenti digitandole nella proprietà FastLoadOptions della finestra di dialogo **Editor avanzato** .  
   
-|Opzione per il caricamento rapido|Description|  
+|Opzione per il caricamento rapido|Descrizione|  
 |----------------------|-----------------|  
 |KILOBYTES_PER_BATCH|Specifica le dimensioni in kilobyte del batch da inserire. Il formato dell'opzione è `KILOBYTES_PER_BATCH`  =  \<positive integer value**> * *.|  
 |FIRE_TRIGGERS|Specifica se attivare o meno i trigger sulla tabella inserita. La sintassi dell'opzione è **FIRE_TRIGGERS**. La presenza dell'opzione indica che i trigger vengono attivati.|  

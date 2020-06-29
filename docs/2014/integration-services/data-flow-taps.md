@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2d847adf-4b3d-4949-a195-ef43de275077
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 212688d5dddaa84b1b7c6aee3fe4ebbb6415e8a9
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 053b34add45354d0df71fa73a72f8786cc706d15
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916865"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432438"
 ---
 # <a name="data-flow-taps"></a>Scelte del flusso di dati
   In [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] è stata introdotta una nuova funzionalità con cui è possibile aggiungere una scelta dei dati in un percorso del flusso di dati di un pacchetto in fase di esecuzione e indirizzare l'output della scelta dei dati a un file esterno. Per utilizzare questa funzionalità, è necessario distribuire il progetto SSIS utilizzando il modello di distribuzione del progetto in un server SSIS. Al termine della distribuzione del pacchetto nel server, è necessario eseguire script T-SQL nel database SSISDB per aggiungere le scelte dei dati prima dell'esecuzione del pacchetto. Di seguito è riportato uno scenario di esempio:  
