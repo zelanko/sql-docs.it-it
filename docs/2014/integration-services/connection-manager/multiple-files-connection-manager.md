@@ -14,14 +14,14 @@ helpviewer_keywords:
 - connections [Integration Services], files
 - multiple file connections
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 20be558522d0f5df2aa4f5bcd0557626cff0e64c
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 85780c6b265334ba16dd00e4a09dff732ab03228
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920612"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434148"
 ---
 # <a name="multiple-files-connection-manager"></a>gestione connessione per più file
   Una gestione connessione per più file consente a un pacchetto di fare riferimento a file e cartelle esistenti o di creare file e cartelle in fase di esecuzione.  

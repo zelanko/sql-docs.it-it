@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data profiling
 - profiling data
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bfde82079c32b9aaba8db0ba9e52b02886bd2c47
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f17debb2b93711981f80c84b0166940f34e44057
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919252"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433378"
 ---
 # <a name="data-profiling-task"></a>Attività Profiling dati
   L'attività Profiling dati calcola i diversi profili che consentono di familiarizzare con un'origine dati e identificare i problemi nei dati che devono essere corretti.  

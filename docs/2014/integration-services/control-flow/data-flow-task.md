@@ -15,14 +15,14 @@ helpviewer_keywords:
 - data flow [Integration Services], Data Flow task
 - Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ff5c519fbe9bf8096807962a939677b3a5d58cc5
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7f10a396923fe25e018271fd62d0412c75471c35
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919559"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433648"
 ---
 # <a name="data-flow-task"></a>Attività Flusso di dati
   L'attività Flusso di dati incapsula il motore flusso di dati che consente di spostare i dati dalle origini alle destinazioni e offre la possibilità di trasformare, pulire e modificare i dati durante lo spostamento. L'aggiunta di un'attività Flusso di dati al flusso di controllo di un pacchetto consente al pacchetto di estrarre, trasformare e caricare dati.  

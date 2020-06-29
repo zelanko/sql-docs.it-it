@@ -12,14 +12,14 @@ helpviewer_keywords:
 - adding containers
 - tasks [Integration Services], adding
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fc86d269d3b286aeee5ccc67ddf6dddc4bfb1c95
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fde63d44a6434b1604a2f05ed1da777e7589a772
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920182"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434138"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Aggiunta o eliminazione di un'attività o un contenitore in un flusso di controllo
   Quando si usa la progettazione dei flussi di controllo, nella casella degli strumenti di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] sono elencate le attività disponibili in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per la compilazione del flusso di controllo in un pacchetto. Per altre informazioni sulla casella degli strumenti, vedere [Casella degli strumenti SSIS](../ssis-toolbox.md).  

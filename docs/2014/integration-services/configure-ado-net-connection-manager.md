@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Configure ADO.NET Connection Manager dialog box
 ms.assetid: 609f8354-e876-4fed-adab-ac8d57a94f1c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 978f50d5b12088271d5cf89ba4513b95f175fdc2
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 13efde1888c50e243f0d07a534f538646db1eaa5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921822"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434788"
 ---
 # <a name="configure-adonet-connection-manager"></a>Configura gestione connessione ADO.NET
   Utilizzare la finestra di dialogo **Configura gestione connessione ADO.NET** per aggiungere una connessione a un'origine dati accessibile mediante un provider di dati .NET Framework, ad esempio il provider SqlClient. La gestione connessione può utilizzare una connessione esistente oppure è possibile crearne una nuova.  

@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Foreach Loop containers
 - containers [Integration Services], Foreach Loop
 ms.assetid: 519c6f96-5e1f-47d2-b96a-d49946948c25
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 840011d1797c7ef9482af31ffc8b3ec3a6419b8a
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6ef95ca29b9e502950326b095f56f26e1a508831
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921972"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434878"
 ---
 # <a name="configure-a-foreach-loop-container"></a>Configurare un contenitore Ciclo Foreach
   Questa procedura descrive la configurazione di un contenitore Ciclo Foreach, incluse le espressioni di proprietà a livello di enumeratore e contenitore.  

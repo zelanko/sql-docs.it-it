@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1a7597e5ebf967bd9da590057a085a72ee8b1a17
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 81659606555a9cb1884e7a92458f293932533023
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919912"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433988"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Chiave candidata (Attività Profiling dati)
   Usare il riquadro **Proprietà richiesta** della pagina **Richieste profilo** per impostare le opzioni di **Richiesta profilo Chiave candidata** selezionata nel riquadro delle richieste. Il profilo Chiave candidata segnala se una colonna o un set di colonne è una chiave o una chiave approssimativa per la tabella selezionata. Questo profilo consente inoltre di identificare eventuali problemi nei dati, ad esempio i valori duplicati in una possibile colonna chiave.  

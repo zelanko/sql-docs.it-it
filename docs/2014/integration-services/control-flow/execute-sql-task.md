@@ -14,14 +14,14 @@ helpviewer_keywords:
 - batches [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 481ec003601a642de788eb8a6131ec1777bef129
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e77b9f442ae8478c57d5b0e68955b541eda38aff
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919092"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433188"
 ---
 # <a name="execute-sql-task"></a>Attività Esegui SQL
   L'attività Esegui SQL consente di eseguire istruzioni SQL o stored procedure da un pacchetto. L'attività può includere una o più istruzioni SQL che vengono eseguite in ordine sequenziale. È possibile utilizzare l'attività Esegui SQL per gli scopi seguenti:  
@@ -103,7 +103,7 @@ ms.locfileid: "84919092"
 ### <a name="custom-log-entries"></a>Voci di log personalizzate  
  Nella tabella seguente è indicata la voce di log personalizzata disponibile per l'attività Esegui SQL. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) e [Messaggi personalizzati per la registrazione](../custom-messages-for-logging.md).  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |`ExecuteSQLExecutingQuery`|Fornisce informazioni sulle fasi di esecuzione dell'istruzione SQL. Vengono scritte voci di log quando l'attività acquisisce la connessione al database, quando inizia a preparare l'istruzione SQL e al termine dell'esecuzione dell'istruzione SQL. La voce di log per la fase di preparazione include l'istruzione SQL utilizzata dall'attività.|  
   

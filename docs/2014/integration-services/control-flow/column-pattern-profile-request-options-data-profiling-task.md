@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a00c72e6f444ec1e62082f254d6b77894b479d09
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 831350b3ab54f84236f7f258415aeb782539cdb5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919642"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433758"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Criteri di ricerca colonna (Attività Profiling dati)
   Usare il riquadro **Proprietà richiesta** della pagina **Richieste profilo** per impostare le opzioni per la **Richiesta profilo Criteri di ricerca colonna** selezionata nel riquadro delle richieste. Un profilo Criteri di ricerca colonna segnala un set di espressioni regolari che analizzano la percentuale specificata di valori in una colonna stringa. Questo profilo consente di identificare eventuali problemi nei dati, ad esempio le stringhe non valide, e può indicare le possibili espressioni regolari da utilizzare in futuro per convalidare nuovi valori. Un profilo di criteri di ricerca di una colonna contenente i codici postali ZIP (Stati Uniti), ad esempio, può produrre le espressioni regolari \d{5}-\d{4}, \d{5} e \d{9}. Se vengono visualizzate altre espressioni regolari, è probabile che i dati contengano valori non validi o in formato non corretto.  
@@ -44,10 +44,10 @@ ms.locfileid: "84919642"
   
 |Tag|Termine|  
 |---------|----------|  
-|Direction|East|  
-|Direction|West|  
-|Direction|North|  
-|Direction|South|  
+|Direzione|East|  
+|Direzione|West|  
+|Direzione|North|  
+|Direzione|South|  
   
  È possibile utilizzare un altro tag per raggruppare le parole diverse che esprimono la nozione di strada negli indirizzi stradali:  
   
