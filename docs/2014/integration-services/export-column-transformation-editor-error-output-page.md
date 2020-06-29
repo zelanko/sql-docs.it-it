@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Export Column Transformation Editor
 ms.assetid: 260be463-01a9-460c-9c98-e5265cb2b1e9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7ae69c24138749fa1f3718c94147cd1db12abd1d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 26cedb4233ec7bca5b8178bbb97eb7ffee94e85d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966721"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437338"
 ---
 # <a name="export-column-transformation-editor-error-output-page"></a>Editor trasformazione Esportazione colonna (pagina Output degli errori)
   Utilizzare la pagina **Output degli errori** della finestra di dialogo **Editor trasformazione Esportazione colonna** per specificare le opzioni di gestione degli errori.  
@@ -32,7 +32,7 @@ ms.locfileid: "84966721"
  **Colonna**  
  Consente di visualizzare le colonne di output selezionate nella pagina **Colonne** della finestra di dialogo **Editor trasformazione Esportazione colonna** .  
   
- **Error (Errore) (Error (Errore)e)**  
+ **Errore**  
  Consente di specificare l'azione che deve essere eseguita in caso di errori, ovvero ignorare l'errore, reindirizzare la riga o interrompere l'esecuzione del componente.  
   
  **Troncamento**  

@@ -10,14 +10,14 @@ helpviewer_keywords:
 - deploying packages [Integration Services], deployment utility
 - deployment utility [Integration Services]
 ms.assetid: 354322a4-ae8c-4d92-8e71-42d29dbd0614
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 25effc199b1f8e525ceec78216e935e13afe2be2
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f0a5f0f4db3f2e3ab5f961de99db0e92ca7009e3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917361"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437958"
 ---
 # <a name="create-a-deployment-utility"></a>Creazione di un'utilità di distribuzione
   Il primo passaggio della distribuzione di pacchetti consiste nel creare un'utilità di distribuzione per un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . L'utilità di distribuzione è una cartella contenente i file necessari per la distribuzione dei pacchetti di un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in un altro server. L'utilità di distribuzione viene creata nel computer in cui è archiviato il progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

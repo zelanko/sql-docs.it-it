@@ -12,14 +12,14 @@ helpviewer_keywords:
 - statements [Integration Services]
 - OLE DB Command transformation
 ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 71e8a21d4e83a37e647ff3bb27aaae14cd62c5a8
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 25ee5f9ba6a17f0d7e0e7b5416079c19bb885c30
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939382"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437598"
 ---
 # <a name="ole-db-command-transformation"></a>Comando OLE DB - trasformazione
   La trasformazione Comando OLE DB esegue un'istruzione SQL per ogni riga in un flusso di dati. È ad esempio possibile eseguire un'istruzione SQL che inserisce, aggiorna o elimina righe in una tabella di database.  

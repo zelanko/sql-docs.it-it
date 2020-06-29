@@ -10,14 +10,14 @@ f1_keywords:
 - sql12.ssis.ssms.ispackagevalidate.f1
 - sql12.ssis.ssms.isprojectvalidate.f1
 ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e0ee899153db7ade8530addbedc13e9faa2bd59e
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8cc9d54c449be6764349fa0267f1171206945468
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924192"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438998"
 ---
 # <a name="validate-dialog-box"></a>Finestra di dialogo Convalida
   Utilizzare la finestra di dialogo **Convalida** per verificare i problemi comuni in un progetto o pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  

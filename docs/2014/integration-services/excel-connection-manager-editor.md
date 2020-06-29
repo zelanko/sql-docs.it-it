@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Connection Manager Editor
 ms.assetid: 7ff097e4-cafb-4885-a898-05b2a46628c1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 08dc39cb21eec03a7cbdc5bd56c68212044dd211
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d9951d9bfe7e95499c2b967e6329d206cdc4aa44
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966891"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437408"
 ---
 # <a name="excel-connection-manager-editor"></a>Editor gestione connessione Excel
   Usare la finestra di dialogo **Editor gestione connessione Excel[!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]per aggiungere una connessione a un file di cartella di lavoro di ** nuovo o esistente.  
@@ -41,7 +41,7 @@ ms.locfileid: "84966891"
  **Versione di Excel**  
  Consente di specificare la versione di Microsoft Excel utilizzata per creare il file.  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |Microsoft Excel 97-2005|Il file è stato creato utilizzando Microsoft Excel 97 o versione successiva.|  
 |Excel 3,0|Il file è stato creato con Excel 3,0.|  

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 6ed56d36-18d9-40c2-b51f-f2a4c71d1e73
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 38f2e94ab794accb8f3b951d0affab2451624748
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2572cc131f34a21171054a159e3b7968c453a780
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917211"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437898"
 ---
 # <a name="create-the-ssis-catalog"></a>Creare il catalogo SSIS
   Dopo avere progettato e testato i pacchetti in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], è possibile distribuire i progetti che contengono i pacchetti in un server di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Prima di poter distribuire i progetti nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], in quest'ultimo deve essere incluso il catalogo `SSISDB`. Tramite il programma di installazione per [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] non viene creato automaticamente il catalogo. Sarà necessario crearlo manualmente usando le istruzioni seguenti.  

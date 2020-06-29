@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configureerroroutput.f1
 ms.assetid: 5f8da390-fab5-44f8-b268-d8fa313ce4b9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7f61748b3a1a691a943deec67fcbcfba4ece682b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ee37cae5e0d6d9d0f95ca5b9f71eec04742f94e3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921572"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438418"
 ---
 # <a name="configure-error-output"></a>Configura output errori
   Usare la finestra di dialogo **Configura output errori** per configurare le opzioni di gestione degli errori per le trasformazioni del flusso di dati che supportano l'output degli errori.  
@@ -30,7 +30,7 @@ ms.locfileid: "84921572"
  **Colonna**  
  Consente di visualizzare le colonne di output selezionate nella finestra di dialogo dell'editor trasformazione.  
   
- **Error (Errore) (Error (Errore)e)**  
+ **Errore**  
  Se applicabile, consente di specificare l'azione da eseguire in caso di errori, ovvero ignorare l'errore, reindirizzare la riga o interrompere il componente.  
   
  **Argomenti correlati:** [Gestione degli errori nei dati](data-flow/error-handling-in-data.md)  

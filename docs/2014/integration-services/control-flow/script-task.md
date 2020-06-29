@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Script task [Integration Services], about Script task
 - Script task [Integration Services]
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6c44017e7f3746861209b62bcb8c7b8999712076
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 024c499d882a515286904229a9d9f7942d9b8056
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918363"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438208"
 ---
 # <a name="script-task"></a>Attività Script
   L'attività Script fornisce il codice necessario per eseguire le funzioni non disponibili nelle trasformazioni e nelle attività predefinite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Tale attività consente inoltre di combinare più funzioni in un unico script, anziché utilizzare più attività e trasformazioni. L'attività Script può essere utilizzata per operazioni che devono essere eseguite una sola volta in un pacchetto o una sola volta per oggetto enumerato, anziché una volta per ogni riga di dati.  
@@ -65,7 +65,7 @@ ms.locfileid: "84918363"
 ### <a name="configuring-the-script-task-in-the-designer"></a>Configurazione dell'attività Script in Progettazione  
  Nella tabella seguente viene descritto l'evento `ScriptTaskLogEntry` che può essere registrato per l'attività Script. L' `ScriptTaskLogEntry` evento è selezionato per la registrazione nella scheda **Dettagli** della finestra di dialogo **Configura log SSIS** . Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) e [Messaggi personalizzati per la registrazione](../custom-messages-for-logging.md).  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |`ScriptTaskLogEntry`|Restituisce i risultati dell'implementazione della registrazione nell'ambito dello script. L'attività scrive una voce di log per ogni chiamata al metodo `Log` dell'oggetto `Dts`. Tali voci vengono scritte dall'attività al momento dell'esecuzione del codice. Per altre informazioni, vedere [Registrazione nell'attività Script](../extending-packages-scripting/task/logging-in-the-script-task.md).|  
   

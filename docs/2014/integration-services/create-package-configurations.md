@@ -15,14 +15,14 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 - deploying packages [Integration Services], configurations
 ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5552d40cf2f899ca6b95658ac2aa50d5cc25f62f
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8931df95aba03710c5feb8b8270dcf9453ba1789
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917344"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437918"
 ---
 # <a name="create-package-configurations"></a>Creazione di configurazioni dei pacchetti
   Le configurazioni di pacchetto vengono create nella finestra di dialogo **Libreria configurazioni pacchetto** e tramite la Configurazione guidata pacchetto. Per accedere a questi strumenti, fare clic su **Configurazioni pacchetto** nel menu **SSIS** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
